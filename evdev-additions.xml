@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<!--
+                       Date: 2023-07-10T1914+0200
+          Partial file name: evdev-additions.xml
+         Partial added date: 2023-07-10T1751+0200
+                   Encoding: UTF-8
+                       Type: text/XML
+                Description: XKB keyboard layout switch configuration partial
+                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
+
+               Project name: Dispoclavier
+                Project URL: https://dispoclavier.com
+                    Version: 1.0.0
+                      Maxim: Simplify typewriting, not French.
+                    Maxime : Simplifier la dactylographie, pas le français.
+        English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
+     Description française : dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
+              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
+             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
+              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
+   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
+                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
+                             kbfrBEs  French Belgium semiautomatic keyboard layout
+                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
+                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
+                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
+                             kbfrFRhw French France hybrid AZERTY semiautomatic keyboard layout
+                             kbfrFRhy French France hybrid QWERTZ semiautomatic keyboard layout
+                             kbfrFRhz French France hybrid QWERTY semiautomatic keyboard layout
+                             kbfrFRr  French France remapped semiautomatic keyboard layout
+                             kbfrFRs  French France semiautomatic keyboard layout
+                             kbfrPFs  French Polynesia semiautomatic keyboard layout
+               Code licence: Apache 2.0
+           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
+           Non-code licence: CC-BY 4.0
+       Non-code licence URL: https://creativecommons.org/licenses/by/4.0/deed.fr
+              Email address: dev@dispoclavier.net
+
+   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
+     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
+
+               Installation: In /usr/share/X11/xkb/rules/evdev.xml
+                             add the lines enclosed in this file 
+                             before the closing </layoutList> tag.
+                             The change takes effect when reopening a session.
+
+             Uninstallation: Delete those lines.
+-->
+<xkbConfigRegistry version="1.1">
+
+	<layoutList>
+
+
+		<layout><!--dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer)-->
+			<configItem><!--La disposition par défaut dans dispocla est "kbfrFRs".-->
+				<name>dispocla</name><!--un fichier ajouté dans /usr/share/X11/xkb/symbols/-->
+				<shortDescription>fr</shortDescription><!--nom de l’icône [Fr] dans la barre d’état-->
+				<description>Français France semi-automatique</description><!--pour le menu du commutateur-->
+				<languageList><!--non exhaustive ; 128 exemples de langues prises en charge, codes ISO 639-3-->
+					<iso639Id>aar</iso639Id><!--afar (Djibouti, Érythrée, Éthiopie)-->
+					<iso639Id>ajg</iso639Id><!--aja-gbe (Bénin, Togo)-->
+					<iso639Id>aqd</iso639Id><!--dogon ampari (Mali)-->
+					<iso639Id>ayb</iso639Id><!--ayizo-gbe (Bénin)-->
+					<iso639Id>bam</iso639Id><!--bambara (Mali)-->
+					<iso639Id>bba</iso639Id><!--bariba, baatonum (Bénin, Nigéria)-->
+					<iso639Id>bci</iso639Id><!--baoulé (Côte d’Ivoire)-->
+					<iso639Id>beh</iso639Id><!--byali, biali (Bénin, Burkina Faso, Togo)-->
+					<iso639Id>bfo</iso639Id><!--birifor, malba (Burkina Faso)-->
+					<iso639Id>bib</iso639Id><!--bissa (Burkina Faso)-->
+					<iso639Id>blo</iso639Id><!--anii (Bénin, Togo)-->
+					<iso639Id>bmq</iso639Id><!--bomu (Burkina Faso, Mali)-->
+					<iso639Id>bof</iso639Id><!--bolon (Burkina Faso)-->
+					<iso639Id>boo</iso639Id><!--bozo de Tiemacɛwɛ (Mali)-->
+					<iso639Id>box</iso639Id><!--bwamu, bouamou (Burkina Faso)-->
+					<iso639Id>boz</iso639Id><!--bozo de Tiéyaxo (Mali)-->
+					<iso639Id>bre</iso639Id><!--breton (France)-->
+					<iso639Id>bul</iso639Id><!--bulgare (Bulgarie)-->
+					<iso639Id>bwj</iso639Id><!--bwamu laa laa (Burkina Faso)-->
+					<iso639Id>bwy</iso639Id><!--bwamu cwi (Burkina Faso)-->
+					<iso639Id>bze</iso639Id><!--bozo de Jenaama (Mali)-->
+					<iso639Id>bzx</iso639Id><!--bozo d’Hainyaxo (Mali)-->
+					<iso639Id>cat</iso639Id><!--catalan (Espagne)-->
+					<iso639Id>ces</iso639Id><!--tchèque (Tchéquie)-->
+					<iso639Id>cli</iso639Id><!--chakali (Ghana)-->
+					<iso639Id>cme</iso639Id><!--cerma (Burkina Faso)-->
+					<iso639Id>crs</iso639Id><!--créole seychellois (Seychelles)-->
+					<iso639Id>cym</iso639Id><!--gallois (Royaume Uni)-->
+					<iso639Id>dag</iso639Id><!--dagbani (Ghana)-->
+					<iso639Id>dan</iso639Id><!--danois (Danemark)-->
+					<iso639Id>dba</iso639Id><!--bangime (Mali)-->
+					<iso639Id>dbt</iso639Id><!--dogon ben tey (Mali)-->
+					<iso639Id>ddn</iso639Id><!--dendi (Bénin)-->
+					<iso639Id>dds</iso639Id><!--dogon donno so (Mali)-->
+					<iso639Id>deu</iso639Id><!--allemand (Allemagne, Autriche, Suisse)-->
+					<iso639Id>dga</iso639Id><!--dagari (Ghana)-->
+					<iso639Id>dgd</iso639Id><!--dagaari dioula (Burkina Faso, Ghana)-->
+					<iso639Id>dgi</iso639Id><!--dagara du Nord (Burkina Faso)-->
+					<iso639Id>dje</iso639Id><!--zarma (Bénin, Burkina Faso, Mali, Niger, Nigéria)-->
+					<iso639Id>djm</iso639Id><!--dogon jamsay (Mali)-->
+					<iso639Id>dmb</iso639Id><!--dogon mombo (Mali)-->
+					<iso639Id>dop</iso639Id><!--lokpa (Bénin, Togo)-->
+					<iso639Id>dos</iso639Id><!--dogosé (Burkina Faso)-->
+					<iso639Id>dti</iso639Id><!--dogon ana tinga (Mali)-->
+					<iso639Id>dtk</iso639Id><!--dogon tene kan (Mali)-->
+					<iso639Id>dtm</iso639Id><!--dogon tomo kan (Mali)-->
+					<iso639Id>dto</iso639Id><!--dogon tommo so (Mali)-->
+					<iso639Id>dts</iso639Id><!--dogon toro so (Mali)-->
+					<iso639Id>dtt</iso639Id><!--dogon toro tegu (Mali)-->
+					<iso639Id>dtu</iso639Id><!--dogon tebul ure (Mali)-->
+					<iso639Id>dym</iso639Id><!--dogon yanda dom (Mali)-->
+					<iso639Id>dyu</iso639Id><!--dioula (Burkina Faso, Côte d’Ivoire, Mali)-->
+					<iso639Id>eng</iso639Id><!--anglais (États-Unis, Royaume Uni)-->
+					<iso639Id>est</iso639Id><!--estonien (Estonie)-->
+					<iso639Id>eus</iso639Id><!--basque (Espagne)-->
+					<iso639Id>ewe</iso639Id><!--éwé (Bénin, Ghana, Togo)-->
+					<iso639Id>fan</iso639Id><!--fang (Cameroun, Congo-Brazzaville, Gabon, Guinée-Équatoriale)-->
+					<iso639Id>fin</iso639Id><!--finnois (Finlande)-->
+					<iso639Id>fod</iso639Id><!--foodo (Bénin)-->
+					<iso639Id>fon</iso639Id><!--fon (Bénin)-->
+					<iso639Id>fra</iso639Id><!--français (Belgique, Burkina Faso, Canada, France, Francophonie, Mali, Suisse)-->
+					<iso639Id>ful</iso639Id><!--peul, fulfulde (Burkina Faso, Cameroun, Gambie, Ghana, Guinée, Mali, Mauritanie, Niger, Nigéria, République centrafricaine, Sénégal, Sierra Leone, Soudan, Tchad)-->
+					<iso639Id>gla</iso639Id><!--gaélique écossais (Royaume Uni)-->
+					<iso639Id>gle</iso639Id><!--irlandais (Irlande)-->
+					<iso639Id>god</iso639Id><!--godié (Côte d’Ivoire)-->
+					<iso639Id>gsw</iso639Id><!--alémanique suisse ou alsacien (France, Suisse)-->
+					<iso639Id>gur</iso639Id><!--farefare (Burkina Faso, Ghana)-->
+					<iso639Id>guw</iso639Id><!--gun-gbe (Bénin, Nigéria, Togo)-->
+					<iso639Id>gux</iso639Id><!--gurmanchéma (Burkina Faso)-->
+					<iso639Id>hau</iso639Id><!--haoussa (Niger, Nigéria)-->
+					<iso639Id>hrv</iso639Id><!--croate (Croatie)-->
+					<iso639Id>hun</iso639Id><!--hongrois (Hongrie, Slovénie)-->
+					<iso639Id>ita</iso639Id><!--italien (Italie, Slovénie)-->
+					<iso639Id>kau</iso639Id><!--kanouri (Nigéria)-->
+					<iso639Id>kbp</iso639Id><!--kabiyè (Togo)-->
+					<iso639Id>kdh</iso639Id><!--tem (Bénin, Ghana, Togo)-->
+					<iso639Id>kin</iso639Id><!--kinyarwanda (Rwanda)-->
+					<iso639Id>kon</iso639Id><!--kikongo (Angola, Congo-Brazzaville, Congo-Kinshasa)-->
+					<iso639Id>ktu</iso639Id><!--kituba (Congo-Brazzaville, Congo-Kinshasa)-->
+					<iso639Id>kus</iso639Id><!--kusaal (Burkina Faso, Ghana, Togo)-->
+					<iso639Id>lav</iso639Id><!--letton (Lettonie)-->
+					<iso639Id>lin</iso639Id><!--lingala (Angola, Congo-Brazzaville, Congo-Kinshasa)-->
+					<iso639Id>lit</iso639Id><!--lituanien (Lituanie)-->
+					<iso639Id>lob</iso639Id><!--lobiri (Burkina Faso, Côte d’Ivoire, Ghana)-->
+					<iso639Id>man</iso639Id><!--mandinka (Guinée)-->
+					<iso639Id>maw</iso639Id><!--mamprusi (Ghana)-->
+					<iso639Id>mey</iso639Id><!--hassanya (Algérie, Mali, Maroc, Mauritanie, Niger, Sahara occidental, Sénégal)-->
+					<iso639Id>mkw</iso639Id><!--kituba (Congo-Brazzaville, Congo-Kinshasa)-->
+					<iso639Id>mlg</iso639Id><!--malgache (Madagascar)-->
+					<iso639Id>mlq</iso639Id><!--malinké de l’Ouest (Gambie, Guinée, Mali, Sénégal)-->
+					<iso639Id>mlt</iso639Id><!--maltais (Malte)-->
+					<iso639Id>mnk</iso639Id><!--mandinka (Gambie, Guinée, Guinée-Bissau, Sénégal)-->
+					<iso639Id>mos</iso639Id><!--mooré (Bénin, Burkina Faso, Côte d’Ivoire, Ghana, Togo)-->
+					<iso639Id>mql</iso639Id><!--mbèlimè (Bénin)-->
+					<iso639Id>myk</iso639Id><!--sénoufo-mamara (Mali)-->
+					<iso639Id>nfr</iso639Id><!--nafaanra (Ghana)-->
+					<iso639Id>nld</iso639Id><!--néerlandais (Pays-Bas)-->
+					<iso639Id>nor</iso639Id><!--norvégien (Norvège)-->
+					<iso639Id>ntm</iso639Id><!--naténi (Bénin)-->
+					<iso639Id>pil</iso639Id><!--yom (Bénin, Mali, Nigéria)-->
+					<iso639Id>pol</iso639Id><!--polonais (Pologne)-->
+					<iso639Id>por</iso639Id><!--portugais (Argentine, Brésil, Portugal)-->
+					<iso639Id>prv</iso639Id><!--provençal (France)-->
+					<iso639Id>rom</iso639Id><!--rromani (Roumanie, Bulgarie, Russie, Serbie-et-Monténégro, Slovaquie, Turquie, Hongrie, France, …)-->
+					<iso639Id>ron</iso639Id><!--roumain (Roumanie)-->
+					<iso639Id>run</iso639Id><!--kirundi (Burundi, Congo-Kinshasa, Ouganda, Rwanda, Tanzanie)-->
+					<iso639Id>sag</iso639Id><!--sango (Congo-Kinshasa, République centrafricaine)-->
+					<iso639Id>shz</iso639Id><!--syenara (Burkina Faso, Côte d’Ivoire, Mali)-->
+					<iso639Id>slk</iso639Id><!--slovaque (Slovaquie)-->
+					<iso639Id>slv</iso639Id><!--slovène (Slovénie)-->
+					<iso639Id>som</iso639Id><!--somali (Djibouti, Somalie)-->
+					<iso639Id>spa</iso639Id><!--espagnol (Chile, Espagne, Pérou)-->
+					<iso639Id>spp</iso639Id><!--supyiré (Mali)-->
+					<iso639Id>srp</iso639Id><!--serbe (Bosnie-Herzégovine, Croatie, Hongrie, Macédoine du Nord, Monténégro, Roumanie, Serbie)-->
+					<iso639Id>sus</iso639Id><!--soso (Guinée, Sierra Leone)-->
+					<iso639Id>swa</iso639Id><!--swahili (Congo-Kinshasa, Kenya, Ouganda, Tanzanie)-->
+					<iso639Id>swb</iso639Id><!--comorien (Comores, France)-->
+					<iso639Id>swe</iso639Id><!--suédois (Suède)-->
+					<iso639Id>tbz</iso639Id><!--ditammari (Bénin, Togo)-->
+					<iso639Id>tde</iso639Id><!--dogon tiranige diga (Mali)-->
+					<iso639Id>tfi</iso639Id><!--tofin-gbe (Bénin)-->
+					<iso639Id>tmh</iso639Id><!--tamasheq (Mali)-->
+					<iso639Id>tuz</iso639Id><!--tchourama (Burkina Faso)-->
+					<iso639Id>vag</iso639Id><!--vagla (Côte d’Ivoire, Ghana)-->
+					<iso639Id>wol</iso639Id><!--wolof (Gambie, Mauritanie, Sénégal)-->
+					<iso639Id>wwa</iso639Id><!--yoabou (Bénin)-->
+					<iso639Id>xsm</iso639Id><!--kasem (Burkina Faso, Ghana)-->
+					<iso639Id>yor</iso639Id><!--yorouba (Bénin, Nigéria, Togo)-->
+				</languageList>
+			</configItem>
+			<variantList>
+				<variant>
+					<configItem>
+						<name>kbbrFRs</name><!--disposition particulière pour langue de France-->
+						<shortDescription>br</shortDescription><!--icône [Br] remplaçant [Fr]-->
+						<description>Breton et français semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrPFs</name><!--disposition particulière facilitant le macron-->
+						<description>Polynésie Française semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrAFs</name><!--disposition particulière facilitant le bambara-->
+						<description>Afrique francophone semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrBEs</name>
+						<description>Français Belgique semi-automatique</description>
+					</configItem>
+				</variant><!--
+				<variant>
+					<configItem>
+						<name>kbfrCAms</name>
+						<description>Canadien multilingue semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrCAs</name>
+						<description>Français Canada semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrCHs</name>
+						<description>Français Suisse semi-automatique</description>
+					</configItem>
+				</variant>-->
+				<variant><!--Les 4 variantes ci-après comportent des lettres redisposées;-->
+					<configItem><!--conçues en symbiose avec l’AZERTY, changements minimaux-->
+						<name>kbfrFRr</name><!--semi-automatique pour l’espacement elle aussi-->
+						<description>Français redisposé semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrFRhw</name><!--Lettres redisposées, raccourcis Contrôle en AZERTY-->
+						<description>Français hybride AZERTY semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrFRhz</name><!--Lettres redisposées, raccourcis Contrôle en QWERTY-->
+						<description>Français hybride QWERTY semi-automatique</description>
+					</configItem>
+				</variant>
+				<variant>
+					<configItem>
+						<name>kbfrFRhy</name><!--Lettres redisposées, raccourcis Contrôle en QWERTZ-->
+						<description>Français hybride QWERTZ semi-automatique</description>
+					</configItem>
+				</variant>
+			</variantList>
+		</layout><!--FIN_dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer)-->
+
+
+	</layoutList>
+
+</xkbConfigRegistry>
