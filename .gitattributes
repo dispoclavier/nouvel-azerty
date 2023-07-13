@@ -1,0 +1,7 @@
+# Include YAML in stats for consistency.
+# Courtesy https://github.com/github-linguist/linguist/issues/4848
+
+*.yml linguist-detectable=true
+*.yml linguist-language=YAML
+
+# Beside `.xml`, file extensions are used for syntactic highlighting.
