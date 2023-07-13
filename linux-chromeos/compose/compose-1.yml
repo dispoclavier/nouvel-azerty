@@ -1,5 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-07-13T1345+0200
+#                       Date: 2023-07-13T1701+0200
+#                    Version:
+<UEFA0>                     : "version 1.0.0 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -9,8 +11,6 @@
 #
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
-#                    Version: The number in the string below for ease of maintenance:
-<UEFA0>                     : "version 1.0.0 "
 #                      Maxim: Simplify typewriting, not French.
 #                    Maxime : Simplifier la dactylographie, pas le français.
 #        English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
