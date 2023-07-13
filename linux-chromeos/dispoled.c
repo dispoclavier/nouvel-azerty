@@ -1,4 +1,4 @@
-//                       Date: 2023-07-10T1740+0200
+//                       Date: 2023-07-13T1714+0200
 //        Operating file name: dispoled
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -8,7 +8,6 @@
 //
 //               Project name: Dispoclavier
 //                Project URL: https://dispoclavier.com
-//                    Version: 1.0.0
 //                      Maxim: Simplify typewriting, not French.
 //                    Maxime : Simplifier la dactylographie, pas le français.
 //        English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
