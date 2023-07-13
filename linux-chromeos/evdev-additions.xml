@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2023-07-10T1914+0200
+                       Date: 2023-07-13T1717+0200
           Partial file name: evdev-additions.xml
          Partial added date: 2023-07-10T1751+0200
                    Encoding: UTF-8
@@ -11,7 +11,6 @@
 
                Project name: Dispoclavier
                 Project URL: https://dispoclavier.com
-                    Version: 1.0.0
                       Maxim: Simplify typewriting, not French.
                     Maxime : Simplifier la dactylographie, pas le français.
         English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
