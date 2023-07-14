@@ -1,4 +1,4 @@
-//                       Date: 2023-07-13T1716+0200
+//                       Date: 2023-07-14T0625+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -122,10 +122,10 @@ default xkb_keycodes "evdev" {
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on right Windows for desktop.
 
-        <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
-        <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
-  //    <RWIN> = 134;  // was <RWIN>   Common mappings for desktop and laptop.
-  //    <COMP> = 135;  // was <COMP>   Common mappings for desktop and laptop.
+  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
+  //    <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
+        <RWIN> = 134;  // was <RWIN>   Common mappings for desktop and laptop.
+        <COMP> = 135;  // was <COMP>   Common mappings for desktop and laptop.
 
   // Other left-hand functional keys:
 
