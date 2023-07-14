@@ -1,5 +1,5 @@
-                      Date : 2023-07-14T0629+0200
-                   Version : 1.0.1
+                      Date : 2023-07-14T1556+0200
+                   Version : 1.0.2
             Nom du produit : Nouvel AZERTY
         Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -92,7 +92,7 @@
 
 
 
-  Mode d’emploi sous Linux et sous ChromeOS :
+  Mode d’emploi sous Linux et sous ChromeOS
 
   1  Ouvrir un terminal dans le dossier `Home` et enregistrer la disposition actuelle dans normal.xkb :
          xkbcomp :0 normal.xkb
@@ -108,7 +108,7 @@
 
   4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-ChromeOS-v
-     et se termine par le numéro de version, par exemple « 1.0.1 », et l’extension « .zip ».
+     et se termine par le numéro de version, par exemple « 1.0.2 », et l’extension « .zip ».
 
   5  Décompresser le dossier téléchargé.
 
@@ -124,6 +124,8 @@
 
   9  Activer le nouvel AZERTY dans le terminal ouvert au point 1 :
          xkbcomp nouvel-azerty.xkb :0
+
+  Veiller à ce que la méthode d’entrée soit XIM.
 
   Le nouvel AZERTY peut maintenant être testé.
 
