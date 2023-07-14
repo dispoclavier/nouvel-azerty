@@ -1,4 +1,4 @@
-//                       Date: 2023-07-14T0627+0200
+//                       Date: 2023-07-14T1511+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -37,11 +37,20 @@
 //     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 //
 //               Installation: 1. Add this file in /usr/share/X11/xkb/symbols/
-//                             2. In /usr/share/X11/xkb/rules/evdev.xml
-//                                add the lines contained in the file
+//                             2. In /usr/share/X11/xkb/rules/evdev
+//                                comment out the line
+//                                    *		*		=	+%l[2]%(v[2]):2
+//                                That line causes to override the second group with
+//                                the default, en_US in case of fr_FR.
+//                                This behavior is deactivated by commenting out that
+//                                line, fixing the second group for all locales.
+//                                Courtesy @Salim on unix.stackexchange.com
+//                                https://unix.stackexchange.com/questions/419042/xkb-modify-layout-to-multi-group-with-mode-switch
+//                             3. In /usr/share/X11/xkb/rules/evdev.xml
+//                                add the lines enclosed in the file
 //                                    evdev-additions.xml
 //                                before the `</layoutList>` closing tag.
-//                             The change takes effect when reopening a session.
+//                             The changes take effect when reopening a session.
 //
 //             Uninstallation: Delete those lines prior to removing the file.
 //
