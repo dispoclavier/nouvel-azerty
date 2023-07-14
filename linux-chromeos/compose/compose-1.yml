@@ -480,19 +480,19 @@
 #
 #   Variant names:
 #
-<UEFA1> : "Français France semi-automatique – kbfrFRs "
-<UEFA2> : "Breton et français semi-automatique – kbbrFRs "
-<UEFA3> : "Polynésie française semi-automatique – kbfrPFs "
-<UEFA4> : "Afrique francophone semi-automatique – kbfrAFs "
-<UEFA5> : "Français Belgique semi-automatique – kbfrBEs "
-<UEFA6> : "Canadien multilingue semi-automatique – kbfrCAms "
-<UEFA7> : "Français Canada semi-automatique – kbfrCAs "
-<UEFA8> : "Français Suisse semi-automatique – kbfrCHs "
+<UEFA1> : "Français France disposition de clavier semi-automatique – kbfrFRs "
+<UEFA2> : "Breton et français disposition de clavier semi-automatique – kbbrFRs "
+<UEFA3> : "Polynésie française disposition de clavier semi-automatique – kbfrPFs "
+<UEFA4> : "Afrique francophone disposition de clavier semi-automatique – kbfrAFs "
+<UEFA5> : "Français Belgique disposition de clavier semi-automatique – kbfrBEs "
+<UEFA6> : "Canadien multilingue disposition de clavier semi-automatique – kbfrCAms "
+<UEFA7> : "Français Canada disposition de clavier semi-automatique – kbfrCAs "
+<UEFA8> : "Français Suisse disposition de clavier semi-automatique – kbfrCHs "
 <UEFA9> : ""
-<UEFAA> : "Français redisposé semi-automatique – kbfrFRr "
-<UEFAB> : "Français hybride AZERTY semi-automatique – kbfrFRhw "
-<UEFAC> : "Français hybride QWERTY semi-automatique – kbfrFRhz "
-<UEFAD> : "Français hybride QWERTZ semi-automatique – kbfrFRhy "
+<UEFAA> : "Français redisposé disposition de clavier semi-automatique – kbfrFRr "
+<UEFAB> : "Français hybride AZERTY disposition de clavier semi-automatique – kbfrFRhw "
+<UEFAC> : "Français hybride QWERTY disposition de clavier semi-automatique – kbfrFRhz "
+<UEFAD> : "Français hybride QWERTZ disposition de clavier semi-automatique – kbfrFRhy "
 <UEFAE> : ""
 # <UEFAF> : See # # Unicode prefix
 #
