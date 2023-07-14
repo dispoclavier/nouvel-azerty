@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2023-07-13T1717+0200
+                       Date: 2023-07-14T1933+0200
           Partial file name: evdev-additions.xml
          Partial added date: 2023-07-10T1751+0200
                    Encoding: UTF-8
@@ -55,7 +55,7 @@
 			<configItem><!--La disposition par défaut dans dispocla est "kbfrFRs".-->
 				<name>dispocla</name><!--un fichier ajouté dans /usr/share/X11/xkb/symbols/-->
 				<shortDescription>fr</shortDescription><!--nom de l’icône [Fr] dans la barre d’état-->
-				<description>Français France semi-automatique</description><!--pour le menu du commutateur-->
+				<description>Français France disposition de clavier semi-automatique</description><!--pour le menu du commutateur-->
 				<languageList><!--non exhaustive ; 128 exemples de langues prises en charge, codes ISO 639-3-->
 					<iso639Id>aar</iso639Id><!--afar (Djibouti, Érythrée, Éthiopie)-->
 					<iso639Id>ajg</iso639Id><!--aja-gbe (Bénin, Togo)-->
@@ -192,67 +192,67 @@
 					<configItem>
 						<name>kbbrFRs</name><!--disposition particulière pour langue de France-->
 						<shortDescription>br</shortDescription><!--icône [Br] remplaçant [Fr]-->
-						<description>Breton et français semi-automatique</description>
+						<description>Breton et français disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrPFs</name><!--disposition particulière facilitant le macron-->
-						<description>Polynésie Française semi-automatique</description>
+						<description>Polynésie Française disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrAFs</name><!--disposition particulière facilitant le bambara-->
-						<description>Afrique francophone semi-automatique</description>
+						<description>Afrique francophone disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrBEs</name>
-						<description>Français Belgique semi-automatique</description>
+						<description>Français Belgique disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant><!--
 				<variant>
 					<configItem>
 						<name>kbfrCAms</name>
-						<description>Canadien multilingue semi-automatique</description>
+						<description>Canadien multilingue disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrCAs</name>
-						<description>Français Canada semi-automatique</description>
+						<description>Français Canada disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrCHs</name>
-						<description>Français Suisse semi-automatique</description>
+						<description>Français Suisse disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>-->
 				<variant><!--Les 4 variantes ci-après comportent des lettres redisposées;-->
 					<configItem><!--conçues en symbiose avec l’AZERTY, changements minimaux-->
 						<name>kbfrFRr</name><!--semi-automatique pour l’espacement elle aussi-->
-						<description>Français redisposé semi-automatique</description>
+						<description>Français redisposé disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrFRhw</name><!--Lettres redisposées, raccourcis Contrôle en AZERTY-->
-						<description>Français hybride AZERTY semi-automatique</description>
+						<description>Français hybride AZERTY disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrFRhz</name><!--Lettres redisposées, raccourcis Contrôle en QWERTY-->
-						<description>Français hybride QWERTY semi-automatique</description>
+						<description>Français hybride QWERTY disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
 						<name>kbfrFRhy</name><!--Lettres redisposées, raccourcis Contrôle en QWERTZ-->
-						<description>Français hybride QWERTZ semi-automatique</description>
+						<description>Français hybride QWERTZ disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 			</variantList>
