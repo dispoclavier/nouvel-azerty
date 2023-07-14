@@ -1,4 +1,4 @@
-//                       Date: 2023-07-14T1511+0200
+//                       Date: 2023-07-14T1631+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -45,7 +45,7 @@
 //                                This behavior is deactivated by commenting out that
 //                                line, fixing the second group for all locales.
 //                                Courtesy @Salim on unix.stackexchange.com
-//                                https://unix.stackexchange.com/questions/419042/xkb-modify-layout-to-multi-group-with-mode-switch
+//                                https://unix.stackexchange.com/a/420126
 //                             3. In /usr/share/X11/xkb/rules/evdev.xml
 //                                add the lines enclosed in the file
 //                                    evdev-additions.xml
