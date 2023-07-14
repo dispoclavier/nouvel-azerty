@@ -1,0 +1,139 @@
+                      Date : 2023-07-13T2255+0200
+                   Version : 1.0.0
+            Nom du produit : Nouvel AZERTY
+        Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
+          Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
+             Documentation : https://dispoclavier.com/nouvel-azerty/
+
+             Nom du projet : Dispoclavier
+             URL du projet : https://dispoclavier.com
+                    Maxime : Simplifier la dactylographie, pas le français.
+               Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
+             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
+    Identifiants réguliers : kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
+ Identifiants descriptions : kbfrFRs  Français France disposition de clavier semi-automatique
+                             kbbrFRs  Breton et français disposition de clavier semi-automatique
+                             kbfrPFs  Polynésie française disposition de clavier semi-automatique
+                             kbfrAFs  Afrique francophone disposition de clavier semi-automatique
+                             kbfrBEs  Français Belgique disposition de clavier semi-automatique
+                             kbfrFRr  Français redisposé disposition de clavier semi-automatique
+                             kbfrFRhw Français hybride AZERTY disposition de clavier semi-automatique
+                             kbfrFRhz Français hybride QWERTY disposition de clavier semi-automatique
+                             kbfrFRhy Français hybride QWERTZ disposition de clavier semi-automatique
+                   À venir : kbfrCAms Canadien multilingue disposition de clavier semi-automatique
+                   À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique
+                   À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique
+              Licence code : Apache 2.0
+          URL licence code : https://www.apache.org/licenses/LICENSE-2.0
+          Licence non-code : CC-BY 4.0
+      URL Licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
+                   Contact : dev@dispoclavier.net
+
+
+
+  Dispositions
+
+  • Les fichiers `nouvel-azerty.xkb`, `nouvel-azerty-ansi.xkb` et `nouvel-azerty-bksp.xkb`
+    sont identiques aux fichiers `kbfrFRs.xkb`, `kbfrFRs-ansi.xkb` et `kbfrFRs-bksp.xkb`.
+
+  • Les fichiers dont les noms commencent par `kbbrFRs` contiennent une disposition optimisée pour
+    la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
+
+  • Les fichiers dont les noms commencent par `kbfrPFs` contiennent une disposition optimisée pour
+    les langues de Polynésie française, avec une touche morte macron sur la touche du symbole =.
+    La touche morte accent grave est sur AltGr + accent circonflexe.
+
+  • Les fichiers dont les noms commencent par `kbfrAFs` contiennent une disposition optimisée pour
+    les langues d’Afrique, en particulier le bambara dans plusieurs pays d’Afrique francophone,
+    avec le ɛ sur le 1, et le ɔ sur le 8.
+
+  • Les fichiers dont les noms commencent par `kbfrBEs` contiennent une disposition optimisée pour
+    la Belgique, avec le symbole § sur le 6, le tiret du 6 sur le 8, et le tiret du 8 sur Maj + 8.
+    Espérant que ce compromis est acceptable en échange des fonctionnalités du nouvel AZERTY.
+
+  • Les fichiers dont les noms commencent par `kbfrFRr` contiennent une disposition optimisée pour
+    une saisie plus ergonomique de l’alphabet de base et d’une partie des lettres diacritées, afin
+    que les exigences en matière d’ergonomie n’obligent pas à renoncer aux fonctionnalités prises
+    en charge par le nouvel AZERTY.
+
+  • Les fichiers dont les noms commencent par `kbfrFRh` contiennent cette disposition ergonomique
+    avec les raccourcis clavier en AZERTY, en QWERTY ou en QWERTZ, selon la lettre à gauche de X.
+
+
+
+  Options de disposition
+
+  Outre la disposition standard et ses variantes, deux optimisations optionnelles sont disponibles.
+
+  • Pour les claviers de portable sans touche ISO entre Maj gauche et W, en particulier ceux
+    de marque HP commercialisés en France, la touche ISO se trouve sur Contrôle droite.
+    Or la touche ISO sert de nouvelle modificatrice AltFr, qui doit être située à gauche
+    pour que les grandes ponctuations, toutes à droite, et le pavé numérique graphique soient
+    utilisables dans de bonnes conditions.
+
+    Remettre AltFr à gauche est possible en permutant les touches ISO et Verrouillage Capitales.
+    C’est ce qui est fait dans les variantes avec le suffixe « -ansi ».
+
+  • Selon une idée originale du Pʳ Yves Neuville, la touche Retour Arrière est mieux en bas.
+    Avec Retour Arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
+    de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Retour Arrière
+    sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, mieux
+    vaut la désactiver.
+
+    Les variantes avec le suffixe « -bksp » ont Backspace sur Windows droite, et la touche
+    Menu est désactivée en lui assignant la fonctionnalité de la touche d’Arrêt Défilement
+    afin d’éviter l’ouverture accidentelle du menu contextuel.
+
+
+
+  Témoin lumineux
+
+  Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode numérique.
+
+
+
+  Mode d’emploi sous Linux et sous ChromeOS :
+
+  1  Ouvrir un terminal dans le dossier `Home` et enregistrer la disposition actuelle dans normal.xkb :
+         xkbcomp :0 normal.xkb
+     Ce fichier sert uniquement à revenir à la disposition actuelle sans fermer la session.
+
+  2  Visiter https://github.com/dispoclavier/nouvel-azerty
+     Le dossier https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/compose
+       visualise le contenu des séquences et des touches mortes en deux parties ;
+     Le lien https://dispoclavier.com/nouvel-azerty/ ouvre la page d’accueil du nouvel AZERTY.
+
+  3  Aller sur la page de la version courante :
+         https://github.com/dispoclavier/nouvel-azerty/releases/latest 
+
+  4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
+         Nouvel-AZERTY-Linux-ChromeOS-v
+     et se termine par le numéro de version, par exemple « 1.0.0 », et l’extension « .zip ».
+
+  5  Décompresser le dossier téléchargé.
+
+  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` vers le dossier `Home`.
+
+  7  Si le dossier `Home` contient déjà un fichier invisible `.XCompose`,
+     ajouter le contenu du fichier `Compose.yml` au début ou à la fin de celui-ci.
+     Sinon, renommer `Compose.yml` en `.XCompose` et décommenter éventuellement la ligne
+         include "%L"
+     si les règles de `en_US.UTF-8/Compose` doivent continuer de s’appliquer.
+
+  8  Fermer et rouvrir les applications avec saisie de texte.
+
+  9  Activer le nouvel AZERTY dans le terminal ouvert au point 1 :
+         xkbcomp nouvel-azerty.xkb :0
+
+  Le nouvel AZERTY peut maintenant être testé.
+
+  La commande pour désactiver le nouvel AZERTY et réactiver la disposition précédente est :
+      xkbcomp normal.xkb :0
+  grâce au fichier mis en place au point 1.
+
+
+
+  Critiques, suggestions et retours d’expérience
+
+  N’hésitez pas à envoyer toutes les critiques, suggestions d’amélioration et retours d’expérience
+  à l’adresse dev@dispoclavier.net. Merci d’avance de tous les retours.
