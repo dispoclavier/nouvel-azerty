@@ -4285,28 +4285,31 @@
 #   *dead_turned (~70); inverted (20) or sideways (8) on double press
 #
 #
-#   Dead keys not included in keysymdef.h
+# # Dead keys not included in keysymdef.h
 #
 #   Some additional dead keys proposed for mapping on an fr-FR keyboard are listed below.
 #   The characters defined as output below are the dead characters used on other systems.
 #
-<UEFD0>      : "①" # *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
-<UEFD1>      : "^" # *dead_superscript, phonetics / abbreviation indicatrs. Multi_key: ¦^
-                   # As abbreviation indicators, superscripts need to be on live keys.
-                   # dead_circumflex is not ¦^ but ¦< in new-school Compose.
-<UEFD2>      : "_" # *dead_subscript is required for phonetics as it traditionally
-                   # also includes small caps.
-<UEFD3>      : "ẻ" # *dead_abovehook, required for disambiguation with dead_hook. Multi_key: ¦]
-<UEFD4>      : "ɖ" # *dead_retroflexhook, required for disambiguation, consistent with the
-                   # new-school Compose scheme: benefits from brace symmetry. Multi_key: ¦}
-<UEFD5>      : "ᴚ" # *dead_turned, technically easiest transform. ~70 instances. Multi_key: ¦%
-                   # double-press: inverted (20 instances) or sideways (8 letters) in Latin;
-                   # inverted and sideways have an empty intersection. Multi_key: ¦%
-<UEFD6>      : "ᴙ" # *dead_reversed, second-most frequent transform. ~50 (Latin). Multi_key: ¦\
-<UEFD7>      : "⚐" # *dead_equal — The Regional Indicator Symbols dead key. Multi_key: ¦=
+#   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
+#   <UEFD1> : "^"   *dead_superscript, phonetics / abbreviation indicatrs. Multi_key: ¦^
+#                   As abbreviation indicators, superscripts need to be on live keys.
+#                   dead_circumflex is not ¦^ but ¦< in new-school Compose.
+#   <UEFD2> : "_"   *dead_subscript is required for phonetics as it traditionally
+#                   also includes small caps.
+#   <UEFD3> : "ẻ"   *dead_abovehook, required for disambiguation with dead_hook. Multi_key: ¦]
+#   <UEFD4> : "ɖ"   *dead_retroflexhook, required for disambiguation, consistent with the
+#                   new-school Compose scheme: benefits from brace symmetry. Multi_key: ¦}
+#   <UEFD5> : "ᴚ"   *dead_turned, technically easiest transform. ~70 instances. Multi_key: ¦%
+#                   double-press: inverted (20 instances) or sideways (8 letters) in Latin;
+#                   inverted and sideways have an empty intersection. Multi_key: ¦%
+#   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform. ~50 (Latin). Multi_key: ¦\
+#   <UEFD7> : "⚐"   *dead_equal — The Regional Indicator Symbols dead key. Multi_key: ¦=
 #
 #
 # # Legacy dead keys
+#
+#   <UEFD8> : "~"   *dead_legacytilde
+#   <UEFD9> : "`"   *dead_legacygrave
 #
 #   Two legacy dead keys are also required for the backward compatible tilde and grave accent
 #   dead keys on Shift + AltGr + B02 and B07 respectively. While dead key behavior is updated
@@ -4315,10 +4318,8 @@
 #   on these upper-row, level-4 positions designed for a seamless keyboard layout transition.
 #   These dead keys have limited functionality, no Multi_key equivalents, and output ASCII on
 #   hitting space, and ASCII twice on double press, like it works on Windows.
-#
-<UEFD8>      : "~" # *dead_legacytilde
-<UEFD9>      : "`" # *dead_legacygrave
 #   2022-12-20T2238+0100
+#
 #
 #   DEAD_LEGACYTILDE
 #   *dead_legacytilde UEFD8
@@ -4341,6 +4342,7 @@
 <UEFD8>                                                                              <y> : "ỹ" U1EF9 # LATIN SMALL LETTER Y WITH TILDE
 <UEFD8>                                                                          <space> : "~" U007E # TILDE
 <UEFD8>                                                                          <UEFD8> : "~~" # TILDE twice
+#
 #
 #   DEAD_LEGACYGRAVE
 #   *dead_legacygrave UEFD9
