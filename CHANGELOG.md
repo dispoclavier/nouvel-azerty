@@ -1,12 +1,15 @@
 # Journal des modifications
 
+## Projet
+
+
 ## 1.0.2 (2023-07-14)
 
-* dispocla.cpp - Ajouter le correctif à faire dans rules/evdev.
+* dispocla.cpp - Ajouter le correctif à faire dans rules/evdev. (https://github.com/dispoclavier/nouvel-azerty/commit/afb2e7707351092a70483116c64be9c8a05b5044)
 
 ## 1.0.1 (2023-07-14)
 
-* evdev.c - Régler la touche Retour arrière en mode par défaut.
+* evdev.c - Régler la touche Retour arrière en mode par défaut. (https://github.com/dispoclavier/nouvel-azerty/commit/616da804a22914e68665f32d522c7c3c074fc55d)
 
 ## 1.0.0 (2023-07-14)
 
