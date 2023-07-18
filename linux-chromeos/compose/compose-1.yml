@@ -567,8 +567,8 @@
 #
 # # Notes for maintenance
 #
-#   Multi_key sequences are configured below each dead key sequence and have
-#   been added by a script distributed as `generate-multikey.pl`.
+#   Most dead key sequences have their Multi_key equivalent added below by
+#   `generate-multikey.pl` run by `multikey.sh`.
 #
 #   The colon alignment in column 90 is based on longest Multi_key sequences,
 #   in terms of string length. In VSCode a zoom factor of -0.7 is then needed
