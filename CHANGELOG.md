@@ -1,6 +1,8 @@
 # Journal des modifications
 
+## 1.0.3 (projet)
 
+* compose-1.yml - Corriger les séquences des opérateurs invisibles. ([5a7d1c8](https://github.com/dispoclavier/nouvel-azerty/commit/5a7d1c847cb2c9091037bf2684d85bbbd4f4d2aa))
 
 ## v1.0.2 (2023-07-14)
 
