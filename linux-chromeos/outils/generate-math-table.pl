@@ -2,12 +2,17 @@
 # 2023-07-19T1747+0200
 # 2023-07-20T0131+0200
 # 2023-07-20T1630+0200
+# 2023-07-20T2316+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based
 # on dead key sequences in `Compose.yml`.
+#
 # The input requires start and end tags.
-# Alias sequences with no-break space are skipped.
+#
+# Alias sequences with no-break space or with
+# right single quotation mark are skipped.
+#
 # The output is designed for use in WordPress.
 #
 # Using old-style file handles.
@@ -40,7 +45,7 @@ while ( my $line = <INPUT> ) {
 	}
 	if ( $math_flag ) {
 		if ( $line =~ /^</ ) {
-			unless ( $line =~ /<nobreakspace>/ ) {
+			unless ( $line =~ /<nobreakspace>/ || $line =~ /<rightsinglequotemark>/ ) {
 				$line =~ s/<Multi_key>/<¦>/g;
 				$line =~ s/<space>/<␣>/g;
 				$line =~ s/<asciicircum>/<^>/g;
@@ -51,7 +56,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<at>/<@>/g;
 				$line =~ s/<grave>/<`>/g;
 				$line =~ s/<apostrophe>/<'>/g;
-				$line =~ s/<rightsinglequotemark>/<’>/g;
 				$line =~ s/<quotedbl>/<">/g;
 				$line =~ s/<ampersand>/<&amp;>/g;
 				$line =~ s/<numbersign>/<#>/g;
