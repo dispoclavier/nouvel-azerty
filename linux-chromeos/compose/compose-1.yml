@@ -2065,6 +2065,9 @@
 #   in ≇ U2247 vs "≆" U2246. E.g. "∄" U2204, "∅" U2205, "∉" U2209.
 #
 #
+#   START_MATH
+#
+#
 # # Less or equal, greater or equal
 #
 #   The slanted variant "⩽" U2A7D and "⩾" U2A7E, preferred in French, is also
@@ -4130,6 +4133,9 @@
 <Multi_key><e><n><v><e><l><o><p><e>                                                      : "✉" U2709 # ENVELOPE LaTeX code is titlecase
 <Multi_key><L><p><a><r><e><n><g><t>                                                      : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
 <Multi_key><R><p><a><r><e><n><l><t>                                                      : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
+#
+#
+#   END_MATH
 #
 #
 #
