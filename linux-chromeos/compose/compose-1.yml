@@ -4131,8 +4131,8 @@
 <Multi_key><d><i><a><m><e><t><e><r>                                                      : "⌀" U2300 # DIAMETER LaTeX code
 <Multi_key><E><n><v><e><l><o><p><e>                                                      : "✉" U2709 # ENVELOPE LaTeX code is titlecase
 <Multi_key><e><n><v><e><l><o><p><e>                                                      : "✉" U2709 # ENVELOPE LaTeX code is titlecase
-<Multi_key><L><p><a><r><e><n><g><t>                                                      : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
-<Multi_key><R><p><a><r><e><n><l><t>                                                      : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
+<Multi_key><L><p><a><r><e><n><g><t>                                                      : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET Mix LaTeX + HTML under max 9 keysyms constraint
+<Multi_key><R><p><a><r><e><n><l><t>                                                      : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET Mix LaTeX + HTML under max 9 keysyms constraint
 #
 #
 #   END_MATH
