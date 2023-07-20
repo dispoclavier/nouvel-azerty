@@ -2214,14 +2214,14 @@
 #
 # # Invisible operators
 #
-<Multi_key><space><f>                                                                    : "⁡" U2061 # FUNCTION APPLICATION
-<Multi_key><nobreakspace><f>                                                             : "⁡" U2061 # FUNCTION APPLICATION
-<Multi_key><space><x>                                                                    : "⁢" U2062 # INVISIBLE TIMES
-<Multi_key><nobreakspace><x>                                                             : "⁢" U2062 # INVISIBLE TIMES
-<Multi_key><space><comma>                                                                : "⁣" U2063 # INVISIBLE SEPARATOR
-<Multi_key><nobreakspace><comma>                                                         : "⁣" U2063 # INVISIBLE SEPARATOR
-<Multi_key><space><plus>                                                                 : "⁤" U2064 # INVISIBLE PLUS
-<Multi_key><nobreakspace><plus>                                                          : "⁤" U2064 # INVISIBLE PLUS
+<Multi_key><space><f>                                                            <space> : "⁡" U2061 # FUNCTION APPLICATION
+<Multi_key><nobreakspace><f>                                                     <space> : "⁡" U2061 # FUNCTION APPLICATION
+<Multi_key><space><x>                                                            <space> : "⁢" U2062 # INVISIBLE TIMES
+<Multi_key><nobreakspace><x>                                                     <space> : "⁢" U2062 # INVISIBLE TIMES
+<Multi_key><space><comma>                                                        <space> : "⁣" U2063 # INVISIBLE SEPARATOR
+<Multi_key><nobreakspace><comma>                                                 <space> : "⁣" U2063 # INVISIBLE SEPARATOR
+<Multi_key><space><plus>                                                         <space> : "⁤" U2064 # INVISIBLE PLUS
+<Multi_key><nobreakspace><plus>                                                  <space> : "⁤" U2064 # INVISIBLE PLUS
 #
 #
 # # Superscript or subscript signs, symbol and punctuation
