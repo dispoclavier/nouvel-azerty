@@ -4203,6 +4203,8 @@
 <Multi_key><e><m><p><t><y><s><e><t>                                                      : "∅" U2205 # EMPTY SET
 <Multi_key><e><n><s><v><i><d><e>                                                         : "∅" U2205 # EMPTY SET French shortened name
 <Multi_key><d><i><a><m><e><t><e><r>                                                      : "⌀" U2300 # DIAMETER
+<Multi_key><d><i><a><m><egrave><t><r><e>                                                 : "⌀" U2300 # DIAMETER French
+<Multi_key><d><i><a><m><e><t><r><e>                                                      : "⌀" U2300 # DIAMETER simplified French
 <Multi_key><E><n><v><e><l><o><p><e>                                                      : "✉" U2709 # ENVELOPE TeX control has title case
 <Multi_key><e><n><v><e><l><o><p><e>                                                      : "✉" U2709 # ENVELOPE
 <Multi_key><L><p><a><r><e><n><g><t>                                                      : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
