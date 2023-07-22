@@ -32,7 +32,7 @@ my $math_flag = !1;
 my $table_header_1 = 'Symbole';
 my $table_header_2 = 'Séquence de composition';
 my $table_header_3 = 'Identifiant Unicode';
-my $line = "<figure class=\"wp-block-table alignwide math\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th colspan=\"9\" class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
+my $line = "<figure class=\"wp-block-table alignwide math\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
 print OUTPUT "$line";
 print OUTPUT "\n";
 while ( my $line = <INPUT> ) {
@@ -79,6 +79,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<semicolon>/<;>/g;
 				$line =~ s/<comma>/<,>/g;
 				$line =~ s/<period>/<.>/g;
+				$line =~ s/<egrave>/<è>/g;
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 				$line =~ s/^<(.+?)><(.+?)><(.+?)><(.+?)><(.+?)><(.+?)><(.+?)><(.+?)><(.+?)> : "(.+?)" U(....) # (.+)/<tr><td>$10<\/td><td>U+$11<\/td><td>$1$2$3$4$5$6$7$8$9<\/td><td>$12<\/td><\/tr>/;
