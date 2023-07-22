@@ -1,6 +1,6 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #                    Version:
-<UEFA0>                     : "version 1.0.2 "
+<UEFA0>                     : "version 1.0.3 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -4173,7 +4173,7 @@
 <Multi_key><minus><greater><asciitilde><backslash>                               <space> : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
 #
 #
-# # LaTeX codes  @todo Complete
+# # LaTeX codes
 #
 #   Since the maximum number of keysyms is 9, many LaTeX commands need to be
 #   truncated to make working Multi_key sequences out of them, limiting this
