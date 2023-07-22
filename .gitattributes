@@ -1,10 +1,20 @@
+## Releases
+
+# Do not package tools in released source code.
+# Courtesy https://stackoverflow.com/a/50062746
+/linux-chromeos/outils/ export-ignore
+
+
+## Language stats
+
 # Include YAML in stats for consistency.
 # Courtesy https://github.com/github-linguist/linguist/issues/4848
 # *.yml linguist-detectable=true
 # *.yml linguist-language=YAML
 # Beside `.xml`, file extensions are used for syntactic highlighting.
 
-# Exclude all files from language stats to prevent inaccuracy.
+# Exclude files from language stats to prevent inaccuracy.
+# See `/linux-chromeos/readme.md`.
 # Courtesy https://proandroiddev.com/removing-noise-from-your-github-language-stats-e96113f8183d
 *.c linguist-vendored
 *.cpp linguist-vendored
