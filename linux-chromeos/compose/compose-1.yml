@@ -1,5 +1,4 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-07-14T1527+0200
 #                    Version:
 <UEFA0>                     : "version 1.0.2 "
 #                      Scope: part 1 of Compose
@@ -2297,6 +2296,7 @@
 #   In group 8 of C                                                                      : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
 <Multi_key><C><C>                                                                <space> : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
 <Multi_key><E><U><L><E><R>                                                               : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><u><l><e><r>                                                               : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><e><u><l><e><r>                                                               : "ℇ" U2107 # EULER CONSTANT
 #   In group 7 of g                                                                      : "ℊ" U210A # SCRIPT SMALL G
 <Multi_key><g><slash><slash>                                                     <space> : "ℊ" U210A # SCRIPT SMALL G
@@ -2308,8 +2308,10 @@
 <Multi_key><H><H>                                                                <space> : "ℍ" U210D # DOUBLE-STRUCK CAPITAL H
 #   In group 8-period of h                                                               : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><L><A><N><C><K>                                                    <space> : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><P><l><a><n><c><k>                                                    <space> : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><p><l><a><n><c><k>                                                    <space> : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><L><A><N><C><K><slash>                                             <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><P><l><a><n><c><k><slash>                                             <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key><p><l><a><n><c><k><slash>                                             <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 #   In group 7 of I                                                                      : "ℐ" U2110 # SCRIPT CAPITAL I
 <Multi_key><I><slash><slash>                                                     <space> : "ℐ" U2110 # SCRIPT CAPITAL I
@@ -2326,7 +2328,9 @@
 <Multi_key><P><P>                                                                <space> : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
 #   In group 8 of Q                                                                      : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
 <Multi_key><Q><Q>                                                                <space> : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
+#   In group 7 of R                                                                      : "ℛ" U211B # SCRIPT CAPITAL R
 <Multi_key><R><slash><slash>                                                     <space> : "ℛ" U211B # SCRIPT CAPITAL R
+#   In group 9 of R                                                                      : "ℜ" U211C # BLACK-LETTER CAPITAL R
 <Multi_key><R><numbersign>                                                       <space> : "ℜ" U211C # BLACK-LETTER CAPITAL R
 #   In group 8 of R                                                                      : "ℝ" U211D # DOUBLE-STRUCK CAPITAL R
 <Multi_key><R><R>                                                                <space> : "ℝ" U211D # DOUBLE-STRUCK CAPITAL R
@@ -2337,14 +2341,18 @@
 <Multi_key><i><percent>                                                          <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 #   In group 7 of B                                                                      : "ℬ" U212C # SCRIPT CAPITAL B
 <Multi_key><B><slash><slash>                                                     <space> : "ℬ" U212C # SCRIPT CAPITAL B
+#   In group 9 of C                                                                      : "ℭ" U212D # BLACK-LETTER CAPITAL C
 <Multi_key><C><numbersign>                                                       <space> : "ℭ" U212D # BLACK-LETTER CAPITAL C
 #   In group 7 of e                                                                      : "ℯ" U212F # SCRIPT SMALL E
 <Multi_key><e><slash><slash>                                                     <space> : "ℯ" U212F # SCRIPT SMALL E
+#   In group 7 of E                                                                      : "ℰ" U2130 # SCRIPT CAPITAL E
 <Multi_key><E><slash><slash>                                                     <space> : "ℰ" U2130 # SCRIPT CAPITAL E
+#   In group 7 of F                                                                      : "ℱ" U2131 # SCRIPT CAPITAL F
 <Multi_key><F><slash><slash>                                                     <space> : "ℱ" U2131 # SCRIPT CAPITAL F
 #   In group 7 of M                                                                      : "ℳ" U2133 # SCRIPT CAPITAL M
 #   See #*# CURRENCY                                                                     : "ℳ" U2133 # SCRIPT CAPITAL M
 <Multi_key><M><slash><slash>                                                     <space> : "ℳ" U2133 # SCRIPT CAPITAL M
+#   In group 7 of o                                                                      : "ℴ" U2134 # SCRIPT SMALL O
 <Multi_key><o><slash><slash>                                                     <space> : "ℴ" U2134 # SCRIPT SMALL O
 <Multi_key><a><backslash>                                                        <space> : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><A><backslash>                                                        <space> : "ℵ" U2135 # ALEF SYMBOL
@@ -2361,9 +2369,15 @@
 <Multi_key><nobreakspace><P><P>                                                  <space> : "ℿ" U213F # DOUBLE-STRUCK CAPITAL PI
 <Multi_key><space><S><S>                                                         <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 <Multi_key><nobreakspace><S><S>                                                  <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
+#   See #*# TURNED                                                                       : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
+#   See # # TURNED&GROUP1                                                                : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
 <Multi_key><G><percent>                                                          <space> : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
+#   See # # TURNED&GROUP1                                                                : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
 <Multi_key><L><percent>                                                          <space> : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
+#   See #*# REVERSED                                                                     : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><L><backslash>                                                        <space> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
+#   See #*# TURNED                                                                       : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
+#   See # # TURNED&GROUP1                                                                : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><Y><percent>                                                          <space> : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><D><D><slash><slash>                                                  <space> : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
 <Multi_key><d><d><slash><slash>                                                  <space> : "ⅆ" U2146 # DOUBLE-STRUCK ITALIC SMALL D
