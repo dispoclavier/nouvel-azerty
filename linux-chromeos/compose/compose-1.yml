@@ -4189,12 +4189,12 @@
 <Multi_key><p><i>                                                                <space> : "π" U03C0 # GREEK SMALL LETTER PI TeX control
 <Multi_key><c><a><p>                                                             <space> : "∩" U2229 # INTERSECTION
 <Multi_key><C><a><p>                                                             <space> : "⋒" U22D2 # DOUBLE INTERSECTION
-<Multi_key><d><b><l><c><a><p>                                                    <space> : "⋒" U22D2 # DOUBLE INTERSECTION TeX control too long
+<Multi_key><d><b><l><c><a><p>                                                            : "⋒" U22D2 # DOUBLE INTERSECTION TeX control too long
 <Multi_key><c><a><p><d><o><t>                                                            : "⩀" U2A40 # INTERSECTION WITH DOT
 #   <Multi_key><c><a><p><p><l><u><s>                                                     : Not encoded in Unicode.
 <Multi_key><c><u><p>                                                             <space> : "∪" U222A # UNION
 <Multi_key><C><u><p>                                                             <space> : "⋓" U22D3 # DOUBLE UNION
-<Multi_key><d><b><l><c><u><p>                                                    <space> : "⋓" U22D3 # DOUBLE UNION TeX control too long
+<Multi_key><d><b><l><c><u><p>                                                            : "⋓" U22D3 # DOUBLE UNION TeX control too long
 <Multi_key><c><u><p><d><o><t>                                                            : "⊍" U228D # MULTISET MULTIPLICATION
 <Multi_key><c><u><p><p><l><u><s>                                                         : "⊎" U228E # MULTISET UNION
 <Multi_key><u><n><i><o><n>                                                               : "∪" U222A # UNION French name
