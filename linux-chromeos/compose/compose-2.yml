@@ -1,6 +1,5 @@
-#                       Date: 2023-07-14T0632+0200
-#                    Version: See `compose-1.yml`
 #                      Scope: part 2 of Compose
+#                    Version: See `compose-1.yml`
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
 #                Description: XCompose string output for dead keys and live keys
@@ -5132,20 +5131,7 @@
 <Multi_key><apostrophe>                                                         <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE
 #
 #
-#
-### Mathematical symbols
-#
-#   Approximation: See #*# TILDE
-#   Negation:      See #*# STROKE
-#   Equality:      See #*# EQUAL
-#
-#   Negated symbols may alternatively be input using (Base-level) dead_acute,
-#   since no symbols have been encoded with an acute accent.
-#   Mnemonics is based on the slant of the accent.
-#
-#   Equality symbols may alternatively be input using (Base-level) dead_diaeresis,
-#   since no symbols have been encoded with a diaeresis.
-#   Mnemonics is based on the double dot and its Multi_key equivalent colon.
+#   END_DEAD_KEYS
 #
 #
 #
