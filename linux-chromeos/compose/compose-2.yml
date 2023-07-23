@@ -5141,7 +5141,8 @@
 #   Patch for *dead_group <UEFD0>, for addition to en_US.UTF-8/Compose.
 #   As a special dead key, the group selector deserves particular attention.
 #
-#   Numbering
+#
+# # Numbering
 #
 #   CAUTION: Unlike specified in ISO/IEC 9995, group numbers are zero based.
 #   For UX consistency, the default group is group 0. Only groups accessed by
@@ -5154,7 +5155,7 @@
 #   The short identifier for group n is gn.
 #
 #
-#   History
+# # History
 #
 #   The group selector dead key has been introduced by Karl Pentzlin while
 #   implementing DIN 2137-2:2012 on Windows. Virtual dead keys accessed by
@@ -5174,7 +5175,7 @@
 #   typesetting practice.
 #
 #
-#   Cross-platform compatibility
+# # Cross-platform compatibility
 #
 #   Implementing the group selector as a dead key avoids breaking UX across
 #   platforms, as Windows supports 6 + 1 modifiers but unsupports the ISO group
@@ -5183,7 +5184,8 @@
 #   modifier, used by the German Neo ergonomic keyboard layout later emulating
 #   left Option using the Karabiner Elements software from Takayama Fumihiko.
 #
-#   Maintenance
+#
+# # Maintenance
 #
 #   Filling empty slots with null output "" U0000 can be avoided. The "" U0000
 #   strings have been removed for ease of maintenance on 2023-01-13T1356+0100.
