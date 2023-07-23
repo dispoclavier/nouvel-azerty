@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-23T1927+0200
+# 2023-07-23T2004+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of dead keys, based
@@ -79,43 +79,43 @@ while ( $line = <INPUT> ) {
 				|| $line =~ /<UEFD9>/
 			) {
 
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition">¦<\/kbd>/g;
-				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef">point en chef<\/kbd>/g;
-				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef">rond en chef<\/kbd>/g;
-				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu">aigu<\/kbd>/g;
-				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite">virgule souscrite<\/kbd>/g;
-				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit">point souscrit<\/kbd>/g;
-				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève">brève<\/kbd>/g;
-				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek">hatchek<\/kbd>/g;
-				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille">cédille<\/kbd>/g;
-				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe">circonflexe<\/kbd>/g;
-				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire">symbole monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma">tréma<\/kbd>/g;
-				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu">double aigu<\/kbd>/g;
-				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave">grave<\/kbd>/g;
-				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque">grec<\/kbd>/g;
-				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet">crosse<\/kbd>/g;
-				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu">cornu<\/kbd>/g;
-				$line =~ s/<dead_invertedbreve>/<kbd class="deadkey long" title="Touche morte brève inversée">brève inversée<\/kbd>/g;
-				$line =~ s/<dead_longsolidusoverlay>/<kbd class="deadkey" title="Touche morte barré">barré<\/kbd>/g;
-				$line =~ s/<dead_macron>/<kbd class="deadkey" title="Touche morte macron">macron<\/kbd>/g;
-				$line =~ s/<dead_ogonek>/<kbd class="deadkey" title="Touche morte ogonek">ogonek<\/kbd>/g;
-				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte rayé">rayé<\/kbd>/g;
-				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde">tilde<\/kbd>/g;
-				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte sélectrice de groupe">groupe<\/kbd>/g;
-				$line =~ s/<UEFD1>/<kbd class="deadkey" title="Touche morte exposant">exposant<\/kbd>/g;
-				$line =~ s/<UEFD2>/<kbd class="deadkey" title="Touche morte indice">indice<\/kbd>/g;
-				$line =~ s/<UEFD3>/<kbd class="deadkey long" title="Touche morte crochet en chef">crochet en chef<\/kbd>/g;
-				$line =~ s/<UEFD4>/<kbd class="deadkey long" title="Touche morte crochet rétroflexe">crochet rétroflexe<\/kbd>/g;
-				$line =~ s/<UEFD5>/<kbd class="deadkey" title="Touche morte tourné">tourné<\/kbd>/g;
-				$line =~ s/<UEFD6>/<kbd class="deadkey" title="Touche morte réfléchi">réfléchi<\/kbd>/g;
-				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte égal, lettre drapeau">égal<\/kbd>/g;
-				$line =~ s/<UEFD8>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible">tilde rétrocompatible<\/kbd>/g;
-				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible">grave rétrocompatible<\/kbd>/g;
+				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + \$">¦<\/kbd>/g;
+				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
+				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
+				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$ ou Maj + AltGr\/Option + I">aigu<\/kbd>/g;
+				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + §">virgule souscrite<\/kbd>/g;
+				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + .">point souscrit<\/kbd>/g;
+				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + F">brève<\/kbd>/g;
+				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + V">hatchek<\/kbd>/g;
+				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?">cédille<\/kbd>/g;
+				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
+				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire ou Maj + AltGr\/Option + S">symbole monétaire<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/">tréma<\/kbd>/g;
+				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + O">double aigu<\/kbd>/g;
+				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + U">grave<\/kbd>/g;
+				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque Maj + AltGr\/Option + Y">grec<\/kbd>/g;
+				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + E">crosse<\/kbd>/g;
+				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
+				$line =~ s/<dead_invertedbreve>/<kbd class="deadkey long" title="Touche morte brève inversée Maj + AltGr\/Option + D">brève inversée<\/kbd>/g;
+				$line =~ s/<dead_longsolidusoverlay>/<kbd class="deadkey" title="Touche morte barré Maj + AltGr\/Option + W">barré<\/kbd>/g;
+				$line =~ s/<dead_macron>/<kbd class="deadkey" title="Touche morte macron Maj + AltGr\/Option + M">macron<\/kbd>/g;
+				$line =~ s/<dead_ogonek>/<kbd class="deadkey" title="Touche morte ogonek Maj + AltGr\/Option + J">ogonek<\/kbd>/g;
+				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte rayé Maj + AltGr\/Option + G">rayé<\/kbd>/g;
+				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde Maj + AltGr\/Option + T">tilde<\/kbd>/g;
+				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte sélectrice de groupe Touche µ* ou Maj + AltGr\/Option + Q">groupe<\/kbd>/g;
+				$line =~ s/<UEFD1>/<kbd class="deadkey" title="Touche morte exposant Maj + AltGr\/Option + A">exposant<\/kbd>/g;
+				$line =~ s/<UEFD2>/<kbd class="deadkey" title="Touche morte indice Maj + AltGr\/Option + L">indice<\/kbd>/g;
+				$line =~ s/<UEFD3>/<kbd class="deadkey long" title="Touche morte crochet en chef Maj + AltGr\/Option + K">crochet en chef<\/kbd>/g;
+				$line =~ s/<UEFD4>/<kbd class="deadkey long" title="Touche morte crochet rétroflexe Maj + AltGr\/Option + R">crochet rétroflexe<\/kbd>/g;
+				$line =~ s/<UEFD5>/<kbd class="deadkey" title="Touche morte tourné Maj + AltGr\/Option + Z">tourné<\/kbd>/g;
+				$line =~ s/<UEFD6>/<kbd class="deadkey" title="Touche morte réfléchi Maj + AltGr\/Option + N">réfléchi<\/kbd>/g;
+				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte égal, lettre drapeau Maj + AltGr\/Option + B">égal<\/kbd>/g;
+				$line =~ s/<UEFD8>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
+				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 				$line =~ s/<space>/<span title="Espace">␣<\/span>/g;
-				$line =~ s/<nobreakspace>/<span title="Espace insécable">⍽<\/span>/g;
+				$line =~ s/<nobreakspace>/<span title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<braceleft>/{/g;
@@ -124,7 +124,7 @@ while ( $line = <INPUT> ) {
 				$line =~ s/<at>/@/g;
 				$line =~ s/<grave>/`/g;
 				$line =~ s/<apostrophe>/&#x27;/g;
-				$line =~ s/<rightsinglequotemark>/’/g;
+				$line =~ s/<rightsinglequotemark>/<span title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
 				$line =~ s/<quotedbl>/&quot;/g;
 				$line =~ s/<ampersand>/&amp;/g;
 				$line =~ s/<numbersign>/#/g;
@@ -161,7 +161,6 @@ while ( $line = <INPUT> ) {
 				$line =~ s/<ccedilla>/ç/g;
 				$line =~ s/<Ccedilla>/Ç/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
-				$line =~ s/<U#>/<kbd class="livekey" title=""><\/kbd>/g;
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/<(.)>/$1/g;
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr><td>$2<\/td><td><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
