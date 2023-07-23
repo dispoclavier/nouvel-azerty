@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-23T2009+0200
+# 2023-07-23T2053+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of dead keys, based
@@ -89,7 +89,7 @@ while ( $line = <INPUT> ) {
 				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + V">hatchek<\/kbd>/g;
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
-				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire ou Maj + AltGr\/Option + S">symbole monétaire<\/kbd>/g;
+				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
 				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + O">double aigu<\/kbd>/g;
 				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + U">grave<\/kbd>/g;
