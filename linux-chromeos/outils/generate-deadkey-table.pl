@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-23T2004+0200
+# 2023-07-23T2009+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of dead keys, based
@@ -88,7 +88,7 @@ while ( $line = <INPUT> ) {
 				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + F">brève<\/kbd>/g;
 				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + V">hatchek<\/kbd>/g;
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?">cédille<\/kbd>/g;
-				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
+				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire ou Maj + AltGr\/Option + S">symbole monétaire<\/kbd>/g;
 				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + O">double aigu<\/kbd>/g;
@@ -101,7 +101,7 @@ while ( $line = <INPUT> ) {
 				$line =~ s/<dead_macron>/<kbd class="deadkey" title="Touche morte macron Maj + AltGr\/Option + M">macron<\/kbd>/g;
 				$line =~ s/<dead_ogonek>/<kbd class="deadkey" title="Touche morte ogonek Maj + AltGr\/Option + J">ogonek<\/kbd>/g;
 				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte rayé Maj + AltGr\/Option + G">rayé<\/kbd>/g;
-				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde Maj + AltGr\/Option + T">tilde<\/kbd>/g;
+				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde AltGr\/Option + ¨^ ou Maj + AltGr\/Option + T">tilde<\/kbd>/g;
 				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte sélectrice de groupe Touche µ* ou Maj + AltGr\/Option + Q">groupe<\/kbd>/g;
 				$line =~ s/<UEFD1>/<kbd class="deadkey" title="Touche morte exposant Maj + AltGr\/Option + A">exposant<\/kbd>/g;
 				$line =~ s/<UEFD2>/<kbd class="deadkey" title="Touche morte indice Maj + AltGr\/Option + L">indice<\/kbd>/g;
