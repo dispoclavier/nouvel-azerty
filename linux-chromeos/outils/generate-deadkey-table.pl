@@ -1,10 +1,11 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-23T2053+0200
+# 2023-07-24T0258+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of dead keys, based
 # on dead key sequences in `Compose.yml`.
+# Multi_key equivalents are skipped.
 #
 # The input requires start and end tags.
 #
@@ -19,30 +20,50 @@ my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
 print( "Opened file $file_path.\n" );
 
-my $output_path = 'deadkey-table-partial.html';
+my $output_directory = 'deadkey-tables';
+unless ( -d $output_directory ) {
+	mkdir $output_directory;
+}
+my $output_file_name_template = 'deadkey-table-partial';
+my $output_path_trunk         = "$output_directory/$output_file_name_template";
+my $output_file_index         = 0;
+my $output_file_extension     = '.html';
+my $output_path               = $output_path_trunk . $output_file_extension;
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
-print( "Processing dead keys from $file_path to $output_path.\n" );
-my $parse_on = !1;
+my $parse_on       = !1;
 my $table_header_1 = 'Caractère';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
-my $line = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
-print OUTPUT "$line";
-print OUTPUT "\n";
-while ( $line = <INPUT> ) {
+my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
+my $end_tags       = '</tbody></table></figure>';
+print OUTPUT "$start_tags\n";
+
+while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
 		$parse_on = !0;
 	}
 	if ( $line =~ /END_DEAD_KEYS/ ) {
 		$parse_on = !1;
 	}
-	if ( $line =~ /^#\*# / || $line =~ /languages in Togo$/ ) {
-		$line =~ s/^....(.+)/<!-- $1 -->/;
-		print OUTPUT "$line";
-	}
 	if ( $parse_on ) {
+  	if ( $line =~ /^#\*# / || $line =~ /languages in Togo$/ ) {
+			print OUTPUT "$end_tags";
+	    close( OUTPUT );
+	    print( "Closed file $output_path.\n" );
+			$line =~ s/^....//;
+			$line =~ s/,//g;
+			$line =~ s/ /-/g;
+			$line =~ m/(.+)/;
+			$output_path = $output_path_trunk . '_' . $output_file_index . '_' . $1 . $output_file_extension;
+			++$output_file_index;
+	    open( OUTPUT, '>', $output_path ) or die $!;
+	    print( "Opened file $output_path.\n" );
+			print( "Processing dead keys from $file_path to $output_path.\n" );
+			print OUTPUT "$start_tags\n";
+			print OUTPUT "<!-- $1 -->\n";
+		}
 		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ ) {
 			if ( $line =~ /<Multi_key>/
 				|| $line =~ /<dead_abovedot>/
@@ -78,7 +99,6 @@ while ( $line = <INPUT> ) {
 				|| $line =~ /<UEFD8>/
 				|| $line =~ /<UEFD9>/
 			) {
-
 				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + \$">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
@@ -171,9 +191,7 @@ while ( $line = <INPUT> ) {
 		}
 	}
 }
-$line = '</tbody></table></figure>';
-print OUTPUT "$line";
 
 close( INPUT );
 close( OUTPUT );
-print( "Dead key table generated.\n\n" );
+print( "Dead key tables generated.\n\n" );
