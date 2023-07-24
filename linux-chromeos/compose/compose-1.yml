@@ -8970,6 +8970,7 @@
 #
 #   This scheme starts with zero.
 #   Circled operators are also supported.
+#   See also #^# CIRCLED_NUMBER
 #
 <dead_greek><dead_greek>                                                             <0> : "⓪" U24EA # CIRCLED DIGIT ZERO
 <Multi_key><at><at>                                                                  <0> : "⓪" U24EA # CIRCLED DIGIT ZERO
@@ -10431,7 +10432,7 @@
 <Multi_key><parenleft><numbersign><colon>                                            <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
-#*# CIRCLED_NUMBER
+#^# CIRCLED_NUMBER
 #   Start:     dead_invertedbreve
 #   End:       dead_breve
 #   Multi_key: ¦(#) where # is 1 or 2 digits.
