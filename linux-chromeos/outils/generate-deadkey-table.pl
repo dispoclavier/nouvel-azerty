@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-25T0242+0200
+# 2023-07-25T0255+0200
 # Last modified: See datestamp above.
 # 
 # Generates HTML tables of dead keys, based
@@ -179,6 +179,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<section>/§/g;
 				$line =~ s/<comma>/,/g;
 				$line =~ s/<period>/./g;
+				$line =~ s/<degree>/<span title="Symbole degré Maj + °)">°<\/span>/g;
+				$line =~ s/<multiply>/<span title="Symbole multiplication AltFr + C">×<\/span>/g;
 				$line =~ s/<paragraph>/<span title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
 				$line =~ s/<agrave>/à/g;
 				$line =~ s/<Agrave>/À/g;
@@ -190,6 +192,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Eacute>/É/g;
 				$line =~ s/<ccedilla>/ç/g;
 				$line =~ s/<Ccedilla>/Ç/g;
+				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— Tiret cadratin<\/kbd>/g;
+				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– Tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
