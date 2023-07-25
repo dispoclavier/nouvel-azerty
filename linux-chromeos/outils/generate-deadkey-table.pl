@@ -1,15 +1,20 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-24T0258+0200
+# 2023-07-25T0242+0200
 # Last modified: See datestamp above.
 # 
-# Generates an HTML table of dead keys, based
+# Generates HTML tables of dead keys, based
 # on dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
 #
-# The input requires start and end tags.
-#
+# The input requires start and end tags, and
+# section headings are parsed for changing file.
 # The output is designed for use in WordPress.
+#
+# An all-in-one table is also generated although
+# WordPress cannot register it regardless of the
+# PHP memory limit set to 1024M for the purpose.
+#
 #
 # Using old-style file handles.
 use warnings;
@@ -28,7 +33,10 @@ my $output_file_name_template = 'deadkey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
 my $output_file_index         = 0;
 my $output_file_extension     = '.html';
-my $output_path               = $output_path_trunk . $output_file_extension;
+my $output_path               = "$output_directory/ALL_$output_file_name_template . $output_file_extension";
+open( WHOLEOUTPUT, '>', $output_path ) or die $!;
+print( "Opened file $output_path.\n" );
+$output_path = $output_path_trunk . $output_file_extension;
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
@@ -38,6 +46,7 @@ my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
 my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
 my $end_tags       = '</tbody></table></figure>';
+print WHOLEOUTPUT "$start_tags\n";
 print OUTPUT "$start_tags\n";
 
 while ( my $line = <INPUT> ) {
@@ -48,7 +57,7 @@ while ( my $line = <INPUT> ) {
 		$parse_on = !1;
 	}
 	if ( $parse_on ) {
-  	if ( $line =~ /^#\*# / || $line =~ /languages in Togo$/ ) {
+  	if ( $line =~ /^#\*# / || $line =~ /languages in Togo$/ || $line =~ /### Emulation/ ) {
 			print OUTPUT "$end_tags";
 	    close( OUTPUT );
 	    print( "Closed file $output_path.\n" );
@@ -99,18 +108,18 @@ while ( my $line = <INPUT> ) {
 				|| $line =~ /<UEFD8>/
 				|| $line =~ /<UEFD9>/
 			) {
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + \$">¦<\/kbd>/g;
+				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + £\$">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
 				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$ ou Maj + AltGr\/Option + I">aigu<\/kbd>/g;
-				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + §">virgule souscrite<\/kbd>/g;
-				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + .">point souscrit<\/kbd>/g;
+				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + §!">virgule souscrite<\/kbd>/g;
+				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + .;">point souscrit<\/kbd>/g;
 				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + F">brève<\/kbd>/g;
 				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + V">hatchek<\/kbd>/g;
-				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?">cédille<\/kbd>/g;
+				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?,">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/">tréma<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + O">double aigu<\/kbd>/g;
 				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + U">grave<\/kbd>/g;
 				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque Maj + AltGr\/Option + Y">grec<\/kbd>/g;
@@ -170,6 +179,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<section>/§/g;
 				$line =~ s/<comma>/,/g;
 				$line =~ s/<period>/./g;
+				$line =~ s/<paragraph>/<span title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
 				$line =~ s/<agrave>/à/g;
 				$line =~ s/<Agrave>/À/g;
 				$line =~ s/<egrave>/è/g;
@@ -180,6 +190,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Eacute>/É/g;
 				$line =~ s/<ccedilla>/ç/g;
 				$line =~ s/<Ccedilla>/Ç/g;
+				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/<(.)>/$1/g;
@@ -187,11 +198,15 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/^(.+?) : "(.+?)" U(03[0-6][0-9A-F]) # (.+)/<tr><td>◌$2<\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr><td>$2<\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT "$line";
+				print WHOLEOUTPUT "$line";
 			}
 		}
 	}
 }
+print OUTPUT "$end_tags";
+print WHOLEOUTPUT "$end_tags";
 
 close( INPUT );
 close( OUTPUT );
+close( WHOLEOUTPUT );
 print( "Dead key tables generated.\n\n" );
