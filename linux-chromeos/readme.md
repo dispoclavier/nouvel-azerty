@@ -4,4 +4,4 @@ Les extensions `.c`, `.cpp` et `.yml` servent à la coloration syntaxique. À l�
 
 L’extension `.cpp` a été choisie pour éviter `dispocla.c`.
 
-En conséquence, les statistiques de langage sont désactivées, car au mieux elles seraient sans objet, au pire elles induiraient en erreur.
+En conséquence, les statistiques de langage sont désactivées.
