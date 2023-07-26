@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-25T0255+0200
+# 2023-07-27T0108+0200
 # Last modified: See datestamp above.
-# 
+#
 # Generates HTML tables of dead keys, based
 # on dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
@@ -53,11 +53,17 @@ while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
 		$parse_on = !0;
 	}
-	if ( $line =~ /END_DEAD_KEYS/ ) {
+	if ( $line =~ /START_GROUP_SELECTOR/ ) {
 		$parse_on = !1;
 	}
 	if ( $parse_on ) {
-  	if ( $line =~ /^#\*# / || $line =~ /languages in Togo$/ || $line =~ /### Emulation/ ) {
+  	if ( $line =~ /^#\*# /
+			|| $line =~ /^# # Composed letters for languages in Togo/
+			|| $line =~ /^# # Ê-key emulation/
+			|| $line =~ /^# # Ç-key emulation/
+			|| $line =~ /^### Quotation mark input method/
+			|| $line =~ /^### Shorthands for Portuguese and Spanish/
+		) {
 			print OUTPUT "$end_tags";
 	    close( OUTPUT );
 	    print( "Closed file $output_path.\n" );
