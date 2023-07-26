@@ -1952,7 +1952,7 @@
 #   <dead_circumflex><m> : "m̂" # composed m with combining circumflex (Min Nan)
 #   <dead_circumflex><N> : "N̂" # composed N with combining circumflex (Min Nan)
 #   <dead_circumflex><n> : "n̂" # composed n with combining circumflex (Min Nan)
-#   See # # Circumflex accent dead key enhancement
+#   See # # Ê-key emulation
 #
 <dead_circumflex>                                                                <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
