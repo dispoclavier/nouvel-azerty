@@ -4,6 +4,9 @@
 # Courtesy https://stackoverflow.com/a/50062746
 /linux-chromeos/outils/ export-ignore
 
+# Do not package the sample full `Compose.yml` either.
+/linux-chromeos/compose/Compose.yml export-ignore
+
 
 ## Language stats
 
