@@ -4931,25 +4931,22 @@
 #
 #
 #
-### Emulation of letter keys and quotation mark keys
+### Diacriticized letter key emulation
 #
-# # Circumflex accent dead key enhancement
-#   by Ê-key emulation
+# # Ê-key emulation
 #
-#   This makes dead_circumflex behave like an ê/Ê key in most cases,
-#   using sequences of dead character 'ê' followed by a letter that
-#   does not exist as a precomposed letter with circumflex accent:
-#   k, l, m, n, p, q, r, t, v.
+#   This makes dead_circumflex behave like an ê/Ê key in most cases, outputting
+#   sequences of 'ê' followed by a letter that does not exist as a precomposed
+#   letter with circumflex accent: k, l, m, n, p, q, r, t, v.
 #
-#   It also adds support for the polygram 'êch' using x, due to the fact that
-#   French does not have any word with -êx-.
+#   Likewise this adds support for the polygram 'êch' using x as a base letter.
+#
+#   Cross-platform compatibility is full on MacOS, but only partial on Windows.
+#   Windows is able to support only lowercase sequences, provided that the dead
+#   key is given the appropriate dead character. For the circumflex accent dead
+#   key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
 #
 #   French usage information: Courtesy _La fée des lettres_ https://www.motsavec.com.
-#
-#   This is partly (Windows) or fully (macOS) cross platform compatible.
-#   Windows is able to support only lowercase sequences at the condition
-#   that the appropriate dead character is used in the circumflex accent
-#   dead key, namely U00EA 'ê' LATIN SMALL LETTER E WITH CIRCUMFLEX
 #
 <dead_circumflex>                                                                    <K> : "ÊK" # (*not* supportable on Windows)
 <Multi_key><less>                                                                    <K> : "ÊK" # (*not* supportable on Windows)
@@ -4993,14 +4990,10 @@
 <Multi_key><less>                                                                    <x> : "êch" # (*not* supportable on Windows)
 #
 #
-# # Cedilla dead key enhancement
+# # Ç-key emulation
 #
-#   This makes the dead_cedilla key behave like a ç/Ç key in most cases.
-#   This is partly (Windows) or totally (macOS) supportable on systems not using XCompose.
-#   Supportable everywhere are sequences of dead character "ç" followed by a lowercase letter that
-#   does not exist as a precomposed letter with cedilla.
-#
-#   Ç-key emulation:
+#   This makes the dead_cedilla key behave like a ç/Ç key in all relevant use
+#   cases along the lines of the Ê-key emulation, for use on Canadian French.
 #
 <dead_cedilla>                                                                       <A> : "ÇA" # (*not* supportable on Windows)
 <Multi_key><comma>                                                                   <A> : "ÇA" # (*not* supportable on Windows)
@@ -5016,10 +5009,11 @@
 <Multi_key><comma>                                                                   <u> : "çu" # (supportable on Windows)
 #
 #
-# # Curly quotation marks
+### Quotation mark input method
 #
-#   A fairly complete set of curly quotes, may be typed on unshifted keys
-#   if disposed accordingly.
+#   A fairly complete set of curly quotes can be typed on unshifted keys only,
+#   provided that the involved dead keys have mappings on the base level, along
+#   with mnemonic and unconflicting base characters.
 #
 #   This is part of the dead key enhancement allowed if considering each
 #   dead key as a group selector, activating a group called "<dead key> group",
@@ -5040,22 +5034,11 @@
 #   is not used in dead key emulation. The ampersand is neither, but it
 #   would be less mnemonic.
 #
-#   Ornamental quotation marks are supported by dead key double press.
-#   SMP quotation mark ornaments U1F676.. are not supported, for cross
-#   platform compatibility.
-#
-#   Angle quotation mark ornaments are in group 3 of bracketleft and -right,
-#   together with angle bracket ornaments in group 2. The former are also in
-#   group 1 of single angle quotation marks, as added here.
-#
-<UEFD0>                                                                          <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign>                                                          <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0>                                                                          <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign>                                                          <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-#
 #   The character descriptor in lowercase below is the Unicode informative
 #   alias, given in case of a suboptimal name.
 #
+#
+#   Common quotation marks
 #
 #   Double
 #
@@ -5067,12 +5050,6 @@
 <Multi_key><colon>                                                            <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <dead_grave>                                                                  <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <Multi_key><grave>                                                            <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
-<dead_circumflex><dead_circumflex>                                            <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
-<Multi_key><less><less>                                                       <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_acute><dead_acute>                                                      <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><apostrophe><apostrophe>                                           <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><dead_diaeresis>                                              <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><colon><colon>                                                     <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 #
 #
 #   Single on rightsinglequotemark
@@ -5085,12 +5062,6 @@
 <Multi_key><colon>                                                <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_grave>                                                      <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
-<dead_circumflex><dead_circumflex>                                <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<Multi_key><less><less>                                           <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_acute><dead_acute>                                          <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><apostrophe><apostrophe>                               <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><dead_diaeresis>                                  <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><colon><colon>                                         <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 #
 #
 #   Single on question mark
@@ -5103,6 +5074,36 @@
 <Multi_key><colon>                                                            <question> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_grave>                                                                  <question> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                            <question> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+#
+#
+#   Ornamental quotation marks
+#
+#   Ornamental quotation marks are supported by dead key double press.
+#   SMP quotation mark ornaments U1F676.. are not supported, for cross
+#   platform compatibility.
+#
+#   Double
+#
+<dead_circumflex><dead_circumflex>                                            <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><less>                                                       <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_acute><dead_acute>                                                      <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><apostrophe>                                           <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><dead_diaeresis>                                              <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><colon>                                                     <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+#
+#
+#   Single on rightsinglequotemark
+#
+<dead_circumflex><dead_circumflex>                                <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><less>                                           <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_acute><dead_acute>                                          <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><apostrophe>                               <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><dead_diaeresis>                                  <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><colon>                                         <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+#
+#
+#   Single on question mark
+#
 <dead_circumflex><dead_circumflex>                                            <question> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><less>                                                       <question> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_acute><dead_acute>                                                      <question> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -5111,7 +5112,17 @@
 <Multi_key><colon><colon>                                                     <question> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 #
 #
-# # Shorthands for Portuguese and Spanish
+#   Angle quotation mark ornaments are in group 3 of bracketleft and -right,
+#   together with angle bracket ornaments in group 2. The former are also in
+#   group 1 of single angle quotation marks, as added here.
+#
+<UEFD0>                                                                          <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign>                                                          <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0>                                                                          <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign>                                                          <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+#
+#
+### Shorthands for Portuguese and Spanish
 #
 <dead_tilde>                                                                    <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
 <Multi_key><asciitilde>                                                         <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
@@ -5131,7 +5142,7 @@
 <Multi_key><apostrophe>                                                         <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE
 #
 #
-#   END_DEAD_KEYS
+#   START_GROUP_SELECTOR
 #
 #
 #
