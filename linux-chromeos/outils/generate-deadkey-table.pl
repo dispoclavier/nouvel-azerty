@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-27T0507+0200
+# 2023-07-27T0608+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys, based
