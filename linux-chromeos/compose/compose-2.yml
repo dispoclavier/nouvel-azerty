@@ -6677,10 +6677,10 @@
 #   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #   The watch emoji are mapped here based on the mnemonics of time notation.
 #
-<UEFD0>                                                                          <colon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
-<Multi_key><numbersign>                                                          <colon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
-<UEFD0><UEFD0>                                                                   <colon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
-<Multi_key><numbersign><numbersign>                                              <colon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
+<UEFD0>                                                                          <colon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
+<Multi_key><numbersign>                                                          <colon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
+<UEFD0><UEFD0>                                                                   <colon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
+<Multi_key><numbersign><numbersign>                                              <colon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <UEFD0><3>                                                                       <colon> : "⋮" U22EE # VERTICAL ELLIPSIS
 <Multi_key><numbersign><3>                                                       <colon> : "⋮" U22EE # VERTICAL ELLIPSIS
 <UEFD0><UEFD0><UEFD0>                                                            <colon> : "⋮" U22EE # VERTICAL ELLIPSIS
@@ -6689,10 +6689,10 @@
 <Multi_key><numbersign><4>                                                       <colon> : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                     <colon> : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                      <colon> : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
-<UEFD0><5>                                                                       <colon> : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
-<Multi_key><numbersign><5>                                                       <colon> : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
-<UEFD0><6>                                                                       <colon> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
-<Multi_key><numbersign><6>                                                       <colon> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+<UEFD0><5>                                                                       <colon> : "꞉" UA789 # MODIFIER LETTER COLON
+<Multi_key><numbersign><5>                                                       <colon> : "꞉" UA789 # MODIFIER LETTER COLON
+<UEFD0><6>                                                                       <colon> : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
+<Multi_key><numbersign><6>                                                       <colon> : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <UEFD0><7>                                                                       <colon> : "⌚" U231A # WATCH emoji
 <Multi_key><numbersign><7>                                                       <colon> : "⌚" U231A # WATCH emoji
 <UEFD0><8>                                                                       <colon> : "⏱" U23F1 # STOPWATCH emoji
@@ -6713,18 +6713,18 @@
 <Multi_key><numbersign>                                                      <semicolon> : "꞉" UA789 # MODIFIER LETTER COLON
 <UEFD0>                                                                        <section> : "꞉" UA789 # MODIFIER LETTER COLON
 <Multi_key><numbersign>                                                        <section> : "꞉" UA789 # MODIFIER LETTER COLON
-<UEFD0><UEFD0>                                                               <semicolon> : "⟂" U27C2 # PERPENDICULAR
-<Multi_key><numbersign><numbersign>                                          <semicolon> : "⟂" U27C2 # PERPENDICULAR
-<UEFD0><UEFD0>                                                                 <section> : "⟂" U27C2 # PERPENDICULAR
-<Multi_key><numbersign><numbersign>                                            <section> : "⟂" U27C2 # PERPENDICULAR
-<UEFD0><3>                                                                   <semicolon> : "⊤" U22A4 # DOWN TACK
-<Multi_key><numbersign><3>                                                   <semicolon> : "⊤" U22A4 # DOWN TACK
-<UEFD0><UEFD0><UEFD0>                                                        <semicolon> : "⊤" U22A4 # DOWN TACK
-<Multi_key><numbersign><numbersign><numbersign>                              <semicolon> : "⊤" U22A4 # DOWN TACK
-<UEFD0><3>                                                                     <section> : "⊤" U22A4 # DOWN TACK
-<Multi_key><numbersign><3>                                                     <section> : "⊤" U22A4 # DOWN TACK
-<UEFD0><UEFD0><UEFD0>                                                          <section> : "⊤" U22A4 # DOWN TACK
-<Multi_key><numbersign><numbersign><numbersign>                                <section> : "⊤" U22A4 # DOWN TACK
+<UEFD0><UEFD0>                                                               <semicolon> : "⊢" U22A2 # RIGHT TACK
+<Multi_key><numbersign><numbersign>                                          <semicolon> : "⊢" U22A2 # RIGHT TACK
+<UEFD0><UEFD0>                                                                 <section> : "⊢" U22A2 # RIGHT TACK
+<Multi_key><numbersign><numbersign>                                            <section> : "⊢" U22A2 # RIGHT TACK
+<UEFD0><3>                                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
+<Multi_key><numbersign><3>                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
+<UEFD0><UEFD0><UEFD0>                                                        <semicolon> : "⊣" U22A3 # LEFT TACK
+<Multi_key><numbersign><numbersign><numbersign>                              <semicolon> : "⊣" U22A3 # LEFT TACK
+<UEFD0><3>                                                                     <section> : "⊣" U22A3 # LEFT TACK
+<Multi_key><numbersign><3>                                                     <section> : "⊣" U22A3 # LEFT TACK
+<UEFD0><UEFD0><UEFD0>                                                          <section> : "⊣" U22A3 # LEFT TACK
+<Multi_key><numbersign><numbersign><numbersign>                                <section> : "⊣" U22A3 # LEFT TACK
 <UEFD0><4>                                                                   <semicolon> : "⊥" U22A5 # UP TACK
 <Multi_key><numbersign><4>                                                   <semicolon> : "⊥" U22A5 # UP TACK
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                 <semicolon> : "⊥" U22A5 # UP TACK
@@ -6733,14 +6733,14 @@
 <Multi_key><numbersign><4>                                                     <section> : "⊥" U22A5 # UP TACK
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                   <section> : "⊥" U22A5 # UP TACK
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                    <section> : "⊥" U22A5 # UP TACK
-<UEFD0><5>                                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
-<Multi_key><numbersign><5>                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
-<UEFD0><5>                                                                     <section> : "⊣" U22A3 # LEFT TACK
-<Multi_key><numbersign><5>                                                     <section> : "⊣" U22A3 # LEFT TACK
-<UEFD0><6>                                                                   <semicolon> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><numbersign><6>                                                   <semicolon> : "⊢" U22A2 # RIGHT TACK
-<UEFD0><6>                                                                     <section> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><numbersign><6>                                                     <section> : "⊢" U22A2 # RIGHT TACK
+<UEFD0><5>                                                                   <semicolon> : "⊤" U22A4 # DOWN TACK
+<Multi_key><numbersign><5>                                                   <semicolon> : "⊤" U22A4 # DOWN TACK
+<UEFD0><5>                                                                     <section> : "⊤" U22A4 # DOWN TACK
+<Multi_key><numbersign><5>                                                     <section> : "⊤" U22A4 # DOWN TACK
+<UEFD0><6>                                                                   <semicolon> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+<Multi_key><numbersign><6>                                                   <semicolon> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+<UEFD0><6>                                                                     <section> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+<Multi_key><numbersign><6>                                                     <section> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <UEFD0><7>                                                                   <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
 <Multi_key><numbersign><7>                                                   <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
 <UEFD0><7>                                                                     <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
