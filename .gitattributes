@@ -23,4 +23,4 @@
 *.cpp linguist-vendored
 
 # Do not include the tooling either, as it is not distributed.
-/linux-chromeos/outils/ linguist-vendored
+/linux-chromeos/outils/* linguist-vendored
