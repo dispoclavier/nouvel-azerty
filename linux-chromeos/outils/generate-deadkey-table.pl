@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-27T0108+0200
+# 2023-07-27T0507+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys, based
@@ -44,10 +44,10 @@ my $parse_on       = !1;
 my $table_header_1 = 'Caractère';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
-my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
-my $end_tags       = '</tbody></table></figure>';
-print WHOLEOUTPUT "$start_tags\n";
-print OUTPUT "$start_tags\n";
+my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $end_tags       = "</tbody></table></figure>\n";
+print WHOLEOUTPUT $start_tags;
+print OUTPUT $start_tags;
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
@@ -64,7 +64,7 @@ while ( my $line = <INPUT> ) {
 			|| $line =~ /^### Quotation mark input method/
 			|| $line =~ /^### Shorthands for Portuguese and Spanish/
 		) {
-			print OUTPUT "$end_tags";
+			print OUTPUT $end_tags;
 	    close( OUTPUT );
 	    print( "Closed file $output_path.\n" );
 			$line =~ s/^....//;
@@ -76,7 +76,7 @@ while ( my $line = <INPUT> ) {
 	    open( OUTPUT, '>', $output_path ) or die $!;
 	    print( "Opened file $output_path.\n" );
 			print( "Processing dead keys from $file_path to $output_path.\n" );
-			print OUTPUT "$start_tags\n";
+			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
 		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ ) {
@@ -149,8 +149,21 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
-				$line =~ s/<space>/<span title="Espace">␣<\/span>/g;
-				$line =~ s/<nobreakspace>/<span title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
+				# Invisibles or confusables:
+				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— Tiret cadratin<\/kbd>/g;
+				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– Tiret demi-cadratin<\/kbd>/g;
+				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
+				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
+				# Clarifying tooltips only:
+				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
+				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
+				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
+				$line =~ s/<degree>/<span class="tooltip" title="Symbole degré Maj + °)">°<\/span>/g;
+				$line =~ s/<multiply>/<span class="tooltip" title="Symbole multiplication AltFr + C">×<\/span>/g;
+				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
+				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
+				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
+				# Way obvious:
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<braceleft>/{/g;
@@ -159,7 +172,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<at>/@/g;
 				$line =~ s/<grave>/`/g;
 				$line =~ s/<apostrophe>/&#x27;/g;
-				$line =~ s/<rightsinglequotemark>/<span title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
 				$line =~ s/<quotedbl>/&quot;/g;
 				$line =~ s/<ampersand>/&amp;/g;
 				$line =~ s/<numbersign>/#/g;
@@ -185,9 +197,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<section>/§/g;
 				$line =~ s/<comma>/,/g;
 				$line =~ s/<period>/./g;
-				$line =~ s/<degree>/<span title="Symbole degré Maj + °)">°<\/span>/g;
-				$line =~ s/<multiply>/<span title="Symbole multiplication AltFr + C">×<\/span>/g;
-				$line =~ s/<paragraph>/<span title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
 				$line =~ s/<agrave>/à/g;
 				$line =~ s/<Agrave>/À/g;
 				$line =~ s/<egrave>/è/g;
@@ -198,23 +207,19 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Eacute>/É/g;
 				$line =~ s/<ccedilla>/ç/g;
 				$line =~ s/<Ccedilla>/Ç/g;
-				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— Tiret cadratin<\/kbd>/g;
-				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– Tiret demi-cadratin<\/kbd>/g;
-				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
-				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/<(.)>/$1/g;
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr><td>$2<\/td><td><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" U(03[0-6][0-9A-F]) # (.+)/<tr><td>◌$2<\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr><td>$2<\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				print OUTPUT "$line";
-				print WHOLEOUTPUT "$line";
+				print OUTPUT $line;
+				print WHOLEOUTPUT $line;
 			}
 		}
 	}
 }
-print OUTPUT "$end_tags";
-print WHOLEOUTPUT "$end_tags";
+print OUTPUT $end_tags;
+print WHOLEOUTPUT $end_tags;
 
 close( INPUT );
 close( OUTPUT );
