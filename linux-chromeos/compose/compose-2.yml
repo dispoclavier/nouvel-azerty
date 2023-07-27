@@ -6733,22 +6733,22 @@
 <Multi_key><numbersign><4>                                                     <section> : "⊥" U22A5 # UP TACK
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                   <section> : "⊥" U22A5 # UP TACK
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                    <section> : "⊥" U22A5 # UP TACK
-<UEFD0><5>                                                                   <semicolon> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><numbersign><5>                                                   <semicolon> : "⊢" U22A2 # RIGHT TACK
-<UEFD0><5>                                                                     <section> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><numbersign><5>                                                     <section> : "⊢" U22A2 # RIGHT TACK
-<UEFD0><6>                                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
-<Multi_key><numbersign><6>                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
-<UEFD0><6>                                                                     <section> : "⊣" U22A3 # LEFT TACK
-<Multi_key><numbersign><6>                                                     <section> : "⊣" U22A3 # LEFT TACK
-<UEFD0><7>                                                                   <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<Multi_key><numbersign><7>                                                   <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<UEFD0><7>                                                                     <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<Multi_key><numbersign><7>                                                     <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<UEFD0><8>                                                                   <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<Multi_key><numbersign><8>                                                   <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<UEFD0><8>                                                                     <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<Multi_key><numbersign><8>                                                     <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<UEFD0><5>                                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
+<Multi_key><numbersign><5>                                                   <semicolon> : "⊣" U22A3 # LEFT TACK
+<UEFD0><5>                                                                     <section> : "⊣" U22A3 # LEFT TACK
+<Multi_key><numbersign><5>                                                     <section> : "⊣" U22A3 # LEFT TACK
+<UEFD0><6>                                                                   <semicolon> : "⊢" U22A2 # RIGHT TACK
+<Multi_key><numbersign><6>                                                   <semicolon> : "⊢" U22A2 # RIGHT TACK
+<UEFD0><6>                                                                     <section> : "⊢" U22A2 # RIGHT TACK
+<Multi_key><numbersign><6>                                                     <section> : "⊢" U22A2 # RIGHT TACK
+<UEFD0><7>                                                                   <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<Multi_key><numbersign><7>                                                   <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<UEFD0><7>                                                                     <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<Multi_key><numbersign><7>                                                     <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<UEFD0><8>                                                                   <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<Multi_key><numbersign><8>                                                   <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<UEFD0><8>                                                                     <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<Multi_key><numbersign><8>                                                     <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
 <UEFD0><9>                                                                   <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
 <Multi_key><numbersign><9>                                                   <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
 <UEFD0><9>                                                                     <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
