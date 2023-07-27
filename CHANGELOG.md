@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.0.4 (projet)
+
+* Groupes des symboles : Permuter les symboles "⊳" U22B3 et "⊲" U22B2 ainsi que "⊢" U22A2 et "⊣" U22A3 (compose-2.yml [aa77809](https://github.com/dispoclavier/nouvel-azerty/commit/aa77809a03a69eb462cec0d540f6d4dd76b79ab0))
+
 ## 1.0.3 (2023-07-22)
 
 * Symboles mathématiques : Corriger les séquences de composition des opérateurs invisibles. (compose-1.yml [5a7d1c8](https://github.com/dispoclavier/nouvel-azerty/commit/5a7d1c847cb2c9091037bf2684d85bbbd4f4d2aa))
