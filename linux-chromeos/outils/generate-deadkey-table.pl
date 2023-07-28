@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-27T0608+0200
+# 2023-07-28T0519+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys, based
@@ -33,7 +33,7 @@ my $output_file_name_template = 'deadkey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
 my $output_file_index         = 0;
 my $output_file_extension     = '.html';
-my $output_path               = "$output_directory/ALL_$output_file_name_template . $output_file_extension";
+my $output_path               = "$output_directory/ALL_$output_file_name_template$output_file_extension";
 open( WHOLEOUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 $output_path = $output_path_trunk . $output_file_extension;
