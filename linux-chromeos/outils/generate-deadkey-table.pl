@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-28T0519+0200
+# 2023-07-28T1904+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys, based
@@ -208,10 +208,11 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<ccedilla>/ç/g;
 				$line =~ s/<Ccedilla>/Ç/g;
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
+				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr><td>$2<\/td><td><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" U(03[0-6][0-9A-F]) # (.+)/<tr><td>◌$2<\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr><td>$2<\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+03[0-6][0-9A-F]) # (.+)/<tr><td>◌$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr><td>$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				print WHOLEOUTPUT $line;
 			}
