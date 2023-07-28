@@ -1951,6 +1951,9 @@
 #   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
 #   letters with circumflex accent.
 #
+#   Likewise, a Ç key is emulated for use on the Canadian French variant.
+#   See #*# CEDILLA
+#
 #   Cross-platform compatibility is full on MacOS, but only partial on Windows.
 #   Windows is able to support only lowercase and only digrams, provided that
 #   the dead key is given the appropriate dead character. For the circumflex
@@ -4376,6 +4379,12 @@
 #   Cedilla has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Cedilla
 #
+#   The polygrams make the dead_cedilla key behave like a Ç key in all relevant
+#   cases, along the lines of the Ê-key emulation.
+#
+#   This is designed for use on the Canadian French QWERTY variant.
+#   See # # Ê-key emulation
+#
 <dead_cedilla>                                                                   <space> : "̧" U0327 # COMBINING CEDILLA
 <Multi_key><comma>                                                               <space> : "̧" U0327 # COMBINING CEDILLA
 <dead_cedilla>                                                                   <U200B> : "̧" U0327 # COMBINING CEDILLA
@@ -4386,6 +4395,10 @@
 <Multi_key><comma>                                                        <nobreakspace> : "¸" U00B8 # CEDILLA
 <dead_cedilla>                                                                 <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
 <Multi_key><comma>                                                             <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
+<dead_cedilla>                                                                       <A> : "ÇA" # U+00C7 U+0041
+<Multi_key><comma>                                                                   <A> : "ÇA" # U+00C7 U+0041
+<dead_cedilla>                                                                       <a> : "ça" # U+00E7 U+0061
+<Multi_key><comma>                                                                   <a> : "ça" # U+00E7 U+0061
 <dead_cedilla>                                                                       <C> : "Ç" U00C7 # LATIN CAPITAL LETTER C WITH CEDILLA
 <Multi_key><comma>                                                                   <C> : "Ç" U00C7 # LATIN CAPITAL LETTER C WITH CEDILLA
 <dead_cedilla>                                                                       <c> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
@@ -4418,6 +4431,10 @@
 <Multi_key><comma>                                                                   <N> : "Ņ" U0145 # LATIN CAPITAL LETTER N WITH CEDILLA
 <dead_cedilla>                                                                       <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
 <Multi_key><comma>                                                                   <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
+<dead_cedilla>                                                                       <O> : "ÇO" # U+00C7 U+004F
+<Multi_key><comma>                                                                   <O> : "ÇO" # U+00C7 U+004F
+<dead_cedilla>                                                                       <o> : "ço" # U+00E7 U+006F
+<Multi_key><comma>                                                                   <o> : "ço" # U+00E7 U+006F
 <dead_cedilla>                                                                       <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
 <Multi_key><comma>                                                                   <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
 <dead_cedilla>                                                                       <r> : "ŗ" U0157 # LATIN SMALL LETTER R WITH CEDILLA
@@ -4430,6 +4447,10 @@
 <Multi_key><comma>                                                                   <T> : "Ţ" U0162 # LATIN CAPITAL LETTER T WITH CEDILLA
 <dead_cedilla>                                                                       <t> : "ţ" U0163 # LATIN SMALL LETTER T WITH CEDILLA
 <Multi_key><comma>                                                                   <t> : "ţ" U0163 # LATIN SMALL LETTER T WITH CEDILLA
+<dead_cedilla>                                                                       <U> : "ÇU" # U+00C7 U+0055
+<Multi_key><comma>                                                                   <U> : "ÇU" # U+00C7 U+0055
+<dead_cedilla>                                                                       <u> : "çu" # U+00E7 U+0075
+<Multi_key><comma>                                                                   <u> : "çu" # U+00E7 U+0075
 #
 #
 # # CEDILLA&ACUTE
@@ -5057,25 +5078,6 @@
 <Multi_key><less>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
 <dead_circumflex>                                                                    <x> : "êch" # U00EA U0063 U0068
 <Multi_key><less>                                                                    <x> : "êch" # U00EA U0063 U0068
-#
-#
-# # Ç-key emulation
-#
-#   This makes the dead_cedilla key behave like a Ç key in all relevant cases,
-#   along the lines of the Ê-key emulation. For use on Canadian French layout.
-#
-<dead_cedilla>                                                                       <A> : "ÇA" # U+00C7 U+0041
-<Multi_key><comma>                                                                   <A> : "ÇA" # U+00C7 U+0041
-<dead_cedilla>                                                                       <a> : "ça" # U+00E7 U+0061
-<Multi_key><comma>                                                                   <a> : "ça" # U+00E7 U+0061
-<dead_cedilla>                                                                       <O> : "ÇO" # U+00C7 U+004F
-<Multi_key><comma>                                                                   <O> : "ÇO" # U+00C7 U+004F
-<dead_cedilla>                                                                       <o> : "ço" # U+00E7 U+006F
-<Multi_key><comma>                                                                   <o> : "ço" # U+00E7 U+006F
-<dead_cedilla>                                                                       <U> : "ÇU" # U+00C7 U+0055
-<Multi_key><comma>                                                                   <U> : "ÇU" # U+00C7 U+0055
-<dead_cedilla>                                                                       <u> : "çu" # U+00E7 U+0075
-<Multi_key><comma>                                                                   <u> : "çu" # U+00E7 U+0075
 #
 #
 ### Quotation mark input method
