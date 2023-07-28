@@ -1946,13 +1946,44 @@
 #   with many mathematical symbol sequences that would need to be disambiguated
 #   by leading space.
 #
-#   The following are discarded because they interfere with the Ê-key emulation
-#   required for writing French.
+#   The polygrams -êk-, -êl-, -êm-, -ên-, -êp-, -êq-, -êr-, -êt-, -êv-, -êch-
+#   make dead_circumflex behave like an Ê key in most cases by using the fact
+#   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
+#   letters with circumflex accent.
+#
+#   Cross-platform compatibility is full on MacOS, but only partial on Windows.
+#   Windows is able to support only lowercase and only digrams, provided that
+#   the dead key is given the appropriate dead character. For the circumflex
+#   accent dead key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
+#
+#   French usage information: Courtesy _La fée des lettres_ https://www.motsavec.com.
+#
+#   The following sequences are included here, although they are overridden by
+#   the Ê-key emulation required for writing French, after overriding the same
+#   French sequences in the circumflex dead key setup:
 #   <dead_circumflex><M> : "M̂" # composed M with combining circumflex (Min Nan)
 #   <dead_circumflex><m> : "m̂" # composed m with combining circumflex (Min Nan)
 #   <dead_circumflex><N> : "N̂" # composed N with combining circumflex (Min Nan)
 #   <dead_circumflex><n> : "n̂" # composed n with combining circumflex (Min Nan)
+#   Courtesy https://www.frathwiki.com/Circumflex
 #   See # # Ê-key emulation
+#
+#   U017F LATIN SMALL LETTER LONG S, in group 3 of s, has an additional input
+#   method by <dead_circumflex><f> since French has no words including an -êf-.
+#   Plus, <dead_circumflex><dollar> also yields the same small letter.
+#
+#   Likewise, U2300 DIAMETER SIGN, in group 1 of (, is given yet another input
+#   method by <dead_circumflex><d>, <dead_circumflex><D> due to the fact that
+#   French does not have any word with -êd-.
+#
+#   U016C LATIN CAPITAL LETTER U WITH BREVE is used in Esperanto and has thus a
+#   shortcut by <dead_circumflex><B>, and U016D LATIN SMALL LETTER U WITH BREVE
+#   may alternatively be input by <dead_circumflex><b>. as French doesn’t have
+#   any word with -êb-. Another pair of shortcuts uses Ugrave, since U has not
+#   been encoded with circumflex and grave, as opposed to A, E and O.
+#
+#   Followed by comma or period, dead_circumflex provides a shorthand for U200C
+#   ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
 #
 <dead_circumflex>                                                                <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
@@ -1988,26 +2019,26 @@
 <Multi_key><less>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <B> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto; supportable on Windows; French doesn’t have any word with -ÊB-)
-<Multi_key><less>                                                                    <B> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto; supportable on Windows; French doesn’t have any word with -ÊB-)
-<dead_circumflex>                                                                    <b> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto; supportable on Windows; French doesn’t have any word with -êb-)
-<Multi_key><less>                                                                    <b> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto; supportable on Windows; French doesn’t have any word with -êb-)
+<dead_circumflex>                                                                    <B> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto)
+<Multi_key><less>                                                                    <B> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto)
+<dead_circumflex>                                                                    <b> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
+<Multi_key><less>                                                                    <b> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
 <dead_circumflex>                                                                    <C> : "Ĉ" U0108 # LATIN CAPITAL LETTER C WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <C> : "Ĉ" U0108 # LATIN CAPITAL LETTER C WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <c> : "ĉ" U0109 # LATIN SMALL LETTER C WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <c> : "ĉ" U0109 # LATIN SMALL LETTER C WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <D> : "⌀" U2300 # DIAMETER SIGN (supportable on Windows; French doesn’t have any word with -ÊD-)
-<Multi_key><less>                                                                    <D> : "⌀" U2300 # DIAMETER SIGN (supportable on Windows; French doesn’t have any word with -ÊD-)
-<dead_circumflex>                                                                    <d> : "⌀" U2300 # DIAMETER SIGN (supportable on Windows; French doesn’t have any word with -êd-)
-<Multi_key><less>                                                                    <d> : "⌀" U2300 # DIAMETER SIGN (supportable on Windows; French doesn’t have any word with -êd-)
+<dead_circumflex>                                                                    <D> : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><less>                                                                    <D> : "⌀" U2300 # DIAMETER SIGN
+<dead_circumflex>                                                                    <d> : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><less>                                                                    <d> : "⌀" U2300 # DIAMETER SIGN
 <dead_circumflex>                                                                    <E> : "Ê" U00CA # LATIN CAPITAL LETTER E WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <E> : "Ê" U00CA # LATIN CAPITAL LETTER E WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <e> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <e> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <F> : "S" U0053 # LATIN CAPITAL LETTER S (no uppercase long s; French doesn’t have any word with -ÊF-)
-<Multi_key><less>                                                                    <F> : "S" U0053 # LATIN CAPITAL LETTER S (no uppercase long s; French doesn’t have any word with -ÊF-)
-<dead_circumflex>                                                                    <f> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3; supportable on Windows; French doesn’t have any word with -êf-)
-<Multi_key><less>                                                                    <f> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3; supportable on Windows; French doesn’t have any word with -êf-)
+<dead_circumflex>                                                                    <F> : "S" U0053 # LATIN CAPITAL LETTER S
+<Multi_key><less>                                                                    <F> : "S" U0053 # LATIN CAPITAL LETTER S
+<dead_circumflex>                                                                    <f> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<Multi_key><less>                                                                    <f> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                    <G> : "Ĝ" U011C # LATIN CAPITAL LETTER G WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <G> : "Ĝ" U011C # LATIN CAPITAL LETTER G WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <g> : "ĝ" U011D # LATIN SMALL LETTER G WITH CIRCUMFLEX
@@ -2024,22 +2055,70 @@
 <Multi_key><less>                                                                    <J> : "Ĵ" U0134 # LATIN CAPITAL LETTER J WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <j> : "ĵ" U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <j> : "ĵ" U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
+<dead_circumflex>                                                                    <K> : "ÊK" # U00CA U004B
+<Multi_key><less>                                                                    <K> : "ÊK" # U00CA U004B
+<dead_circumflex>                                                                    <k> : "êk" # U00EA U006B
+<Multi_key><less>                                                                    <k> : "êk" # U00EA U006B
+<dead_circumflex>                                                                    <L> : "ÊL" # U00CA U004C
+<Multi_key><less>                                                                    <L> : "ÊL" # U00CA U004C
+<dead_circumflex>                                                                    <l> : "êl" # U00EA U006C
+<Multi_key><less>                                                                    <l> : "êl" # U00EA U006C
+<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D
+<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D
+<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D
+<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D
+<dead_circumflex>                                                                    <M> : "M̂" # composed M with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <M> : "M̂" # composed M with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <m> : "m̂" # composed m with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <m> : "m̂" # composed m with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E
+<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E
+<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E
+<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E
+<dead_circumflex>                                                                    <N> : "N̂" # composed N with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <N> : "N̂" # composed N with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <n> : "n̂" # composed n with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <n> : "n̂" # composed n with combining circumflex (Min Nan)
 <dead_circumflex>                                                                    <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
+<dead_circumflex>                                                                    <P> : "ÊP" # U00CA U0050
+<Multi_key><less>                                                                    <P> : "ÊP" # U00CA U0050
+<dead_circumflex>                                                                    <p> : "êp" # U00EA U0070
+<Multi_key><less>                                                                    <p> : "êp" # U00EA U0070
+<dead_circumflex>                                                                    <Q> : "ÊQ" # U00CA U0051
+<Multi_key><less>                                                                    <Q> : "ÊQ" # U00CA U0051
+<dead_circumflex>                                                                    <q> : "êq" # U00EA U0071
+<Multi_key><less>                                                                    <q> : "êq" # U00EA U0071
+<dead_circumflex>                                                                    <R> : "ÊR" # U00CA U0052
+<Multi_key><less>                                                                    <R> : "ÊR" # U00CA U0052
+<dead_circumflex>                                                                    <r> : "êr" # U00EA U0072
+<Multi_key><less>                                                                    <r> : "êr" # U00EA U0072
 <dead_circumflex>                                                                    <S> : "Ŝ" U015C # LATIN CAPITAL LETTER S WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <S> : "Ŝ" U015C # LATIN CAPITAL LETTER S WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <s> : "ŝ" U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <s> : "ŝ" U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
+<dead_circumflex>                                                                    <T> : "ÊT" # U00CA U0054
+<Multi_key><less>                                                                    <T> : "ÊT" # U00CA U0054
+<dead_circumflex>                                                                    <t> : "êt" # U00EA U0074
+<Multi_key><less>                                                                    <t> : "êt" # U00EA U0074
 <dead_circumflex>                                                                    <U> : "Û" U00DB # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <U> : "Û" U00DB # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <u> : "û" U00FB # LATIN SMALL LETTER U WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <u> : "û" U00FB # LATIN SMALL LETTER U WITH CIRCUMFLEX
+<dead_circumflex>                                                                    <V> : "ÊV" # U00CA U0056
+<Multi_key><less>                                                                    <V> : "ÊV" # U00CA U0056
+<dead_circumflex>                                                                    <v> : "êv" # U00EA U0076
+<Multi_key><less>                                                                    <v> : "êv" # U00EA U0076
 <dead_circumflex>                                                                    <W> : "Ŵ" U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <W> : "Ŵ" U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <w> : "ŵ" U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <w> : "ŵ" U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
+<dead_circumflex>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
+<Multi_key><less>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
+<dead_circumflex>                                                                    <x> : "êch" # U00EA U0063 U0068
+<Multi_key><less>                                                                    <x> : "êch" # U00EA U0063 U0068
 <dead_circumflex>                                                                    <Y> : "Ŷ" U0176 # LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <Y> : "Ŷ" U0176 # LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <y> : "ŷ" U0177 # LATIN SMALL LETTER Y WITH CIRCUMFLEX
@@ -2060,18 +2139,18 @@
 <Multi_key><less>                                                               <Egrave> : "Ề" U1EC0 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND GRAVE
 <dead_circumflex>                                                               <egrave> : "ề" U1EC1 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND GRAVE
 <Multi_key><less>                                                               <egrave> : "ề" U1EC1 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND GRAVE
-<dead_circumflex>                                                               <Ugrave> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto; supportable on Windows)
-<Multi_key><less>                                                               <Ugrave> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto; supportable on Windows)
-<dead_circumflex>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto; supportable on Windows)
-<Multi_key><less>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto; supportable on Windows)
-<dead_circumflex>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3; supportable on Windows)
-<Multi_key><less>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3; supportable on Windows)
-<dead_circumflex>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER (used in current writing; supportable on Windows)
-<Multi_key><less>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER (used in current writing; supportable on Windows)
-<dead_circumflex>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER (used in current writing; supportable on Windows)
-<Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER (used in current writing; supportable on Windows)
-<dead_circumflex>                                                             <asterisk> : "⁂" U2042 # ASTERISM (supportable on Windows)
-<Multi_key><less>                                                             <asterisk> : "⁂" U2042 # ASTERISM (supportable on Windows)
+<dead_circumflex>                                                               <Ugrave> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto)
+<Multi_key><less>                                                               <Ugrave> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto)
+<dead_circumflex>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
+<Multi_key><less>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
+<dead_circumflex>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3)
+<Multi_key><less>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3)
+<dead_circumflex>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><less>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
+<dead_circumflex>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
+<dead_circumflex>                                                             <asterisk> : "⁂" U2042 # ASTERISM
+<Multi_key><less>                                                             <asterisk> : "⁂" U2042 # ASTERISM
 #
 #
 # # CIRCUMFLEX&GROUP1
@@ -4935,18 +5014,8 @@
 #
 # # Ê-key emulation
 #
-#   This makes dead_circumflex behave like an Ê key in most cases, outputting
-#   sequences of 'ê' followed by a letter that does not exist as a precomposed
-#   letter with circumflex accent: k, l, m, n, p, q, r, t, v.
-#
-#   Likewise this adds support for the polygram 'êch' using x as a base letter.
-#
-#   Cross-platform compatibility is full on MacOS, but only partial on Windows.
-#   Windows is able to support only lowercase and only digrams, provided that
-#   the dead key is given the appropriate dead character. For the circumflex
-#   accent dead key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
-#
-#   French usage information: Courtesy _La fée des lettres_ https://www.motsavec.com.
+#   These sequences duplicate or override similar sequences in dead_circumflex.
+#   See #*# CIRCUMFLEX
 #
 <dead_circumflex>                                                                    <K> : "ÊK" # U00CA U004B
 <Multi_key><less>                                                                    <K> : "ÊK" # U00CA U004B
