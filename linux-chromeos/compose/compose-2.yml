@@ -4935,78 +4935,78 @@
 #
 # # Ê-key emulation
 #
-#   This makes dead_circumflex behave like an ê/Ê key in most cases, outputting
+#   This makes dead_circumflex behave like an Ê key in most cases, outputting
 #   sequences of 'ê' followed by a letter that does not exist as a precomposed
 #   letter with circumflex accent: k, l, m, n, p, q, r, t, v.
 #
 #   Likewise this adds support for the polygram 'êch' using x as a base letter.
 #
 #   Cross-platform compatibility is full on MacOS, but only partial on Windows.
-#   Windows is able to support only lowercase sequences, provided that the dead
-#   key is given the appropriate dead character. For the circumflex accent dead
-#   key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
+#   Windows is able to support only lowercase and only digrams, provided that
+#   the dead key is given the appropriate dead character. For the circumflex
+#   accent dead key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
 #
 #   French usage information: Courtesy _La fée des lettres_ https://www.motsavec.com.
 #
-<dead_circumflex>                                                                    <K> : "ÊK" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <K> : "ÊK" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <k> : "êk" # (supportable on Windows)
-<Multi_key><less>                                                                    <k> : "êk" # (supportable on Windows)
-<dead_circumflex>                                                                    <L> : "ÊL" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <L> : "ÊL" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <l> : "êl" # (supportable on Windows)
-<Multi_key><less>                                                                    <l> : "êl" # (supportable on Windows)
-<dead_circumflex>                                                                    <M> : "ÊM" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <M> : "ÊM" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <m> : "êm" # (supportable on Windows)
-<Multi_key><less>                                                                    <m> : "êm" # (supportable on Windows)
-<dead_circumflex>                                                                    <N> : "ÊN" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <N> : "ÊN" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <n> : "ên" # (supportable on Windows)
-<Multi_key><less>                                                                    <n> : "ên" # (supportable on Windows)
-<dead_circumflex>                                                                    <P> : "ÊP" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <P> : "ÊP" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <p> : "êp" # (supportable on Windows)
-<Multi_key><less>                                                                    <p> : "êp" # (supportable on Windows)
-<dead_circumflex>                                                                    <Q> : "ÊQ" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <Q> : "ÊQ" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <q> : "êq" # (supportable on Windows)
-<Multi_key><less>                                                                    <q> : "êq" # (supportable on Windows)
-<dead_circumflex>                                                                    <R> : "ÊR" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <R> : "ÊR" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <r> : "êr" # (supportable on Windows)
-<Multi_key><less>                                                                    <r> : "êr" # (supportable on Windows)
-<dead_circumflex>                                                                    <T> : "ÊT" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <T> : "ÊT" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <t> : "êt" # (supportable on Windows)
-<Multi_key><less>                                                                    <t> : "êt" # (supportable on Windows)
-<dead_circumflex>                                                                    <V> : "ÊV" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <V> : "ÊV" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <v> : "êv" # (supportable on Windows)
-<Multi_key><less>                                                                    <v> : "êv" # (supportable on Windows)
-<dead_circumflex>                                                                    <X> : "ÊCH" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <X> : "ÊCH" # (*not* supportable on Windows)
-<dead_circumflex>                                                                    <x> : "êch" # (*not* supportable on Windows)
-<Multi_key><less>                                                                    <x> : "êch" # (*not* supportable on Windows)
+<dead_circumflex>                                                                    <K> : "ÊK" # U00CA U004B
+<Multi_key><less>                                                                    <K> : "ÊK" # U00CA U004B
+<dead_circumflex>                                                                    <k> : "êk" # U00EA U006B
+<Multi_key><less>                                                                    <k> : "êk" # U00EA U006B
+<dead_circumflex>                                                                    <L> : "ÊL" # U00CA U004C
+<Multi_key><less>                                                                    <L> : "ÊL" # U00CA U004C
+<dead_circumflex>                                                                    <l> : "êl" # U00EA U006C
+<Multi_key><less>                                                                    <l> : "êl" # U00EA U006C
+<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D
+<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D
+<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D
+<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D
+<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E
+<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E
+<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E
+<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E
+<dead_circumflex>                                                                    <P> : "ÊP" # U00CA U0050
+<Multi_key><less>                                                                    <P> : "ÊP" # U00CA U0050
+<dead_circumflex>                                                                    <p> : "êp" # U00EA U0070
+<Multi_key><less>                                                                    <p> : "êp" # U00EA U0070
+<dead_circumflex>                                                                    <Q> : "ÊQ" # U00CA U0051
+<Multi_key><less>                                                                    <Q> : "ÊQ" # U00CA U0051
+<dead_circumflex>                                                                    <q> : "êq" # U00EA U0071
+<Multi_key><less>                                                                    <q> : "êq" # U00EA U0071
+<dead_circumflex>                                                                    <R> : "ÊR" # U00CA U0052
+<Multi_key><less>                                                                    <R> : "ÊR" # U00CA U0052
+<dead_circumflex>                                                                    <r> : "êr" # U00EA U0072
+<Multi_key><less>                                                                    <r> : "êr" # U00EA U0072
+<dead_circumflex>                                                                    <T> : "ÊT" # U00CA U0054
+<Multi_key><less>                                                                    <T> : "ÊT" # U00CA U0054
+<dead_circumflex>                                                                    <t> : "êt" # U00EA U0074
+<Multi_key><less>                                                                    <t> : "êt" # U00EA U0074
+<dead_circumflex>                                                                    <V> : "ÊV" # U00CA U0056
+<Multi_key><less>                                                                    <V> : "ÊV" # U00CA U0056
+<dead_circumflex>                                                                    <v> : "êv" # U00EA U0076
+<Multi_key><less>                                                                    <v> : "êv" # U00EA U0076
+<dead_circumflex>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
+<Multi_key><less>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
+<dead_circumflex>                                                                    <x> : "êch" # U00EA U0063 U0068
+<Multi_key><less>                                                                    <x> : "êch" # U00EA U0063 U0068
 #
 #
 # # Ç-key emulation
 #
-#   This makes the dead_cedilla key behave like a ç/Ç key in all relevant use
-#   cases along the lines of the Ê-key emulation, for use on Canadian French.
+#   This makes the dead_cedilla key behave like a Ç key in all relevant cases,
+#   along the lines of the Ê-key emulation. For use on Canadian French layout.
 #
-<dead_cedilla>                                                                       <A> : "ÇA" # (*not* supportable on Windows)
-<Multi_key><comma>                                                                   <A> : "ÇA" # (*not* supportable on Windows)
-<dead_cedilla>                                                                       <a> : "ça" # (supportable on Windows)
-<Multi_key><comma>                                                                   <a> : "ça" # (supportable on Windows)
-<dead_cedilla>                                                                       <O> : "ÇO" # (*not* supportable on Windows)
-<Multi_key><comma>                                                                   <O> : "ÇO" # (*not* supportable on Windows)
-<dead_cedilla>                                                                       <o> : "ço" # (supportable on Windows)
-<Multi_key><comma>                                                                   <o> : "ço" # (supportable on Windows)
-<dead_cedilla>                                                                       <U> : "ÇU" # (*not* supportable on Windows)
-<Multi_key><comma>                                                                   <U> : "ÇU" # (*not* supportable on Windows)
-<dead_cedilla>                                                                       <u> : "çu" # (supportable on Windows)
-<Multi_key><comma>                                                                   <u> : "çu" # (supportable on Windows)
+<dead_cedilla>                                                                       <A> : "ÇA" # U+00C7 U+0041
+<Multi_key><comma>                                                                   <A> : "ÇA" # U+00C7 U+0041
+<dead_cedilla>                                                                       <a> : "ça" # U+00E7 U+0061
+<Multi_key><comma>                                                                   <a> : "ça" # U+00E7 U+0061
+<dead_cedilla>                                                                       <O> : "ÇO" # U+00C7 U+004F
+<Multi_key><comma>                                                                   <O> : "ÇO" # U+00C7 U+004F
+<dead_cedilla>                                                                       <o> : "ço" # U+00E7 U+006F
+<Multi_key><comma>                                                                   <o> : "ço" # U+00E7 U+006F
+<dead_cedilla>                                                                       <U> : "ÇU" # U+00C7 U+0055
+<Multi_key><comma>                                                                   <U> : "ÇU" # U+00C7 U+0055
+<dead_cedilla>                                                                       <u> : "çu" # U+00E7 U+0075
+<Multi_key><comma>                                                                   <u> : "çu" # U+00E7 U+0075
 #
 #
 ### Quotation mark input method
