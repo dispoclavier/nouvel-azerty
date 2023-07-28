@@ -97,7 +97,7 @@
 #                               ⚠ This is not a derivative work (subject to GPL, GFDL et CC-BY-SA licenses).
 #                             • Weston RUTER, for the International Phonetic Alphabet.
 #                               ⸻ https://westonruter.github.io/ipa-chart/keyboard/
-#                             • Mats BLAKSTAD, for the list of composed letters used by languages in Togo.
+#                             • Mats BLAKSTAD, for the list of composed letters for languages in Togo.
 #                               ⸻ https://unicode.org/mail-arch/unicode-ml/y2016-m02/0071.html
 #
 #
@@ -3235,7 +3235,9 @@
 <Multi_key><minus><bracketright><bracketleft>                                    <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
 <Multi_key><bracketleft><bracketright><minus>                                    <space> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
 <Multi_key><bracketright><bracketleft><minus>                                    <space> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
+#   In group 11 of [                                                                     : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
 <Multi_key><bracketleft><bracketleft>                                            <space> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+#   In group 11 of ]                                                                     : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <Multi_key><bracketright><bracketright>                                          <space> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 #   In group 1 of [                                                                      : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
 <Multi_key><bracketleft><less>                                                   <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
