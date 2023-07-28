@@ -1,19 +1,17 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-28T1904+0200
+# 2023-07-29T0146+0200
 # Last modified: See datestamp above.
 #
-# Generates HTML tables of dead keys, based
-# on dead key sequences in `Compose.yml`.
+# Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
 #
-# The input requires start and end tags, and
-# section headings are parsed for changing file.
-# The output is designed for use in WordPress.
+# The input requires start and end tags. Section headings are parsed to switch
+# files.
 #
-# An all-in-one table is also generated although
-# WordPress cannot register it regardless of the
-# PHP memory limit set to 1024M for the purpose.
+# The output is designed for use in WordPress. An all-in-one table is generated
+# alongside, although neither WordPress editor is able to register it. Tested
+# with memory limit set to 1024M for the purpose, both in PHP and in WordPress.
 #
 #
 # Using old-style file handles.
@@ -60,7 +58,6 @@ while ( my $line = <INPUT> ) {
   	if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
 			|| $line =~ /^# # Ê-key emulation/
-			|| $line =~ /^# # Ç-key emulation/
 			|| $line =~ /^### Quotation mark input method/
 			|| $line =~ /^### Shorthands for Portuguese and Spanish/
 		) {
