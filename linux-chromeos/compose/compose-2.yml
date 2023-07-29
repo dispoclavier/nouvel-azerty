@@ -6613,8 +6613,8 @@
 <Multi_key><numbersign><0>                                                   <backslash> : "⛄" U26C4 # SNOWMAN WITHOUT SNOW emoji
 <UEFD0><1>                                                                   <backslash> : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><numbersign><1>                                                   <backslash> : "♮" U266E # MUSIC NATURAL SIGN
-<UEFD0><2>                                                                   <backslash> : "∁" U2201 # COMPLEMENT
-<Multi_key><numbersign><2>                                                   <backslash> : "∁" U2201 # COMPLEMENT
+<UEFD0><2>                                                                   <backslash> : "⟂" U27C2 # PERPENDICULAR
+<Multi_key><numbersign><2>                                                   <backslash> : "⟂" U27C2 # PERPENDICULAR
 #
 #
 # # B07-level3
@@ -6809,7 +6809,7 @@
 <UEFD0><4>                                                                     <section> : "⊥" U22A5 # UP TACK
 <Multi_key><numbersign><4>                                                     <section> : "⊥" U22A5 # UP TACK
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                   <section> : "⊥" U22A5 # UP TACK
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                    <section> : "⊥" U22A5 # UP TACK
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                    <sectiU27C2"⟂" U27C2 on> : "⊥" U22A5 # UP TACK
 <UEFD0><5>                                                                   <semicolon> : "⊤" U22A4 # DOWN TACK
 <Multi_key><numbersign><5>                                                   <semicolon> : "⊤" U22A4 # DOWN TACK
 <UEFD0><5>                                                                     <section> : "⊤" U22A4 # DOWN TACK
