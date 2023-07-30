@@ -36,9 +36,7 @@
 #   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
 #     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 #
-#               Installation: First of all: Concatenate the files `compose-1.yml` and `compose-2.yml`
-#                             to get the full file named `Compose`, too large to display on GitHub.
-#
+#               Installation: Please do not use this file but the full file `Compose.yml`.
 #
 #*# BARRED
 #   dead_stroke
