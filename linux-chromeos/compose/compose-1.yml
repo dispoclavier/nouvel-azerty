@@ -9160,8 +9160,8 @@
 #
 <dead_grave>                                                                     <space> : "̀" U0300 # COMBINING GRAVE ACCENT
 <Multi_key><grave>                                                               <space> : "̀" U0300 # COMBINING GRAVE ACCENT
-<dead_grave>                                                                     <U200B> : "̀" U0300 # COMBINING GRAVE ACCENT
-<Multi_key><grave>                                                               <U200B> : "̀" U0300 # COMBINING GRAVE ACCENT
+<dead_grave>                                                                     <U200B> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
+<Multi_key><grave>                                                               <U200B> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                     <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <Multi_key><grave>                                                               <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <dead_grave>                                                              <nobreakspace> : "`" U0060 # GRAVE ACCENT
@@ -9220,6 +9220,8 @@
 <Multi_key><grave>                                                                   <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
 <dead_grave>                                                                     <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <Multi_key><grave>                                                               <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
+<dead_grave>                                                                <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
+<Multi_key><grave>                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 #
 #
 # # GRAVE&ACUTE
@@ -9359,46 +9361,6 @@
 <Multi_key><grave><grave>                                                            <u> : "ȕ" U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 <dead_grave><dead_grave>                                                         <minus> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <Multi_key><grave><grave>                                                        <minus> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
-#
-#
-#^# GRAVE_BELOW
-#   dead_grave triple press
-#   Multi_key: ¦```
-#
-<dead_grave><dead_grave><dead_grave>                                             <space> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<Multi_key><grave><grave><grave>                                                 <space> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<dead_grave><dead_grave><dead_grave>                                             <U200B> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<Multi_key><grave><grave><grave>                                                 <U200B> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<dead_grave><dead_grave><dead_grave>                                             <U202F> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
-<Multi_key><grave><grave><grave>                                                 <U202F> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
-<dead_grave><dead_grave><dead_grave>                                      <nobreakspace> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
-<Multi_key><grave><grave><grave>                                          <nobreakspace> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
-#
-#
-#^# MIDDLE_GRAVE
-#   dead_grave quadruple press
-#   Multi_key: ¦````
-#
-#   Also by grave on hyphen-minus.
-#   See #*# GRAVE
-#
-<dead_grave><dead_grave><dead_grave><dead_grave>                                 <U202F> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-<Multi_key><grave><grave><grave><grave>                                          <U202F> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-<dead_grave><dead_grave><dead_grave><dead_grave>                          <nobreakspace> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-<Multi_key><grave><grave><grave><grave>                                   <nobreakspace> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-#
-#
-#^# MIDDLE_DOUBLE_GRAVE
-#   dead_grave quintuple press
-#   Multi_key: ¦`````
-#
-#   Also by double grave on hyphen-minus.
-#   See #^# DOUBLE_GRAVE
-#
-<dead_grave><dead_grave><dead_grave><dead_grave><dead_grave>                     <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
-<Multi_key><grave><grave><grave><grave><grave>                                   <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
-<dead_grave><dead_grave><dead_grave><dead_grave><dead_grave>              <nobreakspace> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
-<Multi_key><grave><grave><grave><grave><grave>                            <nobreakspace> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 #
 #
 #*# ACUTE
