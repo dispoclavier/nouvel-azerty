@@ -46,15 +46,14 @@
 #                             need to override U01D5 and U01D6. Likewise, "V́" and "v́" need to override
 #                             U01D7 and U01D8 as defined in en_US.UTF-8/Compose.
 #
-#                             First of all: Concatenate the files `compose-1.yml` and `compose-2.yml`
-#                             to get the full file named `Compose`, too large to display on GitHub.
+#                             Please do not use this file but the full file `Compose.yml`.
 #
 #                             A. 1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                2. Append this file to /usr/share/X11/locale/en_US.UTF-8/Compose
+#                                2. Append `Compose.yml` to /usr/share/X11/locale/en_US.UTF-8/Compose
 #                             B. 1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                2. Replace /usr/share/X11/locale/en_US.UTF-8/Compose with this file.
+#                                2. Replace /usr/share/X11/locale/en_US.UTF-8/Compose with `Compose.yml`.
 #                             C. 1. Back up the file ~/.XCompose if it exists.
-#                                2. Append this file to ~/.XCompose or rename it accordingly.
+#                                2. Append `Compose.yml` to ~/.XCompose or rename it accordingly.
 #                                3. Optionally uncomment the following line:
 #                                       include "%L"
 #                                   That is not mandatory since this file is designed to be standalone.
