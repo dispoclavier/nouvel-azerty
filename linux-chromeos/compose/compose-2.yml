@@ -2154,6 +2154,8 @@
 <Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                             <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                             <asterisk> : "⁂" U2042 # ASTERISM
+<dead_circumflex>                                                            <ampersand> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<Multi_key><less>                                                            <ampersand> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 #
 #
 # # CIRCUMFLEX&GROUP1
@@ -2560,6 +2562,8 @@
 <Multi_key><greater>                                                                 <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
 <dead_caron>                                                                         <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 <Multi_key><greater>                                                                 <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
+<dead_caron>                                                                 <ampersand> : "̬" U032C # COMBINING CARON BELOW
+<Multi_key><greater>                                                         <ampersand> : "̬" U032C # COMBINING CARON BELOW
 #
 #
 # # HACEK&GROUP1
