@@ -1,6 +1,6 @@
 # Journal des modifications
 
-## 1.0.4 (projet)
+## 1.0.4 (2023-07-30)
 
 * Groupes des symboles : Permuter les symboles "⊳" U22B3 et "⊲" U22B2 ainsi que "⊢" U22A2 et "⊣" U22A3. (compose-2.yml [aa77809](https://github.com/dispoclavier/nouvel-azerty/commit/aa77809a03a69eb462cec0d540f6d4dd76b79ab0))
 * Groupes des symboles : Remplacer "∁" U2201 par "⟂" U27C2, permuter "ː" U02D0 et "ˑ" U02D1, réarranger "⊢" U22A2, "⊣" U22A3, "⊥" U22A5, "⊤" U22A4, déplacer "⋱" U22F1, "⋰" U22F0, dupliquer "꞉" UA789. (compose-2.yml [13c46b3](https://github.com/dispoclavier/nouvel-azerty/commit/13c46b3783638c6ad6d7c1c62cf3606b071e29cc), [77a281f](https://github.com/dispoclavier/nouvel-azerty/commit/77a281f994ad25cd1e9bb8928eae881596702292), [cae6903](https://github.com/dispoclavier/nouvel-azerty/commit/cae6903280ed2105c27422d9c6524ade4c229cbd))
@@ -10,6 +10,7 @@
 * Touches mortes : Supprimer les touches mortes virtuelles à partir de triple frappe d’accent grave. (compose-1.yml [bef37b4](https://github.com/dispoclavier/nouvel-azerty/commit/bef37b451007ca6ea93b4961eb8eebf7901ba7b7))
 * Touches mortes : Accents aigu, grave : Déplacer les diacritiques combinants supplémentaires sur la perluète. (compose-1.yml [f4c1ef6](https://github.com/dispoclavier/nouvel-azerty/commit/f4c1ef6fc90d712606d9ed9b6cd6771b5def6ef0))
 * Touches mortes : Accent circonflexe, hatchek : Redonder les diacritiques combinants souscrits sur la perluète. (compose-2.yml [0e3eee2](https://github.com/dispoclavier/nouvel-azerty/commit/0e3eee23ef25fa529643e8a8c64ec360e4777bc7))
+* Touches mortes : Brève, brève inversée, tilde : Redonder les diacritiques combinants souscrits sur la perluète ; double accent aigu : supprimer la touche morte virtuelle double frappe. (compose-1.yml [7c66f9e](https://github.com/dispoclavier/nouvel-azerty/commit/7c66f9eb00175be161f15b57997652efaa9c2b02))
 
 ## 1.0.3 (2023-07-22)
 
