@@ -8210,6 +8210,8 @@
 <Multi_key><asciitilde>                                                              <y> : "ỹ" U1EF9 # LATIN SMALL LETTER Y WITH TILDE
 <dead_tilde>                                                                         <z> : "ᵶ" U1D76 # LATIN SMALL LETTER Z WITH MIDDLE TILDE
 <Multi_key><asciitilde>                                                              <z> : "ᵶ" U1D76 # LATIN SMALL LETTER Z WITH MIDDLE TILDE
+<dead_tilde>                                                                 <ampersand> : "̰" U0330 # COMBINING TILDE BELOW
+<Multi_key><asciitilde>                                                      <ampersand> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde>                                                                     <minus> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde>                                                          <minus> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde>                                                                     <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
@@ -9708,19 +9710,6 @@
 <Multi_key><quotedbl>                                                            <minus> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 #
 #
-#^# MIDDLE_DOUBLE_ACUTE
-#   dead_doubleacute double press
-#   Multi_key: ¦""
-#
-#   Also by double acute on hyphen-minus.
-#   See #*# DOUBLE_ACUTE
-#
-<dead_doubleacute><dead_doubleacute>                                             <U202F> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
-<Multi_key><quotedbl><quotedbl>                                                  <U202F> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
-<dead_doubleacute><dead_doubleacute>                                      <nobreakspace> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
-<Multi_key><quotedbl><quotedbl>                                           <nobreakspace> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
-#
-#
 #*# DOT_ABOVE
 #   dead_abovedot
 #   Multi_key: ¦.
@@ -10324,6 +10313,8 @@
 <Multi_key><parenleft>                                                       <parenleft> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <dead_invertedbreve>                                                        <parenright> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <Multi_key><parenleft>                                                      <parenright> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_invertedbreve>                                                         <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
+<Multi_key><parenleft>                                                       <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 #
 #
 # # Box drawings with rounded corners
@@ -10700,6 +10691,8 @@
 <Multi_key><parenright>                                                      <parenleft> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <dead_breve>                                                                <parenright> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <Multi_key><parenright>                                                     <parenright> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_breve>                                                                 <ampersand> : "̮" U032E # COMBINING BREVE BELOW
+<Multi_key><parenright>                                                      <ampersand> : "̮" U032E # COMBINING BREVE BELOW
 #
 #
 # # Box drawings
