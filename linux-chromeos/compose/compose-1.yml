@@ -3782,10 +3782,14 @@
 <Multi_key><A><x>                                                                <space> : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><x>                                     <space> : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><x>                                     <space> : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
-<Multi_key><minus><apostrophe><apostrophe>                                       <space> : "⨼" U2A3C # INTERIOR PRODUCT
-<Multi_key><minus><rightsinglequotemark><rightsinglequotemark>                   <space> : "⨼" U2A3C # INTERIOR PRODUCT
-<Multi_key><apostrophe><apostrophe><minus>                                       <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><rightsinglequotemark><rightsinglequotemark><minus>                   <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><space><minus><apostrophe>                                            <space> : "⨼" U2A3C # INTERIOR PRODUCT
+<Multi_key><nobreakspace><minus><apostrophe>                                     <space> : "⨼" U2A3C # INTERIOR PRODUCT
+<Multi_key><space><minus><rightsinglequotemark>                                  <space> : "⨼" U2A3C # INTERIOR PRODUCT
+<Multi_key><nobreakspace><minus><rightsinglequotemark>                           <space> : "⨼" U2A3C # INTERIOR PRODUCT
+<Multi_key><space><apostrophe><minus>                                            <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><nobreakspace><apostrophe><minus>                                     <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><space><rightsinglequotemark><minus>                                  <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><nobreakspace><rightsinglequotemark><minus>                           <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 #   This seems to be a duplicate encoding of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION.
 <Multi_key><space><o><semicolon>                                                 <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><o><semicolon>                                          <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
