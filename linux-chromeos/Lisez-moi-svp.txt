@@ -1,4 +1,4 @@
-                      Date : 2023-07-30T2041+0200
+                      Date : 2023-07-30T2054+0200
                    Version : 1.0.4
             Nom du produit : Nouvel AZERTY
         Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
