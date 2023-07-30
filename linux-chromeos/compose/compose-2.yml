@@ -2254,28 +2254,20 @@
 #
 # # CIRCUMFLEX&ACUTE
 #
-<dead_circumflex><dead_acute>                                                        <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
-<Multi_key><less><apostrophe>                                                        <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
+#   This is limited to <dead_acute><dead_circumflex> to prevent conflicts with
+#   quotation marks.
+#   See ### Quotation mark input method
+#
 <dead_acute><dead_circumflex>                                                        <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
 <Multi_key><apostrophe><less>                                                        <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
-<dead_circumflex><dead_acute>                                                        <a> : "ấ" U1EA5 # LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE
-<Multi_key><less><apostrophe>                                                        <a> : "ấ" U1EA5 # LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE
 <dead_acute><dead_circumflex>                                                        <a> : "ấ" U1EA5 # LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE
 <Multi_key><apostrophe><less>                                                        <a> : "ấ" U1EA5 # LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE
-<dead_circumflex><dead_acute>                                                        <E> : "Ế" U1EBE # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND ACUTE
-<Multi_key><less><apostrophe>                                                        <E> : "Ế" U1EBE # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND ACUTE
 <dead_acute><dead_circumflex>                                                        <E> : "Ế" U1EBE # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND ACUTE
 <Multi_key><apostrophe><less>                                                        <E> : "Ế" U1EBE # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND ACUTE
-<dead_circumflex><dead_acute>                                                        <e> : "ế" U1EBF # LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE
-<Multi_key><less><apostrophe>                                                        <e> : "ế" U1EBF # LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE
 <dead_acute><dead_circumflex>                                                        <e> : "ế" U1EBF # LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE
 <Multi_key><apostrophe><less>                                                        <e> : "ế" U1EBF # LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE
-<dead_circumflex><dead_acute>                                                        <O> : "Ố" U1ED0 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE
-<Multi_key><less><apostrophe>                                                        <O> : "Ố" U1ED0 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE
 <dead_acute><dead_circumflex>                                                        <O> : "Ố" U1ED0 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE
 <Multi_key><apostrophe><less>                                                        <O> : "Ố" U1ED0 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE
-<dead_circumflex><dead_acute>                                                        <o> : "ố" U1ED1 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE
-<Multi_key><less><apostrophe>                                                        <o> : "ố" U1ED1 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE
 <dead_acute><dead_circumflex>                                                        <o> : "ố" U1ED1 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE
 <Multi_key><apostrophe><less>                                                        <o> : "ố" U1ED1 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE
 #
@@ -4798,20 +4790,16 @@
 #
 # # DIAERESIS&ACUTE
 #
-<dead_diaeresis><dead_acute>                                                         <I> : "Ḯ" U1E2E # LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
-<Multi_key><colon><apostrophe>                                                       <I> : "Ḯ" U1E2E # LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
+#   This is limited to <dead_acute><dead_diaeresis> to prevent conflicts with
+#   quotation marks.
+#   See ### Quotation mark input method
+#
 <dead_acute><dead_diaeresis>                                                         <I> : "Ḯ" U1E2E # LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
 <Multi_key><apostrophe><colon>                                                       <I> : "Ḯ" U1E2E # LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
-<dead_diaeresis><dead_acute>                                                         <i> : "ḯ" U1E2F # LATIN SMALL LETTER I WITH DIAERESIS AND ACUTE
-<Multi_key><colon><apostrophe>                                                       <i> : "ḯ" U1E2F # LATIN SMALL LETTER I WITH DIAERESIS AND ACUTE
 <dead_acute><dead_diaeresis>                                                         <i> : "ḯ" U1E2F # LATIN SMALL LETTER I WITH DIAERESIS AND ACUTE
 <Multi_key><apostrophe><colon>                                                       <i> : "ḯ" U1E2F # LATIN SMALL LETTER I WITH DIAERESIS AND ACUTE
-<dead_diaeresis><dead_acute>                                                         <U> : "Ǘ" U01D7 # LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE
-<Multi_key><colon><apostrophe>                                                       <U> : "Ǘ" U01D7 # LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE
 <dead_acute><dead_diaeresis>                                                         <U> : "Ǘ" U01D7 # LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE
 <Multi_key><apostrophe><colon>                                                       <U> : "Ǘ" U01D7 # LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE
-<dead_diaeresis><dead_acute>                                                         <u> : "ǘ" U01D8 # LATIN SMALL LETTER U WITH DIAERESIS AND ACUTE
-<Multi_key><colon><apostrophe>                                                       <u> : "ǘ" U01D8 # LATIN SMALL LETTER U WITH DIAERESIS AND ACUTE
 <dead_acute><dead_diaeresis>                                                         <u> : "ǘ" U01D8 # LATIN SMALL LETTER U WITH DIAERESIS AND ACUTE
 <Multi_key><apostrophe><colon>                                                       <u> : "ǘ" U01D8 # LATIN SMALL LETTER U WITH DIAERESIS AND ACUTE
 #
@@ -5099,17 +5087,23 @@
 #
 #   The set with rightsinglequotemark takes into account that the ASCII
 #   apostrophe on row E is replaced with rightsinglequotemark to enhance
-#   user experience. With apostrophe, the set would collide, e.g. with
-#   CIRCUMFLEX&ACUTE. Therefore, apostrophe cannot be used. For an ASCII
-#   alternative, question mark is used instead, since the question mark
-#   is not used in dead key emulation. The ampersand is neither, but it
-#   would be less mnemonic.
+#   user experience.
+#
+#   Apostrophe is supported alongside for interoperability, as designed,
+#   but some of the Multi_key equivalents collide with CIRCUMFLEX&ACUTE,
+#   DIAERESIS&ACUTE. That is fixed by hitting these dead keys the other
+#   way around.
+#
+#   As an alternative, question mark is also used as a base character of
+#   single quotation marks, since question mark does not occur in any of
+#   the dead key emulations with Multi_key. Ampersand does neither, but
+#   it would be even less mnemonic.
 #
 #   The character descriptor in lowercase below is the Unicode informative
 #   alias, given in case of a suboptimal name.
 #
 #
-#   Common quotation marks
+# # Common quotation marks
 #
 #   Double
 #
@@ -5123,7 +5117,7 @@
 <Multi_key><grave>                                                            <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 #
 #
-#   Single on rightsinglequotemark
+#   Single with rightsinglequotemark
 #
 <dead_circumflex>                                                 <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                 <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -5135,7 +5129,19 @@
 <Multi_key><grave>                                                <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 #
 #
-#   Single on question mark
+#   Single with apostrophe
+#
+<dead_circumflex>                                                           <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<Multi_key><less>                                                           <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<dead_acute>                                                                <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><apostrophe>                                                     <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_diaeresis>                                                            <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+<Multi_key><colon>                                                          <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+<dead_grave>                                                                <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+<Multi_key><grave>                                                          <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+#
+#
+#   Single with question mark
 #
 <dead_circumflex>                                                             <question> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                             <question> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -5147,40 +5153,54 @@
 <Multi_key><grave>                                                            <question> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 #
 #
-#   Ornamental quotation marks
+# # Ornamental quotation marks
 #
-#   Ornamental quotation marks are supported by dead key double press.
-#   SMP quotation mark ornaments U1F676.. are not supported, for cross
-#   platform compatibility.
+#   Ornamental quotation marks are input by dead key followed by group selector
+#   rather than dead key double press, that would defeat apostrophe as a base
+#   character.
+#
+#   SMP quotation mark ornaments U1F676.. are not supported, for cross platform
+#   compatibility.
+#
 #
 #   Double
 #
-<dead_circumflex><dead_circumflex>                                            <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
-<Multi_key><less><less>                                                       <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_acute><dead_acute>                                                      <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><apostrophe><apostrophe>                                           <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><dead_diaeresis>                                              <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><colon><colon>                                                     <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEAD0>                                                      <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><UEAD0>                                                      <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEAD0>                                                           <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><UEAD0>                                                <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEAD0>                                                       <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><UEAD0>                                                     <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 #
 #
-#   Single on rightsinglequotemark
+#   Single with rightsinglequotemark
 #
-<dead_circumflex><dead_circumflex>                                <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<Multi_key><less><less>                                           <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_acute><dead_acute>                                          <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><apostrophe><apostrophe>                               <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><dead_diaeresis>                                  <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><colon><colon>                                         <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEAD0>                                          <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><UEAD0>                                          <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEAD0>                                               <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><UEAD0>                                    <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEAD0>                                           <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><UEAD0>                                         <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 #
 #
-#   Single on question mark
+#   Single with apostrophe
 #
-<dead_circumflex><dead_circumflex>                                            <question> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<Multi_key><less><less>                                                       <question> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_acute><dead_acute>                                                      <question> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><apostrophe><apostrophe>                                           <question> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><dead_diaeresis>                                              <question> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><colon><colon>                                                     <question> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEAD0>                                                    <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><UEAD0>                                                    <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEAD0>                                                         <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><UEAD0>                                              <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEAD0>                                                     <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><UEAD0>                                                   <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+#
+#
+#   Single with question mark
+#
+<dead_circumflex><UEAD0>                                                      <question> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><UEAD0>                                                      <question> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEAD0>                                                           <question> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><UEAD0>                                                <question> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEAD0>                                                       <question> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><UEAD0>                                                     <question> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 #
 #
 #   Angle quotation mark ornaments are in group 3 of bracketleft and -right,
