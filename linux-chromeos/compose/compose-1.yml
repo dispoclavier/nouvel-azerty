@@ -4512,8 +4512,8 @@
 #   Z (W on QWERTY)  %  *dead_turned UEFD5; *dead_inverted/sideways
 #   E                {  dead_hook; *dead_curl/loop/crossedtail/squirreltail; *dead_flourish/hooktail/midheightlefthook
 #   R                }  *dead_retroflexhook UEFD4; *dead_palatalhook; *dead_swash
-#   T                ~  dead_tilde, middle tilde; dead_belowtilde/middletilde/doublemiddletilde
-#   Y                @  dead_greek (new-school); *dead_circled
+#   T                ~  dead_tilde; dead_belowtilde/middletilde; *dead_doublemiddletilde
+#   Y                @  dead_greek (new-school); *dead_circled; *dead_doublecircled
 #   U                `  dead_grave; dead_doublegrave
 #   I                '  dead_acute
 #   O                "  dead_doubleacute (new-school)
@@ -4524,7 +4524,7 @@
 #   D                (  dead_invertedbreve (new-school)
 #   F                )  dead_breve (new-school), dead_belowbreve
 #   G                -  dead_stroke (*dead_bar, horizontal stroke)
-#   H                +  dead_horn
+#   H                +  dead_horn/descender/notch
 #   J                [  dead_ogonek (new-school)
 #   K                ]  *dead_abovehook UEFD3
 #   L                _  *dead_subscript UEFD2 or small caps; *dead_belowcombining
@@ -8324,7 +8324,7 @@
 <Multi_key><asciitilde><asciitilde>                                              <equal> : "≈" U2248 # ALMOST EQUAL TO
 #
 #
-#^# DOUBLE_MIDDLE_TILDE, TILDE_OVERLAY
+#^# DOUBLE_MIDDLE_TILDE
 #   dead_tilde triple press
 #   Multi_key: ¦~~~
 #
@@ -9125,6 +9125,7 @@
 #
 #
 #^# DOUBLE_CIRCLED
+#   *dead_doublecircled
 #   dead_greek triple press
 #   Multi_key: ¦@@@
 #
@@ -9318,6 +9319,7 @@
 #
 #
 #^# DOUBLE_GRAVE
+#   dead_doublegrave
 #   dead_grave double press
 #   Multi_key: ¦``
 #
