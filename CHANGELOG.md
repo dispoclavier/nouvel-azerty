@@ -6,7 +6,7 @@
 * Groupes des symboles : Remplacer "∁" U2201 par "⟂" U27C2, permuter "ː" U02D0 et "ˑ" U02D1, réarranger "⊢" U22A2, "⊣" U22A3, "⊥" U22A5, "⊤" U22A4, déplacer "⋱" U22F1, "⋰" U22F0, dupliquer "꞉" UA789. (compose-2.yml [13c46b3](https://github.com/dispoclavier/nouvel-azerty/commit/13c46b3783638c6ad6d7c1c62cf3606b071e29cc), [77a281f](https://github.com/dispoclavier/nouvel-azerty/commit/77a281f994ad25cd1e9bb8928eae881596702292), [cae6903](https://github.com/dispoclavier/nouvel-azerty/commit/cae6903280ed2105c27422d9c6524ade4c229cbd))
 * Symboles mathématiques : Corriger les séquences de composition de "⨼" U2A3C et "⨽" U2A3D. (compose-1.yml [7f7615a](https://github.com/dispoclavier/nouvel-azerty/commit/7f7615ad97212712585262e528a2cd253c1315e2))
 * Touches mortes : Supprimer la touche morte virtuelle double frappe d’accent aigu. (compose-1.yml [90ca4fe](https://github.com/dispoclavier/nouvel-azerty/commit/90ca4fed7741528d890334352e807042e3e5798f))
-* Touches mortes : Ajouter la prise en charge de l’apostrophe ASCII comme caractère de base pour la saisie des guillemets apostrophes. ([2ec9a02](https://github.com/dispoclavier/nouvel-azerty/commit/2ec9a02eb735ad7aa352b5c4a8a8121502eba41d), [2c5626f](https://github.com/dispoclavier/nouvel-azerty/commit/2c5626f24ea1bce7e1e46525df968ecc839a8df9))
+* Touches mortes : Ajouter la prise en charge de l’apostrophe ASCII comme caractère de base pour la saisie des guillemets apostrophes. (compose-2.yml [2ec9a02](https://github.com/dispoclavier/nouvel-azerty/commit/2ec9a02eb735ad7aa352b5c4a8a8121502eba41d), compose-1.yml [2c5626f](https://github.com/dispoclavier/nouvel-azerty/commit/2c5626f24ea1bce7e1e46525df968ecc839a8df9))
 
 ## 1.0.3 (2023-07-22)
 
