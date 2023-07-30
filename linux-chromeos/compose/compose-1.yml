@@ -4500,15 +4500,15 @@
 #   See Mark Durdin’s article about “Robust key message handling in Windows”:
 #   https://blog.keyman.com/2008/06/robust-key-mess/
 #
-#   Each dead key has a stable mapping on level 3 according to the table below.
+#   Each dead key has a stable mapping on level 4 according to the table below.
 #
 #   AZERTY fr_FR has a dedicated key for dead_circumflex and dead_diaeresis,
 #   plus dead positions for both dead_tilde and dead_grave; not for dead_acute.
 #   The layout proposed here has unshifted dead keys for four of these, as well
 #   as a level 3 dead key for dead_tilde on the circumflex dead key, plus the
-#   group selector dead key on both unshifted and level 3 of a key in column 12
+#   group selector dead key on both unshifted and level 3 of a key in column 12,
 #   plus the Multi_key. Level 3 mappings of the latter two and level 4 dead keys
-#   are stable across ModLock states.
+#   are stable across the 2 ModLock states French mode and numeric mode.
 #
 #
 #   Overview            Based on AZERTY fr_FR.
