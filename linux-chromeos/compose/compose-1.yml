@@ -9160,8 +9160,8 @@
 #
 <dead_grave>                                                                     <space> : "̀" U0300 # COMBINING GRAVE ACCENT
 <Multi_key><grave>                                                               <space> : "̀" U0300 # COMBINING GRAVE ACCENT
-<dead_grave>                                                                     <U200B> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<Multi_key><grave>                                                               <U200B> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
+<dead_grave>                                                                     <U200B> : "̀" U0300 # COMBINING GRAVE ACCENT
+<Multi_key><grave>                                                               <U200B> : "̀" U0300 # COMBINING GRAVE ACCENT
 <dead_grave>                                                                     <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <Multi_key><grave>                                                               <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <dead_grave>                                                              <nobreakspace> : "`" U0060 # GRAVE ACCENT
@@ -9218,6 +9218,8 @@
 <Multi_key><grave>                                                                   <Y> : "Ỳ" U1EF2 # LATIN CAPITAL LETTER Y WITH GRAVE
 <dead_grave>                                                                         <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
 <Multi_key><grave>                                                                   <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
+<dead_grave>                                                                 <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
+<Multi_key><grave>                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                     <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <Multi_key><grave>                                                               <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <dead_grave>                                                                <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
@@ -9375,7 +9377,7 @@
 #   The acute accent below virtual dead key is removed as designed to foster a
 #   better quotation input method. The only two acute below characters are now
 #   with underscore for "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT, and with
-#   zero width space for "̗" U0317 # COMBINING ACUTE ACCENT BELOW.
+#   ampersand for "̗" U0317 # COMBINING ACUTE ACCENT BELOW.
 #
 #   Also used as a synonym of STROKE in mathematical symbols, except in those
 #   cases where the quick access sequence conflicts with regular support, and
@@ -9387,8 +9389,8 @@
 #
 <dead_acute>                                                                     <space> : "́" U0301 # COMBINING ACUTE ACCENT
 <Multi_key><apostrophe>                                                          <space> : "́" U0301 # COMBINING ACUTE ACCENT
-<dead_acute>                                                                     <U200B> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
-<Multi_key><apostrophe>                                                          <U200B> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
+<dead_acute>                                                                     <U200B> : "́" U0301 # COMBINING ACUTE ACCENT
+<Multi_key><apostrophe>                                                          <U200B> : "́" U0301 # COMBINING ACUTE ACCENT
 <dead_acute>                                                                     <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <Multi_key><apostrophe>                                                          <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <dead_acute>                                                              <nobreakspace> : "´" U00B4 # ACUTE ACCENT
@@ -9511,6 +9513,8 @@
 <Multi_key><apostrophe>                                                       <Ccedilla> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <dead_acute>                                                                  <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><apostrophe>                                                       <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
+<dead_acute>                                                                 <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
+<Multi_key><apostrophe>                                                      <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                     <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 #
