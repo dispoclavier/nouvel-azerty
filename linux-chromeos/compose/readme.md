@@ -9,8 +9,8 @@ Les tableaux des touches mortes sont [générés](https://github.com/dispoclavie
 ## À propos
 Pour la maintenabilité, `Compose.yml` est divisé en deux parties, `compose-1.yml` et `compose-2.yml`, qui reflètent les modifications apportées au répertoire.
 
-Le fichier d’un seul tenant `Compose.yml` dans ce dossier sert d’exemple seulement. Sa mise à jour est sporadique.
+Le fichier d’un seul tenant `Compose.yml` dans ce dossier est celui de la dernière version publiée.
 
-Les archives distribuées contiennent aussi un tel fichier `Compose.yml`, mais pas celui-ci. Une copie du fichier à jour est placée à la racine de l’archive.
+Les archives distribuées dont le nom commence par `Nouvel-AZERTY-Linux-ChromeOS-` contiennent aussi une copie de ce fichier, placée à la racine de l’archive.
 
 Ce répertoire n’est pas au format YAML ; l’extension `.yml` sert uniquement à activer une coloration syntaxique ici, et dans les éditeurs de texte automatiquement.
