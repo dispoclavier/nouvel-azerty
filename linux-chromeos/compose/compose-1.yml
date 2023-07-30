@@ -4463,7 +4463,7 @@
 #   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
 #   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
 #   collisions with the dead key based input method for apostrophe/comma-shaped
-#   double quotation marks. See # # Curly quotation marks
+#   double quotation marks. See ### Quotation mark input method
 #
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose,
 #   dead_cedilla’s <comma>, also used for dead_ogonek, conflicts on E.
@@ -9235,19 +9235,15 @@
 #   hacek input facility.
 #   See # # HACEK input facility by GRAVE ACUTE
 #
-<dead_grave><dead_acute>                                                         <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<Multi_key><grave><apostrophe>                                                   <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<dead_grave><dead_acute>                                                         <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<Multi_key><grave><apostrophe>                                                   <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<dead_grave><dead_acute><dead_grave>                                             <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<Multi_key><grave><apostrophe><grave>                                            <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<dead_grave><dead_acute><dead_grave>                                             <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<Multi_key><grave><apostrophe><grave>                                            <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+#   These are limited to <dead_acute><dead_grave>[<dead_acute>] to prevent
+#   conflicts with quotation marks.
+#   See ### Quotation mark input method
 #
-<dead_acute><dead_grave>                                                         <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
-<Multi_key><apostrophe><grave>                                                   <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
-<dead_acute><dead_grave>                                                         <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
-<Multi_key><apostrophe><grave>                                                   <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
+<dead_acute><dead_grave>                                                         <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+<Multi_key><apostrophe><grave>                                                   <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+<dead_acute><dead_grave>                                                         <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+<Multi_key><apostrophe><grave>                                                   <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+#
 <dead_acute><dead_grave><dead_acute>                                             <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 <Multi_key><apostrophe><grave><apostrophe>                                       <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 <dead_acute><dead_grave><dead_acute>                                             <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
@@ -9689,18 +9685,18 @@
 #
 # # ACUTE&DIAERESIS&GROUP1
 #
+#   These are limited to <dead_acute><dead_diaeresis> to prevent conflicts with
+#   quotation marks.
+#   See ### Quotation mark input method
+#
 <dead_acute><dead_diaeresis><UEFD0>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon><numbersign>                                       <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_diaeresis><dead_acute><UEFD0>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><colon><apostrophe><numbersign>                                       <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 # # ACUTE&DIAERESIS&GROUP2
 #
 <dead_acute><dead_diaeresis><UEFD0><UEFD0>                                       <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon><numbersign><numbersign>                           <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<dead_diaeresis><dead_acute><UEFD0><UEFD0>                                       <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><colon><apostrophe><numbersign><numbersign>                           <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 #
 #
 # # ACUTE&DIAERESIS&GROUP3
@@ -9711,12 +9707,6 @@
 <Multi_key><apostrophe><colon><numbersign><numbersign><numbersign>               <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <dead_acute><dead_diaeresis><UEFD0><dead_circumflex>                             <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon><numbersign><less>                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_diaeresis><dead_acute><UEFD0><3>                                           <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><colon><apostrophe><numbersign><3>                                    <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_diaeresis><dead_acute><UEFD0><UEFD0><UEFD0>                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><colon><apostrophe><numbersign><numbersign><numbersign>               <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_diaeresis><dead_acute><UEFD0><dead_circumflex>                             <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><colon><apostrophe><numbersign><less>                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 #*# DOUBLE_ACUTE
@@ -9725,7 +9715,7 @@
 #
 #   This dead key supported by XKB is required to avoid collisions with the new
 #   dead key based quotation mark input method.
-#   See # # Curly quotation marks
+#   See ### Quotation mark input method
 #
 #   The DOUBLE_ACUTE dead key is also required for consistency with the symbols
 #   mapped on level 3, and with the new-school Compose scheme, where every dead
