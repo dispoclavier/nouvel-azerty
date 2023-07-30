@@ -4474,46 +4474,37 @@
 #   That is rightfully avoided in en_US.UTF-8/Compose.
 #
 #
-# # Actionable dead key layout for Latin keyboards
+# # Proposed dead key layout for AZERTY keyboards
 #
 #   30 out of 32 ASCII symbols and punctuation are mapped on level 3 of keys
-#   (B..D)(01..10), and all dead keys are mapped on level 4 of the same keys
-#   as the ASCII characters used to emulate those dead keys by composition.
+#   (B..D)(01..10), and 28 dead keys are mapped on level 4 of the same keys
+#   as the ASCII characters used to emulate those dead keys by Multi_key as
+#   of new-school input composition, designed for full support of the Latin
+#   script.
 #
-#   Since question mark and ampersand are not used to emulate any dead keys,
-#   comma and question mark do not conflict, but period and exclamation mark
-#   do conflict as of French AZERTY. Therefore dead_abovedot is mapped on P,
-#   where the level 3 ASCII symbol is ampersand.
+#   One of those that is not is dead_abovedot, which is mapped on P, where
+#   ampersand is unrelated, but period is mapped on level 5 and used on the
+#   extended numpad as a decimal separator, alongside comma on key C10.
 #
-#   The dead keys are mapped consistently with new-school Multi_key characters.
-#   The ampersand key P is used for dead_abovedot so that the period key can be
-#   dead_belowdot, consistently with exclamation mark on the AZERTY period key.
-#   Plus, on P, key D10, period is mapped on the AltFr level, XKB level 5, for
-#   use as a decimal separator on the extended numpad where comma is on key C10.
+#   The other exception is dead_cedilla on the comma key, where the question
+#   mark on level 3 is not an equivalent of any dead key either.
+#   
 #   So there is multiple easy mnemonics.
 #
-#   In the Windows implementation of these keyboard layouts, AltGr level 3 is an
-#   additional level, 0x10 or Right Oyayubi, without Caps Lock support, but free
-#   from the numerous bugs affecting the AltGr level that Windows emulates using
-#   Ctrl + Alt, and that require fixing on application level as in MS Word. That
-#   is one reason why levels 3 and 4 should never be used for casing characters.
+#   In the Windows implementation of these keyboard layouts, AltGr level 3 is
+#   an additional level, 0x10 or Right Oyayubi, without Caps Lock support, but
+#   free from the numerous bugs affecting the AltGr level that Windows emulates
+#   using Ctrl + Alt. These bugs are fixed on application level, as in MS Word.
+#   That is one reason why levels 3 and 4 are not used for casing characters.
 #   See Mark Durdin’s article about “Robust key message handling in Windows”:
 #   https://blog.keyman.com/2008/06/robust-key-mess/
 #
 #   Each dead key has a stable mapping on level 4 according to the table below.
 #
-#   AZERTY fr_FR has a dedicated key for dead_circumflex and dead_diaeresis,
-#   plus dead positions for both dead_tilde and dead_grave; not for dead_acute.
-#   The layout proposed here has unshifted dead keys for four of these, as well
-#   as a level 3 dead key for dead_tilde on the circumflex dead key, plus the
-#   group selector dead key on both unshifted and level 3 of a key in column 12,
-#   plus the Multi_key. Level 3 mappings of the latter two and level 4 dead keys
-#   are stable across the 2 ModLock states French mode and numeric mode.
-#
 #
 #   Overview            Based on AZERTY fr_FR.
-#                       Virtual dead keys on multiple press are shown after semicolons.
-#                       All * are new-school Compose.
+#                       Virtual dead keys on multiple press are semicolon separated.
+#                       All non-existing keysyms, marked *, are new-school Compose.
 #
 #   Level 2          3  4
 #
