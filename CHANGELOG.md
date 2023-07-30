@@ -3,7 +3,8 @@
 ## 1.0.4 (projet)
 
 * Groupes des symboles : Permuter les symboles "⊳" U22B3 et "⊲" U22B2 ainsi que "⊢" U22A2 et "⊣" U22A3 (compose-2.yml [aa77809](https://github.com/dispoclavier/nouvel-azerty/commit/aa77809a03a69eb462cec0d540f6d4dd76b79ab0))
-* Groupes des symboles : Remplacer "∁" U2201 par "⟂" U27C2, permuter "ː" U02D0 et "ˑ" U02D1, réarranger "⊢" U22A2, "⊣" U22A3, "⊥" U22A5, "⊤" U22A4, déplacer "⋱" U22F1, "⋰" U22F0, dupliquer "꞉" UA789 (compose-2.yml [13c46b3](https://github.com/dispoclavier/nouvel-azerty/commit/13c46b3783638c6ad6d7c1c62cf3606b071e29cc), [77a281f](https://github.com/dispoclavier/nouvel-azerty/commit/77a281f994ad25cd1e9bb8928eae881596702292))
+* Groupes des symboles : Remplacer "∁" U2201 par "⟂" U27C2, permuter "ː" U02D0 et "ˑ" U02D1, réarranger "⊢" U22A2, "⊣" U22A3, "⊥" U22A5, "⊤" U22A4, déplacer "⋱" U22F1, "⋰" U22F0, dupliquer "꞉" UA789 (compose-2.yml [13c46b3](https://github.com/dispoclavier/nouvel-azerty/commit/13c46b3783638c6ad6d7c1c62cf3606b071e29cc), [77a281f](https://github.com/dispoclavier/nouvel-azerty/commit/77a281f994ad25cd1e9bb8928eae881596702292), [cae6903](https://github.com/dispoclavier/nouvel-azerty/commit/cae6903280ed2105c27422d9c6524ade4c229cbd))
+* Symboles mathématiques : Corriger les séquences de composition de "⨼" U2A3C et "⨽" U2A3D (compose-1.yml [7f7615a](https://github.com/dispoclavier/nouvel-azerty/commit/7f7615ad97212712585262e528a2cd253c1315e2))
 
 ## 1.0.3 (2023-07-22)
 
