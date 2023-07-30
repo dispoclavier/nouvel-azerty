@@ -4467,6 +4467,8 @@
 #
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose,
 #   dead_cedilla’s <comma>, also used for dead_ogonek, conflicts on E.
+#   en_US.UTF-8/Compose works around this conflict by using <cedilla>,
+#   not <comma>, in the Multi_key sequence of U0228, U0229.
 #   <semicolon> could be used for both dead_belowcomma and dead_ogonek,
 #   but the result would be yet another dead key merger.
 #   That is rightfully avoided in en_US.UTF-8/Compose.
