@@ -2069,9 +2069,6 @@
 #
 # # Less or equal, greater or equal
 #
-#   The slanted variant "⩽" U2A7D and "⩾" U2A7E, preferred in French, is also
-#   in group 2 of < and >.
-#
 #   To support both the straight variant "≤" U2264, "≥" U2265, and the slanted
 #   variant, sequences with underscore are repurposed, and sequences with minus
 #   are introduced since those with equals are needed for "≦" U2266, "≧" U2267.
@@ -2081,14 +2078,17 @@
 #   underscore for single-line equals, two underscores for double-line equals,
 #   e.g. "⪛" U2A9B. See also "⋚" U22DA vs "⪋" U2A8B.
 #
+#   The slanted variant "⩽" U2A7D and "⩾" U2A7E, preferred in French, is also
+#   in group 2 of < and >.
+#
 #
 # # Not sign
-#
-#   Also in group 5 of backslash on N key.
 #
 #   As rightsinglequotemark is on the apostrophe key in French mode, sequences
 #   with apostrophe work also with rightsinglequotemark, like sequences with a
 #   leading space also work with a leading no-break space.
+#
+#   The not sign is also in group 5 of backslash on the N key.
 #
 #   See also "⫬" U2AEC, "⫭" U2AED, and not-math "⌙" U2319.
 #
@@ -2098,11 +2098,11 @@
 #
 # # Plus minus
 #
-#   Latin-1 ± U00B1 PLUS-MINUS SIGN is on live key.
-#
 #   Order matters unlike in en_US.UTF-8/Compose but for backwards compatibility
 #   space termination is skipped, not only for ± U00B1 PLUS-MINUS SIGN but also
 #   for ∓ U2213 MINUS-OR-PLUS SIGN since it is not required for disambiguation.
+#
+#   Latin-1 ± U00B1 PLUS-MINUS SIGN is on live key.
 #
 <Multi_key><plus><minus>                                                                 : "±" U00B1 # PLUS-MINUS SIGN
 #
@@ -2125,9 +2125,9 @@
 #   See #*# GREEK
 #
 #   There are many more Greek symbols. Some TeX math packages may not support
-#   all of these symbols, per Will Robertson, Symbols defined by unicode-math
-#   (2023-06-21).
+#   them all, per Will Robertson, Symbols defined by unicode-math (2023-06-21).
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=79
+#
 #   The following are those with Unicode `Derived Property: Math="Y"`.
 #   See also # # Mathematical Greek alphabets and symbols
 #
@@ -3896,7 +3896,9 @@
 <Multi_key><nobreakspace><o><greater>                                            <space> : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
 <Multi_key><question><less>                                                      <space> : "⩻" U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
 <Multi_key><question><greater>                                                   <space> : "⩼" U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
+#   In group 2 of <                                                                      : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
 <Multi_key><less><underscore>                                                    <space> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
+#   In group 2 of >                                                                      : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
 <Multi_key><greater><underscore>                                                 <space> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
 <Multi_key><less><underscore><period>                                            <space> : "⩿" U2A7F # LESS-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
 <Multi_key><less><period><underscore>                                            <space> : "⩿" U2A7F # LESS-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
