@@ -9419,6 +9419,11 @@
 #   the digraph.
 #   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
 #
+#   The acute accent below virtual dead key is removed as designed to foster a
+#   better quotation input method. The only two acute below characters are now
+#   with underscore for "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT, and with
+#   zero width space for "̗" U0317 # COMBINING ACUTE ACCENT BELOW.
+#
 #   Also used as a synonym of STROKE in mathematical symbols, except in those
 #   cases where the quick access sequence conflicts with regular support, and
 #   without Multi_key.
@@ -9429,8 +9434,8 @@
 #
 <dead_acute>                                                                     <space> : "́" U0301 # COMBINING ACUTE ACCENT
 <Multi_key><apostrophe>                                                          <space> : "́" U0301 # COMBINING ACUTE ACCENT
-<dead_acute>                                                                     <U200B> : "́" U0301 # COMBINING ACUTE ACCENT
-<Multi_key><apostrophe>                                                          <U200B> : "́" U0301 # COMBINING ACUTE ACCENT
+<dead_acute>                                                                     <U200B> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
+<Multi_key><apostrophe>                                                          <U200B> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                     <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <Multi_key><apostrophe>                                                          <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <dead_acute>                                                              <nobreakspace> : "´" U00B4 # ACUTE ACCENT
@@ -9553,6 +9558,8 @@
 <Multi_key><apostrophe>                                                       <Ccedilla> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <dead_acute>                                                                  <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><apostrophe>                                                       <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
+<dead_acute>                                                                <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
+<Multi_key><apostrophe>                                                     <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 #
 <dead_acute>                                                                 <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_acute>                                                                <asciitilde> : "≁" U2241 # NOT TILDE
@@ -9710,20 +9717,6 @@
 <Multi_key><colon><apostrophe><numbersign><numbersign><numbersign>               <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <dead_diaeresis><dead_acute><UEFD0><dead_circumflex>                             <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><colon><apostrophe><numbersign><less>                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-#
-#
-#^# ACUTE_BELOW
-#   dead_acute double press
-#   Multi_key: ¦''
-#
-<dead_acute><dead_acute>                                                         <space> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
-<Multi_key><apostrophe><apostrophe>                                              <space> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
-<dead_acute><dead_acute>                                                         <U200B> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
-<Multi_key><apostrophe><apostrophe>                                              <U200B> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
-<dead_acute><dead_acute>                                                         <U202F> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
-<Multi_key><apostrophe><apostrophe>                                              <U202F> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
-<dead_acute><dead_acute>                                                  <nobreakspace> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
-<Multi_key><apostrophe><apostrophe>                                       <nobreakspace> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 #
 #
 #*# DOUBLE_ACUTE
