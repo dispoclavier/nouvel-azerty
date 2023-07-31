@@ -2634,14 +2634,15 @@
 #
 #   *  ZWNJ is used to prevent an ISO code letter pair from being displayed as a flag;
 #   *  WJ is used to prevent an RI character from breaking off a character of another class;
-#   *  Support for the high surrogate is designed for cross-platform compatibility.
+#   *  Support for the high surrogate is designed for cross-platform compatibility, but on
+#      Linux and ChromeOS this is commented out as irrelevant.
 #
 <UEFD7>                                                                     <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                          <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                <dead_circumflex> : "⁠" U2060 # WORD JOINER
 <Multi_key><equal>                                                     <dead_circumflex> : "⁠" U2060 # WORD JOINER
-<UEFD7>                                                                 <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
-<Multi_key><equal>                                                      <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
+#   <UEFD7>                                                             <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
+#   <Multi_key><equal>                                                  <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
 <UEFD7>                                                                              <a> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                                   <a> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
 <UEFD7>                                                                              <A> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
