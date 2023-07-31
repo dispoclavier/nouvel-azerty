@@ -1,18 +1,16 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-29T0146+0200
+# 2023-07-31T0302+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
 #
-# The input requires start and end tags. Section headings are parsed to switch
-# files.
+# The input requires start and end tags. Section headings switch files.
 #
 # The output is designed for use in WordPress. An all-in-one table is generated
-# alongside, although neither WordPress editor is able to register it. Tested
-# with memory limit set to 1024M for the purpose, both in PHP and in WordPress.
-#
+# alongside, although neither WordPress editor registers it (memory limit 1024M
+# for the purpose, both in PHP and in WordPress).
 #
 # Using old-style file handles.
 use warnings;
@@ -207,9 +205,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr><td>$2<\/td><td><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+03[0-6][0-9A-F]) # (.+)/<tr><td>◌$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr><td>$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr><td title="$3">$2<\/td><td><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr><td title="$4">◌$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr><td title="$4">$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				print WHOLEOUTPUT $line;
 			}
