@@ -5,7 +5,7 @@
 # 2023-03-19T1533+0100
 # 2023-04-26T1950+0200
 # 2023-05-12T1154+0200
-# 2023-08-01T2158+0200
+# 2023-08-01T2210+0200
 # 
 # Adds the Multi_key equivalent below all dead key
 # lines prefixed with an '@' sign for the purpose.
@@ -43,6 +43,7 @@ use feature 'unicode_strings';
 # Courtesy https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
+
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
 print( "File $file_path opened successfully!\n" );
@@ -73,13 +74,7 @@ my $str = '';
 my $cp  = '';
 my $out = '';
 while ( my $line = <BACKUP> ) {
-	if ( $line =~ /^&/ ) {
-		$line =~ s/^&//;
-		if ( $line =~ /^(.+ :) +(U([0-9A-F]{4,5}).+)$/ ) {
-			$line = $1 . ' "' . chr( hex( $3 ) ) . '" ' . $2 . "\n";
-		}
-		print OUTPUT $line;
-	} elsif ( $line =~ /^\?/ ) {
+	if ( $line =~ /^\?/ ) {
 		$line =~ s/^\?//;
 		if ( $line =~ /^(.+ : +"(.+?)")(?: # )?(.+)?$/u ) {
 			$sta = $1;
@@ -98,6 +93,17 @@ while ( my $line = <BACKUP> ) {
 			$line = $sta . ' # ' . $out . $end . "\n";
 		}
 		print OUTPUT $line;
+	} elsif ( $line =~ /^&/ ) {
+		$line =~ s/^&//;
+		if ( $line =~ /^(.+ :) +(U([0-9A-F]{4,5}).+)$/ ) {
+			$line = $1 . ' "' . chr( hex( $3 ) ) . '" ' . $2 . "\n";
+		}
+		print OUTPUT $line;
+	} elsif ( $line =~ /^!/ ) {
+		unless ( $line =~ /^!<Multi_key>/ ) {
+			$line =~ s/^!//;
+			print OUTPUT $line;
+		}
 	} elsif ( $line =~ /^@/ ) {
 		$line =~ s/^@//;
 		unless ( $line =~ /^<Multi_key>/ ) {
@@ -214,11 +220,6 @@ while ( my $line = <BACKUP> ) {
 					print OUTPUT $line;
 				}
 			}
-		}
-	} elsif ( $line =~ /^!/ ) {
-		unless ( $line =~ /^!<Multi_key>/ ) {
-			$line =~ s/^!//;
-			print OUTPUT $line;
 		}
 	} else {
 		print OUTPUT $line;
