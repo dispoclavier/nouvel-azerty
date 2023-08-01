@@ -5,6 +5,7 @@
 # 2023-03-19T1533+0100
 # 2023-04-26T1950+0200
 # 2023-05-12T1154+0200
+# 2023-08-01T2158+0200
 # 
 # Adds the Multi_key equivalent below all dead key
 # lines prefixed with an '@' sign for the purpose.
@@ -14,23 +15,33 @@
 # are prefixed with an '@' sign, in order to avoid
 # adding duplicate Multi_key lines.
 #
-#  All dead keys are supposed to be aligned to the
-#  left, without any space in between, as designed
-#  with a streamlined, quick input in mind.
-#
-# Yet trailing dead_breve is supported as used for
-# circled, and *dead_group UEFD0 may align to
-# the right.
-#
-# Multi_key lines prefixed with '!' are removed.
+# Multi_key lines prefixed with an '!' are removed.
 #
 # Adds the literal to lines prefixed with an '&'.
+#
+# Adds code point comments to composed characters
+# prefixed with a '?'.
+#
+#
+# # Format
+#
+# Dead keys are supposed to align to the left, and
+# not to be space padded, from streamlined input.
+#
+# Still, *dead_group UEFD0 may align to the right.
+#
+# Also, trailing dead_breve is supported, as it is
+# used for circled.
 #
 #
 # Using old-style file handles.
 use warnings;
 use strict;
+use utf8;
 use feature 'unicode_strings';
+
+# Courtesy https://stackoverflow.com/a/12291409
+use open ":std", ":encoding(UTF-8)";
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -56,11 +67,35 @@ open( OUTPUT, '>', $file_path ) or die $!;
 print( "File $file_path opened successfully!\n" );
 
 print( "Processing content from $backup_path to $file_path.\n" );
+my $sta = '';
+my $end = '';
+my $str = '';
+my $cp  = '';
+my $out = '';
 while ( my $line = <BACKUP> ) {
 	if ( $line =~ /^&/ ) {
 		$line =~ s/^&//;
-		if ( $line =~ /^(.+)(U([0-9A-F]{4}).+)$/ ) {
-			$line = $1 . '"' . chr( hex( $3 ) ) . '" ' . $2 . "\n";
+		if ( $line =~ /^(.+ :) +(U([0-9A-F]{4,5}).+)$/ ) {
+			$line = $1 . ' "' . chr( hex( $3 ) ) . '" ' . $2 . "\n";
+		}
+		print OUTPUT $line;
+	} elsif ( $line =~ /^\?/ ) {
+		$line =~ s/^\?//;
+		if ( $line =~ /^(.+ : +"(.+?)")(?: # )?(.+)?$/u ) {
+			$sta = $1;
+			$str = $2;
+			$end = $3;
+			$out = '';
+			until ( $str eq '' ) {
+				$cp  = ord( $str );
+				$cp  = sprintf( "%X", $cp );
+				$cp  =~ s/^(..)$/00$1/;
+				$cp  =~ s/^(...)$/0$1/;
+				$cp  = 'U' . $cp;
+				$out = $out . $cp . ' ';
+				$str =~ s/.//u;
+			}
+			$line = $sta . ' # ' . $out . $end . "\n";
 		}
 		print OUTPUT $line;
 	} elsif ( $line =~ /^@/ ) {
