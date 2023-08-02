@@ -561,74 +561,74 @@
 #
 # # OGONEK&TILDE
 #
-<dead_ogonek><dead_tilde>                                                            <A> : "Ą̃" # composed A with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <A> : "Ą̃" # composed A with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <A> : "Ą̃" # composed A with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <A> : "Ą̃" # composed A with ogonek and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <a> : "ą̃" # composed a with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <a> : "ą̃" # composed a with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <a> : "ą̃" # composed a with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <a> : "ą̃" # composed a with ogonek and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <E> : "Ę̃" # composed E with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <E> : "Ę̃" # composed E with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <E> : "Ę̃" # composed E with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <E> : "Ę̃" # composed E with ogonek and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <e> : "ę̃" # composed e with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <e> : "ę̃" # composed e with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <e> : "ę̃" # composed e with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <e> : "ę̃" # composed e with ogonek and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <I> : "Į̃" # composed I with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <I> : "Į̃" # composed I with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <I> : "Į̃" # composed I with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <I> : "Į̃" # composed I with ogonek and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <i> : "į̇́" # composed i with ogonek and dot above and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <i> : "į̇́" # composed i with ogonek and dot above and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <i> : "į̇́" # composed i with ogonek and dot above and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <i> : "į̇́" # composed i with ogonek and dot above and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <U> : "Ų̃" # composed U with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <U> : "Ų̃" # composed U with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <U> : "Ų̃" # composed U with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <U> : "Ų̃" # composed U with ogonek and tilde (Lithuanian)
-<dead_ogonek><dead_tilde>                                                            <u> : "ų̃" # composed u with ogonek and tilde (Lithuanian)
-<Multi_key><bracketleft><asciitilde>                                                 <u> : "ų̃" # composed u with ogonek and tilde (Lithuanian)
-<dead_tilde><dead_ogonek>                                                            <u> : "ų̃" # composed u with ogonek and tilde (Lithuanian)
-<Multi_key><asciitilde><bracketleft>                                                 <u> : "ų̃" # composed u with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <A> : "Ą̃" # U0104 U0303 A with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <A> : "Ą̃" # U0104 U0303 A with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <A> : "Ą̃" # U0104 U0303 A with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <A> : "Ą̃" # U0104 U0303 A with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <a> : "ą̃" # U0105 U0303 a with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <a> : "ą̃" # U0105 U0303 a with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <a> : "ą̃" # U0105 U0303 a with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <a> : "ą̃" # U0105 U0303 a with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <E> : "Ę̃" # U0118 U0303 E with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <E> : "Ę̃" # U0118 U0303 E with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <E> : "Ę̃" # U0118 U0303 E with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <E> : "Ę̃" # U0118 U0303 E with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <e> : "ę̃" # U0119 U0303 e with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <e> : "ę̃" # U0119 U0303 e with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <e> : "ę̃" # U0119 U0303 e with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <e> : "ę̃" # U0119 U0303 e with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <I> : "Į̃" # U012E U0303 I with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <I> : "Į̃" # U012E U0303 I with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <I> : "Į̃" # U012E U0303 I with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <I> : "Į̃" # U012E U0303 I with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <U> : "Ų̃" # U0172 U0303 U with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <U> : "Ų̃" # U0172 U0303 U with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <U> : "Ų̃" # U0172 U0303 U with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <U> : "Ų̃" # U0172 U0303 U with ogonek and tilde (Lithuanian)
+<dead_ogonek><dead_tilde>                                                            <u> : "ų̃" # U0173 U0303 u with ogonek and tilde (Lithuanian)
+<Multi_key><bracketleft><asciitilde>                                                 <u> : "ų̃" # U0173 U0303 u with ogonek and tilde (Lithuanian)
+<dead_tilde><dead_ogonek>                                                            <u> : "ų̃" # U0173 U0303 u with ogonek and tilde (Lithuanian)
+<Multi_key><asciitilde><bracketleft>                                                 <u> : "ų̃" # U0173 U0303 u with ogonek and tilde (Lithuanian)
 #
 #
 # # OGONEK&ACUTE
 #
-<dead_ogonek><dead_acute>                                                            <A> : "Ą́" # composed A with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <A> : "Ą́" # composed A with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <A> : "Ą́" # composed A with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <A> : "Ą́" # composed A with ogonek and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <a> : "ą́" # composed a with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <a> : "ą́" # composed a with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <a> : "ą́" # composed a with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <a> : "ą́" # composed a with ogonek and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <E> : "Ę́" # composed E with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <E> : "Ę́" # composed E with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <E> : "Ę́" # composed E with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <E> : "Ę́" # composed E with ogonek and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <e> : "ę́" # composed e with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <e> : "ę́" # composed e with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <e> : "ę́" # composed e with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <e> : "ę́" # composed e with ogonek and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <I> : "Į́" # composed I with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <I> : "Į́" # composed I with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <I> : "Į́" # composed I with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <I> : "Į́" # composed I with ogonek and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <i> : "į̇́" # composed i with ogonek and dot above and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <i> : "į̇́" # composed i with ogonek and dot above and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <i> : "į̇́" # composed i with ogonek and dot above and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <i> : "į̇́" # composed i with ogonek and dot above and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <U> : "Ų́" # composed U with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <U> : "Ų́" # composed U with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <U> : "Ų́" # composed U with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <U> : "Ų́" # composed U with ogonek and acute (Lithuanian)
-<dead_ogonek><dead_acute>                                                            <u> : "ų́" # composed u with ogonek and acute (Lithuanian)
-<Multi_key><bracketleft><apostrophe>                                                 <u> : "ų́" # composed u with ogonek and acute (Lithuanian)
-<dead_acute><dead_ogonek>                                                            <u> : "ų́" # composed u with ogonek and acute (Lithuanian)
-<Multi_key><apostrophe><bracketleft>                                                 <u> : "ų́" # composed u with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <A> : "Ą́" # U0104 U0301 A with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <A> : "Ą́" # U0104 U0301 A with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <A> : "Ą́" # U0104 U0301 A with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <A> : "Ą́" # U0104 U0301 A with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <a> : "ą́" # U0105 U0301 a with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <a> : "ą́" # U0105 U0301 a with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <a> : "ą́" # U0105 U0301 a with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <a> : "ą́" # U0105 U0301 a with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <E> : "Ę́" # U0118 U0301 E with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <E> : "Ę́" # U0118 U0301 E with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <E> : "Ę́" # U0118 U0301 E with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <E> : "Ę́" # U0118 U0301 E with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <e> : "ę́" # U0119 U0301 e with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <e> : "ę́" # U0119 U0301 e with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <e> : "ę́" # U0119 U0301 e with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <e> : "ę́" # U0119 U0301 e with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <I> : "Į́" # U012E U0301 I with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <I> : "Į́" # U012E U0301 I with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <I> : "Į́" # U012E U0301 I with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <I> : "Į́" # U012E U0301 I with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <i> : "į̇́" # U012F U0307 U0301 i with ogonek and dot above and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <U> : "Ų́" # U0172 U0301 U with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <U> : "Ų́" # U0172 U0301 U with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <U> : "Ų́" # U0172 U0301 U with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <U> : "Ų́" # U0172 U0301 U with ogonek and acute (Lithuanian)
+<dead_ogonek><dead_acute>                                                            <u> : "ų́" # U0173 U0301 u with ogonek and acute (Lithuanian)
+<Multi_key><bracketleft><apostrophe>                                                 <u> : "ų́" # U0173 U0301 u with ogonek and acute (Lithuanian)
+<dead_acute><dead_ogonek>                                                            <u> : "ų́" # U0173 U0301 u with ogonek and acute (Lithuanian)
+<Multi_key><apostrophe><bracketleft>                                                 <u> : "ų́" # U0173 U0301 u with ogonek and acute (Lithuanian)
 #
 #
 # # OGONEK&MACRON
@@ -1095,30 +1095,30 @@
 #   "WITH LINE BELOW" in Unicode refer to a macron below the letter.
 #   https://unicode.org/charts/nameslist/n_1E00.html
 #
-<UEFD2><UEFD2><UEFD2>                                                                <D> : "D̲" # composed D with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <D> : "D̲" # composed D with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <d> : "d̲" # composed d with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <d> : "d̲" # composed d with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <E> : "E̲" # composed E with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <E> : "E̲" # composed E with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <e> : "e̲" # composed e with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <e> : "e̲" # composed e with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <H> : "H̲" # composed H with line below (Oneida)
-<Multi_key><underscore><underscore><underscore>                                      <H> : "H̲" # composed H with line below (Oneida)
-<UEFD2><UEFD2><UEFD2>                                                                <h> : "h̲" # composed h with line below (Oneida)
-<Multi_key><underscore><underscore><underscore>                                      <h> : "h̲" # composed h with line below (Oneida)
-<UEFD2><UEFD2><UEFD2>                                                                <N> : "N̲" # composed N with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <N> : "N̲" # composed N with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <n> : "n̲" # composed n with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <n> : "n̲" # composed n with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <O> : "O̲" # composed O with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <O> : "O̲" # composed O with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <o> : "o̲" # composed o with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <o> : "o̲" # composed o with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <U> : "U̲" # composed U with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <U> : "U̲" # composed U with line below (languages of Gabon)
-<UEFD2><UEFD2><UEFD2>                                                                <u> : "u̲" # composed u with line below (languages of Gabon)
-<Multi_key><underscore><underscore><underscore>                                      <u> : "u̲" # composed u with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <D> : "D̲" # U0044 U0332 D with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <D> : "D̲" # U0044 U0332 D with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <d> : "d̲" # U0064 U0332 d with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <d> : "d̲" # U0064 U0332 d with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <E> : "E̲" # U0045 U0332 E with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <E> : "E̲" # U0045 U0332 E with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <e> : "e̲" # U0065 U0332 e with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <e> : "e̲" # U0065 U0332 e with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <H> : "H̲" # U0048 U0332 H with line below (Oneida)
+<Multi_key><underscore><underscore><underscore>                                      <H> : "H̲" # U0048 U0332 H with line below (Oneida)
+<UEFD2><UEFD2><UEFD2>                                                                <h> : "h̲" # U0068 U0332 h with line below (Oneida)
+<Multi_key><underscore><underscore><underscore>                                      <h> : "h̲" # U0068 U0332 h with line below (Oneida)
+<UEFD2><UEFD2><UEFD2>                                                                <N> : "N̲" # U004E U0332 N with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <N> : "N̲" # U004E U0332 N with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <n> : "n̲" # U006E U0332 n with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <n> : "n̲" # U006E U0332 n with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <O> : "O̲" # U004F U0332 O with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <O> : "O̲" # U004F U0332 O with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <o> : "o̲" # U006F U0332 o with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <o> : "o̲" # U006F U0332 o with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <U> : "U̲" # U0055 U0332 U with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <U> : "U̲" # U0055 U0332 U with line below (languages of Gabon)
+<UEFD2><UEFD2><UEFD2>                                                                <u> : "u̲" # U0075 U0332 u with line below (languages of Gabon)
+<Multi_key><underscore><underscore><underscore>                                      <u> : "u̲" # U0075 U0332 u with line below (languages of Gabon)
 #
 #
 #*# MACRON, LONG_LEG, TOPBAR
@@ -1169,10 +1169,10 @@
 <Multi_key><bar>                                                                     <I> : "Ī" U012A # LATIN CAPITAL LETTER I WITH MACRON
 <dead_macron>                                                                        <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
 <Multi_key><bar>                                                                     <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
-<dead_macron>                                                                        <N> : "N̄" # composed N with macron (Fula in Senegalese orthography)
-<Multi_key><bar>                                                                     <N> : "N̄" # composed N with macron (Fula in Senegalese orthography)
-<dead_macron>                                                                        <n> : "n̄" # composed n with macron (Fula in Senegalese orthography)
-<Multi_key><bar>                                                                     <n> : "n̄" # composed n with macron (Fula in Senegalese orthography)
+<dead_macron>                                                                        <N> : "N̄" # U004E U0304 N with macron (Fula in Senegalese orthography)
+<Multi_key><bar>                                                                     <N> : "N̄" # U004E U0304 N with macron (Fula in Senegalese orthography)
+<dead_macron>                                                                        <n> : "n̄" # U006E U0304 n with macron (Fula in Senegalese orthography)
+<Multi_key><bar>                                                                     <n> : "n̄" # U006E U0304 n with macron (Fula in Senegalese orthography)
 <dead_macron>                                                                        <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <Multi_key><bar>                                                                     <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <dead_macron>                                                                        <o> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
@@ -1211,14 +1211,14 @@
 #
 # # MACRON&TILDE
 #
-<dead_macron><dead_tilde>                                                            <U> : "Ū̃" # composed U with macron and tilde (Lithuanian)
-<Multi_key><bar><asciitilde>                                                         <U> : "Ū̃" # composed U with macron and tilde (Lithuanian)
-<dead_tilde><dead_macron>                                                            <U> : "Ū̃" # composed U with macron and tilde (Lithuanian)
-<Multi_key><asciitilde><bar>                                                         <U> : "Ū̃" # composed U with macron and tilde (Lithuanian)
-<dead_macron><dead_tilde>                                                            <u> : "ū̃" # composed u with macron and tilde (Lithuanian)
-<Multi_key><bar><asciitilde>                                                         <u> : "ū̃" # composed u with macron and tilde (Lithuanian)
-<dead_tilde><dead_macron>                                                            <u> : "ū̃" # composed u with macron and tilde (Lithuanian)
-<Multi_key><asciitilde><bar>                                                         <u> : "ū̃" # composed u with macron and tilde (Lithuanian)
+<dead_macron><dead_tilde>                                                            <U> : "Ū̃" # U016A U0303 U with macron and tilde (Lithuanian)
+<Multi_key><bar><asciitilde>                                                         <U> : "Ū̃" # U016A U0303 U with macron and tilde (Lithuanian)
+<dead_tilde><dead_macron>                                                            <U> : "Ū̃" # U016A U0303 U with macron and tilde (Lithuanian)
+<Multi_key><asciitilde><bar>                                                         <U> : "Ū̃" # U016A U0303 U with macron and tilde (Lithuanian)
+<dead_macron><dead_tilde>                                                            <u> : "ū̃" # U016B U0303 u with macron and tilde (Lithuanian)
+<Multi_key><bar><asciitilde>                                                         <u> : "ū̃" # U016B U0303 u with macron and tilde (Lithuanian)
+<dead_tilde><dead_macron>                                                            <u> : "ū̃" # U016B U0303 u with macron and tilde (Lithuanian)
+<Multi_key><asciitilde><bar>                                                         <u> : "ū̃" # U016B U0303 u with macron and tilde (Lithuanian)
 #
 #
 # # MACRON&GRAVE
@@ -1279,14 +1279,14 @@
 <Multi_key><bar><apostrophe>                                                         <o> : "ṓ" U1E53 # LATIN SMALL LETTER O WITH MACRON AND ACUTE
 <dead_acute><dead_macron>                                                            <o> : "ṓ" U1E53 # LATIN SMALL LETTER O WITH MACRON AND ACUTE
 <Multi_key><apostrophe><bar>                                                         <o> : "ṓ" U1E53 # LATIN SMALL LETTER O WITH MACRON AND ACUTE
-<dead_macron><dead_acute>                                                            <U> : "Ū́" # composed U with macron and acute (Lithuanian)
-<Multi_key><bar><apostrophe>                                                         <U> : "Ū́" # composed U with macron and acute (Lithuanian)
-<dead_acute><dead_macron>                                                            <U> : "Ū́" # composed U with macron and acute (Lithuanian)
-<Multi_key><apostrophe><bar>                                                         <U> : "Ū́" # composed U with macron and acute (Lithuanian)
-<dead_macron><dead_acute>                                                            <u> : "ū́" # composed u with macron and acute (Lithuanian)
-<Multi_key><bar><apostrophe>                                                         <u> : "ū́" # composed u with macron and acute (Lithuanian)
-<dead_acute><dead_macron>                                                            <u> : "ū́" # composed u with macron and acute (Lithuanian)
-<Multi_key><apostrophe><bar>                                                         <u> : "ū́" # composed u with macron and acute (Lithuanian)
+<dead_macron><dead_acute>                                                            <U> : "Ū́" # U016A U0301 U with macron and acute (Lithuanian)
+<Multi_key><bar><apostrophe>                                                         <U> : "Ū́" # U016A U0301 U with macron and acute (Lithuanian)
+<dead_acute><dead_macron>                                                            <U> : "Ū́" # U016A U0301 U with macron and acute (Lithuanian)
+<Multi_key><apostrophe><bar>                                                         <U> : "Ū́" # U016A U0301 U with macron and acute (Lithuanian)
+<dead_macron><dead_acute>                                                            <u> : "ū́" # U016B U0301 u with macron and acute (Lithuanian)
+<Multi_key><bar><apostrophe>                                                         <u> : "ū́" # U016B U0301 u with macron and acute (Lithuanian)
+<dead_acute><dead_macron>                                                            <u> : "ū́" # U016B U0301 u with macron and acute (Lithuanian)
+<Multi_key><apostrophe><bar>                                                         <u> : "ū́" # U016B U0301 u with macron and acute (Lithuanian)
 #
 #
 # # MACRON&DIAERESIS
@@ -1323,8 +1323,8 @@
 <Multi_key><bar><bar>                                                                <D> : "Ḏ" U1E0E # LATIN CAPITAL LETTER D WITH LINE BELOW
 <dead_macron><dead_macron>                                                           <d> : "ḏ" U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
 <Multi_key><bar><bar>                                                                <d> : "ḏ" U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
-<dead_macron><dead_macron>                                                           <H> : "H̱" # composed H with macron below (Pashto romanization)
-<Multi_key><bar><bar>                                                                <H> : "H̱" # composed H with macron below (Pashto romanization)
+<dead_macron><dead_macron>                                                           <H> : "H̱" # U0048 U0331 H with macron below (Pashto romanization)
+<Multi_key><bar><bar>                                                                <H> : "H̱" # U0048 U0331 H with macron below (Pashto romanization)
 <dead_macron><dead_macron>                                                           <h> : "ẖ" U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
 <Multi_key><bar><bar>                                                                <h> : "ẖ" U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
 <dead_macron><dead_macron>                                                           <K> : "Ḵ" U1E34 # LATIN CAPITAL LETTER K WITH LINE BELOW
@@ -1900,14 +1900,14 @@
 <Multi_key><asterisk><asterisk>                                                      <A> : "Ḁ" U1E00 # LATIN CAPITAL LETTER A WITH RING BELOW
 <dead_abovering><dead_abovering>                                                     <a> : "ḁ" U1E01 # LATIN SMALL LETTER A WITH RING BELOW
 <Multi_key><asterisk><asterisk>                                                      <a> : "ḁ" U1E01 # LATIN SMALL LETTER A WITH RING BELOW
-<dead_abovering><dead_abovering>                                                     <L> : "L̥" # composed L with ring below (Jola-kasa)
-<Multi_key><asterisk><asterisk>                                                      <L> : "L̥" # composed L with ring below (Jola-kasa)
-<dead_abovering><dead_abovering>                                                     <l> : "l̥" # composed l with ring below (Jola-kasa)
-<Multi_key><asterisk><asterisk>                                                      <l> : "l̥" # composed l with ring below (Jola-kasa)
-<dead_abovering><dead_abovering>                                                     <R> : "R̥" # composed R with ring below (voiceless alveolar trill)
-<Multi_key><asterisk><asterisk>                                                      <R> : "R̥" # composed R with ring below (voiceless alveolar trill)
-<dead_abovering><dead_abovering>                                                     <r> : "r̥" # composed r with ring below (voiceless alveolar trill)
-<Multi_key><asterisk><asterisk>                                                      <r> : "r̥" # composed r with ring below (voiceless alveolar trill)
+<dead_abovering><dead_abovering>                                                     <L> : "L̥" # U004C U0325 L with ring below (Jola-kasa)
+<Multi_key><asterisk><asterisk>                                                      <L> : "L̥" # U004C U0325 L with ring below (Jola-kasa)
+<dead_abovering><dead_abovering>                                                     <l> : "l̥" # U006C U0325 l with ring below (Jola-kasa)
+<Multi_key><asterisk><asterisk>                                                      <l> : "l̥" # U006C U0325 l with ring below (Jola-kasa)
+<dead_abovering><dead_abovering>                                                     <R> : "R̥" # U0052 U0325 R with ring below (voiceless alveolar trill)
+<Multi_key><asterisk><asterisk>                                                      <R> : "R̥" # U0052 U0325 R with ring below (voiceless alveolar trill)
+<dead_abovering><dead_abovering>                                                     <r> : "r̥" # U0072 U0325 r with ring below (voiceless alveolar trill)
+<Multi_key><asterisk><asterisk>                                                      <r> : "r̥" # U0072 U0325 r with ring below (voiceless alveolar trill)
 <dead_abovering><dead_abovering>                                                     <x> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
 <Multi_key><asterisk><asterisk>                                                      <x> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
 #
@@ -2056,70 +2056,70 @@
 <Multi_key><less>                                                                    <J> : "Ĵ" U0134 # LATIN CAPITAL LETTER J WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <j> : "ĵ" U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <j> : "ĵ" U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <K> : "ÊK" # U00CA U004B
-<Multi_key><less>                                                                    <K> : "ÊK" # U00CA U004B
-<dead_circumflex>                                                                    <k> : "êk" # U00EA U006B
-<Multi_key><less>                                                                    <k> : "êk" # U00EA U006B
-<dead_circumflex>                                                                    <L> : "ÊL" # U00CA U004C
-<Multi_key><less>                                                                    <L> : "ÊL" # U00CA U004C
-<dead_circumflex>                                                                    <l> : "êl" # U00EA U006C
-<Multi_key><less>                                                                    <l> : "êl" # U00EA U006C
-<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D
-<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D
-<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D
-<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D
-<dead_circumflex>                                                                    <M> : "M̂" # composed M with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <M> : "M̂" # composed M with combining circumflex (Min Nan)
-<dead_circumflex>                                                                    <m> : "m̂" # composed m with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <m> : "m̂" # composed m with combining circumflex (Min Nan)
-<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E
-<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E
-<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E
-<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E
-<dead_circumflex>                                                                    <N> : "N̂" # composed N with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <N> : "N̂" # composed N with combining circumflex (Min Nan)
-<dead_circumflex>                                                                    <n> : "n̂" # composed n with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <n> : "n̂" # composed n with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <K> : "ÊK" # U00CA U004B (French: Ê key emulation)
+<Multi_key><less>                                                                    <K> : "ÊK" # U00CA U004B (French: Ê key emulation)
+<dead_circumflex>                                                                    <k> : "êk" # U00EA U006B (French: Ê key emulation)
+<Multi_key><less>                                                                    <k> : "êk" # U00EA U006B (French: Ê key emulation)
+<dead_circumflex>                                                                    <L> : "ÊL" # U00CA U004C (French: Ê key emulation)
+<Multi_key><less>                                                                    <L> : "ÊL" # U00CA U004C (French: Ê key emulation)
+<dead_circumflex>                                                                    <l> : "êl" # U00EA U006C (French: Ê key emulation)
+<Multi_key><less>                                                                    <l> : "êl" # U00EA U006C (French: Ê key emulation)
+<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D (French: Ê key emulation)
+<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D (French: Ê key emulation)
+<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D (French: Ê key emulation)
+<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D (French: Ê key emulation)
+<dead_circumflex>                                                                    <M> : "M̂" # U004D U0302 M with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <M> : "M̂" # U004D U0302 M with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <m> : "m̂" # U006D U0302 m with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <m> : "m̂" # U006D U0302 m with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E (French: Ê key emulation)
+<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E (French: Ê key emulation)
+<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E (French: Ê key emulation)
+<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E (French: Ê key emulation)
+<dead_circumflex>                                                                    <N> : "N̂" # U004E U0302 N with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <N> : "N̂" # U004E U0302 N with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <n> : "n̂" # U006E U0302 n with combining circumflex (Min Nan)
+<Multi_key><less>                                                                    <n> : "n̂" # U006E U0302 n with combining circumflex (Min Nan)
 <dead_circumflex>                                                                    <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <P> : "ÊP" # U00CA U0050
-<Multi_key><less>                                                                    <P> : "ÊP" # U00CA U0050
-<dead_circumflex>                                                                    <p> : "êp" # U00EA U0070
-<Multi_key><less>                                                                    <p> : "êp" # U00EA U0070
-<dead_circumflex>                                                                    <Q> : "ÊQ" # U00CA U0051
-<Multi_key><less>                                                                    <Q> : "ÊQ" # U00CA U0051
-<dead_circumflex>                                                                    <q> : "êq" # U00EA U0071
-<Multi_key><less>                                                                    <q> : "êq" # U00EA U0071
-<dead_circumflex>                                                                    <R> : "ÊR" # U00CA U0052
-<Multi_key><less>                                                                    <R> : "ÊR" # U00CA U0052
-<dead_circumflex>                                                                    <r> : "êr" # U00EA U0072
-<Multi_key><less>                                                                    <r> : "êr" # U00EA U0072
+<dead_circumflex>                                                                    <P> : "ÊP" # U00CA U0050 (French: Ê key emulation)
+<Multi_key><less>                                                                    <P> : "ÊP" # U00CA U0050 (French: Ê key emulation)
+<dead_circumflex>                                                                    <p> : "êp" # U00EA U0070 (French: Ê key emulation)
+<Multi_key><less>                                                                    <p> : "êp" # U00EA U0070 (French: Ê key emulation)
+<dead_circumflex>                                                                    <Q> : "ÊQ" # U00CA U0051 (French: Ê key emulation)
+<Multi_key><less>                                                                    <Q> : "ÊQ" # U00CA U0051 (French: Ê key emulation)
+<dead_circumflex>                                                                    <q> : "êq" # U00EA U0071 (French: Ê key emulation)
+<Multi_key><less>                                                                    <q> : "êq" # U00EA U0071 (French: Ê key emulation)
+<dead_circumflex>                                                                    <R> : "ÊR" # U00CA U0052 (French: Ê key emulation)
+<Multi_key><less>                                                                    <R> : "ÊR" # U00CA U0052 (French: Ê key emulation)
+<dead_circumflex>                                                                    <r> : "êr" # U00EA U0072 (French: Ê key emulation)
+<Multi_key><less>                                                                    <r> : "êr" # U00EA U0072 (French: Ê key emulation)
 <dead_circumflex>                                                                    <S> : "Ŝ" U015C # LATIN CAPITAL LETTER S WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <S> : "Ŝ" U015C # LATIN CAPITAL LETTER S WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <s> : "ŝ" U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <s> : "ŝ" U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <T> : "ÊT" # U00CA U0054
-<Multi_key><less>                                                                    <T> : "ÊT" # U00CA U0054
-<dead_circumflex>                                                                    <t> : "êt" # U00EA U0074
-<Multi_key><less>                                                                    <t> : "êt" # U00EA U0074
+<dead_circumflex>                                                                    <T> : "ÊT" # U00CA U0054 (French: Ê key emulation)
+<Multi_key><less>                                                                    <T> : "ÊT" # U00CA U0054 (French: Ê key emulation)
+<dead_circumflex>                                                                    <t> : "êt" # U00EA U0074 (French: Ê key emulation)
+<Multi_key><less>                                                                    <t> : "êt" # U00EA U0074 (French: Ê key emulation)
 <dead_circumflex>                                                                    <U> : "Û" U00DB # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <U> : "Û" U00DB # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <u> : "û" U00FB # LATIN SMALL LETTER U WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <u> : "û" U00FB # LATIN SMALL LETTER U WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <V> : "ÊV" # U00CA U0056
-<Multi_key><less>                                                                    <V> : "ÊV" # U00CA U0056
-<dead_circumflex>                                                                    <v> : "êv" # U00EA U0076
-<Multi_key><less>                                                                    <v> : "êv" # U00EA U0076
+<dead_circumflex>                                                                    <V> : "ÊV" # U00CA U0056 (French: Ê key emulation)
+<Multi_key><less>                                                                    <V> : "ÊV" # U00CA U0056 (French: Ê key emulation)
+<dead_circumflex>                                                                    <v> : "êv" # U00EA U0076 (French: Ê key emulation)
+<Multi_key><less>                                                                    <v> : "êv" # U00EA U0076 (French: Ê key emulation)
 <dead_circumflex>                                                                    <W> : "Ŵ" U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <W> : "Ŵ" U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <w> : "ŵ" U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <w> : "ŵ" U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
-<dead_circumflex>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
-<Multi_key><less>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
-<dead_circumflex>                                                                    <x> : "êch" # U00EA U0063 U0068
-<Multi_key><less>                                                                    <x> : "êch" # U00EA U0063 U0068
+<dead_circumflex>                                                                    <X> : "ÊCH" # U00CA U0043 U0048 (French: Ê key emulation)
+<Multi_key><less>                                                                    <X> : "ÊCH" # U00CA U0043 U0048 (French: Ê key emulation)
+<dead_circumflex>                                                                    <x> : "êch" # U00EA U0063 U0068 (French: Ê key emulation)
+<Multi_key><less>                                                                    <x> : "êch" # U00EA U0063 U0068 (French: Ê key emulation)
 <dead_circumflex>                                                                    <Y> : "Ŷ" U0176 # LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <Y> : "Ŷ" U0176 # LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <y> : "ŷ" U0177 # LATIN SMALL LETTER Y WITH CIRCUMFLEX
@@ -2144,8 +2144,8 @@
 <Multi_key><less>                                                               <Ugrave> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto)
 <dead_circumflex>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
 <Multi_key><less>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
-<dead_circumflex>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3)
-<Multi_key><less>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S (also in group 3)
+<dead_circumflex>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<Multi_key><less>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><less>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
@@ -2342,14 +2342,14 @@
 <Multi_key><less><less>                                                   <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                             <section> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                        <section> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_circumflex>                                                   <A> : "A̭" # composed A with circumflex below (Juǀʼhoan)
-<Multi_key><less><less>                                                              <A> : "A̭" # composed A with circumflex below (Juǀʼhoan)
-<dead_circumflex><dead_circumflex>                                                   <a> : "a̭" # composed a with circumflex below (Juǀʼhoan)
-<Multi_key><less><less>                                                              <a> : "a̭" # composed a with circumflex below (Juǀʼhoan)
-<dead_circumflex><dead_circumflex>                                                   <C> : "C̭" # composed C with circumflex below
-<Multi_key><less><less>                                                              <C> : "C̭" # composed C with circumflex below
-<dead_circumflex><dead_circumflex>                                                   <c> : "c̭" # composed c with circumflex below
-<Multi_key><less><less>                                                              <c> : "c̭" # composed c with circumflex below
+<dead_circumflex><dead_circumflex>                                                   <A> : "A̭" # U0041 U032D A with circumflex below (Juǀʼhoan)
+<Multi_key><less><less>                                                              <A> : "A̭" # U0041 U032D A with circumflex below (Juǀʼhoan)
+<dead_circumflex><dead_circumflex>                                                   <a> : "a̭" # U0061 U032D a with circumflex below (Juǀʼhoan)
+<Multi_key><less><less>                                                              <a> : "a̭" # U0061 U032D a with circumflex below (Juǀʼhoan)
+<dead_circumflex><dead_circumflex>                                                   <C> : "C̭" # U0043 U032D C with circumflex below
+<Multi_key><less><less>                                                              <C> : "C̭" # U0043 U032D C with circumflex below
+<dead_circumflex><dead_circumflex>                                                   <c> : "c̭" # U0063 U032D c with circumflex below
+<Multi_key><less><less>                                                              <c> : "c̭" # U0063 U032D c with circumflex below
 <dead_circumflex><dead_circumflex>                                                   <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                              <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                   <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
@@ -2358,18 +2358,18 @@
 <Multi_key><less><less>                                                              <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                   <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                              <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_circumflex>                                                   <H> : "H̭" # composed H with circumflex below (Demotic transcription)
-<Multi_key><less><less>                                                              <H> : "H̭" # composed H with circumflex below (Demotic transcription)
-<dead_circumflex><dead_circumflex>                                                   <h> : "h̭" # composed h with circumflex below (Demotic transcription)
-<Multi_key><less><less>                                                              <h> : "h̭" # composed h with circumflex below (Demotic transcription)
-<dead_circumflex><dead_circumflex>                                                   <I> : "I̭" # composed I with circumflex below (Cuneiform transliteration)
-<Multi_key><less><less>                                                              <I> : "I̭" # composed I with circumflex below (Cuneiform transliteration)
-<dead_circumflex><dead_circumflex>                                                   <i> : "i̭" # composed i with circumflex below (Cuneiform transliteration)
-<Multi_key><less><less>                                                              <i> : "i̭" # composed i with circumflex below (Cuneiform transliteration)
-<dead_circumflex><dead_circumflex>                                                   <K> : "K̭" # composed K with circumflex below
-<Multi_key><less><less>                                                              <K> : "K̭" # composed K with circumflex below
-<dead_circumflex><dead_circumflex>                                                   <k> : "k̭" # composed k with circumflex below
-<Multi_key><less><less>                                                              <k> : "k̭" # composed k with circumflex below
+<dead_circumflex><dead_circumflex>                                                   <H> : "H̭" # U0048 U032D H with circumflex below (Demotic transcription)
+<Multi_key><less><less>                                                              <H> : "H̭" # U0048 U032D H with circumflex below (Demotic transcription)
+<dead_circumflex><dead_circumflex>                                                   <h> : "h̭" # U0068 U032D h with circumflex below (Demotic transcription)
+<Multi_key><less><less>                                                              <h> : "h̭" # U0068 U032D h with circumflex below (Demotic transcription)
+<dead_circumflex><dead_circumflex>                                                   <I> : "I̭" # U0049 U032D I with circumflex below (Cuneiform transliteration)
+<Multi_key><less><less>                                                              <I> : "I̭" # U0049 U032D I with circumflex below (Cuneiform transliteration)
+<dead_circumflex><dead_circumflex>                                                   <i> : "i̭" # U0069 U032D i with circumflex below (Cuneiform transliteration)
+<Multi_key><less><less>                                                              <i> : "i̭" # U0069 U032D i with circumflex below (Cuneiform transliteration)
+<dead_circumflex><dead_circumflex>                                                   <K> : "K̭" # U004B U032D K with circumflex below
+<Multi_key><less><less>                                                              <K> : "K̭" # U004B U032D K with circumflex below
+<dead_circumflex><dead_circumflex>                                                   <k> : "k̭" # U006B U032D k with circumflex below
+<Multi_key><less><less>                                                              <k> : "k̭" # U006B U032D k with circumflex below
 <dead_circumflex><dead_circumflex>                                                   <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                              <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                   <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
@@ -2378,18 +2378,18 @@
 <Multi_key><less><less>                                                              <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                   <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                              <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_circumflex>                                                   <O> : "O̭" # composed O with circumflex below (Juǀʼhoan)
-<Multi_key><less><less>                                                              <O> : "O̭" # composed O with circumflex below (Juǀʼhoan)
-<dead_circumflex><dead_circumflex>                                                   <o> : "o̭" # composed o with circumflex below (Juǀʼhoan)
-<Multi_key><less><less>                                                              <o> : "o̭" # composed o with circumflex below (Juǀʼhoan)
-<dead_circumflex><dead_circumflex>                                                   <R> : "R̭" # composed R with circumflex below
-<Multi_key><less><less>                                                              <R> : "R̭" # composed R with circumflex below
-<dead_circumflex><dead_circumflex>                                                   <r> : "r̭" # composed r with circumflex below
-<Multi_key><less><less>                                                              <r> : "r̭" # composed r with circumflex below
-<dead_circumflex><dead_circumflex>                                                   <S> : "S̭" # composed S with circumflex below (Herero (old orthography))
-<Multi_key><less><less>                                                              <S> : "S̭" # composed S with circumflex below (Herero (old orthography))
-<dead_circumflex><dead_circumflex>                                                   <s> : "s̭" # composed s with circumflex below (Herero (old orthography))
-<Multi_key><less><less>                                                              <s> : "s̭" # composed s with circumflex below (Herero (old orthography))
+<dead_circumflex><dead_circumflex>                                                   <O> : "O̭" # U004F U032D O with circumflex below (Juǀʼhoan)
+<Multi_key><less><less>                                                              <O> : "O̭" # U004F U032D O with circumflex below (Juǀʼhoan)
+<dead_circumflex><dead_circumflex>                                                   <o> : "o̭" # U006F U032D o with circumflex below (Juǀʼhoan)
+<Multi_key><less><less>                                                              <o> : "o̭" # U006F U032D o with circumflex below (Juǀʼhoan)
+<dead_circumflex><dead_circumflex>                                                   <R> : "R̭" # U0052 U032D R with circumflex below
+<Multi_key><less><less>                                                              <R> : "R̭" # U0052 U032D R with circumflex below
+<dead_circumflex><dead_circumflex>                                                   <r> : "r̭" # U0072 U032D r with circumflex below
+<Multi_key><less><less>                                                              <r> : "r̭" # U0072 U032D r with circumflex below
+<dead_circumflex><dead_circumflex>                                                   <S> : "S̭" # U0053 U032D S with circumflex below (Herero (old orthography))
+<Multi_key><less><less>                                                              <S> : "S̭" # U0053 U032D S with circumflex below (Herero (old orthography))
+<dead_circumflex><dead_circumflex>                                                   <s> : "s̭" # U0073 U032D s with circumflex below (Herero (old orthography))
+<Multi_key><less><less>                                                              <s> : "s̭" # U0073 U032D s with circumflex below (Herero (old orthography))
 <dead_circumflex><dead_circumflex>                                                   <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                              <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                   <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
@@ -2398,14 +2398,14 @@
 <Multi_key><less><less>                                                              <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                   <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                              <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_circumflex>                                                   <W> : "W̭" # composed W with circumflex below (Parthian transcription)
-<Multi_key><less><less>                                                              <W> : "W̭" # composed W with circumflex below (Parthian transcription)
-<dead_circumflex><dead_circumflex>                                                   <w> : "w̭" # composed w with circumflex below (Parthian transcription)
-<Multi_key><less><less>                                                              <w> : "w̭" # composed w with circumflex below (Parthian transcription)
-<dead_circumflex><dead_circumflex>                                                   <Z> : "Z̭" # composed Z with circumflex below (Herero (old orthography))
-<Multi_key><less><less>                                                              <Z> : "Z̭" # composed Z with circumflex below (Herero (old orthography))
-<dead_circumflex><dead_circumflex>                                                   <z> : "z̭" # composed z with circumflex below (Herero (old orthography))
-<Multi_key><less><less>                                                              <z> : "z̭" # composed z with circumflex below (Herero (old orthography))
+<dead_circumflex><dead_circumflex>                                                   <W> : "W̭" # U0057 U032D W with circumflex below (Parthian transcription)
+<Multi_key><less><less>                                                              <W> : "W̭" # U0057 U032D W with circumflex below (Parthian transcription)
+<dead_circumflex><dead_circumflex>                                                   <w> : "w̭" # U0077 U032D w with circumflex below (Parthian transcription)
+<Multi_key><less><less>                                                              <w> : "w̭" # U0077 U032D w with circumflex below (Parthian transcription)
+<dead_circumflex><dead_circumflex>                                                   <Z> : "Z̭" # U005A U032D Z with circumflex below (Herero (old orthography))
+<Multi_key><less><less>                                                              <Z> : "Z̭" # U005A U032D Z with circumflex below (Herero (old orthography))
+<dead_circumflex><dead_circumflex>                                                   <z> : "z̭" # U007A U032D z with circumflex below (Herero (old orthography))
+<Multi_key><less><less>                                                              <z> : "z̭" # U007A U032D z with circumflex below (Herero (old orthography))
 #
 #
 #^# HACEK input facility by CIRCUMFLEX
@@ -2643,110 +2643,110 @@
 <Multi_key><equal>                                                     <dead_circumflex> : "⁠" U2060 # WORD JOINER
 #   <UEFD7>                                                             <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
 #   <Multi_key><equal>                                                  <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
-<UEFD7>                                                                              <a> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <a> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <A> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <A> : "🇦‌" # U1F1E6 REGIONAL INDICATOR SYMBOL LETTER A, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <b> : "🇧‌" # U1F1E7 REGIONAL INDICATOR SYMBOL LETTER B, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <b> : "🇧‌" # U1F1E7 REGIONAL INDICATOR SYMBOL LETTER B, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <B> : "🇧‌" # U1F1E7 REGIONAL INDICATOR SYMBOL LETTER B, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <B> : "🇧‌" # U1F1E7 REGIONAL INDICATOR SYMBOL LETTER B, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <c> : "🇨‌" # U1F1E8 REGIONAL INDICATOR SYMBOL LETTER C, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <c> : "🇨‌" # U1F1E8 REGIONAL INDICATOR SYMBOL LETTER C, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <C> : "🇨‌" # U1F1E8 REGIONAL INDICATOR SYMBOL LETTER C, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <C> : "🇨‌" # U1F1E8 REGIONAL INDICATOR SYMBOL LETTER C, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <d> : "🇩‌" # U1F1E9 REGIONAL INDICATOR SYMBOL LETTER D, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <d> : "🇩‌" # U1F1E9 REGIONAL INDICATOR SYMBOL LETTER D, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <D> : "🇩‌" # U1F1E9 REGIONAL INDICATOR SYMBOL LETTER D, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <D> : "🇩‌" # U1F1E9 REGIONAL INDICATOR SYMBOL LETTER D, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <e> : "🇪‌" # U1F1EA REGIONAL INDICATOR SYMBOL LETTER E, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <e> : "🇪‌" # U1F1EA REGIONAL INDICATOR SYMBOL LETTER E, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <E> : "🇪‌" # U1F1EA REGIONAL INDICATOR SYMBOL LETTER E, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <E> : "🇪‌" # U1F1EA REGIONAL INDICATOR SYMBOL LETTER E, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <f> : "🇫‌" # U1F1EB REGIONAL INDICATOR SYMBOL LETTER F, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <f> : "🇫‌" # U1F1EB REGIONAL INDICATOR SYMBOL LETTER F, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <F> : "🇫‌" # U1F1EB REGIONAL INDICATOR SYMBOL LETTER F, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <F> : "🇫‌" # U1F1EB REGIONAL INDICATOR SYMBOL LETTER F, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <g> : "🇬‌" # U1F1EC REGIONAL INDICATOR SYMBOL LETTER G, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <g> : "🇬‌" # U1F1EC REGIONAL INDICATOR SYMBOL LETTER G, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <G> : "🇬‌" # U1F1EC REGIONAL INDICATOR SYMBOL LETTER G, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <G> : "🇬‌" # U1F1EC REGIONAL INDICATOR SYMBOL LETTER G, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <h> : "🇭‌" # U1F1ED REGIONAL INDICATOR SYMBOL LETTER H, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <h> : "🇭‌" # U1F1ED REGIONAL INDICATOR SYMBOL LETTER H, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <H> : "🇭‌" # U1F1ED REGIONAL INDICATOR SYMBOL LETTER H, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <H> : "🇭‌" # U1F1ED REGIONAL INDICATOR SYMBOL LETTER H, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <i> : "🇮‌" # U1F1EE REGIONAL INDICATOR SYMBOL LETTER I, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <i> : "🇮‌" # U1F1EE REGIONAL INDICATOR SYMBOL LETTER I, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <I> : "🇮‌" # U1F1EE REGIONAL INDICATOR SYMBOL LETTER I, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <I> : "🇮‌" # U1F1EE REGIONAL INDICATOR SYMBOL LETTER I, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <j> : "🇯‌" # U1F1EF REGIONAL INDICATOR SYMBOL LETTER J, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <j> : "🇯‌" # U1F1EF REGIONAL INDICATOR SYMBOL LETTER J, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <J> : "🇯‌" # U1F1EF REGIONAL INDICATOR SYMBOL LETTER J, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <J> : "🇯‌" # U1F1EF REGIONAL INDICATOR SYMBOL LETTER J, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <k> : "🇰‌" # U1F1F0 REGIONAL INDICATOR SYMBOL LETTER K, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <k> : "🇰‌" # U1F1F0 REGIONAL INDICATOR SYMBOL LETTER K, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <K> : "🇰‌" # U1F1F0 REGIONAL INDICATOR SYMBOL LETTER K, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <K> : "🇰‌" # U1F1F0 REGIONAL INDICATOR SYMBOL LETTER K, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <l> : "🇱‌" # U1F1F1 REGIONAL INDICATOR SYMBOL LETTER L, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <l> : "🇱‌" # U1F1F1 REGIONAL INDICATOR SYMBOL LETTER L, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <L> : "🇱‌" # U1F1F1 REGIONAL INDICATOR SYMBOL LETTER L, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <L> : "🇱‌" # U1F1F1 REGIONAL INDICATOR SYMBOL LETTER L, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <m> : "🇲‌" # U1F1F2 REGIONAL INDICATOR SYMBOL LETTER M, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <m> : "🇲‌" # U1F1F2 REGIONAL INDICATOR SYMBOL LETTER M, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <M> : "🇲‌" # U1F1F2 REGIONAL INDICATOR SYMBOL LETTER M, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <M> : "🇲‌" # U1F1F2 REGIONAL INDICATOR SYMBOL LETTER M, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <n> : "🇳‌" # U1F1F3 REGIONAL INDICATOR SYMBOL LETTER N, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <n> : "🇳‌" # U1F1F3 REGIONAL INDICATOR SYMBOL LETTER N, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <N> : "🇳‌" # U1F1F3 REGIONAL INDICATOR SYMBOL LETTER N, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <N> : "🇳‌" # U1F1F3 REGIONAL INDICATOR SYMBOL LETTER N, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <o> : "🇴‌" # U1F1F4 REGIONAL INDICATOR SYMBOL LETTER O, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <o> : "🇴‌" # U1F1F4 REGIONAL INDICATOR SYMBOL LETTER O, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <O> : "🇴‌" # U1F1F4 REGIONAL INDICATOR SYMBOL LETTER O, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <O> : "🇴‌" # U1F1F4 REGIONAL INDICATOR SYMBOL LETTER O, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <p> : "🇵‌" # U1F1F5 REGIONAL INDICATOR SYMBOL LETTER P, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <p> : "🇵‌" # U1F1F5 REGIONAL INDICATOR SYMBOL LETTER P, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <P> : "🇵‌" # U1F1F5 REGIONAL INDICATOR SYMBOL LETTER P, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <P> : "🇵‌" # U1F1F5 REGIONAL INDICATOR SYMBOL LETTER P, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <q> : "🇶‌" # U1F1F6 REGIONAL INDICATOR SYMBOL LETTER Q, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <q> : "🇶‌" # U1F1F6 REGIONAL INDICATOR SYMBOL LETTER Q, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <Q> : "🇶‌" # U1F1F6 REGIONAL INDICATOR SYMBOL LETTER Q, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <Q> : "🇶‌" # U1F1F6 REGIONAL INDICATOR SYMBOL LETTER Q, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <r> : "🇷‌" # U1F1F7 REGIONAL INDICATOR SYMBOL LETTER R, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <r> : "🇷‌" # U1F1F7 REGIONAL INDICATOR SYMBOL LETTER R, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <R> : "🇷‌" # U1F1F7 REGIONAL INDICATOR SYMBOL LETTER R, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <R> : "🇷‌" # U1F1F7 REGIONAL INDICATOR SYMBOL LETTER R, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <s> : "🇸‌" # U1F1F8 REGIONAL INDICATOR SYMBOL LETTER S, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <s> : "🇸‌" # U1F1F8 REGIONAL INDICATOR SYMBOL LETTER S, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <S> : "🇸‌" # U1F1F8 REGIONAL INDICATOR SYMBOL LETTER S, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <S> : "🇸‌" # U1F1F8 REGIONAL INDICATOR SYMBOL LETTER S, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <t> : "🇹‌" # U1F1F9 REGIONAL INDICATOR SYMBOL LETTER T, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <t> : "🇹‌" # U1F1F9 REGIONAL INDICATOR SYMBOL LETTER T, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <T> : "🇹‌" # U1F1F9 REGIONAL INDICATOR SYMBOL LETTER T, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <T> : "🇹‌" # U1F1F9 REGIONAL INDICATOR SYMBOL LETTER T, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <u> : "🇺‌" # U1F1FA REGIONAL INDICATOR SYMBOL LETTER U, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <u> : "🇺‌" # U1F1FA REGIONAL INDICATOR SYMBOL LETTER U, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <U> : "🇺‌" # U1F1FA REGIONAL INDICATOR SYMBOL LETTER U, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <U> : "🇺‌" # U1F1FA REGIONAL INDICATOR SYMBOL LETTER U, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <v> : "🇻‌" # U1F1FB REGIONAL INDICATOR SYMBOL LETTER V, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <v> : "🇻‌" # U1F1FB REGIONAL INDICATOR SYMBOL LETTER V, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <V> : "🇻‌" # U1F1FB REGIONAL INDICATOR SYMBOL LETTER V, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <V> : "🇻‌" # U1F1FB REGIONAL INDICATOR SYMBOL LETTER V, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <w> : "🇼‌" # U1F1FC REGIONAL INDICATOR SYMBOL LETTER W, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <w> : "🇼‌" # U1F1FC REGIONAL INDICATOR SYMBOL LETTER W, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <W> : "🇼‌" # U1F1FC REGIONAL INDICATOR SYMBOL LETTER W, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <W> : "🇼‌" # U1F1FC REGIONAL INDICATOR SYMBOL LETTER W, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <x> : "🇽‌" # U1F1FD REGIONAL INDICATOR SYMBOL LETTER X, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <x> : "🇽‌" # U1F1FD REGIONAL INDICATOR SYMBOL LETTER X, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <X> : "🇽‌" # U1F1FD REGIONAL INDICATOR SYMBOL LETTER X, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <X> : "🇽‌" # U1F1FD REGIONAL INDICATOR SYMBOL LETTER X, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <y> : "🇾‌" # U1F1FE REGIONAL INDICATOR SYMBOL LETTER Y, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <y> : "🇾‌" # U1F1FE REGIONAL INDICATOR SYMBOL LETTER Y, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <Y> : "🇾‌" # U1F1FE REGIONAL INDICATOR SYMBOL LETTER Y, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <Y> : "🇾‌" # U1F1FE REGIONAL INDICATOR SYMBOL LETTER Y, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <z> : "🇿‌" # U1F1FF REGIONAL INDICATOR SYMBOL LETTER Z, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <z> : "🇿‌" # U1F1FF REGIONAL INDICATOR SYMBOL LETTER Z, U200C ZERO WIDTH NON-JOINER
-<UEFD7>                                                                              <Z> : "🇿‌" # U1F1FF REGIONAL INDICATOR SYMBOL LETTER Z, U200C ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                   <Z> : "🇿‌" # U1F1FF REGIONAL INDICATOR SYMBOL LETTER Z, U200C ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <A> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <A> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <b> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <b> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <B> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <B> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <c> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <c> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <C> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <C> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <d> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <d> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <D> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <D> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <e> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <e> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <E> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <E> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <f> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <f> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <F> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <F> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <g> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <g> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <G> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <G> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <h> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <h> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <H> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <H> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <i> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <i> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <I> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <I> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <j> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <j> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <J> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <J> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <k> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <k> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <K> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <K> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <l> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <l> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <L> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <L> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <m> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <m> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <M> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <M> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <n> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <n> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <N> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <N> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <o> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <o> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <O> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <O> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <p> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <p> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <P> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <P> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <Q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <Q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <r> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <r> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <R> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <R> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <s> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <s> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <S> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <S> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <t> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <t> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <T> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <T> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <u> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <u> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <U> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <U> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <v> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <v> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <V> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <V> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <w> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <w> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <W> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <W> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <x> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <x> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <X> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <X> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <Y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <Y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                              <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                   <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
 #
 #
 #   Symbols:
@@ -2819,11 +2819,8 @@
 #
 # # Private use area characters
 #
-#   This is a facility to input the first 62 first-range private-use characters.
-#   The glyphs may be edited in any font editor or private character editor, but
-#   fonts may use this range to store extra glyphs.
-#
-#   Using the underused regional indicator letter dead key followed by COMMA.
+#   This facility to input the first 62 private-use characters uses the regional
+#   indicator letter dead key followed by comma.
 #
 <UEFD7><comma>                                                                       <0> : "" UE000 # PRIVATE USE CHARACTER E000
 <Multi_key><equal><comma>                                                            <0> : "" UE000 # PRIVATE USE CHARACTER E000
@@ -2956,7 +2953,8 @@
 #   Multi_key: ¦==
 #
 #   Flags are supported on double press followed by the ISO country code.
-#   Full list of the main country flags as of Unicode v15.0:
+#   This list is up-to-date as of Unicode v15.0.
+#   Full list of the main country flags:
 #   https://unicode.org/emoji/charts/full-emoji-list.html
 #
 <UEFD7><UEFD7>                                                                    <a><c> : "🇦🇨" # Ascension Island
@@ -4110,14 +4108,19 @@
 #   *dead_reversed UEFD6
 #   Multi_key: ¦\
 #
+#   "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, "ɘ" U0258 # LATIN SMALL LETTER
+#   REVERSED E is no casing pair. The small letter has no capital letter, while
+#   the capital letter is considered a turned e, uppercase of "ǝ" U01DD LATIN
+#   SMALL LETTER TURNED E. As such it is in group 1 of R, and in group 2 of E.
+#
 <UEFD6>                                                                        <section> : "\\" U005C # REVERSE SOLIDUS
 <Multi_key><backslash>                                                         <section> : "\\" U005C # REVERSE SOLIDUS
 <UEFD6>                                                                              <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <Multi_key><backslash>                                                               <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <UEFD6>                                                                              <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
 <Multi_key><backslash>                                                               <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
-<UEFD6>                                                                              <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E (turned e)
-<Multi_key><backslash>                                                               <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E (turned e)
+<UEFD6>                                                                              <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
+<Multi_key><backslash>                                                               <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
 <UEFD6>                                                                              <e> : "ɘ" U0258 # LATIN SMALL LETTER REVERSED E
 <Multi_key><backslash>                                                               <e> : "ɘ" U0258 # LATIN SMALL LETTER REVERSED E
 <UEFD6>                                                                              <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
@@ -4390,10 +4393,10 @@
 <Multi_key><comma>                                                        <nobreakspace> : "¸" U00B8 # CEDILLA
 <dead_cedilla>                                                                 <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
 <Multi_key><comma>                                                             <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
-<dead_cedilla>                                                                       <A> : "ÇA" # U+00C7 U+0041
-<Multi_key><comma>                                                                   <A> : "ÇA" # U+00C7 U+0041
-<dead_cedilla>                                                                       <a> : "ça" # U+00E7 U+0061
-<Multi_key><comma>                                                                   <a> : "ça" # U+00E7 U+0061
+<dead_cedilla>                                                                       <A> : "ÇA" # U00C7 U0041 (Canadian French: Ç key emulation)
+<Multi_key><comma>                                                                   <A> : "ÇA" # U00C7 U0041 (Canadian French: Ç key emulation)
+<dead_cedilla>                                                                       <a> : "ça" # U00E7 U0061 (Canadian French: Ç key emulation)
+<Multi_key><comma>                                                                   <a> : "ça" # U00E7 U0061 (Canadian French: Ç key emulation)
 <dead_cedilla>                                                                       <C> : "Ç" U00C7 # LATIN CAPITAL LETTER C WITH CEDILLA
 <Multi_key><comma>                                                                   <C> : "Ç" U00C7 # LATIN CAPITAL LETTER C WITH CEDILLA
 <dead_cedilla>                                                                       <c> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
@@ -4426,10 +4429,10 @@
 <Multi_key><comma>                                                                   <N> : "Ņ" U0145 # LATIN CAPITAL LETTER N WITH CEDILLA
 <dead_cedilla>                                                                       <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
 <Multi_key><comma>                                                                   <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
-<dead_cedilla>                                                                       <O> : "ÇO" # U+00C7 U+004F
-<Multi_key><comma>                                                                   <O> : "ÇO" # U+00C7 U+004F
-<dead_cedilla>                                                                       <o> : "ço" # U+00E7 U+006F
-<Multi_key><comma>                                                                   <o> : "ço" # U+00E7 U+006F
+<dead_cedilla>                                                                       <O> : "ÇO" # U00C7 U004F (Canadian French: Ç key emulation)
+<Multi_key><comma>                                                                   <O> : "ÇO" # U00C7 U004F (Canadian French: Ç key emulation)
+<dead_cedilla>                                                                       <o> : "ço" # U00E7 U006F (Canadian French: Ç key emulation)
+<Multi_key><comma>                                                                   <o> : "ço" # U00E7 U006F (Canadian French: Ç key emulation)
 <dead_cedilla>                                                                       <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
 <Multi_key><comma>                                                                   <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
 <dead_cedilla>                                                                       <r> : "ŗ" U0157 # LATIN SMALL LETTER R WITH CEDILLA
@@ -4442,10 +4445,10 @@
 <Multi_key><comma>                                                                   <T> : "Ţ" U0162 # LATIN CAPITAL LETTER T WITH CEDILLA
 <dead_cedilla>                                                                       <t> : "ţ" U0163 # LATIN SMALL LETTER T WITH CEDILLA
 <Multi_key><comma>                                                                   <t> : "ţ" U0163 # LATIN SMALL LETTER T WITH CEDILLA
-<dead_cedilla>                                                                       <U> : "ÇU" # U+00C7 U+0055
-<Multi_key><comma>                                                                   <U> : "ÇU" # U+00C7 U+0055
-<dead_cedilla>                                                                       <u> : "çu" # U+00E7 U+0075
-<Multi_key><comma>                                                                   <u> : "çu" # U+00E7 U+0075
+<dead_cedilla>                                                                       <U> : "ÇU" # U00C7 U0055 (Canadian French: Ç key emulation)
+<Multi_key><comma>                                                                   <U> : "ÇU" # U00C7 U0055 (Canadian French: Ç key emulation)
+<dead_cedilla>                                                                       <u> : "çu" # U00E7 U0075 (Canadian French: Ç key emulation)
+<Multi_key><comma>                                                                   <u> : "çu" # U00E7 U0075 (Canadian French: Ç key emulation)
 #
 #
 # # CEDILLA&ACUTE
@@ -4610,22 +4613,22 @@
 <Multi_key><exclam><exclam>                                               <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                 <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key><exclam><exclam>                                                    <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-<dead_belowdot><dead_belowdot>                                                       <E> : "E̩" # composed E with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <E> : "E̩" # composed E with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <e> : "e̩" # composed e with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <e> : "e̩" # composed e with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <N> : "N̩" # composed N with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <N> : "N̩" # composed N with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <n> : "n̩" # composed n with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <n> : "n̩" # composed n with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <O> : "O̩" # composed O with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <O> : "O̩" # composed O with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <o> : "o̩" # composed o with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <o> : "o̩" # composed o with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <S> : "S̩" # composed S with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <S> : "S̩" # composed S with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                                       <s> : "s̩" # composed s with vertical line below (Yoruba (current Nigerian alphabet))
-<Multi_key><exclam><exclam>                                                          <s> : "s̩" # composed s with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <E> : "E̩" # U0045 U0329 E with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <E> : "E̩" # U0045 U0329 E with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <e> : "e̩" # U0065 U0329 e with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <e> : "e̩" # U0065 U0329 e with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <N> : "N̩" # U004E U0329 N with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <N> : "N̩" # U004E U0329 N with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <n> : "n̩" # U006E U0329 n with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <n> : "n̩" # U006E U0329 n with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <O> : "O̩" # U004F U0329 O with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <O> : "O̩" # U004F U0329 O with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <o> : "o̩" # U006F U0329 o with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <o> : "o̩" # U006F U0329 o with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <S> : "S̩" # U0053 U0329 S with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <S> : "S̩" # U0053 U0329 S with vertical line below (Yoruba (current Nigerian alphabet))
+<dead_belowdot><dead_belowdot>                                                       <s> : "s̩" # U0073 U0329 s with vertical line below (Yoruba (current Nigerian alphabet))
+<Multi_key><exclam><exclam>                                                          <s> : "s̩" # U0073 U0329 s with vertical line below (Yoruba (current Nigerian alphabet))
 <dead_belowdot><dead_belowdot>                                            <dead_cedilla> : "̩" U0329 # COMBINING VERTICAL LINE BELOW (Yoruba, German dialectology)
 <Multi_key><exclam><exclam>                                                      <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW (Yoruba, German dialectology)
 <dead_belowdot><dead_belowdot>                                           <dead_belowdot> : "̍" U030D # COMBINING VERTICAL LINE ABOVE (Marshallese)
@@ -4673,16 +4676,16 @@
 <Multi_key><colon>                                                                   <I> : "Ï" U00CF # LATIN CAPITAL LETTER I WITH DIAERESIS
 <dead_diaeresis>                                                                     <i> : "ï" U00EF # LATIN SMALL LETTER I WITH DIAERESIS
 <Multi_key><colon>                                                                   <i> : "ï" U00EF # LATIN SMALL LETTER I WITH DIAERESIS
-<dead_diaeresis>                                                                     <N> : "N̈" # composed N with combining diaeresis (Malagasy)
-<Multi_key><colon>                                                                   <N> : "N̈" # composed N with combining diaeresis (Malagasy)
-<dead_diaeresis>                                                                     <n> : "n̈" # composed n with combining diaeresis (Malagasy)
-<Multi_key><colon>                                                                   <n> : "n̈" # composed n with combining diaeresis (Malagasy)
+<dead_diaeresis>                                                                     <N> : "N̈" # U004E U0308 N with combining diaeresis (Malagasy)
+<Multi_key><colon>                                                                   <N> : "N̈" # U004E U0308 N with combining diaeresis (Malagasy)
+<dead_diaeresis>                                                                     <n> : "n̈" # U006E U0308 n with combining diaeresis (Malagasy)
+<Multi_key><colon>                                                                   <n> : "n̈" # U006E U0308 n with combining diaeresis (Malagasy)
 <dead_diaeresis>                                                                     <O> : "Ö" U00D6 # LATIN CAPITAL LETTER O WITH DIAERESIS
 <Multi_key><colon>                                                                   <O> : "Ö" U00D6 # LATIN CAPITAL LETTER O WITH DIAERESIS
 <dead_diaeresis>                                                                     <o> : "ö" U00F6 # LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><colon>                                                                   <o> : "ö" U00F6 # LATIN SMALL LETTER O WITH DIAERESIS
-<dead_diaeresis>                                                                     <T> : "T̈" # composed T with combining diaeresis (Arabic transliteration; ẗ is precomposed)
-<Multi_key><colon>                                                                   <T> : "T̈" # composed T with combining diaeresis (Arabic transliteration; ẗ is precomposed)
+<dead_diaeresis>                                                                     <T> : "T̈" # U0054 U0308 T with combining diaeresis (Arabic transliteration; ẗ is precomposed)
+<Multi_key><colon>                                                                   <T> : "T̈" # U0054 U0308 T with combining diaeresis (Arabic transliteration; ẗ is precomposed)
 <dead_diaeresis>                                                                     <t> : "ẗ" U1E97 # LATIN SMALL LETTER T WITH DIAERESIS (capital not encoded)
 <Multi_key><colon>                                                                   <t> : "ẗ" U1E97 # LATIN SMALL LETTER T WITH DIAERESIS (capital not encoded)
 <dead_diaeresis>                                                                     <U> : "Ü" U00DC # LATIN CAPITAL LETTER U WITH DIAERESIS
@@ -4857,18 +4860,18 @@
 <Multi_key><colon><colon>                                                        <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
 <dead_diaeresis><dead_diaeresis>                                               <section> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
 <Multi_key><colon><colon>                                                      <section> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
-<dead_diaeresis><dead_diaeresis>                                                     <A> : "A̤" # composed A with diaeresis below (Min Dong)
-<Multi_key><colon><colon>                                                            <A> : "A̤" # composed A with diaeresis below (Min Dong)
-<dead_diaeresis><dead_diaeresis>                                                     <a> : "a̤" # composed a with diaeresis below (Min Dong)
-<Multi_key><colon><colon>                                                            <a> : "a̤" # composed a with diaeresis below (Min Dong)
-<dead_diaeresis><dead_diaeresis>                                                     <E> : "E̤" # composed E with diaeresis below (Min Dong)
-<Multi_key><colon><colon>                                                            <E> : "E̤" # composed E with diaeresis below (Min Dong)
-<dead_diaeresis><dead_diaeresis>                                                     <e> : "e̤" # composed e with diaeresis below (Min Dong)
-<Multi_key><colon><colon>                                                            <e> : "e̤" # composed e with diaeresis below (Min Dong)
-<dead_diaeresis><dead_diaeresis>                                                     <O> : "O̤" # composed O with diaeresis below (Min Dong)
-<Multi_key><colon><colon>                                                            <O> : "O̤" # composed O with diaeresis below (Min Dong)
-<dead_diaeresis><dead_diaeresis>                                                     <o> : "o̤" # composed o with diaeresis below (Min Dong)
-<Multi_key><colon><colon>                                                            <o> : "o̤" # composed o with diaeresis below (Min Dong)
+<dead_diaeresis><dead_diaeresis>                                                     <A> : "A̤" # U0041 U0324 A with diaeresis below (Min Dong)
+<Multi_key><colon><colon>                                                            <A> : "A̤" # U0041 U0324 A with diaeresis below (Min Dong)
+<dead_diaeresis><dead_diaeresis>                                                     <a> : "a̤" # U0061 U0324 a with diaeresis below (Min Dong)
+<Multi_key><colon><colon>                                                            <a> : "a̤" # U0061 U0324 a with diaeresis below (Min Dong)
+<dead_diaeresis><dead_diaeresis>                                                     <E> : "E̤" # U0045 U0324 E with diaeresis below (Min Dong)
+<Multi_key><colon><colon>                                                            <E> : "E̤" # U0045 U0324 E with diaeresis below (Min Dong)
+<dead_diaeresis><dead_diaeresis>                                                     <e> : "e̤" # U0065 U0324 e with diaeresis below (Min Dong)
+<Multi_key><colon><colon>                                                            <e> : "e̤" # U0065 U0324 e with diaeresis below (Min Dong)
+<dead_diaeresis><dead_diaeresis>                                                     <O> : "O̤" # U004F U0324 O with diaeresis below (Min Dong)
+<Multi_key><colon><colon>                                                            <O> : "O̤" # U004F U0324 O with diaeresis below (Min Dong)
+<dead_diaeresis><dead_diaeresis>                                                     <o> : "o̤" # U006F U0324 o with diaeresis below (Min Dong)
+<Multi_key><colon><colon>                                                            <o> : "o̤" # U006F U0324 o with diaeresis below (Min Dong)
 <dead_diaeresis><dead_diaeresis>                                                     <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
 <Multi_key><colon><colon>                                                            <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
 <dead_diaeresis><dead_diaeresis>                                                     <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
@@ -4890,12 +4893,12 @@
 <dead_belowcomma>                                                              <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <Multi_key><semicolon>                                                         <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <Multi_key><section>                                                           <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
-<dead_belowcomma>                                                                    <D> : "D̦" # composed D with combining comma below (Moldovan and Romanian, abandoned in 1904)
-<Multi_key><semicolon>                                                               <D> : "D̦" # composed D with combining comma below (Moldovan and Romanian, abandoned in 1904)
-<Multi_key><section>                                                                 <D> : "D̦" # composed D with combining comma below (Moldovan and Romanian, abandoned in 1904)
-<dead_belowcomma>                                                                    <d> : "d̦" # composed d with combining comma below (Moldovan and Romanian, abandoned in 1904)
-<Multi_key><semicolon>                                                               <d> : "d̦" # composed d with combining comma below (Moldovan and Romanian, abandoned in 1904)
-<Multi_key><section>                                                                 <d> : "d̦" # composed d with combining comma below (Moldovan and Romanian, abandoned in 1904)
+<dead_belowcomma>                                                                    <D> : "D̦" # U0044 U0326 D with combining comma below (Moldovan and Romanian, abandoned in 1904)
+<Multi_key><semicolon>                                                               <D> : "D̦" # U0044 U0326 D with combining comma below (Moldovan and Romanian, abandoned in 1904)
+<Multi_key><section>                                                                 <D> : "D̦" # U0044 U0326 D with combining comma below (Moldovan and Romanian, abandoned in 1904)
+<dead_belowcomma>                                                                    <d> : "d̦" # U0064 U0326 d with combining comma below (Moldovan and Romanian, abandoned in 1904)
+<Multi_key><semicolon>                                                               <d> : "d̦" # U0064 U0326 d with combining comma below (Moldovan and Romanian, abandoned in 1904)
+<Multi_key><section>                                                                 <d> : "d̦" # U0064 U0326 d with combining comma below (Moldovan and Romanian, abandoned in 1904)
 <dead_belowcomma>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon>                                                               <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><section>                                                                 <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
@@ -5022,9 +5025,7 @@
 #
 #
 #
-### Diacriticized letter key emulation
-#
-# # Ê-key emulation
+### Ê-key emulation
 #
 #   These sequences duplicate or override similar sequences in dead_circumflex.
 #   See #*# CIRCUMFLEX
