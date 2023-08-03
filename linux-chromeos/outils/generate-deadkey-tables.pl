@@ -1,12 +1,18 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-07-31T0302+0200
+# 2023-08-03T0703+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
 #
 # The input requires start and end tags. Section headings switch files.
+#
+# Localized tooltips require the Unicode NamesList.txt or equivalents in the
+# target locale as configured at lines 28..30. Descriptors are prioritized.
+# The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
+# Linux and ChromeOS. Due to incompleteness (Unicode version 10.0.0), another
+# list is also used, `ListeNoms.txt` from Patrick Andries and collaborators.
 #
 # The output is designed for use in WordPress. An all-in-one table is generated
 # alongside, although neither WordPress editor registers it (memory limit 1024M
@@ -15,7 +21,16 @@
 # Using old-style file handles.
 use warnings;
 use strict;
+use utf8;
 use feature 'unicode_strings';
+
+# Courtesy https://stackoverflow.com/a/12291409
+use open ":std", ":encoding(UTF-8)";
+
+
+# my $names_file_path       = 'names/NamesList.txt';
+my $names_file_path       = 'names/ListeNoms.txt';
+my $descriptors_file_path = 'names/Udescripteurs.txt';
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -35,6 +50,7 @@ print( "Opened file $output_path.\n" );
 $output_path = $output_path_trunk . $output_file_extension;
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
+print( "Processing dead keys from $file_path to $output_path.\n" );
 
 my $parse_on       = !1;
 my $table_header_1 = 'Caractère';
@@ -44,6 +60,7 @@ my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
+my ( $sta, $end, $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
@@ -205,9 +222,62 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr><td title="$3">$2<\/td><td><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr><td title="$4">◌$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr><td title="$4">$2<\/td><td>$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+
+				$line =~ m/^.+ : +"(.+?)"/u;
+				$str     = $1;
+				$tooltip = '';
+				$anchor  = '';
+				until ( $str eq '' ) {
+					$cp      = ord( $str );
+					$cp      = sprintf( "%X", $cp );
+					$cp      =~ s/^(..)$/00$1/;
+					$cp      =~ s/^(...)$/0$1/;
+					$descrip = '';
+					if ( $descriptors_file_path ) {
+						open( DESCRIP, '<', $descriptors_file_path ) or die $!;
+						while ( my $des_line = <DESCRIP> ) {
+							if ( $des_line =~ /U$cp;/ ) {
+								chomp( $des_line );
+								$des_line =~ s/^.+; (.+)$/$1/;
+								$descrip = $des_line;
+								last;
+								close( DESCRIP );
+							}
+						}
+					}
+					unless ( $descrip ) {
+						open( NAMES, '<', $names_file_path ) or die $!;
+						while ( my $name_line = <NAMES> ) {
+							if ( $name_line =~ /^$cp\t/ ) {
+								chomp( $name_line );
+								$name_line =~ s/^.+\t(.+)$/$1/;
+								$descrip = $name_line;
+								last;
+								close( NAMES );
+							}
+						}
+					}
+					$tooltip = $tooltip . $descrip . " U+$cp\n";
+					$anchor  = $anchor . 'U+' . $cp . '-';
+					$str     =~ s/.//u;
+				}
+				$tooltip =~ s/\n$//;
+				$anchor  =~ s/-$//;
+				$regex   = quotemeta( $anchor );
+				$index   = 0;
+				if ( grep( /^$regex$/, @anchors ) ) {
+					$test = $regex;
+					while ( grep( /^$test$/, @anchors ) ) {
+						++$index;
+						$test = $regex . '_' . $index;
+					}
+					$anchor = $anchor . '_' . $index;
+				}
+				push( @anchors, $anchor );
+
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3"><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				print WHOLEOUTPUT $line;
 			}
@@ -219,5 +289,6 @@ print WHOLEOUTPUT $end_tags;
 
 close( INPUT );
 close( OUTPUT );
+print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
 print( "Dead key tables generated.\n\n" );
