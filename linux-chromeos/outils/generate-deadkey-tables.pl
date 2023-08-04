@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-08-04T0214+0200
+# 2023-08-04T0233+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -9,7 +9,8 @@
 # The input requires start and end tags. Section headings switch files.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
-# target locale as configured at lines 31..34. Descriptors are prioritized.
+# target locale as configured under `## Character names localization`.
+# Descriptors, which means “edited French character names,” are prioritized.
 # The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
 # Linux and ChromeOS. Due to incompleteness (Unicode version 10.0.0), another
 # list is also used, `ListeNoms.txt` from Patrick Andries and collaborators.
@@ -17,7 +18,6 @@
 # The output is designed for use in WordPress. An all-in-one table is generated
 # alongside, although neither WordPress editor registers it (memory limit 1024M
 # for the purpose, both in PHP and in WordPress).
-#
 #
 # Using old-style file handles.
 use warnings;
@@ -29,10 +29,12 @@ use feature 'unicode_strings';
 use open ":std", ":encoding(UTF-8)";
 
 
+## Character names localization
 # my $names_file_path       = 'names/NamesList.txt';
 my $names_file_path       = 'names/ListeNoms.txt';
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
+
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -163,11 +165,13 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
+				
 				# Invisibles or confusables:
 				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— Tiret cadratin<\/kbd>/g;
 				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– Tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
+				
 				# Clarifying tooltips only:
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
@@ -177,6 +181,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
+				
 				# Self-evident:
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
@@ -225,6 +230,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
 
+				# Anchors and localized tooltips:
 				$line =~ m/^.+ : +"(.+?)"/u;
 				$str     = $1;
 				$tooltip = '';
