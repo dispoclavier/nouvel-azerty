@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-08-03T0703+0200
+# 2023-08-04T0214+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -9,7 +9,7 @@
 # The input requires start and end tags. Section headings switch files.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
-# target locale as configured at lines 28..30. Descriptors are prioritized.
+# target locale as configured at lines 31..34. Descriptors are prioritized.
 # The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
 # Linux and ChromeOS. Due to incompleteness (Unicode version 10.0.0), another
 # list is also used, `ListeNoms.txt` from Patrick Andries and collaborators.
@@ -17,6 +17,7 @@
 # The output is designed for use in WordPress. An all-in-one table is generated
 # alongside, although neither WordPress editor registers it (memory limit 1024M
 # for the purpose, both in PHP and in WordPress).
+#
 #
 # Using old-style file handles.
 use warnings;
@@ -30,6 +31,7 @@ use open ":std", ":encoding(UTF-8)";
 
 # my $names_file_path       = 'names/NamesList.txt';
 my $names_file_path       = 'names/ListeNoms.txt';
+# my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 
 my $file_path = 'Compose.yml';
@@ -72,7 +74,7 @@ while ( my $line = <INPUT> ) {
 	if ( $parse_on ) {
   	if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
-			|| $line =~ /^# # Ê-key emulation/
+			|| $line =~ /^### Ê-key emulation/
 			|| $line =~ /^### Quotation mark input method/
 			|| $line =~ /^### Shorthands for Portuguese and Spanish/
 		) {
