@@ -1,8 +1,9 @@
 ## Releases
 
-# Do not package tools in released source code.
+# Do not package resources nor tools in released source code.
 # Courtesy https://stackoverflow.com/a/50062746
 /linux-chromeos/outils/ export-ignore
+/linux-chromeos/ressource/ export-ignore
 
 
 ## Language stats
