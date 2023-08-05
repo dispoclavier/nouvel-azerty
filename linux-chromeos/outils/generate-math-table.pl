@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
+# 2023-08-05T2347+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based
@@ -16,7 +17,12 @@
 # Using old-style file handles.
 use warnings;
 use strict;
+use utf8;
 use feature 'unicode_strings';
+
+# Courtesy https://stackoverflow.com/a/12291409
+use open ":std", ":encoding(UTF-8)";
+
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
