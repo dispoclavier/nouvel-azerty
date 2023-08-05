@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-08-04T0233+0200
+# 2023-08-05T2052+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -40,7 +40,7 @@ my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
 print( "Opened file $file_path.\n" );
 
-my $output_directory = 'deadkey-tables';
+my $output_directory = 'tables';
 unless ( -d $output_directory ) {
 	mkdir $output_directory;
 }
@@ -57,14 +57,14 @@ print( "Opened file $output_path.\n" );
 print( "Processing dead keys from $file_path to $output_path.\n" );
 
 my $parse_on       = !1;
-my $table_header_1 = 'Caractère';
+my $table_header_1 = 'Caractère(s)';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
 my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( $sta, $end, $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
+my ( $sta, $end, $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $index );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
@@ -231,9 +231,10 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<(.)>/$1/g;
 
 				# Anchors and localized tooltips:
-				$line =~ m/^.+ : +"(.+?)"/u;
+				$line    =~ m/^.+ : +"(.+?)"/u;
 				$str     = $1;
 				$tooltip = '';
+				$ucodes  = '';
 				$anchor  = '';
 				until ( $str eq '' ) {
 					$cp      = ord( $str );
@@ -266,10 +267,12 @@ while ( my $line = <INPUT> ) {
 						}
 					}
 					$tooltip = $tooltip . $descrip . " U+$cp\n";
+					$ucodes  = $ucodes . "U+$cp<br />";
 					$anchor  = $anchor . 'U+' . $cp . '-';
 					$str     =~ s/.//u;
 				}
 				$tooltip =~ s/\n$//;
+				$ucodes  =~ s/<br \/>$//;
 				$anchor  =~ s/-$//;
 				$regex   = quotemeta( $anchor );
 				$index   = 0;
@@ -283,7 +286,7 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3"><\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
