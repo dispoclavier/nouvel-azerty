@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-08-05T2052+0200
+# 2023-08-06T0044+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -64,7 +64,7 @@ my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( $sta, $end, $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $index );
+my ( $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $index );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
