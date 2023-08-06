@@ -2911,8 +2911,12 @@
 <Multi_key><e><bar><underscore>                                                  <space> : "⋴" U22F4 # SMALL ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><period><e>                                                    <space> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><nobreakspace><period><e>                                             <space> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
-<Multi_key><minus><minus><e>                                                     <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><minus><minus><e><underscore>                                         <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><space><space><minus><e>                                              <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><space><minus><e>                                       <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><nobreakspace><minus><e>                                <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><space><space><minus><e><underscore>                                  <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><space><minus><e><underscore>                           <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><nobreakspace><minus><e><underscore>                    <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
 <Multi_key><e><minus>                                                            <space> : "⋸" U22F8 # ELEMENT OF WITH UNDERBAR
 <Multi_key><e><equal>                                                            <space> : "⋹" U22F9 # ELEMENT OF WITH TWO HORIZONTAL STROKES
 <Multi_key><p><minus>                                                            <space> : "⋺" U22FA # CONTAINS WITH LONG HORIZONTAL STROKE
@@ -2925,14 +2929,18 @@
 <Multi_key><nobreakspace><bar><p><underscore>                                    <space> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><bar><e><e><underscore>                                        <space> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><e><underscore>                                 <space> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-<Multi_key><space><minus><minus><p>                                              <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><minus><minus><p>                                       <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><space><minus><minus><e><e>                                           <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><minus><minus><e><e>                                    <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><space><minus><minus><p><underscore>                                  <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><minus><minus><p><underscore>                           <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><space><minus><minus><e><e><underscore>                               <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><minus><minus><e><e><underscore>                        <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><space><minus><p>                                              <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><space><minus><p>                                       <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><nobreakspace><minus><p>                                <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><space><minus><e><e>                                           <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><space><minus><e><e>                                    <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><nobreakspace><minus><e><e>                             <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><space><minus><p><underscore>                                  <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><space><minus><p><underscore>                           <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><nobreakspace><minus><p><underscore>                    <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><space><minus><e><e><underscore>                               <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><space><minus><e><e><underscore>                        <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><nobreakspace><minus><e><e><underscore>                 <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><e><bracketleft>                                                      <space> : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><e><bracketright>                                                     <space> : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><z><e>                                                                <space> : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
