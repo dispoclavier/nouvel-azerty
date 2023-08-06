@@ -887,46 +887,57 @@
 #   instead, tone bars are supported by dead_hook.
 #   See #*# HOOK
 #
-#   This T-based alternative uses letter-digit sequences.
+#   This T-based alternative uses digit-letter and letter-digit sequences.
 #
-<Multi_key><T>                                                                       <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><t>                                                                       <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><T>                                                                       <2> : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><t>                                                                       <2> : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><T>                                                                       <3> : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><t>                                                                       <3> : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><T>                                                                       <4> : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><t>                                                                       <4> : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><T>                                                                       <5> : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><t>                                                                       <5> : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><1><T>                                                                        : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><T><1>                                                                        : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><1><t>                                                                        : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><t><1>                                                                        : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><2><T>                                                                        : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><T><2>                                                                        : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><2><t>                                                                        : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><t><2>                                                                        : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><3><T>                                                                        : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><T><3>                                                                        : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><3><t>                                                                        : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><t><3>                                                                        : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><4><T>                                                                        : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><T><4>                                                                        : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><4><t>                                                                        : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><t><4>                                                                        : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><5><T>                                                                        : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><T><5>                                                                        : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><5><t>                                                                        : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><t><5>                                                                        : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 #
 #
 # # Zhuang tone letters
 #
-#   Zhuang tone letters are supported for completeness.
-#   Zhuang tone one is unwritten, according to:
+#   Zhuang tone letters are casing and thus require sequences with letters,
+#   most appropriately with Z avoiding conflicts with tone bars, paired with
+#   the digit both ways for ease of input. Zhuang tone one is unwritten:
 #   https://omniglot.com/writing/zhuang.htm
 #
-<Multi_key><2><T>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><T><2>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><2><t>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><t><2>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><3><T>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><T><3>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><3><t>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><t><3>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><4><T>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><T><4>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><4><t>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><t><4>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><5><T>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><T><5>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><5><t>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><t><5>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><6><T>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><T><6>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><6><t>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-<Multi_key><t><6>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+<Multi_key><2><Z>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><Z><2>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><2><z>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><z><2>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><3><Z>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><Z><3>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><3><z>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><z><3>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><4><Z>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><Z><4>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><4><z>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><z><4>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><5><Z>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><Z><5>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><5><z>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><z><5>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><6><Z>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><Z><6>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><6><z>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+<Multi_key><z><6>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
 #
 #
 # # Legal symbols
@@ -960,14 +971,14 @@
 <Multi_key><a><s>                                                                        : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><O><b><y>                                                                     : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><B><Y>                                                                     : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><O><c><c>                                                                     : "🅭" U1F16D # CIRCLED CC
+<Multi_key><o><C><C>                                                                     : "🅭" U1F16D # CIRCLED CC
 <Multi_key><O><C><C>                                                                     : "🅭" U1F16D # CIRCLED CC
 <Multi_key><c><o>                                                                        : "℅" U2105 # CARE OF
 <Multi_key><C><O>                                                                        : "℅" U2105 # CARE OF
 <Multi_key><o><backslash><c>                                                             : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><O><backslash><C>                                                             : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><o><c>                                                                        : "©" U00A9 # COPYRIGHT SIGN emoji
-<Multi_key><O><C>                                                                        : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><O><c>                                                                        : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><r>                                                                        : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><C><R>                                                                        : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><l>                                                                        : "🄯" U1F12F # COPYLEFT SYMBOL
