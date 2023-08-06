@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# 2023-08-06T1935+0200
+# 2023-08-06T2140+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
@@ -196,6 +196,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
+				$line =~ s/:([()])/:&#x200C;$1/g; # Visibly add ZWNJ between.
 
 				# Anchors and localized tooltips:
 				$line    =~ m/^.+ : +"(.+?)"/u;
