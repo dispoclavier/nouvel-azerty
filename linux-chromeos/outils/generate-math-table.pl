@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-06T0052+0200
+# 2023-08-06T0542+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based
@@ -96,6 +96,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 				$line =~ s/<(.+?)>/$1/g;
+				$line =~ s/¦/<span class="tooltip" title="Touche de composition AltGr\/Option + £\$">¦<\/span>/g;
+				$line =~ s/␣/<span class="tooltip" title="Espace">␣<\/span>/g;
 
 				# Anchors and localized tooltips:
 				$line    =~ m/^.+ : +"(.+?)"/u;
