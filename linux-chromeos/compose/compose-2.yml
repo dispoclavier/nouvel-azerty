@@ -5738,6 +5738,27 @@
 #   The base characters in this section are mapped on AltGr and assume
 #   using the group selector in synergy on AltGr.
 #
+#
+#   Emoji
+#
+#   Supporting all emoji in the Basic Multilingual Plane except Chinese letter
+#   emoji makes sense because input by dead keys is cross-platform compatible.
+#
+#   A number of BMP emoji are supported alternatively or only elsewhere:
+#
+#       * See # # Legal symbols
+#       * See # # Western zodiacal signs emoji
+#       * See # # Emoji
+#       * See #   Arrow emoji
+#
+#   A number of Supplemental Multilingual Plane emoji are mapped on live keys.
+#
+#   The two emoji-related variation selectors are in group 10 on key E, D03,
+#   for emoji style, VS16 UFE0F, and on key T, D05, for text style, VS15 UFE0E.
+#
+#   The five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
+#   are in group 10 on D06..D10.
+#
 #   Emoji full list: https://unicode.org/emoji/charts/full-emoji-list.html
 #   The source list: https://unicode.org/Public/emoji/13.0/emoji-sequences.txt
 #   The specification: https://unicode.org/reports/tr51/
@@ -5745,27 +5766,6 @@
 #   Emoji frequency figures are based on:
 #   https://home.unicode.org/emoji/emoji-frequency/
 #   https://www.futurity.org/emoji-countries-1328712-2-2/
-#
-#   Emoji in the Basic Multilingual Plane benefit from straightforward
-#   cross-platform support by dead keys and are fully supported except
-#   Chinese letter emoji.
-#
-#   A number of BMP emoji are supported alternatively or only elsewhere:
-#
-#       * Arrows: see #   Emoji arrows, a mix of black and simple arrows
-#       * Square: see # # Square emoji
-#       * Zodiac: see # # Western zodiacal signs emoji
-#       * ©, ®,™: see # # Legal symbols
-#
-#   Some Supplemental Multilingual Plane emoji are mapped on live keys.
-#
-#   The emoji style variation selector UFE0F is needed for those that
-#   the Unicode Standard specifies as defaulting to text style.
-#   The two emoji-related variation selectors are in group 10 on D03 (E)
-#   for emoji style, and on D05 (T) for text style.
-#
-#   Five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
-#   are supported in group 10 on D06..D10.
 #
 #
 #   Overview
