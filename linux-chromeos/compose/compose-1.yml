@@ -1,4 +1,5 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
+#
 #                    Version:
 <UEFA0>                     : "version 1.0.4 "
 #                      Scope: part 1 of Compose
@@ -518,10 +519,8 @@
 #
 ### Multi_key sequences
 #
-#   Following or referring to en_US.UTF-8/Compose, used for French.
-#
-#   The described behavior of XCompose is based on en_US.UTF-8/Compose, as
-#   used in France.
+#   The described behavior of XCompose is based on en_US.UTF-8/Compose,
+#   as it is used in France.
 #
 #   The maximum number of keysyms is nine. Longer sequences are ignored.
 #
@@ -575,6 +574,9 @@
 #   and U107AB; 2023-05-12T2039+0200),
 #
 #
+#   START_MULTI_KEY
+#
+#
 # # Circled by leading o
 #
 #   This only includes numbers 1–10, since letters would conflict with œ, ꝏ, ©.
@@ -609,13 +611,6 @@
 <Multi_key><O>                                                                       <9> : "⑨" U2468 # CIRCLED DIGIT NINE
 #
 #
-# # Mixed sequences made of both Multi_key and dead keys
-#
-<dead_abovedot><Multi_key><f><s>                                                         : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-<Multi_key><dead_abovedot><f><s>                                                         : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-<Multi_key><period><Multi_key><f><s>                                                     : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-#
-#
 # # Orthography
 #
 #   Some of these letters are easier input using groups.
@@ -637,76 +632,6 @@
 #       "ﬄ" UFB04 # LATIN SMALL LIGATURE FFL
 #       "ﬅ" UFB05 # LATIN SMALL LIGATURE LONG S T
 #       "ﬆ" UFB06 # LATIN SMALL LIGATURE ST
-#
-#
-#   Zhuang tone letters
-#
-#   Zhuang tone letters are supported for completeness.
-#   Zhuang tone one is unwritten, according to:
-#   https://omniglot.com/writing/zhuang.htm
-#
-<Multi_key><2><T>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><T><2>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><2><t>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><t><2>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><3><T>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><T><3>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><3><t>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><t><3>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><4><T>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><T><4>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><4><t>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><t><4>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><5><T>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><T><5>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><5><t>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><t><5>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><6><T>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><T><6>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><6><t>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-<Multi_key><t><6>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-#
-#
-#   Deprecated small apostrophe n requires a curly apostrophe live key.
-#
-#   This character is deprecated and its use is strongly discouraged.
-#
-<Multi_key><rightsinglequotemark><N>                                                     : "ʼN" # U02BC U004E MODIFIER LETTER APOSTROPHE, LATIN CAPITAL LETTER N
-<Multi_key><rightsinglequotemark><n>                                                     : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-#
-#
-#   Superscript digraphs are supported when ampersand is added to the
-#   superscript trigger asciicircum, because asciicircum is the multi
-#   key equivalent of the superscript dead key UEFD1.
-#
-<Multi_key><asciicircum><ampersand><A><A>                                                : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
-<Multi_key><asciicircum><ampersand><d><z>                                                : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
-<Multi_key><asciicircum><braceright><ampersand><d><z>                                    : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><braceright><ampersand><d><z>                        : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><d><e><z>                                             : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
-<Multi_key><asciicircum><ampersand><f><e><n><g>                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<Multi_key><asciicircum><ampersand><f><n><g>                                             : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<Multi_key><asciicircum><ampersand><f><g>                                                : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<Multi_key><asciicircum><ampersand><l><s>                                                : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
-<Multi_key><asciicircum><ampersand><l><z>                                                : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
-<Multi_key><asciicircum><ampersand><l><e><z>                                             : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
-<Multi_key><asciicircum><braceright><ampersand><l><e><z>                                 : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><t><c>                                                : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceright><braceright><ampersand><t><c>                        : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><t><s>                                                : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
-<Multi_key><asciicircum><braceright><ampersand><t><s>                                    : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><t><e><c>                                             : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-<Multi_key><asciicircum><ampersand><t><e><s>                                             : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-#
-#
-#   Conflicting Latin abbreviation "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-#   and "ꝯ" UA76F # LATIN SMALL LETTER CON has mixed sequences based on
-#   shape mnemonics. Its casing pair is incompatible with digits-only.
-#
-<Multi_key><9><C>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><9><c>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
-<Multi_key><C><9>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><c><9>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
 #
 #
 #   Latin ligated polygrams for orthographies
@@ -840,6 +765,48 @@
 <Multi_key><z><h>                                                                        : "ʒ" U0292 # LATIN SMALL LETTER EZH
 #
 #
+#   Deprecated small apostrophe n requires a curly apostrophe live key.
+#
+#   This character is deprecated and its use is strongly discouraged.
+#
+<Multi_key><rightsinglequotemark><N>                                                     : "ʼN" # U02BC U004E MODIFIER LETTER APOSTROPHE, LATIN CAPITAL LETTER N
+<Multi_key><rightsinglequotemark><n>                                                     : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
+#
+#
+#   Superscript digraphs are supported when ampersand is added to the
+#   superscript trigger asciicircum, because asciicircum is the multi
+#   key equivalent of the superscript dead key UEFD1.
+#
+<Multi_key><asciicircum><ampersand><A><A>                                                : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
+<Multi_key><asciicircum><ampersand><d><z>                                                : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
+<Multi_key><asciicircum><braceright><ampersand><d><z>                                    : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><braceright><ampersand><d><z>                        : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><d><e><z>                                             : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
+<Multi_key><asciicircum><ampersand><f><e><n><g>                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
+<Multi_key><asciicircum><ampersand><f><n><g>                                             : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
+<Multi_key><asciicircum><ampersand><f><g>                                                : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
+<Multi_key><asciicircum><ampersand><l><s>                                                : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
+<Multi_key><asciicircum><ampersand><l><z>                                                : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
+<Multi_key><asciicircum><ampersand><l><e><z>                                             : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
+<Multi_key><asciicircum><braceright><ampersand><l><e><z>                                 : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><ampersand><t><c>                                                : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><braceright><braceright><ampersand><t><c>                        : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><t><s>                                                : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
+<Multi_key><asciicircum><braceright><ampersand><t><s>                                    : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><ampersand><t><e><c>                                             : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
+<Multi_key><asciicircum><ampersand><t><e><s>                                             : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
+#
+#
+#   Conflicting Latin abbreviation "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
+#   and "ꝯ" UA76F # LATIN SMALL LETTER CON has mixed sequences based on
+#   shape mnemonics. Its casing pair is incompatible with digits-only.
+#
+<Multi_key><9><C>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
+<Multi_key><9><c>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
+<Multi_key><C><9>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
+<Multi_key><c><9>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
+#
+#
 #   Punctuation
 #
 <Multi_key><question><question>                                                          : "¿" U00BF # INVERTED QUESTION MARK
@@ -869,20 +836,27 @@
 <Multi_key><greater><greater><quotedbl>                                                  : "”" U201D # RIGHT DOUBLE QUOTATION MARK
 <Multi_key><comma><comma><quotedbl>                                                      : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
 #
-#   S O sequences are used fo mathematical symbols,
-#   reverse sequences are used for circled letters,
-#   other casing pairs for German eszett as ss:
-<Multi_key><s><S>                                                                        : "§" U00A7 # SECTION SIGN
-<Multi_key><s><exclam>                                                                   : "§" U00A7 # SECTION SIGN
-<Multi_key><S><exclam>                                                                   : "§" U00A7 # SECTION SIGN
-<Multi_key><p><exclam>                                                                   : "¶" U00B6 # PILCROW SIGN
-<Multi_key><P><exclam>                                                                   : "¶" U00B6 # PILCROW SIGN
-<Multi_key><p><bar>                                                                      : "¶" U00B6 # PILCROW SIGN
-<Multi_key><P><bar>                                                                      : "¶" U00B6 # PILCROW SIGN
-<Multi_key><bar><p>                                                                      : "⁋" U204B # REVERSED PILCROW SIGN
-<Multi_key><bar><P>                                                                      : "⁋" U204B # REVERSED PILCROW SIGN
-<Multi_key><bar><colon>                                                                  : "¦" U00A6 # BROKEN BAR
-<Multi_key><colon><bar>                                                                  : "¦" U00A6 # BROKEN BAR
+#
+# # Ellipses and leaders
+#
+#   The common horizontal ellipsis, here for completeness, is on live key.
+#   One dot and 2 dot leaders are supported consistently by this occasion.
+#   For ease of input, space termination is skipped for all of these.
+#   See also "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
+#
+<Multi_key><period><underscore>                                                          : "․" U2024 # ONE DOT LEADER
+<Multi_key><period><period><underscore>                                                  : "‥" U2025 # TWO DOT LEADER
+<Multi_key><period><period><period><underscore>                                          : "…" U2026 # HORIZONTAL ELLIPSIS
+#
+#
+# # Mixed sequences
+#
+#   These are made of both Multi_key and dead keys.
+#
+<dead_abovedot><Multi_key><f><s>                                                         : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><dead_abovedot><f><s>                                                         : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><period><Multi_key><f><s>                                                     : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+#
 #
 #   These are pretty redundant and only conflict with mathematical symbols and
 #   with dead key equivalents, e.g. vertical line above.
@@ -906,17 +880,6 @@
 #   <Multi_key><equal><period>                                                           : "•" U2022 # BULLET
 #
 #
-# # Numero sign
-#
-#   The symbol is used in a number of languages, not French.
-#   <N><o> and <N><O> are supported by en_US.UTF-8/Compose.
-#
-<Multi_key><n><o>                                                                        : "№" U2116 # NUMERO SIGN
-<Multi_key><N><o>                                                                        : "№" U2116 # NUMERO SIGN
-<Multi_key><N><O>                                                                        : "№" U2116 # NUMERO SIGN
-<Multi_key><n><O>                                                                        : "№" U2116 # NUMERO SIGN
-#
-#
 # # Tone bars
 #
 #   These need numbers, that dead_tilde is in synergy with, but dead_tilde is
@@ -938,6 +901,34 @@
 <Multi_key><t>                                                                       <5> : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 #
 #
+# # Zhuang tone letters
+#
+#   Zhuang tone letters are supported for completeness.
+#   Zhuang tone one is unwritten, according to:
+#   https://omniglot.com/writing/zhuang.htm
+#
+<Multi_key><2><T>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><T><2>                                                                        : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><2><t>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><t><2>                                                                        : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><3><T>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><T><3>                                                                        : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><3><t>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><t><3>                                                                        : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><4><T>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><T><4>                                                                        : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><4><t>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><t><4>                                                                        : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><5><T>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><T><5>                                                                        : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><5><t>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><t><5>                                                                        : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><6><T>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><T><6>                                                                        : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><6><t>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+<Multi_key><t><6>                                                                        : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+#
+#
 # # Legal symbols
 #
 #   Order may matter as for COPYRIGHT SIGN vs CARE OF.
@@ -947,7 +938,22 @@
 #   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
 #
 #   Space termination is required for ℆ to prevent conflicts with math symbols.
+#
+#   S O sequences are used fo mathematical symbols,
+#   reverse sequences are used for circled letters,
+#   other casing pairs for German eszett as ss:
 #   
+<Multi_key><s><S>                                                                        : "§" U00A7 # SECTION SIGN
+<Multi_key><s><exclam>                                                                   : "§" U00A7 # SECTION SIGN
+<Multi_key><S><exclam>                                                                   : "§" U00A7 # SECTION SIGN
+<Multi_key><p><exclam>                                                                   : "¶" U00B6 # PILCROW SIGN
+<Multi_key><P><exclam>                                                                   : "¶" U00B6 # PILCROW SIGN
+<Multi_key><p><bar>                                                                      : "¶" U00B6 # PILCROW SIGN
+<Multi_key><P><bar>                                                                      : "¶" U00B6 # PILCROW SIGN
+<Multi_key><bar><p>                                                                      : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><bar><P>                                                                      : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><bar><colon>                                                                  : "¦" U00A6 # BROKEN BAR
+<Multi_key><colon><bar>                                                                  : "¦" U00A6 # BROKEN BAR
 <Multi_key><a><c>                                                                        : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                        : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><S>                                                                        : "⅍" U214D # AKTIESELSKAB
@@ -994,6 +1000,17 @@
 <Multi_key><W><Z>                                                                        : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><z><w>                                                                        : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><Z><W>                                                                        : "🄮" U1F12E # CIRCLED WZ
+#
+#
+# # Numero sign
+#
+#   The symbol is used in a number of languages, not French.
+#   <N><o> and <N><O> are supported by en_US.UTF-8/Compose.
+#
+<Multi_key><n><o>                                                                        : "№" U2116 # NUMERO SIGN
+<Multi_key><N><o>                                                                        : "№" U2116 # NUMERO SIGN
+<Multi_key><N><O>                                                                        : "№" U2116 # NUMERO SIGN
+<Multi_key><n><O>                                                                        : "№" U2116 # NUMERO SIGN
 #
 #
 # # Vulgar fractions
@@ -1717,7 +1734,10 @@
 <Multi_key><S><E><R><P>                                                                  : "⛎" U26CE # OPHIUCHUS
 #
 #
-# # Circle filled by quarters
+# # Circle quadrants
+#
+#
+#   Circle filled by quarters
 #
 #   Extends white and black circles on D06, groups 1..3.
 #
@@ -1733,7 +1753,7 @@
 <Multi_key><4><Q>                                                                        : "●" U25CF # BLACK CIRCLE
 #
 #
-# # Circle with quadrant outline
+#   Circle with quadrant outline
 #
 <Multi_key><0><1><q>                                                                     : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
 <Multi_key><0><1><Q>                                                                     : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
@@ -1758,7 +1778,10 @@
 <Multi_key><parenleft><underscore><parenright>                                           : "❍" U274D # SHADOWED WHITE CIRCLE
 #
 #
-# # Square emoji
+# # Emoji
+#
+#
+#   Square emoji
 #
 #   The only cross-platform supportable black and white square emoji,
 #   coming in four sizes, cannot be supported all on C01.
@@ -1773,13 +1796,13 @@
 <Multi_key><4>                                                              <underscore> : "⬜" U2B1C # WHITE LARGE SQUARE emoji
 #
 #
-# # Smileys emoji
+#   Smileys emoji
 #
 <Multi_key><colon><parenleft>                                                            : "☹" U2639 # WHITE FROWNING FACE emoji with skin tone support
 <Multi_key><colon><parenright>                                                           : "☺" U263A # WHITE SMILING FACE emoji with skin tone support, 25th-ranking
 #
 #
-# # Heart emoji
+#   Heart emoji
 #
 #   en_US.UTF-8/Compose supports only the least frequent BMP heart emoji.
 #   The most frequent emoji used in France is given the traditional sequence.
@@ -1788,7 +1811,7 @@
 <Multi_key><less><3>                                                                     : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 #
 #
-# # Scissors
+#   Scissors
 #
 #   U2702 BLACK SCISSORS emoji is also on B02 in group 2 of * on X.
 #
@@ -1805,27 +1828,29 @@
 <Multi_key><8><X><L>                                                                     : "✃" U2703 # LOWER BLADE SCISSORS
 #
 #
-# # Symbol for power switch
+# # Technical symbols
+#
+#
+#   Diameter sign
+#
+#   Also on live key C03 (D), level 6, and in group 1 of ( on D key C03; also
+#   in the circumflex dead key with case insensitive D as a base letter.
+#   See #*# CIRCUMFLEX
+#
+#   Despite not being a math symbol, ⌀ U2300 DIAMETER SIGN is space terminated,
+#   like ∅ U2205 EMPTY SET. so as to prevent a conflict with "ℴ" U2134.
+#   See # # Mathematical symbols in Miscellaneous Technical block U2300
+#
+#   In group 1 of (                                                                      : "⌀" U2300 # DIAMETER SIGN
+#   See #*# CIRCUMFLEX                                                                   : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><o><slash>                                                            <space> : "⌀" U2300 # DIAMETER SIGN
+#
+#
+#   Power switch
 #
 #   This is the unambiguous, widely used symbol carrying both ON and OFF semantics.
 #
 <Multi_key><O><I>                                                                        : "⏻" U23FB # POWER SYMBOL
-#
-#
-# # Non-printing characters
-#
-#
-#   Bidirectional layout controls
-#
-<Multi_key><space><greater>                                                      <space> : "‎" U200E # LEFT-TO-RIGHT MARK
-<Multi_key><nobreakspace><greater>                                               <space> : "‎" U200E # LEFT-TO-RIGHT MARK
-<Multi_key><space><less>                                                         <space> : "‏" U200F # RIGHT-TO-LEFT MARK
-<Multi_key><nobreakspace><less>                                                  <space> : "‏" U200F # RIGHT-TO-LEFT MARK
-#
-#
-# # Documentation symbols
-#
-#   Some of these composition sequences are case sensitive.
 #
 #
 #   Symbol for SPACE
@@ -1860,6 +1885,8 @@
 #
 #   Symbols for Enter and Return key
 #
+#   Case sensitive.
+#
 <Multi_key><e><n><t>                                                                     : "⌤" U2324 # UP ARROWHEAD BETWEEN TWO HORIZONTAL BARS
 <Multi_key><E><N><T>                                                                     : "⎆" U2386 # ENTER SYMBOL
 <Multi_key><r><e><t>                                                                     : "↵" U21B5 # DOWNWARDS ARROW WITH CORNER LEFTWARDS
@@ -1869,6 +1896,8 @@
 #
 #
 #   Symbol for Tab key
+#
+#   Case sensitive.
 #
 <Multi_key><t><a><b>                                                                     : "↹" U21B9 # LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR, tab with shift tab
 <Multi_key><T><A><B>                                                                     : "⭾" U2B7E # HORIZONTAL TAB KEY
@@ -1934,31 +1963,19 @@
 <Multi_key><K><U>                                                                        : "⏶" U23F6 # BLACK MEDIUM UP-POINTING TRIANGLE
 #
 #
-# # Ellipses and leaders
+# # Bidirectional layout controls
 #
-#   The common horizontal ellipsis, here for completeness, is on live key.
-#   One dot and 2 dot leaders are supported consistently by this occasion.
-#   For ease of input, space termination is skipped for all of these.
-#   See also "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
+#   These are confusable with math symbols.
 #
-<Multi_key><period><underscore>                                                          : "․" U2024 # ONE DOT LEADER
-<Multi_key><period><period><underscore>                                                  : "‥" U2025 # TWO DOT LEADER
-<Multi_key><period><period><period><underscore>                                          : "…" U2026 # HORIZONTAL ELLIPSIS
+#   Also in group 10 of < and >.
+#
+<Multi_key><space><greater>                                                      <space> : "‎" U200E # LEFT-TO-RIGHT MARK
+<Multi_key><nobreakspace><greater>                                               <space> : "‎" U200E # LEFT-TO-RIGHT MARK
+<Multi_key><space><less>                                                         <space> : "‏" U200F # RIGHT-TO-LEFT MARK
+<Multi_key><nobreakspace><less>                                                  <space> : "‏" U200F # RIGHT-TO-LEFT MARK
 #
 #
-# # Diameter sign
-#
-#   Also on live key C03 (D), level 6, and in group 1 of ( on D key C03; also
-#   in the circumflex dead key with case insensitive D as a base letter.
-#   See #*# CIRCUMFLEX
-#
-#   Despite not being a math symbol, ⌀ U2300 DIAMETER SIGN is space terminated,
-#   like ∅ U2205 EMPTY SET. so as to prevent a conflict with "ℴ" U2134.
-#   See # # Mathematical symbols in Miscellaneous Technical block U2300
-#
-#   In group 1 of (                                                                      : "⌀" U2300 # DIAMETER SIGN
-#   See #*# CIRCUMFLEX                                                                   : "⌀" U2300 # DIAMETER SIGN
-<Multi_key><o><slash>                                                            <space> : "⌀" U2300 # DIAMETER SIGN
+#   START_MATH
 #
 #
 ### Mathematical symbols by input composition
@@ -2063,9 +2080,6 @@
 #   work the other way around: letters first, slash last, space to terminate,
 #   except when required otherwise for disambiguation in partial negation, as
 #   in ≇ U2247 vs "≆" U2246. E.g. "∄" U2204, "∅" U2205, "∉" U2209.
-#
-#
-#   START_MATH
 #
 #
 # # Less or equal, greater or equal
