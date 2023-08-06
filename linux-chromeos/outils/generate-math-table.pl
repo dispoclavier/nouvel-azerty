@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-06T0542+0200
+# 2023-08-06T1933+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based
@@ -35,7 +35,12 @@ my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
 print( "Opened file $file_path.\n" );
 
-my $output_path = 'math-table-partial.html';
+my $output_directory = 'multikey-tables';
+unless ( -d $output_directory ) {
+	mkdir $output_directory;
+}
+my $output_file_name = 'math-table-partial.html';
+my $output_path      = "$output_directory/$output_file_name";
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
@@ -103,7 +108,7 @@ while ( my $line = <INPUT> ) {
 				$line    =~ m/^.+ : +"(.+?)"/u;
 				$str     = $1;
 				$cp      = ord( $str );
-				$cp      = sprintf( "%X", $cp );
+				$cp      = sprintf( "%X", $cp ); # To hex.
 				$cp      =~ s/^(..)$/00$1/;
 				$cp      =~ s/^(...)$/0$1/;
 				$descrip = '';
@@ -145,8 +150,8 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 				
-				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td>U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT "$line";
 			}
 		}
