@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
-# 2023-08-06T0044+0200
+# 2023-08-06T1934+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -40,7 +40,7 @@ my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
 print( "Opened file $file_path.\n" );
 
-my $output_directory = 'tables';
+my $output_directory = 'deadkey-tables';
 unless ( -d $output_directory ) {
 	mkdir $output_directory;
 }
@@ -238,7 +238,7 @@ while ( my $line = <INPUT> ) {
 				$anchor  = '';
 				until ( $str eq '' ) {
 					$cp      = ord( $str );
-					$cp      = sprintf( "%X", $cp );
+					$cp      = sprintf( "%X", $cp ); # To hex.
 					$cp      =~ s/^(..)$/00$1/;
 					$cp      =~ s/^(...)$/0$1/;
 					$descrip = '';
