@@ -498,8 +498,9 @@
 #
 # # Phone key emoji
 #
-#   These require both the emoji style variant selector UFE0F (although Twitter displays
-#   these keycaps as emoji even in its absence), and U20E3  ⃣ COMBINING ENCLOSING KEYCAP.
+#   These require both the emoji style variation selector UFE0F (while Twitter
+#   displays these keycaps as emoji even in its absence) and U20E3  ⃣ COMBINING
+#   ENCLOSING KEYCAP.
 #   https://www.unicode.org/emoji/charts/full-emoji-list.html#keycap
 #
 <UEFC0> : "0️⃣"  # U0030 UFE0F U20E3
@@ -1817,14 +1818,14 @@
 #   Heart emoji
 #
 #   en_US.UTF-8/Compose supports only the least frequent BMP heart emoji, which
-#   is part of the suit series, U2660..U2667: "♥️" U2665 BLACK HEART SUIT, while
+#   is part of the suit series, U2660..U2667: "♥" U2665 BLACK HEART SUIT, while
 #   "❤" U2764 HEAVY BLACK HEART is the most used emoji in France. Consistently,
 #   this is given the traditional sequence. The other heart is disambiguated by
 #   leading space, like math symbols.
 #
 <Multi_key><less><3>                                                                     : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-<Multi_key><space><less><3>                                                              : "♥️" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><nobreakspace><less><3>                                                       : "♥️" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<Multi_key><space><less><3>                                                              : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<Multi_key><nobreakspace><less><3>                                                       : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 #
 #
 #   Scissors
