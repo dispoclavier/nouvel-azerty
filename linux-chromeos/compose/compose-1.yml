@@ -969,6 +969,7 @@
 <Multi_key><A><C>                                                                        : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><S>                                                                        : "⅍" U214D # AKTIESELSKAB
 <Multi_key><a><s>                                                                        : "℁" U2101 # ADDRESSED TO THE SUBJECT
+<Multi_key><o><b><y>                                                                     : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><b><y>                                                                     : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><B><Y>                                                                     : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><o><C><C>                                                                     : "🅭" U1F16D # CIRCLED CC
@@ -1824,18 +1825,27 @@
 #
 #   Scissors
 #
-#   U2702 BLACK SCISSORS emoji is also on B02 in group 2 of * on X.
+#   U2702 BLACK SCISSORS emoji is also in group 2 of * on X.
 #
+<Multi_key><8><x><space>                                                                 : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
+<Multi_key><8><X><space>                                                                 : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
 <Multi_key><8><x><p>                                                                     : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><8><x><o>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
-<Multi_key><8><x><s>                                                                     : "✀" U2700 # BLACK SAFETY SCISSORS
-<Multi_key><8><x><u>                                                                     : "✁" U2701 # UPPER BLADE SCISSORS
-<Multi_key><8><x><l>                                                                     : "✃" U2703 # LOWER BLADE SCISSORS
-#
 <Multi_key><8><X><P>                                                                     : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
+<Multi_key><8><x><a>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
+<Multi_key><8><X><A>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
+<Multi_key><8><x><c>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
+<Multi_key><8><X><C>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
+<Multi_key><8><x><o>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
 <Multi_key><8><X><O>                                                                     : "✄" U2704 # WHITE SCISSORS, outline scissors
+<Multi_key><8><x><s>                                                                     : "✀" U2700 # BLACK SAFETY SCISSORS
 <Multi_key><8><X><S>                                                                     : "✀" U2700 # BLACK SAFETY SCISSORS
+<Multi_key><8><x><h>                                                                     : "✁" U2701 # UPPER BLADE SCISSORS
+<Multi_key><8><X><H>                                                                     : "✁" U2701 # UPPER BLADE SCISSORS
+<Multi_key><8><x><u>                                                                     : "✁" U2701 # UPPER BLADE SCISSORS
 <Multi_key><8><X><U>                                                                     : "✁" U2701 # UPPER BLADE SCISSORS
+<Multi_key><8><x><b>                                                                     : "✃" U2703 # LOWER BLADE SCISSORS
+<Multi_key><8><X><B>                                                                     : "✃" U2703 # LOWER BLADE SCISSORS
+<Multi_key><8><x><l>                                                                     : "✃" U2703 # LOWER BLADE SCISSORS
 <Multi_key><8><X><L>                                                                     : "✃" U2703 # LOWER BLADE SCISSORS
 #
 #
