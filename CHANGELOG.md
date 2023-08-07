@@ -5,6 +5,7 @@
 * Symboles mathématiques : Corriger les séquences de composition de "⋶" U22F6, "⋷" U22F7, "⋽" U22FD, "⋾" U22FE. (compose-1.yml [4bd82a7](https://github.com/dispoclavier/nouvel-azerty/commit/4bd82a7cba326cca12e43042fb9977488d522d00))
 * Séquences de composition : Résoudre les conflits de "Ƨ" U01A7 à "ƅ" U0185 avec "˩" U02E9 à "˥" U02E5. Compléter les séquences de "˩" U02E9 à "˥" U02E5. Résoudre le conflit de "🅭" U1F16D avec "©" U00A9. (compose-1.yml [57c4a09](https://github.com/dispoclavier/nouvel-azerty/commit/57c4a09e0775f80f8c377131c1d3e928e27808a4))
 * Séquences de composition : Compléter les séquences de "🅯" U1F16F. Compléter les séquences de "✀" U2700 à "✄" U2704. (compose-1.yml [4dab06f](https://github.com/dispoclavier/nouvel-azerty/commit/4dab06f19342b00324d8a92aa1fba4348e31169c))
+* Séquences de composition : Corriger la séquence de "♥️" U2665. (compose-1.yml [b9922dd](https://github.com/dispoclavier/nouvel-azerty/commit/b9922dd39253485c707e4047eb088987e505fea4))
 
 ## 1.0.4 (2023-07-30)
 
