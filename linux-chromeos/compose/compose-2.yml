@@ -5829,10 +5829,10 @@
 <Multi_key><numbersign>                                                        <percent> : "‰" U2030 # PER MILLE SIGN
 <UEFD0><UEFD0>                                                                 <percent> : "‱" U2031 # PER TEN THOUSAND SIGN, permyriad
 <Multi_key><numbersign><numbersign>                                            <percent> : "‱" U2031 # PER TEN THOUSAND SIGN, permyriad
-<UEFD0><3>                                                                     <percent> : "⚡️" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
-<Multi_key><numbersign><3>                                                     <percent> : "⚡️" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
-<UEFD0><UEFD0><UEFD0>                                                          <percent> : "⚡️" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
-<Multi_key><numbersign><numbersign><numbersign>                                <percent> : "⚡️" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
+<UEFD0><3>                                                                     <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
+<Multi_key><numbersign><3>                                                     <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
+<UEFD0><UEFD0><UEFD0>                                                          <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
+<Multi_key><numbersign><numbersign><numbersign>                                <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
 <UEFD0><4>                                                                     <percent> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><numbersign><4>                                                     <percent> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                   <percent> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
@@ -6453,8 +6453,8 @@
 #
 <UEFD0>                                                                          <slash> : "∕" U2215 # DIVISION SLASH
 <Multi_key><numbersign>                                                          <slash> : "∕" U2215 # DIVISION SLASH
-<UEFD0><UEFD0>                                                                   <slash> : "♥️" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (consistent mapping)
-<Multi_key><numbersign><numbersign>                                              <slash> : "♥️" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (consistent mapping)
+<UEFD0><UEFD0>                                                                   <slash> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (consistent mapping)
+<Multi_key><numbersign><numbersign>                                              <slash> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (consistent mapping)
 <UEFD0><3>                                                                       <slash> : "♦" U2666 # BLACK DIAMOND SUIT emoji
 <Multi_key><numbersign><3>                                                       <slash> : "♦" U2666 # BLACK DIAMOND SUIT emoji
 <UEFD0><UEFD0><UEFD0>                                                            <slash> : "♦" U2666 # BLACK DIAMOND SUIT emoji
@@ -6505,8 +6505,8 @@
 <Multi_key><numbersign><8>                                                    <asterisk> : "✳" U2733 # EIGHT SPOKED ASTERISK emoji
 <UEFD0><9>                                                                    <asterisk> : "✨" U2728 # SPARKLES emoji
 <Multi_key><numbersign><9>                                                    <asterisk> : "✨" U2728 # SPARKLES emoji
-<UEFD0><0>                                                                    <asterisk> : "✴️" U2734 # EIGHT POINTED BLACK STAR emoji
-<Multi_key><numbersign><0>                                                    <asterisk> : "✴️" U2734 # EIGHT POINTED BLACK STAR emoji
+<UEFD0><0>                                                                    <asterisk> : "✴" U2734 # EIGHT POINTED BLACK STAR emoji
+<Multi_key><numbersign><0>                                                    <asterisk> : "✴" U2734 # EIGHT POINTED BLACK STAR emoji
 <UEFD0><1>                                                                    <asterisk> : "❎" U274E # NEGATIVE SQUARED CROSS MARK emoji, cross mark button
 <Multi_key><numbersign><1>                                                    <asterisk> : "❎" U274E # NEGATIVE SQUARED CROSS MARK emoji, cross mark button
 <UEFD0><2>                                                                    <asterisk> : "✂" U2702 # BLACK SCISSORS emoji
@@ -6679,10 +6679,10 @@
 <Multi_key><numbersign>                                                          <comma> : "‧" U2027 # HYPHENATION POINT
 <UEFD0><UEFD0>                                                                   <comma> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
 <Multi_key><numbersign><numbersign>                                              <comma> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
-<UEFD0><3>                                                                       <comma> : "♥️" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
-<Multi_key><numbersign><3>                                                       <comma> : "♥️" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
-<UEFD0><UEFD0><UEFD0>                                                            <comma> : "♥️" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
-<Multi_key><numbersign><numbersign><numbersign>                                  <comma> : "♥️" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
+<UEFD0><3>                                                                       <comma> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
+<Multi_key><numbersign><3>                                                       <comma> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
+<UEFD0><UEFD0><UEFD0>                                                            <comma> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
+<Multi_key><numbersign><numbersign><numbersign>                                  <comma> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking (mnemonic mapping)
 <UEFD0><4>                                                                       <comma> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
 <Multi_key><numbersign><4>                                                       <comma> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                     <comma> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
