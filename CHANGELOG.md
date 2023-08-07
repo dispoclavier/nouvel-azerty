@@ -6,7 +6,7 @@
 * Séquences de composition : Résoudre les conflits de "Ƨ" U01A7 à "ƅ" U0185 avec "˩" U02E9 à "˥" U02E5. Compléter les séquences de "˩" U02E9 à "˥" U02E5. Résoudre le conflit de "🅭" U1F16D avec "©" U00A9. (compose-1.yml [57c4a09](https://github.com/dispoclavier/nouvel-azerty/commit/57c4a09e0775f80f8c377131c1d3e928e27808a4))
 * Séquences de composition : Compléter les séquences de "🅯" U1F16F. Compléter les séquences de "✀" U2700 à "✄" U2704. (compose-1.yml [4dab06f](https://github.com/dispoclavier/nouvel-azerty/commit/4dab06f19342b00324d8a92aa1fba4348e31169c))
 * Séquences de composition : Corriger la séquence de "♥️" U2665. (compose-1.yml [b9922dd](https://github.com/dispoclavier/nouvel-azerty/commit/b9922dd39253485c707e4047eb088987e505fea4))
-* Séquences de composition : Ôter le sélecteur de variante style émoji de la sortie de "♥" U2665, "⚡" U26A1 et "✴" U2734. (compose-1.yml [13eefac](https://github.com/dispoclavier/nouvel-azerty/commit/13eefacd48cf9e73fa36cde0d6e64ce5e32ff667), compose-2.yml [5c9eec9](https://github.com/dispoclavier/nouvel-azerty/commit/5c9eec960f100518f62b3c62e2a094473719fae1))
+* Séquences de composition : Ôter le sélecteur de variante style émoji de la sortie de "♥" U2665, "⚡" U26A1 et "✴" U2734. (compose-1.yml [13eefac](https://github.com/dispoclavier/nouvel-azerty/commit/13eefacd48cf9e73fa36cde0d6e64ce5e32ff667), compose-2.yml [5c9eec9](https://github.com/dispoclavier/nouvel-azerty/commit/5c9eec960f100518f62b3c62e2a094473719fae1), [48372c5](https://github.com/dispoclavier/nouvel-azerty/commit/48372c506def69f974704d75084bcbdf6f3163bb))
 
 ## 1.0.4 (2023-07-30)
 
