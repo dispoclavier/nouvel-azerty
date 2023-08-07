@@ -1,18 +1,18 @@
 #!/usr/bin/perl
 # 2023-08-06T1935+0200
-# 2023-08-07T0527+0200
+# 2023-08-07T1723+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
 #
-# The input requires start and end tags. Section headings switch files.
+# The input requires start and end tags. Subsection headings switch files.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
 # Descriptors, which means “edited French character names,” are prioritized.
 # The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
-# Linux and ChromeOS. Due to incompleteness (Unicode version 10.0.0), another
-# list is also used, `ListeNoms.txt` from Patrick Andries and collaborators.
+# Linux and ChromeOS. At this point it is incomplete as it is based on v10.
+# Tooltips for characters added to Unicode after v10 use `ListeNoms.txt`.
 #
 # The output is designed for use in WordPress.
 #
@@ -91,7 +91,7 @@ while ( my $line = <INPUT> ) {
 				++$output_file_index;
 		    open( OUTPUT, '>', $output_path ) or die $!;
 		    print( "Opened file $output_path.\n" );
-				print( "Processing dead keys from $file_path to $output_path.\n" );
+				print( "Processing multi-key sequences from $file_path to $output_path.\n" );
 				print OUTPUT $start_tags;
 				print OUTPUT "<!-- $1 -->\n";
 			}
