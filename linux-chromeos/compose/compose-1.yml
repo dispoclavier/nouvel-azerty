@@ -2191,7 +2191,7 @@
 #
 #   Also in group 3 of bar, and in diaeresis of bar or slash, see #*# DIAERESIS
 #
-<Multi_key><bar><2>                                                              <space> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><2><bar>                                                              <space> : "‖" U2016 # DOUBLE VERTICAL LINE
 #
 #
 # # Primes
@@ -2308,9 +2308,9 @@
 <Multi_key><ampersand><o><greater>                                               <space> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><less>                                                  <space> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><backslash>                                    <space> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
-<Multi_key><ampersand><period><3>                                                <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
+<Multi_key><ampersand><3><period>                                                <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><period><period><period>                                   <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
-<Multi_key><ampersand><period><4>                                                <space> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
+<Multi_key><ampersand><4><period>                                                <space> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><period><period><period><period>                           <space> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><less><minus><greater>                                     <space> : "⃡" U20E1 # COMBINING LEFT RIGHT ARROW ABOVE
 <Multi_key><ampersand><backslash>                                                <space> : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
@@ -2507,15 +2507,15 @@
 <Multi_key><minus><greater><less><minus>                                         <space> : "⇄" U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
 <Multi_key><less><bar><bar><greater>                                             <space> : "⇅" U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
 <Multi_key><less><minus><minus><greater>                                         <space> : "⇆" U21C6 # LEFTWARDS ARROW OVER RIGHTWARDS ARROW
-<Multi_key><less><minus><2>                                                      <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
+<Multi_key><2><less><minus>                                                      <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
 <Multi_key><space><less><minus><less><minus>                                     <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
 <Multi_key><nobreakspace><less><minus><less><minus>                              <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
-<Multi_key><less><bar><2>                                                        <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
+<Multi_key><2><less><bar>                                                        <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
 <Multi_key><less><bar><less><bar>                                                <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
-<Multi_key><minus><greater><2>                                                   <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><2><minus><greater>                                                   <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><space><minus><greater><minus><greater>                               <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><nobreakspace><minus><greater><minus><greater>                        <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><bar><greater><2>                                                     <space> : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
+<Multi_key><2><bar><greater>                                                     <space> : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
 <Multi_key><bar><greater><bar><greater>                                          <space> : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
 <Multi_key><apostrophe><minus><minus><apostrophe>                                <space> : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><minus><rightsinglequotemark>            <space> : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
@@ -2543,7 +2543,7 @@
 <Multi_key><minus><greater><bar><underscore>                                     <space> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
 <Multi_key><o><minus><minus><greater>                                            <space> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><bar><greater><less><bar>                                             <space> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
-<Multi_key><minus><greater><3>                                                   <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><3><minus><greater>                                                   <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><minus><greater><minus><greater><minus><greater>                      <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><less><minus><bar><minus>                                             <space> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><minus><bar><minus><greater>                                          <space> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
@@ -2608,9 +2608,12 @@
 <Multi_key><o>                                                                   <space> : "∘" U2218 # RING OPERATOR
 <Multi_key><space><period><period>                                               <space> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><nobreakspace><period><period>                                        <space> : "∙" U2219 # BULLET OPERATOR
-<Multi_key><v><2>                                                                <space> : "√" U221A # SQUARE ROOT
-<Multi_key><v><3>                                                                <space> : "∛" U221B # CUBE ROOT
-<Multi_key><v><4>                                                                <space> : "∜" U221C # FOURTH ROOT
+#   In group 2 of }                                                                      : "√" U221A # SQUARE ROOT
+<Multi_key><2><v>                                                                <space> : "√" U221A # SQUARE ROOT
+#   In group 3 of }                                                                      : "∛" U221B # CUBE ROOT
+<Multi_key><3><v>                                                                <space> : "∛" U221B # CUBE ROOT
+#   In group 4 of }                                                                      : "∜" U221C # FOURTH ROOT
+<Multi_key><4><v>                                                                <space> : "∜" U221C # FOURTH ROOT
 <Multi_key><space><8>                                                            <space> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><8>                                                     <space> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><8>                                                                   <space> : "∞" U221E # INFINITY
@@ -2635,12 +2638,17 @@
 <Multi_key><v>                                                                   <space> : "∨" U2228 # LOGICAL OR
 <Multi_key><n>                                                                   <space> : "∩" U2229 # INTERSECTION
 <Multi_key><u>                                                                   <space> : "∪" U222A # UNION
+#   In group 5 of '                                                                      : "∫" U222B # INTEGRAL
 <Multi_key><s>                                                                   <space> : "∫" U222B # INTEGRAL
-<Multi_key><s><2>                                                                <space> : "∬" U222C # DOUBLE INTEGRAL
-<Multi_key><s><3>                                                                <space> : "∭" U222D # TRIPLE INTEGRAL
+#   In group 6 of '                                                                      : "∬" U222C # DOUBLE INTEGRAL
+<Multi_key><2><s>                                                                <space> : "∬" U222C # DOUBLE INTEGRAL
+#   In group 7 of '                                                                      : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><3><s>                                                                <space> : "∭" U222D # TRIPLE INTEGRAL
+#   See #*# RING&CURRENCY                                                                : "∮" U222E # CONTOUR INTEGRAL
+#   See # # RING_ABOVE&GROUP4                                                            : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><s><o>                                                                <space> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><s><2><o>                                                             <space> : "∯" U222F # SURFACE INTEGRAL
-<Multi_key><s><3><o>                                                             <space> : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><2><s><o>                                                             <space> : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><3><s><o>                                                             <space> : "∰" U2230 # VOLUME INTEGRAL
 <Multi_key><s><greater>                                                          <space> : "∱" U2231 # CLOCKWISE INTEGRAL
 <Multi_key><s><o><greater>                                                       <space> : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
 <Multi_key><s><o><less>                                                          <space> : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
@@ -2892,11 +2900,11 @@
 <Multi_key><a><parenleft><parenright>                                            <space> : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><v><parenright><parenleft>                                         <space> : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><v><parenleft><parenright>                                         <space> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><c><2>                                                                <space> : "⋐" U22D0 # DOUBLE SUBSET
-<Multi_key><b><2>                                                                <space> : "⋑" U22D1 # DOUBLE SUPERSET
-<Multi_key><c><c><2>                                                             <space> : "⋑" U22D1 # DOUBLE SUPERSET
-<Multi_key><n><2>                                                                <space> : "⋒" U22D2 # DOUBLE INTERSECTION
-<Multi_key><u><2>                                                                <space> : "⋓" U22D3 # DOUBLE UNION
+<Multi_key><2><c>                                                                <space> : "⋐" U22D0 # DOUBLE SUBSET
+<Multi_key><2><b>                                                                <space> : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><2><c><c>                                                             <space> : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><2><n>                                                                <space> : "⋒" U22D2 # DOUBLE INTERSECTION
+<Multi_key><2><u>                                                                <space> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><n><bar>                                                              <space> : "⋔" U22D4 # PITCHFORK
 <Multi_key><space><equal><bar><bar>                                              <space> : "⋕" U22D5 # EQUAL AND PARALLEL TO
 <Multi_key><nobreakspace><equal><bar><bar>                                       <space> : "⋕" U22D5 # EQUAL AND PARALLEL TO
@@ -3162,16 +3170,22 @@
 #
 #   In group 1 of {                                                                      : "★" U2605 # BLACK STAR
 <Multi_key><space><space><asterisk><numbersign>                                  <space> : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><space><asterisk><numbersign>                           <space> : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                    <space> : "★" U2605 # BLACK STAR
 #   In group 1 of }                                                                      : "☆" U2606 # WHITE STAR
 <Multi_key><space><space><asterisk>                                              <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><space><asterisk>                                       <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><asterisk>                                <space> : "☆" U2606 # WHITE STAR
 #   In group 4 of )                                                                      : "♀" U2640 # FEMALE SIGN
 <Multi_key><space><o><plus>                                                      <space> : "♀" U2640 # FEMALE SIGN
+<Multi_key><nobreakspace><o><plus>                                               <space> : "♀" U2640 # FEMALE SIGN
 #   In group 4 of |                                                                      : "♂" U2642 # MALE SIGN
 <Multi_key><space><o><minus><greater>                                            <space> : "♂" U2642 # MALE SIGN
+<Multi_key><nobreakspace><o><minus><greater>                                     <space> : "♂" U2642 # MALE SIGN
 #   In group 5 of /                                                                      : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><space><less><3><minus><numbersign>                                   <space> : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><less><8><numbersign>                                                 <space> : "♠" U2660 # BLACK SPADE SUIT
 #   See # # CIRCUMFLEX&GROUP2 on /                                                       : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><space><space><less><3>                                               <space> : "♡" U2661 # WHITE HEART SUIT
+<Multi_key><8><greater>                                                          <space> : "♡" U2661 # WHITE HEART SUIT
 #   See # # CIRCUMFLEX&GROUP3 on /                                                       : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><space><space><less><greater>                                         <space> : "♢" U2662 # WHITE DIAMOND SUIT
 #   In group 4 of /                                                                      : "♣" U2663 # BLACK CLUB SUIT
@@ -3193,9 +3207,9 @@
 #
 <Multi_key><bar><slash><underscore>                                              <space> : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
 #   The inner triangle of ⟁ U27C1 WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE may erroneously look like a small circle.
-<Multi_key><slash><backslash><underscore><2>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
-<Multi_key><backslash><slash><underscore><2>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
-<Multi_key><slash><underscore><backslash><2>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><2><slash><backslash><underscore>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><2><backslash><slash><underscore>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><2><slash><underscore><backslash>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><backslash><underscore><o>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><backslash><slash><underscore><o>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                     <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
@@ -3517,7 +3531,7 @@
 #   https://www.unicode.org/charts/PDF/U2980.pdf
 #   https://www.unicode.org/charts/nameslist/n_2980.html
 #
-<Multi_key><bar><3>                                                              <space> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><3><bar>                                                              <space> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><z><period>                                                           <space> : "⦁" U2981 # Z NOTATION SPOT
 <Multi_key><z><colon>                                                            <space> : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><braceleft><braceleft>                                                <space> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
@@ -3618,10 +3632,10 @@
 <Multi_key><bracketleft><backslash><bracketright>                                <space> : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
 <Multi_key><bracketleft><asterisk><bracketright>                                 <space> : "⧆" U29C6 # SQUARED ASTERISK
 <Multi_key><bracketleft><o><bracketright>                                        <space> : "⧇" U29C7 # SQUARED SMALL CIRCLE
-<Multi_key><bracketleft><bracketright><2>                                        <space> : "⧈" U29C8 # SQUARED SQUARE
-<Multi_key><bracketleft><bracketright><3>                                        <space> : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><space><bracketleft><bracketright><2>                                 <space> : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><nobreakspace><bracketleft><bracketright><2>                          <space> : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><2><bracketleft><bracketright>                                        <space> : "⧈" U29C8 # SQUARED SQUARE
+<Multi_key><3><bracketleft><bracketright>                                        <space> : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><2><space><bracketleft><bracketright>                                 <space> : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><2><nobreakspace><bracketleft><bracketright>                          <space> : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><period><slash><backslash><underscore>                                <space> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><period><backslash><slash><underscore>                                <space> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><slash><backslash><underscore><underscore>                            <space> : "⧋" U29CB # TRIANGLE WITH UNDERBAR
@@ -3717,7 +3731,7 @@
 <Multi_key><nobreakspace><space><backslash>                                      <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><backslash>                               <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><plus><plus>                                                          <space> : "⧺" U29FA # DOUBLE PLUS
-<Multi_key><plus><3>                                                             <space> : "⧻" U29FB # TRIPLE PLUS
+<Multi_key><3><plus>                                                             <space> : "⧻" U29FB # TRIPLE PLUS
 <Multi_key><plus><plus><plus>                                                    <space> : "⧻" U29FB # TRIPLE PLUS
 <Multi_key><bracketleft><less><parenleft>                                        <space> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
 <Multi_key><bracketleft><less><parenright><parenleft>                            <space> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
@@ -3758,7 +3772,7 @@
 <Multi_key><S><o>                                                                <space> : "⨊" U2A0A # MODULO TWO SUM
 <Multi_key><o><S>                                                                <space> : "⨊" U2A0A # MODULO TWO SUM
 <Multi_key><S><s>                                                                <space> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
-<Multi_key><s><4>                                                                <space> : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key><4><s>                                                                <space> : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key><s><minus>                                                            <space> : "⨍" U2A0D # FINITE PART INTEGRAL
 <Multi_key><s><equal>                                                            <space> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
 <Multi_key><s><minus><minus>                                                     <space> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
@@ -3864,10 +3878,10 @@
 <Multi_key><space><minus><minus><u>                                              <space> : "⩌" U2A4C # CLOSED UNION WITH SERIFS
 <Multi_key><nobreakspace><minus><minus><u>                                       <space> : "⩌" U2A4C # CLOSED UNION WITH SERIFS
 <Multi_key><n><minus><minus>                                                     <space> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
-<Multi_key><n><bracketleft><2>                                                   <space> : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
-<Multi_key><n><bracketright><2>                                                  <space> : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
-<Multi_key><u><bracketleft><2>                                                   <space> : "⩏" U2A4F # DOUBLE SQUARE UNION
-<Multi_key><u><bracketright><2>                                                  <space> : "⩏" U2A4F # DOUBLE SQUARE UNION
+<Multi_key><2><n><bracketleft>                                                   <space> : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
+<Multi_key><2><n><bracketright>                                                  <space> : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
+<Multi_key><2><u><bracketleft>                                                   <space> : "⩏" U2A4F # DOUBLE SQUARE UNION
+<Multi_key><2><u><bracketright>                                                  <space> : "⩏" U2A4F # DOUBLE SQUARE UNION
 <Multi_key><space><minus><minus><u><numbersign>                                  <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
 <Multi_key><nobreakspace><minus><minus><u><numbersign>                           <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
 <Multi_key><space><minus><minus><u><numbersign><percent>                         <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
@@ -3878,11 +3892,11 @@
 <Multi_key><nobreakspace><period><v><v>                                          <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><space><period><v>                                                    <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><nobreakspace><period><v>                                             <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><A><2>                                                                <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
-<Multi_key><a><2>                                                                <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
-<Multi_key><V><V><2>                                                             <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
-<Multi_key><v><v><2>                                                             <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
-<Multi_key><V><2>                                                                <space> : "⩔" U2A54 # DOUBLE LOGICAL OR
+<Multi_key><2><A>                                                                <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
+<Multi_key><2><a>                                                                <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
+<Multi_key><2><V><V>                                                             <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
+<Multi_key><2><v><v>                                                             <space> : "⩓" U2A53 # DOUBLE LOGICAL AND
+<Multi_key><2><V>                                                                <space> : "⩔" U2A54 # DOUBLE LOGICAL OR
 #   This set of intersecting operators is smaller than "⨇" U2A07 TWO LOGICAL AND OPERATOR, "⨈" U2A08 TWO LOGICAL OR OPERATOR.
 <Multi_key><w><w>                                                                <space> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><space><a><a>                                                         <space> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
@@ -3991,12 +4005,10 @@
 <Multi_key><asciitilde><backslash><less><equal>                                  <space> : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><greater><equal>                                          <space> : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><backslash><greater><equal>                               <space> : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
-<Multi_key><space><less><2>                                                      <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
-<Multi_key><nobreakspace><less><2>                                               <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
-<Multi_key><space><greater><2>                                                   <space> : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
-<Multi_key><nobreakspace><greater><2>                                            <space> : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
-<Multi_key><space><less><2><minus>                                               <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><less><2><minus>                                        <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><2><less>                                                             <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
+<Multi_key><2><greater>                                                          <space> : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
+<Multi_key><space><2><less><minus>                                               <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><nobreakspace><2><less><minus>                                        <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
 <Multi_key><greater><ampersand><less>                                            <space> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
 <Multi_key><greater><bar><less>                                                  <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
 <Multi_key><space><less><parenright>                                             <space> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
@@ -4154,10 +4166,8 @@
 <Multi_key><bar><bar><bar><minus>                                                <space> : "⫵" U2AF5 # TRIPLE VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><period><colon>                                                       <space> : "⫶" U2AF6 # TRIPLE COLON OPERATOR
 <Multi_key><colon><period>                                                       <space> : "⫶" U2AF6 # TRIPLE COLON OPERATOR
-<Multi_key><space><less><3>                                                      <space> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
-<Multi_key><nobreakspace><less><3>                                               <space> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
-<Multi_key><space><greater><3>                                                   <space> : "⫸" U2AF8 # TRIPLE NESTED GREATER-THAN
-<Multi_key><nobreakspace><greater><3>                                            <space> : "⫸" U2AF8 # TRIPLE NESTED GREATER-THAN
+<Multi_key><3><less>                                                             <space> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
+<Multi_key><3><greater>                                                          <space> : "⫸" U2AF8 # TRIPLE NESTED GREATER-THAN
 <Multi_key><less><underscore><underscore>                                        <space> : "⫹" U2AF9 # DOUBLE-LINE SLANTED LESS-THAN OR EQUAL TO
 <Multi_key><greater><underscore><underscore>                                     <space> : "⫺" U2AFA # DOUBLE-LINE SLANTED GREATER-THAN OR EQUAL TO
 <Multi_key><slash><slash><slash>                                                 <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
@@ -4183,7 +4193,7 @@
 #   Mirror of U21F4.
 <Multi_key><less><minus><o><minus>                                               <space> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 #   Mirror of U21F6.
-<Multi_key><less><minus><3>                                                      <space> : "⬱" U2B31 # THREE LEFTWARDS ARROWS
+<Multi_key><3><less><minus>                                                      <space> : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 <Multi_key><less><minus><less><minus><less><minus>                               <space> : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 #   Mirror of U27F4.
 <Multi_key><less><minus><o><plus>                                                <space> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
