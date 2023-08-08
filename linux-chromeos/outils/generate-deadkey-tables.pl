@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
+# 2023-08-08T0749+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -12,8 +13,8 @@
 # target locale as configured under `## Character names localization`.
 # Descriptors, which means “edited French character names,” are prioritized.
 # The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
-# Linux and ChromeOS. Due to incompleteness (Unicode version 10.0.0), another
-# list is also used, `ListeNoms.txt` from Patrick Andries and collaborators.
+# Linux and ChromeOS. At this point it is incomplete as it is based on v10.
+# Tooltips for characters added to Unicode after v10 use `ListeNoms.txt`.
 #
 # The output is designed for use in WordPress. An all-in-one table is generated
 # alongside, although neither WordPress editor registers it (memory limit 1024M
