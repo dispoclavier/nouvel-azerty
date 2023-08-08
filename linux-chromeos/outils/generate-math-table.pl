@@ -1,16 +1,23 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-08T0718+0200
+# 2023-08-08T0752+0200
 # Last modified: See datestamp above.
 # 
-# Generates an HTML table of math symbols, based
-# on Multi_key sequences in `Compose.yml`.
+# Generates an HTML table of math symbols, based on Multi_key sequences in
+# `Compose.yml`.
 #
 # The input requires start and end tags.
 #
-# Alias sequences with no-break space or with
-# right single quotation mark are skipped.
+# Alias sequences with no-break space or with right single quotation mark are
+# skipped.
+#
+# Localized tooltips require the Unicode NamesList.txt or equivalents in the
+# target locale as configured under `## Character names localization`.
+# Descriptors, which means “edited French character names,” are prioritized.
+# The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
+# Linux and ChromeOS. At this point it is incomplete as it is based on v10.
+# Tooltips for characters added to Unicode after v10 use `ListeNoms.txt`.
 #
 # The output is designed for use in WordPress.
 #
