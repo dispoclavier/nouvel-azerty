@@ -1957,7 +1957,7 @@
 #   <dead_circumflex><N> : "N̂" # composed N with combining circumflex (Min Nan)
 #   <dead_circumflex><n> : "n̂" # composed n with combining circumflex (Min Nan)
 #   Courtesy https://www.frathwiki.com/Circumflex
-#   See # # Ê-key emulation
+#   See ### Ê-key emulation
 #
 #   The circumflex dead key also supports superscript digits, for the sake of
 #   conformance with NF Z71-300:2019, 6.3.3 p24, that E DIN 2137-1:2020-11 has
@@ -4369,7 +4369,7 @@
 #   cases, along the lines of the Ê-key emulation.
 #
 #   This is designed for use on the Canadian French QWERTY variant.
-#   See # # Ê-key emulation
+#   See ### Ê-key emulation
 #
 <dead_cedilla>                                                                   <space> : "̧" U0327 # COMBINING CEDILLA
 <Multi_key><comma>                                                               <space> : "̧" U0327 # COMBINING CEDILLA
