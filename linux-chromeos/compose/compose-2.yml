@@ -1939,10 +1939,13 @@
 #   been synced with.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
-#   This redundancy is not extended to the signs and parentheses, because the
-#   standard does not require these. Their Multi_key equivalents would conflict
-#   with many mathematical symbol sequences that would need to be disambiguated
-#   by leading space.
+#   But the Multi_key equivalent of this way to get superscript digits is not
+#   supported, as pointless and conflicting with "❤" U2764 as of "³" U00B3.
+#
+#   Also, this redundancy with the superscript dead key is not extended to the
+#   signs and parentheses, as the standard does not require these, and their
+#   Multi_key equivalents would conflict with many mathematical symbols. that
+#   would need to be disambiguated by leading space.
 #
 #   The polygrams -êk-, -êl-, -êm-, -ên-, -êp-, -êq-, -êr-, -êt-, -êv-, -êch-
 #   make dead_circumflex behave like an Ê key in most cases by using the fact
@@ -1997,25 +2000,15 @@
 <dead_circumflex>                                                              <section> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
 <Multi_key><less>                                                              <section> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <0> : "⁰" U2070 # SUPERSCRIPT ZERO
-<Multi_key><less>                                                                    <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <dead_circumflex>                                                                    <1> : "¹" U00B9 # SUPERSCRIPT ONE
-<Multi_key><less>                                                                    <1> : "¹" U00B9 # SUPERSCRIPT ONE
 <dead_circumflex>                                                                    <2> : "²" U00B2 # SUPERSCRIPT TWO
-<Multi_key><less>                                                                    <2> : "²" U00B2 # SUPERSCRIPT TWO
 <dead_circumflex>                                                                    <3> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key><less>                                                                    <3> : "³" U00B3 # SUPERSCRIPT THREE
 <dead_circumflex>                                                                    <4> : "⁴" U2074 # SUPERSCRIPT FOUR
-<Multi_key><less>                                                                    <4> : "⁴" U2074 # SUPERSCRIPT FOUR
 <dead_circumflex>                                                                    <5> : "⁵" U2075 # SUPERSCRIPT FIVE
-<Multi_key><less>                                                                    <5> : "⁵" U2075 # SUPERSCRIPT FIVE
 <dead_circumflex>                                                                    <6> : "⁶" U2076 # SUPERSCRIPT SIX
-<Multi_key><less>                                                                    <6> : "⁶" U2076 # SUPERSCRIPT SIX
 <dead_circumflex>                                                                    <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
-<Multi_key><less>                                                                    <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
 <dead_circumflex>                                                                    <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
-<Multi_key><less>                                                                    <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
 <dead_circumflex>                                                                    <9> : "⁹" U2079 # SUPERSCRIPT NINE
-<Multi_key><less>                                                                    <9> : "⁹" U2079 # SUPERSCRIPT NINE
 <dead_circumflex>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -2459,10 +2452,13 @@
 #   with.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
-#   This redundancy is not extended to the signs and parentheses, because the
-#   standard does not require these. Their Multi_key equivalents would conflict
-#   with many mathematical symbol sequences that would need to be disambiguated
-#   by leading space.
+#   But the Multi_key equivalent of this way to get subscript digits is not
+#   supported, as pointless, and in synch with #*# CIRCUMFLEX
+#
+#   Also, this redundancy with the subscript dead key is not extended to the
+#   signs and parentheses, as the standard does not require these, and their
+#   Multi_key equivalents would conflict with many mathematical symbols. that
+#   would need to be disambiguated by leading space.
 #
 <dead_caron>                                                                     <space> : "̌" U030C # COMBINING CARON
 <Multi_key><greater>                                                             <space> : "̌" U030C # COMBINING CARON
@@ -2475,25 +2471,15 @@
 <dead_caron>                                                                   <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <Multi_key><greater>                                                           <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_caron>                                                                         <0> : "₀" U2080 # SUBSCRIPT ZERO
-<Multi_key><greater>                                                                 <0> : "₀" U2080 # SUBSCRIPT ZERO
 <dead_caron>                                                                         <1> : "₁" U2081 # SUBSCRIPT ONE
-<Multi_key><greater>                                                                 <1> : "₁" U2081 # SUBSCRIPT ONE
 <dead_caron>                                                                         <2> : "₂" U2082 # SUBSCRIPT TWO
-<Multi_key><greater>                                                                 <2> : "₂" U2082 # SUBSCRIPT TWO
 <dead_caron>                                                                         <3> : "₃" U2083 # SUBSCRIPT THREE
-<Multi_key><greater>                                                                 <3> : "₃" U2083 # SUBSCRIPT THREE
 <dead_caron>                                                                         <4> : "₄" U2084 # SUBSCRIPT FOUR
-<Multi_key><greater>                                                                 <4> : "₄" U2084 # SUBSCRIPT FOUR
 <dead_caron>                                                                         <5> : "₅" U2085 # SUBSCRIPT FIVE
-<Multi_key><greater>                                                                 <5> : "₅" U2085 # SUBSCRIPT FIVE
 <dead_caron>                                                                         <6> : "₆" U2086 # SUBSCRIPT SIX
-<Multi_key><greater>                                                                 <6> : "₆" U2086 # SUBSCRIPT SIX
 <dead_caron>                                                                         <7> : "₇" U2087 # SUBSCRIPT SEVEN
-<Multi_key><greater>                                                                 <7> : "₇" U2087 # SUBSCRIPT SEVEN
 <dead_caron>                                                                         <8> : "₈" U2088 # SUBSCRIPT EIGHT
-<Multi_key><greater>                                                                 <8> : "₈" U2088 # SUBSCRIPT EIGHT
 <dead_caron>                                                                         <9> : "₉" U2089 # SUBSCRIPT NINE
-<Multi_key><greater>                                                                 <9> : "₉" U2089 # SUBSCRIPT NINE
 <dead_caron>                                                                         <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <Multi_key><greater>                                                                 <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <dead_caron>                                                                         <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
