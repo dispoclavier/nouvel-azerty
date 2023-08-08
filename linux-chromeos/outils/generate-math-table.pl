@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-08T0752+0200
+# 2023-08-08T0817+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based on Multi_key sequences in
@@ -56,8 +56,8 @@ my $math_flag = !1;
 my $table_header_1 = 'Caractère';
 my $table_header_2 = 'Séquence de composition';
 my $table_header_3 = 'Identifiant Unicode';
-my $line = "<figure class=\"wp-block-table alignwide multikey\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
-print OUTPUT "$line\n";
+print OUTPUT "<figure class=\"wp-block-table alignwide multikey\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+print OUTPUT "<!-- Symboles-mathématiques -->\n";
 my ( $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
 
 while ( my $line = <INPUT> ) {
@@ -164,9 +164,7 @@ while ( my $line = <INPUT> ) {
 		}
 	}
 }
-$line = '</tbody></table></figure>';
-print OUTPUT "$line";
-
+print OUTPUT "</tbody></table></figure>\n";
 close( INPUT );
 close( OUTPUT );
 print( "Math table generated.\n\n" );
