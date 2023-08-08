@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-06T1933+0200
+# 2023-08-08T0718+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based
@@ -49,7 +49,7 @@ my $math_flag = !1;
 my $table_header_1 = 'Caractère';
 my $table_header_2 = 'Séquence de composition';
 my $table_header_3 = 'Identifiant Unicode';
-my $line = "<figure class=\"wp-block-table alignwide math\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
+my $line = "<figure class=\"wp-block-table alignwide multikey\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>";
 print OUTPUT "$line\n";
 my ( $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
 
