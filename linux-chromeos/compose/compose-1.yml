@@ -737,7 +737,7 @@
 <Multi_key><S><h>                                                                        : "Ʃ" U01A9 # LATIN CAPITAL LETTER ESH
 <Multi_key><s><h>                                                                        : "ʃ" U0283 # LATIN SMALL LETTER ESH
 <Multi_key><S><S>                                                                        : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
-#   <Multi_key><S><s>                                                                    : # Reserved for "⨋" U2A0B SUMMATION WITH INTEGRAL
+<Multi_key><S><s>                                                                        : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <Multi_key><s><s>                                                                        : "ß" U00DF # LATIN SMALL LETTER SHARP S
 <Multi_key><S><Z>                                                                        : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <Multi_key><S><z>                                                                        : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
@@ -2259,8 +2259,8 @@
 #
 # # Invisible operators
 #
-<Multi_key><space><f>                                                            <space> : "⁡" U2061 # FUNCTION APPLICATION
-<Multi_key><nobreakspace><f>                                                     <space> : "⁡" U2061 # FUNCTION APPLICATION
+<Multi_key><space><f>                                                            <space> : "⁡" U2061 # FUNCTION APPLICATION invisible
+<Multi_key><nobreakspace><f>                                                     <space> : "⁡" U2061 # FUNCTION APPLICATION invisible
 <Multi_key><space><x>                                                            <space> : "⁢" U2062 # INVISIBLE TIMES
 <Multi_key><nobreakspace><x>                                                     <space> : "⁢" U2062 # INVISIBLE TIMES
 <Multi_key><space><comma>                                                        <space> : "⁣" U2063 # INVISIBLE SEPARATOR
@@ -2298,6 +2298,8 @@
 <Multi_key><ampersand><rightsinglequotemark><minus>                              <space> : "⃐" U20D0 # COMBINING LEFT HARPOON ABOVE
 <Multi_key><ampersand><minus><grave>                                             <space> : "⃑" U20D1 # COMBINING RIGHT HARPOON ABOVE
 <Multi_key><ampersand><bar>                                                      <space> : "⃒" U20D2 # COMBINING LONG VERTICAL LINE OVERLAY
+<Multi_key><ampersand><apostrophe>                                               <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
+<Multi_key><ampersand><rightsinglequotemark>                                     <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><space><ampersand><bar>                                               <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><nobreakspace><ampersand><bar>                                        <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><ampersand><less><parenleft>                                          <space> : "⃔" U20D4 # COMBINING ANTICLOCKWISE ARROW ABOVE
@@ -2307,6 +2309,7 @@
 <Multi_key><ampersand><o>                                                        <space> : "⃘" U20D8 # COMBINING RING OVERLAY
 <Multi_key><ampersand><o><greater>                                               <space> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><less>                                                  <space> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><ampersand><o><greater><percent>                                      <space> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><backslash>                                    <space> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><3><period>                                                <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><period><period><period>                                   <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
@@ -2318,9 +2321,12 @@
 <Multi_key><ampersand><slash><slash>                                             <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
 <Multi_key><ampersand><minus><apostrophe>                                        <space> : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><minus><rightsinglequotemark>                              <space> : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><ampersand><underscore><apostrophe>                                   <space> : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><ampersand><underscore><rightsinglequotemark>                         <space> : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><grave><minus>                                             <space> : "⃭" U20ED # COMBINING LEFTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><ampersand><less><minus><underscore>                                  <space> : "⃮" U20EE # COMBINING LEFT ARROW BELOW
-<Multi_key><ampersand><minus><greater><underscore>                               <space> : "⃯" U20EF # COMBINING RIGHT ARROW BELOW
+<Multi_key><ampersand><grave><underscore>                                        <space> : "⃭" U20ED # COMBINING LEFTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><ampersand><less><underscore>                                         <space> : "⃮" U20EE # COMBINING LEFT ARROW BELOW
+<Multi_key><ampersand><underscore><greater>                                      <space> : "⃯" U20EF # COMBINING RIGHT ARROW BELOW
 #
 #
 # # Letterlike symbols in block U2100 used in mathematics
@@ -2351,9 +2357,9 @@
 <Multi_key><P><L><A><N><C><K>                                                    <space> : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><l><a><n><c><k>                                                    <space> : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><p><l><a><n><c><k>                                                    <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><L><A><N><C><K><slash>                                             <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><P><l><a><n><c><k><slash>                                             <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><p><l><a><n><c><k><slash>                                             <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><P><L><A><N><C><K><slash>                                                     : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><P><l><a><n><c><k><slash>                                                     : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><p><l><a><n><c><k><slash>                                                     : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 #   In group 7 of I                                                                      : "ℐ" U2110 # SCRIPT CAPITAL I
 <Multi_key><I><slash><slash>                                                     <space> : "ℐ" U2110 # SCRIPT CAPITAL I
 #   In group 9 of I                                                                      : "ℑ" U2111 # BLACK-LETTER CAPITAL I
@@ -2379,7 +2385,10 @@
 <Multi_key><Z><Z>                                                                <space> : "ℤ" U2124 # DOUBLE-STRUCK CAPITAL Z
 #   In group 9 of Z                                                                      : "ℨ" U2128 # BLACK-LETTER CAPITAL Z
 <Multi_key><Z><numbersign>                                                       <space> : "ℨ" U2128 # BLACK-LETTER CAPITAL Z
+<Multi_key><i><at>                                                               <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 <Multi_key><i><percent>                                                          <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
+<Multi_key><i><at><percent>                                                      <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
+<Multi_key><i><percent><at>                                                      <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 #   In group 7 of B                                                                      : "ℬ" U212C # SCRIPT CAPITAL B
 <Multi_key><B><slash><slash>                                                     <space> : "ℬ" U212C # SCRIPT CAPITAL B
 #   In group 9 of C                                                                      : "ℭ" U212D # BLACK-LETTER CAPITAL C
@@ -2403,11 +2412,12 @@
 <Multi_key><G><backslash>                                                        <space> : "ℷ" U2137 # GIMEL SYMBOL
 <Multi_key><d><backslash>                                                        <space> : "ℸ" U2138 # DALET SYMBOL
 <Multi_key><D><backslash>                                                        <space> : "ℸ" U2138 # DALET SYMBOL
-<Multi_key><p><p>                                                                <space> : "ℼ" U213C # DOUBLE-STRUCK SMALL PI
-<Multi_key><g><g>                                                                <space> : "ℽ" U213D # DOUBLE-STRUCK SMALL GAMMA
-<Multi_key><G><G>                                                                <space> : "ℾ" U213E # DOUBLE-STRUCK CAPITAL GAMMA
-<Multi_key><space><P><P>                                                         <space> : "ℿ" U213F # DOUBLE-STRUCK CAPITAL PI
-<Multi_key><nobreakspace><P><P>                                                  <space> : "ℿ" U213F # DOUBLE-STRUCK CAPITAL PI
+<Multi_key><p><p><at>                                                            <space> : "ℼ" U213C # DOUBLE-STRUCK SMALL PI
+<Multi_key><g><g><at>                                                            <space> : "ℽ" U213D # DOUBLE-STRUCK SMALL GAMMA
+<Multi_key><G><G><at>                                                            <space> : "ℾ" U213E # DOUBLE-STRUCK CAPITAL GAMMA
+<Multi_key><P><P><at>                                                            <space> : "ℿ" U213F # DOUBLE-STRUCK CAPITAL PI
+<Multi_key><space><S><S><at>                                                     <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
+<Multi_key><nobreakspace><S><S><at>                                              <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 <Multi_key><space><S><S>                                                         <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 <Multi_key><nobreakspace><S><S>                                                  <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 #   See #*# TURNED                                                                       : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
@@ -2447,7 +2457,6 @@
 <Multi_key><minus><minus><greater><bar>                                          <space> : "↓" U2193 # DOWNWARDS ARROW
 <Multi_key><less><minus><greater><underscore>                                    <space> : "↔" U2194 # LEFT RIGHT ARROW
 <Multi_key><less><minus><greater><bar>                                           <space> : "↕" U2195 # UP DOWN ARROW
-<Multi_key><less><minus><minus><backslash>                                       <space> : "↖" U2196 # NORTH WEST ARROW
 <Multi_key><less><minus><minus><backslash>                                       <space> : "↖" U2196 # NORTH WEST ARROW
 <Multi_key><minus><minus><greater><slash>                                        <space> : "↗" U2197 # NORTH EAST ARROW
 <Multi_key><minus><minus><greater><backslash>                                    <space> : "↘" U2198 # SOUTH EAST ARROW
@@ -3771,7 +3780,8 @@
 <Multi_key><X>                                                                   <space> : "⨉" U2A09 # N-ARY TIMES OPERATOR
 <Multi_key><S><o>                                                                <space> : "⨊" U2A0A # MODULO TWO SUM
 <Multi_key><o><S>                                                                <space> : "⨊" U2A0A # MODULO TWO SUM
-<Multi_key><S><s>                                                                <space> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+<Multi_key><space><S><s>                                                         <space> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+<Multi_key><nobreakspace><S><s>                                                  <space> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
 <Multi_key><4><s>                                                                <space> : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key><s><minus>                                                            <space> : "⨍" U2A0D # FINITE PART INTEGRAL
 <Multi_key><s><equal>                                                            <space> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
