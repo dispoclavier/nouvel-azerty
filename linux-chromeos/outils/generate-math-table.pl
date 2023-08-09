@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-08T0817+0200
+# 2023-08-09T0859+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based on Multi_key sequences in
@@ -14,10 +14,8 @@
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
-# Descriptors, which means “edited French character names,” are prioritized.
-# The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
-# Linux and ChromeOS. At this point it is incomplete as it is based on v10.
-# Tooltips for characters added to Unicode after v10 use `ListeNoms.txt`.
+# `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
+# In print, tooltips and the comment column are replaced with a last column.
 #
 # The output is designed for use in WordPress.
 #
@@ -56,7 +54,8 @@ my $math_flag = !1;
 my $table_header_1 = 'Caractère';
 my $table_header_2 = 'Séquence de composition';
 my $table_header_3 = 'Identifiant Unicode';
-print OUTPUT "<figure class=\"wp-block-table alignwide multikey\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $table_header_4 = 'Descripteur';
+print OUTPUT "<figure class=\"wp-block-table alignwide multikey math\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_4</th></tr></thead><tbody>\n";
 print OUTPUT "<!-- Symboles-mathématiques -->\n";
 my ( $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
 
@@ -157,8 +156,9 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 				
-				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				# The last column does not display, as the descriptors show in tooltips, but it is printed instead of the second-last column.
+				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td>$4<\/td><td>$descrip<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td>$4<\/td><td>$descrip<\/td><\/tr>/;
 				print OUTPUT "$line";
 			}
 		}
