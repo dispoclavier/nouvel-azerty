@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-10T0306+0200
+# 2023-08-10T0544+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based on Multi_key sequences in
@@ -51,6 +51,8 @@ print( "Opened file $output_path.\n" );
 
 print( "Processing math symbols from $file_path to $output_path.\n" );
 my $math_flag             = !1;
+my $names_count           = 0;
+my $descriptors_count     = 0;
 my $table_header_1        = 'Caractère';
 my $table_header_2        = 'Séquence de composition';
 my $table_header_3        = 'Identifiant Unicode';
@@ -134,6 +136,7 @@ while ( my $line = <INPUT> ) {
 							chomp( $des_line );
 							$des_line =~ s/^.+; (.+)$/$1/;
 							$descrip = $des_line;
+							++$descriptors_count;
 							last;
 							close( DESCRIP );
 						}
@@ -146,6 +149,7 @@ while ( my $line = <INPUT> ) {
 							chomp( $name_line );
 							$name_line =~ s/^.+\t(.+)$/$1/;
 							$descrip = $name_line;
+							++$names_count;
 							last;
 							close( NAMES );
 						}
@@ -175,4 +179,6 @@ while ( my $line = <INPUT> ) {
 print OUTPUT "</tbody></table></figure>\n";
 close( INPUT );
 close( OUTPUT );
-print( "Math table generated.\n\n" );
+print( "Math table generated.\n" );
+print( "Used $names_count times $names_file_path.\n" );
+print( "Used $descriptors_count times $descriptors_file_path.\n\n" );
