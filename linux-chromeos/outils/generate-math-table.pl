@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-10T0204+0200
+# 2023-08-10T0306+0200
 # Last modified: See datestamp above.
 # 
 # Generates an HTML table of math symbols, based on Multi_key sequences in
@@ -55,14 +55,15 @@ my $table_header_1        = 'Caractère';
 my $table_header_2        = 'Séquence de composition';
 my $table_header_3        = 'Identifiant Unicode';
 my $table_header_title    = 'Cliquer pour basculer entre français et anglais';
-my $table_header_label_fr = '☑ Imprimer les descripteurs français';
-my $table_header_label_en = '☐ Imprimer les identifiants Unicode';
+my $checkbox_label        = 'Imprimer les descripteurs, non les identifiants';
+my $checkbox_checked      = '☑&nbsp;';
+my $checkbox_not_checked  = '☐&nbsp;';
 my $table_header_4        = 'Descripteur';
 print OUTPUT "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
 print OUTPUT "<figure class=\"wp-block-table alignwide multikey math\">\n";
 print OUTPUT "<table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">\n";
 print OUTPUT "<span class=\"en\">$table_header_3</span><span class=\"fr\">$table_header_4</span>\n";
-print OUTPUT "<label for=\"print\"><div class=\"status\" title=\"$table_header_title\"><span class=\"fr\">$table_header_label_fr</span><span class=\"en\">$table_header_label_en</span></div></label>\n";
+print OUTPUT "<label for=\"print\"><div class=\"status\" title=\"$table_header_title\"><span class=\"fr\">$checkbox_checked</span><span class=\"en\">$checkbox_not_checked</span>$checkbox_label</div></label>\n";
 print OUTPUT "</th></tr></thead><tbody>\n";
 print OUTPUT "<!-- Symboles-mathématiques -->\n";
 my ( $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
