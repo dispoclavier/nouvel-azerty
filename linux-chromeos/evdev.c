@@ -1,4 +1,4 @@
-//                       Date: 2023-07-14T0625+0200
+//                       Date: 2023-08-11T0824+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -10,8 +10,8 @@
 //                Project URL: https://dispoclavier.com
 //                      Maxim: Simplify typewriting, not French.
 //                    Maxime : Simplifier la dactylographie, pas le français.
-//        English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
-//     Description française : dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
+//        English description: Keyboard layouts fit for national, regional and neighbor languages of Francophonie.
+//     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 //              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 //             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 //              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
