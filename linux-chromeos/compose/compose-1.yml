@@ -13,8 +13,8 @@
 #                Project URL: https://dispoclavier.com
 #                      Maxim: Simplify typewriting, not French.
 #                    Maxime : Simplifier la dactylographie, pas le français.
-#        English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
-#     Description française : dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
+#        English description: Keyboard layouts fit for national, regional and neighbor languages of Francophonie.
+#     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 #              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 #             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 #              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
@@ -2490,11 +2490,10 @@
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=48
 #   In group 4 of %                                                                      : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><N><greater>                                                          <space> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
-<Multi_key><n><greater>                                                          <space> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><less><minus><bar>                                                    <space> : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
 <Multi_key><bar><minus><greater>                                                 <space> : "↱" U21B1 # UPWARDS ARROW WITH TIP RIGHTWARDS
-<Multi_key><less><asciicircum>                                                   <space> : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
-<Multi_key><asciicircum><greater>                                                <space> : "↷" U21B7 # CLOCKWISE TOP SEMICIRCLE ARROW
+<Multi_key><n><less>                                                             <space> : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
+<Multi_key><n><greater>                                                          <space> : "↷" U21B7 # CLOCKWISE TOP SEMICIRCLE ARROW
 <Multi_key><apostrophe><minus><minus>                                            <space> : "↼" U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
 <Multi_key><rightsinglequotemark><minus><minus>                                  <space> : "↼" U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
 <Multi_key><grave><minus><minus>                                                 <space> : "↽" U21BD # LEFTWARDS HARPOON WITH BARB DOWNWARDS
@@ -3428,10 +3427,10 @@
 <Multi_key><space><space><bar><minus><greater>                                   <space> : "⤷" U2937 # ARROW POINTING DOWNWARDS THEN CURVING RIGHTWARDS
 <Multi_key><nobreakspace><space><bar><minus><greater>                            <space> : "⤷" U2937 # ARROW POINTING DOWNWARDS THEN CURVING RIGHTWARDS
 <Multi_key><nobreakspace><nobreakspace><bar><minus><greater>                     <space> : "⤷" U2937 # ARROW POINTING DOWNWARDS THEN CURVING RIGHTWARDS
-<Multi_key><parenright><greater>                                                 <space> : "⤸" U2938 # RIGHT-SIDE ARC CLOCKWISE ARROW
+<Multi_key><parenright><less>                                                    <space> : "⤸" U2938 # RIGHT-SIDE ARC CLOCKWISE ARROW
 <Multi_key><parenleft><greater>                                                  <space> : "⤹" U2939 # LEFT-SIDE ARC ANTICLOCKWISE ARROW
 <Multi_key><less><parenleft>                                                     <space> : "⤺" U293A # TOP ARC ANTICLOCKWISE ARROW
-<Multi_key><less><parenright>                                                    <space> : "⤻" U293B # BOTTOM ARC ANTICLOCKWISE ARROW
+<Multi_key><parenright><greater>                                                 <space> : "⤻" U293B # BOTTOM ARC ANTICLOCKWISE ARROW
 <Multi_key><parenleft><greater><minus>                                           <space> : "⤼" U293C # TOP ARC CLOCKWISE ARROW WITH MINUS
 <Multi_key><less><parenleft><plus>                                               <space> : "⤽" U293D # TOP ARC ANTICLOCKWISE ARROW WITH PLUS
 <Multi_key><C><greater><backslash>                                               <space> : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
@@ -3565,7 +3564,10 @@
 <Multi_key><bracketright><greater><period>                                       <space> : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
 <Multi_key><period><bracketright><greater>                                       <space> : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
 <Multi_key><parenleft><less>                                                     <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
-<Multi_key><parenright><greater>                                                 <space> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
+<Multi_key><space><parenleft><less>                                              <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
+<Multi_key><nobreakspace><parenleft><less>                                       <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
+<Multi_key><space><parenright><greater>                                          <space> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
+<Multi_key><nobreakspace><parenright><greater>                                   <space> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
 <Multi_key><parenleft><parenleft><greater>                                       <space> : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
 <Multi_key><parenright><parenright><less>                                        <space> : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
 <Multi_key><bracketleft><parenleft>                                              <space> : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
