@@ -1,4 +1,4 @@
-//                       Date: 2023-07-14T1631+0200
+//                       Date: 2023-08-11T0932+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -10,8 +10,8 @@
 //                Project URL: https://dispoclavier.com
 //                      Maxim: Simplify typewriting, not French.
 //                    Maxime : Simplifier la dactylographie, pas le français.
-//        English description: keyboard layouts adapted to national, regional and neighbor languages of Francophonie
-//     Description française : dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
+//        English description: Keyboard layouts fit for national, regional and neighbor languages of Francophonie.
+//     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 //              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 //             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 //              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
@@ -728,7 +728,6 @@ xkb_symbols "kbfrFRs" {
 		[                    space,             nobreakspace,                    U202F,                    U200B,                    UEF6E,                    UEF6F,                    UEF9B,                    UEF9F ],
 		[                    space,             nobreakspace,                    U202F,                    U200B,                    UEF6E,                    UEF6F,                    UEF9B,                    UEF9F ]
 	}; // U202F   NARROW NO-BREAK SPACE; U200B ​ ZERO WIDTH SPACE; UEF6E U0020 U2060 ' ⁠' justifying non-breaking space using WORD JOINER; UEF6F U0020 UFEFF ' ﻿' justifying non-breaking space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
-	// The actual mapping of the spacebar is defined in xkb/types/dispotypes like for all other keys. Please refer to that file, since the 8 columns here are indices, not levels.
 
 	//
 	// Numeric keypad (numpad)
