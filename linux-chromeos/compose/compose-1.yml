@@ -1821,9 +1821,11 @@
 #   is part of the suit series, U2660..U2667: "♥" U2665 BLACK HEART SUIT, while
 #   "❤" U2764 HEAVY BLACK HEART is the most used emoji in France. Consistently,
 #   this is given the traditional sequence. The other heart is disambiguated by
-#   leading space, like math symbols.
+#   leading space like math symbols, and it is given an alternative shape-based
+#   sequence as well.
 #
 <Multi_key><less><3>                                                                     : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+<Multi_key><less><8>                                                                     : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><space><less><3>                                                              : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><nobreakspace><less><3>                                                       : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 #
