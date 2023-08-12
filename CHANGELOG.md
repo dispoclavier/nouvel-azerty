@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 1.0.6 (projet)
+
+* Séquences de composition : Compléter les séquences de "♥" U2665. (compose-1.yml [26166c2](https://github.com/dispoclavier/nouvel-azerty/commit/26166c2b5740016b4265cce3db5e80aa7b130e49))
+* Touches mortes : Accent circonflexe : Désactiver les chiffres en exposant. Tréma : Ajouter les chiffres en exposant. Hatchek : Ajouter l’équivalent en composition des chiffres en indice. (compose-2.yml [1485b62](https://github.com/dispoclavier/nouvel-azerty/commit/1485b62fe83adb9cc72296d3dbbf71f8991fb123))
+
 ## 1.0.5 (2023-08-11)
 
 * Symboles mathématiques : Corriger les séquences de composition de "⋶" U22F6, "⋷" U22F7, "⋽" U22FD, "⋾" U22FE. (compose-1.yml [4bd82a7](https://github.com/dispoclavier/nouvel-azerty/commit/4bd82a7cba326cca12e43042fb9977488d522d00))
