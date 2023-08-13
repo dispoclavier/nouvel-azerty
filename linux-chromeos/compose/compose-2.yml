@@ -1946,6 +1946,7 @@
 #   as pointless while superscript and subscript digits are on live keys, and a
 #   dedicated superscript dead key is also present, in NF Z71-300:2019 too. The
 #   diaeresis dead key is traditionally on the same key in shift position.
+#   See #*# DIAERESIS
 #
 #   NOTE: In en_US.UTF-8/Compose that the superscript digits by dead_circumflex
 #   feature comes from, the superscript dead key is missing entirely, since the
@@ -2442,6 +2443,21 @@
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #   See #*# CIRCUMFLEX
 #
+#   However, this redundancy with the subscript dead key is not extended to the
+#   signs and parentheses, as the standard does not require these, and as their
+#   Multi_key equivalents would conflict with many mathematical symbols. These
+#   would need to be disambiguated by leading space.
+#
+<dead_caron>                                                                     <space> : "̌" U030C # COMBINING CARON
+<Multi_key><greater>                                                             <space> : "̌" U030C # COMBINING CARON
+<dead_caron>                                                                     <U200B> : "̌" U030C # COMBINING CARON
+<Multi_key><greater>                                                             <U200B> : "̌" U030C # COMBINING CARON
+<dead_caron>                                                                     <U202F> : "ˇ" U02C7 # CARON
+<Multi_key><greater>                                                             <U202F> : "ˇ" U02C7 # CARON
+<dead_caron>                                                              <nobreakspace> : "ˇ" U02C7 # CARON
+<Multi_key><greater>                                                      <nobreakspace> : "ˇ" U02C7 # CARON
+<dead_caron>                                                                   <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
+<Multi_key><greater>                                                           <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_caron>                                                                         <0> : "₀" U2080 # SUBSCRIPT ZERO
 <Multi_key><greater>                                                                 <0> : "₀" U2080 # SUBSCRIPT ZERO
 <dead_caron>                                                                         <1> : "₁" U2081 # SUBSCRIPT ONE
@@ -2462,22 +2478,6 @@
 <Multi_key><greater>                                                                 <8> : "₈" U2088 # SUBSCRIPT EIGHT
 <dead_caron>                                                                         <9> : "₉" U2089 # SUBSCRIPT NINE
 <Multi_key><greater>                                                                 <9> : "₉" U2089 # SUBSCRIPT NINE
-#
-#   However, this redundancy with the subscript dead key is not extended to the
-#   signs and parentheses, as the standard does not require these, and as their
-#   Multi_key equivalents would conflict with many mathematical symbols. These
-#   would need to be disambiguated by leading space.
-#
-<dead_caron>                                                                     <space> : "̌" U030C # COMBINING CARON
-<Multi_key><greater>                                                             <space> : "̌" U030C # COMBINING CARON
-<dead_caron>                                                                     <U200B> : "̌" U030C # COMBINING CARON
-<Multi_key><greater>                                                             <U200B> : "̌" U030C # COMBINING CARON
-<dead_caron>                                                                     <U202F> : "ˇ" U02C7 # CARON
-<Multi_key><greater>                                                             <U202F> : "ˇ" U02C7 # CARON
-<dead_caron>                                                              <nobreakspace> : "ˇ" U02C7 # CARON
-<Multi_key><greater>                                                      <nobreakspace> : "ˇ" U02C7 # CARON
-<dead_caron>                                                                   <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
-<Multi_key><greater>                                                           <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_caron>                                                                         <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <Multi_key><greater>                                                                 <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <dead_caron>                                                                         <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
@@ -4478,12 +4478,34 @@
 #   Dot below has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Dot_Below
 #
+#   Digits 2, 3, 4, 6 yield vertical multidot punctuation.
+#
 <dead_belowdot>                                                                  <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                              <space> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                  <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                              <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                <section> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
 <Multi_key><exclam>                                                            <section> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
+<dead_belowdot>                                                                      <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<Multi_key><exclam>                                                                  <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<dead_belowdot>                                                                      <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<Multi_key><exclam>                                                                  <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<dead_belowdot>                                                                      <2> : "⁚" U205A # TWO DOT PUNCTUATION
+<Multi_key><exclam>                                                                  <2> : "⁚" U205A # TWO DOT PUNCTUATION
+<dead_belowdot>                                                                      <3> : "⁝" U205D # TRICOLON
+<Multi_key><exclam>                                                                  <3> : "⁝" U205D # TRICOLON
+<dead_belowdot>                                                                      <4> : "⁞" U205E # VERTICAL FOUR DOTS
+<Multi_key><exclam>                                                                  <4> : "⁞" U205E # VERTICAL FOUR DOTS
+<dead_belowdot>                                                                      <5> : "⁙" U2059 # FIVE DOT PUNCTUATION
+<Multi_key><exclam>                                                                  <5> : "⁙" U2059 # FIVE DOT PUNCTUATION
+<dead_belowdot>                                                                      <6> : "⸽" U2E3D # VERTICAL SIX DOTS
+<Multi_key><exclam>                                                                  <6> : "⸽" U2E3D # VERTICAL SIX DOTS
+<dead_belowdot>                                                                      <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<Multi_key><exclam>                                                                  <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<dead_belowdot>                                                                      <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<Multi_key><exclam>                                                                  <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<dead_belowdot>                                                                      <9> : "⁛" U205B # FOUR DOT MARK
+<Multi_key><exclam>                                                                  <9> : "⁛" U205B # FOUR DOT MARK
 <dead_belowdot>                                                                      <A> : "Ạ" U1EA0 # LATIN CAPITAL LETTER A WITH DOT BELOW
 <Multi_key><exclam>                                                                  <A> : "Ạ" U1EA0 # LATIN CAPITAL LETTER A WITH DOT BELOW
 <dead_belowdot>                                                                      <a> : "ạ" U1EA1 # LATIN SMALL LETTER A WITH DOT BELOW
@@ -4712,14 +4734,6 @@
 <Multi_key><colon>                                                                   <Y> : "Ÿ" U0178 # LATIN CAPITAL LETTER Y WITH DIAERESIS
 <dead_diaeresis>                                                                     <y> : "ÿ" U00FF # LATIN SMALL LETTER Y WITH DIAERESIS
 <Multi_key><colon>                                                                   <y> : "ÿ" U00FF # LATIN SMALL LETTER Y WITH DIAERESIS
-<dead_diaeresis>                                                                     <2> : "⁚" U205A # TWO DOT PUNCTUATION
-<Multi_key><colon>                                                                   <2> : "⁚" U205A # TWO DOT PUNCTUATION
-<dead_diaeresis>                                                                     <3> : "⁝" U205D # TRICOLON
-<Multi_key><colon>                                                                   <3> : "⁝" U205D # TRICOLON
-<dead_diaeresis>                                                                     <4> : "⁞" U205E # VERTICAL FOUR DOTS
-<Multi_key><colon>                                                                   <4> : "⁞" U205E # VERTICAL FOUR DOTS
-<dead_diaeresis>                                                                     <6> : "⸽" U2E3D # VERTICAL SIX DOTS
-<Multi_key><colon>                                                                   <6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <dead_diaeresis>                                                                <Ugrave> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon>                                                              <Ugrave> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_diaeresis>                                                                <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
