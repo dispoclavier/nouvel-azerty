@@ -2395,42 +2395,77 @@
 #   dead_circumflex triple press
 #   Multi_key: ¦<<<
 #
-#   For ease of access; Multi_key would not make sense.
+#   For ease of access. Using Multi_key does not make sense, but Multi_key must
+#   be supported for cross-platform compatibility.
 #
 <dead_circumflex><dead_circumflex><dead_circumflex>                            <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
+<Multi_key><less><less><less>                                                  <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
+<Multi_key><less><less><less>                                                        <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
+<Multi_key><less><less><less>                                                        <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <C> : "Č" U010C # LATIN CAPITAL LETTER C WITH CARON
+<Multi_key><less><less><less>                                                        <C> : "Č" U010C # LATIN CAPITAL LETTER C WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <c> : "č" U010D # LATIN SMALL LETTER C WITH CARON
+<Multi_key><less><less><less>                                                        <c> : "č" U010D # LATIN SMALL LETTER C WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <D> : "Ď" U010E # LATIN CAPITAL LETTER D WITH CARON
+<Multi_key><less><less><less>                                                        <D> : "Ď" U010E # LATIN CAPITAL LETTER D WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <d> : "ď" U010F # LATIN SMALL LETTER D WITH CARON
+<Multi_key><less><less><less>                                                        <d> : "ď" U010F # LATIN SMALL LETTER D WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <E> : "Ě" U011A # LATIN CAPITAL LETTER E WITH CARON
+<Multi_key><less><less><less>                                                        <E> : "Ě" U011A # LATIN CAPITAL LETTER E WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <e> : "ě" U011B # LATIN SMALL LETTER E WITH CARON
+<Multi_key><less><less><less>                                                        <e> : "ě" U011B # LATIN SMALL LETTER E WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <G> : "Ǧ" U01E6 # LATIN CAPITAL LETTER G WITH CARON
+<Multi_key><less><less><less>                                                        <G> : "Ǧ" U01E6 # LATIN CAPITAL LETTER G WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <g> : "ǧ" U01E7 # LATIN SMALL LETTER G WITH CARON
+<Multi_key><less><less><less>                                                        <g> : "ǧ" U01E7 # LATIN SMALL LETTER G WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <H> : "Ȟ" U021E # LATIN CAPITAL LETTER H WITH CARON
+<Multi_key><less><less><less>                                                        <H> : "Ȟ" U021E # LATIN CAPITAL LETTER H WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <h> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
+<Multi_key><less><less><less>                                                        <h> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <I> : "Ǐ" U01CF # LATIN CAPITAL LETTER I WITH CARON
+<Multi_key><less><less><less>                                                        <I> : "Ǐ" U01CF # LATIN CAPITAL LETTER I WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <i> : "ǐ" U01D0 # LATIN SMALL LETTER I WITH CARON
+<Multi_key><less><less><less>                                                        <i> : "ǐ" U01D0 # LATIN SMALL LETTER I WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <j> : "ǰ" U01F0 # LATIN SMALL LETTER J WITH CARON
+<Multi_key><less><less><less>                                                        <j> : "ǰ" U01F0 # LATIN SMALL LETTER J WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <K> : "Ǩ" U01E8 # LATIN CAPITAL LETTER K WITH CARON
+<Multi_key><less><less><less>                                                        <K> : "Ǩ" U01E8 # LATIN CAPITAL LETTER K WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <k> : "ǩ" U01E9 # LATIN SMALL LETTER K WITH CARON
+<Multi_key><less><less><less>                                                        <k> : "ǩ" U01E9 # LATIN SMALL LETTER K WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <L> : "Ľ" U013D # LATIN CAPITAL LETTER L WITH CARON
+<Multi_key><less><less><less>                                                        <L> : "Ľ" U013D # LATIN CAPITAL LETTER L WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <l> : "ľ" U013E # LATIN SMALL LETTER L WITH CARON
+<Multi_key><less><less><less>                                                        <l> : "ľ" U013E # LATIN SMALL LETTER L WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <N> : "Ň" U0147 # LATIN CAPITAL LETTER N WITH CARON
+<Multi_key><less><less><less>                                                        <N> : "Ň" U0147 # LATIN CAPITAL LETTER N WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <n> : "ň" U0148 # LATIN SMALL LETTER N WITH CARON
+<Multi_key><less><less><less>                                                        <n> : "ň" U0148 # LATIN SMALL LETTER N WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <O> : "Ǒ" U01D1 # LATIN CAPITAL LETTER O WITH CARON
+<Multi_key><less><less><less>                                                        <O> : "Ǒ" U01D1 # LATIN CAPITAL LETTER O WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <o> : "ǒ" U01D2 # LATIN SMALL LETTER O WITH CARON
+<Multi_key><less><less><less>                                                        <o> : "ǒ" U01D2 # LATIN SMALL LETTER O WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <R> : "Ř" U0158 # LATIN CAPITAL LETTER R WITH CARON
+<Multi_key><less><less><less>                                                        <R> : "Ř" U0158 # LATIN CAPITAL LETTER R WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <r> : "ř" U0159 # LATIN SMALL LETTER R WITH CARON
+<Multi_key><less><less><less>                                                        <r> : "ř" U0159 # LATIN SMALL LETTER R WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <S> : "Š" U0160 # LATIN CAPITAL LETTER S WITH CARON
+<Multi_key><less><less><less>                                                        <S> : "Š" U0160 # LATIN CAPITAL LETTER S WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <s> : "š" U0161 # LATIN SMALL LETTER S WITH CARON
+<Multi_key><less><less><less>                                                        <s> : "š" U0161 # LATIN SMALL LETTER S WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <T> : "Ť" U0164 # LATIN CAPITAL LETTER T WITH CARON
+<Multi_key><less><less><less>                                                        <T> : "Ť" U0164 # LATIN CAPITAL LETTER T WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <t> : "ť" U0165 # LATIN SMALL LETTER T WITH CARON
+<Multi_key><less><less><less>                                                        <t> : "ť" U0165 # LATIN SMALL LETTER T WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <U> : "Ǔ" U01D3 # LATIN CAPITAL LETTER U WITH CARON
+<Multi_key><less><less><less>                                                        <U> : "Ǔ" U01D3 # LATIN CAPITAL LETTER U WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <u> : "ǔ" U01D4 # LATIN SMALL LETTER U WITH CARON
+<Multi_key><less><less><less>                                                        <u> : "ǔ" U01D4 # LATIN SMALL LETTER U WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
+<Multi_key><less><less><less>                                                        <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                  <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
+<Multi_key><less><less><less>                                                        <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 #
 #
 #*# HACEK
@@ -2739,20 +2774,11 @@
 #   unless a quick access sequence conflicts with regular support.
 #   See #*# DIAERESIS
 #
-#   Some of these Multi_key equivalents would conflict with space terminated
-#   mathematical symbol sequences, that are much more powerful, so these are
-#   removed as pointless. This is a convenience for dead keys only.
-#
 #   The only exception is ⹀ U2E40 DOUBLE HYPHEN as a feature for lexicography.
 #   With respect to this, mathematical symbols use <Multi_key><minus><equal>.
 #
 <UEFD7>                                                                          <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><equal>                                                               <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-#
-<UEFD7>                                                                          <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<UEFD7>                                                                           <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
-<UEFD7>                                                                        <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
-<UEFD7>                                                                          <equal> : "≡" U2261 # IDENTICAL TO
 #
 #
 # # EQUAL&GROUP1
@@ -4478,7 +4504,12 @@
 #   Dot below has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Dot_Below
 #
-#   Digits 2, 3, 4, 6 yield vertical multidot punctuation.
+#   Digits yield multidot punctuation.
+#
+#   Beware of the glyph disturbancy affecting many fonts including those in use
+#   on GitHub and in Google Search, that makes "⸪" U2E2A TWO DOTS OVER ONE DOT
+#   PUNCTUATION look like "⸬" U2E2C SQUARED FOUR DOT PUNCTUATION, this like "⸫"
+#   U2E2B ONE DOT OVER TWO DOTS PUNCTUATION, and this like U2E2A.
 #
 <dead_belowdot>                                                                  <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                              <space> : "̣" U0323 # COMBINING DOT BELOW
