@@ -4506,7 +4506,7 @@
 #
 #   Digits yield multidot punctuation.
 #
-#   Beware of the glyph disturbancy affecting many fonts including those in use
+#   Beware of the glyph disturbance affecting many fonts including those in use
 #   on GitHub and in Google Search, that makes "⸪" U2E2A TWO DOTS OVER ONE DOT
 #   PUNCTUATION look like "⸬" U2E2C SQUARED FOUR DOT PUNCTUATION, this like "⸫"
 #   U2E2B ONE DOT OVER TWO DOTS PUNCTUATION, and this like U2E2A.
