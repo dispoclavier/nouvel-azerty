@@ -4771,8 +4771,6 @@
 <Multi_key><colon>                                                              <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 <dead_diaeresis>                                                              <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><colon>                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<dead_diaeresis>                                                                 <equal> : "≔" U2254 # COLON EQUALS
-<Multi_key><colon>                                                               <equal> : "≔" U2254 # COLON EQUALS
 <dead_diaeresis>                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                 <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                 <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
@@ -4781,8 +4779,6 @@
 <Multi_key><colon>                                                           <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 <dead_diaeresis>                                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><colon>                                                               <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<dead_diaeresis>                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><colon>                                                               <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <dead_diaeresis>                                                                  <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
 <Multi_key><colon>                                                                <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
 <dead_diaeresis>                                                               <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
