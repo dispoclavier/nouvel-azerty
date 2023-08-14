@@ -5,6 +5,7 @@
 * Séquences de composition : Compléter les séquences de "♥" U2665. (compose-1.yml [26166c2](https://github.com/dispoclavier/nouvel-azerty/commit/26166c2b5740016b4265cce3db5e80aa7b130e49))
 * Touches mortes : Accent circonflexe : Désactiver les chiffres en exposant. Tréma : Ajouter les chiffres en exposant. Hatchek : Ajouter l’équivalent en composition des chiffres en indice. (compose-2.yml [1485b62](https://github.com/dispoclavier/nouvel-azerty/commit/1485b62fe83adb9cc72296d3dbbf71f8991fb123))
 * Touches mortes : Tréma : Supprimer les ponctuations à base de chiffres. Point souscrit : Ajouter ces ponctuations et les compléter. (compose-2.yml [310cbde](https://github.com/dispoclavier/nouvel-azerty/commit/310cbde97cd94aecaae1d39d8b8936cafd001f5b))
+* Touches mortes : Ajouter l’équivalent en composition partout où il manquait. Supprimer ou déplacer les séquences en conflit. (compose-1.yml [45a1a5d](https://github.com/dispoclavier/nouvel-azerty/commit/45a1a5d2d0fc4b2efeaf3b8bd5d1cf6618bb015c), compose-2.yml [8a8db25](https://github.com/dispoclavier/nouvel-azerty/commit/8a8db25f6c2f20fc141dbd946d3a8059406f6bdc))
 
 ## 1.0.5 (2023-08-11)
 
