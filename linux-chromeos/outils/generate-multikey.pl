@@ -6,7 +6,7 @@
 # 2023-04-26T1950+0200
 # 2023-05-12T1154+0200
 # 2023-08-01T2210+0200
-# 2023-08-15T0547+0200
+# 2023-08-15T0611+0200
 # 
 # Adds the Multi_key equivalent below all dead key
 # lines prefixed with an '@' sign for the purpose.
@@ -20,7 +20,7 @@
 # Multi_key lines prefixed with an '!' are removed.
 #
 # Adds the sequence with keypad aliases instead of
-# digits below Multi_key lines prefixed with a '['.
+# digits below lines prefixed with a '['.
 #
 # Adds the literal to lines prefixed with an '&'.
 #
