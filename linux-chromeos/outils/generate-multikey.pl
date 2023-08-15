@@ -6,9 +6,11 @@
 # 2023-04-26T1950+0200
 # 2023-05-12T1154+0200
 # 2023-08-01T2210+0200
+# 2023-08-15T0547+0200
 # 
 # Adds the Multi_key equivalent below all dead key
 # lines prefixed with an '@' sign for the purpose.
+#
 # Supports also section sign in lieu of semicolon.
 #
 # Removes already existing Multi_key lines if they
@@ -16,6 +18,9 @@
 # adding duplicate Multi_key lines.
 #
 # Multi_key lines prefixed with an '!' are removed.
+#
+# Adds the sequence with keypad aliases instead of
+# digits below Multi_key lines prefixed with a '['.
 #
 # Adds the literal to lines prefixed with an '&'.
 #
@@ -68,11 +73,7 @@ open( OUTPUT, '>', $file_path ) or die $!;
 print( "File $file_path opened successfully!\n" );
 
 print( "Processing content from $backup_path to $file_path.\n" );
-my $sta = '';
-my $end = '';
-my $str = '';
-my $cp  = '';
-my $out = '';
+my ( $sta, $end, $str, $cp, $out );
 while ( my $line = <BACKUP> ) {
 	if ( $line =~ /^\?/ ) {
 		$line =~ s/^\?//;
@@ -97,6 +98,18 @@ while ( my $line = <BACKUP> ) {
 		$line =~ s/^&//;
 		if ( $line =~ /^(.+ :) +(U([0-9A-F]{4,5}).+)$/ ) {
 			$line = $1 . ' "' . chr( hex( $3 ) ) . '" ' . $2 . "\n";
+		}
+		print OUTPUT $line;
+	} elsif ( $line =~ /^\[/ ) {
+		$line =~ s/^\[//;
+		if ( $line =~ /^<.+<\d>/ ) {
+			print OUTPUT $line;
+			while ( $line =~ /^[^ ]+<\d>/ ) {
+				$line =~ s/^([^ ]+)<(\d)>([^ ]* )   /$1<KP_$2>$3/;
+			}
+			while ( $line =~ /^[^ ]+ +[^ ]*<\d>/ ) {
+				$line =~ s/^([^ ]+ +)   ( [^ ]*)<(\d)>/$1$2<KP_$3>/;
+			}
 		}
 		print OUTPUT $line;
 	} elsif ( $line =~ /^!/ ) {
