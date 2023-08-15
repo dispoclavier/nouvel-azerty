@@ -5530,16 +5530,7 @@
 #
 #   By composition, also supporting other dashes and hyphens
 #
-<Multi_key><0><minus>                                                                    : "­" U00AD # SOFT HYPHEN
-<Multi_key><1><minus>                                                                    : "—" U2014 # EM DASH
-<Multi_key><2><minus>                                                                    : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><3><minus>                                                                    : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><4><minus>                                                                    : "‐" U2010 # HYPHEN
-<Multi_key><5><minus>                                                                    : "–" U2013 # EN DASH
-<Multi_key><6><minus>                                                                    : "‒" U2012 # FIGURE DASH
-<Multi_key><7><minus>                                                                    : "―" U2015 # HORIZONTAL BAR
-<Multi_key><8><minus>                                                                    : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><9><minus>                                                                    : "‑" U2011 # NON-BREAKING HYPHEN
+#   See # # Dashes and hyphens
 #
 #
 # # HAIR SPACE
@@ -9672,7 +9663,7 @@
 <UEFD0><8>                                                                           <3> : "𝟛" U1D7DB # MATHEMATICAL DOUBLE-STRUCK DIGIT THREE
 <Multi_key><numbersign><8>                                                           <3> : "𝟛" U1D7DB # MATHEMATICAL DOUBLE-STRUCK DIGIT THREE
 <UEFD0><8>                                                                           <4> : "𝟜" U1D7DC # MATHEMATICAL DOUBLE-STRUCK DIGIT FOUR
-<Multi_key><numbersign><8>                                                           <4> : "���" U1D7DC # MATHEMATICAL DOUBLE-STRUCK DIGIT FOUR
+<Multi_key><numbersign><8>                                                           <4> : "𝟜" U1D7DC # MATHEMATICAL DOUBLE-STRUCK DIGIT FOUR
 <UEFD0><8>                                                                           <5> : "𝟝" U1D7DD # MATHEMATICAL DOUBLE-STRUCK DIGIT FIVE
 <Multi_key><numbersign><8>                                                           <5> : "𝟝" U1D7DD # MATHEMATICAL DOUBLE-STRUCK DIGIT FIVE
 <UEFD0><8>                                                                           <6> : "𝟞" U1D7DE # MATHEMATICAL DOUBLE-STRUCK DIGIT SIX
