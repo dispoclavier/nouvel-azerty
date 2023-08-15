@@ -838,6 +838,20 @@
 <Multi_key><comma><comma><quotedbl>                                                      : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
 #
 #
+# # Dashes and hyphens
+#
+<Multi_key><0><minus>                                                                    : "­" U00AD # SOFT HYPHEN
+<Multi_key><1><minus>                                                                    : "—" U2014 # EM DASH
+<Multi_key><2><minus>                                                                    : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><3><minus>                                                                    : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><4><minus>                                                                    : "‐" U2010 # HYPHEN
+<Multi_key><5><minus>                                                                    : "–" U2013 # EN DASH
+<Multi_key><6><minus>                                                                    : "‒" U2012 # FIGURE DASH
+<Multi_key><7><minus>                                                                    : "―" U2015 # HORIZONTAL BAR
+<Multi_key><8><minus>                                                                    : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><9><minus>                                                                    : "‑" U2011 # NON-BREAKING HYPHEN
+#
+#
 # # Ellipses and leaders
 #
 #   The common horizontal ellipsis, here for completeness, is on live key.
@@ -10119,7 +10133,6 @@
 #   See ### Group selector introduction
 #
 #   The content is in several dedicated sections.
-#   See ### Group selector content sorted by
 #   See ### Group selector content sorted by categories
 #   See ### Group selector content sorted by keys
 #   See ### Group selector content sorted by groups
