@@ -1,4 +1,4 @@
-//                       Date: 2023-08-16T1952+0200
+//                       Date: 2023-08-16T2123+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -690,19 +690,19 @@ xkb_symbols "kbfrFRs" {
 		[                        n,                        N,                    U207F,                backslash,                    UEFD6,                        0,                    UEF68,                    UEF69 ]
 	}; // U207F ⁿ superscript small n; UEFD6 *dead_reversed; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ '
 
-	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_ONE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_ONE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS";
 	key <AB07> {
-		[                    comma,                    UEF63,                 question,             dead_cedilla,                    UEF7B,               digitspace,                   U1F499,                   U1F49A ],
-		[                    comma,                    UEF63,                 question,             dead_cedilla,                    UEF7B,               digitspace,                   U1F499,                   U1F49A ]
-	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U2007   FIGURE SPACE; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
+		[                    comma,                 question,                 question,             dead_cedilla,                    UEF63,                 question,                   U1F499,                   U1F49A ],
+		[                    comma,                 question,                 question,             dead_cedilla,                    comma,                    UEF7B,               digitspace,                   U1F49A ]
+	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_TWO_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_TWO_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS";
 	key <AB08> {
-		[                   period,                    UEF60,                   exclam,            dead_belowdot,                    UEF7A,               punctspace,                   U1F4E2,                   U1F4E3 ],
-		[                   period,                    UEF60,                   exclam,            dead_belowdot,                    UEF7A,               punctspace,                   U1F4E2,                   U1F4E3 ]
-	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#'; U2008   PUNCTUATION SPACE; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji
+		[                   period,                   exclam,                   exclam,            dead_belowdot,                    UEF60,                   exclam,                   U1F4E2,                   U1F4E3 ],
+		[                   period,                   exclam,                   exclam,            dead_belowdot,                   period,                    UEF7A,               punctspace,                   U1F4E3 ]
+	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP2";
@@ -727,7 +727,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U202F ' ' NARROW NO-BREAK SPACE; U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying non-breaking space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying non-breaking space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
 
 	//
-	// Numeric keypad (numpad)
+	// Numpad
 	//
 	// The cursor key feature on the numpad is deactivated as outdated, redundant, wasting positions, and overloading the repurposed NumLock toggle.
 	//
