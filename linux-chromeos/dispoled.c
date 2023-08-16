@@ -1,4 +1,4 @@
-//                       Date: 2023-08-11T0821+0200
+//                       Date: 2023-08-16T1957+0200
 //        Operating file name: dispoled
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -21,9 +21,6 @@
 //                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
 //                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
-//                             kbfrFRhw French France hybrid AZERTY semiautomatic keyboard layout
-//                             kbfrFRhy French France hybrid QWERTZ semiautomatic keyboard layout
-//                             kbfrFRhz French France hybrid QWERTY semiautomatic keyboard layout
 //                             kbfrFRr  French France remapped semiautomatic keyboard layout
 //                             kbfrFRs  French France semiautomatic keyboard layout
 //                             kbfrPFs  French Polynesia semiautomatic keyboard layout
