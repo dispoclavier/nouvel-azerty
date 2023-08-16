@@ -1,4 +1,4 @@
-//                       Date: 2023-08-11T0932+0200
+//                       Date: 2023-08-16T1137+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -722,17 +722,17 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF62 ' ;' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
 	// Index:                  1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	key.type[Group1] = "EIGHT_LEVELS_SPACEBAR_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_SPACEBAR_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS";
 	key <SPCE> {
-		[                    space,             nobreakspace,                    U202F,                    U200B,                    UEF6E,                    UEF6F,                    UEF9B,                    UEF9F ],
-		[                    space,             nobreakspace,                    U202F,                    U200B,                    UEF6E,                    UEF6F,                    UEF9B,                    UEF9F ]
-	}; // U202F   NARROW NO-BREAK SPACE; U200B ​ ZERO WIDTH SPACE; UEF6E U0020 U2060 ' ⁠' justifying non-breaking space using WORD JOINER; UEF6F U0020 UFEFF ' ﻿' justifying non-breaking space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
+		[                    space,                    space,             nobreakspace,                    U200B,                    U202F,                    UEF6E,                    UEF6F,                    UEF9B ],
+		[                    space,                    space,                    space,                    UEF9B,                    space,                    UEF9F,                    UEF9F,                    UEF9B ]
+	}; // U202F ' ' NARROW NO-BREAK SPACE; U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying non-breaking space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying non-breaking space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
 
 	//
 	// Numeric keypad (numpad)
 	//
-	// The cursor key feature on the numpad is deactivated as outdated, redundant, and wasting positions.
+	// The cursor key feature on the numpad is deactivated as outdated, redundant, wasting positions, and overloading the repurposed NumLock toggle.
 	//
 	// For this to work on an overlay numpad with Fn held down, the AltFr modifier must be pressed before the Fn key.
 	//
@@ -1628,8 +1628,8 @@ xkb_symbols "kbfrFRr" {
 		[                        h,                        H,                     U02B0 ]
 	}; // superscript small h
 
-	// Key <SPCE> is included from kbfrFRs.
-	// Numeric keypad (numpad) is included from kbfrFRs.
+	// The spacebar is included from kbfrFRs.
+	// The numpad is included from kbfrFRs.
 	// Variant name:
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
