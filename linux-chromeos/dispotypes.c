@@ -1,4 +1,4 @@
-//                       Date: 2023-08-11T0822+0200
+//                       Date: 2023-08-16T1043+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -126,6 +126,37 @@ default partial xkb_types "dispocla" {
 		// These types are commented out in the original file as of Ubuntu 16.04:
 	// type "EIGHT_LEVEL_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(56).
 	// type "EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(118).
+
+	type "EIGHT_LEVELS_TWO_GROUPS" {
+
+		modifiers =                  Control + LevelFive + LevelThree + Shift;
+		map[ None                                                             ] = Level1;
+		map[                                                            Shift ] = Level2;
+		map[                                               LevelThree         ] = Level3;
+		map[                                               LevelThree + Shift ] = Level4;
+		map[                                   LevelFive                      ] = Level5;
+		map[                                   LevelFive              + Shift ] = Level6;
+		map[                                   LevelFive + LevelThree         ] = Level7;
+		map[                                   LevelFive + LevelThree + Shift ] = Level8;
+		map[                         Control                                  ] = Level1;
+		map[                         Control                          + Shift ] = Level1;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[                                                       Shift ] = Shift;
+		preserve[                                          LevelThree + Shift ] = Shift;
+		preserve[                              LevelFive              + Shift ] = Shift;
+		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+
+		level_name[ Level1 ] = "Base";
+		level_name[ Level2 ] = "Majuscule";
+		level_name[ Level3 ] = "AltGr";
+		level_name[ Level4 ] = "Majuscule + AltGr";
+		level_name[ Level5 ] = "AltFr";
+		level_name[ Level6 ] = "Majuscule + AltFr";
+		level_name[ Level7 ] = "AltGr + AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
+
+	};
 
 	type "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1" {
 		// Based on EIGHT_LEVEL_SEMIALPHABETIC (not EIGHT_LEVELS_SEMIALPHABETIC).
