@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2023-08-11T0823+0200
+                       Date: 2023-08-16T1922+0200
           Partial file name: evdev-additions.xml
-         Partial added date: 2023-07-10T1751+0200
                    Encoding: UTF-8
                        Type: text/XML
                 Description: XKB keyboard layout switch configuration partial
@@ -231,28 +230,10 @@
 						<description>Français Suisse disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>-->
-				<variant><!--Les 4 variantes ci-après comportent des lettres redisposées;-->
-					<configItem><!--conçues en symbiose avec l’AZERTY, changements minimaux-->
+				<variant>
+					<configItem>
 						<name>kbfrFRr</name><!--semi-automatique pour l’espacement elle aussi-->
 						<description>Français redisposé disposition de clavier semi-automatique</description>
-					</configItem>
-				</variant>
-				<variant>
-					<configItem>
-						<name>kbfrFRhw</name><!--Lettres redisposées, raccourcis Contrôle en AZERTY-->
-						<description>Français hybride AZERTY disposition de clavier semi-automatique</description>
-					</configItem>
-				</variant>
-				<variant>
-					<configItem>
-						<name>kbfrFRhz</name><!--Lettres redisposées, raccourcis Contrôle en QWERTY-->
-						<description>Français hybride QWERTY disposition de clavier semi-automatique</description>
-					</configItem>
-				</variant>
-				<variant>
-					<configItem>
-						<name>kbfrFRhy</name><!--Lettres redisposées, raccourcis Contrôle en QWERTZ-->
-						<description>Français hybride QWERTZ disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
 			</variantList>
