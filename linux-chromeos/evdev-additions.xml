@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2023-08-16T1922+0200
+                       Date: 2023-08-16T1954+0200
           Partial file name: evdev-additions.xml
                    Encoding: UTF-8
                        Type: text/XML
@@ -23,9 +23,6 @@
                  (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
                  (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
                  (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
-                             kbfrFRhw French France hybrid AZERTY semiautomatic keyboard layout
-                             kbfrFRhy French France hybrid QWERTZ semiautomatic keyboard layout
-                             kbfrFRhz French France hybrid QWERTY semiautomatic keyboard layout
                              kbfrFRr  French France remapped semiautomatic keyboard layout
                              kbfrFRs  French France semiautomatic keyboard layout
                              kbfrPFs  French Polynesia semiautomatic keyboard layout
