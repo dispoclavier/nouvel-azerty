@@ -1,4 +1,4 @@
-//                       Date: 2023-08-17T0320+0200
+//                       Date: 2023-08-17T0355+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -519,16 +519,16 @@ xkb_symbols "kbfrFRs" {
 		[               dead_grave,                     plus,                    U208A,                    U207A,                        F,                    equal,                    UEFCB,               braceright ]
 	}; // U02B3 ʳ superscript small r; U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key <AD01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        a,                        A,                    U1D43,              asciicircum,                    UEFD1,                      C_H,                      c_h,                      C_h ],
 		[                        a,                        A,                    U1D43,              asciicircum,                    UEFD1,                      C_H,                      c_h,                      C_h ]
 	}; // U1D43 ᵃ superscript small a; UEFD1 *dead_superscript; Breton trigraph: lowercase, titlecase, uppercase with CapsLock only on supporting systems
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
 		[                        z,                        Z,                    U1DBB,                  percent,                    UEFD5,                  percent,                 permille,                  U1F627 ],
 		[                        z,                        Z,                    U1DBB,                  percent,                    UEFD5,                  percent,                 permille,                  U1F627 ]
@@ -588,8 +588,8 @@ xkb_symbols "kbfrFRs" {
 		[               underscore,                    UEF67,                Multi_key,                    U203A,                        D,                   dollar,                 sterling,             bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        q,                        Q,                   U107A5,               numbersign,                    UEFD0,               numbersign,                   U1F610,                   U1F611 ],
@@ -655,8 +655,8 @@ xkb_symbols "kbfrFRs" {
 		[                    UEFD0,                    UEF65,                 asterisk,           guillemotright,                        B,                    minus,                       mu,                semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; SEMICOLON for application shortcut mapping
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                   U1F622,                   U1F62D ],
@@ -683,8 +683,8 @@ xkb_symbols "kbfrFRs" {
 		[                        b,                        B,                    U1D47,                    equal,                    UEFD7,                    UEF6D,                   U1F618,                   U1F495 ]
 	}; // U1D47 ᵇ superscript small b; UEFD7 *dead_equal regional indicator letters; UEF6D '00'; U1F618 😘 FACE THROWING A KISS sixth-most [smiling second-most] used emoji in France, ninth-most worldwide; U1F495 💕 TWO HEARTS seventh-most used emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key <AB06> {
 		[                        n,                        N,                    U207F,                backslash,                    UEFD6,                        0,                    UEF68,                    UEF69 ],
 		[                        n,                        N,                    U207F,                backslash,                    UEFD6,                        0,                    UEF68,                    UEF69 ]
@@ -1155,8 +1155,8 @@ xkb_symbols "kbfrCAs" {
 		[                        q,                        Q,               numbersign,                    UEFD7,                    UEF68,                    UEF69,               numbersign,               numerosign ]
 	}; // *dead_equal regional indicator letters; 'nᵒ '; 'Nᵒ ' (with NNBSP); '#' (duplicate for ease of access when AltFr is down); U2116 NUMERO SIGN
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
 		[                        w,                        W,                    equal,               dead_greek,                    UEF6D,                    U02B7,                    U2126,                    U2550 ],
 		[                        w,                        W,                    equal,               dead_greek,                    UEF6D,                    U02B7,                    U2126,                    U2550 ]
@@ -1177,8 +1177,8 @@ xkb_symbols "kbfrCAs" {
 		[             dead_cedilla ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        a,                        A,                       at,                    U25CC,                  section,                    U1D43,                    U00AA,       enfilledcircbullet ],
@@ -1208,16 +1208,16 @@ xkb_symbols "kbfrCAs" {
 	}; // group selector dead key; double angle quote with NNBSP and unspaced; U00B5 MICRO SIGN
 
 	// Index:                             1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key <AB01> {
 		[                        z,                        Z,                  percent,                      C_H,                  percent,                    U1DBB,                      c_h,                      C_h ],
 		[                        z,                        Z,                  percent,                      C_H,                  percent,                    U1DBB,                      c_h,                      C_h ]
 	}; // Breton trigraph; superscript small z
 
 	// 6 keys included from kbfrFRs
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB07> {
 		[                        m,                        M,                      bar,              dead_macron,                    colon,                    U1D50,                   endash,                    U2014 ],
 		[                        m,                        M,                      bar,              dead_macron,                    colon,                    U1D50,                   endash,                    U2014 ]
@@ -1356,8 +1356,8 @@ xkb_symbols "kbfrCHs" {
 		[                 ccedilla,                 Ccedilla ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key <AD06> {
 		[                        z,                        Z,               apostrophe,                      C_H,                  percent,                    U1DBB,                      c_h,                      C_h ],
 		[                        z,                        Z,               apostrophe,                      C_H,                  percent,                    U1DBB,                      c_h,                      C_h ]
@@ -1396,8 +1396,8 @@ xkb_symbols "kbfrCHs" {
 		[          dead_circumflex,                 question,                 NoSymbol,                 NoSymbol,                 NoSymbol,                   dollar ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		[                        y,                        Y,                  percent,               dead_acute,               numbersign,                    U02B8,                      yen,                    U200C ],
 		[                        y,                        Y,                  percent,               dead_acute,               numbersign,                    U02B8,                      yen,                    U200C ]
@@ -1498,8 +1498,8 @@ xkb_symbols "kbfrFRr" {
 
 	// Key <AE11> is included from kbfrFRs.
 	// Key <AE12> is included from kbfrFRs.
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key <AD01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        q,                        Q,                   U107A5 ],
@@ -1507,8 +1507,8 @@ xkb_symbols "kbfrFRr" {
 	}; // superscript small q
 
 	// Key <AD02> is included from kbfrFRs.
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD03> {
 		[                        j,                        J,                    U02B2 ],
 		[                        j,                        J,                    U02B2 ]
@@ -1553,8 +1553,8 @@ xkb_symbols "kbfrFRr" {
 		[               underscore,                 NoSymbol,                    UEFD0 ]
 	}; // Other indices included from kbfrFRs.
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        a,                        A,                    U1D43 ],
@@ -1617,8 +1617,8 @@ xkb_symbols "kbfrFRr" {
 	}; // Other indices included from kbfrFRs.
 
 	// Row B is included from kbfrFRs, except:
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key <AB06> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        h,                        H,                     U02B0 ],
