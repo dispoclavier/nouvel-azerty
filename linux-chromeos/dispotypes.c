@@ -1,4 +1,4 @@
-//                       Date: 2023-08-16T2006+0200
+//                       Date: 2023-08-17T0304+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -137,12 +137,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8;
 		map[                         Control                                  ] = Level1;
 		map[                         Control                          + Shift ] = Level1;
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -2838,7 +2838,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_PUNCTUATION_TWO_GROUP2" {
-		// Based on EIGHT_LEVELS_PUNCTUATION_ONE.000
+		// Based on EIGHT_LEVELS_PUNCTUATION_ONE.
 		// Used on AB08.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
@@ -2876,7 +2876,7 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level3; // 
-		map[                                                            Shift ] = Level5; // 
+		map[                                                            Shift ] = Level1; // 
 		map[                                               LevelThree         ] = Level3; // 
 		map[                                               LevelThree + Shift ] = Level4; // 
 		map[                                   LevelFive                      ] = Level3; // 
@@ -2909,7 +2909,7 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level3; // 
-		map[                                                            Shift ] = Level5; // 
+		map[                                                            Shift ] = Level1; // 
 		map[                                               LevelThree         ] = Level3; // 
 		map[                                               LevelThree + Shift ] = Level4; // 
 		map[                                   LevelFive                      ] = Level3; // 
