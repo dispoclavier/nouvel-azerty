@@ -124,8 +124,9 @@ default partial xkb_types "dispocla" {
 	// type "EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(118).
 
 	type "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL" {
+		// Based on EIGHT_LEVELS_SPACEBAR_GROUP1.
 
-		modifiers =                  Control + LevelFive + LevelThree + Shift;
+		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1;
 		map[                                                            Shift ] = Level2;
 		map[                                               LevelThree         ] = Level3;
@@ -157,7 +158,7 @@ default partial xkb_types "dispocla" {
 	type "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL" {
 		// Based on EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL.
 
-		modifiers =                  Control + LevelFive + LevelThree + Shift;
+		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1;
 		map[                                                            Shift ] = Level2;
 		map[                                               LevelThree         ] = Level3;
@@ -182,6 +183,47 @@ default partial xkb_types "dispocla" {
 		level_name[ Level5 ] = "AltFr";
 		level_name[ Level6 ] = "Majuscule + AltFr";
 		level_name[ Level7 ] = "AltGr + AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
+
+	};
+
+	type "EIGHT_LEVELS_TWO_GROUPS_CAPITAL_LASTCONTROL" {
+		// Based on EIGHT_LEVELS_AC11_GROUP1.
+		// A casing letter on level 1, if any, is passed on to internal capitalization.
+
+		modifiers =                  Control + LevelFive + LevelThree + Shift;
+		map[ None                                                             ] = Level1; // 
+		map[                                                            Shift ] = Level2; // 
+		map[                                               LevelThree         ] = Level3; // 
+		map[                                               LevelThree + Shift ] = Level4; // 
+		map[                                   LevelFive                      ] = Level5; //  
+		map[                                   LevelFive              + Shift ] = Level6; // 
+		map[                                   LevelFive + LevelThree         ] = Level7; // 
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
+		map[                         Control                                  ] = Level8; // 
+		map[                         Control                          + Shift ] = Level8; // 
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[                                                       Shift ] = Shift;
+		preserve[                                          LevelThree + Shift ] = Shift;
+		preserve[                              LevelFive              + Shift ] = Shift;
+		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[             Lock                                            ] = Lock;
+		preserve[             Lock                                    + Shift ] = Lock;
+		preserve[             Lock                       + LevelThree         ] = Lock;
+		preserve[             Lock                       + LevelThree + Shift ] = Lock;
+		preserve[             Lock           + LevelFive                      ] = Lock;
+		preserve[             Lock           + LevelFive              + Shift ] = Lock;
+		preserve[             Lock           + LevelFive + LevelThree         ] = Lock;
+		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Lock;
+
+		level_name[ Level1 ] = "Base";
+		level_name[ Level2 ] = "AltFr";
+		level_name[ Level3 ] = "AltGr";
+		level_name[ Level4 ] = "Majuscule + AltGr";
+		level_name[ Level5 ] = "Majuscule + AltFr";
+		level_name[ Level6 ] = "Majuscule + AltFr";
+		level_name[ Level7 ] = "Majuscule (chiffres verrouillés)";
 		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
 
 	};
