@@ -1,4 +1,3 @@
-//                       Date: 2023-08-17T0356+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -124,7 +123,7 @@ default partial xkb_types "dispocla" {
 	// type "EIGHT_LEVEL_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(56).
 	// type "EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(118).
 
-	type "EIGHT_LEVELS_TWO_GROUPS" {
+	type "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1;
@@ -137,6 +136,38 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8;
 		map[                         Control                                  ] = Level1;
 		map[                         Control                          + Shift ] = Level1;
+		preserve[                                                       Shift ] = Shift;
+		preserve[                                          LevelThree + Shift ] = Shift;
+		preserve[                              LevelFive              + Shift ] = Shift;
+		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+
+		level_name[ Level1 ] = "Base";
+		level_name[ Level2 ] = "Majuscule";
+		level_name[ Level3 ] = "AltGr";
+		level_name[ Level4 ] = "Majuscule + AltGr";
+		level_name[ Level5 ] = "AltFr";
+		level_name[ Level6 ] = "Majuscule + AltFr";
+		level_name[ Level7 ] = "AltGr + AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
+
+	};
+
+	type "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL" {
+		// Based on EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL.
+
+		modifiers =                  Control + LevelFive + LevelThree + Shift;
+		map[ None                                                             ] = Level1;
+		map[                                                            Shift ] = Level2;
+		map[                                               LevelThree         ] = Level3;
+		map[                                               LevelThree + Shift ] = Level4;
+		map[                                   LevelFive                      ] = Level5;
+		map[                                   LevelFive              + Shift ] = Level6;
+		map[                                   LevelFive + LevelThree         ] = Level7;
+		map[                                   LevelFive + LevelThree + Shift ] = Level8;
+		map[                         Control                                  ] = Level8;
+		map[                         Control                          + Shift ] = Level8;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
