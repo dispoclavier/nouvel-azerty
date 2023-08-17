@@ -580,11 +580,11 @@ xkb_symbols "kbfrFRs" {
 		[                 quotedbl,              bracketleft,              asciicircum,              asciicircum,                        C,           dead_diaeresis,                        C,              bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK
 
-	key.type[Group1] = "EIGHT_LEVELS_AD12_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AD12_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD12> {
-		[               dead_acute,                    UEF67,                Multi_key,                    U203A,                        D,                   dollar,                 sterling,             bracketright ],
-		[               underscore,                    UEF67,                Multi_key,                    U203A,                        D,                   dollar,                 sterling,             bracketright ]
+		[               dead_acute,                    U203A,                Multi_key,                   dollar,                    UEF67,                 sterling,                        D,             bracketright ],
+		[               underscore,             bracketright,                Multi_key,                   dollar,                        D,                 sterling,                        D,             bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -640,18 +640,18 @@ xkb_symbols "kbfrFRs" {
 		[                        m,                        M,                    U1D50,                      bar,              dead_macron,                    comma,                       mu,                   U1F637 ]
 	}; // U1D50 ᵐ superscript small m; U00B5 µ MICRO SIGN; U1F637 😷 FACE WITH MEDICAL MASK emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_AC11_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AC11_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_CAPITAL_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_CAPITAL_LASTCONTROL";
 	key <AC11> {
-		[                   ugrave,                    UEF64,                 ellipsis,            guillemotleft,                        A,                    grave,                  percent,               apostrophe ],
-		[                   ugrave,                    UEF64,                 ellipsis,            guillemotleft,                        A,                    grave,                  percent,               apostrophe ]
+		[                   ugrave,            guillemotleft,                 ellipsis,                  percent,                    UEF64,                  percent,                        A,               apostrophe ],
+		[               apostrophe,                  percent,                    grave,                  percent,                        A,                  percent,                        A,               apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; APOSTROPHE for application shortcut mapping
 
-	key.type[Group1] = "EIGHT_LEVELS_BKSL_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_BKSL_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <BKSL> {
-		[                    UEFD0,                    UEF65,                 asterisk,           guillemotright,                        B,                    minus,                       mu,                semicolon ],
-		[                    UEFD0,                    UEF65,                 asterisk,           guillemotright,                        B,                    minus,                       mu,                semicolon ]
+		[                    UEFD0,           guillemotright,                    UEFD0,                 asterisk,                    UEF65,                       mu,                        B,                semicolon ],
+		[                    minus,                 asterisk,                    UEFD0,                 asterisk,                        B,                       mu,                        B,                semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; SEMICOLON for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1172,8 +1172,8 @@ xkb_symbols "kbfrFRr" {
 	}; // superscript small k
 
 	// Key <AD11> is included from kbfrFRs.
-	key.type[Group1] = "EIGHT_LEVELS_AD12_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AD12_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD12> {
 		[                    UEFD0,                 NoSymbol,                    UEFD0 ],
 		[               underscore,                 NoSymbol,                    UEFD0 ]
@@ -1228,18 +1228,19 @@ xkb_symbols "kbfrFRr" {
 		[                        p,                        P,                    U1D56 ]
 	}; // superscript small p
 
-	key.type[Group1] = "EIGHT_LEVELS_AC11_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AC11_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AC11> {
 		[     rightsinglequotemark ],
-		[     rightsinglequotemark ]
+		[                 NoSymbol ]
 	}; // Other indices included from kbfrFRs.
 
-	key.type[Group1] = "EIGHT_LEVELS_BKSL_REMAP_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_BKSL_REMAP_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <BKSL> {
-		[                Multi_key ],
-		[                Multi_key ]
+		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+		[                    minus,                 NoSymbol,                Multi_key ],
+		[                    minus,                 NoSymbol,                Multi_key ]
 	}; // Other indices included from kbfrFRs.
 
 	// Row B is included from kbfrFRs, except:
