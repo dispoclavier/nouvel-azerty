@@ -1,4 +1,3 @@
-//                       Date: 2023-08-17T0355+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -574,11 +573,11 @@ xkb_symbols "kbfrFRs" {
 		[                        p,                        P,                    U1D56,                ampersand,            dead_abovedot,                   period,                paragraph,                    UEF8B ]
 	}; // U1D56 ᵖ superscript small p; UEF8B '&amp;'
 
-	key.type[Group1] = "EIGHT_LEVELS_AD11_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AD11_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD11> {
-		[          dead_circumflex,                    UEF66,               dead_tilde,                    U2039,                        C,              asciicircum,           dead_diaeresis,              bracketleft ],
-		[                 quotedbl,                    UEF66,               dead_tilde,                    U2039,                        C,              asciicircum,           dead_diaeresis,              bracketleft ]
+		[          dead_circumflex,                    U2039,               dead_tilde,              asciicircum,                    UEF66,           dead_diaeresis,                        C,              bracketleft ],
+		[                 quotedbl,              bracketleft,              asciicircum,              asciicircum,                        C,           dead_diaeresis,                        C,              bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK
 
 	key.type[Group1] = "EIGHT_LEVELS_AD12_GROUP1";
@@ -690,15 +689,15 @@ xkb_symbols "kbfrFRs" {
 		[                        n,                        N,                    U207F,                backslash,                    UEFD6,                        0,                    UEF68,                    UEF69 ]
 	}; // U207F ⁿ superscript small n; UEFD6 *dead_reversed; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ '
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key <AB07> {
 		[                    comma,                 question,                 question,             dead_cedilla,                    UEF63,                 question,                   U1F499,                   U1F49A ],
 		[                    comma,                 question,                 question,             dead_cedilla,                    comma,                    UEF7B,               digitspace,                   U1F49A ]
 	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key <AB08> {
 		[                   period,                   exclam,                   exclam,            dead_belowdot,                    UEF60,                   exclam,                   U1F4E2,                   U1F4E3 ],
 		[                   period,                   exclam,                   exclam,            dead_belowdot,                   period,                    UEF7A,               punctspace,                   U1F4E3 ]
@@ -719,8 +718,8 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF62 ' ;' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
 	// Index:                  1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key <SPCE> {
 		[                    space,                    space,             nobreakspace,                    U200B,                    U202F,                    UEF6E,                    UEF6F,                    UEF9B ],
 		[                    space,                    space,                    space,                    UEF9B,                    space,                    UEF9F,                    UEF9F,                    UEF9B ]
@@ -971,11 +970,11 @@ xkb_symbols "kbfrPFs" {
 		[              dead_macron ]
 	};// Used in Polynesian.
 
-	key.type[Group1] = "EIGHT_LEVELS_AD11_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AD11_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD11> {
 		[                 NoSymbol,                 NoSymbol,               dead_grave ],
-		[                 NoSymbol,                 NoSymbol,               dead_grave ]
+		[                 NoSymbol ]
 	};// Used in Polynesian.
 
 	// Variant name:
@@ -1163,11 +1162,11 @@ xkb_symbols "kbfrCAs" {
 	}; // '00'; superscript small w; OHM SIGN; BOX DRAWINGS DOUBLE HORIZONTAL
 
 	// 8 keys included from kbfrFRs
-	key.type[Group1] = "EIGHT_LEVELS_AD11_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AD11_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD11> {
-		[                 NoSymbol,                 NoSymbol,           dead_diaeresis,                 NoSymbol,                 NoSymbol,                 quotedbl ],
-		[                 NoSymbol,                 NoSymbol,           dead_diaeresis,                 NoSymbol,                 NoSymbol,                 quotedbl ]
+		[                 NoSymbol,                 NoSymbol,           dead_diaeresis,                 quotedbl ],
+		[                 NoSymbol,                 NoSymbol,                 quotedbl,                 quotedbl ]
 	};
 
 	key.type[Group1] = "EIGHT_LEVELS_AD12_GROUP1";
@@ -1283,8 +1282,8 @@ xkb_symbols "kbfrCAms" {
 	};
 
 	// 10 keys included from kbfrCAs
-	key.type[Group1] = "EIGHT_LEVELS_AD11_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_AD11_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD11> {
 		[          dead_circumflex,           dead_diaeresis ],
 		[          dead_circumflex,           dead_diaeresis ]
