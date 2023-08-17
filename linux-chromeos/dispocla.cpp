@@ -1,4 +1,4 @@
-//                       Date: 2023-08-16T2123+0200
+//                       Date: 2023-08-17T0320+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -707,15 +707,15 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP2";
 	key <AB09> {
-		[                    slash,                    UEF61,                    colon,           dead_diaeresis,                    slash,                    U2044,                   U1F615,                   U1F603 ],
-		[                    slash,                    UEF61,                    colon,           dead_diaeresis,                    slash,                    U2044,                   U1F615,                   U1F603 ]
+		[                    slash,                    UEF61,                    colon,           dead_diaeresis,                    U2044,                   U1F615,                   U1F603,                    slash ],
+		[                    slash,                    UEF61,                    colon,           dead_diaeresis,                    U2044,                   U1F615,                   U1F603,                    slash ]
 	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F603 😃 SMILING FACE WITH OPEN MOUTH emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_FOUR_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_FOUR_GROUP2";
 	key <AB10> {
-		[                backslash,                    UEF62,                semicolon,          dead_belowcomma,                backslash,                  section,                   U1F494,                   U1F609 ],
-		[                backslash,                    UEF62,                semicolon,          dead_belowcomma,                backslash,                  section,                   U1F494,                   U1F609 ]
+		[                backslash,                    UEF62,                semicolon,          dead_belowcomma,                  section,                   U1F494,                   U1F609,                backslash ],
+		[                backslash,                    UEF62,                semicolon,          dead_belowcomma,                  section,                   U1F494,                   U1F609,                backslash ]
 	}; // UEF62 ' ;' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
 	// Index:                  1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
