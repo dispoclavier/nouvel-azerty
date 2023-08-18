@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-08-08T0749+0200
-# 2023-08-18T0347+0200
+# 2023-08-18T0349+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -12,14 +12,11 @@
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
-# Descriptors, which means “edited French character names,” are prioritized.
-# The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
-# Linux and ChromeOS. At this point it is incomplete as it is based on v10.
-# Tooltips for characters added to Unicode after v10 use `ListeNoms.txt`.
+# `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
 #
 # The output is designed for use in WordPress. An all-in-one table is generated
 # alongside, although neither WordPress editor registers it (memory limit 1024M
-# for the purpose, both in PHP and in WordPress).
+# for the purpose, both in PHP and in WordPress). It cannot be embedded either.
 #
 # Using old-style file handles.
 use warnings;
