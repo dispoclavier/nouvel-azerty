@@ -1,3 +1,5 @@
+//                       Date: 2023-08-18T0326+0200
+//              Last revision: 2023-08-17T1202+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
