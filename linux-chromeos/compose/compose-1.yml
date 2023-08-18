@@ -2140,8 +2140,8 @@
 #
 #   Symbol for Escape key
 #
-<Multi_key><e><s><c>                                                                     : "⎋" U238B	BROKEN CIRCLE WITH NORTHWEST ARROW
-<Multi_key><E><S><C>                                                                     : "⎋" U238B	BROKEN CIRCLE WITH NORTHWEST ARROW
+<Multi_key><e><s><c>                                                                     : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
+<Multi_key><E><S><C>                                                                     : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 #
 #
 #   Symbols for modifier keys
