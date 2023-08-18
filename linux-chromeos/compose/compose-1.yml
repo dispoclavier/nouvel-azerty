@@ -1275,7 +1275,7 @@
 <Multi_key><e><m><f><r>                                                                  : "▬" emfilledrect         # U25AC BLACK RECTANGLE, not U25AE BLACK VERTICAL RECTANGLE
 <Multi_key><e><n><o><c><b>                                                               : "◦" enopencircbullet     # U25E6 WHITE BULLET
 <Multi_key><e><n><o><s><b>                                                               : "▫" enopensquarebullet   # U25AB WHITE SMALL SQUARE
-<Multi_key><r><e><c><b>                                                                  :     openrectbullet       # U25AE BLACK VERTICAL RECTANGLE, not U25AD WHITE RECTANGLE
+<Multi_key><r><e><c><b>                                                                  : "▮" openrectbullet       # U25AE BLACK VERTICAL RECTANGLE, not U25AD WHITE RECTANGLE
 <Multi_key><e><m><o><r>                                                                  : "▭" U25AD                # WHITE RECTANGLE, *emopenrect
 <Multi_key><o><t><b><u>                                                                  : "▵" opentribulletup      # U25B5 WHITE UP-POINTING SMALL TRIANGLE, not U25B3 WHITE UP-POINTING TRIANGLE
 <Multi_key><o><t><b><d>                                                                  : "▿" opentribulletdown    # U25BF WHITE DOWN-POINTING SMALL TRIANGLE, not U25BD WHITE DOWN-POINTING TRIANGLE
