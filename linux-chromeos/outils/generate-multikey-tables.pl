@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 # 2023-08-06T1935+0200
 # 2023-08-07T1723+0200
+# 2023-08-18T0309+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
@@ -9,10 +10,7 @@
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
-# Descriptors, which means “edited French character names,” are prioritized.
-# The file `Udescripteurs.txt` is optimized for developing `Compose.yml` for
-# Linux and ChromeOS. At this point it is incomplete as it is based on v10.
-# Tooltips for characters added to Unicode after v10 use `ListeNoms.txt`.
+# `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
 #
 # The output is designed for use in WordPress.
 #
@@ -255,9 +253,9 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : +"(.+?)" +(?:[a-z]+ +)?# (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : +"(.+?)" +(U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : +"(.+?)" +(U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				print WHOLEOUTPUT $line;
 			}
