@@ -1,3 +1,5 @@
+//                       Date: 2023-08-18T0324+0200
+//              Last revision: 2023-08-17T1046+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
