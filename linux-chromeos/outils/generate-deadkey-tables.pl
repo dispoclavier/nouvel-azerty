@@ -2,6 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-08-08T0749+0200
+# 2023-08-18T0347+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -96,7 +97,7 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
-		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ ) {
+		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ || $line =~ /<KP_/ ) {
 			if ( $line =~ /<Multi_key>/
 				|| $line =~ /<dead_abovedot>/
 				|| $line =~ /<dead_abovering>/
