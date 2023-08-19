@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.0.6 "
+<UEFA0>                     : "version 1.0.7 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -2196,6 +2196,9 @@
 #
 #
 #   Documentation
+#
+#   This output is not cross-platform compatible, since on Windows it will need
+#   to be truncated to 'en_US.UTF-8/Comp' as max 16 UTF-16 code units.
 #
 <Multi_key><e><n><u><s>                                                                  : "en_US.UTF-8/Compose" # Standard fr_FR Compose sequences.
 #
