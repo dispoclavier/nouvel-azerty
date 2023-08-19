@@ -1,5 +1,5 @@
-                      Date : 2023-08-15T2334+0200
-                   Version : 1.0.6
+                      Date : 2023-08-19T2012+0200
+                   Version : 1.0.7
             Nom du produit : Nouvel AZERTY
         Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -17,9 +17,6 @@
                              kbfrAFs  Afrique francophone disposition de clavier semi-automatique
                              kbfrBEs  Français Belgique disposition de clavier semi-automatique
                              kbfrFRr  Français redisposé disposition de clavier semi-automatique
-                             kbfrFRhw Français hybride AZERTY disposition de clavier semi-automatique
-                             kbfrFRhz Français hybride QWERTY disposition de clavier semi-automatique
-                             kbfrFRhy Français hybride QWERTZ disposition de clavier semi-automatique
                    À venir : kbfrCAms Canadien multilingue disposition de clavier semi-automatique
                    À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique
                    À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique
@@ -55,9 +52,6 @@
     une saisie plus ergonomique de l’alphabet de base et d’une partie des lettres diacritées, afin
     que les exigences en matière d’ergonomie n’obligent pas à renoncer aux fonctionnalités prises
     en charge par le nouvel AZERTY.
-
-  • Les fichiers dont les noms commencent par `kbfrFRh` contiennent cette disposition ergonomique
-    avec les raccourcis clavier en AZERTY, en QWERTY ou en QWERTZ, selon la lettre à gauche de X.
 
 
 
@@ -108,7 +102,7 @@
 
   4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-ChromeOS-
-     et se termine par le numéro de version, par exemple « 1.0.6 », et l’extension « .zip ».
+     et se termine par le numéro de version, par exemple « 1.0.7 », et l’extension « .zip ».
 
   5  Décompresser le dossier téléchargé.
 
