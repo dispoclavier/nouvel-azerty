@@ -2714,14 +2714,14 @@
 <Multi_key><exclam>                                                              <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                <section> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
 <Multi_key><exclam>                                                            <section> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
-<dead_belowdot>                                                                      <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
-<Multi_key><exclam>                                                                  <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
-<dead_belowdot>                                                                   <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
-<Multi_key><exclam>                                                               <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
-<dead_belowdot>                                                                      <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
-<Multi_key><exclam>                                                                  <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
-<dead_belowdot>                                                                   <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
-<Multi_key><exclam>                                                               <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<dead_belowdot>                                                                      <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
+<Multi_key><exclam>                                                                  <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
+<dead_belowdot>                                                                   <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
+<Multi_key><exclam>                                                               <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
+<dead_belowdot>                                                                      <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
+<Multi_key><exclam>                                                                  <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
+<dead_belowdot>                                                                   <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
+<Multi_key><exclam>                                                               <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
 <dead_belowdot>                                                                      <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <Multi_key><exclam>                                                                  <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <dead_belowdot>                                                                   <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
@@ -2742,10 +2742,10 @@
 <Multi_key><exclam>                                                                  <6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <dead_belowdot>                                                                   <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <Multi_key><exclam>                                                               <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
-<dead_belowdot>                                                                      <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
-<Multi_key><exclam>                                                                  <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
-<dead_belowdot>                                                                   <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
-<Multi_key><exclam>                                                               <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<dead_belowdot>                                                                      <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
+<Multi_key><exclam>                                                                  <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
+<dead_belowdot>                                                                   <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
+<Multi_key><exclam>                                                               <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
 <dead_belowdot>                                                                      <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <Multi_key><exclam>                                                                  <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                   <KP_8> : "⁘" U2058 # FOUR DOT PUNCTUATION
