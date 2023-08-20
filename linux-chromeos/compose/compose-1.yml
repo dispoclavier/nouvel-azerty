@@ -2215,20 +2215,20 @@
 <Multi_key><nobreakspace><less>                                                  <space> : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><m><less>                                                                     : "‏" U200F # RIGHT-TO-LEFT MARK
 #
-<Multi_key><e><greater>                                                                  : "‪" U202A # LEFT-TO-RIGHT EMBEDDING;Cf;0;LRE;;;;;N;;;;;
-<Multi_key><e><less>                                                                     : "‫" U202B # RIGHT-TO-LEFT EMBEDDING;Cf;0;RLE;;;;;N;;;;;
-<Multi_key><d><equal>                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING;Cf;0;PDF;;;;;N;;;;;
-<Multi_key><p><equal>                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING;Cf;0;PDF;;;;;N;;;;;
-<Multi_key><f><greater>                                                                  : "‭" U202D # LEFT-TO-RIGHT OVERRIDE;Cf;0;LRO;;;;;N;;;;;
-<Multi_key><o><greater>                                                                  : "‭" U202D # LEFT-TO-RIGHT OVERRIDE;Cf;0;LRO;;;;;N;;;;;
-<Multi_key><f><less>                                                                     : "‮" U202E # RIGHT-TO-LEFT OVERRIDE;Cf;0;RLO;;;;;N;;;;;
-<Multi_key><o><less>                                                                     : "‮" U202E # RIGHT-TO-LEFT OVERRIDE;Cf;0;RLO;;;;;N;;;;;
-<Multi_key><i><greater>                                                                  : "⁦" U2066 # LEFT-TO-RIGHT ISOLATE;Cf;0;LRI;;;;;N;;;;;
-<Multi_key><i><less>                                                                     : "⁧" U2067 # RIGHT-TO-LEFT ISOLATE;Cf;0;RLI;;;;;N;;;;;
-<Multi_key><f><s><i>                                                                     : "⁨" U2068 # FIRST STRONG ISOLATE;Cf;0;FSI;;;;;N;;;;;
-<Multi_key><i><1>                                                                        : "⁨" U2068 # FIRST STRONG ISOLATE;Cf;0;FSI;;;;;N;;;;;
-<Multi_key><p><d><i>                                                                     : "⁩" U2069 # POP DIRECTIONAL ISOLATE;Cf;0;PDI;;;;;N;;;;;
-<Multi_key><i><equal>                                                                    : "⁩" U2069 # POP DIRECTIONAL ISOLATE;Cf;0;PDI;;;;;N;;;;;
+<Multi_key><e><greater>                                                                  : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
+<Multi_key><e><less>                                                                     : "‫" U202B # RIGHT-TO-LEFT EMBEDDING
+<Multi_key><d><equal>                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><p><equal>                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><f><greater>                                                                  : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
+<Multi_key><o><greater>                                                                  : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
+<Multi_key><f><less>                                                                     : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
+<Multi_key><o><less>                                                                     : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
+<Multi_key><i><greater>                                                                  : "⁦" U2066 # LEFT-TO-RIGHT ISOLATE
+<Multi_key><i><less>                                                                     : "⁧" U2067 # RIGHT-TO-LEFT ISOLATE
+<Multi_key><f><s><i>                                                                     : "⁨" U2068 # FIRST STRONG ISOLATE
+<Multi_key><i><1>                                                                        : "⁨" U2068 # FIRST STRONG ISOLATE
+<Multi_key><p><d><i>                                                                     : "⁩" U2069 # POP DIRECTIONAL ISOLATE
+<Multi_key><i><equal>                                                                    : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 #
 #
 #   START_MATH
