@@ -2,6 +2,7 @@
 # 2023-08-06T1935+0200
 # 2023-08-07T1723+0200
 # 2023-08-18T0344+0200
+# 2023-08-20T0243+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
@@ -94,7 +95,7 @@ while ( my $line = <INPUT> ) {
 				print OUTPUT "<!-- $1 -->\n";
 			}
 		}
-		unless ( $line =~ /^#/ || $line =~ /<KP_/ ) {
+		unless ( $line =~ /^#/ || $line =~ /<KP_/ || $line =~ /\/Compose"/ ) {
 			if ( $line =~ /<Multi_key>/ ) {
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
