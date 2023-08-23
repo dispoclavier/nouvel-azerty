@@ -4864,7 +4864,7 @@
 #   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
 #   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
 #   collisions with the dead key based input method for apostrophe/comma-shaped
-#   double quotation marks. See ### Quotation mark input method
+#   double quotation marks. See # # Quotation mark input method
 #
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose,
 #   dead_cedilla’s <comma>, also used for dead_ogonek, conflicts on E.
@@ -4955,6 +4955,39 @@
 #   to be hit first, before the group selector. That behavior is consistent,
 #   it helps streamline code and maintenance, and it makes quick access dead
 #   keys described below possible.
+#
+#
+# # Quotation mark input method
+#
+#   A complete set of curly quotes, input while only hitting unshifted keys, on
+#   the condition that both the involved dead keys, and mnemonic, unconflicting
+#   base characters have base level mappings.
+#
+#   This is part of the dead key enhancement based on considering each dead key
+#   a group selector activating the "<dead key> group", e.g. "circumflex group"
+#   or "dead_circumflex group".
+#
+#   Correspondence between involved dead keys and quotation mark types:
+#
+#       Acute accent:      high           mostly closing
+#       Circumflex accent: turned high    mostly opening, closing in German
+#       Grave accent:      reversed high  mostly opening if used
+#       Diaeresis:         low            opening in German
+#
+#   The <rightsinglequotemark> base character takes into account that the ASCII
+#   apostrophe on row E is replaced with rightsinglequotemark, to enhance UX in
+#   French mode, i.e. ModLock off.
+#
+#   ASCII <apostrophe> is supported alongside for interoperability as designed.
+#   Some Multi_key equivalents conflict with CIRCUMFLEX&ACUTE, DIAERESIS&ACUTE.
+#   That is fixed by hitting these dead keys the other way around.
+#
+#   The character descriptors in lowercase are Unicode informative aliases that
+#   have been given in case of a suboptimal name.
+#
+#   Ornamental quotation marks are input by dead key followed by group selector.
+#   SMP quotation mark ornaments U1F676.. are not supported, for cross platform
+#   compatibility.
 #
 #
 # # Quick access dead keys for groups
@@ -9001,6 +9034,10 @@
 <Multi_key><asciitilde>                                                          <minus> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde>                                                                     <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde>                                                          <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+<dead_tilde>                                                                  <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
+<Multi_key><asciitilde>                                                       <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
+<dead_tilde>                                                                    <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
+<Multi_key><asciitilde>                                                         <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
 #
 #
 # # TILDE&ACUTE
@@ -10277,6 +10314,12 @@
 <Multi_key><grave>                                                                   <Y> : "Ỳ" U1EF2 # LATIN CAPITAL LETTER Y WITH GRAVE
 <dead_grave>                                                                         <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
 <Multi_key><grave>                                                                   <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
+<dead_grave>                                                                <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+<Multi_key><grave>                                                          <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+<dead_grave>                                                      <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+<Multi_key><grave>                                                <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+<dead_grave>                                                                  <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
+<Multi_key><grave>                                                            <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <dead_grave>                                                                 <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <Multi_key><grave>                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                     <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
@@ -10294,7 +10337,7 @@
 #
 #   These are limited to <dead_acute><dead_grave>[<dead_acute>] to prevent
 #   conflicts with quotation marks.
-#   See ### Quotation mark input method
+#   See # # Quotation mark input method
 #
 <dead_acute><dead_grave>                                                         <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
 <Multi_key><apostrophe><grave>                                                   <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
@@ -10501,6 +10544,12 @@
 #   the digraph.
 #   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
 #
+#   Followed by Éé, acute is a shortcut to Ãã for Portuguese with spatial
+#   mnemonics on AZERTY as A is close to É.
+#
+#   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
+#   mnemonics on AZERTY as O is close to À.
+#
 #   The acute accent below virtual dead key is removed as designed to foster a
 #   better quotation input method. The only two acute below characters are now
 #   with underscore for "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT, and with
@@ -10647,6 +10696,20 @@
 <Multi_key><apostrophe>                                                       <Ccedilla> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <dead_acute>                                                                  <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><apostrophe>                                                       <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
+<dead_acute>                                                                    <Eacute> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE (Portuguese)
+<Multi_key><apostrophe>                                                         <Eacute> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE (Portuguese)
+<dead_acute>                                                                    <eacute> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE (Portuguese)
+<Multi_key><apostrophe>                                                         <eacute> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE (Portuguese)
+<dead_acute>                                                                    <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE (Portuguese)
+<Multi_key><apostrophe>                                                         <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE (Portuguese)
+<dead_acute>                                                                    <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE (Portuguese)
+<Multi_key><apostrophe>                                                         <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE (Portuguese)
+<dead_acute>                                                                <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><apostrophe>                                                     <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_acute>                                                      <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><apostrophe>                                           <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_acute>                                                                  <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><apostrophe>                                                       <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_acute>                                                                 <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                      <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
@@ -10666,6 +10729,12 @@
 <Multi_key><apostrophe><numbersign>                                         <asciitilde> : "≁" U2241 # NOT TILDE
 <dead_acute><UEFD0>                                                              <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><apostrophe><numbersign>                                              <grave> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_acute><UEFD0>                                                         <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign>                                         <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEFD0>                                               <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign>                               <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEFD0>                                                           <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign>                                           <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 <dead_acute><UEFD0>                                                                <bar> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><apostrophe><numbersign>                                                <bar> : "∤" U2224 # DOES NOT DIVIDE
 <dead_acute><UEFD0>                                                               <less> : "≮" U226E # NOT LESS-THAN
@@ -10800,7 +10869,7 @@
 #
 #   These are limited to <dead_acute><dead_diaeresis> to prevent conflicts with
 #   quotation marks.
-#   See ### Quotation mark input method
+#   See # # Quotation mark input method
 #
 <dead_acute><dead_diaeresis><UEFD0>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon><numbersign>                                       <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
@@ -10830,7 +10899,7 @@
 #
 #   This dead key supported by XKB is required to avoid collisions with the new
 #   dead key based quotation mark input method.
-#   See ### Quotation mark input method
+#   See # # Quotation mark input method
 #
 #   The DOUBLE_ACUTE dead key is also required for consistency with the symbols
 #   mapped on level 3, and with the new-school Compose scheme, where every dead
