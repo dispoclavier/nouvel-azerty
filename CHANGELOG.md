@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 1.0.8 (projet)
+
+* Touches mortes : Supprimer la prise en charge du point d’interrogation comme caractère de base pour la saisie des guillemets apostrophes. (compose-1.yml [d73a2e8](https://github.com/dispoclavier/nouvel-azerty/commit/d73a2e877787e841b733fedaf9c1de5cd1b44ebc), compose-2.yml [beaf6c5](https://github.com/dispoclavier/nouvel-azerty/commit/beaf6c58d307920314aad8768a409f25937161b3))
+* Touches mortes : Accent grave > Double accent grave : Ajouter "⹂" U2E42. (compose-1.yml [fc72f73](https://github.com/dispoclavier/nouvel-azerty/commit/fc72f73bb3683afa7e5984eb8181272e200b2ea5))
+
 ## 1.0.7 (2023-08-19)
 
 * Séquences de composition : Déboguer la saisie de "⎋" U238B. (compose-1.yml [5d3f7a6](https://github.com/dispoclavier/nouvel-azerty/commit/5d3f7a618c77f2e01d23def1d93efeac0722a7ec))
