@@ -10531,6 +10531,8 @@
 <Multi_key><grave><grave>                                                            <U> : "Ȕ" U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
 <dead_grave><dead_grave>                                                             <u> : "ȕ" U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 <Multi_key><grave><grave>                                                            <u> : "ȕ" U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
+<dead_grave><dead_grave>                                                      <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><grave><grave>                                                     <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_grave><dead_grave>                                                         <minus> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <Multi_key><grave><grave>                                                        <minus> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 #
