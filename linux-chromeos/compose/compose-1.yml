@@ -7585,8 +7585,6 @@
 <Multi_key><percent><numbersign>                                             <backslash> : "⌙" U2319 # TURNED NOT SIGN
 <UEFD5><UEFD0>                                                             <asciicircum> : "⦢" U29A2 # TURNED ANGLE (angle is g2 of ^ on A)
 <Multi_key><percent><numbersign>                                           <asciicircum> : "⦢" U29A2 # TURNED ANGLE (angle is g2 of ^ on A)
-<UEFD5><UEFD0>                                                              <asciitilde> : "≀" U2240 # WREATH PRODUCT
-<Multi_key><percent><numbersign>                                            <asciitilde> : "≀" U2240 # WREATH PRODUCT
 #
 #
 # # TURNED&GROUP2
