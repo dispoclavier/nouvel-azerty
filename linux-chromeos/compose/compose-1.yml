@@ -10326,12 +10326,11 @@
 <Multi_key><grave>                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 #
 #
-# # GRAVE&ACUTE
-# # ACUTE&GRAVE
+# # GRAVE&ACUTE, ACUTE&GRAVE  @todo Move to #*# ACUTE
 #
 #   These combining diacritics are supported independently of the related
 #   hacek input facility.
-#   See # # HACEK input facility by GRAVE ACUTE
+#   See # # HACEK input facility by ACUTE GRAVE
 #
 #   These are limited to <dead_acute><dead_grave>[<dead_acute>] to prevent
 #   conflicts with quotation marks.
@@ -10348,144 +10347,79 @@
 <Multi_key><apostrophe><grave><apostrophe>                                       <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 #
 #
-# # HACEK input facility by GRAVE ACUTE
+# # HACEK input facility by ACUTE GRAVE  @todo Move to #*# ACUTE
 #
 #   For ease of access. Using Multi_key does not make sense, but Multi_key must
 #   be supported for cross-platform compatibility.
 #
-#   This supports both ways, because the circumflex dead key is easy on AZERTY,
-#   so supporting it this way would be pointless.
+#   This supports only <dead_acute><dead_grave>, because the other way around
+#   would conflict with "‛" U201B. Also, the circumflex dead key is easily hit
+#   on AZERTY, so supporting it this way would be pointless.
 #
-<dead_grave><dead_acute>                                                             <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
-<Multi_key><grave><apostrophe>                                                       <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <dead_acute><dead_grave>                                                             <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <Multi_key><apostrophe><grave>                                                       <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
-<dead_grave><dead_acute>                                                             <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
-<Multi_key><grave><apostrophe>                                                       <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
 <dead_acute><dead_grave>                                                             <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
 <Multi_key><apostrophe><grave>                                                       <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
-<dead_grave><dead_acute>                                                             <C> : "Č" U010C # LATIN CAPITAL LETTER C WITH CARON
-<Multi_key><grave><apostrophe>                                                       <C> : "Č" U010C # LATIN CAPITAL LETTER C WITH CARON
 <dead_acute><dead_grave>                                                             <C> : "Č" U010C # LATIN CAPITAL LETTER C WITH CARON
 <Multi_key><apostrophe><grave>                                                       <C> : "Č" U010C # LATIN CAPITAL LETTER C WITH CARON
-<dead_grave><dead_acute>                                                             <c> : "č" U010D # LATIN SMALL LETTER C WITH CARON
-<Multi_key><grave><apostrophe>                                                       <c> : "č" U010D # LATIN SMALL LETTER C WITH CARON
 <dead_acute><dead_grave>                                                             <c> : "č" U010D # LATIN SMALL LETTER C WITH CARON
 <Multi_key><apostrophe><grave>                                                       <c> : "č" U010D # LATIN SMALL LETTER C WITH CARON
-<dead_grave><dead_acute>                                                             <D> : "Ď" U010E # LATIN CAPITAL LETTER D WITH CARON
-<Multi_key><grave><apostrophe>                                                       <D> : "Ď" U010E # LATIN CAPITAL LETTER D WITH CARON
 <dead_acute><dead_grave>                                                             <D> : "Ď" U010E # LATIN CAPITAL LETTER D WITH CARON
 <Multi_key><apostrophe><grave>                                                       <D> : "Ď" U010E # LATIN CAPITAL LETTER D WITH CARON
-<dead_grave><dead_acute>                                                             <d> : "ď" U010F # LATIN SMALL LETTER D WITH CARON
-<Multi_key><grave><apostrophe>                                                       <d> : "ď" U010F # LATIN SMALL LETTER D WITH CARON
 <dead_acute><dead_grave>                                                             <d> : "ď" U010F # LATIN SMALL LETTER D WITH CARON
 <Multi_key><apostrophe><grave>                                                       <d> : "ď" U010F # LATIN SMALL LETTER D WITH CARON
-<dead_grave><dead_acute>                                                             <E> : "Ě" U011A # LATIN CAPITAL LETTER E WITH CARON
-<Multi_key><grave><apostrophe>                                                       <E> : "Ě" U011A # LATIN CAPITAL LETTER E WITH CARON
 <dead_acute><dead_grave>                                                             <E> : "Ě" U011A # LATIN CAPITAL LETTER E WITH CARON
 <Multi_key><apostrophe><grave>                                                       <E> : "Ě" U011A # LATIN CAPITAL LETTER E WITH CARON
-<dead_grave><dead_acute>                                                             <e> : "ě" U011B # LATIN SMALL LETTER E WITH CARON
-<Multi_key><grave><apostrophe>                                                       <e> : "ě" U011B # LATIN SMALL LETTER E WITH CARON
 <dead_acute><dead_grave>                                                             <e> : "ě" U011B # LATIN SMALL LETTER E WITH CARON
 <Multi_key><apostrophe><grave>                                                       <e> : "ě" U011B # LATIN SMALL LETTER E WITH CARON
-<dead_grave><dead_acute>                                                             <G> : "Ǧ" U01E6 # LATIN CAPITAL LETTER G WITH CARON
-<Multi_key><grave><apostrophe>                                                       <G> : "Ǧ" U01E6 # LATIN CAPITAL LETTER G WITH CARON
 <dead_acute><dead_grave>                                                             <G> : "Ǧ" U01E6 # LATIN CAPITAL LETTER G WITH CARON
 <Multi_key><apostrophe><grave>                                                       <G> : "Ǧ" U01E6 # LATIN CAPITAL LETTER G WITH CARON
-<dead_grave><dead_acute>                                                             <g> : "ǧ" U01E7 # LATIN SMALL LETTER G WITH CARON
-<Multi_key><grave><apostrophe>                                                       <g> : "ǧ" U01E7 # LATIN SMALL LETTER G WITH CARON
 <dead_acute><dead_grave>                                                             <g> : "ǧ" U01E7 # LATIN SMALL LETTER G WITH CARON
 <Multi_key><apostrophe><grave>                                                       <g> : "ǧ" U01E7 # LATIN SMALL LETTER G WITH CARON
-<dead_grave><dead_acute>                                                             <H> : "Ȟ" U021E # LATIN CAPITAL LETTER H WITH CARON
-<Multi_key><grave><apostrophe>                                                       <H> : "Ȟ" U021E # LATIN CAPITAL LETTER H WITH CARON
 <dead_acute><dead_grave>                                                             <H> : "Ȟ" U021E # LATIN CAPITAL LETTER H WITH CARON
 <Multi_key><apostrophe><grave>                                                       <H> : "Ȟ" U021E # LATIN CAPITAL LETTER H WITH CARON
-<dead_grave><dead_acute>                                                             <h> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
-<Multi_key><grave><apostrophe>                                                       <h> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_acute><dead_grave>                                                             <h> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <Multi_key><apostrophe><grave>                                                       <h> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
-<dead_grave><dead_acute>                                                             <I> : "Ǐ" U01CF # LATIN CAPITAL LETTER I WITH CARON
-<Multi_key><grave><apostrophe>                                                       <I> : "Ǐ" U01CF # LATIN CAPITAL LETTER I WITH CARON
 <dead_acute><dead_grave>                                                             <I> : "Ǐ" U01CF # LATIN CAPITAL LETTER I WITH CARON
 <Multi_key><apostrophe><grave>                                                       <I> : "Ǐ" U01CF # LATIN CAPITAL LETTER I WITH CARON
-<dead_grave><dead_acute>                                                             <i> : "ǐ" U01D0 # LATIN SMALL LETTER I WITH CARON
-<Multi_key><grave><apostrophe>                                                       <i> : "ǐ" U01D0 # LATIN SMALL LETTER I WITH CARON
 <dead_acute><dead_grave>                                                             <i> : "ǐ" U01D0 # LATIN SMALL LETTER I WITH CARON
 <Multi_key><apostrophe><grave>                                                       <i> : "ǐ" U01D0 # LATIN SMALL LETTER I WITH CARON
-<dead_grave><dead_acute>                                                             <j> : "ǰ" U01F0 # LATIN SMALL LETTER J WITH CARON
-<Multi_key><grave><apostrophe>                                                       <j> : "ǰ" U01F0 # LATIN SMALL LETTER J WITH CARON
 <dead_acute><dead_grave>                                                             <j> : "ǰ" U01F0 # LATIN SMALL LETTER J WITH CARON
 <Multi_key><apostrophe><grave>                                                       <j> : "ǰ" U01F0 # LATIN SMALL LETTER J WITH CARON
-<dead_grave><dead_acute>                                                             <K> : "Ǩ" U01E8 # LATIN CAPITAL LETTER K WITH CARON
-<Multi_key><grave><apostrophe>                                                       <K> : "Ǩ" U01E8 # LATIN CAPITAL LETTER K WITH CARON
 <dead_acute><dead_grave>                                                             <K> : "Ǩ" U01E8 # LATIN CAPITAL LETTER K WITH CARON
 <Multi_key><apostrophe><grave>                                                       <K> : "Ǩ" U01E8 # LATIN CAPITAL LETTER K WITH CARON
-<dead_grave><dead_acute>                                                             <k> : "ǩ" U01E9 # LATIN SMALL LETTER K WITH CARON
-<Multi_key><grave><apostrophe>                                                       <k> : "ǩ" U01E9 # LATIN SMALL LETTER K WITH CARON
 <dead_acute><dead_grave>                                                             <k> : "ǩ" U01E9 # LATIN SMALL LETTER K WITH CARON
 <Multi_key><apostrophe><grave>                                                       <k> : "ǩ" U01E9 # LATIN SMALL LETTER K WITH CARON
-<dead_grave><dead_acute>                                                             <L> : "Ľ" U013D # LATIN CAPITAL LETTER L WITH CARON
-<Multi_key><grave><apostrophe>                                                       <L> : "Ľ" U013D # LATIN CAPITAL LETTER L WITH CARON
 <dead_acute><dead_grave>                                                             <L> : "Ľ" U013D # LATIN CAPITAL LETTER L WITH CARON
 <Multi_key><apostrophe><grave>                                                       <L> : "Ľ" U013D # LATIN CAPITAL LETTER L WITH CARON
-<dead_grave><dead_acute>                                                             <l> : "ľ" U013E # LATIN SMALL LETTER L WITH CARON
-<Multi_key><grave><apostrophe>                                                       <l> : "ľ" U013E # LATIN SMALL LETTER L WITH CARON
 <dead_acute><dead_grave>                                                             <l> : "ľ" U013E # LATIN SMALL LETTER L WITH CARON
 <Multi_key><apostrophe><grave>                                                       <l> : "ľ" U013E # LATIN SMALL LETTER L WITH CARON
-<dead_grave><dead_acute>                                                             <N> : "Ň" U0147 # LATIN CAPITAL LETTER N WITH CARON
-<Multi_key><grave><apostrophe>                                                       <N> : "Ň" U0147 # LATIN CAPITAL LETTER N WITH CARON
 <dead_acute><dead_grave>                                                             <N> : "Ň" U0147 # LATIN CAPITAL LETTER N WITH CARON
 <Multi_key><apostrophe><grave>                                                       <N> : "Ň" U0147 # LATIN CAPITAL LETTER N WITH CARON
-<dead_grave><dead_acute>                                                             <n> : "ň" U0148 # LATIN SMALL LETTER N WITH CARON
-<Multi_key><grave><apostrophe>                                                       <n> : "ň" U0148 # LATIN SMALL LETTER N WITH CARON
 <dead_acute><dead_grave>                                                             <n> : "ň" U0148 # LATIN SMALL LETTER N WITH CARON
 <Multi_key><apostrophe><grave>                                                       <n> : "ň" U0148 # LATIN SMALL LETTER N WITH CARON
-<dead_grave><dead_acute>                                                             <O> : "Ǒ" U01D1 # LATIN CAPITAL LETTER O WITH CARON
-<Multi_key><grave><apostrophe>                                                       <O> : "Ǒ" U01D1 # LATIN CAPITAL LETTER O WITH CARON
 <dead_acute><dead_grave>                                                             <O> : "Ǒ" U01D1 # LATIN CAPITAL LETTER O WITH CARON
 <Multi_key><apostrophe><grave>                                                       <O> : "Ǒ" U01D1 # LATIN CAPITAL LETTER O WITH CARON
-<dead_grave><dead_acute>                                                             <o> : "ǒ" U01D2 # LATIN SMALL LETTER O WITH CARON
-<Multi_key><grave><apostrophe>                                                       <o> : "ǒ" U01D2 # LATIN SMALL LETTER O WITH CARON
 <dead_acute><dead_grave>                                                             <o> : "ǒ" U01D2 # LATIN SMALL LETTER O WITH CARON
 <Multi_key><apostrophe><grave>                                                       <o> : "ǒ" U01D2 # LATIN SMALL LETTER O WITH CARON
-<dead_grave><dead_acute>                                                             <R> : "Ř" U0158 # LATIN CAPITAL LETTER R WITH CARON
-<Multi_key><grave><apostrophe>                                                       <R> : "Ř" U0158 # LATIN CAPITAL LETTER R WITH CARON
 <dead_acute><dead_grave>                                                             <R> : "Ř" U0158 # LATIN CAPITAL LETTER R WITH CARON
 <Multi_key><apostrophe><grave>                                                       <R> : "Ř" U0158 # LATIN CAPITAL LETTER R WITH CARON
-<dead_grave><dead_acute>                                                             <r> : "ř" U0159 # LATIN SMALL LETTER R WITH CARON
-<Multi_key><grave><apostrophe>                                                       <r> : "ř" U0159 # LATIN SMALL LETTER R WITH CARON
 <dead_acute><dead_grave>                                                             <r> : "ř" U0159 # LATIN SMALL LETTER R WITH CARON
 <Multi_key><apostrophe><grave>                                                       <r> : "ř" U0159 # LATIN SMALL LETTER R WITH CARON
-<dead_grave><dead_acute>                                                             <S> : "Š" U0160 # LATIN CAPITAL LETTER S WITH CARON
-<Multi_key><grave><apostrophe>                                                       <S> : "Š" U0160 # LATIN CAPITAL LETTER S WITH CARON
 <dead_acute><dead_grave>                                                             <S> : "Š" U0160 # LATIN CAPITAL LETTER S WITH CARON
 <Multi_key><apostrophe><grave>                                                       <S> : "Š" U0160 # LATIN CAPITAL LETTER S WITH CARON
-<dead_grave><dead_acute>                                                             <s> : "š" U0161 # LATIN SMALL LETTER S WITH CARON
-<Multi_key><grave><apostrophe>                                                       <s> : "š" U0161 # LATIN SMALL LETTER S WITH CARON
 <dead_acute><dead_grave>                                                             <s> : "š" U0161 # LATIN SMALL LETTER S WITH CARON
 <Multi_key><apostrophe><grave>                                                       <s> : "š" U0161 # LATIN SMALL LETTER S WITH CARON
-<dead_grave><dead_acute>                                                             <T> : "Ť" U0164 # LATIN CAPITAL LETTER T WITH CARON
-<Multi_key><grave><apostrophe>                                                       <T> : "Ť" U0164 # LATIN CAPITAL LETTER T WITH CARON
 <dead_acute><dead_grave>                                                             <T> : "Ť" U0164 # LATIN CAPITAL LETTER T WITH CARON
 <Multi_key><apostrophe><grave>                                                       <T> : "Ť" U0164 # LATIN CAPITAL LETTER T WITH CARON
-<dead_grave><dead_acute>                                                             <t> : "ť" U0165 # LATIN SMALL LETTER T WITH CARON
-<Multi_key><grave><apostrophe>                                                       <t> : "ť" U0165 # LATIN SMALL LETTER T WITH CARON
 <dead_acute><dead_grave>                                                             <t> : "ť" U0165 # LATIN SMALL LETTER T WITH CARON
 <Multi_key><apostrophe><grave>                                                       <t> : "ť" U0165 # LATIN SMALL LETTER T WITH CARON
-<dead_grave><dead_acute>                                                             <U> : "Ǔ" U01D3 # LATIN CAPITAL LETTER U WITH CARON
-<Multi_key><grave><apostrophe>                                                       <U> : "Ǔ" U01D3 # LATIN CAPITAL LETTER U WITH CARON
 <dead_acute><dead_grave>                                                             <U> : "Ǔ" U01D3 # LATIN CAPITAL LETTER U WITH CARON
 <Multi_key><apostrophe><grave>                                                       <U> : "Ǔ" U01D3 # LATIN CAPITAL LETTER U WITH CARON
-<dead_grave><dead_acute>                                                             <u> : "ǔ" U01D4 # LATIN SMALL LETTER U WITH CARON
-<Multi_key><grave><apostrophe>                                                       <u> : "ǔ" U01D4 # LATIN SMALL LETTER U WITH CARON
 <dead_acute><dead_grave>                                                             <u> : "ǔ" U01D4 # LATIN SMALL LETTER U WITH CARON
 <Multi_key><apostrophe><grave>                                                       <u> : "ǔ" U01D4 # LATIN SMALL LETTER U WITH CARON
-<dead_grave><dead_acute>                                                             <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
-<Multi_key><grave><apostrophe>                                                       <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
 <dead_acute><dead_grave>                                                             <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
 <Multi_key><apostrophe><grave>                                                       <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
-<dead_grave><dead_acute>                                                             <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
-<Multi_key><grave><apostrophe>                                                       <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 <dead_acute><dead_grave>                                                             <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 <Multi_key><apostrophe><grave>                                                       <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 #
