@@ -13251,7 +13251,8 @@
 #   dead_ogonek
 #   Multi_key: ¦[
 #
-#   Supports the combining keycap diacritic with brackets pair mnemonics.
+#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonics.
+#   See #*# HOOK_ABOVE
 #
 <dead_ogonek>                                                                    <space> : "̨" U0328 # COMBINING OGONEK
 <Multi_key><bracketleft>                                                         <space> : "̨" U0328 # COMBINING OGONEK
@@ -13263,6 +13264,8 @@
 <Multi_key><bracketleft>                                                  <nobreakspace> : "˛" U02DB # OGONEK
 <dead_ogonek>                                                                  <section> : "ǫ" U01EB # LATIN SMALL LETTER O WITH OGONEK
 <Multi_key><bracketleft>                                                       <section> : "ǫ" U01EB # LATIN SMALL LETTER O WITH OGONEK
+<dead_ogonek>                                                                    <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><bracketleft>                                                         <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <dead_ogonek>                                                                        <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
 <Multi_key><bracketleft>                                                             <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
 <dead_ogonek>                                                                        <a> : "ą" U0105 # LATIN SMALL LETTER A WITH OGONEK
@@ -13283,8 +13286,6 @@
 <Multi_key><bracketleft>                                                             <U> : "Ų" U0172 # LATIN CAPITAL LETTER U WITH OGONEK
 <dead_ogonek>                                                                        <u> : "ų" U0173 # LATIN SMALL LETTER U WITH OGONEK
 <Multi_key><bracketleft>                                                             <u> : "ų" U0173 # LATIN SMALL LETTER U WITH OGONEK
-<dead_ogonek>                                                                    <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
-<Multi_key><bracketleft>                                                         <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 #
 #
 # # OGONEK&TILDE
@@ -13375,12 +13376,17 @@
 #   *dead_abovehook UEFD3
 #   Multi_key: ¦]
 #
+#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonics.
+#   See #*# OGONEK
+#
 <UEFD3>                                                                          <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <Multi_key><bracketright>                                                        <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <UEFD3>                                                                          <U200B> : "̉" U0309 # COMBINING HOOK ABOVE
 <Multi_key><bracketright>                                                        <U200B> : "̉" U0309 # COMBINING HOOK ABOVE
 <UEFD3>                                                                        <section> : "ỏ" U1ECF # LATIN SMALL LETTER O WITH HOOK ABOVE
 <Multi_key><bracketright>                                                      <section> : "ỏ" U1ECF # LATIN SMALL LETTER O WITH HOOK ABOVE
+<UEFD3>                                                                    <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><bracketright>                                                  <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <UEFD3>                                                                              <A> : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
 <Multi_key><bracketright>                                                            <A> : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
 <UEFD3>                                                                              <a> : "ả" U1EA3 # LATIN SMALL LETTER A WITH HOOK ABOVE
