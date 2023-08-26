@@ -12,6 +12,10 @@
 #   dead_circumflex
 #   Multi_key: ¦<
 #
+#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_circumflex
+#   yields turned high, opening or closing curly quotation marks U2018, U201C.
+#   See # # Quotation mark input method
+#
 #   The polygrams -êk-, -êl-, -êm-, -ên-, -êp-, -êq-, -êr-, -êt-, -êv-, -êch-
 #   make dead_circumflex behave like an Ê key in most cases by using the fact
 #   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
@@ -28,14 +32,12 @@
 #   French usage information: Courtesy _La fée des lettres_ https://www.motsavec.com.
 #
 #   The following sequences are included here, although they are overridden by
-#   the Ê-key emulation required for writing French, after overriding the same
-#   French sequences in the circumflex dead key setup:
+#   the Ê-key emulation required for writing French:
 #   <dead_circumflex><M> : "M̂" # composed M with combining circumflex (Min Nan)
 #   <dead_circumflex><m> : "m̂" # composed m with combining circumflex (Min Nan)
 #   <dead_circumflex><N> : "N̂" # composed N with combining circumflex (Min Nan)
 #   <dead_circumflex><n> : "n̂" # composed n with combining circumflex (Min Nan)
 #   Courtesy https://www.frathwiki.com/Circumflex
-#   See ### Ê-key emulation
 #
 #   The circumflex dead key also supported superscript digits, for the sake of
 #   conformance with NF Z71-300:2019, 6.3.3 p24, that E DIN 2137-1:2020-11 has
@@ -96,6 +98,9 @@
 #   Followed by comma or period, dead_circumflex provides a shorthand for U200C
 #   ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
 #
+#   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
+#   for portability, but on Linux and ChromeOS it is ineffective.
+#
 <dead_circumflex>                                                                <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                <U200B> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
@@ -106,6 +111,22 @@
 <Multi_key><less>                                                         <nobreakspace> : "^" U005E # CIRCUMFLEX ACCENT
 <dead_circumflex>                                                              <section> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
 <Multi_key><less>                                                              <section> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
+<dead_circumflex>                                                             <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<Multi_key><less>                                                             <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<dead_circumflex>                                                           <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<Multi_key><less>                                                           <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<dead_circumflex>                                                 <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<Multi_key><less>                                                 <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<dead_circumflex>                                                            <ampersand> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<Multi_key><less>                                                            <ampersand> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<dead_circumflex>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<Multi_key><less>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<dead_circumflex>                                                             <asterisk> : "⁂" U2042 # ASTERISM
+<Multi_key><less>                                                             <asterisk> : "⁂" U2042 # ASTERISM
+<dead_circumflex>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><less>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
+<dead_circumflex>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                          <twosuperior> : "���" UD835 # Mathematical Alphanumeric Symbols high surrogate
 <Multi_key><less>                                                          <twosuperior> : "���" UD835 # Mathematical Alphanumeric Symbols high surrogate
 <dead_circumflex>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
@@ -156,22 +177,22 @@
 <Multi_key><less>                                                                    <L> : "ÊL" # U00CA U004C (French: Ê key emulation)
 <dead_circumflex>                                                                    <l> : "êl" # U00EA U006C (French: Ê key emulation)
 <Multi_key><less>                                                                    <l> : "êl" # U00EA U006C (French: Ê key emulation)
-<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D (French: Ê key emulation)
-<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D (French: Ê key emulation)
-<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D (French: Ê key emulation)
-<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D (French: Ê key emulation)
-<dead_circumflex>                                                                    <M> : "M̂" # U004D U0302 M with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <M> : "M̂" # U004D U0302 M with combining circumflex (Min Nan)
-<dead_circumflex>                                                                    <m> : "m̂" # U006D U0302 m with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <m> : "m̂" # U006D U0302 m with combining circumflex (Min Nan)
-<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E (French: Ê key emulation)
-<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E (French: Ê key emulation)
-<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E (French: Ê key emulation)
-<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E (French: Ê key emulation)
-<dead_circumflex>                                                                    <N> : "N̂" # U004E U0302 N with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <N> : "N̂" # U004E U0302 N with combining circumflex (Min Nan)
-<dead_circumflex>                                                                    <n> : "n̂" # U006E U0302 n with combining circumflex (Min Nan)
-<Multi_key><less>                                                                    <n> : "n̂" # U006E U0302 n with combining circumflex (Min Nan)
+<dead_circumflex>                                                                    <M> : "M̂" # U004D U0302 M with combining circumflex (Min Nan; overridden by Ê key emulation)
+<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D (French: Ê key emulation; overrides "M̂" # U004D U0302)
+<Multi_key><less>                                                                    <M> : "M̂" # U004D U0302 M with combining circumflex (Min Nan; overridden by Ê key emulation)
+<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D (French: Ê key emulation; overrides "M̂" # U004D U0302)
+<dead_circumflex>                                                                    <m> : "m̂" # U006D U0302 m with combining circumflex (Min Nan; overridden by Ê key emulation)
+<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D (French: Ê key emulation; overrides "m̂" # U006D U0302)
+<Multi_key><less>                                                                    <m> : "m̂" # U006D U0302 m with combining circumflex (Min Nan; overridden by Ê key emulation)
+<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D (French: Ê key emulation; overrides "m̂" # U006D U0302)
+<dead_circumflex>                                                                    <N> : "N̂" # U004E U0302 N with combining circumflex (Min Nan; overridden by Ê key emulation)
+<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E (French: Ê key emulation; overrides "N̂" # U004E U0302)
+<Multi_key><less>                                                                    <N> : "N̂" # U004E U0302 N with combining circumflex (Min Nan; overridden by Ê key emulation)
+<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E (French: Ê key emulation; overrides "N̂" # U004E U0302)
+<dead_circumflex>                                                                    <n> : "n̂" # U006E U0302 n with combining circumflex (Min Nan; overridden by Ê key emulation)
+<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E (French: Ê key emulation; overrides "n̂" # U006E U0302)
+<Multi_key><less>                                                                    <n> : "n̂" # U006E U0302 n with combining circumflex (Min Nan; overridden by Ê key emulation)
+<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E (French: Ê key emulation; overrides "n̂" # U006E U0302)
 <dead_circumflex>                                                                    <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
@@ -240,34 +261,18 @@
 <Multi_key><less>                                                               <Ugrave> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE (Esperanto)
 <dead_circumflex>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
 <Multi_key><less>                                                               <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE (Esperanto)
-<dead_circumflex>                                                           <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-<Multi_key><less>                                                           <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-<dead_circumflex>                                                 <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-<Multi_key><less>                                                 <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-<dead_circumflex>                                                             <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
-<Multi_key><less>                                                             <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
-<dead_circumflex>                                                            <ampersand> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<Multi_key><less>                                                            <ampersand> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_circumflex>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
-<Multi_key><less>                                                               <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
-<dead_circumflex>                                                             <asterisk> : "⁂" U2042 # ASTERISM
-<Multi_key><less>                                                             <asterisk> : "⁂" U2042 # ASTERISM
-<dead_circumflex>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
-<Multi_key><less>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
-<dead_circumflex>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
-<Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 #
 #
 # # CIRCUMFLEX&GROUP1
 #
-<dead_circumflex><UEFD0>                                                    <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
-<Multi_key><less><numbersign>                                               <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
+<dead_circumflex><UEFD0>                                                      <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><numbersign>                                                 <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                    <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                               <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                          <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                     <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_circumflex><UEFD0>                                                      <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
-<Multi_key><less><numbersign>                                                 <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEFD0>                                                    <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
+<Multi_key><less><numbersign>                                               <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 #
 #
 # # CIRCUMFLEX&GROUP2
@@ -628,6 +633,8 @@
 <Multi_key><greater>                                                      <nobreakspace> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                   <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <Multi_key><greater>                                                           <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
+<dead_caron>                                                                 <ampersand> : "̬" U032C # COMBINING CARON BELOW
+<Multi_key><greater>                                                         <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron>                                                                         <0> : "₀" U2080 # SUBSCRIPT ZERO
 <Multi_key><greater>                                                                 <0> : "₀" U2080 # SUBSCRIPT ZERO
 <dead_caron>                                                                      <KP_0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -734,18 +741,16 @@
 <Multi_key><greater>                                                                 <Z> : "Ž" U017D # LATIN CAPITAL LETTER Z WITH CARON
 <dead_caron>                                                                         <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 <Multi_key><greater>                                                                 <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
-<dead_caron>                                                                 <ampersand> : "̬" U032C # COMBINING CARON BELOW
-<Multi_key><greater>                                                         <ampersand> : "̬" U032C # COMBINING CARON BELOW
 #
 #
 # # HACEK&GROUP1
 #
+<dead_caron><UEFD0>                                                         <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<Multi_key><greater><numbersign>                                            <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_caron><UEFD0>                                                                  <Z> : "Ǯ" U01EE # LATIN CAPITAL LETTER EZH WITH CARON
 <Multi_key><greater><numbersign>                                                     <Z> : "Ǯ" U01EE # LATIN CAPITAL LETTER EZH WITH CARON
 <dead_caron><UEFD0>                                                                  <z> : "ǯ" U01EF # LATIN SMALL LETTER EZH WITH CARON
 <Multi_key><greater><numbersign>                                                     <z> : "ǯ" U01EF # LATIN SMALL LETTER EZH WITH CARON
-<dead_caron><UEFD0>                                                         <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><greater><numbersign>                                            <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 #
 #
 # # HACEK&DOT_ABOVE
@@ -774,10 +779,6 @@
 #   *dead_equal UEFD7
 #   Multi_key: ¦=
 #
-#   Letters:
-#
-# # REGIONAL_INDICATOR_SYMBOL_LETTER
-#
 #   In XKB, on single press, the dead key outputs the symbol with an
 #   appended ZWNJ for letter emoji display and writing words.
 #
@@ -787,7 +788,8 @@
 #   Regional indicator symbols in isolation are supported on triple press.
 #   See #^# REGIONAL_INDICATOR_SYMBOL
 #
-#   NOTES ON CROSS-PLATFORM COMPATIBILITY
+#
+#   Cross-platform compatibility
 #
 #   Windows supports an extra modifier added on Caps Lock for continuous input,
 #   and also for composing flags. As in continuous input, ZERO WIDTH NON-JOINER
@@ -798,25 +800,49 @@
 #   and triple press is swapped, with single press outputting an appended ZWNJ,
 #   and triple press outputting regional indicator symbol letters in isolation.
 #
-#   NOTE: In en_US.UTF-8/Compose, sequences starting with ¦= conflict with currency signs
-#   and double acute, given that en_US.UTF-8/Compose uses ¦", not ¦:, for <dead_diaeresis>,
+#   In en_US.UTF-8/Compose, sequences starting with ¦= conflict with currency signs
+#   and double acute, given that en_US.UTF-8/Compose uses ¦", not ¦:, for diaeresis,
 #   and so cannot use ¦" for <dead_doubleacute>, but must use ¦= instead.
 #   Restricting currency signs to EQUALS SIGN *after* letter solves this issue.
 #   See # # Currency symbols
 #
-#   Auxiliary characters are supported with base characters in synergy:
 #
-#   *  ZWNJ is used to prevent an ISO code letter pair from being displayed as a flag;
-#   *  WJ is used to prevent an RI character from breaking off a character of another class;
-#   *  Support for the high surrogate is designed for cross-platform compatibility, but on
-#      Linux and ChromeOS this is commented out as irrelevant.
+#   Auxiliary characters
+#
+#   Auxiliary characters are supported with base characters in synergy:
+#   The Multi_key equivalents are impractical, but full ASCII equivalents
+#   would conflict with mathematical symbols.
+#
+#   *  ZWNJ is used to prevent an ISO code letter pair from being displayed
+#      as a flag;
+#   *  WJ is used to prevent an RI character from breaking off a character of
+#      another class;
+#   *  Supporting the high surrogate is designed for portability, but on Linux
+#      and ChromeOS it is ineffective.
 #
 <UEFD7>                                                                     <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                          <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                <dead_circumflex> : "⁠" U2060 # WORD JOINER
 <Multi_key><equal>                                                     <dead_circumflex> : "⁠" U2060 # WORD JOINER
-#   <UEFD7>                                                             <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
-#   <Multi_key><equal>                                                  <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
+<UEFD7>                                                                 <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
+<Multi_key><equal>                                                      <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
+#
+#
+#   Symbols
+#
+#   Mathematical symbols also by DIAERESIS, which acts as a quick access,
+#   unless a quick access sequence conflicts with regular support.
+#   See #*# DIAERESIS
+#
+#   The only exception is ⹀ U2E40 DOUBLE HYPHEN as a feature for lexicography.
+#   With respect to this, mathematical symbols use <Multi_key><minus><equal>.
+#
+<UEFD7>                                                                          <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><equal>                                                               <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+#
+#
+#   Letters
+#
 <UEFD7>                                                                              <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                                   <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
 <UEFD7>                                                                              <A> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
@@ -921,19 +947,6 @@
 <Multi_key><equal>                                                                   <z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
 <UEFD7>                                                                              <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                                   <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
-#
-#
-#   Symbols:
-#
-#   Mathematical symbols also by DIAERESIS, which acts as a quick access,
-#   unless a quick access sequence conflicts with regular support.
-#   See #*# DIAERESIS
-#
-#   The only exception is ⹀ U2E40 DOUBLE HYPHEN as a feature for lexicography.
-#   With respect to this, mathematical symbols use <Multi_key><minus><equal>.
-#
-<UEFD7>                                                                          <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><equal>                                                               <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 #
 #
 # # EQUAL&GROUP1
@@ -2189,7 +2202,7 @@
 #   Multi_key: ¦===
 #
 #   This yields the bare symbol not followed by ZWNJ.
-#   See # # REGIONAL_INDICATOR_SYMBOL_LETTER
+#   See #*# EQUAL
 #
 <UEFD7><UEFD7><UEFD7>                                                                <a> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
 <Multi_key><equal><equal><equal>                                                     <a> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
@@ -2308,6 +2321,18 @@
 #
 <UEFD6>                                                                        <section> : "\\" U005C # REVERSE SOLIDUS
 <Multi_key><backslash>                                                         <section> : "\\" U005C # REVERSE SOLIDUS
+<UEFD6>                                                                     <asciitilde> : "∽" U223D # REVERSED TILDE
+<Multi_key><backslash>                                                      <asciitilde> : "∽" U223D # REVERSED TILDE
+<UEFD6>                                                                          <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
+<Multi_key><backslash>                                                           <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
+<UEFD6>                                                                          <comma> : "⹁" U2E41 # REVERSED COMMA
+<Multi_key><backslash>                                                           <comma> : "⹁" U2E41 # REVERSED COMMA
+<UEFD6>                                                                       <question> : "⸮" U2E2E # REVERSED QUESTION MARK
+<Multi_key><backslash>                                                        <question> : "⸮" U2E2E # REVERSED QUESTION MARK
+<UEFD6>                                                                      <semicolon> : "⁏" U204F # REVERSED SEMICOLON
+<Multi_key><backslash>                                                       <semicolon> : "⁏" U204F # REVERSED SEMICOLON
+<UEFD6>                                                                      <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><backslash>                                                       <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
 <UEFD6>                                                                              <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <Multi_key><backslash>                                                               <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <UEFD6>                                                                              <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
@@ -2348,18 +2373,6 @@
 <Multi_key><backslash>                                                               <Z> : "Ƹ" U01B8 # LATIN CAPITAL LETTER EZH REVERSED
 <UEFD6>                                                                              <z> : "ƹ" U01B9 # LATIN SMALL LETTER EZH REVERSED
 <Multi_key><backslash>                                                               <z> : "ƹ" U01B9 # LATIN SMALL LETTER EZH REVERSED
-<UEFD6>                                                                      <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
-<Multi_key><backslash>                                                       <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
-<UEFD6>                                                                      <semicolon> : "⁏" U204F # REVERSED SEMICOLON
-<Multi_key><backslash>                                                       <semicolon> : "⁏" U204F # REVERSED SEMICOLON
-<UEFD6>                                                                     <asciitilde> : "∽" U223D # REVERSED TILDE
-<Multi_key><backslash>                                                      <asciitilde> : "∽" U223D # REVERSED TILDE
-<UEFD6>                                                                          <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
-<Multi_key><backslash>                                                           <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
-<UEFD6>                                                                       <question> : "⸮" U2E2E # REVERSED QUESTION MARK
-<Multi_key><backslash>                                                        <question> : "⸮" U2E2E # REVERSED QUESTION MARK
-<UEFD6>                                                                          <comma> : "⹁" U2E41 # REVERSED COMMA
-<Multi_key><backslash>                                                           <comma> : "⹁" U2E41 # REVERSED COMMA
 #
 #
 # # REVERSED&GROUP1
@@ -2606,9 +2619,9 @@
 #
 #   The polygrams make the dead_cedilla key behave like a Ç key in all relevant
 #   cases, along the lines of the Ê-key emulation.
+#   See #*# CIRCUMFLEX
 #
 #   This is designed for use on the Canadian French QWERTY variant.
-#   See ### Ê-key emulation
 #
 <dead_cedilla>                                                                   <space> : "̧" U0327 # COMBINING CEDILLA
 <Multi_key><comma>                                                               <space> : "̧" U0327 # COMBINING CEDILLA
@@ -2887,6 +2900,12 @@
 <Multi_key><exclam><exclam>                                               <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                 <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key><exclam><exclam>                                                    <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+<dead_belowdot><dead_belowdot>                                            <dead_cedilla> : "̩" U0329 # COMBINING VERTICAL LINE BELOW (Yoruba, German dialectology)
+<Multi_key><exclam><exclam>                                                      <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW (Yoruba, German dialectology)
+<dead_belowdot><dead_belowdot>                                           <dead_belowdot> : "̍" U030D # COMBINING VERTICAL LINE ABOVE (Marshallese)
+<Multi_key><exclam><exclam>                                                     <exclam> : "̍" U030D # COMBINING VERTICAL LINE ABOVE (Marshallese)
+<dead_belowdot><dead_belowdot>                                          <dead_diaeresis> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE (Marshallese)
+<Multi_key><exclam><exclam>                                                      <colon> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE (Marshallese)
 <dead_belowdot><dead_belowdot>                                                       <E> : "E̩" # U0045 U0329 E with vertical line below (Yoruba (current Nigerian alphabet))
 <Multi_key><exclam><exclam>                                                          <E> : "E̩" # U0045 U0329 E with vertical line below (Yoruba (current Nigerian alphabet))
 <dead_belowdot><dead_belowdot>                                                       <e> : "e̩" # U0065 U0329 e with vertical line below (Yoruba (current Nigerian alphabet))
@@ -2903,17 +2922,15 @@
 <Multi_key><exclam><exclam>                                                          <S> : "S̩" # U0053 U0329 S with vertical line below (Yoruba (current Nigerian alphabet))
 <dead_belowdot><dead_belowdot>                                                       <s> : "s̩" # U0073 U0329 s with vertical line below (Yoruba (current Nigerian alphabet))
 <Multi_key><exclam><exclam>                                                          <s> : "s̩" # U0073 U0329 s with vertical line below (Yoruba (current Nigerian alphabet))
-<dead_belowdot><dead_belowdot>                                            <dead_cedilla> : "̩" U0329 # COMBINING VERTICAL LINE BELOW (Yoruba, German dialectology)
-<Multi_key><exclam><exclam>                                                      <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW (Yoruba, German dialectology)
-<dead_belowdot><dead_belowdot>                                           <dead_belowdot> : "̍" U030D # COMBINING VERTICAL LINE ABOVE (Marshallese)
-<Multi_key><exclam><exclam>                                                     <exclam> : "̍" U030D # COMBINING VERTICAL LINE ABOVE (Marshallese)
-<dead_belowdot><dead_belowdot>                                          <dead_diaeresis> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE (Marshallese)
-<Multi_key><exclam><exclam>                                                      <colon> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE (Marshallese)
 #
 #
 #*# DIAERESIS
 #   dead_diaeresis
 #   Multi_key: ¦:
+#
+#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_diaeresis
+#   yields low, opening, curly quotation marks U201A, U201E.
+#   See # # Quotation mark input method
 #
 #   This supports superscript digits, formerly in dead_circumflex, for the sake
 #   of NF Z71-300:2019.
@@ -2928,6 +2945,9 @@
 #   by dead_diaeresis followed by bar or slash, and backslash respectively, as
 #   these symbols are in group 3 of | for ‖, and in group 9 of | for ¦.
 #
+#   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
+#   for portability, but on Linux and ChromeOS it is ineffective.
+#
 <dead_diaeresis>                                                                 <space> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                               <space> : "̈" U0308 # COMBINING DIAERESIS
 <dead_diaeresis>                                                                 <U200B> : "̈" U0308 # COMBINING DIAERESIS
@@ -2938,6 +2958,26 @@
 <Multi_key><colon>                                                        <nobreakspace> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                               <section> : "ë" U00EB # LATIN SMALL LETTER E WITH DIAERESIS
 <Multi_key><colon>                                                             <section> : "ë" U00EB # LATIN SMALL LETTER E WITH DIAERESIS
+<dead_diaeresis>                                                              <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<Multi_key><colon>                                                            <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<dead_diaeresis>                                                            <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+<Multi_key><colon>                                                          <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+<dead_diaeresis>                                                  <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+<Multi_key><colon>                                                <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+<dead_diaeresis>                                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
+<Multi_key><colon>                                                               <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
+<dead_diaeresis>                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><colon>                                                                 <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_diaeresis>                                                                 <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><colon>                                                               <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_diaeresis>                                                              <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<Multi_key><colon>                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<dead_diaeresis>                                                                  <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
+<Multi_key><colon>                                                                <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
+<dead_diaeresis>                                                               <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
+<Multi_key><colon>                                                             <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
+<dead_diaeresis>                                                             <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><colon>                                                           <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 <dead_diaeresis>                                                                     <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <Multi_key><colon>                                                                   <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <dead_diaeresis>                                                                  <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -3028,38 +3068,18 @@
 <Multi_key><colon>                                                              <Ugrave> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_diaeresis>                                                                <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon>                                                              <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
-<dead_diaeresis>                                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<Multi_key><colon>                                                               <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<dead_diaeresis>                                                            <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<Multi_key><colon>                                                          <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<dead_diaeresis>                                                  <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<Multi_key><colon>                                                <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<dead_diaeresis>                                                              <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
-<Multi_key><colon>                                                            <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
-<dead_diaeresis>                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><colon>                                                                 <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<dead_diaeresis>                                                                 <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><colon>                                                               <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
-<dead_diaeresis>                                                              <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<Multi_key><colon>                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<dead_diaeresis>                                                                  <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
-<Multi_key><colon>                                                                <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
-<dead_diaeresis>                                                               <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
-<Multi_key><colon>                                                             <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
-<dead_diaeresis>                                                             <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<Multi_key><colon>                                                           <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 #
 #
 # # DIAERESIS&GROUP1
 #
-<dead_diaeresis><UEFD0>                                                          <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
-<Multi_key><colon><numbersign>                                                   <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
+<dead_diaeresis><UEFD0>                                                       <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><numbersign>                                                <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                     <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                              <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                           <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                    <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><UEFD0>                                                       <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
-<Multi_key><colon><numbersign>                                                <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEFD0>                                                          <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
+<Multi_key><colon><numbersign>                                                   <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <dead_diaeresis><UEFD0>                                                          <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><colon><numbersign>                                                   <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <dead_diaeresis><UEFD0>                                                      <backslash> : "⊻" U22BB # XOR
@@ -3112,6 +3132,10 @@
 #
 # # DIAERESIS&GRAVE
 #
+<dead_diaeresis><dead_grave>                                                  <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><colon><grave>                                                     <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_grave><dead_diaeresis>                                                  <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><grave><colon>                                                     <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_diaeresis><dead_grave>                                                         <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon><grave>                                                            <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_grave><dead_diaeresis>                                                         <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
@@ -3140,13 +3164,8 @@
 #
 # # DIAERESIS&MACRON
 #
-#   Order matters when U/u is the base letter.
+#   Order matters when U/u is the base letter, for "Ǖ" U01D5, "ǖ" U01D6.
 #   See # # MACRON&DIAERESIS
-#
-<dead_diaeresis><dead_macron>                                                        <U> : "Ǖ" U01D5 # LATIN CAPITAL LETTER U WITH DIAERESIS AND MACRON
-<Multi_key><colon><bar>                                                              <U> : "Ǖ" U01D5 # LATIN CAPITAL LETTER U WITH DIAERESIS AND MACRON
-<dead_diaeresis><dead_macron>                                                        <u> : "ǖ" U01D6 # LATIN SMALL LETTER U WITH DIAERESIS AND MACRON
-<Multi_key><colon><bar>                                                              <u> : "ǖ" U01D6 # LATIN SMALL LETTER U WITH DIAERESIS AND MACRON
 #
 <dead_diaeresis><dead_macron>                                                        <A> : "Ǟ" U01DE # LATIN CAPITAL LETTER A WITH DIAERESIS AND MACRON
 <Multi_key><colon><bar>                                                              <A> : "Ǟ" U01DE # LATIN CAPITAL LETTER A WITH DIAERESIS AND MACRON
@@ -3164,6 +3183,10 @@
 <Multi_key><colon><bar>                                                              <o> : "ȫ" U022B # LATIN SMALL LETTER O WITH DIAERESIS AND MACRON
 <dead_macron><dead_diaeresis>                                                        <o> : "ȫ" U022B # LATIN SMALL LETTER O WITH DIAERESIS AND MACRON
 <Multi_key><bar><colon>                                                              <o> : "ȫ" U022B # LATIN SMALL LETTER O WITH DIAERESIS AND MACRON
+<dead_diaeresis><dead_macron>                                                        <U> : "Ǖ" U01D5 # LATIN CAPITAL LETTER U WITH DIAERESIS AND MACRON, not "Ṻ" U1E7A
+<Multi_key><colon><bar>                                                              <U> : "Ǖ" U01D5 # LATIN CAPITAL LETTER U WITH DIAERESIS AND MACRON, not "Ṻ" U1E7A
+<dead_diaeresis><dead_macron>                                                        <u> : "ǖ" U01D6 # LATIN SMALL LETTER U WITH DIAERESIS AND MACRON, not "ṻ" U1E7B
+<Multi_key><colon><bar>                                                              <u> : "ǖ" U01D6 # LATIN SMALL LETTER U WITH DIAERESIS AND MACRON, not "ṻ" U1E7B
 #
 #
 # # DIAERESIS&HACEK
@@ -3368,54 +3391,6 @@
 <dead_belowcomma><dead_belowcomma>                                               <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <Multi_key><section><section>                                                    <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
-#
-#
-#
-### Ê-key emulation
-#
-#   These sequences duplicate or override similar sequences in dead_circumflex.
-#   See #*# CIRCUMFLEX
-#
-<dead_circumflex>                                                                    <K> : "ÊK" # U00CA U004B
-<Multi_key><less>                                                                    <K> : "ÊK" # U00CA U004B
-<dead_circumflex>                                                                    <k> : "êk" # U00EA U006B
-<Multi_key><less>                                                                    <k> : "êk" # U00EA U006B
-<dead_circumflex>                                                                    <L> : "ÊL" # U00CA U004C
-<Multi_key><less>                                                                    <L> : "ÊL" # U00CA U004C
-<dead_circumflex>                                                                    <l> : "êl" # U00EA U006C
-<Multi_key><less>                                                                    <l> : "êl" # U00EA U006C
-<dead_circumflex>                                                                    <M> : "ÊM" # U00CA U004D
-<Multi_key><less>                                                                    <M> : "ÊM" # U00CA U004D
-<dead_circumflex>                                                                    <m> : "êm" # U00EA U006D
-<Multi_key><less>                                                                    <m> : "êm" # U00EA U006D
-<dead_circumflex>                                                                    <N> : "ÊN" # U00CA U004E
-<Multi_key><less>                                                                    <N> : "ÊN" # U00CA U004E
-<dead_circumflex>                                                                    <n> : "ên" # U00EA U006E
-<Multi_key><less>                                                                    <n> : "ên" # U00EA U006E
-<dead_circumflex>                                                                    <P> : "ÊP" # U00CA U0050
-<Multi_key><less>                                                                    <P> : "ÊP" # U00CA U0050
-<dead_circumflex>                                                                    <p> : "êp" # U00EA U0070
-<Multi_key><less>                                                                    <p> : "êp" # U00EA U0070
-<dead_circumflex>                                                                    <Q> : "ÊQ" # U00CA U0051
-<Multi_key><less>                                                                    <Q> : "ÊQ" # U00CA U0051
-<dead_circumflex>                                                                    <q> : "êq" # U00EA U0071
-<Multi_key><less>                                                                    <q> : "êq" # U00EA U0071
-<dead_circumflex>                                                                    <R> : "ÊR" # U00CA U0052
-<Multi_key><less>                                                                    <R> : "ÊR" # U00CA U0052
-<dead_circumflex>                                                                    <r> : "êr" # U00EA U0072
-<Multi_key><less>                                                                    <r> : "êr" # U00EA U0072
-<dead_circumflex>                                                                    <T> : "ÊT" # U00CA U0054
-<Multi_key><less>                                                                    <T> : "ÊT" # U00CA U0054
-<dead_circumflex>                                                                    <t> : "êt" # U00EA U0074
-<Multi_key><less>                                                                    <t> : "êt" # U00EA U0074
-<dead_circumflex>                                                                    <V> : "ÊV" # U00CA U0056
-<Multi_key><less>                                                                    <V> : "ÊV" # U00CA U0056
-<dead_circumflex>                                                                    <v> : "êv" # U00EA U0076
-<Multi_key><less>                                                                    <v> : "êv" # U00EA U0076
-<dead_circumflex>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
-<Multi_key><less>                                                                    <X> : "ÊCH" # U00CA U0043 U0048
-<dead_circumflex>                                                                    <x> : "êch" # U00EA U0063 U0068
-<Multi_key><less>                                                                    <x> : "êch" # U00EA U0063 U0068
 #
 #
 #
