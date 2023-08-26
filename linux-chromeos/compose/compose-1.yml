@@ -10813,25 +10813,19 @@
 #
 # # ACUTE&DIAERESIS
 #
-<dead_acute><dead_diaeresis>                                                     <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon>                                                   <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+#   These are limited to <dead_acute><dead_diaeresis> to prevent conflicts with
+#   quotation marks.
+#   See # # Quotation mark input method
+#
 <dead_acute><dead_diaeresis>                                                     <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon>                                                   <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <dead_acute><dead_diaeresis>                                                      <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <Multi_key><apostrophe><colon>                                                    <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<dead_acute><dead_diaeresis>                                                      <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<Multi_key><apostrophe><colon>                                                    <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<dead_acute><dead_diaeresis>                                                   <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-<Multi_key><apostrophe><colon>                                                 <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <dead_acute><dead_diaeresis>                                                   <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <Multi_key><apostrophe><colon>                                                 <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 #
 #
 # # ACUTE&DIAERESIS&GROUP1
-#
-#   These are limited to <dead_acute><dead_diaeresis> to prevent conflicts with
-#   quotation marks.
-#   See # # Quotation mark input method
 #
 <dead_acute><dead_diaeresis><UEFD0>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon><numbersign>                                       <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
@@ -13120,10 +13114,6 @@
 <Multi_key><plus>                                                              <section> : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
 <dead_horn>                                                                <asciicircum> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
 <Multi_key><plus>                                                          <asciicircum> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
-<dead_horn>                                                                <asciicircum> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
-<Multi_key><plus>                                                          <asciicircum> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
-<dead_horn>                                                                 <underscore> : "̟" U031F # COMBINING PLUS SIGN BELOW
-<Multi_key><plus>                                                           <underscore> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <dead_horn>                                                                 <underscore> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <Multi_key><plus>                                                           <underscore> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <dead_horn>                                                                          <e> : "ⱸ" U2C78 # LATIN SMALL LETTER E WITH NOTCH
@@ -13267,10 +13257,6 @@
 #
 <dead_horn><dead_horn>                                                     <asciicircum> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
 <Multi_key><plus><plus>                                                    <asciicircum> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
-<dead_horn><dead_horn>                                                     <asciicircum> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
-<Multi_key><plus><plus>                                                    <asciicircum> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
-<dead_horn><dead_horn>                                                      <underscore> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
-<Multi_key><plus><plus>                                                     <underscore> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 <dead_horn><dead_horn>                                                      <underscore> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 <Multi_key><plus><plus>                                                     <underscore> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 #
