@@ -3,7 +3,10 @@
 ## 1.0.8 (projet)
 
 * Touches mortes : Supprimer la prise en charge du point d’interrogation comme caractère de base pour la saisie des guillemets apostrophes. (compose-1.yml [d73a2e8](https://github.com/dispoclavier/nouvel-azerty/commit/d73a2e877787e841b733fedaf9c1de5cd1b44ebc), compose-2.yml [beaf6c5](https://github.com/dispoclavier/nouvel-azerty/commit/beaf6c58d307920314aad8768a409f25937161b3))
-* Touches mortes : Accent grave > Double accent grave : Ajouter "⹂" U2E42. (compose-1.yml [fc72f73](https://github.com/dispoclavier/nouvel-azerty/commit/fc72f73bb3683afa7e5984eb8181272e200b2ea5))
+* Touches mortes : Tréma + accent grave, Accent grave > Double accent grave : Ajouter "⹂" U2E42. Lettre grecque, cerclé : Compléter les séquences. (compose-1.yml [fc72f73](https://github.com/dispoclavier/nouvel-azerty/commit/fc72f73bb3683afa7e5984eb8181272e200b2ea5), [462dd44](https://github.com/dispoclavier/nouvel-azerty/commit/462dd44d86069fdf2a9789d6eb7a4968a9f805c2), compose-2.yml [5b46c26](https://github.com/dispoclavier/nouvel-azerty/commit/5b46c2650afa1f96474fc61b56ef15755b37e991))
+* Touches mortes : Tourné : Déboguer "⸸" U2E38. (compose-1.yml [80a6a10](https://github.com/dispoclavier/nouvel-azerty/commit/80a6a10be101dd59b093ba250fdb18a6e6465e3e))
+* Touches mortes : Accent grave : Déboguer "‛" U201B. (compose-1.yml [76eb4ff](https://github.com/dispoclavier/nouvel-azerty/commit/76eb4ffc3965b091d5ae5100d810ba02377efcc5))
+* Touches mortes : Crochet en chef : Ajouter  "⃣" U20E3 en symétrie avec l’ogonek. (compose-1.yml [57a3afb](https://github.com/dispoclavier/nouvel-azerty/commit/57a3afb33bdde161de0c0afd8fad558a65646053))
 
 ## 1.0.7 (2023-08-19)
 
