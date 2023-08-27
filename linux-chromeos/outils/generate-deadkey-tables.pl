@@ -3,6 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-08-08T0749+0200
 # 2023-08-18T0349+0200
+# 2023-08-27T2253+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -228,6 +229,36 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
+				
+				# Comment translation:
+				$line =~ s/( # .*), for convenience/$1, pour plus de facilité/g;
+				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
+				$line =~ s/( # .*) emoji/$1 émoji/g;
+				$line =~ s/ # Mathematical Alphanumeric Symbols high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
+				$line =~ s/ # High surrogate of regional indicator symbol letters/ # Surrogat haut de symbole lettre drapeau/g;
+				$line =~ s/( # .*) affected by glyph like (U\+[0-9A-F]{4,5}) disturbance/$1 victime d’une confusion de glyphes, s’affiche comme $2/g;
+				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 réutilisé comme symbole de composition/g;
+				$line =~ s/( # .*) Canadian French:/$1 Français du Canada :/g;
+				$line =~ s/( # .*) French:/$1 Français :/g;
+				$line =~ s/( # .*) overrides/$1 écrase/g;
+				$line =~ s/( # .*) overridden by Ê key emulation/$1 écrasé par l’émulation de touche Ê/g;
+				$line =~ s/( # .*) (.) key emulation/$1 émulation de touche $2/g;
+				$line =~ s/( # .*) Arabic transliteration/$1 translittération arabe/g;
+				$line =~ s/( # .*) Cuneiform transliteration/$1 translittération cunéiforme/g;
+				$line =~ s/( # .*) Demotic transcription/$1 transcription démotique/g;
+				$line =~ s/( # .*) Parthian transcription/$1 transcription parthe/g;
+				$line =~ s/( # .*) Herero old orthography/$1 héréro ancienne orthographe/g;
+				$line =~ s/( # .*) current Nigerian alphabet/$1 alphabet nigérian actuel/g;
+				$line =~ s/( # .*) German dialectology/$1 dialectologie allemande/g;
+				$line =~ s/( # .*) Swedish grave accent/$1 accent grave suédois/g;
+				$line =~ s/( # .*) Marshallese/$1 marshallais/g;
+				$line =~ s/( # .*) Malagasy/$1 malgache/g;
+				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
+				$line =~ s/( # .*) Croatian/$1 croate/g;
+				$line =~ s/( # .*) Serbian/$1 serbe/g;
+				$line =~ s/( # .*) Slovene/$1 slovène/g;
+				$line =~ s/( # .*) /$1 /g;
+				$line =~ s/( # .*) /$1 /g;
 
 				# Anchors and localized tooltips:
 				$line    =~ m/^.+ : +"(.+?)"/u;
