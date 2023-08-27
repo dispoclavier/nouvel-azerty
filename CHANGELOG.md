@@ -8,7 +8,7 @@
 * Touches mortes : Tourné : Déboguer "⸸" U2E38. (compose-1.yml [80a6a10](https://github.com/dispoclavier/nouvel-azerty/commit/80a6a10be101dd59b093ba250fdb18a6e6465e3e))
 * Touches mortes : Accent grave : Déboguer "‛" U201B. (compose-1.yml [76eb4ff](https://github.com/dispoclavier/nouvel-azerty/commit/76eb4ffc3965b091d5ae5100d810ba02377efcc5))
 * Touches mortes : Crochet en chef : Ajouter  "⃣" U20E3 en symétrie avec l’ogonek. (compose-1.yml [57a3afb](https://github.com/dispoclavier/nouvel-azerty/commit/57a3afb33bdde161de0c0afd8fad558a65646053))
-* Documentation : Touches mortes : Accent aigu + tréma, Cornu : Supprimer 14 doublons. (compose-1.yml [48f9e00](https://github.com/dispoclavier/nouvel-azerty/commit/48f9e00d106648f5e9167a22587ed2520fcfe1d0))
+* Documentation : Touches mortes : Accent aigu + tréma, Cornu : Supprimer 7 × 2 doublons. (compose-1.yml [48f9e00](https://github.com/dispoclavier/nouvel-azerty/commit/48f9e00d106648f5e9167a22587ed2520fcfe1d0))
 * Touches mortes : Barré : Redonder plus de lettres rayées dans les lacunes. (compose-1.yml [8908dae](https://github.com/dispoclavier/nouvel-azerty/commit/8908daec75443b66846db6eec7c2d468476ad438))
 
 ## 1.0.7 (2023-08-19)
