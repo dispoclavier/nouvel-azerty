@@ -14183,10 +14183,10 @@
 <Multi_key><slash>                                                                   <A> : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
 <dead_longsolidusoverlay>                                                            <a> : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
 <Multi_key><slash>                                                                   <a> : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
-<dead_longsolidusoverlay>                                                            <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE
-<Multi_key><slash>                                                                   <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE
-<dead_longsolidusoverlay>                                                            <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE
-<Multi_key><slash>                                                                   <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE
+<dead_longsolidusoverlay>                                                            <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE, for convenience
+<Multi_key><slash>                                                                   <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE, for convenience
+<dead_longsolidusoverlay>                                                            <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE, for convenience
+<Multi_key><slash>                                                                   <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE, for convenience
 <dead_longsolidusoverlay>                                                            <C> : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
 <Multi_key><slash>                                                                   <C> : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
 <dead_longsolidusoverlay>                                                            <c> : "ȼ" U023C # LATIN SMALL LETTER C WITH STROKE
