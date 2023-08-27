@@ -1,5 +1,5 @@
-                      Date : 2023-08-19T2012+0200
-                   Version : 1.0.7
+                      Date : 2023-08-27T0536+0200
+                   Version : 1.0.8
             Nom du produit : Nouvel AZERTY
         Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -102,7 +102,7 @@
 
   4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-ChromeOS-
-     et se termine par le numéro de version, par exemple « 1.0.7 », et l’extension « .zip ».
+     et se termine par le numéro de version, par exemple « 1.0.8 », et l’extension « .zip ».
 
   5  Décompresser le dossier téléchargé.
 
