@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.0.9 (projet)
+
+* Touches mortes : Tréma : Ajouter "‐" U2010, "⸺" U2E3A et "⸻" U2E3B. Sélectrice de groupe : Ajouter "⸺" U2E3A et "⸻" U2E3B. Documentation : Corriger les commentaires (aussi pour les tableaux). (compose-1.yml [aac2dd6](https://github.com/dispoclavier/nouvel-azerty/commit/aac2dd6d65ccff619d0a2b9c718ef072ea23d408), compose-2.yml [c21a6c0](https://github.com/dispoclavier/nouvel-azerty/commit/c21a6c06dd2f73dcaf78da757ae5c7ab706fb5f8))
+
 ## 1.0.8 (2023-08-27)
 
 * Touches mortes : Supprimer la prise en charge du point d’interrogation comme caractère de base pour la saisie des guillemets apostrophes. Documentation : Ranger guillemets et raccourcis dans leurs touches mortes. (compose-1.yml [d73a2e8](https://github.com/dispoclavier/nouvel-azerty/commit/d73a2e877787e841b733fedaf9c1de5cd1b44ebc), compose-2.yml [beaf6c5](https://github.com/dispoclavier/nouvel-azerty/commit/beaf6c58d307920314aad8768a409f25937161b3))
