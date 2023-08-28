@@ -47,37 +47,18 @@
 #   But the Multi_key equivalent of this way to input superscript digits cannot
 #   be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and with a
 #   new sequence introduced for the less frequent "♥" U2665 as of "⁸" U2078.
-#
 #   However, for cross-platform compatibility all Multi_key equivalents must be
-#   supported. As a result, superscript by dead_circumflex must either be fully
-#   supported or it must be dropped entirely.
-#
-#   Ultimately the feature is moved from dead_circumflex to dead_diaeresis, due
-#   to its bad engineering in disconnect with new-school input composition, and
-#   as pointless while superscript and subscript digits are on live keys, and a
-#   dedicated superscript dead key is also present, in NF Z71-300:2019 too. The
-#   diaeresis dead key is traditionally on the same key in shift position.
+#   supported. As a result, superscript by dead_circumflex is dropped entirely.
+#   The diaeresis dead key offers an acceptable alternative with good mnemonics
+#   using the traditional mapping on the same key in shift position. Ultimately
+#   this feature is non-critical since a dedicated superscript dead key is also
+#   present, in NF Z71-300:2019 too. Moreover, superscript and subscript digits
+#   are on live keys.
 #   See #*# DIAERESIS
 #
 #   NOTE: In en_US.UTF-8/Compose that the superscript digits by dead_circumflex
-#   feature comes from, the superscript dead key is missing entirely, since the
-#   *dead_superscript keysym is missing in keysymdef.h.
-#
-#   <dead_circumflex>                                                                <0> : "⁰" U2070 # SUPERSCRIPT ZERO
-#   <dead_circumflex>                                                                <1> : "¹" U00B9 # SUPERSCRIPT ONE
-#   <dead_circumflex>                                                                <2> : "²" U00B2 # SUPERSCRIPT TWO
-#   <dead_circumflex>                                                                <3> : "³" U00B3 # SUPERSCRIPT THREE
-#   <dead_circumflex>                                                                <4> : "⁴" U2074 # SUPERSCRIPT FOUR
-#   <dead_circumflex>                                                                <5> : "⁵" U2075 # SUPERSCRIPT FIVE
-#   <dead_circumflex>                                                                <6> : "⁶" U2076 # SUPERSCRIPT SIX
-#   <dead_circumflex>                                                                <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
-#   <dead_circumflex>                                                                <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
-#   <dead_circumflex>                                                                <9> : "⁹" U2079 # SUPERSCRIPT NINE
-#
-#   Also, this redundancy with the superscript dead key is not extended to the
-#   signs and parentheses, as the standard does not require these, and their
-#   Multi_key equivalents would conflict with many mathematical symbols. that
-#   would need to be disambiguated by leading space.
+#   feature comes from, the superscript dead key is missing, consistently with
+#   the *dead_superscript or equivalent keysym missing in keysymdef.h.
 #
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
@@ -2932,8 +2913,11 @@
 #   yields low, opening, curly quotation marks U201A, U201E.
 #   See # # Quotation mark input method
 #
-#   This supports superscript digits, formerly in dead_circumflex, for the sake
-#   of NF Z71-300:2019.
+#   Superscript digits, formerly in dead_circumflex, are also supported for the
+#   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
+#   key is not extended to the signs and parentheses since NF Z71-300:2019 does
+#   not require these, and their Multi_key equivalents would conflict with many
+#   mathematical symbols. that would need to be disambiguated by leading space.
 #   See #*# CIRCUMFLEX
 #
 #   Diaeresis also supports hyphen and long dashes, with base characters on the
@@ -3478,7 +3462,7 @@
 #   However, the base characters are asciicircum on A, and quotedbl on O, as
 #   mapping them to alphabetic in group 1 is counterproductive by wasting as
 #   much as four casing positions.
-#   See ### Group selector content sorted by keys
+#   See ### Space and symbol groups
 #
 #
 # # Letter apostrophe
@@ -4049,10 +4033,16 @@
 #
 #
 #
-### Group selector content sorted by keys
+### Space and symbol groups
 #
-#   The base characters in this section are mapped on AltGr and assume
-#   using the group selector in synergy on AltGr.
+#   The base characters in this section are mapped on AltGr/Option or unshifted
+#   keys as of comma, period and space. Symbols and punctuation mapped on level
+#   three assume using the group selector in synergy on AltGr/Option.
+#
+#   Consistently this section is ordered by keys rather than by code points, as
+#   the order of the ASCII symbols on the keyboard layout is used for mnemonics
+#   in synergy with the learning curve required by using the base alphabet as a
+#   means to remember the symbols.
 #
 #
 #   Emoji
@@ -5976,7 +5966,7 @@
 #
 #
 #
-### Group selector content sorted by groups
+### Letter groups
 #
 #   On the alphabet, the groups yield:
 #
