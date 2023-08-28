@@ -5053,7 +5053,7 @@
 #   An additional quick access dead key streamlines group 12, a
 #   sequence all on AltGr level: <UEFD0><dead_tilde>.
 #
-#   See ### Group selector content sorted by groups
+#   See ### Letter groups
 #
 #
 # # Mathematical symbols
@@ -11212,8 +11212,8 @@
 #
 #   The content is in several dedicated sections.
 #   See ### Group selector content sorted by categories
-#   See ### Group selector content sorted by keys
-#   See ### Group selector content sorted by groups
+#   See ### Space and symbol groups
+#   See ### Letter groups
 #
 #   For compatibility with the symbols groups on B10, this dead key has its
 #   dead character output for documentation purposes with <dollar>.
