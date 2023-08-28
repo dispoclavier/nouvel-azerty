@@ -2,7 +2,7 @@
 
 ## 1.0.9 (projet)
 
-* Touches mortes : Tréma : Ajouter "‐" U2010, "⸺" U2E3A et "⸻" U2E3B. Sélectrice de groupe : Ajouter "⸺" U2E3A et "⸻" U2E3B. Documentation : Corriger les commentaires (aussi pour les tableaux). (compose-1.yml [aac2dd6](https://github.com/dispoclavier/nouvel-azerty/commit/aac2dd6d65ccff619d0a2b9c718ef072ea23d408), compose-2.yml [c21a6c0](https://github.com/dispoclavier/nouvel-azerty/commit/c21a6c06dd2f73dcaf78da757ae5c7ab706fb5f8))
+* Touches mortes : Tréma : Ajouter "‐" U2010, "⸺" U2E3A et "⸻" U2E3B. Sélectrice de groupe : Ajouter "⸺" U2E3A et "⸻" U2E3B. Documentation : Corriger les commentaires (aussi pour les tableaux), équilibrer le contenu de la sélectrice de groupe. (compose-1.yml [aac2dd6](https://github.com/dispoclavier/nouvel-azerty/commit/aac2dd6d65ccff619d0a2b9c718ef072ea23d408), [3b89562](https://github.com/dispoclavier/nouvel-azerty/commit/3b89562fd042be2e400b526349ae946745ef2454), [ac3fb81](https://github.com/dispoclavier/nouvel-azerty/commit/ac3fb812af391ce90941c8dae47f5b819a4d4b9d), compose-2.yml [c21a6c0](https://github.com/dispoclavier/nouvel-azerty/commit/c21a6c06dd2f73dcaf78da757ae5c7ab706fb5f8), [efd6e96](https://github.com/dispoclavier/nouvel-azerty/commit/efd6e96415eee69fc49c78793d3151bcae5fd10c), [d56ee24](https://github.com/dispoclavier/nouvel-azerty/commit/d56ee249087c6e3c429ccb5f6f1c1889e86661d8))
 
 ## 1.0.8 (2023-08-27)
 
