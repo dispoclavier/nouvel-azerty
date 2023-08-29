@@ -4,6 +4,7 @@
 # 2023-08-08T0749+0200
 # 2023-08-18T0349+0200
 # 2023-08-27T2253+0200
+# 2023-08-29T1214+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -167,10 +168,13 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/> </></g;
 				
 				# Invisibles or confusables:
-				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— Tiret cadratin<\/kbd>/g;
-				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– Tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
+				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— tiret cadratin<\/kbd>/g;
+				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– tiret demi-cadratin<\/kbd>/g;
+				$line =~ s/<U2212>/<kbd class="livekey" title="Signe moins AltFr + T">− signe moins<\/kbd>/g;
+				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + .;">[fine insécable]!<\/kbd>/g;
+				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ?,">[fine insécable]?<\/kbd>/g;
 				
 				# Clarifying tooltips only:
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
@@ -226,6 +230,12 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Eacute>/É/g;
 				$line =~ s/<ccedilla>/ç/g;
 				$line =~ s/<Ccedilla>/Ç/g;
+				$line =~ s/<adiaeresis>/ä/g;
+				$line =~ s/<Adiaeresis>/Ä/g;
+				$line =~ s/<odiaeresis>/ö/g;
+				$line =~ s/<Odiaeresis>/Ö/g;
+				$line =~ s/<udiaeresis>/ü/g;
+				$line =~ s/<Udiaeresis>/Ü/g;
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 				$line =~ s/<(.)>/$1/g;
@@ -251,14 +261,26 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) current Nigerian alphabet/$1 alphabet nigérian actuel/g;
 				$line =~ s/( # .*) German dialectology/$1 dialectologie allemande/g;
 				$line =~ s/( # .*) Swedish grave accent/$1 accent grave suédois/g;
+				$line =~ s/( # .*) languages of Togo/$1 langues du Togo/g;
 				$line =~ s/( # .*) Marshallese/$1 marshallais/g;
 				$line =~ s/( # .*) Malagasy/$1 malgache/g;
 				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
 				$line =~ s/( # .*) Croatian/$1 croate/g;
 				$line =~ s/( # .*) Serbian/$1 serbe/g;
 				$line =~ s/( # .*) Slovene/$1 slovène/g;
-				$line =~ s/( # .*) /$1 /g;
-				$line =~ s/( # .*) /$1 /g;
+				$line =~ s/( # .*) shortcut/$1 raccourci/g;
+				$line =~ s/( # .*) for African and Breton variants/$1 pour variantes africaine et bretonne/g;
+				$line =~ s/( # .*) for African variant/$1 pour variante africaine/g;
+				$line =~ s/( # .*) for Breton variant/$1 pour variante bretonne/g;
+				$line =~ s/( # .*) for Swiss layout/$1 pour disposition suisse/g;
+				$line =~ s/( # .*) for use in Rromani/$1 pour son utilisation en rromani/g;
+				$line =~ s/( # .*) twice/$1 deux fois/g;
+				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
+				$line =~ s/( # .*) Hausa in Boko/$1 hausa en boko/g;
+				$line =~ s/( # .*) romanized Kharosthi/$1 kharosthi romanisé/g;
+				$line =~ s/( # .*) romanized Avestan/$1 avestique romanisé/g;
+				$line =~ s/( # .*) Dutch/$1 néerlandais/g;
+				$line =~ s/( # .*) romanized Pashto following/$1 pachto romanisé selon/g;
 
 				# Anchors and localized tooltips:
 				$line    =~ m/^.+ : +"(.+?)"/u;
