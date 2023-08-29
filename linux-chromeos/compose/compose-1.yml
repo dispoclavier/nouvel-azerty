@@ -11268,27 +11268,31 @@
 <Multi_key><numbersign><KP_2>                                                   <dollar> : "⑫" U246B # CIRCLED NUMBER TWELVE
 #
 #
-# # Letter apostrophe
+# # Letter apostrophe and ʻokina
 #
-#   This word boundary preventing character, needed in Breton and elsewhere,
-#   is a part of group 1, and its turned counterpart ʻokina is a part of g2.
-#   With the <apostrophe> keysym, it is a part of the full ASCII list below.
+#   These word boundary preventing characters, needed in Breton and Hawaiʻian,
+#   are in group 1 and group 2. This completes the apostrophe and grave keysyms
+#   in the symbol groups, where both are in group 1.
+#   See # # D07
+#   See # # D08
 #
 <UEFD0>                                                           <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                           <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0><UEFD0>                                                    <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><numbersign><numbersign>                               <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD0><UEFD0>                                                    <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<Multi_key><numbersign><numbersign>                               <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
 #
 #
 # # Turned punctuation characters for Spanish
 #
-#   These are primarily in group 1. With the unspaced upright marks see further below.
-#   This is with the spaced characters, as a matter of providing several ways.
+#   This is in group 1 with the spaced-out punctuation marks UEF60 and UEF63.
+#   With the unspaced upright marks, the sequences are in the symbol groups.
+#   See # # B07-level3
+#   See # # B08-level3
 #
-<UEFD0>                                                                          <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
-<Multi_key><numbersign>                                                          <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
-<UEFD0>                                                                          <UEF63> : "¿" U00BF # TURNED QUESTION MARK, questiondown
-<Multi_key><numbersign>                                                          <UEF63> : "¿" U00BF # TURNED QUESTION MARK, questiondown
+<UEFD0>                                                                          <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><numbersign>                                                          <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<UEFD0>                                                                          <UEF63> : "¿" U00BF # TURNED QUESTION MARK
+<Multi_key><numbersign>                                                          <UEF63> : "¿" U00BF # TURNED QUESTION MARK
 #
 #
 # # Oslash and Aring for Danish, Norwegian and other languages
@@ -11300,22 +11304,22 @@
 #   to Ccedilla and Odiaeresis in group 1. On AZERTY, Ccedilla is above the
 #   O key, while Swiss QWERTZ has also an Odiaeresis live key.
 #
-<UEFD0>                                                                       <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
-<Multi_key><numbersign>                                                       <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
-<UEFD0>                                                                       <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
-<Multi_key><numbersign>                                                       <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
-<UEFD0>                                                                     <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
-<Multi_key><numbersign>                                                     <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
-<UEFD0>                                                                     <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
-<Multi_key><numbersign>                                                     <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
-<UEFD0>                                                                         <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
-<Multi_key><numbersign>                                                         <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
-<UEFD0>                                                                         <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE
-<Multi_key><numbersign>                                                         <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE
-<UEFD0>                                                                     <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
-<Multi_key><numbersign>                                                     <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
-<UEFD0>                                                                     <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE
-<Multi_key><numbersign>                                                     <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE
+<UEFD0>                                                                       <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<Multi_key><numbersign>                                                       <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<UEFD0>                                                                       <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<Multi_key><numbersign>                                                       <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<UEFD0>                                                                     <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
+<Multi_key><numbersign>                                                     <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
+<UEFD0>                                                                     <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
+<Multi_key><numbersign>                                                     <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
+<UEFD0>                                                                         <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<Multi_key><numbersign>                                                         <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<UEFD0>                                                                         <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<Multi_key><numbersign>                                                         <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<UEFD0>                                                                     <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                     <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<UEFD0>                                                                     <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                     <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
 #
 #
 # # Ntilde for Breton and Spanish
@@ -11324,16 +11328,16 @@
 #   the dead_circumflex key of AZERTY, and Atilde, Ntilde and Otilde have
 #   shorthands using dead_acute or dead_circumflex followed by A/Egrave or
 #   Ccedilla, but the unused group 1 of Egrave and Udiaeresis is also used
-#   until another use case emerges.
+#   until another use case emerges, the latter for a Swiss QWERTZ layout.
 #
-<UEFD0>                                                                         <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
-<Multi_key><numbersign>                                                         <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
-<UEFD0>                                                                         <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
-<Multi_key><numbersign>                                                         <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
-<UEFD0>                                                                     <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
-<Multi_key><numbersign>                                                     <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
-<UEFD0>                                                                     <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
-<Multi_key><numbersign>                                                     <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
+<UEFD0>                                                                         <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
+<Multi_key><numbersign>                                                         <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
+<UEFD0>                                                                         <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
+<Multi_key><numbersign>                                                         <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
+<UEFD0>                                                                     <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
+<Multi_key><numbersign>                                                     <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
+<UEFD0>                                                                     <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
+<Multi_key><numbersign>                                                     <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
 #
 #
 # # Superscript square and cube for African and Breton variants
@@ -11348,32 +11352,14 @@
 #   the same superscripts in the same groups, for convenience. However,
 #   this redundancy has been replaced with support for Aring in group 1.
 #
-<UEFD0>                                                                         <Eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<Multi_key><numbersign>                                                         <Eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<UEFD0>                                                                         <eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<Multi_key><numbersign>                                                         <eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<UEFD0><UEFD0>                                                                  <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key><numbersign><numbersign>                                             <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<UEFD0><UEFD0>                                                                  <eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key><numbersign><numbersign>                                             <eacute> : "³" U00B3 # SUPERSCRIPT THREE
-#
-#
-# # Hyphen and long dashes
-#
-#   The HYPHEN punctuation has been separately encoded as U2010, although it is
-#   a homoglyph to U002D in most fonts.
-#
-#   U2010 is in group 1 of ASCII hyphen. Other facilities are available using
-#   Multi_key or dead_diaeresis.
-#   See # # Dashes and hyphens
-#   See #*# DIAERESIS
-#
-<UEFD0>                                                                          <U2011> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign>                                                          <U2011> : "‐" U2010 # HYPHEN
-<UEFD0>                                                                         <endash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><numbersign>                                                         <endash> : "⸺" U2E3A # TWO-EM DASH
-<UEFD0>                                                                         <emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign>                                                         <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0>                                                                         <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
+<Multi_key><numbersign>                                                         <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
+<UEFD0>                                                                         <eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
+<Multi_key><numbersign>                                                         <eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
+<UEFD0><UEFD0>                                                                  <Eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
+<Multi_key><numbersign><numbersign>                                             <Eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
+<UEFD0><UEFD0>                                                                  <eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
+<Multi_key><numbersign><numbersign>                                             <eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
 #
 #
 # # HORIZONTAL BAR for African and Breton variants
@@ -11387,34 +11373,44 @@
 #   As a fallback solution the HORIZONTAL BAR dash is in group 1 of
 #   OPEN O and N WITH TILDE.
 #
-<UEFD0>                                                                          <U0254> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<Multi_key><numbersign>                                                          <U0254> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<UEFD0>                                                                          <U0186> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<Multi_key><numbersign>                                                          <U0186> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<UEFD0>                                                                          <U00F1> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<Multi_key><numbersign>                                                          <U00F1> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<UEFD0>                                                                          <U00D1> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<Multi_key><numbersign>                                                          <U00D1> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
+<UEFD0>                                                                          <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
+<Multi_key><numbersign>                                                          <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
+<UEFD0>                                                                          <U0186> : "―" U2015 # HORIZONTAL BAR for African variant
+<Multi_key><numbersign>                                                          <U0186> : "―" U2015 # HORIZONTAL BAR for African variant
+<UEFD0>                                                                          <U00F1> : "―" U2015 # HORIZONTAL BAR for Breton variant
+<Multi_key><numbersign>                                                          <U00F1> : "―" U2015 # HORIZONTAL BAR for Breton variant
+<UEFD0>                                                                          <U00D1> : "―" U2015 # HORIZONTAL BAR for Breton variant
+<Multi_key><numbersign>                                                          <U00D1> : "―" U2015 # HORIZONTAL BAR for Breton variant
 #
 #
-#   Facility for other layouts deprived of HORIZONTAL BAR on Shift + E08
+# # Hyphen and long dashes
 #
-<UEFD0>                                                                         <endash> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<Multi_key><numbersign>                                                         <endash> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<UEFD0>                                                                         <emdash> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
-<Multi_key><numbersign>                                                         <emdash> : "―" U2015 # HORIZONTAL BAR, Greek_horizbar, ¾-em-dash in Cambria
+#   The HYPHEN punctuation has been separately encoded as U2010, although it is
+#   a homoglyph to U002D in most fonts.
 #
+#   U2010 is in group 1 of ASCII hyphen. Other facilities are available using
+#   Multi_key or dead_diaeresis.
+#   See # # Dashes and hyphens
+#   See #*# DIAERESIS
 #
-# # TWO-EM DASH and THREE-EM DASH
+#   The TWO-EM DASH and THREE-EM DASH are both in group 1, depending on whether
+#   the base is en or em, and in group 2 or 3 according to the number of dashes
+#   represented by the long dash.
 #
 #   Alongside the support by group selection, multiple em dashes are accessible
 #   by composition, also supporting other dashes and hyphens.
 #   See # # Dashes and hyphens
 #
+<UEFD0>                                                                          <U2011> : "‐" U2010 # HYPHEN
+<Multi_key><numbersign>                                                          <U2011> : "‐" U2010 # HYPHEN
+<UEFD0>                                                                         <endash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><numbersign>                                                         <endash> : "⸺" U2E3A # TWO-EM DASH
 <UEFD0><UEFD0>                                                                  <endash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><numbersign><numbersign>                                             <endash> : "⸺" U2E3A # TWO-EM DASH
 <UEFD0><UEFD0>                                                                  <emdash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><numbersign><numbersign>                                             <emdash> : "⸺" U2E3A # TWO-EM DASH
+<UEFD0>                                                                         <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign>                                                         <emdash> : "⸻" U2E3B # THREE-EM DASH
 <UEFD0><UEFD0><UEFD0>                                                           <endash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><numbersign><numbersign><numbersign>                                 <endash> : "⸻" U2E3B # THREE-EM DASH
 <UEFD0><UEFD0><UEFD0>                                                           <emdash> : "⸻" U2E3B # THREE-EM DASH
