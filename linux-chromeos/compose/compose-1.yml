@@ -11411,8 +11411,16 @@
 <Multi_key><numbersign><numbersign>                                             <emdash> : "⸺" U2E3A # TWO-EM DASH
 <UEFD0>                                                                         <emdash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><numbersign>                                                         <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><3>                                                                      <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><3>                                                      <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><KP_3>                                                                   <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><KP_3>                                                   <endash> : "⸻" U2E3B # THREE-EM DASH
 <UEFD0><UEFD0><UEFD0>                                                           <endash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><numbersign><numbersign><numbersign>                                 <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><3>                                                                      <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><3>                                                      <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><KP_3>                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><KP_3>                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
 <UEFD0><UEFD0><UEFD0>                                                           <emdash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><numbersign><numbersign><numbersign>                                 <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
@@ -11614,86 +11622,86 @@
 #
 #   Arrow emoji as a mix of black and basic simple arrows, live on AltGr + numpad.
 #
-<UEFD0><4>                                                                           <0> : "↕" U2195 # UP DOWN ARROW
-<Multi_key><numbersign><4>                                                           <0> : "↕" U2195 # UP DOWN ARROW
-<UEFD0><KP_4>                                                                     <KP_0> : "↕" U2195 # UP DOWN ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_0> : "↕" U2195 # UP DOWN ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <0> : "↕" U2195 # UP DOWN ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <0> : "↕" U2195 # UP DOWN ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_0> : "↕" U2195 # UP DOWN ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_0> : "↕" U2195 # UP DOWN ARROW
-<UEFD0><4>                                                                           <1> : "↙" U2199 # SOUTH WEST ARROW
-<Multi_key><numbersign><4>                                                           <1> : "↙" U2199 # SOUTH WEST ARROW
-<UEFD0><KP_4>                                                                     <KP_1> : "↙" U2199 # SOUTH WEST ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_1> : "↙" U2199 # SOUTH WEST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <1> : "↙" U2199 # SOUTH WEST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <1> : "↙" U2199 # SOUTH WEST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_1> : "↙" U2199 # SOUTH WEST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_1> : "↙" U2199 # SOUTH WEST ARROW
-<UEFD0><4>                                                                           <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<Multi_key><numbersign><4>                                                           <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<UEFD0><KP_4>                                                                     <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW
-<UEFD0><4>                                                                           <3> : "↘" U2198 # SOUTH EAST ARROW
-<Multi_key><numbersign><4>                                                           <3> : "↘" U2198 # SOUTH EAST ARROW
-<UEFD0><KP_4>                                                                     <KP_3> : "↘" U2198 # SOUTH EAST ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_3> : "↘" U2198 # SOUTH EAST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <3> : "↘" U2198 # SOUTH EAST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <3> : "↘" U2198 # SOUTH EAST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_3> : "↘" U2198 # SOUTH EAST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_3> : "↘" U2198 # SOUTH EAST ARROW
-<UEFD0><4>                                                                           <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<Multi_key><numbersign><4>                                                           <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<UEFD0><KP_4>                                                                     <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW
-<UEFD0><4>                                                                           <5> : "↔" U2194 # LEFT RIGHT ARROW
-<Multi_key><numbersign><4>                                                           <5> : "↔" U2194 # LEFT RIGHT ARROW
-<UEFD0><KP_4>                                                                     <KP_5> : "↔" U2194 # LEFT RIGHT ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_5> : "↔" U2194 # LEFT RIGHT ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <5> : "↔" U2194 # LEFT RIGHT ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <5> : "↔" U2194 # LEFT RIGHT ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_5> : "↔" U2194 # LEFT RIGHT ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_5> : "↔" U2194 # LEFT RIGHT ARROW
-<UEFD0><4>                                                                           <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<Multi_key><numbersign><4>                                                           <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<UEFD0><KP_4>                                                                     <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW
-<UEFD0><4>                                                                           <7> : "↖" U2196 # NORTH WEST ARROW
-<Multi_key><numbersign><4>                                                           <7> : "↖" U2196 # NORTH WEST ARROW
-<UEFD0><KP_4>                                                                     <KP_7> : "↖" U2196 # NORTH WEST ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_7> : "↖" U2196 # NORTH WEST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <7> : "↖" U2196 # NORTH WEST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <7> : "↖" U2196 # NORTH WEST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_7> : "↖" U2196 # NORTH WEST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_7> : "↖" U2196 # NORTH WEST ARROW
-<UEFD0><4>                                                                           <8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<Multi_key><numbersign><4>                                                           <8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<UEFD0><KP_4>                                                                     <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW
-<UEFD0><4>                                                                           <9> : "↗" U2197 # NORTH EAST ARROW
-<Multi_key><numbersign><4>                                                           <9> : "↗" U2197 # NORTH EAST ARROW
-<UEFD0><KP_4>                                                                     <KP_9> : "↗" U2197 # NORTH EAST ARROW
-<Multi_key><numbersign><KP_4>                                                     <KP_9> : "↗" U2197 # NORTH EAST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <9> : "↗" U2197 # NORTH EAST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <9> : "↗" U2197 # NORTH EAST ARROW
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_9> : "↗" U2197 # NORTH EAST ARROW
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_9> : "↗" U2197 # NORTH EAST ARROW
+<UEFD0><4>                                                                           <0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><4>                                                           <0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><4>                                                                           <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><4>                                                           <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><4>                                                                           <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><4>                                                           <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><4>                                                                           <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><4>                                                           <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><4>                                                                           <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><4>                                                           <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><4>                                                                           <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><4>                                                           <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><4>                                                                           <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><4>                                                           <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><4>                                                                           <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><4>                                                           <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><4>                                                                           <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><4>                                                           <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><4>                                                                           <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><4>                                                           <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><KP_4>                                                                     <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                     <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 #
 #
 #   Black or plain arrows, live on Shift + AltGr + numpad.
