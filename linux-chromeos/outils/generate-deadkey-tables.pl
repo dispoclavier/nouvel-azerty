@@ -4,7 +4,7 @@
 # 2023-08-08T0749+0200
 # 2023-08-18T0349+0200
 # 2023-08-27T2253+0200
-# 2023-08-29T1214+0200
+# 2023-08-29T2203+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -281,6 +281,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) romanized Avestan/$1 avestique romanisé/g;
 				$line =~ s/( # .*) Dutch/$1 néerlandais/g;
 				$line =~ s/( # .*) romanized Pashto following/$1 pachto romanisé selon/g;
+				$line =~ s/( # .*) High surrogate/$1 surrogat haut/g;
 
 				# Anchors and localized tooltips:
 				$line    =~ m/^.+ : +"(.+?)"/u;
