@@ -10513,10 +10513,10 @@
 <Multi_key><apostrophe>                                                              <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <dead_acute>                                                                         <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
 <Multi_key><apostrophe>                                                              <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
-<dead_acute>                                                                         <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharoshti
-<Multi_key><apostrophe>                                                              <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharoshti
-<dead_acute>                                                                         <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharoshti
-<Multi_key><apostrophe>                                                              <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharoshti
+<dead_acute>                                                                         <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<Multi_key><apostrophe>                                                              <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<dead_acute>                                                                         <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<Multi_key><apostrophe>                                                              <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
 <dead_acute>                                                                         <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <Multi_key><apostrophe>                                                              <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <dead_acute>                                                                         <e> : "é" U00E9 # LATIN SMALL LETTER E WITH ACUTE
@@ -10577,18 +10577,18 @@
 <Multi_key><apostrophe>                                                              <S> : "Ś" U015A # LATIN CAPITAL LETTER S WITH ACUTE
 <dead_acute>                                                                         <s> : "ś" U015B # LATIN SMALL LETTER S WITH ACUTE
 <Multi_key><apostrophe>                                                              <s> : "ś" U015B # LATIN SMALL LETTER S WITH ACUTE
-<dead_acute>                                                                         <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharoshti
-<Multi_key><apostrophe>                                                              <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharoshti
-<dead_acute>                                                                         <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharoshti
-<Multi_key><apostrophe>                                                              <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharoshti
+<dead_acute>                                                                         <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<Multi_key><apostrophe>                                                              <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<dead_acute>                                                                         <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<Multi_key><apostrophe>                                                              <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
 <dead_acute>                                                                         <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                              <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <dead_acute>                                                                         <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                              <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
-<dead_acute>                                                                         <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE Vōro; romanized Kharoshti. — Overrides en_US.UTF-8/Compose Ǘ
-<Multi_key><apostrophe>                                                              <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE Vōro; romanized Kharoshti. — Overrides en_US.UTF-8/Compose Ǘ
-<dead_acute>                                                                         <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE Vōro; romanized Kharoshti. — Overrides en_US.UTF-8/Compose Ǘ
-<Multi_key><apostrophe>                                                              <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE Vōro; romanized Kharoshti. — Overrides en_US.UTF-8/Compose Ǘ
+<dead_acute>                                                                         <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<Multi_key><apostrophe>                                                              <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<dead_acute>                                                                         <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<Multi_key><apostrophe>                                                              <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
 <dead_acute>                                                                         <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <Multi_key><apostrophe>                                                              <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <dead_acute>                                                                         <w> : "ẃ" U1E83 # LATIN SMALL LETTER W WITH ACUTE
