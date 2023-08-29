@@ -108,8 +108,8 @@
 <Multi_key><less>                                                                <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
-<dead_circumflex>                                                          <twosuperior> : "���" UD835 # Mathematical Alphanumeric Symbols high surrogate
-<Multi_key><less>                                                          <twosuperior> : "���" UD835 # Mathematical Alphanumeric Symbols high surrogate
+<dead_circumflex>                                                          <twosuperior> : UD835 # Mathematical Alphanumeric Symbols high surrogate
+<Multi_key><less>                                                          <twosuperior> : UD835 # Mathematical Alphanumeric Symbols high surrogate
 <dead_circumflex>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -805,8 +805,8 @@
 <Multi_key><equal>                                                          <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                <dead_circumflex> : "⁠" U2060 # WORD JOINER
 <Multi_key><equal>                                                     <dead_circumflex> : "⁠" U2060 # WORD JOINER
-<UEFD7>                                                                 <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
-<Multi_key><equal>                                                      <dead_abovering> : "���" UD83C # High surrogate of regional indicator symbol letters
+<UEFD7>                                                                 <dead_abovering> : UD83C # High surrogate of regional indicator symbol letters
+<Multi_key><equal>                                                      <dead_abovering> : UD83C # High surrogate of regional indicator symbol letters
 #
 #
 #   Symbols
@@ -3016,8 +3016,8 @@
 <Multi_key><colon>                                                                   <9> : "⁹" U2079 # SUPERSCRIPT NINE
 <dead_diaeresis>                                                                  <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
 <Multi_key><colon>                                                                <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
-<dead_diaeresis>                                                           <twosuperior> : "���" UD835 # Mathematical Alphanumeric Symbols high surrogate
-<Multi_key><colon>                                                         <twosuperior> : "���" UD835 # Mathematical Alphanumeric Symbols high surrogate
+<dead_diaeresis>                                                           <twosuperior> : UD835 # Mathematical Alphanumeric Symbols high surrogate
+<Multi_key><colon>                                                         <twosuperior> : UD835 # Mathematical Alphanumeric Symbols high surrogate
 <dead_diaeresis>                                                                     <A> : "Ä" U00C4 # LATIN CAPITAL LETTER A WITH DIAERESIS
 <Multi_key><colon>                                                                   <A> : "Ä" U00C4 # LATIN CAPITAL LETTER A WITH DIAERESIS
 <dead_diaeresis>                                                                     <a> : "ä" U00E4 # LATIN SMALL LETTER A WITH DIAERESIS
