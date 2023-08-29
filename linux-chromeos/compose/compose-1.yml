@@ -11480,16 +11480,27 @@
 #   are extrapolated; double headed left-right is placed on 5, up-down on 0.
 #
 #   Group 1 is not used here, since digits in group 1 are dead keys activating
-#   other groups. And groups 8 and 10 are used for mathematical symbol digits.
+#   other groups. And groups 8 and 10 are used for mathematical symbol digits,
+#   U1D7D8.. (double-struck) and U1D7E2.. (sans-serif). So groups 9, 11 and 12
+#   are used for additional arrow sets: U2B70.. (triangle-headed to bar) as of
+#   BMP arrows, and the wide-headed U1F860.. (light) and U1F880.. (very heavy)
+#   in the SMP. The sans-serif set U1F850.. is skipped as not providing enough
+#   added value with respect to the fact that on most computers (Windows), SMP
+#   characters are hard to input inside the TSF using only layout drivers with
+#   the wrong data type picked for dead key output. 0 and 5 are used for input
+#   of the high surrogate that is part of these wide-headed barb arrows.
 #
-#   Group  Arrow type                      Sample     Numpad live key level
+#   Group  Arrow type                         Sample   Numpad live key level
 #
-#       2  Basic simple arrows             ↑ U2191    AltFr
-#       3  Basic double arrows             ⇑ U21D1    Shift + AltFr
-#       4  Arrow emoji (black / basic simple arrows)  AltGr
-#       5  Black or plain arrows           ⬆ U2B06    Shift + AltGr
-#       6  Empty or outlined, white arrows ⇧ U21E7    Shift + AltGr + AltFr
-#       7  Triangle-headed arrows          ⭡ U2B61    AltGr + AltFr
+#       2  Basic simple arrows                ↑ U2191  AltFr
+#       3  Basic double arrows                ⇑ U21D1  Shift + AltFr
+#       4  Arrow emoji (black / basic simple arrows)   AltGr
+#       5  Black or plain arrows              ⬆ U2B06  Shift + AltGr
+#       6  Empty or outlined, white arrows    ⇧ U21E7  Shift + AltGr + AltFr
+#       7  Triangle-headed arrows             ⭡ U2B61  AltGr + AltFr
+#       9  Triangle-headed arrows to bar      ⭱ U2B71
+#       1  Wide-headed light barb arrows      🡡 U1F861
+#       2  Wide-headed very heavy barb arrows 🢁 U1F881
 #
 #
 #   Basic simple arrows, live on AltFr + numpad.
@@ -11834,6 +11845,138 @@
 <Multi_key><numbersign><7>                                                           <9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
 <UEFD0><KP_7>                                                                     <KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
 <Multi_key><numbersign><KP_7>                                                     <KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
+#
+#
+#   Triangle-headed arrows to bar
+#
+<UEFD0><9>                                                                           <0> : "⭿" U2B7F # VERTICAL TAB KEY
+<Multi_key><numbersign><9>                                                           <0> : "⭿" U2B7F # VERTICAL TAB KEY
+<UEFD0><KP_9>                                                                     <KP_0> : "⭿" U2B7F # VERTICAL TAB KEY
+<Multi_key><numbersign><KP_9>                                                     <KP_0> : "⭿" U2B7F # VERTICAL TAB KEY
+<UEFD0><9>                                                                           <1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<Multi_key><numbersign><9>                                                           <5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<UEFD0><KP_9>                                                                     <KP_5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<Multi_key><numbersign><KP_9>                                                     <KP_5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<UEFD0><9>                                                                           <6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                           <9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                           <9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                     <KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                     <KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+#
+#
+#   Wide-headed light barb arrows
+#
+<UEFD0><1>                                                                           <0> : UD83E # High surrogate
+<Multi_key><numbersign><1>                                                           <0> : UD83E # High surrogate
+<UEFD0><KP_1>                                                                     <KP_0> : UD83E # High surrogate
+<Multi_key><numbersign><KP_1>                                                     <KP_0> : UD83E # High surrogate
+<UEFD0><1>                                                                           <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<UEFD0><1>                                                                           <2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                           <3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<UEFD0><1>                                                                           <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                           <5> : UD83E # High surrogate
+<Multi_key><numbersign><1>                                                           <5> : UD83E # High surrogate
+<UEFD0><KP_1>                                                                     <KP_5> : UD83E # High surrogate
+<Multi_key><numbersign><KP_1>                                                     <KP_5> : UD83E # High surrogate
+<UEFD0><1>                                                                           <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                           <7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<UEFD0><1>                                                                           <8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                           <9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                           <9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                     <KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                     <KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+#
+#
+#   Wide-headed very heavy barb arrows
+#
+<UEFD0><2>                                                                           <0> : UD83E # High surrogate
+<Multi_key><numbersign><2>                                                           <0> : UD83E # High surrogate
+<UEFD0><KP_2>                                                                     <KP_0> : UD83E # High surrogate
+<Multi_key><numbersign><KP_2>                                                     <KP_0> : UD83E # High surrogate
+<UEFD0><2>                                                                           <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <5> : UD83E # High surrogate
+<Multi_key><numbersign><2>                                                           <5> : UD83E # High surrogate
+<UEFD0><KP_2>                                                                     <KP_5> : UD83E # High surrogate
+<Multi_key><numbersign><KP_2>                                                     <KP_5> : UD83E # High surrogate
+<UEFD0><2>                                                                           <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                           <9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                           <9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                     <KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                     <KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
 #
 #
 #*# CURRENCY
