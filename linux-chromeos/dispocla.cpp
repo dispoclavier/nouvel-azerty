@@ -1,5 +1,4 @@
-//                       Date: 2023-08-18T0324+0200
-//              Last revision: 2023-08-17T1046+0200
+//                       Date: 2023-08-30T2304+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -598,9 +597,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U107A5 𐞥 superscript small q; UEFD0 *dead_group; U1F610 😐 NEUTRAL FACE emoji; U1F611 😑 EXPRESSIONLESS FACE emoji
 
 	key <AC02> {
-		[                        s,                        S,                    U02E2,                   dollar,            dead_currency,                   dollar,                   U1F612,                   U1F614 ],
-		[                        s,                        S,                    U02E2,                   dollar,            dead_currency,                   dollar,                   U1F612,                   U1F614 ]
-	}; // U02E2 ˢ superscript small s; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F614 😔 PENSIVE FACE 4th-top sad face emoji
+		[                        s,                        S,                    U02E2,                   dollar,            dead_currency,                   dollar,                  section,                   U1F612 ],
+		[                        s,                        S,                    U02E2,                   dollar,            dead_currency,                   dollar,                  section,                   U1F612 ]
+	}; // U02E2 ˢ superscript small s; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]
 
 	key <AC03> {
 		[                        d,                        D,                    U1D48,                parenleft,       dead_invertedbreve,                parenleft,                    U2300,                   U1F606 ],
@@ -694,9 +693,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key <AB07> {
-		[                    comma,                 question,                 question,             dead_cedilla,                    UEF63,                 question,                   U1F499,                   U1F49A ],
+		[                    comma,                 question,                 question,             dead_cedilla,                    UEF63,                 question,                   U1F614,                   U1F499 ],
 		[                    comma,                 question,                 question,             dead_cedilla,                    comma,                    UEF7B,               digitspace,                   U1F49A ]
-	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
+	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F614 😔 PENSIVE FACE 4th-top sad face emoji; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
