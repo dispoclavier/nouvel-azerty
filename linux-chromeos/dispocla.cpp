@@ -1,4 +1,4 @@
-//                       Date: 2023-08-30T2304+0200
+//                       Date: 2023-08-31T1247+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -592,9 +592,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		[                        q,                        Q,                   U107A5,               numbersign,                    UEFD0,               numbersign,                   U1F610,                   U1F611 ],
-		[                        q,                        Q,                   U107A5,               numbersign,                    UEFD0,               numbersign,                   U1F610,                   U1F611 ]
-	}; // U107A5 𐞥 superscript small q; UEFD0 *dead_group; U1F610 😐 NEUTRAL FACE emoji; U1F611 😑 EXPRESSIONLESS FACE emoji
+		[                        q,                        Q,                   U107A5,               numbersign,                    UEFD0,               numbersign,                    U2044,                   U1F610 ],
+		[                        q,                        Q,                   U107A5,               numbersign,                    UEFD0,               numbersign,                    U2044,                   U1F610 ]
+	}; // U107A5 𐞥 superscript small q; UEFD0 *dead_group; U2044 ⁄ FRACTION SLASH; U1F610 😐 NEUTRAL FACE emoji
 
 	key <AC02> {
 		[                        s,                        S,                    U02E2,                   dollar,            dead_currency,                   dollar,                  section,                   U1F612 ],
@@ -659,14 +659,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                   U1F622,                   U1F62D ],
-		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                   U1F622,                   U1F62D ]
-	}; // U02B7 ʷ superscript small w; U1F622 😢 CRYING FACE 19th-ranking emoji; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji
+		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                    colon,                   U1F622 ],
+		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                    colon,                   U1F622 ]
+	}; // U02B7 ʷ superscript small w; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
-		[                        x,                        X,                    U02E3,                 asterisk,           dead_abovering,                 asterisk,                    colon,                   U1F31F ],
-		[                        x,                        X,                    U02E3,                 asterisk,           dead_abovering,                 asterisk,                    colon,                   U1F31F ]
-	}; // U02E3 ˣ superscript small x; U1F31F 🌟 GLOWING STAR emoji
+		[                        x,                        X,                    U02E3,                 asterisk,           dead_abovering,                 asterisk,                    U200C,                   U1F31F ],
+		[                        x,                        X,                    U02E3,                 asterisk,           dead_abovering,                 asterisk,                    U200C,                   U1F31F ]
+	}; // U02E3 ˣ superscript small x; U200C "‌" ZERO WIDTH NON-JOINER; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
 		[                        c,                        C,                    U1D9C,                     less,          dead_circumflex,                 multiply,                    UEF8E,                   U1F631 ],
@@ -700,9 +700,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key <AB08> {
-		[                   period,                   exclam,                   exclam,            dead_belowdot,                    UEF60,                   exclam,                   U1F4E2,                   U1F4E3 ],
-		[                   period,                   exclam,                   exclam,            dead_belowdot,                   period,                    UEF7A,               punctspace,                   U1F4E3 ]
-	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji
+		[                   period,                   exclam,                   exclam,            dead_belowdot,                    UEF60,                   exclam,                   U1F62D,                   U1F4E3 ],
+		[                   period,                   exclam,                   exclam,            dead_belowdot,                   period,                    UEF7A,               punctspace,                   U1F4E2 ]
+	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP2";
