@@ -11364,14 +11364,20 @@
 #
 # # HORIZONTAL BAR for African and Breton variants
 #
-#   Two positions on key E08 are used for Ɔ or Ñ.
+#   Two positions on key E08 are used for Ɔɔ U0186, U0254 or Ññ U00D1, U00F1.
 #
-#   The HORIZONTAL BAR Unicode informative alias is quotation dash.
-#   This is a four-per-three-em dash, or three-quarter em dash, see
-#   in Cambria. Other fonts make it a conjoining em dash.
+#   To work around the loss of the key position where the HORIZONTAL BAR dash
+#   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
+#   mapped on that key in African and Breton variants respectively, and it is
+#   in group 1 of underscore.
+#   See # # C09
 #
-#   As a fallback solution the HORIZONTAL BAR dash is in group 1 of
-#   OPEN O and N WITH TILDE.
+#   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
+#   the Cambria font makes the most sense of it, giving it a three-quarter em
+#   length and making it a four-per-three-em dash. Other fonts use this dash
+#   to have a conjoining em dash, where em dash is not.
+#   See # # Hyphen and long dashes
+#   See # # Dashes and hyphens
 #
 <UEFD0>                                                                          <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
 <Multi_key><numbersign>                                                          <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
