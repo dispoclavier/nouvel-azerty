@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.0.10 (projet)
+
+* Touches mortes : Sélectrice de groupe : Ajouter "―" U2015 dans le groupe 1 du tiret bas. Supprimer les séparateurs de ligne " " U2028 et de paragraphe " " U2029. Déplacer "➢" U27A2, "➲" U27B2, "▪" U25AA, "‣" U2023, "◦" U25E6, "•" U2022, "❖" U2756, "⮊" U2B8A, "¦" U00A6, "⛰" U26F0, "⏯" U23EF, "✅" U2705, "⛛" U26DB, "⌘" U2318 l’un à la place de l’autre. Supprimer "±" U00B1, "∓" U2213, "₊" U208A, "₋" U208B. Déplacer "˖" U02D6. Ajouter "✚" U271A, "✙" U2719, "✜" U271C, "➸" U27B8, "➟" U279F. (compose-1.yml [dab5b38](https://github.com/dispoclavier/nouvel-azerty/commit/dab5b38dfd2792fc739926bbcb7b00682b123de0), compose-2.yml [585d0de](https://github.com/dispoclavier/nouvel-azerty/commit/585d0dee67043d97c4ef7b23f8afdb375bacc95a))
+
 ## 1.0.9 (2023-08-31)
 
 * Touches mortes : Tréma : Ajouter "‐" U2010, "⸺" U2E3A et "⸻" U2E3B. Sélectrice de groupe : Ajouter "⸺" U2E3A et "⸻" U2E3B. Documentation : Corriger les commentaires (aussi pour les tableaux), équilibrer le contenu de la sélectrice de groupe. (compose-1.yml [aac2dd6](https://github.com/dispoclavier/nouvel-azerty/commit/aac2dd6d65ccff619d0a2b9c718ef072ea23d408), [3b89562](https://github.com/dispoclavier/nouvel-azerty/commit/3b89562fd042be2e400b526349ae946745ef2454), [ac3fb81](https://github.com/dispoclavier/nouvel-azerty/commit/ac3fb812af391ce90941c8dae47f5b819a4d4b9d), compose-2.yml [c21a6c0](https://github.com/dispoclavier/nouvel-azerty/commit/c21a6c06dd2f73dcaf78da757ae5c7ab706fb5f8), [efd6e96](https://github.com/dispoclavier/nouvel-azerty/commit/efd6e96415eee69fc49c78793d3151bcae5fd10c), [d56ee24](https://github.com/dispoclavier/nouvel-azerty/commit/d56ee249087c6e3c429ccb5f6f1c1889e86661d8))
