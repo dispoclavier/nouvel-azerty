@@ -10,6 +10,6 @@ Nouvel AZERTY en mode français :
 ![Nouvel AZERTY en mode français](https://dispoclavier.com/img/nouvel-azerty.png)
 Nouvel AZERTY en mode français à capitales verrouillées :
 ![Nouvel AZERTY en mode français à capitales verrouillées](https://dispoclavier.com/img/nouvel-azerty-verrcap.png)
-Nouvel AZERTY en mode numérique (à chiffres verrouillées) :
+Nouvel AZERTY en mode numérique (à chiffres verrouillés) :
 ![Nouvel AZERTY en mode numérique (à chiffres verrouillées)](https://dispoclavier.com/img/nouvel-azerty-verrmod.png)
 Voir une [vue interactive avec infobulles](https://dispoclavier.com/nouvel-azerty/#nouvel-azerty)
