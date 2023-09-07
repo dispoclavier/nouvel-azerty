@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.0.9 "
+<UEFA0>                     : "version 1.0.10 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -401,14 +401,13 @@
 #
 #   [1] Escaping ampersand is required both in XML and in HTML.
 #   [2] Escaping single quote is required in XML if used to enclose values, but
-#       HTML 4 does not support this escape sequence.
-#   [3] Escaping double quote is required in XML if used to enclose values, and
-#       it is supported but not required in HTML except in argument values.
+#       HTML 4 does not support this escape.
+#   [3] Escaping double quote is required in XML if used to enclose values.
 #   [4] Points to the left or to the right depending on writing direction. This
 #       escape is required both in XML and in HTML.
 #   [5] Points to the right or to the left depending on writing direction. This
-#       escape is required in XML but not in HTML, so it is not used in the new
-#       WordPress Block Editor; still it is used in the TinyMCE Classic Editor.
+#       escape is required in XML. In HTML it is not, but it should be used, at
+#       least in argument values.
 #
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, U2060 WORD JOINER
@@ -883,7 +882,7 @@
 #   the ASCII hyphen U002D. Assigning it an extra scalar potentially fools font
 #   designers into giving U002D a hybrid glyph fitting neither the expectations
 #   for a hyphen nor those for a minus sign, fully expressing its genericity as
-#   pointed in the Unicode NamesList: “used generically for hyphen, minus sign
+#   pointed in the Unicode Code Chart: “used generically for hyphen, minus sign
 #   or en dash, all of which have dedicated alternatives”. As a consequence, it
 #   should be prevented from fully deploying its adverse effects by taking up a
 #   position on keyboard layouts, screwing everything up in the process, from
