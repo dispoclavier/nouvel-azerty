@@ -1,4 +1,4 @@
-//                       Date: 2023-08-31T1701+0200
+//                       Date: 2023-09-07T1825+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -702,7 +702,7 @@ xkb_symbols "kbfrFRs" {
 	key <AB08> {
 		[                   period,                   exclam,                   exclam,            dead_belowdot,                    UEF60,                   exclam,                   U1F62D,                   U1F4E3 ],
 		[                   period,                   exclam,                   exclam,            dead_belowdot,                   period,                    UEF7A,               punctspace,                   U1F4E2 ]
-	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji
+	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP2";
@@ -724,7 +724,7 @@ xkb_symbols "kbfrFRs" {
 	key <SPCE> {
 		[                    space,                    space,             nobreakspace,                    U200B,                    U202F,                    UEF6E,                    UEF6F,                    UEF9B ],
 		[                    space,                    space,                    space,                    UEF9B,                    space,                    UEF9F,                    UEF9F,                    UEF9B ]
-	}; // U202F ' ' NARROW NO-BREAK SPACE; U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying non-breaking space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying non-breaking space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
+	}; // U202F ' ' NARROW NO-BREAK SPACE; U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
 
 	//
 	// Numpad
