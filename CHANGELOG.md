@@ -1,8 +1,8 @@
 # Journal des modifications
 
-## 1.0.10 (projet)
+## 1.0.10 (2023-09-07)
 
-* Touches mortes : Sélectrice de groupe : Ajouter "―" U2015 dans le groupe 1 du tiret bas. Supprimer les séparateurs de ligne " " U2028 et de paragraphe " " U2029. Déplacer "➢" U27A2, "➲" U27B2, "▪" U25AA, "‣" U2023, "◦" U25E6, "•" U2022, "❖" U2756, "⮊" U2B8A, "¦" U00A6, "⛰" U26F0, "⏯" U23EF, "✅" U2705, "⛛" U26DB, "⌘" U2318 l’un à la place de l’autre. Supprimer "±" U00B1, "∓" U2213, "₊" U208A, "₋" U208B. Déplacer "˖" U02D6. Ajouter "✚" U271A, "✙" U2719, "✜" U271C, "➸" U27B8, "➟" U279F. (compose-1.yml [dab5b38](https://github.com/dispoclavier/nouvel-azerty/commit/dab5b38dfd2792fc739926bbcb7b00682b123de0), compose-2.yml [585d0de](https://github.com/dispoclavier/nouvel-azerty/commit/585d0dee67043d97c4ef7b23f8afdb375bacc95a))
+* Touches mortes : Sélectrice de groupe : Ajouter "―" U2015 dans le groupe 1 du tiret bas. Supprimer les séparateurs de ligne " " U2028 et de paragraphe " " U2029. Déplacer "➢" U27A2, "➲" U27B2, "▪" U25AA, "‣" U2023, "◦" U25E6, "•" U2022, "❖" U2756, "⮊" U2B8A, "¦" U00A6, "⛰" U26F0, "⏯" U23EF, "✅" U2705, "⛛" U26DB, "⌘" U2318 l’un à la place de l’autre. Supprimer "±" U00B1, "∓" U2213, "₊" U208A, "₋" U208B. Déplacer "˖" U02D6. Ajouter "✚" U271A, "✙" U2719, "✜" U271C, "➸" U27B8, "➟" U279F. Documentation. (compose-1.yml [dab5b38](https://github.com/dispoclavier/nouvel-azerty/commit/dab5b38dfd2792fc739926bbcb7b00682b123de0), [05e88f5](https://github.com/dispoclavier/nouvel-azerty/commit/05e88f5ba6f33b0cbad3d0a80f906a626e928f53), compose-2.yml [585d0de](https://github.com/dispoclavier/nouvel-azerty/commit/585d0dee67043d97c4ef7b23f8afdb375bacc95a), dispocla.cpp [e2a5f4a](https://github.com/dispoclavier/nouvel-azerty/commit/e2a5f4a7c50836b19c106d1013eac6ced86d34a7))
 
 ## 1.0.9 (2023-08-31)
 
