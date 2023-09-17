@@ -760,7 +760,7 @@
 #   *dead_equal UEFD7
 #   Multi_key: ¦=
 #
-#   In XKB, on single press, the dead key outputs the symbol with an
+#   In XKB, on single press, letters yield regional indicator symbols with an
 #   appended ZWNJ for letter emoji display and writing words.
 #
 #   The full set of existing flag emoji is supported on double press.
@@ -768,6 +768,18 @@
 #
 #   Regional indicator symbols in isolation are supported on triple press.
 #   See #^# REGIONAL_INDICATOR_SYMBOL
+#
+#   Digits yield double arrows as a redundant facility to meet most common user
+#   expectations. Single arrows are yielded by dead_horn.
+#   See #*# HORN, DESCENDER, NOTCH
+#
+#   Symbols other than "⹀" U2E40 DOUBLE HYPHEN as a feature for lexicography
+#   (with respect to this, mathematical symbols use <Multi_key><minus><equal>)
+#   cannot be supported in group 0 due to numerous conflicts with composition.
+#
+#   Mathematical symbols are also supported by DIAERESIS as a quick access,
+#   unless a quick access sequence conflicts with regular support.
+#   See #*# DIAERESIS
 #
 #
 #   Cross-platform compatibility
@@ -808,22 +820,48 @@
 <UEFD7>                                                                 <dead_abovering> : UD83C # High surrogate of regional indicator symbol letters
 <Multi_key><equal>                                                      <dead_abovering> : UD83C # High surrogate of regional indicator symbol letters
 #
-#
-#   Symbols
-#
-#   Mathematical symbols also by DIAERESIS, which acts as a quick access,
-#   unless a quick access sequence conflicts with regular support.
-#   See #*# DIAERESIS
-#
-#   The only exception is ⹀ U2E40 DOUBLE HYPHEN as a feature for lexicography.
-#   With respect to this, mathematical symbols use <Multi_key><minus><equal>.
-#
 <UEFD7>                                                                          <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><equal>                                                               <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-#
-#
-#   Letters
-#
+<UEFD7>                                                                              <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><equal>                                                                   <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<UEFD7>                                                                           <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<UEFD7>                                                                              <1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><equal>                                                                   <1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<UEFD7>                                                                           <KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<UEFD7>                                                                              <2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                   <2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<UEFD7>                                                                           <KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<UEFD7>                                                                              <3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><equal>                                                                   <3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<UEFD7>                                                                           <KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<UEFD7>                                                                              <4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                   <4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<UEFD7>                                                                           <KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<UEFD7>                                                                              <5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><equal>                                                                   <5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<UEFD7>                                                                           <KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<UEFD7>                                                                              <6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                   <6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<UEFD7>                                                                           <KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<UEFD7>                                                                              <7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><equal>                                                                   <7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<UEFD7>                                                                           <KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<UEFD7>                                                                              <8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                   <8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<UEFD7>                                                                           <KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<UEFD7>                                                                              <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><equal>                                                                   <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<UEFD7>                                                                           <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><equal>                                                                <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <UEFD7>                                                                              <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                                   <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
 <UEFD7>                                                                              <A> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
