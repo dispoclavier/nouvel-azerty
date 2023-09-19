@@ -79,6 +79,9 @@
 #   Followed by comma or period, dead_circumflex provides a shorthand for U200C
 #   ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
 #
+#   The numeric base characters are propagated from compose sequences for heart
+#   emoji that are duplicated here for consistency, and completed consistently.
+#
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
 #
@@ -110,6 +113,42 @@
 <Multi_key><less>                                                               <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                          <twosuperior> : UD835 # Mathematical Alphanumeric Symbols high surrogate
 <Multi_key><less>                                                          <twosuperior> : UD835 # Mathematical Alphanumeric Symbols high surrogate
+<dead_circumflex>                                                                    <1> : "♤" U2664 # WHITE SPADE SUIT
+<Multi_key><less>                                                                    <1> : "♤" U2664 # WHITE SPADE SUIT
+<dead_circumflex>                                                                 <KP_1> : "♤" U2664 # WHITE SPADE SUIT
+<Multi_key><less>                                                                 <KP_1> : "♤" U2664 # WHITE SPADE SUIT
+<dead_circumflex>                                                                    <2> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less>                                                                    <2> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex>                                                                 <KP_2> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less>                                                                 <KP_2> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex>                                                                    <3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+<Multi_key><less>                                                                    <3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+<dead_circumflex>                                                                 <KP_3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+<Multi_key><less>                                                                 <KP_3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+<dead_circumflex>                                                                    <4> : "♡" U2661 # WHITE HEART SUIT
+<Multi_key><less>                                                                    <4> : "♡" U2661 # WHITE HEART SUIT
+<dead_circumflex>                                                                 <KP_4> : "♡" U2661 # WHITE HEART SUIT
+<Multi_key><less>                                                                 <KP_4> : "♡" U2661 # WHITE HEART SUIT
+<dead_circumflex>                                                                    <5> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less>                                                                    <5> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex>                                                                 <KP_5> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less>                                                                 <KP_5> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex>                                                                    <6> : "♠" U2660 # BLACK SPADE SUIT emoji
+<Multi_key><less>                                                                    <6> : "♠" U2660 # BLACK SPADE SUIT emoji
+<dead_circumflex>                                                                 <KP_6> : "♠" U2660 # BLACK SPADE SUIT emoji
+<Multi_key><less>                                                                 <KP_6> : "♠" U2660 # BLACK SPADE SUIT emoji
+<dead_circumflex>                                                                    <7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<Multi_key><less>                                                                    <7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<dead_circumflex>                                                                 <KP_7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<Multi_key><less>                                                                 <KP_7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<dead_circumflex>                                                                    <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<Multi_key><less>                                                                    <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<dead_circumflex>                                                                 <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<Multi_key><less>                                                                 <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<dead_circumflex>                                                                    <9> : "♣" U2663 # BLACK CLUB SUIT emoji
+<Multi_key><less>                                                                    <9> : "♣" U2663 # BLACK CLUB SUIT emoji
+<dead_circumflex>                                                                 <KP_9> : "♣" U2663 # BLACK CLUB SUIT emoji
+<Multi_key><less>                                                                 <KP_9> : "♣" U2663 # BLACK CLUB SUIT emoji
 <dead_circumflex>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                    <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                    <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -756,8 +795,8 @@
 <Multi_key><greater><greater>                                                    <U200B> : "̬" U032C # COMBINING CARON BELOW
 #
 #
-#*# EQUAL
-#   *dead_equal UEFD7
+#*# DOUBLE, FLAG_LETTER
+#   *dead_flag UEFD7
 #   Multi_key: ¦=
 #
 #   In XKB, on single press, letters yield regional indicator symbols with an
@@ -1174,7 +1213,7 @@
 #
 #
 #^# REGIONAL_INDICATOR_SYMBOL_PAIR
-#   *dead_equal double press
+#   *dead_flag double press
 #   Multi_key: ¦==
 #
 #   Flags are supported on double press followed by the ISO country code.
@@ -2217,11 +2256,11 @@
 #
 #
 #^# REGIONAL_INDICATOR_SYMBOL
-#   *dead_equal triple press
+#   *dead_flag triple press
 #   Multi_key: ¦===
 #
 #   This yields the bare symbol not followed by ZWNJ.
-#   See #*# EQUAL
+#   See #*# DOUBLE, FLAG_LETTER
 #
 <UEFD7><UEFD7><UEFD7>                                                                <a> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
 <Multi_key><equal><equal><equal>                                                     <a> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
@@ -2338,6 +2377,9 @@
 #   the capital letter is considered a turned e, uppercase of "ǝ" U01DD LATIN
 #   SMALL LETTER TURNED E. As such it is in group 1 of R, and in group 2 of E.
 #
+#   Digits yield negative circled number dingbats as a shortcut.
+#   See # # CIRCLED_NEGATIVE
+#
 <UEFD6>                                                                        <section> : "\\" U005C # REVERSE SOLIDUS
 <Multi_key><backslash>                                                         <section> : "\\" U005C # REVERSE SOLIDUS
 <UEFD6>                                                                     <asciitilde> : "∽" U223D # REVERSED TILDE
@@ -2352,6 +2394,46 @@
 <Multi_key><backslash>                                                       <semicolon> : "⁏" U204F # REVERSED SEMICOLON
 <UEFD6>                                                                      <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><backslash>                                                       <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
+<UEFD6>                                                                              <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><backslash>                                                               <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<UEFD6>                                                                           <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><backslash>                                                            <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<UEFD6>                                                                              <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<Multi_key><backslash>                                                               <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<UEFD6>                                                                           <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<Multi_key><backslash>                                                            <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<UEFD6>                                                                              <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<Multi_key><backslash>                                                               <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<UEFD6>                                                                           <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<Multi_key><backslash>                                                            <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<UEFD6>                                                                              <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<Multi_key><backslash>                                                               <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<UEFD6>                                                                           <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<Multi_key><backslash>                                                            <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<UEFD6>                                                                              <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<Multi_key><backslash>                                                               <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<UEFD6>                                                                           <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<Multi_key><backslash>                                                            <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<UEFD6>                                                                              <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<Multi_key><backslash>                                                               <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<UEFD6>                                                                           <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<Multi_key><backslash>                                                            <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<UEFD6>                                                                              <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<Multi_key><backslash>                                                               <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<UEFD6>                                                                           <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<Multi_key><backslash>                                                            <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<UEFD6>                                                                              <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<Multi_key><backslash>                                                               <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<UEFD6>                                                                           <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<Multi_key><backslash>                                                            <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<UEFD6>                                                                              <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<Multi_key><backslash>                                                               <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<UEFD6>                                                                           <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<Multi_key><backslash>                                                            <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<UEFD6>                                                                              <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<Multi_key><backslash>                                                               <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<UEFD6>                                                                           <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<Multi_key><backslash>                                                            <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
 <UEFD6>                                                                              <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <Multi_key><backslash>                                                               <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <UEFD6>                                                                              <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
@@ -2633,14 +2715,17 @@
 #   dead_cedilla
 #   Multi_key: ¦,
 #
+#   The polygrams make the dead_cedilla key behave like a Ç key in all relevant
+#   cases, along the lines of the Ê-key emulation, for Canadian French QWERTY.
+#   See #*# CIRCUMFLEX
+#
 #   Cedilla has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Cedilla
 #
-#   The polygrams make the dead_cedilla key behave like a Ç key in all relevant
-#   cases, along the lines of the Ê-key emulation.
-#   See #*# CIRCUMFLEX
-#
-#   This is designed for use on the Canadian French QWERTY variant.
+#   Digits yield numbers 1 through 10 (i.e. digits 1..9 and number 10) followed
+#   by a period, as an experimental convenience, while parenthesized digits and
+#   letters are not supported. Numbers 11..20 are in dead_belowcomma.
+#   See #*# COMMA_BELOW
 #
 <dead_cedilla>                                                                   <space> : "̧" U0327 # COMBINING CEDILLA
 <Multi_key><comma>                                                               <space> : "̧" U0327 # COMBINING CEDILLA
@@ -2652,6 +2737,46 @@
 <Multi_key><comma>                                                        <nobreakspace> : "¸" U00B8 # CEDILLA
 <dead_cedilla>                                                                 <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
 <Multi_key><comma>                                                             <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
+<dead_cedilla>                                                                       <0> : "⒑" U2491 # NUMBER TEN FULL STOP
+<Multi_key><comma>                                                                   <0> : "⒑" U2491 # NUMBER TEN FULL STOP
+<dead_cedilla>                                                                    <KP_0> : "⒑" U2491 # NUMBER TEN FULL STOP
+<Multi_key><comma>                                                                <KP_0> : "⒑" U2491 # NUMBER TEN FULL STOP
+<dead_cedilla>                                                                       <1> : "⒈" U2488 # DIGIT ONE FULL STOP
+<Multi_key><comma>                                                                   <1> : "⒈" U2488 # DIGIT ONE FULL STOP
+<dead_cedilla>                                                                    <KP_1> : "⒈" U2488 # DIGIT ONE FULL STOP
+<Multi_key><comma>                                                                <KP_1> : "⒈" U2488 # DIGIT ONE FULL STOP
+<dead_cedilla>                                                                       <2> : "⒉" U2489 # DIGIT TWO FULL STOP
+<Multi_key><comma>                                                                   <2> : "⒉" U2489 # DIGIT TWO FULL STOP
+<dead_cedilla>                                                                    <KP_2> : "⒉" U2489 # DIGIT TWO FULL STOP
+<Multi_key><comma>                                                                <KP_2> : "⒉" U2489 # DIGIT TWO FULL STOP
+<dead_cedilla>                                                                       <3> : "⒊" U248A # DIGIT THREE FULL STOP
+<Multi_key><comma>                                                                   <3> : "⒊" U248A # DIGIT THREE FULL STOP
+<dead_cedilla>                                                                    <KP_3> : "⒊" U248A # DIGIT THREE FULL STOP
+<Multi_key><comma>                                                                <KP_3> : "⒊" U248A # DIGIT THREE FULL STOP
+<dead_cedilla>                                                                       <4> : "⒋" U248B # DIGIT FOUR FULL STOP
+<Multi_key><comma>                                                                   <4> : "⒋" U248B # DIGIT FOUR FULL STOP
+<dead_cedilla>                                                                    <KP_4> : "⒋" U248B # DIGIT FOUR FULL STOP
+<Multi_key><comma>                                                                <KP_4> : "⒋" U248B # DIGIT FOUR FULL STOP
+<dead_cedilla>                                                                       <5> : "⒌" U248C # DIGIT FIVE FULL STOP
+<Multi_key><comma>                                                                   <5> : "⒌" U248C # DIGIT FIVE FULL STOP
+<dead_cedilla>                                                                    <KP_5> : "⒌" U248C # DIGIT FIVE FULL STOP
+<Multi_key><comma>                                                                <KP_5> : "⒌" U248C # DIGIT FIVE FULL STOP
+<dead_cedilla>                                                                       <6> : "⒍" U248D # DIGIT SIX FULL STOP
+<Multi_key><comma>                                                                   <6> : "⒍" U248D # DIGIT SIX FULL STOP
+<dead_cedilla>                                                                    <KP_6> : "⒍" U248D # DIGIT SIX FULL STOP
+<Multi_key><comma>                                                                <KP_6> : "⒍" U248D # DIGIT SIX FULL STOP
+<dead_cedilla>                                                                       <7> : "⒎" U248E # DIGIT SEVEN FULL STOP
+<Multi_key><comma>                                                                   <7> : "⒎" U248E # DIGIT SEVEN FULL STOP
+<dead_cedilla>                                                                    <KP_7> : "⒎" U248E # DIGIT SEVEN FULL STOP
+<Multi_key><comma>                                                                <KP_7> : "⒎" U248E # DIGIT SEVEN FULL STOP
+<dead_cedilla>                                                                       <8> : "⒏" U248F # DIGIT EIGHT FULL STOP
+<Multi_key><comma>                                                                   <8> : "⒏" U248F # DIGIT EIGHT FULL STOP
+<dead_cedilla>                                                                    <KP_8> : "⒏" U248F # DIGIT EIGHT FULL STOP
+<Multi_key><comma>                                                                <KP_8> : "⒏" U248F # DIGIT EIGHT FULL STOP
+<dead_cedilla>                                                                       <9> : "⒐" U2490 # DIGIT NINE FULL STOP
+<Multi_key><comma>                                                                   <9> : "⒐" U2490 # DIGIT NINE FULL STOP
+<dead_cedilla>                                                                    <KP_9> : "⒐" U2490 # DIGIT NINE FULL STOP
+<Multi_key><comma>                                                                <KP_9> : "⒐" U2490 # DIGIT NINE FULL STOP
 <dead_cedilla>                                                                       <A> : "ÇA" # U00C7 U0041 Canadian French: Ç key emulation
 <Multi_key><comma>                                                                   <A> : "ÇA" # U00C7 U0041 Canadian French: Ç key emulation
 <dead_cedilla>                                                                       <a> : "ça" # U00E7 U0061 Canadian French: Ç key emulation
@@ -2968,7 +3093,7 @@
 #
 #   Also used as a synonym of EQUAL in mathematical symbols, except for those
 #   of these quick access sequences that conflict with regular support.
-#   See #*# EQUAL
+#   See #*# DOUBLE, FLAG_LETTER
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol, have quick access
@@ -3269,6 +3394,11 @@
 #   dead_belowcomma
 #   Multi_key: ¦;
 #
+#   Digits yield numbers 11 through 20 followed by a period, as an experimental
+#   convenience, while parenthesized digits and letters are not supported.
+#   Numbers 1..10 are in dead_cedilla.
+#   See #*# CEDILLA
+#
 #   For convenience, the Multi_key sequence ¦§ is also supported.
 #
 <dead_belowcomma>                                                                <space> : "̦" U0326 # COMBINING COMMA BELOW
@@ -3280,6 +3410,66 @@
 <dead_belowcomma>                                                              <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <Multi_key><semicolon>                                                         <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <Multi_key><section>                                                           <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
+<dead_belowcomma>                                                                    <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
+<Multi_key><semicolon>                                                               <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
+<Multi_key><section>                                                                 <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
+<dead_belowcomma>                                                                 <KP_0> : "⒛" U249B # NUMBER TWENTY FULL STOP
+<Multi_key><semicolon>                                                            <KP_0> : "⒛" U249B # NUMBER TWENTY FULL STOP
+<Multi_key><section>                                                              <KP_0> : "⒛" U249B # NUMBER TWENTY FULL STOP
+<dead_belowcomma>                                                                    <1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
+<Multi_key><semicolon>                                                               <1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
+<Multi_key><section>                                                                 <1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
+<dead_belowcomma>                                                                 <KP_1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
+<Multi_key><section>                                                              <KP_1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
+<dead_belowcomma>                                                                    <2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
+<Multi_key><semicolon>                                                               <2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
+<Multi_key><section>                                                                 <2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
+<dead_belowcomma>                                                                 <KP_2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
+<Multi_key><semicolon>                                                            <KP_2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
+<Multi_key><section>                                                              <KP_2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
+<dead_belowcomma>                                                                    <3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
+<Multi_key><semicolon>                                                               <3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
+<Multi_key><section>                                                                 <3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
+<Multi_key><section>                                                              <KP_3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
+<dead_belowcomma>                                                                    <4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
+<Multi_key><semicolon>                                                               <4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
+<Multi_key><section>                                                                 <4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
+<Multi_key><section>                                                              <KP_4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
+<dead_belowcomma>                                                                    <5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
+<Multi_key><semicolon>                                                               <5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
+<Multi_key><section>                                                                 <5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
+<Multi_key><section>                                                              <KP_5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
+<dead_belowcomma>                                                                    <6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
+<Multi_key><semicolon>                                                               <6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
+<Multi_key><section>                                                                 <6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
+<Multi_key><section>                                                              <KP_6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
+<dead_belowcomma>                                                                    <7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
+<Multi_key><semicolon>                                                               <7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
+<Multi_key><section>                                                                 <7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
+<Multi_key><section>                                                              <KP_7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
+<dead_belowcomma>                                                                    <8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
+<Multi_key><semicolon>                                                               <8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
+<Multi_key><section>                                                                 <8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
+<Multi_key><section>                                                              <KP_8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
+<dead_belowcomma>                                                                    <9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
+<Multi_key><semicolon>                                                               <9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
+<Multi_key><section>                                                                 <9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
+<dead_belowcomma>                                                                 <KP_9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
+<Multi_key><semicolon>                                                            <KP_9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
+<Multi_key><section>                                                              <KP_9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
 <dead_belowcomma>                                                                    <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW Moldovan and Romanian until 1904
 <Multi_key><semicolon>                                                               <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW Moldovan and Romanian until 1904
 <Multi_key><section>                                                                 <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW Moldovan and Romanian until 1904
