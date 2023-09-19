@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.0.10 "
+<UEFA0>                     : "version 1.0.11 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -64,10 +64,6 @@
 #                    Setting: The input method needs to be XIM in order for the spaced-out punctuation
 #                             to work, e.g. " ?" rather than "". The setting is located in
 #                             System settings > Personal > Language support > Language > Keyboard input method system
-#
-#             Login keyboard: Sample configuration in /etc/default/keyboard
-#                                 XKBLAYOUT="dispocla"
-#                                 XKBVARIANT="kbfrFRa"
 #
 #           Acknowledgements: • Our Lord God and Jesus Christ, for ideas, help and direction.
 #                               Consistently with the Cistercian “Soli Deo Gloria”, picked up
@@ -4804,7 +4800,7 @@
 #   *dead_bar as an alias for the ambiguous dead_stroke (horizontal)
 #   *dead_circled, virtualized by double press of dead_greek (¦@@)
 #   *dead_group: new AZERTY has a dedicated key for this dead key
-#   *dead_equal (regional indicator letters, U1F1E6..U1F1FF)
+#   *dead_flag (regional indicator letters, U1F1E6..U1F1FF)
 #   *dead_retroflexhook, using brace symmetry to alleviate dead_hook
 #   *dead_reversed (~50 Latin letters)
 #   *dead_subscript (smallcaps with uppercase base letters)
@@ -4830,7 +4826,7 @@
 #                   double-press: inverted (20 instances) or sideways (8 letters) in Latin;
 #                   inverted and sideways have an empty intersection. Multi_key: ¦%
 #   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform. ~50 (Latin). Multi_key: ¦\
-#   <UEFD7> : "⚐"   *dead_equal — The Regional Indicator Symbols dead key. Multi_key: ¦=
+#   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. Multi_key: ¦=
 #
 #
 # # Legacy dead keys
@@ -4973,7 +4969,7 @@
 #   X                *  dead_abovering; dead_belowring
 #   C                <  dead_circumflex (new-school); dead_belowcircumflex
 #   V                >  dead_caron (new-school)
-#   B                =  *dead_equal UEFD7
+#   B                =  *dead_flag UEFD7
 #   N                \  *dead_reversed UEFD6
 #
 #   , and ?          ,  dead_cedilla
@@ -5059,7 +5055,7 @@
 #
 #   Approximation: See #*# TILDE
 #   Negation:      See #*# STROKE
-#   Equality:      See #*# EQUAL
+#   Equality:      See #*# DOUBLE, FLAG_LETTER
 #
 #   Negated symbols may alternatively be input using (Base-level) dead_acute,
 #   since no symbols have been encoded with an acute accent.
@@ -9653,6 +9649,17 @@
 #   dead_greek dead_stroke
 #   Multi_key: ¦@-
 #
+#   Also in REVERSED as a shortcut with alphabetic and semantic mnemonics.
+#   See #*# REVERSED
+#
+<dead_greek><dead_stroke>                                                            <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><at><minus>                                                               <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<dead_greek><dead_stroke>                                                         <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><at><minus>                                                            <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<dead_stroke><dead_greek>                                                            <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><minus><at>                                                               <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<dead_stroke><dead_greek>                                                         <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><minus><at>                                                            <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
 <dead_greek><dead_stroke>                                                            <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
 <Multi_key><at><minus>                                                               <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
 <dead_greek><dead_stroke>                                                         <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
@@ -9725,20 +9732,23 @@
 <Multi_key><minus><at>                                                               <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
 <dead_stroke><dead_greek>                                                         <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
 <Multi_key><minus><at>                                                            <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<dead_greek><dead_stroke>                                                            <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><at><minus>                                                               <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_greek><dead_stroke>                                                         <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><at><minus>                                                            <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_stroke><dead_greek>                                                            <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><minus><at>                                                               <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_stroke><dead_greek>                                                         <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><minus><at>                                                            <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
 #
 #
 # # CIRCLED_SANS
 #   dead_greek dead_currency
 #   Multi_key: ¦@$
 #
+#   Also in OGONEK as a shortcut with positional mnemonics.
+#   See #*# OGONEK
+#
+<dead_greek><dead_currency>                                                          <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><dollar>                                                              <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><dead_currency>                                                       <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><dollar>                                                           <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_greek>                                                          <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><at>                                                              <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_greek>                                                       <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><at>                                                           <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 <dead_greek><dead_currency>                                                          <1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
 <Multi_key><at><dollar>                                                              <1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
 <dead_greek><dead_currency>                                                       <KP_1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
@@ -9811,20 +9821,39 @@
 <Multi_key><dollar><at>                                                              <9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 <dead_currency><dead_greek>                                                       <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 <Multi_key><dollar><at>                                                           <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
-<dead_greek><dead_currency>                                                          <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><dollar>                                                              <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_currency>                                                       <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><dollar>                                                           <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_greek>                                                          <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><at>                                                              <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_greek>                                                       <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><at>                                                           <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 #
 #
-# # CIRCLED_NEG_SANS
+# # CIRCLED_NEGATIVE_SANS
 #   dead_greek dead_stroke dead_currency
 #   Multi_key: ¦@-$
 #
+#   Also in HOOK_ABOVE as a shortcut with positional mnemonics.
+#   See #*# HOOK_ABOVE
+#
+<dead_greek><dead_stroke><dead_currency>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><minus><dollar>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><dead_stroke><dead_currency>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><minus><dollar>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_stroke><dead_currency><dead_greek>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><minus><dollar><at>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_stroke><dead_currency><dead_greek>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><minus><dollar><at>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_stroke><dead_greek><dead_currency>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><minus><at><dollar>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_stroke><dead_greek><dead_currency>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><minus><at><dollar>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_greek><dead_stroke>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><at><minus>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_greek><dead_stroke>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><at><minus>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_stroke><dead_greek>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><minus><at>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_stroke><dead_greek>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><minus><at>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><dead_currency><dead_stroke>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><dollar><minus>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><dead_currency><dead_stroke>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><dollar><minus>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <dead_greek><dead_stroke><dead_currency>                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
 <Multi_key><at><minus><dollar>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
 <dead_greek><dead_stroke><dead_currency>                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
@@ -10041,30 +10070,6 @@
 <Multi_key><at><dollar><minus>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 <dead_greek><dead_currency><dead_stroke>                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 <Multi_key><at><dollar><minus>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_greek><dead_stroke><dead_currency>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><minus><dollar>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_stroke><dead_currency>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><minus><dollar>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_currency><dead_greek>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><dollar><at>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_currency><dead_greek>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><dollar><at>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_greek><dead_currency>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><at><dollar>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_greek><dead_currency>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><at><dollar>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_greek><dead_stroke>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><at><minus>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_greek><dead_stroke>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><at><minus>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_stroke><dead_greek>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><minus><at>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_stroke><dead_greek>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><minus><at>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_currency><dead_stroke>                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><dollar><minus>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_currency><dead_stroke>                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><dollar><minus>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 #
 #
 #^# CIRCLED
@@ -12648,7 +12653,7 @@
 <Multi_key><parenleft>                                          <KP_5><KP_0><parenright> : "㊿" U32BF # CIRCLED NUMBER FIFTY
 #
 #
-# # CIRCLED_NEGATIVE_#[#]
+# # CIRCLED_NEGATIVE_NUMBER
 #   Multi_key: ¦(-#) where # is one or two digits.
 #
 <dead_invertedbreve><dead_stroke>                                        <0><dead_breve> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
@@ -12737,7 +12742,7 @@
 <Multi_key><parenleft><minus>                                   <KP_2><KP_0><parenright> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
 #
 #
-# # CIRCLED_SANS
+# # CIRCLED_SANS_NUMBER
 #   Multi_key: ¦($#) where # is one or two digits.
 #
 #   U1F10B is D83C DD0B in UTF16.
@@ -12788,7 +12793,7 @@
 <Multi_key><parenleft><dollar>                                  <KP_1><KP_0><parenright> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 #
 #
-# # CIRCLED_NEG_SANS
+# # CIRCLED_NEGATIVE_SANS_NUMBER
 #   Multi_key: ¦(-$#) where # is one or two digits.
 #
 #   U1F10C is D83C DD0C in UTF16.
@@ -13630,11 +13635,11 @@
 <dead_stroke>                                                                        <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <Multi_key><minus>                                                                   <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <dead_stroke>                                                                     <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
-<Multi_key><minus>                                                                <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+<Multi_key><KP_Subtract>                                                          <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <dead_stroke>                                                                        <7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><minus>                                                                   <7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <dead_stroke>                                                                     <KP_7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                <KP_7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><KP_Subtract>                                                          <KP_7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <dead_stroke>                                                                        <A> : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
 <Multi_key><minus>                                                                   <A> : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
 <dead_stroke>                                                                        <a> : "ꜻ" UA73B # LATIN SMALL LETTER AV WITH HORIZONTAL BAR
@@ -13913,8 +13918,8 @@
 #   Supports combining plus signs by consistent base characters.
 #
 #   Digits yield simple arrows as a redundant facility to meet most common user
-#   expectations. Double arrows are yielded by *dead_equal.
-#   See #*# EQUAL
+#   expectations. Double arrows are yielded by *dead_flag.
+#   See #*# DOUBLE, FLAG_LETTER
 #
 <dead_horn>                                                                      <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                <space> : "̛" U031B # COMBINING HORN
@@ -13933,43 +13938,43 @@
 <dead_horn>                                                                          <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><plus>                                                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                       <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key><plus>                                                                 <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><KP_Add>                                                               <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                          <1> : "↙" U2199 # SOUTH WEST ARROW emoji
 <Multi_key><plus>                                                                    <1> : "↙" U2199 # SOUTH WEST ARROW emoji
 <dead_horn>                                                                       <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key><plus>                                                                 <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><KP_Add>                                                               <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
 <dead_horn>                                                                          <2> : "↓" U2193 # DOWNWARDS ARROW
 <Multi_key><plus>                                                                    <2> : "↓" U2193 # DOWNWARDS ARROW
 <dead_horn>                                                                       <KP_2> : "↓" U2193 # DOWNWARDS ARROW
-<Multi_key><plus>                                                                 <KP_2> : "↓" U2193 # DOWNWARDS ARROW
+<Multi_key><KP_Add>                                                               <KP_2> : "↓" U2193 # DOWNWARDS ARROW
 <dead_horn>                                                                          <3> : "↘" U2198 # SOUTH EAST ARROW emoji
 <Multi_key><plus>                                                                    <3> : "↘" U2198 # SOUTH EAST ARROW emoji
 <dead_horn>                                                                       <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key><plus>                                                                 <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><KP_Add>                                                               <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
 <dead_horn>                                                                          <4> : "←" U2190 # LEFTWARDS ARROW
 <Multi_key><plus>                                                                    <4> : "←" U2190 # LEFTWARDS ARROW
 <dead_horn>                                                                       <KP_4> : "←" U2190 # LEFTWARDS ARROW
-<Multi_key><plus>                                                                 <KP_4> : "←" U2190 # LEFTWARDS ARROW
+<Multi_key><KP_Add>                                                               <KP_4> : "←" U2190 # LEFTWARDS ARROW
 <dead_horn>                                                                          <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
 <Multi_key><plus>                                                                    <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
 <dead_horn>                                                                       <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key><plus>                                                                 <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><KP_Add>                                                               <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
 <dead_horn>                                                                          <6> : "→" U2192 # RIGHTWARDS ARROW
 <Multi_key><plus>                                                                    <6> : "→" U2192 # RIGHTWARDS ARROW
 <dead_horn>                                                                       <KP_6> : "→" U2192 # RIGHTWARDS ARROW
-<Multi_key><plus>                                                                 <KP_6> : "→" U2192 # RIGHTWARDS ARROW
+<Multi_key><KP_Add>                                                               <KP_6> : "→" U2192 # RIGHTWARDS ARROW
 <dead_horn>                                                                          <7> : "↖" U2196 # NORTH WEST ARROW emoji
 <Multi_key><plus>                                                                    <7> : "↖" U2196 # NORTH WEST ARROW emoji
 <dead_horn>                                                                       <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key><plus>                                                                 <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><KP_Add>                                                               <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
 <dead_horn>                                                                          <8> : "↑" U2191 # UPWARDS ARROW
 <Multi_key><plus>                                                                    <8> : "↑" U2191 # UPWARDS ARROW
 <dead_horn>                                                                       <KP_8> : "↑" U2191 # UPWARDS ARROW
-<Multi_key><plus>                                                                 <KP_8> : "↑" U2191 # UPWARDS ARROW
+<Multi_key><KP_Add>                                                               <KP_8> : "↑" U2191 # UPWARDS ARROW
 <dead_horn>                                                                          <9> : "↗" U2197 # NORTH EAST ARROW emoji
 <Multi_key><plus>                                                                    <9> : "↗" U2197 # NORTH EAST ARROW emoji
 <dead_horn>                                                                       <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key><plus>                                                                 <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><KP_Add>                                                               <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 <dead_horn>                                                                          <e> : "ⱸ" U2C78 # LATIN SMALL LETTER E WITH NOTCH
 <Multi_key><plus>                                                                    <e> : "ⱸ" U2C78 # LATIN SMALL LETTER E WITH NOTCH
 <dead_horn>                                                                          <H> : "Ⱨ" U2C67 # LATIN CAPITAL LETTER H WITH DESCENDER
@@ -14124,6 +14129,9 @@
 #   would conflict with mathematical symbols.
 #   See #*# HOOK_ABOVE
 #
+#   Digits yield circled sans-serif number dingbats as a shortcut.
+#   See # # CIRCLED_SANS
+#
 <dead_ogonek>                                                                    <space> : "̨" U0328 # COMBINING OGONEK
 <Multi_key><bracketleft>                                                         <space> : "̨" U0328 # COMBINING OGONEK
 <dead_ogonek>                                                                    <U200B> : "̨" U0328 # COMBINING OGONEK
@@ -14136,6 +14144,46 @@
 <Multi_key><bracketleft>                                                       <section> : "ǫ" U01EB # LATIN SMALL LETTER O WITH OGONEK
 <dead_ogonek>                                                                    <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <Multi_key><bracketleft>                                                         <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<dead_ogonek>                                                                        <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><bracketleft>                                                             <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<dead_ogonek>                                                                     <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><bracketleft>                                                          <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+<dead_ogonek>                                                                        <1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><bracketleft>                                                             <1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
+<dead_ogonek>                                                                     <KP_1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><bracketleft>                                                          <KP_1> : "➀" U2780 # DINGBAT CIRCLED SANS-SERIF DIGIT ONE
+<dead_ogonek>                                                                        <2> : "➁" U2781 # DINGBAT CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><bracketleft>                                                             <2> : "➁" U2781 # DINGBAT CIRCLED SANS-SERIF DIGIT TWO
+<dead_ogonek>                                                                     <KP_2> : "➁" U2781 # DINGBAT CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><bracketleft>                                                          <KP_2> : "➁" U2781 # DINGBAT CIRCLED SANS-SERIF DIGIT TWO
+<dead_ogonek>                                                                        <3> : "➂" U2782 # DINGBAT CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><bracketleft>                                                             <3> : "➂" U2782 # DINGBAT CIRCLED SANS-SERIF DIGIT THREE
+<dead_ogonek>                                                                     <KP_3> : "➂" U2782 # DINGBAT CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><bracketleft>                                                          <KP_3> : "➂" U2782 # DINGBAT CIRCLED SANS-SERIF DIGIT THREE
+<dead_ogonek>                                                                        <4> : "➃" U2783 # DINGBAT CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><bracketleft>                                                             <4> : "➃" U2783 # DINGBAT CIRCLED SANS-SERIF DIGIT FOUR
+<dead_ogonek>                                                                     <KP_4> : "➃" U2783 # DINGBAT CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><bracketleft>                                                          <KP_4> : "➃" U2783 # DINGBAT CIRCLED SANS-SERIF DIGIT FOUR
+<dead_ogonek>                                                                        <5> : "➄" U2784 # DINGBAT CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><bracketleft>                                                             <5> : "➄" U2784 # DINGBAT CIRCLED SANS-SERIF DIGIT FIVE
+<dead_ogonek>                                                                     <KP_5> : "➄" U2784 # DINGBAT CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><bracketleft>                                                          <KP_5> : "➄" U2784 # DINGBAT CIRCLED SANS-SERIF DIGIT FIVE
+<dead_ogonek>                                                                        <6> : "➅" U2785 # DINGBAT CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><bracketleft>                                                             <6> : "➅" U2785 # DINGBAT CIRCLED SANS-SERIF DIGIT SIX
+<dead_ogonek>                                                                     <KP_6> : "➅" U2785 # DINGBAT CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><bracketleft>                                                          <KP_6> : "➅" U2785 # DINGBAT CIRCLED SANS-SERIF DIGIT SIX
+<dead_ogonek>                                                                        <7> : "➆" U2786 # DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><bracketleft>                                                             <7> : "➆" U2786 # DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_ogonek>                                                                     <KP_7> : "➆" U2786 # DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><bracketleft>                                                          <KP_7> : "➆" U2786 # DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_ogonek>                                                                        <8> : "➇" U2787 # DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><bracketleft>                                                             <8> : "➇" U2787 # DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_ogonek>                                                                     <KP_8> : "➇" U2787 # DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><bracketleft>                                                          <KP_8> : "➇" U2787 # DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_ogonek>                                                                        <9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><bracketleft>                                                             <9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
+<dead_ogonek>                                                                     <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><bracketleft>                                                          <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 <dead_ogonek>                                                                        <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
 <Multi_key><bracketleft>                                                             <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
 <dead_ogonek>                                                                        <a> : "ą" U0105 # LATIN SMALL LETTER A WITH OGONEK
@@ -14251,6 +14299,9 @@
 #   would conflict with mathematical symbols.
 #   See #*# OGONEK
 #
+#   Digits yield negative sans-serif circled number dingbats as a shortcut.
+#   See # # CIRCLED_NEGATIVE_SANS
+#
 <UEFD3>                                                                          <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <Multi_key><bracketright>                                                        <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <UEFD3>                                                                          <U200B> : "̉" U0309 # COMBINING HOOK ABOVE
@@ -14259,6 +14310,46 @@
 <Multi_key><bracketright>                                                      <section> : "ỏ" U1ECF # LATIN SMALL LETTER O WITH HOOK ABOVE
 <UEFD3>                                                                    <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <Multi_key><bracketright>                                                  <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<UEFD3>                                                                              <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><bracketright>                                                            <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<UEFD3>                                                                           <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><bracketright>                                                         <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<UEFD3>                                                                              <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><bracketright>                                                            <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<UEFD3>                                                                           <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><bracketright>                                                         <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<UEFD3>                                                                              <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><bracketright>                                                            <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<UEFD3>                                                                           <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><bracketright>                                                         <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<UEFD3>                                                                              <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><bracketright>                                                            <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<UEFD3>                                                                           <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><bracketright>                                                         <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<UEFD3>                                                                              <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><bracketright>                                                            <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<UEFD3>                                                                           <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><bracketright>                                                         <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<UEFD3>                                                                              <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><bracketright>                                                            <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<UEFD3>                                                                           <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><bracketright>                                                         <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<UEFD3>                                                                              <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><bracketright>                                                            <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<UEFD3>                                                                           <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><bracketright>                                                         <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<UEFD3>                                                                              <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><bracketright>                                                            <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<UEFD3>                                                                           <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><bracketright>                                                         <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<UEFD3>                                                                              <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><bracketright>                                                            <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<UEFD3>                                                                           <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><bracketright>                                                         <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<UEFD3>                                                                              <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><bracketright>                                                            <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<UEFD3>                                                                           <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><bracketright>                                                         <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 <UEFD3>                                                                              <A> : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
 <Multi_key><bracketright>                                                            <A> : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
 <UEFD3>                                                                              <a> : "ả" U1EA3 # LATIN SMALL LETTER A WITH HOOK ABOVE
@@ -14769,6 +14860,10 @@
 #   Cent and Cedi signs are supported by lack of C with macron, and
 #   for consistency with en_US.UTF-8/Compose.
 #
+#   Digits yield the full collection of simple, broken, multiple vertical bars,
+#   for convenience as the other input methods, in groups or by composition are
+#   less mnemonic or more complicated.
+#
 <dead_macron>                                                                    <space> : "̄" U0304 # COMBINING MACRON
 <Multi_key><bar>                                                                 <space> : "̄" U0304 # COMBINING MACRON
 <dead_macron>                                                                    <U200B> : "̄" U0304 # COMBINING MACRON
@@ -14779,6 +14874,46 @@
 <Multi_key><bar>                                                          <nobreakspace> : "¯" U00AF # MACRON
 <dead_macron>                                                                  <section> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
 <Multi_key><bar>                                                               <section> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
+<dead_macron>                                                                        <0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><bar>                                                                     <0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<dead_macron>                                                                     <KP_0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><bar>                                                                  <KP_0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<dead_macron>                                                                        <1> : "∣" U2223 # DIVIDES
+<Multi_key><bar>                                                                     <1> : "∣" U2223 # DIVIDES
+<dead_macron>                                                                     <KP_1> : "∣" U2223 # DIVIDES
+<Multi_key><bar>                                                                  <KP_1> : "∣" U2223 # DIVIDES
+<dead_macron>                                                                        <2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><bar>                                                                     <2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_macron>                                                                     <KP_2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><bar>                                                                  <KP_2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_macron>                                                                        <3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><bar>                                                                     <3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<dead_macron>                                                                     <KP_3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><bar>                                                                  <KP_3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<dead_macron>                                                                        <4> : "∥" U2225 # PARALLEL TO
+<Multi_key><bar>                                                                     <4> : "∥" U2225 # PARALLEL TO
+<dead_macron>                                                                     <KP_4> : "∥" U2225 # PARALLEL TO
+<Multi_key><bar>                                                                  <KP_4> : "∥" U2225 # PARALLEL TO
+<dead_macron>                                                                        <5> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><bar>                                                                     <5> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<dead_macron>                                                                     <KP_5> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><bar>                                                                  <KP_5> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<dead_macron>                                                                        <6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><bar>                                                                     <6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<dead_macron>                                                                     <KP_6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><bar>                                                                  <KP_6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<dead_macron>                                                                        <7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><bar>                                                                     <7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<dead_macron>                                                                     <KP_7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><bar>                                                                  <KP_7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<dead_macron>                                                                        <8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<Multi_key><bar>                                                                     <8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<dead_macron>                                                                     <KP_8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<Multi_key><bar>                                                                  <KP_8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<dead_macron>                                                                        <9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><bar>                                                                     <9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<dead_macron>                                                                     <KP_9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><bar>                                                                  <KP_9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 <dead_macron>                                                                        <A> : "Ā" U0100 # LATIN CAPITAL LETTER A WITH MACRON
 <Multi_key><bar>                                                                     <A> : "Ā" U0100 # LATIN CAPITAL LETTER A WITH MACRON
 <dead_macron>                                                                        <a> : "ā" U0101 # LATIN SMALL LETTER A WITH MACRON
@@ -15009,9 +15144,14 @@
 #   For convenience, to account for this confusion, letters without a variant
 #   with stroke have their barred variant duplicated in this dead key as well.
 #
-#   Mathematical symbols also by ACUTE, which acts as a quick access,
-#   unless a quick access sequence conflicts with regular support.
+#   Negated mathematical symbols are also supported by ACUTE, which acts as a
+#   quick access unless a quick access sequence conflicts with regular support.
 #   See #*# ACUTE
+#
+#   When this ended up as the last dead key without any numeric base character,
+#   digits have been added to yield the related set of arrow emoji, that mix of
+#   black arrows and basic simple arrows as already supported in group 4 of the
+#   digits, and live on AltGr + numpad.
 #
 <dead_longsolidusoverlay>                                                        <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                               <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
@@ -15033,6 +15173,46 @@
 <Multi_key><slash>                                                             <greater> : "≯" U226F # NOT GREATER-THAN
 <dead_longsolidusoverlay>                                                        <equal> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><slash>                                                               <equal> : "≠" U2260 # NOT EQUAL TO
+<dead_longsolidusoverlay>                                                            <0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><slash>                                                                   <0> : "↕" U2195 # UP DOWN ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<dead_longsolidusoverlay>                                                            <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><slash>                                                                   <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<dead_longsolidusoverlay>                                                            <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><slash>                                                                   <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<dead_longsolidusoverlay>                                                            <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><slash>                                                                   <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<dead_longsolidusoverlay>                                                            <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><slash>                                                                   <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<dead_longsolidusoverlay>                                                            <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><slash>                                                                   <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<dead_longsolidusoverlay>                                                            <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><slash>                                                                   <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<dead_longsolidusoverlay>                                                            <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><slash>                                                                   <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<dead_longsolidusoverlay>                                                            <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><slash>                                                                   <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<dead_longsolidusoverlay>                                                            <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><slash>                                                                   <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<dead_longsolidusoverlay>                                                         <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><KP_Divide>                                                            <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 <dead_longsolidusoverlay>                                                            <A> : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
 <Multi_key><slash>                                                                   <A> : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
 <dead_longsolidusoverlay>                                                            <a> : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
@@ -15464,15 +15644,15 @@
 <dead_abovering>                                                                     <1> : "⁎" U204E # LOW ASTERISK
 <Multi_key><asterisk>                                                                <1> : "⁎" U204E # LOW ASTERISK
 <dead_abovering>                                                                  <KP_1> : "⁎" U204E # LOW ASTERISK
-<Multi_key><asterisk>                                                             <KP_1> : "⁎" U204E # LOW ASTERISK
+<Multi_key><KP_Multiply>                                                          <KP_1> : "⁎" U204E # LOW ASTERISK
 <dead_abovering>                                                                     <2> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><asterisk>                                                                <2> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_abovering>                                                                  <KP_2> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<Multi_key><asterisk>                                                             <KP_2> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<Multi_key><KP_Multiply>                                                          <KP_2> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_abovering>                                                                     <3> : "⁂" U2042 # ASTERISM
 <Multi_key><asterisk>                                                                <3> : "⁂" U2042 # ASTERISM
 <dead_abovering>                                                                  <KP_3> : "⁂" U2042 # ASTERISM
-<Multi_key><asterisk>                                                             <KP_3> : "⁂" U2042 # ASTERISM
+<Multi_key><KP_Multiply>                                                          <KP_3> : "⁂" U2042 # ASTERISM
 <dead_abovering>                                                                     <A> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
 <Multi_key><asterisk>                                                                <A> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
 <dead_abovering>                                                                     <a> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE
