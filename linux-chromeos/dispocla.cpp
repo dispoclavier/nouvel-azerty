@@ -1,4 +1,4 @@
-//                       Date: 2023-09-07T1825+0200
+//                       Date: 2023-09-19T2035+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -51,8 +51,25 @@
 //
 //             Uninstallation: Delete those lines prior to removing the file.
 //
+//      Login keyboard layout: If the keyboard layout used to log in should be reconfigured,
+//                             please open the file located at `/etc/default/keyboard`
+//                             and customize the following settings. In this example,
+//                             the main variant of this keyboard layout project is used.
+//                             The cited keyboard(5) manual page is found online at:
+//                             https://manpages.debian.org/jessie/keyboard-configuration/keyboard.5.en.html
+//                             After editing, the beginning of `keyboard` may look like this:
 //
-// Note: C-style XKB configuration files don’t allow block comments.
+//                             # KEYBOARD CONFIGURATION FILE
+//                             
+//                             # Consult the keyboard(5) manual page.
+//                             
+//                             XKBMODEL="pc105"
+//                             XKBLAYOUT="dispocla"
+//                             XKBVARIANT="kbfrFRs"
+//                             XKBOPTIONS=""
+//
+//
+// Note: XKB configuration files don’t allow block comments.
 //
 //
 // ##  French-style punctuation spacing semi-automation
