@@ -5,6 +5,7 @@
 # 2023-08-18T0349+0200
 # 2023-08-27T2253+0200
 # 2023-08-29T2232+0200
+# 2023-09-23T1908+0200
 # Last modified: See datestamp above.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -217,9 +218,10 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<exclam>/!/g;
 				$line =~ s/<colon>/:/g;
 				$line =~ s/<semicolon>/;/g;
-				$line =~ s/<section>/§/g;
 				$line =~ s/<comma>/,/g;
 				$line =~ s/<period>/./g;
+				$line =~ s/<section>/§/g;
+				$line =~ s/<mu>/µ/g;
 				$line =~ s/<agrave>/à/g;
 				$line =~ s/<Agrave>/À/g;
 				$line =~ s/<egrave>/è/g;
@@ -284,61 +286,64 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) romanized Pashto following/$1 pachto romanisé selon/g;
 
 				# Anchors and localized tooltips:
-				$line    =~ m/^.+ : +"(.+?)"/u;
-				$str     = $1;
-				$tooltip = '';
-				$ucodes  = '';
-				$anchor  = '';
-				until ( $str eq '' ) {
-					$cp      = ord( $str );
-					$cp      = sprintf( "%X", $cp ); # To hex.
-					$cp      =~ s/^(..)$/00$1/;
-					$cp      =~ s/^(...)$/0$1/;
-					$descrip = '';
-					if ( $descriptors_file_path ) {
-						open( DESCRIP, '<', $descriptors_file_path ) or die $!;
-						while ( my $des_line = <DESCRIP> ) {
-							if ( $des_line =~ /U$cp;/ ) {
-								chomp( $des_line );
-								$des_line =~ s/^.+; (.+)$/$1/;
-								$descrip = $des_line;
-								last;
-								close( DESCRIP );
+				unless ( $line =~ m/: +"surrogat_haut_pour_Windows"/u ) {
+					$line    =~ m/^.+ : +"(.+?)"/u;
+					$str     = $1;
+					$tooltip = '';
+					$ucodes  = '';
+					$anchor  = '';
+					until ( $str eq '' ) {
+						$cp      = ord( $str );
+						$cp      = sprintf( "%X", $cp ); # To hex.
+						$cp      =~ s/^(..)$/00$1/;
+						$cp      =~ s/^(...)$/0$1/;
+						$descrip = '';
+						if ( $descriptors_file_path ) {
+							open( DESCRIP, '<', $descriptors_file_path ) or die $!;
+							while ( my $des_line = <DESCRIP> ) {
+								if ( $des_line =~ /U$cp;/ ) {
+									chomp( $des_line );
+									$des_line =~ s/^.+; (.+)$/$1/;
+									$descrip = $des_line;
+									last;
+									close( DESCRIP );
+								}
 							}
 						}
-					}
-					unless ( $descrip ) {
-						open( NAMES, '<', $names_file_path ) or die $!;
-						while ( my $name_line = <NAMES> ) {
-							if ( $name_line =~ /^$cp\t/ ) {
-								chomp( $name_line );
-								$name_line =~ s/^.+\t(.+)$/$1/;
-								$descrip = $name_line;
-								last;
-								close( NAMES );
+						unless ( $descrip ) {
+							open( NAMES, '<', $names_file_path ) or die $!;
+							while ( my $name_line = <NAMES> ) {
+								if ( $name_line =~ /^$cp\t/ ) {
+									chomp( $name_line );
+									$name_line =~ s/^.+\t(.+)$/$1/;
+									$descrip = $name_line;
+									last;
+									close( NAMES );
+								}
 							}
 						}
+						$tooltip = $tooltip . $descrip . " U+$cp\n";
+						$ucodes  = $ucodes . "U+$cp<br />";
+						$anchor  = $anchor . 'U+' . $cp . '-';
+						$str     =~ s/.//u;
 					}
-					$tooltip = $tooltip . $descrip . " U+$cp\n";
-					$ucodes  = $ucodes . "U+$cp<br />";
-					$anchor  = $anchor . 'U+' . $cp . '-';
-					$str     =~ s/.//u;
-				}
-				$tooltip =~ s/\n$//;
-				$ucodes  =~ s/<br \/>$//;
-				$anchor  =~ s/-$//;
-				$regex   = quotemeta( $anchor );
-				$index   = 0;
-				if ( grep( /^$regex$/, @anchors ) ) {
-					$test = $regex;
-					while ( grep( /^$test$/, @anchors ) ) {
-						++$index;
-						$test = $regex . '_' . $index;
+					$tooltip =~ s/\n$//;
+					$ucodes  =~ s/<br \/>$//;
+					$anchor  =~ s/-$//;
+					$regex   = quotemeta( $anchor );
+					$index   = 0;
+					if ( grep( /^$regex$/, @anchors ) ) {
+						$test = $regex;
+						while ( grep( /^$test$/, @anchors ) ) {
+							++$index;
+							$test = $regex . '_' . $index;
+						}
+						$anchor = $anchor . '_' . $index;
 					}
-					$anchor = $anchor . '_' . $index;
+					push( @anchors, $anchor );
 				}
-				push( @anchors, $anchor );
 
+				$line =~ s/^(.+?) : "surrogat_haut_pour_Windows" (U\+D[8-9A-B][0-9A-F]{2}) # (.+)/<tr><td title="Surrogat haut pour Windows $2"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
