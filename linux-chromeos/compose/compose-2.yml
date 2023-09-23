@@ -3044,12 +3044,12 @@
 <Multi_key><exclam><exclam>                                               <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                 <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key><exclam><exclam>                                                    <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-<dead_belowdot><dead_belowdot>                                            <dead_cedilla> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<dead_belowdot><dead_belowdot>                                                   <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                      <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
-<dead_belowdot><dead_belowdot>                                           <dead_belowdot> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<Multi_key><exclam><exclam>                                                     <exclam> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<dead_belowdot><dead_belowdot>                                          <dead_diaeresis> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
-<Multi_key><exclam><exclam>                                                      <colon> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
+<dead_belowdot><dead_belowdot>                                              <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<Multi_key><exclam><exclam>                                                 <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<dead_belowdot><dead_belowdot>                                                <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
+<Multi_key><exclam><exclam>                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
 <dead_belowdot><dead_belowdot>                                                       <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW Yoruba current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                          <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW Yoruba current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                       <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW Yoruba current Nigerian alphabet
@@ -3127,8 +3127,6 @@
 <Multi_key><colon>                                                              <emdash> : "⸻" U2E3B # THREE-EM DASH
 <dead_diaeresis>                                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><colon>                                                               <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<dead_diaeresis>                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><colon>                                                                 <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                 <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                               <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                              <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
