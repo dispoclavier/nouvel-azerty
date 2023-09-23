@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.0.13 (projet)
+
+* Touches mortes : Améliorer le rendu des surrogats hauts sous les systèmes ne les utilisant pas. (compose-1.yml [fb60dfb](https://github.com/dispoclavier/nouvel-azerty/commit/fb60dfb6edac409a1309a97cdc0f54cebc0f5862), compose-2.yml [80d347c](https://github.com/dispoclavier/nouvel-azerty/commit/80d347cf92bd6913981506e7f2879603921258e9))
+
 ## 1.0.12 (2023-09-23)
 
 * Composition : Déboguer "¢" U00A2. Symboles mathématiques : Déboguer "⟮" U27EE, "⟯" U27EF, "‬" U202C, "≛" U225B, "⋊" U22CA, "◁" U25C1, "⟜" U27DC, "⦧" U29A7. Touches mortes : Exposant : Déboguer "̽" U033D. Grec : Supprimer l’accord rayé-crochet rétroflexe. Sélectrice de groupe : Déboguer les caractères morts "①" U2460 à "⑫" U246B. Point souscrit : Déboguer "̍" U030D. Tréma : Supprimer "‖" U2016 par "|". (compose-1.yml [43ee671](https://github.com/dispoclavier/nouvel-azerty/commit/43ee671a295299b8d2c6dea90cf3bd7aa5c59a4f), compose-2.yml [addb73e](https://github.com/dispoclavier/nouvel-azerty/commit/addb73ef888be119bbfa9063147a81b1a78f0d8d))
