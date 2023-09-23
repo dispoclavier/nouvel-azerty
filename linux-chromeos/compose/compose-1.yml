@@ -11760,10 +11760,10 @@
 #
 #   Wide-headed light barb arrows
 #
-<UEFD0><1>                                                                                     <0> : UD83E # High surrogate
-<Multi_key><numbersign><1>                                                                     <0> : UD83E # High surrogate
-<UEFD0><KP_1>                                                                               <KP_0> : UD83E # High surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_0> : UD83E # High surrogate
+<UEFD0><1>                                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><1>                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<UEFD0><KP_1>                                                                               <KP_0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
 <UEFD0><1>                                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
@@ -11780,10 +11780,10 @@
 <Multi_key><numbersign><1>                                                                     <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><KP_1>                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-<UEFD0><1>                                                                                     <5> : UD83E # High surrogate
-<Multi_key><numbersign><1>                                                                     <5> : UD83E # High surrogate
-<UEFD0><KP_1>                                                                               <KP_5> : UD83E # High surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_5> : UD83E # High surrogate
+<UEFD0><1>                                                                                     <5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><1>                                                                     <5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<UEFD0><KP_1>                                                                               <KP_5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
 <UEFD0><1>                                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
@@ -11804,10 +11804,10 @@
 #
 #   Wide-headed very heavy barb arrows
 #
-<UEFD0><2>                                                                                     <0> : UD83E # High surrogate
-<Multi_key><numbersign><2>                                                                     <0> : UD83E # High surrogate
-<UEFD0><KP_2>                                                                               <KP_0> : UD83E # High surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_0> : UD83E # High surrogate
+<UEFD0><2>                                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><2>                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<UEFD0><KP_2>                                                                               <KP_0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
 <UEFD0><2>                                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
@@ -11824,10 +11824,10 @@
 <Multi_key><numbersign><2>                                                                     <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><KP_2>                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-<UEFD0><2>                                                                                     <5> : UD83E # High surrogate
-<Multi_key><numbersign><2>                                                                     <5> : UD83E # High surrogate
-<UEFD0><KP_2>                                                                               <KP_5> : UD83E # High surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_5> : UD83E # High surrogate
+<UEFD0><2>                                                                                     <5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><2>                                                                     <5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<UEFD0><KP_2>                                                                               <KP_5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_5> : "surrogat_haut_pour_Windows" UD83E # High surrogate
 <UEFD0><2>                                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
