@@ -2377,13 +2377,10 @@
 #   the capital letter is considered a turned e, uppercase of "ǝ" U01DD LATIN
 #   SMALL LETTER TURNED E. As such it is in group 1 of R, and in group 2 of E.
 #
-#   Digits yield negative circled number dingbats as a shortcut.
-#   See # # CIRCLED_NEGATIVE
+#   Digits yield mathematical backslashes without space termination.
 #
 <UEFD6>                                                                                  <section> : "\\" U005C # REVERSE SOLIDUS
 <Multi_key><backslash>                                                                   <section> : "\\" U005C # REVERSE SOLIDUS
-<UEFD6>                                                                               <asciitilde> : "∽" U223D # REVERSED TILDE
-<Multi_key><backslash>                                                                <asciitilde> : "∽" U223D # REVERSED TILDE
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <UEFD6>                                                                                    <comma> : "⹁" U2E41 # REVERSED COMMA
@@ -2394,46 +2391,22 @@
 <Multi_key><backslash>                                                                 <semicolon> : "⁏" U204F # REVERSED SEMICOLON
 <UEFD6>                                                                                <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><backslash>                                                                 <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
-<UEFD6>                                                                                        <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><backslash>                                                                         <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<UEFD6>                                                                                     <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><backslash>                                                                      <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<UEFD6>                                                                                        <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<Multi_key><backslash>                                                                         <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<UEFD6>                                                                                     <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<Multi_key><backslash>                                                                      <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<UEFD6>                                                                                        <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<Multi_key><backslash>                                                                         <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<UEFD6>                                                                                     <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<Multi_key><backslash>                                                                      <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<UEFD6>                                                                                        <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<Multi_key><backslash>                                                                         <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<UEFD6>                                                                                     <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<Multi_key><backslash>                                                                      <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<UEFD6>                                                                                        <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<Multi_key><backslash>                                                                         <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<UEFD6>                                                                                     <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<Multi_key><backslash>                                                                      <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<UEFD6>                                                                                        <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<Multi_key><backslash>                                                                         <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<UEFD6>                                                                                     <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<Multi_key><backslash>                                                                      <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<UEFD6>                                                                                        <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<Multi_key><backslash>                                                                         <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<UEFD6>                                                                                     <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<Multi_key><backslash>                                                                      <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<UEFD6>                                                                                        <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<Multi_key><backslash>                                                                         <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<UEFD6>                                                                                     <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<Multi_key><backslash>                                                                      <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<UEFD6>                                                                                        <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<Multi_key><backslash>                                                                         <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<UEFD6>                                                                                     <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<Multi_key><backslash>                                                                      <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<UEFD6>                                                                                        <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<Multi_key><backslash>                                                                         <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<UEFD6>                                                                                     <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<Multi_key><backslash>                                                                      <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<UEFD6>                                                                                        <1> : "∖" U2216 # SET MINUS
+<Multi_key><backslash>                                                                         <1> : "∖" U2216 # SET MINUS
+<UEFD6>                                                                                     <KP_1> : "∖" U2216 # SET MINUS
+<Multi_key><backslash>                                                                      <KP_1> : "∖" U2216 # SET MINUS
+<UEFD6>                                                                                        <2> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><backslash>                                                                         <2> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<UEFD6>                                                                                     <KP_2> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><backslash>                                                                      <KP_2> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<UEFD6>                                                                                        <3> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><backslash>                                                                         <3> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<UEFD6>                                                                                     <KP_3> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><backslash>                                                                      <KP_3> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<UEFD6>                                                                                        <4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><backslash>                                                                         <4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<UEFD6>                                                                                     <KP_4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><backslash>                                                                      <KP_4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <UEFD6>                                                                                        <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <Multi_key><backslash>                                                                         <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <UEFD6>                                                                                        <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
@@ -3093,6 +3066,8 @@
 #
 #   Also used as a synonym of EQUAL in mathematical symbols, except for those
 #   of these quick access sequences that conflict with regular support.
+#   So, "⊆" U2286, "≥" U2265, "≤" U2264 by dead_diaeresis grave, less, greater
+#   have been discarded.
 #   See #*# DOUBLE, FLAG_LETTER
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
@@ -3125,16 +3100,10 @@
 <Multi_key><colon>                                                                        <endash> : "⸺" U2E3A # TWO-EM DASH
 <dead_diaeresis>                                                                          <emdash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><colon>                                                                        <emdash> : "⸻" U2E3B # THREE-EM DASH
-<dead_diaeresis>                                                                           <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<Multi_key><colon>                                                                         <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><colon>                                                                      <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<dead_diaeresis>                                                                            <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
-<Multi_key><colon>                                                                          <less> : "≤" U2264 # LESS-THAN OR EQUAL TO
-<dead_diaeresis>                                                                         <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
-<Multi_key><colon>                                                                       <greater> : "≥" U2265 # GREATER-THAN OR EQUAL TO
 <dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 <dead_diaeresis>                                                                               <0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -11862,7 +11831,6 @@
 # # Monospace
 #
 #   For convenience, FIGURE SPACE is also supported, like in group 7 of space.
-
 #
 <UEFD0><9><period>                                                                             <0> : "𝟶" U1D7F6 # MATHEMATICAL MONOSPACE DIGIT ZERO
 <Multi_key><numbersign><9><period>                                                             <0> : "𝟶" U1D7F6 # MATHEMATICAL MONOSPACE DIGIT ZERO
