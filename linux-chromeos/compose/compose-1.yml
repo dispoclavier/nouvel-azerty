@@ -1060,9 +1060,11 @@
 #
 #   Space termination is required for ℆ to prevent conflicts with math symbols.
 #
-#   S O sequences are used fo mathematical symbols,
-#   reverse sequences are used for circled letters,
-#   other casing pairs for German eszett as ss:
+#   S O sequences are used fo mathematical symbols, reverse sequences are used
+#   for circled letters, other casing pairs for German eszett as ss.
+#
+#   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
+#   Multi_key equivalents.
 #   
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
 <Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
@@ -1351,7 +1353,6 @@
 <Multi_key><C><r>                                                                                  : "₢" U20A2 # CRUZEIRO SIGN
 <Multi_key><C><slash>                                                                              : "₡" U20A1 # COLON SIGN
 <Multi_key><d><equal>                                                                              : "₫" U20AB # DONG SIGN
-<Multi_key><D><equal>                                                                              : "₫" U20AB # DONG SIGN
 <Multi_key><D><r>                                                                                  : "₯" U20AF # DRACHMA SIGN
 <Multi_key><e><equal>                                                                              : "€" U20AC # EURO SIGN
 <Multi_key><E><equal>                                                                              : "€" U20AC # EURO SIGN
@@ -2008,6 +2009,9 @@
 #   leading space like math symbols, and it is given an alternative shape-based
 #   sequence as well.
 #
+#   For consistency, two of these sequences are duplicated in dead_circumflex.
+#   See #*# CIRCUMFLEX
+#
 <Multi_key><less><3>                                                                               : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <Multi_key><less><KP_3>                                                                            : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <Multi_key><less><8>                                                                               : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
@@ -2243,7 +2247,6 @@
 <Multi_key><o><less>                                                                               : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
 <Multi_key><i><greater>                                                                            : "⁦" U2066 # LEFT-TO-RIGHT ISOLATE
 <Multi_key><i><less>                                                                               : "⁧" U2067 # RIGHT-TO-LEFT ISOLATE
-<Multi_key><f><s><i>                                                                               : "⁨" U2068 # FIRST STRONG ISOLATE
 <Multi_key><i><1>                                                                                  : "⁨" U2068 # FIRST STRONG ISOLATE
 <Multi_key><p><d><i>                                                                               : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 <Multi_key><i><equal>                                                                              : "⁩" U2069 # POP DIRECTIONAL ISOLATE
@@ -2354,6 +2357,12 @@
 #   work the other way around: letters first, slash last, space to terminate,
 #   except when required otherwise for disambiguation in partial negation, as
 #   in ≇ U2247 vs "≆" U2246. E.g. "∄" U2204, "∅" U2205, "∉" U2209.
+#
+#   For consistency, sequences of slash or backslash with a trailing digit for
+#   disambiguation are moved to the corresponding dead keys, where they are not
+#   space terminated.
+#   See #*# #*# STROKE
+#   See #*# #*# REVERSED
 #
 #
 # # Less or equal, greater or equal
@@ -2490,10 +2499,11 @@
 #   as U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
 #   See # # Vulgar fractions
 #
+#   Also in dead_longsolidusoverlay without space termination.
+#   See #*# STROKE
+#
 <Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><F><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><slash><4>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><slash><KP_4>                                                                   <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><space><space><space><space><slash>                                             <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><nobreakspace><space><space><space><slash>                                      <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><nobreakspace><nobreakspace><space><space><slash>                               <space> : "⁄" U2044 # FRACTION SLASH
@@ -2785,8 +2795,10 @@
 <Multi_key><2><less><bar>                                                                  <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
 <Multi_key><KP_2><less><bar>                                                               <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
 <Multi_key><less><bar><less><bar>                                                          <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
-<Multi_key><2><minus><greater>                                                             <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><KP_2><KP_Subtract><greater>                                                    <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><space><2><minus><greater>                                                      <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><nobreakspace><2><minus><greater>                                               <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><space><KP_2><KP_Subtract><greater>                                             <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><nobreakspace><KP_2><KP_Subtract><greater>                                      <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><space><minus><greater><minus><greater>                                         <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><nobreakspace><minus><greater><minus><greater>                                  <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><2><bar><greater>                                                               <space> : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
@@ -2818,8 +2830,10 @@
 <Multi_key><minus><greater><bar><underscore>                                               <space> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
 <Multi_key><o><minus><minus><greater>                                                      <space> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><bar><greater><less><bar>                                                       <space> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
-<Multi_key><3><minus><greater>                                                             <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><KP_3><KP_Subtract><greater>                                                    <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><space><3><minus><greater>                                                      <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><3><minus><greater>                                               <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><space><KP_3><KP_Subtract><greater>                                             <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><KP_3><KP_Subtract><greater>                                      <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><minus><greater><minus><greater><minus><greater>                                <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><less><minus><bar><minus>                                                       <space> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><minus><bar><minus><greater>                                                    <space> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
@@ -2872,13 +2886,11 @@
 <Multi_key><minus><plus>                                                                           : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><period><plus>                                                                  <space> : "∔" U2214 # DOT PLUS
 #   In group 1 of /                                                                                : "∕" U2215 # DIVISION SLASH
-<Multi_key><slash><1>                                                                      <space> : "∕" U2215 # DIVISION SLASH
-<Multi_key><slash><KP_1>                                                                   <space> : "∕" U2215 # DIVISION SLASH
+#   See #*# STROKE                                                                                 : "∕" U2215 # DIVISION SLASH
 <Multi_key><space><slash>                                                                  <space> : "∕" U2215 # DIVISION SLASH
 <Multi_key><nobreakspace><slash>                                                           <space> : "∕" U2215 # DIVISION SLASH
 #   In group 1 of \                                                                                : "∖" U2216 # SET MINUS
-<Multi_key><backslash><1>                                                                  <space> : "∖" U2216 # SET MINUS
-<Multi_key><backslash><KP_1>                                                               <space> : "∖" U2216 # SET MINUS
+#   See #*# REVERSED                                                                               : "∖" U2216 # SET MINUS
 <Multi_key><space><backslash>                                                              <space> : "∖" U2216 # SET MINUS
 <Multi_key><nobreakspace><backslash>                                                       <space> : "∖" U2216 # SET MINUS
 <Multi_key><space><asterisk>                                                               <space> : "∗" U2217 # ASTERISK OPERATOR
@@ -2955,7 +2967,6 @@
 #   In group 1 of ~                                                                                : "∼" U223C # TILDE OPERATOR
 <Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><nobreakspace><asciitilde>                                                      <space> : "∼" U223C # TILDE OPERATOR
-#   See #*# REVERSED                                                                               : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                         <space> : "∽" U223D # REVERSED TILDE
 #   See #*# INVERTED                                                                               : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><percent>                                                                    <space> : "∾" U223E # INVERTED LAZY S
@@ -2976,9 +2987,11 @@
 #   See # # STROKE&TILDE                                                                           : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                                      <space> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 #   In group 3 of ~                                                                                : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><asciitilde><equal>                                                             <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
-#   See # # STROKE&GROUP3                                                                ; "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<Multi_key><asciitilde><equal><slash>                                                      <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+<Multi_key><space><asciitilde><equal>                                                      <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<Multi_key><nobreakspace><asciitilde><equal>                                               <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
+#   See # # STROKE&GROUP3                                                                          : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+<Multi_key><space><asciitilde><equal><slash>                                               <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+<Multi_key><nobreakspace><asciitilde><equal><slash>                                        <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 #   See #^# DOUBLESTRUCK, OTHER_STROKE                                                             : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                                      <space> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #   See #^# TILDE_BELOW, MIDDLE_TILDE, DOUBLE_MIDDLE_TILDE                                         : "≈" U2248 # ALMOST EQUAL TO
@@ -3542,16 +3555,14 @@
 <Multi_key><nobreakspace><c><c><slash>                                                     <space> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><bar><minus>                                                             <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                                      <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><slash><3>                                                                      <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><slash><KP_3>                                                                   <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+#   See #*# STROKE                                                                                 : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><space><space><space><slash>                                                    <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><space><space><slash>                                             <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><space><slash>                                      <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                               <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 #   The maybe rarely used long division symbol, made of a right parenthesis and a kerning overscore, does not conflict with any combining diacritic, see # # SUPERSCRIPT&BREVE
 <Multi_key><parenright><underscore><asciicircum>                                           <space> : "⟌" U27CC # LONG DIVISION
-<Multi_key><backslash><3>                                                                  <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><backslash><KP_3>                                                               <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+#   See #*# REVERSED                                                                               : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><space><space><space><backslash>                                                <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><space><space><backslash>                                         <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><space><backslash>                                  <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
@@ -3687,8 +3698,10 @@
 <Multi_key><minus><0><minus><0><minus><greater><greater>                                   <space> : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                 <space> : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 #   The following alternative sequence for U2910 accounts for the tail found in some fonts, e.g. DejaVu Serif.
-<Multi_key><greater><0><minus><0><minus><greater><greater>                                 <space> : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><greater><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>               <space> : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><space><greater><0><minus><0><minus><greater><greater>                                  : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><nobreakspace><greater><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><space><greater><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><nobreakspace><greater><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>         : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><period><period><period><greater>                                               <space> : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
 <Multi_key><bar><less><minus><bar>                                                         <space> : "⤒" U2912 # UPWARDS ARROW TO BAR
 <Multi_key><minus><greater><bar><bar>                                                      <space> : "⤓" U2913 # DOWNWARDS ARROW TO BAR
@@ -3725,7 +3738,8 @@
 <Multi_key><slash><greater><less><backslash>                                               <space> : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
 <Multi_key><space><less><backslash><slash><greater>                                        <space> : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><less><backslash><slash><greater>                                 <space> : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><asciicircum><minus><greater>                                                   <space> : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
+<Multi_key><space><asciicircum><minus><greater>                                            <space> : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
+<Multi_key><nobreakspace><asciicircum><minus><greater>                                     <space> : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
 #   In group 12 of [                                                                               : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><J><greater><slash>                                                             <space> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 #   In group 12 of ]                                                                               : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
@@ -3820,7 +3834,8 @@
 <Multi_key><apostrophe><minus><minus><apostrophe><bar>                                     <space> : "⥯" U296F # DOWNWARDS HARPOON WITH BARB LEFT BESIDE UPWARDS HARPOON WITH BARB RIGHT
 <Multi_key><rightsinglequotemark><minus><minus><rightsinglequotemark><bar>                 <space> : "⥯" U296F # DOWNWARDS HARPOON WITH BARB LEFT BESIDE UPWARDS HARPOON WITH BARB RIGHT
 <Multi_key><equal><parenright>                                                             <space> : "⥰" U2970 # RIGHT DOUBLE ARROW WITH ROUNDED HEAD
-<Multi_key><equal><minus><greater>                                                         <space> : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
+<Multi_key><space><equal><minus><greater>                                                  <space> : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
+<Multi_key><nobreakspace><equal><minus><greater>                                           <space> : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
 <Multi_key><asciitilde><minus><greater>                                                    <space> : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><less><minus><asciitilde>                                                       <space> : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde>                                                    <space> : "⥴" U2974 # RIGHTWARDS ARROW ABOVE TILDE OPERATOR
@@ -3953,7 +3968,8 @@
 <Multi_key><bracketleft><slash><bracketright>                                              <space> : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
 <Multi_key><bracketleft><backslash><bracketright>                                          <space> : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
 <Multi_key><bracketleft><asterisk><bracketright>                                           <space> : "⧆" U29C6 # SQUARED ASTERISK
-<Multi_key><bracketleft><o><bracketright>                                                  <space> : "⧇" U29C7 # SQUARED SMALL CIRCLE
+<Multi_key><space><bracketleft><o><bracketright>                                           <space> : "⧇" U29C7 # SQUARED SMALL CIRCLE
+<Multi_key><nobreakspace><bracketleft><o><bracketright>                                    <space> : "⧇" U29C7 # SQUARED SMALL CIRCLE
 <Multi_key><2><bracketleft><bracketright>                                                  <space> : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><KP_2><bracketleft><bracketright>                                               <space> : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><3><bracketleft><bracketright>                                                  <space> : "⧉" U29C9 # TWO JOINED SQUARES
@@ -4046,8 +4062,7 @@
 #   For convenience these [back]slash symbols are alternatively disambiguated by a trailing digit, for consistency also those with a single leading space.
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><O><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><backslash><4>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><backslash><KP_4>                                                               <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+#   See #*# REVERSED                                                                               : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><space><space><space><space><backslash>                                         <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><space><space><space><backslash>                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><nobreakspace><space><space><backslash>                           <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
@@ -4055,13 +4070,11 @@
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>             <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><minus><slash>                                                                  <space> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><backslash><minus>                                                              <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
-<Multi_key><slash><2>                                                                      <space> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><slash><KP_2>                                                                   <space> : "⧸" U29F8 # BIG SOLIDUS
+#   See #*# STROKE                                                                                 : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><space><space><slash>                                                           <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><space><slash>                                                    <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><slash>                                             <space> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><backslash><2>                                                                  <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><backslash><KP_2>                                                               <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+#   See #*# REVERSED                                                                               : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><space><space><backslash>                                                       <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><space><backslash>                                                <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><backslash>                                         <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
@@ -4145,7 +4158,7 @@
 <Multi_key><z><1>                                                                          <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                       <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><o><asciicircum><plus>                                                          <space> : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
-<Multi_key><asciicircum><plus>                                                             <space> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<Multi_key><less><plus>                                                                    <space> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><plus><period>                                                                  <space> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
@@ -4180,7 +4193,8 @@
 <Multi_key><A><plus>                                                                       <space> : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><plus>                                            <space> : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><plus>                                            <space> : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
-<Multi_key><A><minus>                                                                      <space> : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key><space><A><minus>                                                               <space> : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key><nobreakspace><A><minus>                                                        <space> : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><minus>                                           <space> : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><minus>                                           <space> : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><A><x>                                                                          <space> : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
@@ -4293,7 +4307,8 @@
 <Multi_key><period><asciitilde><equal>                                                     <space> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><asterisk><equal>                                                               <space> : "⩮" U2A6E # EQUALS WITH ASTERISK
 <Multi_key><asciicircum><asciitilde><asciitilde>                                           <space> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
-<Multi_key><asciitilde><asciitilde><equal>                                                 <space> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
+<Multi_key><space><asciitilde><asciitilde><equal>                                          <space> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
+<Multi_key><nobreakspace><asciitilde><asciitilde><equal>                                   <space> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
 <Multi_key><equal><plus>                                                                   <space> : "⩱" U2A71 # EQUALS SIGN ABOVE PLUS SIGN
 <Multi_key><plus><equal>                                                                   <space> : "⩲" U2A72 # PLUS SIGN ABOVE EQUALS SIGN
 <Multi_key><equal><asciitilde>                                                             <space> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
@@ -4439,7 +4454,6 @@
 <Multi_key><minus><bracketright>                                                           <space> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
 <Multi_key><c><bar>                                                                        <space> : "⫏" U2ACF # CLOSED SUBSET
 <Multi_key><b><bar>                                                                        <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><bar><b>                                                                        <space> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><space><D>                                                                      <space> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><nobreakspace><D>                                                               <space> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><D><D><minus>                                                                   <space> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
@@ -4448,8 +4462,6 @@
 <Multi_key><D><minus>                                                                      <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><b><bar><minus>                                                                 <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><c><bar><minus>                                                              <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><bar><b><minus>                                                                 <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><bar><c><c><minus>                                                              <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><b>                                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><b>                                                             <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><c><c>                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
@@ -4615,12 +4627,10 @@
 <Multi_key><p><i>                                                                          <space> : "π" U03C0 # GREEK SMALL LETTER PI TeX control
 <Multi_key><c><a><p>                                                                       <space> : "∩" U2229 # INTERSECTION
 <Multi_key><C><a><p>                                                                       <space> : "⋒" U22D2 # DOUBLE INTERSECTION
-<Multi_key><d><b><l><c><a><p>                                                                      : "⋒" U22D2 # DOUBLE INTERSECTION TeX control too long
 <Multi_key><c><a><p><d><o><t>                                                                      : "⩀" U2A40 # INTERSECTION WITH DOT
 #   <Multi_key><c><a><p><p><l><u><s>                                                               : Not encoded in Unicode.
 <Multi_key><c><u><p>                                                                       <space> : "∪" U222A # UNION
 <Multi_key><C><u><p>                                                                       <space> : "⋓" U22D3 # DOUBLE UNION
-<Multi_key><d><b><l><c><u><p>                                                                      : "⋓" U22D3 # DOUBLE UNION TeX control too long
 <Multi_key><c><u><p><d><o><t>                                                                      : "⊍" U228D # MULTISET MULTIPLICATION
 <Multi_key><c><u><p><p><l><u><s>                                                                   : "⊎" U228E # MULTISET UNION
 <Multi_key><u><n><i><o><n>                                                                         : "∪" U222A # UNION French name
@@ -6373,12 +6383,14 @@
 #
 # # SUPERSCRIPT&TURNED&BREVE
 #
+#   Does not work the way <UEFD1><dead_breve><UEFD5> because the multikey equi-
+#   valents of <UEFD1><dead_breve><UEFD5> and <UEFD1><parenright> conflict, and
+#   the superscript parentheses have precedence.
+#
 <UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><asciicircum><percent><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD5><UEFD1><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><percent><asciicircum><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<UEFD1><dead_breve><UEFD5>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><asciicircum><parenright><percent>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD5><dead_breve><UEFD1>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><percent><parenright><asciicircum>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <dead_breve><UEFD1><UEFD5>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
@@ -7051,10 +7063,12 @@
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK&BREVE
 #
+#   Does not work the way <UEFD1><dead_breve><UEFD4> because the multikey equi-
+#   valents of <UEFD1><dead_breve><UEFD4> and <UEFD1><parenright> conflict, and
+#   the superscript parentheses have precedence.
+#
 <UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><braceright><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD1><dead_breve><UEFD4>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><asciicircum><parenright><braceright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <dead_breve><UEFD4><UEFD1>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><braceright><asciicircum>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <dead_breve><UEFD1><UEFD4>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
@@ -7091,12 +7105,12 @@
 #
 # # SUPERSCRIPT&BREVE
 #
-<UEFD1><dead_breve>                                                                            <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><asciicircum><parenright>                                                           <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#   Works only the way <dead_breve><UEFD1> because the multikey equivalents of
+#   <UEFD1><dead_breve> and <UEFD1><parenright> conflict, and the superscript
+#   parentheses have precedence.
+#
 <dead_breve><UEFD1>                                                                            <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><asciicircum>                                                           <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<UEFD1><dead_breve>                                                                            <l> : "𐞛" U1079B # MODIFIER LETTER SMALL L WITH BELT
-<Multi_key><asciicircum><parenright>                                                           <l> : "𐞛" U1079B # MODIFIER LETTER SMALL L WITH BELT
 <dead_breve><UEFD1>                                                                            <l> : "𐞛" U1079B # MODIFIER LETTER SMALL L WITH BELT
 <Multi_key><parenright><asciicircum>                                                           <l> : "𐞛" U1079B # MODIFIER LETTER SMALL L WITH BELT
 #
@@ -7104,40 +7118,30 @@
 # # SUPERSCRIPT&BARRED
 #   Lenient group selection
 #
-<UEFD1><dead_stroke>                                                                           <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
-<Multi_key><asciicircum><minus>                                                                <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
+#   Works only the way <dead_stroke><UEFD1> because the multikey equivalents of
+#   <UEFD1><dead_stroke> and <UEFD1><minus> conflict, and the superscript minus
+#   sign has precedence.
+#
 <dead_stroke><UEFD1>                                                                           <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
 <Multi_key><minus><asciicircum>                                                                <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
-<UEFD1><dead_stroke>                                                                           <h> : "𐞕" U10795 # MODIFIER LETTER SMALL H WITH STROKE
-<Multi_key><asciicircum><minus>                                                                <h> : "𐞕" U10795 # MODIFIER LETTER SMALL H WITH STROKE
 <dead_stroke><UEFD1>                                                                           <h> : "𐞕" U10795 # MODIFIER LETTER SMALL H WITH STROKE
 <Multi_key><minus><asciicircum>                                                                <h> : "𐞕" U10795 # MODIFIER LETTER SMALL H WITH STROKE
-<UEFD1><dead_stroke>                                                                           <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><minus>                                                                <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <dead_stroke><UEFD1>                                                                           <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><minus><asciicircum>                                                                <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<UEFD1><dead_stroke>                                                                           <i> : "ᶤ" U1DA4 # MODIFIER LETTER SMALL I WITH STROKE
-<Multi_key><asciicircum><minus>                                                                <i> : "ᶤ" U1DA4 # MODIFIER LETTER SMALL I WITH STROKE
 <dead_stroke><UEFD1>                                                                           <i> : "ᶤ" U1DA4 # MODIFIER LETTER SMALL I WITH STROKE
 <Multi_key><minus><asciicircum>                                                                <i> : "ᶤ" U1DA4 # MODIFIER LETTER SMALL I WITH STROKE
-<UEFD1><dead_stroke>                                                                           <o> : "ᶱ" U1DB1 # MODIFIER LETTER SMALL BARRED O
-<Multi_key><asciicircum><minus>                                                                <o> : "ᶱ" U1DB1 # MODIFIER LETTER SMALL BARRED O
 <dead_stroke><UEFD1>                                                                           <o> : "ᶱ" U1DB1 # MODIFIER LETTER SMALL BARRED O
 <Multi_key><minus><asciicircum>                                                                <o> : "ᶱ" U1DB1 # MODIFIER LETTER SMALL BARRED O
-<UEFD1><dead_stroke>                                                                           <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus>                                                                <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 <dead_stroke><UEFD1>                                                                           <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><minus><asciicircum>                                                                <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
-<UEFD1><dead_stroke>                                                                           <u> : "ᶶ" U1DB6 # MODIFIER LETTER SMALL U BAR
-<Multi_key><asciicircum><minus>                                                                <u> : "ᶶ" U1DB6 # MODIFIER LETTER SMALL U BAR
 <dead_stroke><UEFD1>                                                                           <u> : "ᶶ" U1DB6 # MODIFIER LETTER SMALL U BAR
 <Multi_key><minus><asciicircum>                                                                <u> : "ᶶ" U1DB6 # MODIFIER LETTER SMALL U BAR
 #
 #
 # # SUPERSCRIPT&BARRED&GROUP1
 #
-<UEFD1><dead_stroke><UEFD0>                                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus><numbersign>                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
+#   See # # SUPERSCRIPT&BARRED
+#
 <dead_stroke><UEFD1><UEFD0>                                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><minus><asciicircum><numbersign>                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 #
@@ -7212,12 +7216,14 @@
 #
 # # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&BREVE
 #
+#   Does not work the way <UEFD1><dead_breve><UEFD2> because the multikey equi-
+#   valents of <UEFD1><dead_breve><UEFD2> and <UEFD1><parenright> conflict, and
+#   the superscript parentheses have precedence.
+#
 <UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><asciicircum><underscore><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD2><UEFD1><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><underscore><asciicircum><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<UEFD1><dead_breve><UEFD2>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><asciicircum><parenright><underscore>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD2><dead_breve><UEFD1>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><underscore><parenright><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <dead_breve><UEFD1><UEFD2>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
@@ -7228,12 +7234,12 @@
 #
 # # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&BARRED
 #
+#   See # # SUPERSCRIPT&BARRED
+#
 <UEFD1><UEFD2><dead_stroke>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><asciicircum><underscore><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><UEFD1><dead_stroke>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><underscore><asciicircum><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<UEFD1><dead_stroke><UEFD2>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><minus><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><dead_stroke><UEFD1>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><underscore><minus><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <dead_stroke><UEFD1><UEFD2>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
@@ -7362,10 +7368,10 @@
 # # SUPERSCRIPT&REVERSED&BARRED
 #   Lenient group selection
 #
+#   See # # SUPERSCRIPT&BARRED
+#
 <UEFD1><UEFD6><dead_stroke>                                                                    <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD1><dead_stroke><UEFD6>                                                                    <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus><backslash>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD6><dead_stroke><UEFD1>                                                                    <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><backslash><minus><asciicircum>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD6><UEFD1><dead_stroke>                                                                    <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -7378,10 +7384,10 @@
 #
 # # SUPERSCRIPT&REVERSED&BARRED&GROUP1
 #
+#   See # # SUPERSCRIPT&BARRED
+#
 <UEFD1><UEFD6><dead_stroke><UEFD0>                                                             <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus><numbersign>                                         <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD1><dead_stroke><UEFD6><UEFD0>                                                             <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus><backslash><numbersign>                                         <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD6><dead_stroke><UEFD1><UEFD0>                                                             <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><backslash><minus><asciicircum><numbersign>                                         <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD6><UEFD1><dead_stroke><UEFD0>                                                             <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -8983,10 +8989,10 @@
 <Multi_key><asciitilde>                                                             <nobreakspace> : "~" U007E # TILDE
 <dead_tilde>                                                                             <section> : "ẽ" U1EBD # LATIN SMALL LETTER E WITH TILDE
 <Multi_key><asciitilde>                                                                  <section> : "ẽ" U1EBD # LATIN SMALL LETTER E WITH TILDE
-<dead_tilde>                                                                           <ampersand> : "̰" U0330 # COMBINING TILDE BELOW
-<Multi_key><asciitilde>                                                                <ampersand> : "̰" U0330 # COMBINING TILDE BELOW
-<dead_tilde>                                                                               <minus> : "̴" U0334 # COMBINING TILDE OVERLAY
-<Multi_key><asciitilde>                                                                    <minus> : "̴" U0334 # COMBINING TILDE OVERLAY
+<dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
+<Multi_key><asciitilde>                                                               <underscore> : "̰" U0330 # COMBINING TILDE BELOW
+<dead_tilde>                                                                           <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
+<Multi_key><asciitilde>                                                                <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde>                                                                               <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde>                                                                    <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <dead_tilde>                                                                            <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
@@ -9438,92 +9444,96 @@
 #
 #
 # # CIRCLED_NEGATIVE
-#   dead_greek dead_stroke
-#   Multi_key: ¦@-
+#   dead_greek *dead_turned
+#   Multi_key: ¦@%
 #
-#   Also in REVERSED as a shortcut with alphabetic and semantic mnemonics.
+#   Not dead_stroke to prevent conflicts with circled minus "⊖" U2296 and since
+#   these are no negative numbers, but negative or inverted colors.
+#
+#   Also in REVERSED as a shortcut with alphabetic (as of the letter on the key
+#   B06, N, that *dead_reversed is mapped on) and slightly semantic mnemonics.
 #   See #*# REVERSED
 #
-<dead_greek><dead_stroke>                                                                      <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><at><minus>                                                                         <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_greek><dead_stroke>                                                                   <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><at><minus>                                                                      <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_stroke><dead_greek>                                                                      <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><minus><at>                                                                         <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_stroke><dead_greek>                                                                   <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><minus><at>                                                                      <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_greek><dead_stroke>                                                                      <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<Multi_key><at><minus>                                                                         <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<dead_greek><dead_stroke>                                                                   <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<Multi_key><at><minus>                                                                      <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<dead_stroke><dead_greek>                                                                      <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<Multi_key><minus><at>                                                                         <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<dead_stroke><dead_greek>                                                                   <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<Multi_key><minus><at>                                                                      <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
-<dead_greek><dead_stroke>                                                                      <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<Multi_key><at><minus>                                                                         <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<dead_greek><dead_stroke>                                                                   <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<Multi_key><at><minus>                                                                      <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<dead_stroke><dead_greek>                                                                      <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<Multi_key><minus><at>                                                                         <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<dead_stroke><dead_greek>                                                                   <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<Multi_key><minus><at>                                                                      <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
-<dead_greek><dead_stroke>                                                                      <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<Multi_key><at><minus>                                                                         <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<dead_greek><dead_stroke>                                                                   <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<Multi_key><at><minus>                                                                      <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<dead_stroke><dead_greek>                                                                      <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<Multi_key><minus><at>                                                                         <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<dead_stroke><dead_greek>                                                                   <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<Multi_key><minus><at>                                                                      <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
-<dead_greek><dead_stroke>                                                                      <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<Multi_key><at><minus>                                                                         <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<dead_greek><dead_stroke>                                                                   <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<Multi_key><at><minus>                                                                      <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<dead_stroke><dead_greek>                                                                      <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<Multi_key><minus><at>                                                                         <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<dead_stroke><dead_greek>                                                                   <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<Multi_key><minus><at>                                                                      <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
-<dead_greek><dead_stroke>                                                                      <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<Multi_key><at><minus>                                                                         <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<dead_greek><dead_stroke>                                                                   <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<Multi_key><at><minus>                                                                      <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<dead_stroke><dead_greek>                                                                      <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<Multi_key><minus><at>                                                                         <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<dead_stroke><dead_greek>                                                                   <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<Multi_key><minus><at>                                                                      <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
-<dead_greek><dead_stroke>                                                                      <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<Multi_key><at><minus>                                                                         <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<dead_greek><dead_stroke>                                                                   <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<Multi_key><at><minus>                                                                      <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<dead_stroke><dead_greek>                                                                      <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<Multi_key><minus><at>                                                                         <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<dead_stroke><dead_greek>                                                                   <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<Multi_key><minus><at>                                                                      <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
-<dead_greek><dead_stroke>                                                                      <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<Multi_key><at><minus>                                                                         <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<dead_greek><dead_stroke>                                                                   <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<Multi_key><at><minus>                                                                      <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<dead_stroke><dead_greek>                                                                      <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<Multi_key><minus><at>                                                                         <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<dead_stroke><dead_greek>                                                                   <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<Multi_key><minus><at>                                                                      <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
-<dead_greek><dead_stroke>                                                                      <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<Multi_key><at><minus>                                                                         <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<dead_greek><dead_stroke>                                                                   <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<Multi_key><at><minus>                                                                      <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<dead_stroke><dead_greek>                                                                      <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<Multi_key><minus><at>                                                                         <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<dead_stroke><dead_greek>                                                                   <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<Multi_key><minus><at>                                                                      <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
-<dead_greek><dead_stroke>                                                                      <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<Multi_key><at><minus>                                                                         <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<dead_greek><dead_stroke>                                                                   <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<Multi_key><at><minus>                                                                      <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<dead_stroke><dead_greek>                                                                      <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<Multi_key><minus><at>                                                                         <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<dead_stroke><dead_greek>                                                                   <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<Multi_key><minus><at>                                                                      <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<dead_greek><UEFD5>                                                                            <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><at><percent>                                                                       <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<dead_greek><UEFD5>                                                                         <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><at><percent>                                                                    <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<UEFD5><dead_greek>                                                                            <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><percent><at>                                                                       <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<UEFD5><dead_greek>                                                                         <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<Multi_key><percent><at>                                                                    <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
+<dead_greek><UEFD5>                                                                            <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<Multi_key><at><percent>                                                                       <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<dead_greek><UEFD5>                                                                         <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<Multi_key><at><percent>                                                                    <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<UEFD5><dead_greek>                                                                            <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<Multi_key><percent><at>                                                                       <1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<UEFD5><dead_greek>                                                                         <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<Multi_key><percent><at>                                                                    <KP_1> : "❶" U2776 # DINGBAT NEGATIVE CIRCLED DIGIT ONE
+<dead_greek><UEFD5>                                                                            <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<Multi_key><at><percent>                                                                       <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<dead_greek><UEFD5>                                                                         <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<Multi_key><at><percent>                                                                    <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<UEFD5><dead_greek>                                                                            <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<Multi_key><percent><at>                                                                       <2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<UEFD5><dead_greek>                                                                         <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<Multi_key><percent><at>                                                                    <KP_2> : "❷" U2777 # DINGBAT NEGATIVE CIRCLED DIGIT TWO
+<dead_greek><UEFD5>                                                                            <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<Multi_key><at><percent>                                                                       <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<dead_greek><UEFD5>                                                                         <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<Multi_key><at><percent>                                                                    <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<UEFD5><dead_greek>                                                                            <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<Multi_key><percent><at>                                                                       <3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<UEFD5><dead_greek>                                                                         <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<Multi_key><percent><at>                                                                    <KP_3> : "❸" U2778 # DINGBAT NEGATIVE CIRCLED DIGIT THREE
+<dead_greek><UEFD5>                                                                            <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<Multi_key><at><percent>                                                                       <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<dead_greek><UEFD5>                                                                         <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<Multi_key><at><percent>                                                                    <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<UEFD5><dead_greek>                                                                            <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<Multi_key><percent><at>                                                                       <4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<UEFD5><dead_greek>                                                                         <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<Multi_key><percent><at>                                                                    <KP_4> : "❹" U2779 # DINGBAT NEGATIVE CIRCLED DIGIT FOUR
+<dead_greek><UEFD5>                                                                            <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<Multi_key><at><percent>                                                                       <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<dead_greek><UEFD5>                                                                         <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<Multi_key><at><percent>                                                                    <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<UEFD5><dead_greek>                                                                            <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<Multi_key><percent><at>                                                                       <5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<UEFD5><dead_greek>                                                                         <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<Multi_key><percent><at>                                                                    <KP_5> : "❺" U277A # DINGBAT NEGATIVE CIRCLED DIGIT FIVE
+<dead_greek><UEFD5>                                                                            <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<Multi_key><at><percent>                                                                       <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<dead_greek><UEFD5>                                                                         <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<Multi_key><at><percent>                                                                    <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<UEFD5><dead_greek>                                                                            <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<Multi_key><percent><at>                                                                       <6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<UEFD5><dead_greek>                                                                         <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<Multi_key><percent><at>                                                                    <KP_6> : "❻" U277B # DINGBAT NEGATIVE CIRCLED DIGIT SIX
+<dead_greek><UEFD5>                                                                            <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<Multi_key><at><percent>                                                                       <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<dead_greek><UEFD5>                                                                         <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<Multi_key><at><percent>                                                                    <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<UEFD5><dead_greek>                                                                            <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<Multi_key><percent><at>                                                                       <7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<UEFD5><dead_greek>                                                                         <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<Multi_key><percent><at>                                                                    <KP_7> : "❼" U277C # DINGBAT NEGATIVE CIRCLED DIGIT SEVEN
+<dead_greek><UEFD5>                                                                            <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<Multi_key><at><percent>                                                                       <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<dead_greek><UEFD5>                                                                         <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<Multi_key><at><percent>                                                                    <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<UEFD5><dead_greek>                                                                            <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<Multi_key><percent><at>                                                                       <8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<UEFD5><dead_greek>                                                                         <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<Multi_key><percent><at>                                                                    <KP_8> : "❽" U277D # DINGBAT NEGATIVE CIRCLED DIGIT EIGHT
+<dead_greek><UEFD5>                                                                            <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<Multi_key><at><percent>                                                                       <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<dead_greek><UEFD5>                                                                         <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<Multi_key><at><percent>                                                                    <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<UEFD5><dead_greek>                                                                            <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<Multi_key><percent><at>                                                                       <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<UEFD5><dead_greek>                                                                         <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
+<Multi_key><percent><at>                                                                    <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
 #
 #
 # # CIRCLED_SANS
@@ -9619,249 +9629,251 @@
 #   dead_greek dead_stroke dead_currency
 #   Multi_key: ¦@-$
 #
+#   See comment on # # CIRCLED_NEGATIVE
+#
 #   Also in HOOK_ABOVE as a shortcut with positional mnemonics.
 #   See #*# HOOK_ABOVE
 #
-<dead_greek><dead_stroke><dead_currency>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><minus><dollar>                                                                 <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><minus><dollar>                                                              <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_currency><dead_greek>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><dollar><at>                                                                 <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><dollar><at>                                                              <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_greek><dead_currency>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><at><dollar>                                                                 <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><minus><at><dollar>                                                              <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_greek><dead_stroke>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><at><minus>                                                                 <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><at><minus>                                                              <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_stroke><dead_greek>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><minus><at>                                                                 <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><dollar><minus><at>                                                              <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_currency><dead_stroke>                                                       <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><dollar><minus>                                                                 <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><dollar><minus>                                                              <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><dead_stroke><dead_currency>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><at><minus><dollar>                                                                 <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><at><minus><dollar>                                                              <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_stroke><dead_currency><dead_greek>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><minus><dollar><at>                                                                 <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><minus><dollar><at>                                                              <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_stroke><dead_greek><dead_currency>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><minus><at><dollar>                                                                 <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><minus><at><dollar>                                                              <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_currency><dead_greek><dead_stroke>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><dollar><at><minus>                                                                 <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><dollar><at><minus>                                                              <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_currency><dead_stroke><dead_greek>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><dollar><minus><at>                                                                 <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><dollar><minus><at>                                                              <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_greek><dead_currency><dead_stroke>                                                       <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><at><dollar><minus>                                                                 <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<Multi_key><at><dollar><minus>                                                              <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-<dead_greek><dead_stroke><dead_currency>                                                       <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><at><minus><dollar>                                                                 <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><at><minus><dollar>                                                              <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_stroke><dead_currency><dead_greek>                                                       <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><minus><dollar><at>                                                                 <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><minus><dollar><at>                                                              <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_stroke><dead_greek><dead_currency>                                                       <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><minus><at><dollar>                                                                 <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><minus><at><dollar>                                                              <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_currency><dead_greek><dead_stroke>                                                       <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><dollar><at><minus>                                                                 <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><dollar><at><minus>                                                              <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_currency><dead_stroke><dead_greek>                                                       <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><dollar><minus><at>                                                                 <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><dollar><minus><at>                                                              <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_greek><dead_currency><dead_stroke>                                                       <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><at><dollar><minus>                                                                 <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<Multi_key><at><dollar><minus>                                                              <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-<dead_greek><dead_stroke><dead_currency>                                                       <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><at><minus><dollar>                                                                 <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><at><minus><dollar>                                                              <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_stroke><dead_currency><dead_greek>                                                       <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><minus><dollar><at>                                                                 <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><minus><dollar><at>                                                              <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_stroke><dead_greek><dead_currency>                                                       <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><minus><at><dollar>                                                                 <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><minus><at><dollar>                                                              <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_currency><dead_greek><dead_stroke>                                                       <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><dollar><at><minus>                                                                 <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><dollar><at><minus>                                                              <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_currency><dead_stroke><dead_greek>                                                       <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><dollar><minus><at>                                                                 <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><dollar><minus><at>                                                              <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_greek><dead_currency><dead_stroke>                                                       <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><at><dollar><minus>                                                                 <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<Multi_key><at><dollar><minus>                                                              <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-<dead_greek><dead_stroke><dead_currency>                                                       <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><at><minus><dollar>                                                                 <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><at><minus><dollar>                                                              <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_stroke><dead_currency><dead_greek>                                                       <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><minus><dollar><at>                                                                 <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><minus><dollar><at>                                                              <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_stroke><dead_greek><dead_currency>                                                       <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><minus><at><dollar>                                                                 <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><minus><at><dollar>                                                              <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_currency><dead_greek><dead_stroke>                                                       <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><dollar><at><minus>                                                                 <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><dollar><at><minus>                                                              <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_currency><dead_stroke><dead_greek>                                                       <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><dollar><minus><at>                                                                 <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><dollar><minus><at>                                                              <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_greek><dead_currency><dead_stroke>                                                       <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><at><dollar><minus>                                                                 <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<Multi_key><at><dollar><minus>                                                              <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-<dead_greek><dead_stroke><dead_currency>                                                       <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><at><minus><dollar>                                                                 <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><at><minus><dollar>                                                              <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_stroke><dead_currency><dead_greek>                                                       <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><minus><dollar><at>                                                                 <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><minus><dollar><at>                                                              <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_stroke><dead_greek><dead_currency>                                                       <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><minus><at><dollar>                                                                 <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><minus><at><dollar>                                                              <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_currency><dead_greek><dead_stroke>                                                       <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><dollar><at><minus>                                                                 <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><dollar><at><minus>                                                              <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_currency><dead_stroke><dead_greek>                                                       <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><dollar><minus><at>                                                                 <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><dollar><minus><at>                                                              <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_greek><dead_currency><dead_stroke>                                                       <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><at><dollar><minus>                                                                 <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<Multi_key><at><dollar><minus>                                                              <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-<dead_greek><dead_stroke><dead_currency>                                                       <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><at><minus><dollar>                                                                 <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><at><minus><dollar>                                                              <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_stroke><dead_currency><dead_greek>                                                       <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><minus><dollar><at>                                                                 <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><minus><dollar><at>                                                              <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_stroke><dead_greek><dead_currency>                                                       <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><minus><at><dollar>                                                                 <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><minus><at><dollar>                                                              <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_currency><dead_greek><dead_stroke>                                                       <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><dollar><at><minus>                                                                 <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><dollar><at><minus>                                                              <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_currency><dead_stroke><dead_greek>                                                       <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><dollar><minus><at>                                                                 <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><dollar><minus><at>                                                              <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_greek><dead_currency><dead_stroke>                                                       <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><at><dollar><minus>                                                                 <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<Multi_key><at><dollar><minus>                                                              <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-<dead_greek><dead_stroke><dead_currency>                                                       <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><at><minus><dollar>                                                                 <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><at><minus><dollar>                                                              <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_stroke><dead_currency><dead_greek>                                                       <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><minus><dollar><at>                                                                 <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><minus><dollar><at>                                                              <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_stroke><dead_greek><dead_currency>                                                       <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><minus><at><dollar>                                                                 <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><minus><at><dollar>                                                              <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_currency><dead_greek><dead_stroke>                                                       <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><dollar><at><minus>                                                                 <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><dollar><at><minus>                                                              <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_currency><dead_stroke><dead_greek>                                                       <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><dollar><minus><at>                                                                 <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><dollar><minus><at>                                                              <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_greek><dead_currency><dead_stroke>                                                       <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><at><dollar><minus>                                                                 <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<Multi_key><at><dollar><minus>                                                              <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-<dead_greek><dead_stroke><dead_currency>                                                       <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><at><minus><dollar>                                                                 <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><at><minus><dollar>                                                              <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_stroke><dead_currency><dead_greek>                                                       <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><minus><dollar><at>                                                                 <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><minus><dollar><at>                                                              <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_stroke><dead_greek><dead_currency>                                                       <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><minus><at><dollar>                                                                 <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><minus><at><dollar>                                                              <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_currency><dead_greek><dead_stroke>                                                       <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><dollar><at><minus>                                                                 <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><dollar><at><minus>                                                              <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_currency><dead_stroke><dead_greek>                                                       <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><dollar><minus><at>                                                                 <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><dollar><minus><at>                                                              <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_greek><dead_currency><dead_stroke>                                                       <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><at><dollar><minus>                                                                 <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<Multi_key><at><dollar><minus>                                                              <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-<dead_greek><dead_stroke><dead_currency>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><at><minus><dollar>                                                                 <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_greek><dead_stroke><dead_currency>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><at><minus><dollar>                                                              <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_stroke><dead_currency><dead_greek>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><minus><dollar><at>                                                                 <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_stroke><dead_currency><dead_greek>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><minus><dollar><at>                                                              <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_stroke><dead_greek><dead_currency>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><minus><at><dollar>                                                                 <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_stroke><dead_greek><dead_currency>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><minus><at><dollar>                                                              <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_currency><dead_greek><dead_stroke>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><dollar><at><minus>                                                                 <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_currency><dead_greek><dead_stroke>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><dollar><at><minus>                                                              <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_currency><dead_stroke><dead_greek>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><dollar><minus><at>                                                                 <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_currency><dead_stroke><dead_greek>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><dollar><minus><at>                                                              <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_greek><dead_currency><dead_stroke>                                                       <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><at><dollar><minus>                                                                 <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<dead_greek><dead_currency><dead_stroke>                                                    <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-<Multi_key><at><dollar><minus>                                                              <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_greek><UEFD5><dead_currency>                                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><percent><dollar>                                                               <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><UEFD5><dead_currency>                                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><percent><dollar>                                                            <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<UEFD5><dead_currency><dead_greek>                                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><percent><dollar><at>                                                               <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<UEFD5><dead_currency><dead_greek>                                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><percent><dollar><at>                                                            <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<UEFD5><dead_greek><dead_currency>                                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><percent><at><dollar>                                                               <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<UEFD5><dead_greek><dead_currency>                                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><percent><at><dollar>                                                            <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_greek><UEFD5>                                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><at><percent>                                                               <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><dead_greek><UEFD5>                                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><at><percent>                                                            <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><UEFD5><dead_greek>                                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><percent><at>                                                               <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_currency><UEFD5><dead_greek>                                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><dollar><percent><at>                                                            <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><dead_currency><UEFD5>                                                             <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><dollar><percent>                                                               <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><dead_currency><UEFD5>                                                          <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<Multi_key><at><dollar><percent>                                                            <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+<dead_greek><UEFD5><dead_currency>                                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><at><percent><dollar>                                                               <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_greek><UEFD5><dead_currency>                                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><at><percent><dollar>                                                            <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<UEFD5><dead_currency><dead_greek>                                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><percent><dollar><at>                                                               <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<UEFD5><dead_currency><dead_greek>                                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><percent><dollar><at>                                                            <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<UEFD5><dead_greek><dead_currency>                                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><percent><at><dollar>                                                               <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<UEFD5><dead_greek><dead_currency>                                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><percent><at><dollar>                                                            <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_currency><dead_greek><UEFD5>                                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><dollar><at><percent>                                                               <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_currency><dead_greek><UEFD5>                                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><dollar><at><percent>                                                            <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_currency><UEFD5><dead_greek>                                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><dollar><percent><at>                                                               <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_currency><UEFD5><dead_greek>                                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><dollar><percent><at>                                                            <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_greek><dead_currency><UEFD5>                                                             <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><at><dollar><percent>                                                               <1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_greek><dead_currency><UEFD5>                                                          <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<Multi_key><at><dollar><percent>                                                            <KP_1> : "➊" U278A # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+<dead_greek><UEFD5><dead_currency>                                                             <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><at><percent><dollar>                                                               <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_greek><UEFD5><dead_currency>                                                          <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><at><percent><dollar>                                                            <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<UEFD5><dead_currency><dead_greek>                                                             <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><percent><dollar><at>                                                               <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<UEFD5><dead_currency><dead_greek>                                                          <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><percent><dollar><at>                                                            <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<UEFD5><dead_greek><dead_currency>                                                             <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><percent><at><dollar>                                                               <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<UEFD5><dead_greek><dead_currency>                                                          <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><percent><at><dollar>                                                            <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_currency><dead_greek><UEFD5>                                                             <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><dollar><at><percent>                                                               <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_currency><dead_greek><UEFD5>                                                          <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><dollar><at><percent>                                                            <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_currency><UEFD5><dead_greek>                                                             <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><dollar><percent><at>                                                               <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_currency><UEFD5><dead_greek>                                                          <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><dollar><percent><at>                                                            <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_greek><dead_currency><UEFD5>                                                             <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><at><dollar><percent>                                                               <2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_greek><dead_currency><UEFD5>                                                          <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<Multi_key><at><dollar><percent>                                                            <KP_2> : "➋" U278B # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+<dead_greek><UEFD5><dead_currency>                                                             <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><at><percent><dollar>                                                               <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_greek><UEFD5><dead_currency>                                                          <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><at><percent><dollar>                                                            <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<UEFD5><dead_currency><dead_greek>                                                             <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><percent><dollar><at>                                                               <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<UEFD5><dead_currency><dead_greek>                                                          <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><percent><dollar><at>                                                            <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<UEFD5><dead_greek><dead_currency>                                                             <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><percent><at><dollar>                                                               <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<UEFD5><dead_greek><dead_currency>                                                          <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><percent><at><dollar>                                                            <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_currency><dead_greek><UEFD5>                                                             <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><dollar><at><percent>                                                               <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_currency><dead_greek><UEFD5>                                                          <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><dollar><at><percent>                                                            <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_currency><UEFD5><dead_greek>                                                             <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><dollar><percent><at>                                                               <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_currency><UEFD5><dead_greek>                                                          <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><dollar><percent><at>                                                            <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_greek><dead_currency><UEFD5>                                                             <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><at><dollar><percent>                                                               <3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_greek><dead_currency><UEFD5>                                                          <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<Multi_key><at><dollar><percent>                                                            <KP_3> : "➌" U278C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+<dead_greek><UEFD5><dead_currency>                                                             <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><at><percent><dollar>                                                               <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_greek><UEFD5><dead_currency>                                                          <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><at><percent><dollar>                                                            <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<UEFD5><dead_currency><dead_greek>                                                             <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><percent><dollar><at>                                                               <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<UEFD5><dead_currency><dead_greek>                                                          <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><percent><dollar><at>                                                            <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<UEFD5><dead_greek><dead_currency>                                                             <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><percent><at><dollar>                                                               <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<UEFD5><dead_greek><dead_currency>                                                          <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><percent><at><dollar>                                                            <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_currency><dead_greek><UEFD5>                                                             <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><dollar><at><percent>                                                               <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_currency><dead_greek><UEFD5>                                                          <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><dollar><at><percent>                                                            <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_currency><UEFD5><dead_greek>                                                             <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><dollar><percent><at>                                                               <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_currency><UEFD5><dead_greek>                                                          <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><dollar><percent><at>                                                            <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_greek><dead_currency><UEFD5>                                                             <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><at><dollar><percent>                                                               <4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_greek><dead_currency><UEFD5>                                                          <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<Multi_key><at><dollar><percent>                                                            <KP_4> : "➍" U278D # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+<dead_greek><UEFD5><dead_currency>                                                             <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><at><percent><dollar>                                                               <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_greek><UEFD5><dead_currency>                                                          <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><at><percent><dollar>                                                            <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<UEFD5><dead_currency><dead_greek>                                                             <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><percent><dollar><at>                                                               <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<UEFD5><dead_currency><dead_greek>                                                          <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><percent><dollar><at>                                                            <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<UEFD5><dead_greek><dead_currency>                                                             <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><percent><at><dollar>                                                               <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<UEFD5><dead_greek><dead_currency>                                                          <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><percent><at><dollar>                                                            <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_currency><dead_greek><UEFD5>                                                             <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><dollar><at><percent>                                                               <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_currency><dead_greek><UEFD5>                                                          <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><dollar><at><percent>                                                            <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_currency><UEFD5><dead_greek>                                                             <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><dollar><percent><at>                                                               <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_currency><UEFD5><dead_greek>                                                          <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><dollar><percent><at>                                                            <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_greek><dead_currency><UEFD5>                                                             <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><at><dollar><percent>                                                               <5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_greek><dead_currency><UEFD5>                                                          <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<Multi_key><at><dollar><percent>                                                            <KP_5> : "➎" U278E # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+<dead_greek><UEFD5><dead_currency>                                                             <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><at><percent><dollar>                                                               <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_greek><UEFD5><dead_currency>                                                          <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><at><percent><dollar>                                                            <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<UEFD5><dead_currency><dead_greek>                                                             <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><percent><dollar><at>                                                               <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<UEFD5><dead_currency><dead_greek>                                                          <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><percent><dollar><at>                                                            <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<UEFD5><dead_greek><dead_currency>                                                             <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><percent><at><dollar>                                                               <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<UEFD5><dead_greek><dead_currency>                                                          <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><percent><at><dollar>                                                            <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_currency><dead_greek><UEFD5>                                                             <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><dollar><at><percent>                                                               <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_currency><dead_greek><UEFD5>                                                          <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><dollar><at><percent>                                                            <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_currency><UEFD5><dead_greek>                                                             <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><dollar><percent><at>                                                               <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_currency><UEFD5><dead_greek>                                                          <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><dollar><percent><at>                                                            <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_greek><dead_currency><UEFD5>                                                             <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><at><dollar><percent>                                                               <6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_greek><dead_currency><UEFD5>                                                          <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<Multi_key><at><dollar><percent>                                                            <KP_6> : "➏" U278F # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+<dead_greek><UEFD5><dead_currency>                                                             <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><at><percent><dollar>                                                               <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_greek><UEFD5><dead_currency>                                                          <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><at><percent><dollar>                                                            <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<UEFD5><dead_currency><dead_greek>                                                             <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><percent><dollar><at>                                                               <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<UEFD5><dead_currency><dead_greek>                                                          <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><percent><dollar><at>                                                            <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<UEFD5><dead_greek><dead_currency>                                                             <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><percent><at><dollar>                                                               <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<UEFD5><dead_greek><dead_currency>                                                          <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><percent><at><dollar>                                                            <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_currency><dead_greek><UEFD5>                                                             <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><dollar><at><percent>                                                               <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_currency><dead_greek><UEFD5>                                                          <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><dollar><at><percent>                                                            <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_currency><UEFD5><dead_greek>                                                             <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><dollar><percent><at>                                                               <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_currency><UEFD5><dead_greek>                                                          <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><dollar><percent><at>                                                            <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_greek><dead_currency><UEFD5>                                                             <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><at><dollar><percent>                                                               <7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_greek><dead_currency><UEFD5>                                                          <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<Multi_key><at><dollar><percent>                                                            <KP_7> : "➐" U2790 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+<dead_greek><UEFD5><dead_currency>                                                             <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><at><percent><dollar>                                                               <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_greek><UEFD5><dead_currency>                                                          <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><at><percent><dollar>                                                            <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<UEFD5><dead_currency><dead_greek>                                                             <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><percent><dollar><at>                                                               <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<UEFD5><dead_currency><dead_greek>                                                          <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><percent><dollar><at>                                                            <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<UEFD5><dead_greek><dead_currency>                                                             <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><percent><at><dollar>                                                               <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<UEFD5><dead_greek><dead_currency>                                                          <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><percent><at><dollar>                                                            <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_currency><dead_greek><UEFD5>                                                             <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><dollar><at><percent>                                                               <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_currency><dead_greek><UEFD5>                                                          <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><dollar><at><percent>                                                            <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_currency><UEFD5><dead_greek>                                                             <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><dollar><percent><at>                                                               <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_currency><UEFD5><dead_greek>                                                          <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><dollar><percent><at>                                                            <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_greek><dead_currency><UEFD5>                                                             <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><at><dollar><percent>                                                               <8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_greek><dead_currency><UEFD5>                                                          <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<Multi_key><at><dollar><percent>                                                            <KP_8> : "➑" U2791 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+<dead_greek><UEFD5><dead_currency>                                                             <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><at><percent><dollar>                                                               <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_greek><UEFD5><dead_currency>                                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><at><percent><dollar>                                                            <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<UEFD5><dead_currency><dead_greek>                                                             <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><percent><dollar><at>                                                               <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<UEFD5><dead_currency><dead_greek>                                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><percent><dollar><at>                                                            <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<UEFD5><dead_greek><dead_currency>                                                             <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><percent><at><dollar>                                                               <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<UEFD5><dead_greek><dead_currency>                                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><percent><at><dollar>                                                            <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_currency><dead_greek><UEFD5>                                                             <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><dollar><at><percent>                                                               <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_currency><dead_greek><UEFD5>                                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><dollar><at><percent>                                                            <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_currency><UEFD5><dead_greek>                                                             <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><dollar><percent><at>                                                               <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_currency><UEFD5><dead_greek>                                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><dollar><percent><at>                                                            <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_greek><dead_currency><UEFD5>                                                             <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><at><dollar><percent>                                                               <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<dead_greek><dead_currency><UEFD5>                                                          <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+<Multi_key><at><dollar><percent>                                                            <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 #
 #
 #^# CIRCLED
@@ -10133,8 +10145,8 @@
 <Multi_key><grave>                                                          <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <dead_grave>                                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<dead_grave>                                                                               <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-<Multi_key><grave>                                                                         <minus> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
+<dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
+<Multi_key><grave>                                                                         <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <Multi_key><grave>                                                                    <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <dead_grave>                                                                                   <1> : "‵" U2035 # REVERSED PRIME
@@ -10212,8 +10224,8 @@
 <Multi_key><grave><grave>                                                                <section> : "ȕ" U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 <dead_grave><dead_grave>                                                                <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <Multi_key><grave><grave>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
-<dead_grave><dead_grave>                                                                   <minus> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
-<Multi_key><grave><grave>                                                                  <minus> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+<dead_grave><dead_grave>                                                                   <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+<Multi_key><grave><grave>                                                                  <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                       <A> : "Ȁ" U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
 <Multi_key><grave><grave>                                                                      <A> : "Ȁ" U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
 <dead_grave><dead_grave>                                                                       <a> : "ȁ" U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
@@ -10480,48 +10492,36 @@
 <Multi_key><apostrophe><numbersign><KP_3>                                              <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                      <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                            <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_acute><UEFD0><dead_circumflex>                                                   <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><apostrophe><numbersign><less>                                              <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_acute><UEFD0><3>                                                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><3>                                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_acute><UEFD0><KP_3>                                                             <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><KP_3>                                             <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                     <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                           <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<dead_acute><UEFD0><dead_circumflex>                                                  <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<Multi_key><apostrophe><numbersign><less>                                             <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_acute><UEFD0><3>                                                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><apostrophe><numbersign><3>                                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_acute><UEFD0><KP_3>                                                                  <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><apostrophe><numbersign><KP_3>                                                  <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                          <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                                <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_acute><UEFD0><dead_circumflex>                                                       <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><apostrophe><numbersign><less>                                                  <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_acute><UEFD0><3>                                                                       <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><apostrophe><numbersign><3>                                                       <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_acute><UEFD0><KP_3>                                                                    <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><apostrophe><numbersign><KP_3>                                                    <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                                  <bar> : "∦" U2226 # NOT PARALLEL TO
-<dead_acute><UEFD0><dead_circumflex>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><apostrophe><numbersign><less>                                                    <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_acute><UEFD0><3>                                                                      <less> : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><apostrophe><numbersign><3>                                                      <less> : "⊀" U2280 # DOES NOT PRECEDE
 <dead_acute><UEFD0><KP_3>                                                                   <less> : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><apostrophe><numbersign><KP_3>                                                   <less> : "⊀" U2280 # DOES NOT PRECEDE
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                           <less> : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                                 <less> : "⊀" U2280 # DOES NOT PRECEDE
-<dead_acute><UEFD0><dead_circumflex>                                                        <less> : "⊀" U2280 # DOES NOT PRECEDE
-<Multi_key><apostrophe><numbersign><less>                                                   <less> : "⊀" U2280 # DOES NOT PRECEDE
 <dead_acute><UEFD0><3>                                                                   <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><apostrophe><numbersign><3>                                                   <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <dead_acute><UEFD0><KP_3>                                                                <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><apostrophe><numbersign><KP_3>                                                <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                        <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                              <greater> : "⊁" U2281 # DOES NOT SUCCEED
-<dead_acute><UEFD0><dead_circumflex>                                                     <greater> : "⊁" U2281 # DOES NOT SUCCEED
-<Multi_key><apostrophe><numbersign><less>                                                <greater> : "⊁" U2281 # DOES NOT SUCCEED
 #
 #
 # # ACUTE&GROUP4
@@ -10532,8 +10532,6 @@
 <Multi_key><apostrophe><numbersign><KP_4>                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_acute><UEFD0><UEFD0><UEFD0><UEFD0>                                               <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><apostrophe><numbersign><numbersign><numbersign><numbersign>                <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_acute><UEFD0><dead_acute>                                                        <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><apostrophe>                                        <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 #
 #
 # # ACUTE&GROUP5
@@ -10542,8 +10540,6 @@
 <Multi_key><apostrophe><numbersign><5>                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_acute><UEFD0><KP_5>                                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><apostrophe><numbersign><KP_5>                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_acute><UEFD0><dead_diaeresis>                                                    <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><colon>                                             <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 #
 #
 # # ACUTE&GRAVE, GRAVE&ACUTE
@@ -10723,8 +10719,8 @@
 <Multi_key><quotedbl>                                                               <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                       <section> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
 <Multi_key><quotedbl>                                                                    <section> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
-<dead_doubleacute>                                                                         <minus> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
-<Multi_key><quotedbl>                                                                      <minus> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
+<dead_doubleacute>                                                                         <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
+<Multi_key><quotedbl>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                             <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
 <Multi_key><quotedbl>                                                                          <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
 <dead_doubleacute>                                                                          <KP_0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
@@ -14938,10 +14934,7 @@
 #   quick access unless a quick access sequence conflicts with regular support.
 #   See #*# ACUTE
 #
-#   When this ended up as the last dead key without any numeric base character,
-#   digits have been added to yield the related set of arrow emoji, that mix of
-#   black arrows and basic simple arrows as already supported in group 4 of the
-#   digits, and live on AltGr + numpad.
+#   Digits yield mathematical slashes without space termination.
 #
 <dead_longsolidusoverlay>                                                                  <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
@@ -14963,46 +14956,22 @@
 <Multi_key><slash>                                                                       <greater> : "≯" U226F # NOT GREATER-THAN
 <dead_longsolidusoverlay>                                                                  <equal> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><slash>                                                                         <equal> : "≠" U2260 # NOT EQUAL TO
-<dead_longsolidusoverlay>                                                                      <0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key><slash>                                                                             <0> : "↕" U2195 # UP DOWN ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<dead_longsolidusoverlay>                                                                      <1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key><slash>                                                                             <1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<dead_longsolidusoverlay>                                                                      <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key><slash>                                                                             <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<dead_longsolidusoverlay>                                                                      <3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key><slash>                                                                             <3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<dead_longsolidusoverlay>                                                                      <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key><slash>                                                                             <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<dead_longsolidusoverlay>                                                                      <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key><slash>                                                                             <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<dead_longsolidusoverlay>                                                                      <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key><slash>                                                                             <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<dead_longsolidusoverlay>                                                                      <7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key><slash>                                                                             <7> : "↖" U2196 # NORTH WEST ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<dead_longsolidusoverlay>                                                                      <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key><slash>                                                                             <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<dead_longsolidusoverlay>                                                                      <9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key><slash>                                                                             <9> : "↗" U2197 # NORTH EAST ARROW emoji
-<dead_longsolidusoverlay>                                                                   <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key><KP_Divide>                                                                      <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<dead_longsolidusoverlay>                                                                      <1> : "∕" U2215 # DIVISION SLASH
+<Multi_key><slash>                                                                             <1> : "∕" U2215 # DIVISION SLASH
+<dead_longsolidusoverlay>                                                                   <KP_1> : "∕" U2215 # DIVISION SLASH
+<Multi_key><KP_Divide>                                                                      <KP_1> : "∕" U2215 # DIVISION SLASH
+<dead_longsolidusoverlay>                                                                      <2> : "⧸" U29F8 # BIG SOLIDUS
+<Multi_key><slash>                                                                             <2> : "⧸" U29F8 # BIG SOLIDUS
+<dead_longsolidusoverlay>                                                                   <KP_2> : "⧸" U29F8 # BIG SOLIDUS
+<Multi_key><KP_Divide>                                                                      <KP_2> : "⧸" U29F8 # BIG SOLIDUS
+<dead_longsolidusoverlay>                                                                      <3> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><slash>                                                                             <3> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<dead_longsolidusoverlay>                                                                   <KP_3> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><KP_Divide>                                                                      <KP_3> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<dead_longsolidusoverlay>                                                                      <4> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><slash>                                                                             <4> : "⁄" U2044 # FRACTION SLASH
+<dead_longsolidusoverlay>                                                                   <KP_4> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><KP_Divide>                                                                      <KP_4> : "⁄" U2044 # FRACTION SLASH
 <dead_longsolidusoverlay>                                                                      <A> : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
 <Multi_key><slash>                                                                             <A> : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
 <dead_longsolidusoverlay>                                                                      <a> : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
@@ -15518,16 +15487,12 @@
 <Multi_key><asterisk><numbersign><KP_4>                                               <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0><UEFD0><UEFD0><UEFD0>                                          <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><asterisk><numbersign><numbersign><numbersign><numbersign>                 <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<dead_abovering><UEFD0><dead_acute>                                                   <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><apostrophe>                                         <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0><4>                                                                     <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><4>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_4>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><KP_4>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><UEFD0><UEFD0><UEFD0>                                                   <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><numbersign><numbersign><numbersign>                          <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><dead_acute>                                                            <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><apostrophe>                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
 #
 # # RING_ABOVE&GROUP5
