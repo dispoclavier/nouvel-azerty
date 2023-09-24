@@ -1916,51 +1916,42 @@
 #
 # # Circle quadrants
 #
+#   These extend filled and empty circles on D06, groups 1..3.
+#   See # # D06
+#
+#   Half circles are supported in mathematical symbols.
+#   See # # Geometric Shapes in block U25A0 used in mathematics
+#
+#   The leading letter prevents a conflict with "↉" U2189 and is case sensitive
+#   in that it is a small q for empty quadrants, a capital Q for filled ones.
+#
 #
 #   Circle filled by quarters
 #
-#   Extends white and black circles on D06, groups 1..3.
-#
-<Multi_key><0><q>                                                                                  : "○" U25CB # WHITE CIRCLE
-<Multi_key><KP_0><q>                                                                               : "○" U25CB # WHITE CIRCLE
-<Multi_key><0><Q>                                                                                  : "○" U25CB # WHITE CIRCLE
-<Multi_key><KP_0><Q>                                                                               : "○" U25CB # WHITE CIRCLE
-<Multi_key><1><q>                                                                                  : "◔" U25D4 # CIRCLE WITH UPPER RIGHT QUADRANT BLACK
-<Multi_key><KP_1><q>                                                                               : "◔" U25D4 # CIRCLE WITH UPPER RIGHT QUADRANT BLACK
-<Multi_key><1><Q>                                                                                  : "◔" U25D4 # CIRCLE WITH UPPER RIGHT QUADRANT BLACK
-<Multi_key><KP_1><Q>                                                                               : "◔" U25D4 # CIRCLE WITH UPPER RIGHT QUADRANT BLACK
-<Multi_key><2><q>                                                                                  : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
-<Multi_key><KP_2><q>                                                                               : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
-<Multi_key><2><Q>                                                                                  : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
-<Multi_key><KP_2><Q>                                                                               : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
-<Multi_key><3><q>                                                                                  : "◕" U25D5 # CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
-<Multi_key><KP_3><q>                                                                               : "◕" U25D5 # CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
-<Multi_key><3><Q>                                                                                  : "◕" U25D5 # CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
-<Multi_key><KP_3><Q>                                                                               : "◕" U25D5 # CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
-<Multi_key><4><q>                                                                                  : "●" U25CF # BLACK CIRCLE
-<Multi_key><KP_4><q>                                                                               : "●" U25CF # BLACK CIRCLE
-<Multi_key><4><Q>                                                                                  : "●" U25CF # BLACK CIRCLE
-<Multi_key><KP_4><Q>                                                                               : "●" U25CF # BLACK CIRCLE
+<Multi_key><Q><0>                                                                                  : "○" U25CB # WHITE CIRCLE
+<Multi_key><Q><KP_0>                                                                               : "○" U25CB # WHITE CIRCLE
+<Multi_key><Q><1>                                                                                  : "◔" U25D4 # CIRCLE WITH UPPER RIGHT QUADRANT BLACK
+<Multi_key><Q><KP_1>                                                                               : "◔" U25D4 # CIRCLE WITH UPPER RIGHT QUADRANT BLACK
+<Multi_key><Q><2>                                                                                  : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
+<Multi_key><Q><KP_2>                                                                               : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
+<Multi_key><Q><3>                                                                                  : "◕" U25D5 # CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
+<Multi_key><Q><KP_3>                                                                               : "◕" U25D5 # CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
+<Multi_key><Q><4>                                                                                  : "●" U25CF # BLACK CIRCLE
+<Multi_key><Q><KP_4>                                                                               : "●" U25CF # BLACK CIRCLE
 #
 #
 #   Circle with quadrant outline
 #
-<Multi_key><0><1><q>                                                                               : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
-<Multi_key><KP_0><KP_1><q>                                                                         : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
-<Multi_key><0><1><Q>                                                                               : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
-<Multi_key><KP_0><KP_1><Q>                                                                         : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
-<Multi_key><0><2><q>                                                                               : "◶" U25F6 # WHITE CIRCLE WITH LOWER RIGHT QUADRANT
-<Multi_key><KP_0><KP_2><q>                                                                         : "◶" U25F6 # WHITE CIRCLE WITH LOWER RIGHT QUADRANT
-<Multi_key><0><2><Q>                                                                               : "◶" U25F6 # WHITE CIRCLE WITH LOWER RIGHT QUADRANT
-<Multi_key><KP_0><KP_2><Q>                                                                         : "◶" U25F6 # WHITE CIRCLE WITH LOWER RIGHT QUADRANT
-<Multi_key><0><3><q>                                                                               : "◵" U25F5 # WHITE CIRCLE WITH LOWER LEFT QUADRANT
-<Multi_key><KP_0><KP_3><q>                                                                         : "◵" U25F5 # WHITE CIRCLE WITH LOWER LEFT QUADRANT
-<Multi_key><0><3><Q>                                                                               : "◵" U25F5 # WHITE CIRCLE WITH LOWER LEFT QUADRANT
-<Multi_key><KP_0><KP_3><Q>                                                                         : "◵" U25F5 # WHITE CIRCLE WITH LOWER LEFT QUADRANT
-<Multi_key><0><4><q>                                                                               : "◴" U25F4 # WHITE CIRCLE WITH UPPER LEFT QUADRANT
-<Multi_key><KP_0><KP_4><q>                                                                         : "◴" U25F4 # WHITE CIRCLE WITH UPPER LEFT QUADRANT
-<Multi_key><0><4><Q>                                                                               : "◴" U25F4 # WHITE CIRCLE WITH UPPER LEFT QUADRANT
-<Multi_key><KP_0><KP_4><Q>                                                                         : "◴" U25F4 # WHITE CIRCLE WITH UPPER LEFT QUADRANT
+<Multi_key><q><0>                                                                                  : "○" U25CB # WHITE CIRCLE
+<Multi_key><q><KP_0>                                                                               : "○" U25CB # WHITE CIRCLE
+<Multi_key><q><1>                                                                                  : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
+<Multi_key><q><KP_1>                                                                               : "◷" U25F7 # WHITE CIRCLE WITH UPPER RIGHT QUADRANT
+<Multi_key><q><2>                                                                                  : "◶" U25F6 # WHITE CIRCLE WITH LOWER RIGHT QUADRANT
+<Multi_key><q><KP_2>                                                                               : "◶" U25F6 # WHITE CIRCLE WITH LOWER RIGHT QUADRANT
+<Multi_key><q><3>                                                                                  : "◵" U25F5 # WHITE CIRCLE WITH LOWER LEFT QUADRANT
+<Multi_key><q><KP_3>                                                                               : "◵" U25F5 # WHITE CIRCLE WITH LOWER LEFT QUADRANT
+<Multi_key><q><4>                                                                                  : "◴" U25F4 # WHITE CIRCLE WITH UPPER LEFT QUADRANT
+<Multi_key><q><KP_4>                                                                               : "◴" U25F4 # WHITE CIRCLE WITH UPPER LEFT QUADRANT
 #
 #
 # # Checkboxes
@@ -5030,7 +5021,6 @@
 #   See # # DIAERESIS&ACUTE
 #   See # # ACUTE&GRAVE, GRAVE&ACUTE
 #   See # # HACEK input facility by ACUTE GRAVE
-
 #
 #   The character descriptors in lowercase are Unicode informative aliases that
 #   have been given in case of a suboptimal name.
@@ -13580,7 +13570,6 @@
 <Multi_key><minus><numbersign><numbersign><numbersign>                                         <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <dead_stroke><UEFD0><dead_circumflex>                                                          <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <Multi_key><minus><numbersign><less>                                                           <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
-
 #
 #
 # # BARRED&RETROFLEX_HOOK
@@ -13621,7 +13610,6 @@
 <Multi_key><minus><slash>                                                                      <k> : "ꝅ" UA745 # LATIN SMALL LETTER K WITH STROKE AND DIAGONAL STROKE
 <dead_longsolidusoverlay><dead_stroke>                                                         <k> : "ꝅ" UA745 # LATIN SMALL LETTER K WITH STROKE AND DIAGONAL STROKE
 <Multi_key><slash><minus>                                                                      <k> : "ꝅ" UA745 # LATIN SMALL LETTER K WITH STROKE AND DIAGONAL STROKE
-
 #
 #
 #^# MORE_BARRED: DOUBLE_BAR, LONG_BAR, BARRED_DESCENDER
