@@ -1075,8 +1075,6 @@
 <Multi_key><P><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
 <Multi_key><bar><p>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><bar><P>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
-<Multi_key><bar><colon>                                                                            : "¦" U00A6 # BROKEN BAR
-<Multi_key><colon><bar>                                                                            : "¦" U00A6 # BROKEN BAR
 <Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
