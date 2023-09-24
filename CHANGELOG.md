@@ -3,6 +3,7 @@
 ## 1.0.13 (projet)
 
 * Touches mortes : Améliorer le rendu des surrogats hauts sous les systèmes ne les utilisant pas. (compose-1.yml [fb60dfb](https://github.com/dispoclavier/nouvel-azerty/commit/fb60dfb6edac409a1309a97cdc0f54cebc0f5862), compose-2.yml [80d347c](https://github.com/dispoclavier/nouvel-azerty/commit/80d347cf92bd6913981506e7f2879603921258e9))
+* Composition : Déboguer "↉" U2189, corriger "○" U25CB, "◔" U25D4, "◑" U25D1, "◕" U25D5, "●" U25CF, "◷" U25F7, "◶" U25F6, "◵" U25F5, "◴" U25F4. (compose-1.yml [dc23892](https://github.com/dispoclavier/nouvel-azerty/commit/dc23892ccbd2b0fd6e51daf7cf1bca44cd4095c2))
 
 ## 1.0.12 (2023-09-23)
 
