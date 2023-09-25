@@ -580,6 +580,22 @@
 #   in terms of string length, as used for U10789. In VSCode a zoom factor of
 #   -0.7 is then needed on 16:10 displays as used for developing this file.
 #
+#   Two Multi_key sequences are duplicates by design:
+#   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+#   <Multi_key><less><8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+#   See #   Heart emoji
+#   See #*# CIRCUMFLEX
+
+#
+#   The following Multi_key sequences do not work, because <numbersign> is used
+#   both as a group selector and as a base character. With respect to dead key
+#   use, the topmost sequences are maintained, but the affected characters may
+#   also be input in groups 5 through 7, with respect to Multi_key use:
+#   <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
+#   <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+#   <Multi_key><numbersign><numbersign><numbersign><numbersign> : "☒" U2612 # BALLOT BOX WITH X
+#   See # # C01
+#
 #
 #   START_MULTI_KEY
 #
@@ -746,7 +762,7 @@
 <Multi_key><N><J>                                                                                  : "Ǌ" U01CA # LATIN CAPITAL LETTER NJ
 <Multi_key><N><j>                                                                                  : "ǋ" U01CB # LATIN CAPITAL LETTER N WITH SMALL LETTER J
 <Multi_key><n><j>                                                                                  : "ǌ" U01CC # LATIN SMALL LETTER NJ
-<Multi_key><n><u>                                                                                  : "ꝴ" UA774 # LATIN SMALL LETTER NUM
+<Multi_key><n><u><m>                                                                               : "ꝴ" UA774 # LATIN SMALL LETTER NUM
 <Multi_key><O><E>                                                                                  : "Œ" U0152 # LATIN CAPITAL LIGATURE OE
 <Multi_key><O><e>                                                                                  : "Œ" U0152 # LATIN CAPITAL LIGATURE OE
 <Multi_key><o><e>                                                                                  : "œ" U0153 # LATIN SMALL LIGATURE OE
@@ -841,12 +857,17 @@
 <Multi_key><question><exclam>                                                                      : "‽" U203D # INTERROBANG
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
 #
-<Multi_key><space><space>                                                                          : " " U00A0 # NO-BREAK SPACE
+#   U00A0 NO-BREAK SPACE is supported by en_US.UTF-8/Compose (by ¦␣␣). But the
+#   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
+#   are heavily used and consistently supported on live keys, and moreover the
+#   Multi_key sequence for U00A0 conflicts with "⧜" U29DC, support is dropped
+#   altogether, and <Multi_key><space><space> is discarded.
 #
-#   More useful than en_US.UTF-8/Compose’s breaking, unmatched* U2008 PUNCTUATION SPACE:
-<Multi_key><space><period>                                                                         : " " U202F # NARROW NO-BREAK SPACE
-#     * en_US.UTF-8/Compose does not support U2007 FIGURE SPACE, despite this alone
-#       in the range U2002..U200A was ultimately granted no-break behavior.
+#   U2008 PUNCTUATION SPACE is supported by en_US.UTF-8/Compose (by ¦␣.), but
+#   matching U2007 FIGURE SPACE is not, although both are used in typesetting
+#   old-style tables, and the latter was ultimately granted no-break behavior.
+#   Since the sequence <Multi_key><space><period> conflicts with "⩑" U2A51, it
+#   is ultimately discarded.
 #
 #   Needs double, else would conflict with CIRCUMFLEX&ACUTE:
 <Multi_key><less><less><apostrophe>                                                                : "‘" U2018 # LEFT SINGLE QUOTATION MARK
@@ -2090,21 +2111,20 @@
 #
 #   Symbol for SPACE
 #
-#   Also in group 1 of $.
+#   The open box is also in group 1 of $.
 #
-<Multi_key><space><nobreakspace>                                                                   : "␣" U2423 # OPEN BOX
 <Multi_key><s><p>                                                                                  : "␣" U2423 # OPEN BOX
 <Multi_key><S><P>                                                                                  : "␣" U2423 # OPEN BOX
 #
 #
 #   Symbols for NO-BREAK SPACE
 #
-#   The shouldered open box is also in group 2 of $.
 #   The down-pointing triangle conforms to Gedit’s Draw Spaces extension.
+#   The shouldered open box is also in group 2 of $.
 #
-<Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 <Multi_key><n><b>                                                                                  : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><B>                                                                                  : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 #
 #
 #   Symbols for NARROW NO-BREAK SPACE
@@ -4358,8 +4378,10 @@
 <Multi_key><underscore><greater><period>                                                   <space> : "⪘" U2A98 # SLANTED EQUAL TO OR GREATER-THAN WITH DOT INSIDE
 <Multi_key><equal><less>                                                                   <space> : "⪙" U2A99 # DOUBLE-LINE EQUAL TO OR LESS-THAN
 <Multi_key><equal><greater>                                                                <space> : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
-<Multi_key><underscore><underscore><less>                                                  <space> : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
-<Multi_key><underscore><underscore><greater>                                               <space> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
+<Multi_key><space><underscore><underscore><less>                                           <space> : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
+<Multi_key><nobreakspace><underscore><underscore><less>                                    <space> : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
+<Multi_key><space><underscore><underscore><greater>                                        <space> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
+<Multi_key><nobreakspace><underscore><underscore><greater>                                 <space> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
 <Multi_key><asciitilde><less>                                                              <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><backslash><less>                                                   <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><greater>                                                           <space> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
@@ -4451,8 +4473,10 @@
 <Multi_key><c><equal><slash>                                                               <space> : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
 <Multi_key><b><equal><slash>                                                               <space> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
 <Multi_key><c><c><equal><slash>                                                            <space> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
-<Multi_key><bracketleft><minus>                                                            <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
-<Multi_key><minus><bracketright>                                                           <space> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
+<Multi_key><space><bracketleft><minus>                                                     <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
+<Multi_key><nobreakspace><bracketleft><minus>                                              <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
+<Multi_key><space><minus><bracketright>                                                    <space> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
+<Multi_key><nobreakspace><minus><bracketright>                                             <space> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
 <Multi_key><c><bar>                                                                        <space> : "⫏" U2ACF # CLOSED SUBSET
 <Multi_key><b><bar>                                                                        <space> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><space><D>                                                                      <space> : "⫐" U2AD0 # CLOSED SUPERSET
@@ -7076,12 +7100,14 @@
 #   valents of <UEFD1><dead_breve><UEFD2> and <UEFD1><parenright> conflict, and
 #   the superscript parentheses have precedence.
 #
+#   Does not work the way <UEFD2><dead_breve><UEFD1> either, because the multi-
+#   key equivalents of <UEFD2><dead_breve><UEFD1> and <UEFD2><parenright> con-
+#   flict, and the subscript parentheses have precedence.
+#
 <UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><asciicircum><underscore><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD2><UEFD1><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><underscore><asciicircum><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<UEFD2><dead_breve><UEFD1>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><underscore><parenright><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <dead_breve><UEFD1><UEFD2>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><asciicircum><underscore>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <dead_breve><UEFD2><UEFD1>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
@@ -7091,13 +7117,12 @@
 # # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&BARRED
 #
 #   See # # SUPERSCRIPT&BARRED
+#   See # # SUBSCRIPT_OR_SMALL_CAPS&BARRED
 #
 <UEFD1><UEFD2><dead_stroke>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><asciicircum><underscore><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><UEFD1><dead_stroke>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><underscore><asciicircum><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<UEFD2><dead_stroke><UEFD1>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><underscore><minus><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <dead_stroke><UEFD1><UEFD2>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><minus><asciicircum><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <dead_stroke><UEFD2><UEFD1>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
@@ -11757,6 +11782,9 @@
 #   "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING is mapped to unconflicting
 #   and case insensitive C, with its right equivalent in dead_breve.
 #
+#   "͡" U0361 # COMBINING DOUBLE INVERTED BREVE is mapped to unconflicting and
+#   case insensitive D, and consistently, "͝" U035D, "͜" U035C and "᷼" U1DFC.
+#
 <dead_invertedbreve>                                                                       <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <dead_invertedbreve>                                                                       <U200B> : "̑" U0311 # COMBINING INVERTED BREVE
@@ -11767,8 +11795,6 @@
 <Multi_key><parenleft>                                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                   <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key><parenleft>                                                                 <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
-<dead_invertedbreve>                                                                       <equal> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
-<Multi_key><parenleft>                                                                     <equal> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <dead_invertedbreve>                                                                           <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <a> : "ȃ" U0203 # LATIN SMALL LETTER A WITH INVERTED BREVE
@@ -11777,6 +11803,10 @@
 <Multi_key><parenleft>                                                                         <C> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <dead_invertedbreve>                                                                           <c> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><parenleft>                                                                         <c> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<dead_invertedbreve>                                                                           <D> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<Multi_key><parenleft>                                                                         <D> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<dead_invertedbreve>                                                                           <d> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<Multi_key><parenleft>                                                                         <d> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <dead_invertedbreve>                                                                           <E> : "Ȇ" U0206 # LATIN CAPITAL LETTER E WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <E> : "Ȇ" U0206 # LATIN CAPITAL LETTER E WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <e> : "ȇ" U0207 # LATIN SMALL LETTER E WITH INVERTED BREVE
@@ -12328,8 +12358,10 @@
 <Multi_key><parenleft><parenleft>                                                          <space> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <dead_invertedbreve><dead_invertedbreve>                                                   <U200B> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key><parenleft><parenleft>                                                          <U200B> : "̯" U032F # COMBINING INVERTED BREVE BELOW
-<dead_invertedbreve><dead_invertedbreve>                                                   <equal> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
-<Multi_key><parenleft><parenleft>                                                          <equal> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<dead_invertedbreve><dead_invertedbreve>                                                       <D> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<Multi_key><parenleft><parenleft>                                                              <D> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<dead_invertedbreve><dead_invertedbreve>                                                       <d> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<Multi_key><parenleft><parenleft>                                                              <d> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 #
 #
 #*# BREVE
@@ -12349,8 +12381,6 @@
 <Multi_key><parenright>                                                             <nobreakspace> : "˘" U02D8 # BREVE
 <dead_breve>                                                                           <ampersand> : "̮" U032E # COMBINING BREVE BELOW
 <Multi_key><parenright>                                                                <ampersand> : "̮" U032E # COMBINING BREVE BELOW
-<dead_breve>                                                                               <equal> : "͝" U035D # COMBINING DOUBLE BREVE
-<Multi_key><parenright>                                                                    <equal> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                                   <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
 <Multi_key><parenright>                                                                        <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
 <dead_breve>                                                                                   <a> : "ă" U0103 # LATIN SMALL LETTER A WITH BREVE
@@ -12359,6 +12389,10 @@
 <Multi_key><parenright>                                                                        <C> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_breve>                                                                                   <c> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <Multi_key><parenright>                                                                        <c> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_breve>                                                                                   <D> : "͝" U035D # COMBINING DOUBLE BREVE
+<Multi_key><parenright>                                                                        <D> : "͝" U035D # COMBINING DOUBLE BREVE
+<dead_breve>                                                                                   <d> : "͝" U035D # COMBINING DOUBLE BREVE
+<Multi_key><parenright>                                                                        <d> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                                   <E> : "Ĕ" U0114 # LATIN CAPITAL LETTER E WITH BREVE
 <Multi_key><parenright>                                                                        <E> : "Ĕ" U0114 # LATIN CAPITAL LETTER E WITH BREVE
 <dead_breve>                                                                                   <e> : "ĕ" U0115 # LATIN SMALL LETTER E WITH BREVE
@@ -13017,8 +13051,10 @@
 <Multi_key><parenright><parenright>                                                        <space> : "̮" U032E # COMBINING BREVE BELOW
 <dead_breve><dead_breve>                                                                   <U200B> : "̮" U032E # COMBINING BREVE BELOW
 <Multi_key><parenright><parenright>                                                        <U200B> : "̮" U032E # COMBINING BREVE BELOW
-<dead_breve><dead_breve>                                                                   <equal> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
-<Multi_key><parenright><parenright>                                                        <equal> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<dead_breve><dead_breve>                                                                       <D> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><parenright><parenright>                                                            <D> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<dead_breve><dead_breve>                                                                       <d> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><parenright><parenright>                                                            <d> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                       <L> : "Ɬ" UA7AD # LATIN CAPITAL LETTER L WITH BELT
 <Multi_key><parenright><parenright>                                                            <L> : "Ɬ" UA7AD # LATIN CAPITAL LETTER L WITH BELT
 <dead_breve><dead_breve>                                                                       <l> : "ɬ" U026C # LATIN SMALL LETTER L WITH BELT
@@ -14108,24 +14144,24 @@
 #
 # # SUBSCRIPT_OR_SMALL_CAPS&BREVE
 #
-<UEFD2><dead_breve>                                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><underscore><parenright>                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
+#   Works only the way <dead_breve><UEFD2> because the multikey equivalents of
+#   <UEFD2><dead_breve> and <UEFD2><parenright> conflict, and the subscript
+#   parentheses have precedence.
+#
 <dead_breve><UEFD2>                                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><underscore>                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
 #
 #
 # # SUBSCRIPT_OR_SMALL_CAPS&BARRED
 #
-<UEFD2><dead_stroke>                                                                           <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
-<Multi_key><underscore><minus>                                                                 <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
+#   Works only the way <dead_stroke><UEFD2> because the multikey equivalents of
+#   <UEFD2><dead_stroke> and <UEFD2><minus> conflict, and the subscript minus
+#   sign has precedence.
+#
 <dead_stroke><UEFD2>                                                                           <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
 <Multi_key><minus><underscore>                                                                 <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
-<UEFD2><dead_stroke>                                                                           <I> : "ᵻ" U1D7B # LATIN SMALL CAPITAL LETTER I WITH STROKE
-<Multi_key><underscore><minus>                                                                 <I> : "ᵻ" U1D7B # LATIN SMALL CAPITAL LETTER I WITH STROKE
 <dead_stroke><UEFD2>                                                                           <I> : "ᵻ" U1D7B # LATIN SMALL CAPITAL LETTER I WITH STROKE
 <Multi_key><minus><underscore>                                                                 <I> : "ᵻ" U1D7B # LATIN SMALL CAPITAL LETTER I WITH STROKE
-<UEFD2><dead_stroke>                                                                           <U> : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
-<Multi_key><underscore><minus>                                                                 <U> : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
 <dead_stroke><UEFD2>                                                                           <U> : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
 <Multi_key><minus><underscore>                                                                 <U> : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
 #
@@ -14550,18 +14586,8 @@
 <Multi_key><slash>                                                                         <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <dead_longsolidusoverlay>                                                              <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><slash>                                                                     <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
-<dead_longsolidusoverlay>                                                             <asciitilde> : "≁" U2241 # NOT TILDE
-<Multi_key><slash>                                                                    <asciitilde> : "≁" U2241 # NOT TILDE
 <dead_longsolidusoverlay>                                                                  <grave> : "⊄" U2284 # NOT A SUBSET OF
 <Multi_key><slash>                                                                         <grave> : "⊄" U2284 # NOT A SUBSET OF
-<dead_longsolidusoverlay>                                                                    <bar> : "∤" U2224 # DOES NOT DIVIDE
-<Multi_key><slash>                                                                           <bar> : "∤" U2224 # DOES NOT DIVIDE
-<dead_longsolidusoverlay>                                                                   <less> : "≮" U226E # NOT LESS-THAN
-<Multi_key><slash>                                                                          <less> : "≮" U226E # NOT LESS-THAN
-<dead_longsolidusoverlay>                                                                <greater> : "≯" U226F # NOT GREATER-THAN
-<Multi_key><slash>                                                                       <greater> : "≯" U226F # NOT GREATER-THAN
-<dead_longsolidusoverlay>                                                                  <equal> : "≠" U2260 # NOT EQUAL TO
-<Multi_key><slash>                                                                         <equal> : "≠" U2260 # NOT EQUAL TO
 <dead_longsolidusoverlay>                                                                      <1> : "∕" U2215 # DIVISION SLASH
 <Multi_key><slash>                                                                             <1> : "∕" U2215 # DIVISION SLASH
 <dead_longsolidusoverlay>                                                                   <KP_1> : "∕" U2215 # DIVISION SLASH
@@ -14683,6 +14709,12 @@
 <Multi_key><slash><numbersign>                                                             <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_longsolidusoverlay><UEFD0>                                                             <bar> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><slash><numbersign>                                                               <bar> : "∤" U2224 # DOES NOT DIVIDE
+<dead_longsolidusoverlay><UEFD0>                                                            <less> : "≮" U226E # NOT LESS-THAN
+<Multi_key><slash><numbersign>                                                              <less> : "≮" U226E # NOT LESS-THAN
+<dead_longsolidusoverlay><UEFD0>                                                         <greater> : "≯" U226F # NOT GREATER-THAN
+<Multi_key><slash><numbersign>                                                           <greater> : "≯" U226F # NOT GREATER-THAN
+<dead_longsolidusoverlay><UEFD0>                                                           <equal> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><slash><numbersign>                                                             <equal> : "≠" U2260 # NOT EQUAL TO
 <dead_longsolidusoverlay><UEFD0>                                                               <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign>                                                                 <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_longsolidusoverlay><UEFD0>                                                               <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
