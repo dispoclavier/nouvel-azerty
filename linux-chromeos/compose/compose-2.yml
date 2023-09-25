@@ -76,8 +76,8 @@
 #   any word with -êb-. Another pair of shortcuts uses Ugrave, since U has not
 #   been encoded with circumflex and grave, as opposed to A, E and O.
 #
-#   Followed by comma or period, dead_circumflex provides a shorthand for U200C
-#   ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
+#   Followed by comma, dead_circumflex provides a shorthand for
+#   U200C ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
 #
 #   The numeric base characters are propagated from compose sequences for heart
 #   emoji that are duplicated here for consistency, and completed consistently.
@@ -109,8 +109,6 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><less>                                                                          <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
-<dead_circumflex>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
-<Multi_key><less>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                                    <twosuperior> : "surrogat_haut_pour_Windows" UD835 # Mathematical Alphanumeric Symbols high surrogate
 <Multi_key><less>                                                                    <twosuperior> : "surrogat_haut_pour_Windows" UD835 # Mathematical Alphanumeric Symbols high surrogate
 <dead_circumflex>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
@@ -309,8 +307,6 @@
 <Multi_key><less><numbersign><KP_3>                                                        <slash> : "♢" U2662 # WHITE DIAMOND SUIT
 <dead_circumflex><UEFD0><UEFD0><UEFD0>                                                     <slash> : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><less><numbersign><numbersign><numbersign>                                      <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex><UEFD0><dead_circumflex>                                                  <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><less>                                                        <slash> : "♢" U2662 # WHITE DIAMOND SUIT
 #
 #
 # # CIRCUMFLEX&GROUP4
@@ -321,8 +317,6 @@
 <Multi_key><less><numbersign><KP_4>                                                        <slash> : "♧" U2667 # WHITE CLUB SUIT
 <dead_circumflex><UEFD0><UEFD0><UEFD0><UEFD0>                                              <slash> : "♧" U2667 # WHITE CLUB SUIT
 <Multi_key><less><numbersign><numbersign><numbersign><numbersign>                          <slash> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex><UEFD0><dead_acute>                                                       <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><apostrophe>                                                  <slash> : "♧" U2667 # WHITE CLUB SUIT
 #
 #
 # # CIRCUMFLEX&GROUP5
@@ -331,8 +325,6 @@
 <Multi_key><less><numbersign><5>                                                           <slash> : "♤" U2664 # WHITE SPADE SUIT
 <dead_circumflex><UEFD0><KP_5>                                                             <slash> : "♤" U2664 # WHITE SPADE SUIT
 <Multi_key><less><numbersign><KP_5>                                                        <slash> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex><UEFD0><dead_diaeresis>                                                   <slash> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less><numbersign><colon>                                                       <slash> : "♤" U2664 # WHITE SPADE SUIT
 #
 #
 # # CIRCUMFLEX&TILDE
@@ -4249,6 +4241,14 @@
 #
 # # C01
 #
+#   The first three positions are inaccessible by composition equivalents, due
+#   to an inavoidable interference of numbersign with itself. Hence the symbols
+#   in these positions, for instance the ballot box and its 2 filled-in clones,
+#   are duplicated after the emoji. Other squares are available elsewhere, too.
+#   See #   Square emoji
+#   See # # Geometric Shapes in block U25A0 used in mathematics
+#   See # WHITE SQUARE WITH LEFTWARDS TICK
+#
 <UEFD0>                                                                               <numbersign> : "☐" U2610 # BALLOT BOX
 <Multi_key><numbersign>                                                               <numbersign> : "☐" U2610 # BALLOT BOX
 <UEFD0><UEFD0>                                                                        <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
@@ -4265,18 +4265,18 @@
 <Multi_key><numbersign><KP_4>                                                         <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                          <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                           <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
-<UEFD0><5>                                                                            <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<Multi_key><numbersign><5>                                                            <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<UEFD0><KP_5>                                                                         <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<Multi_key><numbersign><KP_5>                                                         <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<UEFD0><6>                                                                            <numbersign> : "□" U25A1 # WHITE SQUARE
-<Multi_key><numbersign><6>                                                            <numbersign> : "□" U25A1 # WHITE SQUARE
-<UEFD0><KP_6>                                                                         <numbersign> : "□" U25A1 # WHITE SQUARE
-<Multi_key><numbersign><KP_6>                                                         <numbersign> : "□" U25A1 # WHITE SQUARE
-<UEFD0><7>                                                                            <numbersign> : "■" U25A0 # BLACK SQUARE
-<Multi_key><numbersign><7>                                                            <numbersign> : "■" U25A0 # BLACK SQUARE
-<UEFD0><KP_7>                                                                         <numbersign> : "■" U25A0 # BLACK SQUARE
-<Multi_key><numbersign><KP_7>                                                         <numbersign> : "■" U25A0 # BLACK SQUARE
+<UEFD0><5>                                                                            <numbersign> : "☐" U2610 # BALLOT BOX
+<Multi_key><numbersign><5>                                                            <numbersign> : "☐" U2610 # BALLOT BOX
+<UEFD0><KP_5>                                                                         <numbersign> : "☐" U2610 # BALLOT BOX
+<Multi_key><numbersign><KP_5>                                                         <numbersign> : "☐" U2610 # BALLOT BOX
+<UEFD0><6>                                                                            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+<Multi_key><numbersign><6>                                                            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+<UEFD0><KP_6>                                                                         <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+<Multi_key><numbersign><KP_6>                                                         <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+<UEFD0><7>                                                                            <numbersign> : "☒" U2612 # BALLOT BOX WITH X
+<Multi_key><numbersign><7>                                                            <numbersign> : "☒" U2612 # BALLOT BOX WITH X
+<UEFD0><KP_7>                                                                         <numbersign> : "☒" U2612 # BALLOT BOX WITH X
+<Multi_key><numbersign><KP_7>                                                         <numbersign> : "☒" U2612 # BALLOT BOX WITH X
 <UEFD0><8>                                                                            <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
 <Multi_key><numbersign><8>                                                            <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
 <UEFD0><KP_8>                                                                         <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
@@ -4285,10 +4285,10 @@
 <Multi_key><numbersign><9>                                                            <numbersign> : "♒" U2652 # AQUARIUS emoji
 <UEFD0><KP_9>                                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
 <Multi_key><numbersign><KP_9>                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
-<UEFD0><0>                                                                            <numbersign> : "" U000B # LINE TABULATION, vertical tabulation
-<Multi_key><numbersign><0>                                                            <numbersign> : "" U000B # LINE TABULATION, vertical tabulation
-<UEFD0><KP_0>                                                                         <numbersign> : "" U000B # LINE TABULATION, vertical tabulation
-<Multi_key><numbersign><KP_0>                                                         <numbersign> : "" U000B # LINE TABULATION, vertical tabulation
+<UEFD0><0>                                                                            <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<Multi_key><numbersign><0>                                                            <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<UEFD0><KP_0>                                                                         <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<Multi_key><numbersign><KP_0>                                                         <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <UEFD0><1>                                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><numbersign><1>                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN
 <UEFD0><KP_1>                                                                         <numbersign> : "♯" U266F # MUSIC SHARP SIGN
