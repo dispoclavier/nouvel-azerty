@@ -81,6 +81,7 @@
 #
 #   The numeric base characters are propagated from compose sequences for heart
 #   emoji that are duplicated here for consistency, and completed consistently.
+#   See #   Heart emoji
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
