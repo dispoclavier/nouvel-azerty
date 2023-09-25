@@ -1756,14 +1756,12 @@
 <Multi_key><S><numbersign>                                                                         : "♬" U266C # BEAMED SIXTEENTH NOTES
 <Multi_key><f><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><b><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
-<Multi_key><minus><numbersign>                                                                     : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><n><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><h><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><0><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><KP_0><numbersign>                                                                      : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><s><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><d><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
-<Multi_key><plus><numbersign>                                                                      : "♯" U266F # MUSIC SHARP SIGN
 #
 #
 # # Western zodiacal signs emoji
@@ -2105,7 +2103,7 @@
 #   The shouldered open box is also in group 2 of $.
 #   The down-pointing triangle conforms to Gedit’s Draw Spaces extension.
 #
-<Multi_key><nobreakspace><space>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
+<Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 <Multi_key><n><b>                                                                                  : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><B>                                                                                  : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #
@@ -2189,8 +2187,8 @@
 <Multi_key><C><A><P><S>                                                                            : "⇪" U2BB8 # UPWARDS WHITE ARROW FROM BAR WITH HORIZONTAL BAR, capitals lock
 <Multi_key><c><a><p><l>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
 <Multi_key><C><A><P><L>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
-<Multi_key><n><u><m><l>                                                                            : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
-<Multi_key><N><U><M><L>                                                                            : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
+<Multi_key><n><m><l>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
+<Multi_key><N><M><L>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
 <Multi_key><c><t><l>                                                                               : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
 <Multi_key><C><T><L>                                                                               : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
 <Multi_key><a><l><t>                                                                               : "⎇" U2387 # ALTERNATIVE KEY SYMBOL
@@ -3162,7 +3160,8 @@
 <Multi_key><minus><rightsinglequotemark><rightsinglequotemark><minus>                      <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
 <Multi_key><t>                                                                             <space> : "⊺" U22BA # INTERCALATE
 <Multi_key><v><underscore>                                                                 <space> : "⊻" U22BB # XOR
-<Multi_key><minus><a>                                                                      <space> : "⊼" U22BC # NAND
+<Multi_key><space><minus><a>                                                               <space> : "⊼" U22BC # NAND
+<Multi_key><nobreakspace><minus><a>                                                        <space> : "⊼" U22BC # NAND
 <Multi_key><minus><v><v>                                                                   <space> : "⊼" U22BC # NAND
 <Multi_key><minus><v>                                                                      <space> : "⊽" U22BD # NOR
 <Multi_key><L><parenright>                                                                 <space> : "⊾" U22BE # RIGHT ANGLE WITH ARC
@@ -3494,8 +3493,9 @@
 <Multi_key><space><o><minus><greater>                                                      <space> : "♂" U2642 # MALE SIGN
 <Multi_key><nobreakspace><o><minus><greater>                                               <space> : "♂" U2642 # MALE SIGN
 #   In group 5 of /                                                                                : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><less><8><numbersign>                                                           <space> : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><less><KP_8><numbersign>                                                        <space> : "♠" U2660 # BLACK SPADE SUIT
+#   See #*# CIRCUMFLEX                                                                             : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><8><greater><numbersign>                                                        <space> : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><KP_8><greater><numbersign>                                                     <space> : "♠" U2660 # BLACK SPADE SUIT
 #   See # # CIRCUMFLEX&GROUP2 on /                                                                 : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><8><greater>                                                                    <space> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><KP_8><greater>                                                                 <space> : "♡" U2661 # WHITE HEART SUIT
@@ -3612,8 +3612,10 @@
 <Multi_key><less><greater><parenleft><parenright><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
 <Multi_key><greater><less><parenright><parenleft><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
 <Multi_key><greater><less><parenleft><parenright><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><minus><bracketleft><bracketright>                                              <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><minus><bracketright><bracketleft>                                              <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><space><minus><bracketleft><bracketright>                                       <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><nobreakspace><minus><bracketleft><bracketright>                                <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><space><minus><bracketright><bracketleft>                                       <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><nobreakspace><minus><bracketright><bracketleft>                                <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
 <Multi_key><bracketleft><bracketright><minus>                                              <space> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
 <Multi_key><bracketright><bracketleft><minus>                                              <space> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
 #   In group 11 of [                                                                               : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
@@ -4376,8 +4378,11 @@
 <Multi_key><space><KP_2><less><minus>                                                      <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
 <Multi_key><nobreakspace><2><less><minus>                                                  <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
 <Multi_key><nobreakspace><KP_2><less><minus>                                               <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><greater><ampersand><less>                                                      <space> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
-<Multi_key><greater><bar><less>                                                            <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
+<Multi_key><space><greater><less>                                                          <space> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
+<Multi_key><nobreakspace><greater><less>                                                   <space> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
+<Multi_key><space><space><greater><less>                                                   <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
+<Multi_key><nobreakspace><space><greater><less>                                            <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
+<Multi_key><nobreakspace><nobreakspace><greater><less>                                     <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
 <Multi_key><space><less><parenright>                                                       <space> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
 <Multi_key><nobreakspace><less><parenright>                                                <space> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
 <Multi_key><space><parenleft><greater>                                                     <space> : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
@@ -4595,8 +4600,10 @@
 <Multi_key><asciitilde><backslash><less><minus>                                            <space> : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                                <space> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><minus><greater><minus><greater>                                                <space> : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
-<Multi_key><minus><b><minus><greater>                                                      <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><minus><c><c><minus><greater>                                                   <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><space><minus><b><minus><greater>                                               <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><nobreakspace><minus><b><minus><greater>                                        <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><space><minus><c><c><minus><greater>                                            <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><nobreakspace><minus><c><c><minus><greater>                                     <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #   Verticals are U27F0, U27F1. U2B45 and U2B46 are not labeled as math in Unicode but are included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
 <Multi_key><less><minus><equal><minus><underscore>                                         <space> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
@@ -13416,8 +13423,6 @@
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <dead_stroke>                                                                       <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                  <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
-<dead_stroke>                                                                          <backslash> : "⊼" U22BC # NAND
-<Multi_key><minus>                                                                     <backslash> : "⊼" U22BC # NAND
 <dead_stroke>                                                                                  <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <Multi_key><minus>                                                                             <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <dead_stroke>                                                                               <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
