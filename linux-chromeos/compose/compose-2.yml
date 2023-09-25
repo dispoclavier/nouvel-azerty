@@ -93,8 +93,6 @@
 <Multi_key><less>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                   <nobreakspace> : "^" U005E # CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                   <nobreakspace> : "^" U005E # CIRCUMFLEX ACCENT
-<dead_circumflex>                                                                        <section> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
-<Multi_key><less>                                                                        <section> : "ê" U00EA # LATIN SMALL LETTER E WITH CIRCUMFLEX
 <dead_circumflex>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <Multi_key><less>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <dead_circumflex>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -475,8 +473,6 @@
 <Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <Multi_key><less><less>                                                             <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<dead_circumflex><dead_circumflex>                                                       <section> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<Multi_key><less><less>                                                                  <section> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                             <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW Juǀʼhoan
 <Multi_key><less><less>                                                                        <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW Juǀʼhoan
 <dead_circumflex><dead_circumflex>                                                             <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW Juǀʼhoan
@@ -550,8 +546,6 @@
 #   For ease of access. Using Multi_key does not make sense, but Multi_key must
 #   be supported for cross-platform compatibility.
 #
-<dead_circumflex><dead_circumflex><dead_circumflex>                                      <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
-<Multi_key><less><less><less>                                                            <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                            <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <Multi_key><less><less><less>                                                                  <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                            <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
@@ -643,8 +637,6 @@
 <Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                        <nobreakspace> : "ˇ" U02C7 # CARON
 <Multi_key><greater>                                                                <nobreakspace> : "ˇ" U02C7 # CARON
-<dead_caron>                                                                             <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
-<Multi_key><greater>                                                                     <section> : "ȟ" U021F # LATIN SMALL LETTER H WITH CARON
 <dead_caron>                                                                           <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater>                                                                   <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -2363,8 +2355,6 @@
 #
 #   Digits yield mathematical backslashes without space termination.
 #
-<UEFD6>                                                                                  <section> : "\\" U005C # REVERSE SOLIDUS
-<Multi_key><backslash>                                                                   <section> : "\\" U005C # REVERSE SOLIDUS
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <UEFD6>                                                                                    <comma> : "⹁" U2E41 # REVERSED COMMA
@@ -2658,8 +2648,6 @@
 <Multi_key><comma>                                                                         <U202F> : "¸" U00B8 # CEDILLA
 <dead_cedilla>                                                                      <nobreakspace> : "¸" U00B8 # CEDILLA
 <Multi_key><comma>                                                                  <nobreakspace> : "¸" U00B8 # CEDILLA
-<dead_cedilla>                                                                           <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
-<Multi_key><comma>                                                                       <section> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
 <dead_cedilla>                                                                                 <0> : "⒑" U2491 # NUMBER TEN FULL STOP
 <Multi_key><comma>                                                                             <0> : "⒑" U2491 # NUMBER TEN FULL STOP
 <dead_cedilla>                                                                              <KP_0> : "⒑" U2491 # NUMBER TEN FULL STOP
@@ -2812,8 +2800,6 @@
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                            <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <U200B> : "̣" U0323 # COMBINING DOT BELOW
-<dead_belowdot>                                                                          <section> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
-<Multi_key><exclam>                                                                      <section> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
 <dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
 <Multi_key><exclam>                                                                            <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
 <dead_belowdot>                                                                             <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
@@ -2965,8 +2951,6 @@
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                      <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                         <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<dead_belowdot><dead_belowdot>                                                           <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-<Multi_key><exclam><exclam>                                                              <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
@@ -3036,8 +3020,6 @@
 <Multi_key><colon>                                                                         <U202F> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                    <nobreakspace> : "¨" U00A8 # DIAERESIS
 <Multi_key><colon>                                                                  <nobreakspace> : "¨" U00A8 # DIAERESIS
-<dead_diaeresis>                                                                         <section> : "ë" U00EB # LATIN SMALL LETTER E WITH DIAERESIS
-<Multi_key><colon>                                                                       <section> : "ë" U00EB # LATIN SMALL LETTER E WITH DIAERESIS
 <dead_diaeresis>                                                                        <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <Multi_key><colon>                                                                      <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <dead_diaeresis>                                                                      <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
@@ -3279,8 +3261,6 @@
 <Multi_key><colon><colon>                                                                  <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
 <dead_diaeresis><dead_diaeresis>                                                           <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
 <Multi_key><colon><colon>                                                                  <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
-<dead_diaeresis><dead_diaeresis>                                                         <section> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
-<Multi_key><colon><colon>                                                                <section> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
 <dead_diaeresis><dead_diaeresis>                                                               <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW Min Dong
 <Multi_key><colon><colon>                                                                      <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW Min Dong
 <dead_diaeresis><dead_diaeresis>                                                               <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW Min Dong
@@ -3316,9 +3296,6 @@
 <dead_belowcomma>                                                                          <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><semicolon>                                                                     <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><section>                                                                       <U200B> : "̦" U0326 # COMBINING COMMA BELOW
-<dead_belowcomma>                                                                        <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
-<Multi_key><semicolon>                                                                   <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
-<Multi_key><section>                                                                     <section> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <dead_belowcomma>                                                                              <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <Multi_key><semicolon>                                                                         <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <Multi_key><section>                                                                           <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
