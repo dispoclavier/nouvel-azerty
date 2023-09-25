@@ -4987,9 +4987,9 @@
 #
 #   Diacritic or transformational dead keys applied to letters in groups are
 #   to be hit first, before the group selector. That behavior is consistent,
-#   it helps streamline code and maintenance, and it makes quick access dead
-#   keys described below possible.
-#   See # # Quick access dead keys for groups
+#   it helps streamline code and maintenance, and it prevents conflicts with
+#   Multi_key equivalents for "ʼ" U02BC by ¦#', "∼" U223C by ¦#~, "ˑ" U02D1
+#   by ¦#:, "ʻ" U02BB by ¦#`, and "✘" U2718 by ¦#<.
 #
 #
 # # Quotation mark input method
@@ -5043,24 +5043,6 @@
 #   Ornamental quotation marks are input by dead key followed by group selector.
 #   SMP quotation mark ornaments U1F676.. are not supported, for cross platform
 #   compatibility.
-#
-#
-# # Quick access dead keys for groups
-#
-#   Group 3 quick access dead key is since 2023-04-17T1618+0200
-#   the circumflex accent dead key. This replaces an extra dead
-#   key in group 1 introduced on 2022-12-26T1503+0100.
-#
-#   Other quick access dead keys are accute accent for group 4,
-#   diaeresis for group 5, grave accent for group 11. These are
-#   for letters, not symbols, because that would not make sense
-#   and would only be wasteful to code and screw up development
-#   and maintenance. So far, quick access is on the base level.
-#
-#   An additional quick access dead key streamlines group 12, a
-#   sequence all on AltGr level: <UEFD0><dead_tilde>.
-#
-#   See ### Letter groups
 #
 #
 # # Mathematical symbols
@@ -5921,112 +5903,84 @@
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <a> : "ᵅ" U1D45 # MODIFIER LETTER SMALL ALPHA
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <a> : "ᵅ" U1D45 # MODIFIER LETTER SMALL ALPHA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <a> : "ᵅ" U1D45 # MODIFIER LETTER SMALL ALPHA
-<UEFD1><UEFD0><dead_circumflex>                                                                <a> : "ᵅ" U1D45 # MODIFIER LETTER SMALL ALPHA
-<Multi_key><asciicircum><numbersign><less>                                                     <a> : "ᵅ" U1D45 # MODIFIER LETTER SMALL ALPHA
 <UEFD1><UEFD0><3>                                                                              <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
 <Multi_key><asciicircum><numbersign><3>                                                        <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
 <UEFD1><UEFD0><KP_3>                                                                           <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
-<UEFD1><UEFD0><dead_circumflex>                                                                <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
-<Multi_key><asciicircum><numbersign><less>                                                     <b> : "ᵝ" U1D5D # MODIFIER LETTER SMALL BETA
 <UEFD1><UEFD0><3>                                                                              <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
 <Multi_key><asciicircum><numbersign><3>                                                        <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
 <UEFD1><UEFD0><KP_3>                                                                           <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
-<UEFD1><UEFD0><dead_circumflex>                                                                <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
-<Multi_key><asciicircum><numbersign><less>                                                     <d> : "ᵟ" U1D5F # MODIFIER LETTER SMALL DELTA
 <UEFD1><UEFD0><3>                                                                              <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
 <Multi_key><asciicircum><numbersign><3>                                                        <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
 <UEFD1><UEFD0><KP_3>                                                                           <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
-<UEFD1><UEFD0><dead_circumflex>                                                                <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
-<Multi_key><asciicircum><numbersign><less>                                                     <e> : "ᵋ" U1D4B # MODIFIER LETTER SMALL OPEN E
 <UEFD1><UEFD0><3>                                                                              <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
 <Multi_key><asciicircum><numbersign><3>                                                        <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
 <UEFD1><UEFD0><KP_3>                                                                           <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
-<UEFD1><UEFD0><dead_circumflex>                                                                <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
-<Multi_key><asciicircum><numbersign><less>                                                     <f> : "ᶲ" U1DB2 # MODIFIER LETTER SMALL PHI
 <UEFD1><UEFD0><3>                                                                              <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <Multi_key><asciicircum><numbersign><3>                                                        <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <UEFD1><UEFD0><KP_3>                                                                           <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
-<UEFD1><UEFD0><dead_circumflex>                                                                <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
-<Multi_key><asciicircum><numbersign><less>                                                     <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <UEFD1><UEFD0><3>                                                                              <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <Multi_key><asciicircum><numbersign><3>                                                        <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <UEFD1><UEFD0><KP_3>                                                                           <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
-<UEFD1><UEFD0><dead_circumflex>                                                                <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
-<Multi_key><asciicircum><numbersign><less>                                                     <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <UEFD1><UEFD0><3>                                                                              <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><numbersign><3>                                                        <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <UEFD1><UEFD0><KP_3>                                                                           <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
-<UEFD1><UEFD0><dead_circumflex>                                                                <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
-<Multi_key><asciicircum><numbersign><less>                                                     <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <UEFD1><UEFD0><3>                                                                              <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <Multi_key><asciicircum><numbersign><3>                                                        <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <UEFD1><UEFD0><KP_3>                                                                           <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<UEFD1><UEFD0><dead_circumflex>                                                                <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><asciicircum><numbersign><less>                                                     <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <UEFD1><UEFD0><3>                                                                              <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
 <Multi_key><asciicircum><numbersign><3>                                                        <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
 <UEFD1><UEFD0><KP_3>                                                                           <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
-<UEFD1><UEFD0><dead_circumflex>                                                                <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
-<Multi_key><asciicircum><numbersign><less>                                                     <o> : "ᵓ" U1D53 # MODIFIER LETTER SMALL OPEN O
 <UEFD1><UEFD0><3>                                                                              <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><3>                                                        <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><KP_3>                                                                           <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
-<UEFD1><UEFD0><dead_circumflex>                                                                <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
-<Multi_key><asciicircum><numbersign><less>                                                     <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><3>                                                                              <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key><asciicircum><numbersign><3>                                                        <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <UEFD1><UEFD0><KP_3>                                                                           <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
-<UEFD1><UEFD0><dead_circumflex>                                                                <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
-<Multi_key><asciicircum><numbersign><less>                                                     <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <UEFD1><UEFD0><3>                                                                              <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><3>                                                        <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <UEFD1><UEFD0><KP_3>                                                                           <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<UEFD1><UEFD0><dead_circumflex>                                                                <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<Multi_key><asciicircum><numbersign><less>                                                     <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <UEFD1><UEFD0><3>                                                                              <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
 <Multi_key><asciicircum><numbersign><3>                                                        <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
 <UEFD1><UEFD0><KP_3>                                                                           <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
 <Multi_key><asciicircum><numbersign><KP_3>                                                     <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
 <UEFD1><UEFD0><UEFD0><UEFD0>                                                                   <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
 <Multi_key><asciicircum><numbersign><numbersign><numbersign>                                   <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
-<UEFD1><UEFD0><dead_circumflex>                                                                <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
-<Multi_key><asciicircum><numbersign><less>                                                     <x> : "ᵡ" U1D61 # MODIFIER LETTER SMALL CHI
 #
 #
 # # SUPERSCRIPT&GROUP4
@@ -6037,104 +5991,78 @@
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <D> : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <D> : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <D> : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
-<UEFD1><UEFD0><dead_acute>                                                                     <D> : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <D> : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
 <UEFD1><UEFD0><4>                                                                              <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <Multi_key><asciicircum><numbersign><4>                                                        <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <UEFD1><UEFD0><KP_4>                                                                           <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
-<UEFD1><UEFD0><dead_acute>                                                                     <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <d> : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <UEFD1><UEFD0><4>                                                                              <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
 <Multi_key><asciicircum><numbersign><4>                                                        <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
 <UEFD1><UEFD0><KP_4>                                                                           <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
-<UEFD1><UEFD0><dead_acute>                                                                     <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <e> : "ᵊ" U1D4A # MODIFIER LETTER SMALL SCHWA
 <UEFD1><UEFD0><4>                                                                              <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <Multi_key><asciicircum><numbersign><4>                                                        <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <UEFD1><UEFD0><KP_4>                                                                           <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<UEFD1><UEFD0><dead_acute>                                                                     <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <F> : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <UEFD1><UEFD0><4>                                                                              <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <Multi_key><asciicircum><numbersign><4>                                                        <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <UEFD1><UEFD0><KP_4>                                                                           <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
-<UEFD1><UEFD0><dead_acute>                                                                     <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <UEFD1><UEFD0><4>                                                                              <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <Multi_key><asciicircum><numbersign><4>                                                        <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <UEFD1><UEFD0><KP_4>                                                                           <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
-<UEFD1><UEFD0><dead_acute>                                                                     <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <g> : "𐞑" U10791 # MODIFIER LETTER SMALL RAMS HORN
 <UEFD1><UEFD0><4>                                                                              <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <Multi_key><asciicircum><numbersign><4>                                                        <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <UEFD1><UEFD0><KP_4>                                                                           <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
-<UEFD1><UEFD0><dead_acute>                                                                     <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <L> : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <UEFD1><UEFD0><4>                                                                              <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><numbersign><4>                                                        <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <UEFD1><UEFD0><KP_4>                                                                           <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
-<UEFD1><UEFD0><dead_acute>                                                                     <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <l> : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <UEFD1><UEFD0><4>                                                                              <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <Multi_key><asciicircum><numbersign><4>                                                        <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <UEFD1><UEFD0><KP_4>                                                                           <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
-<UEFD1><UEFD0><dead_acute>                                                                     <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <O> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <UEFD1><UEFD0><4>                                                                              <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <Multi_key><asciicircum><numbersign><4>                                                        <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <UEFD1><UEFD0><KP_4>                                                                           <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
-<UEFD1><UEFD0><dead_acute>                                                                     <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <o> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <UEFD1><UEFD0><4>                                                                              <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><4>                                                        <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><KP_4>                                                                           <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
-<UEFD1><UEFD0><dead_acute>                                                                     <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><4>                                                                              <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><numbersign><4>                                                        <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><UEFD0><KP_4>                                                                           <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<UEFD1><UEFD0><dead_acute>                                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><UEFD0><4>                                                                              <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><4>                                                        <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <UEFD1><UEFD0><KP_4>                                                                           <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><KP_4>                                                     <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><numbersign><numbersign><numbersign>                       <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<UEFD1><UEFD0><dead_acute>                                                                     <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<Multi_key><asciicircum><numbersign><apostrophe>                                               <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 #
 #
 # # SUPERSCRIPT&GROUP5
@@ -6143,86 +6071,58 @@
 <Multi_key><asciicircum><numbersign><5>                                                        <b> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <UEFD1><UEFD0><KP_5>                                                                           <b> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <b> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <b> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
-<Multi_key><asciicircum><numbersign><colon>                                                    <b> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <UEFD1><UEFD0><5>                                                                              <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <Multi_key><asciicircum><numbersign><5>                                                        <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <UEFD1><UEFD0><KP_5>                                                                           <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
-<Multi_key><asciicircum><numbersign><colon>                                                    <f> : "ᵠ" U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <UEFD1><UEFD0><5>                                                                              <g> : "ᶢ" U1DA2 # MODIFIER LETTER SMALL SCRIPT G
 <Multi_key><asciicircum><numbersign><5>                                                        <g> : "ᶢ" U1DA2 # MODIFIER LETTER SMALL SCRIPT G
 <UEFD1><UEFD0><KP_5>                                                                           <g> : "ᶢ" U1DA2 # MODIFIER LETTER SMALL SCRIPT G
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <g> : "ᶢ" U1DA2 # MODIFIER LETTER SMALL SCRIPT G
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <g> : "ᶢ" U1DA2 # MODIFIER LETTER SMALL SCRIPT G
-<Multi_key><asciicircum><numbersign><colon>                                                    <g> : "ᶢ" U1DA2 # MODIFIER LETTER SMALL SCRIPT G
 <UEFD1><UEFD0><5>                                                                              <h> : "𐞷" U107B7 # MODIFIER LETTER LATERAL CLICK
 <Multi_key><asciicircum><numbersign><5>                                                        <h> : "𐞷" U107B7 # MODIFIER LETTER LATERAL CLICK
 <UEFD1><UEFD0><KP_5>                                                                           <h> : "𐞷" U107B7 # MODIFIER LETTER LATERAL CLICK
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <h> : "𐞷" U107B7 # MODIFIER LETTER LATERAL CLICK
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <h> : "𐞷" U107B7 # MODIFIER LETTER LATERAL CLICK
-<Multi_key><asciicircum><numbersign><colon>                                                    <h> : "𐞷" U107B7 # MODIFIER LETTER LATERAL CLICK
 <UEFD1><UEFD0><5>                                                                              <i> : "𐞶" U107B6 # MODIFIER LETTER DENTAL CLICK
 <Multi_key><asciicircum><numbersign><5>                                                        <i> : "𐞶" U107B6 # MODIFIER LETTER DENTAL CLICK
 <UEFD1><UEFD0><KP_5>                                                                           <i> : "𐞶" U107B6 # MODIFIER LETTER DENTAL CLICK
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <i> : "𐞶" U107B6 # MODIFIER LETTER DENTAL CLICK
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <i> : "𐞶" U107B6 # MODIFIER LETTER DENTAL CLICK
-<Multi_key><asciicircum><numbersign><colon>                                                    <i> : "𐞶" U107B6 # MODIFIER LETTER DENTAL CLICK
 <UEFD1><UEFD0><5>                                                                              <j> : "𐞸" U107B8 # MODIFIER LETTER ALVEOLAR CLICK
 <Multi_key><asciicircum><numbersign><5>                                                        <j> : "𐞸" U107B8 # MODIFIER LETTER ALVEOLAR CLICK
 <UEFD1><UEFD0><KP_5>                                                                           <j> : "𐞸" U107B8 # MODIFIER LETTER ALVEOLAR CLICK
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <j> : "𐞸" U107B8 # MODIFIER LETTER ALVEOLAR CLICK
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <j> : "𐞸" U107B8 # MODIFIER LETTER ALVEOLAR CLICK
-<Multi_key><asciicircum><numbersign><colon>                                                    <j> : "𐞸" U107B8 # MODIFIER LETTER ALVEOLAR CLICK
 <UEFD1><UEFD0><5>                                                                              <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><numbersign><5>                                                        <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD0><KP_5>                                                                           <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><asciicircum><numbersign><colon>                                                    <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD0><5>                                                                              <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <Multi_key><asciicircum><numbersign><5>                                                        <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <UEFD1><UEFD0><KP_5>                                                                           <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
-<Multi_key><asciicircum><numbersign><colon>                                                    <L> : "ꭝ" UAB5D # MODIFIER LETTER SMALL L WITH INVERTED LAZY S
 <UEFD1><UEFD0><5>                                                                              <l> : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
 <Multi_key><asciicircum><numbersign><5>                                                        <l> : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
 <UEFD1><UEFD0><KP_5>                                                                           <l> : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <l> : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <l> : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
-<Multi_key><asciicircum><numbersign><colon>                                                    <l> : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
 <UEFD1><UEFD0><5>                                                                              <o> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <Multi_key><asciicircum><numbersign><5>                                                        <o> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <UEFD1><UEFD0><KP_5>                                                                           <o> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <o> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <o> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
-<Multi_key><asciicircum><numbersign><colon>                                                    <o> : "𐞵" U107B5 # MODIFIER LETTER BILABIAL CLICK
 <UEFD1><UEFD0><5>                                                                              <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><5>                                                        <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><KP_5>                                                                           <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
-<Multi_key><asciicircum><numbersign><colon>                                                    <q> : "ᵜ" U1D5C # MODIFIER LETTER SMALL AIN
 <UEFD1><UEFD0><5>                                                                              <T> : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <Multi_key><asciicircum><numbersign><5>                                                        <T> : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <UEFD1><UEFD0><KP_5>                                                                           <T> : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <T> : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <T> : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-<Multi_key><asciicircum><numbersign><colon>                                                    <T> : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <UEFD1><UEFD0><5>                                                                              <t> : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
 <Multi_key><asciicircum><numbersign><5>                                                        <t> : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
 <UEFD1><UEFD0><KP_5>                                                                           <t> : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <t> : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <t> : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
-<Multi_key><asciicircum><numbersign><colon>                                                    <t> : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
 <UEFD1><UEFD0><5>                                                                              <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><5>                                                        <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <UEFD1><UEFD0><KP_5>                                                                           <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 <Multi_key><asciicircum><numbersign><KP_5>                                                     <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<UEFD1><UEFD0><dead_diaeresis>                                                                 <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<Multi_key><asciicircum><numbersign><colon>                                                    <v> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
 #
 #
 # # SUPERSCRIPT&GROUP6
@@ -6326,32 +6226,24 @@
 <Multi_key><asciicircum><percent><numbersign><KP_3>                                            <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <UEFD1><UEFD5><UEFD0><UEFD0><UEFD0>                                                            <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <Multi_key><asciicircum><percent><numbersign><numbersign><numbersign>                          <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<UEFD1><UEFD5><UEFD0><dead_circumflex>                                                         <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<Multi_key><asciicircum><percent><numbersign><less>                                            <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <UEFD5><UEFD1><UEFD0><3>                                                                       <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <Multi_key><percent><asciicircum><numbersign><3>                                               <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <UEFD5><UEFD1><UEFD0><KP_3>                                                                    <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <Multi_key><percent><asciicircum><numbersign><KP_3>                                            <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <UEFD5><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <Multi_key><percent><asciicircum><numbersign><numbersign><numbersign>                          <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<UEFD5><UEFD1><UEFD0><dead_circumflex>                                                         <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<Multi_key><percent><asciicircum><numbersign><less>                                            <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <UEFD1><UEFD5><UEFD0><3>                                                                       <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><asciicircum><percent><numbersign><3>                                               <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <UEFD1><UEFD5><UEFD0><KP_3>                                                                    <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><asciicircum><percent><numbersign><KP_3>                                            <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <UEFD1><UEFD5><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><asciicircum><percent><numbersign><numbersign><numbersign>                          <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
-<UEFD1><UEFD5><UEFD0><dead_circumflex>                                                         <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
-<Multi_key><asciicircum><percent><numbersign><less>                                            <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <UEFD5><UEFD1><UEFD0><3>                                                                       <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><percent><asciicircum><numbersign><3>                                               <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <UEFD5><UEFD1><UEFD0><KP_3>                                                                    <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><percent><asciicircum><numbersign><KP_3>                                            <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <UEFD5><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><percent><asciicircum><numbersign><numbersign><numbersign>                          <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
-<UEFD5><UEFD1><UEFD0><dead_circumflex>                                                         <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
-<Multi_key><percent><asciicircum><numbersign><less>                                            <e> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 #
 #
 # # SUPERSCRIPT&TURNED&HOOK
@@ -6669,16 +6561,10 @@
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><KP_3>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                             <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><numbersign><numbersign>             <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<UEFD1><dead_hook><dead_hook><UEFD0><dead_circumflex>                                          <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceleft><braceleft><numbersign><less>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><UEFD0><UEFD0>                                             <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><numbersign><numbersign>             <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<dead_hook><UEFD1><dead_hook><UEFD0><dead_circumflex>                                          <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><asciicircum><braceleft><numbersign><less>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><UEFD0><UEFD0>                                             <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><numbersign><numbersign>             <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD1><UEFD0><dead_circumflex>                                          <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><asciicircum><numbersign><less>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><3>                                                        <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><3>                                  <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><KP_3>                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
@@ -6693,16 +6579,10 @@
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><KP_3>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><numbersign><numbersign>             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<UEFD1><dead_hook><dead_hook><UEFD0><dead_circumflex>                                          <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceleft><braceleft><numbersign><less>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><UEFD0><UEFD0>                                             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><numbersign><numbersign>             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<dead_hook><UEFD1><dead_hook><UEFD0><dead_circumflex>                                          <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><braceleft><asciicircum><braceleft><numbersign><less>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><UEFD0><UEFD0>                                             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><numbersign><numbersign>             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD1><UEFD0><dead_circumflex>                                          <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><asciicircum><numbersign><less>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 #
 #
 # # SUPERSCRIPT&CURL&GROUP4
@@ -6721,16 +6601,10 @@
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><KP_4>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                      <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign> <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<UEFD1><dead_hook><dead_hook><UEFD0><dead_acute>                                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceleft><braceleft><numbersign><apostrophe>                         <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                      <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><numbersign><numbersign><numbersign> <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<dead_hook><UEFD1><dead_hook><UEFD0><dead_acute>                                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><asciicircum><braceleft><numbersign><apostrophe>                         <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                      <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><numbersign><numbersign><numbersign> <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD1><UEFD0><dead_acute>                                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><asciicircum><numbersign><apostrophe>                         <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><4>                                                        <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><4>                                  <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><KP_4>                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
@@ -6745,16 +6619,10 @@
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><KP_4>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                      <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign> <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<UEFD1><dead_hook><dead_hook><UEFD0><dead_acute>                                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceleft><braceleft><numbersign><apostrophe>                         <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                      <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><numbersign><numbersign><numbersign> <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<dead_hook><UEFD1><dead_hook><UEFD0><dead_acute>                                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><braceleft><asciicircum><braceleft><numbersign><apostrophe>                         <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                      <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><numbersign><numbersign><numbersign> <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD1><UEFD0><dead_acute>                                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><asciicircum><numbersign><apostrophe>                         <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 #
 #
 # # SUPERSCRIPT&CURL&GROUP5
@@ -6763,38 +6631,26 @@
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><5>                                  <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><KP_5>                                                     <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><KP_5>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<UEFD1><dead_hook><dead_hook><UEFD0><dead_diaeresis>                                           <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceleft><braceleft><numbersign><colon>                              <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><5>                                                        <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><5>                                  <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><KP_5>                                                     <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><KP_5>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<dead_hook><UEFD1><dead_hook><UEFD0><dead_diaeresis>                                           <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><asciicircum><braceleft><numbersign><colon>                              <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><5>                                                        <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><5>                                  <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><KP_5>                                                     <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><KP_5>                               <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD1><UEFD0><dead_diaeresis>                                           <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><asciicircum><numbersign><colon>                              <d> : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><5>                                                        <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><5>                                  <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><dead_hook><dead_hook><UEFD0><KP_5>                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft><numbersign><KP_5>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<UEFD1><dead_hook><dead_hook><UEFD0><dead_diaeresis>                                           <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><braceleft><braceleft><numbersign><colon>                              <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><5>                                                        <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><5>                                  <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><UEFD1><dead_hook><UEFD0><KP_5>                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><asciicircum><braceleft><numbersign><KP_5>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<dead_hook><UEFD1><dead_hook><UEFD0><dead_diaeresis>                                           <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><braceleft><asciicircum><braceleft><numbersign><colon>                              <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><5>                                                        <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><5>                                  <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD1><UEFD0><KP_5>                                                     <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><asciicircum><numbersign><KP_5>                               <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD1><UEFD0><dead_diaeresis>                                           <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><asciicircum><numbersign><colon>                              <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 #
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK
@@ -6890,12 +6746,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_3>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_circumflex>                                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><less>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_circumflex>                                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><less>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><3>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><3>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_3>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
@@ -6906,12 +6758,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_3>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_circumflex>                                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><less>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_circumflex>                                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><less>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><3>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><3>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_3>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
@@ -6922,12 +6770,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_3>                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_circumflex>                                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><less>                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_circumflex>                                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><less>                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><3>                                                                       <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><3>                                            <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_3>                                                                    <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
@@ -6938,12 +6782,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_3>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_circumflex>                                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><less>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_circumflex>                                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><less>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK&GROUP4
@@ -6958,12 +6798,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_4>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_acute>                                                              <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><apostrophe>                                   <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_acute>                                                              <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><apostrophe>                                   <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><4>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><4>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_4>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
@@ -6974,12 +6810,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_4>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_acute>                                                              <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><apostrophe>                                   <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_acute>                                                              <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><apostrophe>                                   <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><4>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><4>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_4>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
@@ -6990,12 +6822,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_4>                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_acute>                                                              <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><apostrophe>                                   <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_acute>                                                              <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><apostrophe>                                   <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><4>                                                                       <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><4>                                            <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_4>                                                                    <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
@@ -7006,12 +6834,8 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_4>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_acute>                                                              <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><apostrophe>                                   <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_acute>                                                              <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><apostrophe>                                   <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK&GROUP5
@@ -7020,50 +6844,34 @@
 <Multi_key><asciicircum><braceright><numbersign><5>                                            <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_5>                                                                    <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><KP_5>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_diaeresis>                                                          <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><colon>                                        <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><5>                                                                       <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><5>                                            <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><KP_5>                                                                    <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_diaeresis>                                                          <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><colon>                                        <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><5>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><5>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_5>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><KP_5>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_diaeresis>                                                          <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><colon>                                        <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><5>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><5>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><KP_5>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_diaeresis>                                                          <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><colon>                                        <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><5>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><5>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_5>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><KP_5>                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_diaeresis>                                                          <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><colon>                                        <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><5>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><5>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><KP_5>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_diaeresis>                                                          <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><colon>                                        <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><5>                                                                       <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><5>                                            <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_5>                                                                    <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><KP_5>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><dead_diaeresis>                                                          <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><colon>                                        <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><5>                                                                       <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><5>                                            <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><KP_5>                                                                    <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><dead_diaeresis>                                                          <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><colon>                                        <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK&BREVE
@@ -7322,16 +7130,12 @@
 <Multi_key><asciicircum><backslash><numbersign><KP_3>                                          <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <UEFD1><UEFD6><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <Multi_key><asciicircum><backslash><numbersign><numbersign><numbersign>                        <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
-<UEFD1><UEFD6><UEFD0><dead_circumflex>                                                         <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
-<Multi_key><asciicircum><backslash><numbersign><less>                                          <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><3>                                                                       <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><3>                                             <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><KP_3>                                                                    <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><KP_3>                                          <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><numbersign><numbersign>                        <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
-<UEFD6><UEFD1><UEFD0><dead_circumflex>                                                         <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
-<Multi_key><backslash><asciicircum><numbersign><less>                                          <e> : "ᶟ" U1D9F # MODIFIER LETTER SMALL REVERSED OPEN E
 #
 #
 # # SUPERSCRIPT&REVERSED&GROUP4
@@ -7342,16 +7146,12 @@
 <Multi_key><asciicircum><backslash><numbersign><KP_4>                                          <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD1><UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><asciicircum><backslash><numbersign><numbersign><numbersign><numbersign>            <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<UEFD1><UEFD6><UEFD0><dead_acute>                                                              <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<Multi_key><asciicircum><backslash><numbersign><apostrophe>                                    <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><4>                                                                       <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><4>                                             <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><KP_4>                                                                    <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><KP_4>                                          <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><numbersign><numbersign><numbersign>            <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<UEFD6><UEFD1><UEFD0><dead_acute>                                                              <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<Multi_key><backslash><asciicircum><numbersign><apostrophe>                                    <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 #
 #
 # # SUPERSCRIPT&REVERSED&GROUP5
@@ -7360,14 +7160,10 @@
 <Multi_key><asciicircum><backslash><numbersign><5>                                             <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD1><UEFD6><UEFD0><KP_5>                                                                    <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><asciicircum><backslash><numbersign><KP_5>                                          <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<UEFD1><UEFD6><UEFD0><dead_diaeresis>                                                          <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<Multi_key><asciicircum><backslash><numbersign><colon>                                         <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><5>                                                                       <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><5>                                             <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <UEFD6><UEFD1><UEFD0><KP_5>                                                                    <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 <Multi_key><backslash><asciicircum><numbersign><KP_5>                                          <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<UEFD6><UEFD1><UEFD0><dead_diaeresis>                                                          <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
-<Multi_key><backslash><asciicircum><numbersign><colon>                                         <e> : "𐞏" U1078F # MODIFIER LETTER SMALL CLOSED REVERSED OPEN E
 #
 #
 # # SUPERSCRIPT&REVERSED&BARRED
@@ -7665,32 +7461,24 @@
 <Multi_key><percent><numbersign><KP_3>                                                         <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
 <UEFD5><UEFD0><UEFD0><UEFD0>                                                                   <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
 <Multi_key><percent><numbersign><numbersign><numbersign>                                       <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
-<UEFD5><UEFD0><dead_circumflex>                                                                <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
-<Multi_key><percent><numbersign><less>                                                         <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
 <UEFD5><UEFD0><3>                                                                              <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <Multi_key><percent><numbersign><3>                                                            <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <UEFD5><UEFD0><KP_3>                                                                           <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <Multi_key><percent><numbersign><KP_3>                                                         <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <UEFD5><UEFD0><UEFD0><UEFD0>                                                                   <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <Multi_key><percent><numbersign><numbersign><numbersign>                                       <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
-<UEFD5><UEFD0><dead_circumflex>                                                                <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
-<Multi_key><percent><numbersign><less>                                                         <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <UEFD5><UEFD0><3>                                                                              <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
 <Multi_key><percent><numbersign><3>                                                            <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
 <UEFD5><UEFD0><KP_3>                                                                           <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
 <Multi_key><percent><numbersign><KP_3>                                                         <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
 <UEFD5><UEFD0><UEFD0><UEFD0>                                                                   <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
 <Multi_key><percent><numbersign><numbersign><numbersign>                                       <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
-<UEFD5><UEFD0><dead_circumflex>                                                                <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
-<Multi_key><percent><numbersign><less>                                                         <e> : "ᴈ" U1D08 # LATIN SMALL LETTER TURNED OPEN E
 <UEFD5><UEFD0><3>                                                                              <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <Multi_key><percent><numbersign><3>                                                            <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <UEFD5><UEFD0><KP_3>                                                                           <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <Multi_key><percent><numbersign><KP_3>                                                         <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <UEFD5><UEFD0><UEFD0><UEFD0>                                                                   <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <Multi_key><percent><numbersign><numbersign><numbersign>                                       <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
-<UEFD5><UEFD0><dead_circumflex>                                                                <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
-<Multi_key><percent><numbersign><less>                                                         <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 #
 #
 # # TURNED&GROUP4
@@ -7701,8 +7489,6 @@
 <Multi_key><percent><numbersign><KP_4>                                                         <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <UEFD5><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 <Multi_key><percent><numbersign><numbersign><numbersign><numbersign>                           <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
-<UEFD5><UEFD0><dead_acute>                                                                     <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
-<Multi_key><percent><numbersign><apostrophe>                                                   <o> : "ꭃ" UAB43 # LATIN SMALL LETTER TURNED O OPEN-O
 #
 #
 # # TURNED&GROUP5
@@ -7711,14 +7497,10 @@
 <Multi_key><percent><numbersign><5>                                                            <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><KP_5>                                                                           <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><KP_5>                                                         <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
-<UEFD5><UEFD0><dead_diaeresis>                                                                 <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
-<Multi_key><percent><numbersign><colon>                                                        <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><5>                                                                              <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><5>                                                            <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><KP_5>                                                                           <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><KP_5>                                                         <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
-<UEFD5><UEFD0><dead_diaeresis>                                                                 <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
-<Multi_key><percent><numbersign><colon>                                                        <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 #
 #
 # # TURNED&GROUP11
@@ -7727,14 +7509,10 @@
 <Multi_key><percent><numbersign><1>                                                            <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><KP_1>                                                                           <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><KP_1>                                                         <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
-<UEFD5><UEFD0><dead_grave>                                                                     <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
-<Multi_key><percent><numbersign><grave>                                                        <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><1>                                                                              <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><1>                                                            <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><KP_1>                                                                           <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><KP_1>                                                         <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
-<UEFD5><UEFD0><dead_grave>                                                                     <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
-<Multi_key><percent><numbersign><grave>                                                        <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 #
 #
 # # TURNED&GROUP12
@@ -7743,14 +7521,10 @@
 <Multi_key><percent><numbersign><2>                                                            <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><KP_2>                                                                           <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><KP_2>                                                         <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
-<UEFD5><UEFD0><dead_tilde>                                                                     <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
-<Multi_key><percent><numbersign><asciitilde>                                                   <G> : "Ꝿ" UA77E # LATIN CAPITAL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><2>                                                                              <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><2>                                                            <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <UEFD5><UEFD0><KP_2>                                                                           <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 <Multi_key><percent><numbersign><KP_2>                                                         <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
-<UEFD5><UEFD0><dead_tilde>                                                                     <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
-<Multi_key><percent><numbersign><asciitilde>                                                   <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 #
 #
 # # TURNED&HOOK
@@ -7899,16 +7673,12 @@
 <Multi_key><percent><slash><numbersign><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <UEFD5><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <Multi_key><percent><slash><numbersign><numbersign><numbersign>                                <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<UEFD5><dead_longsolidusoverlay><UEFD0><dead_circumflex>                                       <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><less>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <dead_longsolidusoverlay><UEFD5><UEFD0><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <Multi_key><slash><percent><numbersign><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <dead_longsolidusoverlay><UEFD5><UEFD0><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <Multi_key><slash><percent><numbersign><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <dead_longsolidusoverlay><UEFD5><UEFD0><UEFD0><UEFD0>                                          <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <Multi_key><slash><percent><numbersign><numbersign><numbersign>                                <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><dead_circumflex>                                       <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><less>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 #
 #
 # # TURNED&DIAERESIS
@@ -7990,8 +7760,6 @@
 <Multi_key><percent><percent><numbersign><KP_3>                                                <o> : "ᴒ" U1D12 # LATIN SMALL LETTER SIDEWAYS OPEN O
 <UEFD5><UEFD5><UEFD0><UEFD0><UEFD0>                                                            <o> : "ᴒ" U1D12 # LATIN SMALL LETTER SIDEWAYS OPEN O
 <Multi_key><percent><percent><numbersign><numbersign><numbersign>                              <o> : "ᴒ" U1D12 # LATIN SMALL LETTER SIDEWAYS OPEN O
-<UEFD5><UEFD5><UEFD0><dead_circumflex>                                                         <o> : "ᴒ" U1D12 # LATIN SMALL LETTER SIDEWAYS OPEN O
-<Multi_key><percent><percent><numbersign><less>                                                <o> : "ᴒ" U1D12 # LATIN SMALL LETTER SIDEWAYS OPEN O
 #
 #
 # # INVERTED&CURL
@@ -8164,8 +7932,6 @@
 <Multi_key><braceleft><numbersign><KP_3>                                                       <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 <dead_hook><UEFD0><UEFD0><UEFD0>                                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 <Multi_key><braceleft><numbersign><numbersign><numbersign>                                     <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD0><dead_circumflex>                                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><numbersign><less>                                                       <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 #
 #
 # # HOOK&RETROFLEX_HOOK, HOOK&TAIL
@@ -8307,48 +8073,36 @@
 <Multi_key><braceleft><braceleft><numbersign><KP_3>                                            <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                                    <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign>                          <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_circumflex>                                                 <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><less>                                            <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><3>                                                               <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><3>                                               <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_3>                                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_3>                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                                    <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign>                          <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_circumflex>                                                 <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><less>                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><3>                                                               <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><3>                                               <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_3>                                                            <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_3>                                            <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                                    <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign>                          <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_circumflex>                                                 <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><less>                                            <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><3>                                                               <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><3>                                               <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><KP_3>                                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><KP_3>                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                                    <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign>                          <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
-<dead_hook><dead_hook><UEFD0><dead_circumflex>                                                 <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
-<Multi_key><braceleft><braceleft><numbersign><less>                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><3>                                                               <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><3>                                               <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><KP_3>                                                            <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><KP_3>                                            <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                                    <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign>                          <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
-<dead_hook><dead_hook><UEFD0><dead_circumflex>                                                 <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
-<Multi_key><braceleft><braceleft><numbersign><less>                                            <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><3>                                                               <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><3>                                               <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_3>                                                            <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_3>                                            <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0>                                                    <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign>                          <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_circumflex>                                                 <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><less>                                            <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 #
 #
 # # CURL&GROUP4
@@ -8359,48 +8113,36 @@
 <Multi_key><braceleft><braceleft><numbersign><KP_4>                                            <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                             <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign>              <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_acute>                                                      <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><apostrophe>                                      <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><4>                                                               <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><4>                                               <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_4>                                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_4>                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                             <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign>              <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_acute>                                                      <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><apostrophe>                                      <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><4>                                                               <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><4>                                               <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_4>                                                            <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_4>                                            <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                             <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign>              <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_acute>                                                      <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><apostrophe>                                      <d> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><4>                                                               <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><4>                                               <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><KP_4>                                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><KP_4>                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                             <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign>              <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
-<dead_hook><dead_hook><UEFD0><dead_acute>                                                      <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
-<Multi_key><braceleft><braceleft><numbersign><apostrophe>                                      <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><4>                                                               <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><4>                                               <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><KP_4>                                                            <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><KP_4>                                            <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                             <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign>              <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
-<dead_hook><dead_hook><UEFD0><dead_acute>                                                      <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
-<Multi_key><braceleft><braceleft><numbersign><apostrophe>                                      <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><4>                                                               <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><4>                                               <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_4>                                                            <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_4>                                            <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <dead_hook><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                             <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><numbersign><numbersign><numbersign>              <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_acute>                                                      <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><apostrophe>                                      <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 #
 #
 # # CURL&GROUP5
@@ -8409,20 +8151,14 @@
 <Multi_key><braceleft><braceleft><numbersign><5>                                               <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_5>                                                            <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_5>                                            <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_diaeresis>                                                  <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><colon>                                           <C> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><5>                                                               <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><5>                                               <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><KP_5>                                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <Multi_key><braceleft><braceleft><numbersign><KP_5>                                            <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<dead_hook><dead_hook><UEFD0><dead_diaeresis>                                                  <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
-<Multi_key><braceleft><braceleft><numbersign><colon>                                           <c> : "𝼏" U1DF0F # LATIN LETTER STRETCHED C WITH CURL
 <dead_hook><dead_hook><UEFD0><5>                                                               <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><5>                                               <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <dead_hook><dead_hook><UEFD0><KP_5>                                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft><numbersign><KP_5>                                            <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
-<dead_hook><dead_hook><UEFD0><dead_diaeresis>                                                  <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
-<Multi_key><braceleft><braceleft><numbersign><colon>                                           <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 #
 #
 #^# FLOURISH, HOOK_TAIL, MID-HEIGHT_LEFT_HOOK
@@ -8619,64 +8355,48 @@
 <Multi_key><braceright><numbersign><KP_3>                                                      <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <e> : "ᶓ" U1D93 # LATIN SMALL LETTER OPEN E WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><3>                                                                              <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><3>                                                         <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_3>                                                                           <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_3>                                                      <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0>                                                                   <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign>                                    <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_circumflex>                                                                <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><less>                                                      <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
 # # RETROFLEX_HOOK&GROUP4
@@ -8687,72 +8407,54 @@
 <Multi_key><braceright><numbersign><KP_4>                                                      <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <e> : "ᶕ" U1D95 # LATIN SMALL LETTER SCHWA WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><numbersign><4>                                                         <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <UEFD4><UEFD0><KP_4>                                                                           <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><numbersign><KP_4>                                                      <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
-<UEFD4><UEFD0><dead_acute>                                                                     <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><numbersign><apostrophe>                                                <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <UEFD4><UEFD0><4>                                                                              <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <o> : "ᶗ" U1D97 # LATIN SMALL LETTER OPEN O WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><4>                                                                              <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><4>                                                         <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_4>                                                                           <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_4>                                                      <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><numbersign><numbersign><numbersign>                        <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_acute>                                                                     <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><apostrophe>                                                <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
 # # RETROFLEX_HOOK&GROUP5
@@ -8761,38 +8463,26 @@
 <Multi_key><braceright><numbersign><5>                                                         <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_5>                                                                           <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_5>                                                      <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_diaeresis>                                                                 <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><colon>                                                     <D> : "𝼙" U1DF19 # LATIN SMALL LETTER DEZH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><5>                                                                              <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><5>                                                         <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_5>                                                                           <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_5>                                                      <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_diaeresis>                                                                 <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><colon>                                                     <L> : "𝼅" U1DF05 # LATIN SMALL LETTER LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><5>                                                                              <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><5>                                                         <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_5>                                                                           <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_5>                                                      <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_diaeresis>                                                                 <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><colon>                                                     <K> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><5>                                                                              <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><5>                                                         <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_5>                                                                           <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_5>                                                      <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_diaeresis>                                                                 <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><colon>                                                     <k> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD0><5>                                                                              <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><5>                                                         <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_5>                                                                           <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_5>                                                      <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_diaeresis>                                                                 <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><colon>                                                     <T> : "𝼜" U1DF1C # LATIN SMALL LETTER TESH DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><5>                                                                              <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><5>                                                         <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD0><KP_5>                                                                           <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><numbersign><KP_5>                                                      <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
-<UEFD4><UEFD0><dead_diaeresis>                                                                 <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><braceright><numbersign><colon>                                                     <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
 # # RETROFLEX_HOOK&BREVE
@@ -8891,24 +8581,18 @@
 <Multi_key><braceright><braceright><numbersign><KP_3>                                          <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><numbersign><numbersign>                        <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
-<UEFD4><UEFD4><UEFD0><dead_circumflex>                                                         <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
-<Multi_key><braceright><braceright><numbersign><less>                                          <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><3>                                                                       <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <Multi_key><braceright><braceright><numbersign><3>                                             <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <UEFD4><UEFD4><UEFD0><KP_3>                                                                    <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <Multi_key><braceright><braceright><numbersign><KP_3>                                          <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <UEFD4><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <Multi_key><braceright><braceright><numbersign><numbersign><numbersign>                        <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
-<UEFD4><UEFD4><UEFD0><dead_circumflex>                                                         <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
-<Multi_key><braceright><braceright><numbersign><less>                                          <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <UEFD4><UEFD4><UEFD0><3>                                                                       <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><3>                                             <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><KP_3>                                                                    <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><KP_3>                                          <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><numbersign><numbersign>                        <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
-<UEFD4><UEFD4><UEFD0><dead_circumflex>                                                         <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
-<Multi_key><braceright><braceright><numbersign><less>                                          <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 #
 #
 # # PALATAL_HOOK&GROUP4
@@ -8919,24 +8603,18 @@
 <Multi_key><braceright><braceright><numbersign><KP_4>                                          <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><numbersign><numbersign><numbersign>            <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
-<UEFD4><UEFD4><UEFD0><dead_acute>                                                              <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
-<Multi_key><braceright><braceright><numbersign><apostrophe>                                    <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><4>                                                                       <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <Multi_key><braceright><braceright><numbersign><4>                                             <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <UEFD4><UEFD4><UEFD0><KP_4>                                                                    <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <Multi_key><braceright><braceright><numbersign><KP_4>                                          <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <UEFD4><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <Multi_key><braceright><braceright><numbersign><numbersign><numbersign><numbersign>            <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
-<UEFD4><UEFD4><UEFD0><dead_acute>                                                              <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
-<Multi_key><braceright><braceright><numbersign><apostrophe>                                    <e> : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
 <UEFD4><UEFD4><UEFD0><4>                                                                       <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><4>                                             <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><KP_4>                                                                    <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><KP_4>                                          <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><numbersign><numbersign><numbersign>            <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
-<UEFD4><UEFD4><UEFD0><dead_acute>                                                              <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
-<Multi_key><braceright><braceright><numbersign><apostrophe>                                    <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 #
 #
 # # PALATAL_HOOK&GROUP5
@@ -8945,14 +8623,10 @@
 <Multi_key><braceright><braceright><numbersign><5>                                             <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><KP_5>                                                                    <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><KP_5>                                          <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
-<UEFD4><UEFD4><UEFD0><dead_diaeresis>                                                          <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
-<Multi_key><braceright><braceright><numbersign><colon>                                         <D> : "𝼒" U1DF12 # LATIN SMALL LETTER DEZH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><5>                                                                       <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><5>                                             <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <UEFD4><UEFD4><UEFD0><KP_5>                                                                    <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 <Multi_key><braceright><braceright><numbersign><KP_5>                                          <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
-<UEFD4><UEFD4><UEFD0><dead_diaeresis>                                                          <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
-<Multi_key><braceright><braceright><numbersign><colon>                                         <T> : "𝼗" U1DF17 # LATIN SMALL LETTER TESH DIGRAPH WITH PALATAL HOOK
 #
 #
 #^# SWASH_TAIL
@@ -10691,8 +10365,6 @@
 <Multi_key><apostrophe><colon><numbersign><KP_3>                                           <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <dead_acute><dead_diaeresis><UEFD0><UEFD0><UEFD0>                                          <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><apostrophe><colon><numbersign><numbersign><numbersign>                         <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_acute><dead_diaeresis><UEFD0><dead_circumflex>                                       <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon><numbersign><less>                                           <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 #*# DOUBLE_ACUTE
@@ -12204,8 +11876,6 @@
 <Multi_key><parenleft><numbersign><KP_3>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve><UEFD0><UEFD0><UEFD0>                                                      <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><numbersign><numbersign>                                     <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<dead_invertedbreve><UEFD0><dead_circumflex>                                                   <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<Multi_key><parenleft><numbersign><less>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 # # INVERTED_BREVE&GROUP4
@@ -12216,8 +11886,6 @@
 <Multi_key><parenleft><numbersign><KP_4>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve><UEFD0><UEFD0><UEFD0><UEFD0>                                               <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><numbersign><numbersign><numbersign>                         <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<dead_invertedbreve><UEFD0><dead_acute>                                                        <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<Multi_key><parenleft><numbersign><apostrophe>                                                 <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 # # INVERTED_BREVE&GROUP5
@@ -12226,8 +11894,6 @@
 <Multi_key><parenleft><numbersign><5>                                                          <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve><UEFD0><KP_5>                                                              <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><KP_5>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<dead_invertedbreve><UEFD0><dead_diaeresis>                                                    <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<Multi_key><parenleft><numbersign><colon>                                                      <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 #^# CIRCLED_NUMBER
@@ -13559,16 +13225,12 @@
 <Multi_key><minus><numbersign><KP_3>                                                   <backslash> : "⊽" U22BD # NOR
 <dead_stroke><UEFD0><UEFD0><UEFD0>                                                     <backslash> : "⊽" U22BD # NOR
 <Multi_key><minus><numbersign><numbersign><numbersign>                                 <backslash> : "⊽" U22BD # NOR
-<dead_stroke><UEFD0><dead_circumflex>                                                  <backslash> : "⊽" U22BD # NOR
-<Multi_key><minus><numbersign><less>                                                   <backslash> : "⊽" U22BD # NOR
 <dead_stroke><UEFD0><3>                                                                        <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <Multi_key><minus><numbersign><3>                                                              <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <dead_stroke><UEFD0><KP_3>                                                                     <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <Multi_key><minus><numbersign><KP_3>                                                           <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <dead_stroke><UEFD0><UEFD0><UEFD0>                                                             <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <Multi_key><minus><numbersign><numbersign><numbersign>                                         <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
-<dead_stroke><UEFD0><dead_circumflex>                                                          <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
-<Multi_key><minus><numbersign><less>                                                           <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 #
 #
 # # BARRED&RETROFLEX_HOOK
@@ -14421,16 +14083,12 @@
 <Multi_key><underscore><numbersign><KP_3>                                                      <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
 <UEFD2><UEFD0><UEFD0><UEFD0>                                                                   <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
 <Multi_key><underscore><numbersign><numbersign><numbersign>                                    <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
-<UEFD2><UEFD0><dead_circumflex>                                                                <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
-<Multi_key><underscore><numbersign><less>                                                      <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
 <UEFD2><UEFD0><3>                                                                              <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <Multi_key><underscore><numbersign><3>                                                         <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <UEFD2><UEFD0><KP_3>                                                                           <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <Multi_key><underscore><numbersign><KP_3>                                                      <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <UEFD2><UEFD0><UEFD0><UEFD0>                                                                   <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <Multi_key><underscore><numbersign><numbersign><numbersign>                                    <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
-<UEFD2><UEFD0><dead_circumflex>                                                                <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
-<Multi_key><underscore><numbersign><less>                                                      <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 #
 #
 # # SUBSCRIPT_OR_SMALL_CAPS&GROUP4
@@ -14441,16 +14099,12 @@
 <Multi_key><underscore><numbersign><KP_4>                                                      <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
 <UEFD2><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
 <Multi_key><underscore><numbersign><numbersign><numbersign><numbersign>                        <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
-<UEFD2><UEFD0><dead_acute>                                                                     <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
-<Multi_key><underscore><numbersign><apostrophe>                                                <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
 <UEFD2><UEFD0><4>                                                                              <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <Multi_key><underscore><numbersign><4>                                                         <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <UEFD2><UEFD0><KP_4>                                                                           <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <Multi_key><underscore><numbersign><KP_4>                                                      <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <UEFD2><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 <Multi_key><underscore><numbersign><numbersign><numbersign><numbersign>                        <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
-<UEFD2><UEFD0><dead_acute>                                                                     <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
-<Multi_key><underscore><numbersign><apostrophe>                                                <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 #
 #
 # # SUBSCRIPT_OR_SMALL_CAPS&TURNED
@@ -15112,64 +14766,48 @@
 <Multi_key><slash><numbersign><KP_3>                                                   <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                         <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><slash><numbersign><numbersign><numbersign>                                 <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                      <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><less>                                                   <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_longsolidusoverlay><UEFD0><3>                                                   <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><slash><numbersign><3>                                                     <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><slash><numbersign><KP_3>                                                  <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                        <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><slash><numbersign><numbersign><numbersign>                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                     <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<Multi_key><slash><numbersign><less>                                                  <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><UEFD0><3>                                                        <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><slash><numbersign><3>                                                          <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><slash><numbersign><KP_3>                                                       <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                             <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><slash><numbersign><numbersign><numbersign>                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                          <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><slash><numbersign><less>                                                       <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_longsolidusoverlay><UEFD0><3>                                                          <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><slash><numbersign><3>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                       <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><slash><numbersign><KP_3>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                               <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><slash><numbersign><numbersign><numbersign>                                       <bar> : "∦" U2226 # NOT PARALLEL TO
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                            <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><slash><numbersign><less>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_longsolidusoverlay><UEFD0><3>                                                         <less> : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><slash><numbersign><3>                                                           <less> : "⊀" U2280 # DOES NOT PRECEDE
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                      <less> : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><slash><numbersign><KP_3>                                                        <less> : "⊀" U2280 # DOES NOT PRECEDE
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                              <less> : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><slash><numbersign><numbersign><numbersign>                                      <less> : "⊀" U2280 # DOES NOT PRECEDE
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                           <less> : "⊀" U2280 # DOES NOT PRECEDE
-<Multi_key><slash><numbersign><less>                                                        <less> : "⊀" U2280 # DOES NOT PRECEDE
 <dead_longsolidusoverlay><UEFD0><3>                                                      <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><slash><numbersign><3>                                                        <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                   <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><slash><numbersign><KP_3>                                                     <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                           <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><slash><numbersign><numbersign><numbersign>                                   <greater> : "⊁" U2281 # DOES NOT SUCCEED
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                        <greater> : "⊁" U2281 # DOES NOT SUCCEED
-<Multi_key><slash><numbersign><less>                                                     <greater> : "⊁" U2281 # DOES NOT SUCCEED
 <dead_longsolidusoverlay><UEFD0><3>                                                            <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign><3>                                                              <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                         <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign><KP_3>                                                           <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                                 <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign><numbersign><numbersign>                                         <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                              <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
-<Multi_key><slash><numbersign><less>                                                           <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><3>                                                            <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 <Multi_key><slash><numbersign><3>                                                              <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                         <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 <Multi_key><slash><numbersign><KP_3>                                                           <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                                 <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 <Multi_key><slash><numbersign><numbersign><numbersign>                                         <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
-<dead_longsolidusoverlay><UEFD0><dead_circumflex>                                              <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
-<Multi_key><slash><numbersign><less>                                                           <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 #
 #
 # # STROKE&GROUP4
@@ -15180,16 +14818,12 @@
 <Multi_key><slash><numbersign><KP_4>                                                   <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0><UEFD0>                                  <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                     <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_longsolidusoverlay><UEFD0><dead_acute>                                           <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><apostrophe>                                             <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_longsolidusoverlay><UEFD0><4>                                                            <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><4>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_4>                                                         <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_4>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0><UEFD0>                                          <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                             <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<dead_longsolidusoverlay><UEFD0><dead_acute>                                                   <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<Multi_key><slash><numbersign><apostrophe>                                                     <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 #
 #
 # # STROKE&GROUP5
@@ -15198,14 +14832,10 @@
 <Multi_key><slash><numbersign><5>                                                      <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_longsolidusoverlay><UEFD0><KP_5>                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><slash><numbersign><KP_5>                                                   <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_longsolidusoverlay><UEFD0><dead_diaeresis>                                       <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><colon>                                                  <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_longsolidusoverlay><UEFD0><5>                                                            <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><5>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_5>                                                         <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_5>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<dead_longsolidusoverlay><UEFD0><dead_diaeresis>                                               <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<Multi_key><slash><numbersign><colon>                                                          <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 #
 #
 # # STROKE&GROUP11
@@ -15214,8 +14844,6 @@
 <Multi_key><slash><numbersign><1>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_1>                                                         <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_1>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<dead_longsolidusoverlay><UEFD0><dead_grave>                                                   <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<Multi_key><slash><numbersign><grave>                                                          <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 #
 #
 # # STROKE&GROUP12
@@ -15224,8 +14852,6 @@
 <Multi_key><slash><numbersign><2>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_2>                                                         <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_2>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<dead_longsolidusoverlay><UEFD0><dead_tilde>                                                   <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<Multi_key><slash><numbersign><asciitilde>                                                     <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 #
 #
 # # STROKE&TILDE
@@ -15280,16 +14906,12 @@
 <Multi_key><slash><equal><numbersign><KP_3>                                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0><UEFD0>                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><slash><equal><numbersign><numbersign><numbersign>                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_longsolidusoverlay><UEFD7><UEFD0><dead_circumflex>                                   <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><less>                                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <UEFD7><dead_longsolidusoverlay><UEFD0><3>                                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><equal><slash><numbersign><3>                                                   <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <UEFD7><dead_longsolidusoverlay><UEFD0><KP_3>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><equal><slash><numbersign><KP_3>                                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <UEFD7><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><equal><slash><numbersign><numbersign><numbersign>                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay><UEFD0><dead_circumflex>                                   <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><less>                                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 #^# DOUBLESTRUCK, OTHER_STROKE
@@ -15329,8 +14951,6 @@
 <Multi_key><slash><slash><numbersign><KP_3>                                           <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>               <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><slash><slash><numbersign><numbersign><numbersign>                         <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD0><dead_circumflex>            <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><slash><slash><numbersign><less>                                           <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #
 #
 # # DOUBLESTRUCK&EQUAL
@@ -15359,8 +14979,6 @@
 <Multi_key><slash><slash><equal><numbersign><KP_3>                                         <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0><UEFD0>             <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal><numbersign><numbersign><numbersign>                       <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><dead_circumflex>          <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><less>                                         <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
 # # STROKE&ACUTE
@@ -15470,16 +15088,12 @@
 <Multi_key><asterisk><numbersign><KP_3>                                               <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
 <dead_abovering><UEFD0><UEFD0><UEFD0>                                                 <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
 <Multi_key><asterisk><numbersign><numbersign><numbersign>                             <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<dead_abovering><UEFD0><dead_circumflex>                                              <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><asterisk><numbersign><less>                                               <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
 <dead_abovering><UEFD0><3>                                                                     <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><3>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_3>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><KP_3>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><UEFD0><UEFD0>                                                          <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><numbersign><numbersign>                                      <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><dead_circumflex>                                                       <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><less>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
 #
 # # RING_ABOVE&GROUP4
@@ -15504,14 +15118,10 @@
 <Multi_key><asterisk><numbersign><5>                                                  <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0><KP_5>                                                         <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><asterisk><numbersign><KP_5>                                               <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<dead_abovering><UEFD0><dead_diaeresis>                                               <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><colon>                                              <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0><5>                                                                     <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><5>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_5>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><KP_5>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><dead_diaeresis>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><colon>                                                       <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
 #
 # # RING_ABOVE&GROUP6
@@ -15536,8 +15146,6 @@
 <Multi_key><asterisk><numbersign><1>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_1>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><KP_1>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><dead_grave>                                                            <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><grave>                                                       <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
 #
 # # RING_ABOVE&GROUP12
@@ -15546,8 +15154,6 @@
 <Multi_key><asterisk><numbersign><2>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_2>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><KP_2>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><dead_tilde>                                                            <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><asciitilde>                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
 #
 # # RING_ABOVE&ACUTE
