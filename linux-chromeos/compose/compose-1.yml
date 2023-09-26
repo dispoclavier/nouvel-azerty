@@ -1,11 +1,11 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.0.12 "
+<UEFA0>                     : "version 1.0.13 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
-#                Description: XCompose string output for dead keys and live keys
+#                Description: Live key multi character output and dead keys
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
 #        Syntax highlighting: YAML
 #
@@ -21,12 +21,12 @@
 #   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
 #                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
 #                             kbfrBEs  French Belgium semiautomatic keyboard layout
-#                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
-#                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
-#                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 #                             kbfrFRr  French France remapped semiautomatic keyboard layout
 #                             kbfrFRs  French France semiautomatic keyboard layout
 #                             kbfrPFs  French Polynesia semiautomatic keyboard layout
+#                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
+#                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
+#                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 #               Code licence: Apache 2.0
 #           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 #           Non-code licence: CC-BY 4.0
@@ -577,24 +577,22 @@
 #   `generate-multikey.pl` run by `multikey.sh`.
 #
 #   The colon alignment in column 100 is based on longest Multi_key sequences
-#   in terms of string length, as used for U10789. In VSCode a zoom factor of
-#   -0.7 is then needed on 16:10 displays as used for developing this file.
+#   in terms of string length, as used for U10789, U107AB.
 #
-#   Two Multi_key sequences are duplicates by design:
-#   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-#   <Multi_key><less><8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-#   See #   Heart emoji
-#   See #*# CIRCUMFLEX
-
-#
-#   The following Multi_key sequences do not work, because <numbersign> is used
+#   The following Multi_key sequences do not work because <numbersign> is used
 #   both as a group selector and as a base character. With respect to dead key
 #   use, the topmost sequences are maintained, but the affected characters may
 #   also be input in groups 5 through 7, with respect to Multi_key use:
-#   <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
-#   <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-#   <Multi_key><numbersign><numbersign><numbersign><numbersign> : "☒" U2612 # BALLOT BOX WITH X
+#   <Multi_key><numbersign>                        <numbersign> "☐" U2610 BALLOT BOX
+#   <Multi_key><numbersign><numbersign>            <numbersign> "☑" U2611 BALLOT BOX WITH CHECK emoji
+#   <Multi_key><numbersign><numbersign><numbersign><numbersign> "☒" U2612 BALLOT BOX WITH X
 #   See # # C01
+#
+#   Two Multi_key sequences are duplicates by design:
+#   <Multi_key><less><3> "❤" U2764 HEAVY BLACK HEART red emoji, most-used in France
+#   <Multi_key><less><8> "♥" U2665 BLACK HEART SUIT red emoji, 14th-ranking
+#   First instance:  See #   Heart emoji
+#   Second instance: See #*# CIRCUMFLEX
 #
 #
 #   START_MULTI_KEY
@@ -2356,7 +2354,7 @@
 #   sequence may start with space, or with no-break space. In default mode the
 #   no-break space is in synergy with the Multi_key dead key. In numeric mode,
 #   i.e. when ModLock is on, the space character in synergy with Multi_key is
-#   the ASCII space.
+#   the ASCII space. For longest sequences, space termination is skipped.
 #
 #   Examples with leading space:    "≪" U226A and "≫" U226B.
 #   Examples without leading space: "⋘" U22D8 and "⋙" U22D9.
@@ -3713,8 +3711,8 @@
 <Multi_key><less><minus><underscore><minus><underscore><minus>                             <space> : "⤎" U290E # LEFTWARDS TRIPLE DASH ARROW
 <Multi_key><minus><0><minus><0><minus><greater>                                            <space> : "⤏" U290F # RIGHTWARDS TRIPLE DASH ARROW
 <Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater>                          <space> : "⤏" U290F # RIGHTWARDS TRIPLE DASH ARROW
-<Multi_key><minus><0><minus><0><minus><greater><greater>                                   <space> : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                 <space> : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><minus><0><minus><0><minus><greater><greater>                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                         : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 #   The following alternative sequence for U2910 accounts for the tail found in some fonts, e.g. DejaVu Serif.
 <Multi_key><space><greater><0><minus><0><minus><greater><greater>                                  : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><nobreakspace><greater><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
@@ -3726,8 +3724,8 @@
 <Multi_key><greater><minus><bar><minus><greater>                                           <space> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater>                                      <space> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><greater><greater>                                              <space> : "⤖" U2916 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL
-<Multi_key><greater><minus><bar><minus><greater><greater>                                  <space> : "⤗" U2917 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
-<Multi_key><greater><minus><bar><bar><minus><greater><greater>                             <space> : "⤘" U2918 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
+<Multi_key><greater><minus><bar><minus><greater><greater>                                          : "⤗" U2917 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><greater><minus><bar><bar><minus><greater><greater>                                     : "⤘" U2918 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><minus><less>                                                            <space> : "⤙" U2919 # LEFTWARDS ARROW-TAIL
 <Multi_key><greater><minus><minus>                                                         <space> : "⤚" U291A # RIGHTWARDS ARROW-TAIL
 <Multi_key><minus><minus><less><less>                                                      <space> : "⤛" U291B # LEFTWARDS DOUBLE ARROW-TAIL
@@ -4600,11 +4598,11 @@
 #   Mirror of U2905
 <Multi_key><space><less><less><minus><bar>                                                 <space> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 <Multi_key><nobreakspace><less><less><minus><bar>                                          <space> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><less><less><minus><0><minus><0><minus>                                         <space> : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><KP_Subtract>                       <space> : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><less><less><minus><0><minus><0><minus>                                                 : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><KP_Subtract>                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 #   The following alternative sequence for U2B37 accounts for the tail found in some fonts, e.g. DejaVu Serif. See U2910.
-<Multi_key><less><less><minus><0><minus><0><less>                                          <space> : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><less>                              <space> : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><less><less><minus><0><minus><0><less>                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><less>                                      : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 #   Mirror of U2911.
 <Multi_key><less><period><period><period>                                                  <space> : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
 #   Mirrors of U2914..U2918.
@@ -4612,7 +4610,7 @@
 <Multi_key><less><minus><bar><bar><minus><less>                                            <space> : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><less>                                                       <space> : "⬻" U2B3B # LEFTWARDS TWO-HEADED ARROW WITH TAIL
 <Multi_key><less><less><minus><bar><minus><less>                                           <space> : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
-<Multi_key><less><less><minus><bar><bar><minus><less>                                      <space> : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><less><minus><bar><bar><minus><less>                                              : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 #   Mirror of U2947.
 <Multi_key><less><minus><x><minus>                                                         <space> : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 #   Mirror of U2933.
@@ -4833,7 +4831,7 @@
 # # Dead keys not included in keysymdef.h
 #
 #   Some additional dead keys proposed for mapping on an fr-FR keyboard are listed below.
-#   The characters defined as output below are the dead characters used on other systems.
+#   See # # Dead characters for documentation
 #
 #   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
 #   <UEFD1> : "^"   *dead_superscript, phonetics / abbreviation indicatrs. Multi_key: ¦^
@@ -5104,70 +5102,74 @@
 #   ASCII symbols GRAVE ACCENT, CIRCUMFLEX ACCENT, TILDE are included as well.
 #
 #
-# # Dead characters for documentation purposes
+# # Dead characters for documentation
 #
 #   This representative sign works on Windows as the so-called dead character.
 #   On MacOS it is the terminator. Both OSes output it when the base character
 #   is not listed with the current dead key, prior to outputting the unchanged
 #   base character itself. XCompose, by contrast, has no output in this case.
 #
+#   Traditionally, this character is output on hitting space after a dead key,
+#   but space is now reserved for the related combining diacritic.
+#
 #   Ê-key and Ç-key emulations require ê and ç as dead characters in these dead
 #   keys:
 #   See #*# CIRCUMFLEX
 #   See #*# CEDILLA
 #
-#   Traditionally, this character is output on hitting space after a dead key,
-#   but space is now reserved for the related combining diacritic.
-#
 #   For portability, a list of dead character candidates is provided below.
+#   For natively unsupported dead keys, a keysym candiate is proposed as well.
+#   See # # Dead keys not included in keysymdef.h
 #
-#   <UEFD1>                                             "^" U005E CIRCUMFLEX ACCENT
-#   <UEFD5>                                             "ɐ" U0250 LATIN SMALL LETTER TURNED A
-#   <dead_hook>                                         "ɱ" U0271 LATIN SMALL LETTER M WITH HOOK
-#   <UEFD4>                                             "ɖ" U0256 LATIN SMALL LETTER D WITH TAIL
-#   <dead_tilde>                                        "ẽ" U1EBD LATIN SMALL LETTER E WITH TILDE
-#   <dead_tilde><dead_tilde>                            "ḛ" U1E1B LATIN SMALL LETTER E WITH TILDE BELOW
-#   <dead_grave>                                        "ò" U00F2 LATIN SMALL LETTER O WITH GRAVE
-#   <dead_grave><dead_grave>                            "ȕ" U0215 LATIN SMALL LETTER U WITH DOUBLE GRAVE
-#   <dead_acute>                                        "ó" U00F3 LATIN SMALL LETTER O WITH ACUTE
-#   <dead_doubleacute>                                  "ű" U0171 LATIN SMALL LETTER U WITH DOUBLE ACUTE
 #   <dead_abovedot>                                     "ṗ" U1E57 LATIN SMALL LETTER P WITH DOT ABOVE
-#   <UEFD0>                                             "①" U2460 CIRCLED DIGIT ONE
-#   <UEFD0><UEFD0>                                      "②" U2461 CIRCLED DIGIT TWO
-#   <UEFD0><3>                                          "③" U2462 CIRCLED DIGIT THREE
-#   <UEFD0><4>                                          "④" U2463 CIRCLED DIGIT FOUR
-#   <UEFD0><5>                                          "⑤" U2464 CIRCLED DIGIT FIVE
-#   <UEFD0><6>                                          "⑥" U2465 CIRCLED DIGIT SIX
-#   <UEFD0><7>                                          "⑦" U2466 CIRCLED DIGIT SEVEN
-#   <UEFD0><8>                                          "⑧" U2467 CIRCLED DIGIT EIGHT
-#   <UEFD0><9>                                          "⑨" U2468 CIRCLED DIGIT NINE
-#   <UEFD0><0>                                          "⑩" U2469 CIRCLED NUMBER TEN
-#   <UEFD0><1>                                          "⑪" U246A CIRCLED NUMBER ELEVEN
-#   <UEFD0><2>                                          "⑫" U246B CIRCLED NUMBER TWELVE
-#   <dead_currency>                                     "¤" U00A4 CURRENCY SIGN
-#   <dead_invertedbreve>                                "ȏ" U020F LATIN SMALL LETTER O WITH INVERTED BREVE
-#   <dead_breve>                                        "ŏ" U014F LATIN SMALL LETTER O WITH BREVE
-#   <dead_stroke>                                       "ħ" U0127 LATIN SMALL LETTER H WITH STROKE
-#   <dead_stroke><dead_stroke>                          "ⱡ" U2C61 LATIN SMALL LETTER L WITH DOUBLE BAR
-#   <dead_horn>                                         "ơ" U01A1 LATIN SMALL LETTER O WITH HORN
-#   <dead_ogonek>                                       "ǫ" U01EB LATIN SMALL LETTER O WITH OGONEK
-#   <UEFD3>                                             "ỏ" U1ECF LATIN SMALL LETTER O WITH HOOK ABOVE
-#   <UEFD2>                                             "_" U005F LOW LINE
-#   <dead_macron>                                       "ō" U014D LATIN SMALL LETTER O WITH MACRON
-#   <dead_macron><dead_macron>                          "ḇ" U1E07 LATIN SMALL LETTER B WITH LINE BELOW
-#   <dead_longsolidusoverlay>                           "ø" U00F8 LATIN SMALL LETTER O WITH STROKE
 #   <dead_abovering>                                    "å" U00E5 LATIN SMALL LETTER A WITH RING ABOVE
 #   <dead_abovering><dead_abovering>                    "ḁ" U1E01 LATIN SMALL LETTER A WITH RING BELOW
-#   <dead_circumflex>                                   "ê" U00EA LATIN SMALL LETTER E WITH CIRCUMFLEX
-#   <dead_circumflex><dead_circumflex>                  "ḙ" U1E19 LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-#   <dead_circumflex><dead_circumflex><dead_circumflex> "ȟ" U021F LATIN SMALL LETTER H WITH CARON
-#   <UEFD6>                                             "\\" U005C REVERSE SOLIDUS
-#   <dead_cedilla>                                      "ç" U00E7 LATIN SMALL LETTER C WITH CEDILLA
+#   <dead_acute>                                        "ó" U00F3 LATIN SMALL LETTER O WITH ACUTE
+#   <dead_belowcomma>                                   "ș" U0219 LATIN SMALL LETTER S WITH COMMA BELOW
 #   <dead_belowdot>                                     "ḅ" U1E05 LATIN SMALL LETTER B WITH DOT BELOW
 #   <dead_belowdot><dead_belowdot>                      "ƞ" U019E LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#   <dead_breve>                                        "ŏ" U014F LATIN SMALL LETTER O WITH BREVE
+#   <dead_cedilla>                                      "ç" U00E7 LATIN SMALL LETTER C WITH CEDILLA
+#   <dead_circumflex>                                   "ê" U00EA LATIN SMALL LETTER E WITH CIRCUMFLEX
+#   <dead_circumflex><dead_circumflex>                  "ḙ" U1E19 LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
+#   <dead_currency>                                     "¤" U00A4 CURRENCY SIGN
 #   <dead_diaeresis>                                    "ë" U00EB LATIN SMALL LETTER E WITH DIAERESIS
 #   <dead_diaeresis><dead_diaeresis>                    "ṳ" U1E73 LATIN SMALL LETTER U WITH DIAERESIS BELOW
-#   <dead_belowcomma>                                   "ș" U0219 LATIN SMALL LETTER S WITH COMMA BELOW
+#   <dead_doubleacute>                                  "ű" U0171 LATIN SMALL LETTER U WITH DOUBLE ACUTE
+#   <dead_grave>                                        "ò" U00F2 LATIN SMALL LETTER O WITH GRAVE
+#   <dead_grave><dead_grave>                            "ȕ" U0215 LATIN SMALL LETTER U WITH DOUBLE GRAVE
+#   <dead_hook>                                         "ɱ" U0271 LATIN SMALL LETTER M WITH HOOK
+#   <dead_horn>                                         "ơ" U01A1 LATIN SMALL LETTER O WITH HORN
+#   <dead_invertedbreve>                                "ȏ" U020F LATIN SMALL LETTER O WITH INVERTED BREVE
+#   <dead_longsolidusoverlay>                           "ø" U00F8 LATIN SMALL LETTER O WITH STROKE
+#   <dead_macron>                                       "ō" U014D LATIN SMALL LETTER O WITH MACRON
+#   <dead_macron><dead_macron>                          "ḇ" U1E07 LATIN SMALL LETTER B WITH LINE BELOW
+#   <dead_ogonek>                                       "ǫ" U01EB LATIN SMALL LETTER O WITH OGONEK
+#   <dead_stroke>                                       "ħ" U0127 LATIN SMALL LETTER H WITH STROKE
+#   <dead_stroke><dead_stroke>                          "ⱡ" U2C61 LATIN SMALL LETTER L WITH DOUBLE BAR
+#   <dead_tilde>                                        "ẽ" U1EBD LATIN SMALL LETTER E WITH TILDE
+#   <dead_tilde><dead_tilde>                            "ḛ" U1E1B LATIN SMALL LETTER E WITH TILDE BELOW
+#   <UEFD0>                  *<dead_group>              "①" U2460 CIRCLED DIGIT ONE
+#   <UEFD0><UEFD0>           *<dead_group2>             "②" U2461 CIRCLED DIGIT TWO
+#   <UEFD0><3>               *<dead_group3>             "③" U2462 CIRCLED DIGIT THREE
+#   <UEFD0><4>               *<dead_group4>             "④" U2463 CIRCLED DIGIT FOUR
+#   <UEFD0><5>               *<dead_group5>             "⑤" U2464 CIRCLED DIGIT FIVE
+#   <UEFD0><6>               *<dead_group6>             "⑥" U2465 CIRCLED DIGIT SIX
+#   <UEFD0><7>               *<dead_group7>             "⑦" U2466 CIRCLED DIGIT SEVEN
+#   <UEFD0><8>               *<dead_group8>             "⑧" U2467 CIRCLED DIGIT EIGHT
+#   <UEFD0><9>               *<dead_group9>             "⑨" U2468 CIRCLED DIGIT NINE
+#   <UEFD0><0>               *<dead_group10>            "⑩" U2469 CIRCLED NUMBER TEN
+#   <UEFD0><1>               *<dead_group11>            "⑪" U246A CIRCLED NUMBER ELEVEN
+#   <UEFD0><2>               *<dead_group12>            "⑫" U246B CIRCLED NUMBER TWELVE
+#   <UEFD1>                  *<dead_superscript>        "^" U005E CIRCUMFLEX ACCENT
+#   <UEFD2>                  *<dead_subscript>          "_" U005F LOW LINE
+#   <UEFD3>                  *<dead_abovehook>          "ỏ" U1ECF LATIN SMALL LETTER O WITH HOOK ABOVE
+#   <UEFD4>                  *<dead_retroflexhook>      "ɖ" U0256 LATIN SMALL LETTER D WITH TAIL
+#   <UEFD5>                  *<dead_turned>             "ɐ" U0250 LATIN SMALL LETTER TURNED A
+#   <UEFD6>                  *<dead_reversed>           "ɘ" U0258 LATIN SMALL LETTER REVERSED E
+#   <UEFD7>                  *<dead_flag>               "⚐" U2690 WHITE FLAG
+#   <UEFD8>                  *<dead_legacytilde>        "~" U007E TILDE
+#   <UEFD9>                  *<dead_legacygrave>        "`" U0060 GRAVE ACCENT
 #
 #
 # # Combining diacritics
