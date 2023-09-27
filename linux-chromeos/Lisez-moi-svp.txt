@@ -1,4 +1,4 @@
-                      Date : 2023-09-26T0215+0200
+                      Date : 2023-09-27T0317+0200
                    Version : 1.0.13
             Nom du produit : Nouvel AZERTY
         Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -27,7 +27,6 @@
                    Contact : dev@dispoclavier.net
 
 
-
   Dispositions
 
   • Les fichiers `nouvel-azerty.xkb`, `nouvel-azerty-ansi.xkb` et `nouvel-azerty-bksp.xkb`
@@ -54,7 +53,6 @@
     en charge par ce nouvel AZERTY.
 
 
-
   Options de disposition
 
   Outre la disposition standard et ses variantes, deux optimisations optionnelles sont disponibles.
@@ -79,11 +77,9 @@
     afin d’éviter l’ouverture accidentelle du menu contextuel.
 
 
-
   Témoin lumineux
 
   Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode numérique.
-
 
 
   Mode d’emploi sous Linux et sous ChromeOS
@@ -102,7 +98,7 @@
 
   4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-ChromeOS-
-     et se termine par le numéro de version, par exemple « 1.0.13 », et l’extension « .zip ».
+     et se termine par le numéro de version et l’extension « .zip ».
 
   5  Décompresser le dossier téléchargé.
 
@@ -126,7 +122,6 @@
   La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
       xkbcomp normal.xkb :0
   grâce au fichier mis en place au point 1.
-
 
 
   Critiques, suggestions et retours d’expérience
