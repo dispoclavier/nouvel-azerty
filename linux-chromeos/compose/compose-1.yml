@@ -1,12 +1,12 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.0.13 "
+<UEFA0>                     : "version 1.0.14 "
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
 #                Description: Live key multi character output and dead keys
-#                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
+#                   Platform: Linux using XKB with XCompose*
 #        Syntax highlighting: YAML
 #
 #               Project name: Dispoclavier
