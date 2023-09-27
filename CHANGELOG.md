@@ -2,7 +2,7 @@
 
 ## 1.0.14 (2023-09-27)
 
-* Supprimer toute référence à ChromeOS.
+* Mettre en sourdine la prise en charge de ChromeOS.
 
 ## 1.0.13 (2023-09-27)
 
