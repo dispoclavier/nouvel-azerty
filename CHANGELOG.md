@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.0.14 (2023-09-27)
+
+* Supprimer toute référence à ChromeOS.
+
 ## 1.0.13 (2023-09-27)
 
 * Composition : Déboguer "↉" U2189, corriger "○" U25CB, "●" U25CF, "◑" U25D1, "◔" U25D4, "◕" U25D5, "◴" U25F4, "◵" U25F5, "◶" U25F6, "◷" U25F7. (compose-1.yml [dc23892](https://github.com/dispoclavier/nouvel-azerty/commit/dc23892ccbd2b0fd6e51daf7cf1bca44cd4095c2))
