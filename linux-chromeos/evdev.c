@@ -1,10 +1,10 @@
-//                       Date: 2023-08-16T1955+0200
+//                       Date: 2023-09-29T0134+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
 //                   Language: C-like
 //                Description: X key code to XKB key label conversion
-//                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
+//                   Platform: Linux using XKB with XCompose*
 //
 //               Project name: Dispoclavier
 //                Project URL: https://dispoclavier.com
@@ -98,19 +98,23 @@ default xkb_keycodes "evdev" {
   minimum =   8;
   maximum = 255;
 
-	// Configuring distributable variants:
+  // Configuring distributable variants:
 
-	// <LSGT> is key ISO B00, AltFr on ISO keyboards.
-	// On ANSI keyboards for ISO keyboard markets, B00 is mapped on Right Control,
-	// so that for AltFr to stay lefthand, keys LSGT and CAPS need to be swapped.
+  // <LSGT> is key ISO B00, AltFr on ISO keyboards.
+  // On ANSI keyboards for ISO keyboard markets, B00 is mapped on Right Control,
+  // so that for AltFr to stay lefthand, keys LSGT and CAPS need to be swapped.
 
-  // Permutating BKSP and RCTL here fails in applications
-  // relying partly on keycodes, such as VSCode in the editor, not in the search widget.
-	// Remapping BKSP and RCTL may be done using setkeycodes.
-	// But setkeycodes only works for built-in keyboards, it fails on external keyboards.
-	// Each key can be mapped only once, and the latest mapping overrides previous ones.
-	// So BKSP needs to be mapped ad hoc on a per-user basis anyway, not distributable.
-	// As a workaround, VSCode must use a keybinding on the backspace key for delete left.
+  // Permutating BKSP and RCTL here fails in applications relying partly on keycodes,
+  // such as VSCode in the editor, not in the search widget (where both work). That is
+  // worked around by adding a keybinding for deleteLeft on the legacy Backspace key,
+  // and another one on ContextMenu. The right Windows key is still Meta and cannot be
+  // assigned any command like deleteLeft, using the VSCode keybinding customizer.
+
+  // Remapping BKSP and RCTL may be done using setkeycodes.
+  // But setkeycodes only works for built-in keyboards, it fails on external keyboards.
+  // Each key can be mapped only once, and the latest mapping overrides previous ones.
+  // So BKSP needs to be mapped ad hoc on a per-user basis anyway, not distributable.
+  // As a workaround, VSCode must use a keybinding on the backspace key for delete left.
 
   //    <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
   //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
@@ -119,10 +123,10 @@ default xkb_keycodes "evdev" {
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on right Windows for desktop.
 
-        <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
-        <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
-  //    <RWIN> = 134;  // was <RWIN>   Common mappings for desktop and laptop.
-  //    <COMP> = 135;  // was <COMP>   Common mappings for desktop and laptop.
+  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
+  //    <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
+        <RWIN> = 134;  // was <RWIN>   Common mappings for desktop and laptop.
+        <COMP> = 135;  // was <COMP>   Common mappings for desktop and laptop.
 
   // Other left-hand functional keys:
 
