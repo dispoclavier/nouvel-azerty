@@ -1,7 +1,8 @@
 # Journal des modifications
 
-## 1.0.14 (2023-09-27)
+## 1.0.14 (2023-09-29)
 
+* Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [375b83a](https://github.com/dispoclavier/nouvel-azerty/commit/375b83a11353f6135d39b65a2eca085400de34ee), annule [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
 * Mettre en sourdine la prise en charge de ChromeOS.
 
 ## 1.0.13 (2023-09-27)
@@ -59,6 +60,7 @@
 * Touches vives : Personnalisation : Simplifier le code des touches B01..B06, C01..D12. (dispocla.cpp [9485620](https://github.com/dispoclavier/nouvel-azerty/commit/9485620a726089ad6268f93cb6bbf2e315d3af7a), [6198799](https://github.com/dispoclavier/nouvel-azerty/commit/6198799c997d10faaf65eedac93ca94c7a5b1b13), [907ff0e](https://github.com/dispoclavier/nouvel-azerty/commit/907ff0e6517603c96667415223bdde3d2b33802c), dispotypes.c [1246e6d](https://github.com/dispoclavier/nouvel-azerty/commit/1246e6d4cbb109329649f9740a2a22131e0054c0), [89f1d98](https://github.com/dispoclavier/nouvel-azerty/commit/89f1d9823390ef2b6548e234b410308b07eb36f5), [cb5ab2a](https://github.com/dispoclavier/nouvel-azerty/commit/cb5ab2af0e965736278c55d6d72b0751c4b4802f), [ab6b2d6](https://github.com/dispoclavier/nouvel-azerty/commit/ab6b2d6a79067556ccc8d69793710004b9aae9d0))
 * Variantes : Supprimer provisoirement les 2 variantes pour le Canada et la variante pour la Suisse pour faciliter la maintenance. (dispocla.cpp [bd73f72](https://github.com/dispoclavier/nouvel-azerty/commit/bd73f72760988046ca1c9fcdaeba0ff59e577408))
 * Variantes : Supprimer définitivement les 3 variantes hybrides. (dispocla.cpp [31919ac](https://github.com/dispoclavier/nouvel-azerty/commit/31919ac3fa37cfb3114762809c6ecd39f0f0d3b3))
+* Effacement arrière : Déplacer sur Windows droite par erreur. (evdev.c [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
 
 ## 1.0.6 (2023-08-15)
 
@@ -107,7 +109,7 @@
 
 ## v1.0.1 (2023-07-14)
 
-* Régler la touche Retour arrière en mode par défaut. (evdev.c [616da80](https://github.com/dispoclavier/nouvel-azerty/commit/616da804a22914e68665f32d522c7c3c074fc55d))
+* Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [616da80](https://github.com/dispoclavier/nouvel-azerty/commit/616da804a22914e68665f32d522c7c3c074fc55d))
 
 ## v1.0.0 (2023-07-14)
 
