@@ -1,4 +1,4 @@
-//                       Date: 2023-09-29T0134+0200
+//                       Date: 2023-09-30T0208+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -106,27 +106,28 @@ default xkb_keycodes "evdev" {
 
   // Permutating BKSP and RCTL here fails in applications relying partly on keycodes,
   // such as VSCode in the editor, not in the search widget (where both work). That is
-  // worked around by adding a keybinding for deleteLeft on the legacy Backspace key,
-  // and another one on ContextMenu. The right Windows key is still Meta and cannot be
-  // assigned any command like deleteLeft, using the VSCode keybinding customizer.
+  // worked around by adding keybindings for deleteLeft and deleteWordLeft both on the
+	// ContextMenu key and on Backspace. The right Windows key is still Meta and cannot
+  // be assigned commands such as deleteLeft, using the VSCode keybinding customizer.
 
-  // Remapping BKSP and RCTL may be done using setkeycodes.
-  // But setkeycodes only works for built-in keyboards, it fails on external keyboards.
+  // Swapping BKSP and RCTL on built-in keyboards may be done using setkeycodes, but
+  // that fails on external keyboards. See “setkeycodes not effective on USB keyboard”
+	// https://bugzilla.redhat.com/show_bug.cgi?id=211803
+
   // Each key can be mapped only once, and the latest mapping overrides previous ones.
   // So BKSP needs to be mapped ad hoc on a per-user basis anyway, not distributable.
-  // As a workaround, VSCode must use a keybinding on the backspace key for delete left.
 
-  //    <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
-  //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
         <LSGT> =  94;  // was <LSGT>   Common mappings for desktop and laptop.
         <CAPS> =  66;  // was <CAPS>   Common mappings for desktop and laptop.
+  //    <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
+  //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on right Windows for desktop.
 
-  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
-  //    <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
         <RWIN> = 134;  // was <RWIN>   Common mappings for desktop and laptop.
         <COMP> = 135;  // was <COMP>   Common mappings for desktop and laptop.
+  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
+  //    <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
 
   // Other left-hand functional keys:
 
