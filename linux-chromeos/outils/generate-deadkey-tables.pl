@@ -6,7 +6,9 @@
 # 2023-08-27T2253+0200
 # 2023-08-29T2232+0200
 # 2023-09-23T1908+0200
-# Last modified: See datestamp above.
+# 2023-10-07T1217+0200
+# 2023-10-14T1822+0200
+# = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
@@ -17,9 +19,14 @@
 # target locale as configured under `## Character names localization`.
 # `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
 #
-# The output is designed for use in WordPress. An all-in-one table is generated
-# alongside, although neither WordPress editor registers it (memory limit 1024M
-# for the purpose, both in PHP and in WordPress). It cannot be embedded either.
+# The output is designed for use in WordPress, where {{{anrghg-classes}}} can
+# be replaced with additional CSS classes, as well as {{{anrghg-value}}} with
+# anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
+#
+# An all-in-one table is generated alongside. This can only be included using
+# the “Include partial” block of the A.N.R.GHG Publishing Toolkit, given that
+# WordPress cannot save pages with 2.1MB (5565 lines, 1.9 million characters)
+# in a Custom HTML block, even with memory limit 1024M in PHP and WordPress.
 #
 # Using old-style file handles.
 use warnings;
@@ -62,7 +69,7 @@ my $parse_on       = !1;
 my $table_header_1 = 'Caractère(s)';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
-my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
