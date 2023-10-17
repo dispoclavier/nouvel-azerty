@@ -13,48 +13,58 @@
 #   Multi_key: ¦<
 #
 #   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_circumflex
-#   yields turned high, opening or closing curly quotation marks U2018, U201C.
+#   yields turned high curly quotation marks U2018, U201C (opening or closing).
 #   See # # Quotation mark input method
 #
 #   The polygrams -êk-, -êl-, -êm-, -ên-, -êp-, -êq-, -êr-, -êt-, -êv-, -êch-
 #   make dead_circumflex behave like an Ê key in most cases by using the fact
 #   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
-#   letters with circumflex accent.
+#   letters with circumflex accent, and most of these are not in usage either
+#   with combining circumflex as known composed letters. Those that are, will
+#   need to be overridden, so as to prioritize the Ê key emulation sequences.
+#   French usage information: Courtesy _La fée des lettres_.
+#   https://www.motsavec.com
 #
-#   Likewise, a Ç key is emulated for use on the Canadian French variant.
-#   See #*# CEDILLA
-#
-#   Cross-platform compatibility is full on MacOS, but only partial on Windows.
-#   Windows is able to support only lowercase and only digrams, provided that
-#   the dead key is given the appropriate dead character. For the circumflex
-#   accent dead key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
-#
-#   French usage information: Courtesy _La fée des lettres_ https://www.motsavec.com.
-#
-#   The following sequences are included here, although they are overridden by
-#   the Ê-key emulation required for writing French:
+#   The following are the sequences included despite being overridden:
 #   <dead_circumflex><M> : "M̂" # U004D U0302 LATIN CAPITAL LETTER M WITH CIRCUMFLEX Min Nan
 #   <dead_circumflex><m> : "m̂" # U006D U0302 LATIN SMALL LETTER M WITH CIRCUMFLEX Min Nan
 #   <dead_circumflex><N> : "N̂" # U004E U0302 LATIN CAPITAL LETTER N WITH CIRCUMFLEX Min Nan
 #   <dead_circumflex><n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX Min Nan
 #   Courtesy https://www.frathwiki.com/Circumflex
 #
-#   The circumflex dead key also supported superscript digits, for the sake of
-#   conformance with NF Z71-300:2019, 6.3.3 p24, that E DIN 2137-1:2020-11 has
-#   been synced with.
+#   Cross-platform compatibility is full on MacOS, but only partial on Windows.
+#   Windows is able to support only lowercase, and only digrams — provided that
+#   the dead key is assigned the appropriate dead character. For the circumflex
+#   accent dead key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
+#
+#   Likewise, a Ç key is emulated for use on the Canadian French variant.
+#   See #*# CEDILLA
+#
+#   The circumflex dead key is also expected to support superscript digits, for
+#   the sake of conformance with NF Z71-300:2019, section 6.3.3 page 24, and as
+#   a tribute to the German E DIN 2137-1:2020-11 that has been synced, but only
+#   with the digits part, not the signs and parentheses.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
 #   But the Multi_key equivalent of this way to input superscript digits cannot
 #   be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and with a
-#   new sequence introduced for the less frequent "♥" U2665 as of "⁸" U2078.
-#   However, for cross-platform compatibility all Multi_key equivalents must be
-#   supported. As a result, superscript by dead_circumflex is dropped entirely.
+#   new sequence introduced for the less frequent "♥" U2665 as of "⁸" U2078. So
+#   the numeric base characters are propagated from compose sequences for heart
+#   emoji that are duplicated here for consistency, and completed consistently.
+#   See #   Heart emoji
+#
+#   As a result, superscript by dead_circumflex is dropped entirely, given that
+#   for portability, all Multi_key equivalents must be supported.
+#
 #   The diaeresis dead key offers an acceptable alternative with good mnemonics
-#   using the traditional mapping on the same key in shift position. Ultimately
-#   this feature is non-critical since a dedicated superscript dead key is also
-#   present, in NF Z71-300:2019 too. Moreover, superscript and subscript digits
-#   are on live keys.
+#   using the traditional mapping on the same key in shift position.
 #   See #*# DIAERESIS
+#
+#   Ultimately, this feature is non-critical since a dedicated superscript dead
+#   key is also present, in NF Z71-300:2019 too.
+#   See #*# SUPERSCRIPT
+#
+#   Moreover, superscript and subscript digits are on live keys.
 #
 #   NOTE: In en_US.UTF-8/Compose that the superscript digits by dead_circumflex
 #   feature comes from, the superscript dead key is missing, consistently with
@@ -78,10 +88,6 @@
 #
 #   Followed by comma, dead_circumflex provides a shorthand for
 #   U200C ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
-#
-#   The numeric base characters are propagated from compose sequences for heart
-#   emoji that are duplicated here for consistency, and completed consistently.
-#   See #   Heart emoji
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
@@ -280,7 +286,7 @@
 <Multi_key><less>                                                                         <ugrave> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE Esperanto
 #
 #
-# # CIRCUMFLEX&GROUP1
+# # CIRCUMFLEX&GROUP_1
 #
 <dead_circumflex><UEFD0>                                                                <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                                           <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
@@ -292,13 +298,13 @@
 <Multi_key><less><numbersign>                                                         <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 #
 #
-# # CIRCUMFLEX&GROUP2
+# # CIRCUMFLEX&GROUP_2
 #
 <dead_circumflex><UEFD0><UEFD0>                                                            <slash> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><less><numbersign><numbersign>                                                  <slash> : "♡" U2661 # WHITE HEART SUIT
 #
 #
-# # CIRCUMFLEX&GROUP3
+# # CIRCUMFLEX&GROUP_3
 #
 <dead_circumflex><UEFD0><3>                                                                <slash> : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><less><numbersign><3>                                                           <slash> : "♢" U2662 # WHITE DIAMOND SUIT
@@ -308,7 +314,7 @@
 <Multi_key><less><numbersign><numbersign><numbersign>                                      <slash> : "♢" U2662 # WHITE DIAMOND SUIT
 #
 #
-# # CIRCUMFLEX&GROUP4
+# # CIRCUMFLEX&GROUP_4
 #
 <dead_circumflex><UEFD0><4>                                                                <slash> : "♧" U2667 # WHITE CLUB SUIT
 <Multi_key><less><numbersign><4>                                                           <slash> : "♧" U2667 # WHITE CLUB SUIT
@@ -318,7 +324,7 @@
 <Multi_key><less><numbersign><numbersign><numbersign><numbersign>                          <slash> : "♧" U2667 # WHITE CLUB SUIT
 #
 #
-# # CIRCUMFLEX&GROUP5
+# # CIRCUMFLEX&GROUP_5
 #
 <dead_circumflex><UEFD0><5>                                                                <slash> : "♤" U2664 # WHITE SPADE SUIT
 <Multi_key><less><numbersign><5>                                                           <slash> : "♤" U2664 # WHITE SPADE SUIT
@@ -748,7 +754,7 @@
 <Multi_key><greater>                                                                           <z> : "ž" U017E # LATIN SMALL LETTER Z WITH CARON
 #
 #
-# # HACEK&GROUP1
+# # HACEK&GROUP_1
 #
 <dead_caron><UEFD0>                                                                   <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <Multi_key><greater><numbersign>                                                      <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
@@ -992,7 +998,7 @@
 <Multi_key><equal>                                                                             <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
 #
 #
-# # EQUAL&GROUP1
+# # EQUAL&GROUP_1
 #
 <UEFD7><UEFD0>                                                                             <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><equal><numbersign>                                                             <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
@@ -1002,7 +1008,7 @@
 <Multi_key><equal><numbersign>                                                         <backslash> : "⊻" U22BB # XOR
 #
 #
-# # EQUAL&GROUP2
+# # EQUAL&GROUP_2
 #
 <UEFD7><UEFD0><UEFD0>                                                                      <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><equal><numbersign><numbersign>                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
@@ -1010,7 +1016,7 @@
 <Multi_key><equal><numbersign><numbersign>                                             <backslash> : "⊼" U22BC # NAND
 #
 #
-# # EQUAL&GROUP3
+# # EQUAL&GROUP_3
 #
 <UEFD7><UEFD0><3>                                                                          <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><equal><numbersign><3>                                                          <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
@@ -2351,10 +2357,15 @@
 #
 #   "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, "ɘ" U0258 # LATIN SMALL LETTER
 #   REVERSED E is no casing pair. The small letter has no capital letter, while
-#   the capital letter is considered a turned e, uppercase of "ǝ" U01DD LATIN
-#   SMALL LETTER TURNED E. As such it is in group 1 of R, and in group 2 of E.
+#   the capital letter is considered a _turned_ e, uppercase of "ǝ" U01DD LATIN
+#   SMALL LETTER TURNED E. As such it is in the TURNED dead key, as well as in
+#   group 1 of R for ease of input, and in group 2 of E for ease of retrieval.
+#   See #*# TURNED
+#   See # # GROUP_1
+#   See # # GROUP_2
 #
 #   Digits yield mathematical backslashes without space termination.
+#   See #*# STROKE
 #
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
@@ -2424,7 +2435,7 @@
 <Multi_key><backslash>                                                                         <z> : "ƹ" U01B9 # LATIN SMALL LETTER EZH REVERSED
 #
 #
-# # REVERSED&GROUP1
+# # REVERSED&GROUP_1
 #   Lenient group selection
 #
 <UEFD6><UEFD0>                                                                                 <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
@@ -2441,7 +2452,7 @@
 <Multi_key><backslash><numbersign>                                                             <x> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 #
 #
-# # REVERSED&GROUP2
+# # REVERSED&GROUP_2
 #
 <UEFD6><UEFD0><UEFD0>                                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <Multi_key><backslash><numbersign><numbersign>                                                 <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
@@ -2451,7 +2462,7 @@
 <Multi_key><backslash><numbersign><numbersign>                                                 <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 #
 #
-# # REVERSED&GROUP3
+# # REVERSED&GROUP_3
 #
 <UEFD6><UEFD0><3>                                                                              <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <Multi_key><backslash><numbersign><3>                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
@@ -2473,7 +2484,7 @@
 <Multi_key><backslash><numbersign><numbersign><numbersign>                                     <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 #
 #
-# # REVERSED&GROUP4
+# # REVERSED&GROUP_4
 #
 <UEFD6><UEFD0><4>                                                                              <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <Multi_key><backslash><numbersign><4>                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
@@ -2495,7 +2506,7 @@
 <Multi_key><backslash><numbersign><numbersign><numbersign><numbersign>                         <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 #
 #
-# # REVERSED&GROUP5
+# # REVERSED&GROUP_5
 #
 <UEFD6><UEFD0><5>                                                                              <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <Multi_key><backslash><numbersign><5>                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
@@ -2520,7 +2531,7 @@
 <Multi_key><braceleft><backslash>                                                              <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 #
 #
-# # REVERSED&HOOK&GROUP1
+# # REVERSED&HOOK&GROUP_1
 #
 <UEFD6><dead_hook><UEFD0>                                                                      <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
 <Multi_key><backslash><braceleft><numbersign>                                                  <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
@@ -2528,7 +2539,7 @@
 <Multi_key><braceleft><backslash><numbersign>                                                  <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
 #
 #
-# # REVERSED&HOOK&GROUP2
+# # REVERSED&HOOK&GROUP_2
 #
 <UEFD6><dead_hook><UEFD0><UEFD0>                                                               <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <Multi_key><backslash><braceleft><numbersign><numbersign>                                      <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
@@ -2536,7 +2547,7 @@
 <Multi_key><braceleft><backslash><numbersign><numbersign>                                      <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 #
 #
-# # REVERSED&HOOK&GROUP3
+# # REVERSED&HOOK&GROUP_3
 #
 <UEFD6><dead_hook><UEFD0><3>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 <Multi_key><backslash><braceleft><numbersign><3>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
@@ -2552,7 +2563,7 @@
 <Multi_key><braceleft><backslash><numbersign><numbersign><numbersign>                          <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 #
 #
-# # REVERSED&HOOK&GROUP4
+# # REVERSED&HOOK&GROUP_4
 #
 <UEFD6><dead_hook><UEFD0><4>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 <Multi_key><backslash><braceleft><numbersign><4>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
@@ -2568,7 +2579,7 @@
 <Multi_key><braceleft><backslash><numbersign><numbersign><numbersign><numbersign>              <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 #
 #
-# # REVERSED&HOOK&GROUP5
+# # REVERSED&HOOK&GROUP_5
 #
 <UEFD6><dead_hook><UEFD0><5>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 <Multi_key><backslash><braceleft><numbersign><5>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
@@ -2593,7 +2604,7 @@
 <Multi_key><braceright><backslash>                                                             <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 #
 #
-# # REVERSED&RETROFLEX_HOOK&GROUP1
+# # REVERSED&RETROFLEX_HOOK&GROUP_1
 #
 <UEFD6><UEFD4><UEFD0>                                                                          <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 <Multi_key><backslash><braceright><numbersign>                                                 <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
@@ -2601,7 +2612,7 @@
 <Multi_key><braceright><backslash><numbersign>                                                 <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 #
 #
-# # REVERSED&RETROFLEX_HOOK&GROUP2
+# # REVERSED&RETROFLEX_HOOK&GROUP_2
 #
 <UEFD6><UEFD4><UEFD0><UEFD0>                                                                   <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 <Multi_key><backslash><braceright><numbersign><numbersign>                                     <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
@@ -2609,7 +2620,7 @@
 <Multi_key><braceright><backslash><numbersign><numbersign>                                     <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 #
 #
-# # REVERSED&RETROFLEX_HOOK&GROUP3
+# # REVERSED&RETROFLEX_HOOK&GROUP_3
 #
 <UEFD6><UEFD4><UEFD0><3>                                                                       <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 <Multi_key><backslash><braceright><numbersign><3>                                              <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
@@ -3131,7 +3142,7 @@
 <Multi_key><colon>                                                                        <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 #
 #
-# # DIAERESIS&GROUP1
+# # DIAERESIS&GROUP_1
 #
 <dead_diaeresis><UEFD0>                                                                 <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                                          <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
@@ -3147,7 +3158,7 @@
 <Multi_key><colon><numbersign>                                                         <backslash> : "⊻" U22BB # XOR
 #
 #
-# # DIAERESIS&GROUP2
+# # DIAERESIS&GROUP_2
 #
 <dead_diaeresis><UEFD0><UEFD0>                                                             <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><colon><numbersign><numbersign>                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
@@ -3155,7 +3166,7 @@
 <Multi_key><colon><numbersign><numbersign>                                             <backslash> : "⊼" U22BC # NAND
 #
 #
-# # DIAERESIS&GROUP3
+# # DIAERESIS&GROUP_3
 #
 <dead_diaeresis><UEFD0><3>                                                                 <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><colon><numbersign><3>                                                          <grave> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
@@ -3383,7 +3394,7 @@
 <Multi_key><section>                                                                           <t> : "ț" U021B # LATIN SMALL LETTER T WITH COMMA BELOW
 #
 #
-# # COMMA_BELOW&GROUP1
+# # COMMA_BELOW&GROUP_1
 #   Lenient group selection
 #
 <dead_belowcomma><UEFD0>                                                                       <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
@@ -3394,7 +3405,7 @@
 <Multi_key><section><numbersign>                                                               <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
-# # COMMA_BELOW&GROUP2
+# # COMMA_BELOW&GROUP_2
 #
 <dead_belowcomma><UEFD0><UEFD0>                                                                <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign>                                                 <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
@@ -3404,7 +3415,7 @@
 <Multi_key><section><numbersign><numbersign>                                                   <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
-# # COMMA_BELOW&GROUP3
+# # COMMA_BELOW&GROUP_3
 #
 <dead_belowcomma><UEFD0><3>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><3>                                                          <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
@@ -3426,7 +3437,7 @@
 <Multi_key><section><numbersign><numbersign><numbersign>                                       <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
-# # COMMA_BELOW&GROUP4
+# # COMMA_BELOW&GROUP_4
 #
 <dead_belowcomma><UEFD0><4>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><4>                                                          <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
@@ -3448,7 +3459,7 @@
 <Multi_key><section><numbersign><numbersign><numbersign><numbersign>                           <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
-# # COMMA_BELOW&GROUP5
+# # COMMA_BELOW&GROUP_5
 #
 <dead_belowcomma><UEFD0><5>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><5>                                                          <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
@@ -5556,7 +5567,7 @@
 #	Z z	Ʒ ʒ	Ɀ ɀ	Ᶎ ᶎ	Ⱬ ⱬ	ʓ ʑ	Ꝣ ꝣ	 ʐ	Ζ ζ	𝒵 𝓏	ℤ 𝕫	ℨ 𝔷	𝖹 𝗓
 #
 #
-# # GROUP1
+# # GROUP_1
 #   Group 1 on the base alphabet: Latin letters, modifier letters, punctuation, Euro sign and dead keys
 #
 <UEFD0>                                                                                        <A> : "Æ" U00C6 # LATIN CAPITAL LETTER AE
@@ -5665,7 +5676,7 @@
 <Multi_key><numbersign>                                                                        <z> : "ʒ" U0292 # LATIN SMALL LETTER EZH
 #
 #
-# # GROUP2
+# # GROUP_2
 #   Group 2 on the base alphabet: Latin letters (continued)
 #
 #   The deprecated l with middle dot Ŀ ŀ is in the dead_abovedot dead key.
@@ -5776,7 +5787,7 @@
 <Multi_key><numbersign><numbersign>                                                            <z> : "ɀ" U0240 # LATIN SMALL LETTER Z WITH SWASH TAIL
 #
 #
-# # GROUP3
+# # GROUP_3
 #   Group 3 on the base alphabet: Latin letters (continued)
 #
 <UEFD0><3>                                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
@@ -6093,7 +6104,7 @@
 <Multi_key><numbersign><numbersign><numbersign>                                                <z> : "ᶎ" U1D8E # LATIN SMALL LETTER Z WITH PALATAL HOOK
 #
 #
-# # GROUP4
+# # GROUP_4
 #   Group 4 on the base alphabet: Latin letters (continued)
 #
 <UEFD0><4>                                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
@@ -6410,7 +6421,7 @@
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <z> : "ⱬ" U2C6C # LATIN SMALL LETTER Z WITH DESCENDER
 #
 #
-# # GROUP5
+# # GROUP_5
 #   Group 5 on the base alphabet: Latin letters (continued)
 #
 #   "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E has lowercase position
@@ -6627,11 +6638,11 @@
 <Multi_key><numbersign><KP_5>                                                                  <z> : "ʑ" U0291 # LATIN SMALL LETTER Z WITH CURL
 #
 #
-# # GROUP11
+# # GROUP_11
 #   Group 11 on the base alphabet: Latin letters (continued)
 #
 #   Groups 6..10 follow after Latin letters, group 12.
-#   See # # GROUP6
+#   See # # GROUP_6
 #
 <UEFD0><1>                                                                                     <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
 <Multi_key><numbersign><1>                                                                     <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
@@ -6843,7 +6854,7 @@
 <Multi_key><numbersign><KP_1>                                                                  <z> : "ꝣ" UA763 # LATIN SMALL LETTER VISIGOTHIC Z
 #
 #
-# # GROUP12
+# # GROUP_12
 #   Group 12 on the base alphabet: Latin letters (continued, end)
 #
 <UEFD0><2>                                                                                     <A> : "ẚ" U1E9A # LATIN SMALL LETTER A WITH RIGHT HALF RING
@@ -7056,7 +7067,7 @@
 <Multi_key><numbersign><KP_2>                                                                  <z> : "ʐ" U0290 # LATIN SMALL LETTER Z WITH RETROFLEX HOOK
 #
 #
-# # GROUP6
+# # GROUP_6
 #   Group 6 on the base alphabet: Greek letters
 #
 #   This group using the mnemonics of the Greek dead key in column 6, letter Y or
@@ -8999,7 +9010,7 @@
 #
 #
 #
-# # GROUP7
+# # GROUP_7
 #   Group 7 on the base alphabet
 #   Script, also in bold
 #   Italic of group 7 is used as a shorthand for bold italic of group 8.
@@ -9641,7 +9652,7 @@
 <Multi_key><numbersign><KP_7><KP_Decimal>                                                      <z> : "𝒛" U1D49B # MATHEMATICAL BOLD ITALIC SMALL Z
 #
 #
-# # GROUP8
+# # GROUP_8
 #   Group 8 on the base alphabet
 #   Double-struck, Bold, Italic, Bold italic
 #
@@ -10783,7 +10794,7 @@
 <Multi_key><numbersign><KP_8><period><comma>                                                   <z> : "𝒛" U1D49B # MATHEMATICAL BOLD ITALIC SMALL Z
 #
 #
-# # GROUP9
+# # GROUP_9
 #   Group 9 on the base alphabet
 #   Fraktur, also in bold, and Monospace
 #
@@ -11470,7 +11481,7 @@
 <Multi_key><numbersign><KP_9><KP_Decimal>                                                  <space> : " " U2007 # FIGURE SPACE
 #
 #
-# # GROUP10
+# # GROUP_10
 #   Group 10 on the base alphabet
 #   Sans-serif, also in bold, italic, and bold italic
 #
@@ -12613,8 +12624,8 @@
 #
 #
 # # Groups 11 and 12 for Latin letters follow group 5.
-#   See # # GROUP11
-#   See # # GROUP12
+#   See # # GROUP_11
+#   See # # GROUP_12
 #
 #
 # (NE PAS EFFACER) # end additions Compose dispoclavier
