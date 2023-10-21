@@ -2991,17 +2991,6 @@
 #   dead_diaeresis
 #   Multi_key: ¦:
 #
-#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_diaeresis
-#   yields low, opening, curly quotation marks U201A, U201E.
-#   See # # Quotation mark input method
-#
-#   Superscript digits, formerly in dead_circumflex, are also supported for the
-#   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
-#   key is not extended to the signs and parentheses since NF Z71-300:2019 does
-#   not require these, and their Multi_key equivalents would conflict with many
-#   mathematical symbols. that would need to be disambiguated by leading space.
-#   See #*# CIRCUMFLEX
-#
 #   Diaeresis also supports hyphen and long dashes, with base characters on the
 #   upper row, which makes sense as dead_diaeresis is on the base level of E05.
 #   The HYPHEN punctuation has been separately encoded as U2010, although it is
@@ -3010,16 +2999,29 @@
 #   See # # Dashes and hyphens
 #   See # # Hyphen and long dashes
 #
-#   Also used as a synonym of EQUAL in mathematical symbols, except for those
-#   of these quick access sequences that conflict with regular support.
-#   So, "⊆" U2286, "≥" U2265, "≤" U2264 by dead_diaeresis grave, less, greater
-#   have been discarded.
-#   See #*# DOUBLE, FLAG_LETTER
+#   For intuitivity, with asterisk as a base character it yields "⁑" U2051.
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol, have quick access
 #   by dead_diaeresis followed by bar or slash, and backslash respectively, as
 #   these symbols are in group 3 of | for ‖, and in group 9 of | for ¦.
+#
+#   Superscript digits, formerly in dead_circumflex, are also supported for the
+#   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
+#   key is not extended to the signs and parentheses since NF Z71-300:2019 does
+#   not require these, and their Multi_key equivalents would conflict with many
+#   mathematical symbols. that would need to be disambiguated by leading space.
+#   See #*# CIRCUMFLEX
+#
+#   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
+#   but also "Ø" U00D8, "ø" U00F8 for convenience.
+#   See # # Oslash for Danish, Norwegian and other languages
+#
+#   Also used as a synonym of EQUAL in mathematical symbols, except for those
+#   of these quick access sequences that conflict with regular support.
+#   So, "⊆" U2286, "≥" U2265, "≤" U2264 by dead_diaeresis grave, less, greater
+#   have been discarded.
+#   See #*# DOUBLE, FLAG_LETTER
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
@@ -3140,6 +3142,10 @@
 <Multi_key><colon>                                                                        <Ugrave> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_diaeresis>                                                                          <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon>                                                                        <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
+<dead_diaeresis>                                                                        <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
+<Multi_key><colon>                                                                      <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
+<dead_diaeresis>                                                                        <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
+<Multi_key><colon>                                                                      <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
 #
 #
 # # DIAERESIS&GROUP_1
