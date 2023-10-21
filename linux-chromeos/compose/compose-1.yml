@@ -7394,11 +7394,12 @@
 #   turned Latin capital letters, also upright for centrally symmetric letters.
 #   For an example see the “Propulsé par” (“Powered by”) mention at the bottom:
 #   https://humanisme-renaissance.droz.org
-#   https://www.unicode.org/L2/L2008/08019-lisu.pdf
 #
 #   Old Lisu has turned glyphs for A..L, N..P, R..V, X..Z because Q is not used
 #   at all, and turned M and W are confusable. "𑾰" U11FB0 has been encoded late
 #   and is therefore outside the BMP.
+#   https://www.unicode.org/L2/L2008/08019-lisu.pdf
+#   https://www.unicode.org/L2/L2018/18338r2-lisu-letter-yha.pdf
 #
 #   The TURNED dead key supports Lisu letters looking like turned Latin letters
 #   or like the centrally symmetric H, I, N, O, S, X, Z since these may be used
@@ -10901,14 +10902,33 @@
 <Multi_key><numbersign>                                                                    <UEF63> : "¿" U00BF # TURNED QUESTION MARK
 #
 #
-# # Oslash and Aring for Danish, Norwegian and other languages
+# # Aring for Danish, Norwegian, Swedish, Finnish, Walloon, and Chamorro
+#
+#   Aring is supported in dead_abovering. As a convenience, Aring is mapped
+#   to Agrave in group 1, and also to Adiaeresis that Swiss QWERTZ has.
+#
+<UEFD0>                                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<Multi_key><numbersign>                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<UEFD0>                                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<Multi_key><numbersign>                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<UEFD0>                                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<UEFD0>                                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+#
+#
+# # Oslash for Danish, Norwegian and other languages
 #
 #   ISO layouts have "Øø" in group 1 on Oo, and "Œœ" on Ee. For intuitivity
 #   and predictability, Oslash is supported in dead_longsolidusoverlay, and
 #   both letters Ææ and Œœ are in group 1 on Aa and Oo in this layout. As a
 #   convenience for Danish and other languages using Oslash, this is mapped
 #   to Ccedilla and Odiaeresis in group 1. On AZERTY, Ccedilla is above the
-#   O key, while Swiss QWERTZ has also an Odiaeresis live key.
+#   O key, while Swiss QWERTZ has also an Odiaeresis live key. In an effort
+#   to mitigate the inconvenience of not having Øø in group 1 of Oo, Oslash
+#   is also in dead_diaeresis, on Ccedilla again, with good mnemonics since
+#   Danish Øø is phonetically equivalent to Swedish Öö.
+#   See #*# DIAERESIS
 #
 <UEFD0>                                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
 <Multi_key><numbersign>                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
@@ -10918,14 +10938,6 @@
 <Multi_key><numbersign>                                                               <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
 <UEFD0>                                                                               <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
 <Multi_key><numbersign>                                                               <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
-<UEFD0>                                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
-<Multi_key><numbersign>                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
-<UEFD0>                                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
-<Multi_key><numbersign>                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
-<UEFD0>                                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
-<Multi_key><numbersign>                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
-<UEFD0>                                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
-<Multi_key><numbersign>                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
 #
 #
 # # Ntilde for Breton and Spanish
