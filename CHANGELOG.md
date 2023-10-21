@@ -3,6 +3,7 @@
 ## 1.0.15 (projet)
 
 * Touches mortes : Crochet palatal : Ajouter le diacritique combinant "̡" U0321. Tourné : Ajouter "ꓭ" UA4ED, "ꓷ" UA4F7, "ꓩ" UA4E9, "ꓠ" UA4E0, "ꓳ" UA4F3, "ꓒ" UA4D2, "ꓤ" UA4E4, "ꓢ" UA4E2, "ꓵ" UA4F5, "ꓫ" UA4EB, "ꓜ" UA4DC. Inversé : Ajouter "ꓯ" UA4EF, "ꓭ" UA4ED, "ꓛ" UA4DB, "ꓷ" UA4F7, "ꓱ" UA4F1, "ꓞ" UA4DE, "ꓨ" UA4E8, "ꓧ" UA4E7, "ꓲ" UA4F2, "ꓩ" UA4E9, "ꓘ" UA4D8, "ꓶ" UA4F6, "ꓠ" UA4E0, "ꓳ" UA4F3, "ꓒ" UA4D2, "ꓤ" UA4E4, "ꓢ" UA4E2, "ꓕ" UA4D5, "ꓵ" UA4F5, "ꓥ" UA4E5, "ꓫ" UA4EB, "𑾰" U11FB0, "ꓜ" UA4DC. Supprimer "Ɐ" U2C6F, "ꟷ" UA7F7, "ʁ" U0281. Documentation. (compose-1.yml [57644a5](https://github.com/dispoclavier/nouvel-azerty/commit/57644a5f6bebe6e0e5797df9ef3a9e7260361751), compose-2.yml [419310d](https://github.com/dispoclavier/nouvel-azerty/commit/419310d3cc5aefaf16584f1c3bee10677f94ff57))
+* Touches mortes : Tréma : Redonder "Ø" U00D8, "ø" U00F8. (compose-1.yml [40b9b8f](https://github.com/dispoclavier/nouvel-azerty/commit/40b9b8fef20fa0c0d615fb68d3433994d2f90442), compose-2.yml [3068d68](https://github.com/dispoclavier/nouvel-azerty/commit/3068d686bf5ecfc2c7dc153da98f7bd5812c4f3e))
 
 ## 1.0.14 (2023-09-29)
 
