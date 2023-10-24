@@ -1,4 +1,4 @@
-//                       Date: 2023-10-24T2258+0200
+//                       Date: 2023-10-24T2304+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -82,7 +82,7 @@ default xkb_keycodes "evdev" {
   minimum =   8;
   maximum = 255;
 
-  // The main layout and 4 distributable variants are configurable below.
+  // The main layout and 6 distributable variants are configurable below.
   // As HP laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
   // the variant with Backspace on Menu is provided also with swapped Caps/ISO keys.
   // suffix="-win":       Backspace on right Windows.
