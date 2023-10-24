@@ -2,9 +2,11 @@
 
 Ce nouvel AZERTY est la disposition de base au sein d’un ensemble de dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie, qui prennent en charge l’espacement des grandes ponctuations selon la typographie française nouvelle école. L’espacement vieille école manuel du deux-points est facilité, de même que l’écriture avec majuscules diacritées, toutes en `Maj`, ou en capitales diacritées, toutes en `VerrCap`.
 
-Ces fonctionnalités nécessitent la mise en œuvre des ressources nativement disponibles dans Windows et dans Linux et ChromeOS pour ajouter une 2ᵉ bascule graphique, appelée `VerrMod`, ainsi qu’une 3ᵉ modificatrice graphique, nommée `AltFr`, pour les ponctuations espacées et les chiffres à la française avec séparateur des milliers. Chiffres aussi en `AltGr` comme tous les symboles et ponctuations ASCII sauf la virgule et le point, en Minuscule tous les deux.
+Ces fonctionnalités nécessitent la mise en œuvre des ressources nativement disponibles dans Windows et dans Linux pour ajouter une 2ᵉ bascule graphique, appelée `VerrMod`, ainsi qu’une 3ᵉ modificatrice graphique, nommée `AltFr`, pour les ponctuations espacées et les chiffres à la française avec séparateur des milliers. Chiffres aussi en `AltGr` comme tous les symboles et ponctuations ASCII sauf la virgule et le point, en Minuscule tous les deux.
 
-En « mode numérique », le deux-points et le point-virgule reviennent en minuscule comme sur l’AZERTY traditionnel, après avoir laissé leurs places aux deux obliques en « mode français » afin que toutes les huit grandes ponctuations soient en `Maj` sans espace, et en `AltFr` avec l’espace fine insécable, Unicode U+202F, recommandée pour mettre en œuvre les règles en usage à l’Imprimerie nationale. L’espace fine U+2009 conçue comme insécable y avait été destinée.
+En « mode numérique », le deux-points et le point-virgule reviennent en minuscule comme sur l’AZERTY traditionnel, après avoir laissé leurs places aux deux obliques en « mode français » afin que toutes les huit grandes ponctuations soient en `Maj` sans espace, et en `AltFr` avec l’espace fine insécable, Unicode U+202F, recommandée pour mettre en œuvre les règles en usage à l’Imprimerie nationale. Une [note](https://dispoclavier.com/nouvel-azerty/#note-2250-2-a) explique pourquoi cette espace fine insécable n’existe que depuis Unicode 3.0.
+
+Des versions de ces vues avec infobulles et bascules cliquables sont en ligne sur la [page d’accueil de ce nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) sur le site [dispoclavier.com](https://dispoclavier.com).
 
 Nouvel AZERTY en mode français :
 ![Nouvel AZERTY en mode français](https://dispoclavier.com/img/nouvel-azerty.png)
