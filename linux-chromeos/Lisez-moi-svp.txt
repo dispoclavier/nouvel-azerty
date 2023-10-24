@@ -1,6 +1,6 @@
-                      Date : 2023-09-29T1237+0200
-                   Version : 1.0.14
-            Nom du produit : Nouvel AZERTY
+                      Date : 2023-10-24T2112+0200
+                   Version : 1.1.0
+            Nom du produit : Un nouvel AZERTY
         Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
              Documentation : https://dispoclavier.com/nouvel-azerty/
@@ -29,9 +29,9 @@
 
   Dispositions
 
-  • Les fichiers `nouvel-azerty.xkb`, `nouvel-azerty-ansi.xkb` et `nouvel-azerty-bksp.xkb`
-    sont identiques aux fichiers `kbfrFRs.xkb`, `kbfrFRs-ansi.xkb` et `kbfrFRs-bksp.xkb`.
-    C’est la disposition de base de ce nouvel AZERTY.
+  • Les fichiers `nouvel-azerty.xkb` et `kbfrFRs.xkb` sont identiques.
+    Les fichiers `nouvel-azerty-[suffixe].xkb` et `kbfrFRs-[suffixe].xkb` aussi.
+    C’est la disposition de base de ce nouvel AZERTY, avec ses sous-variantes.
 
   • Les fichiers dont les noms commencent par `kbbrFRs` contiennent une disposition optimisée pour
     la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
@@ -46,39 +46,47 @@
 
   • Les fichiers dont les noms commencent par `kbfrBEs` contiennent une disposition optimisée pour
     la Belgique, avec le symbole § sur le 6, le tiret du 6 sur le 8, et le tiret du 8 sur Maj + 8.
-    Espérant que ce compromis est acceptable en échange des fonctionnalités du nouvel AZERTY.
+    Espérant que ce compromis est acceptable en échange des fonctionnalités de ce nouvel AZERTY.
 
   • Les fichiers dont les noms commencent par `kbfrFRr` contiennent une disposition optimisée pour
-    une saisie plus ergonomique de l’alphabet de base et d’une partie des lettres diacritées, afin
-    que les exigences en matière d’ergonomie n’obligent pas à renoncer aux fonctionnalités prises
+    une saisie plus ergonomique de l’alphabet de base et des lettres diacritées, afin que
+    les exigences en matière d’ergonomie n’obligent pas à renoncer aux fonctionnalités prises
     en charge par ce nouvel AZERTY.
 
 
   Options de disposition
 
-  Outre la disposition standard et ses variantes, deux optimisations optionnelles sont disponibles.
+  Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles
+  dans les sous-variantes de chacune des variantes énumérées ci-dessus :
 
-  • Pour les claviers de portable sans touche ISO entre Maj gauche et W, en particulier ceux
+  • Sur les claviers de portable sans touche ISO entre Maj gauche et W, en particulier ceux
     de marque HP commercialisés en France, la touche ISO se trouve sur Contrôle droite.
     Or la touche ISO sert de nouvelle modificatrice AltFr, qui doit être située à gauche
     pour que les grandes ponctuations, toutes à droite, et le pavé numérique graphique soient
     utilisables dans de bonnes conditions.
 
     Remettre AltFr à gauche est possible en permutant les touches ISO et Verrouillage Capitales.
-    C’est ce qui est fait dans les variantes avec le suffixe « -ansi ».
+    C’est ce qui est fait dans les variantes avec le suffixe « -ansi » ou « -ansi-menu ».
 
-  • Selon une idée originale du Pʳ Yves Neuville, la touche Retour Arrière est mieux en bas.
-    Avec Retour Arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
-    de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Retour Arrière
-    sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, mieux
-    vaut la désactiver.
+  • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
+    Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
+    de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Effacement arrière
+    sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, elle est
+    optionnellement désactivée.
 
-    Les variantes avec le suffixe « -bksp » ont Backspace sur Windows droite, et la touche
-    Menu est désactivée en lui assignant la fonctionnalité de la touche d’Arrêt Défilement
-    afin d’éviter l’ouverture accidentelle du menu contextuel.
+    ◦ Les variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
+    
+    ◦ Les variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
+      et la touche Menu est désactivée en lui assignant la fonctionnalité de la bascule
+      Arrêt Défilement, afin d’éviter l’ouverture accidentelle du menu contextuel.
 
-    Cela ne fonctionne pas dans VSCode. Dans VSCode on peut dans ce cas ajouter deleteLeft
-    sur ContextMenu et sur Backspace.
+      Cela ne fonctionne pas dans VSCode, où on peut paramétrer les raccourcis clavier pour
+      deleteLeft et deleteWordLeft. Cela fonctionne pour ContextMenu et Effacement arrière,
+      mais pas pour Windows droite.
+      
+    ◦ Les variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur Menu.
+    
+    ◦ Les variantes avec le suffixe « -ctrl » ont Effacement arrière sur Contrôle droite.
 
 
   Témoin lumineux
@@ -95,7 +103,7 @@
   2  Visiter https://github.com/dispoclavier/nouvel-azerty
      Le dossier https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/compose
        visualise le contenu des séquences et des touches mortes en deux parties ;
-     Le lien https://dispoclavier.com/nouvel-azerty/ ouvre la page d’accueil du nouvel AZERTY.
+     Le lien https://dispoclavier.com/nouvel-azerty/ ouvre la page d’accueil de ce nouvel AZERTY.
 
   3  Aller sur la page de la version courante :
          https://github.com/dispoclavier/nouvel-azerty/releases/latest 
@@ -106,7 +114,8 @@
 
   5  Décompresser le dossier téléchargé.
 
-  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` vers le dossier `Home`.
+  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
+     vers le dossier `Home`.
 
   7  Si le dossier `Home` contient déjà un fichier invisible `.XCompose`,
      ajouter le contenu du fichier `Compose.yml` au début ou à la fin de celui-ci.
@@ -118,6 +127,7 @@
 
   9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
          xkbcomp nouvel-azerty.xkb :0
+     Remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante choisie.
 
   Veiller à ce que la méthode d’entrée soit XIM.
   Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
