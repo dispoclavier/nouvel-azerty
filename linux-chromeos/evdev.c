@@ -1,4 +1,4 @@
-//                       Date: 2023-10-24T1859+0200
+//                       Date: 2023-10-24T2258+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -106,15 +106,19 @@ default xkb_keycodes "evdev" {
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4
 
-        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on right Windows or Menu.
+        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, COMP or RCTL.
 
         <RWIN> = 134;  // was <RWIN>   Common mapping for desktop and laptop.
         <COMP> = 135;  // was <COMP>   Common mapping for desktop and laptop.
+        <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
 
   //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
   //    <SCLK> = 135;  // was <COMP>   Additionally: Deactivates the Menu key.
 
   //    <BKSP> = 135;  // was <COMP>   Backspace on Menu key for compact keyboards.
+
+  //    <BKSP> = 105;  // was <RCTL>   Backspace on right Control key for laptops.
+  //    <RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
 
   // Permutating BKSP and RCTL here fails in applications relying partly on keycodes,
   // such as VSCode in the editor, not in the search widget (where both work). That is
@@ -139,7 +143,6 @@ default xkb_keycodes "evdev" {
   // Other right-hand functional keys:
 
   alias <MENU> = <COMP>;
-        <RCTL> = 105;  // was <RCTL>
         <RTRN> =  36;  // was <RTRN>
         <RTSH> =  62;  // was <RTSH>
         <RALT> = 108;  // was <RALT>
