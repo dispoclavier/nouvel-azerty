@@ -1,4 +1,4 @@
-//                       Date: 2023-09-30T0208+0200
+//                       Date: 2023-10-24T1859+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -18,12 +18,12 @@
 //   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
 //                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
 //                             kbfrBEs  French Belgium semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
-//                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 //                             kbfrFRr  French France remapped semiautomatic keyboard layout
 //                             kbfrFRs  French France semiautomatic keyboard layout
 //                             kbfrPFs  French Polynesia semiautomatic keyboard layout
+//                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
+//                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
+//                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
@@ -50,44 +50,28 @@
 //          The difference is 8 added when passing Linux key codes
 //          over to X. X key codes come on top of the Linux key codes
 //          and are mapped to XKB key labels in this file.
+//
 //          Some widespread applications are sometimes ignoring these
-//          labels, partly when handling the backspace key. However,
+//          labels, partly when handling the Backspace key. However,
 //          some essential remappings are performed here inside XKB.
 //
-// Linux keycodes appear in /usr/include/linux/input-event-codes.h.
+// Linux keycodes appear in /usr/inc/linux/input-event-codes.h.
+// https://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
+// http://manpages.ubuntu.com/manpages/xenial/man1/showkey.1.html
 // ArchLinux gives the default scancodes-to-keycodes mapping in
 // /usr/lib/udev/hwdb.d/60-keyboard.hwdb.
 // Some versions of Ubuntu like 16.04 do not have this.
 //
 // This file covers key remappings that should apply system-wide
 // rather than on a per-keylayout basis.
-// Certain remappings are useless when performed in symbols files.
-// E.g. mapping NumLock to <TLDE> in a symbols/* file
-// directs the Left Alt key to bug.
 //
-// From https://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
-// scancodes: 0e = Backspace, e0 1d = RCtrl
-// From /usr/inc/linux/input-event-codes.h:
-// #define KEY_BACKSPACE        14
-// #define KEY_RIGHTCTRL        97
-// From http://manpages.ubuntu.com/manpages/xenial/man1/showkey.1.html
-// sudo showkey [-s|--scancodes] | [-k|--keycodes] | [-a|--ascii] | [-h|--help]
-// sudo showkey -k
-// Backspace:
-// keycode  14 press
-// keycode  14 release
-// (Right Control keypress:)
-// keycode  97 press
-// keycode  97 release
-// sudo showkey -s
-// (Backspace keypress:)
-// 0x0e
-// 0x8e
-// Right Control:
-// 0xe0 0x1d
-// 0xe0 0x9d
-// From http://manpages.ubuntu.com/manpages/xenial/man8/setkeycodes.8.html
+// Remappings on a per-user basis for built-in keyboards and without
+// support for USB keyboards may be performed using setkeycodes.
+// This has the upside of being done in the kernel, not in XKB, so it
+// applies also in applications (VSCode) disregarding XKB remappings.
+// http://manpages.ubuntu.com/manpages/xenial/man8/setkeycodes.8.html
 // sudo setkeycodes scancode keycode [...]
+// Permutate Backspace and right Control:
 // sudo setkeycodes 0e 97 e01d 14
 // This command has cross-session validity until shutdown.
 // The remapping may be inadvertently lost once and needs to be redone.
@@ -98,43 +82,56 @@ default xkb_keycodes "evdev" {
   minimum =   8;
   maximum = 255;
 
-  // Configuring distributable variants:
+  // The main layout and 4 distributable variants are configurable below.
+  // As HP laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
+  // the variant with Backspace on Menu is provided also with swapped Caps/ISO keys.
+  // suffix="-win":       Backspace on right Windows.
+  // suffix="-win-sans":  Backspace on right Windows sans Menu.
+  // suffix="-menu":      Backspace on Menu.
+  // suffix="-ctrl":      Backspace on right Control.
+  // suffix="-ansi":      Swap CapsLock and ISO key for ANSI keyboards.
+  // suffix="-ansi-menu": Swap CapsLock and ISO key, Backspace on Menu.
 
-  // <LSGT> is key ISO B00, AltFr on ISO keyboards.
+  // Each key can be mapped only once, and the latest mapping overrides previous ones.
+
   // On ANSI keyboards for ISO keyboard markets, B00 is mapped on Right Control,
   // so that for AltFr to stay lefthand, keys LSGT and CAPS need to be swapped.
+  // <LSGT> is key ISO B00, and on ISO keyboards this is the AltFr modifier key.
+
+        <LSGT> =  94;  // was <LSGT>   Common mapping for desktop and laptop.
+        <CAPS> =  66;  // was <CAPS>   Common mapping for desktop and laptop.
+  //    <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
+  //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
+
+  // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
+  // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4
+
+        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on right Windows or Menu.
+
+        <RWIN> = 134;  // was <RWIN>   Common mapping for desktop and laptop.
+        <COMP> = 135;  // was <COMP>   Common mapping for desktop and laptop.
+
+  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
+  //    <SCLK> = 135;  // was <COMP>   Additionally: Deactivates the Menu key.
+
+  //    <BKSP> = 135;  // was <COMP>   Backspace on Menu key for compact keyboards.
 
   // Permutating BKSP and RCTL here fails in applications relying partly on keycodes,
   // such as VSCode in the editor, not in the search widget (where both work). That is
   // worked around by adding keybindings for deleteLeft and deleteWordLeft both on the
-	// ContextMenu key and on Backspace. The right Windows key is still Meta and cannot
+  // ContextMenu key and on Backspace. The right Windows key is still Meta and cannot
   // be assigned commands such as deleteLeft, using the VSCode keybinding customizer.
 
   // Swapping BKSP and RCTL on built-in keyboards may be done using setkeycodes, but
   // that fails on external keyboards. See “setkeycodes not effective on USB keyboard”
-	// https://bugzilla.redhat.com/show_bug.cgi?id=211803
-
-  // Each key can be mapped only once, and the latest mapping overrides previous ones.
-  // So BKSP needs to be mapped ad hoc on a per-user basis anyway, not distributable.
-
-        <LSGT> =  94;  // was <LSGT>   Common mappings for desktop and laptop.
-        <CAPS> =  66;  // was <CAPS>   Common mappings for desktop and laptop.
-  //    <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
-  //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
-
-        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on right Windows for desktop.
-
-        <RWIN> = 134;  // was <RWIN>   Common mappings for desktop and laptop.
-        <COMP> = 135;  // was <COMP>   Common mappings for desktop and laptop.
-  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop.
-  //    <SCLK> = 135;  // was <COMP>   Backspace on right Windows for desktop: Deactivates the menu key.
+  // https://bugzilla.redhat.com/show_bug.cgi?id=211803
 
   // Other left-hand functional keys:
 
         <ESC>  =   9;  // was <ESC>
         <TAB>  =  23;  // was <TAB>
         <LCTL> =  37;  // was <LCTL>
-        <TLDE> =  49;  // was <TLDE> Now ModLock key switching lock between group1 and group2.
+        <TLDE> =  49;  // was <TLDE>   Now ModLock key that switches between group1 lock and group2 lock.
         <LFSH> =  50;  // was <LFSH>
         <LALT> =  64;  // was <LALT>
         <LWIN> = 133;  // was <LWIN>
@@ -448,4 +445,3 @@ default xkb_keycodes "evdev" {
 xkb_keycodes "pc98" {
   include "evdev(evdev)"
 };
-
