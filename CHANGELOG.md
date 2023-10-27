@@ -2,7 +2,7 @@
 
 ## 1.1.1 (2023-10-27)
 
-* Touches mortes : Corriger la répartition des diacritiques combinants. (compose-1.yml [c279c4e](https://github.com/dispoclavier/nouvel-azerty/commit/c279c4e671677025e2381d9f92478b9239d6b29c), compose-2.yml [403ceca](https://github.com/dispoclavier/nouvel-azerty/commit/403ceca95b46d3559d6fb1b0f7039c61a0b73fc2))
+* Touches mortes : Corriger la répartition des diacritiques combinants : Exposant : Remplacer "̍" U030D par "̅" U0305. Tourné : Remplacer "̅" U0305 par "̒" U0312. Réfléchi : Ajouter "̔" U0314. (compose-1.yml [c279c4e](https://github.com/dispoclavier/nouvel-azerty/commit/c279c4e671677025e2381d9f92478b9239d6b29c), compose-2.yml [403ceca](https://github.com/dispoclavier/nouvel-azerty/commit/403ceca95b46d3559d6fb1b0f7039c61a0b73fc2))
 * Fichiers XKB : Limiter les touches sans symboles à AB11 et AE13. (evdev.c [fcdee06](https://github.com/dispoclavier/nouvel-azerty/commit/fcdee06e45540fc039bca322aeb581d7206e7a8c))
 * Sous-variantes : Permuter correctement la touche Effacement arrière. (evdev.c [d5068d3](https://github.com/dispoclavier/nouvel-azerty/commit/d5068d3580a84fce5b5e5a8c258e69305fa8c524))
 
