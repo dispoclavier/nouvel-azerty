@@ -2367,6 +2367,12 @@
 #   Digits yield mathematical backslashes without space termination.
 #   See #*# STROKE
 #
+#   As a combining diacritic, "̔" U0314 # COMBINING REVERSED COMMA ABOVE is used,
+#
+<UEFD6>                                                                                    <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
+<Multi_key><backslash>                                                                     <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
+<UEFD6>                                                                                    <U200B> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
+<Multi_key><backslash>                                                                     <U200B> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <UEFD6>                                                                                    <comma> : "⹁" U2E41 # REVERSED COMMA
@@ -2955,10 +2961,10 @@
 #   dead_belowdot double press
 #   Multi_key: ¦!!
 #
-<dead_belowdot><dead_belowdot>                                                             <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<Multi_key><exclam><exclam>                                                                <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<dead_belowdot><dead_belowdot>                                                             <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<Multi_key><exclam><exclam>                                                                <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
+<dead_belowdot><dead_belowdot>                                                             <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<Multi_key><exclam><exclam>                                                                <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<dead_belowdot><dead_belowdot>                                                             <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<Multi_key><exclam><exclam>                                                                <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                             <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                      <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
@@ -2990,6 +2996,10 @@
 #*# DIAERESIS
 #   dead_diaeresis
 #   Multi_key: ¦:
+#
+#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_diaeresis
+#   yields low, opening, curly quotation marks U201A, U201E.
+#   See # # Quotation mark input method
 #
 #   Diaeresis also supports hyphen and long dashes, with base characters on the
 #   upper row, which makes sense as dead_diaeresis is on the base level of E05.
@@ -6614,10 +6624,10 @@
 <Multi_key><numbersign><5>                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
 <UEFD0><KP_5>                                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
 <Multi_key><numbersign><KP_5>                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<UEFD0><5>                                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<Multi_key><numbersign><5>                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<UEFD0><KP_5>                                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<Multi_key><numbersign><KP_5>                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
+<UEFD0><5>                                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<Multi_key><numbersign><5>                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<UEFD0><KP_5>                                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<Multi_key><numbersign><KP_5>                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <UEFD0><5>                                                                                     <X> : "̽" U033D # COMBINING X ABOVE
 <Multi_key><numbersign><5>                                                                     <X> : "̽" U033D # COMBINING X ABOVE
 <UEFD0><KP_5>                                                                                  <X> : "̽" U033D # COMBINING X ABOVE
