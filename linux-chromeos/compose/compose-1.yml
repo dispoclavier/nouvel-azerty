@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.1.0"
+<UEFA0>                     : "version 1.1.1"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -5674,9 +5674,20 @@
 #   *dead_superscript UEFD1
 #   Multi_key: ¦^
 #
-#   In CLDR, French has ordinal indicators ᵈ ᵉ ʳ ˢ since v34 (2018).
+#   In CLDR, French has ordinal indicators ᵈ, ᵉ, ʳ, ˢ since v34 (2018).
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
 #   https://github.com/unicode-org/cldr/blob/release-42/common/main/fr.xml#L1526
+#
+#   Superscript lowercase letters, most extensively used as abbreviation
+#   indicators in English, French, Italian, Portuguese, Spanish, spoken
+#   by one third of the world's population, are on live keys too and
+#   support combining diacritics.
+#
+#   The uppercase alphabet is less complete, but some letters are used
+#   for natural languages.
+#   In 2020 and 2021, more uppercase letters were added: C, F, Q.
+#   See L2/20-251, cited in L2/21-016r:
+#   https://www.unicode.org/L2/L2021/21016r-script-adhoc-rept.pdf
 #
 #   Superscript small q is part of Unicode since v14.0 released in 2020.
 #   https://www.unicode.org/L2/L2020/20117-modifier-letter-suppt.pdf
@@ -5690,31 +5701,28 @@
 #
 #   While there is a consensus to include superscript letters in
 #   Unicode for phonetic notation, making abbreviation indicators
-#   plain text is traditionally fiercely opposed by members of the
-#   Consortium for software marketing reasons.
+#   plain text is traditionally fiercely opposed by some members of
+#   the Consortium, obviously for software marketing reasons.
 #
 #   When character names on a MODIFIER LETTER basis were introduced,
 #   this became the new term for “superscript”, while “subscript”
-#   remained unchanged.
+#   remained unchanged. The goal was to make clear that preformatted
+#   superscript letters should not be used instead of formatted ones,
+#   but the attempt was pointless since superscript bears semantics
+#   and is therefore a matter of plain text. Disguising subscript was
+#   dropped due to running out of technical terms.
 #
-#   Superscript lowercase letters, most extensively used as abbreviation
-#   indicators in English, French, Italian, Portuguese, Spanish, spoken
-#   by one third of the world's population, are on live keys too and
-#   support combining diacritics.
-#
-#   The uppercase alphabet is less complete, but some letters are used
-#   for natural languages.
-#   In 2020 and 2021, more uppercase letters were added: C, F, Q.
-#   See L2/20-251, cited in L2/21-016r:
-#   https://www.unicode.org/L2/L2021/21016r-script-adhoc-rept.pdf
+#   To fill the combining diacritic slot, "̅" U0305 COMBINING OVERLINE is used,
+#   with mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this
+#   slot for the SUBSCRIPT_OR_SMALL_CAPS dead key,   
 #
 #
-#   Derivatives
+#   Combining diacritic
 #
-<UEFD1>                                                                                    <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<Multi_key><asciicircum>                                                                   <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<UEFD1>                                                                                    <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<Multi_key><asciicircum>                                                                   <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
+<UEFD1>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
+<Multi_key><asciicircum>                                                                   <space> : "̅" U0305 # COMBINING OVERLINE
+<UEFD1>                                                                                    <U200B> : "̅" U0305 # COMBINING OVERLINE
+<Multi_key><asciicircum>                                                                   <U200B> : "̅" U0305 # COMBINING OVERLINE
 #
 #
 #   Signs and punctuation
@@ -7409,10 +7417,12 @@
 #
 #   Due to conflicts, INVERTED i.e. TURNED double press is used for a full set.
 #
-<UEFD5>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
-<Multi_key><percent>                                                                       <space> : "̅" U0305 # COMBINING OVERLINE
-<UEFD5>                                                                                    <U200B> : "̅" U0305 # COMBINING OVERLINE
-<Multi_key><percent>                                                                       <U200B> : "̅" U0305 # COMBINING OVERLINE
+#   As a combining diacritic, "̒" U0312 # COMBINING TURNED COMMA ABOVE is used,
+#
+<UEFD5>                                                                                    <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
+<Multi_key><percent>                                                                       <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
+<UEFD5>                                                                                    <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
+<Multi_key><percent>                                                                       <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <UEFD5>                                                                               <asciitilde> : "≀" U2240 # WREATH PRODUCT
 <Multi_key><percent>                                                                  <asciitilde> : "≀" U2240 # WREATH PRODUCT
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
@@ -14299,8 +14309,8 @@
 <Multi_key><underscore><underscore>                                                 <nobreakspace> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
-<UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
-<Multi_key><underscore><underscore>                                                   <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW
+<UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<Multi_key><underscore><underscore>                                                   <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                         <parenleft> : "̜" U031C # COMBINING LEFT HALF RING BELOW
