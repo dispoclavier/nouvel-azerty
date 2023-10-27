@@ -1,7 +1,7 @@
-                      Date : 2023-10-24T2112+0200
-                   Version : 1.1.0
+                      Date : 2023-10-27T1432+0200
+                   Version : 1.1.1
             Nom du produit : Un nouvel AZERTY
-        Référentiel GitHub : https://github.com/dispoclavier/nouvel-azerty
+              Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
              Documentation : https://dispoclavier.com/nouvel-azerty/
 
@@ -75,17 +75,12 @@
     optionnellement désactivée.
 
     ◦ Les variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
-    
-    ◦ Les variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
-      et la touche Menu est désactivée en lui assignant la fonctionnalité de la bascule
-      Arrêt Défilement, afin d’éviter l’ouverture accidentelle du menu contextuel.
 
-      Cela ne fonctionne pas dans VSCode, où on peut paramétrer les raccourcis clavier pour
-      deleteLeft et deleteWordLeft. Cela fonctionne pour ContextMenu et Effacement arrière,
-      mais pas pour Windows droite.
-      
+    ◦ Les variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
+      et la touche Menu est désactivée.
+
     ◦ Les variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur Menu.
-    
+
     ◦ Les variantes avec le suffixe « -ctrl » ont Effacement arrière sur Contrôle droite.
 
 
@@ -98,7 +93,7 @@
 
   1  Ouvrir un terminal dans le dossier `Home` et enregistrer la disposition actuelle dans normal.xkb :
          xkbcomp :0 normal.xkb
-     Ce fichier servira à revenir à la disposition actuelle sans fermer la session.
+     Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
 
   2  Visiter https://github.com/dispoclavier/nouvel-azerty
      Le dossier https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/compose
@@ -106,7 +101,7 @@
      Le lien https://dispoclavier.com/nouvel-azerty/ ouvre la page d’accueil de ce nouvel AZERTY.
 
   3  Aller sur la page de la version courante :
-         https://github.com/dispoclavier/nouvel-azerty/releases/latest 
+         https://github.com/dispoclavier/nouvel-azerty/releases/latest
 
   4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-
@@ -123,11 +118,14 @@
          include "%L"
      si les règles de `en_US.UTF-8/Compose` doivent continuer de s’appliquer.
 
-  8  Fermer et rouvrir les applications avec saisie de texte.
+  8  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce Compose.
 
   9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
          xkbcomp nouvel-azerty.xkb :0
      Remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante choisie.
+		 Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches AB11 et AE13.
+		 AB11 est une touche supplémentaire entre § et Maj droite sur des claviers brésiliens,
+		 et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
 
   Veiller à ce que la méthode d’entrée soit XIM.
   Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
