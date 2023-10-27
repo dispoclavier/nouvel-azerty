@@ -1,4 +1,4 @@
-//                       Date: 2023-10-27T1425+0200
+//                       Date: 2023-10-27T1527+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -107,7 +107,8 @@ default xkb_keycodes "evdev" {
   //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
 
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
-  // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4
+  // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4,
+	// Keyboard views p. 51 and 61–65. The options target the key next to the AltGr key.
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
 
@@ -116,11 +117,13 @@ default xkb_keycodes "evdev" {
         <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
 
   //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
+  //    <RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
   //    <HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
 
   //    <BKSP> = 135;  // was <MENU>   Backspace on Menu key for compact keyboards.
+  //    <MENU> =  22;  // was <BKSP>   Menu key on Backspace instead for usability.
 
-  //    <BKSP> = 105;  // was <RCTL>   Backspace on right Control key for laptops.
+  //    <BKSP> = 105;  // was <RCTL>   Backspace on right Control for compact keyboards.
   //    <RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
 
   // Permutating BKSP and RCTL here fails in applications relying partly on keycodes,
