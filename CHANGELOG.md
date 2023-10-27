@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 1.1.1 (2023-10-27)
+
+* Touches mortes : Corriger la répartition des diacritiques combinants. (compose-1.yml [c279c4e](https://github.com/dispoclavier/nouvel-azerty/commit/c279c4e671677025e2381d9f92478b9239d6b29c), compose-2.yml [403ceca](https://github.com/dispoclavier/nouvel-azerty/commit/403ceca95b46d3559d6fb1b0f7039c61a0b73fc2))
+* Fichiers XKB : Limiter les touches sans symboles à AB11 et AE13. (evdev.c [fcdee06](https://github.com/dispoclavier/nouvel-azerty/commit/fcdee06e45540fc039bca322aeb581d7206e7a8c))
+
 ## 1.1.0 (2023-10-24)
 
 * Variantes : Ajouter Effacement arrière sur Menu ou sur Contrôle droite. Ajouter Effacement arrière sur Menu pour claviers ANSI pour la France. Repenser les suffixes des variantes avec AltFr et VerrCap et/ou Effacement arrière redisposées. (evdev.c [e62f925](https://github.com/dispoclavier/nouvel-azerty/commit/e62f925935d81418d2642e5adfd4d37debafdc29), [0f8e732](https://github.com/dispoclavier/nouvel-azerty/commit/0f8e7327dcf48e8561580cd0d21ea03a37bdc1df), [cae8105](https://github.com/dispoclavier/nouvel-azerty/commit/cae8105b2e3655b6f959861816cf04325d34b332))
