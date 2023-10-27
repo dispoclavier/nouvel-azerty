@@ -1,23 +1,17 @@
 #!/usr/bin/perl
 # 2022-12-28T0901+0100
-# 2022-12-30T0635+0100
-# 2023-01-24T2215+0100
-# 2023-03-19T1533+0100
-# 2023-04-26T1950+0200
-# 2023-05-12T1154+0200
-# 2023-08-01T2210+0200
-# 2023-08-15T0611+0200
+# Last modified:
+# 2023-10-27T1438+0200
 # 
 # Adds the Multi_key equivalent below all dead key
 # lines prefixed with an '@' sign for the purpose.
-#
-# Supports also section sign in lieu of semicolon.
 #
 # Removes already existing Multi_key lines if they
 # are prefixed with an '@' sign, in order to avoid
 # adding duplicate Multi_key lines.
 #
-# Multi_key lines prefixed with an '!' are removed.
+# Lines prefixed with an '!' are stripped of any
+# Multi_key lines.
 #
 # Adds the sequence with keypad aliases instead of
 # digits below lines prefixed with a '['.
@@ -26,6 +20,14 @@
 #
 # Adds code point comments to composed characters
 # prefixed with a '?'.
+#
+#
+# # Multi_key equivalents
+#
+# The ASCII symbols used as equivalents follow the
+# new-school input composition.
+#
+# Supports also section sign in lieu of semicolon.
 #
 #
 # # Format
