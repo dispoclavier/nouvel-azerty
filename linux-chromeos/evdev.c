@@ -1,4 +1,4 @@
-//                       Date: 2023-10-24T2304+0200
+//                       Date: 2023-10-27T1425+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -51,9 +51,8 @@
 //          over to X. X key codes come on top of the Linux key codes
 //          and are mapped to XKB key labels in this file.
 //
-//          Some widespread applications are sometimes ignoring these
-//          labels, partly when handling the Backspace key. However,
-//          some essential remappings are performed here inside XKB.
+//          Some applications may be ignoring some of these mappings,
+//          notably those about handling the Backspace key.
 //
 // Linux keycodes appear in /usr/inc/linux/input-event-codes.h.
 // https://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
@@ -83,14 +82,18 @@ default xkb_keycodes "evdev" {
   maximum = 255;
 
   // The main layout and 6 distributable variants are configurable below.
+
   // As HP laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
   // the variant with Backspace on Menu is provided also with swapped Caps/ISO keys.
-  // suffix="-win":       Backspace on right Windows.
-  // suffix="-win-sans":  Backspace on right Windows sans Menu.
-  // suffix="-menu":      Backspace on Menu.
-  // suffix="-ctrl":      Backspace on right Control.
-  // suffix="-ansi":      Swap CapsLock and ISO key for ANSI keyboards.
-  // suffix="-ansi-menu": Swap CapsLock and ISO key, Backspace on Menu.
+
+  // Menu Suffix        Features
+  //   o  ""            Ordinary.
+  //   w  "-win"        Backspace on right Windows.
+  //   s  "-win-sans"   Backspace on right Windows sans Menu.
+  //   m  "-menu"       Backspace on Menu.
+  //   c  "-ctrl"       Backspace on right Control.
+  //   a  "-ansi"       Swap CapsLock and ISO key for ANSI keyboards.
+  //   b  "-ansi-menu"  Swap CapsLock and ISO key, Backspace on Menu.
 
   // Each key can be mapped only once, and the latest mapping overrides previous ones.
 
@@ -106,16 +109,16 @@ default xkb_keycodes "evdev" {
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4
 
-        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, COMP or RCTL.
+        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
 
         <RWIN> = 134;  // was <RWIN>   Common mapping for desktop and laptop.
-        <COMP> = 135;  // was <COMP>   Common mapping for desktop and laptop.
+        <MENU> = 135;  // was <MENU>   Common mapping for desktop and laptop.
         <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
 
   //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
-  //    <SCLK> = 135;  // was <COMP>   Additionally: Deactivates the Menu key.
+  //    <HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
 
-  //    <BKSP> = 135;  // was <COMP>   Backspace on Menu key for compact keyboards.
+  //    <BKSP> = 135;  // was <MENU>   Backspace on Menu key for compact keyboards.
 
   //    <BKSP> = 105;  // was <RCTL>   Backspace on right Control key for laptops.
   //    <RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
@@ -135,7 +138,7 @@ default xkb_keycodes "evdev" {
         <ESC>  =   9;  // was <ESC>
         <TAB>  =  23;  // was <TAB>
         <LCTL> =  37;  // was <LCTL>
-        <TLDE> =  49;  // was <TLDE>   Now ModLock key that switches between group1 lock and group2 lock.
+        <TLDE> =  49;  // was <TLDE>   Now ModLock toggle: group1 lock ⭤ group2 lock.
         <LFSH> =  50;  // was <LFSH>
         <LALT> =  64;  // was <LALT>
         <LWIN> = 133;  // was <LWIN>
@@ -272,26 +275,26 @@ default xkb_keycodes "evdev" {
         <FK16> = 194;
         <FK17> = 195;
         <FK18> = 196;
-        <FK19> = 197;
+  //    <FK19> = 197;
         <FK20> = 198;
         <FK21> = 199;
         <FK22> = 200;
         <FK23> = 201;
-        <FK24> = 202;
+  //    <FK24> = 202;
 
   // Keys that are generated on Japanese keyboards
 
      // <HZTG> =  93; // Hankaku/Zenkakau toggle - not actually used
   alias <HZTG> = <TLDE>;
-        <HKTG> = 101;   // Hiragana/Katakana toggle
-        <AB11> =  97;  // backslash/underscore
+  //    <HKTG> = 101;   // Hiragana/Katakana toggle
+        <AB11> =  97;   // backslash/underscore
         <HENK> = 100;   // Henkan
         <MUHE> = 102;   // Muhenkan
         <AE13> = 132;   // Yen
         <KATA> =  98;   // Katakana
         <HIRA> =  99;   // Hiragana
-        <JPCM> = 103;   // KPJPComma
-     // <RO>   =  97; // Romaji
+  //    <JPCM> = 103;   // KPJPComma
+     // <RO>   =  97;   // Romaji
 
   // Keys that are generated on Korean keyboards
 
@@ -322,18 +325,18 @@ default xkb_keycodes "evdev" {
   // evdev has standardize names for these.
 
         <LNFD> = 109;   // #define KEY_LINEFEED            101
-        <I120> = 120;   // #define KEY_MACRO               112
+  //    <I120> = 120;   // #define KEY_MACRO               112
         <I126> = 126;   // #define KEY_KPPLUSMINUS         118
         <I128> = 128;   // #define KEY_SCALE               120
         <I129> = 129;   // #define KEY_KPCOMMA             121
         <I147> = 147;   // #define KEY_MENU                139
         <I148> = 148;   // #define KEY_CALC                140
-        <I149> = 149;   // #define KEY_SETUP               141
+  //    <I149> = 149;   // #define KEY_SETUP               141
         <I150> = 150;   // #define KEY_SLEEP               142
         <I151> = 151;   // #define KEY_WAKEUP              143
         <I152> = 152;   // #define KEY_FILE                144
         <I153> = 153;   // #define KEY_SENDFILE            145
-        <I154> = 154;   // #define KEY_DELETEFILE          146
+  //    <I154> = 154;   // #define KEY_DELETEFILE          146
         <I155> = 155;   // #define KEY_XFER                147
         <I156> = 156;   // #define KEY_PROG1               148
         <I157> = 157;   // #define KEY_PROG2               149
@@ -347,7 +350,7 @@ default xkb_keycodes "evdev" {
         <I165> = 165;   // #define KEY_COMPUTER            157
         <I166> = 166;   // #define KEY_BACK                158
         <I167> = 167;   // #define KEY_FORWARD             159
-        <I168> = 168;   // #define KEY_CLOSECD             160
+  //    <I168> = 168;   // #define KEY_CLOSECD             160
         <I169> = 169;   // #define KEY_EJECTCD             161
         <I170> = 170;   // #define KEY_EJECTCLOSECD        162
         <I171> = 171;   // #define KEY_NEXTSONG            163
@@ -357,13 +360,13 @@ default xkb_keycodes "evdev" {
         <I175> = 175;   // #define KEY_RECORD              167
         <I176> = 176;   // #define KEY_REWIND              168
         <I177> = 177;   // #define KEY_PHONE               169
-        <I178> = 178;   // #define KEY_ISO                 170
+  //    <I178> = 178;   // #define KEY_ISO                 170
         <I179> = 179;   // #define KEY_CONFIG              171
         <I180> = 180;   // #define KEY_HOMEPAGE            172
         <I181> = 181;   // #define KEY_REFRESH             173
         <I182> = 182;   // #define KEY_EXIT                174
-        <I183> = 183;   // #define KEY_MOVE                175
-        <I184> = 184;   // #define KEY_EDIT                176
+  //    <I183> = 183;   // #define KEY_MOVE                175
+  //    <I184> = 184;   // #define KEY_EDIT                176
         <I185> = 185;   // #define KEY_SCROLLUP            177
         <I186> = 186;   // #define KEY_SCROLLDOWN          178
         <I187> = 187;   // #define KEY_KPLEFTPAREN         179
@@ -379,12 +382,12 @@ default xkb_keycodes "evdev" {
         <I214> = 214;   // #define KEY_CLOSE               206
         <I215> = 215;   // #define KEY_PLAY                207
         <I216> = 216;   // #define KEY_FASTFORWARD         208
-        <I217> = 217;   // #define KEY_BASSBOOST           209
+  //    <I217> = 217;   // #define KEY_BASSBOOST           209
         <I218> = 218;   // #define KEY_PRINT               210
-        <I219> = 219;   // #define KEY_HP                  211
+  //    <I219> = 219;   // #define KEY_HP                  211
         <I220> = 220;   // #define KEY_CAMERA              212
-        <I221> = 221;   // #define KEY_SOUND               213
-        <I222> = 222;   // #define KEY_QUESTION            214
+  //    <I221> = 221;   // #define KEY_SOUND               213
+  //    <I222> = 222;   // #define KEY_QUESTION            214
         <I223> = 223;   // #define KEY_EMAIL               215
         <I224> = 224;   // #define KEY_CHAT                216
         <I225> = 225;   // #define KEY_SEARCH              217
@@ -392,7 +395,7 @@ default xkb_keycodes "evdev" {
         <I227> = 227;   // #define KEY_FINANCE             219
         <I228> = 228;   // #define KEY_SPORT               220
         <I229> = 229;   // #define KEY_SHOP                221
-        <I230> = 230;   // #define KEY_ALTERASE            222
+  //    <I230> = 230;   // #define KEY_ALTERASE            222
         <I231> = 231;   // #define KEY_CANCEL              223
         <I232> = 232;   // #define KEY_BRIGHTNESSDOWN      224
         <I233> = 233;   // #define KEY_BRIGHTNESSUP        225
@@ -409,13 +412,13 @@ default xkb_keycodes "evdev" {
         <I244> = 244;   // #define KEY_BATTERY             236
         <I245> = 245;   // #define KEY_BLUETOOTH           237
         <I246> = 246;   // #define KEY_WLAN                238
-        <I247> = 247;   // #define KEY_UWB                 239
-        <I248> = 248;   // #define KEY_UNKNOWN             240
-        <I249> = 249;   // #define KEY_VIDEO_NEXT          241
-        <I250> = 250;   // #define KEY_VIDEO_PREV          242
-        <I251> = 251;   // #define KEY_BRIGHTNESS_CYCLE    243
-        <I252> = 252;   // #define KEY_BRIGHTNESS_ZERO     244
-        <I253> = 253;   // #define KEY_DISPLAY_OFF         245
+  //    <I247> = 247;   // #define KEY_UWB                 239
+  //    <I248> = 248;   // #define KEY_UNKNOWN             240
+  //    <I249> = 249;   // #define KEY_VIDEO_NEXT          241
+  //    <I250> = 250;   // #define KEY_VIDEO_PREV          242
+  //    <I251> = 251;   // #define KEY_BRIGHTNESS_CYCLE    243
+  //    <I252> = 252;   // #define KEY_BRIGHTNESS_ZERO     244
+  //    <I253> = 253;   // #define KEY_DISPLAY_OFF         245
 
   // Fake keycodes for virtual keys
         <LVL3> =  92;
