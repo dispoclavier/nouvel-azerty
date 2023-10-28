@@ -1,4 +1,4 @@
-//                       Date: 2023-10-27T1527+0200
+//                       Date: 2023-10-28T1215+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -83,21 +83,23 @@ default xkb_keycodes "evdev" {
 
   // The main layout and 6 distributable variants are configurable below.
 
-  // As HP laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
-  // the variant with Backspace on Menu is provided also with swapped Caps/ISO keys.
+  // Since laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
+  // the sub-variant with swapped Backspace/Menu is provided with swapped Caps/ISO too.
 
   // Menu Suffix        Features
   //   o  ""            Ordinary.
   //   w  "-win"        Backspace on right Windows.
   //   s  "-win-sans"   Backspace on right Windows sans Menu.
-  //   m  "-menu"       Backspace on Menu.
-  //   c  "-ctrl"       Backspace on right Control.
+  //   m  "-menu"       Backspace on Menu, Menu on Backspace.
+  //   n  "-menu-sans"  Backspace on Menu only, no permutation.
+  //   c  "-ctrl"       Permutate Backspace and right Control.
   //   a  "-ansi"       Swap CapsLock and ISO key for ANSI keyboards.
-  //   b  "-ansi-menu"  Swap CapsLock and ISO key, Backspace on Menu.
+  //   b  "-ansi-menu"  Swap CapsLock and ISO key, and Backspace and Menu.
 
   // Each key can be mapped only once, and the latest mapping overrides previous ones.
 
-  // On ANSI keyboards for ISO keyboard markets, B00 is mapped on Right Control,
+  // On ANSI keyboards for ISO keyboard markets, key B00 is located where other
+  // laptops — for the ANSI market or with ISO key — have the right Control key,
   // so that for AltFr to stay lefthand, keys LSGT and CAPS need to be swapped.
   // <LSGT> is key ISO B00, and on ISO keyboards this is the AltFr modifier key.
 
@@ -108,7 +110,7 @@ default xkb_keycodes "evdev" {
 
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4,
-	// Keyboard views p. 51 and 61–65. The options target the key next to the AltGr key.
+  // Keyboard views p. 51 and 61–65. The options target the key next to the AltGr key.
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
 
