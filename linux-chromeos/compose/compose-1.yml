@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.1.1"
+<UEFA0>                     : "version 1.1.2"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -7790,18 +7790,18 @@
 #
 # # TURNED&STROKE&GROUP_3
 #
-<UEFD5><dead_longsolidusoverlay><UEFD0><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<UEFD5><dead_longsolidusoverlay><UEFD0><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<UEFD5><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><numbersign><numbersign>                                <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><UEFD0><UEFD0>                                          <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><numbersign><numbersign>                                <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<UEFD5><dead_longsolidusoverlay><UEFD0><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><percent><slash><numbersign><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<UEFD5><dead_longsolidusoverlay><UEFD0><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><percent><slash><numbersign><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<UEFD5><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><percent><slash><numbersign><numbersign><numbersign>                                <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<dead_longsolidusoverlay><UEFD5><UEFD0><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><slash><percent><numbersign><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<dead_longsolidusoverlay><UEFD5><UEFD0><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><slash><percent><numbersign><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<dead_longsolidusoverlay><UEFD5><UEFD0><UEFD0><UEFD0>                                          <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><slash><percent><numbersign><numbersign><numbersign>                                <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 #
 #
 # # TURNED&DIAERESIS
