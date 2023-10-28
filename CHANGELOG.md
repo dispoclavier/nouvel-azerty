@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 1.1.2 (projet)
+
+* Touches mortes : Tourné barré groupe 3 : Déboguer "ꭄ" UAB44. (compose-1.yml [2d88a4a](https://github.com/dispoclavier/nouvel-azerty/commit/2d88a4a349f9f36fa38520e9e6ccfba219fbaa1a))
+* Sous-variantes : Rajouter la sous-variante avec Effacement arrière sur Menu sans permutation. (evdev.c [668cd26](https://github.com/dispoclavier/nouvel-azerty/commit/668cd264f8cbdac7fb3b09752c7b063ec1a36c75), comp.sh [886a1f2](https://github.com/dispoclavier/nouvel-azerty/commit/886a1f21bda5d9dac6a2ba67459b92efcd95d910))
+
 ## 1.1.1 (2023-10-27)
 
 * Touches mortes : Corriger la répartition des diacritiques combinants : Exposant : Remplacer "̍" U030D par "̅" U0305. Tourné : Remplacer "̅" U0305 par "̒" U0312. Réfléchi : Ajouter "̔" U0314. (compose-1.yml [c279c4e](https://github.com/dispoclavier/nouvel-azerty/commit/c279c4e671677025e2381d9f92478b9239d6b29c), compose-2.yml [403ceca](https://github.com/dispoclavier/nouvel-azerty/commit/403ceca95b46d3559d6fb1b0f7039c61a0b73fc2))
