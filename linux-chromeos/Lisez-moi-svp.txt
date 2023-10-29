@@ -1,5 +1,5 @@
-                      Date : 2023-10-27T1432+0200
-                   Version : 1.1.1
+                      Date : 2023-10-28T1203+0200
+                   Version : 1.1.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -66,7 +66,7 @@
     utilisables dans de bonnes conditions.
 
     Remettre AltFr à gauche est possible en permutant les touches ISO et Verrouillage Capitales.
-    C’est ce qui est fait dans les variantes avec le suffixe « -ansi » ou « -ansi-menu ».
+    C’est ce qui est fait dans les sous-variantes avec le suffixe « -ansi » ou « -ansi-menu ».
 
   • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
     Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
@@ -74,14 +74,20 @@
     sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, elle est
     optionnellement désactivée.
 
-    ◦ Les variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
+    ◦ Les sous-variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
 
-    ◦ Les variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
+    ◦ Les sous-variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
       et la touche Menu est désactivée.
 
-    ◦ Les variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur Menu.
+    ◦ Les sous-variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur
+      Menu, et Menu sur Effacement arrière.
+      
+    ◦ Les sous-variantes avec le suffixe « -menu-sans » ont Effacement arrière sur Menu, tandis
+      que la touche Effacement arrière reste telle quelle afin que VSCode puisse lui attribuer
+      des raccourcis tels que `deleteLeft` et (avec Contrôle) `deleteWordLeft`.
 
-    ◦ Les variantes avec le suffixe « -ctrl » ont Effacement arrière sur Contrôle droite.
+    ◦ Les sous-variantes avec le suffixe « -ctrl » permutent les touches Effacement arrière et
+      Contrôle droite, afin que la touche Effacement arrière puisse remplacer Contrôle droite.
 
 
   Témoin lumineux
@@ -123,9 +129,9 @@
   9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
          xkbcomp nouvel-azerty.xkb :0
      Remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante choisie.
-		 Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches AB11 et AE13.
-		 AB11 est une touche supplémentaire entre § et Maj droite sur des claviers brésiliens,
-		 et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
+     Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches AB11 et AE13.
+     AB11 est une touche supplémentaire entre § et Maj droite sur des claviers brésiliens,
+     et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
 
   Veiller à ce que la méthode d’entrée soit XIM.
   Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
