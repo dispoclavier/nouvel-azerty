@@ -1,4 +1,4 @@
-                      Date : 2023-10-28T1203+0200
+                      Date : 2023-10-29T0740+0100
                    Version : 1.1.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -65,8 +65,8 @@
     pour que les grandes ponctuations, toutes à droite, et le pavé numérique graphique soient
     utilisables dans de bonnes conditions.
 
-    Remettre AltFr à gauche est possible en permutant les touches ISO et Verrouillage Capitales.
-    C’est ce qui est fait dans les sous-variantes avec le suffixe « -ansi » ou « -ansi-menu ».
+    Remettre AltFr à gauche est possible en permutant les touches ISO et Verrouillage Capitales,
+    comme dans les sous-variantes avec les suffixes « -ansi », « -ansi-menu », « -ansi-menu-sans ».
 
   • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
     Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
@@ -75,6 +75,7 @@
     optionnellement désactivée.
 
     ◦ Les sous-variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
+      (Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée.)
 
     ◦ Les sous-variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
       et la touche Menu est désactivée.
@@ -82,9 +83,9 @@
     ◦ Les sous-variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur
       Menu, et Menu sur Effacement arrière.
       
-    ◦ Les sous-variantes avec le suffixe « -menu-sans » ont Effacement arrière sur Menu, tandis
-      que la touche Effacement arrière reste telle quelle afin que VSCode puisse lui attribuer
-      des raccourcis tels que `deleteLeft` et (avec Contrôle) `deleteWordLeft`.
+    ◦ Les sous-variantes avec le suffixe « -menu-sans » ou « -ansi-menu-sans » ont Effacement
+      arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que VSCode
+      puisse lui attribuer des raccourcis tels que `deleteLeft` et (avec Contrôle) `deleteWordLeft`.
 
     ◦ Les sous-variantes avec le suffixe « -ctrl » permutent les touches Effacement arrière et
       Contrôle droite, afin que la touche Effacement arrière puisse remplacer Contrôle droite.
