@@ -2367,7 +2367,7 @@
 #   Digits yield mathematical backslashes without space termination.
 #   See #*# STROKE
 #
-#   As a combining diacritic, "̔" U0314 # COMBINING REVERSED COMMA ABOVE is used,
+#   As a diacritic, "̔" U0314 COMBINING REVERSED COMMA ABOVE is included.
 #
 <UEFD6>                                                                                    <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <Multi_key><backslash>                                                                     <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
@@ -3510,9 +3510,9 @@
 <dead_belowcomma><dead_belowcomma>                                                         <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                          <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
 <Multi_key><section><section>                                                              <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
-<dead_belowcomma><dead_belowcomma>                                                         <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
-<Multi_key><semicolon><semicolon>                                                          <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
-<Multi_key><section><section>                                                              <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
+<dead_belowcomma><dead_belowcomma>                                                         <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<Multi_key><semicolon><semicolon>                                                          <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<Multi_key><section><section>                                                              <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
 #
 #
 #
