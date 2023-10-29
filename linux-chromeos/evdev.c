@@ -1,4 +1,4 @@
-//                       Date: 2023-10-28T1215+0200
+//                       Date: 2023-10-29T0733+0100
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -81,20 +81,21 @@ default xkb_keycodes "evdev" {
   minimum =   8;
   maximum = 255;
 
-  // The main layout and 6 distributable variants are configurable below.
+  // The main layout and 8 distributable subvariants are configurable below.
 
   // Since laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
-  // the sub-variant with swapped Backspace/Menu is provided with swapped Caps/ISO too.
+  // the subvariants with Backspace on Menu are provided with swapped Caps/ISO too.
 
-  // Menu Suffix        Features
-  //   o  ""            Ordinary.
-  //   w  "-win"        Backspace on right Windows.
-  //   s  "-win-sans"   Backspace on right Windows sans Menu.
-  //   m  "-menu"       Backspace on Menu, Menu on Backspace.
-  //   n  "-menu-sans"  Backspace on Menu only, no permutation.
-  //   c  "-ctrl"       Permutate Backspace and right Control.
-  //   a  "-ansi"       Swap CapsLock and ISO key for ANSI keyboards.
-  //   b  "-ansi-menu"  Swap CapsLock and ISO key, and Backspace and Menu.
+  // Arg  Suffix             Features
+  //   o  ""                 Ordinary.
+  //   w  "-win"             Backspace on right Windows.
+  //  ws  "-win-sans"        Backspace on right Windows sans Menu.
+  //   m  "-menu"            Backspace on Menu, Menu on Backspace.
+  //  ms  "-menu-sans"       Backspace on Menu only, no permutation.
+  //   c  "-ctrl"            Permutate Backspace and right Control.
+  //   a  "-ansi"            Swap CapsLock and ISO key for ANSI keyboards.
+  //  am  "-ansi-menu"       Swap CapsLock and ISO key, and Backspace and Menu.
+  // ams  "-ansi-menu-sans"  Swap CapsLock and ISO key, with Backspace on Menu.
 
   // Each key can be mapped only once, and the latest mapping overrides previous ones.
 
@@ -105,8 +106,8 @@ default xkb_keycodes "evdev" {
 
         <LSGT> =  94;  // was <LSGT>   Common mapping for desktop and laptop.
         <CAPS> =  66;  // was <CAPS>   Common mapping for desktop and laptop.
-  //    <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
-  //    <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
+        <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
+        <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
 
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4,
@@ -118,15 +119,17 @@ default xkb_keycodes "evdev" {
         <MENU> = 135;  // was <MENU>   Common mapping for desktop and laptop.
         <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
 
-  //    <BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
-  //    <RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
-  //    <HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
+        //<BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
+  // Right Windows on Backspace instead is not included in the distributable subvariants.
+        //<RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
+        //<HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
 
-  //    <BKSP> = 135;  // was <MENU>   Backspace on Menu key for compact keyboards.
-  //    <MENU> =  22;  // was <BKSP>   Menu key on Backspace instead for usability.
+        //<BKSP> = 135;  // was <MENU>   Backspace on Menu key for compact keyboards.
+  // Menu on Backspace is optional since this may interfere with application keybindings.
+        //<MENU> =  22;  // was <BKSP>   Menu key on Backspace instead for usability.
 
-  //    <BKSP> = 105;  // was <RCTL>   Backspace on right Control for compact keyboards.
-  //    <RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
+        //<BKSP> = 105;  // was <RCTL>   Backspace on right Control for compact keyboards.
+        //<RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
 
   // Permutating BKSP and RCTL here fails in applications relying partly on keycodes,
   // such as VSCode in the editor, not in the search widget (where both work). That is
