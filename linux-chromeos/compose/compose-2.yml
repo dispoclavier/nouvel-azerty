@@ -843,6 +843,14 @@
 #   *  Supporting the high surrogate is designed for portability, but on Linux
 #      and ChromeOS it is ineffective.
 #
+#   The sequences with spaces that yield combining diacritics on other deadkeys
+#   are used for the ZWNJ as most extensively used with regional indicators for
+#   writing in letter emoji.
+#
+<UEFD7>                                                                                    <space> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                         <space> : "‌" U200C # ZERO WIDTH NON-JOINER
+<UEFD7>                                                                                    <U200B> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                         <U200B> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                                    <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
