@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.1.3 (projet)
+
+* Touches mortes : Grec : Ajouter le iota souscrit avec espace et césure conditionnelle. Lettres drapeaux : Doubler l’antiliant "‌" U200C avec espace et césure conditionnelle. (compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e), compose-2.yml [5621bee](https://github.com/dispoclavier/nouvel-azerty/commit/5621bee680e37b31f1752497cf1e6007cdd5bb9d))
+
 ## 1.1.2 (2023-10-29)
 
 * Touches mortes : Tourné barré groupe 3 : Déboguer "ꭄ" UAB44. (compose-1.yml [2d88a4a](https://github.com/dispoclavier/nouvel-azerty/commit/2d88a4a349f9f36fa38520e9e6ccfba219fbaa1a))
