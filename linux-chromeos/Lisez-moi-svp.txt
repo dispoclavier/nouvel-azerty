@@ -1,5 +1,5 @@
-                      Date : 2023-10-29T0740+0100
-                   Version : 1.1.2
+                      Date : 2023-10-31T0713+0100
+                   Version : 1.1.3
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -27,7 +27,7 @@
                    Contact : dev@dispoclavier.net
 
 
-  Dispositions
+  Dispositions ou variantes
 
   • Les fichiers `nouvel-azerty.xkb` et `kbfrFRs.xkb` sont identiques.
     Les fichiers `nouvel-azerty-[suffixe].xkb` et `kbfrFRs-[suffixe].xkb` aussi.
@@ -38,44 +38,41 @@
 
   • Les fichiers dont les noms commencent par `kbfrPFs` contiennent une disposition optimisée pour
     les langues de Polynésie française, avec une touche morte macron sur la touche du symbole =.
-    La touche morte accent grave est sur AltGr + accent circonflexe.
+    La touche morte accent grave est sur AltGr + accent circonflexe à la place de la touche morte
+    tilde.
 
   • Les fichiers dont les noms commencent par `kbfrAFs` contiennent une disposition optimisée pour
-    les langues d’Afrique, en particulier le bambara dans plusieurs pays d’Afrique francophone,
-    avec le ɛ sur le 1, et le ɔ sur le 8.
+    les langues d’Afrique, pour le bambara en particulier, avec le ɛ sur le 1, et le ɔ sur le 8.
 
   • Les fichiers dont les noms commencent par `kbfrBEs` contiennent une disposition optimisée pour
-    la Belgique, avec le symbole § sur le 6, le tiret du 6 sur le 8, et le tiret du 8 sur Maj + 8.
+    la Belgique, avec le § sur le 6, le tiret du 6 sur le 8, et le tiret du 8 sur Maj + 8.
     Espérant que ce compromis est acceptable en échange des fonctionnalités de ce nouvel AZERTY.
 
   • Les fichiers dont les noms commencent par `kbfrFRr` contiennent une disposition optimisée pour
     une saisie plus ergonomique de l’alphabet de base et des lettres diacritées, afin que
-    les exigences en matière d’ergonomie n’obligent pas à renoncer aux fonctionnalités prises
-    en charge par ce nouvel AZERTY.
+    les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
 
-  Options de disposition
+  Options de disposition ou sous-variantes
 
   Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles
-  dans les sous-variantes de chacune des variantes énumérées ci-dessus :
+  pour chaque variante :
 
-  • Sur les claviers de portable sans touche ISO entre Maj gauche et W, en particulier ceux
-    de marque HP commercialisés en France, la touche ISO se trouve sur Contrôle droite.
-    Or la touche ISO sert de nouvelle modificatrice AltFr, qui doit être située à gauche
-    pour que les grandes ponctuations, toutes à droite, et le pavé numérique graphique soient
-    utilisables dans de bonnes conditions.
-
-    Remettre AltFr à gauche est possible en permutant les touches ISO et Verrouillage Capitales,
-    comme dans les sous-variantes avec les suffixes « -ansi », « -ansi-menu », « -ansi-menu-sans ».
+  • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où cette touche ISO
+    prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées
+    afin que la touche ISO, qui est la nouvelle modificatrice AltFr, soit située à gauche pour
+    saisir les grandes ponctuations espacées et pouvoir se servir du pavé numérique graphique.
+    Ce sont les sous-variantes avec les suffixes « -ansi », « -ansi-menu », « -ansi-menu-sans ».
 
   • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
     Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
     de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Effacement arrière
-    sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, elle est
-    optionnellement désactivée.
+    sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, celle-ci
+    est optionnellement désactivée.
 
     ◦ Les sous-variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
-      (Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée.)
+      Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée, mais
+      il est possible de la paramétrer après avoir installé ce nouvel AZERTY.
 
     ◦ Les sous-variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
       et la touche Menu est désactivée.
@@ -85,7 +82,7 @@
       
     ◦ Les sous-variantes avec le suffixe « -menu-sans » ou « -ansi-menu-sans » ont Effacement
       arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que VSCode
-      puisse lui attribuer des raccourcis tels que `deleteLeft` et (avec Contrôle) `deleteWordLeft`.
+      puisse lui attribuer des raccourcis comme `deleteLeft`, et avec Contrôle, `deleteWordLeft`.
 
     ◦ Les sous-variantes avec le suffixe « -ctrl » permutent les touches Effacement arrière et
       Contrôle droite, afin que la touche Effacement arrière puisse remplacer Contrôle droite.
