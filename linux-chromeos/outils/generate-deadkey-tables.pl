@@ -8,6 +8,7 @@
 # 2023-09-23T1908+0200
 # 2023-10-07T1217+0200
 # 2023-10-14T1822+0200
+# 2023-10-31T1021+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -139,6 +140,7 @@ while ( my $line = <INPUT> ) {
 				|| $line =~ /<UEFD8>/
 				|| $line =~ /<UEFD9>/
 			) {
+				# Dead keys.
 				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + £\$">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
@@ -169,13 +171,15 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD4>/<kbd class="deadkey long" title="Touche morte crochet rétroflexe Maj + AltGr\/Option + R">crochet rétroflexe<\/kbd>/g;
 				$line =~ s/<UEFD5>/<kbd class="deadkey" title="Touche morte tourné Maj + AltGr\/Option + Z">tourné<\/kbd>/g;
 				$line =~ s/<UEFD6>/<kbd class="deadkey" title="Touche morte réfléchi Maj + AltGr\/Option + N">réfléchi<\/kbd>/g;
-				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte égal, lettre drapeau Maj + AltGr\/Option + B">égal<\/kbd>/g;
+				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte drapeau Maj + AltGr\/Option + B">drapeau<\/kbd>/g;
 				$line =~ s/<UEFD8>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
 				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
+				
+				# Remove spaces.
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 				
-				# Invisibles or confusables:
+				# Invisibles or confusables.
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
 				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— tiret cadratin<\/kbd>/g;
@@ -184,7 +188,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + .;">[fine insécable]!<\/kbd>/g;
 				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ?,">[fine insécable]?<\/kbd>/g;
 				
-				# Clarifying tooltips only:
+				# Tooltips.
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
 				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
@@ -194,7 +198,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
 				
-				# Self-evident:
+				# Keysyms.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<braceleft>/{/g;
@@ -245,11 +249,15 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Odiaeresis>/Ö/g;
 				$line =~ s/<udiaeresis>/ü/g;
 				$line =~ s/<Udiaeresis>/Ü/g;
+				
+				# Scalars.
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
+				
+				# Remove delimiters.
 				$line =~ s/<(.)>/$1/g;
 				
-				# Comment translation:
+				# Translation.
 				$line =~ s/( # .*), for convenience/$1, pour plus de facilité/g;
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
 				$line =~ s/( # .*) emoji/$1 émoji/g;
@@ -292,7 +300,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Dutch/$1 néerlandais/g;
 				$line =~ s/( # .*) romanized Pashto following/$1 pachto romanisé selon/g;
 
-				# Anchors and localized tooltips:
+				# Anchors and localized tooltips.
 				unless ( $line =~ m/: +"surrogat_haut_pour_Windows"/u ) {
 					$line    =~ m/^.+ : +"(.+?)"/u;
 					$str     = $1;
