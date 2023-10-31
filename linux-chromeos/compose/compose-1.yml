@@ -9086,10 +9086,12 @@
 #
 #   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as most
 #   likely to be useful and expected rather than other diacritical marks.
+#   https://www.unicode.org/faq/greek.html
 #
 #   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
 #   alongside dead_greek double press virtualizing the ordinary general-purpose
 #   *dead_circled.
+#   See #^# CIRCLED
 #
 #   This dead key applies a scheme where zero yields circled number 10. This is
 #   consistent with dead_doubleacute yielding double circled numbers.
