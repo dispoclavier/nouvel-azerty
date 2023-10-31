@@ -6,7 +6,7 @@
 
 ## 1.1.3 (2023-10-31)
 
-* Touches mortes : Grec : Ajouter le iota souscrit avec les caractères de base espace ou césure conditionnelle. Lettres drapeaux : Doubler l’antiliant "‌" U200C avec les caractères de base espace ou césure conditionnelle. Documentation. (compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e), [9238b44](https://github.com/dispoclavier/nouvel-azerty/commit/9238b44d970de629389f5b21cb0b8c4011e6233e), compose-2.yml [5621bee](https://github.com/dispoclavier/nouvel-azerty/commit/5621bee680e37b31f1752497cf1e6007cdd5bb9d), [9905833](https://github.com/dispoclavier/nouvel-azerty/commit/99058337ad8a2b2872b44ae380a6a7258cf07717))
+* Touches mortes : Grec : Ajouter le iota souscrit avec les caractères de base espace ou césure conditionnelle. Drapeau : Doubler l’antiliant "‌" U200C avec les caractères de base espace ou césure conditionnelle. Documentation. (compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e), [9238b44](https://github.com/dispoclavier/nouvel-azerty/commit/9238b44d970de629389f5b21cb0b8c4011e6233e), compose-2.yml [5621bee](https://github.com/dispoclavier/nouvel-azerty/commit/5621bee680e37b31f1752497cf1e6007cdd5bb9d), [9905833](https://github.com/dispoclavier/nouvel-azerty/commit/99058337ad8a2b2872b44ae380a6a7258cf07717))
 
 ## 1.1.2 (2023-10-29)
 
