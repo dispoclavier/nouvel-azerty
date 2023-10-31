@@ -786,7 +786,7 @@
 <Multi_key><greater><greater>                                                              <U200B> : "̬" U032C # COMBINING CARON BELOW
 #
 #
-#*# DOUBLE, FLAG_LETTER
+#*# FLAG_LETTER, DOUBLE
 #   *dead_flag UEFD7
 #   Multi_key: ¦=
 #
@@ -807,8 +807,8 @@
 #   (with respect to this, mathematical symbols use <Multi_key><minus><equal>)
 #   cannot be supported in group 0 due to numerous conflicts with composition.
 #
-#   Mathematical symbols are also supported by DIAERESIS as a quick access,
-#   unless a quick access sequence conflicts with regular support.
+#   Mathematical symbols are also supported by DIAERESIS as a shortcut for
+#   DOUBLE, unless a quick access sequence conflicts with regular support.
 #   See #*# DIAERESIS
 #
 #
