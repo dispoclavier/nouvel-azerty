@@ -3,6 +3,7 @@
 ## 1.1.4 (projet)
 
 * Touches mortes : Drapeau : Remplacer "‌" U200C par "⚐" U2690 avec les caractères de base espace ou césure conditionnelle. Ajouter "⚑" U2691 et "🏴" U1F3F4. Corriger la casse. (compose-2.yml [581516e](https://github.com/dispoclavier/nouvel-azerty/commit/581516edbf0de795d92989216ef7900222560427))
+* Touches mortes : Tourné : Remplacer "≀" U2240 par "ⸯ" U2E2F. Point en chef : Ajouter "˙" U02D9 par espace insécable. Rond en chef : Ajouter "⸰" U2E30 par point. Point souscrit : Ajouter "⸳" U2E33 par espace insécable et espace fine insécable. Virgule souscrite : Ajouter "⸴" U2E34 par espace insécable et espace fine insécable. Permuter les séquences avec espace fine insécable et espace insécable pour corriger l’affichage des tableaux. (compose-1.yml [6bfb758](https://github.com/dispoclavier/nouvel-azerty/commit/6bfb7585f90d7bb66a4d4639f7c73a437e7f97bd), compose-2.yml [77ca45c](https://github.com/dispoclavier/nouvel-azerty/commit/77ca45c867df4309ca182dae5bdbce9a4ce6d999))
 
 ## 1.1.3 (2023-10-31)
 
