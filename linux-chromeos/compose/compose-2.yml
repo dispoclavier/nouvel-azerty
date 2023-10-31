@@ -96,10 +96,10 @@
 <Multi_key><less>                                                                          <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                          <U200B> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                          <U200B> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
-<dead_circumflex>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
-<Multi_key><less>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                   <nobreakspace> : "^" U005E # CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                   <nobreakspace> : "^" U005E # CIRCUMFLEX ACCENT
+<dead_circumflex>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
+<Multi_key><less>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <Multi_key><less>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <dead_circumflex>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -476,10 +476,10 @@
 <Multi_key><less><less>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_circumflex><dead_circumflex>                                                         <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><less>                                                                    <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_circumflex><dead_circumflex>                                                         <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <Multi_key><less><less>                                                             <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<dead_circumflex><dead_circumflex>                                                         <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                             <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW Juǀʼhoan
 <Multi_key><less><less>                                                                        <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW Juǀʼhoan
 <dead_circumflex><dead_circumflex>                                                             <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW Juǀʼhoan
@@ -640,10 +640,10 @@
 <Multi_key><greater>                                                                       <space> : "̌" U030C # COMBINING CARON
 <dead_caron>                                                                               <U200B> : "̌" U030C # COMBINING CARON
 <Multi_key><greater>                                                                       <U200B> : "̌" U030C # COMBINING CARON
-<dead_caron>                                                                               <U202F> : "ˇ" U02C7 # CARON
-<Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                        <nobreakspace> : "ˇ" U02C7 # CARON
 <Multi_key><greater>                                                                <nobreakspace> : "ˇ" U02C7 # CARON
+<dead_caron>                                                                               <U202F> : "ˇ" U02C7 # CARON
+<Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                           <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater>                                                                   <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -853,17 +853,17 @@
 #   Nevertheless, for completeness, this waving black flag is output when using
 #   backslash as a base character.
 #
-#   Likewise, the sequences with nobreak thin space and nobreak space, used for
+#   Likewise, the sequences with nobreak space and nobreak thin space, used for
 #   spacing diacritics on most deadkeys, output the matching black flag.
 #
 <UEFD7>                                                                                    <space> : "⚐" U2690 # WHITE FLAG
 <Multi_key><equal>                                                                         <space> : "⚐" U2690 # WHITE FLAG
 <UEFD7>                                                                                    <U200B> : "⚐" U2690 # WHITE FLAG
 <Multi_key><equal>                                                                         <U200B> : "⚐" U2690 # WHITE FLAG
-<UEFD7>                                                                                    <U202F> : "⚑" U2691 # BLACK FLAG
-<Multi_key><equal>                                                                         <U202F> : "⚑" U2691 # BLACK FLAG
 <UEFD7>                                                                             <nobreakspace> : "⚑" U2691 # BLACK FLAG
 <Multi_key><equal>                                                                  <nobreakspace> : "⚑" U2691 # BLACK FLAG
+<UEFD7>                                                                                    <U202F> : "⚑" U2691 # BLACK FLAG
+<Multi_key><equal>                                                                         <U202F> : "⚑" U2691 # BLACK FLAG
 <UEFD7>                                                                                <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <Multi_key><equal>                                                                     <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
@@ -2684,10 +2684,10 @@
 <Multi_key><comma>                                                                         <space> : "̧" U0327 # COMBINING CEDILLA
 <dead_cedilla>                                                                             <U200B> : "̧" U0327 # COMBINING CEDILLA
 <Multi_key><comma>                                                                         <U200B> : "̧" U0327 # COMBINING CEDILLA
-<dead_cedilla>                                                                             <U202F> : "¸" U00B8 # CEDILLA
-<Multi_key><comma>                                                                         <U202F> : "¸" U00B8 # CEDILLA
 <dead_cedilla>                                                                      <nobreakspace> : "¸" U00B8 # CEDILLA
 <Multi_key><comma>                                                                  <nobreakspace> : "¸" U00B8 # CEDILLA
+<dead_cedilla>                                                                             <U202F> : "¸" U00B8 # CEDILLA
+<Multi_key><comma>                                                                         <U202F> : "¸" U00B8 # CEDILLA
 <dead_cedilla>                                                                                 <0> : "⒑" U2491 # NUMBER TEN FULL STOP
 <Multi_key><comma>                                                                             <0> : "⒑" U2491 # NUMBER TEN FULL STOP
 <dead_cedilla>                                                                              <KP_0> : "⒑" U2491 # NUMBER TEN FULL STOP
@@ -2840,6 +2840,10 @@
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                            <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <U200B> : "̣" U0323 # COMBINING DOT BELOW
+<dead_belowdot>                                                                     <nobreakspace> : "⸳" U2E33 # RAISED DOT
+<Multi_key><exclam>                                                                 <nobreakspace> : "⸳" U2E33 # RAISED DOT
+<dead_belowdot>                                                                            <U202F> : "⸳" U2E33 # RAISED DOT
+<Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
 <Multi_key><exclam>                                                                            <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
 <dead_belowdot>                                                                             <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
@@ -2987,10 +2991,10 @@
 <Multi_key><exclam><exclam>                                                                <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                             <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
-<dead_belowdot><dead_belowdot>                                                             <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                      <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                         <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<dead_belowdot><dead_belowdot>                                                             <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
@@ -3062,10 +3066,10 @@
 <Multi_key><colon>                                                                         <space> : "̈" U0308 # COMBINING DIAERESIS
 <dead_diaeresis>                                                                           <U200B> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                                         <U200B> : "̈" U0308 # COMBINING DIAERESIS
-<dead_diaeresis>                                                                           <U202F> : "¨" U00A8 # DIAERESIS
-<Multi_key><colon>                                                                         <U202F> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                    <nobreakspace> : "¨" U00A8 # DIAERESIS
 <Multi_key><colon>                                                                  <nobreakspace> : "¨" U00A8 # DIAERESIS
+<dead_diaeresis>                                                                           <U202F> : "¨" U00A8 # DIAERESIS
+<Multi_key><colon>                                                                         <U202F> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                        <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <Multi_key><colon>                                                                      <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <dead_diaeresis>                                                                      <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
@@ -3346,6 +3350,12 @@
 <dead_belowcomma>                                                                          <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><semicolon>                                                                     <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><section>                                                                       <U200B> : "̦" U0326 # COMBINING COMMA BELOW
+<dead_belowcomma>                                                                   <nobreakspace> : "⸴" U2E34 # RAISED COMMA
+<Multi_key><semicolon>                                                              <nobreakspace> : "⸴" U2E34 # RAISED COMMA
+<Multi_key><section>                                                                <nobreakspace> : "⸴" U2E34 # RAISED COMMA
+<dead_belowcomma>                                                                          <U202F> : "⸴" U2E34 # RAISED COMMA
+<Multi_key><semicolon>                                                                     <U202F> : "⸴" U2E34 # RAISED COMMA
+<Multi_key><section>                                                                       <U202F> : "⸴" U2E34 # RAISED COMMA
 <dead_belowcomma>                                                                              <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <Multi_key><semicolon>                                                                         <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <Multi_key><section>                                                                           <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
