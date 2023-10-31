@@ -8,7 +8,7 @@
 # 2023-09-23T1908+0200
 # 2023-10-07T1217+0200
 # 2023-10-14T1822+0200
-# 2023-10-31T1218+0100
+# 2023-10-31T1647+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -358,10 +358,11 @@ while ( my $line = <INPUT> ) {
 					push( @anchors, $anchor );
 				}
 
+				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
 				$line =~ s/^(.+?) : "surrogat_haut_pour_Windows" (U\+D[8-9A-B][0-9A-F]{2}) # (.+)/<tr><td title="Surrogat haut pour Windows $2"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				print WHOLEOUTPUT $line;
 			}
