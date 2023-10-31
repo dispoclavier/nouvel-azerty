@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.1.3"
+<UEFA0>                     : "version 1.1.4"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -2986,7 +2986,6 @@
 <Multi_key><s><percent><backslash>                                                         <space> : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><i><n>                                                                       <space> : "∿" U223F # SINE WAVE
 <Multi_key><S><I><N>                                                                       <space> : "∿" U223F # SINE WAVE
-#   See #*# TURNED                                                                                 : "≀" U2240 # WREATH PRODUCT
 <Multi_key><asciitilde><percent>                                                           <space> : "≀" U2240 # WREATH PRODUCT
 #   See #*# STROKE                                                                                 : "≁" U2241 # NOT TILDE
 <Multi_key><asciitilde><slash>                                                             <space> : "≁" U2241 # NOT TILDE
@@ -7415,8 +7414,8 @@
 <Multi_key><percent>                                                                       <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <UEFD5>                                                                                    <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
-<UEFD5>                                                                               <asciitilde> : "≀" U2240 # WREATH PRODUCT
-<Multi_key><percent>                                                                  <asciitilde> : "≀" U2240 # WREATH PRODUCT
+<UEFD5>                                                                               <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
+<Multi_key><percent>                                                                  <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
 <Multi_key><percent>                                                                   <ampersand> : "⅋" U214B # TURNED AMPERSAND
 <UEFD5>                                                                                    <comma> : "⸲" U2E32 # TURNED COMMA
@@ -8818,10 +8817,10 @@
 <Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                               <U200B> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <U200B> : "̃" U0303 # COMBINING TILDE
-<dead_tilde>                                                                               <U202F> : "˜" U02DC # SMALL TILDE
-<Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
 <dead_tilde>                                                                        <nobreakspace> : "~" U007E # TILDE
 <Multi_key><asciitilde>                                                             <nobreakspace> : "~" U007E # TILDE
+<dead_tilde>                                                                               <U202F> : "˜" U02DC # SMALL TILDE
+<Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key><asciitilde>                                                               <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde>                                                                           <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
@@ -8972,10 +8971,10 @@
 <Multi_key><asciitilde><asciitilde>                                                        <space> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde><dead_tilde>                                                                   <U200B> : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key><asciitilde><asciitilde>                                                        <U200B> : "̰" U0330 # COMBINING TILDE BELOW
-<dead_tilde><dead_tilde>                                                                   <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
-<Multi_key><asciitilde><asciitilde>                                                        <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <dead_tilde><dead_tilde>                                                            <nobreakspace> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <Multi_key><asciitilde><asciitilde>                                                 <nobreakspace> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
+<dead_tilde><dead_tilde>                                                                   <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
+<Multi_key><asciitilde><asciitilde>                                                        <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <dead_tilde><dead_tilde>                                                                   <equal> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde>                                                        <equal> : "≈" U2248 # ALMOST EQUAL TO
 <dead_tilde><dead_tilde>                                                                       <1> : "†" U2020 # DAGGER
@@ -9965,10 +9964,10 @@
 <Multi_key><grave>                                                                         <space> : "̀" U0300 # COMBINING GRAVE ACCENT
 <dead_grave>                                                                               <U200B> : "̀" U0300 # COMBINING GRAVE ACCENT
 <Multi_key><grave>                                                                         <U200B> : "̀" U0300 # COMBINING GRAVE ACCENT
-<dead_grave>                                                                               <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
-<Multi_key><grave>                                                                         <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <dead_grave>                                                                        <nobreakspace> : "`" U0060 # GRAVE ACCENT
 <Multi_key><grave>                                                                  <nobreakspace> : "`" U0060 # GRAVE ACCENT
+<dead_grave>                                                                               <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
+<Multi_key><grave>                                                                         <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <dead_grave>                                                                            <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <Multi_key><grave>                                                                      <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <dead_grave>                                                                          <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
@@ -10048,10 +10047,10 @@
 <Multi_key><grave><grave>                                                                  <space> : "̏" U030F # COMBINING DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                   <U200B> : "̏" U030F # COMBINING DOUBLE GRAVE ACCENT
 <Multi_key><grave><grave>                                                                  <U200B> : "̏" U030F # COMBINING DOUBLE GRAVE ACCENT
-<dead_grave><dead_grave>                                                                   <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
-<Multi_key><grave><grave>                                                                  <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                            <nobreakspace> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <Multi_key><grave><grave>                                                           <nobreakspace> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+<dead_grave><dead_grave>                                                                   <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+<Multi_key><grave><grave>                                                                  <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <Multi_key><grave><grave>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_grave><dead_grave>                                                                   <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
@@ -10117,10 +10116,10 @@
 <Multi_key><apostrophe>                                                                    <space> : "́" U0301 # COMBINING ACUTE ACCENT
 <dead_acute>                                                                               <U200B> : "́" U0301 # COMBINING ACUTE ACCENT
 <Multi_key><apostrophe>                                                                    <U200B> : "́" U0301 # COMBINING ACUTE ACCENT
-<dead_acute>                                                                               <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
-<Multi_key><apostrophe>                                                                    <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <dead_acute>                                                                        <nobreakspace> : "´" U00B4 # ACUTE ACCENT
 <Multi_key><apostrophe>                                                             <nobreakspace> : "´" U00B4 # ACUTE ACCENT
+<dead_acute>                                                                               <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
+<Multi_key><apostrophe>                                                                    <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <dead_acute>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><apostrophe>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_acute>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
@@ -10539,10 +10538,10 @@
 <Multi_key><quotedbl>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                         <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
-<dead_doubleacute>                                                                         <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
-<Multi_key><quotedbl>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                  <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                               <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
+<dead_doubleacute>                                                                         <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
+<Multi_key><quotedbl>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                         <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                             <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
@@ -10616,6 +10615,8 @@
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
 <dead_abovedot>                                                                            <U200B> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <U200B> : "̇" U0307 # COMBINING DOT ABOVE
+<dead_abovedot>                                                                     <nobreakspace> : "˙" U02D9 # DOT ABOVE
+<Multi_key><period>                                                                 <nobreakspace> : "˙" U02D9 # DOT ABOVE
 <dead_abovedot>                                                                            <U202F> : "˙" U02D9 # DOT ABOVE
 <Multi_key><period>                                                                        <U202F> : "˙" U02D9 # DOT ABOVE
 <dead_abovedot>                                                                                <0> : "♼" U267C # RECYCLED PAPER SYMBOL
@@ -11722,10 +11723,10 @@
 <Multi_key><dollar>                                                                        <space> : "¤" U00A4 # CURRENCY SIGN
 <dead_currency>                                                                            <U200B> : "¤" U00A4 # CURRENCY SIGN
 <Multi_key><dollar>                                                                        <U200B> : "¤" U00A4 # CURRENCY SIGN
-<dead_currency>                                                                            <U202F> : "¤" U00A4 # CURRENCY SIGN
-<Multi_key><dollar>                                                                        <U202F> : "¤" U00A4 # CURRENCY SIGN
 <dead_currency>                                                                     <nobreakspace> : "¤" U00A4 # CURRENCY SIGN
 <Multi_key><dollar>                                                                 <nobreakspace> : "¤" U00A4 # CURRENCY SIGN
+<dead_currency>                                                                            <U202F> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><dollar>                                                                        <U202F> : "¤" U00A4 # CURRENCY SIGN
 <dead_currency>                                                                                <0> : "∱" U2231 # CLOCKWISE INTEGRAL
 <Multi_key><dollar>                                                                            <0> : "∱" U2231 # CLOCKWISE INTEGRAL
 <dead_currency>                                                                             <KP_0> : "∱" U2231 # CLOCKWISE INTEGRAL
@@ -11956,10 +11957,10 @@
 <Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <dead_invertedbreve>                                                                       <U200B> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <U200B> : "̑" U0311 # COMBINING INVERTED BREVE
-<dead_invertedbreve>                                                                       <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
-<Multi_key><parenleft>                                                                     <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <Multi_key><parenleft>                                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_invertedbreve>                                                                       <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<Multi_key><parenleft>                                                                     <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                   <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key><parenleft>                                                                 <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <dead_invertedbreve>                                                                           <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
@@ -12549,10 +12550,10 @@
 <Multi_key><parenright>                                                                    <space> : "̆" U0306 # COMBINING BREVE
 <dead_breve>                                                                               <U200B> : "̆" U0306 # COMBINING BREVE
 <Multi_key><parenright>                                                                    <U200B> : "̆" U0306 # COMBINING BREVE
-<dead_breve>                                                                               <U202F> : "˘" U02D8 # BREVE
-<Multi_key><parenright>                                                                    <U202F> : "˘" U02D8 # BREVE
 <dead_breve>                                                                        <nobreakspace> : "˘" U02D8 # BREVE
 <Multi_key><parenright>                                                             <nobreakspace> : "˘" U02D8 # BREVE
+<dead_breve>                                                                               <U202F> : "˘" U02D8 # BREVE
+<Multi_key><parenright>                                                                    <U202F> : "˘" U02D8 # BREVE
 <dead_breve>                                                                           <ampersand> : "̮" U032E # COMBINING BREVE BELOW
 <Multi_key><parenright>                                                                <ampersand> : "̮" U032E # COMBINING BREVE BELOW
 <dead_breve>                                                                                   <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
@@ -13260,10 +13261,10 @@
 <Multi_key><minus>                                                                         <space> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <dead_stroke>                                                                              <U200B> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <Multi_key><minus>                                                                         <U200B> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
-<dead_stroke>                                                                              <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
-<Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <dead_stroke>                                                                       <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <Multi_key><minus>                                                                  <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
+<dead_stroke>                                                                              <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
+<Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <dead_stroke>                                                                        <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <dead_stroke>                                                                       <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
@@ -13553,10 +13554,10 @@
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
 <dead_horn>                                                                                <U200B> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <U200B> : "̛" U031B # COMBINING HORN
-<dead_horn>                                                                                <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                          <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                         <nobreakspace> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <Multi_key><plus>                                                                   <nobreakspace> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<dead_horn>                                                                                <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<Multi_key><plus>                                                                          <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><plus>                                                                              <0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                                 <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -13758,10 +13759,10 @@
 <Multi_key><bracketleft>                                                                   <space> : "̨" U0328 # COMBINING OGONEK
 <dead_ogonek>                                                                              <U200B> : "̨" U0328 # COMBINING OGONEK
 <Multi_key><bracketleft>                                                                   <U200B> : "̨" U0328 # COMBINING OGONEK
-<dead_ogonek>                                                                              <U202F> : "˛" U02DB # OGONEK
-<Multi_key><bracketleft>                                                                   <U202F> : "˛" U02DB # OGONEK
 <dead_ogonek>                                                                       <nobreakspace> : "˛" U02DB # OGONEK
 <Multi_key><bracketleft>                                                            <nobreakspace> : "˛" U02DB # OGONEK
+<dead_ogonek>                                                                              <U202F> : "˛" U02DB # OGONEK
+<Multi_key><bracketleft>                                                                   <U202F> : "˛" U02DB # OGONEK
 <dead_ogonek>                                                                              <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <Multi_key><bracketleft>                                                                   <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <dead_ogonek>                                                                                  <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
@@ -14036,10 +14037,10 @@
 <Multi_key><underscore>                                                                    <space> : "̲" U0332 # COMBINING LOW LINE
 <UEFD2>                                                                                    <U200B> : "̲" U0332 # COMBINING LOW LINE
 <Multi_key><underscore>                                                                    <U200B> : "̲" U0332 # COMBINING LOW LINE
-<UEFD2>                                                                                    <U202F> : "_" U005F # LOW LINE
-<Multi_key><underscore>                                                                    <U202F> : "_" U005F # LOW LINE
 <UEFD2>                                                                             <nobreakspace> : "_" U005F # LOW LINE
 <Multi_key><underscore>                                                             <nobreakspace> : "_" U005F # LOW LINE
+<UEFD2>                                                                                    <U202F> : "_" U005F # LOW LINE
+<Multi_key><underscore>                                                                    <U202F> : "_" U005F # LOW LINE
 #
 #
 #   Signs and punctuation
@@ -14369,10 +14370,10 @@
 <Multi_key><underscore><underscore>                                                        <space> : "̳" U0333 # COMBINING DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                             <U200B> : "̳" U0333 # COMBINING DOUBLE LOW LINE
 <Multi_key><underscore><underscore>                                                        <U200B> : "̳" U0333 # COMBINING DOUBLE LOW LINE
-<UEFD2><UEFD2>                                                                             <U202F> : "‗" U2017 # DOUBLE LOW LINE
-<Multi_key><underscore><underscore>                                                        <U202F> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                      <nobreakspace> : "‗" U2017 # DOUBLE LOW LINE
 <Multi_key><underscore><underscore>                                                 <nobreakspace> : "‗" U2017 # DOUBLE LOW LINE
+<UEFD2><UEFD2>                                                                             <U202F> : "‗" U2017 # DOUBLE LOW LINE
+<Multi_key><underscore><underscore>                                                        <U202F> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
@@ -14475,10 +14476,10 @@
 <Multi_key><bar>                                                                           <space> : "̄" U0304 # COMBINING MACRON
 <dead_macron>                                                                              <U200B> : "̄" U0304 # COMBINING MACRON
 <Multi_key><bar>                                                                           <U200B> : "̄" U0304 # COMBINING MACRON
-<dead_macron>                                                                              <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
-<Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <dead_macron>                                                                       <nobreakspace> : "¯" U00AF # MACRON
 <Multi_key><bar>                                                                    <nobreakspace> : "¯" U00AF # MACRON
+<dead_macron>                                                                              <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
+<Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <dead_macron>                                                                                  <0> : "⫾" U2AFE # WHITE VERTICAL BAR
 <Multi_key><bar>                                                                               <0> : "⫾" U2AFE # WHITE VERTICAL BAR
 <dead_macron>                                                                               <KP_0> : "⫾" U2AFE # WHITE VERTICAL BAR
@@ -14685,10 +14686,10 @@
 <Multi_key><bar><bar>                                                                      <space> : "̱" U0331 # COMBINING MACRON BELOW
 <dead_macron><dead_macron>                                                                 <U200B> : "̱" U0331 # COMBINING MACRON BELOW
 <Multi_key><bar><bar>                                                                      <U200B> : "̱" U0331 # COMBINING MACRON BELOW
-<dead_macron><dead_macron>                                                                 <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
-<Multi_key><bar><bar>                                                                      <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <dead_macron><dead_macron>                                                          <nobreakspace> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <Multi_key><bar><bar>                                                               <nobreakspace> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
+<dead_macron><dead_macron>                                                                 <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
+<Multi_key><bar><bar>                                                                      <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <dead_macron><dead_macron>                                                                     <B> : "Ḇ" U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <B> : "Ḇ" U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <b> : "ḇ" U1E07 # LATIN SMALL LETTER B WITH LINE BELOW
@@ -15166,14 +15167,16 @@
 <Multi_key><asterisk>                                                                      <space> : "̊" U030A # COMBINING RING ABOVE
 <dead_abovering>                                                                           <U200B> : "̊" U030A # COMBINING RING ABOVE
 <Multi_key><asterisk>                                                                      <U200B> : "̊" U030A # COMBINING RING ABOVE
-<dead_abovering>                                                                           <U202F> : "˚" U02DA # RING ABOVE
-<Multi_key><asterisk>                                                                      <U202F> : "˚" U02DA # RING ABOVE
 <dead_abovering>                                                                    <nobreakspace> : "˚" U02DA # RING ABOVE
 <Multi_key><asterisk>                                                               <nobreakspace> : "˚" U02DA # RING ABOVE
+<dead_abovering>                                                                           <U202F> : "˚" U02DA # RING ABOVE
+<Multi_key><asterisk>                                                                      <U202F> : "˚" U02DA # RING ABOVE
 <dead_abovering>                                                                       <parenleft> : "͑" U0351 # COMBINING LEFT HALF RING ABOVE
 <Multi_key><asterisk>                                                                  <parenleft> : "͑" U0351 # COMBINING LEFT HALF RING ABOVE
 <dead_abovering>                                                                      <parenright> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
 <Multi_key><asterisk>                                                                 <parenright> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
+<dead_abovering>                                                                          <period> : "⸰" U2E30 # RING POINT
+<Multi_key><asterisk>                                                                     <period> : "⸰" U2E30 # RING POINT
 <dead_abovering>                                                                               <1> : "⁎" U204E # LOW ASTERISK
 <Multi_key><asterisk>                                                                          <1> : "⁎" U204E # LOW ASTERISK
 <dead_abovering>                                                                            <KP_1> : "⁎" U204E # LOW ASTERISK
@@ -15329,10 +15332,10 @@
 <Multi_key><asterisk><asterisk>                                                            <space> : "̥" U0325 # COMBINING RING BELOW
 <dead_abovering><dead_abovering>                                                           <U200B> : "̥" U0325 # COMBINING RING BELOW
 <Multi_key><asterisk><asterisk>                                                            <U200B> : "̥" U0325 # COMBINING RING BELOW
-<dead_abovering><dead_abovering>                                                           <U202F> : "˳" U02F3 # MODIFIER LETTER LOW RING
-<Multi_key><asterisk><asterisk>                                                            <U202F> : "˳" U02F3 # MODIFIER LETTER LOW RING
 <dead_abovering><dead_abovering>                                                    <nobreakspace> : "˳" U02F3 # MODIFIER LETTER LOW RING
 <Multi_key><asterisk><asterisk>                                                     <nobreakspace> : "˳" U02F3 # MODIFIER LETTER LOW RING
+<dead_abovering><dead_abovering>                                                           <U202F> : "˳" U02F3 # MODIFIER LETTER LOW RING
+<Multi_key><asterisk><asterisk>                                                            <U202F> : "˳" U02F3 # MODIFIER LETTER LOW RING
 <dead_abovering><dead_abovering>                                                               <A> : "Ḁ" U1E00 # LATIN CAPITAL LETTER A WITH RING BELOW
 <Multi_key><asterisk><asterisk>                                                                <A> : "Ḁ" U1E00 # LATIN CAPITAL LETTER A WITH RING BELOW
 <dead_abovering><dead_abovering>                                                               <a> : "ḁ" U1E01 # LATIN SMALL LETTER A WITH RING BELOW
