@@ -202,15 +202,44 @@
 #   only the verbatim rule on page 149 disagrees.
 #   In mainstream high-quality publishing (new school), NNBSP is used throughout.
 #
-#   See Philippe Verdy’s testimony in:
+#   See Philippe Verdy’s testimony:
 #   http://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
-#   The Unicode position is found in  UAX #14 since 2007, and in TUS since 2014:
+#   Unicode was supposed to encode SI/BIPM number typesetting as well as French
+#   punctuation typesetting, and for that purpose encoded THIN SPACE along with
+#   all other typographic space characters in the range U+2000..U+200A, and for
+#   that purpose designed the line breaking property as no-break for all spaces
+#   starting with U+2002, with the widest spaces both in a breaking variant and
+#   a no-break variant (U+2000, U+2001 vs U+2002, U+2003). But that design goal
+#   was compromised, leaving as no-break only U+2007 FIGURE SPACE, which is the
+#   single least useful space to be no-break since it only occurs inside tables
+#   for the purpose of indenting by the width of a digit, alongside U+2008 that
+#   indents by the width of a decimal dot or comma, and never in flowing text.
+#   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
+#   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
+#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
+#   https://www.unicode.org/L2/L2019/19115-fwsp-usability.pdf
+#   https://www.unicode.org/L2/L2019/19114-line-break-design.pdf
+#   https://www.unicode.org/L2/L2019/19317-uax14-proposal.pdf
+#   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf
+#   https://www.unicode.org/L2/L2020/20006-uax14-formal.pdf
+#   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
+#   https://www.unicode.org/L2/L2020/20008-core-text.pdf
+#
+#   The Unicode position is found in UAX #14 since 2007, and in TUS since 2014.
 #   The Unicode Standard, version 7.0.0, 2014, p. 265, chapter 6, section 6.2,
-#   heading “Space Characters”, subheading “Narrow No-Break Space”:
+#   heading “Space Characters”, subheading “Narrow No-Break Space”. Currently:
+#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834
+#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,300
 #
 #      The NNBSP can be used to represent the narrow space occurring around punctuation
 #      characters in French typography, which is called an “espace fine insécable.”
+#
+#   Unicode® Standard Annex #14, Unicode Line Breaking Algorithm, Unicode 15.1.0:
+#   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
+#
+#      When NARROW NO-BREAK SPACE occurs in French text, it should be interpreted
+#      as an “espace fine insécable”.
 #
 #   The Unicode position reflects also in the following document:
 #   Recommendations to UTC #160 July 2019 on Script Proposals — Script Ad Hoc group
@@ -225,6 +254,21 @@
 #   However, higher level protocols and tailoring are inacceptable options when
 #   used to achieve the digital representation of natural languages. The Unicode
 #   Standard specifies that it is about plain text.
+#
+#   In Unicode CLDR, French migrated from NBSP to NNBSP for grouping digits and
+#   in short measurement unit patterns, in v34, released on 2018-10-15:
+#   https://cldr.unicode.org/index/downloads/cldr-34
+#
+#      The French locale now uses narrow no-break space U+202F is several places:
+#      as the numeric grouping separator, in many short unit patterns, and in
+#      the locale display name patterns. It also changed normal space to
+#      no-break space U+00A0 in the wide unit patterns.
+#
+#      Migration
+#
+#      French grouping separator changed from no-break space U+00A0 to
+#      narrow no-break space U+202F.
+#
 #
 #   See also the CLDR feedback issue “PRI #367: Automated punctuation spacing”:
 #   https://unicode-org.atlassian.net/browse/CLDR-10904
@@ -4963,10 +5007,10 @@
 #   Level 2          3  4
 #
 #   A (Q on QWERTY)  ^  *dead_superscript UEFD1; *dead_abovecombining
-#   Z (W on QWERTY)  %  *dead_turned UEFD5; *dead_inverted/sideways
-#   E                {  dead_hook; *dead_curl/loop/crossedtail/squirreltail; *dead_flourish/hooktail/midheightlefthook
+#   Z (W on QWERTY)  %  *dead_turned UEFD5; *dead_sideways
+#   E                {  dead_hook; *dead_curl; *dead_flourish
 #   R                }  *dead_retroflexhook UEFD4; *dead_palatalhook; *dead_swash
-#   T                ~  dead_tilde; dead_belowtilde/middletilde; *dead_doublemiddletilde
+#   T                ~  dead_tilde; dead_belowtilde; *dead_doublemiddletilde
 #   Y                @  dead_greek (new-school); *dead_circled; *dead_doublecircled
 #   U                `  dead_grave; dead_doublegrave
 #   I                '  dead_acute
@@ -4977,12 +5021,12 @@
 #   S                $  dead_currency (new-school)
 #   D                (  dead_invertedbreve (new-school)
 #   F                )  dead_breve (new-school), dead_belowbreve
-#   G                -  dead_stroke (*dead_bar, horizontal stroke)
-#   H                +  dead_horn/descender/notch
+#   G                -  dead_stroke (*dead_bar)
+#   H                +  dead_horn
 #   J                [  dead_ogonek (new-school)
 #   K                ]  *dead_abovehook UEFD3
-#   L                _  *dead_subscript UEFD2 or small caps; *dead_belowcombining
-#   M                |  dead_macron (new-school) or long leg; dead_belowmacron
+#   L                _  *dead_subscript UEFD2; *dead_belowcombining
+#   M                |  dead_macron (new-school); dead_belowmacron
 #
 #   W (Z on QWERTY)  /  dead_longsolidusoverlay
 #   X                *  dead_abovering; dead_belowring
@@ -4992,7 +5036,7 @@
 #   N                \  *dead_reversed UEFD6
 #
 #   , and ?          ,  dead_cedilla
-#   . and !          !  dead_belowdot; descender (dead_abovedot is on P)
+#   . and !          !  dead_belowdot
 #   / and :          :  dead_diaeresis
 #   \ and ;          ;  dead_belowcomma
 #
@@ -5116,8 +5160,12 @@
 #   See #*# CIRCUMFLEX
 #   See #*# CEDILLA
 #
-#   For portability, a list of dead character candidates is provided below.
-#   For natively unsupported dead keys, a keysym candiate is proposed as well.
+#   For dead_tilde, the dead character base letter is `e` for consistency with
+#   dead_belowtilde, that is precomposed only with e, i, u.
+#   See #^# TILDE_BELOW, MIDDLE_TILDE
+#
+#   For portability, a list of dead character candidates is provided here. For
+#   natively unsupported dead keys, a keysym candiate is proposed as well.
 #   See # # Dead keys not included in keysymdef.h
 #
 #   <dead_abovedot>                                     "ṗ" U1E57 LATIN SMALL LETTER P WITH DOT ABOVE
@@ -5651,22 +5699,9 @@
 #       4.    #^# Dead key virtualized by multiple press
 #
 #   The order of base characters matters too, since this file is also used for
-#   documentation: spaces, §, quotedbl, apostrophes, symbols, digits, letters.
+#   documentation: spaces, quotedbl, apostrophes, symbols, digits, letters.
 #
-#
-# # Legend
-#
-#   # # DEAD_KEY_ID, Dead character or terminator on other platforms.
-#   #   XCompose keysym, or suggested keysym for new deadkeys.
-#   #   [base keysym and number of presses for virtualized dead keys]
-#   #   Multi_key: ¦compose character(s)
-#
-#   Combining marks and spacing clones of diacritics are listed first,
-#   eventually followed by the dead character with the <section> sign
-#   as the base character, although this is relevant on Windows as the
-#   dead character, and on MacOS as the terminator, not on XKB-using
-#   systems Linux and ChromeOS.
-#   See # # Dead characters for documentation purposes
+#   Combining marks and spacing clones of diacritics are listed first.
 #
 #
 #*# SUPERSCRIPT
@@ -5720,6 +5755,10 @@
 <Multi_key><asciicircum>                                                                   <space> : "̅" U0305 # COMBINING OVERLINE
 <UEFD1>                                                                                    <U200B> : "̅" U0305 # COMBINING OVERLINE
 <Multi_key><asciicircum>                                                                   <U200B> : "̅" U0305 # COMBINING OVERLINE
+<UEFD1>                                                                             <nobreakspace> : "‾" U203E # OVERLINE
+<Multi_key><asciicircum>                                                            <nobreakspace> : "‾" U203E # OVERLINE
+<UEFD1>                                                                                    <U202F> : "‾" U203E # OVERLINE
+<Multi_key><asciicircum>                                                                   <U202F> : "‾" U203E # OVERLINE
 #
 #
 #   Signs and punctuation
@@ -7279,10 +7318,16 @@
 #   *dead_superscript double press
 #   Multi_key: ¦^^
 #
-<UEFD1><UEFD1>                                                                             <space> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
-<Multi_key><asciicircum><asciicircum>                                                      <space> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
-<UEFD1><UEFD1>                                                                             <U200B> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
-<Multi_key><asciicircum><asciicircum>                                                      <U200B> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<UEFD1><UEFD1>                                                                             <space> : "̿" U033F # COMBINING DOUBLE OVERLINE
+<Multi_key><asciicircum><asciicircum>                                                      <space> : "̿" U033F # COMBINING DOUBLE OVERLINE
+<UEFD1><UEFD1>                                                                             <U200B> : "̿" U033F # COMBINING DOUBLE OVERLINE
+<Multi_key><asciicircum><asciicircum>                                                      <U200B> : "̿" U033F # COMBINING DOUBLE OVERLINE
+<UEFD1><UEFD1>                                                                      <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
+<Multi_key><asciicircum><asciicircum>                                               <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
+<UEFD1><UEFD1>                                                                             <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
+<Multi_key><asciicircum><asciicircum>                                                      <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
+<UEFD1><UEFD1>                                                                        <underscore> : "﹋" UFE4B # WAVY OVERLINE
+<Multi_key><asciicircum><asciicircum>                                                 <underscore> : "﹋" UFE4B # WAVY OVERLINE
 <UEFD1><UEFD1>                                                                       <bracketleft> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <Multi_key><asciicircum><asciicircum>                                                <bracketleft> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <UEFD1><UEFD1>                                                                      <bracketright> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
@@ -7408,12 +7453,23 @@
 #   but its usual glyph is really a _reversed_ E, unlike what is done for Lisu.
 #   See #*# REVERSED
 #
-#   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included.
+#   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
+#   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
+#   better option for typing a ʻokina is using group 1 of grave).
+#   See # # D07
 #
 <UEFD5>                                                                                    <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <UEFD5>                                                                                    <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
+<UEFD5>                                                                             <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<Multi_key><percent>                                                                <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<UEFD5>                                                                                    <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<Multi_key><percent>                                                                       <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<Multi_key><percent>                                                        <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<UEFD5>                                                                               <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<Multi_key><percent>                                                                  <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
 <UEFD5>                                                                               <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <Multi_key><percent>                                                                  <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
@@ -7803,14 +7859,28 @@
 <Multi_key><colon><percent>                                                                    <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 #
 #
-#^# TURNED, INVERTED, SIDEWAYS
-#   *dead_inverted
+#^# MORE_TURNED, INVERTED, SIDEWAYS
+#   *dead_sideways
 #   *dead_turned double press
 #   Multi_key: ¦%%
 #
-#   This also includes more SIDEWAYS letters, namely those that do not fit into
-#   the TURNED dead key due to conflicts with other turned letters, and Lisu.
+#   This supports the full set of those among the Old Lisu letters that can be
+#   used for writing in turned Latin letters. I.e. there is no M, Q, W as seen
+#   in #*# TURNED, SIDEWAYS
 #
+#   As a diacritic, "̕" U0315 COMBINING COMMA ABOVE RIGHT is included, with the
+#   rationale that this is turned twice, and "̓" U0313 COMBINING COMMA ABOVE is
+#   in dead_belowcomma double press.
+#   See #^# COMMA_ABOVE
+#
+<UEFD5><UEFD5>                                                                             <space> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<Multi_key><percent><percent>                                                              <space> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<UEFD5><UEFD5>                                                                             <U200B> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<Multi_key><percent><percent>                                                              <U200B> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<UEFD5><UEFD5>                                                                      <nobreakspace> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><percent><percent>                                                       <nobreakspace> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<UEFD5><UEFD5>                                                                             <U202F> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><percent><percent>                                                              <U202F> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD5><UEFD5>                                                                        <apostrophe> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
 <Multi_key><percent><percent>                                                         <apostrophe> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
 <UEFD5><UEFD5>                                                                        <parenright> : "⁔" U2054 # INVERTED UNDERTIE
@@ -7955,10 +8025,18 @@
 #
 #   A hook may also be referred to as a fishhook.
 #
-<dead_hook>                                                                                <space> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
-<Multi_key><braceleft>                                                                     <space> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
-<dead_hook>                                                                                <U200B> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
-<Multi_key><braceleft>                                                                     <U200B> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
+#   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
+#   by lack of anything more appropriate the spacing modifier slot is filled in
+#   with "˽" U02FD MODIFIER LETTER SHELF.
+#
+<dead_hook>                                                                                <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<Multi_key><braceleft>                                                                     <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<dead_hook>                                                                                <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<Multi_key><braceleft>                                                                     <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<dead_hook>                                                                         <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
+<Multi_key><braceleft>                                                              <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
+<dead_hook>                                                                                <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<Multi_key><braceleft>                                                                     <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
 <dead_hook>                                                                                    <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><braceleft>                                                                         <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <dead_hook>                                                                                 <KP_1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -8358,10 +8436,17 @@
 #   with alphabetic mnemonics referring to the letters these dead keys are on.
 #   See #*# DOT_ABOVE
 #
+#   By lack of anything more appropriate the spacing modifier slot is filled in
+#   with "˾" U02FE MODIFIER LETTER OPEN SHELF.
+#
 <UEFD4>                                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <Multi_key><braceright>                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <UEFD4>                                                                                    <U200B> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <Multi_key><braceright>                                                                    <U200B> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
+<UEFD4>                                                                             <nobreakspace> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
+<Multi_key><braceright>                                                             <nobreakspace> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
+<UEFD4>                                                                                    <U202F> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
+<Multi_key><braceright>                                                                    <U202F> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
 <UEFD4>                                                                                   <exclam> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright>                                                                   <exclam> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4>                                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
@@ -8649,10 +8734,17 @@
 #   *dead_retroflexhook double press
 #   Multi_key: ¦}}
 #
-<UEFD4><UEFD4>                                                                             <space> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
-<Multi_key><braceright><braceright>                                                        <space> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
-<UEFD4><UEFD4>                                                                             <U200B> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
-<Multi_key><braceright><braceright>                                                        <U200B> : "̡" U0321 # COMBINING PALATAL HOOK BELOW
+#   By lack of anything more appropriate the spacing modifier slot is filled in
+#   with "˽" U02FD MODIFIER LETTER SHELF.
+#
+<UEFD4><UEFD4>                                                                             <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<Multi_key><braceright><braceright>                                                        <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<UEFD4><UEFD4>                                                                             <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<Multi_key><braceright><braceright>                                                        <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
+<dead_hook>                                                                         <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
+<Multi_key><braceleft>                                                              <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
+<dead_hook>                                                                                <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<Multi_key><braceleft>                                                                     <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
 <UEFD4><UEFD4>                                                                                 <b> : "ᶀ" U1D80 # LATIN SMALL LETTER B WITH PALATAL HOOK
 <Multi_key><braceright><braceright>                                                            <b> : "ᶀ" U1D80 # LATIN SMALL LETTER B WITH PALATAL HOOK
 <UEFD4><UEFD4>                                                                                 <C> : "Ꞔ" UA7C4 # LATIN CAPITAL LETTER C WITH PALATAL HOOK
@@ -8810,9 +8902,6 @@
 #   All letters annotated as for Lithuanian in this file are courtesy:
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
-#   The dead character base letter is `e` for consistency with dead_belowtilde,
-#   that is precomposed only with e, i, u.
-#
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                               <U200B> : "̃" U0303 # COMBINING TILDE
@@ -8873,18 +8962,18 @@
 <Multi_key><asciitilde>                                                                        <I> : "Ĩ" U0128 # LATIN CAPITAL LETTER I WITH TILDE
 <dead_tilde>                                                                                   <i> : "ĩ" U0129 # LATIN SMALL LETTER I WITH TILDE
 <Multi_key><asciitilde>                                                                        <i> : "ĩ" U0129 # LATIN SMALL LETTER I WITH TILDE
-<dead_tilde>                                                                                   <J> : "J̃" # U004A U0303 LATIN CAPITAL LETTER J WITH TILDE Lithuanian
-<Multi_key><asciitilde>                                                                        <J> : "J̃" # U004A U0303 LATIN CAPITAL LETTER J WITH TILDE Lithuanian
-<dead_tilde>                                                                                   <j> : "j̇̃" # U006A U0307 U0303 LATIN SMALL LETTER J WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><asciitilde>                                                                        <j> : "j̇̃" # U006A U0307 U0303 LATIN SMALL LETTER J WITH DOT ABOVE AND TILDE Lithuanian
-<dead_tilde>                                                                                   <L> : "L̃" # U004C U0303 LATIN CAPITAL LETTER L WITH TILDE Lithuanian
-<Multi_key><asciitilde>                                                                        <L> : "L̃" # U004C U0303 LATIN CAPITAL LETTER L WITH TILDE Lithuanian
-<dead_tilde>                                                                                   <l> : "l̃" # U006C U0303 LATIN SMALL LETTER L WITH TILDE Lithuanian
-<Multi_key><asciitilde>                                                                        <l> : "l̃" # U006C U0303 LATIN SMALL LETTER L WITH TILDE Lithuanian
-<dead_tilde>                                                                                   <M> : "M̃" # U004D U0303 LATIN CAPITAL LETTER M WITH TILDE Lithuanian
-<Multi_key><asciitilde>                                                                        <M> : "M̃" # U004D U0303 LATIN CAPITAL LETTER M WITH TILDE Lithuanian
-<dead_tilde>                                                                                   <m> : "m̃" # U006D U0303 LATIN SMALL LETTER M WITH TILDE Lithuanian
-<Multi_key><asciitilde>                                                                        <m> : "m̃" # U006D U0303 LATIN SMALL LETTER M WITH TILDE Lithuanian
+<dead_tilde>                                                                                   <J> : "J̃" # U004A U0303 LATIN CAPITAL LETTER J WITH TILDE: Lithuanian
+<Multi_key><asciitilde>                                                                        <J> : "J̃" # U004A U0303 LATIN CAPITAL LETTER J WITH TILDE: Lithuanian
+<dead_tilde>                                                                                   <j> : "j̇̃" # U006A U0307 U0303 LATIN SMALL LETTER J WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><asciitilde>                                                                        <j> : "j̇̃" # U006A U0307 U0303 LATIN SMALL LETTER J WITH DOT ABOVE AND TILDE: Lithuanian
+<dead_tilde>                                                                                   <L> : "L̃" # U004C U0303 LATIN CAPITAL LETTER L WITH TILDE: Lithuanian
+<Multi_key><asciitilde>                                                                        <L> : "L̃" # U004C U0303 LATIN CAPITAL LETTER L WITH TILDE: Lithuanian
+<dead_tilde>                                                                                   <l> : "l̃" # U006C U0303 LATIN SMALL LETTER L WITH TILDE: Lithuanian
+<Multi_key><asciitilde>                                                                        <l> : "l̃" # U006C U0303 LATIN SMALL LETTER L WITH TILDE: Lithuanian
+<dead_tilde>                                                                                   <M> : "M̃" # U004D U0303 LATIN CAPITAL LETTER M WITH TILDE: Lithuanian
+<Multi_key><asciitilde>                                                                        <M> : "M̃" # U004D U0303 LATIN CAPITAL LETTER M WITH TILDE: Lithuanian
+<dead_tilde>                                                                                   <m> : "m̃" # U006D U0303 LATIN SMALL LETTER M WITH TILDE: Lithuanian
+<Multi_key><asciitilde>                                                                        <m> : "m̃" # U006D U0303 LATIN SMALL LETTER M WITH TILDE: Lithuanian
 <dead_tilde>                                                                                   <N> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
 <Multi_key><asciitilde>                                                                        <N> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
 <dead_tilde>                                                                                   <n> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
@@ -8895,10 +8984,10 @@
 <Multi_key><asciitilde>                                                                        <o> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE
 <dead_tilde>                                                                                   <p> : "ᵱ" U1D71 # LATIN SMALL LETTER P WITH MIDDLE TILDE
 <Multi_key><asciitilde>                                                                        <p> : "ᵱ" U1D71 # LATIN SMALL LETTER P WITH MIDDLE TILDE
-<dead_tilde>                                                                                   <R> : "R̃" # U0052 U0303 LATIN CAPITAL LETTER R WITH TILDE Hausa in Boko (Latin), Lithuanian
-<Multi_key><asciitilde>                                                                        <R> : "R̃" # U0052 U0303 LATIN CAPITAL LETTER R WITH TILDE Hausa in Boko (Latin), Lithuanian
-<dead_tilde>                                                                                   <r> : "r̃" # U0072 U0303 LATIN SMALL LETTER R WITH TILDE Hausa in Boko (Latin), Lithuanian
-<Multi_key><asciitilde>                                                                        <r> : "r̃" # U0072 U0303 LATIN SMALL LETTER R WITH TILDE Hausa in Boko (Latin), Lithuanian
+<dead_tilde>                                                                                   <R> : "R̃" # U0052 U0303 LATIN CAPITAL LETTER R WITH TILDE: Hausa in Boko (Latin), Lithuanian
+<Multi_key><asciitilde>                                                                        <R> : "R̃" # U0052 U0303 LATIN CAPITAL LETTER R WITH TILDE: Hausa in Boko (Latin), Lithuanian
+<dead_tilde>                                                                                   <r> : "r̃" # U0072 U0303 LATIN SMALL LETTER R WITH TILDE: Hausa in Boko (Latin), Lithuanian
+<Multi_key><asciitilde>                                                                        <r> : "r̃" # U0072 U0303 LATIN SMALL LETTER R WITH TILDE: Hausa in Boko (Latin), Lithuanian
 <dead_tilde>                                                                                   <s> : "ᵴ" U1D74 # LATIN SMALL LETTER S WITH MIDDLE TILDE
 <Multi_key><asciitilde>                                                                        <s> : "ᵴ" U1D74 # LATIN SMALL LETTER S WITH MIDDLE TILDE
 <dead_tilde>                                                                                   <t> : "ᵵ" U1D75 # LATIN SMALL LETTER T WITH MIDDLE TILDE
@@ -9039,6 +9128,10 @@
 <Multi_key><asciitilde><asciitilde><asciitilde>                                            <space> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde><dead_tilde><dead_tilde>                                                       <U200B> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde><asciitilde><asciitilde>                                            <U200B> : "̴" U0334 # COMBINING TILDE OVERLAY
+<dead_tilde><dead_tilde><dead_tilde>                                                <nobreakspace> : "~" U007E # TILDE
+<Multi_key><asciitilde><asciitilde><asciitilde>                                     <nobreakspace> : "~" U007E # TILDE
+<dead_tilde><dead_tilde><dead_tilde>                                                       <U202F> : "~" U007E # TILDE
+<Multi_key><asciitilde><asciitilde><asciitilde>                                            <U202F> : "~" U007E # TILDE
 <dead_tilde><dead_tilde><dead_tilde>                                                           <l> : "ꬸ" UAB38 # LATIN SMALL LETTER L WITH DOUBLE MIDDLE TILDE
 <Multi_key><asciitilde><asciitilde><asciitilde>                                                <l> : "ꬸ" UAB38 # LATIN SMALL LETTER L WITH DOUBLE MIDDLE TILDE
 #
@@ -9084,7 +9177,8 @@
 #   See # # GROUP_6
 #
 #   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as most
-#   likely to be useful and expected rather than other diacritical marks.
+#   likely to be useful and expected rather than other diacritical marks. So is
+#   the spacing clone slot for "ι" U03B9, for consistency with Greek encoding.
 #   https://www.unicode.org/faq/greek.html
 #
 #   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
@@ -9100,6 +9194,10 @@
 <Multi_key><at>                                                                            <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
 <dead_greek>                                                                               <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
 <Multi_key><at>                                                                            <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<dead_greek>                                                                        <nobreakspace> : "ι" U03B9 # GREEK SMALL LETTER IOTA
+<Multi_key><at>                                                                     <nobreakspace> : "ι" U03B9 # GREEK SMALL LETTER IOTA
+<dead_greek>                                                                               <U202F> : "ι" U03B9 # GREEK SMALL LETTER IOTA
+<Multi_key><at>                                                                            <U202F> : "ι" U03B9 # GREEK SMALL LETTER IOTA
 <dead_greek>                                                                           <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at>                                                                        <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek>                                                                          <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
@@ -9723,6 +9821,16 @@
 #   Circled operators are also supported.
 #   See also #^# CIRCLED_NUMBER
 #
+#   As a diacritic,  "⃝" U20DD is provided, and "⚪" U26AA as a spacing clone.
+#
+<dead_greek><dead_greek>                                                                   <space> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
+<Multi_key><at><at>                                                                        <space> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
+<dead_greek><dead_greek>                                                                   <U200B> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
+<Multi_key><at><at>                                                                        <U200B> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
+<dead_greek><dead_greek>                                                            <nobreakspace> : "⚪" U26AA # MEDIUM WHITE CIRCLE
+<Multi_key><at><at>                                                                 <nobreakspace> : "⚪" U26AA # MEDIUM WHITE CIRCLE
+<dead_greek><dead_greek>                                                                   <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE
+<Multi_key><at><at>                                                                        <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE
 <dead_greek><dead_greek>                                                               <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at><at>                                                                    <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek><dead_greek>                                                              <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
@@ -10004,10 +10112,10 @@
 <Multi_key><grave>                                                                             <I> : "Ì" U00CC # LATIN CAPITAL LETTER I WITH GRAVE
 <dead_grave>                                                                                   <i> : "ì" U00EC # LATIN SMALL LETTER I WITH GRAVE
 <Multi_key><grave>                                                                             <i> : "ì" U00EC # LATIN SMALL LETTER I WITH GRAVE
-<dead_grave>                                                                                   <M> : "M̀" # U004D U0300 LATIN CAPITAL LETTER M WITH GRAVE languages of Togo
-<Multi_key><grave>                                                                             <M> : "M̀" # U004D U0300 LATIN CAPITAL LETTER M WITH GRAVE languages of Togo
-<dead_grave>                                                                                   <m> : "m̀" # U006D U0300 LATIN SMALL LETTER M WITH GRAVE languages of Togo
-<Multi_key><grave>                                                                             <m> : "m̀" # U006D U0300 LATIN SMALL LETTER M WITH GRAVE languages of Togo
+<dead_grave>                                                                                   <M> : "M̀" # U004D U0300 LATIN CAPITAL LETTER M WITH GRAVE: Languages of Togo
+<Multi_key><grave>                                                                             <M> : "M̀" # U004D U0300 LATIN CAPITAL LETTER M WITH GRAVE: Languages of Togo
+<dead_grave>                                                                                   <m> : "m̀" # U006D U0300 LATIN SMALL LETTER M WITH GRAVE: Languages of Togo
+<Multi_key><grave>                                                                             <m> : "m̀" # U006D U0300 LATIN SMALL LETTER M WITH GRAVE: Languages of Togo
 <dead_grave>                                                                                   <N> : "Ǹ" U01F8 # LATIN CAPITAL LETTER N WITH GRAVE
 <Multi_key><grave>                                                                             <N> : "Ǹ" U01F8 # LATIN CAPITAL LETTER N WITH GRAVE
 <dead_grave>                                                                                   <n> : "ǹ" U01F9 # LATIN SMALL LETTER N WITH GRAVE
@@ -10016,10 +10124,10 @@
 <Multi_key><grave>                                                                             <O> : "Ò" U00D2 # LATIN CAPITAL LETTER O WITH GRAVE
 <dead_grave>                                                                                   <o> : "ò" U00F2 # LATIN SMALL LETTER O WITH GRAVE
 <Multi_key><grave>                                                                             <o> : "ò" U00F2 # LATIN SMALL LETTER O WITH GRAVE
-<dead_grave>                                                                                   <R> : "R̀" # U0052 U0300 LATIN CAPITAL LETTER R WITH GRAVE Croatian, Serbian, Slovene
-<Multi_key><grave>                                                                             <R> : "R̀" # U0052 U0300 LATIN CAPITAL LETTER R WITH GRAVE Croatian, Serbian, Slovene
-<dead_grave>                                                                                   <r> : "r̀" # U0072 U0300 LATIN SMALL LETTER R WITH GRAVE Croatian, Serbian, Slovene
-<Multi_key><grave>                                                                             <r> : "r̀" # U0072 U0300 LATIN SMALL LETTER R WITH GRAVE Croatian, Serbian, Slovene
+<dead_grave>                                                                                   <R> : "R̀" # U0052 U0300 LATIN CAPITAL LETTER R WITH GRAVE: Croatian, Serbian, Slovene
+<Multi_key><grave>                                                                             <R> : "R̀" # U0052 U0300 LATIN CAPITAL LETTER R WITH GRAVE: Croatian, Serbian, Slovene
+<dead_grave>                                                                                   <r> : "r̀" # U0072 U0300 LATIN SMALL LETTER R WITH GRAVE: Croatian, Serbian, Slovene
+<Multi_key><grave>                                                                             <r> : "r̀" # U0072 U0300 LATIN SMALL LETTER R WITH GRAVE: Croatian, Serbian, Slovene
 <dead_grave>                                                                                   <U> : "Ù" U00D9 # LATIN CAPITAL LETTER U WITH GRAVE
 <Multi_key><grave>                                                                             <U> : "Ù" U00D9 # LATIN CAPITAL LETTER U WITH GRAVE
 <dead_grave>                                                                                   <u> : "ù" U00F9 # LATIN SMALL LETTER U WITH GRAVE
@@ -10150,42 +10258,42 @@
 <Multi_key><apostrophe>                                                                        <A> : "Á" U00C1 # LATIN CAPITAL LETTER A WITH ACUTE
 <dead_acute>                                                                                   <a> : "á" U00E1 # LATIN SMALL LETTER A WITH ACUTE
 <Multi_key><apostrophe>                                                                        <a> : "á" U00E1 # LATIN SMALL LETTER A WITH ACUTE
-<dead_acute>                                                                                   <B> : "B́" # U0042 U0301 LATIN CAPITAL LETTER B WITH ACUTE Ntcham, Shinasha, Vōro
-<Multi_key><apostrophe>                                                                        <B> : "B́" # U0042 U0301 LATIN CAPITAL LETTER B WITH ACUTE Ntcham, Shinasha, Vōro
-<dead_acute>                                                                                   <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE Ntcham, Shinasha, Vōro
-<Multi_key><apostrophe>                                                                        <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE Ntcham, Shinasha, Vōro
+<dead_acute>                                                                                   <B> : "B́" # U0042 U0301 LATIN CAPITAL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
+<Multi_key><apostrophe>                                                                        <B> : "B́" # U0042 U0301 LATIN CAPITAL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
+<dead_acute>                                                                                   <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
+<Multi_key><apostrophe>                                                                        <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
 <dead_acute>                                                                                   <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <Multi_key><apostrophe>                                                                        <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <dead_acute>                                                                                   <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
 <Multi_key><apostrophe>                                                                        <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
-<dead_acute>                                                                                   <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
-<dead_acute>                                                                                   <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<dead_acute>                                                                                   <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<Multi_key><apostrophe>                                                                        <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<dead_acute>                                                                                   <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<Multi_key><apostrophe>                                                                        <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
 <dead_acute>                                                                                   <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <Multi_key><apostrophe>                                                                        <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <dead_acute>                                                                                   <e> : "é" U00E9 # LATIN SMALL LETTER E WITH ACUTE
 <Multi_key><apostrophe>                                                                        <e> : "é" U00E9 # LATIN SMALL LETTER E WITH ACUTE
-<dead_acute>                                                                                   <F> : "F́" # U0046 U0301 LATIN CAPITAL LETTER F WITH ACUTE Vōro
-<Multi_key><apostrophe>                                                                        <F> : "F́" # U0046 U0301 LATIN CAPITAL LETTER F WITH ACUTE Vōro
-<dead_acute>                                                                                   <f> : "f́" # U0066 U0301 LATIN SMALL LETTER F WITH ACUTE Vōro
-<Multi_key><apostrophe>                                                                        <f> : "f́" # U0066 U0301 LATIN SMALL LETTER F WITH ACUTE Vōro
+<dead_acute>                                                                                   <F> : "F́" # U0046 U0301 LATIN CAPITAL LETTER F WITH ACUTE: Vōro
+<Multi_key><apostrophe>                                                                        <F> : "F́" # U0046 U0301 LATIN CAPITAL LETTER F WITH ACUTE: Vōro
+<dead_acute>                                                                                   <f> : "f́" # U0066 U0301 LATIN SMALL LETTER F WITH ACUTE: Vōro
+<Multi_key><apostrophe>                                                                        <f> : "f́" # U0066 U0301 LATIN SMALL LETTER F WITH ACUTE: Vōro
 <dead_acute>                                                                                   <G> : "Ǵ" U01F4 # LATIN CAPITAL LETTER G WITH ACUTE
 <Multi_key><apostrophe>                                                                        <G> : "Ǵ" U01F4 # LATIN CAPITAL LETTER G WITH ACUTE
 <dead_acute>                                                                                   <g> : "ǵ" U01F5 # LATIN SMALL LETTER G WITH ACUTE
 <Multi_key><apostrophe>                                                                        <g> : "ǵ" U01F5 # LATIN SMALL LETTER G WITH ACUTE
-<dead_acute>                                                                                   <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
-<Multi_key><apostrophe>                                                                        <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
-<dead_acute>                                                                                   <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
-<Multi_key><apostrophe>                                                                        <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
+<dead_acute>                                                                                   <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
+<Multi_key><apostrophe>                                                                        <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
+<dead_acute>                                                                                   <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
+<Multi_key><apostrophe>                                                                        <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
 <dead_acute>                                                                                   <I> : "Í" U00CD # LATIN CAPITAL LETTER I WITH ACUTE
 <Multi_key><apostrophe>                                                                        <I> : "Í" U00CD # LATIN CAPITAL LETTER I WITH ACUTE
 <dead_acute>                                                                                   <i> : "í" U00ED # LATIN SMALL LETTER I WITH ACUTE
 <Multi_key><apostrophe>                                                                        <i> : "í" U00ED # LATIN SMALL LETTER I WITH ACUTE
-<dead_acute>                                                                                   <J> : "J́" # U004A U0301 LATIN CAPITAL LETTER J WITH ACUTE Dutch
-<Multi_key><apostrophe>                                                                        <J> : "J́" # U004A U0301 LATIN CAPITAL LETTER J WITH ACUTE Dutch
-<dead_acute>                                                                                   <j> : "j́" # U006A U0301 LATIN SMALL LETTER J WITH ACUTE Dutch
-<Multi_key><apostrophe>                                                                        <j> : "j́" # U006A U0301 LATIN SMALL LETTER J WITH ACUTE Dutch
+<dead_acute>                                                                                   <J> : "J́" # U004A U0301 LATIN CAPITAL LETTER J WITH ACUTE: Dutch
+<Multi_key><apostrophe>                                                                        <J> : "J́" # U004A U0301 LATIN CAPITAL LETTER J WITH ACUTE: Dutch
+<dead_acute>                                                                                   <j> : "j́" # U006A U0301 LATIN SMALL LETTER J WITH ACUTE: Dutch
+<Multi_key><apostrophe>                                                                        <j> : "j́" # U006A U0301 LATIN SMALL LETTER J WITH ACUTE: Dutch
 <dead_acute>                                                                                   <K> : "Ḱ" U1E30 # LATIN CAPITAL LETTER K WITH ACUTE
 <Multi_key><apostrophe>                                                                        <K> : "Ḱ" U1E30 # LATIN CAPITAL LETTER K WITH ACUTE
 <dead_acute>                                                                                   <k> : "ḱ" U1E31 # LATIN SMALL LETTER K WITH ACUTE
@@ -10210,10 +10318,10 @@
 <Multi_key><apostrophe>                                                                        <P> : "Ṕ" U1E54 # LATIN CAPITAL LETTER P WITH ACUTE
 <dead_acute>                                                                                   <p> : "ṕ" U1E55 # LATIN SMALL LETTER P WITH ACUTE
 <Multi_key><apostrophe>                                                                        <p> : "ṕ" U1E55 # LATIN SMALL LETTER P WITH ACUTE
-<dead_acute>                                                                                   <Q> : "Q́" # U0051 U0301 LATIN CAPITAL LETTER Q WITH ACUTE Chimane orthography of Wayne Gill
-<Multi_key><apostrophe>                                                                        <Q> : "Q́" # U0051 U0301 LATIN CAPITAL LETTER Q WITH ACUTE Chimane orthography of Wayne Gill
-<dead_acute>                                                                                   <q> : "q́" # U0071 U0301 LATIN SMALL LETTER Q WITH ACUTE Chimane orthography of Wayne Gill
-<Multi_key><apostrophe>                                                                        <q> : "q́" # U0071 U0301 LATIN SMALL LETTER Q WITH ACUTE Chimane orthography of Wayne Gill
+<dead_acute>                                                                                   <Q> : "Q́" # U0051 U0301 LATIN CAPITAL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
+<Multi_key><apostrophe>                                                                        <Q> : "Q́" # U0051 U0301 LATIN CAPITAL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
+<dead_acute>                                                                                   <q> : "q́" # U0071 U0301 LATIN SMALL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
+<Multi_key><apostrophe>                                                                        <q> : "q́" # U0071 U0301 LATIN SMALL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
 <dead_acute>                                                                                   <R> : "Ŕ" U0154 # LATIN CAPITAL LETTER R WITH ACUTE
 <Multi_key><apostrophe>                                                                        <R> : "Ŕ" U0154 # LATIN CAPITAL LETTER R WITH ACUTE
 <dead_acute>                                                                                   <r> : "ŕ" U0155 # LATIN SMALL LETTER R WITH ACUTE
@@ -10222,26 +10330,26 @@
 <Multi_key><apostrophe>                                                                        <S> : "Ś" U015A # LATIN CAPITAL LETTER S WITH ACUTE
 <dead_acute>                                                                                   <s> : "ś" U015B # LATIN SMALL LETTER S WITH ACUTE
 <Multi_key><apostrophe>                                                                        <s> : "ś" U015B # LATIN SMALL LETTER S WITH ACUTE
-<dead_acute>                                                                                   <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
-<dead_acute>                                                                                   <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<dead_acute>                                                                                   <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<Multi_key><apostrophe>                                                                        <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<dead_acute>                                                                                   <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<Multi_key><apostrophe>                                                                        <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
 <dead_acute>                                                                                   <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                                        <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <dead_acute>                                                                                   <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                                        <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
-<dead_acute>                                                                                   <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
-<Multi_key><apostrophe>                                                                        <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
-<dead_acute>                                                                                   <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
-<Multi_key><apostrophe>                                                                        <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<dead_acute>                                                                                   <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<Multi_key><apostrophe>                                                                        <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<dead_acute>                                                                                   <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<Multi_key><apostrophe>                                                                        <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
 <dead_acute>                                                                                   <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <Multi_key><apostrophe>                                                                        <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <dead_acute>                                                                                   <w> : "ẃ" U1E83 # LATIN SMALL LETTER W WITH ACUTE
 <Multi_key><apostrophe>                                                                        <w> : "ẃ" U1E83 # LATIN SMALL LETTER W WITH ACUTE
-<dead_acute>                                                                                   <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
-<Multi_key><apostrophe>                                                                        <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
-<dead_acute>                                                                                   <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
-<Multi_key><apostrophe>                                                                        <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
+<dead_acute>                                                                                   <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
+<Multi_key><apostrophe>                                                                        <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
+<dead_acute>                                                                                   <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
+<Multi_key><apostrophe>                                                                        <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
 <dead_acute>                                                                                   <Y> : "Ý" U00DD # LATIN CAPITAL LETTER Y WITH ACUTE
 <Multi_key><apostrophe>                                                                        <Y> : "Ý" U00DD # LATIN CAPITAL LETTER Y WITH ACUTE
 <dead_acute>                                                                                   <y> : "ý" U00FD # LATIN SMALL LETTER Y WITH ACUTE
@@ -10254,14 +10362,14 @@
 <Multi_key><apostrophe>                                                                 <Ccedilla> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <dead_acute>                                                                            <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><apostrophe>                                                                 <ccedilla> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
-<dead_acute>                                                                              <Eacute> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE Portuguese
-<Multi_key><apostrophe>                                                                   <Eacute> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE Portuguese
-<dead_acute>                                                                              <eacute> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE Portuguese
-<Multi_key><apostrophe>                                                                   <eacute> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE Portuguese
-<dead_acute>                                                                              <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE Portuguese
-<Multi_key><apostrophe>                                                                   <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE Portuguese
-<dead_acute>                                                                              <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE Portuguese
-<Multi_key><apostrophe>                                                                   <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE Portuguese
+<dead_acute>                                                                              <Eacute> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE: Portuguese
+<Multi_key><apostrophe>                                                                   <Eacute> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE: Portuguese
+<dead_acute>                                                                              <eacute> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE: Portuguese
+<Multi_key><apostrophe>                                                                   <eacute> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE: Portuguese
+<dead_acute>                                                                              <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE: Portuguese
+<Multi_key><apostrophe>                                                                   <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE: Portuguese
+<dead_acute>                                                                              <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE: Portuguese
+<Multi_key><apostrophe>                                                                   <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE: Portuguese
 #
 #
 # # ACUTE&GROUP_1
@@ -10697,10 +10805,10 @@
 <Multi_key><period>                                                                            <i> : "ı" U0131 # LATIN SMALL LETTER DOTLESS I
 <dead_abovedot>                                                                                <j> : "ȷ" U0237 # LATIN SMALL LETTER DOTLESS J
 <Multi_key><period>                                                                            <j> : "ȷ" U0237 # LATIN SMALL LETTER DOTLESS J
-<dead_abovedot>                                                                                <K> : "K̇" # U004B U0307 LATIN CAPITAL LETTER K WITH DOT ABOVE ALA-LC romanization
-<Multi_key><period>                                                                            <K> : "K̇" # U004B U0307 LATIN CAPITAL LETTER K WITH DOT ABOVE ALA-LC romanization
-<dead_abovedot>                                                                                <k> : "k̇" # U006B U0307 LATIN SMALL LETTER K WITH DOT ABOVE ALA-LC romanization
-<Multi_key><period>                                                                            <k> : "k̇" # U006B U0307 LATIN SMALL LETTER K WITH DOT ABOVE ALA-LC romanization
+<dead_abovedot>                                                                                <K> : "K̇" # U004B U0307 LATIN CAPITAL LETTER K WITH DOT ABOVE: ALA-LC romanization
+<Multi_key><period>                                                                            <K> : "K̇" # U004B U0307 LATIN CAPITAL LETTER K WITH DOT ABOVE: ALA-LC romanization
+<dead_abovedot>                                                                                <k> : "k̇" # U006B U0307 LATIN SMALL LETTER K WITH DOT ABOVE: ALA-LC romanization
+<Multi_key><period>                                                                            <k> : "k̇" # U006B U0307 LATIN SMALL LETTER K WITH DOT ABOVE: ALA-LC romanization
 <dead_abovedot>                                                                                <L> : "Ŀ" U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <Multi_key><period>                                                                            <L> : "Ŀ" U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <dead_abovedot>                                                                                <l> : "ŀ" U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
@@ -10721,10 +10829,10 @@
 <Multi_key><period>                                                                            <P> : "Ṗ" U1E56 # LATIN CAPITAL LETTER P WITH DOT ABOVE
 <dead_abovedot>                                                                                <p> : "ṗ" U1E57 # LATIN SMALL LETTER P WITH DOT ABOVE
 <Multi_key><period>                                                                            <p> : "ṗ" U1E57 # LATIN SMALL LETTER P WITH DOT ABOVE
-<dead_abovedot>                                                                                <Q> : "Q̇" # U0051 U0307 LATIN CAPITAL LETTER Q WITH DOT ABOVE Chechen, Georgian
-<Multi_key><period>                                                                            <Q> : "Q̇" # U0051 U0307 LATIN CAPITAL LETTER Q WITH DOT ABOVE Chechen, Georgian
-<dead_abovedot>                                                                                <q> : "q̇" # U0071 U0307 LATIN SMALL LETTER Q WITH DOT ABOVE Chechen, Georgian
-<Multi_key><period>                                                                            <q> : "q̇" # U0071 U0307 LATIN SMALL LETTER Q WITH DOT ABOVE Chechen, Georgian
+<dead_abovedot>                                                                                <Q> : "Q̇" # U0051 U0307 LATIN CAPITAL LETTER Q WITH DOT ABOVE: Chechen, Georgian
+<Multi_key><period>                                                                            <Q> : "Q̇" # U0051 U0307 LATIN CAPITAL LETTER Q WITH DOT ABOVE: Chechen, Georgian
+<dead_abovedot>                                                                                <q> : "q̇" # U0071 U0307 LATIN SMALL LETTER Q WITH DOT ABOVE: Chechen, Georgian
+<Multi_key><period>                                                                            <q> : "q̇" # U0071 U0307 LATIN SMALL LETTER Q WITH DOT ABOVE: Chechen, Georgian
 <dead_abovedot>                                                                                <R> : "Ṙ" U1E58 # LATIN CAPITAL LETTER R WITH DOT ABOVE
 <Multi_key><period>                                                                            <R> : "Ṙ" U1E58 # LATIN CAPITAL LETTER R WITH DOT ABOVE
 <dead_abovedot>                                                                                <r> : "ṙ" U1E59 # LATIN SMALL LETTER R WITH DOT ABOVE
@@ -10737,14 +10845,14 @@
 <Multi_key><period>                                                                            <T> : "Ṫ" U1E6A # LATIN CAPITAL LETTER T WITH DOT ABOVE
 <dead_abovedot>                                                                                <t> : "ṫ" U1E6B # LATIN SMALL LETTER T WITH DOT ABOVE
 <Multi_key><period>                                                                            <t> : "ṫ" U1E6B # LATIN SMALL LETTER T WITH DOT ABOVE
-<dead_abovedot>                                                                                <U> : "U̇" # U0055 U0307 LATIN CAPITAL LETTER U WITH DOT ABOVE ALA-LC romanization
-<Multi_key><period>                                                                            <U> : "U̇" # U0055 U0307 LATIN CAPITAL LETTER U WITH DOT ABOVE ALA-LC romanization
-<dead_abovedot>                                                                                <u> : "u̇" # U0075 U0307 LATIN SMALL LETTER U WITH DOT ABOVE ALA-LC romanization
-<Multi_key><period>                                                                            <u> : "u̇" # U0075 U0307 LATIN SMALL LETTER U WITH DOT ABOVE ALA-LC romanization
-<dead_abovedot>                                                                                <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE medical notations
-<Multi_key><period>                                                                            <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE medical notations
-<dead_abovedot>                                                                                <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE medical notations
-<Multi_key><period>                                                                            <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE medical notations
+<dead_abovedot>                                                                                <U> : "U̇" # U0055 U0307 LATIN CAPITAL LETTER U WITH DOT ABOVE: ALA-LC romanization
+<Multi_key><period>                                                                            <U> : "U̇" # U0055 U0307 LATIN CAPITAL LETTER U WITH DOT ABOVE: ALA-LC romanization
+<dead_abovedot>                                                                                <u> : "u̇" # U0075 U0307 LATIN SMALL LETTER U WITH DOT ABOVE: ALA-LC romanization
+<Multi_key><period>                                                                            <u> : "u̇" # U0075 U0307 LATIN SMALL LETTER U WITH DOT ABOVE: ALA-LC romanization
+<dead_abovedot>                                                                                <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE: Medical notations
+<Multi_key><period>                                                                            <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE: Medical notations
+<dead_abovedot>                                                                                <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE: Medical notations
+<Multi_key><period>                                                                            <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE: Medical notations
 <dead_abovedot>                                                                                <W> : "Ẇ" U1E86 # LATIN CAPITAL LETTER W WITH DOT ABOVE
 <Multi_key><period>                                                                            <W> : "Ẇ" U1E86 # LATIN CAPITAL LETTER W WITH DOT ABOVE
 <dead_abovedot>                                                                                <w> : "ẇ" U1E87 # LATIN SMALL LETTER W WITH DOT ABOVE
@@ -10765,42 +10873,42 @@
 #
 # # DOT_ABOVE&TILDE
 #
-<dead_abovedot><dead_tilde>                                                                    <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><period><asciitilde>                                                                <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<dead_tilde><dead_abovedot>                                                                    <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><asciitilde><period>                                                                <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<dead_abovedot><dead_tilde>                                                                    <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><period><asciitilde>                                                                <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<dead_tilde><dead_abovedot>                                                                    <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><asciitilde><period>                                                                <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE Lithuanian
-<dead_abovedot><dead_tilde>                                                                    <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><period><asciitilde>                                                                <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE Lithuanian
-<dead_tilde><dead_abovedot>                                                                    <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE Lithuanian
-<Multi_key><asciitilde><period>                                                                <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE Lithuanian
+<dead_abovedot><dead_tilde>                                                                    <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><period><asciitilde>                                                                <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<dead_tilde><dead_abovedot>                                                                    <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><asciitilde><period>                                                                <E> : "Ė̃" # U0116 U0303 LATIN CAPITAL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<dead_abovedot><dead_tilde>                                                                    <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><period><asciitilde>                                                                <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<dead_tilde><dead_abovedot>                                                                    <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><asciitilde><period>                                                                <e> : "ė̃" # U0117 U0303 LATIN SMALL LETTER E WITH DOT ABOVE AND TILDE: Lithuanian
+<dead_abovedot><dead_tilde>                                                                    <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><period><asciitilde>                                                                <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE: Lithuanian
+<dead_tilde><dead_abovedot>                                                                    <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><asciitilde><period>                                                                <i> : "i̇̃" # U0069 U0307 U0303 LATIN SMALL LETTER I WITH DOT ABOVE AND TILDE: Lithuanian
 #
 #
 # # DOT_ABOVE&GRAVE
 #
-<dead_abovedot><dead_grave>                                                                    <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE Lithuanian
-<Multi_key><period><grave>                                                                     <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE Lithuanian
-<dead_grave><dead_abovedot>                                                                    <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE Lithuanian
-<Multi_key><grave><period>                                                                     <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE Lithuanian
+<dead_abovedot><dead_grave>                                                                    <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE: Lithuanian
+<Multi_key><period><grave>                                                                     <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE: Lithuanian
+<dead_grave><dead_abovedot>                                                                    <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE: Lithuanian
+<Multi_key><grave><period>                                                                     <i> : "i̇̀" # U0069 U0307 U0300 LATIN SMALL LETTER I WITH DOT ABOVE AND GRAVE: Lithuanian
 #
 #
 # # DOT_ABOVE&ACUTE
 #
-<dead_abovedot><dead_acute>                                                                    <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><period><apostrophe>                                                                <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<dead_acute><dead_abovedot>                                                                    <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><apostrophe><period>                                                                <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<dead_abovedot><dead_acute>                                                                    <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><period><apostrophe>                                                                <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<dead_acute><dead_abovedot>                                                                    <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><apostrophe><period>                                                                <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE Lithuanian
-<dead_abovedot><dead_acute>                                                                    <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><period><apostrophe>                                                                <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE Lithuanian
-<dead_acute><dead_abovedot>                                                                    <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><apostrophe><period>                                                                <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE Lithuanian
+<dead_abovedot><dead_acute>                                                                    <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><period><apostrophe>                                                                <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<dead_acute><dead_abovedot>                                                                    <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><apostrophe><period>                                                                <E> : "Ė́" # U0116 U0301 LATIN CAPITAL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<dead_abovedot><dead_acute>                                                                    <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><period><apostrophe>                                                                <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<dead_acute><dead_abovedot>                                                                    <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><apostrophe><period>                                                                <e> : "ė́" # U0117 U0301 LATIN SMALL LETTER E WITH DOT ABOVE AND ACUTE: Lithuanian
+<dead_abovedot><dead_acute>                                                                    <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><period><apostrophe>                                                                <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE: Lithuanian
+<dead_acute><dead_abovedot>                                                                    <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><apostrophe><period>                                                                <i> : "i̇́" # U0069 U0307 U0301 LATIN SMALL LETTER I WITH DOT ABOVE AND ACUTE: Lithuanian
 #
 #
 # # DOT_ABOVE&MACRON
@@ -10848,38 +10956,44 @@
 #   dead_abovedot double press
 #   Multi_key ¦..
 #
-<dead_abovedot><dead_abovedot>                                                             <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<Multi_key><period><period>                                                                <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<dead_abovedot><dead_abovedot>                                                             <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<Multi_key><period><period>                                                                <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<dead_abovedot><dead_abovedot>                                                                 <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <E> : "E̍" # U0045 U030D LATIN CAPITAL LETTER E WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <E> : "E̍" # U0045 U030D LATIN CAPITAL LETTER E WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <e> : "e̍" # U0065 U030D LATIN SMALL LETTER E WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <e> : "e̍" # U0065 U030D LATIN SMALL LETTER E WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <I> : "I̍" # U0049 U030D LATIN CAPITAL LETTER I WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <I> : "I̍" # U0049 U030D LATIN CAPITAL LETTER I WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <i> : "i̍" # U0069 U030D LATIN SMALL LETTER I WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <i> : "i̍" # U0069 U030D LATIN SMALL LETTER I WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <M> : "M̍" # U004D U030D LATIN CAPITAL LETTER M WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <M> : "M̍" # U004D U030D LATIN CAPITAL LETTER M WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <m> : "m̍" # U006D U030D LATIN SMALL LETTER M WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <m> : "m̍" # U006D U030D LATIN SMALL LETTER M WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <N> : "N̍" # U004E U030D LATIN CAPITAL LETTER N WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <N> : "N̍" # U004E U030D LATIN CAPITAL LETTER N WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <n> : "n̍" # U006E U030D LATIN SMALL LETTER N WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <n> : "n̍" # U006E U030D LATIN SMALL LETTER N WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <O> : "O̍" # U004F U030D LATIN CAPITAL LETTER O WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <O> : "O̍" # U004F U030D LATIN CAPITAL LETTER O WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <o> : "o̍" # U006F U030D LATIN SMALL LETTER O WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <o> : "o̍" # U006F U030D LATIN SMALL LETTER O WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <U> : "U̍" # U0055 U030D LATIN CAPITAL LETTER U WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <U> : "U̍" # U0055 U030D LATIN CAPITAL LETTER U WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<dead_abovedot><dead_abovedot>                                                                 <u> : "u̍" # U0075 U030D LATIN SMALL LETTER U WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
-<Multi_key><period><period>                                                                    <u> : "u̍" # U0075 U030D LATIN SMALL LETTER U WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                             <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><period><period>                                                                <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<dead_abovedot><dead_abovedot>                                                             <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><period><period>                                                                <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<dead_abovedot><dead_abovedot>                                                      <nobreakspace> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><period><period>                                                         <nobreakspace> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<dead_abovedot><dead_abovedot>                                                             <U202F> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><period><period>                                                                <U202F> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<dead_abovedot><dead_abovedot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<Multi_key><period><period>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<dead_abovedot><dead_abovedot>                                                                 <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <E> : "E̍" # U0045 U030D LATIN CAPITAL LETTER E WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <E> : "E̍" # U0045 U030D LATIN CAPITAL LETTER E WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <e> : "e̍" # U0065 U030D LATIN SMALL LETTER E WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <e> : "e̍" # U0065 U030D LATIN SMALL LETTER E WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <I> : "I̍" # U0049 U030D LATIN CAPITAL LETTER I WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <I> : "I̍" # U0049 U030D LATIN CAPITAL LETTER I WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <i> : "i̍" # U0069 U030D LATIN SMALL LETTER I WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <i> : "i̍" # U0069 U030D LATIN SMALL LETTER I WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <M> : "M̍" # U004D U030D LATIN CAPITAL LETTER M WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <M> : "M̍" # U004D U030D LATIN CAPITAL LETTER M WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <m> : "m̍" # U006D U030D LATIN SMALL LETTER M WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <m> : "m̍" # U006D U030D LATIN SMALL LETTER M WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <N> : "N̍" # U004E U030D LATIN CAPITAL LETTER N WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <N> : "N̍" # U004E U030D LATIN CAPITAL LETTER N WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <n> : "n̍" # U006E U030D LATIN SMALL LETTER N WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <n> : "n̍" # U006E U030D LATIN SMALL LETTER N WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <O> : "O̍" # U004F U030D LATIN CAPITAL LETTER O WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <O> : "O̍" # U004F U030D LATIN CAPITAL LETTER O WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <o> : "o̍" # U006F U030D LATIN SMALL LETTER O WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <o> : "o̍" # U006F U030D LATIN SMALL LETTER O WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <U> : "U̍" # U0055 U030D LATIN CAPITAL LETTER U WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <U> : "U̍" # U0055 U030D LATIN CAPITAL LETTER U WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<dead_abovedot><dead_abovedot>                                                                 <u> : "u̍" # U0075 U030D LATIN SMALL LETTER U WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
+<Multi_key><period><period>                                                                    <u> : "u̍" # U0075 U030D LATIN SMALL LETTER U WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
 #
 #
 #*# GROUP_1
@@ -10897,10 +11011,12 @@
 # # Letter apostrophe and ʻokina
 #
 #   These word boundary preventing characters, needed in Breton and Hawaiʻian,
-#   are in group 1 and group 2. This completes the apostrophe and grave keysyms
-#   in the symbol groups, where both are in group 1.
+#   are also in group 1 and group 2 of rightsinglequotemark. This completes the
+#   apostrophe and grave keysyms in the symbol groups where both are in group 1
+#   for easy, non-discriminatory input.
 #   See # # D07
 #   See # # D08
+#   See #*# TURNED, SIDEWAYS
 #
 <UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -12526,6 +12642,10 @@
 <Multi_key><parenleft><parenleft>                                                          <space> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <dead_invertedbreve><dead_invertedbreve>                                                   <U200B> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key><parenleft><parenleft>                                                          <U200B> : "̯" U032F # COMBINING INVERTED BREVE BELOW
+<dead_invertedbreve><dead_invertedbreve>                                            <nobreakspace> : "⁔" U2054 # INVERTED UNDERTIE
+<Multi_key><parenleft><parenleft>                                                   <nobreakspace> : "⁔" U2054 # INVERTED UNDERTIE
+<dead_invertedbreve><dead_invertedbreve>                                                   <U202F> : "⁔" U2054 # INVERTED UNDERTIE
+<Multi_key><parenleft><parenleft>                                                          <U202F> : "⁔" U2054 # INVERTED UNDERTIE
 <dead_invertedbreve><dead_invertedbreve>                                                       <D> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <Multi_key><parenleft><parenleft>                                                              <D> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <dead_invertedbreve><dead_invertedbreve>                                                       <d> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
@@ -12584,18 +12704,18 @@
 <Multi_key><parenright>                                                                        <I> : "Ĭ" U012C # LATIN CAPITAL LETTER I WITH BREVE
 <dead_breve>                                                                                   <i> : "ĭ" U012D # LATIN SMALL LETTER I WITH BREVE
 <Multi_key><parenright>                                                                        <i> : "ĭ" U012D # LATIN SMALL LETTER I WITH BREVE
-<dead_breve>                                                                                   <L> : "L̆" # U004C U0306 LATIN CAPITAL LETTER L WITH BREVE Inng
-<Multi_key><parenright>                                                                        <L> : "L̆" # U004C U0306 LATIN CAPITAL LETTER L WITH BREVE Inng
-<dead_breve>                                                                                   <l> : "l̆" # U006C U0306 LATIN SMALL LETTER L WITH BREVE Inng
-<Multi_key><parenright>                                                                        <l> : "l̆" # U006C U0306 LATIN SMALL LETTER L WITH BREVE Inng
-<dead_breve>                                                                                   <M> : "M̆" # U004D U0306 LATIN CAPITAL LETTER M WITH BREVE Inng
-<Multi_key><parenright>                                                                        <M> : "M̆" # U004D U0306 LATIN CAPITAL LETTER M WITH BREVE Inng
-<dead_breve>                                                                                   <m> : "m̆" # U006D U0306 LATIN SMALL LETTER M WITH BREVE Inng
-<Multi_key><parenright>                                                                        <m> : "m̆" # U006D U0306 LATIN SMALL LETTER M WITH BREVE Inng
-<dead_breve>                                                                                   <N> : "N̆" # U004E U0306 LATIN CAPITAL LETTER N WITH BREVE Inng
-<Multi_key><parenright>                                                                        <N> : "N̆" # U004E U0306 LATIN CAPITAL LETTER N WITH BREVE Inng
-<dead_breve>                                                                                   <n> : "n̆" # U006E U0306 LATIN SMALL LETTER N WITH BREVE Inng
-<Multi_key><parenright>                                                                        <n> : "n̆" # U006E U0306 LATIN SMALL LETTER N WITH BREVE Inng
+<dead_breve>                                                                                   <L> : "L̆" # U004C U0306 LATIN CAPITAL LETTER L WITH BREVE: Inng
+<Multi_key><parenright>                                                                        <L> : "L̆" # U004C U0306 LATIN CAPITAL LETTER L WITH BREVE: Inng
+<dead_breve>                                                                                   <l> : "l̆" # U006C U0306 LATIN SMALL LETTER L WITH BREVE: Inng
+<Multi_key><parenright>                                                                        <l> : "l̆" # U006C U0306 LATIN SMALL LETTER L WITH BREVE: Inng
+<dead_breve>                                                                                   <M> : "M̆" # U004D U0306 LATIN CAPITAL LETTER M WITH BREVE: Inng
+<Multi_key><parenright>                                                                        <M> : "M̆" # U004D U0306 LATIN CAPITAL LETTER M WITH BREVE: Inng
+<dead_breve>                                                                                   <m> : "m̆" # U006D U0306 LATIN SMALL LETTER M WITH BREVE: Inng
+<Multi_key><parenright>                                                                        <m> : "m̆" # U006D U0306 LATIN SMALL LETTER M WITH BREVE: Inng
+<dead_breve>                                                                                   <N> : "N̆" # U004E U0306 LATIN CAPITAL LETTER N WITH BREVE: Inng
+<Multi_key><parenright>                                                                        <N> : "N̆" # U004E U0306 LATIN CAPITAL LETTER N WITH BREVE: Inng
+<dead_breve>                                                                                   <n> : "n̆" # U006E U0306 LATIN SMALL LETTER N WITH BREVE: Inng
+<Multi_key><parenright>                                                                        <n> : "n̆" # U006E U0306 LATIN SMALL LETTER N WITH BREVE: Inng
 <dead_breve>                                                                                   <O> : "Ŏ" U014E # LATIN CAPITAL LETTER O WITH BREVE
 <Multi_key><parenright>                                                                        <O> : "Ŏ" U014E # LATIN CAPITAL LETTER O WITH BREVE
 <dead_breve>                                                                                   <o> : "ŏ" U014F # LATIN SMALL LETTER O WITH BREVE
@@ -13226,6 +13346,10 @@
 <Multi_key><parenright><parenright>                                                        <space> : "̮" U032E # COMBINING BREVE BELOW
 <dead_breve><dead_breve>                                                                   <U200B> : "̮" U032E # COMBINING BREVE BELOW
 <Multi_key><parenright><parenright>                                                        <U200B> : "̮" U032E # COMBINING BREVE BELOW
+<dead_breve><dead_breve>                                                            <nobreakspace> : "‿" U203F # UNDERTIE
+<Multi_key><parenright><parenright>                                                 <nobreakspace> : "‿" U203F # UNDERTIE
+<dead_breve><dead_breve>                                                                   <U202F> : "‿" U203F # UNDERTIE
+<Multi_key><parenright><parenright>                                                        <U202F> : "‿" U203F # UNDERTIE
 <dead_breve><dead_breve>                                                                       <D> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <Multi_key><parenright><parenright>                                                            <D> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                       <d> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
@@ -13453,12 +13577,18 @@
 <Multi_key><slash><minus>                                                                      <k> : "ꝅ" UA745 # LATIN SMALL LETTER K WITH STROKE AND DIAGONAL STROKE
 #
 #
-#^# MORE_BARRED: DOUBLE_BAR, LONG_BAR, BARRED_DESCENDER
+#^# DOUBLE_BAR, LONG_BAR, BARRED_DESCENDER
+#
+#   By lack of modifier letter dash, the short equals sign "꞊" UA78A is picked.
 #
 <dead_stroke><dead_stroke>                                                                 <space> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
 <Multi_key><minus><minus>                                                                  <space> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
 <dead_stroke><dead_stroke>                                                                 <U200B> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
 <Multi_key><minus><minus>                                                                  <U200B> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
+<dead_stroke><dead_stroke>                                                          <nobreakspace> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
+<Multi_key><minus><minus>                                                           <nobreakspace> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
+<dead_stroke><dead_stroke>                                                                 <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
+<Multi_key><minus><minus>                                                                  <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <dead_stroke><dead_stroke>                                                                     <L> : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
 <Multi_key><minus><minus>                                                                      <L> : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
 <dead_stroke><dead_stroke>                                                                     <l> : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
@@ -13730,19 +13860,6 @@
 <Multi_key><exclam><plus>                                                                      <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 #
 #
-#^# DOUBLE_HORN
-#   dead_horn double press
-#   Multi_key ¦++
-#
-#   This virtual dead key is intended for combining double plus signs,
-#   consistently with combining simple plus signs
-#
-<dead_horn><dead_horn>                                                               <asciicircum> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
-<Multi_key><plus><plus>                                                              <asciicircum> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
-<dead_horn><dead_horn>                                                                <underscore> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
-<Multi_key><plus><plus>                                                               <underscore> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
-#
-#
 #*# OGONEK
 #   dead_ogonek
 #   Multi_key: ¦[
@@ -13829,74 +13946,74 @@
 #
 # # OGONEK&TILDE
 #
-<dead_ogonek><dead_tilde>                                                                      <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE Lithuanian
-<dead_ogonek><dead_tilde>                                                                      <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE Lithuanian
-<Multi_key><bracketleft><asciitilde>                                                           <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE Lithuanian
-<dead_tilde><dead_ogonek>                                                                      <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE Lithuanian
-<Multi_key><asciitilde><bracketleft>                                                           <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <A> : "Ą̃" # U0104 U0303 LATIN CAPITAL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <a> : "ą̃" # U0105 U0303 LATIN SMALL LETTER A WITH OGONEK AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <E> : "Ę̃" # U0118 U0303 LATIN CAPITAL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <e> : "ę̃" # U0119 U0303 LATIN SMALL LETTER E WITH OGONEK AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <I> : "Į̃" # U012E U0303 LATIN CAPITAL LETTER I WITH OGONEK AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <U> : "Ų̃" # U0172 U0303 LATIN CAPITAL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<dead_ogonek><dead_tilde>                                                                      <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><bracketleft><asciitilde>                                                           <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<dead_tilde><dead_ogonek>                                                                      <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE: Lithuanian
+<Multi_key><asciitilde><bracketleft>                                                           <u> : "ų̃" # U0173 U0303 LATIN SMALL LETTER U WITH OGONEK AND TILDE: Lithuanian
 #
 #
 # # OGONEK&ACUTE
 #
-<dead_ogonek><dead_acute>                                                                      <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<dead_ogonek><dead_acute>                                                                      <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><bracketleft><apostrophe>                                                           <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<dead_acute><dead_ogonek>                                                                      <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE Lithuanian
-<Multi_key><apostrophe><bracketleft>                                                           <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE Lithuanian
+<dead_ogonek><dead_acute>                                                                      <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <A> : "Ą́" # U0104 U0301 LATIN CAPITAL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <a> : "ą́" # U0105 U0301 LATIN SMALL LETTER A WITH OGONEK AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <E> : "Ę́" # U0118 U0301 LATIN CAPITAL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <e> : "ę́" # U0119 U0301 LATIN SMALL LETTER E WITH OGONEK AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <I> : "Į́" # U012E U0301 LATIN CAPITAL LETTER I WITH OGONEK AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <i> : "į̇́" # U012F U0307 U0301 LATIN SMALL LETTER I WITH OGONEK AND DOT ABOVE AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <U> : "Ų́" # U0172 U0301 LATIN CAPITAL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<dead_ogonek><dead_acute>                                                                      <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><bracketleft><apostrophe>                                                           <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<dead_acute><dead_ogonek>                                                                      <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bracketleft>                                                           <u> : "ų́" # U0173 U0301 LATIN SMALL LETTER U WITH OGONEK AND ACUTE: Lithuanian
 #
 #
 # # OGONEK&MACRON
@@ -13923,10 +14040,19 @@
 #   Digits yield negative sans-serif circled number dingbats as a shortcut.
 #   See # # CIRCLED_NEGATIVE_SANS
 #
+#   Since the combining hook above has no spacing clone nor any modifier letter
+#   looking close to it, both half rings "ʾ" U02BE, "ʿ" U02BF are provided as a
+#   workaround, with a rationale based on the laterality of the AltFr and AltGr
+#   modifier keys involved in typing these left and right half rings this way.
+#
 <UEFD3>                                                                                    <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <Multi_key><bracketright>                                                                  <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <UEFD3>                                                                                    <U200B> : "̉" U0309 # COMBINING HOOK ABOVE
 <Multi_key><bracketright>                                                                  <U200B> : "̉" U0309 # COMBINING HOOK ABOVE
+<UEFD3>                                                                             <nobreakspace> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
+<Multi_key><bracketright>                                                           <nobreakspace> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
+<UEFD3>                                                                                    <U202F> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
+<Multi_key><bracketright>                                                                  <U202F> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <UEFD3>                                                                              <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <Multi_key><bracketright>                                                            <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <UEFD3>                                                                                        <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
@@ -14376,8 +14502,8 @@
 <Multi_key><underscore><underscore>                                                        <U202F> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
-<UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
-<Multi_key><underscore><underscore>                                                   <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><underscore><underscore>                                                   <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                         <parenleft> : "̜" U031C # COMBINING LEFT HALF RING BELOW
@@ -14431,6 +14557,14 @@
 #   "WITH LINE BELOW" in Unicode refer to a macron below the letter.
 #   https://unicode.org/charts/nameslist/n_1E00.html
 #
+<UEFD2><UEFD2><UEFD2>                                                                      <space> : "̲" U0332 # COMBINING LOW LINE
+<Multi_key><underscore><underscore><underscore>                                            <space> : "̲" U0332 # COMBINING LOW LINE
+<UEFD2><UEFD2><UEFD2>                                                                      <U200B> : "̲" U0332 # COMBINING LOW LINE
+<Multi_key><underscore><underscore><underscore>                                            <U200B> : "̲" U0332 # COMBINING LOW LINE
+<UEFD2><UEFD2><UEFD2>                                                               <nobreakspace> : "_" U005F # LOW LINE
+<Multi_key><underscore><underscore><underscore>                                     <nobreakspace> : "_" U005F # LOW LINE
+<UEFD2><UEFD2><UEFD2>                                                                      <U202F> : "_" U005F # LOW LINE
+<Multi_key><underscore><underscore><underscore>                                            <U202F> : "_" U005F # LOW LINE
 <UEFD2><UEFD2><UEFD2>                                                                          <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW languages of Gabon
 <Multi_key><underscore><underscore><underscore>                                                <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW languages of Gabon
 <UEFD2><UEFD2><UEFD2>                                                                          <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW languages of Gabon
@@ -14439,10 +14573,10 @@
 <Multi_key><underscore><underscore><underscore>                                                <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW languages of Gabon
 <UEFD2><UEFD2><UEFD2>                                                                          <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW languages of Gabon
 <Multi_key><underscore><underscore><underscore>                                                <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW Oneida
-<Multi_key><underscore><underscore><underscore>                                                <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW Oneida
-<UEFD2><UEFD2><UEFD2>                                                                          <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW Oneida
-<Multi_key><underscore><underscore><underscore>                                                <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW Oneida
+<UEFD2><UEFD2><UEFD2>                                                                          <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW: Oneida
+<Multi_key><underscore><underscore><underscore>                                                <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW: Oneida
+<UEFD2><UEFD2><UEFD2>                                                                          <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW: Oneida
+<Multi_key><underscore><underscore><underscore>                                                <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW: Oneida
 <UEFD2><UEFD2><UEFD2>                                                                          <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW languages of Gabon
 <Multi_key><underscore><underscore><underscore>                                                <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW languages of Gabon
 <UEFD2><UEFD2><UEFD2>                                                                          <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW languages of Gabon
@@ -14546,10 +14680,10 @@
 <Multi_key><bar>                                                                               <I> : "Ī" U012A # LATIN CAPITAL LETTER I WITH MACRON
 <dead_macron>                                                                                  <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
 <Multi_key><bar>                                                                               <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
-<dead_macron>                                                                                  <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON Fula in Senegalese orthography
-<Multi_key><bar>                                                                               <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON Fula in Senegalese orthography
-<dead_macron>                                                                                  <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON Fula in Senegalese orthography
-<Multi_key><bar>                                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON Fula in Senegalese orthography
+<dead_macron>                                                                                  <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
+<Multi_key><bar>                                                                               <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
+<dead_macron>                                                                                  <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
+<Multi_key><bar>                                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
 <dead_macron>                                                                                  <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <Multi_key><bar>                                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <dead_macron>                                                                                  <o> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
@@ -14588,14 +14722,14 @@
 #
 # # MACRON&TILDE
 #
-<dead_macron><dead_tilde>                                                                      <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE Lithuanian
-<Multi_key><bar><asciitilde>                                                                   <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE Lithuanian
-<dead_tilde><dead_macron>                                                                      <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE Lithuanian
-<Multi_key><asciitilde><bar>                                                                   <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE Lithuanian
-<dead_macron><dead_tilde>                                                                      <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE Lithuanian
-<Multi_key><bar><asciitilde>                                                                   <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE Lithuanian
-<dead_tilde><dead_macron>                                                                      <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE Lithuanian
-<Multi_key><asciitilde><bar>                                                                   <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE Lithuanian
+<dead_macron><dead_tilde>                                                                      <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE: Lithuanian
+<Multi_key><bar><asciitilde>                                                                   <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE: Lithuanian
+<dead_tilde><dead_macron>                                                                      <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE: Lithuanian
+<Multi_key><asciitilde><bar>                                                                   <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE: Lithuanian
+<dead_macron><dead_tilde>                                                                      <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE: Lithuanian
+<Multi_key><bar><asciitilde>                                                                   <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE: Lithuanian
+<dead_tilde><dead_macron>                                                                      <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE: Lithuanian
+<Multi_key><asciitilde><bar>                                                                   <u> : "ū̃" # U016B U0303 LATIN SMALL LETTER U WITH MACRON AND TILDE: Lithuanian
 #
 #
 # # MACRON&GRAVE
@@ -14656,14 +14790,14 @@
 <Multi_key><bar><apostrophe>                                                                   <o> : "ṓ" U1E53 # LATIN SMALL LETTER O WITH MACRON AND ACUTE
 <dead_acute><dead_macron>                                                                      <o> : "ṓ" U1E53 # LATIN SMALL LETTER O WITH MACRON AND ACUTE
 <Multi_key><apostrophe><bar>                                                                   <o> : "ṓ" U1E53 # LATIN SMALL LETTER O WITH MACRON AND ACUTE
-<dead_macron><dead_acute>                                                                      <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE Lithuanian
-<Multi_key><bar><apostrophe>                                                                   <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE Lithuanian
-<dead_acute><dead_macron>                                                                      <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE Lithuanian
-<Multi_key><apostrophe><bar>                                                                   <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE Lithuanian
-<dead_macron><dead_acute>                                                                      <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE Lithuanian
-<Multi_key><bar><apostrophe>                                                                   <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE Lithuanian
-<dead_acute><dead_macron>                                                                      <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE Lithuanian
-<Multi_key><apostrophe><bar>                                                                   <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE Lithuanian
+<dead_macron><dead_acute>                                                                      <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<Multi_key><bar><apostrophe>                                                                   <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<dead_acute><dead_macron>                                                                      <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bar>                                                                   <U> : "Ū́" # U016A U0301 LATIN CAPITAL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<dead_macron><dead_acute>                                                                      <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<Multi_key><bar><apostrophe>                                                                   <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<dead_acute><dead_macron>                                                                      <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE: Lithuanian
+<Multi_key><apostrophe><bar>                                                                   <u> : "ū́" # U016B U0301 LATIN SMALL LETTER U WITH MACRON AND ACUTE: Lithuanian
 #
 #
 # # MACRON&DIAERESIS
@@ -14698,8 +14832,8 @@
 <Multi_key><bar><bar>                                                                          <D> : "Ḏ" U1E0E # LATIN CAPITAL LETTER D WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <d> : "ḏ" U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <d> : "ḏ" U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
-<dead_macron><dead_macron>                                                                     <H> : "H̱" # U0048 U0331 LATIN CAPITAL LETTER H WITH MACRON BELOW Pashto romanization
-<Multi_key><bar><bar>                                                                          <H> : "H̱" # U0048 U0331 LATIN CAPITAL LETTER H WITH MACRON BELOW Pashto romanization
+<dead_macron><dead_macron>                                                                     <H> : "H̱" # U0048 U0331 LATIN CAPITAL LETTER H WITH MACRON BELOW: Pashto romanization
+<Multi_key><bar><bar>                                                                          <H> : "H̱" # U0048 U0331 LATIN CAPITAL LETTER H WITH MACRON BELOW: Pashto romanization
 <dead_macron><dead_macron>                                                                     <h> : "ẖ" U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <h> : "ẖ" U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <K> : "Ḵ" U1E34 # LATIN CAPITAL LETTER K WITH LINE BELOW
@@ -14759,6 +14893,10 @@
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <dead_longsolidusoverlay>                                                                  <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
+<dead_longsolidusoverlay>                                                           <nobreakspace> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><slash>                                                                  <nobreakspace> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<dead_longsolidusoverlay>                                                                  <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><slash>                                                                         <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_longsolidusoverlay>                                                              <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><slash>                                                                     <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_longsolidusoverlay>                                                                  <grave> : "⊄" U2284 # NOT A SUBSET OF
@@ -15078,6 +15216,10 @@
 <Multi_key><slash><slash>                                                                  <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <Multi_key><slash><slash>                                                                  <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<dead_longsolidusoverlay><dead_longsolidusoverlay>                                  <nobreakspace> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><slash><slash>                                                           <nobreakspace> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <U202F> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><slash><slash>                                                                  <U202F> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_longsolidusoverlay><dead_longsolidusoverlay>                                    <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><slash><slash>                                                             <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><dead_longsolidusoverlay>                                             <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
@@ -15340,10 +15482,10 @@
 <Multi_key><asterisk><asterisk>                                                                <A> : "Ḁ" U1E00 # LATIN CAPITAL LETTER A WITH RING BELOW
 <dead_abovering><dead_abovering>                                                               <a> : "ḁ" U1E01 # LATIN SMALL LETTER A WITH RING BELOW
 <Multi_key><asterisk><asterisk>                                                                <a> : "ḁ" U1E01 # LATIN SMALL LETTER A WITH RING BELOW
-<dead_abovering><dead_abovering>                                                               <L> : "L̥" # U004C U0325 LATIN CAPITAL LETTER L WITH RING BELOW Jola-kasa
-<Multi_key><asterisk><asterisk>                                                                <L> : "L̥" # U004C U0325 LATIN CAPITAL LETTER L WITH RING BELOW Jola-kasa
-<dead_abovering><dead_abovering>                                                               <l> : "l̥" # U006C U0325 LATIN SMALL LETTER L WITH RING BELOW Jola-kasa
-<Multi_key><asterisk><asterisk>                                                                <l> : "l̥" # U006C U0325 LATIN SMALL LETTER L WITH RING BELOW Jola-kasa
+<dead_abovering><dead_abovering>                                                               <L> : "L̥" # U004C U0325 LATIN CAPITAL LETTER L WITH RING BELOW: Jola-kasa
+<Multi_key><asterisk><asterisk>                                                                <L> : "L̥" # U004C U0325 LATIN CAPITAL LETTER L WITH RING BELOW: Jola-kasa
+<dead_abovering><dead_abovering>                                                               <l> : "l̥" # U006C U0325 LATIN SMALL LETTER L WITH RING BELOW: Jola-kasa
+<Multi_key><asterisk><asterisk>                                                                <l> : "l̥" # U006C U0325 LATIN SMALL LETTER L WITH RING BELOW: Jola-kasa
 <dead_abovering><dead_abovering>                                                               <R> : "R̥" # U0052 U0325 LATIN CAPITAL LETTER R WITH RING BELOW, voiceless alveolar trill
 <Multi_key><asterisk><asterisk>                                                                <R> : "R̥" # U0052 U0325 LATIN CAPITAL LETTER R WITH RING BELOW, voiceless alveolar trill
 <dead_abovering><dead_abovering>                                                               <r> : "r̥" # U0072 U0325 LATIN SMALL LETTER R WITH RING BELOW, voiceless alveolar trill
