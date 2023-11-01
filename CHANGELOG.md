@@ -1,9 +1,10 @@
 # Journal des modifications
 
-## 1.1.4 (projet)
+## 1.1.4 (2023-11-01)
 
 * Touches mortes : Drapeau : Remplacer "‌" U200C par "⚐" U2690 avec les caractères de base espace ou césure conditionnelle. Ajouter "⚑" U2691 et "🏴" U1F3F4. Corriger la casse. (compose-2.yml [581516e](https://github.com/dispoclavier/nouvel-azerty/commit/581516edbf0de795d92989216ef7900222560427))
 * Touches mortes : Tourné : Remplacer "≀" U2240 par "ⸯ" U2E2F. Point en chef : Ajouter "˙" U02D9 par espace insécable. Rond en chef : Ajouter "⸰" U2E30 par point. Point souscrit : Ajouter "⸳" U2E33 par espace insécable et espace fine insécable. Virgule souscrite : Ajouter "⸴" U2E34 par espace insécable et espace fine insécable. Permuter les séquences avec espace fine insécable et espace insécable pour corriger l’affichage des tableaux. (compose-1.yml [6bfb758](https://github.com/dispoclavier/nouvel-azerty/commit/6bfb7585f90d7bb66a4d4639f7c73a437e7f97bd), compose-2.yml [77ca45c](https://github.com/dispoclavier/nouvel-azerty/commit/77ca45c867df4309ca182dae5bdbce9a4ce6d999))
+* Touches mortes : Exposant : Ajouter "‾" U203E. Exposant > Suscrit : Remplacer "̎" U030E par "̿" U033F. Ajouter "﹌" UFE4C, "﹋" UFE4B. Tourné : Ajouter "ʻ" U02BB. Tourné > Tourné plus : Ajouter "̕" U0315, "ʼ" U02BC. Crosse : Ajouter "˽" U02FD. Crochet rétroflexe : Ajouter "˾" U02FE. Crochet palatal : Ajouter "˽" U02FD. Tilde > Double tilde médian : Ajouter "~" U007E. Grec : Ajouter "ι" U03B9 par espace insécable ou espace fine insécable. Grec > Cerclé : Ajouter  "⃝" U20DD, "⚪" U26AA. Point en chef > Ligne verticale en chef : Ajouter "̎" U030E, "ˈ" U02C8. Brève inversée > Brève inversée souscrite : Ajouter "⁔" U2054. Brève > Brève souscrite : Ajouter "‿" U203F. Rayé > Double raie : Ajouter "꞊" UA78A. Cornu > Double cornu : Supprimer "᫉" U1AC9, "᫊" U1ACA. Crochet en chef : Ajouter "ʾ" U02BE, "ʿ" U02BF. Réfléchi : Ajouter "ʽ" U02BD. Virgule souscrite > Virgule en chef : Ajouter "ʼ" U02BC. (compose-1.yml [f3e6573](https://github.com/dispoclavier/nouvel-azerty/commit/f3e65739016c562854b0644bc9a9d1ac95e049bf), compose-2.yml [5cd31ad](https://github.com/dispoclavier/nouvel-azerty/commit/5cd31ad2cdfa4d1988dc42dd50372a9c5d729cab))
 
 ## 1.1.3 (2023-10-31)
 
