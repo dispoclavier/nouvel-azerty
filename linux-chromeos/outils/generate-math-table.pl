@@ -1,16 +1,16 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
-# 2023-08-10T0544+0200
-# Last modified: See datestamp above.
+# 2023-11-02T0819+0100
+# = last modified.
 # 
 # Generates an HTML table of math symbols, based on Multi_key sequences in
 # `Compose.yml`.
 #
 # The input requires start and end tags.
 #
-# Alias sequences with no-break space or with right single quotation mark are
-# skipped.
+# Alias sequences with no-break space, with right single quotation mark or
+# with numpad digits are skipped.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -79,7 +79,7 @@ while ( my $line = <INPUT> ) {
 	}
 	if ( $math_flag ) {
 		if ( $line =~ /^</ ) {
-			unless ( $line =~ /<nobreakspace>/ || $line =~ /<rightsinglequotemark>/ ) {
+			unless ( $line =~ /<nobreakspace>/ || $line =~ /<rightsinglequotemark>/ || $line =~ /<KP_/ ) {
 				$line =~ s/<Multi_key>/<¦>/g;
 				$line =~ s/<space>/<␣>/g;
 				$line =~ s/<asciicircum>/<^>/g;
@@ -169,8 +169,9 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 				
-				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
+				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
 				print OUTPUT "$line";
 			}
 		}
