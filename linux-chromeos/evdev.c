@@ -1,4 +1,4 @@
-//                       Date: 2023-10-29T0733+0100
+//                       Date: 2023-11-02T2217+0100
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -106,8 +106,8 @@ default xkb_keycodes "evdev" {
 
         <LSGT> =  94;  // was <LSGT>   Common mapping for desktop and laptop.
         <CAPS> =  66;  // was <CAPS>   Common mapping for desktop and laptop.
-        <CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
-        <LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
+        //<CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
+        //<LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
 
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4,
