@@ -2,11 +2,13 @@
 
 ## 1.1.5 (2023-11-02)
 
+* Sous-variantes : Verrouillage capitales : Remettre sur la touche traditionnelle par défaut, corriger l’erreur de la v1.1.2. (evdev.c [d9a7bc0](https://github.com/dispoclavier/nouvel-azerty/commit/d9a7bc0bb805d0e1b1f736b2f2799f63bf48d56f))
 * Symboles mathématiques : Déboguer "⦄" U2984, "⫻" U2AFB. Touches mortes : Tourné : Déboguer "ꓳ" UA4F3. Crochet rétroflexe > Crochet palatal : Déboguer "˽" U02FD. (compose-1.yml [3714679](https://github.com/dispoclavier/nouvel-azerty/commit/3714679605da4b54b7c5d0135b54beea2163aea2), compose-2.yml [b911cae](https://github.com/dispoclavier/nouvel-azerty/commit/b911caebaeeae8c72710626314cf4ed764ba269b))
 * Touches mortes : Barré > Double barré : Remplacer "̷" U0337 par "⃫" U20EB. Ajouter Courte barre avec "̷" U0337 et "ꜙ" UA719. (compose-1.yml [b8b45a7](https://github.com/dispoclavier/nouvel-azerty/commit/b8b45a79f9065549de0d40fce143ef5df62c6acf), compose-2.yml [2d52334](https://github.com/dispoclavier/nouvel-azerty/commit/2d52334a4f816b6c987dff9d786abf5141f7d6a3))
+* Touches mortes : Crosse > Bouclé : Ajouter "͚" U035A, "˓" U02D3, "˒" U02D2. Crosse > Fioriture : Ajouter "͚" U035A, "˓" U02D3, "˒" U02D2. Crochet rétroflexe > Paraphe : Ajouter "͜" U035C, "‿" U203F. (compose-1.yml [9f8d263](https://github.com/dispoclavier/nouvel-azerty/commit/9f8d26396908e33a41594afffbfcb88ea958a64e), compose-2.yml [fb1055e](https://github.com/dispoclavier/nouvel-azerty/commit/fb1055e7ed4ac16d1647eb6d693c9951065b07b4))
 
 ## 1.1.4 (2023-11-01)
-
+https://github.com/dispoclavier/nouvel-azerty/commit/9f8d26396908e33a41594afffbfcb88ea958a64e
 * Touches mortes : Drapeau : Remplacer "‌" U200C par "⚐" U2690 avec les caractères de base espace ou césure conditionnelle. Ajouter "⚑" U2691 et "🏴" U1F3F4. Corriger la casse. (compose-2.yml [581516e](https://github.com/dispoclavier/nouvel-azerty/commit/581516edbf0de795d92989216ef7900222560427))
 * Touches mortes : Tourné : Remplacer "≀" U2240 par "ⸯ" U2E2F. Point en chef : Ajouter "˙" U02D9 par espace insécable. Rond en chef : Ajouter "⸰" U2E30 par point. Point souscrit : Ajouter "⸳" U2E33 par espace insécable et espace fine insécable. Virgule souscrite : Ajouter "⸴" U2E34 par espace insécable et espace fine insécable. Permuter les séquences avec espace fine insécable et espace insécable pour corriger l’affichage des tableaux. (compose-1.yml [6bfb758](https://github.com/dispoclavier/nouvel-azerty/commit/6bfb7585f90d7bb66a4d4639f7c73a437e7f97bd), compose-2.yml [77ca45c](https://github.com/dispoclavier/nouvel-azerty/commit/77ca45c867df4309ca182dae5bdbce9a4ce6d999))
 * Touches mortes : Exposant : Ajouter "‾" U203E. Exposant > Suscrit : Remplacer "̎" U030E par "̿" U033F. Ajouter "﹌" UFE4C, "﹋" UFE4B. Tourné : Ajouter "ʻ" U02BB. Tourné > Tourné plus : Ajouter "̕" U0315, "ʼ" U02BC. Crosse : Ajouter "˽" U02FD. Crochet rétroflexe : Ajouter "˾" U02FE. Crochet palatal : Ajouter "˽" U02FD. Tilde > Double tilde médian : Ajouter "~" U007E. Grec : Ajouter "ι" U03B9 par espace insécable ou espace fine insécable. Grec > Cerclé : Ajouter  "⃝" U20DD, "⚪" U26AA. Point en chef > Ligne verticale en chef : Ajouter "̎" U030E, "ˈ" U02C8. Brève inversée > Brève inversée souscrite : Ajouter "⁔" U2054. Brève > Brève souscrite : Ajouter "‿" U203F. Rayé > Double raie : Ajouter "꞊" UA78A. Cornu > Double cornu : Supprimer "᫉" U1AC9, "᫊" U1ACA. Crochet en chef : Ajouter "ʾ" U02BE, "ʿ" U02BF. Réfléchi : Ajouter "ʽ" U02BD. Virgule souscrite > Virgule en chef : Ajouter "ʼ" U02BC. (compose-1.yml [f3e6573](https://github.com/dispoclavier/nouvel-azerty/commit/f3e65739016c562854b0644bc9a9d1ac95e049bf), compose-2.yml [5cd31ad](https://github.com/dispoclavier/nouvel-azerty/commit/5cd31ad2cdfa4d1988dc42dd50372a9c5d729cab))
@@ -36,7 +38,7 @@
 
 ## 1.0.14 (2023-09-29)
 
-* Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [375b83a](https://github.com/dispoclavier/nouvel-azerty/commit/375b83a11353f6135d39b65a2eca085400de34ee), annule [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
+* Sous-variantes : Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [375b83a](https://github.com/dispoclavier/nouvel-azerty/commit/375b83a11353f6135d39b65a2eca085400de34ee), annule [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
 * Mettre en sourdine la prise en charge de ChromeOS.
 
 ## 1.0.13 (2023-09-27)
@@ -94,7 +96,7 @@
 * Touches vives : Personnalisation : Simplifier le code des touches B01..B06, C01..D12. (dispocla.cpp [9485620](https://github.com/dispoclavier/nouvel-azerty/commit/9485620a726089ad6268f93cb6bbf2e315d3af7a), [6198799](https://github.com/dispoclavier/nouvel-azerty/commit/6198799c997d10faaf65eedac93ca94c7a5b1b13), [907ff0e](https://github.com/dispoclavier/nouvel-azerty/commit/907ff0e6517603c96667415223bdde3d2b33802c), dispotypes.c [1246e6d](https://github.com/dispoclavier/nouvel-azerty/commit/1246e6d4cbb109329649f9740a2a22131e0054c0), [89f1d98](https://github.com/dispoclavier/nouvel-azerty/commit/89f1d9823390ef2b6548e234b410308b07eb36f5), [cb5ab2a](https://github.com/dispoclavier/nouvel-azerty/commit/cb5ab2af0e965736278c55d6d72b0751c4b4802f), [ab6b2d6](https://github.com/dispoclavier/nouvel-azerty/commit/ab6b2d6a79067556ccc8d69793710004b9aae9d0))
 * Variantes : Supprimer provisoirement les 2 variantes pour le Canada et la variante pour la Suisse pour faciliter la maintenance. (dispocla.cpp [bd73f72](https://github.com/dispoclavier/nouvel-azerty/commit/bd73f72760988046ca1c9fcdaeba0ff59e577408))
 * Variantes : Supprimer définitivement les 3 variantes hybrides. (dispocla.cpp [31919ac](https://github.com/dispoclavier/nouvel-azerty/commit/31919ac3fa37cfb3114762809c6ecd39f0f0d3b3))
-* Effacement arrière : Déplacer sur Windows droite par erreur. (evdev.c [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
+* Sous-variantes : Effacement arrière : Déplacer sur Windows droite par erreur. (evdev.c [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
 
 ## 1.0.6 (2023-08-15)
 
@@ -143,7 +145,7 @@
 
 ## v1.0.1 (2023-07-14)
 
-* Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [616da80](https://github.com/dispoclavier/nouvel-azerty/commit/616da804a22914e68665f32d522c7c3c074fc55d))
+* Sous-variantes : Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [616da80](https://github.com/dispoclavier/nouvel-azerty/commit/616da804a22914e68665f32d522c7c3c074fc55d))
 
 ## v1.0.0 (2023-07-14)
 
