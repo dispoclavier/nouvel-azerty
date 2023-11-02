@@ -623,20 +623,20 @@
 #   The colon alignment in column 100 is based on longest Multi_key sequences
 #   in terms of string length, as used for U10789, U107AB.
 #
-#   The following Multi_key sequences do not work because <numbersign> is used
-#   both as a group selector and as a base character. With respect to dead key
-#   use, the topmost sequences are maintained, but the affected characters may
-#   also be input in groups 5 through 7, with respect to Multi_key use:
+#   Three Multi_key sequences do not work, because <numbersign> is used both as
+#   a group selector and as a base character:
 #   <Multi_key><numbersign>                        <numbersign> "☐" U2610 BALLOT BOX
 #   <Multi_key><numbersign><numbersign>            <numbersign> "☑" U2611 BALLOT BOX WITH CHECK emoji
 #   <Multi_key><numbersign><numbersign><numbersign><numbersign> "☒" U2612 BALLOT BOX WITH X
 #   See # # C01
+#   With respect to dead key use, these topmost sequences are maintained, but a
+#   Multi_key equivalent is available only in groups 5 through 7.
 #
-#   Two Multi_key sequences are duplicates by design:
+#   Two Multi_key sequences have duplicates by design:
 #   <Multi_key><less><3> "❤" U2764 HEAVY BLACK HEART red emoji, most-used in France
 #   <Multi_key><less><8> "♥" U2665 BLACK HEART SUIT red emoji, 14th-ranking
-#   First instance:  See #   Heart emoji
-#   Second instance: See #*# CIRCUMFLEX
+#   First instances:  See #   Heart emoji
+#   Second instances: See #*# CIRCUMFLEX
 #
 #
 #   START_MULTI_KEY
@@ -1157,7 +1157,7 @@
 <Multi_key><C><R>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><C><L>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
-<Multi_key><percent><O><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
+<Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
@@ -1316,8 +1316,6 @@
 #   the reverse sequence <Multi_key><O><percent> conflicts with
 #   "⦼" U29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN.
 #   Also in group 1 of %: <Multi_key><numbersign><percent>.
-#   Also via inverted: <Multi_key><percent><percent>[<percent>]
-#   with space termination.
 #
 <Multi_key><o><percent>                                                                            : "‰" U2030 # PER MILLE SIGN
 <Multi_key><percent><o>                                                                            : "‰" U2030 # PER MILLE SIGN
@@ -1326,8 +1324,6 @@
 <Multi_key><KP_0><percent>                                                                         : "‰" U2030 # PER MILLE SIGN
 <Multi_key><0><0><percent>                                                                         : "‱" U2031 # PER TEN THOUSAND SIGN
 <Multi_key><KP_0><KP_0><percent>                                                                   : "‱" U2031 # PER TEN THOUSAND SIGN
-<Multi_key><percent><percent>                                                              <space> : "‰" U2030 # PER MILLE SIGN
-<Multi_key><percent><percent><percent>                                                     <space> : "‱" U2031 # PER TEN THOUSAND SIGN
 #
 #
 # # Degree sign
@@ -3926,8 +3922,10 @@
 <Multi_key><KP_3><bar>                                                                     <space> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><z><period>                                                                     <space> : "⦁" U2981 # Z NOTATION SPOT
 <Multi_key><z><colon>                                                                      <space> : "⦂" U2982 # Z NOTATION TYPE COLON
-<Multi_key><braceleft><braceleft>                                                          <space> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
-<Multi_key><braceright><braceright>                                                        <space> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
+<Multi_key><space><braceleft><braceleft>                                                   <space> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
+<Multi_key><nobreakspace><braceleft><braceleft>                                            <space> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
+<Multi_key><space><braceright><braceright>                                                 <space> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
+<Multi_key><nobreakspace><braceright><braceright>                                          <space> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
 <Multi_key><space><parenleft><parenleft>                                                   <space> : "⦅" U2985 # LEFT WHITE PARENTHESIS
 <Multi_key><nobreakspace><parenleft><parenleft>                                            <space> : "⦅" U2985 # LEFT WHITE PARENTHESIS
 <Multi_key><space><parenright><parenright>                                                 <space> : "⦆" U2986 # RIGHT WHITE PARENTHESIS
@@ -4604,7 +4602,8 @@
 <Multi_key><KP_3><greater>                                                                 <space> : "⫸" U2AF8 # TRIPLE NESTED GREATER-THAN
 <Multi_key><less><underscore><underscore>                                                  <space> : "⫹" U2AF9 # DOUBLE-LINE SLANTED LESS-THAN OR EQUAL TO
 <Multi_key><greater><underscore><underscore>                                               <space> : "⫺" U2AFA # DOUBLE-LINE SLANTED GREATER-THAN OR EQUAL TO
-<Multi_key><slash><slash><slash>                                                           <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><space><slash><slash><slash>                                                    <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><nobreakspace><slash><slash><slash>                                             <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 #   The LARGE TRIPLE VERTICAL BAR OPERATOR is more spaced out compared to "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION.
 <Multi_key><space><bar><bar><bar>                                                          <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 <Multi_key><nobreakspace><bar><bar><bar>                                                   <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
@@ -8741,10 +8740,10 @@
 <Multi_key><braceright><braceright>                                                        <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <UEFD4><UEFD4>                                                                             <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <Multi_key><braceright><braceright>                                                        <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
-<dead_hook>                                                                         <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
-<Multi_key><braceleft>                                                              <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
-<dead_hook>                                                                                <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
-<Multi_key><braceleft>                                                                     <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<UEFD4><UEFD4>                                                                      <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
+<Multi_key><braceright><braceright>                                                 <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
+<UEFD4><UEFD4>                                                                             <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<Multi_key><braceright><braceright>                                                        <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
 <UEFD4><UEFD4>                                                                                 <b> : "ᶀ" U1D80 # LATIN SMALL LETTER B WITH PALATAL HOOK
 <Multi_key><braceright><braceright>                                                            <b> : "ᶀ" U1D80 # LATIN SMALL LETTER B WITH PALATAL HOOK
 <UEFD4><UEFD4>                                                                                 <C> : "Ꞔ" UA7C4 # LATIN CAPITAL LETTER C WITH PALATAL HOOK
