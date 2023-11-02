@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
-# 2023-11-02T0747+0100
+# 2023-11-02T1728+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -253,6 +253,7 @@ while ( my $line = <INPUT> ) {
 				# Translation.
 				$line =~ s/( # .*), for convenience/$1, pour plus de facilité/g;
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
+				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
 				$line =~ s/( # .*) emoji/$1 émoji/g;
 				$line =~ s/ # Mathematical Alphanumeric Symbols high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
 				$line =~ s/ # High surrogate of regional indicator symbol letters/ # Surrogat haut de symbole lettre drapeau/g;
@@ -261,8 +262,10 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 réutilisé comme symbole de composition/g;
 				$line =~ s/( # .*) Canadian French:/$1 Français du Canada :/g;
 				$line =~ s/( # .*) French:/$1 Français :/g;
-				$line =~ s/( # .*) overrides/$1 écrase/g;
-				$line =~ s/( # .*) overridden by Ê key emulation/$1 écrasé par l’émulation de touche Ê/g;
+				$line =~ s/( # .*) Breton/$1 breton/g;
+				$line =~ s/( # .*) Overrides/$1 Remplace/g;
+				$line =~ s/( # .*) overrides/$1 remplace/g;
+				$line =~ s/( # .*) overridden by Ê key emulation/$1 remplacé par l’émulation de touche Ê/g;
 				$line =~ s/( # .*) (.) key emulation/$1 émulation de touche $2/g;
 				$line =~ s/( # .*) Arabic transliteration/$1 translittération arabe/g;
 				$line =~ s/( # .*) Cuneiform transliteration/$1 translittération cunéiforme/g;
@@ -289,15 +292,36 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) twice/$1 deux fois/g;
 				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
 				$line =~ s/( # .*) Hausa in Boko/$1 hausa en boko/g;
-				$line =~ s/( # .*) Romanized Kharosthi/$1 kharosthi romanisé/g;
+				$line =~ s/( # .*) Romanized Kharoṣṭhī/$1 kharoṣṭhī romanisé/g;
 				$line =~ s/( # .*) Romanized Avestan/$1 avestique romanisé/g;
 				$line =~ s/( # .*) Dutch/$1 néerlandais/g;
 				$line =~ s/( # .*) Romanized Pashto following/$1 pachto romanisé selon/g;
-				$line =~ s/( # .*) ALA-LC for/$1 ALA-LC pour/g;
 				$line =~ s/( # .*) Chimane orthography of Wayne Gill/$1 Chimane orthographe de Wayne Gill/g;
-				$line =~ s/( # .*) Overrides/$1 Remplace/g;
+				$line =~ s/( # .*) Portuguese/$1 portugais/g;
 				$line =~ s/( # .*) Fula in Senegalese orthography/$1 fula selon l’orthographe sénégalaise/g;
+				$line =~ s/( # .*) Moldovan and Romanian until 1904/$1 moldavien et roumain jusqu’en 1904/g;
 				$line =~ s/( # .*) Pashto romanization/$1 romanisation pachto/g;
+				$line =~ s/( # .*) ALA-LC romanization/$1 romanisation ALA-LC/g;
+				$line =~ s/( # .*) ALA-LC for/$1 ALA-LC pour/g;
+				$line =~ s/( # .*) Georgian/$1 géorgien/g;
+				$line =~ s/( # .*) Spanish/$1 espagnol/g;
+				$line =~ s/( # .*) Lezgian/$1 lezghien/g;
+				$line =~ s/( # .*) Esperanto/$1 espéranto/g;
+				$line =~ s/( # .*) most-used in France/$1 le plus utilisé en France/g;
+				$line =~ s/( # .*) (\d\d?)th-ranking/$1 classé au rang $2/g;
+				$line =~ s/( # .*) \(Pe̍h-ōe-jī orthography\)/$1 (orthographe Pe̍h-ōe-jī)/g;
+				$line =~ s/( # .*) voiceless alveolar trill/$1 consonne roulée alvéolaire sourde/g;
+				$line =~ s/( # .*) Medical notations/$1 notations médicales/g;
+				$line =~ s/( # .*) double turned comma quotation mark/$1 guillemet apostrophe double tourné/g;
+				$line =~ s/( # .*) single turned comma quotation mark/$1 guillemet apostrophe simple tourné/g;
+				$line =~ s/( # .*) low double comma quotation mark/$1 guillemet virgule double tourné/g;
+				$line =~ s/( # .*) low single comma quotation mark/$1 guillemet virgule simple tourné/g;
+				$line =~ s/( # .*) double reversed comma quotation mark/$1 guillemet apostrophe double réfléchi/g;
+				$line =~ s/( # .*) single reversed comma quotation mark/$1 guillemet apostrophe simple réfléchi/g;
+				$line =~ s/( # .*) double comma quotation mark/$1 guillemet apostrophe double/g;
+				$line =~ s/( # .*) single comma quotation mark/$1 guillemet apostrophe simple/g;
+				$line =~ s/( # .*) pause button/$1 bouton pause/g;
+				$line =~ s/( # .*) not /$1 pas /g;
 				$line =~ s/( # .*\w): /$1 : /g;
 				$line =~ s/( # .*\w); /$1 ; /g;
 
