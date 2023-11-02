@@ -1,14 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
-# 2023-08-08T0749+0200
-# 2023-08-18T0349+0200
-# 2023-08-27T2253+0200
-# 2023-08-29T2232+0200
-# 2023-09-23T1908+0200
-# 2023-10-07T1217+0200
-# 2023-10-14T1822+0200
-# 2023-10-31T1647+0100
+# 2023-11-02T0747+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -276,10 +269,11 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Demotic transcription/$1 transcription démotique/g;
 				$line =~ s/( # .*) Parthian transcription/$1 transcription parthe/g;
 				$line =~ s/( # .*) Herero old orthography/$1 héréro ancienne orthographe/g;
-				$line =~ s/( # .*) current Nigerian alphabet/$1 alphabet nigérian actuel/g;
+				$line =~ s/( # .*) Yoruba in current Nigerian alphabet/$1 yoruba avec l’alphabet nigérian actuel/g;
 				$line =~ s/( # .*) German dialectology/$1 dialectologie allemande/g;
 				$line =~ s/( # .*) Swedish grave accent/$1 accent grave suédois/g;
-				$line =~ s/( # .*) languages of Togo/$1 langues du Togo/g;
+				$line =~ s/( # .*) Languages of Gabon/$1 langues du Gabon/g;
+				$line =~ s/( # .*) Languages of Togo/$1 langues du Togo/g;
 				$line =~ s/( # .*) Marshallese/$1 marshallais/g;
 				$line =~ s/( # .*) Malagasy/$1 malgache/g;
 				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
@@ -295,10 +289,17 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) twice/$1 deux fois/g;
 				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
 				$line =~ s/( # .*) Hausa in Boko/$1 hausa en boko/g;
-				$line =~ s/( # .*) romanized Kharosthi/$1 kharosthi romanisé/g;
-				$line =~ s/( # .*) romanized Avestan/$1 avestique romanisé/g;
+				$line =~ s/( # .*) Romanized Kharosthi/$1 kharosthi romanisé/g;
+				$line =~ s/( # .*) Romanized Avestan/$1 avestique romanisé/g;
 				$line =~ s/( # .*) Dutch/$1 néerlandais/g;
-				$line =~ s/( # .*) romanized Pashto following/$1 pachto romanisé selon/g;
+				$line =~ s/( # .*) Romanized Pashto following/$1 pachto romanisé selon/g;
+				$line =~ s/( # .*) ALA-LC for/$1 ALA-LC pour/g;
+				$line =~ s/( # .*) Chimane orthography of Wayne Gill/$1 Chimane orthographe de Wayne Gill/g;
+				$line =~ s/( # .*) Overrides/$1 Remplace/g;
+				$line =~ s/( # .*) Fula in Senegalese orthography/$1 fula selon l’orthographe sénégalaise/g;
+				$line =~ s/( # .*) Pashto romanization/$1 romanisation pachto/g;
+				$line =~ s/( # .*\w): /$1 : /g;
+				$line =~ s/( # .*\w); /$1 ; /g;
 
 				# Anchors and localized tooltips.
 				unless ( $line =~ m/: +"surrogat_haut_pour_Windows"/u ) {
