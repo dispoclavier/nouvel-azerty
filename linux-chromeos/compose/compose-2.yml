@@ -786,7 +786,7 @@
 <Multi_key><greater><greater>                                                              <U200B> : "̬" U032C # COMBINING CARON BELOW
 #
 #
-#*# FLAG_LETTER, DOUBLE
+#*# FLAG, DOUBLE
 #   *dead_flag UEFD7
 #   Multi_key: ¦=
 #
@@ -2265,7 +2265,7 @@
 #   Multi_key: ¦===
 #
 #   This yields the bare symbol not followed by ZWNJ.
-#   See #*# DOUBLE, FLAG_LETTER
+#   See #*# FLAG, DOUBLE
 #
 <UEFD7><UEFD7><UEFD7>                                                                          <A> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
 <Multi_key><equal><equal><equal>                                                               <A> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
@@ -3065,7 +3065,7 @@
 #   of these quick access sequences that conflict with regular support.
 #   So, "⊆" U2286, "≥" U2265, "≤" U2264 by dead_diaeresis grave, less, greater
 #   have been discarded.
-#   See #*# DOUBLE, FLAG_LETTER
+#   See #*# FLAG, DOUBLE
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
