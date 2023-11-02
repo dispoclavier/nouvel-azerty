@@ -5150,26 +5150,26 @@
 <Multi_key><numbersign><5>                                                                 <comma> : "⛆" U26C6 # RAIN
 <UEFD0><KP_5>                                                                              <comma> : "⛆" U26C6 # RAIN
 <Multi_key><numbersign><KP_5>                                                              <comma> : "⛆" U26C6 # RAIN
-<UEFD0><6>                                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><6>                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_6>                                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_6>                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><7>                                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><7>                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_7>                                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_7>                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><8>                                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><8>                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_8>                                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_8>                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><9>                                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><9>                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_9>                                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_9>                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><0>                                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><0>                                                                 <comma> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_0>                                                                              <comma> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_0>                                                              <comma> : # part of alphabetic mathematical symbol input sequences
+#   <UEFD0><6>                                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><6>                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_6>                                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_6>                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><7>                                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><7>                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_7>                                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_7>                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><8>                                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><8>                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_8>                                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_8>                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><9>                                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><9>                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_9>                                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_9>                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><0>                                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><0>                                                             <comma> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_0>                                                                          <comma> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_0>                                                          <comma> : part of alphabetic mathematical symbol input sequences
 <UEFD0><1>                                                                                 <comma> : "⚑" U2691 # BLACK FLAG
 <Multi_key><numbersign><1>                                                                 <comma> : "⚑" U2691 # BLACK FLAG
 <UEFD0><KP_1>                                                                              <comma> : "⚑" U2691 # BLACK FLAG
@@ -5256,26 +5256,26 @@
 <Multi_key><numbersign><5>                                                                <period> : "·" U00B7 # MIDDLE DOT
 <UEFD0><KP_5>                                                                         <KP_Decimal> : "·" U00B7 # MIDDLE DOT
 <Multi_key><numbersign><KP_5>                                                         <KP_Decimal> : "·" U00B7 # MIDDLE DOT
-<UEFD0><6>                                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><6>                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_6>                                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_6>                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><7>                                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><7>                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_7>                                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_7>                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><8>                                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><8>                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_8>                                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_8>                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><9>                                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><9>                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_9>                                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_9>                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><0>                                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><0>                                                                <period> : # part of alphabetic mathematical symbol input sequences
-<UEFD0><KP_0>                                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
-<Multi_key><numbersign><KP_0>                                                         <KP_Decimal> : # part of alphabetic mathematical symbol input sequences
+#   <UEFD0><6>                                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><6>                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_6>                                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_6>                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><7>                                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><7>                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_7>                                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_7>                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><8>                                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><8>                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_8>                                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_8>                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><9>                                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><9>                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_9>                                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_9>                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><0>                                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><0>                                                            <period> : part of alphabetic mathematical symbol input sequences
+#   <UEFD0><KP_0>                                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
+#   <Multi_key><numbersign><KP_0>                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
 <UEFD0><1>                                                                                <period> : "⚐" U2690 # WHITE FLAG
 <Multi_key><numbersign><1>                                                                <period> : "⚐" U2690 # WHITE FLAG
 <UEFD0><KP_1>                                                                         <KP_Decimal> : "⚐" U2690 # WHITE FLAG
