@@ -5000,18 +5000,18 @@
 #
 #
 #   Overview            Based on AZERTY fr_FR.
-#                       Virtual dead keys on multiple press are semicolon separated.
+#                       Virtual dead keys on multiple press are listed in the body.
 #                       All non-existing keysyms, marked *, are new-school Compose.
 #
 #   Level 2          3  4
 #
-#   A (Q on QWERTY)  ^  *dead_superscript UEFD1; *dead_abovecombining
-#   Z (W on QWERTY)  %  *dead_turned UEFD5; *dead_sideways
-#   E                {  dead_hook; *dead_curl; *dead_flourish
-#   R                }  *dead_retroflexhook UEFD4; *dead_palatalhook; *dead_swash
-#   T                ~  dead_tilde; dead_belowtilde; *dead_doublemiddletilde
-#   Y                @  dead_greek (new-school); *dead_circled; *dead_doublecircled
-#   U                `  dead_grave; dead_doublegrave
+#   A (Q on QWERTY)  ^  *dead_superscript UEFD1
+#   Z (W on QWERTY)  %  *dead_turned UEFD5
+#   E                {  dead_hook
+#   R                }  *dead_retroflexhook UEFD4
+#   T                ~  dead_tilde
+#   Y                @  dead_greek (new-school)
+#   U                `  dead_grave
 #   I                '  dead_acute
 #   O                "  dead_doubleacute (new-school)
 #   P and &          .  dead_abovedot
@@ -5024,12 +5024,12 @@
 #   H                +  dead_horn
 #   J                [  dead_ogonek (new-school)
 #   K                ]  *dead_abovehook UEFD3
-#   L                _  *dead_subscript UEFD2; *dead_belowcombining
-#   M                |  dead_macron (new-school); dead_belowmacron
+#   L                _  *dead_subscript UEFD2
+#   M                |  dead_macron (new-school)
 #
 #   W (Z on QWERTY)  /  dead_longsolidusoverlay
-#   X                *  dead_abovering; dead_belowring
-#   C                <  dead_circumflex (new-school); dead_belowcircumflex
+#   X                *  dead_abovering
+#   C                <  dead_circumflex (new-school)
 #   V                >  dead_caron (new-school)
 #   B                =  *dead_flag UEFD7
 #   N                \  *dead_reversed UEFD6
@@ -5697,58 +5697,62 @@
 #       3.    # # Dead key combination with one or more other dead keys
 #       4.    #^# Dead key virtualized by multiple press
 #
-#   The order of base characters matters too, since this file is also used for
-#   documentation: spaces, quotedbl, apostrophes, symbols, digits, letters.
-#
-#   Combining marks and spacing clones of diacritics are listed first.
+#   The order of base characters matters, too, since this file is also used for
+#   documentation: spaces, quotedbl, apostrophes, symbols, digits, letters. So,
+#   combining marks and spacing clones of diacritics are listed first.
 #
 #
 #*# SUPERSCRIPT
 #   *dead_superscript UEFD1
 #   Multi_key: ¦^
 #
-#   In CLDR, French has ordinal indicators ᵈ, ᵉ, ʳ, ˢ since v34 (2018).
+#   In Unicode CLDR, French has ordinal indicators ᵈ, ᵉ, ʳ, ˢ since v34 (2018).
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
 #   https://github.com/unicode-org/cldr/blob/release-42/common/main/fr.xml#L1526
 #
-#   Superscript lowercase letters, most extensively used as abbreviation
-#   indicators in English, French, Italian, Portuguese, Spanish, spoken
-#   by one third of the world's population, are on live keys too and
-#   support combining diacritics.
+#   Superscript lowercase letters are most extensively used as abbreviation
+#   indicators in English, French, Italian, Portuguese, Spanish, spoken by one
+#   third of the world’s population. Therefore, these letters are on live keys.
+#   Support for diacriticized abbreviation indicators is straightforward in the
+#   Unicode character encoding model, using combining diacritics.
 #
-#   The uppercase alphabet is less complete, but some letters are used
-#   for natural languages.
-#   In 2020 and 2021, more uppercase letters were added: C, F, Q.
-#   See L2/20-251, cited in L2/21-016r:
+#   The superscript uppercase alphabet is less complete. Yet some of these are
+#   used in orthographies. In 2020 and 2021, more uppercase letters were added:
+#   C "ꟲ" UA7F2, F "ꟳ" UA7F3, Q "ꟴ" UA7F4. See L2/20-251, cited in L2/21-016r:
 #   https://www.unicode.org/L2/L2021/21016r-script-adhoc-rept.pdf
 #
 #   Superscript small q is part of Unicode since v14.0 released in 2020.
 #   https://www.unicode.org/L2/L2020/20117-modifier-letter-suppt.pdf
-#   There had been an attempt to encode superscript q in isolation with
-#   a rationale based on road signs. A new take argued that a full set
-#   of superscript letters is convenient for keyboard layout design.
-#   The first proposal encountered strong headwinds from the industry,
-#   and both attempts to complete the small letter alphabet failed.
+#   There had been an attempt to encode superscript q in isolation, with a good
+#   rationale based on two street signs photographed in Paris, pointing to the
+#   National Library: “Biblio𐞥ᵘᵉ Nationale”.
 #   https://unicode.org/L2/L2010/10230-modifier-q.pdf
+#   One year later, in 2011, a new take argued that the full set of superscript
+#   small and capital letters is convenient for keyboard layout design, as this
+#   would improve the related user experience.
+#   https://unicode.org/L2/L2011/11208-n4068.pdf
+#   The first proposal encountered strong headwinds from the industry.
+#   https://unicode.org/L2/L2010/10315-comment.pdf
 #   https://unicode.org/L2/L2010/10316-cmts.pdf
+#   Both attempts to complete the Latin superscript small letters failed.
 #
 #   Despite the consensus about including superscript letters in Unicode for
 #   phonetic notation, making abbreviation indicators plain text is fiercely
-#   opposed by members of the Consortium, for software marketing reasons.
-#
-#   When character names on a MODIFIER LETTER basis were introduced, this
-#   became the new term for “superscript” while “subscript” remained unchanged.
-#   This made clear that preformatted superscript letters should not be used
-#   in lieu of formatted letters, but the attempt was biased, since superscript
-#   bears semantics and is therefore eligible for support in plain text.
-#   Disguising subscript was dropped due to running out of technical terms.
+#   opposed by members of the Consortium, for software marketing reasons. And
+#   when character names on a MODIFIER LETTER basis were introduced, these were
+#   adopted as the new norm for “superscript”. Meanwhile, “subscript” remained
+#   unchanged, meaning that preformatted superscript letters should not be used
+#   in lieu of formatted letters. But the move was biased, since superscript is
+#   a means to carry semantics and is therefore eligible for plain text support
+#   in Unicode. Duly disguising subscript likewise was dropped, probably due to
+#   running out of technical terms.
 #
 #   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
 #   mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this slot
 #   for the SUBSCRIPT_OR_SMALL_CAPS dead key, <Multi_key><underscore>.
 #
 #
-#   Combining diacritic
+#   Combining diacritic and its spacing counterpart
 #
 <UEFD1>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
 <Multi_key><asciicircum>                                                                   <space> : "̅" U0305 # COMBINING OVERLINE
@@ -7313,7 +7317,6 @@
 #
 #
 #^# COMBINING_ABOVE
-#   *dead_abovecombining
 #   *dead_superscript double press
 #   Multi_key: ¦^^
 #
@@ -7859,7 +7862,6 @@
 #
 #
 #^# MORE_TURNED, INVERTED, SIDEWAYS
-#   *dead_sideways
 #   *dead_turned double press
 #   Multi_key: ¦%%
 #
@@ -8192,10 +8194,24 @@
 #
 #
 #^# CURL, LOOP, CROSSED_TAIL, SQUIRREL_TAIL
-#   *dead_curl
 #   dead_hook double press
 #   Multi_key: ¦{{
 #
+#   As a diacritic, the double ring is used, as coming closest to a curl below.
+#   Since the combining double ring below has no spacing clone nor any modifier
+#   looking close to it, the centered half rings "˒" U02D2, "˓" U02D3 are used
+#   instead, with a rationale based on the laterality of the AltFr and AltGr
+#   modifier keys involved in typing these left and right half rings this way.
+#   See #*# HOOK_ABOVE
+#
+<dead_hook><dead_hook>                                                                     <space> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<Multi_key><braceleft><braceleft>                                                          <space> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<dead_hook><dead_hook>                                                                     <U200B> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<Multi_key><braceleft><braceleft>                                                          <U200B> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<dead_hook><dead_hook>                                                              <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<Multi_key><braceleft><braceleft>                                                   <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_hook><dead_hook>                                                                     <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<Multi_key><braceleft><braceleft>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <dead_hook><dead_hook>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <Multi_key><braceleft><braceleft>                                                         <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <dead_hook><dead_hook>                                                                         <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
@@ -8389,10 +8405,24 @@
 #
 #
 #^# FLOURISH, HOOK_TAIL, MID-HEIGHT_LEFT_HOOK
-#   *dead_flourish
 #   dead_hook triple press
 #   Multi_key: ¦{{{
 #
+#   As a diacritic, the double ring is used, as coming closest to a flourish.
+#   Since the combining double ring below has no spacing clone nor any modifier
+#   looking close to it, the centered half rings "˒" U02D2, "˓" U02D3 are used
+#   instead, with a rationale based on the laterality of the AltFr and AltGr
+#   modifier keys involved in typing these left and right half rings this way.
+#   See #^# CURL, LOOP, CROSSED_TAIL, SQUIRREL_TAIL
+#
+<dead_hook><dead_hook><dead_hook>                                                          <space> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<Multi_key><braceleft><braceleft><braceleft>                                               <space> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<dead_hook><dead_hook><dead_hook>                                                          <U200B> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<Multi_key><braceleft><braceleft><braceleft>                                               <U200B> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<dead_hook><dead_hook><dead_hook>                                                   <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<Multi_key><braceleft><braceleft><braceleft>                                        <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_hook><dead_hook><dead_hook>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<Multi_key><braceleft><braceleft><braceleft>                                               <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <dead_hook><dead_hook><dead_hook>                                                              <B> : "Ꞗ" UA796 # LATIN CAPITAL LETTER B WITH FLOURISH
 <Multi_key><braceleft><braceleft><braceleft>                                                   <B> : "Ꞗ" UA796 # LATIN CAPITAL LETTER B WITH FLOURISH
 <dead_hook><dead_hook><dead_hook>                                                              <b> : "ꞗ" UA797 # LATIN SMALL LETTER B WITH FLOURISH
@@ -8729,7 +8759,6 @@
 #
 #
 #^# PALATAL_HOOK
-#   *dead_palatalhook
 #   *dead_retroflexhook double press
 #   Multi_key: ¦}}
 #
@@ -8876,10 +8905,21 @@
 #
 #
 #^# SWASH_TAIL
-#   *dead_swash
 #   *dead_retroflexhook triple press
 #   Multi_key: ¦}}}
 #
+#   By lack of anything more appropriate, the double breve below is provided as
+#   a diacritic, and the undertie as a spacing clone thereof, although this is
+#   a connecting punctuation.
+#
+<UEFD4><UEFD4><UEFD4>                                                                      <space> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><braceright><braceright><braceright>                                            <space> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<UEFD4><UEFD4><UEFD4>                                                                      <U200B> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><braceright><braceright><braceright>                                            <U200B> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<UEFD4><UEFD4><UEFD4>                                                               <nobreakspace> : "‿" U203F # UNDERTIE
+<Multi_key><braceright><braceright><braceright>                                     <nobreakspace> : "‿" U203F # UNDERTIE
+<UEFD4><UEFD4><UEFD4>                                                                      <U202F> : "‿" U203F # UNDERTIE
+<Multi_key><braceright><braceright><braceright>                                            <U202F> : "‿" U203F # UNDERTIE
 <UEFD4><UEFD4><UEFD4>                                                                          <S> : "Ȿ" U2C7E # LATIN CAPITAL LETTER S WITH SWASH TAIL
 <Multi_key><braceright><braceright><braceright>                                                <S> : "Ȿ" U2C7E # LATIN CAPITAL LETTER S WITH SWASH TAIL
 <UEFD4><UEFD4><UEFD4>                                                                          <s> : "ȿ" U023F # LATIN SMALL LETTER S WITH SWASH TAIL
@@ -9807,7 +9847,6 @@
 #
 #
 #^# CIRCLED
-#   *dead_circled
 #   dead_greek double press
 #   Multi_key: ¦@@
 #
@@ -10007,7 +10046,6 @@
 #
 #
 #^# DOUBLE_CIRCLED
-#   *dead_doublecircled
 #   dead_greek triple press
 #   Multi_key: ¦@@@
 #
@@ -10146,7 +10184,6 @@
 #
 #
 #^# DOUBLE_GRAVE
-#   dead_doublegrave
 #   dead_grave double press
 #   Multi_key: ¦``
 #
@@ -10265,10 +10302,10 @@
 <Multi_key><apostrophe>                                                                        <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <dead_acute>                                                                                   <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
 <Multi_key><apostrophe>                                                                        <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
-<dead_acute>                                                                                   <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
-<dead_acute>                                                                                   <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; romanized Kharosthi
+<dead_acute>                                                                                   <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
+<Multi_key><apostrophe>                                                                        <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
+<dead_acute>                                                                                   <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
+<Multi_key><apostrophe>                                                                        <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
 <dead_acute>                                                                                   <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <Multi_key><apostrophe>                                                                        <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <dead_acute>                                                                                   <e> : "é" U00E9 # LATIN SMALL LETTER E WITH ACUTE
@@ -10281,10 +10318,10 @@
 <Multi_key><apostrophe>                                                                        <G> : "Ǵ" U01F4 # LATIN CAPITAL LETTER G WITH ACUTE
 <dead_acute>                                                                                   <g> : "ǵ" U01F5 # LATIN SMALL LETTER G WITH ACUTE
 <Multi_key><apostrophe>                                                                        <g> : "ǵ" U01F5 # LATIN SMALL LETTER G WITH ACUTE
-<dead_acute>                                                                                   <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
-<Multi_key><apostrophe>                                                                        <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
-<dead_acute>                                                                                   <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
-<Multi_key><apostrophe>                                                                        <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; romanized Avestan
+<dead_acute>                                                                                   <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
+<Multi_key><apostrophe>                                                                        <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
+<dead_acute>                                                                                   <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
+<Multi_key><apostrophe>                                                                        <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
 <dead_acute>                                                                                   <I> : "Í" U00CD # LATIN CAPITAL LETTER I WITH ACUTE
 <Multi_key><apostrophe>                                                                        <I> : "Í" U00CD # LATIN CAPITAL LETTER I WITH ACUTE
 <dead_acute>                                                                                   <i> : "í" U00ED # LATIN SMALL LETTER I WITH ACUTE
@@ -10329,26 +10366,26 @@
 <Multi_key><apostrophe>                                                                        <S> : "Ś" U015A # LATIN CAPITAL LETTER S WITH ACUTE
 <dead_acute>                                                                                   <s> : "ś" U015B # LATIN SMALL LETTER S WITH ACUTE
 <Multi_key><apostrophe>                                                                        <s> : "ś" U015B # LATIN SMALL LETTER S WITH ACUTE
-<dead_acute>                                                                                   <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
-<dead_acute>                                                                                   <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
-<Multi_key><apostrophe>                                                                        <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; romanized Kharosthi
+<dead_acute>                                                                                   <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
+<Multi_key><apostrophe>                                                                        <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
+<dead_acute>                                                                                   <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
+<Multi_key><apostrophe>                                                                        <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
 <dead_acute>                                                                                   <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                                        <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <dead_acute>                                                                                   <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                                        <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
-<dead_acute>                                                                                   <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
-<Multi_key><apostrophe>                                                                        <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
-<dead_acute>                                                                                   <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
-<Multi_key><apostrophe>                                                                        <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; romanized Kharosthi. — Overrides en_US.UTF-8/Compose Ǘ
+<dead_acute>                                                                                   <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
+<Multi_key><apostrophe>                                                                        <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
+<dead_acute>                                                                                   <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
+<Multi_key><apostrophe>                                                                        <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
 <dead_acute>                                                                                   <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <Multi_key><apostrophe>                                                                        <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <dead_acute>                                                                                   <w> : "ẃ" U1E83 # LATIN SMALL LETTER W WITH ACUTE
 <Multi_key><apostrophe>                                                                        <w> : "ẃ" U1E83 # LATIN SMALL LETTER W WITH ACUTE
-<dead_acute>                                                                                   <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
-<Multi_key><apostrophe>                                                                        <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
-<dead_acute>                                                                                   <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
-<Multi_key><apostrophe>                                                                        <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; romanized Pashto following DIN 31635
+<dead_acute>                                                                                   <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
+<Multi_key><apostrophe>                                                                        <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
+<dead_acute>                                                                                   <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
+<Multi_key><apostrophe>                                                                        <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
 <dead_acute>                                                                                   <Y> : "Ý" U00DD # LATIN CAPITAL LETTER Y WITH ACUTE
 <Multi_key><apostrophe>                                                                        <Y> : "Ý" U00DD # LATIN CAPITAL LETTER Y WITH ACUTE
 <dead_acute>                                                                                   <y> : "ý" U00FD # LATIN SMALL LETTER Y WITH ACUTE
@@ -10951,7 +10988,6 @@
 #
 #
 #^# VERTICAL_LINE_ABOVE
-#   dead_aboveverticalline
 #   dead_abovedot double press
 #   Multi_key ¦..
 #
@@ -12000,6 +12036,14 @@
 #   dead_currency double press
 #   Multi_key: ¦$$
 #
+<dead_currency><dead_currency>                                                             <space> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><dollar><dollar>                                                                <space> : "¤" U00A4 # CURRENCY SIGN
+<dead_currency><dead_currency>                                                             <U200B> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><dollar><dollar>                                                                <U200B> : "¤" U00A4 # CURRENCY SIGN
+<dead_currency><dead_currency>                                                      <nobreakspace> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><dollar><dollar>                                                         <nobreakspace> : "¤" U00A4 # CURRENCY SIGN
+<dead_currency><dead_currency>                                                             <U202F> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><dollar><dollar>                                                                <U202F> : "¤" U00A4 # CURRENCY SIGN
 <dead_currency><dead_currency>                                                                 <B> : "₿" U20BF # BITCOIN SIGN
 <Multi_key><dollar><dollar>                                                                    <B> : "₿" U20BF # BITCOIN SIGN
 <dead_currency><dead_currency>                                                                 <b> : "৲" U09F2 # BENGALI RUPEE MARK
@@ -13577,6 +13621,8 @@
 #
 #
 #^# DOUBLE_BAR, LONG_BAR, BARRED_DESCENDER
+#   dead_stroke double press
+#   Multi_key: ¦--
 #
 #   By lack of modifier letter dash, the short equals sign "꞊" UA78A is picked.
 #
@@ -14487,7 +14533,6 @@
 #
 #
 #^# COMBINING_BELOW
-#   *dead_belowcombining
 #   *dead_subscript double press
 #   Multi_key: ¦__
 #
@@ -14548,7 +14593,6 @@
 #
 #
 #^# LINE_BELOW
-#   dead_lowline
 #   *dead_subscript triple press
 #   Multi_key: ¦___
 #
@@ -14564,30 +14608,30 @@
 <Multi_key><underscore><underscore><underscore>                                     <nobreakspace> : "_" U005F # LOW LINE
 <UEFD2><UEFD2><UEFD2>                                                                      <U202F> : "_" U005F # LOW LINE
 <Multi_key><underscore><underscore><underscore>                                            <U202F> : "_" U005F # LOW LINE
-<UEFD2><UEFD2><UEFD2>                                                                          <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW Languages of Gabon
 <UEFD2><UEFD2><UEFD2>                                                                          <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW: Oneida
 <Multi_key><underscore><underscore><underscore>                                                <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW: Oneida
 <UEFD2><UEFD2><UEFD2>                                                                          <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW: Oneida
 <Multi_key><underscore><underscore><underscore>                                                <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW: Oneida
-<UEFD2><UEFD2><UEFD2>                                                                          <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW languages of Gabon
-<UEFD2><UEFD2><UEFD2>                                                                          <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW languages of Gabon
-<Multi_key><underscore><underscore><underscore>                                                <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW Languages of Gabon
+<UEFD2><UEFD2><UEFD2>                                                                          <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW Languages of Gabon
+<Multi_key><underscore><underscore><underscore>                                                <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW Languages of Gabon
 #
 #
 #*# MACRON, TOPBAR, LONG_LEG
