@@ -1,7 +1,8 @@
 # Journal des modifications
 
-## 1.1.5 (projet)
+## 1.1.5 (2023-11-02)
 
+* Symboles mathématiques : Déboguer "⦄" U2984, "⫻" U2AFB. Touches mortes : Tourné : Déboguer "ꓳ" UA4F3. Crochet rétroflexe > Crochet palatal : Déboguer "˽" U02FD. (compose-1.yml [3714679](https://github.com/dispoclavier/nouvel-azerty/commit/3714679605da4b54b7c5d0135b54beea2163aea2), compose-2.yml [b911cae](https://github.com/dispoclavier/nouvel-azerty/commit/b911caebaeeae8c72710626314cf4ed764ba269b))
 * Touches mortes : Barré > Double barré : Remplacer "̷" U0337 par "⃫" U20EB. Ajouter Courte barre avec "̷" U0337 et "ꜙ" UA719. (compose-1.yml [b8b45a7](https://github.com/dispoclavier/nouvel-azerty/commit/b8b45a79f9065549de0d40fce143ef5df62c6acf), compose-2.yml [2d52334](https://github.com/dispoclavier/nouvel-azerty/commit/2d52334a4f816b6c987dff9d786abf5141f7d6a3))
 
 ## 1.1.4 (2023-11-01)
