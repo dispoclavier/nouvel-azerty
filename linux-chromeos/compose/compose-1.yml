@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.1.4"
+<UEFA0>                     : "version 1.1.5"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -3046,7 +3046,7 @@
 #   See # # STROKE&GROUP_3                                                                         : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><space><asciitilde><equal><slash>                                               <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal><slash>                                        <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-#   See #^# DOUBLESTRUCK, OTHER_STROKE                                                             : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
+#   See #^# DOUBLESTRUCK                                                                           : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                                      <space> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #   See #^# TILDE_BELOW, MIDDLE_TILDE, DOUBLE_MIDDLE_TILDE                                         : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><space><asciitilde><asciitilde>                                                 <space> : "≈" U2248 # ALMOST EQUAL TO
@@ -5112,7 +5112,7 @@
 #
 #   Approximation: See #*# TILDE
 #   Negation:      See #*# STROKE
-#   Equality:      See #*# DOUBLE, FLAG_LETTER
+#   Equality:      See #*# FLAG, DOUBLE
 #
 #   Negated symbols may alternatively be input using (Base-level) dead_acute,
 #   since no symbols have been encoded with an acute accent.
@@ -13678,7 +13678,7 @@
 #
 #   Digits yield simple arrows as a redundant facility to meet most common user
 #   expectations. Double arrows are yielded by *dead_flag.
-#   See #*# DOUBLE, FLAG_LETTER
+#   See #*# FLAG, DOUBLE
 #
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
@@ -15160,7 +15160,21 @@
 <Multi_key><slash><asciitilde><asciitilde>                                                 <equal> : "≉" U2249 # NOT ALMOST EQUAL TO
 #
 #
-# # STROKE&EQUAL
+# # STROKE&ACUTE
+#
+#   This is part of <dead_stroke> in en_US.UTF-8/Compose.
+#
+<dead_longsolidusoverlay><dead_acute>                                                          <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
+<Multi_key><slash><apostrophe>                                                                 <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
+<dead_acute><dead_longsolidusoverlay>                                                          <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
+<Multi_key><apostrophe><slash>                                                                 <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
+<dead_longsolidusoverlay><dead_acute>                                                          <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
+<Multi_key><slash><apostrophe>                                                                 <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
+<dead_acute><dead_longsolidusoverlay>                                                          <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
+<Multi_key><apostrophe><slash>                                                                 <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
+#
+#
+# # STROKE&FLAG
 #
 <dead_longsolidusoverlay><UEFD7>                                                           <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><slash><equal>                                                                  <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
@@ -15176,7 +15190,7 @@
 <Multi_key><equal><slash>                                                                <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 #
 #
-# # STROKE&EQUAL&GROUP_1
+# # STROKE&FLAG&GROUP_1
 #
 <dead_longsolidusoverlay><UEFD7><UEFD0>                                                    <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><slash><equal><numbersign>                                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
@@ -15184,7 +15198,7 @@
 <Multi_key><equal><slash><numbersign>                                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
-# # STROKE&EQUAL&GROUP_2
+# # STROKE&FLAG&GROUP_2
 #
 <dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0>                                             <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><slash><equal><numbersign><numbersign>                                          <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
@@ -15192,7 +15206,7 @@
 <Multi_key><equal><slash><numbersign><numbersign>                                          <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 #
 #
-# # STROKE&EQUAL&GROUP_3
+# # STROKE&FLAG&GROUP_3
 #
 <dead_longsolidusoverlay><UEFD7><UEFD0><3>                                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><slash><equal><numbersign><3>                                                   <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
@@ -15208,14 +15222,25 @@
 <Multi_key><equal><slash><numbersign><numbersign><numbersign>                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
-#^# DOUBLESTRUCK, OTHER_STROKE
+#^# DOUBLESTRUCK
 #   dead_longsolidusoverlay double press
 #   Multi_key: ¦//
 #
-<dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
-<Multi_key><slash><slash>                                                                  <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
-<dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
-<Multi_key><slash><slash>                                                                  <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+#   This is required because we have both "Ꞣ" UA7A2 LATIN CAPITAL LETTER K WITH
+#   OBLIQUE STROKE and "Ꝃ" UA742 LATIN CAPITAL LETTER K WITH DIAGONAL STROKE as
+#   well as 4 other letters with diagonal stroke, all of which are consistently
+#   reunited in dead_longsolidusoverlay single press.
+#
+#   As of a spacing modifier letter, "ꜗ" UA717 is picked, consistently with "ꜘ"
+#   UA718 MODIFIER LETTER DOT SLASH that fills this slot in single press. So to
+#   complete this set in a predictable way, a triple press is required too, the
+#   more as minus cannot be used as a base character in dead_longsolidusoverlay
+#   due to conflicts with "Ꝅ" UA744, "ꝅ" UA745.
+#
+<dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
+<Multi_key><slash><slash>                                                                  <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
+<dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <U200B> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
+<Multi_key><slash><slash>                                                                  <U200B> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
 <dead_longsolidusoverlay><dead_longsolidusoverlay>                                  <nobreakspace> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <Multi_key><slash><slash>                                                           <nobreakspace> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_longsolidusoverlay><dead_longsolidusoverlay>                                         <U202F> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
@@ -15251,25 +15276,25 @@
 <Multi_key><slash><slash><numbersign><numbersign><numbersign>                         <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #
 #
-# # DOUBLESTRUCK&EQUAL
+# # DOUBLESTRUCK&FLAG
 #
 <dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7>                                  <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal>                                                           <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 #
 #
-# # DOUBLESTRUCK&EQUAL&GROUP_1
+# # DOUBLESTRUCK&FLAG&GROUP_1
 #
 <dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0>                           <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal><numbersign>                                               <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
-# # DOUBLESTRUCK&EQUAL&GROUP_2
+# # DOUBLESTRUCK&FLAG&GROUP_2
 #
 <dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0>                    <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal><numbersign><numbersign>                                   <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 #
 #
-# # DOUBLESTRUCK&EQUAL&GROUP_3
+# # DOUBLESTRUCK&FLAG&GROUP_3
 #
 <dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><3>                        <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal><numbersign><3>                                            <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
@@ -15279,18 +15304,28 @@
 <Multi_key><slash><slash><equal><numbersign><numbersign><numbersign>                       <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
-# # STROKE&ACUTE
+#^# SHORT_STROKE
+#   dead_longsolidusoverlay triple press
+#   Multi_key: ¦///
 #
-#   This is part of <dead_stroke> in en_US.UTF-8/Compose.
+#   This is required because we have a combining long double solidus as well as
+#   a combining short solidus, plus a third modifier letter in the "ꜘ", "ꜗ", "ꜙ"
+#   set.
 #
-<dead_longsolidusoverlay><dead_acute>                                                          <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
-<Multi_key><slash><apostrophe>                                                                 <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
-<dead_acute><dead_longsolidusoverlay>                                                          <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
-<Multi_key><apostrophe><slash>                                                                 <O> : "Ǿ" U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
-<dead_longsolidusoverlay><dead_acute>                                                          <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
-<Multi_key><slash><apostrophe>                                                                 <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
-<dead_acute><dead_longsolidusoverlay>                                                          <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
-<Multi_key><apostrophe><slash>                                                                 <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
+#   "Ꝃ" UA742, "ꝃ" UA743 are redundant for convenience and consistency.
+#
+<dead_longsolidusoverlay><dead_longsolidusoverlay><dead_longsolidusoverlay>                <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<Multi_key><slash><slash><slash>                                                           <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<dead_longsolidusoverlay><dead_longsolidusoverlay><dead_longsolidusoverlay>                <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<Multi_key><slash><slash><slash>                                                           <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<dead_longsolidusoverlay><dead_longsolidusoverlay><dead_longsolidusoverlay>         <nobreakspace> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><slash><slash><slash>                                                    <nobreakspace> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<dead_longsolidusoverlay><dead_longsolidusoverlay><dead_longsolidusoverlay>                <U202F> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><slash><slash><slash>                                                           <U202F> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<dead_longsolidusoverlay><dead_longsolidusoverlay><dead_longsolidusoverlay>                    <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
+<Multi_key><slash><slash><slash>                                                               <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
+<dead_longsolidusoverlay><dead_longsolidusoverlay><dead_longsolidusoverlay>                    <k> : "ꝃ" UA743 # LATIN SMALL LETTER K WITH DIAGONAL STROKE
+<Multi_key><slash><slash><slash>                                                               <k> : "ꝃ" UA743 # LATIN SMALL LETTER K WITH DIAGONAL STROKE
 #
 #
 #*# RING_ABOVE
