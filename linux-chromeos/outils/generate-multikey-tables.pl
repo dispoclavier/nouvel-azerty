@@ -1,10 +1,7 @@
 #!/usr/bin/perl
 # 2023-08-06T1935+0200
-# 2023-08-07T1723+0200
-# 2023-08-18T0344+0200
 # 2023-08-20T0243+0200
-# 2023-10-07T1220+0200
-# 2023-10-14T1823+0200
+# 2023-11-02T0819+0100
 # = last modified.
 #
 # Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
@@ -258,9 +255,10 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 
-				$line =~ s/^(.+?) : +"(.+?)" +(?:[a-z]+ +)?# (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : +"(.+?)" +(U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) : +"(.+?)" +(U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
+				$line =~ s/^(.+?) : +"(.+?)" +(?:[a-z]+ +)?# (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : +"(.+?)" +(U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : +"(.+?)" +(U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				print WHOLEOUTPUT $line;
 			}
