@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.1.6 (2023-11-04)
+
+* Touches mortes : Rayé > Raie haute : Ajouter "͆" U0346, "˂" U02C2, "˃" U02C3, "˄" U02C4, "˅" U02C5. Crochet en chef > Glottal : Ajouter "҆" U0486, "᾿" U1FBF. Redonder "Ꞻ" UA7BA, "ꞻ" UA7BB, "Ꞽ" UA7BC, "ꞽ" UA7BD, "Ꞿ" UA7BE, "ꞿ" UA7BF dans Virgule souscrite > Virgule en chef, et dans Virgule souscrite. Barré > Barre courte, Double barre : Permuter les identifiants et les diacritiques. Macron > Ligne souscrite : Déplacer ici depuis Indice > Ligne souscrite. Hatchek > Hatchek souscrit : Ajouter "˯" U02EF. Cédille > Cédille en chef : Ajouter "ʻ" U02BB. Tréma > Tréma souscrit : Ajouter "˸" U02F8. Exposant & crochet rétroflexe & sanglé : Dupliquer "𐞝" U1079D depuis Exposant & crochet rétroflexe & brève. Crochet rétroflexe & groupe 4 : Supprimer "ꞎ" UA78E. Crochet rétroflexe & sanglé : Dupliquer "ꞎ" UA78E depuis Crochet rétroflexe & brève. Brève > Sanglé : Remplacer "‿" U203F par "⏑" U23D1. Brève > Sanglé & crochet palatal : Dupliquer "𝼓" U1DF13 depuis Brève & crochet palatal. (compose-1.yml [18ee048](https://github.com/dispoclavier/nouvel-azerty/commit/18ee0489ab9b4e355702b29b75a3871af9fa458d), compose-2.yml [55e43b0](https://github.com/dispoclavier/nouvel-azerty/commit/55e43b09032bedfd58393d985a58a3ee8a0024e0))
+
 ## 1.1.5 (2023-11-02)
 
 * Sous-variantes : Verrouillage capitales : Remettre sur la touche traditionnelle par défaut, corriger l’erreur de la v1.1.2. (evdev.c [d9a7bc0](https://github.com/dispoclavier/nouvel-azerty/commit/d9a7bc0bb805d0e1b1f736b2f2799f63bf48d56f))
