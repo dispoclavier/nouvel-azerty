@@ -151,7 +151,7 @@
 #   *dead_abovehook (intersection with en_US.UTF-8/Compose dead_hook in Vietnamese Y)
 #   *dead_bar as an alias for the ambiguous dead_stroke (horizontal)
 #   *dead_circled, virtualized by double press of dead_greek (¦@@)
-#   *dead_group: new AZERTY has a dedicated key for this dead key
+#   *dead_group: this AZERTY has a dedicated key for this dead key
 #   *dead_flag (regional indicator letters, U1F1E6..U1F1FF)
 #   *dead_retroflexhook, using brace symmetry to alleviate dead_hook
 #   *dead_reversed (~50 Latin letters)
@@ -971,10 +971,10 @@
 <Multi_key><greater>                                                               <numbersign><u> : "ʊ̌" # U028A U030C LATIN SMALL LETTER UPSILON WITH CARON
 #
 #
-# # Order
+# # Order of dead keys
 #
 #   Dead keys in this file are ordered following the AZERTY keyboard layout.
-#   See: # # Actionable dead key layout for Latin keyboards
+#   See # # Actionable dead key layout for Latin keyboards
 #
 #   Heading levels are differentiated, in that the main dead keys with mappings
 #   on keys are prefixed `#*# `, the dead keys virtualized by double or triple,
@@ -9096,7 +9096,10 @@
 #   in a high position, but it ends here. The modifier letters are arrowheads,
 #   with a rationale based on the laterality of the AltFr and AltGr modifiers
 #   involved in typing "˂" U02C2 and "˃" U02C3. To complete the set, "˄" U02C4
-#   and "˅" U02C5 are mapped on mnemonic, case insensitive letters A and V.
+#   and "˅" U02C5 are mapped to mnemonic, case insensitive letters A and V.
+#   Additionally, along the lines of what is done on dead_caron double press,
+#   C, G, W can be used to input "˂" U02C2, and D, M, P, R are for "˃" U02C3.
+#   See #^# HACEK_BELOW
 #
 <dead_stroke><dead_stroke><dead_stroke>                                                    <space> : "͆" U0346 # COMBINING BRIDGE ABOVE
 <Multi_key><minus><minus><minus>                                                           <space> : "͆" U0346 # COMBINING BRIDGE ABOVE
@@ -9110,14 +9113,42 @@
 <Multi_key><minus><minus><minus>                                                               <A> : "˄" U02C4 # MODIFIER LETTER UP ARROWHEAD
 <dead_stroke><dead_stroke><dead_stroke>                                                        <a> : "˄" U02C4 # MODIFIER LETTER UP ARROWHEAD
 <Multi_key><minus><minus><minus>                                                               <a> : "˄" U02C4 # MODIFIER LETTER UP ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <C> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <C> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <c> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <c> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <D> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <D> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <d> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <d> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <G> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <G> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <g> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <g> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
 <dead_stroke><dead_stroke><dead_stroke>                                                        <L> : "Ꝉ" UA748 # LATIN CAPITAL LETTER L WITH HIGH STROKE
 <Multi_key><minus><minus><minus>                                                               <L> : "Ꝉ" UA748 # LATIN CAPITAL LETTER L WITH HIGH STROKE
 <dead_stroke><dead_stroke><dead_stroke>                                                        <l> : "ꝉ" UA749 # LATIN SMALL LETTER L WITH HIGH STROKE
 <Multi_key><minus><minus><minus>                                                               <l> : "ꝉ" UA749 # LATIN SMALL LETTER L WITH HIGH STROKE
+<dead_stroke><dead_stroke><dead_stroke>                                                        <M> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <M> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <m> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <m> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <P> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <P> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <p> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <p> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <R> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <R> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <r> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <r> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
 <dead_stroke><dead_stroke><dead_stroke>                                                        <V> : "˅" U02C5 # MODIFIER LETTER DOWN ARROWHEAD
 <Multi_key><minus><minus><minus>                                                               <V> : "˅" U02C5 # MODIFIER LETTER DOWN ARROWHEAD
 <dead_stroke><dead_stroke><dead_stroke>                                                        <v> : "˅" U02C5 # MODIFIER LETTER DOWN ARROWHEAD
 <Multi_key><minus><minus><minus>                                                               <v> : "˅" U02C5 # MODIFIER LETTER DOWN ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <W> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <W> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<dead_stroke><dead_stroke><dead_stroke>                                                        <w> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<Multi_key><minus><minus><minus>                                                               <w> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
 #
 #
 #*# HORN, DESCENDER, NOTCH
@@ -10037,8 +10068,9 @@
 #   for consistency with en_US.UTF-8/Compose.
 #
 #   Digits yield the full collection of simple, broken, multiple vertical bars,
-#   for convenience as the other input methods, in groups or by composition are
-#   less mnemonic or more complicated.
+#   for convenience since the other input methods, in groups or by composition,
+#   are less mnemonic or more complicated.
+#   See # # Design of math sequences
 #
 <dead_macron>                                                                              <space> : "̄" U0304 # COMBINING MACRON
 <Multi_key><bar>                                                                           <space> : "̄" U0304 # COMBINING MACRON
@@ -10369,6 +10401,7 @@
 #   See #*# ACUTE
 #
 #   Digits yield mathematical slashes without space termination.
+#   See # # Design of math sequences
 #   See #*# REVERSED
 #
 #   As a spacing counterpart of the "̸" U0338 diacritic, "ꜘ" UA718 is used, not
@@ -11592,14 +11625,9 @@
 #   For ease of access. Using Multi_key does not make sense, but Multi_key must
 #   be supported for cross-platform compatibility.
 #
-<dead_circumflex><dead_circumflex><dead_circumflex>                                        <space> : "̌" U030C # COMBINING CARON
-<Multi_key><less><less><less>                                                              <space> : "̌" U030C # COMBINING CARON
-<dead_circumflex><dead_circumflex><dead_circumflex>                                        <U200B> : "̌" U030C # COMBINING CARON
-<Multi_key><less><less><less>                                                              <U200B> : "̌" U030C # COMBINING CARON
-<dead_circumflex><dead_circumflex><dead_circumflex>                                 <nobreakspace> : "ˇ" U02C7 # CARON
-<Multi_key><less><less><less>                                                       <nobreakspace> : "ˇ" U02C7 # CARON
-<dead_circumflex><dead_circumflex><dead_circumflex>                                        <U202F> : "ˇ" U02C7 # CARON
-<Multi_key><less><less><less>                                                              <U202F> : "ˇ" U02C7 # CARON
+#   The diacritic and its spacing clone however are not supported this way, to
+#   prevent a conflict with "⋘" U22D8.
+#
 <dead_circumflex><dead_circumflex><dead_circumflex>                                            <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <Multi_key><less><less><less>                                                                  <A> : "Ǎ" U01CD # LATIN CAPITAL LETTER A WITH CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                            <a> : "ǎ" U01CE # LATIN SMALL LETTER A WITH CARON
@@ -11829,7 +11857,12 @@
 #
 #   This is only present for consistency.
 #
-#   As a spacing clone of "̬" U032C, "˯" U02EF is provided.
+#   As a spacing clone of "̬" U032C, "˯" U02EF is provided. A fuller set of low
+#   arrowheads is mapped to mnemonic, case insensitive base letters, not to the
+#   conflicting less and greater: A for "˰" U02F0; C, G, L, W for "˱" U02F1; and
+#   D, M, P, R for "˲" U02F2. "˯" U02EF is also mapped to V for intuitivity, so
+#   as to be consistent with dead_stroke triple press.
+#   See #^# HIGH_BAR
 #
 <dead_caron><dead_caron>                                                                   <space> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater><greater>                                                              <space> : "̬" U032C # COMBINING CARON BELOW
@@ -11839,6 +11872,46 @@
 <Multi_key><greater><greater>                                                       <nobreakspace> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
 <dead_caron><dead_caron>                                                                   <U202F> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
 <Multi_key><greater><greater>                                                              <U202F> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
+<dead_caron><dead_caron>                                                                       <A> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
+<Multi_key><greater><greater>                                                                  <A> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
+<dead_caron><dead_caron>                                                                       <a> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
+<Multi_key><greater><greater>                                                                  <a> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
+<dead_caron><dead_caron>                                                                       <C> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <C> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <c> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <c> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <D> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <D> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <d> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <d> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <G> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <G> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <g> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <g> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <L> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <L> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <l> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <l> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <M> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <M> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <m> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <m> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <P> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <P> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <p> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <p> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <R> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <R> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <r> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <r> : "˲" U02F2 # MODIFIER LETTER LOW RIGHT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <V> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
+<Multi_key><greater><greater>                                                                  <V> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
+<dead_caron><dead_caron>                                                                       <v> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
+<Multi_key><greater><greater>                                                                  <v> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
+<dead_caron><dead_caron>                                                                       <W> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <W> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<dead_caron><dead_caron>                                                                       <w> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
+<Multi_key><greater><greater>                                                                  <w> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
 #
 #
 #*# FLAG, DOUBLE
@@ -13442,9 +13515,11 @@
 #   See # # GROUP_2
 #
 #   Digits yield mathematical backslashes without space termination.
+#   See # # Design of math sequences
 #   See #*# STROKE
 #
-#   As a diacritic, "̔" U0314 COMBINING REVERSED COMMA ABOVE is included.
+#   As a diacritic, "̔" U0314 COMBINING REVERSED COMMA ABOVE is included, along
+#   with its spacing counterpart "ʽ" U02BD.
 #
 <UEFD6>                                                                                    <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <Multi_key><backslash>                                                                     <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
