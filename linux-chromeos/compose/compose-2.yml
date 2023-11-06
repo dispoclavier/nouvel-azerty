@@ -163,7 +163,7 @@
 # # Dead keys not included in keysymdef.h
 #
 #   Some additional dead keys proposed for mapping on an fr-FR keyboard are listed below.
-#   See # # Dead characters for documentation
+#   See # # Dead characters for portability
 #
 #   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
 #   <UEFD1> : "^"   *dead_superscript, phonetics / abbreviation indicatrs. Multi_key: ¦^
@@ -434,7 +434,7 @@
 #   ASCII symbols GRAVE ACCENT, CIRCUMFLEX ACCENT, TILDE are included as well.
 #
 #
-# # Dead characters for documentation
+# # Dead characters for portability
 #
 #   This representative sign works on Windows as the so-called dead character.
 #   On MacOS it is the terminator. Both OSes output it when the base character
@@ -453,8 +453,19 @@
 #   dead_belowtilde, that is precomposed only with e, i, u.
 #   See #^# TILDE_BELOW, MIDDLE_TILDE
 #
-#   For portability, a list of dead character candidates is provided here. For
-#   natively unsupported dead keys, a keysym candiate is proposed as well.
+#   For portability, the dead characters are defined in the dead key headings:
+#
+#       #*# SUPERSCRIPT
+#       #   *dead_superscript UEFD1
+#       #   Multi_key: ¦^
+#       #   Dchar: "^" U005E
+#
+#   The transpiler will read this in and use it while generating the DEADTRANS
+#   function calls for Windows based on the implementable subset (no strings).
+#   This is yet to be deployed based on an original idea 2023-11-06T0603+0100.
+#
+#   For documentation, a list of dead character candidates is provided here.
+#   For natively unsupported dead keys, a keysym candidate is proposed as well.
 #   See # # Dead keys not included in keysymdef.h
 #
 #   <dead_abovedot>                                     "ṗ" U1E57 LATIN SMALL LETTER P WITH DOT ABOVE
