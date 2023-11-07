@@ -2023,6 +2023,11 @@
 #
 ### Letter groups
 #
+#   These groups contain mainly letters and mathematical letter symbols, but
+#   some groups also contain mathematical digit symbols.
+#
+#   In this section, group headings are prefixed with `#+# `.
+#
 #   On the alphabet, the groups yield:
 #
 #   Group  0  (g0): live keys (default, no group selected);
@@ -2075,7 +2080,7 @@
 #	Z z	Ʒ ʒ	Ɀ ɀ	Ᶎ ᶎ	Ⱬ ⱬ	ʓ ʑ	Ꝣ ꝣ	 ʐ	Ζ ζ	𝒵 𝓏	ℤ 𝕫	ℨ 𝔷	𝖹 𝗓
 #
 #
-# # GROUP_1
+#+# GROUP_1
 #   Group 1 on the base alphabet: Latin letters, modifier letters, punctuation, Euro sign and dead keys
 #
 <UEFD0>                                                                                        <A> : "Æ" U00C6 # LATIN CAPITAL LETTER AE
@@ -2184,7 +2189,7 @@
 <Multi_key><numbersign>                                                                        <z> : "ʒ" U0292 # LATIN SMALL LETTER EZH
 #
 #
-# # GROUP_2
+#+# GROUP_2
 #   Group 2 on the base alphabet: Latin letters (continued)
 #
 #   The deprecated l with middle dot Ŀ ŀ is in the dead_abovedot dead key.
@@ -2295,7 +2300,7 @@
 <Multi_key><numbersign><numbersign>                                                            <z> : "ɀ" U0240 # LATIN SMALL LETTER Z WITH SWASH TAIL
 #
 #
-# # GROUP_3
+#+# GROUP_3
 #   Group 3 on the base alphabet: Latin letters (continued)
 #
 <UEFD0><3>                                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
@@ -2612,7 +2617,7 @@
 <Multi_key><numbersign><numbersign><numbersign>                                                <z> : "ᶎ" U1D8E # LATIN SMALL LETTER Z WITH PALATAL HOOK
 #
 #
-# # GROUP_4
+#+# GROUP_4
 #   Group 4 on the base alphabet: Latin letters (continued)
 #
 <UEFD0><4>                                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
@@ -2929,7 +2934,7 @@
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <z> : "ⱬ" U2C6C # LATIN SMALL LETTER Z WITH DESCENDER
 #
 #
-# # GROUP_5
+#+# GROUP_5
 #   Group 5 on the base alphabet: Latin letters (continued)
 #
 #   "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E has lowercase position
@@ -3146,11 +3151,11 @@
 <Multi_key><numbersign><KP_5>                                                                  <z> : "ʑ" U0291 # LATIN SMALL LETTER Z WITH CURL
 #
 #
-# # GROUP_11
+#+# GROUP_11
 #   Group 11 on the base alphabet: Latin letters (continued)
 #
 #   Groups 6..10 follow after Latin letters, group 12.
-#   See # # GROUP_6
+#   See #+# GROUP_6
 #
 <UEFD0><1>                                                                                     <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
 <Multi_key><numbersign><1>                                                                     <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
@@ -3362,7 +3367,7 @@
 <Multi_key><numbersign><KP_1>                                                                  <z> : "ꝣ" UA763 # LATIN SMALL LETTER VISIGOTHIC Z
 #
 #
-# # GROUP_12
+#+# GROUP_12
 #   Group 12 on the base alphabet: Latin letters (continued, end)
 #
 <UEFD0><2>                                                                                     <A> : "ẚ" U1E9A # LATIN SMALL LETTER A WITH RIGHT HALF RING
@@ -3575,13 +3580,15 @@
 <Multi_key><numbersign><KP_2>                                                                  <z> : "ʐ" U0290 # LATIN SMALL LETTER Z WITH RETROFLEX HOOK
 #
 #
-# # GROUP_6
+#+# GROUP_6
 #   Group 6 on the base alphabet: Greek letters
 #
-#   This group using the mnemonics of the Greek dead key in column 6, letter Y or
-#   Greek i (y grec in French) is an alternative input method that may be used if
-#   the Greek letter dead key present on several layouts and supported by XKB due
-#   to the French ergonomic BÉPO keyboard layout — https://bepo.fr — is missing.
+#   This group, using the mnemonics of the Greek dead key in column 6, letter Y
+#   or Greek i (i grec in French), is an alternative Greek letter input method.
+#   It may be used where the Greek letter dead key is missing.
+#
+#   The Greek letter dead key is present on several layouts and it is supported
+#   by XKB thanks to the French ergonomic BÉPO keyboard layout https://bepo.fr.
 #   See #*# GREEK
 #
 <UEFD0><6>                                                                                     <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
@@ -3806,7 +3813,7 @@
 #   Nabla and theta symbol are supported, other special symbols are not yet.
 #
 #
-# # Bold
+# # Bold Greek alphabet
 #
 <UEFD0><6><comma>                                                                              <A> : "𝚨" U1D6A8 # MATHEMATICAL BOLD CAPITAL ALPHA
 <Multi_key><numbersign><6><comma>                                                              <A> : "𝚨" U1D6A8 # MATHEMATICAL BOLD CAPITAL ALPHA
@@ -4018,7 +4025,7 @@
 <Multi_key><numbersign><KP_6><comma>                                                           <w> : "𝛓" U1D6D3 # MATHEMATICAL BOLD SMALL FINAL SIGMA
 #
 #
-# # Italic
+# # Italic Greek alphabet
 #
 <UEFD0><6><period>                                                                             <A> : "𝛢" U1D6E2 # MATHEMATICAL ITALIC CAPITAL ALPHA
 <Multi_key><numbersign><6><period>                                                             <A> : "𝛢" U1D6E2 # MATHEMATICAL ITALIC CAPITAL ALPHA
@@ -4230,7 +4237,7 @@
 <Multi_key><numbersign><KP_6><KP_Decimal>                                                      <w> : "𝜍" U1D70D # MATHEMATICAL ITALIC SMALL FINAL SIGMA
 #
 #
-# # Bold italic
+# # Bold italic Greek alphabet
 #
 <UEFD0><6><comma><period>                                                                      <A> : "𝜜" U1D71C # MATHEMATICAL BOLD ITALIC CAPITAL ALPHA
 <Multi_key><numbersign><6><comma><period>                                                      <A> : "𝜜" U1D71C # MATHEMATICAL BOLD ITALIC CAPITAL ALPHA
@@ -4650,7 +4657,7 @@
 <Multi_key><numbersign><KP_6><period><comma>                                                   <q> : "𝝑" U1D751 # MATHEMATICAL BOLD ITALIC THETA SYMBOL
 #
 #
-# # Sans-serif bold
+# # Sans-serif bold Greek alphabet
 #
 <UEFD0><6><comma><comma>                                                                       <A> : "𝝖" U1D756 # MATHEMATICAL SANS-SERIF BOLD CAPITAL ALPHA
 <Multi_key><numbersign><6><comma><comma>                                                       <A> : "𝝖" U1D756 # MATHEMATICAL SANS-SERIF BOLD CAPITAL ALPHA
@@ -4862,7 +4869,7 @@
 <Multi_key><numbersign><KP_6><comma><comma>                                                    <w> : "𝞁" U1D781 # MATHEMATICAL SANS-SERIF BOLD SMALL FINAL SIGMA
 #
 #
-# # Sans-serif bold italic
+# # Sans-serif bold italic Greek alphabet
 #
 <UEFD0><6><comma><comma><period>                                                               <A> : "𝞐" U1D790 # MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL ALPHA
 <Multi_key><numbersign><6><comma><comma><period>                                               <A> : "𝞐" U1D790 # MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL ALPHA
@@ -5490,6 +5497,7 @@
 <Multi_key><numbersign><KP_6><period><comma><comma>                                            <w> : "𝞻" U1D7BB # MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL FINAL SIGMA
 #
 #
+#
 # # Mathematical Latin alphabets
 #
 #   See Greek in # # Mathematical Greek alphabets and symbols
@@ -5497,15 +5505,15 @@
 #   MATHEMATICAL SCRIPT U1D49C..                  = g7 
 #   MATHEMATICAL BOLD SCRIPT U1D4D0..             = g7  ,    AKA CALLIGRAPHIC
 #   MATHEMATICAL BOLD ITALIC U1D468.. (short)     = g7    .
-#   MATHEMATICAL DOUBLE-STRUCK U1D53B..           = g8       (digits: U1D7D8..)
-#   MATHEMATICAL BOLD U1D400..                    = g8  ,    (digits: U1D7CE..)
+#   MATHEMATICAL DOUBLE-STRUCK U1D53B..           = g8       digits: U1D7D8..
+#   MATHEMATICAL BOLD U1D400..                    = g8  ,    digits: U1D7CE..
 #   MATHEMATICAL ITALIC U1D434..                  = g8    .
 #   MATHEMATICAL BOLD ITALIC U1D468..             = g8  , .
 #   MATHEMATICAL FRAKTUR U1D504..                 = g9 
 #   MATHEMATICAL BOLD FRAKTUR U1D56C..            = g9  ,
-#   MATHEMATICAL MONOSPACE U1D670..               = g9    .  (digits: U1D7F6..)
-#   MATHEMATICAL SANS-SERIF U1D5A0..              = g10      (digits: U1D7E2..)
-#   MATHEMATICAL SANS-SERIF BOLD U1D5D4..         = g10 ,    (digits: U1D7EC..)
+#   MATHEMATICAL MONOSPACE U1D670..               = g9    .  digits: U1D7F6..
+#   MATHEMATICAL SANS-SERIF U1D5A0..              = g10      digits: U1D7E2..
+#   MATHEMATICAL SANS-SERIF BOLD U1D5D4..         = g10 ,    digits: U1D7EC..
 #   MATHEMATICAL SANS-SERIF ITALIC U1D608..       = g10   .
 #   MATHEMATICAL SANS-SERIF BOLD ITALIC U1D63C..  = g10 , .
 #
@@ -5517,13 +5525,14 @@
 #   ModLock off, after dead_circumflex or dead_diaeresis.
 #
 #
+#+# GROUP_7
+#   Group 7 on the base alphabet: Script, Bold script
 #
-# # GROUP_7
-#   Group 7 on the base alphabet
-#   Script, also in bold
-#   Italic of group 7 is used as a shorthand for bold italic of group 8.
+#   Italic of group 7 is used as a shorthand for Bold italic of group 8.
+#   Mnemonics for script letters is based on the slant of digit 7.
 #
-#   Mnemonics for script letters is the slant of digit 7.
+#
+# # Script Latin alphabet
 #
 <UEFD0><7>                                                                                     <A> : "𝒜" U1D49C # MATHEMATICAL SCRIPT CAPITAL A
 <Multi_key><numbersign><7>                                                                     <A> : "𝒜" U1D49C # MATHEMATICAL SCRIPT CAPITAL A
@@ -5735,7 +5744,7 @@
 <Multi_key><numbersign><KP_7>                                                                  <z> : "𝓏" U1D4CF # MATHEMATICAL SCRIPT SMALL Z
 #
 #
-# # Calligraphic, BOLD SCRIPT
+# # Calligraphic Latin alphabet, named BOLD SCRIPT
 #
 <UEFD0><7><comma>                                                                              <A> : "𝓐" U1D4D0 # MATHEMATICAL BOLD SCRIPT CAPITAL A
 <Multi_key><numbersign><7><comma>                                                              <A> : "𝓐" U1D4D0 # MATHEMATICAL BOLD SCRIPT CAPITAL A
@@ -5947,8 +5956,8 @@
 <Multi_key><numbersign><KP_7><comma>                                                           <z> : "𝔃" U1D503 # MATHEMATICAL BOLD SCRIPT SMALL Z
 #
 #
-# # Shorthand for Bold italic of group 8
-#   See # # Bold italic
+# # Shorthand for Bold italic Latin alphabet of group 8
+#   See # # Bold italic Latin alphabet
 #
 <UEFD0><7><period>                                                                             <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
 <Multi_key><numbersign><7><period>                                                             <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
@@ -6160,11 +6169,13 @@
 <Multi_key><numbersign><KP_7><KP_Decimal>                                                      <z> : "𝒛" U1D49B # MATHEMATICAL BOLD ITALIC SMALL Z
 #
 #
-# # GROUP_8
-#   Group 8 on the base alphabet
-#   Double-struck, Bold, Italic, Bold italic
+#+# GROUP_8
+#   Group 8 on the base alphabet: Double-struck, Bold, Italic, Bold italic
 #
 #   Mnemonics for double-struck is based on the double curl of digit 8.
+#
+#
+# # Double-struck digits
 #
 <UEFD0><8>                                                                                     <0> : "𝟘" U1D7D8 # MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
 <Multi_key><numbersign><8>                                                                     <0> : "𝟘" U1D7D8 # MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
@@ -6206,6 +6217,9 @@
 <Multi_key><numbersign><8>                                                                     <9> : "𝟡" U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
 <UEFD0><KP_8>                                                                               <KP_9> : "𝟡" U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
 <Multi_key><numbersign><KP_8>                                                               <KP_9> : "𝟡" U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
+#
+#
+# # Double-struck Latin alphabet
 #
 <UEFD0><8>                                                                                     <A> : "𝔸" U1D538 # MATHEMATICAL DOUBLE-STRUCK CAPITAL A
 <Multi_key><numbersign><8>                                                                     <A> : "𝔸" U1D538 # MATHEMATICAL DOUBLE-STRUCK CAPITAL A
@@ -6417,7 +6431,7 @@
 <Multi_key><numbersign><KP_8>                                                                  <z> : "𝕫" U1D56B # MATHEMATICAL DOUBLE-STRUCK SMALL Z
 #
 #
-# # Bold
+# # Bold digits
 #
 <UEFD0><8><comma>                                                                              <0> : "𝟎" U1D7CE # MATHEMATICAL BOLD DIGIT ZERO
 <Multi_key><numbersign><8><comma>                                                              <0> : "𝟎" U1D7CE # MATHEMATICAL BOLD DIGIT ZERO
@@ -6459,6 +6473,9 @@
 <Multi_key><numbersign><8><comma>                                                              <9> : "𝟗" U1D7D7 # MATHEMATICAL BOLD DIGIT NINE
 <UEFD0><KP_8><comma>                                                                        <KP_9> : "𝟗" U1D7D7 # MATHEMATICAL BOLD DIGIT NINE
 <Multi_key><numbersign><KP_8><comma>                                                        <KP_9> : "𝟗" U1D7D7 # MATHEMATICAL BOLD DIGIT NINE
+#
+#
+# # Bold Latin alphabet
 #
 <UEFD0><8><comma>                                                                              <A> : "𝐀" U1D400 # MATHEMATICAL BOLD CAPITAL A
 <Multi_key><numbersign><8><comma>                                                              <A> : "𝐀" U1D400 # MATHEMATICAL BOLD CAPITAL A
@@ -6670,7 +6687,7 @@
 <Multi_key><numbersign><KP_8><comma>                                                           <z> : "𝐳" U1D433 # MATHEMATICAL BOLD SMALL Z
 #
 #
-# # Italic
+# # Italic Latin alphabet
 #
 <UEFD0><8><period>                                                                             <A> : "𝐴" U1D434 # MATHEMATICAL ITALIC CAPITAL A
 <Multi_key><numbersign><8><period>                                                             <A> : "𝐴" U1D434 # MATHEMATICAL ITALIC CAPITAL A
@@ -6882,7 +6899,10 @@
 <Multi_key><numbersign><KP_8><KP_Decimal>                                                      <z> : "𝑧" U1D467 # MATHEMATICAL ITALIC SMALL Z
 #
 #
-# # Bold italic
+# # Bold italic Latin alphabet
+#
+#   A shortcut is available in group 7.
+#   See # # Shorthand for Bold italic Latin alphabet of group 8
 #
 <UEFD0><8><comma><period>                                                                      <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
 <Multi_key><numbersign><8><comma><period>                                                      <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
@@ -7302,11 +7322,14 @@
 <Multi_key><numbersign><KP_8><period><comma>                                                   <z> : "𝒛" U1D49B # MATHEMATICAL BOLD ITALIC SMALL Z
 #
 #
-# # GROUP_9
-#   Group 9 on the base alphabet
-#   Fraktur, also in bold, and Monospace
+#+# GROUP_9
+#   Group 9 on the base alphabet: Fraktur, Bold Fraktur, Monospace
 #
-#   Mnemonics: 9 like g for “gothic” as blackletter, not sans-serif.
+#   Mnemonics for Fraktur uses Gothic meaning blackletter, not sans-serif, and
+#   is based on the shape of digit 9 looking like a small letter g.
+#
+#
+# # Fraktur alphabet
 #
 <UEFD0><9>                                                                                     <A> : "𝔄" U1D504 # MATHEMATICAL FRAKTUR CAPITAL A
 <Multi_key><numbersign><9>                                                                     <A> : "𝔄" U1D504 # MATHEMATICAL FRAKTUR CAPITAL A
@@ -7518,7 +7541,7 @@
 <Multi_key><numbersign><KP_9>                                                                  <z> : "𝔷" U1D537 # MATHEMATICAL FRAKTUR SMALL Z
 #
 #
-# # Fraktur bold
+# # Fraktur bold alphabet
 #
 <UEFD0><9><comma>                                                                              <A> : "𝕬" U1D56C # MATHEMATICAL BOLD FRAKTUR CAPITAL A
 <Multi_key><numbersign><9><comma>                                                              <A> : "𝕬" U1D56C # MATHEMATICAL BOLD FRAKTUR CAPITAL A
@@ -7730,9 +7753,7 @@
 <Multi_key><numbersign><KP_9><comma>                                                           <z> : "𝖟" U1D59F # MATHEMATICAL BOLD FRAKTUR SMALL Z
 #
 #
-# # Monospace
-#
-#   For convenience, FIGURE SPACE is also supported, like in group 7 of space.
+# # Monospace digits
 #
 <UEFD0><9><period>                                                                             <0> : "𝟶" U1D7F6 # MATHEMATICAL MONOSPACE DIGIT ZERO
 <Multi_key><numbersign><9><period>                                                             <0> : "𝟶" U1D7F6 # MATHEMATICAL MONOSPACE DIGIT ZERO
@@ -7775,6 +7796,15 @@
 <UEFD0><KP_9><KP_Decimal>                                                                   <KP_9> : "𝟿" U1D7FF # MATHEMATICAL MONOSPACE DIGIT NINE
 <Multi_key><numbersign><KP_9><KP_Decimal>                                                   <KP_9> : "𝟿" U1D7FF # MATHEMATICAL MONOSPACE DIGIT NINE
 #
+#
+# # Monospace Latin alphabet
+#
+#   For convenience, FIGURE SPACE is also supported, like in group 7 of space.
+#
+<UEFD0><9><period>                                                                         <space> : " " U2007 # FIGURE SPACE
+<Multi_key><numbersign><9><period>                                                         <space> : " " U2007 # FIGURE SPACE
+<UEFD0><KP_9><KP_Decimal>                                                                  <space> : " " U2007 # FIGURE SPACE
+<Multi_key><numbersign><KP_9><KP_Decimal>                                                  <space> : " " U2007 # FIGURE SPACE
 <UEFD0><9><period>                                                                             <A> : "𝙰" U1D670 # MATHEMATICAL MONOSPACE CAPITAL A
 <Multi_key><numbersign><9><period>                                                             <A> : "𝙰" U1D670 # MATHEMATICAL MONOSPACE CAPITAL A
 <UEFD0><KP_9><KP_Decimal>                                                                      <A> : "𝙰" U1D670 # MATHEMATICAL MONOSPACE CAPITAL A
@@ -7983,17 +8013,15 @@
 <Multi_key><numbersign><9><period>                                                             <z> : "𝚣" U1D6A3 # MATHEMATICAL MONOSPACE SMALL Z
 <UEFD0><KP_9><KP_Decimal>                                                                      <z> : "𝚣" U1D6A3 # MATHEMATICAL MONOSPACE SMALL Z
 <Multi_key><numbersign><KP_9><KP_Decimal>                                                      <z> : "𝚣" U1D6A3 # MATHEMATICAL MONOSPACE SMALL Z
-<UEFD0><9><period>                                                                         <space> : " " U2007 # FIGURE SPACE
-<Multi_key><numbersign><9><period>                                                         <space> : " " U2007 # FIGURE SPACE
-<UEFD0><KP_9><KP_Decimal>                                                                  <space> : " " U2007 # FIGURE SPACE
-<Multi_key><numbersign><KP_9><KP_Decimal>                                                  <space> : " " U2007 # FIGURE SPACE
 #
 #
-# # GROUP_10
-#   Group 10 on the base alphabet
-#   Sans-serif, also in bold, italic, and bold italic
+#+# GROUP_10
+#   Group 10 on the base alphabet: Sans-serif, also bold, italic, bold italic
 #
 #   Mnemonics is based on 0 for “zero serif”.
+#
+#
+# # Sans-serif digits
 #
 <UEFD0><0>                                                                                     <0> : "𝟢" U1D7E2 # MATHEMATICAL SANS-SERIF DIGIT ZERO
 <Multi_key><numbersign><0>                                                                     <0> : "𝟢" U1D7E2 # MATHEMATICAL SANS-SERIF DIGIT ZERO
@@ -8035,6 +8063,9 @@
 <Multi_key><numbersign><0>                                                                     <9> : "𝟫" U1D7EB # MATHEMATICAL SANS-SERIF DIGIT NINE
 <UEFD0><KP_0>                                                                               <KP_9> : "𝟫" U1D7EB # MATHEMATICAL SANS-SERIF DIGIT NINE
 <Multi_key><numbersign><KP_0>                                                               <KP_9> : "𝟫" U1D7EB # MATHEMATICAL SANS-SERIF DIGIT NINE
+#
+#
+# # Sans-serif Latin alphabet
 #
 <UEFD0><0>                                                                                     <A> : "𝖠" U1D5A0 # MATHEMATICAL SANS-SERIF CAPITAL A
 <Multi_key><numbersign><0>                                                                     <A> : "𝖠" U1D5A0 # MATHEMATICAL SANS-SERIF CAPITAL A
@@ -8246,7 +8277,7 @@
 <Multi_key><numbersign><KP_0>                                                                  <z> : "𝗓" U1D5D3 # MATHEMATICAL SANS-SERIF SMALL Z
 #
 #
-# # Sans-serif bold
+# # Sans-serif bold digits
 #
 <UEFD0><0><comma>                                                                              <0> : "𝟬" U1D7EC # MATHEMATICAL SANS-SERIF BOLD DIGIT ZERO
 <Multi_key><numbersign><0><comma>                                                              <0> : "𝟬" U1D7EC # MATHEMATICAL SANS-SERIF BOLD DIGIT ZERO
@@ -8288,6 +8319,9 @@
 <Multi_key><numbersign><0><comma>                                                              <9> : "𝟵" U1D7F5 # MATHEMATICAL SANS-SERIF BOLD DIGIT NINE
 <UEFD0><KP_0><comma>                                                                        <KP_9> : "𝟵" U1D7F5 # MATHEMATICAL SANS-SERIF BOLD DIGIT NINE
 <Multi_key><numbersign><KP_0><comma>                                                        <KP_9> : "𝟵" U1D7F5 # MATHEMATICAL SANS-SERIF BOLD DIGIT NINE
+#
+#
+# # Sans-serif bold Latin alphabet
 #
 <UEFD0><0><comma>                                                                              <A> : "𝗔" U1D5D4 # MATHEMATICAL SANS-SERIF BOLD CAPITAL A
 <Multi_key><numbersign><0><comma>                                                              <A> : "𝗔" U1D5D4 # MATHEMATICAL SANS-SERIF BOLD CAPITAL A
@@ -8499,7 +8533,7 @@
 <Multi_key><numbersign><KP_0><comma>                                                           <z> : "𝘇" U1D607 # MATHEMATICAL SANS-SERIF BOLD SMALL Z
 #
 #
-# # Sans-serif italic
+# # Sans-serif italic Latin alphabet
 #
 <UEFD0><0><period>                                                                             <A> : "𝘈" U1D608 # MATHEMATICAL SANS-SERIF ITALIC CAPITAL A
 <Multi_key><numbersign><0><period>                                                             <A> : "𝘈" U1D608 # MATHEMATICAL SANS-SERIF ITALIC CAPITAL A
@@ -8711,7 +8745,7 @@
 <Multi_key><numbersign><KP_0><KP_Decimal>                                                      <z> : "𝘻" U1D63B # MATHEMATICAL SANS-SERIF ITALIC SMALL Z
 #
 #
-# # Sans-serif bold italic
+# # Sans-serif bold italic Latin alphabet
 #
 <UEFD0><0><comma><period>                                                                      <A> : "𝘼" U1D63C # MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL A
 <Multi_key><numbersign><0><comma><period>                                                      <A> : "𝘼" U1D63C # MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL A
@@ -9131,9 +9165,9 @@
 <Multi_key><numbersign><KP_0><period><comma>                                                   <z> : "𝙯" U1D66F # MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL Z
 #
 #
-# # Groups 11 and 12 for Latin letters follow group 5.
-#   See # # GROUP_11
-#   See # # GROUP_12
+#+# Groups 11 and 12 for Latin letters follow group 5.
+#   See #+# GROUP_11
+#   See #+# GROUP_12
 #
 #
 # (NE PAS EFFACER) # end additions Compose dispoclavier
