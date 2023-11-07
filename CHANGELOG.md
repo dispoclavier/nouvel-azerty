@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.1.8 (projet)
+
+* Touches mortes : Exposant & tourné & crosse : Ajouter "ʵ" U02B5. Exposant & tourné & crochet rétroflexe : Supprimer "ʵ" U02B5. Ajouter "𐞧" U107A7. Ajouter les caractères morts. (compose-2.yml [a1b26c5](https://github.com/dispoclavier/nouvel-azerty/commit/a1b26c57721bf2f38fbbef6e8eb0c1db01d7db14), [94d376fè](https://github.com/dispoclavier/nouvel-azerty/commit/94d376f4000d1e3dae85ae1e0bf8c589db4a5b1b), [fd4f6c1](https://github.com/dispoclavier/nouvel-azerty/commit/fd4f6c122bd3369d69e3fad6ebacc9bff9c86a6f), compose-3.yml [54c7301](https://github.com/dispoclavier/nouvel-azerty/commit/54c7301aa6c1fe864a81734e2cfb3f2ee7697082))
+
 ## 1.1.7 (2023-11-05)
 
 * Composition : Déboguer "⫴" U2AF4, "⟧" U27E7, "⋘" U22D8. Ajouter la termination par espace insécable pour tous les symboles terminés par espace. Touches mortes : Hatchek > Hatchek souscrit : Ajouter "˰" U02F0, "˱" U02F1, "˲" U02F2. (compose-1.yml [7d54a6f](https://github.com/dispoclavier/nouvel-azerty/commit/7d54a6f5cae08b862526e5b722282aa82980bc72), compose-2.yml [c267636](https://github.com/dispoclavier/nouvel-azerty/commit/c267636c75deb04aef6efe56f1175dd17269dab9))
