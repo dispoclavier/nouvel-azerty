@@ -441,16 +441,30 @@
 #   is not listed with the current dead key, prior to outputting the unchanged
 #   base character itself. XCompose, by contrast, has no output in this case.
 #
-#   Traditionally, this character is output on hitting space after a dead key,
-#   but space is now reserved for the related combining diacritic.
+#   Traditionally, this character is output in isolation on hitting space after
+#   a dead key, but space is now reserved for the related combining diacritic,
+#   and this is inappropriate as a dead character, because dead characters must
+#   be spacing so as to be clearly distinguishable and keep user experience on
+#   a correct level, also with respect to the use on macOS of these characters
+#   as terminators displayed on a yellow background while a sequence is ongoing
+#   (as opposed to both XKB and Windows, where the user gets no feedback).
 #
-#   Ê-key and Ç-key emulations require ê and ç as dead characters in these dead
-#   keys:
+#   The topmost reason for picking the base character from the dead key output
+#   is that an Ê-key emulation on the circumflex accent dead key requires ê as
+#   a dead character in dead_circumflex, and so does the Ç-key emulation for ç
+#   in dead_cedilla.
 #   See #*# CIRCUMFLEX
 #   See #*# CEDILLA
 #
+#   Moreover, many diacritics do not have a spacing clone.
+#
+#   Consistently, dead keys have their dead character picked from their output.
+#
 #   For dead_tilde, the dead character base letter is `e` for consistency with
-#   dead_belowtilde, that is precomposed only with e, i, u.
+#   dead_belowtilde, that is precomposed only with e, i, u, and for equity, as
+#   opposed to picking one of ã, ñ, õ, and thus favoring either Portuguese or
+#   Spanish. The ẽ also makes for consistent mnemonics since tilde ends in e.
+#   See #*# TILDE
 #   See #^# TILDE_BELOW, MIDDLE_TILDE
 #
 #   For portability, the dead characters are defined in the dead key headings:
@@ -1696,8 +1710,26 @@
 #
 #
 # # SUPERSCRIPT&TURNED&RETROFLEX_HOOK
-#   Dchar: 
+#   Dchar: "ᶭ" U1DAD
 #
+#   As "𐞧" U107A7 is in the SMP, "ᶭ" U1DAD is added for the purpose of having a
+#   dead character candidate in the BMP without breaking the rule that the dead
+#   character is picked from the dead key output.
+#   See # # Dead characters for portability
+#   See # # SUPERSCRIPT&TURNED&MACRON
+#
+<UEFD1><UEFD4><UEFD5>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<Multi_key><asciicircum><braceright><percent>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<UEFD1><UEFD5><UEFD4>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<Multi_key><asciicircum><percent><braceright>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<UEFD4><UEFD1><UEFD5>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<Multi_key><braceright><asciicircum><percent>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<UEFD4><UEFD5><UEFD1>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<Multi_key><braceright><percent><asciicircum>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<UEFD5><UEFD1><UEFD4>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<Multi_key><percent><asciicircum><braceright>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<UEFD5><UEFD4><UEFD1>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
+<Multi_key><percent><braceright><asciicircum>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5><UEFD4>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
