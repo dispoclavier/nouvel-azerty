@@ -10,13 +10,15 @@
 #
 ### Dead keys
 #
-#   The X Keyboard Extension does not have dead keys of its own; it relies on XCompose
-#   to emulate dead key behavior. Other systems do not have the Multi_key functionality
-#   specifically, but they can emulate Multi_key using chained dead keys.
+#   The X Keyboard Extension does not have dead keys of its own; it relies on
+#   XCompose to emulate dead key behavior instead. Other systems may not have
+#   any dedicated Multi_key functionality. However, Multi_key behavior can be
+#   emulated using chained dead keys.
 #
-#   Input composition implemented by chaining dead keys is more powerful as it supports
-#   modularity, whereas XCompose requires listing all supported sequences, verbatim and
-#   in extenso. The reason why is that this does not work:
+#   Input composition implemented by chaining dead keys is more powerful in
+#   that it supports modularity, as opposed to XCompose that requires listing
+#   all supported sequences, verbatim and in extenso. The reason why is that
+#   this does not work:
 #
 #       <dead_circumflex> <dead_circumflex> : dead_belowcircumflex
 #   or:
@@ -24,8 +26,7 @@
 #   then:
 #       <dead_belowcircumflex> <e>          : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 #
-#   That however contradicts what X.org specifies at:
-#   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
+#   That however contradicts what X.org specifies:
 #
 #       If the string is omitted, Xlib figures it out from the keysym according to
 #       the current locale.
@@ -37,20 +38,22 @@
 #           <dead_grave> <A> : Agrave
 #       the result depends on how Agrave is mapped in the current locale.
 #
+#   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
+#
 #
 # # Virtual dead keys
 #
-#   The French BÉPO ergonomic keyboard layout defines additional dead keys virtualized
-#   by a double press of a dead key. The diacritic is either doubled or transformed.
-#   Mostly it is shifted to the less frequently diacriticized side of the letter.
-#   More information is available in French on the bépo website:
+#   The French BÉPO ergonomic keyboard layout defines a number of additional
+#   dead keys that are virtualized by dead key double press. The diacritic is
+#   either doubled or transformed, i.e. it is shifted to the less frequently
+#   diacriticized side of the letter. More information is available in French
+#   on the bépo website:
 #   https://bepo.fr/wiki/Version_1.1rc1/Touches_mortes/Pressions_multiples
 #
-#   Mostly, virtual dead keys on double press yield the
-#   same diacritic shifted below or above the letter in
-#   conformance with fr-bépo ergonomic keyboard layout.
-#   Double press is a way of chaining dead key presses.
-#   Multiple diacritics also require chained dead keys.
+#   Based on this, triple or quadruple press virtual dead keys may also be
+#   supported as required. Additionally, mixing multiple diacritics on the
+#   same letter also requires virtual dead keys. Each one of these dead keys
+#   needs a dedicated dead character.
 #
 #
 # # X11 dead key syms defined in keysymdef.h
@@ -61,7 +64,7 @@
 #
 #       sudo apt-get install x11proto-core-dev
 #
-#   For Latin keyboard layouts — keysyms used in this layout are checked:
+#   For Latin keyboard layouts. The 22 keysyms used in this layout are checked:
 #
 #      dead_abovecomma
 #    ✔ dead_abovedot
@@ -98,18 +101,24 @@
 #    ✔ dead_stroke
 #    ✔ dead_tilde
 #
+#
+# # Bar and stroke diacritics
+#
 #   The deadkeysym dead_stroke is newly dedicated to the horizontal dash overlay,
 #   aka bar. One dead key is not enough to support both / and - shaped diacritics.
 #   Thanks to Karl Pentzlin’s German T3, dead_longsolidusoverlay was added to the
-#   keysyms from the name of the diacritic used to decompose negated math symbols:
+#   keysyms from the name of the diacritic used to decompose negated math symbols,
+#   while letters like Oslash (U00D8 LATIN CAPITAL LETTER O WITH STROKE) are not
+#   decomposed:
 #
 #   ̸ U0338 COMBINING LONG SOLIDUS OVERLAY
 #
-#   Oslash (U00D8/F8 LATIN CAPITAL/SMALL LETTER O WITH STROKE) is not decomposed.
-#
-#   Initially it was called dead_longsolidus, and dead_stroke was replaced with
-#   dead_shortstroke as well.
+#   Initially the new keysym was called `dead_longsolidus`, and `dead_stroke` was
+#   replaced with `dead_shortstroke` as well.
 #   https://bugs.freedesktop.org/attachment.cgi?id=85370
+#
+#
+# # Vertical line above or below
 #
 #   The deadkeysyms dead_aboveverticalline and dead_belowverticalline have been
 #   added specifically for German T3 (“extra dead elements for German T3 layout”
@@ -125,6 +134,9 @@
 #       U0329 COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 #       U030D COMBINING VERTICAL LINE ABOVE Marshallese
 #       U030E COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
+#
+#
+# # Macron below and line below
 #
 #   The deadkeysym dead_lowline is not used to input precomposed letters having
 #   “WITH LINE BELOW” in their name, given in the Latin Extended Additional block,
@@ -148,9 +160,11 @@
 #
 # # Proposed additional dead key syms
 #
+#   These 8 additional dead keys are required for supporting the Latin script,
+#   and also for consistency with the 30 ASCII symbols and punctuation mapped
+#   on level 3 of the keys in rows B..D, columns 1..10.
+#
 #   *dead_abovehook (intersection with en_US.UTF-8/Compose dead_hook in Vietnamese Y)
-#   *dead_bar as an alias for the ambiguous dead_stroke (horizontal)
-#   *dead_circled, virtualized by double press of dead_greek (¦@@)
 #   *dead_group: this AZERTY has a dedicated key for this dead key
 #   *dead_flag (regional indicator letters, U1F1E6..U1F1FF)
 #   *dead_retroflexhook, using brace symmetry to alleviate dead_hook
@@ -158,6 +172,11 @@
 #   *dead_subscript (smallcaps with uppercase base letters)
 #   *dead_superscript (modifier letters, abbreviation indicators)
 #   *dead_turned (~70); inverted (20) or sideways (8) on double press
+#
+#   An alias is also proposed, and a virtual dead key:
+#
+#   *dead_bar as an alias for the ambiguous dead_stroke (horizontal)
+#   *dead_circled, virtualized by double press of dead_greek (¦@@)
 #
 #
 # # Dead keys not included in keysymdef.h
@@ -181,23 +200,23 @@
 #   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. Multi_key: ¦=
 #
 #
-# # Legacy dead keys
+# # Legacy dead keys for French France AZERTY
 #
-#   <UEFD8> : "~"   *dead_legacytilde
-#   <UEFD9> : "`"   *dead_legacygrave
+#   <UEFD8> : "~"  *dead_legacytilde  Legacy tilde dead key: key E02, level 4.
+#   <UEFD9> : "`"  *dead_legacygrave  Legacy grave dead key: key E07, level 4.
 #
-#   Two legacy dead keys are also required for the backward compatible tilde and grave accent
-#   dead keys on Shift + AltGr + B02 and B07 respectively. While dead key behavior is updated
-#   so as to output the combining diacritic when the space bar is pressed after a dead key, a
-#   set of backwards compatible legacy dead keys ensures backwards compatible user experience
-#   on these upper-row, level-4 positions designed for a seamless keyboard layout transition.
-#   These dead keys have limited functionality, no Multi_key equivalents, and output ASCII on
-#   hitting space, and ASCII twice on double press, like it works on Windows.
-#   2022-12-20T2238+0100
+#   To improve backwards compatibility, two legacy dead keys are required for
+#   tilde and grave accent on level 4 of B02 and B07, because regular dead key
+#   behavior is updated so as to output the combining diacritic when the space
+#   bar is pressed after a dead key. Designed to seamlessly transition UX, the
+#   legacy dead keys have limited functionality, no Multi_key equivalents, and
+#   output ASCII on hitting space, ASCII twice on double press, emulating dead
+#   key behavior known from Windows. (2022-12-20T2238+0100)
 #
 #
-#   DEAD_LEGACYTILDE
+#*# DEAD_LEGACYTILDE
 #   *dead_legacytilde UEFD8
+#   Dchar: "~" U007E
 #
 <UEFD8>                                                                                        <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <UEFD8>                                                                                        <a> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE
@@ -219,8 +238,9 @@
 <UEFD8>                                                                                    <UEFD8> : "~~" # U007E U007E TILDE twice
 #
 #
-#   DEAD_LEGACYGRAVE
+#*# DEAD_LEGACYGRAVE
 #   *dead_legacygrave UEFD9
+#   Dchar: "`" U0060
 #
 <UEFD9>                                                                                        <A> : "À" U00C0 # LATIN CAPITAL LETTER A WITH GRAVE
 <UEFD9>                                                                                        <a> : "à" U00E0 # LATIN SMALL LETTER A WITH GRAVE
@@ -1710,26 +1730,8 @@
 #
 #
 # # SUPERSCRIPT&TURNED&RETROFLEX_HOOK
-#   Dchar: "ᶭ" U1DAD
+#   Dchar:
 #
-#   As "𐞧" U107A7 is in the SMP, "ᶭ" U1DAD is added for the purpose of having a
-#   dead character candidate in the BMP without breaking the rule that the dead
-#   character is picked from the dead key output.
-#   See # # Dead characters for portability
-#   See # # SUPERSCRIPT&TURNED&MACRON
-#
-<UEFD1><UEFD4><UEFD5>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><asciicircum><braceright><percent>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<UEFD1><UEFD5><UEFD4>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><asciicircum><percent><braceright>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<UEFD4><UEFD1><UEFD5>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><braceright><asciicircum><percent>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<UEFD4><UEFD5><UEFD1>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><braceright><percent><asciicircum>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<UEFD5><UEFD1><UEFD4>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><percent><asciicircum><braceright>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<UEFD5><UEFD4><UEFD1>                                                                          <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
-<Multi_key><percent><braceright><asciicircum>                                                  <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5><UEFD4>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
@@ -3260,7 +3262,7 @@
 #
 # # TURNED&STROKE
 #   Lenient group selection
-#   Dchar: 
+#   Dchar: "ꭁ" UAB41
 #
 <UEFD5><dead_longsolidusoverlay>                                                               <o> : "ꭁ" UAB41 # LATIN SMALL LETTER TURNED OE WITH STROKE
 <Multi_key><percent><slash>                                                                    <o> : "ꭁ" UAB41 # LATIN SMALL LETTER TURNED OE WITH STROKE
@@ -3278,7 +3280,7 @@
 #
 #
 # # TURNED&STROKE&GROUP_2
-#   Dchar: 
+#   Dchar: "ꭄ" UAB44
 #
 <UEFD5><dead_longsolidusoverlay><UEFD0><UEFD0>                                                 <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 <Multi_key><percent><slash><numbersign><numbersign>                                            <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
@@ -3304,7 +3306,7 @@
 #
 #
 # # TURNED&DIAERESIS
-#   Dchar: 
+#   Dchar: "ᴞ" U1D1E
 #
 <UEFD5><dead_diaeresis>                                                                        <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 <Multi_key><percent><colon>                                                                    <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
@@ -3315,7 +3317,7 @@
 #^# MORE_TURNED, INVERTED, SIDEWAYS
 #   *dead_turned double press
 #   Multi_key: ¦%%
-#   Dchar: 
+#   Dchar: "ᴟ" U1D1F
 #
 #   This supports the full set of those among the Old Lisu letters that can be
 #   used for writing in turned Latin letters. I.e. there is no M, Q, W as seen
@@ -3662,7 +3664,7 @@
 #^# CURL, LOOP, CROSSED_TAIL, SQUIRREL_TAIL
 #   dead_hook double press
 #   Multi_key: ¦{{
-#   Dchar: 
+#   Dchar: "ɕ" U0255
 #
 #   As a diacritic, the double ring is used, as coming closest to a curl below.
 #   Since the combining double ring below has no spacing clone nor any modifier
