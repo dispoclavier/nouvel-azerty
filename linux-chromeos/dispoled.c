@@ -1,4 +1,4 @@
-//                       Date: 2023-08-16T1957+0200
+//                       Date: 2023-11-19T1911+0100
 //        Operating file name: dispoled
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -18,12 +18,12 @@
 //   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
 //                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
 //                             kbfrBEs  French Belgium semiautomatic keyboard layout
+//                             kbfrFRs  French France semiautomatic keyboard layout
+//                             kbfrFRsr French France remapped semiautomatic keyboard layout
+//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
 //                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
-//                             kbfrFRr  French France remapped semiautomatic keyboard layout
-//                             kbfrFRs  French France semiautomatic keyboard layout
-//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
