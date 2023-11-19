@@ -1,4 +1,4 @@
-//                       Date: 2023-09-19T2035+0200
+//                       Date: 2023-11-19T1811+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -15,15 +15,15 @@
 //              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 //             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 //              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
-//   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
+//   Full names, descriptions: kbbrFRs  Breton and French semiautomatic keyboard layout
 //                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
 //                             kbfrBEs  French Belgium semiautomatic keyboard layout
+//                             kbfrFRs  French France semiautomatic keyboard layout
+//                             kbfrFRsr French France remapped semiautomatic keyboard layout
+//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
 //                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
-//                             kbfrFRr  French France remapped semiautomatic keyboard layout
-//                             kbfrFRs  French France semiautomatic keyboard layout
-//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
@@ -250,7 +250,7 @@
 // These keyboard layouts support semiautomatic punctuation spacing, where the
 // spaced-out punctuation characters and the unspaced-out ones are on the same
 // key with different modifiers: Shift for unspaced-out, AltFr for spaced-out.
-// Additionally, Shift + AltFr yields unspaced-out punctuation marks ? ! : ;.
+// Additionally, Shift + AltFr yields unspaced-out punctuation marks `?!:;`.
 //
 // Advantages of AltFr over Shift for spaced-out punctuation characters:
 //
@@ -359,7 +359,8 @@
 //
 // As an alternative, the Euro sign is also in group 1 of E. In group 1, with
 // key rollover supported, the group selector can be used like a modifier key
-// by keeping the group selector pressed while already hitting the E key.
+// by keeping the group selector pressed while already hitting the E key. The
+// base character for the Euro sign in group 1 of E is case insensitive.
 //
 //
 // ##  Name and mapping of the level-5 modifier key
@@ -412,9 +413,9 @@
 default partial alphanumeric_keys
 xkb_symbols "kbfrFRs" {
 
-	name[Group1] = "French France semiautomatic";
-	name[Group2] = "French France semiautomatic";
-	// "Français France semi-automatique"
+	name[Group1] = "French France semiautomatic keyboard layout";
+	name[Group2] = "French France semiautomatic keyboard layout";
+	// "Français France disposition de clavier semi-automatique"
 
 	// Includes files from the symbols/ directory.
 	include "pc(pc105)"   // Basic functionality.
@@ -941,9 +942,9 @@ xkb_symbols "kbfrFRs" {
 partial alphanumeric_keys
 xkb_symbols "kbbrFRs" {
 
-	name[Group1] = "Breton and French semiautomatic";
-	name[Group2] = "Breton and French semiautomatic";
-	// "Breton et français semi-automatique"
+	name[Group1] = "Breton and French semiautomatic keyboard layout";
+	name[Group2] = "Breton and French semiautomatic keyboard layout";
+	// "Breton et français disposition de clavier semi-automatique"
 
 	include "dispocla(kbfrFRs)"
 
@@ -975,9 +976,9 @@ xkb_symbols "kbbrFRs" {
 partial alphanumeric_keys
 xkb_symbols "kbfrPFs" {
 
-	name[Group1] = "French Polynesia semiautomatic";
-	name[Group2] = "French Polynesia semiautomatic";
-	// "Polynésie française semi-automatique"
+	name[Group1] = "French Polynesia semiautomatic keyboard layout";
+	name[Group2] = "French Polynesia semiautomatic keyboard layout";
+	// "Polynésie française disposition de clavier semi-automatique"
 
 	include "dispocla(kbfrFRs)"
 
@@ -1008,9 +1009,9 @@ xkb_symbols "kbfrPFs" {
 partial alphanumeric_keys
 xkb_symbols "kbfrAFs" {
 
-	name[Group1] = "Francophone Africa semiautomatic";
-	name[Group2] = "Francophone Africa semiautomatic";
-	// "Afrique francophone semi-automatique"
+	name[Group1] = "Francophone Africa semiautomatic keyboard layout";
+	name[Group2] = "Francophone Africa semiautomatic keyboard layout";
+	// "Afrique francophone disposition de clavier semi-automatique"
 
 	include "dispocla(kbfrFRs)"
 
@@ -1042,9 +1043,9 @@ xkb_symbols "kbfrAFs" {
 partial alphanumeric_keys
 xkb_symbols "kbfrBEs" {
 
-	name[Group1] = "French Belgium semiautomatic";
-	name[Group2] = "French Belgium semiautomatic";
-	// "Français Belgique semi-automatique"
+	name[Group1] = "French Belgium semiautomatic keyboard layout";
+	name[Group2] = "French Belgium semiautomatic keyboard layout";
+	// "Français Belgique disposition de clavier semi-automatique"
 	//
 	// The other divergent keys are equalized with France’s AZERTY because
 	// the downside of keeping them the Belgian way is detrimental to consistency
@@ -1077,20 +1078,30 @@ xkb_symbols "kbfrBEs" {
 };
 
 partial alphanumeric_keys
-xkb_symbols "kbfrFRr" {
+xkb_symbols "kbfrFRsr" {
 
-	name[Group1] = "French remapped semiautomatic";
-	name[Group2] = "French remapped semiautomatic";
-	// "Français redisposé semi-automatique"
+	name[Group1] = "French France remapped semiautomatic keyboard layout";
+	name[Group2] = "French France remapped semiautomatic keyboard layout";
+	// "Français France disposition de clavier semi-automatique redisposée"
 
 	include "dispocla(kbfrFRs)"
 
+	// This layout is remapped as of letter input, to extend ergonomy, already
+	// encompassing symbols and punctuation as a baseline service.
+	//
 	// I and O are switched alongside D and L to improve the -élé- trigram, and
 	// because 5.754 French words contain 'ion', and
 	// 121 French words contain 'noi' (total: 5.875).
 	// But only 280 French words contain 'oin', and
 	// 110 French words contain 'nio' (total: 390).
 	// Courtesy La Fée des Lettres https://www.motsavec.com/
+	//
+	// Hybrid variants were also included until 2023-08-18 but were dropped as
+	// pointless since keys W, X, C, V, B and even Z, Y, S are unremapped, for
+	// the sake of frequent keyboard shortcuts, without cutting back on letter
+	// ergonomy. Moreover, the hybrid variants were truncated since the layout
+	// uses the full set of 8 indices, and shortcut remapping requires one out
+	// of them.
 
 	// Alphanumeric block
 	// Key <AE01> is included from kbfrFRs.
