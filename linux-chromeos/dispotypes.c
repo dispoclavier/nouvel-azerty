@@ -1,5 +1,4 @@
-//                       Date: 2023-08-18T0326+0200
-//              Last revision: 2023-08-17T1202+0200
+//                       Date: 2023-11-19T1908+0100
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -19,12 +18,12 @@
 //   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
 //                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
 //                             kbfrBEs  French Belgium semiautomatic keyboard layout
+//                             kbfrFRs  French France semiautomatic keyboard layout
+//                             kbfrFRsr French France remapped semiautomatic keyboard layout
+//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 //                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
 //                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
-//                             kbfrFRr  French France remapped semiautomatic keyboard layout
-//                             kbfrFRs  French France semiautomatic keyboard layout
-//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
@@ -46,11 +45,8 @@
 //
 // ##   Mapping application shortcuts in keyboard layouts
 //
-// In XKB, applications take graphics mapped on Base level and Shift level
-// as input for processing keyboard shortcuts with Control, recognizing the
-// characters if matching those of US-QWERTY.
-//
-// That behavior can be overridden if key types contain mappings for Control.
+// If key types contain mappings for Control, the default behavior based on
+// graphics mapped on Base level and Shift level can be overridden.
 //
 // Mappings including Control are added for completeness on some keys,
 // while technically not mandatory for unremapped alphabetic types in
@@ -59,26 +55,13 @@
 // Shortcuts should be defined by the index of Base level only.
 // But on alphabetic keys they do also wprk with uppercase, that
 // in some applications is mandatory for Control + Shift shortcuts.
-// Some important applications like LibreOffice do not recognize
-// punctuation and symbols on Shift level for keyboard shortcuts,
-// even if mapped according to US-QWERTY.
-//
-// Control for application shortcuts is mostly mapped to index 8.
-// This scheme allows to have variants with graphics remapped while
-// shortcuts remain the legacy way, without loss of graphics compared
-// to unremapped variants, but with Ctrl + Shift + <letter> shortcuts
-// not working in some applications, e.g. Nautilus, that has some of
-// them. LibreOffice handles only Base level graphics for application
-// shortcuts, with a tolerance on uppercase letters.
+// LibreOffice does not recognize punctuation and symbols on Shift level
+// for keyboard shortcuts, even if mapped according to US-QWERTY.
 //
 // Breaking down by Shift and all enabled toggles is mandatory.
 // Control mappings need to be preserved because else, shortcuts
 // would be output as graphics.
 // Shift needs to be preserved for further processing shortcuts.
-//
-// Remapping letter shortcuts reduces the number of indices that can
-// be used for graphics to 7 instead of 8 per key. Then, UX level 8
-// is used to be able to check the content of index 8 as a graphic.
 //
 // For Nautilus, shortcut problems can be fixed by editing a
 // configuration file located at `~/.config/nautilus/accels`.
@@ -989,12 +972,16 @@ default partial xkb_types "dispocla" {
 		// For keys 2 4 6 8, where emoji arrows are black arrows.
 		//
 		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed FIRST, the Function key LAST.
+		// the modifiers may need to be pressed first, the Function key last.
+		// On desktop keyboards, the combos involving both LevelThree and
+		// LevelFive are almost unusable, but on laptops these are useful.
 		//
-		//  LevelFive  yields simple ↕↙↓↘←↔→↖↑↗ arrows.
-		//  LevelFive +Shift yields double ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗ arrows.
-		//  LevelThree +Shift yields uniform black ⬋⬇⬊⬅⬌➡⬉⬆⬈ arrows.
-		// Emoji arrows ↙⬇↘⬅↔➡↖⬆↗ are output with  LevelThree  (only) pressed.
+		//                       LevelFive  simple arrows          ↕↙↓↘←↔→↖↑↗
+		//  Shift +              LevelFive  double arrows          ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
+		//          LevelThree              emoji arrows           ↕↙⬇↘⬅↔➡↖⬆↗
+		//  Shift + LevelThree              uniform black arrows   ⬍⬋⬇⬊⬅⬌➡⬉⬆⬈
+		//          LevelThree + LevelFive  triangle-headed arrows ⭥⭩⭣⭨⭠⭤⭢⭦⭡⭧
+		//  Shift + LevelThree + LevelFive  white arrows           ⇳⬃⇩⬂⇦⬄⇨⬁⇧⬀
 		//
 		// Emoji arrows require a mixed palette for a consistent UX since the
 		// 4 main arrows had been picked from black arrows as the simple ones
@@ -1043,7 +1030,7 @@ default partial xkb_types "dispocla" {
 		// For keys 0 1 3 5 7 9, where emoji arrows are simple arrows.
 		//
 		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed FIRST, the Function key LAST.
+		// the modifiers may need to be pressed first, the Function key last.
 
 		modifiers =                            LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1; // 
@@ -1770,7 +1757,7 @@ default partial xkb_types "dispocla" {
 		// For keys 2 4 6 8, where emoji arrows are black arrows.
 		//
 		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed FIRST, the Function key LAST.
+		// the modifiers may need to be pressed first, the Function key last.
 		//
 		//  LevelFive  yields simple ↕↙↓↘←↔→↖↑↗ arrows.
 		//  LevelFive +Shift yields double ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗ arrows.
@@ -1824,7 +1811,7 @@ default partial xkb_types "dispocla" {
 		// For keys 0 1 3 5 7 9, where emoji arrows are simple arrows.
 		//
 		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed FIRST, the Function key LAST.
+		// the modifiers may need to be pressed first, the Function key last.
 
 		modifiers =                            LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1; // 
