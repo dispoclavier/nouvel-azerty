@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.1.7"
+<UEFA0>                     : "version 1.1.8"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -641,6 +641,9 @@
 #
 #   START_MULTI_KEY
 #
+#*# COMPOSE
+#   Multi_key
+#   Dchar: "¦" U00A6
 #
 # # Circled by leading o
 #
@@ -6517,7 +6520,8 @@
 <Multi_key><space><minus><c><c><minus><greater>                                     <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><nobreakspace><minus><c><c><minus><greater>                                     <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><nobreakspace><minus><c><c><minus><greater>                              <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-#   Verticals are U27F0, U27F1. U2B45 and U2B46 are not labeled as math in Unicode but are included in TeX math packages.
+#   Verticals are U27F0, U27F1.
+#   U2B45 and U2B46 are not labeled as math in Unicode but are included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
 <Multi_key><less><minus><equal><minus><underscore>                                         <space> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
 <Multi_key><less><minus><equal><minus><underscore>                                  <nobreakspace> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
