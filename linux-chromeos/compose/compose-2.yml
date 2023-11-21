@@ -1809,7 +1809,7 @@
 #
 #
 # # SUPERSCRIPT&TURNED&MACRON
-#   Dchar: 
+#   Dchar: "ᶭ" U1DAD
 #
 <UEFD1><UEFD5><dead_macron>                                                                    <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <Multi_key><asciicircum><percent><bar>                                                         <m> : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
@@ -1891,7 +1891,7 @@
 #
 #
 # # SUPERSCRIPT&INVERTED
-#   Dchar: 
+#   Dchar: "ʶ" U02B6
 #
 <UEFD1><UEFD5><UEFD5>                                                                     <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
 <Multi_key><asciicircum><percent><percent>                                                <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
@@ -1908,7 +1908,7 @@
 #
 #
 # # SUPERSCRIPT&HOOK
-#   Dchar: 
+#   Dchar: "ʱ" U02B1
 #
 <UEFD1><dead_hook>                                                                             <b> : "𐞅" U10785 # MODIFIER LETTER SMALL B WITH HOOK
 <Multi_key><asciicircum><braceleft>                                                            <b> : "𐞅" U10785 # MODIFIER LETTER SMALL B WITH HOOK
