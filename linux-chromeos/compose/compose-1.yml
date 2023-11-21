@@ -629,9 +629,9 @@
 #   <Multi_key><numbersign>                        <numbersign> "☐" U2610 BALLOT BOX
 #   <Multi_key><numbersign><numbersign>            <numbersign> "☑" U2611 BALLOT BOX WITH CHECK emoji
 #   <Multi_key><numbersign><numbersign><numbersign><numbersign> "☒" U2612 BALLOT BOX WITH X
+#   With respect to dead key use, these topmost sequences are maintained, but
+#   related Multi_key equivalents are actionable only in groups 5 through 7.
 #   See # # C01
-#   With respect to dead key use, these topmost sequences are maintained, but a
-#   Multi_key equivalent is available only in groups 5 through 7.
 #
 #   Two Multi_key sequences have duplicates by design:
 #   <Multi_key><less><3> "❤" U2764 HEAVY BLACK HEART red emoji, most-used in France
