@@ -2404,14 +2404,14 @@
 #   a dead key equivalent. To fix these issues, sequences may start with space
 #   or with no-break space. No-break space instead of space is supported for a
 #   better synergy with the Multi_key dead key, on level 3 across modes, while
-#   the space character in synergy with Multi_key is no-break space in default
-#   mode, the ASCII space in numeric mode i.e. when ModLock is on.
+#   the space character in synergy with Multi_key is no-break space in French
+#   mode, ASCII space in ASCII mode, i.e. when ModLock is on.
 #
 #   Leading space is also used to disambiguate math sequences from each other
 #   in case intuitivity requires similar sequences for different symbols. This
-#   may require prepending multiple spaces. In case of multiple leading spaces
-#   starting a math sequence, the thumb may be lifted from the level 3 modifier
-#   after any of them, also in default mode.
+#   may require prepending multiple spaces. In case of multiple leading spaces,
+#   the thumb may be lifted from the level 3 modifier after any of them, also
+#   in French mode, i.e. when ModLock is off.
 #
 #   Examples with leading space:    "≪" U226A and "≫" U226B.
 #   Examples without leading space: "⋘" U22D8 and "⋙" U22D9.
