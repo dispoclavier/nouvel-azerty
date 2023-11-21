@@ -579,43 +579,6 @@
 #   The maximum number of keysyms is nine. Longer sequences are ignored.
 #
 #
-# # Notes on Unicode support
-#
-#   Due to more comprehensive support for Unicode characters used in Latin
-#   script as encoded since version 1.1 of the Standard, some sequences in
-#   en_US.UTF-8/Compose need to be redefined, by making more extensive use
-#   of ASCII symbols and punctuation.
-#
-#   With the Multi_key thought of as a generic dead key taking arguments,
-#   the base letter that those modifications are applied to is typed last.
-#   This pattern performs much better, as it empowers XCompose to apply
-#   multiple diacritics as used e.g. in Vietnamese and Lithuanian.
-#
-#   As a result, semantics of paired punctuation may be switched compared to
-#   en_US.UTF-8/Compose. Examples of Multi_key equivalents for dead_breve:
-#   In en_US.UTF-8/Compose: <Multi_key><a><parenleft>
-#   In new-school Compose:  <Multi_key><parenright><a>
-#   This scheme is not proper to new school, since in en_US.UTF-8/Compose we
-#   already have U-shape:   <Multi_key><U><a>
-#   As well as the initial: <Multi_key><b><a>
-#
-#   While that change alone would not warrant a comprehensive overhaul, more
-#   tweaks are required, such as supporting superscript and subscript, using
-#   asciicircum and underscore repurposed, formerly circumflex and macron.
-#
-#   So, when < and > are used for circumflex and hacek or hatchek aka caron,
-#   and | for macron, : gets used as the diaeresis symbol like in Vim, while
-#   the ASCII double quote looks fine for double acute accent, a change that
-#   is the more desirable as it also fixes an issue with sequences for curly
-#   quotation marks.
-#
-#   Bottom line: Full Unicode support requires the upgraded Multi_key scheme.
-#
-#   The extended Latin F & G blocks are supported since 2023-05-25T1205+0200.
-#   https://unicode.org/versions/enumeratedversions.html
-#   https://en.wikipedia.org/wiki/Latin_Extended-F
-#
-#
 # # Notes for maintenance
 #
 #   Most dead key sequences have their Multi_key equivalent added below by
@@ -869,6 +832,8 @@
 #   Superscript digraphs are supported when ampersand is added to the
 #   superscript trigger asciicircum, because asciicircum is the multi
 #   key equivalent of the superscript dead key UEFD1.
+#
+#   See # # Notes on Unicode support
 #
 <Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
 <Multi_key><asciicircum><ampersand><d><z>                                                          : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
