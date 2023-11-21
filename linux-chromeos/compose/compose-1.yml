@@ -569,6 +569,7 @@
 <UEFCB> : "#️⃣"  # U0023 UFE0F U20E3
 #
 #
+#   START_MULTI_KEY
 #
 ### Multi_key sequences
 #
@@ -638,8 +639,6 @@
 #   First instances:  See #   Heart emoji
 #   Second instances: See #*# CIRCUMFLEX
 #
-#
-#   START_MULTI_KEY
 #
 #*# COMPOSE
 #   Multi_key
