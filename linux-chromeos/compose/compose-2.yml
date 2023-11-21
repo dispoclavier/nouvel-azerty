@@ -262,6 +262,48 @@
 <UEFD9>                                                                                    <UEFD9> : "``" # U0060 U0060 GRAVE ACCENT twice
 #
 #
+# # Notes on Unicode support
+#
+#   The extended Latin F & G blocks are supported since 2023-05-25T1205+0200.
+#   This does not affect ChromeOS, Linux, MacOS (macOS), as opposed to Windows,
+#   where the Text Services Framework (TSF) is no longer able to keep the Latin
+#   script easy to input. Transpiling the related sequences to C will require a
+#   move to low surrogates from U10780 to U1DF2A (U1DFFF) along with a facility
+#   to input the D801 and D837 high surrogates.
+#   https://unicode.org/versions/enumeratedversions.html
+#   https://en.wikipedia.org/wiki/Latin_Extended-F
+#
+#   Due to more comprehensive support for Unicode characters used in Latin
+#   script as encoded since version 1.1 of the Standard, some sequences in
+#   en_US.UTF-8/Compose need to be redefined, by making more extensive use
+#   of ASCII symbols and punctuation.
+#
+#   With the Multi_key thought of as a generic dead key taking arguments,
+#   the base letter that those modifications are applied to is typed last.
+#   This pattern performs much better, as it empowers XCompose to apply
+#   multiple diacritics as used e.g. in Vietnamese and Lithuanian.
+#
+#   As a result, semantics of paired punctuation may be switched compared to
+#   en_US.UTF-8/Compose. Examples of Multi_key equivalents for dead_breve:
+#   In en_US.UTF-8/Compose: <Multi_key><a><parenleft>
+#   In new-school Compose:  <Multi_key><parenright><a>
+#   This scheme is not proper to new school, since in en_US.UTF-8/Compose we
+#   already have U-shape:   <Multi_key><U><a>
+#   As well as the initial: <Multi_key><b><a>
+#
+#   While that change alone would not warrant a comprehensive overhaul, more
+#   tweaks are required, such as supporting superscript and subscript, using
+#   asciicircum and underscore repurposed, formerly circumflex and macron.
+#
+#   So, when < and > are used for circumflex and hacek or hatchek aka caron,
+#   and | for macron, : gets used as the diaeresis symbol like in Vim, while
+#   the ASCII double quote looks fine for double acute accent, a change that
+#   is the more desirable as it also fixes an issue with sequences for curly
+#   quotation marks.
+#
+#   Bottom line: Full Unicode support requires the upgraded Multi_key scheme.
+#
+#
 # # Introducing new-school input composition
 #
 #   ^ and _ need to be freed up for super- and subscript/smallcaps, by applying
@@ -270,15 +312,16 @@
 #   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
 #   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
 #   collisions with the dead key based input method for apostrophe/comma-shaped
-#   double quotation marks. See # # Quotation mark input method
+#   double quotation marks.
+#   See # # Quotation mark input method
 #
-#   Another reason to adopt new-school is that in en_US.UTF-8/Compose,
-#   dead_cedilla’s <comma>, also used for dead_ogonek, conflicts on E.
-#   en_US.UTF-8/Compose works around this conflict by using <cedilla>,
-#   not <comma>, in the Multi_key sequence of U0228, U0229.
-#   <semicolon> could be used for both dead_belowcomma and dead_ogonek,
-#   but the result would be yet another dead key merger.
-#   That is rightfully avoided in en_US.UTF-8/Compose.
+#   Another reason to adopt new-school is that in en_US.UTF-8/Compose, <comma>
+#   is used for both dead_cedilla and dead_ogonek, resulting in a conflict on E
+#   that en_US.UTF-8/Compose works around by using <cedilla> instead of <comma>
+#   in the Multi_key sequences yielding U0228 and U0229. If <semicolon> were
+#   used as the Multi_key equivalent of both dead_belowcomma and dead_ogonek,
+#   the result would be yet another dead key merger, rightfully avoided in
+#   en_US.UTF-8/Compose.
 #
 #
 # # Proposed dead key layout for AZERTY keyboards
