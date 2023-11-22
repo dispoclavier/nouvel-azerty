@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
-# 2023-11-19T1629+0100
+# 2023-11-22T2327+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -16,11 +16,8 @@
 # The output is designed for use in WordPress, where {{{anrghg-classes}}} can
 # be replaced with additional CSS classes, as well as {{{anrghg-value}}} with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
-#
-# An all-in-one table is generated alongside. This can only be included using
-# the “Include partial” block of the A.N.R.GHG Publishing Toolkit, given that
-# WordPress cannot save pages with 2.1MB (5565 lines, 1.9 million characters)
-# in a Custom HTML block, even with memory limit 1024M in PHP and WordPress.
+# The all-in-one table generated alongside can only be included by the
+# “Include partial” block of the A.N.R.GHG Publishing Toolkit.
 #
 # Using old-style file handles.
 use warnings;
@@ -146,8 +143,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
 				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
-				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + O">double aigu<\/kbd>/g;
-				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + U">grave<\/kbd>/g;
+				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + U">double aigu<\/kbd>/g;
+				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + O">grave<\/kbd>/g;
 				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque Maj + AltGr\/Option + Y">grec<\/kbd>/g;
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + E">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
