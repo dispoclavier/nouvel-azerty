@@ -458,54 +458,57 @@
 #
 # # D07
 #
-<UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD0><UEFD0>                                                                             <grave> : "⊂" U2282 # SUBSET OF
-<Multi_key><numbersign><numbersign>                                                        <grave> : "⊂" U2282 # SUBSET OF
-<UEFD0><3>                                                                                 <grave> : "⊃" U2283 # SUPERSET OF
-<Multi_key><numbersign><3>                                                                 <grave> : "⊃" U2283 # SUPERSET OF
-<UEFD0><KP_3>                                                                              <grave> : "⊃" U2283 # SUPERSET OF
-<Multi_key><numbersign><KP_3>                                                              <grave> : "⊃" U2283 # SUPERSET OF
-<UEFD0><UEFD0><UEFD0>                                                                      <grave> : "⊃" U2283 # SUPERSET OF
-<Multi_key><numbersign><numbersign><numbersign>                                            <grave> : "⊃" U2283 # SUPERSET OF
-<UEFD0><4>                                                                                 <grave> : "∪" U222A # UNION
-<Multi_key><numbersign><4>                                                                 <grave> : "∪" U222A # UNION
-<UEFD0><KP_4>                                                                              <grave> : "∪" U222A # UNION
-<Multi_key><numbersign><KP_4>                                                              <grave> : "∪" U222A # UNION
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <grave> : "∪" U222A # UNION
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <grave> : "∪" U222A # UNION
-<UEFD0><5>                                                                                 <grave> : "➰" U27B0 # CURLY LOOP emoji
-<Multi_key><numbersign><5>                                                                 <grave> : "➰" U27B0 # CURLY LOOP emoji
-<UEFD0><KP_5>                                                                              <grave> : "➰" U27B0 # CURLY LOOP emoji
-<Multi_key><numbersign><KP_5>                                                              <grave> : "➰" U27B0 # CURLY LOOP emoji
-<UEFD0><6>                                                                                 <grave> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<Multi_key><numbersign><6>                                                                 <grave> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<UEFD0><KP_6>                                                                              <grave> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<Multi_key><numbersign><KP_6>                                                              <grave> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<UEFD0><7>                                                                                 <grave> : "⚭" U26AD # MARRIAGE SYMBOL
-<Multi_key><numbersign><7>                                                                 <grave> : "⚭" U26AD # MARRIAGE SYMBOL
-<UEFD0><KP_7>                                                                              <grave> : "⚭" U26AD # MARRIAGE SYMBOL
-<Multi_key><numbersign><KP_7>                                                              <grave> : "⚭" U26AD # MARRIAGE SYMBOL
-<UEFD0><8>                                                                                 <grave> : "⚱" U26B1 # FUNERAL URN emoji
-<Multi_key><numbersign><8>                                                                 <grave> : "⚱" U26B1 # FUNERAL URN emoji
-<UEFD0><KP_8>                                                                              <grave> : "⚱" U26B1 # FUNERAL URN emoji
-<Multi_key><numbersign><KP_8>                                                              <grave> : "⚱" U26B1 # FUNERAL URN emoji
-<UEFD0><9>                                                                                 <grave> : "♎" U264E # LIBRA emoji
-<Multi_key><numbersign><9>                                                                 <grave> : "♎" U264E # LIBRA emoji
-<UEFD0><KP_9>                                                                              <grave> : "♎" U264E # LIBRA emoji
-<Multi_key><numbersign><KP_9>                                                              <grave> : "♎" U264E # LIBRA emoji
-<UEFD0><0>                                                                                 <grave> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<Multi_key><numbersign><0>                                                                 <grave> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<UEFD0><KP_0>                                                                              <grave> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<Multi_key><numbersign><KP_0>                                                              <grave> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<UEFD0><1>                                                                                 <grave> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><numbersign><1>                                                                 <grave> : "∝" U221D # PROPORTIONAL TO
-<UEFD0><KP_1>                                                                              <grave> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><numbersign><KP_1>                                                              <grave> : "∝" U221D # PROPORTIONAL TO
-<UEFD0><2>                                                                                 <grave> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<Multi_key><numbersign><2>                                                                 <grave> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<UEFD0><KP_2>                                                                              <grave> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<Multi_key><numbersign><KP_2>                                                              <grave> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+#   "〃" U3003 DITTO MARK is also used in Western contexts.
+#   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
+#
+<UEFD0>                                                                                 <quotedbl> : "〃" U3003 # DITTO MARK
+<Multi_key><numbersign>                                                                 <quotedbl> : "〃" U3003 # DITTO MARK
+<UEFD0><UEFD0>                                                                          <quotedbl> : "⊂" U2282 # SUBSET OF
+<Multi_key><numbersign><numbersign>                                                     <quotedbl> : "⊂" U2282 # SUBSET OF
+<UEFD0><3>                                                                              <quotedbl> : "⊃" U2283 # SUPERSET OF
+<Multi_key><numbersign><3>                                                              <quotedbl> : "⊃" U2283 # SUPERSET OF
+<UEFD0><KP_3>                                                                           <quotedbl> : "⊃" U2283 # SUPERSET OF
+<Multi_key><numbersign><KP_3>                                                           <quotedbl> : "⊃" U2283 # SUPERSET OF
+<UEFD0><UEFD0><UEFD0>                                                                   <quotedbl> : "⊃" U2283 # SUPERSET OF
+<Multi_key><numbersign><numbersign><numbersign>                                         <quotedbl> : "⊃" U2283 # SUPERSET OF
+<UEFD0><4>                                                                              <quotedbl> : "∪" U222A # UNION
+<Multi_key><numbersign><4>                                                              <quotedbl> : "∪" U222A # UNION
+<UEFD0><KP_4>                                                                           <quotedbl> : "∪" U222A # UNION
+<Multi_key><numbersign><KP_4>                                                           <quotedbl> : "∪" U222A # UNION
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <quotedbl> : "∪" U222A # UNION
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <quotedbl> : "∪" U222A # UNION
+<UEFD0><5>                                                                              <quotedbl> : "➰" U27B0 # CURLY LOOP emoji
+<Multi_key><numbersign><5>                                                              <quotedbl> : "➰" U27B0 # CURLY LOOP emoji
+<UEFD0><KP_5>                                                                           <quotedbl> : "➰" U27B0 # CURLY LOOP emoji
+<Multi_key><numbersign><KP_5>                                                           <quotedbl> : "➰" U27B0 # CURLY LOOP emoji
+<UEFD0><6>                                                                              <quotedbl> : "➿" U27BF # DOUBLE CURLY LOOP emoji
+<Multi_key><numbersign><6>                                                              <quotedbl> : "➿" U27BF # DOUBLE CURLY LOOP emoji
+<UEFD0><KP_6>                                                                           <quotedbl> : "➿" U27BF # DOUBLE CURLY LOOP emoji
+<Multi_key><numbersign><KP_6>                                                           <quotedbl> : "➿" U27BF # DOUBLE CURLY LOOP emoji
+<UEFD0><7>                                                                              <quotedbl> : "⚭" U26AD # MARRIAGE SYMBOL
+<Multi_key><numbersign><7>                                                              <quotedbl> : "⚭" U26AD # MARRIAGE SYMBOL
+<UEFD0><KP_7>                                                                           <quotedbl> : "⚭" U26AD # MARRIAGE SYMBOL
+<Multi_key><numbersign><KP_7>                                                           <quotedbl> : "⚭" U26AD # MARRIAGE SYMBOL
+<UEFD0><8>                                                                              <quotedbl> : "⚱" U26B1 # FUNERAL URN emoji
+<Multi_key><numbersign><8>                                                              <quotedbl> : "⚱" U26B1 # FUNERAL URN emoji
+<UEFD0><KP_8>                                                                           <quotedbl> : "⚱" U26B1 # FUNERAL URN emoji
+<Multi_key><numbersign><KP_8>                                                           <quotedbl> : "⚱" U26B1 # FUNERAL URN emoji
+<UEFD0><9>                                                                              <quotedbl> : "♎" U264E # LIBRA emoji
+<Multi_key><numbersign><9>                                                              <quotedbl> : "♎" U264E # LIBRA emoji
+<UEFD0><KP_9>                                                                           <quotedbl> : "♎" U264E # LIBRA emoji
+<Multi_key><numbersign><KP_9>                                                           <quotedbl> : "♎" U264E # LIBRA emoji
+<UEFD0><0>                                                                              <quotedbl> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
+<Multi_key><numbersign><0>                                                              <quotedbl> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
+<UEFD0><KP_0>                                                                           <quotedbl> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
+<Multi_key><numbersign><KP_0>                                                           <quotedbl> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
+<UEFD0><1>                                                                              <quotedbl> : "∝" U221D # PROPORTIONAL TO
+<Multi_key><numbersign><1>                                                              <quotedbl> : "∝" U221D # PROPORTIONAL TO
+<UEFD0><KP_1>                                                                           <quotedbl> : "∝" U221D # PROPORTIONAL TO
+<Multi_key><numbersign><KP_1>                                                           <quotedbl> : "∝" U221D # PROPORTIONAL TO
+<UEFD0><2>                                                                              <quotedbl> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<Multi_key><numbersign><2>                                                              <quotedbl> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<UEFD0><KP_2>                                                                           <quotedbl> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<Multi_key><numbersign><KP_2>                                                           <quotedbl> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
 #
 #
 # # D08
@@ -566,54 +569,54 @@
 #
 # # D09
 #
-<UEFD0>                                                                                 <quotedbl> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<Multi_key><numbersign>                                                                 <quotedbl> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<UEFD0><UEFD0>                                                                          <quotedbl> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><numbersign>                                                     <quotedbl> : "∅" U2205 # EMPTY SET
-<UEFD0><3>                                                                              <quotedbl> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><numbersign><3>                                                              <quotedbl> : "∐" U2210 # N-ARY COPRODUCT
-<UEFD0><KP_3>                                                                           <quotedbl> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><numbersign><KP_3>                                                           <quotedbl> : "∐" U2210 # N-ARY COPRODUCT
-<UEFD0><UEFD0><UEFD0>                                                                   <quotedbl> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><numbersign><numbersign><numbersign>                                         <quotedbl> : "∐" U2210 # N-ARY COPRODUCT
-<UEFD0><4>                                                                              <quotedbl> : "〃" U3003 # DITTO MARK; example: https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-<Multi_key><numbersign><4>                                                              <quotedbl> : "〃" U3003 # DITTO MARK; example: https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-<UEFD0><KP_4>                                                                           <quotedbl> : "〃" U3003 # DITTO MARK; example: https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-<Multi_key><numbersign><KP_4>                                                           <quotedbl> : "〃" U3003 # DITTO MARK; example: https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <quotedbl> : "〃" U3003 # DITTO MARK; example: https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <quotedbl> : "〃" U3003 # DITTO MARK; example: https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-<UEFD0><5>                                                                              <quotedbl> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
-<Multi_key><numbersign><5>                                                              <quotedbl> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
-<UEFD0><KP_5>                                                                           <quotedbl> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
-<Multi_key><numbersign><KP_5>                                                           <quotedbl> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
-<UEFD0><6>                                                                              <quotedbl> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><6>                                                              <quotedbl> : "〰" U3030 # WAVY DASH emoji
-<UEFD0><KP_6>                                                                           <quotedbl> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><KP_6>                                                           <quotedbl> : "〰" U3030 # WAVY DASH emoji
-<UEFD0><7>                                                                              <quotedbl> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
-<Multi_key><numbersign><7>                                                              <quotedbl> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
-<UEFD0><KP_7>                                                                           <quotedbl> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
-<Multi_key><numbersign><KP_7>                                                           <quotedbl> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
-<UEFD0><8>                                                                              <quotedbl> : "☦" U2626 # ORTHODOX CROSS emoji
-<Multi_key><numbersign><8>                                                              <quotedbl> : "☦" U2626 # ORTHODOX CROSS emoji
-<UEFD0><KP_8>                                                                           <quotedbl> : "☦" U2626 # ORTHODOX CROSS emoji
-<Multi_key><numbersign><KP_8>                                                           <quotedbl> : "☦" U2626 # ORTHODOX CROSS emoji
-<UEFD0><9>                                                                              <quotedbl> : "♐" U2650 # SAGITTARIUS emoji
-<Multi_key><numbersign><9>                                                              <quotedbl> : "♐" U2650 # SAGITTARIUS emoji
-<UEFD0><KP_9>                                                                           <quotedbl> : "♐" U2650 # SAGITTARIUS emoji
-<Multi_key><numbersign><KP_9>                                                           <quotedbl> : "♐" U2650 # SAGITTARIUS emoji
-<UEFD0><0>                                                                              <quotedbl> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
-<Multi_key><numbersign><0>                                                              <quotedbl> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
-<UEFD0><KP_0>                                                                           <quotedbl> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
-<Multi_key><numbersign><KP_0>                                                           <quotedbl> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
-<UEFD0><1>                                                                              <quotedbl> : "⛔" U26D4 # NO ENTRY emoji
-<Multi_key><numbersign><1>                                                              <quotedbl> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><KP_1>                                                                           <quotedbl> : "⛔" U26D4 # NO ENTRY emoji
-<Multi_key><numbersign><KP_1>                                                           <quotedbl> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><2>                                                                              <quotedbl> : "⚒" U2692 # HAMMER AND PICK emoji
-<Multi_key><numbersign><2>                                                              <quotedbl> : "⚒" U2692 # HAMMER AND PICK emoji
-<UEFD0><KP_2>                                                                           <quotedbl> : "⚒" U2692 # HAMMER AND PICK emoji
-<Multi_key><numbersign><KP_2>                                                           <quotedbl> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0>                                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<Multi_key><numbersign>                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<UEFD0><UEFD0>                                                                             <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><numbersign><numbersign>                                                        <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD0><3>                                                                                 <grave> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><3>                                                                 <grave> : "∅" U2205 # EMPTY SET
+<UEFD0><KP_3>                                                                              <grave> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><KP_3>                                                              <grave> : "∅" U2205 # EMPTY SET
+<UEFD0><UEFD0><UEFD0>                                                                      <grave> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><numbersign><numbersign>                                            <grave> : "∅" U2205 # EMPTY SET
+<UEFD0><4>                                                                                 <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<Multi_key><numbersign><4>                                                                 <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><KP_4>                                                                              <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<Multi_key><numbersign><KP_4>                                                              <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><5>                                                                                 <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
+<Multi_key><numbersign><5>                                                                 <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
+<UEFD0><KP_5>                                                                              <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
+<Multi_key><numbersign><KP_5>                                                              <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
+<UEFD0><6>                                                                                 <grave> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><6>                                                                 <grave> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><KP_6>                                                                              <grave> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><KP_6>                                                              <grave> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><7>                                                                                 <grave> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
+<Multi_key><numbersign><7>                                                                 <grave> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
+<UEFD0><KP_7>                                                                              <grave> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
+<Multi_key><numbersign><KP_7>                                                              <grave> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
+<UEFD0><8>                                                                                 <grave> : "☦" U2626 # ORTHODOX CROSS emoji
+<Multi_key><numbersign><8>                                                                 <grave> : "☦" U2626 # ORTHODOX CROSS emoji
+<UEFD0><KP_8>                                                                              <grave> : "☦" U2626 # ORTHODOX CROSS emoji
+<Multi_key><numbersign><KP_8>                                                              <grave> : "☦" U2626 # ORTHODOX CROSS emoji
+<UEFD0><9>                                                                                 <grave> : "♐" U2650 # SAGITTARIUS emoji
+<Multi_key><numbersign><9>                                                                 <grave> : "♐" U2650 # SAGITTARIUS emoji
+<UEFD0><KP_9>                                                                              <grave> : "♐" U2650 # SAGITTARIUS emoji
+<Multi_key><numbersign><KP_9>                                                              <grave> : "♐" U2650 # SAGITTARIUS emoji
+<UEFD0><0>                                                                                 <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
+<Multi_key><numbersign><0>                                                                 <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
+<UEFD0><KP_0>                                                                              <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
+<Multi_key><numbersign><KP_0>                                                              <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
+<UEFD0><1>                                                                                 <grave> : "⛔" U26D4 # NO ENTRY emoji
+<Multi_key><numbersign><1>                                                                 <grave> : "⛔" U26D4 # NO ENTRY emoji
+<UEFD0><KP_1>                                                                              <grave> : "⛔" U26D4 # NO ENTRY emoji
+<Multi_key><numbersign><KP_1>                                                              <grave> : "⛔" U26D4 # NO ENTRY emoji
+<UEFD0><2>                                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<Multi_key><numbersign><2>                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><KP_2>                                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<Multi_key><numbersign><KP_2>                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
 #
 #
 # # D10
@@ -628,20 +631,20 @@
 <Multi_key><numbersign><KP_3>                                                          <ampersand> : "∏" U220F # N-ARY PRODUCT
 <UEFD0><UEFD0><UEFD0>                                                                  <ampersand> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><numbersign><numbersign><numbersign>                                        <ampersand> : "∏" U220F # N-ARY PRODUCT
-<UEFD0><4>                                                                             <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<Multi_key><numbersign><4>                                                             <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<UEFD0><KP_4>                                                                          <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<Multi_key><numbersign><KP_4>                                                          <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><4>                                                                             <ampersand> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><numbersign><4>                                                             <ampersand> : "∐" U2210 # N-ARY COPRODUCT
+<UEFD0><KP_4>                                                                          <ampersand> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><numbersign><KP_4>                                                          <ampersand> : "∐" U2210 # N-ARY COPRODUCT
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <ampersand> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <ampersand> : "∐" U2210 # N-ARY COPRODUCT
 <UEFD0><5>                                                                             <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
 <Multi_key><numbersign><5>                                                             <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
 <UEFD0><KP_5>                                                                          <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
 <Multi_key><numbersign><KP_5>                                                          <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
-<UEFD0><6>                                                                             <ampersand> : "☂" U2602 # UMBRELLA emojiW
-<Multi_key><numbersign><6>                                                             <ampersand> : "☂" U2602 # UMBRELLA emojiW
-<UEFD0><KP_6>                                                                          <ampersand> : "☂" U2602 # UMBRELLA emojiW
-<Multi_key><numbersign><KP_6>                                                          <ampersand> : "☂" U2602 # UMBRELLA emojiW
+<UEFD0><6>                                                                             <ampersand> : "☂" U2602 # UMBRELLA emoji
+<Multi_key><numbersign><6>                                                             <ampersand> : "☂" U2602 # UMBRELLA emoji
+<UEFD0><KP_6>                                                                          <ampersand> : "☂" U2602 # UMBRELLA emoji
+<Multi_key><numbersign><KP_6>                                                          <ampersand> : "☂" U2602 # UMBRELLA emoji
 <UEFD0><7>                                                                             <ampersand> : "⛸" U26F8 # ICE SKATE emoji
 <Multi_key><numbersign><7>                                                             <ampersand> : "⛸" U26F8 # ICE SKATE emoji
 <UEFD0><KP_7>                                                                          <ampersand> : "⛸" U26F8 # ICE SKATE emoji
