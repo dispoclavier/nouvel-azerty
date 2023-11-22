@@ -364,10 +364,10 @@
 #   R                }  *dead_retroflexhook UEFD4
 #   T                ~  dead_tilde
 #   Y                @  dead_greek (new-school)
-#   U                `  dead_grave
+#   U                "  dead_doubleacute (new-school)
 #   I                '  dead_acute
-#   O                "  dead_doubleacute (new-school)
-#   P and &          .  dead_abovedot
+#   O                `  dead_grave
+#   P                &  dead_abovedot   Multi_key: .
 #
 #   Q (A on QWERTY)  #  *dead_group UEFD0
 #   S                $  dead_currency (new-school)
@@ -404,7 +404,7 @@
 #   to be hit first, before the group selector. That behavior is consistent,
 #   it helps streamline code and maintenance, and it prevents conflicts with
 #   Multi_key equivalents for "ʼ" U02BC by ¦#', "∼" U223C by ¦#~, "ˑ" U02D1
-#   by ¦#:, "ʻ" U02BB by ¦#`, and "✘" U2718 by ¦#<.
+#   by ¦#:, "º" U00BA by ¦#`, and "✘" U2718 by ¦#<.
 #
 #
 # # Quotation mark input method
@@ -2926,7 +2926,7 @@
 #
 #   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
 #   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
-#   better option for typing a ʻokina is using group 1 of grave), with no-break
+#   better option for typing a ʻokina is using group 2 of grave), with no-break
 #   space or no-break thin space as a base character. For intuitivity, a ʻokina
 #   can also be input as if it were a turned rightsinglequotemark despite being
 #   a turned letter apostrophe. Compatibility requires supporting apostrophe as
@@ -6638,10 +6638,9 @@
 #
 #   These word boundary preventing characters, needed in Breton and Hawaiʻian,
 #   are also in group 1 and group 2 of rightsinglequotemark. This completes the
-#   apostrophe and grave keysyms in the symbol groups where both are in group 1
-#   for easy, non-discriminatory input.
+#   apostrophe and grave keysyms in the symbol groups.
+#   See # # D06
 #   See # # D07
-#   See # # D08
 #   See #*# TURNED, SIDEWAYS
 #
 <UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
