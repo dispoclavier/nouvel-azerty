@@ -1,4 +1,4 @@
-//                       Date: 2023-11-19T1811+0100
+//                       Date: 2023-11-22T2256+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -543,7 +543,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        a,                        A,                    U1D43,              asciicircum,                    UEFD1,                      C_H,                      c_h,                      C_h ],
 		[                        a,                        A,                    U1D43,              asciicircum,                    UEFD1,                      C_H,                      c_h,                      C_h ]
-	}; // U1D43 ᵃ superscript small a; UEFD1 *dead_superscript; Breton trigraph: lowercase, titlecase, uppercase with CapsLock only on supporting systems
+	}; // U1D43 ᵃ superscript small a; UEFD1 *dead_superscript; Breton trigraph: lowercase and titlecase; on supporting systems: uppercase when CapsLock is on
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -573,9 +573,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U02B8 ʸ superscript small y; U00A5 ¥ YEN SIGN; Ω U03A9 (preferred for Ohm sign); 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES (third-most used smiling emoji in France, third-most overall worldwide)
 
 	key <AD07> {
-		[                        u,                        U,                    U1D58,                    grave,               dead_grave,                        4,                    U2126,                   U1F64F ],
-		[                        u,                        U,                    U1D58,                    grave,               dead_grave,                        4,                    U2126,                   U1F64F ]
-	}; // U1D58 ᵘ superscript small u; U2126 Ω OHM SIGN (some fonts support this but no Greek); 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
+		[                        u,                        U,                    U1D58,                 quotedbl,         dead_doubleacute,                        4,                  seconds,                    UEF8D ],
+		[                        u,                        U,                    U1D58,                 quotedbl,         dead_doubleacute,                        4,                  seconds,                    UEF8D ]
+	}; // U1D58 ᵘ superscript small u; UEF8D '&quot;'
 
 	key <AD08> {
 		[                        i,                        I,                    U2071,               apostrophe,               dead_acute,                        5,                  minutes,                    UEF8C ],
@@ -583,9 +583,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U2071 ⁱ superscript small i; UEF8C '&apos;'
 
 	key <AD09> {
-		[                        o,                        O,                    U1D52,                 quotedbl,         dead_doubleacute,                        6,                  seconds,                    UEF8D ],
-		[                        o,                        O,                    U1D52,                 quotedbl,         dead_doubleacute,                        6,                  seconds,                    UEF8D ]
-	}; // U1D52 ᵒ superscript small o; UEF8D '&quot;'
+		[                        o,                        O,                    U1D52,                    grave,               dead_grave,                        6,                    U2126,                   U1F64F ],
+		[                        o,                        O,                    U1D52,                    grave,               dead_grave,                        6,                    U2126,                   U1F64F ]
+	}; // U1D52 ᵒ superscript small o; U2126 Ω OHM SIGN (some fonts support this but no Greek); 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
 
 	key <AD10> {
 		[                        p,                        P,                    U1D56,                ampersand,            dead_abovedot,                   period,                paragraph,                    UEF8B ],
