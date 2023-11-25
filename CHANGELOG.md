@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.2.1 (projet)
+
+* Touches vives : Touches d’édition : Déboguer en supprimant la prise en charge dédiée. (dispocla.cpp [636715c](https://github.com/dispoclavier/nouvel-azerty/commit/636715cccf34da2a46a448ab5651ae03e31c288c))
+
 ## 1.2.0 (2023-11-24)
 
 * Touches vives : Symboles ASCII : Permuter l’accent grave et le guillemet double générique. Faire suivre les touches mortes accent grave et double accent aigu, les symboles Ohm "Ω" et seconde "″", l’émoji "🙏" et la séquence "`&quot;`". Touches mortes : Mettre "〃" à la place de "ʻ", qui prend la place de "∅", qui prend la place de "∐", qui prend la place de "⛱", qui prend la place de "〃". (dispocla.cpp [ae49244](https://github.com/dispoclavier/nouvel-azerty/commit/ae49244e89327c83d7b378263b497c25861a05b1), compose-2.yml [5744ed5](https://github.com/dispoclavier/nouvel-azerty/commit/5744ed5be30e0d99877f40ed568b37ba205164bc), compose-3.yml [3ba78ba](https://github.com/dispoclavier/nouvel-azerty/commit/3ba78baf08ddefad0ee43bc3f43aedcf7605ce2a))
