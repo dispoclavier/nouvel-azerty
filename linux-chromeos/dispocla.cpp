@@ -1,4 +1,4 @@
-//                       Date: 2023-11-22T2256+0100
+//                       Date: 2023-11-25T2310+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -398,16 +398,16 @@
 // The term “group” should be dedicated to dead-key-accessed groups, the most
 // prominent of which are accessed through the “group selector” dead key that
 // also supports multiple presses. As a consequence, the group number matches
-// the number of group selector key presses, at least up to 4, and the groups
-// are a 0-based array of 13 groups: 0 for the default state, 1 and 2 for the
-// single and double press, 3 through 9 for the group selector press followed
-// by a digit 3..9, and groups 10 through 12 with digits 0..2.
+// the number of group selector key presses, and the digit entered after. The
+// multiple key press support goes at least up to 4. That is why groups are a
+// 0-based array of 13 groups, where index 0 is the default layout. The first
+// three digits are used for groups 10 through 12.
 //
 // Given access to uppercase must be intuitive, digits are mapped on level 3.
 // Caps Lock is required for uppercase. As a consequence, the digits require
 // an extra toggle, that is called “ModLock”, short for Mode Lock, and it is
 // implemented as a group toggle. Other non-alphabetic keys are also affected
-// by ModLock, making up for what may be called a “Programmer mode”.
+// by ModLock, making up for what may be referred to as an ASCII mode.
 //
 
 default partial alphanumeric_keys
@@ -747,9 +747,11 @@ xkb_symbols "kbfrFRs" {
 	//
 	// Numpad
 	//
-	// The cursor key feature on the numpad is deactivated as outdated, redundant, wasting positions, and overloading the repurposed NumLock toggle.
+	// The edit key feature on the numpad is deactivated as outdated, redundant, wasting positions
+	// and overloading the repurposed NumLock toggle, used as Fn Lock on compact keyboards.
 	//
-	// For this to work on an overlay numpad with Fn held down, the AltFr modifier must be pressed before the Fn key.
+	// For this to work on an overlay numpad with Fn held down, the AltFr modifier must be pressed
+	// before the Fn key.
 	//
 	key.type[Group1]= "ONE_LEVEL";
 	key.type[Group2]= "ONE_LEVEL";
@@ -758,7 +760,7 @@ xkb_symbols "kbfrFRs" {
 		[                 KP_Equal ]
 	};
 
-	// Index:                             1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP2";
 	key <KPDV> {
@@ -862,64 +864,7 @@ xkb_symbols "kbfrFRs" {
 		[                     KP_9,                        F,                        f,                    U2197,                    U21D7,                    U2B08,                    U2B67,                    U2B00 ],
 		[                     KP_9,                        F,                        f,                    U2197,                    U21D7,                    U2B08,                    U2B67,                    U2B00 ]
 	}; // ↗; ⇗; ⬈; ⭧; ⬀
-
-	// Edit keys. Inverted T: Here, the index numbers are consistent with UX levels.
-	key.type[Group1] = "EIGHT_LEVELS_EDIT_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_EDIT_GROUP2";
-	key <UP>   {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		//                                                                black arrows,             white arrows,         preferred arrows,            legacy arrows,
-		[                       Up,                 NoSymbol,                    U2B06,                    U21E7,                    U2B61,                    U2191,                 NoSymbol,                 NoSymbol ],
-		[                       Up,                 NoSymbol,                    U2B06,                    U21E7,                    U2B61,                    U2191,                 NoSymbol,                 NoSymbol ]
-	}; // ⬆; ⇧; ⭡; ↑
-
-	key <LEFT> {
-		[                     Left,                 NoSymbol,                    U2B05,                    U21E6,                    U2B60,                    U2190,                 NoSymbol,                 NoSymbol ],
-		[                     Left,                 NoSymbol,                    U2B05,                    U21E6,                    U2B60,                    U2190,                 NoSymbol,                 NoSymbol ]
-	}; // ⬅; ⇦; ⭠; ←
-
-	key <DOWN> {
-		[                     Down,                 NoSymbol,                    U2B07,                    U21E9,                    U2B63,                    U2193,                 NoSymbol,                 NoSymbol ],
-		[                     Down,                 NoSymbol,                    U2B07,                    U21E9,                    U2B63,                    U2193,                 NoSymbol,                 NoSymbol ]
-	}; // ⬇; ⇩; ⭣; ↓
-
-	key <RGHT> {
-		[                    Right,                 NoSymbol,                    U27A1,                    U21E8,                    U2B62,                    U2192,                 NoSymbol,                 NoSymbol ],
-		[                    Right,                 NoSymbol,                    U27A1,                    U21E8,                    U2B62,                    U2192,                 NoSymbol,                 NoSymbol ]
-	}; // ➡; ⇨; ⭢; →
-
-	// Six-key cluster:
-	key <INS>  {
-		//                                                           preferred symbols,            other symbols,   preferred alternatives,      legacy alternatives,
-		[                   Insert,                 NoSymbol,                    U2380,                    U2038,                    U2380,                    U2041,                 NoSymbol,                 NoSymbol ],
-		[                   Insert,                 NoSymbol,                    U2380,                    U2038,                    U2380,                    U2041,                 NoSymbol,                 NoSymbol ]
-	}; // ⎀; ‸; ⎀; ⁁
-
-	key <DELE> {
-		[                   Delete,                 NoSymbol,                    U2326,                    U2425,                    U239A,                    U2327,                 NoSymbol,                 NoSymbol ],
-		[                   Delete,                 NoSymbol,                    U2326,                    U2425,                    U239A,                    U2327,                 NoSymbol,                 NoSymbol ]
-	}; // ⌦; ␥; ⎚; ⌧
-
-	key <HOME> {
-		[                     Home,                 NoSymbol,                    U21F1,                    U21B8,                    U2912,                    U2B76,                 NoSymbol,                 NoSymbol ],
-		[                     Home,                 NoSymbol,                    U21F1,                    U21B8,                    U2912,                    U2B76,                 NoSymbol,                 NoSymbol ]
-	}; // ⇱; ↸; ⤒; ⭶
-
-	key <END>  {
-		[                      End,                 NoSymbol,                    U21F2,                    U2B78,                    U2913,                    U2B78,                 NoSymbol,                 NoSymbol ],
-		[                      End,                 NoSymbol,                    U21F2,                    U2B78,                    U2913,                    U2B78,                 NoSymbol,                 NoSymbol ]
-	}; // ⇲; ⭸; ⤓; ⭸
-
-	key <PGUP> {
-		[                    Prior,                 NoSymbol,                    U21DE,                    U2397,                    U2B7B,                    U25B3,                 NoSymbol,                 NoSymbol ],
-		[                    Prior,                 NoSymbol,                    U21DE,                    U2397,                    U2B7B,                    U25B3,                 NoSymbol,                 NoSymbol ]
-	}; // ⭻; ⇞; ⎗; △
-
-	key <PGDN> {
-		[                     Next,                 NoSymbol,                    U21DF,                    U2398,                    U2B7D,                    U25BD,                 NoSymbol,                 NoSymbol ],
-		[                     Next,                 NoSymbol,                    U21DF,                    U2398,                    U2B7D,                    U25BD,                 NoSymbol,                 NoSymbol ]
-	}; // ⭽; ⇟; ⎘; ▽
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 
 	// Modifier maps:
 	modifier_map Control { <LCTL> };
@@ -1098,10 +1043,12 @@ xkb_symbols "kbfrFRsr" {
 	//
 	// Hybrid variants were also included until 2023-08-18 but were dropped as
 	// pointless since keys W, X, C, V, B and even Z, Y, S are unremapped, for
-	// the sake of frequent keyboard shortcuts, without cutting back on letter
-	// ergonomy. Moreover, the hybrid variants were truncated since the layout
-	// uses the full set of 8 indices, and shortcut remapping requires one out
-	// of them.
+	// the sake of frequent keyboard shortcuts, without substantially cutting
+	// back on letter ergonomy. Moreover, the hybrid variants were truncated,
+	// since the layout uses the full set of 8 indices, and shortcut remapping
+	// requires one out of them. Last but not least, applications e.g. VSCode
+	// may disregard the Control mappings in types/ and use the default layout
+	// instead as a reference for keyboard shortcuts, so these are in AZERTY.
 
 	// Alphanumeric block
 	// Key <AE01> is included from kbfrFRs.
