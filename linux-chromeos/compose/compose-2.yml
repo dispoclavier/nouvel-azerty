@@ -6692,6 +6692,58 @@
 <Multi_key><numbersign>                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
 <UEFD0>                                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
 <Multi_key><numbersign>                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layoutEacute, mapped on key 2 of the AZERTY.
+<UEFD0>                                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+#
+#
+# # Oslash for Danish, Norwegian and other languages
+#
+#   ISO layouts have "Øø" in group 1 on Oo, and "Œœ" on Ee. For intuitivity
+#   and predictability, Oslash is supported in dead_longsolidusoverlay, and
+#   both letters Ææ and Œœ are in group 1 on Aa and Oo in this layout. As a
+#   convenience for Danish and other languages using Oslash, this is mapped
+#   to Ccedilla and Odiaeresis in group 1. On AZERTY, Ccedilla is above the
+#   O key, while Swiss QWERTZ has also an Odiaeresis live key. In an effort
+#   to mitigate the inconvenience of not having Øø in group 1 of Oo, Oslash
+#   is also in dead_diaeresis, on Ccedilla again, with good mnemonics since
+#   Danish Øø is phonetically equivalent to Swedish Öö.
+#   See #*# DIAERESIS
+#
+<UEFD0>                                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<Multi_key><numbersign>                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<UEFD0>                                                                                 <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<Multi_key><numbersign>                                                                 <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<UEFD0>                                                                               <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
+<UEFD0>                                                                               <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
+#
+#
+# # Ntilde for Breton and Spanish
+#
+#   The dead_tilde key has already an easy duplicate mapping on level 3 of
+#   the dead_circumflex key of AZERTY, and Atilde, Ntilde and Otilde have
+#   shorthands using dead_acute or dead_circumflex followed by A/Egrave or
+#   Ccedilla, but the unused group 1 of Egrave and Udiaeresis is also used
+#   until another use case emerges, the latter for a Swiss QWERTZ layout.
+#
+<UEFD0>                                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
+<Multi_key><numbersign>                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
+<UEFD0>                                                                                   <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
+<Multi_key><numbersign>                                                                   <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
+<UEFD0>                                                                               <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
+<UEFD0>                                                                               <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
+#
+#
+# # Superscript square and cube for African and Breton variants
+#
+#   The first positions on key E01 are used for ɛ, Ɛ or cʼh, Cʼh.
+#   The ² and ³ superscripts are on Shift + AltGr of 2 and 3 anyway.
+#
+#   For ease of access, the ² and ³ superscripts are also in group 1 and
+#   group 2 of eacute and Eacute, mapped on key 2 of the AZERTY.
 #
 #   Additionally agrave/Agrave, mapped on the digit 0 key of AZERTY, had
 #   the same superscripts in the same groups, for convenience. However,
