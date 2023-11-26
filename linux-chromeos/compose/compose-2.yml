@@ -6683,8 +6683,8 @@
 #
 # # Aring for Danish, Norwegian, Swedish, Finnish, Walloon, and Chamorro
 #
-#   Aring is supported in dead_abovering. As a convenience, Aring is mapped
-#   to Agrave in group 1, and also to Adiaeresis that is on Swiss QWERTZ.
+#   Aring is supported in dead_abovering. As a convenience, Aring is also in
+#   group 1 of Agrave, and of Adiaeresis for the Swiss QWERTZ variant.
 #
 <UEFD0>                                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
 <Multi_key><numbersign>                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
@@ -6698,15 +6698,15 @@
 #
 # # Oslash for Danish, Norwegian and other languages
 #
-#   ISO layouts have "Øø" in group 1 on Oo, and "Œœ" on Ee. For intuitivity
-#   and predictability, Oslash is supported in dead_longsolidusoverlay, and
-#   both letters Ææ and Œœ are in group 1 on Aa and Oo in this layout. As a
-#   convenience for Danish and other languages using Oslash, this is mapped
-#   to Ccedilla and Odiaeresis in group 1. On AZERTY, Ccedilla is above the
-#   O key, while Swiss QWERTZ has also an Odiaeresis live key. In an effort
-#   to mitigate the inconvenience of not having Øø in group 1 of Oo, Oslash
-#   is also in dead_diaeresis, on Ccedilla again, with good mnemonics since
-#   Danish Øø is phonetically equivalent to Swedish Öö.
+#   While ISO layouts have Øø in group 1 of Oo, and Œœ in group 1 of Ee, for
+#   intuitivity and predictability both letters Ææ and Œœ are in group 1 of Aa
+#   and Oo in this layout. Oslash has normal support in dead_longsolidusoverlay
+#   but as a convenience for Danish and other languages, Oslash is in group 1
+#   of Ccedilla and Odiaeresis. On AZERTY, Ccedilla is above the O key, while
+#   Swiss QWERTZ has also an Odiaeresis live key. In an effort to mitigate the
+#   inconvenience of not having Øø in group 1 of Oo, Oslash is additionally in
+#   dead_diaeresis, with Ccedilla as a base character again, and good mnemonics
+#   since Danish Øø is phonetically equivalent to Swedish Öö.
 #   See #*# DIAERESIS
 #
 <UEFD0>                                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
@@ -6739,15 +6739,11 @@
 #
 # # Superscript square and cube for African and Breton variants
 #
-#   The first positions on key E01 are used for ɛ, Ɛ or cʼh, Cʼh.
-#   The ² and ³ superscripts are on Shift + AltGr of 2 and 3 anyway.
+#   The lower- and uppercase positions on key E01 are used for ɛ, Ɛ or cʼh, Cʼh
+#   on the variants for Breton and Francophone Africa, instead of superscripts.
 #
-#   For ease of access, the ² and ³ superscripts are also in group 1 and
-#   group 2 of eacute and Eacute, mapped on key 2 of the AZERTY.
-#
-#   Additionally agrave/Agrave, mapped on the digit 0 key of AZERTY, had
-#   the same superscripts in the same groups, for convenience. However,
-#   this redundancy has been replaced with support for Aring in group 1.
+#   For ease of access, the ² and ³ superscripts are also in groups 1 and 2 of
+#   case insensitive eacute and Eacute, mapped on key 2 of the AZERTY.
 #
 <UEFD0>                                                                                   <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
 <Multi_key><numbersign>                                                                   <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
