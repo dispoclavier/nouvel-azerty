@@ -3,8 +3,7 @@
 ## 1.2.1 (projet)
 
 * Touches vives : Touches d’édition : Déboguer en supprimant la prise en charge dédiée. (dispocla.cpp [636715c](https://github.com/dispoclavier/nouvel-azerty/commit/636715cccf34da2a46a448ab5651ae03e31c288c))
-* Touches mortes : Exposant : Redonder "ʼ" U02BC. Accent aigu : Redonder "ʻ" U02BB. Accent grave : Redonder "ʻ" U02BB. Accent circonflexe : Redonder "ʼ" U02BC. Cédille & accent aigu : Supprimer l’autre sens. Mettre à jour les tableaux. (compose-2.yml [9e82a33](https://github.com/dispoclavier/nouvel-azerty/commit/9e82a33c55b5047c85ac0f36ba2f72568de5b719), [5ddffe3](https://github.com/dispoclavier/nouvel-azerty/commit/5ddffe388e8be20d81bbd81da861ef6120d53f03), compose-3.yml [276e31b](https://github.com/dispoclavier/nouvel-azerty/commit/276e31bd42001ef8a81ad0b6c447b62fb2f6fee3))
-* Touches mortes : Sélectrice de groupe : Déboguer "å" U00E5. Restore lost. (compose-2.yml [392c4c2](https://github.com/dispoclavier/nouvel-azerty/commit/392c4c2799eb7a63fe05a90f9c85c5268585de6d))
+* Touches mortes : Exposant : Redonder "ʼ" U02BC. Accent aigu : Redonder "ʻ" U02BB. Accent grave : Redonder "ʻ" U02BB. Accent circonflexe : Redonder "ʼ" U02BC. Cédille & accent aigu : Supprimer l’autre sens. Mettre à jour les tableaux. (compose-2.yml [9e82a33](https://github.com/dispoclavier/nouvel-azerty/commit/9e82a33c55b5047c85ac0f36ba2f72568de5b719), [5ddffe3](https://github.com/dispoclavier/nouvel-azerty/commit/5ddffe388e8be20d81bbd81da861ef6120d53f03), [392c4c2](https://github.com/dispoclavier/nouvel-azerty/commit/392c4c2799eb7a63fe05a90f9c85c5268585de6d), compose-3.yml [276e31b](https://github.com/dispoclavier/nouvel-azerty/commit/276e31bd42001ef8a81ad0b6c447b62fb2f6fee3))
 
 ## 1.2.0 (2023-11-24)
 
