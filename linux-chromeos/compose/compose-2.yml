@@ -200,7 +200,7 @@
 #   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. Multi_key: ¦=
 #
 #
-# # Legacy dead keys for French France AZERTY
+#:# Legacy dead keys for French France AZERTY
 #
 #   <UEFD8> : "~"  *dead_legacytilde  Legacy tilde dead key: key E02, level 4.
 #   <UEFD9> : "`"  *dead_legacygrave  Legacy grave dead key: key E07, level 4.
@@ -211,10 +211,10 @@
 #   bar is pressed after a dead key. Designed to seamlessly transition UX, the
 #   legacy dead keys have limited functionality, no Multi_key equivalents, and
 #   output ASCII on hitting space, ASCII twice on double press, emulating dead
-#   key behavior known from Windows. (2022-12-20T2238+0100)
+#   key behavior as on Windows. (2022-12-20T2238+0100..2023-11-23T0722+0100)
 #
 #
-#*# DEAD_LEGACYTILDE
+#.# DEAD_LEGACYTILDE
 #   *dead_legacytilde UEFD8
 #   Dchar: "~" U007E
 #
@@ -238,7 +238,7 @@
 <UEFD8>                                                                                    <UEFD8> : "~~" # U007E U007E TILDE twice
 #
 #
-#*# DEAD_LEGACYGRAVE
+#.# DEAD_LEGACYGRAVE
 #   *dead_legacygrave UEFD9
 #   Dchar: "`" U0060
 #
@@ -1161,6 +1161,8 @@
 <Multi_key><asciicircum>                                                                   <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <UEFD1>                                                                                   <period> : "·" U00B7 # MIDDLE DOT
 <Multi_key><asciicircum>                                                                  <period> : "·" U00B7 # MIDDLE DOT
+<UEFD1>                                                                                    <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><asciicircum>                                                                   <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD1>                                                                                        <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <Multi_key><asciicircum>                                                                       <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <UEFD1>                                                                                     <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -5658,6 +5660,10 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
+#   Followed by comma, dead_grave provides an additional input method for the
+#   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
+#   for "ʼ" U02BC MODIFIER LETTER APOSTROPHE. dead_acute also yields ʻokina.
+#
 #   The digits to reversed primes sequences add to the support by Multi_key.
 #   See # # Reversed primes
 #
@@ -5677,10 +5683,12 @@
 <Multi_key><grave>                                                          <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <dead_grave>                                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
-<dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-<Multi_key><grave>                                                                         <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <Multi_key><grave>                                                                    <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
+<dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
+<Multi_key><grave>                                                                         <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
+<dead_grave>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><grave>                                                                         <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_grave>                                                                                   <1> : "‵" U2035 # REVERSED PRIME
 <Multi_key><grave>                                                                             <1> : "‵" U2035 # REVERSED PRIME
 <dead_grave>                                                                                <KP_1> : "‵" U2035 # REVERSED PRIME
@@ -5811,6 +5819,10 @@
 #   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
 #   mnemonics on AZERTY, where O is close to À.
 #
+#   Followed by comma, dead_acute provides an additional input method for the
+#   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
+#   for "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
+#
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method. The only two acute below characters
 #   are now with ampersand for "̗" U0317 COMBINING ACUTE ACCENT BELOW, and
@@ -5841,6 +5853,8 @@
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
+<dead_acute>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><apostrophe>                                                                    <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_acute>                                                                                   <1> : "′" U2032 # PRIME
 <Multi_key><apostrophe>                                                                        <1> : "′" U2032 # PRIME
 <dead_acute>                                                                                <KP_1> : "′" U2032 # PRIME
@@ -11555,6 +11569,13 @@
 #   Followed by comma, dead_circumflex provides a shorthand for
 #   U200C ZERO WIDTH NON-JOINER, and by asterisk, for U2042 ASTERISM.
 #
+#   Followed by comma, dead_circumflex provides an additional input method for
+#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE, consistently with dead_acute for the
+#   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#
+#   Followed by period, dead_circumflex provides a shorthand for
+#   U200C ZERO WIDTH NON-JOINER, and by asterisk, for "⁂" U2042 ASTERISM.
+#
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
 #
@@ -11578,8 +11599,10 @@
 <Multi_key><less>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
-<dead_circumflex>                                                                          <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
-<Multi_key><less>                                                                          <comma> : "‌" U200C # ZERO WIDTH NON-JOINER
+<dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_circumflex>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><less>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                                    <twosuperior> : "surrogat_haut_pour_Windows" UD835 # Mathematical Alphanumeric Symbols high surrogate
 <Multi_key><less>                                                                    <twosuperior> : "surrogat_haut_pour_Windows" UD835 # Mathematical Alphanumeric Symbols high surrogate
 <dead_circumflex>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
@@ -14361,14 +14384,15 @@
 # # CEDILLA&ACUTE
 #   Dchar: 
 #
+#   This works only the way <dead_cedilla><dead_acute>, because the Multi_key
+#   equivalent of the other way around would conflict with the input method for
+#   the ʻokina "ʻ" U02BB by dead_acute.
+#   See #*# ACUTE
+#
 <dead_cedilla><dead_acute>                                                                     <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><comma><apostrophe>                                                                 <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
-<dead_acute><dead_cedilla>                                                                     <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
-<Multi_key><apostrophe><comma>                                                                 <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <dead_cedilla><dead_acute>                                                                     <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><comma><apostrophe>                                                                 <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
-<dead_acute><dead_cedilla>                                                                     <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
-<Multi_key><apostrophe><comma>                                                                 <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 #
 #
 # # CEDILLA&BREVE
