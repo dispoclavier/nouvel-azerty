@@ -1,8 +1,12 @@
 #!/bin/bash
 # Compile .xkb
 # 2023-01-14T1934+0100
-# 2023-11-19T1857+0100
+# 2023-11-27T0358+0100
 # = last modified.
+#
+# Compiles XKB.
+# Automatically switches layouts.
+# Courtesy https://askubuntu.com/questions/209597/how-do-i-change-keyboards-from-the-command-line
 
 cd $(dirname "$0")
 if [[ ! -d "Variantes" ]]; then
@@ -31,10 +35,19 @@ case $re in
 	ams) suffix="-ansi-menu-sans";;
 	*)   exit
 esac
-read -p  "kbfrFRs$suffix.xkb?";  xkbcomp :0  kbfrFRs$suffix.xkb;  echo  "kbfrFRs$suffix.xkb compiled."
-read -p  "kbbrFRs$suffix.xkb?";  xkbcomp :0  kbbrFRs$suffix.xkb;  echo  "kbbrFRs$suffix.xkb compiled."
-read -p  "kbfrPFs$suffix.xkb?";  xkbcomp :0  kbfrPFs$suffix.xkb;  echo  "kbfrPFs$suffix.xkb compiled."
-read -p  "kbfrAFs$suffix.xkb?";  xkbcomp :0  kbfrAFs$suffix.xkb;  echo  "kbfrAFs$suffix.xkb compiled."
-read -p  "kbfrBEs$suffix.xkb?";  xkbcomp :0  kbfrBEs$suffix.xkb;  echo  "kbfrBEs$suffix.xkb compiled."
-read -p  "kbfrFRsr$suffix.xkb?"; xkbcomp :0  kbfrFRsr$suffix.xkb; echo  "kbfrFRsr$suffix.xkb compiled."
+
+function compile {
+	echo "$1$suffix.xkb:"
+	gsettings set org.gnome.desktop.input-sources current $2
+	sleep 1s
+	xkbcomp :0  $1$suffix.xkb
+	echo  "$1$suffix.xkb compiled."
+}
+
+compile "kbfrFRs"  "1"
+compile "kbbrFRs"  "2"
+compile "kbfrPFs"  "3"
+compile "kbfrAFs"  "4"
+compile "kbfrBEs"  "5"
+compile "kbfrFRsr" "0"
 cp kbfrFRs$suffix.xkb ../nouvel-azerty$suffix.xkb; echo "nouvel-azerty$suffix.xkb updated."
