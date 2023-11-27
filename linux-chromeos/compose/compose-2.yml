@@ -6724,8 +6724,8 @@
 #   The dead_tilde key has already an easy duplicate mapping on level 3 of
 #   the dead_circumflex key of AZERTY, and Atilde, Ntilde and Otilde have
 #   shorthands using dead_acute or dead_circumflex followed by A/Egrave or
-#   Ccedilla, but the unused group 1 of Egrave and Udiaeresis is also used
-#   until another use case emerges, the latter for a Swiss QWERTZ layout.
+#   Ccedilla, but the unused group 1 of Egrave and Udiaeresis is also used,
+#   the latter for a Swiss QWERTZ layout, until another use case emerges.
 #
 <UEFD0>                                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
 <Multi_key><numbersign>                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
@@ -6785,12 +6785,23 @@
 # # Hyphen
 #
 #   The HYPHEN punctuation has been separately encoded as U2010, although it is
-#   a homoglyph to U002D in most fonts.
+#   a homoglyph to U002D in nearly all fonts.
 #
-#   U2010 is in group 1 of ASCII hyphen. Other facilities are available using
-#   Multi_key or dead_diaeresis.
+#   To prevent HYPHEN from uselessly taking up a key position, it is in group 1
+#   of ASCII hyphen and of "‑" U2011 NON-BREAKING HYPHEN, mapped on the shifted
+#   position of key E06, or on unshifted key E07 of (remapped) kbfrFRsr.
+#   See # # C05
+#
+#   Other facilities are available using Multi_key or dead_diaeresis.
 #   See # # Dashes and hyphens
 #   See #*# DIAERESIS
+#
+#   To output HYPHEN in French mode and HYPHEN-MINUS in ASCII mode only is not
+#   an option, as that would screw up user experience for zero benefit, except
+#   in one single, not widely used font.
+#
+<UEFD0>                                                                                    <U2011> : "‐" U2010 # HYPHEN
+<Multi_key><numbersign>                                                                    <U2011> : "‐" U2010 # HYPHEN
 #
 #
 # # Long dashes
@@ -6801,19 +6812,17 @@
 #   See #^# GROUP_2
 #   See #^# GROUP_3
 #
-#   Alongside the support by group selection, multiple em dashes are accessible
-#   by composition, also supporting other dashes and hyphens.
+#   Alongside the support by group selection, multiple-em dashes are accessible
+#   by Multi_key composition, also supporting other dashes and hyphens as well.
 #   See # # Dashes and hyphens
 #
-<UEFD0>                                                                                    <U2011> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign>                                                                    <U2011> : "‐" U2010 # HYPHEN
 <UEFD0>                                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><numbersign>                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
 <UEFD0>                                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><numbersign>                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
 #
-# # Angle quotation marks
+# # Ornamental angle quotation marks
 #
 #   Angle quotation mark ornaments are in group 3 of bracketleft and -right,
 #   together with angle bracket ornaments in group 2. The former are also in
@@ -6827,13 +6836,15 @@
 #
 # # HAIR SPACE
 #
-#   HAIR SPACE is used in English between single and double quotation marks.
-#   Sometimes, a no-break THIN SPACE is used for that purpose,
-#   that today is U202F NARROW NO-BREAK SPACE.
-#   The same holds true for footnote indicators, asterisks and so on.
+#   HAIR SPACE may be used in English between single and double quotation marks
+#   if the font does not cater for a distinctive display. The same holds true
+#   for footnote indicators, asterisks and so on.
+#   https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Punctuation/faq0011.html
 #
-#   HAIR SPACE is also in group 11 on the space bar.
-#   The following facility is only a shortcut for convenience.
+#   HAIR SPACE is in group 11 on the space bar. The following facility is only
+#   a shortcut for convenience.
+#   See # # A03-level1
+#   See # # A03-level3
 #
 <UEFD0>                                                                                    <U202F> : " " U200A # HAIR SPACE
 <Multi_key><numbersign>                                                                    <U202F> : " " U200A # HAIR SPACE
@@ -6841,15 +6852,14 @@
 #
 # # Tabular minus sign
 #
-#   The FIGURE DASH is a tabular minus sign used in typesetting tables,
-#   not in interval notation, although it was sometimes recommended for
-#   that purpose.
+#   The FIGURE DASH is a tabular minus sign used in typesetting tables, not in
+#   interval notation, although it was recommended for that purpose.
 #   https://web.archive.org/web/20210224183416/http://www.technicalauthoring.com/wiki/index.php/Figure_dash
 #
-#   Since FIGURE DASH occurs in single instances only, it is compatible
-#   with dead key input, unlike FIGURE SPACE and PUNCTUATION SPACE that
-#   are the tabular digit and punctuation spaces, respectively, and are
-#   mapped on live keys AltGr + AltFr + B07, B08 when ModLock is on.
+#   Since FIGURE DASH occurs in single instances only, it is compatible with
+#   dead key input, unlike FIGURE SPACE and PUNCTUATION SPACE that are the
+#   tabular digit and punctuation spaces, respectively, and are mapped on live
+#   keys B07 and B08, level 7, when ModLock is on, i.e. in ASCII mode.
 #
 #   However, FIGURE DASH is also mapped on live key Shift + AltFr + T,
 #   where MINUS SIGN is on AltFr.
@@ -6875,8 +6885,8 @@
 #   in the SMP. The sans-serif set U1F850.. is skipped as not providing enough
 #   added value with respect to the fact that on most computers (Windows), SMP
 #   characters are hard to input inside the TSF using only layout drivers with
-#   the wrong data type picked for dead key output. 0 and 5 are used for input
-#   of the high surrogate, a feature that is effective on Windows.
+#   an inappropriate data type picked for dead key output. 0 and 5 are used to
+#   input the high surrogate, a feature designed for Windows.
 #
 #   Group  Descripton                          Example   Numpad live key level
 #
