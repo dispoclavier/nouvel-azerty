@@ -569,6 +569,18 @@
 #
 # # D09
 #
+#   The ʻokina is input even more easily by dead_acute followed by comma, so as
+#   to mitigate the adverse effect of not mapping it in group 1 of quotedbl, as
+#   that would be counter-intuitive and breaking the alphabetic mnemonics.
+#
+#   An undiscriminatory input method for *both* letter apostrophe "ʼ" U02BC and
+#   ʻokina "ʻ" U02BB is provided by dead_circumflex, dead_acute and dead_grave,
+#   followed by comma.
+#   See #*# ACUTE
+#   See #*# GRAVE
+#   See #*# CIRCUMFLEX
+#   See # # CEDILLA&ACUTE
+#
 <UEFD0>                                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 <Multi_key><numbersign>                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 <UEFD0><UEFD0>                                                                             <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
