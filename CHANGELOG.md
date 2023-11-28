@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.2.2 (projet)
+
+* Documentation. (compose-2.yml [698ebfc](https://github.com/dispoclavier/nouvel-azerty/commit/698ebfc32c7800fb04acaedd2a7b26aa3ce4d737), compose-3.yml [15df2c4](https://github.com/dispoclavier/nouvel-azerty/commit/15df2c48a5fcb07107401aa6e908103bc0f9ace0))
+
 ## 1.2.1 (2023-11-27)
 
 * Touches vives : Touches d’édition : Déboguer en supprimant la prise en charge dédiée. (dispocla.cpp [636715c](https://github.com/dispoclavier/nouvel-azerty/commit/636715cccf34da2a46a448ab5651ae03e31c288c))
