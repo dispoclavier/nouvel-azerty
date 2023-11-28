@@ -83,7 +83,7 @@
 # # Ordinal indicators
 #
 #   French ordinal indicators are the preformatted superscript letters ᵈᵉʳˢ,
-#   mapped to the AltGr + AltFr level, plus facilities for ᵉ and ʳ in AltGr.
+#   mapped on level 7, plus facilities for ᵉ and ʳ on E11 and E12, level 3.
 #   The two Latin-1 ordinal indicators may be keyed in as a part of group 1,
 #   on A and O respectively — Keys of F and M would be a bit less intuitive.
 #   However, the base characters are asciicircum on A, and quotedbl on O, as
