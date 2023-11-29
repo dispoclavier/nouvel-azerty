@@ -2371,15 +2371,13 @@
 #   better synergy with the Multi_key dead key, on level 3 across modes, while
 #   the space character in synergy with Multi_key is no-break space in French
 #   mode, ASCII space in ASCII mode, i.e. when ModLock is on.
+#   Examples: "≪" U226A and "≫" U226B, "⋘" U22D8 and "⋙" U22D9.
 #
 #   Leading space is also used to disambiguate math sequences from each other
 #   in case intuitivity requires similar sequences for different symbols. This
 #   may require prepending multiple spaces. In case of multiple leading spaces,
 #   the thumb may be lifted from the level 3 modifier after any of them, also
 #   in French mode, i.e. when ModLock is off.
-#
-#   Examples with leading space:    "≪" U226A and "≫" U226B.
-#   Examples without leading space: "⋘" U22D8 and "⋙" U22D9.
 #
 #   Examples involving a double, triple, or quadruple leading [nobreak]space:
 #   Double:    "⧂" U29C2, "⧜" U29DC, "⧸" U29F8, "◽" U25FD, "⤶" U2936;
@@ -3839,10 +3837,14 @@
 <Multi_key><period><greater>                                                        <nobreakspace> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><greater><period>                                                               <space> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><greater><period>                                                        <nobreakspace> : "⋗" U22D7 # GREATER-THAN WITH DOT
-<Multi_key><less><less><less>                                                              <space> : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><less><less><less>                                                       <nobreakspace> : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><greater><greater><greater>                                                     <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
-<Multi_key><greater><greater><greater>                                              <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><space><less><less><less>                                                       <space> : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><space><less><less><less>                                                <nobreakspace> : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><nobreakspace><less><less><less>                                                <space> : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><nobreakspace><less><less><less>                                         <nobreakspace> : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><space><greater><greater><greater>                                              <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><space><greater><greater><greater>                                       <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><nobreakspace><greater><greater><greater>                                       <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><nobreakspace><greater><greater><greater>                                <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
 <Multi_key><less><minus><greater>                                                          <space> : "⋚" U22DA # LESS-THAN EQUAL TO OR GREATER-THAN
 <Multi_key><less><minus><greater>                                                   <nobreakspace> : "⋚" U22DA # LESS-THAN EQUAL TO OR GREATER-THAN
 <Multi_key><greater><minus><less>                                                          <space> : "⋛" U22DB # GREATER-THAN EQUAL TO OR LESS-THAN
