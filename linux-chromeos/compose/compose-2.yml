@@ -7293,10 +7293,10 @@
 #
 # # Wide-headed light barb arrows
 #
-<UEFD0><1>                                                                                     <0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><1>                                                                     <0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_1>                                                                               <KP_0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><1>                                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><1>                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><KP_1>                                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
 <UEFD0><1>                                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
@@ -7313,10 +7313,10 @@
 <Multi_key><numbersign><1>                                                                     <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><KP_1>                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-<UEFD0><1>                                                                                     <5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><1>                                                                     <5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_1>                                                                               <KP_5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><1>                                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><1>                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><KP_1>                                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
 <UEFD0><1>                                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
@@ -7342,10 +7342,10 @@
 #
 # # Wide-headed very heavy barb arrows
 #
-<UEFD0><2>                                                                                     <0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><2>                                                                     <0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_2>                                                                               <KP_0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_0> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><2>                                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><2>                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><KP_2>                                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
 <UEFD0><2>                                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
@@ -7362,10 +7362,10 @@
 <Multi_key><numbersign><2>                                                                     <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><KP_2>                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-<UEFD0><2>                                                                                     <5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><2>                                                                     <5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_2>                                                                               <KP_5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_5> : "high_surrogate_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><2>                                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><2>                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><KP_2>                                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
 <UEFD0><2>                                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
@@ -11531,8 +11531,8 @@
 <Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <dead_circumflex>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><less>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
-<dead_circumflex>                                                                    <twosuperior> : "high_surrogate_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<Multi_key><less>                                                                    <twosuperior> : "high_surrogate_U+D835" # Mathematical Alphanumeric Symbol high surrogate
+<dead_circumflex>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
+<Multi_key><less>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <dead_circumflex>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
 <Multi_key><less>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
 <dead_circumflex>                                                                           <KP_1> : "♤" U2664 # WHITE SPADE SUIT
@@ -12432,8 +12432,8 @@
 <Multi_key><equal>                                                                    <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
 <Multi_key><equal>                                                               <dead_circumflex> : "⁠" U2060 # WORD JOINER
-<UEFD7>                                                                           <dead_abovering> : "high_surrogate_U+D83C" # Regional Indicator Symbol high surrogate
-<Multi_key><equal>                                                                <dead_abovering> : "high_surrogate_U+D83C" # Regional Indicator Symbol high surrogate
+<UEFD7>                                                                           <dead_abovering> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
+<Multi_key><equal>                                                                <dead_abovering> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
 <UEFD7>                                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><equal>                                                                         <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <UEFD7>                                                                                        <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
@@ -14734,8 +14734,8 @@
 <Multi_key><colon>                                                                             <9> : "⁹" U2079 # SUPERSCRIPT NINE
 <dead_diaeresis>                                                                            <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
 <Multi_key><colon>                                                                          <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
-<dead_diaeresis>                                                                     <twosuperior> : "high_surrogate_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<Multi_key><colon>                                                                   <twosuperior> : "high_surrogate_U+D835" # Mathematical Alphanumeric Symbol high surrogate
+<dead_diaeresis>                                                                     <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
+<Multi_key><colon>                                                                   <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <dead_diaeresis>                                                                               <A> : "Ä" U00C4 # LATIN CAPITAL LETTER A WITH DIAERESIS
 <Multi_key><colon>                                                                             <A> : "Ä" U00C4 # LATIN CAPITAL LETTER A WITH DIAERESIS
 <dead_diaeresis>                                                                               <a> : "ä" U00E4 # LATIN SMALL LETTER A WITH DIAERESIS
