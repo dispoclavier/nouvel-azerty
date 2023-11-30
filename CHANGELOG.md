@@ -6,6 +6,7 @@
 * Composition : Adapter les séquences de "⋘" U22D8, "⋙" U22D9. (compose-1.yml [1f22bd3](https://github.com/dispoclavier/nouvel-azerty/commit/1f22bd396686d6c7d6924fbb493590547f6cd172))
 * Documentation. (compose-2.yml [698ebfc](https://github.com/dispoclavier/nouvel-azerty/commit/698ebfc32c7800fb04acaedd2a7b26aa3ce4d737), compose-3.yml [15df2c4](https://github.com/dispoclavier/nouvel-azerty/commit/15df2c48a5fcb07107401aa6e908103bc0f9ace0))
 * Touches mortes : Corriger la sortie de substitution des surrogats hauts. (compose-2.yml [c19705f](https://github.com/dispoclavier/nouvel-azerty/commit/c19705f9a7ecf799a3e144e210821f1bb98a6080), [efba5c0](https://github.com/dispoclavier/nouvel-azerty/commit/efba5c099f12af142eca83677f25bc5d9eec75f3))
+* Touches mortes : Accent aigu : Redonder "‐" U2010. (compose-1.yml [7cd3b81](https://github.com/dispoclavier/nouvel-azerty/commit/7cd3b81d5b9a190685497ebecc97d1f8a554093e), [compose-2.yml [c93e8bf](https://github.com/dispoclavier/nouvel-azerty/commit/c93e8bf5832e199d1312fc77b37f8f7ae1409902))
 
 ## 1.2.1 (2023-11-27)
 
