@@ -5760,8 +5760,9 @@
 #   "‐" U2010 HYPHEN additionally to its presence in group 1 of minus, as a
 #   matter of mitigating its absence from live key support, with respect to
 #   predictable user expectations as of getting something useful from so easy
-#   a key sequence as <dead_acute><minus>. However, the Multi_key equivalent,
-#   conflicting with many math symbols, does not work.
+#   a key sequence as <dead_acute><minus>. The Multi_key equivalent however,
+#   additionally to not making sense, does not work either, due to numerous
+#   conflicts with math symbols.
 #
 #   Followed by comma, dead_acute provides an additional input method for the
 #   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
