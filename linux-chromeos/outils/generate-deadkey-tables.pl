@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
-# 2023-11-22T2327+0100
+# 2023-11-30T0148+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -252,9 +252,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
 				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
 				$line =~ s/( # .*) emoji/$1 émoji/g;
-				$line =~ s/ # Mathematical Alphanumeric Symbols high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
-				$line =~ s/ # High surrogate of regional indicator symbol letters/ # Surrogat haut de symbole lettre drapeau/g;
-				$line =~ s/ # High surrogate/ # surrogat haut/g;
+				$line =~ s/ # Mathematical Alphanumeric Symbol high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
+				$line =~ s/ # Regional Indicator Symbol high surrogate/ # Surrogat haut de symbole drapeau/g;
+				$line =~ s/ # Wide-headed arrow high surrogate/ # Surrogat haut de flèche à pointe large/g;
 				$line =~ s/( # .*) affected by glyph like (U\+[0-9A-F]{4,5}) disturbance/$1 victime d’une confusion de glyphes, s’affiche comme $2/g;
 				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 réutilisé comme symbole de composition/g;
 				$line =~ s/( # .*) Canadian French:/$1 Français du Canada :/g;
@@ -323,7 +323,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*\w); /$1 ; /g;
 
 				# Anchors and localized tooltips.
-				unless ( $line =~ m/: +"surrogat_haut_pour_Windows"/u ) {
+				unless ( $line =~ m/: +"high_surrogate_U"/u ) {
 					$line    =~ m/^.+ : +"(.+?)"/u;
 					$str     = $1;
 					$tooltip = '';
@@ -381,7 +381,7 @@ while ( my $line = <INPUT> ) {
 				}
 
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				$line =~ s/^(.+?) : "surrogat_haut_pour_Windows" (U\+D[8-9A-B][0-9A-F]{2}) # (.+)/<tr><td title="Surrogat haut pour Windows $2"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "high_surrogate_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
