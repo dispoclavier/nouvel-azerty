@@ -584,8 +584,10 @@
 #   The colon alignment in column 100 is based on longest Multi_key sequences
 #   in terms of string length, as used for U10789, U107AB.
 #
-#   Most dead key sequences have their Multi_key equivalent added below by
-#   `generate-multikey.pl` run by `multikey.sh`.
+#   The Multi_key equivalent is added below each dead key sequence by a script
+#   called `generate-multikey.pl`, run by `multikey.sh`, if the sequence is
+#   marked up accordingly. For portability, Multi_key equivalents are present
+#   regardless whether they make sense, and whether they barely work.
 #
 #   Three Multi_key sequences do not work because <numbersign> is used both as
 #   a group selector and as a base character:
