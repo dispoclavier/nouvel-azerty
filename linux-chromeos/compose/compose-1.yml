@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.2.1"
+<UEFA0>                     : "version 1.2.2"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -581,24 +581,29 @@
 #
 # # Notes for maintenance
 #
-#   Most dead key sequences have their Multi_key equivalent added below by
-#   `generate-multikey.pl` run by `multikey.sh`.
-#
 #   The colon alignment in column 100 is based on longest Multi_key sequences
 #   in terms of string length, as used for U10789, U107AB.
 #
-#   Three Multi_key sequences do not work, because <numbersign> is used both as
+#   Most dead key sequences have their Multi_key equivalent added below by
+#   `generate-multikey.pl` run by `multikey.sh`.
+#
+#   Three Multi_key sequences do not work because <numbersign> is used both as
 #   a group selector and as a base character:
-#   <Multi_key><numbersign>                        <numbersign> "☐" U2610 BALLOT BOX
-#   <Multi_key><numbersign><numbersign>            <numbersign> "☑" U2611 BALLOT BOX WITH CHECK emoji
-#   <Multi_key><numbersign><numbersign><numbersign><numbersign> "☒" U2612 BALLOT BOX WITH X
+#   <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
+#   <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+#   <Multi_key><numbersign><numbersign><numbersign><numbersign> : "☒" U2612 # BALLOT BOX WITH X
 #   With respect to dead key use, these topmost sequences are maintained, but
 #   related Multi_key equivalents are actionable only in groups 5 through 7.
 #   See # # C01
 #
+#   Another Multi_key sequence does not work due to conflicts with many math
+#   symbols: <Multi_key><apostrophe><minus> : "‐" U2010 # HYPHEN
+#   This sequence is due to the shortcut for HYPHEN by <dead_acute><minus>.
+#   See #*# ACUTE
+#
 #   Two Multi_key sequences have duplicates by design:
-#   <Multi_key><less><3> "❤" U2764 HEAVY BLACK HEART red emoji, most-used in France
-#   <Multi_key><less><8> "♥" U2665 BLACK HEART SUIT red emoji, 14th-ranking
+#   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
+#   <Multi_key><less><8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 #   First instances:  See #   Heart emoji
 #   Second instances: See #*# CIRCUMFLEX
 #
@@ -609,11 +614,9 @@
 #
 # # Circled by leading o
 #
-#   This only includes numbers 1–10, since letters would conflict with œ, ꝏ, ©.
-#   Other conflicts affect "⫯" U2AEF VERTICAL LINE WITH CIRCLE ABOVE.
-#
-#   Consistently, en_US.UTF-8/Compose supports only Ⓐ this way.
-#
+#   This only supports numbers 1–10, since letters would conflict with œ, ꝏ, ©.
+#   Other conflicts affect "⫯" U2AEF. Consistently, this way,
+#   en_US.UTF-8/Compose supports only Ⓐ.
 #   See #*# GREEK
 #   See #^# CIRCLED
 #
