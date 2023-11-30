@@ -5756,6 +5756,13 @@
 #   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
 #   mnemonics on AZERTY, where O is close to À.
 #
+#   Followed by ASCII minus, dead_acute is a shortcut for the not-so-useful 
+#   "‐" U2010 HYPHEN additionally to its presence in group 1 of minus, as a
+#   matter of mitigating its absence from live key support, with respect to
+#   predictable user expectations as of getting something useful from so easy
+#   a key sequence as <dead_acute><minus>. However, the Multi_key equivalent,
+#   conflicting with many math symbols, does not work.
+#
 #   Followed by comma, dead_acute provides an additional input method for the
 #   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
 #   for "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
@@ -5788,6 +5795,8 @@
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
+<dead_acute>                                                                               <minus> : "‐" U2010 # HYPHEN
+<Multi_key><apostrophe>                                                                    <minus> : "‐" U2010 # HYPHEN
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <dead_acute>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
