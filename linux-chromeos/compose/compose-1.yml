@@ -598,13 +598,15 @@
 #   related Multi_key equivalents are actionable only in groups 5 through 7.
 #   See # # C01
 #
-#   Two other Multi_key sequences do not work due to conflicts with many math
+#   Three other Multi_key sequences do not work due to conflicts with many math
 #   symbols, but that does not matter since these sequences are pointless:
 #   <Multi_key><apostrophe><minus> : "‐" U2010 # HYPHEN
 #   <Multi_key><colon><minus>      : "‐" U2010 # HYPHEN
-#   These sequences are due to shortcuts for HYPHEN by diacritical dead keys.
+#   <Multi_key><less><period>      : "‌" U200C # ZERO WIDTH NON-JOINER
+#   These sequences are due to shortcuts by dead keys for HYPHEN or ZWNJ.
 #   See #*# ACUTE
 #   See #*# DIAERESIS
+#   See #*# CIRCUMFLEX
 #
 #   Two Multi_key sequences have duplicates by design:
 #   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
