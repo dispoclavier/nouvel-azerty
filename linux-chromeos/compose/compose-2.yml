@@ -6701,7 +6701,7 @@
 #   the Cambria font makes the most sense of it, giving it a three-quarter em
 #   length and making it a four-per-three-em dash. Other fonts use this dash
 #   to have a conjoining em dash, where em dash is not.
-#   See # # Hyphen and long dashes
+#   See # # Long dashes
 #   See # # Dashes and hyphens
 #
 <UEFD0>                                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
@@ -14657,7 +14657,7 @@
 #   Shift level, which makes sense because dead_diaeresis is on the base level
 #   of E05. Other facilities are available using Multi_key.
 #   See # # Dashes and hyphens
-#   See # # Hyphen and long dashes
+#   See # # Long dashes
 #
 #   For intuitivity, with asterisk as a base character it yields "⁑" U2051.
 #
