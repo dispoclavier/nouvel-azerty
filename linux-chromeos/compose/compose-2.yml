@@ -11507,8 +11507,12 @@
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE, consistently with dead_acute for the
 #   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #
-#   Followed by period, dead_circumflex provides a shorthand for
-#   U200C ZERO WIDTH NON-JOINER, and by asterisk, for "⁂" U2042 ASTERISM.
+#   Followed by period, dead_circumflex provides a shortcut for
+#   U200C ZERO WIDTH NON-JOINER, but its Multi_key equivalent does not work and
+#   is pointless anyway.
+#
+#   Followed by asterisk, dead_circumflex provides a shortcut for 
+#   "⁂" U2042 ASTERISM, consistently with dead_diaeresis for "⁑" U2051.
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
@@ -14652,7 +14656,8 @@
 #   See # # Dashes and hyphens
 #   See # # Long dashes
 #
-#   For intuitivity, with asterisk as a base character it yields "⁑" U2051.
+#   For intuitivity, with asterisk as a base character it yields "⁑" U2051,
+#   consistently with dead_circumflex for "⁂" U2042 ASTERISM.
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol, have quick access
