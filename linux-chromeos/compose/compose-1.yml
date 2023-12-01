@@ -908,7 +908,8 @@
 #   undeliverable email to broken links to parse errors. It may be input using
 #   the group selector dead key like double and triple dashes, or the following
 #   mnemonic scheme.
-#   See # # Hyphen and long dashes
+#   See # # Hyphen
+#   See # # Long dashes
 #
 #       EM DASH        = (full) dash (called “tiret cadratin” in French)
 #       HORIZONTAL BAR = three-quarter-dash in Cambria, or conjoining em dash
