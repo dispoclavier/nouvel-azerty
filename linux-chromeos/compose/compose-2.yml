@@ -6704,36 +6704,29 @@
 #   See # # Long dashes
 #   See # # Dashes and hyphens
 #
-<UEFD0>                                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
-<Multi_key><numbersign>                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
-<UEFD0>                                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR for African variant
-<Multi_key><numbersign>                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR for African variant
-<UEFD0>                                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR for Breton variant
-<Multi_key><numbersign>                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR for Breton variant
-<UEFD0>                                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR for Breton variant
-<Multi_key><numbersign>                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR for Breton variant
+<UEFD0>                                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
 #
 #
-# # Hyphen
+# # HORIZONTAL BAR for remapped variants
 #
-#   The HYPHEN punctuation has been separately encoded as U2010, although it is
-#   a homoglyph to U002D in nearly all fonts.
+#   Given that in ASCII mode, the underscore is on unshifted key D12, remapped
+#   variants use the underscore’s remapped key position on unshifted E07 to get
+#   an unshifted position for the non-breaking hyphen, and E06 is dedicated to
+#   casing Ùù for consistency even though uppercase support is sufficient using
+#   Caps Lock. As a consequence, in French mode underscore has no unshifted key
+#   support. To prevent this from canceling the input method of HORIZONTAL BAR
+#   in group 1 of underscore, non-breaking hyphen works as a base character too
+#   in group 1.
 #
-#   To prevent HYPHEN from uselessly taking up a key position, it is in group 1
-#   of ASCII hyphen and of "‑" U2011 NON-BREAKING HYPHEN, mapped on the shifted
-#   position of key E06, or on unshifted key E07 of (remapped) kbfrFRsr.
-#   See # # C05
-#
-#   Other facilities are available using Multi_key or dead_diaeresis.
-#   See # # Dashes and hyphens
-#   See #*# DIAERESIS
-#
-#   To output HYPHEN in French mode and HYPHEN-MINUS in ASCII mode only is not
-#   an option, as that would screw up user experience for zero benefit, except
-#   in one single, not widely used font.
-#
-<UEFD0>                                                                                    <U2011> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign>                                                                    <U2011> : "‐" U2010 # HYPHEN
+<UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 #
 #
 # # Long dashes
