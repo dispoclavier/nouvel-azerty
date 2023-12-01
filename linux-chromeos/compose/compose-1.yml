@@ -908,13 +908,12 @@
 #   undeliverable email to broken links to parse errors. It may be input using
 #   the group selector dead key like double and triple dashes, or the following
 #   mnemonic scheme.
-#   See # # Hyphen
 #   See # # Long dashes
 #
-#       EM DASH        = (full) dash (called “tiret cadratin” in French)
-#       HORIZONTAL BAR = three-quarter-dash in Cambria, or conjoining em dash
-#       EN DASH        = half a dash (French “tiret demi-cadratin”)
 #       HYPHEN         = quarter-dash (French “tiret quart-de-cadratin”)
+#       EN DASH        = half a dash (French “tiret demi-cadratin”)
+#       HORIZONTAL BAR = three-quarter-dash in Cambria, or conjoining em dash
+#       EM DASH        = full dash (French “tiret cadratin”)
 #       TWO-EM DASH    = indicates missing letters, or a missing word
 #       THREE-EM DASH  = used for a missing word, or author’s name repetition
 #
