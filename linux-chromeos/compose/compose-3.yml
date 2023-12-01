@@ -14,21 +14,11 @@
 ### Group selector introduction
 #
 #   The private use character UEFB0 is used as the group selector dead key.
-#   Patch for *dead_group <UEFD0>, for addition to en_US.UTF-8/Compose.
 #   As a special dead key, the group selector deserves particular attention.
-#
-#
-# # Numbering
-#
-#   CAUTION: Unlike specified in ISO/IEC 9995, group numbers are zero based.
-#   For UX consistency, the default group is group 0. Only groups accessed by
-#   the group selector dead key are numbered starting with 1, because a group
-#   accessed by an n-uple press on the group selector must be called “group n”,
-#   not “group n+1”. The ISO/IEC 9995 standard uses 1-based numbering because
-#   it uses the terms “primary” and “secondary” with respect to groups, and it
-#   does not consider dead key based group selection with multiple presses.
-#
-#   The short identifier for group n is gn.
+#   Digits and non-ASCII base characters are remaining in the common section.
+#   E.g. group 1 of Ɔɔ, Ññ and non-breaking hyphen outputs "―" U2015. That is
+#   designed for African, Breton, and remapped variants.
+#   See #*# GROUP_1
 #
 #
 # # History
@@ -51,6 +41,19 @@
 #   typesetting practice.
 #
 #
+# # Numbering
+#
+#   CAUTION: Unlike specified in ISO/IEC 9995, group numbers are zero based.
+#   For UX consistency, the default group is group 0. Only groups accessed by
+#   the group selector dead key are numbered starting with 1, because a group
+#   accessed by an n-uple press on the group selector must be called “group n”,
+#   not “group n+1”. The ISO/IEC 9995 standard uses 1-based numbering because
+#   it uses the terms “primary” and “secondary” with respect to groups, and it
+#   does not consider dead key based group selection with multiple presses.
+#
+#   The short identifier for group n is gn.
+#
+#
 # # Cross-platform compatibility
 #
 #   Implementing the group selector as a dead key avoids breaking UX across
@@ -65,6 +68,7 @@
 #
 #   Filling empty slots with null output "" U0000 can be avoided. The "" U0000
 #   strings have been removed for ease of maintenance on 2023-01-13T1356+0100.
+#   See also # # Notes for maintenance
 #
 #
 #
