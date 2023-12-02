@@ -1,4 +1,4 @@
-//                       Date: 2023-11-25T2310+0100
+//                       Date: 2023-12-02T2044+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -14,16 +14,6 @@
 //     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 //              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 //             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
-//              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
-//   Full names, descriptions: kbbrFRs  Breton and French semiautomatic keyboard layout
-//                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
-//                             kbfrBEs  French Belgium semiautomatic keyboard layout
-//                             kbfrFRs  French France semiautomatic keyboard layout
-//                             kbfrFRsr French France remapped semiautomatic keyboard layout
-//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
-//                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
@@ -919,6 +909,40 @@ xkb_symbols "kbbrFRs" {
 };
 
 partial alphanumeric_keys
+xkb_symbols "kbbrFRsr" {
+
+	name[Group1] = "Breton and French remapped semiautomatic keyboard layout";
+	name[Group2] = "Breton and French remapped semiautomatic keyboard layout";
+	// "Breton et français disposition de clavier semi-automatique redisposée"
+
+	include "dispocla(kbfrFRsr)"
+
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
+	key <AE01> {
+		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+		[                 NoSymbol,                      c_h,                      C_h,                      C_H ],
+		[                 NoSymbol,                      c_h,                      C_h,                      C_H ]
+	}; // cʼh, Cʼh, CʼH
+
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key <AE07> {
+		[                 NoSymbol,                    U00F1,                    U00D1 ],
+		[                 NoSymbol,                    U00F1,                    U00D1 ]
+	}; // ñ, Ñ
+
+	// Variant name:
+	key.type[Group1]= "EIGHT_LEVEL";
+	key.type[Group2]= "EIGHT_LEVEL";
+	key <TLDE> {
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAA ],
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAA ]
+	};
+
+};
+
+partial alphanumeric_keys
 xkb_symbols "kbfrPFs" {
 
 	name[Group1] = "French Polynesia semiautomatic keyboard layout";
@@ -947,6 +971,39 @@ xkb_symbols "kbfrPFs" {
 	key <TLDE> {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA3 ],
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA3 ]
+	};
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "kbfrPFsr" {
+
+	name[Group1] = "French Polynesia remapped semiautomatic keyboard layout";
+	name[Group2] = "French Polynesia remapped semiautomatic keyboard layout";
+	// "Polynésie française disposition de clavier semi-automatique redisposée"
+
+	include "dispocla(kbfrFRsr)"
+
+	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
+	key <AE12> {
+		[              dead_macron ],
+		[              dead_macron ]
+	};// Used in Polynesian.
+
+	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key <AD11> {
+		[                 NoSymbol,                 NoSymbol,               dead_grave ],
+		[                 NoSymbol ]
+	};// Used in Polynesian.
+
+	// Variant name:
+	key.type[Group1]= "EIGHT_LEVEL";
+	key.type[Group2]= "EIGHT_LEVEL";
+	key <TLDE> {
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAB ],
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAB ]
 	};
 
 };
@@ -981,6 +1038,40 @@ xkb_symbols "kbfrAFs" {
 	key <TLDE> {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA4 ],
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA4 ]
+	};
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "kbfrAFsr" {
+
+	name[Group1] = "Francophone Africa remapped semiautomatic keyboard layout";
+	name[Group2] = "Francophone Africa remapped semiautomatic keyboard layout";
+	// "Afrique francophone disposition de clavier semi-automatiqueredisposée"
+
+	include "dispocla(kbfrFRsr)"
+
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP2";
+	key <AE01> {
+		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+		[                 NoSymbol,                    U025B,                    U0190 ],
+		[                 NoSymbol,                    U025B,                    U0190 ]
+	}; // ɛ, Ɛ
+
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key <AE07> {
+		[                 NoSymbol,                    U0254,                    U0186 ],
+		[                 NoSymbol,                    U0254,                    U0186 ]
+	}; // ɔ, Ɔ
+
+	// Variant name:
+	key.type[Group1]= "EIGHT_LEVEL";
+	key.type[Group2]= "EIGHT_LEVEL";
+	key <TLDE> {
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAC ],
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAC ]
 	};
 
 };
@@ -1046,29 +1137,26 @@ xkb_symbols "kbfrFRsr" {
 	// the sake of frequent keyboard shortcuts, without substantially cutting
 	// back on letter ergonomy. Moreover, the hybrid variants were truncated,
 	// since the layout uses the full set of 8 indices, and shortcut remapping
-	// requires one out of them. Last but not least, applications e.g. VSCode
-	// may disregard the Control mappings in types/ and use the default layout
-	// instead as a reference for keyboard shortcuts, so these are in AZERTY.
+	// requires one out of them.
 
 	// Alphanumeric block
-	// Key <AE01> is included from kbfrFRs.
+
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE02> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                 NoSymbol,                   agrave,                   Agrave ],
 		[                 NoSymbol,                   agrave,                   Agrave ]
-	}; // Levels 4..8 are included from kbfrFRs.
+	};
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2";
-	// Key <AE03> is included from kbfrFRs.
+
 	key <AE04> {
 		[                 NoSymbol,               dead_acute ],
 		[                 NoSymbol,               dead_acute ]
-	}; // Levels 2..8 are included from kbfrFRs.
+	};
 
-	// Key <AE05> is included from kbfrFRs.
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE06> {
@@ -1081,25 +1169,22 @@ xkb_symbols "kbfrFRsr" {
 	key <AE07> {
 		[                 NoSymbol,                    U2011,           Greek_horizbar ],
 		[                 NoSymbol,                    U2011,           Greek_horizbar ]
-	}; // Levels 4..8 are included from kbfrFRs.
+	};
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE08> {
 		[                 NoSymbol,                   egrave,                   Egrave ],
 		[                 NoSymbol,                   egrave,                   Egrave ]
-	}; // Levels 4..8 are included from kbfrFRs.
+	};
 
-	// Key <AE09> is included from kbfrFRs.
 	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_GROUP2";
 	key <AE10> {
 		[                 NoSymbol,                   eacute,                   Eacute ],
 		[                 NoSymbol,                   eacute,                   Eacute ]
-	}; // Levels 4..8 are included from kbfrFRs.
+	};
 
-	// Key <AE11> is included from kbfrFRs.
-	// Key <AE12> is included from kbfrFRs.
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key <AD01> {
@@ -1108,7 +1193,6 @@ xkb_symbols "kbfrFRsr" {
 		[                        q,                        Q,                   U107A5 ]
 	}; // superscript small q
 
-	// Key <AD02> is included from kbfrFRs.
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD03> {
@@ -1126,7 +1210,6 @@ xkb_symbols "kbfrFRsr" {
 		[                        g,                        G,                    U1D4D ]
 	}; // superscript small g
 
-	// Key <AD06> is included from kbfrFRs.
 	key <AD07> {
 		[                        m,                        M,                    U1D50 ],
 		[                        m,                        M,                    U1D50 ]
@@ -1147,13 +1230,12 @@ xkb_symbols "kbfrFRsr" {
 		[                        k,                        K,                    U1D4F ]
 	}; // superscript small k
 
-	// Key <AD11> is included from kbfrFRs.
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD12> {
 		[                    UEFD0,                 NoSymbol,                    UEFD0 ],
 		[               underscore,                 NoSymbol,                    UEFD0 ]
-	}; // Other indices included from kbfrFRs.
+	};
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1163,7 +1245,6 @@ xkb_symbols "kbfrFRsr" {
 		[                        a,                        A,                    U1D43 ]
 	}; // superscript small a
 
-	// Key <AC02> is included from kbfrFRs.
 	key <AC03> {
 		[                        e,                        E,                    U1D49 ],
 		[                        e,                        E,                    U1D49 ]
@@ -1209,7 +1290,7 @@ xkb_symbols "kbfrFRsr" {
 	key <AC11> {
 		[     rightsinglequotemark ],
 		[                 NoSymbol ]
-	}; // Other indices included from kbfrFRs.
+	};
 
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
@@ -1217,9 +1298,8 @@ xkb_symbols "kbfrFRsr" {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                    minus,                 NoSymbol,                Multi_key ],
 		[                    minus,                 NoSymbol,                Multi_key ]
-	}; // Other indices included from kbfrFRs.
+	};
 
-	// Row B is included from kbfrFRs, except:
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key <AB06> {
@@ -1228,14 +1308,12 @@ xkb_symbols "kbfrFRsr" {
 		[                        h,                        H,                     U02B0 ]
 	}; // superscript small h
 
-	// The spacebar is included from kbfrFRs.
-	// The numpad is included from kbfrFRs.
 	// Variant name:
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
-		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAA ],
-		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAA ]
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA9 ],
+		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA9 ]
 	};
 
 };
