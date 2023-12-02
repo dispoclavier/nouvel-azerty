@@ -491,15 +491,21 @@
 <UEF9A> : " ⁠"
 #
 #
-# # HTML entities for spaces
+# # HTML entity for no-break space
 #
 <UEF9B> : "&nbsp;"   # U00A0 NO-BREAK SPACE
 #   Defined as justifying in Unicode, and handled as such by internet user agents.
 #
-<UEF9C> : "&#8201;"  # U2009 THIN SPACE
+#
+# # Numeric character references of spaces
+#
+#   Hexadecimal is preferred for readability. Saving one character in source
+#   code of HTML does not warrant the downside.
+#
+<UEF9C> : "&#x2009;"  # U2009 THIN SPACE
 #   Should be no-break but is breaking in Unicode.
 #
-<UEF9D> : "&#8200;"  # U2008 PUNCTUATION SPACE
+<UEF9D> : "&#x2008;"  # U2008 PUNCTUATION SPACE
 #   Should be no-break like FSP, with much more reason.
 #
 #         "&#8199;"  # U2007 FIGURE SPACE
@@ -507,10 +513,7 @@
 #   no-break space in that range where all spaces from U2002 through U200A
 #   should be no-break.
 #
-<UEF9E> : "&#8239;"  # U202F NARROW NO-BREAK SPACE
-#   Shorter string than "&#x202F;".
-#
-<UEF9F> : "&#x202F;" # U202F NARROW NO-BREAK SPACE
+<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE
 #   NNBSP has become a usable avatar of THSP as originally intended.
 #
 #
@@ -523,10 +526,10 @@
 #   Kenneth WHISTLER exposed the rationale in:
 #   https://unicode.org/mail-arch/unicode-ml/y2005-m11/0060.html
 #
-<UEFAF> : "U+"
+<UEF9F> : "U+"
 #
 #
-# # Output of keyboard layout version number and variant name
+# # Output of keyboard layout version number
 #
 # <UEFA0> : For ease of maintenance, this is defined in the file header.
 #
@@ -548,7 +551,7 @@
 <UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFsr "
 <UEFAD> : ""
 <UEFAE> : ""
-# <UEFAF> : See # # Unicode prefix
+<UEFAF> : ""
 #
 #
 # # Phone key emoji
