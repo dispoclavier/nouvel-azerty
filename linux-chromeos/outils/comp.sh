@@ -1,7 +1,7 @@
 #!/bin/bash
 # Compile .xkb
 # 2023-01-14T1934+0100
-# 2023-11-27T0358+0100
+# 2023-12-02T2050+0100
 # = last modified.
 #
 # Compiles XKB.
@@ -49,5 +49,8 @@ compile "kbbrFRs"  "2"
 compile "kbfrPFs"  "3"
 compile "kbfrAFs"  "4"
 compile "kbfrBEs"  "5"
+compile "kbbrFRsr" "6"
+compile "kbfrPFsr" "7"
+compile "kbfrAFsr" "8"
 compile "kbfrFRsr" "0"
 cp kbfrFRs$suffix.xkb ../nouvel-azerty$suffix.xkb; echo "nouvel-azerty$suffix.xkb updated."
