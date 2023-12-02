@@ -5762,8 +5762,7 @@
 #   predictable user expectations as of getting something useful from so easy
 #   a key sequence as <dead_acute><minus>. The Multi_key equivalent however,
 #   additionally to not making sense, does not work either, due to numerous
-#   conflicts with math symbols. For consistency with dead_diaeresis, U2011
-#   works as a base character, too.
+#   conflicts with math symbols.
 #
 #   Followed by comma, dead_acute provides an additional input method for the
 #   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
@@ -5799,8 +5798,6 @@
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                               <minus> : "‐" U2010 # HYPHEN
 <Multi_key><apostrophe>                                                                    <minus> : "‐" U2010 # HYPHEN
-<dead_acute>                                                                               <U2011> : "‐" U2010 # HYPHEN
-<Multi_key><apostrophe>                                                                    <U2011> : "‐" U2010 # HYPHEN
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <dead_acute>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -14643,12 +14640,13 @@
 #   yields low, opening, curly quotation marks U201A, U201E.
 #   See # # Quotation mark input method
 #
-#   Followed by ASCII minus, dead_diaeresis is a shortcut for the not-so-useful
-#   "‐" U2010 HYPHEN additionally to its presence in group 1 of minus and other
-#   shortcuts as a matter of mitigating its absence from live key support, with
-#   respect to predictable user expectations as of getting something useful.
-#   The Multi_key equivalents however, additionally to not making sense, do not
-#   work either, due to numerous conflicts with math symbols.
+#   Followed by ASCII minus, dead_diaeresis is a shortcut for the (very useful)
+#   "‑" U2011 NON-BREAKING HYPHEN, additionally to its presence in group 1 of
+#   equal, as a matter of mitigating its absence from live key support on part
+#   of the remapped variants, with respect to predictable user expectations as
+#   of getting something useful from so easy a key combination. The Multi_key
+#   equivalent however, additionally to not making sense, does not work either,
+#   due to numerous conflicts with math symbols.
 #
 #   Diaeresis also supports long dashes, with base characters on the upper row,
 #   Shift level, which makes sense because dead_diaeresis is on the base level
@@ -14698,10 +14696,8 @@
 <Multi_key><colon>                                                                    <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                            <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<dead_diaeresis>                                                                           <minus> : "‐" U2010 # HYPHEN
-<Multi_key><colon>                                                                         <minus> : "‐" U2010 # HYPHEN
-<dead_diaeresis>                                                                           <U2011> : "‐" U2010 # HYPHEN
-<Multi_key><colon>                                                                         <U2011> : "‐" U2010 # HYPHEN
+<dead_diaeresis>                                                                           <minus> : "‑" U2011 # NON-BREAKING HYPHEN
+<Multi_key><colon>                                                                         <minus> : "‑" U2011 # NON-BREAKING HYPHEN
 <dead_diaeresis>                                                                          <endash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><colon>                                                                        <endash> : "⸺" U2E3A # TWO-EM DASH
 <dead_diaeresis>                                                                          <emdash> : "⸻" U2E3B # THREE-EM DASH
