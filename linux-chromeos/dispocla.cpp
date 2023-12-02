@@ -1,4 +1,4 @@
-//                       Date: 2023-12-02T2044+0100
+//                       Date: 2023-12-02T2154+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1047,7 +1047,7 @@ xkb_symbols "kbfrAFsr" {
 
 	name[Group1] = "Francophone Africa remapped semiautomatic keyboard layout";
 	name[Group2] = "Francophone Africa remapped semiautomatic keyboard layout";
-	// "Afrique francophone disposition de clavier semi-automatiqueredisposée"
+	// "Afrique francophone disposition de clavier semi-automatique redisposée"
 
 	include "dispocla(kbfrFRsr)"
 
@@ -1087,6 +1087,10 @@ xkb_symbols "kbfrBEs" {
 	// the downside of keeping them the Belgian way is detrimental to consistency
 	// and would heavily impact user experience far beyond the small benefit of
 	// staying a bit more familiar.
+	//
+	// The Belgian layout variant comes without its remapped variant because
+	// the point in having a Belgian variant is a reasonable amount of backwards
+	// compatibility with the Belgian AZERTY, and remapping defeats this point.
 
 	include "dispocla(kbfrFRs)"
 
