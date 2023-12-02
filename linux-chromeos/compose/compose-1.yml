@@ -17,13 +17,16 @@
 #     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 #              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 #             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
-#              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
-#   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
+#              Regular names: kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s)|CHs|FR(s|sr)|PF(s|sr)))
+#   Full names, descriptions: kbbrFRs  Breton and French semiautomatic keyboard layout
+#                             kbbrFRsr Breton and French remapped semiautomatic keyboard layout
 #                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
+#                             kbfrAFsr Francophone Africa remapped semiautomatic keyboard layout
 #                             kbfrBEs  French Belgium semiautomatic keyboard layout
-#                             kbfrFRr  French France remapped semiautomatic keyboard layout
 #                             kbfrFRs  French France semiautomatic keyboard layout
+#                             kbfrFRsr French France remapped semiautomatic keyboard layout
 #                             kbfrPFs  French Polynesia semiautomatic keyboard layout
+#                             kbfrPFsr French Polynesia remapped semiautomatic keyboard layout
 #                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 #                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
 #                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
@@ -539,11 +542,11 @@
 <UEFA6> : "Canadien multilingue disposition de clavier semi-automatique – kbfrCAms "
 <UEFA7> : "Français Canada disposition de clavier semi-automatique – kbfrCAs "
 <UEFA8> : "Français Suisse disposition de clavier semi-automatique – kbfrCHs "
-<UEFA9> : ""
-<UEFAA> : "Français redisposé disposition de clavier semi-automatique – kbfrFRr "
-<UEFAB> : "Français hybride AZERTY disposition de clavier semi-automatique – kbfrFRhw "
-<UEFAC> : "Français hybride QWERTY disposition de clavier semi-automatique – kbfrFRhz "
-<UEFAD> : "Français hybride QWERTZ disposition de clavier semi-automatique – kbfrFRhy "
+<UEFA9> : "Français France disposition de clavier semi-automatique redisposée – kbfrFRsr "
+<UEFAA> : "Breton et français disposition de clavier semi-automatique redisposée – kbbrFRsr "
+<UEFAB> : "Polynésie française disposition de clavier semi-automatique redisposée – kbfrPFsr "
+<UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFsr "
+<UEFAD> : ""
 <UEFAE> : ""
 # <UEFAF> : See # # Unicode prefix
 #
