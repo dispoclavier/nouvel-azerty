@@ -134,11 +134,11 @@
 # 
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	{	}	~	@	"	'	`	&	#	$	(	)	-	+	[	]	_	|	/	*	<	>	=	\	,	?	.	!	:	;	␣	⍽	
-#	  1	ª	‰	★	☆	∼	◌	〃	ʼ	º	π	☐	␣	⌀	➔	‐	⚠	⟨	⟩	―	∣	∕	✗	✘	✓	✔	∖	‧	¿	⋅	¡	ˑ	꞉	EMSP	MQSP	
-#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	ʻ	☮	☑	⍽	∂	➜	➖	➕	❰	❱	•	∥	♥	∘	⩽	⩾	≙	∧	❤	⁇	∙	‼	ː	⊢	ENSP	NQSP	
-#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	⊖	⊕	❮	❯	◦	‖	♦	⊗	≺	≻	≡	∨	♥	❔	ꞏ	❕	⋮	⊣	3/MSP	3/MSP	
-#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⛱	∐	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	♣	∗	✖	➗	≜	∇	⁛	❓	‧	❗	⋯	⊥	4/MSP	4/MSP	
-#	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	⚠	⛲	⛐	☤	♛	♕	▪	☣	♠	⭐	◀	▶	☕	¬	⛆	⁈	·	⁉	꞉	⊤	MMSP	MMSP	
+#	  1	ª	‰	★	☆	∼	◌	〃	ʼ	º	π	☐	␣	⌀	➔	‐	⚠	⟨	⟩	―	∣	∕	✗	✘	✓	‑	✔	‧	¿	⋅	¡	ˑ	꞉	EMSP	MQSP	
+#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	ʻ	☮	☑	⍽	∂	➜	➖	➕	❰	❱	•	∥	♥	∘	⩽	⩾	≙	∖	❤	⁇	∙	‼	ː	⊢	ENSP	NQSP	
+#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	⊖	⊕	❮	❯	◦	‖	♦	⊗	≺	≻	≡	∧	♥	❔	ꞏ	❕	⋮	⊣	3/MSP	3/MSP	
+#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⛱	∐	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	♣	∗	✖	➗	≜	∨	⁛	❓	‧	❗	⋯	⊥	4/MSP	4/MSP	
+#	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	▪	☣	♠	⭐	◀	▶	☕	¬	⛆	⁈	·	⁉	꞉	⊤	MMSP	MMSP	
 #	  6	⚓	☈	✍	♻	⌨	●	➿	∬	〰	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	❖	⏯	⋌	❇	⏪	⏩	⚾	⛅		☿		⚠	⋰	⋱	6/MSP	6/MSP	
 #	  7	♿	⚮	✉	♼	☎	⚬	⚭	∭	⭕	⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⋋	❌	⏮	⏭	⛹	☁		♁		❣	⌚	⊲	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⋊	✳	⚰	✌	⛓	❄		♃		❢	⏱	⊳	PSP	PSP	
@@ -821,10 +821,10 @@
 <Multi_key><numbersign><KP_4>                                                          <parenleft> : "∆" U2206 # INCREMENT
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                           <parenleft> : "∆" U2206 # INCREMENT
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                            <parenleft> : "∆" U2206 # INCREMENT
-<UEFD0><5>                                                                             <parenleft> : "⚠" U26A0 # WARNING SIGN emoji, alphabetic mnemonic mapping
-<Multi_key><numbersign><5>                                                             <parenleft> : "⚠" U26A0 # WARNING SIGN emoji, alphabetic mnemonic mapping
-<UEFD0><KP_5>                                                                          <parenleft> : "⚠" U26A0 # WARNING SIGN emoji, alphabetic mnemonic mapping
-<Multi_key><numbersign><KP_5>                                                          <parenleft> : "⚠" U26A0 # WARNING SIGN emoji, alphabetic mnemonic mapping
+<UEFD0><5>                                                                             <parenleft> : "∇" U2207 # NABLA
+<Multi_key><numbersign><5>                                                             <parenleft> : "∇" U2207 # NABLA
+<UEFD0><KP_5>                                                                          <parenleft> : "∇" U2207 # NABLA
+<Multi_key><numbersign><KP_5>                                                          <parenleft> : "∇" U2207 # NABLA
 <UEFD0><6>                                                                             <parenleft> : "✡" U2721 # STAR OF DAVID emoji
 <Multi_key><numbersign><6>                                                             <parenleft> : "✡" U2721 # STAR OF DAVID emoji
 <UEFD0><KP_6>                                                                          <parenleft> : "✡" U2721 # STAR OF DAVID emoji
@@ -1439,8 +1439,8 @@
 #
 # # B05
 #
-<UEFD0>                                                                                    <equal> : "✔" U2714 # HEAVY CHECK MARK emoji
-<Multi_key><numbersign>                                                                    <equal> : "✔" U2714 # HEAVY CHECK MARK emoji
+<UEFD0>                                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
+<Multi_key><numbersign>                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
 <UEFD0><UEFD0>                                                                             <equal> : "≙" U2259 # ESTIMATES
 <Multi_key><numbersign><numbersign>                                                        <equal> : "≙" U2259 # ESTIMATES
 <UEFD0><3>                                                                                 <equal> : "≡" U2261 # IDENTICAL TO
@@ -1491,22 +1491,22 @@
 #
 # # B06
 #
-<UEFD0>                                                                                <backslash> : "∖" U2216 # SET MINUS
-<Multi_key><numbersign>                                                                <backslash> : "∖" U2216 # SET MINUS
-<UEFD0><UEFD0>                                                                         <backslash> : "∧" U2227 # LOGICAL AND
-<Multi_key><numbersign><numbersign>                                                    <backslash> : "∧" U2227 # LOGICAL AND
-<UEFD0><3>                                                                             <backslash> : "∨" U2228 # LOGICAL OR
-<Multi_key><numbersign><3>                                                             <backslash> : "∨" U2228 # LOGICAL OR
-<UEFD0><KP_3>                                                                          <backslash> : "∨" U2228 # LOGICAL OR
-<Multi_key><numbersign><KP_3>                                                          <backslash> : "∨" U2228 # LOGICAL OR
-<UEFD0><UEFD0><UEFD0>                                                                  <backslash> : "∨" U2228 # LOGICAL OR
-<Multi_key><numbersign><numbersign><numbersign>                                        <backslash> : "∨" U2228 # LOGICAL OR
-<UEFD0><4>                                                                             <backslash> : "∇" U2207 # NABLA
-<Multi_key><numbersign><4>                                                             <backslash> : "∇" U2207 # NABLA
-<UEFD0><KP_4>                                                                          <backslash> : "∇" U2207 # NABLA
-<Multi_key><numbersign><KP_4>                                                          <backslash> : "∇" U2207 # NABLA
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <backslash> : "∇" U2207 # NABLA
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <backslash> : "∇" U2207 # NABLA
+<UEFD0>                                                                                <backslash> : "✔" U2714 # HEAVY CHECK MARK emoji
+<Multi_key><numbersign>                                                                <backslash> : "✔" U2714 # HEAVY CHECK MARK emoji
+<UEFD0><UEFD0>                                                                         <backslash> : "∖" U2216 # SET MINUS
+<Multi_key><numbersign><numbersign>                                                    <backslash> : "∖" U2216 # SET MINUS
+<UEFD0><3>                                                                             <backslash> : "∧" U2227 # LOGICAL AND
+<Multi_key><numbersign><3>                                                             <backslash> : "∧" U2227 # LOGICAL AND
+<UEFD0><KP_3>                                                                          <backslash> : "∧" U2227 # LOGICAL AND
+<Multi_key><numbersign><KP_3>                                                          <backslash> : "∧" U2227 # LOGICAL AND
+<UEFD0><UEFD0><UEFD0>                                                                  <backslash> : "∧" U2227 # LOGICAL AND
+<Multi_key><numbersign><numbersign><numbersign>                                        <backslash> : "∧" U2227 # LOGICAL AND
+<UEFD0><4>                                                                             <backslash> : "∨" U2228 # LOGICAL OR
+<Multi_key><numbersign><4>                                                             <backslash> : "∨" U2228 # LOGICAL OR
+<UEFD0><KP_4>                                                                          <backslash> : "∨" U2228 # LOGICAL OR
+<Multi_key><numbersign><KP_4>                                                          <backslash> : "∨" U2228 # LOGICAL OR
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <backslash> : "∨" U2228 # LOGICAL OR
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <backslash> : "∨" U2228 # LOGICAL OR
 <UEFD0><5>                                                                             <backslash> : "¬" U00AC # NOT SIGN
 <Multi_key><numbersign><5>                                                             <backslash> : "¬" U00AC # NOT SIGN
 <UEFD0><KP_5>                                                                          <backslash> : "¬" U00AC # NOT SIGN
