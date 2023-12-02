@@ -1,4 +1,4 @@
-//                       Date: 2023-12-02T2154+0100
+//                       Date: 2023-12-02T2309+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -543,9 +543,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U1DBB ᶻ superscript small z; UEFD5 *dead_turned (*dead_inverted on double press); 😧 U1F627 ANGUISHED FACE emoji
 
 	key <AD03> {
-		[                        e,                        E,                    U1D49,                braceleft,                dead_hook,                 EuroSign,                    UEFAF,                   U1F601 ],
-		[                        e,                        E,                    U1D49,                braceleft,                dead_hook,                 EuroSign,                    UEFAF,                   U1F601 ]
-	}; // U1D49 ᵉ superscript small e; Unicode prefix U+; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
+		[                        e,                        E,                    U1D49,                braceleft,                dead_hook,                 EuroSign,                    UEF9F,                   U1F601 ],
+		[                        e,                        E,                    U1D49,                braceleft,                dead_hook,                 EuroSign,                    UEF9F,                   U1F601 ]
+	}; // U1D49 ᵉ superscript small e; UEF9F Unicode prefix U+; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
 
 	key <AD04> {
 		[                        r,                        R,                    U02B3,               braceright,                    UEFD4,                 sterling,                  radical,                   U1F914 ],
