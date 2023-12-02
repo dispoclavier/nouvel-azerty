@@ -1,4 +1,4 @@
-//                       Date: 2023-11-19T1908+0100
+//                       Date: 2023-12-02T2049+0100
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -14,16 +14,6 @@
 //     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 //              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 //             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
-//              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
-//   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
-//                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
-//                             kbfrBEs  French Belgium semiautomatic keyboard layout
-//                             kbfrFRs  French France semiautomatic keyboard layout
-//                             kbfrFRsr French France remapped semiautomatic keyboard layout
-//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
-//                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
