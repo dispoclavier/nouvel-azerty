@@ -601,9 +601,9 @@
 #   Three other Multi_key sequences do not work due to conflicts with many math
 #   symbols, but that does not matter since these sequences are pointless:
 #   <Multi_key><apostrophe><minus> : "‐" U2010 # HYPHEN
-#   <Multi_key><colon><minus>      : "‐" U2010 # HYPHEN
+#   <Multi_key><colon><minus>      : "‑" U2011 # NON-BREAKING HYPHEN
 #   <Multi_key><less><period>      : "‌" U200C # ZERO WIDTH NON-JOINER
-#   These sequences are due to shortcuts by dead keys for HYPHEN or ZWNJ.
+#   These sequences are due to shortcuts by diacritical dead keys.
 #   See #*# ACUTE
 #   See #*# DIAERESIS
 #   See #*# CIRCUMFLEX
@@ -912,7 +912,7 @@
 #   position on keyboard layouts, screwing everything up in the process, from
 #   undeliverable email to broken links to parse errors. It may be input using
 #   the group selector dead key like double and triple dashes, or the following
-#   mnemonic scheme.
+#   mnemonic scheme. "‑" U2011 NON-BREAKING HYPHEN is also in group 1 of equal.
 #   See # # Long dashes
 #
 #       HYPHEN         = quarter-dash (French “tiret quart-de-cadratin”)
