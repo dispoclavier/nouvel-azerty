@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.2.2"
+<UEFA0>                     : "version 1.3.0"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -528,11 +528,11 @@
 #
 # # Output of keyboard layout version number and variant name
 #
-#   Version number:
-#
 # <UEFA0> : For ease of maintenance, this is defined in the file header.
 #
-#   Variant names:
+#   The Belgian layout variant comes without its remapped variant because
+#   the point in having a Belgian variant is a reasonable amount of backwards
+#   compatibility with the Belgian AZERTY, and remapping defeats this point.
 #
 <UEFA1> : "Français France disposition de clavier semi-automatique – kbfrFRs "
 <UEFA2> : "Breton et français disposition de clavier semi-automatique – kbbrFRs "
