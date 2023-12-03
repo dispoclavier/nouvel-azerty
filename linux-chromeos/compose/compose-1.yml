@@ -533,6 +533,9 @@
 #
 # <UEFA0> : For ease of maintenance, this is defined in the file header.
 #
+#
+# # Output of keyboard layout variant name
+#
 #   The Belgian layout variant comes without its remapped variant because
 #   the point in having a Belgian variant is a reasonable amount of backwards
 #   compatibility with the Belgian AZERTY, and remapping defeats this point.
