@@ -1,4 +1,4 @@
-//                       Date: 2023-11-02T2217+0100
+//                       Date: 2023-12-03T0253+0100
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -14,16 +14,6 @@
 //     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 //              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
 //             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
-//              Regular names: kb(brFRs|fr(AFs|BEs|CA(ms|s)|CHs|FR(h(w|z|y)|r|s)|PFs))
-//   Full names, descriptions: kbbrFRs  Breton and French France semiautomatic keyboard layout
-//                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
-//                             kbfrBEs  French Belgium semiautomatic keyboard layout
-//                             kbfrFRr  French France remapped semiautomatic keyboard layout
-//                             kbfrFRs  French France semiautomatic keyboard layout
-//                             kbfrPFs  French Polynesia semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
-//                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
-//                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
@@ -110,8 +100,10 @@ default xkb_keycodes "evdev" {
         //<LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
 
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
-  // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4,
-  // Keyboard views p. 51 and 61–65. The options target the key next to the AltGr key.
+  // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4;
+  // see the drawings showing the Neuville keyboard, at page 51, pages 61 through 65.
+	//
+	// The options suggested below target mainly the key next to the current AltGr key.
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
 
