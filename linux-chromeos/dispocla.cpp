@@ -1,4 +1,4 @@
-//                       Date: 2023-12-04T0733+0100
+//                       Date: 2023-12-04T2224+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -960,22 +960,21 @@ xkb_symbols "kbfrPFs" {
 	name[Group1] = "French Polynesia semiautomatic keyboard layout";
 	name[Group2] = "French Polynesia semiautomatic keyboard layout";
 	// "Polynésie française disposition de clavier semi-automatique"
+	//
+	// The grave accent is used in Polynesia alongside the macron, but while the
+	// acute accent is not, it is part of the quotation mark input method and so
+	// cannot be replaced with the macron dead key either. As a consequence, E08
+	// is repurposed like on African and Breton variants, the better as this has
+	// the upside of freeing up a live key position for Polynesian ʻeta.
 
 	include "dispocla(kbfrFRs)"
 
-	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
-	key <AE12> {
-		[              dead_macron ],
-		[              dead_macron ]
-	};// Used in Polynesian.
-
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key <AD11> {
-		[                 NoSymbol,                 NoSymbol,               dead_grave ],
-		[                 NoSymbol ]
-	};// Used in Polynesian.
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2";
+	key <AE08> {
+		[                 NoSymbol,              dead_macron,                    U02BB ],
+		[                 NoSymbol,              dead_macron,                    U02BB ]
+	};// Tārava, tāumi; U02BB ʻeta
 
 	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
@@ -996,19 +995,12 @@ xkb_symbols "kbfrPFsr" {
 
 	include "dispocla(kbfrFRsr)"
 
-	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
-	key <AE12> {
-		[              dead_macron ],
-		[              dead_macron ]
-	};// Used in Polynesian.
-
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key <AD11> {
-		[                 NoSymbol,                 NoSymbol,               dead_grave ],
-		[                 NoSymbol ]
-	};// Used in Polynesian.
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2";
+	key <AE08> {
+		[                 NoSymbol,              dead_macron,                    U02BB ],
+		[                 NoSymbol,              dead_macron,                    U02BB ]
+	};// Tārava, tāumi; U02BB ʻeta
 
 	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
