@@ -880,6 +880,14 @@ xkb_symbols "kbbrFRs" {
 	name[Group1] = "Breton and French semiautomatic keyboard layout";
 	name[Group2] = "Breton and French semiautomatic keyboard layout";
 	// "Breton et français disposition de clavier semi-automatique"
+	//
+	// The Breton trigraph “cʼh” is particular in that its Unicode conformant
+	// representation uses a letter apostrophe.
+	// https://github.com/unicode-org/cldr/blob/release-42/common/main/br.xml#L1265
+	//
+	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as Ñ key have other
+	// input methods. Underscore is on level 3 of C09, and in ASCII mode it is on
+	// unshifted D12. "―" U2015 is also in group 1 of Ññ, for Breton variants.
 
 	include "dispocla(kbfrFRs)"
 
@@ -917,7 +925,7 @@ xkb_symbols "kbbrFRsr" {
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
 	// as Ñ key may be input using group 1 of equal or underscore. "―" U2015 also
-	// in group 1 of Ññ, and "―" U2015 by dead_diaeresis followed by ASCII hyphen.
+	// in group 1 of Ññ, and "‑" U2011 by dead_diaeresis followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
@@ -927,7 +935,7 @@ xkb_symbols "kbbrFRsr" {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                 NoSymbol,                      c_h,                      C_h,                      C_H ],
 		[                 NoSymbol,                      c_h,                      C_h,                      C_H ]
-	}; // cʼh, Cʼh, CʼH (with letter apostrophe)
+	}; // cʼh, Cʼh, CʼH
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
