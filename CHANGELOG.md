@@ -2,7 +2,7 @@
 
 ## 1.4.0 (projet)
 
-* Variantes : Polynésie : Restaurer la touche morte accent grave, utiliser la touche E08 (ou E07 sur la variante redisposée) pour la touche morte macron et pour le ʻeta polynésien afin de l’avoir sur touche vive. (dispocla.cpp [dc8c459](https://github.com/dispoclavier/nouvel-azerty/commit/dc8c459efc700caa76344415f461a6d68f29efe6))
+* Variantes : Polynésie : Restaurer la touche morte accent grave, utiliser la touche E08 (ou E07 sur la variante redisposée) pour la touche morte macron et pour le ʻeta polynésien afin de l’avoir sur touche vive. (dispocla.cpp [dc8c459](https://github.com/dispoclavier/nouvel-azerty/commit/dc8c459efc700caa76344415f461a6d68f29efe6), [66de23c](https://github.com/dispoclavier/nouvel-azerty/commit/66de23c18921158c464c915a8baa7f117e826671))
 * Documentation. (dispocla.cpp [9959c6c](https://github.com/dispoclavier/nouvel-azerty/commit/9959c6c9ec4961f59085ad5e3c53d83ff7f526b3), [d523e98](https://github.com/dispoclavier/nouvel-azerty/commit/d523e982523ad0b94aba1d74764c2cb4d0756641))
 
 ## 1.3.0 (2023-12-03)
