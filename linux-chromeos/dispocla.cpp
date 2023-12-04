@@ -1,4 +1,4 @@
-//                       Date: 2023-12-02T2309+0100
+//                       Date: 2023-12-04T0733+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -894,11 +894,11 @@ xkb_symbols "kbbrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE08> {
-		[                 NoSymbol,                    U00F1,                    U00D1 ],
-		[                 NoSymbol,                    U00F1,                    U00D1 ]
-	}; // ñ, Ñ
+		[                 NoSymbol,                   ntilde,                   Ntilde ],
+		[                 NoSymbol,                   ntilde,                   Ntilde ]
+	};
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -914,6 +914,10 @@ xkb_symbols "kbbrFRsr" {
 	name[Group1] = "Breton and French remapped semiautomatic keyboard layout";
 	name[Group2] = "Breton and French remapped semiautomatic keyboard layout";
 	// "Breton et français disposition de clavier semi-automatique redisposée"
+	//
+	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
+	// as Ñ key may be input using group 1 of equal or underscore. "―" U2015 also
+	// in group 1 of Ññ, and "―" U2015 by dead_diaeresis followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
@@ -923,16 +927,16 @@ xkb_symbols "kbbrFRsr" {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                 NoSymbol,                      c_h,                      C_h,                      C_H ],
 		[                 NoSymbol,                      c_h,                      C_h,                      C_H ]
-	}; // cʼh, Cʼh, CʼH
+	}; // cʼh, Cʼh, CʼH (with letter apostrophe)
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE07> {
-		[                 NoSymbol,                    U00F1,                    U00D1 ],
-		[                 NoSymbol,                    U00F1,                    U00D1 ]
-	}; // ñ, Ñ
+		[                 NoSymbol,                   ntilde,                   Ntilde ],
+		[                 NoSymbol,                   ntilde,                   Ntilde ]
+	};
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -965,7 +969,7 @@ xkb_symbols "kbfrPFs" {
 		[                 NoSymbol ]
 	};// Used in Polynesian.
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -998,7 +1002,7 @@ xkb_symbols "kbfrPFsr" {
 		[                 NoSymbol ]
 	};// Used in Polynesian.
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -1032,7 +1036,7 @@ xkb_symbols "kbfrAFs" {
 		[                 NoSymbol,                    U0254,                    U0186 ]
 	}; // ɔ, Ɔ
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -1066,7 +1070,7 @@ xkb_symbols "kbfrAFsr" {
 		[                 NoSymbol,                    U0254,                    U0186 ]
 	}; // ɔ, Ɔ
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -1107,7 +1111,7 @@ xkb_symbols "kbfrBEs" {
 		[                 NoSymbol,                    minus,               underscore ]
 	};// Rather than NON-BREAKING HYPHEN.
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -1312,7 +1316,7 @@ xkb_symbols "kbfrFRsr" {
 		[                        h,                        H,                     U02B0 ]
 	}; // superscript small h
 
-	// Variant name:
+	// Variant name.
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
