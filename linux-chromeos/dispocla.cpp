@@ -1,4 +1,4 @@
-//                       Date: 2023-12-04T2224+0100
+//                       Date: 2023-12-04T2349+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -992,12 +992,16 @@ xkb_symbols "kbfrPFsr" {
 	name[Group1] = "French Polynesia remapped semiautomatic keyboard layout";
 	name[Group2] = "French Polynesia remapped semiautomatic keyboard layout";
 	// "Polynésie française disposition de clavier semi-automatique redisposée"
+	//
+	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
+	// as Ñ key may be input using group 1 of equal or underscore. "―" U2015 also
+	// in group 1 of Ññ, and "‑" U2011 by dead_diaeresis followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2";
-	key <AE08> {
+	key <AE07> {
 		[                 NoSymbol,              dead_macron,                    U02BB ],
 		[                 NoSymbol,              dead_macron,                    U02BB ]
 	};// Tārava, tāumi; U02BB ʻeta
