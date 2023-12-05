@@ -6684,14 +6684,20 @@
 <Multi_key><numbersign><numbersign>                                                       <eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
 #
 #
-# # HORIZONTAL BAR for African and Breton variants
+# # HORIZONTAL BAR and NON-BREAKING HYPHEN for African, Breton and Polynesian
 #
-#   Two positions on key E08 are used for Ɔɔ U0186, U0254 or Ññ U00D1, U00F1.
+#   Two positions on key E08 are used for Ɔɔ U0186, U0254 or Ññ U00D1, U00F1,
+#   or the macron dead key and the ʻeta "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #
 #   To work around the loss of the key position where the HORIZONTAL BAR dash
 #   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
-#   mapped on that key in African and Breton variants respectively, and it is
-#   in group 1 of underscore.
+#   mapped on that key in African and Breton variants respectively. Given that
+#   the default mapping of the HORIZONTAL BAR is on shifted E08, the Polynesian
+#   variants use U02BB as a base character for HORIZONTAL BAR, while unshifted
+#   key E08 or E07 yields the NON-BREAKING HYPHEN based on the macron dead key.
+#
+#   HORIZONTAL BAR is also in group 1 of underscore, but regional and remapped
+#   variants have this running only on level 3.
 #   See # # C09
 #
 #   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
@@ -6709,6 +6715,10 @@
 <Multi_key><numbersign>                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR
 <UEFD0>                                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                              <dead_macron> : "‑" U2011 # NON-BREAKING HYPHEN
+<Multi_key><numbersign>                                                              <dead_macron> : "‑" U2011 # NON-BREAKING HYPHEN
 #
 #
 # # HORIZONTAL BAR for remapped variants
@@ -6716,12 +6726,11 @@
 #   Given that in ASCII mode, the underscore is on unshifted key D12, remapped
 #   variants use the underscore’s remapped key position on unshifted E07 to get
 #   an unshifted position for the non-breaking hyphen, and E06 is dedicated to
-#   casing Ùù for consistency even though uppercase support is sufficient using
-#   Caps Lock. As a consequence, in French mode underscore has no unshifted key
-#   support. To prevent this from canceling the input method of HORIZONTAL BAR
-#   in group 1 of underscore, non-breaking hyphen works as a base character too
-#   in group 1.
-#
+#   casing Ùù for consistency even though uppercase support by Caps Lock would
+#   be sufficient. As a consequence, in French mode underscore has no unshifted
+#   key support. To keep running the input method of HORIZONTAL BAR in group 1
+#   of underscore, non-breaking hyphen works as a base character too.
+#çè‑
 <UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 #
