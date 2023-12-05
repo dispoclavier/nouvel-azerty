@@ -1,4 +1,4 @@
-//                       Date: 2023-12-04T2349+0100
+//                       Date: 2023-12-05T2310+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -966,6 +966,10 @@ xkb_symbols "kbfrPFs" {
 	// cannot be replaced with the macron dead key either. As a consequence, E08
 	// is repurposed like on African and Breton variants, the better as this has
 	// the upside of freeing up a live key position for Polynesian ʻeta.
+	//
+	// "―" U2015 HORIZONTAL BAR on shifted E08 is in group 1 of U02BB ʻeta, while
+	// group 1 of dead_macron has U2011 NON-BREAKING HYPHEN with respect to the
+	// Polynesian remapped variant.
 
 	include "dispocla(kbfrFRs)"
 
