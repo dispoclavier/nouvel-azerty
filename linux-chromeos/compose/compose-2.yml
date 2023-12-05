@@ -2929,25 +2929,26 @@
 #
 #   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
 #   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
-#   better option for typing a ʻokina is using group 2 of grave), with no-break
-#   space or no-break thin space as a base character. For intuitivity, a ʻokina
-#   can also be input as if it were a turned rightsinglequotemark despite being
-#   a turned letter apostrophe. Compatibility requires supporting apostrophe as
-#   a base character for this input method.
+#   better option for typing a U02BB is using group 2 of grave), with no-break
+#   space or no-break thin space as a base character.
+#
+#   For intuitivity, the Polynesian ʻeta, Hawaiʻian ʻokina can also be input as
+#   if it were a turned rightsinglequotemark despite being a letter. Apostrophe
+#   is also supported as a base character for this input method.
 #   See # # D07
 #
 <UEFD5>                                                                                    <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <UEFD5>                                                                                    <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
-<UEFD5>                                                                             <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<Multi_key><percent>                                                                <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<UEFD5>                                                                                    <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<Multi_key><percent>                                                                       <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<Multi_key><percent>                                                        <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<UEFD5>                                                                               <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<Multi_key><percent>                                                                  <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<UEFD5>                                                                             <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><percent>                                                                <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD5>                                                                                    <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><percent>                                                                       <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><percent>                                                        <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD5>                                                                               <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><percent>                                                                  <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                               <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <Multi_key><percent>                                                                  <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
@@ -5764,9 +5765,9 @@
 #   additionally to not making sense, does not work either, due to numerous
 #   conflicts with math symbols.
 #
-#   Followed by comma, dead_acute provides an additional input method for the
-#   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
-#   for "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
+#   Followed by comma, dead_acute provides an additional input method for
+#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
+#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
 #
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method. The only two acute below characters
@@ -6126,9 +6127,9 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
-#   Followed by comma, dead_grave provides an additional input method for the
-#   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does
-#   for "ʼ" U02BC MODIFIER LETTER APOSTROPHE. dead_acute also yields ʻokina.
+#   Followed by comma, dead_grave provides an additional input method for
+#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
+#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
 #
 #   The digits to reversed primes sequences add to the support by Multi_key.
 #   See # # Reversed primes
@@ -6577,7 +6578,7 @@
 #   See ### Letter groups
 #
 #
-# # Letter apostrophe and ʻokina
+# # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 #   These word boundary preventing characters, needed in Breton and Polynesian
 #   languages, may be input in group 1 and group 2 of rightsinglequotemark.
@@ -6593,8 +6594,8 @@
 #
 <UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
-<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA, ʻokina
+<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 #
 #
 # # Turned punctuation characters for Spanish
@@ -6730,7 +6731,7 @@
 #   be sufficient. As a consequence, in French mode underscore has no unshifted
 #   key support. To keep running the input method of HORIZONTAL BAR in group 1
 #   of underscore, non-breaking hyphen works as a base character too.
-#çè‑
+#
 <UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 #
@@ -11510,8 +11511,8 @@
 #   been encoded with circumflex and grave, as opposed to A, E and O.
 #
 #   Followed by comma, dead_circumflex provides an additional input method for
-#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE, consistently with dead_acute for the
-#   ʻokina "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE, consistently with dead_acute for
+#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #
 #   Followed by period, dead_circumflex provides a shortcut for
 #   U200C ZERO WIDTH NON-JOINER, but its Multi_key equivalent does not work and
@@ -14402,7 +14403,7 @@
 #
 #   This works only the way <dead_cedilla><dead_acute>, because the Multi_key
 #   equivalent of the other way around would conflict with the input method for
-#   the ʻokina "ʻ" U02BB by dead_acute.
+#   "ʻ" U02BB by dead_acute.
 #   See #*# ACUTE
 #
 <dead_cedilla><dead_acute>                                                                     <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
