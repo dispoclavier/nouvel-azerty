@@ -1,4 +1,4 @@
-//                       Date: 2023-12-05T2310+0100
+//                       Date: 2023-12-05T2339+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1026,6 +1026,10 @@ xkb_symbols "kbfrAFs" {
 	name[Group1] = "Francophone Africa semiautomatic keyboard layout";
 	name[Group2] = "Francophone Africa semiautomatic keyboard layout";
 	// "Afrique francophone disposition de clavier semi-automatique"
+	//
+	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as Ɔ key have other
+	// input methods. Underscore is on level 3 of C09, and in ASCII mode it is on
+	// unshifted D12. "―" U2015 is also in group 1 of Ɔɔ, for African variants.
 
 	include "dispocla(kbfrFRs)"
 
@@ -1060,6 +1064,10 @@ xkb_symbols "kbfrAFsr" {
 	name[Group1] = "Francophone Africa remapped semiautomatic keyboard layout";
 	name[Group2] = "Francophone Africa remapped semiautomatic keyboard layout";
 	// "Afrique francophone disposition de clavier semi-automatique redisposée"
+	//
+	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
+	// as Ɔ key may be input using group 1 of equal or underscore. "―" U2015 also
+	// in group 1 of Ɔɔ, and "‑" U2011 by dead_diaeresis followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
