@@ -1,4 +1,4 @@
-//                       Date: 2023-12-03T0253+0100
+//                       Date: 2023-12-06T0143+0100
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -77,6 +77,7 @@ default xkb_keycodes "evdev" {
   // the subvariants with Backspace on Menu are provided with swapped Caps/ISO too.
 
   // Arg  Suffix             Features
+  //
   //   o  ""                 Ordinary.
   //   w  "-win"             Backspace on right Windows.
   //  ws  "-win-sans"        Backspace on right Windows sans Menu.
@@ -102,23 +103,22 @@ default xkb_keycodes "evdev" {
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4;
   // see the drawings showing the Neuville keyboard, at page 51, pages 61 through 65.
-	//
-	// The options suggested below target mainly the key next to the current AltGr key.
+  //
+  // The options suggested below target mainly the key next to the current AltGr key.
 
         <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
-
         <RWIN> = 134;  // was <RWIN>   Common mapping for desktop and laptop.
         <MENU> = 135;  // was <MENU>   Common mapping for desktop and laptop.
         <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
 
         //<BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
-  // Right Windows on Backspace instead is not included in the distributable subvariants.
-        //<RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
         //<HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
+  // Right Windows on Backspace is not included in the distributable subvariants.
+        //<RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
 
         //<BKSP> = 135;  // was <MENU>   Backspace on Menu key for compact keyboards.
-  // Menu on Backspace is optional since this may interfere with application keybindings.
         //<MENU> =  22;  // was <BKSP>   Menu key on Backspace instead for usability.
+  // Menu on Backspace is optional since this may interfere with application keybindings.
 
         //<BKSP> = 105;  // was <RCTL>   Backspace on right Control for compact keyboards.
         //<RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
