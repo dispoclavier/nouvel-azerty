@@ -1,5 +1,5 @@
-                      Date : 2023-12-03T0410+0100
-                   Version : 1.3.0
+                      Date : 2023-12-06T0131+0100
+                   Version : 1.4.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -40,9 +40,8 @@
     pour la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
 
   • Les fichiers dont les noms commencent par `kbfrPFs` contiennent deux dispositions optimisées
-    pour les langues de Polynésie française, avec une touche morte macron sur la touche du symbole =.
-    La touche morte accent grave est sur AltGr + accent circonflexe à la place de la touche morte
-    tilde.
+    pour les langues de Polynésie française, avec une touche morte macron sur le 8, et le ʻeta sur
+    Maj + 8.
 
   • Les fichiers dont les noms commencent par `kbfrAFs` contiennent deux dispositions optimisées
     pour les langues d’Afrique, pour le bambara en particulier, avec le ɛ sur le 1, et le ɔ sur le 8.
@@ -54,6 +53,7 @@
   • Les fichiers dont les noms se terminent en `r` contiennent des dispositions optimisées pour
     une saisie plus ergonomique de l’alphabet de base et des lettres diacritées, afin que
     les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
+
     La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une
     variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition
     va à l’encontre de cet objectif.
@@ -78,20 +78,21 @@
 
     ◦ Les sous-variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
       Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée, mais
-      il est possible de la paramétrer après avoir installé ce nouvel AZERTY.
+      il est possible de la paramétrer dans `evdev(.c)` après avoir installé ce nouvel AZERTY.
 
     ◦ Les sous-variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
-      et la touche Menu est désactivée.
+      et la touche Menu est désactivée pour éviter l’ouverture intempestive du menu contextuel.
 
     ◦ Les sous-variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur
       Menu, et Menu sur Effacement arrière.
 
     ◦ Les sous-variantes avec le suffixe « -menu-sans » ou « -ansi-menu-sans » ont Effacement
-      arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que VSCode
-      puisse lui attribuer des raccourcis comme `deleteLeft`, et avec Contrôle, `deleteWordLeft`.
+      arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que
+      des applications puissent lui attribuer des raccourcis comme `deleteLeft`, et avec Contrôle,
+      `deleteWordLeft`.
 
     ◦ Les sous-variantes avec le suffixe « -ctrl » permutent les touches Effacement arrière et
-      Contrôle droite, afin que la touche Effacement arrière puisse remplacer Contrôle droite.
+      Contrôle droite.
 
 
   Témoin lumineux
@@ -106,24 +107,19 @@
          xkbcomp :0 normal.xkb
      Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
 
-  2  Visiter https://github.com/dispoclavier/nouvel-azerty
-     Le dossier https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/compose
-       visualise le contenu des séquences et des touches mortes en deux parties ;
-     Le lien https://dispoclavier.com/nouvel-azerty/ ouvre la page d’accueil de ce nouvel AZERTY.
-
-  3  Aller sur la page de la version courante :
+  2  Aller sur la page de la version courante :
          https://github.com/dispoclavier/nouvel-azerty/releases/latest
 
-  4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
+  3  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-
      et se termine par le numéro de version et l’extension « .zip ».
 
-  5  Décompresser le dossier téléchargé.
+  4  Décompresser le dossier téléchargé.
 
-  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
+  5  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
      vers votre dossier `Home`.
 
-  7  Si votre dossier `Home` contient déjà un fichier invisible `.XCompose`, ajouter le contenu
+  6  Si votre dossier `Home` contient déjà un fichier invisible `.XCompose`, ajouter le contenu
      du fichier `Compose.yml` dans ce fichier au début pour ignorer les conflits, ou à la fin
      pour remplacer les conflits.
      Sinon, renommer `Compose.yml` en `.XCompose`. Si les règles de `en_US.UTF-8/Compose` doivent
@@ -132,17 +128,19 @@
      Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
      placer à la fin du fichier.
 
-  8  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce Compose.
+  7  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce Compose.
 
-  9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
+  8  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
          xkbcomp nouvel-azerty.xkb :0
-     Remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante choisie.
+     Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
+     choisie.
+
      Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches AB11 et AE13.
      AB11 est une touche supplémentaire entre § et Maj droite sur des claviers brésiliens,
      et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
 
-  Veiller à ce que la méthode d’entrée soit XIM.
-  Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
+  9  Veiller à ce que la méthode d’entrée soit XIM.
+     Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
 
 
   Ce nouvel AZERTY peut maintenant être testé.
@@ -154,5 +152,5 @@
 
   Critiques, suggestions et retours d’expérience
 
-  N’hésitez pas à envoyer toutes les critiques, suggestions d’amélioration et retours d’expérience
-  à l’adresse dev@dispoclavier.net. Merci d’avance de tous les retours.
+  N’hésitez pas à envoyer toutes vos critiques, suggestions d’amélioration et retours d’expérience
+  à l’adresse dev@dispoclavier.net. Merci d’avance de tous vns retours.
