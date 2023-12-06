@@ -1,4 +1,4 @@
-//                       Date: 2023-12-06T0143+0100
+//                       Date: 2023-12-06T0154+0100
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -102,7 +102,7 @@ default xkb_keycodes "evdev" {
 
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4;
-  // see the drawings showing the Neuville keyboard, at page 51, pages 61 through 65.
+  // see the drawings showing the Neuville keyboard, on page 51, pages 61 through 65.
   //
   // The options suggested below target mainly the key next to the current AltGr key.
 
