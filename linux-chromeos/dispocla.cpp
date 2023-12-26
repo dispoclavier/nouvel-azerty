@@ -1,4 +1,4 @@
-//                       Date: 2023-12-05T2339+0100
+//                       Date: 2023-12-26T2234+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -476,8 +476,8 @@ xkb_symbols "kbfrFRs" {
 	}; // U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4  4️⃣ keycap 4 emoji
 
 	key <AE05> {
-		[                        5,           dead_diaeresis,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ],
-		[                        5,           dead_diaeresis,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ]
+		[                        5,               dead_grave,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ],
+		[                        5,               dead_grave,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ]
 	}; // U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5  5️⃣ keycap 5 emoji
 
 	key <AE06> {
@@ -523,8 +523,8 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[               dead_grave,                     plus,                    U02B3,                    U207A,                        F,                    equal,                    UEFCB,               braceright ],
-		[               dead_grave,                     plus,                    U208A,                    U207A,                        F,                    equal,                    UEFCB,               braceright ]
+		[           dead_diaeresis,                     plus,                    U02B3,                    U207A,                        F,                    equal,                    UEFCB,               braceright ],
+		[           dead_diaeresis,                     plus,                    U208A,                    U207A,                        F,                    equal,                    UEFCB,               braceright ]
 	}; // U02B3 ʳ superscript small r; U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
