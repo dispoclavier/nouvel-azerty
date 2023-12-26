@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 1.5.0 (projet)
+
+* Touches mortes : Permuter les touches mortes tréma sur E05 et accent grave sur E12. (dispocla.cpp [51701f8](https://github.com/dispoclavier/nouvel-azerty/commit/51701f8ac1f15c71bd2b013b0fca918242a38a16))
+* Touches mortes : Accent grave : Ajouter "(" U0028, ")" U0029. (compose-2.yml [0750b87](https://github.com/dispoclavier/nouvel-azerty/commit/0750b87a74978085e2ad0e5d63cf357fd2381ed8))
+
 ## 1.4.0 (2023-12-06)
 
 * Variantes : Polynésie : Restaurer la touche morte accent grave, utiliser la touche E08 (ou E07 sur la variante redisposée) pour la touche morte macron et pour le ʻeta polynésien afin de l’avoir sur touche vive. (dispocla.cpp [dc8c459](https://github.com/dispoclavier/nouvel-azerty/commit/dc8c459efc700caa76344415f461a6d68f29efe6), [66de23c](https://github.com/dispoclavier/nouvel-azerty/commit/66de23c18921158c464c915a8baa7f117e826671))
