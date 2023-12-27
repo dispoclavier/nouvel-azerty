@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
-# 2023-12-06T0547+0100
+# 2023-12-27T1519+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -142,9 +142,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?,">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche += ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + U">double aigu<\/kbd>/g;
-				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + O">grave<\/kbd>/g;
+				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche 5( ou Maj + AltGr\/Option + O">grave<\/kbd>/g;
 				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque Maj + AltGr\/Option + Y">grec<\/kbd>/g;
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + E">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
