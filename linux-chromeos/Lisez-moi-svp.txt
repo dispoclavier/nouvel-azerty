@@ -1,5 +1,5 @@
-                      Date : 2023-12-06T0131+0100
-                   Version : 1.4.0
+                      Date : 2023-12-27T1458+0100
+                   Version : 1.5.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -152,5 +152,5 @@
 
   Critiques, suggestions et retours d’expérience
 
-  N’hésitez pas à envoyer toutes vos critiques, suggestions d’amélioration et retours d’expérience
-  à l’adresse dev@dispoclavier.net. Merci d’avance de tous vns retours.
+  N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
+  à l’adresse dev@dispoclavier.net. Merci d’avance de tous vos retours.
