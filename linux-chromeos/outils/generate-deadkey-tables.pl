@@ -2,6 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
+# 2024-01-14T2352+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -312,8 +313,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Medical notations/$1 notations médicales/g;
 				$line =~ s/( # .*) double turned comma quotation mark/$1 guillemet apostrophe double tourné/g;
 				$line =~ s/( # .*) single turned comma quotation mark/$1 guillemet apostrophe simple tourné/g;
-				$line =~ s/( # .*) low double comma quotation mark/$1 guillemet virgule double tourné/g;
-				$line =~ s/( # .*) low single comma quotation mark/$1 guillemet virgule simple tourné/g;
+				$line =~ s/( # .*) low double comma quotation mark/$1 guillemet virgule double/g;
+				$line =~ s/( # .*) low single comma quotation mark/$1 guillemet virgule simple/g;
 				$line =~ s/( # .*) double reversed comma quotation mark/$1 guillemet apostrophe double réfléchi/g;
 				$line =~ s/( # .*) single reversed comma quotation mark/$1 guillemet apostrophe simple réfléchi/g;
 				$line =~ s/( # .*) double comma quotation mark/$1 guillemet apostrophe double/g;
