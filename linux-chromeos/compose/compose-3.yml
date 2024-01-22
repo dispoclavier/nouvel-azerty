@@ -2089,11 +2089,11 @@
 #	O o	Œ œ	Ȣ ȣ	Ɔ ɔ	ᴖ ᴗ	ʘ ʘ	Ꞝ ꞝ	 ꬽ	Ο ο	𝒪 ℴ	𝕆 𝕠	𝔒 𝔬	𝖮 𝗈
 #	P p	· ·	Ƥ ƥ	Ꝓ ꝓ	Ꝕ ꝕ	͆ ◌̪	⃩ ◌̺	ʺ ʹ	Π π	𝒫 𝓅	ℙ 𝕡	𝔓 𝔭	𝖯 𝗉
 #	Q q	Ɂ ɂ	ʔ ʔ	Ꞌ ꞌ	ᵜ ᴥ	Ꜥ  ꜥ	Ꜫ ꜫ	ˮ ʼ	ϴ ϑ	𝒬 𝓆	ℚ 𝕢	𝔔 𝔮	𝖰 𝗊
-#	R r	Ǝ ǝ	˞ ˞	Ꝛ ꝛ	ꭈ ꭇ	ꭅ ꭋ	Ʀ ʀ	Ꞃ ꞃ	Ρ ρ	ℛ 𝓇	ℝ 𝕣	ℜ 𝔯	𝖱 𝗋
+#	R r	℟ ℟	˞ ˞	Ꝛ ꝛ	ꭈ ꭇ	ꭅ ꭋ	Ʀ ʀ	Ꞃ ꞃ	Ρ ρ	ℛ 𝓇	ℝ 𝕣	ℜ 𝔯	𝖱 𝗋
 #	S s	ẞ ß	Ʃ ʃ	ẛ ſ	ʲ  ʆ	ᴤ ꭍ	Ƨ ƨ	Ꞅ ꞅ	Σ σ	𝒮 𝓈	𝕊 𝕤	𝔖 𝔰	𝖲 𝗌
 #	T t	Þ þ	ϴ θ	Θ θ	 ʨ	ʧ ʦ	 ꝷ	Ꞇ ꞇ	Τ τ	𝒯 𝓉	𝕋 𝕥	𝔗 𝔱	𝖳 𝗍
 #	U u	Ʊ ʊ	Θ θ	Ɥ ɥ	Ɯ ɯ	ꭏ ꭎ	Ꞟ ꞟ	◌᷵ ◌̝	Θ θ	𝒰 𝓊	𝕌 𝕦	𝔘 𝔲	𝖴 𝗎
-#	V v	Ɲ ɲ	Ʋ ʋ	Ꞷ ꞷ	Ꝩ ꝩ	 ɷ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
+#	V v	℣ ℣	Ʋ ʋ	Ꞷ ꞷ	Ꝩ ꝩ	 ɷ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
 #	W w	Ʃ ʃ	ʬ ʷ	Ꟃ ꟃ	Ƿ ƿ	̍ ◌̩	 ʍ	 ʭ	∇ ς	𝒲 𝓌	𝕎 𝕨	𝔚 𝔴	𝖶 𝗐
 #	X x	Ɛ ɛ	ꭘ ꭖ	Ꭓ ꭓ	ꭔ ꭕ	̽ ◌͓	 ꭗ	 ꭙ	Χ χ	𝒳 𝓍	𝕏 𝕩	𝔛 𝔵	𝖷 𝗑
 #	Y y	Ɣ ɣ	Ƴ ƴ	Ʊ ʊ	Ỿ ỿ	 ꭚ	ʏ ʎ	̞ ◌̞	Υ υ	𝒴 𝓎	𝕐 𝕪	𝔜 𝔶	𝖸 𝗒
@@ -2171,10 +2171,10 @@
 <Multi_key><numbersign>                                                                        <Q> : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
 <UEFD0>                                                                                        <q> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
 <Multi_key><numbersign>                                                                        <q> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
-<UEFD0>                                                                                        <R> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
-<Multi_key><numbersign>                                                                        <R> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
-<UEFD0>                                                                                        <r> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
-<Multi_key><numbersign>                                                                        <r> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
+<UEFD0>                                                                                        <R> : "℟" U211F # RESPONSE
+<Multi_key><numbersign>                                                                        <R> : "℟" U211F # RESPONSE
+<UEFD0>                                                                                        <r> : "℟" U211F # RESPONSE
+<Multi_key><numbersign>                                                                        <r> : "℟" U211F # RESPONSE
 <UEFD0>                                                                                        <S> : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <Multi_key><numbersign>                                                                        <S> : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <UEFD0>                                                                                        <s> : "ß" U00DF # LATIN SMALL LETTER SHARP S
@@ -2187,10 +2187,10 @@
 <Multi_key><numbersign>                                                                        <U> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
 <UEFD0>                                                                                        <u> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
 <Multi_key><numbersign>                                                                        <u> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<UEFD0>                                                                                        <V> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
-<Multi_key><numbersign>                                                                        <V> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
-<UEFD0>                                                                                        <v> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
-<Multi_key><numbersign>                                                                        <v> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
+<UEFD0>                                                                                        <V> : "℣" U2123 # VERSICLE
+<Multi_key><numbersign>                                                                        <V> : "℣" U2123 # VERSICLE
+<UEFD0>                                                                                        <v> : "℣" U2123 # VERSICLE
+<Multi_key><numbersign>                                                                        <v> : "℣" U2123 # VERSICLE
 <UEFD0>                                                                                        <W> : "Ʃ" U01A9 # LATIN CAPITAL LETTER ESH
 <Multi_key><numbersign>                                                                        <W> : "Ʃ" U01A9 # LATIN CAPITAL LETTER ESH
 <UEFD0>                                                                                        <w> : "ʃ" U0283 # LATIN SMALL LETTER ESH
