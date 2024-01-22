@@ -2,7 +2,7 @@
 
 ## 1.6.0 (projet)
 
-* Touches mortes : Sélectrice de groupe : Groupe 1 : Remplacer "Ɲ" U019 et "ɲ" U0272 par "℟" U211F, "Ǝ" U018E et "ǝ" U01DD par "℣" U2123. (Les lettres remplacées sont dans le groupe 2 ; les symboles verset et répons seront aussi dans le groupe 4.) (compose-3.yml [b97308c](https://github.com/dispoclavier/nouvel-azerty/commit/b97308ccd60a189e7b7eea5bf03900eddfb6eee6))
+* Touches mortes : Sélectrice de groupe : Groupe 1 : Remplacer "Ɲ" U019 et "ɲ" U0272 par "℟" U211F, "Ǝ" U018E et "ǝ" U01DD par "℣" U2123. (Les lettres remplacées sont dans le groupe 2 ; les symboles « verset » et « répons » seront aussi dans le groupe 4.) (compose-3.yml [b97308c](https://github.com/dispoclavier/nouvel-azerty/commit/b97308ccd60a189e7b7eea5bf03900eddfb6eee6))
 
 ## 1.5.0 (2023-12-27)
 
