@@ -2844,12 +2844,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <q> : "ᴥ" U1D25 # LATIN LETTER AIN
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <q> : "ᴥ" U1D25 # LATIN LETTER AIN
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <q> : "ᴥ" U1D25 # LATIN LETTER AIN
-<UEFD0><4>                                                                                     <R> : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
-<Multi_key><numbersign><4>                                                                     <R> : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
-<UEFD0><KP_4>                                                                                  <R> : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
-<Multi_key><numbersign><KP_4>                                                                  <R> : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <R> : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <R> : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
+<UEFD0><4>                                                                                     <R> : "℟" U211F # RESPONSE
+<Multi_key><numbersign><4>                                                                     <R> : "℟" U211F # RESPONSE
+<UEFD0><KP_4>                                                                                  <R> : "℟" U211F # RESPONSE
+<Multi_key><numbersign><KP_4>                                                                  <R> : "℟" U211F # RESPONSE
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <R> : "℟" U211F # RESPONSE
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <R> : "℟" U211F # RESPONSE
 <UEFD0><4>                                                                                     <r> : "ꭇ" UAB47 # LATIN SMALL LETTER R WITHOUT HANDLE
 <Multi_key><numbersign><4>                                                                     <r> : "ꭇ" UAB47 # LATIN SMALL LETTER R WITHOUT HANDLE
 <UEFD0><KP_4>                                                                                  <r> : "ꭇ" UAB47 # LATIN SMALL LETTER R WITHOUT HANDLE
@@ -2892,30 +2892,30 @@
 <Multi_key><numbersign><KP_4>                                                                  <u> : "ɯ" U026F # LATIN SMALL LETTER TURNED M
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <u> : "ɯ" U026F # LATIN SMALL LETTER TURNED M
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <u> : "ɯ" U026F # LATIN SMALL LETTER TURNED M
-<UEFD0><4>                                                                                     <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
-<Multi_key><numbersign><4>                                                                     <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
-<UEFD0><KP_4>                                                                                  <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
-<Multi_key><numbersign><KP_4>                                                                  <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
-<UEFD0><4>                                                                                     <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
-<Multi_key><numbersign><4>                                                                     <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
-<UEFD0><KP_4>                                                                                  <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
-<Multi_key><numbersign><KP_4>                                                                  <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
-<UEFD0><4>                                                                                     <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
-<Multi_key><numbersign><4>                                                                     <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
-<UEFD0><KP_4>                                                                                  <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
-<Multi_key><numbersign><KP_4>                                                                  <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
-<UEFD0><4>                                                                                     <w> : "ƿ" U01BF # LATIN LETTER WYNN
-<Multi_key><numbersign><4>                                                                     <w> : "ƿ" U01BF # LATIN LETTER WYNN
-<UEFD0><KP_4>                                                                                  <w> : "ƿ" U01BF # LATIN LETTER WYNN
-<Multi_key><numbersign><KP_4>                                                                  <w> : "ƿ" U01BF # LATIN LETTER WYNN
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <w> : "ƿ" U01BF # LATIN LETTER WYNN
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <w> : "ƿ" U01BF # LATIN LETTER WYNN
+<UEFD0><4>                                                                                     <V> : "℣" U2123 # VERSICLE
+<Multi_key><numbersign><4>                                                                     <V> : "℣" U2123 # VERSICLE
+<UEFD0><KP_4>                                                                                  <V> : "℣" U2123 # VERSICLE
+<Multi_key><numbersign><KP_4>                                                                  <V> : "℣" U2123 # VERSICLE
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <V> : "℣" U2123 # VERSICLE
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <V> : "℣" U2123 # VERSICLE
+<UEFD0><4>                                                                                     <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
+<Multi_key><numbersign><4>                                                                     <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
+<UEFD0><KP_4>                                                                                  <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
+<Multi_key><numbersign><KP_4>                                                                  <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
+<UEFD0><4>                                                                                     <W> : 
+<Multi_key><numbersign><4>                                                                     <W> : 
+<UEFD0><KP_4>                                                                                  <W> : 
+<Multi_key><numbersign><KP_4>                                                                  <W> : 
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <W> : 
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <W> : 
+<UEFD0><4>                                                                                     <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
+<Multi_key><numbersign><4>                                                                     <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
+<UEFD0><KP_4>                                                                                  <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
+<Multi_key><numbersign><KP_4>                                                                  <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
 <UEFD0><4>                                                                                     <X> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
 <Multi_key><numbersign><4>                                                                     <X> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
 <UEFD0><KP_4>                                                                                  <X> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
@@ -3129,30 +3129,30 @@
 <Multi_key><numbersign><5>                                                                     <u> : "ꭎ" UAB4E # LATIN SMALL LETTER U WITH SHORT RIGHT LEG
 <UEFD0><KP_5>                                                                                  <u> : "ꭎ" UAB4E # LATIN SMALL LETTER U WITH SHORT RIGHT LEG
 <Multi_key><numbersign><KP_5>                                                                  <u> : "ꭎ" UAB4E # LATIN SMALL LETTER U WITH SHORT RIGHT LEG
-<UEFD0><5>                                                                                     <V> : 
-<Multi_key><numbersign><5>                                                                     <V> : 
-<UEFD0><KP_5>                                                                                  <V> : 
-<Multi_key><numbersign><KP_5>                                                                  <V> : 
-<UEFD0><5>                                                                                     <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
-<Multi_key><numbersign><5>                                                                     <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
-<UEFD0><KP_5>                                                                                  <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
-<Multi_key><numbersign><KP_5>                                                                  <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
-<UEFD0><5>                                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<Multi_key><numbersign><5>                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<UEFD0><KP_5>                                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<Multi_key><numbersign><KP_5>                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<UEFD0><5>                                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<Multi_key><numbersign><5>                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<UEFD0><KP_5>                                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<Multi_key><numbersign><KP_5>                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<UEFD0><5>                                                                                     <X> : "̽" U033D # COMBINING X ABOVE
-<Multi_key><numbersign><5>                                                                     <X> : "̽" U033D # COMBINING X ABOVE
-<UEFD0><KP_5>                                                                                  <X> : "̽" U033D # COMBINING X ABOVE
-<Multi_key><numbersign><KP_5>                                                                  <X> : "̽" U033D # COMBINING X ABOVE
-<UEFD0><5>                                                                                     <x> : "͓" U0353 # COMBINING X BELOW
-<Multi_key><numbersign><5>                                                                     <x> : "͓" U0353 # COMBINING X BELOW
-<UEFD0><KP_5>                                                                                  <x> : "͓" U0353 # COMBINING X BELOW
-<Multi_key><numbersign><KP_5>                                                                  <x> : "͓" U0353 # COMBINING X BELOW
+<UEFD0><5>                                                                                     <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
+<Multi_key><numbersign><5>                                                                     <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
+<UEFD0><KP_5>                                                                                  <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
+<Multi_key><numbersign><KP_5>                                                                  <V> : "Ꝩ" UA768 # LATIN CAPITAL LETTER VEND
+<UEFD0><5>                                                                                     <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
+<Multi_key><numbersign><5>                                                                     <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
+<UEFD0><KP_5>                                                                                  <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
+<Multi_key><numbersign><KP_5>                                                                  <v> : "ꝩ" UA769 # LATIN SMALL LETTER VEND
+<UEFD0><5>                                                                                     <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
+<Multi_key><numbersign><5>                                                                     <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
+<UEFD0><KP_5>                                                                                  <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
+<Multi_key><numbersign><KP_5>                                                                  <W> : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
+<UEFD0><5>                                                                                     <w> : "ƿ" U01BF # LATIN LETTER WYNN
+<Multi_key><numbersign><5>                                                                     <w> : "ƿ" U01BF # LATIN LETTER WYNN
+<UEFD0><KP_5>                                                                                  <w> : "ƿ" U01BF # LATIN LETTER WYNN
+<Multi_key><numbersign><KP_5>                                                                  <w> : "ƿ" U01BF # LATIN LETTER WYNN
+<UEFD0><5>                                                                                     <X> : 
+<Multi_key><numbersign><5>                                                                     <X> : 
+<UEFD0><KP_5>                                                                                  <X> : 
+<Multi_key><numbersign><KP_5>                                                                  <X> : 
+<UEFD0><5>                                                                                     <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<Multi_key><numbersign><5>                                                                     <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<UEFD0><KP_5>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<Multi_key><numbersign><KP_5>                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <UEFD0><5>                                                                                     <Y> : 
 <Multi_key><numbersign><5>                                                                     <Y> : 
 <UEFD0><KP_5>                                                                                  <Y> : 
@@ -3357,18 +3357,18 @@
 <Multi_key><numbersign><1>                                                                     <W> : 
 <UEFD0><KP_1>                                                                                  <W> : 
 <Multi_key><numbersign><KP_1>                                                                  <W> : 
-<UEFD0><1>                                                                                     <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
-<Multi_key><numbersign><1>                                                                     <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
-<UEFD0><KP_1>                                                                                  <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
-<Multi_key><numbersign><KP_1>                                                                  <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
+<UEFD0><1>                                                                                     <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
+<Multi_key><numbersign><1>                                                                     <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
+<UEFD0><KP_1>                                                                                  <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
+<Multi_key><numbersign><KP_1>                                                                  <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
 <UEFD0><1>                                                                                     <X> : 
 <Multi_key><numbersign><1>                                                                     <X> : 
 <UEFD0><KP_1>                                                                                  <X> : 
 <Multi_key><numbersign><KP_1>                                                                  <X> : 
-<UEFD0><1>                                                                                     <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
-<Multi_key><numbersign><1>                                                                     <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
-<UEFD0><KP_1>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
-<Multi_key><numbersign><KP_1>                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<UEFD0><1>                                                                                     <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<Multi_key><numbersign><1>                                                                     <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<UEFD0><KP_1>                                                                                  <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<Multi_key><numbersign><KP_1>                                                                  <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <UEFD0><1>                                                                                     <Y> : "ʏ" U028F # LATIN LETTER SMALL CAPITAL Y
 <Multi_key><numbersign><1>                                                                     <Y> : "ʏ" U028F # LATIN LETTER SMALL CAPITAL Y
 <UEFD0><KP_1>                                                                                  <Y> : "ʏ" U028F # LATIN LETTER SMALL CAPITAL Y
@@ -3566,22 +3566,22 @@
 <Multi_key><numbersign><2>                                                                     <v> : "ỽ" U1EFD # LATIN SMALL LETTER MIDDLE-WELSH V
 <UEFD0><KP_2>                                                                                  <v> : "ỽ" U1EFD # LATIN SMALL LETTER MIDDLE-WELSH V
 <Multi_key><numbersign><KP_2>                                                                  <v> : "ỽ" U1EFD # LATIN SMALL LETTER MIDDLE-WELSH V
-<UEFD0><2>                                                                                     <W> : 
-<Multi_key><numbersign><2>                                                                     <W> : 
-<UEFD0><KP_2>                                                                                  <W> : 
-<Multi_key><numbersign><KP_2>                                                                  <W> : 
-<UEFD0><2>                                                                                     <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
-<Multi_key><numbersign><2>                                                                     <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
-<UEFD0><KP_2>                                                                                  <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
-<Multi_key><numbersign><KP_2>                                                                  <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
-<UEFD0><2>                                                                                     <X> : 
-<Multi_key><numbersign><2>                                                                     <X> : 
-<UEFD0><KP_2>                                                                                  <X> : 
-<Multi_key><numbersign><KP_2>                                                                  <X> : 
-<UEFD0><2>                                                                                     <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<Multi_key><numbersign><2>                                                                     <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<UEFD0><KP_2>                                                                                  <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<Multi_key><numbersign><KP_2>                                                                  <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<UEFD0><2>                                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
+<Multi_key><numbersign><2>                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
+<UEFD0><KP_2>                                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
+<Multi_key><numbersign><KP_2>                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
+<UEFD0><2>                                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><numbersign><2>                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<UEFD0><KP_2>                                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><numbersign><KP_2>                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<UEFD0><2>                                                                                     <X> : "̽" U033D # COMBINING X ABOVE
+<Multi_key><numbersign><2>                                                                     <X> : "̽" U033D # COMBINING X ABOVE
+<UEFD0><KP_2>                                                                                  <X> : "̽" U033D # COMBINING X ABOVE
+<Multi_key><numbersign><KP_2>                                                                  <X> : "̽" U033D # COMBINING X ABOVE
+<UEFD0><2>                                                                                     <x> : "͓" U0353 # COMBINING X BELOW
+<Multi_key><numbersign><2>                                                                     <x> : "͓" U0353 # COMBINING X BELOW
+<UEFD0><KP_2>                                                                                  <x> : "͓" U0353 # COMBINING X BELOW
+<Multi_key><numbersign><KP_2>                                                                  <x> : "͓" U0353 # COMBINING X BELOW
 <UEFD0><2>                                                                                     <Y> : "̞" U031E # COMBINING DOWN TACK BELOW
 <Multi_key><numbersign><2>                                                                     <Y> : "̞" U031E # COMBINING DOWN TACK BELOW
 <UEFD0><KP_2>                                                                                  <Y> : "̞" U031E # COMBINING DOWN TACK BELOW
