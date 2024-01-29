@@ -645,6 +645,10 @@
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
 #   
+<Multi_key><V><slash>                                                                              : "℣" U2123 # VERSICLE
+<Multi_key><v><slash>                                                                              : "℣" U2123 # VERSICLE
+<Multi_key><R><slash>                                                                              : "℟" U211F # RESPONSE
+<Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
 <Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
 <Multi_key><S><exclam>                                                                             : "§" U00A7 # SECTION SIGN
