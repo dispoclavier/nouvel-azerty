@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.5.0"
+<UEFA0>                     : "version 1.6.0"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -628,6 +628,91 @@
 #   Multi_key
 #   Dchar: "¦" U00A6
 #
+#
+# # Abbreviations and Legal Symbols
+#
+#   Order may matter as for COPYRIGHT SIGN vs CARE OF.
+#   Case may matter as for ADDRESSED TO THE SUBJECT vs AKTIESELSKAB.
+#   en_US.UTF-8/Compose supports camelcase sequences, but these are unlikely.
+#
+#   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
+#
+#   Space termination is required for ℆ to prevent conflicts with math symbols.
+#
+#   S O sequences are used fo mathematical symbols, reverse sequences are used
+#   for circled letters, other casing pairs for German eszett as ss.
+#
+#   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
+#   Multi_key equivalents.
+#   
+<Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
+<Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
+<Multi_key><S><exclam>                                                                             : "§" U00A7 # SECTION SIGN
+<Multi_key><p><exclam>                                                                             : "¶" U00B6 # PILCROW SIGN
+<Multi_key><P><exclam>                                                                             : "¶" U00B6 # PILCROW SIGN
+<Multi_key><p><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
+<Multi_key><P><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
+<Multi_key><bar><p>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><bar><P>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
+<Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
+<Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
+<Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
+<Multi_key><o><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
+<Multi_key><O><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
+<Multi_key><O><B><Y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
+<Multi_key><o><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
+<Multi_key><O><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
+<Multi_key><c><o>                                                                                  : "℅" U2105 # CARE OF
+<Multi_key><C><O>                                                                                  : "℅" U2105 # CARE OF
+<Multi_key><o><backslash><c>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><O><backslash><C>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><o><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><O><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><c><r>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><C><R>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
+<Multi_key><C><L>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
+<Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
+<Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
+<Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
+<Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
+<Multi_key><nobreakspace><e>                                                                       : "℮" U212E # ESTIMATED SYMBOL
+<Multi_key><m><c>                                                                                  : "🅪" U1F16A # RAISED MC SIGN
+<Multi_key><M><C>                                                                                  : "🅪" U1F16A # RAISED MC SIGN
+<Multi_key><m><d>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
+<Multi_key><M><D>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
+<Multi_key><d><m>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
+<Multi_key><D><M>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
+<Multi_key><m><r>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><M><R>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><o><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><O><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><R><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><t><m>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
+<Multi_key><T><M>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
+<Multi_key><m><t>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
+<Multi_key><M><T>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
+<Multi_key><w><z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+<Multi_key><W><Z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+<Multi_key><z><w>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+<Multi_key><Z><W>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+#
+#
+# # Numero sign
+#
+#   The symbol is used in a number of languages, not French.
+#   <N><o> and <N><O> are supported by en_US.UTF-8/Compose.
+#
+<Multi_key><n><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><N><O>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
+#
+#
 # # Circled by leading o
 #
 #   This only supports numbers 1–10, since letters would conflict with œ, ꝏ, ©.
@@ -801,6 +886,8 @@
 <Multi_key><O><U>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><O><u>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><o><u>                                                                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
+<Multi_key><R><slash>                                                                              : "℟" U211F # RESPONSE
+<Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
 <Multi_key><R><U><M>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 <Multi_key><R><u><m>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 <Multi_key><r><u><m>                                                                               : "ꝵ" UA775 # LATIN SMALL LETTER RUM
@@ -832,6 +919,8 @@
 <Multi_key><u><i>                                                                                  : "ꭐ" UAB50 # LATIN SMALL LETTER UI
 <Multi_key><u><m>                                                                                  : "ꝸ" UA778 # LATIN SMALL LETTER UM
 <Multi_key><u><o>                                                                                  : "ꭣ" UAB63 # LATIN SMALL LETTER UO
+<Multi_key><V><slash>                                                                              : "℣" U2123 # VERSICLE
+<Multi_key><v><slash>                                                                              : "℣" U2123 # VERSICLE
 <Multi_key><V><Y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><V><y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><v><y>                                                                                  : "ꝡ" UA761 # LATIN SMALL LETTER VY
@@ -1099,90 +1188,6 @@
 <Multi_key><z><KP_6>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
 #
 #
-# # Legal symbols
-#
-#   Order may matter as for COPYRIGHT SIGN vs CARE OF.
-#   Case may matter as for ADDRESSED TO THE SUBJECT vs AKTIESELSKAB.
-#   en_US.UTF-8/Compose supports camelcase sequences, but these are unlikely.
-#
-#   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
-#
-#   Space termination is required for ℆ to prevent conflicts with math symbols.
-#
-#   S O sequences are used fo mathematical symbols, reverse sequences are used
-#   for circled letters, other casing pairs for German eszett as ss.
-#
-#   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
-#   Multi_key equivalents.
-#   
-<Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
-<Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
-<Multi_key><S><exclam>                                                                             : "§" U00A7 # SECTION SIGN
-<Multi_key><p><exclam>                                                                             : "¶" U00B6 # PILCROW SIGN
-<Multi_key><P><exclam>                                                                             : "¶" U00B6 # PILCROW SIGN
-<Multi_key><p><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
-<Multi_key><P><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
-<Multi_key><bar><p>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
-<Multi_key><bar><P>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
-<Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
-<Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
-<Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
-<Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
-<Multi_key><o><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><O><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><O><B><Y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><o><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
-<Multi_key><O><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
-<Multi_key><c><o>                                                                                  : "℅" U2105 # CARE OF
-<Multi_key><C><O>                                                                                  : "℅" U2105 # CARE OF
-<Multi_key><o><backslash><c>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
-<Multi_key><O><backslash><C>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
-<Multi_key><o><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
-<Multi_key><O><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
-<Multi_key><c><r>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
-<Multi_key><C><R>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
-<Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
-<Multi_key><C><L>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
-<Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
-<Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
-<Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
-<Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
-<Multi_key><nobreakspace><e>                                                                       : "℮" U212E # ESTIMATED SYMBOL
-<Multi_key><m><c>                                                                                  : "🅪" U1F16A # RAISED MC SIGN
-<Multi_key><M><C>                                                                                  : "🅪" U1F16A # RAISED MC SIGN
-<Multi_key><m><d>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
-<Multi_key><M><D>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
-<Multi_key><d><m>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
-<Multi_key><D><M>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
-<Multi_key><m><r>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
-<Multi_key><M><R>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
-<Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
-<Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
-<Multi_key><o><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
-<Multi_key><O><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
-<Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
-<Multi_key><R><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
-<Multi_key><t><m>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
-<Multi_key><T><M>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
-<Multi_key><m><t>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
-<Multi_key><M><T>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
-<Multi_key><w><z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
-<Multi_key><W><Z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
-<Multi_key><z><w>                                                                                  : "🄮" U1F12E # CIRCLED WZ
-<Multi_key><Z><W>                                                                                  : "🄮" U1F12E # CIRCLED WZ
-#
-#
-# # Numero sign
-#
-#   The symbol is used in a number of languages, not French.
-#   <N><o> and <N><O> are supported by en_US.UTF-8/Compose.
-#
-<Multi_key><n><o>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><N><O>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
-#
-#
 # # Vulgar fractions
 #
 #   Since the design of this file was changed to become standalone,
@@ -1365,84 +1370,6 @@
 #
 <Multi_key><l><p><t><r>                                                                            : "☚" leftpointer  # U261A BLACK LEFT POINTING INDEX, not U261C WHITE LEFT POINTING INDEX
 <Multi_key><r><p><t><r>                                                                            : "☛" rightpointer # U261B BLACK RIGHT POINTING INDEX, not U261E WHITE RIGHT POINTING INDEX
-#
-#
-# # Currency symbols
-#
-#   Symbol-letter sequences are required for precomposed diacritics, with
-#   EQUALS SIGN used for regional indicator letters, so only letter-symbol
-#   is available for currency symbols.
-#
-#   These are symbols supported by en_US.UTF-8/Compose, including commented-out
-#   ones completed on a best-guess basis.
-#   But unlike set up in en_US.UTF-8/Compose, <Multi_key><C><bar> is "₵" U20B5.
-#   See #*# CURRENCY
-#   And "¢" U00A2 is <Multi_key><bar><c> only, due to conflicts with "ȼ" U023C,
-#   "⊄" U2284 and "⊈" U2288.
-#   See #*# STROKE
-#   See #*# CURRENCY
-#
-#   The generic currency symbol `¤` U00A4 is supported by case insensitive X O
-#   sequences. Reverse sequences conflict with mathematical symbols.
-#
-<Multi_key><A><equal>                                                                              : "₳" U20B3 # AUSTRAL SIGN
-<Multi_key><A><minus>                                                                              : "₳" U20B3 # AUSTRAL SIGN
-<Multi_key><C><bar>                                                                                : "₵" U20B5 # CEDI SIGN
-<Multi_key><bar><c>                                                                                : "¢" U00A2 # CENT SIGN
-<Multi_key><c><e>                                                                                  : "₠" U20A0 # EURO-CURRENCY SIGN
-<Multi_key><C><E>                                                                                  : "₠" U20A0 # EURO-CURRENCY SIGN
-<Multi_key><C><equal>                                                                              : "€" U20AC # EURO SIGN
-<Multi_key><C><r>                                                                                  : "₢" U20A2 # CRUZEIRO SIGN
-<Multi_key><C><slash>                                                                              : "₡" U20A1 # COLON SIGN
-<Multi_key><d><equal>                                                                              : "₫" U20AB # DONG SIGN
-<Multi_key><D><r>                                                                                  : "₯" U20AF # DRACHMA SIGN
-<Multi_key><e><equal>                                                                              : "€" U20AC # EURO SIGN
-<Multi_key><E><equal>                                                                              : "€" U20AC # EURO SIGN
-<Multi_key><F><F>                                                                                  : "₣" U20A3 # FRENCH FRANC SIGN
-<Multi_key><F><f>                                                                                  : "₣" U20A3 # FRENCH FRANC SIGN
-<Multi_key><f><f>                                                                                  : "₣" U20A3 # FRENCH FRANC SIGN
-<Multi_key><g><bar>                                                                                : "₲" U20B2 # GUARANI SIGN
-<Multi_key><G><bar>                                                                                : "₲" U20B2 # GUARANI SIGN
-<Multi_key><G><slash>                                                                              : "₲" U20B2 # GUARANI SIGN
-<Multi_key><k><equal>                                                                              : "₭" U20AD # KIP SIGN
-<Multi_key><K><equal>                                                                              : "₭" U20AD # KIP SIGN
-<Multi_key><k><minus>                                                                              : "₭" U20AD # KIP SIGN
-<Multi_key><K><minus>                                                                              : "₭" U20AD # KIP SIGN
-<Multi_key><L><equal>                                                                              : "₤" U20A4 # LIRA SIGN
-<Multi_key><l><minus>                                                                              : "£" U00A3 # POUND SIGN
-<Multi_key><L><minus>                                                                              : "£" U00A3 # POUND SIGN
-<Multi_key><m><slash>                                                                              : "₥" U20A5 # MILL SIGN
-<Multi_key><n><equal>                                                                              : "₦" U20A6 # NAIRA SIGN
-<Multi_key><N><equal>                                                                              : "₦" U20A6 # NAIRA SIGN
-<Multi_key><n><s>                                                                                  : "₪" U20AA # NEW SHEQEL SIGN
-<Multi_key><N><S>                                                                                  : "₪" U20AA # NEW SHEQEL SIGN
-<Multi_key><p><equal>                                                                              : "₱" U20B1 # PESO SIGN
-<Multi_key><P><equal>                                                                              : "₱" U20B1 # PESO SIGN
-<Multi_key><P><f>                                                                                  : "₰" U20B0 # GERMAN PENNY SIGN
-<Multi_key><p><minus>                                                                              : "₱" U20B1 # PESO SIGN
-<Multi_key><P><minus>                                                                              : "₱" U20B1 # PESO SIGN
-<Multi_key><P><t>                                                                                  : "₧" U20A7 # PESETA SIGN
-<Multi_key><r><equal>                                                                              : "₹" U20B9 # INDIAN RUPEE SIGN
-<Multi_key><R><equal>                                                                              : "₹" U20B9 # INDIAN RUPEE SIGN
-<Multi_key><R><s>                                                                                  : "₨" U20A8 # RUPEE SIGN
-<Multi_key><s><equal>                                                                              : "₴" U20B4 # HRYVNIA SIGN
-<Multi_key><S><equal>                                                                              : "₴" U20B4 # HRYVNIA SIGN
-<Multi_key><s><minus>                                                                              : "₴" U20B4 # HRYVNIA SIGN
-<Multi_key><S><minus>                                                                              : "₴" U20B4 # HRYVNIA SIGN
-<Multi_key><t><equal>                                                                              : "₮" U20AE # TUGRIK SIGN
-<Multi_key><T><equal>                                                                              : "₮" U20AE # TUGRIK SIGN
-<Multi_key><t><minus>                                                                              : "₮" U20AE # TUGRIK SIGN
-<Multi_key><T><minus>                                                                              : "₮" U20AE # TUGRIK SIGN
-<Multi_key><w><equal>                                                                              : "₩" U20A9 # WON SIGN
-<Multi_key><W><equal>                                                                              : "₩" U20A9 # WON SIGN
-<Multi_key><x><o>                                                                                  : "¤" U00A4 # CURRENCY SIGN
-<Multi_key><X><o>                                                                                  : "¤" U00A4 # CURRENCY SIGN
-<Multi_key><x><O>                                                                                  : "¤" U00A4 # CURRENCY SIGN
-<Multi_key><X><O>                                                                                  : "¤" U00A4 # CURRENCY SIGN
-<Multi_key><y><equal>                                                                              : "¥" U00A5 # YEN SIGN
-<Multi_key><Y><equal>                                                                              : "¥" U00A5 # YEN SIGN
-<Multi_key><y><minus>                                                                              : "¥" U00A5 # YEN SIGN
-<Multi_key><Y><minus>                                                                              : "¥" U00A5 # YEN SIGN
 #
 #
 # # Currency symbols by ISO codes
