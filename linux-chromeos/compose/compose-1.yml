@@ -890,8 +890,7 @@
 <Multi_key><O><U>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><O><u>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><o><u>                                                                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
-<Multi_key><R><slash>                                                                              : "℟" U211F # RESPONSE
-<Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
+<Multi_key><r><r>                                                                                  : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
 <Multi_key><R><U><M>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 <Multi_key><R><u><m>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 <Multi_key><r><u><m>                                                                               : "ꝵ" UA775 # LATIN SMALL LETTER RUM
@@ -923,8 +922,6 @@
 <Multi_key><u><i>                                                                                  : "ꭐ" UAB50 # LATIN SMALL LETTER UI
 <Multi_key><u><m>                                                                                  : "ꝸ" UA778 # LATIN SMALL LETTER UM
 <Multi_key><u><o>                                                                                  : "ꭣ" UAB63 # LATIN SMALL LETTER UO
-<Multi_key><V><slash>                                                                              : "℣" U2123 # VERSICLE
-<Multi_key><v><slash>                                                                              : "℣" U2123 # VERSICLE
 <Multi_key><V><Y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><V><y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><v><y>                                                                                  : "ꝡ" UA761 # LATIN SMALL LETTER VY
