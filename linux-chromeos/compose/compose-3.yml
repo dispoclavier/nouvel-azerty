@@ -2076,26 +2076,26 @@
 #	B b	Ɖ ɖ	Ɓ ɓ	Ꞵ ꞵ	␢ ␢	ʘ ʘ	Ƅ ƅ	ƾ ʖ	Β β	ℬ 𝒷	𝔹 𝕓	𝔅 𝔟	𝖡 𝖻
 #	C c	Ɔ ɔ	Ƈ ƈ	Ꜿ ꜿ	 ɕ	ʗ ʗ	Ꝯ ꝯ	ʢ ʕ	Ψ ψ	𝒞 𝒸	ℂ 𝕔	ℭ 𝔠	𝖢 𝖼
 #	D d	Ð ð	Ɖ ɖ	ᵟ ẟ	ʤ ʣ	͑ ʿ	̜ ꝱ	Ꝺ ꝺ	Δ δ	𝒟 𝒹	𝔻 𝕕	𝔇 𝔡	𝖣 𝖽
-#	E e	€ €	Ǝ ǝ	Ɛ ɛ	Ə ə	ʚ ɞ	Ꝫ ꝫ	 ꬲ	Ε ε	ℰ ℯ	𝔼 𝕖	𝔈 𝔢	𝖤 𝖾
+#	E e	€ €	Ǝ ǝ	Ɛ ɛ	Ə ə	ʚ ɞ	Ꝫ ꝫ	˓ ꬲ	Ε ε	ℰ ℯ	𝔼 𝕖	𝔈 𝔢	𝖤 𝖾
 #	F f	Ƒ ƒ	ẛ ſ	ⱷ ɸ	ʩ ꬵ	͗ ʾ	̹ ˒	Ꝼ ꝼ	Φ φ	ℱ 𝒻	𝔽 𝕗	𝔉 𝔣	𝖥 𝖿
 #	G g	Ə ə	Ȝ ȝ	Ɣ ɣ	 ɤ	Ɡ ɡ	Ƣ ƣ	Ᵹ ᵹ	Γ γ	𝒢 ℊ	𝔾 𝕘	𝔊 𝔤	𝖦 𝗀
-#	H h	Ꜧ ꜧ	Ɦ ɦ	Ɥ ɥ	Ⱶ ⱶ	ǁ ǁ	ꝶ ꝵ	̘ ◌̟	Η η	ℋ 𝒽	ℍ 𝕙	ℌ 𝔥	𝖧 𝗁
+#	H h	Ǝ ǝ	Ꜧ ꜧ	Ɦ ɦ	Ɥ ɥ	Ⱶ ⱶ	ꝶ ꝵ	̘ ◌̟	Η η	ℋ 𝒽	ℍ 𝕙	ℌ 𝔥	𝖧 𝗁
 #	I i	Ĳ ĳ	Ɪ ɪ	Ɩ ɩ	Ꞽ ꞽ	ǀ ǀ	Ꝭ ꝭ	ꟾ 	Ι ι	ℐ 𝒾	𝕀 𝕚	ℑ 𝔦	𝖨 𝗂
-#	J j	˓ ʿ	Ꞌ ꞌ	Ʝ ʝ	⁀ ‿	ǂ ǂ	Ꝝ ꝝ	̙ ◌̠	Ξ ξ	𝒥 𝒿	𝕁 𝕛	𝔍 𝔧	𝖩 𝗃
-#	K k	˒ ʾ	Ƙ ƙ	 ĸ	𝼊 𝼊	ǃ ǃ	Ꜭ ꜭ	Ꜯ ꜯ	Κ κ	𝒦 𝓀	𝕂 𝕜	𝔎 𝔨	𝖪 𝗄
-#	L l	ℓ ℓ	Ꝇ ꝇ	ꬷ ƛ	ɮ ʫ	ꬷ ʪ	 ꝲ	Ỻ ỻ	Λ λ	ℒ 𝓁	𝕃 𝕝	𝔏 𝔩	𝖫 𝗅
+#	J j	Ɲ ɲ	Ꞌ ꞌ	Ʝ ʝ	⁀ ‿	ǂ ǂ	Ꝝ ꝝ	̙ ◌̠	Ξ ξ	𝒥 𝒿	𝕁 𝕛	𝔍 𝔧	𝖩 𝗃
+#	K k	ʿ ʾ	Ƙ ƙ	 ĸ	𝼊 𝼊	ǃ ǃ	Ꜭ ꜭ	Ꜯ ꜯ	Κ κ	𝒦 𝓀	𝕂 𝕜	𝔎 𝔨	𝖪 𝗄
+#	L l	ℓ ℓ	Ꝇ ꝇ	ꬷ ƛ	ɮ ʫ	ǁ ǁ	 ꝲ	Ỻ ỻ	Λ λ	ℒ 𝓁	𝕃 𝕝	𝔏 𝔩	𝖫 𝗅
 #	M m	Ɩ ɩ	Ɱ ɱ	 ɰ	Ɯ ɯ	̻ ◌̼	 ꝳ	ꟿ ◌̫	Μ μ	ℳ 𝓂	𝕄 𝕞	𝔐 𝔪	𝖬 𝗆
 #	N n	Ŋ ŋ	Ɲ ɲ	Ƞ ƞ	ꬻ ȵ	̚ ◌͉	 ꝴ	 ŉ	Ν ν	𝒩 𝓃	ℕ 𝕟	𝔑 𝔫	𝖭 𝗇
-#	O o	Œ œ	Ȣ ȣ	Ɔ ɔ	ᴖ ᴗ	ʘ ʘ	Ꞝ ꞝ	 ꬽ	Ο ο	𝒪 ℴ	𝕆 𝕠	𝔒 𝔬	𝖮 𝗈
+#	O o	Œ œ	Ȣ ȣ	Ɔ ɔ	ᴖ ᴗ	ʘ ʘ	Ꞝ ꞝ	˒ ꬽ	Ο ο	𝒪 ℴ	𝕆 𝕠	𝔒 𝔬	𝖮 𝗈
 #	P p	· ·	Ƥ ƥ	Ꝓ ꝓ	Ꝕ ꝕ	͆ ◌̪	⃩ ◌̺	ʺ ʹ	Π π	𝒫 𝓅	ℙ 𝕡	𝔓 𝔭	𝖯 𝗉
 #	Q q	Ɂ ɂ	ʔ ʔ	Ꞌ ꞌ	ᵜ ᴥ	Ꜥ  ꜥ	Ꜫ ꜫ	ˮ ʼ	ϴ ϑ	𝒬 𝓆	ℚ 𝕢	𝔔 𝔮	𝖰 𝗊
-#	R r	℟ ℟	˞ ˞	Ꝛ ꝛ	ꭈ ꭇ	ꭅ ꭋ	Ʀ ʀ	Ꞃ ꞃ	Ρ ρ	ℛ 𝓇	ℝ 𝕣	ℜ 𝔯	𝖱 𝗋
+#	R r	℟ ℟	˞ ˞	Ꝛ ꝛ	℟ ꭇ	ꭅ ꭋ	Ʀ ʀ	Ꞃ ꞃ	Ρ ρ	ℛ 𝓇	ℝ 𝕣	ℜ 𝔯	𝖱 𝗋
 #	S s	ẞ ß	Ʃ ʃ	ẛ ſ	ʲ  ʆ	ᴤ ꭍ	Ƨ ƨ	Ꞅ ꞅ	Σ σ	𝒮 𝓈	𝕊 𝕤	𝔖 𝔰	𝖲 𝗌
 #	T t	Þ þ	ϴ θ	Θ θ	 ʨ	ʧ ʦ	 ꝷ	Ꞇ ꞇ	Τ τ	𝒯 𝓉	𝕋 𝕥	𝔗 𝔱	𝖳 𝗍
 #	U u	Ʊ ʊ	Θ θ	Ɥ ɥ	Ɯ ɯ	ꭏ ꭎ	Ꞟ ꞟ	◌᷵ ◌̝	Θ θ	𝒰 𝓊	𝕌 𝕦	𝔘 𝔲	𝖴 𝗎
-#	V v	℣ ℣	Ʋ ʋ	Ꞷ ꞷ	Ꝩ ꝩ	 ɷ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
-#	W w	Ʃ ʃ	ʬ ʷ	Ꟃ ꟃ	Ƿ ƿ	̍ ◌̩	 ʍ	 ʭ	∇ ς	𝒲 𝓌	𝕎 𝕨	𝔚 𝔴	𝖶 𝗐
-#	X x	Ɛ ɛ	ꭘ ꭖ	Ꭓ ꭓ	ꭔ ꭕ	̽ ◌͓	 ꭗ	 ꭙ	Χ χ	𝒳 𝓍	𝕏 𝕩	𝔛 𝔵	𝖷 𝗑
+#	V v	℣ ℣	Ʋ ʋ	Ꞷ ꞷ	℣ ɷ	Ꝩ ꝩ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
+#	W w	Ʃ ʃ	ʬ ʷ	Ꟃ ꟃ	 ʍ	Ƿ ƿ	 ʭ	̍ ◌̩	∇ ς	𝒲 𝓌	𝕎 𝕨	𝔚 𝔴	𝖶 𝗐
+#	X x	Ɛ ɛ	ꭘ ꭖ	Ꭓ ꭓ	ꭔ ꭕ	 ꭗ	 ꭙ	̽ ◌͓	Χ χ	𝒳 𝓍	𝕏 𝕩	𝔛 𝔵	𝖷 𝗑
 #	Y y	Ɣ ɣ	Ƴ ƴ	Ʊ ʊ	Ỿ ỿ	 ꭚ	ʏ ʎ	̞ ◌̞	Υ υ	𝒴 𝓎	𝕐 𝕪	𝔜 𝔶	𝖸 𝗒
 #	Z z	Ʒ ʒ	Ɀ ɀ	Ᶎ ᶎ	Ⱬ ⱬ	ʓ ʑ	Ꝣ ꝣ	 ʐ	Ζ ζ	𝒵 𝓏	ℤ 𝕫	ℨ 𝔷	𝖹 𝗓
 #
@@ -2131,20 +2131,20 @@
 <Multi_key><numbersign>                                                                        <G> : "Ə" U018F # LATIN CAPITAL LETTER SCHWA
 <UEFD0>                                                                                        <g> : "ə" U0259 # LATIN SMALL LETTER SCHWA
 <Multi_key><numbersign>                                                                        <g> : "ə" U0259 # LATIN SMALL LETTER SCHWA
-<UEFD0>                                                                                        <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
-<Multi_key><numbersign>                                                                        <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
-<UEFD0>                                                                                        <h> : "ꜧ" UA727 # LATIN SMALL LETTER HENG
-<Multi_key><numbersign>                                                                        <h> : "ꜧ" UA727 # LATIN SMALL LETTER HENG
+<UEFD0>                                                                                        <H> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
+<Multi_key><numbersign>                                                                        <H> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
+<UEFD0>                                                                                        <h> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
+<Multi_key><numbersign>                                                                        <h> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <UEFD0>                                                                                        <I> : "Ĳ" U0132 # LATIN CAPITAL LIGATURE IJ
 <Multi_key><numbersign>                                                                        <I> : "Ĳ" U0132 # LATIN CAPITAL LIGATURE IJ
 <UEFD0>                                                                                        <i> : "ĳ" U0133 # LATIN SMALL LIGATURE IJ
 <Multi_key><numbersign>                                                                        <i> : "ĳ" U0133 # LATIN SMALL LIGATURE IJ
-<UEFD0>                                                                                        <J> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<Multi_key><numbersign>                                                                        <J> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<UEFD0>                                                                                        <j> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
-<Multi_key><numbersign>                                                                        <j> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
-<UEFD0>                                                                                        <K> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
-<Multi_key><numbersign>                                                                        <K> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<UEFD0>                                                                                        <J> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
+<Multi_key><numbersign>                                                                        <J> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
+<UEFD0>                                                                                        <j> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
+<Multi_key><numbersign>                                                                        <j> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
+<UEFD0>                                                                                        <K> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
+<Multi_key><numbersign>                                                                        <K> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <UEFD0>                                                                                        <k> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <Multi_key><numbersign>                                                                        <k> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <UEFD0>                                                                                        <L> : "ℓ" U2113 # SCRIPT SMALL L
@@ -2242,10 +2242,10 @@
 <Multi_key><numbersign><numbersign>                                                            <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
 <UEFD0><UEFD0>                                                                                 <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
 <Multi_key><numbersign><numbersign>                                                            <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
-<UEFD0><UEFD0>                                                                                 <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
-<Multi_key><numbersign><numbersign>                                                            <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
-<UEFD0><UEFD0>                                                                                 <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
-<Multi_key><numbersign><numbersign>                                                            <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<UEFD0><UEFD0>                                                                                 <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
+<Multi_key><numbersign><numbersign>                                                            <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
+<UEFD0><UEFD0>                                                                                 <h> : "ꜧ" UA727 # LATIN SMALL LETTER HENG
+<Multi_key><numbersign><numbersign>                                                            <h> : "ꜧ" UA727 # LATIN SMALL LETTER HENG
 <UEFD0><UEFD0>                                                                                 <I> : "Ɪ" UA7AE # LATIN CAPITAL LETTER SMALL CAPITAL I
 <Multi_key><numbersign><numbersign>                                                            <I> : "Ɪ" UA7AE # LATIN CAPITAL LETTER SMALL CAPITAL I
 <UEFD0><UEFD0>                                                                                 <i> : "ɪ" U026A # LATIN LETTER SMALL CAPITAL I
@@ -2407,18 +2407,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
 <UEFD0><UEFD0><UEFD0>                                                                          <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA 
 <Multi_key><numbersign><numbersign><numbersign>                                                <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA 
-<UEFD0><3>                                                                                     <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
-<Multi_key><numbersign><3>                                                                     <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
-<UEFD0><KP_3>                                                                                  <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
-<Multi_key><numbersign><KP_3>                                                                  <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
-<UEFD0><UEFD0><UEFD0>                                                                          <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
-<Multi_key><numbersign><numbersign><numbersign>                                                <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
-<UEFD0><3>                                                                                     <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
-<Multi_key><numbersign><3>                                                                     <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
-<UEFD0><KP_3>                                                                                  <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
-<Multi_key><numbersign><KP_3>                                                                  <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
-<UEFD0><UEFD0><UEFD0>                                                                          <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
-<Multi_key><numbersign><numbersign><numbersign>                                                <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
+<UEFD0><3>                                                                                     <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
+<Multi_key><numbersign><3>                                                                     <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
+<UEFD0><KP_3>                                                                                  <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
+<Multi_key><numbersign><KP_3>                                                                  <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
+<UEFD0><UEFD0><UEFD0>                                                                          <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
+<Multi_key><numbersign><numbersign><numbersign>                                                <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
+<UEFD0><3>                                                                                     <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<Multi_key><numbersign><3>                                                                     <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<UEFD0><KP_3>                                                                                  <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<Multi_key><numbersign><KP_3>                                                                  <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<UEFD0><UEFD0><UEFD0>                                                                          <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<Multi_key><numbersign><numbersign><numbersign>                                                <h> : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
 <UEFD0><3>                                                                                     <I> : "Ɩ" U0196 # LATIN CAPITAL LETTER IOTA
 <Multi_key><numbersign><3>                                                                     <I> : "Ɩ" U0196 # LATIN CAPITAL LETTER IOTA
 <UEFD0><KP_3>                                                                                  <I> : "Ɩ" U0196 # LATIN CAPITAL LETTER IOTA
@@ -2724,18 +2724,18 @@
 <Multi_key><numbersign><KP_4>                                                                  <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
-<UEFD0><4>                                                                                     <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
-<Multi_key><numbersign><4>                                                                     <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
-<UEFD0><KP_4>                                                                                  <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
-<Multi_key><numbersign><KP_4>                                                                  <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
-<UEFD0><4>                                                                                     <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
-<Multi_key><numbersign><4>                                                                     <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
-<UEFD0><KP_4>                                                                                  <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
-<Multi_key><numbersign><KP_4>                                                                  <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
+<UEFD0><4>                                                                                     <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
+<Multi_key><numbersign><4>                                                                     <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
+<UEFD0><KP_4>                                                                                  <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
+<Multi_key><numbersign><KP_4>                                                                  <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
+<UEFD0><4>                                                                                     <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
+<Multi_key><numbersign><4>                                                                     <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
+<UEFD0><KP_4>                                                                                  <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
+<Multi_key><numbersign><KP_4>                                                                  <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
 <UEFD0><4>                                                                                     <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <Multi_key><numbersign><4>                                                                     <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <UEFD0><KP_4>                                                                                  <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
@@ -3017,14 +3017,14 @@
 <Multi_key><numbersign><5>                                                                     <g> : "ɡ" U0261 # LATIN SMALL LETTER SCRIPT G
 <UEFD0><KP_5>                                                                                  <g> : "ɡ" U0261 # LATIN SMALL LETTER SCRIPT G
 <Multi_key><numbersign><KP_5>                                                                  <g> : "ɡ" U0261 # LATIN SMALL LETTER SCRIPT G
-<UEFD0><5>                                                                                     <H> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<Multi_key><numbersign><5>                                                                     <H> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<UEFD0><KP_5>                                                                                  <H> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<Multi_key><numbersign><KP_5>                                                                  <H> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<UEFD0><5>                                                                                     <h> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<Multi_key><numbersign><5>                                                                     <h> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<UEFD0><KP_5>                                                                                  <h> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
-<Multi_key><numbersign><KP_5>                                                                  <h> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<UEFD0><5>                                                                                     <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
+<Multi_key><numbersign><5>                                                                     <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
+<UEFD0><KP_5>                                                                                  <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
+<Multi_key><numbersign><KP_5>                                                                  <H> : "Ⱶ" U2C75 # LATIN CAPITAL LETTER HALF H
+<UEFD0><5>                                                                                     <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
+<Multi_key><numbersign><5>                                                                     <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
+<UEFD0><KP_5>                                                                                  <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
+<Multi_key><numbersign><KP_5>                                                                  <h> : "ⱶ" U2C76 # LATIN SMALL LETTER HALF H
 <UEFD0><5>                                                                                     <I> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
 <Multi_key><numbersign><5>                                                                     <I> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
 <UEFD0><KP_5>                                                                                  <I> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
@@ -3049,14 +3049,14 @@
 <Multi_key><numbersign><5>                                                                     <k> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
 <UEFD0><KP_5>                                                                                  <k> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
 <Multi_key><numbersign><KP_5>                                                                  <k> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
-<UEFD0><5>                                                                                     <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<Multi_key><numbersign><5>                                                                     <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<UEFD0><KP_5>                                                                                  <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<Multi_key><numbersign><KP_5>                                                                  <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<UEFD0><5>                                                                                     <l> : "ʪ" U02AA # LATIN SMALL LETTER LS DIGRAPH
-<Multi_key><numbersign><5>                                                                     <l> : "ʪ" U02AA # LATIN SMALL LETTER LS DIGRAPH
-<UEFD0><KP_5>                                                                                  <l> : "ʪ" U02AA # LATIN SMALL LETTER LS DIGRAPH
-<Multi_key><numbersign><KP_5>                                                                  <l> : "ʪ" U02AA # LATIN SMALL LETTER LS DIGRAPH
+<UEFD0><5>                                                                                     <L> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><numbersign><5>                                                                     <L> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<UEFD0><KP_5>                                                                                  <L> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><numbersign><KP_5>                                                                  <L> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<UEFD0><5>                                                                                     <l> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><numbersign><5>                                                                     <l> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<UEFD0><KP_5>                                                                                  <l> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><numbersign><KP_5>                                                                  <l> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
 <UEFD0><5>                                                                                     <M> : "̻" U033B # COMBINING SQUARE BELOW
 <Multi_key><numbersign><5>                                                                     <M> : "̻" U033B # COMBINING SQUARE BELOW
 <UEFD0><KP_5>                                                                                  <M> : "̻" U033B # COMBINING SQUARE BELOW
@@ -3422,10 +3422,10 @@
 <Multi_key><numbersign><2>                                                                     <d> : "ꝺ" UA77A # LATIN SMALL LETTER INSULAR D
 <UEFD0><KP_2>                                                                                  <d> : "ꝺ" UA77A # LATIN SMALL LETTER INSULAR D
 <Multi_key><numbersign><KP_2>                                                                  <d> : "ꝺ" UA77A # LATIN SMALL LETTER INSULAR D
-<UEFD0><2>                                                                                     <E> : 
-<Multi_key><numbersign><2>                                                                     <E> : 
-<UEFD0><KP_2>                                                                                  <E> : 
-<Multi_key><numbersign><KP_2>                                                                  <E> : 
+<UEFD0><2>                                                                                     <E> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<Multi_key><numbersign><2>                                                                     <E> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<UEFD0><KP_2>                                                                                  <E> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<Multi_key><numbersign><KP_2>                                                                  <E> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <UEFD0><2>                                                                                     <e> : "ꬲ" UAB32 # LATIN SMALL LETTER BLACKLETTER E
 <Multi_key><numbersign><2>                                                                     <e> : "ꬲ" UAB32 # LATIN SMALL LETTER BLACKLETTER E
 <UEFD0><KP_2>                                                                                  <e> : "ꬲ" UAB32 # LATIN SMALL LETTER BLACKLETTER E
@@ -3502,10 +3502,10 @@
 <Multi_key><numbersign><2>                                                                     <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
 <UEFD0><KP_2>                                                                                  <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
 <Multi_key><numbersign><KP_2>                                                                  <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-<UEFD0><2>                                                                                     <O> : 
-<Multi_key><numbersign><2>                                                                     <O> : 
-<UEFD0><KP_2>                                                                                  <O> : 
-<Multi_key><numbersign><KP_2>                                                                  <O> : 
+<UEFD0><2>                                                                                     <O> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<Multi_key><numbersign><2>                                                                     <O> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<UEFD0><KP_2>                                                                                  <O> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<Multi_key><numbersign><KP_2>                                                                  <O> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <UEFD0><2>                                                                                     <o> : "ꬽ" UAB3D # LATIN SMALL LETTER BLACKLETTER O
 <Multi_key><numbersign><2>                                                                     <o> : "ꬽ" UAB3D # LATIN SMALL LETTER BLACKLETTER O
 <UEFD0><KP_2>                                                                                  <o> : "ꬽ" UAB3D # LATIN SMALL LETTER BLACKLETTER O
