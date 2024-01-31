@@ -9,7 +9,7 @@
 
 ## 1.5.0 (2023-12-27)
 
-* Disposition : Permuter les touches mortes tréma sur E05 et accent grave sur E12. (dispocla.cpp [51701f8](https://github.com/dispoclavier/nouvel-azerty/commit/51701f8ac1f15c71bd2b013b0fca918242a38a16))
+* Disposition : Permuter les touches mortes tréma sur E05 et accent grave sur E12. (dispocla.cpp [51701f8](https://github.com/dispoclavier/nouvel-azerty/commit/51701f8ac1f15c71bd2b013b0fca918242a38a16), compose-3.yml [81dbf30](https://github.com/dispoclavier/nouvel-azerty/commit/81dbf306d59a5e7887558d3129c04d5672c8a972))
 * Touches mortes : Accent grave : Ajouter "(" U0028, ")" U0029. (compose-2.yml [0750b87](https://github.com/dispoclavier/nouvel-azerty/commit/0750b87a74978085e2ad0e5d63cf357fd2381ed8))
 
 ## 1.4.0 (2023-12-06)
