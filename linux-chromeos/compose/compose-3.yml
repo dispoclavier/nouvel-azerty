@@ -573,18 +573,18 @@
 #
 # # D09
 #
-#   Polynesian ʻeta, Hawaiʻian ʻokina is input even more easily by dead_acute
-#   followed by comma, so as to mitigate the adverse effect of not mapping it
-#   in group 1 of quotedbl, as that would be counter-intuitive and breaking the
-#   alphabetic mnemonics.
-#
-#   An input method for both "ʼ" U02BC and "ʻ" U02BB is provided by
-#   dead_circumflex, dead_acute and dead_grave followed by comma, with the
-#   benefit of being undiscriminatory.
-#   See #*# ACUTE
+#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB must leave its place in group 1
+#   of ASCII grave to the masculine ordinal indicator; mapping it in group 1 of
+#   quotedbl in group 1 of quotedbl would be counter-intuitive, but it is input
+#   just as easily by dead_acute or dead_grave followed by comma.
 #   See #*# GRAVE
-#   See #*# CIRCUMFLEX
+#   See #*# ACUTE
 #   See # # CEDILLA&ACUTE
+#
+#   Alongside, letter apostrophe "ʼ" U02BC, that does have its place in group 1
+#   of apostrophe, may also be input by dead_circumflex followed by comma, with
+#   the benefit of ensuring a balanced and undiscriminatory distribution.
+#   See #*# CIRCUMFLEX
 #
 <UEFD0>                                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 <Multi_key><numbersign>                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
