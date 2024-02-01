@@ -631,16 +631,19 @@
 #
 # # Abbreviations and Legal Symbols
 #
-#   Order may matter as for COPYRIGHT SIGN vs CARE OF.
-#   Case may matter as for ADDRESSED TO THE SUBJECT vs AKTIESELSKAB.
-#   en_US.UTF-8/Compose supports camelcase sequences, but these are unlikely.
+#   Order may matter as for "©" U00A9 COPYRIGHT SIGN vs "℅" U2105 CARE OF, and
+#   case as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE SUBJECT,
+#   "🄯" U1F12F COPYLEFT SYMBOL vs "℄" U2104 CENTRE LINE SYMBOL.
+#
+#   S O sequences are used fo mathematical symbols, reverse sequences are used
+#   for circled letters, other casing pairs are used for German eszett as ss:
+#   "§" U00A7 SECTION SIGN vs "ß" U00DF LATIN SMALL LETTER SHARP S, "ẞ" U1E9E.
 #
 #   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
 #
 #   Space termination is required for ℆ to prevent conflicts with math symbols.
 #
-#   S O sequences are used fo mathematical symbols, reverse sequences are used
-#   for circled letters, other casing pairs for German eszett as ss.
+#   Camel case sequences are also supported in en_US.UTF-8/Compose.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
@@ -658,8 +661,14 @@
 <Multi_key><P><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
 <Multi_key><bar><p>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><bar><P>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><degree><C>                                                                             : "℃" U2103 # DEGREE CELSIUS
+<Multi_key><degree><c>                                                                             : "℃" U2103 # DEGREE CELSIUS
+<Multi_key><degree><F>                                                                             : "℉" U2109 # DEGREE FAHRENHEIT
+<Multi_key><degree><f>                                                                             : "℉" U2109 # DEGREE FAHRENHEIT
 <Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
+<Multi_key><a><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
+<Multi_key><A><c>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
 <Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><o><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
@@ -668,16 +677,22 @@
 <Multi_key><o><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
 <Multi_key><O><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
 <Multi_key><c><o>                                                                                  : "℅" U2105 # CARE OF
+<Multi_key><c><O>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><C><O>                                                                                  : "℅" U2105 # CARE OF
+<Multi_key><C><o>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><o><backslash><c>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><o><backslash><C>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><O><backslash><C>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><O><backslash><c>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><o><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><o><C>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><O><C>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><O><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><r>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><C><R>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
-<Multi_key><C><L>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
+<Multi_key><C><L>                                                                                  : "℄" U2104 # CENTRE LINE SYMBOL
 <Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
@@ -693,7 +708,9 @@
 <Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><o><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><o><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><O><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><O><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><R><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><t><m>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
