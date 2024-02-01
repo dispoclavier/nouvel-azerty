@@ -629,7 +629,7 @@
 #   Dchar: "¦" U00A6
 #
 #
-# # Abbreviations and Legal Symbols
+# # Abbreviations, Units and Legal Symbols
 #
 #   Order may matter as for "©" U00A9 COPYRIGHT SIGN vs "℅" U2105 CARE OF, and
 #   case as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE SUBJECT,
@@ -643,15 +643,12 @@
 #
 #   Space termination is required for ℆ to prevent conflicts with math symbols.
 #
-#   Camel case sequences are also supported in en_US.UTF-8/Compose.
+#   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
+#   also has mixed-case sequences.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
 #   
-<Multi_key><V><slash>                                                                              : "℣" U2123 # VERSICLE
-<Multi_key><v><slash>                                                                              : "℣" U2123 # VERSICLE
-<Multi_key><R><slash>                                                                              : "℟" U211F # RESPONSE
-<Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
 <Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
 <Multi_key><S><exclam>                                                                             : "§" U00A7 # SECTION SIGN
@@ -665,6 +662,10 @@
 <Multi_key><degree><c>                                                                             : "℃" U2103 # DEGREE CELSIUS
 <Multi_key><degree><F>                                                                             : "℉" U2109 # DEGREE FAHRENHEIT
 <Multi_key><degree><f>                                                                             : "℉" U2109 # DEGREE FAHRENHEIT
+<Multi_key><o><A>                                                                                  : "Å" U212B # ANGSTROM SIGN
+<Multi_key><o><a>                                                                                  : "Å" U212B # ANGSTROM SIGN
+<Multi_key><O><A>                                                                                  : "Å" U212B # ANGSTROM SIGN
+<Multi_key><O><a>                                                                                  : "Å" U212B # ANGSTROM SIGN
 <Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><a><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
@@ -695,8 +696,23 @@
 <Multi_key><C><L>                                                                                  : "℄" U2104 # CENTRE LINE SYMBOL
 <Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
+<Multi_key><E><percent>                                                                            : "℈" U2108 # SCRUPLE
+<Multi_key><e><percent>                                                                            : "℈" U2108 # SCRUPLE
+<Multi_key><s><c><r>                                                                               : "℈" U2108 # SCRUPLE
+<Multi_key><S><C><R>                                                                               : "℈" U2108 # SCRUPLE
+<Multi_key><S><c><r>                                                                               : "℈" U2108 # SCRUPLE
 <Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
 <Multi_key><nobreakspace><e>                                                                       : "℮" U212E # ESTIMATED SYMBOL
+<Multi_key><f><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
+<Multi_key><F><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
+<Multi_key><F><A><X>                                                                               : "℻" U213B # FACSIMILE SIGN
+<Multi_key><space><K>                                                                              : "K" U212A # KELVIN SIGN
+<Multi_key><nobreakspace><K>                                                                       : "K" U212A # KELVIN SIGN
+<Multi_key><space><k>                                                                              : "K" U212A # KELVIN SIGN
+<Multi_key><nobreakspace><k>                                                                       : "K" U212A # KELVIN SIGN
+<Multi_key><l><b><minus>                                                                           : "℔" U2114 # L B BAR SYMBOL
+<Multi_key><L><P>                                                                                  : "⅊" U214A # PROPERTY LINE
+<Multi_key><l><p>                                                                                  : "⅊" U214A # PROPERTY LINE
 <Multi_key><m><c>                                                                                  : "🅪" U1F16A # RAISED MC SIGN
 <Multi_key><M><C>                                                                                  : "🅪" U1F16A # RAISED MC SIGN
 <Multi_key><m><d>                                                                                  : "🅫" U1F16B # RAISED MD SIGN
@@ -707,20 +723,51 @@
 <Multi_key><M><R>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><o><percent>                                                                            : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><O><percent><space>                                                                     : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><m><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><M><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><M><H><O>                                                                               : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><o><h><m>                                                                               : "Ω" U2126 # OHM SIGN
+<Multi_key><O><h><m>                                                                               : "Ω" U2126 # OHM SIGN
+<Multi_key><O><H><M>                                                                               : "Ω" U2126 # OHM SIGN
+<Multi_key><o><P>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
+<Multi_key><O><p>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
+<Multi_key><P><o>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
+<Multi_key><p><O>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
+<Multi_key><p><e><r>                                                                               : "⅌" U214C # PER SIGN
+<Multi_key><P><E><R>                                                                               : "⅌" U214C # PER SIGN
+<Multi_key><R><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
+<Multi_key><r><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
+<Multi_key><R><slash><space>                                                                       : "℟" U211F # RESPONSE
+<Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
 <Multi_key><o><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><o><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><O><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><O><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><R><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><s><m>                                                                                  : "℠" U2120 # SERVICE MARK
+<Multi_key><S><M>                                                                                  : "℠" U2120 # SERVICE MARK
+<Multi_key><m><s>                                                                                  : "℠" U2120 # SERVICE MARK
+<Multi_key><M><S>                                                                                  : "℠" U2120 # SERVICE MARK
+<Multi_key><s><a><m>                                                                               : "⅏" U214F # SYMBOL FOR SAMARITAN SOURCE
+<Multi_key><S><a><m>                                                                               : "⅏" U214F # SYMBOL FOR SAMARITAN SOURCE
+<Multi_key><S><A><M>                                                                               : "⅏" U214F # SYMBOL FOR SAMARITAN SOURCE
+<Multi_key><t><e><l>                                                                               : "℡" U2121 # TELEPHONE SIGN
+<Multi_key><T><e><l>                                                                               : "℡" U2121 # TELEPHONE SIGN
+<Multi_key><T><E><L>                                                                               : "℡" U2121 # TELEPHONE SIGN
 <Multi_key><t><m>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
 <Multi_key><T><M>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
 <Multi_key><m><t>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
 <Multi_key><M><T>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
+<Multi_key><V><slash>                                                                              : "℣" U2123 # VERSICLE
+<Multi_key><v><slash>                                                                              : "℣" U2123 # VERSICLE
 <Multi_key><w><z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><W><Z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><z><w>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><Z><W>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+<Multi_key><z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 #
 #
 # # Numero sign
@@ -1321,12 +1368,9 @@
 # # Per mille and per myriad
 #
 #   This adds to the legacy sequence '<Multi_key><percent><o>'.
-#   This addition uses also zeros, and supports legacy too, but
-#   the reverse sequence <Multi_key><O><percent> conflicts with
-#   "⦼" U29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN.
+#   This addition uses also zeros.
 #   Also in group 1 of %: <Multi_key><numbersign><percent>.
 #
-<Multi_key><o><percent>                                                                            : "‰" U2030 # PER MILLE SIGN
 <Multi_key><percent><o>                                                                            : "‰" U2030 # PER MILLE SIGN
 <Multi_key><percent><O>                                                                            : "‰" U2030 # PER MILLE SIGN
 <Multi_key><0><percent>                                                                            : "‰" U2030 # PER MILLE SIGN
@@ -1386,8 +1430,8 @@
 #
 #   Pointers
 #
-<Multi_key><l><p><t><r>                                                                            : "☚" leftpointer  # U261A BLACK LEFT POINTING INDEX, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><r><p><t><r>                                                                            : "☛" rightpointer # U261B BLACK RIGHT POINTING INDEX, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><p><n><t><l>                                                                            : "☚" leftpointer  # U261A BLACK LEFT POINTING INDEX, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><p><n><t><r>                                                                            : "☛" rightpointer # U261B BLACK RIGHT POINTING INDEX, not U261E WHITE RIGHT POINTING INDEX
 #
 #
 # # Currency symbols
