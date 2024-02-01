@@ -3027,6 +3027,8 @@
 <Multi_key><percent>                                                                           <o> : "ᴑ" U1D11 # LATIN SMALL LETTER SIDEWAYS O
 <UEFD5>                                                                                        <P> : "ꓒ" UA4D2 # LISU LETTER PHA
 <Multi_key><percent>                                                                           <P> : "ꓒ" UA4D2 # LISU LETTER PHA
+<UEFD5>                                                                                        <Q> : "℺" U213A # ROTATED CAPITAL Q
+<Multi_key><percent>                                                                           <Q> : "℺" U213A # ROTATED CAPITAL Q
 <UEFD5>                                                                                        <R> : "ꓤ" UA4E4 # LISU LETTER ZA
 <Multi_key><percent>                                                                           <R> : "ꓤ" UA4E4 # LISU LETTER ZA
 <UEFD5>                                                                                        <r> : "ɹ" U0279 # LATIN SMALL LETTER TURNED R
