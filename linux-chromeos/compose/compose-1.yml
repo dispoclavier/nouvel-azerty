@@ -650,7 +650,7 @@
 #   Multi_key equivalents.
 #
 #   Unpreferred precomposed and dedicated measurement units are supported while
-#   being in the letterlike eymbols block fully supported from v1.6.0 on, after
+#   being in the Letterlike Symbols block fully supported from v1.6.0 on, after
 #   an odd period where important symbols were missing due to not being used in
 #   mathematics.
 #   See # # Letterlike symbols in block U2100 used in mathematics
