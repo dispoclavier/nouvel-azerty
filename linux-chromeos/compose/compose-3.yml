@@ -575,8 +575,8 @@
 #
 #   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB must leave its place in group 1
 #   of ASCII grave to the masculine ordinal indicator; mapping it in group 1 of
-#   quotedbl in group 1 of quotedbl would be counter-intuitive, but it is input
-#   just as easily by dead_acute or dead_grave followed by comma.
+#   quotedbl would be counter-intuitive, but it is input just as easily
+#   by dead_acute or dead_grave followed by comma.
 #   See #*# GRAVE
 #   See #*# ACUTE
 #   See # # CEDILLA&ACUTE
