@@ -648,7 +648,13 @@
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
-#   
+#
+#   Unpreferred precomposed and dedicated measurement units are supported while
+#   being in the letterlike eymbols block fully supported from v1.6.0 on, after
+#   an odd period where important symbols were missing due to not being used in
+#   mathematics.
+#   See # # Letterlike symbols in block U2100 used in mathematics
+#
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
 <Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
 <Multi_key><S><exclam>                                                                             : "§" U00A7 # SECTION SIGN
