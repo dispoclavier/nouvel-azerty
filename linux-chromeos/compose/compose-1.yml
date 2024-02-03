@@ -644,7 +644,7 @@
 #   Space termination is required for ℆ to prevent conflicts with math symbols.
 #
 #   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
-#   also has mixed-case sequences.
+#   supports mixed-case sequences, too.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
@@ -705,8 +705,8 @@
 <Multi_key><E><percent>                                                                            : "℈" U2108 # SCRUPLE
 <Multi_key><e><percent>                                                                            : "℈" U2108 # SCRUPLE
 <Multi_key><s><c><r>                                                                               : "℈" U2108 # SCRUPLE
-<Multi_key><S><C><R>                                                                               : "℈" U2108 # SCRUPLE
 <Multi_key><S><c><r>                                                                               : "℈" U2108 # SCRUPLE
+<Multi_key><S><C><R>                                                                               : "℈" U2108 # SCRUPLE
 <Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
 <Multi_key><nobreakspace><e>                                                                       : "℮" U212E # ESTIMATED SYMBOL
 <Multi_key><f><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
@@ -742,6 +742,7 @@
 <Multi_key><P><o>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><p><O>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><p><e><r>                                                                               : "⅌" U214C # PER SIGN
+<Multi_key><P><e><r>                                                                               : "⅌" U214C # PER SIGN
 <Multi_key><P><E><R>                                                                               : "⅌" U214C # PER SIGN
 <Multi_key><R><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><r><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
@@ -774,6 +775,8 @@
 <Multi_key><z><w>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><Z><W>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
+<Multi_key><Z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
+<Multi_key><Z><Z>                                                                                  : "℥" U2125 # OUNCE SIGN
 #
 #
 # # Numero sign
