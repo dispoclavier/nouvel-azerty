@@ -3177,6 +3177,11 @@
 #   Groups 6..10 follow after Latin letters, group 12.
 #   See #+# GROUP_6
 #
+#   Volapük letters "Ꞛ" UA79A, "ꞛ" UA79B, "Ꞝ" UA79C, "ꞝ" UA79D, "Ꞟ" UA79E and
+#   "ꞟ" UA79F are supported for completeness, although these letters have been
+#   deprecated in 1887.
+#   https://fr.wikipedia.org/wiki/%CA%9A
+#
 <UEFD0><1>                                                                                     <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
 <Multi_key><numbersign><1>                                                                     <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
 <UEFD0><KP_1>                                                                                  <A> : "Ꞛ" UA79A # LATIN CAPITAL LETTER VOLAPUK AE
