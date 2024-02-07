@@ -2443,12 +2443,12 @@
 <Multi_key><numbersign><KP_3>                                                                  <j> : "ʝ" U029D # LATIN SMALL LETTER J WITH CROSSED-TAIL
 <UEFD0><UEFD0><UEFD0>                                                                          <j> : "ʝ" U029D # LATIN SMALL LETTER J WITH CROSSED-TAIL
 <Multi_key><numbersign><numbersign><numbersign>                                                <j> : "ʝ" U029D # LATIN SMALL LETTER J WITH CROSSED-TAIL
-<UEFD0><3>                                                                                     <K> : 
-<Multi_key><numbersign><3>                                                                     <K> : 
-<UEFD0><KP_3>                                                                                  <K> : 
-<Multi_key><numbersign><KP_3>                                                                  <K> : 
-<UEFD0><UEFD0><UEFD0>                                                                          <K> : 
-<Multi_key><numbersign><numbersign><numbersign>                                                <K> : 
+<UEFD0><3>                                                                                     <K> : "Kʼ" # U004B U02BC
+<Multi_key><numbersign><3>                                                                     <K> : "Kʼ" # U004B U02BC
+<UEFD0><KP_3>                                                                                  <K> : "Kʼ" # U004B U02BC
+<Multi_key><numbersign><KP_3>                                                                  <K> : "Kʼ" # U004B U02BC
+<UEFD0><UEFD0><UEFD0>                                                                          <K> : "Kʼ" # U004B U02BC
+<Multi_key><numbersign><numbersign><numbersign>                                                <K> : "Kʼ" # U004B U02BC
 <UEFD0><3>                                                                                     <k> : "ĸ" U0138 # LATIN SMALL LETTER KRA
 <Multi_key><numbersign><3>                                                                     <k> : "ĸ" U0138 # LATIN SMALL LETTER KRA
 <UEFD0><KP_3>                                                                                  <k> : "ĸ" U0138 # LATIN SMALL LETTER KRA
@@ -2664,12 +2664,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <b> : "␢" U2422 # BLANK SYMBOL
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <b> : "␢" U2422 # BLANK SYMBOL
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <b> : "␢" U2422 # BLANK SYMBOL
-<UEFD0><4>                                                                                     <C> : 
-<Multi_key><numbersign><4>                                                                     <C> : 
-<UEFD0><KP_4>                                                                                  <C> : 
-<Multi_key><numbersign><KP_4>                                                                  <C> : 
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <C> : 
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <C> : 
+<UEFD0><4>                                                                                     <C> : "℃" U2103 # DEGREE CELSIUS
+<Multi_key><numbersign><4>                                                                     <C> : "℃" U2103 # DEGREE CELSIUS
+<UEFD0><KP_4>                                                                                  <C> : "℃" U2103 # DEGREE CELSIUS
+<Multi_key><numbersign><KP_4>                                                                  <C> : "℃" U2103 # DEGREE CELSIUS
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <C> : "℃" U2103 # DEGREE CELSIUS
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <C> : "℃" U2103 # DEGREE CELSIUS
 <UEFD0><4>                                                                                     <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <Multi_key><numbersign><4>                                                                     <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <UEFD0><KP_4>                                                                                  <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
@@ -3222,14 +3222,14 @@
 <Multi_key><numbersign><1>                                                                     <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
 <UEFD0><KP_1>                                                                                  <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
 <Multi_key><numbersign><KP_1>                                                                  <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
-<UEFD0><1>                                                                                     <F> : 
-<Multi_key><numbersign><1>                                                                     <F> : 
-<UEFD0><KP_1>                                                                                  <F> : 
-<Multi_key><numbersign><KP_1>                                                                  <F> : 
-<UEFD0><1>                                                                                     <f> : 
-<Multi_key><numbersign><1>                                                                     <f> : 
-<UEFD0><KP_1>                                                                                  <f> : 
-<Multi_key><numbersign><KP_1>                                                                  <f> : 
+<UEFD0><1>                                                                                     <F> : "℉" U2109 # DEGREE FAHRENHEIT
+<Multi_key><numbersign><1>                                                                     <F> : "℉" U2109 # DEGREE FAHRENHEIT
+<UEFD0><KP_1>                                                                                  <F> : "℉" U2109 # DEGREE FAHRENHEIT
+<Multi_key><numbersign><KP_1>                                                                  <F> : "℉" U2109 # DEGREE FAHRENHEIT
+<UEFD0><1>                                                                                     <f> : "℉" U2109 # DEGREE FAHRENHEIT
+<Multi_key><numbersign><1>                                                                     <f> : "℉" U2109 # DEGREE FAHRENHEIT
+<UEFD0><KP_1>                                                                                  <f> : "℉" U2109 # DEGREE FAHRENHEIT
+<Multi_key><numbersign><KP_1>                                                                  <f> : "℉" U2109 # DEGREE FAHRENHEIT
 <UEFD0><1>                                                                                     <G> : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
 <Multi_key><numbersign><1>                                                                     <G> : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
 <UEFD0><KP_1>                                                                                  <G> : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
@@ -3270,10 +3270,10 @@
 <Multi_key><numbersign><1>                                                                     <k> : "ꜭ" UA72D # LATIN SMALL LETTER CUATRILLO
 <UEFD0><KP_1>                                                                                  <k> : "ꜭ" UA72D # LATIN SMALL LETTER CUATRILLO
 <Multi_key><numbersign><KP_1>                                                                  <k> : "ꜭ" UA72D # LATIN SMALL LETTER CUATRILLO
-<UEFD0><1>                                                                                     <L> : 
-<Multi_key><numbersign><1>                                                                     <L> : 
-<UEFD0><KP_1>                                                                                  <L> : 
-<Multi_key><numbersign><KP_1>                                                                  <L> : 
+<UEFD0><1>                                                                                     <L> : "℄" U2104 # CENTRE LINE SYMBOL
+<Multi_key><numbersign><1>                                                                     <L> : "℄" U2104 # CENTRE LINE SYMBOL
+<UEFD0><KP_1>                                                                                  <L> : "℄" U2104 # CENTRE LINE SYMBOL
+<Multi_key><numbersign><KP_1>                                                                  <L> : "℄" U2104 # CENTRE LINE SYMBOL
 <UEFD0><1>                                                                                     <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
 <Multi_key><numbersign><1>                                                                     <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
 <UEFD0><KP_1>                                                                                  <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
