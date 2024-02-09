@@ -1,6 +1,6 @@
-  # Journal des modifications
+# Journal des modifications
 
-## 1.6.0 (projet)
+## 1.6.0 (2024-02-09)
 
 * Touches mortes : Sélectrice de groupe : Groupe 1 : Remplacer "Ǝ" U018E et "ǝ" U01DD par "℣" U2123, "Ɲ" U019D et "ɲ" U0272 par "℟" U211F. (compose-3.yml [b97308c](https://github.com/dispoclavier/nouvel-azerty/commit/b97308ccd60a189e7b7eea5bf03900eddfb6eee6), compose-1.yml [920240d](https://github.com/dispoclavier/nouvel-azerty/commit/920240dade55b57e1aec45af08f4b551f2e9a09f), [0a432bf](https://github.com/dispoclavier/nouvel-azerty/commit/0a432bfd6249bca8a93486c86dcfc8f926a61c90))
 * Composition : Ajouter "℣" U2123, "℟" U211F, "ꭈ" UAB48. (compose-1.yml [5de859b](https://github.com/dispoclavier/nouvel-azerty/commit/5de859b516c4eacd3c57c36f6b5da89ceacb0fb3), [bdf672e](https://github.com/dispoclavier/nouvel-azerty/commit/bdf672eed9f5279f37032658b624c993880ddc0b), [66d2d69](https://github.com/dispoclavier/nouvel-azerty/commit/66d2d69a5656bc06cd31c8d0a903e79a12279ffd), [f7b6b07](https://github.com/dispoclavier/nouvel-azerty/commit/f7b6b07e4104bc260d09c4881b76a3df6bd02da1), [37b670f](https://github.com/dispoclavier/nouvel-azerty/commit/37b670fc15f3df846e1f10f1e625a8e6908745ed))
