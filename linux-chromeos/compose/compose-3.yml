@@ -2048,7 +2048,7 @@
 #
 #   In this section, group headings are prefixed with `#+# `.
 #
-#   On the alphabet, the groups yield:
+#   On the alphabet, the groups yield mainly:
 #
 #   Group  0  (g0): live keys (default, no group selected);
 #   Group  1  (g1): group selector pressed once: Latin;
@@ -2069,24 +2069,24 @@
 #
 #   This tab-separated table is copied from a spreadsheet.
 #   Plain text displays best with a 6 character tab width.
-#   Empty positions are unassigned and available.
+#   Empty positions are unassigned.
 #
 #	   	g1	g2	g3	g4	g5	g11	g12	g6	g7	g8	g9	g10
 #	A a	Æ æ	Ʌ ʌ	Ɑ ɑ	⹒ ⁊	Ꜣ ꜣ	Ꞛ ꞛ	ẚ ꬱ	Α α	𝒜 𝒶	𝔸 𝕒	𝔄 𝔞	𝖠 𝖺
 #	B b	Ɖ ɖ	Ɓ ɓ	Ꞵ ꞵ	␢ ␢	ʘ ʘ	Ƅ ƅ	ƾ ʖ	Β β	ℬ 𝒷	𝔹 𝕓	𝔅 𝔟	𝖡 𝖻
-#	C c	Ɔ ɔ	Ƈ ƈ	Ꜿ ꜿ	 ɕ	ʗ ʗ	Ꝯ ꝯ	ʢ ʕ	Ψ ψ	𝒞 𝒸	ℂ 𝕔	ℭ 𝔠	𝖢 𝖼
+#	C c	Ɔ ɔ	Ƈ ƈ	Ꜿ ꜿ	℃ ɕ	ʗ ʗ	Ꝯ ꝯ	ʢ ʕ	Ψ ψ	𝒞 𝒸	ℂ 𝕔	ℭ 𝔠	𝖢 𝖼
 #	D d	Ð ð	Ɖ ɖ	ᵟ ẟ	͑ ʿ	̜ ˓	 ꝱ	Ꝺ ꝺ	Δ δ	𝒟 𝒹	𝔻 𝕕	𝔇 𝔡	𝖣 𝖽
 #	E e	€ €	Ǝ ǝ	Ɛ ɛ	Ə ə	ʚ ɞ	Ꝫ ꝫ	℈ ꬲ	Ε ε	ℰ ℯ	𝔼 𝕖	𝔈 𝔢	𝖤 𝖾
-#	F f	Ƒ ƒ	ʩ ꬵ	ⱷ ɸ	͗ ʾ	̹ ˒		Ꝼ ꝼ	Φ φ	ℱ 𝒻	𝔽 𝕗	𝔉 𝔣	𝖥 𝖿
+#	F f	Ƒ ƒ	ʩ ꬵ	ⱷ ɸ	͗ ʾ	̹ ˒	℉ ℉	Ꝼ ꝼ	Φ φ	ℱ 𝒻	𝔽 𝕗	𝔉 𝔣	𝖥 𝖿
 #	G g	Ə ə	Ȝ ȝ	Ɣ ɣ	 ɤ	Ɡ ɡ	Ƣ ƣ	Ᵹ ᵹ	Γ γ	𝒢 ℊ	𝔾 𝕘	𝔊 𝔤	𝖦 𝗀
 #	H h	Ǝ ǝ	Ꜧ ꜧ	Ɦ ɦ	Ɥ ɥ	Ⱶ ⱶ	ꝶ ꝵ	̘ ◌̟	Η η	ℋ 𝒽	ℍ 𝕙	ℌ 𝔥	𝖧 𝗁
-#	I i	Ĳ ĳ	Ɪ ɪ	Ɩ ɩ	Ꞽ ꞽ	ǀ ǀ	Ꝭ ꝭ	ꟾ 	Ι ι	ℐ 𝒾	𝕀 𝕚	ℑ 𝔦	𝖨 𝗂
+#	I i	Ĳ ĳ	Ɪ ɪ	Ɩ ɩ	Ꞽ ꞽ	ǀ ǀ	Ꝭ ꝭ	ꟾ ℹ	Ι ι	ℐ 𝒾	𝕀 𝕚	ℑ 𝔦	𝖨 𝗂
 #	J j	Ɲ ɲ	Ꞌ ꞌ	Ʝ ʝ	⁀ ‿	ǂ ǂ	Ꝝ ꝝ	̙ ◌̠	Ξ ξ	𝒥 𝒿	𝕁 𝕛	𝔍 𝔧	𝖩 𝗃
-#	K k	ʿ ʾ	Ƙ ƙ	 ĸ	𝼊 𝼊	ǃ ǃ	Ꜭ ꜭ	Ꜯ ꜯ	Κ κ	𝒦 𝓀	𝕂 𝕜	𝔎 𝔨	𝖪 𝗄
-#	L l	ℓ ℓ	Ꝇ ꝇ	ꬷ ƛ	ɮ ʫ	ǁ ǁ	 ꝲ	Ỻ ỻ	Λ λ	ℒ 𝓁	𝕃 𝕝	𝔏 𝔩	𝖫 𝗅
+#	K k	ʿ ʾ	Ƙ ƙ	Kʼ ĸ	𝼊 𝼊	ǃ ǃ	Ꜭ ꜭ	Ꜯ ꜯ	Κ κ	𝒦 𝓀	𝕂 𝕜	𝔎 𝔨	𝖪 𝗄
+#	L l	ℓ ℓ	Ꝇ ꝇ	ꬷ ƛ	ɮ ʫ	ǁ ǁ	℄ ꝲ	Ỻ ỻ	Λ λ	ℒ 𝓁	𝕃 𝕝	𝔏 𝔩	𝖫 𝗅
 #	M m	Ɩ ɩ	Ɱ ɱ	 ɰ	Ɯ ɯ	̻ ◌̼	 ꝳ	ꟿ ◌̫	Μ μ	ℳ 𝓂	𝕄 𝕞	𝔐 𝔪	𝖬 𝗆
-#	N n	Ŋ ŋ	Ɲ ɲ	Ƞ ƞ	ꬻ ȵ	̚ ◌͉	 ꝴ	 ŉ	Ν ν	𝒩 𝓃	ℕ 𝕟	𝔑 𝔫	𝖭 𝗇
-#	O o	Œ œ	Ȣ ȣ	Ɔ ɔ	ᴖ ᴗ	ʘ ʘ	Ꞝ ꞝ	 ꬽ	Ο ο	𝒪 ℴ	𝕆 𝕠	𝔒 𝔬	𝖮 𝗈
+#	N n	Ŋ ŋ	Ɲ ɲ	Ƞ ƞ	ꬻ ȵ	̚ ◌͉	 ꝴ	Ꞑ ꞑ	Ν ν	𝒩 𝓃	ℕ 𝕟	𝔑 𝔫	𝖭 𝗇
+#	O o	Œ œ	Ȣ ȣ	Ɔ ɔ	ᴖ ᴗ	ʘ ʘ	Ꞝ ꞝ	Ω ꬽ	Ο ο	𝒪 ℴ	𝕆 𝕠	𝔒 𝔬	𝖮 𝗈
 #	P p	· ·	Ƥ ƥ	Ꝓ ꝓ	Ꝕ ꝕ	͆ ◌̪	⃩ ◌̺	ʺ ʹ	Π π	𝒫 𝓅	ℙ 𝕡	𝔓 𝔭	𝖯 𝗉
 #	Q q	Ɂ ɂ	ʔ ʔ	Ꞌ ꞌ	ᵜ ᴥ	Ꜥ  ꜥ	Ꜫ ꜫ	ˮ ʼ	ϴ ϑ	𝒬 𝓆	ℚ 𝕢	𝔔 𝔮	𝖰 𝗊
 #	R r	℟ ℟	˞ ˞	Ꝛ ꝛ	℟ ꭇ	ꭅ ꭋ	Ʀ ʀ	Ꞃ ꞃ	Ρ ρ	ℛ 𝓇	ℝ 𝕣	ℜ 𝔯	𝖱 𝗋
@@ -2101,7 +2101,7 @@
 #
 #
 #+# GROUP_1
-#   Group 1 on the base alphabet: Latin letters, modifier letters, punctuation, Euro sign and dead keys
+#   Group 1 on the base alphabet: Latin letters, symbols and punctuation
 #
 <UEFD0>                                                                                        <A> : "Æ" U00C6 # LATIN CAPITAL LETTER AE
 <Multi_key><numbersign>                                                                        <A> : "Æ" U00C6 # LATIN CAPITAL LETTER AE
@@ -2210,7 +2210,7 @@
 #
 #
 #+# GROUP_2
-#   Group 2 on the base alphabet: Latin letters (continued)
+#   Group 2 on the base alphabet: Latin letters and symbols (continued)
 #
 #   The deprecated l with middle dot Ŀ ŀ is in the dead_abovedot dead key.
 #
@@ -2321,7 +2321,7 @@
 #
 #
 #+# GROUP_3
-#   Group 3 on the base alphabet: Latin letters (continued)
+#   Group 3 on the base alphabet: Latin letters and symbols (continued)
 #
 <UEFD0><3>                                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
 <Multi_key><numbersign><3>                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
@@ -2638,7 +2638,7 @@
 #
 #
 #+# GROUP_4
-#   Group 4 on the base alphabet: Latin letters (continued)
+#   Group 4 on the base alphabet: Latin letters and symbols (continued)
 #
 <UEFD0><4>                                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
 <Multi_key><numbersign><4>                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
@@ -2955,7 +2955,7 @@
 #
 #
 #+# GROUP_5
-#   Group 5 on the base alphabet: Latin letters (continued)
+#   Group 5 on the base alphabet: Latin letters and symbols (continued)
 #
 #   "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E has lowercase position
 #   because "ʚ" U029A # LATIN SMALL LETTER CLOSED OPEN E is almost unused, while
@@ -3172,7 +3172,7 @@
 #
 #
 #+# GROUP_11
-#   Group 11 on the base alphabet: Latin letters (continued)
+#   Group 11 on the base alphabet: Latin letters and symbols (continued)
 #
 #   Groups 6..10 follow after Latin letters, group 12.
 #   See #+# GROUP_6
@@ -3393,7 +3393,7 @@
 #
 #
 #+# GROUP_12
-#   Group 12 on the base alphabet: Latin letters (continued, end)
+#   Group 12 on the base alphabet: Latin letters and symbols (continued, end)
 #
 <UEFD0><2>                                                                                     <A> : "ẚ" U1E9A # LATIN SMALL LETTER A WITH RIGHT HALF RING
 <Multi_key><numbersign><2>                                                                     <A> : "ẚ" U1E9A # LATIN SMALL LETTER A WITH RIGHT HALF RING
@@ -3463,10 +3463,10 @@
 <Multi_key><numbersign><2>                                                                     <I> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
 <UEFD0><KP_2>                                                                                  <I> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
 <Multi_key><numbersign><KP_2>                                                                  <I> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
-<UEFD0><2>                                                                                     <i> : 
-<Multi_key><numbersign><2>                                                                     <i> : 
-<UEFD0><KP_2>                                                                                  <i> : 
-<Multi_key><numbersign><KP_2>                                                                  <i> : 
+<UEFD0><2>                                                                                     <i> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<Multi_key><numbersign><2>                                                                     <i> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<UEFD0><KP_2>                                                                                  <i> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<Multi_key><numbersign><KP_2>                                                                  <i> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <UEFD0><2>                                                                                     <J> : "̙" U0319 # COMBINING RIGHT TACK BELOW
 <Multi_key><numbersign><2>                                                                     <J> : "̙" U0319 # COMBINING RIGHT TACK BELOW
 <UEFD0><KP_2>                                                                                  <J> : "̙" U0319 # COMBINING RIGHT TACK BELOW
@@ -3499,18 +3499,18 @@
 <Multi_key><numbersign><2>                                                                     <m> : "̫" U032B # COMBINING INVERTED DOUBLE ARCH BELOW
 <UEFD0><KP_2>                                                                                  <m> : "̫" U032B # COMBINING INVERTED DOUBLE ARCH BELOW
 <Multi_key><numbersign><KP_2>                                                                  <m> : "̫" U032B # COMBINING INVERTED DOUBLE ARCH BELOW
-<UEFD0><2>                                                                                     <N> : 
-<Multi_key><numbersign><2>                                                                     <N> : 
-<UEFD0><KP_2>                                                                                  <N> : 
-<Multi_key><numbersign><KP_2>                                                                  <N> : 
-<UEFD0><2>                                                                                     <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-<Multi_key><numbersign><2>                                                                     <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-<UEFD0><KP_2>                                                                                  <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-<Multi_key><numbersign><KP_2>                                                                  <n> : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-<UEFD0><2>                                                                                     <O> : 
-<Multi_key><numbersign><2>                                                                     <O> : 
-<UEFD0><KP_2>                                                                                  <O> : 
-<Multi_key><numbersign><KP_2>                                                                  <O> : 
+<UEFD0><2>                                                                                     <N> : "Ꞑ" UA790 # LATIN CAPITAL LETTER N WITH DESCENDER
+<Multi_key><numbersign><2>                                                                     <N> : "Ꞑ" UA790 # LATIN CAPITAL LETTER N WITH DESCENDER
+<UEFD0><KP_2>                                                                                  <N> : "Ꞑ" UA790 # LATIN CAPITAL LETTER N WITH DESCENDER
+<Multi_key><numbersign><KP_2>                                                                  <N> : "Ꞑ" UA790 # LATIN CAPITAL LETTER N WITH DESCENDER
+<UEFD0><2>                                                                                     <n> : "ꞑ" UA791 # LATIN SMALL LETTER N WITH DESCENDER
+<Multi_key><numbersign><2>                                                                     <n> : "ꞑ" UA791 # LATIN SMALL LETTER N WITH DESCENDER
+<UEFD0><KP_2>                                                                                  <n> : "ꞑ" UA791 # LATIN SMALL LETTER N WITH DESCENDER
+<Multi_key><numbersign><KP_2>                                                                  <n> : "ꞑ" UA791 # LATIN SMALL LETTER N WITH DESCENDER
+<UEFD0><2>                                                                                     <O> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><2>                                                                     <O> : "Ω" U2126 # OHM SIGN
+<UEFD0><KP_2>                                                                                  <O> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><KP_2>                                                                  <O> : "Ω" U2126 # OHM SIGN
 <UEFD0><2>                                                                                     <o> : "ꬽ" UAB3D # LATIN SMALL LETTER BLACKLETTER O
 <Multi_key><numbersign><2>                                                                     <o> : "ꬽ" UAB3D # LATIN SMALL LETTER BLACKLETTER O
 <UEFD0><KP_2>                                                                                  <o> : "ꬽ" UAB3D # LATIN SMALL LETTER BLACKLETTER O
