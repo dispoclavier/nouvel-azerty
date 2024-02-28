@@ -453,6 +453,10 @@
 #   See # # DIAERESIS&ACUTE
 #   See # # ACUTE&GRAVE, GRAVE&ACUTE
 #
+#   The highly backwards compatible layouts, without these easily accessed dead
+#   keys, have a tilde dead key closer to quotedbl than the acute accent, so an
+#   easier alternative is provided by replicating the quotation mark sequences.
+#
 #   The character descriptors in lowercase are Unicode informative aliases that
 #   have been given in case of a suboptimal name.
 #
@@ -4484,6 +4488,13 @@
 #   Multi_key: ¦~
 #   Dchar: "ẽ" U1EBD
 #
+#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_tilde yields
+#   high curly quotation marks U201D, U2019 (closing or opening), as a facility
+#   for highly backwards compatible layouts, where dead_acute (usually yielding
+#   these quotation marks) is not on level 1, but on level 3, next to the tilde
+#   dead key on E02, and quotedbl is on E03 as usual.
+#   See # # Quotation mark input method
+#
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
 #   should not depend on user input, but on font settings instead.
@@ -4499,6 +4510,12 @@
 <Multi_key><asciitilde>                                                             <nobreakspace> : "~" U007E # TILDE
 <dead_tilde>                                                                               <U202F> : "˜" U02DC # SMALL TILDE
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
+<dead_tilde>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><asciitilde>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key><asciitilde>                                                               <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde>                                                                           <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
