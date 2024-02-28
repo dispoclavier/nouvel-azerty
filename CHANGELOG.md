@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 1.7.0 (projet)
+
+* Touches mortes : Tilde : Redonder les guillemets comme dans Accent aigu. (compose-2.yml [b9a8c63](https://github.com/dispoclavier/nouvel-azerty/commit/b9a8c635e1cd079dfd625d7bc1af3f4bc56b16c5))
+
 ## 1.6.0 (2024-02-09)
 
 * Touches mortes : Sélectrice de groupe : Groupe 1 : Remplacer "Ǝ" U018E et "ǝ" U01DD par "℣" U2123, "Ɲ" U019D et "ɲ" U0272 par "℟" U211F. (compose-3.yml [b97308c](https://github.com/dispoclavier/nouvel-azerty/commit/b97308ccd60a189e7b7eea5bf03900eddfb6eee6), compose-1.yml [920240d](https://github.com/dispoclavier/nouvel-azerty/commit/920240dade55b57e1aec45af08f4b551f2e9a09f), [0a432bf](https://github.com/dispoclavier/nouvel-azerty/commit/0a432bfd6249bca8a93486c86dcfc8f926a61c90))
