@@ -2,6 +2,7 @@
 
 ## 1.7.0 (projet)
 
+* Disposition : Redonder la touche morte Lettre grecque, cerclé à la place de "@" U0040 sur D06. (dispocla.cpp [2b62fcd](https://github.com/dispoclavier/nouvel-azerty/commit/2b62fcd03c1403fa8ee37e2accaf5be25c53a034))
 * Touches mortes : Tilde : Redonder les guillemets comme dans Accent aigu. (compose-2.yml [b9a8c63](https://github.com/dispoclavier/nouvel-azerty/commit/b9a8c635e1cd079dfd625d7bc1af3f4bc56b16c5))
 
 ## 1.6.0 (2024-02-09)
