@@ -1,4 +1,4 @@
-//                       Date: 2023-12-26T2234+0100
+//                       Date: 2024-02-29T0956+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -558,8 +558,8 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D57 ᵗ superscript small t; U2212 − MINUS SIGN; ‒ U2012 FIGURE DASH; 😊 U1F60A SMILING FACE WITH SMILING EYES (worldwide fifth-most used emoji, fourth-most used smiling emoji in France)
 
 	key <AD06> {
-		[                        y,                        Y,                    U02B8,                       at,               dead_greek,                    U00A5,              Greek_OMEGA,                   U1F60D ],
-		[                        y,                        Y,                    U02B8,                       at,               dead_greek,                    U00A5,              Greek_OMEGA,                   U1F60D ]
+		[                        y,                        Y,                    U02B8,               dead_greek,               dead_greek,                    U00A5,              Greek_OMEGA,                   U1F60D ],
+		[                        y,                        Y,                    U02B8,               dead_greek,               dead_greek,                    U00A5,              Greek_OMEGA,                   U1F60D ]
 	}; // U02B8 ʸ superscript small y; U00A5 ¥ YEN SIGN; Ω U03A9 (preferred for Ohm sign); 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES (third-most used smiling emoji in France, third-most overall worldwide)
 
 	key <AD07> {
