@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-08-31T2203+0200
+#                       Date: 2023-09-07T1846+0200
 #                    Version:
-<UEFA0>                     : "version 1.0.9 "
+<UEFA0>                     : "version 1.0.10 "
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -401,14 +401,13 @@
 #
 #   [1] Escaping ampersand is required both in XML and in HTML.
 #   [2] Escaping single quote is required in XML if used to enclose values, but
-#       HTML 4 does not support this escape sequence.
-#   [3] Escaping double quote is required in XML if used to enclose values, and
-#       it is supported but not required in HTML except in argument values.
+#       HTML 4 does not support this escape.
+#   [3] Escaping double quote is required in XML if used to enclose values.
 #   [4] Points to the left or to the right depending on writing direction. This
 #       escape is required both in XML and in HTML.
 #   [5] Points to the right or to the left depending on writing direction. This
-#       escape is required in XML but not in HTML, so it is not used in the new
-#       WordPress Block Editor; still it is used in the TinyMCE Classic Editor.
+#       escape is required in XML. In HTML it is not, but it should be used, at
+#       least in argument values.
 #
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, U2060 WORD JOINER
@@ -883,7 +882,7 @@
 #   the ASCII hyphen U002D. Assigning it an extra scalar potentially fools font
 #   designers into giving U002D a hybrid glyph fitting neither the expectations
 #   for a hyphen nor those for a minus sign, fully expressing its genericity as
-#   pointed in the Unicode NamesList: “used generically for hyphen, minus sign
+#   pointed in the Unicode Code Chart: “used generically for hyphen, minus sign
 #   or en dash, all of which have dedicated alternatives”. As a consequence, it
 #   should be prevented from fully deploying its adverse effects by taking up a
 #   position on keyboard layouts, screwing everything up in the process, from
@@ -11364,14 +11363,20 @@
 #
 # # HORIZONTAL BAR for African and Breton variants
 #
-#   Two positions on key E08 are used for Ɔ or Ñ.
+#   Two positions on key E08 are used for Ɔɔ U0186, U0254 or Ññ U00D1, U00F1.
 #
-#   The HORIZONTAL BAR Unicode informative alias is quotation dash.
-#   This is a four-per-three-em dash, or three-quarter em dash, see
-#   in Cambria. Other fonts make it a conjoining em dash.
+#   To work around the loss of the key position where the HORIZONTAL BAR dash
+#   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
+#   mapped on that key in African and Breton variants respectively, and it is
+#   in group 1 of underscore.
+#   See # # C09
 #
-#   As a fallback solution the HORIZONTAL BAR dash is in group 1 of
-#   OPEN O and N WITH TILDE.
+#   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
+#   the Cambria font makes the most sense of it, giving it a three-quarter em
+#   length and making it a four-per-three-em dash. Other fonts use this dash
+#   to have a conjoining em dash, where em dash is not.
+#   See # # Hyphen and long dashes
+#   See # # Dashes and hyphens
 #
 <UEFD0>                                                                          <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
 <Multi_key><numbersign>                                                          <U0254> : "―" U2015 # HORIZONTAL BAR for African variant
@@ -19880,10 +19885,10 @@
 <Multi_key><numbersign><8>                                                       <minus> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
 <UEFD0><KP_8>                                                              <KP_Subtract> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
 <Multi_key><numbersign><KP_8>                                              <KP_Subtract> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
-<UEFD0><9>                                                                       <minus> : "∓" U2213 # MINUS-OR-PLUS SIGN
-<Multi_key><numbersign><9>                                                       <minus> : "∓" U2213 # MINUS-OR-PLUS SIGN
-<UEFD0><KP_9>                                                              <KP_Subtract> : "∓" U2213 # MINUS-OR-PLUS SIGN
-<Multi_key><numbersign><KP_9>                                              <KP_Subtract> : "∓" U2213 # MINUS-OR-PLUS SIGN
+<UEFD0><9>                                                                       <minus> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
+<Multi_key><numbersign><9>                                                       <minus> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
+<UEFD0><KP_9>                                                              <KP_Subtract> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
+<Multi_key><numbersign><KP_9>                                              <KP_Subtract> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
 <UEFD0><0>                                                                       <minus> : "⁠" U2060 # WORD JOINER
 <Multi_key><numbersign><0>                                                       <minus> : "⁠" U2060 # WORD JOINER
 <UEFD0><KP_0>                                                              <KP_Subtract> : "⁠" U2060 # WORD JOINER
@@ -19892,10 +19897,10 @@
 <Multi_key><numbersign><1>                                                       <minus> : "⁒" U2052 # COMMERCIAL MINUS SIGN
 <UEFD0><KP_1>                                                              <KP_Subtract> : "⁒" U2052 # COMMERCIAL MINUS SIGN
 <Multi_key><numbersign><KP_1>                                              <KP_Subtract> : "⁒" U2052 # COMMERCIAL MINUS SIGN
-<UEFD0><2>                                                                       <minus> : "₋" U208B # SUBSCRIPT MINUS
-<Multi_key><numbersign><2>                                                       <minus> : "₋" U208B # SUBSCRIPT MINUS
-<UEFD0><KP_2>                                                              <KP_Subtract> : "₋" U208B # SUBSCRIPT MINUS
-<Multi_key><numbersign><KP_2>                                              <KP_Subtract> : "₋" U208B # SUBSCRIPT MINUS
+<UEFD0><2>                                                                       <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<Multi_key><numbersign><2>                                                       <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<UEFD0><KP_2>                                                              <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<Multi_key><numbersign><KP_2>                                              <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
 #
 #
 # # C06
@@ -19932,22 +19937,22 @@
 <Multi_key><numbersign><8>                                                        <plus> : "⛬" U26EC # HISTORIC SITE
 <UEFD0><KP_8>                                                                   <KP_Add> : "⛬" U26EC # HISTORIC SITE
 <Multi_key><numbersign><KP_8>                                                   <KP_Add> : "⛬" U26EC # HISTORIC SITE
-<UEFD0><9>                                                                        <plus> : "±" U00B1 # PLUS-MINUS SIGN
-<Multi_key><numbersign><9>                                                        <plus> : "±" U00B1 # PLUS-MINUS SIGN
-<UEFD0><KP_9>                                                                   <KP_Add> : "±" U00B1 # PLUS-MINUS SIGN
-<Multi_key><numbersign><KP_9>                                                   <KP_Add> : "±" U00B1 # PLUS-MINUS SIGN
-<UEFD0><0>                                                                        <plus> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><0>                                                        <plus> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<UEFD0><KP_0>                                                                   <KP_Add> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><KP_0>                                                   <KP_Add> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<UEFD0><1>                                                                        <plus> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><numbersign><1>                                                        <plus> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<UEFD0><KP_1>                                                                   <KP_Add> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><numbersign><KP_1>                                                   <KP_Add> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<UEFD0><2>                                                                        <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
-<Multi_key><numbersign><2>                                                        <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
-<UEFD0><KP_2>                                                                   <KP_Add> : "₊" U208A # SUBSCRIPT PLUS SIGN
-<Multi_key><numbersign><KP_2>                                                   <KP_Add> : "₊" U208A # SUBSCRIPT PLUS SIGN
+<UEFD0><9>                                                                        <plus> : "✚" U271A # HEAVY GREEK CROSS
+<Multi_key><numbersign><9>                                                        <plus> : "✚" U271A # HEAVY GREEK CROSS
+<UEFD0><KP_9>                                                                   <KP_Add> : "✚" U271A # HEAVY GREEK CROSS
+<Multi_key><numbersign><KP_9>                                                   <KP_Add> : "✚" U271A # HEAVY GREEK CROSS
+<UEFD0><0>                                                                        <plus> : "✙" U2719 # OUTLINED GREEK CROSS
+<Multi_key><numbersign><0>                                                        <plus> : "✙" U2719 # OUTLINED GREEK CROSS
+<UEFD0><KP_0>                                                                   <KP_Add> : "✙" U2719 # OUTLINED GREEK CROSS
+<Multi_key><numbersign><KP_0>                                                   <KP_Add> : "✙" U2719 # OUTLINED GREEK CROSS
+<UEFD0><1>                                                                        <plus> : "✜" U271C # HEAVY OPEN CENTRE CROSS
+<Multi_key><numbersign><1>                                                        <plus> : "✜" U271C # HEAVY OPEN CENTRE CROSS
+<UEFD0><KP_1>                                                                   <KP_Add> : "✜" U271C # HEAVY OPEN CENTRE CROSS
+<Multi_key><numbersign><KP_1>                                                   <KP_Add> : "✜" U271C # HEAVY OPEN CENTRE CROSS
+<UEFD0><2>                                                                        <plus> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<Multi_key><numbersign><2>                                                        <plus> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<UEFD0><KP_2>                                                                   <KP_Add> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<Multi_key><numbersign><KP_2>                                                   <KP_Add> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 #
 #
 # # C07
@@ -20056,30 +20061,30 @@
 #
 # # C09
 #
-<UEFD0>                                                                     <underscore> : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><numbersign>                                                     <underscore> : "•" U2022 # BULLET, enfilledcircbullet
-<UEFD0><UEFD0>                                                              <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><numbersign><numbersign>                                         <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<UEFD0><3>                                                                  <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<Multi_key><numbersign><3>                                                  <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<UEFD0><KP_3>                                                               <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<Multi_key><numbersign><KP_3>                                               <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<UEFD0><UEFD0><UEFD0>                                                       <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<Multi_key><numbersign><numbersign><numbersign>                             <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<UEFD0><4>                                                                  <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><numbersign><4>                                                  <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<UEFD0><KP_4>                                                               <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><numbersign><KP_4>                                               <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                 <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<UEFD0><5>                                                                  <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<Multi_key><numbersign><5>                                                  <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<UEFD0><KP_5>                                                               <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<Multi_key><numbersign><KP_5>                                               <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<UEFD0><6>                                                                  <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
-<Multi_key><numbersign><6>                                                  <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
-<UEFD0><KP_6>                                                               <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
-<Multi_key><numbersign><KP_6>                                               <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD0>                                                                     <underscore> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                     <underscore> : "―" U2015 # HORIZONTAL BAR
+<UEFD0><UEFD0>                                                              <underscore> : "•" U2022 # BULLET, enfilledcircbullet
+<Multi_key><numbersign><numbersign>                                         <underscore> : "•" U2022 # BULLET, enfilledcircbullet
+<UEFD0><3>                                                                  <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><numbersign><3>                                                  <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<UEFD0><KP_3>                                                               <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><numbersign><KP_3>                                               <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<UEFD0><UEFD0><UEFD0>                                                       <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><numbersign><numbersign><numbersign>                             <underscore> : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<UEFD0><4>                                                                  <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
+<Multi_key><numbersign><4>                                                  <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
+<UEFD0><KP_4>                                                               <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
+<Multi_key><numbersign><KP_4>                                               <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                 <underscore> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
+<UEFD0><5>                                                                  <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><numbersign><5>                                                  <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<UEFD0><KP_5>                                                               <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><numbersign><KP_5>                                               <underscore> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<UEFD0><6>                                                                  <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><6>                                                  <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><KP_6>                                                               <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><KP_6>                                               <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 <UEFD0><7>                                                                  <underscore> : "☨" U2628 # CROSS OF LORRAINE
 <Multi_key><numbersign><7>                                                  <underscore> : "☨" U2628 # CROSS OF LORRAINE
 <UEFD0><KP_7>                                                               <underscore> : "☨" U2628 # CROSS OF LORRAINE
@@ -20092,18 +20097,18 @@
 <Multi_key><numbersign><9>                                                  <underscore> : "⚜" U269C # FLEUR-DE-LIS emoji
 <UEFD0><KP_9>                                                               <underscore> : "⚜" U269C # FLEUR-DE-LIS emoji
 <Multi_key><numbersign><KP_9>                                               <underscore> : "⚜" U269C # FLEUR-DE-LIS emoji
-<UEFD0><0>                                                                  <underscore> : " " U2028 # LINE SEPARATOR
-<Multi_key><numbersign><0>                                                  <underscore> : " " U2028 # LINE SEPARATOR
-<UEFD0><KP_0>                                                               <underscore> : " " U2028 # LINE SEPARATOR
-<Multi_key><numbersign><KP_0>                                               <underscore> : " " U2028 # LINE SEPARATOR
-<UEFD0><1>                                                                  <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><numbersign><1>                                                  <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<UEFD0><KP_1>                                                               <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><numbersign><KP_1>                                               <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<UEFD0><2>                                                                  <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<Multi_key><numbersign><2>                                                  <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<UEFD0><KP_2>                                                               <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<Multi_key><numbersign><KP_2>                                               <underscore> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><0>                                                                  <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><numbersign><0>                                                  <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<UEFD0><KP_0>                                                               <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><numbersign><KP_0>                                               <underscore> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<UEFD0><1>                                                                  <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<Multi_key><numbersign><1>                                                  <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<UEFD0><KP_1>                                                               <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<Multi_key><numbersign><KP_1>                                               <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<UEFD0><2>                                                                  <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<Multi_key><numbersign><2>                                                  <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD0><KP_2>                                                               <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<Multi_key><numbersign><KP_2>                                               <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
 #
 #
 # # C10
@@ -20132,10 +20137,10 @@
 <Multi_key><numbersign><5>                                                         <bar> : "☣" U2623 # BIOHAZARD SIGN emoji
 <UEFD0><KP_5>                                                                      <bar> : "☣" U2623 # BIOHAZARD SIGN emoji
 <Multi_key><numbersign><KP_5>                                                      <bar> : "☣" U2623 # BIOHAZARD SIGN emoji
-<UEFD0><6>                                                                         <bar> : "⛰" U26F0 # MOUNTAIN emoji
-<Multi_key><numbersign><6>                                                         <bar> : "⛰" U26F0 # MOUNTAIN emoji
-<UEFD0><KP_6>                                                                      <bar> : "⛰" U26F0 # MOUNTAIN emoji
-<Multi_key><numbersign><KP_6>                                                      <bar> : "⛰" U26F0 # MOUNTAIN emoji
+<UEFD0><6>                                                                         <bar> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<Multi_key><numbersign><6>                                                         <bar> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<UEFD0><KP_6>                                                                      <bar> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<Multi_key><numbersign><KP_6>                                                      <bar> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
 <UEFD0><7>                                                                         <bar> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
 <Multi_key><numbersign><7>                                                         <bar> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
 <UEFD0><KP_7>                                                                      <bar> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
@@ -20144,22 +20149,22 @@
 <Multi_key><numbersign><8>                                                         <bar> : "✋" U270B # RAISED HAND emoji
 <UEFD0><KP_8>                                                                      <bar> : "✋" U270B # RAISED HAND emoji
 <Multi_key><numbersign><KP_8>                                                      <bar> : "✋" U270B # RAISED HAND emoji
-<UEFD0><9>                                                                         <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<Multi_key><numbersign><9>                                                         <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<UEFD0><KP_9>                                                                      <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<Multi_key><numbersign><KP_9>                                                      <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<UEFD0><0>                                                                         <bar> : " " U2029 # PARAGRAPH SEPARATOR
-<Multi_key><numbersign><0>                                                         <bar> : " " U2029 # PARAGRAPH SEPARATOR
-<UEFD0><KP_0>                                                                      <bar> : " " U2029 # PARAGRAPH SEPARATOR
-<Multi_key><numbersign><KP_0>                                                      <bar> : " " U2029 # PARAGRAPH SEPARATOR
+<UEFD0><9>                                                                         <bar> : "⛰" U26F0 # MOUNTAIN emoji
+<Multi_key><numbersign><9>                                                         <bar> : "⛰" U26F0 # MOUNTAIN emoji
+<UEFD0><KP_9>                                                                      <bar> : "⛰" U26F0 # MOUNTAIN emoji
+<Multi_key><numbersign><KP_9>                                                      <bar> : "⛰" U26F0 # MOUNTAIN emoji
+<UEFD0><0>                                                                         <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><0>                                                         <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<UEFD0><KP_0>                                                                      <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><KP_0>                                                      <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
 <UEFD0><1>                                                                         <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <Multi_key><numbersign><1>                                                         <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <UEFD0><KP_1>                                                                      <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <Multi_key><numbersign><KP_1>                                                      <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<UEFD0><2>                                                                         <bar> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
-<Multi_key><numbersign><2>                                                         <bar> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
-<UEFD0><KP_2>                                                                      <bar> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
-<Multi_key><numbersign><KP_2>                                                      <bar> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
+<UEFD0><2>                                                                         <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><numbersign><2>                                                         <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<UEFD0><KP_2>                                                                      <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><numbersign><KP_2>                                                      <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 #
 #
 # # B01
@@ -20352,10 +20357,10 @@
 <Multi_key><numbersign><8>                                                     <greater> : "✌" U270C # VICTORY HAND emoji
 <UEFD0><KP_8>                                                                  <greater> : "✌" U270C # VICTORY HAND emoji
 <Multi_key><numbersign><KP_8>                                                  <greater> : "✌" U270C # VICTORY HAND emoji
-<UEFD0><9>                                                                     <greater> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<Multi_key><numbersign><9>                                                     <greater> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<UEFD0><KP_9>                                                                  <greater> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<Multi_key><numbersign><KP_9>                                                  <greater> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<UEFD0><9>                                                                     <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<Multi_key><numbersign><9>                                                     <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<UEFD0><KP_9>                                                                  <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<Multi_key><numbersign><KP_9>                                                  <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
 <UEFD0><0>                                                                     <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><numbersign><0>                                                     <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
 <UEFD0><KP_0>                                                                  <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
@@ -20364,10 +20369,10 @@
 <Multi_key><numbersign><1>                                                     <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <UEFD0><KP_1>                                                                  <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <Multi_key><numbersign><KP_1>                                                  <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<UEFD0><2>                                                                     <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<Multi_key><numbersign><2>                                                     <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<UEFD0><KP_2>                                                                  <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<Multi_key><numbersign><KP_2>                                                  <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<UEFD0><2>                                                                     <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
+<Multi_key><numbersign><2>                                                     <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
+<UEFD0><KP_2>                                                                  <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
+<Multi_key><numbersign><KP_2>                                                  <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
 #
 #
 # # B05
