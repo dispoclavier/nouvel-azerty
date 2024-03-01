@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-09-19T2030+0200
+#                       Date: 2023-09-23T1439+0200
 #                    Version:
-<UEFA0>                     : "version 1.0.11 "
+<UEFA0>                     : "version 1.0.12 "
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -684,9 +684,13 @@
 <Multi_key><A><y>                                                                        : "Ꜽ" UA73C # LATIN CAPITAL LETTER AY
 <Multi_key><a><y>                                                                        : "ꜽ" UA73D # LATIN SMALL LETTER AY
 <Multi_key><C><9>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
+<Multi_key><9><C>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
 <Multi_key><C><KP_9>                                                                     : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
+<Multi_key><KP_9><C>                                                                     : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
 <Multi_key><c><9>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
+<Multi_key><9><c>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <Multi_key><c><KP_9>                                                                     : "ꝯ" UA76F # LATIN SMALL LETTER CON
+<Multi_key><KP_9><c>                                                                     : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <Multi_key><d><b>                                                                        : "ȸ" U0238 # LATIN SMALL LETTER DB DIGRAPH
 <Multi_key><d><e><z>                                                                     : "ʤ" U02A4 # LATIN SMALL LETTER DEZH DIGRAPH
 <Multi_key><D><H>                                                                        : "Ð" U00D0 # LATIN CAPITAL LETTER ETH
@@ -826,20 +830,6 @@
 <Multi_key><asciicircum><braceright><ampersand><t><s>                                    : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><t><e><c>                                             : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <Multi_key><asciicircum><ampersand><t><e><s>                                             : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-#
-#
-#   Conflicting Latin abbreviation "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-#   and "ꝯ" UA76F # LATIN SMALL LETTER CON has mixed sequences based on
-#   shape mnemonics. Its casing pair is incompatible with digits-only.
-#
-<Multi_key><9><C>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><KP_9><C>                                                                     : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><9><c>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
-<Multi_key><KP_9><c>                                                                     : "ꝯ" UA76F # LATIN SMALL LETTER CON
-<Multi_key><C><9>                                                                        : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><C><KP_9>                                                                     : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><c><9>                                                                        : "ꝯ" UA76F # LATIN SMALL LETTER CON
-<Multi_key><c><KP_9>                                                                     : "ꝯ" UA76F # LATIN SMALL LETTER CON
 #
 #
 #   Punctuation
@@ -1345,6 +1335,10 @@
 #   ones completed on a best-guess basis.
 #   But unlike set up in en_US.UTF-8/Compose, <Multi_key><C><bar> is "₵" U20B5.
 #   See #*# CURRENCY
+#   And "¢" U00A2 is <Multi_key><bar><c> only, due to conflicts with "ȼ" U023C,
+#   "⊄" U2284 and "⊈" U2288.
+#   See #*# STROKE
+#   See #*# CURRENCY
 #
 #   For the generic currency symbol `¤` by composition, X O sequences are used.
 #   Reverse sequences conflict with mathematical symbols.
@@ -1352,13 +1346,12 @@
 <Multi_key><A><equal>                                                                    : "₳" U20B3 # AUSTRAL SIGN
 <Multi_key><A><minus>                                                                    : "₳" U20B3 # AUSTRAL SIGN
 <Multi_key><C><bar>                                                                      : "₵" U20B5 # CEDI SIGN
-<Multi_key><c><slash>                                                                    : "¢" U00A2 # CENT SIGN
+<Multi_key><bar><c>                                                                      : "¢" U00A2 # CENT SIGN
 <Multi_key><c><e>                                                                        : "₠" U20A0 # EURO-CURRENCY SIGN
 <Multi_key><C><E>                                                                        : "₠" U20A0 # EURO-CURRENCY SIGN
 <Multi_key><C><equal>                                                                    : "€" U20AC # EURO SIGN
 <Multi_key><C><r>                                                                        : "₢" U20A2 # CRUZEIRO SIGN
 <Multi_key><C><slash>                                                                    : "₡" U20A1 # COLON SIGN
-<Multi_key><c><slash>                                                                    : "¢" U00A2 # CENT SIGN
 <Multi_key><d><equal>                                                                    : "₫" U20AB # DONG SIGN
 <Multi_key><D><equal>                                                                    : "₫" U20AB # DONG SIGN
 <Multi_key><D><r>                                                                        : "₯" U20AF # DRACHMA SIGN
@@ -2251,8 +2244,10 @@
 #
 <Multi_key><e><greater>                                                                  : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
 <Multi_key><e><less>                                                                     : "‫" U202B # RIGHT-TO-LEFT EMBEDDING
-<Multi_key><d><equal>                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING
-<Multi_key><p><equal>                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><d><greater                                                                   : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><d><less>                                                                     : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><p><greate                                                                    : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><p><less>                                                                     : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><f><greater>                                                                  : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
 <Multi_key><o><greater>                                                                  : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
 <Multi_key><f><less>                                                                     : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
@@ -3024,7 +3019,8 @@
 <Multi_key><space><asciicircum><equal>                                           <space> : "≙" U2259 # ESTIMATES
 <Multi_key><nobreakspace><asciicircum><equal>                                    <space> : "≙" U2259 # ESTIMATES
 <Multi_key><v><equal>                                                            <space> : "≚" U225A # EQUIANGULAR TO
-<Multi_key><plus><equal>                                                         <space> : "≛" U225B # STAR EQUALS
+<Multi_key><space><asterisk><equal>                                              <space> : "≛" U225B # STAR EQUALS
+<Multi_key><nobreakspace><asterisk><equal>                                       <space> : "≛" U225B # STAR EQUALS
 <Multi_key><D><equal>                                                            <space> : "≜" U225C # DELTA EQUAL TO
 <Multi_key><d><e><f><equal>                                                      <space> : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><m><equal>                                                            <space> : "≞" U225E # MEASURED BY
@@ -3192,8 +3188,6 @@
 <Multi_key><bar><slash><backslash>                                               <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><space><backslash><slash><bar>                                        <space> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><nobreakspace><backslash><slash><bar>                                 <space> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
-<Multi_key><space><slash><backslash><bar>                                        <space> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
-<Multi_key><nobreakspace><slash><backslash><bar>                                 <space> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><backslash><backslash><slash>                                         <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                             <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><asciitilde><backslash><minus>                                        <space> : "⋍" U22CD # REVERSED TILDE EQUALS
@@ -3415,8 +3409,6 @@
 <Multi_key><nobreakspace><backslash><slash><numbersign><bar>                     <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><space><slash><backslash><bar>                                        <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><slash><backslash><bar>                                 <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><space><backslash><slash><bar>                                        <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><backslash><slash><bar>                                 <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><less><numbersign><greater>                                           <space> : "◆" U25C6 # BLACK DIAMOND
 <Multi_key><space><less><greater>                                                <space> : "◇" U25C7 # WHITE DIAMOND
 <Multi_key><nobreakspace><less><greater>                                         <space> : "◇" U25C7 # WHITE DIAMOND
@@ -3603,8 +3595,9 @@
 <Multi_key><nobreakspace><T>                                                     <space> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><equal><bar><bar><equal>                                              <space> : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
 <Multi_key><minus><bar><bar><minus>                                              <space> : "⟛" U27DB # LEFT AND RIGHT TACK
-<Multi_key><space><o><minus>                                                     <space> : "⟜" U27DC # LEFT MULTIMAP
-<Multi_key><nobreakspace><o><minus>                                              <space> : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><space><space><o><minus>                                              <space> : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><nobreakspace><space><o><minus>                                       <space> : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><nobreakspace><nobreakspace><o><minus>                                <space> : "⟜" U27DC # LEFT MULTIMAP
 <Multi_key><bar><minus><minus><minus>                                            <space> : "⟝" U27DD # LONG RIGHT TACK
 <Multi_key><minus><minus><minus><bar>                                            <space> : "⟞" U27DE # LONG LEFT TACK
 <Multi_key><o><bar><underscore>                                                  <space> : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
@@ -3637,8 +3630,10 @@
 <Multi_key><bracketright><greater><greater>                                      <space> : "⟫" U27EB # MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
 <Multi_key><bracketleft><parenleft><parenleft>                                   <space> : "⟬" U27EC # MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
 <Multi_key><bracketright><parenright><parenright>                                <space> : "⟭" U27ED # MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
-<Multi_key><bracketleft><parenleft>                                              <space> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
-<Multi_key><bracketright><parenright>                                            <space> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+<Multi_key><space><bracketleft><parenleft>                                       <space> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
+<Multi_key><nobreakspace><bracketleft><parenleft>                                <space> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
+<Multi_key><space><bracketright><parenright>                                     <space> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+<Multi_key><nobreakspace><bracketright><parenright>                              <space> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
 #
 #
 # # Supplemental Arrows-A of block U27F0
@@ -3916,8 +3911,9 @@
 <Multi_key><slash><underscore><underscore>                                       <space> : "⦤" U29A4 # ANGLE WITH UNDERBAR
 <Multi_key><backslash><underscore><underscore>                                   <space> : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
 <Multi_key><backslash><underscore>                                               <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
-<Multi_key><space><slash><underscore>                                            <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><slash><underscore>                                     <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><space><space><slash><underscore>                                     <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><space><slash><underscore>                              <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><nobreakspace><slash><underscore>                       <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><underscore><slash><parenright><greater>                              <space> : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
 <Multi_key><slash><underscore><parenright><greater>                              <space> : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
 <Multi_key><backslash><underscore><parenleft><less>                              <space> : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
@@ -4455,8 +4451,8 @@
 <Multi_key><c><bar>                                                              <space> : "⫏" U2ACF # CLOSED SUBSET
 <Multi_key><b><bar>                                                              <space> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><bar><b>                                                              <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><c><c><bar>                                                           <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><bar><c><c>                                                           <space> : "⫐" U2AD0 # CLOSED SUPERSET
+<Multi_key><space><D>                                                            <space> : "⫐" U2AD0 # CLOSED SUPERSET
+<Multi_key><nobreakspace><D>                                                     <space> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><D><D><minus>                                                         <space> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
 <Multi_key><D><percent><minus>                                                   <space> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
 <Multi_key><c><bar><minus>                                                       <space> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
@@ -4989,6 +4985,7 @@
 #   to be hit first, before the group selector. That behavior is consistent,
 #   it helps streamline code and maintenance, and it makes quick access dead
 #   keys described below possible.
+#   See # # Quick access dead keys for groups
 #
 #
 # # Quotation mark input method
@@ -5017,13 +5014,25 @@
 #
 #       Double grave, or diaeresis + grave:    reversed low      U2E42
 #
+#   This input method is fostered by using dead_doubleacute, consistently with
+#   ASCII double quote on key D09, level 3, as this dead key does not have many
+#   base characters, preventing conflicts in the wake.
+#   See #*# DOUBLE_ACUTE
+#
 #   The <rightsinglequotemark> base character takes into account that the ASCII
 #   apostrophe on row E is replaced with rightsinglequotemark, to enhance UX in
-#   French mode, i.e. ModLock off.
+#   French mode, i.e. ModLock off. This is also an unconflicting base character
+#   fostering this quotation mark input method.
 #
 #   ASCII <apostrophe> is supported alongside for interoperability as designed.
 #   Some Multi_key equivalents conflict with CIRCUMFLEX&ACUTE, DIAERESIS&ACUTE.
 #   That is fixed by hitting these dead keys the other way around.
+#   See # # CIRCUMFLEX&ACUTE
+#   See # # ACUTE&DIAERESIS
+#   See # # DIAERESIS&ACUTE
+#   See # # ACUTE&GRAVE, GRAVE&ACUTE
+#   See # # HACEK input facility by ACUTE GRAVE
+
 #
 #   The character descriptors in lowercase are Unicode informative aliases that
 #   have been given in case of a suboptimal name.
@@ -7484,8 +7493,8 @@
 <Multi_key><asciicircum><asciicircum>                                                <v> : "ͮ" U036E # COMBINING LATIN SMALL LETTER V
 <UEFD1><UEFD1>                                                                       <w> : "ᷱ" U1DF1 # COMBINING LATIN SMALL LETTER W
 <Multi_key><asciicircum><asciicircum>                                                <w> : "ᷱ" U1DF1 # COMBINING LATIN SMALL LETTER W
-<UEFD1><UEFD1>                                                                       <x> : "̽" U033D # COMBINING X ABOVE
-<Multi_key><asciicircum><asciicircum>                                                <x> : "̽" U033D # COMBINING X ABOVE
+<UEFD1><UEFD1>                                                                       <X> : "̽" U033D # COMBINING X ABOVE
+<Multi_key><asciicircum><asciicircum>                                                <X> : "̽" U033D # COMBINING X ABOVE
 <UEFD1><UEFD1>                                                                       <x> : "ͯ" U036F # COMBINING LATIN SMALL LETTER X
 <Multi_key><asciicircum><asciicircum>                                                <x> : "ͯ" U036F # COMBINING LATIN SMALL LETTER X
 <UEFD1><UEFD1>                                                                       <Z> : "͛" U035B # COMBINING ZIGZAG ABOVE
@@ -9247,10 +9256,13 @@
 #
 #   The Greek dead key is mapped on D06 with the Y mnemonics of 'Greek I' (i grec).
 #   Should this position be used otherwise, dead_greek is not indispensable, as
-#   the Greek letters can be accessed in group 6, and by dead key chord based on
-#   GR mnemonics of C05 (G, -, dead_stroke) and D04 (R, }, *dead_retroflexhook) as
-#   the bar and the retroflex hook are not found together on precomposed letters.
+#   the Greek letters can be accessed in group 6.
 #   See # # GROUP6
+#
+#   The dead key chord based on GR mnemonics of C05 (G, -, dead_stroke) and D04
+#   (R, }, *dead_retroflexhook) is not usable any more, since bar and retroflex
+#   hook occur together: U1DF1A LATIN SMALL LETTER I WITH STROKE AND RETROFLEX
+#   HOOK.
 #
 #   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
 #   alongside dead_greek double press virtualizing the ordinary general-purpose
@@ -9333,316 +9345,108 @@
 #
 <dead_greek>                                                                         <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
 <Multi_key><at>                                                                      <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
-<dead_stroke><UEFD4>                                                                 <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
-<Multi_key><minus><braceright>                                                       <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
-<UEFD4><dead_stroke>                                                                 <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
-<Multi_key><braceright><minus>                                                       <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
 <dead_greek>                                                                         <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
 <Multi_key><at>                                                                      <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
-<dead_stroke><UEFD4>                                                                 <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
-<Multi_key><minus><braceright>                                                       <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
-<UEFD4><dead_stroke>                                                                 <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
-<Multi_key><braceright><minus>                                                       <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
 <dead_greek>                                                                         <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
 <Multi_key><at>                                                                      <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
-<dead_stroke><UEFD4>                                                                 <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
-<Multi_key><minus><braceright>                                                       <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
-<UEFD4><dead_stroke>                                                                 <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
-<Multi_key><braceright><minus>                                                       <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
 <dead_greek>                                                                         <b> : "β" U03B2 # GREEK SMALL LETTER BETA
 <Multi_key><at>                                                                      <b> : "β" U03B2 # GREEK SMALL LETTER BETA
-<dead_stroke><UEFD4>                                                                 <b> : "β" U03B2 # GREEK SMALL LETTER BETA
-<Multi_key><minus><braceright>                                                       <b> : "β" U03B2 # GREEK SMALL LETTER BETA
-<UEFD4><dead_stroke>                                                                 <b> : "β" U03B2 # GREEK SMALL LETTER BETA
-<Multi_key><braceright><minus>                                                       <b> : "β" U03B2 # GREEK SMALL LETTER BETA
 <dead_greek>                                                                         <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
 <Multi_key><at>                                                                      <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
-<dead_stroke><UEFD4>                                                                 <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
-<Multi_key><minus><braceright>                                                       <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
-<UEFD4><dead_stroke>                                                                 <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
-<Multi_key><braceright><minus>                                                       <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
 <dead_greek>                                                                         <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
 <Multi_key><at>                                                                      <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
-<dead_stroke><UEFD4>                                                                 <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
-<Multi_key><minus><braceright>                                                       <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
-<UEFD4><dead_stroke>                                                                 <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
-<Multi_key><braceright><minus>                                                       <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
 <dead_greek>                                                                         <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
 <Multi_key><at>                                                                      <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
-<dead_stroke><UEFD4>                                                                 <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
-<Multi_key><minus><braceright>                                                       <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
-<UEFD4><dead_stroke>                                                                 <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
-<Multi_key><braceright><minus>                                                       <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
 <dead_greek>                                                                         <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
 <Multi_key><at>                                                                      <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
-<dead_stroke><UEFD4>                                                                 <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
-<Multi_key><minus><braceright>                                                       <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
-<UEFD4><dead_stroke>                                                                 <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
-<Multi_key><braceright><minus>                                                       <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
 <dead_greek>                                                                         <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
 <Multi_key><at>                                                                      <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
-<dead_stroke><UEFD4>                                                                 <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
-<Multi_key><minus><braceright>                                                       <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
-<UEFD4><dead_stroke>                                                                 <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
-<Multi_key><braceright><minus>                                                       <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
 <dead_greek>                                                                         <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
 <Multi_key><at>                                                                      <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
-<dead_stroke><UEFD4>                                                                 <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
-<Multi_key><minus><braceright>                                                       <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
-<UEFD4><dead_stroke>                                                                 <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
-<Multi_key><braceright><minus>                                                       <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
 <dead_greek>                                                                         <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
 <Multi_key><at>                                                                      <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
-<dead_stroke><UEFD4>                                                                 <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
-<Multi_key><minus><braceright>                                                       <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
-<UEFD4><dead_stroke>                                                                 <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
-<Multi_key><braceright><minus>                                                       <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
 <dead_greek>                                                                         <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
 <Multi_key><at>                                                                      <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
-<dead_stroke><UEFD4>                                                                 <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
-<Multi_key><minus><braceright>                                                       <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
-<UEFD4><dead_stroke>                                                                 <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
-<Multi_key><braceright><minus>                                                       <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
 <dead_greek>                                                                         <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
 <Multi_key><at>                                                                      <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
-<dead_stroke><UEFD4>                                                                 <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
-<Multi_key><minus><braceright>                                                       <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
-<UEFD4><dead_stroke>                                                                 <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
-<Multi_key><braceright><minus>                                                       <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
 <dead_greek>                                                                         <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
 <Multi_key><at>                                                                      <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
-<dead_stroke><UEFD4>                                                                 <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
-<Multi_key><minus><braceright>                                                       <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
-<UEFD4><dead_stroke>                                                                 <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
-<Multi_key><braceright><minus>                                                       <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
 <dead_greek>                                                                         <H> : "Η" U0397 # GREEK CAPITAL LETTER ETA
 <Multi_key><at>                                                                      <H> : "Η" U0397 # GREEK CAPITAL LETTER ETA
-<dead_stroke><UEFD4>                                                                 <H> : "Η" U0397 # GREEK CAPITAL LETTER ETA
-<Multi_key><minus><braceright>                                                       <H> : "Η" U0397 # GREEK CAPITAL LETTER ETA
-<UEFD4><dead_stroke>                                                                 <H> : "Η" U0397 # GREEK CAPITAL LETTER ETA
-<Multi_key><braceright><minus>                                                       <H> : "Η" U0397 # GREEK CAPITAL LETTER ETA
 <dead_greek>                                                                         <h> : "η" U03B7 # GREEK SMALL LETTER ETA
 <Multi_key><at>                                                                      <h> : "η" U03B7 # GREEK SMALL LETTER ETA
-<dead_stroke><UEFD4>                                                                 <h> : "η" U03B7 # GREEK SMALL LETTER ETA
-<Multi_key><minus><braceright>                                                       <h> : "η" U03B7 # GREEK SMALL LETTER ETA
-<UEFD4><dead_stroke>                                                                 <h> : "η" U03B7 # GREEK SMALL LETTER ETA
-<Multi_key><braceright><minus>                                                       <h> : "η" U03B7 # GREEK SMALL LETTER ETA
 <dead_greek>                                                                         <I> : "Ι" U0399 # GREEK CAPITAL LETTER IOTA
 <Multi_key><at>                                                                      <I> : "Ι" U0399 # GREEK CAPITAL LETTER IOTA
-<dead_stroke><UEFD4>                                                                 <I> : "Ι" U0399 # GREEK CAPITAL LETTER IOTA
-<Multi_key><minus><braceright>                                                       <I> : "Ι" U0399 # GREEK CAPITAL LETTER IOTA
-<UEFD4><dead_stroke>                                                                 <I> : "Ι" U0399 # GREEK CAPITAL LETTER IOTA
-<Multi_key><braceright><minus>                                                       <I> : "Ι" U0399 # GREEK CAPITAL LETTER IOTA
 <dead_greek>                                                                         <i> : "ι" U03B9 # GREEK SMALL LETTER IOTA
 <Multi_key><at>                                                                      <i> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<dead_stroke><UEFD4>                                                                 <i> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<Multi_key><minus><braceright>                                                       <i> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<UEFD4><dead_stroke>                                                                 <i> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<Multi_key><braceright><minus>                                                       <i> : "ι" U03B9 # GREEK SMALL LETTER IOTA
 <dead_greek>                                                                         <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
 <Multi_key><at>                                                                      <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
-<dead_stroke><UEFD4>                                                                 <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
-<Multi_key><minus><braceright>                                                       <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
-<UEFD4><dead_stroke>                                                                 <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
-<Multi_key><braceright><minus>                                                       <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
 <dead_greek>                                                                         <j> : "ξ" U03BE # GREEK SMALL LETTER XI
 <Multi_key><at>                                                                      <j> : "ξ" U03BE # GREEK SMALL LETTER XI
-<dead_stroke><UEFD4>                                                                 <j> : "ξ" U03BE # GREEK SMALL LETTER XI
-<Multi_key><minus><braceright>                                                       <j> : "ξ" U03BE # GREEK SMALL LETTER XI
-<UEFD4><dead_stroke>                                                                 <j> : "ξ" U03BE # GREEK SMALL LETTER XI
-<Multi_key><braceright><minus>                                                       <j> : "ξ" U03BE # GREEK SMALL LETTER XI
 <dead_greek>                                                                         <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
 <Multi_key><at>                                                                      <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
-<dead_stroke><UEFD4>                                                                 <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
-<Multi_key><minus><braceright>                                                       <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
-<UEFD4><dead_stroke>                                                                 <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
-<Multi_key><braceright><minus>                                                       <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
 <dead_greek>                                                                         <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
 <Multi_key><at>                                                                      <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
-<dead_stroke><UEFD4>                                                                 <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
-<Multi_key><minus><braceright>                                                       <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
-<UEFD4><dead_stroke>                                                                 <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
-<Multi_key><braceright><minus>                                                       <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
 <dead_greek>                                                                         <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMDA
 <Multi_key><at>                                                                      <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMDA
-<dead_stroke><UEFD4>                                                                 <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMDA
-<Multi_key><minus><braceright>                                                       <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMDA
-<UEFD4><dead_stroke>                                                                 <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMDA
-<Multi_key><braceright><minus>                                                       <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMDA
 <dead_greek>                                                                         <l> : "λ" U03BB # GREEK SMALL LETTER LAMDA
 <Multi_key><at>                                                                      <l> : "λ" U03BB # GREEK SMALL LETTER LAMDA
-<dead_stroke><UEFD4>                                                                 <l> : "λ" U03BB # GREEK SMALL LETTER LAMDA
-<Multi_key><minus><braceright>                                                       <l> : "λ" U03BB # GREEK SMALL LETTER LAMDA
-<UEFD4><dead_stroke>                                                                 <l> : "λ" U03BB # GREEK SMALL LETTER LAMDA
-<Multi_key><braceright><minus>                                                       <l> : "λ" U03BB # GREEK SMALL LETTER LAMDA
 <dead_greek>                                                                         <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
 <Multi_key><at>                                                                      <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
-<dead_stroke><UEFD4>                                                                 <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
-<Multi_key><minus><braceright>                                                       <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
-<UEFD4><dead_stroke>                                                                 <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
-<Multi_key><braceright><minus>                                                       <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
 <dead_greek>                                                                         <m> : "μ" U03BC # GREEK SMALL LETTER MU
 <Multi_key><at>                                                                      <m> : "μ" U03BC # GREEK SMALL LETTER MU
-<dead_stroke><UEFD4>                                                                 <m> : "μ" U03BC # GREEK SMALL LETTER MU
-<Multi_key><minus><braceright>                                                       <m> : "μ" U03BC # GREEK SMALL LETTER MU
-<UEFD4><dead_stroke>                                                                 <m> : "μ" U03BC # GREEK SMALL LETTER MU
-<Multi_key><braceright><minus>                                                       <m> : "μ" U03BC # GREEK SMALL LETTER MU
 <dead_greek>                                                                         <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
 <Multi_key><at>                                                                      <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
-<dead_stroke><UEFD4>                                                                 <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
-<Multi_key><minus><braceright>                                                       <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
-<UEFD4><dead_stroke>                                                                 <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
-<Multi_key><braceright><minus>                                                       <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
 <dead_greek>                                                                         <n> : "ν" U03BD # GREEK SMALL LETTER NU
 <Multi_key><at>                                                                      <n> : "ν" U03BD # GREEK SMALL LETTER NU
-<dead_stroke><UEFD4>                                                                 <n> : "ν" U03BD # GREEK SMALL LETTER NU
-<Multi_key><minus><braceright>                                                       <n> : "ν" U03BD # GREEK SMALL LETTER NU
-<UEFD4><dead_stroke>                                                                 <n> : "ν" U03BD # GREEK SMALL LETTER NU
-<Multi_key><braceright><minus>                                                       <n> : "ν" U03BD # GREEK SMALL LETTER NU
 <dead_greek>                                                                         <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
 <Multi_key><at>                                                                      <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
-<dead_stroke><UEFD4>                                                                 <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
-<Multi_key><minus><braceright>                                                       <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
-<UEFD4><dead_stroke>                                                                 <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
-<Multi_key><braceright><minus>                                                       <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
 <dead_greek>                                                                         <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
 <Multi_key><at>                                                                      <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
-<dead_stroke><UEFD4>                                                                 <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
-<Multi_key><minus><braceright>                                                       <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
-<UEFD4><dead_stroke>                                                                 <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
-<Multi_key><braceright><minus>                                                       <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
 <dead_greek>                                                                         <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
 <Multi_key><at>                                                                      <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
-<dead_stroke><UEFD4>                                                                 <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
-<Multi_key><minus><braceright>                                                       <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
-<UEFD4><dead_stroke>                                                                 <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
-<Multi_key><braceright><minus>                                                       <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
 <dead_greek>                                                                         <p> : "π" U03C0 # GREEK SMALL LETTER PI
 <Multi_key><at>                                                                      <p> : "π" U03C0 # GREEK SMALL LETTER PI
-<dead_stroke><UEFD4>                                                                 <p> : "π" U03C0 # GREEK SMALL LETTER PI
-<Multi_key><minus><braceright>                                                       <p> : "π" U03C0 # GREEK SMALL LETTER PI
-<UEFD4><dead_stroke>                                                                 <p> : "π" U03C0 # GREEK SMALL LETTER PI
-<Multi_key><braceright><minus>                                                       <p> : "π" U03C0 # GREEK SMALL LETTER PI
 <dead_greek>                                                                         <Q> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
 <Multi_key><at>                                                                      <Q> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
-<dead_stroke><UEFD4>                                                                 <Q> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
-<Multi_key><minus><braceright>                                                       <Q> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
-<UEFD4><dead_stroke>                                                                 <Q> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
-<Multi_key><braceright><minus>                                                       <Q> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
 <dead_greek>                                                                         <q> : "ϑ" U03D1 # GREEK THETA SYMBOL
 <Multi_key><at>                                                                      <q> : "ϑ" U03D1 # GREEK THETA SYMBOL
-<dead_stroke><UEFD4>                                                                 <q> : "ϑ" U03D1 # GREEK THETA SYMBOL
-<Multi_key><minus><braceright>                                                       <q> : "ϑ" U03D1 # GREEK THETA SYMBOL
-<UEFD4><dead_stroke>                                                                 <q> : "ϑ" U03D1 # GREEK THETA SYMBOL
-<Multi_key><braceright><minus>                                                       <q> : "ϑ" U03D1 # GREEK THETA SYMBOL
 <dead_greek>                                                                         <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
 <Multi_key><at>                                                                      <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
-<dead_stroke><UEFD4>                                                                 <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
-<Multi_key><minus><braceright>                                                       <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
-<UEFD4><dead_stroke>                                                                 <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
-<Multi_key><braceright><minus>                                                       <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
 <dead_greek>                                                                         <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
 <Multi_key><at>                                                                      <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
-<dead_stroke><UEFD4>                                                                 <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
-<Multi_key><minus><braceright>                                                       <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
-<UEFD4><dead_stroke>                                                                 <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
-<Multi_key><braceright><minus>                                                       <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
 <dead_greek>                                                                         <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
 <Multi_key><at>                                                                      <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
-<dead_stroke><UEFD4>                                                                 <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
-<Multi_key><minus><braceright>                                                       <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
-<UEFD4><dead_stroke>                                                                 <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
-<Multi_key><braceright><minus>                                                       <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
 <dead_greek>                                                                         <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
 <Multi_key><at>                                                                      <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
-<dead_stroke><UEFD4>                                                                 <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
-<Multi_key><minus><braceright>                                                       <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
-<UEFD4><dead_stroke>                                                                 <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
-<Multi_key><braceright><minus>                                                       <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
 <dead_greek>                                                                         <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
 <Multi_key><at>                                                                      <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
-<dead_stroke><UEFD4>                                                                 <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
-<Multi_key><minus><braceright>                                                       <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
-<UEFD4><dead_stroke>                                                                 <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
-<Multi_key><braceright><minus>                                                       <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
 <dead_greek>                                                                         <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
 <Multi_key><at>                                                                      <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
-<dead_stroke><UEFD4>                                                                 <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
-<Multi_key><minus><braceright>                                                       <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
-<UEFD4><dead_stroke>                                                                 <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
-<Multi_key><braceright><minus>                                                       <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
 <dead_greek>                                                                         <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
 <Multi_key><at>                                                                      <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
-<dead_stroke><UEFD4>                                                                 <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
-<Multi_key><minus><braceright>                                                       <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
-<UEFD4><dead_stroke>                                                                 <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
-<Multi_key><braceright><minus>                                                       <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
 <dead_greek>                                                                         <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
 <Multi_key><at>                                                                      <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
-<dead_stroke><UEFD4>                                                                 <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
-<Multi_key><minus><braceright>                                                       <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
-<UEFD4><dead_stroke>                                                                 <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
-<Multi_key><braceright><minus>                                                       <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
 <dead_greek>                                                                         <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
 <Multi_key><at>                                                                      <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<dead_stroke><UEFD4>                                                                 <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<Multi_key><minus><braceright>                                                       <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<UEFD4><dead_stroke>                                                                 <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<Multi_key><braceright><minus>                                                       <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
 <dead_greek>                                                                         <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
 <Multi_key><at>                                                                      <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
-<dead_stroke><UEFD4>                                                                 <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
-<Multi_key><minus><braceright>                                                       <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
-<UEFD4><dead_stroke>                                                                 <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
-<Multi_key><braceright><minus>                                                       <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
 <dead_greek>                                                                         <W> : "∇" U2207 # NABLA
 <Multi_key><at>                                                                      <W> : "∇" U2207 # NABLA
-<dead_stroke><UEFD4>                                                                 <W> : "∇" U2207 # NABLA
-<Multi_key><minus><braceright>                                                       <W> : "∇" U2207 # NABLA
-<UEFD4><dead_stroke>                                                                 <W> : "∇" U2207 # NABLA
-<Multi_key><braceright><minus>                                                       <W> : "∇" U2207 # NABLA
 <dead_greek>                                                                         <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
 <Multi_key><at>                                                                      <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
-<dead_stroke><UEFD4>                                                                 <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
-<Multi_key><minus><braceright>                                                       <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
-<UEFD4><dead_stroke>                                                                 <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
-<Multi_key><braceright><minus>                                                       <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
 <dead_greek>                                                                         <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
 <Multi_key><at>                                                                      <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
-<dead_stroke><UEFD4>                                                                 <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
-<Multi_key><minus><braceright>                                                       <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
-<UEFD4><dead_stroke>                                                                 <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
-<Multi_key><braceright><minus>                                                       <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
 <dead_greek>                                                                         <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
 <Multi_key><at>                                                                      <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
-<dead_stroke><UEFD4>                                                                 <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
-<Multi_key><minus><braceright>                                                       <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
-<UEFD4><dead_stroke>                                                                 <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
-<Multi_key><braceright><minus>                                                       <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
 <dead_greek>                                                                         <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
 <Multi_key><at>                                                                      <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
-<dead_stroke><UEFD4>                                                                 <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
-<Multi_key><minus><braceright>                                                       <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
-<UEFD4><dead_stroke>                                                                 <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
-<Multi_key><braceright><minus>                                                       <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
 <dead_greek>                                                                         <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
 <Multi_key><at>                                                                      <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
-<dead_stroke><UEFD4>                                                                 <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
-<Multi_key><minus><braceright>                                                       <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
-<UEFD4><dead_stroke>                                                                 <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
-<Multi_key><braceright><minus>                                                       <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
 <dead_greek>                                                                         <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
 <Multi_key><at>                                                                      <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
-<dead_stroke><UEFD4>                                                                 <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
-<Multi_key><minus><braceright>                                                       <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
-<UEFD4><dead_stroke>                                                                 <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
-<Multi_key><braceright><minus>                                                       <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
 <dead_greek>                                                                         <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
 <Multi_key><at>                                                                      <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
-<dead_stroke><UEFD4>                                                                 <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
-<Multi_key><minus><braceright>                                                       <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
-<UEFD4><dead_stroke>                                                                 <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
-<Multi_key><braceright><minus>                                                       <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
 #
 #
 # # CIRCLED_NEGATIVE
@@ -11273,58 +11077,58 @@
 #   See ### Letter groups
 #
 #   For compatibility with the symbol groups on B10, this dead key outputs its
-#   dead characters for documentation purposes with <dollar>, not <section>.
+#   dead characters for documentation purposes with <mu>, not <section>.
 #   See # # Dead characters for documentation purposes
 #   See # # B10-level3
 #
-<UEFD0>                                                                         <dollar> : "①" U2460 # CIRCLED DIGIT ONE
-<Multi_key><numbersign>                                                         <dollar> : "①" U2460 # CIRCLED DIGIT ONE
-<UEFD0><UEFD0>                                                                  <dollar> : "②" U2461 # CIRCLED DIGIT TWO
-<Multi_key><numbersign><numbersign>                                             <dollar> : "②" U2461 # CIRCLED DIGIT TWO
-<UEFD0><3>                                                                      <dollar> : "③" U2462 # CIRCLED DIGIT THREE
-<Multi_key><numbersign><3>                                                      <dollar> : "③" U2462 # CIRCLED DIGIT THREE
-<UEFD0><KP_3>                                                                   <dollar> : "③" U2462 # CIRCLED DIGIT THREE
-<Multi_key><numbersign><KP_3>                                                   <dollar> : "③" U2462 # CIRCLED DIGIT THREE
-<UEFD0><UEFD0><UEFD0>                                                           <dollar> : "③" U2462 # CIRCLED DIGIT THREE
-<Multi_key><numbersign><numbersign><numbersign>                                 <dollar> : "③" U2462 # CIRCLED DIGIT THREE
-<UEFD0><4>                                                                      <dollar> : "④" U2463 # CIRCLED DIGIT FOUR
-<Multi_key><numbersign><4>                                                      <dollar> : "④" U2463 # CIRCLED DIGIT FOUR
-<UEFD0><KP_4>                                                                   <dollar> : "④" U2463 # CIRCLED DIGIT FOUR
-<Multi_key><numbersign><KP_4>                                                   <dollar> : "④" U2463 # CIRCLED DIGIT FOUR
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                    <dollar> : "④" U2463 # CIRCLED DIGIT FOUR
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                     <dollar> : "④" U2463 # CIRCLED DIGIT FOUR
-<UEFD0><5>                                                                      <dollar> : "⑤" U2464 # CIRCLED DIGIT FIVE
-<Multi_key><numbersign><5>                                                      <dollar> : "⑤" U2464 # CIRCLED DIGIT FIVE
-<UEFD0><KP_5>                                                                   <dollar> : "⑤" U2464 # CIRCLED DIGIT FIVE
-<Multi_key><numbersign><KP_5>                                                   <dollar> : "⑤" U2464 # CIRCLED DIGIT FIVE
-<UEFD0><6>                                                                      <dollar> : "⑥" U2465 # CIRCLED DIGIT SIX
-<Multi_key><numbersign><6>                                                      <dollar> : "⑥" U2465 # CIRCLED DIGIT SIX
-<UEFD0><KP_6>                                                                   <dollar> : "⑥" U2465 # CIRCLED DIGIT SIX
-<Multi_key><numbersign><KP_6>                                                   <dollar> : "⑥" U2465 # CIRCLED DIGIT SIX
-<UEFD0><7>                                                                      <dollar> : "⑦" U2466 # CIRCLED DIGIT SEVEN
-<Multi_key><numbersign><7>                                                      <dollar> : "⑦" U2466 # CIRCLED DIGIT SEVEN
-<UEFD0><KP_7>                                                                   <dollar> : "⑦" U2466 # CIRCLED DIGIT SEVEN
-<Multi_key><numbersign><KP_7>                                                   <dollar> : "⑦" U2466 # CIRCLED DIGIT SEVEN
-<UEFD0><8>                                                                      <dollar> : "⑧" U2467 # CIRCLED DIGIT EIGHT
-<Multi_key><numbersign><8>                                                      <dollar> : "⑧" U2467 # CIRCLED DIGIT EIGHT
-<UEFD0><KP_8>                                                                   <dollar> : "⑧" U2467 # CIRCLED DIGIT EIGHT
-<Multi_key><numbersign><KP_8>                                                   <dollar> : "⑧" U2467 # CIRCLED DIGIT EIGHT
-<UEFD0><9>                                                                      <dollar> : "⑨" U2468 # CIRCLED DIGIT NINE
-<Multi_key><numbersign><9>                                                      <dollar> : "⑨" U2468 # CIRCLED DIGIT NINE
-<UEFD0><KP_9>                                                                   <dollar> : "⑨" U2468 # CIRCLED DIGIT NINE
-<Multi_key><numbersign><KP_9>                                                   <dollar> : "⑨" U2468 # CIRCLED DIGIT NINE
-<UEFD0><0>                                                                      <dollar> : "⑩" U2469 # CIRCLED NUMBER TEN
-<Multi_key><numbersign><0>                                                      <dollar> : "⑩" U2469 # CIRCLED NUMBER TEN
-<UEFD0><KP_0>                                                                   <dollar> : "⑩" U2469 # CIRCLED NUMBER TEN
-<Multi_key><numbersign><KP_0>                                                   <dollar> : "⑩" U2469 # CIRCLED NUMBER TEN
-<UEFD0><1>                                                                      <dollar> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<Multi_key><numbersign><1>                                                      <dollar> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<UEFD0><KP_1>                                                                   <dollar> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<Multi_key><numbersign><KP_1>                                                   <dollar> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<UEFD0><2>                                                                      <dollar> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<Multi_key><numbersign><2>                                                      <dollar> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<UEFD0><KP_2>                                                                   <dollar> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<Multi_key><numbersign><KP_2>                                                   <dollar> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<UEFD0>                                                                             <mu> : "①" U2460 # CIRCLED DIGIT ONE
+<Multi_key><numbersign>                                                             <mu> : "①" U2460 # CIRCLED DIGIT ONE
+<UEFD0><UEFD0>                                                                      <mu> : "②" U2461 # CIRCLED DIGIT TWO
+<Multi_key><numbersign><numbersign>                                                 <mu> : "②" U2461 # CIRCLED DIGIT TWO
+<UEFD0><3>                                                                          <mu> : "③" U2462 # CIRCLED DIGIT THREE
+<Multi_key><numbersign><3>                                                          <mu> : "③" U2462 # CIRCLED DIGIT THREE
+<UEFD0><KP_3>                                                                       <mu> : "③" U2462 # CIRCLED DIGIT THREE
+<Multi_key><numbersign><KP_3>                                                       <mu> : "③" U2462 # CIRCLED DIGIT THREE
+<UEFD0><UEFD0><UEFD0>                                                               <mu> : "③" U2462 # CIRCLED DIGIT THREE
+<Multi_key><numbersign><numbersign><numbersign>                                     <mu> : "③" U2462 # CIRCLED DIGIT THREE
+<UEFD0><4>                                                                          <mu> : "④" U2463 # CIRCLED DIGIT FOUR
+<Multi_key><numbersign><4>                                                          <mu> : "④" U2463 # CIRCLED DIGIT FOUR
+<UEFD0><KP_4>                                                                       <mu> : "④" U2463 # CIRCLED DIGIT FOUR
+<Multi_key><numbersign><KP_4>                                                       <mu> : "④" U2463 # CIRCLED DIGIT FOUR
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                        <mu> : "④" U2463 # CIRCLED DIGIT FOUR
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                         <mu> : "④" U2463 # CIRCLED DIGIT FOUR
+<UEFD0><5>                                                                          <mu> : "⑤" U2464 # CIRCLED DIGIT FIVE
+<Multi_key><numbersign><5>                                                          <mu> : "⑤" U2464 # CIRCLED DIGIT FIVE
+<UEFD0><KP_5>                                                                       <mu> : "⑤" U2464 # CIRCLED DIGIT FIVE
+<Multi_key><numbersign><KP_5>                                                       <mu> : "⑤" U2464 # CIRCLED DIGIT FIVE
+<UEFD0><6>                                                                          <mu> : "⑥" U2465 # CIRCLED DIGIT SIX
+<Multi_key><numbersign><6>                                                          <mu> : "⑥" U2465 # CIRCLED DIGIT SIX
+<UEFD0><KP_6>                                                                       <mu> : "⑥" U2465 # CIRCLED DIGIT SIX
+<Multi_key><numbersign><KP_6>                                                       <mu> : "⑥" U2465 # CIRCLED DIGIT SIX
+<UEFD0><7>                                                                          <mu> : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<Multi_key><numbersign><7>                                                          <mu> : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<UEFD0><KP_7>                                                                       <mu> : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<Multi_key><numbersign><KP_7>                                                       <mu> : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<UEFD0><8>                                                                          <mu> : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<Multi_key><numbersign><8>                                                          <mu> : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<UEFD0><KP_8>                                                                       <mu> : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<Multi_key><numbersign><KP_8>                                                       <mu> : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<UEFD0><9>                                                                          <mu> : "⑨" U2468 # CIRCLED DIGIT NINE
+<Multi_key><numbersign><9>                                                          <mu> : "⑨" U2468 # CIRCLED DIGIT NINE
+<UEFD0><KP_9>                                                                       <mu> : "⑨" U2468 # CIRCLED DIGIT NINE
+<Multi_key><numbersign><KP_9>                                                       <mu> : "⑨" U2468 # CIRCLED DIGIT NINE
+<UEFD0><0>                                                                          <mu> : "⑩" U2469 # CIRCLED NUMBER TEN
+<Multi_key><numbersign><0>                                                          <mu> : "⑩" U2469 # CIRCLED NUMBER TEN
+<UEFD0><KP_0>                                                                       <mu> : "⑩" U2469 # CIRCLED NUMBER TEN
+<Multi_key><numbersign><KP_0>                                                       <mu> : "⑩" U2469 # CIRCLED NUMBER TEN
+<UEFD0><1>                                                                          <mu> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><numbersign><1>                                                          <mu> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<UEFD0><KP_1>                                                                       <mu> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><numbersign><KP_1>                                                       <mu> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<UEFD0><2>                                                                          <mu> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><numbersign><2>                                                          <mu> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<UEFD0><KP_2>                                                                       <mu> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><numbersign><KP_2>                                                       <mu> : "⑫" U246B # CIRCLED NUMBER TWELVE
 #
 #
 # # Letter apostrophe and ʻokina
@@ -15762,12 +15566,6 @@
 <Multi_key><asterisk><numbersign><6>                                        <apostrophe> : "∯" U222F # SURFACE INTEGRAL
 <dead_abovering><UEFD0><KP_6>                                               <apostrophe> : "∯" U222F # SURFACE INTEGRAL
 <Multi_key><asterisk><numbersign><KP_6>                                     <apostrophe> : "∯" U222F # SURFACE INTEGRAL
-<dead_abovering><UEFD0><5>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><5>                                                 <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><KP_5>                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><KP_5>                                              <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<dead_abovering><UEFD0><dead_diaeresis>                                              <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
-<Multi_key><asterisk><numbersign><colon>                                             <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
 #
 # # RING_ABOVE&GROUP7
@@ -18906,12 +18704,12 @@
 <Multi_key><exclam><exclam>                                               <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                 <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key><exclam><exclam>                                                    <section> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-<dead_belowdot><dead_belowdot>                                            <dead_cedilla> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
+<dead_belowdot><dead_belowdot>                                                   <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                      <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
-<dead_belowdot><dead_belowdot>                                           <dead_belowdot> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<Multi_key><exclam><exclam>                                                     <exclam> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
-<dead_belowdot><dead_belowdot>                                          <dead_diaeresis> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
-<Multi_key><exclam><exclam>                                                      <colon> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
+<dead_belowdot><dead_belowdot>                                              <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<Multi_key><exclam><exclam>                                                 <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<dead_belowdot><dead_belowdot>                                                <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
+<Multi_key><exclam><exclam>                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
 <dead_belowdot><dead_belowdot>                                                       <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW Yoruba current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                          <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW Yoruba current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                       <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW Yoruba current Nigerian alphabet
@@ -18989,8 +18787,6 @@
 <Multi_key><colon>                                                              <emdash> : "⸻" U2E3B # THREE-EM DASH
 <dead_diaeresis>                                                                 <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><colon>                                                               <grave> : "⊆" U2286 # SUBSET OF OR EQUAL TO
-<dead_diaeresis>                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><colon>                                                                 <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                 <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                               <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                              <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
