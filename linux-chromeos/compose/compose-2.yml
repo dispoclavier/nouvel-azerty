@@ -4490,7 +4490,9 @@
 #
 #   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_tilde yields
 #   high curly quotation marks U201D, U2019 (closing or opening), as a facility
-#   for highly backwards compatible layouts, where dead_acute (usually yielding
+#   for one-handed input taking advantage of the synergy between dead_tilde and
+#   quotedbl or apostrophe on level 3 of keys D11 and D07 or D08, as well as to
+#   improve the backwards compatible layout, where dead_acute (usually yielding
 #   these quotation marks) is not on level 1, but on level 3, next to the tilde
 #   dead key on E02, and quotedbl is on E03 as usual.
 #   See # # Quotation mark input method
