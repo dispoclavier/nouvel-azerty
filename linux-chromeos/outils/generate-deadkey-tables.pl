@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-01-14T2352+0100
+# 2024-03-02T1607+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -29,10 +29,13 @@ use feature 'unicode_strings';
 # Courtesy https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
+# Courtesy https://www.geeksforgeeks.org/perl-date-and-time/
+use DateTime;
 
-## Character names localization
+## Convert character names to localized names
 # my $names_file_path       = 'names/NamesList.txt';
 my $names_file_path       = 'names/ListeNoms.txt';
+## Convert character names to descriptors
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 
@@ -58,10 +61,15 @@ print( "Opened file $output_path.\n" );
 print( "Processing dead keys from $file_path to $output_path.\n" );
 
 my $parse_on       = !1;
+my $date_legend    = 'Tableau mis à jour le ';
+# Courtesy https://stackoverflow.com/a/43881027
+my $nowDate        = DateTime->now(time_zone => 'local');
+my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
+my $datetime       = "$day/$month/$year";
 my $table_header_1 = 'Caractère(s)';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
-my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table><caption>$date_legend$datetime</caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
@@ -146,7 +154,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche += ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + U">double aigu<\/kbd>/g;
 				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche 5( ou Maj + AltGr\/Option + O">grave<\/kbd>/g;
-				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque Maj + AltGr\/Option + Y">grec<\/kbd>/g;
+				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque ou cerclé AltGr\/Option + Y ou Maj + AltGr\/Option + Y">grec<\/kbd>/g;
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + E">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
 				$line =~ s/<dead_invertedbreve>/<kbd class="deadkey long" title="Touche morte brève inversée Maj + AltGr\/Option + D">brève inversée<\/kbd>/g;
@@ -313,8 +321,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Medical notations/$1 notations médicales/g;
 				$line =~ s/( # .*) double turned comma quotation mark/$1 guillemet apostrophe double tourné/g;
 				$line =~ s/( # .*) single turned comma quotation mark/$1 guillemet apostrophe simple tourné/g;
-				$line =~ s/( # .*) low double comma quotation mark/$1 guillemet virgule double/g;
-				$line =~ s/( # .*) low single comma quotation mark/$1 guillemet virgule simple/g;
+				$line =~ s/( # .*) low double comma quotation mark/$1 guillemet virgule double tourné/g;
+				$line =~ s/( # .*) low single comma quotation mark/$1 guillemet virgule simple tourné/g;
 				$line =~ s/( # .*) double reversed comma quotation mark/$1 guillemet apostrophe double réfléchi/g;
 				$line =~ s/( # .*) single reversed comma quotation mark/$1 guillemet apostrophe simple réfléchi/g;
 				$line =~ s/( # .*) double comma quotation mark/$1 guillemet apostrophe double/g;
