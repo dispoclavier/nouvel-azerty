@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-03-02T1607+0100
+# 2024-03-02T1858+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -65,11 +65,12 @@ my $date_legend    = 'Tableau mis à jour le ';
 # Courtesy https://stackoverflow.com/a/43881027
 my $nowDate        = DateTime->now(time_zone => 'local');
 my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
-my $datetime       = "$day/$month/$year";
+my $date           = "$day/$month/$year";
+my $table_id       = "tableau-tm-$output_file_index";
 my $table_header_1 = 'Caractère(s)';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
-my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table><caption>$date_legend$datetime</caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"$table_id\"><caption><a href=\"#$table_id\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
