@@ -3,7 +3,8 @@
 ## 1.7.0 (projet)
 
 * Disposition : Redonder la touche morte Lettre grecque, cerclé à la place de "@" U0040 sur D06. (dispocla.cpp [2b62fcd](https://github.com/dispoclavier/nouvel-azerty/commit/2b62fcd03c1403fa8ee37e2accaf5be25c53a034))
-* Touches mortes : Tilde : Redonder les guillemets comme dans Accent aigu. (compose-2.yml [b9a8c63](https://github.com/dispoclavier/nouvel-azerty/commit/b9a8c635e1cd079dfd625d7bc1af3f4bc56b16c5))
+* Touches mortes : Tilde : Redonder les guillemets comme dans Accent aigu. (compose-2.yml [b9a8c63](https://github.com/dispoclavier/nouvel-azerty/commit/b9a8c635e1cd079dfd625d7bc1af3f4bc56b16c5), [9d84d8f](https://github.com/dispoclavier/nouvel-azerty/commit/9d84d8f797d0687367d84de63b4c7dfc67191f98))
+* Documentation : Restaurer l’historique des versions du répertoire des touches mortes. (Compose.yml [c6c939f](https://github.com/dispoclavier/nouvel-azerty/commit/c6c939f1ec1a84dc4a1ec4aaf49df552b887e5dd) jusqu’à [bebf6f8](https://github.com/dispoclavier/nouvel-azerty/commit/bebf6f8e44270b5623bf4eae95454b8b657497e2))
 
 ## 1.6.0 (2024-02-09)
 
@@ -18,13 +19,14 @@
 * Touches mortes : Sélectrice de groupe : Remplacer "ʐ" U0290 par Ⱬ" U2C6B, ⱬ" U2C6C, remplacés par "ʓ" U0293, "ʑ" U0291, remplacés par "Ɀ" U2C7F, "ɀ" U0240, remplacés par "℥" U2125. Groupe 4 de S : Remplacer "ʲ" U02B2 par "℈" U2108. Groupe 12 de E : Redonder "℈" U2108. (compose-3.yml [cdb706c](https://github.com/dispoclavier/nouvel-azerty/commit/cdb706c42934ddacd567c6969f6f3d41b59e05f8))
 * Touches mortes : Sélectrice de groupe : Groupe 3 : Redonder "Kʼ" U004B U02BC. Groupe 4 : Redonder "℃" U2103. Groupe 11 : Redonder "℉" U2109, "℄" U2104. (compose-3.yml [0e887c3](https://github.com/dispoclavier/nouvel-azerty/commit/0e887c34299ce2ace6443ba9c2cc94092d41ce15))
 * Touches mortes : Sélectrice de groupe : Groupe 12: Remplacer "ŉ" U0149 par "Ꞑ" UA790, "ꞑ" UA791. Redonder "ℹ" U2139, "Ω" U2126. (compose-3.yml [121256f](https://github.com/dispoclavier/nouvel-azerty/commit/121256f82fcb134892ecd8d8e5e36f6fcc323d17))
+* Touches mortes : Accent grave : Ajouter "(" U0028, ")" U0029 (prévu pour la version 1.5.0). (compose-2.yml [0750b87](https://github.com/dispoclavier/nouvel-azerty/commit/0750b87a74978085e2ad0e5d63cf357fd2381ed8))
 * Documentation de Disposition : Symboles ASCII : Permuter l’accent grave et le guillemet double générique (1.2.0). (compose-3.yml [81dbf30](https://github.com/dispoclavier/nouvel-azerty/commit/81dbf306d59a5e7887558d3129c04d5672c8a972), [d316791](https://github.com/dispoclavier/nouvel-azerty/commit/d316791df17e563b6630c66f5f09abc3c375bf7c), [9c79996](https://github.com/dispoclavier/nouvel-azerty/commit/9c7999602653aaf0c848bca9fab09389551b42f3))
 * Documentation de Touches mortes : Sélectrice de groupe : Groupe 11 : "Ꞛ" UA79A, "ꞛ" UA79B, "Ꞝ" UA79C, "ꞝ" UA79D, "Ꞟ" UA79E, "ꞟ" UA79F. (compose-3.yml [e5e02cd](https://github.com/dispoclavier/nouvel-azerty/commit/e5e02cde11131e7131b59e3085bf141057b894eb))
 
 ## 1.5.0 (2023-12-27)
 
 * Disposition : Permuter les touches mortes tréma sur E05 et accent grave sur E12. (dispocla.cpp [51701f8](https://github.com/dispoclavier/nouvel-azerty/commit/51701f8ac1f15c71bd2b013b0fca918242a38a16))
-* Touches mortes : Accent grave : Ajouter "(" U0028, ")" U0029. (compose-2.yml [0750b87](https://github.com/dispoclavier/nouvel-azerty/commit/0750b87a74978085e2ad0e5d63cf357fd2381ed8))
+* Touches mortes : Accent grave : Ajouter "(" U0028, ")" U0029 (prévu pour la version 1.5.0). (compose-2.yml [0750b87](https://github.com/dispoclavier/nouvel-azerty/commit/0750b87a74978085e2ad0e5d63cf357fd2381ed8) (fichier qui manque dans la version 1.5.0 distribuée))
 
 ## 1.4.0 (2023-12-06)
 
