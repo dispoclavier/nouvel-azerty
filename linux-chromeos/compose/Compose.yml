@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-10-27T1329+0200
+#                       Date: 2023-10-29T0531+0100
 #                    Version:
-<UEFA0>                     : "version 1.1.1"
+<UEFA0>                     : "version 1.1.2"
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -5699,22 +5699,20 @@
 #   https://unicode.org/L2/L2010/10230-modifier-q.pdf
 #   https://unicode.org/L2/L2010/10316-cmts.pdf
 #
-#   While there is a consensus to include superscript letters in
-#   Unicode for phonetic notation, making abbreviation indicators
-#   plain text is traditionally fiercely opposed by some members of
-#   the Consortium, obviously for software marketing reasons.
+#   Despite the consensus about including superscript letters in Unicode for
+#   phonetic notation, making abbreviation indicators plain text is fiercely
+#   opposed by members of the Consortium, for software marketing reasons.
 #
-#   When character names on a MODIFIER LETTER basis were introduced,
-#   this became the new term for “superscript”, while “subscript”
-#   remained unchanged. The goal was to make clear that preformatted
-#   superscript letters should not be used instead of formatted ones,
-#   but the attempt was pointless since superscript bears semantics
-#   and is therefore a matter of plain text. Disguising subscript was
-#   dropped due to running out of technical terms.
+#   When character names on a MODIFIER LETTER basis were introduced, this
+#   became the new term for “superscript” while “subscript” remained unchanged.
+#   This made clear that preformatted superscript letters should not be used
+#   in lieu of formatted letters, but the attempt was biased, since superscript
+#   bears semantics and is therefore eligible for support in plain text.
+#   Disguising subscript was dropped due to running out of technical terms.
 #
-#   To fill the combining diacritic slot, "̅" U0305 COMBINING OVERLINE is used,
-#   with mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this
-#   slot for the SUBSCRIPT_OR_SMALL_CAPS dead key,   
+#   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
+#   mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this slot
+#   for the SUBSCRIPT_OR_SMALL_CAPS dead key, <Multi_key><underscore>.
 #
 #
 #   Combining diacritic
@@ -7412,7 +7410,7 @@
 #
 #   Due to conflicts, INVERTED i.e. TURNED double press is used for a full set.
 #
-#   As a combining diacritic, "̒" U0312 # COMBINING TURNED COMMA ABOVE is used,
+#   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included.
 #
 <UEFD5>                                                                                    <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
@@ -7458,7 +7456,7 @@
 <Multi_key><percent>                                                                           <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
 <UEFD5>                                                                                        <e> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <Multi_key><percent>                                                                           <e> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
-<UEFD5>                                                                                        <F> : "Ⅎ" U2132 # TURNED CAPITAL F, "Ǝ" U018E, "Ⅎ" U2132, "⅁" U2141, "Ɥ" UA78D
+<UEFD5>                                                                                        <F> : "Ⅎ" U2132 # TURNED CAPITAL F
 <Multi_key><percent>                                                                           <F> : "Ⅎ" U2132 # TURNED CAPITAL F
 <UEFD5>                                                                                        <f> : "ⅎ" U214E # TURNED SMALL F
 <Multi_key><percent>                                                                           <f> : "ⅎ" U214E # TURNED SMALL F
@@ -7785,18 +7783,18 @@
 #
 # # TURNED&STROKE&GROUP_3
 #
-<UEFD5><dead_longsolidusoverlay><UEFD0><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<UEFD5><dead_longsolidusoverlay><UEFD0><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<UEFD5><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><percent><slash><numbersign><numbersign><numbersign>                                <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><3>                                                     <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><KP_3>                                                  <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<dead_longsolidusoverlay><UEFD5><UEFD0><UEFD0><UEFD0>                                          <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
-<Multi_key><slash><percent><numbersign><numbersign><numbersign>                                <a> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<UEFD5><dead_longsolidusoverlay><UEFD0><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><percent><slash><numbersign><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<UEFD5><dead_longsolidusoverlay><UEFD0><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><percent><slash><numbersign><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<UEFD5><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><percent><slash><numbersign><numbersign><numbersign>                                <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<dead_longsolidusoverlay><UEFD5><UEFD0><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><slash><percent><numbersign><3>                                                     <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<dead_longsolidusoverlay><UEFD5><UEFD0><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><slash><percent><numbersign><KP_3>                                                  <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<dead_longsolidusoverlay><UEFD5><UEFD0><UEFD0><UEFD0>                                          <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
+<Multi_key><slash><percent><numbersign><numbersign><numbersign>                                <o> : "ꭄ" UAB44 # LATIN SMALL LETTER TURNED O OPEN-O WITH STROKE
 #
 #
 # # TURNED&DIAERESIS
@@ -7807,7 +7805,7 @@
 <Multi_key><colon><percent>                                                                    <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 #
 #
-#^# INVERTED
+#^# TURNED, INVERTED, SIDEWAYS
 #   *dead_inverted
 #   *dead_turned double press
 #   Multi_key: ¦%%
@@ -10838,6 +10836,10 @@
 #   dead_abovedot double press
 #   Multi_key ¦..
 #
+<dead_abovedot><dead_abovedot>                                                             <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<Multi_key><period><period>                                                                <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<dead_abovedot><dead_abovedot>                                                             <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
+<Multi_key><period><period>                                                                <U200B> : "̍" U030D # COMBINING VERTICAL LINE ABOVE Marshallese
 <dead_abovedot><dead_abovedot>                                                                 <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
 <Multi_key><period><period>                                                                    <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
 <dead_abovedot><dead_abovedot>                                                                 <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE Min Nan (Pe̍h-ōe-jī orthography)
@@ -11012,7 +11014,7 @@
 <Multi_key><numbersign>                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR for Breton variant
 #
 #
-# # Hyphen and long dashes
+# # Hyphen
 #
 #   The HYPHEN punctuation has been separately encoded as U2010, although it is
 #   a homoglyph to U002D in most fonts.
@@ -11022,9 +11024,14 @@
 #   See # # Dashes and hyphens
 #   See #*# DIAERESIS
 #
+#
+# # Long dashes
+#
 #   The TWO-EM DASH and THREE-EM DASH are both in group 1, depending on whether
 #   the base is en or em, and in group 2 or 3 according to the number of dashes
 #   represented by the long dash.
+#   See #^# GROUP_2
+#   See #^# GROUP_3
 #
 #   Alongside the support by group selection, multiple em dashes are accessible
 #   by composition, also supporting other dashes and hyphens.
@@ -11034,24 +11041,8 @@
 <Multi_key><numbersign>                                                                    <U2011> : "‐" U2010 # HYPHEN
 <UEFD0>                                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><numbersign>                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
-<UEFD0><UEFD0>                                                                            <endash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><numbersign><numbersign>                                                       <endash> : "⸺" U2E3A # TWO-EM DASH
-<UEFD0><UEFD0>                                                                            <emdash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><numbersign><numbersign>                                                       <emdash> : "⸺" U2E3A # TWO-EM DASH
 <UEFD0>                                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
 <Multi_key><numbersign>                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
-<UEFD0><3>                                                                                <endash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign><3>                                                                <endash> : "⸻" U2E3B # THREE-EM DASH
-<UEFD0><KP_3>                                                                             <endash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign><KP_3>                                                             <endash> : "⸻" U2E3B # THREE-EM DASH
-<UEFD0><UEFD0><UEFD0>                                                                     <endash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign><numbersign><numbersign>                                           <endash> : "⸻" U2E3B # THREE-EM DASH
-<UEFD0><3>                                                                                <emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign><3>                                                                <emdash> : "⸻" U2E3B # THREE-EM DASH
-<UEFD0><KP_3>                                                                             <emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign><KP_3>                                                             <emdash> : "⸻" U2E3B # THREE-EM DASH
-<UEFD0><UEFD0><UEFD0>                                                                     <emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><numbersign><numbersign><numbersign>                                           <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
 #
 # # Angle quotation marks
@@ -11117,22 +11108,34 @@
 #   added value with respect to the fact that on most computers (Windows), SMP
 #   characters are hard to input inside the TSF using only layout drivers with
 #   the wrong data type picked for dead key output. 0 and 5 are used for input
-#   of the high surrogate that is part of these wide-headed barb arrows.
+#   of the high surrogate, a feature that is effective on Windows.
 #
-#   Group  Arrow type                         Sample   Numpad live key level
+#   Group  Descripton                          Example   Numpad live key level
 #
-#       2  Basic simple arrows                ↑ U2191  AltFr
-#       3  Basic double arrows                ⇑ U21D1  Shift + AltFr
-#       4  Arrow emoji (black / basic simple arrows)   AltGr
-#       5  Black or plain arrows              ⬆ U2B06  Shift + AltGr
-#       6  Empty or outlined, white arrows    ⇧ U21E7  Shift + AltGr + AltFr
-#       7  Triangle-headed arrows             ⭡ U2B61  AltGr + AltFr
-#       9  Triangle-headed arrows to bar      ⭱ U2B71
-#       1  Wide-headed light barb arrows      🡡 U1F861
-#       2  Wide-headed very heavy barb arrows 🢁 U1F881
+#       2  Basic simple arrows                 ↑ U2191   AltFr
+#       3  Basic double arrows                 ⇑ U21D1   Shift + AltFr
+#       4  Arrow emoji (black / basic simple arrows)     AltGr
+#       5  Black or plain arrows               ⬆ U2B06   Shift + AltGr
+#       6  Empty or outlined, white arrows     ⇧ U21E7   Shift + AltGr + AltFr
+#       7  Triangle-headed arrows              ⭡ U2B61   AltGr + AltFr
+#       9  Triangle-headed arrows to bar       ⭱ U2B71
+#       1  Wide-headed light barb arrows       🡡 U1F861
+#       2  Wide-headed very heavy barb arrows  🢁 U1F881
 #
 #
-#   Basic simple arrows, live on AltFr + numpad.
+#^# GROUP_2
+#   *dead_group double press
+#   Multi_key: ¦##
+#
+# # Long dashes
+#
+<UEFD0><UEFD0>                                                                            <endash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><numbersign><numbersign>                                                       <endash> : "⸺" U2E3A # TWO-EM DASH
+<UEFD0><UEFD0>                                                                            <emdash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><numbersign><numbersign>                                                       <emdash> : "⸺" U2E3A # TWO-EM DASH
+#
+#
+# # Basic simple arrows, live on AltFr + numpad.
 #
 <UEFD0><UEFD0>                                                                                 <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><numbersign>                                                            <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -11176,7 +11179,28 @@
 <Multi_key><numbersign><numbersign>                                                         <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 #
 #
-#   Basic double arrows, live on Shift + AltFr + numpad.
+#^# GROUP_3
+#   *dead_group triple press
+#   Multi_key: ¦###
+#   Multi_key: ¦#3
+#
+# # Long dashes
+#
+<UEFD0><3>                                                                                <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><3>                                                                <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><KP_3>                                                                             <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><KP_3>                                                             <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><UEFD0><UEFD0>                                                                     <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><numbersign><numbersign>                                           <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><3>                                                                                <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><3>                                                                <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><KP_3>                                                                             <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><KP_3>                                                             <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><UEFD0><UEFD0>                                                                     <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><numbersign><numbersign>                                           <emdash> : "⸻" U2E3B # THREE-EM DASH
+#
+#
+# # Basic double arrows, live on Shift + AltFr + numpad.
 #
 <UEFD0><3>                                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><numbersign><3>                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
@@ -11260,7 +11284,12 @@
 <Multi_key><numbersign><numbersign><numbersign>                                             <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 #
 #
-#   Arrow emoji as a mix of black and basic simple arrows, live on AltGr + numpad.
+#^# GROUP_4
+#   *dead_group quadruple press
+#   Multi_key: ¦####
+#   Multi_key: ¦#4
+#
+# # Arrow emoji as a mix of black and basic simple arrows, live on AltGr + numpad.
 #
 <UEFD0><4>                                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><4>                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -11344,7 +11373,10 @@
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 #
 #
-#   Black or plain arrows, live on Shift + AltGr + numpad.
+#^# GROUP_5
+#   Multi_key: ¦#5
+#
+# # Black or plain arrows, live on Shift + AltGr + numpad.
 #
 <UEFD0><5>                                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
 <Multi_key><numbersign><5>                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
@@ -11388,7 +11420,10 @@
 <Multi_key><numbersign><KP_5>                                                               <KP_9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
 #
 #
-#   Empty or outlined, white arrows, live on Shift + AltGr + AltFr + numpad.
+#^# GROUP_6
+#   Multi_key: ¦#6
+#
+# # Empty or outlined, white arrows, live on Shift + AltGr + AltFr + numpad.
 #
 <UEFD0><6>                                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
 <Multi_key><numbersign><6>                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
@@ -11432,7 +11467,10 @@
 <Multi_key><numbersign><KP_6>                                                               <KP_9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
 #
 #
-#   Triangle-headed arrows, live on AltGr + AltFr + numpad.
+#^# GROUP_7
+#   Multi_key: ¦#7
+#
+# # Triangle-headed arrows, live on AltGr + AltFr + numpad.
 #
 <UEFD0><7>                                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
 <Multi_key><numbersign><7>                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
@@ -11476,7 +11514,10 @@
 <Multi_key><numbersign><KP_7>                                                               <KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
 #
 #
-#   Triangle-headed arrows to bar
+#^# GROUP_9
+#   Multi_key: ¦#9
+#
+# # Triangle-headed arrows to bar
 #
 <UEFD0><9>                                                                                     <0> : "⭿" U2B7F # VERTICAL TAB KEY
 <Multi_key><numbersign><9>                                                                     <0> : "⭿" U2B7F # VERTICAL TAB KEY
@@ -11520,7 +11561,10 @@
 <Multi_key><numbersign><KP_9>                                                               <KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
 #
 #
-#   Wide-headed light barb arrows
+#^# GROUP_11
+#   Multi_key: ¦#11
+#
+# # Wide-headed light barb arrows
 #
 <UEFD0><1>                                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
 <Multi_key><numbersign><1>                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
@@ -11564,7 +11608,10 @@
 <Multi_key><numbersign><KP_1>                                                               <KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
 #
 #
-#   Wide-headed very heavy barb arrows
+#^# GROUP_12
+#   Multi_key: ¦#12
+#
+# # Wide-headed very heavy barb arrows
 #
 <UEFD0><2>                                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
 <Multi_key><numbersign><2>                                                                     <0> : "surrogat_haut_pour_Windows" UD83E # High surrogate
@@ -17668,7 +17715,7 @@
 #   Digits yield mathematical backslashes without space termination.
 #   See #*# STROKE
 #
-#   As a combining diacritic, "̔" U0314 # COMBINING REVERSED COMMA ABOVE is used,
+#   As a diacritic, "̔" U0314 COMBINING REVERSED COMMA ABOVE is included.
 #
 <UEFD6>                                                                                    <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <Multi_key><backslash>                                                                     <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
@@ -18811,9 +18858,9 @@
 <dead_belowcomma><dead_belowcomma>                                                         <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                          <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
 <Multi_key><section><section>                                                              <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
-<dead_belowcomma><dead_belowcomma>                                                         <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
-<Multi_key><semicolon><semicolon>                                                          <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
-<Multi_key><section><section>                                                              <comma> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
+<dead_belowcomma><dead_belowcomma>                                                         <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<Multi_key><semicolon><semicolon>                                                          <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
+<Multi_key><section><section>                                                              <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
 #
 #
 #
