@@ -1,5 +1,5 @@
-                      Date : 2024-02-09T2239+0100
-                   Version : 1.6.0
+                      Date : 2024-03-02T1302+0100
+                   Version : 1.7.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -32,30 +32,38 @@
 
   Dispositions ou variantes
 
-  • Les fichiers `nouvel-azerty.xkb` et `kbfrFRs.xkb` sont identiques.
-    Les fichiers `nouvel-azerty-[suffixe].xkb` et `kbfrFRs-[suffixe].xkb` aussi.
-    C’est la disposition de base de ce nouvel AZERTY, avec ses sous-variantes.
+  • Le fichier `Compose.yml` contient le répertoire des touches mortes. Son extension n’est pas
+    d’origine et sert uniquement à l’ouverture et à l’affichage.
 
-  • Les fichiers dont les noms commencent par `kbbrFRs` contiennent deux dispositions optimisées
-    pour la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
+  • Le reste des dispositions de clavier se trouve dans les fichiers dont l’extension est `.xkb`.
 
-  • Les fichiers dont les noms commencent par `kbfrPFs` contiennent deux dispositions optimisées
-    pour les langues de Polynésie française, avec une touche morte macron sur le 8, et le ʻeta sur
-    Maj + 8.
+  • Les fichiers dont les noms commencent par `nouvel-azerty` contiennent la disposition de base
+    de ce nouvel AZERTY. Ils sont rangés à la racine de ce dossier, et ils sont identiques aux
+    fichiers dont les noms commencent par `kbfrFRs`, qui sont rangés dans un dossier du même nom
+    à l’intérieur du dossier `Variantes`.
 
-  • Les fichiers dont les noms commencent par `kbfrAFs` contiennent deux dispositions optimisées
-    pour les langues d’Afrique, pour le bambara en particulier, avec le ɛ sur le 1, et le ɔ sur le 8.
+  • Les fichiers dans le dossier `kbbrFRs`, dont les noms commencent par `kbbrFRs`, contiennent
+    une disposition optimisée pour la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
 
-  • Les fichiers dont les noms commencent par `kbfrBEs` contiennent une disposition optimisée pour
-    la Belgique, avec le § sur le 6, le tiret du 6 sur le 8, et le tiret du 8 sur Maj + 8.
-    Espérant que ce compromis est acceptable en échange des fonctionnalités de ce nouvel AZERTY.
+  • Les fichiers dans le dossier `kbfrPFs`, dont les noms commencent par `kbfrPFs`, contiennent
+    une disposition optimisée pour les langues de Polynésie française, avec une touche morte macron
+    sur le 8, et le ʻeta sur Maj + 8.
+
+  • Les fichiers dans le dossier `kbfrAFs`, dont les noms commencent par `kbfrAFs`, contiennent
+    une disposition optimisée pour les langues d’Afrique, pour le bambara en particulier, avec
+    le ɛ sur le 1, et le ɔ sur le 8.
+
+  • Les fichiers dans le dossier `kbfrBEs`, dont les noms commencent par `kbfrBEs`, contiennent
+    une disposition optimisée pour la Belgique, avec le § sur le 6, le tiret du 6 sur le 8, et
+    le tiret du 8 sur Maj + 8. Cette disposition représente un compromis entre l’AZERTY belge et
+    les fonctionnalités de ce nouvel AZERTY français.
 
   • Les fichiers dont les noms se terminent en `r` contiennent des dispositions optimisées pour
-    une saisie plus ergonomique de l’alphabet de base et des lettres diacritées, afin que
+    une saisie un peu plus ergonomique de l’alphabet de base et des lettres diacritées, afin que
     les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
-    La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une
-    variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition
+    La variante belge ne se décline pas en variante belge redisposée, parce que l’intérêt d’une
+    variante belge est une plus grande rétrocompatibilité avec l’AZERTY belge, et la redisposition
     va à l’encontre de cet objectif.
 
 
@@ -66,8 +74,8 @@
 
   • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où cette touche ISO
     prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées
-    afin que la touche ISO, qui est la nouvelle modificatrice AltFr, soit située à gauche pour
-    saisir les grandes ponctuations espacées et pouvoir se servir du pavé numérique graphique.
+    afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour
+    la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique.
     Ce sont les sous-variantes avec les suffixes « -ansi », « -ansi-menu », « -ansi-menu-sans ».
 
   • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
@@ -98,7 +106,9 @@
   Témoin lumineux
 
   Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode ASCII par la bascule
-  VerrMod sur la touche E00 au-dessus de Tab à gauche du 1.
+  VerrMod sur la touche E00 au-dessus de Tab à gauche du 1. Ce témoin lumineux manque sur beaucoup
+  d’ordinateurs portables récents, mais il est présent sur les claviers externes comme les claviers
+  compacts USB ou sans fil.
 
 
   Mode d’emploi sous Linux
@@ -120,8 +130,9 @@
      vers votre dossier `Home`.
 
   6  Si votre dossier `Home` contient déjà un fichier invisible `.XCompose`, ajouter le contenu
-     du fichier `Compose.yml` dans ce fichier au début pour ignorer les conflits, ou à la fin
-     pour remplacer les conflits.
+     du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
+     à la fin pour remplacer les séquences en conflit.
+
      Sinon, renommer `Compose.yml` en `.XCompose`. Si les règles de `en_US.UTF-8/Compose` doivent
      continuer de s’appliquer si elles ne sont pas en conflit, décommenter la ligne suivante :
          include "%L"
