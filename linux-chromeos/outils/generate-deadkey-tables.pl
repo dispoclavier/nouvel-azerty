@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-03-02T1858+0100
+# 2024-03-02T1945+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -66,11 +66,13 @@ my $date_legend    = 'Tableau mis à jour le ';
 my $nowDate        = DateTime->now(time_zone => 'local');
 my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
 my $date           = "$day/$month/$year";
-my $table_id       = "tableau-tm-$output_file_index";
+my $table_id       = 'tableau-tm';
 my $table_header_1 = 'Caractère(s)';
 my $table_header_2 = 'Touches';
 my $table_header_3 = 'Identifiant Unicode';
-my $start_tags     = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"$table_id\"><caption><a href=\"#$table_id\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags_1   = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+my $start_tags_2   = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
@@ -84,23 +86,25 @@ while ( my $line = <INPUT> ) {
 		$parse_on = !1;
 	}
 	if ( $parse_on ) {
-  	if ( $line =~ /^#\*# /
+		if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
 			|| $line =~ /^### Ê-key emulation/
 			|| $line =~ /^### Quotation mark input method/
 			|| $line =~ /^### Shorthands for Portuguese and Spanish/
 		) {
 			print OUTPUT $end_tags;
-	    close( OUTPUT );
-	    print( "Closed file $output_path.\n" );
+			close( OUTPUT );
+			print( "Closed file $output_path.\n" );
 			$line =~ s/^....//;
 			$line =~ s/,//g;
 			$line =~ s/ /-/g;
 			$line =~ m/(.+)/;
 			$output_path = $output_path_trunk . '_' . $output_file_index . '_' . $1 . $output_file_extension;
+			$table_id    = "tableau-tm-$output_file_index";
+			$start_tags  = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 			++$output_file_index;
-	    open( OUTPUT, '>', $output_path ) or die $!;
-	    print( "Opened file $output_path.\n" );
+			open( OUTPUT, '>', $output_path ) or die $!;
+			print( "Opened file $output_path.\n" );
 			print( "Processing dead keys from $file_path to $output_path.\n" );
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
