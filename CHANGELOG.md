@@ -1,9 +1,10 @@
 # Journal des modifications
 
-## 1.7.0 (projet)
+## 1.7.0 (2024-03-02)
 
 * Disposition : Redonder la touche morte Lettre grecque, cerclé à la place de "@" U0040 sur D06. (dispocla.cpp [2b62fcd](https://github.com/dispoclavier/nouvel-azerty/commit/2b62fcd03c1403fa8ee37e2accaf5be25c53a034))
 * Touches mortes : Tilde : Redonder les guillemets comme dans Accent aigu. (compose-2.yml [b9a8c63](https://github.com/dispoclavier/nouvel-azerty/commit/b9a8c635e1cd079dfd625d7bc1af3f4bc56b16c5), [9d84d8f](https://github.com/dispoclavier/nouvel-azerty/commit/9d84d8f797d0687367d84de63b4c7dfc67191f98))
+* Distribution : Ranger les sous-variantes par variante dans 9 dossiers. (comp.sh [28d932b](https://github.com/dispoclavier/nouvel-azerty/commit/28d932b0f03eb04368e73aa7091596c25c4b909e))
 * Documentation : Restaurer l’historique des versions du répertoire des touches mortes. (Compose.yml [c6c939f](https://github.com/dispoclavier/nouvel-azerty/commit/c6c939f1ec1a84dc4a1ec4aaf49df552b887e5dd) jusqu’à [bebf6f8](https://github.com/dispoclavier/nouvel-azerty/commit/bebf6f8e44270b5623bf4eae95454b8b657497e2))
 
 ## 1.6.0 (2024-02-09)
