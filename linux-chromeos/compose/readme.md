@@ -13,4 +13,6 @@ Le fichier d’un seul tenant `Compose.yml` dans ce dossier est celui de la dern
 
 Les archives distribuées dont le nom commence par `Nouvel-AZERTY-Linux-` contiennent aussi une copie de ce fichier, placée à la racine.
 
-Ces fichiers ne sont pas au format YAML ; l’extension `.yml` sert uniquement à activer une coloration syntaxique ici et dans les éditeurs de texte automatiquement.
+Ces fichiers ne sont pas au format YAML. L’extension `.yml` sert à activer une coloration syntaxique ici et dans les éditeurs de texte. Sous Windows, elle permet aussi d’ouvrir ces fichiers plus facilement.
+
+L’historique des versions 1.0.0 à 1.6.0 a été restauré de [c6c939f](https://github.com/dispoclavier/nouvel-azerty/commit/c6c939f1ec1a84dc4a1ec4aaf49df552b887e5dd) à [bebf6f8](https://github.com/dispoclavier/nouvel-azerty/commit/bebf6f8e44270b5623bf4eae95454b8b657497e2).
