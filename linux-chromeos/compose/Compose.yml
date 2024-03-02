@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-12-06T0103+0100
+#                       Date: 2023-12-26T2253+0100
 #                    Version:
-<UEFA0>                     : "version 1.4.0"
+<UEFA0>                     : "version 1.5.0"
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -12690,6 +12690,9 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
+#   Yields parentheses when followed by slash or backslash, because the easy
+#   mapping on E05 of traditional AZERTY is live key of opening parenthesis.
+#
 #   Followed by comma, dead_grave provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
@@ -12711,6 +12714,10 @@
 <Multi_key><grave>                                                                    <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <dead_grave>                                                                <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                          <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
+<dead_grave>                                                                               <slash> : "(" U0028 # LEFT PARENTHESIS
+<Multi_key><grave>                                                                         <slash> : "(" U0028 # LEFT PARENTHESIS
+<dead_grave>                                                                           <backslash> : ")" U0029 # RIGHT PARENTHESIS
+<Multi_key><grave>                                                                     <backslash> : ")" U0029 # RIGHT PARENTHESIS
 <dead_grave>                                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
