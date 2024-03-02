@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2023-10-29T0531+0100
+#                       Date: 2023-10-31T0646+0100
 #                    Version:
-<UEFA0>                     : "version 1.1.2"
+<UEFA0>                     : "version 1.1.3"
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -7380,16 +7380,11 @@
 <Multi_key><asciicircum><asciicircum>                                                     <ugrave> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 #
 #
-#*# TURNED
+#*# TURNED, SIDEWAYS
 #   *dead_turned UEFD5
 #   Multi_key: ¦%
 #
-#   The rotation angle may be 180° as assumed in the Unicode naming scheme, or
-#   90°, i.e. SIDEWAYS in Unicode character names.
-#
-#   "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E is actually used as a _turned_ E,
-#   but its usual glyph is really a _reversed_ E, unlike what is done for Lisu.
-#   See #*# REVERSED
+#   The rotation angle may be 180° as for TURNED letters, or 90° i.e. SIDEWAYS.
 #
 #   Old Lisu letters are also supported, as they are repurposed for typesetting
 #   turned Latin capital letters, also upright for centrally symmetric letters.
@@ -7408,7 +7403,11 @@
 #   used as turned Latin letters, are not supported, as this works by dead key,
 #   meaning that this is not fit for writing Lisu.
 #
-#   Due to conflicts, INVERTED i.e. TURNED double press is used for a full set.
+#   Due to conflicts, TURNED double press is used for a full set.
+#
+#   "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E is actually used as a _turned_ E,
+#   but its usual glyph is really a _reversed_ E, unlike what is done for Lisu.
+#   See #*# REVERSED
 #
 #   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included.
 #
@@ -8346,15 +8345,18 @@
 <Multi_key><braceleft><braceleft><braceleft>                                                   <t> : "𝼪" U1DF2A # LATIN SMALL LETTER T WITH MID-HEIGHT LEFT HOOK
 #
 #
-#*# RETROFLEX_HOOK, RIGHT_HOOK, TAIL, HOOK_TAIL
+#*# RETROFLEX_HOOK, TAIL, RIGHT_HOOK
 #   *dead_retroflexhook UEFD4
 #   Multi_key: ¦}
 #
-#   A retroflex hook may also be referred to as a tail.
+#   A retroflex hook may be referred to as a tail, a hook tail, a right hook.
 #
-#   In this dead key, P WITH SQUIRREL TAIL is made redundant for convenience.
+#   "Ꝕ" UA754, "ꝕ" UA755 P WITH SQUIRREL TAIL is made redundant for convenience
+#   and ease of input thanks to availability of the P positions.
+#   See #^# CURL, LOOP, CROSSED_TAIL, SQUIRREL_TAIL
 #
-#   Includes recycling symbols consistently with paper symbols in DOT_ABOVE.
+#   Includes recycling symbols consistently with paper symbols in dead_abovedot
+#   with alphabetic mnemonics referring to the letters these dead keys are on.
 #   See #*# DOT_ABOVE
 #
 <UEFD4>                                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
@@ -9082,19 +9084,23 @@
 #   the Greek letters can be accessed in group 6.
 #   See # # GROUP_6
 #
-#   The dead key chord based on GR mnemonics of C05 (G, -, dead_stroke) and D04
-#   (R, }, *dead_retroflexhook) is not usable any more, since bar and retroflex
-#   hook occur together: U1DF1A LATIN SMALL LETTER I WITH STROKE AND RETROFLEX
-#   HOOK.
+#   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as most
+#   likely to be useful and expected rather than other diacritical marks.
+#   https://www.unicode.org/faq/greek.html
 #
 #   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
 #   alongside dead_greek double press virtualizing the ordinary general-purpose
 #   *dead_circled.
+#   See #^# CIRCLED
 #
 #   This dead key applies a scheme where zero yields circled number 10. This is
 #   consistent with dead_doubleacute yielding double circled numbers.
 #   See #*# DOUBLE_ACUTE
 #
+<dead_greek>                                                                               <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><at>                                                                            <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<dead_greek>                                                                               <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><at>                                                                            <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
 <dead_greek>                                                                           <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at>                                                                        <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek>                                                                          <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
@@ -9165,7 +9171,6 @@
 <Multi_key><at>                                                                                <9> : "⑨" U2468 # CIRCLED DIGIT NINE
 <dead_greek>                                                                                <KP_9> : "⑨" U2468 # CIRCLED DIGIT NINE
 <Multi_key><at>                                                                             <KP_9> : "⑨" U2468 # CIRCLED DIGIT NINE
-#
 <dead_greek>                                                                                   <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
 <Multi_key><at>                                                                                <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
 <dead_greek>                                                                                   <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
@@ -10590,16 +10595,22 @@
 <Multi_key><quotedbl>                                                                          <u> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
 #
 #
-#*# DOT_ABOVE
+#*# DOT_ABOVE, MIDDLE_DOT, DOTLESS
 #   dead_abovedot
 #   Multi_key: ¦.
 #
-#   For i and j, dot above results in DOTLESS.
-#   For L and l, dot above results in MIDDLE_DOT.
+#   For L and l, dead_abovedot results in WITH MIDDLE_DOT.
+#   For i and j, dead_abovedot results in DOTLESS, applying binary logic. As a
+#   consequence, dotless letters do not need support by live keys or in groups.
 #
-#   Includes paper symbols consistently with recycling symbols in RETROFLEX_HOOK.
-#   Permanent paper is 8, recycled is other even, partially recycled is odd numbers.
+#   Includes three paper symbols, based on the same alphabetic mnemonics as the
+#   ten recycling symbols in *dead_retroflexhook.
 #   See #*# RETROFLEX_HOOK
+#
+#   For convenience, all digits are used as base characters:
+#   "♾" U267E PERMANENT PAPER SIGN              8
+#   "♼" U267C RECYCLED PAPER SYMBOL             0, 2, 4, 6    (other even)
+#   "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL   1, 3, 5, 7, 9 (odd numbers)
 #
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
@@ -11663,11 +11674,6 @@
 #   double press, used as CURRENCY_EXTENDED instead of the currency sign.
 #   See <Multi_key><x><o>
 #
-#   Integral symbols are also supported, based on S mnemonics, with the
-#   corresponding digits as base characters. Likewise, contour integrals
-#   are also supported, although they are also in dead_abovering.
-#   See #*# RING_ABOVE
-#
 #   Letters Jj Qq Vv Xx Zz are unused in en_US.UTF-8/Compose dead_currency,
 #   while 9 symbols are left over among support by base letters.
 #
@@ -11706,6 +11712,11 @@
 #
 #   "₵" U20B5 # CEDI SIGN has Ccedilla as a base character too, for consistency
 #   with en_US.UTF-8/Compose.
+#
+#   Integral symbols are also supported, based on S mnemonics, with the
+#   corresponding digits as base characters. Likewise, contour integrals
+#   are also supported, although they are also in dead_abovering.
+#   See #*# RING_ABOVE
 #
 <dead_currency>                                                                            <space> : "¤" U00A4 # CURRENCY SIGN
 <Multi_key><dollar>                                                                        <space> : "¤" U00A4 # CURRENCY SIGN
@@ -11932,8 +11943,14 @@
 #   "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING is mapped to unconflicting
 #   and case insensitive C, with its right equivalent in dead_breve.
 #
-#   "͡" U0361 # COMBINING DOUBLE INVERTED BREVE is mapped to unconflicting and
-#   case insensitive D, and consistently, "͝" U035D, "͜" U035C and "᷼" U1DFC.
+#   "͡" U0361 COMBINING DOUBLE INVERTED BREVE is mapped to unconflicting and
+#   case insensitive D. Consistently, "᷼" U1DFC in dead_invertedbreve double
+#   press, and likewise "͝" U035D and "͜" U035C in dead_breve single and double
+#   press.
+#
+#   dead_invertedbreve also starts circled numbers and round box drawings.
+#   See #^# CIRCLED_NUMBER
+#   See # # Box drawings with rounded corners
 #
 <dead_invertedbreve>                                                                       <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
@@ -12520,6 +12537,13 @@
 #
 #   "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING is mapped to unconflicting
 #   and case insensitive C, with its left equivalent in dead_invertedbreve.
+#
+#   "͝" U035D COMBINING DOUBLE BREVE is mapped to case insensitive D.
+#   Consistently, "͜" U035C is in dead_breve double press.
+#
+#   dead_breve also ends circled numbers, and it is the box drawings dead key.
+#   See #^# CIRCLED_NUMBER
+#   See # # Box drawings
 #
 <dead_breve>                                                                               <space> : "̆" U0306 # COMBINING BREVE
 <Multi_key><parenright>                                                                    <space> : "̆" U0306 # COMBINING BREVE
@@ -14432,13 +14456,12 @@
 <Multi_key><underscore><underscore><underscore>                                                <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW languages of Gabon
 #
 #
-#*# MACRON, LONG_LEG, TOPBAR
+#*# MACRON, TOPBAR, LONG_LEG
 #   dead_macron
 #   Multi_key: ¦|
 #
 #   Long leg is merged with macron thanks to empty intersection and
 #   with mnemonics based on the macron Multi_key equivalent pipe |.
-#
 #   Small r with long leg has been obsoleted by IPA in 1989.
 #
 #   Cent and Cedi signs are supported by lack of C with macron, and
@@ -16134,7 +16157,7 @@
 <Multi_key><greater><greater>                                                              <U200B> : "̬" U032C # COMBINING CARON BELOW
 #
 #
-#*# DOUBLE, FLAG_LETTER
+#*# FLAG_LETTER, DOUBLE
 #   *dead_flag UEFD7
 #   Multi_key: ¦=
 #
@@ -16155,8 +16178,8 @@
 #   (with respect to this, mathematical symbols use <Multi_key><minus><equal>)
 #   cannot be supported in group 0 due to numerous conflicts with composition.
 #
-#   Mathematical symbols are also supported by DIAERESIS as a quick access,
-#   unless a quick access sequence conflicts with regular support.
+#   Mathematical symbols are also supported by DIAERESIS as a shortcut for
+#   DOUBLE, unless a quick access sequence conflicts with regular support.
 #   See #*# DIAERESIS
 #
 #
@@ -16191,6 +16214,14 @@
 #   *  Supporting the high surrogate is designed for portability, but on Linux
 #      and ChromeOS it is ineffective.
 #
+#   The sequences with spaces that yield combining diacritics on other deadkeys
+#   are used for the ZWNJ as most extensively used with regional indicators for
+#   writing in letter emoji.
+#
+<UEFD7>                                                                                    <space> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                         <space> : "‌" U200C # ZERO WIDTH NON-JOINER
+<UEFD7>                                                                                    <U200B> : "‌" U200C # ZERO WIDTH NON-JOINER
+<Multi_key><equal>                                                                         <U200B> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <Multi_key><equal>                                                                    <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
