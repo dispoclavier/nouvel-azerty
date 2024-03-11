@@ -1,4 +1,4 @@
-//                       Date: 2024-02-29T0956+0100
+//                       Date: 2024-03-11T2313+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -689,7 +689,7 @@ xkb_symbols "kbfrFRs" {
 	key <AB05> {
 		[                        b,                        B,                    U1D47,                    equal,                    UEFD7,                    UEF6D,                   U1F618,                   U1F495 ],
 		[                        b,                        B,                    U1D47,                    equal,                    UEFD7,                    UEF6D,                   U1F618,                   U1F495 ]
-	}; // U1D47 ᵇ superscript small b; UEFD7 *dead_equal regional indicator letters; UEF6D '00'; U1F618 😘 FACE THROWING A KISS sixth-most [smiling second-most] used emoji in France, ninth-most worldwide; U1F495 💕 TWO HEARTS seventh-most used emoji
+	}; // U1D47 ᵇ superscript small b; UEFD7 *dead_flag regional indicator letters; UEF6D '00'; U1F618 😘 FACE THROWING A KISS sixth-most [smiling second-most] used emoji in France, ninth-most worldwide; U1F495 💕 TWO HEARTS seventh-most used emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
