@@ -590,18 +590,18 @@
 <Multi_key><numbersign>                                                                    <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 <UEFD0><UEFD0>                                                                             <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign><numbersign>                                                        <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD0><3>                                                                                 <grave> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><3>                                                                 <grave> : "∅" U2205 # EMPTY SET
-<UEFD0><KP_3>                                                                              <grave> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><KP_3>                                                              <grave> : "∅" U2205 # EMPTY SET
-<UEFD0><UEFD0><UEFD0>                                                                      <grave> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><numbersign><numbersign>                                            <grave> : "∅" U2205 # EMPTY SET
-<UEFD0><4>                                                                                 <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<Multi_key><numbersign><4>                                                                 <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<UEFD0><KP_4>                                                                              <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<Multi_key><numbersign><KP_4>                                                              <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <grave> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><3>                                                                                 <grave> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><3>                                                                 <grave> : "Ω" U2126 # OHM SIGN
+<UEFD0><KP_3>                                                                              <grave> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><KP_3>                                                              <grave> : "Ω" U2126 # OHM SIGN
+<UEFD0><UEFD0><UEFD0>                                                                      <grave> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><numbersign><numbersign>                                            <grave> : "Ω" U2126 # OHM SIGN
+<UEFD0><4>                                                                                 <grave> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><4>                                                                 <grave> : "∅" U2205 # EMPTY SET
+<UEFD0><KP_4>                                                                              <grave> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><KP_4>                                                              <grave> : "∅" U2205 # EMPTY SET
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <grave> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <grave> : "∅" U2205 # EMPTY SET
 <UEFD0><5>                                                                                 <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
 <Multi_key><numbersign><5>                                                                 <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
 <UEFD0><KP_5>                                                                              <grave> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
@@ -648,12 +648,12 @@
 <Multi_key><numbersign><KP_3>                                                          <ampersand> : "∏" U220F # N-ARY PRODUCT
 <UEFD0><UEFD0><UEFD0>                                                                  <ampersand> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><numbersign><numbersign><numbersign>                                        <ampersand> : "∏" U220F # N-ARY PRODUCT
-<UEFD0><4>                                                                             <ampersand> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><numbersign><4>                                                             <ampersand> : "∐" U2210 # N-ARY COPRODUCT
-<UEFD0><KP_4>                                                                          <ampersand> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><numbersign><KP_4>                                                          <ampersand> : "∐" U2210 # N-ARY COPRODUCT
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <ampersand> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <ampersand> : "∐" U2210 # N-ARY COPRODUCT
+<UEFD0><4>                                                                             <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<Multi_key><numbersign><4>                                                             <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><KP_4>                                                                          <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<Multi_key><numbersign><KP_4>                                                          <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <ampersand> : "⛱" U26F1 # UMBRELLA ON GROUND emoji
 <UEFD0><5>                                                                             <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
 <Multi_key><numbersign><5>                                                             <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
 <UEFD0><KP_5>                                                                          <ampersand> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
@@ -1180,8 +1180,8 @@
 #   and "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol, have quick access
 #   through dead_diaeresis followed by slash or backslash.
 #
-<UEFD0>                                                                                      <bar> : "∣" U2223 # DIVIDES
-<Multi_key><numbersign>                                                                      <bar> : "∣" U2223 # DIVIDES
+<UEFD0>                                                                                      <bar> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign>                                                                      <bar> : "µ" U00B5 # MICRO SIGN
 <UEFD0><UEFD0>                                                                               <bar> : "∥" U2225 # PARALLEL TO
 <Multi_key><numbersign><numbersign>                                                          <bar> : "∥" U2225 # PARALLEL TO
 <UEFD0><3>                                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
@@ -1216,10 +1216,10 @@
 <Multi_key><numbersign><9>                                                                   <bar> : "⛰" U26F0 # MOUNTAIN emoji
 <UEFD0><KP_9>                                                                                <bar> : "⛰" U26F0 # MOUNTAIN emoji
 <Multi_key><numbersign><KP_9>                                                                <bar> : "⛰" U26F0 # MOUNTAIN emoji
-<UEFD0><0>                                                                                   <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><0>                                                                   <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<UEFD0><KP_0>                                                                                <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><KP_0>                                                                <bar> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<UEFD0><0>                                                                                   <bar> : "∣" U2223 # DIVIDES
+<Multi_key><numbersign><0>                                                                   <bar> : "∣" U2223 # DIVIDES
+<UEFD0><KP_0>                                                                                <bar> : "∣" U2223 # DIVIDES
+<Multi_key><numbersign><KP_0>                                                                <bar> : "∣" U2223 # DIVIDES
 <UEFD0><1>                                                                                   <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <Multi_key><numbersign><1>                                                                   <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <UEFD0><KP_1>                                                                                <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
@@ -1340,12 +1340,12 @@
 <Multi_key><numbersign>                                                                     <less> : "✘" U2718 # HEAVY BALLOT X
 <UEFD0><UEFD0>                                                                              <less> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
 <Multi_key><numbersign><numbersign>                                                         <less> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
-<UEFD0><3>                                                                                  <less> : "≺" U227A # PRECEDES
-<Multi_key><numbersign><3>                                                                  <less> : "≺" U227A # PRECEDES
-<UEFD0><KP_3>                                                                               <less> : "≺" U227A # PRECEDES
-<Multi_key><numbersign><KP_3>                                                               <less> : "≺" U227A # PRECEDES
-<UEFD0><UEFD0><UEFD0>                                                                       <less> : "≺" U227A # PRECEDES
-<Multi_key><numbersign><numbersign><numbersign>                                             <less> : "≺" U227A # PRECEDES
+<UEFD0><3>                                                                                  <less> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><numbersign><3>                                                                  <less> : "∐" U2210 # N-ARY COPRODUCT
+<UEFD0><KP_3>                                                                               <less> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><numbersign><KP_3>                                                               <less> : "∐" U2210 # N-ARY COPRODUCT
+<UEFD0><UEFD0><UEFD0>                                                                       <less> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><numbersign><numbersign><numbersign>                                             <less> : "∐" U2210 # N-ARY COPRODUCT
 <UEFD0><4>                                                                                  <less> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
 <Multi_key><numbersign><4>                                                                  <less> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
 <UEFD0><KP_4>                                                                               <less> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
@@ -1392,12 +1392,12 @@
 <Multi_key><numbersign>                                                                  <greater> : "✓" U2713 # CHECK MARK
 <UEFD0><UEFD0>                                                                           <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
 <Multi_key><numbersign><numbersign>                                                      <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
-<UEFD0><3>                                                                               <greater> : "≻" U227B # SUCCEEDS
-<Multi_key><numbersign><3>                                                               <greater> : "≻" U227B # SUCCEEDS
-<UEFD0><KP_3>                                                                            <greater> : "≻" U227B # SUCCEEDS
-<Multi_key><numbersign><KP_3>                                                            <greater> : "≻" U227B # SUCCEEDS
-<UEFD0><UEFD0><UEFD0>                                                                    <greater> : "≻" U227B # SUCCEEDS
-<Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "≻" U227B # SUCCEEDS
+<UEFD0><3>                                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<Multi_key><numbersign><3>                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<UEFD0><KP_3>                                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<Multi_key><numbersign><KP_3>                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<UEFD0><UEFD0><UEFD0>                                                                    <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <UEFD0><4>                                                                               <greater> : "➗" U2797 # HEAVY DIVISION SIGN emoji
 <Multi_key><numbersign><4>                                                               <greater> : "➗" U2797 # HEAVY DIVISION SIGN emoji
 <UEFD0><KP_4>                                                                            <greater> : "➗" U2797 # HEAVY DIVISION SIGN emoji
@@ -1428,10 +1428,10 @@
 <Multi_key><numbersign><0>                                                               <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
 <UEFD0><KP_0>                                                                            <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><numbersign><KP_0>                                                            <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
-<UEFD0><1>                                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<Multi_key><numbersign><1>                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<UEFD0><KP_1>                                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<Multi_key><numbersign><KP_1>                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<UEFD0><1>                                                                               <greater> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><1>                                                               <greater> : "◊" U25CA # LOZENGE
+<UEFD0><KP_1>                                                                            <greater> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><KP_1>                                                            <greater> : "◊" U25CA # LOZENGE
 <UEFD0><2>                                                                               <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
 <Multi_key><numbersign><2>                                                               <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
 <UEFD0><KP_2>                                                                            <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
@@ -1688,10 +1688,10 @@
 <Multi_key><numbersign><0>                                                                <exclam> : "∵" U2235 # BECAUSE
 <UEFD0><KP_0>                                                                             <exclam> : "∵" U2235 # BECAUSE
 <Multi_key><numbersign><KP_0>                                                             <exclam> : "∵" U2235 # BECAUSE
-<UEFD0><1>                                                                                <exclam> : "◊" U25CA # LOZENGE
-<Multi_key><numbersign><1>                                                                <exclam> : "◊" U25CA # LOZENGE
-<UEFD0><KP_1>                                                                             <exclam> : "◊" U25CA # LOZENGE
-<Multi_key><numbersign><KP_1>                                                             <exclam> : "◊" U25CA # LOZENGE
+<UEFD0><1>                                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><1>                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<UEFD0><KP_1>                                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><KP_1>                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
 <UEFD0><2>                                                                                <exclam> : "∎" U220E # END OF PROOF
 <Multi_key><numbersign><2>                                                                <exclam> : "∎" U220E # END OF PROOF
 <UEFD0><KP_2>                                                                             <exclam> : "∎" U220E # END OF PROOF
