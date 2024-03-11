@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.7.0"
+<UEFA0>                     : "version 1.7.1"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1276,7 +1276,7 @@
 #   initially <Multi_key><1><slash>, is extended with space accordingly,
 #   while its short sequence <Multi_key><1><space> is still supported.
 #
-#   Freely composed vulgar fractions may use ⁄ U2044 FRACTION SLASH, that
+#   Freely composed vulgar fractions may use ⁄ U2044 FRACTION SLASH. It
 #   triggers autoformatting of base digits to vulgar fractions as stated
 #   in the Unicode Standard — on the condition that the rendering engine
 #   is actually Unicode conformant, like HarfBuzz (OpenType) in Firefox.
