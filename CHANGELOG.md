@@ -3,7 +3,7 @@
 ## 1.7.1 (2024-03-12)
 
 * Touches mortes : Sélectrice de groupe : Mettre "µ" U00B5 à la place de "∣" U2223, qui prend la place de "⌘" U2318, qui prend la place de "◊" U25CA, qui prend la place de "►" U25BA, qui prend la place de "≻" U227B. Redonder "Ω" U2126 à la place de "∅" U2205, qui prend la place de "⛱" U26F1, qui prend la place de "∐" U2210, qui prend la place de "≺" U227A. (compose-3.yml [b1e366d](https://github.com/dispoclavier/nouvel-azerty/commit/b1e366d53c5ab67ba91ca5e752b504ca5705cd7f))
-* Touches mortes : Exposant : Ajouter "⁄" U2044. Indice : Ajouter "⁄" U2044. Drapeau : Compatibilité. (compose-2.yml [72ec518](https://github.com/dispoclavier/nouvel-azerty/commit/72ec5183dabcd2be4cb289bd892b04c6f7094c65))
+* Touches mortes : Exposant : Redonder "⁄" U2044, "”" U201D, "’" U2019. Indice : Redonder "⁄" U2044. Drapeau : Compatibilité. (compose-2.yml [72ec518](https://github.com/dispoclavier/nouvel-azerty/commit/72ec5183dabcd2be4cb289bd892b04c6f7094c65))
 * 1.0.11 (2023-09-19) : Documentation : Touches mortes : Drapeau : Renommer « *dead_equal » en « *dead_flag ». (dispocla.cpp [7e12e97](https://github.com/dispoclavier/nouvel-azerty/commit/7e12e9739dfc10dd36b65350a1396a8d4bf58808))
 
 ## 1.7.0 (2024-03-02)
