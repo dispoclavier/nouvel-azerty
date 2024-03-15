@@ -74,23 +74,23 @@
 #   tweaks are required, such as supporting superscript and subscript, using
 #   asciicircum and underscore repurposed, formerly circumflex and macron.
 #
-#   So, when < and > are used for circumflex and hacek or hatchek aka caron,
-#   and | for macron, : gets used as the diaeresis symbol like in Vim, while
-#   the ASCII double quote looks fine for double acute accent, a change that
-#   is the more desirable as it also fixes an issue with sequences for curly
-#   quotation marks.
+#   So, when "<" and ">" are used for circumflex and hacek (aka hatchek, caron)
+#   and "|" for macron, ":" gets used for diaeresis like in Vim, and <quotedbl>
+#   looks fine for double acute accent. A change that is the more desirable as
+#   it also fixes an issue with sequences for curly quotation marks.
 #
-#   Bottom line: Full Unicode support requires the upgraded Multi_key scheme.
+#   Bottom line: Full Unicode support requires an upgraded Multi_key scheme aka
+#   new-school input composition.
 #
 #
 # # Introducing new-school input composition
 #
-#   ^ and _ need to be freed up for super- and subscript/smallcaps, by applying
+#   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
 #   the parentheses-breve scheme to circumflex and hacek, macron and diaeresis.
 #   For example, new-school Multi_key sequences include ¦^ for superscript,
 #   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
 #   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
-#   collisions with the dead key based input method for apostrophe/comma-shaped
+#   conflicts with the dead key based input method for apostrophe/comma-shaped
 #   double quotation marks.
 #   See # # Quotation mark input method
 #
@@ -102,14 +102,18 @@
 #   the result would be yet another dead key merger, rightfully avoided in
 #   en_US.UTF-8/Compose.
 #
+#   Yet another reason is that en_US.UTF-8/Compose, using dead_hook both for
+#   hook and hook above, is unable to support "Ƴ" U01B3 LATIN CAPITAL LETTER Y
+#   WITH HOOK and "ƴ" U01B4 LATIN SMALL LETTER Y WITH HOOK, proving the
+#   existing scheme as impracticable.
+#
 #
 # # Virtual dead keys
 #
-#   The French BÉPO ergonomic keyboard layout defines a number of additional
-#   dead keys that are virtualized by dead key double press. The diacritic is
-#   either doubled or transformed, i.e. it is shifted to the less frequently
-#   diacriticized side of the letter. More information is available in French
-#   on the bépo website:
+#   The French BÉPO ergonomic keyboard layout defines a number of dead keys as
+#   virtualized by dead key double press. The diacritic is either doubled or
+#   transformed, i.e. it is shifted to the less frequently diacriticized side
+#   of the letter. More information is available in French on the bépo website:
 #   https://bepo.fr/wiki/Version_1.1rc1/Touches_mortes/Pressions_multiples
 #
 #   Based on this, triple or quadruple press virtual dead keys may also be
@@ -219,6 +223,18 @@
 #   it may not be used to underline a text span in plain text, due to vertical alignment
 #   issues under lowercase letters with descender.
 #
+# # Hook, hook above and retroflex hook
+#
+#   In en_US.UTF-8/Compose, dead_hook is used both for hook and hook above.
+#   The consequence is that en_US.UTF-8/Compose is unable to support "Ƴ" U01B3
+#   LATIN CAPITAL LETTER Y WITH HOOK and "ƴ" U01B4 LATIN SMALL LETTER Y WITH
+#   HOOK. Hence the need for a keysym dedicated to letters with hook above,
+#   e.g. *dead_abovehook.
+#
+#   Another hook dead key is added because new-school input composition takes
+#   advantage of the brace symmetry to alleviate the overloaded dead_hook by
+#   adding *dead_retroflexhook.
+#
 #
 # # Proposed additional dead key syms
 #
@@ -226,19 +242,19 @@
 #   and also for consistency with the 30 ASCII symbols and punctuation mapped
 #   on level 3 of the keys in rows B..D, columns 1..10.
 #
-#   *dead_abovehook (intersection with en_US.UTF-8/Compose dead_hook in Vietnamese Y)
-#   *dead_group: this AZERTY has a dedicated key for this dead key
+#   *dead_abovehook (see # # Hook, hook above and retroflex hook)
+#   *dead_group (this AZERTY has also an extra key for this dead key)
 #   *dead_flag (regional indicator letters, U1F1E6..U1F1FF)
-#   *dead_retroflexhook, using brace symmetry to alleviate dead_hook
+#   *dead_retroflexhook (see # # Hook, hook above and retroflex hook)
 #   *dead_reversed (~50 Latin letters)
-#   *dead_subscript (smallcaps with uppercase base letters)
-#   *dead_superscript (modifier letters, abbreviation indicators)
+#   *dead_subscript (smallcap when the base letter is uppercase)
+#   *dead_superscript (used as modifier letter and abbreviation indicator)
 #   *dead_turned (~70); inverted (20) or sideways (8) on double press
 #
-#   An alias is also proposed, and a virtual dead key:
+#   Two aliases are also proposed:
 #
-#   *dead_bar as an alias for the ambiguous dead_stroke (horizontal)
-#   *dead_circled, virtualized by double press of dead_greek (¦@@)
+#   *dead_bar for the ambiguous dead_stroke (horizontal)
+#   *dead_circled for the virtual dead_greek double press
 #
 #
 # # Dead keys not included in keysymdef.h
@@ -292,43 +308,45 @@
 #
 #   Overview            Based on AZERTY fr_FR.
 #                       Virtual dead keys on multiple press are listed in the body.
-#                       All non-existing keysyms, marked *, are new-school Compose.
+#                       All non-existing keysyms, flagged *, are new-school.
+#
+#                       IDENTIFIER keysym [codepoint]
 #
 #   Level 2          3  4
 #
-#   A (Q on QWERTY)  ^  *dead_superscript UEFD1
-#   Z (W on QWERTY)  %  *dead_turned UEFD5
-#   E                {  dead_hook
-#   R                }  *dead_retroflexhook UEFD4
-#   T                ~  dead_tilde
-#   Y                @  dead_greek (new-school)
-#   U                "  dead_doubleacute (new-school)
-#   I                '  dead_acute
-#   O                `  dead_grave
-#   P                &  dead_abovedot   Multi_key: .
+#   A (Q on QWERTY)  ^  SUPERSCRIPT *dead_superscript UEFD1
+#   Z (W on QWERTY)  %  TURNED *dead_turned UEFD5
+#   E                {  HOOK dead_hook
+#   R                }  RETROFLEX_HOOK *dead_retroflexhook UEFD4
+#   T                ~  TILDE dead_tilde
+#   Y                @  GREEK dead_greek (new-school)
+#   U                "  DOUBLE_ACUTE dead_doubleacute (new-school)
+#   I                '  ACUTE dead_acute
+#   O                `  GRAVE dead_grave
+#   P                &  DOT_ABOVE dead_abovedot Multi_key: ¦.
 #
-#   Q (A on QWERTY)  #  *dead_group UEFD0
-#   S                $  dead_currency (new-school)
-#   D                (  dead_invertedbreve (new-school)
-#   F                )  dead_breve (new-school), dead_belowbreve
-#   G                -  dead_stroke (*dead_bar)
-#   H                +  dead_horn
-#   J                [  dead_ogonek (new-school)
-#   K                ]  *dead_abovehook UEFD3
-#   L                _  *dead_subscript UEFD2
-#   M                |  dead_macron (new-school)
+#   Q (A on QWERTY)  #  GROUP_1 *dead_group UEFD0
+#   S                $  CURRENCY dead_currency (new-school)
+#   D                (  INVERTED_BREVE dead_invertedbreve (new-school)
+#   F                )  BREVE dead_breve (new-school)
+#   G                -  BARRED dead_stroke (*dead_bar)
+#   H                +  HORN dead_horn
+#   J                [  OGONEK dead_ogonek (new-school)
+#   K                ]  HOOK_ABOVE *dead_abovehook UEFD3
+#   L                _  SUBSCRIPT *dead_subscript UEFD2
+#   M                |  MACRON dead_macron (new-school)
 #
-#   W (Z on QWERTY)  /  dead_longsolidusoverlay
-#   X                *  dead_abovering
-#   C                <  dead_circumflex (new-school)
-#   V                >  dead_caron (new-school)
-#   B                =  *dead_flag UEFD7
-#   N                \  *dead_reversed UEFD6
+#   W (Z on QWERTY)  /  STROKE dead_longsolidusoverlay
+#   X                *  RING_ABOVE dead_abovering
+#   C                <  CIRCUMFLEX dead_circumflex (new-school)
+#   V                >  HACEK dead_caron (new-school)
+#   B                =  FLAG *dead_flag UEFD7
+#   N                \  REVERSED *dead_reversed UEFD6
 #
-#   , and ?          ,  dead_cedilla
-#   . and !          !  dead_belowdot
-#   / and :          :  dead_diaeresis
-#   \ and ;          ;  dead_belowcomma
+#   , and ?          ,  CEDILLA dead_cedilla
+#   . and !          !  DOT_BELOW dead_belowdot
+#   / and :          :  DIAERESIS dead_diaeresis
+#   \ and ;          ;  COMMA_BELOW dead_belowcomma
 #
 #
 #:# Legacy dead keys for French France AZERTY
@@ -2920,7 +2938,8 @@
 <Multi_key><asciicircum><asciicircum>                                                     <ugrave> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 #
 #
-#*# TURNED, SIDEWAYS
+#*# TURNED
+#   turned or sideways
 #   *dead_turned UEFD5
 #   Multi_key: ¦%
 #   Dchar: "ɐ" U0250
@@ -3997,7 +4016,8 @@
 <Multi_key><braceleft><braceleft><braceleft>                                                   <t> : "𝼪" U1DF2A # LATIN SMALL LETTER T WITH MID-HEIGHT LEFT HOOK
 #
 #
-#*# RETROFLEX_HOOK, TAIL, RIGHT_HOOK
+#*# RETROFLEX_HOOK
+#   retroflex hook or tail or right hook
 #   *dead_retroflexhook UEFD4
 #   Multi_key: ¦}
 #   Dchar: "ɖ" U0256
@@ -4768,6 +4788,7 @@
 #
 #
 #*# GREEK
+#   greek or circled
 #   dead_greek
 #   Multi_key: ¦@
 #   Dchar: "α" U03B1
@@ -6312,12 +6333,13 @@
 <Multi_key><grave><grave>                                                                      <u> : "ȕ" U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 #
 #
-#*# DOT_ABOVE, MIDDLE_DOT, DOTLESS
+#*# DOT_ABOVE
+#   dot above or middle dot or dotless
 #   dead_abovedot
 #   Multi_key: ¦.
 #   Dchar: "ṗ" U1E57
 #
-#   For L and l, dead_abovedot results in WITH MIDDLE_DOT.
+#   For L and l, dead_abovedot results in WITH MIDDLE DOT.
 #   For i and j, dead_abovedot results in DOTLESS, applying binary logic. As a
 #   consequence, dotless letters do not need support by live keys or in groups.
 #
@@ -6612,6 +6634,7 @@
 #
 #
 #*# GROUP_1
+#   group selector dead key
 #   *dead_group UEFD0
 #   Multi_key: ¦#
 #   Dchar: "①" U2460
@@ -9477,7 +9500,8 @@
 <Multi_key><minus><minus><minus>                                                               <w> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
 #
 #
-#*# HORN, DESCENDER, NOTCH
+#*# HORN
+#   horn or descender or notch
 #   dead_horn
 #   Multi_key: ¦+
 #   Dchar: "ơ" U01A1
@@ -9993,7 +10017,8 @@
 <Multi_key><bracketright><bracketright>                                                        <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 #
 #
-#*# SUBSCRIPT_OR_SMALL_CAPS
+#*# SUBSCRIPT
+#   subscript or small cap
 #   *dead_subscript UEFD2
 #   Multi_key: ¦_
 #   Dchar: "_" U005F
@@ -10409,7 +10434,8 @@
 <Multi_key><underscore><underscore>                                                            <z> : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 #
 #
-#*# MACRON, TOPBAR, LONG_LEG
+#*# MACRON
+#   macron or topbar or long leg
 #   dead_macron
 #   Multi_key: ¦|
 #   Dchar: "ō" U014D
@@ -12412,7 +12438,8 @@
 <Multi_key><greater><greater>                                                                  <w> : "˱" U02F1 # MODIFIER LETTER LOW LEFT ARROWHEAD
 #
 #
-#*# FLAG, DOUBLE
+#*# FLAG
+#   letter emoji or flag or double
 #   *dead_flag UEFD7
 #   Multi_key: ¦=
 #   Dchar: "⚐" U2690
