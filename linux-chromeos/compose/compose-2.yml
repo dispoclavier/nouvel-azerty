@@ -1139,6 +1139,15 @@
 #   in Unicode. Duly disguising subscript likewise was dropped, probably due to
 #   running out of technical terms.
 #
+#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_superscript
+#   yields high curly quotation marks U201D, U2019 (closing or opening) exactly
+#   like dead_acute and dead_tilde do, as a facility for keyboard layouts where
+#   dead_superscript is on the base level with respect to the need for dumbed-
+#   down layout drivers to cater for Windows, shipping some malware designed to
+#   destroy the reputation of more complete keyboard layouts.
+#   https://dispoclavier.com/nouvel-azerty/#2250-mais-windows-10-et-11-meme-le-windows-10-de-base-22h2-sans-aucune-mise-a-jour
+#   See # # Quotation mark input method
+#
 #   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
 #   mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this slot
 #   for the SUBSCRIPT_OR_SMALL_CAPS dead key, <Multi_key><underscore>. That is
@@ -1155,6 +1164,12 @@
 <Multi_key><asciicircum>                                                            <nobreakspace> : "‾" U203E # OVERLINE
 <UEFD1>                                                                                    <U202F> : "‾" U203E # OVERLINE
 <Multi_key><asciicircum>                                                                   <U202F> : "‾" U203E # OVERLINE
+<UEFD1>                                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciicircum>                                                                <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<UEFD1>                                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><asciicircum>                                                              <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<UEFD1>                                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><asciicircum>                                                    <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <UEFD1>                                                                                    <minus> : "⁻" U207B # SUPERSCRIPT MINUS
 <Multi_key><asciicircum>                                                                   <minus> : "⁻" U207B # SUPERSCRIPT MINUS
 <UEFD1>                                                                                     <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
