@@ -2,11 +2,12 @@
 # 2023-08-06T1935+0200
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
+# 2024-03-16T0048+0100
 # = last modified.
 #
 # Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
 #
-# The input requires start and end tags. Subsection headings switch files.
+# The input requires start and end tags. Section headings switch files.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -15,6 +16,8 @@
 # The output is designed for use in WordPress, where {{{anrghg-classes}}} can
 # be replaced with additional CSS classes, as well as {{{anrghg-value}}} with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
+# The all-in-one table generated alongside can only be included by the
+# “Include partial” block of the A.N.R.GHG Publishing Toolkit.
 #
 # Using old-style file handles.
 use warnings;
@@ -25,10 +28,13 @@ use feature 'unicode_strings';
 # Courtesy https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
+# Courtesy https://www.geeksforgeeks.org/perl-date-and-time/
+use DateTime;
 
-## Character names localization
+## Convert character names to localized names
 # my $names_file_path       = 'names/NamesList.txt';
 my $names_file_path       = 'names/ListeNoms.txt';
+## Convert character names to descriptors
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 
@@ -54,10 +60,18 @@ print( "Opened file $output_path.\n" );
 print( "Processing multi keys from $file_path to $output_path.\n" );
 
 my $parse_on       = !1;
+my $date_legend    = 'Tableau mis à jour le ';
+# Courtesy https://stackoverflow.com/a/43881027
+my $nowDate        = DateTime->now(time_zone => 'local');
+my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
+my $date           = "$day/$month/$year";
+my $table_id       = 'tableau-compose';
 my $table_header_1 = 'Caractère';
 my $table_header_2 = 'Séquence de composition';
 my $table_header_3 = 'Identifiant Unicode';
-my $start_tags     = "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags_1   = "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+my $start_tags_2   = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
@@ -88,6 +102,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/ /-/g;
 				$line =~ m/(.+)/;
 				$output_path = $output_path_trunk . '_' . $output_file_index . '_' . $1 . $output_file_extension;
+				$table_id    = "tableau-compose-$output_file_index";
+				$start_tags  = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 				++$output_file_index;
 		    open( OUTPUT, '>', $output_path ) or die $!;
 		    print( "Opened file $output_path.\n" );
@@ -96,6 +112,7 @@ while ( my $line = <INPUT> ) {
 				print OUTPUT "<!-- $1 -->\n";
 			}
 		}
+		# Skip comments, numpad alternatives and output like "en_US.UTF-8/Compose".
 		unless ( $line =~ /^#/ || $line =~ /<KP_/ || $line =~ /\/Compose"/ ) {
 			if ( $line =~ /<Multi_key>/ ) {
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
@@ -107,11 +124,11 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + V">hatchek<\/kbd>/g;
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?,">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
-				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte symbole monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
-				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + O">double aigu<\/kbd>/g;
-				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche += ou Maj + AltGr\/Option + U">grave<\/kbd>/g;
-				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte lettre grecque Maj + AltGr\/Option + Y">grec<\/kbd>/g;
+				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche += ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
+				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + U">double aigu<\/kbd>/g;
+				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave Touche 5( ou Maj + AltGr\/Option + O">grave<\/kbd>/g;
+				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte grec ou cerclé AltGr\/Option + Y ou Maj + AltGr\/Option + Y">grec<\/kbd>/g;
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + E">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
 				$line =~ s/<dead_invertedbreve>/<kbd class="deadkey long" title="Touche morte brève inversée Maj + AltGr\/Option + D">brève inversée<\/kbd>/g;
@@ -127,19 +144,19 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD4>/<kbd class="deadkey long" title="Touche morte crochet rétroflexe Maj + AltGr\/Option + R">crochet rétroflexe<\/kbd>/g;
 				$line =~ s/<UEFD5>/<kbd class="deadkey" title="Touche morte tourné Maj + AltGr\/Option + Z">tourné<\/kbd>/g;
 				$line =~ s/<UEFD6>/<kbd class="deadkey" title="Touche morte réfléchi Maj + AltGr\/Option + N">réfléchi<\/kbd>/g;
-				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte égal, lettre drapeau Maj + AltGr\/Option + B">égal<\/kbd>/g;
+				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte drapeau Maj + AltGr\/Option + B">drapeau<\/kbd>/g;
 				$line =~ s/<UEFD8>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
 				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 				
-				# Invisibles or confusables:
+				# Invisibles or confusables.
 				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— Tiret cadratin<\/kbd>/g;
 				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– Tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
 				
-				# Clarifying tooltips only:
+				# Clarifying tooltips only.
 				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + £\$">¦<\/span>/g;
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
@@ -150,7 +167,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
 				
-				# Self-evident:
+				# Self-evident.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<braceleft>/{/g;
@@ -199,7 +216,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<(.)>/$1/g;
 				$line =~ s/:([()])/:&#x200C;$1/g; # Visibly add ZWNJ in-between.
 
-				# Anchors and localized tooltips:
+				# Anchors and localized tooltips.
 				$line    =~ m/^.+ : +"(.+?)"/u;
 				$str     = $1;
 				$tooltip = '';
