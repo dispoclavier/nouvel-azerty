@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.7.1"
+<UEFA0>                     : "version 1.7.2"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -2357,9 +2357,9 @@
 #
 <Multi_key><e><greater>                                                                            : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
 <Multi_key><e><less>                                                                               : "‫" U202B # RIGHT-TO-LEFT EMBEDDING
-<Multi_key><d><greater                                                                             : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><d><greater>                                                                            : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><d><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
-<Multi_key><p><greate                                                                              : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><p><greater>                                                                            : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><p><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><f><greater>                                                                            : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
 <Multi_key><f><less>                                                                               : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
