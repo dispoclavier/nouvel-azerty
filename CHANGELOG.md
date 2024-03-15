@@ -9,6 +9,7 @@
 * Idem : Mettre "☃" U2603 à la place de "⛅" U26C5, qui prend la place de "❄" U2744, qui prend la place de "☁" U2601, qui prend la place laissée par "☃" U2603. (Ibidem)
 * Idem : Ajouter "☏" U260F à la place de "☎" U260E, qui prend la place de "⌨" U2328, qui prend la place de "❒" U2752, qui prend la place de "❑" U2751, qui prend la place de "⤴" U2934, qui prend la place de "⁜" U205C, qui prend la place de "˖" U02D6, qui est dans cornu. (Ibidem)
 * Idem : Redonder "⁞" U205E à la place de "⋯" U22EF, qui prend la place de "꞉" UA789, qui prend la place de "❐" U2750, qui prend la place de "❏" U274F, qui prend la place de "⤵" U2935, qui prend la place de "⏎" U23CE, qui est en composition. (Ibidem)
+* Documentation : Touches mortes : Simplifier les identifiants. (compose-2.yml [df24b01](https://github.com/dispoclavier/nouvel-azerty/commit/df24b01bd6e9e9220642158a8937810128f68bc9))
 
 ## 1.7.1 (2024-03-12)
 
