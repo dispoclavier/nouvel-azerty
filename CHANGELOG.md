@@ -1,14 +1,38 @@
 # Journal des modifications
 
+## 1.7.3 (2024-03-24)
+
+* Composition : Déboguer "℧" U2127, "℥" U2125. (compose-1.yml [cf7f487](https://github.com/dispoclavier/nouvel-azerty/commit/cf7f487e4bb31ff85ecd1de94fccac3ccadb320f))
+* Composition : Corriger les séquences de "⋊" U22CA. Adapter les séquences de "⨞" U2A1E. (ibidem)
+* Composition : Ajouter "ª" U00AA, "º" U00BA. Limiter les séquences de "₳" U20B3. Corriger les séquences de "⟠" U27E0, "⩜" U2A5C, "⩟" U2A5F, "⩠" U2A60, "⩝" U2A5D, "⩞" U2A5E, "⩚" U2A5A, "⩙" U2A59, "⊝" U229D. Compléter les séquences de "⩢" U2A62, "⩛" U2A5B. (ibidem)
+* Composition : Tirets : Mettre "‑" U2011 à la place de "‒" U2012, qui prend la place de "―" U2015, qui prend la place de "⹀" U2E40, qui prend la place laissée par "‑" U2011. (ibidem)
+* Composition : Redonder "❏" U274F, "❐" U2750, "❑" U2751, "❒" U2752. (ibidem)
+* Touches mortes : Exposant : Déboguer "⁄" U2044. Indice : Déboguer "⁄" U2044. (compose-2.yml [ecc5889](https://github.com/dispoclavier/nouvel-azerty/commit/ecc5889cb8c2b741878468796abf9479668391d7))
+* Touches mortes : Accent aigu : Supprimer "‐" U2010. Accent circonflexe : Supprimer "‌" U200C. Tilde : Supprimer "’" U2019 par U0027. Tréma : Supprimer "‑" U2011. (ibidem)
+* Touches mortes : Sélectrice de groupe : Groupes des symboles : Permuter "⋅" U22C5 et "‧" U2027. Redonder "⋅" U22C5 à la place de "ˑ" U02D1, qui prend la place de "꞉" UA789 sur B10, qui prend la place de "ː" U02D0, qui prend la place de "⊢" U22A2, qui prend la place de "⋌" U22CC, qui est en composition. (compose-3.yml [58ba0da](https://github.com/dispoclavier/nouvel-azerty/commit/58ba0da5aee3909c5ed375419708c053a95f1a41))
+* Idem : Redonder "−" U2212 à la place de "‐" U2010, qui prend la place de "⊖" U2296, qui est dans grec ou cerclé et en composition. (ibidem)
+* Idem : Redonder "+" U002B à la place de "⊕" U2295, qui est dans grec ou cerclé et en composition. (ibidem)
+* Idem : Redonder "×" U00D7 à la place de "❖" U2756, qui prend la place de "✂" U2702, qui prend la place de "✖" U2716, qui prend la place de "⊗" U2297, qui est dans grec ou cerclé et en composition. (ibidem)
+* Idem : Redonder "÷" U00F7 à la place de "♥" U2665 sur B01, qui prend la place de "❤" U2764, qui prend la place de "‧" U2027 sur la même touche B07, qui devient redondant. (ibidem)
+* Idem : Mettre "✅" U2705 à la place de "✔" U2714, qui prend la place de "✓" U2713, qui prend la place de "✘" U2718, qui prend la place de "⚠" U26A0 sur B01, qui prend la place de "ª" U00AA, qui passe en composition et prend la place de "✈" U2708, qui prend la place de "※" U203B, qui prend la place de "꞉" UA789 sur B09 dans le groupe 11, qui devient redondant. (ibidem)
+* Idem : Mettre "ʻ" U02BB à la place de "º" U00BA, qui passe en composition et prend la place de "⛔" U26D4, qui prend la place de "〰" U3030, qui prend la place de "♠" U2660, qui prend la place de "⛆" U26C6, qui prend la place de "♣" U2663, qui prend la place de "⁛" U205B, qui prend la place de "⊥" U22A5, qui prend la place de "⋊" U22CA, qui est en composition. (ibidem)
+* Idem : Mettre "⭕" U2B55 à la place de "∅" U2205, qui prend la place de "Ω" U2126, qui prend la place laissée par "ʻ" U02BB. (ibidem)
+* Idem : Mettre "❌" U274C à la place de "∗" U2217, qui prend la place de "❎" U274E, qui prend la place de "✴" U2734, qui prend la place de "✳" U2733, qui prend la place de "✨" U2728, qui prend la place laissée par "❌" U274C. (ibidem)
+* Idem : Ajouter "▻" U25BB à la place de "►" U25BA, qui prend la place de "➗" U2797, qui prend la place de "♦" U2666, qui prend la place de "♥" U2665 sur B07 dans le groupe 3, qui devient redondant. (ibidem)
+* Idem : Redonder "⸫" U2E2B à la place de "⊣" U22A3, qui prend la place de "⋋" U22CB, qui est en composition. (ibidem)
+* Idem : Redonder "⸪" U2E2A à la place de "⊤" U22A4, qui prend la place de "⋉" U22C9, qui est en composition. (ibidem)
+* Idem : Redonder "⹀" U2E40 à la place de "➸" U27B8, qui prend la place laissée par "✅" U2705. (ibidem)
+* Idem : Redonder "Ω" U03A9 à la place laissée par "⭕" U2B55. (ibidem)
+
 ## 1.7.2 (2024-03-15)
 
 * Composition : Déboguer "‬" U202C. (compose-1.yml [df24b01](https://github.com/dispoclavier/nouvel-azerty/commit/df24b01bd6e9e9220642158a8937810128f68bc9))
 * Touches mortes : Sélectrice de groupe : Groupes des symboles : Redonder "±" U00B1 dans le groupe 1 de + sur H à la place de "⚠" U26A0, qui prend la place de "∕" U2215, qui prend la place de "▲" U25B2, qui prend la place de "▼" U25BC, qui prend la place de "⛛" U26DB, qui prend la place de "◊" U25CA, qui prend la place de "➢" U27A2, qui prend la place de "❖" U2756, qui prend la place de "∘" U2218, qui est en composition. (compose-3.yml [e976bdb](https://github.com/dispoclavier/nouvel-azerty/commit/e976bdbe70e82c57a1df45ffa21b0bb1f6e2299e))
-* Idem : Permuter "Ⓜ" U24C2 et "∣" U2223. (Ibidem)
-* Idem : Mettre "⛄" U26C4 à la place de "¬" U00AC, qui prend la place de "∖" U2216, qui prend la place de "♮" U266E, qui prend la place de "‬" U202C, qui prend la place laissée par "⛄" U26C4. (Ibidem)
-* Idem : Mettre "☃" U2603 à la place de "⛅" U26C5, qui prend la place de "❄" U2744, qui prend la place de "☁" U2601, qui prend la place laissée par "☃" U2603. (Ibidem)
-* Idem : Ajouter "☏" U260F à la place de "☎" U260E, qui prend la place de "⌨" U2328, qui prend la place de "❒" U2752, qui prend la place de "❑" U2751, qui prend la place de "⤴" U2934, qui prend la place de "⁜" U205C, qui prend la place de "˖" U02D6, qui est dans cornu. (Ibidem)
-* Idem : Redonder "⁞" U205E à la place de "⋯" U22EF, qui prend la place de "꞉" UA789, qui prend la place de "❐" U2750, qui prend la place de "❏" U274F, qui prend la place de "⤵" U2935, qui prend la place de "⏎" U23CE, qui est en composition. (Ibidem)
+* Idem : Permuter "Ⓜ" U24C2 et "∣" U2223. (ibidem)
+* Idem : Mettre "⛄" U26C4 à la place de "¬" U00AC, qui prend la place de "∖" U2216, qui prend la place de "♮" U266E, qui prend la place de "‬" U202C, qui prend la place laissée par "⛄" U26C4. (ibidem)
+* Idem : Mettre "☃" U2603 à la place de "⛅" U26C5, qui prend la place de "❄" U2744, qui prend la place de "☁" U2601, qui prend la place laissée par "☃" U2603. (ibidem)
+* Idem : Ajouter "☏" U260F à la place de "☎" U260E, qui prend la place de "⌨" U2328, qui prend la place de "❒" U2752, qui prend la place de "❑" U2751, qui prend la place de "⤴" U2934, qui prend la place de "⁜" U205C, qui prend la place de "˖" U02D6, qui est dans cornu. (ibidem)
+* Idem : Redonder "⁞" U205E à la place de "⋯" U22EF, qui prend la place de "꞉" UA789, qui prend la place de "❐" U2750, qui prend la place de "❏" U274F, qui prend la place de "⤵" U2935, qui prend la place de "⏎" U23CE, qui est en composition. (ibidem)
 * Documentation : Touches mortes : Simplifier les identifiants. (compose-2.yml [df24b01](https://github.com/dispoclavier/nouvel-azerty/commit/df24b01bd6e9e9220642158a8937810128f68bc9))
 
 ## 1.7.1 (2024-03-12)
@@ -16,7 +40,6 @@
 * Touches mortes : Sélectrice de groupe : Groupes des symboles : Mettre "µ" U00B5 à la place de "∣" U2223, qui prend la place de "⌘" U2318, qui prend la place de "◊" U25CA, qui prend la place de "►" U25BA, qui prend la place de "≻" U227B. Redonder "Ω" U2126 à la place de "∅" U2205, qui prend la place de "⛱" U26F1, qui prend la place de "∐" U2210, qui prend la place de "≺" U227A. (compose-3.yml [b1e366d](https://github.com/dispoclavier/nouvel-azerty/commit/b1e366d53c5ab67ba91ca5e752b504ca5705cd7f))
 * Touches mortes : Exposant : Redonder "⁄" U2044. Indice : Redonder "⁄" U2044. Drapeau : Compatibilité. (compose-2.yml [72ec518](https://github.com/dispoclavier/nouvel-azerty/commit/72ec5183dabcd2be4cb289bd892b04c6f7094c65))
 * Touches mortes : Exposant : Redonder  "”" U201D, "’" U2019. (Répercuter dans compose-2.yml [66de15c](https://github.com/dispoclavier/nouvel-azerty/commit/66de15cc74d44ea26a3742bd394b71d31345dad3) (1.7.2))
-* 1.0.11 (2023-09-19) : Documentation : Touches mortes : Drapeau : Renommer « *dead_equal » en « *dead_flag ». (dispocla.cpp [7e12e97](https://github.com/dispoclavier/nouvel-azerty/commit/7e12e9739dfc10dd36b65350a1396a8d4bf58808))
 
 ## 1.7.0 (2024-03-02)
 
@@ -77,9 +100,8 @@
 
 ## 1.1.7 (2023-11-05)
 
-* Composition : Déboguer "⫴" U2AF4, "⟧" U27E7, "⋘" U22D8. Ajouter la termination par espace insécable pour tous les symboles terminés par espace. Touches mortes : Hatchek > Hatchek souscrit : Ajouter "˰" U02F0, "˱" U02F1, "˲" U02F2. (compose-1.yml [7d54a6f](https://github.com/dispoclavier/nouvel-azerty/commit/7d54a6f5cae08b862526e5b722282aa82980bc72), compose-2.yml [c267636](https://github.com/dispoclavier/nouvel-azerty/commit/c267636c75deb04aef6efe56f1175dd17269dab9))
+* Composition : Déboguer "⫴" U2AF4, "⟧" U27E7, "⋘" U22D8. Ajouter la termination par espace insécable pour tous les symboles terminés par espace. Touches mortes : Hatchek > Hatchek souscrit : Ajouter "˰" U02F0, "˱" U02F1, "˲" U02F2. (compose-1.yml [7d54a6f](https://github.com/dispoclavier/nouvel-azerty/commit/7d54a6f5cae08b862526e5b722282aa82980bc72) (et déjà [1b197a0](https://github.com/dispoclavier/nouvel-azerty/commit/1b197a039e765268c3b80d609a3a3194c8698e88)), compose-2.yml [c267636](https://github.com/dispoclavier/nouvel-azerty/commit/c267636c75deb04aef6efe56f1175dd17269dab9) (et déjà [e29ce4d](https://github.com/dispoclavier/nouvel-azerty/commit/e29ce4d2b18f50002cdbaec02b08b6226f2a6f3d)))
 * Nouvelle répartition pour rester en dessous de 2 Mo par fichier. (compose-1.yml [71a5e2d](https://github.com/dispoclavier/nouvel-azerty/commit/71a5e2d0c91c4359ad2e3d4fb4a35a6e1fbe62b4), compose-2.yml [8a64209](https://github.com/dispoclavier/nouvel-azerty/commit/8a64209bb0c0c63b70661b8b3ba11885af366bc7), compose-3.yml [60d1889](https://github.com/dispoclavier/nouvel-azerty/commit/60d1889ac60af7ce367b377b441a6dd97e97b82d))
-* [Annulé : Composition : Déboguer "⫴" U2AF4, "⟧" U27E7, "⋘" U22D8. Ajouter la termination par espace insécable pour tous les symboles terminés par espace. Touches mortes : Hatchek > Hatchek souscrit : Ajouter "˰" U02F0, "˱" U02F1, "˲" U02F2. (compose-1.yml [1b197a0](https://github.com/dispoclavier/nouvel-azerty/commit/1b197a039e765268c3b80d609a3a3194c8698e88), compose-2.yml [e29ce4d](https://github.com/dispoclavier/nouvel-azerty/commit/e29ce4d2b18f50002cdbaec02b08b6226f2a6f3d))]
 
 ## 1.1.6 (2023-11-04)
 
@@ -144,7 +166,7 @@
 ## 1.0.11 (2023-09-19)
 
 * Touches mortes : Brève inversée : Déboguer "͡" U0361. Brève inversée souscrite : Ajouter "᷼" U1DFC. Brève : Adapter "͝" U035D. Brève souscrite : Adapter "͜" U035C. Double accent aigu : Redonder "⓵" U24F5 à "⓾" U24FE. Cornu/cramponné/cranté : Redonder "←" U2190 à "↙" U2199. Double, lettre drapeau : Redonder "⇐" U21D0 à "⇙" U21D9. (compose-1.yml [0621f67](https://github.com/dispoclavier/nouvel-azerty/commit/0621f676489af0ccc1ac2d8cf96e0208c73ffc50), compose-2.yml [d60c810](https://github.com/dispoclavier/nouvel-azerty/commit/d60c810371d83c17f60b1040a22b95f9ef2faa83))
-* Touches mortes : Rayé : Corriger les séquences avec chiffre du pavé numérique. Cornu/cramponné/cranté : Corriger les séquences avec chiffre du pavé numérique. Ogonek : Redonder "➀" U2780 à "➉" U2789. Crochet en chef : Redonder "➊" U278A à "➓" U2793. Macron : Redonder "⫾" U2AFE, "∣" U2223, "‖" U2016, "⦀" U2980, "∥" U2225, "¦" U00A6, "⫴" U2AF4, "⫿" U2AFF, "⏸" U23F8, "⫼" U2AFC. Barré : Redonder les émojis flèches "↕" U2195, "↙" U2199, "⬇" U2B07, "↘" U2198, "⬅" U2B05, "↔" U2194, "➡" U27A1, "↖" U2196, "⬆" U2B06, "↗" U2197. Rond en chef : Corriger les séquences avec chiffre du pavé numérique. Accent circonflexe : Redonder "❤" U2764 et "♠" U2660 à "♧" U2667. Réfléchi : Redonder "❶" U2776 à "❿" U277F. Cédille : Ajouter "⒈" U2488 à "⒑" U2491. Virgule souscrite : Ajouter "⒒" U2492 à "⒛" U249B. Double, lettre drapeau : Renommer « EQUAL » en « DOUBLE, FLAG_LETTER ». Renommer « *dead_equal » en « *dead_flag ». Documentation : Corriger et déployer l’information sur la configuration de la disposition de clavier de login. (compose-1.yml [60e7148](https://github.com/dispoclavier/nouvel-azerty/commit/60e7148c1ba8c54745cf17993625dc2135f8f733), compose-2.yml [2ca90bf](https://github.com/dispoclavier/nouvel-azerty/commit/2ca90bf0054af91b80128a7210cd75c0d18a5808), dispocla.cpp [66f0650](https://github.com/dispoclavier/nouvel-azerty/commit/66f065004e61d650dac7481400a1054cda27d99b), [7e12e97](https://github.com/dispoclavier/nouvel-azerty/commit/7e12e9739dfc10dd36b65350a1396a8d4bf58808))
+* Touches mortes : Rayé : Corriger les séquences avec chiffre du pavé numérique. Cornu/cramponné/cranté : Corriger les séquences avec chiffre du pavé numérique. Ogonek : Redonder "➀" U2780 à "➉" U2789. Crochet en chef : Redonder "➊" U278A à "➓" U2793. Macron : Redonder "⫾" U2AFE, "∣" U2223, "‖" U2016, "⦀" U2980, "∥" U2225, "¦" U00A6, "⫴" U2AF4, "⫿" U2AFF, "⏸" U23F8, "⫼" U2AFC. Barré : Redonder les émojis flèches "↕" U2195, "↙" U2199, "⬇" U2B07, "↘" U2198, "⬅" U2B05, "↔" U2194, "➡" U27A1, "↖" U2196, "⬆" U2B06, "↗" U2197. Rond en chef : Corriger les séquences avec chiffre du pavé numérique. Accent circonflexe : Redonder "❤" U2764 et "♠" U2660 à "♧" U2667. Réfléchi : Redonder "❶" U2776 à "❿" U277F. Cédille : Ajouter "⒈" U2488 à "⒑" U2491. Virgule souscrite : Ajouter "⒒" U2492 à "⒛" U249B. Double, lettre drapeau : Renommer « EQUAL » en « DOUBLE, FLAG_LETTER ». Renommer « *dead_equal » en « *dead_flag ». Documentation : Corriger et déployer l’information sur la configuration de la disposition de clavier de login. (compose-1.yml [60e7148](https://github.com/dispoclavier/nouvel-azerty/commit/60e7148c1ba8c54745cf17993625dc2135f8f733), compose-2.yml [2ca90bf](https://github.com/dispoclavier/nouvel-azerty/commit/2ca90bf0054af91b80128a7210cd75c0d18a5808), dispocla.cpp [66f0650](https://github.com/dispoclavier/nouvel-azerty/commit/66f065004e61d650dac7481400a1054cda27d99b), [7e12e97](https://github.com/dispoclavier/nouvel-azerty/commit/7e12e9739dfc10dd36b65350a1396a8d4bf58808) ; [7e12e97](https://github.com/dispoclavier/nouvel-azerty/commit/7e12e9739dfc10dd36b65350a1396a8d4bf58808) (1.7.1))
 
 ## 1.0.10 (2023-09-07)
 
