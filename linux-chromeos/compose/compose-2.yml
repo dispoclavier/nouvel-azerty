@@ -487,7 +487,7 @@
 #
 #   Approximation: See #*# TILDE
 #   Negation:      See #*# STROKE
-#   Equality:      See #*# FLAG, DOUBLE
+#   Equality:      See #*# FLAG
 #
 #   Negated symbols may alternatively be input using (Base-level) dead_acute,
 #   since no symbols have been encoded with an acute accent.
@@ -1168,10 +1168,10 @@
 #
 #   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
 #   mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this slot
-#   for the SUBSCRIPT_OR_SMALL_CAPS dead key, <Multi_key><underscore>. That is
-#   certainly a better option than duplicating the set of circumflexes already
-#   provided in dead_circumflex. Consistently, the spacing clone is "‾" U203E.
-#   See #*# SUBSCRIPT_OR_SMALL_CAPS
+#   for the SUBSCRIPT dead key, <Multi_key><underscore>. That is certainly a
+#   better option than duplicating the set of circumflexes already provided in
+#   dead_circumflex. Consistently, the spacing clone is "‾" U203E.
+#   See #*# SUBSCRIPT
 #   See #*# CIRCUMFLEX
 #
 <UEFD1>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
@@ -1196,8 +1196,6 @@
 <Multi_key><asciicircum>                                                               <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
 <UEFD1>                                                                               <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
 <Multi_key><asciicircum>                                                              <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
-<UEFD1>                                                                                    <slash> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><asciicircum>                                                                   <slash> : "⁄" U2044 # FRACTION SLASH
 <UEFD1>                                                                                    <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <Multi_key><asciicircum>                                                                   <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <UEFD1>                                                                                   <period> : "·" U00B7 # MIDDLE DOT
@@ -2565,9 +2563,20 @@
 <Multi_key><minus><asciicircum><numbersign>                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 #
 #
-# # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS
+# # SUPERSCRIPT&SUBSCRIPT
 #   Dchar: 
 #
+#   This is based on the small cap semantics of the subscript dead key.
+#
+#   The fraction slash is supported alongside as a workaround for incomplete
+#   keyboard layouts lacking a live key position for U2044. The superscript or
+#   subscript dead keys alone cannot include a slash as a base character due to
+#   numerous conflicts with math symbols.
+#
+<UEFD1><UEFD2>                                                                             <slash> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><asciicircum><underscore>                                                       <slash> : "⁄" U2044 # FRACTION SLASH
+<UEFD2><UEFD1>                                                                             <slash> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><underscore><asciicircum>                                                       <slash> : "⁄" U2044 # FRACTION SLASH
 <UEFD1><UEFD2>                                                                                 <B> : "𐞄" U10784 # MODIFIER LETTER SMALL CAPITAL B
 <Multi_key><asciicircum><underscore>                                                           <B> : "𐞄" U10784 # MODIFIER LETTER SMALL CAPITAL B
 <UEFD2><UEFD1>                                                                                 <B> : "𐞄" U10784 # MODIFIER LETTER SMALL CAPITAL B
@@ -2610,7 +2619,7 @@
 <Multi_key><underscore><asciicircum>                                                           <Y> : "𐞲" U107B2 # MODIFIER LETTER SMALL CAPITAL Y
 #
 #
-# # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&GROUP_1
+# # SUPERSCRIPT&SUBSCRIPT&GROUP_1
 #   Dchar: 
 #
 <UEFD1><UEFD2><UEFD0>                                                                          <O> : "𐞣" U107A3 # MODIFIER LETTER SMALL CAPITAL OE
@@ -2619,7 +2628,7 @@
 <Multi_key><underscore><asciicircum><numbersign>                                               <O> : "𐞣" U107A3 # MODIFIER LETTER SMALL CAPITAL OE
 #
 #
-# # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&HOOK
+# # SUPERSCRIPT&SUBSCRIPT&HOOK
 #   Dchar: 
 #
 <UEFD1><UEFD2><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
@@ -2636,7 +2645,7 @@
 <Multi_key><braceleft><underscore><asciicircum>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 #
 #
-# # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&BREVE
+# # SUPERSCRIPT&SUBSCRIPT&BREVE
 #   Dchar: 
 #
 #   Does not work the way <UEFD1><dead_breve><UEFD2> because the multikey equi-
@@ -2657,11 +2666,11 @@
 <Multi_key><parenright><underscore><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 #
 #
-# # SUPERSCRIPT&SUBSCRIPT_OR_SMALL_CAPS&BARRED
+# # SUPERSCRIPT&SUBSCRIPT&BARRED
 #   Dchar: 
 #
 #   See # # SUPERSCRIPT&BARRED
-#   See # # SUBSCRIPT_OR_SMALL_CAPS&BARRED
+#   See # # SUBSCRIPT&BARRED
 #
 <UEFD1><UEFD2><dead_stroke>                                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <Multi_key><asciicircum><underscore><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
@@ -3315,7 +3324,7 @@
 <Multi_key><minus><percent><numbersign>                                                        <o> : "ꭂ" UAB42 # LATIN SMALL LETTER TURNED OE WITH HORIZONTAL STROKE
 #
 #
-# # TURNED&SUBSCRIPT_OR_SMALL_CAPS
+# # TURNED&SUBSCRIPT
 #   Dchar: 
 #
 <UEFD5><UEFD2>                                                                                 <G> : "𝼂" U1DF02 # LATIN LETTER SMALL CAPITAL TURNED G
@@ -4526,13 +4535,14 @@
 #   Multi_key: ¦~
 #   Dchar: "ẽ" U1EBD
 #
-#   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_tilde yields
-#   high curly quotation marks U201D, U2019 (closing or opening), as a facility
-#   for one-handed input taking advantage of the synergy between dead_tilde and
-#   quotedbl or apostrophe on level 3 of keys D11 and D07 or D08, as well as to
-#   improve the backwards compatible layout, where dead_acute (usually yielding
-#   these quotation marks) is not on level 1, but on level 3, next to the tilde
-#   dead key on E02, and quotedbl is on E03 as usual.
+#   Followed by quotedbl or rightsinglequotemark (not apostrophe), dead_tilde
+#   yields high curly quotation marks U201D, U2019 (closing or opening), as a
+#   facility for one-handed input of double apostrophe closing quotation marks,
+#   taking advantage of the synergy between dead_tilde and quotedbl on level 3
+#   of keys D11 and D07 or D08, as well as to improve the backwards compatible
+#   layout, where dead_acute (usually yielding these quotation marks) is not on
+#   level 1, but on level 3, next to the tilde dead key on E02, and quotedbl is
+#   on E03 as usual.
 #   See # # Quotation mark input method
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
@@ -4552,8 +4562,6 @@
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
 <dead_tilde>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<dead_tilde>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-<Multi_key><asciitilde>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
@@ -5733,7 +5741,7 @@
 #   With digits, dead_doubleacute acts as a shortcut for double circled numbers
 #   with “double” mnemonics. Double arrows have their redundancy on *dead_flag.
 #   See #^# DOUBLE_CIRCLED
-#   See #*# FLAG, DOUBLE
+#   See #*# FLAG
 #
 <dead_doubleacute>                                                                         <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
@@ -5817,14 +5825,6 @@
 #   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
 #   mnemonics on AZERTY, where O is close to À.
 #
-#   Followed by ASCII minus, dead_acute is a shortcut for the not-so-useful
-#   "‐" U2010 HYPHEN additionally to its presence in group 1 of minus, as a
-#   matter of mitigating its absence from live key support, with respect to
-#   predictable user expectations as of getting something useful from so easy
-#   a key sequence as <dead_acute><minus>. The Multi_key equivalent however,
-#   additionally to not making sense, does not work either, due to numerous
-#   conflicts with math symbols.
-#
 #   Followed by comma, dead_acute provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
@@ -5857,8 +5857,6 @@
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
-<dead_acute>                                                                               <minus> : "‐" U2010 # HYPHEN
-<Multi_key><apostrophe>                                                                    <minus> : "‐" U2010 # HYPHEN
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <dead_acute>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -6658,7 +6656,7 @@
 #   See # # D09
 #   See #*# ACUTE
 #   See #*# GRAVE
-#   See #*# TURNED, SIDEWAYS
+#   See #*# TURNED
 #   See # # CEDILLA&ACUTE
 #
 <UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -9062,7 +9060,7 @@
 #
 #   As an easier alternative HORN could be used, but it is not, for the sake of
 #   mnemonics and to prevent HORN from becoming a holdall dead key.
-#   See #*# HORN, DESCENDER, NOTCH
+#   See #*# HORN
 #
 #   BELT cannot be merged with hook because of "𝼑" U1DF11, nor curl because of
 #   "ȴ" U0234, nor flourish because of "𝼦" U1DF26.
@@ -9520,7 +9518,7 @@
 #
 #   Digits yield simple arrows as a redundant facility to meet most common user
 #   expectations. Double arrows are yielded by *dead_flag.
-#   See #*# FLAG, DOUBLE
+#   See #*# FLAG
 #
 #   Instead of a non-existing spacing clone of "̛" U031B, "˖" U02D6 is picked,
 #   based on the horn’s traditional Multi_key equivalent "+", consistently with
@@ -10054,8 +10052,6 @@
 <Multi_key><underscore>                                                                <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
 <UEFD2>                                                                               <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
 <Multi_key><underscore>                                                               <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
-<UEFD2>                                                                                    <slash> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><underscore>                                                                    <slash> : "⁄" U2044 # FRACTION SLASH
 <UEFD2>                                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
 <Multi_key><underscore>                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
 <UEFD2>                                                                                        <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -10204,7 +10200,7 @@
 <Multi_key><underscore>                                                                        <z> : "∄" U2204 # THERE DOES NOT EXIST
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&GROUP_1
+# # SUBSCRIPT&GROUP_1
 #   Dchar: 
 #
 <UEFD2><UEFD0>                                                                                 <A> : "ᴁ" U1D01 # LATIN LETTER SMALL CAPITAL AE
@@ -10223,7 +10219,7 @@
 <Multi_key><underscore><numbersign>                                                            <Z> : "ᴣ" U1D23 # LATIN LETTER SMALL CAPITAL EZH
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&GROUP_2
+# # SUBSCRIPT&GROUP_2
 #   Dchar: 
 #
 <UEFD2><UEFD0><UEFD0>                                                                          <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
@@ -10234,7 +10230,7 @@
 <Multi_key><underscore><numbersign><numbersign>                                                <R> : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&GROUP_3
+# # SUBSCRIPT&GROUP_3
 #   Dchar: 
 #
 <UEFD2><UEFD0><3>                                                                              <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
@@ -10251,7 +10247,7 @@
 <Multi_key><underscore><numbersign><numbersign><numbersign>                                    <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&GROUP_4
+# # SUBSCRIPT&GROUP_4
 #   Dchar: 
 #
 <UEFD2><UEFD0><4>                                                                              <e> : "ₔ" U2094 # LATIN SUBSCRIPT SMALL LETTER SCHWA
@@ -10268,7 +10264,7 @@
 <Multi_key><underscore><numbersign><numbersign><numbersign><numbersign>                        <O> : "ᴐ" U1D10 # LATIN LETTER SMALL CAPITAL OPEN O
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&TURNED
+# # SUBSCRIPT&TURNED
 #   Dchar: 
 #
 <UEFD2><UEFD5>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
@@ -10289,7 +10285,7 @@
 <Multi_key><percent><underscore>                                                               <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&INVERTED
+# # SUBSCRIPT&INVERTED
 #   Dchar: 
 #
 <UEFD2><UEFD5><UEFD5>                                                                     <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
@@ -10302,7 +10298,7 @@
 <Multi_key><percent><percent><underscore>                                                      <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&HOOK
+# # SUBSCRIPT&HOOK
 #   Dchar: 
 #
 <UEFD2><dead_hook>                                                                             <G> : "ʛ" U029B # LATIN LETTER SMALL CAPITAL G WITH HOOK
@@ -10315,7 +10311,7 @@
 <Multi_key><braceleft><underscore>                                                             <R> : "ꭆ" UAB46 # LATIN LETTER SMALL CAPITAL R WITH RIGHT LEG
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&BREVE
+# # SUBSCRIPT&BREVE
 #   Dchar: 
 #
 #   Works only the way <dead_breve><UEFD2> because the multikey equivalents of
@@ -10326,7 +10322,7 @@
 <Multi_key><parenright><underscore>                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&BARRED
+# # SUBSCRIPT&BARRED
 #   Dchar: 
 #
 #   Works only the way <dead_stroke><UEFD2> because the multikey equivalents of
@@ -10341,7 +10337,7 @@
 <Multi_key><minus><underscore>                                                                 <U> : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&STROKE
+# # SUBSCRIPT&STROKE
 #   Dchar: 
 #
 <UEFD2><dead_longsolidusoverlay>                                                               <L> : "ᴌ" U1D0C # LATIN LETTER SMALL CAPITAL L WITH STROKE
@@ -10350,7 +10346,7 @@
 <Multi_key><slash><underscore>                                                                 <L> : "ᴌ" U1D0C # LATIN LETTER SMALL CAPITAL L WITH STROKE
 #
 #
-# # SUBSCRIPT_OR_SMALL_CAPS&REVERSED
+# # SUBSCRIPT&REVERSED
 #   Dchar: 
 #
 <UEFD2><UEFD6>                                                                                 <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
@@ -11588,10 +11584,6 @@
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE, consistently with dead_acute for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #
-#   Followed by period, dead_circumflex provides a shortcut for
-#   U200C ZERO WIDTH NON-JOINER, but its Multi_key equivalent does not work and
-#   is pointless anyway.
-#
 #   Followed by asterisk, dead_circumflex provides a shortcut for 
 #   "⁂" U2042 ASTERISM, consistently with dead_diaeresis for "⁑" U2051.
 #
@@ -11620,8 +11612,6 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<dead_circumflex>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
-<Multi_key><less>                                                                         <period> : "‌" U200C # ZERO WIDTH NON-JOINER
 <dead_circumflex>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <Multi_key><less>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <dead_circumflex>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
@@ -12455,7 +12445,7 @@
 #
 #   Digits yield double arrows as a redundant facility to meet most common user
 #   expectations. Single arrows are yielded by dead_horn.
-#   See #*# HORN, DESCENDER, NOTCH
+#   See #*# HORN
 #
 #   Symbols other than "⹀" U2E40 DOUBLE HYPHEN as a feature for lexicography
 #   (with respect to this, mathematical symbols use <Multi_key><minus><equal>)
@@ -13928,7 +13918,7 @@
 #   Dchar: 
 #
 #   This yields the bare symbol not followed by ZWNJ.
-#   See #*# FLAG, DOUBLE
+#   See #*# FLAG
 #
 <UEFD7><UEFD7><UEFD7>                                                                          <A> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
 <Multi_key><equal><equal><equal>                                                               <A> : "🇦" U1F1E6 # REGIONAL INDICATOR SYMBOL LETTER A
@@ -14530,10 +14520,10 @@
 #
 #   Digits yield multidot punctuation.
 #
-#   Beware of the glyph disturbance affecting many fonts including those in use
-#   on GitHub and in Google Search, that makes "⸪" U2E2A TWO DOTS OVER ONE DOT
-#   PUNCTUATION look like "⸬" U2E2C SQUARED FOUR DOT PUNCTUATION, this like "⸫"
-#   U2E2B ONE DOT OVER TWO DOTS PUNCTUATION, and this like U2E2A.
+#   Beware of the glyph disturbance affecting fonts shipped with Ubuntu 16.04,
+#   that makes "⸪" U2E2A TWO DOTS OVER ONE DOT PUNCTUATION look like
+#   "⸬" U2E2C SQUARED FOUR DOT PUNCTUATION, this like
+#   "⸫" U2E2B ONE DOT OVER TWO DOTS PUNCTUATION, and this like U2E2A.
 #
 <dead_belowdot>                                                                            <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
@@ -14543,14 +14533,14 @@
 <Multi_key><exclam>                                                                 <nobreakspace> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <U202F> : "⸳" U2E33 # RAISED DOT
 <Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
-<dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
-<Multi_key><exclam>                                                                            <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
-<dead_belowdot>                                                                             <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
-<Multi_key><exclam>                                                                         <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION affected by glyph like U2E2C disturbance
-<dead_belowdot>                                                                                <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
-<Multi_key><exclam>                                                                            <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
-<dead_belowdot>                                                                             <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
-<Multi_key><exclam>                                                                         <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION affected by glyph like U2E2A disturbance
+<dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<Multi_key><exclam>                                                                            <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<dead_belowdot>                                                                             <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<Multi_key><exclam>                                                                         <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<dead_belowdot>                                                                                <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<Multi_key><exclam>                                                                            <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<dead_belowdot>                                                                             <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<Multi_key><exclam>                                                                         <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <dead_belowdot>                                                                                <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
@@ -14571,10 +14561,10 @@
 <Multi_key><exclam>                                                                            <6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <dead_belowdot>                                                                             <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <Multi_key><exclam>                                                                         <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
-<dead_belowdot>                                                                                <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
-<Multi_key><exclam>                                                                            <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
-<dead_belowdot>                                                                             <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
-<Multi_key><exclam>                                                                         <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION affected by glyph like U2E2B disturbance
+<dead_belowdot>                                                                                <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<Multi_key><exclam>                                                                            <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<dead_belowdot>                                                                             <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<Multi_key><exclam>                                                                         <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                                <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_8> : "⁘" U2058 # FOUR DOT PUNCTUATION
@@ -14728,14 +14718,6 @@
 #   yields low, opening, curly quotation marks U201A, U201E.
 #   See # # Quotation mark input method
 #
-#   Followed by ASCII minus, dead_diaeresis is a shortcut for the (very useful)
-#   "‑" U2011 NON-BREAKING HYPHEN, additionally to its presence in group 1 of
-#   equal, as a matter of mitigating its absence from live key support on part
-#   of the remapped variants, with respect to predictable user expectations as
-#   of getting something useful from so easy a key combination. The Multi_key
-#   equivalent however, additionally to not making sense, does not work either,
-#   due to numerous conflicts with math symbols.
-#
 #   Diaeresis also supports long dashes, with base characters on the upper row,
 #   Shift level, which makes sense because dead_diaeresis is on the base level
 #   of E05. Other facilities are available using Multi_key.
@@ -14765,10 +14747,10 @@
 #   of these quick access sequences that conflict with regular support.
 #   So, "⊆" U2286, "≥" U2265, "≤" U2264 by dead_diaeresis grave, less, greater
 #   have been discarded.
-#   See #*# FLAG, DOUBLE
+#   See #*# FLAG
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
-#   for portability, but on Linux and ChromeOS it is ineffective.
+#   for portability, but on Linux and ChromeOS, this is ineffective.
 #
 <dead_diaeresis>                                                                           <space> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                                         <space> : "̈" U0308 # COMBINING DIAERESIS
@@ -14784,8 +14766,6 @@
 <Multi_key><colon>                                                                    <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                            <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<dead_diaeresis>                                                                           <minus> : "‑" U2011 # NON-BREAKING HYPHEN
-<Multi_key><colon>                                                                         <minus> : "‑" U2011 # NON-BREAKING HYPHEN
 <dead_diaeresis>                                                                          <endash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><colon>                                                                        <endash> : "⸺" U2E3A # TWO-EM DASH
 <dead_diaeresis>                                                                          <emdash> : "⸻" U2E3B # THREE-EM DASH
