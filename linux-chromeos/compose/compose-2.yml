@@ -3587,6 +3587,8 @@
 #
 #   A hook may also be referred to as a fishhook.
 #
+#   Followed by period, the hook key yields "⁕" U2055 FLOWER PUNCTUATION MARK.
+#
 #   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
 #   by lack of anything more appropriate the spacing modifier slot is filled in
 #   with "˽" U02FD MODIFIER LETTER SHELF.
@@ -3599,6 +3601,8 @@
 <Multi_key><braceleft>                                                              <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
 <dead_hook>                                                                                <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
 <Multi_key><braceleft>                                                                     <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<dead_hook>                                                                               <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
+<Multi_key><braceleft>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <dead_hook>                                                                                    <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><braceleft>                                                                         <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <dead_hook>                                                                                 <KP_1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -3780,8 +3784,6 @@
 <Multi_key><braceleft><braceleft>                                                   <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_hook><dead_hook>                                                                     <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><braceleft><braceleft>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<dead_hook><dead_hook>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
-<Multi_key><braceleft><braceleft>                                                         <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <dead_hook><dead_hook>                                                                         <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <Multi_key><braceleft><braceleft>                                                              <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <dead_hook><dead_hook>                                                                         <D> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
@@ -5828,6 +5830,9 @@
 #   Followed by comma, dead_acute provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
+#   See #*# CIRCUMFLEX
+#   This imposes a restriction on the virtual cedilla and acute dead key.
+#   See # # CEDILLA&ACUTE
 #
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method. The only two acute below characters
