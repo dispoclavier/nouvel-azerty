@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 1.7.3"
+<UEFA0>                     : "version 1.7.4"
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -613,6 +613,30 @@
 #   First instances:  See #   Heart emoji
 #   Second instances: See #*# CIRCUMFLEX
 #
+#   To manually verify the absence of other conflicts and duplicates, assuming
+#   no space between the angle brackets around the keysyms:
+#
+#       Remove all:
+#       ^#.*\n
+#
+#       Remove all:
+#       ^<[^>]+> * : .+\n
+#
+#       Remove all:
+#       .+<KP_.+\n
+#
+#       Replace all:
+#       ^([^ ]+)( *)([^ ]+)( : .*)\n
+#       $1$3$2$4\n
+#
+#       Sort lines ascending.
+#
+#       Check for duplicates (no more than U2665 and U2764):
+#       ^([^ ]+) .+\n\1\s
+#
+#       Check for conflicts (no other than U2610, U2611 and U2612):
+#       ^([^ ]+) .+\n\1<
+#
 #
 #*# COMPOSE
 #   Multi_key
@@ -650,18 +674,23 @@
 #
 #   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
 #
-#   Space termination is required for ℆ to prevent conflicts with math symbols.
+#   Many abbreviations allow for a shortcut skipping the slash, but in the case
+#   of ℆, this shortcut requires space termination to prevent conflicts with an
+#   input method for the union symbol "∪" U222A UNION based on its nickname.
 #
 #   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
-#   supports mixed-case sequences, too.
+#   supports mixed-case sequences, too. For the Numero sign, <N><o> and <N><O>
+#   are supported by en_US.UTF-8/Compose.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
 #
-#   Unpreferred precomposed and dedicated measurement units are supported while
-#   being in the Letterlike Symbols block fully supported from v1.6.0 on, after
-#   an odd period where important symbols were missing due to not being used in
-#   mathematics.
+#   Unpreferred precomposed and dedicated measurement units are supported since
+#   they do have an encoding in the Letterlike Symbols block. This, however, is
+#   fully supported not before v1.6.0. Prior to v1.6.0, important symbols were
+#   missing due to not being used in mathematics. This odd time is over since
+#   version 1.6.0 added primarily the VERSICLE and RESPONSE symbols, both by
+#   composition and in groups 1 and 4.
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
@@ -681,17 +710,21 @@
 <Multi_key><o><a>                                                                                  : "Å" U212B # ANGSTROM SIGN
 <Multi_key><O><A>                                                                                  : "Å" U212B # ANGSTROM SIGN
 <Multi_key><O><a>                                                                                  : "Å" U212B # ANGSTROM SIGN
+<Multi_key><a><slash><c>                                                                           : "℀" U2100 # ACCOUNT OF
 <Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><a><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><c>                                                                                  : "℀" U2100 # ACCOUNT OF
+<Multi_key><A><slash><S>                                                                           : "⅍" U214D # AKTIESELSKAB
 <Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
+<Multi_key><a><slash><s>                                                                           : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><o><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><B><Y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><o><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
 <Multi_key><O><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
+<Multi_key><c><slash><o>                                                                           : "℅" U2105 # CARE OF
 <Multi_key><c><o>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><c><O>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><C><O>                                                                                  : "℅" U2105 # CARE OF
@@ -709,6 +742,7 @@
 <Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><C><L>                                                                                  : "℄" U2104 # CENTRE LINE SYMBOL
+<Multi_key><c><slash><u>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><E><percent>                                                                            : "℈" U2108 # SCRUPLE
@@ -738,6 +772,10 @@
 <Multi_key><M><R>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><n><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><N><O>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
 <Multi_key><o><percent>                                                                            : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><O><percent><space>                                                                     : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><m><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
@@ -783,20 +821,13 @@
 <Multi_key><W><Z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><z><w>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><Z><W>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+<Multi_key><X><R>                                                                                  : "☧" U2627 # CHI RHO
+<Multi_key><x><R>                                                                                  : "☧" U2627 # CHI RHO
+<Multi_key><X><r>                                                                                  : "☧" U2627 # CHI RHO
+<Multi_key><x><r>                                                                                  : "☧" U2627 # CHI RHO
 <Multi_key><z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><Z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><z><Z>                                                                                  : "℥" U2125 # OUNCE SIGN
-#
-#
-# # Numero sign
-#
-#   The symbol is used in a number of languages, not French.
-#   <N><o> and <N><O> are supported by en_US.UTF-8/Compose.
-#
-<Multi_key><n><o>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><N><O>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
 #
 #
 # # Circled by leading o
@@ -1520,7 +1551,6 @@
 <Multi_key><l><minus>                                                                              : "£" U00A3 # POUND SIGN
 <Multi_key><L><minus>                                                                              : "£" U00A3 # POUND SIGN
 <Multi_key><m><slash>                                                                              : "₥" U20A5 # MILL SIGN
-<Multi_key><n><equal>                                                                              : "₦" U20A6 # NAIRA SIGN
 <Multi_key><N><equal>                                                                              : "₦" U20A6 # NAIRA SIGN
 <Multi_key><n><s>                                                                                  : "₪" U20AA # NEW SHEQEL SIGN
 <Multi_key><N><S>                                                                                  : "₪" U20AA # NEW SHEQEL SIGN
@@ -1900,23 +1930,38 @@
 #
 # # Music signs
 #
-#   Reverse sequences are required for group selection.
+#   Reverse sequences with numbersign are required for group selection.
+#   Mnemonics support both English and French.
+#   Some sequences are case sensitive.
 #
+<Multi_key><n><4>                                                                                  : "♩" U2669 # QUARTER NOTE
+<Multi_key><N><4>                                                                                  : "♩" U2669 # QUARTER NOTE
 <Multi_key><q><numbersign>                                                                         : "♩" U2669 # QUARTER NOTE
+<Multi_key><Q><numbersign>                                                                         : "♩" U2669 # QUARTER NOTE
+<Multi_key><n><8>                                                                                  : "♪" U266A # EIGHTH NOTE
+<Multi_key><N><8>                                                                                  : "♪" U266A # EIGHTH NOTE
 <Multi_key><e><numbersign>                                                                         : "♪" U266A # EIGHTH NOTE
+<Multi_key><h><numbersign>                                                                         : "♪" U266A # EIGHTH NOTE
+<Multi_key><n><minus>                                                                              : "♫" U266B # BEAMED EIGHTH NOTES
+<Multi_key><N><minus>                                                                              : "♫" U266B # BEAMED EIGHTH NOTES
 <Multi_key><E><numbersign>                                                                         : "♫" U266B # BEAMED EIGHTH NOTES
+<Multi_key><H><numbersign>                                                                         : "♫" U266B # BEAMED EIGHTH NOTES
+<Multi_key><n><equal>                                                                              : "♬" U266C # BEAMED SIXTEENTH NOTES
 <Multi_key><S><numbersign>                                                                         : "♬" U266C # BEAMED SIXTEENTH NOTES
+<Multi_key><b><m>                                                                                  : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><f><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><b><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
+<Multi_key><b><c>                                                                                  : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><n><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><h><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><0><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><KP_0><numbersign>                                                                      : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><s><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><d><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
+<Multi_key><D><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
 #
 #
-# # Western zodiacal signs emoji
+# # Western Zodiacal Signs emoji
 #
 #   The traditional signs are also included in group 9.
 #
@@ -6400,22 +6445,16 @@
 <Multi_key><b><bar><minus>                                                          <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><c><bar><minus>                                                              <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><c><bar><minus>                                                       <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><b>                                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><c><b>                                                                   <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><b>                                                             <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><b>                                                      <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><c><c>                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><c><c>                                                   <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><b><c>                                                                          <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><b><c>                                                                   <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><b><asciicircum><c>                                                             <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><b><asciicircum><c>                                                      <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><c><asciicircum><c>                                                          <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><c><asciicircum><c>                                                   <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                             <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                      <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
-<Multi_key><b><b>                                                                          <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><b><b>                                                                   <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><b>                                                             <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><b>                                                      <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><c><c><asciicircum><c><c>                                                       <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
