@@ -124,25 +124,30 @@
 #	  	^	%	{	}	~	@	"	'	`	&	#	$	(	)	-	+	[	]	_	|	/	*	<	>	=	\	,	?	.	!	:	;	␣	⍽	
 #	  1	⚠	‰	★	☆	∼	◌	〃	ʼ	ʻ	π	☐	␣	⌀	➔	−	±	⟨	⟩	―	µ	✘	✗	✓	✔	‑	✅	❤	¿	‧	¡	⋅	ˑ	EMSP	MQSP	
 #	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	Ω	☮	☑	⍽	∂	➜	➖	➕	❰	❱	•	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
-#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	‐	+	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	⹀	+	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	⛆	❌	✂	►	≜	∨	♣	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	▪	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	⚓	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	➢	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭		⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⊲	FSP	FSP	
+#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⊲	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⊳	PSP	PSP	
-#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	⹀	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⏳	NSP	NSP	
+#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⏳	NSP	NSP	
 #	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	RLE	LRE	◊	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⌛	WNJ	WJ	
 #	11	ª	⏫	⏏	®	™	⁁	∝	∞	º	℗	♯	☉	☾	☽	⁒	✜	⟦	⟧	➲	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
-#	12	✈	⏬	⤴	⤵	☘	❍	⚧	♾	⚒	⛏	⮽	✒	❨	❩	➟	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
+#	12	✈	⏬	⤴	⤵	☘	❍	⚧	♾	⚒	⛏	⮽	✒	❨	❩	‐	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
 #
 #
 # # D01
 #
-#   The "ª" U00AA # FEMININE ORDINAL INDICATOR is a legacy character superseded
+#   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in Italian, Portuguese and Spanish, also supporting plural forms. The old
-#   ordinal indicators are supported by composition instead.
+#   ordinal indicators are supported by composition and in group 12.
 #   See # # Legacy ordinal indicators
+#
+#   In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner,
+#   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+#   in order to improve familiarity, as opposed to names based on “ZERO WIDTH”.
+#   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
@@ -184,14 +189,14 @@
 <Multi_key><numbersign><0>                                                           <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD0><KP_0>                                                                        <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <Multi_key><numbersign><KP_0>                                                        <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<UEFD0><1>                                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<Multi_key><numbersign><1>                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<UEFD0><KP_1>                                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<Multi_key><numbersign><KP_1>                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<UEFD0><2>                                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<Multi_key><numbersign><2>                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<UEFD0><KP_2>                                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<Multi_key><numbersign><KP_2>                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><1>                                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<Multi_key><numbersign><1>                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><KP_1>                                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<Multi_key><numbersign><KP_1>                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><2>                                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<Multi_key><numbersign><2>                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<UEFD0><KP_2>                                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<Multi_key><numbersign><KP_2>                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
 #
 #
 # # D02
@@ -567,16 +572,15 @@
 #
 # # D09
 #
-#   As "º" U00BA # MASCULINE ORDINAL INDICATOR is a legacy character superseded
+#   As "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in Italian, Portuguese and Spanish, also supporting plural forms, it is no
 #   longer supported in group 1 of U0060 where it screwed up U02BB. The legacy
-#   ordinal indicators are supported by composition and in group 11.
+#   ordinal indicators are supported by composition and in group 12.
 #   See # # Legacy ordinal indicators
 #
-#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB must leave its place in group 1
-#   of ASCII grave to the masculine ordinal indicator; mapping it in group 1 of
-#   quotedbl would be counter-intuitive, but it is input just as easily
+#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB recovers its place in group 1
+#   of ASCII grave from the masculine ordinal indicator. It is input as easily
 #   by dead_acute or dead_grave followed by comma.
 #   See #*# GRAVE
 #   See #*# ACUTE
@@ -586,6 +590,9 @@
 #   of apostrophe, may also be input by dead_circumflex followed by comma, with
 #   the benefit of ensuring a balanced and undiscriminatory distribution.
 #   See #*# CIRCUMFLEX
+#
+#   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
+#   in the hook key: "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -611,10 +618,10 @@
 <Multi_key><numbersign><6>                                                                 <grave> : "⛔" U26D4 # NO ENTRY emoji
 <UEFD0><KP_6>                                                                              <grave> : "⛔" U26D4 # NO ENTRY emoji
 <Multi_key><numbersign><KP_6>                                                              <grave> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><7>                                                                                 <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<Multi_key><numbersign><7>                                                                 <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<UEFD0><KP_7>                                                                              <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<Multi_key><numbersign><KP_7>                                                              <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
+<UEFD0><7>                                                                                 <grave> : "⚘" U2698 # FLOWER
+<Multi_key><numbersign><7>                                                                 <grave> : "⚘" U2698 # FLOWER
+<UEFD0><KP_7>                                                                              <grave> : "⚘" U2698 # FLOWER
+<Multi_key><numbersign><KP_7>                                                              <grave> : "⚘" U2698 # FLOWER
 <UEFD0><8>                                                                                 <grave> : "☦" U2626 # ORTHODOX CROSS emoji
 <Multi_key><numbersign><8>                                                                 <grave> : "☦" U2626 # ORTHODOX CROSS emoji
 <UEFD0><KP_8>                                                                              <grave> : "☦" U2626 # ORTHODOX CROSS emoji
@@ -627,14 +634,14 @@
 <Multi_key><numbersign><0>                                                                 <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
 <UEFD0><KP_0>                                                                              <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
 <Multi_key><numbersign><KP_0>                                                              <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
-<UEFD0><1>                                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<Multi_key><numbersign><1>                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<UEFD0><KP_1>                                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<Multi_key><numbersign><KP_1>                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<UEFD0><2>                                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
-<Multi_key><numbersign><2>                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
-<UEFD0><KP_2>                                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
-<Multi_key><numbersign><KP_2>                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><1>                                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<Multi_key><numbersign><1>                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><KP_1>                                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<Multi_key><numbersign><KP_1>                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><2>                                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<Multi_key><numbersign><2>                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<UEFD0><KP_2>                                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<Multi_key><numbersign><KP_2>                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 #
 #
 # # D10
@@ -931,12 +938,12 @@
 <Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN
 <UEFD0><UEFD0>                                                                             <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
 <Multi_key><numbersign><numbersign>                                                        <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<UEFD0><3>                                                                                 <minus> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign><3>                                                                 <minus> : "‐" U2010 # HYPHEN
-<UEFD0><KP_3>                                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
-<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "‐" U2010 # HYPHEN
+<UEFD0><3>                                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><numbersign><3>                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><KP_3>                                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <UEFD0><4>                                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <Multi_key><numbersign><4>                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <UEFD0><KP_4>                                                                        <KP_Subtract> : "♨" U2668 # HOT SPRINGS emoji
@@ -959,10 +966,10 @@
 <Multi_key><numbersign><8>                                                                 <minus> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
 <UEFD0><KP_8>                                                                        <KP_Subtract> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
 <Multi_key><numbersign><KP_8>                                                        <KP_Subtract> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
-<UEFD0><9>                                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><9>                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<UEFD0><KP_9>                                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><KP_9>                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><9>                                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<Multi_key><numbersign><9>                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<UEFD0><KP_9>                                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<Multi_key><numbersign><KP_9>                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
 <UEFD0><0>                                                                                 <minus> : "⁠" U2060 # WORD JOINER
 <Multi_key><numbersign><0>                                                                 <minus> : "⁠" U2060 # WORD JOINER
 <UEFD0><KP_0>                                                                        <KP_Subtract> : "⁠" U2060 # WORD JOINER
@@ -971,10 +978,10 @@
 <Multi_key><numbersign><1>                                                                 <minus> : "⁒" U2052 # COMMERCIAL MINUS SIGN
 <UEFD0><KP_1>                                                                        <KP_Subtract> : "⁒" U2052 # COMMERCIAL MINUS SIGN
 <Multi_key><numbersign><KP_1>                                                        <KP_Subtract> : "⁒" U2052 # COMMERCIAL MINUS SIGN
-<UEFD0><2>                                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-<Multi_key><numbersign><2>                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-<UEFD0><KP_2>                                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-<Multi_key><numbersign><KP_2>                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<UEFD0><2>                                                                                 <minus> : "‐" U2010 # HYPHEN
+<Multi_key><numbersign><2>                                                                 <minus> : "‐" U2010 # HYPHEN
+<UEFD0><KP_2>                                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
+<Multi_key><numbersign><KP_2>                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
 #
 #
 # # C06
