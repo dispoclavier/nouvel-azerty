@@ -123,8 +123,8 @@
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	{	}	~	@	"	'	`	&	#	$	(	)	-	+	[	]	_	|	/	*	<	>	=	\	,	?	.	!	:	;	␣	⍽	
 #	  1	⚠	‰	★	☆	∼	◌	〃	ʼ	ʻ	π	☐	␣	⌀	➔	−	±	⟨	⟩	―	µ	✘	✗	✓	✔	‑	✅	❤	¿	‧	¡	⋅	ˑ	EMSP	MQSP	
-#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	Ω	☮	☑	⍽	∂	➜	➖	➕	❰	❱	•	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
-#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	⹀	+	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	Ω	☮	☑	⍽	∂	➜	⹀	∓	❰	❱	•	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
+#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	➖	➕	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	⛆	❌	✂	►	≜	∨	♣	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	▪	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	⚓	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	➢	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
@@ -132,8 +132,8 @@
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⊳	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⏳	NSP	NSP	
 #	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	RLE	LRE	◊	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⌛	WNJ	WJ	
-#	11	ª	⏫	⏏	®	™	⁁	∝	∞	º	℗	♯	☉	☾	☽	⁒	✜	⟦	⟧	➲	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
-#	12	✈	⏬	⤴	⤵	☘	❍	⚧	♾	⚒	⛏	⮽	✒	❨	❩	‐	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
+#	11	✈	⏫	⏏	®	™	⁁	∝	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	⟦	⟧	➲	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
+#	12	ª	⏬	⤴	⤵	☘	❍	⚧	♾	º	⛏	⮽	✒	❨	❩	‐	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
 #
 #
 # # D01
@@ -592,7 +592,7 @@
 #   See #*# CIRCUMFLEX
 #
 #   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
-#   in the hook key: "⁕" U2055 FLOWER PUNCTUATION MARK.
+#   in dead_hook followed by period: "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -936,14 +936,14 @@
 #
 <UEFD0>                                                                                    <minus> : "−" U2212 # MINUS SIGN
 <Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN
-<UEFD0><UEFD0>                                                                             <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<Multi_key><numbersign><numbersign>                                                        <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<UEFD0><3>                                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><3>                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<UEFD0><KP_3>                                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
-<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><UEFD0>                                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><numbersign><numbersign>                                                        <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><3>                                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><3>                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<UEFD0><KP_3>                                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
 <UEFD0><4>                                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <Multi_key><numbersign><4>                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <UEFD0><KP_4>                                                                        <KP_Subtract> : "♨" U2668 # HOT SPRINGS emoji
@@ -995,14 +995,14 @@
 #
 <UEFD0>                                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
 <Multi_key><numbersign>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
-<UEFD0><UEFD0>                                                                              <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<Multi_key><numbersign><numbersign>                                                         <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<UEFD0><3>                                                                                  <plus> : "+" U002B # PLUS SIGN
-<Multi_key><numbersign><3>                                                                  <plus> : "+" U002B # PLUS SIGN
-<UEFD0><KP_3>                                                                             <KP_Add> : "+" U002B # PLUS SIGN
-<Multi_key><numbersign><KP_3>                                                             <KP_Add> : "+" U002B # PLUS SIGN
-<UEFD0><UEFD0><UEFD0>                                                                       <plus> : "+" U002B # PLUS SIGN
-<Multi_key><numbersign><numbersign><numbersign>                                             <plus> : "+" U002B # PLUS SIGN
+<UEFD0><UEFD0>                                                                              <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN
+<Multi_key><numbersign><numbersign>                                                         <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN
+<UEFD0><3>                                                                                  <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><3>                                                                  <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<UEFD0><KP_3>                                                                             <KP_Add> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><KP_3>                                                             <KP_Add> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<UEFD0><UEFD0><UEFD0>                                                                       <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><numbersign><numbersign>                                             <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
 <UEFD0><4>                                                                                  <plus> : "⊎" U228E # MULTISET UNION
 <Multi_key><numbersign><4>                                                                  <plus> : "⊎" U228E # MULTISET UNION
 <UEFD0><KP_4>                                                                             <KP_Add> : "⊎" U228E # MULTISET UNION
@@ -1942,10 +1942,9 @@
 # # A03-level1
 #
 #   The preferred name and abbreviation of U2009 are NARROW SPACE, NSP.
-#   An alternate, more intuitive name of U200B is WORD NON-JOINER.
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#   An alternate, more intuitive acronym of U200B is WNJ (WORD NON-JOINER).
+#   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   For consistency, WNJ is used in documentation rather than ZWSP.
-#   https://unicode-org.atlassian.net/browse/CLDR-16631
 #
 #   The French name of U200B is CÉSURE CONDITIONNELLE, break opportunity.
 #
