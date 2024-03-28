@@ -614,27 +614,28 @@
 #   Second instances: See #*# CIRCUMFLEX
 #
 #   To manually verify the absence of other conflicts and duplicates, assuming
-#   no space between the angle brackets around the keysyms:
+#   no space between the angle brackets around the keysyms, except that part of
+#   the keysyms may be aligned to the end for readability and maintainability:
 #
-#       Remove all:
+#       1  Remove all comment lines:
 #       ^#.*\n
 #
-#       Remove all:
+#       2  Remove all multi char output for live keys:
 #       ^<[^>]+> * : .+\n
 #
-#       Remove all:
+#       3  Remove all keypad equivalents:
 #       .+<KP_.+\n
 #
-#       Replace all:
+#       4  Replace all (start-align end-aligned keysyms):
 #       ^([^ ]+)( *)([^ ]+)( : .*)\n
 #       $1$3$2$4\n
 #
-#       Sort lines ascending.
+#       5  Sort lines ascending.
 #
-#       Check for duplicates (no more than U2665 and U2764):
+#       6  Check for duplicates (no more than U2665 and U2764):
 #       ^([^ ]+) .+\n\1\s
 #
-#       Check for conflicts (no other than U2610, U2611 and U2612):
+#       7  Check for conflicts (no other than U2610, U2611 and U2612):
 #       ^([^ ]+) .+\n\1<
 #
 #
