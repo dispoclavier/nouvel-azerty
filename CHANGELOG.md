@@ -1,6 +1,6 @@
 # Journal des modifications
 
-## 1.7.4 (projet)
+## 1.7.4 (2024-03-28)
 
 * Composition : Ajouter "☧" U2627. (compose-1.yml [9818410](https://github.com/dispoclavier/nouvel-azerty/commit/9818410af3054c84ab44dd700cbee88120c95921))
 * Composition : Compléter les séquences de "℀" U2100, "⅍" U214D, "℁" U2101, "℅" U2105, "℆" U2106, "♩" U2669, "♪" U266A, "♫" U266B, "♬" U266C, "♭" U266D, "♮" U266E. Adapter les séquences de "₦" U20A6, "⫓" U2AD3, "⫔" U2AD4, "⫖" U2AD6. (ibidem)
@@ -8,6 +8,8 @@
 * Touches mortes : Sélectrice de groupe : Groupes des symboles : Remplacer "Ω" U03A9 par "⚘" U2698. (compose-3.yml [b532280](https://github.com/dispoclavier/nouvel-azerty/commit/b532280a25cd0ecfa00341d44ae182403b2dda82))
 * Idem : Permuter "✈" U2708 et "ª" U00AA. Permuter "⚒" U2692 et "º" U00BA. (ibidem)
 * Idem : Mettre "⹀" U2E40 à la place de "‐" U2010, qui prend la place de "➟" U279F, qui prend la place laissée par "⹀" U2E40. (ibidem)
+* Idem : Permuter "➖" U2796 et "⹀" U2E40. Remplacer "➕" U2795 par "∓" U2213, qui prend la place de "+" U002B, qui est sur touches vives. (compose-3.yml [acc6735](https://github.com/dispoclavier/nouvel-azerty/commit/acc6735b2da465dccd07db81983eb6b01a787704))
+* Documentation : Procédure de vérification d’absence de conflits entre touches mortes. (compose-1.yml [0112702](https://github.com/dispoclavier/nouvel-azerty/commit/01127020fa74acf1f31feb2b4055f96d26242878))
 
 ## 1.7.3 (2024-03-24)
 
