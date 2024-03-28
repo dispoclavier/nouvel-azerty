@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2024-03-24T0527+0100
+#                       Date: 2024-03-28T0951+0100
 #                    Version:
-<UEFA0>                     : "version 1.7.3"
+<UEFA0>                     : "version 1.7.4"
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -613,6 +613,31 @@
 #   First instances:  See #   Heart emoji
 #   Second instances: See #*# CIRCUMFLEX
 #
+#   To manually verify the absence of other conflicts and duplicates, assuming
+#   no space between the angle brackets around the keysyms, except that part of
+#   the keysyms may be aligned to the end for readability and maintainability:
+#
+#       1  Remove all comment lines:
+#       ^#.*\n
+#
+#       2  Remove all multi char output for live keys:
+#       ^<[^>]+> * : .+\n
+#
+#       3  Remove all keypad equivalents:
+#       .+<KP_.+\n
+#
+#       4  Replace all (start-align end-aligned keysyms):
+#       ^([^ ]+)( *)([^ ]+)( : .*)\n
+#       $1$3$2$4\n
+#
+#       5  Sort lines ascending.
+#
+#       6  Check for duplicates (no more than U2665 and U2764):
+#       ^([^ ]+) .+\n\1\s
+#
+#       7  Check for conflicts (no other than U2610, U2611 and U2612):
+#       ^([^ ]+) .+\n\1<
+#
 #
 #*# COMPOSE
 #   Multi_key
@@ -650,18 +675,23 @@
 #
 #   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
 #
-#   Space termination is required for ℆ to prevent conflicts with math symbols.
+#   Many abbreviations allow for a shortcut skipping the slash, but in the case
+#   of ℆, this shortcut requires space termination to prevent conflicts with an
+#   input method for the union symbol "∪" U222A UNION based on its nickname.
 #
 #   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
-#   supports mixed-case sequences, too.
+#   supports mixed-case sequences, too. For the Numero sign, <N><o> and <N><O>
+#   are supported by en_US.UTF-8/Compose.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
 #
-#   Unpreferred precomposed and dedicated measurement units are supported while
-#   being in the Letterlike Symbols block fully supported from v1.6.0 on, after
-#   an odd period where important symbols were missing due to not being used in
-#   mathematics.
+#   Unpreferred precomposed and dedicated measurement units are supported since
+#   they do have an encoding in the Letterlike Symbols block. This, however, is
+#   fully supported not before v1.6.0. Prior to v1.6.0, important symbols were
+#   missing due to not being used in mathematics. This odd time is over since
+#   version 1.6.0 added primarily the VERSICLE and RESPONSE symbols, both by
+#   composition and in groups 1 and 4.
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
@@ -681,17 +711,21 @@
 <Multi_key><o><a>                                                                                  : "Å" U212B # ANGSTROM SIGN
 <Multi_key><O><A>                                                                                  : "Å" U212B # ANGSTROM SIGN
 <Multi_key><O><a>                                                                                  : "Å" U212B # ANGSTROM SIGN
+<Multi_key><a><slash><c>                                                                           : "℀" U2100 # ACCOUNT OF
 <Multi_key><a><c>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><a><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><c>                                                                                  : "℀" U2100 # ACCOUNT OF
+<Multi_key><A><slash><S>                                                                           : "⅍" U214D # AKTIESELSKAB
 <Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
+<Multi_key><a><slash><s>                                                                           : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><o><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><O><B><Y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
 <Multi_key><o><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
 <Multi_key><O><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
+<Multi_key><c><slash><o>                                                                           : "℅" U2105 # CARE OF
 <Multi_key><c><o>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><c><O>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><C><O>                                                                                  : "℅" U2105 # CARE OF
@@ -709,6 +743,7 @@
 <Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><C><L>                                                                                  : "℄" U2104 # CENTRE LINE SYMBOL
+<Multi_key><c><slash><u>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><c><u><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><C><U><space>                                                                           : "℆" U2106 # CADA UNA
 <Multi_key><E><percent>                                                                            : "℈" U2108 # SCRUPLE
@@ -738,6 +773,10 @@
 <Multi_key><M><R>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+<Multi_key><n><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><N><O>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
 <Multi_key><o><percent>                                                                            : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><O><percent><space>                                                                     : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><m><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
@@ -783,20 +822,13 @@
 <Multi_key><W><Z>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><z><w>                                                                                  : "🄮" U1F12E # CIRCLED WZ
 <Multi_key><Z><W>                                                                                  : "🄮" U1F12E # CIRCLED WZ
+<Multi_key><X><R>                                                                                  : "☧" U2627 # CHI RHO
+<Multi_key><x><R>                                                                                  : "☧" U2627 # CHI RHO
+<Multi_key><X><r>                                                                                  : "☧" U2627 # CHI RHO
+<Multi_key><x><r>                                                                                  : "☧" U2627 # CHI RHO
 <Multi_key><z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><Z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><z><Z>                                                                                  : "℥" U2125 # OUNCE SIGN
-#
-#
-# # Numero sign
-#
-#   The symbol is used in a number of languages, not French.
-#   <N><o> and <N><O> are supported by en_US.UTF-8/Compose.
-#
-<Multi_key><n><o>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><N><O>                                                                                  : "№" U2116 # NUMERO SIGN
-<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
 #
 #
 # # Circled by leading o
@@ -1520,7 +1552,6 @@
 <Multi_key><l><minus>                                                                              : "£" U00A3 # POUND SIGN
 <Multi_key><L><minus>                                                                              : "£" U00A3 # POUND SIGN
 <Multi_key><m><slash>                                                                              : "₥" U20A5 # MILL SIGN
-<Multi_key><n><equal>                                                                              : "₦" U20A6 # NAIRA SIGN
 <Multi_key><N><equal>                                                                              : "₦" U20A6 # NAIRA SIGN
 <Multi_key><n><s>                                                                                  : "₪" U20AA # NEW SHEQEL SIGN
 <Multi_key><N><S>                                                                                  : "₪" U20AA # NEW SHEQEL SIGN
@@ -1900,23 +1931,38 @@
 #
 # # Music signs
 #
-#   Reverse sequences are required for group selection.
+#   Reverse sequences with numbersign are required for group selection.
+#   Mnemonics support both English and French.
+#   Some sequences are case sensitive.
 #
+<Multi_key><n><4>                                                                                  : "♩" U2669 # QUARTER NOTE
+<Multi_key><N><4>                                                                                  : "♩" U2669 # QUARTER NOTE
 <Multi_key><q><numbersign>                                                                         : "♩" U2669 # QUARTER NOTE
+<Multi_key><Q><numbersign>                                                                         : "♩" U2669 # QUARTER NOTE
+<Multi_key><n><8>                                                                                  : "♪" U266A # EIGHTH NOTE
+<Multi_key><N><8>                                                                                  : "♪" U266A # EIGHTH NOTE
 <Multi_key><e><numbersign>                                                                         : "♪" U266A # EIGHTH NOTE
+<Multi_key><h><numbersign>                                                                         : "♪" U266A # EIGHTH NOTE
+<Multi_key><n><minus>                                                                              : "♫" U266B # BEAMED EIGHTH NOTES
+<Multi_key><N><minus>                                                                              : "♫" U266B # BEAMED EIGHTH NOTES
 <Multi_key><E><numbersign>                                                                         : "♫" U266B # BEAMED EIGHTH NOTES
+<Multi_key><H><numbersign>                                                                         : "♫" U266B # BEAMED EIGHTH NOTES
+<Multi_key><n><equal>                                                                              : "♬" U266C # BEAMED SIXTEENTH NOTES
 <Multi_key><S><numbersign>                                                                         : "♬" U266C # BEAMED SIXTEENTH NOTES
+<Multi_key><b><m>                                                                                  : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><f><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><b><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
+<Multi_key><b><c>                                                                                  : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><n><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><h><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><0><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><KP_0><numbersign>                                                                      : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><s><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><d><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
+<Multi_key><D><numbersign>                                                                         : "♯" U266F # MUSIC SHARP SIGN
 #
 #
-# # Western zodiacal signs emoji
+# # Western Zodiacal Signs emoji
 #
 #   The traditional signs are also included in group 9.
 #
@@ -6400,22 +6446,16 @@
 <Multi_key><b><bar><minus>                                                          <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><c><bar><minus>                                                              <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><c><bar><minus>                                                       <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><b>                                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><c><b>                                                                   <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><b>                                                             <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><b>                                                      <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><c><c>                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><c><c>                                                   <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><b><c>                                                                          <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><b><c>                                                                   <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><b><asciicircum><c>                                                             <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><b><asciicircum><c>                                                      <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><c><asciicircum><c>                                                          <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><c><asciicircum><c>                                                   <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                             <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                      <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
-<Multi_key><b><b>                                                                          <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><b><b>                                                                   <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><b>                                                             <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><b>                                                      <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><c><c><asciicircum><c><c>                                                       <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
@@ -10301,6 +10341,8 @@
 #
 #   A hook may also be referred to as a fishhook.
 #
+#   Followed by period, the hook key yields "⁕" U2055 FLOWER PUNCTUATION MARK.
+#
 #   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
 #   by lack of anything more appropriate the spacing modifier slot is filled in
 #   with "˽" U02FD MODIFIER LETTER SHELF.
@@ -10313,6 +10355,8 @@
 <Multi_key><braceleft>                                                              <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
 <dead_hook>                                                                                <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
 <Multi_key><braceleft>                                                                     <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<dead_hook>                                                                               <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
+<Multi_key><braceleft>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <dead_hook>                                                                                    <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><braceleft>                                                                         <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <dead_hook>                                                                                 <KP_1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -10494,8 +10538,6 @@
 <Multi_key><braceleft><braceleft>                                                   <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_hook><dead_hook>                                                                     <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><braceleft><braceleft>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<dead_hook><dead_hook>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
-<Multi_key><braceleft><braceleft>                                                         <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <dead_hook><dead_hook>                                                                         <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <Multi_key><braceleft><braceleft>                                                              <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <dead_hook><dead_hook>                                                                         <D> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
@@ -12542,6 +12584,9 @@
 #   Followed by comma, dead_acute provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
+#   See #*# CIRCUMFLEX
+#   This imposes a restriction on the virtual cedilla and acute dead key.
+#   See # # CEDILLA&ACUTE
 #
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method. The only two acute below characters
@@ -22138,26 +22183,31 @@
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	{	}	~	@	"	'	`	&	#	$	(	)	-	+	[	]	_	|	/	*	<	>	=	\	,	?	.	!	:	;	␣	⍽	
 #	  1	⚠	‰	★	☆	∼	◌	〃	ʼ	ʻ	π	☐	␣	⌀	➔	−	±	⟨	⟩	―	µ	✘	✗	✓	✔	‑	✅	❤	¿	‧	¡	⋅	ˑ	EMSP	MQSP	
-#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	Ω	☮	☑	⍽	∂	➜	➖	➕	❰	❱	•	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
-#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	‐	+	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	Ω	☮	☑	⍽	∂	➜	⹀	∓	❰	❱	•	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
+#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	➖	➕	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	⛆	❌	✂	►	≜	∨	♣	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	▪	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	⚓	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	➢	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭		⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⊲	FSP	FSP	
+#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⊲	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⊳	PSP	PSP	
-#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	⹀	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⏳	NSP	NSP	
+#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⏳	NSP	NSP	
 #	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	RLE	LRE	◊	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⌛	WNJ	WJ	
-#	11	ª	⏫	⏏	®	™	⁁	∝	∞	º	℗	♯	☉	☾	☽	⁒	✜	⟦	⟧	➲	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
-#	12	✈	⏬	⤴	⤵	☘	❍	⚧	♾	⚒	⛏	⮽	✒	❨	❩	➟	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
+#	11	✈	⏫	⏏	®	™	⁁	∝	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	⟦	⟧	➲	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
+#	12	ª	⏬	⤴	⤵	☘	❍	⚧	♾	º	⛏	⮽	✒	❨	❩	‐	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
 #
 #
 # # D01
 #
-#   The "ª" U00AA # FEMININE ORDINAL INDICATOR is a legacy character superseded
+#   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in Italian, Portuguese and Spanish, also supporting plural forms. The old
-#   ordinal indicators are supported by composition instead.
+#   ordinal indicators are supported by composition and in group 12.
 #   See # # Legacy ordinal indicators
+#
+#   In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner,
+#   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+#   in order to improve familiarity, as opposed to names based on “ZERO WIDTH”.
+#   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
@@ -22199,14 +22249,14 @@
 <Multi_key><numbersign><0>                                                           <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD0><KP_0>                                                                        <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <Multi_key><numbersign><KP_0>                                                        <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<UEFD0><1>                                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<Multi_key><numbersign><1>                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<UEFD0><KP_1>                                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<Multi_key><numbersign><KP_1>                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<UEFD0><2>                                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<Multi_key><numbersign><2>                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<UEFD0><KP_2>                                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<Multi_key><numbersign><KP_2>                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><1>                                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<Multi_key><numbersign><1>                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><KP_1>                                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<Multi_key><numbersign><KP_1>                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><2>                                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<Multi_key><numbersign><2>                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<UEFD0><KP_2>                                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<Multi_key><numbersign><KP_2>                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
 #
 #
 # # D02
@@ -22582,16 +22632,15 @@
 #
 # # D09
 #
-#   As "º" U00BA # MASCULINE ORDINAL INDICATOR is a legacy character superseded
+#   As "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in Italian, Portuguese and Spanish, also supporting plural forms, it is no
 #   longer supported in group 1 of U0060 where it screwed up U02BB. The legacy
-#   ordinal indicators are supported by composition and in group 11.
+#   ordinal indicators are supported by composition and in group 12.
 #   See # # Legacy ordinal indicators
 #
-#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB must leave its place in group 1
-#   of ASCII grave to the masculine ordinal indicator; mapping it in group 1 of
-#   quotedbl would be counter-intuitive, but it is input just as easily
+#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB recovers its place in group 1
+#   of ASCII grave from the masculine ordinal indicator. It is input as easily
 #   by dead_acute or dead_grave followed by comma.
 #   See #*# GRAVE
 #   See #*# ACUTE
@@ -22601,6 +22650,9 @@
 #   of apostrophe, may also be input by dead_circumflex followed by comma, with
 #   the benefit of ensuring a balanced and undiscriminatory distribution.
 #   See #*# CIRCUMFLEX
+#
+#   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
+#   in dead_hook followed by period: "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -22626,10 +22678,10 @@
 <Multi_key><numbersign><6>                                                                 <grave> : "⛔" U26D4 # NO ENTRY emoji
 <UEFD0><KP_6>                                                                              <grave> : "⛔" U26D4 # NO ENTRY emoji
 <Multi_key><numbersign><KP_6>                                                              <grave> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><7>                                                                                 <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<Multi_key><numbersign><7>                                                                 <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<UEFD0><KP_7>                                                                              <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
-<Multi_key><numbersign><KP_7>                                                              <grave> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
+<UEFD0><7>                                                                                 <grave> : "⚘" U2698 # FLOWER
+<Multi_key><numbersign><7>                                                                 <grave> : "⚘" U2698 # FLOWER
+<UEFD0><KP_7>                                                                              <grave> : "⚘" U2698 # FLOWER
+<Multi_key><numbersign><KP_7>                                                              <grave> : "⚘" U2698 # FLOWER
 <UEFD0><8>                                                                                 <grave> : "☦" U2626 # ORTHODOX CROSS emoji
 <Multi_key><numbersign><8>                                                                 <grave> : "☦" U2626 # ORTHODOX CROSS emoji
 <UEFD0><KP_8>                                                                              <grave> : "☦" U2626 # ORTHODOX CROSS emoji
@@ -22642,14 +22694,14 @@
 <Multi_key><numbersign><0>                                                                 <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
 <UEFD0><KP_0>                                                                              <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
 <Multi_key><numbersign><KP_0>                                                              <grave> : "🏾" U1F3FE # EMOJI MODIFIER FITZPATRICK TYPE-5 (UD83C UDFFE)
-<UEFD0><1>                                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<Multi_key><numbersign><1>                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<UEFD0><KP_1>                                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<Multi_key><numbersign><KP_1>                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<UEFD0><2>                                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
-<Multi_key><numbersign><2>                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
-<UEFD0><KP_2>                                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
-<Multi_key><numbersign><KP_2>                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><1>                                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<Multi_key><numbersign><1>                                                                 <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><KP_1>                                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<Multi_key><numbersign><KP_1>                                                              <grave> : "⚒" U2692 # HAMMER AND PICK emoji
+<UEFD0><2>                                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<Multi_key><numbersign><2>                                                                 <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<UEFD0><KP_2>                                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<Multi_key><numbersign><KP_2>                                                              <grave> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 #
 #
 # # D10
@@ -22944,14 +22996,14 @@
 #
 <UEFD0>                                                                                    <minus> : "−" U2212 # MINUS SIGN
 <Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN
-<UEFD0><UEFD0>                                                                             <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<Multi_key><numbersign><numbersign>                                                        <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<UEFD0><3>                                                                                 <minus> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign><3>                                                                 <minus> : "‐" U2010 # HYPHEN
-<UEFD0><KP_3>                                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
-<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "‐" U2010 # HYPHEN
-<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "‐" U2010 # HYPHEN
+<UEFD0><UEFD0>                                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><numbersign><numbersign>                                                        <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><3>                                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><3>                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<UEFD0><KP_3>                                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
 <UEFD0><4>                                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <Multi_key><numbersign><4>                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <UEFD0><KP_4>                                                                        <KP_Subtract> : "♨" U2668 # HOT SPRINGS emoji
@@ -22974,10 +23026,10 @@
 <Multi_key><numbersign><8>                                                                 <minus> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
 <UEFD0><KP_8>                                                                        <KP_Subtract> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
 <Multi_key><numbersign><KP_8>                                                        <KP_Subtract> : "⛼" U26FC # HEADSTONE GRAVEYARD SYMBOL
-<UEFD0><9>                                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><9>                                                                 <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<UEFD0><KP_9>                                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><KP_9>                                                        <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><9>                                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<Multi_key><numbersign><9>                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<UEFD0><KP_9>                                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<Multi_key><numbersign><KP_9>                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
 <UEFD0><0>                                                                                 <minus> : "⁠" U2060 # WORD JOINER
 <Multi_key><numbersign><0>                                                                 <minus> : "⁠" U2060 # WORD JOINER
 <UEFD0><KP_0>                                                                        <KP_Subtract> : "⁠" U2060 # WORD JOINER
@@ -22986,10 +23038,10 @@
 <Multi_key><numbersign><1>                                                                 <minus> : "⁒" U2052 # COMMERCIAL MINUS SIGN
 <UEFD0><KP_1>                                                                        <KP_Subtract> : "⁒" U2052 # COMMERCIAL MINUS SIGN
 <Multi_key><numbersign><KP_1>                                                        <KP_Subtract> : "⁒" U2052 # COMMERCIAL MINUS SIGN
-<UEFD0><2>                                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-<Multi_key><numbersign><2>                                                                 <minus> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-<UEFD0><KP_2>                                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-<Multi_key><numbersign><KP_2>                                                        <KP_Subtract> : "➟" U279F # DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
+<UEFD0><2>                                                                                 <minus> : "‐" U2010 # HYPHEN
+<Multi_key><numbersign><2>                                                                 <minus> : "‐" U2010 # HYPHEN
+<UEFD0><KP_2>                                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
+<Multi_key><numbersign><KP_2>                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
 #
 #
 # # C06
@@ -23003,14 +23055,14 @@
 #
 <UEFD0>                                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
 <Multi_key><numbersign>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
-<UEFD0><UEFD0>                                                                              <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<Multi_key><numbersign><numbersign>                                                         <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<UEFD0><3>                                                                                  <plus> : "+" U002B # PLUS SIGN
-<Multi_key><numbersign><3>                                                                  <plus> : "+" U002B # PLUS SIGN
-<UEFD0><KP_3>                                                                             <KP_Add> : "+" U002B # PLUS SIGN
-<Multi_key><numbersign><KP_3>                                                             <KP_Add> : "+" U002B # PLUS SIGN
-<UEFD0><UEFD0><UEFD0>                                                                       <plus> : "+" U002B # PLUS SIGN
-<Multi_key><numbersign><numbersign><numbersign>                                             <plus> : "+" U002B # PLUS SIGN
+<UEFD0><UEFD0>                                                                              <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN
+<Multi_key><numbersign><numbersign>                                                         <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN
+<UEFD0><3>                                                                                  <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><3>                                                                  <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<UEFD0><KP_3>                                                                             <KP_Add> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><KP_3>                                                             <KP_Add> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<UEFD0><UEFD0><UEFD0>                                                                       <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><numbersign><numbersign>                                             <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
 <UEFD0><4>                                                                                  <plus> : "⊎" U228E # MULTISET UNION
 <Multi_key><numbersign><4>                                                                  <plus> : "⊎" U228E # MULTISET UNION
 <UEFD0><KP_4>                                                                             <KP_Add> : "⊎" U228E # MULTISET UNION
@@ -23950,10 +24002,9 @@
 # # A03-level1
 #
 #   The preferred name and abbreviation of U2009 are NARROW SPACE, NSP.
-#   An alternate, more intuitive name of U200B is WORD NON-JOINER.
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#   An alternate, more intuitive acronym of U200B is WNJ (WORD NON-JOINER).
+#   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   For consistency, WNJ is used in documentation rather than ZWSP.
-#   https://unicode-org.atlassian.net/browse/CLDR-16631
 #
 #   The French name of U200B is CÉSURE CONDITIONNELLE, break opportunity.
 #
