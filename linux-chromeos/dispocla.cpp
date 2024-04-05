@@ -1,8 +1,8 @@
-//                       Date: 2024-03-11T2313+0100
+//                       Date: 2024-04-05T1400+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
-//                   Language: C-like
+//                   Language: C-style
 //                Description: XKB character key allocation tables
 //                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
 //
@@ -341,33 +341,67 @@
 //
 // ## Note about EURO SIGN
 //
+// The EuroSign is required on key E, level 3 following a recommendation from
+// the European Commission. While carfully avoiding any interference with the
+// national keyboard standards, the EC has issued a recommendation to assign
+// the euro sign the AltGr + e key position. Current hardware and keyboard
+// layout drivers are consistent with this recommendation, and users largely
+// adhere to it and have strong expectations accordingly.
+// https://www.open-std.org/cen/tc304/Euro/Euroreport.html
+//
+// To achieve this, quotedbl is mapped on that key in order to be replaced by
+// the euro sign due to being redundant, since quotedbl is on the base level,
+// in French mode and in ASCII mode alike, keys E03 and D11, respectively.
+//
+// Additionally, EuroSign is tied to quotedbl by obvious mnemonics based on the
+// double bar in the round (C-like) E, that the double acute accent on key E,
+// level 4, also resonates with. Its Multi_key equivalent is quotedbl.
+//
+// The apparent isolation of quotedbl, away from apostrophe a.k.a. quotesingle,
+// benefits ergonomics of backslash in synergy with digits, while apostrophe is
+// in the benefit of base level mappings both in French mode and in ASCII mode,
+// much like quotedbl, on E05 and C11, respectively, and ASCII grave has easy,
+// one-handed access on B06 in both modes, plus level 3 access on C11 in ASCII
+// mode only. This practical, respectful ASCII map was sadly unknown across the
+// 1.0 release, and when it came up, it triggered a 2.0 upgrade due to backward
+// incompatibility. The truth is, the 1.0 map was a wild guess, unlike the next
+// map, now 2.0, “for which I finally prayed to God to help me and advise me”.
+//
 // The euro sign is attached to the preceding numeric value using NNBSP, also
 // used before abbreviated measurement units. As a consequence, the euro sign
-// needs to be mapped on level 5. Level 3 doesn’t have any usefulness nor any
-// available key position for a duplicate mapping of the euro sign, although
-// maintaining its legacy mapping and keycap engraving would be convenient.
+// needs to be mapped on level 5 alongside, in synergy with NNBSP, and so are
+// the dollar, pound, and yen signs, the latter two not on level 3 though.
 //
-// As an alternative, the Euro sign is also in group 1 of E. In group 1, with
-// key rollover supported, the group selector can be used like a modifier key
-// by keeping the group selector pressed while already hitting the E key. The
-// base character for the Euro sign in group 1 of E is case insensitive.
+// The linked page (https://www.open-std.org/cen/tc304/Euro/Euroreport.html)
+// is from 1998 when the only “hard space” was NBSP, Since 1999 we have a NNBSP
+// that is actually recommended before measurement unit abbreviations as well
+// as currency short forms, because it is fixed-width, as opposed to NBSP that
+// is justifying on the web and in MS Word 2013.
+// https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b
 //
 //
-// ##  Name and mapping of the level-5 modifier key
+// ##  Name and mapping of the level 5 modifier key
 //
-// The XKB level-5 modifier key is used in Jan James’ implementation of the
+// The XKB level 5 modifier key is used in Jan James’ implementation of the
 // governmental version (by federal Government and industry representatives)
 // of the Canadian multilingual standard keyboard layout, initially designed
-// by Alain LaBonté. Jan James worked for Windows. The group selector is like
-// the level-5 modifier instead of being a dead key specified in the standard
-// ISO/IEC 9995-2, that CAN/CSA Z243.200-92 complies with.
+// by Alain LaBonté. Jan James worked out Microsoft’s Windows implementation
+// of the Canadian multilingual standard keyboard layout. There, what should
+// be the group selector is like the level 5 modifier key instead of being a
+// dead key as specified in ISO/IEC 9995-2 that CAN/CSA Z243.200-92 complies
+// with. But that is not how things are expected to work.
 //
-// The repurposed level-5 modifier is called AltFr by analogy with AltGr and
+// Instead, keyboard layouts using a scheme like in this file have a level 5
+// modifier located lefthand so as to be usable for an extended numpad below
+// the 7 8 9 0 keys where embedded numpads on compact keyboards are located,
+// too.
+//
+// The repurposed level 5 modifier is called AltFr by analogy with AltGr and
 // to account for its origin on French keyboard layouts, like Microsoft also
 // called the peculiar Caps Lock mappings 'SGCaps', an abbreviation standing
 // for 'Swiss-German Capitals'.
 //
-// This level-5 modifier is repurposed and moved to the left on the “ISO key”
+// This level 5 modifier is repurposed and moved to the left on the “ISO key”
 // B00. On ANSI keyboards with ISO compatibility, where the ISO key takes the
 // place of the Right Control key, Caps Lock and ISO key are swapped, so that
 // AltFr is on the Caps Lock key whereas the latter is then on Right Control.
@@ -435,7 +469,7 @@ xkb_symbols "kbfrFRs" {
 		[ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]
 	};
 
-	// New Numeric mode lock, ModLock for short
+	// New ASCII mode lock, ModLock for short
 	//
 	// Key TLDE becomes a Group Lock as an additional graphic toggle
 	// affecting both the alphanumeric block and the numeric keypad.
@@ -476,8 +510,8 @@ xkb_symbols "kbfrFRs" {
 	}; // U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4  4️⃣ keycap 4 emoji
 
 	key <AE05> {
-		[                        5,               dead_grave,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ],
-		[                        5,               dead_grave,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ]
+		[                        5,               apostrophe,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ],
+		[                        5,               apostrophe,                    U00AD,                    U2075,                    U2085,                        5,                    UEFC5,              bracketleft ]
 	}; // U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5  5️⃣ keycap 5 emoji
 
 	key <AE06> {
@@ -523,9 +557,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[           dead_diaeresis,                     plus,                    U02B3,                    U207A,                        F,                    equal,                    UEFCB,               braceright ],
+		[           dead_diaeresis,                     plus,                Multi_key,                    U207A,                        F,                    equal,                    UEFCB,               braceright ],
 		[           dead_diaeresis,                     plus,                    U208A,                    U207A,                        F,                    equal,                    UEFCB,               braceright ]
-	}; // U02B3 ʳ superscript small r; U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
+	}; // U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
@@ -538,44 +572,44 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
-		[                        z,                        Z,                    U1DBB,                  percent,                    UEFD5,                  percent,                 permille,                  U1F627 ],
-		[                        z,                        Z,                    U1DBB,                  percent,                    UEFD5,                  percent,                 permille,                  U1F627 ]
-	}; // U1DBB ᶻ superscript small z; UEFD5 *dead_turned (*dead_inverted on double press); 😧 U1F627 ANGUISHED FACE emoji
+		[                        z,                        Z,                    U1DBB,                  percent,                    UEFD5,                  percent,                  minutes,                   U1F627 ],
+		[                        z,                        Z,                    U1DBB,                  percent,                    UEFD5,                  percent,                  minutes,                   U1F627 ]
+	}; // U1DBB ᶻ superscript small z; UEFD5 *dead_turned; 😧 U1F627 ANGUISHED FACE emoji
 
 	key <AD03> {
-		[                        e,                        E,                    U1D49,                braceleft,                dead_hook,                 EuroSign,                    UEF9F,                   U1F601 ],
-		[                        e,                        E,                    U1D49,                braceleft,                dead_hook,                 EuroSign,                    UEF9F,                   U1F601 ]
-	}; // U1D49 ᵉ superscript small e; UEF9F Unicode prefix U+; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
+		[                        e,                        E,                    U1D49,                 EuroSign,         dead_doubleacute,                 EuroSign,                  seconds,                    UEF8D ],
+		[                        e,                        E,                    U1D49,                 EuroSign,         dead_doubleacute,                 EuroSign,                  seconds,                    UEF8D ]
+	}; // U1D49 ᵉ superscript small e; UEF8D '&quot;'
 
 	key <AD04> {
-		[                        r,                        R,                    U02B3,               braceright,                    UEFD4,                 sterling,                  radical,                   U1F914 ],
-		[                        r,                        R,                    U02B3,               braceright,                    UEFD4,                 sterling,                  radical,                   U1F914 ]
-	}; // U02B3 ʳ superscript small r; UEFD4 *dead_retroflexhook; √ U221A SQUARE ROOT; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🤣 U1F923 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji is not supported; 🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
+		[                        r,                        R,                    U02B3,                backslash,                    UEFD6,                 sterling,                  radical,                   U1F914 ],
+		[                        r,                        R,                    U02B3,                backslash,                    UEFD6,                 sterling,                  radical,                   U1F914 ]
+	}; // U02B3 ʳ superscript small r; UEFD4 *dead_retroflexhook; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🤣 U1F923 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji is not supported; 🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
 
 	key <AD05> {
 		[                        t,                        T,                    U1D57,               asciitilde,               dead_tilde,                    U2212,                  figdash,                   U1F60A ],
 		[                        t,                        T,                    U1D57,               asciitilde,               dead_tilde,                    U2212,                  figdash,                   U1F60A ]
-	}; // U1D57 ᵗ superscript small t; U2212 − MINUS SIGN; ‒ U2012 FIGURE DASH; 😊 U1F60A SMILING FACE WITH SMILING EYES (worldwide fifth-most used emoji, fourth-most used smiling emoji in France)
+	}; // U1D57 ᵗ superscript small t; U2212 − MINUS SIGN; figdash is the tabular minus sign; 😊 U1F60A SMILING FACE WITH SMILING EYES (worldwide fifth-most used emoji, fourth-most used smiling emoji in France)
 
 	key <AD06> {
-		[                        y,                        Y,                    U02B8,               dead_greek,               dead_greek,                    U00A5,              Greek_OMEGA,                   U1F60D ],
-		[                        y,                        Y,                    U02B8,               dead_greek,               dead_greek,                    U00A5,              Greek_OMEGA,                   U1F60D ]
-	}; // U02B8 ʸ superscript small y; U00A5 ¥ YEN SIGN; Ω U03A9 (preferred for Ohm sign); 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES (third-most used smiling emoji in France, third-most overall worldwide)
+		[                        y,                        Y,                    U02B8,               dead_greek,               dead_greek,                      yen,              Greek_OMEGA,                   U1F60D ],
+		[                        y,                        Y,                    U02B8,               dead_greek,               dead_greek,                      yen,              Greek_OMEGA,                   U1F60D ]
+	}; // U02B8 ʸ superscript small y; Greek_OMEGA is preferred for Ohm sign; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES (third-most used smiling emoji in France, third-most overall worldwide)
 
 	key <AD07> {
-		[                        u,                        U,                    U1D58,                 quotedbl,         dead_doubleacute,                        4,                  seconds,                    UEF8D ],
-		[                        u,                        U,                    U1D58,                 quotedbl,         dead_doubleacute,                        4,                  seconds,                    UEF8D ]
-	}; // U1D58 ᵘ superscript small u; UEF8D '&quot;'
+		[                        u,                        U,                    U1D58,               apostrophe,               dead_acute,                        4,                    UEF9F,                    UEF8C ],
+		[                        u,                        U,                    U1D58,               apostrophe,               dead_acute,                        4,                    UEF9F,                    UEF8C ]
+	}; // U1D58 ᵘ superscript small u; UEF9F Unicode prefix 'U+'; UEF8C '&apos;'
 
 	key <AD08> {
-		[                        i,                        I,                    U2071,               apostrophe,               dead_acute,                        5,                  minutes,                    UEF8C ],
-		[                        i,                        I,                    U2071,               apostrophe,               dead_acute,                        5,                  minutes,                    UEF8C ]
-	}; // U2071 ⁱ superscript small i; UEF8C '&apos;'
+		[                        i,                        I,                    U2071,                braceleft,                dead_hook,                        5,                    UEF7E,                   U1F64F ],
+		[                        i,                        I,                    U2071,                braceleft,                dead_hook,                        5,                    UEF7E,                   U1F64F ]
+	}; // U2071 ⁱ superscript small i; UEF7E '\\u{'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
 
 	key <AD09> {
-		[                        o,                        O,                    U1D52,                    grave,               dead_grave,                        6,                    U2126,                   U1F64F ],
-		[                        o,                        O,                    U1D52,                    grave,               dead_grave,                        6,                    U2126,                   U1F64F ]
-	}; // U1D52 ᵒ superscript small o; U2126 Ω OHM SIGN (some fonts support this but no Greek); 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
+		[                        o,                        O,                    U1D52,               braceright,                    UEFD4,                        6,                    U2126,                   U1F601 ],
+		[                        o,                        O,                    U1D52,               braceright,                    UEFD4,                        6,                    U2126,                   U1F601 ]
+	}; // U1D52 ᵒ superscript small o; U2126 Ω OHM SIGN (some fonts support this but no Greek); 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
 
 	key <AD10> {
 		[                        p,                        P,                    U1D56,                ampersand,            dead_abovedot,                   period,                paragraph,                    UEF8B ],
@@ -592,7 +626,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <AD12> {
-		[               dead_acute,                    U203A,                Multi_key,                   dollar,                    UEF67,                 sterling,                        D,             bracketright ],
+		[               dead_acute,                    U203A,               dead_grave,                   dollar,                    UEF67,                 sterling,                        D,             bracketright ],
 		[               underscore,             bracketright,                Multi_key,                   dollar,                        D,                 sterling,                        D,             bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 
@@ -630,19 +664,19 @@ xkb_symbols "kbfrFRs" {
 	}; // U02B0 ʰ superscript small h; U1F44D 👍 THUMBS UP SIGN worldwide tenth-most used emoji
 
 	key <AC07> {
-		[                        j,                        J,                    U02B2,              bracketleft,              dead_ogonek,                        1,                    U27E8,                   U1F602 ],
-		[                        j,                        J,                    U02B2,              bracketleft,              dead_ogonek,                        1,                    U27E8,                   U1F602 ]
-	}; // U02B2 ʲ superscript small j; U27E8 ⟨ MATHEMATICAL LEFT ANGLE BRACKET; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
+		[                        j,                        J,                    U02B2,               underscore,                    UEFD2,                        1,                    U203E,                   U1F602 ],
+		[                        j,                        J,                    U02B2,               underscore,                    UEFD2,                        1,                    U203E,                   U1F602 ]
+	}; // U02B2 ʲ superscript small j; U203E ‾ OVERLINE as underline in fixed-width plain text; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
 
 	key <AC08> {
-		[                        k,                        K,                    U1D4F,             bracketright,                    UEFD3,                        2,                    U27E9,                   U1F605 ],
-		[                        k,                        K,                    U1D4F,             bracketright,                    UEFD3,                        2,                    U27E9,                   U1F605 ]
-	}; // U1D4F ᵏ superscript small k; UEFD3 *dead_abovehook; U27E9 ⟩ MATHEMATICAL RIGHT ANGLE BRACKET; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
+		[                        k,                        K,                    U1D4F,              bracketleft,              dead_ogonek,                        2,                    UEF7B,                   U1F605 ],
+		[                        k,                        K,                    U1D4F,              bracketleft,              dead_ogonek,                        2,                    UEF7B,                   U1F605 ]
+	}; // U1D4F ᵏ superscript small k; UEFD3 *dead_abovehook;UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
 
 	key <AC09> {
-		[                        l,                        L,                    U02E1,               underscore,                    UEFD2,                        3,                 sterling,                    U203E ],
-		[                        l,                        L,                    U02E1,               underscore,                    UEFD2,                        3,                 sterling,                    U203E ]
-	}; // U02E1 ˡ superscript small l; UEFD2 *dead_subscript; U203E ‾ OVERLINE as underline in fixed-width plain text
+		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ],
+		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ]
+	}; // U02E1 ˡ superscript small l; UEFD2 *dead_subscript
 
 	key <AC10> {
 		[                        m,                        M,                    U1D50,                      bar,              dead_macron,                    comma,                       mu,                   U1F637 ],
@@ -694,8 +728,8 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
 	key <AB06> {
-		[                        n,                        N,                    U207F,                backslash,                    UEFD6,                        0,                    UEF68,                    UEF69 ],
-		[                        n,                        N,                    U207F,                backslash,                    UEFD6,                        0,                    UEF68,                    UEF69 ]
+		[                        n,                        N,                    U207F,                    grave,               dead_grave,                        0,                    UEF68,                    UEF69 ],
+		[                        n,                        N,                    U207F,                    grave,               dead_grave,                        0,                    UEF68,                    UEF69 ]
 	}; // U207F ⁿ superscript small n; UEFD6 *dead_reversed; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ '
 
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
