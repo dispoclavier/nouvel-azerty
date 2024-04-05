@@ -1,4 +1,4 @@
-//                       Date: 2024-04-05T1654+0200
+//                       Date: 2024-04-05T2300+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -386,7 +386,7 @@
 // double bar in the round (C-like) E, that the double acute accent on key E,
 // level 4, also resonates with. Its Multi_key equivalent is quotedbl.
 //
-// The apparent isolation of quotedbl, away from apostrophe a.k.a. quotesingle,
+// The apparent isolation of quotedbl, away from apostrophe / single quote,
 // benefits ergonomics of backslash in synergy with digits, while apostrophe is
 // in the benefit of base level mappings both in French mode and in ASCII mode,
 // much like quotedbl, on E05 and C11, respectively, and ASCII grave has easy,
@@ -394,7 +394,7 @@
 // mode only. This practical, respectful ASCII map was sadly unknown across the
 // 1.0 release, and when it came up, it triggered a 2.0 upgrade due to backward
 // incompatibility. The truth is, the 1.0 map was a wild guess, unlike the next
-// map, now 2.0, “for which I finally prayed to God to help me and advise me”.
+// map, now 2.0, for which I finally prayed to God to help me and advise me.
 //
 // The euro sign is attached to the preceding numeric value using NNBSP, also
 // used before abbreviated measurement units. As a consequence, the euro sign
@@ -411,7 +411,8 @@
 // The fact that quotedbl is on the E key, and apostrophe is on the U key based
 // on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonics, referring to the EU
 // initialism. Also, both quotedbl and apostrophe have their HTML named entity,
-// frequent `&quot;` and rare `&apos;`, on level 8 (Shift + AltGr + AltFr).
+// frequent `&quot;` and rare `&apos;`, on level 8 (Shift + AltGr + AltFr) like
+// ampersand, less and greater, the latter two on level 6 (Shift + AltFr).
 //
 //
 // ### Keyboard levels and groups
