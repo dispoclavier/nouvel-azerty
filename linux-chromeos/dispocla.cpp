@@ -1,4 +1,4 @@
-//                       Date: 2024-04-05T1400+0200
+//                       Date: 2024-04-05T1432+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -584,7 +584,7 @@ xkb_symbols "kbfrFRs" {
 	key <AD04> {
 		[                        r,                        R,                    U02B3,                backslash,                    UEFD6,                 sterling,                  radical,                   U1F914 ],
 		[                        r,                        R,                    U02B3,                backslash,                    UEFD6,                 sterling,                  radical,                   U1F914 ]
-	}; // U02B3 ʳ superscript small r; UEFD4 *dead_retroflexhook; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🤣 U1F923 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji is not supported; 🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
+	}; // U02B3 ʳ superscript small r; UEFD6 *dead_reversed; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🤣 U1F923 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji is not supported; 🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
 
 	key <AD05> {
 		[                        t,                        T,                    U1D57,               asciitilde,               dead_tilde,                    U2212,                  figdash,                   U1F60A ],
@@ -609,7 +609,7 @@ xkb_symbols "kbfrFRs" {
 	key <AD09> {
 		[                        o,                        O,                    U1D52,               braceright,                    UEFD4,                        6,                    U2126,                   U1F601 ],
 		[                        o,                        O,                    U1D52,               braceright,                    UEFD4,                        6,                    U2126,                   U1F601 ]
-	}; // U1D52 ᵒ superscript small o; U2126 Ω OHM SIGN (some fonts support this but no Greek); 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
+	}; // U1D52 ᵒ superscript small o; UEFD4 *dead_retroflexhook; U2126 Ω OHM SIGN (some fonts support this but no Greek); 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
 
 	key <AD10> {
 		[                        p,                        P,                    U1D56,                ampersand,            dead_abovedot,                   period,                paragraph,                    UEF8B ],
@@ -666,17 +666,17 @@ xkb_symbols "kbfrFRs" {
 	key <AC07> {
 		[                        j,                        J,                    U02B2,               underscore,                    UEFD2,                        1,                    U203E,                   U1F602 ],
 		[                        j,                        J,                    U02B2,               underscore,                    UEFD2,                        1,                    U203E,                   U1F602 ]
-	}; // U02B2 ʲ superscript small j; U203E ‾ OVERLINE as underline in fixed-width plain text; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
+	}; // U02B2 ʲ superscript small j; UEFD2 *dead_subscript; U203E ‾ OVERLINE as underline in fixed-width plain text; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
 
 	key <AC08> {
 		[                        k,                        K,                    U1D4F,              bracketleft,              dead_ogonek,                        2,                    UEF7B,                   U1F605 ],
 		[                        k,                        K,                    U1D4F,              bracketleft,              dead_ogonek,                        2,                    UEF7B,                   U1F605 ]
-	}; // U1D4F ᵏ superscript small k; UEFD3 *dead_abovehook;UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
+	}; // U1D4F ᵏ superscript small k;UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
 
 	key <AC09> {
 		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ],
 		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ]
-	}; // U02E1 ˡ superscript small l; UEFD2 *dead_subscript
+	}; // U02E1 ˡ superscript small l; UEFD3 *dead_abovehook
 
 	key <AC10> {
 		[                        m,                        M,                    U1D50,                      bar,              dead_macron,                    comma,                       mu,                   U1F637 ],
@@ -730,7 +730,7 @@ xkb_symbols "kbfrFRs" {
 	key <AB06> {
 		[                        n,                        N,                    U207F,                    grave,               dead_grave,                        0,                    UEF68,                    UEF69 ],
 		[                        n,                        N,                    U207F,                    grave,               dead_grave,                        0,                    UEF68,                    UEF69 ]
-	}; // U207F ⁿ superscript small n; UEFD6 *dead_reversed; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ '
+	}; // U207F ⁿ superscript small n; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ '
 
 	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
