@@ -1,4 +1,4 @@
-//                       Date: 2024-04-05T1432+0200
+//                       Date: 2024-04-05T1654+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -223,6 +223,35 @@
 // https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 //
 //
+// ##  Name and mapping of the level 5 modifier key
+//
+// The XKB level 5 modifier key is used in Jan James’ implementation of the
+// governmental version (by federal Government and industry representatives)
+// of the Canadian multilingual standard keyboard layout, initially designed
+// by Alain LaBonté. Jan James worked out Microsoft’s Windows implementation
+// of the Canadian multilingual standard keyboard layout. There, what should
+// be the group selector is like the level 5 modifier key instead of being a
+// dead key as specified in ISO/IEC 9995-2 that CAN/CSA Z243.200-92 complies
+// with. But that is not how things are expected to work.
+//
+// Instead, keyboard layouts using a scheme like in this file have a level 5
+// modifier located lefthand so as to be usable for an extended numpad below
+// the 7 8 9 0 keys where embedded numpads on compact keyboards are located,
+// too.
+//
+// The repurposed level 5 modifier is called AltFr by analogy with AltGr and
+// to account for its origin on French keyboard layouts, like Microsoft also
+// called the peculiar Caps Lock mappings 'SGCaps', an abbreviation standing
+// for 'Swiss-German Capitals'.
+//
+// This level 5 modifier is repurposed and moved to the left on the “ISO key”
+// B00. On ANSI keyboards with ISO compatibility, where the ISO key takes the
+// place of the Right Control key, Caps Lock and ISO key are swapped, so that
+// AltFr is on the Caps Lock key whereas the latter is then on Right Control.
+// On plain ANSI keyboards, the AltFr key can still be remapped to Caps Lock,
+// and Caps Lock to Right Control.
+//
+//
 // ###  Punctuation spacing input methods
 //
 // Since computerized typewriting and typesetting have made horizontal spacing
@@ -379,34 +408,10 @@
 // is justifying on the web and in MS Word 2013.
 // https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b
 //
-//
-// ##  Name and mapping of the level 5 modifier key
-//
-// The XKB level 5 modifier key is used in Jan James’ implementation of the
-// governmental version (by federal Government and industry representatives)
-// of the Canadian multilingual standard keyboard layout, initially designed
-// by Alain LaBonté. Jan James worked out Microsoft’s Windows implementation
-// of the Canadian multilingual standard keyboard layout. There, what should
-// be the group selector is like the level 5 modifier key instead of being a
-// dead key as specified in ISO/IEC 9995-2 that CAN/CSA Z243.200-92 complies
-// with. But that is not how things are expected to work.
-//
-// Instead, keyboard layouts using a scheme like in this file have a level 5
-// modifier located lefthand so as to be usable for an extended numpad below
-// the 7 8 9 0 keys where embedded numpads on compact keyboards are located,
-// too.
-//
-// The repurposed level 5 modifier is called AltFr by analogy with AltGr and
-// to account for its origin on French keyboard layouts, like Microsoft also
-// called the peculiar Caps Lock mappings 'SGCaps', an abbreviation standing
-// for 'Swiss-German Capitals'.
-//
-// This level 5 modifier is repurposed and moved to the left on the “ISO key”
-// B00. On ANSI keyboards with ISO compatibility, where the ISO key takes the
-// place of the Right Control key, Caps Lock and ISO key are swapped, so that
-// AltFr is on the Caps Lock key whereas the latter is then on Right Control.
-// On plain ANSI keyboards, the AltFr key can still be remapped to Caps Lock,
-// and Caps Lock to Right Control.
+// The fact that quotedbl is on the E key, and apostrophe is on the U key based
+// on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonics, referring to the EU
+// initialism. Also, both quotedbl and apostrophe have their HTML named entity,
+// frequent `&quot;` and rare `&apos;`, on level 8 (Shift + AltGr + AltFr).
 //
 //
 // ### Keyboard levels and groups
