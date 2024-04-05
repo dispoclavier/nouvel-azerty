@@ -1,5 +1,23 @@
 # Journal des modifications
 
+## 2.0.0 (projet)
+
+* Disposition : Redonder le symbole "€" U20AC en AltGr/Option à la place de "{" U007B. (dispocla.cpp [55890e8](https://github.com/dispoclavier/nouvel-azerty/commit/55890e81e154fb3479635595a9cc8eed74f2a420), compose-1.yml [8b62065](https://github.com/dispoclavier/nouvel-azerty/commit/8b6206594ebf9b02e36d94466f253d8fb0a18030))
+* Disposition : Symboles ASCII : Mettre "{" U007B à la place de "'" U0027, qui prend la place de "\"" U0022, qui est sur la touche du 3 en mode français et sur la touche de l’accent circonflexe en mode ASCII, et qui est remplacé par "€" U20AC à la place laissée par "{" U007B. (ibidem)
+* Idem : Mettre "}" U007D à la place de "`" U0060, qui prend la place de "\\" U005C, qui prend la place laissée par "}" U007D. (ibidem)
+* Idem : Mettre "[" U005B en dessous de "{" U007B à la place de "]" U005D, qui prend la place de "_" U005F, qui prend la place laissée par "[" U005B. (ibidem)
+* Disposition : Touches mortes en Maj + AltGr/Option : Faire suivre crosse ou crochet à la place d’accent aigu, qui prend la place de double accent aigu, qui prend la place laissée par crosse ou crochet. (ibidem, [d908a99](https://github.com/dispoclavier/nouvel-azerty/commit/d908a997202108277a749a45d432dda0dbde25b2))
+* Idem : Faire suivre crochet rétroflexe à la place d’accent grave, qui prend la place de réfléchi, qui prend la place laissée par crochet rétroflexe. (ibidem)
+* Idem : Faire suivre ogonek à la place de crochet en chef, qui prend la place d’indice, qui prend la place laissée par ogonek. (ibidem)
+* Disposition : Symboles en Maj + AltFr : Permuter "″" U2033 et "U+", qui passe de la touche E à la touche U. (ibidem)
+* Idem : Ajouter "\\u{" à la place de "′" U2032 (touche I, nouvelle touche de "{" U007B), qui prend la place de "‰" U2030 (touche Z, à côté de "″" U2033), qui est dans le groupe 1 de "%" U0025 et est tombé en désuétude. (ibidem)
+* Idem : Faire suivre "‾" U203E de Maj + AltGr/Option + AltFr + L sur Maj + AltFr + J, la nouvelle touche de "_" U005F, à la place de "⟨" U27E8, qui est dans le groupe 1 de "[" U005B. Redonder "&#x" sur K à la place de "⟩" U27E9, qui est dans le groupe 1 de "]" U005D. (ibidem)
+* Disposition : Séquences ou émojis en Maj + AltGr/Option + AltFr : Faire suivre "&amp;quot;" de la touche U sur la touche E à la place de "😁" U1F601, qui prend la place de "🙏" U1F64F sur la touche O, qui prend la place de "&amp;apos;" sur la touche I, qui prend la place laissée par "&amp;quot;" sur la touche U. (ibidem)
+* Disposition : Redonder l’apostrophe ASCII "'" U0027 sur la touche 5 à la place de la touche morte accent grave, qui prend la place de la touche de composition, qui prend la place de "ʳ" U02B3 sur AltGr/Option + +=, qui est sur AltGr/Option + AltFr + R et dans la touche morte exposant. En mode ASCII, redonder la touche de composition à son ancienne place, la nouvelle place d’accent grave. (ibidem, [d7e798a](https://github.com/dispoclavier/nouvel-azerty/commit/d7e798a2ad558a15bb1808bf022a510150a26ffe))
+* Transformations : Mettre à jour l’ordre des répertoires de touches mortes. (compose-2.yml [79bc1ba](https://github.com/dispoclavier/nouvel-azerty/commit/79bc1ba9d80262d0b5564eefae30b4b1e4b4deb9))
+* Transformations : Sélectrice de groupe : Groupes des symboles : Mettre à jour les symboles de base. (compose-3.yml [4137c0d](https://github.com/dispoclavier/nouvel-azerty/commit/4137c0dc378711bd7ace334dd555f87619063418))
+* Idem : Prendre en charge "€" U20AC comme caractère de base aux côtés de "\"" U0022. (ibidem)
+
 ## 1.7.4 (2024-03-28)
 
 * Composition : Ajouter "☧" U2627. (compose-1.yml [9818410](https://github.com/dispoclavier/nouvel-azerty/commit/9818410af3054c84ab44dd700cbee88120c95921))
