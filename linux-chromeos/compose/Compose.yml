@@ -1,5 +1,5 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2024-04-05T1629+0200
+#                       Date: 2024-04-15T2024+0200
 #                    Version:
 <UEFA0>                     : "version 2.0.0"
 #        Operating file name: Compose or .XCompose
@@ -24030,10 +24030,10 @@
 <Multi_key><numbersign><2>                                                             <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 <UEFD0><KP_2>                                                                          <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 <Multi_key><numbersign><KP_2>                                                          <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><2>                                                                               <section> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                               <section> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                            <section> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                            <section> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                               <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><2>                                                               <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><KP_2>                                                                            <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_2>                                                            <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 #
 #
 # # A03-level1
