@@ -3611,6 +3611,8 @@
 <Multi_key><quotedbl>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                      <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><quotedbl>                                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_doubleacute>                                                                      <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><quotedbl>                                                                   <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_doubleacute>                                                                         <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                             <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
@@ -3988,12 +3990,15 @@
 #   Followed by quotedbl or rightsinglequotemark (not apostrophe), dead_tilde
 #   yields high curly quotation marks U201D, U2019 (closing or opening), as a
 #   facility for one-handed input of double apostrophe closing quotation marks,
-#   taking advantage of the synergy between dead_tilde and quotedbl on level 3
-#   of keys D11 and D07 or D08, as well as to improve the backwards compatible
-#   layout, where dead_acute (usually yielding these quotation marks) is not on
-#   level 1, but on level 3, next to the tilde dead key on E02, and quotedbl is
-#   on E03 as usual.
+#   taking advantage of the synergy between dead_tilde and quotedbl or EuroSign
+#   on level 3 of keys D11 and D03, as well as to improve backwards compatible
+#   layouts where dead_acute (usually yielding these quotation marks) is not on
+#   level 1, but on level 3, key E01, next to the tilde dead key on E02, and
+#   quotedbl is on E03 as usual.
 #   See # # Quotation mark input method
+#
+#   The full set of daggers is available by digits 1 through 6 with shape-based
+#   mnemonics using the alphabetic mnemonics of the tilde dead key on key T.
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
@@ -4012,6 +4017,10 @@
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
 <dead_tilde>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><asciitilde>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
@@ -4040,14 +4049,14 @@
 <Multi_key><asciitilde>                                                                        <4> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <dead_tilde>                                                                                <KP_4> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <Multi_key><asciitilde>                                                                     <KP_4> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
-<dead_tilde>                                                                                   <5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><asciitilde>                                                                        <5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<dead_tilde>                                                                                <KP_5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><asciitilde>                                                                     <KP_5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<dead_tilde>                                                                                   <6> : "⸸" U2E38 # TURNED DAGGER
-<Multi_key><asciitilde>                                                                        <6> : "⸸" U2E38 # TURNED DAGGER
-<dead_tilde>                                                                                <KP_6> : "⸸" U2E38 # TURNED DAGGER
-<Multi_key><asciitilde>                                                                     <KP_6> : "⸸" U2E38 # TURNED DAGGER
+<dead_tilde>                                                                                   <5> : "⸸" U2E38 # TURNED DAGGER
+<Multi_key><asciitilde>                                                                        <5> : "⸸" U2E38 # TURNED DAGGER
+<dead_tilde>                                                                                <KP_5> : "⸸" U2E38 # TURNED DAGGER
+<Multi_key><asciitilde>                                                                     <KP_5> : "⸸" U2E38 # TURNED DAGGER
+<dead_tilde>                                                                                   <6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<Multi_key><asciitilde>                                                                        <6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<dead_tilde>                                                                                <KP_6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<Multi_key><asciitilde>                                                                     <KP_6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_tilde>                                                                                   <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <Multi_key><asciitilde>                                                                        <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <dead_tilde>                                                                                   <a> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE
@@ -5220,6 +5229,8 @@
 <Multi_key><apostrophe>                                                                    <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <dead_acute>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><apostrophe>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_acute>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><apostrophe>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_acute>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><apostrophe>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
@@ -5370,6 +5381,8 @@
 #
 <dead_acute><UEFD0>                                                                     <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><apostrophe><numbersign>                                                     <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEFD0>                                                                     <EuroSign> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign>                                                     <EuroSign> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 <dead_acute><UEFD0>                                                                   <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><apostrophe><numbersign>                                                   <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_acute><UEFD0>                                                         <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -6770,6 +6783,8 @@
 <Multi_key><period><period>                                                                <U202F> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <dead_abovedot><dead_abovedot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
 <Multi_key><period><period>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<dead_abovedot><dead_abovedot>                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<Multi_key><period><period>                                                             <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
 <dead_abovedot><dead_abovedot>                                                                 <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
 <Multi_key><period><period>                                                                    <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
 <dead_abovedot><dead_abovedot>                                                                 <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
@@ -10233,8 +10248,12 @@
 <Multi_key><underscore><underscore>                                                        <U202F> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
+<UEFD2><UEFD2>                                                                          <EuroSign> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
+<Multi_key><underscore><underscore>                                                     <EuroSign> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><underscore><underscore>                                                   <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<UEFD2><UEFD2>                                                              <rightsinglequotemark> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><underscore><underscore>                                         <rightsinglequotemark> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                         <parenleft> : "̜" U031C # COMBINING LEFT HALF RING BELOW
@@ -11757,6 +11776,8 @@
 <Multi_key><less>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <Multi_key><less>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<dead_circumflex>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<Multi_key><less>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <dead_circumflex>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -11769,44 +11790,50 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<dead_circumflex>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<Multi_key><less>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<dead_circumflex>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex>                                                                           <KP_1> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less>                                                                           <KP_1> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex>                                                                              <2> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less>                                                                              <2> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex>                                                                           <KP_2> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less>                                                                           <KP_2> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
+<Multi_key><less>                                                                    <twosuperior> : "′" U2032 # PRIME
+<dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
+<Multi_key><less>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
+<dead_circumflex>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                              <1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
+<dead_circumflex>                                                                           <KP_1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
+<dead_circumflex>                                                                              <2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                              <2> : "◦" U25E6 # WHITE BULLET
+<dead_circumflex>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
 <dead_circumflex>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <Multi_key><less>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <dead_circumflex>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <Multi_key><less>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-<dead_circumflex>                                                                              <4> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><less>                                                                              <4> : "♡" U2661 # WHITE HEART SUIT
-<dead_circumflex>                                                                           <KP_4> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><less>                                                                           <KP_4> : "♡" U2661 # WHITE HEART SUIT
-<dead_circumflex>                                                                              <5> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less>                                                                              <5> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex>                                                                           <KP_5> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less>                                                                           <KP_5> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex>                                                                              <6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<Multi_key><less>                                                                              <6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<dead_circumflex>                                                                           <KP_6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<Multi_key><less>                                                                           <KP_6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<dead_circumflex>                                                                              <7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><less>                                                                              <7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<dead_circumflex>                                                                           <KP_7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><less>                                                                           <KP_7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<dead_circumflex>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><less>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE
+<dead_circumflex>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><less>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE
+<dead_circumflex>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<dead_circumflex>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<dead_circumflex>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
+<dead_circumflex>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
+<dead_circumflex>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<dead_circumflex>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
 <dead_circumflex>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><less>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <dead_circumflex>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><less>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<dead_circumflex>                                                                              <9> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><less>                                                                              <9> : "♣" U2663 # BLACK CLUB SUIT emoji
-<dead_circumflex>                                                                           <KP_9> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><less>                                                                           <KP_9> : "♣" U2663 # BLACK CLUB SUIT emoji
+<dead_circumflex>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
 <dead_circumflex>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -11946,6 +11973,8 @@
 #
 <dead_circumflex><UEFD0>                                                                <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                                           <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEFD0>                                                                <EuroSign> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><numbersign>                                                           <EuroSign> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                              <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                                         <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                    <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
@@ -11957,39 +11986,43 @@
 # # CIRCUMFLEX&GROUP_2
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><UEFD0>                                                            <slash> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><less><numbersign><numbersign>                                                  <slash> : "♡" U2661 # WHITE HEART SUIT
+#   Groups 2 through 5 of circumflex add support for the outlined counterpart
+#   of the HEART, CLUB, DIAMOND and SPADE suits.
+#   See # # B07-level1
+#
+<dead_circumflex><UEFD0><UEFD0>                                                            <comma> : "♡" U2661 # WHITE HEART SUIT
+<Multi_key><less><numbersign><numbersign>                                                  <comma> : "♡" U2661 # WHITE HEART SUIT
 #
 #
 # # CIRCUMFLEX&GROUP_3
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><3>                                                                <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><3>                                                           <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex><UEFD0><KP_3>                                                             <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><KP_3>                                                        <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex><UEFD0><UEFD0><UEFD0>                                                     <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><numbersign><numbersign>                                      <slash> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex><UEFD0><3>                                                                <comma> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less><numbersign><3>                                                           <comma> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex><UEFD0><KP_3>                                                             <comma> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less><numbersign><KP_3>                                                        <comma> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex><UEFD0><UEFD0><UEFD0>                                                     <comma> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less><numbersign><numbersign><numbersign>                                      <comma> : "♧" U2667 # WHITE CLUB SUIT
 #
 #
 # # CIRCUMFLEX&GROUP_4
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><4>                                                                <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><4>                                                           <slash> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex><UEFD0><KP_4>                                                             <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><KP_4>                                                        <slash> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex><UEFD0><UEFD0><UEFD0><UEFD0>                                              <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><numbersign><numbersign><numbersign>                          <slash> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex><UEFD0><4>                                                                <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less><numbersign><4>                                                           <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex><UEFD0><KP_4>                                                             <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less><numbersign><KP_4>                                                        <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex><UEFD0><UEFD0><UEFD0><UEFD0>                                              <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less><numbersign><numbersign><numbersign><numbersign>                          <comma> : "♢" U2662 # WHITE DIAMOND SUIT
 #
 #
 # # CIRCUMFLEX&GROUP_5
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><5>                                                                <slash> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less><numbersign><5>                                                           <slash> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex><UEFD0><KP_5>                                                             <slash> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less><numbersign><KP_5>                                                        <slash> : "♤" U2664 # WHITE SPADE SUIT
+<dead_circumflex><UEFD0><5>                                                                <comma> : "♤" U2664 # WHITE SPADE SUIT
+<Multi_key><less><numbersign><5>                                                           <comma> : "♤" U2664 # WHITE SPADE SUIT
+<dead_circumflex><UEFD0><KP_5>                                                             <comma> : "♤" U2664 # WHITE SPADE SUIT
+<Multi_key><less><numbersign><KP_5>                                                        <comma> : "♤" U2664 # WHITE SPADE SUIT
 #
 #
 # # CIRCUMFLEX&TILDE
@@ -14192,9 +14225,6 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
-#   Yields parentheses when followed by slash or backslash, because the easy
-#   mapping on E05 of traditional AZERTY is live key of opening parenthesis.
-#
 #   Followed by comma, dead_grave provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
@@ -14212,14 +14242,12 @@
 <Multi_key><grave>                                                                         <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <dead_grave>                                                                            <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <Multi_key><grave>                                                                      <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
+<dead_grave>                                                                            <EuroSign> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
+<Multi_key><grave>                                                                      <EuroSign> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <dead_grave>                                                                          <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                                    <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <dead_grave>                                                                <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                          <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
-<dead_grave>                                                                               <slash> : "(" U0028 # LEFT PARENTHESIS
-<Multi_key><grave>                                                                         <slash> : "(" U0028 # LEFT PARENTHESIS
-<dead_grave>                                                                           <backslash> : ")" U0029 # RIGHT PARENTHESIS
-<Multi_key><grave>                                                                     <backslash> : ")" U0029 # RIGHT PARENTHESIS
 <dead_grave>                                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
@@ -14310,6 +14338,8 @@
 <Multi_key><grave><grave>                                                                  <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <Multi_key><grave><grave>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_grave><dead_grave>                                                                <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><grave><grave>                                                               <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_grave><dead_grave>                                                                   <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <Multi_key><grave><grave>                                                                  <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                       <A> : "Ȁ" U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
@@ -14682,10 +14712,14 @@
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
-<Multi_key><exclam><exclam>                                                           <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><exclam><exclam>                                                             <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><exclam><exclam>                                                           <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                              <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><exclam><exclam>                                                 <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                                 <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
@@ -14757,6 +14791,8 @@
 <Multi_key><colon>                                                                         <U202F> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                        <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <Multi_key><colon>                                                                      <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<dead_diaeresis>                                                                        <EuroSign> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<Multi_key><colon>                                                                      <EuroSign> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <dead_diaeresis>                                                                      <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <Multi_key><colon>                                                                    <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                            <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
@@ -14872,6 +14908,8 @@
 #
 <dead_diaeresis><UEFD0>                                                                 <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                                          <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEFD0>                                                                 <EuroSign> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><numbersign>                                                          <EuroSign> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                               <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                                        <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                     <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -14987,6 +15025,10 @@
 <Multi_key><colon><grave>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_grave><dead_diaeresis>                                                            <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <Multi_key><grave><colon>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_diaeresis><dead_grave>                                                            <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><colon><grave>                                                               <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_grave><dead_diaeresis>                                                            <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><grave><colon>                                                               <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_diaeresis><dead_grave>                                                                   <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon><grave>                                                                      <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_grave><dead_diaeresis>                                                                   <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
