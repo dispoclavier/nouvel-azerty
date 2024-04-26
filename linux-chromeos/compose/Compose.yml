@@ -1,5 +1,5 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2024-04-15T2024+0200
+#                       Date: 2024-04-26T2320+0200
 #                    Version:
 <UEFA0>                     : "version 2.0.0"
 #        Operating file name: Compose or .XCompose
@@ -10364,6 +10364,8 @@
 <Multi_key><quotedbl>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                      <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><quotedbl>                                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_doubleacute>                                                                      <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><quotedbl>                                                                   <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_doubleacute>                                                                         <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                             <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
@@ -10741,12 +10743,15 @@
 #   Followed by quotedbl or rightsinglequotemark (not apostrophe), dead_tilde
 #   yields high curly quotation marks U201D, U2019 (closing or opening), as a
 #   facility for one-handed input of double apostrophe closing quotation marks,
-#   taking advantage of the synergy between dead_tilde and quotedbl on level 3
-#   of keys D11 and D07 or D08, as well as to improve the backwards compatible
-#   layout, where dead_acute (usually yielding these quotation marks) is not on
-#   level 1, but on level 3, next to the tilde dead key on E02, and quotedbl is
-#   on E03 as usual.
+#   taking advantage of the synergy between dead_tilde and quotedbl or EuroSign
+#   on level 3 of keys D11 and D03, as well as to improve backwards compatible
+#   layouts where dead_acute (usually yielding these quotation marks) is not on
+#   level 1, but on level 3, key E01, next to the tilde dead key on E02, and
+#   quotedbl is on E03 as usual.
 #   See # # Quotation mark input method
+#
+#   The full set of daggers is available by digits 1 through 6 with shape-based
+#   mnemonics using the alphabetic mnemonics of the tilde dead key on key T.
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
@@ -10765,6 +10770,10 @@
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
 <dead_tilde>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<Multi_key><asciitilde>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
@@ -10793,14 +10802,14 @@
 <Multi_key><asciitilde>                                                                        <4> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <dead_tilde>                                                                                <KP_4> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <Multi_key><asciitilde>                                                                     <KP_4> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
-<dead_tilde>                                                                                   <5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><asciitilde>                                                                        <5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<dead_tilde>                                                                                <KP_5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><asciitilde>                                                                     <KP_5> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<dead_tilde>                                                                                   <6> : "⸸" U2E38 # TURNED DAGGER
-<Multi_key><asciitilde>                                                                        <6> : "⸸" U2E38 # TURNED DAGGER
-<dead_tilde>                                                                                <KP_6> : "⸸" U2E38 # TURNED DAGGER
-<Multi_key><asciitilde>                                                                     <KP_6> : "⸸" U2E38 # TURNED DAGGER
+<dead_tilde>                                                                                   <5> : "⸸" U2E38 # TURNED DAGGER
+<Multi_key><asciitilde>                                                                        <5> : "⸸" U2E38 # TURNED DAGGER
+<dead_tilde>                                                                                <KP_5> : "⸸" U2E38 # TURNED DAGGER
+<Multi_key><asciitilde>                                                                     <KP_5> : "⸸" U2E38 # TURNED DAGGER
+<dead_tilde>                                                                                   <6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<Multi_key><asciitilde>                                                                        <6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<dead_tilde>                                                                                <KP_6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<Multi_key><asciitilde>                                                                     <KP_6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_tilde>                                                                                   <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <Multi_key><asciitilde>                                                                        <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <dead_tilde>                                                                                   <a> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE
@@ -11973,6 +11982,8 @@
 <Multi_key><apostrophe>                                                                    <U202F> : "ˊ" U02CA # MODIFIER LETTER ACUTE ACCENT
 <dead_acute>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><apostrophe>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_acute>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><apostrophe>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_acute>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><apostrophe>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
@@ -12123,6 +12134,8 @@
 #
 <dead_acute><UEFD0>                                                                     <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><apostrophe><numbersign>                                                     <quotedbl> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEFD0>                                                                     <EuroSign> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign>                                                     <EuroSign> : "❞" U275E # HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 <dead_acute><UEFD0>                                                                   <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><apostrophe><numbersign>                                                   <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_acute><UEFD0>                                                         <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -13523,6 +13536,8 @@
 <Multi_key><period><period>                                                                <U202F> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <dead_abovedot><dead_abovedot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
 <Multi_key><period><period>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<dead_abovedot><dead_abovedot>                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
+<Multi_key><period><period>                                                             <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE
 <dead_abovedot><dead_abovedot>                                                                 <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
 <Multi_key><period><period>                                                                    <A> : "A̍" # U0041 U030D LATIN CAPITAL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
 <dead_abovedot><dead_abovedot>                                                                 <a> : "a̍" # U0061 U030D LATIN SMALL LETTER A WITH VERTICAL LINE ABOVE: Min Nan (Pe̍h-ōe-jī orthography)
@@ -16986,8 +17001,12 @@
 <Multi_key><underscore><underscore>                                                        <U202F> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
+<UEFD2><UEFD2>                                                                          <EuroSign> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
+<Multi_key><underscore><underscore>                                                     <EuroSign> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <UEFD2><UEFD2>                                                                        <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><underscore><underscore>                                                   <apostrophe> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<UEFD2><UEFD2>                                                              <rightsinglequotemark> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><underscore><underscore>                                         <rightsinglequotemark> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                         <parenleft> : "̜" U031C # COMBINING LEFT HALF RING BELOW
@@ -18510,6 +18529,8 @@
 <Multi_key><less>                                                                          <U202F> : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <Multi_key><less>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<dead_circumflex>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<Multi_key><less>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <dead_circumflex>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -18522,44 +18543,50 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<dead_circumflex>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<Multi_key><less>                                                                    <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<dead_circumflex>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less>                                                                              <1> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex>                                                                           <KP_1> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less>                                                                           <KP_1> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex>                                                                              <2> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less>                                                                              <2> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex>                                                                           <KP_2> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less>                                                                           <KP_2> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
+<Multi_key><less>                                                                    <twosuperior> : "′" U2032 # PRIME
+<dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
+<Multi_key><less>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
+<dead_circumflex>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                              <1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
+<dead_circumflex>                                                                           <KP_1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
+<dead_circumflex>                                                                              <2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                              <2> : "◦" U25E6 # WHITE BULLET
+<dead_circumflex>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
 <dead_circumflex>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <Multi_key><less>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <dead_circumflex>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 <Multi_key><less>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-<dead_circumflex>                                                                              <4> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><less>                                                                              <4> : "♡" U2661 # WHITE HEART SUIT
-<dead_circumflex>                                                                           <KP_4> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><less>                                                                           <KP_4> : "♡" U2661 # WHITE HEART SUIT
-<dead_circumflex>                                                                              <5> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less>                                                                              <5> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex>                                                                           <KP_5> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less>                                                                           <KP_5> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex>                                                                              <6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<Multi_key><less>                                                                              <6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<dead_circumflex>                                                                           <KP_6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<Multi_key><less>                                                                           <KP_6> : "♠" U2660 # BLACK SPADE SUIT emoji
-<dead_circumflex>                                                                              <7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><less>                                                                              <7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<dead_circumflex>                                                                           <KP_7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><less>                                                                           <KP_7> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<dead_circumflex>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><less>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE
+<dead_circumflex>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><less>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE
+<dead_circumflex>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<dead_circumflex>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<dead_circumflex>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
+<dead_circumflex>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
+<dead_circumflex>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<dead_circumflex>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
 <dead_circumflex>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><less>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <dead_circumflex>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><less>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<dead_circumflex>                                                                              <9> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><less>                                                                              <9> : "♣" U2663 # BLACK CLUB SUIT emoji
-<dead_circumflex>                                                                           <KP_9> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><less>                                                                           <KP_9> : "♣" U2663 # BLACK CLUB SUIT emoji
+<dead_circumflex>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
 <dead_circumflex>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -18699,6 +18726,8 @@
 #
 <dead_circumflex><UEFD0>                                                                <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                                           <quotedbl> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEFD0>                                                                <EuroSign> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><numbersign>                                                           <EuroSign> : "❝" U275D # HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                              <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                                         <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                    <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
@@ -18710,39 +18739,43 @@
 # # CIRCUMFLEX&GROUP_2
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><UEFD0>                                                            <slash> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><less><numbersign><numbersign>                                                  <slash> : "♡" U2661 # WHITE HEART SUIT
+#   Groups 2 through 5 of circumflex add support for the outlined counterpart
+#   of the HEART, CLUB, DIAMOND and SPADE suits.
+#   See # # B07-level1
+#
+<dead_circumflex><UEFD0><UEFD0>                                                            <comma> : "♡" U2661 # WHITE HEART SUIT
+<Multi_key><less><numbersign><numbersign>                                                  <comma> : "♡" U2661 # WHITE HEART SUIT
 #
 #
 # # CIRCUMFLEX&GROUP_3
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><3>                                                                <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><3>                                                           <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex><UEFD0><KP_3>                                                             <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><KP_3>                                                        <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<dead_circumflex><UEFD0><UEFD0><UEFD0>                                                     <slash> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><less><numbersign><numbersign><numbersign>                                      <slash> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex><UEFD0><3>                                                                <comma> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less><numbersign><3>                                                           <comma> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex><UEFD0><KP_3>                                                             <comma> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less><numbersign><KP_3>                                                        <comma> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex><UEFD0><UEFD0><UEFD0>                                                     <comma> : "♧" U2667 # WHITE CLUB SUIT
+<Multi_key><less><numbersign><numbersign><numbersign>                                      <comma> : "♧" U2667 # WHITE CLUB SUIT
 #
 #
 # # CIRCUMFLEX&GROUP_4
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><4>                                                                <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><4>                                                           <slash> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex><UEFD0><KP_4>                                                             <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><KP_4>                                                        <slash> : "♧" U2667 # WHITE CLUB SUIT
-<dead_circumflex><UEFD0><UEFD0><UEFD0><UEFD0>                                              <slash> : "♧" U2667 # WHITE CLUB SUIT
-<Multi_key><less><numbersign><numbersign><numbersign><numbersign>                          <slash> : "♧" U2667 # WHITE CLUB SUIT
+<dead_circumflex><UEFD0><4>                                                                <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less><numbersign><4>                                                           <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex><UEFD0><KP_4>                                                             <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less><numbersign><KP_4>                                                        <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<dead_circumflex><UEFD0><UEFD0><UEFD0><UEFD0>                                              <comma> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><less><numbersign><numbersign><numbersign><numbersign>                          <comma> : "♢" U2662 # WHITE DIAMOND SUIT
 #
 #
 # # CIRCUMFLEX&GROUP_5
 #   Dchar: 
 #
-<dead_circumflex><UEFD0><5>                                                                <slash> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less><numbersign><5>                                                           <slash> : "♤" U2664 # WHITE SPADE SUIT
-<dead_circumflex><UEFD0><KP_5>                                                             <slash> : "♤" U2664 # WHITE SPADE SUIT
-<Multi_key><less><numbersign><KP_5>                                                        <slash> : "♤" U2664 # WHITE SPADE SUIT
+<dead_circumflex><UEFD0><5>                                                                <comma> : "♤" U2664 # WHITE SPADE SUIT
+<Multi_key><less><numbersign><5>                                                           <comma> : "♤" U2664 # WHITE SPADE SUIT
+<dead_circumflex><UEFD0><KP_5>                                                             <comma> : "♤" U2664 # WHITE SPADE SUIT
+<Multi_key><less><numbersign><KP_5>                                                        <comma> : "♤" U2664 # WHITE SPADE SUIT
 #
 #
 # # CIRCUMFLEX&TILDE
@@ -20945,9 +20978,6 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
-#   Yields parentheses when followed by slash or backslash, because the easy
-#   mapping on E05 of traditional AZERTY is live key of opening parenthesis.
-#
 #   Followed by comma, dead_grave provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
@@ -20965,14 +20995,12 @@
 <Multi_key><grave>                                                                         <U202F> : "ˋ" U02CB # MODIFIER LETTER GRAVE ACCENT
 <dead_grave>                                                                            <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <Multi_key><grave>                                                                      <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
+<dead_grave>                                                                            <EuroSign> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
+<Multi_key><grave>                                                                      <EuroSign> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 <dead_grave>                                                                          <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                                    <apostrophe> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <dead_grave>                                                                <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 <Multi_key><grave>                                                          <rightsinglequotemark> : "‛" U201B # SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
-<dead_grave>                                                                               <slash> : "(" U0028 # LEFT PARENTHESIS
-<Multi_key><grave>                                                                         <slash> : "(" U0028 # LEFT PARENTHESIS
-<dead_grave>                                                                           <backslash> : ")" U0029 # RIGHT PARENTHESIS
-<Multi_key><grave>                                                                     <backslash> : ")" U0029 # RIGHT PARENTHESIS
 <dead_grave>                                                                           <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
@@ -21063,6 +21091,8 @@
 <Multi_key><grave><grave>                                                                  <U202F> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <Multi_key><grave><grave>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_grave><dead_grave>                                                                <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><grave><grave>                                                               <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_grave><dead_grave>                                                                   <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <Multi_key><grave><grave>                                                                  <equal> : "˵" U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <dead_grave><dead_grave>                                                                       <A> : "Ȁ" U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
@@ -21435,10 +21465,14 @@
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
-<Multi_key><exclam><exclam>                                                           <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><exclam><exclam>                                                             <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><exclam><exclam>                                                           <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                              <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><exclam><exclam>                                                 <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                                 <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
@@ -21510,6 +21544,8 @@
 <Multi_key><colon>                                                                         <U202F> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                        <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <Multi_key><colon>                                                                      <quotedbl> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<dead_diaeresis>                                                                        <EuroSign> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<Multi_key><colon>                                                                      <EuroSign> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 <dead_diaeresis>                                                                      <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <Multi_key><colon>                                                                    <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                            <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
@@ -21625,6 +21661,8 @@
 #
 <dead_diaeresis><UEFD0>                                                                 <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                                          <quotedbl> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEFD0>                                                                 <EuroSign> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><numbersign>                                                          <EuroSign> : "❠" U2760 # HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                               <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                                        <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                     <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -21740,6 +21778,10 @@
 <Multi_key><colon><grave>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_grave><dead_diaeresis>                                                            <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <Multi_key><grave><colon>                                                               <quotedbl> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_diaeresis><dead_grave>                                                            <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><colon><grave>                                                               <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<dead_grave><dead_diaeresis>                                                            <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
+<Multi_key><grave><colon>                                                               <EuroSign> : "⹂" U2E42 # DOUBLE LOW-REVERSED-9 QUOTATION MARK
 <dead_diaeresis><dead_grave>                                                                   <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon><grave>                                                                      <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_grave><dead_diaeresis>                                                                   <U> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
@@ -22086,8 +22128,10 @@
 #   for the standard digital representation of numbers and measurement units
 #   according to the Bureau International des Poids et Mesures BIPM, and of
 #   French text using U202F NARROW NO-BREAK SPACE to space out big punctuation
-#   marks following the French Imprimerie Nationale and French new-school
-#   typesetting practice.
+#   marks following the French Imprimerie Nationale and/or French new-school
+#   typesetting. French new school punctuation mark spacing is documented in
+#   points (2) and (3) in:
+#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
 #
 #
 # # Numbering
@@ -22100,7 +22144,7 @@
 #   it uses the terms “primary” and “secondary” with respect to groups, and it
 #   does not consider dead key based group selection with multiple presses.
 #
-#   The short identifier for group n is gn.
+#   As a short identifier for “group #”, “g#” is proposed.
 #
 #
 # # Cross-platform compatibility
@@ -22171,18 +22215,18 @@
 # 
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	∼	◌	〃	ʼ	ʻ	π	☐	␣	⌀	➔	−	±	⟨	⟩	―	µ	✘	✗	✓	✔	‑	✅	❤	¿	‧	¡	⋅	ˑ	EMSP	MQSP	
-#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	Ω	☮	☑	⍽	∂	➜	⹀	∓	❰	❱	•	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
-#	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	∅	∏	☒	∑	☹	☺	➖	➕	❮	❯	◦	‖	➗	✖	∐	▻	≡	∧	♦	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
-#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	⛆	❌	✂	►	≜	∨	♣	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
+#	  1	⚠	‰	★	☆	†	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	µ	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ˑ	EMSP	MQSP	
+#	  2	∠	‱	∈	√	‡	⚪	⊂	ˌ	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	∥	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
+#	  3	⦜	⚡	∋	∛	⹋	⚫	⊃	ˈ	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	‖	➗	✖	∐	✅	≡	∧	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	⛆	❌	✂	►	≜	∨	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	▪	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
-#	  6	⚓	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	➢	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⊲	FSP	FSP	
-#	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⊳	PSP	PSP	
-#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⏳	NSP	NSP	
-#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	RLE	LRE	◊	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⌛	WNJ	WJ	
-#	11	✈	⏫	⏏	®	™	⁁	∝	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	⟦	⟧	➲	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
-#	12	ª	⏬	⤴	⤵	☘	❍	⚧	♾	º	⛏	⮽	✒	❨	❩	‐	⁜	❑	❏	⮊	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	❐	❒	IDSP	IDSP	
+#	  6	⚓	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	◊	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
+#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
+#	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
+#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⧖	NSP	NSP	
+#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧗	WNJ	WJ	
+#	11	✈	⏫	⏏	®	™	⁁	∝	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	∣	∕	∗	©	⛛	♭	∖	⚑	♆	⚐	⌘	※	⌨	HSP	HSP	 
+#	12	ª	⏬	⤴	⤵	☘	❍	⚧	♾	º	⛏	⮽	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	▲	❖	✏	▼	⚔	⟂	⁌	♇	⁍	∎	⊲	⊳	IDSP	IDSP	
 #
 #
 # # D01
@@ -22454,16 +22498,16 @@
 #
 # # D05
 #
-<UEFD0>                                                                               <asciitilde> : "∼" U223C # TILDE OPERATOR
-<Multi_key><numbersign>                                                               <asciitilde> : "∼" U223C # TILDE OPERATOR
-<UEFD0><UEFD0>                                                                        <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-<Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-<UEFD0><3>                                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><numbersign><3>                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<UEFD0><KP_3>                                                                         <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><numbersign><KP_3>                                                         <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<UEFD0><UEFD0><UEFD0>                                                                 <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><numbersign><numbersign><numbersign>                                       <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<UEFD0>                                                                               <asciitilde> : "†" U2020 # DAGGER
+<Multi_key><numbersign>                                                               <asciitilde> : "†" U2020 # DAGGER
+<UEFD0><UEFD0>                                                                        <asciitilde> : "‡" U2021 # DOUBLE DAGGER
+<Multi_key><numbersign><numbersign>                                                   <asciitilde> : "‡" U2021 # DOUBLE DAGGER
+<UEFD0><3>                                                                            <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
+<Multi_key><numbersign><3>                                                            <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
+<UEFD0><KP_3>                                                                         <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
+<Multi_key><numbersign><KP_3>                                                         <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
+<UEFD0><UEFD0><UEFD0>                                                                 <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
+<Multi_key><numbersign><numbersign><numbersign>                                       <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
 <UEFD0><4>                                                                            <asciitilde> : "⛺" U26FA # TENT emoji
 <Multi_key><numbersign><4>                                                            <asciitilde> : "⛺" U26FA # TENT emoji
 <UEFD0><KP_4>                                                                         <asciitilde> : "⛺" U26FA # TENT emoji
@@ -22561,8 +22605,8 @@
 #   "〃" U3003 DITTO MARK is also used in Western contexts.
 #   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
 #
-<UEFD0>                                                                               <apostrophe> : "〃" U3003 # DITTO MARK
-<Multi_key><numbersign>                                                               <apostrophe> : "〃" U3003 # DITTO MARK
+<UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD0><UEFD0>                                                                        <apostrophe> : "⊂" U2282 # SUBSET OF
 <Multi_key><numbersign><numbersign>                                                   <apostrophe> : "⊂" U2282 # SUBSET OF
 <UEFD0><3>                                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF
@@ -22617,8 +22661,8 @@
 #   Consistently this is mapped in a higher group than the low vertical line.
 #   https://books.google.com/ngrams/graph?content=%CB%88%2C%CB%8C&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
-<UEFD0>                                                                                <braceleft> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><numbersign>                                                                <braceleft> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<UEFD0>                                                                                <braceleft> : "〃" U3003 # DITTO MARK
+<Multi_key><numbersign>                                                                <braceleft> : "〃" U3003 # DITTO MARK
 <UEFD0><UEFD0>                                                                         <braceleft> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><numbersign>                                                    <braceleft> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <UEFD0><3>                                                                             <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
@@ -22691,16 +22735,16 @@
 #   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
 #   in dead_hook followed by period: "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
-<UEFD0>                                                                               <braceright> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><numbersign>                                                               <braceright> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD0><UEFD0>                                                                        <braceright> : "Ω" U2126 # OHM SIGN
-<Multi_key><numbersign><numbersign>                                                   <braceright> : "Ω" U2126 # OHM SIGN
-<UEFD0><3>                                                                            <braceright> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><3>                                                            <braceright> : "∅" U2205 # EMPTY SET
-<UEFD0><KP_3>                                                                         <braceright> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><KP_3>                                                         <braceright> : "∅" U2205 # EMPTY SET
-<UEFD0><UEFD0><UEFD0>                                                                 <braceright> : "∅" U2205 # EMPTY SET
-<Multi_key><numbersign><numbersign><numbersign>                                       <braceright> : "∅" U2205 # EMPTY SET
+<UEFD0>                                                                               <braceright> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign>                                                               <braceright> : "Ω" U2126 # OHM SIGN
+<UEFD0><UEFD0>                                                                        <braceright> : "∅" U2205 # EMPTY SET
+<Multi_key><numbersign><numbersign>                                                   <braceright> : "∅" U2205 # EMPTY SET
+<UEFD0><3>                                                                            <braceright> : "¶" U00B6 # PILCROW SIGN
+<Multi_key><numbersign><3>                                                            <braceright> : "¶" U00B6 # PILCROW SIGN
+<UEFD0><KP_3>                                                                         <braceright> : "¶" U00B6 # PILCROW SIGN
+<Multi_key><numbersign><KP_3>                                                         <braceright> : "¶" U00B6 # PILCROW SIGN
+<UEFD0><UEFD0><UEFD0>                                                                 <braceright> : "¶" U00B6 # PILCROW SIGN
+<Multi_key><numbersign><numbersign><numbersign>                                       <braceright> : "¶" U00B6 # PILCROW SIGN
 <UEFD0><4>                                                                            <braceright> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
 <Multi_key><numbersign><4>                                                            <braceright> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
 <UEFD0><KP_4>                                                                         <braceright> : "⭕" U2B55 # HEAVY LARGE CIRCLE emoji, hollow red circle
@@ -23142,16 +23186,16 @@
 #
 # # C07
 #
-<UEFD0>                                                                              <underscore> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
-<Multi_key><numbersign>                                                              <underscore> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
-<UEFD0><UEFD0>                                                                       <underscore> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><numbersign><numbersign>                                                  <underscore> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
-<UEFD0><3>                                                                           <underscore> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><3>                                                           <underscore> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><KP_3>                                                                        <underscore> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><KP_3>                                                        <underscore> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0>                                                                              <underscore> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                              <underscore> : "―" U2015 # HORIZONTAL BAR
+<UEFD0><UEFD0>                                                                       <underscore> : "•" U2022 # BULLET
+<Multi_key><numbersign><numbersign>                                                  <underscore> : "•" U2022 # BULLET
+<UEFD0><3>                                                                           <underscore> : "◦" U25E6 # WHITE BULLET
+<Multi_key><numbersign><3>                                                           <underscore> : "◦" U25E6 # WHITE BULLET
+<UEFD0><KP_3>                                                                        <underscore> : "◦" U25E6 # WHITE BULLET
+<Multi_key><numbersign><KP_3>                                                        <underscore> : "◦" U25E6 # WHITE BULLET
+<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "◦" U25E6 # WHITE BULLET
+<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "◦" U25E6 # WHITE BULLET
 <UEFD0><4>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
 <Multi_key><numbersign><4>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
 <UEFD0><KP_4>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
@@ -23178,32 +23222,32 @@
 <Multi_key><numbersign><9>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
 <UEFD0><KP_9>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
 <Multi_key><numbersign><KP_9>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><0>                                                                           <underscore> : "‫" U202B # ‬ RIGHT-TO-LEFT EMBEDDING
-<Multi_key><numbersign><0>                                                           <underscore> : "‫" U202B # ‬ RIGHT-TO-LEFT EMBEDDING
-<UEFD0><KP_0>                                                                        <underscore> : "‫" U202B # ‬ RIGHT-TO-LEFT EMBEDDING
-<Multi_key><numbersign><KP_0>                                                        <underscore> : "‫" U202B # ‬ RIGHT-TO-LEFT EMBEDDING
-<UEFD0><1>                                                                           <underscore> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><numbersign><1>                                                           <underscore> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<UEFD0><KP_1>                                                                        <underscore> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><numbersign><KP_1>                                                        <underscore> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<UEFD0><2>                                                                           <underscore> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                           <underscore> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                        <underscore> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                        <underscore> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><0>                                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
+<Multi_key><numbersign><0>                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
+<UEFD0><KP_0>                                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
+<Multi_key><numbersign><KP_0>                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
+<UEFD0><1>                                                                           <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<Multi_key><numbersign><1>                                                           <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<UEFD0><KP_1>                                                                        <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<Multi_key><numbersign><KP_1>                                                        <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
+<UEFD0><2>                                                                           <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<Multi_key><numbersign><2>                                                           <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD0><KP_2>                                                                        <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<Multi_key><numbersign><KP_2>                                                        <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
 #
 #
 # # C08
 #
-<UEFD0>                                                                             <bracketleft> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
-<Multi_key><numbersign>                                                             <bracketleft> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
-<UEFD0><UEFD0>                                                                      <bracketleft> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><numbersign><numbersign>                                                 <bracketleft> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<UEFD0><3>                                                                          <bracketleft> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><3>                                                          <bracketleft> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><KP_3>                                                                       <bracketleft> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><KP_3>                                                       <bracketleft> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><UEFD0><UEFD0>                                                               <bracketleft> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><numbersign><numbersign>                                     <bracketleft> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0>                                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+<Multi_key><numbersign>                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+<UEFD0><UEFD0>                                                                      <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><numbersign><numbersign>                                                 <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<UEFD0><3>                                                                          <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><3>                                                          <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><KP_3>                                                                       <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><KP_3>                                                       <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><UEFD0><UEFD0>                                                               <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><numbersign><numbersign>                                     <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <UEFD0><4>                                                                          <bracketleft> : "♔" U2654 # WHITE CHESS KING
 <Multi_key><numbersign><4>                                                          <bracketleft> : "♔" U2654 # WHITE CHESS KING
 <UEFD0><KP_4>                                                                       <bracketleft> : "♔" U2654 # WHITE CHESS KING
@@ -23230,46 +23274,46 @@
 <Multi_key><numbersign><9>                                                          <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
 <UEFD0><KP_9>                                                                       <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
 <Multi_key><numbersign><KP_9>                                                       <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
-<UEFD0><0>                                                                          <bracketleft> : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
-<Multi_key><numbersign><0>                                                          <bracketleft> : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
-<UEFD0><KP_0>                                                                       <bracketleft> : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
-<Multi_key><numbersign><KP_0>                                                       <bracketleft> : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
-<UEFD0><1>                                                                          <bracketleft> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><numbersign><1>                                                          <bracketleft> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<UEFD0><KP_1>                                                                       <bracketleft> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><numbersign><KP_1>                                                       <bracketleft> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<UEFD0><2>                                                                          <bracketleft> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                          <bracketleft> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                       <bracketleft> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                       <bracketleft> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><0>                                                                          <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><numbersign><0>                                                          <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<UEFD0><KP_0>                                                                       <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><numbersign><KP_0>                                                       <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<UEFD0><1>                                                                          <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><1>                                                          <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><KP_1>                                                                       <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_1>                                                       <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                          <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><2>                                                          <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><KP_2>                                                                       <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_2>                                                       <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
 #
 #
 # # C09
 #
-<UEFD0>                                                                            <bracketright> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><numbersign>                                                            <bracketright> : "―" U2015 # HORIZONTAL BAR
-<UEFD0><UEFD0>                                                                     <bracketright> : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><numbersign><numbersign>                                                <bracketright> : "•" U2022 # BULLET, enfilledcircbullet
-<UEFD0><3>                                                                         <bracketright> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><numbersign><3>                                                         <bracketright> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<UEFD0><KP_3>                                                                      <bracketright> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><numbersign><KP_3>                                                      <bracketright> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<UEFD0><UEFD0><UEFD0>                                                              <bracketright> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><numbersign><numbersign><numbersign>                                    <bracketright> : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<UEFD0><4>                                                                         <bracketright> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<Multi_key><numbersign><4>                                                         <bracketright> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<UEFD0><KP_4>                                                                      <bracketright> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<Multi_key><numbersign><KP_4>                                                      <bracketright> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6
-<UEFD0><5>                                                                         <bracketright> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><numbersign><5>                                                         <bracketright> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<UEFD0><KP_5>                                                                      <bracketright> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><numbersign><KP_5>                                                      <bracketright> : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<UEFD0><6>                                                                         <bracketright> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><numbersign><6>                                                         <bracketright> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<UEFD0><KP_6>                                                                      <bracketright> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><numbersign><KP_6>                                                      <bracketright> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<UEFD0>                                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
+<Multi_key><numbersign>                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
+<UEFD0><UEFD0>                                                                     <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><numbersign><numbersign>                                                <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<UEFD0><3>                                                                         <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><3>                                                         <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><KP_3>                                                                      <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><KP_3>                                                      <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><UEFD0><UEFD0>                                                              <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><numbersign><numbersign>                                    <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><4>                                                                         <bracketright> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><4>                                                         <bracketright> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><KP_4>                                                                      <bracketright> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><KP_4>                                                      <bracketright> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><5>                                                                         <bracketright> : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><numbersign><5>                                                         <bracketright> : "▪" U25AA # BLACK SMALL SQUARE
+<UEFD0><KP_5>                                                                      <bracketright> : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><numbersign><KP_5>                                                      <bracketright> : "▪" U25AA # BLACK SMALL SQUARE
+<UEFD0><6>                                                                         <bracketright> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><6>                                                         <bracketright> : "◊" U25CA # LOZENGE
+<UEFD0><KP_6>                                                                      <bracketright> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><KP_6>                                                      <bracketright> : "◊" U25CA # LOZENGE
 <UEFD0><7>                                                                         <bracketright> : "☨" U2628 # CROSS OF LORRAINE
 <Multi_key><numbersign><7>                                                         <bracketright> : "☨" U2628 # CROSS OF LORRAINE
 <UEFD0><KP_7>                                                                      <bracketright> : "☨" U2628 # CROSS OF LORRAINE
@@ -23282,18 +23326,18 @@
 <Multi_key><numbersign><9>                                                         <bracketright> : "⚜" U269C # FLEUR-DE-LIS emoji
 <UEFD0><KP_9>                                                                      <bracketright> : "⚜" U269C # FLEUR-DE-LIS emoji
 <Multi_key><numbersign><KP_9>                                                      <bracketright> : "⚜" U269C # FLEUR-DE-LIS emoji
-<UEFD0><0>                                                                         <bracketright> : "◊" U25CA # LOZENGE
-<Multi_key><numbersign><0>                                                         <bracketright> : "◊" U25CA # LOZENGE
-<UEFD0><KP_0>                                                                      <bracketright> : "◊" U25CA # LOZENGE
-<Multi_key><numbersign><KP_0>                                                      <bracketright> : "◊" U25CA # LOZENGE
-<UEFD0><1>                                                                         <bracketright> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<Multi_key><numbersign><1>                                                         <bracketright> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<UEFD0><KP_1>                                                                      <bracketright> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<Multi_key><numbersign><KP_1>                                                      <bracketright> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
-<UEFD0><2>                                                                         <bracketright> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
-<Multi_key><numbersign><2>                                                         <bracketright> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
-<UEFD0><KP_2>                                                                      <bracketright> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
-<Multi_key><numbersign><KP_2>                                                      <bracketright> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD0><0>                                                                         <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><numbersign><0>                                                         <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<UEFD0><KP_0>                                                                      <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><numbersign><KP_0>                                                      <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<UEFD0><1>                                                                         <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><1>                                                         <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><KP_1>                                                                      <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_1>                                                      <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                         <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><2>                                                         <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><KP_2>                                                                      <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_2>                                                      <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
 #
 #
 # # C10
@@ -23514,12 +23558,12 @@
 <Multi_key><numbersign>                                                                  <greater> : "✔" U2714 # HEAVY CHECK MARK emoji
 <UEFD0><UEFD0>                                                                           <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
 <Multi_key><numbersign><numbersign>                                                      <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
-<UEFD0><3>                                                                               <greater> : "▻" U25BB # WHITE RIGHT-POINTING POINTER
-<Multi_key><numbersign><3>                                                               <greater> : "▻" U25BB # WHITE RIGHT-POINTING POINTER
-<UEFD0><KP_3>                                                                            <greater> : "▻" U25BB # WHITE RIGHT-POINTING POINTER
-<Multi_key><numbersign><KP_3>                                                            <greater> : "▻" U25BB # WHITE RIGHT-POINTING POINTER
-<UEFD0><UEFD0><UEFD0>                                                                    <greater> : "▻" U25BB # WHITE RIGHT-POINTING POINTER
-<Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "▻" U25BB # WHITE RIGHT-POINTING POINTER
+<UEFD0><3>                                                                               <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<Multi_key><numbersign><3>                                                               <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<UEFD0><KP_3>                                                                            <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<Multi_key><numbersign><KP_3>                                                            <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<UEFD0><UEFD0><UEFD0>                                                                    <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
 <UEFD0><4>                                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <Multi_key><numbersign><4>                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <UEFD0><KP_4>                                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
@@ -23614,8 +23658,8 @@
 #
 # # B06
 #
-<UEFD0>                                                                                    <grave> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<Multi_key><numbersign>                                                                    <grave> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD0><UEFD0>                                                                             <grave> : "¬" U00AC # NOT SIGN
 <Multi_key><numbersign><numbersign>                                                        <grave> : "¬" U00AC # NOT SIGN
 <UEFD0><3>                                                                                 <grave> : "∧" U2227 # LOGICAL AND
@@ -23718,22 +23762,35 @@
 #
 # # B07-level1
 #
+#   Frequency requires the two hearts to be in the topmost groups, with U2764
+#   HEAVY BLACK HEART (red heart) in group 1 for being the most-used emoji in
+#   France, U2665 BLACK HEART SUIT emoji in group 2 as the 14th-ranking emoji,
+#   and the other suits U2663, U2666 and U2660 in groups 3 through 5.
+#
+#   This order disrupts the traditional English alphabetical order. Getting
+#   some mnemonics into the resulting list requires to assign CLUB to group 3,
+#   DIAMOND to group 4, and (highest-ranking) SPADE to group 5 accordingly.
+#
+#   The outlined counterparts (no emoji) are supported in groups 2 through 5 of
+#   dead_circumflex.
+#   See # # CIRCUMFLEX&GROUP_2
+#
 <UEFD0>                                                                                    <comma> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
 <Multi_key><numbersign>                                                                    <comma> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
 <UEFD0><UEFD0>                                                                             <comma> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking
 <Multi_key><numbersign><numbersign>                                                        <comma> : "♥" U2665 # BLACK HEART SUIT emoji, heart suit, 14th-ranking
-<UEFD0><3>                                                                                 <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><numbersign><3>                                                                 <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<UEFD0><KP_3>                                                                              <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><numbersign><KP_3>                                                              <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<UEFD0><UEFD0><UEFD0>                                                                      <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<Multi_key><numbersign><numbersign><numbersign>                                            <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
-<UEFD0><4>                                                                                 <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><numbersign><4>                                                                 <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
-<UEFD0><KP_4>                                                                              <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><numbersign><KP_4>                                                              <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<UEFD0><3>                                                                                 <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<Multi_key><numbersign><3>                                                                 <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<UEFD0><KP_3>                                                                              <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<Multi_key><numbersign><KP_3>                                                              <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<UEFD0><UEFD0><UEFD0>                                                                      <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<Multi_key><numbersign><numbersign><numbersign>                                            <comma> : "♣" U2663 # BLACK CLUB SUIT emoji
+<UEFD0><4>                                                                                 <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<Multi_key><numbersign><4>                                                                 <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<UEFD0><KP_4>                                                                              <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<Multi_key><numbersign><KP_4>                                                              <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <comma> : "♦" U2666 # BLACK DIAMOND SUIT emoji
 <UEFD0><5>                                                                                 <comma> : "♠" U2660 # BLACK SPADE SUIT emoji
 <Multi_key><numbersign><5>                                                                 <comma> : "♠" U2660 # BLACK SPADE SUIT emoji
 <UEFD0><KP_5>                                                                              <comma> : "♠" U2660 # BLACK SPADE SUIT emoji
@@ -23930,10 +23987,10 @@
 <Multi_key><numbersign><1>                                                                 <colon> : "※" U203B # REFERENCE MARK, Japanese kome
 <UEFD0><KP_1>                                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><numbersign><KP_1>                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
-<UEFD0><2>                                                                                 <colon> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                                 <colon> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                              <colon> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                              <colon> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                                 <colon> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<Multi_key><numbersign><2>                                                                 <colon> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<UEFD0><KP_2>                                                                              <colon> : "⊲" U22B2 # NORMAL SUBGROUP OF
+<Multi_key><numbersign><KP_2>                                                              <colon> : "⊲" U22B2 # NORMAL SUBGROUP OF
 #
 #
 # # B10-level3
@@ -23986,38 +24043,38 @@
 <Multi_key><numbersign><6>                                                               <section> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <UEFD0><KP_6>                                                                            <section> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key><numbersign><KP_6>                                                            <section> : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
-<UEFD0><7>                                                                             <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<Multi_key><numbersign><7>                                                             <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<UEFD0><KP_7>                                                                          <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<Multi_key><numbersign><KP_7>                                                          <semicolon> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<UEFD0><7>                                                                               <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<Multi_key><numbersign><7>                                                               <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<UEFD0><KP_7>                                                                            <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<Multi_key><numbersign><KP_7>                                                            <section> : "⊲" U22B2 # NORMAL SUBGROUP OF
-<UEFD0><8>                                                                             <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<Multi_key><numbersign><8>                                                             <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<UEFD0><KP_8>                                                                          <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<Multi_key><numbersign><KP_8>                                                          <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<UEFD0><8>                                                                               <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<Multi_key><numbersign><8>                                                               <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<UEFD0><KP_8>                                                                            <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<Multi_key><numbersign><KP_8>                                                            <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
-<UEFD0><9>                                                                             <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<Multi_key><numbersign><9>                                                             <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<UEFD0><KP_9>                                                                          <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<Multi_key><numbersign><KP_9>                                                          <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<UEFD0><9>                                                                               <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<Multi_key><numbersign><9>                                                               <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<UEFD0><KP_9>                                                                            <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<Multi_key><numbersign><KP_9>                                                            <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
-<UEFD0><0>                                                                             <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<Multi_key><numbersign><0>                                                             <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<UEFD0><KP_0>                                                                          <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<Multi_key><numbersign><KP_0>                                                          <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<UEFD0><0>                                                                               <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<Multi_key><numbersign><0>                                                               <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<UEFD0><KP_0>                                                                            <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<Multi_key><numbersign><KP_0>                                                            <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<UEFD0><7>                                                                             <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<Multi_key><numbersign><7>                                                             <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<UEFD0><KP_7>                                                                          <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<Multi_key><numbersign><KP_7>                                                          <semicolon> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<UEFD0><7>                                                                               <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<Multi_key><numbersign><7>                                                               <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<UEFD0><KP_7>                                                                            <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<Multi_key><numbersign><KP_7>                                                            <section> : "⏳" U23F3 # HOURGLASS WITH FLOWING SAND emoji, hourglass not done
+<UEFD0><8>                                                                             <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<Multi_key><numbersign><8>                                                             <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<UEFD0><KP_8>                                                                          <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<Multi_key><numbersign><KP_8>                                                          <semicolon> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<UEFD0><8>                                                                               <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<Multi_key><numbersign><8>                                                               <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<UEFD0><KP_8>                                                                            <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<Multi_key><numbersign><KP_8>                                                            <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
+<UEFD0><9>                                                                             <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><9>                                                             <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><KP_9>                                                                          <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><KP_9>                                                          <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><9>                                                                               <section> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><9>                                                               <section> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><KP_9>                                                                            <section> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><KP_9>                                                            <section> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><0>                                                                             <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><0>                                                             <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><KP_0>                                                                          <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><KP_0>                                                          <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><0>                                                                               <section> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><0>                                                               <section> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><KP_0>                                                                            <section> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><KP_0>                                                            <section> : "⧗" U29D7 # BLACK HOURGLASS
 <UEFD0><1>                                                                             <semicolon> : "⌨" U2328 # KEYBOARD emoji
 <Multi_key><numbersign><1>                                                             <semicolon> : "⌨" U2328 # KEYBOARD emoji
 <UEFD0><KP_1>                                                                          <semicolon> : "⌨" U2328 # KEYBOARD emoji
@@ -24026,14 +24083,14 @@
 <Multi_key><numbersign><1>                                                               <section> : "⌨" U2328 # KEYBOARD emoji
 <UEFD0><KP_1>                                                                            <section> : "⌨" U2328 # KEYBOARD emoji
 <Multi_key><numbersign><KP_1>                                                            <section> : "⌨" U2328 # KEYBOARD emoji
-<UEFD0><2>                                                                             <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                             <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                          <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                          <semicolon> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><2>                                                                               <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                               <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                            <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                            <section> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                             <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<Multi_key><numbersign><2>                                                             <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<UEFD0><KP_2>                                                                          <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<Multi_key><numbersign><KP_2>                                                          <semicolon> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<UEFD0><2>                                                                               <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<Multi_key><numbersign><2>                                                               <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<UEFD0><KP_2>                                                                            <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
+<Multi_key><numbersign><KP_2>                                                            <section> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
 #
 #
 # # A03-level1
