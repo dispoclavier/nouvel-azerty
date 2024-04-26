@@ -2,7 +2,7 @@
 
 ## 2.0.0 (projet)
 
-* Version 2.0 due à la redisposition de 9 symboles ASCII et à la disposition en Minuscule, en mode français aussi, de l’apostrophe ASCII à côté de l’apostrophe française (compose-1.yml [8b62065](https://github.com/dispoclavier/nouvel-azerty/commit/8b6206594ebf9b02e36d94466f253d8fb0a18030), dispocla.cpp [d7e798a](https://github.com/dispoclavier/nouvel-azerty/commit/d7e798a2ad558a15bb1808bf022a510150a26ffe), [f7d237b](https://github.com/dispoclavier/nouvel-azerty/commit/f7d237bd0cb41ae8a89c9c6318ff2ed8174ac8a5))
+* Version 2.0 due à la redondance en AltGr du symbole euro, la redisposition de 30 % des symboles ASCII, et à la disposition en Minuscule, en mode français aussi, de l’apostrophe ASCII à côté de l’apostrophe française (compose-1.yml [8b62065](https://github.com/dispoclavier/nouvel-azerty/commit/8b6206594ebf9b02e36d94466f253d8fb0a18030), dispocla.cpp [d7e798a](https://github.com/dispoclavier/nouvel-azerty/commit/d7e798a2ad558a15bb1808bf022a510150a26ffe), [f7d237b](https://github.com/dispoclavier/nouvel-azerty/commit/f7d237bd0cb41ae8a89c9c6318ff2ed8174ac8a5))
 * Disposition : Redonder le symbole "€" U20AC en AltGr/Option à la place de "{" U007B. (dispocla.cpp [55890e8](https://github.com/dispoclavier/nouvel-azerty/commit/55890e81e154fb3479635595a9cc8eed74f2a420))
 * Disposition : Symboles ASCII : Mettre "{" U007B à la place de "'" U0027, qui prend la place de "\"" U0022, qui est sur la touche du 3 en mode français et sur la touche de l’accent circonflexe en mode ASCII, et qui est remplacé par "€" U20AC à la place laissée par "{" U007B. (ibidem)
 * Idem : Mettre "}" U007D à la place de "`" U0060, qui prend la place de "\\" U005C, qui prend la place laissée par "}" U007D. (ibidem)
@@ -13,11 +13,28 @@
 * Disposition : Symboles en Maj + AltFr : Permuter "″" U2033 et "U+", qui passe de la touche E à la touche U. (ibidem)
 * Idem : Ajouter "\\u{" à la place de "′" U2032 (touche I, nouvelle touche de "{" U007B), qui prend la place de "‰" U2030 (touche Z, à côté de "″" U2033), qui est dans le groupe 1 de "%" U0025 et est tombé en désuétude. (ibidem)
 * Idem : Faire suivre "‾" U203E de Maj + AltGr/Option + AltFr + L sur Maj + AltFr + J, la nouvelle touche de "_" U005F, à la place de "⟨" U27E8, qui est dans le groupe 1 de "[" U005B. Redonder "&#x" sur K à la place de "⟩" U27E9, qui est dans le groupe 1 de "]" U005D. (ibidem)
-* Disposition : Séquences ou émojis en Maj + AltGr/Option + AltFr : Faire suivre "&amp;quot;" de la touche U sur la touche E à la place de "😁" U1F601, qui prend la place de "🙏" U1F64F sur la touche O, qui prend la place de "&amp;apos;" sur la touche I, qui prend la place laissée par "&amp;quot;" sur la touche U. (ibidem)
+* Disposition : Séquences et émojis en Maj + AltGr/Option + AltFr : Faire suivre "&amp;quot;" de la touche U sur la touche E à la place de "😁" U1F601, qui prend la place de "🙏" U1F64F sur la touche O, qui prend la place de "&amp;apos;" sur la touche I, qui prend la place laissée par "&amp;quot;" sur la touche U. (ibidem)
 * Disposition : Redonder l’apostrophe ASCII "'" U0027 sur la touche 5 à la place de la touche morte accent grave, qui prend la place de la touche de composition, qui prend la place de "ʳ" U02B3 sur AltGr/Option + +=, qui est sur AltGr/Option + AltFr + R et dans la touche morte exposant. En mode ASCII, redonder la touche de composition à son ancienne place, la nouvelle place d’accent grave. (ibidem)
 * Transformations : Mettre à jour l’ordre des répertoires de touches mortes. (compose-2.yml [79bc1ba](https://github.com/dispoclavier/nouvel-azerty/commit/79bc1ba9d80262d0b5564eefae30b4b1e4b4deb9))
 * Transformations : Sélectrice de groupe : Groupes des symboles : Mettre à jour les symboles de base. (compose-3.yml [4137c0d](https://github.com/dispoclavier/nouvel-azerty/commit/4137c0dc378711bd7ace334dd555f87619063418))
 * Idem : Prendre en charge "€" U20AC comme caractère de base aux côtés de "\"" U0022. (ibidem)
+* Transformations : Dupliquer "\"" U0022 par "€" U20AC. (compose-2.yml [cbd46d7](https://github.com/dispoclavier/nouvel-azerty/commit/cbd46d7566a9a70801a536c050e665a6082260c4))
+* Transformations : Accent circonflexe : Redonder "•" U2022 par "1" U0031 à la place de "♤" U2664, "◦" U25E6 par "2" U0032 à la place de "♢" U2662, "▪" U25AA par "4" U0034 à la place de "♡" U2661, "▫" U25AB par "5" U0035 à la place de "♧" U2667, "‣" U2023 par "6" U0036 à la place de "♠" U2660. Ajouter "▹" U25B9 par "7" U0037 à la place de "♦" U2666. Redonder "➢" U27A2 par "9" U0039 à la place de "♣" U2663. Ajouter "➣" U27A3 par "0" U0030. Redonder "′" U2032 par "²" U00B2, "″" U2033 par "³" U00B3. (ibidem)
+* Idem : Mettre à jour le caractère de base et l’ordre de "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664, (ibidem)
+* Transformations : Tilde : Permuter "⸷" U2E37 et "⸸" U2E38. Compléter les séquences de "”" U201D et "’" U2019. (ibidem)
+* Transformations : Accent grave : Supprimer "(" U0028 et ")" U0029. (ibidem)
+* Transformations : Sélectrice de groupe : Groupes des symboles : Faire suivre "―" U2015 à la place de "⟨" U27E8, qui prend la place de "⟩" U27E9, qui prend la place laissée par "―" U2015. (compose-3.yml [d535c12](https://github.com/dispoclavier/nouvel-azerty/commit/d535c12126bbee9d9fd9cd806b927a097b35e505))
+* Idem : Faire suivre "❰" U2770 à la place de "❱" U2771, qui prend la place de "•" U2022, qui prend la place laissée par "❰" U2770. (ibidem)
+* Idem : Faire suivre "❮" U276E à la place de "❯" U276F, qui prend la place de "◦" U25E6, qui prend la place laissée par "❮" U276E. (ibidem)
+* Idem : Faire suivre "❑" U2751 à la place de "❏" U274F, qui prend la place de "⮊" U2B8A, qui prend la place laissée par "❑" U2751. (ibidem)
+* Regrouper "❒" U2752 à la place de "⟧" U27E7, qui prend la place de "◊" U25CA, qui prend la place de "➢" U27A2, qui est dans accent circonflexe, où se trouve aussi "➣" U27A3. (ibidem)
+* Regrouper "❐" U2750 à la place de "➲" U27B2, qui prend la place de "⟦" U27E6, qui prend la place de "‪" U202A, qui est dans composition. Ajouter "⮈" U2B88 à la place de U202B, qui est dans composition. (ibidem)
+* Idem : Faire suivre "ʻ" U02BB à la place de "✅" U2705, qui prend la place de "▻" U25BB, qui n’est pris en charge que dans les versions 1.7.3 et 1.7.4. (ibidem)
+* Idem : Permuter "ʼ" U02BC et "〃" U3003. (ibidem)
+* Idem : Mettre "∅" U2205 à la place de "Ω" U2126, qui prend la place laissée par "ʻ" U02BB. À la place laissée par "∅" U2205, redonder "¶" U00B6, normalement sur touche vive sur la touche du P. (ibidem)
+* Idem : Mettre "†" U2020 à la place de "∼" U223C, qui est dans composition. Mettre "‡" U2021 à la place de "≃" U2243, qui est dans tilde et dans composition. Mettre "⹋" U2E4B à la place de "≅" U2245, qui est dans composition. (ibidem)
+* Idem : Mettre "⏳" U23F3 à la place de "⊲" U22B2, qui prend la place laissée par "❐" U2750. Mettre "⌛" U231B à la place de "⊳" U22B3, qui prend la place laissée par "❒" U2752. Ajouter "⧖" U29D6 à la place laissée par "⏳" U23F3. Ajouter "⧗" U29D7 à la place laissée par "⌛" U231B. (ibidem)
+* Idem : Permuter "♦" U2666 et "♣" U2663 pour la mnémonique. (ibidem)
 
 ## 1.7.4 (2024-03-28)
 
@@ -65,6 +82,7 @@
 * Idem : Redonder "⁞" U205E à la place de "⋯" U22EF, qui prend la place de "꞉" UA789, qui prend la place de "❐" U2750, qui prend la place de "❏" U274F, qui prend la place de "⤵" U2935, qui prend la place de "⏎" U23CE, qui est en composition. (ibidem)
 * Documentation : Touches mortes : Simplifier les identifiants. (compose-2.yml [df24b01](https://github.com/dispoclavier/nouvel-azerty/commit/df24b01bd6e9e9220642158a8937810128f68bc9))
 
+
 ## 1.7.1 (2024-03-12)
 
 * Transformations : Sélectrice de groupe : Groupes des symboles : Mettre "µ" U00B5 à la place de "∣" U2223, qui prend la place de "⌘" U2318, qui prend la place de "◊" U25CA, qui prend la place de "►" U25BA, qui prend la place de "≻" U227B. Redonder "Ω" U2126 à la place de "∅" U2205, qui prend la place de "⛱" U26F1, qui prend la place de "∐" U2210, qui prend la place de "≺" U227A. (compose-3.yml [b1e366d](https://github.com/dispoclavier/nouvel-azerty/commit/b1e366d53c5ab67ba91ca5e752b504ca5705cd7f))
@@ -92,7 +110,7 @@
 * Transformations : Sélectrice de groupe : Groupes des lettres : Groupe 3 : Redonder "Kʼ" U004B U02BC. Groupe 4 : Redonder "℃" U2103. Groupe 11 : Redonder "℉" U2109, "℄" U2104. (compose-3.yml [0e887c3](https://github.com/dispoclavier/nouvel-azerty/commit/0e887c34299ce2ace6443ba9c2cc94092d41ce15))
 * Transformations : Sélectrice de groupe : Groupes des lettres : Groupe 12: Remplacer "ŉ" U0149 par "Ꞑ" UA790, "ꞑ" UA791. Redonder "ℹ" U2139, "Ω" U2126. (compose-3.yml [121256f](https://github.com/dispoclavier/nouvel-azerty/commit/121256f82fcb134892ecd8d8e5e36f6fcc323d17))
 * Transformations : Accent grave : Ajouter "(" U0028, ")" U0029 (prévu pour la version 1.5.0). (compose-2.yml [0750b87](https://github.com/dispoclavier/nouvel-azerty/commit/0750b87a74978085e2ad0e5d63cf357fd2381ed8))
-* Documentation de Disposition : Symboles ASCII : Permuter l’accent grave et le guillemet double générique (1.2.0). (compose-3.yml [81dbf30](https://github.com/dispoclavier/nouvel-azerty/commit/81dbf306d59a5e7887558d3129c04d5672c8a972), [d316791](https://github.com/dispoclavier/nouvel-azerty/commit/d316791df17e563b6630c66f5f09abc3c375bf7c), [9c79996](https://github.com/dispoclavier/nouvel-azerty/commit/9c7999602653aaf0c848bca9fab09389551b42f3))
+* Documentation de Disposition : Symboles ASCII en AltGr/Option : Permuter l’accent grave et le guillemet double générique (1.2.0). (compose-3.yml [81dbf30](https://github.com/dispoclavier/nouvel-azerty/commit/81dbf306d59a5e7887558d3129c04d5672c8a972), [d316791](https://github.com/dispoclavier/nouvel-azerty/commit/d316791df17e563b6630c66f5f09abc3c375bf7c), [9c79996](https://github.com/dispoclavier/nouvel-azerty/commit/9c7999602653aaf0c848bca9fab09389551b42f3))
 * Documentation de Transformations : Sélectrice de groupe : Groupes des lettres : Groupe 11 : "Ꞛ" UA79A, "ꞛ" UA79B, "Ꞝ" UA79C, "ꞝ" UA79D, "Ꞟ" UA79E, "ꞟ" UA79F. (compose-3.yml [e5e02cd](https://github.com/dispoclavier/nouvel-azerty/commit/e5e02cde11131e7131b59e3085bf141057b894eb))
 
 ## 1.5.0 (2023-12-27)
