@@ -407,16 +407,16 @@
 #
 # # D05
 #
-<UEFD0>                                                                               <asciitilde> : "†" U2020 # DAGGER
-<Multi_key><numbersign>                                                               <asciitilde> : "†" U2020 # DAGGER
-<UEFD0><UEFD0>                                                                        <asciitilde> : "‡" U2021 # DOUBLE DAGGER
-<Multi_key><numbersign><numbersign>                                                   <asciitilde> : "‡" U2021 # DOUBLE DAGGER
-<UEFD0><3>                                                                            <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><numbersign><3>                                                            <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
-<UEFD0><KP_3>                                                                         <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><numbersign><KP_3>                                                         <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
-<UEFD0><UEFD0><UEFD0>                                                                 <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><numbersign><numbersign><numbersign>                                       <asciitilde> : "⹋" U2E4B # TRIPLE DAGGER
+<UEFD0>                                                                               <asciitilde> : "∼" U223C # TILDE OPERATOR
+<Multi_key><numbersign>                                                               <asciitilde> : "∼" U223C # TILDE OPERATOR
+<UEFD0><UEFD0>                                                                        <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+<Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+<UEFD0><3>                                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<Multi_key><numbersign><3>                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<UEFD0><KP_3>                                                                         <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<Multi_key><numbersign><KP_3>                                                         <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<UEFD0><UEFD0><UEFD0>                                                                 <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<Multi_key><numbersign><numbersign><numbersign>                                       <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
 <UEFD0><4>                                                                            <asciitilde> : "⛺" U26FA # TENT emoji
 <Multi_key><numbersign><4>                                                            <asciitilde> : "⛺" U26FA # TENT emoji
 <UEFD0><KP_4>                                                                         <asciitilde> : "⛺" U26FA # TENT emoji
@@ -1251,20 +1251,32 @@
 #
 # # C10
 #
-#   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
-#   and "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol, have quick access
-#   through dead_diaeresis followed by slash or backslash.
+#   The daggers are more extensively supported in dead_tilde based on digits.
+#   They would be in groups 1 through 3 of asciitilde for the sake of mnemonics
+#   but shouldn’t oust those three tilde-based operators. Hence the daggers are
+#   supported in groups 1 through 3 of bar to account for iconicity even though
+#   "⹋" U2E4B TRIPLE DAGGER has (limited) font support, thanks to Nishiki-teki.
 #
-<UEFD0>                                                                                      <bar> : "µ" U00B5 # MICRO SIGN
-<Multi_key><numbersign>                                                                      <bar> : "µ" U00B5 # MICRO SIGN
-<UEFD0><UEFD0>                                                                               <bar> : "∥" U2225 # PARALLEL TO
-<Multi_key><numbersign><numbersign>                                                          <bar> : "∥" U2225 # PARALLEL TO
-<UEFD0><3>                                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><numbersign><3>                                                                   <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<UEFD0><KP_3>                                                                                <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><numbersign><KP_3>                                                                <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<UEFD0><UEFD0><UEFD0>                                                                        <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
-<Multi_key><numbersign><numbersign><numbersign>                                              <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
+#   "µ" U00B5 MICRO SIGN is usually on live keys. Its presence in group 12 is
+#   designed only as a fallback.
+#
+#   "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol is easily input through
+#   dead_diaeresis followed by slash or backslash.
+#
+#   All other vertical bar variants, e,g, "‖" U2016 DOUBLE VERTICAL LINE, are
+#   supported by dead_macron based on digits, additionally to having Multi_key
+#   input methods due to being mathematical symbols.
+#
+<UEFD0>                                                                                      <bar> : "†" U2020 # DAGGER
+<Multi_key><numbersign>                                                                      <bar> : "†" U2020 # DAGGER
+<UEFD0><UEFD0>                                                                               <bar> : "‡" U2021 # DOUBLE DAGGER
+<Multi_key><numbersign><numbersign>                                                          <bar> : "‡" U2021 # DOUBLE DAGGER
+<UEFD0><3>                                                                                   <bar> : "⹋" U2E4B # TRIPLE DAGGER
+<Multi_key><numbersign><3>                                                                   <bar> : "⹋" U2E4B # TRIPLE DAGGER
+<UEFD0><KP_3>                                                                                <bar> : "⹋" U2E4B # TRIPLE DAGGER
+<Multi_key><numbersign><KP_3>                                                                <bar> : "⹋" U2E4B # TRIPLE DAGGER
+<UEFD0><UEFD0><UEFD0>                                                                        <bar> : "⹋" U2E4B # TRIPLE DAGGER
+<Multi_key><numbersign><numbersign><numbersign>                                              <bar> : "⹋" U2E4B # TRIPLE DAGGER
 <UEFD0><4>                                                                                   <bar> : "♂" U2642 # MALE SIGN emoji, Mars
 <Multi_key><numbersign><4>                                                                   <bar> : "♂" U2642 # MALE SIGN emoji, Mars
 <UEFD0><KP_4>                                                                                <bar> : "♂" U2642 # MALE SIGN emoji, Mars
@@ -1295,10 +1307,10 @@
 <Multi_key><numbersign><0>                                                                   <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <UEFD0><KP_0>                                                                                <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <Multi_key><numbersign><KP_0>                                                                <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<UEFD0><1>                                                                                   <bar> : "∣" U2223 # DIVIDES
-<Multi_key><numbersign><1>                                                                   <bar> : "∣" U2223 # DIVIDES
-<UEFD0><KP_1>                                                                                <bar> : "∣" U2223 # DIVIDES
-<Multi_key><numbersign><KP_1>                                                                <bar> : "∣" U2223 # DIVIDES
+<UEFD0><1>                                                                                   <bar> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign><1>                                                                   <bar> : "µ" U00B5 # MICRO SIGN
+<UEFD0><KP_1>                                                                                <bar> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign><KP_1>                                                                <bar> : "µ" U00B5 # MICRO SIGN
 <UEFD0><2>                                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 <Multi_key><numbersign><2>                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 <UEFD0><KP_2>                                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
