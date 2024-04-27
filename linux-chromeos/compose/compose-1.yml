@@ -607,12 +607,6 @@
 #   related Multi_key equivalents are actionable only in groups 5 through 7.
 #   See # # C01
 #
-#   Two Multi_key sequences have duplicates by design:
-#   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-#   <Multi_key><less><8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-#   First instances:  See #   Heart emoji
-#   Second instances: See #*# CIRCUMFLEX
-#
 #   To manually verify the absence of other conflicts and duplicates, assuming
 #   no space between the angle brackets around the keysyms, except that part of
 #   the keysyms may be aligned to the end for readability and maintainability:
@@ -626,16 +620,16 @@
 #       3  Remove all keypad equivalents:
 #       .+<KP_.+\n
 #
-#       4  Replace all (start-align end-aligned keysyms):
+#       4  Start-align end-aligned keysyms (replace all):
 #       ^([^ ]+)( *)([^ ]+)( : .*)\n
 #       $1$3$2$4\n
 #
 #       5  Sort lines ascending.
 #
-#       6  Check for duplicates (no more than U2665 and U2764):
+#       6  Check for duplicates:
 #       ^([^ ]+) .+\n\1\s
 #
-#       7  Check for conflicts (no other than U2610, U2611 and U2612):
+#       7  Check for conflicts (other than U2610, U2611 and U2612):
 #       ^([^ ]+) .+\n\1<
 #
 #
@@ -2209,20 +2203,23 @@
 #
 #   Heart emoji
 #
-#   en_US.UTF-8/Compose supports only the least frequent BMP heart emoji, which
-#   is part of the suit series, U2660..U2667: "♥" U2665 BLACK HEART SUIT, while
-#   "❤" U2764 HEAVY BLACK HEART is the most used emoji in France. Consistently,
-#   this is given the traditional sequence. The other heart is disambiguated by
-#   leading space like math symbols, and it is given an alternative shape-based
-#   sequence as well.
-#
-#   For consistency, two of these sequences are duplicated in dead_circumflex.
+#   Due to its design, the traditional heart Multi_key sequence is supported in
+#   a dead_circumflex Multi_key equivalent with digit 3 as the base character:
+#   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 #   See #*# CIRCUMFLEX
 #
-<Multi_key><less><3>                                                                               : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-<Multi_key><less><KP_3>                                                                            : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
-<Multi_key><less><8>                                                                               : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><less><KP_8>                                                                            : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+#   This however disrupts en_US.UTF-8/Compose supporting the least frequent BMP
+#   heart emoji, which is part of the suit series U2660..U2667: "♥" U2665 BLACK
+#   HEART SUIT. In France, "❤" U2764 HEAVY BLACK HEART is the most used emoji.
+#   Consistently, U2764 is given the traditional sequence.
+#
+#   U2665 is given an alternative, shape-based sequence in the first place:
+#   <Multi_key><less><8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+#   See #*# CIRCUMFLEX
+#
+#   Additionally, U2665 is disambiguated by leading space as well, as if it was
+#   a math symbol:
+#
 <Multi_key><space><less><3>                                                                        : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><space><less><KP_3>                                                                     : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><nobreakspace><less><3>                                                                 : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
