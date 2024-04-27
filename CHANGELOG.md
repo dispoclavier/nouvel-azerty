@@ -21,7 +21,7 @@
 * Transformations : Dupliquer "\"" U0022 par "€" U20AC. (compose-2.yml [cbd46d7](https://github.com/dispoclavier/nouvel-azerty/commit/cbd46d7566a9a70801a536c050e665a6082260c4))
 * Transformations : Accent circonflexe : Redonder "•" U2022 par "1" U0031 à la place de "♤" U2664, "◦" U25E6 par "2" U0032 à la place de "♢" U2662, "▪" U25AA par "4" U0034 à la place de "♡" U2661, "▫" U25AB par "5" U0035 à la place de "♧" U2667, "‣" U2023 par "6" U0036 à la place de "♠" U2660. Ajouter "▹" U25B9 par "7" U0037 à la place de "♦" U2666. Redonder "➢" U27A2 par "9" U0039 à la place de "♣" U2663. Ajouter "➣" U27A3 par "0" U0030. Redonder "′" U2032 par "²" U00B2, "″" U2033 par "³" U00B3. (ibidem)
 * Idem : Mettre à jour le caractère de base et l’ordre de "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664, (ibidem)
-* Transformations : Tilde : Permuter "⸷" U2E37 et "⸸" U2E38. Compléter les séquences de "”" U201D et "’" U2019. (ibidem)
+* Transformations : Tilde : Permuter "⸷" U2E37 et "⸸" U2E38. Compléter les séquences de "”" U201D et "’" U2019. (ibidem et compose-2.yml [368d4aa](https://github.com/dispoclavier/nouvel-azerty/commit/368d4aa29927567a004b9c1a22fa1175104db332))
 * Transformations : Accent grave : Supprimer "(" U0028 et ")" U0029. (ibidem)
 * Transformations : Sélectrice de groupe : Groupes des symboles : Faire suivre "―" U2015 à la place de "⟨" U27E8, qui prend la place de "⟩" U27E9, qui prend la place laissée par "―" U2015. (compose-3.yml [d535c12](https://github.com/dispoclavier/nouvel-azerty/commit/d535c12126bbee9d9fd9cd806b927a097b35e505))
 * Idem : Faire suivre "❰" U2770 à la place de "❱" U2771, qui prend la place de "•" U2022, qui prend la place laissée par "❰" U2770. (ibidem)
@@ -35,6 +35,7 @@
 * Idem : Mettre "†" U2020 à la place de "∼" U223C, qui est dans composition. Mettre "‡" U2021 à la place de "≃" U2243, qui est dans tilde et dans composition. Mettre "⹋" U2E4B à la place de "≅" U2245, qui est dans composition. (ibidem)
 * Idem : Mettre "⏳" U23F3 à la place de "⊲" U22B2, qui prend la place laissée par "❐" U2750. Mettre "⌛" U231B à la place de "⊳" U22B3, qui prend la place laissée par "❒" U2752. Ajouter "⧖" U29D6 à la place laissée par "⏳" U23F3. Ajouter "⧗" U29D7 à la place laissée par "⌛" U231B. (ibidem)
 * Idem : Permuter "♦" U2666 et "♣" U2663 pour la mnémonique. (ibidem)
+* Composition : Simplifier. (compose-1.yml [731afa0](https://github.com/dispoclavier/nouvel-azerty/commit/731afa0d2fa108b55d76a8ecca8308af63399e17))
 
 ## 1.7.4 (2024-03-28)
 
