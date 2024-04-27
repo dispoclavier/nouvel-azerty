@@ -16,11 +16,7 @@
 * Disposition : Séquences et émojis en Maj + AltGr/Option + AltFr : Faire suivre "&amp;quot;" de la touche U sur la touche E à la place de "😁" U1F601, qui prend la place de "🙏" U1F64F sur la touche O, qui prend la place de "&amp;apos;" sur la touche I, qui prend la place laissée par "&amp;quot;" sur la touche U. (ibidem)
 * Disposition : Redonder l’apostrophe ASCII "'" U0027 sur la touche 5 à la place de la touche morte accent grave, qui prend la place de la touche de composition, qui prend la place de "ʳ" U02B3 sur AltGr/Option + +=, qui est sur AltGr/Option + AltFr + R et dans la touche morte exposant. En mode ASCII, redonder la touche de composition à son ancienne place, la nouvelle place d’accent grave. (ibidem)
 * Transformations : Mettre à jour l’ordre des répertoires de touches mortes. (compose-2.yml [79bc1ba](https://github.com/dispoclavier/nouvel-azerty/commit/79bc1ba9d80262d0b5564eefae30b4b1e4b4deb9))
-* Transformations : Sélectrice de groupe : Groupes des symboles : Mettre à jour les symboles de base. (compose-3.yml [4137c0d](https://github.com/dispoclavier/nouvel-azerty/commit/4137c0dc378711bd7ace334dd555f87619063418), compose-2.yml []())
-
-
-
-
+* Transformations : Sélectrice de groupe : Groupes des symboles : Mettre à jour les symboles de base. (compose-3.yml [4137c0d](https://github.com/dispoclavier/nouvel-azerty/commit/4137c0dc378711bd7ace334dd555f87619063418))
 * Idem : Prendre en charge "€" U20AC comme caractère de base aux côtés de "\\"" U0022. (ibidem)
 * Transformations : Dupliquer "\\"" U0022 par "€" U20AC. (compose-2.yml [cbd46d7](https://github.com/dispoclavier/nouvel-azerty/commit/cbd46d7566a9a70801a536c050e665a6082260c4))
 * Transformations : Accent circonflexe : Redonder "•" U2022 par "1" U0031 à la place de "♤" U2664, "◦" U25E6 par "2" U0032 à la place de "♢" U2662, "▪" U25AA par "4" U0034 à la place de "♡" U2661, "▫" U25AB par "5" U0035 à la place de "♧" U2667, "‣" U2023 par "6" U0036 à la place de "♠" U2660. Ajouter "▹" U25B9 par "7" U0037 à la place de "♦" U2666. Redonder "➢" U27A2 par "9" U0039 à la place de "♣" U2663. Ajouter "➣" U27A3 par "0" U0030. Redonder "′" U2032 par "²" U00B2, "″" U2033 par "³" U00B3. (ibidem)
