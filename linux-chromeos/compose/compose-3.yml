@@ -124,8 +124,8 @@
 # 
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	∼	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	†	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ˑ	EMSP	MQSP	
-#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‡	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ː	ENSP	NQSP	
+#	  1	⚠	‰	★	☆	∼	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	†	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
+#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‡	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
 #	  3	⦜	⚡	∋	∛	≅	⚫	⊃	ˈ	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	⹋	➗	✖	∐	✅	≡	∧	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	‣	♂	⛆	❌	✂	►	≜	∨	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	▪	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
@@ -511,9 +511,6 @@
 #
 # # D07
 #
-#   "〃" U3003 DITTO MARK is also used in Western contexts.
-#   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
-#
 <UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD0><UEFD0>                                                                        <apostrophe> : "⊂" U2282 # SUBSET OF
@@ -565,6 +562,9 @@
 #
 #
 # # D08
+#
+#   "〃" U3003 DITTO MARK is also used in Western contexts.
+#   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
 #
 #   The ASCII apostrophe is preferred over the modifier letter vertical line.
 #   Consistently this is mapped in a higher group than the low vertical line.
@@ -628,18 +628,6 @@
 #   longer supported in group 1 of U0060 where it screwed up U02BB. The legacy
 #   ordinal indicators are supported by composition and in group 12.
 #   See # # Legacy ordinal indicators
-#
-#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB recovers its place in group 1
-#   of ASCII grave from the masculine ordinal indicator. It is input as easily
-#   by dead_acute or dead_grave followed by comma.
-#   See #*# GRAVE
-#   See #*# ACUTE
-#   See # # CEDILLA&ACUTE
-#
-#   Alongside, letter apostrophe "ʼ" U02BC, that does have its place in group 1
-#   of apostrophe, may also be input by dead_circumflex followed by comma, with
-#   the benefit of ensuring a balanced and undiscriminatory distribution.
-#   See #*# CIRCUMFLEX
 #
 #   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
 #   in dead_hook followed by period: "⁕" U2055 FLOWER PUNCTUATION MARK.
@@ -1579,6 +1567,19 @@
 #
 # # B06
 #
+#   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB is here in group 1 of grave for
+#   intuitivity, but it is input as easily by dead_acute or dead_grave followed
+#   by comma.
+#   See #*# GRAVE
+#   See #*# ACUTE
+#   See # # CEDILLA&ACUTE
+#
+#   Alongside, letter apostrophe "ʼ" U02BC, that does have its place in group 1
+#   of apostrophe, may also be input by dead_circumflex followed by comma, with
+#   the benefit of ensuring a balanced and undiscriminatory distribution.
+#   See # # D07
+#   See #*# CIRCUMFLEX
+#
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD0><UEFD0>                                                                             <grave> : "¬" U00AC # NOT SIGN
@@ -1859,9 +1860,6 @@
 #
 # # B09-level3
 #
-#   The full triangular colon is about 40 times more frequent than its half.
-#   That justifies their counterintuitive assignment to groups 1 and 2.
-#   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #   The watch emoji are mapped here based on the mnemonics of time notation.
 #
 <UEFD0>                                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR
@@ -1916,14 +1914,19 @@
 #
 # # B10-level3
 #
-<UEFD0>                                                                                <semicolon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
-<Multi_key><numbersign>                                                                <semicolon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
-<UEFD0>                                                                                  <section> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
-<Multi_key><numbersign>                                                                  <section> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
-<UEFD0><UEFD0>                                                                         <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
-<Multi_key><numbersign><numbersign>                                                    <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
-<UEFD0><UEFD0>                                                                           <section> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
-<Multi_key><numbersign><numbersign>                                                      <section> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
+#   The (full) triangular colon is about 40 times more frequent than its half.
+#   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
+#   Consistently, "ː" U02D0 is in group 1, "ˑ" U02D1 in group 2. For mnemonics,
+#   rather than the number of triangles, the 1/1 vs 1/2 logic is convenient.
+#
+<UEFD0>                                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
+<Multi_key><numbersign>                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
+<UEFD0>                                                                                  <section> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
+<Multi_key><numbersign>                                                                  <section> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
+<UEFD0><UEFD0>                                                                         <semicolon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
+<Multi_key><numbersign><numbersign>                                                    <semicolon> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
+<UEFD0><UEFD0>                                                                           <section> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
+<Multi_key><numbersign><numbersign>                                                      <section> : "ˑ" U02D1 # MODIFIER LETTER HALF TRIANGULAR COLON
 <UEFD0><3>                                                                             <semicolon> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <Multi_key><numbersign><3>                                                             <semicolon> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <UEFD0><KP_3>                                                                          <semicolon> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
