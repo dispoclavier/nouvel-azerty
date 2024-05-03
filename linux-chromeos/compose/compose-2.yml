@@ -279,6 +279,22 @@
 #   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. Multi_key: ¦=
 #
 #
+# # Order of dead key lists
+#
+#   There is no obvious order for the dead keys, since keysyms are unintuitive
+#   or non-existent, most code points are arbitrary and unmnemonic, and common
+#   names are challenging due to language and conventions. By lack of anything
+#   better, dead keys are ordered following the keyboard layout as in the list
+#   below.
+#
+#   That order is based on the assumption that those ASCII symbols are mapped
+#   in a stable manner.
+#
+#   However, prior to v2, this ASCII map was unstable, due to a combination of
+#   underengineering and lack of consultancy, which is a euphemism for impiety.
+#   https://github.com/dispoclavier/nouvel-azerty/blob/80fb0969cc0c0b465357b8e6ee9552eca3b21074/linux-chromeos/dispocla.cpp#L396
+#
+#
 # # Proposed dead key layout for AZERTY keyboards
 #
 #   30 out of 32 ASCII symbols and punctuation are mapped on level 3 of keys
@@ -558,7 +574,7 @@
 #   opposed to picking one of ã, ñ, õ, and thus favoring either Portuguese or
 #   Spanish. The ẽ also makes for consistent mnemonics since tilde ends in e.
 #   See #*# TILDE
-#   See #^# TILDE_BELOW, MIDDLE_TILDE
+#   See #^# MIDDLE_TILDE
 #
 #   For portability, the dead characters are defined in the dead key headings:
 #
@@ -1109,8 +1125,13 @@
 #       4.    #^# Dead key virtualized by multiple press
 #
 #   The order of base characters matters, too, since this file is also used for
-#   documentation: spaces, quotedbl, apostrophes, symbols, digits, letters. So,
-#   combining marks and spacing clones of diacritics are listed first.
+#   documentation: spaces, quotedbl, apostrophes, other symbols/punctuation[1],
+#   digits, letters. As a result, combining marks and spacing clones of
+#   diacritics are listed first, quotation marks come next.
+#
+#   [1] For consistency and predictability, the other punctuation and the other
+#       symbols are ordered following the keyboard layout.
+#       See # # Order of dead key lists
 #
 #
 #*# SUPERSCRIPT
@@ -1130,7 +1151,8 @@
 #
 #   The superscript uppercase alphabet is less complete. Yet some of these are
 #   used in orthographies. In 2020 and 2021, more uppercase letters were added:
-#   C "ꟲ" UA7F2, F "ꟳ" UA7F3, Q "ꟴ" UA7F4. See L2/20-251, cited in L2/21-016r:
+#   C "ꟲ" UA7F2, F "ꟳ" UA7F3, Q "ꟴ" UA7F4.
+#   See L2/20-251, cited in the Script Ad Hoc Working Group Report L2/21-016r:
 #   https://www.unicode.org/L2/L2021/21016r-script-adhoc-rept.pdf
 #
 #   Superscript small q is part of Unicode since v14.0 released in 2020.
@@ -1187,24 +1209,26 @@
 <Multi_key><asciicircum>                                                                   <U202F> : "‾" U203E # OVERLINE
 <UEFD1>                                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciicircum>                                                                <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<UEFD1>                                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciicircum>                                                                <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <UEFD1>                                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciicircum>                                                              <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <UEFD1>                                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciicircum>                                                    <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-<UEFD1>                                                                                    <minus> : "⁻" U207B # SUPERSCRIPT MINUS
-<Multi_key><asciicircum>                                                                   <minus> : "⁻" U207B # SUPERSCRIPT MINUS
-<UEFD1>                                                                                     <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
-<Multi_key><asciicircum>                                                                    <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
 <UEFD1>                                                                                <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
 <Multi_key><asciicircum>                                                               <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
 <UEFD1>                                                                               <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
 <Multi_key><asciicircum>                                                              <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
+<UEFD1>                                                                                    <minus> : "⁻" U207B # SUPERSCRIPT MINUS
+<Multi_key><asciicircum>                                                                   <minus> : "⁻" U207B # SUPERSCRIPT MINUS
+<UEFD1>                                                                                     <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
+<Multi_key><asciicircum>                                                                    <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
 <UEFD1>                                                                                    <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <Multi_key><asciicircum>                                                                   <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
-<UEFD1>                                                                                   <period> : "·" U00B7 # MIDDLE DOT
-<Multi_key><asciicircum>                                                                  <period> : "·" U00B7 # MIDDLE DOT
 <UEFD1>                                                                                    <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><asciicircum>                                                                   <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<UEFD1>                                                                                   <period> : "·" U00B7 # MIDDLE DOT
+<Multi_key><asciicircum>                                                                  <period> : "·" U00B7 # MIDDLE DOT
 <UEFD1>                                                                                        <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <Multi_key><asciicircum>                                                                       <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <UEFD1>                                                                                     <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -2703,14 +2727,16 @@
 #
 #
 # # SUPERSCRIPT&SUBSCRIPT
-#   Dchar: 
+#   Dchar: U1DB0
 #
 #   This is based on the small cap semantics of the subscript dead key.
 #
 #   The fraction slash is supported alongside as a workaround for incomplete
 #   keyboard layouts lacking a live key position for U2044. The superscript or
 #   subscript dead keys alone cannot include a slash as a base character due to
-#   numerous conflicts with math symbols.
+#   numerous conflicts with math symbols. Yet another input method is included
+#   in the slash-shaped set supported by dead_longsolidusoverlay, in slot 4.
+#   See #*# STROKE
 #
 <UEFD1><UEFD2>                                                                             <slash> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><asciicircum><underscore>                                                       <slash> : "⁄" U2044 # FRACTION SLASH
@@ -2850,14 +2876,14 @@
 <Multi_key><asciicircum><asciicircum>                                               <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <UEFD1><UEFD1>                                                                             <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <Multi_key><asciicircum><asciicircum>                                                      <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
-<UEFD1><UEFD1>                                                                        <underscore> : "﹋" UFE4B # WAVY OVERLINE
-<Multi_key><asciicircum><asciicircum>                                                 <underscore> : "﹋" UFE4B # WAVY OVERLINE
+<UEFD1><UEFD1>                                                                              <plus> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
+<Multi_key><asciicircum><asciicircum>                                                       <plus> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
 <UEFD1><UEFD1>                                                                       <bracketleft> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <Multi_key><asciicircum><asciicircum>                                                <bracketleft> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <UEFD1><UEFD1>                                                                      <bracketright> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <Multi_key><asciicircum><asciicircum>                                               <bracketright> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
-<UEFD1><UEFD1>                                                                              <plus> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
-<Multi_key><asciicircum><asciicircum>                                                       <plus> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
+<UEFD1><UEFD1>                                                                        <underscore> : "﹋" UFE4B # WAVY OVERLINE
+<Multi_key><asciicircum><asciicircum>                                                 <underscore> : "﹋" UFE4B # WAVY OVERLINE
 <UEFD1><UEFD1>                                                                                 <2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <Multi_key><asciicircum><asciicircum>                                                          <2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <UEFD1><UEFD1>                                                                              <KP_2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
@@ -2944,6 +2970,8 @@
 <Multi_key><asciicircum><asciicircum>                                                          <z> : "ᷦ" U1DE6 # COMBINING LATIN SMALL LETTER Z
 <UEFD1><UEFD1>                                                                          <ccedilla> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 <Multi_key><asciicircum><asciicircum>                                                   <ccedilla> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<UEFD1><UEFD1>                                                                        <udiaeresis> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<Multi_key><asciicircum><asciicircum>                                                 <udiaeresis> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <UEFD1><UEFD1>                                                                            <ugrave> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum>                                                     <ugrave> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 #
@@ -2996,10 +3024,10 @@
 <Multi_key><percent>                                                                <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                                    <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><percent>                                                                       <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><percent>                                                        <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                               <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><percent>                                                                  <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><percent>                                                        <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                               <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <Multi_key><percent>                                                                  <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
@@ -3114,10 +3142,10 @@
 #
 <UEFD5><UEFD0>                                                                       <asciicircum> : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><percent><numbersign>                                                     <asciicircum> : "⦢" U29A2 # TURNED ANGLE
-<UEFD5><UEFD0>                                                                        <asciitilde> : "⸸" U2E38 # TURNED DAGGER
-<Multi_key><percent><numbersign>                                                      <asciitilde> : "⸸" U2E38 # TURNED DAGGER
-<UEFD5><UEFD0>                                                                         <backslash> : "⌙" U2319 # TURNED NOT SIGN
-<Multi_key><percent><numbersign>                                                       <backslash> : "⌙" U2319 # TURNED NOT SIGN
+<UEFD5><UEFD0>                                                                               <bar> : "⸸" U2E38 # TURNED DAGGER
+<Multi_key><percent><numbersign>                                                             <bar> : "⸸" U2E38 # TURNED DAGGER
+<UEFD5><UEFD0>                                                                             <grave> : "⌙" U2319 # TURNED NOT SIGN
+<Multi_key><percent><numbersign>                                                           <grave> : "⌙" U2319 # TURNED NOT SIGN
 <UEFD5><UEFD0>                                                                                 <a> : "ᴂ" U1D02 # LATIN SMALL LETTER TURNED AE
 <Multi_key><percent><numbersign>                                                               <a> : "ᴂ" U1D02 # LATIN SMALL LETTER TURNED AE
 <UEFD5><UEFD0>                                                                                 <d> : "ƍ" U018D # LATIN SMALL LETTER TURNED DELTA
@@ -3145,6 +3173,8 @@
 #
 <UEFD5><UEFD0><UEFD0>                                                                <asciicircum> : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><percent><numbersign><numbersign>                                         <asciicircum> : "⦢" U29A2 # TURNED ANGLE
+<UEFD5><UEFD0><UEFD0>                                                                      <grave> : "⌙" U2319 # TURNED NOT SIGN
+<Multi_key><percent><numbersign><numbersign>                                               <grave> : "⌙" U2319 # TURNED NOT SIGN
 <UEFD5><UEFD0><UEFD0>                                                                          <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
 <Multi_key><percent><numbersign><numbersign>                                                   <A> : "Ɒ" U2C70 # LATIN CAPITAL LETTER TURNED ALPHA
 <UEFD5><UEFD0><UEFD0>                                                                          <a> : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
@@ -3421,14 +3451,16 @@
 #   Dchar: "ᴟ" U1D1F
 #
 #   This supports the full set of those among the Old Lisu letters that can be
-#   used for writing in turned Latin letters. I.e. there is no M, Q, W as seen
-#   in #*# TURNED
+#   used for writing in turned Latin letters. I.e. there is no M, Q, W.
+#   See #*# TURNED
 #
 #   As a diacritic, "̕" U0315 COMBINING COMMA ABOVE RIGHT is included, with the
-#   rationale that this is turned twice. Not "̓" U0313 COMBINING COMMA ABOVE as
-#   this is supported in dead_belowcomma double press; but as a spacing clone,
-#   "ʼ" U02BC is picked invariably.
+#   rationale that turning twice may be used to represent a shift to the right.
+#   Not "̓" U0313 COMBINING COMMA ABOVE as this is supported in dead_belowcomma
+#   double press.
 #   See #^# COMMA_ABOVE
+#
+#   As a spacing clone, "ʼ" U02BC is picked invariably.
 #
 <UEFD5><UEFD5>                                                                             <space> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
 <Multi_key><percent><percent>                                                              <space> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
@@ -3694,10 +3726,10 @@
 <Multi_key><backslash>                                                              <nobreakspace> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                                    <U202F> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                                     <U202F> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
-<UEFD6>                                                                     <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
-<Multi_key><backslash>                                                      <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                               <apostrophe> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                                <apostrophe> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
+<UEFD6>                                                                     <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
+<Multi_key><backslash>                                                      <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <UEFD6>                                                                                    <comma> : "⹁" U2E41 # REVERSED COMMA
@@ -3987,7 +4019,7 @@
 #   Multi_key: ¦~
 #   Dchar: "ẽ" U1EBD
 #
-#   Followed by quotedbl or rightsinglequotemark (not apostrophe), dead_tilde
+#   Followed by quotedbl or rightsinglequotemark (or apostrophe[1]), dead_tilde
 #   yields high curly quotation marks U201D, U2019 (closing or opening), as a
 #   facility for one-handed input of double apostrophe closing quotation marks,
 #   taking advantage of the synergy between dead_tilde and quotedbl or EuroSign
@@ -3995,10 +4027,14 @@
 #   layouts where dead_acute (usually yielding these quotation marks) is not on
 #   level 1, but on level 3, key E01, next to the tilde dead key on E02, and
 #   quotedbl is on E03 as usual.
+#   [1] By apostrophe, the Multi_key equivalent conflicts with TILDE AND ACUTE,
+#       so this is commented out.
 #   See # # Quotation mark input method
 #
 #   The full set of daggers is available by digits 1 through 6 with shape-based
 #   mnemonics using the alphabetic mnemonics of the tilde dead key on key T.
+#   But the three upright full daggers are in groups 1 through 3 of bar.
+#   See # # C10
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
@@ -4006,6 +4042,10 @@
 #
 #   All letters annotated as for Lithuanian in this file are courtesy:
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
+#
+#   "≃" U2243 and "≈" U2248 are both supported by equal based on keypress
+#   number mnemonics.
+#   See #^# MIDDLE_TILDE
 #
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
@@ -4019,6 +4059,8 @@
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+#   <Multi_key><asciitilde>                                                           <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
@@ -4166,10 +4208,14 @@
 <Multi_key><colon><asciitilde>                                                                 <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
 #
 #
-#^# TILDE_BELOW, MIDDLE_TILDE
+#^# MIDDLE_TILDE
+#   middle tilde or tilde below
+#   dead_belowtilde
 #   dead_tilde double press
 #   Multi_key: ¦~~
 #   Dchar: 
+#
+#   14 letters are with middle tilde, and 6 with tilde below.
 #
 <dead_tilde><dead_tilde>                                                                   <space> : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key><asciitilde><asciitilde>                                                        <space> : "̰" U0330 # COMBINING TILDE BELOW
@@ -4181,18 +4227,6 @@
 <Multi_key><asciitilde><asciitilde>                                                        <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <dead_tilde><dead_tilde>                                                                   <equal> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde>                                                        <equal> : "≈" U2248 # ALMOST EQUAL TO
-<dead_tilde><dead_tilde>                                                                       <1> : "†" U2020 # DAGGER
-<Multi_key><asciitilde><asciitilde>                                                            <1> : "†" U2020 # DAGGER
-<dead_tilde><dead_tilde>                                                                    <KP_1> : "†" U2020 # DAGGER
-<Multi_key><asciitilde><asciitilde>                                                         <KP_1> : "†" U2020 # DAGGER
-<dead_tilde><dead_tilde>                                                                       <2> : "‡" U2021 # DOUBLE DAGGER
-<Multi_key><asciitilde><asciitilde>                                                            <2> : "‡" U2021 # DOUBLE DAGGER
-<dead_tilde><dead_tilde>                                                                    <KP_2> : "‡" U2021 # DOUBLE DAGGER
-<Multi_key><asciitilde><asciitilde>                                                         <KP_2> : "‡" U2021 # DOUBLE DAGGER
-<dead_tilde><dead_tilde>                                                                       <3> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><asciitilde><asciitilde>                                                            <3> : "⹋" U2E4B # TRIPLE DAGGER
-<dead_tilde><dead_tilde>                                                                    <KP_3> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><asciitilde><asciitilde>                                                         <KP_3> : "⹋" U2E4B # TRIPLE DAGGER
 <dead_tilde><dead_tilde>                                                                       <b> : "ᵬ" U1D6C # LATIN SMALL LETTER B WITH MIDDLE TILDE
 <Multi_key><asciitilde><asciitilde>                                                            <b> : "ᵬ" U1D6C # LATIN SMALL LETTER B WITH MIDDLE TILDE
 <dead_tilde><dead_tilde>                                                                       <d> : "ᵭ" U1D6D # LATIN SMALL LETTER D WITH MIDDLE TILDE
@@ -4940,7 +4974,7 @@
 #   See #^# DOUBLE_CIRCLED
 #
 #   Circled operators are also supported.
-#   See also #^# CIRCLED_NUMBER
+#   See #^# CIRCLED_NUMBER
 #
 #   As a diacritic,  "⃝" U20DD is provided, and "⚪" U26AA as a spacing clone.
 #
@@ -5385,12 +5419,8 @@
 <Multi_key><apostrophe><numbersign>                                                   <apostrophe> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_acute><UEFD0>                                                         <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><apostrophe><numbersign>                                         <rightsinglequotemark> : "❜" U275C # HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
-<dead_acute><UEFD0>                                                                    <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><apostrophe><numbersign>                                                    <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_acute><UEFD0>                                                                   <asciitilde> : "≁" U2241 # NOT TILDE
 <Multi_key><apostrophe><numbersign>                                                   <asciitilde> : "≁" U2241 # NOT TILDE
-<dead_acute><UEFD0>                                                                        <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><apostrophe><numbersign>                                                        <grave> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_acute><UEFD0>                                                                          <bar> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><apostrophe><numbersign>                                                          <bar> : "∤" U2224 # DOES NOT DIVIDE
 <dead_acute><UEFD0>                                                                         <less> : "≮" U226E # NOT LESS-THAN
@@ -5408,12 +5438,14 @@
 # # ACUTE&GROUP_2
 #   Dchar: 
 #
-<dead_acute><UEFD0><UEFD0>                                                             <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><apostrophe><numbersign><numbersign>                                        <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_acute><UEFD0><UEFD0>                                                              <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><apostrophe><numbersign><numbersign>                                         <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_acute><UEFD0><UEFD0>                                                              <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><apostrophe><numbersign><numbersign>                                         <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_acute><UEFD0><UEFD0>                                                            <asciitilde> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><numbersign>                                       <asciitilde> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
-<dead_acute><UEFD0><UEFD0>                                                                 <grave> : "⊄" U2284 # NOT A SUBSET OF
-<Multi_key><apostrophe><numbersign><numbersign>                                            <grave> : "⊄" U2284 # NOT A SUBSET OF
+<dead_acute><UEFD0><UEFD0>                                                            <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
+<Multi_key><apostrophe><numbersign><numbersign>                                       <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
 <dead_acute><UEFD0><UEFD0>                                                                   <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><apostrophe><numbersign><numbersign>                                              <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_acute><UEFD0><UEFD0>                                                                  <less> : "≮" U226E # NOT LESS-THAN
@@ -5427,24 +5459,30 @@
 # # ACUTE&GROUP_3
 #   Dchar: 
 #
-<dead_acute><UEFD0><3>                                                                 <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><apostrophe><numbersign><3>                                                 <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_acute><UEFD0><KP_3>                                                              <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><apostrophe><numbersign><KP_3>                                              <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_acute><UEFD0><UEFD0><UEFD0>                                                      <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><apostrophe><numbersign><numbersign><numbersign>                            <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_acute><UEFD0><3>                                                                  <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><apostrophe><numbersign><3>                                                  <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_acute><UEFD0><KP_3>                                                               <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><apostrophe><numbersign><KP_3>                                               <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_acute><UEFD0><UEFD0><UEFD0>                                                       <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><apostrophe><numbersign><numbersign><numbersign>                             <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_acute><UEFD0><3>                                                                  <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><apostrophe><numbersign><3>                                                  <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_acute><UEFD0><KP_3>                                                               <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><apostrophe><numbersign><KP_3>                                               <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_acute><UEFD0><UEFD0><UEFD0>                                                       <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><apostrophe><numbersign><numbersign><numbersign>                             <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_acute><UEFD0><3>                                                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><3>                                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_acute><UEFD0><KP_3>                                                             <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><KP_3>                                             <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_acute><UEFD0><UEFD0><UEFD0>                                                     <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><apostrophe><numbersign><numbersign><numbersign>                           <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<dead_acute><UEFD0><3>                                                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><apostrophe><numbersign><3>                                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_acute><UEFD0><KP_3>                                                                  <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><apostrophe><numbersign><KP_3>                                                  <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_acute><UEFD0><UEFD0><UEFD0>                                                          <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><apostrophe><numbersign><numbersign><numbersign>                                <grave> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_acute><UEFD0><3>                                                                <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><apostrophe><numbersign><3>                                                <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_acute><UEFD0><KP_3>                                                             <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><apostrophe><numbersign><KP_3>                                             <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_acute><UEFD0><UEFD0><UEFD0>                                                     <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><apostrophe><numbersign><numbersign><numbersign>                           <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_acute><UEFD0><3>                                                                       <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><apostrophe><numbersign><3>                                                       <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_acute><UEFD0><KP_3>                                                                    <bar> : "∦" U2226 # NOT PARALLEL TO
@@ -5468,21 +5506,31 @@
 # # ACUTE&GROUP_4
 #   Dchar: 
 #
-<dead_acute><UEFD0><4>                                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><4>                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_acute><UEFD0><KP_4>                                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><KP_4>                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_acute><UEFD0><UEFD0><UEFD0><UEFD0>                                               <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><numbersign><numbersign><numbersign>                <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><4>                                                                  <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><4>                                                  <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><KP_4>                                                               <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><KP_4>                                               <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><UEFD0><UEFD0><UEFD0>                                                <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><numbersign><numbersign><numbersign>                 <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><4>                                                                  <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><4>                                                  <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><KP_4>                                                               <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><KP_4>                                               <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><UEFD0><UEFD0><UEFD0>                                                <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><numbersign><numbersign><numbersign>                 <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 #
 #
 # # ACUTE&GROUP_5
 #   Dchar: 
 #
-<dead_acute><UEFD0><5>                                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><5>                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_acute><UEFD0><KP_5>                                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><apostrophe><numbersign><KP_5>                                              <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><5>                                                                  <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><5>                                                  <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><KP_5>                                                               <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><KP_5>                                               <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><5>                                                                  <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><5>                                                  <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_acute><UEFD0><KP_5>                                                               <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><apostrophe><numbersign><KP_5>                                               <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 #
 #
 # # ACUTE&DOT_ABOVE
@@ -5523,8 +5571,8 @@
 #   quotation marks.
 #   See # # Quotation mark input method
 #
-<dead_acute><dead_diaeresis>                                                               <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon>                                                             <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<dead_acute><dead_diaeresis>                                                          <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><apostrophe><colon>                                                        <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <dead_acute><dead_diaeresis>                                                                <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <Multi_key><apostrophe><colon>                                                              <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <dead_acute><dead_diaeresis>                                                             <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
@@ -5534,26 +5582,26 @@
 # # ACUTE&DIAERESIS&GROUP_1
 #   Dchar: 
 #
-<dead_acute><dead_diaeresis><UEFD0>                                                        <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon><numbersign>                                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_acute><dead_diaeresis><UEFD0>                                                   <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><apostrophe><colon><numbersign>                                            <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 # # ACUTE&DIAERESIS&GROUP_2
 #   Dchar: 
 #
-<dead_acute><dead_diaeresis><UEFD0><UEFD0>                                                 <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon><numbersign><numbersign>                                     <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<dead_acute><dead_diaeresis><UEFD0><UEFD0>                                            <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><apostrophe><colon><numbersign><numbersign>                                <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 #
 #
 # # ACUTE&DIAERESIS&GROUP_3
 #   Dchar: 
 #
-<dead_acute><dead_diaeresis><UEFD0><3>                                                     <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon><numbersign><3>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_acute><dead_diaeresis><UEFD0><KP_3>                                                  <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon><numbersign><KP_3>                                           <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_acute><dead_diaeresis><UEFD0><UEFD0><UEFD0>                                          <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><apostrophe><colon><numbersign><numbersign><numbersign>                         <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_acute><dead_diaeresis><UEFD0><3>                                                <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><apostrophe><colon><numbersign><3>                                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_acute><dead_diaeresis><UEFD0><KP_3>                                             <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><apostrophe><colon><numbersign><KP_3>                                      <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_acute><dead_diaeresis><UEFD0><UEFD0><UEFD0>                                     <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><apostrophe><colon><numbersign><numbersign><numbersign>                    <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 #*# HOOK
@@ -5561,7 +5609,7 @@
 #   Multi_key: ¦{
 #   Dchar: "ɱ" U0271
 #
-#   Includes tone bars due to good mnemonics based on E, mapped like { on D03.
+#   Includes tone bars due to good mnemonics based on I, mapped like { on D08.
 #   For an alternative, see # # Tone bars
 #
 #   A hook may also be referred to as a fishhook.
@@ -6830,21 +6878,15 @@
 # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 #   These word boundary preventing characters, needed in Breton and Polynesian
-#   languages, may be input in group 1 and group 2 of rightsinglequotemark.
-#
-#   This completes the apostrophe and grave keysyms in the symbol groups, and
-#   an alternative input method based on comma, using diacritical dead keys.
-#   See # # D08
-#   See # # D09
+#   languages, may be input in group 1 of apostrophe or rightsinglequotemark,
+#   and grave, respectively. Alternative input methods based on comma, using
+#   diacritical dead keys, are also available.
+#   See # # D07
+#   See # # B06
 #   See #*# ACUTE
 #   See #*# GRAVE
 #   See #*# TURNED
 #   See # # CEDILLA&ACUTE
-#
-<UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 #
 #
 # # Turned punctuation characters for Spanish
@@ -7040,10 +7082,10 @@
 #   Since FIGURE DASH occurs in single instances only, it is compatible with
 #   dead key input, unlike FIGURE SPACE and PUNCTUATION SPACE that are the
 #   tabular digit and punctuation spaces, respectively, and are mapped on live
-#   keys B07 and B08, level 7, when ModLock is on, i.e. in ASCII mode.
+#   keys B07 (digitspace) and B08 (punctspace), level 7, in ASCII mode.
 #
-#   However, FIGURE DASH is also mapped on live key Shift + AltFr + T,
-#   where MINUS SIGN is on AltFr.
+#   However, FIGURE DASH is also mapped on live key D05 (figdash), level 6
+#   (Shift + AltFr + T), where MINUS SIGN is on level 5 (AltFr).
 #
 <UEFD0>                                                                                    <U2212> : "‒" U2012 # FIGURE DASH
 <Multi_key><numbersign>                                                                    <U2212> : "‒" U2012 # FIGURE DASH
@@ -7053,10 +7095,14 @@
 #
 #   These are needed to palliate a lack of the dedicated or integrated numpad.
 #
-#   Five sets of arrows, and ten arrow emoji have an input method using digits
+#   Five sets of arrows and ten arrow emoji have an input method using digits
 #   0..9 in groups 2..7. The digits are based on the position of cursor arrows
 #   on the numpad on keys 2, 4, 6, 7 and 8. The remaining single headed arrows
-#   are extrapolated; double headed left-right is placed on 5, up-down on 0.
+#   are extrapolated; double-headed left-right is placed on 5, up-down on 0.
+#
+#   The arrow emoji are heterogeneous in that the diagonal and bidirectional
+#   arrows are basic arrows, whereas the cardinal arrows are picked from the
+#   plain arrows. For UX consistency, this mix makes up an extra set.
 #
 #   Group 1 is not used here, since digits in group 1 are dead keys activating
 #   other groups. And groups 8 and 10 are used for mathematical digit symbols:
@@ -7067,9 +7113,9 @@
 #   added value with respect to the fact that on most computers (Windows), SMP
 #   characters are hard to input inside the TSF using only layout drivers with
 #   an inappropriate data type picked for dead key output. 0 and 5 are used to
-#   input the high surrogate, a feature designed for Windows.
+#   input the high surrogate, since these arrows do not include bidirectionals.
 #
-#   Group  Descripton                          Example   Numpad live key level
+#   Group  Description                         Example   Numpad live key level
 #
 #       2  Basic simple arrows                 ↑ U2191   AltFr
 #       3  Basic double arrows                 ⇑ U21D1   Shift + AltFr
@@ -7078,8 +7124,8 @@
 #       6  Empty or outlined, white arrows     ⇧ U21E7   Shift + AltGr + AltFr
 #       7  Triangle-headed arrows              ⭡ U2B61   AltGr + AltFr
 #       9  Triangle-headed arrows to bar       ⭱ U2B71
-#       1  Wide-headed light barb arrows       🡡 U1F861
-#       2  Wide-headed very heavy barb arrows  🢁 U1F881
+#      11  Wide-headed light barb arrows       🡡 U1F861
+#      12  Wide-headed very heavy barb arrows  🢁 U1F881
 #
 #
 #^# GROUP_2
@@ -7653,7 +7699,7 @@
 #
 #   This is 100% backwards compatible with en_US.UTF-8/Compose, except for the
 #   double press, used to activate the CURRENCY_EXTENDED dead key, rather than
-#   yielding the generic currency sign "¤" U00A4.
+#   to yield the generic currency sign "¤" U00A4.
 #
 #   The generic currency sign "¤" U00A4 however is extensively supported, with
 #   both the two breaking and the two no-break spaces as base characters, both
@@ -9428,8 +9474,8 @@
 # # BARRED&GROUP_1
 #   Dchar: 
 #
-<dead_stroke><UEFD0>                                                                   <backslash> : "⊽" U22BD # NOR
-<Multi_key><minus><numbersign>                                                         <backslash> : "⊽" U22BD # NOR
+<dead_stroke><UEFD0>                                                                       <grave> : "⊽" U22BD # NOR
+<Multi_key><minus><numbersign>                                                             <grave> : "⊽" U22BD # NOR
 <dead_stroke><UEFD0>                                                                           <a> : "ꬰ" UAB30 # LATIN SMALL LETTER BARRED ALPHA
 <Multi_key><minus><numbersign>                                                                 <a> : "ꬰ" UAB30 # LATIN SMALL LETTER BARRED ALPHA
 <dead_stroke><UEFD0>                                                                           <i> : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
@@ -9451,8 +9497,8 @@
 # # BARRED&GROUP_2
 #   Dchar: 
 #
-<dead_stroke><UEFD0><UEFD0>                                                            <backslash> : "⊼" U22BC # NAND
-<Multi_key><minus><numbersign><numbersign>                                             <backslash> : "⊼" U22BC # NAND
+<dead_stroke><UEFD0><UEFD0>                                                                <grave> : "⊼" U22BC # NAND
+<Multi_key><minus><numbersign><numbersign>                                                 <grave> : "⊼" U22BC # NAND
 <dead_stroke><UEFD0><UEFD0>                                                                    <a> : "ꬰ" UAB30 # LATIN SMALL LETTER BARRED ALPHA
 <Multi_key><minus><numbersign><numbersign>                                                     <a> : "ꬰ" UAB30 # LATIN SMALL LETTER BARRED ALPHA
 <dead_stroke><UEFD0><UEFD0>                                                                    <i> : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
@@ -9468,12 +9514,12 @@
 # # BARRED&GROUP_3
 #   Dchar: 
 #
-<dead_stroke><UEFD0><3>                                                                <backslash> : "⊽" U22BD # NOR
-<Multi_key><minus><numbersign><3>                                                      <backslash> : "⊽" U22BD # NOR
-<dead_stroke><UEFD0><KP_3>                                                             <backslash> : "⊽" U22BD # NOR
-<Multi_key><minus><numbersign><KP_3>                                                   <backslash> : "⊽" U22BD # NOR
-<dead_stroke><UEFD0><UEFD0><UEFD0>                                                     <backslash> : "⊽" U22BD # NOR
-<Multi_key><minus><numbersign><numbersign><numbersign>                                 <backslash> : "⊽" U22BD # NOR
+<dead_stroke><UEFD0><3>                                                                    <grave> : "⊽" U22BD # NOR
+<Multi_key><minus><numbersign><3>                                                          <grave> : "⊽" U22BD # NOR
+<dead_stroke><UEFD0><KP_3>                                                                 <grave> : "⊽" U22BD # NOR
+<Multi_key><minus><numbersign><KP_3>                                                       <grave> : "⊽" U22BD # NOR
+<dead_stroke><UEFD0><UEFD0><UEFD0>                                                         <grave> : "⊽" U22BD # NOR
+<Multi_key><minus><numbersign><numbersign><numbersign>                                     <grave> : "⊽" U22BD # NOR
 <dead_stroke><UEFD0><3>                                                                        <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <Multi_key><minus><numbersign><3>                                                              <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
 <dead_stroke><UEFD0><KP_3>                                                                     <s> : "ẝ" U1E9D # LATIN SMALL LETTER LONG S WITH HIGH STROKE
@@ -10976,10 +11022,10 @@
 <Multi_key><slash>                                                                  <nobreakspace> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_longsolidusoverlay>                                                                  <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <Multi_key><slash>                                                                         <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<dead_longsolidusoverlay>                                                              <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><slash>                                                                     <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
-<dead_longsolidusoverlay>                                                                  <grave> : "⊄" U2284 # NOT A SUBSET OF
-<Multi_key><slash>                                                                         <grave> : "⊄" U2284 # NOT A SUBSET OF
+<dead_longsolidusoverlay>                                                               <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><slash>                                                                      <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_longsolidusoverlay>                                                               <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><slash>                                                                      <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_longsolidusoverlay>                                                                      <1> : "∕" U2215 # DIVISION SLASH
 <Multi_key><slash>                                                                             <1> : "∕" U2215 # DIVISION SLASH
 <dead_longsolidusoverlay>                                                                   <KP_1> : "∕" U2215 # DIVISION SLASH
@@ -11094,12 +11140,14 @@
 #   Lenient group selection
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD0>                                                       <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign>                                                         <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0>                                                        <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign>                                                          <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0>                                                        <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign>                                                          <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_longsolidusoverlay><UEFD0>                                                      <asciitilde> : "≁" U2241 # NOT TILDE
 <Multi_key><slash><numbersign>                                                        <asciitilde> : "≁" U2241 # NOT TILDE
-<dead_longsolidusoverlay><UEFD0>                                                           <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><slash><numbersign>                                                             <grave> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_longsolidusoverlay><UEFD0>                                                      <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><slash><numbersign>                                                        <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_longsolidusoverlay><UEFD0>                                                             <bar> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><slash><numbersign>                                                               <bar> : "∤" U2224 # DOES NOT DIVIDE
 <dead_longsolidusoverlay><UEFD0>                                                            <less> : "≮" U226E # NOT LESS-THAN
@@ -11117,12 +11165,14 @@
 # # STROKE&GROUP_2
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD0><UEFD0>                                                <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><slash><numbersign><numbersign>                                             <braceleft> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_longsolidusoverlay><UEFD0><UEFD0>                                                 <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><slash><numbersign><numbersign>                                              <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_longsolidusoverlay><UEFD0><UEFD0>                                                 <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><slash><numbersign><numbersign>                                              <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_longsolidusoverlay><UEFD0><UEFD0>                                               <asciitilde> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><slash><numbersign><numbersign>                                            <asciitilde> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
-<dead_longsolidusoverlay><UEFD0><UEFD0>                                                    <grave> : "⊄" U2284 # NOT A SUBSET OF
-<Multi_key><slash><numbersign><numbersign>                                                 <grave> : "⊄" U2284 # NOT A SUBSET OF
+<dead_longsolidusoverlay><UEFD0><UEFD0>                                               <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
+<Multi_key><slash><numbersign><numbersign>                                            <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
 <dead_longsolidusoverlay><UEFD0><UEFD0>                                                    <equal> : "≢" U2262 # NOT IDENTICAL TO
 <Multi_key><slash><numbersign><numbersign>                                                 <equal> : "≢" U2262 # NOT IDENTICAL TO
 <dead_longsolidusoverlay><UEFD0><UEFD0>                                                      <bar> : "∦" U2226 # NOT PARALLEL TO
@@ -11136,24 +11186,30 @@
 # # STROKE&GROUP_3
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD0><3>                                                    <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><3>                                                      <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_longsolidusoverlay><UEFD0><KP_3>                                                 <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><KP_3>                                                   <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                         <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><numbersign><numbersign>                                 <braceleft> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0><3>                                                     <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><3>                                                       <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0><KP_3>                                                  <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><KP_3>                                                    <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><numbersign><numbersign>                                  <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0><3>                                                     <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><3>                                                       <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0><KP_3>                                                  <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><KP_3>                                                    <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                          <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><numbersign><numbersign>                                  <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_longsolidusoverlay><UEFD0><3>                                                   <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><slash><numbersign><3>                                                     <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><slash><numbersign><KP_3>                                                  <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                        <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><slash><numbersign><numbersign><numbersign>                                <asciitilde> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<dead_longsolidusoverlay><UEFD0><3>                                                        <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><slash><numbersign><3>                                                          <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_longsolidusoverlay><UEFD0><KP_3>                                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><slash><numbersign><KP_3>                                                       <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                             <grave> : "⊅" U2285 # NOT A SUPERSET OF
-<Multi_key><slash><numbersign><numbersign><numbersign>                                     <grave> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_longsolidusoverlay><UEFD0><3>                                                   <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><slash><numbersign><3>                                                     <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_longsolidusoverlay><UEFD0><KP_3>                                                <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><slash><numbersign><KP_3>                                                  <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                        <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><slash><numbersign><numbersign><numbersign>                                <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_longsolidusoverlay><UEFD0><3>                                                          <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><slash><numbersign><3>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_longsolidusoverlay><UEFD0><KP_3>                                                       <bar> : "∦" U2226 # NOT PARALLEL TO
@@ -11189,12 +11245,18 @@
 # # STROKE&GROUP_4
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD0><4>                                                    <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><4>                                                      <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_longsolidusoverlay><UEFD0><KP_4>                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><KP_4>                                                   <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0><UEFD0>                                  <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                     <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><4>                                                     <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><4>                                                       <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><KP_4>                                                  <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><KP_4>                                                    <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0><UEFD0>                                   <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                      <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><4>                                                     <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><4>                                                       <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><KP_4>                                                  <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><KP_4>                                                    <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0><UEFD0>                                   <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                      <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_longsolidusoverlay><UEFD0><4>                                                            <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><4>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_4>                                                         <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
@@ -11206,10 +11268,14 @@
 # # STROKE&GROUP_5
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD0><5>                                                    <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><5>                                                      <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_longsolidusoverlay><UEFD0><KP_5>                                                 <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><KP_5>                                                   <braceleft> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><5>                                                     <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><5>                                                       <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><KP_5>                                                  <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><KP_5>                                                    <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><5>                                                     <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><5>                                                       <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_longsolidusoverlay><UEFD0><KP_5>                                                  <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><KP_5>                                                    <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_longsolidusoverlay><UEFD0><5>                                                            <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><5>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_longsolidusoverlay><UEFD0><KP_5>                                                         <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
@@ -11241,7 +11307,7 @@
 <Multi_key><slash><asciitilde>                                                             <equal> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 #
 #
-# # STROKE&DOUBLE_TILDE
+# # STROKE&MIDDLE_TILDE
 #   Dchar: 
 #
 <dead_longsolidusoverlay><dead_tilde><dead_tilde>                                          <equal> : "≉" U2249 # NOT ALMOST EQUAL TO
@@ -11266,10 +11332,10 @@
 # # STROKE&FLAG
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD7>                                                           <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal>                                                                  <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay>                                                           <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash>                                                                  <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<dead_longsolidusoverlay><UEFD7>                                                      <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><slash><equal>                                                             <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<UEFD7><dead_longsolidusoverlay>                                                      <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><equal><slash>                                                             <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <dead_longsolidusoverlay><UEFD7>                                                            <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <Multi_key><slash><equal>                                                                   <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <UEFD7><dead_longsolidusoverlay>                                                            <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
@@ -11283,36 +11349,36 @@
 # # STROKE&FLAG&GROUP_1
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD7><UEFD0>                                                    <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign>                                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay><UEFD0>                                                    <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign>                                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_longsolidusoverlay><UEFD7><UEFD0>                                               <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><slash><equal><numbersign>                                                 <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<UEFD7><dead_longsolidusoverlay><UEFD0>                                               <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><equal><slash><numbersign>                                                 <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 # # STROKE&FLAG&GROUP_2
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0>                                             <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><numbersign>                                          <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay><UEFD0><UEFD0>                                             <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><numbersign>                                          <grave> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0>                                        <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><slash><equal><numbersign><numbersign>                                     <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<UEFD7><dead_longsolidusoverlay><UEFD0><UEFD0>                                        <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><equal><slash><numbersign><numbersign>                                     <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 #
 #
 # # STROKE&FLAG&GROUP_3
 #   Dchar: 
 #
-<dead_longsolidusoverlay><UEFD7><UEFD0><3>                                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><3>                                                   <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_longsolidusoverlay><UEFD7><UEFD0><KP_3>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><KP_3>                                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0><UEFD0>                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><numbersign><numbersign>                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay><UEFD0><3>                                                 <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><3>                                                   <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay><UEFD0><KP_3>                                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><KP_3>                                                <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                      <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><numbersign><numbersign>                              <grave> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_longsolidusoverlay><UEFD7><UEFD0><3>                                            <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><slash><equal><numbersign><3>                                              <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_longsolidusoverlay><UEFD7><UEFD0><KP_3>                                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><slash><equal><numbersign><KP_3>                                           <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0><UEFD0>                                 <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><slash><equal><numbersign><numbersign><numbersign>                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<UEFD7><dead_longsolidusoverlay><UEFD0><3>                                            <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><equal><slash><numbersign><3>                                              <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<UEFD7><dead_longsolidusoverlay><UEFD0><KP_3>                                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><equal><slash><numbersign><KP_3>                                           <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<UEFD7><dead_longsolidusoverlay><UEFD0><UEFD0><UEFD0>                                 <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><equal><slash><numbersign><numbersign><numbersign>                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
 #^# SHORT_STROKE
@@ -11373,33 +11439,33 @@
 # # SHORT_STROKE&FLAG
 #   Dchar: 
 #
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7>                                  <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal>                                                           <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
+<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7>                             <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
+<Multi_key><slash><slash><equal>                                                      <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 #
 #
 # # SHORT_STROKE&FLAG&GROUP_1
 #   Dchar: 
 #
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0>                           <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign>                                               <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0>                      <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><slash><slash><equal><numbersign>                                          <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
 # # SHORT_STROKE&FLAG&GROUP_2
 #   Dchar: 
 #
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0>                    <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><numbersign>                                   <grave> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
+<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0>               <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
+<Multi_key><slash><slash><equal><numbersign><numbersign>                              <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 #
 #
 # # SHORT_STROKE&FLAG&GROUP_3
 #   Dchar: 
 #
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><3>                        <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><3>                                            <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><KP_3>                     <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><KP_3>                                         <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0><UEFD0>             <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><numbersign><numbersign>                       <grave> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><3>                   <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><slash><slash><equal><numbersign><3>                                       <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><KP_3>                <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><slash><slash><equal><numbersign><KP_3>                                    <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<dead_longsolidusoverlay><dead_longsolidusoverlay><UEFD7><UEFD0><UEFD0><UEFD0>        <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><slash><slash><equal><numbersign><numbersign><numbersign>                  <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
 #^# DOUBLE_STROKE
@@ -11504,8 +11570,8 @@
 #   Lenient group selection
 #   Dchar: 
 #
-<dead_abovering><UEFD0>                                                               <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign>                                                     <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
+<dead_abovering><UEFD0>                                                                <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<Multi_key><asterisk><numbersign>                                                      <braceleft> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0>                                                                        <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign>                                                              <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
@@ -11513,8 +11579,8 @@
 # # RING_ABOVE&GROUP_2
 #   Dchar: 
 #
-<dead_abovering><UEFD0><UEFD0>                                                        <apostrophe> : "∯" U222F # SURFACE INTEGRAL
-<Multi_key><asterisk><numbersign><numbersign>                                         <apostrophe> : "∯" U222F # SURFACE INTEGRAL
+<dead_abovering><UEFD0><UEFD0>                                                         <braceleft> : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><asterisk><numbersign><numbersign>                                          <braceleft> : "∯" U222F # SURFACE INTEGRAL
 <dead_abovering><UEFD0><UEFD0>                                                                 <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><numbersign>                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 #
@@ -11522,12 +11588,12 @@
 # # RING_ABOVE&GROUP_3
 #   Dchar: 
 #
-<dead_abovering><UEFD0><3>                                                            <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><asterisk><numbersign><3>                                                  <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<dead_abovering><UEFD0><KP_3>                                                         <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><asterisk><numbersign><KP_3>                                               <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<dead_abovering><UEFD0><UEFD0><UEFD0>                                                 <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><asterisk><numbersign><numbersign><numbersign>                             <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
+<dead_abovering><UEFD0><3>                                                             <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><asterisk><numbersign><3>                                                   <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<dead_abovering><UEFD0><KP_3>                                                          <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><asterisk><numbersign><KP_3>                                                <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<dead_abovering><UEFD0><UEFD0><UEFD0>                                                  <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><asterisk><numbersign><numbersign><numbersign>                              <braceleft> : "∰" U2230 # VOLUME INTEGRAL
 <dead_abovering><UEFD0><3>                                                                     <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><3>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_3>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
@@ -11539,12 +11605,12 @@
 # # RING_ABOVE&GROUP_4
 #   Dchar: 
 #
-<dead_abovering><UEFD0><4>                                                            <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><4>                                                  <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<dead_abovering><UEFD0><KP_4>                                                         <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><KP_4>                                               <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<dead_abovering><UEFD0><UEFD0><UEFD0><UEFD0>                                          <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><numbersign><numbersign><numbersign>                 <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
+<dead_abovering><UEFD0><4>                                                             <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<Multi_key><asterisk><numbersign><4>                                                   <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<dead_abovering><UEFD0><KP_4>                                                          <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<Multi_key><asterisk><numbersign><KP_4>                                                <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<dead_abovering><UEFD0><UEFD0><UEFD0><UEFD0>                                           <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<Multi_key><asterisk><numbersign><numbersign><numbersign><numbersign>                  <braceleft> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0><4>                                                                     <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><4>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_4>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
@@ -11556,10 +11622,10 @@
 # # RING_ABOVE&GROUP_5
 #   Dchar: 
 #
-<dead_abovering><UEFD0><5>                                                            <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><5>                                                  <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<dead_abovering><UEFD0><KP_5>                                                         <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
-<Multi_key><asterisk><numbersign><KP_5>                                               <apostrophe> : "∮" U222E # CONTOUR INTEGRAL
+<dead_abovering><UEFD0><5>                                                             <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<Multi_key><asterisk><numbersign><5>                                                   <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<dead_abovering><UEFD0><KP_5>                                                          <braceleft> : "∮" U222E # CONTOUR INTEGRAL
+<Multi_key><asterisk><numbersign><KP_5>                                                <braceleft> : "∮" U222E # CONTOUR INTEGRAL
 <dead_abovering><UEFD0><5>                                                                     <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk><numbersign><5>                                                           <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering><UEFD0><KP_5>                                                                  <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
@@ -11569,19 +11635,19 @@
 # # RING_ABOVE&GROUP_6
 #   Dchar: 
 #
-<dead_abovering><UEFD0><6>                                                            <apostrophe> : "∯" U222F # SURFACE INTEGRAL
-<Multi_key><asterisk><numbersign><6>                                                  <apostrophe> : "∯" U222F # SURFACE INTEGRAL
-<dead_abovering><UEFD0><KP_6>                                                         <apostrophe> : "∯" U222F # SURFACE INTEGRAL
-<Multi_key><asterisk><numbersign><KP_6>                                               <apostrophe> : "∯" U222F # SURFACE INTEGRAL
+<dead_abovering><UEFD0><6>                                                             <braceleft> : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><asterisk><numbersign><6>                                                   <braceleft> : "∯" U222F # SURFACE INTEGRAL
+<dead_abovering><UEFD0><KP_6>                                                          <braceleft> : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><asterisk><numbersign><KP_6>                                                <braceleft> : "∯" U222F # SURFACE INTEGRAL
 #
 #
 # # RING_ABOVE&GROUP_7
 #   Dchar: 
 #
-<dead_abovering><UEFD0><7>                                                            <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><asterisk><numbersign><7>                                                  <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<dead_abovering><UEFD0><KP_7>                                                         <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><asterisk><numbersign><KP_7>                                               <apostrophe> : "∰" U2230 # VOLUME INTEGRAL
+<dead_abovering><UEFD0><7>                                                             <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><asterisk><numbersign><7>                                                   <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<dead_abovering><UEFD0><KP_7>                                                          <braceleft> : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><asterisk><numbersign><KP_7>                                                <braceleft> : "∰" U2230 # VOLUME INTEGRAL
 #
 #
 # # RING_ABOVE&GROUP_11
@@ -11717,12 +11783,19 @@
 #   But the Multi_key equivalent of this way to input superscript digits cannot
 #   be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and as of
 #   "⁸" U2078, with a new sequence introduced for the less frequent "♥" U2665.
-#   So the full set of numeric base characters is engaged for compose sequences
-#   yielding emoji.
 #   See #   Heart emoji
 #
-#   As a result, superscript by dead_circumflex is dropped entirely, given that
-#   for portability, all Multi_key equivalents must be supported.
+#   So the set of remaining numeric base characters is engaged for bullets as a
+#   useful functionality after support for bullets was disrupted in the symbols
+#   groups. Now a set of 8 bullets is supported: "•" U2022, "◦" U25E6,
+#   "▪" U25AA, "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3.
+#
+#   Previously, the heart emoji logic was followed through, supporting the full
+#   set of filled (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
+#   outlined (non-emoji "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664) suits.
+#   See # # B07-level1
+#   See # # CIRCUMFLEX&GROUP_2
+#   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #   The diaeresis dead key offers an acceptable alternative with good mnemonics
 #   using the traditional mapping on the same key in shift position.
@@ -14756,8 +14829,13 @@
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol, have quick access
-#   by dead_diaeresis followed by bar or slash, and backslash respectively, as
-#   these symbols are in group 3 of | for ‖, and in group 9 of | for ¦.
+#   by dead_diaeresis followed by slash, or backslash respectively (not bar,
+#   due to conflicts with the diaeresis and macron virtual dead keys).
+#   See # # DIAERESIS&MACRON
+#   See # # MACRON&DIAERESIS
+#
+#   "¦" U00A6 is also in group 12 of |.
+#   See # # C10
 #
 #   Superscript digits, formerly in dead_circumflex, are also supported for the
 #   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
