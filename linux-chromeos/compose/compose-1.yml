@@ -136,7 +136,7 @@
 #   The scheme using Private Use characters is found on FDO:
 #   https://bugs.freedesktop.org/show_bug.cgi?id=19506
 #
-#   See also on Gnome:
+#   On Gnome:
 #   https://bugzilla.gnome.org/show_bug.cgi?id=537457#c7
 #
 #   Unicode Private Use areas are managed by CSUR and UCSUR:
@@ -210,14 +210,16 @@
 #
 #   Unicode was supposed to encode SI/BIPM number typesetting as well as French
 #   punctuation typesetting, and for that purpose encoded THIN SPACE along with
-#   all other typographic space characters in the range U+2000..U+200A, and for
-#   that purpose designed the line breaking property as no-break for all spaces
-#   starting with U+2002, with the widest spaces both in a breaking variant and
-#   a no-break variant (U+2000, U+2001 vs U+2002, U+2003). But that design goal
-#   was compromised, leaving as no-break only U+2007 FIGURE SPACE, which is the
-#   single least useful space to be no-break since it only occurs inside tables
-#   for the purpose of indenting by the width of a digit, alongside U+2008 that
-#   indents by the width of a decimal dot or comma, and never in flowing text.
+#   other typographic space characters in the range U+2000..U+200A. Accordingly
+#   the line breaking property was set to no-break for all spaces starting with
+#   U+2002, after the two widest spaces in a breaking variant U+2000, U+2001 vs
+#   U+2002, U+2003.
+#
+#   But that design goal was ultimately compromised. To cover up the vandalism,
+#   U+2007 FIGURE SPACE was left no-break with the hypocritical allegation that
+#   this space is used “in” numbers, while it was encoded as the tabular space,
+#   to be used before numbers when typesetting tables the old way, alongside an
+#   equivalent indenting by the width of a decimal dot or comma: U+2008.
 #   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 #   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
 #   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
@@ -229,9 +231,9 @@
 #   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf
 #
-#   The Unicode position is found in UAX #14 since 2007, and in TUS since 2014.
-#   The Unicode Standard, version 7.0.0, 2014, p. 265, chapter 6, section 6.2,
-#   heading “Space Characters”, subheading “Narrow No-Break Space”. Currently:
+#   The corrected Unicode position is found in UAX #14 since 2007, in TUS since
+#   2014: The Unicode Standard, version 7.0.0, 2014, p. 265, section 6.2,
+#   heading “Space Characters”, subheading “Narrow No-Break Space”.
 #   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834
 #   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,300
 #
@@ -241,13 +243,15 @@
 #   Unicode® Standard Annex #14, Unicode Line Breaking Algorithm, Unicode 15.1.0:
 #   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #
-#      When NARROW NO-BREAK SPACE occurs in French text, it should be interpreted
-#      as an “espace fine insécable”.
+#      When NARROW NO-BREAK SPACE occurs in French text, it should be
+#      interpreted as an “espace fine insécable”.
 #
-#   The Unicode position reflects also in the following document:
+#   The Unicode position reflects also in a Script Ad Hoc Group (since 2024-03:
+#   Script Encoding Working Group) recommendation made on 2019-07-22 for the
+#   Unicode Technical Committee meeting #160.
+#   https://www.unicode.org/L2/topical/scriptadhoc/
 #   Recommendations to UTC #160 July 2019 on Script Proposals — Script Ad Hoc group
-#   http://www.unicode.org/L2/L2019/19286-script-recs.pdf
-#   Page 14 (last page) states:
+#   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
 #      The Unicode Standard includes several different space characters.
 #      It is acceptable to use THIN SPACE, and then use a higher-level protocol,
@@ -262,9 +266,9 @@
 #   in short measurement unit patterns, in v34, released on 2018-10-15:
 #   https://cldr.unicode.org/index/downloads/cldr-34
 #
-#      The French locale now uses narrow no-break space U+202F is several places:
-#      as the numeric grouping separator, in many short unit patterns, and in
-#      the locale display name patterns. It also changed normal space to
+#      The French locale now uses narrow no-break space U+202F in several
+#      places: as the numeric grouping separator, in many short unit patterns,
+#      and in the locale display name patterns. It also changed normal space to
 #      no-break space U+00A0 in the wide unit patterns.
 #
 #      Migration
@@ -272,8 +276,9 @@
 #      French grouping separator changed from no-break space U+00A0 to
 #      narrow no-break space U+202F.
 #
-#
-#   See also the CLDR feedback issue “PRI #367: Automated punctuation spacing”:
+#   As of punctuation spacing automation while writing, there is a feedback
+#   issue submitted while commenting an LDML extension designed for SIL/Keyman:
+#   “PRI #367: Automated punctuation spacing”
 #   https://unicode-org.atlassian.net/browse/CLDR-10904
 #
 <UEF60> : " !"
@@ -290,10 +295,11 @@
 #       is spaced out using NNBSP.
 #   [2] Based on the visual aspect in the current edition of the style manual,
 #       Imprimerie nationale, the guillemets are typeset with NNBSP, although
-#       the verbatim rule suggests that they be spaced out using NBSP.
+#       the verbatim rule given on page 149 specifies that they be spaced out
+#       using NBSP.
 #
 #
-# # Abbreviation "Numéro"
+# # Abbreviation "Numéro" with trailing space
 #
 #   With regular superscript o U1D52 and NNBSP U202F.
 #
@@ -301,20 +307,20 @@
 <UEF69> : "Nᵒ "
 #
 #
-# # Ordinal indicators
+# # Abbreviation "Numéro" without spacing
+#
+#   With regular superscript o U1D52, without NNBSP U202F.
+#
+<UEF6A> : "nᵒ"
+<UEF6B> : "Nᵒ"
+#
+#
+# # Ordinal indicator with trailing space
 #
 #   Ordinal indicator ᵉ with automated spacing by NNBSP U202F,
 #   Intended to type century figures in French style using Roman numerals.
 #
-<UEF6A> : "ᵉ "
-#
-#
-# # Abbreviation "Numéro"
-#
-#   With regular superscript o U1D52, without NNBSP U202F.
-#
-<UEF6B> : "nᵒ"
-<UEF6C> : "Nᵒ"
+<UEF6C> : "ᵉ "
 #
 #
 # # Double zero
@@ -333,15 +339,18 @@
 #
 # # Justifying no-break spaces
 #
-#   NO-BREAK SPACE U00A0 is tailored as fixed-width in most word processors.
-#   That raises issues in Polish and other locales using a justifying no-break
-#   space.
+#   NO-BREAK SPACE U00A0 is abusively and unchangeably tailored as fixed-width
+#   in word processors other than Microsoft Word 2013, raising issues in Polish
+#   as well as in Russian and other locales requiring no-break space between
+#   words, and thus requiring the no-break space to be justifying as defined.
 #
 #   The justifying no-break space strings using a break-preventing character are
 #   courtesy Jakub Stachu, in "Non‐breakable space justification in Word 2016"
 #   on Microsoft Community forum MS Office > Word > Windows 8 on November 5, 2017:
 #   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
-#   Also L2/19-114 "Proposal to focus line break prevention design on end-user input"
+#
+#   The issue has been formally submitted to Unicode in L2/19-114
+#   “Proposal to focus line break prevention design on end-user input”
 #   https://www.unicode.org/L2/L2019/19114-line-break-design.pdf
 #
 <UEF6E> : " ⁠" # With WORD JOINER U2060 [1]
@@ -392,21 +401,15 @@
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, UFEFF ZERO WIDTH NO-BREAK SPACE
 #
-#   This is an acceptable fallback, given in most fonts NNBSP has the same width as THIN SPACE,
-#   and THIN SPACE has line breaking class BA (break after). See:
-#   "Recommendations to UTC #160 July 2019 on Script Proposals — Script Ad Hoc group"
-#   http://www.unicode.org/L2/L2019/19286-script-recs.pdf
-#   Page 14 (last page) states:
-#
-#      The Unicode Standard includes several different space characters. It is acceptable to use THIN
-#      SPACE, and then use a higher-level protocol, a word joiner, or tailored line-breaking to prevent
-#      line-breaking. Alternatively, NNBSP can be used to force no-break behavior.
+#   This is an acceptable fallback, given in most fonts NNBSP has the same width
+#   as THIN SPACE, and THIN SPACE has line breaking class BA (break after).
+#   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
 #   This fallback works everywhere THIN SPACE and WORD JOINER or ZERO WIDTH NO-BREAK SPACE are supported.
 #
-#   Display: Consistently, THIN SPACE is represented like SPACE by the Gedit Draw Spaces plugin.
+#   Gedit Draw Spaces plugin: Consistently, THIN SPACE is represented like SPACE.
 #
-#   This space is *not* SPACE but U2009 THIN SPACE followed by UFEFF ZWNBSP.
+#   These spaces are U2009 THIN SPACE followed by UFEFF ZWNBSP.
 #
 <UEF80> : " ﻿!"
 <UEF81> : " ﻿:"
@@ -455,20 +458,15 @@
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, U2060 WORD JOINER
 #
-#   This is an acceptable fallback, given in most fonts NNBSP has the same width as THIN SPACE, and
-#   THIN SPACE has line breaking class BA (break after). See the following document:
-#   Recommendations to UTC #160 July 2019 on Script Proposals — Script Ad Hoc group
-#   http://www.unicode.org/L2/L2019/19286-script-recs.pdf
-#   Page 14 (last page) states:
-#      The Unicode Standard includes several different space characters. It is acceptable to use THIN
-#      SPACE, and then use a higher-level protocol, a word joiner, or tailored line-breaking to prevent
-#      line-breaking. Alternatively, NNBSP can be used to force no-break behavior.
+#   This is an acceptable fallback, given in most fonts NNBSP has the same
+#   width as THIN SPACE, and THIN SPACE has line breaking class Break After.
+#   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
 #   This fallback works everywhere THIN SPACE and WORD JOINER are supported.
 #
-#   Display: THIN SPACE is represented like SPACE by the Gedit Draw Spaces plugin.
+#   Gedit Draw Spaces plugin: THIN SPACE is represented like SPACE.
 #
-#   This space is *not* SPACE but U2009 THIN SPACE followed by U2060 WORD JOINER.
+#   These spaces are U2009 THIN SPACE followed by U2060 WORD JOINER.
 #
 <UEF90> : " ⁠!"
 <UEF91> : " ⁠:"
@@ -520,7 +518,8 @@
 # # Unicode prefix
 #
 #   This sequence was supported initially, then was dropped as overkill.
-#   @since 2022-11-11T1420+0100 it is supported, on Shift + AltFr + D03.
+#   On 2022-11-11T1420+0100 it was readded. As of v2 it is on the U key
+#   (Shift + AltFr + D07).
 #
 #   'U+' is an ASCII-fied U228E ⊎ MULTISET UNION.
 #   Kenneth WHISTLER exposed the rationale in:
@@ -1181,7 +1180,7 @@
 #   The common horizontal ellipsis, here for completeness, is on live key.
 #   One dot and 2 dot leaders are supported consistently by this occasion.
 #   For ease of input, space termination is skipped for all of these.
-#   See also "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
+#   See "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
 #
 <Multi_key><period><underscore>                                                                    : "․" U2024 # ONE DOT LEADER
 <Multi_key><period><period><underscore>                                                            : "‥" U2025 # TWO DOT LEADER
@@ -2286,7 +2285,7 @@
 #   See # # Mathematical symbols in Miscellaneous Technical block U2300
 #
 #   In group 1 of (                                                                                : "⌀" U2300 # DIAMETER SIGN
-#   See #*# CIRCUMFLEX                                                                             : "⌀" U2300 # DIAMETER SIGN
+#   In #*# CIRCUMFLEX                                                                              : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><o><slash>                                                                      <space> : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
 #
@@ -2464,7 +2463,7 @@
 ### Mathematical symbols by input composition
 #
 #
-# # Count of math sequences
+# # Count of math symbols
 #
 #       2310 total characters declared as for use in math according to
 #            https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
@@ -2601,13 +2600,12 @@
 #
 # # Not sign
 #
+#   The not sign is also in group 2 of grave on the N key.
+#
+#   See "⫬" U2AEC, "⫭" U2AED, and not-math "⌙" U2319.
+#
 #   As rightsinglequotemark is on the apostrophe key in French mode, sequences
-#   with apostrophe work also with rightsinglequotemark, like sequences with a
-#   leading space also work with a leading no-break space.
-#
-#   The not sign is also in group 5 of backslash on the N key.
-#
-#   See also "⫬" U2AEC, "⫭" U2AED, and not-math "⌙" U2319.
+#   with apostrophe work also with rightsinglequotemark.
 #
 <Multi_key><minus><apostrophe>                                                             <space> : "¬" U00AC # NOT SIGN
 <Multi_key><minus><apostrophe>                                                      <nobreakspace> : "¬" U00AC # NOT SIGN
@@ -2630,7 +2628,7 @@
 #
 #   Basic operators are supported by Multi_key despite being on live keys.
 #
-#   See also "⋇" U22C7 DIVISION TIMES.
+#   See "⋇" U22C7 DIVISION TIMES.
 #
 <Multi_key><x>                                                                             <space> : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                      <nobreakspace> : "×" U00D7 # MULTIPLICATION SIGN
@@ -2643,7 +2641,7 @@
 # # Greek mathematical SMP symbols
 #
 #   The at sign is used as a modifier in these Multi_key sequences because it
-#   is on the same key as dead_greek and is thus its Multi_key equivalent.
+#   is the Multi_key equivalent of dead_greek.
 #   See #*# GREEK
 #
 #   There are many more Greek symbols. Some TeX math packages may not support
@@ -2651,7 +2649,7 @@
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=79
 #
 #   The following are those with Unicode `Derived Property: Math="Y"`.
-#   See also # # Mathematical Greek alphabets and symbols
+#   See # # Mathematical Greek alphabets and symbols
 #
 <Multi_key><b><at>                                                                         <space> : "ϐ" U03D0 # GREEK BETA SYMBOL
 <Multi_key><b><at>                                                                  <nobreakspace> : "ϐ" U03D0 # GREEK BETA SYMBOL
@@ -2683,7 +2681,15 @@
 #
 # # Double vertical bar
 #
-#   Also in group 3 of bar, and in diaeresis of bar or slash, see #*# DIAERESIS
+#   Also supported by dead_macron followed by 2, with the homoglyph "∥" U2225
+#   in slot 4.
+#   See #*# MACRON
+#
+#   Additionally, this can be input by dead_diaeresis followed by slash (not
+#   bar, due to conflicts with the diaeresis and macron virtual dead keys).
+#   See #*# DIAERESIS
+#   See # # DIAERESIS&MACRON
+#   See # # MACRON&DIAERESIS
 #
 <Multi_key><2><bar>                                                                        <space> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><2><bar>                                                                 <nobreakspace> : "‖" U2016 # DOUBLE VERTICAL LINE
@@ -2693,9 +2699,11 @@
 #
 # # Primes
 #
-#   This adds to the support by dead key. See #*# ACUTE
-#   Space termination is not needed, so it is skipped for ease of input.
-#   See also "⁗" U2057 sorted in its own subsection for consistency.
+#   This adds to the support by dead_acute, where Multi_key sequences are
+#   reversed. Space termination is not needed here either, so it is skipped
+#   for ease of input.
+#   See #*# ACUTE
+#   See "⁗" U2057 sorted in its own subsection for the sake of ascending order.
 #
 <Multi_key><1><apostrophe>                                                                         : "′" U2032 # PRIME
 <Multi_key><KP_1><apostrophe>                                                                      : "′" U2032 # PRIME
@@ -2713,8 +2721,10 @@
 #
 # # Reversed primes
 #
-#   These are no math symbols. Also supported by dead key. See #*# GRAVE
+#   Although not being math symbols, these are supported for consistency.
 #   Space termination is not needed, so it is skipped for ease of input.
+#   Also supported by dead_grave, with reversed Multi_key sequences.
+#   See #*# GRAVE
 #
 <Multi_key><1><grave>                                                                              : "‵" U2035 # REVERSED PRIME
 <Multi_key><KP_1><grave>                                                                           : "‵" U2035 # REVERSED PRIME
@@ -2734,12 +2744,12 @@
 #
 # # Fraction slash
 #
-#   Also on live B09: Always on level 7, and on level 6 while ModLock is on.
+#   Also on live B09: Always on level 7, and on level 6 in ASCII mode.
 #   Additionally, U2044 FRACTION SLASH is supported by Multi_key the same way
 #   as U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
 #   See # # Vulgar fractions
 #
-#   Also in dead_longsolidusoverlay without space termination.
+#   Also in dead_longsolidusoverlay followed by 4, without space termination.
 #   See #*# STROKE
 #
 <Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
@@ -2768,7 +2778,9 @@
 #
 # # Quadruple prime
 #
-#   This is no math symbol. See # # Primes
+#   Although no math symbol, this is supported for consistency.
+#   See # # Primes
+#   See #*# ACUTE
 #
 <Multi_key><4><apostrophe>                                                                         : "⁗" U2057 # QUADRUPLE PRIME
 <Multi_key><KP_4><apostrophe>                                                                      : "⁗" U2057 # QUADRUPLE PRIME
@@ -2796,7 +2808,7 @@
 <Multi_key><nobreakspace><plus>                                                     <nobreakspace> : "⁤" U2064 # INVISIBLE PLUS
 #
 #
-# # Superscript or subscript signs, symbol and punctuation
+# # Superscript or subscript signs, symbol, punctuation
 #
 #   Primarily supported by dead keys and their Multi_key equivalents.
 #   See #*# SUPERSCRIPT
@@ -2907,7 +2919,9 @@
 #
 #   Other alphanumeric mathematical symbols are supported in groups 6 to 10,
 #   including some of these that have extra signatures here for convenience.
-#   The first 9 correspondences are indicated; the liter ℓ goes extra.
+#   The liter symbol "ℓ" U2113 goes extra, "𝓁" U1D4C1 is encoded separately.
+#   Space termination is skipped where obviously dispensable.
+#   Alternative input methods are hinted in comment lines.
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Letterlike_Symbols_block
 #   https://en.wikipedia.org/wiki/Letterlike_Symbols
@@ -3004,7 +3018,7 @@
 <Multi_key><F><slash><slash>                                                               <space> : "ℱ" U2131 # SCRIPT CAPITAL F
 <Multi_key><F><slash><slash>                                                        <nobreakspace> : "ℱ" U2131 # SCRIPT CAPITAL F
 #   In group 7 of M                                                                                : "ℳ" U2133 # SCRIPT CAPITAL M
-#   See #*# CURRENCY                                                                               : "ℳ" U2133 # SCRIPT CAPITAL M
+#   In #*# CURRENCY                                                                                : "ℳ" U2133 # SCRIPT CAPITAL M
 <Multi_key><M><slash><slash>                                                               <space> : "ℳ" U2133 # SCRIPT CAPITAL M
 <Multi_key><M><slash><slash>                                                        <nobreakspace> : "ℳ" U2133 # SCRIPT CAPITAL M
 #   In group 7 of o                                                                                : "ℴ" U2134 # SCRIPT SMALL O
@@ -3042,18 +3056,18 @@
 <Multi_key><space><S><S>                                                            <nobreakspace> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 <Multi_key><nobreakspace><S><S>                                                            <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 <Multi_key><nobreakspace><S><S>                                                     <nobreakspace> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
-#   See #*# TURNED                                                                                 : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
-#   See # # TURNED&GROUP_1                                                                         : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
+#   In #*# TURNED                                                                                  : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
+#   In # # TURNED&GROUP_1                                                                          : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
 <Multi_key><G><percent>                                                                    <space> : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
 <Multi_key><G><percent>                                                             <nobreakspace> : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
-#   See # # TURNED&GROUP_1                                                                         : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
+#   In # # TURNED&GROUP_1                                                                          : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
 <Multi_key><L><percent>                                                                    <space> : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
 <Multi_key><L><percent>                                                             <nobreakspace> : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
-#   See #*# REVERSED                                                                               : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
+#   In #*# REVERSED                                                                                : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><L><backslash>                                                                  <space> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><L><backslash>                                                           <nobreakspace> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
-#   See #*# TURNED                                                                                 : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
-#   See # # TURNED&GROUP_1                                                                         : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
+#   In #*# TURNED                                                                                  : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
+#   In # # TURNED&GROUP_1                                                                          : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><Y><percent>                                                                    <space> : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><Y><percent>                                                             <nobreakspace> : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><D><D><slash><slash>                                                            <space> : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
@@ -3066,7 +3080,7 @@
 <Multi_key><i><i><slash><slash>                                                     <nobreakspace> : "ⅈ" U2148 # DOUBLE-STRUCK ITALIC SMALL I
 <Multi_key><j><j><slash><slash>                                                            <space> : "ⅉ" U2149 # DOUBLE-STRUCK ITALIC SMALL J
 <Multi_key><j><j><slash><slash>                                                     <nobreakspace> : "ⅉ" U2149 # DOUBLE-STRUCK ITALIC SMALL J
-#   See #*# TURNED                                                                                 : "⅋" U214B # TURNED AMPERSAND
+#   In #*# TURNED                                                                                  : "⅋" U214B # TURNED AMPERSAND
 <Multi_key><ampersand><percent>                                                            <space> : "⅋" U214B # TURNED AMPERSAND
 <Multi_key><ampersand><percent>                                                     <nobreakspace> : "⅋" U214B # TURNED AMPERSAND
 #
@@ -3322,7 +3336,7 @@
 #
 # # Mathematical Operators of block U2200
 #
-#   Some symbols already have easy access in groups. Those whose straightforward
+#   Some symbols also have easy access in groups. Those whose straightforward
 #   Multi_key sequences conflict with dead key equivalents have sequences with a
 #   leading space. Some examples: "∕" U2215 DIVISION SLASH, "∖" U2216 SET MINUS,
 #   "∣" U2223 DIVIDES, "∼" U223C TILDE OPERATOR.
@@ -3379,19 +3393,22 @@
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
 #   On live key AltFr + D05                                                                        : "−" U2212 # MINUS SIGN
+#   In group 1 of -                                                                                : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                                  <space> : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                           <nobreakspace> : "−" U2212 # MINUS SIGN
+#   For "∓" U2213, space termination is skipped like it is for "±" U00B1,
+#   according to comment in # # Plus minus
 <Multi_key><minus><plus>                                                                           : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><period><plus>                                                                  <space> : "∔" U2214 # DOT PLUS
 <Multi_key><period><plus>                                                           <nobreakspace> : "∔" U2214 # DOT PLUS
-#   In group 1 of /                                                                                : "∕" U2215 # DIVISION SLASH
-#   See #*# STROKE                                                                                 : "∕" U2215 # DIVISION SLASH
+#   In group 12 of /                                                                               : "∕" U2215 # DIVISION SLASH
+#   In #*# STROKE                                                                                  : "∕" U2215 # DIVISION SLASH
 <Multi_key><space><slash>                                                                  <space> : "∕" U2215 # DIVISION SLASH
 <Multi_key><space><slash>                                                           <nobreakspace> : "∕" U2215 # DIVISION SLASH
 <Multi_key><nobreakspace><slash>                                                           <space> : "∕" U2215 # DIVISION SLASH
 <Multi_key><nobreakspace><slash>                                                    <nobreakspace> : "∕" U2215 # DIVISION SLASH
-#   In group 1 of \                                                                                : "∖" U2216 # SET MINUS
-#   See #*# REVERSED                                                                               : "∖" U2216 # SET MINUS
+#   In group 12 of \                                                                               : "∖" U2216 # SET MINUS
+#   In #*# REVERSED                                                                                : "∖" U2216 # SET MINUS
 <Multi_key><space><backslash>                                                              <space> : "∖" U2216 # SET MINUS
 <Multi_key><space><backslash>                                                       <nobreakspace> : "∖" U2216 # SET MINUS
 <Multi_key><nobreakspace><backslash>                                                       <space> : "∖" U2216 # SET MINUS
@@ -3406,17 +3423,17 @@
 <Multi_key><space><period><period>                                                  <nobreakspace> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><nobreakspace><period><period>                                                  <space> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><nobreakspace><period><period>                                           <nobreakspace> : "∙" U2219 # BULLET OPERATOR
-#   In group 2 of }                                                                                : "√" U221A # SQUARE ROOT
+#   In group 2 of \                                                                                : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                          <space> : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                   <nobreakspace> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                       <space> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                <nobreakspace> : "√" U221A # SQUARE ROOT
-#   In group 3 of }                                                                                : "∛" U221B # CUBE ROOT
+#   In group 3 of \                                                                                : "∛" U221B # CUBE ROOT
 <Multi_key><3><v>                                                                          <space> : "∛" U221B # CUBE ROOT
 <Multi_key><3><v>                                                                   <nobreakspace> : "∛" U221B # CUBE ROOT
 <Multi_key><KP_3><v>                                                                       <space> : "∛" U221B # CUBE ROOT
 <Multi_key><KP_3><v>                                                                <nobreakspace> : "∛" U221B # CUBE ROOT
-#   In group 4 of }                                                                                : "∜" U221C # FOURTH ROOT
+#   In group 4 of \                                                                                : "∜" U221C # FOURTH ROOT
 <Multi_key><4><v>                                                                          <space> : "∜" U221C # FOURTH ROOT
 <Multi_key><4><v>                                                                   <nobreakspace> : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                       <space> : "∜" U221C # FOURTH ROOT
@@ -3441,20 +3458,20 @@
 <Multi_key><slash><underscore><parenright>                                          <nobreakspace> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><slash><backslash><parenright>                                                  <space> : "∢" U2222 # SPHERICAL ANGLE
 <Multi_key><slash><backslash><parenright>                                           <nobreakspace> : "∢" U2222 # SPHERICAL ANGLE
-#   In group 1 of |                                                                                : "∣" U2223 # DIVIDES
+#   In #*# MACRON                                                                                  : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                                    <space> : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                             <nobreakspace> : "∣" U2223 # DIVIDES
 <Multi_key><nobreakspace><bar>                                                             <space> : "∣" U2223 # DIVIDES
 <Multi_key><nobreakspace><bar>                                                      <nobreakspace> : "∣" U2223 # DIVIDES
-#   See #*# STROKE                                                                                 : "∤" U2224 # DOES NOT DIVIDE
+#   In #*# STROKE                                                                                  : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                                    <space> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                             <nobreakspace> : "∤" U2224 # DOES NOT DIVIDE
-#   In group 2 of |                                                                                : "∥" U2225 # PARALLEL TO
+#   In #*# MACRON                                                                                  : "∥" U2225 # PARALLEL TO
 <Multi_key><space><bar><bar>                                                               <space> : "∥" U2225 # PARALLEL TO
 <Multi_key><space><bar><bar>                                                        <nobreakspace> : "∥" U2225 # PARALLEL TO
 <Multi_key><nobreakspace><bar><bar>                                                        <space> : "∥" U2225 # PARALLEL TO
 <Multi_key><nobreakspace><bar><bar>                                                 <nobreakspace> : "∥" U2225 # PARALLEL TO
-#   See #*# STROKE                                                                                 : "∦" U2226 # NOT PARALLEL TO
+#   In #*# STROKE                                                                                  : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><bar><bar><slash>                                                               <space> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><bar><bar><slash>                                                        <nobreakspace> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><a>                                                                             <space> : "∧" U2227 # LOGICAL AND
@@ -3471,21 +3488,21 @@
 <Multi_key><n>                                                                      <nobreakspace> : "∩" U2229 # INTERSECTION
 <Multi_key><u>                                                                             <space> : "∪" U222A # UNION
 <Multi_key><u>                                                                      <nobreakspace> : "∪" U222A # UNION
-#   In group 5 of '                                                                                : "∫" U222B # INTEGRAL
+#   In group 5 of {                                                                                : "∫" U222B # INTEGRAL
 <Multi_key><s>                                                                             <space> : "∫" U222B # INTEGRAL
 <Multi_key><s>                                                                      <nobreakspace> : "∫" U222B # INTEGRAL
-#   In group 6 of '                                                                                : "∬" U222C # DOUBLE INTEGRAL
+#   In group 6 of {                                                                                : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><2><s>                                                                          <space> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><2><s>                                                                   <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><KP_2><s>                                                                       <space> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><KP_2><s>                                                                <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
-#   In group 7 of '                                                                                : "∭" U222D # TRIPLE INTEGRAL
+#   In group 7 of {                                                                                : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><3><s>                                                                          <space> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><3><s>                                                                   <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><KP_3><s>                                                                       <space> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><KP_3><s>                                                                <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
-#   See #*# RING&CURRENCY                                                                          : "∮" U222E # CONTOUR INTEGRAL
-#   See # # RING_ABOVE&GROUP_4                                                                     : "∮" U222E # CONTOUR INTEGRAL
+#   In #*# RING&CURRENCY                                                                           : "∮" U222E # CONTOUR INTEGRAL
+#   In # # RING_ABOVE&GROUP_4                                                                      : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><s><o>                                                                          <space> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><s><o>                                                                   <nobreakspace> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><2><s><o>                                                                       <space> : "∯" U222F # SURFACE INTEGRAL
@@ -3533,7 +3550,7 @@
 <Multi_key><nobreakspace><asciitilde>                                               <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><asciitilde><backslash>                                                         <space> : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                  <nobreakspace> : "∽" U223D # REVERSED TILDE
-#   See #*# INVERTED                                                                               : "∾" U223E # INVERTED LAZY S
+#   In #*# INVERTED                                                                                : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><percent>                                                                    <space> : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><percent>                                                             <nobreakspace> : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><percent><percent>                                                           <space> : "∾" U223E # INVERTED LAZY S
@@ -3548,17 +3565,17 @@
 <Multi_key><S><I><N>                                                                <nobreakspace> : "∿" U223F # SINE WAVE
 <Multi_key><asciitilde><percent>                                                           <space> : "≀" U2240 # WREATH PRODUCT
 <Multi_key><asciitilde><percent>                                                    <nobreakspace> : "≀" U2240 # WREATH PRODUCT
-#   See #*# STROKE                                                                                 : "≁" U2241 # NOT TILDE
+#   In #*# STROKE                                                                                  : "≁" U2241 # NOT TILDE
 <Multi_key><asciitilde><slash>                                                             <space> : "≁" U2241 # NOT TILDE
 <Multi_key><asciitilde><slash>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
 <Multi_key><minus><asciitilde>                                                             <space> : "≂" U2242 # MINUS TILDE
 <Multi_key><minus><asciitilde>                                                      <nobreakspace> : "≂" U2242 # MINUS TILDE
 #   In group 2 of ~                                                                                : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-#   See #*# TILDE                                                                                  : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+#   In #*# TILDE                                                                                   : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus>                                                             <space> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus>                                                      <nobreakspace> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-#   See # # STROKE&GROUP_2                                                                         : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
-#   See # # STROKE&TILDE                                                                           : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
+#   In # # STROKE&GROUP_2                                                                          : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
+#   In # # STROKE&TILDE                                                                            : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                                      <space> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                               <nobreakspace> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 #   In group 3 of ~                                                                                : "≅" U2245 # APPROXIMATELY EQUAL TO
@@ -3566,20 +3583,20 @@
 <Multi_key><space><asciitilde><equal>                                               <nobreakspace> : "≅" U2245 # APPROXIMATELY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal>                                               <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal>                                        <nobreakspace> : "≅" U2245 # APPROXIMATELY EQUAL TO
-#   See # # STROKE&GROUP_3                                                                         : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+#   In # # STROKE&GROUP_3                                                                          : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><space><asciitilde><equal><slash>                                               <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><space><asciitilde><equal><slash>                                        <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal><slash>                                        <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal><slash>                                 <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-#   See #^# SHORT_STROKE                                                                           : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
+#   In #^# SHORT_STROKE                                                                            : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                                      <space> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                               <nobreakspace> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-#   See #^# TILDE_BELOW, MIDDLE_TILDE, DOUBLE_MIDDLE_TILDE                                         : "≈" U2248 # ALMOST EQUAL TO
+#   In #^# MIDDLE_TILDE                                                                            : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><space><asciitilde><asciitilde>                                                 <space> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><space><asciitilde><asciitilde>                                          <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><nobreakspace><asciitilde><asciitilde>                                          <space> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><nobreakspace><asciitilde><asciitilde>                                   <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
-#   See # # STROKE&DOUBLE_TILDE                                                                    : "≉" U2249 # NOT ALMOST EQUAL TO
+#   In # # STROKE&MIDDLE_TILDE                                                                     : "≉" U2249 # NOT ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><slash>                                                 <space> : "≉" U2249 # NOT ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><slash>                                          <nobreakspace> : "≉" U2249 # NOT ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><minus>                                                 <space> : "≊" U224A # ALMOST EQUAL OR EQUAL TO
@@ -4518,14 +4535,14 @@
 #   https://www.unicode.org/charts/PDF/U2600.pdf
 #   https://www.unicode.org/charts/nameslist/n_2600.html
 #
-#   In group 1 of {                                                                                : "★" U2605 # BLACK STAR
+#   In group 1 of € and "                                                                          : "★" U2605 # BLACK STAR
 <Multi_key><space><space><asterisk><numbersign>                                            <space> : "★" U2605 # BLACK STAR
 <Multi_key><space><space><asterisk><numbersign>                                     <nobreakspace> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><space><asterisk><numbersign>                                     <space> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><space><asterisk><numbersign>                              <nobreakspace> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                              <space> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                       <nobreakspace> : "★" U2605 # BLACK STAR
-#   In group 1 of }                                                                                : "☆" U2606 # WHITE STAR
+#   In group 1 of \                                                                                : "☆" U2606 # WHITE STAR
 <Multi_key><space><space><asterisk>                                                        <space> : "☆" U2606 # WHITE STAR
 <Multi_key><space><space><asterisk>                                                 <nobreakspace> : "☆" U2606 # WHITE STAR
 <Multi_key><nobreakspace><space><asterisk>                                                 <space> : "☆" U2606 # WHITE STAR
@@ -4542,21 +4559,20 @@
 <Multi_key><space><o><minus><greater>                                               <nobreakspace> : "♂" U2642 # MALE SIGN
 <Multi_key><nobreakspace><o><minus><greater>                                               <space> : "♂" U2642 # MALE SIGN
 <Multi_key><nobreakspace><o><minus><greater>                                        <nobreakspace> : "♂" U2642 # MALE SIGN
-#   In group 5 of /                                                                                : "♠" U2660 # BLACK SPADE SUIT
-#   See #*# CIRCUMFLEX                                                                             : "♠" U2660 # BLACK SPADE SUIT
+#   In group 5 of ,                                                                                : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><8><greater><numbersign>                                                        <space> : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><8><greater><numbersign>                                                 <nobreakspace> : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><KP_8><greater><numbersign>                                                     <space> : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><KP_8><greater><numbersign>                                              <nobreakspace> : "♠" U2660 # BLACK SPADE SUIT
-#   See # # CIRCUMFLEX&GROUP_2                                                                     : "♡" U2661 # WHITE HEART SUIT
+#   In # # CIRCUMFLEX&GROUP_2                                                                      : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><8><greater>                                                                    <space> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><8><greater>                                                             <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><KP_8><greater>                                                                 <space> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><KP_8><greater>                                                          <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
-#   See # # CIRCUMFLEX&GROUP_3                                                                     : "♢" U2662 # WHITE DIAMOND SUIT
+#   In # # CIRCUMFLEX&GROUP_3                                                                      : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><space><space><less><greater>                                                   <space> : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><space><space><less><greater>                                            <nobreakspace> : "♢" U2662 # WHITE DIAMOND SUIT
-#   In group 4 of /                                                                                : "♣" U2663 # BLACK CLUB SUIT
+#   In group 3 of ,                                                                                : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><o><8><numbersign>                                                              <space> : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><o><8><numbersign>                                                       <nobreakspace> : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><o><KP_8><numbersign>                                                           <space> : "♣" U2663 # BLACK CLUB SUIT
@@ -4564,7 +4580,7 @@
 #   In group 11 of = on B                                                                          : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                                      <space> : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                               <nobreakspace> : "♭" U266D # MUSIC FLAT SIGN
-#   In group 11 of \ on N                                                                          : "♮" U266E # MUSIC NATURAL SIGN
+#   In group 10 of = on B                                                                          : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><h>                                                                      <space> : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><h>                                                               <nobreakspace> : "♮" U266E # MUSIC NATURAL SIGN
 #   In group 11 of #                                                                               : "♯" U266F # MUSIC SHARP SIGN
@@ -4645,7 +4661,7 @@
 <Multi_key><space><bar><minus>                                                      <nobreakspace> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                                      <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                               <nobreakspace> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-#   See #*# STROKE                                                                                 : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+#   In #*# STROKE                                                                                  : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><space><space><space><slash>                                                    <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><space><space><space><slash>                                             <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><space><space><slash>                                             <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
@@ -4657,7 +4673,7 @@
 #   The maybe rarely used long division symbol, made of a right parenthesis and a kerning overscore, does not conflict with any combining diacritic, see # # SUPERSCRIPT&BREVE
 <Multi_key><parenright><underscore><asciicircum>                                           <space> : "⟌" U27CC # LONG DIVISION
 <Multi_key><parenright><underscore><asciicircum>                                    <nobreakspace> : "⟌" U27CC # LONG DIVISION
-#   See #*# REVERSED                                                                               : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+#   In #*# REVERSED                                                                                : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><space><space><space><backslash>                                                <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><space><space><space><backslash>                                         <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><space><space><backslash>                                         <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
@@ -5614,17 +5630,20 @@
 <Multi_key><colon><minus><greater>                                                  <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
 <Multi_key><colon><minus><minus><greater>                                                  <space> : "⧴" U29F4 # RULE-DELAYED
 <Multi_key><colon><minus><minus><greater>                                           <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
-#   "⧵" U29F5 REVERSE SOLIDUS OPERATOR: likely duplicate "∖" U2216 SET MINUS with the potential to fool people into decisions causing issues, e.g.
+#   "⧵" U29F5 REVERSE SOLIDUS OPERATOR: likely duplicate "∖" U2216 SET MINUS
+#   with the potential to fool people into decisions causing issues, e.g.
 #   “\setminus translated as U+29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems #409”
 #   https://github.com/tudace/tuda_latex_templates/issues/409
 #   Fonts, e.g. DejaVu Sans Mono Book, may give them a slight difference in slant.
-#   Since "∕" U2215 DIVISION SLASH does not have any *SOLIDUS OPERATOR equivalent, REVERSE SOLIDUS OPERATOR is disambiguated by a quadruple leading space.
-#   For convenience these [back]slash symbols are alternatively disambiguated by a trailing digit, for consistency also those with a single leading space.
+#   Since "∕" U2215 DIVISION SLASH does not have any *SOLIDUS OPERATOR equivalent,
+#   REVERSE SOLIDUS OPERATOR is disambiguated by a quadruple leading space.
+#   For convenience these [back]slash symbols are alternatively disambiguated
+#   by a trailing digit, for consistency also those with a single leading space.
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><O><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-#   See #*# REVERSED                                                                               : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+#   In #*# REVERSED                                                                                : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><space><space><space><space><backslash>                                         <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><space><space><space><space><backslash>                                  <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><space><space><space><backslash>                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
@@ -5639,14 +5658,14 @@
 <Multi_key><minus><slash>                                                           <nobreakspace> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><backslash><minus>                                                              <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
 <Multi_key><backslash><minus>                                                       <nobreakspace> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
-#   See #*# STROKE                                                                                 : "⧸" U29F8 # BIG SOLIDUS
+#   In #*# STROKE                                                                                  : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><space><space><slash>                                                           <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><space><space><slash>                                                    <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><space><slash>                                                    <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><space><slash>                                             <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><slash>                                             <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><slash>                                      <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
-#   See #*# REVERSED                                                                               : "⧹" U29F9 # BIG REVERSE SOLIDUS
+#   In #*# REVERSED                                                                                : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><space><space><backslash>                                                       <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><space><space><backslash>                                                <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><space><backslash>                                                <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
