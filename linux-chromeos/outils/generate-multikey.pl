@@ -1,7 +1,8 @@
 #!/usr/bin/perl
 # 2022-12-28T0901+0100
-# Last modified:
 # 2023-10-27T1438+0200
+# 2024-05-04T0813+0200
+# = last modified.
 # 
 # Adds the Multi_key equivalent below all dead key
 # lines prefixed with an '@' sign for the purpose.
@@ -27,7 +28,8 @@
 # The ASCII symbols used as equivalents follow the
 # new-school input composition.
 #
-# Supports also section sign in lieu of semicolon.
+# Supports also section sign in lieu of semicolon,
+# and EuroSign in lieu of quotedbl.
 #
 #
 # # Format
@@ -232,6 +234,12 @@ while ( my $line = <BACKUP> ) {
 					do {
 						$line =~ s/^([^ ]*?)<semicolon>([^ ]*)/$1<section>$2  /;
 					} while ( $line =~ /^([^ ]*?)<semicolon>/ );
+					print OUTPUT $line;
+				}
+				if ( $line =~ /^<Multi_key>.*<quotedbl>/ ) {
+					do {
+						$line =~ s/^([^ ]*?)<quotedbl>([^ ]*)/$1<EuroSign>$2/;
+					} while ( $line =~ /^([^ ]*?)<quotedbl>/ );
 					print OUTPUT $line;
 				}
 			}
