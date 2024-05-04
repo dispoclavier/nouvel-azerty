@@ -2,7 +2,7 @@
 
 ## 2.0.0 (projet)
 
-* Version 2.0 due à la redondance en AltGr du symbole euro, la redisposition de 30 % des symboles ASCII, et à la disposition en Minuscule, en mode français aussi, de l’apostrophe ASCII à côté de l’apostrophe française (compose-1.yml [8b62065](https://github.com/dispoclavier/nouvel-azerty/commit/8b6206594ebf9b02e36d94466f253d8fb0a18030), dispocla.cpp [d7e798a](https://github.com/dispoclavier/nouvel-azerty/commit/d7e798a2ad558a15bb1808bf022a510150a26ffe), [f7d237b](https://github.com/dispoclavier/nouvel-azerty/commit/f7d237bd0cb41ae8a89c9c6318ff2ed8174ac8a5))
+* Version 2.0 due à la redondance en AltGr du symbole euro, la redisposition de 30 % des symboles ASCII, et à la disposition en Minuscule, en mode français, de l’apostrophe ASCII à côté de l’apostrophe française (compose-1.yml [8b62065](https://github.com/dispoclavier/nouvel-azerty/commit/8b6206594ebf9b02e36d94466f253d8fb0a18030), dispocla.cpp [d7e798a](https://github.com/dispoclavier/nouvel-azerty/commit/d7e798a2ad558a15bb1808bf022a510150a26ffe), [f7d237b](https://github.com/dispoclavier/nouvel-azerty/commit/f7d237bd0cb41ae8a89c9c6318ff2ed8174ac8a5))
 * Disposition : Redonder le symbole "€" U20AC en AltGr/Option à la place de "{" U007B. (dispocla.cpp [55890e8](https://github.com/dispoclavier/nouvel-azerty/commit/55890e81e154fb3479635595a9cc8eed74f2a420))
 * Disposition : Symboles ASCII : Mettre "{" U007B à la place de "'" U0027, qui prend la place de "\\"" U0022, qui est sur la touche du 3 en mode français et sur la touche de l’accent circonflexe en mode ASCII, et qui est remplacé par "€" U20AC à la place laissée par "{" U007B. (ibidem)
 * Idem : Mettre "}" U007D à la place de "`" U0060, qui prend la place de "\\" U005C, qui prend la place laissée par "}" U007D. (ibidem)
@@ -20,9 +20,10 @@
 * Idem : Prendre en charge "€" U20AC comme caractère de base aux côtés de "\\"" U0022. (ibidem)
 * Transformations : Dupliquer "\\"" U0022 par "€" U20AC. (compose-2.yml [cbd46d7](https://github.com/dispoclavier/nouvel-azerty/commit/cbd46d7566a9a70801a536c050e665a6082260c4))
 * Composition : Simplifier. (compose-1.yml [731afa0](https://github.com/dispoclavier/nouvel-azerty/commit/731afa0d2fa108b55d76a8ecca8308af63399e17))
-* Idem : Mettre à jour les renvois. (compose-1.yml [b40afd1](https://github.com/dispoclavier/nouvel-azerty/commit/b40afd1141823e5f65653ff9a3a753d98ad39f6c))
+* Idem : Mettre à jour les renvois. (compose-1.yml [b40afd1](https://github.com/dispoclavier/nouvel-azerty/commit/b40afd1141823e5f65653ff9a3a753d98ad39f6c), [7f9d628](https://github.com/dispoclavier/nouvel-azerty/commit/7f9d628ed127a3e94d0e1a0558b5f3a0e567600a))
 * Transformations : Mettre à jour les symboles de base. (compose-2.yml [6603624](https://github.com/dispoclavier/nouvel-azerty/commit/660362419d1d97088c6da803853a43d9f6b0fef7))
-* Transformations : Accent circonflexe : Redonder "•" U2022 par "1" U0031 à la place de "♤" U2664, "◦" U25E6 par "2" U0032 à la place de "♢" U2662, "▪" U25AA par "4" U0034 à la place de "♡" U2661, "▫" U25AB par "5" U0035 à la place de "♧" U2667, "‣" U2023 par "6" U0036 à la place de "♠" U2660. Ajouter "▹" U25B9 par "7" U0037 à la place de "♦" U2666. Redonder "➢" U27A2 par "9" U0039 à la place de "♣" U2663. Ajouter "➣" U27A3 par "0" U0030. Redonder "′" U2032 par "²" U00B2, "″" U2033 par "³" U00B3. (ibidem)
+* Transformations : Rond en chef : Redonder "∗" U2217 par 0 et 4. (compose-2.yml [1510bb0](https://github.com/dispoclavier/nouvel-azerty/commit/1510bb04a2e041e24f0862ed64d34c606731bb4f))
+* Transformations : Accent circonflexe : Redonder "•" U2022 par "1" U0031 à la place de "♤" U2664, "◦" U25E6 par "2" U0032 à la place de "♢" U2662, "▪" U25AA par "4" U0034 à la place de "♡" U2661, "▫" U25AB par "5" U0035 à la place de "♧" U2667, "‣" U2023 par "6" U0036 à la place de "♠" U2660. Ajouter "▹" U25B9 par "7" U0037 à la place de "♦" U2666. Redonder "➢" U27A2 par "9" U0039 à la place de "♣" U2663. Ajouter "➣" U27A3 par "0" U0030. Redonder "′" U2032 par "²" U00B2, "″" U2033 par "³" U00B3. (compose-2.yml [6603624](https://github.com/dispoclavier/nouvel-azerty/commit/660362419d1d97088c6da803853a43d9f6b0fef7))
 * Idem : Mettre à jour le caractère de base et l’ordre de "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664, (ibidem)
 * Transformations : Tilde : Permuter "⸷" U2E37 et "⸸" U2E38. Compléter les séquences de "”" U201D et "’" U2019. (ibidem et compose-2.yml [368d4aa](https://github.com/dispoclavier/nouvel-azerty/commit/368d4aa29927567a004b9c1a22fa1175104db332))
 * Transformations : Accent grave : Supprimer "(" U0028 et ")" U0029. (ibidem)
@@ -43,6 +44,7 @@
 * Idem : Ajouter "∡" U2221 à la place de "⦜" U299C, qui prend la place de "▪" U25AA, qui est dans circonflexe 4. Ajouter "∟" U221F à la place de "‣" U2023, qui est dans circonflexe 6. (ibidem)
 * Idem : Dupliquer "@" U0040 par la touche morte grec ou cerclé. (Nécessaire depuis la version 1.7.0.) (ibidem)
 * Idem : Dupliquer "'" U0027 par "’" U2019. Dans le groupe 2 de "’" U2019, remplacer "ʻ" U02BB par "⊂" U2282. (ibidem)
+* Idem : Mettre "∟" U221F à la place de "⦜" U299C, qui prend la place de "◊" U25CA, qui prend la place laissée par "∟" U221F. Mettre "∠" U2220 à la place de "⚛" U269B, qui prend la place de "∡" U2221, qui prend la place de "⚓" U2693, qui prend la place de "♿" U267F, qui prend la place laissée par "∠" U2220. Permuter "⛵" U26F5 et "⛷" U26F7. Permuter "⛴" U26F4 et "⚽" U26BD. (compose-3.yml [075cf20](https://github.com/dispoclavier/nouvel-azerty/commit/075cf20a74214ad255ffffb38c8c3e029017ffa4))
 
 ## 1.7.4 (2024-03-28)
 
