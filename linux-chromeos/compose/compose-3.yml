@@ -153,32 +153,32 @@
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
-<UEFD0><UEFD0>                                                                       <asciicircum> : "∠" U2220 # ANGLE
-<Multi_key><numbersign><numbersign>                                                  <asciicircum> : "∠" U2220 # ANGLE
-<UEFD0><3>                                                                           <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><numbersign><3>                                                           <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<UEFD0><KP_3>                                                                        <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><numbersign><KP_3>                                                        <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<UEFD0><UEFD0><UEFD0>                                                                <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><numbersign><numbersign><numbersign>                                      <asciicircum> : "∡" U2221 # MEASURED ANGLE
+<UEFD0><UEFD0>                                                                       <asciicircum> : "♿" U267F # WHEELCHAIR SYMBOL emoji
+<Multi_key><numbersign><numbersign>                                                  <asciicircum> : "♿" U267F # WHEELCHAIR SYMBOL emoji
+<UEFD0><3>                                                                           <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
+<Multi_key><numbersign><3>                                                           <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
+<UEFD0><KP_3>                                                                        <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
+<Multi_key><numbersign><KP_3>                                                        <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
+<UEFD0><UEFD0><UEFD0>                                                                <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
+<Multi_key><numbersign><numbersign><numbersign>                                      <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
 <UEFD0><4>                                                                           <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
 <Multi_key><numbersign><4>                                                           <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
 <UEFD0><KP_4>                                                                        <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
 <Multi_key><numbersign><KP_4>                                                        <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                         <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                          <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
-<UEFD0><5>                                                                           <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
-<Multi_key><numbersign><5>                                                           <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
-<UEFD0><KP_5>                                                                        <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
-<Multi_key><numbersign><KP_5>                                                        <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
-<UEFD0><6>                                                                           <asciicircum> : "⚓" U2693 # ANCHOR emoji
-<Multi_key><numbersign><6>                                                           <asciicircum> : "⚓" U2693 # ANCHOR emoji
-<UEFD0><KP_6>                                                                        <asciicircum> : "⚓" U2693 # ANCHOR emoji
-<Multi_key><numbersign><KP_6>                                                        <asciicircum> : "⚓" U2693 # ANCHOR emoji
-<UEFD0><7>                                                                           <asciicircum> : "♿" U267F # WHEELCHAIR SYMBOL emoji
-<Multi_key><numbersign><7>                                                           <asciicircum> : "♿" U267F # WHEELCHAIR SYMBOL emoji
-<UEFD0><KP_7>                                                                        <asciicircum> : "♿" U267F # WHEELCHAIR SYMBOL emoji
-<Multi_key><numbersign><KP_7>                                                        <asciicircum> : "♿" U267F # WHEELCHAIR SYMBOL emoji
+<UEFD0><5>                                                                           <asciicircum> : "∠" U2220 # ANGLE
+<Multi_key><numbersign><5>                                                           <asciicircum> : "∠" U2220 # ANGLE
+<UEFD0><KP_5>                                                                        <asciicircum> : "∠" U2220 # ANGLE
+<Multi_key><numbersign><KP_5>                                                        <asciicircum> : "∠" U2220 # ANGLE
+<UEFD0><6>                                                                           <asciicircum> : "∡" U2221 # MEASURED ANGLE
+<Multi_key><numbersign><6>                                                           <asciicircum> : "∡" U2221 # MEASURED ANGLE
+<UEFD0><KP_6>                                                                        <asciicircum> : "∡" U2221 # MEASURED ANGLE
+<Multi_key><numbersign><KP_6>                                                        <asciicircum> : "∡" U2221 # MEASURED ANGLE
+<UEFD0><7>                                                                           <asciicircum> : "⚓" U2693 # ANCHOR emoji
+<Multi_key><numbersign><7>                                                           <asciicircum> : "⚓" U2693 # ANCHOR emoji
+<UEFD0><KP_7>                                                                        <asciicircum> : "⚓" U2693 # ANCHOR emoji
+<Multi_key><numbersign><KP_7>                                                        <asciicircum> : "⚓" U2693 # ANCHOR emoji
 <UEFD0><8>                                                                           <asciicircum> : "⚗" U2697 # ALEMBIC emoji
 <Multi_key><numbersign><8>                                                           <asciicircum> : "⚗" U2697 # ALEMBIC emoji
 <UEFD0><KP_8>                                                                        <asciicircum> : "⚗" U2697 # ALEMBIC emoji
@@ -929,14 +929,14 @@
 <Multi_key><numbersign><5>                                                                <dollar> : "⛑" U26D1 # HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
 <UEFD0><KP_5>                                                                             <dollar> : "⛑" U26D1 # HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
 <Multi_key><numbersign><KP_5>                                                             <dollar> : "⛑" U26D1 # HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
-<UEFD0><6>                                                                                <dollar> : "⛵" U26F5 # SAILBOAT emoji
-<Multi_key><numbersign><6>                                                                <dollar> : "⛵" U26F5 # SAILBOAT emoji
-<UEFD0><KP_6>                                                                             <dollar> : "⛵" U26F5 # SAILBOAT emoji
-<Multi_key><numbersign><KP_6>                                                             <dollar> : "⛵" U26F5 # SAILBOAT emoji
-<UEFD0><7>                                                                                <dollar> : "⛷" U26F7 # SKIER emoji
-<Multi_key><numbersign><7>                                                                <dollar> : "⛷" U26F7 # SKIER emoji
-<UEFD0><KP_7>                                                                             <dollar> : "⛷" U26F7 # SKIER emoji
-<Multi_key><numbersign><KP_7>                                                             <dollar> : "⛷" U26F7 # SKIER emoji
+<UEFD0><6>                                                                                <dollar> : "⛷" U26F7 # SKIER emoji
+<Multi_key><numbersign><6>                                                                <dollar> : "⛷" U26F7 # SKIER emoji
+<UEFD0><KP_6>                                                                             <dollar> : "⛷" U26F7 # SKIER emoji
+<Multi_key><numbersign><KP_6>                                                             <dollar> : "⛷" U26F7 # SKIER emoji
+<UEFD0><7>                                                                                <dollar> : "⛵" U26F5 # SAILBOAT emoji
+<Multi_key><numbersign><7>                                                                <dollar> : "⛵" U26F5 # SAILBOAT emoji
+<UEFD0><KP_7>                                                                             <dollar> : "⛵" U26F5 # SAILBOAT emoji
+<Multi_key><numbersign><KP_7>                                                             <dollar> : "⛵" U26F5 # SAILBOAT emoji
 <UEFD0><8>                                                                                <dollar> : "⛩" U26E9 # SHINTO SHRINE emoji
 <Multi_key><numbersign><8>                                                                <dollar> : "⛩" U26E9 # SHINTO SHRINE emoji
 <UEFD0><KP_8>                                                                             <dollar> : "⛩" U26E9 # SHINTO SHRINE emoji
@@ -1039,14 +1039,14 @@
 <Multi_key><numbersign><5>                                                            <parenright> : "⛲" U26F2 # FOUNTAIN emoji
 <UEFD0><KP_5>                                                                         <parenright> : "⛲" U26F2 # FOUNTAIN emoji
 <Multi_key><numbersign><KP_5>                                                         <parenright> : "⛲" U26F2 # FOUNTAIN emoji
-<UEFD0><6>                                                                            <parenright> : "⛴" U26F4 # FERRY emoji
-<Multi_key><numbersign><6>                                                            <parenright> : "⛴" U26F4 # FERRY emoji
-<UEFD0><KP_6>                                                                         <parenright> : "⛴" U26F4 # FERRY emoji
-<Multi_key><numbersign><KP_6>                                                         <parenright> : "⛴" U26F4 # FERRY emoji
-<UEFD0><7>                                                                            <parenright> : "⚽" U26BD # SOCCER BALL emoji
-<Multi_key><numbersign><7>                                                            <parenright> : "⚽" U26BD # SOCCER BALL emoji
-<UEFD0><KP_7>                                                                         <parenright> : "⚽" U26BD # SOCCER BALL emoji
-<Multi_key><numbersign><KP_7>                                                         <parenright> : "⚽" U26BD # SOCCER BALL emoji
+<UEFD0><6>                                                                            <parenright> : "⚽" U26BD # SOCCER BALL emoji
+<Multi_key><numbersign><6>                                                            <parenright> : "⚽" U26BD # SOCCER BALL emoji
+<UEFD0><KP_6>                                                                         <parenright> : "⚽" U26BD # SOCCER BALL emoji
+<Multi_key><numbersign><KP_6>                                                         <parenright> : "⚽" U26BD # SOCCER BALL emoji
+<UEFD0><7>                                                                            <parenright> : "⛴" U26F4 # FERRY emoji
+<Multi_key><numbersign><7>                                                            <parenright> : "⛴" U26F4 # FERRY emoji
+<UEFD0><KP_7>                                                                         <parenright> : "⛴" U26F4 # FERRY emoji
+<Multi_key><numbersign><KP_7>                                                         <parenright> : "⛴" U26F4 # FERRY emoji
 <UEFD0><8>                                                                            <parenright> : "✊" U270A # RAISED FIST emoji
 <Multi_key><numbersign><8>                                                            <parenright> : "✊" U270A # RAISED FIST emoji
 <UEFD0><KP_8>                                                                         <parenright> : "✊" U270A # RAISED FIST emoji
@@ -1306,20 +1306,20 @@
 <Multi_key><numbersign><KP_3>                                                      <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <UEFD0><UEFD0><UEFD0>                                                              <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <Multi_key><numbersign><numbersign><numbersign>                                    <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><4>                                                                         <bracketright> : "∟" U221F # RIGHT ANGLE
-<Multi_key><numbersign><4>                                                         <bracketright> : "∟" U221F # RIGHT ANGLE
-<UEFD0><KP_4>                                                                      <bracketright> : "∟" U221F # RIGHT ANGLE
-<Multi_key><numbersign><KP_4>                                                      <bracketright> : "∟" U221F # RIGHT ANGLE
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "∟" U221F # RIGHT ANGLE
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "∟" U221F # RIGHT ANGLE
-<UEFD0><5>                                                                         <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><numbersign><5>                                                         <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<UEFD0><KP_5>                                                                      <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><numbersign><KP_5>                                                      <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<UEFD0><6>                                                                         <bracketright> : "◊" U25CA # LOZENGE
-<Multi_key><numbersign><6>                                                         <bracketright> : "◊" U25CA # LOZENGE
-<UEFD0><KP_6>                                                                      <bracketright> : "◊" U25CA # LOZENGE
-<Multi_key><numbersign><KP_6>                                                      <bracketright> : "◊" U25CA # LOZENGE
+<UEFD0><4>                                                                         <bracketright> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><4>                                                         <bracketright> : "◊" U25CA # LOZENGE
+<UEFD0><KP_4>                                                                      <bracketright> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><KP_4>                                                      <bracketright> : "◊" U25CA # LOZENGE
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "◊" U25CA # LOZENGE
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "◊" U25CA # LOZENGE
+<UEFD0><5>                                                                         <bracketright> : "∟" U221F # RIGHT ANGLE
+<Multi_key><numbersign><5>                                                         <bracketright> : "∟" U221F # RIGHT ANGLE
+<UEFD0><KP_5>                                                                      <bracketright> : "∟" U221F # RIGHT ANGLE
+<Multi_key><numbersign><KP_5>                                                      <bracketright> : "∟" U221F # RIGHT ANGLE
+<UEFD0><6>                                                                         <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<Multi_key><numbersign><6>                                                         <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<UEFD0><KP_6>                                                                      <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<Multi_key><numbersign><KP_6>                                                      <bracketright> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <UEFD0><7>                                                                         <bracketright> : "☨" U2628 # CROSS OF LORRAINE
 <Multi_key><numbersign><7>                                                         <bracketright> : "☨" U2628 # CROSS OF LORRAINE
 <UEFD0><KP_7>                                                                      <bracketright> : "☨" U2628 # CROSS OF LORRAINE
