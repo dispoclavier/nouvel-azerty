@@ -2856,6 +2856,11 @@
 #+# GROUP_4
 #   Group 4 on the base alphabet: Latin letters and symbols (continued)
 #
+#   Tbe ties "⁀" U2040 CHARACTER TIE and "‿" U203F UNDERTIE are here by J, with
+#   mnemonics based on the curved tail of the letter.
+#   See #*# TURNED
+#   See #^# INVERTED
+#
 <UEFD0><4>                                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
 <Multi_key><numbersign><4>                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
 <UEFD0><KP_4>                                                                                  <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
