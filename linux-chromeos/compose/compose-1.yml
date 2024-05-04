@@ -259,8 +259,10 @@
 #      Alternatively, NNBSP can be used to force no-break behavior.
 #
 #   However, higher level protocols and tailoring are inacceptable options when
-#   used to achieve the digital representation of natural languages. The Unicode
-#   Standard specifies that it is about plain text.
+#   considered for the purpose of achieving the digital representation of
+#   natural languages, since the Unicode Standard specifies that it encodes
+#   plain text.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=45
 #
 #   In Unicode CLDR, French migrated from NBSP to NNBSP for grouping digits and
 #   in short measurement unit patterns, in v34, released on 2018-10-15:
@@ -2627,11 +2629,17 @@
 # # Multiplication and division signs
 #
 #   Basic operators are supported by Multi_key despite being on live keys.
+#   Additionally, for incomplete keyboard layouts, there are fallback input
+#   methods in the symbols groups.
+#   See # # B02
+#   See # # B01
 #
 #   See "⋇" U22C7 DIVISION TIMES.
 #
+#   In group 2 of *                                                                                : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                             <space> : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                      <nobreakspace> : "×" U00D7 # MULTIPLICATION SIGN
+#   In group 2 of /                                                                                : "÷" U00F7 # DIVISION SIGN
 <Multi_key><colon><minus>                                                                  <space> : "÷" U00F7 # DIVISION SIGN
 <Multi_key><colon><minus>                                                           <nobreakspace> : "÷" U00F7 # DIVISION SIGN
 <Multi_key><period><minus><period>                                                         <space> : "÷" U00F7 # DIVISION SIGN
@@ -3413,12 +3421,15 @@
 <Multi_key><space><backslash>                                                       <nobreakspace> : "∖" U2216 # SET MINUS
 <Multi_key><nobreakspace><backslash>                                                       <space> : "∖" U2216 # SET MINUS
 <Multi_key><nobreakspace><backslash>                                                <nobreakspace> : "∖" U2216 # SET MINUS
+#   In group 11 of *                                                                               : "∗" U2217 # ASTERISK OPERATOR
+#   In #*# RING_ABOVE                                                                              : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><space><asterisk>                                                               <space> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><space><asterisk>                                                        <nobreakspace> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><nobreakspace><asterisk>                                                        <space> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><nobreakspace><asterisk>                                                 <nobreakspace> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><o>                                                                             <space> : "∘" U2218 # RING OPERATOR
 <Multi_key><o>                                                                      <nobreakspace> : "∘" U2218 # RING OPERATOR
+#   In group 2 of .                                                                                : "∙" U2219 # BULLET OPERATOR
 <Multi_key><space><period><period>                                                         <space> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><space><period><period>                                                  <nobreakspace> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><nobreakspace><period><period>                                                  <space> : "∙" U2219 # BULLET OPERATOR
@@ -3438,6 +3449,7 @@
 <Multi_key><4><v>                                                                   <nobreakspace> : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                       <space> : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                <nobreakspace> : "∜" U221C # FOURTH ROOT
+#   In group 11 of '                                                                               : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><8>                                                                      <space> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><8>                                                               <nobreakspace> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><KP_8>                                                                   <space> : "∝" U221D # PROPORTIONAL TO
@@ -3446,14 +3458,18 @@
 <Multi_key><nobreakspace><8>                                                        <nobreakspace> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><KP_8>                                                            <space> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><KP_8>                                                     <nobreakspace> : "∝" U221D # PROPORTIONAL TO
+#   In group 11 of {                                                                               : "∞" U221E # INFINITY
 <Multi_key><8>                                                                             <space> : "∞" U221E # INFINITY
 <Multi_key><8>                                                                      <nobreakspace> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                          <space> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                   <nobreakspace> : "∞" U221E # INFINITY
+#   In group 5 of /                                                                                : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                             <space> : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                      <nobreakspace> : "∟" U221F # RIGHT ANGLE
+#   In group 5 of ^                                                                                : "∠" U2220 # ANGLE
 <Multi_key><slash><underscore>                                                             <space> : "∠" U2220 # ANGLE
 <Multi_key><slash><underscore>                                                      <nobreakspace> : "∠" U2220 # ANGLE
+#   In group 6 of ^                                                                                : "∡" U2221 # MEASURED ANGLE
 <Multi_key><slash><underscore><parenright>                                                 <space> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><slash><underscore><parenright>                                          <nobreakspace> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><slash><backslash><parenright>                                                  <space> : "∢" U2222 # SPHERICAL ANGLE
@@ -3519,10 +3535,12 @@
 <Multi_key><s><o><greater>                                                          <nobreakspace> : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
 <Multi_key><s><o><less>                                                                    <space> : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
 <Multi_key><s><o><less>                                                             <nobreakspace> : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
+#   In group 9 of !                                                                                : "∴" U2234 # THEREFORE
 <Multi_key><period><period><period><a>                                                     <space> : "∴" U2234 # THEREFORE
 <Multi_key><period><period><period><a>                                              <nobreakspace> : "∴" U2234 # THEREFORE
 <Multi_key><period><period><period><v><v>                                                  <space> : "∴" U2234 # THEREFORE
 <Multi_key><period><period><period><v><v>                                           <nobreakspace> : "∴" U2234 # THEREFORE
+#   In group 10 of !                                                                               : "∵" U2235 # BECAUSE
 <Multi_key><period><period><period><v>                                                     <space> : "∵" U2235 # BECAUSE
 <Multi_key><period><period><period><v>                                              <nobreakspace> : "∵" U2235 # BECAUSE
 <Multi_key><space><colon>                                                                  <space> : "∶" U2236 # RATIO
@@ -5324,6 +5342,7 @@
 <Multi_key><parenleft><underscore><backslash>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
 <Multi_key><backslash><underscore><parenleft>                                              <space> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
 <Multi_key><backslash><underscore><parenleft>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
+#   In group 6 of /                                                                                : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><bracketright>                                                               <space> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><bracketright>                                                        <nobreakspace> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><parenright><period>                                                         <space> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
