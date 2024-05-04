@@ -3006,15 +3006,21 @@
 #   but its usual glyph is really a _reversed_ E, unlike what is done for Lisu.
 #   See #*# REVERSED
 #
-#   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
-#   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
-#   better option for typing a U02BB is using group 2 of grave), with no-break
-#   space or no-break thin space as a base character.
+#   Turned punctuation for Spanish is supported both in the turned (single) and
+#   inverted (double press) parts to account for the misconceived names.
+#
+#   The two parentheses yield the character tie and the undertie "⁀" U2040,
+#   "‿" U203F, since these may be considered sideways, or vertical parentheses.
 #
 #   For intuitivity, the Polynesian ʻeta, Hawaiʻian ʻokina can also be input as
 #   if it were a turned rightsinglequotemark despite being a letter. Apostrophe
 #   is also supported as a base character for this input method.
 #   See # # D07
+#
+#   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
+#   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
+#   better option for typing a U02BB is using group 2 of grave), with no-break
+#   space or no-break thin space as a base character.
 #
 <UEFD5>                                                                                    <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 <Multi_key><percent>                                                                       <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
@@ -3032,6 +3038,10 @@
 <Multi_key><percent>                                                                  <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
 <Multi_key><percent>                                                                   <ampersand> : "⅋" U214B # TURNED AMPERSAND
+<UEFD5>                                                                                <parenleft> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><percent>                                                                   <parenleft> : "⁀" U2040 # CHARACTER TIE
+<UEFD5>                                                                               <parenright> : "‿" U203F # UNDERTIE
+<Multi_key><percent>                                                                  <parenright> : "‿" U203F # UNDERTIE
 <UEFD5>                                                                                    <comma> : "⸲" U2E32 # TURNED COMMA
 <Multi_key><percent>                                                                       <comma> : "⸲" U2E32 # TURNED COMMA
 <UEFD5>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
@@ -3454,13 +3464,17 @@
 #   used for writing in turned Latin letters. I.e. there is no M, Q, W.
 #   See #*# TURNED
 #
+#   The two parentheses yield the two underties, one of which is inverted:
+#   "⁔" U2054, "‿" U203F. For mnemonics, these are like sideways, or vertical
+#   parentheses.
+#
 #   As a diacritic, "̕" U0315 COMBINING COMMA ABOVE RIGHT is included, with the
 #   rationale that turning twice may be used to represent a shift to the right.
 #   Not "̓" U0313 COMBINING COMMA ABOVE as this is supported in dead_belowcomma
 #   double press.
 #   See #^# COMMA_ABOVE
 #
-#   As a spacing clone, "ʼ" U02BC is picked invariably.
+#   As a spacing clone, letter apostrophe "ʼ" U02BC is picked invariably.
 #
 <UEFD5><UEFD5>                                                                             <space> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
 <Multi_key><percent><percent>                                                              <space> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
@@ -3472,8 +3486,12 @@
 <Multi_key><percent><percent>                                                              <U202F> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD5><UEFD5>                                                                        <apostrophe> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
 <Multi_key><percent><percent>                                                         <apostrophe> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
-<UEFD5><UEFD5>                                                                        <parenright> : "⁔" U2054 # INVERTED UNDERTIE
-<Multi_key><percent><percent>                                                         <parenright> : "⁔" U2054 # INVERTED UNDERTIE
+<UEFD5><UEFD5>                                                              <rightsinglequotemark> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
+<Multi_key><percent><percent>                                               <rightsinglequotemark> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
+<UEFD5><UEFD5>                                                                         <parenleft> : "⁔" U2054 # INVERTED UNDERTIE
+<Multi_key><percent><percent>                                                          <parenleft> : "⁔" U2054 # INVERTED UNDERTIE
+<UEFD5><UEFD5>                                                                        <parenright> : "‿" U203F # UNDERTIE
+<Multi_key><percent><percent>                                                         <parenright> : "‿" U203F # UNDERTIE
 <UEFD5><UEFD5>                                                                          <question> : "¿" U00BF # INVERTED QUESTION MARK
 <Multi_key><percent><percent>                                                           <question> : "¿" U00BF # INVERTED QUESTION MARK
 <UEFD5><UEFD5>                                                                            <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
@@ -3633,68 +3651,104 @@
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
 #
+#   Multi_key sequences with quotedbl are duplicated with EuroSign, to account
+#   for the mapping of EuroSign instead of quotedbl for compliance with current
+#   hardware and the European Commission’s recommendation.
+#   See dispocla.cpp // ## Note about EURO SIGN
+#
 <dead_doubleacute>                                                                         <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+<Multi_key><EuroSign>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                         <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+<Multi_key><EuroSign>                                                                      <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                  <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                               <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
+<Multi_key><EuroSign>                                                               <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                         <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
+<Multi_key><EuroSign>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                      <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><quotedbl>                                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><EuroSign>                                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_doubleacute>                                                                      <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><quotedbl>                                                                   <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><EuroSign>                                                                   <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_doubleacute>                                                                         <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
+<Multi_key><EuroSign>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <dead_doubleacute>                                                                             <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
 <Multi_key><quotedbl>                                                                          <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
+<Multi_key><EuroSign>                                                                          <0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
 <dead_doubleacute>                                                                          <KP_0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
 <Multi_key><quotedbl>                                                                       <KP_0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
+<Multi_key><EuroSign>                                                                       <KP_0> : "⓾" U24FE # DOUBLE CIRCLED NUMBER TEN
 <dead_doubleacute>                                                                             <1> : "⓵" U24F5 # DOUBLE CIRCLED DIGIT ONE
 <Multi_key><quotedbl>                                                                          <1> : "⓵" U24F5 # DOUBLE CIRCLED DIGIT ONE
+<Multi_key><EuroSign>                                                                          <1> : "⓵" U24F5 # DOUBLE CIRCLED DIGIT ONE
 <dead_doubleacute>                                                                          <KP_1> : "⓵" U24F5 # DOUBLE CIRCLED DIGIT ONE
 <Multi_key><quotedbl>                                                                       <KP_1> : "⓵" U24F5 # DOUBLE CIRCLED DIGIT ONE
+<Multi_key><EuroSign>                                                                       <KP_1> : "⓵" U24F5 # DOUBLE CIRCLED DIGIT ONE
 <dead_doubleacute>                                                                             <2> : "⓶" U24F6 # DOUBLE CIRCLED DIGIT TWO
 <Multi_key><quotedbl>                                                                          <2> : "⓶" U24F6 # DOUBLE CIRCLED DIGIT TWO
+<Multi_key><EuroSign>                                                                          <2> : "⓶" U24F6 # DOUBLE CIRCLED DIGIT TWO
 <dead_doubleacute>                                                                          <KP_2> : "⓶" U24F6 # DOUBLE CIRCLED DIGIT TWO
 <Multi_key><quotedbl>                                                                       <KP_2> : "⓶" U24F6 # DOUBLE CIRCLED DIGIT TWO
+<Multi_key><EuroSign>                                                                       <KP_2> : "⓶" U24F6 # DOUBLE CIRCLED DIGIT TWO
 <dead_doubleacute>                                                                             <3> : "⓷" U24F7 # DOUBLE CIRCLED DIGIT THREE
 <Multi_key><quotedbl>                                                                          <3> : "⓷" U24F7 # DOUBLE CIRCLED DIGIT THREE
+<Multi_key><EuroSign>                                                                          <3> : "⓷" U24F7 # DOUBLE CIRCLED DIGIT THREE
 <dead_doubleacute>                                                                          <KP_3> : "⓷" U24F7 # DOUBLE CIRCLED DIGIT THREE
 <Multi_key><quotedbl>                                                                       <KP_3> : "⓷" U24F7 # DOUBLE CIRCLED DIGIT THREE
+<Multi_key><EuroSign>                                                                       <KP_3> : "⓷" U24F7 # DOUBLE CIRCLED DIGIT THREE
 <dead_doubleacute>                                                                             <4> : "⓸" U24F8 # DOUBLE CIRCLED DIGIT FOUR
 <Multi_key><quotedbl>                                                                          <4> : "⓸" U24F8 # DOUBLE CIRCLED DIGIT FOUR
+<Multi_key><EuroSign>                                                                          <4> : "⓸" U24F8 # DOUBLE CIRCLED DIGIT FOUR
 <dead_doubleacute>                                                                          <KP_4> : "⓸" U24F8 # DOUBLE CIRCLED DIGIT FOUR
 <Multi_key><quotedbl>                                                                       <KP_4> : "⓸" U24F8 # DOUBLE CIRCLED DIGIT FOUR
+<Multi_key><EuroSign>                                                                       <KP_4> : "⓸" U24F8 # DOUBLE CIRCLED DIGIT FOUR
 <dead_doubleacute>                                                                             <5> : "⓹" U24F9 # DOUBLE CIRCLED DIGIT FIVE
 <Multi_key><quotedbl>                                                                          <5> : "⓹" U24F9 # DOUBLE CIRCLED DIGIT FIVE
+<Multi_key><EuroSign>                                                                          <5> : "⓹" U24F9 # DOUBLE CIRCLED DIGIT FIVE
 <dead_doubleacute>                                                                          <KP_5> : "⓹" U24F9 # DOUBLE CIRCLED DIGIT FIVE
 <Multi_key><quotedbl>                                                                       <KP_5> : "⓹" U24F9 # DOUBLE CIRCLED DIGIT FIVE
+<Multi_key><EuroSign>                                                                       <KP_5> : "⓹" U24F9 # DOUBLE CIRCLED DIGIT FIVE
 <dead_doubleacute>                                                                             <6> : "⓺" U24FA # DOUBLE CIRCLED DIGIT SIX
 <Multi_key><quotedbl>                                                                          <6> : "⓺" U24FA # DOUBLE CIRCLED DIGIT SIX
+<Multi_key><EuroSign>                                                                          <6> : "⓺" U24FA # DOUBLE CIRCLED DIGIT SIX
 <dead_doubleacute>                                                                          <KP_6> : "⓺" U24FA # DOUBLE CIRCLED DIGIT SIX
 <Multi_key><quotedbl>                                                                       <KP_6> : "⓺" U24FA # DOUBLE CIRCLED DIGIT SIX
+<Multi_key><EuroSign>                                                                       <KP_6> : "⓺" U24FA # DOUBLE CIRCLED DIGIT SIX
 <dead_doubleacute>                                                                             <7> : "⓻" U24FB # DOUBLE CIRCLED DIGIT SEVEN
 <Multi_key><quotedbl>                                                                          <7> : "⓻" U24FB # DOUBLE CIRCLED DIGIT SEVEN
+<Multi_key><EuroSign>                                                                          <7> : "⓻" U24FB # DOUBLE CIRCLED DIGIT SEVEN
 <dead_doubleacute>                                                                          <KP_7> : "⓻" U24FB # DOUBLE CIRCLED DIGIT SEVEN
 <Multi_key><quotedbl>                                                                       <KP_7> : "⓻" U24FB # DOUBLE CIRCLED DIGIT SEVEN
+<Multi_key><EuroSign>                                                                       <KP_7> : "⓻" U24FB # DOUBLE CIRCLED DIGIT SEVEN
 <dead_doubleacute>                                                                             <8> : "⓼" U24FC # DOUBLE CIRCLED DIGIT EIGHT
 <Multi_key><quotedbl>                                                                          <8> : "⓼" U24FC # DOUBLE CIRCLED DIGIT EIGHT
+<Multi_key><EuroSign>                                                                          <8> : "⓼" U24FC # DOUBLE CIRCLED DIGIT EIGHT
 <dead_doubleacute>                                                                          <KP_8> : "⓼" U24FC # DOUBLE CIRCLED DIGIT EIGHT
 <Multi_key><quotedbl>                                                                       <KP_8> : "⓼" U24FC # DOUBLE CIRCLED DIGIT EIGHT
+<Multi_key><EuroSign>                                                                       <KP_8> : "⓼" U24FC # DOUBLE CIRCLED DIGIT EIGHT
 <dead_doubleacute>                                                                             <9> : "⓽" U24FD # DOUBLE CIRCLED DIGIT NINE
 <Multi_key><quotedbl>                                                                          <9> : "⓽" U24FD # DOUBLE CIRCLED DIGIT NINE
+<Multi_key><EuroSign>                                                                          <9> : "⓽" U24FD # DOUBLE CIRCLED DIGIT NINE
 <dead_doubleacute>                                                                          <KP_9> : "⓽" U24FD # DOUBLE CIRCLED DIGIT NINE
 <Multi_key><quotedbl>                                                                       <KP_9> : "⓽" U24FD # DOUBLE CIRCLED DIGIT NINE
+<Multi_key><EuroSign>                                                                       <KP_9> : "⓽" U24FD # DOUBLE CIRCLED DIGIT NINE
 <dead_doubleacute>                                                                             <O> : "Ő" U0150 # LATIN CAPITAL LETTER O WITH DOUBLE ACUTE
 <Multi_key><quotedbl>                                                                          <O> : "Ő" U0150 # LATIN CAPITAL LETTER O WITH DOUBLE ACUTE
+<Multi_key><EuroSign>                                                                          <O> : "Ő" U0150 # LATIN CAPITAL LETTER O WITH DOUBLE ACUTE
 <dead_doubleacute>                                                                             <o> : "ő" U0151 # LATIN SMALL LETTER O WITH DOUBLE ACUTE
 <Multi_key><quotedbl>                                                                          <o> : "ő" U0151 # LATIN SMALL LETTER O WITH DOUBLE ACUTE
+<Multi_key><EuroSign>                                                                          <o> : "ő" U0151 # LATIN SMALL LETTER O WITH DOUBLE ACUTE
 <dead_doubleacute>                                                                             <U> : "Ű" U0170 # LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
 <Multi_key><quotedbl>                                                                          <U> : "Ű" U0170 # LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
+<Multi_key><EuroSign>                                                                          <U> : "Ű" U0170 # LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
 <dead_doubleacute>                                                                             <u> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
 <Multi_key><quotedbl>                                                                          <u> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
+<Multi_key><EuroSign>                                                                          <u> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
 #
 #
 #*# REVERSED
@@ -4063,10 +4117,10 @@
 #   <Multi_key><asciitilde>                                                           <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-<dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
-<Multi_key><asciitilde>                                                               <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde>                                                                           <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde>                                                                <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
+<dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
+<Multi_key><asciitilde>                                                               <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde>                                                                               <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde>                                                                    <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <dead_tilde>                                                                            <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
