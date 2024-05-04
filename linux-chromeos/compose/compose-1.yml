@@ -1104,8 +1104,11 @@
 <Multi_key><comma><comma><apostrophe>                                                              : "‚" U201A # SINGLE LOW-9 QUOTATION MARK
 #
 <Multi_key><less><less><quotedbl>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK
+<Multi_key><less><less><EuroSign>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK
 <Multi_key><greater><greater><quotedbl>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK
+<Multi_key><greater><greater><EuroSign>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK
 <Multi_key><comma><comma><quotedbl>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
+<Multi_key><comma><comma><EuroSign>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
 #
 #
 # # Dashes and hyphens
