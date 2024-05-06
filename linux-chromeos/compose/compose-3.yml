@@ -1355,7 +1355,7 @@
 #   and triple daggers, more extensively supported together with their left or
 #   right guard or turned counterparts in tilde followed by digits 1 through 6.
 #   They would be in groups 1 through 3 of asciitilde for the sake of mnemonics
-#   but shouldn’t oust those three tilde-based operators neither.
+#   but shouldn’t oust those three tilde-based operators either.
 #   See #*# TILDE
 #   See # # STROKE&GROUP_1
 #   See # # ACUTE&GROUP_1
