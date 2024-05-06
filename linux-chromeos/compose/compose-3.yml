@@ -124,13 +124,13 @@
 # 
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	∼	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	†	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
-#	  2	∠	‱	∈	√	≃	⚪	⊂	ˌ	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‡	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
-#	  3	∡	⚡	∋	∛	≅	⚫	⊃	ˈ	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	⹋	➗	✖	∐	✅	≡	∧	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
-#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	∟	♂	⛆	❌	✂	►	≜	∨	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
-#	  5	⚛	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	⦜	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
-#	  6	⚓	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛵	✡	⛴	☪	☝	♜	♖	◊	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	♿	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛷	〽	⚽	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
+#	  1	⚠	‰	★	☆	∼	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
+#	  2	♿	‱	∈	√	≃	⚪	⊂	ˌ	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‖	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
+#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	ˈ	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	∥	➗	✖	∐	✅	≡	∧	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✂	►	≜	∨	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
+#	  5	∠	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
+#	  6	∡	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
+#	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⧖	NSP	NSP	
 #	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧗	WNJ	WJ	
@@ -1348,11 +1348,21 @@
 #
 # # C10
 #
-#   The daggers are more extensively supported in dead_tilde based on digits.
+#   With respect to mathematical symbols that need to be negated, the positions
+#   in groups 1 to 3 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, then
+#   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonics, as well as for
+#   "∥" U2225 PARALLEL TO, negated as "∦" U2226, rather than for single, double
+#   and triple daggers, more extensively supported together with their left or
+#   right guard or turned counterparts in tilde followed by digits 1 through 6.
 #   They would be in groups 1 through 3 of asciitilde for the sake of mnemonics
-#   but shouldn’t oust those three tilde-based operators. Hence the daggers are
-#   supported in groups 1 through 3 of bar to account for iconicity even though
-#   "⹋" U2E4B TRIPLE DAGGER has (limited) font support, thanks to Nishiki-teki.
+#   but shouldn’t oust those three tilde-based operators neither.
+#   See #*# TILDE
+#   See # # STROKE&GROUP_1
+#   See # # ACUTE&GROUP_1
+#   See # # STROKE&GROUP_2
+#   See # # STROKE&GROUP_3
+#   See # # ACUTE&GROUP_2
+#   See # # ACUTE&GROUP_3
 #
 #   "µ" U00B5 MICRO SIGN is usually on live keys. Its presence in group 11 is
 #   designed only as a fallback.
@@ -1360,20 +1370,16 @@
 #   "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol is easily input through
 #   dead_diaeresis followed by backslash.
 #
-#   All other vertical bar variants, e,g, "‖" U2016 DOUBLE VERTICAL LINE, are
-#   supported by dead_macron based on digits, additionally to having Multi_key
-#   input methods due to being mathematical symbols.
-#
-<UEFD0>                                                                                      <bar> : "†" U2020 # DAGGER
-<Multi_key><numbersign>                                                                      <bar> : "†" U2020 # DAGGER
-<UEFD0><UEFD0>                                                                               <bar> : "‡" U2021 # DOUBLE DAGGER
-<Multi_key><numbersign><numbersign>                                                          <bar> : "‡" U2021 # DOUBLE DAGGER
-<UEFD0><3>                                                                                   <bar> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><numbersign><3>                                                                   <bar> : "⹋" U2E4B # TRIPLE DAGGER
-<UEFD0><KP_3>                                                                                <bar> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><numbersign><KP_3>                                                                <bar> : "⹋" U2E4B # TRIPLE DAGGER
-<UEFD0><UEFD0><UEFD0>                                                                        <bar> : "⹋" U2E4B # TRIPLE DAGGER
-<Multi_key><numbersign><numbersign><numbersign>                                              <bar> : "⹋" U2E4B # TRIPLE DAGGER
+<UEFD0>                                                                                      <bar> : "∣" U2223 # DIVIDES
+<Multi_key><numbersign>                                                                      <bar> : "∣" U2223 # DIVIDES
+<UEFD0><UEFD0>                                                                               <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><numbersign><numbersign>                                                          <bar> : "‖" U2016 # DOUBLE VERTICAL LINE
+<UEFD0><3>                                                                                   <bar> : "∥" U2225 # PARALLEL TO
+<Multi_key><numbersign><3>                                                                   <bar> : "∥" U2225 # PARALLEL TO
+<UEFD0><KP_3>                                                                                <bar> : "∥" U2225 # PARALLEL TO
+<Multi_key><numbersign><KP_3>                                                                <bar> : "∥" U2225 # PARALLEL TO
+<UEFD0><UEFD0><UEFD0>                                                                        <bar> : "∥" U2225 # PARALLEL TO
+<Multi_key><numbersign><numbersign><numbersign>                                              <bar> : "∥" U2225 # PARALLEL TO
 <UEFD0><4>                                                                                   <bar> : "♂" U2642 # MALE SIGN emoji, Mars
 <Multi_key><numbersign><4>                                                                   <bar> : "♂" U2642 # MALE SIGN emoji, Mars
 <UEFD0><KP_4>                                                                                <bar> : "♂" U2642 # MALE SIGN emoji, Mars
