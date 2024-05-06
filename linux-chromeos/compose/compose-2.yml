@@ -4087,7 +4087,7 @@
 #
 #   The full set of daggers is available by digits 1 through 6 with shape-based
 #   mnemonics using the alphabetic mnemonics of the tilde dead key on key T.
-#   But the three upright full daggers are in groups 1 through 3 of bar.
+#   Umihotaru’s 'Nishiki-teki' font supports "⹋" U2E4B TRIPLE DAGGER.
 #   See # # C10
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
@@ -4404,12 +4404,20 @@
 <Multi_key><at>                                                                     <nobreakspace> : "ι" U03B9 # GREEK SMALL LETTER IOTA
 <dead_greek>                                                                               <U202F> : "ι" U03B9 # GREEK SMALL LETTER IOTA
 <Multi_key><at>                                                                            <U202F> : "ι" U03B9 # GREEK SMALL LETTER IOTA
+<dead_greek>                                                                              <degree> : "⊚" U229A # CIRCLED RING OPERATOR
+<Multi_key><at>                                                                           <degree> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek>                                                                           <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at>                                                                        <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek>                                                                          <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at>                                                                       <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
-<dead_greek>                                                                              <degree> : "⊚" U229A # CIRCLED RING OPERATOR
-<Multi_key><at>                                                                           <degree> : "⊚" U229A # CIRCLED RING OPERATOR
+<dead_greek>                                                                            <multiply> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at>                                                                         <multiply> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek>                                                                           <backslash> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at>                                                                        <backslash> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek>                                                                                <less> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at>                                                                             <less> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek>                                                                             <greater> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at>                                                                          <greater> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek>                                                                               <minus> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><at>                                                                            <minus> : "⊖" U2296 # CIRCLED MINUS
 <dead_greek>                                                                                <plus> : "⊕" U2295 # CIRCLED PLUS
@@ -4424,12 +4432,6 @@
 <Multi_key><at>                                                                            <slash> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <dead_greek>                                                                            <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><at>                                                                         <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
-<dead_greek>                                                                                <less> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at>                                                                             <less> : "⊗" U2297 # CIRCLED TIMES
-<dead_greek>                                                                             <greater> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at>                                                                          <greater> : "⊗" U2297 # CIRCLED TIMES
-<dead_greek>                                                                            <multiply> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at>                                                                         <multiply> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek>                                                                               <equal> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><at>                                                                            <equal> : "⊜" U229C # CIRCLED EQUALS
 <dead_greek>                                                                              <period> : "⊙" U2299 # CIRCLED DOT OPERATOR
@@ -5040,12 +5042,20 @@
 <Multi_key><at><at>                                                                 <nobreakspace> : "⚪" U26AA # MEDIUM WHITE CIRCLE
 <dead_greek><dead_greek>                                                                   <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE
 <Multi_key><at><at>                                                                        <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE
+<dead_greek><dead_greek>                                                                  <degree> : "⊚" U229A # CIRCLED RING OPERATOR
+<Multi_key><at><at>                                                                       <degree> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek><dead_greek>                                                               <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at><at>                                                                    <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek><dead_greek>                                                              <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at><at>                                                                   <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
-<dead_greek><dead_greek>                                                                  <degree> : "⊚" U229A # CIRCLED RING OPERATOR
-<Multi_key><at><at>                                                                       <degree> : "⊚" U229A # CIRCLED RING OPERATOR
+<dead_greek><dead_greek>                                                                <multiply> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at><at>                                                                     <multiply> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek><dead_greek>                                                               <backslash> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at><at>                                                                    <backslash> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek><dead_greek>                                                                    <less> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at><at>                                                                         <less> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek><dead_greek>                                                                 <greater> : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><at><at>                                                                      <greater> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek><dead_greek>                                                                   <minus> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><at><at>                                                                        <minus> : "⊖" U2296 # CIRCLED MINUS
 <dead_greek><dead_greek>                                                                    <plus> : "⊕" U2295 # CIRCLED PLUS
@@ -5060,12 +5070,6 @@
 <Multi_key><at><at>                                                                        <slash> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <dead_greek><dead_greek>                                                                <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><at><at>                                                                     <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
-<dead_greek><dead_greek>                                                                    <less> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at><at>                                                                         <less> : "⊗" U2297 # CIRCLED TIMES
-<dead_greek><dead_greek>                                                                 <greater> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at><at>                                                                      <greater> : "⊗" U2297 # CIRCLED TIMES
-<dead_greek><dead_greek>                                                                <multiply> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at><at>                                                                     <multiply> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek><dead_greek>                                                                   <equal> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><at><at>                                                                        <equal> : "⊜" U229C # CIRCLED EQUALS
 <dead_greek><dead_greek>                                                                  <period> : "⊙" U2299 # CIRCLED DOT OPERATOR
