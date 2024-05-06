@@ -1351,11 +1351,12 @@
 #   With respect to mathematical symbols that need to be negated, the positions
 #   in groups 1 to 3 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, then
 #   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonics, as well as for
-#   "∥" U2225 PARALLEL TO, negated as "∦" U2226, rather than for single, double
+#   "∥" U2225 PARALLEL TO (negated "∦" U2226) to prevent any accessibility bias
+#   fostering misuse of "‖" U2016 as "∥" U2225, rather than for single, double
 #   and triple daggers, more extensively supported together with their left or
 #   right guard or turned counterparts in tilde followed by digits 1 through 6.
 #   They would be in groups 1 through 3 of asciitilde for the sake of mnemonics
-#   but shouldn’t oust those three tilde-based operators either.
+#   but should not oust those three tilde-based operators either.
 #   See #*# TILDE
 #   See # # STROKE&GROUP_1
 #   See # # ACUTE&GROUP_1
