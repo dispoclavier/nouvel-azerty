@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-05-06T1014+0200
+# 2024-05-06T1059+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -225,13 +225,14 @@ while ( my $line = <INPUT> ) {
 				# Keysyms.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
+				$line =~ s/<asciitilde>/~/g;
+				$line =~ s/<EuroSign>/€/g;
+				$line =~ s/<quotedbl>/&quot;/g;
+				$line =~ s/<backslash>/\\/g;
+				$line =~ s/<at>/@/g;
+				$line =~ s/<apostrophe>/&#x27;/g;
 				$line =~ s/<braceleft>/{/g;
 				$line =~ s/<braceright>/}/g;
-				$line =~ s/<asciitilde>/~/g;
-				$line =~ s/<at>/@/g;
-				$line =~ s/<grave>/`/g;
-				$line =~ s/<apostrophe>/&#x27;/g;
-				$line =~ s/<quotedbl>/&quot;/g;
 				$line =~ s/<ampersand>/&amp;/g;
 				$line =~ s/<numbersign>/#/g;
 				$line =~ s/<dollar>/\$/g;
@@ -239,22 +240,22 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<parenright>/)/g;
 				$line =~ s/<minus>/-/g;
 				$line =~ s/<plus>/+/g;
+				$line =~ s/<underscore>/_/g;
 				$line =~ s/<bracketleft>/[/g;
 				$line =~ s/<bracketright>/]/g;
-				$line =~ s/<underscore>/_/g;
 				$line =~ s/<bar>/|/g;
 				$line =~ s/<slash>/\//g;
 				$line =~ s/<asterisk>/*/g;
 				$line =~ s/<less>/&lt;/g;
 				$line =~ s/<greater>/&gt;/g;
 				$line =~ s/<equal>/=/g;
-				$line =~ s/<backslash>/\\/g;
+				$line =~ s/<grave>/`/g;
+				$line =~ s/<comma>/,/g;
 				$line =~ s/<question>/?/g;
+				$line =~ s/<period>/./g;
 				$line =~ s/<exclam>/!/g;
 				$line =~ s/<colon>/:/g;
 				$line =~ s/<semicolon>/;/g;
-				$line =~ s/<comma>/,/g;
-				$line =~ s/<period>/./g;
 				$line =~ s/<section>/§/g;
 				$line =~ s/<mu>/µ/g;
 				$line =~ s/<agrave>/à/g;
