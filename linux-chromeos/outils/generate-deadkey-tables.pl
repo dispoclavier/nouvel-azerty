@@ -2,13 +2,18 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-04-24T0420+0200
+# 2024-05-06T1014+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
 # Multi_key equivalents are skipped.
 #
-# The input requires start and end tags. Section headings switch files.
+# The input requires `END_MATH` as a start tag. Section headings switch files.
+#
+# Parsing `START_LETTER_SYMBOL_GROUPS` as the end tag is commented out, so that
+# space and symbol group tables and letter group tables as a searchable
+# complementary documentation are generated too.
+# Please check additional options after `/START_LETTER_SYMBOL_GROUPS/`.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -64,6 +69,7 @@ print( "Opened file $output_path.\n" );
 print( "Processing dead keys from $file_path to $output_path.\n" );
 
 my $parse_on       = !1;
+my $comprehensive  = !0;
 my $date_legend    = 'Tableau mis à jour le ';
 # Courtesy https://stackoverflow.com/a/43881027
 my $nowDate        = DateTime->now(time_zone => 'local');
@@ -85,12 +91,25 @@ while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
 		$parse_on = !0;
 	}
-	if ( $line =~ /START_GROUP_SELECTOR/ ) {
-		$parse_on = !1;
+	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
+
+		# Symbol groups and letter groups are included in the comprehensive table
+		# (its handle is WHOLEOUTPUT). To get them included, uncomment this line:
+
+		# $comprehensive = !1;
+
+		# The symbol group table and the letter group table are generated alongside
+		# as an alternative, searchable documentation.
+		# To skip these tables, uncomment this line:
+
+		# $parse_on = !1;
+
 	}
 	if ( $parse_on ) {
 		if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
+			|| $line =~ /^### Space and symbol groups/
+			|| $line =~ /^### Letter groups/
 		) {
 			print OUTPUT $end_tags;
 			close( OUTPUT );
@@ -109,7 +128,7 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
-		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ || $line =~ /<KP_/ ) {
+		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ || $line =~ /<KP_/ || $line =~ /> : ?$/ ) {
 			if ( $line =~ /<Multi_key>/
 				|| $line =~ /<dead_abovedot>/
 				|| $line =~ /<dead_abovering>/
@@ -178,11 +197,11 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte drapeau Maj + AltGr\/Option + B">drapeau<\/kbd>/g;
 				$line =~ s/<UEFD8>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
 				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
-				
+
 				# Remove spaces.
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
-				
+
 				# Invisibles or confusables.
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
@@ -192,7 +211,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U02BB>/<kbd class="livekey" title="Lettre apostrophe tournée Maj + 8_ sur les variantes pour la Polynésie">ʻ lettre apostrophe tournée<\/kbd>/g;
 				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + .;">[fine insécable]!<\/kbd>/g;
 				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ?,">[fine insécable]?<\/kbd>/g;
-				
+
 				# Tooltips.
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
@@ -202,7 +221,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
-				
+
 				# Keysyms.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
@@ -254,14 +273,14 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Odiaeresis>/Ö/g;
 				$line =~ s/<udiaeresis>/ü/g;
 				$line =~ s/<Udiaeresis>/Ü/g;
-				
+
 				# Scalars.
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
-				
+
 				# Remove delimiters.
 				$line =~ s/<(.)>/$1/g;
-				
+
 				# Translation.
 				$line =~ s/( # .*), for convenience/$1, pour plus de facilité/g;
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
@@ -401,7 +420,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
-				print WHOLEOUTPUT $line;
+				if ( $comprehensive ) {
+					print WHOLEOUTPUT $line;
+				}
 			}
 		}
 	}
