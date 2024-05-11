@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-05-06T1059+0200
+# 2024-05-11T1257+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -11,9 +11,12 @@
 # The input requires `END_MATH` as a start tag. Section headings switch files.
 #
 # Parsing `START_LETTER_SYMBOL_GROUPS` as the end tag is commented out, so that
-# space and symbol group tables and letter group tables as a searchable
-# complementary documentation are generated too.
-# Please check additional options after `/START_LETTER_SYMBOL_GROUPS/`.
+# space and symbol group tables and letter group tables are generated too.
+# Other options may be configured after `/START_LETTER_SYMBOL_GROUPS/`.
+#
+# In these tables, a second instance of each emoji is displayed in text style,
+# provided that the text style variation selector is supported. This feature
+# is intended to make emoji searchable (the alt attribute is not).
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -85,7 +88,7 @@ my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$sta
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $index );
+my ( $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $text, $index );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
@@ -285,8 +288,6 @@ while ( my $line = <INPUT> ) {
 				# Translation.
 				$line =~ s/( # .*), for convenience/$1, pour plus de facilité/g;
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
-				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
-				$line =~ s/( # .*) emoji/$1 émoji/g;
 				$line =~ s/ # Mathematical Alphanumeric Symbol high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
 				$line =~ s/ # Regional Indicator Symbol high surrogate/ # Surrogat haut de symbole drapeau/g;
 				$line =~ s/ # Wide-headed arrow high surrogate/ # Surrogat haut de flèche à pointe large/g;
@@ -353,12 +354,67 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) double comma quotation mark/$1 guillemet apostrophe double/g;
 				$line =~ s/( # .*) single comma quotation mark/$1 guillemet apostrophe simple/g;
 				$line =~ s/( # .*) pause button/$1 bouton pause/g;
-				$line =~ s/( # .*) not /$1 pas /g;
+				$line =~ s/( # .*) ergonomic mapping/$1 disposition ergonomique/g;
+				$line =~ s/( # .*) mnemonic mapping/$1 disposition mnémonique/g;
+				$line =~ s/( # .*) universal quantifier/$1 quantificateur universel/g;
+				$line =~ s/( # .*) cursive non-joiner/$1 antiliant cursif/g;
+				$line =~ s/( # .*) permyriad/$1 pour dix mille/g;
+				$line =~ s/( # .*) lightning/$1 éclair/g;
+				$line =~ s/( # .*) cursive joiner/$1 liant cursif/g;
+				$line =~ s/( # .*) fast up button/$1 bouton d’augmentation rapide/g;
+				$line =~ s/( # .*) fast down button/$1 bouton de diminution rapide/g;
+				$line =~ s/( # .*) existential quantifier/$1 quantificateur existentiel/g;
+				$line =~ s/( # .*) medical symbol/$1 symbole médical/g;
+				$line =~ s/( # .*) emoji style/$1 style émoji/g;
+				$line =~ s/( # .*) text style/$1 style texte/g;
+				$line =~ s/( # .*) generic base character for combining diacritics/$1 caractère de base générique pour diacritiques combinants/g;
+				$line =~ s/( # .*) record button/$1 bouton d’enregistrement/g;
+				$line =~ s/( # .*) engaged, betrothed, wedding ring/$1 fiancé, fiancée, alliance/g;
+				$line =~ s/( # .*) infinity/$1 infinité/g;
+				$line =~ s/( # .*) hollow red circle/$1 anneau rouge/g;
+				$line =~ s/( # .*) stop button/$1 bouton d’arrêt/g;
+				$line =~ s/( # .*) space character/$1 espace/g;
+				$line =~ s/( # .*) no-break space/$1 espace insécable/g;
+				$line =~ s/( # .*) rescue worker’s helmet/$1 casque de secouriste/g;
+				$line =~ s/( # .*) page break in plain text/$1 saut de page en texte brut/g;
+				$line =~ s/( # .*) fountain pen/$1 stylo plume/g;
+				$line =~ s/( # .*) emoji with skin tone support/$1 émoji avec prise en charge de la couleur de peau/g;
+				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
+				$line =~ s/( # .*) emoji/$1 émoji/g;
+				$line =~ s/( # .*) in legacy usage/$1 précédemment/g;
+				$line =~ s/( # .*) highlighter mark used by scribes in the margin/$1 mise en évidence par les scibes dans la marge/g;
+				$line =~ s/( # .*) highlighter mark/$1 mise en évidence/g;
+				$line =~ s/( # .*) play or pause button/$1 bouton lecture ou pause/g;
+				$line =~ s/( # .*) pause button/$1 bouton pause/g;
+				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 utilisé comme symbole de composition/g;
+				$line =~ s/( # .*) cross mark button/$1 bouton de croix/g;
+				$line =~ s/( # .*) fast reverse button/$1 bouton de retour rapide/g;
+				$line =~ s/( # .*) reverse button/$1 bouton marche arrière/g;
+				$line =~ s/( # .*) last track button/$1 bouton de la dernière piste/g;
+				$line =~ s/( # .*) check mark button/$1 bouton de coche/g;
+				$line =~ s/( # .*) play button/$1 bouton lecture/g;
+				$line =~ s/( # .*) fast-forward button/$1 bouton d’avance rapide/g;
+				$line =~ s/( # .*) next track button/$1 bouton de la piste suivante/g;
+				$line =~ s/( # .*) drive slow sign/$1 panneau aller doucement/g;
+				$line =~ s/( # .*) snowman with snow/$1 bonhomme de neige sous la neige/g;
+				$line =~ s/( # .*) red heart/$1 cœur rouge/g;
+				$line =~ s/( # .*) most-used in France/$1 émoji le plus utilisé en France/g;
+				$line =~ s/( # .*) heart suit/$1 couleur de cœur/g;
+				$line =~ s/( # .*) part of alphabetic mathematical symbol input sequences/$1 utilisé pour l’accès à 10 alphabets mathématiques latins préformatés supplémentaires et aux 5 alphabets ou symboles mathématiques grecs/g;
+				$line =~ s/( # .*) Japanese kome/$1 kome japonais/g;
+				$line =~ s/( # .*) hourglass not done/$1 sablier non terminé/g;
+				$line =~ s/( # .*) hourglass done/$1 sablier terminé/g;
 				$line =~ s/( # .*\w): /$1 : /g;
 				$line =~ s/( # .*\w); /$1 ; /g;
 
-				# Anchors and localized tooltips.
+				# Anchors, localized tooltips and text style emoji for searchability.
 				unless ( $line =~ m/: +"surrogat_haut_U"/u ) {
+					if ( $line =~ m/ émoji/u ) {
+						$line    =~ m/^.+ : +"(.+?)"/u;
+						$text    = "$1&#xFE0E; ";
+					} else {
+						$text    = '';
+					}
 					$line    =~ m/^.+ : +"(.+?)"/u;
 					$str     = $1;
 					$tooltip = '';
@@ -419,7 +475,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				if ( $comprehensive ) {
 					print WHOLEOUTPUT $line;
@@ -435,4 +491,4 @@ close( INPUT );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
-print( "Dead key tables generated.\n\n" );
+print( "Dead key tables generated.\n" );
