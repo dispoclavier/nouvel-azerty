@@ -2,12 +2,13 @@
 # 2023-08-06T1935+0200
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
-# 2024-03-16T0048+0100
+# 2024-05-11T1256+0200
 # = last modified.
 #
-# Generates HTML tables of Multi_key from multi-key sequences in `Compose.yml`.
+# Generates HTML tables of multi-key sequences from `Compose.yml`.
 #
-# The input requires start and end tags. Section headings switch files.
+# The input requires `START_MULTI_KEY` as a start tag, and `START_MATH` as the
+# end tag. Section headings switch files.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -37,7 +38,6 @@ my $names_file_path       = 'names/ListeNoms.txt';
 ## Convert character names to descriptors
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
-
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -87,12 +87,12 @@ while ( my $line = <INPUT> ) {
 	if ( $parse_on ) {
   	if ( $line =~ /^# # / ) {
 			unless (
-				$line =~ /^# # Circled by leading o/
+				$line =~ /^# # Notes for maintenance/
 				|| $line =~ /^# # Ellipses and leaders/
-				|| $line =~ /^# # Mixed sequences/
-				|| $line =~ /^# # Numero sign/
-				|| $line =~ /^# # Per mille and per myriad/
+				|| $line =~ /^# # Dashes and hyphens/
+				|| $line =~ /^# # Unsupported sequences/
 				|| $line =~ /^# # Degree sign/
+				|| $line =~ /^# # Currency symbols by ISO codes/
 			) {
 				print OUTPUT $end_tags;
 		    close( OUTPUT );
@@ -170,13 +170,14 @@ while ( my $line = <INPUT> ) {
 				# Self-evident.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
-				$line =~ s/<braceleft>/{/g;
-				$line =~ s/<braceright>/}/g;
+				$line =~ s/<EuroSign>/€/g;
+				$line =~ s/<quotedbl>/&quot;/g;
+				$line =~ s/<backslash>/\\/g;
 				$line =~ s/<asciitilde>/~/g;
 				$line =~ s/<at>/@/g;
-				$line =~ s/<grave>/`/g;
 				$line =~ s/<apostrophe>/&#x27;/g;
-				$line =~ s/<quotedbl>/&quot;/g;
+				$line =~ s/<braceleft>/{/g;
+				$line =~ s/<braceright>/}/g;
 				$line =~ s/<ampersand>/&amp;/g;
 				$line =~ s/<numbersign>/#/g;
 				$line =~ s/<dollar>/\$/g;
@@ -184,16 +185,16 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<parenright>/)/g;
 				$line =~ s/<minus>/-/g;
 				$line =~ s/<plus>/+/g;
+				$line =~ s/<underscore>/_/g;
 				$line =~ s/<bracketleft>/[/g;
 				$line =~ s/<bracketright>/]/g;
-				$line =~ s/<underscore>/_/g;
 				$line =~ s/<bar>/|/g;
 				$line =~ s/<slash>/\//g;
 				$line =~ s/<asterisk>/*/g;
 				$line =~ s/<less>/&lt;/g;
 				$line =~ s/<greater>/&gt;/g;
 				$line =~ s/<equal>/=/g;
-				$line =~ s/<backslash>/\\/g;
+				$line =~ s/<grave>/`/g;
 				$line =~ s/<question>/?/g;
 				$line =~ s/<exclam>/!/g;
 				$line =~ s/<colon>/:/g;
@@ -289,4 +290,4 @@ close( INPUT );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
-print( "Multi_key tables generated.\n\n" );
+print( "Multi_key tables generated.\n" );
