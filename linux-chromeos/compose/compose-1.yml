@@ -259,9 +259,8 @@
 #      Alternatively, NNBSP can be used to force no-break behavior.
 #
 #   However, higher level protocols and tailoring are inacceptable options when
-#   considered for the purpose of achieving the digital representation of
-#   natural languages, since the Unicode Standard specifies that it encodes
-#   plain text.
+#   considered for the purpose of digitally representing natural languages, the
+#   more as the Unicode Standard specifies that it encodes plain text.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=45
 #
 #   In Unicode CLDR, French migrated from NBSP to NNBSP for grouping digits and
@@ -644,15 +643,14 @@
 #   The two Latin-1 ordinal indicators "ª" U00AA FEMININE ORDINAL INDICATOR and
 #   "º" U00BA MASCULINE ORDINAL INDICATOR are legacy characters, superseded by
 #   the use of preformatted superscript small letters for ordinal indicators in
-#   Italian, Portuguese, and Spanish, also supporting plural forms. The two old
-#   ordinal indicators are still supported by composition, and they are even in
-#   group 11.
+#   Italian, Portuguese and Spanish, also supporting plural forms. Consistently
+#   French ordinal indicators are preformatted superscripts, too: ᵈ, ᵉ, ʳ, ˢ.
+#   https://github.com/unicode-org/cldr/blob/01d3fe0c2168336453b5ec1a34837da1ba9fbc6c/common/main/fr.xml#L1528
+#
+#   The two old ordinal indicators are still supported by Multi_key and also in
+#   group 12.
 #   See # # D01
 #   See # # D09
-#
-#   Consistently, French ordinal indicators are preformatted superscripts, too:
-#   ᵈ, ᵉ, ʳ, ˢ.
-#   https://github.com/unicode-org/cldr/blob/01d3fe0c2168336453b5ec1a34837da1ba9fbc6c/common/main/fr.xml#L1528
 #
 <Multi_key><a><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <Multi_key><o><underscore>                                                                         : "º" U00BA # MASCULINE ORDINAL INDICATOR
@@ -1184,8 +1182,9 @@
 #
 #   The common horizontal ellipsis, here for completeness, is on live key.
 #   One dot and 2 dot leaders are supported consistently by this occasion.
-#   For ease of input, space termination is skipped for all of these.
-#   See "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
+#   For ease of input, space termination is skipped for all of these, and
+#   also for the mathematical "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
+#   See # # Mathematical Operators of block U2200
 #
 <Multi_key><period><underscore>                                                                    : "․" U2024 # ONE DOT LEADER
 <Multi_key><period><period><underscore>                                                            : "‥" U2025 # TWO DOT LEADER
@@ -2465,56 +2464,65 @@
 #   START_MATH
 #
 #
-### Mathematical symbols by input composition
+### Mathematical symbols by Multi_key
 #
 #
-# # Count of math symbols
+# # Count
 #
-#       2310 total characters declared as for use in math according to
+#       2310 total characters with Derived Property: Math
 #            https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
 #
 #         −7 ASCII + < = > ^ | ~
-#         +4 Quadruple or reverse primes included in TeX math packages,
-#         +5 Arrows U21A8, U21AF, U21DC, U2B45, U2B46 included in TeX math packages,
-#         +2 Triangles U25E3, U25E5 included in TeX math packages according to
+#         +1 Quadruple prime included in TeX math packages
+#         +3 Reverse primes included in TeX math packages
+#         +5 Arrows U21A8, U21AF, U21DC, U2B45, U2B46 included in TeX math packages
+#         +2 Triangles U25E3, U25E5 included in TeX math packages
 #            https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf
+#       ――――
 #       2314 total characters set out for use in math
 #
-#       −996 SMP alphanumeric math symbols in groups 6..10, also by Multi_key,
-#            see # # Mathematical Latin alphabets
+#       −996 SMP alphanumeric math symbols in groups 6..10
+#            See # # Mathematical Latin alphabets
+#            See # # Mathematical Greek alphabets and symbols
 #       −143 SMP Arabic mathematical characters
+#       ――――
 #       1175 BMP math characters
 #
-#        −29 partials, outdated, commented out,
-#         −8 vertical symbols, commented out,
+#        −29 partials
+#         −8 vertical symbols
 #            See # # Mathematical symbols in Miscellaneous Technical block U2300
+#       ――――
 #       1138 horizontal full BMP symbols and diacritics used in math
 #
 #         −3 Arabic[-Indic] BMP math symbols
 #        −20 CJK math presentation forms
 #         −1 Hebrew math presentation form
+#       ――――
 #       1114 Western full BMP math symbols and diacritics
 #
 #
-#   The Unicode `Math` property cannot be relied on since it does not reflect the
-#   use of the symbols in practice. E.g. U2B45 and U2B46 are not labeled as math,
-#   yet they are included in TeX math packages and are thus expected to be input.
+#   The Unicode `Math` property defines a subset of the symbols that need to be
+#   supported as math symbols. E.g. "⭅" U2B45 and U2B46 are not labeled as math
+#   yet are included in TeX math packages and are thus expected to be supported
+#   by input methods.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
 #
 #
-# # Order of math sequences
+# # Layout
 #
-#   For maintainability, the symbols are ordered by ascending code points.
+#   For maintainability, the symbols are ordered by ascending code point.
 #
-#   The preposition “of” is used if a block is entirely devoted to mathematics.
-#   If the list of supported symbols defines a subset, the preposition is “in”.
+#   Alternative input methods are hinted in comment lines.
+#
+#   In the headings, the preposition “of” is used if the block is entirely
+#   dedicated to mathematics. If the mathematical symbols are a subset only,
+#   the preposition is “in”.
 #
 #
-#   Overview
+# # Overview
 #
 #   Symbols are included and counted depending on their code point order.
 #
-#      0  # # Less/greater or equal
 #      1  # # Not sign
 #      1  # # Plus minus
 #      2  # # Multiplication and division signs
@@ -2576,7 +2584,20 @@
 #   except when required otherwise for disambiguation in partial negation, as
 #   in ≇ U2247 vs "≆" U2246. E.g. "∄" U2204, "∅" U2205, "∉" U2209.
 #
-#   For consistency, Multi_key sequences starting with slash, pipe or backslash
+#   The symbols with less or equal, greater or equal semantics are redesigned.
+#   To support both the straight variant "≤" U2264, "≥" U2265, and the slanted
+#   variant, sequences with underscore are repurposed, and sequences with minus
+#   are introduced since those with equals are needed for "≦" U2266, "≧" U2267.
+#   This applies to all symbols with “or equal to” semantics. If the equals is
+#   double line, sequences with equals sign are used; if it is single line, the
+#   ASCII minus is used; if the equals is slanted, underscore is used, a single
+#   underscore for single-line equals, two underscores for double-line equals,
+#   e.g. "⪛" U2A9B. See also "⋚" U22DA vs "⪋" U2A8B.
+#
+#   The slanted variants "⩽" U2A7D and "⩾" U2A7E, preferred in French, are also
+#   in group 2 of < and >.
+#
+#   For consistency, Multi_key sequences starting with slash, pipe, or backslash
 #   followed by a trailing digit are in the corresponding dead keys, where they
 #   are not space terminated.
 #   Slash: "∕" U2215, "⧸" U29F8, "⟋" U27CB, "⁄" U2044.
@@ -2587,31 +2608,27 @@
 #   Backslash: "∖" U2216, "⧹" U29F9, "⟍" U27CD, "⧵" U29F5.
 #   See #*# REVERSED
 #
+#   Sequences including quotedbl need to be replicated using EuroSign instead,
+#   since the euro sign replaces quotedbl on AltGr/Option + E.
 #
-# # Less or equal, greater or equal
+#   Sequences including semicolon need to be replicated using section instead,
+#   since the section sign replaces the semicolon in French mode.
 #
-#   To support both the straight variant "≤" U2264, "≥" U2265, and the slanted
-#   variant, sequences with underscore are repurposed, and sequences with minus
-#   are introduced since those with equals are needed for "≦" U2266, "≧" U2267.
-#   This applies to all symbols with “or equal to” semantics. If the equals is
-#   double line, sequences with equals sign are used; if it is single line, the
-#   ASCII minus is used; if the equals is slanted, underscore is used, a single
-#   underscore for single-line equals, two underscores for double-line equals,
-#   e.g. "⪛" U2A9B. See also "⋚" U22DA vs "⪋" U2A8B.
-#
-#   The slanted variant "⩽" U2A7D and "⩾" U2A7E, preferred in French, is also
-#   in group 2 of < and >.
+#   As rightsinglequotemark is on the apostrophe key in French mode, sequences
+#   with apostrophe work also with rightsinglequotemark, although apostrophe is
+#   on the next key, E05, on the same (base) level as rightsinglequotemark.
 #
 #
 # # Not sign
 #
 #   The not sign is also in group 2 of grave on the N key.
 #
-#   See "⫬" U2AEC, "⫭" U2AED, and not-math "⌙" U2319.
+#   These sequences need to be consistent with those of "⫬" U2AEC and "⫭" U2AED
+#   below. There is also a not-math turned not sign "⌙" U2319.
+#   See # # TURNED&GROUP_1
+#   See # # TURNED&GROUP_2
 #
-#   As rightsinglequotemark is on the apostrophe key in French mode, sequences
-#   with apostrophe work also with rightsinglequotemark.
-#
+#   In group 2 of `                                                                                : "¬" U00AC # NOT SIGN
 <Multi_key><minus><apostrophe>                                                             <space> : "¬" U00AC # NOT SIGN
 <Multi_key><minus><apostrophe>                                                      <nobreakspace> : "¬" U00AC # NOT SIGN
 <Multi_key><minus><rightsinglequotemark>                                                   <space> : "¬" U00AC # NOT SIGN
@@ -2620,24 +2637,29 @@
 #
 # # Plus minus
 #
-#   Order matters unlike in en_US.UTF-8/Compose but for backwards compatibility
-#   space termination is skipped, not only for ± U00B1 PLUS-MINUS SIGN but also
-#   for ∓ U2213 MINUS-OR-PLUS SIGN since it is not required for disambiguation.
+#   Order matters unlike in en_US.UTF-8/Compose not supporting "∓" U2213.
+#   Still for backwards compatibility, space termination is skipped, for both
+#   "±" U00B1 and "∓" U2213, since it is not required for disambiguation.
 #
-#   Latin-1 ± U00B1 PLUS-MINUS SIGN is on live key.
+#   Like "×" U00D7 and "÷" U00F7, on complete keyboard layouts, "±" U00B1 PLUS-
+#   MINUS SIGN is on live key.
 #
+#   Additionally, for incomplete keyboard layouts, there is a fallback input
+#   method in the symbols groups.
+#   See # # C06
+#
+#   In group 1 of +                                                                                : "±" U00B1 # PLUS-MINUS SIGN
 <Multi_key><plus><minus>                                                                           : "±" U00B1 # PLUS-MINUS SIGN
 #
 #
 # # Multiplication and division signs
 #
 #   Basic operators are supported by Multi_key despite being on live keys.
-#   Additionally, for incomplete keyboard layouts, there are fallback input
-#   methods in the symbols groups.
+#
+#   Additionally, for incomplete keyboard layouts, there is a fallback input
+#   method in the symbols groups.
 #   See # # B02
 #   See # # B01
-#
-#   See "⋇" U22C7 DIVISION TIMES.
 #
 #   In group 2 of *                                                                                : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                             <space> : "×" U00D7 # MULTIPLICATION SIGN
@@ -2649,18 +2671,20 @@
 <Multi_key><period><minus><period>                                                  <nobreakspace> : "÷" U00F7 # DIVISION SIGN
 #
 #
-# # Greek mathematical SMP symbols
+# # Greek mathematical BMP symbols
 #
-#   The at sign is used as a modifier in these Multi_key sequences because it
-#   is the Multi_key equivalent of dead_greek.
-#   See #*# GREEK
+#   This section is limited to Greek symbols in the Basic Multilingual Plane
+#   with `Derived Property: Math="Y"`. There are many more Greek symbols.
+#   See # # Mathematical Greek alphabets and symbols
 #
-#   There are many more Greek symbols. Some TeX math packages may not support
-#   them all, per Will Robertson, Symbols defined by unicode-math (2023-06-21).
+#   Some TeX math packages may not support them all, per Will Robertson,
+#   “Symbols defined by unicode-math” (2023-06-21).
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=79
 #
-#   The following are those with Unicode `Derived Property: Math="Y"`.
-#   See # # Mathematical Greek alphabets and symbols
+#   The at sign is part of these Multi_key sequences for consistency with the
+#   Greek dead key. However, in the Multi_key equivalent of dead_greek, <at>
+#   is in leading position, while here it comes after the letter.
+#   See #*# GREEK
 #
 <Multi_key><b><at>                                                                         <space> : "ϐ" U03D0 # GREEK BETA SYMBOL
 <Multi_key><b><at>                                                                  <nobreakspace> : "ϐ" U03D0 # GREEK BETA SYMBOL
@@ -2696,12 +2720,17 @@
 #   in slot 4.
 #   See #*# MACRON
 #
+#   With similar mnemonics, "‖" U2016 is in group 2 of bar, while "∥" U2225 is
+#   in group 3, mitigating a potential accessibility bias.
+#   See # # C10
+#
 #   Additionally, this can be input by dead_diaeresis followed by slash (not
 #   bar, due to conflicts with the diaeresis and macron virtual dead keys).
 #   See #*# DIAERESIS
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
 #
+#   In group 2 of |                                                                                : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><2><bar>                                                                        <space> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><2><bar>                                                                 <nobreakspace> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><KP_2><bar>                                                                     <space> : "‖" U2016 # DOUBLE VERTICAL LINE
@@ -2714,19 +2743,22 @@
 #   reversed. Space termination is not needed here either, so it is skipped
 #   for ease of input.
 #   See #*# ACUTE
-#   See "⁗" U2057 sorted in its own subsection for the sake of ascending order.
+#
+#   The quadruple prime "⁗" U2057 is sorted in its own subsection for the sake
+#   of ascending order.
+#   See # # Quadruple prime
 #
 <Multi_key><1><apostrophe>                                                                         : "′" U2032 # PRIME
-<Multi_key><KP_1><apostrophe>                                                                      : "′" U2032 # PRIME
 <Multi_key><1><rightsinglequotemark>                                                               : "′" U2032 # PRIME
+<Multi_key><KP_1><apostrophe>                                                                      : "′" U2032 # PRIME
 <Multi_key><KP_1><rightsinglequotemark>                                                            : "′" U2032 # PRIME
 <Multi_key><2><apostrophe>                                                                         : "″" U2033 # DOUBLE PRIME
-<Multi_key><KP_2><apostrophe>                                                                      : "″" U2033 # DOUBLE PRIME
 <Multi_key><2><rightsinglequotemark>                                                               : "″" U2033 # DOUBLE PRIME
+<Multi_key><KP_2><apostrophe>                                                                      : "″" U2033 # DOUBLE PRIME
 <Multi_key><KP_2><rightsinglequotemark>                                                            : "″" U2033 # DOUBLE PRIME
 <Multi_key><3><apostrophe>                                                                         : "‴" U2034 # TRIPLE PRIME
-<Multi_key><KP_3><apostrophe>                                                                      : "‴" U2034 # TRIPLE PRIME
 <Multi_key><3><rightsinglequotemark>                                                               : "‴" U2034 # TRIPLE PRIME
+<Multi_key><KP_3><apostrophe>                                                                      : "‴" U2034 # TRIPLE PRIME
 <Multi_key><KP_3><rightsinglequotemark>                                                            : "‴" U2034 # TRIPLE PRIME
 #
 #
@@ -2747,21 +2779,22 @@
 #
 # # Character tie
 #
-#   Also in group 4 of J.
-#
+#   In group 4 of J                                                                                : "⁀" U2040 # CHARACTER TIE
 <Multi_key><space><parenleft>                                                              <space> : "⁀" U2040 # CHARACTER TIE
 <Multi_key><space><parenleft>                                                       <nobreakspace> : "⁀" U2040 # CHARACTER TIE
 #
 #
 # # Fraction slash
 #
-#   Also on live B09: Always on level 7, and on level 6 in ASCII mode.
-#   Additionally, U2044 FRACTION SLASH is supported by Multi_key the same way
-#   as U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
+#   On complete layouts, U2044 FRACTION SLASH is on live keys:
+#   C01, level 6, and B09, level 7, in ASCII mode also on level 6.
 #   See # # Vulgar fractions
 #
 #   Also in dead_longsolidusoverlay followed by 4, without space termination.
 #   See #*# STROKE
+#
+#   Additionally, U2044 FRACTION SLASH is supported by Multi_key the same way
+#   as U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
 #
 <Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><f><slash>                                                               <nobreakspace> : "⁄" U2044 # FRACTION SLASH
@@ -2781,10 +2814,11 @@
 #
 # # Commercial minus sign
 #
-#   Also in group 11 of -.
+#   As this is used in current writing, and thanks to its unique Multi_key
+#   sequence, space termination is not needed and is skipped.
 #
-<Multi_key><period><slash><period>                                                         <space> : "⁒" U2052 # COMMERCIAL MINUS SIGN
-<Multi_key><period><slash><period>                                                  <nobreakspace> : "⁒" U2052 # COMMERCIAL MINUS SIGN
+#   In group 11 of -                                                                               : "⁒" U2052 # COMMERCIAL MINUS SIGN
+<Multi_key><period><slash><period>                                                                 : "⁒" U2052 # COMMERCIAL MINUS SIGN
 #
 #
 # # Quadruple prime
@@ -2821,7 +2855,8 @@
 #
 # # Superscript or subscript signs, symbol, punctuation
 #
-#   Primarily supported by dead keys and their Multi_key equivalents.
+#   Primarily supported by dead keys and their Multi_key equivalents, where the
+#   sequences work the other way around, and without space termination.
 #   See #*# SUPERSCRIPT
 #   See #*# SUBSCRIPT
 #
@@ -2848,6 +2883,10 @@
 #
 #
 # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
+#
+#   Ampersand is in leading position because this is no Multi_key equivalent of
+#   any dead key, and because that is consistent with the “combining” semantics
+#   of ampersand in this context.
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Combining_Diacritical_Marks_for_Symbols_block
 #   https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols
@@ -2932,7 +2971,8 @@
 #   including some of these that have extra signatures here for convenience.
 #   The liter symbol "ℓ" U2113 goes extra, "𝓁" U1D4C1 is encoded separately.
 #   Space termination is skipped where obviously dispensable.
-#   Alternative input methods are hinted in comment lines.
+#   See # # Mathematical Latin alphabets
+#   See # # Mathematical Greek alphabets and symbols
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Letterlike_Symbols_block
 #   https://en.wikipedia.org/wiki/Letterlike_Symbols
@@ -3098,15 +3138,15 @@
 #
 # # Arrows in block U2190 used in mathematics
 #
+#   Single-line stem (U2190..) and double-line stem (U21D0..) basic arrows used
+#   in math are also easily input by digits 0..9 in groups 2 and 3.
+#   See # # Arrows as on the numpad
+#
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Arrows_block
 #   https://en.wikipedia.org/wiki/Arrows_(Unicode_block)
 #   https://en.wikipedia.org/wiki/Arrow_(symbol)#Unicode
 #   https://www.unicode.org/charts/PDF/U2190.pdf
 #   https://www.unicode.org/charts/nameslist/n_2190.html
-#
-#   Single-line stem (U2190..) and double-line stem (U21D0..) basic arrows used
-#   in math are also easily input by digits 0..9 in groups 2 and 3.
-#   See # # Arrows as on the numpad
 #
 <Multi_key><less><minus><minus><underscore>                                                <space> : "←" U2190 # LEFTWARDS ARROW
 <Multi_key><less><minus><minus><underscore>                                         <nobreakspace> : "←" U2190 # LEFTWARDS ARROW
@@ -3163,8 +3203,10 @@
 #   U21A8 is not labeled as math in Unicode but is included in TeX math packages.
 <Multi_key><less><minus><greater><bar><bar>                                                <space> : "↨" U21A8 # UP DOWN ARROW WITH BASE
 <Multi_key><less><minus><greater><bar><bar>                                         <nobreakspace> : "↨" U21A8 # UP DOWN ARROW WITH BASE
+#   In group 9 of )                                                                                : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
 <Multi_key><less><minus><parenright>                                                       <space> : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
 <Multi_key><less><minus><parenright>                                                <nobreakspace> : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
+#   In group 9 of (                                                                                : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
 <Multi_key><parenleft><minus><greater>                                                     <space> : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
 <Multi_key><parenleft><minus><greater>                                              <nobreakspace> : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
 <Multi_key><less><minus><o>                                                                <space> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
@@ -3357,28 +3399,36 @@
 #   https://www.unicode.org/charts/PDF/U2200.pdf
 #   https://www.unicode.org/charts/nameslist/n_2200.html
 #
+#   In group 4 of ^                                                                                : "∀" U2200 # FOR ALL
 <Multi_key><A>                                                                             <space> : "∀" U2200 # FOR ALL
 <Multi_key><A>                                                                      <nobreakspace> : "∀" U2200 # FOR ALL
 <Multi_key><C>                                                                             <space> : "∁" U2201 # COMPLEMENT
 <Multi_key><C>                                                                      <nobreakspace> : "∁" U2201 # COMPLEMENT
+#   In group 2 of (                                                                                : "∂" U2202 # PARTIAL DIFFERENTIAL
 <Multi_key><d>                                                                             <space> : "∂" U2202 # PARTIAL DIFFERENTIAL
 <Multi_key><d>                                                                      <nobreakspace> : "∂" U2202 # PARTIAL DIFFERENTIAL
+#   In group 4 of € and "                                                                          : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                             <space> : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                      <nobreakspace> : "∃" U2203 # THERE EXISTS
 <Multi_key><E><slash>                                                                      <space> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><E><slash>                                                               <nobreakspace> : "∄" U2204 # THERE DOES NOT EXIST
+#   In group 2 of }                                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><O><slash>                                                                      <space> : "∅" U2205 # EMPTY SET
 <Multi_key><O><slash>                                                               <nobreakspace> : "∅" U2205 # EMPTY SET
+#   In group 4 of (                                                                                : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                             <space> : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                      <nobreakspace> : "∆" U2206 # INCREMENT
+#   In group 5 of (                                                                                : "∇" U2207 # NABLA
 <Multi_key><D><D>                                                                          <space> : "∇" U2207 # NABLA
 <Multi_key><D><D>                                                                   <nobreakspace> : "∇" U2207 # NABLA
+#   In group 2 of € and "                                                                          : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                             <space> : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                      <nobreakspace> : "∈" U2208 # ELEMENT OF
 <Multi_key><e><slash>                                                                      <space> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><e><slash>                                                               <nobreakspace> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><e><underscore>                                                                 <space> : "∊" U220A # SMALL ELEMENT OF
 <Multi_key><e><underscore>                                                          <nobreakspace> : "∊" U220A # SMALL ELEMENT OF
+#   In group 3 of € and "                                                                          : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                             <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                      <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><e>                                                                          <space> : "∋" U220B # CONTAINS AS MEMBER
@@ -3391,24 +3441,29 @@
 <Multi_key><p><underscore>                                                          <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><e><underscore>                                                              <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><e><underscore>                                                       <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
+#   In group 12 of !                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><q><e><d>                                                                       <space> : "∎" U220E # END OF PROOF
 <Multi_key><q><e><d>                                                                <nobreakspace> : "∎" U220E # END OF PROOF
 <Multi_key><c><q><f><d>                                                                    <space> : "∎" U220E # END OF PROOF
 <Multi_key><c><q><f><d>                                                             <nobreakspace> : "∎" U220E # END OF PROOF
+#   In group 3 of &                                                                                : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
+#   In group 3 of <                                                                                : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><percent>                                                                    <space> : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><percent>                                                             <nobreakspace> : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><P><P>                                                                       <space> : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><P><P>                                                                <nobreakspace> : "∐" U2210 # N-ARY COPRODUCT
+#   In group 3 of $                                                                                : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
 #   On live key AltFr + D05                                                                        : "−" U2212 # MINUS SIGN
 #   In group 1 of -                                                                                : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                                  <space> : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                           <nobreakspace> : "−" U2212 # MINUS SIGN
-#   For "∓" U2213, space termination is skipped like it is for "±" U00B1,
-#   according to comment in # # Plus minus
+#   For "∓" U2213, space termination is skipped like it is for "±" U00B1.
+#   See # # Plus minus
+#   In group 2 of +                                                                                : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><minus><plus>                                                                           : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><period><plus>                                                                  <space> : "∔" U2214 # DOT PLUS
 <Multi_key><period><plus>                                                           <nobreakspace> : "∔" U2214 # DOT PLUS
@@ -3466,7 +3521,7 @@
 <Multi_key><8>                                                                      <nobreakspace> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                          <space> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                   <nobreakspace> : "∞" U221E # INFINITY
-#   In group 5 of /                                                                                : "∟" U221F # RIGHT ANGLE
+#   In group 5 of ]                                                                                : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                             <space> : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                      <nobreakspace> : "∟" U221F # RIGHT ANGLE
 #   In group 5 of ^                                                                                : "∠" U2220 # ANGLE
@@ -3477,6 +3532,7 @@
 <Multi_key><slash><underscore><parenright>                                          <nobreakspace> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><slash><backslash><parenright>                                                  <space> : "∢" U2222 # SPHERICAL ANGLE
 <Multi_key><slash><backslash><parenright>                                           <nobreakspace> : "∢" U2222 # SPHERICAL ANGLE
+#   In group 1 of |                                                                                : "∣" U2223 # DIVIDES
 #   In #*# MACRON                                                                                  : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                                    <space> : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                             <nobreakspace> : "∣" U2223 # DIVIDES
@@ -3485,6 +3541,7 @@
 #   In #*# STROKE                                                                                  : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                                    <space> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                             <nobreakspace> : "∤" U2224 # DOES NOT DIVIDE
+#   In group 3 of |                                                                                : "∥" U2225 # PARALLEL TO
 #   In #*# MACRON                                                                                  : "∥" U2225 # PARALLEL TO
 <Multi_key><space><bar><bar>                                                               <space> : "∥" U2225 # PARALLEL TO
 <Multi_key><space><bar><bar>                                                        <nobreakspace> : "∥" U2225 # PARALLEL TO
@@ -3493,6 +3550,7 @@
 #   In #*# STROKE                                                                                  : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><bar><bar><slash>                                                               <space> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><bar><bar><slash>                                                        <nobreakspace> : "∦" U2226 # NOT PARALLEL TO
+#   In group 3 of `                                                                                : "∧" U2227 # LOGICAL AND
 <Multi_key><a>                                                                             <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><a>                                                                      <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><v>                                                                          <space> : "∧" U2227 # LOGICAL AND
@@ -3501,10 +3559,13 @@
 <Multi_key><space><asciicircum>                                                     <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><nobreakspace><asciicircum>                                                     <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><nobreakspace><asciicircum>                                              <nobreakspace> : "∧" U2227 # LOGICAL AND
+#   In group 4 of `                                                                                : "∨" U2228 # LOGICAL OR
 <Multi_key><v>                                                                             <space> : "∨" U2228 # LOGICAL OR
 <Multi_key><v>                                                                      <nobreakspace> : "∨" U2228 # LOGICAL OR
+#   In group 4 of }                                                                                : "∩" U2229 # INTERSECTION
 <Multi_key><n>                                                                             <space> : "∩" U2229 # INTERSECTION
 <Multi_key><n>                                                                      <nobreakspace> : "∩" U2229 # INTERSECTION
+#   In group 4 of '                                                                                : "∪" U222A # UNION
 <Multi_key><u>                                                                             <space> : "∪" U222A # UNION
 <Multi_key><u>                                                                      <nobreakspace> : "∪" U222A # UNION
 #   In group 5 of {                                                                                : "∫" U222B # INTEGRAL
@@ -3656,6 +3717,7 @@
 <Multi_key><o><equal>                                                               <nobreakspace> : "≗" U2257 # RING EQUAL TO
 <Multi_key><parenleft><equal>                                                              <space> : "≘" U2258 # CORRESPONDS TO
 <Multi_key><parenleft><equal>                                                       <nobreakspace> : "≘" U2258 # CORRESPONDS TO
+#   In group 2 of =                                                                                : "≙" U2259 # ESTIMATES
 <Multi_key><a><equal>                                                                      <space> : "≙" U2259 # ESTIMATES
 <Multi_key><a><equal>                                                               <nobreakspace> : "≙" U2259 # ESTIMATES
 <Multi_key><v><v><equal>                                                                   <space> : "≙" U2259 # ESTIMATES
@@ -3670,6 +3732,7 @@
 <Multi_key><space><asterisk><equal>                                                 <nobreakspace> : "≛" U225B # STAR EQUALS
 <Multi_key><nobreakspace><asterisk><equal>                                                 <space> : "≛" U225B # STAR EQUALS
 <Multi_key><nobreakspace><asterisk><equal>                                          <nobreakspace> : "≛" U225B # STAR EQUALS
+#   In group 4 of =                                                                                : "≜" U225C # DELTA EQUAL TO
 <Multi_key><D><equal>                                                                      <space> : "≜" U225C # DELTA EQUAL TO
 <Multi_key><D><equal>                                                               <nobreakspace> : "≜" U225C # DELTA EQUAL TO
 <Multi_key><d><e><f><equal>                                                                <space> : "≝" U225D # EQUAL TO BY DEFINITION
@@ -3680,6 +3743,7 @@
 <Multi_key><question><equal>                                                        <nobreakspace> : "≟" U225F # QUESTIONED EQUAL TO
 <Multi_key><equal><slash>                                                                  <space> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                           <nobreakspace> : "≠" U2260 # NOT EQUAL TO
+#   In group 3 of =                                                                                : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal>                                                                  <space> : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal>                                                           <nobreakspace> : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal><slash>                                                           <space> : "≢" U2262 # NOT IDENTICAL TO
@@ -3768,8 +3832,10 @@
 <Multi_key><greater><parenright><parenleft><slash>                                  <nobreakspace> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><greater><parenleft><parenright><slash>                                         <space> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><greater><parenleft><parenright><slash>                                  <nobreakspace> : "⊁" U2281 # DOES NOT SUCCEED
+#   In group 2 of '                                                                                : "⊂" U2282 # SUBSET OF
 <Multi_key><c>                                                                             <space> : "⊂" U2282 # SUBSET OF
 <Multi_key><c>                                                                      <nobreakspace> : "⊂" U2282 # SUBSET OF
+#   In group 3 of '                                                                                : "⊃" U2283 # SUPERSET OF
 <Multi_key><b>                                                                             <space> : "⊃" U2283 # SUPERSET OF
 <Multi_key><b>                                                                      <nobreakspace> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><c>                                                                          <space> : "⊃" U2283 # SUPERSET OF
@@ -3802,6 +3868,7 @@
 <Multi_key><u><less>                                                                <nobreakspace> : "⊌" U228C # MULTISET
 <Multi_key><u><period>                                                                     <space> : "⊍" U228D # MULTISET MULTIPLICATION
 <Multi_key><u><period>                                                              <nobreakspace> : "⊍" U228D # MULTISET MULTIPLICATION
+#   In group 4 of +                                                                                : "⊎" U228E # MULTISET UNION
 <Multi_key><u><plus>                                                                       <space> : "⊎" U228E # MULTISET UNION
 <Multi_key><u><plus>                                                                <nobreakspace> : "⊎" U228E # MULTISET UNION
 <Multi_key><c><bracketleft>                                                                <space> : "⊏" U228F # SQUARE IMAGE OF
@@ -3876,12 +3943,16 @@
 <Multi_key><period><bracketright>                                                   <nobreakspace> : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period><bracketright>                                             <space> : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period><bracketright>                                      <nobreakspace> : "⊡" U22A1 # SQUARED DOT OPERATOR
+#   In group 6 of /                                                                                : "⊢" U22A2 # RIGHT TACK
 <Multi_key><bar><minus><minus>                                                             <space> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><bar><minus><minus>                                                      <nobreakspace> : "⊢" U22A2 # RIGHT TACK
+#   In group 7 of /                                                                                : "⊣" U22A3 # LEFT TACK
 <Multi_key><minus><minus><bar>                                                             <space> : "⊣" U22A3 # LEFT TACK
 <Multi_key><minus><minus><bar>                                                      <nobreakspace> : "⊣" U22A3 # LEFT TACK
+#   In group 9 of /                                                                                : "⊤" U22A4 # DOWN TACK
 <Multi_key><T>                                                                             <space> : "⊤" U22A4 # DOWN TACK
 <Multi_key><T>                                                                      <nobreakspace> : "⊤" U22A4 # DOWN TACK
+#   In group 8 of /                                                                                : "⊥" U22A5 # UP TACK
 <Multi_key><T><T>                                                                          <space> : "⊥" U22A5 # UP TACK
 <Multi_key><T><T>                                                                   <nobreakspace> : "⊥" U22A5 # UP TACK
 <Multi_key><T><percent>                                                                    <space> : "⊥" U22A5 # UP TACK
@@ -3978,6 +4049,8 @@
 <Multi_key><U>                                                                      <nobreakspace> : "⋃" U22C3 # N-ARY UNION
 <Multi_key><asciicircum><asciicircum><asciicircum>                                         <space> : "⋄" U22C4 # DIAMOND OPERATOR
 <Multi_key><asciicircum><asciicircum><asciicircum>                                  <nobreakspace> : "⋄" U22C4 # DIAMOND OPERATOR
+#   In group 1 of :                                                                                : "⋅" U22C5 # DOT OPERATOR
+#   In group 4 of .                                                                                : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><space><period>                                                                 <space> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><space><period>                                                          <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><nobreakspace><period>                                                          <space> : "⋅" U22C5 # DOT OPERATOR
@@ -3994,6 +4067,7 @@
 <Multi_key><x><period><minus><period>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><period><minus><period><x>                                                      <space> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><period><minus><period><x>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
+#   In group 10 of /                                                                               : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash><bar>                                                    <space> : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash><bar>                                             <nobreakspace> : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><slash><backslash><bar>                                                    <space> : "⋈" U22C8 # BOWTIE
@@ -4137,9 +4211,15 @@
 <Multi_key><greater><bar><slash><minus>                                             <nobreakspace> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
 <Multi_key><greater><bar><minus><slash>                                                    <space> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
 <Multi_key><greater><bar><minus><slash>                                             <nobreakspace> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
+#   For ellipses, space termination is skipped for consistency and as needless.
+#   See # # Ellipses and leaders
+#   In group 3 of :                                                                                : "⋮" U22EE # VERTICAL ELLIPSIS
 <Multi_key><period><period><period><bar>                                                           : "⋮" U22EE # VERTICAL ELLIPSIS
+#   In group 5 of :                                                                                : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key><period><period><period><minus>                                                         : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
+#   In group 6 of :                                                                                : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <Multi_key><period><period><period><slash>                                                         : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
+#   In group 6 of ;                                                                                : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key><period><period><period><backslash>                                                     : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key><space><minus><e>                                                               <space> : "⋲" U22F2 # ELEMENT OF WITH LONG HORIZONTAL STROKE
 <Multi_key><space><minus><e>                                                        <nobreakspace> : "⋲" U22F2 # ELEMENT OF WITH LONG HORIZONTAL STROKE
@@ -4223,14 +4303,14 @@
 #
 # # Mathematical symbols in Miscellaneous Technical block U2300
 #
+#   Supporting the 29 technically outdated partials by Multi_key is pointless.
+#   Likewise, the 9 vertical brackets AK̭A horizontal brackets are not used in
+#   contexts other than CJK and terminal emulation with vertical text layout.
+#
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Miscellaneous_Technical_block
 #   https://en.wikipedia.org/wiki/Miscellaneous_Technical
 #   https://www.unicode.org/charts/PDF/U2300.pdf
 #   https://www.unicode.org/charts/nameslist/n_2300.html
-#
-#   Supporting the 29 technically outdated partials by Multi_key is pointless.
-#   Likewise, the 9 vertical brackets AK̭A horizontal brackets are not used in
-#   contexts other than CJK and terminal emulation with vertical text layout.
 #
 <Multi_key><bracketleft><asciicircum>                                                      <space> : "⌈" U2308 # LEFT CEILING
 <Multi_key><bracketleft><asciicircum>                                               <nobreakspace> : "⌈" U2308 # LEFT CEILING
@@ -4349,6 +4429,7 @@
 <Multi_key><slash><numbersign><underscore><slash>                                   <nobreakspace> : "▰" U25B0 # BLACK PARALLELOGRAM
 <Multi_key><slash><underscore><slash>                                                      <space> : "▱" U25B1 # WHITE PARALLELOGRAM
 <Multi_key><slash><underscore><slash>                                               <nobreakspace> : "▱" U25B1 # WHITE PARALLELOGRAM
+#   In group 11 of /                                                                               : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><numbersign><underscore><backslash>                                      <space> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><numbersign><underscore><backslash>                               <nobreakspace> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                                  <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
@@ -4357,6 +4438,7 @@
 <Multi_key><asciicircum><numbersign><underscore>                                    <nobreakspace> : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><asciicircum><underscore>                                                       <space> : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><asciicircum><underscore>                                                <nobreakspace> : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+#   In group 5 of >                                                                                : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign><backslash><slash>                                      <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign><backslash><slash>                               <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><numbersign><backslash><slash>                               <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
@@ -4373,6 +4455,7 @@
 <Multi_key><space><bar><slash><backslash>                                           <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><slash><backslash>                                           <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><slash><backslash>                                    <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+#   In group 11 of >                                                                               : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash>                                      <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash>                               <nobreakspace> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><slash><backslash>                                      <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
@@ -4413,6 +4496,7 @@
 <Multi_key><underscore><slash><backslash><0>                                        <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><slash><backslash><KP_0>                                            <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><slash><backslash><KP_0>                                     <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#   In group 5 of <                                                                                : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><space><slash><backslash><numbersign><bar>                                      <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><space><slash><backslash><numbersign><bar>                               <nobreakspace> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><slash><backslash><numbersign><bar>                               <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
@@ -4433,12 +4517,15 @@
 <Multi_key><space><less><greater>                                                   <nobreakspace> : "◇" U25C7 # WHITE DIAMOND
 <Multi_key><nobreakspace><less><greater>                                                   <space> : "◇" U25C7 # WHITE DIAMOND
 <Multi_key><nobreakspace><less><greater>                                            <nobreakspace> : "◇" U25C7 # WHITE DIAMOND
+#   In group 4 of ]                                                                                : "◊" U25CA # LOZENGE
 <Multi_key><space><a><v>                                                                   <space> : "◊" U25CA # LOZENGE
 <Multi_key><space><a><v>                                                            <nobreakspace> : "◊" U25CA # LOZENGE
 <Multi_key><nobreakspace><a><v>                                                            <space> : "◊" U25CA # LOZENGE
 <Multi_key><nobreakspace><a><v>                                                     <nobreakspace> : "◊" U25CA # LOZENGE
+#   In group 5 of @                                                                                : "○" U25CB # WHITE CIRCLE
 <Multi_key><O>                                                                             <space> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O>                                                                      <nobreakspace> : "○" U25CB # WHITE CIRCLE
+#   In group 6 of @                                                                                : "●" U25CF # BLACK CIRCLE
 <Multi_key><O><numbersign>                                                                 <space> : "●" U25CF # BLACK CIRCLE
 <Multi_key><O><numbersign>                                                          <nobreakspace> : "●" U25CF # BLACK CIRCLE
 <Multi_key><O><numbersign><bar>                                                            <space> : "◐" U25D0 # CIRCLE WITH LEFT HALF BLACK
@@ -4637,6 +4724,7 @@
 <Multi_key><backslash><slash><underscore><o>                                        <nobreakspace> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                               <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                        <nobreakspace> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+#   In group 12 of `                                                                               : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><bar><underscore>                                                               <space> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><bar><underscore>                                                        <nobreakspace> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><space><c><o>                                                                   <space> : "⟃" U27C3 # OPEN SUBSET
@@ -5345,7 +5433,7 @@
 <Multi_key><parenleft><underscore><backslash>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
 <Multi_key><backslash><underscore><parenleft>                                              <space> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
 <Multi_key><backslash><underscore><parenleft>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-#   In group 6 of /                                                                                : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+#   In group 6 of ]                                                                                : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><bracketright>                                                               <space> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><bracketright>                                                        <nobreakspace> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><parenright><period>                                                         <space> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
@@ -5552,8 +5640,10 @@
 <Multi_key><backslash><slash><numbersign><bar>                                      <nobreakspace> : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
 <Multi_key><slash><backslash><numbersign><bar>                                             <space> : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
 <Multi_key><slash><backslash><numbersign><bar>                                      <nobreakspace> : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+#   In group 10 of ;                                                                               : "⧖" U29D6 # WHITE HOURGLASS
 <Multi_key><X><underscore><underscore>                                                     <space> : "⧖" U29D6 # WHITE HOURGLASS
 <Multi_key><X><underscore><underscore>                                              <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
+#   In group 9 of ;                                                                                : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore>                                                     <space> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore>                                              <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore><underscore>                                         <space> : "⧗" U29D7 # BLACK HOURGLASS
@@ -5661,11 +5751,11 @@
 #   REVERSE SOLIDUS OPERATOR is disambiguated by a quadruple leading space.
 #   For convenience these [back]slash symbols are alternatively disambiguated
 #   by a trailing digit, for consistency also those with a single leading space.
+#   In #*# REVERSED                                                                                : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><O><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-#   In #*# REVERSED                                                                                : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><space><space><space><space><backslash>                                         <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><space><space><space><space><backslash>                                  <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><space><space><space><backslash>                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
@@ -5839,6 +5929,10 @@
 <Multi_key><o><semicolon>                                                           <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><semicolon>                                                                  <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><semicolon>                                                           <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><o><section>                                                                    <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><o><section>                                                             <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><z><section>                                                                    <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><z><section>                                                             <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><greater><greater>                                                           <space> : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
 <Multi_key><z><greater><greater>                                                    <nobreakspace> : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
 <Multi_key><z><1>                                                                          <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
@@ -5955,6 +6049,14 @@
 <Multi_key><space><z><semicolon>                                                    <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><z><semicolon>                                                    <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><z><semicolon>                                             <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><o><section>                                                             <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><o><section>                                                      <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><o><section>                                                      <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><o><section>                                               <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><z><section>                                                             <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><z><section>                                                      <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><z><section>                                                      <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><z><section>                                               <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><p><p><p>                                                                       <space> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><p><p><p>                                                                <nobreakspace> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><n><period>                                                                     <space> : "⩀" U2A40 # INTERSECTION WITH DOT
@@ -6768,25 +6870,33 @@
 #   The Comprehensive LaTeX Symbol List, 19 January 2017
 #   http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf
 #
-<Multi_key><p><i>                                                                          <space> : "π" U03C0 # GREEK SMALL LETTER PI TeX control
-<Multi_key><p><i>                                                                   <nobreakspace> : "π" U03C0 # GREEK SMALL LETTER PI TeX control
+#   In group 1 of &                                                                                : "π" U03C0 # GREEK SMALL LETTER PI
+<Multi_key><p><i>                                                                          <space> : "π" U03C0 # GREEK SMALL LETTER PI
+<Multi_key><p><i>                                                                   <nobreakspace> : "π" U03C0 # GREEK SMALL LETTER PI
+#   In group 4 of }                                                                                : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                       <space> : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                <nobreakspace> : "∩" U2229 # INTERSECTION
+<Multi_key><i><n><t><e><r><s><e><c>                                                                : "∩" U2229 # INTERSECTION French truncated name
 <Multi_key><C><a><p>                                                                       <space> : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><C><a><p>                                                                <nobreakspace> : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><c><a><p><d><o><t>                                                                      : "⩀" U2A40 # INTERSECTION WITH DOT
-#   <Multi_key><c><a><p><p><l><u><s>                                                               : Not encoded in Unicode.
+#   <Multi_key><c><a><p><p><l><u><s>                                                               : Not in Unicode.
+#   In group 4 of '                                                                                : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                       <space> : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                <nobreakspace> : "∪" U222A # UNION
+<Multi_key><u><n><i><o><n>                                                                         : "∪" U222A # UNION French name
 <Multi_key><C><u><p>                                                                       <space> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><C><u><p>                                                                <nobreakspace> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><c><u><p><d><o><t>                                                                      : "⊍" U228D # MULTISET MULTIPLICATION
+#   In group 4 of +                                                                                : "⊎" U228E # MULTISET UNION
 <Multi_key><c><u><p><p><l><u><s>                                                                   : "⊎" U228E # MULTISET UNION
-<Multi_key><u><n><i><o><n>                                                                         : "∪" U222A # UNION French name
-<Multi_key><i><n><t><e><r><s><e><c>                                                                : "∩" U2229 # INTERSECTION French truncated name
+#   In group 12 of \                                                                               : "∖" U2216 # SET MINUS
+#   In #*# REVERSED                                                                                : "∖" U2216 # SET MINUS
 <Multi_key><s><e><t><m><i><n><u><s>                                                                : "∖" U2216 # SET MINUS
+#   In group 2 of }                                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><e><m><p><t><y><s><e><t>                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><e><n><s><v><i><d><e>                                                                   : "∅" U2205 # EMPTY SET French shortened name
+#   In group 1 of (                                                                                : "⌀" U2300 # DIAMETER
 <Multi_key><d><i><a><m><e><t><e><r>                                                                : "⌀" U2300 # DIAMETER
 <Multi_key><d><i><a><m><egrave><t><r><e>                                                           : "⌀" U2300 # DIAMETER French
 <Multi_key><d><i><a><m><e><t><r><e>                                                                : "⌀" U2300 # DIAMETER simplified French
