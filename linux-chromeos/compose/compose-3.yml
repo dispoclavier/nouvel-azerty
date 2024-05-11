@@ -8,7 +8,7 @@
 #               Installation: Please do not use this file but the all-in-one file `Compose.yml`.
 #
 #
-#   START_GROUP_SELECTOR
+#   START_LETTER_SYMBOL_GROUPS
 #
 #
 ### Group selector introduction
@@ -106,22 +106,29 @@
 #   The five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
 #   are in group 10 on D06..D10.
 #
-#   Emoji full list: https://unicode.org/emoji/charts/full-emoji-list.html
-#   The source list: https://unicode.org/Public/emoji/13.0/emoji-sequences.txt
-#   The specification: https://unicode.org/reports/tr51/
+#   Emoji full list:
+#   https://unicode.org/emoji/charts/full-emoji-list.html
+#   The source list:
+#   https://unicode.org/Public/emoji/13.0/emoji-sequences.txt
+#   The specification:
+#   https://unicode.org/reports/tr51/
 #
 #   Emoji frequency figures are based on:
 #   https://home.unicode.org/emoji/emoji-frequency/
 #   https://www.futurity.org/emoji-countries-1328712-2-2/
 #
 #
-#   Overview
+# # Overview
 #
 #   This tab-separated table is copied from a spreadsheet.
 #   Plain text displays best with a 6 character tab width.
+#
 #   Empty positions are reserved, because these sequences
 #   are used for mathematical letters.
-# 
+#   See # # Mathematical Latin alphabets
+#
+#
+#
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
 #	  1	⚠	‰	★	☆	∼	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
@@ -132,23 +139,26 @@
 #	  6	∡	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
 #	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
-#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⧖	NSP	NSP	
-#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧗	WNJ	WJ	
+#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	NSP	NSP	
+#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
 #	11	✈	⏫	⏏	®	™	⁁	∝	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⚐	⌘	⤴	⤵	HSP	HSP	 
 #	12	ª	⏬	〃	∖	☘	❍	⚧	♾	º	⛏	⮽	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	∕	❖	✏	⛛	⚔	⟂	⁌	♇	⁍	∎	※	⌨	IDSP	IDSP	
 #
 #
+#
 # # D01
 #
-#   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character superseded
+#   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in Italian, Portuguese and Spanish, also supporting plural forms. The old
-#   ordinal indicators are supported by composition and in group 12.
+#   ordinal indicators are supported by Multi_key and in group 12.
+#   See # # D09
 #   See # # Legacy ordinal indicators
 #
-#   In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner,
+#   In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner.
 #   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
-#   in order to improve familiarity, as opposed to names based on “ZERO WIDTH”.
+#   By giving the new name, CLDR intends to improve familiarity, as opposed to
+#   names based on “ZERO WIDTH”.
 #   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
@@ -362,8 +372,8 @@
 #
 <UEFD0>                                                                                <backslash> : "☆" U2606 # WHITE STAR
 <Multi_key><numbersign>                                                                <backslash> : "☆" U2606 # WHITE STAR
-<UEFD0><UEFD0>                                                                         <backslash> : "√" U221A # SQUARE ROOT, also on live key
-<Multi_key><numbersign><numbersign>                                                    <backslash> : "√" U221A # SQUARE ROOT, also on live key
+<UEFD0><UEFD0>                                                                         <backslash> : "√" U221A # SQUARE ROOT
+<Multi_key><numbersign><numbersign>                                                    <backslash> : "√" U221A # SQUARE ROOT
 <UEFD0><3>                                                                             <backslash> : "∛" U221B # CUBE ROOT
 <Multi_key><numbersign><3>                                                             <backslash> : "∛" U221B # CUBE ROOT
 <UEFD0><KP_3>                                                                          <backslash> : "∛" U221B # CUBE ROOT
@@ -731,11 +741,11 @@
 #
 # # D09
 #
-#   As "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character superseded
+#   As "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in Italian, Portuguese and Spanish, also supporting plural forms, it is no
-#   longer supported in group 1 of U0060 where it screwed up U02BB. The legacy
-#   ordinal indicators are supported by composition and in group 12.
+#   longer supported in group 1, but in group 12 and by Multi_key.
+#   See # # D01
 #   See # # Legacy ordinal indicators
 #
 #   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
@@ -845,7 +855,7 @@
 #
 # # C01
 #
-#   The first three positions are inaccessible by composition equivalents, due
+#   The first three positions are inaccessible by Multi_key equivalents, due
 #   to an inavoidable interference of numbersign with itself. Hence the symbols
 #   in these positions, for instance the ballot box and its 2 filled-in clones,
 #   are duplicated after the emoji. Other squares are available elsewhere, too.
@@ -1228,10 +1238,10 @@
 <Multi_key><numbersign><9>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
 <UEFD0><KP_9>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
 <Multi_key><numbersign><KP_9>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><0>                                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
-<Multi_key><numbersign><0>                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
-<UEFD0><KP_0>                                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
-<Multi_key><numbersign><KP_0>                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROWS
+<UEFD0><0>                                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
+<Multi_key><numbersign><0>                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD0><KP_0>                                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
+<Multi_key><numbersign><KP_0>                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
 <UEFD0><1>                                                                           <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
 <Multi_key><numbersign><1>                                                           <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
 <UEFD0><KP_1>                                                                        <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
@@ -1365,11 +1375,13 @@
 #   See # # ACUTE&GROUP_2
 #   See # # ACUTE&GROUP_3
 #
-#   "µ" U00B5 MICRO SIGN is usually on live keys. Its presence in group 11 is
-#   designed only as a fallback.
+#   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonics, key F as
+#   an easier alternative, key C12 for hardware compatibility). Its presence in
+#   group 11 is designed only as a fallback, for incomplete layouts as required
+#   to cope with the malware simulator shipped with Windows.
 #
-#   "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol is easily input through
-#   dead_diaeresis followed by backslash.
+#   "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol is in group 12 although
+#   it is more easily input through dead_diaeresis followed by backslash.
 #
 <UEFD0>                                                                                      <bar> : "∣" U2223 # DIVIDES
 <Multi_key><numbersign>                                                                      <bar> : "∣" U2223 # DIVIDES
@@ -1543,10 +1555,10 @@
 <Multi_key><numbersign><KP_4>                                                               <less> : "✂" U2702 # BLACK SCISSORS emoji
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                <less> : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <less> : "✂" U2702 # BLACK SCISSORS emoji
-<UEFD0><5>                                                                                  <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button, not filledlefttribullet
-<Multi_key><numbersign><5>                                                                  <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button, not filledlefttribullet
-<UEFD0><KP_5>                                                                               <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button, not filledlefttribullet
-<Multi_key><numbersign><KP_5>                                                               <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button, not filledlefttribullet
+<UEFD0><5>                                                                                  <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button
+<Multi_key><numbersign><5>                                                                  <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button
+<UEFD0><KP_5>                                                                               <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button
+<Multi_key><numbersign><KP_5>                                                               <less> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE emoji, reverse button
 <UEFD0><6>                                                                                  <less> : "⏪" U23EA # BLACK LEFT-POINTING DOUBLE TRIANGLE emoji, fast reverse button
 <Multi_key><numbersign><6>                                                                  <less> : "⏪" U23EA # BLACK LEFT-POINTING DOUBLE TRIANGLE emoji, fast reverse button
 <UEFD0><KP_6>                                                                               <less> : "⏪" U23EA # BLACK LEFT-POINTING DOUBLE TRIANGLE emoji, fast reverse button
@@ -1595,10 +1607,10 @@
 <Multi_key><numbersign><KP_4>                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                             <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                              <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<UEFD0><5>                                                                               <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button, not filledrighttribullet
-<Multi_key><numbersign><5>                                                               <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button, not filledrighttribullet
-<UEFD0><KP_5>                                                                            <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button, not filledrighttribullet
-<Multi_key><numbersign><KP_5>                                                            <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button, not filledrighttribullet
+<UEFD0><5>                                                                               <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
+<Multi_key><numbersign><5>                                                               <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
+<UEFD0><KP_5>                                                                            <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
+<Multi_key><numbersign><KP_5>                                                            <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
 <UEFD0><6>                                                                               <greater> : "⏩" U23E9 # BLACK RIGHT-POINTING DOUBLE TRIANGLE emoji, fast-forward button
 <Multi_key><numbersign><6>                                                               <greater> : "⏩" U23E9 # BLACK RIGHT-POINTING DOUBLE TRIANGLE emoji, fast-forward button
 <UEFD0><KP_6>                                                                            <greater> : "⏩" U23E9 # BLACK RIGHT-POINTING DOUBLE TRIANGLE emoji, fast-forward button
@@ -1748,8 +1760,8 @@
 #
 # # B07-level3
 #
-<UEFD0>                                                                                 <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
-<Multi_key><numbersign>                                                                 <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
+<UEFD0>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
+<Multi_key><numbersign>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
 <UEFD0><UEFD0>                                                                          <question> : "⁇" U2047 # DOUBLE QUESTION MARK
 <Multi_key><numbersign><numbersign>                                                     <question> : "⁇" U2047 # DOUBLE QUESTION MARK
 <UEFD0><3>                                                                              <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
@@ -1865,8 +1877,8 @@
 #
 # # B08-level3
 #
-<UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
-<Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
+<UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <UEFD0><UEFD0>                                                                            <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK emoji
 <Multi_key><numbersign><numbersign>                                                       <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK emoji
 <UEFD0><3>                                                                                <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
@@ -1917,12 +1929,14 @@
 #
 # # B08-level1
 #
-#   U00B7 MIDDLE DOT is also more conveniently in group 1 of p and P.
-#
-#   This is only a tiny subset of the many vertically centered dots in Unicode:
+#   This is only a small subset of the many vertically centered dots in Unicode
+#   as discussed in:
 #   https://tex.stackexchange.com/questions/19180/which-dot-character-to-use-in-which-context
-#   In particular this answer from Davislor:
+#   Notably in this answer from Davislor:
 #   https://tex.stackexchange.com/a/470824
+#
+#   "·" U00B7 MIDDLE DOT is also more conveniently in group 1 of p and P.
+#   "⋅" U22C5 DOT OPERATOR is also more conveniently in group 1 of colon.
 #
 <UEFD0>                                                                                   <period> : "‧" U2027 # HYPHENATION POINT
 <Multi_key><numbersign>                                                                   <period> : "‧" U2027 # HYPHENATION POINT
@@ -2031,9 +2045,9 @@
 # # B10-level3
 #
 #   The (full) triangular colon is about 40 times more frequent than its half.
-#   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #   Consistently, "ː" U02D0 is in group 1, "ˑ" U02D1 in group 2. For mnemonics,
 #   rather than the number of triangles, the 1/1 vs 1/2 logic is convenient.
+#   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
 <UEFD0>                                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <Multi_key><numbersign>                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
@@ -2099,22 +2113,22 @@
 <Multi_key><numbersign><8>                                                               <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
 <UEFD0><KP_8>                                                                            <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
 <Multi_key><numbersign><KP_8>                                                            <section> : "⌛" U231B # HOURGLASS emoji, hourglass done
-<UEFD0><9>                                                                             <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><numbersign><9>                                                             <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
-<UEFD0><KP_9>                                                                          <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><numbersign><KP_9>                                                          <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
-<UEFD0><9>                                                                               <section> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><numbersign><9>                                                               <section> : "⧖" U29D6 # WHITE HOURGLASS
-<UEFD0><KP_9>                                                                            <section> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><numbersign><KP_9>                                                            <section> : "⧖" U29D6 # WHITE HOURGLASS
-<UEFD0><0>                                                                             <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><numbersign><0>                                                             <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
-<UEFD0><KP_0>                                                                          <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><numbersign><KP_0>                                                          <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
-<UEFD0><0>                                                                               <section> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><numbersign><0>                                                               <section> : "⧗" U29D7 # BLACK HOURGLASS
-<UEFD0><KP_0>                                                                            <section> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><numbersign><KP_0>                                                            <section> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><9>                                                                             <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><9>                                                             <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><KP_9>                                                                          <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><KP_9>                                                          <semicolon> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><9>                                                                               <section> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><9>                                                               <section> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><KP_9>                                                                            <section> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><numbersign><KP_9>                                                            <section> : "⧗" U29D7 # BLACK HOURGLASS
+<UEFD0><0>                                                                             <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><0>                                                             <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><KP_0>                                                                          <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><KP_0>                                                          <semicolon> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><0>                                                                               <section> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><0>                                                               <section> : "⧖" U29D6 # WHITE HOURGLASS
+<UEFD0><KP_0>                                                                            <section> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><numbersign><KP_0>                                                            <section> : "⧖" U29D6 # WHITE HOURGLASS
 <UEFD0><1>                                                                             <semicolon> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <Multi_key><numbersign><1>                                                             <semicolon> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <UEFD0><KP_1>                                                                          <semicolon> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
@@ -2288,7 +2302,7 @@
 #   Group 12 (g12): group selector then digit 2: Latin.
 #
 #
-#   Overview
+# # Overview
 #
 #   This tab-separated table is copied from a spreadsheet.
 #   Plain text displays best with a 6 character tab width.
@@ -5753,7 +5767,12 @@
 #
 # # Mathematical Latin alphabets
 #
-#   See Greek in # # Mathematical Greek alphabets and symbols
+#   Mathematical Greek alphabets are supported in group 6, that includes in the
+#   first place the Greek base alphabet.
+#   See # # Mathematical Greek alphabets and symbols
+#
+#   Additional alphabets in groups 7 through 10 are input using comma or period
+#   or both, as hinted after the group number here below:
 #
 #   MATHEMATICAL SCRIPT U1D49C..                  = g7 
 #   MATHEMATICAL BOLD SCRIPT U1D4D0..             = g7  ,    AKA CALLIGRAPHIC
