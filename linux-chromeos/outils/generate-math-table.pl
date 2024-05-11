@@ -2,22 +2,26 @@
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
 # 2023-11-02T0819+0100
+# 2024-05-11T1324+0200
 # = last modified.
 # 
-# Generates an HTML table of math symbols, based on Multi_key sequences in
+# Generates an HTML table of math symbols, based on multi-key sequences in
 # `Compose.yml`.
 #
-# The input requires start and end tags.
+# The input requires the `START_MATH` start tag, and the `END_MATH` end tag.
 #
-# Alias sequences with no-break space, with right single quotation mark or
-# with numpad digits are skipped.
+# Alias sequences with no-break space or with numpad digits are skipped.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
 # `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
 # In print, tooltips may be replaced with descriptors in the last column.
 #
-# The output is designed for use in WordPress.
+# The output is designed for use in WordPress, where {{{anrghg-classes}}} can
+# be replaced with additional CSS classes, as well as {{{anrghg-value}}} with
+# anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
+# Emoji style display should be deactivated on the page that this math table
+# is included as a partial.
 #
 # Using old-style file handles.
 use warnings;
@@ -28,13 +32,14 @@ use feature 'unicode_strings';
 # Courtesy https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
+# Courtesy https://www.geeksforgeeks.org/perl-date-and-time/
+use DateTime;
 
 ## Character names localization
 # my $names_file_path       = 'names/NamesList.txt';
 my $names_file_path       = 'names/ListeNoms.txt';
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
-
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -50,7 +55,13 @@ open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
 print( "Processing math symbols from $file_path to $output_path.\n" );
-my $math_flag             = !1;
+my $parse_on              = !1;
+my $date_legend           = 'Tableau mis à jour le ';
+# Courtesy https://stackoverflow.com/a/43881027
+my $nowDate               = DateTime->now(time_zone => 'local');
+my ($month, $day, $year)  = ($nowDate->month, $nowDate->day, $nowDate->year);
+my $date                  = "$day/$month/$year";
+my $table_id              = 'tableau-math';
 my $names_count           = 0;
 my $descriptors_count     = 0;
 my $table_header_1        = 'Caractère';
@@ -62,35 +73,40 @@ my $checkbox_checked      = '☑&nbsp;';
 my $checkbox_not_checked  = '☐&nbsp;';
 my $table_header_4        = 'Descripteur';
 print OUTPUT "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
-print OUTPUT "<figure class=\"wp-block-table alignwide multikey math\">\n";
-print OUTPUT "<table><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">\n";
+print OUTPUT "<figure class=\"wp-block-table alignwide multikey math {{{anrghg-classes}}} {{{anrghg-value}}}\">\n";
+print OUTPUT "<table id=\"$table_id\"><caption><a href=\"#$table_id\">$date_legend$date</a></caption>";
+print OUTPUT "<thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th>";
+print OUTPUT "<th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">\n";
 print OUTPUT "<span class=\"en\">$table_header_3</span><span class=\"fr\">$table_header_4</span>\n";
-print OUTPUT "<label for=\"print\"><div class=\"status\" title=\"$table_header_title\"><span class=\"fr\">$checkbox_checked</span><span class=\"en\">$checkbox_not_checked</span>$checkbox_label</div></label>\n";
+print OUTPUT "<label for=\"print\"><div class=\"status\" title=\"$table_header_title\">";
+print OUTPUT "<span class=\"fr\">$checkbox_checked</span><span class=\"en\">$checkbox_not_checked</span>$checkbox_label</div></label>\n";
 print OUTPUT "</th></tr></thead><tbody>\n";
 print OUTPUT "<!-- Symboles-mathématiques -->\n";
 my ( $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /START_MATH/ ) {
-		$math_flag = !0;
+		$parse_on = !0;
 	}
 	if ( $line =~ /END_MATH/ ) {
-		$math_flag = !1;
+		$parse_on = !1;
 	}
-	if ( $math_flag ) {
+	if ( $parse_on ) {
 		if ( $line =~ /^</ ) {
-			unless ( $line =~ /<nobreakspace>/ || $line =~ /<rightsinglequotemark>/ || $line =~ /<KP_/ ) {
+			unless ( $line =~ /<nobreakspace>/ || $line =~ /<KP_/ ) {
 				$line =~ s/<Multi_key>/<¦>/g;
 				$line =~ s/<space>/<␣>/g;
 				$line =~ s/<asciicircum>/<^>/g;
 				$line =~ s/<percent>/<%>/g;
-				$line =~ s/<braceleft>/<{>/g;
-				$line =~ s/<braceright>/<}>/g;
+				$line =~ s/<EuroSign>/€/g;
+				$line =~ s/<quotedbl>/<">/g;
+				$line =~ s/<backslash>/<\\>/g;
 				$line =~ s/<asciitilde>/<~>/g;
 				$line =~ s/<at>/<@>/g;
-				$line =~ s/<grave>/<`>/g;
 				$line =~ s/<apostrophe>/<'>/g;
-				$line =~ s/<quotedbl>/<">/g;
+				$line =~ s/<rightsinglequotemark>/<’>/g;
+				$line =~ s/<braceleft>/<{>/g;
+				$line =~ s/<braceright>/<}>/g;
 				$line =~ s/<ampersand>/<&amp;>/g;
 				$line =~ s/<numbersign>/<#>/g;
 				$line =~ s/<dollar>/<\$>/g;
@@ -98,22 +114,23 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<parenright>/<)>/g;
 				$line =~ s/<minus>/<->/g;
 				$line =~ s/<plus>/<+>/g;
+				$line =~ s/<underscore>/<_>/g;
 				$line =~ s/<bracketleft>/<[>/g;
 				$line =~ s/<bracketright>/<]>/g;
-				$line =~ s/<underscore>/<_>/g;
 				$line =~ s/<bar>/<|>/g;
 				$line =~ s/<slash>/<\/>/g;
 				$line =~ s/<asterisk>/<*>/g;
 				$line =~ s/<less>/<&lt;>/g;
 				$line =~ s/<greater>/<&gt;>/g;
 				$line =~ s/<equal>/<=>/g;
-				$line =~ s/<backslash>/<\\>/g;
+				$line =~ s/<grave>/<`>/g;
+				$line =~ s/<comma>/<,>/g;
 				$line =~ s/<question>/<?>/g;
+				$line =~ s/<period>/<.>/g;
 				$line =~ s/<exclam>/<!>/g;
 				$line =~ s/<colon>/<:>/g;
 				$line =~ s/<semicolon>/<;>/g;
-				$line =~ s/<comma>/<,>/g;
-				$line =~ s/<period>/<.>/g;
+				$line =~ s/<section>/<;>/g;
 				$line =~ s/<egrave>/<è>/g;
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
@@ -182,4 +199,4 @@ close( INPUT );
 close( OUTPUT );
 print( "Math table generated.\n" );
 print( "Used $names_count times $names_file_path.\n" );
-print( "Used $descriptors_count times $descriptors_file_path.\n\n" );
+print( "Used $descriptors_count times $descriptors_file_path.\n" );
