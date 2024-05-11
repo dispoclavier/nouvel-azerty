@@ -3050,6 +3050,8 @@
 <Multi_key><percent>                                                                      <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <UEFD5>                                                                                <semicolon> : "⸵" U2E35 # TURNED SEMICOLON
 <Multi_key><percent>                                                                   <semicolon> : "⸵" U2E35 # TURNED SEMICOLON
+<UEFD5>                                                                                  <section> : "⸵" U2E35 # TURNED SEMICOLON
+<Multi_key><percent>                                                                     <section> : "⸵" U2E35 # TURNED SEMICOLON
 <UEFD5>                                                                                        <2> : "↊" U218A # TURNED DIGIT TWO
 <Multi_key><percent>                                                                           <2> : "↊" U218A # TURNED DIGIT TWO
 <UEFD5>                                                                                     <KP_2> : "↊" U218A # TURNED DIGIT TWO
@@ -3792,6 +3794,8 @@
 <Multi_key><backslash>                                                                  <question> : "⸮" U2E2E # REVERSED QUESTION MARK
 <UEFD6>                                                                                <semicolon> : "⁏" U204F # REVERSED SEMICOLON
 <Multi_key><backslash>                                                                 <semicolon> : "⁏" U204F # REVERSED SEMICOLON
+<UEFD6>                                                                                  <section> : "⁏" U204F # REVERSED SEMICOLON
+<Multi_key><backslash>                                                                   <section> : "⁏" U204F # REVERSED SEMICOLON
 <UEFD6>                                                                                <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><backslash>                                                                 <paragraph> : "⁋" U204B # REVERSED PILCROW SIGN
 <UEFD6>                                                                                        <1> : "∖" U2216 # SET MINUS
@@ -4085,8 +4089,21 @@
 #       so this is commented out.
 #   See # # Quotation mark input method
 #
+#   Supports turned punctuation used in Spanish:
+#   "¡" U00A1 # INVERTED EXCLAMATION MARK
+#   "¿" U00BF # INVERTED QUESTION MARK
+#   See #*# TURNED
+#   See #^# INVERTED
+#   See # # Turned punctuation characters for Spanish
+#   See # # B07-level3
+#   See # # B08-level3
+#
+#   The tilde dead key supports daggers, because it is mapped on key T due to
+#   alphabetic mnemonics, and daggers are tied to T by shape-based mnemonics.
 #   The full set of daggers is available by digits 1 through 6 with shape-based
-#   mnemonics using the alphabetic mnemonics of the tilde dead key on key T.
+#   mnemonics for simple, double and triple daggers, by 1 through 3, and numpad
+#   positional mnemonics for left/right guard daggers, by 4 and 6 respectively,
+#   around the turned dagger by 5.
 #   Umihotaru’s 'Nishiki-teki' font supports "⹋" U2E4B TRIPLE DAGGER.
 #   See # # C10
 #
@@ -4123,10 +4140,10 @@
 <Multi_key><asciitilde>                                                               <underscore> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde>                                                                               <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde>                                                                    <equal> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-<dead_tilde>                                                                            <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
-<Multi_key><asciitilde>                                                                 <question> : "¿" U00BF # TURNED QUESTION MARK, questiondown
-<dead_tilde>                                                                              <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
-<Multi_key><asciitilde>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK, exclamdown
+<dead_tilde>                                                                            <question> : "¿" U00BF # INVERTED QUESTION MARK
+<Multi_key><asciitilde>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
+<dead_tilde>                                                                              <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><asciitilde>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <dead_tilde>                                                                                   <1> : "†" U2020 # DAGGER
 <Multi_key><asciitilde>                                                                        <1> : "†" U2020 # DAGGER
 <dead_tilde>                                                                                <KP_1> : "†" U2020 # DAGGER
@@ -6956,8 +6973,8 @@
 #
 <UEFD0>                                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><numbersign>                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
-<UEFD0>                                                                                    <UEF63> : "¿" U00BF # TURNED QUESTION MARK
-<Multi_key><numbersign>                                                                    <UEF63> : "¿" U00BF # TURNED QUESTION MARK
+<UEFD0>                                                                                    <UEF63> : "¿" U00BF # INVERTED QUESTION MARK
+<Multi_key><numbersign>                                                                    <UEF63> : "¿" U00BF # INVERTED QUESTION MARK
 #
 #
 # # Aring for Danish, Norwegian, Swedish, Finnish, Walloon, and Chamorro
@@ -10722,7 +10739,7 @@
 #   for consistency with en_US.UTF-8/Compose.
 #
 #   Digits yield the full collection of simple, broken, multiple vertical bars,
-#   for convenience since the other input methods, in groups or by composition,
+#   for convenience since the other input methods, in groups or by Multi_key,
 #   are less mnemonic or more complicated.
 #   See # # Design of math sequences
 #
@@ -15229,7 +15246,7 @@
 #
 #   Digits yield numbers 11 through 20 followed by a period, as an experimental
 #   convenience, while parenthesized digits and letters are not supported.
-#   Numbers 1..10 are in dead_cedilla.
+#   Numbers 1..10 followed by a period are in dead_cedilla.
 #   See #*# CEDILLA
 #
 #   For convenience, the Multi_key sequence ¦§ is also supported.
