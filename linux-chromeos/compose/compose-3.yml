@@ -131,18 +131,18 @@
 #
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	∼	◌	ʼ	〃	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
-#	  2	♿	‱	∈	√	≃	⚪	⊂	ˌ	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‖	÷	×	⩽	⩾	≙	¬	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
-#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	ˈ	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	∥	➗	✖	∐	✅	≡	∧	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
-#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✂	►	≜	∨	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
-#	  5	∠	☇	⚕	☢	☠	○	➰	∫	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	〰	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
-#	  6	∡	☈	✍	♻	☎	●	➿	∬	⛔	☂	☑	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∭	⚘	⛸	☒	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
+#	  1	⚠	‰	★	☆	∼	◌	ʼ	∫	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
+#	  2	♿	‱	∈	√	≃	⚪	⊂	∬	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‖	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
+#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	∥	➗	✖	∐	✅	≡	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	〰	❌	✂	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
+#	  5	∠	☇	⚕	☢	☠	○	➰	▢	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	⛆	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
+#	  6	∡	☈	✍	♻	☎	●	➿	〃	⛔	☂	☑	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
+#	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∝	⚘	⛸	☒	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	NSP	NSP	
-#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	▢	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
-#	11	✈	⏫	⏏	®	™	⁁	∝	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⚐	⌘	⤴	⤵	HSP	HSP	 
-#	12	ª	⏬	〃	∖	☘	❍	⚧	♾	º	⛏	⮽	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	∕	❖	✏	⛛	⚔	⟂	⁌	♇	⁍	∎	※	⌨	IDSP	IDSP	
+#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
+#	11	✈	⏫	⏏	®	™	⁁	ˈ	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⚐	⌘	⤴	⤵	HSP	HSP	 
+#	12	ª	⏬	〃	∖	☘	❍	ˌ	♾	º	⛏	⚧	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	∕	❖	✏	⛛	⚔	⟂	⁌	♇	⁍	∎	※	⌨	IDSP	IDSP	
 #
 #
 #
@@ -577,107 +577,54 @@
 #
 # # D07
 #
-#   Since rightsinglequotemark replaces apostrophe on key E04, and although the
-#   apostrophe is also on the base level of key E05, rightsinglequotemark works
-#   as a base character alongside apostrophe in the symbols groups, too.
-#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
-#
 <UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD0><UEFD0>                                                                        <apostrophe> : "⊂" U2282 # SUBSET OF
 <Multi_key><numbersign><numbersign>                                                   <apostrophe> : "⊂" U2282 # SUBSET OF
-<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "⊂" U2282 # SUBSET OF
-<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "⊂" U2282 # SUBSET OF
 <UEFD0><3>                                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF
 <Multi_key><numbersign><3>                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF
-<UEFD0><3>                                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF
-<Multi_key><numbersign><3>                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF
 <UEFD0><KP_3>                                                                         <apostrophe> : "⊃" U2283 # SUPERSET OF
 <Multi_key><numbersign><KP_3>                                                         <apostrophe> : "⊃" U2283 # SUPERSET OF
-<UEFD0><KP_3>                                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF
-<Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF
 <UEFD0><UEFD0><UEFD0>                                                                 <apostrophe> : "⊃" U2283 # SUPERSET OF
 <Multi_key><numbersign><numbersign><numbersign>                                       <apostrophe> : "⊃" U2283 # SUPERSET OF
-<UEFD0><UEFD0><UEFD0>                                                       <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF
-<Multi_key><numbersign><numbersign><numbersign>                             <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF
 <UEFD0><4>                                                                            <apostrophe> : "∪" U222A # UNION
 <Multi_key><numbersign><4>                                                            <apostrophe> : "∪" U222A # UNION
-<UEFD0><4>                                                                  <rightsinglequotemark> : "∪" U222A # UNION
-<Multi_key><numbersign><4>                                                  <rightsinglequotemark> : "∪" U222A # UNION
 <UEFD0><KP_4>                                                                         <apostrophe> : "∪" U222A # UNION
 <Multi_key><numbersign><KP_4>                                                         <apostrophe> : "∪" U222A # UNION
-<UEFD0><KP_4>                                                               <rightsinglequotemark> : "∪" U222A # UNION
-<Multi_key><numbersign><KP_4>                                               <rightsinglequotemark> : "∪" U222A # UNION
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                          <apostrophe> : "∪" U222A # UNION
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                           <apostrophe> : "∪" U222A # UNION
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                <rightsinglequotemark> : "∪" U222A # UNION
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                 <rightsinglequotemark> : "∪" U222A # UNION
 <UEFD0><5>                                                                            <apostrophe> : "➰" U27B0 # CURLY LOOP emoji
 <Multi_key><numbersign><5>                                                            <apostrophe> : "➰" U27B0 # CURLY LOOP emoji
-<UEFD0><5>                                                                  <rightsinglequotemark> : "➰" U27B0 # CURLY LOOP emoji
-<Multi_key><numbersign><5>                                                  <rightsinglequotemark> : "➰" U27B0 # CURLY LOOP emoji
 <UEFD0><KP_5>                                                                         <apostrophe> : "➰" U27B0 # CURLY LOOP emoji
 <Multi_key><numbersign><KP_5>                                                         <apostrophe> : "➰" U27B0 # CURLY LOOP emoji
-<UEFD0><KP_5>                                                               <rightsinglequotemark> : "➰" U27B0 # CURLY LOOP emoji
-<Multi_key><numbersign><KP_5>                                               <rightsinglequotemark> : "➰" U27B0 # CURLY LOOP emoji
 <UEFD0><6>                                                                            <apostrophe> : "➿" U27BF # DOUBLE CURLY LOOP emoji
 <Multi_key><numbersign><6>                                                            <apostrophe> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<UEFD0><6>                                                                  <rightsinglequotemark> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<Multi_key><numbersign><6>                                                  <rightsinglequotemark> : "➿" U27BF # DOUBLE CURLY LOOP emoji
 <UEFD0><KP_6>                                                                         <apostrophe> : "➿" U27BF # DOUBLE CURLY LOOP emoji
 <Multi_key><numbersign><KP_6>                                                         <apostrophe> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<UEFD0><KP_6>                                                               <rightsinglequotemark> : "➿" U27BF # DOUBLE CURLY LOOP emoji
-<Multi_key><numbersign><KP_6>                                               <rightsinglequotemark> : "➿" U27BF # DOUBLE CURLY LOOP emoji
 <UEFD0><7>                                                                            <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><7>                                                            <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
-<UEFD0><7>                                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
-<Multi_key><numbersign><7>                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><KP_7>                                                                         <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><KP_7>                                                         <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
-<UEFD0><KP_7>                                                               <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
-<Multi_key><numbersign><KP_7>                                               <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><8>                                                                            <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><8>                                                            <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
-<UEFD0><8>                                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
-<Multi_key><numbersign><8>                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><KP_8>                                                                         <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><KP_8>                                                         <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
-<UEFD0><KP_8>                                                               <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
-<Multi_key><numbersign><KP_8>                                               <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><9>                                                                            <apostrophe> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><9>                                                            <apostrophe> : "♎" U264E # LIBRA emoji
-<UEFD0><9>                                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
-<Multi_key><numbersign><9>                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><KP_9>                                                                         <apostrophe> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><KP_9>                                                         <apostrophe> : "♎" U264E # LIBRA emoji
-<UEFD0><KP_9>                                                               <rightsinglequotemark> : "♎" U264E # LIBRA emoji
-<Multi_key><numbersign><KP_9>                                               <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><0>                                                                            <apostrophe> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
 <Multi_key><numbersign><0>                                                            <apostrophe> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<UEFD0><0>                                                                  <rightsinglequotemark> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<Multi_key><numbersign><0>                                                  <rightsinglequotemark> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
 <UEFD0><KP_0>                                                                         <apostrophe> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
 <Multi_key><numbersign><KP_0>                                                         <apostrophe> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<UEFD0><KP_0>                                                               <rightsinglequotemark> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<Multi_key><numbersign><KP_0>                                               <rightsinglequotemark> : "🏼" U1F3FC # EMOJI MODIFIER FITZPATRICK TYPE-3 (UD83C UDFFC)
-<UEFD0><1>                                                                            <apostrophe> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><numbersign><1>                                                            <apostrophe> : "∝" U221D # PROPORTIONAL TO
-<UEFD0><1>                                                                  <rightsinglequotemark> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><numbersign><1>                                                  <rightsinglequotemark> : "∝" U221D # PROPORTIONAL TO
-<UEFD0><KP_1>                                                                         <apostrophe> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><numbersign><KP_1>                                                         <apostrophe> : "∝" U221D # PROPORTIONAL TO
-<UEFD0><KP_1>                                                               <rightsinglequotemark> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><numbersign><KP_1>                                               <rightsinglequotemark> : "∝" U221D # PROPORTIONAL TO
-<UEFD0><2>                                                                            <apostrophe> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<Multi_key><numbersign><2>                                                            <apostrophe> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<UEFD0><2>                                                                  <rightsinglequotemark> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<Multi_key><numbersign><2>                                                  <rightsinglequotemark> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<UEFD0><KP_2>                                                                         <apostrophe> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<Multi_key><numbersign><KP_2>                                                         <apostrophe> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<UEFD0><KP_2>                                                               <rightsinglequotemark> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
-<Multi_key><numbersign><KP_2>                                               <rightsinglequotemark> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<UEFD0><1>                                                                            <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><1>                                                            <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><KP_1>                                                                         <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><KP_1>                                                         <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><2>                                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><2>                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><KP_2>                                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><KP_2>                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 #
 #
 # # D08
@@ -689,34 +636,34 @@
 #   Consistently this is mapped in a higher group than the low vertical line.
 #   https://books.google.com/ngrams/graph?content=%CB%88%2C%CB%8C&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
-<UEFD0>                                                                                <braceleft> : "〃" U3003 # DITTO MARK
-<Multi_key><numbersign>                                                                <braceleft> : "〃" U3003 # DITTO MARK
-<UEFD0><UEFD0>                                                                         <braceleft> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><numbersign>                                                    <braceleft> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><3>                                                                             <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<Multi_key><numbersign><3>                                                             <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<UEFD0><KP_3>                                                                          <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<Multi_key><numbersign><KP_3>                                                          <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<UEFD0><UEFD0><UEFD0>                                                                  <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<Multi_key><numbersign><numbersign><numbersign>                                        <braceleft> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0>                                                                                <braceleft> : "∫" U222B # INTEGRAL
+<Multi_key><numbersign>                                                                <braceleft> : "∫" U222B # INTEGRAL
+<UEFD0><UEFD0>                                                                         <braceleft> : "∬" U222C # DOUBLE INTEGRAL
+<Multi_key><numbersign><numbersign>                                                    <braceleft> : "∬" U222C # DOUBLE INTEGRAL
+<UEFD0><3>                                                                             <braceleft> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><numbersign><3>                                                             <braceleft> : "∭" U222D # TRIPLE INTEGRAL
+<UEFD0><KP_3>                                                                          <braceleft> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><numbersign><KP_3>                                                          <braceleft> : "∭" U222D # TRIPLE INTEGRAL
+<UEFD0><UEFD0><UEFD0>                                                                  <braceleft> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><numbersign><numbersign><numbersign>                                        <braceleft> : "∭" U222D # TRIPLE INTEGRAL
 <UEFD0><4>                                                                             <braceleft> : "∩" U2229 # INTERSECTION
 <Multi_key><numbersign><4>                                                             <braceleft> : "∩" U2229 # INTERSECTION
 <UEFD0><KP_4>                                                                          <braceleft> : "∩" U2229 # INTERSECTION
 <Multi_key><numbersign><KP_4>                                                          <braceleft> : "∩" U2229 # INTERSECTION
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                           <braceleft> : "∩" U2229 # INTERSECTION
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                            <braceleft> : "∩" U2229 # INTERSECTION
-<UEFD0><5>                                                                             <braceleft> : "∫" U222B # INTEGRAL
-<Multi_key><numbersign><5>                                                             <braceleft> : "∫" U222B # INTEGRAL
-<UEFD0><KP_5>                                                                          <braceleft> : "∫" U222B # INTEGRAL
-<Multi_key><numbersign><KP_5>                                                          <braceleft> : "∫" U222B # INTEGRAL
-<UEFD0><6>                                                                             <braceleft> : "∬" U222C # DOUBLE INTEGRAL
-<Multi_key><numbersign><6>                                                             <braceleft> : "∬" U222C # DOUBLE INTEGRAL
-<UEFD0><KP_6>                                                                          <braceleft> : "∬" U222C # DOUBLE INTEGRAL
-<Multi_key><numbersign><KP_6>                                                          <braceleft> : "∬" U222C # DOUBLE INTEGRAL
-<UEFD0><7>                                                                             <braceleft> : "∭" U222D # TRIPLE INTEGRAL
-<Multi_key><numbersign><7>                                                             <braceleft> : "∭" U222D # TRIPLE INTEGRAL
-<UEFD0><KP_7>                                                                          <braceleft> : "∭" U222D # TRIPLE INTEGRAL
-<Multi_key><numbersign><KP_7>                                                          <braceleft> : "∭" U222D # TRIPLE INTEGRAL
+<UEFD0><5>                                                                             <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<Multi_key><numbersign><5>                                                             <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<UEFD0><KP_5>                                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<Multi_key><numbersign><KP_5>                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<UEFD0><6>                                                                             <braceleft> : "〃" U3003 # DITTO MARK
+<Multi_key><numbersign><6>                                                             <braceleft> : "〃" U3003 # DITTO MARK
+<UEFD0><KP_6>                                                                          <braceleft> : "〃" U3003 # DITTO MARK
+<Multi_key><numbersign><KP_6>                                                          <braceleft> : "〃" U3003 # DITTO MARK
+<UEFD0><7>                                                                             <braceleft> : "∝" U221D # PROPORTIONAL TO
+<Multi_key><numbersign><7>                                                             <braceleft> : "∝" U221D # PROPORTIONAL TO
+<UEFD0><KP_7>                                                                          <braceleft> : "∝" U221D # PROPORTIONAL TO
+<Multi_key><numbersign><KP_7>                                                          <braceleft> : "∝" U221D # PROPORTIONAL TO
 <UEFD0><8>                                                                             <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <Multi_key><numbersign><8>                                                             <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <UEFD0><KP_8>                                                                          <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
@@ -899,18 +846,18 @@
 <Multi_key><numbersign><9>                                                            <numbersign> : "♒" U2652 # AQUARIUS emoji
 <UEFD0><KP_9>                                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
 <Multi_key><numbersign><KP_9>                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
-<UEFD0><0>                                                                            <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<Multi_key><numbersign><0>                                                            <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<UEFD0><KP_0>                                                                         <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<Multi_key><numbersign><KP_0>                                                         <numbersign> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
+<UEFD0><0>                                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><0>                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><KP_0>                                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><KP_0>                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
 <UEFD0><1>                                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><numbersign><1>                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN
 <UEFD0><KP_1>                                                                         <numbersign> : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><numbersign><KP_1>                                                         <numbersign> : "♯" U266F # MUSIC SHARP SIGN
-<UEFD0><2>                                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><2>                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<UEFD0><KP_2>                                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><KP_2>                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><2>                                                                            <numbersign> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<Multi_key><numbersign><2>                                                            <numbersign> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<UEFD0><KP_2>                                                                         <numbersign> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
+<Multi_key><numbersign><KP_2>                                                         <numbersign> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
 #
 #
 # # C02
@@ -1445,16 +1392,16 @@
 <Multi_key><numbersign><KP_3>                                                          <KP_Divide> : "➗" U2797 # HEAVY DIVISION SIGN emoji
 <UEFD0><UEFD0><UEFD0>                                                                      <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
 <Multi_key><numbersign><numbersign><numbersign>                                            <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<UEFD0><4>                                                                                 <slash> : "⛆" U26C6 # RAIN
-<Multi_key><numbersign><4>                                                                 <slash> : "⛆" U26C6 # RAIN
-<UEFD0><KP_4>                                                                          <KP_Divide> : "⛆" U26C6 # RAIN
-<Multi_key><numbersign><KP_4>                                                          <KP_Divide> : "⛆" U26C6 # RAIN
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <slash> : "⛆" U26C6 # RAIN
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <slash> : "⛆" U26C6 # RAIN
-<UEFD0><5>                                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><5>                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
-<UEFD0><KP_5>                                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><KP_5>                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><4>                                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><4>                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><KP_4>                                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><KP_4>                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <slash> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <slash> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><5>                                                                                 <slash> : "⛆" U26C6 # RAIN
+<Multi_key><numbersign><5>                                                                 <slash> : "⛆" U26C6 # RAIN
+<UEFD0><KP_5>                                                                          <KP_Divide> : "⛆" U26C6 # RAIN
+<Multi_key><numbersign><KP_5>                                                          <KP_Divide> : "⛆" U26C6 # RAIN
 <UEFD0><6>                                                                                 <slash> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><numbersign><6>                                                                 <slash> : "⊢" U22A2 # RIGHT TACK
 <UEFD0><KP_6>                                                                          <KP_Divide> : "⊢" U22A2 # RIGHT TACK
@@ -1710,20 +1657,20 @@
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD0><UEFD0>                                                                             <grave> : "¬" U00AC # NOT SIGN
-<Multi_key><numbersign><numbersign>                                                        <grave> : "¬" U00AC # NOT SIGN
-<UEFD0><3>                                                                                 <grave> : "∧" U2227 # LOGICAL AND
-<Multi_key><numbersign><3>                                                                 <grave> : "∧" U2227 # LOGICAL AND
-<UEFD0><KP_3>                                                                              <grave> : "∧" U2227 # LOGICAL AND
-<Multi_key><numbersign><KP_3>                                                              <grave> : "∧" U2227 # LOGICAL AND
-<UEFD0><UEFD0><UEFD0>                                                                      <grave> : "∧" U2227 # LOGICAL AND
-<Multi_key><numbersign><numbersign><numbersign>                                            <grave> : "∧" U2227 # LOGICAL AND
-<UEFD0><4>                                                                                 <grave> : "∨" U2228 # LOGICAL OR
-<Multi_key><numbersign><4>                                                                 <grave> : "∨" U2228 # LOGICAL OR
-<UEFD0><KP_4>                                                                              <grave> : "∨" U2228 # LOGICAL OR
-<Multi_key><numbersign><KP_4>                                                              <grave> : "∨" U2228 # LOGICAL OR
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <grave> : "∨" U2228 # LOGICAL OR
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <grave> : "∨" U2228 # LOGICAL OR
+<UEFD0><UEFD0>                                                                             <grave> : "∧" U2227 # LOGICAL AND
+<Multi_key><numbersign><numbersign>                                                        <grave> : "∧" U2227 # LOGICAL AND
+<UEFD0><3>                                                                                 <grave> : "∨" U2228 # LOGICAL OR
+<Multi_key><numbersign><3>                                                                 <grave> : "∨" U2228 # LOGICAL OR
+<UEFD0><KP_3>                                                                              <grave> : "∨" U2228 # LOGICAL OR
+<Multi_key><numbersign><KP_3>                                                              <grave> : "∨" U2228 # LOGICAL OR
+<UEFD0><UEFD0><UEFD0>                                                                      <grave> : "∨" U2228 # LOGICAL OR
+<Multi_key><numbersign><numbersign><numbersign>                                            <grave> : "∨" U2228 # LOGICAL OR
+<UEFD0><4>                                                                                 <grave> : "¬" U00AC # NOT SIGN
+<Multi_key><numbersign><4>                                                                 <grave> : "¬" U00AC # NOT SIGN
+<UEFD0><KP_4>                                                                              <grave> : "¬" U00AC # NOT SIGN
+<Multi_key><numbersign><KP_4>                                                              <grave> : "¬" U00AC # NOT SIGN
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <grave> : "¬" U00AC # NOT SIGN
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <grave> : "¬" U00AC # NOT SIGN
 <UEFD0><5>                                                                                 <grave> : "⛄" U26C4 # SNOWMAN WITHOUT SNOW emoji
 <Multi_key><numbersign><5>                                                                 <grave> : "⛄" U26C4 # SNOWMAN WITHOUT SNOW emoji
 <UEFD0><KP_5>                                                                              <grave> : "⛄" U26C4 # SNOWMAN WITHOUT SNOW emoji
