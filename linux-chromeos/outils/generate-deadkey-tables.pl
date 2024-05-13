@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-05-11T1257+0200
+# 2024-05-13T1859+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -49,7 +49,8 @@ my $names_file_path       = 'names/ListeNoms.txt';
 ## Convert character names to descriptors
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
-
+my $names_count           = 0;
+my $descriptors_count     = 0;
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -66,7 +67,8 @@ my $output_file_extension     = '.html';
 my $output_path               = "$output_directory/ALL_$output_file_name_template$output_file_extension";
 open( WHOLEOUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
-$output_path = $output_path_trunk . $output_file_extension;
+my $wholeoutput_path = $output_path;
+$output_path         = $output_path_trunk . $output_file_extension;
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 print( "Processing dead keys from $file_path to $output_path.\n" );
@@ -433,6 +435,7 @@ while ( my $line = <INPUT> ) {
 									chomp( $des_line );
 									$des_line =~ s/^.+; (.+)$/$1/;
 									$descrip = $des_line;
+									++$descriptors_count;
 									last;
 									close( DESCRIP );
 								}
@@ -445,6 +448,7 @@ while ( my $line = <INPUT> ) {
 									chomp( $name_line );
 									$name_line =~ s/^.+\t(.+)$/$1/;
 									$descrip = $name_line;
+									++$names_count;
 									last;
 									close( NAMES );
 								}
@@ -491,4 +495,7 @@ close( INPUT );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
+print( "Closed file $wholeoutput_path.\n" );
 print( "Dead key tables generated.\n" );
+print( "Used $names_count times $names_file_path.\n" );
+print( "Used $descriptors_count times $descriptors_file_path.\n" );
