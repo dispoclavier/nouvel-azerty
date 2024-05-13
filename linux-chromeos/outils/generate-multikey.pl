@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 # 2022-12-28T0901+0100
 # 2023-10-27T1438+0200
-# 2024-05-04T0813+0200
+# 2024-05-13T1842+0200
 # = last modified.
 # 
-# Adds the Multi_key equivalent below all dead key
+# Adds the Multi_key equivalent below the dead key
 # lines prefixed with an '@' sign for the purpose.
 #
 # Removes already existing Multi_key lines if they
@@ -52,29 +52,30 @@ use feature 'unicode_strings';
 # Courtesy https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
-print( "File $file_path opened successfully!\n" );
+print( "Opened file $file_path.\n" );
 
 my $backup_path = 'Compose.bak';
 open( BACKUP, '>', $backup_path ) or die $!;
-print( "File $backup_path opened successfully!\n" );
+print( "Opened file $backup_path.\n" );
 
 print( "Copying content from $file_path to $backup_path.\n" );
 while ( my $line = <INPUT> ) {
 	print BACKUP $line;
 }
-print( "File content copied successfully!\n" );
+print( "File content copied successfully.\n" );
 
 close( INPUT );
+print( "Closed file $file_path.\n" );
 close( BACKUP );
+print( "Closed file $backup_path.\n" );
 
 open( BACKUP, '<', $backup_path ) or die $!;
-print( "File $backup_path opened successfully!\n" );
+print( "Opened file $backup_path.\n" );
 
 open( OUTPUT, '>', $file_path ) or die $!;
-print( "File $file_path opened successfully!\n" );
+print( "Opened file $file_path.\n" );
 
 print( "Processing content from $backup_path to $file_path.\n" );
 my ( $sta, $end, $str, $cp, $out );
@@ -250,5 +251,7 @@ while ( my $line = <BACKUP> ) {
 }
 
 close( BACKUP );
+print( "Closed file $backup_path.\n" );
 close( OUTPUT );
-print( "File content processed successfully!\n\n" );
+print( "Closed file $file_path.\n" );
+print( "File content processed successfully.\n" );
