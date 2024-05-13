@@ -22,7 +22,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
 * Transformations :
   * Dupliquer "\\"" U0022 par "€" U20AC. (compose-2.yml [cbd46d7](https://github.com/dispoclavier/nouvel-azerty/commit/cbd46d7566a9a70801a536c050e665a6082260c4))
   * Mettre à jour l’ordre des répertoires de touches mortes. (compose-2.yml [79bc1ba](https://github.com/dispoclavier/nouvel-azerty/commit/79bc1ba9d80262d0b5564eefae30b4b1e4b4deb9))
-  * Mettre à jour les symboles de base. (compose-2.yml [6603624](https://github.com/dispoclavier/nouvel-azerty/commit/660362419d1d97088c6da803853a43d9f6b0fef7), [e491173](https://github.com/dispoclavier/nouvel-azerty/commit/e49117376c902d4c21acce6e0ea66def18e54ee0))
+  * Mettre à jour les symboles de base. (compose-2.yml [6603624](https://github.com/dispoclavier/nouvel-azerty/commit/660362419d1d97088c6da803853a43d9f6b0fef7), [e491173](https://github.com/dispoclavier/nouvel-azerty/commit/e49117376c902d4c21acce6e0ea66def18e54ee0), [2c72d23](https://github.com/dispoclavier/nouvel-azerty/commit/2c72d237681dc4e6e09f653977f4a53030fdbeb7))
   * Dupliquer ";" U003B par "§" U00A7. (compose-2.yml [e491173](https://github.com/dispoclavier/nouvel-azerty/commit/e49117376c902d4c21acce6e0ea66def18e54ee0))
   * Grec ou cerclé : Compléter les séquences de "⊗" U2297. (compose-2.yml [4fa70b9](https://github.com/dispoclavier/nouvel-azerty/commit/4fa70b903241008b75d894271604ca07ccbfdf42))
   * Double accent aigu : Dupliquer "\\"" U0022 par "€" U20AC. (compose-2.yml [559f988](https://github.com/dispoclavier/nouvel-azerty/commit/559f9880394d3724b67f06ba4e717c6e219817a3))
@@ -33,6 +33,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
     * Mettre à jour le caractère de base et l’ordre de "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664, (ibidem)
   * Accent grave : Supprimer "(" U0028 et ")" U0029. (ibidem)
   * Tilde : Permuter "⸷" U2E37 et "⸸" U2E38. Compléter les séquences de "”" U201D et "’" U2019. (ibidem et compose-2.yml [368d4aa](https://github.com/dispoclavier/nouvel-azerty/commit/368d4aa29927567a004b9c1a22fa1175104db332))
+  * Barré : Barre courte : Redonder "Ꝙ" UA758, "ꝙ" UA759. (compose-2.yml [2c72d23](https://github.com/dispoclavier/nouvel-azerty/commit/2c72d237681dc4e6e09f653977f4a53030fdbeb7))
   * Sélectrice de groupe : Groupes des symboles :
     * Prendre en charge "€" U20AC comme caractère de base aux côtés de "\\"" U0022. (compose-3.yml [4137c0d](https://github.com/dispoclavier/nouvel-azerty/commit/4137c0dc378711bd7ace334dd555f87619063418))
     * Mettre à jour les symboles de base. (ibidem)
@@ -57,7 +58,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
     * Permuter "⧖" U29D6 et "⧗" U29D7. (compose-3.yml [0d80301](https://github.com/dispoclavier/nouvel-azerty/commit/0d803019a6173d4eabbc76a805648e56f0a17bc0))
     * Mettre "∧" U2227 à la place de "¬" U00AC, qui prend la place de "∨" U2228, qui prend la place laissée par "¬" U00AC. (compose-3.yml [96c5653](https://github.com/dispoclavier/nouvel-azerty/commit/96c5653869fe9fc3c407623f19a49a8df9ba3d7d))
     * Permuter "⛆" U26C6 et "〰" U3030 pour que la pluie soit dans le même groupe que "☔" U2614. (ibidem)
-    * Mettre "∫" U222B à la place de "〃" U3003, qui est dans le groupe 12 de "€" U20AC et "\\"" U0022 et prend la place de "∬" U222C, qui prend la place de "ˌ" U02CC, qui prend la place de "⚧" U26A7, qui prend la place de "⮽" U2BBD, qui prend la place de "▢" U25A2, qui prend la place laissée par "∫" U222B. Mettre "∭" U222D à la place de "ˈ" U02C8, qui prend la place de "∝" U221D, qui prend la place laissée par "∭" U222D. (ibidem)
+    * Mettre "∫" U222B à la place de "〃" U3003, qui est dans le groupe 12 de "€" U20AC et "\\"" U0022 et prend la place de "∬" U222C, qui prend la place de "ˌ" U02CC, qui prend la place de "⚧" U26A7, qui prend la place de "⮽" U2BBD, qui prend la place de "▢" U25A2, qui prend la place laissée par "∫" U222B. Mettre "∭" U222D à la place de "ˈ" U02C8, qui prend la place de "∝" U221D, qui prend la place laissée par "∭" U222D. (ibidem et compose-2.yml [2c72d23](https://github.com/dispoclavier/nouvel-azerty/commit/2c72d237681dc4e6e09f653977f4a53030fdbeb7))
 * Composition :
   * Dupliquer "\\"" U0022 par "€" U20AC. (compose-1.yml [223b3ec](https://github.com/dispoclavier/nouvel-azerty/commit/223b3ec15f4597cea59eda0d4ef95ec8cc037636))
   * Dupliquer ";" U003B par "§" U00A7. (compose-1.yml [5e75dac](https://github.com/dispoclavier/nouvel-azerty/commit/5e75dacf841d71082f5b6b3fbdb33824d1504ac4))
