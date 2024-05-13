@@ -658,33 +658,40 @@
 #
 # # Abbreviations, Units and Legal Symbols
 #
+#   Sequences for "©" U00A9 and "®" U00AE made out of letters only with an O or
+#   an o are based on en_US.UTF-8/Compose where "℗" U2117 is missing as well as
+#   ASCII fallback sequences "(C)" and "(R)", probably because the latter would
+#   conflict with "Ȓ" U0212. To mitigate these gaps, an alternative with a pair
+#   of leading parentheses is proposed consistently: "()C", "()R", "()P".
+#
 #   Order may matter as for "©" U00A9 COPYRIGHT SIGN vs "℅" U2105 CARE OF, and
 #   case as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE SUBJECT,
 #   "🄯" U1F12F COPYLEFT SYMBOL vs "℄" U2104 CENTRE LINE SYMBOL.
 #
-#   S O sequences are used fo mathematical symbols, reverse sequences are used
-#   for circled letters, other casing pairs are used for German eszett as ss:
-#   "§" U00A7 SECTION SIGN vs "ß" U00DF LATIN SMALL LETTER SHARP S, "ẞ" U1E9E.
-#
-#   Reverse ¦SA conflicts with ر.س Saudi Riyal and ♐ U2650 SAGITTARIUS.
+#   Reverse ¦SA conflicts with "ر.س" Saudi Riyal and "♐" U2650 SAGITTARIUS.
 #
 #   Many abbreviations allow for a shortcut skipping the slash, but in the case
-#   of ℆, this shortcut requires space termination to prevent conflicts with an
-#   input method for the union symbol "∪" U222A UNION based on its nickname.
+#   of "℆" U2106, this shortcut requires space termination to prevent conflicts
+#   with an input method for the union symbol "∪" U222A based on its nickname.
+#
+#   S O sequences are used fo mathematical symbols, reverse sequences are used
+#   for circled letters, other casing pairs are used for German eszett and for
+#   the section sign: "§" U00A7 vs "ß" U00DF vs "ẞ" U1E9E.
 #
 #   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
-#   supports mixed-case sequences, too. For the Numero sign, <N><o> and <N><O>
-#   are supported by en_US.UTF-8/Compose.
+#   supports mixed-case sequences as well. E.g. for the Numero sign "№" U2116,
+#   it has <N><o> and <N><O>; adding the other two makes for lenient Caps Lock.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
 #   Multi_key equivalents.
 #
-#   Unpreferred precomposed and dedicated measurement units are supported since
-#   they do have an encoding in the Letterlike Symbols block. This, however, is
-#   fully supported not before v1.6.0. Prior to v1.6.0, important symbols were
-#   missing due to not being used in mathematics. This odd time is over since
-#   version 1.6.0 added primarily the VERSICLE and RESPONSE symbols, both by
-#   composition and in groups 1 and 4.
+#   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated unit symbols
+#   ("K" U212A) are supported as they are in the Letterlike Symbols block. This
+#   however was not fully supported before v1.6.0. Prior to v1.6.0, important
+#   symbols were missing due to not being used in mathematics. This odd time is
+#   over since version 1.6.0 added primarily the VERSICLE and RESPONSE symbols
+#   "℣" U2123, "℟" U211F, both by Multi_key and in letter groups 1 and 4.
+#   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
@@ -733,6 +740,8 @@
 <Multi_key><O><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><r>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><C><R>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><parenleft><parenright><c>                                                              : "©" U00A9 # COPYRIGHT SIGN emoji
+<Multi_key><parenleft><parenright><C>                                                              : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><c><l>                                                                                  : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><O><percent><C>                                                                         : "🄯" U1F12F # COPYLEFT SYMBOL
 <Multi_key><C><L>                                                                                  : "℄" U2104 # CENTRE LINE SYMBOL
@@ -782,6 +791,8 @@
 <Multi_key><O><p>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><P><o>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><p><O>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
+<Multi_key><parenleft><parenright><p>                                                              : "℗" U2117 # SOUND RECORDING COPYRIGHT
+<Multi_key><parenleft><parenright><P>                                                              : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><p><e><r>                                                                               : "⅌" U214C # PER SIGN
 <Multi_key><P><e><r>                                                                               : "⅌" U214C # PER SIGN
 <Multi_key><P><E><R>                                                                               : "⅌" U214C # PER SIGN
@@ -789,12 +800,12 @@
 <Multi_key><r><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><R><slash><space>                                                                       : "℟" U211F # RESPONSE
 <Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
-<Multi_key><o><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><o><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
-<Multi_key><O><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><O><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><R><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><parenleft><parenright><r>                                                              : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><parenleft><parenright><R>                                                              : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><s><m>                                                                                  : "℠" U2120 # SERVICE MARK
 <Multi_key><S><M>                                                                                  : "℠" U2120 # SERVICE MARK
 <Multi_key><m><s>                                                                                  : "℠" U2120 # SERVICE MARK
@@ -1040,6 +1051,8 @@
 #   Deprecated small apostrophe n requires a curly apostrophe live key.
 #
 #   This character is deprecated and its use is strongly discouraged.
+#   It was encoded as a legacy compatibility character for ISO/IEC 6937.
+#   https://www.unicode.org/Public/15.0.0/ucd/NamesList.txt
 #
 <Multi_key><rightsinglequotemark><N>                                                               : "ʼN" # U02BC U004E MODIFIER LETTER APOSTROPHE, LATIN CAPITAL LETTER N
 <Multi_key><rightsinglequotemark><n>                                                               : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
@@ -3559,9 +3572,15 @@
 <Multi_key><space><asciicircum>                                                     <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><nobreakspace><asciicircum>                                                     <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><nobreakspace><asciicircum>                                              <nobreakspace> : "∧" U2227 # LOGICAL AND
+#   For basic logical operators with plain English Multi_key sequences, space
+#   termination is skipped.
+<Multi_key><a><n><d>                                                                               : "∧" U2227 # LOGICAL AND
+<Multi_key><A><N><D>                                                                               : "∧" U2227 # LOGICAL AND
 #   In group 4 of `                                                                                : "∨" U2228 # LOGICAL OR
 <Multi_key><v>                                                                             <space> : "∨" U2228 # LOGICAL OR
 <Multi_key><v>                                                                      <nobreakspace> : "∨" U2228 # LOGICAL OR
+<Multi_key><o><r>                                                                                  : "∨" U2228 # LOGICAL OR
+<Multi_key><O><R>                                                                                  : "∨" U2228 # LOGICAL OR
 #   In group 4 of }                                                                                : "∩" U2229 # INTERSECTION
 <Multi_key><n>                                                                             <space> : "∩" U2229 # INTERSECTION
 <Multi_key><n>                                                                      <nobreakspace> : "∩" U2229 # INTERSECTION
@@ -4023,14 +4042,20 @@
 <Multi_key><t>                                                                      <nobreakspace> : "⊺" U22BA # INTERCALATE
 <Multi_key><v><underscore>                                                                 <space> : "⊻" U22BB # XOR
 <Multi_key><v><underscore>                                                          <nobreakspace> : "⊻" U22BB # XOR
+<Multi_key><x><o><r>                                                                               : "⊻" U22BB # XOR
+<Multi_key><X><O><R>                                                                               : "⊻" U22BB # XOR
 <Multi_key><space><minus><a>                                                               <space> : "⊼" U22BC # NAND
 <Multi_key><space><minus><a>                                                        <nobreakspace> : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><minus><a>                                                        <space> : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><minus><a>                                                 <nobreakspace> : "⊼" U22BC # NAND
 <Multi_key><minus><v><v>                                                                   <space> : "⊼" U22BC # NAND
 <Multi_key><minus><v><v>                                                            <nobreakspace> : "⊼" U22BC # NAND
+<Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
+<Multi_key><N><A><N><D>                                                                            : "⊼" U22BC # NAND
 <Multi_key><minus><v>                                                                      <space> : "⊽" U22BD # NOR
 <Multi_key><minus><v>                                                               <nobreakspace> : "⊽" U22BD # NOR
+<Multi_key><n><o><r>                                                                               : "⊽" U22BD # NOR
+<Multi_key><N><O><R>                                                                               : "⊽" U22BD # NOR
 <Multi_key><L><parenright>                                                                 <space> : "⊾" U22BE # RIGHT ANGLE WITH ARC
 <Multi_key><L><parenright>                                                          <nobreakspace> : "⊾" U22BE # RIGHT ANGLE WITH ARC
 <Multi_key><slash><bar><underscore>                                                        <space> : "⊿" U22BF # RIGHT TRIANGLE
