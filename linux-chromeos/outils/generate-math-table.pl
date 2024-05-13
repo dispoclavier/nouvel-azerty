@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
 # 2023-11-02T0819+0100
-# 2024-05-11T1324+0200
+# 2024-05-13T1859+0200
 # = last modified.
 # 
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -40,6 +40,8 @@ use DateTime;
 my $names_file_path       = 'names/ListeNoms.txt';
 # my $descriptors_file_path = '';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
+my $names_count           = 0;
+my $descriptors_count     = 0;
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -62,8 +64,6 @@ my $nowDate               = DateTime->now(time_zone => 'local');
 my ($month, $day, $year)  = ($nowDate->month, $nowDate->day, $nowDate->year);
 my $date                  = "$day/$month/$year";
 my $table_id              = 'tableau-math';
-my $names_count           = 0;
-my $descriptors_count     = 0;
 my $table_header_1        = 'Caractère';
 my $table_header_2        = 'Séquence de composition';
 my $table_header_3        = 'Identifiant Unicode';
@@ -196,7 +196,9 @@ while ( my $line = <INPUT> ) {
 }
 print OUTPUT "</tbody></table></figure>\n";
 close( INPUT );
+print( "Closed file $file_path.\n" );
 close( OUTPUT );
+print( "Closed file $output_path.\n" );
 print( "Math table generated.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
