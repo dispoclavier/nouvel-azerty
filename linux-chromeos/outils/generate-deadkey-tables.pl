@@ -2,7 +2,7 @@
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
-# 2024-05-13T1859+0200
+# 2024-05-16T1520+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -13,6 +13,10 @@
 # Parsing `START_LETTER_SYMBOL_GROUPS` as the end tag is commented out, so that
 # space and symbol group tables and letter group tables are generated too.
 # Other options may be configured after `/START_LETTER_SYMBOL_GROUPS/`.
+#
+# The keyboard output is displayed on a white background span (class "bg") for
+# the purpose of delimiting whitespace characters and clarifying advance width
+# and vertical alignment.
 #
 # In these tables, a second instance of each emoji is displayed in text style,
 # provided that the text style variation selector is supported. This feature
@@ -476,9 +480,14 @@ while ( my $line = <INPUT> ) {
 				}
 
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
+				# The white background (span of class bg) clarifies whitespace and vertical alignment.
+				# High surrogates.
 				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				# Composed characters.
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				# Combining characters.
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				# All other characters.
 				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 				print OUTPUT $line;
 				if ( $comprehensive ) {
