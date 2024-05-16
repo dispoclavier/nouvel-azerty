@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-07-23T1447+0200
 # 2023-11-02T0819+0100
-# 2024-05-13T1859+0200
+# 2024-05-16T1520+0200
 # = last modified.
 # 
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -11,6 +11,10 @@
 # The input requires the `START_MATH` start tag, and the `END_MATH` end tag.
 #
 # Alias sequences with no-break space or with numpad digits are skipped.
+#
+# The keyboard output is displayed on a white background span (class "bg") for
+# the purpose of delimiting whitespace characters and clarifying advance width
+# and vertical alignment.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -187,8 +191,11 @@ while ( my $line = <INPUT> ) {
 				push( @anchors, $anchor );
 				
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">◌$2<\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor">$2<\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				# The white background (span of class bg) clarifies whitespace and vertical alignment.
+				# Diacritics.
+				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				# Spacing symbols.
+				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
 				print OUTPUT "$line";
 			}
 		}
