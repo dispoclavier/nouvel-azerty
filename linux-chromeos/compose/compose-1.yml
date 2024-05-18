@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version:
-<UEFA0>                     : "version 2.0.0"
+<UEFA0>                     : "version 2.0.0" #
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -143,6 +143,11 @@
 #   http://www.evertype.com/standards/csur/
 #   http://www.kreativekorp.com/ucsur/
 #
+#   Line comments are mandatory for compatibility with defective compilers that
+#   are not able to parse compose sequences not followed by a hash, although in
+#   the spec, comments are declared as optional. See the section “File Format”.
+#   https://linux.die.net/man/3/xcompose
+#
 #   In most comments in this file, the plus sign in Unicode code points
 #   is omitted for consistency to ease searching, and tweaked versions
 #   of UnicodeData.txt and the NamesList.txt are used for development.
@@ -170,9 +175,9 @@
 #   These have got mnemonic keysyms in keysymdef.h but may not be supported yet,
 #   so they are defined here using "ʼ" U02BC MODIFIER LETTER APOSTROPHE:
 #
-<c_h> : "cʼh"
-<C_h> : "Cʼh"
-<C_H> : "CʼH"
+<c_h> : "cʼh" #
+<C_h> : "Cʼh" #
+<C_H> : "CʼH" #
 #
 #
 #   The Breton digraph is mapped on the CʼHWERTY keyboard.
@@ -181,9 +186,9 @@
 #   Unlike the trigraph, the digraph has no dedicated support on any variant.
 #   It is expected to be input like all polygraphs, as used in many languages.
 #
-<ch> : "ch"
-<Ch> : "Ch"
-<CH> : "CH"
+<ch> : "ch" #
+<Ch> : "Ch" #
+<CH> : "CH" #
 #
 #
 # # Automated punctuation spacing for fr-FR, regular with NNBSP U202F
@@ -282,14 +287,14 @@
 #   “PRI #367: Automated punctuation spacing”
 #   https://unicode-org.atlassian.net/browse/CLDR-10904
 #
-<UEF60> : " !"
+<UEF60> : " !" #
 <UEF61> : " :" # [1]
-<UEF62> : " ;"
-<UEF63> : " ?"
+<UEF62> : " ;" #
+<UEF63> : " ?" #
 <UEF64> : "« " # [2]
-<UEF65> : " »"
-<UEF66> : "‹ "
-<UEF67> : " ›"
+<UEF65> : " »" #
+<UEF66> : "‹ " #
+<UEF67> : " ›" #
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
 #       the colon has NBSP spacing. In new-school French typesetting, the colon
@@ -304,16 +309,16 @@
 #
 #   With regular superscript o U1D52 and NNBSP U202F.
 #
-<UEF68> : "nᵒ "
-<UEF69> : "Nᵒ "
+<UEF68> : "nᵒ " #
+<UEF69> : "Nᵒ " #
 #
 #
 # # Abbreviation "Numéro" without spacing
 #
 #   With regular superscript o U1D52, without NNBSP U202F.
 #
-<UEF6A> : "nᵒ"
-<UEF6B> : "Nᵒ"
+<UEF6A> : "nᵒ" #
+<UEF6B> : "Nᵒ" #
 #
 #
 # # Ordinal indicator with trailing space
@@ -321,7 +326,7 @@
 #   Ordinal indicator ᵉ with automated spacing by NNBSP U202F,
 #   Intended to type century figures in French style using Roman numerals.
 #
-<UEF6C> : "ᵉ "
+<UEF6C> : "ᵉ " #
 #
 #
 # # Double zero
@@ -330,7 +335,7 @@
 #   On the numpad, this may be mapped on Shift + 0 since the cursor key feature
 #   on the numpad is deactivated as outdated, redundant, and wasting positions.
 #
-<UEF6D> : "00"
+<UEF6D> : "00" #
 #
 #   A triple zero key is useful only on the numpad. On the extended numpad, the
 #   triple zero is obtained by simultaneously pressing single and double zeroes.
@@ -386,18 +391,18 @@
 #
 # # Abbreviation "Numéro" with regular superscript o and legacy NBSP
 #
-<UEF78> : "nᵒ "
-<UEF79> : "Nᵒ "
+<UEF78> : "nᵒ " #
+<UEF79> : "Nᵒ " #
 #
 #
 # # Prefixes, and triple zero for numpad
 #
 <UEF7A> : "&#"
 <UEF7B> : "&#x"
-<UEF7C> : "0x"
+<UEF7C> : "0x" #
 <UEF7D> : "000"  # See # # Double zero
-<UEF7E> : "\\u{"
-<UEF7F> : "\\x{"
+<UEF7E> : "\\u{" #
+<UEF7F> : "\\x{" #
 #
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, UFEFF ZERO WIDTH NO-BREAK SPACE
@@ -412,25 +417,25 @@
 #
 #   These spaces are U2009 THIN SPACE followed by UFEFF ZWNBSP.
 #
-<UEF80> : " ﻿!"
-<UEF81> : " ﻿:"
-<UEF82> : " ﻿;"
-<UEF83> : " ﻿?"
-<UEF84> : "« ﻿"
-<UEF85> : " ﻿»"
-<UEF86> : "‹ ﻿"
-<UEF87> : " ﻿›"
+<UEF80> : " ﻿!" #
+<UEF81> : " ﻿:" #
+<UEF82> : " ﻿;" #
+<UEF83> : " ﻿?" #
+<UEF84> : "« ﻿" #
+<UEF85> : " ﻿»" #
+<UEF86> : "‹ ﻿" #
+<UEF87> : " ﻿›" #
 #
 #
 # # Abbreviation "Numéro" with regular superscript o and a THIN SPACE, ZWNBSP string
 #
-<UEF88> : "nᵒ ﻿"
-<UEF89> : "Nᵒ ﻿"
+<UEF88> : "nᵒ ﻿" #
+<UEF89> : "Nᵒ ﻿" #
 #
 #
 # # No-break thin space string in isolation
 #
-<UEF8A> : " ﻿"
+<UEF8A> : " ﻿" #
 #
 #
 # # Named entities for SGML-based languages HTML, XML and XHTML
@@ -469,25 +474,25 @@
 #
 #   These spaces are U2009 THIN SPACE followed by U2060 WORD JOINER.
 #
-<UEF90> : " ⁠!"
-<UEF91> : " ⁠:"
-<UEF92> : " ⁠;"
-<UEF93> : " ⁠?"
-<UEF94> : "« ⁠"
-<UEF95> : " ⁠»"
-<UEF96> : "‹ ⁠"
-<UEF97> : " ⁠›"
+<UEF90> : " ⁠!" #
+<UEF91> : " ⁠:" #
+<UEF92> : " ⁠;" #
+<UEF93> : " ⁠?" #
+<UEF94> : "« ⁠" #
+<UEF95> : " ⁠»" #
+<UEF96> : "‹ ⁠" #
+<UEF97> : " ⁠›" #
 #
 #
 # # Abbreviation "Numéro" with regular superscript o and a THIN SPACE, WORD JOINER string
 #
-<UEF98> : "nᵒ ⁠"
-<UEF99> : "Nᵒ ⁠"
+<UEF98> : "nᵒ ⁠" #
+<UEF99> : "Nᵒ ⁠" #
 #
 #
 # # No-break THIN SPACE string in isolation
 #
-<UEF9A> : " ⁠"
+<UEF9A> : " ⁠" #
 #
 #
 # # HTML entity for no-break space
@@ -526,7 +531,7 @@
 #   Kenneth WHISTLER exposed the rationale in:
 #   https://unicode.org/mail-arch/unicode-ml/y2005-m11/0060.html
 #
-<UEF9F> : "U+"
+<UEF9F> : "U+" #
 #
 #
 # # Output of keyboard layout version number
@@ -540,21 +545,21 @@
 #   the point in having a Belgian variant is a reasonable amount of backwards
 #   compatibility with the Belgian AZERTY, and remapping defeats this point.
 #
-<UEFA1> : "Français France disposition de clavier semi-automatique – kbfrFRs "
-<UEFA2> : "Breton et français disposition de clavier semi-automatique – kbbrFRs "
-<UEFA3> : "Polynésie française disposition de clavier semi-automatique – kbfrPFs "
-<UEFA4> : "Afrique francophone disposition de clavier semi-automatique – kbfrAFs "
-<UEFA5> : "Français Belgique disposition de clavier semi-automatique – kbfrBEs "
-<UEFA6> : "Canadien multilingue disposition de clavier semi-automatique – kbfrCAms "
-<UEFA7> : "Français Canada disposition de clavier semi-automatique – kbfrCAs "
-<UEFA8> : "Français Suisse disposition de clavier semi-automatique – kbfrCHs "
-<UEFA9> : "Français France disposition de clavier semi-automatique redisposée – kbfrFRsr "
-<UEFAA> : "Breton et français disposition de clavier semi-automatique redisposée – kbbrFRsr "
-<UEFAB> : "Polynésie française disposition de clavier semi-automatique redisposée – kbfrPFsr "
-<UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFsr "
-<UEFAD> : ""
-<UEFAE> : ""
-<UEFAF> : ""
+<UEFA1> : "Français France disposition de clavier semi-automatique – kbfrFRs " #
+<UEFA2> : "Breton et français disposition de clavier semi-automatique – kbbrFRs " #
+<UEFA3> : "Polynésie française disposition de clavier semi-automatique – kbfrPFs " #
+<UEFA4> : "Afrique francophone disposition de clavier semi-automatique – kbfrAFs " #
+<UEFA5> : "Français Belgique disposition de clavier semi-automatique – kbfrBEs " #
+<UEFA6> : "Canadien multilingue disposition de clavier semi-automatique – kbfrCAms " #
+<UEFA7> : "Français Canada disposition de clavier semi-automatique – kbfrCAs " #
+<UEFA8> : "Français Suisse disposition de clavier semi-automatique – kbfrCHs " #
+<UEFA9> : "Français France disposition de clavier semi-automatique redisposée – kbfrFRsr " #
+<UEFAA> : "Breton et français disposition de clavier semi-automatique redisposée – kbbrFRsr " #
+<UEFAB> : "Polynésie française disposition de clavier semi-automatique redisposée – kbfrPFsr " #
+<UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFsr " #
+<UEFAD> : "" #
+<UEFAE> : "" #
+<UEFAF> : "" #
 #
 #
 # # Phone key emoji
