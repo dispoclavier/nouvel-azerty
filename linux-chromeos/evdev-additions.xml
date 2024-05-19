@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2023-12-02T2049+0100
+                       Date: 2024-05-19T1740+0200
           Partial file name: evdev-additions.xml
                    Encoding: UTF-8
                        Type: text/XML
@@ -26,15 +26,15 @@
      in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 
                Installation: In /usr/share/X11/xkb/rules/evdev.xml
-                             add the lines enclosed in this file 
+                             add the lines set off in this file 
                              before the closing </layoutList> tag.
                              The change takes effect when reopening a session.
 
              Uninstallation: Delete those lines.
 -->
 <xkbConfigRegistry version="1.1">
-
 	<layoutList>
+
 
 
 		<layout><!-- dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
@@ -198,7 +198,8 @@
 						<name>kbfrBEs</name><!-- avec § en Minuscule et _ en Majuscule -->
 						<description>Français Belgique disposition de clavier semi-automatique</description>
 					</configItem>
-				</variant><!--
+				</variant>
+				<!-- Variantes non-AZERTY pour d’autres pays de la Francophonie.
 				<variant>
 					<configItem>
 						<name>kbfrCAms</name>
@@ -217,27 +218,29 @@
 						<description>Français Suisse disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>-->
+				<!-- Variantes plus ergonomiques en saisie de lettres. -->
 				<variant>
 					<configItem>
-						<name>kbfrFRsr</name><!-- plus ergonomique pour la saisie des lettres -->
+						<name>kbfrFRsr</name>
 						<description>Français France disposition de clavier semi-automatique redisposée</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
-						<name>kbbrFRsr</name><!-- plus ergonomique pour la saisie des lettres -->
+						<name>kbbrFRsr</name>
+						<shortDescription>br</shortDescription><!-- icône [Br] remplaçant [Fr] -->
 						<description>Breton et français disposition de clavier semi-automatique redisposée</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
-						<name>kbfrPFsr</name><!-- plus ergonomique pour la saisie des lettres -->
+						<name>kbfrPFsr</name>
 						<description>Polynésie française disposition de clavier semi-automatique redisposée</description>
 					</configItem>
 				</variant>
 				<variant>
 					<configItem>
-						<name>kbfrAFsr</name><!-- plus ergonomique pour la saisie des lettres -->
+						<name>kbfrAFsr</name>
 						<description>Afrique francophone disposition de clavier semi-automatique redisposée</description>
 					</configItem>
 				</variant>
@@ -245,6 +248,6 @@
 		</layout><!-- FIN_dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
 
 
-	</layoutList>
 
+	</layoutList>
 </xkbConfigRegistry>
