@@ -1,4 +1,4 @@
-//                       Date: 2024-04-05T2300+0200
+//                       Date: 2024-05-19T0431+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -564,7 +564,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
 		[           dead_diaeresis,                     plus,                Multi_key,                    U207A,                        F,                    equal,                    UEFCB,               braceright ],
-		[           dead_diaeresis,                     plus,                    U208A,                    U207A,                        F,                    equal,                    UEFCB,               braceright ]
+		[                Multi_key,                     plus,                    U208A,                    U207A,                        F,                    equal,                    UEFCB,               braceright ]
 	}; // U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
@@ -677,7 +677,7 @@ xkb_symbols "kbfrFRs" {
 	key <AC08> {
 		[                        k,                        K,                    U1D4F,              bracketleft,              dead_ogonek,                        2,                    UEF7B,                   U1F605 ],
 		[                        k,                        K,                    U1D4F,              bracketleft,              dead_ogonek,                        2,                    UEF7B,                   U1F605 ]
-	}; // U1D4F ᵏ superscript small k;UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
+	}; // U1D4F ᵏ superscript small k; UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
 
 	key <AC09> {
 		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ],
