@@ -68,6 +68,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
   * Simplifier la séquence de "⁒" U2052. (compose-1.yml [5e75dac](https://github.com/dispoclavier/nouvel-azerty/commit/5e75dacf841d71082f5b6b3fbdb33824d1504ac4))
   * Mettre à jour les renvois. (compose-1.yml [b40afd1](https://github.com/dispoclavier/nouvel-azerty/commit/b40afd1141823e5f65653ff9a3a753d98ad39f6c), [7f9d628](https://github.com/dispoclavier/nouvel-azerty/commit/7f9d628ed127a3e94d0e1a0558b5f3a0e567600a), [5e75dac](https://github.com/dispoclavier/nouvel-azerty/commit/5e75dacf841d71082f5b6b3fbdb33824d1504ac4))
   * Simplifier le fichier. (compose-1.yml [731afa0](https://github.com/dispoclavier/nouvel-azerty/commit/731afa0d2fa108b55d76a8ecca8308af63399e17))
+* Commutateur : Variante Breton et français redisposée : Ajouter l’icône « br » manquante. (evdev-additions.xml [4d148fe](https://github.com/dispoclavier/nouvel-azerty/commit/4d148fe24cae47953da873f6b3a9997330923b1b))
 
 ## 1.7.4 (2024-03-28)
 
