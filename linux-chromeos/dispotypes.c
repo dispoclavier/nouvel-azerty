@@ -1,4 +1,4 @@
-//                       Date: 2023-12-02T2049+0100
+//                       Date: 2024-05-19T0454+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -733,18 +733,22 @@ default partial xkb_types "dispocla" {
 
 	type "EIGHT_LEVELS_PLUS_GROUP1" {
 		// Based on EIGHT_LEVELS_MINUS.
+		// The Control value is intended to debug the terminal (noticed on Linux Mint)
+		// not zooming in on `Ctrl + "="`, while on `Ctrl + "-"` it does zoom out.
+		// The <plus> Control value should be more generally supported, as opposed to
+		// its US-QWERTY variant.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // <ò>
+		map[ None                                                             ] = Level1; // <ë>
 		map[                                                            Shift ] = Level2; // +
-		map[                                               LevelThree         ] = Level3; // ʳ
+		map[                                               LevelThree         ] = Level3; // <¦>
 		map[                                               LevelThree + Shift ] = Level8; // }
 		map[                                   LevelFive                      ] = Level6; // =
 		map[                                   LevelFive              + Shift ] = Level7; // #️⃣
 		map[                                   LevelFive + LevelThree         ] = Level5; // F
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
-		map[                         Control                                  ] = Level6; // =
-		map[                         Control                          + Shift ] = Level6; // =
+		map[                         Control                                  ] = Level2; // +
+		map[                         Control                          + Shift ] = Level2; // +
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -1522,14 +1526,14 @@ default partial xkb_types "dispocla" {
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level6; // =
 		map[                                                            Shift ] = Level2; // +
-		map[                                               LevelThree         ] = Level2; // +
+		map[                                               LevelThree         ] = Level1; // <¦>
 		map[                                               LevelThree + Shift ] = Level4; // ⁺
 		map[                                   LevelFive                      ] = Level5; // F
 		map[                                   LevelFive              + Shift ] = Level3; // ₊
 		map[                                   LevelFive + LevelThree         ] = Level4; // ⁺
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
-		map[                         Control                                  ] = Level6; // =
-		map[                         Control                          + Shift ] = Level6; // =
+		map[                         Control                                  ] = Level2; // +
+		map[                         Control                          + Shift ] = Level2; // +
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
