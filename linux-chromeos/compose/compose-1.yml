@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
-#                    Version:
-<UEFA0>                     : "version 2.0.0" #
+#                    Version: See # # Output of keyboard layout version number
+<UEFA0>                     : "version 2.0.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -47,7 +47,7 @@
 #                             need to override U01D5 and U01D6. Likewise, "V́" and "v́" need to override
 #                             U01D7 and U01D8 as defined in en_US.UTF-8/Compose.
 #
-#                             Please do not use this file but the all-in-one file `Compose.yml`.
+#                             Please make sure to be using the full-length file `Compose.yml`.
 #
 #                             A. 1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
 #                                2. Append `Compose.yml` to /usr/share/X11/locale/en_US.UTF-8/Compose
@@ -143,6 +143,9 @@
 #   http://www.evertype.com/standards/csur/
 #   http://www.kreativekorp.com/ucsur/
 #
+#
+# # Notes about syntax
+#
 #   Line comments are mandatory for compatibility with defective compilers that
 #   are not able to parse compose sequences not followed by a hash, although in
 #   the spec, comments are declared as optional. See the section “File Format”.
@@ -175,7 +178,7 @@
 #   These have got mnemonic keysyms in keysymdef.h but may not be supported yet,
 #   so they are defined here using "ʼ" U02BC MODIFIER LETTER APOSTROPHE:
 #
-<c_h> : "cʼh" #
+<c_h> : "cʼh" # See # # Notes about syntax
 <C_h> : "Cʼh" #
 <C_H> : "CʼH" #
 #
@@ -287,7 +290,7 @@
 #   “PRI #367: Automated punctuation spacing”
 #   https://unicode-org.atlassian.net/browse/CLDR-10904
 #
-<UEF60> : " !" #
+<UEF60> : " !" # See # # Notes about syntax
 <UEF61> : " :" # [1]
 <UEF62> : " ;" #
 <UEF63> : " ?" #
