@@ -1,4 +1,4 @@
-//                       Date: 2024-05-19T0431+0200
+//                       Date: 2024-05-20T1818+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -590,7 +590,7 @@ xkb_symbols "kbfrFRs" {
 	key <AD04> {
 		[                        r,                        R,                    U02B3,                backslash,                    UEFD6,                 sterling,                  radical,                   U1F914 ],
 		[                        r,                        R,                    U02B3,                backslash,                    UEFD6,                 sterling,                  radical,                   U1F914 ]
-	}; // U02B3 ʳ superscript small r; UEFD6 *dead_reversed; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🤣 U1F923 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji is not supported; 🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
+	}; // U02B3 ʳ superscript small r; UEFD6 *dead_reversed; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
 
 	key <AD05> {
 		[                        t,                        T,                    U1D57,               asciitilde,               dead_tilde,                    U2212,                  figdash,                   U1F60A ],
@@ -680,9 +680,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D4F ᵏ superscript small k; UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
 
 	key <AC09> {
-		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ],
-		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                     ]
-	}; // U02E1 ˡ superscript small l; UEFD3 *dead_abovehook
+		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                   U1F923 ],
+		[                        l,                        L,                    U02E1,             bracketright,                    UEFD3,                        3,                 sterling,                   U1F923 ]
+	}; // U02E1 ˡ superscript small l; UEFD3 *dead_abovehook; U1F923 🤣 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji
 
 	key <AC10> {
 		[                        m,                        M,                    U1D50,                      bar,              dead_macron,                    comma,                       mu,                   U1F637 ],
