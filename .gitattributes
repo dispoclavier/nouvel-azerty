@@ -2,8 +2,9 @@
 
 # Do not package resources nor tools in released source code.
 # Courtesy https://stackoverflow.com/a/50062746
-/linux-chromeos/outils/ export-ignore
 /linux-chromeos/ressource/ export-ignore
+/linux-chromeos/outils/ export-ignore
+/.gitattributes export-ignore
 
 
 ## Language stats
@@ -23,4 +24,3 @@
 # Do not include undistributed files.
 /linux-chromeos/outils/* linguist-vendored
 /linux-chromeos/ressource/* linguist-vendored
-/.gitattributes
