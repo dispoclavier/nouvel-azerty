@@ -1,4 +1,4 @@
-//                       Date: 2024-05-20T1818+0200
+//                       Date: 2024-05-21T2318+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -499,9 +499,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE02> {
-		[                        2,                   eacute,                   Eacute,              twosuperior,                    U2082,                        2,                    UEFC2,                    UEFD8 ],
-		[                        2,                   eacute,                   Eacute,              twosuperior,                    U2082,                        2,                    UEFC2,                    UEFD8 ]
-	}; // U2082 ₂ SUBSCRIPT TWO; UEFC2  2️⃣ keycap 2 emoji; UEFD8 *dead_legacytilde
+		[                        2,                   eacute,                   Eacute,              twosuperior,                    U2082,                        2,                    UEFC2,                    UEFD9 ],
+		[                        2,                   eacute,                   Eacute,              twosuperior,                    U2082,                        2,                    UEFC2,                    UEFD9 ]
+	}; // U2082 ₂ SUBSCRIPT TWO; UEFC2  2️⃣ keycap 2 emoji; UEFD9 *dead_legacytilde
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2";
@@ -528,9 +528,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2";
 	key <AE07> {
-		[                        7,                   egrave,                   Egrave,                    U2077,                    U2087,                        7,                    UEFC7,                    UEFD9 ],
-		[                        7,                   egrave,                   Egrave,                    U2077,                    U2087,                        7,                    UEFC7,                    UEFD9 ]
-	}; // U2077 ⁷ SUPERSCRIPT SEVEN; U2087 ₇ SUBSCRIPT SEVEN; UEFC7  7️⃣ keycap 7 emoji; UEFD9 *dead_legacygrave
+		[                        7,                   egrave,                   Egrave,                    U2077,                    U2087,                        7,                    UEFC7,                    UEFDA ],
+		[                        7,                   egrave,                   Egrave,                    U2077,                    U2087,                        7,                    UEFC7,                    UEFDA ]
+	}; // U2077 ⁷ SUPERSCRIPT SEVEN; U2087 ₇ SUBSCRIPT SEVEN; UEFC7  7️⃣ keycap 7 emoji; UEFDA *dead_legacygrave
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2";
@@ -660,9 +660,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U1DA0 ᶠ superscript small f; U00B5 µ MICRO SIGN; U1F525 🔥 FIRE 15th-ranking emoji
 
 	key <AC05> {
-		[                        g,                        G,                    U1D4D,                    minus,              dead_stroke,                    minus,                   endash,                   U1F44F ],
-		[                        g,                        G,                    U1D4D,                    minus,              dead_stroke,                    minus,                   endash,                   U1F44F ]
-	}; // U1D4D ᵍ superscript small g; U2013 – EN DASH (Unicode-recommended for noting intervals); U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
+		[                        g,                        G,                    U1D4D,                    minus,                    UEFD8,                    minus,                   endash,                   U1F44F ],
+		[                        g,                        G,                    U1D4D,                    minus,                    UEFD8,                    minus,                   endash,                   U1F44F ]
+	}; // U1D4D ᵍ superscript small g; UEFD8 *dead_bar; U2013 – EN DASH (Unicode-recommended for noting intervals); U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC06> {
 		[                        h,                        H,                    U02B0,                     plus,                dead_horn,                     plus,                plusminus,                   U1F44D ],
@@ -707,8 +707,8 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                    colon,                   U1F622 ],
-		[                        w,                        W,                    U02B7,                    slash,  dead_longsolidusoverlay,                    slash,                    colon,                   U1F622 ]
+		[                        w,                        W,                    U02B7,                    slash,              dead_stroke,                    slash,                    colon,                   U1F622 ],
+		[                        w,                        W,                    U02B7,                    slash,              dead_stroke,                    slash,                    colon,                   U1F622 ]
 	}; // U02B7 ʷ superscript small w; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
