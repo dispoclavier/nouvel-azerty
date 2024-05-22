@@ -1,5 +1,5 @@
-                      Date : 2024-05-20T2340+0200
-                   Version : 2.0.0
+                      Date : 2024-05-22T0526+0200
+                   Version : 2.0.1
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -113,11 +113,14 @@
 
   Mode d’emploi sous Linux
 
-  1  Ouvrir un terminal dans votre dossier `Home` et enregistrer la disposition actuelle dans normal.xkb :
+  1  Ouvrir un terminal dans votre dossier personnel et enregistrer la disposition actuelle dans `normal.xkb` :
+
          xkbcomp :0 normal.xkb
+
      Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
 
   2  Aller sur la page de la version courante :
+
          https://github.com/dispoclavier/nouvel-azerty/releases/latest
 
   3  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
@@ -127,9 +130,9 @@
   4  Décompresser le dossier téléchargé.
 
   5  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
-     vers votre dossier `Home`.
+     vers votre dossier personnel.
 
-  6  Si votre dossier `Home` contient déjà un fichier invisible `.XCompose`, ajouter le contenu
+  6  Si votre dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
      du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
      à la fin pour remplacer les séquences en conflit.
 
@@ -139,10 +142,13 @@
      Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
      placer à la fin du fichier.
 
-  7  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce Compose.
+  7  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de
+     touches mortes.
 
   8  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
+
          xkbcomp nouvel-azerty.xkb :0
+
      Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
      choisie.
 
@@ -153,11 +159,12 @@
   9  Veiller à ce que la méthode d’entrée soit XIM.
      Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
 
-
   Ce nouvel AZERTY peut maintenant être testé.
 
   La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
+
       xkbcomp normal.xkb :0
+
   grâce au fichier mis en place au point 1.
 
 
