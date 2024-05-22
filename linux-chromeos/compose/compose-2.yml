@@ -195,15 +195,12 @@
 #   https://www.reddit.com/r/openSUSE/comments/17guwgm/comment/k6p6ul2/
 #
 #   In Cimbali’s French AFNOR layout, dead_longsolidusoverlay was replaced with
-#   a second instance of dead_stroke.
+#   a second instance of dead_stroke. So, none of the 2 French standard layouts
+#   can be implemented anymore using only XKB named keysyms.
 #
 #   The outcome is not so bad, as dead_stroke is stroke again, while *dead_bar
-#   becomes the ninth Private Use Area keysym used for dead keys (UEFD8, after
-#   UEFD0..UEFD7 plus UEFD9, UEFDA).
-#
-#   None of the two French standard layouts can be implemented using only XKB
-#   keysyms either. (Not to mention the issues affecting both the standard and
-#   its layouts.)
+#   becomes the ninth Private Use Area keysym used for dead keys in this file:
+#   UEFD8, after UEFD0..UEFD7, plus UEFD9, UEFDA.
 #
 #
 # # Vertical line above or below
