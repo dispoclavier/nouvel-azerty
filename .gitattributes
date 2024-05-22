@@ -20,5 +20,7 @@
 *.c linguist-vendored
 *.cpp linguist-vendored
 
-# Do not include the tooling either, as it is not distributed.
+# Do not include undistributed files.
 /linux-chromeos/outils/* linguist-vendored
+/linux-chromeos/ressource/* linguist-vendored
+/.gitattributes
