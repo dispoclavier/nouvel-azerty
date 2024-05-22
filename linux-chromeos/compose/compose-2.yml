@@ -29,8 +29,8 @@
 #
 #   That however contradicts what X.org specifies:
 #
-#       If the string is omitted, Xlib figures it out from the keysym according to
-#       the current locale.
+#       If the string is omitted, Xlib figures it out from the keysym according
+#       to the current locale.
 #
 #       I.e., if a rule looks like:
 #           <dead_grave>     <A> : "\300" Agrave
@@ -125,8 +125,8 @@
 #
 # # X11 dead key syms defined in keysymdef.h
 #
-#   Dead keys are defined for Latin and Greek keyboards and for other input methods.
-#   Some new dead keys already have a keysym defined in keysymdef.h;
+#   Dead keys are defined for Latin and Greek keyboards and for other input
+#   methods. Some new dead keys already have a keysym defined in keysymdef.h;
 #   an update package can be installed with this command:
 #
 #       sudo apt-get install x11proto-core-dev
@@ -170,17 +170,16 @@
 #
 # # Bar and stroke diacritics
 #
-#   The deadkeysym dead_stroke is newly dedicated to the horizontal dash overlay,
-#   aka bar. One dead key is not enough to support both / and - shaped diacritics.
-#   Thanks to Karl Pentzlin’s German T3, dead_longsolidusoverlay was added to the
-#   keysyms from the name of the diacritic used to decompose negated math symbols,
-#   while letters like Oslash (U00D8 LATIN CAPITAL LETTER O WITH STROKE) are not
-#   decomposed:
+#   The keysym dead_stroke was previously used for the horizontal dash overlay,
+#   a.k.a. bar, given that one dead key is not enough to support both "/" and
+#   "-" shaped diacritics. Thanks to Karl Pentzlin’s German T3 standard layout,
+#   dead_longsolidusoverlay was added based on the name of the diacritic used
+#   to decompose negated math symbols: "̸" U0338 COMBINING LONG SOLIDUS OVERLAY
+#   (Letters like Oslash "Ø" U00D8 LATIN CAPITAL LETTER O WITH STROKE are not
+#   decomposed.)
 #
-#   ̸ U0338 COMBINING LONG SOLIDUS OVERLAY
-#
-#   Initially the new keysym was called `dead_longsolidus`, and `dead_stroke` was
-#   replaced with `dead_shortstroke` as well.
+#   Initially, the new keysym was called `dead_longsolidus`, and `dead_stroke`
+#   was replaced with `dead_shortstroke` as well.
 #   https://bugs.freedesktop.org/attachment.cgi?id=85370
 #
 #   One decade later, while dead_longsolidusoverlay was expectedly in use, at
@@ -197,6 +196,14 @@
 #
 #   In Cimbali’s French AFNOR layout, dead_longsolidusoverlay was replaced with
 #   a second instance of dead_stroke.
+#
+#   The outcome is not so bad, as dead_stroke is stroke again, while *dead_bar
+#   becomes the ninth Private Use Area keysym used for dead keys (UEFD8, after
+#   UEFD0..UEFD7 plus UEFD9, UEFDA).
+#
+#   None of the two French standard layouts can be implemented using only XKB
+#   keysyms either. (Not to mention the issues affecting both the standard and
+#   its layouts.)
 #
 #
 # # Vertical line above or below
