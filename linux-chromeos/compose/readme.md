@@ -9,7 +9,7 @@ Les tableaux des touches mortes sont [générés](https://github.com/dispoclavie
 ## À propos
 Pour la maintenabilité, `Compose.yml` est réparti sur trois fichiers : `compose-1.yml`, `compose-2.yml` et `compose-3.yml`, qui reflètent les modifications apportées au répertoire des touches mortes de ce nouvel AZERTY.
 
-Le fichier d’un seul tenant `Compose.yml` dans ce dossier est celui de la dernière version publiée.
+Le fichier d’un seul tenant `Compose.yml` dans ce dossier est celui de la dernière version publiée ou un fichier mis à jour en cours de développement.
 
 Les archives distribuées dont le nom commence par `Nouvel-AZERTY-Linux-` contiennent aussi une copie de ce fichier, placée à la racine.
 
