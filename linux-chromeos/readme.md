@@ -1,4 +1,4 @@
-# Nouvel AZERTY pour Linux
+# Un nouvel AZERTY pour Linux
 
 ## Systèmes
 Ces fichiers ont été testés sous Ubuntu 24.04 et Linux Mint 21.3.
