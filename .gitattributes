@@ -6,9 +6,13 @@
 /linux-chromeos/outils/ export-ignore
 /.gitattributes export-ignore
 
-# Fix bug by enumerating content of ressource/ folder.
+# Fix bug by enumerating content of ressource/ folder and
+# by syntactic redundancy.
+# https://stackoverflow.com/questions/5524731/git-ignoring-gitattributes-pattern
 /linux-chromeos/ressource/Udescripteurs.txt export-ignore
 /linux-chromeos/ressource/readme.md export-ignore
+/linux-chromeos/ressource/* export-ignore
+/linux-chromeos/ressource/** export-ignore
 
 
 ## Language stats
