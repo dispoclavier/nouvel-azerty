@@ -6,6 +6,10 @@
 /linux-chromeos/outils/ export-ignore
 /.gitattributes export-ignore
 
+# Fix bug by enumerating content of ressource/ folder.
+/linux-chromeos/ressource/Udescripteurs.txt export-ignore
+/linux-chromeos/ressource/readme.md export-ignore
+
 
 ## Language stats
 
