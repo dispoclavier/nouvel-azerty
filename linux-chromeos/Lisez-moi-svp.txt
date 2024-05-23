@@ -1,4 +1,4 @@
-                      Date : 2024-05-23T2007+0200
+                      Date : 2024-05-23T2012+0200
                    Version : 2.0.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -113,10 +113,12 @@ Témoin lumineux
 
 Mode d’emploi sous Linux
 
-  1  Veiller à ce que la [version de Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md)
-     utilisée ne soit pas trop récente.
+  1  Veiller à ce que la version de Linux utilisée ne soit pas trop récente.
+     Lire si nécessaire les explications sur ce point dans le Lisez-moi pour Linux :
 
-  2  Ouvrir un terminal dans votre dossier personnel et enregistrer la disposition actuelle dans `normal.xkb` :
+         https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md
+
+  2  Ouvrir un terminal dans le dossier personnel et enregistrer la disposition actuelle dans `normal.xkb` :
 
          xkbcomp :0 normal.xkb
 
@@ -133,9 +135,9 @@ Mode d’emploi sous Linux
   5  Décompresser le dossier téléchargé.
 
   6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
-     vers votre dossier personnel.
+     vers le dossier personnel.
 
-  7  Si votre dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
+  7  Si le dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
      du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
      à la fin pour remplacer les séquences en conflit.
 
