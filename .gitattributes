@@ -2,17 +2,9 @@
 
 # Do not package resources nor tools in released source code.
 # Courtesy https://stackoverflow.com/a/50062746
-/linux-chromeos/ressource/ export-ignore
+/ressource/ export-ignore
 /linux-chromeos/outils/ export-ignore
 /.gitattributes export-ignore
-
-# Fix bug by enumerating content of ressource/ folder and
-# by syntactic redundancy.
-# https://stackoverflow.com/questions/5524731/git-ignoring-gitattributes-pattern
-/linux-chromeos/ressource/Udescripteurs.txt export-ignore
-/linux-chromeos/ressource/readme.md export-ignore
-/linux-chromeos/ressource/* export-ignore
-/linux-chromeos/ressource/** export-ignore
 
 
 ## Language stats
@@ -30,5 +22,5 @@
 *.cpp linguist-vendored
 
 # Do not include undistributed files.
+/ressource/* linguist-vendored
 /linux-chromeos/outils/* linguist-vendored
-/linux-chromeos/ressource/* linguist-vendored
