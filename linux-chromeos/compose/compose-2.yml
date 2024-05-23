@@ -172,75 +172,72 @@
 #
 #   The keysym dead_stroke was previously used for the horizontal dash overlay,
 #   a.k.a. bar, given that one dead key is not enough to support both "/" and
-#   "-" shaped diacritics. Thanks to Karl Pentzlin’s German T3 standard layout,
-#   dead_longsolidusoverlay was added based on the name of the diacritic used
-#   to decompose negated math symbols: "̸" U0338 COMBINING LONG SOLIDUS OVERLAY
-#   (Letters like Oslash "Ø" U00D8 LATIN CAPITAL LETTER O WITH STROKE are not
-#   decomposed.)
+#   "-" shaped diacritics, so to cater for Karl Pentzlin’s new German T3 layout
+#   (DIN 2137:2012), dead_longsolidusoverlay was added based on the name of the
+#   diacritic used to decompose negated math symbols: "̸" U0338 COMBINING LONG
+#   SOLIDUS OVERLAY. (Letters like Oslash "Ø" U00D8 LATIN CAPITAL LETTER O WITH
+#   STROKE are not decomposed.) The T3 also required another three new keysyms:
+#   dead_aboveverticalline, dead_belowverticalline, dead_lowline, although none
+#   of these has any precomposed letters, and Windows’ TSF dead keys are unable
+#   to support decomposed (NFD/NFKD) letters. But the stroke-bar disambiguation
+#   made a good point for adding the “extra dead elements for German T3 layout”
+#   alongside the use of vertical line below, and its alternate representation
+#   vertical line above, in Yoruba and in other languages.
 #
 #   Initially, the new keysym was called `dead_longsolidus`, and `dead_stroke`
-#   was replaced with `dead_shortstroke` as well.
+#   was disruptively renamed to `dead_shortstroke` as well.
 #   https://bugs.freedesktop.org/attachment.cgi?id=85370
 #
-#   One decade later, while dead_longsolidusoverlay was expectedly in use, at
-#   least in Cimbali’s implementation of the newly standardized French AZERTY
-#   (NF Z71-300, https://norme-azerty.fr/, /usr/share/X11/symbols/fr(afnor)),
-#   that supports "Ł" U0141, "ł" U0142 and "Ƚ" U023D, "ƚ" U019A (at least in
-#   the standard; getting the latter into en_US.UTF-8/Compose is a different
-#   ballgame), Ghost User (@ghost) managed to toss it out of keysymdef.h.
+#   Alas, en_US.UTF-8/Compose has not been updated in the wake. One decade down
+#   the road, while dead_longsolidusoverlay was (expectedly) in use at least in
+#   Cimbali’s partial implementation (skipping unsupported dead key content) of
+#   the newly standardized French AZERTY (NF Z71-300, https://norme-azerty.fr/,
+#   `/usr/share/X11/symbols/fr(afnor)`), that explicitly supports "Ł" U0141 and
+#   "ł" U0142 as well as "Ƚ" U023D and "ƚ" U019A (another casing letter pair is
+#   less completely enumerated in the standard), Ghost User (@ghost) managed to
+#   toss it out of keysymdef.h.
 #   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/70
 #
-#   The resulting regression was released in libxkbcommon 1.6.0.
+#   The resulting regression was bluntly released in libxkbcommon 1.6.0.
 #   https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
 #   https://www.reddit.com/r/openSUSE/comments/17guwgm/comment/k6p6ul2/
 #
 #   In Cimbali’s French AFNOR layout, dead_longsolidusoverlay was replaced with
-#   a second instance of dead_stroke. So, none of the 2 French standard layouts
-#   can be implemented anymore using only XKB named keysyms.
+#   a second instance of dead_stroke.
+#
+#   So, none of the 2 French standard layouts can be implemented anymore, using
+#   XKB named keysyms only.
 #
 #   The outcome is not so bad, as dead_stroke is stroke again, while *dead_bar
 #   becomes the ninth Private Use Area keysym used for dead keys in this file:
 #   UEFD8, after UEFD0..UEFD7, plus UEFD9, UEFDA.
 #
 #
-# # Vertical line above or below
-#
-#   The deadkeysyms dead_aboveverticalline and dead_belowverticalline have been
-#   added specifically for German T3 (“extra dead elements for German T3 layout”
-#   of DIN 2137:2012), along with dead_longsolidusoverlay and dead_lowline.
-#
-#   Vertical line below, and its alternate representation vertical line above,
-#   are used in Yoruba and in other languages.
-#
-#   Unicode did not encode any precomposed letters with vertical line below,
-#   as precomposed letters are legacy. The standard representation in Unicode
-#   uses combining diacritics in decomposed normalization forms NFD/NFKD.
-#
-#       U0329 COMBINING VERTICAL LINE BELOW Yoruba, German dialectology
-#       U030D COMBINING VERTICAL LINE ABOVE Marshallese
-#       U030E COMBINING DOUBLE VERTICAL LINE ABOVE Marshallese
-#
-#
 # # Macron below and line below
 #
 #   The deadkeysym dead_lowline is not used to input precomposed letters having
-#   “WITH LINE BELOW” in their name, given in the Latin Extended Additional block,
-#   “the names "WITH LINE BELOW" refer to a macron below the letter.”
+#   “WITH LINE BELOW” in their name, given in the Latin Extended Additional
+#   block, “the names "WITH LINE BELOW" refer to a macron below the letter.”
 #   https://unicode.org/charts/nameslist/n_1E00.html
-#   These are input using dead_belowmacron, which may be virtualized by double press of
-#   dead_macron.
 #
-#   Keyboard layouts compliant with ISO/IEC 9995-11 still may have that dead key, given
-#   they are using combining diacritics as dead characters on Windows, the OS that this
-#   part of the standard has been designed for, for instance U0332 COMBINING LOW LINE.
+#   These letters are input using dead_belowmacron, which may be virtualized by
+#   double press of dead_macron.
+#   See #^# MACRON_BELOW
 #
-#   As the output only consists in an added combining diacritic to any letter typed after,
-#   implementing this dead key on non-Windows keyboards needs to know the list of expected
-#   output letters. So it does on Windows, as ISO/IEC 9995-11 has no known implementation.
+#   Letters with a real line below are used in languages of Gabon and in Oneida
+#   and require a line-below dead key, standardized in ISO/IEC 9995-11, where
+#   dead keys output combining diacritics to begin with, for post-processing by
+#   applications on Windows that part 11 of the standard has been designed for.
+#   See #^# LINE_BELOW
 #
-#   Note: Although U0332 COMBINING LOW LINE is defined as connecting on left and right,
-#   it may not be used to underline a text span in plain text, due to vertical alignment
-#   issues under lowercase letters with descender.
+#   As the output only consists in an added combining diacritic to any letter
+#   typed after, implementing this dead key on non-Windows keyboards requires
+#   knowing the list of letters expected to be supported.
+#
+#   (Although U0332 COMBINING LOW LINE is defined as connecting, it may not be
+#   used to underline a text span in plain text, due to vertical alignment
+#   issues under lowercase letters with descender.)
+#
 #
 # # Hook, hook above and retroflex hook
 #
@@ -1298,8 +1295,8 @@
 <Multi_key><asciicircum>                                                                       <B> : "ᴮ" U1D2E # MODIFIER LETTER CAPITAL B
 <UEFD1>                                                                                        <b> : "ᵇ" U1D47 # MODIFIER LETTER SMALL B
 <Multi_key><asciicircum>                                                                       <b> : "ᵇ" U1D47 # MODIFIER LETTER SMALL B
-<UEFD1>                                                                                        <C> : "ꟲ" UA7F2 # MODIFIER LETTER CAPITAL C Chatino (Oaxaca, Mexico)
-<Multi_key><asciicircum>                                                                       <C> : "ꟲ" UA7F2 # MODIFIER LETTER CAPITAL C Chatino (Oaxaca, Mexico)
+<UEFD1>                                                                                        <C> : "ꟲ" UA7F2 # MODIFIER LETTER CAPITAL C: Chatino (Oaxaca, Mexico)
+<Multi_key><asciicircum>                                                                       <C> : "ꟲ" UA7F2 # MODIFIER LETTER CAPITAL C: Chatino (Oaxaca, Mexico)
 <UEFD1>                                                                                        <c> : "ᶜ" U1D9C # MODIFIER LETTER SMALL C
 <Multi_key><asciicircum>                                                                       <c> : "ᶜ" U1D9C # MODIFIER LETTER SMALL C
 <UEFD1>                                                                                        <D> : "ᴰ" U1D30 # MODIFIER LETTER CAPITAL D
@@ -1310,8 +1307,8 @@
 <Multi_key><asciicircum>                                                                       <E> : "ᴱ" U1D31 # MODIFIER LETTER CAPITAL E
 <UEFD1>                                                                                        <e> : "ᵉ" U1D49 # MODIFIER LETTER SMALL E
 <Multi_key><asciicircum>                                                                       <e> : "ᵉ" U1D49 # MODIFIER LETTER SMALL E
-<UEFD1>                                                                                        <F> : "ꟳ" UA7F3 # MODIFIER LETTER CAPITAL F Chatino (Oaxaca, Mexico)
-<Multi_key><asciicircum>                                                                       <F> : "ꟳ" UA7F3 # MODIFIER LETTER CAPITAL F Chatino (Oaxaca, Mexico)
+<UEFD1>                                                                                        <F> : "ꟳ" UA7F3 # MODIFIER LETTER CAPITAL F: Chatino (Oaxaca, Mexico)
+<Multi_key><asciicircum>                                                                       <F> : "ꟳ" UA7F3 # MODIFIER LETTER CAPITAL F: Chatino (Oaxaca, Mexico)
 <UEFD1>                                                                                        <f> : "ᶠ" U1DA0 # MODIFIER LETTER SMALL F
 <Multi_key><asciicircum>                                                                       <f> : "ᶠ" U1DA0 # MODIFIER LETTER SMALL F
 <UEFD1>                                                                                        <G> : "ᴳ" U1D33 # MODIFIER LETTER CAPITAL G
@@ -6902,6 +6899,7 @@
 #
 #
 #^# VERTICAL_LINE_ABOVE
+#   (former dead_aboveverticalline)
 #   dead_abovedot double press
 #   Multi_key ¦..
 #
@@ -9375,6 +9373,7 @@
 #
 #
 #^# BELT, BREVE_BELOW
+#   dead_belowbreve
 #   dead_breve double press
 #   Multi_key: ¦))
 #   Dchar: 
@@ -10983,6 +10982,7 @@
 #
 #
 #^# MACRON_BELOW
+#   dead_belowmacron
 #   dead_macron double press
 #   Multi_key: ¦||
 #   Dchar: "ḇ" U1E07
@@ -11034,6 +11034,7 @@
 #
 #
 #^# LINE_BELOW
+#   (former dead_lowline)
 #   *dead_macron triple press
 #   Multi_key: ¦|||
 #   Dchar: 
@@ -11056,30 +11057,30 @@
 <Multi_key><bar><bar><bar>                                                          <nobreakspace> : "_" U005F # LOW LINE
 <dead_macron><dead_macron><dead_macron>                                                    <U202F> : "_" U005F # LOW LINE
 <Multi_key><bar><bar><bar>                                                                 <U202F> : "_" U005F # LOW LINE
-<dead_macron><dead_macron><dead_macron>                                                        <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <E> : "E̲" # U0045 U0332 LATIN CAPITAL LETTER E WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <e> : "e̲" # U0065 U0332 LATIN SMALL LETTER E WITH LINE BELOW: Languages of Gabon
 <dead_macron><dead_macron><dead_macron>                                                        <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW: Oneida
 <Multi_key><bar><bar><bar>                                                                     <H> : "H̲" # U0048 U0332 LATIN CAPITAL LETTER H WITH LINE BELOW: Oneida
 <dead_macron><dead_macron><dead_macron>                                                        <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW: Oneida
 <Multi_key><bar><bar><bar>                                                                     <h> : "h̲" # U0068 U0332 LATIN SMALL LETTER H WITH LINE BELOW: Oneida
-<dead_macron><dead_macron><dead_macron>                                                        <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW Languages of Gabon
-<dead_macron><dead_macron><dead_macron>                                                        <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW Languages of Gabon
-<Multi_key><bar><bar><bar>                                                                     <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <N> : "N̲" # U004E U0332 LATIN CAPITAL LETTER N WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <n> : "n̲" # U006E U0332 LATIN SMALL LETTER N WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <O> : "O̲" # U004F U0332 LATIN CAPITAL LETTER O WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <o> : "o̲" # U006F U0332 LATIN SMALL LETTER O WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <U> : "U̲" # U0055 U0332 LATIN CAPITAL LETTER U WITH LINE BELOW: Languages of Gabon
+<dead_macron><dead_macron><dead_macron>                                                        <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW: Languages of Gabon
+<Multi_key><bar><bar><bar>                                                                     <u> : "u̲" # U0075 U0332 LATIN SMALL LETTER U WITH LINE BELOW: Languages of Gabon
 #
 #
 #*# STROKE
@@ -11749,6 +11750,7 @@
 #
 #
 #^# RING_BELOW
+#   dead_belowring
 #   dead_abovering double press
 #   Multi_key: ¦**
 #   Dchar: "ḁ" U1E01
@@ -12301,6 +12303,7 @@
 #
 #
 #^# CIRCUMFLEX_BELOW
+#   dead_belowcircumflex
 #   dead_circumflex double press
 #   Multi_key: ¦<<
 #   Dchar: "ḙ" U1E19
@@ -14441,6 +14444,7 @@
 #
 #
 #^# DOUBLE_GRAVE
+#   dead_doublegrave
 #   dead_grave double press
 #   Multi_key: ¦``
 #   Dchar: 
@@ -14824,6 +14828,7 @@
 #
 #
 #^# VERTICAL_LINE_BELOW
+#   (former dead_belowverticalline)
 #   dead_belowdot double press
 #   Multi_key: ¦!!
 #   Dchar: 
@@ -15157,6 +15162,7 @@
 #
 #
 #^# DIAERESIS_BELOW
+#   dead_belowdiaeresis
 #   dead_diaeresis double press
 #   Multi_key: ¦::
 #   Dchar: "ṳ" U1E73
@@ -15411,6 +15417,7 @@
 #
 #
 #^# COMMA_ABOVE
+#   dead_abovecomma
 #   dead_belowcomma double press
 #   Multi_key: ¦;;
 #   Multi_key: ¦§§
