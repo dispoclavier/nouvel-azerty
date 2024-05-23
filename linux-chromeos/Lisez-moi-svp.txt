@@ -1,5 +1,5 @@
-                      Date : 2024-05-22T0526+0200
-                   Version : 2.0.1
+                      Date : 2024-05-23T2007+0200
+                   Version : 2.0.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -30,7 +30,7 @@
                    Contact : dev@dispoclavier.net
 
 
-  Dispositions ou variantes
+Dispositions ou variantes
 
   • Le fichier `Compose.yml` contient le répertoire des touches mortes. Son extension n’est pas
     d’origine et sert uniquement à l’ouverture et à l’affichage.
@@ -67,7 +67,7 @@
     va à l’encontre de cet objectif.
 
 
-  Options de disposition ou sous-variantes
+Options de disposition ou sous-variantes
 
   Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles
   pour chaque variante :
@@ -103,7 +103,7 @@
       Contrôle droite.
 
 
-  Témoin lumineux
+Témoin lumineux
 
   Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode ASCII par la bascule
   VerrMod sur la touche E00 au-dessus de Tab à gauche du 1. Ce témoin lumineux manque sur beaucoup
@@ -111,28 +111,31 @@
   compacts USB ou sans fil.
 
 
-  Mode d’emploi sous Linux
+Mode d’emploi sous Linux
 
-  1  Ouvrir un terminal dans votre dossier personnel et enregistrer la disposition actuelle dans `normal.xkb` :
+  1  Veiller à ce que la [version de Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md)
+     utilisée ne soit pas trop récente.
+
+  2  Ouvrir un terminal dans votre dossier personnel et enregistrer la disposition actuelle dans `normal.xkb` :
 
          xkbcomp :0 normal.xkb
 
      Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
 
-  2  Aller sur la page de la version courante :
+  3  Aller sur la page de la version courante :
 
          https://github.com/dispoclavier/nouvel-azerty/releases/latest
 
-  3  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
+  4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-
      et se termine par le numéro de version et l’extension « .zip ».
 
-  4  Décompresser le dossier téléchargé.
+  5  Décompresser le dossier téléchargé.
 
-  5  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
+  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
      vers votre dossier personnel.
 
-  6  Si votre dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
+  7  Si votre dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
      du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
      à la fin pour remplacer les séquences en conflit.
 
@@ -142,10 +145,10 @@
      Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
      placer à la fin du fichier.
 
-  7  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de
+  8  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de
      touches mortes.
 
-  8  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
+  9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
 
          xkbcomp nouvel-azerty.xkb :0
 
@@ -156,19 +159,19 @@
      AB11 est une touche supplémentaire entre § et Maj droite sur des claviers brésiliens,
      et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
 
-  9  Veiller à ce que la méthode d’entrée soit XIM.
+ 10  Veiller à ce que la méthode d’entrée soit XIM.
      Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
 
-  Ce nouvel AZERTY peut maintenant être testé.
+Ce nouvel AZERTY peut maintenant être testé.
 
-  La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
+La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
 
       xkbcomp normal.xkb :0
 
   grâce au fichier mis en place au point 1.
 
 
-  Critiques, suggestions et retours d’expérience
+Critiques, suggestions et retours d’expérience
 
   N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
   à l’adresse dev@dispoclavier.net. Merci d’avance de tous vos retours.
