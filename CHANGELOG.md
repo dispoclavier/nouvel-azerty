@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 2.0.2 (2024-05-23)
+
+* Transformations : Documentation. (compose-2.yml [d5274a3](https://github.com/dispoclavier/nouvel-azerty/commit/d5274a393d8c77e9063e7d11da962c48c6394c7f), [6242a03](https://github.com/dispoclavier/nouvel-azerty/commit/6242a039772829d27b53381994809623d5a518fe), [450eac7](https://github.com/dispoclavier/nouvel-azerty/commit/450eac78b64940e119aa68cd4c66850392e8a448))
+
 ## 2.0.1 (2024-05-22)
 
 * Transformations : Déboguer les dispositions pour les systèmes postérieurs à octobre 2023 suite à la suppression du nom XKB de la touche morte barré. (dispocla.cpp [9ec9fc2](https://github.com/dispoclavier/nouvel-azerty/commit/9ec9fc26ce3b3a31b60fa4e78ea456280ba0a4d7), compose-2.yml [6de07bb](https://github.com/dispoclavier/nouvel-azerty/commit/6de07bb4ae228c8c3e2277fbed21b8bf01ee1045), compose-1.yml [882ca8a](https://github.com/dispoclavier/nouvel-azerty/commit/882ca8a19e47b2fe544aa4f351cf49fa56613f6b))
