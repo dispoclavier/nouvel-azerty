@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2024-05-19T1740+0200
+                       Date: 2024-05-25T1913+0200
           Partial file name: evdev-additions.xml
                    Encoding: UTF-8
                        Type: text/XML
@@ -31,6 +31,12 @@
                              The change takes effect when reopening a session.
 
              Uninstallation: Delete those lines.
+
+Country codes have been added for the keyboard layouts to be grouped not only
+by language, as they were until 2023, when all French layouts were found in a
+“French” folder, but also by country: French (France), French (Canada), instead
+of just filtering a flat list, back in 2016.
+
 -->
 <xkbConfigRegistry version="1.1">
 	<layoutList>
@@ -38,10 +44,73 @@
 
 
 		<layout><!-- dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
-			<configItem><!-- La disposition par défaut dans dispocla est "kbfrFRs". -->
+			<configItem>
 				<name>dispocla</name><!-- un fichier ajouté dans /usr/share/X11/xkb/symbols/ -->
+				<!-- La disposition par défaut dans dispocla est "kbfrFRs". -->
+				<!-- Keyboard indicator for French layouts -->
 				<shortDescription>fr</shortDescription><!-- nom de l’icône [Fr] dans la barre d’état -->
 				<description>Français France disposition de clavier semi-automatique</description><!-- pour le menu du commutateur -->
+				<countryList><!-- tous les codes ISO 3166-1 alpha-2 des membres de la Francophonie -->
+					<iso3166Id>AL</iso3166Id><!-- Albanie -->
+					<iso3166Id>AD</iso3166Id><!-- Andorre -->
+					<iso3166Id>AM</iso3166Id><!-- Arménie -->
+					<iso3166Id>BE</iso3166Id><!-- Belgique, Wallonie-Bruxelles (Fédération) -->
+					<iso3166Id>BJ</iso3166Id><!-- Bénin -->
+					<iso3166Id>BG</iso3166Id><!-- Bulgarie -->
+					<iso3166Id>BF</iso3166Id><!-- Burkina Faso -->
+					<iso3166Id>BI</iso3166Id><!-- Burundi -->
+					<iso3166Id>CV</iso3166Id><!-- Cabo Verde -->
+					<iso3166Id>KH</iso3166Id><!-- Cambodge -->
+					<iso3166Id>CM</iso3166Id><!-- Cameroun -->
+					<iso3166Id>CA</iso3166Id><!-- Canada, Canada/Nouveau-Brunswick, Canada/Québec -->
+					<iso3166Id>CF</iso3166Id><!-- Centrafrique -->
+					<iso3166Id>CC</iso3166Id><!-- Comores -->
+					<iso3166Id>CG</iso3166Id><!-- Congo -->
+					<iso3166Id>CD</iso3166Id><!-- Congo (RD) -->
+					<iso3166Id>CI</iso3166Id><!-- Côte d’Ivoire -->
+					<iso3166Id>DJ</iso3166Id><!-- Djibouti -->
+					<iso3166Id>DM</iso3166Id><!-- Dominique -->
+					<iso3166Id>EG</iso3166Id><!-- Égypte -->
+					<iso3166Id>FR</iso3166Id><!-- France -->
+					<iso3166Id>GA</iso3166Id><!-- Gabon -->
+					<iso3166Id>GR</iso3166Id><!-- Grèce -->
+					<iso3166Id>GN</iso3166Id><!-- Guinée -->
+					<iso3166Id>GW</iso3166Id><!-- Guinée-Bissau -->
+					<iso3166Id>GQ</iso3166Id><!-- Guinée équatoriale  -->
+					<iso3166Id>HT</iso3166Id><!-- Haïti -->
+					<iso3166Id>LA</iso3166Id><!-- Laos -->
+					<iso3166Id>LB</iso3166Id><!-- Liban -->
+					<iso3166Id>LU</iso3166Id><!-- Luxembourg -->
+					<iso3166Id>HK</iso3166Id><!-- Macédoine du Nord -->
+					<iso3166Id>MG</iso3166Id><!-- Madagascar -->
+					<iso3166Id>ML</iso3166Id><!-- Mali -->
+					<iso3166Id>MA</iso3166Id><!-- Maroc -->
+					<iso3166Id>MU</iso3166Id><!-- Maurice -->
+					<iso3166Id>MR</iso3166Id><!-- Mauritanie -->
+					<iso3166Id>MD</iso3166Id><!-- Moldavie -->
+					<iso3166Id>MC</iso3166Id><!-- Monaco -->
+					<iso3166Id>NE</iso3166Id><!-- Niger -->
+					<iso3166Id>RO</iso3166Id><!-- Roumanie -->
+					<iso3166Id>RW</iso3166Id><!-- Rwanda -->
+					<iso3166Id>LC</iso3166Id><!-- Sainte-Lucie -->
+					<iso3166Id>ST</iso3166Id><!-- Sao Tomé-et-Principe -->
+					<iso3166Id>SN</iso3166Id><!-- Sénégal -->
+					<iso3166Id>SC</iso3166Id><!-- Seychelles -->
+					<iso3166Id>CH</iso3166Id><!-- Suisse -->
+					<iso3166Id>TD</iso3166Id><!-- Tchad -->
+					<iso3166Id>TG</iso3166Id><!-- Togo -->
+					<iso3166Id>TN</iso3166Id><!-- Tunisie -->
+					<iso3166Id>VU</iso3166Id><!-- Vanuatu -->
+					<iso3166Id>VN</iso3166Id><!-- Vietnam -->
+					<!-- Membres associés : -->
+					<iso3166Id>CY</iso3166Id><!-- Chypre -->
+					<iso3166Id>AE</iso3166Id><!-- Émirats arabes unis -->
+					<!-- France/Nouvelle-Calédonie -->
+					<iso3166Id>GH</iso3166Id><!-- Ghana -->
+					<!-- Kosovo -->
+					<iso3166Id>QA</iso3166Id><!-- Qatar -->
+					<iso3166Id>RS</iso3166Id><!-- Serbie -->
+				</countryList>
 				<languageList><!-- non exhaustive ; 128 exemples de langues prises en charge, codes ISO 639-3 -->
 					<iso639Id>aar</iso639Id><!-- afar (Djibouti, Érythrée, Éthiopie) -->
 					<iso639Id>ajg</iso639Id><!-- aja-gbe (Bénin, Togo) -->
