@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2024-05-25T1913+0200
+                       Date: 2024-05-26T1824+0200
           Partial file name: evdev-additions.xml
                    Encoding: UTF-8
                        Type: text/XML
@@ -26,16 +26,23 @@
      in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 
                Installation: In /usr/share/X11/xkb/rules/evdev.xml
-                             add the lines set off in this file 
-                             before the closing </layoutList> tag.
-                             The change takes effect when reopening a session.
+                             add the <layout> element below, just before
+                             the </layoutList> closing tag.
 
-             Uninstallation: Delete those lines.
+                             The edit takes effect when reopening a session.
+
+             Uninstallation: Delete the added `layout` element.
 
 Country codes have been added for the keyboard layouts to be grouped not only
 by language, as they were until 2023, when all French layouts were found in a
 “French” folder, but also by country: French (France), French (Canada), instead
 of just filtering a flat list, back in 2016.
+
+The upside of the flat list was that back then, the switch actually worked, as
+opposed to the time since the UI redesign.
+
+As all country codes are listed with the base layout, all the variants show up
+in every listed country that Gnome has a country folder for.
 
 -->
 <xkbConfigRegistry version="1.1">
@@ -50,7 +57,7 @@ of just filtering a flat list, back in 2016.
 				<!-- Keyboard indicator for French layouts -->
 				<shortDescription>fr</shortDescription><!-- nom de l’icône [Fr] dans la barre d’état -->
 				<description>Français France disposition de clavier semi-automatique</description><!-- pour le menu du commutateur -->
-				<countryList><!-- tous les codes ISO 3166-1 alpha-2 des membres de la Francophonie -->
+				<countryList><!-- les codes ISO 3166-1 alpha-2 des membres de la Francophonie -->
 					<iso3166Id>AL</iso3166Id><!-- Albanie -->
 					<iso3166Id>AD</iso3166Id><!-- Andorre -->
 					<iso3166Id>AM</iso3166Id><!-- Arménie -->
@@ -268,7 +275,8 @@ of just filtering a flat list, back in 2016.
 						<description>Français Belgique disposition de clavier semi-automatique</description>
 					</configItem>
 				</variant>
-				<!-- Variantes non-AZERTY pour d’autres pays de la Francophonie.
+				<!-- Variantes non-AZERTY pour d’autres pays de la Francophonie. -->
+				<!--
 				<variant>
 					<configItem>
 						<name>kbfrCAms</name>
@@ -286,7 +294,8 @@ of just filtering a flat list, back in 2016.
 						<name>kbfrCHs</name>
 						<description>Français Suisse disposition de clavier semi-automatique</description>
 					</configItem>
-				</variant>-->
+				</variant>
+				-->
 				<!-- Variantes plus ergonomiques en saisie de lettres. -->
 				<variant>
 					<configItem>
