@@ -1,4 +1,4 @@
-//                       Date: 2023-12-06T0154+0100
+//                       Date: 2024-05-27T2133+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -27,8 +27,9 @@
 //                                /usr/share/X11/xkb/keycodes/evdev
 //                                as the original, e.g.
 //                                /usr/share/X11/xkb/keycodes/evdev_ORIGINAL
-//                             2. Add this file in
-//                                /usr/share/X11/xkb/keycodes/
+//                             2. Add this file as
+//                                /usr/share/X11/xkb/keycodes/evdev
+//
 //                             The change takes effect when reopening a session.
 //
 //             Uninstallation: Delete that file and revert the renaming.
@@ -64,18 +65,20 @@
 // sudo setkeycodes 0e 97 e01d 14
 // This command has cross-session validity until shutdown.
 // The remapping may be inadvertently lost once and needs to be redone.
-
-// When editing this file, please move the left-hand codes, keylabels.
+//
+// Editing this file is designed for moving the left-hand codes, keylabels.
 
 default xkb_keycodes "evdev" {
   minimum =   8;
   maximum = 255;
 
   // The main layout and 8 distributable subvariants are configurable below.
-
+  //
   // Since laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
   // the subvariants with Backspace on Menu are provided with swapped Caps/ISO too.
-
+  //
+  // Arguments are designed for use when running `comp.sh`.
+  //
   // Arg  Suffix             Features
   //
   //   o  ""                 Ordinary.
@@ -87,9 +90,9 @@ default xkb_keycodes "evdev" {
   //   a  "-ansi"            Swap CapsLock and ISO key for ANSI keyboards.
   //  am  "-ansi-menu"       Swap CapsLock and ISO key, and Backspace and Menu.
   // ams  "-ansi-menu-sans"  Swap CapsLock and ISO key, with Backspace on Menu.
-
+  //
   // Each key can be mapped only once, and the latest mapping overrides previous ones.
-
+  //
   // On ANSI keyboards for ISO keyboard markets, key B00 is located where other
   // laptops — for the ANSI market or with ISO key — have the right Control key,
   // so that for AltFr to stay lefthand, keys LSGT and CAPS need to be swapped.
@@ -113,6 +116,7 @@ default xkb_keycodes "evdev" {
 
         //<BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
         //<HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
+
   // Right Windows on Backspace is not included in the distributable subvariants.
         //<RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
 
@@ -128,7 +132,7 @@ default xkb_keycodes "evdev" {
   // worked around by adding keybindings for deleteLeft and deleteWordLeft both on the
   // ContextMenu key and on Backspace. The right Windows key is still Meta and cannot
   // be assigned commands such as deleteLeft, using the VSCode keybinding customizer.
-
+  //
   // Swapping BKSP and RCTL on built-in keyboards may be done using setkeycodes, but
   // that fails on external keyboards. See “setkeycodes not effective on USB keyboard”
   // https://bugzilla.redhat.com/show_bug.cgi?id=211803
