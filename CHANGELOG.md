@@ -1,5 +1,14 @@
 # Journal des modifications
 
+## 2.0.4 (2024-05-27)
+
+* Disposition :
+  * Déboguer les touches 2, 7, 9 en mode ASCII. (dispotypes.c [6eb5ada](https://github.com/dispoclavier/nouvel-azerty/commit/6eb5ada1baafa5e1a3ad9ad65ccdef221c0edfab))
+  * Déboguer la touche 1 des variantes bretonnes. (dispocla.cpp [5e36f73](https://github.com/dispoclavier/nouvel-azerty/commit/5e36f731ad7327582e8c298e18a49321933caa8a), dispotypes ibidem)
+* Vues de disposition : Optimiser pour un rendu intelligible. (ibidem)
+* Commutateur : Documentation. (evdev-additions.xml [e983458](https://github.com/dispoclavier/nouvel-azerty/commit/e983458faf769aeeb30da32b6fd9a88c332cb945), [9447c03](https://github.com/dispoclavier/nouvel-azerty/commit/9447c031b59d82360d041a27e962a94187aa8b6c))
+* Sous-variantes : Documentation. (evdev.c [ca470f1](https://github.com/dispoclavier/nouvel-azerty/commit/ca470f166bb947ece0ba07354ec10b03202ddf3e))
+
 ## 2.0.3 (2024-05-25)
 
 * Commutateur : Mettre à jour par l’ajout des codes de pays. (evdev-additions.xml [1d5bdf7](https://github.com/dispoclavier/nouvel-azerty/commit/1d5bdf770e3cb68a633748107e569bd36443b9e0))
