@@ -1,4 +1,4 @@
-//                       Date: 2024-05-19T0454+0200
+//                       Date: 2024-05-27T2035+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -204,34 +204,31 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_FIRSTALPHABETIC" {
-		// Based on EIGHT_LEVEL_SEMIALPHABETIC (not EIGHT_LEVELS_SEMIALPHABETIC).
-		// All variants use this on keys B01..B05.
-		// Used on almost all other base letter keys in variants that have
-		// graphic letters and shortcut letters mapped consistently throughout.
-		//
+		// Based on EIGHT_LEVEL_SEMIALPHABETIC.
+		// All variants use this on keys D02..D10, C01..C10, B01..B05.
 		// CapsLock affects indices 1..2.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level2; // 
-		map[                                               LevelThree         ] = Level4; // 
-		map[                                               LevelThree + Shift ] = Level5; // 
-		map[                                   LevelFive                      ] = Level6; // 
-		map[                                   LevelFive              + Shift ] = Level7; // 
-		map[                                   LevelFive + LevelThree         ] = Level3; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level2; // 
-		map[                  Lock                                    + Shift ] = Level1; // 
-		map[                  Lock                       + LevelThree         ] = Level4; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level5; // 
-		map[                  Lock           + LevelFive                      ] = Level6; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level7; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level3; // 
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level2; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level2; // 
+		map[ None                                                             ] = Level1; // b
+		map[                                                            Shift ] = Level2; // B
+		map[                                               LevelThree         ] = Level3; // =
+		map[                                               LevelThree + Shift ] = Level5; // <⚐>
+		map[                                   LevelFive                      ] = Level4; // 00
+		map[                                   LevelFive              + Shift ] = Level7; // 😘
+		map[                                   LevelFive + LevelThree         ] = Level6; // ᵇ
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 💕
+		map[                  Lock                                            ] = Level2; // B
+		map[                  Lock                                    + Shift ] = Level1; // b
+		map[                  Lock                       + LevelThree         ] = Level3; // =
+		map[                  Lock                       + LevelThree + Shift ] = Level5; // <⚐>
+		map[                  Lock           + LevelFive                      ] = Level4; // 00
+		map[                  Lock           + LevelFive              + Shift ] = Level7; // 😘
+		map[                  Lock           + LevelFive + LevelThree         ] = Level6; // ᵇ
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 💕
+		map[                         Control                                  ] = Level1; // b
+		map[                         Control                          + Shift ] = Level2; // B
+		map[                  Lock + Control                                  ] = Level1; // b
+		map[                  Lock + Control                          + Shift ] = Level2; // B
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -261,26 +258,26 @@ default partial xkb_types "dispocla" {
 		// Used on AD02.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level2; // 
-		map[                                               LevelThree         ] = Level4; // 
-		map[                                               LevelThree + Shift ] = Level5; // 
-		map[                                   LevelFive                      ] = Level4; // 
-		map[                                   LevelFive              + Shift ] = Level7; // 
-		map[                                   LevelFive + LevelThree         ] = Level3; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level2; // 
-		map[                  Lock                                    + Shift ] = Level1; // 
-		map[                  Lock                       + LevelThree         ] = Level4; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level5; // 
-		map[                  Lock           + LevelFive                      ] = Level4; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level3; // 
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 
-		map[                         Control                                  ] = Level1;
-		map[                         Control                          + Shift ] = Level2;
-		map[                  Lock + Control                                  ] = Level1;
-		map[                  Lock + Control                          + Shift ] = Level2;
+		map[ None                                                             ] = Level1; // a
+		map[                                                            Shift ] = Level2; // A
+		map[                                               LevelThree         ] = Level3; // ^
+		map[                                               LevelThree + Shift ] = Level6; // <^>
+		map[                                   LevelFive                      ] = Level3; // ^
+		map[                                   LevelFive              + Shift ] = Level4; // cʼh
+		map[                                   LevelFive + LevelThree         ] = Level7; // ᵃ
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // Cʼh
+		map[                  Lock                                            ] = Level2; // A
+		map[                  Lock                                    + Shift ] = Level1; // a
+		map[                  Lock                       + LevelThree         ] = Level3; // ^
+		map[                  Lock                       + LevelThree + Shift ] = Level6; // <^>
+		map[                  Lock           + LevelFive                      ] = Level3; // ^
+		map[                  Lock           + LevelFive              + Shift ] = Level5; // CʼH
+		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // ᵃ
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level4; // cʼh
+		map[                         Control                                  ] = Level1; // a
+		map[                         Control                          + Shift ] = Level2; // A
+		map[                  Lock + Control                                  ] = Level1; // a
+		map[                  Lock + Control                          + Shift ] = Level2; // A
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -354,21 +351,21 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP1" {
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1" {
 		// Based on EIGHT_LEVELS_DIGIT.
 		// Used on keys AE01, AE03..AE06.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level2; // "
-		map[                                                            Shift ] = Level3; // –
-		map[                                               LevelThree         ] = Level1; // 3
-		map[                                               LevelThree + Shift ] = Level8; // #
-		map[                                   LevelFive                      ] = Level6; // 3
-		map[                                   LevelFive              + Shift ] = Level7; // 3️⃣
-		map[                                   LevelFive + LevelThree         ] = Level4; // ³
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 3️⃣
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level1; // "
+		map[                                                            Shift ] = Level2; // –
+		map[                                               LevelThree         ] = Level3; // 3
+		map[                                               LevelThree + Shift ] = Level4; // #
+		map[                                   LevelFive                      ] = Level7; // 3
+		map[                                   LevelFive              + Shift ] = Level8; // 3️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ³
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 3️⃣
+		map[                         Control                                  ] = Level3; // 3
+		map[                         Control                          + Shift ] = Level3; // 3
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -387,31 +384,31 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_GROUP1" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_GROUP1" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC.
 		// Used on AE01.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level2; // ²
-		map[                                                            Shift ] = Level3; // ³
-		map[                                               LevelThree         ] = Level1; // 1
-		map[                                               LevelThree + Shift ] = Level8; // &
-		map[                                   LevelFive                      ] = Level1; // 1
-		map[                                   LevelFive              + Shift ] = Level7; // 1️⃣
-		map[                                   LevelFive + LevelThree         ] = Level4; // ¹
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 1️⃣
-		map[                  Lock                                            ] = Level6; // ₂
-		map[                  Lock                                    + Shift ] = Level5; // ₃
-		map[                  Lock                       + LevelThree         ] = Level1; // 1
-		map[                  Lock                       + LevelThree + Shift ] = Level8; // &
-		map[                  Lock           + LevelFive                      ] = Level1; // 1
-		map[                  Lock           + LevelFive              + Shift ] = Level7; // 1️⃣
-		map[                  Lock           + LevelFive + LevelThree         ] = Level4; // ¹
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 1️⃣
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level1; // ²
+		map[                                                            Shift ] = Level2; // ³
+		map[                                               LevelThree         ] = Level3; // 1
+		map[                                               LevelThree + Shift ] = Level4; // &
+		map[                                   LevelFive                      ] = Level3; // 1
+		map[                                   LevelFive              + Shift ] = Level8; // 1️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ¹
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                  Lock                                            ] = Level7; // ₂
+		map[                  Lock                                    + Shift ] = Level6; // ₃
+		map[                  Lock                       + LevelThree         ] = Level3; // 1
+		map[                  Lock                       + LevelThree + Shift ] = Level4; // &
+		map[                  Lock           + LevelFive                      ] = Level3; // 1
+		map[                  Lock           + LevelFive              + Shift ] = Level8; // 1️⃣
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ¹
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                         Control                                  ] = Level3; // 1
+		map[                         Control                          + Shift ] = Level3; // 1
+		map[                  Lock + Control                                  ] = Level3; // 1
+		map[                  Lock + Control                          + Shift ] = Level3; // 1
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -436,31 +433,31 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP1" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1.
 		// Used on AE02, AE07, AE09.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level2; // é
-		map[                                                            Shift ] = Level3; // É
-		map[                                               LevelThree         ] = Level1; // 2
-		map[                                               LevelThree + Shift ] = Level8; // <~>
-		map[                                   LevelFive                      ] = Level1; // 2
-		map[                                   LevelFive              + Shift ] = Level7; //  2️⃣
-		map[                                   LevelFive + LevelThree         ] = Level4; // ²
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; //  2️⃣
-		map[                  Lock                                            ] = Level3; // É
-		map[                  Lock                                    + Shift ] = Level2; // é
-		map[                  Lock                       + LevelThree         ] = Level1; // 2
-		map[                  Lock                       + LevelThree + Shift ] = Level8; // <~>
-		map[                  Lock           + LevelFive                      ] = Level1; // 2
-		map[                  Lock           + LevelFive              + Shift ] = Level7; //  2️⃣
-		map[                  Lock           + LevelFive + LevelThree         ] = Level4; // ²
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; //  2️⃣
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level1; // é
+		map[                                                            Shift ] = Level2; // É
+		map[                                               LevelThree         ] = Level3; // 2
+		map[                                               LevelThree + Shift ] = Level4; // <~>
+		map[                                   LevelFive                      ] = Level3; // 2
+		map[                                   LevelFive              + Shift ] = Level8; //  2️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ²
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; //  2️⃣
+		map[                  Lock                                            ] = Level2; // É
+		map[                  Lock                                    + Shift ] = Level1; // é
+		map[                  Lock                       + LevelThree         ] = Level3; // 2
+		map[                  Lock                       + LevelThree + Shift ] = Level4; // <~>
+		map[                  Lock           + LevelFive                      ] = Level3; // 2
+		map[                  Lock           + LevelFive              + Shift ] = Level8; //  2️⃣
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ²
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; //  2️⃣
+		map[                         Control                                  ] = Level3; // 2
+		map[                         Control                          + Shift ] = Level3; // 2
+		map[                  Lock + Control                                  ] = Level3; // 2
+		map[                  Lock + Control                          + Shift ] = Level3; // 2
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -485,31 +482,31 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP1" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK.
-		// Used on AE01 of Breton and Francophone Africa variants.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP1" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1.
+		// Used on AE01 of Francophone African variants.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level2; // 
-		map[                                                            Shift ] = Level3; // 
-		map[                                               LevelThree         ] = Level1; // 
-		map[                                               LevelThree + Shift ] = Level4; // 
-		map[                                   LevelFive                      ] = Level7; // 
-		map[                                   LevelFive              + Shift ] = Level6; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level3; // 
-		map[                  Lock                                    + Shift ] = Level2; // 
-		map[                  Lock                       + LevelThree         ] = Level1; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level4; // 
-		map[                  Lock           + LevelFive                      ] = Level5; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level1; // ɛ
+		map[                                                            Shift ] = Level2; // Ɛ
+		map[                                               LevelThree         ] = Level3; // 1
+		map[                                               LevelThree + Shift ] = Level4; // &
+		map[                                   LevelFive                      ] = Level3; // 1
+		map[                                   LevelFive              + Shift ] = Level8; // 1️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ¹
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                  Lock                                            ] = Level2; // Ɛ
+		map[                  Lock                                    + Shift ] = Level1; // ɛ
+		map[                  Lock                       + LevelThree         ] = Level3; // 1
+		map[                  Lock                       + LevelThree + Shift ] = Level4; // &
+		map[                  Lock           + LevelFive                      ] = Level3; // 1
+		map[                  Lock           + LevelFive              + Shift ] = Level8; // 1️⃣
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ¹
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                         Control                                  ] = Level3; // 1
+		map[                         Control                          + Shift ] = Level3; // 1
+		map[                  Lock + Control                                  ] = Level3; // 1
+		map[                  Lock + Control                          + Shift ] = Level3; // 1
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -534,32 +531,32 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC.
-		// Used on AE01 of kbbrFRs.
-		// Supports Breton with an extra uppercase string on index 4.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC.
+		// Used on AE01 of Breton variants.
+		// Supports Breton with an extra uppercase string on index 6.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level2; // 
-		map[                                                            Shift ] = Level3; // 
-		map[                                               LevelThree         ] = Level1; // 
-		map[                                               LevelThree + Shift ] = Level4; // 
-		map[                                   LevelFive                      ] = Level7; // 
-		map[                                   LevelFive              + Shift ] = Level6; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level4; // 
-		map[                  Lock                                    + Shift ] = Level2; // 
-		map[                  Lock                       + LevelThree         ] = Level1; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level3; // 
-		map[                  Lock           + LevelFive                      ] = Level5; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level1; // cʼh
+		map[                                                            Shift ] = Level2; // Cʼh
+		map[                                               LevelThree         ] = Level3; // 1
+		map[                                               LevelThree + Shift ] = Level4; // &
+		map[                                   LevelFive                      ] = Level3; // 1
+		map[                                   LevelFive              + Shift ] = Level8; // 1️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ¹
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                  Lock                                            ] = Level6; // CʼH
+		map[                  Lock                                    + Shift ] = Level1; // cʼh
+		map[                  Lock                       + LevelThree         ] = Level3; // 1
+		map[                  Lock                       + LevelThree + Shift ] = Level4; // &
+		map[                  Lock           + LevelFive                      ] = Level3; // 1
+		map[                  Lock           + LevelFive              + Shift ] = Level8; // 1️⃣
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ¹
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                         Control                                  ] = Level3; // 1
+		map[                         Control                          + Shift ] = Level3; // 1
+		map[                  Lock + Control                                  ] = Level3; // 1
+		map[                  Lock + Control                          + Shift ] = Level3; // 1
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -585,7 +582,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_AE10_GROUP1" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK.
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1.
 		// Used on Canadian variants.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
@@ -620,28 +617,29 @@ default partial xkb_types "dispocla" {
 	type "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_GROUP1" {
 		// Based on EIGHT_LEVELS_AE10.
 		// Used on variants other than Canadian.
+		// Designed to support both U1F51F 🔟 KEYCAP TEN emoji and UEFC0 0️⃣ keycap 0 emoji.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level2; // à
-		map[                                                            Shift ] = Level3; // À
-		map[                                               LevelThree         ] = Level1; // 0
-		map[                                               LevelThree + Shift ] = Level8; // )
-		map[                                   LevelFive                      ] = Level1; // 0
-		map[                                   LevelFive              + Shift ] = Level7; // 0️⃣
-		map[                                   LevelFive + LevelThree         ] = Level4; // ⁰
-		map[                                   LevelFive + LevelThree + Shift ] = Level6; // 🔟
-		map[                  Lock                                            ] = Level3; // À
-		map[                  Lock                                    + Shift ] = Level2; // à
-		map[                  Lock                       + LevelThree         ] = Level1; // 0
-		map[                  Lock                       + LevelThree + Shift ] = Level8; // )
-		map[                  Lock           + LevelFive                      ] = Level1; // 0
-		map[                  Lock           + LevelFive              + Shift ] = Level7; // 0️⃣
-		map[                  Lock           + LevelFive + LevelThree         ] = Level4; // ⁰
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level6; // 🔟
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level1; // à
+		map[                                                            Shift ] = Level2; // À
+		map[                                               LevelThree         ] = Level3; // 0
+		map[                                               LevelThree + Shift ] = Level4; // )
+		map[                                   LevelFive                      ] = Level3; // 0
+		map[                                   LevelFive              + Shift ] = Level8; // 0️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ⁰
+		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 🔟
+		map[                  Lock                                            ] = Level2; // À
+		map[                  Lock                                    + Shift ] = Level1; // à
+		map[                  Lock                       + LevelThree         ] = Level3; // 0
+		map[                  Lock                       + LevelThree + Shift ] = Level4; // )
+		map[                  Lock           + LevelFive                      ] = Level3; // 0
+		map[                  Lock           + LevelFive              + Shift ] = Level8; // 0️⃣
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ⁰
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 🔟
+		map[                         Control                                  ] = Level3; // 3
+		map[                         Control                          + Shift ] = Level3; // 3
+		map[                  Lock + Control                                  ] = Level3; // 3
+		map[                  Lock + Control                          + Shift ] = Level3; // 3
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -667,19 +665,19 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_MINUS_GROUP1" {
-		// Based on EIGHT_LEVELS_AD11.
+		// Based on EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1; // @
 		map[                                                            Shift ] = Level2; // °
 		map[                                               LevelThree         ] = Level3; // ᵉ
-		map[                                               LevelThree + Shift ] = Level8; // ]
+		map[                                               LevelThree + Shift ] = Level4; // ]
 		map[                                   LevelFive                      ] = Level2; // °
-		map[                                   LevelFive              + Shift ] = Level7; // *️⃣
-		map[                                   LevelFive + LevelThree         ] = Level5; // E
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // *️⃣
-		map[                         Control                                  ] = Level6; // -
-		map[                         Control                          + Shift ] = Level6; // -
+		map[                                   LevelFive              + Shift ] = Level8; // *️⃣
+		map[                                   LevelFive + LevelThree         ] = Level6; // E
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // *️⃣
+		map[                         Control                                  ] = Level7; // -
+		map[                         Control                          + Shift ] = Level7; // -
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -699,7 +697,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_MINUS_CH_GROUP1" {
-		// Based on EIGHT_LEVELS_MINUS.
+		// Based on EIGHT_LEVELS_MINUS_GROUP1.
 		// Used on Swiss variants.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
@@ -732,21 +730,19 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_PLUS_GROUP1" {
-		// Based on EIGHT_LEVELS_MINUS.
-		// The Control value is intended to debug the terminal (noticed on Linux Mint)
-		// not zooming in on `Ctrl + "="`, while on `Ctrl + "-"` it does zoom out.
-		// The <plus> Control value should be more generally supported, as opposed to
-		// its US-QWERTY variant.
+		// Based on EIGHT_LEVELS_MINUS_GROUP1.
+		// The Control value <plus> is expected to be more generally supported,
+		// as opposed to its US-QWERTY variant <equal>.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1; // <ë>
 		map[                                                            Shift ] = Level2; // +
 		map[                                               LevelThree         ] = Level3; // <¦>
-		map[                                               LevelThree + Shift ] = Level8; // }
-		map[                                   LevelFive                      ] = Level6; // =
-		map[                                   LevelFive              + Shift ] = Level7; // #️⃣
-		map[                                   LevelFive + LevelThree         ] = Level5; // F
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
+		map[                                               LevelThree + Shift ] = Level4; // }
+		map[                                   LevelFive                      ] = Level7; // =
+		map[                                   LevelFive              + Shift ] = Level8; // #️⃣
+		map[                                   LevelFive + LevelThree         ] = Level6; // F
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // #️⃣
 		map[                         Control                                  ] = Level2; // +
 		map[                         Control                          + Shift ] = Level2; // +
 		preserve[                    Control                                  ] = Control;
@@ -912,7 +908,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_PUNCTUATION_FIRSTALPHABETIC_GROUP1" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC.
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC.
 		// Used on Canadian variants on AB10.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
@@ -1143,21 +1139,21 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_GROUP2" {
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2" {
 		// Based on EIGHT_LEVELS_DIGIT.
 		// Used on keys AE01, AE03..AE06.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 3
-		map[                                                            Shift ] = Level1; // 3
-		map[                                               LevelThree         ] = Level1; // 3
-		map[                                               LevelThree + Shift ] = Level4; // ³
-		map[                                   LevelFive                      ] = Level6; // 3
-		map[                                   LevelFive              + Shift ] = Level5; // ₃
-		map[                                   LevelFive + LevelThree         ] = Level4; // ³
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 3️⃣
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level3; // 3
+		map[                                                            Shift ] = Level3; // 3
+		map[                                               LevelThree         ] = Level3; // 3
+		map[                                               LevelThree + Shift ] = Level5; // ³
+		map[                                   LevelFive                      ] = Level7; // 3
+		map[                                   LevelFive              + Shift ] = Level6; // ₃
+		map[                                   LevelFive + LevelThree         ] = Level5; // ³
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 3️⃣
+		map[                         Control                                  ] = Level3; // 3
+		map[                         Control                          + Shift ] = Level3; // 3
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -1176,31 +1172,31 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_GROUP2" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_GROUP2" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC.
 		// Used on AE01.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 1
-		map[                                                            Shift ] = Level1; // 1
-		map[                                               LevelThree         ] = Level1; // 1
-		map[                                               LevelThree + Shift ] = Level4; // ¹
-		map[                                   LevelFive                      ] = Level1; // 1
-		map[                                   LevelFive              + Shift ] = Level5; // ₁
-		map[                                   LevelFive + LevelThree         ] = Level4; // ¹
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 1️⃣
-		map[                  Lock                                            ] = Level1; // 1
-		map[                  Lock                                    + Shift ] = Level1; // 1
-		map[                  Lock                       + LevelThree         ] = Level1; // 1
-		map[                  Lock                       + LevelThree + Shift ] = Level4; // ¹
-		map[                  Lock           + LevelFive                      ] = Level1; // 1
-		map[                  Lock           + LevelFive              + Shift ] = Level5; // ₁
-		map[                  Lock           + LevelFive + LevelThree         ] = Level4; // ¹
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 1️⃣
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level3; // 1
+		map[                                                            Shift ] = Level3; // 1
+		map[                                               LevelThree         ] = Level3; // 1
+		map[                                               LevelThree + Shift ] = Level5; // ¹
+		map[                                   LevelFive                      ] = Level3; // 1
+		map[                                   LevelFive              + Shift ] = Level6; // ₁
+		map[                                   LevelFive + LevelThree         ] = Level5; // ¹
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                  Lock                                            ] = Level3; // 1
+		map[                  Lock                                    + Shift ] = Level3; // 1
+		map[                  Lock                       + LevelThree         ] = Level3; // 1
+		map[                  Lock                       + LevelThree + Shift ] = Level5; // ¹
+		map[                  Lock           + LevelFive                      ] = Level3; // 1
+		map[                  Lock           + LevelFive              + Shift ] = Level6; // ₁
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ¹
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                         Control                                  ] = Level3; // 1
+		map[                         Control                          + Shift ] = Level3; // 1
+		map[                  Lock + Control                                  ] = Level3; // 1
+		map[                  Lock + Control                          + Shift ] = Level3; // 1
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -1225,27 +1221,27 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC_GROUP2" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2.
 		// Used on AE02, AE07, AE09.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 2
-		map[                                                            Shift ] = Level1; // 2
-		map[                                               LevelThree         ] = Level1; // 2
-		map[                                               LevelThree + Shift ] = Level4; // ²
-		map[                                   LevelFive                      ] = Level1; // 2
-		map[                                   LevelFive              + Shift ] = Level5; // ₂
-		map[                                   LevelFive + LevelThree         ] = Level4; // ²
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 2️⃣
-		map[                  Lock                                            ] = Level1; // 2
-		map[                  Lock                                    + Shift ] = Level1; // 2
-		map[                  Lock                       + LevelThree         ] = Level1; // 2
-		map[                  Lock                       + LevelThree + Shift ] = Level7; // 2️⃣
-		map[                  Lock           + LevelFive                      ] = Level6; // 2
-		map[                  Lock           + LevelFive              + Shift ] = Level8; // ~
-		map[                  Lock           + LevelFive + LevelThree         ] = Level8; // ~
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 2️⃣
+		map[ None                                                             ] = Level3; // 2
+		map[                                                            Shift ] = Level3; // 2
+		map[                                               LevelThree         ] = Level3; // 2
+		map[                                               LevelThree + Shift ] = Level5; // ²
+		map[                                   LevelFive                      ] = Level7; // 2
+		map[                                   LevelFive              + Shift ] = Level6; // ₂
+		map[                                   LevelFive + LevelThree         ] = Level5; // ²
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 2️⃣
+		map[                  Lock                                            ] = Level3; // 2
+		map[                  Lock                                    + Shift ] = Level3; // 2
+		map[                  Lock                       + LevelThree         ] = Level3; // 2
+		map[                  Lock                       + LevelThree + Shift ] = Level5; // ²
+		map[                  Lock           + LevelFive                      ] = Level7; // 2
+		map[                  Lock           + LevelFive              + Shift ] = Level6; // ₂
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ²
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 2️⃣
 		map[                         Control                                  ] = Level1; // 
 		map[                         Control                          + Shift ] = Level1; // 
 		map[                  Lock + Control                                  ] = Level1; // 
@@ -1274,31 +1270,31 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP2" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK.
-		// Used on AE01 of Breton and Francophone Africa variants.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP2" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2.
+		// Used on AE01 of Francophone African variants.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level1; // 
-		map[                                               LevelThree         ] = Level1; // 
-		map[                                               LevelThree + Shift ] = Level8; // 
-		map[                                   LevelFive                      ] = Level7; // 
-		map[                                   LevelFive              + Shift ] = Level6; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level1; // 
-		map[                  Lock                                    + Shift ] = Level1; // 
-		map[                  Lock                       + LevelThree         ] = Level1; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level8; // 
-		map[                  Lock           + LevelFive                      ] = Level5; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level3; // 1
+		map[                                                            Shift ] = Level3; // 1
+		map[                                               LevelThree         ] = Level3; // 1
+		map[                                               LevelThree + Shift ] = Level5; // ¹
+		map[                                   LevelFive                      ] = Level3; // 1
+		map[                                   LevelFive              + Shift ] = Level6; // ₁
+		map[                                   LevelFive + LevelThree         ] = Level5; // ¹
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                  Lock                                            ] = Level3; // 1
+		map[                  Lock                                    + Shift ] = Level3; // 1
+		map[                  Lock                       + LevelThree         ] = Level3; // 1
+		map[                  Lock                       + LevelThree + Shift ] = Level5; // ¹
+		map[                  Lock           + LevelFive                      ] = Level3; // 1
+		map[                  Lock           + LevelFive              + Shift ] = Level6; // ₁
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ¹
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                         Control                                  ] = Level3; // 1
+		map[                         Control                          + Shift ] = Level3; // 1
+		map[                  Lock + Control                                  ] = Level3; // 1
+		map[                  Lock + Control                          + Shift ] = Level3; // 1
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -1323,32 +1319,31 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	type "EIGHT_LEVELS_LEVEL_ONE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC.
-		// Used on AE01 of kbbrFRs.
-		// Supports Breton with an extra uppercase string on index 4.
+	type "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2" {
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC.
+		// Used on AE01 of Breton variants.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level1; // 
-		map[                                               LevelThree         ] = Level1; // 
-		map[                                               LevelThree + Shift ] = Level8; // 
-		map[                                   LevelFive                      ] = Level7; // 
-		map[                                   LevelFive              + Shift ] = Level6; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level1; // 
-		map[                  Lock                                    + Shift ] = Level1; // 
-		map[                  Lock                       + LevelThree         ] = Level1; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level8; // 
-		map[                  Lock           + LevelFive                      ] = Level5; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level3; // 1
+		map[                                                            Shift ] = Level3; // 1
+		map[                                               LevelThree         ] = Level3; // 1
+		map[                                               LevelThree + Shift ] = Level5; // ¹
+		map[                                   LevelFive                      ] = Level3; // 1
+		map[                                   LevelFive              + Shift ] = Level6; // ₁
+		map[                                   LevelFive + LevelThree         ] = Level5; // ¹
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                  Lock                                            ] = Level3; // 1
+		map[                  Lock                                    + Shift ] = Level3; // 1
+		map[                  Lock                       + LevelThree         ] = Level3; // 1
+		map[                  Lock                       + LevelThree + Shift ] = Level5; // ¹
+		map[                  Lock           + LevelFive                      ] = Level3; // 1
+		map[                  Lock           + LevelFive              + Shift ] = Level6; // ₁
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ¹
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 1️⃣
+		map[                         Control                                  ] = Level3; // 1
+		map[                         Control                          + Shift ] = Level3; // 1
+		map[                  Lock + Control                                  ] = Level3; // 1
+		map[                  Lock + Control                          + Shift ] = Level3; // 1
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -1374,7 +1369,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_AE10_GROUP2" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK.
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2.
 		// Used on Canadian variants.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
@@ -1411,26 +1406,26 @@ default partial xkb_types "dispocla" {
 		// Used on variants other than Canadian.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level1; // 0
-		map[                                                            Shift ] = Level1; // 0
-		map[                                               LevelThree         ] = Level1; // 0
-		map[                                               LevelThree + Shift ] = Level4; // ⁰
-		map[                                   LevelFive                      ] = Level1; // 0
-		map[                                   LevelFive              + Shift ] = Level5; // ₀
-		map[                                   LevelFive + LevelThree         ] = Level4; // ⁰
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 0️⃣
-		map[                  Lock                                            ] = Level1; // 0
-		map[                  Lock                                    + Shift ] = Level1; // 0
-		map[                  Lock                       + LevelThree         ] = Level1; // 0
-		map[                  Lock                       + LevelThree + Shift ] = Level4; // ⁰
-		map[                  Lock           + LevelFive                      ] = Level1; // 0
-		map[                  Lock           + LevelFive              + Shift ] = Level5; // ₀
-		map[                  Lock           + LevelFive + LevelThree         ] = Level4; // ⁰
-		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 0️⃣
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		map[                  Lock + Control                                  ] = Level1; // 
-		map[                  Lock + Control                          + Shift ] = Level1; // 
+		map[ None                                                             ] = Level3; // 0
+		map[                                                            Shift ] = Level3; // 0
+		map[                                               LevelThree         ] = Level3; // 0
+		map[                                               LevelThree + Shift ] = Level5; // ⁰
+		map[                                   LevelFive                      ] = Level3; // 0
+		map[                                   LevelFive              + Shift ] = Level6; // ₀
+		map[                                   LevelFive + LevelThree         ] = Level5; // ⁰
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 0️⃣
+		map[                  Lock                                            ] = Level3; // 0
+		map[                  Lock                                    + Shift ] = Level3; // 0
+		map[                  Lock                       + LevelThree         ] = Level3; // 0
+		map[                  Lock                       + LevelThree + Shift ] = Level5; // ⁰
+		map[                  Lock           + LevelFive                      ] = Level3; // 0
+		map[                  Lock           + LevelFive              + Shift ] = Level6; // ₀
+		map[                  Lock           + LevelFive + LevelThree         ] = Level5; // ⁰
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 0️⃣
+		map[                         Control                                  ] = Level3; // 0
+		map[                         Control                          + Shift ] = Level3; // 0
+		map[                  Lock + Control                                  ] = Level3; // 0
+		map[                  Lock + Control                          + Shift ] = Level3; // 0
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[             Lock + Control                                  ] = Control;
@@ -1456,19 +1451,19 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_MINUS_GROUP2" {
-		// Based on EIGHT_LEVELS_AD11.
+		// Based on EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1; // @
 		map[                                                            Shift ] = Level2; // °
 		map[                                               LevelThree         ] = Level2; // °
-		map[                                               LevelThree + Shift ] = Level4; // ⁻
-		map[                                   LevelFive                      ] = Level5; // E
+		map[                                               LevelThree + Shift ] = Level5; // ⁻
+		map[                                   LevelFive                      ] = Level6; // E
 		map[                                   LevelFive              + Shift ] = Level3; // ₋
-		map[                                   LevelFive + LevelThree         ] = Level4; // ⁻
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // *️⃣
-		map[                         Control                                  ] = Level6; // -
-		map[                         Control                          + Shift ] = Level6; // -
+		map[                                   LevelFive + LevelThree         ] = Level5; // ⁻
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // *️⃣
+		map[                         Control                                  ] = Level7; // -
+		map[                         Control                          + Shift ] = Level7; // -
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -1488,7 +1483,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_MINUS_CH_GROUP2" {
-		// Based on EIGHT_LEVELS_MINUS.
+		// Based on EIGHT_LEVELS_MINUS_GROUP1.
 		// Used on Swiss variants.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
@@ -1521,17 +1516,17 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_PLUS_GROUP2" {
-		// Based on EIGHT_LEVELS_MINUS.
+		// Based on EIGHT_LEVELS_MINUS_GROUP1.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift;
-		map[ None                                                             ] = Level6; // =
+		map[ None                                                             ] = Level7; // =
 		map[                                                            Shift ] = Level2; // +
 		map[                                               LevelThree         ] = Level1; // <¦>
-		map[                                               LevelThree + Shift ] = Level4; // ⁺
-		map[                                   LevelFive                      ] = Level5; // F
+		map[                                               LevelThree + Shift ] = Level5; // ⁺
+		map[                                   LevelFive                      ] = Level6; // F
 		map[                                   LevelFive              + Shift ] = Level3; // ₊
-		map[                                   LevelFive + LevelThree         ] = Level4; // ⁺
-		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
+		map[                                   LevelFive + LevelThree         ] = Level5; // ⁺
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // #️⃣
 		map[                         Control                                  ] = Level2; // +
 		map[                         Control                          + Shift ] = Level2; // +
 		preserve[                    Control                                  ] = Control;
@@ -1697,7 +1692,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_PUNCTUATION_FIRSTALPHABETIC_GROUP2" {
-		// Based on EIGHT_LEVELS_LEVEL_ONE_LOCK_FIRSTALPHABETIC.
+		// Based on EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC.
 		// Used on Canadian variants on AB10.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
