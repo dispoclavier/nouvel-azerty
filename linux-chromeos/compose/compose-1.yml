@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.0.3" # See # # Notes about syntax
+<UEFA0>                     : "version 2.0.4" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
