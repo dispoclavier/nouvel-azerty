@@ -1,5 +1,5 @@
-                      Date : 2024-05-25T2124+0200
-                   Version : 2.0.3
+                      Date : 2024-05-27T2208+0200
+                   Version : 2.0.4
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -162,7 +162,9 @@ Mode d’emploi sous Linux
      et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
 
  10  Veiller à ce que la méthode d’entrée soit XIM.
-     Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée.
+     Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée,
+     ou dans Système > Pays et langue > Système > Gérer les langues installées > Langue >
+     Système de saisie au clavier. On a le choix entre iBus, XIM et Aucun.
 
 Ce nouvel AZERTY peut maintenant être testé.
 
