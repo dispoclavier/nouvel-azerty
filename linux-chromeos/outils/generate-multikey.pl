@@ -2,6 +2,7 @@
 # 2022-12-28T0901+0100
 # 2023-10-27T1438+0200
 # 2024-05-13T1842+0200
+# 2024-05-27T2346+0200
 # = last modified.
 # 
 # Adds the Multi_key equivalent below the dead key
@@ -134,6 +135,7 @@ while ( my $line = <BACKUP> ) {
 				|| $line =~ /<UEFD5>/
 				|| $line =~ /<UEFD6>/
 				|| $line =~ /<UEFD7>/
+				|| $line =~ /<UEFD8>/
 				|| $line =~ /<dead_abovedot>/
 				|| $line =~ /<dead_abovering>/
 				|| $line =~ /<dead_acute>/
@@ -151,7 +153,6 @@ while ( my $line = <BACKUP> ) {
 				|| $line =~ /<dead_hook>/
 				|| $line =~ /<dead_horn>/
 				|| $line =~ /<dead_invertedbreve>/
-				|| $line =~ /<dead_longsolidusoverlay>/
 				|| $line =~ /<dead_macron>/
 				|| $line =~ /<dead_ogonek>/
 				|| $line =~ /<dead_stroke>/
@@ -166,6 +167,7 @@ while ( my $line = <BACKUP> ) {
 					$line =~ s/^([^ ]*?)<UEFD5>([^ ]*)  /$1<percent>$2/;
 					$line =~ s/^([^ ]*?)<UEFD6>([^ ]*)     /$1<backslash>$2 /;
 					$line =~ s/^([^ ]*?)<UEFD7>([^ ]*)/$1<equal>$2/;
+					$line =~ s/^([^ ]*?)<UEFD8>([^ ]*)/$1<minus>$2/;
 					$line =~ s/^([^ ]*?)<dead_abovedot>([^ ]*)/$1<period>$2       /;
 					$line =~ s/^([^ ]*?)<dead_abovering>([^ ]*)/$1<asterisk>$2      /;
 					$line =~ s/^([^ ]*?)<dead_acute>([^ ]*)/$1<apostrophe>$2/;
@@ -183,10 +185,9 @@ while ( my $line = <BACKUP> ) {
 					$line =~ s/^([^ ]*?)<dead_hook>([^ ]*)/$1<braceleft>$2/;
 					$line =~ s/^([^ ]*?)<dead_horn>([^ ]*)/$1<plus>$2     /;
 					$line =~ s/^([^ ]*?)<dead_invertedbreve>([^ ]*)/$1<parenleft>$2         /;
-					$line =~ s/^([^ ]*?)<dead_longsolidusoverlay>([^ ]*)/$1<slash>$2                  /;
 					$line =~ s/^([^ ]*?)<dead_macron>([^ ]*)/$1<bar>$2        /;
 					$line =~ s/^([^ ]*?)<dead_ogonek>([^ ]*)/$1<bracketleft>$2/;
-					$line =~ s/^([^ ]*?)<dead_stroke>([^ ]*)/$1<minus>$2      /;
+					$line =~ s/^([^ ]*?)<dead_stroke>([^ ]*)/$1<slash>$2      /;
 					$line =~ s/^([^ ]*?)<dead_tilde>([^ ]*)/$1<asciitilde>$2/;
 				} while (
 					$line =~    /^([^ ]*?)<UEFD0>/
@@ -197,6 +198,7 @@ while ( my $line = <BACKUP> ) {
 					|| $line =~ /^([^ ]*?)<UEFD5>/
 					|| $line =~ /^([^ ]*?)<UEFD6>/
 					|| $line =~ /^([^ ]*?)<UEFD7>/
+					|| $line =~ /^([^ ]*?)<UEFD8>/
 					|| $line =~ /^([^ ]*?)<dead_abovedot>/
 					|| $line =~ /^([^ ]*?)<dead_abovering>/
 					|| $line =~ /^([^ ]*?)<dead_acute>/
@@ -214,7 +216,6 @@ while ( my $line = <BACKUP> ) {
 					|| $line =~ /^([^ ]*?)<dead_hook>/
 					|| $line =~ /^([^ ]*?)<dead_horn>/
 					|| $line =~ /^([^ ]*?)<dead_invertedbreve>/
-					|| $line =~ /^([^ ]*?)<dead_longsolidusoverlay>/
 					|| $line =~ /^([^ ]*?)<dead_macron>/
 					|| $line =~ /^([^ ]*?)<dead_ogonek>/
 					|| $line =~ /^([^ ]*?)<dead_stroke>/
