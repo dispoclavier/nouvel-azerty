@@ -3,6 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
+# 2024-05-27T2338+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -156,7 +157,6 @@ while ( my $line = <INPUT> ) {
 				|| $line =~ /<dead_hook>/
 				|| $line =~ /<dead_horn>/
 				|| $line =~ /<dead_invertedbreve>/
-				|| $line =~ /<dead_longsolidusoverlay>/
 				|| $line =~ /<dead_macron>/
 				|| $line =~ /<dead_ogonek>/
 				|| $line =~ /<dead_stroke>/
@@ -171,6 +171,7 @@ while ( my $line = <INPUT> ) {
 				|| $line =~ /<UEFD7>/
 				|| $line =~ /<UEFD8>/
 				|| $line =~ /<UEFD9>/
+				|| $line =~ /<UEFDA>/
 			) {
 				# Dead keys.
 				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + += ou en mode ASCII, AltGr\/Option + £\$">¦<\/kbd>/g;
@@ -191,10 +192,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + I">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
 				$line =~ s/<dead_invertedbreve>/<kbd class="deadkey long" title="Touche morte brève inversée Maj + AltGr\/Option + D">brève inversée<\/kbd>/g;
-				$line =~ s/<dead_longsolidusoverlay>/<kbd class="deadkey" title="Touche morte barré Maj + AltGr\/Option + W">barré<\/kbd>/g;
 				$line =~ s/<dead_macron>/<kbd class="deadkey" title="Touche morte macron Maj + AltGr\/Option + M">macron<\/kbd>/g;
 				$line =~ s/<dead_ogonek>/<kbd class="deadkey" title="Touche morte ogonek Maj + AltGr\/Option + K">ogonek<\/kbd>/g;
-				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte rayé Maj + AltGr\/Option + G">rayé<\/kbd>/g;
+				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte barré Maj + AltGr\/Option + W">barré<\/kbd>/g;
 				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde AltGr\/Option + ¨^ ou Maj + AltGr\/Option + T">tilde<\/kbd>/g;
 				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte sélectrice de groupe Touche µ* ou Maj + AltGr\/Option + Q">groupe<\/kbd>/g;
 				$line =~ s/<UEFD1>/<kbd class="deadkey" title="Touche morte exposant Maj + AltGr\/Option + A">exposant<\/kbd>/g;
@@ -204,8 +204,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD5>/<kbd class="deadkey" title="Touche morte tourné Maj + AltGr\/Option + Z">tourné<\/kbd>/g;
 				$line =~ s/<UEFD6>/<kbd class="deadkey" title="Touche morte réfléchi Maj + AltGr\/Option + R">réfléchi<\/kbd>/g;
 				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte drapeau Maj + AltGr\/Option + B">drapeau<\/kbd>/g;
-				$line =~ s/<UEFD8>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
-				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
+				$line =~ s/<UEFD8>/<kbd class="deadkey" title="Touche morte rayé Maj + AltGr\/Option + G">rayé<\/kbd>/g;
+				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
+				$line =~ s/<UEFDA>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
 
 				# Remove spaces.
 				$line =~ s/ {2,}/ /g;
@@ -234,10 +235,10 @@ while ( my $line = <INPUT> ) {
 				# Keysyms.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
-				$line =~ s/<asciitilde>/~/g;
 				$line =~ s/<EuroSign>/€/g;
 				$line =~ s/<quotedbl>/&quot;/g;
 				$line =~ s/<backslash>/\\/g;
+				$line =~ s/<asciitilde>/~/g;
 				$line =~ s/<at>/@/g;
 				$line =~ s/<apostrophe>/&#x27;/g;
 				$line =~ s/<braceleft>/{/g;
@@ -284,8 +285,10 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<udiaeresis>/ü/g;
 				$line =~ s/<Udiaeresis>/Ü/g;
 
-				# Scalars.
+				# Convert Unicode keysym to NCR.
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
+
+				# Format Unicode scalar in comment.
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 
 				# Remove delimiters.
@@ -480,7 +483,7 @@ while ( my $line = <INPUT> ) {
 				}
 
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				# The white background (span of class bg) clarifies whitespace and vertical alignment.
+				# The span of class bg is used to apply a white background with a light-blue baseline.
 				# High surrogates.
 				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				# Composed characters.
