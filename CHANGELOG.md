@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 2.0.5 (2024-05-28)
+
+* Disposition : Déboguer la touche B06. (dispotypes.c [e6fa645](https://github.com/dispoclavier/nouvel-azerty/commit/e6fa6456530e1d2b4d4d31056b57d01acf597e24))
+
 ## 2.0.4 (2024-05-27)
 
 * Disposition :
