@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2024-05-27T2156+0200
+#                       Date: 2024-05-28T0711+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.0.4" # See # # Notes about syntax
+<UEFA0>                     : "version 2.0.5" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
