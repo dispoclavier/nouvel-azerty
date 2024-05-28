@@ -1,4 +1,4 @@
-//                       Date: 2024-05-27T2035+0200
+//                       Date: 2024-05-28T0704+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -304,24 +304,24 @@ default partial xkb_types "dispocla" {
 
 	type "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC" {
 		// Based on EIGHT_LEVELS_FIRSTALPHABETIC.
-		// Used on AD02.
+		// Used on AB06.
 
 		modifiers =           Lock + Control + LevelFive + LevelThree + Shift;
 		map[ None                                                             ] = Level1; // 
 		map[                                                            Shift ] = Level2; // 
-		map[                                               LevelThree         ] = Level4; // 
+		map[                                               LevelThree         ] = Level3; // 
 		map[                                               LevelThree + Shift ] = Level5; // 
-		map[                                   LevelFive                      ] = Level6; // 
+		map[                                   LevelFive                      ] = Level4; // 
 		map[                                   LevelFive              + Shift ] = Level7; // 
-		map[                                   LevelFive + LevelThree         ] = Level3; // 
+		map[                                   LevelFive + LevelThree         ] = Level6; // 
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
 		map[                  Lock                                            ] = Level2; // 
 		map[                  Lock                                    + Shift ] = Level1; // 
-		map[                  Lock                       + LevelThree         ] = Level4; // 
+		map[                  Lock                       + LevelThree         ] = Level3; // 
 		map[                  Lock                       + LevelThree + Shift ] = Level5; // 
-		map[                  Lock           + LevelFive                      ] = Level6; // 
+		map[                  Lock           + LevelFive                      ] = Level4; // 
 		map[                  Lock           + LevelFive              + Shift ] = Level8; // 
-		map[                  Lock           + LevelFive + LevelThree         ] = Level3; // 
+		map[                  Lock           + LevelFive + LevelThree         ] = Level6; // 
 		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level7; // 
 		map[                         Control                                  ] = Level1;
 		map[                         Control                          + Shift ] = Level2;
