@@ -1,9 +1,9 @@
 # Journal des modifications
 
-## 2.0.6 (projet)
+## 2.0.6 (2024-05-30)
 
 * Disposition :
-  * Déboguer "′" U2032 sur la touche D02. (dispotypes.c [a1d471a](https://github.com/dispoclavier/nouvel-azerty/commit/a1d471a49c216dd940c81e0d695957e93baf3614), dispocla.cpp [91aa602](https://github.com/dispoclavier/nouvel-azerty/commit/91aa602d43a1756e9cd053b0c817dae459869588))
+  * Déboguer "′" U2032 sur la touche D02. (dispotypes.c [a1d471a](https://github.com/dispoclavier/nouvel-azerty/commit/a1d471a49c216dd940c81e0d695957e93baf3614), [b7f2ae8](https://github.com/dispoclavier/nouvel-azerty/commit/b7f2ae8ed5d9e5aff78392c5720a352be3376c0c), [c98825a](https://github.com/dispoclavier/nouvel-azerty/commit/c98825a9c4119d45a0935bdea732d7310ab92f5e), dispocla.cpp [91aa602](https://github.com/dispoclavier/nouvel-azerty/commit/91aa602d43a1756e9cd053b0c817dae459869588), [b8c19bf](https://github.com/dispoclavier/nouvel-azerty/commit/b8c19bf8378b37d9c617326c8666a2d2aef8e978))
   * Déboguer la touche D01 des variantes redisposées. (ibidem)
 
 ## 2.0.5 (2024-05-28)
