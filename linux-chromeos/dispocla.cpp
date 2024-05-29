@@ -1,4 +1,4 @@
-//                       Date: 2024-05-27T2139+0200
+//                       Date: 2024-05-29T0309+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -493,39 +493,39 @@ xkb_symbols "kbfrFRs" {
 	// keyboard view, where the traditional four levels are filled in by parsing
 	// indices 1 through 4 regardless of key types.
 	//
-	// Since dead key syms may be rendered as an ellipsis, and 9 of the dead key
-	// syms are PUA characters by lack of appropriate keysyms in keysymdef.h, the
-	// dead keys should not show up in the level 4 slot, the less as the level 4
-	// dead keys are consistent with the level 3 ASCII symbols.
+	// Since dead key syms may be rendered as an ellipsis, because dead_greek and
+	// Multi_key seem to be excluded from the representation tweak applied so far
+	// as spacing clones of diacritics are available, and 9 of the dead key syms
+	// are PUA characters by lack of appropriate keysyms in keysymdef.h, the dead
+	// keys should not show up in the level 4 slot, the less as the dead keys on
+	// level 4 are consistent with the level 3 ASCII symbol map.
 	//
 	// Instead, the level 4 position on the layout views is used for level 5,
 	// except on key D01, where the level 3 - level 5 redundancy when both have
 	// the same symbol is not possible, to cater for the Breton trigram because
-	// this is written with a letter apostrophe U02BC.
+	// this is written with a letter apostrophe U02BC and so makes a good point
+	// for being mapped as an all-in-one sequence beyond the Breton CʼHWERTY.
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_GROUP2";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
 		[              twosuperior,            threesuperior,                        1,                ampersand,              onesuperior,                    U2083,                    U2082,                    UEFC1 ],
 		[              twosuperior,            threesuperior,                        1,                ampersand,              onesuperior,                    U2081,                    U2082,                    UEFC1 ]
 	}; // U2081 ₁ SUBSCRIPT ONE; U2082 ₂ SUBSCRIPT TWO; U2083 ₃ SUBSCRIPT THREE; UEFC1 1️⃣ keycap 1 emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE02> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
 		[                   eacute,                   Eacute,                        2,                    UEFD9,              twosuperior,                    U2082,                        2,                    UEFC2 ],
 		[                   eacute,                   Eacute,                        2,                    UEFD9,              twosuperior,                    U2082,                        2,                    UEFC2 ]
 	}; // U2082 ₂ SUBSCRIPT TWO; UEFC2 2️⃣ keycap 2 emoji; UEFD9 *dead_legacytilde
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 	key <AE03> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
 		[                 quotedbl,                   endash,                        3,               numbersign,            threesuperior,                    U2083,                        3,                    UEFC3 ],
 		[                 quotedbl,                   endash,                        3,               numbersign,            threesuperior,                    U2083,                        3,                    UEFC3 ]
 	}; // U2083 ₃ SUBSCRIPT THREE; UEFC3 3️⃣ keycap 3 emoji
@@ -545,8 +545,8 @@ xkb_symbols "kbfrFRs" {
 		[                    minus,                    U2011,                        6,                      bar,                    U2076,                    U2086,                        6,                    UEFC6 ]
 	}; // U2011 ‑ NON-BREAKING HYPHEN; U2076 ⁶ SUPERSCRIPT SIX; U2086 ₆ SUBSCRIPT SIX; UEFC6 6️⃣ keycap 6 emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE07> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
@@ -554,20 +554,18 @@ xkb_symbols "kbfrFRs" {
 		[                   egrave,                   Egrave,                        7,                    UEFDA,                    U2077,                    U2087,                        7,                    UEFC7 ]
 	}; // U2077 ⁷ SUPERSCRIPT SEVEN; U2087 ₇ SUBSCRIPT SEVEN; UEFC7 7️⃣ keycap 7 emoji; UEFDA *dead_legacygrave
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 	key <AE08> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
 		[               underscore,           Greek_horizbar,                        8,                backslash,                    U2078,                    U2088,                        8,                    UEFC8 ],
 		[               underscore,           Greek_horizbar,                        8,                backslash,                    U2078,                    U2088,                        8,                    UEFC8 ]
 	}; // Greek_horizbar ― U2015 HORIZONTAL BAR (not “Greek”); U2078 ⁸ SUPERSCRIPT EIGHT; U2088 ₈ SUBSCRIPT EIGHT; UEFC8 8️⃣ keycap 8 emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE09> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
 		[                 ccedilla,                 Ccedilla,                        9,                parenleft,                    U2079,                    U2089,                        9,                    UEFC9 ],
 		[                 ccedilla,                 Ccedilla,                        9,                parenleft,                    U2079,                    U2089,                        9,                    UEFC9 ]
 	}; // U2079 ⁹ SUPERSCRIPT NINE; U2089 ₉ SUBSCRIPT NINE; UEFC9 9️⃣ keycap 9 emoji
@@ -576,7 +574,6 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_GROUP2";
 	key <AE10> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         2,                        3,                        1,                        8,                        4,                        5,                        6,                        7
 		[                   agrave,                   Agrave,                        0,               parenright,                    U2070,                    U2080,                   U1F51F,                    UEFC0 ],
 		[                   agrave,                   Agrave,                        0,               parenright,                    U2070,                    U2080,                   U1F51F,                    UEFC0 ]
 	}; // U2070 ⁰ SUPERSCRIPT ZERO; U2080 ₀ SUBSCRIPT ZERO; U1F51F 🔟 KEYCAP TEN emoji; UEFC0 0️⃣ keycap 0 emoji
@@ -585,7 +582,6 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        3,                        8,                        4,                        5,                        6,                        7
 		[                       at,                   degree,                    U1D49,             bracketright,                    U207B,                        E,                    minus,                    UEFCA ],
 		[                       at,                   degree,                    U208B,             bracketright,                    U207B,                        E,                    minus,                    UEFCA ]
 	}; // U1D49 ᵉ superscript small e; U208B ₋ SUBSCRIPT MINUS; U207B ⁻ SUPERSCRIPT MINUS; UEFCA  *️⃣ keycap star emoji
@@ -594,25 +590,22 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        3,                        8,                        4,                        5,                        6,                        7
 		[           dead_diaeresis,                     plus,                Multi_key,               braceright,                    U207A,                        F,                    equal,                    UEFCB ],
 		[                Multi_key,                     plus,                    U208A,               braceright,                    U207A,                        F,                    equal,                    UEFCB ]
 	}; // U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
 	key <AD01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        4,                        7,                        6,                        5,                        3,                        8
-		[                        a,                        A,              asciicircum,                      c_h,                      C_H,                    UEFD1,                    U1D43,                      C_h ],
-		[                        a,                        A,              asciicircum,                      c_h,                      C_H,                    UEFD1,                    U1D43,                      C_h ]
+		[                        a,                        A,              asciicircum,                      c_h,                    UEFD1,                    U1D43,                      C_H,                      C_h ],
+		[                        a,                        A,              asciicircum,                      c_h,                    UEFD1,                    U1D43,                      C_H,                      C_h ]
 	}; // U1D43 ᵃ superscript small a; UEFD1 *dead_superscript; Breton trigraph: lowercase and titlecase; on supporting systems: uppercase when CapsLock is on
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        4,                        6,                        5,                        3,                        7,                        8
 		[                        z,                        Z,                  percent,                  percent,                    UEFD5,                    U1DBB,                  minutes,                   U1F627 ],
 		[                        z,                        Z,                  percent,                  percent,                    UEFD5,                    U1DBB,                  minutes,                   U1F627 ]
 	}; // U1DBB ᶻ superscript small z; UEFD5 *dead_turned; 😧 U1F627 ANGUISHED FACE emoji
@@ -657,16 +650,16 @@ xkb_symbols "kbfrFRs" {
 		[                        p,                        P,                ampersand,                   period,            dead_abovedot,                    U1D56,                paragraph,                    UEF8B ]
 	}; // U1D56 ᵖ superscript small p; UEF8B '&amp;'
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LASTCONTROL";
 	key <AD11> {
-		[          dead_circumflex,                    U2039,               dead_tilde,              asciicircum,                    UEF66,           dead_diaeresis,                        C,              bracketleft ],
-		[                 quotedbl,              bracketleft,              asciicircum,              asciicircum,                        C,           dead_diaeresis,                        C,              bracketleft ]
+		[          dead_circumflex,                    U2039,               dead_tilde,                    UEF66,              asciicircum,           dead_diaeresis,                        C,              bracketleft ],
+		[                 quotedbl,              bracketleft,              asciicircum,                        C,              asciicircum,           dead_diaeresis,                        C,              bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK
 
 	key <AD12> {
-		[               dead_acute,                    U203A,               dead_grave,                   dollar,                    UEF67,                 sterling,                        D,             bracketright ],
-		[               underscore,             bracketright,                Multi_key,                   dollar,                        D,                 sterling,                        D,             bracketright ]
+		[               dead_acute,                    U203A,               dead_grave,                    UEF67,                   dollar,                 sterling,                        D,             bracketright ],
+		[               underscore,             bracketright,                Multi_key,                        D,                   dollar,                 sterling,                        D,             bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -722,18 +715,18 @@ xkb_symbols "kbfrFRs" {
 		[                        m,                        M,                      bar,                    comma,              dead_macron,                    U1D50,                       mu,                   U1F637 ]
 	}; // U1D50 ᵐ superscript small m; U00B5 µ MICRO SIGN; U1F637 😷 FACE WITH MEDICAL MASK emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_CAPITAL_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_CAPITAL_LASTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LASTCONTROL";
 	key <AC11> {
-		[                   ugrave,            guillemotleft,                 ellipsis,                  percent,                    UEF64,                  percent,                        A,               apostrophe ],
-		[               apostrophe,                  percent,                    grave,                  percent,                        A,                  percent,                        A,               apostrophe ]
+		[                   ugrave,            guillemotleft,                 ellipsis,                    UEF64,                  percent,                  percent,                        A,               apostrophe ],
+		[               apostrophe,                  percent,                    grave,                        A,                  percent,                  percent,                        A,               apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; APOSTROPHE for application shortcut mapping
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LASTCONTROL";
 	key <BKSL> {
-		[                    UEFD0,           guillemotright,                    UEFD0,                 asterisk,                    UEF65,                       mu,                        B,                semicolon ],
-		[                    minus,                 asterisk,                    UEFD0,                 asterisk,                        B,                       mu,                        B,                semicolon ]
+		[                    UEFD0,           guillemotright,                    UEFD0,                    UEF65,                 asterisk,                       mu,                        B,                semicolon ],
+		[                    minus,                 asterisk,                    UEFD0,                        B,                 asterisk,                       mu,                        B,                semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; SEMICOLON for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -765,53 +758,47 @@ xkb_symbols "kbfrFRs" {
 		[                        b,                        B,                    equal,                    UEF6D,                    UEFD7,                    U1D47,                   U1F618,                   U1F495 ]
 	}; // U1D47 ᵇ superscript small b; UEFD7 *dead_flag regional indicator letters; UEF6D '00'; U1F618 😘 FACE THROWING A KISS sixth-most [smiling second-most] used emoji in France, ninth-most worldwide; U1F495 💕 TWO HEARTS seventh-most used emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key <AB06> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        4,                        6,                        5,                        3,                        7,                        8
 		[                        n,                        N,                    grave,                        0,               dead_grave,                    U207F,                    UEF68,                    UEF69 ],
 		[                        n,                        N,                    grave,                        0,               dead_grave,                    U207F,                    UEF68,                    UEF69 ]
-	}; // U207F ⁿ superscript small n; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ '
+	}; // U207F ⁿ SUPERSCRIPT LATIN SMALL LETTER N; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ ' with U1D52 and NNBSP
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTCONTROL";
 	key <AB07> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		[                    comma,                 question,                 question,             dead_cedilla,                    UEF63,                 question,                   U1F612,                   U1F499 ],
-		[                    comma,                 question,                 question,             dead_cedilla,                    comma,                    UEF7B,               digitspace,                   U1F49A ]
+		[                    comma,                 question,                 question,                    UEF63,             dead_cedilla,                 question,                   U1F612,                   U1F499 ],
+		[                    comma,                 question,                 question,                    comma,             dead_cedilla,                    UEF7B,               digitspace,                   U1F49A ]
 	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
-		[                   period,                   exclam,                   exclam,            dead_belowdot,                    UEF60,                   exclam,                   U1F62D,                   U1F4E3 ],
-		[                   period,                   exclam,                   exclam,            dead_belowdot,                   period,                    UEF7A,               punctspace,                   U1F4E2 ]
+		[                   period,                   exclam,                   exclam,                    UEF60,            dead_belowdot,                   exclam,                   U1F62D,                   U1F4E3 ],
+		[                   period,                   exclam,                   exclam,                   period,            dead_belowdot,                    UEF7A,               punctspace,                   U1F4E2 ]
 	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_THREE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
 	key <AB09> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		[                    slash,                    UEF61,                    colon,           dead_diaeresis,                    U2044,                   U1F615,                   U1F603,                    slash ],
-		[                    slash,                    UEF61,                    colon,           dead_diaeresis,                    U2044,                   U1F615,                   U1F603,                    slash ]
+		[                    slash,                    colon,                    colon,                    UEF61,           dead_diaeresis,                    U2044,                   U1F615,                    slash ],
+		[                    colon,                    slash,                    colon,                    colon,           dead_diaeresis,                    U2044,                   U1F603,                    slash ]
 	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F603 😃 SMILING FACE WITH OPEN MOUTH emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_FOUR_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_FOUR_GROUP2";
 	key <AB10> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-		[                backslash,                    UEF62,                semicolon,          dead_belowcomma,                  section,                   U1F494,                   U1F609,                backslash ],
-		[                backslash,                    UEF62,                semicolon,          dead_belowcomma,                  section,                   U1F494,                   U1F609,                backslash ]
+		[                backslash,                semicolon,                  section,                    UEF62,          dead_belowcomma,                  section,                   U1F494,                backslash ],
+		[                semicolon,                backslash,                semicolon,                semicolon,          dead_belowcomma,                  section,                   U1F609,                backslash ]
 	}; // UEF62 ' ;' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
-	// Index:                  1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_FIRSTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTCONTROL";
 	key <SPCE> {
-		[                    space,                    space,             nobreakspace,                    U200B,                    U202F,                    UEF6E,                    UEF6F,                    UEF9B ],
-		[                    space,                    space,                    space,                    UEF9B,                    space,                    UEF9F,                    UEF9F,                    UEF9B ]
+		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+		[                    space,                    space,             nobreakspace,                    U202F,                    U200B,                    UEF6E,                    UEF6F,                    UEF9B ],
+		[                    space,                    space,                    space,                    space,                    UEF9B,                    UEF9F,                    UEF9F,                    UEF9B ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE; U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
 
 	//
@@ -979,8 +966,8 @@ xkb_symbols "kbbrFRs" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA2 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 	//                         1,                        2,                        4,                        5,                        6,                        3,                        7,                        8
@@ -988,8 +975,8 @@ xkb_symbols "kbbrFRs" {
 		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol ]
 	}; // cʼh, Cʼh, CʼH
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE08> {
 		[                   ntilde,                   Ntilde ],
 		[                   ntilde,                   Ntilde ]
@@ -1018,16 +1005,16 @@ xkb_symbols "kbbrFRsr" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAA ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                      C_H ],
 		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol ]
 	}; // cʼh, Cʼh, CʼH
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE07> {
 		[                   ntilde,                   Ntilde ],
 		[                   ntilde,                   Ntilde ]
@@ -1062,8 +1049,8 @@ xkb_symbols "kbfrPFs" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA3 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 	key <AE08> {
 		[              dead_macron,                    U02BB ],
 		[              dead_macron,                    U02BB ]
@@ -1092,8 +1079,8 @@ xkb_symbols "kbfrPFsr" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAB ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 	key <AE07> {
 		[              dead_macron,                    U02BB ],
 		[              dead_macron,                    U02BB ]
@@ -1122,16 +1109,16 @@ xkb_symbols "kbfrAFs" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA4 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP2";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                    U025B,                    U0190 ],
 		[                    U025B,                    U0190 ]
 	}; // ɛ, Ɛ
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE08> {
 		[                    U0254,                    U0186 ],
 		[                    U0254,                    U0186 ]
@@ -1160,16 +1147,16 @@ xkb_symbols "kbfrAFsr" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAC ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_SUPERSUB_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP2";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                    U025B,                    U0190 ],
 		[                    U025B,                    U0190 ]
 	}; // ɛ, Ɛ
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE07> {
 		[                    U0254,                    U0186 ],
 		[                    U0254,                    U0186 ]
@@ -1203,8 +1190,8 @@ xkb_symbols "kbfrBEs" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA5 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 	key <AE06> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                  section ],
@@ -1252,38 +1239,38 @@ xkb_symbols "kbfrFRsr" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA9 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE02> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                   agrave,                   Agrave ],
 		[                   agrave,                   Agrave ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 
 	key <AE04> {
 		[               dead_acute ],
 		[               dead_acute ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE06> {
 		[                   ugrave,                   Ugrave ],
 		[                   ugrave,                   Ugrave ]
 	}; // Ugrave for consistency since U2011 is on E07 for accessibility while underscore is on D12 when ModLock is on.
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_GROUP2";
 	key <AE07> {
 		[                    U2011,           Greek_horizbar ],
 		[                    U2011,           Greek_horizbar ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_LEVEL_THREE_LOCK_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_GROUP2";
 	key <AE08> {
 		[                   egrave,                   Egrave ],
 		[                   egrave,                   Egrave ]
@@ -1296,8 +1283,8 @@ xkb_symbols "kbfrFRsr" {
 		[                   eacute,                   Eacute ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SIX_TITLECASE";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
 	key <AD01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        q,                        Q,                 NoSymbol,                 NoSymbol,                 NoSymbol,                   U107A5 ],
@@ -1341,8 +1328,8 @@ xkb_symbols "kbfrFRsr" {
 		[                        k,                        K,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    U1D4F ]
 	}; // superscript small k
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LASTCONTROL";
 	key <AD12> {
 		[                    UEFD0,                 NoSymbol,                    UEFD0 ],
 		[               underscore,                 NoSymbol,                    UEFD0 ]
@@ -1396,27 +1383,25 @@ xkb_symbols "kbfrFRsr" {
 		[                        p,                        P,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    U1D56 ]
 	}; // superscript small p
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_LASTCONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LASTCONTROL";
 	key <AC11> {
 		[     rightsinglequotemark ],
 		[                 NoSymbol ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_TWO_GROUPS_LASTCONTROL";
 	key <BKSL> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                    minus,                 NoSymbol,                Multi_key ],
 		[                    minus,                 NoSymbol,                Multi_key ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL_SEVEN_ALPHABETIC";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
+	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key <AB06> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                        h,                        H,                 NoSymbol,                 NoSymbol,                 NoSymbol,                     U02B0 ],
 		[                        h,                        H,                 NoSymbol,                 NoSymbol,                 NoSymbol,                     U02B0 ]
-	}; // superscript small h
+	}; // U02B0 ʰ MODIFIER LETTER SMALL H
 
 };
