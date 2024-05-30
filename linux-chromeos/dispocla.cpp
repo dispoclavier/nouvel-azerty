@@ -1,4 +1,4 @@
-//                       Date: 2024-05-30T0123+0200
+//                       Date: 2024-05-30T0214+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -570,7 +570,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
 		[                   agrave,                   Agrave,                        0,               parenright,                    U2070,                    U2080,                   U1F51F,                    UEFC0 ],
-		[                   agrave,                   Agrave,                        0,               parenright,                    U2070,                    U2080,                   U1F51F,                    UEFC0 ]
+		[                        0,                        0,                        0,                    U2070,                        0,                    U2080,                    U2070,                    UEFC0 ]
 	}; // U2070 ⁰ SUPERSCRIPT ZERO; U2080 ₀ SUBSCRIPT ZERO; U1F51F 🔟 KEYCAP TEN emoji; UEFC0 0️⃣ keycap 0 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
