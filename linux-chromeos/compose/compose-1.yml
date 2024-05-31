@@ -1354,7 +1354,7 @@
 #   fractions as more frequently used than circled digits, but ⅒ is now
 #   <Multi_key><1><1>, not <Multi_key><1><1><0>.
 #
-#   For a predictable, intuitive, consistent, versatile user experience,
+#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH. It
 #   sequences with a slash are also supported, and fraction numerator 1,
 #   initially <Multi_key><1><slash>, is extended with space accordingly,
 #   while its short sequence <Multi_key><1><space> is still supported.
@@ -2807,15 +2807,15 @@
 #
 # # Fraction slash
 #
-#   On complete layouts, U2044 FRACTION SLASH is on live keys:
+#   On complete layouts, "⁄" U2044 FRACTION SLASH is on live keys:
 #   C01, level 6, and B09, level 7, in ASCII mode also on level 6.
 #   See # # Vulgar fractions
 #
 #   Also in dead_stroke followed by 4, without space termination.
 #   See #*# STROKE
 #
-#   Additionally, U2044 FRACTION SLASH is supported by Multi_key the same way
-#   as U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
+#   Additionally, "⁄" U2044 FRACTION SLASH is supported by Multi_key the same
+#   way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
 #
 <Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><f><slash>                                                               <nobreakspace> : "⁄" U2044 # FRACTION SLASH
