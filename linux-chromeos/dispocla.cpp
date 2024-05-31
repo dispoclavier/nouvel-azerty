@@ -1,4 +1,4 @@
-//                       Date: 2024-05-30T0214+0200
+//                       Date: 2024-05-31T1831+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -573,18 +573,22 @@ xkb_symbols "kbfrFRs" {
 		[                        0,                        0,                        0,                    U2070,                        0,                    U2080,                    U2070,                    UEFC0 ]
 	}; // U2070 ⁰ SUPERSCRIPT ZERO; U2080 ₀ SUBSCRIPT ZERO; U1F51F 🔟 KEYCAP TEN emoji; UEFC0 0️⃣ keycap 0 emoji
 
+	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
+		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                       at,                   degree,                    U1D49,             bracketright,                    U207B,                        E,                    minus,                    UEFCA ],
-		[                       at,                   degree,                    U208B,             bracketright,                    U207B,                        E,                    minus,                    UEFCA ]
+	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
+		[                       at,                   degree,                    minus,                    U208B,                    U207B,                        E,                    minus,                    UEFCA ]
 	}; // U1D49 ᵉ superscript small e; U208B ₋ SUBSCRIPT MINUS; U207B ⁻ SUPERSCRIPT MINUS; UEFCA  *️⃣ keycap star emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
 		[           dead_diaeresis,                     plus,                Multi_key,               braceright,                    U207A,                        F,                    equal,                    UEFCB ],
-		[                Multi_key,                     plus,                    U208A,               braceright,                    U207A,                        F,                    equal,                    UEFCB ]
+		[                    equal,                     plus,                Multi_key,                    U208A,                    U207A,                        F,                    equal,                    UEFCB ]
 	}; // U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
@@ -1194,7 +1198,7 @@ xkb_symbols "kbfrBEs" {
 
 	key <AE08> {
 		[                    minus,               underscore ],
-		[                    minus,               underscore ]
+		[                 NoSymbol ]
 	};// Rather than NON-BREAKING HYPHEN.
 
 };
