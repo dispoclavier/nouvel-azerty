@@ -1,5 +1,11 @@
 # Journal des modifications
 
+## 2.1.0 (2024-05-31)
+
+* Disposition :
+  * Déboguer la touche 8 de la variante belge. (dispocla.cpp [a2fa910](https://github.com/dispoclavier/nouvel-azerty/commit/a2fa910f037fc7ba63f2d1e52aaa9ac26239da5e))
+  * Mettre "-" U002D à la place de "°" U00B0 en AltGr/Option en mode ASCII. (dispotypes.c [1372a36](https://github.com/dispoclavier/nouvel-azerty/commit/1372a366ff1b71065719d29e4aab58cf10d9a810), dispocla.cpp [a2fa910](https://github.com/dispoclavier/nouvel-azerty/commit/a2fa910f037fc7ba63f2d1e52aaa9ac26239da5e))
+
 ## 2.0.6 (2024-05-30)
 
 * Disposition :
