@@ -1,4 +1,4 @@
-//                       Date: 2024-06-01T0442+0200
+//                       Date: 2024-06-01T2351+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -448,23 +448,35 @@ xkb_symbols "kbfrFRs" {
 	include "pc(pc105)"   // Basic functionality.
 	include "inet(evdev)" // Easy access and internet keys.
 
-	// Correct LSGT key behavior after inclusion of symbols/pc(105)
+	//
+	// New 'AltFr' modifier key
+	//
+	// The level 5 modifier defaults to the LSGT key but may need to be placed on
+	// CapsLock depending on the hardware. Keyboards for the European market with
+	// key LSGT on right Control need to have LSGT and CAPS swapped, so as to get
+	// CapsLock on right Control, and the level 5 modifier on the CapsLock key.
+	//
+	// Correct LSGT key behavior after inclusion of symbols/pc(105):
 	modifier_map Mod3 { <MDSW> };
-	// See also the complete modifier map list at the bottom of this section "kbfrFRs".
-	include "level5(lsgt_switch)"  // New 'AltFr' modifier key defaulting to LSGT key
+	// See also the complete modifier map list at the bottom of this section.
+	include "level5(lsgt_switch)"
+
 	key.type[Group1]= "FOUR_LEVEL";
 	key.type[Group2]= "FOUR_LEVEL";
 	key <LSGT> {
 		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ],
 		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ]
 	};
+
 	key <MDSW> {
 		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ],
 		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ]
 	};
 
-	// Regular legacy AltGr key
+	// Regular level 3 (AltGr) modifier key
+
 	include "level3(ralt_switch)"
+
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <RALT> {
@@ -472,12 +484,21 @@ xkb_symbols "kbfrFRs" {
 		[ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]
 	};
 
-	// New ASCII mode lock, ModLock for short
 	//
-	// Key TLDE becomes a Group Lock as an additional graphic toggle
-	// affecting both the alphanumeric block and the numeric keypad.
+	// ASCII mode lock toggle key
+	//
+	// The second graphic toggle changes between default mode, that is called the
+	// French mode for instance, and the ASCII mode. It is implemented as a group
+	// toggle between first group and last group, i.e. group 1 and group 2, while
+	// repurposing NumLock is not an option, due to its use on compact keyboards.
+	// Key TLDE is used for this additional graphic toggle and becomes Group Lock
+	// or ModLock for short, affecting both the alphanumeric block and the numpad
+	// graphic extensions.
+	//
 	// ISO_First_Group is interpreted as: action= LockGroup(group=1)
 	// ISO_Last_Group  is interpreted as: action= LockGroup(group=2)
+	//
+
 	key.type[Group1]= "EIGHT_LEVEL";
 	key.type[Group2]= "EIGHT_LEVEL";
 	key <TLDE> {
@@ -486,6 +507,15 @@ xkb_symbols "kbfrFRs" {
 		[     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,               UEFA1,               UEFA0 ]
 	}; // Level5 yields <variant>; Level6 yields <version>
 
+	//
+	// Code layout
+	//
+	// After the removal of dead_longsolidusoverlay in libxkbcommon 1.6.0 (2023),
+	// keysyms are expected to be no longer than rightsinglequotemark, making for
+	// a compacter layout with a column width shrinking from 25 to 20 characters.
+	// https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
+	//
+	//
 	// Keyboard views
 	//
 	// On indices 1 through 4, the keysyms are ordered only with respect to the
@@ -505,12 +535,6 @@ xkb_symbols "kbfrFRs" {
 	// this is written with a letter apostrophe U02BC and so makes a good point
 	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
 	//
-	// Code layout
-	//
-	// After the removal of dead_longsolidusoverlay in libxkbcommon 1.6.0 (2023),
-	// keysyms are expected to be no longer than rightsinglequotemark, making for
-	// a compacter layout with a column width shrinking from 25 to 20 characters.
-	// https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
 
 	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
