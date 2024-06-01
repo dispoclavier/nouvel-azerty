@@ -1,4 +1,4 @@
-//                       Date: 2024-05-31T1831+0200
+//                       Date: 2024-06-01T0335+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -37,17 +37,14 @@
 //                                add the lines enclosed in the file
 //                                    evdev-additions.xml
 //                                before the `</layoutList>` closing tag.
+//
 //                             The changes take effect when reopening a session.
 //
 //             Uninstallation: Delete those lines, uncomment the rule, remove the file.
 //
-//      Login keyboard layout: If the keyboard layout used to log in should be reconfigured,
-//                             please open the file located at `/etc/default/keyboard`
-//                             and customize the following settings. In this example,
-//                             the main variant of this keyboard layout project is used.
-//                             The cited keyboard(5) manual page is found online at:
+//      Login keyboard layout: The keyboard layout used to log in is configured in
+//                             `/etc/default/keyboard`.
 //                             https://manpages.debian.org/jessie/keyboard-configuration/keyboard.5.en.html
-//                             After editing, the beginning of `keyboard` may look like this:
 //
 //                             # KEYBOARD CONFIGURATION FILE
 //                             
@@ -59,7 +56,7 @@
 //                             XKBOPTIONS=""
 //
 //
-// Note: XKB configuration files don’t allow block comments.
+// Block comments are not supported in XKB configuration files.
 //
 //
 // ##  French-style punctuation spacing semi-automation
@@ -506,7 +503,7 @@ xkb_symbols "kbfrFRs" {
 	// this is written with a letter apostrophe U02BC and so makes a good point
 	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
 
-	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT";
+	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
@@ -515,7 +512,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U2081 ₁ SUBSCRIPT ONE; U2082 ₂ SUBSCRIPT TWO; U2083 ₃ SUBSCRIPT THREE; UEFC1 1️⃣ keycap 1 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE02> {
 		[                   eacute,                   Eacute,                        2,                    UEFD9,                        2,                    UEFC2,              twosuperior,                    UEFC2 ],
 		[                        2,                        2,                        2,              twosuperior,                        2,                    U2082,              twosuperior,                    UEFC2 ]
@@ -545,7 +542,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U2011 ‑ NON-BREAKING HYPHEN; U2076 ⁶ SUPERSCRIPT SIX; U2086 ₆ SUBSCRIPT SIX; UEFC6 6️⃣ keycap 6 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
 		[                   egrave,                   Egrave,                        7,                    UEFDA,                        7,                    UEFC7,                    U2077,                    UEFC7 ],
 		[                        7,                        7,                        7,                    U2077,                        7,                    U2087,                    U2077,                    UEFC7 ]
@@ -559,28 +556,24 @@ xkb_symbols "kbfrFRs" {
 	}; // Greek_horizbar ― U2015 HORIZONTAL BAR (not “Greek”); U2078 ⁸ SUPERSCRIPT EIGHT; U2088 ₈ SUBSCRIPT EIGHT; UEFC8 8️⃣ keycap 8 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE09> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                 ccedilla,                 Ccedilla,                        9,                parenleft,                        9,                    UEFC9,                    U2079,                    UEFC9 ],
 		[                        9,                        9,                        9,                    U2079,                        9,                    U2089,                    U2079,                    UEFC9 ]
 	}; // U2079 ⁹ SUPERSCRIPT NINE; U2089 ₉ SUBSCRIPT NINE; UEFC9 9️⃣ keycap 9 emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC";
+	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
 		[                   agrave,                   Agrave,                        0,               parenright,                    U2070,                    U2080,                   U1F51F,                    UEFC0 ],
 		[                        0,                        0,                        0,                    U2070,                        0,                    U2080,                    U2070,                    UEFC0 ]
 	}; // U2070 ⁰ SUPERSCRIPT ZERO; U2080 ₀ SUBSCRIPT ZERO; U1F51F 🔟 KEYCAP TEN emoji; UEFC0 0️⃣ keycap 0 emoji
 
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
-		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                       at,                   degree,                    U1D49,             bracketright,                    U207B,                        E,                    minus,                    UEFCA ],
-	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                       at,                   degree,                    minus,                    U208B,                    U207B,                        E,                    minus,                    UEFCA ]
 	}; // U1D49 ᵉ superscript small e; U208B ₋ SUBSCRIPT MINUS; U207B ⁻ SUPERSCRIPT MINUS; UEFCA  *️⃣ keycap star emoji
 
@@ -813,6 +806,7 @@ xkb_symbols "kbfrFRs" {
 		[                 KP_Equal ]
 	};
 
+	//                         1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP2";
 	key <KPDV> {
@@ -964,17 +958,16 @@ xkb_symbols "kbbrFRs" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA2 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
-	//                         1,                        2,                        4,                        5,                        6,                        3,                        7,                        8
 		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                      C_H ],
-		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol ]
+		[                 NoSymbol ]
 	}; // cʼh, Cʼh, CʼH
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE08> {
 		[                   ntilde,                   Ntilde ],
 		[                 NoSymbol ]
@@ -1003,16 +996,16 @@ xkb_symbols "kbbrFRsr" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAA ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_TITLECASE_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                      C_H ],
-		[                      c_h,                      C_h,                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol ]
+		[                 NoSymbol ]
 	}; // cʼh, Cʼh, CʼH
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
 		[                   ntilde,                   Ntilde ],
 		[                 NoSymbol ]
@@ -1107,16 +1100,16 @@ xkb_symbols "kbfrAFs" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFA4 ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                    U025B,                    U0190 ],
-		[                    U025B,                    U0190 ]
+		[                 NoSymbol ]
 	}; // ɛ, Ɛ
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE08> {
 		[                    U0254,                    U0186 ],
 		[                 NoSymbol ]
@@ -1145,16 +1138,16 @@ xkb_symbols "kbfrAFsr" {
 		[                 NoSymbol,                 NoSymbol,                 NoSymbol,                 NoSymbol,                    UEFAC ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_SUPERSUB_FIRSTALPHABETIC_GROUP2";
+	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE01> {
 		// Index:                1,                        2,                        3,                        4,                        5,                        6,                        7,                        8
 		[                    U025B,                    U0190 ],
-		[                    U025B,                    U0190 ]
+		[                 NoSymbol ]
 	}; // ɛ, Ɛ
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
 		[                    U0254,                    U0186 ],
 		[                 NoSymbol ]
@@ -1274,7 +1267,7 @@ xkb_symbols "kbfrFRsr" {
 		[                 NoSymbol ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC";
+	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
 		[                   eacute,                   Eacute ],
