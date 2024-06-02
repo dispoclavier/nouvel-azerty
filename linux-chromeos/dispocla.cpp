@@ -1,4 +1,4 @@
-//                       Date: 2024-06-02T0334+0200
+//                       Date: 2024-06-02T0536+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -681,12 +681,12 @@ xkb_symbols "kbfrFRs" {
 	key <AD11> {
 		[     dead_circumflex,               U2039,          dead_tilde,               UEF66,         asciicircum,      dead_diaeresis,                   C,         bracketleft ],
 		[            quotedbl,         bracketleft,         asciicircum,                   C,         asciicircum,      dead_diaeresis,         asciicircum,         bracketleft ]
-	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK
+	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
 
 	key <AD12> {
 		[          dead_acute,               U203A,          dead_grave,               UEF67,              dollar,            sterling,                   D,        bracketright ],
-		[          underscore,        bracketright,           Multi_key,                   D,              dollar,            sterling,              dollar,        bracketright ]
-	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+		[          underscore,        bracketright,           Multi_key,                   D,              dollar,            sterling,               U207C,        bracketright ]
+	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -747,15 +747,15 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
 		[              ugrave,       guillemotleft,            ellipsis,               UEF64,             percent,             percent,                   A,          apostrophe ],
-		[          apostrophe,             percent,               grave,                   A,             percent,             percent,             percent,          apostrophe ]
-	}; // UEF64 '« ' spaced out with NNBSP; APOSTROPHE for application shortcut mapping
+		[          apostrophe,             percent,               grave,                   A,             percent,             percent,               U207D,          apostrophe ]
+	}; // UEF64 '« ' spaced out with NNBSP; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <BKSL> {
 		[               UEFD0,      guillemotright,               UEFD0,               UEF65,            asterisk,                  mu,                   B,           semicolon ],
-		[               minus,            asterisk,               UEFD0,                   B,            asterisk,                  mu,            asterisk,           semicolon ]
-	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; SEMICOLON for application shortcut mapping
+		[               minus,            asterisk,               UEFD0,                   B,            asterisk,                  mu,               U207E,           semicolon ]
+	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; U207E ⁾ SUPERSCRIPT RIGHT PARENTHESIS; SEMICOLON for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1266,7 +1266,7 @@ xkb_symbols "kbfrFRsr" {
 	};
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE02> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              agrave,              Agrave ],
@@ -1282,7 +1282,7 @@ xkb_symbols "kbfrFRsr" {
 	};
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE06> {
 		[              ugrave,              Ugrave ],
 		[            NoSymbol ]
@@ -1296,7 +1296,7 @@ xkb_symbols "kbfrFRsr" {
 	};
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
-	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE08> {
 		[              egrave,              Egrave ],
 		[            NoSymbol ]
