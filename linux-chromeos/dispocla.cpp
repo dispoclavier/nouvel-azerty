@@ -1,4 +1,4 @@
-//                       Date: 2024-06-01T2351+0200
+//                       Date: 2024-06-02T0134+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -508,15 +508,9 @@ xkb_symbols "kbfrFRs" {
 	}; // Level5 yields <variant>; Level6 yields <version>
 
 	//
-	// Code layout
+	// Level inconsistency
 	//
-	// After the removal of dead_longsolidusoverlay in libxkbcommon 1.6.0 (2023),
-	// keysyms are expected to be no longer than rightsinglequotemark, making for
-	// a compacter layout with a column width shrinking from 25 to 20 characters.
-	// https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
-	//
-	//
-	// Keyboard views
+	// CAUTION: Index 4 is mostly level 5, and conversely.
 	//
 	// On indices 1 through 4, the keysyms are ordered only with respect to the
 	// keyboard view, where the traditional four levels are filled in by parsing
@@ -534,6 +528,14 @@ xkb_symbols "kbfrFRs" {
 	// the same symbol is not possible, to cater for the Breton trigram because
 	// this is written with a letter apostrophe U02BC and so makes a good point
 	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
+	//
+	//
+	// Column width
+	//
+	// After the removal of dead_longsolidusoverlay in libxkbcommon 1.6.0 (2023),
+	// keysyms are expected to be no longer than rightsinglequotemark, making for
+	// a compacter layout with a column width shrinking from 25 to 20 characters.
+	// https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
 	//
 
 	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT_LEVEL3_CONTROL";
@@ -678,12 +680,12 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD11> {
 		[     dead_circumflex,               U2039,          dead_tilde,               UEF66,         asciicircum,      dead_diaeresis,                   C,         bracketleft ],
-		[            quotedbl,         bracketleft,         asciicircum,                   C,         asciicircum,      dead_diaeresis,                   C,         bracketleft ]
+		[            quotedbl,         bracketleft,         asciicircum,                   C,         asciicircum,      dead_diaeresis,         asciicircum,         bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK
 
 	key <AD12> {
 		[          dead_acute,               U203A,          dead_grave,               UEF67,              dollar,            sterling,                   D,        bracketright ],
-		[          underscore,        bracketright,           Multi_key,                   D,              dollar,            sterling,                   D,        bracketright ]
+		[          underscore,        bracketright,           Multi_key,                   D,              dollar,            sterling,              dollar,        bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -745,14 +747,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
 		[              ugrave,       guillemotleft,            ellipsis,               UEF64,             percent,             percent,                   A,          apostrophe ],
-		[          apostrophe,             percent,               grave,                   A,             percent,             percent,                   A,          apostrophe ]
+		[          apostrophe,             percent,               grave,                   A,             percent,             percent,             percent,          apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <BKSL> {
 		[               UEFD0,      guillemotright,               UEFD0,               UEF65,            asterisk,                  mu,                   B,           semicolon ],
-		[               minus,            asterisk,               UEFD0,                   B,            asterisk,                  mu,                   B,           semicolon ]
+		[               minus,            asterisk,               UEFD0,                   B,            asterisk,                  mu,            asterisk,           semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; SEMICOLON for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
