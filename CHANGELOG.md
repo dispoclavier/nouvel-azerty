@@ -2,24 +2,24 @@
 
 ## 2.1.1 (projet)
 
-* Disposition : Touches C11, C12, D11, D12 en AltFr + AltGr/Option en mode ASCII : Mettre "⁽" U207D à la place de "A" U0041, "⁾" U207E à la place de "B" U0042, "^" U005E à la place de "C" U0043, "⁼" U207C à la place de "D" U0044. (dispocla.cpp [78281d0](https://github.com/dispoclavier/nouvel-azerty/commit/78281d0d195d5b5497eb7c86c632e1121e0fb048), [4fd1c54](https://github.com/dispoclavier/nouvel-azerty/commit/4fd1c54304db7fbf2cfaad628e7444d411a6681f))
+* Disposition : Mode ASCII : Touches C11, C12, D11, D12 en Maj + AltGr/Option et en AltFr + AltGr/Option : Mettre "⁽" U207D à la place de "%" U0025 ou de "A" U0041, "⁾" U207E à la place de "*" U002A ou de "B" U0042, "^" U005E à la place de "C" U0043, "⁼" U207C à la place de "$" U0024 ou de "D" U0044 ; en Maj + AltFr : Mettre "_" U005F à la place de la touche morte tréma, "₌" U208C à la place de "£" U00A3, "₍" U208D à la place de "%" U0025, "₎" U208E à la place de "µ" U00B5. (dispocla.cpp [78281d0](https://github.com/dispoclavier/nouvel-azerty/commit/78281d0d195d5b5497eb7c86c632e1121e0fb048), [4fd1c54](https://github.com/dispoclavier/nouvel-azerty/commit/4fd1c54304db7fbf2cfaad628e7444d411a6681f), [bfd180c](https://github.com/dispoclavier/nouvel-azerty/commit/bfd180c48541a316185d747ba7cdece768088cfe))
 * Personnalisation :
   * Simplifier le code de la touche 1 des variantes pour le breton et pour l’Afrique francophone. (dispocla.cpp [5d77c5e](https://github.com/dispoclavier/nouvel-azerty/commit/5d77c5e35c309b7af9a17351bb550e750bbd7a72), dispotypes.c [982d5d6](https://github.com/dispoclavier/nouvel-azerty/commit/982d5d62ab5b76d04b2fe594b2003d607447bea1))
   * Compacter le code pour faciliter la maintenance. (dispocla.cpp [aba7eb0](https://github.com/dispoclavier/nouvel-azerty/commit/aba7eb063e7e121cbf2f86e7e8bb35efcc81e57c))
-* Documentation. (dispocla.cpp [8df14fd](https://github.com/dispoclavier/nouvel-azerty/commit/8df14fd2cde91256cad5c7ad4ba41fa9cf5e7702))
+* Documentation. (dispocla.cpp [8df14fd](https://github.com/dispoclavier/nouvel-azerty/commit/8df14fd2cde91256cad5c7ad4ba41fa9cf5e7702), dispotypes.c [bc83d02](https://github.com/dispoclavier/nouvel-azerty/commit/bc83d0210b7533e077baefde6038c56450cc1070))
 
 ## 2.1.0 (2024-05-31)
 
 * Disposition :
   * Déboguer la touche 8 de la variante belge. (dispocla.cpp [a2fa910](https://github.com/dispoclavier/nouvel-azerty/commit/a2fa910f037fc7ba63f2d1e52aaa9ac26239da5e))
-  * Mettre "-" U002D à la place de "°" U00B0 en AltGr/Option en mode ASCII. (dispotypes.c [1372a36](https://github.com/dispoclavier/nouvel-azerty/commit/1372a366ff1b71065719d29e4aab58cf10d9a810), dispocla.cpp [a2fa910](https://github.com/dispoclavier/nouvel-azerty/commit/a2fa910f037fc7ba63f2d1e52aaa9ac26239da5e))
+  * Mode ASCII : Touche E11 en AltGr/Option : Mettre "-" U002D à la place de "°" U00B0. (dispotypes.c [1372a36](https://github.com/dispoclavier/nouvel-azerty/commit/1372a366ff1b71065719d29e4aab58cf10d9a810), dispocla.cpp [a2fa910](https://github.com/dispoclavier/nouvel-azerty/commit/a2fa910f037fc7ba63f2d1e52aaa9ac26239da5e))
 
 ## 2.0.6 (2024-05-30)
 
 * Disposition :
   * Déboguer "′" U2032 sur la touche D02. (dispotypes.c [a1d471a](https://github.com/dispoclavier/nouvel-azerty/commit/a1d471a49c216dd940c81e0d695957e93baf3614), dispocla.cpp [91aa602](https://github.com/dispoclavier/nouvel-azerty/commit/91aa602d43a1756e9cd053b0c817dae459869588))
   * Déboguer la touche D01 des variantes redisposées. (ibidem)
-* Personnalisation : Améliorer la maintenabilité du code. (dispotypes.c [b7f2ae8](https://github.com/dispoclavier/nouvel-azerty/commit/b7f2ae8ed5d9e5aff78392c5720a352be3376c0c), [c98825a](https://github.com/dispoclavier/nouvel-azerty/commit/c98825a9c4119d45a0935bdea732d7310ab92f5e), dispocla.cpp [b8c19bf](https://github.com/dispoclavier/nouvel-azerty/commit/b8c19bf8378b37d9c617326c8666a2d2aef8e978), [21780af](https://github.com/dispoclavier/nouvel-azerty/commit/21780af35e9a2ba556e34614156b599c0e3cbeb4))
+* Personnalisation : Améliorer la maintenabilité du code. (dispotypes.c [a1d471a](https://github.com/dispoclavier/nouvel-azerty/commit/a1d471a49c216dd940c81e0d695957e93baf3614), [b7f2ae8](https://github.com/dispoclavier/nouvel-azerty/commit/b7f2ae8ed5d9e5aff78392c5720a352be3376c0c), [c98825a](https://github.com/dispoclavier/nouvel-azerty/commit/c98825a9c4119d45a0935bdea732d7310ab92f5e), dispocla.cpp [91aa602](https://github.com/dispoclavier/nouvel-azerty/commit/91aa602d43a1756e9cd053b0c817dae459869588), [b8c19bf](https://github.com/dispoclavier/nouvel-azerty/commit/b8c19bf8378b37d9c617326c8666a2d2aef8e978), [21780af](https://github.com/dispoclavier/nouvel-azerty/commit/21780af35e9a2ba556e34614156b599c0e3cbeb4))
 
 ## 2.0.5 (2024-05-28)
 
