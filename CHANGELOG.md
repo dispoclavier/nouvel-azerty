@@ -2,9 +2,11 @@
 
 ## 2.1.1 (projet)
 
+* Disposition : Touches C11, C12, D11, D12 en AltFr + AltGr/Option en mode ASCII : Mettre "⁽" U207D à la place de "A" U0041, "⁾" U207E à la place de "B" U0042, "^" U005E à la place de "C" U0043, "⁼" U207C à la place de "D" U0044. (dispocla.cpp [78281d0](https://github.com/dispoclavier/nouvel-azerty/commit/78281d0d195d5b5497eb7c86c632e1121e0fb048), [4fd1c54](https://github.com/dispoclavier/nouvel-azerty/commit/4fd1c54304db7fbf2cfaad628e7444d411a6681f))
 * Personnalisation :
   * Simplifier le code de la touche 1 des variantes pour le breton et pour l’Afrique francophone. (dispocla.cpp [5d77c5e](https://github.com/dispoclavier/nouvel-azerty/commit/5d77c5e35c309b7af9a17351bb550e750bbd7a72), dispotypes.c [982d5d6](https://github.com/dispoclavier/nouvel-azerty/commit/982d5d62ab5b76d04b2fe594b2003d607447bea1))
   * Compacter le code pour faciliter la maintenance. (dispocla.cpp [aba7eb0](https://github.com/dispoclavier/nouvel-azerty/commit/aba7eb063e7e121cbf2f86e7e8bb35efcc81e57c))
+* Documentation. (dispocla.cpp [8df14fd](https://github.com/dispoclavier/nouvel-azerty/commit/8df14fd2cde91256cad5c7ad4ba41fa9cf5e7702))
 
 ## 2.1.0 (2024-05-31)
 
