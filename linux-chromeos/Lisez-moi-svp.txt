@@ -1,5 +1,5 @@
-                      Date : 2024-06-02T2056+0200
-                   Version : 2.2.0
+                      Date : 2024-06-03T0632+0200
+                   Version : 2.2.1
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
