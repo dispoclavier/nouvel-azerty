@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 2.2.1 (2024-06-03)
+
+* Sortie multi-caractères : Déboguer "&#" et "&#x". (compose-1.yml [456f97e](https://github.com/dispoclavier/nouvel-azerty/commit/456f97e489a250088bb181f72eb3c199a92e579a))
+
 ## 2.2.0 (2024-06-02)
 
 * Disposition : Mode ASCII : Touches C11, C12, D11, D12 en Maj + AltGr/Option et en AltFr + AltGr/Option : Mettre "⁽" U207D à la place de "%" U0025 ou de "A" U0041, "⁾" U207E à la place de "*" U002A ou de "B" U0042, "^" U005E à la place de "C" U0043, "⁼" U207C à la place de "$" U0024 ou de "D" U0044 ; en Maj + AltFr : Mettre "_" U005F à la place de la touche morte tréma, "₌" U208C à la place de "£" U00A3, "₍" U208D à la place de "%" U0025, "₎" U208E à la place de "µ" U00B5. (dispocla.cpp [78281d0](https://github.com/dispoclavier/nouvel-azerty/commit/78281d0d195d5b5497eb7c86c632e1121e0fb048), [4fd1c54](https://github.com/dispoclavier/nouvel-azerty/commit/4fd1c54304db7fbf2cfaad628e7444d411a6681f), [bfd180c](https://github.com/dispoclavier/nouvel-azerty/commit/bfd180c48541a316185d747ba7cdece768088cfe))
