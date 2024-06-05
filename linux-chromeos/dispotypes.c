@@ -1,4 +1,4 @@
-//                       Date: 2024-06-02T0547+0200
+//                       Date: 2024-06-05T0630+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -44,7 +44,7 @@
 // the Latin base alphabet.
 //
 // Shortcuts should be defined by the index of Base level only.
-// But on alphabetic keys they do also wprk with uppercase, that
+// But on alphabetic keys they do also work with uppercase, that
 // in some applications is mandatory for Control + Shift shortcuts.
 // LibreOffice does not recognize punctuation and symbols on Shift level
 // for keyboard shortcuts, even if mapped according to US-QWERTY.
@@ -1225,256 +1225,22 @@ default partial xkb_types "dispocla" {
 
 	};
 
-	// type "EIGHT_LEVELS_NUMPAD_DIGIT" is replaced with the two following.
-
-	type "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP1" {
-		// For keys 2 4 6 8, where emoji arrows are black arrows.
-		//
-		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed first, the Function key last.
-		// On desktop keyboards, the combos involving both LevelThree and
-		// LevelFive are almost unusable, but on laptops these are useful.
-		//
-		//                       LevelFive  simple arrows          ↕↙↓↘←↔→↖↑↗
-		//  Shift +              LevelFive  double arrows          ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
-		//          LevelThree              emoji arrows           ↕↙⬇↘⬅↔➡↖⬆↗
-		//  Shift + LevelThree              uniform black arrows   ⬍⬋⬇⬊⬅⬌➡⬉⬆⬈
-		//          LevelThree + LevelFive  triangle-headed arrows ⭥⭩⭣⭨⭠⭤⭢⭦⭡⭧
-		//  Shift + LevelThree + LevelFive  white arrows           ⇳⬃⇩⬂⇦⬄⇨⬁⇧⬀
-		//
-		// Emoji arrows require a mixed palette for a consistent UX since the
-		// 4 main arrows had been picked from black arrows as the simple ones
-		// were used for keyboard arrows. The oblique and double-headed ones
-		// have later been inconsistently picked from the simple arrow range.
-		// See https://unicode-org.atlassian.net/browse/CLDR-11748
-		// This layout addresses that problem by giving the emoji palette easy
-		// access when  LevelThree  is held down, while uniform black arrows are
-		// on Shift +  LevelThree . Initially, the palette was mixed on index 7.
-		//
-		// When the DigitsLock toggle is on, the layout is in Programmer mode.
-		// The numpad offers the opportunity to switch hex letters (on Shift)
-		// to lowercase, and output 0x, \u{, \x{ rather than 000, U, <NNBSP>.
-		//
-		// Initially, the AltGr + AltFr modifier combination was not used, as
-		// these are hardly held down simultaneously while using the numpad.
-		// However, overlay numpads on laptops can actually be used that way.
-		// Therefore, two extra sets of arrows have been added in July 2021.
-
-		modifiers =                            LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level2; // 
-		map[                                               LevelThree         ] = Level6; // 
-		map[                                               LevelThree + Shift ] = Level6; // 
-		map[                                   LevelFive                      ] = Level4; // 
-		map[                                   LevelFive              + Shift ] = Level5; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level4 ] = "AltFr";
-		level_name[ Level5 ] = "Majuscule + AltFr";
-		level_name[ Level6 ] = "AltGr";
-		level_name[ Level7 ] = "AltGr + AltFr";
-		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
-
-	};
-
-	// type "EIGHT_LEVELS_NUMPAD_DIGIT" is replaced with the two following.
-
-	type "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP2" {
-		// For keys 2 4 6 8, where emoji arrows are black arrows.
-		//
-		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed first, the Function key last.
-		//
-		//  LevelFive  yields simple ↕↙↓↘←↔→↖↑↗ arrows.
-		//  LevelFive +Shift yields double ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗ arrows.
-		//  LevelThree +Shift yields uniform black ⬋⬇⬊⬅⬌➡⬉⬆⬈ arrows.
-		// Emoji arrows ↙⬇↘⬅↔➡↖⬆↗ are output with  LevelThree  (only) pressed.
-		//
-		// Emoji arrows require a mixed palette for a consistent UX since the
-		// 4 main arrows had been picked from black arrows as the simple ones
-		// were used for keyboard arrows. The oblique and double-headed ones
-		// have later been inconsistently picked from the simple arrow range.
-		// See https://unicode-org.atlassian.net/browse/CLDR-11748
-		// This layout addresses that problem by giving the emoji palette easy
-		// access when  LevelThree  is held down, while uniform black arrows are
-		// on Shift +  LevelThree . Initially, the palette was mixed on index 7.
-		//
-		// When the DigitsLock toggle is on, the layout is in Programmer mode.
-		// The numpad offers the opportunity to switch hex letters (on Shift)
-		// to lowercase, and output 0x, \u{, \x{ rather than 000, U, <NNBSP>.
-		//
-		// Initially, the AltGr + AltFr modifier combination was not used, as
-		// these are hardly held down simultaneously while using the numpad.
-		// However, overlay numpads on laptops can actually be used that way.
-		// Therefore, two extra sets of arrows have been added in July 2021.
-
-		modifiers =                            LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level3; // 
-		map[                                               LevelThree         ] = Level6; // 
-		map[                                               LevelThree + Shift ] = Level6; // 
-		map[                                   LevelFive                      ] = Level4; // 
-		map[                                   LevelFive              + Shift ] = Level5; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level4 ] = "AltFr";
-		level_name[ Level5 ] = "Majuscule + AltFr";
-		level_name[ Level6 ] = "AltGr";
-		level_name[ Level7 ] = "AltGr + AltFr";
-		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
-
-	};
-
-	type "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP1" {
-		// For keys 0 1 3 5 7 9, where emoji arrows are simple arrows.
-		//
-		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed first, the Function key last.
-
-		modifiers =                            LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level2; // 
-		map[                                               LevelThree         ] = Level4; // 
-		map[                                               LevelThree + Shift ] = Level6; // 
-		map[                                   LevelFive                      ] = Level4; // 
-		map[                                   LevelFive              + Shift ] = Level5; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level4 ] = "AltGr";
-		level_name[ Level5 ] = "Majuscule + AltFr";
-		level_name[ Level6 ] = "Majuscule + AltGr";
-		level_name[ Level7 ] = "AltGr + AltFr";
-		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
-
-	};
-
-	type "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP2" {
-		// For keys 0 1 3 5 7 9, where emoji arrows are simple arrows.
-		//
-		// DISCLAIMER: For this to work on laptops with an overlay numpad,
-		// the modifiers may need to be pressed first, the Function key last.
-
-		modifiers =                            LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level3; // 
-		map[                                               LevelThree         ] = Level4; // 
-		map[                                               LevelThree + Shift ] = Level6; // 
-		map[                                   LevelFive                      ] = Level4; // 
-		map[                                   LevelFive              + Shift ] = Level5; // 
-		map[                                   LevelFive + LevelThree         ] = Level7; // 
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level4 ] = "AltGr";
-		level_name[ Level5 ] = "Majuscule + AltFr";
-		level_name[ Level6 ] = "Majuscule + AltGr";
-		level_name[ Level7 ] = "AltGr + AltFr";
-		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
-
-	};
-
-	type "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP1" {
-		//  LevelThree  (impractical) and  LevelFive  (recommended) have same effect.
-		// Both default mode and Programmer mode have a full set of 4 dedicated indices,
-		// but level 1 of Programmer mode is mapped to index 1 for compatibility.
-
-		modifiers =                            LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level2; // 
-		map[                                               LevelThree         ] = Level3; // 
-		map[                                               LevelThree + Shift ] = Level4; // 
-		map[                                   LevelFive                      ] = Level3; // 
-		map[                                   LevelFive              + Shift ] = Level4; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "AltGr";
-		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "aucun";
-		level_name[ Level6 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level7 ] = "AltFr (chiffres verrouillés)";
-		level_name[ Level8 ] = "Majuscule + AltFr (chiffres verrouillés)";
-
-	};
-
-	type "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP2" {
-		//  LevelThree  (impractical) and  LevelFive  (recommended) have same effect.
-		// Both default mode and Programmer mode have a full set of 4 dedicated indices,
-		// but level 1 of Programmer mode is mapped to index 1 for compatibility.
-
-		modifiers =                            LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level6; // 
-		map[                                               LevelThree         ] = Level7; // 
-		map[                                               LevelThree + Shift ] = Level8; // 
-		map[                                   LevelFive                      ] = Level7; // 
-		map[                                   LevelFive              + Shift ] = Level8; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "AltGr";
-		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "aucun";
-		level_name[ Level6 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level7 ] = "AltFr (chiffres verrouillés)";
-		level_name[ Level8 ] = "Majuscule + AltFr (chiffres verrouillés)";
-
-	};
-
-	type "EIGHT_LEVELS_NUMPAD_DECIMAL_SEPARATOR_GROUP1" {
-		// Based on EIGHT_LEVELS_NUMPAD_DIGIT.
-		// Used on the decimal separator key(s).
-		// CapsLock affects indices 1..2 and 5..6.
+	type "EIGHT_LEVELS_NUMPAD_SEPARATOR" {
+		// CapsLock affects levels 1 and 2 for toggling dot and comma.
 
 		modifiers =           Lock           + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1; // 
 		map[                                                            Shift ] = Level2; // 
 		map[                                               LevelThree         ] = Level3; // 
 		map[                                               LevelThree + Shift ] = Level4; // 
-		map[                                   LevelFive                      ] = Level3; // 
-		map[                                   LevelFive              + Shift ] = Level4; // 
+		map[                                   LevelFive                      ] = Level5; // 
+		map[                                   LevelFive              + Shift ] = Level6; // 
 		map[                  Lock                                            ] = Level2; // 
 		map[                  Lock                                    + Shift ] = Level1; // 
 		map[                  Lock                       + LevelThree         ] = Level3; // 
 		map[                  Lock                       + LevelThree + Shift ] = Level4; // 
-		map[                  Lock           + LevelFive                      ] = Level3; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level4; // 
+		map[                  Lock           + LevelFive                      ] = Level5; // 
+		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -1492,99 +1258,3 @@ default partial xkb_types "dispocla" {
 		level_name[ Level8 ] = "Majuscule + AltFr (chiffres verrouillés)";
 
 	};
-
-	type "EIGHT_LEVELS_NUMPAD_DECIMAL_SEPARATOR_GROUP2" {
-		// Based on EIGHT_LEVELS_NUMPAD_DIGIT.
-		// Used on the decimal separator key(s).
-		// CapsLock affects indices 1..2 and 5..6.
-
-		modifiers =           Lock           + LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level6; // 
-		map[                                               LevelThree         ] = Level7; // 
-		map[                                               LevelThree + Shift ] = Level8; // 
-		map[                                   LevelFive                      ] = Level7; // 
-		map[                                   LevelFive              + Shift ] = Level8; // 
-		map[                  Lock                                            ] = Level6; // 
-		map[                  Lock                                    + Shift ] = Level5; // 
-		map[                  Lock                       + LevelThree         ] = Level7; // 
-		map[                  Lock                       + LevelThree + Shift ] = Level8; // 
-		map[                  Lock           + LevelFive                      ] = Level7; // 
-		map[                  Lock           + LevelFive              + Shift ] = Level8; // 
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-		preserve[                              LevelFive              + Shift ] = Shift;
-		preserve[             Lock                                    + Shift ] = Shift;
-		preserve[             Lock                       + LevelThree + Shift ] = Shift;
-		preserve[             Lock           + LevelFive              + Shift ] = Shift;
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "Majuscule";
-		level_name[ Level3 ] = "AltGr";
-		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "aucun";
-		level_name[ Level6 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level7 ] = "AltFr (chiffres verrouillés)";
-		level_name[ Level8 ] = "Majuscule + AltFr (chiffres verrouillés)";
-
-	};
-
-	type "EIGHT_LEVELS_EDIT_GROUP1" {
-		// Both Base and Shift levels are mapped to index 1 for compatibility.
-		// Level Five is UX-disturbances-prone, and is therefore not used.
-		// Output symbols depend on ASCII mode toggle state.
-
-		modifiers =                  Control             + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level1; // Shift is handled on application side.
-		map[                                               LevelThree         ] = Level3; // 
-		map[                                               LevelThree + Shift ] = Level4; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "aucun";
-		level_name[ Level3 ] = "AltGr";
-		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "AltGr (chiffres verrouillés)";
-		level_name[ Level6 ] = "Majuscule + AltGr (chiffres verrouillés)";
-		level_name[ Level7 ] = "aucun";
-		level_name[ Level8 ] = "aucun";
-
-	};
-
-	type "EIGHT_LEVELS_EDIT_GROUP2" {
-		// Both Base and Shift levels are mapped to index 1 for compatibility.
-		// Level Five is UX-disturbances-prone, and is therefore not used.
-		// Output symbols depend on ASCII mode toggle state.
-
-		modifiers =                  Control             + LevelThree + Shift ;
-		map[ None                                                             ] = Level1; // 
-		map[                                                            Shift ] = Level1; // 
-		map[                                               LevelThree         ] = Level5; // 
-		map[                                               LevelThree + Shift ] = Level6; // 
-		map[                         Control                                  ] = Level1; // 
-		map[                         Control                          + Shift ] = Level1; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[                                                       Shift ] = Shift;
-		preserve[                                          LevelThree + Shift ] = Shift;
-
-
-		level_name[ Level1 ] = "Base";
-		level_name[ Level2 ] = "aucun";
-		level_name[ Level3 ] = "AltGr";
-		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "AltGr (chiffres verrouillés)";
-		level_name[ Level6 ] = "Majuscule + AltGr (chiffres verrouillés)";
-		level_name[ Level7 ] = "aucun";
-		level_name[ Level8 ] = "aucun";
-
-	};
-
-};
