@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 2.3.0 (projet)
+
+* Disposition : Pavé numérique en mode ASCII : Permuter "=" U003D et "#" U0023. Redonder "{" U007B, "\\u{", "\\x{". (dispocla.cpp [f3bdb52](https://github.com/dispoclavier/nouvel-azerty/commit/f3bdb52d165f418ad11315bf662ef4e80ef47e6d), dispotypes.c [4eef10d](https://github.com/dispoclavier/nouvel-azerty/commit/4eef10d6fc4f76bfd98c8b8ba33d9e87958b21e1))
+* Personnalisation : Simplifier le code du pavé numérique. (ibidem)
+
 ## 2.2.1 (2024-06-03)
 
 * Sortie multi-caractères : Déboguer "&#" et "&#x". (compose-1.yml [456f97e](https://github.com/dispoclavier/nouvel-azerty/commit/456f97e489a250088bb181f72eb3c199a92e579a))
