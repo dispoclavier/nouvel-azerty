@@ -2,8 +2,12 @@
 
 ## 2.3.0 (projet)
 
-* Disposition : Pavé numérique en mode ASCII : Permuter "=" U003D et "#" U0023. Redonder "{" U007B, "\\u{", "\\x{". (dispocla.cpp [f3bdb52](https://github.com/dispoclavier/nouvel-azerty/commit/f3bdb52d165f418ad11315bf662ef4e80ef47e6d), dispotypes.c [4eef10d](https://github.com/dispoclavier/nouvel-azerty/commit/4eef10d6fc4f76bfd98c8b8ba33d9e87958b21e1))
-* Personnalisation : Simplifier le code du pavé numérique. (ibidem)
+* Disposition :
+  * Chiffres du pavé numérique :
+    * Mode français : Permuter les flèches simples et les flèches émojis ; permuter les flèches doubles et les flèches pleines. (dispocla.cpp [e3bf0c6](https://github.com/dispoclavier/nouvel-azerty/commit/e3bf0c60e26641106c106c4acda1dde9d32a34a8))
+    * Mode ASCII : Permuter les flèches émojis et les flèches à tête triangulaire ; permuter les flèches pleines et les flèches ajourées. (ibidem)
+  * Opérateurs du pavé numérique en mode ASCII : Permuter "=" U003D et "#" U0023. Redonder "{" U007B, "\\u{", "\\x{". (dispocla.cpp [f3bdb52](https://github.com/dispoclavier/nouvel-azerty/commit/f3bdb52d165f418ad11315bf662ef4e80ef47e6d), dispotypes.c [4eef10d](https://github.com/dispoclavier/nouvel-azerty/commit/4eef10d6fc4f76bfd98c8b8ba33d9e87958b21e1))
+* Personnalisation : Pavé numérique : Simplifier le code. (ibidem)
 
 ## 2.2.1 (2024-06-03)
 
