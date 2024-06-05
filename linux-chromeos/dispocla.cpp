@@ -1,4 +1,4 @@
-//                       Date: 2024-06-02T1935+0200
+//                       Date: 2024-06-05T0632+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -420,21 +420,30 @@
 // cope with the limitation to 8 indices in XKB allocation tables. The number
 // of keyboard levels in user experience may be up to 8 using three modifiers
 // (Shift, AltGr, AltFr). Since the ModLock toggle is a group toggle, it does
-// not require any additional indices, but Caps Lock and Control may.
+// not require any additional indices, but Caps Lock and Control may do so.
 //
 // The term “group” should be dedicated to dead-key-accessed groups, the most
-// prominent of which are accessed through the “group selector” dead key that
+// prominent of which are accessed through the “group selector” dead key, that
 // also supports multiple presses. As a consequence, the group number matches
-// the number of group selector key presses, and the digit entered after. The
-// multiple key press support goes at least up to 4. That is why groups are a
-// 0-based array of 13 groups, where index 0 is the default layout. The first
-// three digits are used for groups 10 through 12.
+// the number of group selector key presses, or the digit entered after one
+// group selector key press. Support for multiple group selector key presses
+// goes at least up to 4. That is why groups are a 0-based array of 13 groups,
+// where index 0 is the default layout. Digits 0..2 are used for groups 10..12.
 //
 // Given access to uppercase must be intuitive, digits are mapped on level 3.
-// Caps Lock is required for uppercase. As a consequence, the digits require
+//
+//
+// ### Toggle keys
+//
+// Caps Lock is dedicated to uppercase. As a consequence, the digits require
 // an extra toggle, that is called “ModLock”, short for Mode Lock, and it is
 // implemented as a group toggle. Other non-alphabetic keys are also affected
-// by ModLock, making up for what may be referred to as an ASCII mode.
+// by ModLock, making up for what may be referred to as an ASCII mode without
+// being limited to ASCII, as in ASCII mode, row E and keys D12, C11, C12 are
+// able to output subscript digits, signs and punctuation that are not there in
+// default mode, where keypad emoji are easier accessed instead. ASCII symbols
+// and backwards compatible dead keys printed on these keys are also accessible
+// in default mode, but not in ASCII mode.
 //
 
 default partial alphanumeric_keys
@@ -511,6 +520,7 @@ xkb_symbols "kbfrFRs" {
 	// Level inconsistency
 	//
 	// CAUTION: Index 4 is mostly level 5, and conversely.
+	//          Index 6 is mostly level 7, and conversely.
 	//
 	// On indices 1 through 4, the keysyms are ordered only with respect to the
 	// keyboard view, where the traditional four levels are filled in by parsing
@@ -528,6 +538,8 @@ xkb_symbols "kbfrFRs" {
 	// the same symbol is not possible, to cater for the Breton trigram because
 	// this is written with a letter apostrophe U02BC and so makes a good point
 	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
+	//
+	// Level 7 superscript letters are mapped on index 6 for ease of maintenance.
 	//
 	//
 	// Column width
@@ -841,116 +853,155 @@ xkb_symbols "kbfrFRs" {
 		[            KP_Equal ]
 	};
 
-	//                    1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_OPERATOR_GROUP2";
+	//
+	// Operator keys
+	//
+	// LevelThree (impractical) and LevelFive (recommended) have same effect.
+	//
+
+	key.type[Group1] = "EIGHT_LEVEL";
+	key.type[Group2] = "EIGHT_LEVEL";
 	key <KPDV> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[           KP_Divide,            division,             radical,           parenleft,           KP_Divide,           parenleft,         bracketleft,               U2044 ],
-		[           KP_Divide,            division,             radical,           parenleft,           KP_Divide,           parenleft,         bracketleft,               U2044 ]
+		[           KP_Divide,            division,             radical,           parenleft,             radical,           parenleft ],
+		[           KP_Divide,           parenleft,         bracketleft,               U2044,         bracketleft,               U2044 ]
 	}; // U2044 ⁄ FRACTION SLASH
 
 	key <KPMU> {
-		[         KP_Multiply,            multiply,         asciicircum,          parenright,         KP_Multiply,          parenright,        bracketright,            NoSymbol ],
-		[         KP_Multiply,            multiply,         asciicircum,          parenright,         KP_Multiply,          parenright,        bracketright,            NoSymbol ]
-	};
+		[         KP_Multiply,            multiply,         asciicircum,          parenright,         asciicircum,          parenright ],
+		[         KP_Multiply,          parenright,        bracketright,               UEF7F,        bracketright,               UEF7F ]
+	}; // UEF7F '\x{'
 
 	key <KPSU> {
-		[         KP_Subtract,               U2212,               equal,               U2243,         KP_Subtract,         asciicircum,          numbersign,            NoSymbol ],
-		[         KP_Subtract,               U2212,               equal,               U2243,         KP_Subtract,         asciicircum,          numbersign,            NoSymbol ]
-	}; // U2212 − MINUS SIGN; U2243 ≃ ASYMPTOTICALLY EQUAL
+		[         KP_Subtract,               U2212,               equal,               U2243,               equal,               U2243 ],
+		[         KP_Subtract,         asciicircum,               equal,               UEF7E,               equal,               UEF7E ]
+	}; // U2212 − MINUS SIGN; U2243 ≃ ASYMPTOTICALLY EQUAL; UEF7E '\u{'
 
 	key <KPAD> {
-		[              KP_Add,                plus,           plusminus,               U2248,              KP_Add,          braceright,               equal,            NoSymbol ],
-		[              KP_Add,                plus,           plusminus,               U2248,              KP_Add,          braceright,               equal,            NoSymbol ]
+		[              KP_Add,                plus,           plusminus,               U2248,           plusminus,               U2248 ],
+		[              KP_Add,          braceright,          numbersign,           braceleft,          numbersign,           braceleft ]
 	}; // U2248 ≈ ALMOST EQUAL
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DECIMAL_SEPARATOR_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DECIMAL_SEPARATOR_GROUP2";
+	//
+	// Decimal separator keys
+	//
+	// CapsLock affects levels 1 and 2 for toggling dot and comma.
+	// LevelThree (impractical) and LevelFive (recommended) have same effect.
+	//
+
+	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
+	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
 	key <KPDL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,          KP_Decimal,               comma,               space,        nobreakspace ],
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,          KP_Decimal,               comma,               space,        nobreakspace ]
-	}; // U202F   NARROW NO-BREAK SPACE
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace ],
+		[          KP_Decimal,               comma,               space,        nobreakspace,               space,        nobreakspace ]
+	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	key <KPPT> {
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,          KP_Decimal,               comma,               space,        nobreakspace ],
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,          KP_Decimal,               comma,               space,        nobreakspace ]
-	}; // U202F   NARROW NO-BREAK SPACE
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace ],
+		[          KP_Decimal,               comma,               space,        nobreakspace,               space,        nobreakspace ]
+	}; // U202F ' ' NARROW NO-BREAK SPACE
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP2";
+	//
+	// Digit keys
+	//
+	// In ASCII mode, the level 2 hex letters are lowercase, and 0x, \u{, \x{ are
+	// output rather than 000, U, and NARROW NO-BREAK SPACE.
+	//
+	// Keycap engravings for the deactivated cursor key functionality are usually
+	// repurposed for hinting the positions of a full set of 10 graphic arrows.
+	//
+	// On desktop keyboards, the combos involving both LevelThree and LevelFive
+	// are almost unusable, so initially, the AltGr + AltFr modifier combination
+	// was not used, as these are hard to hold down simultaneously while using
+	// the numpad. However, the overlay numpads on laptops can actually be used
+	// that way. Therefore, two extra sets of arrows have been added (2021-07).
+	//
+	//          LevelThree              emoji arrows           ↕↙⬇↘⬅↔➡↖⬆↗
+	//  Shift + LevelThree              uniform black arrows   ⬍⬋⬇⬊⬅⬌➡⬉⬆⬈
+	//                       LevelFive  simple arrows          ↕↙↓↘←↔→↖↑↗
+	//  Shift +              LevelFive  double arrows          ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
+	//          LevelThree + LevelFive  triangle-headed arrows ⭥⭩⭣⭨⭠⭤⭢⭦⭡⭧
+	//  Shift + LevelThree + LevelFive  white arrows           ⇳⬃⇩⬂⇦⬄⇨⬁⇧⬀
+	//
+	// Emoji arrows are a mix of simple and filled arrows. For a consistent user
+	// experience, emoji arrows are mapped on a dedicated level, a consistent set
+	// of simple arrows is mapped on another level, and so are the filled arrows.
+	//
+	// For emojification, the four main arrows had been picked from black arrows,
+	// due to the use of the simple arrows to represent keyboard arrows. On the
+	// other hand, oblique or double-headed arrows are inconsistently picked from
+	// the simple arrow range.
+	// https://unicode-org.atlassian.net/browse/CLDR-11748
+	//
+
+	key.type[Group1] = "EIGHT_LEVEL";
+	key.type[Group2] = "EIGHT_LEVEL";
 	key <KP0>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category or state:          ModLock off,          ModLock on,       single arrows,       double arrows, black/filled arrows,     triangle-headed,  white/empty arrows
-		[                KP_0,               UEF6D,               UEF6D,               U2195,               U21D5,               U2B0D,               U2B65,               U21F3 ],
-		[                KP_0,               UEF6D,               UEF6D,               U2195,               U21D5,               U2B0D,               U2B65,               U21F3 ]
-	}; // UEF6D '00'; UEF6D '00'; ↕; ⇕; ⬍; ⭥; ⇳
+		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_0,               UEF6D,               U2195,               U2B0D,               U2195,               U21D5,               U2B65,               U21F3 ],
+		[                KP_0,               UEF6D,               U2195,               U2B0D,               U2195,               U21D5,               U2B65,               U21F3 ]
+	}; // UEF6D '00'; ↕; ⇕; ⬍; ⭥; ⇳
 
 	key <KP1>  {
-		[                KP_1,               UEF7D,               UEF7C,               U2199,               U21D9,               U2B0B,               U2B69,               U2B03 ],
-		[                KP_1,               UEF7D,               UEF7C,               U2199,               U21D9,               U2B0B,               U2B69,               U2B03 ]
+		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_1,               UEF7D,               U2199,               U2B0B,               U2199,               U21D9,               U2B69,               U2B03 ],
+		[                KP_1,               UEF7C,               U2199,               U2B0B,               U2199,               U21D9,               U2B69,               U2B03 ]
 	}; // UEF7D '000'; UEF7C '0x'; ↙; ⇙; ⬋; ⭩; ⬃
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP2";
 	key <KP2>  {
-		[                KP_2,                   A,                   a,               U2193,               U21D3,               U2B07,               U2B63,               U21E9 ],
-		[                KP_2,                   A,                   a,               U2193,               U21D3,               U2B07,               U2B63,               U21E9 ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_2,                   A,               U2B07,               U2B07,               U2193,               U21D3,               U2B63,               U21E9 ],
+		[                KP_2,                   a,               U2B07,               U2B07,               U2193,               U21D3,               U2B63,               U21E9 ]
 	}; // ↓; ⇓; ⬇; ⭣; ⇩
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP2";
 	key <KP3>  {
-		[                KP_3,                   B,                   b,               U2198,               U21D8,               U2B0A,               U2B68,               U2B02 ],
-		[                KP_3,                   B,                   b,               U2198,               U21D8,               U2B0A,               U2B68,               U2B02 ]
+		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_3,                   B,               U2198,               U2B0A,               U2198,               U21D8,               U2B68,               U2B02 ],
+		[                KP_3,                   b,               U2198,               U2B0A,               U2198,               U21D8,               U2B68,               U2B02 ]
 	}; // ↘; ⇘; ⬊; ⭨; ⬂
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP2";
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                KP_4,                   U,               UEF7E,               U2190,               U21D0,               U2B05,               U2B60,               U21E6 ],
-		[                KP_4,                   U,               UEF7E,               U2190,               U21D0,               U2B05,               U2B60,               U21E6 ]
+		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_4,                   U,               U2B05,               U2B05,               U2190,               U21D0,               U2B60,               U21E6 ],
+		[                KP_4,               UEF7E,               U2B05,               U2B05,               U2190,               U21D0,               U2B60,               U21E6 ]
 	}; // Unicode; '\u{'; ←; ⇐; ⬅; ⭠; ⇦
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP2";
 	key <KP5>  {
-		[                KP_5,                   C,                   c,               U2194,               U21D4,               U2B0C,               U2B64,               U2B04 ],
-		[                KP_5,                   C,                   c,               U2194,               U21D4,               U2B0C,               U2B64,               U2B04 ]
+		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_5,                   C,               U2194,               U2B0C,               U2194,               U21D4,               U2B64,               U2B04 ],
+		[                KP_5,                   c,               U2194,               U2B0C,               U2194,               U21D4,               U2B64,               U2B04 ]
 	}; // ↔; ⇔; ⬌; ⭤; ⬄
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP2";
 	key <KP6>  {
-		[                KP_6,                   D,                   d,               U2192,               U21D2,               U27A1,               U2B62,               U21E8 ],
-		[                KP_6,                   D,                   d,               U2192,               U21D2,               U27A1,               U2B62,               U21E8 ]
+		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_6,                   D,               U27A1,               U27A1,               U2192,               U21D2,               U2B62,               U21E8 ],
+		[                KP_6,                   d,               U27A1,               U27A1,               U2192,               U21D2,               U2B62,               U21E8 ]
 	}; // →; ⇒; ➡; ⭢; ⇨
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP2";
 	key <KP7>  {
-		[                KP_7,               U202F,               UEF7F,               U2196,               U21D6,               U2B09,               U2B66,               U2B01 ],
-		[                KP_7,               U202F,               UEF7F,               U2196,               U21D6,               U2B09,               U2B66,               U2B01 ]
-	}; // NNBSP; '\x{'; ↖; ⇖; ⬉; ⭦; ⬁
+		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_7,               U202F,               U2196,               U2B09,               U2196,               U21D6,               U2B66,               U2B01 ],
+		[                KP_7,               UEF7F,               U2196,               U2B09,               U2196,               U21D6,               U2B66,               U2B01 ]
+	}; // U202F NARROW NO-BREAK SPACE; UEF7F '\x{'; ↖; ⇖; ⬉; ⭦; ⬁
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_BLACK_GROUP2";
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                KP_8,                   E,                   e,               U2191,               U21D1,               U2B06,               U2B61,               U21E7 ],
-		[                KP_8,                   E,                   e,               U2191,               U21D1,               U2B06,               U2B61,               U21E7 ]
+		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_8,                   E,               U2B06,               U2B06,               U2191,               U21D1,               U2B61,               U21E7 ],
+		[                KP_8,                   e,               U2B06,               U2B06,               U2191,               U21D1,               U2B61,               U21E7 ]
 	}; // ↑; ⇑; ⬆; ⭡; ⇧
 
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP1";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_DIGIT_EMOJI_SIMPLE_GROUP2";
 	key <KP9>  {
-		[                KP_9,                   F,                   f,               U2197,               U21D7,               U2B08,               U2B67,               U2B00 ],
-		[                KP_9,                   F,                   f,               U2197,               U21D7,               U2B08,               U2B67,               U2B00 ]
+		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
+		[                KP_9,                   F,               U2197,               U2B08,               U2197,               U21D7,               U2B67,               U2B00 ],
+		[                KP_9,                   f,               U2197,               U2B08,               U2197,               U21D7,               U2B67,               U2B00 ]
 	}; // ↗; ⇗; ⬈; ⭧; ⬀
 
-	// Modifier maps:
+	// Modifier maps
 	modifier_map Control { <LCTL> };
 	modifier_map Mod2    { <NMLK> };
 	modifier_map Shift   { <LFSH> };
@@ -1335,6 +1386,7 @@ xkb_symbols "kbfrFRsr" {
 	}; // superscript small g
 
 	key <AD07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   m,                   M,            NoSymbol,            NoSymbol,            NoSymbol,               U1D50 ],
 		[                   m,                   M,            NoSymbol,            NoSymbol,            NoSymbol,               U1D50 ]
 	}; // superscript small m
@@ -1385,6 +1437,7 @@ xkb_symbols "kbfrFRsr" {
 	}; // superscript small t
 
 	key <AC06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   u,                   U,            NoSymbol,            NoSymbol,            NoSymbol,               U1D58 ],
 		[                   u,                   U,            NoSymbol,            NoSymbol,            NoSymbol,               U1D58 ]
 	}; // superscript small u
