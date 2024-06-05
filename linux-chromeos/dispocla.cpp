@@ -1,4 +1,4 @@
-//                       Date: 2024-06-05T0632+0200
+//                       Date: 2024-06-05T2346+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -917,89 +917,116 @@ xkb_symbols "kbfrFRs" {
 	// the numpad. However, the overlay numpads on laptops can actually be used
 	// that way. Therefore, two extra sets of arrows have been added (2021-07).
 	//
-	//          LevelThree              emoji arrows           ↕↙⬇↘⬅↔➡↖⬆↗
-	//  Shift + LevelThree              uniform black arrows   ⬍⬋⬇⬊⬅⬌➡⬉⬆⬈
-	//                       LevelFive  simple arrows          ↕↙↓↘←↔→↖↑↗
-	//  Shift +              LevelFive  double arrows          ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
-	//          LevelThree + LevelFive  triangle-headed arrows ⭥⭩⭣⭨⭠⭤⭢⭦⭡⭧
-	//  Shift + LevelThree + LevelFive  white arrows           ⇳⬃⇩⬂⇦⬄⇨⬁⇧⬀
+	// The supported arrow sets are simple, double, black, white, triangle-headed
+	// arrows. The preferred name of the black arrows is filled arrows, and the
+	// preferred name of the white arrows is outline arrows.
 	//
-	// Emoji arrows are a mix of simple and filled arrows. For a consistent user
-	// experience, emoji arrows are mapped on a dedicated level, a consistent set
-	// of simple arrows is mapped on another level, and so are the filled arrows.
+	// Simple             U2190..U2199                       ↕↙↓↘←↔→↖↑↗
+	// Double             U21D0..U21D9                       ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
+	// Filled             U27A1, U2B05..U2B0D                ⬍⬋⬇⬊⬅⬌➡⬉⬆⬈
+	// Outline            U21E6..U21E9, U21F3, U2B00..U2B04  ⇳⬃⇩⬂⇦⬄⇨⬁⇧⬀
+	// Triangle-headed    U2B60..U2B69                       ⭥⭩⭣⭨⭠⭤⭢⭦⭡⭧
 	//
-	// For emojification, the four main arrows had been picked from black arrows,
-	// due to the use of the simple arrows to represent keyboard arrows. On the
-	// other hand, oblique or double-headed arrows are inconsistently picked from
-	// the simple arrow range.
+	// Basic arrow emoji are a mix of simple and filled arrows. For emojification
+	// the four main arrows had been picked from black arrows, due to the use of
+	// the simple arrows to represent keyboard arrows. On the other hand, oblique
+	// or double-headed arrows are inconsistently picked from the simple arrows.
 	// https://unicode-org.atlassian.net/browse/CLDR-11748
+	//
+	// Basic arrow emoji  U27A1, U2B05..U2B07, U2194..U2199  ↕↙⬇↘⬅↔➡↖⬆↗
+	//
+	// For a consistent user experience, the basic arrow emoji are mapped on a
+	// dedicated level, additionally to the sets of simple and filled arrows.
+	//
+	// The effect on user experience of the key combination AltFr + AltGr/Option
+	// plus a numpad digit is mitigated by making the level depend on the state
+	// of the ModLock toggle. In this table, the keyboard levels are ordered by
+	// UX quality, from best to worst. LevelThree is AltGr, LevelFive is AltFr.
+	//
+	//                                    Default mode      ASCII mode
+	//
+	//                       LevelFive    emoji arrows      simple arrows
+	//  Shift +              LevelFive    filled arrows     double arrows
+	//          LevelThree                simple arrows     triangle-headed
+	//  Shift + LevelThree                double arrows     outline arrows
+	//          LevelThree + LevelFive    triangle-headed   emoji arrows
+	//  Shift + LevelThree + LevelFive    outline arrows    filled arrows
 	//
 
 	key.type[Group1] = "EIGHT_LEVEL";
 	key.type[Group2] = "EIGHT_LEVEL";
 	key <KP0>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_0,               UEF6D,               U2195,               U2B0D,               U2195,               U21D5,               U2B65,               U21F3 ],
-		[                KP_0,               UEF6D,               U2195,               U2B0D,               U2195,               U21D5,               U2B65,               U21F3 ]
-	}; // UEF6D '00'; ↕; ⇕; ⬍; ⭥; ⇳
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_0,               UEF6D,               U2195,               U21D5,               U2195,               U2B0D,               U2B65,               U21F3 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_0,               UEF6D,               U2B65,               U21F3,               U2195,               U21D5,               U2195,               U2B0D ]
+	}; // UEF6D '00'
 
 	key <KP1>  {
-		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_1,               UEF7D,               U2199,               U2B0B,               U2199,               U21D9,               U2B69,               U2B03 ],
-		[                KP_1,               UEF7C,               U2199,               U2B0B,               U2199,               U21D9,               U2B69,               U2B03 ]
-	}; // UEF7D '000'; UEF7C '0x'; ↙; ⇙; ⬋; ⭩; ⬃
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_1,               UEF7D,               U2199,               U21D9,               U2199,               U2B0B,               U2B69,               U2B03 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_1,               UEF7C,               U2B69,               U2B03,               U2199,               U21D9,               U2199,               U2B0B ]
+	}; // UEF7D '000'; UEF7C '0x'
 
 	key <KP2>  {
-		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_2,                   A,               U2B07,               U2B07,               U2193,               U21D3,               U2B63,               U21E9 ],
-		[                KP_2,                   a,               U2B07,               U2B07,               U2193,               U21D3,               U2B63,               U21E9 ]
-	}; // ↓; ⇓; ⬇; ⭣; ⇩
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_2,                   A,               U2193,               U21D3,               U2B07,               U2B07,               U2B63,               U21E9 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		[                KP_2,                   a,               U2B63,               U21E9,               U2193,               U21D3,               U2B07,               U2B07 ]
+	};
 
 	key <KP3>  {
-		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_3,                   B,               U2198,               U2B0A,               U2198,               U21D8,               U2B68,               U2B02 ],
-		[                KP_3,                   b,               U2198,               U2B0A,               U2198,               U21D8,               U2B68,               U2B02 ]
-	}; // ↘; ⇘; ⬊; ⭨; ⬂
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_3,                   B,               U2198,               U21D8,               U2198,               U2B0A,               U2B68,               U2B02 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_3,                   b,               U2B68,               U2B02,               U2198,               U21D8,               U2198,               U2B0A ]
+	};
 
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_4,                   U,               U2B05,               U2B05,               U2190,               U21D0,               U2B60,               U21E6 ],
-		[                KP_4,               UEF7E,               U2B05,               U2B05,               U2190,               U21D0,               U2B60,               U21E6 ]
-	}; // Unicode; '\u{'; ←; ⇐; ⬅; ⭠; ⇦
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_4,                   U,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		[                KP_4,               UEF7E,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
+	}; // Unicode; '\u{'
 
 	key <KP5>  {
-		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_5,                   C,               U2194,               U2B0C,               U2194,               U21D4,               U2B64,               U2B04 ],
-		[                KP_5,                   c,               U2194,               U2B0C,               U2194,               U21D4,               U2B64,               U2B04 ]
-	}; // ↔; ⇔; ⬌; ⭤; ⬄
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_5,                   C,               U2194,               U21D4,               U2194,               U2B0C,               U2B64,               U2B04 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_5,                   c,               U2B64,               U2B04,               U2194,               U21D4,               U2194,               U2B0C ]
+	};
 
 	key <KP6>  {
-		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_6,                   D,               U27A1,               U27A1,               U2192,               U21D2,               U2B62,               U21E8 ],
-		[                KP_6,                   d,               U27A1,               U27A1,               U2192,               U21D2,               U2B62,               U21E8 ]
-	}; // →; ⇒; ➡; ⭢; ⇨
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_6,                   D,               U2192,               U21D2,               U27A1,               U27A1,               U2B62,               U21E8 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		[                KP_6,                   d,               U2B62,               U21E8,               U2192,               U21D2,               U27A1,               U27A1 ]
+	};
 
 	key <KP7>  {
-		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_7,               U202F,               U2196,               U2B09,               U2196,               U21D6,               U2B66,               U2B01 ],
-		[                KP_7,               UEF7F,               U2196,               U2B09,               U2196,               U21D6,               U2B66,               U2B01 ]
-	}; // U202F NARROW NO-BREAK SPACE; UEF7F '\x{'; ↖; ⇖; ⬉; ⭦; ⬁
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_7,               U202F,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_7,               UEF7F,               U2B66,               U2B01,               U2196,               U21D6,               U2196,               U2B09 ]
+	}; // U202F NARROW NO-BREAK SPACE; UEF7F '\x{'
 
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:                                 black/filled arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_8,                   E,               U2B06,               U2B06,               U2191,               U21D1,               U2B61,               U21E7 ],
-		[                KP_8,                   e,               U2B06,               U2B06,               U2191,               U21D1,               U2B61,               U21E7 ]
-	}; // ↑; ⇑; ⬆; ⭡; ⇧
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_8,                   E,               U2191,               U21D1,               U2B06,               U2B06,               U2B61,               U21E7 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		[                KP_8,                   e,               U2B61,               U21E7,               U2191,               U21D1,               U2B06,               U2B06 ]
+	};
 
 	key <KP9>  {
-		// Category:                                       simple arrow,  black/filled arrow,        simple arrow,        double arrow,     triangle-headed,   white/empty arrow
-		[                KP_9,                   F,               U2197,               U2B08,               U2197,               U21D7,               U2B67,               U2B00 ],
-		[                KP_9,                   f,               U2197,               U2B08,               U2197,               U21D7,               U2B67,               U2B00 ]
-	}; // ↗; ⇗; ⬈; ⭧; ⬀
+		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_9,                   F,               U2197,               U21D7,               U2197,               U2B08,               U2B67,               U2B00 ],
+		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_9,                   f,               U2B67,               U2B00,               U2197,               U21D7,               U2197,               U2B08 ]
+	};
 
 	// Modifier maps
 	modifier_map Control { <LCTL> };
