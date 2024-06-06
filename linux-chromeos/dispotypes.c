@@ -1,4 +1,4 @@
-//                       Date: 2024-06-05T0630+0200
+//                       Date: 2024-06-06T1956+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -80,24 +80,34 @@ default partial xkb_types "dispocla" {
 
 	virtual_modifiers LevelThree, LevelFive;
 
-	// The following types are found in /usr/share/X11/xkb/types/level5
-	// on Ubuntu 16.04 LTS.
+	type "EIGHT_LEVELS_BASIC" {
+		// Based on "EIGHT_LEVEL" in xkb/types/level5(8).
+		// This type is required for the sake of level names, where "X" is "AltFr".
 
-	// type "EIGHT_LEVEL" {...} see in xkb/types/level5(8).
-		// Does not force effect of Caps Lock on any index pair.
-		// Relies on internal capitalization rules.
+		modifiers =                            LevelFive + LevelThree + Shift ;
+		map[ None                                                             ] = Level1;
+		map[                                                            Shift ] = Level2;
+		map[                                               LevelThree         ] = Level3;
+		map[                                               LevelThree + Shift ] = Level4;
+		map[                                   LevelFive                      ] = Level5;
+		map[                                   LevelFive              + Shift ] = Level6;
+		map[                                   LevelFive + LevelThree         ] = Level7;
+		map[                                   LevelFive + LevelThree + Shift ] = Level8;
+		preserve[                                                       Shift ] = Shift;
+		preserve[                                          LevelThree + Shift ] = Shift;
+		preserve[                              LevelFive              + Shift ] = Shift;
+		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
 
-	// type "EIGHT_LEVEL_ALPHABETIC" {...} see in xkb/types/level5(28).
-		// CapsLock affects indices 1-2, 3-4, 5-6 and 7-8.
+		level_name[ Level1 ] = "Base";
+		level_name[ Level2 ] = "Majuscule";
+		level_name[ Level3 ] = "AltGr";
+		level_name[ Level4 ] = "Majuscule + AltGr";
+		level_name[ Level5 ] = "AltFr";
+		level_name[ Level6 ] = "Majuscule + AltFr";
+		level_name[ Level7 ] = "AltGr + AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
 
-	// type "EIGHT_LEVEL_SEMIALPHABETIC" {...} see in xkb/types/level5(178).
-		// CapsLock affects indices 1..2 and 5..6.
-		// This type does not feature "Shift cancels Lock" on levels 5..6. and
-		// hence does not match the specifications used in symbols/dispocla.
-
-		// These types are commented out in the original file as of Ubuntu 16.04:
-	// type "EIGHT_LEVEL_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(56).
-	// type "EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK" {...} see in xkb/types/level5(118).
+	};
 
 	type "EIGHT_LEVELS_LEVEL1_CONTROL" {
 		// Index 4 (Level4) is level 5 (LevelFive) for the sake of keyboard views,
@@ -619,7 +629,7 @@ default partial xkb_types "dispocla" {
 		level_name[ Level5 ] = "Majuscule + AltFr";
 		level_name[ Level6 ] = "AltGr + AltFr";
 		level_name[ Level7 ] = "Majuscule + AltGr + AltFr";
-		level_name[ Level8 ] = "Majuscule (chiffres verrouillés)";
+		level_name[ Level8 ] = "Majuscule";
 
 	};
 
@@ -862,10 +872,10 @@ default partial xkb_types "dispocla" {
 		level_name[ Level2 ] = "Majuscule";
 		level_name[ Level3 ] = "AltGr";
 		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "Majuscule + AltFr";
-		level_name[ Level6 ] = "Majuscule + AltGr + AltFr";
-		level_name[ Level7 ] = "AltGr + AltFr";
-		level_name[ Level8 ] = "AltFr";
+		level_name[ Level5 ] = "(aucun)";
+		level_name[ Level6 ] = "AltGr + AltFr";
+		level_name[ Level7 ] = "AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
 
 	};
 
@@ -895,11 +905,11 @@ default partial xkb_types "dispocla" {
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
 		level_name[ Level3 ] = "AltGr";
-		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "Majuscule + AltFr";
-		level_name[ Level6 ] = "Majuscule + AltGr + AltFr";
-		level_name[ Level7 ] = "AltGr + AltFr";
-		level_name[ Level8 ] = "AltFr";
+		level_name[ Level4 ] = "Majuscule + AltFr";
+		level_name[ Level5 ] = "Majuscule + AltGr";
+		level_name[ Level6 ] = "AltFr";
+		level_name[ Level7 ] = "(aucun)";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
 
 	};
 
@@ -944,7 +954,7 @@ default partial xkb_types "dispocla" {
 		level_name[ Level5 ] = "AltGr + AltFr";
 		level_name[ Level6 ] = "Majuscule + AltFr";
 		level_name[ Level7 ] = "Majuscule + AltGr + AltFr";
-		level_name[ Level8 ] = "Majuscule (chiffres verrouillés)";
+		level_name[ Level8 ] = "(aucun)";
 
 	};
 
@@ -1171,7 +1181,7 @@ default partial xkb_types "dispocla" {
 		level_name[ Level4 ] = "Majuscule + AltGr";
 		level_name[ Level5 ] = "AltFr";
 		level_name[ Level6 ] = "AltGr + AltFr";
-		level_name[ Level7 ] = "Majuscule (chiffres verrouillés)";
+		level_name[ Level7 ] = "Majuscule";
 		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
 
 	};
@@ -1235,26 +1245,34 @@ default partial xkb_types "dispocla" {
 		map[                                               LevelThree + Shift ] = Level4; // 
 		map[                                   LevelFive                      ] = Level5; // 
 		map[                                   LevelFive              + Shift ] = Level6; // 
+		map[                                   LevelFive + LevelThree         ] = Level7; // 
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
 		map[                  Lock                                            ] = Level2; // 
 		map[                  Lock                                    + Shift ] = Level1; // 
 		map[                  Lock                       + LevelThree         ] = Level3; // 
 		map[                  Lock                       + LevelThree + Shift ] = Level4; // 
 		map[                  Lock           + LevelFive                      ] = Level5; // 
 		map[                  Lock           + LevelFive              + Shift ] = Level6; // 
+		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 
+		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
+		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
 		preserve[             Lock                                    + Shift ] = Shift;
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
+		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
 		level_name[ Level3 ] = "AltGr";
 		level_name[ Level4 ] = "Majuscule + AltGr";
-		level_name[ Level5 ] = "aucun";
-		level_name[ Level6 ] = "Majuscule (chiffres verrouillés)";
-		level_name[ Level7 ] = "AltFr (chiffres verrouillés)";
-		level_name[ Level8 ] = "Majuscule + AltFr (chiffres verrouillés)";
+		level_name[ Level5 ] = "AltFr";
+		level_name[ Level6 ] = "Majuscule + AltFr";
+		level_name[ Level7 ] = "AltGr + AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
 
 	};
+
+};
