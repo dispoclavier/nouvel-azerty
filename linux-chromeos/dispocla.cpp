@@ -1,4 +1,4 @@
-//                       Date: 2024-06-05T2346+0200
+//                       Date: 2024-06-06T1954+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -486,8 +486,8 @@ xkb_symbols "kbfrFRs" {
 
 	include "level3(ralt_switch)"
 
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <RALT> {
 		[ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ],
 		[ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]
@@ -499,17 +499,18 @@ xkb_symbols "kbfrFRs" {
 	// The second graphic toggle changes between default mode, that is called the
 	// French mode for instance, and the ASCII mode. It is implemented as a group
 	// toggle between first group and last group, i.e. group 1 and group 2, while
-	// repurposing NumLock is not an option, due to its use on compact keyboards.
-	// Key TLDE is used for this additional graphic toggle and becomes Group Lock
-	// or ModLock for short, affecting both the alphanumeric block and the numpad
-	// graphic extensions.
+	// repurposing NumLock is not an option, due to its use on compact keyboards;
+	// key types doing that are discarded in xkb/types/level5(56, 118). For this
+	// additional graphic toggle, key TLDE is used, and so becomes the Group Lock
+	// toggle key, or “ModLock” for short. ModLock affects the alphanumeric block
+	// and also the numpad with respect to its graphic extensions.
 	//
 	// ISO_First_Group is interpreted as: action= LockGroup(group=1)
 	// ISO_Last_Group  is interpreted as: action= LockGroup(group=2)
 	//
 
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,               UEFA1,               UEFA0 ],
@@ -859,8 +860,8 @@ xkb_symbols "kbfrFRs" {
 	// LevelThree (impractical) and LevelFive (recommended) have same effect.
 	//
 
-	key.type[Group1] = "EIGHT_LEVEL";
-	key.type[Group2] = "EIGHT_LEVEL";
+	key.type[Group1] = "EIGHT_LEVELS_BASIC";
+	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <KPDV> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[           KP_Divide,            division,             radical,           parenleft,             radical,           parenleft ],
@@ -879,8 +880,8 @@ xkb_symbols "kbfrFRs" {
 
 	key <KPAD> {
 		[              KP_Add,                plus,           plusminus,               U2248,           plusminus,               U2248 ],
-		[              KP_Add,          braceright,          numbersign,           braceleft,          numbersign,           braceleft ]
-	}; // U2248 ≈ ALMOST EQUAL
+		[              KP_Add,          braceright,          numbersign,               UEF7C,          numbersign,               UEF7C ]
+	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
 	// Decimal separator keys
@@ -893,33 +894,27 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
 	key <KPDL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace ],
-		[          KP_Decimal,               comma,               space,        nobreakspace,               space,        nobreakspace ]
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               space,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	key <KPPT> {
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace ],
-		[          KP_Decimal,               comma,               space,        nobreakspace,               space,        nobreakspace ]
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               space,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	//
 	// Digit keys
 	//
-	// In ASCII mode, the level 2 hex letters are lowercase, and 0x, \u{, \x{ are
-	// output rather than 000, U, and NARROW NO-BREAK SPACE.
+	// In ASCII mode, the level 2 hex letters are lowercase, and backslash is
+	// output rather than the full Unicode prefix.
 	//
 	// Keycap engravings for the deactivated cursor key functionality are usually
-	// repurposed for hinting the positions of a full set of 10 graphic arrows.
-	//
-	// On desktop keyboards, the combos involving both LevelThree and LevelFive
-	// are almost unusable, so initially, the AltGr + AltFr modifier combination
-	// was not used, as these are hard to hold down simultaneously while using
-	// the numpad. However, the overlay numpads on laptops can actually be used
-	// that way. Therefore, two extra sets of arrows have been added (2021-07).
-	//
-	// The supported arrow sets are simple, double, black, white, triangle-headed
-	// arrows. The preferred name of the black arrows is filled arrows, and the
-	// preferred name of the white arrows is outline arrows.
+	// repurposed for hinting the positions of a full set of 10 graphic arrows,
+	// mostly simple and double. This feature is extended to support also basic
+	// emoji arrows as well as black, white and triangle-headed arrows. The
+	// preferred name of the black arrows is filled arrows, and the preferred
+	// name of the white arrows is outline arrows.
 	//
 	// Simple             U2190..U2199                       ↕↙↓↘←↔→↖↑↗
 	// Double             U21D0..U21D9                       ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
@@ -938,6 +933,12 @@ xkb_symbols "kbfrFRs" {
 	// For a consistent user experience, the basic arrow emoji are mapped on a
 	// dedicated level, additionally to the sets of simple and filled arrows.
 	//
+	// On desktop keyboards, the combos involving both LevelThree and LevelFive
+	// are almost unusable, so initially, the AltGr + AltFr modifier combination
+	// was not used, as these are hard to hold down simultaneously while using
+	// the numpad. However, the overlay numpads on laptops can actually be used
+	// that way. Therefore, two extra sets of arrows have been added (2021-07).
+	//
 	// The effect on user experience of the key combination AltFr + AltGr/Option
 	// plus a numpad digit is mitigated by making the level depend on the state
 	// of the ModLock toggle. In this table, the keyboard levels are ordered by
@@ -953,78 +954,78 @@ xkb_symbols "kbfrFRs" {
 	//  Shift + LevelThree + LevelFive    outline arrows    filled arrows
 	//
 
-	key.type[Group1] = "EIGHT_LEVEL";
-	key.type[Group2] = "EIGHT_LEVEL";
+	key.type[Group1] = "EIGHT_LEVELS_BASIC";
+	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <KP0>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_0,               UEF6D,               U2195,               U21D5,               U2195,               U2B0D,               U2B65,               U21F3 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		// Category:    digit,            sequence,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_0,               UEF6D,               U2B65,               U21F3,               U2195,               U21D5,               U2195,               U2B0D ]
 	}; // UEF6D '00'
 
 	key <KP1>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_1,               UEF7D,               U2199,               U21D9,               U2199,               U2B0B,               U2B69,               U2B03 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
-		[                KP_1,               UEF7C,               U2B69,               U2B03,               U2199,               U21D9,               U2199,               U2B0B ]
-	}; // UEF7D '000'; UEF7C '0x'
+		// Category:    digit,            sequence,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_1,               UEF7D,               U2B69,               U2B03,               U2199,               U21D9,               U2199,               U2B0B ]
+	}; // UEF7D '000'
 
 	key <KP2>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_2,                   A,               U2193,               U21D3,               U2B07,               U2B07,               U2B63,               U21E9 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[                KP_2,                   a,               U2B63,               U21E9,               U2193,               U21D3,               U2B07,               U2B07 ]
 	};
 
 	key <KP3>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_3,                   B,               U2198,               U21D8,               U2198,               U2B0A,               U2B68,               U2B02 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_3,                   b,               U2B68,               U2B02,               U2198,               U21D8,               U2198,               U2B0A ]
 	};
 
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit,              prefix,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_4,                   U,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
-		[                KP_4,               UEF7E,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
-	}; // Unicode; '\u{'
+		// Category:    digit,              prefix,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		[                KP_4,          numbersign,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
+	}; // 
 
 	key <KP5>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_5,                   C,               U2194,               U21D4,               U2194,               U2B0C,               U2B64,               U2B04 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_5,                   c,               U2B64,               U2B04,               U2194,               U21D4,               U2194,               U2B0C ]
 	};
 
 	key <KP6>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_6,                   D,               U2192,               U21D2,               U27A1,               U27A1,               U2B62,               U21E8 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[                KP_6,                   d,               U2B62,               U21E8,               U2192,               U21D2,               U27A1,               U27A1 ]
 	};
 
 	key <KP7>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
-		[                KP_7,               U202F,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
-		[                KP_7,               UEF7F,               U2B66,               U2B01,               U2196,               U21D6,               U2196,               U2B09 ]
-	}; // U202F NARROW NO-BREAK SPACE; UEF7F '\x{'
+		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_7,               UEF9F,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
+		// Category:    digit,    escape character,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		[                KP_7,           backslash,               U2B66,               U2B01,               U2196,               U21D6,               U2196,               U2B09 ]
+	}; // UEF9F 'U+'
 
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_8,                   E,               U2191,               U21D1,               U2B06,               U2B06,               U2B61,               U21E7 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[                KP_8,                   e,               U2B61,               U21E7,               U2191,               U21D1,               U2B06,               U2B06 ]
 	};
 
 	key <KP9>  {
-		// Category:         ,                    ,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_9,                   F,               U2197,               U21D7,               U2197,               U2B08,               U2B67,               U2B00 ],
-		// Category:         ,                    ,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
+		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_9,                   f,               U2B67,               U2B00,               U2197,               U21D7,               U2197,               U2B08 ]
 	};
 
@@ -1064,8 +1065,8 @@ xkb_symbols "kbbrFRs" {
 	include "dispocla(kbfrFRs)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ]
@@ -1102,8 +1103,8 @@ xkb_symbols "kbbrFRsr" {
 	include "dispocla(kbfrFRsr)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ]
@@ -1146,8 +1147,8 @@ xkb_symbols "kbfrPFs" {
 	include "dispocla(kbfrFRs)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ]
@@ -1176,8 +1177,8 @@ xkb_symbols "kbfrPFsr" {
 	include "dispocla(kbfrFRsr)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ]
@@ -1206,8 +1207,8 @@ xkb_symbols "kbfrAFs" {
 	include "dispocla(kbfrFRs)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ]
@@ -1244,8 +1245,8 @@ xkb_symbols "kbfrAFsr" {
 	include "dispocla(kbfrFRsr)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ]
@@ -1287,8 +1288,8 @@ xkb_symbols "kbfrBEs" {
 	include "dispocla(kbfrFRs)"
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ]
@@ -1336,8 +1337,8 @@ xkb_symbols "kbfrFRsr" {
 	// requires one out of them.
 
 	// Variant name.
-	key.type[Group1]= "EIGHT_LEVEL";
-	key.type[Group2]= "EIGHT_LEVEL";
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ]
