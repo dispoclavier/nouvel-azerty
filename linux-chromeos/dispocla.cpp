@@ -1,4 +1,4 @@
-//                       Date: 2024-06-06T1954+0200
+//                       Date: 2024-06-06T2053+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -895,19 +895,19 @@ xkb_symbols "kbfrFRs" {
 	key <KPDL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               space,        nobreakspace,            NoSymbol,            NoSymbol ]
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	key <KPPT> {
 		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               space,        nobreakspace,            NoSymbol,            NoSymbol ]
+		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	//
 	// Digit keys
 	//
-	// In ASCII mode, the level 2 hex letters are lowercase, and backslash is
-	// output rather than the full Unicode prefix.
+	// In ASCII mode, the level 2 hex letter digits are lowercase, and backslash
+	// is output rather than the full Unicode prefix.
 	//
 	// Keycap engravings for the deactivated cursor key functionality are usually
 	// repurposed for hinting the positions of a full set of 10 graphic arrows,
