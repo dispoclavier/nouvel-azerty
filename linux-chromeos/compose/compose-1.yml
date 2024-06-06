@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.2.1" # See # # Notes about syntax
+<UEFA0>                     : "version 2.3.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1354,15 +1354,15 @@
 #   fractions as more frequently used than circled digits, but ⅒ is now
 #   <Multi_key><1><1>, not <Multi_key><1><1><0>.
 #
-#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH. It
+#   For a predictable, intuitive, consistent, versatile user experience,
 #   sequences with a slash are also supported, and fraction numerator 1,
 #   initially <Multi_key><1><slash>, is extended with space accordingly,
 #   while its short sequence <Multi_key><1><space> is still supported.
 #
-#   Freely composed vulgar fractions may use ⁄ U2044 FRACTION SLASH. It
-#   triggers autoformatting of base digits to vulgar fractions as stated
-#   in the Unicode Standard — on the condition that the rendering engine
-#   is actually Unicode conformant, like HarfBuzz (OpenType) in Firefox.
+#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH.
+#   The fraction slash triggers autoformatting of base digits to vulgar
+#   fractions in Unicode-conformant rendering engines, like HarfBuzz in
+#   Firefox.
 #   See # # Fraction slash
 #
 #   A workaround for defective renderers is using superscript digits for
