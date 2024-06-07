@@ -1,4 +1,4 @@
-//                       Date: 2024-06-06T2053+0200
+//                       Date: 2024-06-07T2346+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -24,6 +24,7 @@
 //     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 //
 //               Installation: 1. Add this file in /usr/share/X11/xkb/symbols/dispocla
+//
 //                             2. In /usr/share/X11/xkb/rules/evdev
 //                                comment out the rule:
 //                                    *		*		=	+%l[2]%(v[2]):2
@@ -33,6 +34,7 @@
 //                                line, fixing the second group for all locales.
 //                                Courtesy @Salim on unix.stackexchange.com
 //                                https://unix.stackexchange.com/a/420126
+//
 //                             3. In /usr/share/X11/xkb/rules/evdev.xml
 //                                add the lines enclosed in the file
 //                                    evdev-additions.xml
@@ -841,12 +843,10 @@ xkb_symbols "kbfrFRs" {
 	//
 	// Numpad
 	//
-	// The edit key feature on the numpad is deactivated as outdated, redundant,
-	// and wasting positions.
-	//
 	// On an overlay numpad with Fn held down, the AltFr modifier must be pressed
 	// before the Fn key.
 	//
+
 	key.type[Group1]= "ONE_LEVEL";
 	key.type[Group2]= "ONE_LEVEL";
 	key <KPEQ> {
@@ -857,6 +857,17 @@ xkb_symbols "kbfrFRs" {
 	//
 	// Operator keys
 	//
+	// Typographic basic arithmetic symbols are featured on the `Keypad math area
+	// with non-CS operators` keypad(ossmath), © Nicolas Mailhot
+	// <nicolas.mailhot @ laposte.net>, whose keypad(legacynumber_wang) and
+	// keypad(ossnumber_wang) also feature the asciicircum, while the colon and
+	// the equals as well as parentheses are featured on the `Hexadecimal Numpad`
+	// keypad(hex) by Roland Kaufmann <rlndkfmn at gmail dot com>.
+	//
+	// Additionally, plusminus and radical are also included, and two symbols for
+	// approximations. Numeric character reference prefixes and the closing brace
+	// fill up the remaining positions in ASCII mode.
+	//
 	// LevelThree (impractical) and LevelFive (recommended) have same effect.
 	//
 
@@ -865,8 +876,8 @@ xkb_symbols "kbfrFRs" {
 	key <KPDV> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[           KP_Divide,            division,             radical,           parenleft,             radical,           parenleft ],
-		[           KP_Divide,           parenleft,         bracketleft,               U2044,         bracketleft,               U2044 ]
-	}; // U2044 ⁄ FRACTION SLASH
+		[           KP_Divide,           parenleft,         bracketleft,               UEF7E,         bracketleft,               UEF7E ]
+	}; // UEF7E '\u{'
 
 	key <KPMU> {
 		[         KP_Multiply,            multiply,         asciicircum,          parenright,         asciicircum,          parenright ],
@@ -875,46 +886,92 @@ xkb_symbols "kbfrFRs" {
 
 	key <KPSU> {
 		[         KP_Subtract,               U2212,               equal,               U2243,               equal,               U2243 ],
-		[         KP_Subtract,         asciicircum,               equal,               UEF7E,               equal,               UEF7E ]
-	}; // U2212 − MINUS SIGN; U2243 ≃ ASYMPTOTICALLY EQUAL; UEF7E '\u{'
+		[         KP_Subtract,         asciicircum,               equal,          braceright,               equal,          braceright ]
+	}; // U2212 − MINUS SIGN; U2243 ≃ ASYMPTOTICALLY EQUAL
 
 	key <KPAD> {
-		[              KP_Add,                plus,           plusminus,               U2248,           plusminus,               U2248 ],
-		[              KP_Add,          braceright,          numbersign,               UEF7C,          numbersign,               UEF7C ]
+		[              KP_Add,               colon,           plusminus,               U2248,           plusminus,               U2248 ],
+		[              KP_Add,               colon,           plusminus,               UEF7C,           plusminus,               UEF7C ]
 	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
-	// Decimal separator keys
+	// Decimal separator key
+	//
+	// Most importantly, the numpad dot key can deliver all three separators used
+	// as decimal separator or as group (thousands) separator. Both dot and comma
+	// as well as the no-break thin space U202F NARROW NO-BREAK SPACE are output
+	// when pressing this key alone or with Shift or AltFr (or AltGr).
+	//
+	// The legacy U00A0 NO-BREAK SPACE is less easily input but still supported,
+	// although it is dysfunctional in this usage, except on old systems where it
+	// prevents worse issues, while paving the way of false confidence that fools
+	// their users into sticking with them, compromising their cyber security.
+	//
+	// LevelThree (impractical) and LevelFive (recommended) have same effect.
 	//
 	// CapsLock affects levels 1 and 2 for toggling dot and comma.
-	// LevelThree (impractical) and LevelFive (recommended) have same effect.
+	//
+	// Brazilian ABNT2 keyboards have also a dot key above Enter, KPPT, while the
+	// widespread decimal separator key besides Enter, KPDL, outputs a comma. The
+	// level 2 comma is designed for keyboards where the decimal separator key is
+	// a period key and is not accompanied by a second decimal separator key. But
+	// the key KPPT is supported regardless, so it can output NNBSP in AltFr too,
+	// although Brazilian Portuguese uses period as a group separator, as opposed
+	// to European Portuguese.
+	//
+	// KP_Decimal translates to period, KP_Separator to comma. The map below does
+	// not match the Brazilian locale, where KPDL is mapped to KP_Separator, KPPT
+	// to KP_Decimal; it only ensures that there is a key for comma and a key for
+	// period on numpads with two separator keys.
+	// https://bugzilla.redhat.com/show_bug.cgi?id=470153
+	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606
 	//
 
 	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
 	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
 	key <KPDL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
+		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
+		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	key <KPPT> {
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[          KP_Decimal,               comma,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
+		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
+		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	//
 	// Digit keys
 	//
-	// In ASCII mode, the level 2 hex letter digits are lowercase, and backslash
-	// is output rather than the full Unicode prefix.
+	// The edit key feature on the numpad is deactivated as outdated, redundant,
+	// and wasting positions. Instead, level 2 is repurposed for double zero and
+	// triple zero as found on electronic calculators, and for hexadecimal letter
+	// digits in a layout consistent with the hexadecimal letter digits that are
+	// part of the graphic numpad on the alphanumeric block, with digits 1..9 on
+	// the same keys as the overlay numpad on compact keyboards. The use of E10
+	// for an additional 0 ensuring an AltFr-AltGr symmetry with respect to the
+	// row E digits, and both decimal separators dot and comma on D10 and C10 due
+	// to the use of B07..B10 for spaced punctuation marks, constrain hex letter
+	// digits to keys (C..E)(11..12). As a consequence, the numpad features A..F
+	// on level 2 of keys 2, 3, 5, 6, 8 and 9, with a downside of not featuring
+	// the E in the center on key 5 like on the `Hexadecimal Numpad` keypad(hex)
+	// by Roland Kaufmann <rlndkfmn at gmail dot com>.
 	//
-	// Keycap engravings for the deactivated cursor key functionality are usually
-	// repurposed for hinting the positions of a full set of 10 graphic arrows,
-	// mostly simple and double. This feature is extended to support also basic
-	// emoji arrows as well as black, white and triangle-headed arrows. The
-	// preferred name of the black arrows is filled arrows, and the preferred
-	// name of the white arrows is outline arrows.
+	// In default mode, these level 2 hex digits are uppercase, but lowercase in
+	// ASCII mode, where also backslash is output rather than the fraction slash,
+	// filling up the shifted position on shape-mnemonic key 7, while key 4 on U
+	// has room for the full Unicode prefix in default mode, a `#` in ASCII mode.
+	//
+	// Arrows on digit keys are based on the simple and double arrows featured in
+	// the `Keypad number area with arrow symbols` keypad(ossnumber), included in
+	// fr(oss), © Nicolas Mailhot <nicolas.mailhot @ laposte.net>. As a feature-
+	// rich layout, fr(oss) is found in libraries running Linux on public PCs.
+	//
+	// Keycap engravings for the deactivated cursor key functionality are used as
+	// hints for the positions of a set of 10 graphic basic arrows. This feature
+	// is extended to support also basic emoji arrows as well as black, white and
+	// triangle-headed arrows. Black arrows are more appropriately called filled
+	// arrows, and white arrows, outline arrows.
 	//
 	// Simple             U2190..U2199                       ↕↙↓↘←↔→↖↑↗
 	// Double             U21D0..U21D9                       ⇕⇙⇓⇘⇐⇔⇒⇖⇑⇗
@@ -988,10 +1045,10 @@ xkb_symbols "kbfrFRs" {
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit,              prefix,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
-		[                KP_4,                   U,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
+		[                KP_4,               UEF9F,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
 		// Category:    digit,              prefix,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[                KP_4,          numbersign,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
-	}; // 
+	}; // UEF9F 'U+'
 
 	key <KP5>  {
 		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
@@ -1009,10 +1066,10 @@ xkb_symbols "kbfrFRs" {
 
 	key <KP7>  {
 		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
-		[                KP_7,               UEF9F,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
+		[                KP_7,               U2044,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
 		// Category:    digit,    escape character,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_7,           backslash,               U2B66,               U2B01,               U2196,               U21D6,               U2196,               U2B09 ]
-	}; // UEF9F 'U+'
+	}; // U2044 ⁄ FRACTION SLASH
 
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
@@ -1029,7 +1086,10 @@ xkb_symbols "kbfrFRs" {
 		[                KP_9,                   f,               U2B67,               U2B00,               U2197,               U21D7,               U2197,               U2B08 ]
 	};
 
+	//
 	// Modifier maps
+	//
+
 	modifier_map Control { <LCTL> };
 	modifier_map Mod2    { <NMLK> };
 	modifier_map Shift   { <LFSH> };
