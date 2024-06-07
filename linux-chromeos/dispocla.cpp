@@ -1,4 +1,4 @@
-//                       Date: 2024-06-07T2346+0200
+//                       Date: 2024-06-08T0003+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -895,52 +895,6 @@ xkb_symbols "kbfrFRs" {
 	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
-	// Decimal separator key
-	//
-	// Most importantly, the numpad dot key can deliver all three separators used
-	// as decimal separator or as group (thousands) separator. Both dot and comma
-	// as well as the no-break thin space U202F NARROW NO-BREAK SPACE are output
-	// when pressing this key alone or with Shift or AltFr (or AltGr).
-	//
-	// The legacy U00A0 NO-BREAK SPACE is less easily input but still supported,
-	// although it is dysfunctional in this usage, except on old systems where it
-	// prevents worse issues, while paving the way of false confidence that fools
-	// their users into sticking with them, compromising their cyber security.
-	//
-	// LevelThree (impractical) and LevelFive (recommended) have same effect.
-	//
-	// CapsLock affects levels 1 and 2 for toggling dot and comma.
-	//
-	// Brazilian ABNT2 keyboards have also a dot key above Enter, KPPT, while the
-	// widespread decimal separator key besides Enter, KPDL, outputs a comma. The
-	// level 2 comma is designed for keyboards where the decimal separator key is
-	// a period key and is not accompanied by a second decimal separator key. But
-	// the key KPPT is supported regardless, so it can output NNBSP in AltFr too,
-	// although Brazilian Portuguese uses period as a group separator, as opposed
-	// to European Portuguese.
-	//
-	// KP_Decimal translates to period, KP_Separator to comma. The map below does
-	// not match the Brazilian locale, where KPDL is mapped to KP_Separator, KPPT
-	// to KP_Decimal; it only ensures that there is a key for comma and a key for
-	// period on numpads with two separator keys.
-	// https://bugzilla.redhat.com/show_bug.cgi?id=470153
-	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606
-	//
-
-	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
-	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
-	key <KPDL> {
-		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
-	}; // U202F ' ' NARROW NO-BREAK SPACE
-
-	key <KPPT> {
-		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
-	}; // U202F ' ' NARROW NO-BREAK SPACE
-
-	//
 	// Digit keys
 	//
 	// The edit key feature on the numpad is deactivated as outdated, redundant,
@@ -1085,6 +1039,52 @@ xkb_symbols "kbfrFRs" {
 		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_9,                   f,               U2B67,               U2B00,               U2197,               U21D7,               U2197,               U2B08 ]
 	};
+
+	//
+	// Decimal separator key
+	//
+	// Most importantly, the numpad dot key can deliver all three separators used
+	// as decimal separator or as group (thousands) separator. Both dot and comma
+	// as well as the no-break thin space U202F NARROW NO-BREAK SPACE are output
+	// when pressing this key alone or with Shift or AltFr (or AltGr).
+	//
+	// The legacy U00A0 NO-BREAK SPACE is less easily input but still supported,
+	// although it is dysfunctional in this usage, except on old systems where it
+	// prevents worse issues, while paving the way of false confidence that fools
+	// their users into sticking with them, compromising their cyber security.
+	//
+	// LevelThree (impractical) and LevelFive (recommended) have same effect.
+	//
+	// CapsLock affects levels 1 and 2 for toggling dot and comma.
+	//
+	// Brazilian ABNT2 keyboards have also a dot key above Enter, KPPT, while the
+	// widespread decimal separator key besides Enter, KPDL, outputs a comma. The
+	// level 2 comma is designed for keyboards where the decimal separator key is
+	// a period key and is not accompanied by a second decimal separator key. But
+	// the key KPPT is supported regardless, so it can output NNBSP in AltFr too,
+	// although Brazilian Portuguese uses period as a group separator, as opposed
+	// to European Portuguese.
+	//
+	// KP_Decimal translates to period, KP_Separator to comma. The map below does
+	// not match the Brazilian locale, where KPDL is mapped to KP_Separator, KPPT
+	// to KP_Decimal; it only ensures that there is a key for comma and a key for
+	// period on numpads with two separator keys.
+	// https://bugzilla.redhat.com/show_bug.cgi?id=470153
+	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606
+	//
+
+	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
+	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
+	key <KPDL> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
+		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
+	}; // U202F ' ' NARROW NO-BREAK SPACE
+
+	key <KPPT> {
+		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
+		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
+	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	//
 	// Modifier maps
