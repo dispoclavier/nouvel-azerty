@@ -1,4 +1,4 @@
-//                       Date: 2024-06-08T0003+0200
+//                       Date: 2024-06-08T0131+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1057,20 +1057,19 @@ xkb_symbols "kbfrFRs" {
 	//
 	// CapsLock affects levels 1 and 2 for toggling dot and comma.
 	//
-	// Brazilian ABNT2 keyboards have also a dot key above Enter, KPPT, while the
-	// widespread decimal separator key besides Enter, KPDL, outputs a comma. The
-	// level 2 comma is designed for keyboards where the decimal separator key is
-	// a period key and is not accompanied by a second decimal separator key. But
-	// the key KPPT is supported regardless, so it can output NNBSP in AltFr too,
-	// although Brazilian Portuguese uses period as a group separator, as opposed
-	// to European Portuguese.
+	// ABNT-2 keyboards feature a dot key above Enter, KPPT, while the widespread
+	// decimal separator key besides Enter, KPDL, outputs a comma.
+	// https://bugzilla.redhat.com/show_bug.cgi?id=470153
+	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606
 	//
 	// KP_Decimal translates to period, KP_Separator to comma. The map below does
 	// not match the Brazilian locale, where KPDL is mapped to KP_Separator, KPPT
 	// to KP_Decimal; it only ensures that there is a key for comma and a key for
-	// period on numpads with two separator keys.
-	// https://bugzilla.redhat.com/show_bug.cgi?id=470153
-	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606
+	// period on numpads with two separator keys, and both have NARROW NO-BREAK
+	// SPACE on level 5, although in Brazilian Portuguese, the group separator is
+	// period, as opposed to European Portuguese.
+	// https://bugzilla.redhat.com/show_bug.cgi?id=470153#c27
+	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606/comments/54
 	//
 
 	key.type[Group1] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
@@ -1085,6 +1084,19 @@ xkb_symbols "kbfrFRs" {
 		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
 		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
+
+	//
+	// Key AB11 for ABNT-2 keyboards
+	//
+	// For completeness, alongside KPPT, as in br(abnt2).
+	//
+
+	key.type[Group1] = "EIGHT_LEVELS_BASIC";
+	key.type[Group2] = "EIGHT_LEVELS_BASIC";
+	key <AB11> {
+		[               slash,            question,              degree,        questiondown,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[               slash,            question,              degree,        questiondown,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
+	};
 
 	//
 	// Modifier maps
