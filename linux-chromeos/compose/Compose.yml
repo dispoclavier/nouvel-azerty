@@ -1,7 +1,7 @@
 # (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2024-06-03T0625+0200
+#                       Date: 2024-06-06T1850+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.2.1" # See # # Notes about syntax
+<UEFA0>                     : "version 2.3.0" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1359,10 +1359,10 @@
 #   initially <Multi_key><1><slash>, is extended with space accordingly,
 #   while its short sequence <Multi_key><1><space> is still supported.
 #
-#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH. It
-#   triggers autoformatting of base digits to vulgar fractions as stated
-#   in the Unicode Standard — on the condition that the rendering engine
-#   is actually Unicode conformant, like HarfBuzz (OpenType) in Firefox.
+#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH.
+#   The fraction slash triggers autoformatting of base digits to vulgar
+#   fractions in Unicode-conformant rendering engines, like HarfBuzz in
+#   Firefox.
 #   See # # Fraction slash
 #
 #   A workaround for defective renderers is using superscript digits for
@@ -14143,15 +14143,16 @@
 #   characters are hard to input inside the TSF using only layout drivers with
 #   an inappropriate data type picked for dead key output. 0 and 5 are used to
 #   input the high surrogate, since these arrows do not include bidirectionals.
+#   The numpad live key level depends on the ModLock toggle state.
 #
 #   Group  Description                         Example   Numpad live key level
 #
-#       2  Basic simple arrows                 ↑ U2191   AltFr
-#       3  Basic double arrows                 ⇑ U21D1   Shift + AltFr
-#       4  Arrow emoji (black / basic simple arrows)     AltGr
-#       5  Black or plain arrows               ⬆ U2B06   Shift + AltGr
-#       6  Empty or outlined, white arrows     ⇧ U21E7   Shift + AltGr + AltFr
-#       7  Triangle-headed arrows              ⭡ U2B61   AltGr + AltFr
+#       2  Basic simple arrows                 ↑ U2191   AltGr or AltFr
+#       3  Basic double arrows                 ⇑ U21D1   Shift + (AltGr or AltFr)
+#       4  Arrow emoji (mix of filled and simple arrows) AltFr or AltGr + AltFr
+#       5  Filled (“black”) arrows             ⬆ U2B06   Shift + (AltGr +) AltFr
+#       6  Outline (“white”) arrows            ⇧ U21E7   Shift + AltGr (+ AltFr)
+#       7  Triangle-headed arrows              ⭡ U2B61   AltGr + AltFr or AltGr
 #       9  Triangle-headed arrows to bar       ⭱ U2B71
 #      11  Wide-headed light barb arrows       🡡 U1F861
 #      12  Wide-headed very heavy barb arrows  🢁 U1F881
