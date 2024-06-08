@@ -1,20 +1,29 @@
 # Journal des modifications
 
-## 2.3.0 (projet)
+## 2.3.0 (2024-06-08)
 
-* Disposition :
-  * Chiffres du pavé numérique :
+* Disposition du pavé numérique :
+  * Chiffres :
     * Mode français :
-      * Mettre "U+" à la place de " " U202F. (dispocla.cpp [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d))
+      * Majuscule :
+        * Touche 4 : Mettre le préfixe Unicode complet "U+" à la place de "U" U0055. (dispocla.cpp [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d))
+        * Touche 7 : Mettre la barre de fraction "⁄" U2044 à la place de l’espace fine insécable " " U202F. (dispocla.cpp [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d), [4c9e353](https://github.com/dispoclavier/nouvel-azerty/commit/4c9e353764d19bad4ecb48f583b96b2e45bbfbe6))
       * Permuter les flèches simples et les flèches émojis ; permuter les flèches doubles et les flèches pleines. (dispocla.cpp [e3bf0c6](https://github.com/dispoclavier/nouvel-azerty/commit/e3bf0c60e26641106c106c4acda1dde9d32a34a8), compose-2.yml [5545ce0](https://github.com/dispoclavier/nouvel-azerty/commit/5545ce01c3ad79853b4db27f13acf4063798068b))
     * Mode ASCII :
       * Mettre "000" à la place de "0x", "#" U0023 à la place de "\\u{", "\\" U005C à la place de "\\x{". (dispocla.cpp [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d))
       * Permuter les flèches émojis et les flèches à tête triangulaire ; permuter les flèches pleines et les flèches ajourées. (dispocla.cpp [e3bf0c6](https://github.com/dispoclavier/nouvel-azerty/commit/e3bf0c60e26641106c106c4acda1dde9d32a34a8), compose-2.yml [5545ce0](https://github.com/dispoclavier/nouvel-azerty/commit/5545ce01c3ad79853b4db27f13acf4063798068b))
-  * Opérateurs du pavé numérique en mode ASCII : Permuter "=" U003D et "#" U0023. Rajouter "0x", "\\u{", "\\x{". (dispocla.cpp [f3bdb52](https://github.com/dispoclavier/nouvel-azerty/commit/f3bdb52d165f418ad11315bf662ef4e80ef47e6d), [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d), dispotypes.c [4eef10d](https://github.com/dispoclavier/nouvel-azerty/commit/4eef10d6fc4f76bfd98c8b8ba33d9e87958b21e1), [90d5a43](https://github.com/dispoclavier/nouvel-azerty/commit/90d5a43d2e09c83433c18160a9ec01a4ab11ce43))
-  * Point du pavé numérique :
-    * Mode ASCII : Mettre " " U202F à la place de " " U0020. (dispocla.cpp [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d), [4109119](https://github.com/dispoclavier/nouvel-azerty/commit/41091193b9bb027145bd41b1561164bdf4ba727f))
-    * Rectifier le code. (dispocla.cpp [e1803c3](https://github.com/dispoclavier/nouvel-azerty/commit/e1803c3f3bb56cf01d6063087fc8f22eb09e715e))
-  * Déboguer la touche virgule des claviers brésiliens. (ibidem)
+  * Opérateurs :
+    * Plus :
+      * Majuscule : Redonder ":" U003A à la place de "+" U002B. (dispocla.cpp [f3bdb52](https://github.com/dispoclavier/nouvel-azerty/commit/f3bdb52d165f418ad11315bf662ef4e80ef47e6d), [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d), dispotypes.c [4eef10d](https://github.com/dispoclavier/nouvel-azerty/commit/4eef10d6fc4f76bfd98c8b8ba33d9e87958b21e1), [90d5a43](https://github.com/dispoclavier/nouvel-azerty/commit/90d5a43d2e09c83433c18160a9ec01a4ab11ce43))
+      * Mode ASCII : Rajouter "0x". (ibidem)
+    * Moins : Mode ASCII : Mettre "=" U003D à la place de "#" U0023. Rajouter "\\x{". (ibidem)
+    * Multiplier : Mode ASCII : Redonder "}" U007D. (ibidem)
+    * Diviser : Mode ASCII : Mettre "\\u{" à la place de la barre de fraction "⁄" U2044. (ibidem)
+  * Point :
+    * Mode ASCII : Mettre l’espace fine insécable " " U202F à la place de l’espace " " U0020. (dispocla.cpp [317541d](https://github.com/dispoclavier/nouvel-azerty/commit/317541d16dab837be37bb1f0f434a2ab1dd43b0d), [4109119](https://github.com/dispoclavier/nouvel-azerty/commit/41091193b9bb027145bd41b1561164bdf4ba727f))
+    * Rectifier le code et la documentation. (dispocla.cpp [e1803c3](https://github.com/dispoclavier/nouvel-azerty/commit/e1803c3f3bb56cf01d6063087fc8f22eb09e715e), [959b970](https://github.com/dispoclavier/nouvel-azerty/commit/959b9707531e0768d77a8b29ddb39f169c065efe), [3f12966](https://github.com/dispoclavier/nouvel-azerty/commit/3f12966eb664f25c5f0d24cb6b253cd61eb339c6))
+  * Déboguer la touche virgule des claviers brésiliens. (dispocla.cpp [e1803c3](https://github.com/dispoclavier/nouvel-azerty/commit/e1803c3f3bb56cf01d6063087fc8f22eb09e715e))
+  * Prendre en charge aussi la touche B11 des claviers brésiliens. (dispocla.cpp [339fed4](https://github.com/dispoclavier/nouvel-azerty/commit/339fed4643ab4e4f44d01409793b78b1f9d18929), [8f5ebba](https://github.com/dispoclavier/nouvel-azerty/commit/8f5ebba8383c90b2986994bcdad4202c30eddf55))
 
 ## 2.2.1 (2024-06-03)
 
