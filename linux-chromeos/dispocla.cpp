@@ -1,4 +1,4 @@
-//                       Date: 2024-06-08T0409+0200
+//                       Date: 2024-06-08T0436+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1019,11 +1019,11 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	key <KP7>  {
-		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Category:    digit,      fraction slash,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_7,               U2044,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
 		// Category:    digit,    escape character,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_7,           backslash,               U2B66,               U2B01,               U2196,               U21D6,               U2196,               U2B09 ]
-	}; // U2044 ⁄ FRACTION SLASH
+	}; // U2044 ⁄ FRACTION SLASH (triggers fraction formatting in supporting renderers)
 
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
