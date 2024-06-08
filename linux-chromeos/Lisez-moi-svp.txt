@@ -1,5 +1,5 @@
-                      Date : 2024-06-03T0632+0200
-                   Version : 2.2.1
+                      Date : 2024-06-08T0312+0200
+                   Version : 2.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -157,9 +157,8 @@ Mode d’emploi sous Linux
      Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
      choisie.
 
-     Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches AB11 et AE13.
-     AB11 est une touche supplémentaire entre § et Maj droite sur des claviers brésiliens,
-     et la touche AE13, si elle est présente, se trouve entre Égal et Effacement arrière.
+     Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour la touche AE13, qui si elle
+     est présente, se trouve entre Égal et Effacement arrière.
 
  10  Veiller à ce que la méthode d’entrée soit XIM.
      Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée,
