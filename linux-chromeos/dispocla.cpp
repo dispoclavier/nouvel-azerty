@@ -1,4 +1,4 @@
-//                       Date: 2024-06-08T0131+0200
+//                       Date: 2024-06-08T0209+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1046,12 +1046,13 @@ xkb_symbols "kbfrFRs" {
 	// Most importantly, the numpad dot key can deliver all three separators used
 	// as decimal separator or as group (thousands) separator. Both dot and comma
 	// as well as the no-break thin space U202F NARROW NO-BREAK SPACE are output
-	// when pressing this key alone or with Shift or AltFr (or AltGr).
+	// when pressing this key alone or with Shift or AltFr (or AltGr) as found in
+	// kbdl(dotoss) © 2007 Nicolas Mailhot <nicolas.mailhot @ laposte.net>.
 	//
 	// The legacy U00A0 NO-BREAK SPACE is less easily input but still supported,
 	// although it is dysfunctional in this usage, except on old systems where it
 	// prevents worse issues, while paving the way of false confidence that fools
-	// their users into sticking with them, compromising their cyber security.
+	// users into sticking with them, compromising cyber security.
 	//
 	// LevelThree (impractical) and LevelFive (recommended) have same effect.
 	//
