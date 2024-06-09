@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 2.3.1 (projet)
+
+* Documentation. (dispocla.cpp [ff2ae89](https://github.com/dispoclavier/nouvel-azerty/commit/ff2ae89b787340d93e2956e1561ef18e5cdbaca9))
+
 ## 2.3.0 (2024-06-08)
 
 * Disposition du pavé numérique :
