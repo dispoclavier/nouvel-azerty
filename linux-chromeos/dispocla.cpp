@@ -1,4 +1,4 @@
-//                       Date: 2024-06-09T0333+0200
+//                       Date: 2024-06-10T0821+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -542,7 +542,27 @@ xkb_symbols "kbfrFRs" {
 	// this is written with a letter apostrophe U02BC and so makes a good point
 	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
 	//
-	// Level 7 superscript letters are mapped on index 6 for ease of maintenance.
+	// Level 7 superscript letters in turn are mapped on index 6 because of their
+	// relationship to indices 1 and 2, resulting in a symmetric scheme with ease
+	// of maintenance as an additional advantage:
+	//
+	// Level: 1        2        3        5        4        7        6        8
+	// Index: 1        2        3        4        5        6        7        8
+	//
+	//                                   Graphic numpad
+	//                          ASCII symbol .... Dead key
+	//        Latin letter ............................... Abbreviation indicator
+	//
+	// Latin superscript letters are called MODIFIER LETTER except the first few,
+	// despite their use goes far beyond phonetics, given that ᵈ, ᵉ, ʳ, and ˢ are
+	// used as regular ordinal indicators in French, and ᵃ, ᵒ, and ˢ in Italian,
+	// Portuguese and Spanish. The scheme extends to support other abbreviations,
+	// with accented letters composed using combining diacritics.
+	//
+	// As ordinal indicators, ᵈ, ᵉ, ʳ, and ˢ are in Unicode CLDR since v34 (2018)
+	// for the French locale, waiting for the other locales to follow up.
+	// https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
+	// https://github.com/unicode-org/cldr/blob/release-42/common/main/fr.xml#L1526
 	//
 	//
 	// Column width
@@ -678,7 +698,7 @@ xkb_symbols "kbfrFRs" {
 	key <AD08> {
 		[                   i,                   I,           braceleft,                   5,           dead_hook,               U2071,               UEF7E,              U1F64F ],
 		[                   i,                   I,           braceleft,                   5,           dead_hook,               U2071,               UEF7E,              U1F64F ]
-	}; // U2071 ⁱ SUPERSCRIPT SMALL I; UEF7E '\\u{'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
+	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF7E '\\u{'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
 
 	key <AD09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
