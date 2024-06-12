@@ -1,4 +1,4 @@
-//                       Date: 2024-06-12T0431+0200
+//                       Date: 2024-06-12T0636+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -86,10 +86,11 @@
 //
 // ## X Window Input Method
 //
-// Multi character output requires XIM, regardless whether the output is for a
-// single keysym like c_h, or for a Multi_key sequence. That is why these semi-
-// automatic keyboard layouts only work when XIM has been activated, given that
-// another input method may be set as the default.
+// Multi character output, including composed letters as required for output by
+// dead keys, requires XIM. These semi-automatic keyboard layouts output multi-
+// character sequences, such as spaced punctuation and the Breton trigraph, on
+// live keys too and can only work when XIM has been activated, given that iBus
+// may still be set as the default.
 //
 // The X Window Input Method may be activated by command line:
 //
@@ -1632,7 +1633,7 @@ xkb_symbols "kbfrFRsr" {
 
 	key <BKSL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[               minus,            NoSymbol,           Multi_key ],
+		[               minus,            NoSymbol,          dead_grave ],
 		[               minus,            NoSymbol,           Multi_key ]
 	};
 
