@@ -2,7 +2,7 @@
 
 ## 2.3.1 (projet)
 
-* Documentation. (dispocla.cpp [ff2ae89](https://github.com/dispoclavier/nouvel-azerty/commit/ff2ae89b787340d93e2956e1561ef18e5cdbaca9))
+* Documentation. (dispocla.cpp [ff2ae89](https://github.com/dispoclavier/nouvel-azerty/commit/ff2ae89b787340d93e2956e1561ef18e5cdbaca9), [a765295](https://github.com/dispoclavier/nouvel-azerty/commit/a765295c5159be22d6a8c4084850542870b8a25e), [abad9ea](https://github.com/dispoclavier/nouvel-azerty/commit/abad9ea974e0f2e65584a9f6262e6c3ebd017740), compose-1.yml [479e3fa](https://github.com/dispoclavier/nouvel-azerty/commit/479e3fa96252ef1396c917695fff971cb4a9ab20), compose-2.yml [ca21e7b](https://github.com/dispoclavier/nouvel-azerty/commit/ca21e7b84d88fbfe062d0d7e26f812a7476e9ed0), compose-3.yml [41fd139](https://github.com/dispoclavier/nouvel-azerty/commit/41fd139c247d8c45cc70c0a208acd76f1a672ec4))
 
 ## 2.3.0 (2024-06-08)
 
