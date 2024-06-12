@@ -1,4 +1,4 @@
-//                       Date: 2024-06-10T0821+0200
+//                       Date: 2024-06-12T0431+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -28,17 +28,17 @@
 //                             2. In /usr/share/X11/xkb/rules/evdev
 //                                comment out the rule:
 //                                    *		*		=	+%l[2]%(v[2]):2
-//                                That line causes to override the second group with
-//                                the default, en_US in case of fr_FR.
-//                                This behavior is deactivated by commenting out that
-//                                line, fixing the second group for all locales.
-//                                Courtesy @Salim on unix.stackexchange.com
-//                                https://unix.stackexchange.com/a/420126
+//                                See ## XKB layout group 2
 //
 //                             3. In /usr/share/X11/xkb/rules/evdev.xml
 //                                add the lines enclosed in the file
 //                                    evdev-additions.xml
 //                                before the `</layoutList>` closing tag.
+//
+//                             4. In the locale and language settings make sure
+//                                that the input method is XIM, or type
+//                                    im-config -n xim
+//                                in a terminal.
 //
 //                             The changes take effect when reopening a session.
 //
@@ -57,9 +57,46 @@
 //                             XKBVARIANT="kbfrFRs"
 //                             XKBOPTIONS=""
 //
+// # Configuration
 //
-// Block comments are not supported in XKB configuration files.
+// ## XKB layout group 2
 //
+// A second graphic toggle is required to toggle the row E keys between letters
+// and digits, independently of the CapsLock toggle, that is set to also affect
+// the diacriticized letters, most of which are on row E too. This digit toggle
+// cannot be implemented by repurposing the NumLock toggle. Consistently, this
+// solution is commented out in xkb/types/level5. The working solution uses the
+// ISO_First_Group and ISO_Last_Group to toggle between two layout groups. This
+// is compromised by a rule in /usr/share/X11/xkb/rules/evdev:
+//
+//       *		*		=	+%l[2]%(v[2]):2
+//
+// This rule causes the second group to get overridden by a default layout. The
+// fix is to comment this rule out, although another fix seems to be working as
+// well, according to a thread on Unix & Linux StackExchange, where this issue
+// has been discussed and solved in 2018.
+// https://unix.stackexchange.com/questions/419042/xkb-modify-layout-to-multi-group-with-mode-switch/420126
+// https://unix.stackexchange.com/a/420126
+//
+// However, so far, none of the following rules works:
+//     As solved on the forum:  *		dispocla	=	+dispocla
+//     Inferred from context:   *		dispocla	=	+dispocla%(v[2]):2
+//     As in other context:     *		kbfrFRsr	=	+dispocla(kbfrFRsr):2
+//
+//
+// ## X Window Input Method
+//
+// Multi character output requires XIM, regardless whether the output is for a
+// single keysym like c_h, or for a Multi_key sequence. That is why these semi-
+// automatic keyboard layouts only work when XIM has been activated, given that
+// another input method may be set as the default.
+//
+// The X Window Input Method may be activated by command line:
+//
+//         im-config -n xim
+//
+//
+// # Documentation
 //
 // ##  French-style punctuation spacing semi-automation
 //
@@ -569,7 +606,10 @@ xkb_symbols "kbfrFRs" {
 	//
 	// After the removal of dead_longsolidusoverlay in libxkbcommon 1.6.0 (2023),
 	// keysyms are expected to be no longer than rightsinglequotemark, making for
-	// a compacter layout with a column width shrinking from 25 to 20 characters.
+	// a compacter layout with a column width shrinking from 25 to 20 characters,
+	// although keysyms are up to 27 characters long (Greek_upsilonaccentdieresis
+	// and ISO_Discontinuous_Underline), and even Greek_finalsmallsigma is longer
+	// than 20 characters.
 	// https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
 	//
 
