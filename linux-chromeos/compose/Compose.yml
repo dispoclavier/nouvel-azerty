@@ -1,7 +1,7 @@
-# (NE PAS EFFACER) # start additions Compose dispoclavier
-#                       Date: 2024-06-06T1850+0200
+# START additions Compose dispoclavier (do not delete - ne pas effacer)
+#                       Date: 2024-06-12T0649+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.3.0" # See # # Notes about syntax
+<UEFA0>                     : "version 2.3.1" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -47,19 +47,43 @@
 #                             need to override U01D5 and U01D6. Likewise, "V́" and "v́" need to override
 #                             U01D7 and U01D8 as defined in en_US.UTF-8/Compose.
 #
-#                             Please make sure to be using the full-length file `Compose.yml`.
+#                             1. Set the input method to XIM, because iBus does not support
+#                                multi-character output, not even composed letters required
+#                                by the Unicode encoding model for output on dead keys; and
+#                                with no input method at all, this Compose is not compiled,
+#                                and a default Compose is used.
+#
+#                                The following command activates the X Window Input Method:
+#                                    im-config -n xim
+#
+#                                The currently active input method displays on line 2 after:
+#                                    im-config -m
+#
+#                                Setting the input method to XIM to begin with is essential,
+#                                because current distros keep being shipped with the input
+#                                method set to iBus by default.
+#
+#                             2. Make sure to be using the full-length file `Compose.yml`.
+#
+#                             3. Proceed following method A, B, or C:
 #
 #                             A. 1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
 #                                2. Append `Compose.yml` to /usr/share/X11/locale/en_US.UTF-8/Compose
+#
 #                             B. 1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
 #                                2. Replace /usr/share/X11/locale/en_US.UTF-8/Compose with `Compose.yml`.
+#
 #                             C. 1. Back up the file ~/.XCompose if it exists.
 #                                2. Append `Compose.yml` to ~/.XCompose or rename it accordingly.
 #                                3. Optionally uncomment the following line:
+#
 #                                       include "%L"
+#
 #                                   That is not mandatory since this file is designed to be standalone.
 #                                   That will include the default, en_US.UTF-8/Compose for fr_FR.
-#                             The change takes effect in any application after reopening it.
+#
+#                             The changes take effect in any application after reopening it, or
+#                             after opening a new session if the input method needs to be changed.
 #
 #             Uninstallation: A. Restore the previously backed-up original Compose file.
 #                             B. Remove this addition from the current Compose file.
@@ -104,7 +128,7 @@
 #       https://help.ubuntu.com/community/ComposeKey#Compose_key
 #       https://manpages.ubuntu.com/manpages/cosmic/man5/Compose.5.html
 #       https://wiki.debian.org/XCompose
-#   provided that the X Input Method is active.
+#   provided that the X Window Input Method is active.
 #       https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/1584314/comments/6
 #       http://manpages.ubuntu.com/manpages/bionic/en/man8/im-config.8.html
 #       https://askubuntu.com/questions/129680/how-can-i-make-ibus-not-ignore-xcompose
@@ -7533,9 +7557,9 @@
 #       #   Multi_key: ¦^
 #       #   Dchar: "^" U005E
 #
-#   The transpiler will read this in and use it while generating the DEADTRANS
-#   function calls for Windows based on the implementable subset (no strings).
-#   This is yet to be deployed based on an original idea 2023-11-06T0603+0100.
+#   A projected transpiler shall read in this dead character and use it for the
+#   DEADTRANS function calls on Windows, supporting an implementable subset (no
+#   strings). That is yet to be implemented (idea 2023-11-06T0603+0100).
 #
 #   For documentation, a list of dead character candidates is provided here.
 #   For natively unsupported dead keys, a keysym candidate is proposed as well.
@@ -31786,4 +31810,4 @@
 #   See #+# GROUP_12
 #
 #
-# (NE PAS EFFACER) # end additions Compose dispoclavier
+# END additions Compose dispoclavier (do not delete - ne pas effacer)
