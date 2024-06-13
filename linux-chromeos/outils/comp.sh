@@ -1,16 +1,20 @@
 #!/bin/bash
-# Compile .xkb
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-03-02T1159+0100
+# 2024-06-13T0441+0200
 # = last modified.
 #
-# Compiles XKB.
-# Automatically switches layouts.
+# Compiles XKB layout files for activating a keyboard layout as user.
+# Requires to manually configure the subvariants in xkb/keycodes/evdev.
+# Automatically switches layouts while compiling a subvariant as configured.
 # Courtesy https://askubuntu.com/questions/209597/how-do-i-change-keyboards-from-the-command-line
 
 cd $(dirname "$0")
-if [[ ! -d "Variantes" ]]; then
+if [ ! -d "compiled" ]; then
+	mkdir compiled
+fi
+cd compiled
+if [ ! -d "Variantes" ]; then
 	mkdir Variantes
 fi
 cd Variantes
@@ -39,7 +43,7 @@ esac
 
 function compile {
 	echo "$1$suffix.xkb:"
-	if [[ ! -d "$1" ]]; then
+	if [ ! -d "$1" ]; then
 		mkdir $1
 	fi
 	gsettings set org.gnome.desktop.input-sources current $2
