@@ -65,15 +65,11 @@
 #                                      overriding U01D5 and U01D6, and "V́" and "v́" overriding
 #                                      U01D7 and U01D8 as defined in en_US.UTF-8/Compose.
 #
-#                                B. Most efficient for Latin only:
-#                                   1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                   2. Replace /usr/share/X11/locale/en_US.UTF-8/Compose with `Compose.yml`.
-#
-#                                C. Shared computer with User Compose:
+#                                B. Shared computer with User Compose:
 #                                   1. Back up the file ~/.XCompose.
 #                                   2. Append `Compose.yml` to ~/.XCompose.
 #
-#                                D. Shared computer without User Compose:
+#                                C. Shared computer without User Compose:
 #                                   1. Copy `Compose.yml` to ~/.XCompose.
 #                                   2. Optionally uncomment the following line:
 #
@@ -85,8 +81,8 @@
 #                             The changes take effect in any application after reopening it, or
 #                             after opening a new session if the input method needs to be changed.
 #
-#             Uninstallation: A, D: Restore the previously backed-up original Compose file.
-#                             B, C: Remove this addition from the current Compose file.
+#             Uninstallation: A, B: Restore the previously backed-up original Compose file.
+#                             C:    Delete this Compose file.
 #
 #           Acknowledgements: • Our Lord God and Jesus Christ, for ideas, help and direction.
 #                               Consistently with the Cistercian “Soli Deo Gloria”, picked up
