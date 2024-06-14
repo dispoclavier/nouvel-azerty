@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
 <!--
-                       Date: 2024-05-27T2144+0200
+                       Date: 2024-06-14T0411+0200
           Partial file name: evdev-additions.xml
                    Encoding: UTF-8
                        Type: text/XML
-                Description: XKB keyboard layout switch configuration partial
-                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
+                Description: Gnome keyboard layout switch configuration partial
+                   Platform: Linux
 
                Project name: Dispoclavier
                 Project URL: https://dispoclavier.com
@@ -22,9 +22,6 @@
        Non-code licence URL: https://creativecommons.org/licenses/by/4.0/deed.fr
               Email address: dev@dispoclavier.net
 
-   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
-     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
-
                Installation: In /usr/share/X11/xkb/rules/evdev.xml
                              add the <layout> element below, just before
                              the </layoutList> closing tag.
@@ -36,10 +33,10 @@
 Country codes have been added for the keyboard layouts to be grouped not only
 by language, as they were until 2023, when all French layouts were found in a
 “French” folder, but also by country: French (France), French (Canada), instead
-of just filtering a flat list, back in 2016.
+of the filterable flat list featured until 2016.
 
 The upside of the flat list was that back then, the switch actually worked, as
-opposed to the time since the UI redesign.
+opposed to the redesigned UI.
 
 As all country codes are listed with the base layout, all the variants show up
 in every listed country that Gnome has a country folder for.
@@ -50,14 +47,15 @@ in every listed country that Gnome has a country folder for.
 
 
 
-    <layout><!-- dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
+    <layout><!-- Dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
       <configItem>
         <name>dispocla</name><!-- un fichier ajouté dans /usr/share/X11/xkb/symbols/ -->
         <!-- La disposition par défaut dans dispocla est "kbfrFRs". -->
         <!-- Keyboard indicator for French layouts -->
         <shortDescription>fr</shortDescription><!-- nom de l’icône [Fr] dans la barre d’état -->
         <description>Français France disposition de clavier semi-automatique</description><!-- pour le menu du commutateur -->
-        <countryList><!-- les codes ISO 3166-1 alpha-2 des membres de la Francophonie -->
+        <countryList><!-- codes ISO 3166-1 alpha-2 des membres de la Francophonie -->
+          <!-- classement alphabétique par nom en commentaire -->
           <iso3166Id>AL</iso3166Id><!-- Albanie -->
           <iso3166Id>AD</iso3166Id><!-- Andorre -->
           <iso3166Id>AM</iso3166Id><!-- Arménie -->
@@ -323,7 +321,7 @@ in every listed country that Gnome has a country folder for.
           </configItem>
         </variant>
       </variantList>
-    </layout><!-- FIN_dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
+    </layout><!-- FIN_Dispoclavier (mot-clé pour simplifier la désinstallation ; ne pas effacer) -->
 
 
 
