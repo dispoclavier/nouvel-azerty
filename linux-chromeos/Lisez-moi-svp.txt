@@ -1,5 +1,5 @@
-                      Date : 2024-06-12T0701+0200
-                   Version : 2.3.1
+                      Date : 2024-06-15T1332+0200
+                   Version : 2.3.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -35,7 +35,7 @@ Dispositions ou variantes
   • Le fichier `Compose.yml` contient le répertoire des touches mortes. Son extension `.yml`
     sert uniquement à l’ouverture et à l’affichage.
 
-  • Le reste des dispositions de clavier se trouve dans les fichiers dont l’extension est `.xkb`.
+  • Le reste des dispositions de clavier se trouve dans le dossier `activer`.
 
   • Les fichiers dont les noms commencent par `nouvel-azerty` contiennent la disposition de base
     de ce nouvel AZERTY. Ils sont rangés à la racine de ce dossier, et ils sont identiques aux
