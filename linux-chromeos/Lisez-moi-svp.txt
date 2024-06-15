@@ -1,5 +1,5 @@
-                      Date : 2024-06-15T1332+0200
-                   Version : 2.3.2
+                      Date : 2024-06-15T1932+0200
+                   Version : 2.3.3
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -32,14 +32,15 @@
 
 Dispositions ou variantes
 
-  • Le fichier `Compose.yml` contient le répertoire des touches mortes. Son extension `.yml`
-    sert uniquement à l’ouverture et à l’affichage.
+  • Le fichier `Compose.yml` contient le répertoire des touches mortes, les séquences de composition,
+    ainsi que les chaînes de caractères sur touches vives. Son extension `.yml` sert uniquement à
+    l’ouverture et à l’affichage.
 
-  • Le reste des dispositions de clavier se trouve dans le dossier `activer`.
+  • Les autres dispositions de clavier se trouvent dans le dossier `activer`.
 
   • Les fichiers dont les noms commencent par `nouvel-azerty` contiennent la disposition de base
-    de ce nouvel AZERTY. Ils sont rangés à la racine de ce dossier, et ils sont identiques aux
-    fichiers dont les noms commencent par `kbfrFRs`, qui sont rangés dans un dossier du même nom
+    de ce nouvel AZERTY. Ils sont rangés à la racine du dossier `activer`, et ils sont identiques
+    aux fichiers dont les noms commencent par `kbfrFRs`, qui sont rangés dans un dossier du même nom
     à l’intérieur du dossier `Variantes`.
 
   • Les fichiers dans le dossier `kbbrFRs`, dont les noms commencent par `kbbrFRs`, contiennent
@@ -58,9 +59,10 @@ Dispositions ou variantes
     le tiret du 8 sur Maj + 8. Cette disposition représente un compromis entre l’AZERTY belge et
     les fonctionnalités de ce nouvel AZERTY français.
 
-  • Les fichiers dont les noms se terminent en `r` contiennent des dispositions optimisées pour
-    une saisie un peu plus ergonomique de l’alphabet de base et des lettres diacritées, afin que
-    les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
+  • Les fichiers dont le nom – ou la première partie du nom pour les sous-variantes – se termine
+    en `r` contiennent des dispositions optimisées pour une saisie un peu plus ergonomique de
+    l’alphabet de base et des lettres diacritées, afin que les exigences d’ergonomie n’obligent
+    pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
     La variante belge ne se décline pas en variante belge redisposée, parce que l’intérêt d’une
     variante belge est une plus grande rétrocompatibilité avec l’AZERTY belge, et la redisposition
@@ -70,7 +72,7 @@ Dispositions ou variantes
 Options de disposition ou sous-variantes
 
   Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles
-  pour chaque variante :
+  pour chaque variante et sous-variante :
 
   • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où cette touche ISO
     prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées
@@ -107,8 +109,8 @@ Témoin lumineux
 
   Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode ASCII par la bascule
   VerrMod sur la touche E00 au-dessus de Tab à gauche du 1. Ce témoin lumineux manque sur beaucoup
-  d’ordinateurs portables récents, mais il est présent sur les claviers externes comme les claviers
-  compacts USB ou sans fil.
+  d’ordinateurs portables récents, mais il est présent sur la plupart des claviers externes, tels
+  que les claviers compacts USB ou sans fil.
 
 
 Mode d’emploi sous Linux
@@ -118,7 +120,7 @@ Mode d’emploi sous Linux
 
          https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md
 
-  2  Ouvrir un terminal dans le dossier personnel et enregistrer la disposition actuelle dans `normal.xkb` :
+  2  Ouvrir un terminal dans le dossier personnel et mettre la disposition actuelle dans `normal.xkb` :
 
          xkbcomp :0 normal.xkb
 
@@ -143,7 +145,9 @@ Mode d’emploi sous Linux
 
      Sinon, renommer `Compose.yml` en `.XCompose`. Si les règles de `en_US.UTF-8/Compose` doivent
      continuer de s’appliquer si elles ne sont pas en conflit, décommenter la ligne suivante :
+
          include "%L"
+
      Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
      placer à la fin du fichier.
 
@@ -160,10 +164,16 @@ Mode d’emploi sous Linux
      Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour la touche AE13, qui si elle
      est présente, se trouve entre Égal et Effacement arrière.
 
- 10  Veiller à ce que la méthode d’entrée soit XIM.
+ 10  Veiller à ce que le système de saisie au clavier soit XIM.
      Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée,
      ou dans Système > Pays et langue > Système > Gérer les langues installées > Langue >
      Système de saisie au clavier. On a le choix entre iBus, XIM et Aucun.
+
+     Le système de saisie au clavier peut aussi être paramétré en ligne de commande. Pour
+     ce faire, ouvrir un terminal et utiliser la commande suivante :
+
+         im-config -n xim
+
 
 Ce nouvel AZERTY peut maintenant être testé.
 
@@ -177,4 +187,20 @@ La commande pour désactiver ce nouvel AZERTY et réactiver la disposition préc
 Critiques, suggestions et retours d’expérience
 
   N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
-  à l’adresse dev@dispoclavier.net. Merci d’avance de tous vos retours.
+  à l’adresse dev@dispoclavier.net.
+
+  N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
+  le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
+
+  Pour signaler un bogue :
+
+      https://github.com/dispoclavier/nouvel-azerty/issues
+
+  Pour lancer une discussion :
+
+      https://github.com/dispoclavier/nouvel-azerty/discussions
+
+  De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
+  que dans une discussion lancée à cet effet.
+
+      Merci d’avance de tous vos retours.
