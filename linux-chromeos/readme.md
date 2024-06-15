@@ -16,13 +16,25 @@ De toute manière, les statistiques de langage sont désactivées.
 
 La version de Linux recommandée pour cet usage est [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou l’équivalent, de cette époque, des autres distributions.
 
-Télécharger le dossier « Nouvel-AZERTY-Linux-<version>.zip » sous le titre « Assets », et faire comme indiqué dans le fichier « [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) » inclus.
+Télécharger le dossier « Nouvel-AZERTY-Linux-`version`.zip » sous le titre « Assets », et faire comme indiqué dans le fichier « [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) » inclus.
 
 ## Installation
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « Nouvel-AZERTY-Linux-<version>.zip » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh). On peut aussi installer chaque fichier manuellement :
+Télécharger le dossier « Nouvel-AZERTY-Linux-`version`.zip » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh). On peut aussi installer chaque fichier manuellement.
+
+### Script d’installation : mode d’emploi
+
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve ici sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh)) à la racine du dossier « linux-chromeos/ », ainsi qu’à la racine du paquet distribué « Nouvel-AZERTY-Linux-`version`.zip ». Selon les réglages, on peut le lancer en le cliquant ou en le double-cliquant, ou dans un terminal (./installer.sh).
+
+Une fois lancé, le script analyse la situation et propose normalement soit d’installer ces dispositions de clavier, soit de les désinstaller.
+
+Pour mettre à jour ces dispositions de clavier par le script, il faut lancer celui-ci deux fois afin de les désinstaller, puis de les réinstaller.
+
+Les redispositions de touches sont sauvegardées lors de la désinstallation, aussi bien dans un dossier « sauvegarde/ » créé à côté du script, que dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au début de l’installation, le script propose d’utiliser le fichier sauvegardé à ces deux endroits s’il existe.
+
+### Installation manuelle
 
 1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier « Nouvel-AZERTY-Linux-[version].zip », et l’ajouter à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
 2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/types/dispotypes`.
@@ -35,9 +47,13 @@ Télécharger le dossier « Nouvel-AZERTY-Linux-<version>.zip » sous le tit
 9. Dans `/usr/share/X11/xkb/compat/complete`, ajouter `include "dispoled"` sur une nouvelle ligne.
 10. Veiller à ce que la méthode d’entrée soit XIM. Ce réglage se trouve par exemple (Ubuntu 24.04) dans `Système` > `Pays et langue` > `Système` > `Gérer les langues installées` > `Langue` > `Système de saisie au clavier` [iBus, XIM, Aucun].
 
-Si la disposition de clavier utilisée pour saisir le mot de passe à l’ouverture des sessions doit aussi être reconfigurée, ouvrir le fichier `/etc/default/keyboard` et changer les valeurs par exemple en `XKBLAYOUT="dispocla"` et `XKBVARIANT="kbfrFRs"`. Dans ce cas, on peut aussi laisser `XKBVARIANT=""` vide, car `"kbfrFRs"` est la disposition de base de ce nouvel AZERTY.
-
 Puis fermer la session et en rouvrir une. 
+
+## Disposition de clavier par défaut
+
+Si la disposition de clavier par défaut doit aussi être reconfigurée, ouvrir le fichier `/etc/default/keyboard` et changer les valeurs par exemple en `XKBLAYOUT="dispocla"` et `XKBVARIANT="kbfrFRs"`. Dans ce cas, on peut aussi laisser `XKBVARIANT=""` vide, car `"kbfrFRs"` est la disposition de base de ce nouvel AZERTY.
+
+## Commutateur de dispositions de clavier
 
 Ce nouvel AZERTY figure dans le dossier des dispositions de clavier `Français (France)` sous le nom `Français France disposition de clavier semi-automatique` et peut être ajouté aux dispositions actives. Afin de l’activer, il est nécessaire de désactiver l’autre disposition, car [le commutateur ne fonctionne pas](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md).
 
@@ -56,5 +72,7 @@ Les variantes redisposées QZJFGY s’appellent :
 * `Afrique francophone disposition de clavier semi-automatique redisposée`.
 
 La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va à l’encontre de cet objectif.
+
+## Vues de disposition autogénérées
 
 Les vues de disposition se veulent un compromis entre les 8 positions par touche programmables dans XKB et les 4 positions par touche pris en charge par les vues. Les rectangles avec un code sont des touches mortes ou des séquences définies dans le répertoire des touches mortes et des séquences Compose(.yml).
