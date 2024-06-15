@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 2.3.2 (2024-06-15)
+
+* Installation : Fournir un script pour automatiser l’installation. (installer.sh [4dc1b1b](https://github.com/dispoclavier/nouvel-azerty/commit/4dc1b1b3a0c1ab4d5ac3fd9735cb309cbc6793f6))
+* Documentation. (evdev-additions.xml [37d393b](https://github.com/dispoclavier/nouvel-azerty/commit/37d393bf5a171f1f8e3733431236de0615799ae8), compose-1.yml [0c06057](https://github.com/dispoclavier/nouvel-azerty/commit/0c060578cb1276f95ed4b5cc297d2ab37fdfeb28), [ea8660d](https://github.com/dispoclavier/nouvel-azerty/commit/ea8660d076fe28eb9e84309508520a434c4fa650), [a2f1a7f](https://github.com/dispoclavier/nouvel-azerty/commit/a2f1a7f00c88c54129fd3cbd98a6824770afc0e2), compose-3.yml [e92cfb9](https://github.com/dispoclavier/nouvel-azerty/commit/e92cfb960be614513c6c94ee3caa14f9440a979b), [78d5438](https://github.com/dispoclavier/nouvel-azerty/commit/78d5438a5dd122ebf2b6dda38d8a20cbadd03729))
+
 ## 2.3.1 (2024-06-12)
 
 * Variantes redisposées : Disposition : Restaurer la touche morte accent grave, perdue dès la version 2.0.0. (dispocla.cpp [3447c5d](https://github.com/dispoclavier/nouvel-azerty/commit/3447c5dd892925f994af6e36f249f137b0a57e5f))
