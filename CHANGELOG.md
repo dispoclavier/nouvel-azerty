@@ -1,5 +1,12 @@
 # Journal des modifications
 
+## 2.3.3 (2024-06-16)
+
+* Installation :
+  * Sortir le script du sous-dossier `outils/`. (installer.sh [b48cd4a](https://github.com/dispoclavier/nouvel-azerty/commit/b48cd4a59b3a56354b3dae710e5e134488a268da))
+  * Améliorer l’expérience utilisateur. (installer.sh [013dd59](https://github.com/dispoclavier/nouvel-azerty/commit/013dd59b15a467bd3c18a2a4e8fe861961ded582))
+  * Documentation. (readme.md [e9eccec](https://github.com/dispoclavier/nouvel-azerty/commit/e9eccec9195f8f5986bcc71c74fd1960b59b00c2), [fa1644e](https://github.com/dispoclavier/nouvel-azerty/commit/fa1644e84ceab8ad426c5899ac8b60e77e6c62a2), [369d48f](https://github.com/dispoclavier/nouvel-azerty/commit/369d48f7d106132f5f82f86e21bb905b327b50ff))
+
 ## 2.3.2 (2024-06-15)
 
 * Installation : Fournir un script pour automatiser l’installation. (installer.sh [4dc1b1b](https://github.com/dispoclavier/nouvel-azerty/commit/4dc1b1b3a0c1ab4d5ac3fd9735cb309cbc6793f6))
