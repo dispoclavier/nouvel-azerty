@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.3.2" # See # # Notes about syntax
+<UEFA0>                     : "version 2.3.3" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -55,7 +55,7 @@
 #
 #                             2. Make sure to be using the full-length file `Compose.yml`.
 #
-#                             3. Proceed following method A, B, C, or D:
+#                             3. Proceed following method A, B, or C:
 #
 #                                A. Most backward compatible:
 #                                   1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
