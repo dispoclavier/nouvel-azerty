@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-05-27T2338+0200
+# 2024-06-16T1832+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -15,9 +15,9 @@
 # space and symbol group tables and letter group tables are generated too.
 # Other options may be configured after `/START_LETTER_SYMBOL_GROUPS/`.
 #
-# The keyboard output is displayed on a white background span (class "bg") for
-# the purpose of delimiting whitespace characters and clarifying advance width
-# and vertical alignment.
+# The keyboard output is displayed on a white background span (class "bg") with
+# a light-blue baseline for the purpose of delimiting whitespace characters and
+# clarifying advance width and vertical alignment.
 #
 # In these tables, a second instance of each emoji is displayed in text style,
 # provided that the text style variation selector is supported. This feature
@@ -27,14 +27,15 @@
 # target locale as configured under `## Character names localization`.
 # `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
 #
-# The output is designed for use in WordPress, where {{{anrghg-classes}}} can
-# be replaced with additional CSS classes, as well as {{{anrghg-value}}} with
+# The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
+# be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
 # https://wordpress.org/plugins/anrghg/
 # https://wordpress.com/plugins/anrghg
-# The all-in-one table generated alongside can only be included by the
-# “Include partial” block of the A.N.R.GHG Publishing Toolkit because posts
-# with too much code cannot be saved in WordPress.
+#
+# The all-in-one table generated alongside can only be included in web pages in
+# WordPress when using the “Include partial” block provided by this plugin, as
+# posts with too much code in HTML blocks are not saved in WordPress.
 #
 # Using old-style file handles.
 use warnings;
@@ -104,14 +105,13 @@ while ( my $line = <INPUT> ) {
 	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
 
 		# Symbol groups and letter groups are included in the comprehensive table
-		# (its handle is WHOLEOUTPUT). To get them included, uncomment this line:
-
+		# WHOLEOUTPUT. To exclude these from WHOLEOUTPUT, uncomment this line:
 		# $comprehensive = !1;
 
 		# The symbol group table and the letter group table are generated alongside
-		# as an alternative, searchable documentation.
-		# To skip these tables, uncomment this line:
-
+		# as an alternative documentation that is searchable, as opposed to the two
+		# image-based tables with tooltips.
+		# To skip these HTML tables, uncomment this line:
 		# $parse_on = !1;
 
 	}
@@ -232,7 +232,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
 
-				# Keysyms.
+				# ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<EuroSign>/€/g;
@@ -291,7 +291,7 @@ while ( my $line = <INPUT> ) {
 				# Format Unicode scalar in comment.
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 
-				# Remove delimiters.
+				# Remove remaining delimiters.
 				$line =~ s/<(.)>/$1/g;
 
 				# Translation.
@@ -483,7 +483,6 @@ while ( my $line = <INPUT> ) {
 				}
 
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				# The span of class bg is used to apply a white background with a light-blue baseline.
 				# High surrogates.
 				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 				# Composed characters.
