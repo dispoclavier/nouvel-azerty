@@ -16,7 +16,7 @@ De toute manière, les statistiques de langage sont désactivées.
 
 La version de Linux recommandée pour cet usage est [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou l’équivalent, de cette époque, des autres distributions.
 
-Télécharger le dossier « Nouvel-AZERTY-Linux-`version`.zip » sous le titre « Assets », et faire comme indiqué dans le fichier « [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) » inclus.
+Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
 ## Installation
 
@@ -26,17 +26,21 @@ Télécharger le dossier « Nouvel-AZERTY-Linux-`version`.zip » sous le tit
 
 ### Script d’installation : mode d’emploi
 
-Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve ici sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh)) à la racine du dossier « linux-chromeos/ », ainsi qu’à la racine du paquet distribué « Nouvel-AZERTY-Linux-`version`.zip ». Selon les réglages, on peut le lancer en le cliquant ou en le double-cliquant, ou dans un terminal (./installer.sh).
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve ici sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`. Selon les réglages, on peut le lancer en le cliquant ou en le double-cliquant, ou dans un terminal (./installer.sh).
 
 Une fois lancé, le script analyse la situation et propose normalement soit d’installer ces dispositions de clavier, soit de les désinstaller.
 
 Pour mettre à jour ces dispositions de clavier par le script, il faut lancer celui-ci deux fois afin de les désinstaller, puis de les réinstaller.
 
-Les redispositions de touches sont sauvegardées lors de la désinstallation, aussi bien dans un dossier « sauvegarde/ » créé à côté du script, que dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au début de l’installation, le script propose d’utiliser le fichier sauvegardé à ces deux endroits s’il existe.
+Les **redispositions de touches** sont sauvegardées lors de la désinstallation, aussi bien dans un dossier `sauvegarde/` créé à côté du script, que dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au début de l’installation, le script propose d’utiliser le fichier sauvegardé à ces deux endroits s’il existe.
+
+Le fichier sauvegardé à côté de ce script offre la facilité d’une personnalisation aisée avant sa réinstallation, tandis que celui dans les configurations personnelles assure la pérennité à travers les différentes mises à jour, tant du système d’exploitation que de ces dispositions de clavier.
 
 ### Installation manuelle
 
-1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier « Nouvel-AZERTY-Linux-[version].zip », et l’ajouter à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
+En cas d’incompatibilité ou de configurations logicielles particulières, l’installation manuelle est une solution de dernier recours.
+
+1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-[version].zip`, et l’ajouter à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
 2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/types/dispotypes`.
 3. Dans `/usr/share/X11/xkb/types/complete`, ajouter `include "dispotypes"` sur une nouvelle ligne.
 4. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/symbols/dispocla`.
