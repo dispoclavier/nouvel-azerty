@@ -8,9 +8,7 @@ Quant à **Chrome OS**, il utilise certes XKB mais le fournit codé en dur, et 
 
 ## Extensions de fichiers
 
-À l’usage, la plupart de ces fichiers sont sans extension. Les extensions `.c`, `.cpp` et `.yml` servent surtout à ajouter des couleurs, et aussi à faciliter l’ouverture de ces fichiers sous Windows. L’extension `.cpp` a été choisie pour éviter `dispocla.c` ; les noms de fichier « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives.
-
-De toute manière, les statistiques de langage sont désactivées.
+À l’usage, la plupart de ces fichiers sont sans extension. Les extensions `.c`, `.cpp` et `.yml` servent surtout à ajouter des couleurs, et aussi à faciliter l’ouverture de ces fichiers sous Windows. L’extension `.cpp` a été choisie pour éviter `dispocla.c` (les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives). De toute manière, les statistiques de langage sont désactivées.
 
 ## Utilisation sans droits d’administrateur
 
@@ -77,6 +75,10 @@ Les variantes redisposées QZJFGY s’appellent :
 
 La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va à l’encontre de cet objectif.
 
-## Vues de disposition autogénérées
+## Vues de disposition
 
-Les vues de disposition se veulent un compromis entre les 8 positions par touche programmables dans XKB et les 4 positions par touche pris en charge par les vues. Les rectangles avec un code sont des touches mortes ou des séquences définies dans le répertoire des touches mortes et des séquences Compose(.yml).
+Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 positions par touche programmables dans XKB et les 4 positions par touche pris en charge par les vues. Les rectangles avec un code sont des touches mortes ou des séquences définies dans le répertoire des touches mortes et des séquences Compose(.yml).
+
+## Note
+
+Ce Lisez-moi est inclus dans les versions sous le nom de `Mode-d-emploi.md`.
