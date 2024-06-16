@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 # 2023-07-19T1747+0200
-# 2023-07-23T1447+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
+# 2024-06-16T1831+0200
 # = last modified.
-# 
+#
 # Generates an HTML table of math symbols, based on multi-key sequences in
 # `Compose.yml`.
 #
@@ -12,18 +12,19 @@
 #
 # Alias sequences with no-break space or with numpad digits are skipped.
 #
-# The keyboard output is displayed on a white background span (class "bg") for
-# the purpose of delimiting whitespace characters and clarifying advance width
-# and vertical alignment.
+# The keyboard output is displayed on a white background span (class "bg") with
+# a light-blue baseline for the purpose of delimiting whitespace characters and
+# clarifying advance width and vertical alignment.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
 # `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
 # In print, tooltips may be replaced with descriptors in the last column.
 #
-# The output is designed for use in WordPress, where {{{anrghg-classes}}} can
-# be replaced with additional CSS classes, as well as {{{anrghg-value}}} with
+# The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
+# be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
+#
 # Emoji style display should be deactivated on the page that this math table
 # is included as a partial.
 #
@@ -98,51 +99,57 @@ while ( my $line = <INPUT> ) {
 	if ( $parse_on ) {
 		if ( $line =~ /^</ ) {
 			unless ( $line =~ /<nobreakspace>/ || $line =~ /<KP_/ ) {
-				$line =~ s/<Multi_key>/<¦>/g;
-				$line =~ s/<space>/<␣>/g;
-				$line =~ s/<asciicircum>/<^>/g;
-				$line =~ s/<percent>/<%>/g;
-				$line =~ s/<EuroSign>/€/g;
-				$line =~ s/<quotedbl>/<">/g;
-				$line =~ s/<backslash>/<\\>/g;
-				$line =~ s/<asciitilde>/<~>/g;
-				$line =~ s/<at>/<@>/g;
-				$line =~ s/<apostrophe>/<'>/g;
-				$line =~ s/<rightsinglequotemark>/<’>/g;
-				$line =~ s/<braceleft>/<{>/g;
-				$line =~ s/<braceright>/<}>/g;
-				$line =~ s/<ampersand>/<&amp;>/g;
-				$line =~ s/<numbersign>/<#>/g;
-				$line =~ s/<dollar>/<\$>/g;
-				$line =~ s/<parenleft>/<(>/g;
-				$line =~ s/<parenright>/<)>/g;
-				$line =~ s/<minus>/<->/g;
-				$line =~ s/<plus>/<+>/g;
-				$line =~ s/<underscore>/<_>/g;
-				$line =~ s/<bracketleft>/<[>/g;
-				$line =~ s/<bracketright>/<]>/g;
-				$line =~ s/<bar>/<|>/g;
-				$line =~ s/<slash>/<\/>/g;
-				$line =~ s/<asterisk>/<*>/g;
-				$line =~ s/<less>/<&lt;>/g;
-				$line =~ s/<greater>/<&gt;>/g;
-				$line =~ s/<equal>/<=>/g;
-				$line =~ s/<grave>/<`>/g;
-				$line =~ s/<comma>/<,>/g;
-				$line =~ s/<question>/<?>/g;
-				$line =~ s/<period>/<.>/g;
-				$line =~ s/<exclam>/<!>/g;
-				$line =~ s/<colon>/<:>/g;
-				$line =~ s/<semicolon>/<;>/g;
-				$line =~ s/<section>/<;>/g;
-				$line =~ s/<egrave>/<è>/g;
+
+				# Remove spaces.
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
-				$line =~ s/<(.+?)>/$1/g;
-				$line =~ s/¦/<span class="tooltip" title="Touche de composition AltGr\/Option + £\$">¦<\/span>/g;
-				$line =~ s/␣/<span class="tooltip" title="Espace">␣<\/span>/g;
 
-				# Anchors and localized tooltips:
+				# Add tooltips.
+				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + £\$">¦<\/span>/g;
+				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
+				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
+
+				# Convert ASCII and iconic.
+				$line =~ s/<asciicircum>/^/g;
+				$line =~ s/<percent>/%/g;
+				$line =~ s/<EuroSign>/€/g;
+				$line =~ s/<quotedbl>/"/g;
+				$line =~ s/<backslash>/\\/g;
+				$line =~ s/<asciitilde>/~/g;
+				$line =~ s/<at>/@/g;
+				$line =~ s/<apostrophe>/'/g;
+				$line =~ s/<braceleft>/{/g;
+				$line =~ s/<braceright>/}/g;
+				$line =~ s/<ampersand>/&amp;/g;
+				$line =~ s/<numbersign>/#/g;
+				$line =~ s/<dollar>/\$/g;
+				$line =~ s/<parenleft>/(/g;
+				$line =~ s/<parenright>/)/g;
+				$line =~ s/<minus>/-/g;
+				$line =~ s/<plus>/+/g;
+				$line =~ s/<underscore>/_/g;
+				$line =~ s/<bracketleft>/[/g;
+				$line =~ s/<bracketright>/]/g;
+				$line =~ s/<bar>/|/g;
+				$line =~ s/<slash>/\//g;
+				$line =~ s/<asterisk>/*/g;
+				$line =~ s/<less>/&lt;/g;
+				$line =~ s/<greater>/&gt;/g;
+				$line =~ s/<equal>/=/g;
+				$line =~ s/<grave>/`/g;
+				$line =~ s/<comma>/,/g;
+				$line =~ s/<question>/?/g;
+				$line =~ s/<period>/./g;
+				$line =~ s/<exclam>/!/g;
+				$line =~ s/<colon>/:/g;
+				$line =~ s/<semicolon>/;/g;
+				$line =~ s/<section>/§/g;
+				$line =~ s/<egrave>/è/g;
+
+				# Remove remaining delimiters.
+				$line =~ s/<(.)>/$1/g;
+
+				# Add anchors and localized tooltips.
 				$line    =~ m/^.+ : +"(.+?)"/u;
 				$str     = $1;
 				$cp      = ord( $str );
@@ -189,9 +196,8 @@ while ( my $line = <INPUT> ) {
 					$anchor = $anchor . '_' . $index;
 				}
 				push( @anchors, $anchor );
-				
+
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				# The white background (span of class bg) clarifies whitespace and vertical alignment.
 				# Diacritics.
 				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
 				# Spacing symbols.
