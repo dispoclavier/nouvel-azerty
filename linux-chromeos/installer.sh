@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-15T1225+0200
+#                       Date : 2024-06-16T0322+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -24,8 +24,8 @@
 #
 #     ◦ Vérifier le contenu du script ci-dessous ;
 #     ◦ Ouvrir un terminal dans le même dossier ;
-#     ◦ Rendre ce script exécutable par `chmod +x installer.sh` ;
-#     ◦ Lancer le script par la commande `./installer.sh`.
+#     ◦ Rendre ce script exécutable par « chmod +x installer.sh » ;
+#     ◦ Lancer le script par la commande « ./installer.sh ».
 #
 #
 #   • Dans le navigateur de fichiers :
@@ -37,13 +37,13 @@
 #     ◦ Cliquer ou double-cliquer le script puis choisir « Lancer dans le terminal ».
 #
 #
-# Le manque de booléens dans Bash est pallié par le recours à des comparaisons arithmétiques.
+# L’absence des booléens dans Bash est pallié par le recours à des comparaisons arithmétiques.
 # C’est pourquoi on peut tout aussi bien inverser 0 et 1 (false dans Bash) pour la lisibilité.
 introduction=0 # Pas faite.
 function afficher {
 	if [ "$introduction" -eq 0 ]; then
-		echo "    Bienvenue dans l’installateur de dispositions de clavier Dispoclavier."
-		echo "    En vérifiant brièvement l’existant avant de commencer, on peut noter :"
+		echo '    Bienvenue dans l’installateur de dispositions de clavier Dispoclavier.'
+		echo '    En vérifiant brièvement l’existant avant de commencer, on peut noter :'
 		introduction=1 # Faite.
 	fi
 	echo "$fichier $1."
@@ -263,162 +263,184 @@ if [ "$fonctionne" -eq 1 ]; then
 			# Vérifier le système de saisie au clavier.
 			if ! im-config -m | grep -q 'xim'; then
 				echo -e "\n  ⚠  Ces dispositions de clavier fonctionnent uniquement"
-				echo      "     si le système de saisie au clavier est XIM."
+				echo      '     si le système de saisie au clavier est XIM.'
 				echo -e "\n  ⚠  Sans la X Window Input Method, toutes les séquences"
-				echo      "     multi-caractères sont en panne."
-				echo      "     Or sans séquences multi-caractères, ces dispositions"
-				echo      "     semi-automatiques ne peuvent être opérationnelles."
-				echo      "     Même les lettres composées qui sont dans les touches"
-				echo      "     mortes ne peuvent être saisies, étant en panne."
+				echo      '     multi-caractères sont en panne.'
+				echo      '     Or sans séquences multi-caractères, ces dispositions'
+				echo      '     semi-automatiques ne peuvent être opérationnelles.'
+				echo      '     Même les lettres composées qui sont dans les touches'
+				echo      '     mortes ne peuvent être saisies, étant en panne.'
 				echo -e "\n     XIM une fois sélectionnée, elle sera active"
-				echo      "     dès la prochaine session."
+				echo      '     dès la prochaine session.'
 				echo -e "\n  ⚠  Avant d’installer ces dispositions de clavier,"
-				echo      "     le mieux est de commencer par activer XIM."
+				echo      '     le mieux est de commencer par activer XIM.'
 				echo -e "\n       Pour activer XIM, appuyez sur Entrée."
-				echo      "       Pour quitter, tapez Q ou N puis Entrée."
+				echo      '       Pour quitter, tapez q ou n puis Entrée.'
 				read -p   "    " reponse
 				case $reponse in
-					[qQnN])
+					[nNqQ])
 						exit
 					;;
 					*)
 						# Basculer vers le système de saisie au clavier XIM.
 						im-config -n xim
-						echo      "     XIM a maintenant été sélectionné."
+						echo      '     XIM a maintenant été sélectionné.'
 					;;
 				esac
 			fi
 			# Installer ces dispositions de clavier.
 			echo -e "\n  ❓  Souhaitez-vous installer ces dispositions de clavier ?"
-			echo -e "\n       Pour installer, tapez I ou O puis Entrée."
-			echo      "       Pour quitter, appuyez sur Entrée."
+			echo -e "\n       Pour les installer, appuyez sur Entrée."
+			echo      '       Pour quitter, tapez q ou p puis Entrée.'
 			read -p   "    " reponse
 			case $reponse in
-				[iIoO])
+				[pPqQ])
+					exit
+				;;
+				*)
 					# Installer le fichier permettant de redisposer des touches.
 					sudo cp $X11/xkb/keycodes/evdev $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
 					fait=0
-					# Vérifier s’il y a une sauvegarde à côté.
+					config=0
 					if [ -f "sauvegarde/evdev.c" ]; then
 						echo -e "\n  ❓  Souhaitez-vous réinstaller les redispositions de touches"
-						echo      "       sauvegardées ici à côté dans sauvegarde/evdev.c ?"
-						echo -e "\n       Pour les réinstaller, tapez S puis Entrée."
-						echo      "       Pour les ignorer, appuyez sur Entrée."
+						echo      '       sauvegardées ici à côté dans sauvegarde/evdev.c ?'
+						echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
+						echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
+						echo      '       Pour quitter, tapez q puis Entrée.'
 						read -p   "    " reponse
 						case $reponse in
-							[sS])
-								echo "Réinstallation du fichier permettant de redisposer des touches."
-								sudo cp sauvegarde/evdev.c $X11/xkb/keycodes/evdev
-								fait=1
+							[iIpP])
+								echo '    Le fichier "sauvegarde/evdev.c" a été ignoré.'
+							;;
+							[qQ])
+								sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+								exit
 							;;
 							*)
+								echo 'Réinstallation et sauvegarde des redispositions de touches,'
+								echo '    en utilisant le fichier "sauvegarde/evdev.c" ici à côté.'
+								sudo cp sauvegarde/evdev.c $X11/xkb/keycodes/evdev
+								cp $X11/xkb/keycodes/evdev ~/.config/dispoclavier/keycodes/evdev
+								fait=1
+								config=1
 							;;
 						esac
 					fi
-					# Vérifier s’il y a une sauvegarde dans le dossier de configurations.
-					if [ -e "$HOME/.config/dispoclavier/keycodes/evdev" ] && [ "$fait" -eq 0 ]; then
+					if [ -f "$HOME/.config/dispoclavier/keycodes/evdev" ] && [ "$fait" -eq 0 ]; then
 						echo -e "\n  ❓  Souhaitez-vous réinstaller les redispositions de touches"
-						echo      "       sauvegardées dans ~/.config/dispoclavier/keycodes/ ?"
-						echo -e "\n       Pour les réinstaller, tapez C puis Entrée."
-						echo      "       Pour les ignorer, appuyez sur Entrée."
+						echo      '       sauvegardées dans ~/.config/dispoclavier/keycodes/ ?'
+						echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
+						echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
+						echo      '       Pour quitter, tapez q puis Entrée.'
 						read -p   "    " reponse
 						case $reponse in
-							[cC])
-								echo "Réinstallation du fichier permettant de redisposer des touches."
-								sudo cp ~/.config/dispoclavier/keycodes/evdev $X11/xkb/keycodes/evdev
-								fait=1
+							[iIpP])
+								echo '    Le fichier "~/.config/dispoclavier/keycodes/evdev" a été ignoré.'
+							;;
+							[qQ])
+								sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+								exit
 							;;
 							*)
+								echo 'Réinstallation du fichier permettant de redisposer des touches,'
+								echo '    en utilisant le fichier "~/.config/dispoclavier/keycodes/evdev".'
+								sudo cp ~/.config/dispoclavier/keycodes/evdev $X11/xkb/keycodes/evdev
+								fait=1
 							;;
 						esac
 					fi
 					if [ "$fait" -eq 0 ]; then
-						echo "Installation du fichier générique de redisposition des touches."
+						echo 'Installation du fichier générique de redisposition des touches.'
 						sudo cp installer/evdev.c $X11/xkb/keycodes/evdev
 					fi
 					# Installer les types de touches.
-					echo "Installation des types de touches."
+					echo 'Installation des types de touches.'
 					sudo cp installer/dispotypes.c $X11/xkb/types/dispotypes
 					sudo cp $X11/xkb/types/complete $X11/xkb/types/complete-types-avant-dispoclavier
 					sudo sed -i '/\};/i \ \ \ \ include "dispotypes"' $X11/xkb/types/complete
 					# Installer les tableaux d’allocation de touches.
-					echo "Installation des tableaux d’allocation de touches."
+					echo 'Installation des tableaux d’allocation de touches.'
 					sudo cp installer/dispocla.cpp $X11/xkb/symbols/dispocla
 					# Désactiver l’écrasement du deuxième groupe vif.
-					echo "Désactivation de l’écrasement du deuxième groupe vif."
+					echo 'Désactivation de l’écrasement du deuxième groupe vif.'
 					sudo cp $X11/xkb/rules/evdev $X11/xkb/rules/evdev-rules-avant-dispoclavier
 					sudo sed -ri 's/(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\/\/\ \1/' $X11/xkb/rules/evdev
 					# Installer les séquences et le contenu des touches mortes.
-					echo "Installation des séquences et du contenu des touches mortes."
+					echo 'Installation des séquences et du contenu des touches mortes.'
 					sudo cp $X11/locale/en_US.UTF-8/Compose $X11/locale/en_US.UTF-8/Compose-avant-dispoclavier
 					sudo chmod 666 $X11/locale/en_US.UTF-8/Compose
 					cat Compose.yml >> $X11/locale/en_US.UTF-8/Compose
 					sudo chmod 644 $X11/locale/en_US.UTF-8/Compose
 					# Ajouter une extension au commutateur de dispositions.
-					echo "Ajout dans le répertoire du commutateur de dispositions de clavier."
+					echo 'Ajout dans le répertoire du commutateur de dispositions de clavier.'
 					sudo cp $X11/xkb/rules/evdev.xml $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml
 					sudo sed -i '/<\/layoutList>/i <!-- ajouts-dispoclavier -->' $X11/xkb/rules/evdev.xml
 					sudo sed -n '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/p' installer/evdev-additions.xml > installer/evdev-additions-seules.xml
 					sudo sed -i '/ajouts-dispoclavier/r installer/evdev-additions-seules.xml' $X11/xkb/rules/evdev.xml
 					sudo sed -i '/ajouts-dispoclavier/d' $X11/xkb/rules/evdev.xml
 					# Installer le témoin lumineux Arrêt défilement pour le mode ASCII.
-					echo "Rattachement du témoin lumineux Arrêt défilement au mode ASCII."
+					echo 'Rattachement du témoin lumineux Arrêt défilement au mode ASCII.'
 					sudo cp installer/dispoled.c $X11/xkb/compat/dispoled
 					sudo cp $X11/xkb/compat/complete $X11/xkb/compat/complete-compat-avant-dispoclavier
 					sudo sed -i '/\};/i \ \ \ \ include "dispoled"' $X11/xkb/compat/complete
 					# Afficher un dernier message.
 					echo -e "\n  ✅  Ces dispositions de clavier viennent d’être installées."
-					echo      "     Elles sont activables dès la prochaine session."
-					echo      "     Tous les retours d’expérience sont les bienvenus."
-					echo      "     S’il manque quoi que ce soit, ou à tout autre sujet relatif,"
-					echo      "     n’hésitez pas à créer un rapport de bogue :"
-					echo      "     https://github.com/dispoclavier/nouvel-azerty/issues"
-					echo      "     N’hésitez pas non plus à lancer une discussion :"
-					echo      "     https://github.com/dispoclavier/nouvel-azerty/discussions"
-					echo -e   "             Bonne utilisation !\n"
-				;;
-				*)
-					exit
+					echo      '     Elles sont activables dès la prochaine session.'
+					if [ "$config" -eq 1 ]; then
+						echo -e "\n     Les redispositions actuelles de touches ont été sauvegardées"
+						echo      '         dans ~/.config/dispoclavier/keycodes/evdev.'
+					fi
+					echo -e "\n     Tous les retours d’expérience sont les bienvenus."
+					echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
+					echo      '     n’hésitez pas à créer un rapport de bogue :'
+					echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
+					echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
+					echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
+					echo -e "\n             Bonne utilisation !\n"
 				;;
 			esac
 		else
 			echo -e "\n     Ces dispositions de clavier ne sont pas installées, mais"
-			echo      "     il n’est pas possible de les installer maintenant :"
+			echo      '     il n’est pas possible de les installer maintenant :'
 			if [ "$manque" -eq 1 ]; then
-				echo      "     Les fichiers à installer ne sont pas au complet."
+				echo      '     Les fichiers à installer ne sont pas au complet.'
 			fi
 			if [ "$faux" -eq 1 ]; then
-				echo      "     Les fichiers à installer présentent des non-conformités."
+				echo      '     Les fichiers à installer présentent des non-conformités.'
 			fi
-			echo      "     Le mieux est de télécharger un nouveau paquetage"
-			echo      "     sur la page de la version la plus récente :"
-			echo      "     https://github.com/dispoclavier/nouvel-azerty/releases/latest"
-			echo -e   "     Avec toutes nos excuses pour ce désagrément.\n"
+			echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
+			echo      '     sur la page de la version la plus récente :'
+			echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
+			echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
 		fi
 	else
 		if [ "$installation" -eq 1 ]; then
 			echo -e "\n     Ces dispositions de clavier étant déjà installées,"
-			echo      "     le mieux est de les désinstaller, quitte à les réinstaller"
-			echo      "     par la suite avec tous les fichiers à jour. Les redispositions"
-			echo      "     de touches seront sauvegardées dans les configurations :"
-			echo      "     ~/.config/dispoclavier/keycodes/evdev"
-			echo      "     Et aussi ici à côté, où tout le reste sera pareillement archivé."
+			echo      '     le mieux est de les désinstaller, quitte à les réinstaller'
+			echo      '     par la suite avec tous les fichiers à jour.'
+			echo -e "\n  ⚠  Les redispositions de touches seront sauvegardées dans :"
+			echo      '         ~/.config/dispoclavier/keycodes/evdev'
+			echo      '     Et ici à côté dans "sauvegarde/", où tout sera archivé.'
 		elif [ "$trace" -eq 1 ]; then
 			echo -e "\n     Ces dispositions de clavier ne sont pas bien installées, mais"
-			echo      "     il y a des traces d’installation. Le mieux est de tout désinstaller,"
-			echo      "     puis éventuellement de réinstaller le tout correctement plus tard."
+			echo      '     il y a des traces d’installation. Le mieux est de tout désinstaller,'
+			echo      '     puis éventuellement de réinstaller le tout correctement.'
 		fi
 		echo -e "\n  ❓  Souhaitez-vous désinstaller ces dispositions de clavier ?"
-		echo -e "\n       Pour désinstaller, tapez D ou O puis Entrée."
-		echo      "       Pour quitter, appuyez sur Entrée."
+		echo -e "\n       Pour les désinstaller, appuyez sur Entrée."
+		echo      '       Pour quitter, tapez q ou p puis Entrée.'
 		read -p   "    " reponse
 		case $reponse in
-			[dDoO])
+			[pPqQ])
+				exit
+			;;
+			*)
 				# Désinstaller le témoin lumineux Arrêt défilement pour le mode ASCII.
 				mkdir -p sauvegarde/archive
 				cp $X11/xkb/compat/complete sauvegarde/archive/complete-compat.c
 				sudo sed -i '/include "dispoled"/d' $X11/xkb/compat/complete
-				echo "Détachement du témoin lumineux Arrêt défilement du mode ASCII."
+				echo 'Détachement du témoin lumineux Arrêt défilement du mode ASCII.'
 				if [ "$complete_compat_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/compat/complete-compat-avant-dispoclavier sauvegarde/archive/complete-compat-avant.c
 				fi
@@ -426,7 +448,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					sudo mv $X11/xkb/compat/dispoled sauvegarde/archive/dispoled.c
 				fi
 				# Désinstaller et sauvegarder le fichier pour redisposer des touches.
-				echo "Désinstallation et sauvegarde du fichier permettant de redisposer des touches."
+				echo 'Désinstallation et sauvegarde du fichier permettant de redisposer des touches.'
 				cp $X11/xkb/keycodes/evdev sauvegarde/evdev.c
 				mkdir -p ~/.config/dispoclavier/keycodes
 				cp $X11/xkb/keycodes/evdev ~/.config/dispoclavier/keycodes/evdev
@@ -435,33 +457,33 @@ if [ "$fonctionne" -eq 1 ]; then
 					sudo mv $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier $X11/xkb/keycodes/evdev
 				fi
 				# Supprimer l’extension du commutateur de dispositions.
-				echo "Suppression dans le répertoire du commutateur de dispositions de clavier."
+				echo 'Suppression dans le répertoire du commutateur de dispositions de clavier.'
 				cp $X11/xkb/rules/evdev.xml sauvegarde/archive/evdev-xml-rules.xml
 				if [ "$evdev_xml_rules_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml sauvegarde/archive/evdev-xml-rules-avant.xml
 				fi
 				sudo sed -i '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/d' $X11/xkb/rules/evdev.xml
 				# Désinstaller les séquences et le contenu des touches mortes.
-				echo "Désinstallation des séquences et du contenu des touches mortes."
+				echo 'Désinstallation des séquences et du contenu des touches mortes.'
 				cp $X11/locale/en_US.UTF-8/Compose sauvegarde/archive/Compose.yml
 				sudo sed -i '/START_additions_Compose_Dispoclavier/,/END_additions_Compose_Dispoclavier/d' $X11/locale/en_US.UTF-8/Compose
 				if [ "$compose_avant" -eq 1 ]; then
 					sudo mv $X11/locale/en_US.UTF-8/Compose-avant-dispoclavier sauvegarde/archive/Compose-avant.yml
 				fi
 				# Réactiver l’écrasement du deuxième groupe vif.
-				echo "Réactivation de l’écrasement du deuxième groupe vif."
+				echo 'Réactivation de l’écrasement du deuxième groupe vif.'
 				sudo cp $X11/xkb/rules/evdev sauvegarde/archive/evdev-rules.c
 				sudo sed -ri 's/\/\/\s*(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\1/' $X11/xkb/rules/evdev
 				if [ "$evdev_rules_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/rules/evdev-rules-avant-dispoclavier sauvegarde/archive/evdev-rules-avant.c
 				fi
 				# Désinstaller les tableaux d’allocation de touches.
-				echo "Désinstallation des tableaux d’allocation de touches."
+				echo 'Désinstallation des tableaux d’allocation de touches.'
 				if [ "$dispocla" -eq 1 ]; then
 					sudo mv $X11/xkb/symbols/dispocla sauvegarde/archive/dispocla.cpp
 				fi
 				# Désinstaller les types de touches.
-				echo "Désinstallation des types de touches."
+				echo 'Désinstallation des types de touches.'
 				cp $X11/xkb/types/complete sauvegarde/archive/complete-types.c
 				sudo sed -i '/include "dispotypes"/d' $X11/xkb/types/complete
 				if [ "$complete_types_avant" -eq 1 ]; then
@@ -472,23 +494,20 @@ if [ "$fonctionne" -eq 1 ]; then
 				fi
 				# Afficher un dernier message.
 				echo -e "\n  ✅  Ces dispositions de clavier viennent d’être désinstallées."
-				echo      "     À moins d’être réinstallées dans la foulée, ces dispositions"
-				echo      "     auront complètement disparu dès la prochaine session."
+				echo      '     À moins d’être réinstallées dans la foulée, ces dispositions'
+				echo      '     auront complètement disparu dès la prochaine session.'
 				echo -e "\n  ⚠  Les redispositions de touches ont été sauvegardées à côté et"
-				echo      "     dans ~/.config/dispoclavier/keycodes/."
-				echo -e   "             Merci d’avoir utilisé Dispoclavier.\n"
-			;;
-			*)
-				exit
+				echo      '     dans ~/.config/dispoclavier/keycodes/.'
+				echo -e "\n             Merci d’avoir utilisé Dispoclavier.\n"
 			;;
 		esac
 	fi
 else
 	echo -e "\n     Sous ce système, ce script ne peut pas installer ces dispositions"
-	echo      "     de clavier, car XKB et XCompose ne se présentent pas comme attendu."
-	echo      "     Peut-être serait-il envisageable d’installer ces dispositions de"
-	echo      "     clavier manuellement selon le mode d’emploi figurant dans l’en-tête"
-	echo      "     du fichier \"Compose.yml\", qui va dans le dossier personnel, et dans"
-	echo      "     chacun des fichiers qui se trouvent dans le dossier \"installer/\"".
-	echo -e   "     Avec toutes nos excuses pour ce désagrément.\n"
+	echo      '     de clavier, car XKB et XCompose ne se présentent pas comme attendu.'
+	echo -e "\n     Peut-être serait-il envisageable d’installer ces dispositions de"
+	echo      '     clavier manuellement selon le mode d’emploi figurant dans l’en-tête'
+	echo      '     du fichier "Compose.yml", qui va dans le dossier personnel, et dans'
+	echo      '     chacun des fichiers qui se trouvent dans le dossier "installer/"'.
+	echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
 fi
