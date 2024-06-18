@@ -1,4 +1,4 @@
-//                       Date: 2024-05-27T2133+0200
+//                       Date: 2024-06-18T0314+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -27,30 +27,29 @@
 //                                /usr/share/X11/xkb/keycodes/evdev
 //                                as the original, e.g.
 //                                /usr/share/X11/xkb/keycodes/evdev_ORIGINAL
+//
 //                             2. Add this file as
 //                                /usr/share/X11/xkb/keycodes/evdev
 //
-//                             The change takes effect when reopening a session.
+//                             The changes take effect when reopening a session.
 //
-//             Uninstallation: Delete that file and revert the renaming.
+//             Uninstallation: Delete the new file and revert the renaming.
 //
 //
-// Mapping X key codes to XKB key labels
+// #   X key codes to XKB key labels map
 //
-// CAUTION: These decimals are X key codes, not Linux key codes.
-//          The difference is 8 added when passing Linux key codes
-//          over to X. X key codes come on top of the Linux key codes
-//          and are mapped to XKB key labels in this file.
+// When Linux key codes are passed over to X, 8 is added. X key codes come on
+// top of the Linux key codes and are mapped to XKB key labels in this file.
 //
-//          Some applications may be ignoring some of these mappings,
-//          notably those about handling the Backspace key.
+// Some applications may be ignoring some of these mappings, notably those
+// about handling the Backspace key.
 //
 // Linux keycodes appear in /usr/inc/linux/input-event-codes.h.
 // https://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
 // http://manpages.ubuntu.com/manpages/xenial/man1/showkey.1.html
+//
 // ArchLinux gives the default scancodes-to-keycodes mapping in
 // /usr/lib/udev/hwdb.d/60-keyboard.hwdb.
-// Some versions of Ubuntu like 16.04 do not have this.
 //
 // This file covers key remappings that should apply system-wide
 // rather than on a per-keylayout basis.
@@ -58,26 +57,32 @@
 // Remappings on a per-user basis for built-in keyboards and without
 // support for USB keyboards may be performed using setkeycodes.
 // This has the upside of being done in the kernel, not in XKB, so it
-// applies also in applications (VSCode) disregarding XKB remappings.
+// applies also in applications disregarding XKB remappings.
 // http://manpages.ubuntu.com/manpages/xenial/man8/setkeycodes.8.html
-// sudo setkeycodes scancode keycode [...]
-// Permutate Backspace and right Control:
-// sudo setkeycodes 0e 97 e01d 14
-// This command has cross-session validity until shutdown.
-// The remapping may be inadvertently lost once and needs to be redone.
 //
-// Editing this file is designed for moving the left-hand codes, keylabels.
+//     sudo setkeycodes scancode keycode [...]
+//
+// Permutate Backspace and right Control:
+//
+//     sudo setkeycodes 0e 97 e01d 14
+//
+// This command has cross-session validity until shutdown.
+// The remapping may be inadvertently lost once and need to be redone.
+//
+// The recommended way of editing this file is by moving the keylabels.
+//
 
 default xkb_keycodes "evdev" {
   minimum =   8;
   maximum = 255;
 
+  //
   // The main layout and 8 distributable subvariants are configurable below.
   //
   // Since laptops with ANSI keyboard for ISO keyboard markets may have a Menu key,
   // the subvariants with Backspace on Menu are provided with swapped Caps/ISO too.
   //
-  // Arguments are designed for use when running `comp.sh`.
+  // When running `comp.sh`, the following arguments are used.
   //
   // Arg  Suffix             Features
   //
@@ -93,37 +98,77 @@ default xkb_keycodes "evdev" {
   //
   // Each key can be mapped only once, and the latest mapping overrides previous ones.
   //
+  
+        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
+
+        <CAPS> =  66;  // was <CAPS>   Common mapping for desktop and laptop.
+        <LSGT> =  94;  // was <LSGT>   Common mapping for desktop and laptop.
+        <RWIN> = 134;  // was <RWIN>   Common mapping for desktop and laptop.
+        <MENU> = 135;  // was <MENU>   Common mapping for desktop and laptop.
+        <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
+
+  //
+  // ##   ANSI keyboards
+  //
+  // On pure ANSI keyboards, key B00 needs to be introduced at the expense of
+  // the right Control key, repurposed as CAPS, for the CapsLock key to become
+  // the AltFr key LSGT, that needs to be lefthand. However, in case the CAPS
+  // key is disliked, it does not need to be remapped, so RCTL is unaffected.
+
+        //<LSGT> =  66;  // was <CAPS>   Map ISO key on CapsLock for pure ANSI keyboards.
+        //<CAPS> = 105;  // was <RCTL>   Map CapsLock on right Control for pure ANSI keyboards.
+
+  //
+  // ##   Hybrid ANSI keyboards with ISO key emulation
+  //
+  // Suffix: -ansi
+  // Suffix: -ansi-menu
+  // Suffix: -ansi-menu-sans
+  //
   // On ANSI keyboards for ISO keyboard markets, key B00 is located where other
   // laptops — for the ANSI market or with ISO key — have the right Control key,
   // so that for AltFr to stay lefthand, keys LSGT and CAPS need to be swapped.
-  // <LSGT> is key ISO B00, and on ISO keyboards this is the AltFr modifier key.
+  // LSGT is key ISO B00, which on ISO keyboards is the AltFr modifier key.
 
-        <LSGT> =  94;  // was <LSGT>   Common mapping for desktop and laptop.
-        <CAPS> =  66;  // was <CAPS>   Common mapping for desktop and laptop.
-        //<CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for ANSI keyboards.
-        //<LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for ANSI keyboards.
+        //<LSGT> =  66;  // was <CAPS>   Swap CapsLock and ISO key for hybrid ANSI keyboards.
+        //<CAPS> =  94;  // was <LSGT>   Swap CapsLock and ISO key for hybrid ANSI keyboards.
 
+  //
+  // ##   Backspace on right Windows key
+  //
+  // Suffix: -win
+  // Suffix: -win-sans
+  //
   // Yves NEUVILLE recommends the Backspace key at the bottom right rather at the top.
   // “Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4;
   // see the drawings showing the Neuville keyboard, on page 51, pages 61 through 65.
   //
   // The options suggested below target mainly the key next to the current AltGr key.
-
-        <BKSP> =  22;  // was <BKSP>   Overridden if Backspace on RWIN, MENU or RCTL.
-        <RWIN> = 134;  // was <RWIN>   Common mapping for desktop and laptop.
-        <MENU> = 135;  // was <MENU>   Common mapping for desktop and laptop.
-        <RCTL> = 105;  // was <RCTL>   Common mapping for desktop and laptop.
+  // Right Windows on Backspace is not included in the distributable subvariants.
 
         //<BKSP> = 134;  // was <RWIN>   Backspace on right Windows for desktop keyboards.
         //<HKTG> = 135;  // was <MENU>   Additionally: Deactivates the Menu key.
 
-  // Right Windows on Backspace is not included in the distributable subvariants.
-        //<RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
+  //      <RWIN> =  22;  // was <BKSP>   Right Windows on Backspace instead for usability.
+  //
+  //
+  // ##   Backspace on Menu key
+  //
+  // Suffix: -menu
+  // Suffix: -ansi-menu
+  // Suffix: -menu-sans
+  // Suffix: -ansi-menu-sans
+  //
+  // Menu on Backspace is optional since this may interfere with application keybindings.
 
         //<BKSP> = 135;  // was <MENU>   Backspace on Menu key for compact keyboards.
         //<MENU> =  22;  // was <BKSP>   Menu key on Backspace instead for usability.
-  // Menu on Backspace is optional since this may interfere with application keybindings.
 
+  //
+  // ##   Backspace on right Control key
+  //
+  // Suffix: -ctrl
+  //
         //<BKSP> = 105;  // was <RCTL>   Backspace on right Control for compact keyboards.
         //<RCTL> =  22;  // was <BKSP>   Right Control on Backspace instead for usability.
 
@@ -136,8 +181,9 @@ default xkb_keycodes "evdev" {
   // Swapping BKSP and RCTL on built-in keyboards may be done using setkeycodes, but
   // that fails on external keyboards. See “setkeycodes not effective on USB keyboard”
   // https://bugzilla.redhat.com/show_bug.cgi?id=211803
+  //
 
-  // Other left-hand functional keys:
+  // Other left-hand special keys
 
         <ESC>  =   9;  // was <ESC>
         <TAB>  =  23;  // was <TAB>
@@ -147,14 +193,14 @@ default xkb_keycodes "evdev" {
         <LALT> =  64;  // was <LALT>
         <LWIN> = 133;  // was <LWIN>
 
-  // Other right-hand functional keys:
+  // Other right-hand special keys
 
   alias <MENU> = <COMP>;
         <RTRN> =  36;  // was <RTRN>
         <RTSH> =  62;  // was <RTSH>
         <RALT> = 108;  // was <RALT>
 
-  // Other keys:
+  // Other keys
 
         <NMLK> =  77;  // was <NMLK>   Compact keyboards use NMLK for the overlay numpad.
         <SCLK> =  78;  // was <SCLK>
@@ -163,7 +209,7 @@ default xkb_keycodes "evdev" {
         <PAUS> = 127;
      // <BRK>  = 419;
 
-  // Alphabetic keys:
+  // Alphabetic keys
 
         <AE01> =  10;
         <AE02> =  11;
@@ -219,7 +265,7 @@ default xkb_keycodes "evdev" {
 
         <SPCE> =  65;
 
-  // Edit keys:
+  // Edit keys
 
         <UP>   = 111;
         <LEFT> = 113;
@@ -233,7 +279,7 @@ default xkb_keycodes "evdev" {
         <PGUP> = 112;
         <PGDN> = 117;
 
-  // Numeric keypad:
+  // Numeric keypad
 
         <KPEN> = 104;
         <KPEQ> = 125;
@@ -258,7 +304,7 @@ default xkb_keycodes "evdev" {
         <KP0>  =  90;
         <KPDL> =  91;
 
-  // Function keys:
+  // Function keys
 
         <FK01> =  67;
         <FK02> =  68;
@@ -279,12 +325,12 @@ default xkb_keycodes "evdev" {
         <FK16> = 194;
         <FK17> = 195;
         <FK18> = 196;
-  //    <FK19> = 197;
+        <FK19> = 197;
         <FK20> = 198;
         <FK21> = 199;
         <FK22> = 200;
         <FK23> = 201;
-  //    <FK24> = 202;
+        <FK24> = 202;
 
   // Keys that are generated on Japanese keyboards
 
