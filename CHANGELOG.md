@@ -1,5 +1,17 @@
 # Journal des modifications
 
+## 2.3.4 (projet)
+
+* Sous-variantes :
+  * Prendre en charge aussi les agencements ANSI purs. (evdev.c [d98b5de](https://github.com/dispoclavier/nouvel-azerty/commit/d98b5de4daa2c29fb690f2d175b41a6301996deb))
+  * Restaurer les touches de fonction 19 et 24. (ibidem)
+  * Fournir un fichier `evdev.c` redisposé pour chaque catégorie de sous-variantes.
+* Installation :
+  * Gérer les redispositions de touches des sous-variantes pendant l’installation. (installer.sh [bc51116](https://github.com/dispoclavier/nouvel-azerty/commit/bc51116238f53b2be4f7f28b31ab950a59078dd6))
+  * Déverrouiller les fichiers sauvegardés pendant la désinstallation. (ibidem)
+  * Améliorer la robustesse du script. (ibidem)
+* Documentation. (compose-1.yml [c44a9d8](https://github.com/dispoclavier/nouvel-azerty/commit/c44a9d86810711b6ac1c1be019ded28bb9132bfb))
+
 ## 2.3.3 (2024-06-16)
 
 * Installation :
