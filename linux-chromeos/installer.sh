@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-18T1031+0200
+#                       Date : 2024-06-18T1122+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -77,6 +77,7 @@ function afficher {
 
 # Vérifier les fichiers à installer.
 manque=0 # Il ne manque rien.
+sous_variantes=1 # Les sous-variantes sont au complet.
 faux=0 # Tout est bon.
 fichier="Compose.yml"
 if [ ! -f "$fichier" ]; then
@@ -117,6 +118,51 @@ else
 		faux=1
 		afficher 'est défectueux'
 	fi
+fi
+fichier="installer/evdev-ansi.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-ansi-menu.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-ansi-menu-sans.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-ansi-pur.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-ctrl.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-menu.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-menu-sans.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-win.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
+fi
+fichier="installer/evdev-win-sans.c"
+if [ ! -f "$fichier" ]; then
+	sous_variantes=0
+	afficher 'manque'
 fi
 # Vérifier l’environnement.
 fonctionne=1 # XKB est fonctionnel.
@@ -343,8 +389,8 @@ if [ "$fonctionne" -eq 1 ]; then
 								exit
 							;;
 							*)
-								echo 'Réinstallation des redispositions de touches,'
-								echo '    en utilisant le fichier "sauvegarde/evdev.c".'
+								echo 'Réinstallation du fichier de redisposition de touches'
+								echo '    en utilisant "sauvegarde/evdev.c".'
 								sudo cp sauvegarde/evdev.c $X11/xkb/keycodes/evdev
 								fait=1
 							;;
@@ -366,14 +412,14 @@ if [ "$fonctionne" -eq 1 ]; then
 								exit
 							;;
 							*)
-								echo 'Réinstallation du fichier permettant de redisposer des touches,'
-								echo '    en utilisant le fichier "~/.config/dispoclavier/keycodes/evdev".'
+								echo 'Réinstallation du fichier de redisposition de touches'
+								echo '  en utilisant "~/.config/dispoclavier/keycodes/evdev".'
 								sudo cp ~/.config/dispoclavier/keycodes/evdev $X11/xkb/keycodes/evdev
 								fait=1
 							;;
 						esac
 					fi
-					if [ "$fait" -eq 0 ]; then
+					if [ "$fait" -eq 0 && "$sous_variantes" -eq 0 ]; then
 						echo -e "\n  ❓  Souhaitez-vous redisposer les touches AltFr ou"
 						echo      '     Effacement arrière (Retour arrière) ?'
 						echo -e "\n       Pour redisposer, tapez r ou o puis Entrée."
@@ -412,6 +458,7 @@ if [ "$fonctionne" -eq 1 ]; then
 												echo '  manuellement dans installer/evdev.c ou dans sauvegarde/evdev.c.'
 												sudo cp installer/evdev-ansi-pur.c $X11/xkb/keycodes/evdev
 												ansipur=1
+												fait=1
 											;;
 											[hH])
 												suffixe="-ansi"
@@ -532,6 +579,7 @@ if [ "$fonctionne" -eq 1 ]; then
 									esac
 									echo 'Installation du fichier de redisposition de touches.'
 									sudo cp installer/evdev$suffixe.c $X11/xkb/keycodes/evdev
+									fait=1
 								fi
 							;;
 							[qQ])
@@ -539,10 +587,12 @@ if [ "$fonctionne" -eq 1 ]; then
 								exit
 							;;
 							*)
-								echo 'Installation du fichier générique de redisposition de touches.'
-								sudo cp installer/evdev.c $X11/xkb/keycodes/evdev
 							;;
 						esac
+					fi
+					if [ "$fait" -eq 0 ]; then
+						echo 'Installation du fichier générique de redisposition de touches.'
+						sudo cp installer/evdev.c $X11/xkb/keycodes/evdev
 					fi
 					echo 'Sauvegarde des redispositions de touches.'
 					mkdir -p ~/.config/dispoclavier/keycodes
