@@ -1,9 +1,9 @@
 #!/bin/bash
-#                       Date : 2024-06-18T1122+0200
+#                       Date : 2024-06-18T2041+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
-#                Description : Installe des dispositions de clavier basées sur XKB et XCompose.
+#                Description : Installe et désinstalle des dispositions de clavier.
 #     Système d’exploitation : Linux
 #
 #                     Projet : Dispoclavier
@@ -31,18 +31,17 @@
 #   • Dans le navigateur de fichiers :
 #
 #     ◦ Vérifier le contenu du script ci-dessous ;
-#     ◦ Rendre le script exécutable dans Propriétés > Permissions > Exécuter ;
-#     ◦ Aller dans Édition > Préférences > Comportement > Fichier texte exécutable :
-#     ◦ Pour l’action à l’ouverture du fichier, choisir « Demander chaque fois » ;
-#     ◦ Cliquer ou double-cliquer le script puis choisir « Lancer dans le terminal ».
+#     ◦ Rendre ce script exécutable dans Propriétés > Permissions > Exécuter ;
+#     ◦ Dans Édition > Préférences > Comportement > Fichier texte exécutable,
+#       choisir « Demander chaque fois » pour l’action à l’ouverture du fichier ;
+#     ◦ Cliquer ou double-cliquer ce script puis choisir « Lancer dans le terminal ».
 #
 #
-#   Fichiers
+#   Fichiers associés
 #
-#   Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et
-#   à faciliter l’ouverture sous Windows dans un souci d’interopérabilité.
-#
-#   Pour fonctionner, ce script a besoin des fichiers suivants dans cette arborescence :
+#   Pour fonctionner, ce script a besoin des fichiers suivants dans cette arborescence.
+#   Si l’un des 9 derniers fichiers manque, la redisposition des touches en fonction des
+#   sous-variantes n’est pas prise en charge, mais l’installation standard fonctionne.
 #
 #      installer.sh
 #      Compose.yml
@@ -52,6 +51,7 @@
 #         dispotypes.c
 #         dispoled.c
 #         evdev.c
+#
 #         evdev-ansi.c
 #         evdev-ansi-menu.c
 #         evdev-ansi-menu-sans.c
@@ -62,9 +62,13 @@
 #         evdev-win.c
 #         evdev-win-sans.c
 #
+#   Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et
+#   à faciliter l’ouverture sous Windows dans un souci d’interopérabilité.
+#
 #
 # L’absence des booléens dans Bash est pallié par le recours à des comparaisons arithmétiques.
-# C’est pourquoi on peut tout aussi bien inverser 0 et 1 (false dans Bash) pour la lisibilité.
+# On peut en profiter pour inverser 0 et 1 (qui dans Bash signifient vrai et faux, contrairement
+# à la plupart des autres langages où ils signifient faux et vrai) dans un souci de lisibilité.
 introduction=0 # Pas faite.
 function afficher {
 	if [ "$introduction" -eq 0 ]; then
@@ -616,7 +620,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					cat Compose.yml >> $X11/locale/en_US.UTF-8/Compose
 					sudo chmod 644 $X11/locale/en_US.UTF-8/Compose
 					# Ajouter une extension au commutateur de dispositions.
-					echo 'Ajout dans le répertoire du commutateur de dispositions de clavier.'
+					echo 'Ajout de ces dispositions de clavier dans la liste du commutateur.'
 					sudo cp $X11/xkb/rules/evdev.xml $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml
 					sudo sed -i '/<\/layoutList>/i <!-- ajouts-dispoclavier -->' $X11/xkb/rules/evdev.xml
 					sudo sed -n '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/p' installer/evdev-additions.xml > installer/evdev-additions-seules.xml
@@ -700,7 +704,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					sudo mv $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier $X11/xkb/keycodes/evdev
 				fi
 				# Supprimer l’extension du commutateur de dispositions.
-				echo 'Suppression dans le répertoire du commutateur de dispositions de clavier.'
+				echo 'Suppression de ces dispositions de clavier dans la liste du commutateur.'
 				cp $X11/xkb/rules/evdev.xml sauvegarde/archive/evdev-xml-rules.xml
 				if [ "$evdev_xml_rules_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml sauvegarde/archive/evdev-xml-rules-avant.xml
@@ -735,6 +739,7 @@ if [ "$fonctionne" -eq 1 ]; then
 				if [ "$dispotypes" -eq 1 ]; then
 					sudo mv $X11/xkb/types/dispotypes sauvegarde/archive/dispotypes.c
 				fi
+				# Rendre les fichiers sauvegardés éditables.
 				sudo chmod --recursive 777 sauvegarde
 				# Afficher un dernier message.
 				echo -e "\n  ✅  Ces dispositions de clavier viennent d’être désinstallées."
