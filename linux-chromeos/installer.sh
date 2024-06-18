@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-16T0322+0200
+#                       Date : 2024-06-18T1031+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -35,6 +35,32 @@
 #     ◦ Aller dans Édition > Préférences > Comportement > Fichier texte exécutable :
 #     ◦ Pour l’action à l’ouverture du fichier, choisir « Demander chaque fois » ;
 #     ◦ Cliquer ou double-cliquer le script puis choisir « Lancer dans le terminal ».
+#
+#
+#   Fichiers
+#
+#   Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et
+#   à faciliter l’ouverture sous Windows dans un souci d’interopérabilité.
+#
+#   Pour fonctionner, ce script a besoin des fichiers suivants dans cette arborescence :
+#
+#      installer.sh
+#      Compose.yml
+#      installer/
+#         evdev-additions.xml
+#         dispocla.cpp
+#         dispotypes.c
+#         dispoled.c
+#         evdev.c
+#         evdev-ansi.c
+#         evdev-ansi-menu.c
+#         evdev-ansi-menu-sans.c
+#         evdev-ansi-pur.c
+#         evdev-ctrl.c
+#         evdev-menu.c
+#         evdev-menu-sans.c
+#         evdev-win.c
+#         evdev-win-sans.c
 #
 #
 # L’absence des booléens dans Bash est pallié par le recours à des comparaisons arithmétiques.
@@ -211,9 +237,9 @@ if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
 else
-	if [ "$dispotypes" -eq 1 ] && ! grep -q 'include "dispotypes"' $fichier; then
+	if [ "$dispotypes" -eq 1 ] && ! grep -qP 'include\s*"dispotypes"' $fichier; then
 		installation=0
-		afficher 'ne contient pas Dispoclavier'
+		afficher 'n’inclut pas "dispotypes"'
 	fi
 fi
 fichier="$dossier/complete-types-avant-dispoclavier"
@@ -240,9 +266,9 @@ if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
 else
-	if [ "$dispoled" -eq 1 ] && ! grep -q 'include "dispoled"' $fichier; then
+	if [ "$dispoled" -eq 1 ] && ! grep -qP 'include\s*"dispoled"' $fichier; then
 		installation=0
-		afficher 'ne contient pas Dispoclavier'
+		afficher 'n’inclut pas "dispoled"'
 	fi
 fi
 fichier="$dossier/complete-compat-avant-dispoclavier"
@@ -301,15 +327,14 @@ if [ "$fonctionne" -eq 1 ]; then
 					# Installer le fichier permettant de redisposer des touches.
 					sudo cp $X11/xkb/keycodes/evdev $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
 					fait=0
-					config=0
 					if [ -f "sauvegarde/evdev.c" ]; then
 						echo -e "\n  ❓  Souhaitez-vous réinstaller les redispositions de touches"
 						echo      '       sauvegardées ici à côté dans sauvegarde/evdev.c ?'
 						echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
 						echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
 						echo      '       Pour quitter, tapez q puis Entrée.'
-						read -p   "    " reponse
-						case $reponse in
+						read -p   "    " repo
+						case $repo in
 							[iIpP])
 								echo '    Le fichier "sauvegarde/evdev.c" a été ignoré.'
 							;;
@@ -318,12 +343,10 @@ if [ "$fonctionne" -eq 1 ]; then
 								exit
 							;;
 							*)
-								echo 'Réinstallation et sauvegarde des redispositions de touches,'
-								echo '    en utilisant le fichier "sauvegarde/evdev.c" ici à côté.'
+								echo 'Réinstallation des redispositions de touches,'
+								echo '    en utilisant le fichier "sauvegarde/evdev.c".'
 								sudo cp sauvegarde/evdev.c $X11/xkb/keycodes/evdev
-								cp $X11/xkb/keycodes/evdev ~/.config/dispoclavier/keycodes/evdev
 								fait=1
-								config=1
 							;;
 						esac
 					fi
@@ -333,8 +356,8 @@ if [ "$fonctionne" -eq 1 ]; then
 						echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
 						echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
 						echo      '       Pour quitter, tapez q puis Entrée.'
-						read -p   "    " reponse
-						case $reponse in
+						read -p   "    " repo
+						case $repo in
 							[iIpP])
 								echo '    Le fichier "~/.config/dispoclavier/keycodes/evdev" a été ignoré.'
 							;;
@@ -351,9 +374,179 @@ if [ "$fonctionne" -eq 1 ]; then
 						esac
 					fi
 					if [ "$fait" -eq 0 ]; then
-						echo 'Installation du fichier générique de redisposition des touches.'
-						sudo cp installer/evdev.c $X11/xkb/keycodes/evdev
+						echo -e "\n  ❓  Souhaitez-vous redisposer les touches AltFr ou"
+						echo      '     Effacement arrière (Retour arrière) ?'
+						echo -e "\n       Pour redisposer, tapez r ou o puis Entrée."
+						echo      '       Pour ne rien redisposer, appuyez sur Entrée.'
+						echo      '       Pour quitter, tapez q puis Entrée.'
+						read -p   "    " repo
+						case $repo in
+							[oOrR])
+								suffixe=''
+								echo -e "\n  ❓  Souhaitez-vous redisposer la touche AltFr ?"
+								echo      '     Normalement, AltFr se trouve entre la touche'
+								echo      '     Majuscule gauche et celle du W de l’AZERTY.'
+								echo -e "\n       Pour la redisposer, tapez r ou o puis Entrée."
+								echo      '       Pour ne pas la redisposer, appuyez sur Entrée.'
+								echo      '       Pour quitter, tapez q puis Entrée.'
+								read -p   "    " rep
+								ansipur=0
+								case $rep in
+									[oOrR])
+										echo -e "\n  ⚠  La touche AltFr peut être disposée sur la touche"
+										echo      '     de Verrouillage des Capitales. VerrCap sera alors'
+										echo      '     disposée sur la touche Contrôle droite. Celle-ci'
+										echo      '     peut être une vraie touche Contrôle (clavier ANSI)'
+										echo      '     ou être de fait la touche [<>] (clavier AZERTY ANSI).'
+										echo -e "\n  ❓  Souhaitez-vous disposer la touche AltFr pour un :"
+										echo      '       a   clavier ANSI pur (sans autres options) ?'
+										echo      '       h   clavier ANSI hybride disposé en AZERTY ?'
+										echo      '       i   clavier ISO avec la touche [<>] à côté de Maj ?'
+										echo      '       Pour laisser tomber, appuyez sur Entrée.'
+										read -p   "    " re
+										case $re in
+											[aA])
+												echo 'Installation du fichier de redisposition de touches pour'
+												echo '  un clavier ANSI pur, sans autres options de redisposition.'
+												echo '  La touche d’Effacement arrière peut toujours être redisposée'
+												echo '  manuellement dans installer/evdev.c ou dans sauvegarde/evdev.c.'
+												sudo cp installer/evdev-ansi-pur.c $X11/xkb/keycodes/evdev
+												ansipur=1
+											;;
+											[hH])
+												suffixe="-ansi"
+											;;
+											[iI])
+												echo 'La touche AltFr restera entre Maj et W.'
+											;;
+											*)
+												echo 'La touche AltFr restera entre Maj et W.'
+											;;
+										esac
+									;;
+									[qQ])
+										sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+										exit
+									;;
+									*)
+										echo 'La touche AltFr restera entre Maj et W.'
+									;;
+								esac
+								if [ "$ansipur" -eq 0 ]; then
+									echo -e "\n  ❓  Souhaitez-vous redisposer Effacement arrière ?"
+									echo -e "\n       Pour la redisposer, tapez r ou o puis Entrée."
+									echo      '       Pour ne pas la redisposer, appuyez sur Entrée.'
+									echo      '       Pour quitter, tapez q puis Entrée.'
+									read -p   "    " rep
+									case $rep in
+										[oOrR])
+											echo -e "\n  ⚠  La touche d’Effacement arrière peut être disposée"
+											if [ "$suffixe" == "-ansi" ]; then
+												echo      '     sur la touche Menu.'
+											else
+												echo      '     sur la touche Windows droite, sur la touche Menu,'
+												echo      '     ou sur la touche Contrôle droite.'
+											fi
+											echo -e "\n  ❓  Souhaitez-vous disposer l’Effacement arrière sur :"
+											echo      '       m   Menu ?'
+											if [ ! "$suffixe" == "-ansi" ]; then
+												echo      '       w   Windows droite ?'
+												echo      '       c   Contrôle droite ?'
+											fi
+											echo      '       Pour laisser tomber, appuyez sur Entrée.'
+											read -p   "    " re
+											case $re in
+												[cC])
+													if [ ! "$suffixe" == "-ansi" ]; then
+														suffixe+="-ctrl"
+													else
+														echo 'Pour les agencements ANSI hybrides en AZERTY, l’option'
+														echo 'Effacement arrière sur Contrôle droite n’est pas disponible,'
+														echo 'car ce sont des claviers de portable sans Contrôle droite.'
+													fi
+												;;
+												[mM])
+													suffixe+="-menu"
+													echo -e "\n  ⚠  La touche Effacement arrière servira de touche Menu,"
+													echo      '     mais cela peut ne pas être souhaitable.'
+													echo -e "\n  ❓  Souhaitez-vous redisposer la touche Effacement arrière"
+													echo      '       sans redisposer aussi la touche Menu ?'
+													echo -e "\n       Pour ne pas redisposer Menu, tapez n ou s puis Entrée."
+													echo      '       Pour redisposer Menu, appuyez sur Entrée.'
+													echo      '       Pour quitter, tapez q puis Entrée.'
+													read -p   "    " r
+													case $r in
+														[nNsS])
+															suffixe+="-sans"
+															echo 'La touche Menu ne sera pas redisposée.'
+														;;
+														[qQ])
+															sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+															exit
+														;;
+														*)
+															echo 'La touche Menu sera redisposée.'
+														;;
+													esac
+												;;
+												[wW])
+													if [ ! "$suffixe" == "-ansi" ]; then
+														suffixe+="-win"
+														echo -e "\n  ⚠  L’utilisation de Windows droite comme Effacement arrière"
+														echo      '     amène le risque d’ouvrir accidentellement le menu contextuel.'
+														echo -e "\n  ❓  Souhaitez-vous désactiver la touche Menu ?"
+														echo -e "\n       Pour la désactiver, tapez d ou o puis Entrée."
+														echo      '       Pour ne pas la désactiver, appuyez sur Entrée.'
+														echo      '       Pour quitter, tapez q puis Entrée.'
+														read -p   "    " r
+														case $r in
+															[dDoO])
+																suffixe+="-sans"
+																echo 'La touche Menu sera désactivée.'
+															;;
+															[qQ])
+																sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+																exit
+															;;
+															*)
+																echo 'La touche Menu restera active.'
+															;;
+														esac
+													else
+														echo 'Pour les agencements ANSI hybrides en AZERTY, l’option'
+														echo 'Effacement arrière sur Windows droite n’est pas disponible,'
+														echo 'car ce sont des claviers de portable sans Windows droite.'
+													fi
+												;;
+												*)
+												;;
+											esac
+										;;
+										[qQ])
+											sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+											exit
+										;;
+										*)
+											echo 'La touche d’Effacement arrière restera en haut.'
+										;;
+									esac
+									echo 'Installation du fichier de redisposition de touches.'
+									sudo cp installer/evdev$suffixe.c $X11/xkb/keycodes/evdev
+								fi
+							;;
+							[qQ])
+								sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
+								exit
+							;;
+							*)
+								echo 'Installation du fichier générique de redisposition de touches.'
+								sudo cp installer/evdev.c $X11/xkb/keycodes/evdev
+							;;
+						esac
 					fi
+					echo 'Sauvegarde des redispositions de touches.'
+					mkdir -p ~/.config/dispoclavier/keycodes
+					cp $X11/xkb/keycodes/evdev ~/.config/dispoclavier/keycodes/evdev
 					# Installer les types de touches.
 					echo 'Installation des types de touches.'
 					sudo cp installer/dispotypes.c $X11/xkb/types/dispotypes
@@ -387,10 +580,8 @@ if [ "$fonctionne" -eq 1 ]; then
 					# Afficher un dernier message.
 					echo -e "\n  ✅  Ces dispositions de clavier viennent d’être installées."
 					echo      '     Elles sont activables dès la prochaine session.'
-					if [ "$config" -eq 1 ]; then
-						echo -e "\n     Les redispositions actuelles de touches ont été sauvegardées"
-						echo      '         dans ~/.config/dispoclavier/keycodes/evdev.'
-					fi
+					echo -e "\n     Les redispositions actuelles de touches ont été sauvegardées"
+					echo      '         dans ~/.config/dispoclavier/keycodes/evdev.'
 					echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 					echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
 					echo      '     n’hésitez pas à créer un rapport de bogue :'
@@ -419,14 +610,16 @@ if [ "$fonctionne" -eq 1 ]; then
 			echo -e "\n     Ces dispositions de clavier étant déjà installées,"
 			echo      '     le mieux est de les désinstaller, quitte à les réinstaller'
 			echo      '     par la suite avec tous les fichiers à jour.'
-			echo -e "\n  ⚠  Les redispositions de touches seront sauvegardées dans :"
-			echo      '         ~/.config/dispoclavier/keycodes/evdev'
-			echo      '     Et ici à côté dans "sauvegarde/", où tout sera archivé.'
 		elif [ "$trace" -eq 1 ]; then
 			echo -e "\n     Ces dispositions de clavier ne sont pas bien installées, mais"
-			echo      '     il y a des traces d’installation. Le mieux est de tout désinstaller,'
-			echo      '     puis éventuellement de réinstaller le tout correctement.'
+			echo      '     il y a des traces d’installation.'
+			echo -e "\n     Le mieux est d’essayer d’en désinstaller autant que possible,"
+			echo      '     puis de réinstaller ces dispositions de clavier le cas échéant'
+			echo      '     dans un deuxième temps, fût-ce en relançant ce script ensuite.'
 		fi
+		echo -e "\n  ⚠  Les redispositions de touches seront sauvegardées dans :"
+		echo      '         ~/.config/dispoclavier/keycodes/evdev'
+		echo      '     Et ici à côté dans "sauvegarde/", où tout sera archivé.'
 		echo -e "\n  ❓  Souhaitez-vous désinstaller ces dispositions de clavier ?"
 		echo -e "\n       Pour les désinstaller, appuyez sur Entrée."
 		echo      '       Pour quitter, tapez q ou p puis Entrée.'
@@ -492,6 +685,7 @@ if [ "$fonctionne" -eq 1 ]; then
 				if [ "$dispotypes" -eq 1 ]; then
 					sudo mv $X11/xkb/types/dispotypes sauvegarde/archive/dispotypes.c
 				fi
+				sudo chmod --recursive 777 sauvegarde
 				# Afficher un dernier message.
 				echo -e "\n  ✅  Ces dispositions de clavier viennent d’être désinstallées."
 				echo      '     À moins d’être réinstallées dans la foulée, ces dispositions'
