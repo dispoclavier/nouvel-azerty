@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-18T2041+0200
+#                       Date : 2024-06-19T1037+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -423,7 +423,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							;;
 						esac
 					fi
-					if [ "$fait" -eq 0 && "$sous_variantes" -eq 0 ]; then
+					if [ "$fait" -eq 0 ] && [ "$sous_variantes" -eq 1 ]; then
 						echo -e "\n  ❓  Souhaitez-vous redisposer les touches AltFr ou"
 						echo      '     Effacement arrière (Retour arrière) ?'
 						echo -e "\n       Pour redisposer, tapez r ou o puis Entrée."
