@@ -1,5 +1,5 @@
-                      Date : 2024-06-15T1932+0200
-                   Version : 2.3.3
+                      Date : 2024-06-19T0507+0200
+                   Version : 2.3.4
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -161,8 +161,8 @@ Mode d’emploi sous Linux
      Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
      choisie.
 
-     Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour la touche AE13, qui si elle
-     est présente, se trouve entre Égal et Effacement arrière.
+     Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches de fonction 19 et 24,
+     ni pour la touche AE13, qui si elle est présente, se trouve entre Égal et Effacement arrière.
 
  10  Veiller à ce que le système de saisie au clavier soit XIM.
      Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée,
