@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
-#                       Date: 2024-06-16T0354+0200
+#                       Date: 2024-06-17T1603+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.3.3" # See # # Notes about syntax
+<UEFA0>                     : "version 2.3.4" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -2005,8 +2005,7 @@
 #
 #   Input sequences are based on Latin names and on French names.
 #   Base 16 numeric sequences are also supported, not conflicting
-#   with vulgar fractions. Additionally level 3 characters of the
-#   last three keys of the upper row are supported.
+#   with vulgar fractions.
 #
 #   To avoid conflicts, alphabetic sequences are sufficiently long,
 #   and numeric sequences are terminated by asterisk, not started.
@@ -2017,120 +2016,118 @@
 #
 #   Aries, Bélier
 #
-<Multi_key><1><asterisk>                                                                           : "♈" U2648 # ARIES
-<Multi_key><KP_1><KP_Multiply>                                                                     : "♈" U2648 # ARIES
-<Multi_key><a><r><i><e>                                                                            : "♈" U2648 # ARIES
-<Multi_key><A><R><I><E>                                                                            : "♈" U2648 # ARIES
-<Multi_key><b><e><l><i>                                                                            : "♈" U2648 # ARIES
-<Multi_key><B><E><L><I>                                                                            : "♈" U2648 # ARIES
-<Multi_key><b><eacute><l><i>                                                                       : "♈" U2648 # ARIES
-<Multi_key><B><Eacute><L><I>                                                                       : "♈" U2648 # ARIES
+<Multi_key><1><asterisk>                                                                           : "♈" U2648 # ARIES emoji
+<Multi_key><KP_1><KP_Multiply>                                                                     : "♈" U2648 # ARIES emoji
+<Multi_key><a><r><i><e>                                                                            : "♈" U2648 # ARIES emoji
+<Multi_key><A><R><I><E>                                                                            : "♈" U2648 # ARIES emoji
+<Multi_key><b><e><l><i>                                                                            : "♈" U2648 # ARIES emoji
+<Multi_key><B><E><L><I>                                                                            : "♈" U2648 # ARIES emoji
+<Multi_key><b><eacute><l><i>                                                                       : "♈" U2648 # ARIES emoji
+<Multi_key><B><Eacute><L><I>                                                                       : "♈" U2648 # ARIES emoji
 #
 #
 #   Taurus, Taureau
 #
-<Multi_key><2><asterisk>                                                                           : "♉" U2649 # TAURUS
-<Multi_key><KP_2><KP_Multiply>                                                                     : "♉" U2649 # TAURUS
-<Multi_key><t><a><u><r>                                                                            : "♉" U2649 # TAURUS
-<Multi_key><T><A><U><R>                                                                            : "♉" U2649 # TAURUS
+<Multi_key><2><asterisk>                                                                           : "♉" U2649 # TAURUS emoji
+<Multi_key><KP_2><KP_Multiply>                                                                     : "♉" U2649 # TAURUS emoji
+<Multi_key><t><a><u><r>                                                                            : "♉" U2649 # TAURUS emoji
+<Multi_key><T><A><U><R>                                                                            : "♉" U2649 # TAURUS emoji
 #
 #
 #   Gemini, Gémeaux
 #
-<Multi_key><3><asterisk>                                                                           : "♊" U264A # GEMINI
-<Multi_key><KP_3><KP_Multiply>                                                                     : "♊" U264A # GEMINI
-<Multi_key><g><e><m><i>                                                                            : "♊" U264A # GEMINI
-<Multi_key><G><E><M><I>                                                                            : "♊" U264A # GEMINI
-<Multi_key><g><e><m><e>                                                                            : "♊" U264A # GEMINI
-<Multi_key><G><E><M><E>                                                                            : "♊" U264A # GEMINI
-<Multi_key><g><eacute><m><e>                                                                       : "♊" U264A # GEMINI
-<Multi_key><G><Eacute><M><E>                                                                       : "♊" U264A # GEMINI
+<Multi_key><3><asterisk>                                                                           : "♊" U264A # GEMINI emoji
+<Multi_key><KP_3><KP_Multiply>                                                                     : "♊" U264A # GEMINI emoji
+<Multi_key><g><e><m><i>                                                                            : "♊" U264A # GEMINI emoji
+<Multi_key><G><E><M><I>                                                                            : "♊" U264A # GEMINI emoji
+<Multi_key><g><e><m><e>                                                                            : "♊" U264A # GEMINI emoji
+<Multi_key><G><E><M><E>                                                                            : "♊" U264A # GEMINI emoji
+<Multi_key><g><eacute><m><e>                                                                       : "♊" U264A # GEMINI emoji
+<Multi_key><G><Eacute><M><E>                                                                       : "♊" U264A # GEMINI emoji
 #
 #
 #   Cancer
 #
-<Multi_key><4><asterisk>                                                                           : "♋" U264B # CANCER
-<Multi_key><KP_4><KP_Multiply>                                                                     : "♋" U264B # CANCER
-<Multi_key><c><a><n><c>                                                                            : "♋" U264B # CANCER
-<Multi_key><C><A><N><C>                                                                            : "♋" U264B # CANCER
+<Multi_key><4><asterisk>                                                                           : "♋" U264B # CANCER emoji
+<Multi_key><KP_4><KP_Multiply>                                                                     : "♋" U264B # CANCER emoji
+<Multi_key><c><a><n><c>                                                                            : "♋" U264B # CANCER emoji
+<Multi_key><C><A><N><C>                                                                            : "♋" U264B # CANCER emoji
 #
 #
 #   Leo, Lion
 #
-<Multi_key><5><asterisk>                                                                           : "♌" U264C # LEO
-<Multi_key><KP_5><KP_Multiply>                                                                     : "♌" U264C # LEO
-<Multi_key><l><e><o>                                                                               : "♌" U264C # LEO
-<Multi_key><L><E><O>                                                                               : "♌" U264C # LEO
-<Multi_key><l><i><o><n>                                                                            : "♌" U264C # LEO
-<Multi_key><L><I><O><N>                                                                            : "♌" U264C # LEO
+<Multi_key><5><asterisk>                                                                           : "♌" U264C # LEO emoji
+<Multi_key><KP_5><KP_Multiply>                                                                     : "♌" U264C # LEO emoji
+<Multi_key><l><e><o>                                                                               : "♌" U264C # LEO emoji
+<Multi_key><L><E><O>                                                                               : "♌" U264C # LEO emoji
+<Multi_key><l><i><o><n>                                                                            : "♌" U264C # LEO emoji
+<Multi_key><L><I><O><N>                                                                            : "♌" U264C # LEO emoji
 #
 #
 #   Virgo, Vierge
 #
-<Multi_key><6><asterisk>                                                                           : "♍" U264D # VIRGO
-<Multi_key><KP_6><KP_Multiply>                                                                     : "♍" U264D # VIRGO
-<Multi_key><v><i><r><g>                                                                            : "♍" U264D # VIRGO
-<Multi_key><V><I><R><G>                                                                            : "♍" U264D # VIRGO
-<Multi_key><v><i><e><r>                                                                            : "♍" U264D # VIRGO
-<Multi_key><V><I><E><R>                                                                            : "♍" U264D # VIRGO
+<Multi_key><6><asterisk>                                                                           : "♍" U264D # VIRGO emoji
+<Multi_key><KP_6><KP_Multiply>                                                                     : "♍" U264D # VIRGO emoji
+<Multi_key><v><i><r><g>                                                                            : "♍" U264D # VIRGO emoji
+<Multi_key><V><I><R><G>                                                                            : "♍" U264D # VIRGO emoji
+<Multi_key><v><i><e><r>                                                                            : "♍" U264D # VIRGO emoji
+<Multi_key><V><I><E><R>                                                                            : "♍" U264D # VIRGO emoji
 #
 #
 #   Libra, Balance
 #
-<Multi_key><7><asterisk>                                                                           : "♎" U264E # LIBRA
-<Multi_key><KP_7><KP_Multiply>                                                                     : "♎" U264E # LIBRA
-<Multi_key><l><i><b><r>                                                                            : "♎" U264E # LIBRA
-<Multi_key><L><I><B><R>                                                                            : "♎" U264E # LIBRA
-<Multi_key><b><a><l><a>                                                                            : "♎" U264E # LIBRA
-<Multi_key><B><A><L><A>                                                                            : "♎" U264E # LIBRA
+<Multi_key><7><asterisk>                                                                           : "♎" U264E # LIBRA emoji
+<Multi_key><KP_7><KP_Multiply>                                                                     : "♎" U264E # LIBRA emoji
+<Multi_key><l><i><b><r>                                                                            : "♎" U264E # LIBRA emoji
+<Multi_key><L><I><B><R>                                                                            : "♎" U264E # LIBRA emoji
+<Multi_key><b><a><l><a>                                                                            : "♎" U264E # LIBRA emoji
+<Multi_key><B><A><L><A>                                                                            : "♎" U264E # LIBRA emoji
 #
 #
 #   Scorpio, Scorpion
 #
-<Multi_key><8><asterisk>                                                                           : "♏" U264F # SCORPIUS
-<Multi_key><KP_8><KP_Multiply>                                                                     : "♏" U264F # SCORPIUS
-<Multi_key><s><c><o><r>                                                                            : "♏" U264F # SCORPIUS
-<Multi_key><S><C><O><R>                                                                            : "♏" U264F # SCORPIUS
+<Multi_key><8><asterisk>                                                                           : "♏" U264F # SCORPIUS emoji
+<Multi_key><KP_8><KP_Multiply>                                                                     : "♏" U264F # SCORPIUS emoji
+<Multi_key><s><c><o><r>                                                                            : "♏" U264F # SCORPIUS emoji
+<Multi_key><S><C><O><R>                                                                            : "♏" U264F # SCORPIUS emoji
 #
 #
 #   Sagittarius, Sagittaire
 #
-<Multi_key><9><asterisk>                                                                           : "♐" U2650 # SAGITTARIUS
-<Multi_key><KP_9><KP_Multiply>                                                                     : "♐" U2650 # SAGITTARIUS
-<Multi_key><s><a><g><i>                                                                            : "♐" U2650 # SAGITTARIUS
-<Multi_key><S><A><G><I>                                                                            : "♐" U2650 # SAGITTARIUS
+<Multi_key><9><asterisk>                                                                           : "♐" U2650 # SAGITTARIUS emoji
+<Multi_key><KP_9><KP_Multiply>                                                                     : "♐" U2650 # SAGITTARIUS emoji
+<Multi_key><s><a><g><i>                                                                            : "♐" U2650 # SAGITTARIUS emoji
+<Multi_key><S><A><G><I>                                                                            : "♐" U2650 # SAGITTARIUS emoji
 #
 #
 #   Capricornus, Capricorne
 #
-<Multi_key><A><asterisk>                                                                           : "♑" U2651 # CAPRICORN
-<Multi_key><a><asterisk>                                                                           : "♑" U2651 # CAPRICORN
-<Multi_key><0><asterisk>                                                                           : "♑" U2651 # CAPRICORN
-<Multi_key><KP_0><KP_Multiply>                                                                     : "♑" U2651 # CAPRICORN
-<Multi_key><c><a><p><r>                                                                            : "♑" U2651 # CAPRICORN
-<Multi_key><C><A><P><R>                                                                            : "♑" U2651 # CAPRICORN
+<Multi_key><A><asterisk>                                                                           : "♑" U2651 # CAPRICORN emoji
+<Multi_key><a><asterisk>                                                                           : "♑" U2651 # CAPRICORN emoji
+<Multi_key><0><asterisk>                                                                           : "♑" U2651 # CAPRICORN emoji
+<Multi_key><KP_0><KP_Multiply>                                                                     : "♑" U2651 # CAPRICORN emoji
+<Multi_key><c><a><p><r>                                                                            : "♑" U2651 # CAPRICORN emoji
+<Multi_key><C><A><P><R>                                                                            : "♑" U2651 # CAPRICORN emoji
 #
 #
 #   Aquarius, Verseau
 #
-<Multi_key><B><asterisk>                                                                           : "♒" U2652 # AQUARIUS
-<Multi_key><b><asterisk>                                                                           : "♒" U2652 # AQUARIUS
-<Multi_key><U1D49><asterisk>                                                                       : "♒" U2652 # AQUARIUS
-<Multi_key><a><q><u><a>                                                                            : "♒" U2652 # AQUARIUS
-<Multi_key><A><Q><U><A>                                                                            : "♒" U2652 # AQUARIUS
-<Multi_key><v><e><r><s>                                                                            : "♒" U2652 # AQUARIUS
-<Multi_key><V><E><R><S>                                                                            : "♒" U2652 # AQUARIUS
+<Multi_key><B><asterisk>                                                                           : "♒" U2652 # AQUARIUS emoji
+<Multi_key><b><asterisk>                                                                           : "♒" U2652 # AQUARIUS emoji
+<Multi_key><a><q><u><a>                                                                            : "♒" U2652 # AQUARIUS emoji
+<Multi_key><A><Q><U><A>                                                                            : "♒" U2652 # AQUARIUS emoji
+<Multi_key><v><e><r><s>                                                                            : "♒" U2652 # AQUARIUS emoji
+<Multi_key><V><E><R><S>                                                                            : "♒" U2652 # AQUARIUS emoji
 #
 #
 #   Pisces, Poissons
 #
-<Multi_key><C><asterisk>                                                                           : "♓" U2653 # PISCES
-<Multi_key><c><asterisk>                                                                           : "♓" U2653 # PISCES
-<Multi_key><U02B3><asterisk>                                                                       : "♓" U2653 # PISCES
-<Multi_key><p><i><s><c>                                                                            : "♓" U2653 # PISCES
-<Multi_key><P><I><S><C>                                                                            : "♓" U2653 # PISCES
-<Multi_key><p><o><i><s>                                                                            : "♓" U2653 # PISCES
-<Multi_key><P><O><I><S>                                                                            : "♓" U2653 # PISCES
+<Multi_key><C><asterisk>                                                                           : "♓" U2653 # PISCES emoji
+<Multi_key><c><asterisk>                                                                           : "♓" U2653 # PISCES emoji
+<Multi_key><p><i><s><c>                                                                            : "♓" U2653 # PISCES emoji
+<Multi_key><P><I><S><C>                                                                            : "♓" U2653 # PISCES emoji
+<Multi_key><p><o><i><s>                                                                            : "♓" U2653 # PISCES emoji
+<Multi_key><P><O><I><S>                                                                            : "♓" U2653 # PISCES emoji
 #
 #
 #   New sign emoji
@@ -2138,12 +2135,12 @@
 #
 #   Ophiuchus, Serpentaire
 #
-<Multi_key><D><asterisk>                                                                           : "⛎" U26CE # OPHIUCHUS
-<Multi_key><d><asterisk>                                                                           : "⛎" U26CE # OPHIUCHUS
-<Multi_key><o><p><h><i>                                                                            : "⛎" U26CE # OPHIUCHUS
-<Multi_key><O><P><H><I>                                                                            : "⛎" U26CE # OPHIUCHUS
-<Multi_key><s><e><r><p>                                                                            : "⛎" U26CE # OPHIUCHUS
-<Multi_key><S><E><R><P>                                                                            : "⛎" U26CE # OPHIUCHUS
+<Multi_key><D><asterisk>                                                                           : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><d><asterisk>                                                                           : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><o><p><h><i>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><O><P><H><I>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><s><e><r><p>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><S><E><R><P>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
 #
 #
 # # Circle quadrants
@@ -2193,11 +2190,17 @@
 #   Sequence with space conflicts with combining ogonek.
 #   Sequence with lowercase v conflicts with "⟏" U27CF SQUARED LOGICAL OR
 #   Sequence with lowercase x conflicts with "⊠" U22A0 SQUARED TIMES.
-#   Sequence ¦() conflicts with "≬" U226C BETWEEN.
 #
 <Multi_key><bracketleft><underscore><bracketright>                                                 : "☐" U2610 # BALLOT BOX
-<Multi_key><bracketleft><V><bracketright>                                                          : "☑" U2611 # BALLOT BOX WITH CHECK
+<Multi_key><bracketleft><V><bracketright>                                                          : "☑" U2611 # BALLOT BOX WITH CHECK emoji
 <Multi_key><bracketleft><X><bracketright>                                                          : "☒" U2612 # BALLOT BOX WITH X
+#
+#
+#   Shadowed circle
+#
+#   Also in group 12 of @.
+#   Sequence ¦() conflicts with "≬" U226C BETWEEN.
+#
 <Multi_key><parenleft><underscore><parenright>                                                     : "❍" U274D # SHADOWED WHITE CIRCLE
 #
 #
@@ -2217,8 +2220,8 @@
 #
 #   Square emoji
 #
-#   The only cross-platform supportable black and white square emoji,
-#   coming in four sizes, cannot be supported all on C01.
+#   The only cross-platform supportable black and white square emoji are
+#   coming in four sizes.
 #
 <Multi_key><1>                                                                        <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
 <Multi_key><KP_1>                                                                     <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
@@ -2254,14 +2257,12 @@
 #   This however disrupts en_US.UTF-8/Compose supporting the least frequent BMP
 #   heart emoji, which is part of the suit series U2660..U2667: "♥" U2665 BLACK
 #   HEART SUIT. In France, "❤" U2764 HEAVY BLACK HEART is the most used emoji.
-#   Consistently, U2764 is given the traditional sequence.
+#   Consistently, U2764 is supported by the traditional sequence.
 #
-#   U2665 is given an alternative, shape-based sequence in the first place:
+#   U2665 is disambiguated by leading space as if it was a math symbol, but in
+#   the first place it is supported by an alternative, shape-based sequence:
 #   <Multi_key><less><8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 #   See #*# CIRCUMFLEX
-#
-#   Additionally, U2665 is disambiguated by leading space as well, as if it was
-#   a math symbol:
 #
 <Multi_key><space><less><3>                                                                        : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 <Multi_key><space><less><KP_3>                                                                     : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
@@ -2361,7 +2362,11 @@
 #
 #   Symbols for NARROW NO-BREAK SPACE
 #
-<Multi_key><U202F><space>                                                                          : "⎍" U238D # MONOSTABLE SYMBOL - flipped narrow shouldered box, repurposed by lack of unsuccessful L2/10-351 https://unicode.org/L2/L2010/10351-n3897-jtc1sc35n1579.pdf
+#   "⎍" U238D MONOSTABLE SYMBOL is picked as a flipped narrow shouldered box,
+#   repurposed by lack of an unsuccessful symbol in L2/10-351.
+#   https://unicode.org/L2/L2010/10351-n3897-jtc1sc35n1579.pdf
+#
+<Multi_key><U202F><space>                                                                          : "⎍" U238D # MONOSTABLE SYMBOL
 <Multi_key><n><n>                                                                                  : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><N>                                                                                  : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><w><v>                                                                                  : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
@@ -2426,14 +2431,14 @@
 <Multi_key><s><n><KP_3>                                                                            : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><S><N><3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><S><N><KP_3>                                                                            : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><l><5><s>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><l><KP_5><s>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><L><5><S>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><L><KP_5><S>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><s><n><5>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><s><n><KP_5>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><S><N><5>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
-<Multi_key><S><N><KP_5>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW, used for level 5 select
+<Multi_key><l><5><s>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><l><KP_5><s>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><L><5><S>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><L><KP_5><S>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><s><n><5>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><s><n><KP_5>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><S><N><5>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
+<Multi_key><S><N><KP_5>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
 <Multi_key><c><a><p><s>                                                                            : "⇪" U21EA # UPWARDS WHITE ARROW FROM BAR, capitals lock
 <Multi_key><C><A><P><S>                                                                            : "⇪" U2BB8 # UPWARDS WHITE ARROW FROM BAR WITH HORIZONTAL BAR, capitals lock
 <Multi_key><c><a><p><l>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
