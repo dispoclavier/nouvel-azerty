@@ -1,4 +1,4 @@
-                      Date : 2024-06-19T0507+0200
+                      Date : 2024-06-19T0529+0200
                    Version : 2.3.4
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -72,9 +72,9 @@ Dispositions ou variantes
 Options de disposition ou sous-variantes
 
   Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles
-  pour chaque variante et sous-variante :
+  pour chaque variante :
 
-  • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où cette touche ISO
+  • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [<>]
     prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées
     afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour
     la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique.
@@ -88,21 +88,21 @@ Options de disposition ou sous-variantes
 
     ◦ Les sous-variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
       Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée, mais
-      il est possible de la paramétrer dans `evdev(.c)` après avoir installé ce nouvel AZERTY.
+      il est possible de la paramétrer dans `evdev(.c)` en installant ce nouvel AZERTY.
 
     ◦ Les sous-variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
       et la touche Menu est désactivée pour éviter l’ouverture intempestive du menu contextuel.
 
-    ◦ Les sous-variantes avec le suffixe « -menu » ou « -ansi-menu » ont Effacement arrière sur
+    ◦ Les sous-variantes avec les suffixes « -menu » ou « -ansi-menu » ont Effacement arrière sur
       Menu, et Menu sur Effacement arrière.
 
-    ◦ Les sous-variantes avec le suffixe « -menu-sans » ou « -ansi-menu-sans » ont Effacement
+    ◦ Les sous-variantes avec les suffixes « -menu-sans » ou « -ansi-menu-sans » ont Effacement
       arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que
       des applications puissent lui attribuer des raccourcis comme `deleteLeft`, et avec Contrôle,
       `deleteWordLeft`.
 
-    ◦ Les sous-variantes avec le suffixe « -ctrl » permutent les touches Effacement arrière et
-      Contrôle droite.
+    ◦ Les sous-variantes avec le suffixe « -ctrl » ont les touches Effacement arrière et
+      Contrôle droite permutées.
 
 
 Témoin lumineux
