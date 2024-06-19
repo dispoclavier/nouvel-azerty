@@ -8,7 +8,7 @@ Quant à **Chrome OS**, il utilise certes XKB mais le fournit codé en dur, et 
 
 ## Extensions de fichiers
 
-À l’usage, la plupart de ces fichiers sont sans extension. Les extensions `.c`, `.cpp` et `.yml` servent surtout à ajouter des couleurs, et aussi à faciliter l’ouverture de ces fichiers sous Windows. L’extension `.cpp` a été choisie pour éviter `dispocla.c` (les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives). De toute manière, les statistiques de langage sont désactivées.
+À l’usage, la plupart de ces fichiers sont sans extension. Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension `.cpp` a été choisie pour éviter `dispocla.c` (les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives). De toute manière, les statistiques de langage sont désactivées.
 
 ## Utilisation sans droits d’administrateur
 
@@ -49,7 +49,7 @@ En cas d’incompatibilité ou de configurations logicielles particulières, l�
 9. Dans `/usr/share/X11/xkb/compat/complete`, ajouter `include "dispoled"` sur une nouvelle ligne.
 10. Veiller à ce que la méthode d’entrée soit XIM. Ce réglage se trouve par exemple (Ubuntu 24.04) dans `Système` > `Pays et langue` > `Système` > `Gérer les langues installées` > `Langue` > `Système de saisie au clavier` [iBus, XIM, Aucun].
 
-Puis fermer la session et en rouvrir une. 
+Puis fermer la session et en rouvrir une.
 
 ## Disposition de clavier par défaut
 
