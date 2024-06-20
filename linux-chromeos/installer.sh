@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-19T1037+0200
+#                       Date : 2024-06-20T0704+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -360,7 +360,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					*)
 						# Basculer vers le système de saisie au clavier XIM.
 						im-config -n xim
-						echo      '     XIM a maintenant été sélectionné.'
+						echo      '    XIM a maintenant été sélectionné.'
 					;;
 				esac
 			fi
@@ -468,10 +468,10 @@ if [ "$fonctionne" -eq 1 ]; then
 												suffixe="-ansi"
 											;;
 											[iI])
-												echo 'La touche AltFr restera entre Maj et W.'
+												echo '    La touche AltFr restera entre Maj et W.'
 											;;
 											*)
-												echo 'La touche AltFr restera entre Maj et W.'
+												echo '    La touche AltFr restera entre Maj et W.'
 											;;
 										esac
 									;;
@@ -480,7 +480,7 @@ if [ "$fonctionne" -eq 1 ]; then
 										exit
 									;;
 									*)
-										echo 'La touche AltFr restera entre Maj et W.'
+										echo '    La touche AltFr restera entre Maj et W.'
 									;;
 								esac
 								if [ "$ansipur" -eq 0 ]; then
@@ -511,9 +511,9 @@ if [ "$fonctionne" -eq 1 ]; then
 													if [ ! "$suffixe" == "-ansi" ]; then
 														suffixe+="-ctrl"
 													else
-														echo 'Pour les agencements ANSI hybrides en AZERTY, l’option'
-														echo 'Effacement arrière sur Contrôle droite n’est pas disponible,'
-														echo 'car ce sont des claviers de portable sans Contrôle droite.'
+														echo '    Pour les agencements ANSI hybrides en AZERTY, l’option'
+														echo '    Effacement arrière sur Contrôle droite n’est pas disponible,'
+														echo '    car ce sont des claviers de portable sans Contrôle droite.'
 													fi
 												;;
 												[mM])
@@ -529,14 +529,14 @@ if [ "$fonctionne" -eq 1 ]; then
 													case $r in
 														[nNsS])
 															suffixe+="-sans"
-															echo 'La touche Menu ne sera pas redisposée.'
+															echo '    La touche Menu ne sera pas redisposée.'
 														;;
 														[qQ])
 															sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
 															exit
 														;;
 														*)
-															echo 'La touche Menu sera redisposée.'
+															echo '    La touche Menu sera redisposée.'
 														;;
 													esac
 												;;
@@ -553,20 +553,20 @@ if [ "$fonctionne" -eq 1 ]; then
 														case $r in
 															[dDoO])
 																suffixe+="-sans"
-																echo 'La touche Menu sera désactivée.'
+																echo '    La touche Menu sera désactivée.'
 															;;
 															[qQ])
 																sudo rm $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier
 																exit
 															;;
 															*)
-																echo 'La touche Menu restera active.'
+																echo '    La touche Menu restera active.'
 															;;
 														esac
 													else
-														echo 'Pour les agencements ANSI hybrides en AZERTY, l’option'
-														echo 'Effacement arrière sur Windows droite n’est pas disponible,'
-														echo 'car ce sont des claviers de portable sans Windows droite.'
+														echo '    Pour les agencements ANSI hybrides en AZERTY, l’option'
+														echo '    Effacement arrière sur Windows droite n’est pas disponible,'
+														echo '    car ce sont des claviers de portable sans Windows droite.'
 													fi
 												;;
 												*)
@@ -578,10 +578,10 @@ if [ "$fonctionne" -eq 1 ]; then
 											exit
 										;;
 										*)
-											echo 'La touche d’Effacement arrière restera en haut.'
+											echo '    La touche d’Effacement arrière restera en haut.'
 										;;
 									esac
-									echo 'Installation du fichier de redisposition de touches.'
+									echo -e "\nInstallation du fichier de redisposition de touches."
 									sudo cp installer/evdev$suffixe.c $X11/xkb/keycodes/evdev
 									fait=1
 								fi
