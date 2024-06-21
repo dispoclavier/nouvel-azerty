@@ -6,6 +6,10 @@ Le « + » dans U+ABCD est omis pour la compatibilité avec les fichiers de 
 
 * Installation : Harmoniser les retraits de début de ligne des messages du script. (installer.sh [07a3f1c](https://github.com/dispoclavier/nouvel-azerty/commit/07a3f1c3883b6ad9cb747c62baf36dd333e5300d))
 
+## 2.3.5 (2024-06-19)
+
+* Installation : Déboguer le script. (installer.sh [22b0887](https://github.com/dispoclavier/nouvel-azerty/commit/22b08870a5fe325ab6eabd947a2220cddf07f3db))
+
 ## 2.3.4 (2024-06-19)
 
 * Sous-variantes :
