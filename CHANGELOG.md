@@ -1,6 +1,6 @@
 # Journal des modifications
 
-Le « + » dans U+ABCD est omis pour la compatibilité avec les fichiers de configuration.
+Le signe plus dans les points de code au format U+ABCD est omis pour l’interopérabilité. Pour la documentation, il doit être rajouté.
 
 ## 2.3.6 (projet)
 
@@ -14,7 +14,7 @@ Le « + » dans U+ABCD est omis pour la compatibilité avec les fichiers de 
 
 * Sous-variantes :
 	* Prendre en charge aussi les agencements ANSI purs. (evdev.c [d98b5de](https://github.com/dispoclavier/nouvel-azerty/commit/d98b5de4daa2c29fb690f2d175b41a6301996deb))
-	* Restaurer les touches de fonction 19 et 24. (ibidem)
+	* Restaurer les touches de fonction 19 et 24 (désactivées pour la version 1.1.1). (ibidem)
 	* Fournir un fichier `evdev.c` redisposé pour chaque catégorie de sous-variantes.
 * Installation :
 	* Gérer les redispositions de touches des sous-variantes pendant l’installation. (installer.sh [bc51116](https://github.com/dispoclavier/nouvel-azerty/commit/bc51116238f53b2be4f7f28b31ab950a59078dd6), [df8aac7](https://github.com/dispoclavier/nouvel-azerty/commit/df8aac7e8389ec85af0a13c035c9aa6852f7448d))
@@ -388,37 +388,85 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. (compose-1.y
 
 ## 1.1.4 (2023-11-01)
 
-* Transformations : Drapeau : Remplacer "‌" U200C par "⚐" U2690 avec les caractères de base espace ou césure conditionnelle. Ajouter "⚑" U2691 et "🏴" U1F3F4. Corriger la casse. (compose-2.yml [581516e](https://github.com/dispoclavier/nouvel-azerty/commit/581516edbf0de795d92989216ef7900222560427))
-* Transformations : Tourné : Remplacer "≀" U2240 par "ⸯ" U2E2F. Point en chef : Ajouter "˙" U02D9 par espace insécable. Rond en chef : Ajouter "⸰" U2E30 par point. Point souscrit : Ajouter "⸳" U2E33 par espace insécable et espace fine insécable. Virgule souscrite : Ajouter "⸴" U2E34 par espace insécable et espace fine insécable. Permuter les séquences avec espace fine insécable et espace insécable pour corriger l’affichage des tableaux. (compose-1.yml [6bfb758](https://github.com/dispoclavier/nouvel-azerty/commit/6bfb7585f90d7bb66a4d4639f7c73a437e7f97bd), compose-2.yml [77ca45c](https://github.com/dispoclavier/nouvel-azerty/commit/77ca45c867df4309ca182dae5bdbce9a4ce6d999))
-* Transformations : Exposant : Ajouter "‾" U203E. Exposant > Suscrit : Remplacer "̎" U030E par "̿" U033F. Ajouter "﹌" UFE4C, "﹋" UFE4B. Tourné : Ajouter "ʻ" U02BB. Tourné > Tourné plus : Ajouter "̕" U0315, "ʼ" U02BC. Crosse : Ajouter "˽" U02FD. Crochet rétroflexe : Ajouter "˾" U02FE. Crochet palatal : Ajouter "˽" U02FD. Tilde > Double tilde médian : Ajouter "~" U007E. Grec : Ajouter "ι" U03B9 par espace insécable ou espace fine insécable. Grec > Cerclé : Ajouter  "⃝" U20DD, "⚪" U26AA. Point en chef > Ligne verticale en chef : Ajouter "̎" U030E, "ˈ" U02C8. Brève inversée > Brève inversée souscrite : Ajouter "⁔" U2054. Brève > Brève souscrite : Ajouter "‿" U203F. Rayé > Double raie : Ajouter "꞊" UA78A. Cornu > Double cornu : Supprimer "᫉" U1AC9, "᫊" U1ACA. Crochet en chef : Ajouter "ʾ" U02BE, "ʿ" U02BF. Réfléchi : Ajouter "ʽ" U02BD. Virgule souscrite > Virgule en chef : Ajouter "ʼ" U02BC. (compose-1.yml [f3e6573](https://github.com/dispoclavier/nouvel-azerty/commit/f3e65739016c562854b0644bc9a9d1ac95e049bf), compose-2.yml [5cd31ad](https://github.com/dispoclavier/nouvel-azerty/commit/5cd31ad2cdfa4d1988dc42dd50372a9c5d729cab))
+* Transformations :
+	* Permuter les séquences avec espace fine insécable et espace insécable pour corriger l’affichage des tableaux. (compose-1.yml [6bfb758](https://github.com/dispoclavier/nouvel-azerty/commit/6bfb7585f90d7bb66a4d4639f7c73a437e7f97bd), compose-2.yml [77ca45c](https://github.com/dispoclavier/nouvel-azerty/commit/77ca45c867df4309ca182dae5bdbce9a4ce6d999))
+	* Tourné : Remplacer "≀" U2240 par "ⸯ" U2E2F. (ibidem)
+	* Point en chef : Ajouter "˙" U02D9 par espace insécable. (ibidem)
+	* Rond en chef : Ajouter "⸰" U2E30 par point. (ibidem)
+	* Point souscrit : Ajouter "⸳" U2E33 par espace insécable et espace fine insécable. (ibidem)
+	* Virgule souscrite : Ajouter "⸴" U2E34 par espace insécable et espace fine insécable. (ibidem)
+	* Drapeau :
+		* Remplacer "‌" U200C par "⚐" U2690 avec les caractères de base espace ou césure conditionnelle. (compose-2.yml [581516e](https://github.com/dispoclavier/nouvel-azerty/commit/581516edbf0de795d92989216ef7900222560427))
+		* Ajouter "⚑" U2691 et "🏴" U1F3F4. (ibidem)
+		* Corriger la casse. (ibidem)
+* Transformations :
+	* Exposant : Ajouter "‾" U203E. (compose-1.yml [f3e6573](https://github.com/dispoclavier/nouvel-azerty/commit/f3e65739016c562854b0644bc9a9d1ac95e049bf))
+	* Exposant > Suscrit :
+		* Remplacer "̎" U030E par "̿" U033F. (ibidem)
+		* Ajouter "﹌" UFE4C, "﹋" UFE4B. (ibidem)
+	* Tourné : Ajouter "ʻ" U02BB. (ibidem)
+	* Tourné > Inversé : Ajouter "̕" U0315, "ʼ" U02BC. (ibidem)
+	* Crosse : Ajouter "˽" U02FD. (ibidem)
+	* Crochet rétroflexe : Ajouter "˾" U02FE. (ibidem)
+	* Crochet palatal : Ajouter "˽" U02FD. (ibidem)
+	* Tilde > Double tilde médian : Ajouter "~" U007E. (ibidem)
+	* Grec : Ajouter "ι" U03B9 par espace insécable ou espace fine insécable. (ibidem)
+	* Grec > Cerclé : Ajouter  "⃝" U20DD, "⚪" U26AA. (ibidem)
+	* Point en chef > Ligne verticale en chef : Ajouter "̎" U030E, "ˈ" U02C8. (ibidem)
+	* Brève inversée > Brève inversée souscrite : Ajouter "⁔" U2054. (ibidem)
+	* Brève > Brève souscrite : Ajouter "‿" U203F. (ibidem)
+	* Rayé > Double raie : Ajouter "꞊" UA78A. (ibidem)
+	* Cornu > Double cornu : Supprimer "᫉" U1AC9, "᫊" U1ACA. (ibidem)
+	* Crochet en chef : Ajouter "ʾ" U02BE, "ʿ" U02BF. (ibidem)
+	* Réfléchi : Ajouter "ʽ" U02BD. (compose-2.yml [5cd31ad](https://github.com/dispoclavier/nouvel-azerty/commit/5cd31ad2cdfa4d1988dc42dd50372a9c5d729cab))
+	* Virgule souscrite > Virgule en chef : Ajouter "ʼ" U02BC. (ibidem)
 
 ## 1.1.3 (2023-10-31)
 
-* Transformations : Grec : Ajouter le iota souscrit avec les caractères de base espace ou césure conditionnelle. Drapeau : Doubler l’antiliant "‌" U200C avec les caractères de base espace ou césure conditionnelle. Documentation. (compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e), [9238b44](https://github.com/dispoclavier/nouvel-azerty/commit/9238b44d970de629389f5b21cb0b8c4011e6233e), compose-2.yml [5621bee](https://github.com/dispoclavier/nouvel-azerty/commit/5621bee680e37b31f1752497cf1e6007cdd5bb9d), [9905833](https://github.com/dispoclavier/nouvel-azerty/commit/99058337ad8a2b2872b44ae380a6a7258cf07717))
+* Transformations :
+	* Grec : Ajouter le iota souscrit avec les caractères de base espace ou césure conditionnelle. (compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e))
+	* Drapeau : Doubler l’antiliant "‌" U200C avec les caractères de base espace ou césure conditionnelle. (compose-2.yml [5621bee](https://github.com/dispoclavier/nouvel-azerty/commit/5621bee680e37b31f1752497cf1e6007cdd5bb9d))
+* Documentation. (compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e), [9238b44](https://github.com/dispoclavier/nouvel-azerty/commit/9238b44d970de629389f5b21cb0b8c4011e6233e), compose-2.yml [9905833](https://github.com/dispoclavier/nouvel-azerty/commit/99058337ad8a2b2872b44ae380a6a7258cf07717))
 
 ## 1.1.2 (2023-10-29)
 
-* Transformations : Tourné barré groupe 3 : Déboguer "ꭄ" UAB44. (compose-1.yml [2d88a4a](https://github.com/dispoclavier/nouvel-azerty/commit/2d88a4a349f9f36fa38520e9e6ccfba219fbaa1a))
-* Transformations : Point en chef > Ligne verticale en chef : Ajouter le diacritique "̍" U030D. Virgule souscrite > Virgule en chef : Remplacer "̔" U0314 par "̕" U0315. (compose-1.yml [fba48cd](https://github.com/dispoclavier/nouvel-azerty/commit/fba48cd1cb74cb3d6806ed17003e67bcb701d418), compose-2.yml [f683794](https://github.com/dispoclavier/nouvel-azerty/commit/f683794097e02e2df794f6d179af2b7b93c496b1))
-* Sous-variantes : Rajouter les sous-variantes avec Effacement arrière sur Menu sans permutation. (evdev.c [668cd26](https://github.com/dispoclavier/nouvel-azerty/commit/668cd264f8cbdac7fb3b09752c7b063ec1a36c75), comp.sh [886a1f2](https://github.com/dispoclavier/nouvel-azerty/commit/886a1f21bda5d9dac6a2ba67459b92efcd95d910))
-* Sous-variantes : Ajouter des sous-variantes avec VerrCap et touche ISO permutées et avec Effacement arrière sur Menu sans permutation. (evdev.c [b57016c](https://github.com/dispoclavier/nouvel-azerty/commit/b57016c6c0d14aef8275f8b2619eac73fef99224), comp.sh [76bca78](https://github.com/dispoclavier/nouvel-azerty/commit/76bca78b35213b2a75efbd42493b3ba5ac47459e))
+* Transformations :
+	* Tourné barré groupe 3 : Déboguer "ꭄ" UAB44. (compose-1.yml [2d88a4a](https://github.com/dispoclavier/nouvel-azerty/commit/2d88a4a349f9f36fa38520e9e6ccfba219fbaa1a))
+* Transformations :
+	* Point en chef > Ligne verticale en chef : Ajouter le diacritique "̍" U030D. (compose-1.yml [fba48cd](https://github.com/dispoclavier/nouvel-azerty/commit/fba48cd1cb74cb3d6806ed17003e67bcb701d418))
+	* Virgule souscrite > Virgule en chef : Remplacer "̔" U0314 par "̕" U0315. (compose-2.yml [f683794](https://github.com/dispoclavier/nouvel-azerty/commit/f683794097e02e2df794f6d179af2b7b93c496b1))
+* Sous-variantes :
+	* Rajouter les sous-variantes avec Effacement arrière sur Menu sans permutation. (evdev.c [668cd26](https://github.com/dispoclavier/nouvel-azerty/commit/668cd264f8cbdac7fb3b09752c7b063ec1a36c75), comp.sh [886a1f2](https://github.com/dispoclavier/nouvel-azerty/commit/886a1f21bda5d9dac6a2ba67459b92efcd95d910))
+	* Ajouter des sous-variantes avec VerrCap et touche ISO permutées et avec Effacement arrière sur Menu sans permutation. (evdev.c [b57016c](https://github.com/dispoclavier/nouvel-azerty/commit/b57016c6c0d14aef8275f8b2619eac73fef99224), comp.sh [76bca78](https://github.com/dispoclavier/nouvel-azerty/commit/76bca78b35213b2a75efbd42493b3ba5ac47459e))
 
 ## 1.1.1 (2023-10-27)
 
-* Transformations : Corriger la répartition des diacritiques combinants : Exposant : Remplacer "̍" U030D par "̅" U0305. Tourné : Remplacer "̅" U0305 par "̒" U0312. Réfléchi : Ajouter "̔" U0314. (compose-1.yml [c279c4e](https://github.com/dispoclavier/nouvel-azerty/commit/c279c4e671677025e2381d9f92478b9239d6b29c), compose-2.yml [403ceca](https://github.com/dispoclavier/nouvel-azerty/commit/403ceca95b46d3559d6fb1b0f7039c61a0b73fc2))
-* Fichiers XKB : Limiter les touches sans symboles à AB11 et AE13. (evdev.c [fcdee06](https://github.com/dispoclavier/nouvel-azerty/commit/fcdee06e45540fc039bca322aeb581d7206e7a8c))
-* Sous-variantes : Permuter correctement la touche Effacement arrière. (evdev.c [d5068d3](https://github.com/dispoclavier/nouvel-azerty/commit/d5068d3580a84fce5b5e5a8c258e69305fa8c524))
+* Transformations : Corriger la répartition des diacritiques combinants. (compose-1.yml [c279c4e](https://github.com/dispoclavier/nouvel-azerty/commit/c279c4e671677025e2381d9f92478b9239d6b29c), compose-2.yml [403ceca](https://github.com/dispoclavier/nouvel-azerty/commit/403ceca95b46d3559d6fb1b0f7039c61a0b73fc2))
+	* Exposant : Remplacer "̍" U030D par "̅" U0305. (ibidem)
+	* Tourné : Remplacer "̅" U0305 par "̒" U0312. (ibidem)
+	* Réfléchi : Ajouter "̔" U0314. (ibidem)
+* Fichiers compilés : Limiter les touches sans symboles à AB11 et AE13. (evdev.c [fcdee06](https://github.com/dispoclavier/nouvel-azerty/commit/fcdee06e45540fc039bca322aeb581d7206e7a8c))
+* Sous-variantes : Permuter correctement la touche d’Effacement arrière. (evdev.c [d5068d3](https://github.com/dispoclavier/nouvel-azerty/commit/d5068d3580a84fce5b5e5a8c258e69305fa8c524))
 
 ## 1.1.0 (2023-10-24)
 
-* Sous-variantes : Ajouter Effacement arrière sur Menu ou sur Contrôle droite. Ajouter Effacement arrière sur Menu pour claviers ANSI pour la France. Repenser les suffixes des variantes avec AltFr et VerrCap et/ou Effacement arrière redisposées. (evdev.c [e62f925](https://github.com/dispoclavier/nouvel-azerty/commit/e62f925935d81418d2642e5adfd4d37debafdc29), [0f8e732](https://github.com/dispoclavier/nouvel-azerty/commit/0f8e7327dcf48e8561580cd0d21ea03a37bdc1df), [cae8105](https://github.com/dispoclavier/nouvel-azerty/commit/cae8105b2e3655b6f959861816cf04325d34b332))
-* Transformations : Crochet palatal : Ajouter le diacritique combinant "̡" U0321. Tourné : Ajouter "ꓭ" UA4ED, "ꓷ" UA4F7, "ꓩ" UA4E9, "ꓠ" UA4E0, "ꓳ" UA4F3, "ꓒ" UA4D2, "ꓤ" UA4E4, "ꓢ" UA4E2, "ꓵ" UA4F5, "ꓫ" UA4EB, "ꓜ" UA4DC. Inversé : Ajouter "ꓯ" UA4EF, "ꓭ" UA4ED, "ꓛ" UA4DB, "ꓷ" UA4F7, "ꓱ" UA4F1, "ꓞ" UA4DE, "ꓨ" UA4E8, "ꓧ" UA4E7, "ꓲ" UA4F2, "ꓩ" UA4E9, "ꓘ" UA4D8, "ꓶ" UA4F6, "ꓠ" UA4E0, "ꓳ" UA4F3, "ꓒ" UA4D2, "ꓤ" UA4E4, "ꓢ" UA4E2, "ꓕ" UA4D5, "ꓵ" UA4F5, "ꓥ" UA4E5, "ꓫ" UA4EB, "𑾰" U11FB0, "ꓜ" UA4DC. Supprimer "Ɐ" U2C6F, "ꟷ" UA7F7, "ʁ" U0281. Documentation. (compose-1.yml [57644a5](https://github.com/dispoclavier/nouvel-azerty/commit/57644a5f6bebe6e0e5797df9ef3a9e7260361751), compose-2.yml [419310d](https://github.com/dispoclavier/nouvel-azerty/commit/419310d3cc5aefaf16584f1c3bee10677f94ff57))
-* Transformations : Tréma : Redonder "Ø" U00D8, "ø" U00F8. (compose-1.yml [40b9b8f](https://github.com/dispoclavier/nouvel-azerty/commit/40b9b8fef20fa0c0d615fb68d3433994d2f90442), compose-2.yml [3068d68](https://github.com/dispoclavier/nouvel-azerty/commit/3068d686bf5ecfc2c7dc153da98f7bd5812c4f3e))
+* Sous-variantes :
+	* Ajouter des sous-variantes avec Effacement arrière sur Menu ou sur Contrôle droite. (evdev.c [e62f925](https://github.com/dispoclavier/nouvel-azerty/commit/e62f925935d81418d2642e5adfd4d37debafdc29), [0f8e732](https://github.com/dispoclavier/nouvel-azerty/commit/0f8e7327dcf48e8561580cd0d21ea03a37bdc1df), [cae8105](https://github.com/dispoclavier/nouvel-azerty/commit/cae8105b2e3655b6f959861816cf04325d34b332))
+	* Ajouter des sous-variantes avec Effacement arrière sur Menu pour claviers ANSI en AZERTY. (ibidem)
+	* Améliorer les suffixes. (ibidem)
+* Transformations :
+	* Crochet palatal : Ajouter le diacritique combinant "̡" U0321. (compose-1.yml [57644a5](https://github.com/dispoclavier/nouvel-azerty/commit/57644a5f6bebe6e0e5797df9ef3a9e7260361751))
+	* Tourné : Ajouter "ꓭ" UA4ED, "ꓷ" UA4F7, "ꓩ" UA4E9, "ꓠ" UA4E0, "ꓳ" UA4F3, "ꓒ" UA4D2, "ꓤ" UA4E4, "ꓢ" UA4E2, "ꓵ" UA4F5, "ꓫ" UA4EB, "ꓜ" UA4DC. (ibidem)
+	* Inversé :
+		* Ajouter "ꓯ" UA4EF, "ꓭ" UA4ED, "ꓛ" UA4DB, "ꓷ" UA4F7, "ꓱ" UA4F1, "ꓞ" UA4DE, "ꓨ" UA4E8, "ꓧ" UA4E7, "ꓲ" UA4F2, "ꓩ" UA4E9, "ꓘ" UA4D8, "ꓶ" UA4F6, "ꓠ" UA4E0, "ꓳ" UA4F3, "ꓒ" UA4D2, "ꓤ" UA4E4, "ꓢ" UA4E2, "ꓕ" UA4D5, "ꓵ" UA4F5, "ꓥ" UA4E5, "ꓫ" UA4EB, "𑾰" U11FB0, "ꓜ" UA4DC. (ibidem)
+		* Supprimer "Ɐ" U2C6F, "ꟷ" UA7F7, "ʁ" U0281. (ibidem)
+	* Tréma : Redonder "Ø" U00D8, "ø" U00F8. (compose-2.yml [3068d68](https://github.com/dispoclavier/nouvel-azerty/commit/3068d686bf5ecfc2c7dc153da98f7bd5812c4f3e))
+* Documentation. (compose-1.yml [57644a5](https://github.com/dispoclavier/nouvel-azerty/commit/57644a5f6bebe6e0e5797df9ef3a9e7260361751), [40b9b8f](https://github.com/dispoclavier/nouvel-azerty/commit/40b9b8fef20fa0c0d615fb68d3433994d2f90442), compose-2.yml [419310d](https://github.com/dispoclavier/nouvel-azerty/commit/419310d3cc5aefaf16584f1c3bee10677f94ff57))
 
 ## 1.0.14 (2023-09-29)
 
 * Sous-variantes : Effacement arrière : Remettre sur la touche traditionnelle. (evdev.c [375b83a](https://github.com/dispoclavier/nouvel-azerty/commit/375b83a11353f6135d39b65a2eca085400de34ee), annule [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973))
-* Mettre en sourdine la prise en charge de ChromeOS.
+* Documentation : Mettre en sourdine la prise en charge de ChromeOS.
 
 ## 1.0.13 (2023-09-27)
 
