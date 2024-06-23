@@ -13,21 +13,54 @@
 #
 ### Group selector introduction
 #
-#   The private use character UEFB0 is used as the group selector dead key.
-#   As a special dead key, the group selector deserves particular attention.
-#   Digits and non-ASCII base characters are remaining in the common section.
-#   E.g. group 1 of Ɔɔ, Ññ and non-breaking hyphen outputs "―" U2015. That is
-#   designed for African, Breton, and remapped variants.
+#   The group selector is a special dead key designed to remap every single key
+#   position. E.g. group 1 of Ɔɔ, Ññ and non-breaking hyphen outputs "―" U2015,
+#   a feature designed for African, Breton, and remapped variants.
 #   See #*# GROUP_1
+#
+#   Usually, however, the scope of the group selector is limited to a handy set
+#   of characters including the Latin base alphabet, the ten digits and the set
+#   of ASCII symbols mapped on level 3 as of 30 symbols, and level 1 for period
+#   and comma, plus the space bar, with ordinary space and no-break space used.
+#
+#   The resulting letter groups and symbol groups make up the main content of a
+#   standard group selector as used on this keyboard layout, with support for a
+#   minimum number of 4 multiple presses. Support for looping through the group
+#   array is straightforward on macOS with the terminator showing the currently
+#   active group, and on Windows. In XCompose, supporting the first four groups
+#   by multiple presses is feasible, and going beyond is not even desirable, as
+#   all groups — except group 1 and group 2 — are activatable by typing a digit
+#   after pressing the group selector. This scheme expands the group array to a
+#   total number of 12 groups accessed using the group selector, piling up upon
+#   the default group, that is obiously numbered 0, contrasting with the scheme
+#   introduced by ISO/IEC 9995.
+#
+#   Digits and non-ASCII base characters:
+#   See #*# GROUP_1
+#
+#   ASCII symbols and punctuation, space, no-break space:
+#   See ### Space and symbol groups
+#
+#   Latin base alphabet:
+#   See ### Letter groups
+#
+#   The keysym *dead_group is not supported in keysymdef.h. For the time being,
+#   the private use character UEFB0 is used as the group selector dead key.
 #
 #
 # # History
 #
 #   The group selector dead key has been introduced by Karl Pentzlin while
-#   implementing DIN 2137-2:2012 on Windows. Virtual dead keys accessed by
-#   multiple dead key presses have been introduced by the French ergonomic
-#   bépo keyboard layout project in 2015 while upgrading to version 1.1 for
-#   the NF Z71-300:2019 standard.
+#   implementing DIN 2137-2:2012 on Windows. Noticing that the Text Services
+#   Framework does not support the ISO/IEC 9995 style group selector, moving
+#   group selection to a dead key was the only actionable solution. On other
+#   keyboard layouts, similar dead keys are called “Latin” as on the French
+#   ergonomic bépo keyboard layout, or “Europe” as in the NF Z71-300:2019
+#   standard.
+#
+#   Virtual dead keys accessed by multiple dead key presses in turn have been
+#   introduced by the bépo development team in 2015, while upgrading the bépo
+#   layout to version 1.1 for the NF Z71-300:2019 keyboard layout standard.
 #
 #   *dead_group is used when levels are exhausted by Level5 modifier and toggle.
 #   XKB supports the ISO/IEC 9995 conformant group selection since 2013, see
