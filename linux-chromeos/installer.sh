@@ -1,9 +1,9 @@
 #!/bin/bash
-#                       Date : 2024-06-20T0704+0200
+#                       Date : 2024-06-23T1334+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
-#                Description : Installe et désinstalle des dispositions de clavier.
+#                Description : Installe et désinstalle des dispositions de clavier et des redispositions de touches.
 #     Système d’exploitation : Linux
 #
 #                     Projet : Dispoclavier
@@ -68,7 +68,7 @@
 #
 # L’absence des booléens dans Bash est pallié par le recours à des comparaisons arithmétiques.
 # On peut en profiter pour inverser 0 et 1 (qui dans Bash signifient vrai et faux, contrairement
-# à la plupart des autres langages où ils signifient faux et vrai) dans un souci de lisibilité.
+# à la plupart des autres langages où ils signifient faux et vrai), dans un souci de lisibilité.
 introduction=0 # Pas faite.
 function afficher {
 	if [ "$introduction" -eq 0 ]; then
@@ -394,7 +394,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							;;
 							*)
 								echo 'Réinstallation du fichier de redisposition de touches'
-								echo '    en utilisant "sauvegarde/evdev.c".'
+								echo '  en utilisant "sauvegarde/evdev.c".'
 								sudo cp sauvegarde/evdev.c $X11/xkb/keycodes/evdev
 								fait=1
 							;;
@@ -425,7 +425,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					fi
 					if [ "$fait" -eq 0 ] && [ "$sous_variantes" -eq 1 ]; then
 						echo -e "\n  ❓  Souhaitez-vous redisposer les touches AltFr ou"
-						echo      '     Effacement arrière (Retour arrière) ?'
+						echo      '         Effacement arrière (Retour arrière) ?'
 						echo -e "\n       Pour redisposer, tapez r ou o puis Entrée."
 						echo      '       Pour ne rien redisposer, appuyez sur Entrée.'
 						echo      '       Pour quitter, tapez q puis Entrée.'
@@ -434,7 +434,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							[oOrR])
 								suffixe=''
 								echo -e "\n  ❓  Souhaitez-vous redisposer la touche AltFr ?"
-								echo      '     Normalement, AltFr se trouve entre la touche'
+								echo -e "\n  ⚠  Normalement, AltFr se trouve entre la touche"
 								echo      '     Majuscule gauche et celle du W de l’AZERTY.'
 								echo -e "\n       Pour la redisposer, tapez r ou o puis Entrée."
 								echo      '       Pour ne pas la redisposer, appuyez sur Entrée.'
@@ -471,7 +471,7 @@ if [ "$fonctionne" -eq 1 ]; then
 												echo '    La touche AltFr restera entre Maj et W.'
 											;;
 											*)
-												echo '    La touche AltFr restera entre Maj et W.'
+												echo '    La touche AltFr restera sur la touche [<>].'
 											;;
 										esac
 									;;
@@ -480,7 +480,7 @@ if [ "$fonctionne" -eq 1 ]; then
 										exit
 									;;
 									*)
-										echo '    La touche AltFr restera entre Maj et W.'
+										echo '    La touche AltFr restera sur la touche [<>].'
 									;;
 								esac
 								if [ "$ansipur" -eq 0 ]; then
@@ -491,7 +491,7 @@ if [ "$fonctionne" -eq 1 ]; then
 									read -p   "    " rep
 									case $rep in
 										[oOrR])
-											echo -e "\n  ⚠  La touche d’Effacement arrière peut être disposée"
+											echo -e "\n  ⚠  La touche d’Effacement arrière peut être redisposée"
 											if [ "$suffixe" == "-ansi" ]; then
 												echo      '     sur la touche Menu.'
 											else
@@ -598,6 +598,7 @@ if [ "$fonctionne" -eq 1 ]; then
 						echo 'Installation du fichier générique de redisposition de touches.'
 						sudo cp installer/evdev.c $X11/xkb/keycodes/evdev
 					fi
+					# Sauvegarder le fichier installé de redisposition de touches.
 					echo 'Sauvegarde des redispositions de touches.'
 					mkdir -p ~/.config/dispoclavier/keycodes
 					cp $X11/xkb/keycodes/evdev ~/.config/dispoclavier/keycodes/evdev
@@ -607,7 +608,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					sudo cp $X11/xkb/types/complete $X11/xkb/types/complete-types-avant-dispoclavier
 					sudo sed -i '/\};/i \ \ \ \ include "dispotypes"' $X11/xkb/types/complete
 					# Installer les tableaux d’allocation de touches.
-					echo 'Installation des tableaux d’allocation de touches.'
+					echo 'Installation des dispositions de clavier.'
 					sudo cp installer/dispocla.cpp $X11/xkb/symbols/dispocla
 					# Désactiver l’écrasement du deuxième groupe vif.
 					echo 'Désactivation de l’écrasement du deuxième groupe vif.'
@@ -626,7 +627,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					sudo sed -n '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/p' installer/evdev-additions.xml > installer/evdev-additions-seules.xml
 					sudo sed -i '/ajouts-dispoclavier/r installer/evdev-additions-seules.xml' $X11/xkb/rules/evdev.xml
 					sudo sed -i '/ajouts-dispoclavier/d' $X11/xkb/rules/evdev.xml
-					# Installer le témoin lumineux Arrêt défilement pour le mode ASCII.
+					# Installer l’allumage du témoin lumineux Arrêt défilement en mode ASCII.
 					echo 'Rattachement du témoin lumineux Arrêt défilement au mode ASCII.'
 					sudo cp installer/dispoled.c $X11/xkb/compat/dispoled
 					sudo cp $X11/xkb/compat/complete $X11/xkb/compat/complete-compat-avant-dispoclavier
