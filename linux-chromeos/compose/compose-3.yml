@@ -37,6 +37,7 @@
 #
 #   Digits and non-ASCII base characters:
 #   See #*# GROUP_1
+#   and following, up to #^# GROUP_12
 #
 #   ASCII symbols and punctuation, space, no-break space:
 #   See ### Space and symbol groups
@@ -50,41 +51,44 @@
 #
 # # History
 #
-#   The group selector dead key has been introduced by Karl Pentzlin while
-#   implementing DIN 2137-2:2012 on Windows. Noticing that the Text Services
-#   Framework does not support the ISO/IEC 9995 style group selector, moving
-#   group selection to a dead key was the only actionable solution. On other
-#   keyboard layouts, similar dead keys are called “Latin” as on the French
-#   ergonomic bépo keyboard layout, or “Europe” as in the NF Z71-300:2019
-#   standard.
+#   The group selector dead key has been introduced by Karl Pentzlin during the
+#   implementation of the new DIN 2137-2:2012 standard on Windows. Noticing the
+#   lack of support for the ISO/IEC 9995 style group selector in TSF, the Text
+#   Services Framework on Windows, Karl Pentzlin moved the group selector to a
+#   real dead key taking over the dead key behavior that ISO/IEC 9995 specified
+#   on the level 2 + level 3 modifier combination. A similar dead key included
+#   in other keyboard layouts may be called “Latin and punctuation” as on the
+#   French ergonomic bépo keyboard layout, or “Europe” as in NF Z71-300:2019.
+#   https://bepo.fr/wiki/Latin_et_ponctuation
+#
+#   XKB supports the ISO/IEC 9995 conformant group selection since 2013, see
+#   https://bugs.freedesktop.org/show_bug.cgi?id=60991
+#
+#   But XKB keysym mapping is limited to a maximum number of 8 elements. This
+#   array is used up by the extra graphic modifier required for the support of
+#   input methods for the Unicode conformant digital representation of numbers
+#   and measurement units used in 50+ countries, conforming to the guidelines
+#   set up by the Bureau International des Poids et Mesures BIPM, and for input
+#   of French, that uses U202F NARROW NO-BREAK SPACE to space out a number of
+#   punctuation marks following the French Imprimerie Nationale and/or French
+#   new-school typesetting as documented in points (2) and (3) of:
+#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
 #
 #   Virtual dead keys accessed by multiple dead key presses in turn have been
 #   introduced by the bépo development team in 2015, while upgrading the bépo
 #   layout to version 1.1 for the NF Z71-300:2019 keyboard layout standard.
 #
-#   *dead_group is used when levels are exhausted by Level5 modifier and toggle.
-#   XKB supports the ISO/IEC 9995 conformant group selection since 2013, see
-#   https://bugs.freedesktop.org/show_bug.cgi?id=60991
-#   But its keysym mapping array is limited to a maximum number of 8 elements,
-#   used up by the extra graphic modifier key required to support input methods
-#   for the standard digital representation of numbers and measurement units
-#   according to the Bureau International des Poids et Mesures BIPM, and of
-#   French text using U202F NARROW NO-BREAK SPACE to space out big punctuation
-#   marks following the French Imprimerie Nationale and/or French new-school
-#   typesetting. French new school punctuation mark spacing is documented in
-#   points (2) and (3) in:
-#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
-#
 #
 # # Numbering
 #
-#   CAUTION: Unlike specified in ISO/IEC 9995, group numbers are zero based.
-#   For UX consistency, the default group is group 0. Only groups accessed by
-#   the group selector dead key are numbered starting with 1, because a group
-#   accessed by an n-uple press on the group selector must be called “group n”,
-#   not “group n+1”. The ISO/IEC 9995 standard uses 1-based numbering because
-#   it uses the terms “primary” and “secondary” with respect to groups, and it
-#   does not consider dead key based group selection with multiple presses.
+#   For UX consistency, the default group is group 0. Therefore, the numbering
+#   scheme specified in ISO/IEC 9995 is ruled out in favor of a zero-based one.
+#   Only groups accessed by the group selector dead key are numbered starting
+#   with 1, because a group accessed by an n-uple press on the group selector
+#   must be called “group n” rather than “group n+1”. The ISO/IEC 9995 standard
+#   uses 1-based numbering because it uses the terms “primary” and “secondary”
+#   with respect to groups and fails to consider dead key based group selection
+#   with support for multiple presses.
 #
 #   As a short identifier for “group #”, “g#” is proposed.
 #
