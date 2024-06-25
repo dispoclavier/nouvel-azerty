@@ -1,6 +1,12 @@
 # Un nouvel AZERTY pour Linux
 
-Ceci est un mode d’emploi couvrant principalement l’installation et l’activation. Sur l’utilisation, il est vivement conseillé de se référer à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf) est pareillement disponible en ligne.
+Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’activation. Sur l’utilisation, il est vivement conseillé de se référer à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf) est pareillement disponible en ligne.
+
+## Alerte d’incompatibilité de Linux Mint
+
+Linux Mint 21.3 (2024) est incompatible avec ce nouvel AZERTY, qui utilise la modificatrice de niveau 5, appellée AltFr dans cet usage, et qui est convertie en deuxième touche AltGr sous Linux Mint 21.3 Virginia. Plus d’informations sous le titre [### Linux Mint](#linux-mint) plus bas.
+
+Mieux vaut utiliser directement [Ubuntu 24.04](https://releases.ubuntu.com/noble/), exempt de ces bogues.
 
 ## Activation sans droits d’administrateur
 
@@ -12,19 +18,23 @@ Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « 
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « Nouvel-AZERTY-Linux-`version`.zip » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh). On peut aussi installer chaque fichier manuellement.
+Télécharger le dossier « Nouvel-AZERTY-Linux-`version`.zip » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh). On peut aussi installer chaque fichier [manuellement](#installation-manuelle).
 
 ### Script d’installation : mode d’emploi
 
-Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve ici sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`. Selon les réglages, on peut le lancer en le cliquant ou en le double-cliquant, et de toute manière par la commande `./installer.sh` après avoir ouvert le dossier dans un terminal.
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve ici sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
 
-Une fois lancé, le script analyse la situation et propose normalement soit d’installer ces dispositions de clavier, soit de les désinstaller.
+Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./installer.sh` après avoir ouvert le dossier dans un terminal.
+
+Le script commence par analyser la situation, et propose normalement soit d’installer ces dispositions de clavier, soit de les désinstaller.
 
 Au début de l’installation, le script demande s’il faut **redisposer des touches.** Il s’agit de la touche AltFr, qui peut être redisposée sur la touche de Verrouillage des capitales, et de la touche d’Effacement arrière, qui peut être redisposée sur la touche Menu, ou sur Windows droite ou Contrôle droite.
 
 Après la sortie d’une nouvelle version, pour **mettre à jour** ces dispositions de clavier par le script, il faut lancer celui-ci deux fois afin de les désinstaller, puis de les réinstaller.
 
-Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au moment de la désinstallation, le même fichier est sauvegardé aussi dans un dossier `sauvegarde/` créé à côté du script. Au début de l’installation, le script propose d’utiliser le fichier sauvegardé à ces deux endroits s’il existe.
+Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au moment de la désinstallation, le même fichier est sauvegardé aussi dans un dossier `sauvegarde/` créé à côté du script.
+
+Au moment de l’installation, le script propose d’utiliser le fichier sauvegardé à ces deux endroits s’il existe.
 
 Le fichier sauvegardé à côté de ce script offre la facilité d’une **personnalisation** aisée avant sa réinstallation, tandis que celui dans les configurations personnelles assure la pérennité à travers les différentes mises à jour, tant du système d’exploitation que de ces dispositions de clavier.
 
@@ -32,7 +42,11 @@ Le fichier sauvegardé à côté de ce script offre la facilité d’une **perso
 
 En cas d’incompatibilité ou de configurations logicielles particulières, l’installation manuelle est une solution de dernier recours.
 
-Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans `/usr/share/X11/xkb/`, que le système risque d’avoir zéro tolérance sur une faute de frappe, une erreur de syntaxe ou l’absence d’un type de touche utilisé. Contrairement aux modifications dans `/usr/share/X11/locale/`, il ne suffit pas pour tester de rouvrir une application. Un système d’exploitation avec une erreur dans XKB risque d’être inutilisable et de devoir être débogué depuis une autre instance du système, installée sur le même ordinateur ou chargée depuis une clé USB démarrable.
+Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans `/usr/share/X11/xkb/`, que le système risque d’avoir zéro tolérance sur une faute de frappe, une erreur de syntaxe ou l’absence d’un type de touche utilisé. Contrairement aux modifications dans `/usr/share/X11/locale/`, il ne suffit pas pour tester de rouvrir une application.
+
+Un système d’exploitation avec une erreur dans XKB risque d’être inutilisable et de devoir être débogué depuis **une autre instance du système,** installée sur le même ordinateur ou chargée depuis une clé USB démarrable.
+
+Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller le dossier `X11` par `sudo chmod --recursive 777 /usr/share/X11`, ou d’ouvrir une instance d’administrateur du navigateur de fichiers par `sudo nautilus` ou `sudo nemo`, ou quel que soit le nom de l’application.
 
 Pour toute éventualité, la procédure d’installation est la suivante :
 
@@ -80,6 +94,18 @@ Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 pos
 ## Systèmes
 
 Ces fichiers sont développés, testés et compilés sous **Ubuntu 16.04** depuis 2018 et toujours en 2024. Sur la fin, ces fichiers ont aussi été testés sous **Ubuntu 24.04,** où le commutateur affiche certes toutes les dispositions installées, qu’elles soient fournies ou ajoutées, mais ne permet d’en utiliser qu’une seule à la fois ; impossible d’utiliser le commutateur pour basculer entre plusieurs dispositions ; bogue confirmé sous **Debian 12.5.0** (datant de 2023) et sous des distributions de Linux postérieures à Ubuntu 16.04 (testé sous **Ubuntu 18.04, Ubuntu 20.04, Linux Mint 21.3**).
+
+### Linux Mint
+
+Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024, car il utilise la modificatrice de niveau 5 « ISO_Level5_Shift », qu’il appelle AltFr. Celle-ci est convertie en deuxième touche AltGr (« ISO_Level3_Shift ») sous Linux Mint 21.3. Ce bogue a été introduit pendant la refactorisation d’Ubuntu, puisqu’il est absent d’Ubuntu 24.04 et de toutes les versions antérieures.
+
+Linux Mint est aussi affecté par un autre bogue, dans le compilateur, qui ne peut pas toujours lire les redéfinitions partielles. Quand une touche incluse est partiellement redéfinie, et les autres positions sont omises ou remplacées par « NoSymbol » (qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère »), le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte les touches de la rangée E.
+
+Vu que pour éviter ces bogues, il aurait suffi de ne pas toucher au code, l’intentionnalité suspectée vise à rendre inutilisable ce nouvel AZERTY et à faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Mint et à exposer la fragilité du projet et sa corruptibilité.
+
+La solution consiste à **éviter Linux Mint** et à utiliser Ubuntu directement.
+
+### Chrome OS
 
 Quant à **Chrome OS**, il utilise certes XKB mais le fournit codé en dur, et même dans le conteneur Linux, l’image d’X11 est hors service. Utiliser une disposition de clavier ajoutée comme extension de Chrome est impossible à cause d’un problème de performance, même sur les chromebooks puissants. Le bogue a été [rapporté](https://github.com/google/extra-keyboards-for-chrome-os/issues/135) fin janvier 2024 mais n’est pas traité, pas plus que les autres rapports de bogue dans ce dépôt officiel des dispositions de clavier ajoutées à Chrome OS.
 
