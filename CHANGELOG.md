@@ -1,5 +1,11 @@
 # Journal des modifications
 
+## 2.3.7 (projet)
+
+* Améliorer le mode d’emploi. (readme.md [5aee580](https://github.com/dispoclavier/nouvel-azerty/commit/5aee5804715e314faf18409ba726e380a91a7fe1))
+* Alerter sur Linux Mint. (readme.md [428dd59](https://github.com/dispoclavier/nouvel-azerty/commit/428dd59d1be592abde77b0a6286453362040bfe3))
+* Documentation. (compose-3.yml [c7c3d72](https://github.com/dispoclavier/nouvel-azerty/commit/c7c3d723c188629501290f910220f6b13e15dc60))
+
 ## 2.3.6 (2024-06-23)
 
 * Installation :
