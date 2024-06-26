@@ -3,7 +3,7 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-06-16T1831+0200
+# 2024-06-26T1146+0200
 # = last modified.
 #
 # Generates HTML tables of multi-key sequences from `Compose.yml`.
@@ -55,6 +55,7 @@ print( "Opened file $file_path.\n" );
 my $output_directory = 'multikey-tables';
 unless ( -d $output_directory ) {
 	mkdir $output_directory;
+	print( "New directory $output_directory/.\n" );
 }
 my $output_file_name_template = 'multikey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
@@ -337,6 +338,6 @@ close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
 print( "Closed file $wholeoutput_path.\n" );
-print( "Multi_key tables generated.\n" );
+print( "Multi_key tables generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
