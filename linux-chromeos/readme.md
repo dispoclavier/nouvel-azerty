@@ -4,9 +4,7 @@ Ceci est un mode d’emploi couvrant principalement l’[installation](#installa
 
 ## Alerte d’incompatibilité de Linux Mint
 
-Linux Mint 21.3 (2024) est incompatible avec ce nouvel AZERTY, qui utilise la modificatrice de niveau 5, appellée AltFr dans cet usage, et qui est convertie en deuxième touche AltGr sous Linux Mint 21.3 Virginia. Plus d’informations sous le titre [### Linux Mint](#linux-mint) plus bas.
-
-Mieux vaut utiliser directement [Ubuntu 24.04](https://releases.ubuntu.com/noble/), exempt de ces bogues.
+Linux Mint 21.3 (2024) est incompatible avec ce nouvel AZERTY, qui y est inutilisable. Plus d’informations sous le titre [### Linux Mint](#linux-mint) plus bas. Mieux vaut utiliser directement [Ubuntu](https://ubuntu.com/download/desktop), exempt de ces bogues.
 
 ## Activation sans droits d’administrateur
 
@@ -103,9 +101,9 @@ Linux Mint est aussi affecté par un autre bogue, qui transforme la bascule Verr
 
 Un troisième bogue est situé dans le compilateur, qui sous Linux Mint ne peut plus toujours lire les redéfinitions partielles de touches. Quand une touche d’une disposition incluse dans une autre disposition est partiellement redéfinie, et les autres positions sont omises ou remplacées par « NoSymbol » – qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère » –, le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte les touches de la rangée E et met en panne des touches sur les variantes régionales et les variantes redisposées.
 
-Un bogue supplémentaire affecte le commutateur de dispositions de clavier sous Linux Mint, qui peut être hors d’état d’activer une des dispositions de clavier de ce nouvel AZERTY. Mais ce bogue est de peu d’importance, puisque sous Linux Mint, ce nouvel AZERTY est de toute façon inutilisable.
+Un bogue supplémentaire affecte le commutateur de dispositions de clavier sous Linux Mint, qui peut être hors d’état d’activer une des dispositions de clavier de ce nouvel AZERTY. Mais ce bogue est de peu d’importance, puisque sous Linux Mint, ce nouvel AZERTY est de toute façon inutilisable. Sous Ubuntu, le commutateur est autrement bogué, mais il y est toujours possible d’activer une des dispositions de ce nouvel AZERTY, quelle qu’elle soit.
 
-Ces bogues ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’Ubuntu 24.04 et de toutes les versions antérieures. Pour éviter ces bogues, il aurait suffi de ne pas toucher au code d’XKB. L’intentionnalité suspectée vise principalement à rendre inutilisable ce nouvel AZERTY, et accessoirement à lui faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Linux Mint et à exposer la fragilité de ce projet et sa corruptibilité.
+Ces bogues propres à Linux Mint ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’[Ubuntu 24.04](https://releases.ubuntu.com/noble/) et de toutes les versions antérieures. Pour éviter ces bogues, il aurait suffi de ne pas toucher au code d’XKB. L’intentionnalité suspectée vise principalement à rendre inutilisable ce nouvel AZERTY, et accessoirement à lui faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Linux Mint et à exposer la fragilité de ce projet et sa corruptibilité.
 
 La solution consiste à **éviter Linux Mint** et à utiliser [Ubuntu](https://ubuntu.com/download/desktop) directement.
 
