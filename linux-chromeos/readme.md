@@ -97,11 +97,13 @@ Ces fichiers sont développés, testés et compilés sous **Ubuntu 16.04** depu
 
 ### Linux Mint
 
-Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024, car il utilise la modificatrice de niveau 5 « ISO_Level5_Shift », qu’il appelle AltFr. Celle-ci est convertie en deuxième touche AltGr (« ISO_Level3_Shift ») sous Linux Mint 21.3. Ce bogue a été introduit pendant la refactorisation d’Ubuntu, puisqu’il est absent d’Ubuntu 24.04 et de toutes les versions antérieures.
+Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024, car il utilise la modificatrice de niveau 5 « ISO_Level5_Shift », qu’il appelle AltFr. Celle-ci est convertie en deuxième touche AltGr (« ISO_Level3_Shift ») sous Linux Mint 21.3. Ce bogue désactive toutes les ponctuations espacées, ainsi que le pavé numérique graphique disposé sur le bloc alphanumérique.
 
-Linux Mint est aussi affecté par un autre bogue, dans le compilateur, qui ne peut pas toujours lire les redéfinitions partielles. Quand une touche incluse est partiellement redéfinie, et les autres positions sont omises ou remplacées par « NoSymbol » (qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère »), le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte les touches de la rangée E.
+Linux Mint est aussi affecté par un autre bogue, qui transforme la bascule VerrMod en touche pour passer d’une disposition de clavier à une autre, parmi celles qui sont dans la liste du commutateur. VerrMod bascule entre « ISO_Last_Group » et « ISO_First_Group », soit entre les deux groupes de disposition de chaque touche, qui permettent de disposer les huit positions séparément pour le mode français et le mode ASCII. Cette deuxième bascule graphique, dédiée aux chiffres, permet de dédier aux lettres la bascule traditionnelle VerrMaj, désormais VerrCap.
 
-Vu que pour éviter ces bogues, il aurait suffi de ne pas toucher au code, l’intentionnalité suspectée vise à rendre inutilisable ce nouvel AZERTY et à faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Mint et à exposer la fragilité du projet et sa corruptibilité.
+Un troisième bogue est situé dans le compilateur, qui ne peut pas toujours lire les redéfinitions partielles. Quand une touche incluse est partiellement redéfinie, et les autres positions sont omises ou remplacées par « NoSymbol » (qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère »), le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte les touches de la rangée E.
+
+Ces bogues ont été introduits pendant la refactorisation d’Ubuntu, puisqu’ils sont absents d’Ubuntu 24.04 et de toutes les versions antérieures. Pour éviter ces bogues, il aurait suffi de ne pas toucher au code. L’intentionnalité suspectée vise à rendre inutilisable ce nouvel AZERTY, et à faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Mint et à exposer la fragilité du projet et sa corruptibilité.
 
 La solution consiste à **éviter Linux Mint** et à utiliser Ubuntu directement.
 
