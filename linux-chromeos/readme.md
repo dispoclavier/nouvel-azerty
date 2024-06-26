@@ -103,9 +103,9 @@ Linux Mint est aussi affecté par un autre bogue, qui transforme la bascule Verr
 
 Un troisième bogue est situé dans le compilateur, qui ne peut pas toujours lire les redéfinitions partielles. Quand une touche incluse est partiellement redéfinie, et les autres positions sont omises ou remplacées par « NoSymbol » (qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère »), le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte les touches de la rangée E.
 
-Ces bogues ont été introduits pendant la refactorisation d’Ubuntu, puisqu’ils sont absents d’Ubuntu 24.04 et de toutes les versions antérieures. Pour éviter ces bogues, il aurait suffi de ne pas toucher au code. L’intentionnalité suspectée vise à rendre inutilisable ce nouvel AZERTY, et à faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Mint et à exposer la fragilité du projet et sa corruptibilité.
+Ces bogues ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’Ubuntu 24.04 et de toutes les versions antérieures. Pour éviter ces bogues, il aurait suffi de ne pas toucher au code d’XKB. L’intentionnalité suspectée vise principalement à rendre inutilisable ce nouvel AZERTY, et accessoirement à lui faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Linux Mint et à exposer la fragilité de ce projet et sa corruptibilité.
 
-La solution consiste à **éviter Linux Mint** et à utiliser Ubuntu directement.
+La solution consiste à **éviter Linux Mint** et à utiliser [Ubuntu](https://ubuntu.com/download/desktop) directement.
 
 ### Chrome OS
 
