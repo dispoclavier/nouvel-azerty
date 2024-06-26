@@ -3,7 +3,7 @@
 ## 2.3.7 (projet)
 
 * Améliorer le mode d’emploi. (readme.md [5aee580](https://github.com/dispoclavier/nouvel-azerty/commit/5aee5804715e314faf18409ba726e380a91a7fe1))
-* Alerter sur Linux Mint. (readme.md [428dd59](https://github.com/dispoclavier/nouvel-azerty/commit/428dd59d1be592abde77b0a6286453362040bfe3))
+* Alerter sur Linux Mint. (readme.md [428dd59](https://github.com/dispoclavier/nouvel-azerty/commit/428dd59d1be592abde77b0a6286453362040bfe3), [e10dfc1](https://github.com/dispoclavier/nouvel-azerty/commit/e10dfc1932d5f2ae9c1ce2a30f5490caa9fad3c0), [823bba6](https://github.com/dispoclavier/nouvel-azerty/commit/823bba6fe9ea1cb6029b4c1b25160a001c500d15), [a74b9d6](https://github.com/dispoclavier/nouvel-azerty/commit/a74b9d6e0ba35cfdb1789d90991dabb79ac1abda), [5b7b147](https://github.com/dispoclavier/nouvel-azerty/commit/5b7b1475dec9c3a1d9c538d72938dd059e85d9fd))
 * Documentation. (compose-3.yml [c7c3d72](https://github.com/dispoclavier/nouvel-azerty/commit/c7c3d723c188629501290f910220f6b13e15dc60))
 
 ## 2.3.6 (2024-06-23)
