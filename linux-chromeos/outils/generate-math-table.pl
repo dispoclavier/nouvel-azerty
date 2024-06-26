@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-06-16T1831+0200
+# 2024-06-26T1149+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -55,6 +55,7 @@ print( "Opened file $file_path.\n" );
 my $output_directory = 'multikey-tables';
 unless ( -d $output_directory ) {
 	mkdir $output_directory;
+	print( "New directory $output_directory/.\n" );
 }
 my $output_file_name = 'math-table-partial.html';
 my $output_path      = "$output_directory/$output_file_name";
@@ -212,6 +213,6 @@ close( INPUT );
 print( "Closed file $file_path.\n" );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
-print( "Math table generated.\n" );
+print( "Math table generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
