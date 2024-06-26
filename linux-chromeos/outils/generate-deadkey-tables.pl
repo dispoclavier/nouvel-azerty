@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-06-16T1832+0200
+# 2024-06-26T1149+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -65,6 +65,7 @@ print( "Opened file $file_path.\n" );
 my $output_directory = 'deadkey-tables';
 unless ( -d $output_directory ) {
 	mkdir $output_directory;
+	print( "New directory $output_directory/.\n" );
 }
 my $output_file_name_template = 'deadkey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
@@ -507,6 +508,6 @@ close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
 print( "Closed file $wholeoutput_path.\n" );
-print( "Dead key tables generated.\n" );
+print( "Dead key tables generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
