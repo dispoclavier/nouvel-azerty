@@ -34,21 +34,27 @@ Les **redispositions de touches** sont sauvegardées aussi bien lors de l’inst
 
 Au moment d’installer ou de réinstaller ces dispositions de clavier, si le script détecte un fichier à ces deux endroits, il propose de l’utiliser.
 
-Le fichier de redisposition sauvegardé à côté de ce script offre la facilité d’une **personnalisation** aisée avant sa réinstallation, tandis que celui dans les configurations personnelles assure la pérennité à travers les mises à jour du système d’exploitation.
+Le fichier de redisposition sauvegardé à côté de ce script offre la facilité d’une **personnalisation** aisée avant sa réinstallation, tandis que celui dans les configurations personnelles assure la pérennité des redispositions à travers les mises à jour du système d’exploitation.
 
 ### Installation manuelle
 
 En cas d’incompatibilité ou de configurations logicielles particulières, l’installation manuelle est une solution de dernier recours.
 
+#### Alerte de dépannage
+
 Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans `/usr/share/X11/xkb/`, que le système risque d’avoir zéro tolérance sur une faute de frappe, une erreur de syntaxe ou l’absence d’un type de touche utilisé. Contrairement aux modifications dans `/usr/share/X11/locale/`, il ne suffit pas pour tester de rouvrir une application.
 
 Un système d’exploitation avec une erreur dans XKB risque d’être inutilisable et de devoir être débogué depuis **une autre instance du système,** installée sur le même ordinateur ou chargée depuis une clé USB démarrable.
 
-Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller le dossier `X11` par `sudo chmod --recursive 777 /usr/share/X11`, ou d’ouvrir une instance d’administrateur du navigateur de fichiers par `sudo nautilus` ou `sudo nemo`, ou quel que soit le nom de l’application.
+#### Droits d’écriture
+
+Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller le dossier `X11/` par la commande `sudo chmod --recursive 777 /usr/share/X11`, ou d’ouvrir une instance d’administrateur du navigateur de fichiers par `sudo `(nom de l’application), par exemple `sudo nautilus` ou `sudo nemo`.
+
+#### L’installation pas à pas
 
 Pour toute éventualité, la procédure d’installation est la suivante :
 
-1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-[version].zip`, et l’ajouter à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
+1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
 2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/types/dispotypes`.
 3. Dans `/usr/share/X11/xkb/types/complete`, ajouter `include "dispotypes"` sur une nouvelle ligne.
 4. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/symbols/dispocla`.
@@ -61,7 +67,7 @@ Pour toute éventualité, la procédure d’installation est la suivante :
 
 Puis fermer la session et en rouvrir une.
 
-## Disposition de clavier par défaut
+#### Disposition de clavier par défaut
 
 Si la disposition de clavier par défaut doit aussi être reconfigurée, ouvrir le fichier `/etc/default/keyboard` et changer les valeurs par exemple en `XKBLAYOUT="dispocla"` et `XKBVARIANT="kbfrFRs"`. Dans ce cas, on peut aussi laisser `XKBVARIANT=""` vide, car `"kbfrFRs"` est la disposition de base de ce nouvel AZERTY.
 
@@ -87,7 +93,13 @@ La variante belge ne se décline pas en variante redisposée parce que l’inté
 
 ## Vues de disposition
 
-Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 positions par touche programmables dans XKB et les 4 positions par touche pris en charge par les vues. Les rectangles avec un code sont des touches mortes ou des séquences définies dans le répertoire des touches mortes et des séquences Compose(.yml).
+Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 positions par touche programmables dans XKB et les 4 positions par touche pris en charge par les vues.
+
+Sur les vues de disposition de ce nouvel AZERTY, sur le bloc alphabétique et la barre d’espace, le niveau 4 montre le niveau 5, c’est-à-dire les caractères disposés en AltFr, qui incluent les ponctuations espacées et le pavé numérique graphique disposé sur le bloc alphanumérique, tandis que sur la rangée des chiffres, le niveau 4 montre réellement ce qui se trouve au niveau 4 : les positions rétrocompatibles du mode français. Car sur les touches des chiffres, le niveau 5 est identique au niveau 3 avec les chiffres, la touche moins a le symbole degré du niveau 2, et la touche plus a le symbole égal du niveau 1 du mode ASCII.
+
+Les rectangles avec un code sont soit des touches mortes, comme la sélectrice de groupe « EFD0 » sur la touche [*], soit des séquences, comme le double zéro « EF6D » sur [B].
+
+Ces touches mortes et ces séquences sont définies dans le répertoire des touches mortes et des séquences Compose(.yml), consultable sur GitHub en trois parties à cause d’une limitation de taille de fichier : [compose-1.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml) pour les séquences sur touches vives et les séquences de composition, [compose-2.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml) pour les touches mortes, et [compose-3.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml) pour les groupes des symboles et les groupes des lettres, qui font partie de la touche morte sélectrice de groupe.
 
 ## Utilisation
 
