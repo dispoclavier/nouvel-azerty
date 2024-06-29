@@ -115,7 +115,7 @@ Les majuscules qui manquent sont en Majuscule. Les capitales à leur tour sont t
 
 ### Chiffres
 
-Les chiffres sont en Minuscule, en Majuscule pour la rétrocompatibilité, et en AltGr pour la synergie avec la touche morte « groupe » tant que le clavier est en mode ASCII par la bascule VerrMod sur la touche [²]. Sinon, en mode français, les chiffres sont en AltGr, afin de libérer les places en Majuscule pour les majuscules É, È, Ç et À et les tirets autres que le tiret du 6 et le tiret du 8, qui restent inchangés.
+Les chiffres sont en Minuscule, en Majuscule pour la rétrocompatibilité, et en AltGr pour la synergie avec la touche morte « groupe » tant que le clavier est en mode ASCII par la bascule VerrMod sur la touche [²]. Sinon, en mode français, les chiffres sont en AltGr, afin de libérer les places en Majuscule pour les majuscules É, È, Ç et À et pour les tirets autres que le tiret du 6 et le tiret du 8, qui restent inchangés.
 
 Les chiffres sont toujours aussi en AltFr, la nouvelle touche modificatrice sur la touche [<>]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7], [8], [9], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M]. Le point et la virgule sont aussi en AltFr sur leurs touches traditionnelles quand le clavier est en mode ASCII.
 
@@ -127,11 +127,15 @@ En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symbole
 
 En Minuscule sur les deux premières touches après le [N], la virgule ne change pas de place, et le point est lui aussi sur sa touche traditionnelle mais en Minuscule. Sur les deux dernières touches, en mode français, les places en Minuscule sont données l’une à l’oblique sur sa touche traditionnelle, l’autre à la contre-oblique pour faciliter la saisie de diverses commandes et séquences d’échappement. En mode ASCII, le deux-points et le point-virgule redescendent en Minuscule en se permutant avec l’oblique et la contre-oblique.
 
+#### Grandes ponctuations
+
 En mode français, toutes les grandes ponctuations sont en Majuscule, à l’instar du point d’interrogation, qui est la seule grande ponctuation à ne pas changer de place, ou à ne pas faire son entrée sur le clavier. Le point d’exclamation prend la place du point, afin de pouvoir laisser sa place au point-virgule. Mais le deux-points reste bien sur sa touche. Les [guillemets](#guillemets) français, au nombre de quatre (deux doubles et deux simples), prennent les quatre places en Majuscule à gauche de la touche Entrée, les doubles aux places de [%] et [µ], les simples aux places de [¨] et [£].
 
 Toujours en mode français, toutes les huit grandes ponctuations sont aussi en AltFr, soit presque en Majuscule à une touche près, AltFr étant la nouvelle touche modificatrice sur la touche [<>]. Comme toutes ces grandes ponctuations sont disposées dans la moitié droite du clavier, leur saisie en AltFr demande encore moins d’effort à la main gauche que la saisie des mêmes ponctuations en Majuscule. Et contrairement à ces dernières, les ponctuations en AltFr sont déjà espacées comme il faut, par le seul caractère d’espacement Unicode fonctionnel et interopérable, l’espace fine insécable (U+202F). L’autocorrection des traitements de texte, qui espace les ponctuations par l’espace insécable U+00A0, peut et doit être désactivée, avec d’autant plus de raison que l’espacement qu’elle applique [n’est pas français](#typographie) et fonctionne très mal voire pas du tout.
 
 En mode ASCII, si les points d’interrogation et d’exclamation restent en Majuscule, tel n’est pas le cas du deux-points ni du point-virgule, qui redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
+
+#### Ponctuations en haut
 
 En mode français, les tirets du 6 et du 8 restent bien à leurs places éponymes, tandis qu’en mode ASCII, quand les chiffres sont verrouillés, ils n’y sont pas en Majuscule, mais plus facilement atteignables sur les touches [$] pour le tiret bas, et [*] pour le trait d’union, quand le guillemet et l’apostrophe bénéficient de facilités similaires, l’un sur la touche [^], l’autre sur [ù].
 
