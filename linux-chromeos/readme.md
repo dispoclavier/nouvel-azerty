@@ -183,9 +183,13 @@ Alors que les exposants de toutes les minuscules servent d’indicateurs d’abr
 
 ### Autres symboles
 
-Les symboles pour cent [%] et micro [µ], et le symbole livre [£] et la touche morte tréma [¨], qui cèdent leurs places aux guillemets français, sont tous en Maj + AltFr sur leurs touches historiques en mode français. En mode ASCII, quand ce sont les chiffres en indice qui sont en Maj + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus (nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier), le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient clore la sélection. Avec les chiffres en exposant en Maj + AltGr et en AltGr + AltFr, toujours en mode ASCII, on a les mêmes en exposant, avec le circonflexe ASCII, symbole de l’exponentiation.
+Les symboles pour cent [%] et micro [µ], et le symbole livre [£] et la touche morte tréma [¨], qui cèdent leurs places aux guillemets français, sont tous en Maj + AltFr sur leurs touches historiques en mode français. Mais ces symboles sont bien plus accessibles sur leurs nouvelles places. Ainsi le symbole pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en Maj + AltFr + [L] pour l’intuitivité ; et le symbole micro est sur Maj + AltFr + [F] et sur Maj + AltFr + [M] dans la même logique.
+
+En mode ASCII, quand ce sont les chiffres en indice qui sont en Maj + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus (nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier), le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient clore la sélection. Avec les chiffres en exposant en Maj + AltGr et en AltGr + AltFr, toujours en mode ASCII, on a les mêmes en exposant, avec le circonflexe ASCII, symbole de l’exponentiation.
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
+
+Les infobulles sur les [vues interactives](https://dispoclavier.com/nouvel-azerty/#nouvel-azerty) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
 
 ### Émojis
 
