@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-23T1334+0200
+#                       Date : 2024-06-30T1751+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -176,6 +176,7 @@ X11="/usr/share/X11"
 # Compose.
 dossier="$X11/locale/en_US.UTF-8"
 fichier="$dossier/Compose"
+compose_dispoclavier=0
 if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
@@ -185,9 +186,11 @@ else
 		afficher 'ne contient pas Dispoclavier'
 	else
 		trace=1
+		compose_dispoclavier=2
 		if ! ( grep -q 'START_additions_Compose_Dispoclavier' $fichier && grep -q 'END_additions_Compose_Dispoclavier' $fichier ); then
 			installation=0
 			afficher 'est défectueux'
+			compose_dispoclavier=1
 		fi
 	fi
 fi
@@ -218,6 +221,7 @@ fi
 ## Rules/evdev.
 dossier="$X11/xkb/rules"
 fichier="$dossier/evdev"
+rules_ecrase=0
 if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
@@ -229,6 +233,8 @@ else
 	if ! grep -qP '\/\/\s*\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2' $fichier; then
 		installation=0
 		afficher 'écrase le deuxième groupe vif'
+	else
+		rules_ecrase=1
 	fi
 fi
 fichier="$dossier/evdev-rules-avant-dispoclavier"
@@ -241,15 +247,22 @@ else
 fi
 ## Rules/evdev.xml.
 fichier="$dossier/evdev.xml"
+rules_dispoclavier=0
 if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
 else
-	if ! grep -qP '<layout><!-- Dispoclavier.*-->' $fichier || ! grep -qP '<\/layout><!-- FIN_Dispoclavier.*-->' $fichier; then
+	if ! grep -qP '<layout><!-- Dispoclavier.*-->' $fichier; then
 		installation=0
 		afficher 'ne contient pas Dispoclavier'
 	else
 		trace=1
+		rules_dispoclavier=2
+		if ! grep -qP '<\/layout><!-- FIN_Dispoclavier.*-->' $fichier; then
+			installation=0
+			afficher 'est défectueux'
+			rules_dispoclavier=1
+		fi
 	fi
 fi
 fichier="$dossier/evdev-xml-rules-avant-dispoclavier.xml"
@@ -687,58 +700,75 @@ if [ "$fonctionne" -eq 1 ]; then
 				# Désinstaller le témoin lumineux Arrêt défilement pour le mode ASCII.
 				mkdir -p sauvegarde/archive
 				cp $X11/xkb/compat/complete sauvegarde/archive/complete-compat.c
-				sudo sed -i '/include "dispoled"/d' $X11/xkb/compat/complete
-				echo 'Détachement du témoin lumineux Arrêt défilement du mode ASCII.'
+				if [ "$dispoled" -eq 1 ]; then
+					sudo sed -i '/include "dispoled"/d' $X11/xkb/compat/complete
+					echo 'Détachement du témoin lumineux Arrêt défilement du mode ASCII.'
+					sudo mv $X11/xkb/compat/dispoled sauvegarde/archive/dispoled.c
+				fi
 				if [ "$complete_compat_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/compat/complete-compat-avant-dispoclavier sauvegarde/archive/complete-compat-avant.c
 				fi
-				if [ "$dispoled" -eq 1 ]; then
-					sudo mv $X11/xkb/compat/dispoled sauvegarde/archive/dispoled.c
-				fi
 				# Désinstaller et sauvegarder le fichier pour redisposer des touches.
-				echo 'Désinstallation et sauvegarde du fichier permettant de redisposer des touches.'
+				echo 'Sauvegarde du fichier permettant de redisposer des touches.'
 				cp $X11/xkb/keycodes/evdev sauvegarde/evdev.c
 				mkdir -p ~/.config/dispoclavier/keycodes
 				cp $X11/xkb/keycodes/evdev ~/.config/dispoclavier/keycodes/evdev
 				if [ "$evdev_keycodes_avant" -eq 1 ]; then
+					echo 'Désinstallation du fichier permettant de redisposer des touches.'
 					cp $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier sauvegarde/evdev-keycodes-avant.c
 					sudo mv $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier $X11/xkb/keycodes/evdev
 				fi
 				# Supprimer l’extension du commutateur de dispositions.
-				echo 'Suppression de ces dispositions de clavier dans la liste du commutateur.'
 				cp $X11/xkb/rules/evdev.xml sauvegarde/archive/evdev-xml-rules.xml
+				if [ "$rules_dispoclavier" -eq 2 ]; then
+					echo 'Suppression de ces dispositions de clavier dans la liste du commutateur.'
+					sudo sed -i '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/d' $X11/xkb/rules/evdev.xml
+				else
+					echo 'Ces dispositions de clavier n’ont pas pu être supprimées dans la liste du commutateur.'
+					if [ "$rules_dispoclavier" -eq 1 ]; then
+						echo 'Il est nécessaire de les supprimer manuellement.'
+					fi
+				fi
 				if [ "$evdev_xml_rules_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml sauvegarde/archive/evdev-xml-rules-avant.xml
 				fi
-				sudo sed -i '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/d' $X11/xkb/rules/evdev.xml
 				# Désinstaller les séquences et le contenu des touches mortes.
-				echo 'Désinstallation des séquences et du contenu des touches mortes.'
 				cp $X11/locale/en_US.UTF-8/Compose sauvegarde/archive/Compose.yml
-				sudo sed -i '/START_additions_Compose_Dispoclavier/,/END_additions_Compose_Dispoclavier/d' $X11/locale/en_US.UTF-8/Compose
+				if [ "$compose_dispoclavier" -eq 2 ]; then
+					echo 'Désinstallation des séquences et du contenu des touches mortes.'
+					sudo sed -i '/START_additions_Compose_Dispoclavier/,/END_additions_Compose_Dispoclavier/d' $X11/locale/en_US.UTF-8/Compose
+				else
+					echo 'Les séquences et le contenu des touches mortes n’ont pas pu être désinstallés.'
+					if [ "$compose_dispoclavier" -eq 1 ]; then
+						echo 'Il est nécessaire de les supprimer manuellement.'
+					fi
+				fi
 				if [ "$compose_avant" -eq 1 ]; then
 					sudo mv $X11/locale/en_US.UTF-8/Compose-avant-dispoclavier sauvegarde/archive/Compose-avant.yml
 				fi
 				# Réactiver l’écrasement du deuxième groupe vif.
-				echo 'Réactivation de l’écrasement du deuxième groupe vif.'
 				sudo cp $X11/xkb/rules/evdev sauvegarde/archive/evdev-rules.c
-				sudo sed -ri 's/\/\/\s*(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\1/' $X11/xkb/rules/evdev
+				if [ "$rules_ecrase" -eq 1 ]; then
+					echo 'Réactivation de l’écrasement du deuxième groupe vif.'
+					sudo sed -ri 's/\/\/\s*(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\1/' $X11/xkb/rules/evdev
+				fi
 				if [ "$evdev_rules_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/rules/evdev-rules-avant-dispoclavier sauvegarde/archive/evdev-rules-avant.c
 				fi
 				# Désinstaller les tableaux d’allocation de touches.
-				echo 'Désinstallation des tableaux d’allocation de touches.'
 				if [ "$dispocla" -eq 1 ]; then
+					echo 'Désinstallation des dispositions de clavier.'
 					sudo mv $X11/xkb/symbols/dispocla sauvegarde/archive/dispocla.cpp
 				fi
 				# Désinstaller les types de touches.
-				echo 'Désinstallation des types de touches.'
 				cp $X11/xkb/types/complete sauvegarde/archive/complete-types.c
-				sudo sed -i '/include "dispotypes"/d' $X11/xkb/types/complete
+				if [ "$dispotypes" -eq 1 ]; then
+					echo 'Désinstallation des types de touches.'
+					sudo sed -i '/include "dispotypes"/d' $X11/xkb/types/complete
+					sudo mv $X11/xkb/types/dispotypes sauvegarde/archive/dispotypes.c
+				fi
 				if [ "$complete_types_avant" -eq 1 ]; then
 					sudo mv $X11/xkb/types/complete-types-avant-dispoclavier sauvegarde/archive/complete-types-avant.c
-				fi
-				if [ "$dispotypes" -eq 1 ]; then
-					sudo mv $X11/xkb/types/dispotypes sauvegarde/archive/dispotypes.c
 				fi
 				# Rendre les fichiers sauvegardés éditables.
 				sudo chmod --recursive 777 sauvegarde
@@ -746,8 +776,14 @@ if [ "$fonctionne" -eq 1 ]; then
 				echo -e "\n  ✅  Ces dispositions de clavier viennent d’être désinstallées."
 				echo      '     À moins d’être réinstallées dans la foulée, ces dispositions'
 				echo      '     auront complètement disparu dès la prochaine session.'
-				echo -e "\n  ⚠  Les redispositions de touches ont été sauvegardées à côté et"
-				echo      '     dans ~/.config/dispoclavier/keycodes/.'
+				echo -e "\n  ⚠  Les redispositions de touches ont été sauvegardées"
+				echo      '         à côté dans sauvegarde/evdev.c'
+				echo      '         et dans ~/.config/dispoclavier/keycodes/evdev.'
+				echo -e "\n     Tous les retours d’expérience sont les bienvenus."
+				echo -e "\n     N’hésitez pas à créer un rapport de bogue :"
+				echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
+				echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
+				echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
 				echo -e "\n             Merci d’avoir utilisé Dispoclavier.\n"
 			;;
 		esac
