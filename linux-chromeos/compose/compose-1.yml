@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.3.7" # See # # Notes about syntax
+<UEFA0>                     : "version 2.3.8" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -215,8 +215,8 @@
 #
 # # Automated punctuation spacing for fr-FR, regular with NNBSP U202F
 #
-#   Imprimerie nationale (France) assumes that big punctuation is spaced out using either
-#   of these spaces:
+#   Imprimerie nationale (France) assumes that big punctuation is spaced out
+#   using either of these spaces:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NNBSP U202F.
@@ -228,9 +228,12 @@
 #
 #   This is regular typesetting at Imprimerie nationale except for colon and quotation marks,
 #   although the latter are typeset with NNBSP in the Imprimerie nationale style guide
-#   (_Lexique des règles en usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002);
+#   (_Lexique des règles typographiques en usage à l’Imprimerie nationale_,
+#   Paris, Imprimerie nationale, 2002);
 #   only the verbatim rule on page 149 disagrees.
-#   In mainstream high-quality publishing (new school), NNBSP is used throughout.
+#   In mainstream high-quality publishing, referred to as new school, no-break
+#   thin space is used throughout. The most straightforward Unicode character
+#   representing this no-break thin space is NARROW NO-BREAK SPACE U+202F.
 #
 #   See Philippe Verdy’s testimony:
 #   http://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
@@ -360,7 +363,7 @@
 <UEF6D> : "00" #
 #
 #   A triple zero key is useful only on the numpad. On the extended numpad, the
-#   triple zero is obtained by simultaneously pressing single and double zeroes.
+#   triple zero is input by simultaneously pressing single and double zeroes.
 #   So the triple zero had been suppressed and was later (2021-07-01T0458+0200)
 #   readded as UEF7D for numpad Shift + 1.
 #
@@ -372,9 +375,9 @@
 #   as well as in Russian and other locales requiring no-break space between
 #   words, and thus requiring the no-break space to be justifying as defined.
 #
-#   The justifying no-break space strings using a break-preventing character are
-#   courtesy Jakub Stachu, in "Non‐breakable space justification in Word 2016"
-#   on Microsoft Community forum MS Office > Word > Windows 8 on November 5, 2017:
+#   The justifying no-break strings using a break-preventing character are
+#   courtesy Jakub Stachu, in "Non‐breakable space justification in Word 2016",
+#   Microsoft Community forum MS Office > Word > Windows 8 on November 5, 2017:
 #   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
 #
 #   The issue has been formally submitted to Unicode in L2/19-114
@@ -392,11 +395,12 @@
 #
 # # Automated punctuation spacing for fr-FR, legacy Latin-1 fallbacks with NBSP
 #
-#   This is regular with colon and quotation marks according to Imprimerie nationale.
-#   style guide Lexique des règles en usage à l’Imprimerie nationale, 2002, table page 149.
-#   Note however that in the Lexique des règles en usage à l’Imprimerie nationale, 2002
-#   (last edition as per 2017 reprint), angle quotation marks are typeset with a narrow
-#   space, which corresponds to NNBSP, not a word space, which would correspond to NBSP.
+#   This is regular with colon and quotation marks according to the style guide
+#   of the French national printing house _Lexique des règles typographiques en
+#   usage à l’Imprimerie nationale_, 2002, table page 149.
+#
+#   However, in this manual’s last edition in its 2017 reprint, angle quotation
+#   marks are typeset with a narrow space, not a word space.
 #
 #   Once some “dysfunctional” keyboard layout variants supported some of these.
 #   Now none of these are supported anymore.
