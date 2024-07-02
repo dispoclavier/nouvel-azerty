@@ -103,7 +103,7 @@ Ces touches mortes et ces séquences sont définies dans le répertoire des touc
 
 ## Utilisation
 
-Ce mode d’emploi condensé ne vise pas à remplacer la documentation détaillée citée [au début](#un-nouvel-azerty-pour-linux).
+Ce mode d’emploi condensé ne peut pas remplacer la documentation détaillée citée [au début](#un-nouvel-azerty-pour-linux).
 
 ### Lettres
 
@@ -183,17 +183,17 @@ Alors que les exposants de toutes les minuscules servent d’indicateurs d’abr
 
 ### Autres symboles
 
-Les symboles pour cent [%] et micro [µ], et le symbole livre [£] et la touche morte tréma [¨], qui cèdent leurs places aux guillemets français, sont tous en Maj + AltFr sur leurs touches historiques en mode français. Mais ces symboles sont bien plus accessibles sur leurs nouvelles places. Ainsi le symbole pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en Maj + AltFr + [L] pour l’intuitivité ; et le symbole micro est sur Maj + AltFr + [F] et sur Maj + AltFr + [M] dans la même logique.
+Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en Maj + AltFr sur leurs touches historiques. Sur leurs nouvelles places, ces symboles sont bien plus accessibles. Ainsi le [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en Maj + AltFr + [L] pour l’intuitivité ; et le symbole micro est sur Maj + AltFr + [F] et sur Maj + AltFr + [M] dans la même logique.
 
 En mode ASCII, quand ce sont les chiffres en indice qui sont en Maj + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus (nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier), le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient clore la sélection. Avec les chiffres en exposant en Maj + AltGr et en AltGr + AltFr, toujours en mode ASCII, on a les mêmes en exposant, avec le circonflexe ASCII, symbole de l’exponentiation.
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
 
-Les infobulles sur les [vues interactives](https://dispoclavier.com/nouvel-azerty/#nouvel-azerty) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
+Les infobulles sur la [vue interactive](https://dispoclavier.com/nouvel-azerty/#nouvel-azerty) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
 
 ### Émojis
 
-Une sélection d’émojis est disposée sur les places de touches vives qui restent. Elle est documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis).
+Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent.
 
 ## Systèmes
 
@@ -235,19 +235,21 @@ C’est cette fine qui sert à espacer toutes les grandes ponctuations, ou les p
 
 L’autre espace fine d’Unicode est présente depuis le début au point de code U+2009, mais elle n’est pas directement utilisable en français, car elle est sécable, contrairement à l’espace chiffre tabulaire U+2007, qui est la seule espace insécable dans cette plage d’espaces qui va de U+2000 à U+200A et où toutes les espaces autres que U+2000 et U+2001 étaient conçues comme insécables. Qu’elles ne le soient pas est une [irrégularité](https://dispoclavier.com/nouvel-azerty/#note-2250-2-a) ([archive](https://web.archive.org/web/20240524173357/https://dispoclavier.com/nouvel-azerty/#note-2250-2-a)).
 
-Un autre nom de l’espace fine insécable, « espace insécable étroite », a été officialisé par calque sur son identifiant Unicode, mais il est corrigé dans les spécifications de base du Standard Unicode au chapitre 6 dans la [section consacrée aux caractères d’espacement](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834), à l’[alinéa qui parle de l’espace fine insécable](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,340), avec le terme d’« espace fine insécable » en français dans le texte anglais. L’identifiant a été choisi pour ne pas faire référence à l’espace fine U+2009, prévue pour être insécable et qui ne doit son existence en tant qu’espace sécable qu’à un acte de vandalisme, qui n’est pas documenté mais qui a dû être commis peu avant la publication du jeu de caractères universel.
+Un autre nom de l’espace fine insécable, « espace insécable étroite », a été officialisé par calque sur son identifiant Unicode, mais il est corrigé dans les spécifications de base du Standard Unicode au chapitre 6 dans la [section consacrée aux caractères d’espacement](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834), à l’[alinéa qui parle de l’espace fine insécable](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,340), avec le terme d’« espace fine insécable » en français dans le texte anglais, et pareillement dans l’[Annexe sur la coupure de ligne](https://www.unicode.org/reports/tr14/tr14-51.html#GL). L’identifiant a été choisi de façon à ne pas faire référence à l’espace fine U+2009, prévue pour être insécable, et qui ne doit son existence en tant qu’espace sécable qu’à un acte de vandalisme, qui n’est pas documenté mais qui a visiblement été commis avant la publication du jeu de caractères universel.
+
+#### Espacement vieille école
 
 Si l’espacement vieille école est préféré, il peut être réalisé manuellement grâce à la synergie de l’espace insécable avec le deux-points en AltGr. Car en plus d’être disposé en Majuscule, le deux-points est aussi en AltGr, pour la synergie avec les chiffres dans le format d’heure « 12:34:56 » (qui en mode ASCII est facile à faire aussi en AltFr), mais aussi pour la synergie avec l’espace insécable, qui en mode français est sur AltGr + Espace.
 
 À part le deux-points, aucune autre ponctuation ne devrait être composée à l’ancienne, car les guillemets, qui selon le *Lexique* de l’Imprimerie nationale sont accompagnés d’une **espace mot insécable** (« espace mots insécable »), sont composés avec une **espace fine** (« espace fine insécable ») dans ce même *Lexique des règles typographiques en usage à l’Imprimerie nationale.*
 
-Il faudrait noter aussi que les guillemets apostrophes et les guillemets doubles génériques (["] sur la touche du [3]) sont collés aux mots, sans aucune espace à l’intérieur. La pratique contraire utilise ces derniers à la place des guillemets chevrons, absents de certaines dispositions de clavier, d’où le quiproquo.
-
 ### Guillemets
 
-Pour commencer par revenir sur l’espacement des guillemets, décrit ci-dessus, il faut noter que [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace) manque de clarté en la matière mais permet d’interpoler que l’« espace insécable » à l’intérieur des guillemets chevrons doubles est bien l’espace fine, étant la seule espace insécable citée sur cette page web du Robert.
+Les guillemets apostrophes et les guillemets doubles génériques (["] sur la touche du [3]) sont collés aux mots, sans aucune espace à l’intérieur. La pratique contraire utilise ces derniers à la place des guillemets chevrons, absents de certaines dispositions de clavier, d’où le quiproquo.
 
-La bonne nouvelle est que ce nouvel AZERTY aide à résoudre aussi d’autres problèmes laissés en suspens sur le site [Le Robert](https://dictionnaire.lerobert.com/guide/guillemets) :
+À l’intérieur des guillemets chevrons doubles, l’« espace insécable » décrite sur [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace) est bien l’espace fine, étant la seule espace insécable citée sur cette page web du Robert.
+
+Quelques autres problèmes laissés en suspens sur [Le Robert](https://dictionnaire.lerobert.com/guide/guillemets) peuvent être résolus comme documenté dans la suite.
 
 #### Guillemets de second niveau
 
