@@ -195,6 +195,40 @@ Les infobulles sur la [vue interactive](https://dispoclavier.com/nouvel-azerty/#
 
 Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent.
 
+### Séquences
+
+La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisée aussi pour des séquences autres que les ponctuations avec espace fine insécable sur AltFr plus l’une des huit touches entre N et Majuscule droite ou entre P, M et Entrée. Le pavé numérique graphique dispose ainsi d’un double zéro sur AltFr + [B], qui figure aussi sur les vues du clavier. D’autres besoins sont couverts le plus mnémoniquement possible.
+
+#### Trigrammes bretons
+
+Le trigramme breton « cʼh » avec lettre apostrophe est sur Maj + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton. Sa majuscule « Cʼh » est sur Maj + AltGr + AltFr + [A], tandis que sa capitale s’insère à la place de la minuscule quand les capitales sont verrouillées. Ce n’est pas qu’il manquerait la lettre apostrophe, dans le groupe 1 de l’apostrophe.
+
+#### Espaces
+
+L’espace suivie du gluon qui est le caractère régulier pour empêcher un retour à la ligne automatique : cette séquence est sur Maj + AltFr + [Espace], pour insérer une espace insécable justifiante dans LibreOffice Writer parce que l’espace insécable sur AltGr + Espace y est à chasse fixe pour espacer les ponctuations en français.
+
+L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word parce que l’espace insécable y est justifiante uniquement dans Word 2013.  œ‧ʼ⁄
+
+L’entité nommée de l’espace insécable « &‌nbsp; » est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
+
+En mode ASCII, l’entité numérique de l’espace fine insécable « &‌#x202F; » est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
+
+#### Séquences d’échappement
+
+Les entités nommées des symboles « < » et « > », soit « &‌lt; » et « &‌gt; », sont sur Maj + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
+
+Les entités nommées des symboles « " » et « ' », soit « &‌quot; » et « &‌apos; », sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U]. &‌apos; est moins utilisé que &‌quot;.
+
+#### Références de caractères
+
+Le préfixe « &‌#x » des références de caractères hexadécimales en HTML/XML est sur Maj + AltFr + [K]. En mode ASCII, il est aussi sur la touche de la virgule en Maj + AltFr + [?,].
+
+En mode ASCII, le préfixe « &‌# » des références de caractères décimales en HTML/XML est sur la touche du point en Maj + AltFr + [.;].
+
+Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur Maj + AltFr + [U].
+
+Le préfixe « \u{ » est sur la touche [I], qui est aussi la touche de l’accolade ouvrante.
+
 ## Systèmes
 
 Ces fichiers sont développés, testés et compilés sous **Ubuntu 16.04** depuis 2018 et toujours en 2024. Sur la fin, ces fichiers ont aussi été testés sous **Ubuntu 24.04,** où le commutateur affiche certes toutes les dispositions installées, qu’elles soient fournies ou ajoutées, mais ne permet d’en utiliser qu’une seule ; impossible d’utiliser le commutateur pour basculer entre plusieurs dispositions ; bogue confirmé sous **Debian 12.5.0** (datant de 2023) et sous des distributions de Linux postérieures à Ubuntu 16.04 (testé sous **Ubuntu 18.04, Ubuntu 20.04, Linux Mint 21.3** (datant de 2024)).
@@ -279,6 +313,8 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 À l’usage, la plupart de ces fichiers sont sans extension. Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension `.cpp` a été choisie pour éviter `dispocla.c` (les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives). De toute manière, les statistiques de langage sont désactivées.
 
-## Note
+## Notes
+
+L’échappement des entités HTML par « &‌amp; » est évité grâce à l’insertion d’un antiliant après la perluète, afin de maintenir la lisibilité des séquences aussi bien en texte brut qu’en affichage Markdown.
 
 Ce Lisez-moi est inclus dans les versions sous le nom de `Mode-d-emploi.md`.
