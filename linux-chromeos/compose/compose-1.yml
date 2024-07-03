@@ -215,14 +215,16 @@
 #
 #   Functionally, NNBSP is a no-break clone of Unicode’s thin space THSP U2009.
 #
-#   The preferred name and abbreviation of U2009 are NARROW SPACE, NSP.
+#   Consistently, the preferred name and abbreviation of U2009 are NARROW SPACE
+#   matching the name of U202F, and NSP.
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
-#   This is regular typesetting at Imprimerie nationale except for colon and quotation marks,
-#   although the latter are typeset with NNBSP in the Imprimerie nationale style guide
-#   (_Lexique des règles typographiques en usage à l’Imprimerie nationale_,
-#   Paris, Imprimerie nationale, 2002);
-#   only the verbatim rule on page 149 disagrees.
+#   This is regular typesetting at Imprimerie nationale except for colon and
+#   quotation marks, although the latter are typeset with narrow space in the
+#   Imprimerie nationale style guide _Lexique des règles typographiques en
+#   usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002; only
+#   the verbatim rule on page 149 disagrees.
+#
 #   In mainstream high-quality publishing, referred to as new school, no-break
 #   thin space is used throughout. The most straightforward Unicode character
 #   representing this no-break thin space is NARROW NO-BREAK SPACE U202F.
@@ -232,16 +234,23 @@
 #
 #   Unicode was supposed to encode SI/BIPM number typesetting as well as French
 #   punctuation typesetting, and for that purpose encoded THIN SPACE along with
-#   other typographic space characters in the range U2000..U200A. Accordingly
+#   other typographic space characters in the range U2000..U200A. Accordingly,
 #   the line breaking property was set to no-break for all spaces starting with
-#   U2002, after the two widest spaces in a breaking variant U2000, U2001 vs
-#   U2002, U2003.
+#   U2002, after the two widest spaces in a breaking variant: U2000, U2001, as
+#   opposed to U2002, U2003.
 #
 #   But that design goal was ultimately compromised. To cover up the vandalism,
 #   U2007 FIGURE SPACE was left no-break with the hypocritical allegation that
 #   this space is used “in” numbers, while it was encoded as the tabular space,
 #   to be used before numbers when typesetting tables the old way, alongside an
-#   equivalent indenting by the width of a decimal dot or comma: U2008.
+#   equivalent indentation by the width of a decimal dot or comma using U2008.
+#   https://www.unicode.org/reports/tr14/tr14-51.html
+#
+#       This is the preferred space to use in numbers. It has the same width as
+#       a digit and keeps the number together for the purpose of line breaking.
+#
+#   Further reading about the topic, documenting opportunities for Unicode to
+#   get that right:
 #   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 #   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
 #   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
@@ -253,16 +262,24 @@
 #   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf
 #
-#   The corrected Unicode position is found in UAX #14 since 2007, in TUS since
-#   2014: The Unicode Standard, version 7.0.0, 2014, p. 265, section 6.2,
-#   heading “Space Characters”, subheading “Narrow No-Break Space”.
-#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834
-#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,300
+#   The corrected Unicode position is found in UAX #14 since 2008, in TUS
+#   since 2014: The Unicode Standard, version 7.0.0, 2014, p. 265, section 6.2,
+#   heading “Space Characters” (see subheading “Narrow No-Break Space”).
+#   https://www.unicode.org/versions/Unicode7.0.0/ch06.pdf#G1834
+#   Also: The Unicode Standard, version 15.0.0, 2022, p. 268, subheading
+#   “Narrow No-Break Space”, e.g. in the full text PDF:
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=294&zoom=100,0,300
 #
-#      The NNBSP can be used to represent the narrow space occurring around punctuation
-#      characters in French typography, which is called an “espace fine insécable.”
+#      Narrow No-Break Space. U+202F NARROW NO-BREAK SPACE (NNBSP) is a narrow
+#      version of U+00A0 NO-BREAK SPACE. The NNBSP can be used to represent the
+#      narrow space occurring around punctuation characters in French
+#      typography, which is called an “espace fine insécable.”
 #
-#   Unicode® Standard Annex #14, Unicode Line Breaking Algorithm, Unicode 15.1.0:
+#   In UAX #14, it started with the “Proposed Update Unicode Standard Annex #14
+#   Unicode Line Breaking Algorithm”, Unicode 5.1 Draft 3, 2008-03-07.
+#   https://www.unicode.org/reports/tr14/tr14-21.html#GL
+#   15 years later, 2023-08-15: Unicode® Standard Annex #14,
+#   Unicode Line Breaking Algorithm, Unicode 15.1.0:
 #   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #
 #      When NARROW NO-BREAK SPACE occurs in French text, it should be
@@ -314,12 +331,12 @@
 <UEF67> : " ›" #
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
-#       the colon has NBSP spacing. In new-school French typesetting, the colon
-#       is spaced out using NNBSP.
+#       in Unicode encoding, the colon has NBSP spacing. In new-school French
+#       typesetting, the colon is spaced out using NNBSP.
 #   [2] Based on the visual aspect in the current edition of the style manual,
-#       Imprimerie nationale, the guillemets are typeset with NNBSP, although
-#       the verbatim rule given on page 149 specifies that they be spaced out
-#       using NBSP.
+#       Imprimerie nationale, in Unicode encoding, the guillemets are typeset
+#       with NNBSP, although the verbatim rule given on page 149 specifies that
+#       the guillemets are to be spaced out using the equivalent of NBSP.
 #
 #
 # # Abbreviation "Numéro" with trailing space
