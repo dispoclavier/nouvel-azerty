@@ -1,4 +1,4 @@
-//                       Date: 2024-07-03T1423+0200
+//                       Date: 2024-07-03T1430+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -36,9 +36,8 @@
 //                                before the `</layoutList>` closing tag.
 //
 //                             4. In the locale and language settings make sure
-//                                that the input method is XIM, or type
+//                                that the input method is XIM, or use the command
 //                                    im-config -n xim
-//                                in a terminal.
 //
 //                             The changes take effect when reopening a session.
 //
