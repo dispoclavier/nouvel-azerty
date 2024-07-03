@@ -1,4 +1,4 @@
-//                       Date: 2024-07-03T1534+0200
+//                       Date: 2024-07-03T1629+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -461,7 +461,25 @@
 // (Shift, AltGr, AltFr). Since the ModLock toggle is a group toggle, it does
 // not require any additional indices, but Caps Lock and Control may do so.
 //
-// The term “group” should be dedicated to dead-key-accessed groups, the most
+// The keysyms enclosed in brackets inside the braces define a group as used
+// in XKB. In this file, each key has 2 groups. The first group is the default
+// mode layout, and the second group is the ASCII mode layout. Each group has
+// two names. The name in brackets may be called the identifier, and the name
+// in double quotes is likely the descriptor, without any constraint as of
+// uniqueness, although choosing unique descriptors makes for a better UX.
+// https://www.charvolant.org/doug/xkb/html/node5.html#Sec:Symbols
+//
+//     The name[Group1]= "US/ASCII"; statement gives a name to one of the
+//     keyboard groups. Other groups can be specified by using the same syntax
+//     but with a different group name.
+//
+//     […]
+//
+//     Inside the braces, it is possible to use the syntax
+//     group[groupname] = [ symbol, symbol] instead, with the various
+//     statements being separated by commas.
+//
+// The term “group” is also used for dead-key-accessed groups, the most
 // prominent of which are accessed through the “group selector” dead key, that
 // also supports multiple presses. As a consequence, the group number matches
 // the number of group selector key presses, or the digit entered after one
@@ -565,18 +583,20 @@ xkb_symbols "kbfrFRs" {
 	// keyboard view, where the traditional four levels are filled in by parsing
 	// indices 1 through 4 regardless of key types.
 	//
-	// Since dead key syms may be rendered as an ellipsis, because dead_greek and
-	// Multi_key seem to be excluded from the representation tweak applied so far
-	// as spacing clones of diacritics are available, and 9 of the dead key syms
-	// are PUA characters by lack of appropriate keysyms in keysymdef.h, the dead
+	// Since dead key syms may be rendered as an ellipsis, because dead_greek (on
+	// older systems also Multi_key) do not have representation tweaks applied so
+	// far as spacing clones of diacritics are available, and 9 of the dead keys
+	// use PUA characters by lack of appropriate keysyms in keysymdef.h, the dead
 	// keys should not show up in the level 4 slot, the less as the dead keys on
-	// level 4 are consistent with the level 3 ASCII symbol map.
+	// level 4 are consistent with the level 3 ASCII symbol map by the means of a
+	// Multi_key equivalent (or two) associated with each dead key.
 	//
-	// Instead, the level 4 position on the layout views is used for level 5,
+	// Instead, the level 4 position of the layout views is used for level 5,
 	// except on key D01, where the level 3 - level 5 redundancy when both have
 	// the same symbol is not possible, to cater for the Breton trigram because
 	// this is written with a letter apostrophe U02BC and so makes a good point
-	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
+	// for being mapped on keyboard layouts beyond the Breton CʼHWERTY, as an
+	// all-in-one sequence with uppercase and titlecase.
 	//
 	//
 	// Superscript letters
