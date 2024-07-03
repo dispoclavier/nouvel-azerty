@@ -1,4 +1,4 @@
-//                       Date: 2024-07-03T1350+0200
+//                       Date: 2024-07-03T1406+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -561,7 +561,6 @@ xkb_symbols "kbfrFRs" {
 	// Level inconsistency
 	//
 	// CAUTION: Index 4 is mostly level 5, and conversely.
-	//          Index 6 is mostly level 7, and conversely.
 	//
 	// On indices 1 through 4, the keysyms are ordered only with respect to the
 	// keyboard view, where the traditional four levels are filled in by parsing
@@ -580,16 +579,11 @@ xkb_symbols "kbfrFRs" {
 	// this is written with a letter apostrophe U02BC and so makes a good point
 	// for being mapped, beyond the Breton CʼHWERTY, as an all-in-one sequence.
 	//
-	// Level 7 superscript letters in turn are mapped on index 6 because of their
-	// relationship to indices 1 and 2, resulting in a symmetric scheme with ease
-	// of maintenance as an additional advantage:
 	//
-	// Level: 1        2        3        5        4        7        6        8
-	// Index: 1        2        3        4        5        6        7        8
+	// Superscript letters
 	//
-	//                                   Graphic numpad
-	//                          ASCII symbol .... Dead key
-	//        Latin letter ............................... Abbreviation indicator
+	// Level 6 superscript letters are related to indices 1 and 2 but cannot be
+	// mapped on index 3, for the above reasons.
 	//
 	// Latin superscript letters are called MODIFIER LETTER except the first few,
 	// despite their use goes far beyond phonetics, given that ᵈ, ᵉ, ʳ, and ˢ are
@@ -601,6 +595,13 @@ xkb_symbols "kbfrFRs" {
 	// for the French locale, waiting for the other locales to follow up.
 	// https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
 	// https://github.com/unicode-org/cldr/blob/release-42/common/main/fr.xml#L1526
+	//
+	// Level: 1        2        3        5        4        6        7        8
+	// Index: 1        2        3        4        5        6        7        8
+	//
+	//                                   Graphic numpad
+	//                          ASCII symbol .... Dead key
+	//        Latin letter ............................... Abbreviation indicator
 	//
 	//
 	// Column width
