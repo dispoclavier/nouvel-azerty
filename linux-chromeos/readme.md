@@ -42,28 +42,28 @@ En cas d’incompatibilité ou de configurations logicielles particulières, l�
 
 #### Alerte de dépannage
 
-Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans `/usr/share/X11/xkb/`, que le système risque d’avoir zéro tolérance sur une faute de frappe, une erreur de syntaxe ou l’absence d’un type de touche utilisé. Contrairement aux modifications dans `/usr/share/X11/locale/`, il ne suffit pas pour tester de rouvrir une application.
+Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans `/usr/share/X11/xkb/`, que le système a zéro tolérance sur certaines fautes de frappe, erreurs de syntaxe et incohérences comme l’utilisation d’un type de touche non défini. Pour tester des modifications dans XKB, il ne suffit pas non plus de rouvrir une application, contrairement aux modifications dans XCompose (`/usr/share/X11/locale/`),
 
-Un système d’exploitation avec une erreur dans XKB risque d’être inutilisable et de devoir être débogué depuis **une autre instance du système,** installée sur le même ordinateur ou chargée depuis une clé USB démarrable.
+Ainsi, quand une erreur dans les fichiers de configuration d’XKB a rendu le système d’exploitation inutilisable, il ne peut être débogué que depuis **un(e) autre (instance du) système** dans une autre partition ou une clé USB démarrable.
 
 #### Droits d’écriture
 
-Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller le dossier `X11/` par la commande `sudo chmod --recursive 777 /usr/share/X11`, ou d’ouvrir une instance d’administrateur du navigateur de fichiers par `sudo `(nom de l’application), par exemple `sudo nautilus` ou `sudo nemo`.
+Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller le dossier `X11/` par la commande `sudo chmod --recursive 777 /usr/share/X11`, ou d’ouvrir une instance d’administrateur du navigateur de fichiers par `sudo `(nom de l’application), par exemple `sudo nemo` ou `sudo nautilus`.
 
 #### L’installation pas à pas
 
-Pour toute éventualité, la procédure d’installation est la suivante :
+Compte tenu de l’[alerte](#alerte-de-depannage) plus haut, et pour toute éventualité, la procédure d’installation manuelle est la suivante :
 
 1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
-2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/types/dispotypes`.
+2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Copier ce fichier vers `/usr/share/X11/xkb/types/dispotypes`.
 3. Dans `/usr/share/X11/xkb/types/complete`, ajouter `include "dispotypes"` sur une nouvelle ligne.
-4. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Prendre ce fichier et le mettre dans `/usr/share/X11/xkb/symbols/dispocla`.
+4. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/dispocla`.
 5. [evdev-additions.xml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev-additions.xml) : Copier l’élément `<layout>` qui commence à la ligne 50 et le coller dans `/usr/share/X11/xkb/rules/evdev.xml` avant la balise `</layoutList>`.
-6. Dans `/usr/share/X11/xkb/rules/evdev`, désactiver la ligne `*		*		=	+%l[2]%(v[2]):2` en l’effaçant ou en la commentant, en la remplaçant par `// * * = +%l[2]%(v[2]):2`. Cela sert à empêcher le système d’écraser le deuxième groupe vif.
+6. Dans `/usr/share/X11/xkb/rules/evdev`, désactiver la ligne `*		*		=	+%l[2]%(v[2]):2` en l’effaçant ou en la commentant, en la remplaçant par `// * * = +%l[2]%(v[2]):2`. Cela empêche le système d’écraser le deuxième groupe vif.
 7. [evdev.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev.c) : Mettre ce fichier à la place de `/usr/share/X11/xkb/keycodes/evdev` après avoir renommé celui-ci. Décommenter le cas échéant les définitions de touches souhaitées concernant Effacement arrière, AltFr et VerrCap.
-8. [dispoled.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispoled.c) : Mettre ce fichier dans `/usr/share/X11/xkb/compat/dispoled`.
+8. [dispoled.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispoled.c) : Copier ce fichier vers `/usr/share/X11/xkb/compat/dispoled`.
 9. Dans `/usr/share/X11/xkb/compat/complete`, ajouter `include "dispoled"` sur une nouvelle ligne.
-10. Veiller à ce que la méthode d’entrée soit XIM. Ce réglage se trouve par exemple (Ubuntu 24.04) dans `Système` > `Pays et langue` > `Système` > `Gérer les langues installées` > `Langue` > `Système de saisie au clavier` [iBus, XIM, Aucun].
+10. Veiller à ce que la méthode d’entrée soit XIM. Ce réglage se trouve par exemple (Ubuntu 24.04) dans `Système` > `Pays et langue` > `Système` > `Gérer les langues installées` > `Langue` > `Système de saisie au clavier` [iBus, XIM, Aucun]. Il peut aussi être effectué par la commande `im-config -n xim`.
 
 Puis fermer la session et en rouvrir une.
 
