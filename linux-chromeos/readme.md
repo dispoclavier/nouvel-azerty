@@ -107,15 +107,15 @@ Ce mode d’emploi condensé ne peut pas remplacer la documentation détaillée 
 
 ### Lettres
 
-La disposition de toutes les minuscules, y compris accentuées ou avec cédille, est rigoureusement identique à l’AZERTY traditionnel. Les différences sont dans les touches mortes. Celle de l’accent circonflexe fonctionne optionnellement comme une touche [ê] avant k, l, m, n, p, q, r, t, v ; « ê » s’insère ensemble avec l’une de ces minuscules. Hormis sous Windows, cela fonctionne aussi en capitales, et x donne « êch ».
+La disposition de toutes les minuscules, y compris accentuées ou avec cédille, est identique à l’AZERTY traditionnel. Les différences sont dans les touches mortes. Celle de l’accent circonflexe fonctionne optionnellement comme une touche [ê] avant [k], [l], [m], [n], [p], [q], [r], [t], [v] ; « ê » s’insère ensemble avec l’une de ces minuscules si le [e] n’est pas saisi avant. Cela fonctionne aussi en capitales, et [x] donne « êch ».
 
 #### Verrouillage des capitales
 
-Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres à leur tour sont en AltGr. Les capitales pour leur part, aussi les É, È, Ç, À et Ù, sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (La plupart des dispositions de clavier d’ordinateur fonctionnent ainsi.)
+Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr. Quant aux capitales, aussi les É, È, Ç, À et Ù, elles sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.)
 
 #### Sélectrice de groupe
 
-Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte sélectrice de groupe, appelée « groupe », notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche de groupe peut activer 12 groupes des lettres et 12 groupes des symboles. Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Les chiffres et quelques autres caractères sont aussi pris en charge.
+Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte sélectrice de groupe, appelée « groupe », notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche de groupe peut activer 12 groupes des lettres et 12 groupes des symboles. Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
 
 #### Touches mortes spécialisées
 
