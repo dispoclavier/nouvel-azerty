@@ -1,4 +1,4 @@
-//                       Date: 2024-07-03T1430+0200
+//                       Date: 2024-07-03T1526+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -485,7 +485,7 @@
 // in default mode, but not in ASCII mode.
 //
 
-default partial alphanumeric_keys
+default partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "kbfrFRs" {
 
 	name[Group1] = "French France semiautomatic keyboard layout";
