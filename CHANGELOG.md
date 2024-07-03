@@ -5,7 +5,7 @@
 Disruption : les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule du trigramme breton puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr, et pour faciliter la saisie des minuscules en exposant, en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
 
 * Supprimer la prise en charge du digramme breton, non disposé. (compose-1.yml [1d21d06](https://github.com/dispoclavier/nouvel-azerty/commit/1d21d0677c1b3e49a532111d83660bb646fed1b7))
-* Rectifier la documentation. (compose-1.yml [1f3776e](https://github.com/dispoclavier/nouvel-azerty/commit/1f3776e536fbe430d3ecd064c237eb1a47dc4816), ibidem)
+* Rectifier la documentation. (ibidem, compose-1.yml [1f3776e](https://github.com/dispoclavier/nouvel-azerty/commit/1f3776e536fbe430d3ecd064c237eb1a47dc4816), [06deaac](https://github.com/dispoclavier/nouvel-azerty/commit/06deaacdff00d8c9486bff786924751d60d6052f))
 * Améliorer et compléter le mode d’emploi. (readme.md [95bc470](https://github.com/dispoclavier/nouvel-azerty/commit/95bc47000498f18bced4126714b44e7b906fc436), [305b322](https://github.com/dispoclavier/nouvel-azerty/commit/305b322ef276e17f274dd2859f7b552707e29a4e))
 
 ## 2.3.7 (2024-06-30)
