@@ -1,4 +1,4 @@
-//                       Date: 2024-06-12T0636+0200
+//                       Date: 2024-07-03T1350+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -619,80 +619,80 @@ xkb_symbols "kbfrFRs" {
 	key <AE01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[         twosuperior,       threesuperior,                   1,           ampersand,         onesuperior,               U2082,               U2083,               UEFC1 ],
-		[                   1,                   1,                   1,         onesuperior,                   1,               U2081,         onesuperior,               UEFC1 ]
+		[                   1,                   1,                   1,         onesuperior,                   1,         onesuperior,               U2081,               UEFC1 ]
 	}; // U2081 ₁ SUBSCRIPT ONE; U2082 ₂ SUBSCRIPT TWO; U2083 ₃ SUBSCRIPT THREE; UEFC1 1️⃣ keycap 1 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE02> {
-		[              eacute,              Eacute,                   2,               UEFD9,                   2,               UEFC2,         twosuperior,               UEFC2 ],
-		[                   2,                   2,                   2,         twosuperior,                   2,               U2082,         twosuperior,               UEFC2 ]
+		[              eacute,              Eacute,                   2,               UEFD9,                   2,         twosuperior,               UEFC2,               UEFC2 ],
+		[                   2,                   2,                   2,         twosuperior,                   2,         twosuperior,               U2082,               UEFC2 ]
 	}; // U2082 ₂ SUBSCRIPT TWO; UEFC2 2️⃣ keycap 2 emoji; UEFD9 *dead_legacytilde
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE03> {
-		[            quotedbl,              endash,                   3,          numbersign,                   3,               UEFC3,       threesuperior,               UEFC3 ],
-		[                   3,                   3,                   3,       threesuperior,                   3,               U2083,       threesuperior,               UEFC3 ]
+		[            quotedbl,              endash,                   3,          numbersign,                   3,       threesuperior,               UEFC3,               UEFC3 ],
+		[                   3,                   3,                   3,       threesuperior,                   3,       threesuperior,               U2083,               UEFC3 ]
 	}; // U2083 ₃ SUBSCRIPT THREE; UEFC3 3️⃣ keycap 3 emoji
 
 	key <AE04> {
-		[rightsinglequotemark,              emdash,                   4,           braceleft,                   4,               UEFC4,               U2074,               UEFC4 ],
-		[                   4,                   4,                   4,               U2074,                   4,               U2084,               U2074,               UEFC4 ]
+		[rightsinglequotemark,              emdash,                   4,           braceleft,                   4,               U2074,               UEFC4,               UEFC4 ],
+		[                   4,                   4,                   4,               U2074,                   4,               U2074,               U2084,               UEFC4 ]
 	}; // U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4 4️⃣ keycap 4 emoji
 
 	key <AE05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          apostrophe,               U00AD,                   5,         bracketleft,                   5,               UEFC5,               U2075,               UEFC5 ],
-		[                   5,                   5,                   5,               U2075,                   5,               U2085,               U2075,               UEFC5 ]
+		[          apostrophe,               U00AD,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
+		[                   5,                   5,                   5,               U2075,                   5,               U2075,               U2085,               UEFC5 ]
 	}; // U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
 
 	key <AE06> {
-		[               minus,               U2011,                   6,                 bar,                   6,               UEFC6,               U2076,               UEFC6 ],
-		[                   6,                   6,                   6,               U2076,                   6,               U2086,               U2076,               UEFC6 ]
+		[               minus,               U2011,                   6,                 bar,                   6,               U2076,               UEFC6,               UEFC6 ],
+		[                   6,                   6,                   6,               U2076,                   6,               U2076,               U2086,               UEFC6 ]
 	}; // U2011 ‑ NON-BREAKING HYPHEN; U2076 ⁶ SUPERSCRIPT SIX; U2086 ₆ SUBSCRIPT SIX; UEFC6 6️⃣ keycap 6 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
-		[              egrave,              Egrave,                   7,               UEFDA,                   7,               UEFC7,               U2077,               UEFC7 ],
-		[                   7,                   7,                   7,               U2077,                   7,               U2087,               U2077,               UEFC7 ]
+		[              egrave,              Egrave,                   7,               UEFDA,                   7,               U2077,               UEFC7,               UEFC7 ],
+		[                   7,                   7,                   7,               U2077,                   7,               U2077,               U2087,               UEFC7 ]
 	}; // U2077 ⁷ SUPERSCRIPT SEVEN; U2087 ₇ SUBSCRIPT SEVEN; UEFC7 7️⃣ keycap 7 emoji; UEFDA *dead_legacygrave
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE08> {
-		[          underscore,      Greek_horizbar,                   8,           backslash,                   8,               UEFC8,               U2078,               UEFC8 ],
-		[                   8,                   8,                   8,               U2078,                   8,               U2088,               U2078,               UEFC8 ]
+		[          underscore,      Greek_horizbar,                   8,           backslash,                   8,               U2078,               UEFC8,               UEFC8 ],
+		[                   8,                   8,                   8,               U2078,                   8,               U2078,               U2088,               UEFC8 ]
 	}; // Greek_horizbar ― U2015 HORIZONTAL BAR (not “Greek”); U2078 ⁸ SUPERSCRIPT EIGHT; U2088 ₈ SUBSCRIPT EIGHT; UEFC8 8️⃣ keycap 8 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            ccedilla,            Ccedilla,                   9,           parenleft,                   9,               UEFC9,               U2079,               UEFC9 ],
-		[                   9,                   9,                   9,               U2079,                   9,               U2089,               U2079,               UEFC9 ]
+		[            ccedilla,            Ccedilla,                   9,           parenleft,                   9,               U2079,               UEFC9,               UEFC9 ],
+		[                   9,                   9,                   9,               U2079,                   9,               U2079,               U2089,               UEFC9 ]
 	}; // U2079 ⁹ SUPERSCRIPT NINE; U2089 ₉ SUBSCRIPT NINE; UEFC9 9️⃣ keycap 9 emoji
 
-	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
-		[              agrave,              Agrave,                   0,          parenright,               U2070,               U2080,              U1F51F,               UEFC0 ],
-		[                   0,                   0,                   0,               U2070,                   0,               U2080,               U2070,               UEFC0 ]
+		[              agrave,              Agrave,                   0,          parenright,                   0,               U2070,               UEFC0,              U1F51F ],
+		[                   0,                   0,                   0,               U2070,                   0,               U2070,               U2080,               UEFC0 ]
 	}; // U2070 ⁰ SUPERSCRIPT ZERO; U2080 ₀ SUBSCRIPT ZERO; U1F51F 🔟 KEYCAP TEN emoji; UEFC0 0️⃣ keycap 0 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
-		[                  at,              degree,               U1D49,        bracketright,               U207B,                   E,               minus,               UEFCA ],
-		[                  at,              degree,               minus,               U208B,               U207B,                   E,               minus,               UEFCA ]
+		[                  at,              degree,               U1D49,        bracketright,               U207B,               minus,                   E,               UEFCA ],
+		[                  at,              degree,               minus,               U208B,               U207B,               minus,                   E,               UEFCA ]
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; U208B ₋ SUBSCRIPT MINUS; U207B ⁻ SUPERSCRIPT MINUS; UEFCA  *️⃣ keycap star emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[      dead_diaeresis,                plus,           Multi_key,          braceright,               U207A,                   F,               equal,               UEFCB ],
-		[               equal,                plus,           Multi_key,               U208A,               U207A,                   F,               equal,               UEFCB ]
+		[      dead_diaeresis,                plus,           Multi_key,          braceright,               U207A,               equal,                   F,               UEFCB ],
+		[               equal,                plus,           Multi_key,               U208A,               U207A,               equal,                   F,               UEFCB ]
 	}; // U208A ₊ SUBSCRIPT PLUS; U207A ⁺ SUPERSCRIPT PLUS; UEFCB  #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
@@ -1515,7 +1515,7 @@ xkb_symbols "kbfrFRsr" {
 		[            NoSymbol ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_AE10_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
 		[              eacute,              Eacute ],
