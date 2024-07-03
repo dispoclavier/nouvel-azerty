@@ -1,4 +1,4 @@
-//                       Date: 2024-07-03T1526+0200
+//                       Date: 2024-07-03T1534+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -489,7 +489,7 @@ default partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "kbfrFRs" {
 
 	name[Group1] = "French France semiautomatic keyboard layout";
-	name[Group2] = "French France semiautomatic keyboard layout";
+	name[Group2] = "French France semiautomatic keyboard layout, ASCII mode";
 	// "Français France disposition de clavier semi-automatique"
 
 	// Includes files from the symbols/ directory.
@@ -1185,7 +1185,7 @@ partial alphanumeric_keys
 xkb_symbols "kbbrFRs" {
 
 	name[Group1] = "Breton and French semiautomatic keyboard layout";
-	name[Group2] = "Breton and French semiautomatic keyboard layout";
+	name[Group2] = "Breton and French semiautomatic keyboard layout, ASCII mode";
 	// "Breton et français disposition de clavier semi-automatique"
 	//
 	// The Breton trigraph “cʼh” is particular in that its Unicode conformant
@@ -1227,7 +1227,7 @@ partial alphanumeric_keys
 xkb_symbols "kbbrFRsr" {
 
 	name[Group1] = "Breton and French remapped semiautomatic keyboard layout";
-	name[Group2] = "Breton and French remapped semiautomatic keyboard layout";
+	name[Group2] = "Breton and French remapped semiautomatic keyboard layout, ASCII mode";
 	// "Breton et français disposition de clavier semi-automatique redisposée"
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
@@ -1265,7 +1265,7 @@ partial alphanumeric_keys
 xkb_symbols "kbfrPFs" {
 
 	name[Group1] = "French Polynesia semiautomatic keyboard layout";
-	name[Group2] = "French Polynesia semiautomatic keyboard layout";
+	name[Group2] = "French Polynesia semiautomatic keyboard layout, ASCII mode";
 	// "Polynésie française disposition de clavier semi-automatique"
 	//
 	// The grave accent is used in Polynesia alongside the macron, but while the
@@ -1301,7 +1301,7 @@ partial alphanumeric_keys
 xkb_symbols "kbfrPFsr" {
 
 	name[Group1] = "French Polynesia remapped semiautomatic keyboard layout";
-	name[Group2] = "French Polynesia remapped semiautomatic keyboard layout";
+	name[Group2] = "French Polynesia remapped semiautomatic keyboard layout, ASCII mode";
 	// "Polynésie française disposition de clavier semi-automatique redisposée"
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
@@ -1331,7 +1331,7 @@ partial alphanumeric_keys
 xkb_symbols "kbfrAFs" {
 
 	name[Group1] = "Francophone Africa semiautomatic keyboard layout";
-	name[Group2] = "Francophone Africa semiautomatic keyboard layout";
+	name[Group2] = "Francophone Africa semiautomatic keyboard layout, ASCII mode";
 	// "Afrique francophone disposition de clavier semi-automatique"
 	//
 	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as Ɔ key have other
@@ -1369,7 +1369,7 @@ partial alphanumeric_keys
 xkb_symbols "kbfrAFsr" {
 
 	name[Group1] = "Francophone Africa remapped semiautomatic keyboard layout";
-	name[Group2] = "Francophone Africa remapped semiautomatic keyboard layout";
+	name[Group2] = "Francophone Africa remapped semiautomatic keyboard layout, ASCII mode";
 	// "Afrique francophone disposition de clavier semi-automatique redisposée"
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
@@ -1407,7 +1407,7 @@ partial alphanumeric_keys
 xkb_symbols "kbfrBEs" {
 
 	name[Group1] = "French Belgium semiautomatic keyboard layout";
-	name[Group2] = "French Belgium semiautomatic keyboard layout";
+	name[Group2] = "French Belgium semiautomatic keyboard layout, ASCII mode";
 	// "Français Belgique disposition de clavier semi-automatique"
 	//
 	// The other divergent keys are equalized with France’s AZERTY because
@@ -1448,7 +1448,7 @@ partial alphanumeric_keys
 xkb_symbols "kbfrFRsr" {
 
 	name[Group1] = "French France remapped semiautomatic keyboard layout";
-	name[Group2] = "French France remapped semiautomatic keyboard layout";
+	name[Group2] = "French France remapped semiautomatic keyboard layout, ASCII mode";
 	// "Français France disposition de clavier semi-automatique redisposée"
 
 	include "dispocla(kbfrFRs)"
