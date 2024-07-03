@@ -225,9 +225,9 @@ Le préfixe « &‌#x » des références de caractères hexadécimales en H
 
 En mode ASCII, le préfixe « &‌# » des références de caractères décimales en HTML/XML est sur la touche du point en Maj + AltFr + [.;].
 
-Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur AltGr + AltFr + [U].
+Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur AltGr + AltFr + [U].
 
-Le préfixe « \u{ » est sur AltGr + AltFr + [I], qui est aussi la touche de l’accolade ouvrante.
+Le préfixe « \u{ » est sur AltGr + AltFr + [I], qui est aussi la touche de l’accolade ouvrante.
 
 ## Systèmes
 
