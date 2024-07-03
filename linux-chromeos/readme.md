@@ -135,7 +135,7 @@ Les chiffres sont toujours aussi en AltFr, la nouvelle touche modificatrice sur 
 
 En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
 
-Les émojis chiffres, complétés par les émojis des deux autres touches de téléphone étoile et croisillon ou dièse, sont en Maj + AltFr sur la rangée des chiffres en mode français, ainsi qu’en Maj + AltGr + AltFr, avec la particularité que l’émoji 10 prend la place de l’émoji chiffre 0. Non toutefois en mode ASCII, où le niveau Maj + AltFr est pris par les [indices](#exposants-et-indices).
+Les émojis chiffres, complétés par les émojis des deux autres touches de téléphone étoile et croisillon ou dièse, sont en AltGr + AltFr sur la rangée des chiffres en mode français, ainsi qu’en Maj + AltGr + AltFr, avec la particularité que l’émoji 10 prend la place de l’émoji chiffre 0. Non toutefois en mode ASCII, où le niveau AltGr + AltFr est pris par les [indices](#exposants-et-indices).
 
 ### Ponctuations
 
@@ -177,15 +177,15 @@ Pour les quatre grandes ponctuations après la touche du [N], le point d’inter
 
 L’exposant deux de l’AZERTY traditionnel change de touche suite à l’utilisation de sa touche [²] pour la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche du [1], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
 
-Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en AltGr + AltFr sur les touches des chiffres, et les chiffres en indice y sont en Maj + AltFr. En mode ASCII, les exposants sont aussi en Maj + AltGr pour une saisie plus facile, aux dépens des positions rétrocompatibles, présentes uniquement en mode français. Cela permet d’écrire simplement toutes les fractions ordinaires, au-delà des fractions précomposées en composition, en intercalant la barre de fraction U+2044 qui est aussi bien sur [Q] en Maj + AltFr en synergie avec les indices, que sur [/] en synergie avec les exposants en AltGr + AltFr, et avec les indices en Maj + AltFr (ceci uniquement en mode ASCII, car en mode français, c’est le deux-points sans espace).
+Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres, et les chiffres en indice y sont en AltGr + AltFr. En mode ASCII, les exposants sont aussi en Maj + AltGr pour une saisie encore plus facile, aux dépens des positions rétrocompatibles, présentes uniquement en mode français. Cela permet d’écrire simplement toutes les fractions ordinaires, au-delà des fractions précomposées en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est aussi bien sur [Q] en AltGr + AltFr en synergie avec les indices, que sur [/] en synergie avec les indices en AltGr + AltFr, et avec les exposants en Maj + AltFr (ceci uniquement en mode ASCII, car en mode français, c’est le deux-points sans espace).
 
-Alors que les exposants de toutes les minuscules servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », seul le plus fréquent, « ᵉ », est en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Mais toutes les minuscules en exposant sont en AltGr + AltFr, chacun sur la touche de sa lettre de base. Les accents peuvent être ajoutés en appuyant sur une touche morte et ensuite sur la barre d’espace. L’accent sera placé parfaitement sur le ᵉ pour peu que la police de caractères le prenne en charge conformément au modèle de codage d’Unicode, qui vaut aussi bien pour les lettres de base que pour leurs exposants et indices.
+Alors que les exposants de toutes les minuscules servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », seul le plus fréquent, « ᵉ », est en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Mais toutes les minuscules en exposant sont en Maj + AltFr, chacun sur la touche de sa lettre de base. Les accents peuvent être ajoutés en appuyant sur une touche morte et ensuite sur la barre d’espace. L’accent sera placé parfaitement sur le ᵉ pour peu que la police de caractères le prenne en charge conformément au modèle de codage d’Unicode, qui vaut aussi bien pour les lettres de base que pour leurs exposants et indices.
 
 ### Autres symboles
 
-Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en Maj + AltFr sur leurs touches historiques. Sur leurs nouvelles places, ces symboles sont bien plus accessibles. Ainsi le [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en Maj + AltFr + [L] pour l’intuitivité ; et le symbole micro est sur Maj + AltFr + [F] et sur Maj + AltFr + [M] dans la même logique.
+Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en Maj + AltFr sur leurs touches historiques. Sur leurs nouvelles places, ces symboles sont bien plus accessibles. Ainsi le [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en AltGr + AltFr + [L] pour l’intuitivité ; et le symbole micro est sur AltGr + AltFr + [F] et sur AltGr + AltFr + [M] dans la même logique.
 
-En mode ASCII, quand ce sont les chiffres en indice qui sont en Maj + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus (nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier), le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient clore la sélection. Avec les chiffres en exposant en Maj + AltGr et en AltGr + AltFr, toujours en mode ASCII, on a les mêmes en exposant, avec le circonflexe ASCII, symbole de l’exponentiation.
+En mode ASCII, quand ce sont les chiffres en indice qui sont en AltGr + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus (nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier), le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient arrondir la sélection. Avec les chiffres en exposant en Maj + AltGr et en Maj + AltFr, toujours en mode ASCII, on a les mêmes en exposant, avec le circonflexe ASCII, symbole de l’exponentiation.
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
 
@@ -201,7 +201,7 @@ La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisé
 
 #### Trigrammes bretons
 
-Le trigramme breton « cʼh » avec lettre apostrophe est sur Maj + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton. Sa majuscule « Cʼh » est sur Maj + AltGr + AltFr + [A], tandis que sa capitale s’insère à la place de la minuscule quand les capitales sont verrouillées. Ce n’est pas qu’il manquerait la lettre apostrophe, dans le groupe 1 de l’apostrophe.
+Le trigramme breton « cʼh » avec lettre apostrophe est sur AltGr + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton. Sa majuscule « Cʼh » est sur Maj + AltGr + AltFr + [A], tandis que sa capitale s’insère à la place de la minuscule quand les capitales sont verrouillées. Ce n’est pas qu’il manquerait la lettre apostrophe, dans le groupe 1 de l’apostrophe.
 
 #### Espaces
 
@@ -215,19 +215,19 @@ En mode ASCII, l’entité numérique de l’espace fine insécable « &‌#x2
 
 #### Séquences d’échappement
 
-Les entités nommées des symboles « < » et « > », soit « &‌lt; » et « &‌gt; », sont sur Maj + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
+Les entités nommées des symboles « < » et « > », soit « &‌lt; » et « &‌gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
 
 Les entités nommées des symboles « " » et « ' », soit « &‌quot; » et « &‌apos; », sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U]. &‌apos; est moins utilisé que &‌quot;.
 
 #### Références de caractères
 
-Le préfixe « &‌#x » des références de caractères hexadécimales en HTML/XML est sur Maj + AltFr + [K]. En mode ASCII, il est aussi sur la touche de la virgule en Maj + AltFr + [?,].
+Le préfixe « &‌#x » des références de caractères hexadécimales en HTML/XML est sur AltGr + AltFr + [K]. En mode ASCII, il est aussi sur la touche de la virgule en Maj + AltFr + [?,].
 
 En mode ASCII, le préfixe « &‌# » des références de caractères décimales en HTML/XML est sur la touche du point en Maj + AltFr + [.;].
 
-Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur Maj + AltFr + [U].
+Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur AltGr + AltFr + [U].
 
-Le préfixe « \u{ » est sur la touche [I], qui est aussi la touche de l’accolade ouvrante.
+Le préfixe « \u{ » est sur AltGr + AltFr + [I], qui est aussi la touche de l’accolade ouvrante.
 
 ## Systèmes
 
