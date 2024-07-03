@@ -2,10 +2,11 @@
 
 ## 3.0.0 (projet)
 
-Disruption : les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule du trigramme breton puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr, et pour faciliter la saisie des minuscules en exposant, en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
+Disruption : les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule de l'abréviation Numéro (avec le o en exposant) puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr + N, et pareillement pour le trigramme breton (avec la lettre apostrophe) sur A, ainsi que pour faciliter la saisie des minuscules en exposant (comme indicateurs d’abréviation, indicateurs ordinaux), en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
 
+* Permuter les niveaux 6 et 7. (dispocla.cpp [eda4dd1](https://github.com/dispoclavier/nouvel-azerty/commit/eda4dd14bcca8f876eccbb5e68e9fccadcf130ee), [c74e5a8](https://github.com/dispoclavier/nouvel-azerty/commit/c74e5a82814311b1716389dae0ab351c1e3b2068), [e3924aa](https://github.com/dispoclavier/nouvel-azerty/commit/e3924aae79e0ebc30a08b21da8cd2e6fc47c92ed), dispotypes.c [fc8683b](https://github.com/dispoclavier/nouvel-azerty/commit/fc8683be9e555c4d5b86a9a4d6e55ea79502153f))
 * Supprimer la prise en charge du digramme breton, non disposé. (compose-1.yml [1d21d06](https://github.com/dispoclavier/nouvel-azerty/commit/1d21d0677c1b3e49a532111d83660bb646fed1b7))
-* Rectifier la documentation. (ibidem, compose-1.yml [1f3776e](https://github.com/dispoclavier/nouvel-azerty/commit/1f3776e536fbe430d3ecd064c237eb1a47dc4816), [06deaac](https://github.com/dispoclavier/nouvel-azerty/commit/06deaacdff00d8c9486bff786924751d60d6052f))
+* Rectifier la documentation. (ibidem, compose-1.yml [1f3776e](https://github.com/dispoclavier/nouvel-azerty/commit/1f3776e536fbe430d3ecd064c237eb1a47dc4816), [06deaac](https://github.com/dispoclavier/nouvel-azerty/commit/06deaacdff00d8c9486bff786924751d60d6052f), dispocla.cpp [7cf2831](https://github.com/dispoclavier/nouvel-azerty/commit/7cf2831394f9e7df65484b630010abde0aa1c6ac))
 * Améliorer et compléter le mode d’emploi. (readme.md [95bc470](https://github.com/dispoclavier/nouvel-azerty/commit/95bc47000498f18bced4126714b44e7b906fc436), [305b322](https://github.com/dispoclavier/nouvel-azerty/commit/305b322ef276e17f274dd2859f7b552707e29a4e))
 
 ## 2.3.7 (2024-06-30)
