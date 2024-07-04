@@ -1,4 +1,4 @@
-//                       Date: 2024-07-03T1350+0200
+//                       Date: 2024-07-04T0510+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -675,12 +675,12 @@ default partial xkb_types "dispocla" {
 		map[                                                            Shift ] = Level2; // °
 		map[                                               LevelThree         ] = Level3; // ᵉ
 		map[                                               LevelThree + Shift ] = Level4; // ]
-		map[                                   LevelFive                      ] = Level2; // °
-		map[                                   LevelFive              + Shift ] = Level8; // *️⃣
-		map[                                   LevelFive + LevelThree         ] = Level7; // E
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // *️⃣
-		map[                         Control                                  ] = Level6; // -
-		map[                         Control                          + Shift ] = Level6; // -
+		map[                                   LevelFive                      ] = Level5; // °
+		map[                                   LevelFive              + Shift ] = Level6; // E
+		map[                                   LevelFive + LevelThree         ] = Level7; // *️⃣
+		map[                                   LevelFive + LevelThree + Shift ] = Level7; // *️⃣
+		map[                         Control                                  ] = Level8; // -
+		map[                         Control                          + Shift ] = Level8; // -
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -706,13 +706,13 @@ default partial xkb_types "dispocla" {
 		map[ None                                                             ] = Level1; // @
 		map[                                                            Shift ] = Level2; // °
 		map[                                               LevelThree         ] = Level3; // -
-		map[                                               LevelThree + Shift ] = Level5; // ⁻
-		map[                                   LevelFive                      ] = Level7; // E
-		map[                                   LevelFive              + Shift ] = Level4; // ₋
-		map[                                   LevelFive + LevelThree         ] = Level5; // ⁻
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // *️⃣
-		map[                         Control                                  ] = Level6; // -
-		map[                         Control                          + Shift ] = Level6; // -
+		map[                                               LevelThree + Shift ] = Level4; // ⁻
+		map[                                   LevelFive                      ] = Level5; // E
+		map[                                   LevelFive              + Shift ] = Level4; // ⁻
+		map[                                   LevelFive + LevelThree         ] = Level6; // ₋
+		map[                                   LevelFive + LevelThree + Shift ] = Level7; // *️⃣
+		map[                         Control                                  ] = Level8; // -
+		map[                         Control                          + Shift ] = Level8; // -
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -799,20 +799,20 @@ default partial xkb_types "dispocla" {
 
 	type "EIGHT_LEVELS_PLUS_GROUP1" {
 		// Based on EIGHT_LEVELS_MINUS_GROUP1.
-		// The Control value <plus> is expected to be more generally supported,
-		// as opposed to its US-QWERTY variant <equal>.
+		// The Control value <equal> is based on the US-QWERTY base level,
+		// expected to be supported by most applications, as opposed to <plus>.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1; // <ë>
 		map[                                                            Shift ] = Level2; // +
 		map[                                               LevelThree         ] = Level3; // <¦>
 		map[                                               LevelThree + Shift ] = Level4; // }
-		map[                                   LevelFive                      ] = Level6; // =
-		map[                                   LevelFive              + Shift ] = Level8; // #️⃣
-		map[                                   LevelFive + LevelThree         ] = Level7; // F
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // #️⃣
-		map[                         Control                                  ] = Level2; // +
-		map[                         Control                          + Shift ] = Level2; // +
+		map[                                   LevelFive                      ] = Level5; // =
+		map[                                   LevelFive              + Shift ] = Level6; // F
+		map[                                   LevelFive + LevelThree         ] = Level7; // #️⃣
+		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
+		map[                         Control                                  ] = Level8; // =
+		map[                         Control                          + Shift ] = Level8; // =
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
@@ -833,20 +833,18 @@ default partial xkb_types "dispocla" {
 
 	type "EIGHT_LEVELS_PLUS_GROUP2" {
 		// Based on EIGHT_LEVELS_MINUS_GROUP1.
-		// Could be merged with group 1 if the control value is "+".
-		// But the option "=" must stay available.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1; // =
 		map[                                                            Shift ] = Level2; // +
 		map[                                               LevelThree         ] = Level3; // <¦>
-		map[                                               LevelThree + Shift ] = Level5; // ⁺
-		map[                                   LevelFive                      ] = Level7; // F
-		map[                                   LevelFive              + Shift ] = Level4; // ₊
-		map[                                   LevelFive + LevelThree         ] = Level5; // ⁺
-		map[                                   LevelFive + LevelThree + Shift ] = Level8; // #️⃣
-		map[                         Control                                  ] = Level2; // +
-		map[                         Control                          + Shift ] = Level2; // +
+		map[                                               LevelThree + Shift ] = Level4; // ⁺
+		map[                                   LevelFive                      ] = Level5; // F
+		map[                                   LevelFive              + Shift ] = Level4; // ⁺
+		map[                                   LevelFive + LevelThree         ] = Level6; // ₊
+		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
+		map[                         Control                                  ] = Level8; // =
+		map[                         Control                          + Shift ] = Level8; // =
 		preserve[                    Control                                  ] = Control;
 		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
