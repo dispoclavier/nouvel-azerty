@@ -1,4 +1,4 @@
-//                       Date: 2024-07-04T0510+0200
+//                       Date: 2024-07-04T2038+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -788,9 +788,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U2044,              U1F610 ],
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U2044,              U1F610 ]
-	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U2044 ⁄ FRACTION SLASH; U1F610 😐 NEUTRAL FACE emoji
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               colon,              U1F610 ],
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               colon,              U1F610 ]
+	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U1F610 😐 NEUTRAL FACE emoji
 
 	key <AC02> {
 		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,             section,              U1F614 ],
@@ -803,9 +803,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D48 ᵈ MODIFIER LETTER SMALL D; U2300 ⌀ DIAMETER SIGN; U1F606 😆 SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES 16th-ranking emoji
 
 	key <AC04> {
-		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,                  mu,              U1F525 ],
-		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,                  mu,              U1F525 ]
-	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U00B5 µ MICRO SIGN; U1F525 🔥 FIRE 15th-ranking emoji
+		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,               U2044,              U1F525 ],
+		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,               U2044,              U1F525 ]
+	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U2044 ⁄ FRACTION SLASH; U1F525 🔥 FIRE 15th-ranking emoji
 
 	key <AC05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
@@ -837,7 +837,7 @@ xkb_symbols "kbfrFRs" {
 	key <AC10> {
 		[                   m,                   M,                 bar,               comma,         dead_macron,               U1D50,                  mu,              U1F637 ],
 		[                   m,                   M,                 bar,               comma,         dead_macron,               U1D50,                  mu,              U1F637 ]
-	}; // U1D50 ᵐ MODIFIER LETTER SMALL M; U00B5 µ MICRO SIGN; U1F637 😷 FACE WITH MEDICAL MASK emoji
+	}; // U1D50 ᵐ MODIFIER LETTER SMALL M; U1F637 😷 FACE WITH MEDICAL MASK emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
@@ -857,14 +857,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               colon,              U1F622 ],
-		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               colon,              U1F622 ]
-	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U1F622 😢 CRYING FACE 19th-ranking emoji
+		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ],
+		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ]
+	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C "‌" ZERO WIDTH NON-JOINER; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
-		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200C,              U1F31F ],
-		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200C,              U1F31F ]
-	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200C "‌" ZERO WIDTH NON-JOINER; U1F31F 🌟 GLOWING STAR emoji
+		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ],
+		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ]
+	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D "‍" ZERO WIDTH JOINER; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
 		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F631 ],
