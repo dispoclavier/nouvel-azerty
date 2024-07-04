@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
-#                       Date: 2024-06-30T2000+0200
+#                       Date: 2024-07-04T0702+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 2.3.7" # See # # Notes about syntax
+<UEFA0>                     : "version 3.0.0" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -150,6 +150,7 @@
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
 #   These layouts make extensive use of added keysyms as in keysymdef.h:97.
+#   /usr/X11R6/include/X11/keysymdef.h
 #   https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
 #
 #   The scheme using Private Use characters is found on FDO:
@@ -165,88 +166,92 @@
 #
 # # Notes about syntax
 #
-#   Line comments are mandatory for compatibility with defective compilers that
-#   are not able to parse compose sequences not followed by a hash, although in
-#   the spec, comments are declared as optional. See the section “File Format”.
+#   On all lines containing a compose sequence to be parsed by the compiler, a
+#   comment is mandatory, for compatibility with non-conformant compilers that
+#   do not parse compose sequences without a comment before the EOL. According
+#   to the spec, comments are optional though. See the section “File Format”:
 #   https://linux.die.net/man/3/xcompose
 #
-#   In most comments in this file, the plus sign in Unicode code points
-#   is omitted for consistency to ease searching, and tweaked versions
-#   of UnicodeData.txt and the NamesList.txt are used for development.
+#   The plus sign in Unicode code points is omitted throughout in this file,
+#   also in comments, except in quotations and in output strings representing
+#   high surrogates, for interoperability with the code parsed by the Compose
+#   compiler, for easier maintenance and reference. (Also tweaked versions of
+#   Unicode files are used alongside for development.)
 #
 #
 # # Breton polygraphs
 #
 #   The Breton polygraphs are mapped as such on the CʼHWERTY keyboard following
-#   https://bugs.freedesktop.org/show_bug.cgi?id=19506.
+#   https://bugs.freedesktop.org/show_bug.cgi?id=19506
 #
-#   Following the link chain from the documentation of the CʼHWERTY keyboard:
+#   Both Breton trigraphs and Breton digraphs are supported by output strings:
 #   http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/162-faq-foire-aux-questions
 #   https://dominiko.livejournal.com/22848.html
 #   https://bugs.freedesktop.org/show_bug.cgi?id=25349
 #
-#   The Breton trigraph has a dedicated key on the Breton variant "kbbrFRs" and
-#   it is supported on Shift + AltFr + A on the French base layout "kbfrFRs".
+#   The Breton trigraph has a dedicated key on the Breton variants "kbbrFRs"
+#   and "kbbrFRsr", and it is supported on Shift + AltFr + A on the French base
+#   layout "kbfrFRs" and its remapped variant "kbfrFRsr", and on all other
+#   variants consistently. Unlike the trigraph, the digraph has no dedicated
+#   support on any variant.
 #
 #   The Breton trigraph uses regular letter apostrophe U02BC.
-#   See Breton exemplar characters in CLDR as pointed in:
-#   https://bugs.freedesktop.org/show_bug.cgi?id=19506#c16.
-#   CLDR versions below v34 are too incomplete:
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
 #
-#   These have got mnemonic keysyms in keysymdef.h but may not be supported yet,
-#   so they are defined here using "ʼ" U02BC MODIFIER LETTER APOSTROPHE:
+#   These have got mnemonic keysyms in keysymdef.h but may not be supported yet
+#   by en_US.UTF-8/Compose, so the trigraph is defined here.
 #
 <c_h> : "cʼh" # See # # Notes about syntax
 <C_h> : "Cʼh" #
 <C_H> : "CʼH" #
 #
 #
-#   The Breton digraph is mapped on the CʼHWERTY keyboard.
-#   Therefore, in XKB, it has got three keysyms, too.
-#
-#   Unlike the trigraph, the digraph has no dedicated support on any variant.
-#   It is expected to be input like all polygraphs, as used in many languages.
-#
-<ch> : "ch" #
-<Ch> : "Ch" #
-<CH> : "CH" #
-#
-#
 # # Automated punctuation spacing for fr-FR, regular with NNBSP U202F
 #
-#   Imprimerie nationale (France) assumes that big punctuation is spaced out using either
-#   of these spaces:
+#   Imprimerie nationale (France) assumes that big punctuation is spaced out
+#   using either of these spaces:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NNBSP U202F.
 #
 #   Functionally, NNBSP is a no-break clone of Unicode’s thin space THSP U2009.
 #
-#   The preferred name and abbreviation of U2009 are NARROW SPACE, NSP.
+#   Consistently, the preferred name and abbreviation of U2009 are NARROW SPACE
+#   matching the name of U202F, and NSP.
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
-#   This is regular typesetting at Imprimerie nationale except for colon and quotation marks,
-#   although the latter are typeset with NNBSP in the Imprimerie nationale style guide
-#   (_Lexique des règles en usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002);
-#   only the verbatim rule on page 149 disagrees.
-#   In mainstream high-quality publishing (new school), NNBSP is used throughout.
+#   This is regular typesetting at Imprimerie nationale except for colon and
+#   quotation marks, although the latter are typeset with narrow space in the
+#   Imprimerie nationale style guide _Lexique des règles typographiques en
+#   usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002; only
+#   the verbatim rule on page 149 disagrees.
+#
+#   In mainstream high-quality publishing, referred to as new school, no-break
+#   thin space is used throughout. The most straightforward Unicode character
+#   representing this no-break thin space is NARROW NO-BREAK SPACE U202F.
 #
 #   See Philippe Verdy’s testimony:
 #   http://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
 #   Unicode was supposed to encode SI/BIPM number typesetting as well as French
 #   punctuation typesetting, and for that purpose encoded THIN SPACE along with
-#   other typographic space characters in the range U+2000..U+200A. Accordingly
+#   other typographic space characters in the range U2000..U200A. Accordingly,
 #   the line breaking property was set to no-break for all spaces starting with
-#   U+2002, after the two widest spaces in a breaking variant U+2000, U+2001 vs
-#   U+2002, U+2003.
+#   U2002, after the two widest spaces in a breaking variant: U2000, U2001, as
+#   opposed to U2002, U2003.
 #
 #   But that design goal was ultimately compromised. To cover up the vandalism,
-#   U+2007 FIGURE SPACE was left no-break with the hypocritical allegation that
+#   U2007 FIGURE SPACE was left no-break with the hypocritical allegation that
 #   this space is used “in” numbers, while it was encoded as the tabular space,
 #   to be used before numbers when typesetting tables the old way, alongside an
-#   equivalent indenting by the width of a decimal dot or comma: U+2008.
+#   equivalent indentation by the width of a decimal dot or comma using U2008.
+#   https://www.unicode.org/reports/tr14/tr14-51.html
+#
+#       This is the preferred space to use in numbers. It has the same width as
+#       a digit and keeps the number together for the purpose of line breaking.
+#
+#   Further reading about the topic, documenting opportunities for Unicode to
+#   get that right:
 #   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 #   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
 #   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
@@ -258,16 +263,24 @@
 #   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf
 #
-#   The corrected Unicode position is found in UAX #14 since 2007, in TUS since
-#   2014: The Unicode Standard, version 7.0.0, 2014, p. 265, section 6.2,
-#   heading “Space Characters”, subheading “Narrow No-Break Space”.
-#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834
-#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,300
+#   The corrected Unicode position is found in UAX #14 since 2008, in TUS
+#   since 2014: The Unicode Standard, version 7.0.0, 2014, p. 265, section 6.2,
+#   heading “Space Characters” (see subheading “Narrow No-Break Space”).
+#   https://www.unicode.org/versions/Unicode7.0.0/ch06.pdf#G1834
+#   Also: The Unicode Standard, version 15.0.0, 2022, p. 268, subheading
+#   “Narrow No-Break Space”, e.g. in the full text PDF:
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=294&zoom=100,0,300
 #
-#      The NNBSP can be used to represent the narrow space occurring around punctuation
-#      characters in French typography, which is called an “espace fine insécable.”
+#      Narrow No-Break Space. U+202F NARROW NO-BREAK SPACE (NNBSP) is a narrow
+#      version of U+00A0 NO-BREAK SPACE. The NNBSP can be used to represent the
+#      narrow space occurring around punctuation characters in French
+#      typography, which is called an “espace fine insécable.”
 #
-#   Unicode® Standard Annex #14, Unicode Line Breaking Algorithm, Unicode 15.1.0:
+#   In UAX #14, it started with the “Proposed Update Unicode Standard Annex #14
+#   Unicode Line Breaking Algorithm”, Unicode 5.1 Draft 3, 2008-03-07.
+#   https://www.unicode.org/reports/tr14/tr14-21.html#GL
+#   15 years later, 2023-08-15: Unicode® Standard Annex #14,
+#   Unicode Line Breaking Algorithm, Unicode 15.1.0:
 #   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #
 #      When NARROW NO-BREAK SPACE occurs in French text, it should be
@@ -319,12 +332,12 @@
 <UEF67> : " ›" #
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
-#       the colon has NBSP spacing. In new-school French typesetting, the colon
-#       is spaced out using NNBSP.
+#       in Unicode encoding, the colon has NBSP spacing. In new-school French
+#       typesetting, the colon is spaced out using NNBSP.
 #   [2] Based on the visual aspect in the current edition of the style manual,
-#       Imprimerie nationale, the guillemets are typeset with NNBSP, although
-#       the verbatim rule given on page 149 specifies that they be spaced out
-#       using NBSP.
+#       Imprimerie nationale, in Unicode encoding, the guillemets are typeset
+#       with NNBSP, although the verbatim rule given on page 149 specifies that
+#       the guillemets are to be spaced out using the equivalent of NBSP.
 #
 #
 # # Abbreviation "Numéro" with trailing space
@@ -360,7 +373,7 @@
 <UEF6D> : "00" #
 #
 #   A triple zero key is useful only on the numpad. On the extended numpad, the
-#   triple zero is obtained by simultaneously pressing single and double zeroes.
+#   triple zero is input by simultaneously pressing single and double zeroes.
 #   So the triple zero had been suppressed and was later (2021-07-01T0458+0200)
 #   readded as UEF7D for numpad Shift + 1.
 #
@@ -372,9 +385,9 @@
 #   as well as in Russian and other locales requiring no-break space between
 #   words, and thus requiring the no-break space to be justifying as defined.
 #
-#   The justifying no-break space strings using a break-preventing character are
-#   courtesy Jakub Stachu, in "Non‐breakable space justification in Word 2016"
-#   on Microsoft Community forum MS Office > Word > Windows 8 on November 5, 2017:
+#   The justifying no-break strings using a break-preventing character are
+#   courtesy Jakub Stachu, in "Non‐breakable space justification in Word 2016",
+#   Microsoft Community forum MS Office > Word > Windows 8 on November 5, 2017:
 #   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
 #
 #   The issue has been formally submitted to Unicode in L2/19-114
@@ -392,11 +405,12 @@
 #
 # # Automated punctuation spacing for fr-FR, legacy Latin-1 fallbacks with NBSP
 #
-#   This is regular with colon and quotation marks according to Imprimerie nationale.
-#   style guide Lexique des règles en usage à l’Imprimerie nationale, 2002, table page 149.
-#   Note however that in the Lexique des règles en usage à l’Imprimerie nationale, 2002
-#   (last edition as per 2017 reprint), angle quotation marks are typeset with a narrow
-#   space, which corresponds to NNBSP, not a word space, which would correspond to NBSP.
+#   This is regular with colon and quotation marks according to the style guide
+#   of the French national printing house _Lexique des règles typographiques en
+#   usage à l’Imprimerie nationale_, 2002, table page 149.
+#
+#   However, in this manual’s last edition in its 2017 reprint, angle quotation
+#   marks are typeset with a narrow space, not a word space.
 #
 #   Once some “dysfunctional” keyboard layout variants supported some of these.
 #   Now none of these are supported anymore.
@@ -5813,7 +5827,7 @@
 <Multi_key><colon><minus><minus><greater>                                           <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
 #   "⧵" U29F5 REVERSE SOLIDUS OPERATOR: likely duplicate "∖" U2216 SET MINUS
 #   with the potential to fool people into decisions causing issues, e.g.
-#   “\setminus translated as U+29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems #409”
+#   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems #409”
 #   https://github.com/tudace/tuda_latex_templates/issues/409
 #   Fonts, e.g. DejaVu Sans Mono Book, may give them a slight difference in slant.
 #   Since "∕" U2215 DIVISION SLASH does not have any *SOLIDUS OPERATOR equivalent,
