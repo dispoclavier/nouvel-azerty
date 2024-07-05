@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-06-30T1751+0200
+#                       Date : 2024-07-05T1744+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -191,6 +191,8 @@ else
 			installation=0
 			afficher 'est défectueux'
 			compose_dispoclavier=1
+		else
+			afficher 'contient Dispoclavier'
 		fi
 	fi
 fi
@@ -221,7 +223,7 @@ fi
 ## Rules/evdev.
 dossier="$X11/xkb/rules"
 fichier="$dossier/evdev"
-rules_ecrase=0
+rules_n_ecrase_pas=0
 if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
@@ -234,7 +236,8 @@ else
 		installation=0
 		afficher 'écrase le deuxième groupe vif'
 	else
-		rules_ecrase=1
+		rules_n_ecrase_pas=1
+		afficher 'n’écrase pas le deuxième groupe vif'
 	fi
 fi
 fichier="$dossier/evdev-rules-avant-dispoclavier"
@@ -262,6 +265,8 @@ else
 			installation=0
 			afficher 'est défectueux'
 			rules_dispoclavier=1
+		else
+			afficher 'contient Dispoclavier'
 		fi
 	fi
 fi
@@ -303,6 +308,8 @@ else
 	if [ "$dispotypes" -eq 1 ] && ! grep -qP 'include\s*"dispotypes"' $fichier; then
 		installation=0
 		afficher 'n’inclut pas "dispotypes"'
+	else
+		afficher 'inclut "dispotypes"'
 	fi
 fi
 fichier="$dossier/complete-types-avant-dispoclavier"
@@ -332,6 +339,8 @@ else
 	if [ "$dispoled" -eq 1 ] && ! grep -qP 'include\s*"dispoled"' $fichier; then
 		installation=0
 		afficher 'n’inclut pas "dispoled"'
+	else
+		afficher 'inclut "dispoled"'
 	fi
 fi
 fichier="$dossier/complete-compat-avant-dispoclavier"
@@ -748,7 +757,7 @@ if [ "$fonctionne" -eq 1 ]; then
 				fi
 				# Réactiver l’écrasement du deuxième groupe vif.
 				sudo cp $X11/xkb/rules/evdev sauvegarde/archive/evdev-rules.c
-				if [ "$rules_ecrase" -eq 1 ]; then
+				if [ "$rules_n_ecrase_pas" -eq 1 ]; then
 					echo 'Réactivation de l’écrasement du deuxième groupe vif.'
 					sudo sed -ri 's/\/\/\s*(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\1/' $X11/xkb/rules/evdev
 				fi
