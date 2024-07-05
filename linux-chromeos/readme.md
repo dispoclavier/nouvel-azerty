@@ -183,9 +183,9 @@ Alors que les exposants de toutes les minuscules servent d’indicateurs d’abr
 
 ### Autres symboles
 
-Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en Maj + AltFr sur leurs touches historiques. Sur leurs nouvelles places, ces symboles sont bien plus accessibles. Ainsi le [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en AltGr + AltFr + [L] pour l’intuitivité ; et le symbole micro est sur AltGr + AltFr + [F] et sur AltGr + AltFr + [M] dans la même logique.
+Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en AltGr + AltFr sur leurs touches historiques. La nouvelle place du [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en AltGr + AltFr + [L] pour l’intuitivité, comme le symbole micro est sur AltGr + AltFr + [M].
 
-En mode ASCII, quand ce sont les chiffres en indice qui sont en AltGr + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus (nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier), le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient arrondir la sélection. Avec les chiffres en exposant en Maj + AltGr et en Maj + AltFr, toujours en mode ASCII, on a les mêmes en exposant, avec le circonflexe ASCII, symbole de l’exponentiation.
+En mode ASCII, quand les chiffres en indice sont en AltGr + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient arrondir l’ensemble. Pareil pour les chiffres en exposant en Maj + AltGr et en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
 
@@ -199,7 +199,7 @@ Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.co
 
 La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisée aussi pour des séquences autres que les ponctuations avec espace fine insécable sur AltFr plus l’une des huit touches entre N et Majuscule droite ou entre P, M et Entrée. Le pavé numérique graphique dispose ainsi d’un double zéro sur AltFr + [B], qui figure aussi sur les vues du clavier. D’autres besoins sont couverts le plus mnémoniquement possible.
 
-#### Trigrammes bretons
+#### Trigramme breton
 
 Le trigramme breton « cʼh » avec lettre apostrophe est sur AltGr + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton. Sa majuscule « Cʼh » est sur Maj + AltGr + AltFr + [A], tandis que sa capitale s’insère à la place de la minuscule quand les capitales sont verrouillées. Ce n’est pas qu’il manquerait la lettre apostrophe, dans le groupe 1 de l’apostrophe.
 
@@ -207,7 +207,7 @@ Le trigramme breton « cʼh » avec lettre apostrophe est sur AltGr + Al
 
 L’espace suivie du gluon qui est le caractère régulier pour empêcher un retour à la ligne automatique : cette séquence est sur Maj + AltFr + [Espace], pour insérer une espace insécable justifiante dans LibreOffice Writer parce que l’espace insécable sur AltGr + Espace y est à chasse fixe pour espacer les ponctuations en français.
 
-L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word parce que l’espace insécable y est justifiante uniquement dans Word 2013.  œ‧ʼ⁄
+L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word parce que l’espace insécable y est justifiante uniquement dans Word 2013.
 
 L’entité nommée de l’espace insécable « &‌nbsp; » est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
 
