@@ -209,21 +209,21 @@ L’espace suivie du gluon qui est le caractère régulier pour empêcher un ret
 
 L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word parce que l’espace insécable y est justifiante uniquement dans Word 2013.
 
-L’entité nommée de l’espace insécable « &‌nbsp; » est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
+L’entité nommée de l’espace insécable « &‍nbsp; » est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
 
-En mode ASCII, l’entité numérique de l’espace fine insécable « &‌#x202F; » est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
+En mode ASCII, l’entité numérique de l’espace fine insécable « &‍#x202F; » est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
 
 #### Séquences d’échappement
 
-Les entités nommées des symboles « < » et « > », soit « &‌lt; » et « &‌gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
+Les entités nommées des symboles « < » et « > », soit « &‍lt; » et « &‍gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
 
-Les entités nommées des symboles « " » et « ' », soit « &‌quot; » et « &‌apos; », sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U]. &‌apos; est moins utilisé que &‌quot;.
+Les entités nommées des symboles « " » et « ' », soit « &‍quot; » et « &‍apos; », sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U]. &‍apos; est moins utilisé que &‍quot;.
 
 #### Références de caractères
 
-Le préfixe « &‌#x » des références de caractères hexadécimales en HTML/XML est sur AltGr + AltFr + [K]. En mode ASCII, il est aussi sur la touche de la virgule en Maj + AltFr + [?,].
+Le préfixe « &‍#x » des références de caractères hexadécimales en HTML/XML est sur AltGr + AltFr + [K]. En mode ASCII, il est aussi sur la touche de la virgule en Maj + AltFr + [?,].
 
-En mode ASCII, le préfixe « &‌# » des références de caractères décimales en HTML/XML est sur la touche du point en Maj + AltFr + [.;].
+En mode ASCII, le préfixe « &‍# » des références de caractères décimales en HTML/XML est sur la touche du point en Maj + AltFr + [.;].
 
 Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur AltGr + AltFr + [U].
 
@@ -255,7 +255,7 @@ Ce bogue a été [rapporté](https://github.com/google/extra-keyboards-for-chrom
 
 ## Typographie
 
-Ces quelques notes ne visent qu’à clarifier le [mode d’emploi condensé](#utilisation).
+Ces quelques notes visent seulement à clarifier le [mode d’emploi condensé](#utilisation) de ce nouvel AZERTY, car au-delà de quelques notions communes, la typographie française est extrêmement hétéroclite et difficile à documenter.
 
 ### Espaces
 
@@ -265,11 +265,17 @@ Sous les systèmes d’exploitation qui prennent en charge le jeu de caractères
 * L’espace insécable U+00A0, ou espace mot insécable, qui a la même largeur qu’une espace normale, et qui est justifiante dans les navigateurs et dans Word 2013, mais pas dans les autres traitements de texte ;
 * L’espace fine insécable U+202F, aussi appelée espace fine ou la fine (qui en principe est toujours insécable), à chasse fixe.
 
-C’est cette fine qui sert à espacer toutes les grandes ponctuations, ou les ponctuations doubles plus les guillemets chevrons simples. Selon [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace), même le « deux-points est précédé d'une espace fine et suivi d'une espace normale ». C’est la nouvelle école de typographie française, qui ne s’est pas formellement constituée, mais que claude72 cite déjà en 2005 sur [forums.macg.co](https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119).
+#### Nouvelle école de typographie française
 
-L’autre espace fine d’Unicode est présente depuis le début au point de code U+2009, mais elle n’est pas directement utilisable en français, car elle est sécable, contrairement à l’espace chiffre tabulaire U+2007, qui est la seule espace insécable dans cette plage d’espaces qui va de U+2000 à U+200A et où toutes les espaces autres que U+2000 et U+2001 étaient conçues comme insécables. Qu’elles ne le soient pas est une [irrégularité](https://dispoclavier.com/nouvel-azerty/#note-2250-2-a) ([archive](https://web.archive.org/web/20240524173357/https://dispoclavier.com/nouvel-azerty/#note-2250-2-a)).
+L’espace fine (insécable U+202F) sert à espacer toutes les grandes ponctuations, ou les ponctuations doubles plus les guillemets chevrons simples. Selon [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace), même le « deux-points est précédé d'une espace fine et suivi d'une espace normale ».
 
-Un autre nom de l’espace fine insécable, « espace insécable étroite », a été officialisé par calque sur son identifiant Unicode, mais il est corrigé dans les spécifications de base du Standard Unicode au chapitre 6 dans la [section consacrée aux caractères d’espacement](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834), à l’[alinéa qui parle de l’espace fine insécable](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,340), avec le terme d’« espace fine insécable » en français dans le texte anglais, et pareillement dans l’[Annexe sur la coupure de ligne](https://www.unicode.org/reports/tr14/tr14-51.html#GL). L’identifiant a été choisi de façon à ne pas faire référence à l’espace fine U+2009, prévue pour être insécable, et qui ne doit son existence en tant qu’espace sécable qu’à un acte de vandalisme, qui n’est pas documenté mais qui a visiblement été commis avant la publication du jeu de caractères universel.
+Cette nouvelle école ne s’est pas formellement constituée, mais claude72 l’a mentionnée déjà en 2005 sur [forums.macg.co](https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119).
+
+#### Risques de confusion
+
+Une autre espace fine d’Unicode est présente depuis le début au point de code U+2009, mais elle n’est pas directement utilisable en français, car elle est sécable, contrairement à l’espace chiffre tabulaire U+2007, qui est la seule espace insécable dans cette plage d’espaces allant de U+2000 à U+200A, où toutes les espaces autres que U+2000 et U+2001 étaient conçues comme insécables. Qu’elles ne le soient pas est une [irrégularité](https://dispoclavier.com/nouvel-azerty/#note-2250-2-a) ([archive](https://web.archive.org/web/20240524173357/https://dispoclavier.com/nouvel-azerty/#note-2250-2-a)).
+
+Un autre nom de l’espace fine insécable, « espace insécable étroite », a été officialisé par calque sur son identifiant Unicode, mais il est corrigé dans les spécifications de base du Standard Unicode au chapitre 6 dans la [section consacrée aux caractères d’espacement](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G1834), à l’[alinéa qui parle de l’espace fine insécable](https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#page=13&zoom=100,0,340), avec le terme d’« espace fine insécable » en français dans le texte anglais, et pareillement dans l’[Annexe sur la coupure de ligne](https://www.unicode.org/reports/tr14/tr14-51.html#GL). L’identifiant a été choisi de façon à ne pas faire référence à l’espace fine U+2009, prévue pour être insécable, et qui ne doit son existence en tant qu’espace sécable qu’à un acte de vandalisme non documenté mais visiblement commis avant le lancement du jeu de caractères universel.
 
 #### Espacement vieille école
 
@@ -295,26 +301,30 @@ En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscu
 
 #### Guillemets en langues voisines
 
-Comme les mêmes guillemets servent aussi en allemand d’Allemagne et d’Autriche, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait en Majuscule sur les mêmes touches mais dans l’autre sens, en commençant par le guillemet pointant vers la fin [»] sur [*] ou [›] sur [$], et en finissant par le guillemet pointant vers le début [«] sur [ù] ou [‹] sur [^].
+En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en Majuscule et dans l’autre sens, en commençant par le guillemet pointant vers la fin [»] sur [*], ou [›] sur [$], et en finissant par le guillemet pointant vers le début [«] sur [ù], ou [‹] sur [^].
 
 (On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » [<] ou « supérieur à » [>] (réfléchis eux aussi), si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
 
-Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, à saisir donc en Majuscule (et en mode français). Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en AltFr sur les mêmes touches, car depuis 2015, la Suisse romande applique aux ponctuations exactement les mêmes règles d’espacement que la France.
+Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, comme ils sont disposés en Majuscule. Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en AltFr sur les mêmes touches. Car depuis 2015, la Suisse romande applique aux ponctuations exactement les mêmes règles d’espacement que la France.
 
 #### Guillemets de distanciation
 
-L’usage des guillemets chevrons simples pour les citations incluses permet de réserver les « guillemets anglais » aux usages où les guillemets ne signalent pas une citation, mais une distanciation. Dans ce sens, les guillemets sont aussi appelés « guillemets d’ironie », bien que l’ironie ne soit pas la seule connotation véhiculée par ces guillemets, qui en anglais s’appellent avec justesse « scare quotes ».
+L’usage des guillemets chevrons simples pour les citations incluses permet de réserver les « guillemets anglais » aux usages où les guillemets ne signalent pas une citation, mais une distanciation. Dans ce sens, les guillemets sont aussi appelés « guillemets d’ironie », bien que l’ironie ne soit pas la seule connotation qu’ils véhiculent. Aussi s’appellent-ils en anglais « scare quotes ».
 
-Plutôt que les guillemets doubles génériques de la touche du [3], les guillemets de distanciation et les guillemets en anglais sont les guillemets apostrophes doubles ou simples, dont les ouvrants sont dans la touche morte accent circonflexe, inchangée sur ce nouvel AZERTY en mode français, et les fermants, dans la touche morte accent aigu sur la touche à côté, [$].
+Plutôt que les guillemets doubles génériques de la touche du [3], les guillemets de distanciation et les guillemets en anglais – que ce soit en anglais britannique ou en anglais américain – sont les guillemets apostrophes doubles (distanciation en français, premier niveau en anglais américain) ou simples (premier niveau en anglais britannique), dont les ouvrants en français et en anglais sont dans la touche morte accent circonflexe, et les fermants, dans la touche morte accent aigu sur la touche à côté, [$].
 
 En retour, ce système de guillemets de distanciation permet de réserver les guillemets chevrons aux citations. À la clé, les textes gagnent en univocité, et partant, en [clarté](https://www.ledevoir.com/societe/488139/mises-aux-points-les-antiguillemets-comme-symboles-de-la-postverite).
 
-## Extensions de fichiers
+## Notes techniques
 
-À l’usage, la plupart de ces fichiers sont sans extension. Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension `.cpp` a été choisie pour éviter `dispocla.c` (les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives). De toute manière, les statistiques de langage sont désactivées.
+### Usage du liant
 
-## Notes
+Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur touche vive sur d’autres dispositions de clavier à cause de son utilisation pour empêcher les ligatures typographiques inappropriées. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + W, et le liant U+200D sur AltGr + AltFr + X. Les deux sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer quelque chose d’invisible qui ne soit pas l’espace nulle ou césure conditionnelle U+200B, qui elle, est disposée sur Maj + AltGr + Espace vu sa grande utilité pour fragmenter les URL (après leur conversion en hyperlien) pour leur affichage dans les navigateurs non conformes à Unicode (qui spécifie que l’oblique doit fonctionner comme les traits d’union.
 
-L’échappement des entités HTML par « &‌amp; » est évité grâce à l’insertion d’un antiliant après la perluète, afin de maintenir la lisibilité des séquences aussi bien en texte brut qu’en affichage Markdown.
+### Extensions de fichiers
 
-Ce Lisez-moi est inclus dans les versions sous le nom de `Mode-d-emploi.md`.
+À l’usage, la plupart des fichiers pour Linux de ce nouvel AZERTY sont sans extension. Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension `.cpp` a été choisie pour éviter `dispocla.c`. (Les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives.) Dans ce dépôt, les statistiques de langage sont de toute manière désactivées.
+
+### Nom de fichier
+
+Ce Lisez-moi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier où il se trouve. Il est inclus dans le dossier « `Nouvel-AZERTY-Linux-`version`.zip` » sous le nom de `Mode-d-emploi.md`.
