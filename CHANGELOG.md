@@ -3,6 +3,11 @@
 ## 3.1.0 (projet)
 
 * Disposition : Mettre le liant "‍" U+200D à la place de l’antiliant "‌" U+200C sur AltGr + AltFr + X, qui prend la place du deux-points sur AltGr + AltFr + W, qui prend la place de la barre de fraction "⁄" U+2044 sur (Maj puis) AltGr + AltFr + Q (depuis 1.0.9), qui prend la place du symbole micro "µ" U+00B5 sur AltGr + AltFr + F, qui est sur AltGr + AltFr + M. (dispocla.cpp [157d828](https://github.com/dispoclavier/nouvel-azerty/commit/157d828f913b15f50666cc6d71e2124765c6390c))
+* Installation : Ajouter des messages affichés pendant le diagnostic. (installer.sh [38cd80b](https://github.com/dispoclavier/nouvel-azerty/commit/38cd80b1ce9b9931f57fb1e5f81901c037f2abd3))
+* Mode d’emploi :
+	* Mettre à jour. (readme.md [ecb2560](https://github.com/dispoclavier/nouvel-azerty/commit/ecb256088c841239f345fb9ed78bed970bf1ef4f))
+	* Améliorer. (readme.md [0d21efa](https://github.com/dispoclavier/nouvel-azerty/commit/0d21efa6e4f9a53804b8c59bb1a391839a8a5617))
+* Documentation : Ajouter et mettre à jour des infobulles. (generate-deadkey-tables.pl [998c71d](https://github.com/dispoclavier/nouvel-azerty/commit/998c71db225a5bf180a1fd2fcc85b71726d18cab), generate-multikey-tables.pl [c3af782](https://github.com/dispoclavier/nouvel-azerty/commit/c3af782d1cc9143b8ad2aa98d5103827e57cb377), generate-math-table.pl [6a4d1c9](https://github.com/dispoclavier/nouvel-azerty/commit/6a4d1c9b3ac6ff4e6583b9f4bca86500c10402e0))
 
 ## 3.0.0 (2024-07-04)
 
