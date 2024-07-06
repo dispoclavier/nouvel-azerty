@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-06-26T1149+0200
+# 2024-07-06T0948+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -174,8 +174,9 @@ while ( my $line = <INPUT> ) {
 				|| $line =~ /<UEFD9>/
 				|| $line =~ /<UEFDA>/
 			) {
-				# Dead keys.
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + += ou en mode ASCII, AltGr\/Option + £\$">¦<\/kbd>/g;
+
+				# Convert dead keys.
+				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + += ou AltGr\/Option + £\$ en mode ASCII">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
 				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$ ou Maj + AltGr\/Option + U">aigu<\/kbd>/g;
@@ -213,7 +214,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 
-				# Invisibles or confusables.
+				# Mark up invisibles or confusables.
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
 				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— tiret cadratin<\/kbd>/g;
@@ -223,17 +224,18 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + .;">[fine insécable]!<\/kbd>/g;
 				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ?,">[fine insécable]?<\/kbd>/g;
 
-				# Tooltips.
+				# Add tooltips.
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
 				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
+				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche 5( en mode français, ou touche %ù en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
 				$line =~ s/<degree>/<span class="tooltip" title="Symbole degré Maj + °)">°<\/span>/g;
 				$line =~ s/<multiply>/<span class="tooltip" title="Symbole multiplication AltFr + C">×<\/span>/g;
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
 
-				# ASCII and iconic.
+				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<EuroSign>/€/g;
@@ -241,7 +243,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<backslash>/\\/g;
 				$line =~ s/<asciitilde>/~/g;
 				$line =~ s/<at>/@/g;
-				$line =~ s/<apostrophe>/&#x27;/g;
 				$line =~ s/<braceleft>/{/g;
 				$line =~ s/<braceright>/}/g;
 				$line =~ s/<ampersand>/&amp;/g;
