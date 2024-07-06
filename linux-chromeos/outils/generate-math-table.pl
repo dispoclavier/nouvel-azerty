@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-06-26T1149+0200
+# 2024-07-06T0949+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -106,11 +106,12 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/> </></g;
 
 				# Add tooltips.
-				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + £\$">¦<\/span>/g;
+				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + += ou AltGr\/Option + £\$ en mode ASCII">¦<\/span>/g;
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
+				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche 5( en mode français, ou touche %ù en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
 
-				# Convert ASCII and iconic.
+				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
 				$line =~ s/<percent>/%/g;
 				$line =~ s/<EuroSign>/€/g;
@@ -118,7 +119,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<backslash>/\\/g;
 				$line =~ s/<asciitilde>/~/g;
 				$line =~ s/<at>/@/g;
-				$line =~ s/<apostrophe>/'/g;
 				$line =~ s/<braceleft>/{/g;
 				$line =~ s/<braceright>/}/g;
 				$line =~ s/<ampersand>/&amp;/g;
