@@ -10,7 +10,9 @@
 	* Mettre à jour. (readme.md [ecb2560](https://github.com/dispoclavier/nouvel-azerty/commit/ecb256088c841239f345fb9ed78bed970bf1ef4f))
 	* Améliorer. (readme.md [0d21efa](https://github.com/dispoclavier/nouvel-azerty/commit/0d21efa6e4f9a53804b8c59bb1a391839a8a5617))
 	* Compléter. (readme.md [b2012f1](https://github.com/dispoclavier/nouvel-azerty/commit/b2012f16d4946f2053e1288e1fa87fbcbe6c9fd9))
-* Documentation : Ajouter et mettre à jour des infobulles. (generate-deadkey-tables.pl [998c71d](https://github.com/dispoclavier/nouvel-azerty/commit/998c71db225a5bf180a1fd2fcc85b71726d18cab), generate-multikey-tables.pl [c3af782](https://github.com/dispoclavier/nouvel-azerty/commit/c3af782d1cc9143b8ad2aa98d5103827e57cb377), generate-math-table.pl [6a4d1c9](https://github.com/dispoclavier/nouvel-azerty/commit/6a4d1c9b3ac6ff4e6583b9f4bca86500c10402e0))
+* Documentation :
+	* Corriger, compléter. (compose-1.yml [8bd49b1](https://github.com/dispoclavier/nouvel-azerty/commit/8bd49b1d5bbd93e01e8622c8621274b8472a35b9), compose-2.yml [22b8333](https://github.com/dispoclavier/nouvel-azerty/commit/22b83333eb44737f444e5abc7b603e4beaae18b5), compose-3.yml [9a3cb00](https://github.com/dispoclavier/nouvel-azerty/commit/9a3cb0042658aaa48f7b8d0a55b452a73272e418))
+	* Ajouter et mettre à jour des infobulles. (generate-deadkey-tables.pl [998c71d](https://github.com/dispoclavier/nouvel-azerty/commit/998c71db225a5bf180a1fd2fcc85b71726d18cab), generate-multikey-tables.pl [c3af782](https://github.com/dispoclavier/nouvel-azerty/commit/c3af782d1cc9143b8ad2aa98d5103827e57cb377), generate-math-table.pl [6a4d1c9](https://github.com/dispoclavier/nouvel-azerty/commit/6a4d1c9b3ac6ff4e6583b9f4bca86500c10402e0))
 
 ## 3.0.0 (2024-07-04)
 
