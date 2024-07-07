@@ -197,6 +197,7 @@
 #   By giving the new name, CLDR intends to improve familiarity, as opposed to
 #   names based on “ZERO WIDTH”.
 #   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
+#   Conversely, "‍" U200D ZERO WIDTH JOINER is the cursive joiner.
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
