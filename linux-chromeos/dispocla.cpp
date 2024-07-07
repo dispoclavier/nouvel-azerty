@@ -1,4 +1,4 @@
-//                       Date: 2024-07-04T2038+0200
+//                       Date: 2024-07-07T1750+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -742,9 +742,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AD05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,             figdash,              U1F60A ],
-		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,             figdash,              U1F60A ]
-	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; figdash is the tabular minus sign; 😊 U1F60A SMILING FACE WITH SMILING EYES (worldwide fifth-most used emoji, fourth-most used smiling emoji in France)
+		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,              endash,              U1F60A ],
+		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,              endash,              U1F60A ]
+	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; U2013 – EN DASH (Unicode-recommended for noting intervals); 😊 U1F60A SMILING FACE WITH SMILING EYES (worldwide fifth-most used emoji, fourth-most used smiling emoji in France)
 
 	key <AD06> {
 		[                   y,                   Y,          dead_greek,                 yen,          dead_greek,               U02B8,         Greek_OMEGA,              U1F60D ],
@@ -809,9 +809,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AC05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,              endash,              U1F44F ],
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,              endash,              U1F44F ]
-	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2013 – EN DASH (Unicode-recommended for noting intervals); U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ],
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ]
+	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC06> {
 		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,           plusminus,              U1F44D ],
@@ -859,12 +859,12 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ],
 		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ]
-	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C "‌" ZERO WIDTH NON-JOINER; U1F622 😢 CRYING FACE 19th-ranking emoji
+	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C ZERO WIDTH NON-JOINER; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ],
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ]
-	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D "‍" ZERO WIDTH JOINER; U1F31F 🌟 GLOWING STAR emoji
+	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D ZERO WIDTH JOINER; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
 		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F631 ],
