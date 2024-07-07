@@ -1,17 +1,20 @@
 # Journal des modifications
 
-## 3.1.0 (projet)
+## 3.1.0 (2024-07-07)
 
-* Disposition : Mettre le liant "‍" U+200D à la place de l’antiliant "‌" U+200C sur AltGr + AltFr + X, qui prend la place du deux-points sur AltGr + AltFr + W, qui prend la place de la barre de fraction "⁄" U+2044 sur (Maj puis) AltGr + AltFr + Q (depuis 1.0.9), qui prend la place du symbole micro "µ" U+00B5 sur AltGr + AltFr + F, qui est sur AltGr + AltFr + M. (dispocla.cpp [157d828](https://github.com/dispoclavier/nouvel-azerty/commit/157d828f913b15f50666cc6d71e2124765c6390c))
+* Disposition :
+	* Mettre le liant "‍" U+200D à la place de l’antiliant "‌" U+200C sur AltGr + AltFr + X, qui prend la place du deux-points sur AltGr + AltFr + W, qui prend la place de la barre de fraction "⁄" U+2044 sur (Maj puis) AltGr + AltFr + Q (depuis 1.0.9), qui prend la place du symbole micro "µ" U+00B5 sur AltGr + AltFr + F, qui est sur AltGr + AltFr + M. (dispocla.cpp [157d828](https://github.com/dispoclavier/nouvel-azerty/commit/157d828f913b15f50666cc6d71e2124765c6390c))
+	* Prendre en charge le gluon "⁠" U+2060 par touche vive sur AltGr + AltFr + G à la place du tiret demi-cadratin "–" U+2013, qui prend la place du tiret tabulaire "‒" U+2012 sur AltGr + AltFr + T, qui est dans le groupe 1 du signe moins "−" U+2212, et qui ne doit pas être sur touche vive. (dispocla.cpp [2b0786b](https://github.com/dispoclavier/nouvel-azerty/commit/2b0786bff734f6ea883a67e542373a2bbdd36a27))
 * Installation : Ajouter des messages affichés pendant le diagnostic. (installer.sh [38cd80b](https://github.com/dispoclavier/nouvel-azerty/commit/38cd80b1ce9b9931f57fb1e5f81901c037f2abd3))
 * Mode d’emploi :
 	* Mettre à jour. (readme.md [ecb2560](https://github.com/dispoclavier/nouvel-azerty/commit/ecb256088c841239f345fb9ed78bed970bf1ef4f))
 	* Améliorer. (readme.md [0d21efa](https://github.com/dispoclavier/nouvel-azerty/commit/0d21efa6e4f9a53804b8c59bb1a391839a8a5617))
+	* Compléter. (readme.md [b2012f1](https://github.com/dispoclavier/nouvel-azerty/commit/b2012f16d4946f2053e1288e1fa87fbcbe6c9fd9))
 * Documentation : Ajouter et mettre à jour des infobulles. (generate-deadkey-tables.pl [998c71d](https://github.com/dispoclavier/nouvel-azerty/commit/998c71db225a5bf180a1fd2fcc85b71726d18cab), generate-multikey-tables.pl [c3af782](https://github.com/dispoclavier/nouvel-azerty/commit/c3af782d1cc9143b8ad2aa98d5103827e57cb377), generate-math-table.pl [6a4d1c9](https://github.com/dispoclavier/nouvel-azerty/commit/6a4d1c9b3ac6ff4e6583b9f4bca86500c10402e0))
 
 ## 3.0.0 (2024-07-04)
 
-Disruption : les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule de l'abréviation Numéro (avec le o en exposant) puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr + N, et afin que le trigramme breton (avec la lettre apostrophe) bénéficie de la même logique sur A, ainsi que pour faciliter la saisie des minuscules en exposant (comme indicateurs d’abréviation, indicateurs ordinaux), en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
+Disruption : les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule de l’abréviation Numéro (avec le o en exposant) puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr + N, et afin que le trigramme breton (avec la lettre apostrophe) bénéficie de la même logique sur A, ainsi que pour faciliter la saisie des minuscules en exposant (comme indicateurs d’abréviation, indicateurs ordinaux), en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
 
 * Permuter les niveaux 6 et 7. (dispocla.cpp [eda4dd1](https://github.com/dispoclavier/nouvel-azerty/commit/eda4dd14bcca8f876eccbb5e68e9fccadcf130ee), [c74e5a8](https://github.com/dispoclavier/nouvel-azerty/commit/c74e5a82814311b1716389dae0ab351c1e3b2068), [e3924aa](https://github.com/dispoclavier/nouvel-azerty/commit/e3924aae79e0ebc30a08b21da8cd2e6fc47c92ed), [17f0984](https://github.com/dispoclavier/nouvel-azerty/commit/17f0984949b62b5fcd9825e618e7341ce596d9f6), dispotypes.c [fc8683b](https://github.com/dispoclavier/nouvel-azerty/commit/fc8683be9e555c4d5b86a9a4d6e55ea79502153f), [accfc83](https://github.com/dispoclavier/nouvel-azerty/commit/accfc83f04a40d4deb8f2511f8fcd41a274ac9cc))
 * Remettre "=" U+003D comme caractère en Contrôle plutôt que "+" U+002B. (dispotypes.c [accfc83](https://github.com/dispoclavier/nouvel-azerty/commit/accfc83f04a40d4deb8f2511f8fcd41a274ac9cc))
