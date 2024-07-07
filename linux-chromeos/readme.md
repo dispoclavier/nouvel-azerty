@@ -189,7 +189,7 @@ En mode ASCII, quand les chiffres en indice sont en AltGr + AltFr, ces indic
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
 
-Les infobulles sur la [vue interactive](https://dispoclavier.com/nouvel-azerty/#nouvel-azerty) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
+Les infobulles sur la [vue interactive](https://dispoclavier.com/nouvel-azerty/#vue-interactive) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
 
 ### Émojis
 
@@ -198,6 +198,10 @@ Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.co
 ### Séquences
 
 La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisée aussi pour des séquences autres que les ponctuations avec espace fine insécable sur AltFr plus l’une des huit touches entre N et Majuscule droite ou entre P, M et Entrée. Le pavé numérique graphique dispose ainsi d’un double zéro sur AltFr + [B], qui figure aussi sur les vues du clavier. D’autres besoins sont couverts le plus mnémoniquement possible.
+
+#### Abréviation numéro
+
+Écrite avec un o en exposant, souvent émulé par le symbole degré, l’abréviation « numéro » est facile à saisir grâce à sa disposition comme séquence tout-en-un sur AltGr + AltFr + [N], et sa majuscule, en ajoutant Maj, sur Maj + AltGr + AltFr + [N].
 
 #### Trigramme breton
 
