@@ -150,6 +150,7 @@
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
 #   These layouts make extensive use of added keysyms as in keysymdef.h:97.
+#   /usr/X11R6/include/X11/keysymdef.h
 #   https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
 #
 #   The scheme using Private Use characters is found on FDO:
