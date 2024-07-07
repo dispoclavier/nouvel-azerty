@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
-#                       Date: 2024-07-04T0702+0200
+#                       Date: 2024-07-07T1831+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.0.0" # See # # Notes about syntax
+<UEFA0>                     : "version 3.1.0" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -19824,12 +19824,13 @@
 #      and ChromeOS it is ineffective.
 #
 #
-#   Head character
+#   Dead character
 #
 #   For iconicity, the sequences with spaces that yield combining diacritics on
 #   most deadkeys, output a white flag, like dead_currency outputs ¤, since the
-#   flag used as a base character for subdivision flags is in the SMP:
-#   "🏴" U1F3F4 WAVING BLACK FLAG
+#   flag used as a base character for subdivision flags is in the SMP, and thus
+#   is cross-platform incompatible: "🏴" U1F3F4 WAVING BLACK FLAG
+#
 #   Nevertheless, for completeness, this waving black flag is output when using
 #   backslash as a base character.
 #
@@ -19848,8 +19849,8 @@
 <Multi_key><equal>                                                                     <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <UEFD7>                                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><equal>                                                                         <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                    <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER
+<UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
+<Multi_key><equal>                                                                    <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
 <Multi_key><equal>                                                               <dead_circumflex> : "⁠" U2060 # WORD JOINER
 <UEFD7>                                                                           <dead_abovering> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
@@ -22661,6 +22662,7 @@
 #   By giving the new name, CLDR intends to improve familiarity, as opposed to
 #   names based on “ZERO WIDTH”.
 #   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
+#   Conversely, "‍" U200D ZERO WIDTH JOINER is the cursive joiner.
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
