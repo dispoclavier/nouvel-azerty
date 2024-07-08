@@ -1,4 +1,4 @@
-//                       Date: 2024-07-07T1750+0200
+//                       Date: 2024-07-08T1839+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -489,19 +489,6 @@
 //
 // Given access to uppercase must be intuitive, digits are mapped on level 3.
 //
-//
-// ### Toggle keys
-//
-// Caps Lock is dedicated to uppercase. As a consequence, the digits require
-// an extra toggle, that is called “ModLock”, short for Mode Lock, and it is
-// implemented as a group toggle. Other non-alphabetic keys are also affected
-// by ModLock, making up for what may be referred to as an ASCII mode without
-// being limited to ASCII, as in ASCII mode, row E and keys D12, C11, C12 are
-// able to output subscript digits, signs and punctuation that are not there in
-// default mode, where keypad emoji are easier accessed instead. ASCII symbols
-// and backwards compatible dead keys printed on these keys are also accessible
-// in default mode, but not in ASCII mode.
-//
 
 default partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "kbfrFRs" {
@@ -553,14 +540,24 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ASCII mode lock toggle key
 	//
-	// The second graphic toggle changes between default mode, that is called the
-	// French mode for instance, and the ASCII mode. It is implemented as a group
-	// toggle between first group and last group, i.e. group 1 and group 2, while
-	// repurposing NumLock is not an option, due to its use on compact keyboards;
-	// key types doing that are discarded in xkb/types/level5(56, 118). For this
-	// additional graphic toggle, key TLDE is used, and so becomes the Group Lock
-	// toggle key, or “ModLock” for short. ModLock affects the alphanumeric block
-	// and also the numpad with respect to its graphic extensions.
+	// Caps Lock is dedicated to uppercase. As a consequence, the digits require
+	// an extra toggle, that is called “ModLock”, short for Mode Lock. The second
+	// graphic toggle as ModLock may be referred to, changes between default mode
+	// or French mode for instance, and an ASCII mode. It affects non-alphabetic
+	// keys, because alphabetic keys must not be affected by ModLock with respect
+	// to cross-platform compatibility.
+	//
+	// ASCII mode is not limited to ASCII, as row E and keys D12, C11, C12 output
+	// subscript digits, signs and punctuation not there in default mode, where
+	// keypad emoji are easier accessed instead. ASCII symbols printed on these
+	// keys are also accessible in default mode, but not in ASCII mode.
+	//
+	// ModLock is implemented as a group toggle between ISO first group and ISO
+	// last group, i.e. group 1 and group 2. Repurposing NumLock is not an option
+	// due to its use on compact keyboards; key types doing that are discarded in
+	// xkb/types/level5(56, 118).
+	//
+	// The key used for this additional graphic toggle is TLDE.
 	//
 	// ISO_First_Group is interpreted as: action= LockGroup(group=1)
 	// ISO_Last_Group  is interpreted as: action= LockGroup(group=2)
@@ -621,6 +618,41 @@ xkb_symbols "kbfrFRs" {
 	//                                   Graphic numpad
 	//                          ASCII symbol .... Dead key
 	//        Latin letter ............................... Abbreviation indicator
+	//
+	//
+	// Emoji
+	//
+	// A number of Supplemental Multilingual Plane emoji are mapped on live keys.
+	// Due to cross-platform compatibility issues, SMP emoji are not supported by
+	// dead keys, while all emoji in the Basic Multilingual Plane are supported
+	// by the group selector dead key and a few Multi_key sequences. Conversely,
+	// available live key positions are reserved for SMP emoji. The selection for
+	// live key support is based on frequency and some additional criteria.
+	//
+	// The resulting accessibility bias is a consequence of Microsoft’s bad TSF
+	// design, that also impacts natural languages, as it unsupports all composed
+	// letters expected to be input by dead keys.
+	//
+	// The two emoji-related variation selectors are in group 10 on key E, D03,
+	// for emoji style, VS16 UFE0F, and on key T, D05, for text style, VS15 UFE0E.
+	//
+	// The five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
+	// "🏻" U1F3FB, "🏼" U1F3FC, "🏽" U1F3FD, "🏾" U1F3FE, "🏿" U1F3FF are in
+	// group 10 on D06..D10 as an exception to the rule that SMP emoji are not in
+	// dead keys.
+	//
+	// Emoji full list:
+	// https://unicode.org/emoji/charts/full-emoji-list.html
+	//
+	// Source list:
+	// https://unicode.org/Public/emoji/13.0/emoji-sequences.txt
+	//
+	// Specification:
+	// https://unicode.org/reports/tr51/
+	//
+	// Emoji frequency figures are based on:
+	// https://home.unicode.org/emoji/emoji-frequency/
+	// https://www.futurity.org/emoji-countries-1328712-2-2/
 	//
 	//
 	// Column width
@@ -867,9 +899,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D ZERO WIDTH JOINER; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
-		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F631 ],
-		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F631 ]
-	}; // U1D9C ᶜ MODIFIER LETTER SMALL C; UEF8E '&lt;'; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji
+		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F62D ],
+		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F62D ]
+	}; // U1D9C ᶜ MODIFIER LETTER SMALL C; UEF8E '&lt;'; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji
 
 	key <AB04> {
 		[                   v,                   V,             greater,            division,          dead_caron,               U1D5B,               UEF8F,              U1F496 ],
@@ -897,9 +929,9 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
-		[              period,              exclam,              exclam,               UEF60,       dead_belowdot,              exclam,              U1F62D,              U1F4E3 ],
+		[              period,              exclam,              exclam,               UEF60,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
 		[              period,              exclam,              exclam,              period,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
-	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
+	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
