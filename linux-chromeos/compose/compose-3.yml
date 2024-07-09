@@ -123,16 +123,20 @@
 #   means to remember the symbols.
 #
 #
-# # Emoji
+# # Emoji in symbol groups
 #
 #   Supporting all emoji in the Basic Multilingual Plane except Chinese letter
-#   emoji makes sense because input by dead keys is cross-platform compatible.
+#   emoji makes sense because input by dead keys is cross-platform compatible,
+#   whereas SMP emoji are excluded from this scheme because of cross-platform
+#   incompatibilities due to design mistakes in Windows, where keyboard layouts
+#   have been coded by a single developer whose errors persistently degraded
+#   the usability of most of the world’s computers.
 #
 #   A number of BMP emoji are supported alternatively or only elsewhere:
 #
 #       * See # # Legal symbols
-#       * See # # Western zodiacal signs emoji
-#       * See # # Emoji
+#       * See # # Western Zodiacal Signs
+#       * See # # Emoji by Multi_key
 #       * See #   Arrow emoji
 #
 #   A number of Supplemental Multilingual Plane emoji are mapped on live keys.
@@ -141,12 +145,15 @@
 #   for emoji style, VS16 UFE0F, and on key T, D05, for text style, VS15 UFE0E.
 #
 #   The five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
-#   are in group 10 on D06..D10.
+#   "🏻" U1F3FB, "🏼" U1F3FC, "🏽" U1F3FD, "🏾" U1F3FE, "🏿" U1F3FF are in group 10
+#   on D06..D10.
 #
 #   Emoji full list:
 #   https://unicode.org/emoji/charts/full-emoji-list.html
+#
 #   The source list:
 #   https://unicode.org/Public/emoji/13.0/emoji-sequences.txt
+#
 #   The specification:
 #   https://unicode.org/reports/tr51/
 #
@@ -841,12 +848,20 @@
 # # C01
 #
 #   The first three positions are inaccessible by Multi_key equivalents, due
-#   to an inavoidable interference of numbersign with itself. Hence the symbols
-#   in these positions, for instance the ballot box and its 2 filled-in clones,
-#   are duplicated after the emoji. Other squares are available elsewhere, too.
+#   to an inavoidable interference of numbersign with itself. But these can be
+#   input by Multi_key using other sequences.
+#   See #   Checkboxes
+#
+#   Other squares, too, are available elsewhere.
 #   See #   Square emoji
 #   See # # Geometric Shapes in block U25A0 used in mathematics
 #   See # WHITE SQUARE WITH LEFTWARDS TICK
+#
+#   The black or white square emoji, coming in four sizes as U25AA, U25AB,
+#   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color and also
+#   have another input composition alternative.
+#   See # # B01
+#   See #   Square emoji
 #
 <UEFD0>                                                                               <numbersign> : "☐" U2610 # BALLOT BOX
 <Multi_key><numbersign>                                                               <numbersign> : "☐" U2610 # BALLOT BOX
@@ -864,22 +879,22 @@
 <Multi_key><numbersign><KP_4>                                                         <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                          <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                           <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
-<UEFD0><5>                                                                            <numbersign> : "☐" U2610 # BALLOT BOX
-<Multi_key><numbersign><5>                                                            <numbersign> : "☐" U2610 # BALLOT BOX
-<UEFD0><KP_5>                                                                         <numbersign> : "☐" U2610 # BALLOT BOX
-<Multi_key><numbersign><KP_5>                                                         <numbersign> : "☐" U2610 # BALLOT BOX
-<UEFD0><6>                                                                            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-<Multi_key><numbersign><6>                                                            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-<UEFD0><KP_6>                                                                         <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-<Multi_key><numbersign><KP_6>                                                         <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-<UEFD0><7>                                                                            <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><numbersign><7>                                                            <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<UEFD0><KP_7>                                                                         <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><numbersign><KP_7>                                                         <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<UEFD0><8>                                                                            <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
-<Multi_key><numbersign><8>                                                            <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
-<UEFD0><KP_8>                                                                         <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
-<Multi_key><numbersign><KP_8>                                                         <numbersign> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<UEFD0><5>                                                                            <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><numbersign><5>                                                            <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<UEFD0><KP_5>                                                                         <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><numbersign><KP_5>                                                         <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<UEFD0><6>                                                                            <numbersign> : "◾" U25FE # BLACK MEDIUM SMALL SQUARE emoji
+<Multi_key><numbersign><6>                                                            <numbersign> : "◾" U25FE # BLACK MEDIUM SMALL SQUARE emoji
+<UEFD0><KP_6>                                                                         <numbersign> : "◾" U25FE # BLACK MEDIUM SMALL SQUARE emoji
+<Multi_key><numbersign><KP_6>                                                         <numbersign> : "◾" U25FE # BLACK MEDIUM SMALL SQUARE emoji
+<UEFD0><7>                                                                            <numbersign> : "◼" U25FC # BLACK MEDIUM SQUARE emoji
+<Multi_key><numbersign><7>                                                            <numbersign> : "◼" U25FC # BLACK MEDIUM SQUARE emoji
+<UEFD0><KP_7>                                                                         <numbersign> : "◼" U25FC # BLACK MEDIUM SQUARE emoji
+<Multi_key><numbersign><KP_7>                                                         <numbersign> : "◼" U25FC # BLACK MEDIUM SQUARE emoji
+<UEFD0><8>                                                                            <numbersign> : "⬛" U2B1B # BLACK LARGE SQUARE emoji
+<Multi_key><numbersign><8>                                                            <numbersign> : "⬛" U2B1B # BLACK LARGE SQUARE emoji
+<UEFD0><KP_8>                                                                         <numbersign> : "⬛" U2B1B # BLACK LARGE SQUARE emoji
+<Multi_key><numbersign><KP_8>                                                         <numbersign> : "⬛" U2B1B # BLACK LARGE SQUARE emoji
 <UEFD0><9>                                                                            <numbersign> : "♒" U2652 # AQUARIUS emoji
 <Multi_key><numbersign><9>                                                            <numbersign> : "♒" U2652 # AQUARIUS emoji
 <UEFD0><KP_9>                                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
@@ -1420,6 +1435,12 @@
 #
 # # B01
 #
+#   The black or white square emoji, coming in four sizes as U25AA, U25AB,
+#   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color and also
+#   have another input composition alternative.
+#   See # # C01
+#   See #   Square emoji
+#
 <UEFD0>                                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
 <Multi_key><numbersign>                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
 <UEFD0><UEFD0>                                                                             <slash> : "÷" U00F7 # DIVISION SIGN
@@ -1430,32 +1451,32 @@
 <Multi_key><numbersign><KP_3>                                                          <KP_Divide> : "➗" U2797 # HEAVY DIVISION SIGN emoji
 <UEFD0><UEFD0><UEFD0>                                                                      <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
 <Multi_key><numbersign><numbersign><numbersign>                                            <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<UEFD0><4>                                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><4>                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
-<UEFD0><KP_4>                                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><KP_4>                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <slash> : "〰" U3030 # WAVY DASH emoji
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <slash> : "〰" U3030 # WAVY DASH emoji
-<UEFD0><5>                                                                                 <slash> : "⛆" U26C6 # RAIN
-<Multi_key><numbersign><5>                                                                 <slash> : "⛆" U26C6 # RAIN
-<UEFD0><KP_5>                                                                          <KP_Divide> : "⛆" U26C6 # RAIN
-<Multi_key><numbersign><KP_5>                                                          <KP_Divide> : "⛆" U26C6 # RAIN
-<UEFD0><6>                                                                                 <slash> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><numbersign><6>                                                                 <slash> : "⊢" U22A2 # RIGHT TACK
-<UEFD0><KP_6>                                                                          <KP_Divide> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><numbersign><KP_6>                                                          <KP_Divide> : "⊢" U22A2 # RIGHT TACK
-<UEFD0><7>                                                                                 <slash> : "⊣" U22A3 # LEFT TACK
-<Multi_key><numbersign><7>                                                                 <slash> : "⊣" U22A3 # LEFT TACK
-<UEFD0><KP_7>                                                                          <KP_Divide> : "⊣" U22A3 # LEFT TACK
-<Multi_key><numbersign><KP_7>                                                          <KP_Divide> : "⊣" U22A3 # LEFT TACK
-<UEFD0><8>                                                                                 <slash> : "⊥" U22A5 # UP TACK
-<Multi_key><numbersign><8>                                                                 <slash> : "⊥" U22A5 # UP TACK
-<UEFD0><KP_8>                                                                          <KP_Divide> : "⊥" U22A5 # UP TACK
-<Multi_key><numbersign><KP_8>                                                          <KP_Divide> : "⊥" U22A5 # UP TACK
-<UEFD0><9>                                                                                 <slash> : "⊤" U22A4 # DOWN TACK
-<Multi_key><numbersign><9>                                                                 <slash> : "⊤" U22A4 # DOWN TACK
-<UEFD0><KP_9>                                                                          <KP_Divide> : "⊤" U22A4 # DOWN TACK
-<Multi_key><numbersign><KP_9>                                                          <KP_Divide> : "⊤" U22A4 # DOWN TACK
+<UEFD0><4>                                                                                 <slash> : "⛆" U26C6 # RAIN
+<Multi_key><numbersign><4>                                                                 <slash> : "⛆" U26C6 # RAIN
+<UEFD0><KP_4>                                                                          <KP_Divide> : "⛆" U26C6 # RAIN
+<Multi_key><numbersign><KP_4>                                                          <KP_Divide> : "⛆" U26C6 # RAIN
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                               <slash> : "⛆" U26C6 # RAIN
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                <slash> : "⛆" U26C6 # RAIN
+<UEFD0><5>                                                                                 <slash> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><numbersign><5>                                                                 <slash> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<UEFD0><KP_5>                                                                          <KP_Divide> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><numbersign><KP_5>                                                          <KP_Divide> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<UEFD0><6>                                                                                 <slash> : "◽" U25FD # WHITE MEDIUM SMALL SQUARE emoji
+<Multi_key><numbersign><6>                                                                 <slash> : "◽" U25FD # WHITE MEDIUM SMALL SQUARE emoji
+<UEFD0><KP_6>                                                                          <KP_Divide> : "◽" U25FD # WHITE MEDIUM SMALL SQUARE emoji
+<Multi_key><numbersign><KP_6>                                                          <KP_Divide> : "◽" U25FD # WHITE MEDIUM SMALL SQUARE emoji
+<UEFD0><7>                                                                                 <slash> : "◻" U25FB # WHITE MEDIUM SQUARE emoji
+<Multi_key><numbersign><7>                                                                 <slash> : "◻" U25FB # WHITE MEDIUM SQUARE emoji
+<UEFD0><KP_7>                                                                          <KP_Divide> : "◻" U25FB # WHITE MEDIUM SQUARE emoji
+<Multi_key><numbersign><KP_7>                                                          <KP_Divide> : "◻" U25FB # WHITE MEDIUM SQUARE emoji
+<UEFD0><8>                                                                                 <slash> : "⬜" U2B1C # WHITE LARGE SQUARE emoji
+<Multi_key><numbersign><8>                                                                 <slash> : "⬜" U2B1C # WHITE LARGE SQUARE emoji
+<UEFD0><KP_8>                                                                          <KP_Divide> : "⬜" U2B1C # WHITE LARGE SQUARE emoji
+<Multi_key><numbersign><KP_8>                                                          <KP_Divide> : "⬜" U2B1C # WHITE LARGE SQUARE emoji
+<UEFD0><9>                                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><9>                                                                 <slash> : "〰" U3030 # WAVY DASH emoji
+<UEFD0><KP_9>                                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
+<Multi_key><numbersign><KP_9>                                                          <KP_Divide> : "〰" U3030 # WAVY DASH emoji
 <UEFD0><0>                                                                                 <slash> : "⋈" U22C8 # BOWTIE
 <Multi_key><numbersign><0>                                                                 <slash> : "⋈" U22C8 # BOWTIE
 <UEFD0><KP_0>                                                                          <KP_Divide> : "⋈" U22C8 # BOWTIE
@@ -2209,7 +2230,7 @@
 # # A03-level3
 #
 #   Except U2000 and U2001, originally intended to be breaking, these space characters
-#   could be followed by WORD JOINER, but they are not, for cross platform compatibility
+#   could be followed by WORD JOINER, but they are not, for cross-platform compatibility
 #   and for consistency with U2000 and U2001.
 #
 <UEFD0>                                                                             <nobreakspace> : " " U2001 # EM QUAD
@@ -5777,7 +5798,7 @@
 #
 #   The high surrogate for all is UD835.
 #
-#   A one-handed input method for cross platform and cross layout compatibility
+#   A one-handed input method for cross-platform and cross-layout compatibility
 #   uses superscript digit ² as a base character, as it is on base level with
 #   ModLock off, after dead_circumflex or dead_diaeresis.
 #
