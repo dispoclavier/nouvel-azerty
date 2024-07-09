@@ -113,9 +113,13 @@ La disposition de toutes les minuscules, y compris accentuées ou avec cédille,
 
 Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr. Quant aux capitales, aussi les É, È, Ç, À et Ù, elles sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.)
 
-#### Sélectrice de groupe
+#### Touche morte groupe
 
-Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte sélectrice de groupe, appelée « groupe », notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche de groupe peut activer 12 groupes des lettres et 12 groupes des symboles. Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
+Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte sélectrice de groupe, appelée « groupe », notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche de groupe peut activer 12 [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles). Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
+
+#### Touche de composition
+
+Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$]. Son symbole ISO est [⎄] U+2384. Sur ce nouvel AZERTY, son symbole est le deux-barrettes [¦] U+00A6, souvent appelé barre brisée, plus facile à afficher, saisi le plus rapidement par la touche morte tréma suivie de la contre-oblique. La touche de composition offre une méthode de saisie alternative, quoique peu intéressante, pour le o-e entrelacé par [¦][o][e] ; elle est aussi le seul moyen de saisir des lettres comme « ꜳ » U+A733.
 
 #### Touches mortes spécialisées
 
@@ -124,8 +128,6 @@ Plus généralement, toutes les lettres accentuées ou autrement diacritées son
 Les deux autres touches mortes de l’AZERTY traditionnel, qui ont fait leur entrée après l’avènement de l’AZERTY d’ordinateur, l’accent grave et le tilde, sont toujours en AltGr mais sur la touche de l’accent circonflexe pour le tilde, et sur la touche [$] pour l’accent grave, car en Minuscule, c’est la touche de la touche morte accent aigu, qui sert aussi à la saisie des [guillemets apostrophes](#guillemets-de-distanciation) doubles et simples, ensemble avec la touche morte accent circonflexe. Toutefois, pour la rétrocompatibilité, les touches mortes tilde et accent grave sont aussi sur leurs touches historiques, en Maj + AltGr en mode français, sous des formes rétrocompatibles qui émettent des symboles ASCII quand on fait suivre un appui sur la barre d’espace ou qu’on appuie deux fois sur l’une de ces touches mortes. Celles-ci sont destinées uniquement à assurer un maximum de rétrocompatibilité.
 
 Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposées en Maj + AltGr, chacune sur la touche de son équivalent en composition, sauf la touche morte grec ou cerclé sur [Y], disposée aussi en AltGr à la place de son équivalent en composition, l’arobase, en Minuscule sur [)]. Les autres touches mortes transformationnelles appliquent elles aussi des transformations aux lettres et aux chiffres plutôt que d’ajouter des diacritiques. Partiellement cela est aussi le cas des touches mortes diacritiques, comme pour la saisie des [guillemets apostrophes](#guillemets-de-distanciation). Elles sont toutes documentées sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/).
-
-La touche morte de composition, deuxième touche morte générique après la sélectrice de groupe, se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$]. Son symbole ISO est [⎄] U+2384. Sur ce nouvel AZERTY, son symbole est la barre brisée [¦] U+00A6, plus facile à afficher, saisie le plus rapidement par la touche morte tréma suivie de la contre-oblique. La touche de composition offre une méthode de saisie alternative, quoique peu intéressante, pour le o-e entrelacé par [¦][o][e] ; elle est aussi le seul moyen de saisir des lettres comme « ꜳ » U+A733 ; mais elle permet surtout de saisir les 1 114 symboles et diacritiques mathématiques pris en charge par ce nouvel AZERTY et documentés sur [cette page](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/) ([PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf)).
 
 ### Chiffres
 
@@ -189,11 +191,13 @@ En mode ASCII, quand les chiffres en indice sont en AltGr + AltFr, ces indic
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
 
-Les infobulles sur la [vue interactive](https://dispoclavier.com/nouvel-azerty/#vue-interactive) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
+Les infobulles de la [vue interactive](https://dispoclavier.com/nouvel-azerty/#vue-interactive) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
+
+Les 1 114 symboles et diacritiques mathématiques d’Unicode sont dans la touche de composition et documentés sur [cette page](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/) ([PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf))
 
 ### Émojis
 
-Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent.
+Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent, parce que cela doit fonctionner aussi sous Windows, système mal conçu, dysfonctionnel, dont les dispositions de clavier ont été programmées par un seul développeur, de qui les erreurs de conception ont durablement dégradé l’utilisabilité des ordinateurs de la majorité. Alors que tous les émojis codés sur deux ou trois octets à part les sinogrammes sont pris en charge par touches mortes dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), seuls quelques émoji codés sur quatre octets, triés sur le volet, sont pris en charge, sur touches vives uniquement.
 
 ### Séquences
 
