@@ -13,7 +13,7 @@
 	* Redonder "◽" U+25FD dans le groupe 6 de "/" U+002F à la place de "⊢" U+22A2, qui est en composition. (ibidem)
 	* Redonder "◻" U+25FB dans le groupe 7 de "/" U+002F à la place de "⊣" U+22A3, qui est en composition. (ibidem)
 	* Redonder "⬜" U+2B1C dans le groupe 8 de "/" U+002F à la place de "⊥" U+22A5, qui est en composition. (ibidem)
-* Documentation. (dispocla.cpp [35f423f](https://github.com/dispoclavier/nouvel-azerty/commit/35f423f998a9af26189352f6d4eb8ed5bb376860), compose-2.yml [a119d4b](https://github.com/dispoclavier/nouvel-azerty/commit/a119d4b856f60bb01bcf44fb5c25a1c332e4cd18))
+* Documentation. (readme.md [e96eda7](https://github.com/dispoclavier/nouvel-azerty/commit/e96eda7fac758277190d7e41251ed60a263c1969), dispocla.cpp [35f423f](https://github.com/dispoclavier/nouvel-azerty/commit/35f423f998a9af26189352f6d4eb8ed5bb376860), compose-2.yml [a119d4b](https://github.com/dispoclavier/nouvel-azerty/commit/a119d4b856f60bb01bcf44fb5c25a1c332e4cd18))
 
 ## 3.1.0 (2024-07-07)
 
