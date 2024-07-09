@@ -518,7 +518,7 @@
 #   have been given in case of a suboptimal name.
 #
 #   Ornamental quotation marks are input by dead key followed by group selector.
-#   SMP quotation mark ornaments U1F676.. are not supported, for cross platform
+#   SMP quotation mark ornaments U1F676.. are not supported, for cross-platform
 #   compatibility.
 #
 #
