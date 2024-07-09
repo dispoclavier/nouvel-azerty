@@ -1,7 +1,5 @@
 # Journal des modifications
 
-Le signe plus dans les points de code au format U+9ABC est omis pour l’interopérabilité. Pour la documentation, il doit être rajouté.
-
 ## 3.2.0 (2024-07-09)
 
 * Disposition : Permuter "😭" U+1F62D et "😱" U+1F631 pour la mnémonique. (dispocla.cpp [35f423f](https://github.com/dispoclavier/nouvel-azerty/commit/35f423f998a9af26189352f6d4eb8ed5bb376860))
