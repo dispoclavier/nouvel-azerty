@@ -243,23 +243,55 @@ Ces fichiers sont développés, testés et compilés sous **Ubuntu 16.04** depu
 
 ### Linux Mint
 
-Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024, car il utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qu’il appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est convertie en touche AltGr, qui en tant que `ISO_Level3_Shift` est bien distincte. Ce bogue désactive les ponctuations espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, toutes les fonctionnalités disposées aux niveaux 5 à 8.
+Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024 et bogué de façon protéiforme au regard des dispositions de clavier, tantôt comme décrit ci-après, tantôt avec des variations dont le but présumé est de faire gaspiller du temps de débogage et de développement. La solution consiste à effacer Linux Mint sur le disque dur en installant à sa place un système d’exploitation opérationnel tel qu’[Ubuntu](https://ubuntu.com/download/desktop).
 
-Linux Mint est aussi affecté par un bogue qui transforme la bascule « VerrMod » en touche pour passer d’une disposition de clavier à une autre, parmi celles qui sont dans le commutateur. Sur ce nouvel AZERTY, « VerrMod » bascule entre `ISO_Last_Group` et `ISO_First_Group`, soit entre les deux groupes de disposition de chaque touche, qui permettent de disposer les huit positions séparément pour le mode français et le mode ASCII. Cette deuxième bascule graphique, dédiée aux chiffres, permet de dédier aux lettres la bascule traditionnelle VerrMaj, désormais VerrCap. Sous Linux Mint, on ne peut pas verrouiller les chiffres, et le mode ASCII est inaccessible.
+#### Bogue d’xkbcomp
 
-Un troisième bogue est situé dans le compilateur, qui sous Linux Mint ne peut plus toujours lire les redéfinitions partielles de touches. Quand une touche d’une disposition incluse dans une autre disposition est partiellement redéfinie, les autres positions sont omises ou remplacées par `NoSymbol` – qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère » –, le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte les touches de la rangée E et met en panne des touches sur les variantes régionales et les variantes redisposées. Il serait facile à contourner, mais vu les autres bogues, cela serait une perte de temps inutile.
+Sous Linux Mint, il est impossible d’activer une disposition de clavier à partir d’un fichier `.xkm`, alors que sous Ubuntu, cela fonctionne parfaitement.
+
+Inutile de noter les références de débogage, car vu tous les autres bogues ci-dessous, Linux Mint est suspecté d’avoir intentionnellement endommagé xkbcomp.
+
+#### Bogue d’AltFr
+
+Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qu’il appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant que `ISO_Level3_Shift` est bien distincte.
+
+Quand il est en cours d’exécution, ce bogue désactive les ponctuations espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, tout ou partie des fonctionnalités disposées aux niveaux 5 à 8.
+
+#### Bogue de VerrMod
+
+Linux Mint est parfois aussi affecté par un bogue qui transforme la bascule « VerrMod » en touche pour passer d’une disposition de clavier à une autre, parmi celles qui sont dans le commutateur.
+
+Sur ce nouvel AZERTY, « VerrMod » bascule entre `ISO_Last_Group` et `ISO_First_Group`, soit entre les deux groupes de disposition de chaque touche, qui permettent de disposer les huit positions séparément pour le mode français et le mode ASCII. Cette deuxième bascule graphique, dédiée aux chiffres, permet de dédier aux lettres la bascule traditionnelle VerrMaj, désormais VerrCap.
+
+Sous Linux Mint, parfois on ne peut pas verrouiller les chiffres, et le mode ASCII est alors inaccessible.
+
+#### Bogue du compilateur
+
+Un troisième bogue est situé dans le compilateur, qui sous Linux Mint ne peut plus toujours lire les redéfinitions partielles de touches. Quand une touche d’une disposition incluse dans une autre disposition est partiellement redéfinie – les autres positions sont omises ou remplacées par `NoSymbol`, qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère » –, le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte tout ou partie des touches de la rangée E et met en panne des touches sur les variantes régionales et les variantes redisposées. Il serait facile à contourner, mais vu les autres bogues, cela serait une perte de temps inutile.
+
+#### Bogue du commutateur
 
 Un bogue supplémentaire sous Linux Mint affecte le commutateur de dispositions de clavier, qui peut être hors d’état d’activer une des dispositions de clavier de ce nouvel AZERTY. Mais ce bogue est de peu d’importance, puisque sous Linux Mint, ce nouvel AZERTY est de toute façon inutilisable. Sous Ubuntu, le commutateur est autrement bogué, mais il y est toujours possible d’activer une des dispositions de ce nouvel AZERTY, quelle qu’elle soit.
 
-Les bogues propres à Linux Mint ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’[Ubuntu 24.04](https://releases.ubuntu.com/noble/) et de toutes les versions antérieures. Pour les éviter, il aurait suffi de ne pas toucher au code d’XKB. L’intentionnalité suspectée vise principalement à rendre inutilisable ce nouvel AZERTY sous Linux Mint, et accessoirement à lui faire gaspiller du temps de développement. Mais le résultat conduit plutôt à décrédibiliser Linux Mint et à exposer la fragilité du projet et sa corruptibilité. La solution consiste à **éviter Linux Mint** et à installer [Ubuntu](https://ubuntu.com/download/desktop) directement.
+#### Conclusions
+
+Les bogues propres à Linux Mint ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’[Ubuntu 24.04](https://releases.ubuntu.com/noble/) et antérieures. Pour les éviter, il aurait suffi de ne pas toucher au code d’XKB.
+
+L’intentionnalité suspectée vise principalement à rendre inutilisable ce nouvel AZERTY sous Linux Mint, et accessoirement à lui faire gaspiller du temps de développement.
+
+Mais le résultat conduit plutôt à décrédibiliser Linux Mint et à exposer la fragilité du projet et sa corruptibilité par le cybercrime organisé au service de certains acteurs économiques, dans le cadre d’une opération de destruction de dispositions de clavier, dans laquelle [la firme Microsoft est aussi impliquée](https://dispoclavier.com/nouvel-azerty/#2250-malware-windows).
+
+La solution consiste à **éviter Linux Mint** et à installer [Ubuntu](https://ubuntu.com/download/desktop) directement.
 
 ### ChromeOS
 
-Quant à **ChromeOS**, il utilise certes XKB mais le fournit codé en dur, et même dans le conteneur Linux, l’image d’X11 est hors service.
+Quant à **ChromeOS**, il utilise certes XKB mais le fournit compilé en dur, et même dans le conteneur Linux, l’image d’X11 est hors service.
 
-Utiliser une disposition de clavier ajoutée comme extension de Chrome est impossible, parce qu’au lieu de compiler la disposition comme sous Linux, ChromeOS l’exécute dans l’interpréteur JavaScript de Chrome, qui fait planter même un chromebook puissant après la première demi-ligne de saisie.
+Sous ChromeOS, ajouter une disposition de clavier consiste à installer une extension dans le navigateur Chrome. Il existe deux cas de figure : Soit cette extension active une ou plusieurs dispositions de clavier distribuées avec Linux à une époque plus loin dans le passé que 2019. Soit elle définit en JavaScript tout ou partie des fonctionnalités du clavier.
 
-Ce bogue a été [rapporté](https://github.com/google/extra-keyboards-for-chrome-os/issues/135) fin janvier 2024 mais n’est pas traité, pas plus que les autres rapports de bogue dans ce dépôt officiel des dispositions de clavier ajoutées à ChromeOS.
+Or, utiliser une disposition de clavier ajoutée sous forme d’extension de Chrome est impossible, parce qu’au lieu de compiler la disposition comme sous Linux, ChromeOS l’exécute dans l’interpréteur JavaScript de Chrome, qui fait planter même un chromebook puissant dès la première demi-ligne de saisie de texte même purement ASCII.
+
+Ce bogue a été [rapporté](https://github.com/google/extra-keyboards-for-chrome-os/issues/135) fin janvier 2024 mais n’est pas traité, pas plus que les autres rapports de bogue dans ce dépôt officiel des dispositions de clavier ajoutables sous ChromeOS.
 
 ## Typographie
 
