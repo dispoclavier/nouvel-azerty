@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
-#                       Date: 2024-07-09T2040+0200
+#                       Date: 2024-07-14T0625+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.2.0" # See # # Notes about syntax
+<UEFA0>                     : "version 3.2.1" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1533,8 +1533,7 @@
 #   open rectangular bullet, evidently wrong since the output is filled. This
 #   literal is removed for demo on systems working without literals; since it
 #   outputs an unintended character, it could be downright discarded as well.
-#   Japanese tainome and kome are also supported, as well as "⯀" U2BC0 BLACK
-#   SQUARE CENTRED after its support in group 8 of # was discontinued (v3.2.0).
+#   Japanese tainome and kome are also supported.
 #
 <Multi_key><f><r><b>                                                                               : "∎" filledrectbullet     # U220E END OF PROOF, not U25AC BLACK RECTANGLE
 <Multi_key><f><l><t><b>                                                                            : "◂" filledlefttribullet  # U25C2 BLACK LEFT-POINTING SMALL TRIANGLE, not U25C0 BLACK LEFT-POINTING TRIANGLE
@@ -1552,7 +1551,6 @@
 <Multi_key><e><n><f><s><b>                                                                         : "▪" enfilledsqbullet     # U25AA BLACK SMALL SQUARE
 <Multi_key><f><t><b><u>                                                                            : "▴" filledtribulletup    # U25B4 BLACK UP-POINTING SMALL TRIANGLE, not U25B2 BLACK UP-POINTING TRIANGLE
 <Multi_key><f><t><b><d>                                                                            : "▾" filledtribulletdown  # U25BE BLACK DOWN-POINTING SMALL TRIANGLE, not U25BC BLACK DOWN-POINTING TRIANGLE
-<Multi_key><f><s><q><c>                                                                            : "⯀" U2BC0               # BLACK SQUARE CENTRED
 #
 #
 #   Tainome
@@ -23170,10 +23168,10 @@
 <Multi_key><numbersign><5>                                                             <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <UEFD0><KP_5>                                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <Multi_key><numbersign><KP_5>                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<UEFD0><6>                                                                             <braceleft> : "〃" U3003 # DITTO MARK
-<Multi_key><numbersign><6>                                                             <braceleft> : "〃" U3003 # DITTO MARK
-<UEFD0><KP_6>                                                                          <braceleft> : "〃" U3003 # DITTO MARK
-<Multi_key><numbersign><KP_6>                                                          <braceleft> : "〃" U3003 # DITTO MARK
+<UEFD0><6>                                                                             <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<Multi_key><numbersign><6>                                                             <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<UEFD0><KP_6>                                                                          <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<Multi_key><numbersign><KP_6>                                                          <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
 <UEFD0><7>                                                                             <braceleft> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><numbersign><7>                                                             <braceleft> : "∝" U221D # PROPORTIONAL TO
 <UEFD0><KP_7>                                                                          <braceleft> : "∝" U221D # PROPORTIONAL TO
