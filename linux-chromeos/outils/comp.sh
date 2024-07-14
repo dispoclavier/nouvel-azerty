@@ -1,7 +1,7 @@
 #!/bin/bash
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-06-13T0441+0200
+# 2024-07-14T1506+0200
 # = last modified.
 #
 # Compiles XKB layout files for activating a keyboard layout as user.
@@ -42,14 +42,14 @@ case $re in
 esac
 
 function compile {
-	echo "$1$suffix.xkb:"
+	echo "$1$suffix.xkm:"
 	if [ ! -d "$1" ]; then
 		mkdir $1
 	fi
 	gsettings set org.gnome.desktop.input-sources current $2
 	sleep 1s
-	xkbcomp :0 $1/$1$suffix.xkb
-	echo  "$1$suffix.xkb compiled."
+	xkbcomp :0 $1/$1$suffix.xkm
+	echo  "$1$suffix.xkm compiled."
 }
 
 compile "kbfrFRs"  "1"
@@ -61,4 +61,4 @@ compile "kbbrFRsr" "6"
 compile "kbfrPFsr" "7"
 compile "kbfrAFsr" "8"
 compile "kbfrFRsr" "0"
-cp kbfrFRs/kbfrFRs$suffix.xkb ../nouvel-azerty$suffix.xkb; echo "nouvel-azerty$suffix.xkb updated."
+cp kbfrFRs/kbfrFRs$suffix.xkm ../nouvel-azerty$suffix.xkm; echo "nouvel-azerty$suffix.xkm updated."
