@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 3.2.2 (projet)
+
+* Activation : Corriger l’extension des fichiers compilés en .xkm. (comp.sh [bb82c93](https://github.com/dispoclavier/nouvel-azerty/commit/bb82c935ab22b17fa4eb235a5eab60cf203bc1f0), Lisez-moi-svp.txt [258e86a](https://github.com/dispoclavier/nouvel-azerty/commit/258e86a720a3cbc9a6220d7bc3b60894fc9c26b2))
+* Documentation : Mode d’emploi : Préciser les bogues sous Linux Mint et sous ChromeOS. (readme.md [2d1fc45](https://github.com/dispoclavier/nouvel-azerty/commit/2d1fc451e3463368481ebd8ff81e8c3e58425f59))
+
 ## 3.2.1 (2024-07-14)
 
 * Transformations : Touche morte groupe : Groupes des symboles : Rajouter "⯀" U+2BC0 dans le groupe 6 à la place de "〃" U+3003, qui est dans le groupe 12. (compose-3.yml [7629ef3](https://github.com/dispoclavier/nouvel-azerty/commit/7629ef3b3a9039aa0f0fc49b92d7d73db0103da4))
