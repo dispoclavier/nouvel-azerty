@@ -701,10 +701,10 @@
 <Multi_key><numbersign><5>                                                             <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <UEFD0><KP_5>                                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <Multi_key><numbersign><KP_5>                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<UEFD0><6>                                                                             <braceleft> : "〃" U3003 # DITTO MARK
-<Multi_key><numbersign><6>                                                             <braceleft> : "〃" U3003 # DITTO MARK
-<UEFD0><KP_6>                                                                          <braceleft> : "〃" U3003 # DITTO MARK
-<Multi_key><numbersign><KP_6>                                                          <braceleft> : "〃" U3003 # DITTO MARK
+<UEFD0><6>                                                                             <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<Multi_key><numbersign><6>                                                             <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<UEFD0><KP_6>                                                                          <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
+<Multi_key><numbersign><KP_6>                                                          <braceleft> : "⯀" U2BC0 # BLACK SQUARE CENTRED
 <UEFD0><7>                                                                             <braceleft> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><numbersign><7>                                                             <braceleft> : "∝" U221D # PROPORTIONAL TO
 <UEFD0><KP_7>                                                                          <braceleft> : "∝" U221D # PROPORTIONAL TO
