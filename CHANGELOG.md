@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 3.2.1 (2024-07-14)
+
+* Transformations : Touche morte groupe : Groupes des symboles : Rajouter "⯀" U+2BC0 dans le groupe 6 à la place de "〃" U+3003, qui est dans le groupe 12. (compose-3.yml [7629ef3](https://github.com/dispoclavier/nouvel-azerty/commit/7629ef3b3a9039aa0f0fc49b92d7d73db0103da4))
+* Composition : Supprimer "⯀" U+2BC0. (compose-1.yml [d746dbb](https://github.com/dispoclavier/nouvel-azerty/commit/d746dbb2a07cb2273a413f8b16570ea0b2a1a4f3))
+
 ## 3.2.0 (2024-07-09)
 
 * Disposition : Permuter "😭" U+1F62D et "😱" U+1F631 pour la mnémonique. (dispocla.cpp [35f423f](https://github.com/dispoclavier/nouvel-azerty/commit/35f423f998a9af26189352f6d4eb8ed5bb376860))
