@@ -1,4 +1,4 @@
-//                       Date: 2024-07-08T1839+0200
+//                       Date: 2024-07-21T0541+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1160,7 +1160,7 @@ xkb_symbols "kbfrFRs" {
 	// or as group separator, also called thousands separator. Both dot and comma
 	// as well as the no-break thin space U202F NARROW NO-BREAK SPACE are output
 	// when pressing this key alone or with Shift or AltFr (or AltGr), similarly
-	// to kbdl(dotoss) © 2007 Nicolas Mailhot <nicolas.mailhot @ laposte.net>.
+	// to kbdl(kposs) © 2007 Nicolas Mailhot <nicolas.mailhot @ laposte.net>.
 	//
 	// The legacy U00A0 NO-BREAK SPACE is less easily input but still supported,
 	// although it is dysfunctional in this usage, except on old systems where it
@@ -1176,12 +1176,18 @@ xkb_symbols "kbfrFRs" {
 	// https://bugzilla.redhat.com/show_bug.cgi?id=470153
 	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606
 	//
-	// KP_Decimal translates to period, KP_Separator to comma. The map below does
-	// not match the Brazilian locale, where KPDL is mapped to KP_Separator, KPPT
-	// to KP_Decimal; it only ensures that there is a key for comma and a key for
-	// period on numpads with two separator keys, and both have NARROW NO-BREAK
-	// SPACE on level 5, although in Brazilian Portuguese, the group separator is
-	// period, as opposed to European Portuguese.
+	// KP_Decimal translates to period, KP_Separator to comma. But there is no
+	// guarantee that this mapping works out as expected, Nicolas Mailhot warns
+	// in symbols/kpdl. This soft-coded map is picked here rather than one of the
+	// hard-coded alternatives, considering that this setup might be expected to
+	// be modifiable depending on regional preferences.
+	//
+	// The map below does not match the Brazilian locale, where KPDL is mapped to
+	// KP_Separator, KPPT to KP_Decimal; it only ensures that there is a key for
+	// comma and a key for period on numpads with two separator keys, and both
+	// have NARROW NO-BREAK SPACE on level 3 and on level 5, although in
+	// Brazilian Portuguese, the group separator is period, as opposed to
+	// European Portuguese, where the decimal separator is comma.
 	// https://bugzilla.redhat.com/show_bug.cgi?id=470153#c27
 	// https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/272606/comments/54
 	//
