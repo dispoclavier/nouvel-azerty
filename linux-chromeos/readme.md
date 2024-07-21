@@ -285,13 +285,17 @@ La solution consiste à **éviter Linux Mint** et à installer [Ubuntu](https://
 
 ### ChromeOS
 
-Quant à **ChromeOS**, il utilise certes XKB mais le fournit compilé en dur, et même dans le conteneur Linux, l’image d’X11 est hors service.
+Quant à **ChromeOS**, il utilise certes XKB mais le fournit compilé en dur, et même dans le conteneur Linux, l’image d’X11 est hors service. Une erreur de conception que Google a échoué à pallier : Au lieu de permettre de recompiler XKB, Google demande à ajouter les dispositions de clavier dans un langage qui n’est pas adapté à ce type de service.
 
-Sous ChromeOS, ajouter une disposition de clavier consiste à installer une extension dans le navigateur Chrome. Il existe deux cas de figure : Soit cette extension active une ou plusieurs dispositions de clavier distribuées avec Linux à une époque plus loin dans le passé que 2019. Soit elle définit en JavaScript tout ou partie des fonctionnalités du clavier.
+Sous ChromeOS, ajouter une disposition de clavier consiste à installer une extension dans le navigateur Chrome. Il existe deux cas de figure : Soit cette extension active une ou plusieurs dispositions de clavier distribuées avec Linux. Soit elle définit en JavaScript tout ou partie des fonctionnalités du clavier.
 
-Or, utiliser une disposition de clavier ajoutée sous forme d’extension de Chrome est impossible, parce qu’au lieu de compiler la disposition comme sous Linux, ChromeOS l’exécute dans l’interpréteur JavaScript de Chrome, qui fait planter même un chromebook puissant dès la première demi-ligne de saisie de texte même purement ASCII.
+Or, utiliser une disposition de clavier ajoutée sous forme d’extension de Chrome est impossible, parce qu’au lieu de compiler la disposition comme sous Linux, ChromeOS l’exécute dans l’interpréteur JavaScript de Chrome, qui fait planter même un chromebook haut de gamme conçu pour un usage professionnel, dès la première demi-ligne de saisie de texte, même purement ASCII.
 
 Ce bogue a été [rapporté](https://github.com/google/extra-keyboards-for-chrome-os/issues/135) fin janvier 2024 mais n’est pas traité, pas plus que les autres rapports de bogue dans ce dépôt officiel des dispositions de clavier ajoutables sous ChromeOS.
+
+Pour mettre le comble, Google ne met pas à jour sa bibliothèque de dispositions de clavier compilées en dur et fournies avec ChromeOS, restées figées à une époque plus loin dans le passé que 2019. Rien de tout ce qui a été ajouté ou modifié dans XKB depuis cinq ans voire plus n’est disponible sous ChromeOS.
+
+Aussi les chromebooks sont-ils invendables à moins d’être bradés.
 
 ## Typographie
 
