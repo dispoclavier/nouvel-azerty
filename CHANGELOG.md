@@ -2,7 +2,7 @@
 
 ## 3.2.2 (projet)
 
-* Activation : Corriger l’extension des fichiers compilés en .xkm. (comp.sh [bb82c93](https://github.com/dispoclavier/nouvel-azerty/commit/bb82c935ab22b17fa4eb235a5eab60cf203bc1f0), Lisez-moi-svp.txt [258e86a](https://github.com/dispoclavier/nouvel-azerty/commit/258e86a720a3cbc9a6220d7bc3b60894fc9c26b2))
+* Activation : Corriger en `.xkm` l’extension des fichiers compilés. (comp.sh [bb82c93](https://github.com/dispoclavier/nouvel-azerty/commit/bb82c935ab22b17fa4eb235a5eab60cf203bc1f0), Lisez-moi-svp.txt [258e86a](https://github.com/dispoclavier/nouvel-azerty/commit/258e86a720a3cbc9a6220d7bc3b60894fc9c26b2))
 * Documentation :
 	* Point du pavé numérique : Corriger la référence du modèle cité, `kpdl(kposs)`, non `kpdl(dotoss)`. (dispocla.cpp [3175e51](https://github.com/dispoclavier/nouvel-azerty/commit/3175e51073dfba773b12996fcc648dc55ba4558e))
 	* Mode d’emploi :
