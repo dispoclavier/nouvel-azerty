@@ -1,4 +1,4 @@
-                      Date : 2024-07-14T1808+0200
+                      Date : 2024-07-24T0719+0200
                    Version : 3.2.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -120,9 +120,9 @@ Mode d’emploi sous Linux
 
          https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md
 
-  2  Ouvrir un terminal dans le dossier personnel et mettre la disposition actuelle dans `normal.xkm` :
+  2  Ouvrir un terminal dans le dossier personnel et mettre la disposition actuelle dans `normal.xkb` :
 
-         xkbcomp :0 normal.xkm
+         xkbcomp :0 normal.xkb
 
      Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
 
@@ -136,7 +136,7 @@ Mode d’emploi sous Linux
 
   5  Décompresser le dossier téléchargé.
 
-  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkm` ou celui de la variante choisie
+  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
      vers le dossier personnel.
 
   7  Si le dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
@@ -156,9 +156,9 @@ Mode d’emploi sous Linux
 
   9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
 
-         xkbcomp nouvel-azerty.xkm :0
+         xkbcomp nouvel-azerty.xkb :0
 
-     Le cas échéant, remplacer `nouvel-azerty.xkm` par le nom de la variante et sous-variante
+     Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
      choisie.
 
      Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches de fonction 19 et 24,
@@ -179,7 +179,7 @@ Ce nouvel AZERTY peut maintenant être testé.
 
 La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
 
-      xkbcomp normal.xkm :0
+      xkbcomp normal.xkb :0
 
   grâce au fichier mis en place au point 1.
 
