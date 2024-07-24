@@ -1,4 +1,4 @@
-//                       Date: 2024-07-21T0541+0200
+//                       Date: 2024-07-24T2058+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -64,9 +64,14 @@
 // and digits, independently of the CapsLock toggle, that is set to also affect
 // the diacriticized letters, most of which are on row E too. This digit toggle
 // cannot be implemented by repurposing the NumLock toggle. Consistently, this
-// solution is commented out in xkb/types/level5. The working solution uses the
-// ISO_First_Group and ISO_Last_Group to toggle between two layout groups. This
-// is compromised by a rule in /usr/share/X11/xkb/rules/evdev:
+// solution was commented out in xkb/types/level5 back in 2016 (later causing a
+// bug in xkbcomp when these types were uncommented again). These two types are
+// EIGHT_LEVEL_LEVEL_FIVE_LOCK and EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK.
+//
+// The working solution needs to use the ISO_First_Group and ISO_Last_Group for
+// the purpose of toggling between two layout groups.
+//
+// This however is compromised by a rule in /usr/share/X11/xkb/rules/evdev:
 //
 //       *		*		=	+%l[2]%(v[2]):2
 //
