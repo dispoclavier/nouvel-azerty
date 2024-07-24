@@ -8,6 +8,7 @@
 		* Préciser les bogues sous Linux Mint et sous ChromeOS. (linux-chromeos/readme.md [2d1fc45](https://github.com/dispoclavier/nouvel-azerty/commit/2d1fc451e3463368481ebd8ff81e8c3e58425f59))
 		* Préciser le bogue sous ChromeOS. (linux-chromeos/readme.md [d235040](https://github.com/dispoclavier/nouvel-azerty/commit/d2350409ea06cb0acf657333def517bf2d9a9dae))
 		* Préciser ou mitiger le bogue d’xkbcomp sous Linux Mint. (comp.sh [bb82c93](https://github.com/dispoclavier/nouvel-azerty/commit/bb82c935ab22b17fa4eb235a5eab60cf203bc1f0), [5a71641](https://github.com/dispoclavier/nouvel-azerty/commit/5a71641554775d50bbb0d8cac15de0509444a7b2), Lisez-moi-svp.txt [258e86a](https://github.com/dispoclavier/nouvel-azerty/commit/258e86a720a3cbc9a6220d7bc3b60894fc9c26b2), [ed1664c](https://github.com/dispoclavier/nouvel-azerty/commit/ed1664c953631bfe3e0de94d11352d3b29a292cb), linux-chromeos/readme.md [8d4e19e](https://github.com/dispoclavier/nouvel-azerty/commit/8d4e19ea219b1ec9cd9646a6cbb3594a2507e371))
+	* Personnalisation : Attirer l’attention sur la possibilité. (Lisez-moi-svp.txt [711ee78](https://github.com/dispoclavier/nouvel-azerty/commit/711ee782775e7883b166d827da61ae189f8a1e5d))
 
 ## 3.2.1 (2024-07-14)
 
