@@ -1,4 +1,4 @@
-                      Date : 2024-07-24T0719+0200
+                      Date : 2024-07-24T1747+0200
                    Version : 3.2.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -34,9 +34,13 @@ Dispositions ou variantes
 
   • Le fichier `Compose.yml` contient le répertoire des touches mortes, les séquences de composition,
     ainsi que les chaînes de caractères sur touches vives. Son extension `.yml` sert uniquement à
-    l’ouverture et à l’affichage.
+    l’ouverture et à l’affichage. Ce fichier est personnalisable et amplement commenté et expliqué.
 
-  • Les autres dispositions de clavier se trouvent dans le dossier `activer`.
+  Les autres dispositions de clavier se trouvent dans le dossier `activer`, qui contient en tout
+  90 fichiers texte qui sont des sources XKB issues de la fusion des différents fichiers sources,
+  et qui portent tous l’extension `.xkb` (contrairement aux fichiers compilés `.xkm`, qu’il faut
+  éviter car ils sont illisibles pour les humains). Ces fichiers tout-en-un sont personnalisables
+  dans tout éditeur de texte, qui permet de rechercher un nom de touche, et remplacer un symbole.
 
   • Les fichiers dont les noms commencent par `nouvel-azerty` contiennent la disposition de base
     de ce nouvel AZERTY. Ils sont rangés à la racine du dossier `activer`, et ils sont identiques
