@@ -247,13 +247,15 @@ Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https
 
 #### Bogue d’xkbcomp
 
-Sous Linux Mint, il est impossible d’activer une disposition de clavier à partir d’un fichier `.xkm`, alors que sous Ubuntu, cela fonctionne parfaitement.
+Sous Linux Mint, il est impossible d’activer une disposition de clavier à partir d’un fichier source fusionné tout-en-un `.xkb`. Impossible aussi d’activer une disposition de clavier à partir d’un fichier compilé `.xkm`. Sous Ubuntu au contraire, cela fonctionne parfaitement.
 
-Inutile de noter les références de débogage, car vu tous les autres bogues ci-dessous, Linux Mint est suspecté d’avoir intentionnellement endommagé xkbcomp.
+C’est pourquoi Linux Mint est déconseillé.
+
+Les références de débogage figurent tout en bas sous le titre [Bogue d’xkbcomp sous Linux Mint](bogue-d’xkbcomp-sous-linux-mint).
 
 #### Bogue d’AltFr
 
-Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qu’il appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant que `ISO_Level3_Shift` est bien distincte.
+Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qui s’y appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant que `ISO_Level3_Shift` est bien distincte.
 
 Quand il est en cours d’exécution, ce bogue désactive les ponctuations espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, tout ou partie des fonctionnalités disposées aux niveaux 5 à 8.
 
@@ -371,4 +373,13 @@ Les entités HTML documentées dans ce fichier à cause de leur disposition sur 
 
 ### Nom de fichier
 
-Ce Lisez-moi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier où il se trouve. Il est inclus dans le dossier « `Nouvel-AZERTY-Linux-`version`.zip` » sous le nom de `Mode-d-emploi.md`.
+Ce Lisez-moi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `linux-chromeos/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Nouvel-AZERTY-Linux-`version`.zip` ».
+
+### Bogue d’xkbcomp sous Linux Mint
+
+	X Error of failed request:  BadValue (integer parameter out of range for operation)
+	  Major opcode of failed request:  135 (XKEYBOARD)
+	  Minor opcode of failed request:  9 (XkbSetMap)
+	  Value in failed request:  0x135b0038
+	  Serial number of failed request:  170
+	  Current serial number in output stream:  176
