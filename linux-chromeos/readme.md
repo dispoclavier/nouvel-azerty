@@ -4,13 +4,13 @@ Ceci est un mode d’emploi couvrant principalement l’[installation](#installa
 
 ## Alerte d’incompatibilité de Linux Mint
 
-Linux Mint 21.3 (2024) est incompatible avec ce nouvel AZERTY, qui y est en grande partie inutilisable. Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas. Mieux vaut opter directement pour [Ubuntu](https://ubuntu.com/download/desktop), exempt de ces bogues.
+Sous Linux Mint 21.3 (2024), ce nouvel AZERTY fonctionne uniquement quand il est activé par xkbcomp comme indiqué sous le titre suivant, non quand il est installé. Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas.
 
 ## Activation sans droits d’administrateur
 
-La version de Linux recommandée pour cet usage est [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou l’équivalent, de cette époque, des autres distributions.
-
 Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+
+Afin de remplacer l’installation par l’activation, celle-ci peut être automatisée au démarrage ou à l’ouverture de session selon une méthode qui peut dépendre du système d’exploitation.
 
 ## Installation
 
@@ -243,15 +243,7 @@ Ces fichiers sont développés, testés et compilés sous **Ubuntu 16.04** depu
 
 ### Linux Mint
 
-Ce nouvel AZERTY est incompatible avec [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024 et bogué de façon protéiforme au regard des dispositions de clavier, tantôt comme décrit ci-après, tantôt avec des variations dont le but présumé est de faire gaspiller du temps de débogage et de développement. La solution consiste à effacer Linux Mint sur le disque dur en installant à sa place un système d’exploitation opérationnel tel qu’[Ubuntu](https://ubuntu.com/download/desktop).
-
-#### Bogue d’xkbcomp
-
-Sous Linux Mint, il est impossible d’activer une disposition de clavier à partir d’un fichier source fusionné tout-en-un `.xkb`. Impossible aussi d’activer une disposition de clavier à partir d’un fichier compilé `.xkm`. Sous Ubuntu au contraire, cela fonctionne parfaitement.
-
-C’est pourquoi Linux Mint est déconseillé.
-
-Les références de débogage figurent tout en bas sous le titre [Bogue d’xkbcomp sous Linux Mint](bogue-d’xkbcomp-sous-linux-mint).
+Ce nouvel AZERTY ne peut pas être installé normalement sous [Linux Mint Cinnamon 21.3 Virginia](https://www.linuxmint.com/edition.php?id=311), sorti en 2024 et bogué de façon protéiforme au regard des dispositions de clavier, tantôt comme décrit ci-après, tantôt avec des variations. La solution consiste à utiliser uniquement xkbcomp comme indiqué sous le titre [Activation sans droits d’administrateur](#activation-sans-droits-dadministrateur).
 
 #### Bogue d’AltFr
 
@@ -273,17 +265,13 @@ Un troisième bogue est situé dans le compilateur, qui sous Linux Mint ne peut 
 
 #### Bogue du commutateur
 
-Un bogue supplémentaire sous Linux Mint affecte le commutateur de dispositions de clavier, qui peut être hors d’état d’activer une des dispositions de clavier de ce nouvel AZERTY. Mais ce bogue est de peu d’importance, puisque sous Linux Mint, ce nouvel AZERTY est de toute façon inutilisable. Sous Ubuntu, le commutateur est autrement bogué, mais il y est toujours possible d’activer une des dispositions de ce nouvel AZERTY, quelle qu’elle soit.
+Un bogue supplémentaire sous Linux Mint affecte le commutateur de dispositions de clavier, qui peut être hors d’état d’activer une des dispositions de clavier de ce nouvel AZERTY. Sous Ubuntu, le commutateur est autrement bogué, mais il y est toujours possible d’activer une des dispositions de ce nouvel AZERTY, quelle qu’elle soit.
 
 #### Conclusions
 
 Les bogues propres à Linux Mint ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’[Ubuntu 24.04](https://releases.ubuntu.com/noble/) et antérieures. Pour les éviter, il aurait suffi de ne pas toucher au code d’XKB.
 
-L’intentionnalité suspectée vise principalement à rendre inutilisable ce nouvel AZERTY sous Linux Mint, et accessoirement à lui faire gaspiller du temps de développement.
-
-Mais le résultat conduit plutôt à décrédibiliser Linux Mint et à exposer la fragilité du projet et sa corruptibilité par le cybercrime organisé au service de certains acteurs économiques, dans le cadre d’une opération de destruction de dispositions de clavier, dans laquelle [la firme Microsoft est aussi impliquée](https://dispoclavier.com/nouvel-azerty/#2250-malware-windows).
-
-La solution consiste à **éviter Linux Mint** et à installer [Ubuntu](https://ubuntu.com/download/desktop) directement.
+La solution consiste à **utiliser xkbcomp** comme indiqué sous le titre [Activation sans droits d’administrateur](#activation-sans-droits-dadministrateur).
 
 ### ChromeOS
 
@@ -373,13 +361,4 @@ Les entités HTML documentées dans ce fichier à cause de leur disposition sur 
 
 ### Nom de fichier
 
-Ce Lisez-moi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `linux-chromeos/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Nouvel-AZERTY-Linux-`version`.zip` ».
-
-### Bogue d’xkbcomp sous Linux Mint
-
-	X Error of failed request:  BadValue (integer parameter out of range for operation)
-	  Major opcode of failed request:  135 (XKEYBOARD)
-	  Minor opcode of failed request:  9 (XkbSetMap)
-	  Value in failed request:  0x135b0038
-	  Serial number of failed request:  170
-	  Current serial number in output stream:  176
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `linux-chromeos/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Nouvel-AZERTY-Linux-`version`.zip` ».
