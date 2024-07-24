@@ -1,13 +1,22 @@
 #!/bin/bash
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-07-14T1506+0200
+# 2024-07-24T0718+0200
 # = last modified.
 #
-# Compiles XKB layout files for activating a keyboard layout as user.
+# Merges XKB source files into an all-in-one `.xkb` source, for the purpose of
+# activating a keyboard layout as user.
+#
 # Requires to manually configure the subvariants in xkb/keycodes/evdev.
+#
 # Automatically switches layouts while compiling a subvariant as configured.
 # Courtesy https://askubuntu.com/questions/209597/how-do-i-change-keyboards-from-the-command-line
+#
+# Rather than distributing compiled `.xkm` files, distributing merged `.xkb` is
+# preferable for transparency (the user is able to check what they got) and for
+# usability alike, since the user can directly customize the layout by making a
+# small edit right in the all-in-one human readable source file.
+#
 
 cd $(dirname "$0")
 if [ ! -d "compiled" ]; then
@@ -42,14 +51,14 @@ case $re in
 esac
 
 function compile {
-	echo "$1$suffix.xkm:"
+	echo "$1$suffix.xkb:"
 	if [ ! -d "$1" ]; then
 		mkdir $1
 	fi
 	gsettings set org.gnome.desktop.input-sources current $2
 	sleep 1s
-	xkbcomp :0 $1/$1$suffix.xkm
-	echo  "$1$suffix.xkm compiled."
+	xkbcomp :0 $1/$1$suffix.xkb
+	echo  "$1$suffix.xkb compiled."
 }
 
 compile "kbfrFRs"  "1"
@@ -61,4 +70,4 @@ compile "kbbrFRsr" "6"
 compile "kbfrPFsr" "7"
 compile "kbfrAFsr" "8"
 compile "kbfrFRsr" "0"
-cp kbfrFRs/kbfrFRs$suffix.xkm ../nouvel-azerty$suffix.xkm; echo "nouvel-azerty$suffix.xkm updated."
+cp kbfrFRs/kbfrFRs$suffix.xkb ../nouvel-azerty$suffix.xkb; echo "nouvel-azerty$suffix.xkb updated."
