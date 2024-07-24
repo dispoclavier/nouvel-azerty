@@ -2,12 +2,13 @@
 
 ## 3.2.2 (projet)
 
+* Activation : Déboguer les fichiers fusionnés en réactivant deux types de touches non utilisés et désactivés dans les distributions de 2016. (dispocla.cpp [6e6da51](https://github.com/dispoclavier/nouvel-azerty/commit/6e6da518aef27fac611ba90b6873328bf40d75c8), comp.sh [c0eecf0](https://github.com/dispoclavier/nouvel-azerty/commit/c0eecf0f0d8ca357b63c989d0ff3cd50daafa2e8))
 * Documentation :
 	* Point du pavé numérique : Corriger la référence du modèle cité, `kpdl(kposs)`, non `kpdl(dotoss)`. (dispocla.cpp [3175e51](https://github.com/dispoclavier/nouvel-azerty/commit/3175e51073dfba773b12996fcc648dc55ba4558e))
 	* Bogues des systèmes d’exploitation :
+		* Documenter le recours à xkbcomp sous Linux Mint. (comp.sh [bb82c93](https://github.com/dispoclavier/nouvel-azerty/commit/bb82c935ab22b17fa4eb235a5eab60cf203bc1f0), [5a71641](https://github.com/dispoclavier/nouvel-azerty/commit/5a71641554775d50bbb0d8cac15de0509444a7b2), Lisez-moi-svp.txt [258e86a](https://github.com/dispoclavier/nouvel-azerty/commit/258e86a720a3cbc9a6220d7bc3b60894fc9c26b2), [ed1664c](https://github.com/dispoclavier/nouvel-azerty/commit/ed1664c953631bfe3e0de94d11352d3b29a292cb), linux-chromeos/readme.md [8d4e19e](https://github.com/dispoclavier/nouvel-azerty/commit/8d4e19ea219b1ec9cd9646a6cbb3594a2507e371), [67d85af](https://github.com/dispoclavier/nouvel-azerty/commit/67d85afeaacf5cd8103d10fa15a7de38b84d84fd))
 		* Préciser les bogues sous Linux Mint et sous ChromeOS. (linux-chromeos/readme.md [2d1fc45](https://github.com/dispoclavier/nouvel-azerty/commit/2d1fc451e3463368481ebd8ff81e8c3e58425f59))
 		* Préciser le bogue sous ChromeOS. (linux-chromeos/readme.md [d235040](https://github.com/dispoclavier/nouvel-azerty/commit/d2350409ea06cb0acf657333def517bf2d9a9dae))
-		* Préciser ou mitiger le bogue d’xkbcomp sous Linux Mint. (comp.sh [bb82c93](https://github.com/dispoclavier/nouvel-azerty/commit/bb82c935ab22b17fa4eb235a5eab60cf203bc1f0), [5a71641](https://github.com/dispoclavier/nouvel-azerty/commit/5a71641554775d50bbb0d8cac15de0509444a7b2), Lisez-moi-svp.txt [258e86a](https://github.com/dispoclavier/nouvel-azerty/commit/258e86a720a3cbc9a6220d7bc3b60894fc9c26b2), [ed1664c](https://github.com/dispoclavier/nouvel-azerty/commit/ed1664c953631bfe3e0de94d11352d3b29a292cb), linux-chromeos/readme.md [8d4e19e](https://github.com/dispoclavier/nouvel-azerty/commit/8d4e19ea219b1ec9cd9646a6cbb3594a2507e371))
 	* Personnalisation : Attirer l’attention sur la possibilité. (Lisez-moi-svp.txt [711ee78](https://github.com/dispoclavier/nouvel-azerty/commit/711ee782775e7883b166d827da61ae189f8a1e5d))
 
 ## 3.2.1 (2024-07-14)
