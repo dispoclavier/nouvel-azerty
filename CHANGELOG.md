@@ -1,6 +1,6 @@
 # Journal des modifications
 
-## 3.2.2 (2024-07-24)
+## 3.2.2 (2024-07-25)
 
 * Activation : Déboguer les fichiers fusionnés en réactivant deux types de touches non utilisés et désactivés dans les distributions Linux de 2016. (dispocla.cpp [6e6da51](https://github.com/dispoclavier/nouvel-azerty/commit/6e6da518aef27fac611ba90b6873328bf40d75c8), comp.sh [c0eecf0](https://github.com/dispoclavier/nouvel-azerty/commit/c0eecf0f0d8ca357b63c989d0ff3cd50daafa2e8))
 * Documentation :
