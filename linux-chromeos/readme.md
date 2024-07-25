@@ -52,7 +52,7 @@ Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller
 
 #### L’installation pas à pas
 
-Compte tenu de l’[alerte](#alerte-de-depannage) plus haut, et pour toute éventualité, la procédure d’installation manuelle est la suivante :
+Compte tenu de l’[alerte](#alerte-de-d%C3%A9pannage) plus haut, et pour toute éventualité, la procédure d’installation manuelle est la suivante :
 
 1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
 2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Copier ce fichier vers `/usr/share/X11/xkb/types/dispotypes`.
