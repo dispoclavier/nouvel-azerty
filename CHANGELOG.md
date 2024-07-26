@@ -1,5 +1,39 @@
 # Journal des modifications
 
+## 3.3.0 (2024-07-26)
+
+* Composition :
+	* Médiévisme :
+		* Ajouter "ᷓ" U+1DD3, "ᷔ" U+1DD4, "ᷕ" U+1DD5, "ᷖ" U+1DD6. (compose-1.yml [17d8731](https://github.com/dispoclavier/nouvel-azerty/commit/17d8731adc64bb15ea3b6aa8bb66e88ceab9c451))
+		* Redonder "᷏" U+1DCF, "᷐" U+1DD0, "᷑" U+1DD1, "᷒" U+1DD2. (ibidem)
+	* Chiffres romains non décomposables :
+		* Ajouter "ↀ" U+2180, "ↂ" U+2182, "ↈ" U+2188, "ↁ" U+2181, "ↇ" U+2187, "ↅ" U+2185, "ↆ" U+2186. (ibidem)
+	* Symboles de touches modificatrices :
+		* Mettre "⟰" U+27F0 à la place de "⬆" U+2B06. (ibidem)
+		* Simplifier les séquences. (ibidem)
+	* Symboles de touche de composition :
+		* Prendre en charge "¦" U+00A6. (ibidem)
+		* Corriger la séquence de "⎄" U+2384. (ibidem)
+* Transformations :
+	* Exposant :
+		* Ajouter "ˀ" U+02C0. (compose-2.yml [32f4db9](https://github.com/dispoclavier/nouvel-azerty/commit/32f4db95799bdfb438dcb58efebb243c58e7745a))
+	* Exposant et groupe 1 :
+		* Ajouter "ᵞ" U+1D5E en Majuscule. (ibidem)
+		* Redonder "ᵠ" U+1D60. (ibidem)
+	* Indice ou petite capitale et réfléchi :
+		* Ajouter "ᴎ" U+1D0E, "ᴙ" U+1D19. (ibidem)
+	* Réfléchi :
+		* Redonder "ᴎ" U+1D0E, "ᴙ" U+1D19. (ibidem)
+	* Exposant > Suscrit et groupe 1 :
+		* Ajouter "ᷘ" U+1DD8, "ᷙ" U+1DD9, "ᷣ" U+1DE3, "ᷥ" U+1DE5, "ᷧ" U+1DE7, "ᷩ" U+1DE9, "ᷪ" U+1DEA, "ᷬ" U+1DEC, "ᷭ" U+1DED, "ᷯ" U+1DEF, "ᷰ" U+1DF0. (ibidem)
+		* Redonder "ᷓ" U+1DD3. (ibidem)
+	* Exposant > Suscrit et groupe 12 :
+		* Redonder "ᷘ" U+1DD8. (ibidem)
+	* Tourné : Redonder "ɟ" U+025F à la place de "ⅎ" U+214E, qui passe en double pression. Permuter "Ⅎ" U+2132 et "ꓞ" U+A4DE. (ibidem)
+* Documentation :
+	* Corriger. (compose-1.yml [17d8731](https://github.com/dispoclavier/nouvel-azerty/commit/17d8731adc64bb15ea3b6aa8bb66e88ceab9c451), compose-2.yml [32f4db9](https://github.com/dispoclavier/nouvel-azerty/commit/32f4db95799bdfb438dcb58efebb243c58e7745a), compose-3.yml [6b97818](https://github.com/dispoclavier/nouvel-azerty/commit/6b97818f83578fca6bf66b88b527e2ca79ac2745))
+	* Déboguer linux-chromeos/readme.md. ([31e6af7](https://github.com/dispoclavier/nouvel-azerty/commit/31e6af71d04aed655f64cfbbab1a8b7f7e5038ce))
+
 ## 3.2.2 (2024-07-25)
 
 * Activation : Déboguer les fichiers fusionnés en réactivant deux types de touches non utilisés et désactivés dans les distributions Linux de 2016. (dispocla.cpp [6e6da51](https://github.com/dispoclavier/nouvel-azerty/commit/6e6da518aef27fac611ba90b6873328bf40d75c8), comp.sh [c0eecf0](https://github.com/dispoclavier/nouvel-azerty/commit/c0eecf0f0d8ca357b63c989d0ff3cd50daafa2e8))
