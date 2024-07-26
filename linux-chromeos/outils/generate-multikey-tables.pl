@@ -3,7 +3,7 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-07-06T0948+0200
+# 2024-07-26T2144+0200
 # = last modified.
 #
 # Generates HTML tables of multi-key sequences from `Compose.yml`.
@@ -50,7 +50,7 @@ my $descriptors_count     = 0;
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
-print( "Opened file $file_path.\n" );
+print( "Opened file $file_path for reading.\n" );
 
 my $output_directory = 'multikey-tables';
 unless ( -d $output_directory ) {
@@ -63,30 +63,25 @@ my $output_file_index         = 0;
 my $output_file_extension     = '.html';
 my $output_path               = "$output_directory/ALL_$output_file_name_template$output_file_extension";
 open( WHOLEOUTPUT, '>', $output_path ) or die $!;
-print( "Opened file $output_path.\n" );
-my $wholeoutput_path = $output_path;
-$output_path         = $output_path_trunk . $output_file_extension;
-open( OUTPUT, '>', $output_path ) or die $!;
-print( "Opened file $output_path.\n" );
-print( "Processing multi keys from $file_path to $output_path.\n" );
-
-my $parse_on       = !1;
-my $date_legend    = 'Tableau mis à jour le ';
+print( "Opened file $output_path for writing.\n" );
+my $wholeoutput_path     = $output_path;
+my $parse_on             = !1;
+my $date_legend          = 'Tableau mis à jour le ';
 # Courtesy https://stackoverflow.com/a/43881027
-my $nowDate        = DateTime->now(time_zone => 'local');
+my $nowDate              = DateTime->now(time_zone => 'local');
 my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
-my $date           = "$day/$month/$year";
-my $table_id       = 'tableau-compose';
-my $table_header_1 = 'Caractère';
-my $table_header_2 = 'Séquence de composition';
-my $table_header_3 = 'Identifiant Unicode';
-my $start_tags_1   = "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
-my $start_tags_2   = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
-my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
-my $end_tags       = "</tbody></table></figure>\n";
+my $date                 = "$day/$month/$year";
+my $table_id             = 'tableau-compose';
+my $table_header_1       = 'Caractère';
+my $table_header_2       = 'Séquence de composition';
+my $table_header_3       = 'Identifiant Unicode';
+my $start_tags_1         = "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
+my $end_tags             = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
-print OUTPUT $start_tags;
-my ( $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $text, $index );
+my $sectional_partial_is_open = !1;
+my ( @anchors, $anchor, $cp, $descrip, $index, $regex, $str, $test, $text, $tooltip, $ucodes );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /START_MULTI_KEY/ ) {
@@ -99,15 +94,18 @@ while ( my $line = <INPUT> ) {
   	if ( $line =~ /^# # / ) {
 			unless (
 				$line =~ /^# # Notes for maintenance/
+				|| $line =~ /^# # Notes on documentation/
 				|| $line =~ /^# # Ellipses and leaders/
 				|| $line =~ /^# # Dashes and hyphens/
 				|| $line =~ /^# # Unsupported sequences/
 				|| $line =~ /^# # Degree sign/
 				|| $line =~ /^# # Currency symbols by ISO codes/
 			) {
-				print OUTPUT $end_tags;
-		    close( OUTPUT );
-		    print( "Closed file $output_path.\n" );
+				if ( $sectional_partial_is_open ) {
+					print OUTPUT $end_tags;
+			    close( OUTPUT );
+			    print( "Closed file $output_path.\n" );
+				}
 				$line =~ s/^....//;
 				$line =~ s/,//g;
 				$line =~ s/ /-/g;
@@ -117,7 +115,8 @@ while ( my $line = <INPUT> ) {
 				$start_tags  = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 				++$output_file_index;
 		    open( OUTPUT, '>', $output_path ) or die $!;
-		    print( "Opened file $output_path.\n" );
+				$sectional_partial_is_open = !0;
+		    print( "Opened file $output_path for writing.\n" );
 				print( "Processing multi-key sequences from $file_path to $output_path.\n" );
 				print OUTPUT $start_tags;
 				print OUTPUT "<!-- $1 -->\n";
