@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-07-06T0948+0200
+# 2024-07-26T1905+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -296,9 +296,12 @@ while ( my $line = <INPUT> ) {
 				# Remove remaining delimiters.
 				$line =~ s/<(.)>/$1/g;
 
-				# Translation.
-				$line =~ s/( # .*), for convenience/$1, pour plus de facilité/g;
+				# Translate English comments to French.
+				$line =~ s/( # .*) \(cool\)/$1 pour une expérience utilisateur plus cool/g;
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
+				$line =~ s/( # .*) preferred in Rromani/$1 préféré en rromani/g;
+				$line =~ s/( # .*) preferred glyph for Latin theta/$1 glyphe préféré pour le thêta latin/g;
+				$line =~ s/( # .*) mapped like on Greek keyboards/$1 disposé comme sur les claviers grecs/g;
 				$line =~ s/ # Mathematical Alphanumeric Symbol high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
 				$line =~ s/ # Regional Indicator Symbol high surrogate/ # Surrogat haut de symbole drapeau/g;
 				$line =~ s/ # Wide-headed arrow high surrogate/ # Surrogat haut de flèche à pointe large/g;
@@ -367,14 +370,13 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) pause button/$1 bouton pause/g;
 				$line =~ s/( # .*) ergonomic mapping/$1 disposition ergonomique/g;
 				$line =~ s/( # .*) mnemonic mapping/$1 disposition mnémonique/g;
-				$line =~ s/( # .*) universal quantifier/$1 quantificateur universel/g;
 				$line =~ s/( # .*) cursive non-joiner/$1 antiliant cursif/g;
-				$line =~ s/( # .*) permyriad/$1 pour dix mille/g;
 				$line =~ s/( # .*) lightning/$1 éclair/g;
+				$line =~ s/( # .*) plain scissors/$1 ciseaux pleins/g;
+				$line =~ s/( # .*) outline scissors/$1 ciseaux ajourés/g;
 				$line =~ s/( # .*) cursive joiner/$1 liant cursif/g;
 				$line =~ s/( # .*) fast up button/$1 bouton d’augmentation rapide/g;
 				$line =~ s/( # .*) fast down button/$1 bouton de diminution rapide/g;
-				$line =~ s/( # .*) existential quantifier/$1 quantificateur existentiel/g;
 				$line =~ s/( # .*) medical symbol/$1 symbole médical/g;
 				$line =~ s/( # .*) emoji style/$1 style émoji/g;
 				$line =~ s/( # .*) text style/$1 style texte/g;
@@ -393,7 +395,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
 				$line =~ s/( # .*) emoji/$1 émoji/g;
 				$line =~ s/( # .*) in legacy usage/$1 précédemment/g;
-				$line =~ s/( # .*) highlighter mark used by scribes in the margin/$1 mise en évidence par les scibes dans la marge/g;
 				$line =~ s/( # .*) highlighter mark/$1 mise en évidence/g;
 				$line =~ s/( # .*) play or pause button/$1 bouton lecture ou pause/g;
 				$line =~ s/( # .*) pause button/$1 bouton pause/g;
