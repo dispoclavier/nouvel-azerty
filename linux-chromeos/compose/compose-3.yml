@@ -216,12 +216,12 @@
 <Multi_key><numbersign><KP_3>                                                        <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
 <UEFD0><UEFD0><UEFD0>                                                                <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
 <Multi_key><numbersign><numbersign><numbersign>                                      <asciicircum> : "⚛" U269B # ATOM SYMBOL emoji
-<UEFD0><4>                                                                           <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
-<Multi_key><numbersign><4>                                                           <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
-<UEFD0><KP_4>                                                                        <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
-<Multi_key><numbersign><KP_4>                                                        <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <asciicircum> : "∀" U2200 # FOR ALL, universal quantifier
+<UEFD0><4>                                                                           <asciicircum> : "∀" U2200 # FOR ALL
+<Multi_key><numbersign><4>                                                           <asciicircum> : "∀" U2200 # FOR ALL
+<UEFD0><KP_4>                                                                        <asciicircum> : "∀" U2200 # FOR ALL
+<Multi_key><numbersign><KP_4>                                                        <asciicircum> : "∀" U2200 # FOR ALL
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <asciicircum> : "∀" U2200 # FOR ALL
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <asciicircum> : "∀" U2200 # FOR ALL
 <UEFD0><5>                                                                           <asciicircum> : "∠" U2220 # ANGLE
 <Multi_key><numbersign><5>                                                           <asciicircum> : "∠" U2220 # ANGLE
 <UEFD0><KP_5>                                                                        <asciicircum> : "∠" U2220 # ANGLE
@@ -260,8 +260,8 @@
 #
 <UEFD0>                                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
 <Multi_key><numbersign>                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
-<UEFD0><UEFD0>                                                                           <percent> : "‱" U2031 # PER TEN THOUSAND SIGN, permyriad
-<Multi_key><numbersign><numbersign>                                                      <percent> : "‱" U2031 # PER TEN THOUSAND SIGN, permyriad
+<UEFD0><UEFD0>                                                                           <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
+<Multi_key><numbersign><numbersign>                                                      <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
 <UEFD0><3>                                                                               <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
 <Multi_key><numbersign><3>                                                               <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
 <UEFD0><KP_3>                                                                            <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
@@ -335,18 +335,18 @@
 <Multi_key><numbersign><numbersign><numbersign>                                         <EuroSign> : "∋" U220B # CONTAINS AS MEMBER
 <UEFD0><UEFD0><UEFD0>                                                                   <quotedbl> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><numbersign><numbersign><numbersign>                                         <quotedbl> : "∋" U220B # CONTAINS AS MEMBER
-<UEFD0><4>                                                                              <EuroSign> : "∃" U2203 # THERE EXISTS, existential quantifier
-<Multi_key><numbersign><4>                                                              <EuroSign> : "∃" U2203 # THERE EXISTS, existential quantifier
-<UEFD0><4>                                                                              <quotedbl> : "∃" U2203 # THERE EXISTS, existential quantifier
-<Multi_key><numbersign><4>                                                              <quotedbl> : "∃" U2203 # THERE EXISTS, existential quantifier
-<UEFD0><KP_4>                                                                           <EuroSign> : "∃" U2203 # THERE EXISTS, existential quantifier
-<Multi_key><numbersign><KP_4>                                                           <EuroSign> : "∃" U2203 # THERE EXISTS, existential quantifier
-<UEFD0><KP_4>                                                                           <quotedbl> : "∃" U2203 # THERE EXISTS, existential quantifier
-<Multi_key><numbersign><KP_4>                                                           <quotedbl> : "∃" U2203 # THERE EXISTS, existential quantifier
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <EuroSign> : "∃" U2203 # THERE EXISTS, existential quantifier
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <EuroSign> : "∃" U2203 # THERE EXISTS, existential quantifier
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <quotedbl> : "∃" U2203 # THERE EXISTS, existential quantifier
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <quotedbl> : "∃" U2203 # THERE EXISTS, existential quantifier
+<UEFD0><4>                                                                              <EuroSign> : "∃" U2203 # THERE EXISTS
+<Multi_key><numbersign><4>                                                              <EuroSign> : "∃" U2203 # THERE EXISTS
+<UEFD0><4>                                                                              <quotedbl> : "∃" U2203 # THERE EXISTS
+<Multi_key><numbersign><4>                                                              <quotedbl> : "∃" U2203 # THERE EXISTS
+<UEFD0><KP_4>                                                                           <EuroSign> : "∃" U2203 # THERE EXISTS
+<Multi_key><numbersign><KP_4>                                                           <EuroSign> : "∃" U2203 # THERE EXISTS
+<UEFD0><KP_4>                                                                           <quotedbl> : "∃" U2203 # THERE EXISTS
+<Multi_key><numbersign><KP_4>                                                           <quotedbl> : "∃" U2203 # THERE EXISTS
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <EuroSign> : "∃" U2203 # THERE EXISTS
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <EuroSign> : "∃" U2203 # THERE EXISTS
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <quotedbl> : "∃" U2203 # THERE EXISTS
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <quotedbl> : "∃" U2203 # THERE EXISTS
 <UEFD0><5>                                                                              <EuroSign> : "⚕" U2695 # STAFF OF AESCULAPIUS emoji, medical symbol
 <Multi_key><numbersign><5>                                                              <EuroSign> : "⚕" U2695 # STAFF OF AESCULAPIUS emoji, medical symbol
 <UEFD0><5>                                                                              <quotedbl> : "⚕" U2695 # STAFF OF AESCULAPIUS emoji, medical symbol
@@ -435,18 +435,18 @@
 <Multi_key><numbersign><5>                                                             <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
 <UEFD0><KP_5>                                                                          <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
 <Multi_key><numbersign><KP_5>                                                          <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
-<UEFD0><6>                                                                             <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji 
-<Multi_key><numbersign><6>                                                             <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji 
-<UEFD0><KP_6>                                                                          <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji 
-<Multi_key><numbersign><KP_6>                                                          <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji 
-<UEFD0><7>                                                                             <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL 
-<Multi_key><numbersign><7>                                                             <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL 
-<UEFD0><KP_7>                                                                          <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL 
-<Multi_key><numbersign><KP_7>                                                          <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL 
-<UEFD0><8>                                                                             <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL 
-<Multi_key><numbersign><8>                                                             <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL 
-<UEFD0><KP_8>                                                                          <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL 
-<Multi_key><numbersign><KP_8>                                                          <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL 
+<UEFD0><6>                                                                             <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><numbersign><6>                                                             <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<UEFD0><KP_6>                                                                          <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><numbersign><KP_6>                                                          <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<UEFD0><7>                                                                             <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><7>                                                             <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
+<UEFD0><KP_7>                                                                          <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><KP_7>                                                          <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
+<UEFD0><8>                                                                             <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><8>                                                             <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<UEFD0><KP_8>                                                                          <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><KP_8>                                                          <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
 <UEFD0><9>                                                                             <backslash> : "♋" U264B # CANCER emoji
 <Multi_key><numbersign><9>                                                             <backslash> : "♋" U264B # CANCER emoji
 <UEFD0><KP_9>                                                                          <backslash> : "♋" U264B # CANCER emoji
@@ -713,10 +713,10 @@
 <Multi_key><numbersign><8>                                                             <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <UEFD0><KP_8>                                                                          <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <Multi_key><numbersign><KP_8>                                                          <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<UEFD0><9>                                                                             <braceleft> : "♏" U264F # SCORPIUS emoji, Scorpio
-<Multi_key><numbersign><9>                                                             <braceleft> : "♏" U264F # SCORPIUS emoji, Scorpio
-<UEFD0><KP_9>                                                                          <braceleft> : "♏" U264F # SCORPIUS emoji, Scorpio
-<Multi_key><numbersign><KP_9>                                                          <braceleft> : "♏" U264F # SCORPIUS emoji, Scorpio
+<UEFD0><9>                                                                             <braceleft> : "♏" U264F # SCORPIUS emoji
+<Multi_key><numbersign><9>                                                             <braceleft> : "♏" U264F # SCORPIUS emoji
+<UEFD0><KP_9>                                                                          <braceleft> : "♏" U264F # SCORPIUS emoji
+<Multi_key><numbersign><KP_9>                                                          <braceleft> : "♏" U264F # SCORPIUS emoji
 <UEFD0><0>                                                                             <braceleft> : "🏽" U1F3FD # EMOJI MODIFIER FITZPATRICK TYPE-4 (UD83C UDFFD)
 <Multi_key><numbersign><0>                                                             <braceleft> : "🏽" U1F3FD # EMOJI MODIFIER FITZPATRICK TYPE-4 (UD83C UDFFD)
 <UEFD0><KP_0>                                                                          <braceleft> : "🏽" U1F3FD # EMOJI MODIFIER FITZPATRICK TYPE-4 (UD83C UDFFD)
@@ -827,10 +827,10 @@
 <Multi_key><numbersign><8>                                                             <ampersand> : "⛽" U26FD # FUEL PUMP emoji
 <UEFD0><KP_8>                                                                          <ampersand> : "⛽" U26FD # FUEL PUMP emoji
 <Multi_key><numbersign><KP_8>                                                          <ampersand> : "⛽" U26FD # FUEL PUMP emoji
-<UEFD0><9>                                                                             <ampersand> : "♑" U2651 # CAPRICORN, Capricornus emoji
-<Multi_key><numbersign><9>                                                             <ampersand> : "♑" U2651 # CAPRICORN, Capricornus emoji
-<UEFD0><KP_9>                                                                          <ampersand> : "♑" U2651 # CAPRICORN, Capricornus emoji
-<Multi_key><numbersign><KP_9>                                                          <ampersand> : "♑" U2651 # CAPRICORN, Capricornus emoji
+<UEFD0><9>                                                                             <ampersand> : "♑" U2651 # CAPRICORN emoji
+<Multi_key><numbersign><9>                                                             <ampersand> : "♑" U2651 # CAPRICORN emoji
+<UEFD0><KP_9>                                                                          <ampersand> : "♑" U2651 # CAPRICORN emoji
+<Multi_key><numbersign><KP_9>                                                          <ampersand> : "♑" U2651 # CAPRICORN emoji
 <UEFD0><0>                                                                             <ampersand> : "🏿" U1F3FF # EMOJI MODIFIER FITZPATRICK TYPE-6 (UD83C UDFFF)
 <Multi_key><numbersign><0>                                                             <ampersand> : "🏿" U1F3FF # EMOJI MODIFIER FITZPATRICK TYPE-6 (UD83C UDFFF)
 <UEFD0><KP_0>                                                                          <ampersand> : "🏿" U1F3FF # EMOJI MODIFIER FITZPATRICK TYPE-6 (UD83C UDFFF)
@@ -2055,6 +2055,9 @@
 #   rather than the number of triangles, the 1/1 vs 1/2 logic is convenient.
 #   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
+#   "⁛" U205B FOUR DOT MARK is a highlighter mark used by scribes in the margin
+#   and is annotated as such in the Unicode Code Charts.
+#
 <UEFD0>                                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <Multi_key><numbersign>                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <UEFD0>                                                                                  <section> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
@@ -2075,18 +2078,18 @@
 <Multi_key><numbersign><KP_3>                                                            <section> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <UEFD0><UEFD0><UEFD0>                                                                    <section> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <Multi_key><numbersign><numbersign><numbersign>                                          <section> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
-<UEFD0><4>                                                                             <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<Multi_key><numbersign><4>                                                             <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<UEFD0><KP_4>                                                                          <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<Multi_key><numbersign><KP_4>                                                          <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<UEFD0><4>                                                                               <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<Multi_key><numbersign><4>                                                               <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<UEFD0><KP_4>                                                                            <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<Multi_key><numbersign><KP_4>                                                            <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                             <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                              <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark used by scribes in the margin
+<UEFD0><4>                                                                             <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<Multi_key><numbersign><4>                                                             <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<UEFD0><KP_4>                                                                          <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<Multi_key><numbersign><KP_4>                                                          <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                           <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                            <semicolon> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<UEFD0><4>                                                                               <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<Multi_key><numbersign><4>                                                               <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<UEFD0><KP_4>                                                                            <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<Multi_key><numbersign><KP_4>                                                            <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                             <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                              <section> : "⁛" U205B # FOUR DOT MARK, highlighter mark
 <UEFD0><5>                                                                             <semicolon> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <Multi_key><numbersign><5>                                                             <semicolon> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <UEFD0><KP_5>                                                                          <semicolon> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
@@ -2374,8 +2377,8 @@
 <Multi_key><numbersign>                                                                        <G> : "Ə" U018F # LATIN CAPITAL LETTER SCHWA
 <UEFD0>                                                                                        <g> : "ə" U0259 # LATIN SMALL LETTER SCHWA
 <Multi_key><numbersign>                                                                        <g> : "ə" U0259 # LATIN SMALL LETTER SCHWA
-<UEFD0>                                                                                        <H> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
-<Multi_key><numbersign>                                                                        <H> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
+<UEFD0>                                                                                        <H> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
+<Multi_key><numbersign>                                                                        <H> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
 <UEFD0>                                                                                        <h> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <Multi_key><numbersign>                                                                        <h> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <UEFD0>                                                                                        <I> : "Ĳ" U0132 # LATIN CAPITAL LIGATURE IJ
@@ -2473,8 +2476,8 @@
 <Multi_key><numbersign><numbersign>                                                            <D> : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
 <UEFD0><UEFD0>                                                                                 <d> : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
 <Multi_key><numbersign><numbersign>                                                            <d> : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
-<UEFD0><UEFD0>                                                                                 <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
-<Multi_key><numbersign><numbersign>                                                            <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E, turned e
+<UEFD0><UEFD0>                                                                                 <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
+<Multi_key><numbersign><numbersign>                                                            <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
 <UEFD0><UEFD0>                                                                                 <e> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <Multi_key><numbersign><numbersign>                                                            <e> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <UEFD0><UEFD0>                                                                                 <F> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
@@ -2539,8 +2542,8 @@
 <Multi_key><numbersign><numbersign>                                                            <t> : "θ" U03B8 # GREEK SMALL LETTER THETA
 <UEFD0><UEFD0>                                                                                 <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA preferred in Rromani
 <Multi_key><numbersign><numbersign>                                                            <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA preferred in Rromani
-<UEFD0><UEFD0>                                                                                 <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
-<Multi_key><numbersign><numbersign>                                                            <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
+<UEFD0><UEFD0>                                                                                 <u> : "θ" U03B8 # GREEK SMALL LETTER THETA mapped like on Greek keyboards
+<Multi_key><numbersign><numbersign>                                                            <u> : "θ" U03B8 # GREEK SMALL LETTER THETA mapped like on Greek keyboards
 <UEFD0><UEFD0>                                                                                 <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
 <Multi_key><numbersign><numbersign>                                                            <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
 <UEFD0><UEFD0>                                                                                 <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
@@ -2648,8 +2651,8 @@
 <Multi_key><numbersign><3>                                                                     <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
 <UEFD0><KP_3>                                                                                  <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
 <Multi_key><numbersign><KP_3>                                                                  <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<UEFD0><UEFD0><UEFD0>                                                                          <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA 
-<Multi_key><numbersign><numbersign><numbersign>                                                <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA 
+<UEFD0><UEFD0><UEFD0>                                                                          <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
+<Multi_key><numbersign><numbersign><numbersign>                                                <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
 <UEFD0><3>                                                                                     <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
 <Multi_key><numbersign><3>                                                                     <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
 <UEFD0><KP_3>                                                                                  <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
@@ -3819,10 +3822,10 @@
 <Multi_key><numbersign><2>                                                                     <v> : "ỽ" U1EFD # LATIN SMALL LETTER MIDDLE-WELSH V
 <UEFD0><KP_2>                                                                                  <v> : "ỽ" U1EFD # LATIN SMALL LETTER MIDDLE-WELSH V
 <Multi_key><numbersign><KP_2>                                                                  <v> : "ỽ" U1EFD # LATIN SMALL LETTER MIDDLE-WELSH V
-<UEFD0><2>                                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<Multi_key><numbersign><2>                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<UEFD0><KP_2>                                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
-<Multi_key><numbersign><KP_2>                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE
+<UEFD0><2>                                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><numbersign><2>                                                                     <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<UEFD0><KP_2>                                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><numbersign><KP_2>                                                                  <W> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <UEFD0><2>                                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><numbersign><2>                                                                     <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <UEFD0><KP_2>                                                                                  <w> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
