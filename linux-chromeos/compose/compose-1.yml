@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.2.2" # See # # Notes about syntax
+<UEFA0>                     : "version 3.3.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -940,7 +940,27 @@
 <Multi_key><O>                                                                              <KP_9> : "⑨" U2468 # CIRCLED DIGIT NINE
 #
 #
-# # Orthography
+# # Roman numerals
+#
+#   Only Roman numerals not intended for CJK and other vertical text, and not
+#   decomposable and thus not discouraged in Latin text are supported, except
+#   the Claudian letter "Ↄ" U2183 (and "ↄ" U2184) supported in *dead_reversed.
+#   https://en.wikipedia.org/wiki/Numerals_in_Unicode#Roman_numerals
+#   See #*# REVERSED
+#
+#   To prevent conflicts with some mathematical symbols, the sequences of all
+#   Roman numerals start with an R for mnemonics and UX consistency.
+#
+<Multi_key><R><C><D>                                                                               : "ↀ" U2180 # ROMAN NUMERAL ONE THOUSAND C D
+<Multi_key><R><D><D><space>                                                                        : "ↁ" U2181 # ROMAN NUMERAL FIVE THOUSAND
+<Multi_key><R><C><C><D><D>                                                                         : "ↂ" U2182 # ROMAN NUMERAL TEN THOUSAND
+<Multi_key><R><C><V><I>                                                                            : "ↅ" U2185 # ROMAN NUMERAL SIX LATE FORM
+<Multi_key><R><L><L>                                                                               : "ↆ" U2186 # ROMAN NUMERAL FIFTY EARLY FORM
+<Multi_key><R><D><D><D>                                                                            : "ↇ" U2187 # ROMAN NUMERAL FIFTY THOUSAND
+<Multi_key><R><C><C><C><D><D><D>                                                                   : "ↈ" U2188 # ROMAN NUMERAL ONE HUNDRED THOUSAND
+#
+#
+# # Orthographies and medievalism
 #
 #   Some of these letters are easier input using groups.
 #
@@ -962,9 +982,18 @@
 #       "ﬅ" UFB05 # LATIN SMALL LIGATURE LONG S T
 #       "ﬆ" UFB06 # LATIN SMALL LIGATURE ST
 #
+#   Sequences for combining diacritical marks start with ampersand because this
+#   is no Multi_key equivalent of any dead key, and because that is consistent
+#   with the “combining” semantics of ampersand in this context.
 #
-#   Latin ligated polygrams for orthographies
-#
+<Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
+<Multi_key><ampersand><a><o>                                                                       : "ᷕ" U1DD5 # COMBINING LATIN SMALL LETTER AO
+<Multi_key><ampersand><a><v>                                                                       : "ᷖ" U1DD6 # COMBINING LATIN SMALL LETTER AV
+<Multi_key><ampersand><a><w>                                                                       : "ᷓ" U1DD3 # COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE
+<Multi_key><ampersand><i><s>                                                                       : "᷐" U1DD0 # COMBINING IS BELOW
+<Multi_key><ampersand><u><r>                                                                       : "᷑" U1DD1 # COMBINING UR ABOVE
+<Multi_key><ampersand><u><s>                                                                       : "᷒" U1DD2 # COMBINING US ABOVE
+<Multi_key><ampersand><z><z>                                                                       : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 <Multi_key><A><A>                                                                                  : "Ꜳ" UA732 # LATIN CAPITAL LETTER AA
 <Multi_key><A><a>                                                                                  : "Ꜳ" UA732 # LATIN CAPITAL LETTER AA
 <Multi_key><a><a>                                                                                  : "ꜳ" UA733 # LATIN SMALL LETTER AA
@@ -1160,19 +1189,26 @@
 #   Since the sequence <Multi_key><space><period> conflicts with "⩑" U2A51, it
 #   is ultimately discarded.
 #
+#   Only most common quotation marks are supported by Multi_key. Less common
+#   quotation marks are supported by the dead key based input method.
+#   See # # Quotation mark input method
+#
+#   The Unicode informative aliases are appended to the Unicode identifiers of
+#   single and double apostrophe quotation marks and comma quotation marks.
+#
 #   Needs double, else would conflict with CIRCUMFLEX&ACUTE:
-<Multi_key><less><less><apostrophe>                                                                : "‘" U2018 # LEFT SINGLE QUOTATION MARK
-<Multi_key><greater><greater><apostrophe>                                                          : "’" U2019 # RIGHT SINGLE QUOTATION MARK
+<Multi_key><less><less><apostrophe>                                                                : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<Multi_key><greater><greater><apostrophe>                                                          : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 #
 #   Needs double, else would conflict with CEDILLA&ACUTE:
-<Multi_key><comma><comma><apostrophe>                                                              : "‚" U201A # SINGLE LOW-9 QUOTATION MARK
+<Multi_key><comma><comma><apostrophe>                                                              : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 #
-<Multi_key><less><less><quotedbl>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK
-<Multi_key><less><less><EuroSign>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK
-<Multi_key><greater><greater><quotedbl>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK
-<Multi_key><greater><greater><EuroSign>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK
-<Multi_key><comma><comma><quotedbl>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
-<Multi_key><comma><comma><EuroSign>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
+<Multi_key><less><less><quotedbl>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<Multi_key><less><less><EuroSign>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+<Multi_key><greater><greater><quotedbl>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><greater><greater><EuroSign>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><comma><comma><quotedbl>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+<Multi_key><comma><comma><EuroSign>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 #
 #
 # # Dashes and hyphens
@@ -2302,14 +2338,14 @@
 #
 #   U2702 BLACK SCISSORS emoji is also in group 2 of * on X.
 #
-<Multi_key><8><x><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><KP_8><x><space>                                                                        : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><8><X><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><KP_8><X><space>                                                                        : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><8><x><p>                                                                               : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><KP_8><x><p>                                                                            : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><8><X><P>                                                                               : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
-<Multi_key><KP_8><X><P>                                                                            : "✂" U2702 # BLACK SCISSORS emoji, plain scissors
+<Multi_key><8><x><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><KP_8><x><space>                                                                        : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><8><X><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><KP_8><X><space>                                                                        : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><8><x><p>                                                                               : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><KP_8><x><p>                                                                            : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><8><X><P>                                                                               : "✂" U2702 # BLACK SCISSORS emoji
+<Multi_key><KP_8><X><P>                                                                            : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><8><x><a>                                                                               : "✄" U2704 # WHITE SCISSORS, outline scissors
 <Multi_key><KP_8><x><a>                                                                            : "✄" U2704 # WHITE SCISSORS, outline scissors
 <Multi_key><8><X><A>                                                                               : "✄" U2704 # WHITE SCISSORS, outline scissors
@@ -2443,32 +2479,36 @@
 #
 #   Symbols for modifier keys
 #
-<Multi_key><l><2><s>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><l><KP_2><s>                                                                            : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><L><2><S>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><L><KP_2><S>                                                                            : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><s><n><2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><s><n><KP_2>                                                                            : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><S><N><2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><S><N><KP_2>                                                                            : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
-<Multi_key><l><3><s>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><l><KP_3><s>                                                                            : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><L><3><S>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><L><KP_3><S>                                                                            : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><s><n><3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><s><n><KP_3>                                                                            : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><S><N><3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><S><N><KP_3>                                                                            : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><l><5><s>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><l><KP_5><s>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><L><5><S>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><L><KP_5><S>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><s><n><5>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><s><n><KP_5>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><S><N><5>                                                                               : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><S><N><KP_5>                                                                            : "⬆" U2B06 # UPWARDS BLACK ARROW emoji, used for level 5 select
-<Multi_key><c><a><p><s>                                                                            : "⇪" U21EA # UPWARDS WHITE ARROW FROM BAR, capitals lock
-<Multi_key><C><A><P><S>                                                                            : "⇪" U2BB8 # UPWARDS WHITE ARROW FROM BAR WITH HORIZONTAL BAR, capitals lock
+#   "⟰" U27F0 UPWARDS QUADRUPLE ARROW is proposed for repurposing as level 5
+#   select, by lack of a quintuple arrow, and with the logic that this modifier
+#   increments the level number by 4.
+#
+<Multi_key><l><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><l><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><L><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><L><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><n><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><n><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><N><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><N><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+<Multi_key><l><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><l><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><L><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><L><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><n><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><n><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><N><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><N><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><l><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><l><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><L><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><L><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><n><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><n><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><N><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><N><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><c><a><p>                                                                               : "⇪" U21EA # UPWARDS WHITE ARROW FROM BAR, capitals lock
+<Multi_key><C><A><P>                                                                               : "⇪" U2BB8 # UPWARDS WHITE ARROW FROM BAR WITH HORIZONTAL BAR, capitals lock
 <Multi_key><c><a><p><l>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
 <Multi_key><C><A><P><L>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
 <Multi_key><n><m><l>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
@@ -2481,10 +2521,12 @@
 <Multi_key><O><P><T>                                                                               : "⌥" U2325 # OPTION KEY
 #
 #
-#   Symbol for Composition key
+#   Symbols for Multi_key or Composition key
 #
-<Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
-<Multi_key><C><M><P>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+<Multi_key><c><o><m>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+<Multi_key><C><O><M>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 #
 #
 #   Symbols that may be used for key down, key up events
@@ -6981,12 +7023,13 @@
 #   In group 2 of }                                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><e><m><p><t><y><s><e><t>                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><e><n><s><v><i><d><e>                                                                   : "∅" U2205 # EMPTY SET French shortened name
-#   In group 1 of (                                                                                : "⌀" U2300 # DIAMETER
-<Multi_key><d><i><a><m><e><t><e><r>                                                                : "⌀" U2300 # DIAMETER
-<Multi_key><d><i><a><m><egrave><t><r><e>                                                           : "⌀" U2300 # DIAMETER French
-<Multi_key><d><i><a><m><e><t><r><e>                                                                : "⌀" U2300 # DIAMETER simplified French
+#   In group 1 of (                                                                                : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><d><i><a><m><e><t><e><r>                                                                : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><d><i><a><m><egrave><t><r><e>                                                           : "⌀" U2300 # DIAMETER SIGN French
+<Multi_key><d><i><a><m><e><t><r><e>                                                                : "⌀" U2300 # DIAMETER SIGN simplified French
 <Multi_key><E><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE TeX control has title case
 <Multi_key><e><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE
+#   The French sequence ¦enveloppe is not supported, because it exceeds the XCompose upper limit of 9 keysyms (including Multi_key).
 <Multi_key><L><p><a><r><e><n><g><t>                                                                : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
 <Multi_key><R><p><a><r><e><n><l><t>                                                                : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET TeX + HTML under max 9 keysym constraint
 #
