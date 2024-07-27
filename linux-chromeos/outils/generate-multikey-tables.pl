@@ -3,13 +3,15 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-07-26T2144+0200
+# 2024-07-27T2201+0200
 # = last modified.
 #
 # Generates HTML tables of multi-key sequences from `Compose.yml`.
 #
-# The input requires `START_MULTI_KEY` as a start tag, and `START_MATH` as the
-# end tag. Section headings switch files.
+# In the input file, parsing starts at `START_MULTI_KEY`, and parsing stops at
+# `START_MATH`.
+#
+# Section headings with a caret between the two leading hashes switch files.
 #
 # The keyboard output is displayed on a white background span (class "bg") with
 # a light-blue baseline for the purpose of delimiting whitespace characters and
@@ -59,18 +61,19 @@ unless ( -d $output_directory ) {
 }
 my $output_file_name_template = 'multikey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
-my $output_file_index         = 0;
 my $output_file_extension     = '.html';
 my $output_path               = "$output_directory/ALL_$output_file_name_template$output_file_extension";
 open( WHOLEOUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path for writing.\n" );
 my $wholeoutput_path     = $output_path;
-my $parse_on             = !1;
+my $parsing_on           = !1;
 my $date_legend          = 'Tableau mis à jour le ';
+
 # Courtesy https://stackoverflow.com/a/43881027
 my $nowDate              = DateTime->now(time_zone => 'local');
 my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
 my $date                 = "$day/$month/$year";
+
 my $table_id             = 'tableau-compose';
 my $table_header_1       = 'Caractère';
 my $table_header_2       = 'Séquence de composition';
@@ -79,48 +82,41 @@ my $start_tags_1         = "<figure class=\"wp-block-table alignwide multikey {{
 my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags             = "</tbody></table></figure>\n";
+my $section_partial_open = !1;
+my ( @anchors, $anchor, $comment, $cp, $descrip, $file_id, $index, $regex, $str, $test, $text, $tooltip, $ucodes );
+
 print WHOLEOUTPUT $start_tags;
-my $sectional_partial_is_open = !1;
-my ( @anchors, $anchor, $cp, $descrip, $index, $regex, $str, $test, $text, $tooltip, $ucodes );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /START_MULTI_KEY/ ) {
-		$parse_on = !0;
+		$parsing_on = !0;
 	}
 	if ( $line =~ /START_MATH/ ) {
-		$parse_on = !1;
+		$parsing_on = !1;
 	}
-	if ( $parse_on ) {
-  	if ( $line =~ /^# # / ) {
-			unless (
-				$line =~ /^# # Notes for maintenance/
-				|| $line =~ /^# # Notes on documentation/
-				|| $line =~ /^# # Ellipses and leaders/
-				|| $line =~ /^# # Dashes and hyphens/
-				|| $line =~ /^# # Unsupported sequences/
-				|| $line =~ /^# # Degree sign/
-				|| $line =~ /^# # Currency symbols by ISO codes/
-			) {
-				if ( $sectional_partial_is_open ) {
-					print OUTPUT $end_tags;
-			    close( OUTPUT );
-			    print( "Closed file $output_path.\n" );
-				}
-				$line =~ s/^....//;
-				$line =~ s/,//g;
-				$line =~ s/ /-/g;
-				$line =~ m/(.+)/;
-				$output_path = $output_path_trunk . '_' . $output_file_index . '_' . $1 . $output_file_extension;
-				$table_id    = "tableau-compose-$output_file_index";
-				$start_tags  = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
-				++$output_file_index;
-		    open( OUTPUT, '>', $output_path ) or die $!;
-				$sectional_partial_is_open = !0;
-		    print( "Opened file $output_path for writing.\n" );
-				print( "Processing multi-key sequences from $file_path to $output_path.\n" );
-				print OUTPUT $start_tags;
-				print OUTPUT "<!-- $1 -->\n";
+	if ( $parsing_on ) {
+  	if ( $line =~ /^#\^# / ) {
+			if ( $section_partial_open ) {
+				print OUTPUT $end_tags;
+		    close( OUTPUT );
+		    print( "Closed file $output_path.\n" );
 			}
+			$line        =~ s/^....//;
+			$line        =~ m/(.+)/;
+			$comment     = $1;
+			$line        =~ s/,//g;
+			$line        =~ s/ /-/g;
+			$line        =~ m/(.+)/;
+			$file_id     = lc( $1 );
+			$output_path = $output_path_trunk . '_' . $file_id . $output_file_extension;
+			$table_id    = "tableau-compose-$file_id";
+			$start_tags  = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
+	    open( OUTPUT, '>', $output_path ) or die $!;
+			$section_partial_open = !0;
+	    print( "Opened file $output_path for writing.\n" );
+			print( "Processing multi-key sequences from $file_path to $output_path.\n" );
+			print OUTPUT $start_tags;
+			print OUTPUT "<!-- $comment -->\n";
 		}
 		# Skip comments, numpad alternatives and output like "en_US.UTF-8/Compose".
 		unless ( $line =~ /^#/ || $line =~ /<KP_/ || $line =~ /\/Compose"/ ) {
