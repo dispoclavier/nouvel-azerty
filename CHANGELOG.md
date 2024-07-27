@@ -15,9 +15,8 @@
 		* Prendre en charge "¦" U+00A6. (ibidem)
 		* Corriger la séquence de "⎄" U+2384. (ibidem)
 * Transformations :
-	* Exposant :
-		* Ajouter "ˀ" U+02C0. (compose-2.yml [32f4db9](https://github.com/dispoclavier/nouvel-azerty/commit/32f4db95799bdfb438dcb58efebb243c58e7745a))
 	* Exposant et groupe 1 :
+		* Ajouter "ˀ" U+02C0. (compose-2.yml [32f4db9](https://github.com/dispoclavier/nouvel-azerty/commit/32f4db95799bdfb438dcb58efebb243c58e7745a))
 		* Ajouter "ᵞ" U+1D5E en Majuscule. (ibidem)
 		* Redonder "ᵠ" U+1D60. (ibidem)
 	* Indice ou petite capitale et réfléchi :
