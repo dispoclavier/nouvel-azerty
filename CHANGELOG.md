@@ -3,21 +3,21 @@
 ## 3.4.0 (projet)
 
 * Composition :
-	* Corriger les séquences de "⪃" U2A83, "⪄" U2A84.
-	* Ajouter "⁐" U2050.
+	* Corriger les séquences de "⪃" U+2A83, "⪄" U+2A84.
+	* Ajouter "⁐" U+2050.
 * Transformations :
 	* Touche morte groupe :
 		* Groupes des symboles :
-			* Ajouter "‸" U2038 à la place de "✈" U2708, qui prend la place de "∡" U2221, qui est en composition.
-			* Ajouter "⁃" U2043 à la place de "⹀" U2E40, qui est dans plusieurs touches mortes et en composition.
-			* Ajouter "⁖" U2056 à la place de "‏" U200F, qui est en composition.
-			* Redonder "✀" U2700 à la place de "►" U25BA, qui prend la place de "‎" U200E, qui est en composition.
+			* Ajouter "‸" U+2038 à la place de "✈" U+2708, qui prend la place de "∡" U+2221, qui est en composition.
+			* Ajouter "⁃" U+2043 à la place de "⹀" U+2E40, qui est dans plusieurs touches mortes et en composition.
+			* Ajouter "⁖" U+2056 à la place de "‏" U+200F, qui est en composition.
+			* Redonder "✀" U+2700 à la place de "►" U+25BA, qui prend la place de "‎" U+200E, qui est en composition.
 	* Tilde :
-		* Ajouter "⁓" U2053.
+		* Ajouter "⁓" U+2053.
 	* Brève inversée :
-		* Redonder "⁐" U2050.
+		* Redonder "⁐" U+2050.
 	* Accent circonflexe :
-		* Redonder "‸" U2038 à la place de "ꞈ" UA788, qui est avec le caractère de base espace fine insécable.
+		* Redonder "‸" U+2038 à la place de "ꞈ" U+A788, qui est avec le caractère de base espace fine insécable.
 
 ## 3.3.0 (2024-07-26)
 
