@@ -14,7 +14,7 @@
 #   While Windows and macOS can emulate input composition by chained dead keys,
 #   XKB is to emulate dead keys by XCompose. This resulting configuration file
 #   is very human readable, and it is easily converted into documentation.
-#   See # # Notes on documentation
+#   See # # Notes about documentation
 #
 #   Input composition implemented by chaining dead keys is more powerful in
 #   that it supports modularity, as opposed to XCompose that requires listing
@@ -3055,8 +3055,8 @@
 #
 #   The rotation angle may be 180° as for TURNED letters, or 90° i.e. SIDEWAYS.
 #
-#   "ɟ" U025F LATIN SMALL LETTER DOTLESS J WITH STROKE is “typographically a
-#   turned f, but better thought of as a form of j” (Unicode Code Charts). For
+#   "ɟ" U025F LATIN SMALL LETTER DOTLESS J WITH STROKE being “typographically a
+#   turned f, but better thought of as a form of j” (Unicode Code Charts), for
 #   consistency, it is supported as such, but for convenience also as a turned
 #   f. Since the Claudian letter "Ⅎ" U2132 also has a lowercase form "ⅎ" U214E,
 #   that is intended to meet Unicode casing requirements, the uppercase slot is
@@ -4178,16 +4178,14 @@
 #   Multi_key: ¦~
 #   Dchar: "ẽ" U1EBD
 #
-#   Followed by quotedbl or rightsinglequotemark (or apostrophe[1]), dead_tilde
-#   yields high curly quotation marks U201D, U2019 (closing or opening), as a
-#   facility for one-handed input of double apostrophe closing quotation marks,
-#   taking advantage of the synergy between dead_tilde and quotedbl or EuroSign
-#   on level 3 of keys D11 and D03, as well as to improve backwards compatible
-#   layouts where dead_acute (usually yielding these quotation marks) is not on
-#   level 1, but on level 3, key E01, next to the tilde dead key on E02, and
-#   quotedbl is on E03 as usual.
-#   [1] By apostrophe, the Multi_key equivalent conflicts with TILDE AND ACUTE,
-#       so this is commented out.
+#   Followed by quotedbl, dead_tilde yields the (closing or opening) high curly
+#   quotation mark U201D, a facility for one-handed input, taking advantage of
+#   the synergy between dead_tilde and quotedbl or EuroSign on level 3 of keys
+#   D11 and D03, and to improve backwards compatible layouts where dead_acute
+#   (usually yielding these quotation marks) is not on level 1, but on level 3,
+#   key E01 next to the tilde dead key on E02, and quotedbl is on E03 as usual.
+#   By apostrophe, the Multi_key equivalent would conflict with TILDE AND ACUTE
+#   and so makes U2019 unsupportable this way,
 #   See # # Quotation mark input method
 #
 #   Supports turned punctuation used in Spanish:
@@ -4207,6 +4205,8 @@
 #   around the turned dagger by 5.
 #   Umihotaru’s 'Nishiki-teki' font supports "⹋" U2E4B TRIPLE DAGGER.
 #   See # # C10
+#
+#   This also supports the swung dash "⁓" U2053 with dashes as base characters.
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
@@ -4231,10 +4231,6 @@
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<dead_tilde>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-#   <Multi_key><asciitilde>                                                           <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-<dead_tilde>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-<Multi_key><asciitilde>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_tilde>                                                                           <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde>                                                                <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde>                                                                          <underscore> : "̰" U0330 # COMBINING TILDE BELOW
@@ -4245,6 +4241,12 @@
 <Multi_key><asciitilde>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
 <dead_tilde>                                                                              <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><asciitilde>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<dead_tilde>                                                                              <emdash> : "⁓" U2053 # SWUNG DASH
+<Multi_key><asciitilde>                                                                   <emdash> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                              <endash> : "⁓" U2053 # SWUNG DASH
+<Multi_key><asciitilde>                                                                   <endash> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
+<Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                                   <1> : "†" U2020 # DAGGER
 <Multi_key><asciitilde>                                                                        <1> : "†" U2020 # DAGGER
 <dead_tilde>                                                                                <KP_1> : "†" U2020 # DAGGER
@@ -8078,8 +8080,8 @@
 <Multi_key><dollar>                                                                            <R> : "₨" U20A8 # RUPEE SIGN
 <dead_currency>                                                                                <r> : "₢" U20A2 # CRUZEIRO SIGN
 <Multi_key><dollar>                                                                            <r> : "₢" U20A2 # CRUZEIRO SIGN
-<dead_currency>                                                                                <S> : "$" U0024 # DOLLAR SIGN
-<Multi_key><dollar>                                                                            <S> : "$" U0024 # DOLLAR SIGN
+<dead_currency>                                                                                <S> : "⃀" U20C0 # SOM SIGN
+<Multi_key><dollar>                                                                            <S> : "⃀" U20C0 # SOM SIGN
 <dead_currency>                                                                                <s> : "₪" U20AA # NEW SHEQEL SIGN
 <Multi_key><dollar>                                                                            <s> : "₪" U20AA # NEW SHEQEL SIGN
 <dead_currency>                                                                                <T> : "₮" U20AE # TUGRIK SIGN
@@ -8190,7 +8192,14 @@
 #   press, and likewise "͝" U035D and "͜" U035C in dead_breve single and double
 #   press.
 #
-#   dead_invertedbreve also starts circled numbers and round box drawings.
+#   With dead_breve as a base character, dead_invertedbreve has a shortcut for
+#   "⁐" U2050 CLOSE UP. The genuine Multi_key equivalent would not work, as it
+#   conflicts with numerous other sequences, including the dedicated Multi_key
+#   sequence of this symbol.
+#   See # # Proofreading mark
+#
+#   dead_invertedbreve also starts circled numbers as well as box drawings with
+#   rounded corners.
 #   See #^# CIRCLED_NUMBER
 #   See # # Box drawings with rounded corners
 #
@@ -8238,6 +8247,8 @@
 <Multi_key><parenleft>                                                                         <U> : "Ȗ" U0216 # LATIN CAPITAL LETTER U WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <u> : "ȗ" U0217 # LATIN SMALL LETTER U WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <u> : "ȗ" U0217 # LATIN SMALL LETTER U WITH INVERTED BREVE
+<dead_invertedbreve>                                                                  <dead_breve> : "⁐" U2050 # CLOSE UP
+<Multi_key><parenleft>                                                                <dead_breve> : "⁐" U2050 # CLOSE UP
 #
 #
 # # Box drawings with rounded corners
@@ -10302,8 +10313,8 @@
 <Multi_key><underscore>                                                                        <s> : "ₛ" U209B # LATIN SUBSCRIPT SMALL LETTER S
 <UEFD2>                                                                                        <T> : "ᴛ" U1D1B # LATIN LETTER SMALL CAPITAL T
 <Multi_key><underscore>                                                                        <T> : "ᴛ" U1D1B # LATIN LETTER SMALL CAPITAL T
-<UEFD2>                                                                                        <t> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><underscore>                                                                        <t> : "∄" U2204 # THERE DOES NOT EXIST
+<UEFD2>                                                                                        <t> : "ₜ" U209C # LATIN SUBSCRIPT SMALL LETTER T
+<Multi_key><underscore>                                                                        <t> : "ₜ" U209C # LATIN SUBSCRIPT SMALL LETTER T
 <UEFD2>                                                                                        <U> : "ᴜ" U1D1C # LATIN LETTER SMALL CAPITAL U
 <Multi_key><underscore>                                                                        <U> : "ᴜ" U1D1C # LATIN LETTER SMALL CAPITAL U
 <UEFD2>                                                                                        <u> : "ᵤ" U1D64 # LATIN SUBSCRIPT SMALL LETTER U
@@ -12439,8 +12450,8 @@
 <Multi_key><less><less>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_circumflex><dead_circumflex>                                                         <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><less>                                                                    <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><less><less>                                                             <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "‸" U2038 # CARET
+<Multi_key><less><less>                                                             <nobreakspace> : "‸" U2038 # CARET
 <dead_circumflex><dead_circumflex>                                                         <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                             <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
@@ -12522,7 +12533,7 @@
 #
 #   The triple dead_circumflex sequences are not added right in the HACEK dead
 #   key, because this file is also used as the source code for dead key tables.
-#   See # # Notes on documentation
+#   See # # Notes about documentation
 #
 <dead_circumflex><dead_circumflex><dead_circumflex>                                        <space> : "̌" U030C # COMBINING CARON
 <Multi_key><less><less><less>                                                              <space> : "̌" U030C # COMBINING CARON
