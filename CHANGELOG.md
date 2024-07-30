@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 3.4.1 (2024-07-30)
+
+* Mettre à jour le symbole monétaire par code ISO "Лв" U+041B U+0432 Som KYRGYZSTAN vers "⃀" U+20C0 SOM SIGN. (compose-1.yml [9ea34e0](https://github.com/dispoclavier/nouvel-azerty/commit/9ea34e023b55c39301a7bb5bdd808fb065e2346b))
+* Déboguer "℣" U+2123, "ᴎ" U+1D0E, "ᴙ" U+1D19, "ą" U+0105. (ibidem, compose-2.yml [9b4a4c0](https://github.com/dispoclavier/nouvel-azerty/commit/9b4a4c0efdc8000b8abb604fcf7368013b255261))
+
 ## 3.4.0 (2024-07-30)
 
 * Composition :
