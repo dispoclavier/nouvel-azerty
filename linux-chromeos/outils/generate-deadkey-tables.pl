@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-07-26T1947+0200
+# 2024-07-30T1719+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -15,7 +15,7 @@
 # space and symbol group tables and letter group tables are generated too.
 # Other options may be configured after `/START_LETTER_SYMBOL_GROUPS/`.
 #
-# The keyboard output is displayed on a white background span (class "bg") with
+# The keyboard output is marked up for display with a white background and with
 # a light-blue baseline for the purpose of delimiting whitespace characters and
 # clarifying advance width and vertical alignment.
 #
@@ -308,7 +308,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) ALA-LC for/$1 ALA-LC pour/g;
 				$line =~ s/( # .*) ALA-LC romanization/$1 romanisation ALA-LC/g;
 				$line =~ s/( # .*) Arabic transliteration/$1 translittération arabe/g;
-				$line =~ s/( # .*) Breton/$1 breton/g;
 				$line =~ s/( # .*) Canadian French:/$1 Français du Canada :/g;
 				$line =~ s/( # .*) check mark button/$1 bouton de coche/g;
 				$line =~ s/( # .*) Chimane orthography of Wayne Gill/$1 Chimane orthographe de Wayne Gill/g;
@@ -338,7 +337,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) for Breton variant/$1 pour variante bretonne/g;
 				$line =~ s/( # .*) for Swiss layout/$1 pour disposition suisse/g;
 				$line =~ s/( # .*) for use in Rromani/$1 pour son usage en rromani/g;
-				$line =~ s/( # .*) for use in Rromani/$1 pour son utilisation en rromani/g;
 				$line =~ s/( # .*) fountain pen/$1 stylo plume/g;
 				$line =~ s/( # .*) French:/$1 Français :/g;
 				$line =~ s/( # .*) Fula in Senegalese orthography/$1 fula selon l’orthographe sénégalaise/g;
@@ -361,7 +359,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Lezgian/$1 lezghien/g;
 				$line =~ s/( # .*) lightning/$1 éclair/g;
 				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
-				$line =~ s/( # .*) Lithuanian/$1 lithuanien/g;
 				$line =~ s/( # .*) low double comma quotation mark/$1 guillemet virgule double/g;
 				$line =~ s/( # .*) low single comma quotation mark/$1 guillemet virgule simple/g;
 				$line =~ s/( # .*) Malagasy/$1 malgache/g;
@@ -371,7 +368,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) medical symbol/$1 symbole médical/g;
 				$line =~ s/( # .*) mnemonic mapping/$1 disposition mnémonique/g;
 				$line =~ s/( # .*) Moldovan and Romanian until 1904/$1 moldavien et roumain jusqu’en 1904/g;
-				$line =~ s/( # .*) most-used in France/$1 émoji le plus utilisé en France/g;
 				$line =~ s/( # .*) most-used in France/$1 le plus utilisé en France/g;
 				$line =~ s/( # .*) next track button/$1 bouton de la piste suivante/g;
 				$line =~ s/( # .*) no-break space/$1 espace insécable/g;
@@ -384,7 +380,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Parthian transcription/$1 transcription parthe/g;
 				$line =~ s/( # .*) Pashto romanization/$1 romanisation pachto/g;
 				$line =~ s/( # .*) pause button/$1 bouton pause/g;
-				$line =~ s/( # .*) pause button/$1 bouton pause/g;
 				$line =~ s/( # .*) plain scissors/$1 ciseaux pleins/g;
 				$line =~ s/( # .*) play button/$1 bouton lecture/g;
 				$line =~ s/( # .*) play or pause button/$1 bouton lecture ou pause/g;
@@ -394,7 +389,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) record button/$1 bouton d’enregistrement/g;
 				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
 				$line =~ s/( # .*) red heart/$1 cœur rouge/g;
-				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 réutilisé comme symbole de composition/g;
 				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 utilisé comme symbole de composition/g;
 				$line =~ s/( # .*) rescue worker’s helmet/$1 casque de secouriste/g;
 				$line =~ s/( # .*) reverse button/$1 bouton marche arrière/g;
@@ -417,7 +411,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) voiceless alveolar trill/$1 consonne roulée alvéolaire sourde/g;
 				$line =~ s/( # .*) Yoruba in current Nigerian alphabet/$1 yoruba avec l’alphabet nigérian actuel/g;
 				$line =~ s/( # .*\w); /$1 ; /g;
-				$line =~ s/( # .*\w): /$1 : /g;
 
 				# Anchors, localized tooltips and text style emoji for searchability.
 				unless ( $line =~ m/: +"surrogat_haut_U"/u ) {
