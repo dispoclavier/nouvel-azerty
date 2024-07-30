@@ -176,16 +176,16 @@
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
 #	  1	⚠	‰	★	☆	∼	◌	ʼ	∫	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
-#	  2	♿	‱	∈	√	≃	⚪	⊂	∬	∅	☮	☑	⍽	∂	➜	⹀	∓	•	❰	❱	‖	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
+#	  2	♿	‱	∈	√	≃	⚪	⊂	∬	∅	☮	☑	⍽	∂	➜	⁃	∓	•	❰	❱	‖	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
 #	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	¶	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	∥	➗	✖	∐	✅	≡	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
-#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	〰	❌	✂	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
-#	  5	∠	☇	⚕	☢	☠	○	➰	▢	⛈	☔	☐	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	⛆	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
-#	  6	∡	☈	✍	♻	☎	●	➿	〃	⛔	☂	☑	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	⊢	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∝	⚘	⛸	☒	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	⊣	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
-#	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⯀	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⊥	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
-#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	⊤	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	NSP	NSP	
-#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	RLM	LRM	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
-#	11	✈	⏫	⏏	®	™	⁁	ˈ	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⚐	⌘	⤴	⤵	HSP	HSP	 
+#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✂	✀	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
+#	  5	∠	☇	⚕	☢	☠	○	➰	▢	⛈	☔	▪	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	▫	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
+#	  6	✈	☈	✍	♻	☎	●	➿	⯀	⛔	☂	◾	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	◽	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
+#	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∝	⚘	⛸	◼	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	◻	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
+#	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⬛	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⬜	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
+#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	〰	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	NSP	NSP	
+#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	⁖	►	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
+#	11	‸	⏫	⏏	®	™	⁁	ˈ	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⚐	⌘	⤴	⤵	HSP	HSP	 
 #	12	ª	⏬	〃	∖	☘	❍	ˌ	♾	º	⛏	⚧	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	∕	❖	✏	⛛	⚔	⟂	⁌	♇	⁍	∎	※	⌨	IDSP	IDSP	
 #
 #
@@ -226,18 +226,18 @@
 <Multi_key><numbersign><5>                                                           <asciicircum> : "∠" U2220 # ANGLE
 <UEFD0><KP_5>                                                                        <asciicircum> : "∠" U2220 # ANGLE
 <Multi_key><numbersign><KP_5>                                                        <asciicircum> : "∠" U2220 # ANGLE
-<UEFD0><6>                                                                           <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><numbersign><6>                                                           <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<UEFD0><KP_6>                                                                        <asciicircum> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><numbersign><KP_6>                                                        <asciicircum> : "∡" U2221 # MEASURED ANGLE
+<UEFD0><6>                                                                           <asciicircum> : "⚗" U2697 # ALEMBIC emoji
+<Multi_key><numbersign><6>                                                           <asciicircum> : "⚗" U2697 # ALEMBIC emoji
+<UEFD0><KP_6>                                                                        <asciicircum> : "⚗" U2697 # ALEMBIC emoji
+<Multi_key><numbersign><KP_6>                                                        <asciicircum> : "⚗" U2697 # ALEMBIC emoji
 <UEFD0><7>                                                                           <asciicircum> : "⚓" U2693 # ANCHOR emoji
 <Multi_key><numbersign><7>                                                           <asciicircum> : "⚓" U2693 # ANCHOR emoji
 <UEFD0><KP_7>                                                                        <asciicircum> : "⚓" U2693 # ANCHOR emoji
 <Multi_key><numbersign><KP_7>                                                        <asciicircum> : "⚓" U2693 # ANCHOR emoji
-<UEFD0><8>                                                                           <asciicircum> : "⚗" U2697 # ALEMBIC emoji
-<Multi_key><numbersign><8>                                                           <asciicircum> : "⚗" U2697 # ALEMBIC emoji
-<UEFD0><KP_8>                                                                        <asciicircum> : "⚗" U2697 # ALEMBIC emoji
-<Multi_key><numbersign><KP_8>                                                        <asciicircum> : "⚗" U2697 # ALEMBIC emoji
+<UEFD0><8>                                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<Multi_key><numbersign><8>                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><KP_8>                                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<Multi_key><numbersign><KP_8>                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
 <UEFD0><9>                                                                           <asciicircum> : "♈" U2648 # ARIES emoji
 <Multi_key><numbersign><9>                                                           <asciicircum> : "♈" U2648 # ARIES emoji
 <UEFD0><KP_9>                                                                        <asciicircum> : "♈" U2648 # ARIES emoji
@@ -246,10 +246,10 @@
 <Multi_key><numbersign><0>                                                           <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD0><KP_0>                                                                        <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <Multi_key><numbersign><KP_0>                                                        <asciicircum> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<UEFD0><1>                                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<Multi_key><numbersign><1>                                                           <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<UEFD0><KP_1>                                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
-<Multi_key><numbersign><KP_1>                                                        <asciicircum> : "✈" U2708 # AIRPLANE emoji
+<UEFD0><1>                                                                           <asciicircum> : "‸" U2038 # CARET
+<Multi_key><numbersign><1>                                                           <asciicircum> : "‸" U2038 # CARET
+<UEFD0><KP_1>                                                                        <asciicircum> : "‸" U2038 # CARET
+<Multi_key><numbersign><KP_1>                                                        <asciicircum> : "‸" U2038 # CARET
 <UEFD0><2>                                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <Multi_key><numbersign><2>                                                           <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <UEFD0><KP_2>                                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
@@ -1093,8 +1093,8 @@
 #
 <UEFD0>                                                                                    <minus> : "−" U2212 # MINUS SIGN
 <Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN
-<UEFD0><UEFD0>                                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><numbersign><numbersign>                                                        <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<UEFD0><UEFD0>                                                                             <minus> : "⁃" U2043 # HYPHEN BULLET
+<Multi_key><numbersign><numbersign>                                                        <minus> : "⁃" U2043 # HYPHEN BULLET
 <UEFD0><3>                                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
 <Multi_key><numbersign><3>                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
 <UEFD0><KP_3>                                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
@@ -1545,6 +1545,11 @@
 #
 # # B03
 #
+#   Group 10 has the archaic "⁖" U2056 THREE DOT PUNCTUATION, used by the W3C
+#   in a test page for the `:first-letter` pseudoclass, rather than "‏" U200F,
+#   to prevent abuse.
+#   https://www.w3.org/Style/CSS/Test/CSS2.1/20100316/xhtml1/first-letter-punctuation-252.xht
+#
 <UEFD0>                                                                                     <less> : "✓" U2713 # CHECK MARK
 <Multi_key><numbersign>                                                                     <less> : "✓" U2713 # CHECK MARK
 <UEFD0><UEFD0>                                                                              <less> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
@@ -1581,10 +1586,10 @@
 <Multi_key><numbersign><9>                                                                  <less> : "☄" U2604 # COMET emoji
 <UEFD0><KP_9>                                                                               <less> : "☄" U2604 # COMET emoji
 <Multi_key><numbersign><KP_9>                                                               <less> : "☄" U2604 # COMET emoji
-<UEFD0><0>                                                                                  <less> : "‏" U200F # RIGHT-TO-LEFT MARK
-<Multi_key><numbersign><0>                                                                  <less> : "‏" U200F # RIGHT-TO-LEFT MARK
-<UEFD0><KP_0>                                                                               <less> : "‏" U200F # RIGHT-TO-LEFT MARK
-<Multi_key><numbersign><KP_0>                                                               <less> : "‏" U200F # RIGHT-TO-LEFT MARK
+<UEFD0><0>                                                                                  <less> : "⁖" U2056 # THREE DOT PUNCTUATION
+<Multi_key><numbersign><0>                                                                  <less> : "⁖" U2056 # THREE DOT PUNCTUATION
+<UEFD0><KP_0>                                                                               <less> : "⁖" U2056 # THREE DOT PUNCTUATION
+<Multi_key><numbersign><KP_0>                                                               <less> : "⁖" U2056 # THREE DOT PUNCTUATION
 <UEFD0><1>                                                                                  <less> : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><numbersign><1>                                                                  <less> : "©" U00A9 # COPYRIGHT SIGN emoji
 <UEFD0><KP_1>                                                                               <less> : "©" U00A9 # COPYRIGHT SIGN emoji
@@ -1607,12 +1612,12 @@
 <Multi_key><numbersign><KP_3>                                                            <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
 <UEFD0><UEFD0><UEFD0>                                                                    <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
 <Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<UEFD0><4>                                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<Multi_key><numbersign><4>                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<UEFD0><KP_4>                                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<Multi_key><numbersign><KP_4>                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                             <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                              <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<UEFD0><4>                                                                               <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
+<Multi_key><numbersign><4>                                                               <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
+<UEFD0><KP_4>                                                                            <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
+<Multi_key><numbersign><KP_4>                                                            <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                             <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                              <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
 <UEFD0><5>                                                                               <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
 <Multi_key><numbersign><5>                                                               <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
 <UEFD0><KP_5>                                                                            <greater> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE emoji, play button
@@ -1633,10 +1638,10 @@
 <Multi_key><numbersign><9>                                                               <greater> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
 <UEFD0><KP_9>                                                                            <greater> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
 <Multi_key><numbersign><KP_9>                                                            <greater> : "➸" U27B8 # HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
-<UEFD0><0>                                                                               <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
-<Multi_key><numbersign><0>                                                               <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
-<UEFD0><KP_0>                                                                            <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
-<Multi_key><numbersign><KP_0>                                                            <greater> : "‎" U200E # LEFT-TO-RIGHT MARK
+<UEFD0><0>                                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<Multi_key><numbersign><0>                                                               <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<UEFD0><KP_0>                                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
+<Multi_key><numbersign><KP_0>                                                            <greater> : "►" U25BA # BLACK RIGHT-POINTING POINTER
 <UEFD0><1>                                                                               <greater> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><numbersign><1>                                                               <greater> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <UEFD0><KP_1>                                                                            <greater> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
