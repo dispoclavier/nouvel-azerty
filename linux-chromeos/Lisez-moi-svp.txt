@@ -1,5 +1,5 @@
-                      Date : 2024-07-29T1647+0200
-                   Version : 3.4.0
+                      Date : 2024-07-30T1954+0200
+                   Version : 3.4.1
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
