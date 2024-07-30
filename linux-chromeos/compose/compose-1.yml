@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.4.0" # See # # Notes about syntax
+<UEFA0>                     : "version 3.4.1" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1856,8 +1856,8 @@
 <Multi_key><J><P><Y>                                                                               : "¥" U00A5 # Yen JAPAN
 #   <Multi_key><k><e><s>                                                                           : "Ksh" # Kenyan Shilling KENYA
 #   <Multi_key><K><E><S>                                                                           : "Ksh" # Kenyan Shilling KENYA
-<Multi_key><k><g><s>                                                                               : "Лв" # U041B U0432 Som KYRGYZSTAN
-<Multi_key><K><G><S>                                                                               : "Лв" # U041B U0432 Som KYRGYZSTAN
+<Multi_key><k><g><s>                                                                               : "⃀" U20C0 # Som KYRGYZSTAN
+<Multi_key><K><G><S>                                                                               : "⃀" U20C0 # Som KYRGYZSTAN
 <Multi_key><k><h><r>                                                                               : "៛" U17DB # Riel CAMBODIA
 <Multi_key><K><H><R>                                                                               : "៛" U17DB # Riel CAMBODIA
 #   <Multi_key><k><m><f>                                                                           : "CF" # Comorian Franc COMOROS (THE)
@@ -4212,10 +4212,6 @@
 <Multi_key><space><A>                                                               <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                               <space> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                        <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
-<Multi_key><space><A>                                                                      <space> : "⋀" U22C0 # N-ARY LOGICAL AND
-<Multi_key><space><A>                                                               <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
-<Multi_key><nobreakspace><A>                                                               <space> : "⋀" U22C0 # N-ARY LOGICAL AND
-<Multi_key><nobreakspace><A>                                                        <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V><backslash>                                                                  <space> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V><backslash>                                                           <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V>                                                                             <space> : "⋁" U22C1 # N-ARY LOGICAL OR
@@ -4970,10 +4966,8 @@
 <Multi_key><nobreakspace><nobreakspace><space><backslash>                           <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                           <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                    <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><bracketleft><a>                                                                <space> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><a>                                                         <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><a><bracketright>                                                  <space> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><a><bracketright>                                           <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
+#   Sequences for "⟎" U27CE using the "a" slug with a leading bracketleft would
+#   conflict with "ą" U0105.
 <Multi_key><a><bracketright>                                                               <space> : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><a><bracketright>                                                        <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><bracketleft><v><percent>                                                       <space> : "⟎" U27CE # SQUARED LOGICAL AND
@@ -6365,8 +6359,10 @@
 <Multi_key><space><v><v>                                                            <nobreakspace> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
 <Multi_key><nobreakspace><v><v>                                                            <space> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
 <Multi_key><nobreakspace><v><v>                                                     <nobreakspace> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
-<Multi_key><V><slash><slash>                                                               <space> : "⩗" U2A57 # SLOPING LARGE OR
-<Multi_key><V><slash><slash>                                                        <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><space><V><slash><slash>                                                        <space> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><space><V><slash><slash>                                                 <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><nobreakspace><V><slash><slash>                                                 <space> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><nobreakspace><V><slash><slash>                                          <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
 <Multi_key><A><slash><slash>                                                               <space> : "⩘" U2A58 # SLOPING LARGE AND
 <Multi_key><A><slash><slash>                                                        <nobreakspace> : "⩘" U2A58 # SLOPING LARGE AND
 <Multi_key><V><percent><slash><slash>                                                      <space> : "⩘" U2A58 # SLOPING LARGE AND
