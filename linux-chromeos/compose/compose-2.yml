@@ -10446,10 +10446,10 @@
 <Multi_key><underscore><backslash>                                                             <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
 <UEFD6><UEFD2>                                                                                 <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
 <Multi_key><backslash><underscore>                                                             <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
-<UEFD2><UEFD6>                                                                                 <N> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
-<Multi_key><underscore><backslash>                                                             <N> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
-<UEFD6><UEFD2>                                                                                 <N> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
-<Multi_key><backslash><underscore>                                                             <N> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
+<UEFD2><UEFD6>                                                                                 <R> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
+<Multi_key><underscore><backslash>                                                             <R> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
+<UEFD6><UEFD2>                                                                                 <R> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
+<Multi_key><backslash><underscore>                                                             <R> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
 #
 #
 # # SUBSCRIPT&HOOK
