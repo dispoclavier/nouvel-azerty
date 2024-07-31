@@ -1768,6 +1768,10 @@
 <Multi_key><asciicircum><percent>                                                              <v> : "ᶺ" U1DBA # MODIFIER LETTER SMALL TURNED V
 <UEFD5><UEFD1>                                                                                 <v> : "ᶺ" U1DBA # MODIFIER LETTER SMALL TURNED V
 <Multi_key><percent><asciicircum>                                                              <v> : "ᶺ" U1DBA # MODIFIER LETTER SMALL TURNED V
+<UEFD1><UEFD5>                                                                                 <w> : "ꭩ" UAB69 # MODIFIER LETTER SMALL TURNED W
+<Multi_key><asciicircum><percent>                                                              <w> : "ꭩ" UAB69 # MODIFIER LETTER SMALL TURNED W
+<UEFD5><UEFD1>                                                                                 <w> : "ꭩ" UAB69 # MODIFIER LETTER SMALL TURNED W
+<Multi_key><percent><asciicircum>                                                              <w> : "ꭩ" UAB69 # MODIFIER LETTER SMALL TURNED W
 <UEFD1><UEFD5>                                                                                 <x> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <Multi_key><asciicircum><percent>                                                              <x> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
 <UEFD5><UEFD1>                                                                                 <x> : "ᵌ" U1D4C # MODIFIER LETTER SMALL TURNED OPEN E
@@ -3363,6 +3367,26 @@
 <Multi_key><percent><numbersign><KP_2>                                                         <g> : "ꝿ" UA77F # LATIN SMALL LETTER TURNED INSULAR G
 #
 #
+# # TURNED&TILDE
+#   Dchar: 
+#
+<UEFD5><dead_tilde>                                                                            <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<Multi_key><percent><asciitilde>                                                               <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<dead_tilde><UEFD5>                                                                            <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<Multi_key><asciitilde><percent>                                                               <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+#
+#
+# # TURNED&MIDDLE_TILDE
+#   Dchar: 
+#
+<UEFD5><dead_tilde><dead_tilde>                                                                <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<Multi_key><percent><asciitilde><asciitilde>                                                   <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<dead_tilde><UEFD5><dead_tilde>                                                                <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<Multi_key><asciitilde><percent><asciitilde>                                                   <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<dead_tilde><dead_tilde><UEFD5>                                                                <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+<Multi_key><asciitilde><asciitilde><percent>                                                   <r> : "ꭨ" UAB68 # LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
+#
+#
 # # TURNED&HOOK
 #   Dchar: 
 #
@@ -4751,6 +4775,15 @@
 <Multi_key><at>                                                                                <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
 <dead_greek>                                                                                   <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
 <Multi_key><at>                                                                                <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
+#
+#
+# # GREEK&SUBSCRIPT
+#   Dchar: 
+#
+<dead_greek><UEFD2>                                                                            <O> : "ꭥ" UAB65 # GREEK LETTER SMALL CAPITAL OMEGA
+<Multi_key><at><underscore>                                                                    <O> : "ꭥ" UAB65 # GREEK LETTER SMALL CAPITAL OMEGA
+<UEFD2><dead_greek>                                                                            <O> : "ꭥ" UAB65 # GREEK LETTER SMALL CAPITAL OMEGA
+<Multi_key><underscore><at>                                                                    <O> : "ꭥ" UAB65 # GREEK LETTER SMALL CAPITAL OMEGA
 #
 #
 # # CIRCLED_NEGATIVE
