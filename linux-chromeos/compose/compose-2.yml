@@ -1429,8 +1429,8 @@
 <Multi_key><asciicircum><numbersign>                                                           <n> : "ᵑ" U1D51 # MODIFIER LETTER SMALL ENG
 <UEFD1><UEFD0>                                                                                 <O> : "𐞣" U107A3 # MODIFIER LETTER SMALL CAPITAL OE
 <Multi_key><asciicircum><numbersign>                                                           <O> : "𐞣" U107A3 # MODIFIER LETTER SMALL CAPITAL OE
-<UEFD1><UEFD0>                                                                                 <o> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
-<Multi_key><asciicircum><numbersign>                                                           <o> : "𐞤" U107A4 # MODIFIER LETTER SMALL CLOSED OMEGA
+<UEFD1><UEFD0>                                                                                 <o> : "ꟹ" UA7F9 # MODIFIER LETTER SMALL LIGATURE OE
+<Multi_key><asciicircum><numbersign>                                                           <o> : "ꟹ" UA7F9 # MODIFIER LETTER SMALL LIGATURE OE
 <UEFD1><UEFD0>                                                                                 <Q> : "ˀ" U02C0 # MODIFIER LETTER GLOTTAL STOP
 <Multi_key><asciicircum><numbersign>                                                           <Q> : "ˀ" U02C0 # MODIFIER LETTER GLOTTAL STOP
 <UEFD1><UEFD0>                                                                                 <q> : "ˀ" U02C0 # MODIFIER LETTER GLOTTAL STOP
@@ -2733,6 +2733,8 @@
 #
 <UEFD8><UEFD1>                                                                                 <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
 <Multi_key><minus><asciicircum>                                                                <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
+<UEFD8><UEFD1>                                                                                 <H> : "ꟸ" UA7F8 # MODIFIER LETTER CAPITAL H WITH STROKE
+<Multi_key><minus><asciicircum>                                                                <H> : "ꟸ" UA7F8 # MODIFIER LETTER CAPITAL H WITH STROKE
 <UEFD8><UEFD1>                                                                                 <h> : "𐞕" U10795 # MODIFIER LETTER SMALL H WITH STROKE
 <Multi_key><minus><asciicircum>                                                                <h> : "𐞕" U10795 # MODIFIER LETTER SMALL H WITH STROKE
 <UEFD8><UEFD1>                                                                                 <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
@@ -3546,10 +3548,11 @@
 #   Dchar: "ᴟ" U1D1F
 #
 #   This supports the full set of those among the Old Lisu letters that can be
-#   used for writing in turned Latin letters, i.e. without M, Q, W.
+#   used for writing in turned Latin letters, i.e. without M, Q, W, except for
+#   "ꓞ" UA4DE, that is in the single press dead key for the sake of "ɟ" U025F.
 #   See #*# TURNED
 #
-#   This also supports the Claudian letter "Ⅎ" U2132, that also has a lowercase
+#   Therefore, this supports the Claudian letter "Ⅎ" U2132 that has a lowercase
 #   form "ⅎ" U214E, intended to meet Unicode casing requirements, and thus less
 #   appropriate for support in the single press *dead_turned, where "ɟ" U025F
 #   is more convenient. The other Claudian letters are "Ↄ" U2183, "ↄ" U2184 and
@@ -3630,10 +3633,10 @@
 <Multi_key><percent><percent>                                                                  <O> : "ꓳ" UA4F3 # LISU LETTER O
 <UEFD5><UEFD5>                                                                                 <o> : "ᴑ" U1D11 # LATIN SMALL LETTER SIDEWAYS O
 <Multi_key><percent><percent>                                                                  <o> : "ᴑ" U1D11 # LATIN SMALL LETTER SIDEWAYS O
-<UEFD5><UEFD5>                                                                                 <Q> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
-<Multi_key><percent><percent>                                                                  <Q> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
 <UEFD5><UEFD5>                                                                                 <P> : "ꓒ" UA4D2 # LISU LETTER PHA
 <Multi_key><percent><percent>                                                                  <P> : "ꓒ" UA4D2 # LISU LETTER PHA
+<UEFD5><UEFD5>                                                                                 <Q> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
+<Multi_key><percent><percent>                                                                  <Q> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
 <UEFD5><UEFD5>                                                                                 <q> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
 <Multi_key><percent><percent>                                                                  <q> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
 <UEFD5><UEFD5>                                                                                 <R> : "ꓤ" UA4E4 # LISU LETTER ZA
@@ -3916,10 +3919,14 @@
 <Multi_key><backslash>                                                                         <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
 <UEFD6>                                                                                        <e> : "ɘ" U0258 # LATIN SMALL LETTER REVERSED E
 <Multi_key><backslash>                                                                         <e> : "ɘ" U0258 # LATIN SMALL LETTER REVERSED E
-<UEFD6>                                                                                        <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
-<Multi_key><backslash>                                                                         <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6>                                                                                        <F> : "ꟻ" UA7FB # LATIN EPIGRAPHIC LETTER REVERSED F
 <Multi_key><backslash>                                                                         <F> : "ꟻ" UA7FB # LATIN EPIGRAPHIC LETTER REVERSED F
+<UEFD6>                                                                                        <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<Multi_key><backslash>                                                                         <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<UEFD6>                                                                                        <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash>                                                                         <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6>                                                                                        <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash>                                                                         <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 <UEFD6>                                                                                        <k> : "𝼃" U1DF03 # LATIN SMALL LETTER REVERSED K
 <Multi_key><backslash>                                                                         <k> : "𝼃" U1DF03 # LATIN SMALL LETTER REVERSED K
 <UEFD6>                                                                                        <L> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
@@ -3964,6 +3971,10 @@
 <Multi_key><backslash><numbersign>                                                             <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <UEFD6><UEFD0>                                                                                 <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign>                                                             <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<UEFD6><UEFD0>                                                                                 <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign>                                                             <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0>                                                                                 <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign>                                                             <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 <UEFD6><UEFD0>                                                                                 <n> : "𝼇" U1DF07 # LATIN SMALL LETTER REVERSED ENG
 <Multi_key><backslash><numbersign>                                                             <n> : "𝼇" U1DF07 # LATIN SMALL LETTER REVERSED ENG
 <UEFD6><UEFD0>                                                                                 <X> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
@@ -3981,6 +3992,10 @@
 <Multi_key><backslash><numbersign><numbersign>                                                 <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <UEFD6><UEFD0><UEFD0>                                                                          <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><numbersign>                                                 <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<UEFD6><UEFD0><UEFD0>                                                                          <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><numbersign>                                                 <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><UEFD0>                                                                          <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><numbersign>                                                 <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 #
 #
 # # REVERSED&GROUP_3
@@ -4004,6 +4019,18 @@
 <Multi_key><backslash><numbersign><KP_3>                                                       <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6><UEFD0><UEFD0><UEFD0>                                                                   <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><numbersign><numbersign>                                     <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<UEFD6><UEFD0><3>                                                                              <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><3>                                                          <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><KP_3>                                                                           <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><KP_3>                                                       <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><UEFD0><UEFD0>                                                                   <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><numbersign><numbersign>                                     <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><3>                                                                              <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><3>                                                          <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<UEFD6><UEFD0><KP_3>                                                                           <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><KP_3>                                                       <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<UEFD6><UEFD0><UEFD0><UEFD0>                                                                   <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><numbersign><numbersign>                                     <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 #
 #
 # # REVERSED&GROUP_4
@@ -4027,6 +4054,18 @@
 <Multi_key><backslash><numbersign><KP_4>                                                       <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><numbersign><numbersign><numbersign>                         <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<UEFD6><UEFD0><4>                                                                              <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><4>                                                          <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><KP_4>                                                                           <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><KP_4>                                                       <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><numbersign><numbersign><numbersign>                         <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><4>                                                                              <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><4>                                                          <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<UEFD6><UEFD0><KP_4>                                                                           <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><KP_4>                                                       <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><numbersign><numbersign><numbersign>                         <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 #
 #
 # # REVERSED&GROUP_5
@@ -4044,6 +4083,14 @@
 <Multi_key><backslash><numbersign><5>                                                          <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6><UEFD0><KP_5>                                                                           <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><KP_5>                                                       <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
+<UEFD6><UEFD0><5>                                                                              <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><5>                                                          <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><KP_5>                                                                           <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><KP_5>                                                       <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
+<UEFD6><UEFD0><5>                                                                              <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><5>                                                          <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<UEFD6><UEFD0><KP_5>                                                                           <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
+<Multi_key><backslash><numbersign><KP_5>                                                       <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 #
 #
 # # REVERSED&HOOK
@@ -9668,8 +9715,10 @@
 <Multi_key><minus>                                                                             <R> : "Ɍ" U024C # LATIN CAPITAL LETTER R WITH STROKE
 <UEFD8>                                                                                        <r> : "ɍ" U024D # LATIN SMALL LETTER R WITH STROKE
 <Multi_key><minus>                                                                             <r> : "ɍ" U024D # LATIN SMALL LETTER R WITH STROKE
-<UEFD8>                                                                                        <s> : "𝼋" U1DF0B # LATIN SMALL LETTER ESH WITH DOUBLE BAR
-<Multi_key><minus>                                                                             <s> : "𝼋" U1DF0B # LATIN SMALL LETTER ESH WITH DOUBLE BAR
+<UEFD8>                                                                                        <S> : "Ꟊ" UA7C9 # LATIN CAPITAL LETTER S WITH SHORT STROKE OVERLAY
+<Multi_key><minus>                                                                             <S> : "Ꟊ" UA7C9 # LATIN CAPITAL LETTER S WITH SHORT STROKE OVERLAY
+<UEFD8>                                                                                        <s> : "ꟊ" UA7CA # LATIN SMALL LETTER S WITH SHORT STROKE OVERLAY
+<Multi_key><minus>                                                                             <s> : "ꟊ" UA7CA # LATIN SMALL LETTER S WITH SHORT STROKE OVERLAY
 <UEFD8>                                                                                        <T> : "Ŧ" U0166 # LATIN CAPITAL LETTER T WITH STROKE
 <Multi_key><minus>                                                                             <T> : "Ŧ" U0166 # LATIN CAPITAL LETTER T WITH STROKE
 <UEFD8>                                                                                        <t> : "ŧ" U0167 # LATIN SMALL LETTER T WITH STROKE
@@ -9790,10 +9839,14 @@
 #
 #
 #^# DOUBLE_BAR
-#   double bar, long bar, barred descender
+#   double bar, long bar, barred descender, short stroke overlay
 #   *dead_bar double press
 #   Multi_key: ¦--
 #   Dchar: "ⱡ" U2C61
+#
+#   The short stroke overlay in "Ꟈ" UA7C7 is longer than the standard stroke in
+#   "Đ" U0110 and so makes a good point for being supported by the double press
+#   virtual dead key.
 #
 #   As a MODIFIER LETTER SHORT EQUALS SIGN "꞊" UA78A is picked for its “double”
 #   semantics and matching "˗" U02D7 MODIFIER LETTER MINUS SIGN.
@@ -9807,6 +9860,10 @@
 <Multi_key><minus><minus>                                                           <nobreakspace> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <UEFD8><UEFD8>                                                                             <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <Multi_key><minus><minus>                                                                  <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
+<UEFD8><UEFD8>                                                                                 <D> : "Ꟈ" UA7C7 # LATIN CAPITAL LETTER D WITH SHORT STROKE OVERLAY
+<Multi_key><minus><minus>                                                                      <D> : "Ꟈ" UA7C7 # LATIN CAPITAL LETTER D WITH SHORT STROKE OVERLAY
+<UEFD8><UEFD8>                                                                                 <d> : "ꟈ" UA7C8 # LATIN SMALL LETTER D WITH SHORT STROKE OVERLAY
+<Multi_key><minus><minus>                                                                      <d> : "ꟈ" UA7C8 # LATIN SMALL LETTER D WITH SHORT STROKE OVERLAY
 <UEFD8><UEFD8>                                                                                 <L> : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
 <Multi_key><minus><minus>                                                                      <L> : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
 <UEFD8><UEFD8>                                                                                 <l> : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
@@ -9823,8 +9880,10 @@
 <Multi_key><minus><minus>                                                                      <Q> : "Ꝗ" UA756 # LATIN CAPITAL LETTER Q WITH STROKE THROUGH DESCENDER
 <UEFD8><UEFD8>                                                                                 <q> : "ꝗ" UA757 # LATIN SMALL LETTER Q WITH STROKE THROUGH DESCENDER
 <Multi_key><minus><minus>                                                                      <q> : "ꝗ" UA757 # LATIN SMALL LETTER Q WITH STROKE THROUGH DESCENDER
-<UEFD8><UEFD8>                                                                                 <s> : "𝼋" U1DF0B # LATIN SMALL LETTER ESH WITH DOUBLE BAR
-<Multi_key><minus><minus>                                                                      <s> : "𝼋" U1DF0B # LATIN SMALL LETTER ESH WITH DOUBLE BAR
+<UEFD8><UEFD8>                                                                                 <S> : "Ꟊ" UA7C9 # LATIN CAPITAL LETTER S WITH SHORT STROKE OVERLAY
+<Multi_key><minus><minus>                                                                      <S> : "Ꟊ" UA7C9 # LATIN CAPITAL LETTER S WITH SHORT STROKE OVERLAY
+<UEFD8><UEFD8>                                                                                 <s> : "ꟊ" UA7CA # LATIN SMALL LETTER S WITH SHORT STROKE OVERLAY
+<Multi_key><minus><minus>                                                                      <s> : "ꟊ" UA7CA # LATIN SMALL LETTER S WITH SHORT STROKE OVERLAY
 <UEFD8><UEFD8>                                                                                 <T> : "Ꝧ" UA766 # LATIN CAPITAL LETTER THORN WITH STROKE THROUGH DESCENDER
 <Multi_key><minus><minus>                                                                      <T> : "Ꝧ" UA766 # LATIN CAPITAL LETTER THORN WITH STROKE THROUGH DESCENDER
 <UEFD8><UEFD8>                                                                                 <t> : "ꝧ" UA767 # LATIN SMALL LETTER THORN WITH STROKE THROUGH DESCENDER
@@ -10416,14 +10475,14 @@
 <Multi_key><underscore><percent>                                                               <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
 <UEFD5><UEFD2>                                                                                 <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
 <Multi_key><percent><underscore>                                                               <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
-<UEFD2><UEFD5>                                                                                 <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
-<Multi_key><underscore><percent>                                                               <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
-<UEFD5><UEFD2>                                                                                 <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
-<Multi_key><percent><underscore>                                                               <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
 <UEFD2><UEFD5>                                                                                 <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
 <Multi_key><underscore><percent>                                                               <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
 <UEFD5><UEFD2>                                                                                 <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
 <Multi_key><percent><underscore>                                                               <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
+<UEFD2><UEFD5>                                                                                 <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
+<Multi_key><underscore><percent>                                                               <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
+<UEFD5><UEFD2>                                                                                 <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
+<Multi_key><percent><underscore>                                                               <R> : "ᴚ" U1D1A # LATIN LETTER SMALL CAPITAL TURNED R
 #
 #
 # # SUBSCRIPT&INVERTED
