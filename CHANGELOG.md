@@ -2,7 +2,7 @@
 
 ## 3.4.3 (2024-07-31)
 
-* Ajouter "ꭥ" UAB65, "ꭨ" UAB68, "ꭩ" UAB69. (compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8), [57cc11e](https://github.com/dispoclavier/nouvel-azerty/commit/57cc11eb43515cb98c12c6ac2f7a6657032c85bc))
+* Ajouter "ꭥ" U+AB65, "ꭨ" U+AB68, "ꭩ" U+AB69. (compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8), [57cc11e](https://github.com/dispoclavier/nouvel-azerty/commit/57cc11eb43515cb98c12c6ac2f7a6657032c85bc))
 
 ## 3.4.2 (2024-07-31)
 
