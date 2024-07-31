@@ -1,5 +1,10 @@
 # Journal des modifications
 
+## 3.4.2 (2024-07-31)
+
+* Restaurer "⋊" U+22CA, perdu dans la version 1.7.3. (compose-1.yml [181f80f](https://github.com/dispoclavier/nouvel-azerty/commit/181f80f696d182232b23792169a111cbc6fe45a2))
+* Ajouter "ꝰ" U+A770, "Ꟁ" U+A7C0, "ꟁ" U+A7C1, "Ꟈ" U+A7C7, "ꟈ" U+A7C8, "Ꟊ" U+A7C9, "ꟊ" U+A7CA, "Ꟑ" U+A7D0, "ꟑ" U+A7D1, "ꟓ" U+A7D3, "ꟕ" U+A7D5, "Ꟗ" U+A7D6, "ꟗ" U+A7D7, "Ꟙ" U+A7D8, "ꟙ" U+A7D9, "Ꟶ" U+A7F5, "ꟶ" U+A7F6, "ꟸ" U+A7F8, "ꟹ" U+A7F9. (ibidem, compose-2.yml [ac18a8c](https://github.com/dispoclavier/nouvel-azerty/commit/ac18a8c59b721a2e105bd62c218a36f7a992f25f), compose-3.yml [9633960](https://github.com/dispoclavier/nouvel-azerty/commit/96339608a6cf13d6900e72770a237d5c61d20465))
+
 ## 3.4.1 (2024-07-30)
 
 * Mettre à jour le symbole monétaire par code ISO "Лв" U+041B U+0432 Som KYRGYZSTAN vers "⃀" U+20C0 SOM SIGN. (compose-1.yml [9ea34e0](https://github.com/dispoclavier/nouvel-azerty/commit/9ea34e023b55c39301a7bb5bdd808fb065e2346b))
