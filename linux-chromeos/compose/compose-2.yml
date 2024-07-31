@@ -3125,8 +3125,6 @@
 <Multi_key><percent>                                                                  <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><percent>                                                        <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD5>                                                                               <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
-<Multi_key><percent>                                                                  <asciitilde> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5>                                                                                <ampersand> : "⅋" U214B # TURNED AMPERSAND
 <Multi_key><percent>                                                                   <ampersand> : "⅋" U214B # TURNED AMPERSAND
 <UEFD5>                                                                                <parenleft> : "⁀" U2040 # CHARACTER TIE
@@ -4617,8 +4615,6 @@
 <Multi_key><at>                                                                            <minus> : "⊖" U2296 # CIRCLED MINUS
 <dead_greek>                                                                                <plus> : "⊕" U2295 # CIRCLED PLUS
 <Multi_key><at>                                                                             <plus> : "⊕" U2295 # CIRCLED PLUS
-<dead_greek>                                                                          <underscore> : "⊝" U229D # CIRCLED DASH
-<Multi_key><at>                                                                       <underscore> : "⊝" U229D # CIRCLED DASH
 <dead_greek>                                                                              <endash> : "⊝" U229D # CIRCLED DASH
 <Multi_key><at>                                                                           <endash> : "⊝" U229D # CIRCLED DASH
 <dead_greek>                                                                              <emdash> : "⊝" U229D # CIRCLED DASH
