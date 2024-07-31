@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 3.4.3 (2024-07-31)
+
+* Ajouter "ꭥ" U+AB65, "ꭨ" U+AB68, "ꭩ" U+AB69. (compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8))
+
 ## 3.4.2 (2024-07-31)
 
 * Restaurer "⋊" U+22CA, perdu dans la version 1.7.3. (compose-1.yml [181f80f](https://github.com/dispoclavier/nouvel-azerty/commit/181f80f696d182232b23792169a111cbc6fe45a2))
