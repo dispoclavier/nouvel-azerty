@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.4.1" # See # # Notes about syntax
+<UEFA0>                     : "version 3.4.2" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1051,9 +1051,9 @@
 <Multi_key><f><n><g>                                                                               : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <Multi_key><f><g>                                                                                  : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <Multi_key><f><s>                                                                                  : "ſ" U017F # LATIN SMALL LETTER LONG S
-<Multi_key><G><H><space>                                                                           : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
-<Multi_key><G><h>                                                                                  : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
-<Multi_key><g><h><space>                                                                           : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><G><H><space>                                                                           : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
+<Multi_key><G><h>                                                                                  : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
+<Multi_key><g><h><space>                                                                           : "ƣ" U01A3 # LATIN SMALL LETTER OI, LATIN SMALL LETTER GHA
 <Multi_key><H><N>                                                                                  : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
 <Multi_key><H><n>                                                                                  : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
 <Multi_key><h><n>                                                                                  : "ꜧ" UA727 # LATIN SMALL LETTER HENG
@@ -1174,6 +1174,7 @@
 <Multi_key><asciicircum><braceright><ampersand><t><s>                                              : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><t><e><c>                                                       : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <Multi_key><asciicircum><ampersand><t><e><s>                                                       : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
+<Multi_key><asciicircum><ampersand><u><s>                                                          : "ꝰ" UA770 # MODIFIER LETTER US
 #
 #
 #^# Punctuation
@@ -4251,10 +4252,10 @@
 <Multi_key><bar><backslash><slash>                                                  <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><bar><slash><backslash>                                                         <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><bar><slash><backslash>                                                  <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
-<Multi_key><backslash><slash><bar>                                                         <space> : "⊥" U22A5 # UP TACK
-<Multi_key><backslash><slash><bar>                                                  <nobreakspace> : "⊥" U22A5 # UP TACK
-<Multi_key><slash><backslash><bar>                                                         <space> : "⊥" U22A5 # UP TACK
-<Multi_key><slash><backslash><bar>                                                  <nobreakspace> : "⊥" U22A5 # UP TACK
+<Multi_key><backslash><slash><bar>                                                         <space> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><backslash><slash><bar>                                                  <nobreakspace> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><slash><backslash><bar>                                                         <space> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><slash><backslash><bar>                                                  <nobreakspace> : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><backslash><backslash><slash>                                                   <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><backslash><backslash><slash>                                            <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
