@@ -7,7 +7,7 @@
 	* Tourné et tilde : Ajouter "ꭨ" U+AB68. (ibidem)
 	* Grec et indice : Ajouter "ꭥ" U+AB65. (ibidem)
 	* Tourné : Supprimer "ⸯ" U+2E2F. (compose-2.yml [57cc11e](https://github.com/dispoclavier/nouvel-azerty/commit/57cc11eb43515cb98c12c6ac2f7a6657032c85bc))
-	* Grec ou cerclé : Supprimer "⊝" U+229D. (ibidem)
+	* Grec ou cerclé : Supprimer "⊝" U+229D par "_" U+005F. (ibidem)
 
 ## 3.4.2 (2024-07-31)
 
