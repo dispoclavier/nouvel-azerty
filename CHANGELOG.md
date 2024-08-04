@@ -60,7 +60,7 @@
 ## 3.3.0 (2024-07-26)
 
 * Composition :
-	* Médiévisme :
+	* Paléographie médiévale :
 		* Ajouter "ᷓ" U+1DD3, "ᷔ" U+1DD4, "ᷕ" U+1DD5, "ᷖ" U+1DD6. (compose-1.yml [17d8731](https://github.com/dispoclavier/nouvel-azerty/commit/17d8731adc64bb15ea3b6aa8bb66e88ceab9c451))
 		* Redonder "᷏" U+1DCF, "᷐" U+1DD0, "᷑" U+1DD1, "᷒" U+1DD2. (ibidem)
 	* Chiffres romains non décomposables :
