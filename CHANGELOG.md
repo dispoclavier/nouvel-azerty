@@ -2,17 +2,42 @@
 
 ## 3.4.3 (2024-07-31)
 
-* Ajouter "ꭥ" U+AB65, "ꭨ" U+AB68, "ꭩ" U+AB69. (compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8), [57cc11e](https://github.com/dispoclavier/nouvel-azerty/commit/57cc11eb43515cb98c12c6ac2f7a6657032c85bc))
+* Transformations :
+	* Exposant et tourné : Ajouter "ꭩ" U+AB69. (compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8))
+	* Tourné et tilde : Ajouter "ꭨ" U+AB68. (ibidem)
+	* Grec et indice : Ajouter "ꭥ" U+AB65. (ibidem)
+	* Tourné : Supprimer "ⸯ" U+2E2F. (compose-2.yml [57cc11e](https://github.com/dispoclavier/nouvel-azerty/commit/57cc11eb43515cb98c12c6ac2f7a6657032c85bc))
+	* Grec ou cerclé : Supprimer "⊝" U+229D. (ibidem)
 
 ## 3.4.2 (2024-07-31)
 
-* Restaurer "⋊" U+22CA, perdu dans la version 1.7.3. (compose-1.yml [181f80f](https://github.com/dispoclavier/nouvel-azerty/commit/181f80f696d182232b23792169a111cbc6fe45a2))
-* Ajouter "ꝰ" U+A770, "Ꟁ" U+A7C0, "ꟁ" U+A7C1, "Ꟈ" U+A7C7, "ꟈ" U+A7C8, "Ꟊ" U+A7C9, "ꟊ" U+A7CA, "Ꟑ" U+A7D0, "ꟑ" U+A7D1, "ꟓ" U+A7D3, "ꟕ" U+A7D5, "Ꟗ" U+A7D6, "ꟗ" U+A7D7, "Ꟙ" U+A7D8, "ꟙ" U+A7D9, "Ꟶ" U+A7F5, "ꟶ" U+A7F6, "ꟸ" U+A7F8, "ꟹ" U+A7F9. (ibidem, compose-2.yml [ac18a8c](https://github.com/dispoclavier/nouvel-azerty/commit/ac18a8c59b721a2e105bd62c218a36f7a992f25f), compose-3.yml [9633960](https://github.com/dispoclavier/nouvel-azerty/commit/96339608a6cf13d6900e72770a237d5c61d20465))
+* Composition :
+	* Restaurer "⋊" U+22CA, perdu dans la version 1.7.3. (compose-1.yml [181f80f](https://github.com/dispoclavier/nouvel-azerty/commit/181f80f696d182232b23792169a111cbc6fe45a2))
+	* Mettre "Ƣ" U+01A2, "ƣ" U+01A3 à la place de "Ȝ" U+021C, "ȝ" U+021D, qui est dans le groupe 2. (ibidem)
+	* Ajouter "ꝰ" U+A770. (ibidem)
+* Transformations :
+	* Exposant et groupe 1 : Ajouter "ꟹ" U+A7F9. (compose-2.yml [ac18a8c](https://github.com/dispoclavier/nouvel-azerty/commit/ac18a8c59b721a2e105bd62c218a36f7a992f25f))
+	* Exposant et rayé : Ajouter "ꟸ" U+A7F8. (ibidem)
+	* Réfléchi : Ajouter "Ꟶ" U+A7F5, "ꟶ" U+A7F6. (ibidem)
+	* Rayé, double raie : Ajouter "Ꟈ" U+A7C7, "ꟈ" U+A7C8, "Ꟊ" U+A7C9, "ꟊ" U+A7CA. (ibidem)
+	* Touche morte groupe : Groupes des lettres :
+		* Groupe 4 :
+			* Ajouter "Ꟗ" U+A7D6 à la place de "℈" U+2108, qui est en composition. (compose-3.yml [9633960](https://github.com/dispoclavier/nouvel-azerty/commit/96339608a6cf13d6900e72770a237d5c61d20465))
+			* Ajouter "ꟗ" U+A7D7 à la place de "ʆ" U+0286, qui est en bouclé. (ibidem)
+		* Groupe 5 : Ajouter "Ꟁ" U+A7C0, "ꟁ" U+A7C1 à la place de "ʘ" U+0298 par O, qui est dans le groupe 5 par B. (ibidem)
+		* Groupe 11 :
+			* Ajouter "Ꟑ" U+A7D0, "ꟑ" U+A7D1 à la place de "Ƣ" U+01A2, "ƣ" U+01A3, qui va en composition. (ibidem)
+			* Ajouter "Ꟙ" U+A7D8, "ꟙ" U+A7D9 à la place de "Ƨ" U+01A7, "ƨ" U+01A8, qui est en composition. (ibidem)
+			* Ajouter "ꟓ" U+A7D3 et "ꟕ" U+A7D5. (ibidem)
 
 ## 3.4.1 (2024-07-30)
 
-* Mettre à jour le symbole monétaire par code ISO "Лв" U+041B U+0432 Som KYRGYZSTAN vers "⃀" U+20C0 SOM SIGN. (compose-1.yml [9ea34e0](https://github.com/dispoclavier/nouvel-azerty/commit/9ea34e023b55c39301a7bb5bdd808fb065e2346b))
-* Déboguer "℣" U+2123, "ᴎ" U+1D0E, "ᴙ" U+1D19, "ą" U+0105. (ibidem, compose-2.yml [9b4a4c0](https://github.com/dispoclavier/nouvel-azerty/commit/9b4a4c0efdc8000b8abb604fcf7368013b255261))
+* Composition :
+	* Mettre à jour le symbole monétaire par code ISO "Лв" U+041B U+0432 Som KYRGYZSTAN vers "⃀" U+20C0 SOM SIGN. (compose-1.yml [9ea34e0](https://github.com/dispoclavier/nouvel-azerty/commit/9ea34e023b55c39301a7bb5bdd808fb065e2346b))
+	* Corriger les séquences de "⟎" U+27CE pour déboguer "ą" U+0105. (ibidem)
+	* Corriger les séquences de "⩗" U+2A57 pour déboguer "℣" U+2123. (ibidem)
+	* Supprimer des doublons pour "⋀" U+22C0. (ibidem)
+* Transformations : Indice et réfléchi : Corriger les séquences de "ᴙ" U+1D19 pour déboguer "ᴎ" U+1D0E et "ᴙ" U+1D19. (compose-2.yml [9b4a4c0](https://github.com/dispoclavier/nouvel-azerty/commit/9b4a4c0efdc8000b8abb604fcf7368013b255261))
 
 ## 3.4.0 (2024-07-30)
 
@@ -21,22 +46,16 @@
 	* Ajouter "⁐" U+2050. (ibidem)
 	* Redonder "⧠" U+29E0 et adapter les séquences de "❒" U+2752, "❑" U+2751, "❐" U+2750, "❏" U+274F. (ibidem)
 * Transformations :
-	* Touche morte groupe :
-		* Groupes des symboles :
-			* Ajouter "‸" U+2038 à la place de "✈" U+2708, qui prend la place de "∡" U+2221, qui est en composition. (compose-3.yml [137dc95](https://github.com/dispoclavier/nouvel-azerty/commit/137dc958d8624d619e2d687ad6aebf65dc17ad46))
-			* Ajouter "⁃" U+2043 à la place de "⹀" U+2E40, qui est dans plusieurs touches mortes et en composition. (ibidem)
-			* Ajouter "⁖" U+2056 à la place de "‏" U+200F, qui est en composition. (ibidem)
-			* Redonder "✀" U+2700 à la place de "►" U+25BA, qui prend la place de "‎" U+200E, qui est en composition. (ibidem)
-	* Tilde :
-		* Ajouter "⁓" U+2053. (compose-2.yml [b4470e1](https://github.com/dispoclavier/nouvel-azerty/commit/b4470e18c39451256e6020b3d51f18506905822d))
-	* Symbole monétaire :
-		* Ajouter "⃀" U+20C0 à la place de "$" U+0024, qui est sur touche vive. (ibidem)
-	* Brève inversée :
-		* Redonder "⁐" U+2050. (ibidem)
-	* Indice :
-		* Ajouter "ₜ" U+209C. (ibidem)
-	* Accent circonflexe > Accent circonflexe souscrit :
-		* Redonder "‸" U+2038 à la place de "ꞈ" U+A788, qui est avec le caractère de base espace fine insécable. (ibidem)
+	* Tilde : Ajouter "⁓" U+2053. (compose-2.yml [b4470e1](https://github.com/dispoclavier/nouvel-azerty/commit/b4470e18c39451256e6020b3d51f18506905822d))
+	* Symbole monétaire : Ajouter "⃀" U+20C0 à la place de "$" U+0024, qui est sur touche vive. (ibidem)
+	* Brève inversée : Redonder "⁐" U+2050. (ibidem)
+	* Indice : Ajouter "ₜ" U+209C. (ibidem)
+	* Accent circonflexe > Accent circonflexe souscrit : Redonder "‸" U+2038 à la place de "ꞈ" U+A788, qui est avec le caractère de base espace fine insécable. (ibidem)
+	* Touche morte groupe : Groupes des symboles :
+		* Ajouter "‸" U+2038 à la place de "✈" U+2708, qui prend la place de "∡" U+2221, qui est en composition. (compose-3.yml [137dc95](https://github.com/dispoclavier/nouvel-azerty/commit/137dc958d8624d619e2d687ad6aebf65dc17ad46))
+		* Ajouter "⁃" U+2043 à la place de "⹀" U+2E40, qui est dans plusieurs touches mortes et en composition. (ibidem)
+		* Ajouter "⁖" U+2056 à la place de "‏" U+200F, qui est en composition. (ibidem)
+		* Redonder "✀" U+2700 à la place de "►" U+25BA, qui prend la place de "‎" U+200E, qui est en composition. (ibidem)
 
 ## 3.3.0 (2024-07-26)
 
