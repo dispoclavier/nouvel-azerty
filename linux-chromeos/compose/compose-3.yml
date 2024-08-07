@@ -1769,58 +1769,6 @@
 <Multi_key><numbersign><KP_2>                                                              <grave> : "⟂" U27C2 # PERPENDICULAR
 #
 #
-# # B07-level3
-#
-<UEFD0>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
-<Multi_key><numbersign>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
-<UEFD0><UEFD0>                                                                          <question> : "⁇" U2047 # DOUBLE QUESTION MARK
-<Multi_key><numbersign><numbersign>                                                     <question> : "⁇" U2047 # DOUBLE QUESTION MARK
-<UEFD0><3>                                                                              <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
-<Multi_key><numbersign><3>                                                              <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
-<UEFD0><KP_3>                                                                           <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
-<Multi_key><numbersign><KP_3>                                                           <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
-<UEFD0><UEFD0><UEFD0>                                                                   <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
-<Multi_key><numbersign><numbersign><numbersign>                                         <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
-<UEFD0><4>                                                                              <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
-<Multi_key><numbersign><4>                                                              <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
-<UEFD0><KP_4>                                                                           <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
-<Multi_key><numbersign><KP_4>                                                           <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
-<UEFD0><5>                                                                              <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
-<Multi_key><numbersign><5>                                                              <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
-<UEFD0><KP_5>                                                                           <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
-<Multi_key><numbersign><KP_5>                                                           <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
-<UEFD0><6>                                                                              <question> : "☿" U263F # MERCURY
-<Multi_key><numbersign><6>                                                              <question> : "☿" U263F # MERCURY
-<UEFD0><KP_6>                                                                           <question> : "☿" U263F # MERCURY
-<Multi_key><numbersign><KP_6>                                                           <question> : "☿" U263F # MERCURY
-<UEFD0><7>                                                                              <question> : "♁" U2641 # EARTH
-<Multi_key><numbersign><7>                                                              <question> : "♁" U2641 # EARTH
-<UEFD0><KP_7>                                                                           <question> : "♁" U2641 # EARTH
-<Multi_key><numbersign><KP_7>                                                           <question> : "♁" U2641 # EARTH
-<UEFD0><8>                                                                              <question> : "♃" U2643 # JUPITER
-<Multi_key><numbersign><8>                                                              <question> : "♃" U2643 # JUPITER
-<UEFD0><KP_8>                                                                           <question> : "♃" U2643 # JUPITER
-<Multi_key><numbersign><KP_8>                                                           <question> : "♃" U2643 # JUPITER
-<UEFD0><9>                                                                              <question> : "♄" U2644 # SATURN
-<Multi_key><numbersign><9>                                                              <question> : "♄" U2644 # SATURN
-<UEFD0><KP_9>                                                                           <question> : "♄" U2644 # SATURN
-<Multi_key><numbersign><KP_9>                                                           <question> : "♄" U2644 # SATURN
-<UEFD0><0>                                                                              <question> : "♅" U2645 # URANUS
-<Multi_key><numbersign><0>                                                              <question> : "♅" U2645 # URANUS
-<UEFD0><KP_0>                                                                           <question> : "♅" U2645 # URANUS
-<Multi_key><numbersign><KP_0>                                                           <question> : "♅" U2645 # URANUS
-<UEFD0><1>                                                                              <question> : "♆" U2646 # NEPTUNE
-<Multi_key><numbersign><1>                                                              <question> : "♆" U2646 # NEPTUNE
-<UEFD0><KP_1>                                                                           <question> : "♆" U2646 # NEPTUNE
-<Multi_key><numbersign><KP_1>                                                           <question> : "♆" U2646 # NEPTUNE
-<UEFD0><2>                                                                              <question> : "♇" U2647 # PLUTO
-<Multi_key><numbersign><2>                                                              <question> : "♇" U2647 # PLUTO
-<UEFD0><KP_2>                                                                           <question> : "♇" U2647 # PLUTO
-<Multi_key><numbersign><KP_2>                                                           <question> : "♇" U2647 # PLUTO
-#
-#
 # # B07-level1
 #
 #   Frequency requires the two hearts to be in the topmost groups, with U2764
@@ -1886,56 +1834,56 @@
 <Multi_key><numbersign><KP_2>                                                              <comma> : "⚐" U2690 # WHITE FLAG
 #
 #
-# # B08-level3
+# # B07-level3
 #
-<UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
-<Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
-<UEFD0><UEFD0>                                                                            <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK emoji
-<Multi_key><numbersign><numbersign>                                                       <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK emoji
-<UEFD0><3>                                                                                <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
-<Multi_key><numbersign><3>                                                                <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
-<UEFD0><KP_3>                                                                             <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
-<Multi_key><numbersign><KP_3>                                                             <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
-<UEFD0><UEFD0><UEFD0>                                                                     <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
-<Multi_key><numbersign><numbersign><numbersign>                                           <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
-<UEFD0><4>                                                                                <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
-<Multi_key><numbersign><4>                                                                <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
-<UEFD0><KP_4>                                                                             <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
-<Multi_key><numbersign><KP_4>                                                             <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                              <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                               <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
-<UEFD0><5>                                                                                <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
-<Multi_key><numbersign><5>                                                                <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
-<UEFD0><KP_5>                                                                             <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
-<Multi_key><numbersign><KP_5>                                                             <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
-<UEFD0><6>                                                                                <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
-<Multi_key><numbersign><6>                                                                <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
-<UEFD0><KP_6>                                                                             <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
-<Multi_key><numbersign><KP_6>                                                             <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
-<UEFD0><7>                                                                                <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
-<Multi_key><numbersign><7>                                                                <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
-<UEFD0><KP_7>                                                                             <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
-<Multi_key><numbersign><KP_7>                                                             <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
-<UEFD0><8>                                                                                <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
-<Multi_key><numbersign><8>                                                                <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
-<UEFD0><KP_8>                                                                             <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
-<Multi_key><numbersign><KP_8>                                                             <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
-<UEFD0><9>                                                                                <exclam> : "∴" U2234 # THEREFORE
-<Multi_key><numbersign><9>                                                                <exclam> : "∴" U2234 # THEREFORE
-<UEFD0><KP_9>                                                                             <exclam> : "∴" U2234 # THEREFORE
-<Multi_key><numbersign><KP_9>                                                             <exclam> : "∴" U2234 # THEREFORE
-<UEFD0><0>                                                                                <exclam> : "∵" U2235 # BECAUSE
-<Multi_key><numbersign><0>                                                                <exclam> : "∵" U2235 # BECAUSE
-<UEFD0><KP_0>                                                                             <exclam> : "∵" U2235 # BECAUSE
-<Multi_key><numbersign><KP_0>                                                             <exclam> : "∵" U2235 # BECAUSE
-<UEFD0><1>                                                                                <exclam> : "∎" U220E # END OF PROOF
-<Multi_key><numbersign><1>                                                                <exclam> : "∎" U220E # END OF PROOF
-<UEFD0><KP_1>                                                                             <exclam> : "∎" U220E # END OF PROOF
-<Multi_key><numbersign><KP_1>                                                             <exclam> : "∎" U220E # END OF PROOF
-<UEFD0><2>                                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><2>                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<UEFD0><KP_2>                                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><KP_2>                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<UEFD0>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
+<Multi_key><numbersign>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
+<UEFD0><UEFD0>                                                                          <question> : "⁇" U2047 # DOUBLE QUESTION MARK
+<Multi_key><numbersign><numbersign>                                                     <question> : "⁇" U2047 # DOUBLE QUESTION MARK
+<UEFD0><3>                                                                              <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
+<Multi_key><numbersign><3>                                                              <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
+<UEFD0><KP_3>                                                                           <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
+<Multi_key><numbersign><KP_3>                                                           <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
+<UEFD0><UEFD0><UEFD0>                                                                   <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
+<Multi_key><numbersign><numbersign><numbersign>                                         <question> : "❔" U2754 # WHITE QUESTION MARK ORNAMENT emoji
+<UEFD0><4>                                                                              <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
+<Multi_key><numbersign><4>                                                              <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
+<UEFD0><KP_4>                                                                           <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
+<Multi_key><numbersign><KP_4>                                                           <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                            <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                             <question> : "❓" U2753 # BLACK QUESTION MARK ORNAMENT emoji
+<UEFD0><5>                                                                              <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
+<Multi_key><numbersign><5>                                                              <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
+<UEFD0><KP_5>                                                                           <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
+<Multi_key><numbersign><KP_5>                                                           <question> : "⁈" U2048 # QUESTION EXCLAMATION MARK
+<UEFD0><6>                                                                              <question> : "☿" U263F # MERCURY
+<Multi_key><numbersign><6>                                                              <question> : "☿" U263F # MERCURY
+<UEFD0><KP_6>                                                                           <question> : "☿" U263F # MERCURY
+<Multi_key><numbersign><KP_6>                                                           <question> : "☿" U263F # MERCURY
+<UEFD0><7>                                                                              <question> : "♁" U2641 # EARTH
+<Multi_key><numbersign><7>                                                              <question> : "♁" U2641 # EARTH
+<UEFD0><KP_7>                                                                           <question> : "♁" U2641 # EARTH
+<Multi_key><numbersign><KP_7>                                                           <question> : "♁" U2641 # EARTH
+<UEFD0><8>                                                                              <question> : "♃" U2643 # JUPITER
+<Multi_key><numbersign><8>                                                              <question> : "♃" U2643 # JUPITER
+<UEFD0><KP_8>                                                                           <question> : "♃" U2643 # JUPITER
+<Multi_key><numbersign><KP_8>                                                           <question> : "♃" U2643 # JUPITER
+<UEFD0><9>                                                                              <question> : "♄" U2644 # SATURN
+<Multi_key><numbersign><9>                                                              <question> : "♄" U2644 # SATURN
+<UEFD0><KP_9>                                                                           <question> : "♄" U2644 # SATURN
+<Multi_key><numbersign><KP_9>                                                           <question> : "♄" U2644 # SATURN
+<UEFD0><0>                                                                              <question> : "♅" U2645 # URANUS
+<Multi_key><numbersign><0>                                                              <question> : "♅" U2645 # URANUS
+<UEFD0><KP_0>                                                                           <question> : "♅" U2645 # URANUS
+<Multi_key><numbersign><KP_0>                                                           <question> : "♅" U2645 # URANUS
+<UEFD0><1>                                                                              <question> : "♆" U2646 # NEPTUNE
+<Multi_key><numbersign><1>                                                              <question> : "♆" U2646 # NEPTUNE
+<UEFD0><KP_1>                                                                           <question> : "♆" U2646 # NEPTUNE
+<Multi_key><numbersign><KP_1>                                                           <question> : "♆" U2646 # NEPTUNE
+<UEFD0><2>                                                                              <question> : "♇" U2647 # PLUTO
+<Multi_key><numbersign><2>                                                              <question> : "♇" U2647 # PLUTO
+<UEFD0><KP_2>                                                                           <question> : "♇" U2647 # PLUTO
+<Multi_key><numbersign><KP_2>                                                           <question> : "♇" U2647 # PLUTO
 #
 #
 # # B08-level1
@@ -1997,6 +1945,58 @@
 <Multi_key><numbersign><2>                                                                <period> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <UEFD0><KP_2>                                                                         <KP_Decimal> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <Multi_key><numbersign><KP_2>                                                         <KP_Decimal> : "⁘" U2058 # FOUR DOT PUNCTUATION
+#
+#
+# # B08-level3
+#
+<UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<UEFD0><UEFD0>                                                                            <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK emoji
+<Multi_key><numbersign><numbersign>                                                       <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK emoji
+<UEFD0><3>                                                                                <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
+<Multi_key><numbersign><3>                                                                <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
+<UEFD0><KP_3>                                                                             <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
+<Multi_key><numbersign><KP_3>                                                             <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
+<UEFD0><UEFD0><UEFD0>                                                                     <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
+<Multi_key><numbersign><numbersign><numbersign>                                           <exclam> : "❕" U2755 # WHITE EXCLAMATION MARK ORNAMENT emoji
+<UEFD0><4>                                                                                <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
+<Multi_key><numbersign><4>                                                                <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
+<UEFD0><KP_4>                                                                             <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
+<Multi_key><numbersign><KP_4>                                                             <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                              <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                               <exclam> : "❗" U2757 # HEAVY EXCLAMATION MARK SYMBOL emoji
+<UEFD0><5>                                                                                <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
+<Multi_key><numbersign><5>                                                                <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
+<UEFD0><KP_5>                                                                             <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
+<Multi_key><numbersign><KP_5>                                                             <exclam> : "⁉" U2049 # EXCLAMATION QUESTION MARK emoji
+<UEFD0><6>                                                                                <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
+<Multi_key><numbersign><6>                                                                <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
+<UEFD0><KP_6>                                                                             <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
+<Multi_key><numbersign><KP_6>                                                             <exclam> : "⚠" U26A0 # WARNING SIGN emoji, mnemonic mapping
+<UEFD0><7>                                                                                <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
+<Multi_key><numbersign><7>                                                                <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
+<UEFD0><KP_7>                                                                             <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
+<Multi_key><numbersign><KP_7>                                                             <exclam> : "❣" U2763 # HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
+<UEFD0><8>                                                                                <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
+<Multi_key><numbersign><8>                                                                <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
+<UEFD0><KP_8>                                                                             <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
+<Multi_key><numbersign><KP_8>                                                             <exclam> : "❢" U2762 # HEAVY EXCLAMATION MARK ORNAMENT
+<UEFD0><9>                                                                                <exclam> : "∴" U2234 # THEREFORE
+<Multi_key><numbersign><9>                                                                <exclam> : "∴" U2234 # THEREFORE
+<UEFD0><KP_9>                                                                             <exclam> : "∴" U2234 # THEREFORE
+<Multi_key><numbersign><KP_9>                                                             <exclam> : "∴" U2234 # THEREFORE
+<UEFD0><0>                                                                                <exclam> : "∵" U2235 # BECAUSE
+<Multi_key><numbersign><0>                                                                <exclam> : "∵" U2235 # BECAUSE
+<UEFD0><KP_0>                                                                             <exclam> : "∵" U2235 # BECAUSE
+<Multi_key><numbersign><KP_0>                                                             <exclam> : "∵" U2235 # BECAUSE
+<UEFD0><1>                                                                                <exclam> : "∎" U220E # END OF PROOF
+<Multi_key><numbersign><1>                                                                <exclam> : "∎" U220E # END OF PROOF
+<UEFD0><KP_1>                                                                             <exclam> : "∎" U220E # END OF PROOF
+<Multi_key><numbersign><KP_1>                                                             <exclam> : "∎" U220E # END OF PROOF
+<UEFD0><2>                                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><2>                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<UEFD0><KP_2>                                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><KP_2>                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
 #
 #
 # # B09
