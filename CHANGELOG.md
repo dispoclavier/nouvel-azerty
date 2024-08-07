@@ -18,9 +18,9 @@
 		* Ajouter "🅐" U+1F150.."🅩" U+1F169, "🅰" U+1F170.."🆉" U+1F189. (ibidem)
 	* Grec ou cerclé et tilde : Ajouter comme touche morte carré avec "🄰" U+1F130.."🅉" U+1F149. (ibidem)
 	* Touche morte groupe : Groupes des symboles : (compose-3.yml [80afd99](https://github.com/dispoclavier/nouvel-azerty/commit/80afd99bc85cc719bf6b935c863533feb1921347))
-			* Ajouter "⸿" U+2E3F à la place de "⁖" U+2056, qui prend la place de "⚐" U+2690, qui prend la place de "⁌" U+204C, qui va en composition avec les autres puces spécialisées, où elle est suivie par "⁍" U+204D. (compose-3.yml [80d680b](https://github.com/dispoclavier/nouvel-azerty/commit/80d680bfcfb87809e6466ab6f5eb2857ecc5964d))
-			* Redonder "⁘" U+2058 à l’ancienne place de "⁍" U+204D. (ibidem)
-			* Permuter "⌘" U+2318 et "∎" U+220E. (ibidem)
+		* Ajouter "⸿" U2E3F à la place de "⁖" U2056, qui prend la place de "⚐" U2690, qui prend la place de "⁌" U204C, qui va en composition avec les autres puces spécialisées, où elle est suivie par "⁍" U204D. (compose-3.yml [80d680b](https://github.com/dispoclavier/nouvel-azerty/commit/80d680bfcfb87809e6466ab6f5eb2857ecc5964d))
+		* Redonder "⁘" U2058 à l’ancienne place de "⁍" U204D. (ibidem)
+		* Permuter "⌘" U2318 et "∎" U220E. (ibidem)
 
 ## 3.4.3 (2024-07-31)
 
