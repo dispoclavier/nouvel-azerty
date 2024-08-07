@@ -1,5 +1,27 @@
 # Journal des modifications
 
+## 3.5.0 (projet)
+
+* Composition :
+	* Redonder "⁌" U+204C, "⁍" U+204D. (compose-1.yml [9b7b785](https://github.com/dispoclavier/nouvel-azerty/commit/9b7b785d697158546d5edd532688941c0e359da8))
+	* Corriger les séquences de "☚" U+261A, "☛" U+261B. (ibidem)
+	* Compléter les séquences de "∎" U+220E, "◂" U+25C2, "‣" U+2023, "●" U+25CF, "▬" U+25AC, "◦" U+25E6, "▫" U+25AB, "▮" U+25AE, "▭" U+25AD, "▵" U+25B5, "▿" U+25BF, "☆" U+2606, "•" U+2022, "▪" U+25AA, "▴" U+25B4, "▾" U+25BE. (ibidem)
+* Transformations :
+	* Réfléchi :
+		* Ajouter "⌐" U+2310. (compose-2.yml [1422800](https://github.com/dispoclavier/nouvel-azerty/commit/14228002156f979d83c02316b08580df7c3966b6))
+		* Compléter les séquences de "⁋" U+204B. (ibidem)
+		* Redonder "⁌" U+204C, "⁍" U+204D. (ibidem)
+	* Réfléchi et groupe 1 : Redonder "Ƹ" U+01B8, "ƹ" U+01B9. (ibidem)
+	* Grec ou cerclé : Adapter les séquences de "⊗" U+2297. (ibidem)
+	* Grec ou cerclé inversé :
+		* Utiliser réfléchi au lieu de tourné. (ibidem)
+		* Ajouter "🅐" U+1F150.."🅩" U+1F169, "🅰" U+1F170.."🆉" U+1F189. (ibidem)
+	* Grec ou cerclé et tilde : Ajouter comme touche morte carré avec "🄰" U+1F130.."🅉" U+1F149. (ibidem)
+	* Touche morte groupe : Groupes des symboles : (compose-3.yml [80afd99](https://github.com/dispoclavier/nouvel-azerty/commit/80afd99bc85cc719bf6b935c863533feb1921347))
+			* Ajouter "⸿" U+2E3F à la place de "⁖" U+2056, qui prend la place de "⚐" U+2690, qui prend la place de "⁌" U+204C, qui va en composition avec les autres puces spécialisées, où elle est suivie par "⁍" U+204D. (compose-3.yml [80d680b](https://github.com/dispoclavier/nouvel-azerty/commit/80d680bfcfb87809e6466ab6f5eb2857ecc5964d))
+			* Redonder "⁘" U+2058 à l’ancienne place de "⁍" U+204D. (ibidem)
+			* Permuter "⌘" U+2318 et "∎" U+220E. (ibidem)
+
 ## 3.4.3 (2024-07-31)
 
 * Transformations :
