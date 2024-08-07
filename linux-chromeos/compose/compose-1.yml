@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.4.3" # See # # Notes about syntax
+<UEFA0>                     : "version 3.5.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -1584,58 +1584,86 @@
 #^# Bullets
 #
 #   In keysymdef.h, 15 bullets are supported, but some comments do not match.
-#   This supports the keysyms as implemented, adding support for the intended
-#   open rectangular bullet, evidently wrong since the output is filled. This
-#   literal is removed for demo on systems working without literals; since it
-#   outputs an unintended character, it could be downright discarded as well.
+#   This supports the bullets as implemented, adding support for the intended
+#   open rectangular bullet.
+#
+<Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
+<Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
+<Multi_key><f><l><t><b>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><F><L><T><B>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><f><r><t><b>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><F><R><T><B>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><e><n><o><c><b>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><E><N><O><C><B>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><e><n><o><s><b>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><E><N><O><S><B>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><e><m><o><r>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
+<Multi_key><E><M><O><R>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
+<Multi_key><o><t><b><u>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
+<Multi_key><O><T><B><U>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
+<Multi_key><o><t><b><d>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+<Multi_key><O><T><B><D>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+<Multi_key><o><s><t><a><r>                                                                         : "☆" U2606 # WHITE STAR, openstar
+<Multi_key><O><S><T><A><R>                                                                         : "☆" U2606 # WHITE STAR, openstar
+<Multi_key><e><n><f><c><b>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
+<Multi_key><E><N><F><C><B>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
+<Multi_key><e><n><f><s><b>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><E><N><F><S><B>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><f><t><b><u>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
+<Multi_key><F><T><B><U>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
+<Multi_key><f><t><b><d>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
+<Multi_key><F><T><B><D>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
+#
+#
+#   Tainome and kome
+#
 #   Japanese tainome and kome are also supported.
 #
-<Multi_key><f><r><b>                                                                               : "∎" filledrectbullet     # U220E END OF PROOF, not U25AC BLACK RECTANGLE
-<Multi_key><f><l><t><b>                                                                            : "◂" filledlefttribullet  # U25C2 BLACK LEFT-POINTING SMALL TRIANGLE, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><f><r><t><b>                                                                            : "‣" filledrighttribullet # U2023 TRIANGULAR BULLET, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><e><m><f><c>                                                                            : "●" emfilledcircle       # U25CF BLACK CIRCLE
-<Multi_key><e><m><f><r>                                                                            : "▬" emfilledrect         # U25AC BLACK RECTANGLE, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><e><n><o><c><b>                                                                         : "◦" enopencircbullet     # U25E6 WHITE BULLET
-<Multi_key><e><n><o><s><b>                                                                         : "▫" enopensquarebullet   # U25AB WHITE SMALL SQUARE
-<Multi_key><r><e><c><b>                                                                            : "▮" openrectbullet       # U25AE BLACK VERTICAL RECTANGLE, not U25AD WHITE RECTANGLE
-<Multi_key><e><m><o><r>                                                                            : "▭" U25AD                # WHITE RECTANGLE, *emopenrect
-<Multi_key><o><t><b><u>                                                                            : "▵" opentribulletup      # U25B5 WHITE UP-POINTING SMALL TRIANGLE, not U25B3 WHITE UP-POINTING TRIANGLE
-<Multi_key><o><t><b><d>                                                                            : "▿" opentribulletdown    # U25BF WHITE DOWN-POINTING SMALL TRIANGLE, not U25BD WHITE DOWN-POINTING TRIANGLE
-<Multi_key><o><s><t><a><r>                                                                         : "☆" openstar             # U2606 WHITE STAR
-<Multi_key><e><n><f><c><b>                                                                         : "•" enfilledcircbullet   # U2022 BULLET
-<Multi_key><e><n><f><s><b>                                                                         : "▪" enfilledsqbullet     # U25AA BLACK SMALL SQUARE
-<Multi_key><f><t><b><u>                                                                            : "▴" filledtribulletup    # U25B4 BLACK UP-POINTING SMALL TRIANGLE, not U25B2 BLACK UP-POINTING TRIANGLE
-<Multi_key><f><t><b><d>                                                                            : "▾" filledtribulletdown  # U25BE BLACK DOWN-POINTING SMALL TRIANGLE, not U25BC BLACK DOWN-POINTING TRIANGLE
-#
-#
-#   Tainome
-#
+<Multi_key><k><o><m>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
+<Multi_key><K><O><M>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><t><a><i>                                                                               : "◉" U25C9 # FISHEYE, Japanese tainome, bullet
 <Multi_key><T><A><I>                                                                               : "◉" U25C9 # FISHEYE, Japanese tainome, bullet
 #
 #
-#   Kome
-#
-<Multi_key><k><o><m>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
-<Multi_key><K><O><M>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
-#
-#
 #   Pointers
 #
-<Multi_key><p><n><t><l>                                                                            : "☚" leftpointer  # U261A BLACK LEFT POINTING INDEX, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><p><n><t><r>                                                                            : "☛" rightpointer # U261B BLACK RIGHT POINTING INDEX, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><f><l><p><t>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><F><L><P><T>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><f><r><p><t>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><F><R><P><T>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+#
+#
+#   Pilcrow bullets
+#
+#   "⁌" U204C and "⁍" U204D match "¶" U00B6 and "⁋" U204B. These bullets are
+#   part of the signature marks and are considered general punctuation.
+#   https://www.unicode.org/L2/L1998/98215-n1748.pdf
+#   https://www.unicode.org/L2/L1998/98292.htm
+#   https://github.com/psb1558/Junicode-font/discussions/93
+#   https://en.wikipedia.org/wiki/Signature_mark
+#
+<Multi_key><f><l><p><b>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><F><L><P><B>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><f><r><p><b>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<Multi_key><F><R><P><B>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 #
 #
 #^# Currency symbols
 #
-#   Symbol-letter sequences are required for precomposed diacritics, with
-#   EQUALS SIGN used for regional indicator letters, so only letter-symbol
-#   is available for currency symbols.
+#   Symbol-letter sequences are used as Multi_key equivalents of dead keys, and
+#   equal in particular is used for regional indicator letters, so only letter-
+#   symbol sequences are available for currency symbols by Multi_key.
+#   See #*# CURRENCY
 #
 #   These are symbols supported by en_US.UTF-8/Compose, including commented-out
 #   ones completed on a best-guess basis.
 #   But unlike set up in en_US.UTF-8/Compose, <Multi_key><C><bar> is "₵" U20B5.
-#   See #*# CURRENCY
 #   And "¢" U00A2 is <Multi_key><bar><c> only, due to conflicts with "ȼ" U023C,
 #   "⊄" U2284 and "⊈" U2288.
 #   See #*# STROKE
@@ -1711,32 +1739,32 @@
 #
 #   Pound sign is commented out too as conflicting and easy to input.
 #
-<Multi_key><a><e><d>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham UNITED ARAB EMIRATES (THE)
-<Multi_key><A><E><D>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham UNITED ARAB EMIRATES (THE)
-<Multi_key><a><f><n>                                                                               : "؋" U060B # Afghani AFGHANISTAN
-<Multi_key><A><F><N>                                                                               : "؋" U060B # Afghani AFGHANISTAN
+<Multi_key><a><e><d>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
+<Multi_key><A><E><D>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
+<Multi_key><a><f><n>                                                                               : "؋" U060B # AFGHANI SIGN, Afghani AFGHANISTAN
+<Multi_key><A><F><N>                                                                               : "؋" U060B # AFGHANI SIGN, Afghani AFGHANISTAN
 #   <Multi_key><a><l><l>                                                                           : "L" U004C # Lek ALBANIA
 #   <Multi_key><A><L><L>                                                                           : "L" U004C # Lek ALBANIA
-<Multi_key><a><m><d>                                                                               : "֏" U058F # Armenian Dram ARMENIA
-<Multi_key><A><M><D>                                                                               : "֏" U058F # Armenian Dram ARMENIA
-<Multi_key><a><n><g>                                                                               : "ƒ" U0192 # Netherlands Antillean Guilder CURAÇAO, SINT MAARTEN (DUTCH PART)
-<Multi_key><A><N><G>                                                                               : "ƒ" U0192 # Netherlands Antillean Guilder CURAÇAO, SINT MAARTEN (DUTCH PART)
+<Multi_key><a><m><d>                                                                               : "֏" U058F # ARMENIAN DRAM SIGN, Armenian Dram ARMENIA
+<Multi_key><A><M><D>                                                                               : "֏" U058F # ARMENIAN DRAM SIGN, Armenian Dram ARMENIA
+<Multi_key><a><n><g>                                                                               : "ƒ" U0192 # LATIN SMALL LETTER F WITH HOOK, Netherlands Antillean Guilder CURAÇAO, SINT MAARTEN (DUTCH PART)
+<Multi_key><A><N><G>                                                                               : "ƒ" U0192 # LATIN SMALL LETTER F WITH HOOK, Netherlands Antillean Guilder CURAÇAO, SINT MAARTEN (DUTCH PART)
 #   <Multi_key><a><o><a>                                                                           : "Kz" # Kwanza ANGOLA
 #   <Multi_key><A><O><A>                                                                           : "Kz" # Kwanza ANGOLA
 #   <Multi_key><a><r><s>                                                                           : "$" U0024 # Argentine Peso ARGENTINA
 #   <Multi_key><A><R><S>                                                                           : "$" U0024 # Argentine Peso ARGENTINA
 #   <Multi_key><a><u><d>                                                                           : "$" U0024 # Australian Dollar AUSTRALIA
 #   <Multi_key><A><U><D>                                                                           : "$" U0024 # Australian Dollar AUSTRALIA
-<Multi_key><a><w><g>                                                                               : "ƒ" U0192 # Aruban Florin ARUBA
-<Multi_key><A><W><G>                                                                               : "ƒ" U0192 # Aruban Florin ARUBA
-<Multi_key><a><z><n>                                                                               : "₼" U20BC # Azerbaijan Manat AZERBAIJAN
-<Multi_key><A><Z><N>                                                                               : "₼" U20BC # Azerbaijan Manat AZERBAIJAN
+<Multi_key><a><w><g>                                                                               : "ƒ" U0192 # LATIN SMALL LETTER F WITH HOOK, Aruban Florin ARUBA
+<Multi_key><A><W><G>                                                                               : "ƒ" U0192 # LATIN SMALL LETTER F WITH HOOK, Aruban Florin ARUBA
+<Multi_key><a><z><n>                                                                               : "₼" U20BC # MANAT SIGN, Azerbaijan Manat AZERBAIJAN
+<Multi_key><A><Z><N>                                                                               : "₼" U20BC # MANAT SIGN, Azerbaijan Manat AZERBAIJAN
 #   <Multi_key><b><a><m>                                                                           : "KM" # Convertible Mark BOSNIA AND HERZEGOVINA
 #   <Multi_key><B><A><M>                                                                           : "KM" # Convertible Mark BOSNIA AND HERZEGOVINA
 #   <Multi_key><b><b><d>                                                                           : "Bds$" # Barbados Dollar BARBADOS
 #   <Multi_key><B><B><D>                                                                           : "Bds$" # Barbados Dollar BARBADOS
-<Multi_key><b><d><t>                                                                               : "৳" U09F3 # Taka BANGLADESH
-<Multi_key><B><D><T>                                                                               : "৳" U09F3 # Taka BANGLADESH
+<Multi_key><b><d><t>                                                                               : "৳" U09F3 # BENGALI RUPEE SIGN, Taka BANGLADESH
+<Multi_key><B><D><T>                                                                               : "৳" U09F3 # BENGALI RUPEE SIGN, Taka BANGLADESH
 <Multi_key><b><g><n>                                                                               : "Лв." # U041B U0432 U002E Bulgarian Lev BULGARIA
 <Multi_key><B><G><N>                                                                               : "Лв." # U041B U0432 U002E Bulgarian Lev BULGARIA
 <Multi_key><b><h><d>                                                                               : ".د.ب" # U002E U062F U002E U0628 Bahraini Dinar BAHRAIN
@@ -1747,12 +1775,12 @@
 #   <Multi_key><B><M><D>                                                                           : "$" U0024 # Bermudian Dollar BERMUDA
 #   <Multi_key><b><n><d>                                                                           : "B$" # Brunei Dollar BRUNEI DARUSSALAM
 #   <Multi_key><B><N><D>                                                                           : "B$" # Brunei Dollar BRUNEI DARUSSALAM
-#   <Multi_key><b><o><b>                                                                           : "Bs" # Boliviano BOLIVIA (PLURINATIONAL STATE OF)
-#   <Multi_key><B><O><B>                                                                           : "Bs" # Boliviano BOLIVIA (PLURINATIONAL STATE OF)
+#   <Multi_key><b><o><b>                                                                           : "Bs" # Boliviano PLURINATIONAL STATE OF BOLIVIA
+#   <Multi_key><B><O><B>                                                                           : "Bs" # Boliviano PLURINATIONAL STATE OF BOLIVIA
 #   <Multi_key><b><r><l>                                                                           : "R$" # Brazilian Real BRAZIL
 #   <Multi_key><B><R><L>                                                                           : "R$" # Brazilian Real BRAZIL
-#   <Multi_key><b><s><d>                                                                           : "B$" # Bahamian Dollar BAHAMAS (THE)
-#   <Multi_key><B><S><D>                                                                           : "B$" # Bahamian Dollar BAHAMAS (THE)
+#   <Multi_key><b><s><d>                                                                           : "B$" # Bahamian Dollar THE BAHAMAS
+#   <Multi_key><B><S><D>                                                                           : "B$" # Bahamian Dollar THE BAHAMAS
 #   <Multi_key><b><t><n>                                                                           : "Nu." # Ngultrum BHUTAN
 #   <Multi_key><B><T><N>                                                                           : "Nu." # Ngultrum BHUTAN
 #   <Multi_key><b><w><p>                                                                           : "P" U0050 # Pula BOTSWANA
@@ -1763,22 +1791,22 @@
 #   <Multi_key><B><Z><D>                                                                           : "$" U0024 # Belize Dollar BELIZE
 #   <Multi_key><c><a><d>                                                                           : "$" U0024 # Canadian Dollar CANADA
 #   <Multi_key><C><A><D>                                                                           : "$" U0024 # Canadian Dollar CANADA
-#   <Multi_key><c><d><f>                                                                           : "FC" # Congolese Franc CONGO (THE DEMOCRATIC REPUBLIC OF THE)
-#   <Multi_key><C><D><F>                                                                           : "FC" # Congolese Franc CONGO (THE DEMOCRATIC REPUBLIC OF THE)
+#   <Multi_key><c><d><f>                                                                           : "FC" # Congolese Franc THE DEMOCRATIC REPUBLIC OF THE CONGO
+#   <Multi_key><C><D><F>                                                                           : "FC" # Congolese Franc THE DEMOCRATIC REPUBLIC OF THE CONGO
 #   <Multi_key><c><h><f>                                                                           : "fr." # Swiss Franc SWITZERLAND, LIECHTENSTEIN
 #   <Multi_key><C><H><F>                                                                           : "fr." # Swiss Franc SWITZERLAND, LIECHTENSTEIN
 #   <Multi_key><c><l><f>                                                                           : "UF" # Unidad de Fomento CHILE
 #   <Multi_key><C><L><F>                                                                           : "UF" # Unidad de Fomento CHILE
 #   <Multi_key><c><l><p>                                                                           : "$" U0024 # Chilean Peso CHILE
 #   <Multi_key><C><L><P>                                                                           : "$" U0024 # Chilean Peso CHILE
-<Multi_key><c><n><y>                                                                               : "¥" U00A5 # Yuan Renminbi CHINA
-<Multi_key><C><N><Y>                                                                               : "¥" U00A5 # Yuan Renminbi CHINA
+<Multi_key><c><n><y>                                                                               : "¥" U00A5 # YEN SIGN, Yuan Renminbi CHINA
+<Multi_key><C><N><Y>                                                                               : "¥" U00A5 # YEN SIGN, Yuan Renminbi CHINA
 #   <Multi_key><c><o><p>                                                                           : "$" U0024 # Colombian Peso COLOMBIA
 #   <Multi_key><C><O><P>                                                                           : "$" U0024 # Colombian Peso COLOMBIA
 #   <Multi_key><c><o><u>                                                                           : "UVR" # Unidad de Valor Real COLOMBIA
 #   <Multi_key><C><O><U>                                                                           : "UVR" # Unidad de Valor Real COLOMBIA
-<Multi_key><c><r><c>                                                                               : "₡" U20A1 # Costa Rican Colon COSTA RICA
-<Multi_key><C><R><C>                                                                               : "₡" U20A1 # Costa Rican Colon COSTA RICA
+<Multi_key><c><r><c>                                                                               : "₡" U20A1 # COLON SIGN, Costa Rican Colon COSTA RICA
+<Multi_key><C><R><C>                                                                               : "₡" U20A1 # COLON SIGN, Costa Rican Colon COSTA RICA
 #   <Multi_key><c><u><c>                                                                           : "$" U0024 # Peso Convertible CUBA
 #   <Multi_key><C><U><C>                                                                           : "$" U0024 # Peso Convertible CUBA
 #   <Multi_key><c><u><p>                                                                           : "$" U0024 # Cuban Peso CUBA
@@ -1789,10 +1817,10 @@
 <Multi_key><C><Z><K>                                                                               : "Kč" # U004B U010D Czech Koruna CZECHIA
 #   <Multi_key><d><j><f>                                                                           : "Fdj" # Djibouti Franc DJIBOUTI
 #   <Multi_key><D><J><F>                                                                           : "Fdj" # Djibouti Franc DJIBOUTI
-#   <Multi_key><d><k><k>                                                                           : "Kr." # Danish Krone DENMARK, GREENLAND, FAROE ISLANDS (THE)
-#   <Multi_key><D><K><K>                                                                           : "Kr." # Danish Krone DENMARK, GREENLAND, FAROE ISLANDS (THE)
-#   <Multi_key><d><o><p>                                                                           : "$" U0024 # Dominican Peso DOMINICAN REPUBLIC (THE)
-#   <Multi_key><D><O><P>                                                                           : "$" U0024 # Dominican Peso DOMINICAN REPUBLIC (THE)
+#   <Multi_key><d><k><k>                                                                           : "Kr." # Danish Krone DENMARK, GREENLAND, THE FAROE ISLANDS
+#   <Multi_key><D><K><K>                                                                           : "Kr." # Danish Krone DENMARK, GREENLAND, THE FAROE ISLANDS
+#   <Multi_key><d><o><p>                                                                           : "$" U0024 # Dominican Peso THE DOMINICAN REPUBLIC
+#   <Multi_key><D><O><P>                                                                           : "$" U0024 # Dominican Peso THE DOMINICAN REPUBLIC
 <Multi_key><d><z><d>                                                                               : "دج" # U062F U062C Algerian Dinar ALGERIA
 <Multi_key><D><Z><D>                                                                               : "دج" # U062F U062C Algerian Dinar ALGERIA
 #   <Multi_key><e><g><p>                                                                           : "LE" # Egyptian Pound EGYPT
@@ -1801,22 +1829,22 @@
 #   <Multi_key><E><R><N>                                                                           : "Nkf" # Nakfa ERITREA
 #   <Multi_key><e><t><b>                                                                           : "Br" # Ethiopian Birr ETHIOPIA
 #   <Multi_key><E><T><B>                                                                           : "Br" # Ethiopian Birr ETHIOPIA
-<Multi_key><e><u><r>                                                                               : "€" U20AC # Euro EUROPEAN UNION
-<Multi_key><E><U><R>                                                                               : "€" U20AC # Euro EUROPEAN UNION
+<Multi_key><e><u><r>                                                                               : "€" U20AC # EURO SIGN, Euro EUROPEAN UNION
+<Multi_key><E><U><R>                                                                               : "€" U20AC # EURO SIGN, Euro EUROPEAN UNION
 #   <Multi_key><f><j><d>                                                                           : "$" U0024 # Fiji Dollar FIJI
 #   <Multi_key><F><J><D>                                                                           : "$" U0024 # Fiji Dollar FIJI
-#   <Multi_key><f><k><p>                                                                           : "£" U00A3 # Falkland Islands Pound FALKLAND ISLANDS (THE) [MALVINAS]
-#   <Multi_key><F><K><P>                                                                           : "£" U00A3 # Falkland Islands Pound FALKLAND ISLANDS (THE) [MALVINAS]
+#   <Multi_key><f><k><p>                                                                           : "£" U00A3 # Falkland Islands Pound THE FALKLAND ISLANDS [MALVINAS]
+#   <Multi_key><F><K><P>                                                                           : "£" U00A3 # Falkland Islands Pound THE FALKLAND ISLANDS [MALVINAS]
 #   <Multi_key><g><b><p>                                                                           : "£" U00A3 # Pound Sterling GUERNSEY
 #   <Multi_key><G><B><P>                                                                           : "£" U00A3 # Pound Sterling GUERNSEY
 #   <Multi_key><g><b><p>                                                                           : "£" U00A3 # Pound Sterling ISLE OF MAN
 #   <Multi_key><G><B><P>                                                                           : "£" U00A3 # Pound Sterling ISLE OF MAN
-#   <Multi_key><g><b><p>                                                                           : "£" U00A3 # Pound Sterling UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)
-#   <Multi_key><G><B><P>                                                                           : "£" U00A3 # Pound Sterling UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)
-<Multi_key><g><e><l>                                                                               : "₾" U20BE # Lari GEORGIA
-<Multi_key><G><E><L>                                                                               : "₾" U20BE # Lari GEORGIA
-<Multi_key><g><h><s>                                                                               : "₵" U20B5 # Ghana Cedi GHANA
-<Multi_key><G><H><S>                                                                               : "₵" U20B5 # Ghana Cedi GHANA
+#   <Multi_key><g><b><p>                                                                           : "£" U00A3 # Pound Sterling THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND
+#   <Multi_key><G><B><P>                                                                           : "£" U00A3 # Pound Sterling THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND
+<Multi_key><g><e><l>                                                                               : "₾" U20BE # LARI SIGN, Lari GEORGIA
+<Multi_key><G><E><L>                                                                               : "₾" U20BE # LARI SIGN, Lari GEORGIA
+<Multi_key><g><h><s>                                                                               : "₵" U20B5 # CEDI SIGN, Ghana Cedi GHANA
+<Multi_key><G><H><S>                                                                               : "₵" U20B5 # CEDI SIGN, Ghana Cedi GHANA
 #   <Multi_key><g><i><p>                                                                           : "£" U00A3 # Gibraltar Pound GIBRALTAR
 #   <Multi_key><G><I><P>                                                                           : "£" U00A3 # Gibraltar Pound GIBRALTAR
 #   <Multi_key><g><m><d>                                                                           : "D" U0044 # Dalasi GAMBIA (THE)
@@ -1839,42 +1867,42 @@
 #   <Multi_key><H><U><F>                                                                           : "Ft" # Forint HUNGARY
 #   <Multi_key><i><d><r>                                                                           : "Rp" # Rupiah INDONESIA
 #   <Multi_key><I><D><R>                                                                           : "Rp" # Rupiah INDONESIA
-<Multi_key><i><l><s>                                                                               : "₪" U20AA # New Israeli Sheqel ISRAEL
-<Multi_key><I><L><S>                                                                               : "₪" U20AA # New Israeli Sheqel ISRAEL
-<Multi_key><i><n><r>                                                                               : "₹" U20B9 # Indian Rupee INDIA, BHUTAN
-<Multi_key><I><N><R>                                                                               : "₹" U20B9 # Indian Rupee INDIA, BHUTAN
-<Multi_key><i><q><d>                                                                               : "ع" U0639 # Iraqi Dinar IRAQ
-<Multi_key><I><Q><D>                                                                               : "ع" U0639 # Iraqi Dinar IRAQ
-<Multi_key><i><r><r>                                                                               : "﷼" UFDFC # Iranian Rial IRAN (ISLAMIC REPUBLIC OF)
-<Multi_key><I><R><R>                                                                               : "﷼" UFDFC # Iranian Rial IRAN (ISLAMIC REPUBLIC OF)
+<Multi_key><i><l><s>                                                                               : "₪" U20AA # NEW SHEQEL SIGN, New Israeli Sheqel ISRAEL
+<Multi_key><I><L><S>                                                                               : "₪" U20AA # NEW SHEQEL SIGN, New Israeli Sheqel ISRAEL
+<Multi_key><i><n><r>                                                                               : "₹" U20B9 # INDIAN RUPEE SIGN, Indian Rupee INDIA, BHUTAN
+<Multi_key><I><N><R>                                                                               : "₹" U20B9 # INDIAN RUPEE SIGN, Indian Rupee INDIA, BHUTAN
+<Multi_key><i><q><d>                                                                               : "ع" U0639 # ARABIC LETTER AIN, Iraqi Dinar IRAQ
+<Multi_key><I><Q><D>                                                                               : "ع" U0639 # ARABIC LETTER AIN, Iraqi Dinar IRAQ
+<Multi_key><i><r><r>                                                                               : "﷼" UFDFC # RIAL SIGN, Iranian Rial ISLAMIC REPUBLIC OF IRAN
+<Multi_key><I><R><R>                                                                               : "﷼" UFDFC # RIAL SIGN, Iranian Rial ISLAMIC REPUBLIC OF IRAN
 #   <Multi_key><i><s><k>                                                                           : "kr" # Iceland Krona ICELAND
 #   <Multi_key><I><S><K>                                                                           : "kr" # Iceland Krona ICELAND
 #   <Multi_key><j><m><d>                                                                           : "$" U0024 # Jamaican Dollar JAMAICA
 #   <Multi_key><J><M><D>                                                                           : "$" U0024 # Jamaican Dollar JAMAICA
 <Multi_key><j><o><d>                                                                               : "د.ا" # U062F U002E U0627 Jordanian Dinar JORDAN
 <Multi_key><J><O><D>                                                                               : "د.ا" # U062F U002E U0627 Jordanian Dinar JORDAN
-<Multi_key><j><p><y>                                                                               : "¥" U00A5 # Yen JAPAN
-<Multi_key><J><P><Y>                                                                               : "¥" U00A5 # Yen JAPAN
+<Multi_key><j><p><y>                                                                               : "¥" U00A5 # YEN SIGN, Yen JAPAN
+<Multi_key><J><P><Y>                                                                               : "¥" U00A5 # YEN SIGN, Yen JAPAN
 #   <Multi_key><k><e><s>                                                                           : "Ksh" # Kenyan Shilling KENYA
 #   <Multi_key><K><E><S>                                                                           : "Ksh" # Kenyan Shilling KENYA
-<Multi_key><k><g><s>                                                                               : "⃀" U20C0 # Som KYRGYZSTAN
-<Multi_key><K><G><S>                                                                               : "⃀" U20C0 # Som KYRGYZSTAN
-<Multi_key><k><h><r>                                                                               : "៛" U17DB # Riel CAMBODIA
-<Multi_key><K><H><R>                                                                               : "៛" U17DB # Riel CAMBODIA
+<Multi_key><k><g><s>                                                                               : "⃀" U20C0 # SOM SIGN, Som KYRGYZSTAN
+<Multi_key><K><G><S>                                                                               : "⃀" U20C0 # SOM SIGN, Som KYRGYZSTAN
+<Multi_key><k><h><r>                                                                               : "៛" U17DB # KHMER CURRENCY SYMBOL RIEL, Riel CAMBODIA
+<Multi_key><K><H><R>                                                                               : "៛" U17DB # KHMER CURRENCY SYMBOL RIEL, Riel CAMBODIA
 #   <Multi_key><k><m><f>                                                                           : "CF" # Comorian Franc COMOROS (THE)
 #   <Multi_key><K><M><F>                                                                           : "CF" # Comorian Franc COMOROS (THE)
-<Multi_key><k><p><w>                                                                               : "₩" U20A9 # North Korean Won KOREA (THE DEMOCRATIC PEOPLE’S REPUBLIC OF)
-<Multi_key><K><P><W>                                                                               : "₩" U20A9 # North Korean Won KOREA (THE DEMOCRATIC PEOPLE’S REPUBLIC OF)
-<Multi_key><k><r><w>                                                                               : "₩" U20A9 # Won KOREA (THE REPUBLIC OF)
-<Multi_key><K><R><W>                                                                               : "₩" U20A9 # Won KOREA (THE REPUBLIC OF)
+<Multi_key><k><p><w>                                                                               : "₩" U20A9 # WON SIGN, North Korean Won THE DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA
+<Multi_key><K><P><W>                                                                               : "₩" U20A9 # WON SIGN, North Korean Won THE DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA
+<Multi_key><k><r><w>                                                                               : "₩" U20A9 # WON SIGN, Won KOREA (THE REPUBLIC OF)
+<Multi_key><K><R><W>                                                                               : "₩" U20A9 # WON SIGN, Won KOREA (THE REPUBLIC OF)
 <Multi_key><k><w><d>                                                                               : "د.ك" # U062F U002E U0643 Kuwaiti Dinar KUWAIT
 <Multi_key><K><W><D>                                                                               : "د.ك" # U062F U002E U0643 Kuwaiti Dinar KUWAIT
-#   <Multi_key><k><y><d>                                                                           : "$" U0024 # Cayman Islands Dollar CAYMAN ISLANDS (THE)
-#   <Multi_key><K><Y><D>                                                                           : "$" U0024 # Cayman Islands Dollar CAYMAN ISLANDS (THE)
-<Multi_key><k><z><t>                                                                               : "₸" U20B8 # Tenge KAZAKHSTAN
-<Multi_key><K><Z><T>                                                                               : "₸" U20B8 # Tenge KAZAKHSTAN
-<Multi_key><l><a><k>                                                                               : "₭" U20AD # Lao Kip LAO PEOPLE’S DEMOCRATIC REPUBLIC (THE)
-<Multi_key><L><A><K>                                                                               : "₭" U20AD # Lao Kip LAO PEOPLE’S DEMOCRATIC REPUBLIC (THE)
+#   <Multi_key><k><y><d>                                                                           : "$" U0024 # Cayman Islands Dollar THE CAYMAN ISLANDS
+#   <Multi_key><K><Y><D>                                                                           : "$" U0024 # Cayman Islands Dollar THE CAYMAN ISLANDS
+<Multi_key><k><z><t>                                                                               : "₸" U20B8 # TENGE SIGN, Tenge KAZAKHSTAN
+<Multi_key><K><Z><T>                                                                               : "₸" U20B8 # TENGE SIGN, Tenge KAZAKHSTAN
+<Multi_key><l><a><k>                                                                               : "₭" U20AD # KIP SIGN, Lao Kip THE LAO PEOPLE’S DEMOCRATIC REPUBLIC
+<Multi_key><L><A><K>                                                                               : "₭" U20AD # KIP SIGN, Lao Kip THE LAO PEOPLE’S DEMOCRATIC REPUBLIC
 <Multi_key><l><b><p>                                                                               : "ل.ل." # U0644 U002E U0644 U002E Lebanese Pound LEBANON
 <Multi_key><L><B><P>                                                                               : "ل.ل." # U0644 U002E U0644 U002E Lebanese Pound LEBANON
 #   <Multi_key><l><k><r>                                                                           : "Rs" # Sri Lanka Rupee SRI LANKA
@@ -1887,24 +1915,24 @@
 #   <Multi_key><L><Y><D>                                                                           : "LD" # Libyan Dinar LIBYA
 #   <Multi_key><m><a><d>                                                                           : "DH" # Moroccan Dirham MOROCCO
 #   <Multi_key><M><A><D>                                                                           : "DH" # Moroccan Dirham MOROCCO
-#   <Multi_key><m><d><l>                                                                           : "L" U004C # Moldovan Leu MOLDOVA (THE REPUBLIC OF)
-#   <Multi_key><M><D><L>                                                                           : "L" U004C # Moldovan Leu MOLDOVA (THE REPUBLIC OF)
+#   <Multi_key><m><d><l>                                                                           : "L" U004C # Moldovan Leu THE REPUBLIC OF MOLDOVA
+#   <Multi_key><M><D><L>                                                                           : "L" U004C # Moldovan Leu THE REPUBLIC OF MOLDOVA
 #   <Multi_key><m><g><a>                                                                           : "Ar" # Malagasy Ariary MADAGASCAR
 #   <Multi_key><M><G><A>                                                                           : "Ar" # Malagasy Ariary MADAGASCAR
 <Multi_key><m><k><d>                                                                               : "Ден" # U0414 U0435 U043D Denar NORTH MACEDONIA
 <Multi_key><M><K><D>                                                                               : "Ден" # U0414 U0435 U043D Denar NORTH MACEDONIA
 #   <Multi_key><m><m><k>                                                                           : "K" U004B # Kyat MYANMAR
 #   <Multi_key><M><M><K>                                                                           : "K" U004B # Kyat MYANMAR
-<Multi_key><m><n><t>                                                                               : "₮" U20AE # Tugrik MONGOLIA
-<Multi_key><M><N><T>                                                                               : "₮" U20AE # Tugrik MONGOLIA
+<Multi_key><m><n><t>                                                                               : "₮" U20AE # TUGRIK SIGN, Tugrik MONGOLIA
+<Multi_key><M><N><T>                                                                               : "₮" U20AE # TUGRIK SIGN, Tugrik MONGOLIA
 #   <Multi_key><m><o><p>                                                                           : "MOP$" # Pataca MACAO
 #   <Multi_key><M><O><P>                                                                           : "MOP$" # Pataca MACAO
 #   <Multi_key><m><r><u>                                                                           : "UM" # Ouguiya MAURITANIA
 #   <Multi_key><M><R><U>                                                                           : "UM" # Ouguiya MAURITANIA
-<Multi_key><m><u><r>                                                                               : "₨" U20A8 # Mauritius Rupee MAURITIUS
-<Multi_key><M><U><R>                                                                               : "₨" U20A8 # Mauritius Rupee MAURITIUS
-<Multi_key><m><v><r>                                                                               : "ރ" U0783 # Rufiyaa MALDIVES
-<Multi_key><M><V><R>                                                                               : "ރ" U0783 # Rufiyaa MALDIVES
+<Multi_key><m><u><r>                                                                               : "₨" U20A8 # RUPEE SIGN, Mauritius Rupee MAURITIUS
+<Multi_key><M><U><R>                                                                               : "₨" U20A8 # RUPEE SIGN, Mauritius Rupee MAURITIUS
+<Multi_key><m><v><r>                                                                               : "ރ" U0783 # THAANA LETTER RAA, Rufiyaa MALDIVES
+<Multi_key><M><V><R>                                                                               : "ރ" U0783 # THAANA LETTER RAA, Rufiyaa MALDIVES
 #   <Multi_key><m><w><k>                                                                           : "MK" # Malawi Kwacha MALAWI
 #   <Multi_key><M><W><K>                                                                           : "MK" # Malawi Kwacha MALAWI
 #   <Multi_key><m><x><n>                                                                           : "$" U0024 # Mexican Peso MEXICO
@@ -1917,8 +1945,8 @@
 #   <Multi_key><M><Z><N>                                                                           : "MT" # Mozambique Metical MOZAMBIQUE
 #   <Multi_key><n><a><d>                                                                           : "$" U0024 # Namibia Dollar NAMIBIA
 #   <Multi_key><N><A><D>                                                                           : "$" U0024 # Namibia Dollar NAMIBIA
-<Multi_key><n><g><n>                                                                               : "₦" U20A6 # Naira NIGERIA
-<Multi_key><N><G><N>                                                                               : "₦" U20A6 # Naira NIGERIA
+<Multi_key><n><g><n>                                                                               : "₦" U20A6 # NAIRA SIGN, Naira NIGERIA
+<Multi_key><N><G><N>                                                                               : "₦" U20A6 # NAIRA SIGN, Naira NIGERIA
 #   <Multi_key><n><i><o>                                                                           : "C$" # Cordoba Oro NICARAGUA
 #   <Multi_key><N><I><O>                                                                           : "C$" # Cordoba Oro NICARAGUA
 #   <Multi_key><n><o><k>                                                                           : "kr" # Norwegian Krone NORWAY
@@ -1935,22 +1963,22 @@
 #   <Multi_key><P><E><N>                                                                           : "S/" # Sol PERU
 #   <Multi_key><p><g><k>                                                                           : "K" U004B # Kina PAPUA NEW GUINEA
 #   <Multi_key><P><G><K>                                                                           : "K" U004B # Kina PAPUA NEW GUINEA
-<Multi_key><p><h><p>                                                                               : "₱" U20B1 # Philippine Peso PHILIPPINES (THE)
-<Multi_key><P><H><P>                                                                               : "₱" U20B1 # Philippine Peso PHILIPPINES (THE)
+<Multi_key><p><h><p>                                                                               : "₱" U20B1 # PESO SIGN, Philippine Peso THE PHILIPPINES
+<Multi_key><P><H><P>                                                                               : "₱" U20B1 # PESO SIGN, Philippine Peso THE PHILIPPINES
 #   <Multi_key><p><k><r>                                                                           : "Rs." # Pakistan Rupee PAKISTAN
 #   <Multi_key><P><K><R>                                                                           : "Rs." # Pakistan Rupee PAKISTAN
 <Multi_key><p><l><n>                                                                               : "zł" # U007A U0142 Zloty POLAND
 <Multi_key><P><L><N>                                                                               : "zł" # U007A U0142 Zloty POLAND
-<Multi_key><p><y><g>                                                                               : "₲" U20B2 # Guarani PARAGUAY
-<Multi_key><P><Y><G>                                                                               : "₲" U20B2 # Guarani PARAGUAY
+<Multi_key><p><y><g>                                                                               : "₲" U20B2 # GUARANI SIGN, Guarani PARAGUAY
+<Multi_key><P><Y><G>                                                                               : "₲" U20B2 # GUARANI SIGN, Guarani PARAGUAY
 <Multi_key><q><a><r>                                                                               : "ر.ق" # U0631 U002E U0642 Qatari Rial QATAR
 <Multi_key><Q><A><R>                                                                               : "ر.ق" # U0631 U002E U0642 Qatari Rial QATAR
 #   <Multi_key><r><o><n>                                                                           : "lei" # Romanian Leu ROMANIA
 #   <Multi_key><R><O><N>                                                                           : "lei" # Romanian Leu ROMANIA
 #   <Multi_key><r><s><d>                                                                           : "din" # Serbian Dinar SERBIA
 #   <Multi_key><R><S><D>                                                                           : "din" # Serbian Dinar SERBIA
-<Multi_key><r><u><b>                                                                               : "₽" U20BD # Russian Ruble RUSSIAN FEDERATION (THE)
-<Multi_key><R><U><B>                                                                               : "₽" U20BD # Russian Ruble RUSSIAN FEDERATION (THE)
+<Multi_key><r><u><b>                                                                               : "₽" U20BD # RUBLE SIGN, Russian Ruble THE RUSSIAN FEDERATION
+<Multi_key><R><U><B>                                                                               : "₽" U20BD # RUBLE SIGN, Russian Ruble THE RUSSIAN FEDERATION
 #   <Multi_key><r><w><f>                                                                           : "FRw" # Rwanda Franc RWANDA
 #   <Multi_key><R><W><F>                                                                           : "FRw" # Rwanda Franc RWANDA
 <Multi_key><s><a><r>                                                                               : "ر.س" # U0631 U002E U0633 Saudi Riyal SAUDI ARABIA
@@ -1959,8 +1987,8 @@
 #   <Multi_key><S><B><D>                                                                           : "$" U0024 # Solomon Islands Dollar SOLOMON ISLANDS
 #   <Multi_key><s><c><r>                                                                           : "Rs." # Seychelles Rupee SEYCHELLES
 #   <Multi_key><S><C><R>                                                                           : "Rs." # Seychelles Rupee SEYCHELLES
-<Multi_key><s><d><g>                                                                               : "ج.س." # U062C U002E U0633 U002E Sudanese Pound SUDAN (THE)
-<Multi_key><S><D><G>                                                                               : "ج.س." # U062C U002E U0633 U002E Sudanese Pound SUDAN (THE)
+<Multi_key><s><d><g>                                                                               : "ج.س." # U062C U002E U0633 U002E Sudanese Pound THE SUDAN
+<Multi_key><S><D><G>                                                                               : "ج.س." # U062C U002E U0633 U002E Sudanese Pound THE SUDAN
 #   <Multi_key><s><e><k>                                                                           : "kr" # Swedish Krona SWEDEN
 #   <Multi_key><S><E><K>                                                                           : "kr" # Swedish Krona SWEDEN
 #   <Multi_key><s><g><d>                                                                           : "$" U0024 # Singapore Dollar SINGAPORE
@@ -1979,14 +2007,14 @@
 #   <Multi_key><S><S><P>                                                                           : "£" U00A3 # South Sudanese Pound SOUTH SUDAN
 #   <Multi_key><s><t><n>                                                                           : "Db" # Dobra SAO TOME AND PRINCIPE
 #   <Multi_key><S><T><N>                                                                           : "Db" # Dobra SAO TOME AND PRINCIPE
-<Multi_key><s><v><c>                                                                               : "₡" U20A1 # El Salvador Colon EL SALVADOR
-<Multi_key><S><V><C>                                                                               : "₡" U20A1 # El Salvador Colon EL SALVADOR
+<Multi_key><s><v><c>                                                                               : "₡" U20A1 # COLON SIGN, El Salvador Colon EL SALVADOR
+<Multi_key><S><V><C>                                                                               : "₡" U20A1 # COLON SIGN, El Salvador Colon EL SALVADOR
 #   <Multi_key><s><y><p>                                                                           : "LS" # Syrian Pound SYRIAN ARAB REPUBLIC
 #   <Multi_key><S><Y><P>                                                                           : "LS" # Syrian Pound SYRIAN ARAB REPUBLIC
 #   <Multi_key><s><z><l>                                                                           : "E" U0045 # Lilangeni ESWATINI
 #   <Multi_key><S><Z><L>                                                                           : "E" U0045 # Lilangeni ESWATINI
-<Multi_key><t><h><b>                                                                               : "฿" U0E3F # Baht THAILAND
-<Multi_key><T><H><B>                                                                               : "฿" U0E3F # Baht THAILAND
+<Multi_key><t><h><b>                                                                               : "฿" U0E3F # THAI CURRENCY SYMBOL BAHT, Baht THAILAND
+<Multi_key><T><H><B>                                                                               : "฿" U0E3F # THAI CURRENCY SYMBOL BAHT, Baht THAILAND
 #   <Multi_key><t><j><s>                                                                           : "SM" # Somoni TAJIKISTAN
 #   <Multi_key><T><J><S>                                                                           : "SM" # Somoni TAJIKISTAN
 #   <Multi_key><t><m><t>                                                                           : "m" U006D # Turkmenistan New Manat TURKMENISTAN
@@ -1995,20 +2023,20 @@
 <Multi_key><T><N><D>                                                                               : "د.ت" # U062F U002E U062A Tunisian Dinar TUNISIA
 <Multi_key><t><o><p>                                                                               : "T$" # U0054 U0024 Pa’anga TONGA
 <Multi_key><T><O><P>                                                                               : "T$" # U0054 U0024 Pa’anga TONGA
-<Multi_key><t><r><y>                                                                               : "₺" U20BA # Turkish Lira TÜRKİYE
-<Multi_key><T><R><Y>                                                                               : "₺" U20BA # Turkish Lira TÜRKİYE
+<Multi_key><t><r><y>                                                                               : "₺" U20BA # TURKISH LIRA SIGN, Turkish Lira TÜRKİYE
+<Multi_key><T><R><Y>                                                                               : "₺" U20BA # TURKISH LIRA SIGN, Turkish Lira TÜRKİYE
 #   <Multi_key><t><t><d>                                                                           : "$" U0024 # Trinidad and Tobago Dollar TRINIDAD AND TOBAGO
 #   <Multi_key><T><T><D>                                                                           : "$" U0024 # Trinidad and Tobago Dollar TRINIDAD AND TOBAGO
-#   <Multi_key><t><w><d>                                                                           : "$" U0024 # New Taiwan Dollar TAIWAN (PROVINCE OF CHINA)
-#   <Multi_key><T><W><D>                                                                           : "$" U0024 # New Taiwan Dollar TAIWAN (PROVINCE OF CHINA)
-#   <Multi_key><t><z><s>                                                                           : "TSh" # Tanzanian Shilling TANZANIA, UNITED REPUBLIC OF
-#   <Multi_key><T><Z><S>                                                                           : "TSh" # Tanzanian Shilling TANZANIA, UNITED REPUBLIC OF
-<Multi_key><u><a><h>                                                                               : "₴" U20B4 # Hryvnia UKRAINE
-<Multi_key><U><A><H>                                                                               : "₴" U20B4 # Hryvnia UKRAINE
+#   <Multi_key><t><w><d>                                                                           : "$" U0024 # New Taiwan Dollar TAIWAN
+#   <Multi_key><T><W><D>                                                                           : "$" U0024 # New Taiwan Dollar TAIWAN
+#   <Multi_key><t><z><s>                                                                           : "TSh" # Tanzanian Shilling UNITED REPUBLIC OF TANZANIA
+#   <Multi_key><T><Z><S>                                                                           : "TSh" # Tanzanian Shilling UNITED REPUBLIC OF TANZANIA
+<Multi_key><u><a><h>                                                                               : "₴" U20B4 # HRYVNIA SIGN, Hryvnia UKRAINE
+<Multi_key><U><A><H>                                                                               : "₴" U20B4 # HRYVNIA SIGN, Hryvnia UKRAINE
 #   <Multi_key><u><g><x>                                                                           : "USh" # Uganda Shilling UGANDA
 #   <Multi_key><U><G><X>                                                                           : "USh" # Uganda Shilling UGANDA
-#   <Multi_key><u><s><d>                                                                           : "$" U0024 # US Dollar UNITED STATES OF AMERICA (THE)
-#   <Multi_key><U><S><D>                                                                           : "$" U0024 # US Dollar UNITED STATES OF AMERICA (THE)
+#   <Multi_key><u><s><d>                                                                           : "$" U0024 # US Dollar THE UNITED STATES OF AMERICA
+#   <Multi_key><U><S><D>                                                                           : "$" U0024 # US Dollar THE UNITED STATES OF AMERICA
 #   <Multi_key><u><y><i>                                                                           : "UI" # Uruguay Peso en Unidades Indexadas (UI) URUGUAY
 #   <Multi_key><U><Y><I>                                                                           : "UI" # Uruguay Peso en Unidades Indexadas (UI) URUGUAY
 #   <Multi_key><u><y><u>                                                                           : "$" U0024 # Peso Uruguayo URUGUAY
@@ -2017,30 +2045,30 @@
 #   <Multi_key><U><Y><W>                                                                           : "UP" # Unidad Previsional URUGUAY
 #   <Multi_key><u><z><s>                                                                           : "so'm" # Uzbekistan Sum UZBEKISTAN
 #   <Multi_key><U><Z><S>                                                                           : "so'm" # Uzbekistan Sum UZBEKISTAN
-#   <Multi_key><v><e><d>                                                                           : "Bs." # Bolívar Soberano VENEZUELA (BOLIVARIAN REPUBLIC OF)
-#   <Multi_key><V><E><D>                                                                           : "Bs." # Bolívar Soberano VENEZUELA (BOLIVARIAN REPUBLIC OF)
-#   <Multi_key><v><e><s>                                                                           : "Bs." # Bolívar Soberano VENEZUELA (BOLIVARIAN REPUBLIC OF)
-#   <Multi_key><V><E><S>                                                                           : "Bs." # Bolívar Soberano VENEZUELA (BOLIVARIAN REPUBLIC OF)
-<Multi_key><v><n><d>                                                                               : "₫" U20AB # Dong VIET NAM
-<Multi_key><V><N><D>                                                                               : "₫" U20AB # Dong VIET NAM
+#   <Multi_key><v><e><d>                                                                           : "Bs." # Bolívar Soberano BOLIVARIAN REPUBLIC OF VENEZUELA
+#   <Multi_key><V><E><D>                                                                           : "Bs." # Bolívar Soberano BOLIVARIAN REPUBLIC OF VENEZUELA
+#   <Multi_key><v><e><s>                                                                           : "Bs." # Bolívar Soberano BOLIVARIAN REPUBLIC OF VENEZUELA
+#   <Multi_key><V><E><S>                                                                           : "Bs." # Bolívar Soberano BOLIVARIAN REPUBLIC OF VENEZUELA
+<Multi_key><v><n><d>                                                                               : "₫" U20AB # DONG SIGN, Dong VIET NAM
+<Multi_key><V><N><D>                                                                               : "₫" U20AB # DONG SIGN, Dong VIET NAM
 #   <Multi_key><v><u><v>                                                                           : "VT" # Vatu VANUATU
 #   <Multi_key><V><U><V>                                                                           : "VT" # Vatu VANUATU
 #   <Multi_key><w><s><t>                                                                           : "$" U0024 # Tala SAMOA
 #   <Multi_key><W><S><T>                                                                           : "$" U0024 # Tala SAMOA
-#   <Multi_key><x><a><f>                                                                           : "F.CFA" # CFA Franc BEAC CAMEROON CENTRAL AFRICAN REPUBLIC (THE) CHAD CONGO (THE) EQUATORIAL GUINEA GABON
-#   <Multi_key><X><A><F>                                                                           : "F.CFA" # CFA Franc BEAC CAMEROON CENTRAL AFRICAN REPUBLIC (THE) CHAD CONGO (THE) EQUATORIAL GUINEA GABON
-#   <Multi_key><x><c><d>                                                                           : "$" U0024 # East Caribbean Dollar ANGUILLA ANTIGUA AND BARBUDA DOMINICA GRENADA MONTSERRAT SAINT KITTS AND NEVIS SAINT LUCIA SAINT VINCENT AND THE GRENADINES
-#   <Multi_key><X><C><D>                                                                           : "$" U0024 # East Caribbean Dollar ANGUILLA ANTIGUA AND BARBUDA DOMINICA GRENADA MONTSERRAT SAINT KITTS AND NEVIS SAINT LUCIA SAINT VINCENT AND THE GRENADINES
+#   <Multi_key><x><a><f>                                                                           : "F.CFA" # CFA Franc BEAC, CAMEROON, THE CENTRAL AFRICAN REPUBLIC, THE CHAD, CONGO, EQUATORIAL GUINEA, GABON
+#   <Multi_key><X><A><F>                                                                           : "F.CFA" # CFA Franc BEAC, CAMEROON, THE CENTRAL AFRICAN REPUBLIC, THE CHAD, CONGO, EQUATORIAL GUINEA, GABON
+#   <Multi_key><x><c><d>                                                                           : "$" U0024 # East Caribbean Dollar ANGUILLA, ANTIGUA AND BARBUDA, DOMINICA, GRENADA, MONTSERRAT, SAINT KITTS AND NEVIS, SAINT LUCIA, SAINT VINCENT AND THE GRENADINES
+#   <Multi_key><X><C><D>                                                                           : "$" U0024 # East Caribbean Dollar ANGUILLA, ANTIGUA AND BARBUDA, DOMINICA, GRENADA, MONTSERRAT, SAINT KITTS AND NEVIS, SAINT LUCIA, SAINT VINCENT AND THE GRENADINES
 #   <Multi_key><x><d><r>                                                                           : "SDR" # SDR (Special Drawing Right) INTERNATIONAL MONETARY FUND (IMF)
 #   <Multi_key><X><D><R>                                                                           : "SDR" # SDR (Special Drawing Right) INTERNATIONAL MONETARY FUND (IMF)
-#   <Multi_key><x><o><f>                                                                           : "F.CFA" # CFA Franc BCEAO BENIN BURKINA FASO CÔTE D'IVOIRE GUINEA-BISSAU MALI NIGER (THE) SENEGAL TOGO
-#   <Multi_key><X><O><F>                                                                           : "F.CFA" # CFA Franc BCEAO BENIN BURKINA FASO CÔTE D'IVOIRE GUINEA-BISSAU MALI NIGER (THE) SENEGAL TOGO
-#   <Multi_key><x><p><f>                                                                           : "F" U0046 # CFP Franc FRENCH POLYNESIA NEW CALEDONIA WALLIS AND FUTUNA
-#   <Multi_key><X><P><F>                                                                           : "F" U0046 # CFP Franc FRENCH POLYNESIA NEW CALEDONIA WALLIS AND FUTUNA
-<Multi_key><y><e><r>                                                                               : "﷼" UFDFC # Yemeni Rial YEMEN
-<Multi_key><Y><E><R>                                                                               : "﷼" UFDFC # Yemeni Rial YEMEN
-#   <Multi_key><z><a><r>                                                                           : "R" U0052 # Rand LESOTHO NAMIBIA SOUTH AFRICA
-#   <Multi_key><Z><A><R>                                                                           : "R" U0052 # Rand LESOTHO NAMIBIA SOUTH AFRICA
+#   <Multi_key><x><o><f>                                                                           : "F.CFA" # CFA Franc BCEAO, BENIN, BURKINA FASO, CÔTE D'IVOIRE, GUINEA-BISSAU, MALI, THE NIGER, SENEGAL, TOGO
+#   <Multi_key><X><O><F>                                                                           : "F.CFA" # CFA Franc BCEAO, BENIN, BURKINA FASO, CÔTE D'IVOIRE, GUINEA-BISSAU, MALI, THE NIGER, SENEGAL, TOGO
+#   <Multi_key><x><p><f>                                                                           : "F" U0046 # CFP Franc FRENCH POLYNESIA, NEW CALEDONIA, WALLIS AND FUTUNA
+#   <Multi_key><X><P><F>                                                                           : "F" U0046 # CFP Franc FRENCH POLYNESIA, NEW CALEDONIA, WALLIS AND FUTUNA
+<Multi_key><y><e><r>                                                                               : "﷼" UFDFC # RIAL SIGN, Yemeni Rial YEMEN
+<Multi_key><Y><E><R>                                                                               : "﷼" UFDFC # RIAL SIGN, Yemeni Rial YEMEN
+#   <Multi_key><z><a><r>                                                                           : "R" U0052 # Rand LESOTHO, NAMIBIA, SOUTH AFRICA
+#   <Multi_key><Z><A><R>                                                                           : "R" U0052 # Rand LESOTHO, NAMIBIA, SOUTH AFRICA
 #   <Multi_key><z><m><w>                                                                           : "ZK" # Zambian Kwacha ZAMBIA
 #   <Multi_key><Z><M><W>                                                                           : "ZK" # Zambian Kwacha ZAMBIA
 #   <Multi_key><z><w><l>                                                                           : "$" U0024 # Zimbabwe Dollar ZIMBABWE
@@ -2609,12 +2637,31 @@
 ### Mathematical symbols by Multi_key
 #
 #
+#   The General Category `Symbol, other` (`So`) does not preclude a symbol from
+#   being a math symbol, despite there is the dedicated `Symbol, math` (`Sm`).
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=199
+#
+#   Also, the General Category is not constrained by any stability policies and
+#   could therefore easily be updated to stay in sync with evolving math symbol
+#   assignments.
+#   https://www.unicode.org/policies/stability_policy.html
+#
+#   The derived Unicode property `Math` is more reliable although it still only
+#   defines a subset of the symbols that need to be supported as math symbols.
+#   https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
+#
+#   E.g. "⭅" U2B45 and "⭆" U2B46 are not labeled as `Math`, yet both are found
+#   in TeX math packages and are thus expected to be supported by input methods
+#   consistently.
+#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
+#
+#
 # # Count
 #
-#       2310 total characters with Derived Property: Math
+#       2310 total characters with Derived Property Math
 #            https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
 #
-#         −7 ASCII + < = > ^ | ~
+#         −7 ASCII + < = > ^ | ~ fully supported on live keys
 #         +1 Quadruple prime included in TeX math packages
 #         +3 Reverse primes included in TeX math packages
 #         +5 Arrows U21A8, U21AF, U21DC, U2B45, U2B46 included in TeX math packages
@@ -2643,17 +2690,11 @@
 #       1114 Western full BMP math symbols and diacritics
 #
 #
-#   The Unicode `Math` property defines a subset of the symbols that need to be
-#   supported as math symbols. E.g. "⭅" U2B45 and U2B46 are not labeled as math
-#   yet are included in TeX math packages and are thus expected to be supported
-#   by input methods.
-#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
-#
-#
 # # Layout
 #
 #   For maintainability, the symbols are ordered by ascending code point.
 #
+#   Some symbols also have easy access in groups or by other dead keys.
 #   Alternative input methods are hinted in comment lines.
 #
 #   In the headings, the preposition “of” is used if the block is entirely
@@ -2662,8 +2703,6 @@
 #
 #
 # # Overview
-#
-#   Symbols are included and counted depending on their code point order.
 #
 #      1  # # Not sign
 #      1  # # Plus minus
@@ -2719,12 +2758,13 @@
 #   in case intuitivity requires similar sequences for different symbols. This
 #   may require prepending multiple spaces. In case of multiple leading spaces,
 #   the thumb may be lifted from the level 3 modifier after any of them, also
-#   in French mode.
+#   in French mode, requiring alias sequences with leading no-break spaces.
 #
-#   Examples involving a double, triple, or quadruple leading [nobreak]space:
-#   Double:    "⧂" U29C2, "⧜" U29DC, "⧸" U29F8, "◽" U25FD, "⤶" U2936;
+#   Examples involving single or multiple leading [nobreak]space:
+#   Single:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
+#   Double:    "⧸" U29F8, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
 #   Triple:    "⟋" U27CB and "⟍" U27CD;
-#   Quadruple: "⧵" U29F5, "⁄" U2044.
+#   Quadruple:  "⁄" U2044 and "⧵" U29F5.
 #
 #   To prevent further conflicts with dead key equivalents, negated sequences
 #   work the other way around: letters first, slash last, except when required
@@ -2787,14 +2827,14 @@
 #
 # # Not sign
 #
-#   The not sign is also in group 2 of grave on the N key.
+#   The not sign is also in group 4 of grave on the N key.
 #
 #   These sequences need to be consistent with those of "⫬" U2AEC and "⫭" U2AED
 #   below. There is also a not-math turned not sign "⌙" U2319.
 #   See # # TURNED&GROUP_1
 #   See # # TURNED&GROUP_2
 #
-#   In group 2 of `                                                                                : "¬" U00AC # NOT SIGN
+#   In group 4 of `                                                                                : "¬" U00AC # NOT SIGN
 <Multi_key><minus><apostrophe>                                                             <space> : "¬" U00AC # NOT SIGN
 <Multi_key><minus><apostrophe>                                                      <nobreakspace> : "¬" U00AC # NOT SIGN
 <Multi_key><minus><rightsinglequotemark>                                                   <space> : "¬" U00AC # NOT SIGN
@@ -3552,11 +3592,6 @@
 #
 #
 # # Mathematical Operators of block U2200
-#
-#   Some symbols also have easy access in groups. Those whose straightforward
-#   Multi_key sequences conflict with dead key equivalents have sequences with a
-#   leading space. Some examples: "∕" U2215 DIVISION SLASH, "∖" U2216 SET MINUS,
-#   "∣" U2223 DIVIDES, "∼" U223C TILDE OPERATOR.
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Mathematical_Operators_block
 #   https://en.wikipedia.org/wiki/Mathematical_Operators_(Unicode_block)
@@ -4716,7 +4751,8 @@
 <Multi_key><slash><underscore><numbersign><bar>                                     <nobreakspace> : "◢" U25E2 # BLACK LOWER RIGHT TRIANGLE
 <Multi_key><underscore><slash><numbersign><bar>                                            <space> : "◢" U25E2 # BLACK LOWER RIGHT TRIANGLE
 <Multi_key><underscore><slash><numbersign><bar>                                     <nobreakspace> : "◢" U25E2 # BLACK LOWER RIGHT TRIANGLE
-#   U25E3 is not labeled as math in Unicode but is included in TeX math packages.
+#   U25E3 is not labeled as math in Unicode, yet it is included in TeX math
+#   packages.
 <Multi_key><bar><numbersign><backslash><underscore>                                        <space> : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
 <Multi_key><bar><numbersign><backslash><underscore>                                 <nobreakspace> : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
 <Multi_key><bar><numbersign><underscore><backslash>                                        <space> : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
@@ -4925,7 +4961,8 @@
 <Multi_key><S><braceright>                                                          <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
 <Multi_key><v><period>                                                                     <space> : "⟇" U27C7 # OR WITH DOT INSIDE
 <Multi_key><v><period>                                                              <nobreakspace> : "⟇" U27C7 # OR WITH DOT INSIDE
-#   Some fonts feature a slash instead of a backslash in "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
+#   Some fonts feature a slash instead of a backslash in
+#   "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
 <Multi_key><space><backslash><c>                                                           <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><space><backslash><c>                                                    <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><backslash><c>                                                    <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
@@ -5926,15 +5963,27 @@
 <Multi_key><colon><minus><greater>                                                  <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
 <Multi_key><colon><minus><minus><greater>                                                  <space> : "⧴" U29F4 # RULE-DELAYED
 <Multi_key><colon><minus><minus><greater>                                           <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
-#   "⧵" U29F5 REVERSE SOLIDUS OPERATOR: likely duplicate "∖" U2216 SET MINUS
-#   with the potential to fool people into decisions causing issues, e.g.
+#
+#   "⧵" U29F5 REVERSE SOLIDUS OPERATOR is likely a duplicate of "∖" U2216 SET
+#   MINUS with the potential to fool people into decisions causing issues, e.g.
 #   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems #409”
 #   https://github.com/tudace/tuda_latex_templates/issues/409
-#   Fonts, e.g. DejaVu Sans Mono Book, may give them a slight difference in slant.
-#   Since "∕" U2215 DIVISION SLASH does not have any *SOLIDUS OPERATOR equivalent,
-#   REVERSE SOLIDUS OPERATOR is disambiguated by a quadruple leading space.
-#   For convenience these [back]slash symbols are alternatively disambiguated
-#   by a trailing digit, for consistency also those with a single leading space.
+#
+#   Consistently, "⧵" U29F5 goes unmentioned in TUS, Table 22-5. Mathematical
+#   Operators Disunified from Punctuation, as disunifying this from "\" U005C
+#   was pointless. As a consequence, people are left stranded when attempting
+#   to make sense of this code point.
+#
+#   Fonts may give the duplicate a slight difference in slant. One example is
+#   DejaVu Sans Mono Book.
+#
+#   "∕" U2215 DIVISION SLASH, by contrast, does not have any *SOLIDUS OPERATOR
+#   equivalent. Therefore, U29F5 is disambiguated by a quadruple leading space.
+#   For convenience, these [back]slash symbols are alternatively disambiguated
+#   by a trailing digit, also those with a single leading space for consistency
+#   in the related dead key (without space termination).
+#   See #*# REVERSED
+#
 #   In #*# REVERSED                                                                                : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
@@ -6159,9 +6208,17 @@
 <Multi_key><parenleft><plus>                                                        <nobreakspace> : "⨭" U2A2D # PLUS SIGN IN LEFT HALF CIRCLE
 <Multi_key><plus><parenright>                                                              <space> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
 <Multi_key><plus><parenright>                                                       <nobreakspace> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
-#   The vector cross product symbol "⨯" U2A2F is confusable with the
+#
+#   The vector cross product symbol "⨯" U2A2F is confusable with the Latin-1
 #   multiplication symbol "×" U00D7 and is probably another duplicate encoding,
 #   since the vector dot product symbol is the dot operator "⋅" U22C5.
+#
+#   Consistently, TUS does not mention mathematical operators disunified from
+#   Latin-1 operators, along the lines of Table 22-5. Mathematical Operators
+#   Disunified from Punctuation, as disunifying "⨯" U2A2F from "×" U00D7 was
+#   pointless. As a consequence, people are left stranded when attempting to
+#   make sense of this code point.
+#
 <Multi_key><space><x>                                                                      <space> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
 <Multi_key><space><x>                                                               <nobreakspace> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
 <Multi_key><nobreakspace><x>                                                               <space> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
