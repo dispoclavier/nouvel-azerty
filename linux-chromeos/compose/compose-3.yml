@@ -184,9 +184,9 @@
 #	  7	⚓	⚮	✉	♼	☏	⚬	⚭	∝	⚘	⛸	◼	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	◻	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	⚯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⬛	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⬜	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	〰	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	NSP	NSP	
-#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	⁖	►	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
-#	11	‸	⏫	⏏	®	™	⁁	ˈ	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⚐	⌘	⤴	⤵	HSP	HSP	 
-#	12	ª	⏬	〃	∖	☘	❍	ˌ	♾	º	⛏	⚧	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	∕	❖	✏	⛛	⚔	⟂	⁌	♇	⁍	∎	※	⌨	IDSP	IDSP	
+#	10	ZWNJ	ZWJ	VS16	VS1	VS15	🏻	🏼	🏽	🏾	🏿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	⸿	►	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
+#	11	‸	⏫	⏏	®	™	⁁	ˈ	∞	⚒	℗	♯	☉	☾	☽	⁒	✜	➲	❐	❒	µ	▲	∗	©	▼	♭	♮	⚑	♆	⁖	∎	⤴	⤵	HSP	HSP	 
+#	12	ª	⏬	〃	∖	☘	❍	ˌ	♾	º	⛏	⚧	✒	❨	❩	‐	⁜	⮊	❑	❏	¦	∕	❖	✏	⛛	⚔	⟂	⚐	♇	⁘	⌘	※	⌨	IDSP	IDSP	
 #
 #
 #
@@ -1084,12 +1084,19 @@
 #   Unlike U2011 NON-BREAKING HYPHEN, in group 1 of U003D, U2010 HYPHEN is not
 #   in group 1 of U002D, because it is a duplicate of U002D with the potential
 #   of messing up keyboard layouts and user experience when it is too easily
-#   accessible.
+#   accessible. U2010 HYPHEN is a duplicate of U002D HYPHEN-MINUS because just
+#   like "*" U002A and "/" U002F, that are not called *ASTERISK-MULTIPLICATION
+#   or *SLASH-DIVISION either, "-" U002D is a plain hyphen, that is repurposed
+#   in programming like so many other symbols. "+" U002B PLUS SIGN is the only
+#   ASCII base operator used as such in good typesetting.
 #   See # # B05
 #   See # # Dashes and hyphens
 #
 #   Instead, U2212 MINUS SIGN is mapped here with respect to incomplete layouts
 #   lacking arithmetic base operators, usually on level 5 live key positions.
+#
+#   For completeness, U2010 HYPHEN is in group 12 of this key, where it should
+#   not do too much harm.
 #
 <UEFD0>                                                                                    <minus> : "−" U2212 # MINUS SIGN
 <Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN
@@ -1142,13 +1149,6 @@
 #
 #
 # # C06
-#
-#   "+" U002B PLUS SIGN is mapped here in group 3, for completeness, given that
-#   this is the only ASCII base operator used as such in good typesetting. Also
-#   because U2010 in the same group on the previous key is a duplicate of U002D
-#   with the potential of messing up keyboard layouts and user experience.
-#   See # # C05
-#   See # # Dashes and hyphens
 #
 <UEFD0>                                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
 <Multi_key><numbersign>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
@@ -1586,10 +1586,10 @@
 <Multi_key><numbersign><9>                                                                  <less> : "☄" U2604 # COMET emoji
 <UEFD0><KP_9>                                                                               <less> : "☄" U2604 # COMET emoji
 <Multi_key><numbersign><KP_9>                                                               <less> : "☄" U2604 # COMET emoji
-<UEFD0><0>                                                                                  <less> : "⁖" U2056 # THREE DOT PUNCTUATION
-<Multi_key><numbersign><0>                                                                  <less> : "⁖" U2056 # THREE DOT PUNCTUATION
-<UEFD0><KP_0>                                                                               <less> : "⁖" U2056 # THREE DOT PUNCTUATION
-<Multi_key><numbersign><KP_0>                                                               <less> : "⁖" U2056 # THREE DOT PUNCTUATION
+<UEFD0><0>                                                                                  <less> : "⸿" U2E3F # CAPITULUM
+<Multi_key><numbersign><0>                                                                  <less> : "⸿" U2E3F # CAPITULUM
+<UEFD0><KP_0>                                                                               <less> : "⸿" U2E3F # CAPITULUM
+<Multi_key><numbersign><KP_0>                                                               <less> : "⸿" U2E3F # CAPITULUM
 <UEFD0><1>                                                                                  <less> : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><numbersign><1>                                                                  <less> : "©" U00A9 # COPYRIGHT SIGN emoji
 <UEFD0><KP_1>                                                                               <less> : "©" U00A9 # COPYRIGHT SIGN emoji
@@ -1606,12 +1606,12 @@
 <Multi_key><numbersign>                                                                  <greater> : "✔" U2714 # HEAVY CHECK MARK emoji
 <UEFD0><UEFD0>                                                                           <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
 <Multi_key><numbersign><numbersign>                                                      <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
-<UEFD0><3>                                                                               <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<Multi_key><numbersign><3>                                                               <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<UEFD0><KP_3>                                                                            <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<Multi_key><numbersign><KP_3>                                                            <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<UEFD0><UEFD0><UEFD0>                                                                    <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
-<Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "✅" U2705 # HEAVY WHITE CHECK MARK emoji, check mark button
+<UEFD0><3>                                                                               <greater> : "✅" U2705 # WHITE HEAVY CHECK MARK emoji, check mark button
+<Multi_key><numbersign><3>                                                               <greater> : "✅" U2705 # WHITE HEAVY CHECK MARK emoji, check mark button
+<UEFD0><KP_3>                                                                            <greater> : "✅" U2705 # WHITE HEAVY CHECK MARK emoji, check mark button
+<Multi_key><numbersign><KP_3>                                                            <greater> : "✅" U2705 # WHITE HEAVY CHECK MARK emoji, check mark button
+<UEFD0><UEFD0><UEFD0>                                                                    <greater> : "✅" U2705 # WHITE HEAVY CHECK MARK emoji, check mark button
+<Multi_key><numbersign><numbersign><numbersign>                                          <greater> : "✅" U2705 # WHITE HEAVY CHECK MARK emoji, check mark button
 <UEFD0><4>                                                                               <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
 <Multi_key><numbersign><4>                                                               <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
 <UEFD0><KP_4>                                                                            <greater> : "✀" U2700 # BLACK SAFETY SCISSORS
@@ -1880,10 +1880,10 @@
 <Multi_key><numbersign><1>                                                                 <comma> : "⚑" U2691 # BLACK FLAG
 <UEFD0><KP_1>                                                                              <comma> : "⚑" U2691 # BLACK FLAG
 <Multi_key><numbersign><KP_1>                                                              <comma> : "⚑" U2691 # BLACK FLAG
-<UEFD0><2>                                                                                 <comma> : "⁌" U204C # BLACK LEFTWARDS BULLET
-<Multi_key><numbersign><2>                                                                 <comma> : "⁌" U204C # BLACK LEFTWARDS BULLET
-<UEFD0><KP_2>                                                                              <comma> : "⁌" U204C # BLACK LEFTWARDS BULLET
-<Multi_key><numbersign><KP_2>                                                              <comma> : "⁌" U204C # BLACK LEFTWARDS BULLET
+<UEFD0><2>                                                                                 <comma> : "⚐" U2690 # WHITE FLAG
+<Multi_key><numbersign><2>                                                                 <comma> : "⚐" U2690 # WHITE FLAG
+<UEFD0><KP_2>                                                                              <comma> : "⚐" U2690 # WHITE FLAG
+<Multi_key><numbersign><KP_2>                                                              <comma> : "⚐" U2690 # WHITE FLAG
 #
 #
 # # B08-level3
@@ -1928,14 +1928,14 @@
 <Multi_key><numbersign><0>                                                                <exclam> : "∵" U2235 # BECAUSE
 <UEFD0><KP_0>                                                                             <exclam> : "∵" U2235 # BECAUSE
 <Multi_key><numbersign><KP_0>                                                             <exclam> : "∵" U2235 # BECAUSE
-<UEFD0><1>                                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><1>                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<UEFD0><KP_1>                                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<Multi_key><numbersign><KP_1>                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
-<UEFD0><2>                                                                                <exclam> : "∎" U220E # END OF PROOF
-<Multi_key><numbersign><2>                                                                <exclam> : "∎" U220E # END OF PROOF
-<UEFD0><KP_2>                                                                             <exclam> : "∎" U220E # END OF PROOF
-<Multi_key><numbersign><KP_2>                                                             <exclam> : "∎" U220E # END OF PROOF
+<UEFD0><1>                                                                                <exclam> : "∎" U220E # END OF PROOF
+<Multi_key><numbersign><1>                                                                <exclam> : "∎" U220E # END OF PROOF
+<UEFD0><KP_1>                                                                             <exclam> : "∎" U220E # END OF PROOF
+<Multi_key><numbersign><KP_1>                                                             <exclam> : "∎" U220E # END OF PROOF
+<UEFD0><2>                                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><2>                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<UEFD0><KP_2>                                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
+<Multi_key><numbersign><KP_2>                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
 #
 #
 # # B08-level1
@@ -1989,17 +1989,17 @@
 #   <Multi_key><numbersign><0>                                                            <period> : part of alphabetic mathematical symbol input sequences
 #   <UEFD0><KP_0>                                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
 #   <Multi_key><numbersign><KP_0>                                                     <KP_Decimal> : part of alphabetic mathematical symbol input sequences
-<UEFD0><1>                                                                                <period> : "⚐" U2690 # WHITE FLAG
-<Multi_key><numbersign><1>                                                                <period> : "⚐" U2690 # WHITE FLAG
-<UEFD0><KP_1>                                                                         <KP_Decimal> : "⚐" U2690 # WHITE FLAG
-<Multi_key><numbersign><KP_1>                                                         <KP_Decimal> : "⚐" U2690 # WHITE FLAG
-<UEFD0><2>                                                                                <period> : "⁍" U204D # BLACK RIGHTWARDS BULLET
-<Multi_key><numbersign><2>                                                                <period> : "⁍" U204D # BLACK RIGHTWARDS BULLET
-<UEFD0><KP_2>                                                                         <KP_Decimal> : "⁍" U204D # BLACK RIGHTWARDS BULLET
-<Multi_key><numbersign><KP_2>                                                         <KP_Decimal> : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<UEFD0><1>                                                                                <period> : "⁖" U2056 # THREE DOT PUNCTUATION
+<Multi_key><numbersign><1>                                                                <period> : "⁖" U2056 # THREE DOT PUNCTUATION
+<UEFD0><KP_1>                                                                         <KP_Decimal> : "⁖" U2056 # THREE DOT PUNCTUATION
+<Multi_key><numbersign><KP_1>                                                         <KP_Decimal> : "⁖" U2056 # THREE DOT PUNCTUATION
+<UEFD0><2>                                                                                <period> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<Multi_key><numbersign><2>                                                                <period> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<UEFD0><KP_2>                                                                         <KP_Decimal> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<Multi_key><numbersign><KP_2>                                                         <KP_Decimal> : "⁘" U2058 # FOUR DOT PUNCTUATION
 #
 #
-# # B09-level3
+# # B09
 #
 #   The watch emoji are mapped here based on the mnemonics of time notation.
 #
@@ -2053,7 +2053,7 @@
 <Multi_key><numbersign><KP_2>                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
 #
 #
-# # B10-level3
+# # B10
 #
 #   The (full) triangular colon is about 40 times more frequent than its half.
 #   Consistently, "ː" U02D0 is in group 1, "ˑ" U02D1 in group 2. For mnemonics,
