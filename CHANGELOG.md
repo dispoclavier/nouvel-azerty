@@ -3,9 +3,10 @@
 ## 3.5.0 (projet)
 
 * Composition :
-	* Redonder "⁌" U+204C, "⁍" U+204D. (compose-1.yml [9b7b785](https://github.com/dispoclavier/nouvel-azerty/commit/9b7b785d697158546d5edd532688941c0e359da8))
-	* Corriger les séquences de "☚" U+261A, "☛" U+261B. (ibidem)
+	* Redonder "⁌" U+204C, "⁍" U+204D. (compose-1.yml [9b7b785](https://github.com/dispoclavier/nouvel-azerty/commit/9b7b785d697158546d5edd532688941c0e359da8), [817b5d8](https://github.com/dispoclavier/nouvel-azerty/commit/817b5d8439cbd175ddaf714a14bc9884fd8e7b49))
 	* Compléter les séquences de "∎" U+220E, "◂" U+25C2, "‣" U+2023, "●" U+25CF, "▬" U+25AC, "◦" U+25E6, "▫" U+25AB, "▮" U+25AE, "▭" U+25AD, "▵" U+25B5, "▿" U+25BF, "☆" U+2606, "•" U+2022, "▪" U+25AA, "▴" U+25B4, "▾" U+25BE. (ibidem)
+	* Corriger les séquences de "☚" U+261A, "☛" U+261B. (ibidem)
+	* Ajouter "👈" U+1F448, "👉" U+1F449. (compose-1.yml [817b5d8](https://github.com/dispoclavier/nouvel-azerty/commit/817b5d8439cbd175ddaf714a14bc9884fd8e7b49))
 * Transformations :
 	* Réfléchi :
 		* Ajouter "⌐" U+2310. (compose-2.yml [1422800](https://github.com/dispoclavier/nouvel-azerty/commit/14228002156f979d83c02316b08580df7c3966b6))
@@ -18,9 +19,19 @@
 		* Ajouter "🅐" U+1F150.."🅩" U+1F169, "🅰" U+1F170.."🆉" U+1F189. (ibidem)
 	* Grec ou cerclé et tilde : Ajouter comme touche morte carré avec "🄰" U+1F130.."🅉" U+1F149. (ibidem)
 	* Touche morte groupe : Groupes des symboles : (compose-3.yml [80afd99](https://github.com/dispoclavier/nouvel-azerty/commit/80afd99bc85cc719bf6b935c863533feb1921347))
-		* Ajouter "⸿" U2E3F à la place de "⁖" U2056, qui prend la place de "⚐" U2690, qui prend la place de "⁌" U204C, qui va en composition avec les autres puces spécialisées, où elle est suivie par "⁍" U204D. (compose-3.yml [80d680b](https://github.com/dispoclavier/nouvel-azerty/commit/80d680bfcfb87809e6466ab6f5eb2857ecc5964d))
-		* Redonder "⁘" U2058 à l’ancienne place de "⁍" U204D. (ibidem)
-		* Permuter "⌘" U2318 et "∎" U220E. (ibidem)
+		* Ajouter "⸿" U+2E3F à la place de "⁖" U+2056, qui prend la place de "⚐" U+2690, qui prend la place de "⁌" U+204C, qui va en composition avec les autres puces spécialisées, où elle est suivie par "⁍" U+204D. (compose-3.yml [80d680b](https://github.com/dispoclavier/nouvel-azerty/commit/80d680bfcfb87809e6466ab6f5eb2857ecc5964d))
+		* Redonder "⁘" U+2058 à l’ancienne place de "⁍" U+204D. (ibidem)
+		* Permuter "⌘" U+2318 et "∎" U+220E. (ibidem)
+		* Arrêter la prise en charge des diacritiques phototypes "🏻" U+1F3FB, "🏼" U+1F3FC, "🏽" U+1F3FD, "🏾" U+1F3FE, "🏿" U+1F3FF, inappropriée sur une disposition de clavier sans prise en charge extensive des émojis. (compose-3.yml [7f517cc](https://github.com/dispoclavier/nouvel-azerty/commit/7f517cc69e6ef3d04350148c0e103fe5abec98f3))
+		* Redonder "☚" U+261A à la place de "⸿" U+2E3F, qui prend la place laissée par "🏿" U+1F3FF. (ibidem)
+		* Redonder "☛" U+261B à la place de "►" U+25BA, qui prend la place de "✀" U+2700, qui prend la place de "✂" U+2702, qui prend la place de "∐" U+2210, qui prend la place de "¶" U+00B6, qui prend la place de "℗" U+2117, qui est en composition. (ibidem)
+		* Permuter "○" U+25CB et "●" U+25CF, "▢" U+25A2 et "⯀" U+2BC0. (ibidem)
+		* Ajouter "⛯" U+26EF à la place de "⚯" U+26AF, qui prend la place de "⚮" U+26AE, qui prend la place de "∝" U+221D, qui prend la place laissée par "🏽" U+1F3FD. (ibidem)
+		* Mettre "⤴" U+2934 à la place laissée par "🏼" U+1F3FC. (ibidem)
+		* Mettre "⤵" U+2935 à la place laissée par "🏾" U+1F3FE. (ibidem)
+		* Redonder "⁚" U+205A à la place laissée par "⤴" U+2934. (ibidem)
+		* Redonder l’antiliant "‌" U+200C pour la mnémonique graphique à la place laissée par "🏻" U+1F3FB. (ibidem)
+		* Redonder "⟰" U+27F0 à la place laissée par "⤵" U+2935. (ibidem)
 
 ## 3.4.3 (2024-07-31)
 
