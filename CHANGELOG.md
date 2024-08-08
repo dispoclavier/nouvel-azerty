@@ -1,6 +1,6 @@
 # Journal des modifications
 
-## 3.5.0 (projet)
+## 3.5.0 (2024-08-08)
 
 * Composition :
 	* Redonder "⁌" U+204C, "⁍" U+204D. (compose-1.yml [9b7b785](https://github.com/dispoclavier/nouvel-azerty/commit/9b7b785d697158546d5edd532688941c0e359da8), [817b5d8](https://github.com/dispoclavier/nouvel-azerty/commit/817b5d8439cbd175ddaf714a14bc9884fd8e7b49))
