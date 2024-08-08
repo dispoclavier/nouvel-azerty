@@ -1585,24 +1585,42 @@
 #
 #   In keysymdef.h, 15 bullets are supported, but some comments do not match.
 #   This supports the bullets as implemented, adding support for the intended
-#   open rectangular bullet.
+#   open rectangular bullet "▭" U25AD.
+#
+#   Some sequences based on English mnemonics have French equivalents.
+#   "∎" U220E has bilingual support in the math symbols.
+#
+#   These sequences are case insensitive in that they can be typed either in
+#   lowercase or in uppercase.
 #
 <Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
 <Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
 <Multi_key><f><l><t><b>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
 <Multi_key><F><L><T><B>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><p><p><t><g>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><P><P><T><G>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
 <Multi_key><f><r><t><b>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><F><R><T><B>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><p><p><t><d>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><P><P><T><D>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
 <Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><p><p><r><c>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><P><P><R><C>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
 <Multi_key><e><n><o><c><b>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
 <Multi_key><E><N><O><C><B>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><p><a><c><d>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><P><A><C><D>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
 <Multi_key><e><n><o><s><b>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><E><N><O><S><B>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, openrectbullet, not U25AD WHITE RECTANGLE
-<Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><p><a><c><r>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><P><A><C><R>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
 <Multi_key><e><m><o><r>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
 <Multi_key><E><M><O><R>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
 <Multi_key><o><t><b><u>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
@@ -1623,7 +1641,7 @@
 #
 #   Tainome and kome
 #
-#   Japanese tainome and kome are also supported.
+#   Japanese tainome and kome are supported with cross-language sequences.
 #
 <Multi_key><k><o><m>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><K><O><M>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
@@ -1633,10 +1651,32 @@
 #
 #   Pointers
 #
-<Multi_key><f><l><p><t>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><F><L><P><T>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><f><r><p><t>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-<Multi_key><F><R><P><T>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+#   "☚" U261A and "☛" U261B are no emoji, yet these are rendered as emoji on
+#   Microsoft PCs, with the upside that finger-pointing emoji are less screwed
+#   up, as opposed to the backhand index pointing left or right U1F448, U1F449,
+#   in the SMP and thus harder to input by dead keys on Windows. However all of
+#   these are questionable since finger-pointing is bad practice, as opposed to
+#   hand-pointing: "🫱" U1FAF1 RIGHTWARDS HAND,"🫲" U1FAF2 LEFTWARDS HAND.
+#   https://emojipedia.org/black-left-pointing-index
+#   https://www.unicode.org/emoji/charts-15.1/emoji-list.html#hand-single-finger
+#   https://unicode.org/Public/emoji/15.1/emoji-sequences.txt
+#
+<Multi_key><f><i><p><l>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><F><I><P><L>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><i><p><p><g>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><I><P><P><G>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><f><i><p><r>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><F><I><P><R>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><i><p><p><d>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><I><P><P><D>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><b><i><p><l>                                                                            : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
+<Multi_key><B><I><P><L>                                                                            : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
+<Multi_key><i><r><m><p><g>                                                                         : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
+<Multi_key><I><R><M><P><G>                                                                         : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
+<Multi_key><b><i><p><r>                                                                            : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
+<Multi_key><B><I><P><R>                                                                            : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
+<Multi_key><i><r><m><p><d>                                                                         : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
+<Multi_key><I><R><M><P><D>                                                                         : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
 #
 #
 #   Pilcrow bullets
@@ -1650,8 +1690,12 @@
 #
 <Multi_key><f><l><p><b>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><F><L><P><B>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><p><p><m><g>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><P><P><M><G>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><f><r><p><b>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><F><R><P><B>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<Multi_key><p><p><m><d>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<Multi_key><P><P><M><D>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 #
 #
 #^# Currency symbols
@@ -2410,7 +2454,7 @@
 <Multi_key><KP_8><x><o>                                                                            : "✄" U2704 # WHITE SCISSORS, outline scissors
 <Multi_key><8><X><O>                                                                               : "✄" U2704 # WHITE SCISSORS, outline scissors
 <Multi_key><KP_8><X><O>                                                                            : "✄" U2704 # WHITE SCISSORS, outline scissors
-#   In group 4 of >                                                                                : "✀" U2700 # BLACK SAFETY SCISSORS
+#   In group 4 of <                                                                                : "✀" U2700 # BLACK SAFETY SCISSORS
 <Multi_key><8><x><s>                                                                               : "✀" U2700 # BLACK SAFETY SCISSORS
 <Multi_key><KP_8><x><s>                                                                            : "✀" U2700 # BLACK SAFETY SCISSORS
 <Multi_key><8><X><S>                                                                               : "✀" U2700 # BLACK SAFETY SCISSORS
@@ -3642,7 +3686,7 @@
 <Multi_key><p><underscore>                                                          <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><underscore>                                                      <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><underscore>                                               <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
-#   In group 12 of !                                                                               : "∎" U220E # END OF PROOF
+#   In group 11 of !                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><q><e><d>                                                                       <space> : "∎" U220E # END OF PROOF
 <Multi_key><q><e><d>                                                                <nobreakspace> : "∎" U220E # END OF PROOF
 <Multi_key><c><q><f><d>                                                                    <space> : "∎" U220E # END OF PROOF
@@ -3650,7 +3694,7 @@
 #   In group 3 of &                                                                                : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
-#   In group 3 of <                                                                                : "∐" U2210 # N-ARY COPRODUCT
+#   In group 3 of {                                                                                : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><percent>                                                                    <space> : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><percent>                                                             <nobreakspace> : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><C><P>                                                                          <space> : "∐" U2210 # N-ARY COPRODUCT
@@ -6072,7 +6116,9 @@
 <Multi_key><U><bracketleft>                                                         <nobreakspace> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
 <Multi_key><U><bracketright>                                                               <space> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
 <Multi_key><U><bracketright>                                                        <nobreakspace> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
-#   This set of intersecting operators is taller than "⩕" U2A55 TWO INTERSECTING LOGICAL AND, "⩖" U2A56 TWO INTERSECTING LOGICAL OR.
+#   This set of intersecting logical operators "⨇" U2A07, "⨈" U2A08 is taller
+#   than "⩕" U2A55 TWO INTERSECTING LOGICAL AND, "⩖" U2A56 TWO INTERSECTING
+#   LOGICAL OR.
 <Multi_key><W><percent>                                                                    <space> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
 <Multi_key><W><percent>                                                             <nobreakspace> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
 <Multi_key><space><A><A>                                                                   <space> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
@@ -6287,7 +6333,8 @@
 <Multi_key><space><rightsinglequotemark><minus>                                     <nobreakspace> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 <Multi_key><nobreakspace><rightsinglequotemark><minus>                                     <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 <Multi_key><nobreakspace><rightsinglequotemark><minus>                              <nobreakspace> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-#   This seems to be a duplicate encoding (see U2010) of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION.
+#   This seems to be a duplicate encoding (see U2010) of "⨟" U2A1F Z NOTATION
+#   SCHEMA COMPOSITION.
 <Multi_key><space><o><semicolon>                                                           <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><space><o><semicolon>                                                    <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><o><semicolon>                                                    <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
@@ -6791,8 +6838,8 @@
 <Multi_key><c><asciitilde>                                                          <nobreakspace> : "⫇" U2AC7 # SUBSET OF ABOVE TILDE OPERATOR
 <Multi_key><b><asciitilde>                                                                 <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><b><asciitilde>                                                          <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
-<Multi_key><c><backslash><asciitilde>                                                              <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
-<Multi_key><c><backslash><asciitilde>                                                       <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
+<Multi_key><c><backslash><asciitilde>                                                      <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
+<Multi_key><c><backslash><asciitilde>                                               <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><asciitilde><asciitilde>                                                     <space> : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><c><asciitilde><asciitilde>                                              <nobreakspace> : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><b><asciitilde><asciitilde>                                                     <space> : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
@@ -6837,22 +6884,22 @@
 <Multi_key><c><asciicircum><c><c>                                                   <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><c>                                                             <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><b><asciicircum><c>                                                      <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><c><backslash><asciicircum><c>                                                          <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><c><backslash><asciicircum><c>                                                   <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
+<Multi_key><c><backslash><asciicircum><c>                                                  <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
+<Multi_key><c><backslash><asciicircum><c>                                           <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                             <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                      <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
 <Multi_key><b><asciicircum><b>                                                             <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><b>                                                      <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><c><backslash><asciicircum><c><c>                                                       <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><c><backslash><asciicircum><c><c>                                                <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
+<Multi_key><c><backslash><asciicircum><c><c>                                               <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
+<Multi_key><c><backslash><asciicircum><c><c>                                        <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><b><ampersand><c>                                                               <space> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><b><ampersand><c>                                                        <nobreakspace> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><c><backslash><ampersand><c>                                                            <space> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><c><backslash><ampersand><c>                                                     <nobreakspace> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+<Multi_key><c><backslash><ampersand><c>                                                    <space> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+<Multi_key><c><backslash><ampersand><c>                                             <nobreakspace> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><b><minus><c>                                                                   <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
 <Multi_key><b><minus><c>                                                            <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><c><backslash><minus><c>                                                                <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><c><backslash><minus><c>                                                         <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
+<Multi_key><c><backslash><minus><c>                                                        <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
+<Multi_key><c><backslash><minus><c>                                                 <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
 <Multi_key><N><I>                                                                          <space> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><N><I>                                                                   <nobreakspace> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><n><i>                                                                          <space> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
@@ -6981,7 +7028,8 @@
 <Multi_key><space><slash><slash><slash>                                             <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 <Multi_key><nobreakspace><slash><slash><slash>                                             <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 <Multi_key><nobreakspace><slash><slash><slash>                                      <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-#   The LARGE TRIPLE VERTICAL BAR OPERATOR is more spaced out compared to "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION.
+#   The LARGE TRIPLE VERTICAL BAR OPERATOR is more spaced out compared to
+#   "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION.
 <Multi_key><space><space><bar><bar><bar>                                                   <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 <Multi_key><space><space><bar><bar><bar>                                            <nobreakspace> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 <Multi_key><nobreakspace><space><bar><bar><bar>                                            <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
@@ -7036,7 +7084,8 @@
 <Multi_key><nobreakspace><less><less><minus><bar>                                   <nobreakspace> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 <Multi_key><less><less><minus><0><minus><0><minus>                                                 : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><KP_Subtract>                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-#   The following alternative sequence for U2B37 accounts for the tail found in some fonts, e.g. DejaVu Serif. See U2910.
+#   The following alternative sequence for U2B37 accounts for the tail found in
+#   some fonts, e.g. DejaVu Serif. See U2910.
 <Multi_key><less><less><minus><0><minus><0><less>                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><less>                                      : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 #   Mirror of U2911.
@@ -7112,14 +7161,14 @@
 #   In group 1 of &                                                                                : "π" U03C0 # GREEK SMALL LETTER PI
 <Multi_key><p><i>                                                                          <space> : "π" U03C0 # GREEK SMALL LETTER PI
 <Multi_key><p><i>                                                                   <nobreakspace> : "π" U03C0 # GREEK SMALL LETTER PI
-#   In group 4 of }                                                                                : "∩" U2229 # INTERSECTION
+#   In group 4 of {                                                                                : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                       <space> : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                <nobreakspace> : "∩" U2229 # INTERSECTION
 <Multi_key><i><n><t><e><r><s><e><c>                                                                : "∩" U2229 # INTERSECTION French truncated name
 <Multi_key><C><a><p>                                                                       <space> : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><C><a><p>                                                                <nobreakspace> : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><c><a><p><d><o><t>                                                                      : "⩀" U2A40 # INTERSECTION WITH DOT
-#   <Multi_key><c><a><p><p><l><u><s>                                                               : Not in Unicode.
+#   <Multi_key><c><a><p><p><l><u><s> is not a Unicode character.
 #   In group 4 of '                                                                                : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                       <space> : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                <nobreakspace> : "∪" U222A # UNION
@@ -7141,7 +7190,8 @@
 <Multi_key><d><i><a><m><e><t><r><e>                                                                : "⌀" U2300 # DIAMETER SIGN simplified French
 <Multi_key><E><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE TeX control has title case
 <Multi_key><e><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE
-#   The French sequence ¦enveloppe is not supported, because it exceeds the XCompose upper limit of 9 keysyms (including Multi_key).
+#   The French sequence ¦enveloppe is not supported, because it exceeds the
+#   XCompose upper limit of 9 keysyms (including Multi_key).
 <Multi_key><L><p><a><r><e><n><g><t>                                                                : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
 <Multi_key><R><p><a><r><e><n><l><t>                                                                : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET TeX + HTML under max 9 keysym constraint
 #
