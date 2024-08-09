@@ -5,7 +5,7 @@
 * Composition :
 	* Ajouter les barres de ton additionnelles "꜈" U+A708, "꜉" U+A709, "꜊" U+A70A, "꜋" U+A70B, "꜌" U+A70C, "꜍" U+A70D, "꜎" U+A70E, "꜏" U+A70F, "꜐" U+A710, "꜑" U+A711, "꜒" U+A712, "꜓" U+A713, "꜔" U+A714, "꜕" U+A715, "꜖" U+A716. (compose-1.yml [d8d4de5](https://github.com/dispoclavier/nouvel-azerty/commit/d8d4de52fb8ad1448957d5b7c022eae17bc5291e))
 	* Adapter la séquence de "⁨" U+2068. (ibidem)
-* Documentation. (linux-chromeos/readme.md [8d712f9](https://github.com/dispoclavier/nouvel-azerty/commit/8d712f9d7129d5c46e4d1ca31ae65a7ba7360a83), compose-2.yml [e19e126](https://github.com/dispoclavier/nouvel-azerty/commit/e19e126dbfd8556c815c431353a5494e0c12633b), compose-3.yml [02651af](https://github.com/dispoclavier/nouvel-azerty/commit/02651afcc59bd886f0d4d8b2464b7ed57ca17948), dispocla.cpp [f281e69](https://github.com/dispoclavier/nouvel-azerty/commit/f281e69890dad1ae7bee4d234cf91cead365f0b8))
+* Documentation. (linux-chromeos/readme.md [8d712f9](https://github.com/dispoclavier/nouvel-azerty/commit/8d712f9d7129d5c46e4d1ca31ae65a7ba7360a83), compose-2.yml [e19e126](https://github.com/dispoclavier/nouvel-azerty/commit/e19e126dbfd8556c815c431353a5494e0c12633b), compose-3.yml [02651af](https://github.com/dispoclavier/nouvel-azerty/commit/02651afcc59bd886f0d4d8b2464b7ed57ca17948), dispocla.cpp [f281e69](https://github.com/dispoclavier/nouvel-azerty/commit/f281e69890dad1ae7bee4d234cf91cead365f0b8), [1b293ba](https://github.com/dispoclavier/nouvel-azerty/commit/1b293ba200c30f1dc02010e04c30a02be76d2588))
 
 ## 3.5.0 (2024-08-08)
 
