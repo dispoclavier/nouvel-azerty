@@ -198,7 +198,7 @@
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
 #   The old ordinal indicators are supported by Multi_key and in group 12.
-#   See # # Legacy ordinal indicators
+#   See #^# Legacy ordinal indicators
 #   See # # D09
 #
 #   In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner.
@@ -739,7 +739,7 @@
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
 #   The old ordinal indicators are supported by Multi_key and in group 12.
-#   See # # Legacy ordinal indicators
+#   See #^# Legacy ordinal indicators
 #   See # # D01
 #
 #   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
@@ -2065,6 +2065,13 @@
 #   "⁛" U205B FOUR DOT MARK is a highlighter mark used by scribes in the margin
 #   and is annotated as such in the Unicode Code Charts.
 #
+#   "⟰" U27F0 is repurposed as the level 5 modifier symbol, with the rationale
+#   that this key increments by 4 the level index. Called AltFr on this layout
+#   and natively supported by XKB and the Windows TSF, this modifier is easily
+#   emulated on macOS. Japanese keyboards have left and right Oyayubi keys that
+#   made it into the Windows layout driver source code by Ian James as LOYA and
+#   ROYA, but not into ISO/IEC 9995.
+#
 <UEFD0>                                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <Multi_key><numbersign>                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <UEFD0>                                                                                  <section> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
@@ -2165,7 +2172,9 @@
 #
 # # A03-level1
 #
-#   The preferred name and abbreviation of U2009 are NARROW SPACE, NSP.
+#   The preferred name of U2009 is NARROW SPACE, abbreviated NSP.
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#
 #   An alternate, more intuitive acronym of U200B is WNJ (WORD NON-JOINER).
 #   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   For consistency, WNJ is used in documentation rather than ZWSP.
