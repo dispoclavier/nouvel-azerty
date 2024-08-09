@@ -554,7 +554,9 @@
 #   Unicode added U02D8..U02DD to the Latin-1 diacritics merely for roundtrip
 #   compatibility with pre-existing character sets.
 #
-#   Both NBSP (AltGr + SP) and NNBSP (AltFr + SP) are used as base characters.
+#   Both NBSP (AltGr + spacebar) and NNBSP (AltFr + spacebar) are used as base
+#   characters.
+#
 #   Since DIAERESIS and CEDILLA do exist only in Latin-1, they are accessible
 #   both ways. By contrast, Latin-1 MACRON and ACUTE ACCENT are duplicates of
 #   modifier letters (by NNBSP) and are accessible by NBSP exclusively. Then,
@@ -1166,14 +1168,7 @@
 #   third of the world’s population. Therefore, these letters are on live keys.
 #   Support for diacriticized abbreviation indicators is straightforward in the
 #   Unicode character encoding model, using combining diacritics.
-#
-#   The superscript uppercase alphabet is less complete. Yet some of these are
-#   used in orthographies. In 2020 and 2021, more uppercase letters were added:
-#   C "ꟲ" UA7F2, F "ꟳ" UA7F3, Q "ꟴ" UA7F4.
-#   See L2/20-251, cited in the Script Ad Hoc Working Group Report L2/21-016r:
-#   https://www.unicode.org/L2/L2021/21016r-script-adhoc-rept.pdf
-#
-#   Missing S, X, Y, Z are replaced with "∄" U2204 THERE DOES NOT EXIST.
+#   See #^# Legacy ordinal indicators
 #
 #   Superscript small q is part of Unicode since v14.0 released in 2020.
 #   https://www.unicode.org/L2/L2020/20117-modifier-letter-suppt.pdf
@@ -1190,6 +1185,18 @@
 #   It was immediately defended by its author during the UTC meeting.
 #   https://unicode.org/L2/L2010/10316-cmts.pdf
 #   Both attempts to complete the Latin superscript small letters failed.
+#
+#   The superscript uppercase alphabet is less complete. Yet some of these are
+#   used in orthographies. In 2020 and 2021, more uppercase letters were added:
+#   C "ꟲ" UA7F2, F "ꟳ" UA7F3, Q "ꟴ" UA7F4.
+#   https://www.unicode.org/L2/L2020/20251-mod-latin.pdf
+#   L2/20-251 is cited in the Script Ad Hoc Working Group Report L2/21-016r.
+#   https://www.unicode.org/L2/L2021/21016r-script-adhoc-rept.pdf
+#
+#   Superscript uppercase S, X, Y, Z still missing after a proposal advising to
+#   encode them all are for now replaced with "∄" U2204 THERE DOES NOT EXIST.
+#   https://www.unicode.org/L2/L2002/02141-n2419-uralic-phonetic.pdf#page=5
+#   See #*# SUBSCRIPT
 #
 #   Despite the consensus about including superscript letters in Unicode for
 #   phonetic notation, making abbreviation indicators plain text is fiercely
@@ -6298,7 +6305,7 @@
 #   Dchar: "ɱ" U0271
 #
 #   Includes tone bars due to good mnemonics based on I, mapped like { on D08.
-#   For an alternative, see # # Tone bars
+#   For an alternative, see #^# Tone bars
 #
 #   A hook may also be referred to as a fishhook.
 #
@@ -7800,8 +7807,21 @@
 #   tabular digit and punctuation spaces, respectively, and are mapped on live
 #   keys B07 (digitspace) and B08 (punctspace), level 7, in ASCII mode.
 #
-#   However, FIGURE DASH is also mapped on live key D05 (figdash), level 6
-#   (Shift + AltFr + T), where MINUS SIGN is on level 5 (AltFr).
+#   FIGURE DASH is not supported on live key to prevent its misuse for interval
+#   notation, a use case that "–" U2013 EM DASH is recommended for.
+#   https://www.unicode.org/versions/Unicode15.0.0/ch06.pdf#G6120
+#   https://en.wikipedia.org/wiki/Dash#Figure_dash
+#   https://en.wikipedia.org/wiki/Dash#En_dash
+#   https://en.wikipedia.org/wiki/Dash#Unicode
+#   https://web.archive.org/web/20180121071439/http://www.technicalauthoring.com/wiki/index.php/Figure_dash
+#
+#   Unicode does not promote this misuse, but Unicode did — and still does —
+#   promote the misuse of FIGURE SPACE as a numeric group separator in UAX#14.
+#   So it is advisable to stop promoting Unicode-related misuse of any sorts.
+#   https://cldr.unicode.org/index/downloads/cldr-34
+#   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
+#   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf#page=6
+#   https://www.unicode.org/L2/L2020/20008-core-text.pdf#page=7
 #
 <UEFD0>                                                                                    <U2212> : "‒" U2012 # FIGURE DASH
 <Multi_key><numbersign>                                                                    <U2212> : "‒" U2012 # FIGURE DASH
@@ -10700,7 +10720,9 @@
 #   for small caps, frequent in phonetics, consistently with other dead key
 #   implementations.
 #
-#   Missing letters are replaced with "∄" U2204 THERE DOES NOT EXIST.
+#   Letters still missing after a proposal advising to encode them all are for
+#   now replaced with "∄" U2204 THERE DOES NOT EXIST.
+#   https://www.unicode.org/L2/L2002/02141-n2419-uralic-phonetic.pdf#page=5
 #
 #   The associated diacritic and its spacing clone are built on the underscore
 #   theme hinted by the subscript’s TeX command: "̲" U0332 and ASCII "_" U005F.
