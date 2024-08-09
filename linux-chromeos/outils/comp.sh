@@ -1,7 +1,7 @@
 #!/bin/bash
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-07-24T2110+0200
+# 2024-08-09T1343+0200
 # = last modified.
 #
 # Merges XKB source files into an all-in-one `.xkb` source, for the purpose of
@@ -32,10 +32,10 @@
 #
 
 cd $(dirname "$0")
-if [ ! -d "compiled" ]; then
-	mkdir compiled
+if [ ! -d "merged" ]; then
+	mkdir merged
 fi
-cd compiled
+cd merged
 if [ ! -d "Variantes" ]; then
 	mkdir Variantes
 fi
@@ -71,7 +71,7 @@ function compile {
 	gsettings set org.gnome.desktop.input-sources current $2
 	sleep 1s
 	xkbcomp :0 $1/$1$suffix.xkb
-	echo  "$1$suffix.xkb compiled."
+	echo  "$1$suffix.xkb merged."
 }
 
 compile "kbfrFRs"  "1"
