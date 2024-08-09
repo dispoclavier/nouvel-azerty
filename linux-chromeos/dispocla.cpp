@@ -1,4 +1,4 @@
-//                       Date: 2024-08-09T0516+0200
+//                       Date: 2024-08-09T0731+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -655,7 +655,7 @@ xkb_symbols "kbfrFRs" {
 	// are used for SMP emoji. The selection is based on frequency and additional
 	// criteria.
 	//
-	// The resulting accessibility bias is a consequence of Microsoft’s bad TSF
+	// The resulting availability bias is a consequence of Microsoft’s failed TSF
 	// design, that also impacts natural languages, as it unsupports all composed
 	// letters expected to be input by dead keys.
 	//
