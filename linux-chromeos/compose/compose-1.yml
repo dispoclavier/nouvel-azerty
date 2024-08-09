@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.5.0" # See # # Notes about syntax
+<UEFA0>                     : "version 3.6.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -193,21 +193,22 @@
 #   The Breton trigraph has a dedicated key on the Breton variants "kbbrFRs"
 #   and "kbbrFRsr", and it is supported on Shift + AltFr + A on the French base
 #   layout "kbfrFRs" and its remapped variant "kbfrFRsr", and on all other
-#   variants consistently. Unlike the trigraph, the digraph has no dedicated
-#   support on any variant.
+#   variants consistently.
 #
 #   The Breton trigraph uses regular letter apostrophe U02BC.
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
 #
-#   These have got mnemonic keysyms in keysymdef.h but may not be supported yet
-#   by en_US.UTF-8/Compose, so the trigraph is defined here.
+#   Unlike the trigraph, the digraph has no dedicated support on any variant.
+#
+#   The Breton trigraph got mnemonic keysyms in keysymdef.h, but these may not
+#   be supported yet by en_US.UTF-8/Compose, so the trigraph is defined here.
 #
 <c_h> : "cʼh" # See # # Notes about syntax
 <C_h> : "Cʼh" #
 <C_H> : "CʼH" #
 #
 #
-# # Automated punctuation spacing for fr-FR, regular with NNBSP U202F
+# # Automated punctuation spacing for fr-FR, regular with U202F NNBSP
 #
 #   Imprimerie nationale (France) assumes that big punctuation is spaced out
 #   using either of these spaces:
@@ -217,8 +218,8 @@
 #
 #   Functionally, NNBSP is a no-break clone of Unicode’s thin space THSP U2009.
 #
-#   Consistently, the preferred name and abbreviation of U2009 are NARROW SPACE
-#   matching the name of U202F, and NSP.
+#   Consistently, U2009 is preferredly called NARROW SPACE and abbreviated NSP,
+#   matching the name of U202F.
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
 #   This is regular typesetting at Imprimerie nationale except for colon and
@@ -1347,53 +1348,112 @@
 #
 #^# Tone bars
 #
-#   These need numbers, that dead_tilde is in synergy with, but dead_tilde is
-#   best associated with daggers. Using visual mnemonics based on capital E
-#   instead, tone bars are supported by dead_hook.
+#   The bar may be a dot, and the stem may be to the right or alternatively to
+#   the left. This scheme supports all four sets using digits 1..5 and letters
+#   T for bar-shaped tone bars, or I for dotted tone bars, with leading digits
+#   for standard tone bars, or trailing digits for left-stem tone bars. Digits
+#   are assigned mnemonically from 1 for extra-low, to 5 for extra-high. Both
+#   letters are case insensitive, but order does matter since the additional
+#   tone bars "꜈" UA708.."꜖" UA716 are supported.
+#
+#
+# # Standard tone bars
+#
+#   Shortcuts using visual mnemonics based on capital I are in dead_hook.
 #   See #*# HOOK
 #
-#   This T-based alternative uses digit-letter and letter-digit sequences.
-#
-<Multi_key><1><T>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><KP_1><T>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><T><1>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><T><KP_1>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><1><t>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><1><T>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><KP_1><t>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><t><1>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><t><KP_1>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><2><T>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><KP_2><T>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><T><2>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><T><KP_2>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><KP_1><T>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><2><t>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><2><T>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
 <Multi_key><KP_2><t>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><t><2>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><t><KP_2>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><3><T>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><KP_3><T>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><T><3>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><T><KP_3>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><KP_2><T>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
 <Multi_key><3><t>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><3><T>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
 <Multi_key><KP_3><t>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><t><3>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><t><KP_3>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><KP_4><T>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><T><4>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><T><KP_4>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><KP_3><T>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
 <Multi_key><4><t>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><KP_4><t>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><t><4>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><t><KP_4>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><5><T>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><KP_5><T>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><T><5>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><T><KP_5>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><KP_4><T>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><5><t>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><5><T>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 <Multi_key><KP_5><t>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><t><5>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><t><KP_5>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><KP_5><T>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+#
+#
+# # Left-stem tone bars
+#
+<Multi_key><t><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><T><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><t><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><T><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><t><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+<Multi_key><T><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+<Multi_key><t><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+<Multi_key><T><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+<Multi_key><t><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+<Multi_key><T><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+<Multi_key><t><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+<Multi_key><T><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+<Multi_key><t><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><T><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><t><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><T><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><t><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><T><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><t><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><T><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+#
+#
+# # Dotted tone bars
+#
+<Multi_key><1><i>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><1><I>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><KP_1><i>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><KP_1><I>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><2><i>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><2><I>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><KP_2><i>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><KP_2><I>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><3><i>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><3><I>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><KP_3><i>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><KP_3><I>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><4><i>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><4><I>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><KP_4><i>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><KP_4><I>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><5><i>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><5><I>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><KP_5><i>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><KP_5><I>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+#
+#
+# # Dotted left-stem tone bars
+#
+<Multi_key><i><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
 #
 #
 #^# Zhuang tone letters
@@ -2578,8 +2638,9 @@
 #   Symbols for modifier keys
 #
 #   "⟰" U27F0 UPWARDS QUADRUPLE ARROW is proposed for repurposing as level 5
-#   select, by lack of a quintuple arrow, and with the logic that this modifier
-#   increments the level number by 4.
+#   select, by lack of a quintuple arrow and with the rationale that this key
+#   increments the level index by 4.
+#   See dispocla.cpp // ##  Name and mapping of the level 5 modifier key
 #
 <Multi_key><l><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><l><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
@@ -2670,7 +2731,7 @@
 <Multi_key><f><less>                                                                               : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
 <Multi_key><i><greater>                                                                            : "⁦" U2066 # LEFT-TO-RIGHT ISOLATE
 <Multi_key><i><less>                                                                               : "⁧" U2067 # RIGHT-TO-LEFT ISOLATE
-<Multi_key><i><1>                                                                                  : "⁨" U2068 # FIRST STRONG ISOLATE
+<Multi_key><i><bar>                                                                                : "⁨" U2068 # FIRST STRONG ISOLATE
 <Multi_key><p><d><i>                                                                               : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 <Multi_key><i><equal>                                                                              : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 #
