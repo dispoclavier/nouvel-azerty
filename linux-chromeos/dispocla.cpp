@@ -1,4 +1,4 @@
-//                       Date: 2024-08-09T0731+0200
+//                       Date: 2024-08-10T0041+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -295,10 +295,10 @@
 // The proposed symbol is "⟰" U27F0 UPWARDS QUADRUPLE ARROW, by lack of a
 // quintuple arrow and with the rationale that this key increments the level
 // index by 4, on the background of the lack of a dedicated level-5 modifier
-// key symbol in ISO/IEC 9995-7, a standard limited to dumbed-down versions
-// of Western keyboards without any support for Japanese modifiers and toggles.
-// Unsurprisingly, this ignorance backfired by limiting or incapacitating most
-// keyboard layout design efforts in Canada, France and other countries.
+// key symbol in ISO/IEC 9995-7, due to ISO/IEC 9995 being limited to Western
+// keyboards without support for Japanese modifiers and toggles. A limitation
+// that subsequently backfired by impairing keyboard layout design efforts in
+// Canada, France and other countries.
 //
 //
 // ###  Punctuation spacing input methods
@@ -737,7 +737,7 @@ xkb_symbols "kbfrFRs" {
 	key <AE08> {
 		[          underscore,      Greek_horizbar,                   8,           backslash,                   8,               U2078,               UEFC8,               UEFC8 ],
 		[                   8,                   8,                   8,               U2078,                   8,               U2078,               U2088,               UEFC8 ]
-	}; // Greek_horizbar ― U2015 HORIZONTAL BAR (not “Greek”); U2078 ⁸ SUPERSCRIPT EIGHT; U2088 ₈ SUBSCRIPT EIGHT; UEFC8 8️⃣ keycap 8 emoji
+	}; // Greek_horizbar ― U2015 HORIZONTAL BAR; U2078 ⁸ SUPERSCRIPT EIGHT; U2088 ₈ SUBSCRIPT EIGHT; UEFC8 8️⃣ keycap 8 emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -797,12 +797,12 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,              endash,              U1F60A ],
 		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,              endash,              U1F60A ]
-	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; U2013 – EN DASH (Unicode-recommended for noting intervals); 😊 U1F60A SMILING FACE WITH SMILING EYES (worldwide fifth-most used emoji, fourth-most used smiling emoji in France)
+	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; endash U2013 – EN DASH recommended for noting intervals; 😊 U1F60A SMILING FACE WITH SMILING EYES worldwide fifth-most used emoji, fourth-most used smiling emoji in France
 
 	key <AD06> {
 		[                   y,                   Y,          dead_greek,                 yen,          dead_greek,               U02B8,         Greek_OMEGA,              U1F60D ],
 		[                   y,                   Y,          dead_greek,                 yen,          dead_greek,               U02B8,         Greek_OMEGA,              U1F60D ]
-	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; Greek_OMEGA is preferred for Ohm sign; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES (third-most used smiling emoji in France, third-most overall worldwide)
+	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; Greek_OMEGA is preferred for Ohm sign; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES third-most used smiling emoji in France, third-most overall worldwide
 
 	key <AD07> {
 		[                   u,                   U,          apostrophe,                   4,          dead_acute,               U1D58,               UEF9F,               UEF8C ],
@@ -1157,7 +1157,7 @@ xkb_symbols "kbfrFRs" {
 		[                KP_7,               U2044,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
 		// Category:    digit,    escape character,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[                KP_7,           backslash,               U2B66,               U2B01,               U2196,               U21D6,               U2196,               U2B09 ]
-	}; // U2044 ⁄ FRACTION SLASH (triggers fraction formatting in supporting renderers)
+	}; // U2044 ⁄ FRACTION SLASH
 
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
