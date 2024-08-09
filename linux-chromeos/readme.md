@@ -97,9 +97,9 @@ Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 pos
 
 Sur les vues de disposition de ce nouvel AZERTY, sur le bloc alphabétique et la barre d’espace, le niveau 4 montre le niveau 5, c’est-à-dire les caractères disposés en AltFr, qui incluent les ponctuations espacées et le pavé numérique graphique disposé sur le bloc alphanumérique, tandis que sur la rangée des chiffres, le niveau 4 montre réellement ce qui se trouve au niveau 4 : les positions rétrocompatibles du mode français. Car sur les touches des chiffres, le niveau 5 est identique au niveau 3 avec les chiffres, la touche moins a le symbole degré du niveau 2, et la touche plus a le symbole égal du niveau 1 du mode ASCII.
 
-Les rectangles avec un code sont soit des touches mortes, comme la sélectrice de groupe « EFD0 » sur la touche [*], soit des séquences, comme le double zéro « EF6D » sur [B].
+Les rectangles avec un code sont soit des touches mortes, comme la touche morte groupe « EFD0 » sur la touche [*], soit des séquences, comme le double zéro « EF6D » sur [B].
 
-Ces touches mortes et ces séquences sont définies dans le répertoire des touches mortes et des séquences Compose(.yml), consultable sur GitHub en trois parties à cause d’une limitation de taille de fichier : [compose-1.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml) pour les séquences sur touches vives et les séquences de composition, [compose-2.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml) pour les touches mortes, et [compose-3.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml) pour les groupes des symboles et les groupes des lettres, qui font partie de la touche morte sélectrice de groupe.
+Ces touches mortes et ces séquences sont définies dans le répertoire des touches mortes et des séquences Compose(.yml), consultable sur GitHub en trois parties à cause d’une limitation de taille de fichier : [compose-1.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml) pour les séquences sur touches vives et les séquences de composition, [compose-2.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml) pour les touches mortes, et [compose-3.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml) pour les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles) et les [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres), qui font partie de la touche morte groupe.
 
 ## Utilisation
 
@@ -115,7 +115,7 @@ Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce po
 
 #### Touche morte groupe
 
-Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte sélectrice de groupe, appelée « groupe », notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche de groupe peut activer 12 [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles). Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
+Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte groupe, notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche morte groupe peut activer 12 [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles). Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
 
 #### Touche de composition
 
@@ -179,17 +179,29 @@ Pour les quatre grandes ponctuations après la touche du [N], le point d’inter
 
 L’exposant deux de l’AZERTY traditionnel change de touche suite à l’utilisation de sa touche [²] pour la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche du [1], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
 
-Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres, et les chiffres en indice y sont en AltGr + AltFr. En mode ASCII, les exposants sont aussi en Maj + AltGr pour une saisie encore plus facile, aux dépens des positions rétrocompatibles, présentes uniquement en mode français. Cela permet d’écrire simplement toutes les fractions ordinaires, au-delà des fractions précomposées en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est aussi bien sur [Q] en AltGr + AltFr en synergie avec les indices, que sur [/] en synergie avec les indices en AltGr + AltFr, et avec les exposants en Maj + AltFr (ceci uniquement en mode ASCII, car en mode français, c’est le deux-points sans espace).
+Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres, et les chiffres en indice y sont en AltGr + AltFr. En mode ASCII, les exposants sont aussi en Maj + AltGr pour une saisie encore plus facile, aux dépens des positions rétrocompatibles, présentes uniquement en mode français. Cela permet d’écrire simplement toutes les fractions ordinaires, au-delà des fractions précomposées en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est aussi bien sur [F] en AltGr + AltFr en synergie avec les indices, que sur [/] en synergie avec les indices en AltGr + AltFr, et avec les exposants en Maj + AltFr (ceci uniquement en mode ASCII, car en mode français, c’est le deux-points sans espace).
 
 Alors que les exposants de toutes les minuscules servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », seul le plus fréquent, « ᵉ », est en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Mais toutes les minuscules en exposant sont en Maj + AltFr, chacun sur la touche de sa lettre de base. Les accents peuvent être ajoutés en appuyant sur une touche morte et ensuite sur la barre d’espace. L’accent sera placé parfaitement sur le ᵉ pour peu que la police de caractères le prenne en charge conformément au modèle de codage d’Unicode, qui vaut aussi bien pour les lettres de base que pour leurs exposants et indices.
 
 ### Autres symboles
 
+La plupart des symboles sont dans les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), mais un certain nombre sont aussi ou uniquement sur touches vives comme documenté ici.
+
+#### Symboles de l’AZERTY
+
 Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en AltGr + AltFr sur leurs touches historiques. La nouvelle place du [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en AltGr + AltFr + [L] pour l’intuitivité, comme le symbole micro est sur AltGr + AltFr + [M].
+
+#### Exposants et indices additionnels
 
 En mode ASCII, quand les chiffres en indice sont en AltGr + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient arrondir l’ensemble. Pareil pour les chiffres en exposant en Maj + AltGr et en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
 
+#### Opérateurs arithmétiques
+
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
+
+#### Barre de fraction
+
+La barre de fraction U+2044 est sur AltGr + AltFr + [F]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire dans les logiciels conformes comme Firefox. La partie entière peut être séparée par le gluon sur AltGr + AltFr + [G].
 
 Les infobulles de la [vue interactive](https://dispoclavier.com/nouvel-azerty/#vue-interactive) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
 
