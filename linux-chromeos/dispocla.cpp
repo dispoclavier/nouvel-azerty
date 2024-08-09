@@ -1,4 +1,4 @@
-//                       Date: 2024-07-24T2058+0200
+//                       Date: 2024-08-09T0516+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -291,6 +291,14 @@
 // AltFr is on the Caps Lock key whereas the latter is then on Right Control.
 // On plain ANSI keyboards, the AltFr key can still be remapped to Caps Lock,
 // and Caps Lock to Right Control.
+//
+// The proposed symbol is "⟰" U27F0 UPWARDS QUADRUPLE ARROW, by lack of a
+// quintuple arrow and with the rationale that this key increments the level
+// index by 4, on the background of the lack of a dedicated level-5 modifier
+// key symbol in ISO/IEC 9995-7, a standard limited to dumbed-down versions
+// of Western keyboards without any support for Japanese modifiers and toggles.
+// Unsurprisingly, this ignorance backfired by limiting or incapacitating most
+// keyboard layout design efforts in Canada, France and other countries.
 //
 //
 // ###  Punctuation spacing input methods
@@ -625,14 +633,27 @@ xkb_symbols "kbfrFRs" {
 	//        Latin letter ............................... Abbreviation indicator
 	//
 	//
+	// Format controls
+	//
+	// "⁄" U2044 FRACTION SLASH is mapped on level 7 of the F key. To separate a
+	// preceding integer from a fraction, the cursive non-joiner U200C ZERO WIDTH
+	// NON-JOINER is a good fit. U2060 WORD JOINER can also be used, on level 7
+	// of the G key with mnemonics based on French "gluon", while the cursive
+	// non-joiner is on level 7 of the W key, the cursive joiner U200D on level 7
+	// of the X key.
+	// https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=302&zoom=100,0,400
+	// https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
+	// https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+	//
+	//
 	// Emoji
 	//
 	// A number of Supplemental Multilingual Plane emoji are mapped on live keys.
 	// Due to cross-platform compatibility issues, SMP emoji are not supported by
 	// dead keys, while all emoji in the Basic Multilingual Plane are supported
-	// by the group selector dead key and a few Multi_key sequences. Conversely,
-	// available live key positions are reserved for SMP emoji. The selection for
-	// live key support is based on frequency and some additional criteria.
+	// by the group selector dead key. Conversely, available live key positions
+	// are used for SMP emoji. The selection is based on frequency and additional
+	// criteria.
 	//
 	// The resulting accessibility bias is a consequence of Microsoft’s bad TSF
 	// design, that also impacts natural languages, as it unsupports all composed
@@ -640,11 +661,6 @@ xkb_symbols "kbfrFRs" {
 	//
 	// The two emoji-related variation selectors are in group 10 on key E, D03,
 	// for emoji style, VS16 UFE0F, and on key T, D05, for text style, VS15 UFE0E.
-	//
-	// The five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
-	// "🏻" U1F3FB, "🏼" U1F3FC, "🏽" U1F3FD, "🏾" U1F3FE, "🏿" U1F3FF are in
-	// group 10 on D06..D10 as an exception to the rule that SMP emoji are not in
-	// dead keys.
 	//
 	// Emoji full list:
 	// https://unicode.org/emoji/charts/full-emoji-list.html
@@ -848,7 +864,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ],
 		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ]
-	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
+	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER also usable as integer-fraction separator; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC06> {
 		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,           plusminus,              U1F44D ],
@@ -896,12 +912,12 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ],
 		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ]
-	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C ZERO WIDTH NON-JOINER; U1F622 😢 CRYING FACE 19th-ranking emoji
+	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C ZERO WIDTH NON-JOINER, cursive non-joiner; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ],
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ]
-	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D ZERO WIDTH JOINER; U1F31F 🌟 GLOWING STAR emoji
+	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D ZERO WIDTH JOINER, cursive joiner; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
 		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F62D ],
