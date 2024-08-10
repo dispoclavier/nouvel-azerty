@@ -7815,13 +7815,18 @@
 #   https://en.wikipedia.org/wiki/Dash#Unicode
 #   https://web.archive.org/web/20180121071439/http://www.technicalauthoring.com/wiki/index.php/Figure_dash
 #
-#   Unicode does not promote this misuse, but Unicode did — and still does —
-#   promote the misuse of FIGURE SPACE as a numeric group separator in UAX#14.
-#   So it is advisable to stop promoting Unicode-related misuse of any sorts.
+#   Unicode does not promote the misuse of FIGURE DASH for interval notation as
+#   advocated on the web page cited above, but Unicode did — and still does —
+#   promote the misuse of FIGURE SPACE as a numeric group separator, in UAX#14.
 #   https://cldr.unicode.org/index/downloads/cldr-34
 #   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf#page=6
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf#page=7
+#
+#   So it is advisable to stop promoting Unicode-related misuse of any sorts.
+#   Following this policy, FIGURE DASH is only supported by dead key in group 1
+#   of MINUS SIGN as here, and in the set of dashes and hyphens by Multi_key.
+#   See # # Dashes and hyphens
 #
 <UEFD0>                                                                                    <U2212> : "‒" U2012 # FIGURE DASH
 <Multi_key><numbersign>                                                                    <U2212> : "‒" U2012 # FIGURE DASH
