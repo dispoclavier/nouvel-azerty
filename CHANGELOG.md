@@ -1,5 +1,11 @@
 # Journal des modifications
 
+## 4.0.0 (projet)
+
+Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
+
+* Documentation. (compose-2.yml [eaf2807](https://github.com/dispoclavier/nouvel-azerty/commit/eaf2807c711908fa26273a72ee573fc2c3c88f24))
+
 ## 3.5.1 (2024-08-10)
 
 * Composition :
