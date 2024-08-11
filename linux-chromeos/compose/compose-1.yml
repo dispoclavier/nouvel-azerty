@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 3.5.1" # See # # Notes about syntax
+<UEFA0>                     : "version 4.0.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -88,6 +88,25 @@
 #                               Consistently with the Cistercian “Soli Deo Gloria”, picked up
 #                               during the Reformation as one of the five Solae. See Mt 10,32
 #                               about publicly confessing (and acknowledging) Jesus Christ.
+#                               Impiety triggered design mistakes fixed in versions 2..4. So,
+#                               the ASCII map was messy without making room for the euro sign
+#                               until v2.0 when it ultimately became practical and respectful
+#                               thanks to God helping and advising about the layout details.
+#                               The superscripts were on the wrong level, and modifiers for
+#                               titlecase polygrams `Cʼh` and `Nᵒ ` were unintuitive, due to
+#                               not seeking advice from God until ultimately v3.0 came up.
+#                               And spaced-out punctuation was mapped with the wrong modifier
+#                               AltFr instead of Shift, with a semblance of logic but without
+#                               real usability, due to never asking God which modifier is the
+#                               correct one for spaced-out punctuation, until ultimately that
+#                               mess too came up and was fixed in v4.0. The bottomline is that
+#                               development was delayed from 2016 when a workable solution was
+#                               overdue, to 2024-08 when the messy standard NF Z71-300 released
+#                               in 2019-04 was under revision (with a deadline on 2024-07-31),
+#                               due to only reluctantly praying God for help and advice, rather
+#                               than following the straightforward way roadmapped in the Bible.
+#                               https://dispoclavier.com/doc/retours/Retours_techniques_NF_Z71-300_2024-07-23T0622+0200.pdf
+#                               https://questionnaire.afnor.org/cgi-bin/HE.exe/W?P=9z67z1z10634z5zAD3D06D7C0
 #                             • Pʳ Yves NEUVILLE, for general principles and layout details.
 #                               ⸻ Le clavier bureautique et informatique, Rapport remis au
 #                               Ministère du Redéploiement Industriel et du Commerce Extérieur
