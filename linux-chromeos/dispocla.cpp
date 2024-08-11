@@ -1,4 +1,4 @@
-//                       Date: 2024-08-10T0041+0200
+//                       Date: 2024-08-11T0255+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -266,18 +266,26 @@
 //
 // ##  Name and mapping of the level 5 modifier key
 //
-// The XKB level 5 modifier key is used in Jan James’ implementation of the
-// governmental version (by federal Government and industry representatives)
-// of the Canadian multilingual standard keyboard layout, initially designed
-// by Alain LaBonté. Jan James worked out Microsoft’s Windows implementation
-// of the Canadian multilingual standard keyboard layout. There, what should
-// be the group selector is like the level 5 modifier key instead of being a
-// dead key as specified in ISO/IEC 9995-2 that CAN/CSA Z243.200-92 complies
-// with. But that is not how things are expected to work.
+// The ISO/IEC 9995 standard does not support the level 5 modifier, because it
+// is limited to low-performance Western keyboard layouts and excludes all the
+// features found on Japanese keyboards such as the halfwidth/fullwidth toggle
+// (hankaku/zenkaku kanji) on B00, the left and the right Thumb Shift modifiers
+// (Oyayubi Shifuto). ISO does not even provide numbers for these, calling the
+// spacebar A03
+// https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
+//
+// A Windows equivalent of the XKB level 5 modifier key is used in Jan James’
+// implementation of a governmental avatar (by federal Government and industry
+// representatives) of the Canadian multilingual standard keyboard layout by
+// Alain LaBonté (initial design). Jan James was tasked with implementing the
+// Canadian multilingual standard keyboard layout for Microsoft, transforming
+// the group selector dead key into a level 5 modifier key, although initially,
+// CAN/CSA Z243.200-92 was meant to comply with ISO/IEC 9995-2. But that is not
+// how things are expected to work on properly designed keyboard layouts.
 //
 // Instead, keyboard layouts using a scheme like in this file have a level 5
 // modifier located lefthand so as to be usable for an extended numpad below
-// the 7 8 9 0 keys where embedded numpads on compact keyboards are located,
+// the 7 8 9 0 keys, where embedded numpads on compact keyboards are located,
 // too.
 //
 // The repurposed level 5 modifier is called AltFr by analogy with AltGr and
@@ -310,6 +318,7 @@
 // where mapping a non-breaking space on Shift + Space is accepted to create a
 // synergy with spacing-prone punctuation characters mapped on the Shift level
 // and pressed almost simultaneously with the space bar.
+// https://bepo.fr/wiki/Version_1.1rc1/Touches_vives/Espaces
 //
 // Users are divided over whether it is acceptable to input spaces separately.
 // While spacing out punctuation is generally considered mandatory in French,
@@ -317,8 +326,20 @@
 //
 // These keyboard layouts support semiautomatic punctuation spacing, where the
 // spaced-out punctuation characters and the unspaced-out ones are on the same
-// key with different modifiers: Shift for unspaced-out, AltFr for spaced-out.
-// Additionally, Shift + AltFr yields unspaced-out punctuation marks `?!:;`.
+// key with different modifiers: Shift for spaced-out, AltFr for unspaced-out.
+// Additionally, Shift + AltFr yields unspaced-out punctuation marks `?!:;`,
+// with the rationale that after typing a spaced-out punctuation and while the
+// little finger is still on Shift, the ring finger can easily press AltFr, so
+// as to inhibit spacing before an additional question or exclamation mark.
+//
+// Advantages of Shift over AltFr for spaced-out punctuation characters:
+//
+//   1  Synergy between spaced-out punctuation and normal space;
+//   2  Synergy between unspaced punctuation and extended numpad digits;
+//   3  Unspaced punctuation is in synergy with no-break narrow space;
+//   4  UX consistency between legacy and new as of the question mark;
+//   5  Cross-mode UX consistency between writing French and programming;
+//   6  Consistency between spacing and modifier key accessibility.
 //
 // Advantages of AltFr over Shift for spaced-out punctuation characters:
 //
@@ -328,11 +349,9 @@
 //   4  Stability of the question mark as the only unmoved big punctuation;
 //   5  Minimal cross-mode user experience inconsistency, as Shift is stable;
 //   6  All strings involving no-break thin space have the same modifier key;
-//   7  New consistency frees up three key positions and improves the layout.
 //
-// Note: Points 4 and 7 are true only when ModLock is off.
-//       When ModLock is on, the colon too is on its legacy position
-//       next to the semicolon, moved from B08 to B10.
+// The latter set of “advantages” fueled a design error, fixed only in v4.0.0.
+// See Compose.yml  Acknowledgements
 //
 //
 // ###  Synergistic vs semiautomatic punctuation spacing
@@ -345,7 +364,7 @@
 //
 // Word processing software is catering for punctuation spacing by automatically
 // inserting NBSP when a colon, a semicolon, a question mark or exclamation mark
-// is typed with/without a preceding space, which in the former case is deleted,
+// is typed, with or without a preceding breaking space (replaced with an NBSP),
 // and by replacing U+0022 QUOTATION MARK with the appropriate, spaced-out angle
 // quotation mark. But the NBSP used is not preferred, because it is justifying.
 // Therefore NBSP is tailored as fixed-width as long as the text is displayed in
@@ -372,8 +391,8 @@
 //    2. The ModLock toggle, now mapped on key E00 instead of superscript 2,
 //       toggles the spaced-out punctuation character positions to unspaced.
 //    3. Question and exclamation mark used in repetition, first spaced out,
-//       then unspaced, require spacing inhibition by additionally holding
-//       down the usual punctuation modifier: Shift in addition to AltFr.
+//       then unspaced, require spacing inhibition by additionally pressing
+//       down a second modifier (AltFr).
 //
 // A. Advantages of synergistic over semiautomatic punctuation spacing:
 //
@@ -384,7 +403,7 @@
 //    2. Simplicity. No multiple mapping of the same character with and without
 //       semiautomatic spacing, no additional levels implied and required.
 //
-// https://www.inpact-hardware.com/article/1666/clavier-azerty-ldlc-notre-bilan-apres-mois-dutilisation#comment/45501
+// https://next.ink/3020/clavier-azerty-ldlc-notre-bilan-apres-mois-dutilisation/#comment-67038
 //
 // B. Advantages of semiautomatic over synergistic punctuation spacing:
 //
@@ -397,8 +416,7 @@
 //
 // Synergistic variants started being added on 2020-02-08, and were intended
 // for users writing primarily in other languages than French, and for users
-// having an aversion against layouts yielding polygrams.
-// They were removed on 2021-01-27.
+// opposed to polygram output. They have been discontinued on 2021-01-27.
 //
 //
 // ###  Standard typographic number input
@@ -438,12 +456,10 @@
 // The apparent isolation of quotedbl, away from apostrophe / single quote,
 // benefits ergonomics of backslash in synergy with digits, while apostrophe is
 // in the benefit of base level mappings both in French mode and in ASCII mode,
-// much like quotedbl, on E05 and C11, respectively, and ASCII grave has easy,
-// one-handed access on B06 in both modes, plus level 3 access on C11 in ASCII
-// mode only. This practical, respectful ASCII map was sadly unknown across the
-// 1.0 release, and when it came up, it triggered a 2.0 upgrade due to backward
-// incompatibility. The truth is, the 1.0 map was a wild guess, unlike the next
-// map, now 2.0, for which I finally prayed to God to help me and advise me.
+// much like quotedbl, on E05 and C11, respectively, and ASCII grave has easy
+// level 3 access on B06 in both modes, plus level 3 access on C11 in ASCII
+// mode only.
+// See Compose.yml  Acknowledgements
 //
 // The euro sign is attached to the preceding numeric value using NNBSP, also
 // used before abbreviated measurement units. As a consequence, the euro sign
@@ -461,7 +477,7 @@
 // on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonics, referring to the EU
 // initialism. Also, both quotedbl and apostrophe have their HTML named entity,
 // frequent `&quot;` and rare `&apos;`, on level 8 (Shift + AltGr + AltFr) like
-// ampersand, less and greater, the latter two on level 6 (Shift + AltFr).
+// ampersand, less and greater, the latter two on level 7 (AltGr + AltFr).
 //
 //
 // ### Keyboard levels and groups
@@ -521,6 +537,7 @@ xkb_symbols "kbfrFRs" {
 	// CapsLock depending on the hardware. Keyboards for the European market with
 	// key LSGT on right Control need to have LSGT and CAPS swapped, so as to get
 	// CapsLock on right Control, and the level 5 modifier on the CapsLock key.
+	// See ##  Name and mapping of the level 5 modifier key
 	//
 	// Correct LSGT key behavior after inclusion of symbols/pc(105):
 	modifier_map Mod3 { <MDSW> };
@@ -828,12 +845,12 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD11> {
-		[     dead_circumflex,               U2039,          dead_tilde,               UEF66,         asciicircum,                   C,      dead_diaeresis,         bracketleft ],
+		[     dead_circumflex,               UEF66,          dead_tilde,               U2039,         asciicircum,                   C,      dead_diaeresis,         bracketleft ],
 		[            quotedbl,         bracketleft,         asciicircum,                   C,         asciicircum,         asciicircum,          underscore,         bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
 
 	key <AD12> {
-		[          dead_acute,               U203A,          dead_grave,               UEF67,              dollar,                   D,            sterling,        bracketright ],
+		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,                   D,            sterling,        bracketright ],
 		[          underscore,        bracketright,           Multi_key,                   D,               U207C,               U207C,               U208C,        bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
 
@@ -841,9 +858,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               colon,              U1F610 ],
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               colon,              U1F610 ]
-	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U1F610 😐 NEUTRAL FACE emoji
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200C,              U1F610 ],
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200C,              U1F610 ]
+	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200C ZERO WIDTH NON-JOINER, cursive non-joiner; U1F610 😐 NEUTRAL FACE emoji
 
 	key <AC02> {
 		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,             section,              U1F614 ],
@@ -895,14 +912,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
-		[              ugrave,       guillemotleft,            ellipsis,               UEF64,             percent,                   A,             percent,          apostrophe ],
+		[              ugrave,               UEF64,            ellipsis,       guillemotleft,             percent,                   A,             percent,          apostrophe ],
 		[          apostrophe,             percent,               grave,                   A,               U207D,               U207D,               U208D,          apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <BKSL> {
-		[               UEFD0,      guillemotright,               UEFD0,               UEF65,            asterisk,                   B,                  mu,           semicolon ],
+		[               UEFD0,               UEF65,               UEFD0,      guillemotright,            asterisk,                   B,                  mu,           semicolon ],
 		[               minus,            asterisk,               UEFD0,                   B,               U207E,               U207E,               U208E,           semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; U207E ⁾ SUPERSCRIPT RIGHT PARENTHESIS; U208E ₎ SUBSCRIPT RIGHT PARENTHESIS; SEMICOLON for application shortcut mapping
 
@@ -910,14 +927,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ],
-		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ]
-	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C ZERO WIDTH NON-JOINER, cursive non-joiner; U1F622 😢 CRYING FACE 19th-ranking emoji
+		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200D,              U1F622 ],
+		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200D,              U1F622 ]
+	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200D ZERO WIDTH JOINER, cursive joiner; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
-		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ],
-		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U200D,              U1F31F ]
-	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U200D ZERO WIDTH JOINER, cursive joiner; U1F31F 🌟 GLOWING STAR emoji
+		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U22C5,              U1F31F ],
+		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U22C5,              U1F31F ]
+	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U22C5 ⋅ DOT OPERATOR; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
 		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F62D ],
@@ -945,12 +962,12 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <AB07> {
-		[               comma,            question,            question,               UEF63,        dead_cedilla,            question,              U1F612,              U1F499 ],
+		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,              U1F612,              U1F499 ],
 		[               comma,            question,            question,               comma,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
 	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
-		[              period,              exclam,              exclam,               UEF60,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
+		[              period,               UEF60,              exclam,              exclam,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
 		[              period,              exclam,              exclam,              period,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
 	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
@@ -958,12 +975,12 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
 	key <AB09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[               slash,               colon,               colon,               UEF61,      dead_diaeresis,               U2044,              U1F615,               slash ],
+		[               slash,               UEF61,               colon,               colon,      dead_diaeresis,               U2044,              U1F615,               slash ],
 		[               colon,               slash,               colon,               colon,      dead_diaeresis,               U2044,              U1F603,               slash ]
 	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F603 😃 SMILING FACE WITH OPEN MOUTH emoji
 
 	key <AB10> {
-		[           backslash,           semicolon,             section,               UEF62,     dead_belowcomma,             section,              U1F494,           backslash ],
+		[           backslash,               UEF62,             section,           semicolon,     dead_belowcomma,             section,              U1F494,           backslash ],
 		[           semicolon,           backslash,           semicolon,           semicolon,     dead_belowcomma,             section,              U1F609,           backslash ]
 	}; // UEF62 ' ;' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
@@ -1039,7 +1056,7 @@ xkb_symbols "kbfrFRs" {
 	// the same keys as the overlay numpad on compact keyboards. The use of E10
 	// for an additional 0 ensuring an AltFr-AltGr symmetry with respect to the
 	// row E digits, and both decimal separators dot and comma on D10 and C10 due
-	// to the use of B07..B10 for spaced punctuation marks, constrain hex letter
+	// to using B07..B10 for unspaced punctuation marks, constrain the hex letter
 	// digits to keys (C..E)(11..12). As a consequence, the numpad features A..F
 	// on level 2 of keys 2, 3, 5, 6, 8 and 9, with a downside of not featuring
 	// the E in the center on key 5 like on the `Hexadecimal Numpad` keypad(hex)
