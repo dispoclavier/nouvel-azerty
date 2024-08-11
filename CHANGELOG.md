@@ -1,10 +1,13 @@
 # Journal des modifications
 
-## 4.0.0 (projet)
+## 4.0.0 (2024-08-11)
 
 Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
-* Documentation. (compose-2.yml [eaf2807](https://github.com/dispoclavier/nouvel-azerty/commit/eaf2807c711908fa26273a72ee573fc2c3c88f24))
+* Disposition :
+	* Mettre les ponctuations espacées à la place des ponctuations non espacées en Maj, qui prennent les places en AltFr laissées par les ponctuations espacées. (dispocla.cpp [ba9f321](https://github.com/dispoclavier/nouvel-azerty/commit/ba9f321504bc8042429bf931eb6f47d403d7fe13), dispotypes [e41b05b](https://github.com/dispoclavier/nouvel-azerty/commit/e41b05b03fa268244027b9a8ca2caba8035889e2))
+	* Redonder l’opérateur point "⋅" U+22C5 sur AltGr + AltFr + X à la place du liant U+200D, qui prend la place de l’antiliant U+200C sur AltGr + AltFr + W, qui prend la place du ":" U+003A sur AltGr + AltFr + Q, qui est sur AltFr + la touche du deux-points.
+* Documentation. (compose-1.yml [0e1aedf](https://github.com/dispoclavier/nouvel-azerty/commit/0e1aedfb0b6646f672fa511567adf3141b071532), compose-2.yml [eaf2807](https://github.com/dispoclavier/nouvel-azerty/commit/eaf2807c711908fa26273a72ee573fc2c3c88f24))
 
 ## 3.5.1 (2024-08-10)
 
