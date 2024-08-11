@@ -1,4 +1,4 @@
-//                       Date: 2024-07-04T0510+0200
+//                       Date: 2024-08-11T0444+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -110,21 +110,24 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_LEVEL1_CONTROL" {
+		// Used on AB07, AB08 and SPCE.
 		// Index 4 (Level4) is level 5 (LevelFive) for the sake of keyboard views,
 		// where most alphabetic keys show the level 5 character in the traditional
 		// level 4 position.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;
-		map[ None                                                             ] = Level1;
-		map[                                                            Shift ] = Level2;
-		map[                                               LevelThree         ] = Level3;
-		map[                                               LevelThree + Shift ] = Level5;
-		map[                                   LevelFive                      ] = Level4;
-		map[                                   LevelFive              + Shift ] = Level6;
-		map[                                   LevelFive + LevelThree         ] = Level7;
-		map[                                   LevelFive + LevelThree + Shift ] = Level8;
-		map[                         Control                                  ] = Level1;
-		map[                         Control                          + Shift ] = Level1;
+		map[ None                                                             ] = Level1; // ,
+		map[                                                            Shift ] = Level2; // < ?>
+		map[                                               LevelThree         ] = Level3; // ?
+		map[                                               LevelThree + Shift ] = Level5; // <ç>
+		map[                                   LevelFive                      ] = Level4; // ?
+		map[                                   LevelFive              + Shift ] = Level6; // ?
+		map[                                   LevelFive + LevelThree         ] = Level7; // 😒
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 💙
+		map[                         Control                                  ] = Level1; // ,
+		map[                         Control                          + Shift ] = Level1; // ,
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -144,6 +147,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_LEVEL8_CONTROL" {
+		// Used on AD11, AD12, BKSL (AC12) and AC11 (pro parte).
 		// Based on EIGHT_LEVELS_LEVEL1_CONTROL.
 		// Index 4 (Level4) is level 5 (LevelFive) for the sake of keyboard views,
 		// where most alphabetic keys show the level 5 character in the traditional
@@ -151,15 +155,17 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;           // group1
 		map[ None                                                             ] = Level1; // <①>
-		map[                                                            Shift ] = Level2; // »
+		map[                                                            Shift ] = Level2; // < »>
 		map[                                               LevelThree         ] = Level3; // <①>
 		map[                                               LevelThree + Shift ] = Level5; // *
-		map[                                   LevelFive                      ] = Level4; // < »>
+		map[                                   LevelFive                      ] = Level4; // »
 		map[                                   LevelFive              + Shift ] = Level6; // µ
 		map[                                   LevelFive + LevelThree         ] = Level7; // B
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // ;
 		map[                         Control                                  ] = Level8; // ;
 		map[                         Control                          + Shift ] = Level8; // ;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -179,6 +185,7 @@ default partial xkb_types "dispocla" {
 	};
 
 	type "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL" {
+		// Used on AC11.
 		// A casing letter on level 1, if any, is passed on to internal capitalization.
 		// Index 4 (Level4) is level 5 (LevelFive) for the sake of keyboard views,
 		// where most alphabetic keys show the level 5 character in the traditional
@@ -186,10 +193,10 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;           // group1
 		map[ None                                                             ] = Level1; // ù
-		map[                                                            Shift ] = Level2; // «
+		map[                                                            Shift ] = Level2; // <« >
 		map[                                               LevelThree         ] = Level3; // …
 		map[                                               LevelThree + Shift ] = Level5; // %
-		map[                                   LevelFive                      ] = Level4; // <« > 
+		map[                                   LevelFive                      ] = Level4; // «
 		map[                                   LevelFive              + Shift ] = Level6; // %
 		map[                                   LevelFive + LevelThree         ] = Level7; // A
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // '
@@ -956,14 +963,17 @@ default partial xkb_types "dispocla" {
 	type "EIGHT_LEVELS_PUNCTUATION_GROUP1" {
 		// Based on EIGHT_LEVELS_LEVEL1_CONTROL.
 		// Used on AB09 and AB10.
+		// Index 4 (Level4) is level 5 (LevelFive) for the sake of keyboard views,
+		// where most alphabetic keys show the level 5 character in the traditional
+		// level 4 position.
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1; // /
-		map[                                                            Shift ] = Level2; // :
+		map[                                                            Shift ] = Level2; // < :>
 		map[                                               LevelThree         ] = Level3; // :
 		map[                                               LevelThree + Shift ] = Level5; // <ë>
-		map[                                   LevelFive                      ] = Level4; // < :>
-		map[                                   LevelFive              + Shift ] = Level2; // :
+		map[                                   LevelFive                      ] = Level4; // :
+		map[                                   LevelFive              + Shift ] = Level4; // :
 		map[                                   LevelFive + LevelThree         ] = Level6; // ⁄
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 😃
 		map[                         Control                                  ] = Level8; // /
