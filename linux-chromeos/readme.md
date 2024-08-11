@@ -95,11 +95,11 @@ La variante belge ne se décline pas en variante redisposée parce que l’inté
 
 Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 positions par touche programmables dans XKB et les 4 positions par touche pris en charge par les vues.
 
-Sur les vues de disposition de ce nouvel AZERTY, sur le bloc alphabétique et la barre d’espace, le niveau 4 montre le niveau 5, c’est-à-dire les caractères disposés en AltFr, qui incluent les ponctuations espacées et le pavé numérique graphique disposé sur le bloc alphanumérique, tandis que sur la rangée des chiffres, le niveau 4 montre réellement ce qui se trouve au niveau 4 : les positions rétrocompatibles du mode français. Car sur les touches des chiffres, le niveau 5 est identique au niveau 3 avec les chiffres, la touche moins a le symbole degré du niveau 2, et la touche plus a le symbole égal du niveau 1 du mode ASCII.
+Sur les vues de disposition de ce nouvel AZERTY, sur le bloc alphabétique et la barre d’espace, le niveau 4 montre le niveau 5, c’est-à-dire les caractères disposés en AltFr, qui incluent les ponctuations non espacées et le pavé numérique graphique disposé sur le bloc alphanumérique, tandis que sur la rangée des chiffres, le niveau 4 montre réellement ce qui se trouve au niveau 4 : les positions rétrocompatibles du mode français. Car sur les touches des chiffres, le niveau 5 est identique au niveau 3 avec les chiffres, la touche moins a le symbole degré du niveau 2, et la touche plus a le symbole égal du niveau 1 du mode ASCII.
 
-Les rectangles avec un code sont soit des touches mortes, comme la touche morte groupe « EFD0 » sur la touche [*], soit des séquences, comme le double zéro « EF6D » sur [B].
+Les rectangles avec un code sont soit des touches mortes, comme la touche morte groupe « EFD0 » sur la touche [*], soit des séquences, comme les ponctuations espacées en Majuscule, ou le double zéro « EF6D » sur [B].
 
-Ces touches mortes et ces séquences sont définies dans le répertoire des touches mortes et des séquences Compose(.yml), consultable sur GitHub en trois parties à cause d’une limitation de taille de fichier : [compose-1.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml) pour les séquences sur touches vives et les séquences de composition, [compose-2.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml) pour les touches mortes, et [compose-3.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml) pour les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles) et les [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres), qui font partie de la touche morte groupe.
+Ces touches mortes et ces séquences sont définies dans le répertoire des touches mortes et des séquences Compose(.yml), consultable sur GitHub en trois parties à cause d’une limitation de taille de fichier : [compose-1.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml) pour les séquences sur touches vives et les séquences de composition, [compose-2.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml) pour les touches mortes, et [compose-3.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml) pour les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles) et les [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres), qui font partie de la [touche morte groupe](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/).
 
 ## Utilisation
 
@@ -145,13 +145,15 @@ En Minuscule sur les deux premières touches après le [N], la virgule ne change
 
 #### Grandes ponctuations
 
-En mode français, toutes les grandes ponctuations sont en Majuscule, à l’instar du point d’interrogation, qui est la seule grande ponctuation à ne pas changer de place, ou à ne pas faire son entrée sur le clavier. Le point d’exclamation prend la place du point, afin de pouvoir laisser sa place au point-virgule. Mais le deux-points reste bien sur sa touche. Les [guillemets](#guillemets) français, au nombre de quatre (deux doubles et deux simples), prennent les quatre places en Majuscule à gauche de la touche Entrée, les doubles aux places de [%] et [µ], les simples aux places de [¨] et [£].
+En mode français, toutes les grandes ponctuations sont en Majuscule, et elles sont déjà espacées. Non espacées en mode français, elles sont en AltFr. Ainsi, le point d’interrogation est à sa place traditionnelle mais déjà espacé. Pour l’avoir non espacé, il faut appuyer sur AltFr au lieu d’appuyer sur Maj.
 
-Toujours en mode français, toutes les huit grandes ponctuations sont aussi en AltFr, soit presque en Majuscule à une touche près, AltFr étant la nouvelle touche modificatrice sur la touche [<>]. Comme toutes ces grandes ponctuations sont disposées dans la moitié droite du clavier, leur saisie en AltFr demande encore moins d’effort à la main gauche que la saisie des mêmes ponctuations en Majuscule. Et contrairement à ces dernières, les ponctuations en AltFr sont déjà espacées comme il faut, par le seul caractère d’espacement Unicode fonctionnel et interopérable, l’espace fine insécable U+202F. L’autocorrection des traitements de texte, qui espace les ponctuations par l’espace insécable U+00A0, peut et doit être désactivée, avec d’autant plus de raison que l’espacement qu’elle applique [n’est pas français](#typographie) et fonctionne très mal voire pas du tout.
+Le point d’exclamation quant à lui prend la place du point, afin de pouvoir laisser sa place au point-virgule. Mais le deux-points reste bien sur sa touche. Les [guillemets](#guillemets) français, au nombre de quatre — deux doubles et deux simples —, prennent les quatre places en Majuscule à gauche de la touche Entrée, les doubles aux places de [%] et [µ], les simples aux places de [¨] et [£]. Eux aussi sont en AltFr sans espace à l’intérieur, pour leur usage en allemand et dans d’autres langues.
 
-En cas de points d’interrogation ou d’exclamation multiples, l’espace devant le deuxième est évitée manuellement. Plutôt que de changer de touche modificatrice, on peut maintenir l’appui sur AltFr et ajouter un appui sur Majuscule, soit après avoir commencé par actionner AltFr de l’annulaire, soit en appuyant sur Majuscule droite.
+L’espacement automatique des ponctuations en Majuscule se fait par la seule espace insécable Unicode utilisable à cet effet, l’espace fine insécable U+202F. L’autocorrection des traitements de texte, qui espace les ponctuations par l’espace insécable U+00A0, peut et doit être désactivée, avec d’autant plus de raison que l’espacement qu’elle applique [n’est pas français](#typographie) et fonctionne très mal voire pas du tout.
 
-En mode ASCII, si les points d’interrogation et d’exclamation restent en Majuscule, tel n’est pas le cas du deux-points ni du point-virgule, qui redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
+En cas de points d’interrogation ou d’exclamation multiples, l’espace devant le deuxième est évitée manuellement. Plutôt que de changer de touche modificatrice, on peut maintenir l’appui sur Majuscule et ajouter un appui sur AltFr.
+
+En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points ni le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
 
 #### Ponctuations en haut
 
@@ -173,7 +175,7 @@ Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur
 
 D’autres symboles ASCII sont disposés sur les places vacantes avec des mnémoniques alphabétiques ou graphiques : la perluète [&] sur [P], le croisillon [#] sur [Q], le symbole pour cent [%] sur [Z], le circonflexe ASCII [^] sur [A], le tilde [~] sur [T], la contre-oblique [\\] sur [R], la barre verticale ou tuyau [|] sur [M] parce que c’est l’équivalent en composition de la touche morte macron, le symbole égal [=] sur [B], l’accent grave ASCII [`] sur [N], le tiret-moins [-] sur [G], le signe plus [+] sur [H], et enfin le tiret bas [_] sur [J], et l’apostrophe ASCII ['] sur [U].
 
-Pour les quatre grandes ponctuations après la touche du [N], le point d’interrogation, le point d’exclamation, le deux-points et le point-virgule, la disposition varie légèrement entre les modes français et ASCII. En mode ASCII, chacune est aussi en AltGr sur la touche où elle est en Majuscule. En mode français, le point-virgule cède sa place en AltGr au symbole paragraphe, afin que celui-ci soit en synergie avec les chiffres, pour la rétrocompatibilité avec le symbole paragraphe sur l’AZERTY traditionnel, où il est pareillement en synergie avec les chiffres, mais en Majuscule.
+Pour les quatre grandes ponctuations après la touche du [N], le point d’interrogation, le point d’exclamation, le deux-points et le point-virgule, la disposition varie légèrement entre les modes français et ASCII. En mode français, toutes sauf le point-virgule sont aussi en AltGr sur la touche où elles sont en Majuscule avec espace, et en AltFr sans espace. Le point-virgule cède sa place en AltGr au symbole paragraphe, afin que celui-ci soit en synergie avec les chiffres, pour la rétrocompatibilité avec le symbole paragraphe sur l’AZERTY traditionnel, où il est pareillement en synergie avec les chiffres, mais en Majuscule. En mode ASCII, toutes les quatre sont en AltGr, deux sont en Minuscule et en AltFr : le deux-points et le point-virgule ; et deux sont en Majuscule : les points d’interrogation et d’exclamation.
 
 ### Exposants et indices
 
@@ -186,6 +188,10 @@ Alors que les exposants de toutes les minuscules servent d’indicateurs d’abr
 ### Autres symboles
 
 La plupart des symboles sont dans les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), mais un certain nombre sont aussi ou uniquement sur touches vives comme documenté ici.
+
+Les 1 114 symboles et diacritiques mathématiques d’Unicode sont dans la touche de composition et documentés sur [cette page](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/) ([PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf))
+
+Les infobulles de la [vue interactive](https://dispoclavier.com/nouvel-azerty/#vue-interactive) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
 
 #### Symboles de l’AZERTY
 
@@ -202,10 +208,6 @@ En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symbole
 #### Barre de fraction
 
 La barre de fraction U+2044 est sur AltGr + AltFr + [F]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire dans les logiciels conformes comme Firefox. La partie entière peut être séparée par le gluon sur AltGr + AltFr + [G].
-
-Les infobulles de la [vue interactive](https://dispoclavier.com/nouvel-azerty/#vue-interactive) informent sur tous les détails de la disposition de ce nouvel AZERTY en cours de documentation.
-
-Les 1 114 symboles et diacritiques mathématiques d’Unicode sont dans la touche de composition et documentés sur [cette page](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/) ([PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf))
 
 ### Émojis
 
@@ -261,7 +263,7 @@ Ce nouvel AZERTY ne peut pas être installé normalement sous [Linux Mint Cinnam
 
 Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qui s’y appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant que `ISO_Level3_Shift` est bien distincte.
 
-Quand il est en cours d’exécution, ce bogue désactive les ponctuations espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, tout ou partie des fonctionnalités disposées aux niveaux 5 à 8.
+Quand il est en cours d’exécution, ce bogue désactive les ponctuations non espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, tout ou partie des fonctionnalités disposées aux niveaux 5 à 8.
 
 #### Bogue de VerrMod
 
@@ -325,7 +327,7 @@ Un autre nom de l’espace fine insécable, « espace insécable étroite »
 
 #### Espacement vieille école
 
-Si l’espacement vieille école est préféré, il peut être réalisé manuellement grâce à la synergie de l’espace insécable avec le deux-points en AltGr. Car en plus d’être disposé en Majuscule, le deux-points est aussi en AltGr, pour la synergie avec les chiffres dans le format d’heure « 12:34:56 » (qui en mode ASCII est facile à faire aussi en AltFr), mais aussi pour la synergie avec l’espace insécable, qui en mode français est sur AltGr + Espace.
+Si l’espacement vieille école est préféré, il peut être réalisé manuellement grâce à la synergie de l’espace insécable avec le deux-points en AltGr. Car en plus d’être disposé en Majuscule avec espace et en AltFr sans espace, le deux-points sans espace est aussi en AltGr, pour la synergie avec les chiffres dans le format d’heure « 12:34:56 », qui est facile à faire aussi en AltFr, mais surtout pour la synergie avec l’espace insécable, qui en mode français est sur AltGr + Espace.
 
 À part le deux-points, aucune autre ponctuation ne devrait être composée à l’ancienne, car les guillemets, qui selon le *Lexique* de l’Imprimerie nationale sont accompagnés d’une **espace mot insécable** (« espace mots insécable »), sont composés avec une **espace fine** (« espace fine insécable ») dans ce même *Lexique des règles typographiques en usage à l’Imprimerie nationale.*
 
@@ -343,15 +345,15 @@ Grâce au fait que les guillemets chevrons existent aussi en version simple, l�
 
 Quitte à se résigner à l’emploi de « guillemets anglais », autant encastrer les guillemets à l’anglaise, ou à l’américaine, mais à la française. À l’anglaise au sens où les guillemets de second (ou deuxième) niveau sont simples si les guillemets de premier niveau (ou rang) sont doubles, comme c’est le cas en écrivant à l’américaine. À la française au sens où les guillemets sont des guillemets chevrons.
 
-En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscule sur les touches [^] et [$], au-dessus des touches [ù] et [*] où les guillemets chevrons doubles sont disposés en Majuscule. Sur les mêmes touches en AltFr, les mêmes guillemets sont espacés à l’intérieur à l’aide de la fine.
+En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscule sur les touches [^] et [$], au-dessus des touches [ù] et [*] où les guillemets chevrons doubles sont disposés en Majuscule. Ces quatre guillemets sont déjà espacés à l’aide de la fine. Sur les mêmes touches en AltFr, les mêmes guillemets sont sans espace.
 
 #### Guillemets en langues voisines
 
-En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en Majuscule et dans l’autre sens, en commençant par le guillemet pointant vers la fin [»] sur [*], ou [›] sur [$], et en finissant par le guillemet pointant vers le début [«] sur [ù], ou [‹] sur [^].
+En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin [»] sur [*], ou [›] sur [$], et en finissant par le guillemet pointant vers le début [«] sur [ù], ou [‹] sur [^].
 
-(On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » [<] ou « supérieur à » [>] (réfléchis eux aussi), si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
+(On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » [<] ou « supérieur à » [>], réfléchis eux aussi, si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
 
-Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, comme ils sont disposés en Majuscule. Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en AltFr sur les mêmes touches. Car depuis 2015, la Suisse romande applique aux ponctuations exactement les mêmes règles d’espacement que la France.
+Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, comme ils sont disposés en AltFr. Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en Majuscule sur les mêmes touches. Depuis 2015, la Suisse romande applique aux ponctuations exactement les mêmes règles d’espacement que la France.
 
 #### Guillemets de distanciation
 
@@ -365,7 +367,9 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 ### Usage du liant
 
-Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur touche vive sur d’autres dispositions de clavier à cause de son utilisation pour empêcher les ligatures typographiques inappropriées. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + W, et le liant U+200D sur AltGr + AltFr + X. Les deux sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer quelque chose d’invisible qui ne soit pas l’espace nulle ou césure conditionnelle U+200B, qui elle, est disposée sur Maj + AltGr + Espace vu sa grande utilité pour fragmenter les URL (après leur conversion en hyperlien) pour leur affichage dans les navigateurs non conformes à Unicode (qui spécifie que l’oblique doit fonctionner comme les traits d’union.
+Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [Q] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [Q], le liant U+200D sur AltGr + AltFr + [W], et le gluon U+2060 sur AltGr + AltFr + [G]. Les trois sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A] et de l’arobase sur [Y], le liant dans le même groupe du symbole pour cent sur [Z], et le gluon dans le même groupe du tiret du 6 sur [G].
+
+L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer quelque chose d’invisible qui ne soit pas l’espace nulle, aussi appelée césure conditionnelle U+200B, qui elle, est disposée sur Maj + AltGr + Espace vu sa grande utilité pour fragmenter les URL (après leur conversion en hyperlien) pour leur affichage dans les navigateurs non conformes à Unicode (qui spécifie que l’oblique doit fonctionner comme les traits d’union.
 
 ### Extensions de fichiers
 
