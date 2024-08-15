@@ -1,5 +1,11 @@
 # Journal des modifications
 
+## 4.0.1 (projet)
+
+* Documentation :
+	* Mettre à jour le nom anglais de l’espace fine insécable U+202F. (compose-1.yml [386fa78](https://github.com/dispoclavier/nouvel-azerty/commit/386fa78123de7ef4a18af4a55603a43e1af3bce9))
+	* Corriger l’abréviation de l’espace fine U+2009. (ibidem)
+
 ## 4.0.0 (2024-08-11)
 
 Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
