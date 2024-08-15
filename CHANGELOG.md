@@ -3,8 +3,8 @@
 ## 4.0.1 (projet)
 
 * Documentation :
-	* Mettre à jour le nom anglais de l’espace fine insécable U+202F. (compose-1.yml [386fa78](https://github.com/dispoclavier/nouvel-azerty/commit/386fa78123de7ef4a18af4a55603a43e1af3bce9))
-	* Corriger l’abréviation de l’espace fine U+2009. (ibidem)
+	* Mettre à jour le nom anglais de l’espace fine insécable U202F. (compose-1.yml [386fa78](https://github.com/dispoclavier/nouvel-azerty/commit/386fa78123de7ef4a18af4a55603a43e1af3bce9), [9241b1a](https://github.com/dispoclavier/nouvel-azerty/commit/9241b1a2e3553150261c7fdb6031416a801af3e4), compose-2.yml [7d92df0](https://github.com/dispoclavier/nouvel-azerty/commit/7d92df027cb5b73ef4794480c4f8a2eb5c68a359))
+	* Corriger l’abréviation de l’espace fine U2009 et autres. (ibidem, compose-3.yml [fce1ab7](https://github.com/dispoclavier/nouvel-azerty/commit/fce1ab7fdc020921f9558010170516dbdae27710))
 
 ## 4.0.0 (2024-08-11)
 
