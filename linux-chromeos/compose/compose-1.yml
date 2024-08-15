@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.0.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.0.1" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -229,13 +229,18 @@
 #
 # # Automated punctuation spacing for fr-FR, regular with U202F NNBSP
 #
+#   Since 2024-08-02T0242+0200, U202F is called "no-break thin space",
+#   abbreviated "NBTSP".
+#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
+#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#
 #   Imprimerie nationale (France) assumes that big punctuation is spaced out
 #   using either of these spaces:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
-#       * No-break thin space, behaving like Unicode’s NNBSP U202F.
+#       * No-break thin space, behaving like Unicode’s NBTSP U202F.
 #
-#   Functionally, NNBSP is a no-break clone of Unicode’s thin space THSP U2009.
+#   Functionally, NBTSP is a no-break clone of Unicode’s thin space TSP U2009.
 #
 #   Consistently, U2009 is preferredly called NARROW SPACE and abbreviated NSP,
 #   matching the name of U202F.
@@ -572,10 +577,10 @@
 #         "&#8199;"  # U2007 FIGURE SPACE
 #   Is no-break in Unicode for nearly no reason, which is why it is the only
 #   no-break space in that range where all spaces from U2002 through U200A
-#   should be no-break.
+#   were originally designed to be no-break.
 #
-<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE
-#   NNBSP has become a usable avatar of THSP as originally intended.
+<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE, no-break thin space
+#   NBTSP has become a usable avatar of TSP as originally intended.
 #
 #
 # # Unicode prefix
