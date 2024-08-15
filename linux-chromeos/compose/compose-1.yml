@@ -227,12 +227,13 @@
 <C_H> : "CʼH" #
 #
 #
-# # Automated punctuation spacing for fr-FR, regular with U202F NNBSP
+# # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
 #
-#   Since 2024-08-02T0242+0200, U202F is called "no-break thin space",
+#   In CLDR, since 2024-08-02T0242+0200, U202F is the no-break thin space,
 #   abbreviated "NBTSP".
 #   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
 #   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
 #   Imprimerie nationale (France) assumes that big punctuation is spaced out
 #   using either of these spaces:
@@ -343,6 +344,12 @@
 #      French grouping separator changed from no-break space U+00A0 to
 #      narrow no-break space U+202F.
 #
+#   Still in CLDR, the narrow no-break space U+202F is the no-break thin space,
+#   since 2024-08-02T0242+0200, and its initialism is NBTSP.
+#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
+#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#
 #   As of punctuation spacing automation while writing, there is a feedback
 #   issue submitted while commenting an LDML extension designed for SIL/Keyman:
 #   “PRI #367: Automated punctuation spacing”
@@ -359,16 +366,16 @@
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
 #       in Unicode encoding, the colon has NBSP spacing. In new-school French
-#       typesetting, the colon is spaced out using NNBSP.
+#       typesetting, the colon is spaced out using NBTSP.
 #   [2] Based on the visual aspect in the current edition of the style manual,
 #       Imprimerie nationale, in Unicode encoding, the guillemets are typeset
-#       with NNBSP, although the verbatim rule given on page 149 specifies that
+#       with NBTSP, although the verbatim rule given on page 149 specifies that
 #       the guillemets are to be spaced out using the equivalent of NBSP.
 #
 #
 # # Abbreviation "Numéro" with trailing space
 #
-#   With regular superscript o U1D52 and NNBSP U202F.
+#   With regular superscript o U1D52 and NBTSP U202F.
 #
 <UEF68> : "nᵒ " #
 <UEF69> : "Nᵒ " #
@@ -376,7 +383,7 @@
 #
 # # Abbreviation "Numéro" without spacing
 #
-#   With regular superscript o U1D52, without NNBSP U202F.
+#   With regular superscript o U1D52, without NBTSP U202F.
 #
 <UEF6A> : "nᵒ" #
 <UEF6B> : "Nᵒ" #
@@ -384,7 +391,7 @@
 #
 # # Ordinal indicator with trailing space
 #
-#   Ordinal indicator ᵉ with automated spacing by NNBSP U202F,
+#   Ordinal indicator ᵉ with automated spacing by NBTSP U202F,
 #   Intended to type century figures in French style using Roman numerals.
 #
 <UEF6C> : "ᵉ " #
@@ -469,7 +476,7 @@
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, UFEFF ZERO WIDTH NO-BREAK SPACE
 #
-#   This is an acceptable fallback, given in most fonts NNBSP has the same width
+#   This is an acceptable fallback, given in most fonts NBTSP has the same width
 #   as THIN SPACE, and THIN SPACE has line breaking class BA (break after).
 #   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
@@ -526,7 +533,7 @@
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, U2060 WORD JOINER
 #
-#   This is an acceptable fallback, given in most fonts NNBSP has the same
+#   This is an acceptable fallback, given in most fonts NBTSP has the same
 #   width as THIN SPACE, and THIN SPACE has line breaking class Break After.
 #   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
@@ -1216,17 +1223,22 @@
 #   U00A0 NO-BREAK SPACE is supported by en_US.UTF-8/Compose (by ¦␣␣). But the
 #   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
 #   are heavily used and consistently supported on live keys, and moreover the
-#   Multi_key sequence for U00A0 conflicts with "⧜" U29DC, support is dropped
-#   altogether, and <Multi_key><space><space> is discarded.
+#   Multi_key sequence for U00A0 <Multi_key><space><space> conflicts with every
+#   single math symbol sequence using disambiguation by multiple leading space,
+#   support is dropped altogether.
 #
 #   U2008 PUNCTUATION SPACE is supported by en_US.UTF-8/Compose (by ¦␣.), but
-#   matching U2007 FIGURE SPACE is not, although both are used in typesetting
-#   old-style tables, and the latter was ultimately granted no-break behavior.
-#   Since the sequence <Multi_key><space><period> conflicts with "⩑" U2A51, it
-#   is ultimately discarded.
+#   the matching U2007 FIGURE SPACE used with the same rationale in typesetting
+#   old-style tables is not, although the latter is particular in that it is an
+#   outstandig reminder that all spaces U2002..U200A were initially designed to
+#   be no-break. Since the sequence <Multi_key><space><period> conflicts with
+#    "⩑" U2A51, it is discarded altogether, and support for spaces is moved to
+#   the space groups.
+#   See # # A03-level1
+#   See # # A03-level3
 #
-#   Only most common quotation marks are supported by Multi_key. Less common
-#   quotation marks are supported by the dead key based input method.
+#   Quotation marks by Multi_key only supports the most common. Less common
+#   quotation marks are supported only by the dead key based input method.
 #   See # # Quotation mark input method
 #
 #   The Unicode informative aliases are appended to the Unicode identifiers of
