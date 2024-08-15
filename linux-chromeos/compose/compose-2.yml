@@ -554,12 +554,12 @@
 #   Unicode added U02D8..U02DD to the Latin-1 diacritics merely for roundtrip
 #   compatibility with pre-existing character sets.
 #
-#   Both NBSP (AltGr + spacebar) and NNBSP (AltFr + spacebar) are used as base
+#   Both NBSP (AltGr + spacebar) and NBTSP (AltFr + spacebar) are used as base
 #   characters.
 #
 #   Since DIAERESIS and CEDILLA do exist only in Latin-1, they are accessible
 #   both ways. By contrast, Latin-1 MACRON and ACUTE ACCENT are duplicates of
-#   modifier letters (by NNBSP) and are accessible by NBSP exclusively. Then,
+#   modifier letters (by NBTSP) and are accessible by NBSP exclusively. Then,
 #   ASCII symbols GRAVE ACCENT, CIRCUMFLEX ACCENT, TILDE are included as well.
 #
 #
