@@ -2172,10 +2172,11 @@
 #
 # # A03-level1
 #
-#   The preferred name of U2009 is NARROW SPACE, abbreviated NSP.
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#   ISO A03 should be the left Thumb Shift (Oyayubi Shifuto).
+#   https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
 #
 #   An alternate, more intuitive acronym of U200B is WNJ (WORD NON-JOINER).
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   For consistency, WNJ is used in documentation rather than ZWSP.
 #
