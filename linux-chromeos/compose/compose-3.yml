@@ -1992,10 +1992,10 @@
 <Multi_key><numbersign><0>                                                                <exclam> : "∵" U2235 # BECAUSE
 <UEFD0><KP_0>                                                                             <exclam> : "∵" U2235 # BECAUSE
 <Multi_key><numbersign><KP_0>                                                             <exclam> : "∵" U2235 # BECAUSE
-<UEFD0><1>                                                                                <exclam> : "∎" U220E # END OF PROOF
-<Multi_key><numbersign><1>                                                                <exclam> : "∎" U220E # END OF PROOF
-<UEFD0><KP_1>                                                                             <exclam> : "∎" U220E # END OF PROOF
-<Multi_key><numbersign><KP_1>                                                             <exclam> : "∎" U220E # END OF PROOF
+<UEFD0><1>                                                                                <exclam> : "⸙" U2E19 # PALM BRANCH
+<Multi_key><numbersign><1>                                                                <exclam> : "⸙" U2E19 # PALM BRANCH
+<UEFD0><KP_1>                                                                             <exclam> : "⸙" U2E19 # PALM BRANCH
+<Multi_key><numbersign><KP_1>                                                             <exclam> : "⸙" U2E19 # PALM BRANCH
 <UEFD0><2>                                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
 <Multi_key><numbersign><2>                                                                <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
 <UEFD0><KP_2>                                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
@@ -2046,10 +2046,10 @@
 <Multi_key><numbersign><0>                                                                 <colon> : "⏲" U23F2 # TIMER CLOCK emoji
 <UEFD0><KP_0>                                                                              <colon> : "⏲" U23F2 # TIMER CLOCK emoji
 <Multi_key><numbersign><KP_0>                                                              <colon> : "⏲" U23F2 # TIMER CLOCK emoji
-<UEFD0><1>                                                                                 <colon> : "⁚" U205A # TWO DOT PUNCTUATION
-<Multi_key><numbersign><1>                                                                 <colon> : "⁚" U205A # TWO DOT PUNCTUATION
-<UEFD0><KP_1>                                                                              <colon> : "⁚" U205A # TWO DOT PUNCTUATION
-<Multi_key><numbersign><KP_1>                                                              <colon> : "⁚" U205A # TWO DOT PUNCTUATION
+<UEFD0><1>                                                                                 <colon> : "⁝" U205D # TRICOLON
+<Multi_key><numbersign><1>                                                                 <colon> : "⁝" U205D # TRICOLON
+<UEFD0><KP_1>                                                                              <colon> : "⁝" U205D # TRICOLON
+<Multi_key><numbersign><KP_1>                                                              <colon> : "⁝" U205D # TRICOLON
 <UEFD0><2>                                                                                 <colon> : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><numbersign><2>                                                                 <colon> : "※" U203B # REFERENCE MARK, Japanese kome
 <UEFD0><KP_2>                                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
@@ -2176,18 +2176,28 @@
 #   ISO A03 should be the left Thumb Shift (Oyayubi Shifuto).
 #   https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
 #
-#   An alternate, more intuitive acronym of U200B is WNJ (WORD NON-JOINER).
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
-#   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
-#   For consistency, WNJ is used in documentation rather than ZWSP.
+#   U200B ZERO WIDTH SPACE has an alternate, more intuitive and more familiar
+#   acronym: WNJ, for WORD NON-JOINER.
+#   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
+#   https://www.unicode.org/mail-arch/unicode-ml/y2007-m11/0119.html
+#   https://github.com/unicode-org/cldr/blob/2b08423c8502f499b334eef17488c730adcd3a6c/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L32
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L32
 #
-#   The French name of U200B is CÉSURE CONDITIONNELLE, break opportunity.
+#   U200B ZERO WIDTH SPACE also has an intuitive, to-the-point French name:
+#   CÉSURE CONDITIONNELLE, break opportunity, non-existent in English.
 #
-#   For ease of input, U2002 and U2003 are on level 1, although they were
-#   originally intended to be no-break. That brings the need to put their
-#   breaking clones on level3, since they are now canonically equivalent.
-#   U2002..U2006 and U2008..U200A were originally intended to be no-break
-#   just like U2007 FIGURE SPACE.
+#   The WNJ is also on live key, level 4 of the space bar, for its use in long
+#   URLs expected to line-wrap after slashes but not doing so in browsers that
+#   are not fully Unicode conformant, and because level 4 of the space bar must
+#   not be used for useful space characters such as U00A0 NBSP and U202F NBTSP.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=944
+#   https://unicode.org/reports/tr14/#SY
+#
+#   U2002 and U2003 are on level 1 for usability, although these spaces were
+#   originally intended to be no-break. That brings the need to move their two
+#   breaking clones to level3, since these have become canonically equivalent.
+#   U2002..U2006 and U2008..U200A were originally intended to be no-break, just
+#   like U2007 FIGURE SPACE ultimately remained, as sort of the sole survivor.
 #
 #   Unlike stated in UAX #14, U2007 is not intended for use *in* figures,
 #   but *before* figures for indentation in tables. Therefore, it is also
