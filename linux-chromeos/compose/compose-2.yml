@@ -592,7 +592,7 @@
 #   For dead_tilde, the dead character base letter is `e` for consistency with
 #   dead_belowtilde, that is precomposed only with e, i, u, and for equity, as
 #   opposed to picking one of ã, ñ, õ, and thus favoring either Portuguese or
-#   Spanish. The ẽ also makes for consistent mnemonics since tilde ends in e.
+#   Spanish. The ẽ also makes for a consistent mnemonic since tilde ends in e.
 #   See #*# TILDE
 #   See #^# MIDDLE_TILDE
 #
@@ -1219,7 +1219,7 @@
 #   See # # Quotation mark input method
 #
 #   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
-#   mnemonics referring to "̲" U0332 COMBINING LOW LINE that fills this slot
+#   mnemonic referring to "̲" U0332 COMBINING LOW LINE that fills this slot
 #   for the SUBSCRIPT dead key, <Multi_key><underscore>. That is certainly a
 #   better option than duplicating the set of circumflexes already provided in
 #   dead_circumflex. Consistently, the spacing clone is "‾" U203E.
@@ -3591,7 +3591,7 @@
 #   See #+# GROUP_5
 #
 #   The two parentheses yield the two underties, one of which is inverted:
-#   "⁔" U2054, "‿" U203F. For mnemonics, these are like sideways, or vertical
+#   "⁔" U2054, "‿" U203F. For mnemonic, these are like sideways, or vertical
 #   parentheses.
 #
 #   As a diacritic, "̕" U0315 COMBINING COMMA ABOVE RIGHT is included, with the
@@ -3775,7 +3775,7 @@
 #   https://www.frathwiki.com/Double_Acute_Accent
 #
 #   With digits, dead_doubleacute acts as a shortcut for double circled numbers
-#   with “double” mnemonics. Double arrows have their redundancy on *dead_flag.
+#   with “double” mnemonic. Double arrows have their redundancy on *dead_flag.
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
 #
@@ -4285,13 +4285,23 @@
 #   See # # B08-level3
 #
 #   The tilde dead key supports daggers, because it is mapped on key T due to
-#   alphabetic mnemonics, and daggers are tied to T by shape-based mnemonics.
+#   alphabetic mnemonic, and daggers are tied to T by shape-based mnemonic.
 #   The full set of daggers is available by digits 1 through 6 with shape-based
-#   mnemonics for simple, double and triple daggers, by 1 through 3, and numpad
-#   positional mnemonics for left/right guard daggers, by 4 and 6 respectively,
+#   mnemonic for simple, double and triple daggers, by 1 through 3, and numpad
+#   positional mnemonic for left/right guard daggers, by 4 and 6 respectively,
 #   around the turned dagger by 5.
 #   Umihotaru’s 'Nishiki-teki' font supports "⹋" U2E4B TRIPLE DAGGER.
-#   See # # C10
+#
+#   The remaining digits are used for the four tack modifier letters that are
+#   no superscripts despite the "modifier letter" part in their names. since
+#   modifier letters are not necessarily superscript. Positional mnemonic is
+#   partly based on the numpad:
+#
+#      7    "꭪" UAB6A MODIFIER LETTER LEFT TACK
+#      8    "˔" U02D4 MODIFIER LETTER UP TACK
+#      9    "꭫" UAB6B MODIFIER LETTER RIGHT TACK
+#      0    "˕" U02D5 MODIFIER LETTER DOWN TACK
+#
 #
 #   This also supports the swung dash "⁓" U2053 with dashes as base characters.
 #
@@ -4303,7 +4313,7 @@
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
 #   "≃" U2243 and "≈" U2248 are both supported by equal based on keypress
-#   number mnemonics.
+#   number mnemonic.
 #   See #^# MIDDLE_TILDE
 #
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
@@ -4334,6 +4344,10 @@
 <Multi_key><asciitilde>                                                                   <endash> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                                   <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
+<Multi_key><asciitilde>                                                                        <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
+<dead_tilde>                                                                                <KP_0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
+<Multi_key><asciitilde>                                                                     <KP_0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
 <dead_tilde>                                                                                   <1> : "†" U2020 # DAGGER
 <Multi_key><asciitilde>                                                                        <1> : "†" U2020 # DAGGER
 <dead_tilde>                                                                                <KP_1> : "†" U2020 # DAGGER
@@ -4358,6 +4372,18 @@
 <Multi_key><asciitilde>                                                                        <6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_tilde>                                                                                <KP_6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <Multi_key><asciitilde>                                                                     <KP_6> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<dead_tilde>                                                                                   <7> : "꭪" UAB6A # MODIFIER LETTER LEFT TACK
+<Multi_key><asciitilde>                                                                        <7> : "꭪" UAB6A # MODIFIER LETTER LEFT TACK
+<dead_tilde>                                                                                <KP_7> : "꭪" UAB6A # MODIFIER LETTER LEFT TACK
+<Multi_key><asciitilde>                                                                     <KP_7> : "꭪" UAB6A # MODIFIER LETTER LEFT TACK
+<dead_tilde>                                                                                   <8> : "˔" U02D4 # MODIFIER LETTER UP TACK
+<Multi_key><asciitilde>                                                                        <8> : "˔" U02D4 # MODIFIER LETTER UP TACK
+<dead_tilde>                                                                                <KP_8> : "˔" U02D4 # MODIFIER LETTER UP TACK
+<Multi_key><asciitilde>                                                                     <KP_8> : "˔" U02D4 # MODIFIER LETTER UP TACK
+<dead_tilde>                                                                                   <9> : "꭫" UAB6B # MODIFIER LETTER RIGHT TACK
+<Multi_key><asciitilde>                                                                        <9> : "꭫" UAB6B # MODIFIER LETTER RIGHT TACK
+<dead_tilde>                                                                                <KP_9> : "꭫" UAB6B # MODIFIER LETTER RIGHT TACK
+<Multi_key><asciitilde>                                                                     <KP_9> : "꭫" UAB6B # MODIFIER LETTER RIGHT TACK
 <dead_tilde>                                                                                   <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <Multi_key><asciitilde>                                                                        <A> : "Ã" U00C3 # LATIN CAPITAL LETTER A WITH TILDE
 <dead_tilde>                                                                                   <a> : "ã" U00E3 # LATIN SMALL LETTER A WITH TILDE
@@ -4588,9 +4614,10 @@
 #       y : "υ" was ψ
 #       Y : "Υ" was Ψ
 #
-#   The Greek dead key is mapped on D06 with the Y mnemonics of 'Greek I' (i grec).
+#   The Greek dead key is mapped on D06 with a mnemonic based on Y as 'Greek I'
+#   translating its French name: i grec.
 #   Should this position be used otherwise, dead_greek is not indispensable, as
-#   the Greek letters can be accessed in group 6.
+#   the Greek base letters are also available in group 6.
 #   See # # GROUP_6
 #
 #   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as most
@@ -5106,7 +5133,7 @@
 #   Multi_key: ¦@$
 #   Dchar: 
 #
-#   Also in OGONEK as a shortcut with positional mnemonics.
+#   Also in OGONEK as a shortcut with positional mnemonic.
 #   See #*# OGONEK
 #
 <dead_greek><dead_currency>                                                                    <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
@@ -5449,7 +5476,7 @@
 #   Dchar: 
 #
 #   Unlike squared digit emoji, squared letter dingbats are separately encoded.
-#   These sequences are based on convenience and T-shape-based mnemonics. These
+#   These sequences are based on convenience and T-shape-based mnemonic. These
 #   SMP dingbats have limited cross-platform compatibility. For streamlining an
 #   implementation, equivalents with inverted color are supported based on this
 #   feature and by repurposing lowercase so as to skip the overhead of flagging
@@ -5934,10 +5961,10 @@
 #   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
 #
 #   Followed by Éé, acute is a shortcut to Ãã for Portuguese with spatial
-#   mnemonics on AZERTY, where A is close to É.
+#   mnemonic on AZERTY, where A is close to É.
 #
 #   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
-#   mnemonics on AZERTY, where O is close to À.
+#   mnemonic on AZERTY, where O is close to À.
 #
 #   Followed by comma, dead_acute provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
@@ -6304,7 +6331,7 @@
 #   Multi_key: ¦{
 #   Dchar: "ɱ" U0271
 #
-#   Includes tone bars due to good mnemonics based on I, mapped like { on D08.
+#   Includes tone bars due to good mnemonic based on I, mapped like { on D08.
 #   For an alternative, see #^# Tone bars
 #
 #   A hook may also be referred to as a fishhook.
@@ -6765,10 +6792,10 @@
 #
 #   RETROFLEX_HOOK supports the full set of 10 recycling symbols in Unicode,
 #   consistently with the paper symbols in dead_abovedot, with alphabetic or
-#   graphic mnemonics based on the letters these dead keys are on. For these
-#   symbols, the R mnemonics is not possible, since the REVERSED dead key is
+#   graphic mnemonic based on the letters these dead keys are on. For these
+#   symbols, the R mnemonic is not possible, since the REVERSED dead key is
 #   used for mathematical backslash shaped symbols consistently with STROKE,
-#   but O (where this dead key is on) offers graphic mnemonics, based on the
+#   but O (where this dead key is on) offers graphic mnemonic, based on the
 #   letter shape and the cycling idea. The neighborship with DOT_ABOVE on P
 #   also has a mnemonic upside.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
@@ -7274,7 +7301,7 @@
 #   For i and j, dead_abovedot results in DOTLESS, applying binary logic. As a
 #   consequence, dotless letters do not need support on live keys or in groups.
 #
-#   Includes three paper symbols, based on the same alphabetic mnemonics as the
+#   Includes three paper symbols, based on the same alphabetic mnemonic as the
 #   10 recycling symbols in *dead_retroflexhook. For intuitivity all digits may
 #   be used as base characters.
 #   See #*# RETROFLEX_HOOK
@@ -7649,7 +7676,7 @@
 #   On AZERTY, Ccedilla is above the O key, while Swiss QWERTZ has also an
 #   Odiaeresis live key. In an effort to mitigate the inconvenience of not
 #   having Øø in group 1 of Oo, Oslash is additionally in dead_diaeresis,
-#   with Ccedilla as a base character again, and good mnemonics since Danish Øø
+#   with Ccedilla as a base character again, and good mnemonic since Danish Øø
 #   is phonetically equivalent to Swedish Öö.
 #   See #*# DIAERESIS
 #
@@ -8489,7 +8516,7 @@
 #   "₵" U20B5 # CEDI SIGN has Ccedilla as a base character too, for consistency
 #   with en_US.UTF-8/Compose.
 #
-#   Integral symbols are also supported, based on S mnemonics, with the
+#   Integral symbols are also supported, based on S mnemonic, with the
 #   corresponding digits as base characters. Likewise, contour integrals
 #   are also supported, although they are also in dead_abovering.
 #   See #*# RING_ABOVE
@@ -8796,8 +8823,8 @@
 # # Box drawings with rounded corners
 #
 #   Rounded corners use dead_invertedbreve and its Multi_key equivalent ¦( with
-#   graphic mnemonics based on the shape of uppercase letter D on C03, and with
-#   neighborship mnemonics.
+#   graphic mnemonic based on the shape of uppercase letter D on C03, and with
+#   neighborship mnemonic.
 #
 <dead_invertedbreve>                                                                  <1><1><0><0> : "╭" U256D # BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
 <Multi_key><parenleft>                                                                <1><1><0><0> : "╭" U256D # BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
@@ -9430,7 +9457,7 @@
 # # Box drawings
 #
 #   Using the breve dead key and its Multi_key equivalent ¦) with alphabetic
-#   mnemonics in French, where box drawings are called ‘filets’, as dead_breve
+#   mnemonic in French, where box drawings are called ‘filets’, as dead_breve
 #   is on level 4 of key F, C04, where the closing parenthesis is on level 3.
 #
 #   The digit position sets the direction clockwise: up, right, down, left;
@@ -9446,8 +9473,8 @@
 #   both for cross, terminated by `d` for diagonal.
 #
 #   Rounded corners use dead_invertedbreve and its Multi_key equivalent ¦( with
-#   graphic mnemonics based on the shape of uppercase letter D on C03, and with
-#   neighborship mnemonics.
+#   graphic mnemonic based on the shape of uppercase letter D on C03, and with
+#   neighborship mnemonic.
 #   See # # Box drawings with rounded corners
 #
 <dead_breve>                                                                          <1><0><1><0> : "─" U2500 # BOX DRAWINGS LIGHT HORIZONTAL
@@ -11136,7 +11163,7 @@
 #   Multi_key: ¦[
 #   Dchar: "ǫ" U01EB
 #
-#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonics.
+#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonic.
 #   The Multi_key equivalent is impractical, but a full ASCII equivalent
 #   would conflict with mathematical symbols.
 #   See #*# HOOK_ABOVE
@@ -11308,7 +11335,7 @@
 #   Multi_key: ¦]
 #   Dchar: "ỏ" U1ECF
 #
-#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonics.
+#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonic.
 #   The Multi_key equivalent is impractical, but a full ASCII equivalent
 #   would conflict with mathematical symbols.
 #   See #*# OGONEK
@@ -11446,7 +11473,7 @@
 #   Dchar: "ō" U014D
 #
 #   Long leg is merged with macron thanks to empty intersection and
-#   with mnemonics based on the macron Multi_key equivalent pipe |.
+#   with mnemonic based on the macron Multi_key equivalent pipe |.
 #   Small r with long leg has been obsoleted by IPA in 1989.
 #
 #   Cent and Cedi signs are supported by lack of C with macron, and
@@ -12262,7 +12289,7 @@
 #   This is required because we have a combining long double solidus as well as
 #   a combining short solidus, plus a third modifier letter in the "ꜗ", "ꜘ", "ꜙ"
 #   set. However, "⃫" U20EB being a mathematical diacritic, "̷" U0337 is easier,
-#   at the expense of the “double” mnemonics based on double press.
+#   at the expense of the “double” mnemonic based on double press.
 #
 <dead_stroke><dead_stroke><dead_stroke>                                                    <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
 <Multi_key><slash><slash><slash>                                                           <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
@@ -12473,7 +12500,7 @@
 # # RING&CURRENCY
 #   Dchar: 
 #
-#   Supports contour integrals based on ring and S mnemonics.
+#   Supports contour integrals based on ring and S mnemonic.
 #
 <dead_abovering><dead_currency>                                                                <1> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><asterisk><dollar>                                                                  <1> : "∮" U222E # CONTOUR INTEGRAL
@@ -12557,7 +12584,7 @@
 #   See # # CIRCUMFLEX&GROUP_2
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
-#   The diaeresis dead key offers an acceptable alternative with good mnemonics
+#   The diaeresis dead key offers an acceptable alternative with good mnemonic
 #   using the traditional mapping on the same key in shift position.
 #   See #*# DIAERESIS
 #
