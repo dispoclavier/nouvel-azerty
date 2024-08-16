@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.0.1" # See # # Notes about syntax
+<UEFA0>                     : "version 4.1.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -992,7 +992,7 @@
 #   See #*# REVERSED
 #
 #   To prevent conflicts with some mathematical symbols, the sequences of all
-#   Roman numerals start with an R for mnemonics and UX consistency.
+#   Roman numerals start with an R for mnemonic and UX consistency.
 #
 <Multi_key><R><C><D>                                                                               : "ↀ" U2180 # ROMAN NUMERAL ONE THOUSAND C D
 <Multi_key><R><D><D><space>                                                                        : "ↁ" U2181 # ROMAN NUMERAL FIVE THOUSAND
@@ -1396,7 +1396,7 @@
 #
 # # Standard tone bars
 #
-#   Shortcuts using visual mnemonics based on capital I are in dead_hook.
+#   Shortcuts using visual mnemonic based on capital I are in dead_hook.
 #   See #*# HOOK
 #
 <Multi_key><1><t>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -1684,7 +1684,7 @@
 #   This supports the bullets as implemented, adding support for the intended
 #   open rectangular bullet "▭" U25AD.
 #
-#   Some sequences based on English mnemonics have French equivalents.
+#   Some sequences based on English mnemonic have French equivalents.
 #   "∎" U220E has bilingual support in the math symbols.
 #
 #   These sequences are case insensitive in that they can be typed either in
@@ -2918,7 +2918,7 @@
 #   horizontally or vertically, a matching alternate slug is used, as well as
 #   a trailing percent sign or a trailing backslash with dead key semantics,
 #   so as to provide both a streamlined and an intuitive input method. Most
-#   slugs use graphic mnemonics, while H and CP use alphabetic mnemonics based
+#   slugs use graphic mnemonic, while H and CP use alphabetic mnemonic based
 #   on HARP or on COPRODUCT.
 #
 #   Symbol A   Slug |  Symbol B   Slug  Alternative with trailing transform
@@ -3068,7 +3068,7 @@
 #   in slot 4.
 #   See #*# MACRON
 #
-#   With similar mnemonics, "‖" U2016 is in group 2 of bar, while "∥" U2225 is
+#   With similar mnemonic, "‖" U2016 is in group 2 of bar, while "∥" U2225 is
 #   in group 3, mitigating a potential accessibility bias.
 #   See # # C10
 #
