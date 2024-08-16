@@ -7301,14 +7301,24 @@
 #   For i and j, dead_abovedot results in DOTLESS, applying binary logic. As a
 #   consequence, dotless letters do not need support on live keys or in groups.
 #
-#   Includes three paper symbols, based on the same alphabetic mnemonic as the
-#   10 recycling symbols in *dead_retroflexhook. For intuitivity all digits may
-#   be used as base characters.
+#   This supports various combining dots with digits as base characters and
+#   with numpad-based mnemonics:
+#
+#       1    "᷺" U1DFA COMBINING DOT BELOW LEFT
+#       3    "᪴" U1AB4 COMBINING TRIPLE DOT
+#       5    "͒" U0352 COMBINING FERMATA
+#       7    "᷸" U1DF8 COMBINING DOT ABOVE LEFT
+#       9    "͘" U0358 COMBINING DOT ABOVE RIGHT
+#
+#   This scheme also includes three paper symbols, using a similar alphabetic
+#   mnemonic as the ten recycling symbols in *dead_retroflexhook, as well as
+#   a shape-based mnemonic using digit 8. The remaining two slots are filled in
+#   with duplicates.
 #   See #*# RETROFLEX_HOOK
 #
-#       "♾" U267E PERMANENT PAPER SIGN              8
-#       "♼" U267C RECYCLED PAPER SYMBOL             0, 2, 4, 6    (other even)
-#       "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL   1, 3, 5, 7, 9 (odd numbers)
+#       0    "♼" U267C RECYCLED PAPER SYMBOL
+#       2    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
+#       8    "♾" U267E PERMANENT PAPER SIGN
 #
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
@@ -7322,42 +7332,42 @@
 <Multi_key><period>                                                                            <0> : "♼" U267C # RECYCLED PAPER SYMBOL
 <dead_abovedot>                                                                             <KP_0> : "♼" U267C # RECYCLED PAPER SYMBOL
 <Multi_key><period>                                                                         <KP_0> : "♼" U267C # RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                                <1> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <1> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_1> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_1> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                                <2> : "♼" U267C # RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <2> : "♼" U267C # RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_2> : "♼" U267C # RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_2> : "♼" U267C # RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                                <3> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <3> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_3> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_3> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                                <4> : "♼" U267C # RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <4> : "♼" U267C # RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_4> : "♼" U267C # RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_4> : "♼" U267C # RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                                <5> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <5> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_5> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_5> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                                <1> : "᷺" U1DFA # COMBINING DOT BELOW LEFT
+<Multi_key><period>                                                                            <1> : "᷺" U1DFA # COMBINING DOT BELOW LEFT
+<dead_abovedot>                                                                             <KP_1> : "᷺" U1DFA # COMBINING DOT BELOW LEFT
+<Multi_key><period>                                                                         <KP_1> : "᷺" U1DFA # COMBINING DOT BELOW LEFT
+<dead_abovedot>                                                                                <2> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><period>                                                                            <2> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                             <KP_2> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><period>                                                                         <KP_2> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                                <3> : "᪴" U1AB4 # COMBINING TRIPLE DOT
+<Multi_key><period>                                                                            <3> : "᪴" U1AB4 # COMBINING TRIPLE DOT
+<dead_abovedot>                                                                             <KP_3> : "᪴" U1AB4 # COMBINING TRIPLE DOT
+<Multi_key><period>                                                                         <KP_3> : "᪴" U1AB4 # COMBINING TRIPLE DOT
+<dead_abovedot>                                                                                <4> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><period>                                                                            <4> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                             <KP_4> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><period>                                                                         <KP_4> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                                <5> : "͒" U0352 # COMBINING FERMATA
+<Multi_key><period>                                                                            <5> : "͒" U0352 # COMBINING FERMATA
+<dead_abovedot>                                                                             <KP_5> : "͒" U0352 # COMBINING FERMATA
+<Multi_key><period>                                                                         <KP_5> : "͒" U0352 # COMBINING FERMATA
 <dead_abovedot>                                                                                <6> : "♼" U267C # RECYCLED PAPER SYMBOL
 <Multi_key><period>                                                                            <6> : "♼" U267C # RECYCLED PAPER SYMBOL
 <dead_abovedot>                                                                             <KP_6> : "♼" U267C # RECYCLED PAPER SYMBOL
 <Multi_key><period>                                                                         <KP_6> : "♼" U267C # RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                                <7> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <7> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_7> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_7> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                                <7> : "᷸" U1DF8 # COMBINING DOT ABOVE LEFT
+<Multi_key><period>                                                                            <7> : "᷸" U1DF8 # COMBINING DOT ABOVE LEFT
+<dead_abovedot>                                                                             <KP_7> : "᷸" U1DF8 # COMBINING DOT ABOVE LEFT
+<Multi_key><period>                                                                         <KP_7> : "᷸" U1DF8 # COMBINING DOT ABOVE LEFT
 <dead_abovedot>                                                                                <8> : "♾" U267E # PERMANENT PAPER SIGN emoji
 <Multi_key><period>                                                                            <8> : "♾" U267E # PERMANENT PAPER SIGN emoji
 <dead_abovedot>                                                                             <KP_8> : "♾" U267E # PERMANENT PAPER SIGN emoji
 <Multi_key><period>                                                                         <KP_8> : "♾" U267E # PERMANENT PAPER SIGN emoji
-<dead_abovedot>                                                                                <9> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                            <9> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<dead_abovedot>                                                                             <KP_9> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
-<Multi_key><period>                                                                         <KP_9> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<dead_abovedot>                                                                                <9> : "͘" U0358 # COMBINING DOT ABOVE RIGHT
+<Multi_key><period>                                                                            <9> : "͘" U0358 # COMBINING DOT ABOVE RIGHT
+<dead_abovedot>                                                                             <KP_9> : "͘" U0358 # COMBINING DOT ABOVE RIGHT
+<Multi_key><period>                                                                         <KP_9> : "͘" U0358 # COMBINING DOT ABOVE RIGHT
 <dead_abovedot>                                                                                <A> : "Ȧ" U0226 # LATIN CAPITAL LETTER A WITH DOT ABOVE
 <Multi_key><period>                                                                            <A> : "Ȧ" U0226 # LATIN CAPITAL LETTER A WITH DOT ABOVE
 <dead_abovedot>                                                                                <a> : "ȧ" U0227 # LATIN SMALL LETTER A WITH DOT ABOVE
@@ -11150,8 +11160,8 @@
 <Multi_key><underscore><underscore>                                                            <v> : "̼" U033C # COMBINING SEAGULL BELOW
 <UEFD2><UEFD2>                                                                                 <W> : "᪶" U1AB6 # COMBINING WIGGLY LINE BELOW
 <Multi_key><underscore><underscore>                                                            <W> : "᪶" U1AB6 # COMBINING WIGGLY LINE BELOW
-<UEFD2><UEFD2>                                                                                 <w> : "̫" U032B # COMBINING INVERTED DOUBLE ARCH BELOW
-<Multi_key><underscore><underscore>                                                            <w> : "̫" U032B # COMBINING INVERTED DOUBLE ARCH BELOW
+<UEFD2><UEFD2>                                                                                 <w> : "ᪿ" U1ABF # COMBINING LATIN SMALL LETTER W BELOW
+<Multi_key><underscore><underscore>                                                            <w> : "ᪿ" U1ABF # COMBINING LATIN SMALL LETTER W BELOW
 <UEFD2><UEFD2>                                                                                 <x> : "͓" U0353 # COMBINING X BELOW
 <Multi_key><underscore><underscore>                                                            <x> : "͓" U0353 # COMBINING X BELOW
 <UEFD2><UEFD2>                                                                                 <z> : "᷏" U1DCF # COMBINING ZIGZAG BELOW
@@ -15420,10 +15430,10 @@
 <Multi_key><exclam>                                                                            <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
-<dead_belowdot>                                                                                <3> : "⁝" U205D # TRICOLON
-<Multi_key><exclam>                                                                            <3> : "⁝" U205D # TRICOLON
-<dead_belowdot>                                                                             <KP_3> : "⁝" U205D # TRICOLON
-<Multi_key><exclam>                                                                         <KP_3> : "⁝" U205D # TRICOLON
+<dead_belowdot>                                                                                <3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><exclam>                                                                            <3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<dead_belowdot>                                                                             <KP_3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><exclam>                                                                         <KP_3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot>                                                                                <4> : "⁞" U205E # VERTICAL FOUR DOTS
 <Multi_key><exclam>                                                                            <4> : "⁞" U205E # VERTICAL FOUR DOTS
 <dead_belowdot>                                                                             <KP_4> : "⁞" U205E # VERTICAL FOUR DOTS
