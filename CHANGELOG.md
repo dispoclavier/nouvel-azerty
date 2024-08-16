@@ -1,6 +1,6 @@
 # Journal des modifications
 
-## 4.0.1 (projet)
+## 4.1.0 (projet)
 
 * Transformations:
 	* Tilde : Ajouter "˔" U+02D4, "˕" U+02D5, "꭪" U+AB6A, "꭫" U+AB6B. (compose-2.yml [67b2c87](https://github.com/dispoclavier/nouvel-azerty/commit/67b2c87366708c633f0f740b721d79c84e0469d1))
