@@ -235,17 +235,18 @@
 #   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
+#   Functionally, NBTSP is a no-break clone of Unicode’s thin space TSP U2009.
+#
+#   When U202F was still mainly called NARROW NO-BREAK SPACE, U2009 THIN SPACE
+#   was called "narrow space" for consistency, and abbreviated "NSP".
+#   https://github.com/unicode-org/cldr/commit/e46774fcb6eaea3c106b29e7011d68c8749aefbb
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#
 #   Imprimerie nationale (France) assumes that big punctuation is spaced out
 #   using either of these spaces:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NBTSP U202F.
-#
-#   Functionally, NBTSP is a no-break clone of Unicode’s thin space TSP U2009.
-#
-#   Consistently, U2009 is preferredly called NARROW SPACE and abbreviated NSP,
-#   matching the name of U202F.
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
 #   This is regular typesetting at Imprimerie nationale except for colon and
 #   quotation marks, although the latter are typeset with narrow space in the
@@ -2618,7 +2619,7 @@
 <Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 #
 #
-#   Symbols for NARROW NO-BREAK SPACE
+#   Symbols for NARROW NO-BREAK SPACE, the no-break thin space NBTSP
 #
 #   "⎍" U238D MONOSTABLE SYMBOL is picked as a flipped narrow shouldered box,
 #   repurposed by lack of an unsuccessful symbol in L2/10-351.
