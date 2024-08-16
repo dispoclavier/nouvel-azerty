@@ -1025,7 +1025,7 @@
 #
 # # C04
 #
-#   The arrows in groups 1 and 2 have alphabetic mnemonics in French, where
+#   The arrows in groups 1 and 2 have alphabetic mnemonic in French, where
 #   an “arrow” is a “flèche”. This is consistent with DIN 2137 since the 2023
 #   revision switched arrows on U and P keys for the right-pointing to be on
 #   “P wie Pfeil”, “arrow” in German.
@@ -1362,7 +1362,7 @@
 #
 #   With respect to mathematical symbols that need to be negated, the positions
 #   in groups 1 to 3 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, then
-#   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonics, as well as for
+#   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonic, as well as for
 #   "∥" U2225 PARALLEL TO (negated "∦" U2226) to prevent any accessibility bias
 #   fostering misuse of "‖" U2016 as "∥" U2225, rather than for single, double
 #   and triple daggers, more extensively supported together with their left or
@@ -1377,10 +1377,11 @@
 #   See # # ACUTE&GROUP_2
 #   See # # ACUTE&GROUP_3
 #
-#   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonics, key F as
-#   an easier alternative, key C12 for hardware compatibility). Its presence in
-#   group 11 is designed only as a fallback, for incomplete layouts as required
-#   to cope with the malware simulator shipped with Windows.
+#   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonic, key C12
+#   for hardware compatibility). Its presence in group 11 is designed only as a
+#   fallback, for incomplete layouts required to cope with a malware simulator
+#   shipped with Windows.
+#   https://dispoclavier.com/nouvel-azerty/#malware-windows
 #
 #   "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol is in group 12 although
 #   it is more easily input through dead_diaeresis followed by backslash.
@@ -2003,7 +2004,7 @@
 #
 # # B09
 #
-#   The watch emoji are mapped here based on the mnemonics of time notation.
+#   The watch emoji are mapped here based on the mnemonic of time notation.
 #
 <UEFD0>                                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><numbersign>                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR
@@ -2190,7 +2191,8 @@
 #
 #   Unlike stated in UAX #14, U2007 is not intended for use *in* figures,
 #   but *before* figures for indentation in tables. Therefore, it is also
-#   called tabular digit space, as opposed to tabular punctuation space.
+#   called tabular digit space, as opposed to the tabular punctuation space
+#   U2008.
 #   https://www.unicode.org/reports/tr14
 #
 #   U205F MEDIUM MATHEMATICAL SPACE is a breaking 4/18 em, or 4½-per-em.
@@ -2904,7 +2906,7 @@
 #   Group 4 on the base alphabet: Latin letters and symbols (continued)
 #
 #   Tbe ties "⁀" U2040 CHARACTER TIE and "‿" U203F UNDERTIE are here by J, with
-#   mnemonics based on the curved tail of the letter.
+#   mnemonic based on the curved tail of the letter.
 #   See #*# TURNED
 #   See #^# INVERTED
 #
@@ -3876,7 +3878,7 @@
 #+# GROUP_6
 #   Group 6 on the base alphabet: Greek letters
 #
-#   This group, using the mnemonics of the Greek dead key in column 6, letter Y
+#   This group, using the mnemonic of the Greek dead key in column 6, letter Y
 #   or Greek i (i grec in French), is an alternative Greek letter input method.
 #   It may be used where the Greek letter dead key is missing.
 #
