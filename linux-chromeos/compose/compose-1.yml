@@ -3784,7 +3784,6 @@
 <Multi_key><p><underscore>                                                          <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><underscore>                                                      <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><underscore>                                               <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
-#   In group 11 of !                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><q><e><d>                                                                       <space> : "∎" U220E # END OF PROOF
 <Multi_key><q><e><d>                                                                <nobreakspace> : "∎" U220E # END OF PROOF
 <Multi_key><c><q><f><d>                                                                    <space> : "∎" U220E # END OF PROOF
