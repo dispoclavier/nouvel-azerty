@@ -133,7 +133,7 @@ Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposé
 
 Les chiffres sont en Minuscule, en Majuscule pour la rétrocompatibilité, et en AltGr pour la synergie avec la touche morte « groupe » tant que le clavier est en mode ASCII par la bascule VerrMod sur la touche [²]. Sinon, en mode français, les chiffres sont en AltGr, afin de libérer les places en Majuscule pour les majuscules É, È, Ç et À et pour les tirets autres que le tiret du 6 et le tiret du 8, qui restent inchangés.
 
-Les chiffres sont toujours aussi en AltFr, la nouvelle touche modificatrice sur la touche [<>]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7], [8], [9], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M]. Le point et la virgule sont aussi en AltFr sur leurs touches traditionnelles quand le clavier est en mode ASCII.
+Les chiffres sont toujours aussi en AltFr, la nouvelle touche modificatrice sur la touche [><]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7], [8], [9], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M]. Le point et la virgule sont aussi en AltFr sur leurs touches traditionnelles quand le clavier est en mode ASCII.
 
 En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en Maj + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
 
@@ -169,9 +169,9 @@ Le guillemet double générique en revanche reste inchangé en mode français, e
 
 La plupart des symboles en Minuscule ou en AltGr sur les touches des chiffres y tiennent désormais des places en Majuscule + AltGr pour la rétrocompatibilité, en mode français uniquement. C’est le cas de la perluète sur Maj + AltGr + [1] parce qu’elle laisse sa place à l’exposant deux, du tilde sur [2] sous la forme de sa traditionnelle touche morte, du croisillon sur [3], de l’accolade ouvrante sur [4], du crochet ouvrant sur [5], de la barre verticale ou tube sur [6], de l’accent grave ASCII en touche morte sur [7], de la contre-oblique sur [8], du crochet fermant et de l’accolade fermante sur les deux dernières touches. Ces places sur [9] et [0] par contre sont utilisées pour disposer les parenthèses, parce que l’arobase est en Minuscule sur la touche suivante, et le circonflexe ASCII est en Majuscule + AltGr sur la touche de la touche morte accent circonflexe. 
 
-Surtout, tous les symboles ASCII sauf la virgule et le point sont désormais disposés en AltGr sur les touches des lettres et les quatre touches de ponctuations qui leur font suite, sauf l’arobase qui reçoit une position stable en Minuscule à la place de la parenthèse fermante et permet ainsi d’utiliser sa place en AltGr sur [Y] pour une deuxième instance de la touche morte grec ou cerclé, et le guillemet double générique ou ASCII, qui garde sa place sur la touche du [3] et cède sa place en AltGr au symbole euro sur [E]. Le symbole dollar lui aussi a une place prédéfinie sur AltGr + [S].
+Surtout, tous les symboles ASCII sauf la virgule et le point sont désormais disposés en AltGr sur les touches des lettres et les quatre touches de ponctuations qui leur font suite, sauf l’arobase qui reçoit une position stable en Minuscule à la place de la parenthèse fermante et permet ainsi d’utiliser sa place en AltGr sur [Y] pour une deuxième instance de la touche morte grec ou cerclé, et le guillemet double générique ou ASCII, qui garde sa place sur la touche [3"] et cède sa place en AltGr au symbole euro sur [E]. Le symbole dollar lui aussi a une place prédéfinie sur AltGr + [S].
 
-Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur la gauche, crochets et accolades sur la droite, ces dernières sur [I] et [O] pour respecter l’anatomie de la main droite, les crochets en dessous sur [K] et [L] pour la cohérence et la synergie avec les points de suspension sur AltGr + [ù], les parenthèses en regard sur [D] et [F] à la suite du [$], sous le [€], et au-dessus des [<] et [>] qui sur [C] et [V] sont disposés à la suite de l’oblique sur [W] et de l’astérisque sur [X] pour les synergies requises en langages informatiques.
+Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur la gauche, crochets et accolades sur la droite, ces dernières sur [I] et [O] pour respecter l’anatomie de la main, les crochets en dessous sur [K] et [L] pour la cohérence et la synergie avec les points de suspension sur AltGr + [ù], les parenthèses en regard sur [D] et [F], sous le symbole euro sur [E], à la suite du symbole dollar sur [S], et au-dessus des symboles inférieur/supérieur ou crochets pointus, qui sont disposés sur [C] et [V] à la suite de l’oblique sur [W] et de l’astérisque sur [X], pour les synergies requises en langages informatiques, au niveau des balises en SGML/HTML/XML et des commentaires (en blocs) C/C++/CSS/PHP.
 
 D’autres symboles ASCII sont disposés sur les places vacantes avec des mnémoniques alphabétiques ou graphiques : la perluète [&] sur [P], le croisillon [#] sur [Q], le symbole pour cent [%] sur [Z], le circonflexe ASCII [^] sur [A], le tilde [~] sur [T], la contre-oblique [\\] sur [R], la barre verticale ou tuyau [|] sur [M] parce que c’est l’équivalent en composition de la touche morte macron, le symbole égal [=] sur [B], l’accent grave ASCII [`] sur [N], le tiret-moins [-] sur [G], le signe plus [+] sur [H], et enfin le tiret bas [_] sur [J], et l’apostrophe ASCII ['] sur [U].
 
@@ -179,7 +179,7 @@ Pour les quatre grandes ponctuations après la touche du [N], le point d’inter
 
 ### Exposants et indices
 
-L’exposant deux de l’AZERTY traditionnel change de touche suite à l’utilisation de sa touche [²] pour la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche du [1], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
+L’exposant deux de l’AZERTY traditionnel change de touche suite à l’utilisation de sa touche [²] pour la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
 
 Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres, et les chiffres en indice y sont en AltGr + AltFr. En mode ASCII, les exposants sont aussi en Maj + AltGr pour une saisie encore plus facile, aux dépens des positions rétrocompatibles, présentes uniquement en mode français. Cela permet d’écrire simplement toutes les fractions ordinaires, au-delà des fractions précomposées en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est aussi bien sur [F] en AltGr + AltFr en synergie avec les indices, que sur [/] en synergie avec les indices en AltGr + AltFr, et avec les exposants en Maj + AltFr (ceci uniquement en mode ASCII, car en mode français, c’est le deux-points sans espace).
 
@@ -239,7 +239,7 @@ En mode ASCII, l’entité numérique de l’espace fine insécable « &‍#x2
 
 Les entités nommées des symboles « < » et « > », soit « &‍lt; » et « &‍gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
 
-Les entités nommées des symboles « " » et « ' », soit « &‍quot; » et « &‍apos; », sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U]. &‍apos; est moins utilisé que &‍quot;.
+Les entités nommées des symboles « " » et « ' », soit « &‍quot; » et « &‍apos; » (moins utilisée), sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U].
 
 #### Références de caractères
 
@@ -253,7 +253,7 @@ Le préfixe « \u{ » est sur AltGr + AltFr + [I], qui est aussi la 
 
 ## Systèmes
 
-Ces fichiers sont développés, testés et compilés sous **Ubuntu 16.04** depuis 2018 et toujours en 2024. Sur la fin, ces fichiers ont aussi été testés sous **Ubuntu 24.04,** où le commutateur affiche certes toutes les dispositions installées, qu’elles soient fournies ou ajoutées, mais ne permet d’en utiliser qu’une seule ; impossible d’utiliser le commutateur pour basculer entre plusieurs dispositions ; bogue confirmé sous **Debian 12.5.0** (datant de 2023) et sous des distributions de Linux postérieures à Ubuntu 16.04 (testé sous **Ubuntu 18.04, Ubuntu 20.04, Linux Mint 21.3** (datant de 2024)).
+Ces fichiers sont développés, testés et fusionnés sous **Ubuntu 16.04** depuis 2018 et toujours en 2024. Sur la fin, ces fichiers ont aussi été testés sous **Ubuntu 24.04,** où le commutateur affiche certes toutes les dispositions installées, qu’elles soient fournies ou ajoutées, mais ne permet d’en utiliser qu’une seule ; impossible d’utiliser le commutateur pour basculer entre plusieurs dispositions ; bogue confirmé sous **Debian 12.5.0** (datant de 2023) et sous des distributions de Linux postérieures à Ubuntu 16.04 (testé sous **Ubuntu 18.04, Ubuntu 20.04, Linux Mint 21.3** (datant de 2024)).
 
 ### Linux Mint
 
@@ -333,7 +333,7 @@ Si l’espacement vieille école est préféré, il peut être réalisé manuell
 
 ### Guillemets
 
-Les guillemets apostrophes et les guillemets doubles génériques (["] sur la touche du [3]) sont collés aux mots, sans aucune espace à l’intérieur. La pratique contraire utilise ces derniers à la place des guillemets chevrons, absents de certaines dispositions de clavier, d’où le quiproquo.
+Les guillemets apostrophes et les guillemets doubles génériques « " » sur la touche [3"] sont collés aux mots, sans aucune espace à l’intérieur. La pratique contraire utilise les guillemets doubles génériques à la place des guillemets chevrons, absents de certaines dispositions de clavier, d’où le quiproquo.
 
 À l’intérieur des guillemets chevrons doubles, l’« espace insécable » décrite sur [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace) est bien l’espace fine, étant la seule espace insécable citée sur cette page web du Robert.
 
@@ -349,9 +349,9 @@ En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscu
 
 #### Guillemets en langues voisines
 
-En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin [»] sur [*], ou [›] sur [$], et en finissant par le guillemet pointant vers le début [«] sur [ù], ou [‹] sur [^].
+En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin « » » sur [*], ou « › » sur [$], et en finissant par le guillemet pointant vers le début « « » sur [ù], ou « ‹ » sur [^].
 
-(On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » [<] ou « supérieur à » [>], réfléchis eux aussi, si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
+(On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » ou « supérieur à », réfléchis eux aussi, si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
 
 Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, comme ils sont disposés en AltFr. Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en Majuscule sur les mêmes touches. Depuis 2015, la Suisse romande applique aux ponctuations exactement les mêmes règles d’espacement que la France.
 
@@ -359,7 +359,7 @@ Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Sui
 
 L’usage des guillemets chevrons simples pour les citations incluses permet de réserver les « guillemets anglais » aux usages où les guillemets ne signalent pas une citation, mais une distanciation. Dans ce sens, les guillemets sont aussi appelés « guillemets d’ironie », bien que l’ironie ne soit pas la seule connotation qu’ils véhiculent. Aussi s’appellent-ils en anglais « scare quotes ».
 
-Plutôt que les guillemets doubles génériques de la touche du [3], les guillemets de distanciation et les guillemets en anglais – que ce soit en anglais britannique ou en anglais américain – sont les guillemets apostrophes doubles (distanciation en français, premier niveau en anglais américain) ou simples (premier niveau en anglais britannique), dont les ouvrants en français et en anglais sont dans la touche morte accent circonflexe, et les fermants, dans la touche morte accent aigu sur la touche à côté, [$].
+Plutôt que les guillemets doubles génériques de la touche [3"], les guillemets de distanciation et les guillemets en anglais – que ce soit en anglais britannique ou en anglais américain – sont les guillemets apostrophes doubles (distanciation en français, premier niveau en anglais américain) ou simples (premier niveau en anglais britannique), dont les ouvrants en français et en anglais sont dans la touche morte accent circonflexe, et les fermants, dans la touche morte accent aigu sur la touche à côté, [$].
 
 En retour, ce système de guillemets de distanciation permet de réserver les guillemets chevrons aux citations. À la clé, les textes gagnent en univocité, et partant, en [clarté](https://www.ledevoir.com/societe/488139/mises-aux-points-les-antiguillemets-comme-symboles-de-la-postverite).
 
