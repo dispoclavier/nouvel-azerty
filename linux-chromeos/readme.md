@@ -153,7 +153,7 @@ L’espacement automatique des ponctuations en Majuscule se fait par la seule es
 
 En cas de points d’interrogation ou d’exclamation multiples, l’espace devant le deuxième est évitée manuellement. Plutôt que de changer de touche modificatrice, on peut maintenir l’appui sur Majuscule et ajouter un appui sur AltFr.
 
-En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points ni le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
+En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points et le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
 
 #### Ponctuations en haut
 
@@ -185,6 +185,12 @@ Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Ma
 
 Alors que les exposants de toutes les minuscules servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », seul le plus fréquent, « ᵉ », est en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Mais toutes les minuscules en exposant sont en Maj + AltFr, chacun sur la touche de sa lettre de base. Les accents peuvent être ajoutés en appuyant sur une touche morte et ensuite sur la barre d’espace. L’accent sera placé parfaitement sur le ᵉ pour peu que la police de caractères le prenne en charge conformément au modèle de codage d’Unicode, qui vaut aussi bien pour les lettres de base que pour leurs exposants et indices.
 
+### Barre d’espace
+
+L’espace normale en Minuscule y est aussi en Majuscule comme sur l’AZERTY traditionnel, pour la synergie avec les grandes ponctuations espacées, tandis que les deux [espaces insécables](#espaces) les plus utiles sont en AltFr pour la fine, et en AltGr pour la justifiante, l’espace insécable tout court, qui dans les traitements de texte n’est justifiante que dans Word 2013, qui disparaît souvent au copier-coller, et qui dysfonctionne dans de nombreux logiciels, mais qui est néanmoins indispensable comme alternative à l’espace fine insécable.
+
+Aucune espace importante n’est disposée sur Maj + AltGr + Espace, où se trouve l’espace nulle, aussi appelée césure conditionnelle U+200B, qui est utile pour fragmenter les URL une fois converties en hyperlien, pour leur affichage dans les navigateurs non conformes à Unicode qui spécifie que l’oblique doit fonctionner comme les traits d’union.
+
 ### Autres symboles
 
 La plupart des symboles sont dans les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), mais un certain nombre sont aussi ou uniquement sur touches vives comme documenté ici.
@@ -195,7 +201,7 @@ Les infobulles de la [vue interactive](https://dispoclavier.com/nouvel-azerty/#v
 
 #### Symboles de l’AZERTY
 
-Les symboles pour cent [%] et micro [µ], le symbole livre [£] et la touche morte tréma [¨] cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en AltGr + AltFr sur leurs touches historiques. La nouvelle place du [symbole ASCII](#symboles-ascii) pour cent est sur [Z] en AltGr et en AltFr ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en AltGr + AltFr + [L] pour l’intuitivité, comme le symbole micro est sur AltGr + AltFr + [M].
+Les symboles pour cent et micro, le symbole livre et la touche morte tréma cèdent leurs places aux guillemets français, mais en mode français, ils sont tous en AltGr + AltFr sur leurs touches historiques. La nouvelle place du symbole pour cent est sur [Z] en AltGr et en AltFr, dans le cadre de la disposition des [symboles ASCII](#symboles-ascii) ; le symbole livre est en AltFr sur [R] pour l’accessibilité, et en AltGr + AltFr + [L] pour l’intuitivité, comme le symbole micro est sur AltGr + AltFr + [M].
 
 #### Exposants et indices additionnels
 
@@ -225,7 +231,7 @@ La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisé
 
 Le trigramme breton « cʼh » avec lettre apostrophe est sur AltGr + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton. Sa majuscule « Cʼh » est sur Maj + AltGr + AltFr + [A], tandis que sa capitale s’insère à la place de la minuscule quand les capitales sont verrouillées. Ce n’est pas qu’il manquerait la lettre apostrophe, dans le groupe 1 de l’apostrophe.
 
-#### Espaces
+#### Espaces composées
 
 L’espace suivie du gluon qui est le caractère régulier pour empêcher un retour à la ligne automatique : cette séquence est sur Maj + AltFr + [Espace], pour insérer une espace insécable justifiante dans LibreOffice Writer parce que l’espace insécable sur AltGr + Espace y est à chasse fixe pour espacer les ponctuations en français.
 
@@ -233,7 +239,7 @@ L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + Alt
 
 L’entité nommée de l’espace insécable « &‍nbsp; » est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
 
-En mode ASCII, l’entité numérique de l’espace fine insécable « &‍#x202F; » est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
+En mode ASCII, la référence de caractère numérique de l’espace fine insécable « &‍#x202F; » est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
 
 #### Séquences d’échappement
 
@@ -261,7 +267,7 @@ Ce nouvel AZERTY ne peut pas être installé normalement sous [Linux Mint Cinnam
 
 #### Bogue d’AltFr
 
-Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qui s’y appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant que `ISO_Level3_Shift` est bien distincte.
+Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qui s’y appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant qu’`ISO_Level3_Shift` est bien distincte.
 
 Quand il est en cours d’exécution, ce bogue désactive les ponctuations non espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, tout ou partie des fonctionnalités disposées aux niveaux 5 à 8.
 
@@ -327,9 +333,9 @@ Un autre nom de l’espace fine insécable, « espace insécable étroite »
 
 #### Espacement vieille école
 
-Si l’espacement vieille école est préféré, il peut être réalisé manuellement grâce à la synergie de l’espace insécable avec le deux-points en AltGr. Car en plus d’être disposé en Majuscule avec espace et en AltFr sans espace, le deux-points sans espace est aussi en AltGr, pour la synergie avec les chiffres dans le format d’heure « 12:34:56 », qui est facile à faire aussi en AltFr, mais surtout pour la synergie avec l’espace insécable, qui en mode français est sur AltGr + Espace.
+Si l’espacement vieille école est préféré, il peut être réalisé manuellement grâce à la synergie de l’espace insécable avec le deux-points en AltGr. Car en plus d’être disposé en Majuscule avec espace et en AltFr sans espace, le deux-points sans espace est aussi en AltGr, pour la synergie avec les chiffres dans le format d’heure « 12:34:56 », qui est aussi facile à saisir en AltFr, et aussi pour la synergie avec l’espace insécable, qui en mode français est sur AltGr + Espace.
 
-À part le deux-points, aucune autre ponctuation ne devrait être composée à l’ancienne, car les guillemets, qui selon le *Lexique* de l’Imprimerie nationale sont accompagnés d’une **espace mot insécable** (« espace mots insécable »), sont composés avec une **espace fine** (« espace fine insécable ») dans ce même *Lexique des règles typographiques en usage à l’Imprimerie nationale.*
+À part le deux-points, aucune autre ponctuation ne devrait être composée à l’ancienne, car les guillemets, qui selon le *Lexique des règles typographiques en usage à l’Imprimerie nationale* sont accompagnés d’une **espace mot insécable** (« espace mots insécable »), sont composés avec une **espace fine** (« espace fine insécable ») dans ce même *Lexique.*
 
 ### Guillemets
 
@@ -353,7 +359,7 @@ En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent a
 
 (On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » ou « supérieur à », réfléchis eux aussi, si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
 
-Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, comme ils sont disposés en AltFr. Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en Majuscule sur les mêmes touches. Depuis 2015, la Suisse romande applique aux ponctuations exactement les mêmes règles d’espacement que la France.
+Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Suisse utilise tous ces guillemets dans le sens français, toujours les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, et toujours sans espace fine à l’intérieur, comme ils sont disposés en AltFr. Par contre, en français de Suisse, les mêmes guillemets s’utilisent avec une fine à l’intérieur, comme ils sont disposés en Majuscule sur les mêmes touches. Depuis 2015, la Suisse romande applique aux ponctuations les mêmes règles d’espacement que la France.
 
 #### Guillemets de distanciation
 
@@ -369,7 +375,7 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [Q] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [Q], le liant U+200D sur AltGr + AltFr + [W], et le gluon U+2060 sur AltGr + AltFr + [G]. Les trois sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A] et de l’arobase sur [Y], le liant dans le même groupe du symbole pour cent sur [Z], et le gluon dans le même groupe du tiret du 6 sur [G].
 
-L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer quelque chose d’invisible qui ne soit pas l’espace nulle, aussi appelée césure conditionnelle U+200B, qui elle, est disposée sur Maj + AltGr + Espace vu sa grande utilité pour fragmenter les URL (après leur conversion en hyperlien) pour leur affichage dans les navigateurs non conformes à Unicode (qui spécifie que l’oblique doit fonctionner comme les traits d’union.
+L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’[espace nulle](#espace-nulle).
 
 ### Extensions de fichiers
 
