@@ -13,8 +13,8 @@
 * Documentation :
 	* Mettre à jour le nom anglais de l’espace fine insécable U+202F. (compose-1.yml [386fa78](https://github.com/dispoclavier/nouvel-azerty/commit/386fa78123de7ef4a18af4a55603a43e1af3bce9), [9241b1a](https://github.com/dispoclavier/nouvel-azerty/commit/9241b1a2e3553150261c7fdb6031416a801af3e4), [1462c6a](https://github.com/dispoclavier/nouvel-azerty/commit/1462c6a62467e5ff96069499b6b9b40e1f7ebf4c), compose-2.yml [7d92df0](https://github.com/dispoclavier/nouvel-azerty/commit/7d92df027cb5b73ef4794480c4f8a2eb5c68a359))
 	* Corriger l’abréviation de l’espace fine U+2009 et autres. (ibidem, compose-3.yml [fce1ab7](https://github.com/dispoclavier/nouvel-azerty/commit/fce1ab7fdc020921f9558010170516dbdae27710))
+	* Corriger le mode d’emploi. (linux-chromeos/readme.md [7e9a5ab](https://github.com/dispoclavier/nouvel-azerty/commit/7e9a5abc88c3378946db1732998e926f227f9a3c), [4a08530](https://github.com/dispoclavier/nouvel-azerty/commit/4a08530899d595c3c9402cdd94ac6cd31a4ea8c0))
 	* Orthographe. (compose-1.yml [3746f5e](https://github.com/dispoclavier/nouvel-azerty/commit/3746f5e053db16f0e93514714b88ae1bd01226b4), compose-2.yml [67b2c87](https://github.com/dispoclavier/nouvel-azerty/commit/67b2c87366708c633f0f740b721d79c84e0469d1), compose-3.yml [92a0ade](https://github.com/dispoclavier/nouvel-azerty/commit/92a0ade87078b18982e09104b8e625b2a6e64aee))
-
 
 ## 4.0.0 (2024-08-11)
 
@@ -23,7 +23,9 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 * Disposition :
 	* Mettre les ponctuations espacées à la place des ponctuations non espacées en Maj, qui prennent les places en AltFr laissées par les ponctuations espacées. (dispocla.cpp [ba9f321](https://github.com/dispoclavier/nouvel-azerty/commit/ba9f321504bc8042429bf931eb6f47d403d7fe13), dispotypes [e41b05b](https://github.com/dispoclavier/nouvel-azerty/commit/e41b05b03fa268244027b9a8ca2caba8035889e2))
 	* Redonder l’opérateur point "⋅" U+22C5 sur AltGr + AltFr + X à la place du liant U+200D, qui prend la place de l’antiliant U+200C sur AltGr + AltFr + W, qui prend la place du ":" U+003A sur AltGr + AltFr + Q, qui est sur AltFr + la touche du deux-points.
-* Documentation. (compose-1.yml [0e1aedf](https://github.com/dispoclavier/nouvel-azerty/commit/0e1aedfb0b6646f672fa511567adf3141b071532), compose-2.yml [eaf2807](https://github.com/dispoclavier/nouvel-azerty/commit/eaf2807c711908fa26273a72ee573fc2c3c88f24))
+* Documentation :
+	* Mettre à jour le mode d’emploi. (linux-chromeos/readme.md [3ab3d33](https://github.com/dispoclavier/nouvel-azerty/commit/3ab3d3331d0a3196936feb33a66bcba6e22cd8ff))
+	* Mettre à jour le code source. (compose-1.yml [0e1aedf](https://github.com/dispoclavier/nouvel-azerty/commit/0e1aedfb0b6646f672fa511567adf3141b071532), compose-2.yml [eaf2807](https://github.com/dispoclavier/nouvel-azerty/commit/eaf2807c711908fa26273a72ee573fc2c3c88f24))
 
 ## 3.5.1 (2024-08-10)
 
