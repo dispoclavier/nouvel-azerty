@@ -469,10 +469,10 @@
 #
 # # D05
 #
-<UEFD0>                                                                               <asciitilde> : "∼" U223C # TILDE OPERATOR
-<Multi_key><numbersign>                                                               <asciitilde> : "∼" U223C # TILDE OPERATOR
-<UEFD0><UEFD0>                                                                        <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-<Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+<UEFD0>                                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+<Multi_key><numbersign>                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+<UEFD0><UEFD0>                                                                        <asciitilde> : "≈" U2248 # ALMOST EQUAL TO
+<Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≈" U2248 # ALMOST EQUAL TO
 <UEFD0><3>                                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
 <Multi_key><numbersign><3>                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
 <UEFD0><KP_3>                                                                         <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO
