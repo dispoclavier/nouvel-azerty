@@ -3955,6 +3955,11 @@
 #   In group 10 of !                                                                               : "∵" U2235 # BECAUSE
 <Multi_key><period><period><period><v>                                                     <space> : "∵" U2235 # BECAUSE
 <Multi_key><period><period><period><v>                                              <nobreakspace> : "∵" U2235 # BECAUSE
+#   "∶" U2236 RATIO is disunified from the colon with the rationale that
+#   unlike the punctuation, it is visibly padded as a relational operator.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
+#   Additionally its vertical alignment matches digits, not the x height.
+#   https://github.com/microsoft/cascadia-code/issues/572
 <Multi_key><space><colon>                                                                  <space> : "∶" U2236 # RATIO
 <Multi_key><space><colon>                                                           <nobreakspace> : "∶" U2236 # RATIO
 <Multi_key><nobreakspace><colon>                                                           <space> : "∶" U2236 # RATIO
@@ -3973,7 +3978,9 @@
 <Multi_key><colon><asciitilde>                                                      <nobreakspace> : "∻" U223B # HOMOTHETIC
 <Multi_key><asciitilde><colon>                                                             <space> : "∻" U223B # HOMOTHETIC
 <Multi_key><asciitilde><colon>                                                      <nobreakspace> : "∻" U223B # HOMOTHETIC
-#   In group 1 of ~                                                                                : "∼" U223C # TILDE OPERATOR
+#   "∼" U223C TILDE OPERATOR was disunified from ASCII tilde without rationale.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
+#   Looking like a pointless duplicate, not supported in group 1 of "~" U007E.
 <Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><space><asciitilde>                                                      <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><nobreakspace><asciitilde>                                                      <space> : "∼" U223C # TILDE OPERATOR
@@ -4000,11 +4007,10 @@
 <Multi_key><asciitilde><slash>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
 <Multi_key><minus><asciitilde>                                                             <space> : "≂" U2242 # MINUS TILDE
 <Multi_key><minus><asciitilde>                                                      <nobreakspace> : "≂" U2242 # MINUS TILDE
-#   In group 2 of ~                                                                                : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-#   In #*# TILDE                                                                                   : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
+#   In group 1 of ~                                                                                : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus>                                                             <space> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus>                                                      <nobreakspace> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
-#   In # # STROKE&GROUP_2                                                                          : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
+#   In # # STROKE&GROUP_1                                                                          : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 #   In # # STROKE&TILDE                                                                            : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                                      <space> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                               <nobreakspace> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
@@ -4021,7 +4027,7 @@
 #   In #^# SHORT_STROKE                                                                            : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                                      <space> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                               <nobreakspace> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-#   In #^# MIDDLE_TILDE                                                                            : "≈" U2248 # ALMOST EQUAL TO
+#   In group 2 of ~                                                                                : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><space><asciitilde><asciitilde>                                                 <space> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><space><asciitilde><asciitilde>                                          <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><nobreakspace><asciitilde><asciitilde>                                          <space> : "≈" U2248 # ALMOST EQUAL TO
