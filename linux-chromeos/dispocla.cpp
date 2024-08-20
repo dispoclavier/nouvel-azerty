@@ -1,4 +1,4 @@
-//                       Date: 2024-08-11T0255+0200
+//                       Date: 2024-08-20T1246+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -806,9 +806,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; UEF8D '&quot;'
 
 	key <AD04> {
-		[                   r,                   R,           backslash,            sterling,               UEFD6,               U02B3,             radical,              U1F914 ],
-		[                   r,                   R,           backslash,            sterling,               UEFD6,               U02B3,             radical,              U1F914 ]
-	}; // U02B3 ʳ MODIFIER LETTER SMALL R; UEFD6 *dead_reversed; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
+		[                   r,                   R,           backslash,            sterling,               UEFD6,               U02B3,               U2236,              U1F914 ],
+		[                   r,                   R,           backslash,            sterling,               UEFD6,               U02B3,               U2236,              U1F914 ]
+	}; // U02B3 ʳ MODIFIER LETTER SMALL R; UEFD6 *dead_reversed; U2236 ∶ RATIO; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
 
 	key <AD05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
