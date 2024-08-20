@@ -2,29 +2,47 @@
 
 ## 4.1.0 (projet)
 
+* Disposition : Redonder "∶" U+2236 sur AltGr + AltFr + R à la place de "√" U+221A, qui est dans le groupe 2 de "\" U+005C avec "∛" U+221B dans le groupe 3 et "∜" U+221C dans le groupe 4. (dispocla.cpp [173f7b0](https://github.com/dispoclavier/nouvel-azerty/commit/173f7b0b728821c322c241cba5e306a26f232dc8))
 * Transformations:
 	* Exposant :
 		* Ajouter "˸" U+02F8, qui était dans tréma souscrit. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
-	* Exposant et groupe 1 : Ajouter "𐞁" U+10781, "𐞂" U+10782. (ibidem)
+		* Ajouter "ꜝ" U+A71D. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+	* Exposant et groupe 1 : Ajouter "𐞁" U+10781, "𐞂" U+10782. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
+	* Exposant > Suscrit et groupe 1 :
+		* Ajouter "ᫌ" U+1ACC, "ᫍ" U+1ACD, "ᫎ" U+1ACE. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+		* Supprimer "ᷣ" U+1DE3, qui va dans le groupe 2. (ibidem)
+	* Exposant > Suscrit et groupe 2 : Ajouter pour "ᷣ" U+1DE3. (ibidem)
+	* Exposant > Suscrit et groupe 12 : Ajouter "ᫌ" U+1ACC, "ᫍ" U+1ACD, "ᫎ" U+1ACE. (ibidem)
+	* Double accent aigu > Triple accent aigu : Ajouter pour  "᫋" U+1ACB. (ibidem)
 	* Tilde :
 		* Ajouter "˔" U+02D4, "˕" U+02D5, "꭪" U+AB6A, "꭫" U+AB6B. (compose-2.yml [67b2c87](https://github.com/dispoclavier/nouvel-azerty/commit/67b2c87366708c633f0f740b721d79c84e0469d1))
 		* Ajouter "͠" U+0360 à la place de "”" U+201D, qui est dans accent aigu. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
 		* Compléter les séquences de "⁓" U+2053. (ibidem)
-		* Supprimer "̰" U+0330, qui est dans tilde médian. (ibidem)
+		* Redonder "͌" U+034C à la place de "≃" U+2243, qui est en composition et va dans le groupe 1 de "~" U+007E (et y était dans le groupe 2). (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+		* Supprimer "̰" U+0330, qui est dans tilde médian. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
 		* Supprimer "̴" U+0334, qui va dans tilde médian. (ibidem)
 	* Tilde et tourné : Ajouter pour "̾" U+033E, "ⸯ" U+2E2F. (ibidem)
 	* Tilde et barré : Ajouter pour "͊" U+034A. (ibidem)
 	* Tilde et drapeau : Ajouter pour "͌" U+034C. (ibidem)
-	* Tilde et tréma : Ajouter "͋" U+034B.
-	* Tilde > Tilde médian : Rajouter "̴" U+0334. (ibidem)
+	* Tilde et tréma : Ajouter "͋" U+034B. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+	* Tilde > Tilde médian :
+		* Rajouter "̴" U+0334. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
+		* Ajouter "᷽" U+1DFD à la place de "≈" U+2248, qui est en composition et va dans le groupe 2 de "~" U+007E. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+	* Grec ou cerclé et indice : Ajouter "ᴦ" U+1D26, "ᴧ" U+1D27, "ᴨ" U+1D28, "ᴩ" U+1D29, "ᴪ" U+1D2A, "ᵦ" U+1D66, "ᵧ" U+1D67, "ᵨ" U+1D68, "ᵩ" U+1D69, "ᵪ" U+1D6A. (ibidem)
 	* Point en chef : Ajouter "͒" U+0352, "͘" U+0358, "᪴" U+1AB4, "᷸" U+1DF8, "᷺" U+1DFA. (compose-2.yml [adebfe4](https://github.com/dispoclavier/nouvel-azerty/commit/adebfe4b6b60fc71b4c3e96da2d419a4dc2e2e96))
 	* Point en chef et accent aigu : Ajouter "᷁" U+1DC1. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
 	* Point en chef et accent grave : Ajouter "᷀" U+1DC0. (ibidem)
 	* Brève : Corriger les séquences de "͝" U+035D. (ibidem)
 	* Brève et macron : Ajouter pour "᷋" U+1DCB. (ibidem)
-	* Brève > Brève souscrite : Corriger les séquences de "͜" U+035C (ibidem)
+	* Brève et point en chef : Ajouter pour "̐" U+0310. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+	* Brève > Brève souscrite : Corriger les séquences de "͜" U+035C (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
 	* Ogonek > Ogonek en chef : Ajouter pour "᷎" U+1DCE. (ibidem)
-	* Indice > Combinant souscrit : Ajouter "ᪿ" U+1ABF à la place de "̫" U+032B, qui est dans le groupe 12 de m. (compose-2.yml [adebfe4](https://github.com/dispoclavier/nouvel-azerty/commit/adebfe4b6b60fc71b4c3e96da2d419a4dc2e2e96))
+	* Indice : Ajouter "ᴦ" U+1D26, "ᴧ" U+1D27, "ᴨ" U+1D28, "ᴩ" U+1D29, "ᴪ" U+1D2A, "ᵦ" U+1D66, "ᵧ" U+1D67, "ᵨ" U+1D68, "ᵩ" U+1D69, "ᵪ" U+1D6A. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+	* Indice et groupe 6 : Ajouter pour "ᴦ" U+1D26, "ᴧ" U+1D27, "ᴨ" U+1D28, "ᴩ" U+1D29, "ᴪ" U+1D2A, "ᵦ" U+1D66, "ᵧ" U+1D67, "ᵨ" U+1D68, "ᵩ" U+1D69, "ᵪ" U+1D6A. (ibidem)
+	* Indice > Souscrit :
+		* Ajouter "ᪿ" U+1ABF à la place de "̫" U+032B, qui est dans le groupe 12 de m. (compose-2.yml [adebfe4](https://github.com/dispoclavier/nouvel-azerty/commit/adebfe4b6b60fc71b4c3e96da2d419a4dc2e2e96))
+		* Ajouter "᪵" U+1AB5. (compose-2.yml [c050474](https://github.com/dispoclavier/nouvel-azerty/commit/c050474fd0b841ff9f71ad315cce4594230ccbdf))
+	* Indice > Souscrit et tourné : Ajouter pour "ᫀ" U+1AC0. (ibidem)
 	* Macron : Ajouter "͞" U+035E, "︦" U+FE26. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
 	* Macron et brève : Ajouter pour "᷌" U+1DCC. (ibidem)
 	* Macron > Macron souscrit : Ajouter "͟" U+035F, "︭" U+FE2D. (ibidem)
@@ -37,6 +55,7 @@
 	* Tréma et rond en chef : Ajouter pour "᪱" U+1AB1. (compose-2.yml [34dac7f](https://github.com/dispoclavier/nouvel-azerty/commit/34dac7f4edca177b1629186c8092adca575ffd1d))
 	* Tréma > Tréma souscrit : Redonder "‥" U+2025 à la place de "˸" U+02F8, qui va dans exposant. (ibidem)
 	* Groupes des symboles :
+		* Groupe 2 de "~" U+007E : Redonder "≈" U+2248 à la place de "≃" U+2243, qui prend la place de "∼" U+223C, qui est en composition (et est un doublon de "~" U+007E). (compose-3.yml [26ccb63](https://github.com/dispoclavier/nouvel-azerty/commit/26ccb63af7e56d1a72acc6279f79e76e759bc5d7), compose-1.yml [544cb51](https://github.com/dispoclavier/nouvel-azerty/commit/544cb516d2a2d705313f76855b5a60ba4a6e5ae3))
 		* Groupe 11 de "!" U+0021 : Ajouter "⸙" U+2E19 à la place de "∎" U+220E, qui est en composition. (compose-3.yml [4d31de6](https://github.com/dispoclavier/nouvel-azerty/commit/4d31de65dd1cb263f10b6eb65a9d7f43d0b434ca), compose-1.yml [98c1039](https://github.com/dispoclavier/nouvel-azerty/commit/98c103904a989a6a58dd5fa50aabd7f3399c3dd8))
 		* Groupe 11 de ":" U+003A : Mettre "⁝" U+205D à la place de "⁚" U+205A, qui est dans point souscrit. (compose-3.yml [4d31de6](https://github.com/dispoclavier/nouvel-azerty/commit/4d31de65dd1cb263f10b6eb65a9d7f43d0b434ca))
 * Documentation :
