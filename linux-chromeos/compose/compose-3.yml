@@ -469,6 +469,17 @@
 #
 # # D05
 #
+#   The positions in groups 1 through 3 could be used for single, double and
+#   triple daggers for the sake of mnemonics, but they are not, as daggers are
+#   more extensively supported together with their left/right guard or turned
+#   counterparts in tilde followed by digits 1 through 6,
+#   See #*# TILDE
+#
+#   Another reason is that these three tilde-based operators are useful, unlike
+#   "∼" U223C TILDE OPERATOR that was disunified from ASCII tilde while Unicode
+#   is unable to provide any rationale for this disunification.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
+#
 <UEFD0>                                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><numbersign>                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <UEFD0><UEFD0>                                                                        <asciitilde> : "≈" U2248 # ALMOST EQUAL TO
@@ -1362,20 +1373,17 @@
 #
 #   With respect to mathematical symbols that need to be negated, the positions
 #   in groups 1 to 3 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, then
-#   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonic, as well as for
-#   "∥" U2225 PARALLEL TO (negated "∦" U2226) to prevent any accessibility bias
-#   fostering misuse of "‖" U2016 as "∥" U2225, rather than for single, double
-#   and triple daggers, more extensively supported together with their left or
-#   right guard or turned counterparts in tilde followed by digits 1 through 6.
-#   They would be in groups 1 through 3 of asciitilde for the sake of mnemonics
-#   but should not oust those three tilde-based operators either.
-#   See #*# TILDE
+#   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonic, and ultimately
+#   "∥" U2225 PARALLEL TO, negated as "∦" U2226, This is required to prevent an
+#   accessibility bias fostering misuse of "‖" U2016 as "∥" U2225.
 #   See # # STROKE&GROUP_1
-#   See # # ACUTE&GROUP_1
 #   See # # STROKE&GROUP_2
 #   See # # STROKE&GROUP_3
-#   See # # ACUTE&GROUP_2
-#   See # # ACUTE&GROUP_3
+#
+#   What these positions are not used for is single, double and triple daggers,
+#   more extensively supported together with their left/right guard or turned
+#   counterparts in tilde followed by digits 1 through 6.
+#   See #*# TILDE
 #
 #   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonic, key C12
 #   for hardware compatibility). Its presence in group 11 is designed only as a
