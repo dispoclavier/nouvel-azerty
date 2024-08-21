@@ -3817,12 +3817,12 @@
 <dead_doubleacute>                                                                         <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
 <Multi_key><EuroSign>                                                                      <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
-<dead_doubleacute>                                                                      <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
-<Multi_key><quotedbl>                                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
-<Multi_key><EuroSign>                                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
-<dead_doubleacute>                                                                      <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
-<Multi_key><quotedbl>                                                                   <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
-<Multi_key><EuroSign>                                                                   <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_doubleacute>                                                                    <apostrophe> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><quotedbl>                                                                 <apostrophe> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><EuroSign>                                                                 <apostrophe> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<dead_doubleacute>                                                          <rightsinglequotemark> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><quotedbl>                                                       <rightsinglequotemark> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><EuroSign>                                                       <rightsinglequotemark> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_doubleacute>                                                                         <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
 <Multi_key><EuroSign>                                                                      <equal> : "˶" U02F6 # MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
@@ -4536,19 +4536,6 @@
 <Multi_key><asciitilde><slash>                                                             <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <dead_stroke><dead_tilde>                                                                  <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <Multi_key><slash><asciitilde>                                                             <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
-#
-#
-# # TILDE&FLAG
-#   Dchar: 
-#
-<dead_tilde><UEFD7>                                                                        <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<Multi_key><asciitilde><equal>                                                             <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<UEFD7><dead_tilde>                                                                        <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<Multi_key><equal><asciitilde>                                                             <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<dead_tilde><UEFD7>                                                                        <U200B> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<Multi_key><asciitilde><equal>                                                             <U200B> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<UEFD7><dead_tilde>                                                                        <U200B> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<Multi_key><equal><asciitilde>                                                             <U200B> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 #
 #
 # # TILDE&DIAERESIS
@@ -12263,20 +12250,6 @@
 <Multi_key><slash><numbersign><2>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_stroke><UEFD0><KP_2>                                                                     <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_2>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-#
-#
-# # STROKE&TILDE
-#   Dchar: 
-#
-<dead_stroke><dead_tilde>                                                                  <equal> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
-<Multi_key><slash><asciitilde>                                                             <equal> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
-#
-#
-# # STROKE&MIDDLE_TILDE
-#   Dchar: 
-#
-<dead_stroke><dead_tilde><dead_tilde>                                                      <equal> : "≉" U2249 # NOT ALMOST EQUAL TO
-<Multi_key><slash><asciitilde><asciitilde>                                                 <equal> : "≉" U2249 # NOT ALMOST EQUAL TO
 #
 #
 # # STROKE&ACUTE
