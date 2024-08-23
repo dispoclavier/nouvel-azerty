@@ -20,7 +20,7 @@ Télécharger le dossier « `Nouvel-AZERTY-Linux-`version`.zip` » sous le t
 
 ### Script d’installation : mode d’emploi
 
-Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve ici sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
 
 Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./installer.sh` après avoir ouvert le dossier dans un terminal.
 
@@ -187,7 +187,7 @@ Alors que les exposants de toutes les minuscules servent d’indicateurs d’abr
 
 ### Barre d’espace
 
-L’espace normale en Minuscule y est aussi en Majuscule comme sur l’AZERTY traditionnel, pour la synergie avec les grandes ponctuations espacées, tandis que les deux [espaces insécables](#espaces) les plus utiles sont en AltFr pour la fine, et en AltGr pour la justifiante, l’espace insécable tout court, qui dans les traitements de texte n’est justifiante que dans Word 2013, qui disparaît souvent au copier-coller, et qui dysfonctionne dans de nombreux logiciels, mais qui est néanmoins indispensable comme alternative à l’espace fine insécable.
+L’espace normale en Minuscule y est aussi en Majuscule comme sur l’AZERTY traditionnel, pour la synergie avec les grandes ponctuations espacées, tandis que les deux [espaces insécables](#espaces) les plus utiles sont en AltFr pour la fine, et en AltGr pour la justifiante, l’espace insécable tout court, qui dans les traitements de texte n’est justifiante que dans Word 2013, qui disparaît souvent au copier-coller, et qui dysfonctionne dans de nombreux logiciels, mais qui est néanmoins indispensable en français aussi, là où l’espace fine insécable ne convient pas.
 
 Aucune espace importante n’est disposée sur Maj + AltGr + Espace, où se trouve l’espace nulle, aussi appelée césure conditionnelle U+200B, qui est utile pour fragmenter les URL une fois converties en hyperlien, pour leur affichage dans les navigateurs non conformes à Unicode qui spécifie que l’oblique doit fonctionner comme les traits d’union.
 
