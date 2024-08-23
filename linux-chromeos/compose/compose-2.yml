@@ -88,7 +88,7 @@
 #
 #   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
 #   the parentheses-breve scheme to circumflex and hacek, macron and diaeresis.
-#   For example, new-school Multi_key sequences include ¦^ for superscript,
+#   For example, new-school multi-key sequences include ¦^ for superscript,
 #   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
 #   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
 #   conflicts with the dead key based input method for apostrophe/comma-shaped
@@ -98,7 +98,7 @@
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose, <comma>
 #   is used for both dead_cedilla and dead_ogonek, resulting in a conflict on E
 #   that en_US.UTF-8/Compose works around by using <cedilla> instead of <comma>
-#   in the Multi_key sequences yielding U0228 and U0229. If <semicolon> were
+#   in the multi-key sequences yielding U0228 and U0229. If <semicolon> were
 #   used as the Multi_key equivalent of both dead_belowcomma and dead_ogonek,
 #   the result would be yet another dead key merger, rightfully avoided in
 #   en_US.UTF-8/Compose.
@@ -650,7 +650,7 @@
 #   <UEFD9>                  <*dead_legacytilde>        "~" U007E TILDE
 #   <UEFDA>                  <*dead_legacygrave>        "`" U0060 GRAVE ACCENT
 #
-#   The Multi_key sequences by contrast are built using generic dead characters
+#   The multi-key sequences by contrast are built using generic dead characters
 #   in a private use area, because there are too many of them, and it is better
 #   to have a .notdef box output on failure rather than an unintended character
 #   or two of them (on Windows).
@@ -3800,7 +3800,7 @@
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
 #
-#   Multi_key sequences with quotedbl are duplicated with EuroSign, to account
+#   Multi-key sequences with quotedbl are duplicated with EuroSign, to account
 #   for the mapping of EuroSign instead of quotedbl for compliance with current
 #   hardware and the European Commission’s recommendation.
 #   See dispocla.cpp // ## Note about EURO SIGN
@@ -6780,19 +6780,20 @@
 #   and ease of input thanks to availability of the P positions.
 #   See #^# CURL
 #
-#   RETROFLEX_HOOK supports the full set of 10 recycling symbols in Unicode,
-#   consistently with the paper symbols in dead_abovedot, with alphabetic or
-#   graphic mnemonic based on the letters these dead keys are on. For these
-#   symbols, the R mnemonic is not possible, since the REVERSED dead key is
-#   used for mathematical backslash shaped symbols consistently with STROKE,
-#   but O (where this dead key is on) offers graphic mnemonic, based on the
-#   letter shape and the cycling idea. The neighborship with DOT_ABOVE on P
-#   also has a mnemonic upside.
+#   RETROFLEX_HOOK supports the full set of 10 recycling symbols, consistently
+#   with the paper symbols in dead_abovedot, with graphic mnemonic based on the
+#   shape of the letter O this dead key is on, and the cycling idea.
+#   The neighborship with DOT_ABOVE on P also has a mnemonic upside.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# DOT_ABOVE
+#   See # # D04
 #
-#   By lack of anything more appropriate, the spacing modifier slot is filled
-#   in with "˾" U02FE MODIFIER LETTER OPEN SHELF.
+#   For these symbols, the R mnemonic is not possible, since the REVERSED dead
+#   key is used for mathematical backslash shaped symbols.
+#   See #*# STROKE,
+#
+#   The spacing modifier slot is filled in with "˾" U02FE MODIFIER LETTER OPEN
+#   SHELF, by lack of anything more appropriate.
 #
 <UEFD4>                                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <Multi_key><braceright>                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
@@ -7291,7 +7292,7 @@
 #   For i and j, dead_abovedot results in DOTLESS, applying binary logic. As a
 #   consequence, dotless letters do not need support on live keys or in groups.
 #
-#   This supports various combining dots with digits as base characters and
+#   This supports various combining dots, with digits as base characters, and
 #   with numpad-based mnemonics:
 #
 #       1    "᷺" U1DFA COMBINING DOT BELOW LEFT
@@ -7300,15 +7301,16 @@
 #       7    "᷸" U1DF8 COMBINING DOT ABOVE LEFT
 #       9    "͘" U0358 COMBINING DOT ABOVE RIGHT
 #
-#   This scheme also includes three paper symbols, using a similar alphabetic
-#   mnemonic as the ten recycling symbols in *dead_retroflexhook, as well as
-#   a shape-based mnemonic using digit 8. The remaining two slots are filled in
-#   with duplicates.
+#   This scheme also includes three paper symbols, with alphabetic mnemonic,
+#   as well as — for the permanent paper symbol — a shape-based mnemonic using
+#   digit 8. The remaining two slots 4 and 6 are filled in with duplicates.
 #   See #*# RETROFLEX_HOOK
+#   See # # D04
+#   See # # D08
 #
-#       0    "♼" U267C RECYCLED PAPER SYMBOL
-#       2    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
-#       8    "♾" U267E PERMANENT PAPER SIGN
+#       0 and 6    "♼" U267C RECYCLED PAPER SYMBOL
+#       2 and 4    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
+#       8          "♾" U267E PERMANENT PAPER SIGN
 #
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
@@ -8085,7 +8087,9 @@
 #   Dchar: "④" U2463
 #
 #
-# # Arrow emoji as a mix of black and basic simple arrows, live on AltGr + numpad.
+# # Arrow emoji
+#
+#   Arrow emoji are a mix of black and basic simple arrows, live on AltGr + numpad.
 #
 <UEFD0><4>                                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><4>                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -12632,7 +12636,7 @@
 <Multi_key><asterisk><asterisk>                                                                <x> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
 #
 #
-# # RING&CURRENCY
+# # RING_ABOVE&CURRENCY
 #   Dchar: 
 #
 #   Supports contour integrals based on ring and S mnemonic.
@@ -13676,7 +13680,7 @@
 #      and ChromeOS it is ineffective.
 #
 #   The sequences with no-break space and nobreak thin space, used for spacing
-#   diacritics on most deadkeys, output a black flag by nobreak space, and a
+#   diacritics on most dead keys, output a black flag by nobreak space, and a
 #   white flag by no-break thin space, since the flag used as a base character
 #   for subdivision flags is in the SMP, cross-platform incompatible. However,
 #   for completeness, "🏴" U1F3F4 WAVING BLACK FLAG is output by backslash.
@@ -16048,7 +16052,7 @@
 #   Numbers 1..10 followed by a period are in dead_cedilla.
 #   See #*# CEDILLA
 #
-#   For convenience, the Multi_key sequence ¦§ is also supported to account for
+#   For convenience, the multi-key sequence ¦§ is also supported to account for
 #   the mapping of the section sign on level 3 of B10 in French mode for the
 #   synergy with digits and keyboard backcompat.
 #
