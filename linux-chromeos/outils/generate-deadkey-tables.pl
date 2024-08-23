@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-07-30T1719+0200
+# 2024-08-23T0618+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -22,6 +22,10 @@
 # In these tables, a second instance of each emoji is displayed in text style,
 # provided that the text style variation selector is supported. This feature
 # is intended to make emoji searchable (the alt attribute is not).
+#
+# Math symbols get an appended link to their first instance on the math symbols
+# page https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/
+# on the condition that the `math` string is appended as the very last element.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
@@ -97,7 +101,7 @@ my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$sta
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( $str, $cp, $descrip, $tooltip, $ucodes, $anchor, @anchors, $regex, $test, $text, $index );
+my ( @anchors, $anchor, $cp, $descrip, $index, $math, $regex, $str, $test, $text, $tooltip, $ucodes );
 
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
@@ -412,14 +416,17 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Yoruba in current Nigerian alphabet/$1 yoruba avec l’alphabet nigérian actuel/g;
 				$line =~ s/( # .*\w); /$1 ; /g;
 
-				# Anchors, localized tooltips and text style emoji for searchability.
 				unless ( $line =~ m/: +"surrogat_haut_U"/u ) {
+
+				# Text style emoji for searchability.
 					if ( $line =~ m/ émoji/u ) {
 						$line    =~ m/^.+ : +"(.+?)"/u;
 						$text    = "$1&#xFE0E; ";
 					} else {
 						$text    = '';
 					}
+
+					# Localized tooltips.
 					$line    =~ m/^.+ : +"(.+?)"/u;
 					$str     = $1;
 					$tooltip = '';
@@ -464,6 +471,8 @@ while ( my $line = <INPUT> ) {
 					}
 					$tooltip =~ s/\n$//;
 					$ucodes  =~ s/<br \/>$//;
+
+					# Disambiguate anchors.
 					$anchor  =~ s/-$//;
 					$regex   = quotemeta( $anchor );
 					$index   = 0;
@@ -478,15 +487,27 @@ while ( my $line = <INPUT> ) {
 					push( @anchors, $anchor );
 				}
 
-				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
+				# Link to first instance in math list if applicable.
+				if ( $line =~ m/ math/u ) {
+					$line    =~ s/ math//u;
+					$math = " <a href=\"https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/#U+$cp\">math</a>";
+				} else {
+					$math = '';
+				}
+
 				# High surrogates.
 				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+
 				# Composed characters.
+				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+
 				# Combining characters.
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+
 				# All other characters.
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4$math<\/td><\/tr>/;
+				
 				print OUTPUT $line;
 				if ( $comprehensive ) {
 					print WHOLEOUTPUT $line;
