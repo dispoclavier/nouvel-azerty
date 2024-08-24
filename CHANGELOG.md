@@ -2,7 +2,7 @@
 
 ## 4.2.0 (projet)
 
-* Installation : Prioriser la mise à jour. (installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91))
+* Installation : Faciliter les mises à jour. (installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91), linux-chromeos/readme.md [1145307](https://github.com/dispoclavier/nouvel-azerty/commit/114530720e83ca1b7325c69fd4c6eab8cf01fad0))
 
 ## 4.1.0 (2024-08-23)
 
