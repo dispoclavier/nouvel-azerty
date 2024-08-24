@@ -1,5 +1,9 @@
 # Journal des modifications
 
+## 4.2.0 (projet)
+
+* Installation : Prioriser la mise à jour. (installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91))
+
 ## 4.1.0 (2024-08-23)
 
 * Disposition : Redonder "∶" U+2236 sur AltGr + AltFr + R à la place de "√" U+221A, qui est dans le groupe 2 de "\" U+005C avec "∛" U+221B dans le groupe 3 et "∜" U+221C dans le groupe 4. (dispocla.cpp [173f7b0](https://github.com/dispoclavier/nouvel-azerty/commit/173f7b0b728821c322c241cba5e306a26f232dc8))
