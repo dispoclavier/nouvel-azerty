@@ -24,13 +24,13 @@ Le script d’installation s’appelle « installer.sh » d’après le verb
 
 Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./installer.sh` après avoir ouvert le dossier dans un terminal.
 
-Le script commence par analyser la situation, et propose normalement soit d’installer ces dispositions de clavier, soit de les désinstaller.
+Le script commence par analyser la situation, et propose normalement soit d’installer ces dispositions de clavier, soit de les mettre à jour ou de les désinstaller.
 
 Au début de l’installation, le script demande s’il faut **redisposer des touches.** Il s’agit de la touche AltFr, qui peut être redisposée sur la touche de Verrouillage des Capitales, et de la touche d’Effacement arrière, qui peut être redisposée sur la touche Menu, ou sur Windows droite ou Contrôle droite.
 
-Après la sortie d’une nouvelle version, pour **mettre à jour** ces dispositions de clavier par le script, il faut lancer celui-ci deux fois afin de les désinstaller, puis de les réinstaller.
+Après la sortie d’une nouvelle version, pour **mettre à jour** ces dispositions de clavier par le script, il faut lancer celui-ci, appuyer sur Entrée, saisir le mot de passe administrateur et faire Entrée une dernière fois.
 
-Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au cours de la désinstallation, le même fichier est sauvegardé aussi dans un dossier `sauvegarde/` créé à côté du script.
+Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation et d’une mise à jour. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au cours de la désinstallation, le même fichier est sauvegardé aussi dans un dossier `sauvegarde/` créé à côté du script.
 
 Au moment d’installer ou de réinstaller ces dispositions de clavier, si le script détecte un fichier à ces deux endroits, il propose de l’utiliser.
 
