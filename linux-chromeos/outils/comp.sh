@@ -1,27 +1,38 @@
 #!/bin/bash
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-08-09T1343+0200
+# 2024-08-25T0306+0200
 # = last modified.
 #
-# Merges XKB source files into an all-in-one `.xkb` source, for the purpose of
-# activating a keyboard layout as user.
+# Generates all-in-one keymap files from X display. X display is the installed
+# and currently active keyboard layout. The recommended output format is `.xkb`
+# keymap source files, but `.xkm` compiled keymap file output is also supported
+# and can be activated by editing the de-facto boolean `human_readable` below.
+# https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command
 #
 # Requires to manually configure the subvariants in xkb/keycodes/evdev.
 #
 # Automatically switches layouts while compiling a subvariant as configured.
 # Courtesy https://askubuntu.com/questions/209597/how-do-i-change-keyboards-from-the-command-line
 #
-# Rather than distributing compiled `.xkm` files, distributing merged `.xkb` is
-# preferable for transparency (the user is able to check what they got) and for
-# usability alike, since the user can directly customize the layout by making a
-# small edit right in the all-in-one human readable source file.
+# For this to work, the keyboard layouts must be activated and set up in the
+# Gnome switch in the following order:
 #
-# For these files to be usable, the key types EIGHT_LEVEL_LEVEL_FIVE_LOCK and
-# EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK must be uncommented. They are found in
-# xkb/types/level5 and were commented out in 2016 distros. However, these types
-# are not used in these keyboard layouts and only prevent xkbcomp from throwing
-# an error:
+#     0  kbfrFRsr
+#     1  kbfrFRs
+#     2  kbbrFRs
+#     3  kbfrPFs
+#     4  kbfrAFs
+#     5  kbfrBEs
+#     6  kbbrFRsr
+#     7  kbfrPFsr
+#     8  kbfrAFsr
+#
+# For these files to be usable in 2024 Linux distros, two previously commented-
+# out key types are supposed to be uncommented, although these are not used in
+# these keyboard layouts:
+# EIGHT_LEVEL_LEVEL_FIVE_LOCK and EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK, as in
+# xkb/types/level5, required to prevent xkbcomp from throwing an error:
 #
 # X Error of failed request:  BadValue (integer parameter out of range for operation)
 #   Major opcode of failed request:  135 (XKEYBOARD)
@@ -30,12 +41,26 @@
 #   Serial number of failed request:  170
 #   Current serial number in output stream:  176
 #
+# Rather than distributing compiled `.xkm` files, distributing merged `.xkb` is
+# preferable for transparency (the user is able to check what they got) and for
+# usability alike, since the user can directly customize the layout by making a
+# small edit right in the all-in-one human readable source file.
+#
+human_readable=1 # The integer 1 is used with `true` semantics.
+
+if [ "$human_readable" -eq 1 ]; then
+	mode="xkb" # Used both as a flag and as the output file extension.
+	action="merged" # Used both as a dirname and in the confirmation.
+else
+	mode="xkm" # Used both as a flag and as the output file extension.
+	action="compiled" # Used both as a dirname and in the confirmation.
+fi
 
 cd $(dirname "$0")
-if [ ! -d "merged" ]; then
-	mkdir merged
+if [ ! -d "$action" ]; then
+	mkdir $action
 fi
-cd merged
+cd $action
 if [ ! -d "Variantes" ]; then
 	mkdir Variantes
 fi
@@ -64,14 +89,14 @@ case $re in
 esac
 
 function compile {
-	echo "$1$suffix.xkb:"
+	echo "$1$suffix.$mode:"
 	if [ ! -d "$1" ]; then
 		mkdir $1
 	fi
 	gsettings set org.gnome.desktop.input-sources current $2
 	sleep 1s
-	xkbcomp :0 $1/$1$suffix.xkb
-	echo  "$1$suffix.xkb merged."
+	xkbcomp -$mode :0 $1/$1$suffix.$mode
+	echo  "$1$suffix.$mode $action."
 }
 
 compile "kbfrFRs"  "1"
@@ -83,4 +108,4 @@ compile "kbbrFRsr" "6"
 compile "kbfrPFsr" "7"
 compile "kbfrAFsr" "8"
 compile "kbfrFRsr" "0"
-cp kbfrFRs/kbfrFRs$suffix.xkb ../nouvel-azerty$suffix.xkb; echo "nouvel-azerty$suffix.xkb updated."
+cp kbfrFRs/kbfrFRs$suffix.$mode ../nouvel-azerty$suffix.$mode; echo "nouvel-azerty$suffix.$mode updated."
