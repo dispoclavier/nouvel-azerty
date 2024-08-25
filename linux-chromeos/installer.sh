@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-24T0646+0200
+#                       Date : 2024-08-25T0414+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -66,7 +66,7 @@
 #   à faciliter l’ouverture sous Windows dans un souci d’interopérabilité.
 #
 #
-# L’absence des booléens dans Bash est pallié par le recours à des comparaisons arithmétiques.
+# L’absence des booléens dans Bash est palliée par le recours à des comparaisons arithmétiques.
 # On peut en profiter pour inverser 0 et 1 (qui dans Bash signifient vrai et faux, contrairement
 # à la plupart des autres langages où ils signifient faux et vrai), dans un souci de lisibilité.
 
