@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-25T0644+0200
+#                       Date : 2024-08-25T0652+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -146,15 +146,15 @@
 #               kbfrPFsr-win.xkb
 #               kbfrPFsr-win-sans.xkb
 #
-# Les sources de disposition de clavier fusionnées `.xkb` sont préférables aux
-# dispositions de clavier compilées `.xkm` parce qu’elles sont vérifiables et
-# éditables pour de petites personnalisations.
+#   Les sources de disposition de clavier fusionnées `.xkb` sont préférables aux
+#   dispositions de clavier compilées `.xkm` parce qu’elles sont vérifiables et
+#   éditables pour de petites personnalisations.
 #
 # L’absence des booléens dans Bash est palliée par le recours à des comparaisons arithmétiques.
 # On peut en profiter pour inverser 0 et 1 (qui dans Bash signifient vrai et faux, contrairement
 # à la plupart des autres langages où ils signifient faux et vrai), dans un souci de lisibilité.
 #
-intelligible=1 # Format XKB. Éditer ce nombre pour passer au format XKM.
+intelligible=1 # Format XKB. Changer ce nombre pour passer au format XKM.
 if [ "$intelligible" -eq 1 ]; then
 	mode="xkb"
 else
