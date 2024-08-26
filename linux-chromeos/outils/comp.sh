@@ -1,7 +1,7 @@
 #!/bin/bash
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-08-26T0257+0200
+# 2024-08-26T0303+0200
 # = last modified.
 #
 # Generates all-in-one keymap files from X display. X display is the installed
@@ -28,9 +28,9 @@
 #     7  kbfrPFsr
 #     8  kbfrAFsr
 #
-# For these files to be usable in 2024 Linux distros, two previously commented-
-# out key types are supposed to be uncommented, although these are not used in
-# these keyboard layouts:
+# For these files to be usable in recent Linux distros, two key types that were
+# previously commented out are required to be uncommented, despite they are not
+# used in these keyboard layouts:
 # EIGHT_LEVEL_LEVEL_FIVE_LOCK and EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK, as in
 # xkb/types/level5, required to prevent xkbcomp from throwing an error:
 #
@@ -55,6 +55,17 @@ else
 	mode="xkm" # Used both as a flag and as the output file extension.
 	action="compiled" # Used both as a dirname and in the confirmation.
 fi
+
+function merge_or_compile {
+	echo "$1$suffix.$mode:"
+	if [ ! -d "$1" ]; then
+		mkdir $1
+	fi
+	gsettings set org.gnome.desktop.input-sources current $2
+	sleep 1s
+	xkbcomp -$mode :0 $1/$1$suffix.$mode
+	echo  "$1$suffix.$mode $action."
+}
 
 cd $(dirname "$0")
 if [ ! -d "$action" ]; then
@@ -89,17 +100,6 @@ case $re in
 		exit
 	;;
 esac
-
-function merge_or_compile {
-	echo "$1$suffix.$mode:"
-	if [ ! -d "$1" ]; then
-		mkdir $1
-	fi
-	gsettings set org.gnome.desktop.input-sources current $2
-	sleep 1s
-	xkbcomp -$mode :0 $1/$1$suffix.$mode
-	echo  "$1$suffix.$mode $action."
-}
 
 # Output the variants.
 merge_or_compile "kbfrFRs"  "1"
