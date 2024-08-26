@@ -1,7 +1,7 @@
 #!/bin/bash
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
-# 2024-08-25T0306+0200
+# 2024-08-26T0257+0200
 # = last modified.
 #
 # Generates all-in-one keymap files from X display. X display is the installed
@@ -65,15 +65,15 @@ if [ ! -d "Variantes" ]; then
 	mkdir Variantes
 fi
 cd Variantes
-echo "      o = Disposition ordinaire."
-echo "      w = Effacement arrière sur Windows droite."
-echo "     ws = Effacement arrière sur Windows droite sans Menu."
-echo "      m = Effacement arrière sur Menu, Menu sur Effacement arrière."
-echo "     ms = Effacement arrière sur Menu seulement, sans permutation."
-echo "      c = Permuter Effacement arrière et Contrôle droite."
-echo "      a = Permuter VerrCap et touche ISO pour claviers ANSI."
-echo "     am = Permuter VerrCap et touche ISO, et Effacement arrière et Menu."
-echo "    ams = Permuter VerrCap et touche ISO, Effacement arrière sur Menu."
+echo    "      o = Disposition ordinaire."
+echo    "      w = Effacement arrière sur Windows droite."
+echo    "     ws = Effacement arrière sur Windows droite sans Menu."
+echo    "      m = Effacement arrière sur Menu, Menu sur Effacement arrière."
+echo    "     ms = Effacement arrière sur Menu seulement, sans permutation."
+echo    "      c = Permuter Effacement arrière et Contrôle droite."
+echo    "      a = Permuter VerrCap et touche ISO pour claviers ANSI."
+echo    "     am = Permuter VerrCap et touche ISO, et Effacement arrière et Menu."
+echo    "    ams = Permuter VerrCap et touche ISO, Effacement arrière sur Menu."
 read -p "          o, w, ws, m, ms, c, a, am, ams ?   " re
 case $re in
 	o)   suffix="";;
@@ -85,10 +85,12 @@ case $re in
 	a)   suffix="-ansi";;
 	am)  suffix="-ansi-menu";;
 	ams) suffix="-ansi-menu-sans";;
-	*)   exit
+	*)
+		exit
+	;;
 esac
 
-function compile {
+function merge_or_compile {
 	echo "$1$suffix.$mode:"
 	if [ ! -d "$1" ]; then
 		mkdir $1
@@ -99,13 +101,17 @@ function compile {
 	echo  "$1$suffix.$mode $action."
 }
 
-compile "kbfrFRs"  "1"
-compile "kbbrFRs"  "2"
-compile "kbfrPFs"  "3"
-compile "kbfrAFs"  "4"
-compile "kbfrBEs"  "5"
-compile "kbbrFRsr" "6"
-compile "kbfrPFsr" "7"
-compile "kbfrAFsr" "8"
-compile "kbfrFRsr" "0"
-cp kbfrFRs/kbfrFRs$suffix.$mode ../nouvel-azerty$suffix.$mode; echo "nouvel-azerty$suffix.$mode updated."
+# Output the variants.
+merge_or_compile "kbfrFRs"  "1"
+merge_or_compile "kbbrFRs"  "2"
+merge_or_compile "kbfrPFs"  "3"
+merge_or_compile "kbfrAFs"  "4"
+merge_or_compile "kbfrBEs"  "5"
+merge_or_compile "kbbrFRsr" "6"
+merge_or_compile "kbfrPFsr" "7"
+merge_or_compile "kbfrAFsr" "8"
+merge_or_compile "kbfrFRsr" "0"
+
+# Replicate at root.
+cp kbfrFRs/kbfrFRs$suffix.$mode ../nouvel-azerty$suffix.$mode
+echo "nouvel-azerty$suffix.$mode mis à jour."
