@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-25T0414+0200
+#                       Date : 2024-08-26T0231+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -33,15 +33,16 @@
 #     ◦ Vérifier le contenu du script ci-dessous ;
 #     ◦ Rendre ce script exécutable dans Propriétés > Permissions > Exécuter ;
 #     ◦ Dans Édition > Préférences > Comportement > Fichier texte exécutable,
-#       choisir « Demander chaque fois » pour l’action à l’ouverture du fichier ;
-#     ◦ Cliquer ou double-cliquer ce script puis choisir « Lancer dans le terminal ».
+#       choisir « Demander chaque fois » ;
+#     ◦ Cliquer ou double-cliquer ce script puis « Lancer dans le terminal ».
 #
 #
 #   Fichiers associés
 #
-#   Pour fonctionner, ce script a besoin des fichiers suivants dans cette arborescence.
-#   Si l’un des 9 derniers fichiers manque, la redisposition des touches en fonction des
-#   sous-variantes n’est pas prise en charge, mais l’installation standard fonctionne.
+#   Ce script utilise les fichiers suivants.
+#   Si les 9 derniers fichiers ne sont pas au complet, les redispositions de
+#   touches en fonction des sous-variantes ne sont pas prises en charge, mais
+#   l’installation standard fonctionne.
 #
 #      installer.sh
 #      Compose.yml
@@ -51,7 +52,6 @@
 #         dispotypes.c
 #         dispoled.c
 #         evdev.c
-#
 #         evdev-ansi.c
 #         evdev-ansi-menu.c
 #         evdev-ansi-menu-sans.c
@@ -62,13 +62,14 @@
 #         evdev-win.c
 #         evdev-win-sans.c
 #
-#   Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et
+#   Les extensions .c, .cpp et .yml servent à la coloration syntaxique et
 #   à faciliter l’ouverture sous Windows dans un souci d’interopérabilité.
 #
 #
-# L’absence des booléens dans Bash est palliée par le recours à des comparaisons arithmétiques.
-# On peut en profiter pour inverser 0 et 1 (qui dans Bash signifient vrai et faux, contrairement
-# à la plupart des autres langages où ils signifient faux et vrai), dans un souci de lisibilité.
+# L’absence des booléens dans Bash est palliée par le recours aux comparaisons
+# arithmétiques. On en profite pour inverser 0 et 1 (qui dans Bash signifient
+# vrai et faux contrairement à la plupart des autres langages où ils signifient
+# faux et vrai), dans un souci de lisibilité.
 
 introduction=0 # Pas faite.
 function afficher {
