@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-26T0914+0200
+#                       Date : 2024-08-26T1019+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -254,20 +254,29 @@ function options_de_disposition {
 		*)   suffixe="";;
 	esac
 	chemin_complet="$chemin$suffixe.$mode"
-	xkbcomp activer/$chemin_complet :0
-	mkdir -p ~/.config/dispoclavier/activer
-	echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
-	cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
-	echo -e "\n  ✅  La disposition de clavier vient d’être activée."
-	echo -e "\n     Son fichier .$mode et son chemin ont été sauvegardés"
-	echo      '         dans ~/.config/dispoclavier/activer/.'
-	echo -e "\n     Tous les retours d’expérience sont les bienvenus."
-	echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
-	echo      '     n’hésitez pas à créer un rapport de bogue :'
-	echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
-	echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
-	echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
-	echo -e "\n             Bonne utilisation !\n"
+	if [ -f "activer/$chemin_complet" ]; then
+		xkbcomp activer/$chemin_complet :0
+		mkdir -p ~/.config/dispoclavier/activer
+		echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
+		cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
+		echo -e "\n  ✅  La disposition de clavier vient d’être activée."
+		echo -e "\n     Son fichier .$mode et son chemin ont été sauvegardés"
+		echo      '         dans ~/.config/dispoclavier/activer/.'
+		echo -e "\n     Tous les retours d’expérience sont les bienvenus."
+		echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
+		echo      '     n’hésitez pas à créer un rapport de bogue :'
+		echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
+		echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
+		echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
+		echo -e "\n             Bonne utilisation !\n"
+	else
+		echo -e "\n     Cette disposition de clavier n’a pas été activée, car"
+		echo      '     le fichier à activer n’est pas accessible.'
+		echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
+		echo      '     sur la page de la version la plus récente :'
+		echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
+		echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+	fi
 }
 
 echo -e "\n    Bienvenue dans l’activateur de dispositions de clavier Dispoclavier."
