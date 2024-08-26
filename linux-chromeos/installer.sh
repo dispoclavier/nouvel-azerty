@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-26T0231+0200
+#                       Date : 2024-08-26T0743+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -67,9 +67,9 @@
 #
 #
 # L’absence des booléens dans Bash est palliée par le recours aux comparaisons
-# arithmétiques. On en profite pour inverser 0 et 1 (qui dans Bash signifient
-# vrai et faux contrairement à la plupart des autres langages où ils signifient
-# faux et vrai), dans un souci de lisibilité.
+# arithmétiques. On en profite pour inverser 0 et 1 — qui dans Bash signifient
+# vrai et faux, contrairement à la plupart des autres langages où ils
+# signifient faux et vrai — dans un souci de lisibilité.
 
 introduction=0 # Pas faite.
 function afficher {
@@ -526,7 +526,7 @@ if [ "$fonctionne" -eq 1 ]; then
 					echo      '     le mieux est de commencer par activer XIM.'
 					echo -e "\n       Pour activer XIM, appuyez sur Entrée."
 					echo      '       Pour quitter, tapez q ou n puis Entrée.'
-					read -p   "    " reponse
+					read -p   '    ' reponse
 					case $reponse in
 						[nNqQ])
 							exit
@@ -534,7 +534,7 @@ if [ "$fonctionne" -eq 1 ]; then
 						*)
 							# Basculer vers le système de saisie au clavier XIM.
 							im-config -n xim
-							echo      '    XIM a maintenant été sélectionné.'
+							echo      '    XIM a maintenant été sélectionnée.'
 						;;
 					esac
 				fi
@@ -542,7 +542,7 @@ if [ "$fonctionne" -eq 1 ]; then
 				echo -e "\n  ❓  Souhaitez-vous installer ces dispositions de clavier ?"
 				echo -e "\n       Pour les installer, appuyez sur Entrée."
 				echo      '       Pour quitter, tapez q ou p puis Entrée.'
-				read -p   "    " reponse
+				read -p   '    ' reponse
 				case $reponse in
 					[pPqQ])
 						exit
@@ -557,7 +557,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
 							echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
 							echo      '       Pour quitter, tapez q puis Entrée.'
-							read -p   "    " repo
+							read -p   '    ' repo
 							case $repo in
 								[iIpP])
 									echo '    Le fichier "sauvegarde/evdev.c" a été ignoré.'
@@ -580,7 +580,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
 							echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
 							echo      '       Pour quitter, tapez q puis Entrée.'
-							read -p   "    " repo
+							read -p   '    ' repo
 							case $repo in
 								[iIpP])
 									echo '    Le fichier "~/.config/dispoclavier/keycodes/evdev" a été ignoré.'
@@ -603,7 +603,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							echo -e "\n       Pour redisposer, tapez r ou o puis Entrée."
 							echo      '       Pour ne rien redisposer, appuyez sur Entrée.'
 							echo      '       Pour quitter, tapez q puis Entrée.'
-							read -p   "    " repo
+							read -p   '    ' repo
 							case $repo in
 								[oOrR])
 									suffixe=''
@@ -613,7 +613,7 @@ if [ "$fonctionne" -eq 1 ]; then
 									echo -e "\n       Pour la redisposer, tapez r ou o puis Entrée."
 									echo      '       Pour ne pas la redisposer, appuyez sur Entrée.'
 									echo      '       Pour quitter, tapez q puis Entrée.'
-									read -p   "    " rep
+									read -p   '    ' rep
 									ansipur=0
 									case $rep in
 										[oOrR])
@@ -627,7 +627,7 @@ if [ "$fonctionne" -eq 1 ]; then
 											echo      '       h   clavier ANSI hybride disposé en AZERTY ?'
 											echo      '       i   clavier ISO avec la touche [<>] à côté de Maj ?'
 											echo      '       Pour laisser tomber, appuyez sur Entrée.'
-											read -p   "    " re
+											read -p   '    ' re
 											case $re in
 												[aA])
 													echo 'Installation du fichier de redisposition de touches pour'
@@ -662,7 +662,7 @@ if [ "$fonctionne" -eq 1 ]; then
 										echo -e "\n       Pour la redisposer, tapez r ou o puis Entrée."
 										echo      '       Pour ne pas la redisposer, appuyez sur Entrée.'
 										echo      '       Pour quitter, tapez q puis Entrée.'
-										read -p   "    " rep
+										read -p   '    ' rep
 										case $rep in
 											[oOrR])
 												echo -e "\n  ⚠  La touche d’Effacement arrière peut être redisposée"
@@ -679,7 +679,7 @@ if [ "$fonctionne" -eq 1 ]; then
 													echo      '       c   Contrôle droite ?'
 												fi
 												echo      '       Pour laisser tomber, appuyez sur Entrée.'
-												read -p   "    " re
+												read -p   '    ' re
 												case $re in
 													[cC])
 														if [ ! "$suffixe" == "-ansi" ]; then
@@ -699,7 +699,7 @@ if [ "$fonctionne" -eq 1 ]; then
 														echo -e "\n       Pour ne pas redisposer Menu, tapez n ou s puis Entrée."
 														echo      '       Pour redisposer Menu, appuyez sur Entrée.'
 														echo      '       Pour quitter, tapez q puis Entrée.'
-														read -p   "    " r
+														read -p   '    ' r
 														case $r in
 															[nNsS])
 																suffixe+="-sans"
@@ -723,7 +723,7 @@ if [ "$fonctionne" -eq 1 ]; then
 															echo -e "\n       Pour la désactiver, tapez d ou o puis Entrée."
 															echo      '       Pour ne pas la désactiver, appuyez sur Entrée.'
 															echo      '       Pour quitter, tapez q puis Entrée.'
-															read -p   "    " r
+															read -p   '    ' r
 															case $r in
 																[dDoO])
 																	suffixe+="-sans"
@@ -812,7 +812,7 @@ if [ "$fonctionne" -eq 1 ]; then
 		echo -e "\n       Pour mettre à jour, appuyez sur Entrée."
 		echo      '       Pour désinstaller, tapez d puis Entrée.'
 		echo      '       Pour quitter, tapez q ou p puis Entrée.'
-		read -p   "    " reponse
+		read -p   '    ' reponse
 		case $reponse in
 			[pPqQ])
 				exit
