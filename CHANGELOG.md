@@ -2,8 +2,10 @@
 
 ## 4.2.0 (projet)
 
-* Installation : Faciliter les mises à jour. (installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91), linux-chromeos/readme.md [1145307](https://github.com/dispoclavier/nouvel-azerty/commit/114530720e83ca1b7325c69fd4c6eab8cf01fad0))
-* Activation : Prévoir la fourniture de dispositions compilées comme une alternative aux sources de disposition fusionnées. (comp.sh [e63e247](https://github.com/dispoclavier/nouvel-azerty/commit/e63e24766508f87fb72af37802f64e8d98e6773e))
+* Installation : Faciliter les mises à jour. (installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91), [172f1a2](https://github.com/dispoclavier/nouvel-azerty/commit/172f1a2773bc49e2b9952208492cff5598c65777), [cd024ef](https://github.com/dispoclavier/nouvel-azerty/commit/cd024ef57cf461fa586cb52215754b690a006f88), linux-chromeos/readme.md [1145307](https://github.com/dispoclavier/nouvel-azerty/commit/114530720e83ca1b7325c69fd4c6eab8cf01fad0))
+* Activation :
+	* Fournir un script pour faciliter l’activation. (activer.sh [5fb5636](https://github.com/dispoclavier/nouvel-azerty/commit/5fb563605062fa49667bcb1f468a75074fc5fb2c))
+	* Prévoir la fourniture de dispositions compilées comme une alternative aux sources de disposition fusionnées. (comp.sh [e63e247](https://github.com/dispoclavier/nouvel-azerty/commit/e63e24766508f87fb72af37802f64e8d98e6773e), [6229021](https://github.com/dispoclavier/nouvel-azerty/commit/622902160670f9539eda3068af419a765f282dd5), [bbd0f42](https://github.com/dispoclavier/nouvel-azerty/commit/bbd0f42b44a516ca740c647c57106e0f0007e128))
 
 ## 4.1.0 (2024-08-23)
 
