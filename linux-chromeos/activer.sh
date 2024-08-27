@@ -1,9 +1,9 @@
 #!/bin/bash
-#                       Date : 2024-08-26T1019+0200
+#                       Date : 2024-08-27T0449+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
-#                Description : Charge une source XKB fusionnée pour activer une disposition de clavier.
+#                Description : Charge une source XKB pour activer une disposition de clavier.
 #     Système d’exploitation : Linux
 #
 #                     Projet : Dispoclavier
@@ -30,19 +30,17 @@
 #   • Dans le navigateur de fichiers :
 #
 #     ◦ Vérifier le contenu du script ci-dessous ;
-#     ◦ Rendre le script exécutable dans Propriétés > Permissions > Exécuter ;
-#     ◦ Aller dans Édition > Préférences > Comportement > Fichier texte exécutable :
-#     ◦ Pour l’action à l’ouverture du fichier, choisir « Demander chaque fois » ;
-#     ◦ Cliquer ou double-cliquer le script puis choisir « Lancer dans le terminal ».
+#     ◦ Rendre le script exécutable : Propriétés > Permissions > Exécuter ;
+#     ◦ Dans Édition > Préférences > Comportement > Fichier texte exécutable :
+#     ◦ Pour l’action à l’ouverture du fichier : « Demander chaque fois » ;
+#     ◦ Cliquer ou double-cliquer ce script, puis « Lancer dans le terminal ».
 #
 #
 #   Fichiers associés
 #
-#   Pour fonctionner, ce script a besoin des fichiers suivants dans cette arborescence.
-#   Si l’un des 9 derniers fichiers manque, la redisposition des touches en fonction des
-#   sous-variantes n’est pas prise en charge, mais l’installation standard fonctionne.
+#   Ce script est susceptible d’utiliser l’un des fichiers suivants :
 #
-#      activer.sh
+#      [activer.sh]
 #      Compose.yml
 #      activer/
 #         nouvel-azerty.xkb
