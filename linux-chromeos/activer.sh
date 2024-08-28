@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-28T0702+0200
+#                       Date : 2024-08-28T1108+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -354,19 +354,25 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo "# $(date +"%Y-%m-%dT%H:%M:%S")" >> der.sh
 					echo "# Activation de la dernière disposition utilisée." >> der.sh
 					echo "# sleep 3" >> der.sh
-					echo "xkbcomp der.$mode :0" >> der.sh
-					echo "$appli_terminal -- xkbcomp der.$mode :0; echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read" >> der.sh
-					echo "$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_1 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_2 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_3 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_4 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_5 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_6 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_7 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_8 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_9 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo "$navigateur_fichiers_10 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "failed=0" >> der.sh
+					echo "( $appli_terminal -- xkbcomp der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
+					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
+					echo -e "\tfailed=0" >> der.sh
+					echo -e "\txkbcomp der.$mode :0 || failed=1" >> der.sh
+					echo "fi" >> der.sh
+					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
+					echo -e "\t$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_1 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_2 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_3 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_4 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_5 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_6 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_7 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_8 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_9 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo -e "\t$navigateur_fichiers_10 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "fi" >> der.sh
 					chmod +x der.sh
 					if [ -f "$HOME/.config/autostart/activer-dispo.desktop" ]; then
 						echo -e "\n  ✅  L’activation est désormais censée être automatisée, et en principe,"
