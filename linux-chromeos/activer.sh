@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-27T0449+0200
+#                       Date : 2024-08-28T0543+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -16,15 +16,32 @@
 #           Licence non-code : CC-BY 4.0
 # URL de la licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
 #               Adresse mail : dev@dispoclavier.net
-# 
+#
+#   ALERTES
+#
+#   L’option d’activation automatique fait appel au terminal
+#   et au navigateur de fichiers. Si ce ne sont pas Nautilus
+#   et Gnome-Terminal, ils peuvent être personnalisés dans :
+#      appli_terminal="gnome-terminal" # Personnaliser si différent.
+#      navigateur_fichiers="nautilus" # Personnaliser si différent.
+#
+#   De même, si le format XKB n’est pas préféré, le format compilé
+#   peut être choisi en altérant la valeur 1 de cette variable :
+#
+#      intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
+#
+#   Toutefois, les fichiers d’activation au format XKM ne sont pas fournis, à cause
+#   de leur opacité et de leur immuabilité.
+#
+#
 #   Utilisation
 #
 #   • En ligne de commande :
 #
 #     ◦ Vérifier le contenu du script ci-dessous ;
 #     ◦ Ouvrir un terminal dans le même dossier ;
-#     ◦ Rendre ce script exécutable par « chmod +x installer.sh » ;
-#     ◦ Lancer le script par la commande « ./installer.sh ».
+#     ◦ Rendre ce script exécutable par « chmod +x activer.sh » ;
+#     ◦ Lancer le script par la commande « ./activer.sh ».
 #
 #
 #   • Dans le navigateur de fichiers :
@@ -153,7 +170,10 @@
 # vrai et faux, contrairement à la plupart des autres langages où ils
 # signifient faux et vrai — dans un souci de lisibilité.
 #
-intelligible=1 # Format XKB. Changer pour prendre en charge le format XKM.
+intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
+appli_terminal="gnome-terminal" # Personnaliser si différent.
+navigateur_fichiers="nautilus" # Personnaliser si différent.
+
 if [ "$intelligible" -eq 1 ]; then
 	mode="xkb"
 else
@@ -282,17 +302,76 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 	chemin=$(<"$HOME/.config/dispoclavier/activer/der.txt");
 	if [ -f "activer/$chemin" ]; then
 		echo -e "\n  ❓  Souhaitez-vous activer la version actuelle de"
-		echo      '     la disposition dernièrement utilisée ?'
+		echo      '            la disposition dernièrement utilisée ?'
 		echo -e "\n       Pour l’activer, appuyez sur Entrée."
-		echo      '       Pour plus d’options, tapez o puis Entrée.'
+		echo      '       Pour plus d’options, tapez o ou p puis Entrée.'
+		if [ -f "$HOME/.config/autostart/activer-dispo.desktop" ]; then
+			echo      '       Pour désactiver l’automatisation, tapez d puis Entrée.'
+		else
+			echo      '       Pour automatiser l’activation, tapez a puis Entrée.'
+		fi
 		echo      '       Pour quitter, tapez q ou n puis Entrée.'
 		read -p   '    ' reponse
 		case $reponse in
 			[nNqQ])
 				exit
 			;;
-			[oO])
+			[oOpP])
 				options_de_disposition
+			;;
+			[aA])
+				if [ -f "$HOME/.config/dispoclavier/activer/der.$mode" ]; then
+					mkdir -p ~/.config/autostart # Comme /etc/xdg/autostart/.
+					cd ~/.config/autostart
+					# https://specifications.freedesktop.org/autostart-spec/0.5/
+					# https://specifications.freedesktop.org/desktop-entry-spec/latest/recognized-keys.html
+					# https://forums.linuxmint.com/viewtopic.php?t=349397
+					echo "#!/usr/bin/env xdg-open" > activer-dispo.desktop # Ajouté lors de la validation.
+					echo "[Desktop Entry]" >> activer-dispo.desktop
+					echo "Type=Application" >> activer-dispo.desktop
+					echo "Exec=$HOME/.config/dispoclavier/activer/der.sh" >> activer-dispo.desktop
+					echo "X-GNOME-Autostart-enabled=true" >> activer-dispo.desktop
+					echo "NoDisplay=false" >> activer-dispo.desktop
+					echo "Hidden=false" >> activer-dispo.desktop
+					echo "Name=activer-dispo" >> activer-dispo.desktop
+					echo "Comment=Activation de la dernière disposition utilisée" >> activer-dispo.desktop
+					echo "X-GNOME-Autostart-Delay=3" >> activer-dispo.desktop
+					chmod +x activer-dispo.desktop # Ajouté lors de la validation.
+					cd ~/.config/dispoclavier/activer
+					echo "#!/bin/bash" > der.sh
+					echo "# $(date +"%Y-%m-%dT%H:%M:%S")" >> der.sh
+					echo "# Activation de la dernière disposition utilisée." >> der.sh
+					echo "# sleep 3" >> der.sh
+					echo "xkbcomp der.$mode :0" >> der.sh
+					echo "$appli_terminal -- xkbcomp der.$mode :0; echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read" >> der.sh
+					echo "$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					chmod +x der.sh
+					if [ -f "$HOME/.config/autostart/activer-dispo.desktop" ]; then
+						echo -e "\n  ✅  L’activation est désormais censée être automatisée, et en principe,"
+						echo      '      dès l’ouverture de session, la disposition dernièrement utilisée devrait'
+						echo      '      être activée. Mais cela ne fonctionne que pour lancer la commande dans'
+						echo      '      un terminal, voire, accéder au script dans un navigateur de fichiers.'
+						echo      '      Ces deux solutions de dépannage sont aussi prises en charge à la suite.'
+						echo -e "\n     Pour désactiver cet automatisme, relancer ce script et choisir l’option D."
+						echo -e "\n             Bonne utilisation !\n"
+					else
+						echo -e "\n  ⚠  L’automatisation a échoué, car le fichier n’a pas pu être créé."
+						echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+					fi
+				else
+					echo -e "\n  ⚠  L’automatisation n’est pas possible dans l’état actuel."
+					echo -e "\n     Le mieux est d’activer une disposition par l’option O,"
+					echo      '     et ensuite de relancer la mise en place de l’automatisme,'
+					echo      '     éventuellement après avoir téléchargé un nouveau paquetage'
+					echo      '     sur la page de la version la plus récente :'
+					echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
+					echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+				fi
+			;;
+			[dD])
+				mkdir -p sauvegarde
+				mv ~/.config/autostart/activer-dispo.desktop sauvegarde/activer-dispo.desktop
+				echo -e "\n  ✅  L’activation automatique est désactivée."
 			;;
 			*)
 				config_xim
@@ -313,14 +392,14 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 elif [ -f "$HOME/.config/dispoclavier/activer/der.$mode" ]; then
 	echo -e "\n  ❓  Souhaitez-vous réactiver la disposition dernièrement utilisée ?"
 	echo -e "\n       Pour la réactiver, appuyez sur Entrée."
-	echo      '       Pour plus d’options, tapez o puis Entrée.'
+	echo      '       Pour plus d’options, tapez o ou p puis Entrée.'
 	echo      '       Pour quitter, tapez q ou n puis Entrée.'
 	read -p   '    ' reponse
 	case $reponse in
 		[nNqQ])
 			exit
 		;;
-		[oO])
+		[oOpP])
 			options_de_disposition
 		;;
 		*)
