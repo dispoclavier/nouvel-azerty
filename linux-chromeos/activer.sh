@@ -1,9 +1,9 @@
 #!/bin/bash
-#                       Date : 2024-08-28T1108+0200
+#                       Date : 2024-08-29T0003+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
-#                Description : Charge une source XKB pour activer une disposition de clavier.
+#                Description : Fait charger une source XKB ou une disposition XKM pour activer une disposition de clavier.
 #     Système d’exploitation : Linux
 #
 #                     Projet : Dispoclavier
@@ -19,13 +19,15 @@
 #
 #   ALERTES
 #
-#   L’option d’activation automatique, faute de fonctionner, fait appel au
-#   terminal et au navigateur de fichiers. Si ce ne sont pas Gnome-Terminal et
-#   Dolphin, Doublecmd-GTK, Konqueror, Krusader, MC (Midnight Commander),
-#   Nautilus (GNOME Files), Nemo, NNN, PCmanFM, Ranger ou Thunar,
-#   ils peuvent être personnalisés plus bas dans :
-#      appli_terminal="gnome-terminal" # Personnaliser si différent.
-#      navigateur_fichiers="nautilus" # Personnaliser si différent.
+#   L’activation automatique à l’ouverture de session, faute de fonctionner par
+#   un script, propose d’exécuter ce script manuellement en l’affichant dans le
+#   navigateur de fichiers. Si ce n’est pas l’un des 10 recommandés sur la page
+#   https://www.geeksforgeeks.org/10-best-file-managers-for-linux/
+#   soit Dolphin, Double Commander, Konqueror, Krusader, Midnight Commander,
+#   Nautilus (GNOME Files), Nemo, Nnn, PCManFM ou Thunar, et si votre terminal
+#   n’est pas GNOME Terminal, ils peuvent être personnalisés plus bas dans :
+#      emulateur_terminal="gnome-terminal" # Personnaliser si différent.
+#      navigateur_fichiers="dolphin" # Personnaliser si différent.
 #
 #   De même, si le format XKB n’est pas préféré, le format compilé
 #   peut être choisi en altérant la valeur 1 de cette variable :
@@ -173,7 +175,7 @@
 # signifient faux et vrai — dans un souci de lisibilité.
 #
 intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
-appli_terminal="gnome-terminal" # Personnaliser si différent.
+emulateur_terminal="gnome-terminal" # Personnaliser si différent.
 navigateur_fichiers="dolphin" # Personnaliser si différent.
 navigateur_fichiers_1="doublecmd-gtk"
 navigateur_fichiers_2="konqueror"
@@ -183,8 +185,7 @@ navigateur_fichiers_5="nautilus"
 navigateur_fichiers_6="nemo"
 navigateur_fichiers_7="nnn"
 navigateur_fichiers_8="pcmanfm"
-navigateur_fichiers_9="ranger"
-navigateur_fichiers_10="thunar"
+navigateur_fichiers_9="thunar"
 
 if [ "$intelligible" -eq 1 ]; then
 	mode="xkb"
@@ -355,10 +356,10 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo "# Activation de la dernière disposition utilisée." >> der.sh
 					echo "# sleep 3" >> der.sh
 					echo "failed=0" >> der.sh
-					echo "( $appli_terminal -- xkbcomp der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
+					echo "xkbcomp der.$mode :0 || failed=1" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\tfailed=0" >> der.sh
-					echo -e "\txkbcomp der.$mode :0 || failed=1" >> der.sh
+					echo -e "\t( $emulateur_terminal -- xkbcomp der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
 					echo "fi" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\t$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
@@ -371,7 +372,6 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo -e "\t$navigateur_fichiers_7 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
 					echo -e "\t$navigateur_fichiers_8 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
 					echo -e "\t$navigateur_fichiers_9 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
-					echo -e "\t$navigateur_fichiers_10 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
 					echo "fi" >> der.sh
 					chmod +x der.sh
 					if [ -f "$HOME/.config/autostart/activer-dispo.desktop" ]; then
