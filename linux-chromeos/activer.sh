@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-28T0543+0200
+#                       Date : 2024-08-28T0702+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -19,9 +19,11 @@
 #
 #   ALERTES
 #
-#   L’option d’activation automatique fait appel au terminal
-#   et au navigateur de fichiers. Si ce ne sont pas Nautilus
-#   et Gnome-Terminal, ils peuvent être personnalisés dans :
+#   L’option d’activation automatique, faute de fonctionner, fait appel au
+#   terminal et au navigateur de fichiers. Si ce ne sont pas Gnome-Terminal et
+#   Dolphin, Doublecmd-GTK, Konqueror, Krusader, MC (Midnight Commander),
+#   Nautilus (GNOME Files), Nemo, NNN, PCmanFM, Ranger ou Thunar,
+#   ils peuvent être personnalisés plus bas dans :
 #      appli_terminal="gnome-terminal" # Personnaliser si différent.
 #      navigateur_fichiers="nautilus" # Personnaliser si différent.
 #
@@ -172,7 +174,17 @@
 #
 intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
 appli_terminal="gnome-terminal" # Personnaliser si différent.
-navigateur_fichiers="nautilus" # Personnaliser si différent.
+navigateur_fichiers="dolphin" # Personnaliser si différent.
+navigateur_fichiers_1="doublecmd-gtk"
+navigateur_fichiers_2="konqueror"
+navigateur_fichiers_3="krusader"
+navigateur_fichiers_4="mc"
+navigateur_fichiers_5="nautilus"
+navigateur_fichiers_6="nemo"
+navigateur_fichiers_7="nnn"
+navigateur_fichiers_8="pcmanfm"
+navigateur_fichiers_9="ranger"
+navigateur_fichiers_10="thunar"
 
 if [ "$intelligible" -eq 1 ]; then
 	mode="xkb"
@@ -345,6 +357,16 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo "xkbcomp der.$mode :0" >> der.sh
 					echo "$appli_terminal -- xkbcomp der.$mode :0; echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read" >> der.sh
 					echo "$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_1 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_2 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_3 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_4 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_5 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_6 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_7 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_8 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_9 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
+					echo "$navigateur_fichiers_10 $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
 					chmod +x der.sh
 					if [ -f "$HOME/.config/autostart/activer-dispo.desktop" ]; then
 						echo -e "\n  ✅  L’activation est désormais censée être automatisée, et en principe,"
