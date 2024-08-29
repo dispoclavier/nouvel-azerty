@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-29T0003+0200
+#                       Date : 2024-08-29T0648+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -344,22 +344,24 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo "Type=Application" >> activer-dispo.desktop
 					echo "Exec=$HOME/.config/dispoclavier/activer/der.sh" >> activer-dispo.desktop
 					echo "X-GNOME-Autostart-enabled=true" >> activer-dispo.desktop
+					echo "X-KDE-Autostart-enabled=true" >> activer-dispo.desktop
 					echo "NoDisplay=false" >> activer-dispo.desktop
 					echo "Hidden=false" >> activer-dispo.desktop
 					echo "Name=activer-dispo" >> activer-dispo.desktop
-					echo "Comment=Activation de la dernière disposition utilisée" >> activer-dispo.desktop
+					echo "Comment=Activation de la dernière disposition de clavier utilisée" >> activer-dispo.desktop
 					echo "X-GNOME-Autostart-Delay=3" >> activer-dispo.desktop
+					echo "X-KDE-Autostart-Delay=3" >> activer-dispo.desktop
 					chmod +x activer-dispo.desktop # Ajouté lors de la validation.
 					cd ~/.config/dispoclavier/activer
 					echo "#!/bin/bash" > der.sh
 					echo "# $(date +"%Y-%m-%dT%H:%M:%S")" >> der.sh
-					echo "# Activation de la dernière disposition utilisée." >> der.sh
-					echo "# sleep 3" >> der.sh
+					echo "# Activation de la dernière disposition de clavier utilisée." >> der.sh
+					echo "# sleep 3 # La temporisation est dans autostart." >> der.sh
 					echo "failed=0" >> der.sh
-					echo "xkbcomp der.$mode :0 || failed=1" >> der.sh
+					echo "( $emulateur_terminal -- xkbcomp der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\tfailed=0" >> der.sh
-					echo -e "\t( $emulateur_terminal -- xkbcomp der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
+					echo -e "\txkbcomp der.$mode :0 || failed=1" >> der.sh
 					echo "fi" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\t$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
@@ -379,8 +381,14 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 						echo      '      dès l’ouverture de session, la disposition dernièrement utilisée devrait'
 						echo      '      être activée. Mais cela ne fonctionne que pour lancer la commande dans'
 						echo      '      un terminal, voire, accéder au script dans un navigateur de fichiers.'
-						echo      '      Ces deux solutions de dépannage sont aussi prises en charge à la suite.'
-						echo -e "\n     Pour désactiver cet automatisme, relancer ce script et choisir l’option D."
+						echo      '      Ces deux solutions de dépannage sont aussi prises en charge.'
+						echo -e "\n      Quand vous verrez le navigateur de fichiers à l’ouverture de session,"
+						echo      '      cela signifie que deux tentatives d’activation ont déjà échoué, une'
+						echo      '      silencieuse et une dans le terminal.'
+						echo -e "\n      Dans le navigateur de fichiers, le même script attendra que vous le"
+						echo      '      lanciez manuellement. Ce script ouvrira un terminal,'
+						echo      '      dans lequel il vous confirmera l’activation réussie.'
+						echo -e "\n    Pour désactiver cet automatisme, relancer ce script et choisir l’option D."
 						echo -e "\n             Bonne utilisation !\n"
 					else
 						echo -e "\n  ⚠  L’automatisation a échoué, car le fichier n’a pas pu être créé."
@@ -388,10 +396,10 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					fi
 				else
 					echo -e "\n  ⚠  L’automatisation n’est pas possible dans l’état actuel."
-					echo -e "\n     Le mieux est d’activer une disposition par l’option O,"
-					echo      '     et ensuite de relancer la mise en place de l’automatisme,'
-					echo      '     éventuellement après avoir téléchargé un nouveau paquetage'
-					echo      '     sur la page de la version la plus récente :'
+					echo -e "\n     Le mieux est d’activer une disposition par l’option O ou P,"
+					echo      '     et ensuite de relancer la mise en place de l’automatisme, le'
+					echo      '     tout éventuellement après que vous avez téléchargé un nouveau'
+					echo      '     paquetage sur la page de la version la plus récente :'
 					echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
 					echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
 				fi
