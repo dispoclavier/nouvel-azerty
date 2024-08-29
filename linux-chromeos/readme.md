@@ -4,13 +4,19 @@ Ceci est un mode d’emploi couvrant principalement l’[installation](#installa
 
 ## Alerte d’incompatibilité de Linux Mint
 
-Sous Linux Mint 21.3 (2024), ce nouvel AZERTY fonctionne uniquement quand il est activé par xkbcomp comme indiqué sous le titre suivant, non quand il est installé. Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas.
+Sous Linux Mint 21.3 (2024), ce nouvel AZERTY fonctionne uniquement quand il est activé par xkbcomp comme indiqué sous le titre suivant, Quand il y est installé, il fonctionne partiellement. Il n’est pas inutile d’installer ce nouvel AZERTY sous Linux Mint, mais il faut prévoir, en plus, de l’activer par xkbcomp.
+
+Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas.
 
 ## Activation sans droits d’administrateur
 
-Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
-Afin de remplacer l’installation par l’activation, celle-ci peut être automatisée au démarrage ou à l’ouverture de session selon une méthode qui peut dépendre du système d’exploitation.
+Le script d’activation « activer.sh » se trouve sur GitHub ([activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
+
+Afin de compléter l’installation par l’activation, celle-ci peut être (semi-)automatisée à l’ouverture de session selon une méthode uniformisée, mais qui pour xkbcomp ne fonctionne pas. Quand le navigateur de fichiers (10 logiciels sont pris en charge, et on peut personnaliser le script pour prendre en charge d’autres logiciels) s’ouvre sur le script de réactivation de la dernière disposition utilisée, cela signifie que le lancement automatique d’xkbcomp a échoué et qu’il est nécessaire de le lancer manuellement.
+
+Plus d’informations sous le titre [XKBCOMP](#xkbcomp) plus bas.
 
 ## Installation
 
@@ -213,7 +219,17 @@ En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symbole
 
 #### Barre de fraction
 
-La barre de fraction U+2044 est sur AltGr + AltFr + [F]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire dans les logiciels conformes comme Firefox. La partie entière peut être séparée par le gluon sur AltGr + AltFr + [G].
+La barre de fraction U+2044 est sur AltGr + AltFr + [F]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire dans les logiciels conformes comme Firefox.
+
+La partie entière peut être séparée par le gluon sur AltGr + AltFr + [G], ou par l’antiliant sur AltGr + AltFr + [Q].
+
+#### Symbole rapport
+
+Contrairement à beaucoup d’autres doublons inutiles pour lesquels même Unicode est incapable de donner une bonne raison, le symbole rapport « ∶ » ne ressemble que superficiellement à un deux-points. Voici le symbole rapport et le deux-points : « ∶: ».
+
+Car selon les polices, soit les deux points sont plus rapprochés, soit le symbole est surélevé et plus haut afin de s’aligner sur les chiffres (« 2∶3 »), non sur les minuscules comme le deux-points (« b:c »).
+
+C’est pourquoi le symbole rapport a relayé le symbole racine carrée sur AltGr + AltFr + [R] à la sortie de la version 4.1.0, sachant que les racines carrée, cubique et quatrième sont dans les groupes 2, 3 et 4 de l’oblique inverse sur [R].
 
 ### Émojis
 
@@ -289,9 +305,31 @@ Un bogue supplémentaire sous Linux Mint affecte le commutateur de dispositions 
 
 #### Conclusions
 
-Les bogues propres à Linux Mint ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’[Ubuntu 24.04](https://releases.ubuntu.com/noble/) et antérieures. Pour les éviter, il aurait suffi de ne pas toucher au code d’XKB.
+La solution consiste à compléter l’installation par l’**utilisation d’xkbcomp**, présenté [ci-dessous](#xkbcomp), comme indiqué sous le titre [Activation sans droits d’administrateur](#activation-sans-droits-dadministrateur).
 
-La solution consiste à **utiliser xkbcomp** comme indiqué sous le titre [Activation sans droits d’administrateur](#activation-sans-droits-dadministrateur).
+L’installation peut même être remplacée par l’activation, puisque l’installation n’aboutit pas à une disposition de clavier 100 % fonctionnelle. Mais en cas d’utilisation de variantes redisposées, une disposition défectueuse vaut mieux que pas de disposition du tout.
+
+Les bogues propres à Linux Mint ont dû être introduits au titre des modifications censées conférer à Ubuntu un air de Windows, puisqu’ils sont absents d’[Ubuntu 24.04](https://releases.ubuntu.com/noble/) et antérieures.
+
+### Xkbcomp
+
+Xkbcomp, qui s’écrit tout en minuscules (« xkbcomp »), est un utilitaire de dispositions de clavier [documenté par IBM](https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command) avec une interface utilisateur en ligne de commande, invoqué par la commande « xkbcomp ».
+
+L’intérêt d’xkbcomp est de pouvoir activer la partie disposition des touches d’une disposition de clavier à partir d’un seul fichier, sans droits d’administrateur. Les chaînes de caractères des séquences et le contenu des touches mortes ne sont pas pris en charge par xkbcomp, étant dans un autre fichier. Celui-ci peut aussi être placé dans le dossier personnel, afin de rendre la disposition de clavier opérationnelle, toujours sans droits d’administrateur.
+
+Xkbcomp a le grand avantage de fonctionner à 100 % aussi sous Linux Mint. Cette caractéristique rend xkbcomp indispensable sous Linux Mint, qui a la particularité de mettre partiellement en panne les dispositions de clavier installées, comme documenté ci-dessus sous le titre [Linux Mint](#linux-mint). Sous Linux Mint, l’installation doit être complétée par l’activation, qui a pour effet de déboguer la disposition de clavier installée.
+
+#### Automatisation
+
+La nécessité d’invoquer xkbcomp à chaque ouverture de session sous Linux Mint rend l’automatisation de ce processus souhaitable. Or la procédure standard consistant à lancer un script à l’ouverture de session ne fonctionne pas et aboutit à l’affichage du script dans le navigateur de fichiers pour son lancement manuel, qui lui, fonctionne.
+
+Les alternatives pour lancer un script au démarrage sont foison, mais elles conviennent uniquement sur les ordinateurs unipersonnels ou en cas d’accord sur la disposition de clavier utilisée.
+
+L’automatisation proposée par le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) est cohérente avec xkbcomp, qui active une disposition de clavier pour une session.
+
+Après avoir mis en place l’automatisation, le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) alerte que l’activation est seulement « censée être automatisée, et en principe, dès l’ouverture de session, la disposition dernièrement utilisée devrait être activée. Mais cela ne fonctionne que pour lancer la commande dans un terminal, voire, accéder au script dans un navigateur de fichiers. Ces deux solutions de dépannage sont aussi prises en charge. Quand vous verrez le navigateur de fichiers à l’ouverture de session, cela signifie que deux tentatives d’activation ont déjà échoué, une silencieuse et une dans le terminal. Dans le navigateur de fichiers, le même script attendra que vous le lanciez manuellement. Ce script ouvrira un terminal, dans lequel il vous confirmera l’activation réussie. »
+
+Quant au bogue inconnu qui empêche xkbcomp de fonctionner sur invocation par un script lancé par [autostart](https://specifications.freedesktop.org/autostart-spec/latest/), il est peut-être expliqué par un faisceau de témoignages concordants trouvés [ici](https://forums.linuxmint.com/viewtopic.php?p=2373855#p2373855), [ici](https://forums.linuxmint.com/viewtopic.php?p=2376225&sid=0901bdee365911c4549d6dda5362842f#p2376225), [ici](https://forums.linuxmint.com/viewtopic.php?p=2368840#p2368840), [ici](https://forums.linuxmint.com/viewtopic.php?t=414342), [ici](https://ubuntuforums.org/showthread.php?t=2482076), [ici](https://forum.beyond3d.com/threads/linux-is-a-pile-of-shit.60616/), [ici](https://itvision.altervista.org/why.linux.is.not.ready.for.the.desktop.current.html) et [ici](https://castingoutnines.wordpress.com/2009/07/17/why-i-am-not-a-linux-user-any-more/), mais il faut aussi noter que la [spécification d’Autostart](https://specifications.freedesktop.org/autostart-spec/latest/) est toujours une « ébauche » en chantier, puisque la [version courante](https://specifications.freedesktop.org/autostart-spec/latest/) est la [version 0.5](https://specifications.freedesktop.org/autostart-spec/0.5/) datant de 2006.
 
 ### ChromeOS
 
