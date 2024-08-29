@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-29T0648+0200
+#                       Date : 2024-08-30T0105+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -223,6 +223,13 @@ function config_xim {
 	fi
 }
 
+function ajouter_compose {
+	if [ -f "Compose.yml" ]; then
+		cp Compose.yml ~/.XCompose
+		sed -ri 's/#.*\s*(include "%L")/\1/' ~/.XCompose
+	fi
+}
+
 function options_de_disposition {
 	config_xim
 	echo -e "\n  ⚠  Vous pouvez opter pour ce nouvel AZERTY par défaut,"
@@ -290,6 +297,7 @@ function options_de_disposition {
 		mkdir -p ~/.config/dispoclavier/activer
 		echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
 		cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
+		ajouter_compose
 		echo -e "\n  ✅  La disposition de clavier vient d’être activée."
 		echo -e "\n     Son fichier .$mode et son chemin ont été sauvegardés"
 		echo      '         dans ~/.config/dispoclavier/activer/.'
@@ -407,11 +415,12 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 			[dD])
 				mkdir -p sauvegarde
 				mv ~/.config/autostart/activer-dispo.desktop sauvegarde/activer-dispo.desktop
-				echo -e "\n  ✅  L’activation automatique est désactivée."
+				echo -e "\n  ✅  L’activation automatique est désactivée.\n"
 			;;
 			*)
 				config_xim
 				xkbcomp activer/$chemin :0
+				ajouter_compose
 				echo -e "\n  ✅  La disposition de clavier vient d’être activée."
 				echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 				echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
@@ -441,6 +450,7 @@ elif [ -f "$HOME/.config/dispoclavier/activer/der.$mode" ]; then
 		*)
 			config_xim
 			xkbcomp ~/.config/dispoclavier/activer/der.$mode :0
+			ajouter_compose
 			echo -e "\n  ✅  La disposition de clavier vient d’être réactivée."
 			echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 			echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
