@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-26T0743+0200
+#                       Date : 2024-08-30T0733+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -44,7 +44,7 @@
 #   touches en fonction des sous-variantes ne sont pas prises en charge, mais
 #   l’installation standard fonctionne.
 #
-#      installer.sh
+#      [installer.sh]
 #      Compose.yml
 #      installer/
 #         evdev-additions.xml
@@ -70,6 +70,7 @@
 # arithmétiques. On en profite pour inverser 0 et 1 — qui dans Bash signifient
 # vrai et faux, contrairement à la plupart des autres langages où ils
 # signifient faux et vrai — dans un souci de lisibilité.
+#
 
 introduction=0 # Pas faite.
 function afficher {
