@@ -1,5 +1,5 @@
-                      Date : 2024-08-23T0543+0200
-                   Version : 4.1.0
+                      Date : 2024-08-30T0724+0200
+                   Version : 4.2.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -34,7 +34,7 @@ Dispositions ou variantes
 
   • Le fichier `Compose.yml` contient le répertoire des touches mortes, les séquences de composition,
     ainsi que les chaînes de caractères sur touches vives. Son extension `.yml` sert uniquement à
-    l’ouverture et à l’affichage. Ce fichier est personnalisable et amplement commenté et expliqué.
+    l’ouverture et à l’affichage. Ce fichier est personnalisable.
 
   Les autres dispositions de clavier se trouvent dans le dossier `activer`, qui contient en tout
   90 fichiers texte qui sont des sources XKB issues de la fusion des différents fichiers sources,
@@ -119,73 +119,77 @@ Témoin lumineux
 
 Mode d’emploi sous Linux
 
-  1  Veiller à ce que la version de Linux utilisée ne soit pas trop récente.
-     Lire si nécessaire les explications sur ce point dans le Lisez-moi pour Linux :
+  Linux est affecté par un certain nombre de problèmes détaillés dans le Lisez-moi pour Linux :
 
          https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md
 
-  2  Ouvrir un terminal dans le dossier personnel et mettre la disposition actuelle dans `normal.xkb` :
-
-         xkbcomp :0 normal.xkb
-
-     Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
-
-  3  Aller sur la page de la version courante :
+  1  Aller sur la page de la version courante :
 
          https://github.com/dispoclavier/nouvel-azerty/releases/latest
 
-  4  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
+  2  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
          Nouvel-AZERTY-Linux-
      et se termine par le numéro de version et l’extension « .zip ».
 
-  5  Décompresser le dossier téléchargé.
+  3  Décompresser le dossier téléchargé.
 
-  6  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
-     vers le dossier personnel.
+  4  Choisir entre l’activation par le script `activer.sh` (A) et l’activation manuelle (B).
 
-  7  Si le dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
-     du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
-     à la fin pour remplacer les séquences en conflit.
+     A   Lancer le script `activer.sh` et se laisser guider. Ce script est documenté dans son en-tête et sur :
 
-     Sinon, renommer `Compose.yml` en `.XCompose`. Si les règles de `en_US.UTF-8/Compose` doivent
-     continuer de s’appliquer si elles ne sont pas en conflit, décommenter la ligne suivante :
+             https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#script-dactivation-mode-demploi
 
-         include "%L"
+     B1  Ouvrir un terminal dans le dossier personnel et mettre la disposition actuelle dans `normal.xkb` :
 
-     Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
-     placer à la fin du fichier.
+             xkbcomp :0 normal.xkb
 
-  8  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de
-     touches mortes.
+         Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
 
-  9  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
+     B2  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
+         vers le dossier personnel.
 
-         xkbcomp nouvel-azerty.xkb :0
+     B3  Si le dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
+         du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
+         à la fin pour remplacer les séquences en conflit.
 
-     Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
-     choisie.
+         Sinon, renommer `Compose.yml` en `.XCompose`. Si les règles de `en_US.UTF-8/Compose` doivent
+         continuer de s’appliquer si elles ne sont pas en conflit, décommenter la ligne suivante :
 
-     Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches de fonction 19 et 24,
-     ni pour la touche AE13, qui si elle est présente, se trouve entre Égal et Effacement arrière.
+             include "%L"
 
- 10  Veiller à ce que le système de saisie au clavier soit XIM.
-     Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée,
-     ou dans Système > Pays et langue > Système > Gérer les langues installées > Langue >
-     Système de saisie au clavier. On a le choix entre iBus, XIM et Aucun.
+         Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
+         placer à la fin du fichier.
 
-     Le système de saisie au clavier peut aussi être paramétré en ligne de commande. Pour
-     ce faire, ouvrir un terminal et utiliser la commande suivante :
+     B4  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de
+         touches mortes.
 
-         im-config -n xim
+     B5  Activer ce nouvel AZERTY dans le terminal ouvert au point 1 :
 
+             xkbcomp nouvel-azerty.xkb :0
 
-Ce nouvel AZERTY peut maintenant être testé.
+         Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
+         choisie.
 
-La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
+         Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches de fonction 19 et 24,
+         ni pour la touche AE13, qui si elle est présente, se trouve entre Égal et Effacement arrière.
 
-      xkbcomp normal.xkb :0
+     B6  Veiller à ce que le système de saisie au clavier soit XIM.
+         Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée,
+         ou dans Système > Pays et langue > Système > Gérer les langues installées > Langue >
+         Système de saisie au clavier. On a le choix entre iBus, XIM et Aucun.
 
-  grâce au fichier mis en place au point 1.
+         Le système de saisie au clavier peut aussi être paramétré en ligne de commande. Pour
+         ce faire, ouvrir un terminal et utiliser la commande suivante :
+
+             im-config -n xim
+
+     Ce nouvel AZERTY peut maintenant être testé.
+
+     La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente est :
+
+         xkbcomp normal.xkb :0
+
+     grâce au fichier mis en place au point 1.
 
 
 Critiques, suggestions et retours d’expérience
