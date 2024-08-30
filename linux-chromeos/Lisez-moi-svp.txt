@@ -1,5 +1,5 @@
-                      Date : 2024-08-30T0724+0200
-                   Version : 4.2.0
+                      Date : 2024-08-30T1312+0200
+                   Version : 4.2.1
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -127,9 +127,9 @@ Mode d’emploi sous Linux
 
          https://github.com/dispoclavier/nouvel-azerty/releases/latest
 
-  2  Sous le titre « Assets », télécharger le dossier compressé dont le nom commence par
-         Nouvel-AZERTY-Linux-
-     et se termine par le numéro de version et l’extension « .zip ».
+  2  Sous le titre « Assets », télécharger le dossier compressé nommé :
+
+         Nouvel-AZERTY-Linux-4.2.1.zip
 
   3  Décompresser le dossier téléchargé.
 
@@ -139,7 +139,7 @@ Mode d’emploi sous Linux
 
              https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#script-dactivation-mode-demploi
 
-     B1  Ouvrir un terminal dans le dossier personnel et mettre la disposition actuelle dans `normal.xkb` :
+     B1  Ouvrir un terminal dans le dossier personnel et sauvegarder la disposition actuelle dans `normal.xkb` :
 
              xkbcomp :0 normal.xkb
 
