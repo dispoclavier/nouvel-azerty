@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
-#                       Date: 2024-08-23T0454+0200
+#                       Date: 2024-08-30T0658+0200
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.1.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.2.0" # See # # Notes about syntax
 #        Operating file name: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -717,8 +717,10 @@
 #   This file is also used as the source code for HTML table partials, as those
 #   output by the scripts generate-multikey-tables.pl or generate-math-table.pl
 #   documenting multi-key sequences, and generate-deadkey-tables.pl documenting
-#   dead keys, also letter groups and symbol groups, also on screenshots of two
-#   spreadsheets that have plain text dumps in this file.
+#   dead keys, also letter groups and symbol groups.
+#
+#   The letter groups and symbol groups are also documented on screenshots of
+#   two spreadsheets. These have plain text dumps in this file.
 #   See # # Symbol groups overview
 #   See # # Letter groups overview
 #
