@@ -20,13 +20,15 @@ Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cli
 
 Ce script commence par sauvegarder la disposition de clavier actuelle, afin de pouvoir par la suite proposer de revenir à la disposition de clavier habituelle. Cela est utile pour rapidement mettre fin à un test, par la même méthode qui a mis ce test en route. Cette option était prévue dès le début quand le seul moyen était l’activation manuelle documentée dans le [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt).
 
-Aujourd’hui, pour revenir à la disposition de clavier habituelle, on choisit l’option O ou P pour plus d’options, puis H.
+Pour revenir à la disposition de clavier habituelle, on choisit l’option O ou P pour plus d’options, puis H.
 
 Sinon, après avoir appuyé sur Entrée, on peut choisir la variante de disposition dans une liste, puis la sous-variante dans une autre liste ; mais on peut aussi abréger en appuyant chaque fois directement sur Entrée, afin d’activer la disposition de base de ce nouvel AZERTY sans redispositions de touches.
 
-Par la suite, la disposition de clavier dernièrement utilisée parmi celles incluses dans ce nouvel AZERTY – ce qui inclut aussi les variantes redisposées – sera réactivée le plus facilement, après un appui sur Entrée. Ce sera la version la plus à jour disponible localement, si le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) est lancé depuis un paquetage téléchargé. Sinon ce sera la version dernièrement utilisée, mise en cache dans le dossier personnel, dans un sous-dossier `dispoclavier/activer/` au sein du sous-dossier caché `.config/`.
+Pour finaliser l’activation, les chaînes de caractères pour touches vives et le contenu des touches mortes sont mis en place dans le dossier personnel, le cas échéant à la suite des séquences de composition existantes.
 
-Le script d’activation propose aussi de (semi-)automatiser l’activation à l’ouverture de session selon une méthode uniformisée, utile pour compléter l’installation par l’activation.
+Par la suite, la disposition de clavier dernièrement utilisée parmi celles incluses dans ce nouvel AZERTY (qui inclut aussi les variantes redisposées) sera réactivée le plus facilement, après un appui sur Entrée. Ce sera la version la plus à jour disponible localement, si le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) est lancé depuis un paquetage téléchargé. Sinon ce sera la version dernièrement utilisée, mise en cache dans le dossier personnel, dans un sous-dossier `dispoclavier/activer/` au sein du sous-dossier caché `.config/`.
+
+Le script d’activation propose aussi de (semi-)automatiser l’activation à l’ouverture de session selon une méthode uniformisée, utile pour compléter l’installation par l’activation, mais cette fonctionnalité est affectée par le problème mentionné ci-après.
 
 ### Bogue d’autostart avec xkbcomp
 
@@ -333,7 +335,7 @@ Les bogues propres à Linux Mint ont dû être introduits au titre des modificat
 
 Xkbcomp, qui s’écrit tout en minuscules (« xkbcomp »), est un utilitaire de dispositions de clavier [documenté par IBM](https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command) avec une interface utilisateur en ligne de commande, invoqué par la commande « xkbcomp ».
 
-L’intérêt d’xkbcomp est de pouvoir activer la partie disposition des touches d’une disposition de clavier à partir d’un seul fichier, sans droits d’administrateur. Les chaînes de caractères des séquences et le contenu des touches mortes ne sont pas pris en charge par xkbcomp, étant dans un autre fichier. Celui-ci peut aussi être placé dans le dossier personnel, afin de rendre la disposition de clavier opérationnelle, toujours sans droits d’administrateur.
+L’intérêt d’xkbcomp est de pouvoir activer la partie disposition des touches d’une disposition de clavier à partir d’un seul fichier, sans droits d’administrateur. Les chaînes de caractères pour touches vives et le contenu des touches mortes ne sont pas pris en charge par xkbcomp, étant dans un autre fichier. Celui-ci peut aussi être placé dans le dossier personnel, afin de rendre la disposition de clavier opérationnelle, toujours sans droits d’administrateur.
 
 Xkbcomp a le grand avantage de fonctionner à 100 % aussi sous Linux Mint. Cette caractéristique rend xkbcomp indispensable sous Linux Mint, qui a la particularité de mettre partiellement en panne les dispositions de clavier installées, comme documenté ci-dessus sous le titre [Linux Mint](#linux-mint). Sous Linux Mint, l’installation doit être complétée par l’activation, qui a pour effet de déboguer la disposition de clavier installée.
 
@@ -431,7 +433,7 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [Q] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [Q], le liant U+200D sur AltGr + AltFr + [W], et le gluon U+2060 sur AltGr + AltFr + [G]. Les trois sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A] et de l’arobase sur [Y], le liant dans le même groupe du symbole pour cent sur [Z], et le gluon dans le même groupe du tiret du 6 sur [G].
 
-L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’[espace nulle](#espace-nulle).
+L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’espace nulle.
 
 ### Extensions de fichiers
 
