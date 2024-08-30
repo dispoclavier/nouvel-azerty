@@ -12,11 +12,29 @@ Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas.
 
 Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
+### Script d’activation : mode d’emploi
+
 Le script d’activation « activer.sh » se trouve sur GitHub ([activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
 
-Afin de compléter l’installation par l’activation, celle-ci peut être (semi-)automatisée à l’ouverture de session selon une méthode uniformisée, mais qui pour xkbcomp ne fonctionne pas. Quand le navigateur de fichiers (10 logiciels sont pris en charge, et on peut personnaliser le script pour prendre en charge d’autres logiciels) s’ouvre sur le script de réactivation de la dernière disposition utilisée, cela signifie que le lancement automatique d’xkbcomp a échoué et qu’il est nécessaire de le lancer manuellement.
+Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./activer.sh` après avoir ouvert le dossier dans un terminal.
 
-Plus d’informations sous le titre [XKBCOMP](#xkbcomp) plus bas.
+Ce script commence par sauvegarder la disposition de clavier actuelle, afin de pouvoir par la suite proposer de revenir à la disposition de clavier habituelle. Cela est utile pour rapidement mettre fin à un test, par la même méthode qui a mis ce test en route. Cette option était prévue dès le début quand le seul moyen était l’activation manuelle documentée dans le [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt).
+
+Aujourd’hui, pour revenir à la disposition de clavier habituelle, on choisit l’option O ou P pour plus d’options, puis H.
+
+Sinon, après avoir appuyé sur Entrée, on peut choisir la variante de disposition dans une liste, puis la sous-variante dans une autre liste ; mais on peut aussi abréger en appuyant chaque fois directement sur Entrée, afin d’activer la disposition de base de ce nouvel AZERTY sans redispositions de touches.
+
+Par la suite, la disposition de clavier dernièrement utilisée parmi celles incluses dans ce nouvel AZERTY – ce qui inclut aussi les variantes redisposées – sera réactivée le plus facilement, après un appui sur Entrée. Ce sera la version la plus à jour disponible localement, si le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) est lancé depuis un paquetage téléchargé. Sinon ce sera la version dernièrement utilisée, mise en cache dans le dossier personnel, dans un sous-dossier `dispoclavier/activer/` au sein du sous-dossier caché `.config/`.
+
+Le script d’activation propose aussi de (semi-)automatiser l’activation à l’ouverture de session selon une méthode uniformisée, utile pour compléter l’installation par l’activation.
+
+### Bogue d’autostart avec xkbcomp
+
+La méthode uniformisée de lancement à l’ouverture de session ne fonctionne pas pour xkbcomp. Ce bogue est documenté plus bas sous le titre [Xkbcomp](#xkbcomp).
+
+Quand le navigateur de fichiers s’ouvre sur le script de réactivation de la dernière disposition utilisée, cela signifie que le lancement automatique d’xkbcomp a échoué et qu’il est nécessaire de le lancer manuellement.
+
+Pour le navigateur de fichiers, dix logiciels sont pris en charge nativement, et on peut personnaliser le script pour en prendre en charge un autre.
 
 ## Installation
 
