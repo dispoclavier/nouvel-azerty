@@ -1,11 +1,11 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.2.1" # See # # Notes about syntax
+<UEFA0>                     : "version 4.3.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
-#                Description: Live key multi character output, dead keys and input composition,
+#                Description: Multi-key and dead key content, character strings for live keys.
 #                   Platform: Linux using XKB with XCompose*
 #        Syntax highlighting: YAML
 #
