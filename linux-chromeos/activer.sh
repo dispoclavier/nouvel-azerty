@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-30T0105+0200
+#                       Date : 2024-08-30T0532+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -236,11 +236,20 @@ function options_de_disposition {
 	echo      '     ou choisir une variante et éventuellement une sous-variante.'
 	echo -e "\n  ❓  Souhaitez-vous choisir rapidement dans deux listes ?"
 	echo -e "\n       Si oui, appuyez sur Entrée."
+	if [ -f "$HOME/.config/dispoclavier/activer/dispo_habituelle.$mode" ]; then
+		echo      '       Pour revenir à la disposition de clavier habituelle, tapez h puis Entrée.'
+	else
+		xkbcomp :0 ~/.config/dispoclavier/activer/dispo_habituelle.$mode
+	fi
 	echo      '       Pour quitter, tapez q ou n puis Entrée.'
 	read -p   '    ' repo
 	case $repo in
 		[nNqQ])
 			exit
+		;;
+		[hH])
+			xkbcomp ~/.config/dispoclavier/activer/dispo_habituelle.$mode :0
+			echo -e "\n  ✅  La disposition de clavier habituelle vient d’être réactivée.\n"
 		;;
 		*)
 			echo -e "\n  ❓  Quelle variante souhaitez-vous activer ? Pour passer, faites Entrée."
@@ -266,56 +275,56 @@ function options_de_disposition {
 				9) chemin="Variantes/kbfrAFsr/kbfrAFsr";;
 				*) chemin="nouvel-azerty";;
 			esac
+			echo -e "\n  ❓  Quelle sous-variante souhaitez-vous ? Pour passer, faites Entrée."
+			echo      "      o = Disposition ordinaire."
+			echo      "      w = Effacement arrière sur Windows droite."
+			echo      "     ws = Effacement arrière sur Windows droite sans Menu."
+			echo      "      m = Effacement arrière sur Menu, Menu sur Effacement arrière."
+			echo      "     ms = Effacement arrière sur Menu seulement, sans permutation."
+			echo      "      c = Permuter Effacement arrière et Contrôle droite."
+			echo      "      a = Permuter VerrCap et touche ISO pour claviers ANSI."
+			echo      "     am = Permuter VerrCap et touche ISO, et Effacement arrière et Menu."
+			echo      "    ams = Permuter VerrCap et touche ISO, Effacement arrière sur Menu."
+			read -p   "          o, w, ws, m, ms, c, a, am, ams ?   " re
+			case $re in
+				o)   suffixe="";;
+				w)   suffixe="-win";;
+				ws)  suffixe="-win-sans";;
+				m)   suffixe="-menu";;
+				ms)  suffixe="-menu-sans";;
+				c)   suffixe="-ctrl";;
+				a)   suffixe="-ansi";;
+				am)  suffixe="-ansi-menu";;
+				ams) suffixe="-ansi-menu-sans";;
+				*)   suffixe="";;
+			esac
+			chemin_complet="$chemin$suffixe.$mode"
+			if [ -f "activer/$chemin_complet" ]; then
+				xkbcomp activer/$chemin_complet :0
+				mkdir -p ~/.config/dispoclavier/activer
+				echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
+				cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
+				ajouter_compose
+				echo -e "\n  ✅  La disposition de clavier vient d’être activée."
+				echo -e "\n     Son fichier .$mode et son chemin ont été sauvegardés"
+				echo      '         dans ~/.config/dispoclavier/activer/.'
+				echo -e "\n     Tous les retours d’expérience sont les bienvenus."
+				echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
+				echo      '     n’hésitez pas à créer un rapport de bogue :'
+				echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
+				echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
+				echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
+				echo -e "\n             Bonne utilisation !\n"
+			else
+				echo -e "\n     Cette disposition de clavier n’a pas été activée, car"
+				echo      '     le fichier à activer n’est pas accessible.'
+				echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
+				echo      '     sur la page de la version la plus récente :'
+				echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
+				echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+			fi
 		;;
 	esac
-	echo -e "\n  ❓  Quelle sous-variante souhaitez-vous ? Pour passer, faites Entrée."
-	echo      "      o = Disposition ordinaire."
-	echo      "      w = Effacement arrière sur Windows droite."
-	echo      "     ws = Effacement arrière sur Windows droite sans Menu."
-	echo      "      m = Effacement arrière sur Menu, Menu sur Effacement arrière."
-	echo      "     ms = Effacement arrière sur Menu seulement, sans permutation."
-	echo      "      c = Permuter Effacement arrière et Contrôle droite."
-	echo      "      a = Permuter VerrCap et touche ISO pour claviers ANSI."
-	echo      "     am = Permuter VerrCap et touche ISO, et Effacement arrière et Menu."
-	echo      "    ams = Permuter VerrCap et touche ISO, Effacement arrière sur Menu."
-	read -p   "          o, w, ws, m, ms, c, a, am, ams ?   " re
-	case $re in
-		o)   suffixe="";;
-		w)   suffixe="-win";;
-		ws)  suffixe="-win-sans";;
-		m)   suffixe="-menu";;
-		ms)  suffixe="-menu-sans";;
-		c)   suffixe="-ctrl";;
-		a)   suffixe="-ansi";;
-		am)  suffixe="-ansi-menu";;
-		ams) suffixe="-ansi-menu-sans";;
-		*)   suffixe="";;
-	esac
-	chemin_complet="$chemin$suffixe.$mode"
-	if [ -f "activer/$chemin_complet" ]; then
-		xkbcomp activer/$chemin_complet :0
-		mkdir -p ~/.config/dispoclavier/activer
-		echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
-		cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
-		ajouter_compose
-		echo -e "\n  ✅  La disposition de clavier vient d’être activée."
-		echo -e "\n     Son fichier .$mode et son chemin ont été sauvegardés"
-		echo      '         dans ~/.config/dispoclavier/activer/.'
-		echo -e "\n     Tous les retours d’expérience sont les bienvenus."
-		echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
-		echo      '     n’hésitez pas à créer un rapport de bogue :'
-		echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
-		echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
-		echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
-		echo -e "\n             Bonne utilisation !\n"
-	else
-		echo -e "\n     Cette disposition de clavier n’a pas été activée, car"
-		echo      '     le fichier à activer n’est pas accessible.'
-		echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
-		echo      '     sur la page de la version la plus récente :'
-		echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
-		echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
-	fi
 }
 
 echo -e "\n    Bienvenue dans l’activateur de dispositions de clavier Dispoclavier."
@@ -461,6 +470,12 @@ elif [ -f "$HOME/.config/dispoclavier/activer/der.$mode" ]; then
 			echo -e "\n             Bonne utilisation !\n"
 		;;
 	esac
-else
+elif [ -d "activer" ]; then
 	options_de_disposition
+else
+		echo -e "\n     Les dispositions de clavier à activer ne sont pas présentes."
+		echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
+		echo      '     sur la page de la version la plus récente :'
+		echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
+		echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
 fi
