@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-30T0532+0200
+#                       Date : 2024-08-30T1259+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -19,6 +19,9 @@
 #
 #   ALERTES
 #
+#   Ce script utilise l’utilitaire xkbcomp documenté par IBM pour son OS AIX :
+#   https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command
+#
 #   L’activation automatique à l’ouverture de session, faute de fonctionner par
 #   un script, propose d’exécuter ce script manuellement en l’affichant dans le
 #   navigateur de fichiers. Si ce n’est pas l’un des 10 recommandés sur la page
@@ -26,6 +29,7 @@
 #   soit Dolphin, Double Commander, Konqueror, Krusader, Midnight Commander,
 #   Nautilus (GNOME Files), Nemo, Nnn, PCManFM ou Thunar, et si votre terminal
 #   n’est pas GNOME Terminal, ils peuvent être personnalisés plus bas dans :
+#
 #      emulateur_terminal="gnome-terminal" # Personnaliser si différent.
 #      navigateur_fichiers="dolphin" # Personnaliser si différent.
 #
@@ -223,10 +227,30 @@ function config_xim {
 	fi
 }
 
-function ajouter_compose {
+function gestion_compose {
+	message_compose='Ses chaînes de caractères pour touches vives et\n     le contenu de ses touches mortes '
 	if [ -f "Compose.yml" ]; then
-		cp Compose.yml ~/.XCompose
-		sed -ri 's/#.*\s*(include "%L")/\1/' ~/.XCompose
+		if [ -f "$HOME/.XCompose" ]; then
+			# Si le Compose Dispoclavier est déjà dans le .XCompose, le supprimer.
+			if ( grep -q 'START_additions_Compose_Dispoclavier' ~/.XCompose && grep -q 'END_additions_Compose_Dispoclavier' ~/.XCompose ); then
+				sed -i '/START_additions_Compose_Dispoclavier/,/END_additions_Compose_Dispoclavier/d' ~/.XCompose
+				message_compose+='ont été mis à jour dans\n     le fichier .XCompose existant.'
+			else
+				message_compose+='ont été ajoutés dans\n     le fichier .XCompose existant.'
+			fi
+			# Ajouter le Compose Dispoclavier actuel dans le .XCompose.
+			cat Compose.yml >> ~/.XCompose
+		else
+			# Placer le Compose Dispoclavier actuel dans un nouveau .XCompose.
+			cp Compose.yml ~/.XCompose
+			message_compose+='ont été placés dans\n     un fichier .XCompose ajouté à la racine de\n     votre dossier personnel.'
+		fi
+		# Si le Compose de la locale n’est pas déjà inclus, l’inclure.
+		if ! grep -qP '^\s*include "%L"' ~/.XCompose; then
+			sed -ri 's/#.*\s*(include "%L")/\1/' ~/.XCompose
+		fi
+	else
+		message_compose+='n’ont pas pu être\n     pris en charge, espérant qu’ils sont déjà en place.'
 	fi
 }
 
@@ -248,7 +272,7 @@ function options_de_disposition {
 			exit
 		;;
 		[hH])
-			xkbcomp ~/.config/dispoclavier/activer/dispo_habituelle.$mode :0
+			xkbcomp -w 0 ~/.config/dispoclavier/activer/dispo_habituelle.$mode :0
 			echo -e "\n  ✅  La disposition de clavier habituelle vient d’être réactivée.\n"
 		;;
 		*)
@@ -300,14 +324,15 @@ function options_de_disposition {
 			esac
 			chemin_complet="$chemin$suffixe.$mode"
 			if [ -f "activer/$chemin_complet" ]; then
-				xkbcomp activer/$chemin_complet :0
+				xkbcomp -w 0 activer/$chemin_complet :0
 				mkdir -p ~/.config/dispoclavier/activer
 				echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
 				cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
-				ajouter_compose
+				gestion_compose
 				echo -e "\n  ✅  La disposition de clavier vient d’être activée."
 				echo -e "\n     Son fichier .$mode et son chemin ont été sauvegardés"
 				echo      '         dans ~/.config/dispoclavier/activer/.'
+				echo -e "\n     $message_compose"
 				echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 				echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
 				echo      '     n’hésitez pas à créer un rapport de bogue :'
@@ -375,10 +400,10 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo "# Activation de la dernière disposition de clavier utilisée." >> der.sh
 					echo "# sleep 3 # La temporisation est dans autostart." >> der.sh
 					echo "failed=0" >> der.sh
-					echo "( $emulateur_terminal -- xkbcomp der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
+					echo "( $emulateur_terminal -- xkbcomp -w 0 der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\tfailed=0" >> der.sh
-					echo -e "\txkbcomp der.$mode :0 || failed=1" >> der.sh
+					echo -e "\txkbcomp -w 0 der.$mode :0 || failed=1" >> der.sh
 					echo "fi" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\t$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
@@ -428,9 +453,10 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 			;;
 			*)
 				config_xim
-				xkbcomp activer/$chemin :0
-				ajouter_compose
+				xkbcomp -w 0 activer/$chemin :0
+				gestion_compose
 				echo -e "\n  ✅  La disposition de clavier vient d’être activée."
+				echo -e "\n     $message_compose"
 				echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 				echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
 				echo      '     n’hésitez pas à créer un rapport de bogue :'
@@ -458,9 +484,10 @@ elif [ -f "$HOME/.config/dispoclavier/activer/der.$mode" ]; then
 		;;
 		*)
 			config_xim
-			xkbcomp ~/.config/dispoclavier/activer/der.$mode :0
-			ajouter_compose
+			xkbcomp -w 0 ~/.config/dispoclavier/activer/der.$mode :0
+			gestion_compose
 			echo -e "\n  ✅  La disposition de clavier vient d’être réactivée."
+			echo -e "\n     $message_compose"
 			echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 			echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
 			echo      '     n’hésitez pas à créer un rapport de bogue :'
