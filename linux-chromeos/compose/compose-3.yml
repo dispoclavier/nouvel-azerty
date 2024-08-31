@@ -1012,6 +1012,10 @@
 #
 # # C03
 #
+#   The character tie "⁀" U2040 is supported in group 12 mainly as a matching
+#   counterpart of "‿" U203F instead of former "❨" U2768, intended to prevent
+#   misuse of "☾" U263E, but unused in serious practice
+#
 <UEFD0>                                                                                <parenleft> : "⌀" U2300 # DIAMETER SIGN math
 <Multi_key><numbersign>                                                                <parenleft> : "⌀" U2300 # DIAMETER SIGN math
 <UEFD0><UEFD0>                                                                         <parenleft> : "∂" U2202 # PARTIAL DIFFERENTIAL math
@@ -1056,10 +1060,10 @@
 <Multi_key><numbersign><1>                                                             <parenleft> : "☾" U263E # LAST QUARTER MOON
 <UEFD0><KP_1>                                                                          <parenleft> : "☾" U263E # LAST QUARTER MOON
 <Multi_key><numbersign><KP_1>                                                          <parenleft> : "☾" U263E # LAST QUARTER MOON
-<UEFD0><2>                                                                             <parenleft> : "❨" U2768 # MEDIUM LEFT PARENTHESIS ORNAMENT
-<Multi_key><numbersign><2>                                                             <parenleft> : "❨" U2768 # MEDIUM LEFT PARENTHESIS ORNAMENT
-<UEFD0><KP_2>                                                                          <parenleft> : "❨" U2768 # MEDIUM LEFT PARENTHESIS ORNAMENT
-<Multi_key><numbersign><KP_2>                                                          <parenleft> : "❨" U2768 # MEDIUM LEFT PARENTHESIS ORNAMENT
+<UEFD0><2>                                                                             <parenleft> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><numbersign><2>                                                             <parenleft> : "⁀" U2040 # CHARACTER TIE
+<UEFD0><KP_2>                                                                          <parenleft> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><numbersign><KP_2>                                                          <parenleft> : "⁀" U2040 # CHARACTER TIE
 #
 #
 # # C04
@@ -1069,6 +1073,10 @@
 #   revision switched arrows on U and P keys for the right-pointing to be on
 #   “P wie Pfeil”, “arrow” in German.
 #   https://de.wikipedia.org/w/index.php?title=DIN_2137&oldid=235900739#%C3%9Cberarbeitung_2023
+#
+#   The undertie "‿" U203F is supported in group 12 for its use in phonetics to
+#   denote linking, aka liaison, instead of former "❩" U2769, that was intended
+#   to prevent misuse of "☽" U263D, but is unused in serious practice.
 #
 <UEFD0>                                                                               <parenright> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
 <Multi_key><numbersign>                                                               <parenright> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
@@ -1114,10 +1122,10 @@
 <Multi_key><numbersign><1>                                                            <parenright> : "☽" U263D # FIRST QUARTER MOON
 <UEFD0><KP_1>                                                                         <parenright> : "☽" U263D # FIRST QUARTER MOON
 <Multi_key><numbersign><KP_1>                                                         <parenright> : "☽" U263D # FIRST QUARTER MOON
-<UEFD0><2>                                                                            <parenright> : "❩" U2769 # MEDIUM RIGHT PARENTHESIS ORNAMENT
-<Multi_key><numbersign><2>                                                            <parenright> : "❩" U2769 # MEDIUM RIGHT PARENTHESIS ORNAMENT
-<UEFD0><KP_2>                                                                         <parenright> : "❩" U2769 # MEDIUM RIGHT PARENTHESIS ORNAMENT
-<Multi_key><numbersign><KP_2>                                                         <parenright> : "❩" U2769 # MEDIUM RIGHT PARENTHESIS ORNAMENT
+<UEFD0><2>                                                                            <parenright> : "‿" U203F # UNDERTIE
+<Multi_key><numbersign><2>                                                            <parenright> : "‿" U203F # UNDERTIE
+<UEFD0><KP_2>                                                                         <parenright> : "‿" U203F # UNDERTIE
+<Multi_key><numbersign><KP_2>                                                         <parenright> : "‿" U203F # UNDERTIE
 #
 #
 # # C05
@@ -2952,9 +2960,12 @@
 #   Group 4 on the base alphabet: Latin letters and symbols (continued)
 #
 #   Tbe ties "⁀" U2040 CHARACTER TIE and "‿" U203F UNDERTIE are here by J, with
-#   mnemonic based on the curved tail of the letter.
+#   mnemonic based on the curved tail of the letter. They are also in group 12
+#   of parenleft and parenright.
 #   See #*# TURNED
 #   See #^# INVERTED
+#   See # # C03
+#   See # # C04
 #
 <UEFD0><4>                                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
 <Multi_key><numbersign><4>                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
