@@ -29,6 +29,7 @@
 		* Redonder "•" U+2022. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
 	* Drapeau : Ajouter "˭" U+02ED à la place de "⚑" U+2691 et "⚐" U+2690, qui vont en double frappe, suivis par "🏴" U+1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
 	* Drapeau > Double drapeau : Redonder "͌" U+034C, rajouter "⚑" U+2691, "⚐" U+2690, "🏴" U+1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Groupes des symboles : Redonder "⁀" U2040 et "‿" U203F à la place de "❨" U2768 et "❩" U2769. (compose-3.yml [d93e3f1](https://github.com/dispoclavier/nouvel-azerty/commit/d93e3f135ec7a44bd6e108311393c4ddf945383d), (compose-2.yml [9598dbd](https://github.com/dispoclavier/nouvel-azerty/commit/9598dbd0530f1860d1df1adef0f2b5dad011bb2c))
 * Corriger la description des fichiers de composition. (compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f))
 
 ## 4.2.1 (2024-08-30)
