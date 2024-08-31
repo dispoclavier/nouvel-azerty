@@ -1,5 +1,21 @@
 # Journal des modifications
 
+## 4.3.0 (projet)
+
+* Transformations :
+	* Déboguer "͚" U035A, "͜" U035C, "͝" U035D, "͞" U035E, "͟" U035F, "∄" U2204, "∉" U2209, "∌" U220C. (compose-2.yml [22b3da4](https://github.com/dispoclavier/nouvel-azerty/commit/22b3da4dd3e2e0b5c9ef62794c15296584414a17))
+	* Exposant > Suscrit : Ajouter "᪻" U1ABB, "᪼" U1ABC, "᫆" U1AC6, "⃰" U20F0. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Cornu : Ajouter "᫉" U1AC9, "᫊" U1ACA. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Indice > Souscrit : Ajouter "᪽" U1ABD à la place de "̜" U031C et "̹" U0339, qui sont dans le groupe 5 de D et F. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Barré > Triple barre : Renommer et ajouter "᷻" U1DFB à la place de "⃫" U20EB, qui est en composition. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Drapeau : Ajouter "˭" U02ED à la place de "⚑" U2691 et "⚐" U2690, qui vont en double frappe, suivis par "🏴" U1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Drapeau > Double drapeau : Redonder "͌" U034C, rajouter "⚑" U2691, "⚐" U2690, "🏴" U1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+* Corriger la description des fichiers de composition. (compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f))
+
+## 4.2.1 (2024-08-30)
+
+* Activation : Protéger un fichier .XCompose préexistant. (activer.sh [5294412](https://github.com/dispoclavier/nouvel-azerty/commit/52944122d4387903e7dcab78e086da68f9a79c39), linux-chromeos/readme.md [7507ed6](https://github.com/dispoclavier/nouvel-azerty/commit/7507ed68e69df11aa2fc4d7d33c7b95b6c164a07), Lisez-moi-svp.txt [f4941b0](https://github.com/dispoclavier/nouvel-azerty/commit/f4941b0d91da34069404fe9024dc59108992ac38))
+
 ## 4.2.0 (2024-08-30)
 
 * Installation : Faciliter les mises à jour. (installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91), [172f1a2](https://github.com/dispoclavier/nouvel-azerty/commit/172f1a2773bc49e2b9952208492cff5598c65777), [cd024ef](https://github.com/dispoclavier/nouvel-azerty/commit/cd024ef57cf461fa586cb52215754b690a006f88), linux-chromeos/readme.md [1145307](https://github.com/dispoclavier/nouvel-azerty/commit/114530720e83ca1b7325c69fd4c6eab8cf01fad0))
