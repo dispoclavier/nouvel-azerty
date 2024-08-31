@@ -9429,8 +9429,8 @@
 <Multi_key><parenright>                                                             <nobreakspace> : "˘" U02D8 # BREVE
 <dead_breve>                                                                               <U202F> : "˘" U02D8 # BREVE
 <Multi_key><parenright>                                                                    <U202F> : "˘" U02D8 # BREVE
-<dead_breve>                                                                            <dblquote> : "͝" U035D # COMBINING DOUBLE BREVE
-<Multi_key><parenright>                                                                 <dblquote> : "͝" U035D # COMBINING DOUBLE BREVE
+<dead_breve>                                                                            <quotedbl> : "͝" U035D # COMBINING DOUBLE BREVE
+<Multi_key><parenright>                                                                 <quotedbl> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                            <EuroSign> : "͝" U035D # COMBINING DOUBLE BREVE
 <Multi_key><parenright>                                                                 <EuroSign> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                           <ampersand> : "̮" U032E # COMBINING BREVE BELOW
@@ -10158,8 +10158,8 @@
 <Multi_key><parenright><parenright>                                                 <nobreakspace> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
 <dead_breve><dead_breve>                                                                   <U202F> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <Multi_key><parenright><parenright>                                                        <U202F> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
-<dead_breve><dead_breve>                                                                <dblquote> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
-<Multi_key><parenright><parenright>                                                     <dblquote> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<dead_breve><dead_breve>                                                                <quotedbl> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><parenright><parenright>                                                     <quotedbl> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                <EuroSign> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <Multi_key><parenright><parenright>                                                     <EuroSign> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                       <L> : "Ɬ" UA7AD # LATIN CAPITAL LETTER L WITH BELT
@@ -11654,8 +11654,8 @@
 <Multi_key><bar>                                                                    <nobreakspace> : "¯" U00AF # MACRON
 <dead_macron>                                                                              <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
-<dead_macron>                                                                           <dblquote> : "͞" U035E # COMBINING DOUBLE MACRON
-<Multi_key><bar>                                                                        <dblquote> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_macron>                                                                           <quotedbl> : "͞" U035E # COMBINING DOUBLE MACRON
+<Multi_key><bar>                                                                        <quotedbl> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_macron>                                                                           <EuroSign> : "͞" U035E # COMBINING DOUBLE MACRON
 <Multi_key><bar>                                                                        <EuroSign> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_macron>                                                                          <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
@@ -11880,8 +11880,8 @@
 <Multi_key><bar><bar>                                                               <nobreakspace> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <dead_macron><dead_macron>                                                                 <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <Multi_key><bar><bar>                                                                      <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
-<dead_macron><dead_macron>                                                              <dblquote> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
-<Multi_key><bar><bar>                                                                   <dblquote> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<dead_macron><dead_macron>                                                              <quotedbl> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<Multi_key><bar><bar>                                                                   <quotedbl> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                              <EuroSign> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <Multi_key><bar><bar>                                                                   <EuroSign> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                             <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
@@ -12021,8 +12021,8 @@
 <Multi_key><slash>                                                                  <nobreakspace> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_stroke>                                                                              <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <Multi_key><slash>                                                                         <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<dead_stroke>                                                                           <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><slash>                                                                      <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_stroke>                                                                           <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><slash>                                                                      <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_stroke>                                                                           <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><slash>                                                                      <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_stroke>                                                                         <asciitilde> : "≁" U2241 # NOT TILDE
@@ -12141,8 +12141,8 @@
 #   Lenient group selection
 #   Dchar: 
 #
-<dead_stroke><UEFD0>                                                                    <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign>                                                          <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_stroke><UEFD0>                                                                    <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign>                                                          <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_stroke><UEFD0>                                                                    <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><slash><numbersign>                                                          <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_stroke><UEFD0>                                                                  <asciitilde> : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
@@ -12166,8 +12166,8 @@
 # # STROKE&GROUP_2
 #   Dchar: 
 #
-<dead_stroke><UEFD0><UEFD0>                                                             <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><slash><numbersign><numbersign>                                              <dblquote> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_stroke><UEFD0><UEFD0>                                                             <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><slash><numbersign><numbersign>                                              <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_stroke><UEFD0><UEFD0>                                                             <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><slash><numbersign><numbersign>                                              <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_stroke><UEFD0><UEFD0>                                                           <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
@@ -12185,12 +12185,12 @@
 # # STROKE&GROUP_3
 #   Dchar: 
 #
-<dead_stroke><UEFD0><3>                                                                 <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><3>                                                       <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_stroke><UEFD0><KP_3>                                                              <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><KP_3>                                                    <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<dead_stroke><UEFD0><UEFD0><UEFD0>                                                      <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><slash><numbersign><numbersign><numbersign>                                  <dblquote> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_stroke><UEFD0><3>                                                                 <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><3>                                                       <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_stroke><UEFD0><KP_3>                                                              <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><KP_3>                                                    <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<dead_stroke><UEFD0><UEFD0><UEFD0>                                                      <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><slash><numbersign><numbersign><numbersign>                                  <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_stroke><UEFD0><3>                                                                 <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><slash><numbersign><3>                                                       <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_stroke><UEFD0><KP_3>                                                              <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
@@ -12232,12 +12232,12 @@
 # # STROKE&GROUP_4
 #   Dchar: 
 #
-<dead_stroke><UEFD0><4>                                                                 <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><4>                                                       <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_stroke><UEFD0><KP_4>                                                              <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><KP_4>                                                    <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
-<dead_stroke><UEFD0><UEFD0><UEFD0><UEFD0>                                               <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                      <dblquote> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_stroke><UEFD0><4>                                                                 <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><4>                                                       <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_stroke><UEFD0><KP_4>                                                              <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><KP_4>                                                    <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_stroke><UEFD0><UEFD0><UEFD0><UEFD0>                                               <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><slash><numbersign><numbersign><numbersign><numbersign>                      <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_stroke><UEFD0><4>                                                                 <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><slash><numbersign><4>                                                       <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_stroke><UEFD0><KP_4>                                                              <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
@@ -12640,8 +12640,8 @@
 <Multi_key><asterisk><asterisk>                                                     <nobreakspace> : "˳" U02F3 # MODIFIER LETTER LOW RING
 <dead_abovering><dead_abovering>                                                           <U202F> : "˳" U02F3 # MODIFIER LETTER LOW RING
 <Multi_key><asterisk><asterisk>                                                            <U202F> : "˳" U02F3 # MODIFIER LETTER LOW RING
-<dead_abovering><dead_abovering>                                                        <dblquote> : "͚" U035A # COMBINING DOUBLE RING BELOW
-<Multi_key><asterisk><asterisk>                                                         <dblquote> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<dead_abovering><dead_abovering>                                                        <quotedbl> : "͚" U035A # COMBINING DOUBLE RING BELOW
+<Multi_key><asterisk><asterisk>                                                         <quotedbl> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <dead_abovering><dead_abovering>                                                        <EuroSign> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <Multi_key><asterisk><asterisk>                                                         <EuroSign> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <dead_abovering><dead_abovering>                                                               <A> : "Ḁ" U1E00 # LATIN CAPITAL LETTER A WITH RING BELOW
