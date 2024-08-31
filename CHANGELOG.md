@@ -1,5 +1,7 @@
 # Journal des modifications
 
+Le signe plus dans les points de code au format U+9ABC est omis pour l’interopérabilité. Pour la documentation, il doit être rajouté.
+
 ## 4.3.0 (projet)
 
 * Transformations :
@@ -256,7 +258,7 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.2.2 (2024-07-25)
 
-* Activation : Déboguer les fichiers fusionnés en réactivant deux types de touches non utilisés et désactivés dans les distributions Linux de 2016. dispocla.cpp [6e6da51](https://github.com/dispoclavier/nouvel-azerty/commit/6e6da518aef27fac611ba90b6873328bf40d75c8), comp.sh [c0eecf0](https://github.com/dispoclavier/nouvel-azerty/commit/c0eecf0f0d8ca357b63c989d0ff3cd50daafa2e8)
+* Activation : Déboguer les sources de disposition fusionnées en réactivant deux types de touches non utilisés et désactivés dans les distributions Linux de 2016. dispocla.cpp [6e6da51](https://github.com/dispoclavier/nouvel-azerty/commit/6e6da518aef27fac611ba90b6873328bf40d75c8), comp.sh [c0eecf0](https://github.com/dispoclavier/nouvel-azerty/commit/c0eecf0f0d8ca357b63c989d0ff3cd50daafa2e8)
 * Documentation :
 	* Point du pavé numérique : Corriger la référence du modèle cité, `kpdl(kposs)`, non `kpdl(dotoss)`. dispocla.cpp [3175e51](https://github.com/dispoclavier/nouvel-azerty/commit/3175e51073dfba773b12996fcc648dc55ba4558e)
 	* Bogues des systèmes d’exploitation :
@@ -301,7 +303,7 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.0.0 (2024-07-04)
 
-Disruption : les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule de l’abréviation Numéro (avec le o en exposant) puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr + N, et afin que le trigramme breton (avec la lettre apostrophe) bénéficie de la même logique sur A, ainsi que pour faciliter la saisie des minuscules en exposant (comme indicateurs d’abréviation, indicateurs ordinaux), en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
+Les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin que la majuscule de l’abréviation Numéro (avec le o en exposant) puisse être saisie en ajoutant Maj, non en ajoutant AltGr, sur Maj + AltGr + AltFr + N, et afin que le trigramme breton (avec la lettre apostrophe) bénéficie de la même logique sur A, ainsi que pour faciliter la saisie des minuscules en exposant (comme indicateurs d’abréviation, indicateurs ordinaux), en Maj + AltFr, non en AltGr + AltFr. Permutation des niveaux 6 et 7 sur la plupart des touches.
 
 * Permuter les niveaux 6 et 7. dispocla.cpp [eda4dd1](https://github.com/dispoclavier/nouvel-azerty/commit/eda4dd14bcca8f876eccbb5e68e9fccadcf130ee), [c74e5a8](https://github.com/dispoclavier/nouvel-azerty/commit/c74e5a82814311b1716389dae0ab351c1e3b2068), [e3924aa](https://github.com/dispoclavier/nouvel-azerty/commit/e3924aae79e0ebc30a08b21da8cd2e6fc47c92ed), [17f0984](https://github.com/dispoclavier/nouvel-azerty/commit/17f0984949b62b5fcd9825e618e7341ce596d9f6), dispotypes.c [fc8683b](https://github.com/dispoclavier/nouvel-azerty/commit/fc8683be9e555c4d5b86a9a4d6e55ea79502153f), [accfc83](https://github.com/dispoclavier/nouvel-azerty/commit/accfc83f04a40d4deb8f2511f8fcd41a274ac9cc)
 * Remettre "=" U+003D comme caractère en Contrôle plutôt que "+" U+002B. dispotypes.c [accfc83](https://github.com/dispoclavier/nouvel-azerty/commit/accfc83f04a40d4deb8f2511f8fcd41a274ac9cc)
@@ -584,7 +586,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
 
 * Disposition : Redonder la touche morte grec ou cerclé à la place de "@" U+0040 sur D06. dispocla.cpp [2b62fcd](https://github.com/dispoclavier/nouvel-azerty/commit/2b62fcd03c1403fa8ee37e2accaf5be25c53a034)
 * Transformations : Tilde : Redonder les guillemets comme dans Accent aigu. compose-2.yml [b9a8c63](https://github.com/dispoclavier/nouvel-azerty/commit/b9a8c635e1cd079dfd625d7bc1af3f4bc56b16c5), [9d84d8f](https://github.com/dispoclavier/nouvel-azerty/commit/9d84d8f797d0687367d84de63b4c7dfc67191f98)
-* Distribution : Ranger les fichiers compilés par variante dans 9 dossiers. comp.sh [28d932b](https://github.com/dispoclavier/nouvel-azerty/commit/28d932b0f03eb04368e73aa7091596c25c4b909e)
+* Distribution : Ranger les sources de disposition fusionnées par variante dans 9 dossiers. comp.sh [28d932b](https://github.com/dispoclavier/nouvel-azerty/commit/28d932b0f03eb04368e73aa7091596c25c4b909e)
 * Documentation : Restaurer l’historique des versions du répertoire des touches mortes. Compose.yml de [c6c939f](https://github.com/dispoclavier/nouvel-azerty/commit/c6c939f1ec1a84dc4a1ec4aaf49df552b887e5dd) à [bebf6f8](https://github.com/dispoclavier/nouvel-azerty/commit/bebf6f8e44270b5623bf4eae95454b8b657497e2)
 
 ## 1.6.0 (2024-02-09)
@@ -769,7 +771,7 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 	* Exposant : Remplacer "̍" U+030D par "̅" U+0305. ibidem
 	* Tourné : Remplacer "̅" U+0305 par "̒" U+0312. ibidem
 	* Réfléchi : Ajouter "̔" U+0314. ibidem
-* Fichiers compilés : Limiter les touches sans symboles à AB11 et AE13. evdev.c [fcdee06](https://github.com/dispoclavier/nouvel-azerty/commit/fcdee06e45540fc039bca322aeb581d7206e7a8c)
+* Sources de disposition fusionnées : Limiter les touches sans symboles à AB11 et AE13. evdev.c [fcdee06](https://github.com/dispoclavier/nouvel-azerty/commit/fcdee06e45540fc039bca322aeb581d7206e7a8c)
 * Sous-variantes : Permuter correctement la touche d’Effacement arrière. evdev.c [d5068d3](https://github.com/dispoclavier/nouvel-azerty/commit/d5068d3580a84fce5b5e5a8c258e69305fa8c524)
 
 ## 1.1.0 (2023-10-24)
