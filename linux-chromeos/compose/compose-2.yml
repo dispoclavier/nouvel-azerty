@@ -1201,11 +1201,11 @@
 #
 #   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_superscript
 #   yields high curly quotation marks U201D, U2019 (closing or opening) exactly
-#   like dead_acute and dead_tilde do, as a facility for keyboard layouts where
-#   dead_superscript is on the base level with respect to the need for dumbed-
-#   down layout drivers to cater for Windows, shipping some malware designed to
-#   destroy the reputation of more complete keyboard layouts.
-#   https://dispoclavier.com/nouvel-azerty/#2250-mais-windows-10-et-11-meme-le-windows-10-de-base-22h2-sans-aucune-mise-a-jour
+#   like dead_acute does, and dead_tilde as of "”" U201D, for more resilient
+#   keyboard layouts, e.g. with dead_superscript on the base level with respect
+#   to a need for dumbed-down layout drivers to cater for Windows shipping some
+#   malware designed to destroy the reputation of more complete layouts.
+#   https://dispoclavier.com/nouvel-azerty/#malware-windows
 #   See # # Quotation mark input method
 #
 #   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
@@ -4317,6 +4317,10 @@
 #   See # # B07-level3
 #   See # # B08-level3
 #
+#   The tilde dead key also supports the "”" U201D quotation mark, reduntantly
+#   with acute accent, for more resilient keyboard layouts.
+#   See # # Quotation mark input method
+#
 #   The tilde dead key supports daggers, because it is mapped on key T due to
 #   alphabetic mnemonic, and daggers are tied to T by shape-based mnemonic.
 #   The full set of daggers is available by digits 1 through 6 with shape-based
@@ -4336,8 +4340,7 @@
 #      0    "˕" U02D5 MODIFIER LETTER DOWN TACK
 #
 #   The tilde dead key also has intuitive support for the swung dash "⁓" U2053,
-#   with em and en dashes and the quotation dash U2015 as base characters, or
-#   underscore as an ASCII fallback.
+#   with underscore and the quotation dash U2015 as base characters.
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
@@ -4354,10 +4357,10 @@
 <Multi_key><asciitilde>                                                             <nobreakspace> : "~" U007E # TILDE
 <dead_tilde>                                                                               <U202F> : "˜" U02DC # SMALL TILDE
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
-<dead_tilde>                                                                            <quotedbl> : "͠" U0360 # COMBINING DOUBLE TILDE
-<Multi_key><asciitilde>                                                                 <quotedbl> : "͠" U0360 # COMBINING DOUBLE TILDE
-<dead_tilde>                                                                            <EuroSign> : "͠" U0360 # COMBINING DOUBLE TILDE
-<Multi_key><asciitilde>                                                                 <EuroSign> : "͠" U0360 # COMBINING DOUBLE TILDE
+<dead_tilde>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                            <question> : "¿" U00BF # INVERTED QUESTION MARK
@@ -4366,14 +4369,10 @@
 <Multi_key><asciitilde>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <dead_tilde>                                                                          <underscore> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
-<dead_tilde>                                                                              <emdash> : "⁓" U2053 # SWUNG DASH
-<Multi_key><asciitilde>                                                                   <emdash> : "⁓" U2053 # SWUNG DASH
-<dead_tilde>                                                                              <endash> : "⁓" U2053 # SWUNG DASH
-<Multi_key><asciitilde>                                                                   <endash> : "⁓" U2053 # SWUNG DASH
-<dead_tilde>                                                                               <U2015> : "⁓" U2053 # SWUNG DASH
-<Multi_key><asciitilde>                                                                    <U2015> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
+<Multi_key><asciitilde>                                                                   <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                                   <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
 <Multi_key><asciitilde>                                                                        <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
 <dead_tilde>                                                                                <KP_0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
@@ -8815,6 +8814,8 @@
 <Multi_key><parenleft>                                                                     <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                   <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key><parenleft>                                                                 <ampersand> : "̯" U032F # COMBINING INVERTED BREVE BELOW
+<dead_invertedbreve>                                                                      <emdash> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<Multi_key><parenleft>                                                                    <emdash> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <dead_invertedbreve>                                                                           <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <a> : "ȃ" U0203 # LATIN SMALL LETTER A WITH INVERTED BREVE
@@ -9400,6 +9401,8 @@
 <Multi_key><parenleft><parenleft>                                                   <nobreakspace> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
 <dead_invertedbreve><dead_invertedbreve>                                                   <U202F> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <Multi_key><parenleft><parenleft>                                                          <U202F> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
+<dead_invertedbreve><dead_invertedbreve>                                                  <emdash> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<Multi_key><parenleft><parenleft>                                                         <emdash> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <dead_invertedbreve><dead_invertedbreve>                                                       <D> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <Multi_key><parenleft><parenleft>                                                              <D> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <dead_invertedbreve><dead_invertedbreve>                                                       <d> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
@@ -9435,6 +9438,8 @@
 <Multi_key><parenright>                                                                 <EuroSign> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                           <ampersand> : "̮" U032E # COMBINING BREVE BELOW
 <Multi_key><parenright>                                                                <ampersand> : "̮" U032E # COMBINING BREVE BELOW
+<dead_breve>                                                                              <emdash> : "͝" U035D # COMBINING DOUBLE BREVE
+<Multi_key><parenright>                                                                   <emdash> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                                   <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
 <Multi_key><parenright>                                                                        <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
 <dead_breve>                                                                                   <a> : "ă" U0103 # LATIN SMALL LETTER A WITH BREVE
@@ -10162,6 +10167,8 @@
 <Multi_key><parenright><parenright>                                                     <quotedbl> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                <EuroSign> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <Multi_key><parenright><parenright>                                                     <EuroSign> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<dead_breve><dead_breve>                                                                  <emdash> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><parenright><parenright>                                                       <emdash> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                       <L> : "Ɬ" UA7AD # LATIN CAPITAL LETTER L WITH BELT
 <Multi_key><parenright><parenright>                                                            <L> : "Ɬ" UA7AD # LATIN CAPITAL LETTER L WITH BELT
 <dead_breve><dead_breve>                                                                       <l> : "ɬ" U026C # LATIN SMALL LETTER L WITH BELT
@@ -10211,6 +10218,14 @@
 #   encoded in Unicode, since the overlay bar diacritics do not render well.
 #   https://www.frathwiki.com/Bar
 #
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are consistently
+#   supported across three matching dead keys, with quotedbl and EuroSign as
+#   base characters.
+#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #*# MACRON
+#   See #*# STROKE
+#   See #*# BAR
+#
 #   As a spacing counterpart of the short bar diacritic "̵" U0335, "˗" U02D7 is
 #   convenient, since it is not the superscript minus sign, despite being named
 #   a MODIFIER LETTER.
@@ -10223,6 +10238,10 @@
 <Multi_key><minus>                                                                  <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <UEFD8>                                                                                    <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
+<UEFD8>                                                                                 <quotedbl> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><minus>                                                                      <quotedbl> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<UEFD8>                                                                                 <EuroSign> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><minus>                                                                      <EuroSign> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 <UEFD8>                                                                              <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <UEFD8>                                                                             <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
@@ -11641,6 +11660,14 @@
 #   Cent and Cedi signs are supported by lack of C with macron, and
 #   for consistency with en_US.UTF-8/Compose.
 #
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are consistently
+#   supported across three matching dead keys, with quotedbl and EuroSign as
+#   base characters.
+#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #*# MACRON
+#   See #*# STROKE
+#   See #*# BAR
+#
 #   Digits yield the full collection of simple, broken, multiple vertical bars,
 #   for convenience, since the other input methods, in groups or by Multi_key,
 #   may be less mnemonic or more complicated.
@@ -11654,12 +11681,14 @@
 <Multi_key><bar>                                                                    <nobreakspace> : "¯" U00AF # MACRON
 <dead_macron>                                                                              <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
-<dead_macron>                                                                           <quotedbl> : "͞" U035E # COMBINING DOUBLE MACRON
-<Multi_key><bar>                                                                        <quotedbl> : "͞" U035E # COMBINING DOUBLE MACRON
-<dead_macron>                                                                           <EuroSign> : "͞" U035E # COMBINING DOUBLE MACRON
-<Multi_key><bar>                                                                        <EuroSign> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_macron>                                                                           <quotedbl> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><bar>                                                                        <quotedbl> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<dead_macron>                                                                           <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><bar>                                                                        <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_macron>                                                                          <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <Multi_key><bar>                                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
+<dead_macron>                                                                             <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
+<Multi_key><bar>                                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_macron>                                                                                  <0> : "⫾" U2AFE # WHITE VERTICAL BAR
 <Multi_key><bar>                                                                               <0> : "⫾" U2AFE # WHITE VERTICAL BAR
 <dead_macron>                                                                               <KP_0> : "⫾" U2AFE # WHITE VERTICAL BAR
@@ -11886,6 +11915,8 @@
 <Multi_key><bar><bar>                                                                   <EuroSign> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                             <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
 <Multi_key><bar><bar>                                                                  <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
+<dead_macron><dead_macron>                                                                <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<Multi_key><bar><bar>                                                                     <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                                     <B> : "Ḇ" U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <B> : "Ḇ" U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <b> : "ḇ" U1E07 # LATIN SMALL LETTER B WITH LINE BELOW
@@ -12005,26 +12036,31 @@
 #   See # # Design of math sequences
 #   See #*# REVERSED
 #
-#   As a spacing counterpart of the long solidus diacritic "̸" U0338, "ꜘ" UA718
-#   is picked rather than a slash punctuation or symbol, with respect to double
-#   and triple press virtual dead keys also needing a spacing equivalent, so as
-#   to get a subset of Chinantec tone marks: "ꜘ" UA718, "ꜗ" UA717, "ꜙ" UA719.
+#   As a spacing counterpart of the long solidus diacritic "̸" U0338, the
+#   division slash "∕" U2215 is picked rather than Chinantec "ꜘ" UA718, that
+#   would be too unexpected and disrupting, with too far-fetched a rationale.
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are consistently
+#   supported across three matching dead keys, with quotedbl and EuroSign as
+#   base characters.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #*# MACRON
+#   See #*# STROKE
+#   See #*# BAR
 #   See #^# SHORT_STROKE
-#   See #^# DOUBLE_STROKE
+#   See #^# TRIPLE_STROKE
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <dead_stroke>                                                                              <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
-<dead_stroke>                                                                       <nobreakspace> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><slash>                                                                  <nobreakspace> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<dead_stroke>                                                                              <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><slash>                                                                         <U202F> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<dead_stroke>                                                                           <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><slash>                                                                      <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
-<dead_stroke>                                                                           <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><slash>                                                                      <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_stroke>                                                                       <nobreakspace> : "∕" U2215 # DIVISION SLASH
+<Multi_key><slash>                                                                  <nobreakspace> : "∕" U2215 # DIVISION SLASH
+<dead_stroke>                                                                              <U202F> : "∕" U2215 # DIVISION SLASH
+<Multi_key><slash>                                                                         <U202F> : "∕" U2215 # DIVISION SLASH
+<dead_stroke>                                                                           <quotedbl> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><slash>                                                                      <quotedbl> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<dead_stroke>                                                                           <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><slash>                                                                      <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_stroke>                                                                         <asciitilde> : "≁" U2241 # NOT TILDE
 <Multi_key><slash>                                                                    <asciitilde> : "≁" U2241 # NOT TILDE
 <dead_stroke>                                                                                  <1> : "∕" U2215 # DIVISION SLASH
@@ -12358,17 +12394,18 @@
 #   is called SHORT_STROKE rather than DIAGONAL_STROKE, while the other two are
 #   unconflictingly supported in dead_stroke single press.
 #
-#   As of a spacing modifier letter, "ꜗ" UA717 is picked, consistently with "ꜘ"
-#   UA718 MODIFIER LETTER DOT SLASH that fills this slot in single press.
+#   As a spacing modifier letter, "⟋" U27CB is picked for graphic consistency,
+#   although it is a math symbol, not a letter. Chinantec "ꜗ" UA717 would be
+#   too unexpected, inconsistent and disrupting.
 #
 <dead_stroke><dead_stroke>                                                                 <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <Multi_key><slash><slash>                                                                  <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <dead_stroke><dead_stroke>                                                                 <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <Multi_key><slash><slash>                                                                  <U200B> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
-<dead_stroke><dead_stroke>                                                          <nobreakspace> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><slash><slash>                                                           <nobreakspace> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<dead_stroke><dead_stroke>                                                                 <U202F> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><slash><slash>                                                                  <U202F> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<dead_stroke><dead_stroke>                                                          <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><slash><slash>                                                           <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<dead_stroke><dead_stroke>                                                                 <U202F> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><slash><slash>                                                                  <U202F> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <dead_stroke><dead_stroke>                                                            <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><slash><slash>                                                             <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <dead_stroke><dead_stroke>                                                                     <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
@@ -12445,19 +12482,17 @@
 #   Dchar: 
 #
 #   This is required because we have a combining deletion mark: "᷻" U1DFB, that
-#   is a triple solidus.
-#
-#   Additionally, this also allows to support the third modifier letter in the
-#   "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 set.
+#   is a triple solidus. The spacing counterpart, although a math symbol, is
+#   consistent with the graphic, unlike Chinantec "ꜙ" UA719.
 #
 <dead_stroke><dead_stroke><dead_stroke>                                                    <space> : "᷻" U1DFB # COMBINING DELETION MARK
 <Multi_key><slash><slash><slash>                                                           <space> : "᷻" U1DFB # COMBINING DELETION MARK
 <dead_stroke><dead_stroke><dead_stroke>                                                    <U200B> : "᷻" U1DFB # COMBINING DELETION MARK
 <Multi_key><slash><slash><slash>                                                           <U200B> : "᷻" U1DFB # COMBINING DELETION MARK
-<dead_stroke><dead_stroke><dead_stroke>                                             <nobreakspace> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><slash><slash><slash>                                                    <nobreakspace> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<dead_stroke><dead_stroke><dead_stroke>                                                    <U202F> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><slash><slash><slash>                                                           <U202F> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<dead_stroke><dead_stroke><dead_stroke>                                             <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><slash><slash><slash>                                                    <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<dead_stroke><dead_stroke><dead_stroke>                                                    <U202F> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><slash><slash><slash>                                                           <U202F> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 #
 #
 #*# RING_ABOVE
@@ -12736,13 +12771,9 @@
 #   See #   Heart emoji
 #
 #   So the set of remaining numeric base characters is used for other purposes.
-#   Digit 2 replaces quotedbl and EuroSign for the combining double circumflex,
-#   inconsistently with the other dead keys yielding double combining marks but
-#   with digit 2 mostly unavailable for that purpose.
-#
-#   Another useful functionality is bullets, since a fairly complete set in the
-#   symbols groups is now limited to "•" U2022, "◦" U25E6, "⁃" U2043. This now
-#   supports "▪" U25AA, "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3.
+#   One useful functionality is bullets, since the symbol groups are limited to
+#   "•" U2022, "◦" U25E6, "⁃" U2043. Now, dead_circumflex supports "▪" U25AA,
+#   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3 as well as "•" U2022.
 #
 #   Previously, the heart emoji logic was followed through, supporting the full
 #   set of filled (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
@@ -12755,21 +12786,19 @@
 #   using the traditional mapping on the same key in shift position.
 #   See #*# DIAERESIS
 #
-#   Ultimately, this feature is non-critical since a dedicated superscript dead
-#   key is also present, in NF Z71-300:2019 too.
+#   Ultimately, this feature is non-critical when a dedicated superscript dead
+#   key is present, and superscript digits and small letters are on live keys.
 #   See #*# SUPERSCRIPT
-#
-#   Moreover, superscript and subscript digits are on live keys.
 #
 #   NOTE: In en_US.UTF-8/Compose that the superscript digits by dead_circumflex
 #   feature comes from, the superscript dead key is missing, consistently with
-#   the *dead_superscript or equivalent keysym missing in keysymdef.h.
+#   the *dead_superscript or equivalent keysym missing from keysymdef.h.
 #
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
 #   U017F LATIN SMALL LETTER LONG S, in group 3 of s, has an additional input
-#   method by <dead_circumflex><f> since French has no words including an -êf-.
-#   Plus, <dead_circumflex><dollar> also yields the same small letter.
+#   method by <dead_circumflex><f> since French has no words including an -êf-
+#   digram. Plus, <dead_circumflex><dollar> also yields this small letter.
 #
 #   Likewise, U2300 DIAMETER SIGN, in group 1 of (, is given yet another input
 #   method by <dead_circumflex><d>, <dead_circumflex><D> due to the fact that
@@ -12815,6 +12844,8 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_circumflex>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<Multi_key><less>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
 <Multi_key><less>                                                                    <twosuperior> : "′" U2032 # PRIME
 <dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
@@ -12823,14 +12854,14 @@
 <Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
 <dead_circumflex>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
 <Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<dead_circumflex>                                                                              <1> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<Multi_key><less>                                                                              <1> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<dead_circumflex>                                                                           <KP_1> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<Multi_key><less>                                                                           <KP_1> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<dead_circumflex>                                                                              <2> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<Multi_key><less>                                                                              <2> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<dead_circumflex>                                                                           <KP_2> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<Multi_key><less>                                                                           <KP_2> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<dead_circumflex>                                                                              <1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
+<dead_circumflex>                                                                           <KP_1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
+<dead_circumflex>                                                                              <2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
+<Multi_key><less>                                                                              <2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
+<dead_circumflex>                                                                           <KP_2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
+<Multi_key><less>                                                                           <KP_2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
 <Multi_key><less>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
 <dead_circumflex>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
