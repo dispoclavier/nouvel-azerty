@@ -3,13 +3,32 @@
 ## 4.3.0 (projet)
 
 * Transformations :
-	* Déboguer "͚" U035A, "͜" U035C, "͝" U035D, "͞" U035E, "͟" U035F, "∄" U2204, "∉" U2209, "∌" U220C. (compose-2.yml [22b3da4](https://github.com/dispoclavier/nouvel-azerty/commit/22b3da4dd3e2e0b5c9ef62794c15296584414a17))
-	* Exposant > Suscrit : Ajouter "᪻" U1ABB, "᪼" U1ABC, "᫆" U1AC6, "⃰" U20F0. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
-	* Cornu : Ajouter "᫉" U1AC9, "᫊" U1ACA. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
-	* Indice > Souscrit : Ajouter "᪽" U1ABD à la place de "̜" U031C et "̹" U0339, qui sont dans le groupe 5 de D et F. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
-	* Barré > Triple barre : Renommer et ajouter "᷻" U1DFB à la place de "⃫" U20EB, qui est en composition. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
-	* Drapeau : Ajouter "˭" U02ED à la place de "⚑" U2691 et "⚐" U2690, qui vont en double frappe, suivis par "🏴" U1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
-	* Drapeau > Double drapeau : Redonder "͌" U034C, rajouter "⚑" U2691, "⚐" U2690, "🏴" U1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Déboguer "͚" U+035A, "͜" U+035C, "͝" U+035D, "͞" U+035E, "͟" U+035F, "∄" U+2204, "∉" U+2209, "∌" U+220C. (compose-2.yml [22b3da4](https://github.com/dispoclavier/nouvel-azerty/commit/22b3da4dd3e2e0b5c9ef62794c15296584414a17))
+	* Exposant > Suscrit : Ajouter "᪻" U+1ABB, "᪼" U+1ABC, "᫆" U+1AC6, "⃰" U+20F0. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Tilde : Corriger les séquences de "⁓" U+2053, "͠" U+0360. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Brève inversée : Corriger les séquences de "͡" U+0361. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Brève inversée > Brève inversée souscrite : Corriger les séquences de "᷼" U+1DFC. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Brève : Corriger les séquences de "͝" U+035D. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Brève > Brève souscrite : Corriger les séquences de "͜" U+035C. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Rayé : Redonder "ꜙ" U+A719. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Cornu : Ajouter "᫉" U+1AC9, "᫊" U+1ACA. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Indice > Souscrit : Ajouter "᪽" U+1ABD à la place de "̜" U+031C et "̹" U+0339, qui sont dans le groupe 5 de D et F. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Macron :
+		* Corriger les séquences de "͞" U+035E. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+		* Redonder "ꜗ" U+A717 à la place de "͞" U+035E, qui est par tiret cadratin. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Macron > Macron souscrit : Corriger les séquences de "͟" U+035F. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Barré :
+		* Redonder "∕" U+2215 à la place de "ꜘ" U+A718, qui est par "\"" U+0022 et par "€" U+20AC. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+		* Redonder "ꜘ" U+A718 à la place de "∉" U+2209, qui est dans le groupe 2 et en composition. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Barré > Barre courte : Redonder "⟋" U+27CB à la place de "ꜗ" U+A717, qui est dans macron. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Barré > Triple barre :
+		* Renommer et ajouter "᷻" U+1DFB à la place de "⃫" U+20EB, qui est en composition. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+		* Redonder "⫻" U+2AFB à la place de "ꜙ" U+A719, qui est dans rayé. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Accent circonflexe :
+		* Corriger les séquences de "᪰" U+1AB0, "᷍" U+1DCD. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+		* Redonder "•" U+2022. (compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa))
+	* Drapeau : Ajouter "˭" U+02ED à la place de "⚑" U+2691 et "⚐" U+2690, qui vont en double frappe, suivis par "🏴" U+1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
+	* Drapeau > Double drapeau : Redonder "͌" U+034C, rajouter "⚑" U+2691, "⚐" U+2690, "🏴" U+1F3F4. (compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b))
 * Corriger la description des fichiers de composition. (compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f))
 
 ## 4.2.1 (2024-08-30)
