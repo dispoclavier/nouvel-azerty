@@ -1,7 +1,5 @@
 # Journal des modifications
 
-Le signe plus dans les points de code au format U+9ABC est omis pour l’interopérabilité. Pour la documentation, il doit être rajouté.
-
 ## 4.3.0 (projet)
 
 * Transformations :
