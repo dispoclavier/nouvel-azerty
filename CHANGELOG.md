@@ -38,6 +38,10 @@
 
 ## 4.2.0 (2024-08-30)
 
+Facilitation des mises à jour par le script d’installation.
+
+Simplification et automatisation de l’activation sans droits d’administrateur par le nouveau script d’activation.
+
 * Installation : Faciliter les mises à jour. installer.sh [0c93aaa](https://github.com/dispoclavier/nouvel-azerty/commit/0c93aaa8bb2aca60787791bf497a292ba0d45a91), [172f1a2](https://github.com/dispoclavier/nouvel-azerty/commit/172f1a2773bc49e2b9952208492cff5598c65777), [cd024ef](https://github.com/dispoclavier/nouvel-azerty/commit/cd024ef57cf461fa586cb52215754b690a006f88), linux-chromeos/readme.md [1145307](https://github.com/dispoclavier/nouvel-azerty/commit/114530720e83ca1b7325c69fd4c6eab8cf01fad0)
 * Activation :
 	* Fournir un script pour faciliter l’activation. activer.sh [5fb5636](https://github.com/dispoclavier/nouvel-azerty/commit/5fb563605062fa49667bcb1f468a75074fc5fb2c), [06f0482](https://github.com/dispoclavier/nouvel-azerty/commit/06f04828103e593619a0de7886b18627d0e81fd0), [638dc31](https://github.com/dispoclavier/nouvel-azerty/commit/638dc31e6ba514de87b5cb394ee4e7f183747913), [062df8e](https://github.com/dispoclavier/nouvel-azerty/commit/062df8e46f5c6a8a46980b90ba4373e85d7e25f1), [26e0bee](https://github.com/dispoclavier/nouvel-azerty/commit/26e0beed9d211c07c9fcbb09bd59cf7df32a2d46) (aussi [10536e7](https://github.com/dispoclavier/nouvel-azerty/commit/10536e7e3d557e2e720a8533316cf1f6873d33ef), [064156b](https://github.com/dispoclavier/nouvel-azerty/commit/064156b60533a10360f8ddc2e45d218b89ce05df), [760efce](https://github.com/dispoclavier/nouvel-azerty/commit/760efcea392533981c3d52a1c749a0c40fc94756)), Lisez-moi-svp.txt [10b5b33](https://github.com/dispoclavier/nouvel-azerty/commit/10b5b330fa037cd0d6d45dbb12dbd3cff9b09092), linux-chromeos/readme.md [6dd8aec](https://github.com/dispoclavier/nouvel-azerty/commit/6dd8aeca92bde97bc35254db43adec7209626230), [3f6716d](https://github.com/dispoclavier/nouvel-azerty/commit/3f6716da00c70d9e1802070b4b29b35b98d48ed1)
@@ -45,6 +49,8 @@
 	* Prévoir la fourniture de dispositions compilées comme une alternative aux sources de disposition fusionnées. comp.sh [e63e247](https://github.com/dispoclavier/nouvel-azerty/commit/e63e24766508f87fb72af37802f64e8d98e6773e), [6229021](https://github.com/dispoclavier/nouvel-azerty/commit/622902160670f9539eda3068af419a765f282dd5), [bbd0f42](https://github.com/dispoclavier/nouvel-azerty/commit/bbd0f42b44a516ca740c647c57106e0f0007e128)
 
 ## 4.1.0 (2024-08-23)
+
+Le symbole racine cède sa place sur touche vive au symbole rapport, plus utile seul.
 
 * Disposition : Redonder "∶" U+2236 sur AltGr + AltFr + R à la place de "√" U+221A, qui est dans le groupe 2 de "\" U+005C avec "∛" U+221B dans le groupe 3 et "∜" U+221C dans le groupe 4. dispocla.cpp [173f7b0](https://github.com/dispoclavier/nouvel-azerty/commit/173f7b0b728821c322c241cba5e306a26f232dc8)
 * Composition : Adapter les séquences de "∻" U+223B, "≀" U+2240, "≁" U+2241, "⟦" U+27E6, "⩳" U+2A73, "⫝" U+2ADD. compose-1.yml [6c30d09](https://github.com/dispoclavier/nouvel-azerty/commit/6c30d09f968239d96b81d904070d01b2fcdc45a6)
@@ -126,6 +132,8 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.5.1 (2024-08-10)
 
+Prise en charge des barres de ton manquantes.
+
 * Composition :
 	* Ajouter les barres de ton additionnelles "꜈" U+A708, "꜉" U+A709, "꜊" U+A70A, "꜋" U+A70B, "꜌" U+A70C, "꜍" U+A70D, "꜎" U+A70E, "꜏" U+A70F, "꜐" U+A710, "꜑" U+A711, "꜒" U+A712, "꜓" U+A713, "꜔" U+A714, "꜕" U+A715, "꜖" U+A716. compose-1.yml [d8d4de5](https://github.com/dispoclavier/nouvel-azerty/commit/d8d4de52fb8ad1448957d5b7c022eae17bc5291e)
 	* Adapter la séquence de "⁨" U+2068. ibidem
@@ -166,6 +174,8 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.4.3 (2024-07-31)
 
+Prise en charge de lettres manquantes.
+
 * Transformations :
 	* Exposant et tourné : Ajouter "ꭩ" U+AB69. compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8)
 	* Tourné et tilde : Ajouter "ꭨ" U+AB68. ibidem
@@ -174,6 +184,10 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 	* Grec ou cerclé : Supprimer "⊝" U+229D par "_" U+005F. ibidem
 
 ## 3.4.2 (2024-07-31)
+
+Rajout d’un symbole mathématique perdu dans la version 1.7.3.
+
+Prise en charge de lettres manquantes.
 
 * Composition :
 	* Restaurer "⋊" U+22CA, perdu dans la version 1.7.3. compose-1.yml [181f80f](https://github.com/dispoclavier/nouvel-azerty/commit/181f80f696d182232b23792169a111cbc6fe45a2)
@@ -196,6 +210,10 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.4.1 (2024-07-30)
 
+Prise en charge du symbole som pour le Kirghizistan.
+
+Débogages.
+
 * Composition :
 	* Mettre à jour le symbole monétaire par code ISO "Лв" U+041B U+0432 Som KYRGYZSTAN vers "⃀" U+20C0 SOM SIGN. compose-1.yml [9ea34e0](https://github.com/dispoclavier/nouvel-azerty/commit/9ea34e023b55c39301a7bb5bdd808fb065e2346b)
 	* Corriger les séquences de "⟎" U+27CE pour déboguer "ą" U+0105. ibidem
@@ -204,6 +222,12 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 * Transformations : Indice et réfléchi : Corriger les séquences de "ᴙ" U+1D19 pour déboguer "ᴎ" U+1D0E et "ᴙ" U+1D19. compose-2.yml [9b4a4c0](https://github.com/dispoclavier/nouvel-azerty/commit/9b4a4c0efdc8000b8abb604fcf7368013b255261)
 
 ## 3.4.0 (2024-07-30)
+
+Prise en charge du symbole som pour le Kirghizistan.
+
+Remise à plat de nombreuses séquences de composition de symboles mathématiques.
+
+Poursuite de l’amélioration de la prise en charge de l’écriture latine.
 
 * Composition :
 	* Corriger les séquences de "⁡" U+2061, "⁢" U+2062, "⁣" U+2063, "⁤" U+2064, "∇" U+2207, "∋" U+220B, "∌" U+220C, "∍" U+220D, "∐" U+2210, "∧" U+2227, "⊃" U+2283, "⊅" U+2285, "⊇" U+2287, "⊉" U+2289, "⊋" U+228B, "⊐" U+2290, "⊒" U+2292, "⊥" U+22A5, "⋀" U+22C0, "⋄" U+22C4, "⋏" U+22CF, "⋑" U+22D1, "⋣" U+22E3, "⋥" U+22E5, "⋺" U+22FA, "⋻" U+22FB, "⋼" U+22FC, "⋽" U+22FD, "⋾" U+22FE, "⟎" U+27CE, "⟏" U+27CF, "⟑" U+27D1, "⧘" U+29D8, "⧙" U+29D9, "⧚" U+29DA, "⧛" U+29DB, "⨇" U+2A07, "⨯" U+2A2F, "⨿" U+2A3F, "⩕" U+2A55, "⩗" U+2A57, "⩘" U+2A58, "⩙" U+2A59, "⩚" U+2A5A, "⩜" U+2A5C, "⩞" U+2A5E, "⩟" U+2A5F, "⩠" U+2A60, "⪃" U+2A83, "⪄" U+2A84, "⪾" U+2ABE, "⫀" U+2AC0, "⫂" U+2AC2, "⫄" U+2AC4, "⫆" U+2AC6, "⫈" U+2AC8, "⫊" U+2ACA, "⫌" U+2ACC, "⫐" U+2AD0, "⫑" U+2AD1, "⫒" U+2AD2, "⫓" U+2AD3, "⫖" U+2AD6, "⫘" U+2AD8, "⫪" U+2AEA, "⫫" U+2AEB, "⫾" U+2AFE. compose-1.yml [97ca5cb](https://github.com/dispoclavier/nouvel-azerty/commit/97ca5cb715405f1b28ce988c050921c7105dd1b3)
@@ -222,6 +246,8 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 	* Accent circonflexe > Accent circonflexe souscrit : Redonder "‸" U+2038 à la place de "ꞈ" U+A788, qui est avec le caractère de base espace fine insécable. ibidem
 
 ## 3.3.0 (2024-07-26)
+
+Amélioration de la prise en charge de l’écriture latine.
 
 * Composition :
 	* Paléographie médiévale :
@@ -256,6 +282,8 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.2.2 (2024-07-25)
 
+Débogage des fichiers servant à activer une disposition de clavier par xkbcomp.
+
 * Activation : Déboguer les sources de disposition fusionnées en réactivant deux types de touches non utilisés et désactivés dans les distributions Linux de 2016. dispocla.cpp [6e6da51](https://github.com/dispoclavier/nouvel-azerty/commit/6e6da518aef27fac611ba90b6873328bf40d75c8), comp.sh [c0eecf0](https://github.com/dispoclavier/nouvel-azerty/commit/c0eecf0f0d8ca357b63c989d0ff3cd50daafa2e8)
 * Documentation :
 	* Point du pavé numérique : Corriger la référence du modèle cité, `kpdl(kposs)`, non `kpdl(dotoss)`. dispocla.cpp [3175e51](https://github.com/dispoclavier/nouvel-azerty/commit/3175e51073dfba773b12996fcc648dc55ba4558e)
@@ -267,10 +295,14 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 
 ## 3.2.1 (2024-07-14)
 
+Rectification du carré plein centré et de la marque de répétition.
+
 * Composition : Supprimer "⯀" U+2BC0. compose-1.yml [d746dbb](https://github.com/dispoclavier/nouvel-azerty/commit/d746dbb2a07cb2273a413f8b16570ea0b2a1a4f3)
 * Transformations : Groupes des symboles : Rajouter "⯀" U+2BC0 dans le groupe 6 à la place de "〃" U+3003, qui est dans le groupe 12. compose-3.yml [7629ef3](https://github.com/dispoclavier/nouvel-azerty/commit/7629ef3b3a9039aa0f0fc49b92d7d73db0103da4)
 
 ## 3.2.0 (2024-07-09)
+
+Meilleure prise en charge des émojis.
 
 * Disposition : Permuter "😭" U+1F62D et "😱" U+1F631 pour la mnémonique. dispocla.cpp [35f423f](https://github.com/dispoclavier/nouvel-azerty/commit/35f423f998a9af26189352f6d4eb8ed5bb376860)
 * Composition : Ajouter "⯀" U+2BC0 au nombre des puces. compose-1.yml [d9f67b1](https://github.com/dispoclavier/nouvel-azerty/commit/d9f67b10ebbf30578fa3df535076dc3410961392)
@@ -286,6 +318,8 @@ Permutation des ponctuations espacées et non espacées sur AltFr et Maj.
 * Documentation. linux-chromeos/readme.md [e96eda7](https://github.com/dispoclavier/nouvel-azerty/commit/e96eda7fac758277190d7e41251ed60a263c1969), dispocla.cpp [35f423f](https://github.com/dispoclavier/nouvel-azerty/commit/35f423f998a9af26189352f6d4eb8ed5bb376860), compose-2.yml [a119d4b](https://github.com/dispoclavier/nouvel-azerty/commit/a119d4b856f60bb01bcf44fb5c25a1c332e4cd18)
 
 ## 3.1.0 (2024-07-07)
+
+Plusieurs caractères sont redisposés.
 
 * Disposition :
 	* Mettre le liant "‍" U+200D à la place de l’antiliant "‌" U+200C sur AltGr + AltFr + X, qui prend la place du deux-points sur AltGr + AltFr + W, qui prend la place de la barre de fraction "⁄" U+2044 sur (Maj puis) AltGr + AltFr + Q (depuis 1.0.9), qui prend la place du symbole micro "µ" U+00B5 sur AltGr + AltFr + F, qui est sur AltGr + AltFr + M. dispocla.cpp [157d828](https://github.com/dispoclavier/nouvel-azerty/commit/157d828f913b15f50666cc6d71e2124765c6390c)
@@ -337,6 +371,8 @@ Les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin
 
 ## 2.3.4 (2024-06-19)
 
+Cette version vient avec un script d’installation qui prend en charge aussi les redispositions des sous-variantes.
+
 * Sous-variantes :
 	* Prendre en charge aussi les agencements ANSI purs. evdev.c [d98b5de](https://github.com/dispoclavier/nouvel-azerty/commit/d98b5de4daa2c29fb690f2d175b41a6301996deb)
 	* Restaurer les touches de fonction 19 et 24 (désactivées pour la version 1.1.1). ibidem
@@ -349,6 +385,8 @@ Les exposants changent de niveau, d’AltGr + AltFr à Maj + AltFr, afin
 * Documentation. compose-1.yml [c44a9d8](https://github.com/dispoclavier/nouvel-azerty/commit/c44a9d86810711b6ac1c1be019ded28bb9132bfb)
 
 ## 2.3.3 (2024-06-16)
+
+Cette version vient avec un script d’installation amélioré.
 
 * Installation :
 	* Sortir le script du sous-dossier `outils/`. installer.sh [b48cd4a](https://github.com/dispoclavier/nouvel-azerty/commit/b48cd4a59b3a56354b3dae710e5e134488a268da)
