@@ -3137,7 +3137,10 @@
 #   The opening parenthesis yields the character tie "⁀" U2040, since this may
 #   be considered sideways, or like a vertical parenthesis. The undertie
 #   "‿" U203F would conflict with "𐞡" U107A1 by its Multi_key equivalent, but
-#   it is supported in the double press virtual dead key *dead_inverted.
+#   it is supported in the double press virtual dead key *dead_inverted. Both
+#   "⁀" U2040 and "‿" U203F are also in group 12 of "(" and ")".
+#   See # # C03
+#   See # # C04
 #
 #   For intuitivity, the Polynesian ʻeta, Hawaiʻian ʻokina can also be input as
 #   if it were a turned rightsinglequotemark despite being a letter. Apostrophe
@@ -3621,7 +3624,7 @@
 #
 #   The two parentheses yield the two underties, one of which is inverted:
 #   "⁔" U2054, "‿" U203F. For mnemonic, these are like sideways, or vertical
-#   parentheses.
+#   parentheses. "⁀" U2040 and "‿" U203F are also in group 12 of "(" and ")".
 #
 #   As a diacritic, "̕" U0315 COMBINING COMMA ABOVE RIGHT is included, with the
 #   rationale that turning twice may be used to represent a shift to the right.
