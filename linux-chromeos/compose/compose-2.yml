@@ -2917,14 +2917,22 @@
 <Multi_key><asciicircum><asciicircum>                                               <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <UEFD1><UEFD1>                                                                             <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <Multi_key><asciicircum><asciicircum>                                                      <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
+<UEFD1><UEFD1>                                                                        <numbersign> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
+<Multi_key><asciicircum><asciicircum>                                                 <numbersign> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
+<UEFD1><UEFD1>                                                                         <parenleft> : "᪻" U1ABB # COMBINING PARENTHESES ABOVE
+<Multi_key><asciicircum><asciicircum>                                                  <parenleft> : "᪻" U1ABB # COMBINING PARENTHESES ABOVE
+<UEFD1><UEFD1>                                                                        <parenright> : "᪼" U1ABC # COMBINING DOUBLE PARENTHESES ABOVE
+<Multi_key><asciicircum><asciicircum>                                                 <parenright> : "᪼" U1ABC # COMBINING DOUBLE PARENTHESES ABOVE
 <UEFD1><UEFD1>                                                                              <plus> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
 <Multi_key><asciicircum><asciicircum>                                                       <plus> : "᫈" U1AC8 # COMBINING PLUS SIGN ABOVE
+<UEFD1><UEFD1>                                                                        <underscore> : "﹋" UFE4B # WAVY OVERLINE
+<Multi_key><asciicircum><asciicircum>                                                 <underscore> : "﹋" UFE4B # WAVY OVERLINE
 <UEFD1><UEFD1>                                                                       <bracketleft> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <Multi_key><asciicircum><asciicircum>                                                <bracketleft> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <UEFD1><UEFD1>                                                                      <bracketright> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <Multi_key><asciicircum><asciicircum>                                               <bracketright> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
-<UEFD1><UEFD1>                                                                        <underscore> : "﹋" UFE4B # WAVY OVERLINE
-<Multi_key><asciicircum><asciicircum>                                                 <underscore> : "﹋" UFE4B # WAVY OVERLINE
+<UEFD1><UEFD1>                                                                          <asterisk> : "⃰" U20F0 # COMBINING ASTERISK ABOVE
+<Multi_key><asciicircum><asciicircum>                                                   <asterisk> : "⃰" U20F0 # COMBINING ASTERISK ABOVE
 <UEFD1><UEFD1>                                                                                 <2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <Multi_key><asciicircum><asciicircum>                                                          <2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <UEFD1><UEFD1>                                                                              <KP_2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
@@ -7312,6 +7320,11 @@
 #       2 and 4    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
 #       8          "♾" U267E PERMANENT PAPER SIGN
 #
+#   By contrast, dead_abovedot cannot support Chinantec tone marks "ꜗ" UA717,
+#   "ꜘ" UA718, "ꜙ" UA719, due to conflicts with bar and macron combinations.
+#   See # # DOT_ABOVE&BAR
+#   See # # DOT_ABOVE&MACRON
+#
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
 <dead_abovedot>                                                                            <U200B> : "̇" U0307 # COMBINING DOT ABOVE
@@ -10600,6 +10613,12 @@
 #   "˗" U02D7 in the dead key for barred letters *dead_bar.
 #   See #*# BAR
 #
+#   This also supports "᫉" U1AC9 COMBINING DOUBLE PLUS SIGN ABOVE and "᫊" U1ACA
+#   COMBINING DOUBLE PLUS SIGN BELOW, while single counterparts are supported
+#   in combining above for "᫈" U1AC8, combining below for "̟" U031F.
+#   See #^# COMBINING_ABOVE
+#   See #^# COMBINING_BELOW
+#
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
 <dead_horn>                                                                                <U200B> : "̛" U031B # COMBINING HORN
@@ -10608,6 +10627,10 @@
 <Multi_key><plus>                                                                   <nobreakspace> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <Multi_key><plus>                                                                          <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<dead_horn>                                                                             <quotedbl> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
+<Multi_key><plus>                                                                       <quotedbl> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
+<dead_horn>                                                                            <ampersand> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
+<Multi_key><plus>                                                                      <ampersand> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 <dead_horn>                                                                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><plus>                                                                              <0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                                 <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -11231,10 +11254,10 @@
 <Multi_key><underscore><underscore>                                         <rightsinglequotemark> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
-<UEFD2><UEFD2>                                                                         <parenleft> : "̜" U031C # COMBINING LEFT HALF RING BELOW
-<Multi_key><underscore><underscore>                                                    <parenleft> : "̜" U031C # COMBINING LEFT HALF RING BELOW
-<UEFD2><UEFD2>                                                                        <parenright> : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
-<Multi_key><underscore><underscore>                                                   <parenright> : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
+<UEFD2><UEFD2>                                                                         <parenleft> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
+<Multi_key><underscore><underscore>                                                    <parenleft> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
+<UEFD2><UEFD2>                                                                        <parenright> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
+<Multi_key><underscore><underscore>                                                   <parenright> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
 <UEFD2><UEFD2>                                                                              <plus> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <Multi_key><underscore><underscore>                                                         <plus> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <UEFD2><UEFD2>                                                                             <slash> : "᪹" U1AB9 # COMBINING LIGHT CENTRALIZATION STROKE BELOW
@@ -12416,20 +12439,21 @@
 <Multi_key><slash><slash><equal><numbersign><numbersign><numbersign>                  <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
-#^# DOUBLE_STROKE
+#^# TRIPLE_STROKE
 #   dead_stroke triple press
 #   Multi_key: ¦///
 #   Dchar: 
 #
-#   This is required because we have a combining long double solidus as well as
-#   a combining short solidus, plus a third modifier letter in the "ꜗ", "ꜘ", "ꜙ"
-#   set. However, "⃫" U20EB being a mathematical diacritic, "̷" U0337 is easier,
-#   at the expense of the “double” mnemonic based on double press.
+#   This is required because we have a combining deletion mark: "᷻" U1DFB, that
+#   is a triple solidus.
 #
-<dead_stroke><dead_stroke><dead_stroke>                                                    <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
-<Multi_key><slash><slash><slash>                                                           <space> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
-<dead_stroke><dead_stroke><dead_stroke>                                                    <U200B> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
-<Multi_key><slash><slash><slash>                                                           <U200B> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
+#   Additionally, this also allows to support the third modifier letter in the
+#   "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 set.
+#
+<dead_stroke><dead_stroke><dead_stroke>                                                    <space> : "᷻" U1DFB # COMBINING DELETION MARK
+<Multi_key><slash><slash><slash>                                                           <space> : "᷻" U1DFB # COMBINING DELETION MARK
+<dead_stroke><dead_stroke><dead_stroke>                                                    <U200B> : "᷻" U1DFB # COMBINING DELETION MARK
+<Multi_key><slash><slash><slash>                                                           <U200B> : "᷻" U1DFB # COMBINING DELETION MARK
 <dead_stroke><dead_stroke><dead_stroke>                                             <nobreakspace> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 <Multi_key><slash><slash><slash>                                                    <nobreakspace> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 <dead_stroke><dead_stroke><dead_stroke>                                                    <U202F> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
@@ -13679,22 +13703,14 @@
 #   *  Supporting the high surrogate is designed for portability, but on Linux
 #      and ChromeOS it is ineffective.
 #
-#   The sequences with no-break space and nobreak thin space, used for spacing
-#   diacritics on most dead keys, output a black flag by nobreak space, and a
-#   white flag by no-break thin space, since the flag used as a base character
-#   for subdivision flags is in the SMP, cross-platform incompatible. However,
-#   for completeness, "🏴" U1F3F4 WAVING BLACK FLAG is output by backslash.
-#
 <UEFD7>                                                                                    <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <Multi_key><equal>                                                                         <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <UEFD7>                                                                                    <U200B> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <Multi_key><equal>                                                                         <U200B> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
-<UEFD7>                                                                             <nobreakspace> : "⚑" U2691 # BLACK FLAG
-<Multi_key><equal>                                                                  <nobreakspace> : "⚑" U2691 # BLACK FLAG
-<UEFD7>                                                                                    <U202F> : "⚐" U2690 # WHITE FLAG
-<Multi_key><equal>                                                                         <U202F> : "⚐" U2690 # WHITE FLAG
-<UEFD7>                                                                                <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
-<Multi_key><equal>                                                                     <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
+<UEFD7>                                                                             <nobreakspace> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
+<Multi_key><equal>                                                                  <nobreakspace> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
+<UEFD7>                                                                                    <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
+<Multi_key><equal>                                                                         <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <UEFD7>                                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><equal>                                                                         <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
@@ -14048,6 +14064,27 @@
 #   Full list of the main country flags:
 #   https://unicode.org/emoji/charts/full-emoji-list.html
 #
+#   As a combining diacritic, by lack of a combining equals sign above, a close
+#   relative, "͌" U034C COMBINING ALMOST EQUAL TO ABOVE, fills in the slot. This
+#   happens to match the waving flags, that non-country / non-subdivision flags
+#   are typically pictured as, for iconicity.
+#
+#   The sequences with no-break space and no-break thin space, used for spacing
+#   diacritics on most dead keys, output a black flag by no-break space, and a
+#   white flag by no-break thin space, since the flag used as a base character
+#   for subdivision flags, "🏴" U1F3F4 WAVING BLACK FLAG, is in the SMP, cross-
+#   platform incompatible. However, U1F3F4 is output by backslash.
+#
+<UEFD7><UEFD7>                                                                             <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+<Multi_key><equal><equal>                                                                  <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+<UEFD7><UEFD7>                                                                             <U200B> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+<Multi_key><equal><equal>                                                                  <U200B> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+<UEFD7><UEFD7>                                                                      <nobreakspace> : "⚑" U2691 # BLACK FLAG
+<Multi_key><equal><equal>                                                           <nobreakspace> : "⚑" U2691 # BLACK FLAG
+<UEFD7><UEFD7>                                                                             <U202F> : "⚐" U2690 # WHITE FLAG
+<Multi_key><equal><equal>                                                                  <U202F> : "⚐" U2690 # WHITE FLAG
+<UEFD7><UEFD7>                                                                         <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
+<Multi_key><equal><equal>                                                              <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <UEFD7><UEFD7>                                                                              <A><C> : "🇦🇨" # Ascension Island
 <Multi_key><equal><equal>                                                                   <A><C> : "🇦🇨" # Ascension Island
 <UEFD7><UEFD7>                                                                              <a><c> : "🇦🇨" # Ascension Island
