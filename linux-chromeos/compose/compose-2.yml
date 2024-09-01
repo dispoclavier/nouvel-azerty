@@ -10552,9 +10552,10 @@
 #   in a high position, but it ends here. The modifier letters are arrowheads,
 #   with a rationale based on the laterality of the AltFr and AltGr modifiers
 #   involved in typing "˂" U02C2 and "˃" U02C3. To complete the set, "˄" U02C4
-#   and "˅" U02C5 are mapped to mnemonic, case insensitive letters A and V.
+#   and "˅" U02C5 are mapped to mnemonic, case insensitive letters "A" and "V".
 #   Additionally, along the lines of what is done on dead_caron double press,
-#   C, G, W can be used to input "˂" U02C2, and D, M, P, R are for "˃" U02C3.
+#   "C", "G", "W" can be used to input "˂" U02C2, and "D", "M", "P", "R" are
+#   for "˃" U02C3.
 #   See #^# HACEK_BELOW
 #
 <UEFD8><UEFD8><UEFD8>                                                                      <space> : "͆" U0346 # COMBINING BRIDGE ABOVE
@@ -13618,23 +13619,27 @@
 #   Multi_key: ¦>>
 #   Dchar: 
 #
-#   This is only present for consistency.
+#   This is supported for consistency so as to provide an input method for
+#   "̬" U032C COMBINING CARON BELOW.
 #
-#   As a spacing clone of "̬" U032C, "˯" U02EF is provided. A fuller set of low
-#   arrowheads is mapped to mnemonic, case insensitive base letters, not to the
-#   conflicting less and greater: A for "˰" U02F0; C, G, L, W for "˱" U02F1; and
-#   D, M, P, R for "˲" U02F2. "˯" U02EF is also mapped to V for intuitivity, so
-#   as to be consistent with *dead_bar triple press.
+#   As a spacing clone, "ˬ" U02EC MODIFIER LETTER VOICING is a good fit.
+#
+#   As of alphabetic dead key content, by lack of precomposed letters with a
+#   hacek below, the full set of low arrowheads is mapped to mnemonic, case
+#   insensitive base letters, rather than to the conflicting less and greater:
+#   "A" for "˰" U02F0; "C", "G", "L", "W" for "˱" U02F1; "D", "M", "P", "R" for
+#   "˲" U02F2; "V" for "˯" U02EF; consistently with what is done for high
+#   arrowheads on *dead_bar triple press.
 #   See #^# HIGH_BAR
 #
 <dead_caron><dead_caron>                                                                   <space> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater><greater>                                                              <space> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron><dead_caron>                                                                   <U200B> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater><greater>                                                              <U200B> : "̬" U032C # COMBINING CARON BELOW
-<dead_caron><dead_caron>                                                            <nobreakspace> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
-<Multi_key><greater><greater>                                                       <nobreakspace> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
-<dead_caron><dead_caron>                                                                   <U202F> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
-<Multi_key><greater><greater>                                                              <U202F> : "˯" U02EF # MODIFIER LETTER LOW DOWN ARROWHEAD
+<dead_caron><dead_caron>                                                            <nobreakspace> : "ˬ" U02EC # MODIFIER LETTER VOICING
+<Multi_key><greater><greater>                                                       <nobreakspace> : "ˬ" U02EC # MODIFIER LETTER VOICING
+<dead_caron><dead_caron>                                                                   <U202F> : "ˬ" U02EC # MODIFIER LETTER VOICING
+<Multi_key><greater><greater>                                                              <U202F> : "ˬ" U02EC # MODIFIER LETTER VOICING
 <dead_caron><dead_caron>                                                                       <A> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
 <Multi_key><greater><greater>                                                                  <A> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
 <dead_caron><dead_caron>                                                                       <a> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD
