@@ -28,6 +28,7 @@
 	* Accent circonflexe :
 		* Corriger les séquences de "᪰" U+1AB0, "᷍" U+1DCD. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
 		* Redonder "•" U+2022. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
+	* Accent circonflexe > Accent circonflexe souscrit : Redonder "ꞈ" U+A788 à la place de "‸" U+2038, qui est dans le groupe 11 de "^" U+005E. compose-2.yml [7b1ceef](https://github.com/dispoclavier/nouvel-azerty/commit/7b1ceef466ad3adcefa214ee7ccbb3575e25e20a)
 	* Hatchek > Hatchek souscrit : Ajouter "ˬ" U+02EC par espace insécable ou espace fine insécable à la place de "˯" U+02EF, qui est par v ou V. compose-2.yml [e64dc0c](https://github.com/dispoclavier/nouvel-azerty/commit/e64dc0cd464f3b590aa32f4bba10adf2859b64ea)
 	* Drapeau : Ajouter "˭" U+02ED à la place de "⚑" U+2691 et "⚐" U+2690, qui vont en double frappe, suivis par "🏴" U+1F3F4. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 	* Drapeau > Double drapeau : Redonder "͌" U+034C, rajouter "⚑" U+2691, "⚐" U+2690, "🏴" U+1F3F4. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
