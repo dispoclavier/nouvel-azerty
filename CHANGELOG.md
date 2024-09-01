@@ -4,7 +4,7 @@
 
 * Transformations :
 	* Déboguer "͚" U+035A, "͜" U+035C, "͝" U+035D, "͞" U+035E, "͟" U+035F, "∄" U+2204, "∉" U+2209, "∌" U+220C. compose-2.yml [22b3da4](https://github.com/dispoclavier/nouvel-azerty/commit/22b3da4dd3e2e0b5c9ef62794c15296584414a17)
-	* Groupes des symboles : Redonder "⁀" U+2040 et "‿" U+203F à la place de "❨" U+2768 et "❩" U+2769. compose-3.yml [d93e3f1](https://github.com/dispoclavier/nouvel-azerty/commit/d93e3f135ec7a44bd6e108311393c4ddf945383d), compose-2.yml [9598dbd](https://github.com/dispoclavier/nouvel-azerty/commit/9598dbd0530f1860d1df1adef0f2b5dad011bb2c)
+	* Groupes des symboles : Redonder "⁀" U+2040 et "‿" U+203F à la place de "❨" U+2768 et "❩" U+2769. compose-3.yml [d93e3f1](https://github.com/dispoclavier/nouvel-azerty/commit/d93e3f135ec7a44bd6e108311393c4ddf945383d), [7b5984c](https://github.com/dispoclavier/nouvel-azerty/commit/7b5984c6792f47ebbda409340f60d9e948aaff63), compose-2.yml [9598dbd](https://github.com/dispoclavier/nouvel-azerty/commit/9598dbd0530f1860d1df1adef0f2b5dad011bb2c)
 	* Exposant > Suscrit : Ajouter "᪻" U+1ABB, "᪼" U+1ABC, "᫆" U+1AC6, "⃰" U+20F0. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 	* Tilde : Corriger les séquences de "⁓" U+2053, "͠" U+0360. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
 	* Brève inversée : Corriger les séquences de "͡" U+0361. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
@@ -28,6 +28,7 @@
 	* Accent circonflexe :
 		* Corriger les séquences de "᪰" U+1AB0, "᷍" U+1DCD. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
 		* Redonder "•" U+2022. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
+	* Hatchek > Hatchek souscrit : Ajouter "ˬ" U+02EC par espace insécable ou espace fine insécable à la place de "˯" U+02EF, qui est par v ou V. compose-2.yml [e64dc0c](https://github.com/dispoclavier/nouvel-azerty/commit/e64dc0cd464f3b590aa32f4bba10adf2859b64ea)
 	* Drapeau : Ajouter "˭" U+02ED à la place de "⚑" U+2691 et "⚐" U+2690, qui vont en double frappe, suivis par "🏴" U+1F3F4. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 	* Drapeau > Double drapeau : Redonder "͌" U+034C, rajouter "⚑" U+2691, "⚐" U+2690, "🏴" U+1F3F4. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 * Documentation :
