@@ -13236,8 +13236,8 @@
 <Multi_key><less><less>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_circumflex><dead_circumflex>                                                         <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><less>                                                                    <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "‸" U2038 # CARET
-<Multi_key><less><less>                                                             <nobreakspace> : "‸" U2038 # CARET
+<dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<Multi_key><less><less>                                                             <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                         <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                             <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
