@@ -711,13 +711,13 @@
 # # Notes about documentation
 #
 #   The plus sign omitted in Unicode code points for interoperability needs to
-#   be readded for documentation.
+#   be readded for documentation, e.g. in the changelog.
 #   See # # Notes about syntax
 #
-#   This file is also used as the source code for HTML table partials, as those
-#   output by the scripts generate-multikey-tables.pl or generate-math-table.pl
-#   documenting multi-key sequences, and generate-deadkey-tables.pl documenting
-#   dead keys, also letter groups and symbol groups.
+#   This file is also the source code for HTML table partials, such as those by
+#   the scripts `generate-multikey-tables.pl` and `generate-math-table.pl`
+#   documenting multi-key sequences, and those by `generate-deadkey-tables.pl`
+#   documenting dead keys, among which the letter groups and the symbol groups.
 #
 #   The letter groups and symbol groups are also documented on screenshots of
 #   two spreadsheets. These have plain text dumps in this file.
