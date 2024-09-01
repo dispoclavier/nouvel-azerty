@@ -31,6 +31,15 @@
 	* Drapeau : Ajouter "˭" U+02ED à la place de "⚑" U+2691 et "⚐" U+2690, qui vont en double frappe, suivis par "🏴" U+1F3F4. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 	* Drapeau > Double drapeau : Redonder "͌" U+034C, rajouter "⚑" U+2691, "⚐" U+2690, "🏴" U+1F3F4. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 * Corriger la description des fichiers de composition. compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f)
+* Documentation :
+	* Chaînes de caractères pour touches vives et contenu des touches mortes :
+		* Corriger la description. compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f), [ff713ff](https://github.com/dispoclavier/nouvel-azerty/commit/ff713ff537b12f08f25b898fb7c2e1f79528057b)
+		* Corriger les notes sur les tableaux. compose-1.yml [ff713ff](https://github.com/dispoclavier/nouvel-azerty/commit/ff713ff537b12f08f25b898fb7c2e1f79528057b), [8647ed0](https://github.com/dispoclavier/nouvel-azerty/commit/8647ed07e214334df54f6048c365461efcdfe889)
+	* Journal des modifications :
+		* Uniformiser l’ordre des entrées. CHANGELOG.md [018acd1](https://github.com/dispoclavier/nouvel-azerty/commit/018acd112a6808fed563582996b6aea7fb044f2b)
+		* Supprimer les parenthèses superflues. CHANGELOG.md [882c246](https://github.com/dispoclavier/nouvel-azerty/commit/882c2461834633c76f6a31a05584850c36fd1077)
+		* Corriger les désignations. CHANGELOG.md [c391350](https://github.com/dispoclavier/nouvel-azerty/commit/c391350e0e4399144e43b4ad62c1daaadb9c7058)
+		* Ajouter les résumés omis. CHANGELOG.md [de3e0fe](https://github.com/dispoclavier/nouvel-azerty/commit/de3e0fe658bd43ee919ac8dbea8f92528d322615)
 
 ## 4.2.1 (2024-08-30)
 
