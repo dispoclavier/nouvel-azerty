@@ -505,6 +505,9 @@
 #   is unable to provide any rationale for this disunification.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
+#   Consistently, both U223C and U007E display exactly the same, and semantics
+#   are also unambiguous. As a result, U223C is not supported in group 1 of ~.
+#
 <UEFD0>                                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
 <Multi_key><numbersign>                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
 <UEFD0><UEFD0>                                                                        <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
