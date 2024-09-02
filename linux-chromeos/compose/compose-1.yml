@@ -1593,6 +1593,9 @@
 #   L, this would conflict with "⊾" U22BE. The start or end semantic is carried
 #   by a trailing parenthesis: h(, b(, or h), l), and conversely.
 #
+#   "꜠" UA720 and "꜡" UA721 are supported alongside, as these are ligatures of
+#   begin tone marks and stress, adding a median apostrophe to the sequences.
+#
 <Multi_key><h><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
 <Multi_key><H><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
 <Multi_key><h><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
@@ -1604,6 +1607,12 @@
 <Multi_key><b><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
 <Multi_key><B><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
 <Multi_key><l><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
+<Multi_key><h><apostrophe><parenleft>                                                              : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><H><apostrophe><parenleft>                                                              : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><b><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><B><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><l><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><L><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
 #
 #
 #^# Vulgar fractions
