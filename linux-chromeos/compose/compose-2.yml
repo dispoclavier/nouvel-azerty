@@ -2917,8 +2917,6 @@
 <Multi_key><asciicircum><asciicircum>                                               <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <UEFD1><UEFD1>                                                                             <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <Multi_key><asciicircum><asciicircum>                                                      <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
-<UEFD1><UEFD1>                                                                        <numbersign> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
-<Multi_key><asciicircum><asciicircum>                                                 <numbersign> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
 <UEFD1><UEFD1>                                                                         <parenleft> : "᪻" U1ABB # COMBINING PARENTHESES ABOVE
 <Multi_key><asciicircum><asciicircum>                                                  <parenleft> : "᪻" U1ABB # COMBINING PARENTHESES ABOVE
 <UEFD1><UEFD1>                                                                        <parenright> : "᪼" U1ABC # COMBINING DOUBLE PARENTHESES ABOVE
@@ -3029,6 +3027,10 @@
 #   Lenient group selection
 #   Dchar: 
 #
+<UEFD1><UEFD1><UEFD0>                                                                      <space> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
+<Multi_key><asciicircum><asciicircum><numbersign>                                          <space> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
+<UEFD1><UEFD1><UEFD0>                                                                      <U200B> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
+<Multi_key><asciicircum><asciicircum><numbersign>                                          <U200B> : "᫆" U1AC6 # COMBINING NUMBER SIGN ABOVE
 <UEFD1><UEFD1><UEFD0>                                                                          <A> : "ᷓ" U1DD3 # COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE
 <Multi_key><asciicircum><asciicircum><numbersign>                                              <A> : "ᷓ" U1DD3 # COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE
 <UEFD1><UEFD1><UEFD0>                                                                          <a> : "ᷧ" U1DE7 # COMBINING LATIN SMALL LETTER ALPHA
@@ -4546,6 +4548,14 @@
 <Multi_key><asciitilde><slash>                                                             <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <dead_stroke><dead_tilde>                                                                  <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <Multi_key><slash><asciitilde>                                                             <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
+<dead_tilde><dead_stroke>                                                           <nobreakspace> : "≁" U2241 # NOT TILDE
+<Multi_key><asciitilde><slash>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
+<dead_stroke><dead_tilde>                                                           <nobreakspace> : "≁" U2241 # NOT TILDE
+<Multi_key><slash><asciitilde>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
+<dead_tilde><dead_stroke>                                                                  <U202F> : "≁" U2241 # NOT TILDE
+<Multi_key><asciitilde><slash>                                                             <U202F> : "≁" U2241 # NOT TILDE
+<dead_stroke><dead_tilde>                                                                  <U202F> : "≁" U2241 # NOT TILDE
+<Multi_key><slash><asciitilde>                                                             <U202F> : "≁" U2241 # NOT TILDE
 #
 #
 # # TILDE&DIAERESIS
@@ -7322,6 +7332,12 @@
 #       2 and 4    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
 #       8          "♾" U267E PERMANENT PAPER SIGN
 #
+#   As "·" U00B7 MIDDLE DOT by <Multi_key><asciicircum><period> is part of the
+#   superscript dead key, the reverse sequence is supported here for backwards
+#   compatibility with en_US.UTF-8/Compose.
+#   See #*# SUPERSCRIPT
+#   See #^# Punctuation
+#
 #   By contrast, dead_abovedot cannot support Chinantec tone marks "ꜗ" UA717,
 #   "ꜘ" UA718, "ꜙ" UA719, due to conflicts with bar and macron combinations.
 #   See # # DOT_ABOVE&BAR
@@ -7335,6 +7351,8 @@
 <Multi_key><period>                                                                 <nobreakspace> : "˙" U02D9 # DOT ABOVE
 <dead_abovedot>                                                                            <U202F> : "˙" U02D9 # DOT ABOVE
 <Multi_key><period>                                                                        <U202F> : "˙" U02D9 # DOT ABOVE
+<dead_abovedot>                                                                      <asciicircum> : "·" U00B7 # MIDDLE DOT
+<Multi_key><period>                                                                  <asciicircum> : "·" U00B7 # MIDDLE DOT
 <dead_abovedot>                                                                                <0> : "♼" U267C # RECYCLED PAPER SYMBOL
 <Multi_key><period>                                                                            <0> : "♼" U267C # RECYCLED PAPER SYMBOL
 <dead_abovedot>                                                                             <KP_0> : "♼" U267C # RECYCLED PAPER SYMBOL
@@ -7811,6 +7829,11 @@
 #
 #
 # # Long dashes
+#
+#   These are documented by Jukka Korpela, who links also to the archive of the
+#   Unicode Public Mailing List.
+#   https://jkorpela.fi/dashes.html
+#   https://unicode.org/mail-arch/unicode-ml/y2010-m01/0219.html
 #
 #   The TWO-EM DASH and THREE-EM DASH are both in group 1, depending on whether
 #   the base is en or em, and in group 2 or 3 according to the number of dashes
@@ -8517,7 +8540,7 @@
 #
 #   In en_US.UTF-8/Compose, the BENGALI RUPEE MARK requires a thorn live key,
 #   while the INDIAN RUPEE SIGN is supported only by Multi_key =R sequences.
-#   The other seven symbols are unsupported by en_US.UTF-8/Compose.
+#   The other seven symbols are unsupported in en_US.UTF-8/Compose.
 #
 #   New base:
 #   J        "৲" U09F2 # BENGALI RUPEE MARK
@@ -10452,6 +10475,12 @@
 #   "Đ" U0110 and so makes a good point for being supported by the double press
 #   virtual dead key.
 #
+#   "–" U2013 EN DASH is supported in the double bar dead key for backwards
+#   compatibility with en_US.UTF-8/Compose that has a multi-key sequence for it
+#   by <Multi_key><minus><minus><period>.
+#   See #^# HIGH_BAR
+#   See #^# Punctuation
+#
 #   As a MODIFIER LETTER SHORT EQUALS SIGN "꞊" UA78A is picked for its “double”
 #   semantics and matching "˗" U02D7 MODIFIER LETTER MINUS SIGN.
 #   See #*# BAR
@@ -10464,6 +10493,8 @@
 <Multi_key><minus><minus>                                                           <nobreakspace> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <UEFD8><UEFD8>                                                                             <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <Multi_key><minus><minus>                                                                  <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
+<UEFD8><UEFD8>                                                                            <period> : "–" U2013 # EN DASH
+<Multi_key><minus><minus>                                                                 <period> : "–" U2013 # EN DASH
 <UEFD8><UEFD8>                                                                                 <D> : "Ꟈ" UA7C7 # LATIN CAPITAL LETTER D WITH SHORT STROKE OVERLAY
 <Multi_key><minus><minus>                                                                      <D> : "Ꟈ" UA7C7 # LATIN CAPITAL LETTER D WITH SHORT STROKE OVERLAY
 <UEFD8><UEFD8>                                                                                 <d> : "ꟈ" UA7C8 # LATIN SMALL LETTER D WITH SHORT STROKE OVERLAY
@@ -10548,6 +10579,15 @@
 #   "ꝉ" UA749, that adds to "Ƚ" U023D, "ƚ" U019A on #dead_bar single press, and
 #   "Ⱡ" U2C60, "ⱡ" U2C61 on *dead_bar double press.
 #
+#   "—" U2014 EM DASH could be supported in this high bar dead key to get the
+#   closest possible to backwards compatibility with en_US.UTF-8/Compose, given
+#   this has a multi-key sequence for it: <Multi_key><minus><minus><minus>.
+#   However, for consistency with the UCS, the sequence with a triple minus and
+#   a final period is used for "―" U2015 HORIZONTAL BAR, since this may have a
+#   length of three quarters of an em dash, being a four-per-three-em dash.
+#   See #^# DOUBLE_BAR
+#   See #^# Punctuation
+#
 #   As a diacritic, "͆" U0346 is picked for carrying semantics of horizontality
 #   in a high position, but it ends here. The modifier letters are arrowheads,
 #   with a rationale based on the laterality of the AltFr and AltGr modifiers
@@ -10566,6 +10606,8 @@
 <Multi_key><minus><minus><minus>                                                    <nobreakspace> : "˃" U02C3 # MODIFIER LETTER RIGHT ARROWHEAD
 <UEFD8><UEFD8><UEFD8>                                                                      <U202F> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
 <Multi_key><minus><minus><minus>                                                           <U202F> : "˂" U02C2 # MODIFIER LETTER LEFT ARROWHEAD
+<UEFD8><UEFD8><UEFD8>                                                                     <period> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><minus><minus><minus>                                                          <period> : "―" U2015 # HORIZONTAL BAR
 <UEFD8><UEFD8><UEFD8>                                                                          <A> : "˄" U02C4 # MODIFIER LETTER UP ARROWHEAD
 <Multi_key><minus><minus><minus>                                                               <A> : "˄" U02C4 # MODIFIER LETTER UP ARROWHEAD
 <UEFD8><UEFD8><UEFD8>                                                                          <a> : "˄" U02C4 # MODIFIER LETTER UP ARROWHEAD
@@ -12065,8 +12107,6 @@
 <Multi_key><slash>                                                                      <quotedbl> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_stroke>                                                                           <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <Multi_key><slash>                                                                      <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<dead_stroke>                                                                         <asciitilde> : "≁" U2241 # NOT TILDE
-<Multi_key><slash>                                                                    <asciitilde> : "≁" U2241 # NOT TILDE
 <dead_stroke>                                                                                  <1> : "∕" U2215 # DIVISION SLASH
 <Multi_key><slash>                                                                             <1> : "∕" U2215 # DIVISION SLASH
 <dead_stroke>                                                                               <KP_1> : "∕" U2215 # DIVISION SLASH
@@ -12769,9 +12809,15 @@
 #   with the digits part, not the signs and parentheses.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
-#   But the Multi_key equivalent of this way to input superscript digits cannot
-#   be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and as of
-#   "⁸" U2078, with a new sequence introduced for the less frequent "♥" U2665.
+#   In en_US.UTF-8/Compose, that the “superscript digits by dead_circumflex”
+#   feature comes from, the superscript dead key is missing, consistently with
+#   keysymdef.h lacking a *dead_superscript or equivalent keysym.
+#   See # # Notes on Unicode support
+#   See # # Introducing new-school input composition
+#
+#   Anyway, the Multi_key equivalent of this way to input superscript digits is
+#   unsupportable, since it conflicts with "❤" U2764 as of "³" U00B3, and with
+#   a new sequence introduced for the less frequent "♥" U2665, as of "⁸" U2078.
 #   See #   Heart emoji
 #
 #   So the set of remaining numeric base characters is used for other purposes.
@@ -12787,16 +12833,14 @@
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #   The diaeresis dead key offers an acceptable alternative with good mnemonic
-#   using the traditional mapping on the same key in shift position.
+#   using the traditional French AZERTY mapping on the same key D11, in shift
+#   position.
 #   See #*# DIAERESIS
 #
-#   Ultimately, this feature is non-critical when a dedicated superscript dead
-#   key is present, and superscript digits and small letters are on live keys.
+#   Ultimately, the “superscript digits by dead_circumflex” feature may be
+#   considered non-critical when a dedicated superscript dead key is present,
+#   and superscript digits and small letters are on live keys.
 #   See #*# SUPERSCRIPT
-#
-#   NOTE: In en_US.UTF-8/Compose that the superscript digits by dead_circumflex
-#   feature comes from, the superscript dead key is missing, consistently with
-#   the *dead_superscript or equivalent keysym missing from keysymdef.h.
 #
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
@@ -13232,6 +13276,15 @@
 #   with a redlink in the “Palette Accent circonflexe souscrit” on Wikipédia.
 #   https://fr.wikipedia.org/wiki/Mod%C3%A8le:Palette_Accent_circonflexe_souscrit
 #
+#   "ꜛ" UA71B MODIFIER LETTER RAISED UP ARROW is supported by quotedbl, like
+#   "ꜜ" UA71C is supported in dead_caron, only that single press is used for
+#   the quotation mark input method, so the arrow goes double press.
+#   See #*# HACEK
+#
+#   "˿" U02FF MODIFIER LETTER LOW LEFT ARROW is supported by case insensitive
+#   letter F with French mnemonic for Flèche = Arrow and a rationale combining
+#   low and less matching this arrow’s head.
+#
 <dead_circumflex><dead_circumflex>                                                         <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><less>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_circumflex><dead_circumflex>                                                         <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
@@ -13240,6 +13293,8 @@
 <Multi_key><less><less>                                                             <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                         <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<dead_circumflex><dead_circumflex>                                                      <quotedbl> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
+<Multi_key><less><less>                                                                 <quotedbl> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
 <dead_circumflex><dead_circumflex>                                                             <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
 <Multi_key><less><less>                                                                        <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
 <dead_circumflex><dead_circumflex>                                                             <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
@@ -13256,6 +13311,10 @@
 <Multi_key><less><less>                                                                        <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
 <dead_circumflex><dead_circumflex>                                                             <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 <Multi_key><less><less>                                                                        <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
+<dead_circumflex><dead_circumflex>                                                             <F> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<Multi_key><less><less>                                                                        <F> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<dead_circumflex><dead_circumflex>                                                             <f> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<Multi_key><less><less>                                                                        <f> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
 <dead_circumflex><dead_circumflex>                                                             <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
 <Multi_key><less><less>                                                                        <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
 <dead_circumflex><dead_circumflex>                                                             <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
@@ -13329,6 +13388,8 @@
 <Multi_key><less><less><less>                                                       <nobreakspace> : "ˇ" U02C7 # CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                        <U202F> : "ˇ" U02C7 # CARON
 <Multi_key><less><less><less>                                                              <U202F> : "ˇ" U02C7 # CARON
+<dead_circumflex><dead_circumflex><dead_circumflex>                                     <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
+<Multi_key><less><less><less>                                                           <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <dead_circumflex><dead_circumflex><dead_circumflex>                                    <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><less><less><less>                                                          <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_circumflex><dead_circumflex><dead_circumflex>                                            <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -13472,6 +13533,10 @@
 #   AZERTY.
 #   See # # Quotation mark input method
 #
+#   "ꜜ" UA71C MODIFIER LETTER RAISED DOWN ARROW is supported consistently by
+#   quotedbl, like "ꜛ" UA71B is supported in dead_circumflex double press.
+#   See #^# CIRCUMFLEX_BELOW
+#
 <dead_caron>                                                                               <space> : "̌" U030C # COMBINING CARON
 <Multi_key><greater>                                                                       <space> : "̌" U030C # COMBINING CARON
 <dead_caron>                                                                               <U200B> : "̌" U030C # COMBINING CARON
@@ -13480,6 +13545,8 @@
 <Multi_key><greater>                                                                <nobreakspace> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                               <U202F> : "ˇ" U02C7 # CARON
 <Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
+<dead_caron>                                                                            <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
+<Multi_key><greater>                                                                    <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <dead_caron>                                                                           <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater>                                                                   <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
