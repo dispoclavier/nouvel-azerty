@@ -668,44 +668,47 @@
 #   The colon alignment in column 100 is based on longest multi-key sequences
 #   in terms of string length, as used for U10789, U107AB.
 #
+#   For maintainability, there is no space between the leading keysyms, but
+#   part of the keysyms may be aligned to the end for readability.
+#
 #   The Multi_key equivalent is added below each dead key sequence by a script
 #   called `generate-multikey.pl`, run by `multikey.sh`, if the sequence is
 #   marked up accordingly. For portability, Multi_key equivalents are present
-#   regardless whether they make sense, and whether they barely work.
+#   regardless whether they make sense, and whether they barely work. So,
+#   three multi-key sequences do not work because <numbersign> is used both
+#   as a group selector and as a base character:
 #
-#   Three multi-key sequences do not work because <numbersign> is used both as
-#   a group selector and as a base character:
-#   <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
-#   <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-#   <Multi_key><numbersign><numbersign><numbersign><numbersign> : "☒" U2612 # BALLOT BOX WITH X
-#   With respect to dead key use, these topmost sequences are maintained, but
-#   related Multi_key equivalents are actionable only in groups 5 through 7.
+#       <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
+#       <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+#       <Multi_key><numbersign><numbersign><numbersign><numbersign> : "☒" U2612 # BALLOT BOX WITH X
+#
+#   With respect to dead key use, these sequences are maintained, but Multi_key
+#   equivalents are actionable only elsewhere.
 #   See # # C01
+#   See #^# Square boxes
 #
-#   To manually verify the absence of other conflicts and duplicates, assuming
-#   no space between the angle brackets around the keysyms, except that part of
-#   the keysyms may be aligned to the end for readability and maintainability:
+#   U2610, U2611 and U2612 are involved in 3 unavoidable conflicts.
+#   To manually check the absence of other conflicts and duplicates
+#   (steps 1 through 4 are prone to automation using a replace rule set):
+#   (Used toolchain: VSCode, bhughes339.replacerules)
 #
-#       1  Remove all comment lines:
+#       1  Remove comment lines:
 #       ^#.*\n
 #
-#       2  Remove all multi char output for live keys:
+#       2  Remove character strings for live keys:
 #       ^<[^>]+> * : .+\n
 #
-#       3  Remove all keypad equivalents:
+#       3  Remove keypad equivalents:
 #       .+<KP_.+\n
 #
-#       4  Start-align end-aligned keysyms (replace all):
+#       4  Start-align end-aligned keysyms:
 #       ^([^ ]+)( *)([^ ]+)( : .*)$
 #       $1$3$2$4
 #
 #       5  Sort lines ascending.
 #
-#       6  Check for duplicates:
-#       ^([^ ]+) .+\n\1\s
-#
-#       7  Check for conflicts (other than U2610, U2611 and U2612):
-#       ^([^ ]+) .+\n\1<
+#       6  Check for conflicts and duplicates:
+#       ^([^ ]+) .+\n\1(<|\s)
 #
 #
 # # Notes about documentation
@@ -1581,6 +1584,26 @@
 <Multi_key><KP_6><z>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
 <Multi_key><z><6>                                                                                  : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
 <Multi_key><z><KP_6>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+#
+#
+#^# Bracketing tone marks
+#
+#   The tone height is denoted by a leading initialism, localized in French and
+#   in English and case insensitive except for "˼" U02FC, because with a capital
+#   L, this would conflict with "⊾" U22BE. The start or end semantic is carried
+#   by a trailing parenthesis: h(, b(, or h), l), and conversely.
+#
+<Multi_key><h><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><H><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><h><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><H><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><b><parenleft>                                                                          : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
+<Multi_key><B><parenleft>                                                                          : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
+<Multi_key><l><parenleft>                                                                          : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
+<Multi_key><L><parenleft>                                                                          : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
+<Multi_key><b><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
+<Multi_key><B><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
+<Multi_key><l><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
 #
 #
 #^# Vulgar fractions
