@@ -10694,6 +10694,8 @@
 <Multi_key><plus>                                                                          <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                             <quotedbl> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
 <Multi_key><plus>                                                                       <quotedbl> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
+<dead_horn>                                                                             <EuroSign> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
+<Multi_key><plus>                                                                       <EuroSign> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
 <dead_horn>                                                                            <ampersand> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 <Multi_key><plus>                                                                      <ampersand> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 <dead_horn>                                                                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -13295,6 +13297,8 @@
 <Multi_key><less><less>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_circumflex>                                                      <quotedbl> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
 <Multi_key><less><less>                                                                 <quotedbl> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
+<dead_circumflex><dead_circumflex>                                                      <EuroSign> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
+<Multi_key><less><less>                                                                 <EuroSign> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
 <dead_circumflex><dead_circumflex>                                                             <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
 <Multi_key><less><less>                                                                        <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
 <dead_circumflex><dead_circumflex>                                                             <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
@@ -13390,6 +13394,8 @@
 <Multi_key><less><less><less>                                                              <U202F> : "ˇ" U02C7 # CARON
 <dead_circumflex><dead_circumflex><dead_circumflex>                                     <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <Multi_key><less><less><less>                                                           <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
+<dead_circumflex><dead_circumflex><dead_circumflex>                                     <EuroSign> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
+<Multi_key><less><less><less>                                                           <EuroSign> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <dead_circumflex><dead_circumflex><dead_circumflex>                                    <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><less><less><less>                                                          <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_circumflex><dead_circumflex><dead_circumflex>                                            <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -13547,6 +13553,8 @@
 <Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                            <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <Multi_key><greater>                                                                    <quotedbl> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
+<dead_caron>                                                                            <EuroSign> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
+<Multi_key><greater>                                                                    <EuroSign> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <dead_caron>                                                                           <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater>                                                                   <ampersand> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
