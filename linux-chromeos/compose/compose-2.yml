@@ -2931,6 +2931,10 @@
 <Multi_key><asciicircum><asciicircum>                                               <bracketright> : "᫅" U1AC5 # COMBINING SQUARE BRACKETS ABOVE
 <UEFD1><UEFD1>                                                                          <asterisk> : "⃰" U20F0 # COMBINING ASTERISK ABOVE
 <Multi_key><asciicircum><asciicircum>                                                   <asterisk> : "⃰" U20F0 # COMBINING ASTERISK ABOVE
+<UEFD1><UEFD1>                                                                              <less> : "᷾" U1DFE # COMBINING LEFT ARROWHEAD ABOVE
+<Multi_key><asciicircum><asciicircum>                                                       <less> : "᷾" U1DFE # COMBINING LEFT ARROWHEAD ABOVE
+<UEFD1><UEFD1>                                                                           <greater> : "͐" U0350 # COMBINING RIGHT ARROWHEAD ABOVE
+<Multi_key><asciicircum><asciicircum>                                                    <greater> : "͐" U0350 # COMBINING RIGHT ARROWHEAD ABOVE
 <UEFD1><UEFD1>                                                                                 <2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <Multi_key><asciicircum><asciicircum>                                                          <2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <UEFD1><UEFD1>                                                                              <KP_2> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
@@ -4583,7 +4587,7 @@
 #   Dchar: 
 #
 #   This new virtual dead key uses the synergy of the dead_tilde main instance,
-#   on key D11 level 3, with the ampersand on D10.
+#   on key D11 level 3, with the ampersand on D10 level 3.
 #
 <dead_tilde><ampersand>                                                                        <a> : 
 <Multi_key><asciitilde><ampersand>                                                             <a> : 
@@ -10667,13 +10671,19 @@
 #   https://www.frathwiki.com/Descender
 #   https://fr.wikipedia.org/wiki/%E2%B1%B8
 #
-#   HORN could also be used as an easier alternative for the belt diacritic. It
-#   is not, for the sake of mnemonics and to prevent HORN from being a holdall.
+#   HORN could also be used as an easier alternative for the belt diacritic.
+#   It is not, to prevent HORN from becoming an unmnemonic holdall.
 #   See #^# BELT
 #
 #   Digits yield simple arrows as a redundant facility to meet most common user
 #   expectations. Double arrows are yielded by *dead_flag.
 #   See #*# FLAG
+#
+#   This also supports "᫉" U1AC9 COMBINING DOUBLE PLUS SIGN ABOVE and "᫊" U1ACA
+#   COMBINING DOUBLE PLUS SIGN BELOW, while single counterparts are supported
+#   in combining above for "᫈" U1AC8, combining below for "̟" U031F.
+#   See #^# COMBINING_ABOVE
+#   See #^# COMBINING_BELOW
 #
 #   Instead of a non-existing spacing clone of "̛" U031B, "ꜚ" UA71A is picked,
 #   based on the horn’s shape, although this is a Chinantec tone mark.
@@ -10686,13 +10696,6 @@
 #   See #*# MACRON
 #   See #*# STROKE
 #   See #*# BAR
-#   See #*# HORN
-#
-#   This also supports "᫉" U1AC9 COMBINING DOUBLE PLUS SIGN ABOVE and "᫊" U1ACA
-#   COMBINING DOUBLE PLUS SIGN BELOW, while single counterparts are supported
-#   in combining above for "᫈" U1AC8, combining below for "̟" U031F.
-#   See #^# COMBINING_ABOVE
-#   See #^# COMBINING_BELOW
 #
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
@@ -11341,6 +11344,8 @@
 <Multi_key><underscore><underscore>                                                   <parenright> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
 <UEFD2><UEFD2>                                                                              <plus> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <Multi_key><underscore><underscore>                                                         <plus> : "̟" U031F # COMBINING PLUS SIGN BELOW
+<UEFD2><UEFD2>                                                                        <underscore> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
+<Multi_key><underscore><underscore>                                                   <underscore> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
 <UEFD2><UEFD2>                                                                             <slash> : "᪹" U1AB9 # COMBINING LIGHT CENTRALIZATION STROKE BELOW
 <Multi_key><underscore><underscore>                                                        <slash> : "᪹" U1AB9 # COMBINING LIGHT CENTRALIZATION STROKE BELOW
 <UEFD2><UEFD2>                                                                          <asterisk> : "͙" U0359 # COMBINING ASTERISK BELOW
@@ -11351,12 +11356,22 @@
 <Multi_key><underscore><underscore>                                                      <greater> : "͕" U0355 # COMBINING RIGHT ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                            <period> : "᪺" U1ABA # COMBINING STRONG CENTRALIZATION STROKE BELOW
 <Multi_key><underscore><underscore>                                                       <period> : "᪺" U1ABA # COMBINING STRONG CENTRALIZATION STROKE BELOW
+<UEFD2><UEFD2>                                                                                 <1> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
+<Multi_key><underscore><underscore>                                                            <1> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
+<UEFD2><UEFD2>                                                                              <KP_1> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
+<Multi_key><underscore><underscore>                                                         <KP_1> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
+<UEFD2><UEFD2>                                                                                 <2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
+<Multi_key><underscore><underscore>                                                            <2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
+<UEFD2><UEFD2>                                                                              <KP_2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
+<Multi_key><underscore><underscore>                                                         <KP_2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
 <UEFD2><UEFD2>                                                                                 <8> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <Multi_key><underscore><underscore>                                                            <8> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <UEFD2><UEFD2>                                                                              <KP_8> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <Multi_key><underscore><underscore>                                                         <KP_8> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <UEFD2><UEFD2>                                                                                 <i> : "᷐" U1DD0 # COMBINING IS BELOW
 <Multi_key><underscore><underscore>                                                            <i> : "᷐" U1DD0 # COMBINING IS BELOW
+<UEFD2><UEFD2>                                                                                 <J> : "᪸" U1AB8 # COMBINING DOUBLE OPEN MARK BELOW
+<Multi_key><underscore><underscore>                                                            <J> : "᪸" U1AB8 # COMBINING DOUBLE OPEN MARK BELOW
 <UEFD2><UEFD2>                                                                                 <j> : "᪷" U1AB7 # COMBINING OPEN MARK BELOW
 <Multi_key><underscore><underscore>                                                            <j> : "᪷" U1AB7 # COMBINING OPEN MARK BELOW
 <UEFD2><UEFD2>                                                                                 <L> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
