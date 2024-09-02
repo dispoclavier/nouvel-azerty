@@ -76,7 +76,7 @@
 #                                       include "%L"
 #
 #                                   Required for using non-Latin keyboard layouts
-#                                   supported by en_US.UTF-8/Compose, default for fr_FR.
+#                                   supported in en_US.UTF-8/Compose, default for fr_FR.
 #
 #                             The changes take effect in any application after reopening it, or
 #                             after opening a new session if the input method needs to be changed.
@@ -220,7 +220,7 @@
 #   Unlike the trigraph, the digraph has no dedicated support on any variant.
 #
 #   The Breton trigraph got mnemonic keysyms in keysymdef.h, but these may not
-#   be supported yet by en_US.UTF-8/Compose, so the trigraph is defined here.
+#   be supported yet in en_US.UTF-8/Compose, so the trigraph is defined here.
 #
 <c_h> : "cʼh" # See # # Notes about syntax
 <C_h> : "Cʼh" #
@@ -719,6 +719,15 @@
 #   documenting multi-key sequences, and those by `generate-deadkey-tables.pl`
 #   documenting dead keys, among which the letter groups and the symbol groups.
 #
+#   The `generate-multikey-tables.pl` script, processing the multi-key section,
+#   expects a caret between the leading hashes of a subsection heading to start
+#   an HTML table partial file, while in the dead key division, another script,
+#   `generate-deadkey-tables.pl`, expects an asterisk between the hashes in the
+#   same position. The dead key tables are numbered, while the multi-key tables
+#   are not, since their number is not finite. Adding a new file start heading
+#   does not alter existing file names. However, each of these headings is used
+#   to make a file name, and they are expected to be unique.
+#
 #   The letter groups and symbol groups are also documented on screenshots of
 #   two spreadsheets. These have plain text dumps in this file.
 #   See # # Symbol groups overview
@@ -730,10 +739,9 @@
 #   Dchar: "¦" U00A6
 #
 #   The generate-multikey-tables.pl script requires a caret between the leading
-#   hashes of a section heading to start a new section partial table file.
-#
-#   Each of these headings is used to make a file name. They are expected to be
-#   unique, and so, adding a new file does not change the existing file names.
+#   hashes of a subsection heading to start a new subsection partial table file
+#   while processing the multi-key section.
+#   See # # Notes about documentation
 #
 #
 #^# Legacy ordinal indicators
@@ -1212,6 +1220,32 @@
 <Multi_key><asciicircum><ampersand><u><s>                                                          : "ꝰ" UA770 # MODIFIER LETTER US
 #
 #
+# # Spaces
+#
+#   All important space characters are supported on live keys. This is the only
+#   acceptable scheme from a user experience point of view. All dead key based
+#   input methods, including multi-key, are no acceptable workarounds for the
+#   no-break space and the no-break thin space.
+#   See # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
+#
+#   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by ¦␣␣). But the
+#   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
+#   are heavily used and consistently supported on live keys, and moreover the
+#   multi-key sequence for U00A0 <Multi_key><space><space> conflicts with every
+#   single math symbol sequence using disambiguation by multiple leading space,
+#   support is dropped altogether.
+#
+#   U2008 PUNCTUATION SPACE is supported in en_US.UTF-8/Compose (by ¦␣.), but
+#   the matching U2007 FIGURE SPACE used with the same rationale in typesetting
+#   old-style tables is not, although the latter is particular in that it is an
+#   outstandig reminder that all spaces U2002..U200A were initially designed to
+#   be no-break. Since the sequence <Multi_key><space><period> conflicts with
+#    "⩑" U2A51, it is discarded altogether, and support for spaces is moved to
+#   the space groups.
+#   See # # A03-level1
+#   See # # A03-level3
+#
+#
 #^# Punctuation
 #
 <Multi_key><question><question>                                                                    : "¿" U00BF # INVERTED QUESTION MARK
@@ -1223,43 +1257,47 @@
 <Multi_key><question><exclam>                                                                      : "‽" U203D # INTERROBANG
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
 #
-#   U00A0 NO-BREAK SPACE is supported by en_US.UTF-8/Compose (by ¦␣␣). But the
-#   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
-#   are heavily used and consistently supported on live keys, and moreover the
-#   multi-key sequence for U00A0 <Multi_key><space><space> conflicts with every
-#   single math symbol sequence using disambiguation by multiple leading space,
-#   support is dropped altogether.
-#
-#   U2008 PUNCTUATION SPACE is supported by en_US.UTF-8/Compose (by ¦␣.), but
-#   the matching U2007 FIGURE SPACE used with the same rationale in typesetting
-#   old-style tables is not, although the latter is particular in that it is an
-#   outstandig reminder that all spaces U2002..U200A were initially designed to
-#   be no-break. Since the sequence <Multi_key><space><period> conflicts with
-#    "⩑" U2A51, it is discarded altogether, and support for spaces is moved to
-#   the space groups.
-#   See # # A03-level1
-#   See # # A03-level3
-#
-#   Quotation marks by Multi_key only supports the most common. Less common
-#   quotation marks are supported only by the dead key based input method.
+#   Apostrophe quotation marks and comma quotation marks "‘" U2018, "’" U2019,
+#   "‚" U201A, "“" U201C, "”" U201D, and "„" U201E by Multi_key are supported
+#   in en_US.UTF-8/Compose. However, these sequences are discontinued as a
+#   conflicting and pointless waste, since they are superseded by a more
+#   efficient and intuitive input method.
 #   See # # Quotation mark input method
 #
-#   The Unicode informative aliases are appended to the Unicode identifiers of
-#   single and double apostrophe quotation marks and comma quotation marks.
+#   Angle quotation marks "«" U00AB, "»" U00BB, "‹" U2039, and "›" U203A are
+#   on live keys, since supporting these by dead keys is pointless due to the
+#   French spacing requirement. Also, sequences for these along the lines of
+#   en_US.UTF-8/Compose conflict with sequences for mathematical symbols and
+#   with dead key equivalents, e.g. vertical line above.
+#   See #*# SUPERSCRIPT
+#   
+#   "…" U2026 HORIZONTAL ELLIPSIS has a redesigned sequence, that the legacy
+#   <Multi_key><period><period> conflicts with.
+#   See # # Ellipses and leaders
 #
-#   Needs double, else would conflict with CIRCUMFLEX&ACUTE:
-<Multi_key><less><less><apostrophe>                                                                : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-<Multi_key><greater><greater><apostrophe>                                                          : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+#   "·" U00B7 MIDDLE DOT by <Multi_key><asciicircum><period> is part of the
+#   superscript dead key, and the reverse sequence is in dead_abovedot for
+#   completeness.
+#   See #*# SUPERSCRIPT
+#   See #*# DOT_ABOVE
 #
-#   Needs double, else would conflict with CEDILLA&ACUTE:
-<Multi_key><comma><comma><apostrophe>                                                              : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+#   "•" U2022 BULLET has now multiple input methods, while its legacy sequence
+#   <Multi_key><period><equal> conflicts with many math symbols, also the other
+#   way around (<Multi_key><equal><period> conflicts with U2A66).
+#   See #^# Bullets
+#   See #*# CIRCUMFLEX
+#   See # # C07
 #
-<Multi_key><less><less><quotedbl>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
-<Multi_key><less><less><EuroSign>                                                                  : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
-<Multi_key><greater><greater><quotedbl>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<Multi_key><greater><greater><EuroSign>                                                            : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<Multi_key><comma><comma><quotedbl>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
-<Multi_key><comma><comma><EuroSign>                                                                : "„" U201E # DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
+#   "–" U2013 EN DASH by <Multi_key><minus><minus><period> is supported in the
+#   double bar dead key, but "—" U2014 EM DASH cannot be supported as-is, i.e.
+#   by <Multi_key><minus><minus><minus>, since this is used as the entry point
+#   of the high bar dead key. Also, "―" U2015 HORIZONTAL BAR needs support as
+#   well, being a ¾-em dash. The resulting new sequence for U2014 below is the
+#   most consistent, although it is not the most user-friendly.
+#   See #^# DOUBLE_BAR
+#   See #^# HIGH_BAR
+#
+<Multi_key><minus><minus><minus><minus>                                                            : "—" U2014 # EM DASH
 #
 #
 # # Dashes and hyphens
@@ -1279,35 +1317,60 @@
 #       <char cp="002D" age="1.1" na="HYPHEN-MINUS" gc="Pd" ea="Na" lb="HY" SB="SC" blk="ASCII"/>
 #       <char cp="2010" age="1.1" na="HYPHEN"       gc="Pd" ea="A"  lb="BA" SB="XX" blk="Punctuation"/>
 #
-#   Noteworthy differences are in East Asian width, in the line break class and
-#   in the sentence break property. The Unicode Line Breaking Algorithm UAX #14
-#   does not require an extra hyphen for non-numerical contexts, and HY is BA.
+#   Noticeable differences are in East Asian width, in the line break class and
+#   in the sentence break property.
+#
+#   The Unicode Line Breaking Algorithm UAX #14 does not require an extra
+#   hyphen for non-numerical contexts, and HY is BA (break after).
 #   https://unicode.org/reports/tr14/#HY
-#   East Asian width neither warrants a duplicate hyphen since Unicode includes
-#   UFF0D FULLWIDTH HYPHEN-MINUS, and HYPHEN as “ambiguous” resolves to narrow.
+#
+#   East Asian width neither warrants a duplicate hyphen, since Unicode
+#   includes UFF0D FULLWIDTH HYPHEN-MINUS, and HYPHEN as “ambiguous” resolves
+#   to narrow.
+#
 #   As of text segmentation, HYPHEN is unspecified, rather than SContinue like
 #   HYPHEN-MINUS, and the relevant specification skips “XX” entirely.
 #   https://unicode.org/reports/tr29/#SContinue
+#
 #   Bottom line: U2010 is a useless duplicate of U002D and should be prevented
-#   from fully deploying its adverse effects when taking up a live key position
-#   or even an easy-access dead key input method like in group 1 of U002D. Else
-#   U2010 would screw everything up from undeliverable email to broken links to
-#   parse errors. It may be input using the following mnemonic scheme.
-#   See # # Long dashes
+#   from fully deploying its adverse effects by taking up a live key position,
+#   or even only an easy-access dead key input method like in group 1 of U002D.
+#   (Ultimately, however, U2010 is in group 12 of U002D. And it may be input
+#   using the following mnemonic scheme.)
+#   See # # C05
+#
+#   Else, U2010 would screw everything up, from undeliverable email to broken
+#   links to parse errors.
+#
+#   The reason why Unicode, well aware of the duplicate encoding pitfalls, and
+#   carefully avoiding an extra decimal dot, an extra factorial, and an extra
+#   punctuation apostrophe, was fooled into double-encoding the hyphen, was the
+#   old ISO-8859 misnomer HYPHEN-MINUS, whereas ASCII parenthesized the Minus,
+#   just like it parenthesized the Decimal Point.
+#   https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf#page=12
+#
+#   Calling U002D "HYPHEN-MINUS" was like calling U002A *ASTERISK-MULTIPLY, and
+#   U002F *SOLIDUS-DIVIDE. Only the Minus was appended with a hyphen, prompting
+#   people to figure out a non-existing reason behind, and to guess that this
+#   HYPHEN-MINUS might eventually not be a genuine hyphen.
+#
+#   That is most probably how Unicode was fooled into encoding an extra hyphen,
+#   not noticing that the hyphen is already there. As a consequence, we must
+#   stop taking the extra hyphen U2010 seriously and messing up keyboard layout
+#   design while attempting to support U2010 on live key or by premium dead key
+#   such as group 1 of <minus>.
 #
 #       HYPHEN-MINUS   = quarter-dash (French “tiret quart-de-cadratin”)
 #       HYPHEN         = quarter-dash (French “tiret quart-de-cadratin”)
 #       EN DASH        = half dash (French “tiret demi-cadratin”)
-#       HORIZONTAL BAR = three-quarter-dash (in Cambria, or conjoining em dash)
+#       HORIZONTAL BAR = three-quarter-dash (in Cambria; or conjoining em dash)
 #       EM DASH        = full dash (French “tiret cadratin”)
 #       TWO-EM DASH    = indicates missing letters, or a missing word
 #       THREE-EM DASH  = used for a missing word, or author’s name repetition
 #
-#   About the latter two, see https://jkorpela.fi/dashes.html
-#   and linked https://unicode.org/mail-arch/unicode-ml/y2010-m01/0219.html
+#   See # # Long dashes
 #
 #   "‑" U2011 NON-BREAKING HYPHEN is also in group 1 of <equal> .
-#   Nevertheless, "‐" U2010 HYPHEN is also in group 2 of <minus>.
 #
 <Multi_key><0><minus>                                                                              : "­" U00AD # SOFT HYPHEN
 <Multi_key><KP_0><KP_Subtract>                                                                     : "­" U00AD # SOFT HYPHEN
@@ -1359,30 +1422,6 @@
 <dead_abovedot><Multi_key><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 <Multi_key><dead_abovedot><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 <Multi_key><period><Multi_key><f><s>                                                               : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-#
-#
-# # Unsupported sequences
-#
-#   These are pretty redundant and only conflict with mathematical symbols and
-#   with dead key equivalents, e.g. vertical line above.
-#   Except "·" U00B7 MIDDLE DOT.
-#   See #*# SUPERSCRIPT
-#
-#   #   Needs triple, else would conflict with CIRCUMFLEX_BELOW:
-#   <Multi_key><less><less><less>                                                                  : "«" U00AB # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
-#   #   Needs triple, else would conflict with COMBINING CARON BELOW:
-#   <Multi_key><greater><greater><greater>                                                         : "»" U00BB # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
-#   <Multi_key><period><less>                                                                      : "‹" U2039 # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
-#   <Multi_key><less><period>                                                                      : "‹" U2039 # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
-#   <Multi_key><period><greater>                                                                   : "›" U203A # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
-#   <Multi_key><greater><period>                                                                   : "›" U203A # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
-#   <Multi_key><minus><minus><period>                                                              : "–" U2013 # EN DASH
-#   <Multi_key><minus><minus><minus>                                                               : "—" U2014 # EM DASH
-#   <Multi_key><period><period>                                                                    : "…" U2026 # HORIZONTAL ELLIPSIS
-#   <Multi_key><period><asciicircum>                                                               : "·" U00B7 # MIDDLE DOT
-#   <Multi_key><asciicircum><period>                                                               : "·" U00B7 # MIDDLE DOT
-#   <Multi_key><period><equal>                                                                     : "•" U2022 # BULLET
-#   <Multi_key><equal><period>                                                                     : "•" U2022 # BULLET
 #
 #
 #^# Tone bars
@@ -1804,7 +1843,7 @@
 #   symbol sequences are available for currency symbols by Multi_key.
 #   See #*# CURRENCY
 #
-#   These are symbols supported by en_US.UTF-8/Compose, including commented-out
+#   These are symbols supported in en_US.UTF-8/Compose, including commented-out
 #   ones completed on a best-guess basis.
 #   But unlike set up in en_US.UTF-8/Compose, <Multi_key><C><bar> is "₵" U20B5.
 #   And "¢" U00A2 is <Multi_key><bar><c> only, due to conflicts with "ȼ" U023C,
@@ -3969,11 +4008,14 @@
 #   In group 10 of !                                                                               : "∵" U2235 # BECAUSE
 <Multi_key><period><period><period><v>                                                     <space> : "∵" U2235 # BECAUSE
 <Multi_key><period><period><period><v>                                              <nobreakspace> : "∵" U2235 # BECAUSE
+#
 #   "∶" U2236 RATIO is disunified from the colon with the rationale that
 #   unlike the punctuation, it is visibly padded as a relational operator.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
+#
 #   Additionally its vertical alignment matches digits, not the x height.
 #   https://github.com/microsoft/cascadia-code/issues/572
+#
 <Multi_key><space><colon>                                                                  <space> : "∶" U2236 # RATIO
 <Multi_key><space><colon>                                                           <nobreakspace> : "∶" U2236 # RATIO
 <Multi_key><nobreakspace><colon>                                                           <space> : "∶" U2236 # RATIO
@@ -3996,10 +4038,13 @@
 <Multi_key><space><asciitilde><colon>                                               <nobreakspace> : "∻" U223B # HOMOTHETIC
 <Multi_key><nobreakspace><asciitilde><colon>                                               <space> : "∻" U223B # HOMOTHETIC
 <Multi_key><nobreakspace><asciitilde><colon>                                        <nobreakspace> : "∻" U223B # HOMOTHETIC
+#
 #   "∼" U223C TILDE OPERATOR was disunified from ASCII tilde without rationale.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
+#
 #   Consistently, both U223C and U007E display exactly the same, and semantics
 #   are also unambiguous. As a result, U223C is not supported in group 1 of ~.
+#
 <Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><space><asciitilde>                                                      <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><nobreakspace><asciitilde>                                                      <space> : "∼" U223C # TILDE OPERATOR
@@ -4023,7 +4068,7 @@
 <Multi_key><space><asciitilde><percent>                                             <nobreakspace> : "≀" U2240 # WREATH PRODUCT
 <Multi_key><nobreakspace><asciitilde><percent>                                             <space> : "≀" U2240 # WREATH PRODUCT
 <Multi_key><nobreakspace><asciitilde><percent>                                      <nobreakspace> : "≀" U2240 # WREATH PRODUCT
-#   In #*# STROKE                                                                                  : "≁" U2241 # NOT TILDE
+#   In # # TILDE&STROKE                                                                            : "≁" U2241 # NOT TILDE
 <Multi_key><space><asciitilde><slash>                                                      <space> : "≁" U2241 # NOT TILDE
 <Multi_key><space><asciitilde><slash>                                               <nobreakspace> : "≁" U2241 # NOT TILDE
 <Multi_key><nobreakspace><asciitilde><slash>                                               <space> : "≁" U2241 # NOT TILDE
@@ -6388,6 +6433,7 @@
 #   Disunified from Punctuation, as disunifying "⨯" U2A2F from "×" U00D7 was
 #   pointless. As a consequence, people are left stranded when attempting to
 #   make sense of this code point.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
 <Multi_key><space><x>                                                                      <space> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
 <Multi_key><space><x>                                                               <nobreakspace> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
@@ -6696,8 +6742,10 @@
 <Multi_key><nobreakspace><equal><asciitilde>                                        <nobreakspace> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
 <Multi_key><colon><colon><equal>                                                           <space> : "⩴" U2A74 # DOUBLE COLON EQUAL
 <Multi_key><colon><colon><equal>                                                    <nobreakspace> : "⩴" U2A74 # DOUBLE COLON EQUAL
-<Multi_key><equal><equal>                                                                  <space> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
-<Multi_key><equal><equal>                                                           <nobreakspace> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key><space><equal><equal>                                                           <space> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key><space><equal><equal>                                                    <nobreakspace> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key><nobreakspace><equal><equal>                                                    <space> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key><nobreakspace><equal><equal>                                             <nobreakspace> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
 <Multi_key><equal><equal><equal>                                                           <space> : "⩶" U2A76 # THREE CONSECUTIVE EQUALS SIGNS
 <Multi_key><equal><equal><equal>                                                    <nobreakspace> : "⩶" U2A76 # THREE CONSECUTIVE EQUALS SIGNS
 <Multi_key><period><period><equal><period><period>                                         <space> : "⩷" U2A77 # EQUALS SIGN WITH TWO DOTS ABOVE AND TWO DOTS BELOW
