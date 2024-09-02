@@ -4589,8 +4589,24 @@
 #   This new virtual dead key uses the synergy of the dead_tilde main instance,
 #   on key D11 level 3, with the ampersand on D10 level 3.
 #
-<dead_tilde><ampersand>                                                                        <a> : 
-<Multi_key><asciitilde><ampersand>                                                             <a> : 
+<dead_tilde><ampersand>                                                              <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<Multi_key><asciitilde><ampersand>                                                   <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<dead_tilde><ampersand>                                                                <backslash> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
+<Multi_key><asciitilde><ampersand>                                                     <backslash> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
+<dead_tilde><ampersand>                                                                <parenleft> : "᪾" U1ABE # COMBINING PARENTHESES OVERLAY
+<Multi_key><asciitilde><ampersand>                                                     <parenleft> : "᪾" U1ABE # COMBINING PARENTHESES OVERLAY
+<dead_tilde><ampersand>                                                               <parenright> : "⃢" U20E2 # COMBINING ENCLOSING SCREEN
+<Multi_key><asciitilde><ampersand>                                                    <parenright> : "⃢" U20E2 # COMBINING ENCLOSING SCREEN
+<dead_tilde><ampersand>                                                              <bracketleft> : "⃞" U20DE # COMBINING ENCLOSING SQUARE
+<Multi_key><asciitilde><ampersand>                                                   <bracketleft> : "⃞" U20DE # COMBINING ENCLOSING SQUARE
+<dead_tilde><ampersand>                                                             <bracketright> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><asciitilde><ampersand>                                                  <bracketright> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<dead_tilde><ampersand>                                                                     <less> : "⃪" U20EA # COMBINING LEFTWARDS ARROW OVERLAY
+<Multi_key><asciitilde><ampersand>                                                          <less> : "⃪" U20EA # COMBINING LEFTWARDS ARROW OVERLAY
+<dead_tilde><ampersand>                                                                  <greater> : "⃟" U20DF # COMBINING ENCLOSING DIAMOND
+<Multi_key><asciitilde><ampersand>                                                       <greater> : "⃟" U20DF # COMBINING ENCLOSING DIAMOND
+<dead_tilde><ampersand>                                                                        <L> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
+<Multi_key><asciitilde><ampersand>                                                             <L> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 #
 #
 #^# MIDDLE_TILDE
