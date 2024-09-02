@@ -10244,13 +10244,15 @@
 #   encoded in Unicode, since the overlay bar diacritics do not render well.
 #   https://www.frathwiki.com/Bar
 #
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are consistently
-#   supported across three matching dead keys, with quotedbl and EuroSign as
-#   base characters.
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
+#   consistently supported across four matching dead keys, with quotedbl and
+#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
+#   used as the spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
 #   See #*# MACRON
 #   See #*# STROKE
 #   See #*# BAR
+#   See #*# HORN
 #
 #   As a spacing counterpart of the short bar diacritic "̵" U0335, "˗" U02D7 is
 #   convenient, since it is not the superscript minus sign, despite being named
@@ -10673,10 +10675,18 @@
 #   expectations. Double arrows are yielded by *dead_flag.
 #   See #*# FLAG
 #
-#   Instead of a non-existing spacing clone of "̛" U031B, "˖" U02D6 is picked,
-#   based on the horn’s traditional Multi_key equivalent "+", consistently with
-#   "˗" U02D7 in the dead key for barred letters *dead_bar.
+#   Instead of a non-existing spacing clone of "̛" U031B, "ꜚ" UA71A is picked,
+#   based on the horn’s shape, although this is a Chinantec tone mark.
+#
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
+#   consistently supported across four matching dead keys, with quotedbl and
+#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
+#   used as the spacing clone of horn.
+#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #*# MACRON
+#   See #*# STROKE
 #   See #*# BAR
+#   See #*# HORN
 #
 #   This also supports "᫉" U1AC9 COMBINING DOUBLE PLUS SIGN ABOVE and "᫊" U1ACA
 #   COMBINING DOUBLE PLUS SIGN BELOW, while single counterparts are supported
@@ -10688,10 +10698,10 @@
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
 <dead_horn>                                                                                <U200B> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <U200B> : "̛" U031B # COMBINING HORN
-<dead_horn>                                                                         <nobreakspace> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                   <nobreakspace> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<dead_horn>                                                                                <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                          <U202F> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<dead_horn>                                                                         <nobreakspace> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+<Multi_key><plus>                                                                   <nobreakspace> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+<dead_horn>                                                                                <U202F> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+<Multi_key><plus>                                                                          <U202F> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
 <dead_horn>                                                                             <quotedbl> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
 <Multi_key><plus>                                                                       <quotedbl> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
 <dead_horn>                                                                             <EuroSign> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
@@ -10756,6 +10766,10 @@
 <Multi_key><plus>                                                                              <O> : "Ơ" U01A0 # LATIN CAPITAL LETTER O WITH HORN
 <dead_horn>                                                                                    <o> : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
 <Multi_key><plus>                                                                              <o> : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
+<dead_horn>                                                                                    <P> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<Multi_key><plus>                                                                              <P> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<dead_horn>                                                                                    <p> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<Multi_key><plus>                                                                              <p> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                    <U> : "Ư" U01AF # LATIN CAPITAL LETTER U WITH HORN
 <Multi_key><plus>                                                                              <U> : "Ư" U01AF # LATIN CAPITAL LETTER U WITH HORN
 <dead_horn>                                                                                    <u> : "ư" U01B0 # LATIN SMALL LETTER U WITH HORN
