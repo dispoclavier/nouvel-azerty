@@ -56,7 +56,7 @@
 		* Supprimer les parenthèses superflues. CHANGELOG.md [882c246](https://github.com/dispoclavier/nouvel-azerty/commit/882c2461834633c76f6a31a05584850c36fd1077)
 		* Corriger les désignations. CHANGELOG.md [c391350](https://github.com/dispoclavier/nouvel-azerty/commit/c391350e0e4399144e43b4ad62c1daaadb9c7058)
 		* Ajouter les résumés omis. CHANGELOG.md [de3e0fe](https://github.com/dispoclavier/nouvel-azerty/commit/de3e0fe658bd43ee919ac8dbea8f92528d322615)
-@		* Corriger la notation des séquences de composition.
+		* Corriger la notation des séquences de composition. CHANGELOG.md [a32211b](https://github.com/dispoclavier/nouvel-azerty/commit/a32211baf420d2b1d568eed504d00699209e2aff)
 
 ## 4.2.1 (2024-08-30)
 
