@@ -3,14 +3,16 @@
 ## 4.3.0 (projet) 
 
 * Composition :
-	* Ajouter "˹" U+02F9, "˺" U+02FA, "˻" U+02FB, "˼" U+02FC. compose-1.yml [087907a](https://github.com/dispoclavier/nouvel-azerty/commit/087907a93adceaefdab7e3a5083190fed269a4cc)
+	* Ajouter "˹" U+02F9, "˺" U+02FA, "˻" U+02FB, "˼" U+02FC, "꜠" U+A720, "꜡" U+A721. compose-1.yml [087907a](https://github.com/dispoclavier/nouvel-azerty/commit/087907a93adceaefdab7e3a5083190fed269a4cc), [cb0c2fe](https://github.com/dispoclavier/nouvel-azerty/commit/cb0c2fe6d6c9e4fb8a3ada2db3d71666e05e60b2)
 	* Redonder "—" U+2014 par « ¦---- ». compose-1.yml [ed84348](https://github.com/dispoclavier/nouvel-azerty/commit/ed843489a2adb2bd0257f2ef4de3efc6ca0e19d7)
 	* Adapter les séquences de "⩵" U+2A75. compose-1.yml [ed84348](https://github.com/dispoclavier/nouvel-azerty/commit/ed843489a2adb2bd0257f2ef4de3efc6ca0e19d7)
 	* Supprimer "‘" U+2018, "’" U+2019, "‚" U+201A, "“" U+201C, "”" U+201D, "„" U+201E, qui sont dans accent circonflexe, dans accent aigu ou dans tréma. compose-1.yml [ed84348](https://github.com/dispoclavier/nouvel-azerty/commit/ed843489a2adb2bd0257f2ef4de3efc6ca0e19d7)
 * Transformations :
 	* Déboguer "͚" U+035A, "͜" U+035C, "͝" U+035D, "͞" U+035E, "͟" U+035F, "∄" U+2204, "∉" U+2209, "∌" U+220C. compose-2.yml [22b3da4](https://github.com/dispoclavier/nouvel-azerty/commit/22b3da4dd3e2e0b5c9ef62794c15296584414a17)
 	* Groupes des symboles : Redonder "⁀" U+2040 et "‿" U+203F à la place de "❨" U+2768 et "❩" U+2769. compose-3.yml [d93e3f1](https://github.com/dispoclavier/nouvel-azerty/commit/d93e3f135ec7a44bd6e108311393c4ddf945383d), [7b5984c](https://github.com/dispoclavier/nouvel-azerty/commit/7b5984c6792f47ebbda409340f60d9e948aaff63), compose-2.yml [9598dbd](https://github.com/dispoclavier/nouvel-azerty/commit/9598dbd0530f1860d1df1adef0f2b5dad011bb2c)
-	* Exposant > Suscrit : Ajouter "᪻" U+1ABB, "᪼" U+1ABC, "⃰" U+20F0. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
+	* Exposant > Suscrit :
+		* Ajouter "᪻" U+1ABB, "᪼" U+1ABC, "⃰" U+20F0. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
+		* Ajouter "᷾" U+1DFE, "͐" U+0350 par "<", ">". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
 	* Exposant > Suscrit et groupe 1 : Ajouter "᫆" U+1AC6. compose-2.yml [03501b0](https://github.com/dispoclavier/nouvel-azerty/commit/03501b0b1c130f7beebbfaec430b3a247c40a1dc)
 	* Tilde : Corriger les séquences de "⁓" U+2053, "͠" U+0360. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
 	* Tilde et barré : Rajouter "≁" U+2241. compose-2.yml [03501b0](https://github.com/dispoclavier/nouvel-azerty/commit/03501b0b1c130f7beebbfaec430b3a247c40a1dc)
@@ -23,7 +25,12 @@
 	* Rayé > Double raie : Redonder "–" U+2013 pour la compatibilité ascendante avec la composition héritée. compose-2.yml [03501b0](https://github.com/dispoclavier/nouvel-azerty/commit/03501b0b1c130f7beebbfaec430b3a247c40a1dc)
 	* Rayé > Raie haute : Redonder "―" U+2015. compose-2.yml [03501b0](https://github.com/dispoclavier/nouvel-azerty/commit/03501b0b1c130f7beebbfaec430b3a247c40a1dc)
 	* Cornu : Ajouter "᫉" U+1AC9, "᫊" U+1ACA. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b), [b69f110](https://github.com/dispoclavier/nouvel-azerty/commit/b69f110ec20787cda555e6c7bd558f17b565c8b9)
-	* Indice > Souscrit : Ajouter "᪽" U+1ABD à la place de "̜" U+031C et "̹" U+0339, qui sont dans le groupe 5 de D et F. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
+	* Cornu : Ajouter "ꜚ" U+A71A à la place de "˖" U+02D6, qui va sur "p" et "P". compose-2.yml [30bb5de](https://github.com/dispoclavier/nouvel-azerty/commit/30bb5de97e8e1677a92f31ea1e34cd3b97a2a575)
+	* Indice > Souscrit :
+		* Ajouter "͎" U+034E et "͍" U+034D par "1" et "2". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
+		* Ajouter "᪸" U+1AB8 par "J". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
+		* Ajouter ""͢" U+0362 par "_". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
+		* Ajouter "᪽" U+1ABD à la place de "̜" U+031C et "̹" U+0339, qui sont dans le groupe 5 de D et F. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 	* Macron :
 		* Corriger les séquences de "͞" U+035E. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
 		* Redonder "ꜗ" U+A717 à la place de "͞" U+035E, qui est par tiret cadratin. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa)
