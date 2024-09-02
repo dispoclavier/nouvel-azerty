@@ -50,7 +50,7 @@
 	* Chaînes de caractères pour touches vives et contenu des touches mortes :
 		* Corriger la description. compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f), [ff713ff](https://github.com/dispoclavier/nouvel-azerty/commit/ff713ff537b12f08f25b898fb7c2e1f79528057b)
 		* Corriger les notes sur les tableaux. compose-1.yml [ff713ff](https://github.com/dispoclavier/nouvel-azerty/commit/ff713ff537b12f08f25b898fb7c2e1f79528057b), [8647ed0](https://github.com/dispoclavier/nouvel-azerty/commit/8647ed07e214334df54f6048c365461efcdfe889), [ed84348](https://github.com/dispoclavier/nouvel-azerty/commit/ed843489a2adb2bd0257f2ef4de3efc6ca0e19d7)
-		* Compléter l’annotation de l’arrêt de "∼" U+223C dans le groupe 1 (4.1.0). compose-3.yml [6a129d8](https://github.com/dispoclavier/nouvel-azerty/commit/6a129d823e3ded94273e08be43c5fe855f86822f)
+	* Arrêt de "∼" U+223C dans le groupe 1 (4.1.0) : Compléter l’annotation. compose-3.yml [6a129d8](https://github.com/dispoclavier/nouvel-azerty/commit/6a129d823e3ded94273e08be43c5fe855f86822f)
 	* Journal des modifications :
 		* Uniformiser l’ordre des entrées. CHANGELOG.md [018acd1](https://github.com/dispoclavier/nouvel-azerty/commit/018acd112a6808fed563582996b6aea7fb044f2b)
 		* Supprimer les parenthèses superflues. CHANGELOG.md [882c246](https://github.com/dispoclavier/nouvel-azerty/commit/882c2461834633c76f6a31a05584850c36fd1077)
