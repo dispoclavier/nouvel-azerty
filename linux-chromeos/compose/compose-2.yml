@@ -4662,10 +4662,14 @@
 <Multi_key><asciitilde><ampersand>                                                             <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
 <dead_tilde><ampersand>                                                                        <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
 <Multi_key><asciitilde><ampersand>                                                             <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
+<dead_tilde><ampersand>                                                                        <U> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
+<Multi_key><asciitilde><ampersand>                                                             <U> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
+<dead_tilde><ampersand>                                                                        <u> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
+<Multi_key><asciitilde><ampersand>                                                             <u> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
 <dead_tilde><ampersand>                                                                        <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
 <Multi_key><asciitilde><ampersand>                                                             <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
-<dead_tilde><ampersand>                                                                        <w> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
-<Multi_key><asciitilde><ampersand>                                                             <w> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
+<dead_tilde><ampersand>                                                                        <w> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
+<Multi_key><asciitilde><ampersand>                                                             <w> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
 #
 #
 #^# MIDDLE_TILDE
