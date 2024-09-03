@@ -4611,32 +4611,20 @@
 <Multi_key><asciitilde><ampersand>                                                             <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <dead_tilde><ampersand>                                                                        <D> : "᫁" U1AC1 # COMBINING LEFT PARENTHESIS ABOVE LEFT
 <Multi_key><asciitilde><ampersand>                                                             <D> : "᫁" U1AC1 # COMBINING LEFT PARENTHESIS ABOVE LEFT
-<dead_tilde><ampersand>                                                                        <F> : "᫂" U1AC2 # COMBINING RIGHT PARENTHESIS ABOVE RIGHT
-<Multi_key><asciitilde><ampersand>                                                             <F> : "᫂" U1AC2 # COMBINING RIGHT PARENTHESIS ABOVE RIGHT
 <dead_tilde><ampersand>                                                                        <d> : "᫃" U1AC3 # COMBINING LEFT PARENTHESIS BELOW LEFT
 <Multi_key><asciitilde><ampersand>                                                             <d> : "᫃" U1AC3 # COMBINING LEFT PARENTHESIS BELOW LEFT
+<dead_tilde><ampersand>                                                                        <F> : "᫂" U1AC2 # COMBINING RIGHT PARENTHESIS ABOVE RIGHT
+<Multi_key><asciitilde><ampersand>                                                             <F> : "᫂" U1AC2 # COMBINING RIGHT PARENTHESIS ABOVE RIGHT
 <dead_tilde><ampersand>                                                                        <f> : "᫄" U1AC4 # COMBINING RIGHT PARENTHESIS BELOW RIGHT
 <Multi_key><asciitilde><ampersand>                                                             <f> : "᫄" U1AC4 # COMBINING RIGHT PARENTHESIS BELOW RIGHT
-<dead_tilde><ampersand>                                                                        <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
-<Multi_key><asciitilde><ampersand>                                                             <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
-<dead_tilde><ampersand>                                                                        <w> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
-<Multi_key><asciitilde><ampersand>                                                             <w> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
-<dead_tilde><ampersand>                                                                        <O> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
-<Multi_key><asciitilde><ampersand>                                                             <O> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
-<dead_tilde><ampersand>                                                                        <o> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
-<Multi_key><asciitilde><ampersand>                                                             <o> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
-<dead_tilde><ampersand>                                                                        <L> : "︧" UFE27 # COMBINING LIGATURE LEFT HALF BELOW
-<Multi_key><asciitilde><ampersand>                                                             <L> : "︧" UFE27 # COMBINING LIGATURE LEFT HALF BELOW
-<dead_tilde><ampersand>                                                                        <l> : "︨" UFE28 # COMBINING LIGATURE RIGHT HALF BELOW
-<Multi_key><asciitilde><ampersand>                                                             <l> : "︨" UFE28 # COMBINING LIGATURE RIGHT HALF BELOW
-<dead_tilde><ampersand>                                                                        <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
-<Multi_key><asciitilde><ampersand>                                                             <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
-<dead_tilde><ampersand>                                                                        <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
-<Multi_key><asciitilde><ampersand>                                                             <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
 <dead_tilde><ampersand>                                                                        <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
 <Multi_key><asciitilde><ampersand>                                                             <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
 <dead_tilde><ampersand>                                                                        <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
 <Multi_key><asciitilde><ampersand>                                                             <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
+<dead_tilde><ampersand>                                                                        <L> : "︧" UFE27 # COMBINING LIGATURE LEFT HALF BELOW
+<Multi_key><asciitilde><ampersand>                                                             <L> : "︧" UFE27 # COMBINING LIGATURE LEFT HALF BELOW
+<dead_tilde><ampersand>                                                                        <l> : "︨" UFE28 # COMBINING LIGATURE RIGHT HALF BELOW
+<Multi_key><asciitilde><ampersand>                                                             <l> : "︨" UFE28 # COMBINING LIGATURE RIGHT HALF BELOW
 <dead_tilde><ampersand>                                                                        <M> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <Multi_key><asciitilde><ampersand>                                                             <M> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_tilde><ampersand>                                                                        <m> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
@@ -4645,6 +4633,18 @@
 <Multi_key><asciitilde><ampersand>                                                             <N> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
 <dead_tilde><ampersand>                                                                        <n> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
 <Multi_key><asciitilde><ampersand>                                                             <n> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
+<dead_tilde><ampersand>                                                                        <O> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
+<Multi_key><asciitilde><ampersand>                                                             <O> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
+<dead_tilde><ampersand>                                                                        <o> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
+<Multi_key><asciitilde><ampersand>                                                             <o> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
+<dead_tilde><ampersand>                                                                        <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
+<Multi_key><asciitilde><ampersand>                                                             <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
+<dead_tilde><ampersand>                                                                        <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
+<Multi_key><asciitilde><ampersand>                                                             <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
+<dead_tilde><ampersand>                                                                        <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
+<Multi_key><asciitilde><ampersand>                                                             <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
+<dead_tilde><ampersand>                                                                        <w> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
+<Multi_key><asciitilde><ampersand>                                                             <w> : "᷹" U1DF9 # COMBINING WIDE INVERTED BRIDGE BELOW
 #
 #
 #^# MIDDLE_TILDE
