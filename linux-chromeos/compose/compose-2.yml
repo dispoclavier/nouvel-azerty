@@ -4589,6 +4589,27 @@
 #   This new virtual dead key uses the synergy of the dead_tilde main instance,
 #   on key D11 level 3, with the ampersand on D10 level 3.
 #
+#   While the mnemonics based on ASCII symbols are obvious, the mnemonics based
+#   on letters use a new-school French AZERTY and its alphabetic key ASCII map,
+#   except for the annuity diacritic "⃧" U20E7 mapped on case insensitive A. The
+#   list has been reordered alphabetically for consistency, but it started with
+#   D and F for opening and closing parentheses "᫁" U1AC1, "᫃" U1AC3, "᫂" U1AC2,
+#   "᫄" U1AC4, using uppercase for above, lowercase for below.
+#
+#   Half macrons and tildes start on the keys that their multi-key equivalents
+#   "|" and "~" are on, for the variants above: "︤" UFE24, "︥" UFE25, "︢" UFE22,
+#   "︣" UFE23, but for these, the semantic of uppercase / lowercase is used for
+#   the left and right halves, with the rationale that uppercase is associated
+#   with (word) start. The variants below are on a letter whose key is below M
+#   or T on the keyboard, G for tilde "︩" UFE29, "︪" UFE2A, N for macron "︫" UFE2B
+#   and "︬" UFE2C, based on the French AZERTY, where M comes after L.
+#
+#   The ligature halves above – "︠" UFE20, "︡" UFE21 – are on O, as the O key is
+#   above the L key, that the ligature halves below are on: "︧" UFE27, "︨" UFE28.
+#
+#   By contrast, the "᫇" U1AC7 and "᷹" U1DF9 diacritics use graphic mnemonics on
+#   case insensitive W and U.
+#
 <dead_tilde><ampersand>                                                              <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 <Multi_key><asciitilde><ampersand>                                                   <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 <dead_tilde><ampersand>                                                                <backslash> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
