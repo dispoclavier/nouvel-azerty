@@ -78,6 +78,7 @@ Le deux-barrettes ou la barre brisée « ¦ » U+00A6 représente la touche 
 		* Ajouter les résumés omis. CHANGELOG.md [de3e0fe](https://github.com/dispoclavier/nouvel-azerty/commit/de3e0fe658bd43ee919ac8dbea8f92528d322615)
 		* Corriger la notation des séquences de composition. CHANGELOG.md [a32211b](https://github.com/dispoclavier/nouvel-azerty/commit/a32211baf420d2b1d568eed504d00699209e2aff)
 		* Corriger la notation des caractères de base. CHANGELOG.md [f5e86ed](https://github.com/dispoclavier/nouvel-azerty/commit/f5e86ed338ddd6f642f99cef00c2ed0ff1ca3719)
+		* Ajouter la légende de la touche de composition. CHANGELOG.md [97e4faa](https://github.com/dispoclavier/nouvel-azerty/commit/97e4faa49733ee698881a67e62372e5197bca4df)
 
 ## 4.2.1 (2024-08-30)
 
