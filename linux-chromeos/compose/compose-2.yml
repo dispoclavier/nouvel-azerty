@@ -12,8 +12,10 @@
 ### Dead keys
 #
 #   While Windows and macOS can emulate input composition by chained dead keys,
-#   XKB is to emulate dead keys by XCompose. This resulting configuration file
-#   is very human readable, and it is easily converted into documentation.
+#   XKB is to emulate dead keys by input composition.
+#
+#   This resulting configuration file is very human readable, and it is easily
+#   converted into documentation.
 #   See # # Notes about documentation
 #
 #   Input composition implemented by chaining dead keys is more powerful in
@@ -22,21 +24,25 @@
 #   this does not work:
 #
 #       <dead_circumflex> <dead_circumflex> : dead_belowcircumflex
-#   or:
-#       <dead_circumflex> <dead_circumflex> : <dead_belowcircumflex>
+#
 #   then:
+#
 #       <dead_belowcircumflex> <e>          : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 #
-#   That however contradicts what X.org specifies:
+#   Although X.org specifies:
 #
 #       If the string is omitted, Xlib figures it out from the keysym according
 #       to the current locale.
 #
 #       I.e., if a rule looks like:
+#
 #           <dead_grave>     <A> : "\300" Agrave
+#
 #       the result of the composition is always the letter with the "\300" code.
 #       But if the rule is:
+#
 #           <dead_grave> <A> : Agrave
+#
 #       the result depends on how Agrave is mapped in the current locale.
 #
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
@@ -44,12 +50,12 @@
 #
 # # Notes on Unicode support
 #
-#   The extended Latin F & G blocks are supported since 2023-05-25T1205+0200.
-#   This does not affect ChromeOS, Linux, MacOS (macOS), as opposed to Windows,
-#   where the Text Services Framework (TSF) is no longer able to keep the Latin
-#   script easy to input. Transpiling the related sequences to C will require a
-#   move to low surrogates from U10780 to U1DF2A (U1DFFF) along with a facility
-#   to input the D801 and D837 high surrogates.
+#   The extended Latin F & G blocks in the SMP are supported since 2023-05-25.
+#   The issues related to SMP support do not affect ChromeOS, Linux, macOS, as
+#   opposed to Windows, whose Text Services Framework (TSF) is no longer able
+#   to keep the Latin script easy to input. Transpiling the related sequences
+#   to C will require a move to low surrogates from U10780 to U1DF2A (U1DFFF)
+#   along with a facility to input the D801 and D837 high surrogates.
 #   https://unicode.org/versions/enumeratedversions.html
 #   https://en.wikipedia.org/wiki/Latin_Extended-F
 #
@@ -4358,12 +4364,13 @@
 #   All letters annotated as for Lithuanian in this file are courtesy:
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
-#   Combining half tildes above: "︢" UFE22, "︣" UFE23, and below: "︩" UFE29,
-#   "︪" UFE2A are supported on G and H, where G is consistent with the tilde
-#   and ampersand virtual dead key, and H is picked for its neighborship, and
-#   since the alphabetically mnemonic T key is not available for this purpose.
-#   Halves of combining diacritics are supported in the tilde and ampersand
-#   virtual dead key.
+#   Combining half tildes above – "︢" UFE22, "︣" UFE23 – and below – "︩" UFE29,
+#   "︪" UFE2A – are supported on G and H, where G is consistent with the tilde
+#   and ampersand virtual dead key, and H is picked for its neighborship, since
+#   the alphabetically mnemonic T key is not available for this purpose.
+#
+#   Halves of combining diacritics are also supported in the tilde and
+#   ampersand virtual dead key.
 #   See # # TILDE&AMPERSAND
 #
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
@@ -11862,9 +11869,9 @@
 #   may be less mnemonic or more complicated.
 #   See # # Design of math sequences
 #
-#   Combining half macrons above and below "︤" UFE24, "︥" UFE25, "︫" UFE2B,
-#   "︬" UFE2C are supported on M and W, with alphabetic mnemonic as of M, and
-#   graphic mnemonic of W thought of as an upside down M for the "below"
+#   Combining half macrons above and below – "︤" UFE24, "︥" UFE25, "︫" UFE2B,
+#   "︬" UFE2C – are supported on M and W, with alphabetic mnemonic as of M, and
+#   graphic mnemonic as of W, thought of as an upside down M for the "below"
 #   semantics. Halves of combining diacritics are also supported in the tilde
 #   and ampersand virtual dead key.
 #   See # # TILDE&AMPERSAND
@@ -12105,9 +12112,10 @@
 #
 #   Ampersand as a base character supports the conjoining diacritic.
 #
-#   Combining half macrons below: "︫" UFE2B, "︬" UFE2C are supported on W,
-#   consistently with dead_macron single press, and with the tilde and
-#   ampersand virtual dead key also supporting halves of combining diacritics.
+#   Combining half macrons below – "︫" UFE2B, "︬" UFE2C – are supported on W,
+#   consistently with dead_macron single press, and consistently with the tilde
+#   and ampersand virtual dead key, that also supports halves of combining
+#   diacritics.
 #   See # # TILDE&AMPERSAND
 #
 <dead_macron><dead_macron>                                                                 <space> : "̱" U0331 # COMBINING MACRON BELOW
