@@ -1,6 +1,6 @@
 # Journal des modifications
 
-Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U00A6 représente la touche de composition "⎄" U2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
+Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
 ## 4.3.0 (projet) 
 
