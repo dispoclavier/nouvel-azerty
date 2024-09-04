@@ -4358,6 +4358,14 @@
 #   All letters annotated as for Lithuanian in this file are courtesy:
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
+#   Combining half tildes above: "︢" UFE22, "︣" UFE23, and below: "︩" UFE29,
+#   "︪" UFE2A are supported on G and H, where G is consistent with the tilde
+#   and ampersand virtual dead key, and H is picked for its neighborship, and
+#   since the alphabetically mnemonic T key is not available for this purpose.
+#   Halves of combining diacritics are supported in the tilde and ampersand
+#   virtual dead key.
+#   See # # TILDE&AMPERSAND
+#
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                               <U200B> : "̃" U0303 # COMBINING TILDE
@@ -4436,6 +4444,14 @@
 <Multi_key><asciitilde>                                                                        <e> : "ẽ" U1EBD # LATIN SMALL LETTER E WITH TILDE
 <dead_tilde>                                                                                   <f> : "ᵮ" U1D6E # LATIN SMALL LETTER F WITH MIDDLE TILDE
 <Multi_key><asciitilde>                                                                        <f> : "ᵮ" U1D6E # LATIN SMALL LETTER F WITH MIDDLE TILDE
+<dead_tilde>                                                                                   <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
+<Multi_key><asciitilde>                                                                        <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
+<dead_tilde>                                                                                   <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
+<Multi_key><asciitilde>                                                                        <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
+<dead_tilde>                                                                                   <H> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
+<Multi_key><asciitilde>                                                                        <H> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
+<dead_tilde>                                                                                   <h> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
+<Multi_key><asciitilde>                                                                        <h> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
 <dead_tilde>                                                                                   <I> : "Ĩ" U0128 # LATIN CAPITAL LETTER I WITH TILDE
 <Multi_key><asciitilde>                                                                        <I> : "Ĩ" U0128 # LATIN CAPITAL LETTER I WITH TILDE
 <dead_tilde>                                                                                   <i> : "ĩ" U0129 # LATIN SMALL LETTER I WITH TILDE
@@ -4587,25 +4603,33 @@
 #   Dchar: 
 #
 #   This new virtual dead key uses the synergy of the dead_tilde main instance,
-#   on key D11 level 3, with the ampersand on D10 level 3.
+#   on key D11 level 3, with the ampersand on D10 level 3, according to the new
+#   ASCII symbols map on alphabetic keys.
+#
+#   The TILDE&AMPERSAND dead key is dedicated to combining diacritics, with the
+#   ampersand carrying the "combining" semantics.
+#   See # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
 #
 #   While the mnemonics based on ASCII symbols are obvious, the mnemonics based
 #   on letters use a new-school French AZERTY and its alphabetic key ASCII map,
-#   except for the annuity diacritic "⃧" U20E7 mapped on case insensitive A. The
-#   list has been reordered alphabetically for consistency, but it started with
-#   D and F for opening and closing parentheses "᫁" U1AC1, "᫃" U1AC3, "᫂" U1AC2,
-#   "᫄" U1AC4, using uppercase for above, lowercase for below.
+#   except for the annuity diacritic "⃧" U20E7 mapped on case insensitive A.
+#   The list has been reordered alphabetically for consistency, but it started
+#   with D and F for opening and closing parentheses "᫁" U1AC1, "᫃" U1AC3,
+#   "᫂" U1AC2, "᫄" U1AC4, using uppercase for above, lowercase for below.
 #
 #   Half macrons and tildes start on the keys that their multi-key equivalents
-#   "|" and "~" are on, for the variants above: "︤" UFE24, "︥" UFE25, "︢" UFE22,
-#   "︣" UFE23, but for these, the semantic of uppercase / lowercase is used for
-#   the left and right halves, with the rationale that uppercase is associated
-#   with (word) start. The variants below are on a letter whose key is below M
-#   or T on the keyboard, G for tilde "︩" UFE29, "︪" UFE2A, N for macron "︫" UFE2B
-#   and "︬" UFE2C, based on the French AZERTY, where M comes after L.
+#   "|" and "~" are on, for the variants above: "︤" UFE24, "︥" UFE25, "︢" UFE22
+#   and "︣" UFE23. But for these, the semantics of uppercase/lowercase is used
+#   for the left and right halves, with the rationale that uppercase carries
+#   semantics of start when it is in titlecase position. The variants below are
+#   on a letter whose key is below M or T on the keyboard: G for the half tilde
+#   "︩" UFE29 and the half tilde "︪" UFE2A, N for the half macron "︫" UFE2B and
+#   the half macron "︬" UFE2C. This assumes a French AZERTY, where M comes
+#   after L, and N is the last letter in the row below the row that M is in.
 #
-#   The ligature halves above – "︠" UFE20, "︡" UFE21 – are on O, as the O key is
-#   above the L key, that the ligature halves below are on: "︧" UFE27, "︨" UFE28.
+#   The ligature halves above – "︠" UFE20, "︡" UFE21 – are on O, as the O key
+#   is above the L key, that the ligature halves below are on: "︧" UFE27,
+#   "︨" UFE28.
 #
 #   By contrast, the "᫇" U1AC7 and "᷹" U1DF9 diacritics use graphic mnemonics on
 #   case insensitive W and U.
@@ -4685,6 +4709,11 @@
 #   "ɵ" U0275 LATIN SMALL LETTER BARRED O.
 #   See #*# BAR
 #
+#   Combining half tildes below: "︩" UFE29, "︪" UFE2A are supported on G, as G
+#   is consistent with dead_tilde single press, and also with the tilde and
+#   ampersand virtual dead key supporting halves of combining diacritics.
+#   See # # TILDE&AMPERSAND
+#
 <dead_tilde><dead_tilde>                                                                   <space> : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key><asciitilde><asciitilde>                                                        <space> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde><dead_tilde>                                                                   <U200B> : "̰" U0330 # COMBINING TILDE BELOW
@@ -4707,6 +4736,10 @@
 <Multi_key><asciitilde><asciitilde>                                                            <e> : "ḛ" U1E1B # LATIN SMALL LETTER E WITH TILDE BELOW
 <dead_tilde><dead_tilde>                                                                       <f> : "ᵮ" U1D6E # LATIN SMALL LETTER F WITH MIDDLE TILDE
 <Multi_key><asciitilde><asciitilde>                                                            <f> : "ᵮ" U1D6E # LATIN SMALL LETTER F WITH MIDDLE TILDE
+<dead_tilde><dead_tilde>                                                                       <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
+<Multi_key><asciitilde><asciitilde>                                                            <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
+<dead_tilde><dead_tilde>                                                                       <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
+<Multi_key><asciitilde><asciitilde>                                                            <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
 <dead_tilde><dead_tilde>                                                                       <I> : "Ḭ" U1E2C # LATIN CAPITAL LETTER I WITH TILDE BELOW
 <Multi_key><asciitilde><asciitilde>                                                            <I> : "Ḭ" U1E2C # LATIN CAPITAL LETTER I WITH TILDE BELOW
 <dead_tilde><dead_tilde>                                                                       <i> : "ḭ" U1E2D # LATIN SMALL LETTER I WITH TILDE BELOW
@@ -11829,6 +11862,13 @@
 #   may be less mnemonic or more complicated.
 #   See # # Design of math sequences
 #
+#   Combining half macrons above and below "︤" UFE24, "︥" UFE25, "︫" UFE2B,
+#   "︬" UFE2C are supported on M and W, with alphabetic mnemonic as of M, and
+#   graphic mnemonic of W thought of as an upside down M for the "below"
+#   semantics. Halves of combining diacritics are also supported in the tilde
+#   and ampersand virtual dead key.
+#   See # # TILDE&AMPERSAND
+#
 <dead_macron>                                                                              <space> : "̄" U0304 # COMBINING MACRON
 <Multi_key><bar>                                                                           <space> : "̄" U0304 # COMBINING MACRON
 <dead_macron>                                                                              <U200B> : "̄" U0304 # COMBINING MACRON
@@ -11911,6 +11951,10 @@
 <Multi_key><bar>                                                                               <I> : "Ī" U012A # LATIN CAPITAL LETTER I WITH MACRON
 <dead_macron>                                                                                  <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
 <Multi_key><bar>                                                                               <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
+<dead_macron>                                                                                  <M> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><bar>                                                                               <M> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_macron>                                                                                  <m> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><bar>                                                                               <m> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <dead_macron>                                                                                  <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
 <Multi_key><bar>                                                                               <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
 <dead_macron>                                                                                  <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
@@ -11925,14 +11969,18 @@
 <Multi_key><bar>                                                                               <U> : "Ū" U016A # LATIN CAPITAL LETTER U WITH MACRON
 <dead_macron>                                                                                  <u> : "ū" U016B # LATIN SMALL LETTER U WITH MACRON
 <Multi_key><bar>                                                                               <u> : "ū" U016B # LATIN SMALL LETTER U WITH MACRON
-<dead_macron>                                                                                  <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
-<Multi_key><bar>                                                                               <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
-<dead_macron>                                                                                  <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
-<Multi_key><bar>                                                                               <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
+<dead_macron>                                                                                  <W> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
+<Multi_key><bar>                                                                               <W> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
+<dead_macron>                                                                                  <w> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
+<Multi_key><bar>                                                                               <w> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
 <dead_macron>                                                                                  <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <Multi_key><bar>                                                                               <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <dead_macron>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <Multi_key><bar>                                                                               <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<dead_macron>                                                                                  <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
+<Multi_key><bar>                                                                               <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
+<dead_macron>                                                                                  <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
+<Multi_key><bar>                                                                               <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
 <dead_macron>                                                                             <Eacute> : "Ḗ" U1E16 # LATIN CAPITAL LETTER E WITH MACRON AND ACUTE
 <Multi_key><bar>                                                                          <Eacute> : "Ḗ" U1E16 # LATIN CAPITAL LETTER E WITH MACRON AND ACUTE
 <dead_macron>                                                                             <eacute> : "ḗ" U1E17 # LATIN SMALL LETTER E WITH MACRON AND ACUTE
@@ -12057,6 +12105,11 @@
 #
 #   Ampersand as a base character supports the conjoining diacritic.
 #
+#   Combining half macrons below: "︫" UFE2B, "︬" UFE2C are supported on W,
+#   consistently with dead_macron single press, and with the tilde and
+#   ampersand virtual dead key also supporting halves of combining diacritics.
+#   See # # TILDE&AMPERSAND
+#
 <dead_macron><dead_macron>                                                                 <space> : "̱" U0331 # COMBINING MACRON BELOW
 <Multi_key><bar><bar>                                                                      <space> : "̱" U0331 # COMBINING MACRON BELOW
 <dead_macron><dead_macron>                                                                 <U200B> : "̱" U0331 # COMBINING MACRON BELOW
@@ -12105,6 +12158,10 @@
 <Multi_key><bar><bar>                                                                          <T> : "Ṯ" U1E6E # LATIN CAPITAL LETTER T WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <t> : "ṯ" U1E6F # LATIN SMALL LETTER T WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <t> : "ṯ" U1E6F # LATIN SMALL LETTER T WITH LINE BELOW
+<dead_macron><dead_macron>                                                                     <W> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
+<Multi_key><bar><bar>                                                                          <W> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
+<dead_macron><dead_macron>                                                                     <w> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
+<Multi_key><bar><bar>                                                                          <w> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
 <dead_macron><dead_macron>                                                                     <Z> : "Ẕ" U1E94 # LATIN CAPITAL LETTER Z WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <Z> : "Ẕ" U1E94 # LATIN CAPITAL LETTER Z WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <z> : "ẕ" U1E95 # LATIN SMALL LETTER Z WITH LINE BELOW
