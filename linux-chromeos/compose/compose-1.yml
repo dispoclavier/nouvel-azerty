@@ -2650,7 +2650,7 @@
 #^# Technical symbols
 #
 #
-#   Diameter sign
+# # Diameter sign
 #
 #   Also on live key C03 (D), level 6, and in group 1 of ( on D key C03; also
 #   in the circumflex dead key with case insensitive D as a base letter.
@@ -2667,14 +2667,14 @@
 <Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
 #
 #
-#   Power switch
+# # Power switch
 #
 #   This is the unambiguous, widely used symbol carrying both ON and OFF semantics.
 #
 <Multi_key><O><I>                                                                                  : "⏻" U23FB # POWER SYMBOL
 #
 #
-#   Symbol for SPACE
+# # Symbol for SPACE
 #
 #   The open box is also in group 1 of $.
 #
@@ -2682,7 +2682,7 @@
 <Multi_key><S><P>                                                                                  : "␣" U2423 # OPEN BOX
 #
 #
-#   Symbols for NO-BREAK SPACE
+# # Symbols for NO-BREAK SPACE
 #
 #   The down-pointing triangle conforms to Gedit’s Draw Spaces extension.
 #   The shouldered open box is also in group 2 of $.
@@ -2692,7 +2692,7 @@
 <Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 #
 #
-#   Symbols for NARROW NO-BREAK SPACE, the no-break thin space NBTSP
+# # Symbols for NARROW NO-BREAK SPACE, the no-break thin space NBTSP
 #
 #   "⎍" U238D MONOSTABLE SYMBOL is picked as a flipped narrow shouldered box,
 #   repurposed by lack of an unsuccessful symbol in L2/10-351.
@@ -2707,7 +2707,7 @@
 <Multi_key><W><L>                                                                                  : "⌇" U2307 # WAVY LINE
 #
 #
-#   Symbols for Enter and Return key
+# # Symbols for Enter and Return key
 #
 #   Case sensitive.
 #
@@ -2719,7 +2719,7 @@
 <Multi_key><L><R><E><T>                                                                            : "⮠" U2BA0 # DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
 #
 #
-#   Symbol for Tab key
+# # Symbols for Tab key
 #
 #   Case sensitive.
 #
@@ -2727,7 +2727,7 @@
 <Multi_key><T><A><B>                                                                               : "⭾" U2B7E # HORIZONTAL TAB KEY
 #
 #
-#   Symbols for deletion keys
+# # Symbols for deletion keys
 #
 <Multi_key><b><k><s>                                                                               : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><B><K><S>                                                                               : "⟵" U27F5 # LONG LEFTWARDS ARROW
@@ -2739,13 +2739,13 @@
 <Multi_key><D><E><L>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
 #
 #
-#   Symbol for Escape key
+# # Symbol for Escape key
 #
 <Multi_key><e><s><c>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 <Multi_key><E><S><C>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 #
 #
-#   Symbols for modifier keys
+# # Symbols for modifier keys
 #
 #   "⟰" U27F0 UPWARDS QUADRUPLE ARROW is proposed for repurposing as level 5
 #   select, by lack of a quintuple arrow and with the rationale that this key
@@ -2790,7 +2790,28 @@
 <Multi_key><O><P><T>                                                                               : "⌥" U2325 # OPTION KEY
 #
 #
-#   Symbols for Multi_key or Composition key
+# # Symbols for multi-key and composition
+#
+#   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive `com`,
+#   while the broken bar "¦" U00A6, repurposed as multi-key symbol, is input by
+#   case insensitive `mul` consistently.
+#
+#   "¦" U00A6 is also in group 12 of |, in dead_macron 5, and in dead_diaeresis
+#   backslash.
+#   See #*# DIAERESIS
+#   See #*# MACRON
+#   See # # C10
+#
+#   The rationale of providing an alternative "¦" U00A6 to the "⎄" U2384 ISO
+#   symbol is font support and a slimmer, less bulky, visually less impacting,
+#   less outstanding glyph design in documentation, since the ISO symbol did
+#   not make it onto many keyboards, partly because dedicating an entire key
+#   to input composition rather than a mere key position, possibly on level 3,
+#   is not recommended in the presence of a group selector dead key, providing
+#   a more powerful input method for current digraphs.
+#
+#   Downgrading the composition symbol from "⎄" U2384 to "¦" U00A6 as a result
+#   stands for a less screwed-up user experience.
 #
 <Multi_key><c><o><m>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
 <Multi_key><C><O><M>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
@@ -2798,7 +2819,9 @@
 <Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
 #
 #
-#   Symbols that may be used for key down, key up events
+# # Symbols for key events
+#
+#   These are suggested for use as key down, key up events.
 #
 <Multi_key><k><d>                                                                                  : "⏷" U23F7 # BLACK MEDIUM DOWN-POINTING TRIANGLE
 <Multi_key><K><D>                                                                                  : "⏷" U23F7 # BLACK MEDIUM DOWN-POINTING TRIANGLE
@@ -2806,7 +2829,7 @@
 <Multi_key><K><U>                                                                                  : "⏶" U23F6 # BLACK MEDIUM UP-POINTING TRIANGLE
 #
 #
-#   Documentation
+# # Referring to en_US.UTF-8/Compose
 #
 #   This output is not cross-platform compatible, since on Windows it will need
 #   to be truncated to 'en_US.UTF-8/Comp' as max 16 UTF-16 code units.
