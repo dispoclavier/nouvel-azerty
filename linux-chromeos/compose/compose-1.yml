@@ -1590,8 +1590,8 @@
 #
 #   The tone height is denoted by a leading initialism, localized in French and
 #   in English and case insensitive except for "˼" U02FC, because with a capital
-#   L, this would conflict with "⊾" U22BE. The start or end semantic is carried
-#   by a trailing parenthesis: h(, b(, or h), l), and conversely.
+#   L, this would conflict with "⊾" U22BE. The start or end semantics is
+#   carried by a trailing parenthesis: h(, b(, or h), l), and conversely.
 #
 #   "꜠" UA720 and "꜡" UA721 are supported alongside, as these are ligatures of
 #   begin tone marks and stress, adding a median apostrophe to the sequences.
@@ -3309,6 +3309,7 @@
 #   Ampersand is in leading position because this is no Multi_key equivalent of
 #   any dead key, and because that is consistent with the “combining” semantics
 #   of ampersand in this context.
+#   See # # TILDE&AMPERSAND
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Combining_Diacritical_Marks_for_Symbols_block
 #   https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols
