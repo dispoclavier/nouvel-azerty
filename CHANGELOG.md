@@ -1,5 +1,7 @@
 # Journal des modifications
 
+Le deux-barrettes ou la barre brisée « ¦ » U+00A6 représente la touche de composition "⎄" U+2384.
+
 ## 4.3.0 (projet) 
 
 * Composition :
