@@ -4,6 +4,11 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.3.0 (projet) 
 
+Permutation du liant et de l’antiliant, plus fréquent et désormais plus facile à saisir sur AltGr + AltFr + W.
+
+Bouclage de la prise en charge de l’écriture latine.
+
+* Disposition : Permuter l’antiliant U200C et le liant U200D afin que U200C soit sur AltGr + AltFr + W, et U200D sur AltGr + AltFr + Q.
 * Composition :
 	* Ajouter "˹" U+02F9, "˺" U+02FA, "˻" U+02FB, "˼" U+02FC, "꜠" U+A720, "꜡" U+A721. compose-1.yml [087907a](https://github.com/dispoclavier/nouvel-azerty/commit/087907a93adceaefdab7e3a5083190fed269a4cc), [cb0c2fe](https://github.com/dispoclavier/nouvel-azerty/commit/cb0c2fe6d6c9e4fb8a3ada2db3d71666e05e60b2)
 	* Redonder "—" U+2014 par « ¦---- ». compose-1.yml [ed84348](https://github.com/dispoclavier/nouvel-azerty/commit/ed843489a2adb2bd0257f2ef4de3efc6ca0e19d7)
