@@ -137,7 +137,7 @@
 #   than of an information about the `Math` status. In this regard, this `math`
 #   label is the opposite of the `Sm` General Category, discussed at the start
 #   of the math section.
-#   See ### Mathematical symbols by Multi_key
+#   See ### Mathematical symbols by multi-key
 #
 #
 # # Emoji in symbol groups
@@ -153,7 +153,7 @@
 #
 #       * See #^# Abbreviations, Units and Legal Symbols
 #       * See #^# Western Zodiacal Signs
-#       * See #^# Emoji by Multi_key
+#       * See #^# Emoji by multi-key
 #       * See # # Arrow emoji
 #
 #   A number of Supplemental Multilingual Plane emoji are mapped on live keys.
@@ -214,7 +214,7 @@
 #   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The old ordinal indicators are supported by Multi_key and in group 12.
+#   The old ordinal indicators are supported by multi-key and in group 12.
 #   See #^# Legacy ordinal indicators
 #   See # # D09
 #
@@ -222,8 +222,8 @@
 #   Consistently, "‍" U200D ZERO WIDTH JOINER is the cursive joiner.
 #   The new names are intended to improve familiarity, as opposed to the legacy
 #   names based on “ZERO WIDTH”.
-#   https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
 #   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
@@ -780,7 +780,7 @@
 #   The "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The old ordinal indicators are supported by Multi_key and in group 12.
+#   The old ordinal indicators are supported by multi-key and in group 12.
 #   See #^# Legacy ordinal indicators
 #   See # # D01
 #
@@ -891,21 +891,21 @@
 #
 # # C01
 #
-#   The first three positions are inaccessible by Multi_key equivalents, due
+#   The first three positions are inaccessible by multi-key equivalents, due
 #   to an inavoidable interference of numbersign with itself. But these can be
-#   input by Multi_key using other sequences.
-#   See #   Checkboxes
-#
-#   Other squares, too, are available elsewhere.
-#   See #   Square emoji
-#   See # # Geometric Shapes in block U25A0 used in mathematics
-#   See # WHITE SQUARE WITH LEFTWARDS TICK
+#   input by multi-key using other sequences.
+#   See # # Checkboxes
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
-#   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color and also
-#   have another input composition alternative.
+#   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color in two
+#   sets. These also have a multi-key alternative.
 #   See # # B01
-#   See #   Square emoji
+#   See # # Square emoji
+#
+#   Broader sets of squares are available by multi-key.
+#   See # # Square emoji
+#   See # # Geometric Shapes in block U25A0 used in mathematics
+#   See # WHITE SQUARE WITH LEFTWARDS TICK
 #
 <UEFD0>                                                                               <numbersign> : "☐" U2610 # BALLOT BOX
 <Multi_key><numbersign>                                                               <numbersign> : "☐" U2610 # BALLOT BOX
@@ -1430,8 +1430,9 @@
 #   shipped with Windows.
 #   https://dispoclavier.com/nouvel-azerty/#malware-windows
 #
-#   "¦" U00A6 BROKEN BAR repurposed as Multi_key symbol is in group 12 although
+#   "¦" U00A6 BROKEN BAR repurposed as multi-key symbol is in group 12 although
 #   it is more easily input through dead_diaeresis followed by backslash.
+#   See # # Symbols for multi-key and composition
 #
 <UEFD0>                                                                                      <bar> : "∣" U2223 # DIVIDES math
 <Multi_key><numbersign>                                                                      <bar> : "∣" U2223 # DIVIDES math
@@ -1477,10 +1478,10 @@
 <Multi_key><numbersign><1>                                                                   <bar> : "µ" U00B5 # MICRO SIGN
 <UEFD0><KP_1>                                                                                <bar> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign><KP_1>                                                                <bar> : "µ" U00B5 # MICRO SIGN
-<UEFD0><2>                                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<Multi_key><numbersign><2>                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<UEFD0><KP_2>                                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<Multi_key><numbersign><KP_2>                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<UEFD0><2>                                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<Multi_key><numbersign><2>                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<UEFD0><KP_2>                                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<Multi_key><numbersign><KP_2>                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
 #
 #
 # # B01
@@ -1489,7 +1490,7 @@
 #   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color and also
 #   have another input composition alternative.
 #   See # # C01
-#   See #   Square emoji
+#   See # # Square emoji
 #
 <UEFD0>                                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
 <Multi_key><numbersign>                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
