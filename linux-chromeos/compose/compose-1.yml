@@ -132,12 +132,12 @@
 #                               ⸻ https://unicode.org/mail-arch/unicode-ml/y2016-m02/0071.html
 #
 #
-### Output strings for live keys
+### Character strings for live keys
 #
-#   XCompose [unlike the Windows TSF] is able to output more than one single
-#   code unit by dead keys.
+#   XCompose can output more than a single code unit by dead keys,
+#   outperforming the Windows Text Services Framework.
 #
-#   XCompose also handles the output of strings after a single live key press.
+#   XCompose also handles the output of strings on single live key presses.
 #   https://help.ubuntu.com/community/ComposeKey#Compose_key
 #   https://manpages.ubuntu.com/manpages/cosmic/man5/Compose.5.html
 #   https://wiki.debian.org/XCompose
@@ -229,13 +229,13 @@
 #
 # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
 #
-#   In CLDR, since 2024-08-02T0242+0200, U202F is the no-break thin space,
-#   abbreviated "NBTSP".
+#   Technically, NBTSP is a no-break clone of Unicode’s thin space TSP U2009.
+#   Consistently, in CLDR, U202F is the no-break thin space, abbreviated NBTSP,
+#   since 2024-08-02T0242+0200.
 #   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
 #   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
-#   Functionally, NBTSP is a no-break clone of Unicode’s thin space TSP U2009.
 #
 #   When U202F was still mainly called NARROW NO-BREAK SPACE, U2009 THIN SPACE
 #   was called "narrow space" for consistency, and abbreviated "NSP".
@@ -671,9 +671,9 @@
 #   For maintainability, there is no space between the leading keysyms, but
 #   part of the keysyms may be aligned to the end for readability.
 #
-#   The Multi_key equivalent is added below each dead key sequence by a script
+#   The multi-key equivalent is added below each dead key sequence by a script
 #   called `generate-multikey.pl`, run by `multikey.sh`, if the sequence is
-#   marked up accordingly. For portability, Multi_key equivalents are present
+#   marked up accordingly. For portability, multi-key equivalents are present
 #   regardless whether they make sense, and whether they barely work. So,
 #   three multi-key sequences do not work because <numbersign> is used both
 #   as a group selector and as a base character:
@@ -754,15 +754,18 @@
 #   the use of preformatted superscript small letters for ordinal indicators in
 #   Italian, Portuguese and Spanish, also supporting plural forms. Consistently
 #   French ordinal indicators are preformatted superscripts, too: ᵈ, ᵉ, ʳ, ˢ.
-#   https://github.com/unicode-org/cldr/blob/01d3fe0c2168336453b5ec1a34837da1ba9fbc6c/common/main/fr.xml#L1528
+#   https://github.com/unicode-org/cldr/blob/2ebe44fd537132620f61830ada804fb7abe1ec6b/common/main/fr.xml#L1546
+#   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L1546
 #
-#   The two old ordinal indicators are still supported by Multi_key and also in
-#   group 12.
+#   The two legacy ordinal indicators are supported in group 12 of "^" on key A
+#   and in group 12 of "}" on key O, and by multi-key.
 #   See # # D01
 #   See # # D09
 #
 <Multi_key><a><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
+<Multi_key><A><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <Multi_key><o><underscore>                                                                         : "º" U00BA # MASCULINE ORDINAL INDICATOR
+<Multi_key><O><underscore>                                                                         : "º" U00BA # MASCULINE ORDINAL INDICATOR
 #
 #
 #^# Abbreviations, Units and Legal Symbols
@@ -792,14 +795,14 @@
 #   it has <N><o> and <N><O>; adding the other two makes for lenient Caps Lock.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
-#   Multi_key equivalents.
+#   multi-key equivalents.
 #
 #   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated unit symbols
 #   ("K" U212A) are supported as they are in the Letterlike Symbols block. This
 #   however was not fully supported before v1.6.0. Prior to v1.6.0, important
 #   symbols were missing due to not being used in mathematics. This odd time is
 #   over since version 1.6.0 added primarily the VERSICLE and RESPONSE symbols
-#   "℣" U2123, "℟" U211F, both by Multi_key and in letter groups 1 and 4.
+#   "℣" U2123, "℟" U211F, both by multi-key and in letter groups 1 and 4.
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
@@ -1039,7 +1042,7 @@
 #       "ﬆ" UFB06 # LATIN SMALL LIGATURE ST
 #
 #   Sequences for combining diacritical marks start with ampersand because this
-#   is no Multi_key equivalent of any dead key, and because that is consistent
+#   is no multi-key equivalent of any dead key, and because that is consistent
 #   with the “combining” semantics of ampersand in this context.
 #
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
@@ -1233,18 +1236,20 @@
 #
 #   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by ¦␣␣). But the
 #   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
-#   are heavily used and consistently supported on live keys, and moreover the
-#   multi-key sequence for U00A0 <Multi_key><space><space> conflicts with every
-#   single math symbol sequence using disambiguation by multiple leading space,
-#   support is dropped altogether.
+#   are heavily used in French and consistently supported on live keys, and
+#   moreover, the multi-key sequence for U00A0 – <Multi_key><space><space> –
+#   conflicts with every single math symbol sequence disambiguated by multiple
+#   leading spaces, backwards compatible support for U00A0 by multi-key is
+#   dropped altogether.
 #
 #   U2008 PUNCTUATION SPACE is supported in en_US.UTF-8/Compose (by ¦␣.), but
 #   the matching U2007 FIGURE SPACE used with the same rationale in typesetting
 #   old-style tables is not, although the latter is particular in that it is an
 #   outstandig reminder that all spaces U2002..U200A were initially designed to
 #   be no-break. Since the sequence <Multi_key><space><period> conflicts with
-#    "⩑" U2A51, it is discarded altogether, and support for spaces is moved to
-#   the space groups.
+#    "⩑" U2A51, and disambiguating the latter would screw it up (by requiring a
+#   double leading space), it is discarded, and support for spaces by dead keys
+#   is moved to the space groups altogether.
 #   See # # A03-level1
 #   See # # A03-level3
 #
@@ -1261,7 +1266,7 @@
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
 #
 #   Apostrophe quotation marks and comma quotation marks "‘" U2018, "’" U2019,
-#   "‚" U201A, "“" U201C, "”" U201D, and "„" U201E by Multi_key are supported
+#   "‚" U201A, "“" U201C, "”" U201D, and "„" U201E by multi-key are supported
 #   in en_US.UTF-8/Compose. However, these sequences are discontinued as a
 #   conflicting and pointless waste, since they are superseded by a more
 #   efficient and intuitive input method.
@@ -1275,12 +1280,12 @@
 #   See #*# SUPERSCRIPT
 #   
 #   "…" U2026 HORIZONTAL ELLIPSIS has a redesigned sequence, that the legacy
-#   <Multi_key><period><period> conflicts with.
+#   <Multi_key><period><period> in en_US.UTF-8/Compose conflicts with.
 #   See # # Ellipses and leaders
 #
 #   "·" U00B7 MIDDLE DOT by <Multi_key><asciicircum><period> is part of the
 #   superscript dead key, and the reverse sequence is in dead_abovedot for
-#   completeness.
+#   backwards compatibility with en_US.UTF-8/Compose.
 #   See #*# SUPERSCRIPT
 #   See #*# DOT_ABOVE
 #
@@ -1291,14 +1296,26 @@
 #   See #*# CIRCUMFLEX
 #   See # # C07
 #
-#   "–" U2013 EN DASH by <Multi_key><minus><minus><period> is supported in the
-#   double bar dead key, but "—" U2014 EM DASH cannot be supported as-is, i.e.
-#   by <Multi_key><minus><minus><minus>, since this is used as the entry point
+#   "–" U2013 EN DASH by <Multi_key><minus><minus><period> is supported in
+#   en_US.UTF-8/Compose and, for backwards compatibility, also in the double
+#   bar dead key. But "—" U2014 EM DASH cannot be supported as-is, i.e. by
+#   <Multi_key><minus><minus><minus>, since this is used as the entry point
 #   of the high bar dead key. Also, "―" U2015 HORIZONTAL BAR needs support as
-#   well, being a ¾-em dash. The resulting new sequence for U2014 below is the
-#   most consistent, although it is not the most user-friendly.
+#   well, being a ¾-em dash, yet en_US.UTF-8/Compose skips this one, supported
+#   in the high bar dead key by <Multi_key><minus><minus><minus><period>.
 #   See #^# DOUBLE_BAR
 #   See #^# HIGH_BAR
+#
+#   As a result, U2014 is moved to the new sequence below, that is the most
+#   consistent both with en_US.UTF-8/Compose and with typography thinking of an
+#   em dash as 4 hyphens worth; although it is not the most user-friendly.
+#
+#   However with this respect, this is only about multi-key support. U2013 and
+#   U2014, and depending on the variant, also U2015 are in the benefit of
+#   level 2 live key positions.
+#   See dispocla.cpp key <AE03>
+#   See dispocla.cpp key <AE04>
+#   See dispocla.cpp key <AE08>
 #
 <Multi_key><minus><minus><minus><minus>                                                            : "—" U2014 # EM DASH
 #
@@ -1420,7 +1437,7 @@
 #
 #^# Mixed sequences
 #
-#   These are made of both Multi_key and dead keys.
+#   These are made of both multi-key and dead keys.
 #
 <dead_abovedot><Multi_key><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 <Multi_key><dead_abovedot><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
@@ -1870,9 +1887,9 @@
 #
 #^# Currency symbols
 #
-#   Symbol-letter sequences are used as Multi_key equivalents of dead keys, and
+#   Symbol-letter sequences are used as multi-key equivalents of dead keys, and
 #   equal in particular is used for regional indicator letters, so only letter-
-#   symbol sequences are available for currency symbols by Multi_key.
+#   symbol sequences are available for currency symbols by multi-key.
 #   See #*# CURRENCY
 #
 #   These are symbols supported in en_US.UTF-8/Compose, including commented-out
@@ -2334,7 +2351,7 @@
 #   and numeric sequences are terminated by asterisk, not started.
 #
 #
-#   Traditional signs emoji
+# # Traditional signs emoji
 #
 #
 #   Aries, Bélier
@@ -2453,7 +2470,7 @@
 <Multi_key><P><O><I><S>                                                                            : "♓" U2653 # PISCES emoji
 #
 #
-#   New sign emoji
+# # New sign emoji
 #
 #
 #   Ophiuchus, Serpentaire
@@ -2478,7 +2495,7 @@
 #   in that it is a small q for empty quadrants, a capital Q for filled ones.
 #
 #
-#   Circle filled by quarters
+# # Circle filled by quarters
 #
 <Multi_key><Q><0>                                                                                  : "○" U25CB # WHITE CIRCLE
 <Multi_key><Q><KP_0>                                                                               : "○" U25CB # WHITE CIRCLE
@@ -2492,7 +2509,7 @@
 <Multi_key><Q><KP_4>                                                                               : "●" U25CF # BLACK CIRCLE
 #
 #
-#   Circle with quadrant outline
+# # Circle with quadrant outline
 #
 <Multi_key><q><0>                                                                                  : "○" U25CB # WHITE CIRCLE
 <Multi_key><q><KP_0>                                                                               : "○" U25CB # WHITE CIRCLE
@@ -2508,7 +2525,7 @@
 #
 #^# Square boxes
 #
-#   Checkboxes
+# # Checkboxes
 #
 #   Sequence with space conflicts with combining ogonek.
 #   Sequence with lowercase v conflicts with "⟏" U27CF SQUARED LOGICAL OR
@@ -2519,7 +2536,7 @@
 <Multi_key><bracketleft><X><bracketright>                                                          : "☒" U2612 # BALLOT BOX WITH X
 #
 #
-#   Shadowed circle
+# # Shadowed circle
 #
 #   Also in group 12 of @.
 #   Sequence ¦() conflicts with "≬" U226C BETWEEN.
@@ -2527,7 +2544,7 @@
 <Multi_key><parenleft><underscore><parenright>                                                     : "❍" U274D # SHADOWED WHITE CIRCLE
 #
 #
-#   End marks
+# # End marks
 #
 #   Compose sequences are based on the shadow type: box shadow, or drop shadow;
 #   on the shadow direction: up or down; and on the shadow side: left or right.
@@ -2544,10 +2561,10 @@
 <Multi_key><bracketleft><bracketleft><backslash><bracketright>                                     : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
 #
 #
-#^# Emoji by Multi_key
+#^# Emoji by multi-key
 #
 #
-#   Square emoji
+# # Square emoji
 #
 #   The only cross-platform supportable black or white square emoji come in
 #   four sizes and are also supported in the symbol groups.
@@ -2572,16 +2589,16 @@
 <Multi_key><KP_4>                                                                     <underscore> : "⬜" U2B1C # WHITE LARGE SQUARE emoji
 #
 #
-#   Smiley emoji
+# # Smiley emoji
 #
 <Multi_key><colon><parenleft>                                                                      : "☹" U2639 # WHITE FROWNING FACE emoji with skin tone support
 <Multi_key><colon><parenright>                                                                     : "☺" U263A # WHITE SMILING FACE emoji with skin tone support, 25th-ranking
 #
 #
-#   Heart emoji
+# # Heart emoji
 #
 #   Due to its design, the traditional heart multi-key sequence is supported in
-#   a dead_circumflex Multi_key equivalent with digit 3 as the base character:
+#   a dead_circumflex multi-key equivalent with digit 3 as the base character:
 #   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 #   See #*# CIRCUMFLEX
 #
@@ -2601,9 +2618,9 @@
 <Multi_key><nobreakspace><less><KP_3>                                                              : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 #
 #
-#   Scissors
+# # Scissors
 #
-#   In group 4 of < on C                                                                           : "✂" U2702 # BLACK SCISSORS emoji
+#   In group 3 of < on C                                                                           : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><8><x><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><KP_8><x><space>                                                                        : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><8><X><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji
@@ -2815,8 +2832,8 @@
 #
 <Multi_key><c><o><m>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
 <Multi_key><C><O><M>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
-<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
-<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as Multi_key symbol
+<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
 #
 #
 # # Symbols for key events
@@ -2872,7 +2889,7 @@
 #   START_MATH
 #
 #
-### Mathematical symbols by Multi_key
+### Mathematical symbols by multi-key
 #
 #
 #   The General Category `Symbol, other` (`So`) does not preclude a symbol from
@@ -3101,7 +3118,7 @@
 #
 # # Multiplication and division symbols
 #
-#   Basic operators are supported by Multi_key despite being on live keys.
+#   Basic operators are supported by multi-key despite being on live keys.
 #
 #   Additionally, for incomplete keyboard layouts, there is a fallback input
 #   method in the symbols groups.
@@ -3129,7 +3146,7 @@
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=79
 #
 #   The at sign is part of these multi-key sequences for consistency with the
-#   Greek dead key. However, in the Multi_key equivalent of dead_greek, <at>
+#   Greek dead key. However, in the multi-key equivalent of dead_greek, <at>
 #   is in leading position, while here it comes after the letter.
 #   See #*# GREEK
 #
@@ -3240,7 +3257,7 @@
 #   Also in dead_stroke followed by 4, without space termination.
 #   See #*# STROKE
 #
-#   Additionally, "⁄" U2044 FRACTION SLASH is supported by Multi_key the same
+#   Additionally, "⁄" U2044 FRACTION SLASH is supported by multi-key the same
 #   way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
 #
 <Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
@@ -3300,7 +3317,7 @@
 #
 # # Superscript or subscript signs, symbol, punctuation
 #
-#   Primarily supported by dead keys and their Multi_key equivalents, where the
+#   Primarily supported by dead keys and their multi-key equivalents, where the
 #   sequences work the other way around, and without space termination.
 #   See #*# SUPERSCRIPT
 #   See #*# SUBSCRIPT
@@ -3329,7 +3346,7 @@
 #
 # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
 #
-#   Ampersand is in leading position because this is no Multi_key equivalent of
+#   Ampersand is in leading position because this is no multi-key equivalent of
 #   any dead key, and because that is consistent with the “combining” semantics
 #   of ampersand in this context.
 #   See # # TILDE&AMPERSAND
@@ -4785,7 +4802,7 @@
 #
 # # Mathematical symbols in Miscellaneous Technical block U2300
 #
-#   Supporting the 29 technically outdated partials by Multi_key is pointless.
+#   Supporting the 29 technically outdated partials by multi-key is pointless.
 #   Likewise, the 9 vertical brackets AK̭A horizontal brackets are not used in
 #   contexts other than CJK and terminal emulation with vertical text layout.
 #
@@ -6242,6 +6259,7 @@
 #   Operators Disunified from Punctuation, as disunifying this from "\" U005C
 #   was pointless. As a consequence, people are left stranded when attempting
 #   to make sense of this code point.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
 #   Fonts may give the duplicate a slight difference in slant. One example is
 #   DejaVu Sans Mono Book.
