@@ -1,4 +1,4 @@
-//                       Date: 2024-08-20T1246+0200
+//                       Date: 2024-09-08T0818+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -652,15 +652,36 @@ xkb_symbols "kbfrFRs" {
 	//
 	// Format controls
 	//
-	// "⁄" U2044 FRACTION SLASH is mapped on level 7 of the F key. To separate a
-	// preceding integer from a fraction, the cursive non-joiner U200C ZERO WIDTH
-	// NON-JOINER is a good fit. U2060 WORD JOINER can also be used, on level 7
-	// of the G key with mnemonics based on French "gluon", while the cursive
-	// non-joiner is on level 7 of the W key, the cursive joiner U200D on level 7
-	// of the X key.
-	// https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=302&zoom=100,0,400
-	// https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
+	// "⁄" U2044 FRACTION SLASH is mapped on level 7 of the F key, because it is
+	// designed to get ASCII digits formatted as numerators and denominators and
+	// is supported by HarfBuzz and OpenType fonts used in Chromium and Firefox.
+	// In case of mixed numbers, using the fraction slash as intended requires an
+	// invisible character to separate the whole part and the fractional part, as
+	// in that case there is no space in front of the fraction. Typically this is
+	// U2064 INVISIBLE PLUS or the cursive non-joiner U200C or U2060 WORD JOINER.
+	// https://stackoverflow.com/questions/55033436/how-to-display-the-fraction-15-16-nicely-in-unicode
+	//
+	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, abundantly used to
+	// prevent wrong ligatures and therefore on level 7 of the AZERTY W key B01,
+	// next to the AltFr key B00.
 	// https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+	//
+	// U200D ZERO WIDTH JOINER is the cursive joiner on level 7 of AZERTY key Q,
+	// ISO C01, right above the cursive non-joiner.
+	//
+	// U2060 WORD JOINER makes no-break characters out of breaking ones and is on
+	// level 7 of the G key with mnemonics based on French "gluon". It happens to
+	// be next to the fraction slash that it can help bracket the numerators, the
+	// other way around. Previously, the byte order mark UFEFF was used instead.
+ 	//
+	//
+	// Overscore
+	// ‾‾‾‾‾‾‾‾‾
+	// "‾" U203E OVERLINE is on level 7 of the underscore key C07 for the purpose
+	// of typing sequences displaying as unbroken lines, that can be used e.g. in
+	// fixed-width plain text to underline headings like above.
+	// https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=302&zoom=100,0,600
 	//
 	//
 	// Emoji
@@ -858,9 +879,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200C,              U1F610 ],
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200C,              U1F610 ]
-	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200C ZERO WIDTH NON-JOINER, cursive non-joiner; U1F610 😐 NEUTRAL FACE emoji
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200D,              U1F610 ],
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200D,              U1F610 ]
+	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200D ZERO WIDTH JOINER, cursive joiner; U1F610 😐 NEUTRAL FACE emoji
 
 	key <AC02> {
 		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,             section,              U1F614 ],
@@ -881,7 +902,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ],
 		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ]
-	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER also usable as integer-fraction separator; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
+	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC06> {
 		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,           plusminus,              U1F44D ],
@@ -891,7 +912,7 @@ xkb_symbols "kbfrFRs" {
 	key <AC07> {
 		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ],
 		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ]
-	}; // U02B2 ʲ MODIFIER LETTER SMALL J; UEFD2 *dead_subscript; U203E ‾ OVERLINE as underline in fixed-width plain text; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
+	}; // U02B2 ʲ MODIFIER LETTER SMALL J; UEFD2 *dead_subscript; U203E ‾ OVERLINE; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
 
 	key <AC08> {
 		[                   k,                   K,         bracketleft,                   2,         dead_ogonek,               U1D4F,               UEF7B,              U1F605 ],
@@ -927,9 +948,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AB01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200D,              U1F622 ],
-		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200D,              U1F622 ]
-	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200D ZERO WIDTH JOINER, cursive joiner; U1F622 😢 CRYING FACE 19th-ranking emoji
+		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ],
+		[                   w,                   W,               slash,               slash,         dead_stroke,               U02B7,               U200C,              U1F622 ]
+	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C ZERO WIDTH NON-JOINER, cursive non-joiner; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U22C5,              U1F31F ],
@@ -957,7 +978,7 @@ xkb_symbols "kbfrFRs" {
 	key <AB06> {
 		[                   n,                   N,               grave,                   0,          dead_grave,               U207F,               UEF68,               UEF69 ],
 		[                   n,                   N,               grave,                   0,          dead_grave,               U207F,               UEF68,               UEF69 ]
-	}; // U207F ⁿ SUPERSCRIPT LATIN SMALL LETTER N; UEF68 'nᵒ ' with U1D52 and NNBSP; UEF69 'Nᵒ ' with U1D52 and NNBSP
+	}; // U207F ⁿ SUPERSCRIPT LATIN SMALL LETTER N; UEF68 'nᵒ ' with U1D52 and U202F; UEF69 'Nᵒ ' with U1D52 and U202F
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
