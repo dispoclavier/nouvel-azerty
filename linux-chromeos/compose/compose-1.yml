@@ -5,7 +5,7 @@
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
-#                Description: Character strings for live keys and dead key content.
+#                Description: Multicharacter strings for live keys and dead key content.
 #                   Platform: Linux using XKB with XCompose*
 #        Syntax highlighting: YAML
 #
@@ -132,53 +132,59 @@
 #                               ⸻ https://unicode.org/mail-arch/unicode-ml/y2016-m02/0071.html
 #
 #
-### Character strings for live keys
+### Multicharacter strings for live keys
 #
-#   XCompose can output more than a single code unit by dead keys,
-#   outperforming the Windows Text Services Framework.
-#
-#   XCompose also handles the output of strings on single live key presses.
-#   https://help.ubuntu.com/community/ComposeKey#Compose_key
+#   Dead key handling XCompose has the ability to output more than one single
+#   code unit, outperforming the misdesigned Windows Text Services Framework,
+#   that can do so by live keys only, and is limited to 16 (not 4) UTF-16 code
+#   units, as opposed to XCompose, that has no upper limit and also handles
+#   multicharacter strings on single live key press.
+#   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #   https://manpages.ubuntu.com/manpages/cosmic/man5/Compose.5.html
+#   https://help.ubuntu.com/community/ComposeKey#Compose_key
 #   https://wiki.debian.org/XCompose
 #
-#   This feature requires the X Window Input Method.
+#   For the multicharacter feature to actually work, activating the X Window
+#   Input Method, XIM for short, is mandatory.
 #   https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/1584314/comments/6
 #   http://manpages.ubuntu.com/manpages/bionic/en/man8/im-config.8.html
 #   https://askubuntu.com/questions/129680/how-can-i-make-ibus-not-ignore-xcompose
 #
 #   In XCompose, a single keysym hapax is processed for direct output, whereas a keysym
 #   followed by another keysym in >0 instances is considered a dead key throughout, and
-#   its singleton output is discarded, thus the system “eats” the dead key press if the
+#   its singleton output is discarded. Thus the system “eats” the dead key press if the
 #   input sequence is undefined.
 #
 #   Definition format in XCompose files:
-#   * Single character output may be defined like in allocation tables,
-#     but this format is reportedly not interoperable across XKB.
-#   * Strings must be defined as literals delimited by double quotes.
-#     This is the interoperable format for single character output.
-#   Both formats may be used concurrently.
+#
+#       * Single character output may be defined like in allocation tables,
+#         but this format is reportedly not interoperable across XKB.
+#       * Strings must be defined as literals delimited by double quotes.
+#         This is the interoperable format for single character output, too.
+#
+#   Both formats may be used concurrently, so that single character output is
+#   defined both as a string and as a keysym.
 #
 #   Definition format in allocation tables (Symbols directory):
 #   Single character output in any UCS plane may be defined in several formats:
-#   * Uxxxx[x[x]] hexadecimal
-#   * U00xxxxxx hexadecimal
-#   * 0x01xxxxxx hexadecimal
-#   The specified format "\0x123A" does *not* work, neither with nor without quotes
-#   or leading backslash.
+#
+#       * Uxxxx[x[x]] hexadecimal
+#       * U00xxxxxx hexadecimal
+#       * 0x01xxxxxx hexadecimal
+#
+#   The specified format "\0x123A" does not seem to work.
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
 #   These layouts make extensive use of added keysyms as in keysymdef.h:97.
 #   /usr/X11R6/include/X11/keysymdef.h
 #   https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
 #
-#   The scheme using Private Use characters is found on FDO:
+#   The scheme using Private Use characters instead of missing dead keysyms is
+#   found on FDO as well as on GNOME.
 #   https://bugs.freedesktop.org/show_bug.cgi?id=19506
-#
-#   On Gnome:
 #   https://bugzilla.gnome.org/show_bug.cgi?id=537457#c7
 #
-#   Unicode Private Use areas are managed by CSUR and UCSUR:
+#   Unicode Private Use areas are managed by CSUR and UCSUR.
 #   http://www.evertype.com/standards/csur/
 #   http://www.kreativekorp.com/ucsur/
 #
@@ -188,36 +194,46 @@
 #   On all lines containing a compose sequence to be parsed by the compiler, a
 #   comment is mandatory, for compatibility with non-conformant compilers that
 #   do not parse compose sequences without a comment before the EOL. According
-#   to the spec, comments are optional though. See the section “File Format”:
-#   https://linux.die.net/man/3/xcompose
+#   to the spec, section “File Format”, comments are optional.
+#   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
-#   The plus sign in Unicode code points is omitted throughout in this file,
-#   also in comments, except in quotations and in output strings representing
-#   high surrogates, for interoperability with the code parsed by the Compose
-#   compiler, for easier maintenance and reference. (Also tweaked versions of
-#   Unicode files are used alongside for development.)
+#   The plus sign in Unicode code points is omitted, also in comments, except
+#   in quotations and in result strings used as placeholders of high surrogates
+#   and intended for display to end-users. This scheme is interoperable with
+#   the code parsed by the Compose compiler, for easier maintenance and easier
+#   reference, using a specially formatted version of `UnicodeData.txt` by the
+#   script `format-UnicodeData-txt.pl`.
 #   See # # Notes about documentation
+#
+#   The word "multikey" is not hyphenated. “Multi words are not hyphenated
+#   unless such spelling makes for awkward reading.”
+#   https://brand.tennessee.edu/content-strategy/writing-guide/spelling-and-hyphenation/
 #
 #
 # # Breton polygraphs
 #
-#   The Breton polygraphs are mapped as such on the CʼHWERTY keyboard following
+#   The CʼHWERTY keyboard layout from the NGO An Drouizig has a dedicated key
+#   for the Breton trigraph.
+#   https://drouizig.org/outils-et-ressources/clavier-chwerty/
+#   https://web.archive.org/web/20221007070728/http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/162-faq-foire-aux-questions
 #   https://bugs.freedesktop.org/show_bug.cgi?id=19506
-#
-#   Both Breton trigraphs and Breton digraphs are supported by output strings:
-#   http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/162-faq-foire-aux-questions
-#   https://dominiko.livejournal.com/22848.html
 #   https://bugs.freedesktop.org/show_bug.cgi?id=25349
+#   https://dominiko.livejournal.com/22848.html
+#
+#   The Public Office of the Breton language OPLB/OPAB has requested the letter
+#   apostrophe to be featured on the NF Z71-300 standard keyboard layouts.
+#   https://listengine.tuxfamily.org/ergodis.org/discussions/2018/10/msg00007.html
+#   https://www.fr.brezhoneg.bzh/uploads/Document/c8/4004_900_Geriaoueg-al-levraouegou-2021.pdf#page=6&zoom=100,0,800
+#
+#   The Breton trigraph is composed with a regular letter apostrophe U02BC.
+#   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
+#   https://github.com/unicode-org/cldr/blob/135658d98f51ce881e8cd553c5bd60b0672d9f7a/common/main/br.xml#L1264
+#   https://github.com/unicode-org/cldr/blob/main/common/main/br.xml#L1264
 #
 #   The Breton trigraph has a dedicated key on the Breton variants "kbbrFRs"
-#   and "kbbrFRsr", and it is supported on Shift + AltFr + A on the French base
-#   layout "kbfrFRs" and its remapped variant "kbfrFRsr", and on all other
-#   variants consistently.
-#
-#   The Breton trigraph uses regular letter apostrophe U02BC.
-#   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
-#
-#   Unlike the trigraph, the digraph has no dedicated support on any variant.
+#   and "kbbrFRsr", and it is supported on (Shift +) AltGr + AltFr + A on the
+#   French base layout "kbfrFRs" and the remapped "kbfrFRsr", and on all other
+#   variants consistently. The digraph "ch" does not have dedicated support.
 #
 #   The Breton trigraph got mnemonic keysyms in keysymdef.h, but these may not
 #   be supported yet in en_US.UTF-8/Compose, so the trigraph is defined here.
@@ -229,18 +245,20 @@
 #
 # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
 #
-#   Technically, NBTSP is a no-break clone of Unicode’s thin space TSP U2009.
-#   Consistently, in CLDR, U202F is the no-break thin space, abbreviated NBTSP,
-#   since 2024-08-02T0242+0200.
-#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
-#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#   This is regular typesetting at Imprimerie nationale except for colon and
+#   quotation marks, although the latter are typeset with narrow space in the
+#   Imprimerie nationale style guide _Lexique des règles typographiques en
+#   usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002; only
+#   the rule on page 149 differs.
 #
+#   In mainstream high-quality publishing, referred to as new school, no-break
+#   thin space is used throughout.
+#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
 #
-#   When U202F was still mainly called NARROW NO-BREAK SPACE, U2009 THIN SPACE
-#   was called "narrow space" for consistency, and abbreviated "NSP".
-#   https://github.com/unicode-org/cldr/commit/e46774fcb6eaea3c106b29e7011d68c8749aefbb
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#   Philippe Verdy testified on the Unicode Public mailing list that the most
+#   straightforward Unicode character representing this no-break thin space is
+#   NARROW NO-BREAK SPACE U202F.
+#   https://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
 #   Imprimerie nationale (France) assumes that big punctuation is spaced out
 #   using either of these spaces:
@@ -248,18 +266,24 @@
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NBTSP U202F.
 #
-#   This is regular typesetting at Imprimerie nationale except for colon and
-#   quotation marks, although the latter are typeset with narrow space in the
-#   Imprimerie nationale style guide _Lexique des règles typographiques en
-#   usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002; only
-#   the verbatim rule on page 149 disagrees.
+#   Which one exactly depends on the punctuation mark and on whether we want to
+#   know the rules in use at Imprimerie nationale, or if it is about the usage.
+#   The semicolon and the question and exclamation marks are typeset exactly as
+#   stated in the style guide with a no-break thin space. The colon too, with a
+#   no-break justifying space. The double angle quotation marks are ruled like
+#   colon but typeset like semicolon. The single angle quotation marks are
+#   missing.
 #
-#   In mainstream high-quality publishing, referred to as new school, no-break
-#   thin space is used throughout. The most straightforward Unicode character
-#   representing this no-break thin space is NARROW NO-BREAK SPACE U202F.
+#   Technically, U202F is a no-break clone of Unicode’s thin space TSP U2009.
+#   Consistently, in CLDR, U202F is the no-break thin space, abbreviated NBTSP,
+#   since 2024-08-02T0242+0200.
+#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
+#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #
-#   See Philippe Verdy’s testimony:
-#   http://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
+#   When U202F was still mainly called NARROW NO-BREAK SPACE, U2009 THIN SPACE
+#   was called "narrow space" for consistency, and abbreviated "NSP".
+#   https://github.com/unicode-org/cldr/commit/e46774fcb6eaea3c106b29e7011d68c8749aefbb
 #
 #   Unicode was supposed to encode SI/BIPM number typesetting as well as French
 #   punctuation typesetting, and for that purpose encoded THIN SPACE along with
@@ -278,23 +302,11 @@
 #       This is the preferred space to use in numbers. It has the same width as
 #       a digit and keeps the number together for the purpose of line breaking.
 #
-#   Further reading about the topic, documenting opportunities for Unicode to
-#   get that right:
-#   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
-#   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
-#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
-#   https://www.unicode.org/L2/L2019/19115-fwsp-usability.pdf
-#   https://www.unicode.org/L2/L2019/19114-line-break-design.pdf
-#   https://www.unicode.org/L2/L2019/19317-uax14-proposal.pdf
-#   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf
-#   https://www.unicode.org/L2/L2020/20006-uax14-formal.pdf
-#   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
-#   https://www.unicode.org/L2/L2020/20008-core-text.pdf
-#
 #   The corrected Unicode position is found in UAX #14 since 2008, in TUS
 #   since 2014: The Unicode Standard, version 7.0.0, 2014, p. 265, section 6.2,
 #   heading “Space Characters” (see subheading “Narrow No-Break Space”).
 #   https://www.unicode.org/versions/Unicode7.0.0/ch06.pdf#G1834
+#
 #   Also: The Unicode Standard, version 15.0.0, 2022, p. 268, subheading
 #   “Narrow No-Break Space”, e.g. in the full text PDF:
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=294&zoom=100,0,300
@@ -307,6 +319,7 @@
 #   In UAX #14, it started with the “Proposed Update Unicode Standard Annex #14
 #   Unicode Line Breaking Algorithm”, Unicode 5.1 Draft 3, 2008-03-07.
 #   https://www.unicode.org/reports/tr14/tr14-21.html#GL
+#
 #   15 years later, 2023-08-15: Unicode® Standard Annex #14,
 #   Unicode Line Breaking Algorithm, Unicode 15.1.0:
 #   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
@@ -351,12 +364,23 @@
 #   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
 #
+#   Further reading about the topic:
+#   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
+#   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
+#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
+#   https://www.unicode.org/L2/L2019/19115-fwsp-usability.pdf
+#   https://www.unicode.org/L2/L2019/19317-uax14-proposal.pdf
+#   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf
+#   https://www.unicode.org/L2/L2020/20006-uax14-formal.pdf
+#   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
+#   https://www.unicode.org/L2/L2020/20008-core-text.pdf
+#
 #   As of punctuation spacing automation while writing, there is a feedback
-#   issue submitted while commenting an LDML extension designed for SIL/Keyman:
+#   item submitted while commenting an LDML extension designed for SIL/Keyman:
 #   “PRI #367: Automated punctuation spacing”
 #   https://unicode-org.atlassian.net/browse/CLDR-10904
 #
-<UEF60> : " !" # See # # Notes about syntax
+<UEF60> : " !" #
 <UEF61> : " :" # [1]
 <UEF62> : " ;" #
 <UEF63> : " ?" #
@@ -366,12 +390,12 @@
 <UEF67> : " ›" #
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
-#       in Unicode encoding, the colon has NBSP spacing. In new-school French
-#       typesetting, the colon is spaced out using NBTSP.
+#       in Unicode encoding, the colon has NBSP spacing; but in new-school
+#       French typesetting, the colon is spaced out using NBTSP.
 #   [2] Based on the visual aspect in the current edition of the style manual,
 #       Imprimerie nationale, in Unicode encoding, the guillemets are typeset
-#       with NBTSP, although the verbatim rule given on page 149 specifies that
-#       the guillemets are to be spaced out using the equivalent of NBSP.
+#       with NBTSP, although the rule given on page 149 stipulates that the
+#       guillemets are to be spaced out using a justifying normal-width space.
 #
 #
 # # Abbreviation "Numéro" with trailing space
@@ -384,7 +408,7 @@
 #
 # # Abbreviation "Numéro" without spacing
 #
-#   With regular superscript o U1D52, without NBTSP U202F.
+#   With regular superscript o U1D52.
 #
 <UEF6A> : "nᵒ" #
 <UEF6B> : "Nᵒ" #
@@ -477,13 +501,18 @@
 #
 # # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, UFEFF ZERO WIDTH NO-BREAK SPACE
 #
-#   This is an acceptable fallback, given in most fonts NBTSP has the same width
-#   as THIN SPACE, and THIN SPACE has line breaking class BA (break after).
+#   This is a workaround for an acceptable fallback, given in most fonts NBTSP
+#   has the same width as THIN SPACE, and THIN SPACE has line breaking class BA
+#   (break after). UFEFF ZERO WIDTH NO-BREAK SPACE is the BYTE ORDER MARK, and
+#   using it as a line break preventer is only a legacy workaround in case the
+#   recommended, more recent U2060 WORD JOINER is not supported.
 #   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
-#   This fallback works everywhere THIN SPACE and WORD JOINER or ZERO WIDTH NO-BREAK SPACE are supported.
+#   This fallback works everywhere U2009 THIN SPACE and UFEFF ZERO WIDTH
+#   NO-BREAK SPACE are supported.
 #
-#   Gedit Draw Spaces plugin: Consistently, THIN SPACE is represented like SPACE.
+#   The Draw Spaces extension for Gedit consistently represents THIN SPACE like
+#   normal SPACE, given that U2009 THIN SPACE is breaking.
 #
 #   These spaces are U2009 THIN SPACE followed by UFEFF ZWNBSP.
 #
@@ -503,15 +532,15 @@
 <UEF89> : "Nᵒ ﻿" #
 #
 #
-# # No-break thin space string in isolation
+# # Composed no-break THIN SPACE - ZWNBSP string in isolation
 #
 <UEF8A> : " ﻿" #
 #
 #
-# # Named entities for SGML-based languages HTML, XML and XHTML
+# # Named entities for SGML, HTML, XML and XHTML
 #
-#   Using `&apos;` is discouraged, but these layouts support the sequence after
-#   some hesitation. See:
+#   Using `&apos;` may be discouraged, but it may be required in XML, and it is
+#   supported in HTML5.
 #   https://www.w3.org/International/questions/qa-escapes
 #   https://stackoverflow.com/questions/2083754/why-shouldnt-apos-be-used-to-escape-single-quotes
 #
@@ -540,8 +569,6 @@
 #
 #   This fallback works everywhere THIN SPACE and WORD JOINER are supported.
 #
-#   Gedit Draw Spaces plugin: THIN SPACE is represented like SPACE.
-#
 #   These spaces are U2009 THIN SPACE followed by U2060 WORD JOINER.
 #
 <UEF90> : " ⁠!" #
@@ -554,13 +581,13 @@
 <UEF97> : " ⁠›" #
 #
 #
-# # Abbreviation "Numéro" with regular superscript o and a THIN SPACE, WORD JOINER string
+# # Abbreviation "Numéro" with regular superscript o and TSP WJ
 #
 <UEF98> : "nᵒ ⁠" #
 <UEF99> : "Nᵒ ⁠" #
 #
 #
-# # No-break THIN SPACE string in isolation
+# # Composed no-break THIN SPACE - WJ string in isolation
 #
 <UEF9A> : " ⁠" #
 #
@@ -573,14 +600,13 @@
 #
 # # Numeric character references of spaces
 #
-#   Hexadecimal is preferred for readability. Saving one character in source
-#   code of HTML does not warrant the downside.
+#   Hexadecimal is preferred for readability.
 #
 <UEF9C> : "&#x2009;"  # U2009 THIN SPACE
 #   Should be no-break but is breaking in Unicode.
 #
 <UEF9D> : "&#x2008;"  # U2008 PUNCTUATION SPACE
-#   Should be no-break like FSP, with much more reason.
+#   Should be no-break like FSP.
 #
 #         "&#8199;"  # U2007 FIGURE SPACE
 #   Is no-break in Unicode for nearly no reason, which is why it is the only
@@ -612,7 +638,7 @@
 # # Output of keyboard layout variant name
 #
 #   The Belgian layout variant comes without its remapped variant because
-#   the point in having a Belgian variant is a reasonable amount of backwards
+#   the point in having a Belgian variant is a reasonable amount of sideways
 #   compatibility with the Belgian AZERTY, and remapping defeats this point.
 #
 <UEFA1> : "Français France disposition de clavier semi-automatique – kbfrFRs " #
@@ -655,7 +681,7 @@
 #
 #   START_MULTI_KEY
 #
-### Multi-key sequences
+### Multikey sequences
 #
 #   The described behavior of XCompose is based on en_US.UTF-8/Compose,
 #   as it is used in France.
@@ -665,17 +691,17 @@
 #
 # # Notes for maintenance
 #
-#   The colon alignment in column 100 is based on longest multi-key sequences
+#   The colon alignment in column 100 is based on longest multikey sequences
 #   in terms of string length, as used for U10789, U107AB.
 #
 #   For maintainability, there is no space between the leading keysyms, but
 #   part of the keysyms may be aligned to the end for readability.
 #
-#   The multi-key equivalent is added below each dead key sequence by a script
+#   The multikey equivalent is added below each dead key sequence by a script
 #   called `generate-multikey.pl`, run by `multikey.sh`, if the sequence is
-#   marked up accordingly. For portability, multi-key equivalents are present
+#   marked up accordingly. For portability, multikey equivalents are present
 #   regardless whether they make sense, and whether they barely work. So,
-#   three multi-key sequences do not work because <numbersign> is used both
+#   three multikey sequences do not work because <numbersign> is used both
 #   as a group selector and as a base character:
 #
 #       <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
@@ -695,8 +721,8 @@
 #       1  Remove comment lines:
 #       ^#.*\n
 #
-#       2  Remove character strings for live keys:
-#       ^<[^>]+> * : .+\n
+#       2  Remove multicharacter strings for live keys:
+#       ^<[^>]+> +: .+\n
 #
 #       3  Remove keypad equivalents:
 #       .+<KP_.+\n
@@ -719,14 +745,14 @@
 #
 #   This file is also the source code for HTML table partials, such as those by
 #   the scripts `generate-multikey-tables.pl` and `generate-math-table.pl`
-#   documenting multi-key sequences, and those by `generate-deadkey-tables.pl`
+#   documenting multikey sequences, and those by `generate-deadkey-tables.pl`
 #   documenting dead keys, among which the letter groups and the symbol groups.
 #
-#   The `generate-multikey-tables.pl` script, processing the multi-key section,
+#   The `generate-multikey-tables.pl` script, processing the multikey section,
 #   expects a caret between the leading hashes of a subsection heading to start
 #   an HTML table partial file, while in the dead key division, another script,
 #   `generate-deadkey-tables.pl`, expects an asterisk between the hashes in the
-#   same position. The dead key tables are numbered, while the multi-key tables
+#   same position. The dead key tables are numbered, while the multikey tables
 #   are not, since their number is not finite. Adding a new file start heading
 #   does not alter existing file names. However, each of these headings is used
 #   to make a file name, and they are expected to be unique.
@@ -743,8 +769,11 @@
 #
 #   The generate-multikey-tables.pl script requires a caret between the leading
 #   hashes of a subsection heading to start a new subsection partial table file
-#   while processing the multi-key section.
+#   while processing the multikey section.
 #   See # # Notes about documentation
+#
+#   The broken bar "¦" U00A6 is repurposed as multikey symbol.
+#   See # # Symbols for multikey and composition
 #
 #
 #^# Legacy ordinal indicators
@@ -758,7 +787,7 @@
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L1546
 #
 #   The two legacy ordinal indicators are supported in group 12 of "^" on key A
-#   and in group 12 of "}" on key O, and by multi-key.
+#   and in group 12 of "}" on key O, and by multikey.
 #   See # # D01
 #   See # # D09
 #
@@ -795,14 +824,14 @@
 #   it has <N><o> and <N><O>; adding the other two makes for lenient Caps Lock.
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
-#   multi-key equivalents.
+#   multikey equivalents.
 #
 #   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated unit symbols
 #   ("K" U212A) are supported as they are in the Letterlike Symbols block. This
 #   however was not fully supported before v1.6.0. Prior to v1.6.0, important
 #   symbols were missing due to not being used in mathematics. This odd time is
 #   over since version 1.6.0 added primarily the VERSICLE and RESPONSE symbols
-#   "℣" U2123, "℟" U211F, both by multi-key and in letter groups 1 and 4.
+#   "℣" U2123, "℟" U211F, both by multikey and in letter groups 1 and 4.
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
@@ -1042,7 +1071,7 @@
 #       "ﬆ" UFB06 # LATIN SMALL LIGATURE ST
 #
 #   Sequences for combining diacritical marks start with ampersand because this
-#   is no multi-key equivalent of any dead key, and because that is consistent
+#   is no multikey equivalent of any dead key, and because that is consistent
 #   with the “combining” semantics of ampersand in this context.
 #
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
@@ -1142,6 +1171,8 @@
 <Multi_key><o><e>                                                                                  : "œ" U0153 # LATIN SMALL LIGATURE OE
 <Multi_key><o><numbersign><e>                                                                      : "ꭢ" UAB62 # LATIN SMALL LETTER OPEN OE
 <Multi_key><c><percent><e>                                                                         : "ꭢ" UAB62 # LATIN SMALL LETTER OPEN OE
+<Multi_key><o><s><u><p>                                                                            : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
+<Multi_key><o><i><n><f>                                                                            : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
 <Multi_key><O><O>                                                                                  : "Ꝏ" UA74E # LATIN CAPITAL LETTER OO
 #   <Multi_key><O><o>                                                                              : # Reserved for "⊚" U229A CIRCLED RING OPERATOR
 <Multi_key><o><o>                                                                                  : "ꝏ" UA74F # LATIN SMALL LETTER OO
@@ -1230,16 +1261,16 @@
 #
 #   All important space characters are supported on live keys. This is the only
 #   acceptable scheme from a user experience point of view. All dead key based
-#   input methods, including multi-key, are no acceptable workarounds for the
+#   input methods, including multikey, are no acceptable workarounds for the
 #   no-break space and the no-break thin space.
 #   See # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
 #
 #   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by ¦␣␣). But the
 #   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
 #   are heavily used in French and consistently supported on live keys, and
-#   moreover, the multi-key sequence for U00A0 – <Multi_key><space><space> –
+#   moreover, the multikey sequence for U00A0 – <Multi_key><space><space> –
 #   conflicts with every single math symbol sequence disambiguated by multiple
-#   leading spaces, backwards compatible support for U00A0 by multi-key is
+#   leading spaces, sideways compatible support for U00A0 by multikey is
 #   dropped altogether.
 #
 #   U2008 PUNCTUATION SPACE is supported in en_US.UTF-8/Compose (by ¦␣.), but
@@ -1266,7 +1297,7 @@
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
 #
 #   Apostrophe quotation marks and comma quotation marks "‘" U2018, "’" U2019,
-#   "‚" U201A, "“" U201C, "”" U201D, and "„" U201E by multi-key are supported
+#   "‚" U201A, "“" U201C, "”" U201D, and "„" U201E by multikey are supported
 #   in en_US.UTF-8/Compose. However, these sequences are discontinued as a
 #   conflicting and pointless waste, since they are superseded by a more
 #   efficient and intuitive input method.
@@ -1285,7 +1316,7 @@
 #
 #   "·" U00B7 MIDDLE DOT by <Multi_key><asciicircum><period> is part of the
 #   superscript dead key, and the reverse sequence is in dead_abovedot for
-#   backwards compatibility with en_US.UTF-8/Compose.
+#   sideways compatibility with en_US.UTF-8/Compose.
 #   See #*# SUPERSCRIPT
 #   See #*# DOT_ABOVE
 #
@@ -1296,8 +1327,11 @@
 #   See #*# CIRCUMFLEX
 #   See # # C07
 #
+#
+# # Dashes and hyphens
+#
 #   "–" U2013 EN DASH by <Multi_key><minus><minus><period> is supported in
-#   en_US.UTF-8/Compose and, for backwards compatibility, also in the double
+#   en_US.UTF-8/Compose and, for sideways compatibility, also in the double
 #   bar dead key. But "—" U2014 EM DASH cannot be supported as-is, i.e. by
 #   <Multi_key><minus><minus><minus>, since this is used as the entry point
 #   of the high bar dead key. Also, "―" U2015 HORIZONTAL BAR needs support as
@@ -1310,7 +1344,7 @@
 #   consistent both with en_US.UTF-8/Compose and with typography thinking of an
 #   em dash as 4 hyphens worth; although it is not the most user-friendly.
 #
-#   However with this respect, this is only about multi-key support. U2013 and
+#   However with this respect, this is only about multikey support. U2013 and
 #   U2014, and depending on the variant, also U2015 are in the benefit of
 #   level 2 live key positions.
 #   See dispocla.cpp key <AE03>
@@ -1319,8 +1353,6 @@
 #
 <Multi_key><minus><minus><minus><minus>                                                            : "—" U2014 # EM DASH
 #
-#
-# # Dashes and hyphens
 #
 #   U2010 is not mapped on live key, nor in group 1 of HYPHEN-MINUS, given that
 #   its correct representation is the ASCII hyphen U002D. Assigning it an extra
@@ -1430,14 +1462,14 @@
 # # Proofreading mark
 #
 #   This only supports the close-up mark for now, but other marks are supported
-#   in the symbols groups: "‸" U2038 and "⁁" U2041.
+#   in the symbol groups: "‸" U2038 and "⁁" U2041.
 #
 <Multi_key><parenleft><parenright><minus>                                                          : "⁐" U2050 # CLOSE UP
 #
 #
 #^# Mixed sequences
 #
-#   These are made of both multi-key and dead keys.
+#   These are made of both multikey and dead keys.
 #
 <dead_abovedot><Multi_key><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 <Multi_key><dead_abovedot><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
@@ -1606,12 +1638,14 @@
 #^# Bracketing tone marks
 #
 #   The tone height is denoted by a leading initialism, localized in French and
-#   in English and case insensitive except for "˼" U02FC, because with a capital
-#   L, this would conflict with "⊾" U22BE. The start or end semantics is
-#   carried by a trailing parenthesis: h(, b(, or h), l), and conversely.
+#   in English and case insensitive except the English sequence for "˼" U02FC,
+#   because with a capital L, this would conflict with "⊾" U22BE. The start or
+#   end semantics is carried by a trailing parenthesis: ¦h(, ¦H(, ¦b(, ¦B(,
+#   ¦l(, ¦L(, or ¦h), ¦H), ¦b), ¦B), ¦l).
 #
 #   "꜠" UA720 and "꜡" UA721 are supported alongside, as these are ligatures of
-#   begin tone marks and stress, adding a median apostrophe to the sequences.
+#   begin tone marks and stress, adding a median apostrophe to the sequences,
+#   with alias sequences featuring rightsinglequotemark instead.
 #
 <Multi_key><h><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
 <Multi_key><H><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
@@ -1625,11 +1659,17 @@
 <Multi_key><B><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
 <Multi_key><l><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
 <Multi_key><h><apostrophe><parenleft>                                                              : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><h><rightsinglequotemark><parenleft>                                                    : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
 <Multi_key><H><apostrophe><parenleft>                                                              : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><H><rightsinglequotemark><parenleft>                                                    : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
 <Multi_key><b><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><b><rightsinglequotemark><parenleft>                                                    : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
 <Multi_key><B><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><B><rightsinglequotemark><parenleft>                                                    : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
 <Multi_key><l><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><l><rightsinglequotemark><parenleft>                                                    : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
 <Multi_key><L><apostrophe><parenleft>                                                              : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><L><rightsinglequotemark><parenleft>                                                    : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
 #
 #
 #^# Vulgar fractions
@@ -1887,9 +1927,9 @@
 #
 #^# Currency symbols
 #
-#   Symbol-letter sequences are used as multi-key equivalents of dead keys, and
+#   Symbol-letter sequences are used as multikey equivalents of dead keys, and
 #   equal in particular is used for regional indicator letters, so only letter-
-#   symbol sequences are available for currency symbols by multi-key.
+#   symbol sequences are available for currency symbols by multikey.
 #   See #*# CURRENCY
 #
 #   These are symbols supported in en_US.UTF-8/Compose, including commented-out
@@ -1897,15 +1937,15 @@
 #   But unlike set up in en_US.UTF-8/Compose, <Multi_key><C><bar> is "₵" U20B5.
 #   And "¢" U00A2 is <Multi_key><bar><c> only, due to conflicts with "ȼ" U023C,
 #   "⊄" U2284 and "⊈" U2288.
-#   See #*# STROKE
 #   See #*# CURRENCY
+#   See #*# MACRON
+#   See #*# STROKE
 #
 #   The generic currency symbol `¤` U00A4 is supported by case insensitive X O
 #   sequences. Reverse sequences conflict with mathematical symbols.
 #
 <Multi_key><A><equal>                                                                              : "₳" U20B3 # AUSTRAL SIGN
 <Multi_key><C><bar>                                                                                : "₵" U20B5 # CEDI SIGN
-<Multi_key><bar><c>                                                                                : "¢" U00A2 # CENT SIGN
 <Multi_key><c><e>                                                                                  : "₠" U20A0 # EURO-CURRENCY SIGN
 <Multi_key><C><E>                                                                                  : "₠" U20A0 # EURO-CURRENCY SIGN
 <Multi_key><C><equal>                                                                              : "€" U20AC # EURO SIGN
@@ -2561,7 +2601,7 @@
 <Multi_key><bracketleft><bracketleft><backslash><bracketright>                                     : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
 #
 #
-#^# Emoji by multi-key
+#^# Emoji by multikey
 #
 #
 # # Square emoji
@@ -2597,8 +2637,8 @@
 #
 # # Heart emoji
 #
-#   Due to its design, the traditional heart multi-key sequence is supported in
-#   a dead_circumflex multi-key equivalent with digit 3 as the base character:
+#   Due to its design, the traditional heart multikey sequence is supported in
+#   a dead_circumflex multikey equivalent with digit 3 as the base character:
 #   <Multi_key><less><3> : "❤" U2764 # HEAVY BLACK HEART red emoji, most-used in France
 #   See #*# CIRCUMFLEX
 #
@@ -2807,10 +2847,10 @@
 <Multi_key><O><P><T>                                                                               : "⌥" U2325 # OPTION KEY
 #
 #
-# # Symbols for multi-key and composition
+# # Symbols for multikey and composition
 #
 #   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive `com`,
-#   while the broken bar "¦" U00A6, repurposed as multi-key symbol, is input by
+#   while the broken bar "¦" U00A6, repurposed as multikey symbol, is input by
 #   case insensitive `mul` consistently.
 #
 #   "¦" U00A6 is also in group 12 of |, in dead_macron 5, and in dead_diaeresis
@@ -2832,8 +2872,8 @@
 #
 <Multi_key><c><o><m>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
 <Multi_key><C><O><M>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
-<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
 #
 # # Symbols for key events
@@ -2889,11 +2929,12 @@
 #   START_MATH
 #
 #
-### Mathematical symbols by multi-key
+### Mathematical symbols by multikey
 #
 #
 #   The General Category `Symbol, other` (`So`) does not preclude a symbol from
 #   being a math symbol, despite there is the dedicated `Symbol, math` (`Sm`).
+#   Indeed both `Sm` and `So` are only informative, not normative.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=199
 #
 #   The reason why is that labeling all math symbols as `Sm` is not feasible,
@@ -3058,7 +3099,7 @@
 #
 #   Examples: "⪛" U2A9B, "⋚" U22DA, "⪋" U2A8B.
 #
-#   For consistency, multi-key sequences starting with slash, pipe, or backslash
+#   For consistency, multikey sequences starting with slash, pipe, or backslash
 #   followed by a trailing digit are in the corresponding dead keys, where they
 #   are not space terminated.
 #
@@ -3102,14 +3143,14 @@
 # # Plus minus
 #
 #   Order matters unlike in en_US.UTF-8/Compose not supporting "∓" U2213.
-#   Still for backwards compatibility, space termination is skipped, for both
+#   Still for sideways compatibility, space termination is skipped, for both
 #   "±" U00B1 and "∓" U2213, since it is not required for disambiguation.
 #
 #   Like "×" U00D7 and "÷" U00F7, on complete keyboard layouts, "±" U00B1 PLUS-
 #   MINUS SIGN is on live key.
 #
 #   Additionally, for incomplete keyboard layouts, there is a fallback input
-#   method in the symbols groups.
+#   method in the symbol groups.
 #   See # # C06
 #
 #   In group 1 of +                                                                                : "±" U00B1 # PLUS-MINUS SIGN
@@ -3118,10 +3159,10 @@
 #
 # # Multiplication and division symbols
 #
-#   Basic operators are supported by multi-key despite being on live keys.
+#   Basic operators are supported by multikey despite being on live keys.
 #
 #   Additionally, for incomplete keyboard layouts, there is a fallback input
-#   method in the symbols groups.
+#   method in the symbol groups.
 #   See # # B02
 #   See # # B01
 #
@@ -3145,8 +3186,8 @@
 #   “Symbols defined by unicode-math” (2023-06-21).
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=79
 #
-#   The at sign is part of these multi-key sequences for consistency with the
-#   Greek dead key. However, in the multi-key equivalent of dead_greek, <at>
+#   The at sign is part of these multikey sequences for consistency with the
+#   Greek dead key. However, in the multikey equivalent of dead_greek, <at>
 #   is in leading position, while here it comes after the letter.
 #   See #*# GREEK
 #
@@ -3203,7 +3244,7 @@
 #
 # # Primes
 #
-#   This adds to the support by dead_acute, where multi-key sequences are
+#   This adds to the support by dead_acute, where multikey sequences are
 #   reversed. Space termination is not needed here either, so it is skipped
 #   for ease of input.
 #   See #*# ACUTE
@@ -3230,7 +3271,7 @@
 #
 #   Although not being math symbols, these are supported for consistency.
 #   Space termination is not needed, so it is skipped for ease of input.
-#   Also supported by dead_grave, with reversed multi-key sequences.
+#   Also supported by dead_grave, with reversed multikey sequences.
 #   See #*# GRAVE
 #
 <Multi_key><1><grave>                                                                              : "‵" U2035 # REVERSED PRIME
@@ -3257,7 +3298,7 @@
 #   Also in dead_stroke followed by 4, without space termination.
 #   See #*# STROKE
 #
-#   Additionally, "⁄" U2044 FRACTION SLASH is supported by multi-key the same
+#   Additionally, "⁄" U2044 FRACTION SLASH is supported by multikey the same
 #   way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
 #
 <Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
@@ -3317,7 +3358,7 @@
 #
 # # Superscript or subscript signs, symbol, punctuation
 #
-#   Primarily supported by dead keys and their multi-key equivalents, where the
+#   Primarily supported by dead keys and their multikey equivalents, where the
 #   sequences work the other way around, and without space termination.
 #   See #*# SUPERSCRIPT
 #   See #*# SUBSCRIPT
@@ -3346,7 +3387,7 @@
 #
 # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
 #
-#   Ampersand is in leading position because this is no multi-key equivalent of
+#   Ampersand is in leading position because this is no multikey equivalent of
 #   any dead key, and because that is consistent with the “combining” semantics
 #   of ampersand in this context.
 #   See # # TILDE&AMPERSAND
@@ -4164,7 +4205,7 @@
 <Multi_key><space><asciitilde><equal><slash>                                        <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal><slash>                                        <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><nobreakspace><asciitilde><equal><slash>                                 <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-#   In #^# SHORT_STROKE                                                                            : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
+#   In #^# OBLIQUE_STROKE                                                                          : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                                      <space> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                               <nobreakspace> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #   In group 2 of ~                                                                                : "≈" U2248 # ALMOST EQUAL TO
@@ -4802,7 +4843,7 @@
 #
 # # Mathematical symbols in Miscellaneous Technical block U2300
 #
-#   Supporting the 29 technically outdated partials by multi-key is pointless.
+#   Supporting the 29 technically outdated partials by multikey is pointless.
 #   Likewise, the 9 vertical brackets AK̭A horizontal brackets are not used in
 #   contexts other than CJK and terminal emulation with vertical text layout.
 #
@@ -6750,14 +6791,18 @@
 <Multi_key><minus><minus><v><percent>                                               <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><percent>                                                      <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><percent>                                               <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><A><underscore>                                                                 <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><A><underscore>                                                          <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><space><A><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><space><A><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><nobreakspace><A><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><nobreakspace><A><underscore>                                            <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><V><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><V><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><A><underscore><underscore>                                                     <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><A><underscore><underscore>                                              <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><space><A><underscore><underscore>                                              <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><space><A><underscore><underscore>                                       <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><nobreakspace><A><underscore><underscore>                                       <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><nobreakspace><A><underscore><underscore>                                <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><V><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
@@ -7398,7 +7443,7 @@
 # # LaTeX codes
 #
 #   Since the maximum number of keysyms is 9, many LaTeX commands need to be
-#   truncated to make working multi-key sequences out of them, limiting this
+#   truncated to make working multikey sequences out of them, limiting this
 #   input method’s usability.
 #
 #   Most short sequences require space termination for disambiguation. This
