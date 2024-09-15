@@ -2,11 +2,11 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.3.0 (projet)
-
-Permutation du liant et de l’antiliant, plus fréquent et désormais plus facile à saisir sur AltGr + AltFr + W.
+## 4.3.0 (2024-09-15)
 
 Mise à jour vers Unicode 16.0, bouclage de la prise en charge de l’écriture latine.
+
+Permutation du liant et de l’antiliant, plus fréquent et désormais plus facile à saisir sur AltGr + AltFr + W.
 
 * Disposition :
 	* Permuter l’antiliant U+200C et le liant U+200D afin que l’antiliant soit sur AltGr + AltFr + W, et le liant sur AltGr + AltFr + Q. dispocla.cpp [b10b147](https://github.com/dispoclavier/nouvel-azerty/commit/b10b147daa058e2737e68176acae3debae34c259)
