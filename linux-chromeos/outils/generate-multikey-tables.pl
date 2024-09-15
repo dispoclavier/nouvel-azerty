@@ -3,7 +3,7 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-07-27T2201+0200
+# 2024-09-15T2045+0200
 # = last modified.
 #
 # Generates HTML tables of multi-key sequences from `Compose.yml`.
@@ -49,6 +49,8 @@ my $names_file_path       = 'names/ListeNoms.txt';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
+my $missing_count         = 0;
+my $missing_cp            = '';
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -247,6 +249,27 @@ while ( my $line = <INPUT> ) {
 				# parsing the sequence as an emoji.
 				$line =~ s/:([()])/:&#x200C;$1/g;
 
+				# Format Unicode scalar in comment.
+				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
+
+				# Translate English comments to French.
+				$line =~ s/( # .*) (\d\d?)th-ranking/$1 classé au rang $2/g;
+				$line =~ s/( # .*) capitals lock/$1 verrouillage capitales/g;
+				$line =~ s/( # .*) Control key ISO symbol/$1 symbole ISO de la touche Contrôle/g;
+				$line =~ s/( # .*) emoji with skin tone support/$1 émoji avec prise en charge de la couleur de peau/g;
+				$line =~ s/( # .*) Japanese kome/$1 kome japonais/g;
+				$line =~ s/( # .*) Japanese tainome/$1 tainome japonais/g;
+				$line =~ s/( # .*) level 3 select/$1 AltGr\/Option/g;
+				$line =~ s/( # .*) numeric lock/$1 verrouillage numérique/g;
+				$line =~ s/( # .*) outline scissors/$1 ciseaux ajourés/g;
+				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
+				$line =~ s/( # .*) repurposed as multikey symbol/$1 utilisé comme symbole de composition/g;
+				$line =~ s/( # .*) tab with shift tab/$1 Tab avec Majuscule Tab/g;
+				$line =~ s/( # .*) bullet/$1 puce/g;
+				$line =~ s/( # .*) emoji/$1 émoji/g;
+				$line =~ s/( # .*) not/$1 non/g;
+				$line =~ s/( # .*) shift/$1 Majuscule/g;
+
 				# Add anchors, localized tooltips and text style emoji for searchability.
 				if ( $line =~ m/ emoji/u ) {
 					$line    =~ m/^.+ : +"(.+?)"/u;
@@ -274,9 +297,9 @@ while ( my $line = <INPUT> ) {
 								$descrip = $des_line;
 								++$descriptors_count;
 								last;
-								close( DESCRIP );
 							}
 						}
+						close( DESCRIP );
 					}
 					unless ( $descrip ) {
 						open( NAMES, '<', $names_file_path ) or die $!;
@@ -287,13 +310,17 @@ while ( my $line = <INPUT> ) {
 								$descrip = $name_line;
 								++$names_count;
 								last;
-								close( NAMES );
 							}
 						}
+						close( NAMES );
 					}
-					$tooltip = $tooltip . $descrip . " U+$cp\n";
-					$ucodes  = $ucodes . "U+$cp<br />";
-					$anchor  = $anchor . 'U+' . $cp . '-';
+					unless ( $descrip ) {
+						++$missing_count;
+						$missing_cp .= $cp . ', ';
+					}
+					$tooltip .= $descrip . " U+$cp\n";
+					$ucodes  .= "U+$cp<br />";
+					$anchor  .= 'U+' . $cp . '-';
 					$str     =~ s/.//u;
 				}
 				$tooltip =~ s/\n$//;
@@ -336,3 +363,9 @@ print( "Closed file $wholeoutput_path.\n" );
 print( "Multi_key tables generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
+if ( $missing_count > 0 ) {
+	print( "Not localized: $missing_count names.\n" );
+	print( "Affected code points: $missing_cp.\n" );
+} else {
+	print( "All names localized.\n" );
+}
