@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-07-06T0949+0200
+# 2024-09-15T2104+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -167,9 +167,9 @@ while ( my $line = <INPUT> ) {
 							$descrip = $des_line;
 							++$descriptors_count;
 							last;
-							close( DESCRIP );
 						}
 					}
+					close( DESCRIP );
 				}
 				unless ( $descrip ) {
 					open( NAMES, '<', $names_file_path ) or die $!;
@@ -180,9 +180,9 @@ while ( my $line = <INPUT> ) {
 							$descrip = $name_line;
 							++$names_count;
 							last;
-							close( NAMES );
 						}
 					}
+					close( NAMES );
 				}
 				$tooltip = $descrip . " U+$cp";
 				$anchor  = 'U+' . $cp;
