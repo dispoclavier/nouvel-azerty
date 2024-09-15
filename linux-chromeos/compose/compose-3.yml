@@ -2,7 +2,7 @@
 #                    Version: See `compose-1.yml`
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
-#                Description: XCompose string output for dead keys and live keys
+#                Description: Multicharacter strings for live keys and dead key content.
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
 #        Syntax highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file `Compose.yml`.
@@ -132,12 +132,12 @@
 #   appended as the very last element.
 #
 #   Non-math characters, such as the letter pi and the envelope emoji, are also
-#   given this `math` label, as far as a multi-key sequence in the math section
+#   given this `math` label, as far as a multikey sequence in the math section
 #   is available for input. This `math` label is therefore more of a UX feature
 #   than of an information about the `Math` status. In this regard, this `math`
 #   label is the opposite of the `Sm` General Category, discussed at the start
 #   of the math section.
-#   See ### Mathematical symbols by multi-key
+#   See ### Mathematical symbols by multikey
 #
 #
 # # Emoji in symbol groups
@@ -153,7 +153,7 @@
 #
 #       * See #^# Abbreviations, Units and Legal Symbols
 #       * See #^# Western Zodiacal Signs
-#       * See #^# Emoji by multi-key
+#       * See #^# Emoji by multikey
 #       * See # # Arrow emoji
 #
 #   A number of Supplemental Multilingual Plane emoji are mapped on live keys.
@@ -214,7 +214,7 @@
 #   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The old ordinal indicators are supported by multi-key and in group 12.
+#   The old ordinal indicators are supported by multikey and in group 12.
 #   See #^# Legacy ordinal indicators
 #   See # # D09
 #
@@ -561,7 +561,7 @@
 # # D06
 #
 #   Since dead_greek is also mapped on level 3 instead of (redundant) "@" U0040
-#   (v1.7.0), dead_greek must work as a base character for the symbols groups.
+#   (v1.7.0), dead_greek must work as a base character for the symbol groups.
 #
 #   "◌" U25CC is in group 1 because it is the generic base character for
 #   combining diacritics.
@@ -780,7 +780,7 @@
 #   The "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The old ordinal indicators are supported by multi-key and in group 12.
+#   The old ordinal indicators are supported by multikey and in group 12.
 #   See #^# Legacy ordinal indicators
 #   See # # D01
 #
@@ -891,18 +891,18 @@
 #
 # # C01
 #
-#   The first three positions are inaccessible by multi-key equivalents, due
+#   The first three positions are inaccessible by multikey equivalents, due
 #   to an inavoidable interference of numbersign with itself. But these can be
-#   input by multi-key using other sequences.
+#   input by multikey using other sequences.
 #   See # # Checkboxes
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
 #   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color in two
-#   sets. These also have a multi-key alternative.
+#   sets. These also have a multikey alternative.
 #   See # # B01
 #   See # # Square emoji
 #
-#   Broader sets of squares are available by multi-key.
+#   Broader sets of squares are available by multikey.
 #   See # # Square emoji
 #   See # # Geometric Shapes in block U25A0 used in mathematics
 #   See # WHITE SQUARE WITH LEFTWARDS TICK
@@ -1430,9 +1430,9 @@
 #   shipped with Windows.
 #   https://dispoclavier.com/nouvel-azerty/#malware-windows
 #
-#   "¦" U00A6 BROKEN BAR repurposed as multi-key symbol is in group 12 although
+#   "¦" U00A6 BROKEN BAR repurposed as multikey symbol is in group 12 although
 #   it is more easily input through dead_diaeresis followed by backslash.
-#   See # # Symbols for multi-key and composition
+#   See # # Symbols for multikey and composition
 #
 <UEFD0>                                                                                      <bar> : "∣" U2223 # DIVIDES math
 <Multi_key><numbersign>                                                                      <bar> : "∣" U2223 # DIVIDES math
@@ -1478,10 +1478,10 @@
 <Multi_key><numbersign><1>                                                                   <bar> : "µ" U00B5 # MICRO SIGN
 <UEFD0><KP_1>                                                                                <bar> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign><KP_1>                                                                <bar> : "µ" U00B5 # MICRO SIGN
-<UEFD0><2>                                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<Multi_key><numbersign><2>                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<UEFD0><KP_2>                                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<Multi_key><numbersign><KP_2>                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<UEFD0><2>                                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><numbersign><2>                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<UEFD0><KP_2>                                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><numbersign><KP_2>                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
 #
 # # B01
@@ -2778,18 +2778,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <k> : "ĸ" U0138 # LATIN SMALL LETTER KRA
 <UEFD0><UEFD0><UEFD0>                                                                          <k> : "ĸ" U0138 # LATIN SMALL LETTER KRA
 <Multi_key><numbersign><numbersign><numbersign>                                                <k> : "ĸ" U0138 # LATIN SMALL LETTER KRA
-<UEFD0><3>                                                                                     <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<Multi_key><numbersign><3>                                                                     <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<UEFD0><KP_3>                                                                                  <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<Multi_key><numbersign><KP_3>                                                                  <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<UEFD0><UEFD0><UEFD0>                                                                          <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<Multi_key><numbersign><numbersign><numbersign>                                                <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
-<UEFD0><3>                                                                                     <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-<Multi_key><numbersign><3>                                                                     <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-<UEFD0><KP_3>                                                                                  <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-<Multi_key><numbersign><KP_3>                                                                  <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-<UEFD0><UEFD0><UEFD0>                                                                          <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-<Multi_key><numbersign><numbersign><numbersign>                                                <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<UEFD0><3>                                                                                     <L> : "Ꟛ" UA7DA # LATIN CAPITAL LETTER LAMBDA
+<Multi_key><numbersign><3>                                                                     <L> : "Ꟛ" UA7DA # LATIN CAPITAL LETTER LAMBDA
+<UEFD0><KP_3>                                                                                  <L> : "Ꟛ" UA7DA # LATIN CAPITAL LETTER LAMBDA
+<Multi_key><numbersign><KP_3>                                                                  <L> : "Ꟛ" UA7DA # LATIN CAPITAL LETTER LAMBDA
+<UEFD0><UEFD0><UEFD0>                                                                          <L> : "Ꟛ" UA7DA # LATIN CAPITAL LETTER LAMBDA
+<Multi_key><numbersign><numbersign><numbersign>                                                <L> : "Ꟛ" UA7DA # LATIN CAPITAL LETTER LAMBDA
+<UEFD0><3>                                                                                     <l> : "ꟛ" UA7DB # LATIN SMALL LETTER LAMBDA
+<Multi_key><numbersign><3>                                                                     <l> : "ꟛ" UA7DB # LATIN SMALL LETTER LAMBDA
+<UEFD0><KP_3>                                                                                  <l> : "ꟛ" UA7DB # LATIN SMALL LETTER LAMBDA
+<Multi_key><numbersign><KP_3>                                                                  <l> : "ꟛ" UA7DB # LATIN SMALL LETTER LAMBDA
+<UEFD0><UEFD0><UEFD0>                                                                          <l> : "ꟛ" UA7DB # LATIN SMALL LETTER LAMBDA
+<Multi_key><numbersign><numbersign><numbersign>                                                <l> : "ꟛ" UA7DB # LATIN SMALL LETTER LAMBDA
 <UEFD0><3>                                                                                     <M> : 
 <Multi_key><numbersign><3>                                                                     <M> : 
 <UEFD0><KP_3>                                                                                  <M> : 
@@ -2995,12 +2995,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <b> : "␢" U2422 # BLANK SYMBOL
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <b> : "␢" U2422 # BLANK SYMBOL
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <b> : "␢" U2422 # BLANK SYMBOL
-<UEFD0><4>                                                                                     <C> : "℃" U2103 # DEGREE CELSIUS
-<Multi_key><numbersign><4>                                                                     <C> : "℃" U2103 # DEGREE CELSIUS
-<UEFD0><KP_4>                                                                                  <C> : "℃" U2103 # DEGREE CELSIUS
-<Multi_key><numbersign><KP_4>                                                                  <C> : "℃" U2103 # DEGREE CELSIUS
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <C> : "℃" U2103 # DEGREE CELSIUS
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <C> : "℃" U2103 # DEGREE CELSIUS
+<UEFD0><4>                                                                                     <C> : 
+<Multi_key><numbersign><4>                                                                     <C> : 
+<UEFD0><KP_4>                                                                                  <C> : 
+<Multi_key><numbersign><KP_4>                                                                  <C> : 
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <C> : 
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <C> : 
 <UEFD0><4>                                                                                     <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <Multi_key><numbersign><4>                                                                     <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <UEFD0><KP_4>                                                                                  <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
@@ -3043,12 +3043,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <f> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <f> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <f> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
-<UEFD0><4>                                                                                     <G> : 
-<Multi_key><numbersign><4>                                                                     <G> : 
-<UEFD0><KP_4>                                                                                  <G> : 
-<Multi_key><numbersign><KP_4>                                                                  <G> : 
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <G> : 
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <G> : 
+<UEFD0><4>                                                                                     <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<Multi_key><numbersign><4>                                                                     <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<UEFD0><KP_4>                                                                                  <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<Multi_key><numbersign><KP_4>                                                                  <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
 <UEFD0><4>                                                                                     <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 <Multi_key><numbersign><4>                                                                     <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 <UEFD0><KP_4>                                                                                  <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
@@ -3139,18 +3139,18 @@
 <Multi_key><numbersign><KP_4>                                                                  <n> : "ȵ" U0235 # LATIN SMALL LETTER N WITH CURL
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <n> : "ȵ" U0235 # LATIN SMALL LETTER N WITH CURL
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <n> : "ȵ" U0235 # LATIN SMALL LETTER N WITH CURL
-<UEFD0><4>                                                                                     <O> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
-<Multi_key><numbersign><4>                                                                     <O> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
-<UEFD0><KP_4>                                                                                  <O> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
-<Multi_key><numbersign><KP_4>                                                                  <O> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <O> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <O> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
-<UEFD0><4>                                                                                     <o> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
-<Multi_key><numbersign><4>                                                                     <o> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
-<UEFD0><KP_4>                                                                                  <o> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
-<Multi_key><numbersign><KP_4>                                                                  <o> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <o> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <o> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
+<UEFD0><4>                                                                                     <O> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><4>                                                                     <O> : "Ω" U2126 # OHM SIGN
+<UEFD0><KP_4>                                                                                  <O> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><KP_4>                                                                  <O> : "Ω" U2126 # OHM SIGN
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <O> : "Ω" U2126 # OHM SIGN
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <O> : "Ω" U2126 # OHM SIGN
+<UEFD0><4>                                                                                     <o> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<Multi_key><numbersign><4>                                                                     <o> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<UEFD0><KP_4>                                                                                  <o> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<Multi_key><numbersign><KP_4>                                                                  <o> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <o> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <o> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
 <UEFD0><4>                                                                                     <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
 <Multi_key><numbersign><4>                                                                     <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
 <UEFD0><KP_4>                                                                                  <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
@@ -3553,14 +3553,14 @@
 <Multi_key><numbersign><1>                                                                     <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
 <UEFD0><KP_1>                                                                                  <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
 <Multi_key><numbersign><KP_1>                                                                  <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
-<UEFD0><1>                                                                                     <F> : "℉" U2109 # DEGREE FAHRENHEIT
-<Multi_key><numbersign><1>                                                                     <F> : "℉" U2109 # DEGREE FAHRENHEIT
-<UEFD0><KP_1>                                                                                  <F> : "℉" U2109 # DEGREE FAHRENHEIT
-<Multi_key><numbersign><KP_1>                                                                  <F> : "℉" U2109 # DEGREE FAHRENHEIT
-<UEFD0><1>                                                                                     <f> : "℉" U2109 # DEGREE FAHRENHEIT
-<Multi_key><numbersign><1>                                                                     <f> : "℉" U2109 # DEGREE FAHRENHEIT
-<UEFD0><KP_1>                                                                                  <f> : "℉" U2109 # DEGREE FAHRENHEIT
-<Multi_key><numbersign><KP_1>                                                                  <f> : "℉" U2109 # DEGREE FAHRENHEIT
+<UEFD0><1>                                                                                     <F> : 
+<Multi_key><numbersign><1>                                                                     <F> : 
+<UEFD0><KP_1>                                                                                  <F> : 
+<Multi_key><numbersign><KP_1>                                                                  <F> : 
+<UEFD0><1>                                                                                     <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
+<Multi_key><numbersign><1>                                                                     <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
+<UEFD0><KP_1>                                                                                  <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
+<Multi_key><numbersign><KP_1>                                                                  <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <UEFD0><1>                                                                                     <G> : "Ꟑ" UA7D0 # LATIN CAPITAL LETTER CLOSED INSULAR G
 <Multi_key><numbersign><1>                                                                     <G> : "Ꟑ" UA7D0 # LATIN CAPITAL LETTER CLOSED INSULAR G
 <UEFD0><KP_1>                                                                                  <G> : "Ꟑ" UA7D0 # LATIN CAPITAL LETTER CLOSED INSULAR G
@@ -3601,10 +3601,10 @@
 <Multi_key><numbersign><1>                                                                     <k> : "ꜭ" UA72D # LATIN SMALL LETTER CUATRILLO
 <UEFD0><KP_1>                                                                                  <k> : "ꜭ" UA72D # LATIN SMALL LETTER CUATRILLO
 <Multi_key><numbersign><KP_1>                                                                  <k> : "ꜭ" UA72D # LATIN SMALL LETTER CUATRILLO
-<UEFD0><1>                                                                                     <L> : "℄" U2104 # CENTRE LINE SYMBOL
-<Multi_key><numbersign><1>                                                                     <L> : "℄" U2104 # CENTRE LINE SYMBOL
-<UEFD0><KP_1>                                                                                  <L> : "℄" U2104 # CENTRE LINE SYMBOL
-<Multi_key><numbersign><KP_1>                                                                  <L> : "℄" U2104 # CENTRE LINE SYMBOL
+<UEFD0><1>                                                                                     <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
+<Multi_key><numbersign><1>                                                                     <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
+<UEFD0><KP_1>                                                                                  <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
+<Multi_key><numbersign><KP_1>                                                                  <L> : "ꬷ" UAB37 # LATIN SMALL LETTER L WITH INVERTED LAZY S
 <UEFD0><1>                                                                                     <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
 <Multi_key><numbersign><1>                                                                     <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
 <UEFD0><KP_1>                                                                                  <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
