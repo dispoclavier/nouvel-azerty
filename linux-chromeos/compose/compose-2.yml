@@ -2,7 +2,7 @@
 #                    Version: See `compose-1.yml`
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
-#                Description: XCompose string output for dead keys and live keys
+#                Description: Multicharacter strings for live keys and dead key content.
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
 #        Syntax highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file `Compose.yml`.
@@ -70,7 +70,7 @@
 #   multiple diacritics as used e.g. in Vietnamese and Lithuanian.
 #
 #   As a result, semantics of paired punctuation may be switched compared to
-#   en_US.UTF-8/Compose. Examples of multi-key equivalents for dead_breve:
+#   en_US.UTF-8/Compose. Examples of multikey equivalents for dead_breve:
 #   In en_US.UTF-8/Compose: <Multi_key><a><parenleft>
 #   In new-school Compose:  <Multi_key><parenright><a>
 #   This scheme is not proper to new school, since in en_US.UTF-8/Compose we
@@ -86,7 +86,7 @@
 #   looks fine for double acute accent. A change that is the more desirable as
 #   it also fixes an issue with sequences for curly quotation marks.
 #
-#   Bottom line: Full Unicode support requires an upgraded multi-key scheme aka
+#   Bottom line: Full Unicode support requires an upgraded multikey scheme aka
 #   new-school input composition.
 #
 #
@@ -94,7 +94,7 @@
 #
 #   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
 #   the parentheses-breve scheme to circumflex and hacek, macron and diaeresis.
-#   For example, new-school multi-key sequences include ¦^ for superscript,
+#   For example, new-school multikey sequences include ¦^ for superscript,
 #   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
 #   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
 #   conflicts with the dead key based input method for apostrophe/comma-shaped
@@ -104,8 +104,8 @@
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose, <comma>
 #   is used for both dead_cedilla and dead_ogonek, resulting in a conflict on E
 #   that en_US.UTF-8/Compose works around by using <cedilla> instead of <comma>
-#   in the multi-key sequences yielding U0228 and U0229. If <semicolon> were
-#   used as the multi-key equivalent of both dead_belowcomma and dead_ogonek,
+#   in the multikey sequences yielding U0228 and U0229. If <semicolon> were
+#   used as the multikey equivalent of both dead_belowcomma and dead_ogonek,
 #   the result would be yet another dead key merger, rightfully avoided in
 #   en_US.UTF-8/Compose.
 #
@@ -321,12 +321,12 @@
 #
 #   30 out of 32 ASCII symbols and punctuation are mapped on level 3 of keys
 #   (B..D)(01..10), and 28 dead keys are mapped on level 4 of the same keys
-#   as the ASCII characters used to emulate those dead keys by multi-key, using
+#   as the ASCII characters used to emulate those dead keys by multikey, using
 #   new-school input composition. New-school composition is designed to fully
 #   support the Latin script.
 #
 #   One of those two dead keys that is not mapped on the same key as the symbol
-#   used to emulate it by multi-key is dead_abovedot, mapped on P where level 3
+#   used to emulate it by multikey is dead_abovedot, mapped on P where level 3
 #   ampersand is unrelated. However, period is mapped on level 5, to be used on
 #   the extended numpad as a decimal separator, alongside comma on key C10 (M).
 #
@@ -399,7 +399,7 @@
 #   tilde and grave accent on level 4 of E02 and E07, because regular dead key
 #   behavior is updated so as to output the combining diacritic when the space
 #   bar is pressed after a dead key. Designed to seamlessly transition UX, the
-#   legacy dead keys have limited functionality, no multi-key equivalents, and
+#   legacy dead keys have limited functionality, no multikey equivalents, and
 #   output ASCII on hitting space, ASCII twice on double press, emulating dead
 #   key behavior as on Windows. (2022-12-20T2238+0100..2023-11-23T0722+0100)
 #
@@ -507,7 +507,7 @@
 #
 #   ASCII apostrophe is supported alongside for interoperability, and because
 #   it is mapped on the base level of key E05 next to rightsinglequotemark. The
-#   conflicts of multi-key equivalents with CIRCUMFLEX&ACUTE, DIAERESIS&ACUTE,
+#   conflicts of multikey equivalents with CIRCUMFLEX&ACUTE, DIAERESIS&ACUTE,
 #   are fixed by hitting these dead keys the other way around.
 #   See # # CIRCUMFLEX&ACUTE
 #   See # # ACUTE&DIAERESIS
@@ -656,7 +656,7 @@
 #   <UEFD9>                  <*dead_legacytilde>        "~" U007E TILDE
 #   <UEFDA>                  <*dead_legacygrave>        "`" U0060 GRAVE ACCENT
 #
-#   The multi-key sequences by contrast are built using generic dead characters
+#   The multikey sequences by contrast are built using generic dead characters
 #   in a private use area, because there are too many of them, and it is better
 #   to have a .notdef box output on failure rather than an unintended character
 #   or two of them (on Windows).
@@ -1226,12 +1226,11 @@
 #   https://dispoclavier.com/nouvel-azerty/#malware-windows
 #   See # # Quotation mark input method
 #
-#   To fill the diacritic slot, "̅" U0305 COMBINING OVERLINE is included, with
-#   mnemonic referring to "̲" U0332 COMBINING LOW LINE that fills this slot
-#   for the SUBSCRIPT dead key, <Multi_key><underscore>. That is certainly a
-#   better option than duplicating the set of circumflexes already provided in
-#   dead_circumflex. Consistently, the spacing clone is "‾" U203E, that is also
-#   supported on live key.
+#   To populate the diacritic slot, "̅" U0305 COMBINING OVERLINE is included,
+#   with a mnemonic referring to "̲" U0332 COMBINING LOW LINE that fills this
+#   slot in the SUBSCRIPT dead key, rather than duplicates of the set of
+#   circumflexes already provided in dead_circumflex. Consistently, the spacing
+#   clone is "‾" U203E, that is also supported on live key.
 #   See #*# SUBSCRIPT
 #   See #*# CIRCUMFLEX
 #   See dispocla.cpp // Overscore
@@ -1446,6 +1445,8 @@
 <Multi_key><asciicircum><numbersign>                                                           <G> : "ᵞ" U1D5E # MODIFIER LETTER SMALL GREEK GAMMA
 <UEFD1><UEFD0>                                                                                 <g> : "ˠ" U02E0 # MODIFIER LETTER SMALL GAMMA
 <Multi_key><asciicircum><numbersign>                                                           <g> : "ˠ" U02E0 # MODIFIER LETTER SMALL GAMMA
+<UEFD1><UEFD0>                                                                                 <H> : "ᵸ" U1D78 # MODIFIER LETTER CYRILLIC EN
+<Multi_key><asciicircum><numbersign>                                                           <H> : "ᵸ" U1D78 # MODIFIER LETTER CYRILLIC EN
 <UEFD1><UEFD0>                                                                                 <h> : "ꭜ" UAB5C # MODIFIER LETTER SMALL HENG
 <Multi_key><asciicircum><numbersign>                                                           <h> : "ꭜ" UAB5C # MODIFIER LETTER SMALL HENG
 <UEFD1><UEFD0>                                                                                 <i> : "ᶥ" U1DA5 # MODIFIER LETTER SMALL IOTA
@@ -3166,7 +3167,7 @@
 #
 #   The opening parenthesis yields the character tie "⁀" U2040, since this may
 #   be considered sideways, or like a vertical parenthesis. The undertie
-#   "‿" U203F would conflict with "𐞡" U107A1 by its multi-key equivalent, but
+#   "‿" U203F would conflict with "𐞡" U107A1 by its multikey equivalent, but
 #   it is supported in the double press virtual dead key *dead_inverted. Both
 #   "⁀" U2040 and "‿" U203F are also in group 12 of "(" and ")".
 #   See # # C03
@@ -3841,7 +3842,7 @@
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
 #
-#   Multi-key sequences with quotedbl are duplicated with EuroSign, to account
+#   Multikey sequences with quotedbl are duplicated with EuroSign, to account
 #   for the mapping of EuroSign instead of quotedbl for compliance with current
 #   hardware and the European Commission’s recommendation.
 #   See dispocla.cpp // ## Note about EURO SIGN
@@ -4344,16 +4345,6 @@
 #   with acute accent, for more resilient keyboard layouts.
 #   See # # Quotation mark input method
 #
-#   For consistency, the tilde dead key supports turned punctuation used in
-#   Spanish:
-#   "¡" U00A1 # INVERTED EXCLAMATION MARK
-#   "¿" U00BF # INVERTED QUESTION MARK
-#   See #*# TURNED
-#   See #^# INVERTED
-#   See # # Turned punctuation characters for Spanish
-#   See # # B07-level3
-#   See # # B08-level3
-#
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
 #   should not depend on user input, but on font settings instead.
@@ -4382,12 +4373,9 @@
 #   The tilde dead key also has intuitive support for the swung dash "⁓" U2053,
 #   with underscore and the quotation dash U2015 as base characters.
 #
-#   The combining double tilde "͠" U0360 has emdash as its base character,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "͠" U0360 has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 #   Combining tilde halves above – "︢" UFE22, "︣" UFE23 – are supported on all
 #   fully available base letters for a streamlined user experience.
@@ -4410,16 +4398,12 @@
 <Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<dead_tilde>                                                                            <question> : "¿" U00BF # INVERTED QUESTION MARK
-<Multi_key><asciitilde>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
-<dead_tilde>                                                                              <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
-<Multi_key><asciitilde>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <dead_tilde>                                                                          <underscore> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
-<dead_tilde>                                                                                  <at> : "͠" U0360 # COMBINING DOUBLE TILDE
-<Multi_key><asciitilde>                                                                       <at> : "͠" U0360 # COMBINING DOUBLE TILDE
+<dead_tilde>                                                                            <question> : "͠" U0360 # COMBINING DOUBLE TILDE
+<Multi_key><asciitilde>                                                                 <question> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
 <Multi_key><asciitilde>                                                                   <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                                   <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
@@ -4658,8 +4642,22 @@
 #   on key D11 level 3, with the ampersand on D10 level 3, according to the new
 #   ASCII symbols map on alphabetic keys.
 #
-#   The TILDE&AMPERSAND dead key is dedicated to combining diacritics, with the
-#   ampersand carrying the "combining" semantics.
+#   The TILDE&AMPERSAND dead key is partly dedicated to African click letters,
+#   hopefully coming into the benefit of a consistent input method. Three of
+#   these have Latin equivalents in Zulu and are mapped on these letters, while
+#   another two use graphic mnemonics based on O and H, thought of as sideways.
+#   These are case insensitive except q for intuitivity:
+#
+#       c  "ǀ" U01C0 LATIN LETTER DENTAL CLICK
+#       x  "ǁ" U01C1 LATIN LETTER LATERAL CLICK
+#       q  "ǃ" U01C3 LATIN LETTER RETROFLEX CLICK (post)alveolar click (IPA)
+#       Q  "𐞹" U107B9 MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+#
+#       H  "ǂ" U01C2 LATIN LETTER ALVEOLAR CLICK  palatoalveolar click (IPA)
+#       O  "ʘ" U0298 LATIN LETTER BILABIAL CLICK
+#
+#   Other parts of this dead key are dedicated to combining diacritics, with
+#   the ampersand carrying the "combining" semantics.
 #   See # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
 #
 #   While the mnemonics based on ASCII symbols are obvious, the mnemonics based
@@ -4669,7 +4667,7 @@
 #   with D and F for opening and closing parentheses "᫁" U1AC1, "᫃" U1AC3,
 #   "᫂" U1AC2, "᫄" U1AC4, using uppercase for above, lowercase for below.
 #
-#   Half macrons and tildes start on the keys that their multi-key equivalents
+#   Half macrons and tildes start on the keys that their multikey equivalents
 #   "|" and "~" are on, for the variants above: "︤" UFE24, "︥" UFE25, "︢" UFE22
 #   and "︣" UFE23. But for these, the semantics of uppercase/lowercase is used
 #   for the left and right halves, with the rationale that uppercase carries
@@ -4679,9 +4677,10 @@
 #   the half macron "︬" UFE2C. This assumes a French AZERTY, where M comes
 #   after L, and N is the last letter in the row below the row that M is in.
 #
-#   The ligature halves above – "︠" UFE20, "︡" UFE21 – are on O, as the O key
-#   is above the L key, that the ligature halves below are on: "︧" UFE27,
-#   "︨" UFE28.
+#   The ligature halves below are on L: "︧" UFE27, "︨" UFE28, while those above
+#   – "︠" UFE20, "︡" UFE21 – are on P, as the P key is nearly above the L key,
+#   and it benefits from the ampersand mnemonic.
+#   
 #
 #   By contrast, the "᫇" U1AC7 and "᷹" U1DF9 diacritics use graphic mnemonics on
 #   case insensitive W and U.
@@ -4706,6 +4705,10 @@
 <Multi_key><asciitilde><ampersand>                                                             <A> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <dead_tilde><ampersand>                                                                        <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <Multi_key><asciitilde><ampersand>                                                             <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
+<dead_tilde><ampersand>                                                                        <C> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<Multi_key><asciitilde><ampersand>                                                             <C> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<dead_tilde><ampersand>                                                                        <c> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<Multi_key><asciitilde><ampersand>                                                             <c> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
 <dead_tilde><ampersand>                                                                        <D> : "᫁" U1AC1 # COMBINING LEFT PARENTHESIS ABOVE LEFT
 <Multi_key><asciitilde><ampersand>                                                             <D> : "᫁" U1AC1 # COMBINING LEFT PARENTHESIS ABOVE LEFT
 <dead_tilde><ampersand>                                                                        <d> : "᫃" U1AC3 # COMBINING LEFT PARENTHESIS BELOW LEFT
@@ -4718,6 +4721,10 @@
 <Multi_key><asciitilde><ampersand>                                                             <G> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
 <dead_tilde><ampersand>                                                                        <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
 <Multi_key><asciitilde><ampersand>                                                             <g> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
+<dead_tilde><ampersand>                                                                        <H> : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+<Multi_key><asciitilde><ampersand>                                                             <H> : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+<dead_tilde><ampersand>                                                                        <h> : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+<Multi_key><asciitilde><ampersand>                                                             <h> : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
 <dead_tilde><ampersand>                                                                        <L> : "︧" UFE27 # COMBINING LIGATURE LEFT HALF BELOW
 <Multi_key><asciitilde><ampersand>                                                             <L> : "︧" UFE27 # COMBINING LIGATURE LEFT HALF BELOW
 <dead_tilde><ampersand>                                                                        <l> : "︨" UFE28 # COMBINING LIGATURE RIGHT HALF BELOW
@@ -4730,10 +4737,18 @@
 <Multi_key><asciitilde><ampersand>                                                             <N> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
 <dead_tilde><ampersand>                                                                        <n> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
 <Multi_key><asciitilde><ampersand>                                                             <n> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
-<dead_tilde><ampersand>                                                                        <O> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
-<Multi_key><asciitilde><ampersand>                                                             <O> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
-<dead_tilde><ampersand>                                                                        <o> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
-<Multi_key><asciitilde><ampersand>                                                             <o> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
+<dead_tilde><ampersand>                                                                        <O> : "ʘ" U0298 # LATIN LETTER BILABIAL CLICK
+<Multi_key><asciitilde><ampersand>                                                             <O> : "ʘ" U0298 # LATIN LETTER BILABIAL CLICK
+<dead_tilde><ampersand>                                                                        <o> : "ʘ" U0298 # LATIN LETTER BILABIAL CLICK
+<Multi_key><asciitilde><ampersand>                                                             <o> : "ʘ" U0298 # LATIN LETTER BILABIAL CLICK
+<dead_tilde><ampersand>                                                                        <P> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
+<Multi_key><asciitilde><ampersand>                                                             <P> : "︠" UFE20 # COMBINING LIGATURE LEFT HALF
+<dead_tilde><ampersand>                                                                        <p> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
+<Multi_key><asciitilde><ampersand>                                                             <p> : "︡" UFE21 # COMBINING LIGATURE RIGHT HALF
+<dead_tilde><ampersand>                                                                        <Q> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<Multi_key><asciitilde><ampersand>                                                             <Q> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<dead_tilde><ampersand>                                                                        <q> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
+<Multi_key><asciitilde><ampersand>                                                             <q> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
 <dead_tilde><ampersand>                                                                        <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
 <Multi_key><asciitilde><ampersand>                                                             <T> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
 <dead_tilde><ampersand>                                                                        <t> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
@@ -4746,6 +4761,10 @@
 <Multi_key><asciitilde><ampersand>                                                             <W> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
 <dead_tilde><ampersand>                                                                        <w> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
 <Multi_key><asciitilde><ampersand>                                                             <w> : "᫇" U1AC7 # COMBINING INVERTED DOUBLE ARCH ABOVE
+<dead_tilde><ampersand>                                                                        <X> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><asciitilde><ampersand>                                                             <X> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<dead_tilde><ampersand>                                                                        <x> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><asciitilde><ampersand>                                                             <x> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
 #
 #
 #^# MIDDLE_TILDE
@@ -6339,7 +6358,7 @@
 #   MODIFIER LETTER LOW ACUTE ACCENT.
 #   See #*# GRAVE
 #
-#   The primes by digits sequences add to the support by multi-key.
+#   The primes by digits sequences add to the support by multikey.
 #   See # # Primes
 #
 <dead_acute>                                                                               <space> : "́" U0301 # COMBINING ACUTE ACCENT
@@ -6570,8 +6589,8 @@
 #   Followed by period, the hook key yields "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
 #   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
-#   by lack of anything more appropriate the spacing modifier slot is filled in
-#   with "˽" U02FD MODIFIER LETTER SHELF.
+#   by lack of anything more appropriate, the spacing modifier slot is
+#   populated with "˽" U02FD MODIFIER LETTER SHELF.
 #
 <dead_hook>                                                                                <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <Multi_key><braceleft>                                                                     <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
@@ -7024,7 +7043,7 @@
 #   RETROFLEX_HOOK supports the full set of 10 recycling symbols, consistently
 #   with the paper symbols in dead_abovedot, with graphic mnemonic based on the
 #   shape of the letter O this dead key is on, and the cycling idea.
-#   The neighborship with DOT_ABOVE on P also has a mnemonic upside.
+#   The proximity with DOT_ABOVE on P also has a mnemonic upside.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# DOT_ABOVE
 #   See # # D04
@@ -7033,8 +7052,8 @@
 #   key is used for mathematical backslash shaped symbols.
 #   See #*# STROKE,
 #
-#   The spacing modifier slot is filled in with "˾" U02FE MODIFIER LETTER OPEN
-#   SHELF, by lack of anything more appropriate.
+#   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
+#   SHELF, by lack of anything more to the point.
 #
 <UEFD4>                                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <Multi_key><braceright>                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
@@ -7348,8 +7367,8 @@
 #   Multi_key: ¦}}
 #   Dchar: 
 #
-#   By lack of anything more appropriate the spacing modifier slot is filled in
-#   with "˽" U02FD MODIFIER LETTER SHELF.
+#   By lack of anything more to the point, the spacing modifier slot is
+#   populated with "˽" U02FD MODIFIER LETTER SHELF.
 #
 <UEFD4><UEFD4>                                                                             <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <Multi_key><braceright><braceright>                                                        <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
@@ -7544,7 +7563,7 @@
 #
 #   This scheme also includes three paper symbols, with alphabetic mnemonic,
 #   as well as — for the permanent paper symbol — a shape-based mnemonic using
-#   digit 8. The remaining two slots 4 and 6 are filled in with duplicates.
+#   digit 8. The remaining two slots 4 and 6 are populated with duplicates.
 #   See #*# RETROFLEX_HOOK
 #   See # # D04
 #   See # # D08
@@ -7554,7 +7573,7 @@
 #       8          "♾" U267E PERMANENT PAPER SIGN
 #
 #   As "·" U00B7 MIDDLE DOT by <Multi_key><asciicircum><period> is part of the
-#   superscript dead key, the reverse sequence is supported here for backwards
+#   superscript dead key, the reverse sequence is supported here for sideways
 #   compatibility with en_US.UTF-8/Compose.
 #   See #*# SUPERSCRIPT
 #   See #^# Punctuation
@@ -7632,8 +7651,8 @@
 <Multi_key><period>                                                                            <d> : "ḋ" U1E0B # LATIN SMALL LETTER D WITH DOT ABOVE
 <dead_abovedot>                                                                                <E> : "Ė" U0116 # LATIN CAPITAL LETTER E WITH DOT ABOVE
 <Multi_key><period>                                                                            <E> : "Ė" U0116 # LATIN CAPITAL LETTER E WITH DOT ABOVE
-<dead_abovedot>                                                                                <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
-<Multi_key><period>                                                                            <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
+<dead_abovedot>                                                                                <er : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
+<Multi_key><period>                                                                            <er : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
 <dead_abovedot>                                                                                <F> : "Ḟ" U1E1E # LATIN CAPITAL LETTER F WITH DOT ABOVE
 <Multi_key><period>                                                                            <F> : "Ḟ" U1E1E # LATIN CAPITAL LETTER F WITH DOT ABOVE
 <dead_abovedot>                                                                                <f> : "ḟ" U1E1F # LATIN SMALL LETTER F WITH DOT ABOVE
@@ -7650,6 +7669,8 @@
 <Multi_key><period>                                                                            <I> : "İ" U0130 # LATIN CAPITAL LETTER I WITH DOT ABOVE
 <dead_abovedot>                                                                                <i> : "ı" U0131 # LATIN SMALL LETTER DOTLESS I
 <Multi_key><period>                                                                            <i> : "ı" U0131 # LATIN SMALL LETTER DOTLESS I
+<dead_abovedot>                                                                                <J> : "ȷ" U0237 # LATIN SMALL LETTER DOTLESS J
+<Multi_key><period>                                                                            <J> : "ȷ" U0237 # LATIN SMALL LETTER DOTLESS J
 <dead_abovedot>                                                                                <j> : "ȷ" U0237 # LATIN SMALL LETTER DOTLESS J
 <Multi_key><period>                                                                            <j> : "ȷ" U0237 # LATIN SMALL LETTER DOTLESS J
 <dead_abovedot>                                                                                <K> : "K̇" # U004B U0307 LATIN CAPITAL LETTER K WITH DOT ABOVE: ALA-LC romanization
@@ -8063,7 +8084,7 @@
 #   See #^# GROUP_3
 #
 #   Alongside the support by group selection, multiple-em dashes can be input
-#   by multi-key, also supporting other dashes and hyphens as well.
+#   by multikey, also supporting other dashes and hyphens as well.
 #   See # # Dashes and hyphens
 #
 <UEFD0>                                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
@@ -8129,7 +8150,7 @@
 #
 #   So it is advisable to stop promoting Unicode-related misuse of any sorts.
 #   Following this policy, FIGURE DASH is only supported by dead key in group 1
-#   of MINUS SIGN as here, and in the set of dashes and hyphens by multi-key.
+#   of MINUS SIGN as here, and in the set of dashes and hyphens by multikey.
 #   See # # Dashes and hyphens
 #
 <UEFD0>                                                                                    <U2212> : "‒" U2012 # FIGURE DASH
@@ -8745,14 +8766,14 @@
 #   Multi_key: ¦$
 #   Dchar: "¤" U00A4
 #
-#   This is 100% backwards compatible with en_US.UTF-8/Compose, except for the
+#   This is 100% sideways compatible with en_US.UTF-8/Compose, except for the
 #   double press, used to activate the CURRENCY_EXTENDED dead key, rather than
 #   to yield the generic currency sign "¤" U00A4.
 #
 #   The generic currency sign "¤" U00A4 however is extensively supported, with
 #   both the two breaking and the two no-break spaces as base characters, both
 #   after single and double press, and by case insensitive <Multi_key><x><o>
-#   sequences as backwards compatible multi-key equivalents.
+#   sequences as sideways compatible multikey equivalents.
 #   See #^# CURRENCY_EXTENDED
 #   See # # Currency symbols
 #
@@ -8760,7 +8781,7 @@
 #   while 9 symbols are left over among support by base letters.
 #
 #   In en_US.UTF-8/Compose, the BENGALI RUPEE MARK requires a thorn live key,
-#   while the INDIAN RUPEE SIGN is supported only by multi-key =R sequences.
+#   while the INDIAN RUPEE SIGN is supported only by multikey =R sequences.
 #   The other seven symbols are unsupported in en_US.UTF-8/Compose.
 #
 #   New base:
@@ -9023,7 +9044,7 @@
 #   Dchar: "ȏ" U020F
 #
 #   Breve and inverted breve have each their own dead key for consistency with
-#   the ASCII map and the dead key multi-key equivalents.
+#   the ASCII map and the dead key multikey equivalents.
 #
 #   As inverted breve has only 6×2 precomposed letters, it might be virtualized
 #   by dead breve double press, but it has a dead key of its own for consistency
@@ -9038,8 +9059,8 @@
 #   This also supports the new U1DF00 LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #   because the trill looks like two inverted breves or a double inverted breve.
 #
-#   With digit 2 as a base character, dead_invertedbreve has a shortcut for
-#   "⁐" U2050 CLOSE UP.
+#   With case insensitive G as a base character, dead_invertedbreve has a
+#   shortcut for "⁐" U2050 CLOSE UP.
 #   See # # Proofreading mark
 #
 #   dead_invertedbreve also starts circled numbers as well as box drawings with
@@ -9047,12 +9068,9 @@
 #   See #^# CIRCLED_NUMBER
 #   See # # Box drawings with rounded corners
 #
-#   The combining double inverted breve "͡" U0361 has emdash as its base,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "͡" U0361 has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 <dead_invertedbreve>                                                                       <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
@@ -9062,14 +9080,10 @@
 <Multi_key><parenleft>                                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                       <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                     <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
-<dead_invertedbreve>                                                                          <at> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
-<Multi_key><parenleft>                                                                        <at> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<dead_invertedbreve>                                                                    <question> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<Multi_key><parenleft>                                                                  <question> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <dead_invertedbreve>                                                                      <emdash> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <Multi_key><parenleft>                                                                    <emdash> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
-<dead_invertedbreve>                                                                           <2> : "⁐" U2050 # CLOSE UP
-<Multi_key><parenleft>                                                                         <2> : "⁐" U2050 # CLOSE UP
-<dead_invertedbreve>                                                                        <KP_2> : "⁐" U2050 # CLOSE UP
-<Multi_key><parenleft>                                                                      <KP_2> : "⁐" U2050 # CLOSE UP
 <dead_invertedbreve>                                                                           <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <a> : "ȃ" U0203 # LATIN SMALL LETTER A WITH INVERTED BREVE
@@ -9082,8 +9096,12 @@
 <Multi_key><parenleft>                                                                         <E> : "Ȇ" U0206 # LATIN CAPITAL LETTER E WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <e> : "ȇ" U0207 # LATIN SMALL LETTER E WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <e> : "ȇ" U0207 # LATIN SMALL LETTER E WITH INVERTED BREVE
-<dead_invertedbreve>                                                                           <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-<Multi_key><parenleft>                                                                         <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve>                                                                           <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft>                                                                         <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve>                                                                           <G> : "⁐" U2050 # CLOSE UP
+<Multi_key><parenleft>                                                                         <G> : "⁐" U2050 # CLOSE UP
+<dead_invertedbreve>                                                                           <g> : "⁐" U2050 # CLOSE UP
+<Multi_key><parenleft>                                                                         <g> : "⁐" U2050 # CLOSE UP
 <dead_invertedbreve>                                                                           <I> : "Ȋ" U020A # LATIN CAPITAL LETTER I WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <I> : "Ȋ" U020A # LATIN CAPITAL LETTER I WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <i> : "ȋ" U020B # LATIN SMALL LETTER I WITH INVERTED BREVE
@@ -9104,9 +9122,9 @@
 #
 # # Box drawings with rounded corners
 #
-#   Rounded corners use dead_invertedbreve and its multi-key equivalent ¦( with
+#   Rounded corners use dead_invertedbreve and its multikey equivalent ¦( with
 #   graphic mnemonic based on the shape of uppercase letter D on C03, that the
-#   dead_invertedbreve dead key is on, and with neighborship mnemonic since the
+#   dead_invertedbreve dead key is on, and with proximity mnemonic, since the
 #   box drawings are mainly in dead_breve on key F, C04.
 #
 <dead_invertedbreve>                                                                  <1><1><0><0> : "╭" U256D # BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
@@ -9636,12 +9654,9 @@
 #   For consistency with breve below by dead_breve double press.
 #   See #^# BREVE_BELOW
 #
-#   The combining double inverted breve below "᷼" U1DFC has emdash as its base,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "᷼" U1DFC has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 #   Given that breve below and inverted breve below do not have spacing clones,
 #   and for a consistent scheme across breve and inverted breve using modifier
@@ -9657,8 +9672,8 @@
 <Multi_key><parenleft><parenleft>                                                   <nobreakspace> : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
 <dead_invertedbreve><dead_invertedbreve>                                                   <U202F> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
 <Multi_key><parenleft><parenleft>                                                          <U202F> : "ᵔ" U1D54 # MODIFIER LETTER SMALL TOP HALF O
-<dead_invertedbreve><dead_invertedbreve>                                                      <at> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
-<Multi_key><parenleft><parenleft>                                                             <at> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<dead_invertedbreve><dead_invertedbreve>                                                <question> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
+<Multi_key><parenleft><parenleft>                                                       <question> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <dead_invertedbreve><dead_invertedbreve>                                                  <emdash> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 <Multi_key><parenleft><parenleft>                                                         <emdash> : "᷼" U1DFC # COMBINING DOUBLE INVERTED BREVE BELOW
 #
@@ -9672,16 +9687,13 @@
 #   and case insensitive C, with its left equivalent in dead_invertedbreve, and
 #   with respect to support for regular half rings in group 1 of K.
 #
-#   The combining double breve "͝" U035D has emdash as its base character,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
-#
 #   dead_breve also ends circled numbers, and it is the box drawings dead key.
 #   See #^# CIRCLED_NUMBER
 #   See # # Box drawings
+#
+#   The double diacritic "͝" U035D has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 <dead_breve>                                                                               <space> : "̆" U0306 # COMBINING BREVE
 <Multi_key><parenright>                                                                    <space> : "̆" U0306 # COMBINING BREVE
@@ -9691,8 +9703,8 @@
 <Multi_key><parenright>                                                             <nobreakspace> : "˘" U02D8 # BREVE
 <dead_breve>                                                                               <U202F> : "˘" U02D8 # BREVE
 <Multi_key><parenright>                                                                    <U202F> : "˘" U02D8 # BREVE
-<dead_breve>                                                                                  <at> : "͝" U035D # COMBINING DOUBLE BREVE
-<Multi_key><parenright>                                                                       <at> : "͝" U035D # COMBINING DOUBLE BREVE
+<dead_breve>                                                                            <question> : "͝" U035D # COMBINING DOUBLE BREVE
+<Multi_key><parenright>                                                                 <question> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                              <emdash> : "͝" U035D # COMBINING DOUBLE BREVE
 <Multi_key><parenright>                                                                   <emdash> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                                   <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
@@ -9749,7 +9761,7 @@
 #
 # # Box drawings
 #
-#   Using the breve dead key and its multi-key equivalent ¦) with alphabetic
+#   Using the breve dead key and its multikey equivalent ¦) with alphabetic
 #   mnemonic in French, where box drawings are called ‘filets’, as dead_breve
 #   is on level 4 of key F, C04, where the closing parenthesis is on level 3.
 #
@@ -9757,17 +9769,25 @@
 #   and a digit sets the stroke type: 0 for none,
 #                                     1 for light,
 #                                     2 for double,
-#                                     3 for heavy.
+#                                     3 for heavy,
+#   as in <1><0><1><0> : "─" U2500 BOX DRAWINGS LIGHT HORIZONTAL.
 #
 #   Multiple dashes are input by the number of dashes, typed once for light,
-#   twice for heavy, terminated by `h` for horizontal, or `v` for vertical.
+#   twice for heavy, terminated by `h` for horizontal, or `v` for vertical,
+#   as in <3><h> : "┄" U2504 BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL, vs
+#   <3><3><h> : "┅" U2505 BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL.
 #
 #   Diagonals are input by 1 for the slash slant, 2 for the backslash slant,
-#   both for cross, terminated by `d` for diagonal.
+#   both for cross, terminated by `d` for diagonal, as in <1><d> : "╱" U2571
+#   BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT, vs <1><2><d> : "╳"
+#   U2573 BOX DRAWINGS LIGHT DIAGONAL CROSS. The 16 character cell diagonals,
+#   new to Unicode 16.0, from "🯐" U1FBD0 BOX DRAWINGS LIGHT DIAGONAL MIDDLE
+#   RIGHT TO LOWER LEFT through "🯟" U1FBDF BOX DRAWINGS LIGHT DIAGONAL UPPER
+#   LEFT TO MIDDLE RIGHT TO LOWER LEFT are not supported yet however.
 #
-#   Rounded corners use dead_invertedbreve and its multi-key equivalent ¦( with
+#   Rounded corners use dead_invertedbreve and its multikey equivalent ¦( with
 #   graphic mnemonic based on the shape of uppercase letter D on C03, and with
-#   neighborship mnemonic.
+#   additional mnemonic based on the proximity to key F, C04.
 #   See # # Box drawings with rounded corners
 #
 <dead_breve>                                                                          <1><0><1><0> : "─" U2500 # BOX DRAWINGS LIGHT HORIZONTAL
@@ -10397,12 +10417,9 @@
 #   BELT cannot be merged with RING either, because this occurs as middle ring
 #   on small l: "ꬹ" UAB39.
 #
-#   The combining double breve below "͜" U035C has emdash as a base character,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "͜" U035C has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 #   For a spacing clone of the combining breve below, "⏑" U23D1 METRICAL BREVE
 #   could be picked. Yet it is a symbol, not a letter, so it is not a good fit.
@@ -10420,8 +10437,8 @@
 <Multi_key><parenright><parenright>                                                 <nobreakspace> : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
 <dead_breve><dead_breve>                                                                   <U202F> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
 <Multi_key><parenright><parenright>                                                        <U202F> : "ᵕ" U1D55 # MODIFIER LETTER SMALL BOTTOM HALF O
-<dead_breve><dead_breve>                                                                      <at> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
-<Multi_key><parenright><parenright>                                                           <at> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<dead_breve><dead_breve>                                                                <question> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
+<Multi_key><parenright><parenright>                                                     <question> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                  <emdash> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <Multi_key><parenright><parenright>                                                       <emdash> : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <dead_breve><dead_breve>                                                                       <H> : "Ḫ" U1E2A # LATIN CAPITAL LETTER H WITH BREVE BELOW
@@ -10461,17 +10478,21 @@
 #   the new dead_longsolidusoverlay keysym named after U0338 "̸" COMBINING LONG
 #   SOLIDUS OVERLAY as one of four extra dead elements for the German T3 layout
 #   designed around 2010 and standardized in 2012 as DIN 2137:2012.
+#   https://de.wikipedia.org/wiki/DIN_2137#Neufassung_2012
+#   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/6d4acb0e3a6568a8faaa651d4e3d32f917b9067b
 #
-#   The use of dead_stroke for horizontal, rather than using it for oblique and
-#   introducing *dead_bar/*dead_shortstrokeoverlay to cover horizontal, appears
-#   to be fueled by the name of the combining diacritic and the character names
-#   containing WITH STROKE with the meaning of WITH BAR, or BARRED like UAB33,
-#   or like in the Unicode 1.0 name of U0197: “LATIN CAPITAL LETTER BARRED I”,
-#   that Unicode was urged to rename at ISO merger, making it an I WITH STROKE.
+#   The use of dead_stroke for horizontal, rather than for diagonal while
+#   introducing *dead_bar to cover horizontal, appears to be fueled by the name
+#   of the combining diacritic and the character names containing WITH STROKE
+#   with the meaning of WITH BAR, or BARRED, like UAB33 LATIN SMALL LETTER
+#   BARRED E, or in the Unicode 1.0 name of U0197 LATIN CAPITAL LETTER I WITH
+#   STROKE, previously LATIN CAPITAL LETTER BARRED I.
+#   See # # Bar and stroke diacritics
 #
 #   But since dead_longsolidusoverlay was removed in 2023, dead_stroke is used
 #   for slash-shaped diacritics again, while missing *dead_bar gets a PUA code.
-#   See # # Bar and stroke diacritics
+#   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/70
+#   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #
 #   All barred letters occurring in orthographies have their precomposed form
 #   encoded in Unicode, since the overlay bar diacritics do not render well.
@@ -10480,7 +10501,7 @@
 #   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
 #   consistently supported across four matching dead keys, with quotedbl and
 #   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
-#   used as the spacing clone of horn.
+#   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
 #   See #*# MACRON
 #   See #*# STROKE
@@ -10701,24 +10722,32 @@
 #
 #
 #^# DOUBLE_BAR
-#   double bar, long bar, barred descender, short stroke overlay
+#   double bar, long bar, barred descender, short bar overlay
 #   *dead_bar double press
 #   Multi_key: ¦--
 #   Dchar: "ⱡ" U2C61
 #
-#   The short stroke overlay in "Ꟈ" UA7C7 is longer than the standard stroke in
-#   "Đ" U0110 and so makes a good point for being supported by the double press
+#   The eponymous letter of this virtual dead key is "Ⱡ" U2C60 LATIN CAPITAL
+#   LETTER L WITH DOUBLE BAR, "ⱡ" U2C61 LATIN SMALL LETTER L WITH DOUBLE BAR.
+#
+#   The short bar overlay in "Ꟈ" UA7C7 LATIN CAPITAL LETTER D WITH SHORT STROKE
+#   OVERLAY is longer than the standard bar in "Đ" U0110 LATIN CAPITAL LETTER D
+#   WITH STROKE, and so makes a good point for support in this double press bar
 #   virtual dead key.
 #
-#   "–" U2013 EN DASH is supported in the double bar dead key for backwards
-#   compatibility with en_US.UTF-8/Compose that has a multi-key sequence for it
-#   by <Multi_key><minus><minus><period>.
+#   "–" U2013 EN DASH is supported in this double bar dead key for sideways
+#   compatibility with en_US.UTF-8/Compose, that has this multikey sequence for
+#   it: <Multi_key><minus><minus><period>.
 #   See #^# HIGH_BAR
 #   See #^# Punctuation
 #
-#   As a MODIFIER LETTER SHORT EQUALS SIGN "꞊" UA78A is picked for its “double”
-#   semantics and matching "˗" U02D7 MODIFIER LETTER MINUS SIGN.
+#   Budu uses MODIFIER LETTER SHORT EQUALS SIGN "꞊" UA78A as a tone letter, but
+#   in this virtual dead key, UA78A is picked to fill the modifier letter slot
+#   due to its “double” semantics. Additionally, UA78A matches its single press
+#   counterpart "˗" U02D7 MODIFIER LETTER MINUS SIGN, while "˭" U02ED MODIFIER
+#   LETTER UNASPIRATED is in *dead_flag.
 #   See #*# BAR
+#   See #*# FLAG
 #
 <UEFD8><UEFD8>                                                                             <space> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
 <Multi_key><minus><minus>                                                                  <space> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
@@ -10815,13 +10844,15 @@
 #   "Ⱡ" U2C60, "ⱡ" U2C61 on *dead_bar double press.
 #
 #   "—" U2014 EM DASH could be supported in this high bar dead key to get the
-#   closest possible to backwards compatibility with en_US.UTF-8/Compose, given
-#   this has a multi-key sequence for it: <Multi_key><minus><minus><minus>.
-#   However, for consistency with the UCS, the sequence with a triple minus and
+#   closest possible to sideways compatibility with en_US.UTF-8/Compose, given
+#   this has a multikey sequence for it: <Multi_key><minus><minus><minus>.
+#   However, for consistency with the UCS, a sequence with a triple minus and
 #   a final period is used for "―" U2015 HORIZONTAL BAR, since this may have a
-#   length of three quarters of an em dash, being a four-per-three-em dash.
+#   length of three quarters of an em dash, being a four-per-three-em dash; and
+#   a new multikey sequence made of a quadruple minus is added to support U2014
+#   by multikey, although all of these three dashes are on live keys.
 #   See #^# DOUBLE_BAR
-#   See #^# Punctuation
+#   See # # Dashes and hyphens
 #
 #   As a diacritic, "͆" U0346 is picked for carrying semantics of horizontality
 #   in a high position, but it ends here. The modifier letters are arrowheads,
@@ -10919,14 +10950,14 @@
 #   spacing modifier letter anyway.
 #
 #   The other mnemonic spacing modifier letter, "˖" U02D6 MODIFIER LETTER PLUS
-#   SIGN, based on the horn’s multi-key equivalent, is supported by other base
+#   SIGN, based on the horn’s multikey equivalent, is supported by other base
 #   letters: case insensitive P as the most mnemonic, but also by all other
 #   fully available base letters for a streamlined user experience.
 #
 #   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
 #   consistently supported across four matching dead keys, with quotedbl and
 #   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
-#   used as the spacing clone of horn.
+#   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
 #   See #*# MACRON
 #   See #*# STROKE
@@ -11217,8 +11248,8 @@
 #   now replaced with "∄" U2204 THERE DOES NOT EXIST.
 #   https://www.unicode.org/L2/L2002/02141-n2419-uralic-phonetic.pdf#page=5
 #
-#   But ultimately all these instances are filled in with the remaining Greek
-#   preformatted letters, both subscript and small caps. Here is the full list:
+#   But ultimately all these instances are populated with the remaining Greek
+#   preformatted letters, both subscript and small caps:
 #
 #       "ᴦ" U1D26 # GREEK LETTER SMALL CAPITAL GAMMA
 #       "ᴧ" U1D27 # GREEK LETTER SMALL CAPITAL LAMDA
@@ -11718,7 +11749,7 @@
 #   Dchar: "ǫ" U01EB
 #
 #   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonic.
-#   The multi-key equivalent is impractical, but a full ASCII equivalent
+#   The multikey equivalent is impractical, but a full ASCII equivalent
 #   would conflict with mathematical symbols.
 #   See #*# HOOK_ABOVE
 #
@@ -11899,7 +11930,7 @@
 #   Dchar: "ỏ" U1ECF
 #
 #   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonic.
-#   The multi-key equivalent is impractical, but a full ASCII equivalent
+#   The multikey equivalent is impractical, but a full ASCII equivalent
 #   would conflict with mathematical symbols.
 #   See #*# OGONEK
 #
@@ -12036,7 +12067,7 @@
 #   Dchar: "ō" U014D
 #
 #   Long leg is merged with macron thanks to empty intersection and
-#   with mnemonic based on the macron multi-key equivalent pipe |.
+#   with mnemonic based on the macron multikey equivalent pipe |.
 #   Small r with long leg has been obsoleted by IPA in 1989.
 #
 #   Ampersand as a base character supports the conjoining diacritic.
@@ -12044,32 +12075,31 @@
 #   Cent and Cedi signs are supported by lack of C with macron, and
 #   for consistency with en_US.UTF-8/Compose.
 #
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are consistently
-#   supported across three matching dead keys, with quotedbl and EuroSign as
-#   base characters.
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
+#   consistently supported across four matching dead keys, with quotedbl and
+#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
+#   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
-#   See #*# MACRON
 #   See #*# STROKE
 #   See #*# BAR
+#   See #*# HORN
 #
 #   Digits yield the full collection of simple, multiple, broken ("¦" U00A6)
 #   vertical bars, for convenience, since the other input methods, in groups
-#   or by multi-key, may be less mnemonic or more complicated.
+#   or by multikey, may be less mnemonic or more complicated.
 #   See # # Design of math sequences
-#   See # # Symbols for multi-key and composition
+#   See # # Symbols for multikey and composition
 #
 #   The conjoining variant of the combining diacritic is supported by ampersand
 #   both in macron – "︦" UFE26 – and in macron below.
 #
-#   The combining double macron "͞" U035E has emdash as a base character, since
-#   the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "͞" U035E has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 #   Combining macron halves above – "︤" UFE24, "︥" UFE25 – are supported on all
-#   fully available base letters for a streamlined user experience.
+#   unconflicting and fully available base letters for a streamlined user
+#   experience.
 #
 #   Halves of combining diacritics are also supported in the virtual dead key
 #   called “tilde and ampersand”.
@@ -12089,8 +12119,8 @@
 <Multi_key><bar>                                                                        <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_macron>                                                                          <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <Multi_key><bar>                                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
-<dead_macron>                                                                                 <at> : "͞" U035E # COMBINING DOUBLE MACRON
-<Multi_key><bar>                                                                              <at> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_macron>                                                                           <question> : "͞" U035E # COMBINING DOUBLE MACRON
+<Multi_key><bar>                                                                        <question> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_macron>                                                                             <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <Multi_key><bar>                                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_macron>                                                                                  <0> : "⫾" U2AFE # WHITE VERTICAL BAR
@@ -12113,10 +12143,10 @@
 <Multi_key><bar>                                                                               <4> : "∥" U2225 # PARALLEL TO
 <dead_macron>                                                                               <KP_4> : "∥" U2225 # PARALLEL TO
 <Multi_key><bar>                                                                            <KP_4> : "∥" U2225 # PARALLEL TO
-<dead_macron>                                                                                  <5> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<Multi_key><bar>                                                                               <5> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<dead_macron>                                                                               <KP_5> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<Multi_key><bar>                                                                            <KP_5> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<dead_macron>                                                                                  <5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<Multi_key><bar>                                                                               <5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<dead_macron>                                                                               <KP_5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<Multi_key><bar>                                                                            <KP_5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
 <dead_macron>                                                                                  <6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><bar>                                                                               <6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <dead_macron>                                                                               <KP_6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
@@ -12125,10 +12155,10 @@
 <Multi_key><bar>                                                                               <7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <dead_macron>                                                                               <KP_7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <Multi_key><bar>                                                                            <KP_7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
-<dead_macron>                                                                                  <8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<Multi_key><bar>                                                                               <8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<dead_macron>                                                                               <KP_8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<Multi_key><bar>                                                                            <KP_8> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<dead_macron>                                                                                  <8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><bar>                                                                               <8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<dead_macron>                                                                               <KP_8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><bar>                                                                            <KP_8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
 <dead_macron>                                                                                  <9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 <Multi_key><bar>                                                                               <9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 <dead_macron>                                                                               <KP_9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
@@ -12193,10 +12223,6 @@
 <Multi_key><bar>                                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <dead_macron>                                                                                  <o> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
 <Multi_key><bar>                                                                               <o> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
-<dead_macron>                                                                                  <P> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <P> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <p> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <p> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <dead_macron>                                                                                  <Q> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <Multi_key><bar>                                                                               <Q> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_macron>                                                                                  <q> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
@@ -12205,10 +12231,6 @@
 <Multi_key><bar>                                                                               <R> : "ɺ" U027A # LATIN SMALL LETTER TURNED R WITH LONG LEG
 <dead_macron>                                                                                  <r> : "ɼ" U027C # LATIN SMALL LETTER R WITH LONG LEG
 <Multi_key><bar>                                                                               <r> : "ɼ" U027C # LATIN SMALL LETTER R WITH LONG LEG
-<dead_macron>                                                                                  <S> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <S> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <s> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <s> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <dead_macron>                                                                                  <T> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <Multi_key><bar>                                                                               <T> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_macron>                                                                                  <t> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
@@ -12221,10 +12243,6 @@
 <Multi_key><bar>                                                                               <V> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_macron>                                                                                  <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <Multi_key><bar>                                                                               <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<dead_macron>                                                                                  <W> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <W> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <w> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <w> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <dead_macron>                                                                                  <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <Multi_key><bar>                                                                               <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <dead_macron>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
@@ -12361,12 +12379,9 @@
 #
 #   Ampersand as a base character supports the conjoining diacritic "︭" UFE2D.
 #
-#   The combining double macron below "͟" U035F has emdash as a base character,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "͟" U035F has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 #   Combining macron halves below – "︫" UFE2B, "︬" UFE2C – are supported on W
 #   as well as on all other available base letters, consistently with
@@ -12390,8 +12405,8 @@
 <Multi_key><bar><bar>                                                                   <EuroSign> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                             <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
 <Multi_key><bar><bar>                                                                  <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
-<dead_macron><dead_macron>                                                                    <at> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
-<Multi_key><bar><bar>                                                                         <at> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<dead_macron><dead_macron>                                                              <question> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<Multi_key><bar><bar>                                                                   <question> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                                <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <Multi_key><bar><bar>                                                                     <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                                     <A> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
@@ -12551,31 +12566,51 @@
 #
 #
 #*# STROKE
+#   stroke, diagonal stroke, oblique stroke, bar (lenient)
 #   dead_stroke
 #   former dead_longsolidusoverlay
 #   Multi_key: ¦/
 #   Dchar: "ø" U00F8
 #
+#   Some letters occur both with a diagonal stroke and with an oblique stroke,
+#   where the diagonal stroke has the steep slant of a regular slash, while the
+#   oblique stroke is only slightly slanted, to such an extent that it might be
+#   referred to as an oblique bar, if keeping things straightforward wasn’t the
+#   best option. Yet prior to Unicode 16.0, the only letter occurring both with
+#   a diagonal stroke and an oblique stroke was "K", where a diagonal stroke is
+#   also short: "Ꝃ" UA742 LATIN CAPITAL LETTER K WITH DIAGONAL STROKE. But as
+#   Unicode 16.0 adds "Ꟍ" UA7CC LATIN CAPITAL LETTER S WITH DIAGONAL STROKE
+#   https://commons.wikimedia.org/wiki/File:Latin_letter_S_with_diagonal_stroke.svg
+#   alongside Unicode 6.0 "Ꞩ" UA7A8 LATIN CAPITAL LETTER S WITH OBLIQUE STROKE,
+#   the scheme is now clear, and double press is dedicated to oblique stroke.
+#   However, empty slots in single press are populated conveniently for a
+#   streamlined user experience.
+#   See #^# OBLIQUE_STROKE
+#
 #   In X11 XKB, the diacritic called “stroke” had an ambiguous shape, until the
-#   horizontal stroke and the oblique stroke were disambiguated, by introducing
+#   horizontal stroke and the slanted strokes were disambiguated by introducing
 #   the new dead_longsolidusoverlay keysym named after U0338 "̸" COMBINING LONG
 #   SOLIDUS OVERLAY as one of four extra dead elements for the German T3 layout
 #   designed around 2010 and standardized in 2012 as DIN 2137:2012.
+#   https://de.wikipedia.org/wiki/DIN_2137#Neufassung_2012
+#   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/6d4acb0e3a6568a8faaa651d4e3d32f917b9067b
 #
-#   The use of dead_stroke for horizontal, rather than using it for oblique and
-#   introducing *dead_bar/*dead_shortstrokeoverlay to cover horizontal, appears
-#   to be fueled by the name of the combining diacritic and the character names
-#   containing WITH STROKE with the meaning of WITH BAR, or BARRED like UAB33,
-#   or like in the Unicode 1.0 name of U0197: “LATIN CAPITAL LETTER BARRED I”,
-#   that Unicode renamed to its ISO name “LATIN CAPITAL LETTER I WITH STROKE”.
+#   The use of dead_stroke for horizontal, rather than for diagonal while
+#   introducing *dead_bar to cover horizontal, appears to be fueled by the name
+#   of the combining diacritic and the character names containing "WITH STROKE"
+#   with the meaning of WITH BAR, or BARRED, like UAB33 LATIN SMALL LETTER
+#   BARRED E, or in the Unicode 1.0 name of U0197 LATIN CAPITAL LETTER I WITH
+#   STROKE, previously LATIN CAPITAL LETTER BARRED I.
+#   See # # Bar and stroke diacritics
 #
 #   But since dead_longsolidusoverlay was removed in 2023, dead_stroke is used
 #   for slash-shaped diacritics again.
-#   See # # Bar and stroke diacritics
+#   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/70
+#   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #
 #   For convenience, to account for this confusion, letters without a variant
 #   with stroke have their barred variant duplicated in this dead key as well,
-#   to make for a cooler user experience.
+#   to make it more lenient, for a streamlined user experience.
 #
 #   Digits yield mathematical slashes without space termination.
 #   See # # Design of math sequences
@@ -12584,15 +12619,14 @@
 #   As a spacing counterpart of the long solidus diacritic "̸" U0338, the
 #   division slash "∕" U2215 is picked rather than Chinantec "ꜘ" UA718, that
 #   would be too unexpected and disrupting, with too far-fetched a rationale.
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are consistently
-#   supported across three matching dead keys, with quotedbl and EuroSign as
-#   base characters.
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
+#   consistently supported across four matching dead keys, with quotedbl and
+#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
+#   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
 #   See #*# MACRON
-#   See #*# STROKE
 #   See #*# BAR
-#   See #^# SHORT_STROKE
-#   See #^# TRIPLE_STROKE
+#   See #*# HORN
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
@@ -12626,46 +12660,46 @@
 <Multi_key><slash>                                                                             <A> : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
 <dead_stroke>                                                                                  <a> : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
 <Multi_key><slash>                                                                             <a> : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
-<dead_stroke>                                                                                  <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE (cool)
-<Multi_key><slash>                                                                             <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE (cool)
-<dead_stroke>                                                                                  <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE (cool)
-<Multi_key><slash>                                                                             <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE (cool)
+<dead_stroke>                                                                                  <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <B> : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE (lenient)
+<dead_stroke>                                                                                  <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <b> : "ƀ" U0180 # LATIN SMALL LETTER B WITH STROKE (lenient)
 <dead_stroke>                                                                                  <C> : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
 <Multi_key><slash>                                                                             <C> : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
 <dead_stroke>                                                                                  <c> : "ȼ" U023C # LATIN SMALL LETTER C WITH STROKE
 <Multi_key><slash>                                                                             <c> : "ȼ" U023C # LATIN SMALL LETTER C WITH STROKE
-<dead_stroke>                                                                                  <D> : "Đ" U0110 # LATIN CAPITAL LETTER D WITH STROKE (cool)
-<Multi_key><slash>                                                                             <D> : "Đ" U0110 # LATIN CAPITAL LETTER D WITH STROKE (cool)
-<dead_stroke>                                                                                  <d> : "đ" U0111 # LATIN SMALL LETTER D WITH STROKE (cool)
-<Multi_key><slash>                                                                             <d> : "đ" U0111 # LATIN SMALL LETTER D WITH STROKE (cool)
+<dead_stroke>                                                                                  <D> : "Đ" U0110 # LATIN CAPITAL LETTER D WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <D> : "Đ" U0110 # LATIN CAPITAL LETTER D WITH STROKE (lenient)
+<dead_stroke>                                                                                  <d> : "đ" U0111 # LATIN SMALL LETTER D WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <d> : "đ" U0111 # LATIN SMALL LETTER D WITH STROKE (lenient)
 <dead_stroke>                                                                                  <E> : "Ɇ" U0246 # LATIN CAPITAL LETTER E WITH STROKE
 <Multi_key><slash>                                                                             <E> : "Ɇ" U0246 # LATIN CAPITAL LETTER E WITH STROKE
 <dead_stroke>                                                                                  <e> : "ɇ" U0247 # LATIN SMALL LETTER E WITH STROKE
 <Multi_key><slash>                                                                             <e> : "ɇ" U0247 # LATIN SMALL LETTER E WITH STROKE
-<dead_stroke>                                                                                  <F> : "Ꞙ" UA798 # LATIN CAPITAL LETTER F WITH STROKE (cool)
-<Multi_key><slash>                                                                             <F> : "Ꞙ" UA798 # LATIN CAPITAL LETTER F WITH STROKE (cool)
-<dead_stroke>                                                                                  <f> : "ꞙ" UA799 # LATIN SMALL LETTER F WITH STROKE (cool)
-<Multi_key><slash>                                                                             <f> : "ꞙ" UA799 # LATIN SMALL LETTER F WITH STROKE (cool)
+<dead_stroke>                                                                                  <F> : "Ꞙ" UA798 # LATIN CAPITAL LETTER F WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <F> : "Ꞙ" UA798 # LATIN CAPITAL LETTER F WITH STROKE (lenient)
+<dead_stroke>                                                                                  <f> : "ꞙ" UA799 # LATIN SMALL LETTER F WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <f> : "ꞙ" UA799 # LATIN SMALL LETTER F WITH STROKE (lenient)
 <dead_stroke>                                                                                  <G> : "Ꞡ" UA7A0 # LATIN CAPITAL LETTER G WITH OBLIQUE STROKE
 <Multi_key><slash>                                                                             <G> : "Ꞡ" UA7A0 # LATIN CAPITAL LETTER G WITH OBLIQUE STROKE
 <dead_stroke>                                                                                  <g> : "ꞡ" UA7A1 # LATIN SMALL LETTER G WITH OBLIQUE STROKE
 <Multi_key><slash>                                                                             <g> : "ꞡ" UA7A1 # LATIN SMALL LETTER G WITH OBLIQUE STROKE
-<dead_stroke>                                                                                  <H> : "Ħ" U0126 # LATIN CAPITAL LETTER H WITH STROKE (cool)
-<Multi_key><slash>                                                                             <H> : "Ħ" U0126 # LATIN CAPITAL LETTER H WITH STROKE (cool)
-<dead_stroke>                                                                                  <h> : "ħ" U0127 # LATIN SMALL LETTER H WITH STROKE (cool)
-<Multi_key><slash>                                                                             <h> : "ħ" U0127 # LATIN SMALL LETTER H WITH STROKE (cool)
-<dead_stroke>                                                                                  <I> : "Ɨ" U0197 # LATIN CAPITAL LETTER I WITH STROKE (cool)
-<Multi_key><slash>                                                                             <I> : "Ɨ" U0197 # LATIN CAPITAL LETTER I WITH STROKE (cool)
-<dead_stroke>                                                                                  <i> : "ɨ" U0268 # LATIN SMALL LETTER I WITH STROKE (cool)
-<Multi_key><slash>                                                                             <i> : "ɨ" U0268 # LATIN SMALL LETTER I WITH STROKE (cool)
-<dead_stroke>                                                                                  <J> : "Ɉ" U0248 # LATIN CAPITAL LETTER J WITH STROKE (cool)
-<Multi_key><slash>                                                                             <J> : "Ɉ" U0248 # LATIN CAPITAL LETTER J WITH STROKE (cool)
-<dead_stroke>                                                                                  <j> : "ɉ" U0249 # LATIN SMALL LETTER J WITH STROKE (cool)
-<Multi_key><slash>                                                                             <j> : "ɉ" U0249 # LATIN SMALL LETTER J WITH STROKE (cool)
-<dead_stroke>                                                                                  <K> : "Ꞣ" UA7A2 # LATIN CAPITAL LETTER K WITH OBLIQUE STROKE
-<Multi_key><slash>                                                                             <K> : "Ꞣ" UA7A2 # LATIN CAPITAL LETTER K WITH OBLIQUE STROKE
-<dead_stroke>                                                                                  <k> : "ꞣ" UA7A3 # LATIN SMALL LETTER K WITH OBLIQUE STROKE
-<Multi_key><slash>                                                                             <k> : "ꞣ" UA7A3 # LATIN SMALL LETTER K WITH OBLIQUE STROKE
+<dead_stroke>                                                                                  <H> : "Ħ" U0126 # LATIN CAPITAL LETTER H WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <H> : "Ħ" U0126 # LATIN CAPITAL LETTER H WITH STROKE (lenient)
+<dead_stroke>                                                                                  <h> : "ħ" U0127 # LATIN SMALL LETTER H WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <h> : "ħ" U0127 # LATIN SMALL LETTER H WITH STROKE (lenient)
+<dead_stroke>                                                                                  <I> : "Ɨ" U0197 # LATIN CAPITAL LETTER I WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <I> : "Ɨ" U0197 # LATIN CAPITAL LETTER I WITH STROKE (lenient)
+<dead_stroke>                                                                                  <i> : "ɨ" U0268 # LATIN SMALL LETTER I WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <i> : "ɨ" U0268 # LATIN SMALL LETTER I WITH STROKE (lenient)
+<dead_stroke>                                                                                  <J> : "Ɉ" U0248 # LATIN CAPITAL LETTER J WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <J> : "Ɉ" U0248 # LATIN CAPITAL LETTER J WITH STROKE (lenient)
+<dead_stroke>                                                                                  <j> : "ɉ" U0249 # LATIN SMALL LETTER J WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <j> : "ɉ" U0249 # LATIN SMALL LETTER J WITH STROKE (lenient)
+<dead_stroke>                                                                                  <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
+<Multi_key><slash>                                                                             <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
+<dead_stroke>                                                                                  <k> : "ꝃ" UA743 # LATIN SMALL LETTER K WITH DIAGONAL STROKE
+<Multi_key><slash>                                                                             <k> : "ꝃ" UA743 # LATIN SMALL LETTER K WITH DIAGONAL STROKE
 <dead_stroke>                                                                                  <L> : "Ł" U0141 # LATIN CAPITAL LETTER L WITH STROKE
 <Multi_key><slash>                                                                             <L> : "Ł" U0141 # LATIN CAPITAL LETTER L WITH STROKE
 <dead_stroke>                                                                                  <l> : "ł" U0142 # LATIN SMALL LETTER L WITH STROKE
@@ -12678,10 +12712,10 @@
 <Multi_key><slash>                                                                             <O> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
 <dead_stroke>                                                                                  <o> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
 <Multi_key><slash>                                                                             <o> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
-<dead_stroke>                                                                                  <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE (cool)
-<Multi_key><slash>                                                                             <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE (cool)
-<dead_stroke>                                                                                  <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE (cool)
-<Multi_key><slash>                                                                             <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE (cool)
+<dead_stroke>                                                                                  <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE (lenient)
+<dead_stroke>                                                                                  <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE (lenient)
 <dead_stroke>                                                                                  <Q> : "Ꝙ" UA758 # LATIN CAPITAL LETTER Q WITH DIAGONAL STROKE
 <Multi_key><slash>                                                                             <Q> : "Ꝙ" UA758 # LATIN CAPITAL LETTER Q WITH DIAGONAL STROKE
 <dead_stroke>                                                                                  <q> : "ꝙ" UA759 # LATIN SMALL LETTER Q WITH DIAGONAL STROKE
@@ -12690,10 +12724,10 @@
 <Multi_key><slash>                                                                             <R> : "Ꞧ" UA7A6 # LATIN CAPITAL LETTER R WITH OBLIQUE STROKE
 <dead_stroke>                                                                                  <r> : "ꞧ" UA7A7 # LATIN SMALL LETTER R WITH OBLIQUE STROKE
 <Multi_key><slash>                                                                             <r> : "ꞧ" UA7A7 # LATIN SMALL LETTER R WITH OBLIQUE STROKE
-<dead_stroke>                                                                                  <S> : "Ꞩ" UA7A8 # LATIN CAPITAL LETTER S WITH OBLIQUE STROKE
-<Multi_key><slash>                                                                             <S> : "Ꞩ" UA7A8 # LATIN CAPITAL LETTER S WITH OBLIQUE STROKE
-<dead_stroke>                                                                                  <s> : "ꞩ" UA7A9 # LATIN SMALL LETTER S WITH OBLIQUE STROKE
-<Multi_key><slash>                                                                             <s> : "ꞩ" UA7A9 # LATIN SMALL LETTER S WITH OBLIQUE STROKE
+<dead_stroke>                                                                                  <S> : "Ꟍ" UA7CC # LATIN CAPITAL LETTER S WITH DIAGONAL STROKE
+<Multi_key><slash>                                                                             <S> : "Ꟍ" UA7CC # LATIN CAPITAL LETTER S WITH DIAGONAL STROKE
+<dead_stroke>                                                                                  <s> : "ꟍ" UA7CD # LATIN SMALL LETTER S WITH DIAGONAL STROKE
+<Multi_key><slash>                                                                             <s> : "ꟍ" UA7CD # LATIN SMALL LETTER S WITH DIAGONAL STROKE
 <dead_stroke>                                                                                  <T> : "Ⱦ" U023E # LATIN CAPITAL LETTER T WITH DIAGONAL STROKE
 <Multi_key><slash>                                                                             <T> : "Ⱦ" U023E # LATIN CAPITAL LETTER T WITH DIAGONAL STROKE
 <dead_stroke>                                                                                  <t> : "ⱦ" U2C66 # LATIN SMALL LETTER T WITH DIAGONAL STROKE
@@ -12706,14 +12740,14 @@
 <Multi_key><slash>                                                                             <V> : "Ꝟ" UA75E # LATIN CAPITAL LETTER V WITH DIAGONAL STROKE
 <dead_stroke>                                                                                  <v> : "ꝟ" UA75F # LATIN SMALL LETTER V WITH DIAGONAL STROKE
 <Multi_key><slash>                                                                             <v> : "ꝟ" UA75F # LATIN SMALL LETTER V WITH DIAGONAL STROKE
-<dead_stroke>                                                                                  <Y> : "Ɏ" U024E # LATIN CAPITAL LETTER Y WITH STROKE (cool)
-<Multi_key><slash>                                                                             <Y> : "Ɏ" U024E # LATIN CAPITAL LETTER Y WITH STROKE (cool)
-<dead_stroke>                                                                                  <y> : "ɏ" U024F # LATIN SMALL LETTER Y WITH STROKE (cool)
-<Multi_key><slash>                                                                             <y> : "ɏ" U024F # LATIN SMALL LETTER Y WITH STROKE (cool)
-<dead_stroke>                                                                                  <Z> : "Ƶ" U01B5 # LATIN CAPITAL LETTER Z WITH STROKE (cool)
-<Multi_key><slash>                                                                             <Z> : "Ƶ" U01B5 # LATIN CAPITAL LETTER Z WITH STROKE (cool)
-<dead_stroke>                                                                                  <z> : "ƶ" U01B6 # LATIN SMALL LETTER Z WITH STROKE (cool)
-<Multi_key><slash>                                                                             <z> : "ƶ" U01B6 # LATIN SMALL LETTER Z WITH STROKE (cool)
+<dead_stroke>                                                                                  <Y> : "Ɏ" U024E # LATIN CAPITAL LETTER Y WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <Y> : "Ɏ" U024E # LATIN CAPITAL LETTER Y WITH STROKE (lenient)
+<dead_stroke>                                                                                  <y> : "ɏ" U024F # LATIN SMALL LETTER Y WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <y> : "ɏ" U024F # LATIN SMALL LETTER Y WITH STROKE (lenient)
+<dead_stroke>                                                                                  <Z> : "Ƶ" U01B5 # LATIN CAPITAL LETTER Z WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <Z> : "Ƶ" U01B5 # LATIN CAPITAL LETTER Z WITH STROKE (lenient)
+<dead_stroke>                                                                                  <z> : "ƶ" U01B6 # LATIN SMALL LETTER Z WITH STROKE (lenient)
+<Multi_key><slash>                                                                             <z> : "ƶ" U01B6 # LATIN SMALL LETTER Z WITH STROKE (lenient)
 #
 #
 # # STROKE&GROUP_1
@@ -12736,6 +12770,10 @@
 <Multi_key><slash><numbersign>                                                           <greater> : "≯" U226F # NOT GREATER-THAN
 <dead_stroke><UEFD0>                                                                       <equal> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><slash><numbersign>                                                             <equal> : "≠" U2260 # NOT EQUAL TO
+<dead_stroke><UEFD0>                                                                           <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign>                                                                 <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0>                                                                           <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign>                                                                 <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 <dead_stroke><UEFD0>                                                                           <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign>                                                                 <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_stroke><UEFD0>                                                                           <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
@@ -12755,6 +12793,10 @@
 <Multi_key><slash><numbersign><numbersign>                                                 <equal> : "≢" U2262 # NOT IDENTICAL TO
 <dead_stroke><UEFD0><UEFD0>                                                                  <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><slash><numbersign><numbersign>                                                   <bar> : "∦" U2226 # NOT PARALLEL TO
+<dead_stroke><UEFD0><UEFD0>                                                                    <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><numbersign>                                                     <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0><UEFD0>                                                                    <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><numbersign>                                                     <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 <dead_stroke><UEFD0><UEFD0>                                                                    <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign><numbersign>                                                     <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_stroke><UEFD0><UEFD0>                                                                    <s> : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
@@ -12794,6 +12836,18 @@
 <Multi_key><slash><numbersign><KP_3>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_stroke><UEFD0><UEFD0><UEFD0>                                                           <bar> : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><slash><numbersign><numbersign><numbersign>                                       <bar> : "∦" U2226 # NOT PARALLEL TO
+<dead_stroke><UEFD0><3>                                                                        <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><3>                                                              <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0><KP_3>                                                                     <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><KP_3>                                                           <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0><UEFD0><UEFD0>                                                             <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><numbersign><numbersign>                                         <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0><3>                                                                        <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><3>                                                              <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0><KP_3>                                                                     <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><KP_3>                                                           <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<dead_stroke><UEFD0><UEFD0><UEFD0>                                                             <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+<Multi_key><slash><numbersign><numbersign><numbersign>                                         <l> : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 <dead_stroke><UEFD0><3>                                                                        <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <Multi_key><slash><numbersign><3>                                                              <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
 <dead_stroke><UEFD0><KP_3>                                                                     <o> : "ꬿ" UAB3F # LATIN SMALL LETTER OPEN O WITH STROKE
@@ -12810,6 +12864,10 @@
 #
 # # STROKE&GROUP_4
 #   Dchar: 
+#
+#   As of "ꬾ" UAB3E, Unicode 16.0 warns that “[t]his letter was encoded based
+#   on a misinterpretation of a low quality copy of Sievers 1901. It is not
+#   actually used in German dialectology.”
 #
 <dead_stroke><UEFD0><4>                                                                 <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><slash><numbersign><4>                                                       <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
@@ -12923,23 +12981,18 @@
 <Multi_key><equal><slash><numbersign><numbersign><numbersign>                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #
 #
-#^# SHORT_STROKE
+#^# OBLIQUE_STROKE
 #   dead_stroke double press
 #   Multi_key: ¦//
 #   Dchar: 
 #
-#   This is required because we have both "Ꞣ" UA7A2 LATIN CAPITAL LETTER K WITH
-#   OBLIQUE STROKE and "Ꝃ" UA742 LATIN CAPITAL LETTER K WITH DIAGONAL STROKE.
-#   Among the 3 other letters with diagonal stroke, "Ꝙ" UA758 "ꝙ" UA759 has the
-#   stroke through the descender, while "Ⱦ" U023E "ⱦ" U2C66 has the stroke from
-#   lower left to upper right, and "Ꝟ" UA75E "ꝟ" UA75F has it from there to the
-#   top. Consistently, "Ꝙ" UA758 "ꝙ" UA759 is duplicated here, and the dead key
-#   is called SHORT_STROKE rather than DIAGONAL_STROKE, while the other two are
-#   unconflictingly supported in dead_stroke single press.
+#   This double press virtual dead key is dedicated to letters with a slightly
+#   slanted stroke, some of which occur alongside letters with a steep slash,
+#   including those with a short stroke merely through the descender, both of
+#   which are supported in dead_stroke single press.
 #
 #   As a spacing modifier letter, "⟋" U27CB is picked for graphic consistency,
-#   although it is a math symbol, not a letter. Chinantec "ꜗ" UA717 would be
-#   too unexpected, inconsistent and disrupting.
+#   although it is a math symbol, not a letter.
 #
 <dead_stroke><dead_stroke>                                                                 <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <Multi_key><slash><slash>                                                                  <space> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
@@ -12951,17 +13004,29 @@
 <Multi_key><slash><slash>                                                                  <U202F> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <dead_stroke><dead_stroke>                                                            <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><slash><slash>                                                             <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<dead_stroke><dead_stroke>                                                                     <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
-<Multi_key><slash><slash>                                                                      <K> : "Ꝃ" UA742 # LATIN CAPITAL LETTER K WITH DIAGONAL STROKE
-<dead_stroke><dead_stroke>                                                                     <k> : "ꝃ" UA743 # LATIN SMALL LETTER K WITH DIAGONAL STROKE
-<Multi_key><slash><slash>                                                                      <k> : "ꝃ" UA743 # LATIN SMALL LETTER K WITH DIAGONAL STROKE
-<dead_stroke><dead_stroke>                                                                     <Q> : "Ꝙ" UA758 # LATIN CAPITAL LETTER Q WITH DIAGONAL STROKE
-<Multi_key><slash><slash>                                                                      <Q> : "Ꝙ" UA758 # LATIN CAPITAL LETTER Q WITH DIAGONAL STROKE
-<dead_stroke><dead_stroke>                                                                     <q> : "ꝙ" UA759 # LATIN SMALL LETTER Q WITH DIAGONAL STROKE
-<Multi_key><slash><slash>                                                                      <q> : "ꝙ" UA759 # LATIN SMALL LETTER Q WITH DIAGONAL STROKE
+<dead_stroke><dead_stroke>                                                                     <G> : "Ꞡ" UA7A0 # LATIN CAPITAL LETTER G WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <G> : "Ꞡ" UA7A0 # LATIN CAPITAL LETTER G WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <g> : "ꞡ" UA7A1 # LATIN SMALL LETTER G WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <g> : "ꞡ" UA7A1 # LATIN SMALL LETTER G WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <K> : "Ꞣ" UA7A2 # LATIN CAPITAL LETTER K WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <K> : "Ꞣ" UA7A2 # LATIN CAPITAL LETTER K WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <k> : "ꞣ" UA7A3 # LATIN SMALL LETTER K WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <k> : "ꞣ" UA7A3 # LATIN SMALL LETTER K WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <N> : "Ꞥ" UA7A4 # LATIN CAPITAL LETTER N WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <N> : "Ꞥ" UA7A4 # LATIN CAPITAL LETTER N WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <n> : "ꞥ" UA7A5 # LATIN SMALL LETTER N WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <n> : "ꞥ" UA7A5 # LATIN SMALL LETTER N WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <R> : "Ꞧ" UA7A6 # LATIN CAPITAL LETTER R WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <R> : "Ꞧ" UA7A6 # LATIN CAPITAL LETTER R WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <r> : "ꞧ" UA7A7 # LATIN SMALL LETTER R WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <r> : "ꞧ" UA7A7 # LATIN SMALL LETTER R WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <S> : "Ꞩ" UA7A8 # LATIN CAPITAL LETTER S WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <S> : "Ꞩ" UA7A8 # LATIN CAPITAL LETTER S WITH OBLIQUE STROKE
+<dead_stroke><dead_stroke>                                                                     <s> : "ꞩ" UA7A9 # LATIN SMALL LETTER S WITH OBLIQUE STROKE
+<Multi_key><slash><slash>                                                                      <s> : "ꞩ" UA7A9 # LATIN SMALL LETTER S WITH OBLIQUE STROKE
 #
 #
-# # SHORT_STROKE&GROUP_1
+# # OBLIQUE_STROKE&GROUP_1
 #   Lenient group selection
 #   Dchar: 
 #
@@ -12969,14 +13034,14 @@
 <Multi_key><slash><slash><numbersign>                                                 <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #
 #
-# # SHORT_STROKE&GROUP_2
+# # OBLIQUE_STROKE&GROUP_2
 #   Dchar: 
 #
 <dead_stroke><dead_stroke><UEFD0><UEFD0>                                              <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <Multi_key><slash><slash><numbersign><numbersign>                                     <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #
 #
-# # SHORT_STROKE&GROUP_3
+# # OBLIQUE_STROKE&GROUP_3
 #   Dchar: 
 #
 <dead_stroke><dead_stroke><UEFD0><3>                                                  <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
@@ -12987,28 +13052,28 @@
 <Multi_key><slash><slash><numbersign><numbersign><numbersign>                         <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 #
 #
-# # SHORT_STROKE&FLAG
+# # OBLIQUE_STROKE&FLAG
 #   Dchar: 
 #
 <dead_stroke><dead_stroke><UEFD7>                                                     <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal>                                                      <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 #
 #
-# # SHORT_STROKE&FLAG&GROUP_1
+# # OBLIQUE_STROKE&FLAG&GROUP_1
 #   Dchar: 
 #
 <dead_stroke><dead_stroke><UEFD7><UEFD0>                                              <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal><numbersign>                                          <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
-# # SHORT_STROKE&FLAG&GROUP_2
+# # OBLIQUE_STROKE&FLAG&GROUP_2
 #   Dchar: 
 #
 <dead_stroke><dead_stroke><UEFD7><UEFD0><UEFD0>                                       <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 <Multi_key><slash><slash><equal><numbersign><numbersign>                              <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 #
 #
-# # SHORT_STROKE&FLAG&GROUP_3
+# # OBLIQUE_STROKE&FLAG&GROUP_3
 #   Dchar: 
 #
 <dead_stroke><dead_stroke><UEFD7><UEFD0><3>                                           <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
@@ -13024,18 +13089,18 @@
 #   Multi_key: ¦///
 #   Dchar: 
 #
-#   This is required because we have a combining deletion mark: "᷻" U1DFB, that
-#   is a triple solidus. The spacing counterpart, although a math symbol, is
-#   consistent with the graphic.
+#   This may be useful as we have a combining deletion mark: "᷻" U1DFB, that
+#   is a triple solidus. As a spacing counterpart, "␥" U2425 is consistent
+#   with the graphic.
 #
 <dead_stroke><dead_stroke><dead_stroke>                                                    <space> : "᷻" U1DFB # COMBINING DELETION MARK
 <Multi_key><slash><slash><slash>                                                           <space> : "᷻" U1DFB # COMBINING DELETION MARK
 <dead_stroke><dead_stroke><dead_stroke>                                                    <U200B> : "᷻" U1DFB # COMBINING DELETION MARK
 <Multi_key><slash><slash><slash>                                                           <U200B> : "᷻" U1DFB # COMBINING DELETION MARK
-<dead_stroke><dead_stroke><dead_stroke>                                             <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><slash><slash><slash>                                                    <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<dead_stroke><dead_stroke><dead_stroke>                                                    <U202F> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><slash><slash><slash>                                                           <U202F> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<dead_stroke><dead_stroke><dead_stroke>                                             <nobreakspace> : "␥" U2425 # SYMBOL FOR DELETE FORM TWO
+<Multi_key><slash><slash><slash>                                                    <nobreakspace> : "␥" U2425 # SYMBOL FOR DELETE FORM TWO
+<dead_stroke><dead_stroke><dead_stroke>                                                    <U202F> : "␥" U2425 # SYMBOL FOR DELETE FORM TWO
+<Multi_key><slash><slash><slash>                                                           <U202F> : "␥" U2425 # SYMBOL FOR DELETE FORM TWO
 #
 #
 #*# RING_ABOVE
@@ -13045,8 +13110,17 @@
 #
 #   Supports combining half rings with parentheses as base characters.
 #
+#   Supports spacing right, left, raised, centered half rings, based on digits,
+#   with numpad mnemonics:
+#
+#       4  "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING
+#       6  "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING
+#       7  "ʿ" U02BF MODIFIER LETTER LEFT HALF RING
+#       9  "ʾ" U02BE MODIFIER LETTER RIGHT HALF RING
+#
 #   Based on digits, supports asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042,
-#   used as footnote indicators, as well as the asterisk operator "∗" U2217.
+#   used as footnote indicators, as well as the asterisk operator "∗" U2217 by
+#   "0", "5" and "8".
 #
 #   Supports also discouraged precomposed temperature units.
 #
@@ -13083,10 +13157,30 @@
 <Multi_key><asterisk>                                                                          <3> : "⁂" U2042 # ASTERISM
 <dead_abovering>                                                                            <KP_3> : "⁂" U2042 # ASTERISM
 <Multi_key><KP_Multiply>                                                                    <KP_3> : "⁂" U2042 # ASTERISM
-<dead_abovering>                                                                               <4> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><asterisk>                                                                          <4> : "∗" U2217 # ASTERISK OPERATOR
-<dead_abovering>                                                                            <KP_4> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><KP_Multiply>                                                                    <KP_4> : "∗" U2217 # ASTERISK OPERATOR
+<dead_abovering>                                                                               <4> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<Multi_key><asterisk>                                                                          <4> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<dead_abovering>                                                                            <KP_4> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<Multi_key><KP_Multiply>                                                                    <KP_4> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<dead_abovering>                                                                               <5> : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key><asterisk>                                                                          <5> : "∗" U2217 # ASTERISK OPERATOR
+<dead_abovering>                                                                            <KP_5> : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key><KP_Multiply>                                                                    <KP_5> : "∗" U2217 # ASTERISK OPERATOR
+<dead_abovering>                                                                               <6> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<Multi_key><asterisk>                                                                          <6> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_abovering>                                                                            <KP_6> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<Multi_key><KP_Multiply>                                                                    <KP_6> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
+<dead_abovering>                                                                               <7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
+<Multi_key><asterisk>                                                                          <7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
+<dead_abovering>                                                                            <KP_7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
+<Multi_key><KP_Multiply>                                                                    <KP_7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
+<dead_abovering>                                                                               <8> : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key><asterisk>                                                                          <8> : "∗" U2217 # ASTERISK OPERATOR
+<dead_abovering>                                                                            <KP_8> : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key><KP_Multiply>                                                                    <KP_8> : "∗" U2217 # ASTERISK OPERATOR
+<dead_abovering>                                                                               <9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
+<Multi_key><asterisk>                                                                          <9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
+<dead_abovering>                                                                            <KP_9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
+<Multi_key><KP_Multiply>                                                                    <KP_9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <dead_abovering>                                                                               <A> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
 <Multi_key><asterisk>                                                                          <A> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE
 <dead_abovering>                                                                               <a> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE
@@ -13314,7 +13408,7 @@
 #   See # # Notes on Unicode support
 #   See # # Introducing new-school input composition
 #
-#   Anyway, the multi-key equivalent of this way to input superscript digits
+#   Anyway, the multikey equivalent of this way to input superscript digits
 #   cannot be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and
 #   with the new sequence <Multi_key><less><8> introduced for the less frequent
 #   "♥" U2665, as of "⁸" U2078.
@@ -13366,12 +13460,9 @@
 #   Followed by asterisk, dead_circumflex provides a shortcut for 
 #   "⁂" U2042 ASTERISM, consistently with dead_diaeresis for "⁑" U2051.
 #
-#   The combining double circumflex "᷍" U1DCD has emdash as a base character,
-#   since the more mnemonic underscore conflicts with so many math symbols that
-#   would require disambiguation by leading space, that the ASCII compatibility
-#   of this base character would be too detrimental. The same holds true for
-#   equal. Therefore, as an unconflicting ASCII equivalent, the at sign is
-#   picked instead, at the expense of the “long” or “double” mnemonic.
+#   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
+#   the question mark as an unconflicting ASCII alternative, for a consistent
+#   input method across all dead keys featuring a double diacritic.
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
@@ -13398,8 +13489,8 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<dead_circumflex>                                                                             <at> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<Multi_key><less>                                                                             <at> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<dead_circumflex>                                                                       <question> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<Multi_key><less>                                                                       <question> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <Multi_key><less>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
@@ -13784,8 +13875,9 @@
 #   with a redlink in the “Palette Accent circonflexe souscrit” on Wikipédia.
 #   https://fr.wikipedia.org/wiki/Mod%C3%A8le:Palette_Accent_circonflexe_souscrit
 #
-#   "˿" U02FF MODIFIER LETTER LOW LEFT ARROW is supported by "\"" and "€", with
-#   a rationale combining low and less matching this arrow’s head.
+#   "˿" U02FF MODIFIER LETTER LOW LEFT ARROW has quotedbl and EuroSign as base
+#   characters, with a rationale combining low and less, matching this arrow’s
+#   head.
 #
 <dead_circumflex><dead_circumflex>                                                         <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><less>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
@@ -13874,7 +13966,7 @@
 #   the hacek dead key is also activatable by dead_circumflex triple press,
 #   following the logic that multiple dead key presses shift diacritics around
 #   and may also turn them. For portability, the full dead key content must be
-#   supported, as well as multi-key, even though this does not make sense.
+#   supported, as well as multikey, even though this does not make sense.
 #
 #   The triple dead_circumflex sequences are not added right in the HACEK dead
 #   key, because this file is also used as the source code for dead key tables.
@@ -14009,14 +14101,14 @@
 #
 #   However, this redundancy with the subscript dead key is not extended to the
 #   signs and parentheses, as the standard does not require these, and because
-#   their multi-key equivalents would conflict with many mathematical symbols.
+#   their multikey equivalents would conflict with many mathematical symbols.
 #   These would need to be disambiguated by leading space, screwing things up.
 #
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the hacek dead key is also activatable by dead_circumflex triple press,
 #   following the logic that multiple dead key presses shift diacritics around
 #   and may also turn them. For portability, the full dead key content must be
-#   supported, as well as multi-key, even though this does not make sense.
+#   supported, as well as multikey, even though this does not make sense.
 #
 #   While the most streamlined implementation would be by adding the triple
 #   dead_circumflex sequences here, for consistency the content is copied and
@@ -14259,7 +14351,7 @@
 #   See #*# HORN
 #
 #   Symbols other than "⹀" U2E40 DOUBLE HYPHEN cannot be supported in group 0,
-#   due to numerous multi-key conflicts. (With respect to this, mathematical
+#   due to numerous multikey conflicts. (With respect to this, mathematical
 #   symbols use <Multi_key><minus><equal>.)
 #
 #
@@ -14273,8 +14365,8 @@
 #
 #   MacOS supports an iterative dead key for continuous input, on triple press.
 #   As XKB has no support for iterative dead keys, the behavior of single press
-#   and triple press is swapped, with single press outputting an appended ZWNJ,
-#   and triple press outputting regional indicator symbol letters in isolation.
+#   and triple press is swapped, so that single press outputs an appended ZWNJ,
+#   and triple press outputs regional indicator symbol letters in isolation.
 #
 #   In en_US.UTF-8/Compose, sequences starting with ¦= conflict with currency
 #   symbols and with double acute, given that en_US.UTF-8/Compose uses ¦", not
@@ -14287,7 +14379,7 @@
 #   Auxiliary characters
 #
 #   Auxiliary characters are supported with base characters in synergy:
-#   The multi-key equivalents are impractical, but full ASCII equivalents
+#   The multikey equivalents are impractical, but full ASCII equivalents
 #   would conflict with mathematical symbols.
 #
 #   *  ZWNJ is used to prevent an ISO code letter pair from being displayed
@@ -14296,6 +14388,12 @@
 #      another class;
 #   *  Supporting the high surrogate is designed for portability, but on Linux
 #      and ChromeOS it is ineffective.
+#
+#   As a diacritic, we have "͇" U0347 COMBINING EQUALS SIGN BELOW, as there is
+#   no variant above, and as a flipped yet spacing counterpart there is the
+#   "˭" U02ED MODIFIER LETTER UNASPIRATED, while "꞊" UA78A MODIFIER LETTER
+#   SHORT EQUALS SIGN is consistently in *dead_bar double press.
+#   See #^# DOUBLE_BAR
 #
 <UEFD7>                                                                                    <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <Multi_key><equal>                                                                         <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
@@ -15840,7 +15938,7 @@
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
 #   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
 #
-#   The digits to reversed primes sequences add to the support by multi-key.
+#   The digits to reversed primes sequences add to the support by multikey.
 #   See # # Reversed primes
 #
 #   "̖" U0316 COMBINING GRAVE ACCENT BELOW is supported by ampersand, and its
@@ -16380,7 +16478,7 @@
 #
 #   Diaeresis also supports long dashes, with base characters on the upper row,
 #   Shift level, which makes sense because dead_diaeresis is on the base level
-#   of E05. Other facilities are available using multi-key.
+#   of E05. Other facilities are available using multikey.
 #   See # # Dashes and hyphens
 #   See # # Long dashes
 #
@@ -16388,12 +16486,12 @@
 #   consistently with dead_circumflex for "⁂" U2042 ASTERISM.
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
-#   and "¦" U00A6 BROKEN BAR repurposed as multi-key symbol, have quick access
+#   and "¦" U00A6 BROKEN BAR repurposed as multikey symbol, have quick access
 #   by dead_diaeresis followed by slash, or backslash respectively (not bar,
 #   due to conflicts with the diaeresis and macron virtual dead keys).
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
-#   See # # Symbols for multi-key and composition
+#   See # # Symbols for multikey and composition
 #
 #   "¦" U00A6 is also in group 12 of |.
 #   See # # C10
@@ -16401,7 +16499,7 @@
 #   Superscript digits, formerly in dead_circumflex, are also supported for the
 #   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
 #   key is not extended to the signs and parentheses since NF Z71-300:2019 does
-#   not require these, and their multi-key equivalents would conflict with many
+#   not require these, and their multikey equivalents would conflict with many
 #   mathematical symbols. that would need to be disambiguated by leading space.
 #   See #*# CIRCUMFLEX
 #
@@ -16428,8 +16526,8 @@
 <Multi_key><colon>                                                                    <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                            <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-<dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
-<Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multi-key symbol
+<dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
@@ -16651,7 +16749,7 @@
 #   plus several composed letters.
 #
 #   As the diaeresis below has no spacing clone, "˸" U02F8 is provided instead,
-#   based on its multi-key equivalent.
+#   based on its multikey equivalent.
 #
 <dead_diaeresis><dead_diaeresis>                                                           <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
 <Multi_key><colon><colon>                                                                  <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
@@ -16692,7 +16790,7 @@
 #   Numbers 1..10 followed by a period are in dead_cedilla.
 #   See #*# CEDILLA
 #
-#   For convenience, the multi-key sequence ¦§ is also supported to account for
+#   For convenience, the multikey sequence ¦§ is also supported to account for
 #   the mapping of the section sign on level 3 of B10 in French mode for the
 #   synergy with digits and keyboard backcompat.
 #
