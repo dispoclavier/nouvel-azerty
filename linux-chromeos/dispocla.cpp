@@ -1,9 +1,9 @@
-//                       Date: 2024-09-08T0818+0200
+//                       Date: 2024-09-15T0525+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
 //                   Language: C-like
-//                Description: XKB character key allocation tables
+//                Description: XKB key allocation tables
 //                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
 //
 //               Project name: Dispoclavier
@@ -625,6 +625,13 @@ xkb_symbols "kbfrFRs" {
 	// for being mapped on keyboard layouts beyond the Breton CʼHWERTY, as an
 	// all-in-one sequence with uppercase and titlecase.
 	//
+	// Level: 1        2        3        5        4        6        7        8
+	// Index: 1        2        3        4        5        6        7        8
+	//
+	//                                   Graphic numpad
+	//                          ASCII symbol .... Dead key
+	//        Latin letter ............................... Abbreviation indicator
+	//
 	//
 	// Superscript letters
 	//
@@ -640,14 +647,29 @@ xkb_symbols "kbfrFRs" {
 	// As ordinal indicators, ᵈ, ᵉ, ʳ, and ˢ are in Unicode CLDR since v34 (2018)
 	// for the French locale, waiting for the other locales to follow up.
 	// https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
-	// https://github.com/unicode-org/cldr/blob/release-42/common/main/fr.xml#L1526
+	// https://github.com/unicode-org/cldr/blob/release-45/common/main/fr.xml#L1528
 	//
-	// Level: 1        2        3        5        4        6        7        8
-	// Index: 1        2        3        4        5        6        7        8
 	//
-	//                                   Graphic numpad
-	//                          ASCII symbol .... Dead key
-	//        Latin letter ............................... Abbreviation indicator
+	// Apostrophes
+	//
+	// Both the preferred punctuation apostrophe "’" U2019 <rightsinglequotemark>
+	// and the ASCII single quote "'" U0027 <apostrophe> are featured on two base
+	// level live key positions: E04, because this is the traditional apostrophe
+	// key, or remapped on C11, and E05 because this is traditionally the opening
+	// parenthesis, that has its closing counterpart on E11 repurposed for the at
+	// sign required on base level, and that becomes available thanks to moving
+	// both opening and closing parentheses together on C03 and C04, level 3; or
+	// C11, when the keyboard is in ASCII mode.
+	//
+	// The letter apostrophe "ʼ" U02BC, used in Breton as part of the trigraph
+	// "cʼh", is used in the Breton trigraph <c_h> and is featured in group 1 of
+	// the ASCII apostrophe as well as in group 1 of the punctuation apostrophe.
+	//
+	// Mapping both the punctuation apostrophe and the ASCII apostrophe on two
+	// base level positions is usually frowned upon, but this is the only way
+	// to reconcile two competing requirements that are equally advocated, due to
+	// the frequency and usefulness of both punctuation and ASCII apostrophes.
+	// https://listengine.tuxfamily.org/ergodis.org/discussions/2016/11/msg00152.html
 	//
 	//
 	// Format controls
@@ -750,13 +772,13 @@ xkb_symbols "kbfrFRs" {
 	key <AE04> {
 		[rightsinglequotemark,              emdash,                   4,           braceleft,                   4,               U2074,               UEFC4,               UEFC4 ],
 		[                   4,                   4,                   4,               U2074,                   4,               U2074,               U2084,               UEFC4 ]
-	}; // U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4 4️⃣ keycap 4 emoji
+	}; // rightsinglequotemark: see Apostrophes; U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4 4️⃣ keycap 4 emoji
 
 	key <AE05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          apostrophe,               U00AD,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
 		[                   5,                   5,                   5,               U2075,                   5,               U2075,               U2085,               UEFC5 ]
-	}; // U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
+	}; // apostrophe: see Apostrophes; U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
 
 	key <AE06> {
 		[               minus,               U2011,                   6,                 bar,                   6,               U2076,               UEFC6,               UEFC6 ],
