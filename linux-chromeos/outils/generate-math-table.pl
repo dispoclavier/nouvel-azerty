@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-09-15T2104+0200
+# 2024-09-15T2109+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -47,6 +47,8 @@ my $names_file_path       = 'names/ListeNoms.txt';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
+my $missing_count         = 0;
+my $missing_cp            = '';
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -184,6 +186,10 @@ while ( my $line = <INPUT> ) {
 					}
 					close( NAMES );
 				}
+				unless ( $descrip ) {
+					++$missing_count;
+					$missing_cp .= $cp . ', ';
+				}
 				$tooltip = $descrip . " U+$cp";
 				$anchor  = 'U+' . $cp;
 				$regex   = quotemeta( $anchor );
@@ -216,3 +222,9 @@ print( "Closed file $output_path.\n" );
 print( "Math table generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
+if ( $missing_count > 0 ) {
+	print( "Not localized: $missing_count names.\n" );
+	print( "Affected code points: $missing_cp.\n" );
+} else {
+	print( "All names localized.\n" );
+}
