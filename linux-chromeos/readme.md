@@ -215,7 +215,7 @@ Alors que les exposants de toutes les minuscules servent d’indicateurs d’abr
 
 L’espace normale en Minuscule y est aussi en Majuscule comme sur l’AZERTY traditionnel, pour la synergie avec les grandes ponctuations espacées, tandis que les deux [espaces insécables](#espaces) les plus utiles sont en AltFr pour la fine, et en AltGr pour la justifiante, l’espace insécable tout court, qui dans les traitements de texte n’est justifiante que dans Word 2013, qui disparaît souvent au copier-coller, et qui dysfonctionne dans de nombreux logiciels, mais qui est néanmoins indispensable en français aussi, là où l’espace fine insécable ne convient pas.
 
-Aucune espace importante n’est disposée sur Maj + AltGr + Espace, où se trouve l’espace nulle, aussi appelée césure conditionnelle U+200B, qui est utile pour fragmenter les URL une fois converties en hyperlien, pour leur affichage dans les navigateurs non conformes à Unicode qui spécifie que l’oblique doit fonctionner comme les traits d’union.
+Aucune espace importante n’est disposée sur Maj + AltGr + Espace, où se trouve l’espace nulle, aussi appelée césure conditionnelle U+200B, qui est utile pour fragmenter les URL une fois converties en hyperlien, pour leur affichage dans les navigateurs non conformes à Unicode qui [spécifie](https://www.unicode.org/reports/tr14/#SY) qu’à partir d’une certaine longueur, l’oblique doit fonctionner comme le trait d’union.
 
 ### Autres symboles
 
@@ -237,23 +237,23 @@ En mode ASCII, quand les chiffres en indice sont en AltGr + AltFr, ces indic
 
 En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symboles monétaires supplémentaires sur les touches dont les symboles ASCII ne sont pas nécessaires en AltFr : les symboles de multiplication et de division sur [C] et [V] dans la prolongation de l’oblique sur [W] et de l’astérisque sur [X], le signe moins sur [T] au-dessus du tiret-moins ASCII sur [G], le symbole livre sur [R] comme Royaume-Uni à côté du symbole euro, et le symbole yen sur [Y].
 
-#### Barre de fraction
+##### Opérateur point
+
+L’opérateur point « ⋅ » U+22C5 est sur AltGr + AltFr + [X], et aussi dans le groupe 1 du deux-points, et dans le groupe 4 du point.
+
+##### Barre de fraction
 
 La barre de fraction U+2044 est sur AltGr + AltFr + [F]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire dans les logiciels conformes comme Firefox.
 
 La partie entière peut être séparée par le gluon sur AltGr + AltFr + [G], ou par l’antiliant sur AltGr + AltFr + [Q].
 
-#### Symbole rapport
+##### Symbole rapport
 
 Contrairement à beaucoup d’autres doublons inutiles pour lesquels même Unicode est incapable de donner une bonne raison, le symbole rapport « ∶ » ne ressemble que superficiellement à un deux-points. Voici le symbole rapport et le deux-points : « ∶: ».
 
 Car selon les polices, soit les deux points sont plus rapprochés, soit le symbole est surélevé et plus haut afin de s’aligner sur les chiffres (« 2∶3 »), non sur les minuscules comme le deux-points (« b:c »).
 
 C’est pourquoi le symbole rapport a relayé le symbole racine carrée sur AltGr + AltFr + [R] à la sortie de la version 4.1.0, sachant que les racines carrée, cubique et quatrième sont dans les groupes 2, 3 et 4 de l’oblique inverse sur [R].
-
-### Émojis
-
-Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent, parce que cela doit fonctionner aussi sous Windows, système mal conçu, dysfonctionnel, dont les dispositions de clavier ont été programmées par un seul développeur, de qui les erreurs de conception ont durablement dégradé l’utilisabilité des ordinateurs de la majorité. Alors que tous les émojis codés sur deux ou trois octets à part les sinogrammes sont pris en charge par touches mortes dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), seuls quelques émoji codés sur quatre octets, triés sur le volet, sont pris en charge, sur touches vives uniquement.
 
 ### Séquences
 
@@ -292,6 +292,10 @@ En mode ASCII, le préfixe « &‍# » des références de caractères déci
 Le préfixe des codes hexadécimaux des caractères Unicode « U+ », utilisé en écriture courante, est sur AltGr + AltFr + [U].
 
 Le préfixe « \u{ » est sur AltGr + AltFr + [I], qui est aussi la touche de l’accolade ouvrante.
+
+### Émojis
+
+Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent, parce que cela doit fonctionner aussi sous Windows, système mal conçu, dysfonctionnel, dont les dispositions de clavier ont été programmées par un seul développeur, de qui les erreurs de conception ont durablement dégradé l’utilisabilité des ordinateurs de la majorité. Alors que tous les émojis codés sur deux ou trois octets à part les sinogrammes sont pris en charge par touches mortes dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), seuls quelques émoji codés sur quatre octets, triés sur le volet, sont pris en charge, sur touches vives uniquement.
 
 ## Systèmes
 
@@ -349,7 +353,7 @@ L’automatisation proposée par le script [activer.sh](https://github.com/dispo
 
 Après avoir mis en place l’automatisation, le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) alerte que l’activation est seulement « censée être automatisée, et en principe, dès l’ouverture de session, la disposition dernièrement utilisée devrait être activée. Mais cela ne fonctionne que pour lancer la commande dans un terminal, voire, accéder au script dans un navigateur de fichiers. Ces deux solutions de dépannage sont aussi prises en charge. Quand vous verrez le navigateur de fichiers à l’ouverture de session, cela signifie que deux tentatives d’activation ont déjà échoué, une silencieuse et une dans le terminal. Dans le navigateur de fichiers, le même script attendra que vous le lanciez manuellement. Ce script ouvrira un terminal, dans lequel il vous confirmera l’activation réussie. »
 
-Quant au bogue inconnu qui empêche xkbcomp de fonctionner sur invocation par un script lancé par [autostart](https://specifications.freedesktop.org/autostart-spec/latest/), il est peut-être expliqué par un faisceau de témoignages concordants trouvés [ici](https://forums.linuxmint.com/viewtopic.php?p=2373855#p2373855), [ici](https://forums.linuxmint.com/viewtopic.php?p=2376225&sid=0901bdee365911c4549d6dda5362842f#p2376225), [ici](https://forums.linuxmint.com/viewtopic.php?p=2368840#p2368840), [ici](https://forums.linuxmint.com/viewtopic.php?t=414342), [ici](https://ubuntuforums.org/showthread.php?t=2482076), [ici](https://forum.beyond3d.com/threads/linux-is-a-pile-of-shit.60616/), [ici](https://itvision.altervista.org/why.linux.is.not.ready.for.the.desktop.current.html) et [ici](https://castingoutnines.wordpress.com/2009/07/17/why-i-am-not-a-linux-user-any-more/), mais il faut aussi noter que la [spécification d’Autostart](https://specifications.freedesktop.org/autostart-spec/latest/) est toujours une « ébauche » en chantier, puisque la [version courante](https://specifications.freedesktop.org/autostart-spec/latest/) est la [version 0.5](https://specifications.freedesktop.org/autostart-spec/0.5/) datant de 2006.
+Quant au bogue inconnu qui empêche xkbcomp de fonctionner sur invocation par un script lancé par [autostart](https://specifications.freedesktop.org/autostart-spec/latest/), il est peut-être expliqué par un faisceau de témoignages concordants trouvés [ici](https://forums.linuxmint.com/viewtopic.php?p=2373855#p2373855), [ici](https://forums.linuxmint.com/viewtopic.php?p=2376225&sid=0901bdee365911c4549d6dda5362842f#p2376225), [ici](https://forums.linuxmint.com/viewtopic.php?p=2368840#p2368840), [ici](https://forums.linuxmint.com/viewtopic.php?t=414342), [ici](https://ubuntuforums.org/showthread.php?t=2482076), [ici](https://askubuntu.com/questions/437584/xkbcomp-command-at-startup-using-xinitrc), [ici](https://superuser.com/questions/644521/linux-mint-mate-use-xkbcomp-to-load-a-keyboard-layout-on-startup), [ici](https://forum.beyond3d.com/threads/linux-is-a-pile-of-shit.60616/), [ici](https://itvision.altervista.org/why.linux.is.not.ready.for.the.desktop.current.html) et [ici](https://castingoutnines.wordpress.com/2009/07/17/why-i-am-not-a-linux-user-any-more/), mais il faut aussi noter que la [spécification d’Autostart](https://specifications.freedesktop.org/autostart-spec/latest/) est toujours une « ébauche » en chantier, puisque la [version courante](https://specifications.freedesktop.org/autostart-spec/latest/) est la [version 0.5](https://specifications.freedesktop.org/autostart-spec/0.5/) datant de 2006.
 
 ### ChromeOS
 
@@ -431,7 +435,7 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 ### Usage du liant
 
-Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [Q] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [Q], le liant U+200D sur AltGr + AltFr + [W], et le gluon U+2060 sur AltGr + AltFr + [G]. Les trois sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A] et de l’arobase sur [Y], le liant dans le même groupe du symbole pour cent sur [Z], et le gluon dans le même groupe du tiret du 6 sur [G].
+Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [Q] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], et le gluon U+2060 sur AltGr + AltFr + [G]. Les trois sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A] et de l’arobase sur [Y], le liant dans le même groupe du symbole pour cent sur [Z], et le gluon dans le même groupe du tiret du 6 sur [G].
 
 L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’espace nulle.
 
