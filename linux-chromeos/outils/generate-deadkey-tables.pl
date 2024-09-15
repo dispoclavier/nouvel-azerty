@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-08-23T0618+0200
+# 2024-09-15T2045+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
@@ -61,6 +61,8 @@ my $names_file_path       = 'names/ListeNoms.txt';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
+my $missing_count         = 0;
+my $missing_cp            = '';
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
@@ -306,7 +308,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/ # Wide-headed arrow high surrogate/ # Surrogat haut de flèche à pointe large/g;
 				$line =~ s/( # .*) (.) key emulation/$1 émulation de touche $2/g;
 				$line =~ s/( # .*) (\d\d?)th-ranking/$1 classé au rang $2/g;
-				$line =~ s/( # .*) \(cool\)/$1 pour une expérience utilisateur plus cool/g;
+				$line =~ s/( # .*) \(lenient\)/$1 pour une expérience utilisateur plus lisse/g;
 				$line =~ s/( # .*) \(Pe̍h-ōe-jī orthography\)/$1 (orthographe Pe̍h-ōe-jī)/g;
 				$line =~ s/( # .*) affected by glyph like (U\+[0-9A-F]{4,5}) disturbance/$1 victime d’une confusion de glyphes, s’affiche comme $2/g;
 				$line =~ s/( # .*) ALA-LC for/$1 ALA-LC pour/g;
@@ -328,7 +330,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) Dutch/$1 néerlandais/g;
 				$line =~ s/( # .*) emoji style/$1 style émoji/g;
 				$line =~ s/( # .*) emoji with skin tone support/$1 émoji avec prise en charge de la couleur de peau/g;
-				$line =~ s/( # .*) emoji/$1 émoji/g;
 				$line =~ s/( # .*) engaged, betrothed, wedding ring/$1 fiancé, fiancée, alliance/g;
 				$line =~ s/( # .*) ergonomic mapping/$1 disposition ergonomique/g;
 				$line =~ s/( # .*) Esperanto/$1 espéranto/g;
@@ -393,7 +394,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) record button/$1 bouton d’enregistrement/g;
 				$line =~ s/( # .*) red emoji/$1 émoji rouge/g;
 				$line =~ s/( # .*) red heart/$1 cœur rouge/g;
-				$line =~ s/( # .*) repurposed as Multi_key symbol/$1 utilisé comme symbole de composition/g;
+				$line =~ s/( # .*) repurposed as multikey symbol/$1 utilisé comme symbole de composition/g;
 				$line =~ s/( # .*) rescue worker’s helmet/$1 casque de secouriste/g;
 				$line =~ s/( # .*) reverse button/$1 bouton marche arrière/g;
 				$line =~ s/( # .*) Romanized Avestan/$1 avestique romanisé/g;
@@ -414,6 +415,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) twice/$1 deux fois/g;
 				$line =~ s/( # .*) voiceless alveolar trill/$1 consonne roulée alvéolaire sourde/g;
 				$line =~ s/( # .*) Yoruba in current Nigerian alphabet/$1 yoruba avec l’alphabet nigérian actuel/g;
+				$line =~ s/( # .*) emoji/$1 émoji/g;
 				$line =~ s/( # .*\w); /$1 ; /g;
 
 				unless ( $line =~ m/: +"surrogat_haut_U"/u ) {
@@ -447,9 +449,9 @@ while ( my $line = <INPUT> ) {
 									$descrip = $des_line;
 									++$descriptors_count;
 									last;
-									close( DESCRIP );
 								}
 							}
+							close( DESCRIP );
 						}
 						unless ( $descrip ) {
 							open( NAMES, '<', $names_file_path ) or die $!;
@@ -460,13 +462,17 @@ while ( my $line = <INPUT> ) {
 									$descrip = $name_line;
 									++$names_count;
 									last;
-									close( NAMES );
 								}
 							}
+							close( NAMES );
 						}
-						$tooltip = $tooltip . $descrip . " U+$cp\n";
-						$ucodes  = $ucodes . "U+$cp<br />";
-						$anchor  = $anchor . 'U+' . $cp . '-';
+						unless ( $descrip ) {
+							++$missing_count;
+							$missing_cp .= $cp . ', ';
+						}
+						$tooltip .= $descrip . " U+$cp\n";
+						$ucodes  .= "U+$cp<br />";
+						$anchor  .= 'U+' . $cp . '-';
 						$str     =~ s/.//u;
 					}
 					$tooltip =~ s/\n$//;
@@ -527,3 +533,9 @@ print( "Closed file $wholeoutput_path.\n" );
 print( "Dead key tables generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
+if ( $missing_count > 0 ) {
+	print( "Not localized: $missing_count names.\n" );
+	print( "Affected code points: $missing_cp.\n" );
+} else {
+	print( "All names localized.\n" );
+}
