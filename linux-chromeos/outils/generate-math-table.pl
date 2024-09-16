@@ -2,7 +2,7 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-09-15T2109+0200
+# 2024-09-16T2040+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multi-key sequences in
@@ -19,7 +19,11 @@
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
 # `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
-# In print, tooltips may be replaced with descriptors in the last column.
+# Characters missing from both are counted and listed with their line number
+# in `Compose.yml`.
+#
+# In print, Unicode character names may be replaced with descriptors in the
+# last column.
 #
 # The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
 # be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
@@ -90,9 +94,10 @@ print OUTPUT "<label for=\"print\"><div class=\"status\" title=\"$table_header_t
 print OUTPUT "<span class=\"fr\">$checkbox_checked</span><span class=\"en\">$checkbox_not_checked</span>$checkbox_label</div></label>\n";
 print OUTPUT "</th></tr></thead><tbody>\n";
 print OUTPUT "<!-- Symboles-mathématiques -->\n";
-my ( $str, $cp, $descrip, $tooltip, $anchor, @anchors, $regex, $test, $index );
+my ( @anchors, $anchor, $cp, $descrip, $index, $line_nb, $regex, $str, $test, $tooltip );
 
 while ( my $line = <INPUT> ) {
+	$line_nb = $.;
 	if ( $line =~ /START_MATH/ ) {
 		$parse_on = !0;
 	}
@@ -157,6 +162,7 @@ while ( my $line = <INPUT> ) {
 				$str     = $1;
 				$cp      = ord( $str );
 				$cp      = sprintf( "%X", $cp ); # To hex.
+				$cp      =~ s/^(.)$/000$1/;
 				$cp      =~ s/^(..)$/00$1/;
 				$cp      =~ s/^(...)$/0$1/;
 				$descrip = '';
@@ -188,7 +194,7 @@ while ( my $line = <INPUT> ) {
 				}
 				unless ( $descrip ) {
 					++$missing_count;
-					$missing_cp .= $cp . ', ';
+					$missing_cp .= $cp . ' (:' . $line_nb . ")\n";
 				}
 				$tooltip = $descrip . " U+$cp";
 				$anchor  = 'U+' . $cp;
@@ -222,9 +228,12 @@ print( "Closed file $output_path.\n" );
 print( "Math table generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
-if ( $missing_count > 0 ) {
+if ( $missing_count == 1 ) {
+	print( "Not localized: $missing_count name.\n" );
+	print( "Affected code point (at line number): $missing_cp" );
+} elsif ( $missing_count > 1 ) {
 	print( "Not localized: $missing_count names.\n" );
-	print( "Affected code points: $missing_cp.\n" );
+	print( "Affected code points (at line numbers): $missing_cp" );
 } else {
 	print( "All names localized.\n" );
 }
