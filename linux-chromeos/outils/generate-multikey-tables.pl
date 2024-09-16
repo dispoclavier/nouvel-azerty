@@ -3,7 +3,7 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-09-15T2045+0200
+# 2024-09-16T2041+0200
 # = last modified.
 #
 # Generates HTML tables of multi-key sequences from `Compose.yml`.
@@ -20,6 +20,8 @@
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
 # target locale as configured under `## Character names localization`.
 # `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
+# Characters missing from both are counted and listed with their line number
+# in `Compose.yml`.
 #
 # The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
 # be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
@@ -85,11 +87,12 @@ my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th col
 my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags             = "</tbody></table></figure>\n";
 my $section_partial_open = !1;
-my ( @anchors, $anchor, $comment, $cp, $descrip, $file_id, $index, $regex, $str, $test, $text, $tooltip, $ucodes );
+my ( @anchors, $anchor, $comment, $cp, $descrip, $file_id, $index, $line_nb, $regex, $str, $test, $text, $tooltip, $ucodes );
 
 print WHOLEOUTPUT $start_tags;
 
 while ( my $line = <INPUT> ) {
+	$line_nb = $.;
 	if ( $line =~ /START_MULTI_KEY/ ) {
 		$parsing_on = !0;
 	}
@@ -285,6 +288,7 @@ while ( my $line = <INPUT> ) {
 				until ( $str eq '' ) {
 					$cp      = ord( $str );
 					$cp      = sprintf( "%X", $cp ); # To hex.
+					$cp      =~ s/^(.)$/000$1/;
 					$cp      =~ s/^(..)$/00$1/;
 					$cp      =~ s/^(...)$/0$1/;
 					$descrip = '';
@@ -316,7 +320,7 @@ while ( my $line = <INPUT> ) {
 					}
 					unless ( $descrip ) {
 						++$missing_count;
-						$missing_cp .= $cp . ', ';
+						$missing_cp .= $cp . ' (:' . $line_nb . ")\n";
 					}
 					$tooltip .= $descrip . " U+$cp\n";
 					$ucodes  .= "U+$cp<br />";
@@ -363,9 +367,12 @@ print( "Closed file $wholeoutput_path.\n" );
 print( "Multi_key tables generated in $output_directory/.\n" );
 print( "Used $names_count times $names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
-if ( $missing_count > 0 ) {
+if ( $missing_count == 1 ) {
+	print( "Not localized: $missing_count name.\n" );
+	print( "Affected code point (at line number): $missing_cp" );
+} elsif ( $missing_count > 1 ) {
 	print( "Not localized: $missing_count names.\n" );
-	print( "Affected code points: $missing_cp.\n" );
+	print( "Affected code points (at line numbers): $missing_cp" );
 } else {
 	print( "All names localized.\n" );
 }
