@@ -260,8 +260,30 @@
 #   NARROW NO-BREAK SPACE U202F.
 #   https://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
-#   Imprimerie nationale (France) assumes that big punctuation is spaced out
-#   using either of these spaces:
+#   Indeed, U202F NNBSP, a.k.a. no-break thin space, is “a character that,
+#   despite being encoded for Mongolian with specific handling intended,
+#   was readily ripped off for use in French, Philippe Verdy reported,
+#   to that extent that it is actually an encoding error in Mongolian
+#   that brought the long-missing narrow non-breakable thin space into
+#   the UCS, in the block where it really belongs to, and where it had
+#   been encoded in the beginning if there had been no desire to keep
+#   it proprietary.
+#   That is the hidden (almost occult) fact where stances like “The
+#   NNBSP can be used to represent the narrow space occurring around
+#   punctuation characters in French typography, which is called an
+#   ‘espace fine insécable.’ ” (TUS) and “When NARROW NO-BREAK SPACE
+#   occurs in French text, it should be interpreted as an ‘espace fine
+#   insécable’.” (UAX #14) are stemming from. The underlying meaning
+#   as I understand it now is like: “The non-breakable thin space is
+#   usually a vendor-specific layout control in DTP applications; it’s
+#   also available via a TeX command. However, if you are interested
+#   in an interoperable representation, here’s a Unicode character you
+#   can use instead.”
+#   https://www.unicode.org/mail-arch/unicode-ml/y2019-m01/0146.html
+#
+#   Imprimerie nationale (France) assumes that big punctuation (a.k.a. double
+#   punctuation as of the subset it supports, i.e. without U2039, U203A) is
+#   spaced out using either of these spaces:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NBTSP U202F.
@@ -358,8 +380,15 @@
 #      French grouping separator changed from no-break space U+00A0 to
 #      narrow no-break space U+202F.
 #
-#   Still in CLDR, the narrow no-break space U+202F is the no-break thin space,
-#   since 2024-08-02T0242+0200, and its initialism is NBTSP.
+#   The other 50+ locales using a space as the numeric group separator —
+#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf#page=6&zoom=100,0,640
+#   — are expected to follow up soon. However, six years down the road, no more
+#   than one locale did so: Venetian (vec).
+#   https://www.unicode.org/cldr/charts/46/by_type/numbers.symbols.html#a1ef41eaeb6982d
+#
+#   In CLDR, the narrow no-break space U+202F is now the no-break thin space,
+#   since 2024-08-02T0242+0200, and its initialism is NBTSP. (This move towards
+#   more accurate descriptors is expected to reflect in other parts soon.)
 #   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
 #   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
@@ -499,13 +528,14 @@
 <UEF7F> : "\\x{" #
 #
 #
-# # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, UFEFF ZERO WIDTH NO-BREAK SPACE
+# # Automated punctuation spacing for fr-FR using U2009 TSP, UFEFF ZWNBSP
 #
 #   This is a workaround for an acceptable fallback, given in most fonts NBTSP
 #   has the same width as THIN SPACE, and THIN SPACE has line breaking class BA
 #   (break after). UFEFF ZERO WIDTH NO-BREAK SPACE is the BYTE ORDER MARK, and
 #   using it as a line break preventer is only a legacy workaround in case the
-#   recommended, more recent U2060 WORD JOINER is not supported.
+#   recommended, more recent U2060 WORD JOINER (Unicode 3.2, 2002) is not yet
+#   supported. Hence the indefinite “a word joiner” in L2/19-286, section 20.
 #   https://www.unicode.org/L2/L2019/19286-script-recs.pdf#page=14
 #
 #   This fallback works everywhere U2009 THIN SPACE and UFEFF ZERO WIDTH
