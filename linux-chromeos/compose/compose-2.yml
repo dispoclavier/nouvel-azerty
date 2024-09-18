@@ -4636,13 +4636,13 @@
 #
 #
 # # TILDE&AMPERSAND
-#   Dchar: 
+#   Dchar: "ǂ" U01C2
 #
 #   This new virtual dead key uses the synergy of the dead_tilde main instance,
 #   on key D11 level 3, with the ampersand on D10 level 3, according to the new
 #   ASCII symbols map on alphabetic keys.
 #
-#   The TILDE&AMPERSAND dead key is partly dedicated to African click letters,
+#   The TILDE&AMPERSAND dead key is partly dedicated to African click letters
 #   hopefully coming into the benefit of a consistent input method. Three of
 #   these have Latin equivalents in Zulu and are mapped on these letters, while
 #   another two use graphic mnemonics based on O and H, thought of as sideways.
@@ -4680,11 +4680,25 @@
 #   The ligature halves below are on L: "︧" UFE27, "︨" UFE28, while those above
 #   – "︠" UFE20, "︡" UFE21 – are on P, as the P key is nearly above the L key,
 #   and it benefits from the ampersand mnemonic.
-#   
 #
 #   By contrast, the "᫇" U1AC7 and "᷹" U1DF9 diacritics use graphic mnemonics on
 #   case insensitive W and U.
 #
+#   As of the combining diacritic and its spacing clone, the picks are the most
+#   iconic of both classes, for the combining diacritics  "⃤" U20E4 COMBINING
+#   ENCLOSING UPWARD POINTING TRIANGLE, and for the spacing letters, "ǃ" U01C3
+#   LATIN LETTER RETROFLEX CLICK, "q" in Zulu; while the "ǂ" U01C2 LATIN LETTER
+#   ALVEOLAR CLICK, not used in Zulu but fairly unambiguous, may be a good fit
+#   as a dead character.
+#
+<dead_tilde><ampersand>                                                                    <space> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<Multi_key><asciitilde><ampersand>                                                         <space> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<dead_tilde><ampersand>                                                                    <U200B> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<Multi_key><asciitilde><ampersand>                                                         <U200B> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<dead_tilde><ampersand>                                                             <nobreakspace> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
+<Multi_key><asciitilde><ampersand>                                                  <nobreakspace> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
+<dead_tilde><ampersand>                                                                    <U202F> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
+<Multi_key><asciitilde><ampersand>                                                         <U202F> : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
 <dead_tilde><ampersand>                                                              <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 <Multi_key><asciitilde><ampersand>                                                   <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 <dead_tilde><ampersand>                                                                <backslash> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
