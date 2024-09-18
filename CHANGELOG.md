@@ -2,6 +2,13 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.3.1 (projet)
+
+* Transformations : Tilde et perluète : Redonder "⃤" U+20E4 par espace, "ǃ" U+01C3 par espace insécable. compose-2.yml [200f140](https://github.com/dispoclavier/nouvel-azerty/commit/200f140f51a74d099094538508884a94f12e4dbf)
+* Documentation :
+	* Annoter le lambda latin nouveau dans Unicode 16.0. compose-3.yml [0a09f16](https://github.com/dispoclavier/nouvel-azerty/commit/0a09f168552723f476ad8fc6acfdad6c715037da)
+	* À propos de l’histoire tourmentée de l’espace fine insécable. compose-1.yml [1760222](https://github.com/dispoclavier/nouvel-azerty/commit/1760222baa5718774890688739d38ffbaf62821d)
+
 ## 4.3.0 (2024-09-15)
 
 Mise à jour vers Unicode 16.0, bouclage de la prise en charge de l’écriture latine.
