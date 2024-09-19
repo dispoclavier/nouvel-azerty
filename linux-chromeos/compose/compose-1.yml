@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.3.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.3.1" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -255,30 +255,27 @@
 #   thin space is used throughout.
 #   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
 #
-#   Philippe Verdy testified on the Unicode Public mailing list that the most
+#   Philippe Verdy reported on the Unicode Public mailing list that the most
 #   straightforward Unicode character representing this no-break thin space is
 #   NARROW NO-BREAK SPACE U202F.
 #   https://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
-#   Indeed, U202F NNBSP, a.k.a. no-break thin space, is “a character that,
-#   despite being encoded for Mongolian with specific handling intended,
-#   was readily ripped off for use in French, Philippe Verdy reported,
-#   to that extent that it is actually an encoding error in Mongolian
-#   that brought the long-missing narrow non-breakable thin space into
-#   the UCS, in the block where it really belongs to, and where it had
-#   been encoded in the beginning if there had been no desire to keep
-#   it proprietary.
-#   That is the hidden (almost occult) fact where stances like “The
-#   NNBSP can be used to represent the narrow space occurring around
-#   punctuation characters in French typography, which is called an
-#   ‘espace fine insécable.’ ” (TUS) and “When NARROW NO-BREAK SPACE
-#   occurs in French text, it should be interpreted as an ‘espace fine
-#   insécable’.” (UAX #14) are stemming from. The underlying meaning
-#   as I understand it now is like: “The non-breakable thin space is
-#   usually a vendor-specific layout control in DTP applications; it’s
-#   also available via a TeX command. However, if you are interested
-#   in an interoperable representation, here’s a Unicode character you
-#   can use instead.”
+#   Indeed, U202F NNBSP, a.k.a. no-break thin space, is a character that,
+#   despite being encoded for Mongolian with specific handling intended, was
+#   readily ripped off for use in French, Philippe Verdy reported, to that
+#   extent that it is actually an encoding error in Mongolian that brought
+#   the long-missing no-break thin space into the UCS, in the block that it
+#   actually belongs to, and where it had been encoded in the beginning if
+#   there had been no desire to keep it proprietary. That is the hidden (almost
+#   occult) fact where stances like “The NNBSP can be used to represent the
+#   narrow space occurring around punctuation characters in French typography,
+#   which is called an ‘espace fine insécable.’ ” (TUS) and “When NARROW
+#   NO-BREAK SPACE occurs in French text, it should be interpreted as an
+#   ‘espace fine insécable’.” (UAX #14) are stemming from. The underlying
+#   meaning is like: “The no-break thin space is usually a vendor-specific
+#   layout control in DTP applications; it’s also available via a TeX command.
+#   However, if you are interested in an interoperable representation, here’s
+#   a Unicode character you can use instead.”
 #   https://www.unicode.org/mail-arch/unicode-ml/y2019-m01/0146.html
 #
 #   Imprimerie nationale (France) assumes that big punctuation (a.k.a. double
