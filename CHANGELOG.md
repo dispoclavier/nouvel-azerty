@@ -2,12 +2,35 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.3.1 (projet)
+## 4.3.1 (2024-09-22)
 
-* Transformations : Tilde et perluète : Redonder "⃤" U+20E4 par espace, "ǃ" U+01C3 par espace insécable. compose-2.yml [200f140](https://github.com/dispoclavier/nouvel-azerty/commit/200f140f51a74d099094538508884a94f12e4dbf)
+* Composition :
+	* Adapter les séquences de "🅭" U+1F16D, "©" U+00A9 pour déboguer "©" U+00A9. compose-1.yml [cf47ccf](https://github.com/dispoclavier/nouvel-azerty/commit/cf47ccf1703b54cd0c7b116363632eef6964a769)
+	* Adapter les séquences de "№" U+2116 pour le déboguer. ibidem
+	* Adapter les séquences de "▾" U+25BE, "▿" U+25BF pour les déboguer. ibidem
+	* Adapter les séquences de "‰" U+2030 pour le déboguer. ibidem
+	* Adapter les séquences de "₱" U+20B1 pour le déboguer. ibidem
+	* Adapter les séquences de "₴" U+20B4 pour le déboguer. ibidem
+	* Adapter les séquences de "¤" U+00A4, "©" U+00A9 pour les déboguer. ibidem
+	* Adapter les séquences de "⇪" U+21EA, "⇪" U+2BB8 pour les déboguer. ibidem
+	* Adapter les séquences de "⇭" U+21ED pour l’intuitivité. ibidem
+	* Adapter les séquences de "⎄" U+2384 pour déboguer "℅" U+2105. ibidem
+	* Adapter les séquences de "‬" U+202C pour déboguer. ibidem
+	* Adapter les séquences de "€" U+20AC pour déboguer. ibidem
+	* Adapter les séquences de "℈" U+2108 pour déboguer. ibidem
+	* Adapter les séquences de "⟲" U+27F2 pour déboguer "ℷ" U+2137. ibidem
+	* Adapter les séquences de "♮" U+266E pour déboguer "♪" U+266A. ibidem
+	* Adapter les séquences de "♫" U+266B pour déboguer. ibidem
+	* Adapter les séquences de "⫛" U+2ADB pour déboguer "⫙" U+2AD9. ibidem
+	* Adapter les séquences de "⧵" U+29F5 pour déboguer "⦰" U+29B0. ibidem
+	* Adapter les séquences de "♣" U+2663 pour déboguer "⑧" U+2467. ibidem
+* Transformations :
+	* Rond en chef : Redonder "°" U+00B0 par "0" à la place de "∗" U+2217, qui est par "5" et par "8" et en composition. compose-2.yml [f1d465e](https://github.com/dispoclavier/nouvel-azerty/commit/f1d465e92b885ae0659bfaa5d3d418f18b7f2b13)
+	* Tilde et perluète : Redonder "⃤" U+20E4 par espace, "ǃ" U+01C3 par espace insécable. compose-2.yml [200f140](https://github.com/dispoclavier/nouvel-azerty/commit/200f140f51a74d099094538508884a94f12e4dbf)
 * Documentation :
+	* Annoter les symboles verset et répons "℣" U+2123, "℟" U+211F. compose-3.yml [922c0cd](https://github.com/dispoclavier/nouvel-azerty/commit/922c0cd65df9b747ad51aaf3125deb9fe6ff5486)
 	* Annoter le lambda latin "Ꟛ" U+A7DA, "ꟛ" U+A7DB nouveau dans Unicode 16.0. compose-3.yml [0a09f16](https://github.com/dispoclavier/nouvel-azerty/commit/0a09f168552723f476ad8fc6acfdad6c715037da)
-	* Annoter l’histoire tourmentée de l’espace fine insécable U202F. compose-1.yml [1760222](https://github.com/dispoclavier/nouvel-azerty/commit/1760222baa5718774890688739d38ffbaf62821d), [065cc9a](https://github.com/dispoclavier/nouvel-azerty/commit/065cc9ad20fd16e144d7c9c498e4e29a7f4d15d5)
+	* Annoter l’histoire tourmentée de l’espace fine insécable U+202F. compose-1.yml [1760222](https://github.com/dispoclavier/nouvel-azerty/commit/1760222baa5718774890688739d38ffbaf62821d), [065cc9a](https://github.com/dispoclavier/nouvel-azerty/commit/065cc9ad20fd16e144d7c9c498e4e29a7f4d15d5)
 	* Mettre à jour le dump de la feuille de calcul des groupes des lettres. compose-3.yml [2be2cb3](https://github.com/dispoclavier/nouvel-azerty/commit/2be2cb3a680f9fd36634d5a5be63764843b3c961)
 	* Vérifier et déboguer les tableaux de touches mortes. generate-deadkey-tables.pl [4ae76f8](https://github.com/dispoclavier/nouvel-azerty/commit/4ae76f8964d06ff27d4d7e71eaea3d3455421088), [f2cccfa](https://github.com/dispoclavier/nouvel-azerty/commit/f2cccfa397e8868b3b1772aa1249a13e8ad7785d), generate-math-table.pl [14d4fee](https://github.com/dispoclavier/nouvel-azerty/commit/14d4feeeca766cb1a5ec3d4248c68cfba1833b28), [6928407](https://github.com/dispoclavier/nouvel-azerty/commit/6928407c1d24fc3723c1aa67e11c214a47b3b6b3), [4990388](https://github.com/dispoclavier/nouvel-azerty/commit/49903883bfb3ebf0676a56ea4c36e51fde4225cd), generate-multikey-tables.pl [fb2a13b](https://github.com/dispoclavier/nouvel-azerty/commit/fb2a13b6d0911ac898fc88bf3d67a84da1479c7a), [8daf19a](https://github.com/dispoclavier/nouvel-azerty/commit/8daf19ae6a320071325fb8f73538a368879b07a1)
 
