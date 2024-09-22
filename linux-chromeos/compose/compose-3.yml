@@ -2426,6 +2426,11 @@
 #+# GROUP_1
 #   Group 1 on the base alphabet: Latin letters, symbols and punctuation
 #
+#   The VERSICLE and RESPONSE symbols "℣" U2123, "℟" U211F are supported since
+#   version 1.6.0 both by multikey and in letter groups 1 and 4.
+#   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
+#   See #^# Abbreviations, Units and Legal Symbols
+#
 <UEFD0>                                                                                        <A> : "Æ" U00C6 # LATIN CAPITAL LETTER AE
 <Multi_key><numbersign>                                                                        <A> : "Æ" U00C6 # LATIN CAPITAL LETTER AE
 <UEFD0>                                                                                        <a> : "æ" U00E6 # LATIN SMALL LETTER AE
