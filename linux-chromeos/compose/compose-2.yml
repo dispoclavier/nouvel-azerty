@@ -13134,11 +13134,12 @@
 #
 #   Based on digits, supports asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042,
 #   used as footnote indicators, as well as the asterisk operator "∗" U2217 by
-#   "0", "5" and "8".
+#   "5" and "8". This scheme supports also the degree sign "°" U00B0 by "0".
+#   See # # Degree sign
 #
 #   Supports also discouraged precomposed temperature units.
 #
-#   No reported usage outside Unicode precomposed letters.
+#   Ring above has no reported usage beyond precomposed letters.
 #   https://www.frathwiki.com/Ring_Above
 #
 <dead_abovering>                                                                           <space> : "̊" U030A # COMBINING RING ABOVE
@@ -13155,10 +13156,10 @@
 <Multi_key><asterisk>                                                                 <parenright> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
 <dead_abovering>                                                                          <period> : "⸰" U2E30 # RING POINT
 <Multi_key><asterisk>                                                                     <period> : "⸰" U2E30 # RING POINT
-<dead_abovering>                                                                               <0> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><asterisk>                                                                          <0> : "∗" U2217 # ASTERISK OPERATOR
-<dead_abovering>                                                                            <KP_0> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><KP_Multiply>                                                                    <KP_0> : "∗" U2217 # ASTERISK OPERATOR
+<dead_abovering>                                                                               <0> : "°" U00B0 # DEGREE SIGN
+<Multi_key><asterisk>                                                                          <0> : "°" U00B0 # DEGREE SIGN
+<dead_abovering>                                                                            <KP_0> : "°" U00B0 # DEGREE SIGN
+<Multi_key><KP_Multiply>                                                                    <KP_0> : "°" U00B0 # DEGREE SIGN
 <dead_abovering>                                                                               <1> : "⁎" U204E # LOW ASTERISK
 <Multi_key><asterisk>                                                                          <1> : "⁎" U204E # LOW ASTERISK
 <dead_abovering>                                                                            <KP_1> : "⁎" U204E # LOW ASTERISK
@@ -13395,11 +13396,14 @@
 #   French usage information: Courtesy _La fée des lettres_.
 #   https://www.motsavec.com
 #
-#   The following are the sequences included despite being overridden:
-#   <dead_circumflex><M> : "M̂" # U004D U0302 LATIN CAPITAL LETTER M WITH CIRCUMFLEX: Min Nan
-#   <dead_circumflex><m> : "m̂" # U006D U0302 LATIN SMALL LETTER M WITH CIRCUMFLEX: Min Nan
-#   <dead_circumflex><N> : "N̂" # U004E U0302 LATIN CAPITAL LETTER N WITH CIRCUMFLEX: Min Nan
-#   <dead_circumflex><n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX: Min Nan
+#   This is the full list of composed letters unsupported for the sake of Ê key
+#   emulation:
+#
+#       <dead_circumflex><M> : "M̂" # U004D U0302 LATIN CAPITAL LETTER M WITH CIRCUMFLEX: Min Nan
+#       <dead_circumflex><m> : "m̂" # U006D U0302 LATIN SMALL LETTER M WITH CIRCUMFLEX: Min Nan
+#       <dead_circumflex><N> : "N̂" # U004E U0302 LATIN CAPITAL LETTER N WITH CIRCUMFLEX: Min Nan
+#       <dead_circumflex><n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX: Min Nan
+#
 #   Courtesy https://www.frathwiki.com/Circumflex
 #
 #   Cross-platform compatibility is full on MacOS, but only partial on Windows.
@@ -13599,21 +13603,13 @@
 <Multi_key><less>                                                                              <L> : "ÊL" # U00CA U004C French: Ê key emulation
 <dead_circumflex>                                                                              <l> : "êl" # U00EA U006C French: Ê key emulation
 <Multi_key><less>                                                                              <l> : "êl" # U00EA U006C French: Ê key emulation
-<dead_circumflex>                                                                              <M> : "M̂" # U004D U0302 LATIN CAPITAL LETTER M WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <dead_circumflex>                                                                              <M> : "ÊM" # U00CA U004D French: Ê key emulation; overrides "M̂" # U004D U0302
-<Multi_key><less>                                                                              <M> : "M̂" # U004D U0302 LATIN CAPITAL LETTER M WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <Multi_key><less>                                                                              <M> : "ÊM" # U00CA U004D French: Ê key emulation; overrides "M̂" # U004D U0302
-<dead_circumflex>                                                                              <m> : "m̂" # U006D U0302 LATIN SMALL LETTER M WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <dead_circumflex>                                                                              <m> : "êm" # U00EA U006D French: Ê key emulation; overrides "m̂" # U006D U0302
-<Multi_key><less>                                                                              <m> : "m̂" # U006D U0302 LATIN SMALL LETTER M WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <Multi_key><less>                                                                              <m> : "êm" # U00EA U006D French: Ê key emulation; overrides "m̂" # U006D U0302
-<dead_circumflex>                                                                              <N> : "N̂" # U004E U0302 LATIN CAPITAL LETTER N WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <dead_circumflex>                                                                              <N> : "ÊN" # U00CA U004E French: Ê key emulation; overrides "N̂" # U004E U0302
-<Multi_key><less>                                                                              <N> : "N̂" # U004E U0302 LATIN CAPITAL LETTER N WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <Multi_key><less>                                                                              <N> : "ÊN" # U00CA U004E French: Ê key emulation; overrides "N̂" # U004E U0302
-<dead_circumflex>                                                                              <n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <dead_circumflex>                                                                              <n> : "ên" # U00EA U006E French: Ê key emulation; overrides "n̂" # U006E U0302
-<Multi_key><less>                                                                              <n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX: Min Nan; overridden by Ê key emulation
 <Multi_key><less>                                                                              <n> : "ên" # U00EA U006E French: Ê key emulation; overrides "n̂" # U006E U0302
 <dead_circumflex>                                                                              <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
