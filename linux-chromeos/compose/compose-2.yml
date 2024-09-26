@@ -326,22 +326,26 @@
 #   support the Latin script.
 #
 #   One of those two dead keys that is not mapped on the same key as the symbol
-#   used to emulate it by multikey is dead_abovedot, mapped on P where level 3
-#   ampersand is unrelated. However, period is mapped on level 5, to be used on
-#   the extended numpad as a decimal separator, alongside comma on key C10 (M).
+#   used to emulate it by multikey is dead_abovedot, mapped on P, where level 3
+#   ampersand is unrelated. However, dead_abovedot’s multikey equivalent period
+#   is mapped on level 5, for use as a decimal separator on the extended AltFr-
+#   level numpad, alongside comma on key C10 (M on AZERTY).
 #
-#   The other exception is dead_cedilla on the comma key where level 3 question
-#   mark is not an equivalent of any dead key either.
+#   The other exception is dead_cedilla on the comma key B07, where level 3 is
+#   used for question mark, that is not an equivalent of any dead key either.
 #
-#   As a result, dead keys are related to the ASCII symbols mapped on the same
-#   keys by multiple easy mnemonics.
-#
-#   In the Windows implementation of these keyboard layouts, AltGr level 3 is
+#   As a result, most dead keys are mnemonically related to the ASCII symbols
+#   mapped on the same keys, the more as all level 4 positions are available as
+#   dead keys because none of them is used for an uppercase letter, the less as
+#   in the Windows implementation of these keyboard layouts, AltGr level 3 is
 #   an additional level, 0x10 or Right Oyayubi, without Caps Lock support, but
-#   free from the numerous bugs affecting the AltGr level that Windows emulates
-#   using Ctrl + Alt. These bugs are fixed on application level, as in MS Word.
-#   That is one reason why levels 3 and 4 are not used for casing characters.
-#   See Mark Durdin’s article about “Robust key message handling in Windows”:
+#   free from the numerous conflicts with application shortcuts affecting the
+#   AltGr level because on Windows, this is emulated by Ctrl + Alt. These
+#   conflicts may be fixed on application level, as in MS Word.
+#
+#   That is one reason why levels 3 and 4 are not used for casing characters,
+#   consistently with Mark Durdin’s advice about “Robust key message handling
+#   in Windows”.
 #   https://blog.keyman.com/2008/06/robust-key-mess/
 #
 #   Each dead key has a stable mapping on level 4 according to the table below.
@@ -3170,13 +3174,13 @@
 #   "‿" U203F would conflict with "𐞡" U107A1 by its multikey equivalent, but
 #   it is supported in the double press virtual dead key *dead_inverted. Both
 #   "⁀" U2040 and "‿" U203F are also in group 12 of "(" and ")".
-#   See # # C03
-#   See # # C04
+#   See # # C03 parenleft
+#   See # # C04 parenright
 #
 #   For intuitivity, the Polynesian ʻeta, Hawaiʻian ʻokina can also be input as
 #   if it were a turned rightsinglequotemark despite being a letter. Apostrophe
 #   is also supported as a base character for this input method.
-#   See # # D07
+#   See # # D07 apostrophe
 #
 #   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
 #   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
@@ -4788,9 +4792,10 @@
 #   Multi_key: ¦~~
 #   Dchar: 
 #
-#   This dead key results from the merger of tilde below and middle tilde. This
-#   however outweighs the tilde below (14 letters vs 6) and therefore makes the
-#   dead key name.
+#   This dead key results from the merger of tilde below and middle tilde. But
+#   given that middle tilde with 14 letters (casing counted twice, "ɵ" U0275
+#   included) outweighs tilde below with 6 letters, middle tilde makes the dead
+#   key name.
 #
 #   The tilde below however keeps making the consistent combining and modifier
 #   pair "̰" U0330, "˷" U02F7, while the combining tilde overlay "̴" U0334 is
@@ -6356,13 +6361,11 @@
 #   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
 #   mnemonic on AZERTY, where O is close to À.
 #
-#   Followed by comma, dead_acute provides an additional input method for
-#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
-#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
-#   See #*# CIRCUMFLEX
-#
-#   This imposes a restriction on the virtual cedilla and acute dead key.
+#   Comma is not used as a base character, because one way, its multikey
+#   equivalent would conflict with acute and cedilla. Nor is period, that
+#   has the same issue with acute and dot above.
 #   See # # CEDILLA&ACUTE
+#   See # # ACUTE&DOT_ABOVE
 #
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method, the more as there are no precomposed
@@ -6395,8 +6398,6 @@
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
-<dead_acute>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><apostrophe>                                                                    <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_acute>                                                                                   <1> : "′" U2032 # PRIME
 <Multi_key><apostrophe>                                                                        <1> : "′" U2032 # PRIME
 <dead_acute>                                                                                <KP_1> : "′" U2032 # PRIME
@@ -7060,7 +7061,7 @@
 #   The proximity with DOT_ABOVE on P also has a mnemonic upside.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# DOT_ABOVE
-#   See # # D04
+#   See # # D04 backslash
 #
 #   For these symbols, the R mnemonic is not possible, since the REVERSED dead
 #   key is used for mathematical backslash shaped symbols.
@@ -7579,8 +7580,8 @@
 #   as well as — for the permanent paper symbol — a shape-based mnemonic using
 #   digit 8. The remaining two slots 4 and 6 are populated with duplicates.
 #   See #*# RETROFLEX_HOOK
-#   See # # D04
-#   See # # D08
+#   See # # D04 backslash
+#   See # # D08 braceleft
 #
 #       0 and 6    "♼" U267C RECYCLED PAPER SYMBOL
 #       2 and 4    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
@@ -7923,20 +7924,18 @@
 #
 # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
-#   These word boundary preventing characters, needed in Breton and Polynesian
-#   languages, may be input in group 1 of apostrophe or rightsinglequotemark,
-#   and grave, respectively. Alternative input methods based on comma, using
-#   diacritical dead keys, are also available.
-#   See # # D07
-#   See # # B06
-#   See #*# ACUTE
-#   See #*# GRAVE
-#   See #*# TURNED
-#   See # # CEDILLA&ACUTE
+#   These word boundary preventing characters are needed in Breton and in
+#   Polynesian languages. Consistently, both are in group 1 of a symbol:
+#   apostrophe and rightsinglequotemark, or grave, respectively.
+#   See # # D07 apostrophe
+#   See # # B06 grave
 #
-#   Additionally, they may be input in groups 1 and 2 of rightsinglequotemark,
-#   since apostrophe is on base level live key alongside rightsinglequotemark
-#   and is therefore not expected to be synced with rightsinglequotemark.
+#   Alternative input methods based on comma, using diacritical dead keys,
+#   are also available.
+#   See #*# CIRCUMFLEX
+#   See #*# TURNED
+#
+#   Additionally, "ʻ" U02BB is in group 2 of rightsinglequotemark.
 #
 <UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -7948,8 +7947,8 @@
 #
 #   This is in group 1 with the spaced-out punctuation marks UEF60 and UEF63.
 #   With the unspaced upright marks, the sequences are in the symbol groups.
-#   See # # B07-level3
-#   See # # B08-level3
+#   See # # B07-level3 question
+#   See # # B08-level3 exclam
 #
 <UEFD0>                                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><numbersign>                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
@@ -8033,7 +8032,7 @@
 <Multi_key><numbersign><numbersign>                                                       <eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
 #
 #
-# # HORIZONTAL BAR and NON-BREAKING HYPHEN for African, Breton and Polynesian
+# # HORIZONTAL BAR for African, Breton and Polynesian variants
 #
 #   Two positions on key E08 are used for Ɔɔ U0186, U0254 or Ññ U00D1, U00F1,
 #   or the macron dead key and the ʻeta "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
@@ -8044,15 +8043,13 @@
 #   the default mapping of the HORIZONTAL BAR is on shifted E08, the Polynesian
 #   variants use U02BB as a base character for HORIZONTAL BAR, while unshifted
 #   key E08 or E07 yields the NON-BREAKING HYPHEN based on the macron dead key.
-#
-#   HORIZONTAL BAR is also in group 1 of underscore, but regional and remapped
-#   variants have this running only on level 3.
-#   See # # C09
+#   See # # NON-BREAKING HYPHEN for Polynesian variants
+#   See # # C07 underscore
 #
 #   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
 #   the Cambria font makes the most sense of it, giving it a three-quarter em
 #   length and making it a four-per-three-em dash. Other fonts use this dash
-#   to have a conjoining em dash, where em dash is not.
+#   to have a conjoining em dash, while em dash may not be conjoining.
 #   See # # Long dashes
 #   See # # Dashes and hyphens
 #
@@ -8066,6 +8063,18 @@
 <Multi_key><numbersign>                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
 <UEFD0>                                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
+#
+#
+# # NON-BREAKING HYPHEN for Polynesian variants
+#
+#   As variants for French Polynesia have base level support for dead_macron in
+#   lieu of the underscore on E08 or the non-breaking hyphen on E07, the latter
+#   is in group 1 of dead_macron.
+#
+#   On African and Breton variants this feature is unavailable so as to prevent
+#   the Caps Lock toggle state from altering the result.
+#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
+#
 <UEFD0>                                                                              <dead_macron> : "‑" U2011 # NON-BREAKING HYPHEN
 <Multi_key><numbersign>                                                              <dead_macron> : "‑" U2011 # NON-BREAKING HYPHEN
 #
@@ -8076,9 +8085,12 @@
 #   variants use the underscore’s remapped key position on unshifted E07 to get
 #   an unshifted position for the non-breaking hyphen, and E06 is dedicated to
 #   casing Ùù for consistency even though uppercase support by Caps Lock would
-#   be sufficient. As a consequence, in French mode underscore has no unshifted
-#   key support. To keep running the input method of HORIZONTAL BAR in group 1
-#   of underscore, non-breaking hyphen works as a base character too.
+#   be sufficient, while on unremapped variants this is the hyphen key with the
+#   non-breaking hyphen on level 2.
+#
+#   As a consequence, in French mode, underscore has no unshifted key support.
+#   To keep running the base level input method for HORIZONTAL BAR in group 1
+#   of underscore, non-breaking hyphen works as a base character, too.
 #
 <UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
@@ -8126,10 +8138,10 @@
 #   for footnote indicators, asterisks and so on.
 #   https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Punctuation/faq0011.html
 #
-#   HAIR SPACE is in group 11 on the space bar. The following facility is only
-#   a shortcut for convenience.
-#   See # # A03-level1
-#   See # # A03-level3
+#   HAIR SPACE is in group 11 on the space bar. The following facility using
+#   no-break thin space U202F as a base character is only a shortcut.
+#   See # # A03-level1 space
+#   See # # A03-level3 nobreakspace
 #
 <UEFD0>                                                                                    <U202F> : " " U200A # HAIR SPACE
 <Multi_key><numbersign>                                                                    <U202F> : " " U200A # HAIR SPACE
@@ -9788,16 +9800,18 @@
 #
 #   Multiple dashes are input by the number of dashes, typed once for light,
 #   twice for heavy, terminated by `h` for horizontal, or `v` for vertical,
-#   as in <3><h> : "┄" U2504 BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL, vs
+#   as in <3><h> : "┄" U2504 BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL, and in
 #   <3><3><h> : "┅" U2505 BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL.
 #
 #   Diagonals are input by 1 for the slash slant, 2 for the backslash slant,
-#   both for cross, terminated by `d` for diagonal, as in <1><d> : "╱" U2571
-#   BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT, vs <1><2><d> : "╳"
-#   U2573 BOX DRAWINGS LIGHT DIAGONAL CROSS. The 16 character cell diagonals,
-#   new to Unicode 16.0, from "🯐" U1FBD0 BOX DRAWINGS LIGHT DIAGONAL MIDDLE
-#   RIGHT TO LOWER LEFT through "🯟" U1FBDF BOX DRAWINGS LIGHT DIAGONAL UPPER
-#   LEFT TO MIDDLE RIGHT TO LOWER LEFT are not supported yet however.
+#   both 1 and 2 for a cross, and terminated by `d` for diagonal, as in
+#   <1><d> : "╱" U2571 BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT,
+#   <1><2><d> : "╳" U2573 BOX DRAWINGS LIGHT DIAGONAL CROSS.
+#
+#   The 16 character cell diagonals, new to Unicode 16.0, from "🯐" U1FBD0 BOX
+#   DRAWINGS LIGHT DIAGONAL MIDDLE RIGHT TO LOWER LEFT through "🯟" U1FBDF BOX
+#   DRAWINGS LIGHT DIAGONAL UPPER LEFT TO MIDDLE RIGHT TO LOWER LEFT are not
+#   supported yet however.
 #
 #   Rounded corners use dead_invertedbreve and its multikey equivalent ¦( with
 #   graphic mnemonic based on the shape of uppercase letter D on C03, and with
@@ -10864,9 +10878,11 @@
 #   a final period is used for "―" U2015 HORIZONTAL BAR, since this may have a
 #   length of three quarters of an em dash, being a four-per-three-em dash; and
 #   a new multikey sequence made of a quadruple minus is added to support U2014
-#   by multikey, although all of these three dashes are on live keys.
-#   See #^# DOUBLE_BAR
+#   by multikey, although all of these three dashes are on live keys except for
+#   "―" U2015 on regional variants.
+#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
 #   See # # Dashes and hyphens
+#   See #^# DOUBLE_BAR
 #
 #   As a diacritic, "͆" U0346 is picked for carrying semantics of horizontality
 #   in a high position, but it ends here. The modifier letters are arrowheads,
@@ -13134,7 +13150,9 @@
 #
 #   Based on digits, supports asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042,
 #   used as footnote indicators, as well as the asterisk operator "∗" U2217 by
-#   "5" and "8". This scheme supports also the degree sign "°" U00B0 by "0".
+#   "5" and "8".
+#
+#   This scheme also supports the degree sign "°" U00B0 by "0".
 #   See # # Degree sign
 #
 #   Supports also discouraged precomposed temperature units.
@@ -13426,7 +13444,7 @@
 #   See # # Notes on Unicode support
 #   See # # Introducing new-school input composition
 #
-#   Anyway, the multikey equivalent of this way to input superscript digits
+#   Anyway, the multikey equivalents of this way to input superscript digits
 #   cannot be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and
 #   with the new sequence <Multi_key><less><8> introduced for the less frequent
 #   "♥" U2665, as of "⁸" U2078.
@@ -13440,7 +13458,7 @@
 #   Previously, the heart emoji logic was followed through, supporting the full
 #   set of filled (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
 #   outlined (non-emoji "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664) suits.
-#   See # # B07-level1
+#   See # # B07-level1 comma
 #   See # # CIRCUMFLEX&GROUP_2
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
@@ -13472,8 +13490,10 @@
 #   been encoded with circumflex and grave, as opposed to A, E and O.
 #
 #   Followed by comma, dead_circumflex provides an additional input method for
-#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE, consistently with dead_acute for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#   See # # B06 grave
+#   See #*# CIRCUMFLEX
+#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 #   Followed by asterisk, dead_circumflex provides a shortcut for 
 #   "⁂" U2042 ASTERISM, consistently with dead_diaeresis for "⁑" U2051.
@@ -13505,8 +13525,8 @@
 <Multi_key><less>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
-<dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                       <question> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <Multi_key><less>                                                                       <question> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
@@ -13699,9 +13719,10 @@
 # # CIRCUMFLEX&GROUP_2
 #   Dchar: 
 #
-#   Groups 2 through 5 of circumflex add support for the outlined counterpart
-#   of the HEART, CLUB, DIAMOND and SPADE suits.
-#   See # # B07-level1
+#   Groups 2 through 5 of dead_circumflex support the outlined counterparts of
+#   the HEART "♥" U2665, CLUB "♣" U2663, DIAMOND "♦" U2666 and SPADE "♠" U2660
+#   suits.
+#   See # # B07-level1 comma
 #
 <dead_circumflex><UEFD0><UEFD0>                                                            <comma> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><less><numbersign><numbersign>                                                  <comma> : "♡" U2661 # WHITE HEART SUIT
@@ -15944,10 +15965,6 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
-#   Followed by comma, dead_grave provides an additional input method for
-#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA, like dead_circumflex does for
-#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
-#
 #   The digits to reversed primes sequences add to the support by multikey.
 #   See # # Reversed primes
 #
@@ -15981,8 +15998,6 @@
 <Multi_key><grave>                                                                    <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <Multi_key><grave>                                                                         <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
-<dead_grave>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><grave>                                                                         <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_grave>                                                                                   <1> : "‵" U2035 # REVERSED PRIME
 <Multi_key><grave>                                                                             <1> : "‵" U2035 # REVERSED PRIME
 <dead_grave>                                                                                <KP_1> : "‵" U2035 # REVERSED PRIME
@@ -16232,15 +16247,14 @@
 # # CEDILLA&ACUTE
 #   Dchar: 
 #
-#   This works only the way <dead_cedilla><dead_acute>, because the Multi_key
-#   equivalent of the other way around would conflict with the input method for
-#   "ʻ" U02BB by dead_acute.
-#   See #*# ACUTE
-#
 <dead_cedilla><dead_acute>                                                                     <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><comma><apostrophe>                                                                 <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
+<dead_acute><dead_cedilla>                                                                     <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
+<Multi_key><apostrophe><comma>                                                                 <C> : "Ḉ" U1E08 # LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
 <dead_cedilla><dead_acute>                                                                     <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 <Multi_key><comma><apostrophe>                                                                 <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
+<dead_acute><dead_cedilla>                                                                     <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
+<Multi_key><apostrophe><comma>                                                                 <c> : "ḉ" U1E09 # LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 #
 #
 # # CEDILLA&BREVE
@@ -16504,7 +16518,7 @@
 #   See # # Symbols for multikey and composition
 #
 #   "¦" U00A6 is also in group 12 of |.
-#   See # # C10
+#   See # # C10 bar
 #
 #   Superscript digits, formerly in dead_circumflex, are also supported for the
 #   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
