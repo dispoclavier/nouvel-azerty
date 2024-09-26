@@ -144,8 +144,8 @@
 #   https://help.ubuntu.com/community/ComposeKey#Compose_key
 #   https://wiki.debian.org/XCompose
 #
-#   For the multicharacter feature to actually work, activating the X Window
-#   Input Method, XIM for short, is mandatory.
+#   However, for the multicharacter feature to be effective and actually work,
+#   activating the X Window Input Method, XIM for short, is mandatory.
 #   https://bugs.launchpad.net/ubuntu/+source/xkeyboard-config/+bug/1584314/comments/6
 #   http://manpages.ubuntu.com/manpages/bionic/en/man8/im-config.8.html
 #   https://askubuntu.com/questions/129680/how-can-i-make-ibus-not-ignore-xcompose
@@ -278,9 +278,10 @@
 #   a Unicode character you can use instead.”
 #   https://www.unicode.org/mail-arch/unicode-ml/y2019-m01/0146.html
 #
-#   Imprimerie nationale (France) assumes that big punctuation (a.k.a. double
-#   punctuation as of the subset it supports, i.e. without U2039, U203A) is
-#   spaced out using either of these spaces:
+#   Imprimerie nationale (France) specifies that big punctuation, also known as
+#   double punctuation, as of the subset it supports, and that does not include
+#   the single angle quotation marks U2039 and U203A used for nested quotations
+#   in other parts of Francophonie, is spaced out using either of these spaces:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NBTSP U202F.
@@ -426,7 +427,7 @@
 #
 # # Abbreviation "Numéro" with trailing space
 #
-#   With regular superscript o U1D52 and NBTSP U202F.
+#   With regular superscript "ᵒ" U1D52 and NBTSP U202F.
 #
 <UEF68> : "nᵒ " #
 <UEF69> : "Nᵒ " #
@@ -434,7 +435,7 @@
 #
 # # Abbreviation "Numéro" without spacing
 #
-#   With regular superscript o U1D52.
+#   With regular superscript "ᵒ" U1D52.
 #
 <UEF6A> : "nᵒ" #
 <UEF6B> : "Nᵒ" #
@@ -442,40 +443,50 @@
 #
 # # Ordinal indicator with trailing space
 #
-#   Ordinal indicator ᵉ with automated spacing by NBTSP U202F,
-#   Intended to type century figures in French style using Roman numerals.
+#   Ordinal indicator "ᵉ" with automated spacing by NBTSP U202F, intended for
+#   typing French style century figures using Roman numerals.
 #
 <UEF6C> : "ᵉ " #
 #
 #
 # # Double zero
 #
-#   For the extended numpad mapped on the alphanumeric block.
-#   On the numpad, this may be mapped on Shift + 0 since the cursor key feature
-#   on the numpad is deactivated as outdated, redundant, and wasting positions.
+#   Primarily intended for the extended AltFr-level numpad on the alphanumeric
+#   block. On the dedicated numpad, this may be mapped on Shift + KP_0, since
+#   the cursor key feature on the numpad is deactivated as outdated, redundant
+#   and wasting these now repurposed Shift + KP_* positions.
 #
 <UEF6D> : "00" #
 #
-#   A triple zero key is useful only on the numpad. On the extended numpad, the
-#   triple zero is input by simultaneously pressing single and double zeroes.
-#   So the triple zero had been suppressed and was later (2021-07-01T0458+0200)
-#   readded as UEF7D for numpad Shift + 1.
+#   A triple zero key is useful only on the dedicated numpad. On the extended
+#   AltFr-level numpad, a triple zero is easily input by simultaneously hitting
+#   single and double zeros on AltFr + N and AltFr + B. As a consequence, this
+#   triple zero was dropped. But later (2021-07-01T0458+0200) it was readded as
+#   UEF7D for Shift + KP_1.
 #
 #
 # # Justifying no-break spaces
 #
-#   NO-BREAK SPACE U00A0 is abusively and unchangeably tailored as fixed-width
-#   in word processors other than Microsoft Word 2013, raising issues in Polish
-#   as well as in Russian and other locales requiring no-break space between
-#   words, and thus requiring the no-break space to be justifying as defined.
+#   NO-BREAK SPACE U00A0 is tailored as fixed-width in word processors other
+#   than Microsoft Word 2013, because it is misused for punctuation spacing in
+#   lieu of NBTSP U202F, so that it raises issues in Polish, Russian and other
+#   locales requiring no-break space as interword space, and thus requiring the
+#   no-break space to be justifying as defined. This tailoring without settings
+#   for NBSP justification and for the space used in French punctuation spacing
+#   and without even locale sensitivity results in an abuse that makes sense as
+#   part of the downgrading policy intended to limit word processors’ usability
+#   for the interoperable representation of the world’s languages.
+#   https://answers.microsoft.com/en-us/msoffice/forum/all/word-will-not-consistently-end-lines-at-the-bottom/f3b0d024-dc9d-4678-94d9-3ade20521974
+#   at `Word is the "poor man's", or simple man's, document publishing tool.`
 #
-#   The justifying no-break strings using a break-preventing character are
-#   courtesy Jakub Stachu, in "Non‐breakable space justification in Word 2016",
-#   Microsoft Community forum MS Office > Word > Windows 8 on November 5, 2017:
+#   The workaround using justifying no-break strings composed of a space and a
+#   trailing break-preventer is courtesy Jakub Stachu, who reported this scheme
+#   on November 5, 2017 in "Non‐breakable space justification in Word 2016",
+#   Microsoft Community forum MS Office > Word > Windows 8.
 #   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
 #
-#   The issue has been formally submitted to Unicode in L2/19-114
-#   “Proposal to focus line break prevention design on end-user input”
+#   This issue has been formally submitted to Unicode in L2/19-114
+#   “Proposal to focus line break prevention design on end-user input”.
 #   https://www.unicode.org/L2/L2019/19114-line-break-design.pdf
 #
 <UEF6E> : " ⁠" # With WORD JOINER U2060 [1]
@@ -509,7 +520,7 @@
 <UEF77> : " ›" # (not mentioned by Imprimerie nationale)
 #
 #
-# # Abbreviation "Numéro" with regular superscript o and legacy NBSP
+# # Abbreviation "Numéro" with regular superscript "ᵒ" and legacy NBSP
 #
 <UEF78> : "nᵒ " #
 <UEF79> : "Nᵒ " #
@@ -553,7 +564,7 @@
 <UEF87> : " ﻿›" #
 #
 #
-# # Abbreviation "Numéro" with regular superscript o and a THIN SPACE, ZWNBSP string
+# # Abbreviation "Numéro" with regular superscript "ᵒ" and a THIN SPACE, ZWNBSP string
 #
 <UEF88> : "nᵒ ﻿" #
 <UEF89> : "Nᵒ ﻿" #
@@ -608,7 +619,7 @@
 <UEF97> : " ⁠›" #
 #
 #
-# # Abbreviation "Numéro" with regular superscript o and TSP WJ
+# # Abbreviation "Numéro" with regular superscript "ᵒ" and TSP WJ
 #
 <UEF98> : "nᵒ ⁠" #
 <UEF99> : "Nᵒ ⁠" #
@@ -737,7 +748,7 @@
 #
 #   With respect to dead key use, these sequences are maintained, but Multi_key
 #   equivalents are actionable only elsewhere.
-#   See # # C01
+#   See # # C01 numbersign
 #   See #^# Square boxes
 #
 #   As a consequence, the multikey equivalents of U2610, U2611 and U2612 in the
@@ -746,8 +757,9 @@
 #   this, where the first steps may be automated by `bhughes339.replacerules`
 #   extension for VSCode.
 #
-#   Base letters are flagged for case, because default case sensitive ordering
-#   is unable to catch all conflicts.
+#   Base letters are flagged for case, because even case sensitive, the default
+#   sort order prioritizing string length over case hides many conflicts due to
+#   case, sorting A > a > Ab > ab instead of A > Ab > a > ab.
 #
 #       {
 #         "replacerules.rules": {
@@ -847,8 +859,8 @@
 #
 #   The two legacy ordinal indicators are supported in group 12 of "^" on key A
 #   and in group 12 of "}" on key O, and by multikey.
-#   See # # D01
-#   See # # D09
+#   See # # D01 asciicircum
+#   See # # D09 braceright
 #
 <Multi_key><a><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <Multi_key><A><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
@@ -864,26 +876,30 @@
 #   conflict with "Ȓ" U0212. To mitigate these gaps, an alternative with a pair
 #   of leading parentheses is proposed consistently: "()C", "()R", "()P".
 #
-#   Order may matter as for "©" U00A9 COPYRIGHT SIGN vs "℅" U2105 CARE OF, and
-#   case as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE SUBJECT,
-#   "🄯" U1F12F COPYLEFT SYMBOL vs "℄" U2104 CENTRE LINE SYMBOL.
+#   Order may matter as for "©" U00A9 COPYRIGHT SIGN by ¦oc or ¦Oc, as opposed
+#   to "℅" U2105 CARE OF by ¦co or ¦Co or ¦CO or ¦cO.
 #
-#   Reverse ¦SA conflicts with "ر.س" Saudi Riyal and "♐" U2650 SAGITTARIUS.
+#   Case may matter as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE
+#   SUBJECT, or for "🄯" U1F12F COPYLEFT SYMBOL vs "℄" U2104 CENTRE LINE SYMBOL.
+#
+#   Reverse sequences cannot be supported either for "⅍" U214D as ¦SA conflicts
+#   with "ر.س" Saudi Riyal by ¦SAR, and with "♐" U2650 SAGITTARIUS by ¦SAGI.
 #
 #   Many abbreviations allow for a shortcut skipping the slash, but in the case
 #   of "℆" U2106, this shortcut requires space termination to prevent conflicts
 #   with an input method for the union symbol "∪" U222A based on its nickname.
 #
-#   S O sequences are used fo mathematical symbols, reverse sequences are used
+#   ¦SO sequences are used fo mathematical symbols, reverse sequences are used
 #   for circled letters, other casing pairs are used for German eszett and for
-#   the section sign: "§" U00A7 vs "ß" U00DF vs "ẞ" U1E9E.
+#   the section sign: "§" U00A7 by ¦sS, as opposed to "ß" U00DF by ¦ss (or ¦sz)
+#   and "ẞ" U1E9E by ¦SS or ¦Ss.
 #
 #   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
 #   supports mixed-case sequences as well. E.g. for the Numero sign "№" U2116,
 #   it has <N><o> and <N><O>; adding the other two makes for lenient Caps Lock.
 #   A trailing underscore however is added consistently with the glyph and with
 #   the two legacy ordinal indicators "ª" U00AA, "º" U00BA, so as to prevent a
-#   conflict with "⊽" U22BD.
+#   conflict with "⊽" U22BD by ¦NOR.
 #   See #^# Legacy ordinal indicators
 #
 #   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
@@ -1339,8 +1355,8 @@
 #    "⩑" U2A51, and disambiguating the latter would screw it up (by requiring a
 #   double leading space), it is discarded, and support for spaces by dead keys
 #   is moved to the space groups altogether.
-#   See # # A03-level1
-#   See # # A03-level3
+#   See # # A03-level1 space
+#   See # # A03-level3 nobreakspace
 #
 #
 #^# Punctuation
@@ -1383,7 +1399,7 @@
 #   way around (<Multi_key><equal><period> conflicts with U2A66).
 #   See #^# Bullets
 #   See #*# CIRCUMFLEX
-#   See # # C07
+#   See # # C07 underscore
 #
 #
 # # Dashes and hyphens
@@ -1399,12 +1415,12 @@
 #   See #^# HIGH_BAR
 #
 #   As a result, U2014 is moved to the new sequence below, that is the most
-#   consistent both with en_US.UTF-8/Compose and with typography thinking of an
-#   em dash as 4 hyphens worth; although it is not the most user-friendly.
+#   consistent both with en_US.UTF-8/Compose and with typography, defining the
+#   em dash as 4 hyphens worth.
 #
-#   However with this respect, this is only about multikey support. U2013 and
-#   U2014, and depending on the variant, also U2015 are in the benefit of
-#   level 2 live key positions.
+#   This new multikey sequence is not the most user-friendly, but this is only
+#   about multikey support. U2013 and U2014, and depending on the variant, also
+#   U2015, are in the benefit of level 2 live key positions.
 #   See dispocla.cpp key <AE03>
 #   See dispocla.cpp key <AE04>
 #   See dispocla.cpp key <AE08>
@@ -1447,7 +1463,7 @@
 #   or even only an easy-access dead key input method like in group 1 of U002D.
 #   (Ultimately, however, U2010 is in group 12 of U002D. And it may be input
 #   using the following mnemonic scheme.)
-#   See # # C05
+#   See # # C05 minus
 #
 #   Else, U2010 would screw everything up, from undeliverable email to broken
 #   links to parse errors.
@@ -1847,7 +1863,7 @@
 #   The legacy sequence <Multi_key><percent><o> conflicts with "ᴑ" U1D11, so it
 #   cannot be supported. To compensate this loss, new sequences involving zeros
 #   are added, additionally to the support in groups 1 and 2 of "%".
-#   See # # D02
+#   See # # D02 percent
 #
 <Multi_key><0><percent>                                                                            : "‰" U2030 # PER MILLE SIGN
 <Multi_key><KP_0><percent>                                                                         : "‰" U2030 # PER MILLE SIGN
@@ -1858,11 +1874,14 @@
 # # Degree sign
 #
 #   "°" U00B0 is on live key E11, on level 2 consistently with French AZERTY,
-#   and on level 5 as part of the graphic numpad on the alphanumeric block, but
-#   its legacy sequence <Multi_key><o><o> from en_US.UTF-8/Compose cannot be
-#   supported, since it is required for "ꝏ" UA74F LATIN SMALL LETTER OO. To
-#   compensate this loss, sequences with zero are supported in dead_abovering,
-#   on the pattern <Multi_key><asterisk><0>.
+#   and on level 5 as part of the graphics-only, extended AltFr-level numpad on
+#   the alphanumeric block.
+#
+#   By contrast, the degree sign’s legacy multikey sequence <Multi_key><o><o>
+#   as in en_US.UTF-8/Compose cannot be supported, since it is required for "ꝏ"
+#   UA74F LATIN SMALL LETTER OO. To compensate this loss, "°" U00B0 has support
+#   in dead_abovering on the pattern <Multi_key><asterisk><0> with the dead key
+#   working as a de facto shortcut: <dead_abovedot><0>.
 #   See #*# RING_ABOVE
 #
 #
@@ -1872,56 +1891,63 @@
 #   This supports the bullets as implemented, adding support for the intended
 #   open rectangular bullet "▭" U25AD.
 #
+#   Default HTML/CSS bullets have equivalents in Unicode as "•" U2022 for the
+#   first level, "◦" U25E6 for the second level. For the third level, "▪" U25AA
+#   is sometimes chosen to stick with `list-style-type: square`, but this is an
+#   emoji, so "‣" U2023 is eventually a better pick. These three bullets are in
+#   groups 1..3 of underscore, too.
+#   See # # C07 underscore
+#
 #   Some sequences based on English mnemonic have French equivalents.
 #   "∎" U220E has bilingual support in the math symbols.
 #
 #   These sequences are case insensitive in that they can be typed either in
 #   lowercase or in uppercase.
 #
-<Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
-<Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
-<Multi_key><f><l><t><b>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><F><L><T><B>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><p><p><t><g>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><P><P><T><G>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><e><n><f><c><b>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
+<Multi_key><E><N><F><C><B>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
 <Multi_key><f><r><t><b>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><F><R><T><B>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><p><p><t><d>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><P><P><T><D>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><p><p><r><c>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><P><P><R><C>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><e><n><o><c><b>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><E><N><O><C><B>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><p><a><c><d>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><P><A><C><D>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
+<Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
+<Multi_key><e><n><f><s><b>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><E><N><F><S><B>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
 <Multi_key><e><n><o><s><b>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><E><N><O><S><B>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><p><a><c><r>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><P><A><C><R>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
-<Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><p><p><r><c>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><P><P><R><C>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
 <Multi_key><e><m><o><r>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
 <Multi_key><E><M><O><R>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
-<Multi_key><o><t><b><u>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
-<Multi_key><O><T><B><U>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
-<Multi_key><o><t><b><d>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
-<Multi_key><O><T><B><D>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
-<Multi_key><o><s><t><a><r>                                                                         : "☆" U2606 # WHITE STAR, openstar
-<Multi_key><O><S><T><A><R>                                                                         : "☆" U2606 # WHITE STAR, openstar
-<Multi_key><e><n><f><c><b>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><E><N><F><C><B>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><e><n><f><s><b>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><E><N><F><S><B>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
 <Multi_key><f><t><b><u>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
 <Multi_key><F><T><B><U>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
+<Multi_key><o><t><b><u>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
+<Multi_key><O><T><B><U>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
 <Multi_key><f><t><b><d>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
 <Multi_key><F><T><B><D>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
+<Multi_key><o><t><b><d>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+<Multi_key><O><T><B><D>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+<Multi_key><f><l><t><b>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><F><L><T><B>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><p><p><t><g>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><P><P><T><G>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
+<Multi_key><e><n><o><c><b>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><E><N><O><C><B>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><p><a><c><d>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><P><A><C><D>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><o><s><t><a><r>                                                                         : "☆" U2606 # WHITE STAR, openstar
+<Multi_key><O><S><T><A><R>                                                                         : "☆" U2606 # WHITE STAR, openstar
 #
 #
 #   Tainome and kome
@@ -2433,12 +2459,13 @@
 #
 #   The traditional signs are also included in group 9.
 #
-#   Input sequences are based on Latin names and on French names.
-#   Base 16 numeric sequences are also supported, not conflicting
-#   with vulgar fractions.
+#   Input sequences are based on Latin names and on French names and mostly are
+#   four characters long, for conflictless consistency.
 #
-#   To avoid conflicts, alphabetic sequences are sufficiently long,
-#   and numeric sequences are terminated by asterisk, not started.
+#   Base 16 numeric sequences are also supported, not conflicting with vulgar
+#   fractions where for efficiency, the slash is not mandatory, only supported
+#   for intuitivity. These are terminated by asterisk, not started, avoiding
+#   conflicts with dead_abovering.
 #
 #
 # # Traditional signs emoji
@@ -2576,7 +2603,7 @@
 #^# Circle quadrants
 #
 #   These extend filled and empty circles on D06, groups 1..3.
-#   See # # D06
+#   See # # D06 at, dead_greek
 #
 #   Half circles are supported in mathematical symbols.
 #   See # # Geometric Shapes in block U25A0 used in mathematics
@@ -2658,8 +2685,8 @@
 #
 #   The only cross-platform supportable black or white square emoji come in
 #   four sizes and are also supported in the symbol groups.
-#   See # # B01
-#   See # # C01
+#   See # # B01 slash
+#   See # # C01 numbersign
 #
 <Multi_key><1>                                                                        <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
 <Multi_key><KP_1>                                                                     <numbersign> : "▪" U25AA # BLACK SMALL SQUARE emoji
@@ -2762,7 +2789,7 @@
 #   Also on live key C03 (D), level 6, and in group 1 of ( on D key C03; also
 #   in the circumflex dead key with case insensitive D as a base letter.
 #   See #*# CIRCUMFLEX
-#   See # # C03
+#   See # # C03 parenleft
 #
 #   Despite not being a math symbol, ⌀ U2300 DIAMETER SIGN is space terminated,
 #   like ∅ U2205 EMPTY SET. so as to prevent a conflict with "ℴ" U2134.
@@ -2907,7 +2934,7 @@
 #
 #   "¦" U00A6 is also in group 12 of |, in dead_macron 5, and in dead_diaeresis
 #   backslash.
-#   See # # C10
+#   See # # C10 bar
 #   See #*# MACRON
 #   See #*# DIAERESIS
 #
@@ -3202,7 +3229,7 @@
 #
 #   Additionally, for incomplete keyboard layouts, there is a fallback input
 #   method in the symbol groups.
-#   See # # C06
+#   See # # C06 plus
 #
 #   In group 1 of +                                                                                : "±" U00B1 # PLUS-MINUS SIGN
 <Multi_key><plus><minus>                                                                           : "±" U00B1 # PLUS-MINUS SIGN
@@ -3214,8 +3241,8 @@
 #
 #   Additionally, for incomplete keyboard layouts, there is a fallback input
 #   method in the symbol groups.
-#   See # # B02
-#   See # # B01
+#   See # # B02 asterisk
+#   See # # B01 slash
 #
 #   In group 2 of *                                                                                : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                             <space> : "×" U00D7 # MULTIPLICATION SIGN
@@ -3278,7 +3305,7 @@
 #
 #   With similar mnemonic, "‖" U2016 is in group 2 of bar, while "∥" U2225 is
 #   in group 3, mitigating a potential accessibility bias.
-#   See # # C10
+#   See # # C10 bar
 #
 #   Additionally, this can be input by dead_diaeresis followed by slash (not
 #   bar, due to conflicts with the diaeresis and macron virtual dead keys).
