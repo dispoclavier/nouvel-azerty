@@ -194,9 +194,9 @@
 #
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π	☐	␣	⌀	➔	−	±	―	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
-#	  2	♿	‱	∈	√	≈	⚪	⊂	∬	∅	☮	☑	⍽	∂	➜	⁃	∓	•	❰	❱	‖	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
-#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	∐	∏	☒	∑	☹	☺	➖	➕	◦	❮	❯	∥	➗	✖	✂	✅	≡	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π	☐	␣	⌀	➔	−	±	•	⟨	⟩	∣	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
+#	  2	♿	‱	∈	√	≈	⚪	⊂	∬	∅	☮	☑	⍽	∂	➜	⁃	∓	◦	❰	❱	‖	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
+#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	∐	∏	☒	∑	☹	☺	➖	➕	‣	❮	❯	∥	➗	✖	✂	✅	≡	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	∠	☇	⚕	☢	☠	●	➰	⯀	⛈	☔	▪	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	▫	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	✈	☈	✍	♻	☎	○	➿	▢	⛔	☂	◾	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	◽	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
@@ -209,14 +209,14 @@
 #
 #
 #
-# # D01
+# # D01 asciicircum
 #
 #   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The old ordinal indicators are supported by multikey and in group 12.
+#   The legacy ordinal indicators are supported by multikey and in group 12.
 #   See #^# Legacy ordinal indicators
-#   See # # D09
+#   See # # D09 braceright
 #
 #   In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner.
 #   Consistently, "‍" U200D ZERO WIDTH JOINER is the cursive joiner.
@@ -275,7 +275,7 @@
 <Multi_key><numbersign><KP_2>                                                        <asciicircum> : "ª" U00AA # FEMININE ORDINAL INDICATOR
 #
 #
-# # D02
+# # D02 percent
 #
 <UEFD0>                                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
 <Multi_key><numbersign>                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
@@ -327,7 +327,7 @@
 <Multi_key><numbersign><KP_2>                                                            <percent> : "⏬" U23EC # BLACK DOWN-POINTING DOUBLE TRIANGLE emoji, fast down button
 #
 #
-# # D03
+# # D03 quotedbl, EuroSign
 #
 #   Since quotedbl is mapped on the E key in order to be replaced with EuroSign
 #   for compliance with the related recommendation from the European Commission
@@ -435,7 +435,7 @@
 <Multi_key><numbersign><KP_2>                                                           <quotedbl> : "〃" U3003 # DITTO MARK
 #
 #
-# # D04
+# # D04 backslash
 #
 #   Recycling symbols are more extensively supported in *dead_retroflexhook and
 #   paper symbols in dead_abovedot.
@@ -492,7 +492,7 @@
 <Multi_key><numbersign><KP_2>                                                          <backslash> : "∖" U2216 # SET MINUS math
 #
 #
-# # D05
+# # D05 asciitilde
 #
 #   The positions in groups 1 through 3 could be used for single, double and
 #   triple daggers for the sake of mnemonics, but they are not, as daggers are
@@ -558,13 +558,20 @@
 <Multi_key><numbersign><KP_2>                                                         <asciitilde> : "☘" U2618 # SHAMROCK emoji
 #
 #
-# # D06
+# # D06 at, dead_greek
 #
-#   Since dead_greek is also mapped on level 3 instead of (redundant) "@" U0040
-#   (v1.7.0), dead_greek must work as a base character for the symbol groups.
+#   Since v1.7.0, dead_greek is also mapped on level 3 instead of the at sign,
+#   that is supported on base level E11, making its level 3 D06 alias redundant
+#   and making this position available for an easier dead_greek alias.
 #
-#   "◌" U25CC is in group 1 because it is the generic base character for
-#   combining diacritics.
+#   As a consequence, dead_greek must work as an alias base character for the
+#   symbol groups.
+#
+#   "◌" U25CC is in group 1 as the usual pick for the dotted circle, a generic
+#   base character for combining diacritics.
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=80
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=132&zoom=100,0,410
+#   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=950
 #
 <UEFD0>                                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
 <Multi_key><numbersign>                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
@@ -664,7 +671,12 @@
 <Multi_key><numbersign><KP_2>                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
 #
 #
-# # D07
+# # D07 apostrophe
+#
+#   Letter apostrophe "ʼ" U02BC, used in Breton, is here in group 1 of
+#   apostrophe as well as in group 1 of rightsinglequotemark.
+#   See # # B06 grave
+#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 <UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -716,13 +728,9 @@
 <Multi_key><numbersign><KP_2>                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 #
 #
-# # D08
+# # D08 braceleft
 #
-#   The ASCII apostrophe is preferred over the modifier letter vertical line.
-#   Consistently this is mapped in a higher group than the low vertical line.
-#   https://books.google.com/ngrams/graph?content=%CB%88%2C%CB%8C&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
-#
-#   Paper symbols are also supported in dead_abovedot.
+#   Paper symbols are more extensively supported in dead_abovedot.
 #   See #*# DOT_ABOVE
 #
 <UEFD0>                                                                                <braceleft> : "∫" U222B # INTEGRAL math
@@ -775,17 +783,14 @@
 <Multi_key><numbersign><KP_2>                                                          <braceleft> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
 #
 #
-# # D09
+# # D09 braceright
 #
 #   The "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character, superseded
 #   by the use of preformatted superscript small letters for ordinal indicators
 #   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The old ordinal indicators are supported by multikey and in group 12.
+#   The legacy ordinal indicators are supported by multikey and in group 12.
 #   See #^# Legacy ordinal indicators
-#   See # # D01
-#
-#   The "⚘" U2698 FLOWER symbol, for botanic use, has an ornamental counterpart
-#   in dead_hook followed by period: "⁕" U2055 FLOWER PUNCTUATION MARK.
+#   See # # D01 asciicircum
 #
 <UEFD0>                                                                               <braceright> : "Ω" U2126 # OHM SIGN
 <Multi_key><numbersign>                                                               <braceright> : "Ω" U2126 # OHM SIGN
@@ -837,7 +842,7 @@
 <Multi_key><numbersign><KP_2>                                                         <braceright> : "º" U00BA # MASCULINE ORDINAL INDICATOR
 #
 #
-# # D10
+# # D10 ampersand
 #
 <UEFD0>                                                                                <ampersand> : "π" U03C0 # GREEK SMALL LETTER PI math
 <Multi_key><numbersign>                                                                <ampersand> : "π" U03C0 # GREEK SMALL LETTER PI math
@@ -889,23 +894,27 @@
 <Multi_key><numbersign><KP_2>                                                          <ampersand> : "⛏" U26CF # PICK emoji
 #
 #
-# # C01
+# # C01 numbersign
 #
 #   The first three positions are inaccessible by multikey equivalents, due
 #   to an inavoidable interference of numbersign with itself. But these can be
 #   input by multikey using other sequences.
 #   See # # Checkboxes
+#   See # # Notes for maintenance
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
-#   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color in two
-#   sets. These also have a multikey alternative.
-#   See # # B01
+#   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two
+#   sets. These also have multikey alternatives. "▪" U25AA is considered a
+#   Unicode equivalent of CSS `list-style-type: square`, but it is emoji #1622
+#   and is therefore subject to rendering issues when used as a bullet.
+#   https://www.unicode.org/emoji/charts-15.1/emoji-list.html#25aa
+#   https://github.com/w3c/csswg-drafts/issues/6200
 #   See # # Square emoji
+#   See # # B01 slash
 #
 #   Broader sets of squares are available by multikey.
 #   See # # Square emoji
 #   See # # Geometric Shapes in block U25A0 used in mathematics
-#   See # WHITE SQUARE WITH LEFTWARDS TICK
 #
 <UEFD0>                                                                               <numbersign> : "☐" U2610 # BALLOT BOX
 <Multi_key><numbersign>                                                               <numbersign> : "☐" U2610 # BALLOT BOX
@@ -957,10 +966,12 @@
 <Multi_key><numbersign><KP_2>                                                         <numbersign> : "⚧" U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
 #
 #
-# # C02
+# # C02 dollar
 #
-#   Unlike the open box, the shouldered open box denoting a no-break space is
-#   uncommon, although it should be in group 1 as important in documentation.
+#   Unlike the open box "␣" U2423, denoting an ASCII space U0020, and also more
+#   generally a breaking space as a category, the shouldered open box "⍽" U237D
+#   used for a Latin-1 no-break space U00A0, and sometimes also generically for
+#   any no-break space, notably the no-break thin space U202F, is uncommon.
 #   https://books.google.com/ngrams/graph?content=%E2%90%A3%2C%E2%8D%BD&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
 <UEFD0>                                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
@@ -1013,11 +1024,11 @@
 <Multi_key><numbersign><KP_2>                                                             <dollar> : "✒" U2712 # BLACK NIB emoji, fountain pen
 #
 #
-# # C03
+# # C03 parenleft
 #
 #   The character tie "⁀" U2040 is supported in group 12 mainly as a matching
 #   counterpart of "‿" U203F instead of former "❨" U2768, intended to prevent
-#   misuse of "☾" U263E, but unused in serious practice
+#   misuse of "☾" U263E, but nearly unused in practice.
 #
 <UEFD0>                                                                                <parenleft> : "⌀" U2300 # DIAMETER SIGN math
 <Multi_key><numbersign>                                                                <parenleft> : "⌀" U2300 # DIAMETER SIGN math
@@ -1069,7 +1080,7 @@
 <Multi_key><numbersign><KP_2>                                                          <parenleft> : "⁀" U2040 # CHARACTER TIE
 #
 #
-# # C04
+# # C04 parenright
 #
 #   The arrows in groups 1 and 2 have alphabetic mnemonic in French, where
 #   an “arrow” is a “flèche”. This is consistent with DIN 2137 since the 2023
@@ -1079,7 +1090,7 @@
 #
 #   The undertie "‿" U203F is supported in group 12 for its use in phonetics to
 #   denote linking, aka liaison, instead of former "❩" U2769, that was intended
-#   to prevent misuse of "☽" U263D, but is unused in serious practice.
+#   to prevent misuse of "☽" U263D, but is nearly unused in practice.
 #
 <UEFD0>                                                                               <parenright> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
 <Multi_key><numbersign>                                                               <parenright> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
@@ -1131,24 +1142,22 @@
 <Multi_key><numbersign><KP_2>                                                         <parenright> : "‿" U203F # UNDERTIE
 #
 #
-# # C05
+# # C05 minus
 #
-#   Unlike U2011 NON-BREAKING HYPHEN, in group 1 of U003D, U2010 HYPHEN is not
-#   in group 1 of U002D, because it is a duplicate of U002D with the potential
-#   of messing up keyboard layouts and user experience when it is too easily
-#   accessible. U2010 HYPHEN is a duplicate of U002D HYPHEN-MINUS because just
-#   like "*" U002A and "/" U002F, that are not called *ASTERISK-MULTIPLICATION
-#   or *SLASH-DIVISION either, "-" U002D is a plain hyphen, that is repurposed
+#   Unlike U2011 NON-BREAKING HYPHEN, in group 1 of equal, U2010 HYPHEN is not
+#   in group 1 of minus, because it is a duplicate of U002D HYPHEN-MINUS. Like
+#   "*" U002A not being called *ASTERISK-MULTIPLICATION, and "/" U002F that is
+#   not called *SLASH-DIVISION either, "-" U002D is a plain hyphen, repurposed
 #   in programming like so many other symbols. "+" U002B PLUS SIGN is the only
-#   ASCII base operator used as such in good typesetting.
-#   See # # B05
+#   ASCII base operator used as such in correct typesetting.
+#   See # # B05 equal
 #   See # # Dashes and hyphens
 #
 #   Instead, U2212 MINUS SIGN is mapped here with respect to incomplete layouts
 #   lacking arithmetic base operators, usually on level 5 live key positions.
 #
-#   For completeness, U2010 HYPHEN is in group 12 of this key, where it should
-#   not do too much harm.
+#   For completeness, U2010 HYPHEN is in group 12 of minus, where it should not
+#   do too much harm.
 #
 <UEFD0>                                                                                    <minus> : "−" U2212 # MINUS SIGN math
 <Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN math
@@ -1200,7 +1209,7 @@
 <Multi_key><numbersign><KP_2>                                                        <KP_Subtract> : "‐" U2010 # HYPHEN
 #
 #
-# # C06
+# # C06 plus
 #
 <UEFD0>                                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN math
 <Multi_key><numbersign>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN math
@@ -1252,18 +1261,30 @@
 <Multi_key><numbersign><KP_2>                                                             <KP_Add> : "⁜" U205C # DOTTED CROSS, highlighter mark
 #
 #
-# # C07
+# # C07 underscore
 #
-<UEFD0>                                                                              <underscore> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><numbersign>                                                              <underscore> : "―" U2015 # HORIZONTAL BAR
-<UEFD0><UEFD0>                                                                       <underscore> : "•" U2022 # BULLET
-<Multi_key><numbersign><numbersign>                                                  <underscore> : "•" U2022 # BULLET
-<UEFD0><3>                                                                           <underscore> : "◦" U25E6 # WHITE BULLET
-<Multi_key><numbersign><3>                                                           <underscore> : "◦" U25E6 # WHITE BULLET
-<UEFD0><KP_3>                                                                        <underscore> : "◦" U25E6 # WHITE BULLET
-<Multi_key><numbersign><KP_3>                                                        <underscore> : "◦" U25E6 # WHITE BULLET
-<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "◦" U25E6 # WHITE BULLET
-<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "◦" U25E6 # WHITE BULLET
+#   "―" U2015 HORIZONTAL BAR is supported in group 1 with other base characters
+#   for regional variants without live key support for this character.
+#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
+#
+#   Thus here, the first three groups are available for these bullets. While
+#   "•" U2022 and "◦" U25E6 are consistent with mainstream practice, the pick
+#   for level 3 is "‣" U2023, consistently with Unicode scalars and with the
+#   group number and level number, rather than "▪" U25AA, that is an emoji and
+#   as such is supported in group 5 of numbersign as part of a set of four.
+#   See # # C01 numbersign
+#   See #^# Bullets
+#
+<UEFD0>                                                                              <underscore> : "•" U2022 # BULLET
+<Multi_key><numbersign>                                                              <underscore> : "•" U2022 # BULLET
+<UEFD0><UEFD0>                                                                       <underscore> : "◦" U25E6 # WHITE BULLET
+<Multi_key><numbersign><numbersign>                                                  <underscore> : "◦" U25E6 # WHITE BULLET
+<UEFD0><3>                                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><3>                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><KP_3>                                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><KP_3>                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "‣" U2023 # TRIANGULAR BULLET
 <UEFD0><4>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
 <Multi_key><numbersign><4>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
 <UEFD0><KP_4>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
@@ -1304,7 +1325,7 @@
 <Multi_key><numbersign><KP_2>                                                        <underscore> : "⮊" U2B8A # RIGHTWARDS BLACK CIRCLED WHITE ARROW
 #
 #
-# # C08
+# # C08 bracketleft
 #
 <UEFD0>                                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
 <Multi_key><numbersign>                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
@@ -1356,7 +1377,7 @@
 <Multi_key><numbersign><KP_2>                                                       <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
 #
 #
-# # C09
+# # C09 bracketright
 #
 <UEFD0>                                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
 <Multi_key><numbersign>                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
@@ -1408,7 +1429,7 @@
 <Multi_key><numbersign><KP_2>                                                      <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
 #
 #
-# # C10
+# # C10 bar
 #
 #   With respect to mathematical symbols that need to be negated, the positions
 #   in groups 1 to 3 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, then
@@ -1484,12 +1505,12 @@
 <Multi_key><numbersign><KP_2>                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
 #
-# # B01
+# # B01 slash
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
-#   U25FE, U25FD, U25FC, U25FB, U2B1B, U2B1C, are dispatched by color and also
-#   have another input composition alternative.
-#   See # # C01
+#   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two
+#   sets. These also have multikey alternatives.
+#   See # # C01 numbersign
 #   See # # Square emoji
 #
 <UEFD0>                                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
@@ -1542,7 +1563,7 @@
 <Multi_key><numbersign><KP_2>                                                          <KP_Divide> : "∕" U2215 # DIVISION SLASH math
 #
 #
-# # B02
+# # B02 asterisk
 #
 <UEFD0>                                                                                 <asterisk> : "✗" U2717 # BALLOT X
 <Multi_key><numbersign>                                                                 <asterisk> : "✗" U2717 # BALLOT X
@@ -1594,7 +1615,7 @@
 <Multi_key><numbersign><KP_2>                                                        <KP_Multiply> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 #
 #
-# # B03
+# # B03 less
 #
 #   Group 10 has the archaic "⁖" U2056 THREE DOT PUNCTUATION, used by the W3C
 #   in a test page for the `:first-letter` pseudoclass, rather than "‏" U200F,
@@ -1651,7 +1672,7 @@
 <Multi_key><numbersign><KP_2>                                                               <less> : "✏" U270F # PENCIL emoji
 #
 #
-# # B04
+# # B04 greater
 #
 <UEFD0>                                                                                  <greater> : "✔" U2714 # HEAVY CHECK MARK emoji
 <Multi_key><numbersign>                                                                  <greater> : "✔" U2714 # HEAVY CHECK MARK emoji
@@ -1703,7 +1724,7 @@
 <Multi_key><numbersign><KP_2>                                                            <greater> : "⛛" U26DB # HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
 #
 #
-# # B05
+# # B05 equal
 #
 <UEFD0>                                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
 <Multi_key><numbersign>                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
@@ -1755,20 +1776,14 @@
 <Multi_key><numbersign><KP_2>                                                              <equal> : "⚔" U2694 # CROSSED SWORDS emoji
 #
 #
-# # B06
+# # B06 grave
 #
 #   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB is here in group 1 of grave for
-#   intuitivity, but it is input as easily by dead_acute or dead_grave followed
-#   by comma.
-#   See #*# GRAVE
-#   See #*# ACUTE
-#   See # # CEDILLA&ACUTE
-#
-#   Alongside, letter apostrophe "ʼ" U02BC, that does have its place in group 1
-#   of apostrophe, may also be input by dead_circumflex followed by comma, with
-#   the benefit of ensuring a balanced and undiscriminatory distribution.
-#   See # # D07
+#   intuitivity, but an easier alternative is dead_circumflex followed by comma
+#   for an similar user experience as for "ʼ" U02BC in group 1 of apostrophe.
 #   See #*# CIRCUMFLEX
+#   See # # D07 apostrophe
+#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -1820,7 +1835,7 @@
 <Multi_key><numbersign><KP_2>                                                              <grave> : "⟂" U27C2 # PERPENDICULAR math
 #
 #
-# # B07-level1
+# # B07-level1 comma
 #
 #   Frequency requires the two hearts to be in the topmost groups, with U2764
 #   HEAVY BLACK HEART (red heart) in group 1 for being the most-used emoji in
@@ -1829,10 +1844,11 @@
 #
 #   This order disrupts the traditional English alphabetical order. Getting
 #   some mnemonics into the resulting list requires to assign CLUB to group 3,
-#   DIAMOND to group 4, and (highest-ranking) SPADE to group 5 accordingly.
+#   DIAMOND to group 4, and SPADE, highest-ranking, to group 5 accordingly.
 #
-#   The outlined counterparts (no emoji) are supported in groups 2 through 5 of
-#   dead_circumflex.
+#   The outlined counterparts "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664 do not
+#   have the emoji status; they are supported in the same order, with the same
+#   base character, in groups 2 through 5 of dead_circumflex.
 #   See # # CIRCUMFLEX&GROUP_2
 #
 <UEFD0>                                                                                    <comma> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
@@ -1885,7 +1901,7 @@
 <Multi_key><numbersign><KP_2>                                                              <comma> : "⚐" U2690 # WHITE FLAG
 #
 #
-# # B07-level3
+# # B07-level3 question
 #
 <UEFD0>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
 <Multi_key><numbersign>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
@@ -1937,7 +1953,7 @@
 <Multi_key><numbersign><KP_2>                                                           <question> : "♇" U2647 # PLUTO
 #
 #
-# # B08-level1
+# # B08-level1 period
 #
 #   This is only a small subset of the many vertically centered dots in Unicode
 #   as discussed in:
@@ -1945,8 +1961,15 @@
 #   Notably in this answer from Davislor:
 #   https://tex.stackexchange.com/a/470824
 #
+#   "‧" U2027 HYPHENATION POINT used in French is best for screen readers.
+#   https://listengine.tuxfamily.org/ergodis.org/discussions/2021/06/msg00010.html
+#   https://matti-sg-fr.medium.com/point-m%C3%A9dian-final-point-dhyph%C3%A9nation-3f749c32b659
+#
 #   "·" U00B7 MIDDLE DOT is also more conveniently in group 1 of p and P.
+#   See #+# GROUP_1
+#
 #   "⋅" U22C5 DOT OPERATOR is also more conveniently in group 1 of colon.
+#   See # # B09 colon
 #
 <UEFD0>                                                                                   <period> : "‧" U2027 # HYPHENATION POINT
 <Multi_key><numbersign>                                                                   <period> : "‧" U2027 # HYPHENATION POINT
@@ -1998,7 +2021,7 @@
 <Multi_key><numbersign><KP_2>                                                         <KP_Decimal> : "⁘" U2058 # FOUR DOT PUNCTUATION
 #
 #
-# # B08-level3
+# # B08-level3 exclam
 #
 <UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
@@ -2050,7 +2073,7 @@
 <Multi_key><numbersign><KP_2>                                                             <exclam> : "⌘" U2318 # PLACE OF INTEREST SIGN
 #
 #
-# # B09
+# # B09 colon
 #
 #   The watch emoji are mapped here based on the mnemonic of time notation.
 #
@@ -2104,7 +2127,7 @@
 <Multi_key><numbersign><KP_2>                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
 #
 #
-# # B10
+# # B10 semicolon, section
 #
 #   The (full) triangular colon is about 40 times more frequent than its half.
 #   Consistently, "ː" U02D0 is in group 1, "ˑ" U02D1 in group 2. For mnemonics,
@@ -2219,7 +2242,7 @@
 <Multi_key><numbersign><KP_2>                                                            <section> : "⌨" U2328 # KEYBOARD emoji
 #
 #
-# # A03-level1
+# # A03-level1 space
 #
 #   ISO A03 should be the left Thumb Shift (Oyayubi Shifuto).
 #   https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
@@ -2237,7 +2260,7 @@
 #   The WNJ is also on live key, level 4 of the space bar, for its use in long
 #   URLs expected to line-wrap after slashes but not doing so in browsers that
 #   are not fully Unicode conformant, and because level 4 of the space bar must
-#   not be used for useful space characters such as U00A0 NBSP and U202F NBTSP.
+#   not be used for frequent space characters like U00A0 NBSP and U202F NBTSP.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=944
 #   https://unicode.org/reports/tr14/#SY
 #
@@ -2307,7 +2330,7 @@
 <Multi_key><numbersign><KP_2>                                                              <space> : "　" U3000 # IDEOGRAPHIC SPACE
 #
 #
-# # A03-level3
+# # A03-level3 nobreakspace
 #
 #   Except U2000 and U2001, originally intended to be breaking, these space characters
 #   could be followed by WORD JOINER, but they are not, for cross-platform compatibility
@@ -2394,6 +2417,8 @@
 #   Plain text displays best with a 6 character tab width.
 #   Empty positions are unassigned.
 #
+#
+#
 #	   	g1	g2	g3	g4	g5	g11	g12	g6	g7	g8	g9	g10
 #	A a	Æ æ	Ʌ ʌ	Ɑ ɑ	⹒ ⁊	Ꜣ ꜣ	Ꞛ ꞛ	ẚ ꬱ	Α α	𝒜 𝒶	𝔸 𝕒	𝔄 𝔞	𝖠 𝖺
 #	B b	Ɖ ɖ	Ɓ ɓ	Ꞵ ꞵ	␢ ␢	ʘ ʘ	Ƅ ƅ	ƾ ʖ	Β β	ℬ 𝒷	𝔹 𝕓	𝔅 𝔟	𝖡 𝖻
@@ -2421,6 +2446,7 @@
 #	X x	Ɛ ɛ	ꭘ ꭖ	Ꭓ ꭓ	ꭔ ꭕ	 ꭗ	 ꭙ	̽ ◌͓	Χ χ	𝒳 𝓍	𝕏 𝕩	𝔛 𝔵	𝖷 𝗑
 #	Y y	Ɣ ɣ	Ƴ ƴ	Ʊ ʊ	Ỿ ỿ	 ꭚ	ʏ ʎ	̞ ◌̞	Υ υ	𝒴 𝓎	𝕐 𝕪	𝔜 𝔶	𝖸 𝗒
 #	Z z	Ʒ ʒ	℥ ℥	Ᶎ ᶎ	ʓ ʑ	Ɀ ɀ	Ꝣ ꝣ	Ⱬ ⱬ	Ζ ζ	𝒵 𝓏	ℤ 𝕫	ℨ 𝔷	𝖹 𝗓
+#
 #
 #
 #+# GROUP_1
@@ -2977,8 +3003,8 @@
 #   of parenleft and parenright.
 #   See #*# TURNED
 #   See #^# INVERTED
-#   See # # C03
-#   See # # C04
+#   See # # C03 parenleft
+#   See # # C04 parenright
 #
 <UEFD0><4>                                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
 <Multi_key><numbersign><4>                                                                     <A> : "⹒" U2E52 # TIRONIAN SIGN CAPITAL ET
