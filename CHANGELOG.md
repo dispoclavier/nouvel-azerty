@@ -2,6 +2,17 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.4.0 (projet)
+
+Redisposition des trois premiers groupes du tiret bas.
+
+* Transformations :
+	* Groupes des symboles : Redonder "‣" U+2023 à la place de "◦" U+25E6, qui prend la place de "•" U+2022, qui prend la place de "―" U+2015, qui est sur touche vive ou dans le groupe 1 de "ɔ" U+0254, "Ɔ" U+0186, "ñ" U+00F1, "Ñ" U+00D1, "ʻ" U+02BB, "‑" U+2011, dans raie haute et en composition par « ¦8- ». compose-3.yml [d93a4d9](https://github.com/dispoclavier/nouvel-azerty/commit/d93a4d994914a50073429b5e6aade265eec61281), compose-1.yml [f57e338](https://github.com/dispoclavier/nouvel-azerty/commit/f57e3380a1d6ddd40c86891a0a7cc0bd630bcf75)
+	* Accent aigu : Supprimer "ʻ" U+02BB (par ","), qui est dans le groupe 1 de "`" et va dans accent circonflexe (par ","). compose-2.yml [6994434](https://github.com/dispoclavier/nouvel-azerty/commit/6994434b505b5808e887099048acbd26c1da451d)
+	* Accent circonflexe : Redonder "ʻ" U+02BB (par ",") à la place de "ʼ" U+02BC, qui est dans le groupe 1 de "'" et "’". ibidem
+	* Accent grave : Supprimer "ʻ" U+02BB (par ","), qui est dans le groupe 1 de "`" et va dans accent circonflexe (par ","). ibidem
+	* Cédille et accent aigu : Rétablir la symétrie des séquences. ibidem
+
 ## 4.3.1 (2024-09-22)
 
 * Composition :
