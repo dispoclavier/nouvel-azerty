@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.4.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.4.1" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -225,7 +225,9 @@
 #   https://listengine.tuxfamily.org/ergodis.org/discussions/2018/10/msg00007.html
 #   https://www.fr.brezhoneg.bzh/uploads/Document/c8/4004_900_Geriaoueg-al-levraouegou-2021.pdf#page=6&zoom=100,0,800
 #
-#   The Breton trigraph is composed with a regular letter apostrophe U02BC.
+#   The Breton trigraph is regularly composed of a "c" and an "h" separated by
+#   a letter apostrophe U02BC, not a punctuation apostrophe U2019, so as to
+#   avoid inaccurate word boundaries.
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
 #   https://github.com/unicode-org/cldr/blob/135658d98f51ce881e8cd553c5bd60b0672d9f7a/common/main/br.xml#L1264
 #   https://github.com/unicode-org/cldr/blob/main/common/main/br.xml#L1264
@@ -236,7 +238,7 @@
 #   variants consistently. The digraph "ch" does not have dedicated support.
 #
 #   The Breton trigraph got mnemonic keysyms in keysymdef.h, but these may not
-#   be supported yet in en_US.UTF-8/Compose, so the trigraph is defined here.
+#   be supported yet in en_US.UTF-8/Compose, so they are configured here.
 #
 <c_h> : "cʼh" # See # # Notes about syntax
 <C_h> : "Cʼh" #
@@ -278,10 +280,11 @@
 #   a Unicode character you can use instead.”
 #   https://www.unicode.org/mail-arch/unicode-ml/y2019-m01/0146.html
 #
-#   Imprimerie nationale (France) specifies that big punctuation, also known as
-#   double punctuation, as of the subset it supports, and that does not include
-#   the single angle quotation marks U2039 and U203A used for nested quotations
-#   in other parts of Francophonie, is spaced out using either of these spaces:
+#   Imprimerie nationale, France does not formally categorize punctuation marks
+#   into big punctuation and small punctuation or double punctuation and simple
+#   punctuation, nor does it support all punctuation marks: The em dash and the
+#   en dash are merged, and the single angle quotation marks U2039 and U203A go
+#   unmentioned. Part of the punctuation is spaced out using either of:
 #
 #       * No-break justifying space, behaving like Unicode’s NBSP U00A0;
 #       * No-break thin space, behaving like Unicode’s NBTSP U202F.
@@ -291,12 +294,11 @@
 #   The semicolon and the question and exclamation marks are typeset exactly as
 #   stated in the style guide with a no-break thin space. The colon too, with a
 #   no-break justifying space. The double angle quotation marks are ruled like
-#   colon but typeset like semicolon. The single angle quotation marks are
-#   missing.
+#   colon but typeset like semicolon.
 #
-#   Technically, U202F is a no-break clone of Unicode’s thin space TSP U2009.
-#   Consistently, in CLDR, U202F is the no-break thin space, abbreviated NBTSP,
-#   since 2024-08-02T0242+0200.
+#   The no-break thin space is the "espace fine insécable" quoted in Unicode,
+#   a no-break clone of Unicode’s thin space TSP U2009. Consistently, in CLDR,
+#   U202F is the no-break thin space, short NBTSP, since 2024-08-02T0242+0200.
 #   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
 #   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
@@ -310,7 +312,7 @@
 #   other typographic space characters in the range U2000..U200A. Accordingly,
 #   the line breaking property was set to no-break for all spaces starting with
 #   U2002, after the two widest spaces in a breaking variant: U2000, U2001, as
-#   opposed to U2002, U2003.
+#   opposed to U2002, U2003, consistently with TeX.
 #
 #   But that design goal was ultimately compromised. To cover up the vandalism,
 #   U2007 FIGURE SPACE was left no-break with the hypocritical allegation that
