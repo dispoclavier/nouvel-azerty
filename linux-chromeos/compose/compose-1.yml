@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.4.1" # See # # Notes about syntax
+<UEFA0>                     : "version 4.4.2" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -312,13 +312,18 @@
 #   other typographic space characters in the range U2000..U200A. Accordingly,
 #   the line breaking property was set to no-break for all spaces starting with
 #   U2002, after the two widest spaces in a breaking variant: U2000, U2001, as
-#   opposed to U2002, U2003, consistently with TeX.
+#   opposed to U2002, U2003, consistently with TeX, where `\qquad` and `\quad`
+#   are breaking, while `\emspace`, `\enspace` and `\thinspace` are no-break.
+#   The TeXbook is not very clear about that, but obviously this difference was
+#   well known and fostered the original typographical space range design.
+#   https://ctan.org/tex-archive/systems/knuth/dist/tex/texbook.tex
+#   https://unicode.org/mail-arch/unicode-ml/Archives-Old/UML023/0536.html
 #
 #   But that design goal was ultimately compromised. To cover up the vandalism,
 #   U2007 FIGURE SPACE was left no-break with the hypocritical allegation that
 #   this space is used “in” numbers, while it was encoded as the tabular space,
 #   to be used before numbers when typesetting tables the old way, alongside an
-#   equivalent indentation by the width of a decimal dot or comma using U2008.
+#   equivalent indentation by the width of a decimal dot or comma, using U2008.
 #   https://www.unicode.org/reports/tr14/tr14-51.html
 #
 #       This is the preferred space to use in numbers. It has the same width as
@@ -366,37 +371,51 @@
 #   more as the Unicode Standard specifies that it encodes plain text.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=45
 #
-#   In Unicode CLDR, French migrated from NBSP to NNBSP for grouping digits and
-#   in short measurement unit patterns, in v34, released on 2018-10-15:
-#   https://cldr.unicode.org/index/downloads/cldr-34
+#   In Unicode CLDR, French migrated from NBSP to NNBSP wherever appropriate,
+#   in 2018 when version 34 was released on 2018-10-15.
+#   In section Detailed Data Changes of the release note:
+#   https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l
 #
 #      The French locale now uses narrow no-break space U+202F in several
 #      places: as the numeric grouping separator, in many short unit patterns,
 #      and in the locale display name patterns. It also changed normal space to
 #      no-break space U+00A0 in the wide unit patterns.
 #
-#      Migration
+#   In section Migration of the release note:
+#   https://cldr.unicode.org/downloads/cldr-34#h.fm1q7yof3rxz_l
 #
 #      French grouping separator changed from no-break space U+00A0 to
 #      narrow no-break space U+202F.
 #
-#   The other 50+ locales using a space as the numeric group separator —
-#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf#page=6&zoom=100,0,640
-#   — are expected to follow up soon. However, six years down the road, no more
-#   than one locale did so: Venetian (vec).
-#   https://www.unicode.org/cldr/charts/46/by_type/numbers.symbols.html#a1ef41eaeb6982d
+#   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/fr.xml#L7868
+#   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L7868
 #
-#   In CLDR, the narrow no-break space U+202F is now the no-break thin space,
-#   since 2024-08-02T0242+0200, and its initialism is NBTSP. (This move towards
-#   more accurate descriptors is expected to reflect in other parts soon.)
-#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
-#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java
+#   Venetian got its CLDR coverage level raised in 2023, adding the decimal
+#   separator and the group separator to the covered data. Since then, the
+#   group separator in Venetian is set to U202F NBTSP, making Venetian the
+#   second locale to implement the BIPM recommendation.
+#   https://cldr.unicode.org/downloads/cldr-44#overview
+#   https://www.unicode.org/cldr/charts/44/by_type/numbers.symbols.html#a1ef41eaeb6982d
+#   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/vec.xml#L4721
+#   https://github.com/unicode-org/cldr/blob/main/common/main/vec.xml#L4721
+#
+#   Spanish is prone to using NBTSP, since the recommended group separator is a
+#   thin space, “un pequeño espacio”, but CLDR is not updated yet.
+#   https://www.rae.es/dpd/punto
+#   https://en.wikipedia.org/wiki/Non-breaking_space#Width_variation
+#   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/es.xml#L5834
+#   https://github.com/unicode-org/cldr/blob/main/common/main/es.xml#L5834
+#
+#   There are other 50+ locales using a space as a numeric group separator, and
+#   this space is supposed to be a thin space, so there is no other option than
+#   syncing these locales with French and Venetian. But all of these, including
+#   Canadian French, keep sticking with U00A0 NO-BREAK SPACE,
+#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf#page=6&zoom=100,0,640
+#   https://www.unicode.org/cldr/charts/46/by_type/numbers.symbols.html#a1ef41eaeb6982d
 #
 #   Further reading about the topic:
 #   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 #   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
-#   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
 #   https://www.unicode.org/L2/L2019/19115-fwsp-usability.pdf
 #   https://www.unicode.org/L2/L2019/19317-uax14-proposal.pdf
 #   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf
@@ -429,7 +448,7 @@
 #
 # # Abbreviation "Numéro" with trailing space
 #
-#   With regular superscript "ᵒ" U1D52 and NBTSP U202F.
+#   With regular superscript "ᵒ" U1D52 and NBTSP.
 #
 <UEF68> : "nᵒ " #
 <UEF69> : "Nᵒ " #
@@ -445,8 +464,8 @@
 #
 # # Ordinal indicator with trailing space
 #
-#   Ordinal indicator "ᵉ" with automated spacing by NBTSP U202F, intended for
-#   typing French style century figures using Roman numerals.
+#   Ordinal indicator "ᵉ" with automated spacing by NBTSP, intended for typing
+#   French style century figures using Roman numerals.
 #
 <UEF6C> : "ᵉ " #
 #
@@ -471,7 +490,7 @@
 #
 #   NO-BREAK SPACE U00A0 is tailored as fixed-width in word processors other
 #   than Microsoft Word 2013, because it is misused for punctuation spacing in
-#   lieu of NBTSP U202F, so that it raises issues in Polish, Russian and other
+#   lieu of U202F NBTSP, so that it raises issues in Polish, Russian and other
 #   locales requiring no-break space as interword space, and thus requiring the
 #   no-break space to be justifying as defined. This tailoring without settings
 #   for NBSP justification and for the space used in French punctuation spacing
