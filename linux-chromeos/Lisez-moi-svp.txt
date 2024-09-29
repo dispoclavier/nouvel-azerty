@@ -1,5 +1,5 @@
-                      Date : 22024-09-27T0352+0200
-                   Version : 4.4.1
+                      Date : 2024-09-29T0515+0200
+                   Version : 4.4.2
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -135,7 +135,7 @@ Mode d’emploi sous Linux
 
   2  Sous le titre « Assets », télécharger le dossier compressé nommé :
 
-         Nouvel-AZERTY-Linux-4.4.1.zip
+         Nouvel-AZERTY-Linux-4.4.2.zip
 
   3  Décompresser le dossier téléchargé.
 
