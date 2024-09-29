@@ -8169,7 +8169,6 @@
 #   Unicode does not promote the misuse of FIGURE DASH for interval notation as
 #   advocated on the web page cited above, but Unicode did — and still does —
 #   promote the misuse of FIGURE SPACE as a numeric group separator, in UAX#14.
-#   https://cldr.unicode.org/index/downloads/cldr-34
 #   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf#page=6
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf#page=7
