@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.4.2" # See # # Notes about syntax
+<UEFA0>                     : "version 4.4.3" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -371,9 +371,10 @@
 #   more as the Unicode Standard specifies that it encodes plain text.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=45
 #
-#   In Unicode CLDR, French migrated from NBSP to NNBSP wherever appropriate,
-#   in 2018 when version 34 was released on 2018-10-15.
-#   In section Detailed Data Changes of the release note:
+#   In Unicode CLDR, French migrated from NBSP to NNBSP, i.e. NBTSP, wherever
+#   applicable, in 2018, when CLDR 34 was released on 2018-10-15.
+#
+#   In the release note, section Detailed Data Changes:
 #   https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l
 #
 #      The French locale now uses narrow no-break space U+202F in several
@@ -381,19 +382,20 @@
 #      and in the locale display name patterns. It also changed normal space to
 #      no-break space U+00A0 in the wide unit patterns.
 #
-#   In section Migration of the release note:
+#   In the release note, section Migration:
 #   https://cldr.unicode.org/downloads/cldr-34#h.fm1q7yof3rxz_l
 #
 #      French grouping separator changed from no-break space U+00A0 to
 #      narrow no-break space U+202F.
 #
+#   The related data field in `cldr/common/main/fr.xml`:
 #   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/fr.xml#L7868
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L7868
 #
 #   Venetian got its CLDR coverage level raised in 2023, adding the decimal
-#   separator and the group separator to the covered data. Since then, the
-#   group separator in Venetian is set to U202F NBTSP, making Venetian the
-#   second locale to implement the BIPM recommendation.
+#   separator and the group separator to the covered data. Since CLDR 44 was
+#   released on 2023‑10‑31, the group separator in Venetian is set to U202F,
+#   making Venetian the second locale to implement the BIPM recommendation.
 #   https://cldr.unicode.org/downloads/cldr-44#overview
 #   https://www.unicode.org/cldr/charts/44/by_type/numbers.symbols.html#a1ef41eaeb6982d
 #   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/vec.xml#L4721
@@ -409,19 +411,19 @@
 #   There are other 50+ locales using a space as a numeric group separator, and
 #   this space is supposed to be a thin space, so there is no other option than
 #   syncing these locales with French and Venetian. But all of these, including
-#   Canadian French, keep sticking with U00A0 NO-BREAK SPACE,
+#   Canadian French, keep sticking with NBSP U00A0 for the time being.
 #   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf#page=6&zoom=100,0,640
 #   https://www.unicode.org/cldr/charts/46/by_type/numbers.symbols.html#a1ef41eaeb6982d
 #
 #   Further reading about the topic:
-#   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
-#   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
 #   https://www.unicode.org/L2/L2019/19115-fwsp-usability.pdf
+#   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
+#   https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 #   https://www.unicode.org/L2/L2019/19317-uax14-proposal.pdf
 #   https://www.unicode.org/L2/L2020/20005-uax14-material.pdf
 #   https://www.unicode.org/L2/L2020/20006-uax14-formal.pdf
-#   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf
+#   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
 #
 #   As of punctuation spacing automation while writing, there is a feedback
 #   item submitted while commenting an LDML extension designed for SIL/Keyman:
