@@ -2,6 +2,10 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.4.4 (2024-09-30)
+
+* Documentation : Corriger des annotations. compose-1.yml [1690492](https://github.com/dispoclavier/nouvel-azerty/commit/1690492790286bb4c6043e7202783d975cc20429)
+
 ## 4.4.3 (2024-09-29)
 
 * Documentation : Corriger des annotations. compose-1.yml [154f6a5](https://github.com/dispoclavier/nouvel-azerty/commit/154f6a51ac081b8e88fe9413c3337c9c8d7ce6b3)
