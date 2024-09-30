@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.4.3" # See # # Notes about syntax
+<UEFA0>                     : "version 4.4.4" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -224,6 +224,13 @@
 #   apostrophe to be featured on the NF Z71-300 standard keyboard layouts.
 #   https://listengine.tuxfamily.org/ergodis.org/discussions/2018/10/msg00007.html
 #   https://www.fr.brezhoneg.bzh/uploads/Document/c8/4004_900_Geriaoueg-al-levraouegou-2021.pdf#page=6&zoom=100,0,800
+#   https://unicode-org.atlassian.net/browse/CLDR-12026
+#   https://github.com/unicode-org/cldr/pull/3220
+#   https://cldr.unicode.org/downloads/cldr-44
+#   https://kbdlayout.info/kbdfrna
+#   https://kbdlayout.info/kbdfrna/download/klc
+#   DEADKEY	017f	// CaractÃ¨res europÃ©ens additionnels
+#   0027	02bc	// ' -> ʼ
 #
 #   The Breton trigraph is regularly composed of a "c" and an "h" separated by
 #   a letter apostrophe U02BC, not a punctuation apostrophe U2019, so as to
@@ -232,17 +239,16 @@
 #   https://github.com/unicode-org/cldr/blob/135658d98f51ce881e8cd553c5bd60b0672d9f7a/common/main/br.xml#L1264
 #   https://github.com/unicode-org/cldr/blob/main/common/main/br.xml#L1264
 #
-#   The Breton trigraph has a dedicated key on the Breton variants "kbbrFRs"
-#   and "kbbrFRsr", and it is supported on (Shift +) AltGr + AltFr + A on the
-#   French base layout "kbfrFRs" and the remapped "kbfrFRsr", and on all other
-#   variants consistently. The digraph "ch" does not have dedicated support.
+#   The variants for Breton and French "kbbrFRs" and "kbbrFRsr" have the Breton
+#   trigraph on Base and Shift levels of key E01 additionally to the support of
+#   the Breton trigraph on (Shift +) AltGr + AltFr + A.
 #
-#   The Breton trigraph got mnemonic keysyms in keysymdef.h, but these may not
-#   be supported yet in en_US.UTF-8/Compose, so they are configured here.
+#   The Breton trigraph got mnemonic keysyms in keysymdef.h, configured here to
+#   ensure regular support.
 #
-<c_h> : "cʼh" # See # # Notes about syntax
+<c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE.
 <C_h> : "Cʼh" #
-<C_H> : "CʼH" #
+<C_H> : "CʼH" # See # # Notes about syntax
 #
 #
 # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
