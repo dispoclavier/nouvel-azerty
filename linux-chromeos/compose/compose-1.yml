@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.4.4" # See # # Notes about syntax
+<UEFA0>                     : "version 4.4.5" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -212,8 +212,8 @@
 #
 # # Breton polygraphs
 #
-#   The CʼHWERTY keyboard layout from the NGO An Drouizig has a dedicated key
-#   for the Breton trigraph.
+#   The Brezhoneg keyboard layout from An drouizig has its key D01 dedicated to
+#   the Breton trigraph.
 #   https://drouizig.org/outils-et-ressources/clavier-chwerty/
 #   https://web.archive.org/web/20221007070728/http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/162-faq-foire-aux-questions
 #   https://bugs.freedesktop.org/show_bug.cgi?id=19506
@@ -224,16 +224,21 @@
 #   apostrophe to be featured on the NF Z71-300 standard keyboard layouts.
 #   https://listengine.tuxfamily.org/ergodis.org/discussions/2018/10/msg00007.html
 #   https://www.fr.brezhoneg.bzh/uploads/Document/c8/4004_900_Geriaoueg-al-levraouegou-2021.pdf#page=6&zoom=100,0,800
-#   https://unicode-org.atlassian.net/browse/CLDR-12026
-#   https://github.com/unicode-org/cldr/pull/3220
-#   https://cldr.unicode.org/downloads/cldr-44
-#   https://kbdlayout.info/kbdfrna
-#   https://kbdlayout.info/kbdfrna/download/klc
-#   DEADKEY	017f	// CaractÃ¨res europÃ©ens additionnels
+#
+#   Consistently, in Microsoft’s implementation of NF Z71-300:2019 AZERTY, the
+#   first rule of the “Caractères européens additionnels” dead key, whose dead
+#   character is "017f", is for letter apostrophe based on ASCII apostrophe:
 #   0027	02bc	// ' -> ʼ
+#   https://kbdlayout.info/kbdfrna/download/klc
+#   https://kbdlayout.info/kbdfrna
+#   https://github.com/unicode-org/cldr/pull/3220
+#   https://unicode-org.atlassian.net/browse/CLDR-12026
+#   https://cldr.unicode.org/downloads/cldr-44
+#   https://blogs.windows.com/windows-insider/2022/11/18/announcing-windows-11-insider-preview-build-25247/
+#   https://forum.bepo.fr/d/2020-bepo-desormais-inclus-dans-windows-11-insider-preview
 #
 #   The Breton trigraph is regularly composed of a "c" and an "h" separated by
-#   a letter apostrophe U02BC, not a punctuation apostrophe U2019, so as to
+#   a letter apostrophe U02BC, not a punctuation apostrophe U2019, in order to
 #   avoid inaccurate word boundaries.
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
 #   https://github.com/unicode-org/cldr/blob/135658d98f51ce881e8cd553c5bd60b0672d9f7a/common/main/br.xml#L1264
