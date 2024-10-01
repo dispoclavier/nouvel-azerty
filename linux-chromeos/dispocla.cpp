@@ -1,4 +1,4 @@
-//                       Date: 2024-09-15T0525+0200
+//                       Date: 2024-10-02T0030+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -314,78 +314,37 @@
 // Since computerized typewriting and typesetting have made horizontal spacing
 // a question of inserting characters, both users and implementers are tempted
 // to shift solid punctuation spacing out of the keyboard layout by relying on
-// postprocessing or on hybrid input methods involving word processors, except
-// where mapping a non-breaking space on Shift + Space is accepted to create a
-// synergy with spacing-prone punctuation characters mapped on the Shift level
-// and pressed almost simultaneously with the space bar.
-// https://bepo.fr/wiki/Version_1.1rc1/Touches_vives/Espaces
+// postprocessing or on hybrid input methods involving word processors.
+//
+// Word processing software caters for punctuation spacing by automatically
+// inserting NBSP when a colon, a semicolon, a question or exclamation mark
+// is typed, with or without a preceding breaking space, and by replacing U0022
+// QUOTATION MARK with the appropriate, spaced-out angle quotation mark.
+// But the NBSP used is not preferred, because it is justifying (and too wide).
+// Therefore NBSP is tailored as fixed-width as long as the text is displayed
+// in the software or exported to PDF, but not after copy-pasting in a browser.
 //
 // Users are divided over whether it is acceptable to input spaces separately.
 // While spacing out punctuation is generally considered mandatory in French,
 // doing so manually is seen as wasteful and inefficient by part of the users.
-//
-// These keyboard layouts support semiautomatic punctuation spacing, where the
-// spaced-out punctuation characters and the unspaced-out ones are on the same
-// key with different modifiers: Shift for spaced-out, AltFr for unspaced-out.
-// Additionally, Shift + AltFr yields unspaced-out punctuation marks `?!:;`,
-// with the rationale that after typing a spaced-out punctuation and while the
-// little finger is still on Shift, the ring finger can easily press AltFr, so
-// as to inhibit spacing before an additional question or exclamation mark.
-//
-// Advantages of Shift over AltFr for spaced-out punctuation characters:
-//
-//   1  Synergy between spaced-out punctuation and normal space;
-//   2  Synergy between unspaced punctuation and extended numpad digits;
-//   3  Unspaced punctuation is in synergy with no-break narrow space;
-//   4  UX consistency between legacy and new as of the question mark;
-//   5  Cross-mode UX consistency between writing French and programming;
-//   6  Consistency between spacing and modifier key accessibility.
-//
-// Advantages of AltFr over Shift for spaced-out punctuation characters:
-//
-//   1  No inadvertent insertion of NNBSP while typing unspaced punctuation;
-//   2  Consistency with the key name 'AltFr' as 'Alternate French' modifier;
-//   3  Shift is often considered too far left, while AltFr is better placed;
-//   4  Stability of the question mark as the only unmoved big punctuation;
-//   5  Minimal cross-mode user experience inconsistency, as Shift is stable;
-//   6  All strings involving no-break thin space have the same modifier key;
-//
-// The latter set of “advantages” fueled a design error, fixed only in v4.0.0.
-// See Compose.yml  Acknowledgements
-//
-//
-// ###  Synergistic vs semiautomatic punctuation spacing
-//
-// Spacing out certain punctuation characters is required in standard French and
-// in Canadian French, where a non-breaking thin space is used with ?!; if it is
-// available on the system, and certainly also with «» (and with ‹›) as inferred
-// from the table below the rules on this page:
-// https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles
-//
-// Word processing software is catering for punctuation spacing by automatically
-// inserting NBSP when a colon, a semicolon, a question mark or exclamation mark
-// is typed, with or without a preceding breaking space (replaced with an NBSP),
-// and by replacing U+0022 QUOTATION MARK with the appropriate, spaced-out angle
-// quotation mark. But the NBSP used is not preferred, because it is justifying.
-// Therefore NBSP is tailored as fixed-width as long as the text is displayed in
-// the software or exported in PDF, but not after copy-pasting in a blog editor.
-//
 // According to mainstream demand fostered by word processing autocorrection,
-// users should not be required to input more than a normal space inside eligible
+// users should not be required to input more than a normal space around
 // punctuation characters, ideally less. This requirement can be met in 2 ways:
 //
 // a. Synergistic punctuation spacing.
-//    Punctuation characters and non-breaking space are mapped on the same level.
-//    That can be either level 2 or level 3. Some layouts feature angle quotation
-//    marks and NBSP on level 3, while double ASCII punctuation (?!:;) is mostly
-//    on level 2 or even level 1, where the space bar yields breaking space
-//    except on the French BÉPO layout https://bepo.fr where they are on
-//    level 2 along with NNBSP on the space bar (v1.1; NBSP in v1.0).
+//    Punctuation characters and no-break space are mapped on the same level.
+//    That can be level 2, level 3 or level 5. Some layouts feature angle
+//    quotation marks and NBSP on level 3, while 2-parts ASCII punctuation
+//    (?!:;) is mostly on level 1 or on level 2, where the space bar yields
+//    breaking space except on the French BÉPO layout where 2-parts punctuation
+//    is on level 2 along with no-break thin space NNBSP on the space bar as of
+//    v1.1; NBSP in v1.0.
+//    https://bepo.fr/wiki/Version_1.1rc1/Touches_vives/Espaces
 //
 // b. Semi-automatic punctuation spacing.
 //    Punctuation characters are mapped with NNBSP as polygrams on single key
 //    positions along with the same punctuation characters mapped in isolation
-//    on the same keys on other positions. Requirements:
+//    on the same keys on another level. Requirements:
 //
 //    1. Spaced-out and unspaced punctuation has the same ease of access.
 //    2. The ModLock toggle, now mapped on key E00 instead of superscript 2,
@@ -417,6 +376,38 @@
 // Synergistic variants started being added on 2020-02-08, and were intended
 // for users writing primarily in other languages than French, and for users
 // opposed to polygram output. They have been discontinued on 2021-01-27.
+// But ultimately, since version 4.0.0 (2024-08-11), unspaced punctuation is
+// in synergy with the no-break thin space without requiring extra variants.
+//
+// These keyboard layouts support both manual and semiautomatic punctuation
+// spacing, where the spaced-out punctuation characters and the unspaced-out
+// ones are on the same key with different modifiers: Shift for spaced-out,
+// AltFr for unspaced-out while the spacebar yields the no-break thin space.
+// Additionally, Shift + AltFr yields unspaced-out punctuation marks `?!:;`,
+// with the rationale that after typing a spaced-out punctuation and while the
+// little finger is still on Shift, the ring finger can easily press AltFr, so
+// as to inhibit spacing before an additional question or exclamation mark.
+//
+// Advantages of Shift over AltFr for spaced-out punctuation characters:
+//
+//   1  Synergy between spaced-out punctuation and normal space;
+//   2  Synergy between unspaced punctuation and no-break thin space;
+//   3  Synergy between unspaced punctuation and extended numpad digits;
+//   4  UX consistency between legacy and new as of the question mark;
+//   5  Cross-mode UX consistency between writing French and programming;
+//   6  Consistency between spacing and modifier key accessibility.
+//
+// Advantages of AltFr over Shift for spaced-out punctuation characters:
+//
+//   1  No inadvertent insertion of NNBSP while typing unspaced punctuation;
+//   2  Consistency with the key name 'AltFr' as 'Alternate French' modifier;
+//   3  Shift is often considered too far left, while AltFr is better placed;
+//   4  Stability of the question mark as the only unmoved big punctuation;
+//   5  Minimal cross-mode user experience inconsistency, as Shift is stable;
+//   6  All strings involving no-break thin space have the same modifier key;
+//
+// The latter set of “advantages” fueled a design error, fixed only in v4.0.0.
+// See Compose.yml  Acknowledgements
 //
 //
 // ###  Standard typographic number input
