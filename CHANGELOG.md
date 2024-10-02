@@ -2,6 +2,11 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.4.6 (2024-10-02)
+
+* Composition : Supprimer "ʼN" U+02BC U+004E. compose-1.yml [24b2f6b](https://github.com/dispoclavier/nouvel-azerty/commit/24b2f6bf215e1132ccfe135a5c14da97fcde61b3)
+* Documentation : Corriger des annotations. dispocla.cpp [b9ca449](https://github.com/dispoclavier/nouvel-azerty/commit/b9ca449e93678f4ab94e23f323f2fa098d8c2bb7), compose-1.yml [24b2f6b](https://github.com/dispoclavier/nouvel-azerty/commit/24b2f6bf215e1132ccfe135a5c14da97fcde61b3), [ceffb2a](https://github.com/dispoclavier/nouvel-azerty/commit/ceffb2a5ea86d1ba50437ec913ee0c520bd3ec30), compose-2.yml [d72e791](https://github.com/dispoclavier/nouvel-azerty/commit/d72e791471c412d75dbab07ae709d69ef4b352d8), [2f12a33](https://github.com/dispoclavier/nouvel-azerty/commit/2f12a3398796c734d9ec5ee27d823b1d6ec778a1), compose-3.yml [07c7bee](https://github.com/dispoclavier/nouvel-azerty/commit/07c7bee6887a227028131bebfb7e318bc5c33c96)
+
 ## 4.4.5 (2024-09-30)
 
 * Documentation : Corriger des annotations. compose-1.yml [e1ff957](https://github.com/dispoclavier/nouvel-azerty/commit/e1ff957eaf396e7d19ce20c4d332e4cc3afe5494)
