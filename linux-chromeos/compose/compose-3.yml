@@ -11,27 +11,27 @@
 #   START_LETTER_SYMBOL_GROUPS
 #
 #
-### Group selector introduction
+### Group dead key introduction
 #
-#   The group selector is a special dead key designed to remap every single key
+#   The group dead key is a special dead key designed to remap every single key
 #   position. E.g. group 1 of Ɔɔ, Ññ and non-breaking hyphen outputs "―" U2015,
 #   a feature designed for African, Breton, and remapped variants.
 #   See #*# GROUP_1
 #
-#   Usually, however, the scope of the group selector is limited to a handy set
+#   Usually, however, the scope of the group dead key is limited to a handy set
 #   of characters including the Latin base alphabet, the ten digits and the set
 #   of ASCII symbols mapped on level 3 as of 30 symbols, and level 1 for period
 #   and comma, plus the space bar, with ordinary space and no-break space used.
 #
 #   The resulting letter groups and symbol groups make up the main content of a
-#   standard group selector as used on this keyboard layout, with support for a
+#   standard group dead key as used on this keyboard layout, with support for a
 #   minimum number of 4 multiple presses. Support for looping through the group
 #   array is straightforward on macOS with the terminator showing the currently
 #   active group, and on Windows. In XCompose, supporting the first four groups
 #   by multiple presses is feasible, and going beyond is not even desirable, as
 #   all groups — except group 1 and group 2 — are activatable by typing a digit
-#   after pressing the group selector. This scheme expands the group array to a
-#   total number of 12 groups accessed using the group selector, piling up upon
+#   after pressing the group dead key. This scheme expands the group array to a
+#   total number of 12 groups accessed using the group dead key, piling up upon
 #   the default group, that is obiously numbered 0, contrasting with the scheme
 #   introduced by ISO/IEC 9995.
 #
@@ -46,15 +46,15 @@
 #   See ### Letter groups
 #
 #   The keysym *dead_group is not supported in keysymdef.h. For the time being,
-#   the private use character UEFB0 is used as the group selector dead key.
+#   the private use character UEFB0 is used as the group dead key.
 #
 #
 # # History
 #
-#   The group selector dead key has been introduced by Karl Pentzlin during the
+#   The group dead key has been introduced by Karl Pentzlin during the
 #   implementation of the new DIN 2137-2:2012 standard on Windows. Noticing the
-#   lack of support for the ISO/IEC 9995 style group selector in TSF, the Text
-#   Services Framework on Windows, Karl Pentzlin moved the group selector to a
+#   lack of support for the ISO/IEC 9995 style group dead key in TSF, the Text
+#   Services Framework on Windows, Karl Pentzlin moved the group dead key to a
 #   real dead key taking over the dead key behavior that ISO/IEC 9995 specified
 #   on the level 2 + level 3 modifier combination. A similar dead key included
 #   in other keyboard layouts may be called “Latin and punctuation” as on the
@@ -83,24 +83,27 @@
 #
 #   For UX consistency, the default group is group 0. Therefore, the numbering
 #   scheme specified in ISO/IEC 9995 is ruled out in favor of a zero-based one.
-#   Only groups accessed by the group selector dead key are numbered starting
-#   with 1, because a group accessed by an n-uple press on the group selector
+#   Only groups accessed by the group dead key are numbered starting
+#   with 1, because a group accessed by an n-uple press on the group dead key
 #   must be called “group n” rather than “group n+1”. The ISO/IEC 9995 standard
 #   uses 1-based numbering because it uses the terms “primary” and “secondary”
 #   with respect to groups and fails to consider dead key based group selection
 #   with support for multiple presses.
 #
-#   As a short identifier for “group #”, “g#” is proposed.
+#   As a short identifier for "group #", "g#" is proposed.
 #
 #
 # # Cross-platform compatibility
 #
-#   Implementing the group selector as a dead key avoids breaking UX across
-#   platforms, as Windows supports 6 + 1 modifiers but unsupports the ISO group
-#   selector combo Shift + AltGr, and Apple has broken its technote TN2056 as
-#   of around 2015 after previously allowing to use left Option as an extra
-#   modifier, used by the German Neo ergonomic keyboard layout later emulating
-#   left Option using the Karabiner Elements software from Takayama Fumihiko.
+#   Implementing the group selector as a dead key rather than a modifier key
+#   avoids breaking user experience across platforms, since Windows unsupports
+#   the ISO group selector modifier key combination Shift + AltGr, but supports
+#   6 + 1 modifiers, and Apple has broken its technote TN2056 around 2015 after
+#   previously allowing to use left Option as an extra modifier, that was
+#   effectively used by the German Neo ergonomic keyboard layout. After the
+#   dedicated left Option was broken, Neo emulated left Option using
+#   Takayama Fumihiko’s Karabiner Elements.
+#   https://pqrs.org/osx/karabiner/
 #
 #
 # # Maintenance
@@ -115,7 +118,7 @@
 #
 #   The base characters in this section are mapped on AltGr/Option or unshifted
 #   keys as of comma, period and space. Symbols and punctuation mapped on level
-#   three assume using the group selector in synergy on AltGr/Option.
+#   three assume using the group dead key in synergy on AltGr/Option.
 #
 #   Consistently this section is ordered by keys rather than by code points, as
 #   the order of the ASCII symbols on the keyboard layout is used for mnemonics
@@ -126,15 +129,15 @@
 # # Math symbols in symbol groups
 #
 #   Mathematical symbols outside the math section, i.e. in the dead key section
-#   and especially in the symbol groups, are labeled as `math` since this label
+#   and especially in the symbol groups, are labeled as "math" since this label
 #   is converted into link text, with a hyperlink to the first instance of that
-#   symbol on the math symbols page, on the condition that the `math` string is
+#   symbol on the math symbols page, on the condition that the "math" string is
 #   appended as the very last element.
 #
 #   Non-math characters, such as the letter pi and the envelope emoji, are also
-#   given this `math` label, as far as a multikey sequence in the math section
-#   is available for input. This `math` label is therefore more of a UX feature
-#   than of an information about the `Math` status. In this regard, this `math`
+#   given this "math" label, as far as a multikey sequence in the math section
+#   is available for input. This "math" label is therefore more of a UX feature
+#   than of an information about the `Math` status. In this regard, this "math"
 #   label is the opposite of the `Sm` General Category, discussed at the start
 #   of the math section.
 #   See ### Mathematical symbols by multikey
@@ -163,8 +166,8 @@
 #
 #   The five emoji skin tone modifiers based on the 6-shades Fitzpatrick scale
 #   "🏻" U1F3FB, "🏼" U1F3FC, "🏽" U1F3FD, "🏾" U1F3FE, "🏿" U1F3FF are discontinued
-#   as inappropriate on a general-purpose keyboard layout without extensive emoji
-#   support.
+#   as inappropriate on a general-purpose keyboard layout without extensive
+#   emoji support.
 #
 #   Emoji full list:
 #   https://unicode.org/emoji/charts/full-emoji-list.html
@@ -1145,11 +1148,7 @@
 # # C05 minus
 #
 #   Unlike U2011 NON-BREAKING HYPHEN, in group 1 of equal, U2010 HYPHEN is not
-#   in group 1 of minus, because it is a duplicate of U002D HYPHEN-MINUS. Like
-#   "*" U002A not being called *ASTERISK-MULTIPLICATION, and "/" U002F that is
-#   not called *SLASH-DIVISION either, "-" U002D is a plain hyphen, repurposed
-#   in programming like so many other symbols. "+" U002B PLUS SIGN is the only
-#   ASCII base operator used as such in correct typesetting.
+#   in group 1 of minus, because it is a duplicate of U002D HYPHEN-MINUS.
 #   See # # B05 equal
 #   See # # Dashes and hyphens
 #
@@ -1211,6 +1210,9 @@
 #
 # # C06 plus
 #
+#   "+" U002B PLUS SIGN is the only ASCII base operator used as such in correct
+#   typesetting.
+#
 <UEFD0>                                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN math
 <Multi_key><numbersign>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN math
 <UEFD0><UEFD0>                                                                              <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
@@ -1264,14 +1266,15 @@
 # # C07 underscore
 #
 #   "―" U2015 HORIZONTAL BAR is supported in group 1 with other base characters
-#   for regional variants without live key support for this character.
+#   for regional variants that cannot support this character on live key.
 #   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
 #
-#   Thus here, the first three groups are available for these bullets. While
-#   "•" U2022 and "◦" U25E6 are consistent with mainstream practice, the pick
-#   for level 3 is "‣" U2023, consistently with Unicode scalars and with the
-#   group number and level number, rather than "▪" U25AA, that is an emoji and
-#   as such is supported in group 5 of numbersign as part of a set of four.
+#   Thanks to not needing to support U2015 in group 1 of underscore, the first
+#   three groups are available for bullets. While "•" U2022 and "◦" U25E6 are
+#   consistent with mainstream practice, the pick for level 3 is "‣" U2023,
+#   consistently with Unicode scalars, the group number and the level number,
+#   rather than "▪" U25AA, that is an emoji and as such is supported in group 5
+#   of numbersign as part of a set of four.
 #   See # # C01 numbersign
 #   See #^# Bullets
 #
@@ -1725,6 +1728,9 @@
 #
 #
 # # B05 equal
+#
+#   Due to its importance, "‑" U2011 NON-BREAKING HYPHEN is also on live key.
+#   # # C05 minus
 #
 <UEFD0>                                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
 <Multi_key><numbersign>                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
@@ -2332,9 +2338,10 @@
 #
 # # A03-level3 nobreakspace
 #
-#   Except U2000 and U2001, originally intended to be breaking, these space characters
-#   could be followed by WORD JOINER, but they are not, for cross-platform compatibility
-#   and for consistency with U2000 and U2001.
+#   Except U2000 and U2001, originally intended to be breaking, these space
+#   characters could be followed by WORD JOINER so as to convert them to
+#   no-break spaces consistent with the original design. But they are not,
+#   for cross-platform compatibility and with respect to U2000 and U2001.
 #
 <UEFD0>                                                                             <nobreakspace> : " " U2001 # EM QUAD
 <Multi_key><numbersign>                                                             <nobreakspace> : " " U2001 # EM QUAD
@@ -2397,18 +2404,18 @@
 #   On the alphabet, the groups yield mainly:
 #
 #   Group  0  (g0): live keys (default, no group selected);
-#   Group  1  (g1): group selector pressed once: Latin;
-#   Group  2  (g2): group selector pressed twice: Latin;
-#   Group  3  (g3): group selector pressed thrice or followed by digit 3: Latin;
-#   Group  4  (g4): group selector pressed 4 times or followed by digit 4: Latin;
-#   Group  5  (g5): group selector then digit 5: Latin;
-#   Group  6  (g6): group selector then digit 6: Greek and Greek math symbols;
-#   Group  7  (g7): group selector then digit 7: Latin script style math symbols;
-#   Group  8  (g8): group selector then digit 8: Latin doublestruck/bold/italic math symbols;
-#   Group  9  (g9): group selector then digit 9: Latin fraktur/monospace math symbols;
-#   Group 10 (g10): group selector then digit 0: Latin sans-serif math symbols;
-#   Group 11 (g11): group selector then digit 1: Latin;
-#   Group 12 (g12): group selector then digit 2: Latin.
+#   Group  1  (g1): group pressed once: Latin;
+#   Group  2  (g2): group pressed twice: Latin;
+#   Group  3  (g3): group pressed thrice or followed by digit 3: Latin;
+#   Group  4  (g4): group pressed 4 times or followed by digit 4: Latin;
+#   Group  5  (g5): group then digit 5: Latin;
+#   Group  6  (g6): group then digit 6: Greek and Greek math symbols;
+#   Group  7  (g7): group then digit 7: Latin script style math symbols;
+#   Group  8  (g8): group then digit 8: Latin double-struck/bold/italic math symbols;
+#   Group  9  (g9): group then digit 9: Latin fraktur/monospace math symbols;
+#   Group 10 (g10): group then digit 0: Latin sans-serif math symbols;
+#   Group 11 (g11): group then digit 1: Latin;
+#   Group 12 (g12): group then digit 2: Latin.
 #
 #
 # # Letter groups overview
@@ -3323,9 +3330,10 @@
 #+# GROUP_5
 #   Group 5 on the base alphabet: Latin letters and symbols (continued)
 #
-#   "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E has lowercase position
-#   because "ʚ" U029A # LATIN SMALL LETTER CLOSED OPEN E is almost unused, while
-#   the former is the open-mid central rounded vowel.
+#   "ɞ" U025E LATIN SMALL LETTER CLOSED REVERSED OPEN E has lowercase position,
+#   because "ʚ" U029A LATIN SMALL LETTER CLOSED OPEN E, almost unused, is a
+#   better fit for the uppercase slot, while its reversed variant represents
+#   the open-mid central rounded vowel.
 #
 <UEFD0><5>                                                                                     <A> : "Ꜣ" UA722 # LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
 <Multi_key><numbersign><5>                                                                     <A> : "Ꜣ" UA722 # LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
