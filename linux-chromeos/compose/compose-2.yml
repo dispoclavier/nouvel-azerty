@@ -94,11 +94,11 @@
 #
 #   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
 #   the parentheses-breve scheme to circumflex and hacek, macron and diaeresis.
-#   For example, new-school multikey sequences include ¦^ for superscript,
-#   ¦> for hacek, ¦< for circumflex accent, ¦| for macron, ¦: for diaeresis,
-#   ¦" for the double acute accent that is an acute diaeresis. That helps avoid
-#   conflicts with the dead key based input method for apostrophe/comma-shaped
-#   double quotation marks.
+#   For example, new-school multikey sequences include « ¦^ » for superscript,
+#   « ¦> » for hacek, « ¦< » for circumflex accent, « ¦| » for macron, « ¦: »
+#   for diaeresis, « ¦" » for the double acute accent, an acute diaeresis.
+#   That helps avoid conflicts with the dead key based input method for
+#   apostrophe/comma-shaped double quotation marks.
 #   See # # Quotation mark input method
 #
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose, <comma>
@@ -190,8 +190,8 @@
 #   alongside the use of vertical line below, and its alternate representation
 #   vertical line above, in Yoruba and in other languages.
 #
-#   Initially, the new keysym was called `dead_longsolidus`, and `dead_stroke`
-#   was disruptively renamed to `dead_shortstroke` as well.
+#   Initially, the new keysym was called "dead_longsolidus", and "dead_stroke"
+#   was disruptively renamed to "dead_shortstroke" as well.
 #   https://bugs.freedesktop.org/attachment.cgi?id=85370
 #
 #   Alas, en_US.UTF-8/Compose has not been updated in the wake. One decade down
@@ -281,13 +281,16 @@
 #
 # # Dead keys not included in keysymdef.h
 #
-#   Some additional dead keys proposed for mapping on an fr-FR keyboard are listed below.
+#   Some additional dead keys proposed for mapping on an fr-FR keyboard are
+#   listed below.
 #   See # # Dead characters for portability
 #
 #   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
-#   <UEFD1> : "^"   *dead_superscript, phonetics / abbreviation indicatrs. Multi_key: ¦^
-#                   As abbreviation indicators, superscripts need to be on live keys.
-#                   dead_circumflex is not ¦^ but ¦< in new-school Compose.
+#   <UEFD1> : "^"   *dead_superscript, used in phonetics and as abbreviation
+#                   indicatrs. Multi_key: ¦^
+#                   As abbreviation indicators, superscripts need to be on live
+#                   keys.
+#                   dead_circumflex is not « ¦^ » but « ¦< » in new-school Compose.
 #   <UEFD2> : "_"   *dead_subscript is required for phonetics as it traditionally
 #                   also includes small caps.
 #   <UEFD3> : "ẻ"   *dead_abovehook, required for disambiguation with dead_hook. Multi_key: ¦]
@@ -352,7 +355,7 @@
 #
 #
 #   Overview            Based on AZERTY fr_FR.
-#                       Virtual dead keys on multiple press are listed in the body.
+#                       Virtual dead keys on multiple press are listed.
 #                       All non-existing keysyms, flagged *, are new-school.
 #
 #                       IDENTIFIER keysym [codepoint]
@@ -368,7 +371,7 @@
 #   U                '  ACUTE dead_acute
 #   I                {  HOOK dead_hook
 #   O                }  RETROFLEX_HOOK *dead_retroflexhook UEFD4
-#   P                &  DOT_ABOVE dead_abovedot Multi_key: ¦.
+#   P                &  DOT_ABOVE dead_abovedot, Multi_key ¦.
 #
 #   Q (A on QWERTY)  #  GROUP_1 *dead_group UEFD0
 #   S                $  CURRENCY dead_currency (new-school)
@@ -466,7 +469,7 @@
 #   U1E09 with "ʻ" U02BB by dead_acute, "Ǘ" U01D7 and "ǘ" U01D8 with "‚" U201A.
 #
 #   Diacritic or transformational dead keys applied to letters in groups are
-#   to be hit first, before the group selector. That behavior is consistent,
+#   to be hit first, before the group dead key. That behavior is consistent,
 #   it helps streamline code and maintenance, and it prevents conflicts.
 #
 #
@@ -523,7 +526,9 @@
 #   A Unicode informative alias has been given when the Unicode character name
 #   (used as an identifier) was considered suboptimal.
 #
-#   Ornamental quotation marks are input by dead key followed by group selector.
+#   Ornamental quotation marks are input by diacritical dead key followed by
+#   group dead key.
+#
 #   SMP quotation mark ornaments U1F676.. are not supported, for cross-platform
 #   compatibility.
 #
@@ -538,15 +543,18 @@
 # # Spacing modifier letters and clones of diacritics
 #
 #   An input method based on overtyping reportedly existed on very old systems.
-#   Most of the spacing diacritics in Latin-1 were replaced with actual letters
-#   in Latin-15, but other symbols were replaced too while a diacritic remained.
+#   Most of the spacing diacritics in Latin-1 were replaced with letters in
+#   Latin-15, but other symbols were replaced too, while a diacritic remained.
+#
 #   The Unicode Standard states in §7.9 that it is not clear whether diacritics
 #   were combining or standalone. Using the latter as dead characters (Windows)
 #   or terminators (macOS) in dead keys is not possible consistently throughout
 #   and is a reason why many keyboard layouts are not streamlined, and dead key
-#   behavior is inconsistent. Examples include a dedicated 'ê' key while 'ê' is
-#   better supported by configuring the circumflex accent dead key accordingly,
-#   as well as unrelated dead characters for hook, horn, and most combinations.
+#   behavior is inconsistent. The most outstanding example is a dedicated 'ê'
+#   key, when 'ê' is better supported by configuring the circumflex accent dead
+#   key accordingly, with "ê" U00EA as a dead character. Other examples include
+#   unrelated dead characters for hook, horn, and for most combinations.
+#
 #   Unicode added U02D8..U02DD to the Latin-1 diacritics merely for roundtrip
 #   compatibility with pre-existing character sets.
 #
@@ -586,7 +594,7 @@
 #
 #   Consistently, dead keys have their dead character picked from their output.
 #
-#   For dead_tilde, the dead character base letter is `e` for consistency with
+#   For dead_tilde, the dead character base letter is "e" for consistency with
 #   dead_belowtilde, that is precomposed only with e, i, u, and for equity, as
 #   opposed to picking one of ã, ñ, õ, and thus favoring either Portuguese or
 #   Spanish. The ẽ also makes for a consistent mnemonic since tilde ends in e.
@@ -4685,8 +4693,8 @@
 #   – "︠" UFE20, "︡" UFE21 – are on P, as the P key is nearly above the L key,
 #   and it benefits from the ampersand mnemonic.
 #
-#   By contrast, the "᫇" U1AC7 and "᷹" U1DF9 diacritics use graphic mnemonics on
-#   case insensitive W and U.
+#   By contrast, the "᫇" U1AC7 and "᷹" U1DF9 diacritics use graphic mnemonics
+#   on case insensitive W and U.
 #
 #   As of the combining diacritic and its spacing clone, the picks are the most
 #   iconic of both classes, for the combining diacritics  "⃤" U20E4 COMBINING
@@ -4934,7 +4942,8 @@
 #   Multi_key: ¦@
 #   Dchar: "α" U03B1
 #
-#   List conformant to ISO/IEC 9995-9 consistent with the Greek keyboard layout.
+#   The list conforms to ISO/IEC 9995-9, that is consistent with the Greek
+#   keyboard layout.
 #
 #   The empty place on Q is used for the theta symbol preferred in Romani when
 #   only the glyph is considered, regardless of word processing concerns.
@@ -4971,9 +4980,10 @@
 #   the Greek base letters are also available in group 6.
 #   See # # GROUP_6
 #
-#   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as most
-#   likely to be useful and expected rather than other diacritical marks. So is
-#   the spacing clone slot for "ι" U03B9, for consistency with Greek encoding.
+#   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345, as
+#   most likely to be useful and expected, rather than other diacritical marks.
+#   So is the spacing clone slot used for "ι" U03B9, for consistency with Greek
+#   encoding.
 #   https://www.unicode.org/faq/greek.html
 #
 #   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
@@ -6350,9 +6360,9 @@
 #   yields high curly quotation marks U201D, U2019 (closing or opening).
 #   See # # Quotation mark input method
 #
-#   J WITH ACUTE is in en_US.UTF-8/Compose, but Ĳ́ ĳ́ with acute is not rendered
-#   correctly in some fonts. It should have an accent on each letter making up
-#   the digraph.
+#   J WITH ACUTE is in en_US.UTF-8/Compose, but Ĳ́ ĳ́ with acute is not
+#   rendered correctly in some fonts. It should have an accent on each letter
+#   making up the digraph.
 #   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
 #
 #   Followed by Éé, acute is a shortcut to Ãã for Portuguese with spatial
@@ -7909,13 +7919,13 @@
 #
 #
 #*# GROUP_1
-#   group selector dead key
+#   group dead key
 #   *dead_group UEFD0
 #   Multi_key: ¦#
 #   Dchar: "①" U2460
 #
 #   Group 1 of every digit activates the corresponding group from 3 through 12.
-#   See ### Group selector introduction
+#   See ### Group dead key introduction
 #
 #   For balance, this section is limited to digits and non-ASCII symbols.
 #   See ### Space and symbol groups
@@ -8394,7 +8404,9 @@
 #
 # # Arrow emoji
 #
-#   Arrow emoji are a mix of black and basic simple arrows, live on AltGr + numpad.
+#   Arrow emoji are a mix of black and basic simple arrows.
+#
+#   These are on live keys on the numpad on level 3.
 #
 <UEFD0><4>                                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><4>                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -8629,7 +8641,7 @@
 #   Multi_key: ¦#8
 #   Dchar: "⑧" U2467
 #
-#   Group 8 is used for double-struck mathematical digit symbols U1D7D8..U1D7E1.
+#   Used for double-struck mathematical digit symbols U1D7D8..U1D7E1.
 #
 #
 #^# GROUP_9
@@ -9072,8 +9084,8 @@
 #   the ASCII map and the dead key multikey equivalents.
 #
 #   As inverted breve has only 6×2 precomposed letters, it might be virtualized
-#   by dead breve double press, but it has a dead key of its own for consistency
-#   with ASCII symbols, and supported by its XKB keysym dead_invertedbreve.
+#   by dead breve double press. Nevertheless it has a dead key of its own, for
+#   consistency with ASCII symbols, and with its XKB keysym dead_invertedbreve.
 #
 #   Inverted breve has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Inverted_Breve
@@ -9081,15 +9093,16 @@
 #   "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING is mapped to unconflicting
 #   and case insensitive C, with its right equivalent in dead_breve.
 #
-#   This also supports the new U1DF00 LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-#   because the trill looks like two inverted breves or a double inverted breve.
+#   This also supports the new U1DF00 LATIN SMALL LETTER FENG DIGRAPH WITH
+#   TRILL, because the trill looks like two inverted breves, or a double
+#   inverted breve.
 #
 #   With case insensitive G as a base character, dead_invertedbreve has a
 #   shortcut for "⁐" U2050 CLOSE UP.
 #   See # # Proofreading mark
 #
-#   dead_invertedbreve also starts circled numbers as well as box drawings with
-#   rounded corners.
+#   dead_invertedbreve also starts circled numbers, as well as box drawings
+#   with rounded corners.
 #   See #^# CIRCLED_NUMBER
 #   See # # Box drawings with rounded corners
 #
@@ -9708,9 +9721,9 @@
 #   Multi_key: ¦)
 #   Dchar: "ŏ" U014F
 #
-#   "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING is mapped to unconflicting
-#   and case insensitive C, with its left equivalent in dead_invertedbreve, and
-#   with respect to support for regular half rings in group 1 of K.
+#   "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING is mapped to
+#   unconflicting and case insensitive C, with its left equivalent in
+#   dead_invertedbreve. Raised half rings are in group 1 of K.
 #
 #   dead_breve also ends circled numbers, and it is the box drawings dead key.
 #   See #^# CIRCLED_NUMBER
@@ -9798,12 +9811,12 @@
 #   as in <1><0><1><0> : "─" U2500 BOX DRAWINGS LIGHT HORIZONTAL.
 #
 #   Multiple dashes are input by the number of dashes, typed once for light,
-#   twice for heavy, terminated by `h` for horizontal, or `v` for vertical,
+#   twice for heavy, terminated by "h" for horizontal, or "v" for vertical,
 #   as in <3><h> : "┄" U2504 BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL, and in
 #   <3><3><h> : "┅" U2505 BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL.
 #
 #   Diagonals are input by 1 for the slash slant, 2 for the backslash slant,
-#   both 1 and 2 for a cross, and terminated by `d` for diagonal, as in
+#   both 1 and 2 for a cross, and terminated by "d" for diagonal, as in
 #   <1><d> : "╱" U2571 BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT,
 #   <1><2><d> : "╳" U2573 BOX DRAWINGS LIGHT DIAGONAL CROSS.
 #
@@ -13423,10 +13436,10 @@
 #
 #   Courtesy https://www.frathwiki.com/Circumflex
 #
-#   Cross-platform compatibility is full on MacOS, but only partial on Windows.
-#   Windows is able to support only lowercase, and only digrams — provided that
-#   the dead key is assigned the appropriate dead character. For the circumflex
-#   accent dead key, that is U00EA "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX.
+#   Cross-platform compatibility is full on MacOS, but only partial on Windows,
+#   that is able to support only lowercase, and only digrams, provided that the
+#   dead key is assigned the appropriate dead character: "ê" U00EA LATIN SMALL
+#   LETTER E WITH CIRCUMFLEX.
 #
 #   Likewise, a Ç key is emulated for use on the Canadian French variant.
 #   See #*# CEDILLA
@@ -13434,7 +13447,7 @@
 #   The circumflex dead key is also expected to support superscript digits, for
 #   the sake of conformance with NF Z71-300:2019, section 6.3.3 page 24, and as
 #   a tribute to the German E DIN 2137-1:2020-11 that has been synced, but only
-#   with the digits part, not the signs and parentheses.
+#   with the digits part, not the plus and minus signs and parentheses.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
 #   In en_US.UTF-8/Compose, that the “superscript digits by dead_circumflex”
@@ -13444,25 +13457,14 @@
 #   See # # Introducing new-school input composition
 #
 #   Anyway, the multikey equivalents of this way to input superscript digits
-#   cannot be supported, since it conflicts with "❤" U2764 as of "³" U00B3, and
+#   cannot be supported, since they conflict with "❤" U2764 as of "³" U00B3, or
 #   with the new sequence <Multi_key><less><8> introduced for the less frequent
 #   "♥" U2665, as of "⁸" U2078.
 #   See # # Heart emoji
 #
-#   So the set of remaining numeric base characters is used for other purposes.
-#   One useful functionality is bullets, since the symbol groups are limited to
-#   "•" U2022, "◦" U25E6, "⁃" U2043. Now, dead_circumflex supports "▪" U25AA,
-#   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3 as well as "•" U2022.
-#
-#   Previously, the heart emoji logic was followed through, supporting the full
-#   set of filled (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
-#   outlined (non-emoji "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664) suits.
-#   See # # B07-level1 comma
-#   See # # CIRCUMFLEX&GROUP_2
-#   See # # Miscellaneous Symbols in block U2600 used in mathematics
-#
-#   The diaeresis dead key offers an acceptable alternative with good mnemonic
-#   using the traditional French AZERTY mapping on the same key D11, in shift
+#   The diaeresis dead key offers an acceptable alternative input method for
+#   superscript digits, with some mnemonic using the traditional French AZERTY
+#   mapping of dead_diaeresis on the same key D11 as dead_circumflex, in shift
 #   position.
 #   See #*# DIAERESIS
 #
@@ -13472,6 +13474,23 @@
 #   small letters) are on live keys for a streamlined user experience.
 #   See #*# SUPERSCRIPT
 #
+#   So the set of remaining numeric base characters is used for other purposes.
+#   One useful functionality is bullets, since the symbol groups are limited to
+#   "•" U2022, "◦" U25E6, "‣" U2023, as well as "⁃" U2043, and "▪" U25AA. As a
+#   complementary, partly intersecting set, dead_circumflex supports "▪" U25AA,
+#   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3, and also "•" U2022.
+#   See # # C07 underscore
+#   See # # C05 minus
+#   See # # C01 numbersign
+#   See #^# Bullets
+#
+#   Previously, the heart emoji logic was followed through, supporting the full
+#   set of filled suits (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
+#   outlined suits (non-emoji "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664).
+#   See # # B07-level1 comma
+#   See # # CIRCUMFLEX&GROUP_2
+#   See # # Miscellaneous Symbols in block U2600 used in mathematics
+#
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
 #   U017F LATIN SMALL LETTER LONG S, in group 3 of s, has an additional input
@@ -13479,8 +13498,8 @@
 #   digram. Plus, <dead_circumflex><dollar> also yields this small letter.
 #
 #   Likewise, U2300 DIAMETER SIGN, in group 1 of (, is given yet another input
-#   method by <dead_circumflex><d>, <dead_circumflex><D> due to the fact that
-#   French does not have any word with -êd-.
+#   method by <dead_circumflex><d>, <dead_circumflex><D> thanks to French not
+#   having any word with -êd-.
 #
 #   U016C LATIN CAPITAL LETTER U WITH BREVE is used in Esperanto and has thus a
 #   shortcut by <dead_circumflex><B>, and U016D LATIN SMALL LETTER U WITH BREVE
@@ -14627,8 +14646,8 @@
 # # Private use area characters
 #   Dchar: 
 #
-#   This facility to input the first 62 private-use characters uses the regional
-#   indicator letter dead key followed by comma.
+#   This facility to input the first 62 private-use characters uses the
+#   regional indicator letter dead key followed by comma.
 #
 <UEFD7><comma>                                                                                 <0> : "" UE000 # PRIVATE USE CHARACTER E000
 <Multi_key><equal><comma>                                                                      <0> : "" UE000 # PRIVATE USE CHARACTER E000
@@ -14787,15 +14806,17 @@
 #   https://unicode.org/emoji/charts/full-emoji-list.html
 #
 #   As a combining diacritic, by lack of a combining equals sign above, a close
-#   relative, "͌" U034C COMBINING ALMOST EQUAL TO ABOVE, fills in the slot. This
-#   happens to match the waving flags, that non-country / non-subdivision flags
-#   are typically pictured as, for iconicity.
+#   relative, "͌" U034C COMBINING ALMOST EQUAL TO ABOVE, fills in the slot.
+#   This happens to match the waving flags, that non-country / non-subdivision
+#   flags are typically pictured as, for iconicity.
 #
 #   The sequences with no-break space and no-break thin space, used for spacing
-#   diacritics on most dead keys, output a black flag by no-break space, and a
-#   white flag by no-break thin space, since the flag used as a base character
-#   for subdivision flags, "🏴" U1F3F4 WAVING BLACK FLAG, is in the SMP, cross-
-#   platform incompatible. However, U1F3F4 is output by backslash.
+#   clones of diacritics or for modifier letters on most dead keys, output a
+#   black flag by no-break space, and a white flag by no-break thin space,
+#   since the flag used as a base character for subdivision flags, "🏴" U1F3F4
+#   WAVING BLACK FLAG, is in the SMP, cross-platform incompatible.
+#
+#   However, U1F3F4 WAVING BLACK FLAG is output by backslash.
 #
 <UEFD7><UEFD7>                                                                             <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><equal><equal>                                                                  <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
@@ -17028,10 +17049,12 @@
 #
 #   This yields mainly the glottal letters new to Unicode v12, since these may
 #   be expected here, because the spiritus lenis that these glottal letters are
-#   diacriticized with, often happens to be shaped like a comma above, a curly
-#   apostrophe on top, so that "̓" U0313 is the actual encoding of the combining
-#   psili. Nevertheless, the glottal letters are also in a dedicated dead key,
-#   on dead_abovehook double press.
+#   diacriticized with, often happens to be shaped like a comma above, that may
+#   also be referred to as a curly apostrophe on top, so that "̓" U0313
+#   COMBINING COMMA ABOVE is the actual encoding of the combining psili.
+#
+#   Nevertheless, the glottal letters are also in a dedicated dead key,
+#   virtualized by dead_abovehook double press.
 #   See #^# GLOTTAL
 #
 <dead_belowcomma><dead_belowcomma>                                                         <space> : "̓" U0313 # COMBINING COMMA ABOVE
