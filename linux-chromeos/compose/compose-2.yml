@@ -8244,7 +8244,10 @@
 <Multi_key><numbersign><numbersign>                                                       <emdash> : "⸺" U2E3A # TWO-EM DASH
 #
 #
-# # Basic simple arrows, live on AltFr + numpad.
+# # Basic simple arrows
+#
+#   Live in default mode on AltGr + numpad.
+#   Live in   ASCII mode on AltFr + numpad.
 #
 <UEFD0><UEFD0>                                                                                 <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><numbersign>                                                            <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -8311,7 +8314,10 @@
 <Multi_key><numbersign><numbersign><numbersign>                                           <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
 #
-# # Basic double arrows, live on Shift + AltFr + numpad.
+# # Basic double arrows
+#
+#   Live in default mode on Shift + AltGr + numpad.
+#   Live in   ASCII mode on Shift + AltFr + numpad.
 #
 <UEFD0><3>                                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><numbersign><3>                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
@@ -8406,7 +8412,8 @@
 #
 #   Arrow emoji are a mix of black and basic simple arrows.
 #
-#   These are on live keys on the numpad on level 3.
+#   Live in default mode on AltFr + numpad.
+#   Live in   ASCII mode on AltGr + AltFr + numpad.
 #
 <UEFD0><4>                                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><4>                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -8495,7 +8502,10 @@
 #   Dchar: "⑤" U2464
 #
 #
-# # Black or plain arrows, live on Shift + AltGr + numpad.
+# # Black or filled arrows
+#
+#   Live in default mode on Shift + AltFr + numpad.
+#   Live in   ASCII mode on Shift + AltGr + AltFr + numpad.
 #
 <UEFD0><5>                                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
 <Multi_key><numbersign><5>                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
@@ -8544,7 +8554,10 @@
 #   Dchar: "⑥" U2465
 #
 #
-# # Empty or outlined, white arrows, live on Shift + AltGr + AltFr + numpad.
+# # White or empty, outline arrows
+#
+#   Live in default mode on Shift + AltGr + AltFr + numpad.
+#   Live in   ASCII mode on Shift + AltGr + numpad.
 #
 <UEFD0><6>                                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
 <Multi_key><numbersign><6>                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
@@ -8593,7 +8606,10 @@
 #   Dchar: "⑦" U2466
 #
 #
-# # Triangle-headed arrows, live on AltGr + AltFr + numpad.
+# # Triangle-headed arrows
+#
+#   Live in default mode on AltGr + AltFr + numpad.
+#   Live in   ASCII mode on AltGr + numpad.
 #
 <UEFD0><7>                                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
 <Multi_key><numbersign><7>                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
