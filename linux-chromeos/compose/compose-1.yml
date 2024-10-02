@@ -259,7 +259,7 @@
 <C_H> : "CʼH" # See # # Notes about syntax
 #
 #
-# # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
+# # Punctuation spacing for French, regular with U202F NBTSP
 #
 #   This is regular typesetting at Imprimerie nationale except for colon and
 #   quotation marks, although the latter are typeset with narrow space in the
@@ -514,12 +514,12 @@
 #   part of the downgrading policy intended to limit word processors’ usability
 #   for the interoperable representation of the world’s languages.
 #   https://answers.microsoft.com/en-us/msoffice/forum/all/word-will-not-consistently-end-lines-at-the-bottom/f3b0d024-dc9d-4678-94d9-3ade20521974
-#   at `Word is the "poor man's", or simple man's, document publishing tool.`
+#   « Word is the "poor man's", or simple man's, document publishing tool. »
 #
 #   The workaround using justifying no-break strings composed of a space and a
-#   trailing break-preventer is courtesy Jakub Stachu, who reported this scheme
+#   trailing break-preventer is courtesy Jakub Stachu, who reported this usage
 #   on November 5, 2017 in "Non‐breakable space justification in Word 2016",
-#   Microsoft Community forum MS Office > Word > Windows 8.
+#   Microsoft Community forum MS Office > Word > Windows 8, page 3.
 #   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
 #
 #   This issue has been formally submitted to Unicode in L2/19-114
@@ -530,12 +530,16 @@
 <UEF6F> : " ﻿" # With ZERO-WIDTH NO-BREAK SPACE UFEFF [2]
 #
 #   [1] OpenOffice Writer and LibreOffice Writer are able to handle WORD JOINER
-#       and even give it syntactic highlighting.
-#   [2] UFEFF is the byte order mark, and its use as ZWNBSP is obsoleted but is
-#       still widely supported, as it has 10 years of precedence in that role.
+#       and even highlight it using the field background color as for NBSP:
+#       Tools > Options > LibreOffice > UI colors > Text documents > Field background
+#       https://ask.libreoffice.org/t/remove-gray-color-of-non-breaking-spaces-in-writer/22106
+#   [2] UFEFF is the byte order mark, and its use as ZWNBSP is obsoleted but
+#       may still be supported, as it has 10 years of precedence in that role.
 #
 #
-# # Automated punctuation spacing for fr-FR, legacy Latin-1 fallbacks with NBSP
+# # Punctuation spacing for French, legacy
+#
+#   These legacy fallbacks are limited to Latin-1/Latin-9 and use U00A0 NBSP.
 #
 #   This is regular with colon and quotation marks according to the style guide
 #   of the French national printing house _Lexique des règles typographiques en
@@ -575,7 +579,7 @@
 <UEF7F> : "\\x{" #
 #
 #
-# # Automated punctuation spacing for fr-FR using U2009 TSP, UFEFF ZWNBSP
+# # Punctuation spacing for French using U2009 TSP, UFEFF ZWNBSP
 #
 #   This is a workaround for an acceptable fallback, given in most fonts NBTSP
 #   has the same width as THIN SPACE, and THIN SPACE has line breaking class BA
@@ -640,7 +644,7 @@
 #       least in argument values.
 #
 #
-# # Automated punctuation spacing for fr-FR using U2009 THIN SPACE, U2060 WORD JOINER
+# # Punctuation spacing for French using U2009 THIN SPACE, U2060 WORD JOINER
 #
 #   This is an acceptable fallback, given in most fonts NBTSP has the same
 #   width as THIN SPACE, and THIN SPACE has line breaking class Break After.
@@ -675,38 +679,45 @@
 #
 # # HTML entity for no-break space
 #
-<UEF9B> : "&nbsp;"   # U00A0 NO-BREAK SPACE
-#   Defined as justifying in Unicode, and handled as such by user agents.
+#   Defined as justifying in Unicode, and handled as such in user agents.
+#
+<UEF9B> : "&nbsp;" # U00A0 NO-BREAK SPACE
 #
 #
 # # Numeric character references of spaces
 #
 #   Hexadecimal is preferred for readability.
 #
-<UEF9C> : "&#x2009;"  # U2009 THIN SPACE
-#   Should be no-break but is breaking in Unicode.
+<UEF9C> : "&#x2009;" # U2009 THIN SPACE [1]
 #
-<UEF9D> : "&#x2008;"  # U2008 PUNCTUATION SPACE
-#   Should be no-break like FSP.
+#   [1] Should be no-break but is breaking in Unicode.
 #
-#         "&#8199;"  # U2007 FIGURE SPACE
-#   Is no-break in Unicode for nearly no reason, which is why it is the only
-#   no-break space in that range where all spaces from U2002 through U200A
-#   were originally designed to be no-break.
+<UEF9D> : "&#x2008;" # U2008 PUNCTUATION SPACE [2]
 #
-<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE, no-break thin space
-#   NBTSP has become a usable avatar of TSP as originally intended.
+#   [2] Should be no-break like FIGURE SPACE.
+#
+#         "&#8199;" # U2007 FIGURE SPACE [3]
+#
+#   [3] Is no-break in Unicode for nearly no reason, which is why it is
+#       the only no-break space in that range where all spaces from U2002
+#       through U200A were originally designed to be no-break.
+#
+<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE [4]
+#
+#   [4] No-break thin space NBTSP, has become a usable avatar of
+#       U2009 THIN SPACE as originally intended.
+#       See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #
 # # Unicode prefix
 #
-#   This sequence was supported initially, then was dropped as overkill.
-#   On 2022-11-11T1420+0100 it was readded. As of v2 it is on the U key
-#   (Shift + AltFr + D07).
-#
 #   'U+' is an ASCII-fied U228E ⊎ MULTISET UNION.
 #   Kenneth WHISTLER exposed the rationale in:
 #   https://unicode.org/mail-arch/unicode-ml/y2005-m11/0060.html
+#
+#   This sequence was supported initially, then was dropped as overkill.
+#   On 2022-11-11T1420+0100 it was readded. As of v2 it is on the U key
+#   (Shift + AltFr + D07).
 #
 <UEF9F> : "U+" #
 #
@@ -1403,7 +1414,7 @@
 #   acceptable scheme from a user experience point of view. For no-break space
 #   and no-break thin space, dead key based input methods, including multikey,
 #   can hardly be considered as acceptable workarounds.
-#   See # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
+#   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by « ¦␣␣ »). But
 #   the equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since
