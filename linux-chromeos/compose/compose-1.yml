@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.4.5" # See # # Notes about syntax
+<UEFA0>                     : "version 4.4.6" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose configuration
@@ -53,13 +53,13 @@
 #                                Setting the input method to XIM to begin with is essential,
 #                                because distros may not ship XIM as the default.
 #
-#                             2. Make sure to be using the full-length file `Compose.yml`.
+#                             2. Make sure to be using the full-length file Compose.yml.
 #
 #                             3. Proceed following method A, B, or C:
 #
 #                                A. Most backward compatible:
 #                                   1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                   2. Append `Compose.yml` to /usr/share/X11/locale/en_US.UTF-8/Compose
+#                                   2. Append Compose.yml to /usr/share/X11/locale/en_US.UTF-8/Compose
 #
 #                                      Prepending rather than appending breaks U1E7A and U1E7B
 #                                      overriding U01D5 and U01D6, and "V́" and "v́" overriding
@@ -67,10 +67,10 @@
 #
 #                                B. Shared computer with User Compose:
 #                                   1. Back up the file ~/.XCompose.
-#                                   2. Append `Compose.yml` to ~/.XCompose.
+#                                   2. Append Compose.yml to ~/.XCompose.
 #
 #                                C. Shared computer without User Compose:
-#                                   1. Copy `Compose.yml` to ~/.XCompose.
+#                                   1. Copy Compose.yml to ~/.XCompose.
 #                                   2. Optionally uncomment the following line:
 #
 #                                       include "%L"
@@ -93,7 +93,7 @@
 #                               until v2.0 when it ultimately became practical and respectful
 #                               thanks to God helping and advising about the layout details.
 #                               The superscripts were on the wrong level, and modifiers for
-#                               titlecase polygrams `Cʼh` and `Nᵒ ` were unintuitive, due to
+#                               titlecase polygrams "Cʼh" and "Nᵒ " were unintuitive, due to
 #                               not seeking advice from God until ultimately v3.0 came up.
 #                               And spaced-out punctuation was mapped with the wrong modifier
 #                               AltFr instead of Shift, with a semblance of logic but without
@@ -150,10 +150,10 @@
 #   http://manpages.ubuntu.com/manpages/bionic/en/man8/im-config.8.html
 #   https://askubuntu.com/questions/129680/how-can-i-make-ibus-not-ignore-xcompose
 #
-#   In XCompose, a single keysym hapax is processed for direct output, whereas a keysym
-#   followed by another keysym in >0 instances is considered a dead key throughout, and
-#   its singleton output is discarded. Thus the system “eats” the dead key press if the
-#   input sequence is undefined.
+#   In XCompose, a single keysym hapax is processed for direct output, whereas
+#   a keysym followed by another keysym at least once is handled as a dead key
+#   throughout, and its singleton output is discarded. Thus, the system “eats”
+#   the dead key press if the input sequence is undefined.
 #
 #   Definition format in XCompose files:
 #
@@ -162,8 +162,11 @@
 #       * Strings must be defined as literals delimited by double quotes.
 #         This is the interoperable format for single character output, too.
 #
-#   Both formats may be used concurrently, so that single character output is
-#   defined both as a string and as a keysym.
+#   Both formats may be used concurrently. Therefore, single character output
+#   is defined both as a string, which is mandatory, and as a keysym providing
+#   a redundant convenience. However, on the result side, the preferred keysyms
+#   are Unicode scalars rather than X11 keysyms, that have limited coverage and
+#   are not directly interoperable.
 #
 #   Definition format in allocation tables (Symbols directory):
 #   Single character output in any UCS plane may be defined in several formats:
@@ -201,8 +204,8 @@
 #   in quotations and in result strings used as placeholders of high surrogates
 #   and intended for display to end-users. This scheme is interoperable with
 #   the code parsed by the Compose compiler, for easier maintenance and easier
-#   reference, using a specially formatted version of `UnicodeData.txt` by the
-#   script `format-UnicodeData-txt.pl`.
+#   reference, using a specially formatted version of UnicodeData.txt by the
+#   script format-UnicodeData-txt.pl.
 #   See # # Notes about documentation
 #
 #   The word "multikey" is not hyphenated. “Multi words are not hyphenated
@@ -399,7 +402,7 @@
 #      French grouping separator changed from no-break space U+00A0 to
 #      narrow no-break space U+202F.
 #
-#   The related data field in `cldr/common/main/fr.xml`:
+#   The related data field in cldr/common/main/fr.xml:
 #   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/fr.xml#L7868
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L7868
 #
@@ -554,7 +557,9 @@
 <UEF77> : " ›" # (not mentioned by Imprimerie nationale)
 #
 #
-# # Abbreviation "Numéro" with regular superscript "ᵒ" and legacy NBSP
+# # Abbreviation "Numéro" with legacy NBSP
+#
+#   With regular superscript "ᵒ" U1D52.
 #
 <UEF78> : "nᵒ " #
 <UEF79> : "Nᵒ " #
@@ -598,7 +603,9 @@
 <UEF87> : " ﻿›" #
 #
 #
-# # Abbreviation "Numéro" with regular superscript "ᵒ" and a THIN SPACE, ZWNBSP string
+# # Abbreviation "Numéro" with a THIN SPACE, ZWNBSP string
+#
+#   With regular superscript "ᵒ" U1D52.
 #
 <UEF88> : "nᵒ ﻿" #
 <UEF89> : "Nᵒ ﻿" #
@@ -653,7 +660,9 @@
 <UEF97> : " ⁠›" #
 #
 #
-# # Abbreviation "Numéro" with regular superscript "ᵒ" and TSP WJ
+# # Abbreviation "Numéro" with TSP WJ
+#
+#   With regular superscript "ᵒ" U1D52.
 #
 <UEF98> : "nᵒ ⁠" #
 <UEF99> : "Nᵒ ⁠" #
@@ -667,7 +676,7 @@
 # # HTML entity for no-break space
 #
 <UEF9B> : "&nbsp;"   # U00A0 NO-BREAK SPACE
-#   Defined as justifying in Unicode, and handled as such by internet user agents.
+#   Defined as justifying in Unicode, and handled as such by user agents.
 #
 #
 # # Numeric character references of spaces
@@ -770,11 +779,11 @@
 #   part of the keysyms may be aligned to the end for readability.
 #
 #   The multikey equivalent is added below each dead key sequence by a script
-#   called `generate-multikey.pl`, run by `multikey.sh`, if the sequence is
+#   called generate-multikey.pl, run by multikey.sh, if the sequence is
 #   marked up accordingly. For portability, multikey equivalents are present
 #   regardless whether they make sense, and whether they barely work. So,
 #   three multikey sequences do not work because <numbersign> is used both
-#   as a group selector and as a base character:
+#   as a group dead key and as a base character:
 #
 #       <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
 #       <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
@@ -849,14 +858,14 @@
 #   See # # Notes about syntax
 #
 #   This file is also the source code for HTML table partials, such as those by
-#   the scripts `generate-multikey-tables.pl` and `generate-math-table.pl`
-#   documenting multikey sequences, and those by `generate-deadkey-tables.pl`
+#   the scripts generate-multikey-tables.pl and generate-math-table.pl
+#   documenting multikey sequences, and those by generate-deadkey-tables.pl
 #   documenting dead keys, including the letter groups and the symbol groups.
 #
-#   The `generate-multikey-tables.pl` script, processing the multikey section,
+#   The generate-multikey-tables.pl script, processing the multikey section,
 #   expects a caret between the leading hashes of a subsection heading to start
 #   an HTML table partial file, while in the dead key division, another script,
-#   `generate-deadkey-tables.pl`, expects an asterisk between the hashes in the
+#   generate-deadkey-tables.pl, expects an asterisk between the hashes in the
 #   same position. The dead key tables are numbered, while the multikey tables
 #   are not, since their number is not finite. Adding a new file start heading
 #   does not alter existing file names. However, each of these headings is used
@@ -880,6 +889,11 @@
 #   The broken bar "¦" U00A6 is repurposed as multikey symbol.
 #   See # # Symbols for multikey and composition
 #
+#   For readability, inline literal multikey sequences are bracketed with
+#   French-style no-break thin space padded double angle quotation marks,
+#   because quotedbl, backtick, period, comma and other ASCII symbols likely
+#   to occur next to multikey sequences may also be part of multikey seqences.
+#
 #
 #^# Legacy ordinal indicators
 #
@@ -892,9 +906,20 @@
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L1546
 #
 #   The two legacy ordinal indicators are supported in group 12 of "^" on key A
-#   and in group 12 of "}" on key O, and by multikey.
+#   and in group 12 of "}" on key O.
 #   See # # D01 asciicircum
 #   See # # D09 braceright
+#
+#   The following intuitive, case-insensitive, underscore-terminated multikey
+#   sequences add to this support in the symbol groups. Underscore termination
+#   is consistent with "№" U2116 NUMERO SIGN in the next section. Many fonts
+#   give the legacy ordinal indicators a line below, that is not preferred in
+#   French and makes "º" U00BA unfit for use in the abbreviation for "numéro".
+#   See # # Abbreviation "Numéro" with trailing space
+#   See # # Abbreviation "Numéro" without spacing
+#   See # # Abbreviation "Numéro" with legacy NBSP
+#   See # # Abbreviation "Numéro" with a THIN SPACE, ZWNBSP string
+#   See # # Abbreviation "Numéro" with TSP WJ
 #
 <Multi_key><a><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <Multi_key><A><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
@@ -904,14 +929,15 @@
 #
 #^# Abbreviations, Units and Legal Symbols
 #
-#   Sequences for "©" U00A9 and "®" U00AE made out of letters only with an O or
-#   an o are based on en_US.UTF-8/Compose where "℗" U2117 is missing as well as
-#   ASCII fallback sequences "(C)" and "(R)", probably because the latter would
-#   conflict with "Ȓ" U0212. To mitigate these gaps, an alternative with a pair
-#   of leading parentheses is proposed consistently: "()C", "()R", "()P".
+#   Sequences for "©" U00A9 and "®" U00AE made out of letters only with an "O"
+#   or an "o" are based on en_US.UTF-8/Compose, where "℗" U2117 is missing, as
+#   ASCII fallback sequences « ¦(C) » and « ¦(R) », probably because the latter
+#   would conflict with "Ȓ" U0212. To mitigate these gaps, an alternative with
+#   a pair of leading parentheses is proposed consistently: « ¦()C », « ¦()R »,
+#   « ¦()P ».
 #
-#   Order may matter as for "©" U00A9 COPYRIGHT SIGN by ¦oc or ¦Oc, as opposed
-#   to "℅" U2105 CARE OF by ¦co or ¦Co or ¦CO or ¦cO.
+#   Order may matter as for "©" U00A9 COPYRIGHT SIGN by « ¦oc » or « ¦Oc », as
+#   opposed to "℅" U2105 CARE OF by « ¦co », « ¦Co », « ¦CO » or « ¦cO ».
 #
 #   Case may matter as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE
 #   SUBJECT, or for "🄯" U1F12F COPYLEFT SYMBOL vs "℄" U2104 CENTRE LINE SYMBOL.
@@ -923,28 +949,29 @@
 #   of "℆" U2106, this shortcut requires space termination to prevent conflicts
 #   with an input method for the union symbol "∪" U222A based on its nickname.
 #
-#   ¦SO sequences are used fo mathematical symbols, reverse sequences are used
-#   for circled letters, other casing pairs are used for German eszett and for
-#   the section sign: "§" U00A7 by ¦sS, as opposed to "ß" U00DF by ¦ss (or ¦sz)
-#   and "ẞ" U1E9E by ¦SS or ¦Ss.
+#   « ¦SO » sequences are used fo mathematical symbols, reverse sequences are
+#   used for circled letters, other casing pairs are used for German eszett and
+#   for the section sign: "§" U00A7 by « ¦sS », as opposed to "ß" U00DF by
+#   « ¦ss » or « ¦sz », and "ẞ" U1E9E by « ¦SS » or « ¦Ss ».
 #
 #   Title case and camel case sequences are also supported; en_US.UTF-8/Compose
 #   supports mixed-case sequences as well. E.g. for the Numero sign "№" U2116,
-#   it has <N><o> and <N><O>; adding the other two makes for lenient Caps Lock.
-#   A trailing underscore however is added consistently with the glyph and with
-#   the two legacy ordinal indicators "ª" U00AA, "º" U00BA, so as to prevent a
-#   conflict with "⊽" U22BD by ¦NOR.
+#   it has <Multi_key><N><o> and <Multi_key><N><O>; adding the other two makes
+#   for lenient Caps Lock. A trailing underscore however is added consistently
+#   with the glyph and with the legacy ordinal indicators "ª" U00AA, "º" U00BA,
+#   so as to prevent a conflict with "⊽" U22BD by « ¦NOR ».
 #   See #^# Legacy ordinal indicators
 #
-#   "¦" U00A6 by ¦|: or ¦:| is discarded due to conflicts with DIAERESIS&MACRON
-#   multikey equivalents.
+#   "¦" U00A6 by « ¦|: » or « ¦:| » is discarded due to conflicts with
+#   DIAERESIS&MACRON multikey equivalents.
 #
-#   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated unit symbols
-#   ("K" U212A) are supported as they are in the Letterlike Symbols block. This
-#   however was not fully supported before v1.6.0. Prior to v1.6.0, important
-#   symbols were missing due to not being used in mathematics. This odd time is
-#   over since version 1.6.0 added primarily the VERSICLE and RESPONSE symbols
-#   "℣" U2123, "℟" U211F, both by multikey and in letter groups 1 and 4.
+#   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated ("K" U212A)
+#   measurement unit symbols are supported for bsing in the Letterlike Symbols
+#   block. This however was not fully supported before v1.6.0. Prior to v1.6.0,
+#   important symbols were missing due to not being used in mathematics. This
+#   odd time is over since version 1.6.0 added primarily the VERSICLE and
+#   RESPONSE symbols "℣" U2123, "℟" U211F, both by multikey and in letter
+#   groups 1 and 4.
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
@@ -1086,13 +1113,13 @@
 #
 #^# Circled by leading o
 #
-#   This only supports numbers 1–10, since letters would conflict with œ, ꝏ, ©.
-#   Other conflicts affect "⫯" U2AEF. Consistently, this way,
-#   en_US.UTF-8/Compose supports only Ⓐ.
+#   This only supports numbers 1–10, since letters would conflict with "œ",
+#   "ꝏ", "©". Other conflicts affect "⫯" U2AEF. Consistently, this way,
+#   en_US.UTF-8/Compose supports only "Ⓐ".
 #   See #*# GREEK
 #   See #^# CIRCLED
 #
-#   The o is case insensitive.
+#   The "o" is case insensitive.
 #
 <Multi_key><o>                                                                                 <0> : "⑩" U2469 # CIRCLED NUMBER TEN
 <Multi_key><o>                                                                              <KP_0> : "⑩" U2469 # CIRCLED NUMBER TEN
@@ -1161,14 +1188,14 @@
 #   Some of these letters are easier input using groups.
 #
 #   Conflicting sequences, e.g. with ISO currency codes,
-#   can be fixed by terminating with <space>.
+#   are fixed by space termination.
 #
-#   Titlecase sequences are supported following en_US.UTF-8/Compose.
+#   Titlecase sequences are supported following en_US.UTF-8/Compose, but
+#   reverse sequences are not supported since they would not make much sense
+#   and are prone to conflicts.
 #
-#   Reverse sequences are not supported.
-#
-#   Deprecated presentation forms for typographic ligatures
-#   are not supported, given that their use is discouraged:
+#   Deprecated presentation forms for typographic ligatures are not supported,
+#   given that their use is discouraged:
 #
 #       "ﬀ" UFB00 # LATIN SMALL LIGATURE FF
 #       "ﬁ" UFB01 # LATIN SMALL LIGATURE FI
@@ -1328,20 +1355,25 @@
 <Multi_key><z><h>                                                                                  : "ʒ" U0292 # LATIN SMALL LETTER EZH
 #
 #
+# # Small apostrophe n
+#
 #   Deprecated small apostrophe n requires a curly apostrophe live key.
 #
 #   This character is deprecated and its use is strongly discouraged.
 #   It was encoded as a legacy compatibility character for ISO/IEC 6937.
-#   https://www.unicode.org/Public/15.0.0/ucd/NamesList.txt
+#   https://www.unicode.org/Public/15.0.0/ucd/NamesList.txt:1130
 #
-<Multi_key><rightsinglequotemark><N>                                                               : "ʼN" # U02BC U004E MODIFIER LETTER APOSTROPHE, LATIN CAPITAL LETTER N
+#   Uppercase is "ʼN" U02BC MODIFIER LETTER APOSTROPHE, U004E LATIN CAPITAL
+#   LETTER N.
+#
 <Multi_key><rightsinglequotemark><n>                                                               : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
 #
 #
-#   Superscript digraphs are supported when ampersand is added to the
-#   superscript trigger asciicircum, because asciicircum is the multi
-#   key equivalent of the superscript dead key UEFD1.
+# # Superscript digraphs
 #
+#   To support superscript digraphs, the superscript trigger asciicircum is
+#   followed by ampersand.
+#   See #*# SUPERSCRIPT
 #   See # # Notes on Unicode support
 #
 <Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
@@ -1367,26 +1399,26 @@
 #
 # # Spaces
 #
-#   All important space characters are supported on live keys. This is the only
-#   acceptable scheme from a user experience point of view. All dead key based
-#   input methods, including multikey, are no acceptable workarounds for the
-#   no-break space and the no-break thin space.
+#   All important space characters are supported on live keys, as the only
+#   acceptable scheme from a user experience point of view. For no-break space
+#   and no-break thin space, dead key based input methods, including multikey,
+#   can hardly be considered as acceptable workarounds.
 #   See # # Automated punctuation spacing for fr-FR, regular with U202F NBTSP
 #
-#   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by ¦␣␣). But the
-#   equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since both
-#   are heavily used in French and consistently supported on live keys, and
-#   moreover, the multikey sequence for U00A0 – <Multi_key><space><space> –
+#   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by « ¦␣␣ »). But
+#   the equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since
+#   both are heavily used in French and consistently supported on live keys,
+#   and moreover, the multikey sequence for U00A0 <Multi_key><space><space>
 #   conflicts with every single math symbol sequence disambiguated by multiple
-#   leading spaces, sideways compatible support for U00A0 by multikey is
-#   dropped altogether.
+#   leading space, sideways compatible support for U00A0 by multikey needs to
+#   be dropped as impossible.
 #
-#   U2008 PUNCTUATION SPACE is supported in en_US.UTF-8/Compose (by ¦␣.), but
-#   the matching U2007 FIGURE SPACE used with the same rationale in typesetting
-#   old-style tables is not, although the latter is particular in that it is an
-#   outstandig reminder that all spaces U2002..U200A were initially designed to
-#   be no-break. Since the sequence <Multi_key><space><period> conflicts with
-#    "⩑" U2A51, and disambiguating the latter would screw it up (by requiring a
+#   U2008 PUNCTUATION SPACE is supported in en_US.UTF-8/Compose (by « ¦␣. »),
+#   but the matching U2007 FIGURE SPACE, that is used with the same rationale
+#   in typesetting old-style tables, is not, although the latter is particular
+#   in that it is an outstandig reminder that all spaces U2002..U200A were
+#   initially designed to be no-break. As <Multi_key><space><period> conflicts
+#   with "⩑" U2A51, and disambiguating this would screw it up (by requiring a
 #   double leading space), it is discarded, and support for spaces by dead keys
 #   is moved to the space groups altogether.
 #   See # # A03-level1 space
@@ -1406,18 +1438,20 @@
 #
 #   Apostrophe quotation marks and comma quotation marks "‘" U2018, "’" U2019,
 #   "‚" U201A, "“" U201C, "”" U201D, and "„" U201E by multikey are supported
-#   in en_US.UTF-8/Compose. However, these sequences are discontinued as a
-#   conflicting and pointless waste, since they are superseded by a more
-#   efficient and intuitive input method.
+#   in en_US.UTF-8/Compose by sequences that need to be discontinued as
+#   conflicting, and as pointless too, for being superseded by a more efficient
+#   and intuitive input method based on diacritical dead keys and their
+#   multikey equivalents.
 #   See # # Quotation mark input method
 #
-#   Angle quotation marks "«" U00AB, "»" U00BB, "‹" U2039, and "›" U203A are
-#   on live keys, since supporting these by dead keys is pointless due to the
-#   French spacing requirement. Also, sequences for these along the lines of
-#   en_US.UTF-8/Compose conflict with sequences for mathematical symbols and
-#   with dead key equivalents, e.g. vertical line above.
+#   Angle quotation marks "«" U00AB, "»" U00BB, "‹" U2039, and "›" U203A are on
+#   live keys, since supporting these by dead keys is not very useful, due to
+#   the French spacing requirement. Also, sequences for these along the lines
+#   of en_US.UTF-8/Compose conflict with sequences for mathematical symbols and
+#   with dead key equivalents.
 #   See #*# SUPERSCRIPT
-#   
+#   See #^# COMBINING_ABOVE
+#
 #   "…" U2026 HORIZONTAL ELLIPSIS has a redesigned sequence, that the legacy
 #   <Multi_key><period><period> in en_US.UTF-8/Compose conflicts with.
 #   See # # Ellipses and leaders
@@ -1450,7 +1484,7 @@
 #
 #   As a result, U2014 is moved to the new sequence below, that is the most
 #   consistent both with en_US.UTF-8/Compose and with typography, defining the
-#   em dash as 4 hyphens worth.
+#   length of the em dash as 4 hyphens.
 #
 #   This new multikey sequence is not the most user-friendly, but this is only
 #   about multikey support. U2013 and U2014, and depending on the variant, also
@@ -1510,15 +1544,20 @@
 #   https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf#page=12
 #
 #   Calling U002D "HYPHEN-MINUS" was like calling U002A *ASTERISK-MULTIPLY, and
-#   U002F *SOLIDUS-DIVIDE. Only the Minus was appended with a hyphen, prompting
+#   U002F *SOLIDUS-DIVIDE. Only the MINUS was appended with a hyphen, prompting
 #   people to figure out a non-existing reason behind, and to guess that this
-#   HYPHEN-MINUS might eventually not be a genuine hyphen.
+#   HYPHEN-MINUS might eventually not be a genuine hyphen. Yet it is, and it is
+#   repurposed in programming like so many other symbols. That is most probably
+#   how Unicode was fooled into encoding an extra hyphen, not noticing that the
+#   hyphen is already there.
 #
-#   That is most probably how Unicode was fooled into encoding an extra hyphen,
-#   not noticing that the hyphen is already there. As a consequence, we must
-#   stop taking the extra hyphen U2010 seriously and messing up keyboard layout
-#   design while attempting to support U2010 on live key or by premium dead key
-#   such as group 1 of <minus>.
+#   As a consequence, we must stop taking the extra hyphen U2010 seriously, in
+#   order to prevent adverse effects on keyboard layout design while attempting
+#   to support U2010 on live key or by premium dead key.
+#   See # # C05 minus
+#
+#   The dashes based on multiples of the em dash make up 7 out of 10 dashes and
+#   hyphens supported by this digit-based multikey scheme:
 #
 #       HYPHEN-MINUS   = quarter-dash (French “tiret quart-de-cadratin”)
 #       HYPHEN         = quarter-dash (French “tiret quart-de-cadratin”)
@@ -1530,7 +1569,8 @@
 #
 #   See # # Long dashes
 #
-#   "‑" U2011 NON-BREAKING HYPHEN is also in group 1 of <equal> .
+#   "‑" U2011 NON-BREAKING HYPHEN is also in group 1 of equal.
+#   See # # B05 equal
 #
 <Multi_key><0><minus>                                                                              : "­" U00AD # SOFT HYPHEN
 <Multi_key><KP_0><KP_Subtract>                                                                     : "­" U00AD # SOFT HYPHEN
@@ -1554,12 +1594,16 @@
 <Multi_key><KP_9><KP_Subtract>                                                                     : "⹀" U2E40 # DOUBLE HYPHEN
 #
 #
-# # Ellipses and leaders
+# # Ellipsis and leaders
 #
-#   The common horizontal ellipsis, here for completeness, is on live key.
-#   One dot and 2 dot leaders are supported consistently by this occasion.
-#   For ease of input, space termination is skipped for all of these, and
-#   also for the mathematical "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
+#   The common horizontal ellipsis is on live key in synergy with brackets.
+#   See dispoclavier.cpp key <AC11>
+#
+#   This underscore terminated multikey scheme also supports the one dot leader
+#   and the two dot leader.
+#
+#   For consistency and ease of input, space termination is skipped for
+#   mathematical ellipses too: "⋯" U22EF, "⋮" U22EE, "⋰" U22F0, "⋱" U22F1.
 #   See # # Mathematical Operators of block U2200
 #
 <Multi_key><period><underscore>                                                                    : "․" U2024 # ONE DOT LEADER
@@ -1698,7 +1742,7 @@
 #
 #   Zhuang tone letters are casing and thus require sequences with letters,
 #   most appropriately with Z avoiding conflicts with tone bars, paired with
-#   the digit both ways for ease of input. Zhuang tone one is unwritten:
+#   the digit both ways for ease of input. Zhuang tone one is unwritten.
 #   https://omniglot.com/writing/zhuang.htm
 #
 <Multi_key><2><Z>                                                                                  : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
@@ -1748,8 +1792,9 @@
 #   The tone height is denoted by a leading initialism, localized in French and
 #   in English and case insensitive except the English sequence for "˼" U02FC,
 #   because with a capital L, this would conflict with "⊾" U22BE. The start or
-#   end semantics is carried by a trailing parenthesis: ¦h(, ¦H(, ¦b(, ¦B(,
-#   ¦l(, ¦L(, or ¦h), ¦H), ¦b), ¦B), ¦l).
+#   end semantics is carried by a trailing parenthesis: « ¦h( », « ¦H( »,
+#   « ¦b( », « ¦B( », « ¦l( », « ¦L( », or « ¦h) », « ¦H) », « ¦b) », « ¦B) »,
+#   « ¦l) ».
 #
 #   "꜠" UA720 and "꜡" UA721 are supported alongside, as these are ligatures of
 #   begin tone marks and stress, adding a median apostrophe to the sequences,
@@ -1796,9 +1841,9 @@
 #
 #   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH.
 #   The fraction slash triggers autoformatting of base digits to vulgar
-#   fractions in Unicode-conformant rendering engines, like HarfBuzz in
-#   Firefox.
+#   fractions in Unicode-conformant rendering engines like HarfBuzz.
 #   See # # Fraction slash
+#   See dispocla.cpp key <AC04>
 #
 #   A workaround for defective renderers is using superscript digits for
 #   numerators, and subscript digits for denominators, with the negative
@@ -1922,21 +1967,23 @@
 #^# Bullets
 #
 #   In keysymdef.h, 15 bullets are supported, but some comments do not match.
-#   This supports the bullets as implemented, adding support for the intended
+#   This supports the bullets as implemented and adds support for the intended
 #   open rectangular bullet "▭" U25AD.
 #
 #   Default HTML/CSS bullets have equivalents in Unicode as "•" U2022 for the
-#   first level, "◦" U25E6 for the second level. For the third level, "▪" U25AA
-#   is sometimes chosen to stick with `list-style-type: square`, but this is an
-#   emoji, so "‣" U2023 is eventually a better pick. These three bullets are in
-#   groups 1..3 of underscore, too.
+#   first level and "◦" U25E6 for the second level. For level 3, "▪" U25AA is
+#   sometimes chosen in an attempt to stick with `list-style-type: square`, but
+#   this is an emoji. That is why as a level 3 bullet, "‣" U2023 may eventually
+#   be an interesting alternative. These are in groups 1..3 of underscore, too.
 #   See # # C07 underscore
 #
 #   Some sequences based on English mnemonic have French equivalents.
+#
 #   "∎" U220E has bilingual support in the math symbols.
+#   See # # Mathematical Operators of block U2200
 #
 #   These sequences are case insensitive in that they can be typed either in
-#   lowercase or in uppercase.
+#   lowercase or in uppercase (but neither in titlecase nor in mixed case).
 #
 <Multi_key><e><n><f><c><b>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
 <Multi_key><E><N><F><C><B>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
@@ -2059,7 +2106,7 @@
 #   See #*# MACRON
 #   See #*# STROKE
 #
-#   The generic currency symbol `¤` U00A4 is supported by case insensitive X O
+#   The generic currency symbol "¤" U00A4 is supported by case insensitive X O
 #   sequences. Reverse sequences conflict with mathematical symbols.
 #
 <Multi_key><A><equal>                                                                              : "₳" U20B3 # AUSTRAL SIGN
@@ -2115,12 +2162,16 @@
 #
 # # Currency symbols by ISO codes
 #
-#   This only supports non-trivial symbols. Dollar sign and sequences
-#   including Latin base letters and punctuation are commented out,
-#   as several of these conflict with legal symbols ™ (¦tm), ℅ (¦co)
-#   or with letters.
+#   This only supports non-trivial symbols. Dollar sign and results made of
+#   sequences including Latin base letters and punctuation are commented out,
+#   as several of these conflict with legal symbols "™" by « ¦tm », "℅" by
+#   « ¦co », or with letters.
 #
-#   Pound sign is commented out too as conflicting and easy to input.
+#   Pound sign is commented out too as conflicting and easy to input on live
+#   keys.
+#   See dispocla.cpp key <AD04>
+#   See dispocla.cpp key <AD12>
+#   See dispocla.cpp key <AC09>
 #
 <Multi_key><a><e><d>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
 <Multi_key><A><E><D>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
@@ -2690,7 +2741,7 @@
 # # Shadowed circle
 #
 #   Also in group 12 of @.
-#   Sequence ¦() conflicts with "≬" U226C BETWEEN.
+#   The sequence « ¦() » conflicts with "≬" U226C BETWEEN.
 #
 <Multi_key><parenleft><underscore><parenright>                                                     : "❍" U274D # SHADOWED WHITE CIRCLE
 #
@@ -2837,7 +2888,7 @@
 #
 # # Power switch
 #
-#   This is the unambiguous, widely used symbol carrying both ON and OFF semantics.
+#   Unambiguous, widely used symbol carrying both ON and OFF semantics.
 #
 <Multi_key><O><I>                                                                                  : "⏻" U23FB # POWER SYMBOL
 #
@@ -2960,14 +3011,14 @@
 #
 # # Symbols for multikey and composition
 #
-#   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive `cmp`.
-#   Not `com`, to prevent conflicts with "℅" U2105.
+#   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive
+#   « ¦cmp ». Not « ¦com », to prevent conflicts with "℅" U2105.
 #
 #   The broken bar "¦" U00A6, repurposed as multikey symbol, is input by case
-#   insensitive `mul`.
+#   insensitive « ¦mul ».
 #
-#   "¦" U00A6 is also in group 12 of |, in dead_macron 5, and in dead_diaeresis
-#   backslash.
+#   "¦" U00A6 is also in group 12 of bar, in dead_macron "5", and in
+#   dead_diaeresis backslash.
 #   See # # C10 bar
 #   See #*# MACRON
 #   See #*# DIAERESIS
@@ -2977,8 +3028,8 @@
 #   less outstanding glyph design in documentation, since the ISO symbol did
 #   not make it onto many keyboards, partly because dedicating an entire key
 #   to input composition rather than a mere key position, possibly on level 3,
-#   is not recommended in the presence of a group selector dead key providing
-#   a more powerful input method for current digraphs.
+#   is not recommended in the presence of a group dead key providing a more
+#   powerful input method for current digraphs.
 #
 #   Downgrading the composition symbol from "⎄" U2384 to "¦" U00A6 as a result
 #   stands for a less screwed-up user experience.
@@ -6407,7 +6458,7 @@
 #
 #   "⧵" U29F5 REVERSE SOLIDUS OPERATOR is likely a duplicate of "∖" U2216 SET
 #   MINUS with the potential to fool people into decisions causing issues, e.g.
-#   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems #409”
+#   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems”
 #   https://github.com/tudace/tuda_latex_templates/issues/409
 #
 #   Consistently, "⧵" U29F5 goes unmentioned in TUS, Table 22-5. Mathematical
@@ -7529,9 +7580,12 @@
 <Multi_key><space><minus><c><c><minus><greater>                                     <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><nobreakspace><minus><c><c><minus><greater>                                     <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><nobreakspace><minus><c><c><minus><greater>                              <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-#   Verticals are U27F0, U27F1.
-#   U2B45 and U2B46 are not labeled as math but are included in TeX math packages.
+#
+#   Verticals of U2B45, U2B46 are U27F0, U27F1.
+#   U2B45 and U2B46 are not labeled as math but are included in TeX math
+#   packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
+#
 <Multi_key><less><minus><equal><minus><underscore>                                         <space> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
 <Multi_key><less><minus><equal><minus><underscore>                                  <nobreakspace> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
 <Multi_key><minus><equal><minus><greater><underscore>                                      <space> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
@@ -7599,8 +7653,8 @@
 #   In group 7 of € and "                                                                          : "✉" U2709 # ENVELOPE
 <Multi_key><E><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE TeX control has title case
 <Multi_key><e><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE
-#   The French sequence ¦enveloppe is not supported, because it exceeds the
-#   XCompose upper limit of 9 keysyms (including Multi_key).
+#   The French sequence « ¦enveloppe » is not supported, because it exceeds
+#   the XCompose upper limit of 9 keysyms (including Multi_key).
 <Multi_key><L><p><a><r><e><n><g><t>                                                                : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
 <Multi_key><R><p><a><r><e><n><l><t>                                                                : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET TeX + HTML under max 9 keysym constraint
 #
