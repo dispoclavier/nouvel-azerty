@@ -105,8 +105,10 @@
 #                               in 2019-04 was under revision (with a deadline on 2024-07-31),
 #                               due to only reluctantly praying God for help and advice, rather
 #                               than following the straightforward way roadmapped in the Bible.
-#                               https://dispoclavier.com/doc/retours/Retours_techniques_NF_Z71-300_2024-07-23T0622+0200.pdf
 #                               https://questionnaire.afnor.org/cgi-bin/HE.exe/W?P=9z67z1z10634z5zAD3D06D7C0
+#                               https://dispoclavier.com/doc/retours/Retours_techniques_NF_Z71-300_2024-07-23T0622+0200.pdf
+#                               https://questionnaire.afnor.org/cgi-bin/HE.exe/P?P=13z4z1z8642z5z0C9172AEE3
+#                               https://dispoclavier.com/doc/retours/Retours_techniques_NF_Z71-300_2024-02-24T1604+0100.pdf
 #                             • Pʳ Yves NEUVILLE, for general principles and layout details.
 #                               ⸻ Le clavier bureautique et informatique, Rapport remis au
 #                               Ministère du Redéploiement Industriel et du Commerce Extérieur
@@ -125,7 +127,7 @@
 #                               ⸻ http://beop.free.fr
 #                             • Ergodis association, for principles of ergonomics and technology transfers.
 #                               ⸻ https://bepo.fr
-#                               ⚠ This is not a derivative work (subject to GPL, GFDL et CC-BY-SA licenses).
+#                               ⚠ This is no derivative work, that would be subject to GPL, GFDL, CC-BY-SA.
 #                             • Weston RUTER, for the International Phonetic Alphabet.
 #                               ⸻ https://westonruter.github.io/ipa-chart/keyboard/
 #                             • Mats BLAKSTAD, for the list of composed letters for languages in Togo.
@@ -136,9 +138,10 @@
 #
 #   Dead key handling XCompose has the ability to output more than one single
 #   code unit, outperforming the misdesigned Windows Text Services Framework,
-#   that can do so by live keys only, and is limited to 16 (not 4) UTF-16 code
-#   units, as opposed to XCompose, that has no upper limit and also handles
-#   multicharacter strings on single live key press.
+#   that can do so by live keys only, and is limited to 16 UTF-16 code units,
+#   and even to only 4 code units on Shift + Ctrl + Alt (modifier byte 0x07),
+#   as opposed to XCompose, that has no upper limit on the result length, and
+#   also handles multicharacter strings output on a single live key press.
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #   https://manpages.ubuntu.com/manpages/cosmic/man5/Compose.5.html
 #   https://help.ubuntu.com/community/ComposeKey#Compose_key
