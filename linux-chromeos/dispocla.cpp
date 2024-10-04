@@ -1,4 +1,4 @@
-//                       Date: 2024-10-04T2242+0200
+//                       Date: 2024-10-05T0121+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -60,16 +60,39 @@
 //
 // ## XKB layout group 2
 //
+// Caps Lock is dedicated to uppercase. As a consequence, the digits require
+// an extra toggle, that is called "ModLock", short for Mode Lock. The second
+// graphic toggle as ModLock may be referred to, changes between default mode
+// or French mode for instance, and an ASCII mode. It affects non-alphabetic
+// keys, because alphabetic keys must not be affected by ModLock with respect
+// to cross-platform compatibility.
+//
 // A second graphic toggle is required to toggle the row E keys between letters
 // and digits, independently of the CapsLock toggle, that is set to also affect
-// the diacriticized letters, most of which are on row E too. This digit toggle
-// cannot be implemented by repurposing the NumLock toggle. Consistently, this
-// solution was commented out in xkb/types/level5 back in 2016 (later causing a
-// bug in xkbcomp when these types were uncommented again). These two types are
-// EIGHT_LEVEL_LEVEL_FIVE_LOCK and EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK.
+// the diacriticized letters, most of which are on row E too. The second toggle
+// also maintains level 1 access for the ASCII single and double quotes and the
+// ASCII hyphen and underscore, all of which are on row E level 1 of the French
+// AZERTY. Additionally, ASCII mode has level 2 positions for one set of paired
+// punctuation, used for one out of the two level-3 right-hand pairs. Frequency
+// is the criterion for picking the braces rather than the brackets. Plus, this
+// matches US-QWERTY.
+// http://xahlee.info/comp/computer_language_char_distribution.html
+//
+// ASCII mode is not limited to ASCII, as row E and keys D12, C11, C12 output
+// subscript digits, signs and punctuation not there in default mode, where
+// keypad emoji are easier accessed instead. ASCII symbols printed on these
+// keys are also accessible in default mode, but not in ASCII mode.
+//
+// This digit toggle cannot be implemented by repurposing the NumLock toggle as
+// types EIGHT_LEVEL_LEVEL_FIVE_LOCK and EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK
+// commented out in xkb/types/level5 back in 2016 consistently, later causing a
+// bug in xkbcomp when these were uncommented, in xkb/types/level5(56, 118).
+// Repurposing NumLock is prone to issues due to its use on compact keyboards.
 //
 // The working solution needs to use the ISO_First_Group and ISO_Last_Group for
-// the purpose of toggling between two layout groups.
+// the purpose of toggling between two layout groups. That is the reason why
+// ModLock is implemented as a group toggle between ISO first group and ISO
+// last group, i.e. group 1 and group 2.
 //
 // This however is compromised by a rule in /usr/share/X11/xkb/rules/evdev:
 //
@@ -264,7 +287,7 @@
 // https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 //
 //
-// ##  Name and mapping of the level 5 modifier key
+// ## Name and mapping of the level 5 modifier key
 //
 // The ISO/IEC 9995 standard does not support the level 5 modifier, because it
 // is limited to low-performance Western keyboard layouts and excludes all the
@@ -279,7 +302,7 @@
 // representatives) of the Canadian multilingual standard keyboard layout by
 // Alain LaBonté (initial design). Jan James was tasked with implementing the
 // Canadian multilingual standard keyboard layout for Microsoft, transforming
-// the group selector dead key into a level 5 modifier key, although initially,
+// the group selector into a level 5 modifier key, although initially,
 // CAN/CSA Z243.200-92 was meant to comply with ISO/IEC 9995-2. But that is not
 // how things are expected to work on properly designed keyboard layouts.
 //
@@ -474,8 +497,8 @@
 // ### Keyboard levels and groups
 //
 // While “keyboard level” refers to user-perceived modifier key combinations,
-// the 1-based array indices used in the allocation tables are named “Level1”
-// through “Level8” in the key type definitions. The numerous key types help
+// the 1-based array indices used in the allocation tables are named "Level1"
+// through "Level8" in the key type definitions. The numerous key types help
 // cope with the limitation to 8 indices in XKB allocation tables. The number
 // of keyboard levels in user experience may be up to 8 using three modifiers
 // (Shift, AltGr, AltFr). Since the ModLock toggle is a group toggle, it does
@@ -499,11 +522,11 @@
 //     group[groupname] = [ symbol, symbol] instead, with the various
 //     statements being separated by commas.
 //
-// The term “group” is also used for dead-key-accessed groups, the most
-// prominent of which are accessed through the “group selector” dead key, that
-// also supports multiple presses. As a consequence, the group number matches
-// the number of group selector key presses, or the digit entered after one
-// group selector key press. Support for multiple group selector key presses
+// The term "group" is also used for dead-key-accessed groups, the most
+// prominent of which are accessed through the "group dead key", that also
+// supports multiple presses. As a consequence, the group number matches the
+// number of group dead key presses, or the digit entered after one
+// group dead key press. Support for multiple group dead key presses
 // goes at least up to 4. That is why groups are a 0-based array of 13 groups,
 // where index 0 is the default layout. Digits 0..2 are used for groups 10..12.
 //
@@ -522,17 +545,20 @@ xkb_symbols "kbfrFRs" {
 	include "inet(evdev)" // Easy access and internet keys.
 
 	//
-	// New 'AltFr' modifier key
+	// ## New 'AltFr' modifier key
 	//
 	// The level 5 modifier defaults to the LSGT key but may need to be placed on
 	// CapsLock depending on the hardware. Keyboards for the European market with
 	// key LSGT on right Control need to have LSGT and CAPS swapped, so as to get
 	// CapsLock on right Control, and the level 5 modifier on the CapsLock key.
-	// See ##  Name and mapping of the level 5 modifier key
+	// See ## Name and mapping of the level 5 modifier key
 	//
 	// Correct LSGT key behavior after inclusion of symbols/pc(105):
+
 	modifier_map Mod3 { <MDSW> };
+
 	// See also the complete modifier map list at the bottom of this section.
+
 	include "level5(lsgt_switch)"
 
 	key.type[Group1]= "FOUR_LEVEL";
@@ -547,7 +573,7 @@ xkb_symbols "kbfrFRs" {
 		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ]
 	};
 
-	// Regular level 3 (AltGr) modifier key
+	// ## Regular level 3 (AltGr) modifier key
 
 	include "level3(ralt_switch)"
 
@@ -559,24 +585,9 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	//
-	// ASCII mode lock toggle key
+	// ## ASCII mode lock toggle key
 	//
-	// Caps Lock is dedicated to uppercase. As a consequence, the digits require
-	// an extra toggle, that is called “ModLock”, short for Mode Lock. The second
-	// graphic toggle as ModLock may be referred to, changes between default mode
-	// or French mode for instance, and an ASCII mode. It affects non-alphabetic
-	// keys, because alphabetic keys must not be affected by ModLock with respect
-	// to cross-platform compatibility.
-	//
-	// ASCII mode is not limited to ASCII, as row E and keys D12, C11, C12 output
-	// subscript digits, signs and punctuation not there in default mode, where
-	// keypad emoji are easier accessed instead. ASCII symbols printed on these
-	// keys are also accessible in default mode, but not in ASCII mode.
-	//
-	// ModLock is implemented as a group toggle between ISO first group and ISO
-	// last group, i.e. group 1 and group 2. Repurposing NumLock is not an option
-	// due to its use on compact keyboards; key types doing that are discarded in
-	// xkb/types/level5(56, 118).
+	// See ## XKB layout group 2
 	//
 	// The key used for this additional graphic toggle is TLDE.
 	//
@@ -593,7 +604,7 @@ xkb_symbols "kbfrFRs" {
 	}; // Level5 yields <variant>; Level6 yields <version>
 
 	//
-	// Level inconsistency
+	// ## Level inconsistency
 	//
 	// CAUTION: Index 4 is mostly level 5, and conversely.
 	//
@@ -624,7 +635,7 @@ xkb_symbols "kbfrFRs" {
 	//        Latin letter ............................... Abbreviation indicator
 	//
 	//
-	// Superscript letters
+	// ## Superscript letters
 	//
 	// Level 6 superscript letters are related to indices 1 and 2 but cannot be
 	// mapped on index 3, for the above reasons.
@@ -641,7 +652,7 @@ xkb_symbols "kbfrFRs" {
 	// https://github.com/unicode-org/cldr/blob/release-45/common/main/fr.xml#L1528
 	//
 	//
-	// Apostrophes
+	// ## Apostrophes
 	//
 	// Both the preferred punctuation apostrophe "’" U2019 <rightsinglequotemark>
 	// and the ASCII single quote "'" U0027 <apostrophe> are featured on two base
@@ -663,7 +674,7 @@ xkb_symbols "kbfrFRs" {
 	// https://listengine.tuxfamily.org/ergodis.org/discussions/2016/11/msg00152.html
 	//
 	//
-	// Format controls
+	// ## Format controls
 	//
 	// "⁄" U2044 FRACTION SLASH is mapped on level 7 of the F key, because it is
 	// designed to get ASCII digits formatted as numerators and denominators and
@@ -689,20 +700,20 @@ xkb_symbols "kbfrFRs" {
 	// other way around. Previously, the byte order mark UFEFF was used instead.
  	//
 	//
-	// Overscore
-	// ‾‾‾‾‾‾‾‾‾
+	// ## Overscore
+	//    ‾‾‾‾‾‾‾‾‾
 	// "‾" U203E OVERLINE is on level 7 of the underscore key C07 for the purpose
 	// of typing sequences displaying as unbroken lines, that can be used e.g. in
 	// fixed-width plain text to underline headings like above.
 	// https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=302&zoom=100,0,600
 	//
 	//
-	// Emoji
+	// ## Emoji
 	//
 	// A number of Supplemental Multilingual Plane emoji are mapped on live keys.
 	// Due to cross-platform compatibility issues, SMP emoji are not supported by
 	// dead keys, while all emoji in the Basic Multilingual Plane are supported
-	// by the group selector dead key. Conversely, available live key positions
+	// by the group dead key. Conversely, available live key positions
 	// are used for SMP emoji. The selection is based on frequency and additional
 	// criteria.
 	//
@@ -727,7 +738,7 @@ xkb_symbols "kbfrFRs" {
 	// https://www.futurity.org/emoji-countries-1328712-2-2/
 	//
 	//
-	// Column width
+	// ## Column width
 	//
 	// After the removal of dead_longsolidusoverlay in libxkbcommon 1.6.0 (2023),
 	// keysyms are expected to be no longer than rightsinglequotemark, making for
