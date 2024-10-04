@@ -1,4 +1,4 @@
-//                       Date: 2024-10-02T0030+0200
+//                       Date: 2024-10-04T2242+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -880,12 +880,12 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD11> {
 		[     dead_circumflex,               UEF66,          dead_tilde,               U2039,         asciicircum,                   C,      dead_diaeresis,         bracketleft ],
-		[            quotedbl,         bracketleft,         asciicircum,                   C,         asciicircum,         asciicircum,          underscore,         bracketleft ]
+		[            quotedbl,           braceleft,         asciicircum,                   C,         asciicircum,         asciicircum,          underscore,         bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
 
 	key <AD12> {
 		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,                   D,            sterling,        bracketright ],
-		[          underscore,        bracketright,           Multi_key,                   D,               U207C,               U207C,               U208C,        bracketright ]
+		[          underscore,          braceright,           Multi_key,                   D,               U207C,               U207C,               U208C,        bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
