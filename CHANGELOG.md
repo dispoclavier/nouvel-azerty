@@ -4,7 +4,9 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.5.1 (projet)
 
-* Documentation : Corriger des annotations. dispocla.cpp [55fbd27](https://github.com/dispoclavier/nouvel-azerty/commit/55fbd276f1d19df764ffe8225202a20927c43d23)
+* Documentation :
+	* Ajouter une note sur les normes. dispocla.cpp [625988d](https://github.com/dispoclavier/nouvel-azerty/commit/625988d99e36aaf2f9f46db131ab678358c43b57)
+	* Corriger des annotations. dispocla.cpp [55fbd27](https://github.com/dispoclavier/nouvel-azerty/commit/55fbd276f1d19df764ffe8225202a20927c43d23)
 
 ## 4.5.0 (2024-10-05)
 
