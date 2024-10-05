@@ -1,4 +1,4 @@
-//                       Date: 2024-10-05T0121+0200
+//                       Date: 2024-10-05T1910+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -81,18 +81,19 @@
 // ASCII mode is not limited to ASCII, as row E and keys D12, C11, C12 output
 // subscript digits, signs and punctuation not there in default mode, where
 // keypad emoji are easier accessed instead. ASCII symbols printed on these
-// keys are also accessible in default mode, but not in ASCII mode.
+// keys are also accessible in default mode on level 4 as a fallback commodity,
+// but not in ASCII mode.
 //
 // This digit toggle cannot be implemented by repurposing the NumLock toggle as
-// types EIGHT_LEVEL_LEVEL_FIVE_LOCK and EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK
-// commented out in xkb/types/level5 back in 2016 consistently, later causing a
-// bug in xkbcomp when these were uncommented, in xkb/types/level5(56, 118).
-// Repurposing NumLock is prone to issues due to its use on compact keyboards.
+// in types EIGHT_LEVEL_LEVEL_FIVE_LOCK, EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK
+// commented out in xkb/types/level5(56, 118) back in 2016 consistently, later
+// causing a bug in xkbcomp when these were uncommented again. Repurposing the
+// NumLock toggle is prone to causing issues on compact keyboards with overlay
+// numpad turned on and off by Num Lock.
 //
-// The working solution needs to use the ISO_First_Group and ISO_Last_Group for
-// the purpose of toggling between two layout groups. That is the reason why
-// ModLock is implemented as a group toggle between ISO first group and ISO
-// last group, i.e. group 1 and group 2.
+// The working solution relies on ISO_First_Group and ISO_Last_Group for the
+// purpose of switching between two layout groups. ModLock is implemented as
+// a group toggle between live key layout group 1 and live key layout group 2.
 //
 // This however is compromised by a rule in /usr/share/X11/xkb/rules/evdev:
 //
