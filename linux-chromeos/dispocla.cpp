@@ -1,4 +1,4 @@
-//                       Date: 2024-10-05T1910+0200
+//                       Date: 2024-10-05T2132+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -55,6 +55,21 @@
 //                             XKBLAYOUT="dispocla"
 //                             XKBVARIANT="kbfrFRs"
 //                             XKBOPTIONS=""
+//
+// # Standards compliance
+//
+// This file configures a level 5 modifier key called "AltFr", located lefthand
+// either on B00 or on C00 (CapsLock), and a group 2 toggle called "ModLock" on
+// E00. This file also allocates full sets of eight levels on each graphic key.
+// Neither of these are covered by ISO/IEC 9995. Despite being international by
+// design, this standard does not cover Japanese keyboards either. In fact, the
+// ISO/IEC keyboard standard only covers low-end Western keyboard layouts.
+//
+// Software tools like keyboard layouts do not need to be standardized prior to
+// deployment, and features are not necessarily printed on keycaps. The role of
+// standards is to serve the users, not to dominate users by curtailing the use
+// and compromising the usability of work tools.
+//
 //
 // # Configuration
 //
