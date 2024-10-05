@@ -2,7 +2,7 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.5.0 (projet)
+## 4.5.0 (2024-10-05)
 
 Correction du mode ASCII suite à la version 2.
 
