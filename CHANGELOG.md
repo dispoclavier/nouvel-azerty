@@ -2,8 +2,11 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.5.1 (projet)
+## 4.6.0 (2024-10-06)
 
+Correction des variantes redisposées pour une meilleure ergonomie.
+
+* Disposition : Variantes redisposées : Mettre la touche morte tréma sur AltGr + C12 à la place de la touche morte accent grave, qui prend la place du trait d’union insécable U+2011 sur E07, qui prend la place laissée par la touche morte tréma sur E12. dispocla.cpp [53b3f20](https://github.com/dispoclavier/nouvel-azerty/commit/53b3f2055091f79e1f56e4f6d4293c77875f8887)
 * Documentation :
 	* Ajouter une note sur les normes. dispocla.cpp [625988d](https://github.com/dispoclavier/nouvel-azerty/commit/625988d99e36aaf2f9f46db131ab678358c43b57)
 	* Corriger des annotations. dispocla.cpp [55fbd27](https://github.com/dispoclavier/nouvel-azerty/commit/55fbd276f1d19df764ffe8225202a20927c43d23)
