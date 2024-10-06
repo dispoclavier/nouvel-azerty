@@ -1,4 +1,4 @@
-//                       Date: 2024-10-05T2132+0200
+//                       Date: 2024-10-06T0341+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1661,7 +1661,7 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
-		[               U2011,      Greek_horizbar ],
+		[          dead_grave,      Greek_horizbar ],
 		[            NoSymbol ]
 	};
 
@@ -1679,58 +1679,65 @@ xkb_symbols "kbfrFRsr" {
 		[            NoSymbol ]
 	};
 
+	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
+	key <AE12> {
+		[               U2011 ],
+		[            NoSymbol ]
+	};
+
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
 	key <AD01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   q,                   Q,            NoSymbol,            NoSymbol,            NoSymbol,              U107A5 ],
 		[                   q,                   Q,            NoSymbol,            NoSymbol,            NoSymbol,              U107A5 ]
-	}; // MODIFIER LETTER SMALL Q
+	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD03> {
 		[                   j,                   J,            NoSymbol,            NoSymbol,            NoSymbol,               U02B2 ],
 		[                   j,                   J,            NoSymbol,            NoSymbol,            NoSymbol,               U02B2 ]
-	}; // MODIFIER LETTER SMALL J
+	}; // U02B2 ʲ MODIFIER LETTER SMALL J
 
 	key <AD04> {
 		[                   f,                   F,            NoSymbol,            NoSymbol,            NoSymbol,               U1DA0 ],
 		[                   f,                   F,            NoSymbol,            NoSymbol,            NoSymbol,               U1DA0 ]
-	}; // MODIFIER LETTER SMALL F
+	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F
 
 	key <AD05> {
 		[                   g,                   G,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4D ],
 		[                   g,                   G,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4D ]
-	}; // MODIFIER LETTER SMALL G
+	}; // U1D4D ᵍ MODIFIER LETTER SMALL G
 
 	key <AD07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   m,                   M,            NoSymbol,            NoSymbol,            NoSymbol,               U1D50 ],
 		[                   m,                   M,            NoSymbol,            NoSymbol,            NoSymbol,               U1D50 ]
-	}; // MODIFIER LETTER SMALL M
+	}; // U1D50 ᵐ MODIFIER LETTER SMALL M
 
 	key <AD08> {
 		[                   l,                   L,            NoSymbol,            NoSymbol,            NoSymbol,               U02E1 ],
 		[                   l,                   L,            NoSymbol,            NoSymbol,            NoSymbol,               U02E1 ]
-	}; // MODIFIER LETTER SMALL L
+	}; // U02E1 ˡ MODIFIER LETTER SMALL L
 
 	key <AD09> {
 		[                   d,                   D,            NoSymbol,            NoSymbol,            NoSymbol,               U1D48 ],
 		[                   d,                   D,            NoSymbol,            NoSymbol,            NoSymbol,               U1D48 ]
-	}; // MODIFIER LETTER SMALL D
+	}; // U1D48 ᵈ MODIFIER LETTER SMALL D
 
 	key <AD10> {
 		[                   k,                   K,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4F ],
 		[                   k,                   K,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4F ]
-	}; // MODIFIER LETTER SMALL K
+	}; // U1D4F ᵏ MODIFIER LETTER SMALL K
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD12> {
 		[               UEFD0,            NoSymbol,               UEFD0 ],
-		[          underscore,            NoSymbol,               UEFD0 ]
-	};
+		[            NoSymbol,            NoSymbol,               UEFD0 ]
+	}; // UEFD0 *dead_group
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1738,48 +1745,48 @@ xkb_symbols "kbfrFRsr" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   a,                   A,            NoSymbol,            NoSymbol,            NoSymbol,               U1D43 ],
 		[                   a,                   A,            NoSymbol,            NoSymbol,            NoSymbol,               U1D43 ]
-	}; // MODIFIER LETTER SMALL A
+	}; // U1D43 ᵃ MODIFIER LETTER SMALL A
 
 	key <AC03> {
 		[                   e,                   E,            NoSymbol,            NoSymbol,            NoSymbol,               U1D49 ],
 		[                   e,                   E,            NoSymbol,            NoSymbol,            NoSymbol,               U1D49 ]
-	}; // MODIFIER LETTER SMALL E
+	}; // U1D49 ᵉ MODIFIER LETTER SMALL E
 
 	key <AC04> {
 		[                   r,                   R,            NoSymbol,            NoSymbol,            NoSymbol,               U02B3 ],
 		[                   r,                   R,            NoSymbol,            NoSymbol,            NoSymbol,               U02B3 ]
-	}; // MODIFIER LETTER SMALL R
+	}; // U02B3 ʳ MODIFIER LETTER SMALL R
 
 	key <AC05> {
 		[                   t,                   T,            NoSymbol,            NoSymbol,            NoSymbol,               U1D57 ],
 		[                   t,                   T,            NoSymbol,            NoSymbol,            NoSymbol,               U1D57 ]
-	}; // MODIFIER LETTER SMALL T
+	}; // U1D57 ᵗ MODIFIER LETTER SMALL T
 
 	key <AC06> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   u,                   U,            NoSymbol,            NoSymbol,            NoSymbol,               U1D58 ],
 		[                   u,                   U,            NoSymbol,            NoSymbol,            NoSymbol,               U1D58 ]
-	}; // MODIFIER LETTER SMALL U
+	}; // U1D58 ᵘ MODIFIER LETTER SMALL U
 
 	key <AC07> {
 		[                   n,                   N,            NoSymbol,            NoSymbol,            NoSymbol,               U207F ],
 		[                   n,                   N,            NoSymbol,            NoSymbol,            NoSymbol,               U207F ]
-	}; // SUPERSCRIPT SMALL N
+	}; // U207F ⁿ SUPERSCRIPT SMALL N
 
 	key <AC08> {
 		[                   o,                   O,            NoSymbol,            NoSymbol,            NoSymbol,               U1D52 ],
 		[                   o,                   O,            NoSymbol,            NoSymbol,            NoSymbol,               U1D52 ]
-	}; // MODIFIER LETTER SMALL O
+	}; // U1D52 ᵒ MODIFIER LETTER SMALL O
 
 	key <AC09> {
 		[                   i,                   I,            NoSymbol,            NoSymbol,            NoSymbol,               U2071 ],
 		[                   i,                   I,            NoSymbol,            NoSymbol,            NoSymbol,               U2071 ]
-	}; // MODIFIER LETTER SMALL I
+	}; // U2071 ⁱ MODIFIER LETTER SMALL I
 
 	key <AC10> {
 		[                   p,                   P,            NoSymbol,            NoSymbol,            NoSymbol,               U1D56 ],
 		[                   p,                   P,            NoSymbol,            NoSymbol,            NoSymbol,               U1D56 ]
-	}; // MODIFIER LETTER SMALL P
+	}; // U1D56 ᵖ MODIFIER LETTER SMALL P
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
@@ -1790,7 +1797,7 @@ xkb_symbols "kbfrFRsr" {
 
 	key <BKSL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[               minus,            NoSymbol,          dead_grave ],
+		[               minus,            NoSymbol,      dead_diaeresis ],
 		[               minus,            NoSymbol,           Multi_key ]
 	};
 
