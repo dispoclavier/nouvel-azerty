@@ -2,6 +2,10 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.6.1 (projet)
+
+* Documentation : Corriger des annotations. dispocla.cpp [ff6db0d](https://github.com/dispoclavier/nouvel-azerty/commit/ff6db0d8783a360245ffb2e0d51f97ef7d28d242)
+
 ## 4.6.0 (2024-10-06)
 
 Correction des variantes redisposées pour une meilleure ergonomie.
@@ -60,7 +64,7 @@ Redisposition des trois premiers groupes du tiret bas.
 Débogage par résolution de 34 conflits suite à l’amélioration de la méthode de test.
 
 * Composition :
-	* Adapter les séquences de "🅭" U+1F16D, "©" U+00A9 pour déboguer "©" U+00A9. compose-1.yml [cf47ccf](https://github.com/dispoclavier/nouvel-azerty/commit/cf47ccf1703b54cd0c7b116363632eef6964a769)
+	* Adapter les séquences de "🅭" U+1F16D par « ¦OCC », "©" U+00A9 par « ¦oc », « ¦()c », pour déboguer "©" U+00A9. compose-1.yml [cf47ccf](https://github.com/dispoclavier/nouvel-azerty/commit/cf47ccf1703b54cd0c7b116363632eef6964a769)
 	* Déboguer "№" U+2116 par « ¦no_ », « ¦NO_ », « ¦No_ », « ¦nO_ ». ibidem
 	* Déboguer "▾" U+25BE par « ¦nbt ». ibidem
 	* Déboguer "▿" U+25BF par « ¦nbs ». ibidem
@@ -68,7 +72,6 @@ Débogage par résolution de 34 conflits suite à l’amélioration de la méth
 	* Déboguer "₱" U+20B1 par « ¦p= », « ¦P- ». ibidem
 	* Déboguer "₴" U+20B4 par « ¦S= », « ¦S- ». ibidem
 	* Déboguer "¤" U+00A4 par « ¦Xo », « ¦xO ». ibidem
-	* Déboguer "©" U+00A9 par « ¦oc », « ¦()c ». ibidem
 	* Déboguer "⇪" U+21EA par « ¦caps ». ibidem
 	* Déboguer "⇪" U+2BB8 par « ¦CAPS ». ibidem
 	* Déboguer "‬" U+202C par « ¦d< », « ¦p< », « ¦p> ». ibidem
