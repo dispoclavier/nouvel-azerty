@@ -1,4 +1,4 @@
-//                       Date: 2024-10-06T0341+0200
+//                       Date: 2024-10-10T0827+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -75,12 +75,13 @@
 //
 // ## XKB layout group 2
 //
-// Caps Lock is dedicated to uppercase. As a consequence, the digits require
-// an extra toggle, that is called "ModLock", short for Mode Lock. The second
-// graphic toggle as ModLock may be referred to, changes between default mode
-// or French mode for instance, and an ASCII mode. It affects non-alphabetic
-// keys, because alphabetic keys must not be affected by ModLock with respect
-// to cross-platform compatibility.
+// Caps Lock is dedicated to uppercase. The extra toggle required for digits,
+// as a consequence, is called "ModLock", short for "Mode Lock". This second,
+// or additional, graphic toggle, as ModLock may be referred to, switches the
+// keyboard between default mode or French mode for instance, and ASCII mode.
+// It affects non-alphabetic keys only, because alphabetic keys should not be
+// affected by ModLock, with respect to cross-platform compatibility, since a
+// similar functionality on Windows is Caps Lock insensitive.
 //
 // A second graphic toggle is required to toggle the row E keys between letters
 // and digits, independently of the CapsLock toggle, that is set to also affect
@@ -98,6 +99,11 @@
 // keypad emoji are easier accessed instead. ASCII symbols printed on these
 // keys are also accessible in default mode on level 4 as a fallback commodity,
 // but not in ASCII mode.
+//
+// The key used for this additional graphic toggle is TLDE, consistently with
+// Japanese keyboards, where E00 is the full-width/half-width toggle.
+// https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
+// https://w3c.github.io/uievents-code/#code-Backquote
 //
 // This digit toggle cannot be implemented by repurposing the NumLock toggle as
 // in types EIGHT_LEVEL_LEVEL_FIVE_LOCK, EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK
@@ -122,9 +128,10 @@
 // https://unix.stackexchange.com/a/420126
 //
 // However, so far, none of the following rules works:
-//     As solved on the forum:  *		dispocla	=	+dispocla
-//     Inferred from context:   *		dispocla	=	+dispocla%(v[2]):2
-//     As in other context:     *		kbfrFRsr	=	+dispocla(kbfrFRsr):2
+//
+//     As solved on the forum:  `*		dispocla	=	+dispocla`
+//     Inferred from context:   `*		dispocla	=	+dispocla%(v[2]):2`
+//     As in other context:     `*		kbfrFRsr	=	+dispocla(kbfrFRsr):2`
 //
 //
 // ## X Window Input Method
@@ -134,6 +141,7 @@
 // character sequences, such as spaced punctuation and the Breton trigraph, on
 // live keys too and can only work when XIM has been activated, given that iBus
 // may still be set as the default.
+// See Compose.yml ### Multicharacter strings for live keys
 //
 // The X Window Input Method may be activated by command line:
 //
@@ -142,168 +150,7 @@
 //
 // # Documentation
 //
-// ##  French-style punctuation spacing semi-automation
-//
-// These layouts support output of polygrams after single keystrokes.
-//
-//
-// ### Requirements
-//
-// The requirements about spacing out big punctuation marks in French text depend on
-// the sublocale, the typesetting school and, for some sublocales, software support.
-//
-// In France, the new-school rules require a no-break thin space before ? ! : ; » ›,
-// and after « ‹. They are followed in print editions of high-end newspapers, namely
-// Le Monde, without being well documented, so as to prevent conflicts with the old
-// school whose specification is the verbatim text of the National Printing Office’s
-// style guide “Lexique des règles en usage à l’Imprimerie nationale”, stipulating a
-// justifying no-break space before a colon, and inside the “guillemet” double angle
-// quotation marks. In its eighth edition, of March 2017, a reprint of its July 2002
-// edition, the colon is indeed spaced out as specified, whereas the angle quotation
-// marks are spaced out the new-school way, with the same thin space used before the
-// other three big punctuation marks question mark, exclamation mark, and semicolon.
-// The verbatim text was not synced with the evolving usage, supposedly with respect
-// to the strong user community tracking changes and possibly frowning upon this one
-// because equally spaced-out guillemets are an outstanding feature in old printing.
-// The new usage of the Imprimerie Nationale as of spacing out guillemets using thin
-// space may be considered as intermediate typesetting school. About new school, see
-// https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
-//
-// Belgium applies either the French Imprimerie Nationale style guide or NBN Z01-002
-// specifying that the punctuation marks ? ! : ; must not be spaced out. Guillemets
-// as angle quotes are not mentioned in https://cuy.be/orthotypo/NORMES_D.pdf#page=12
-//
-// Canada has peculiar rules applying old school typesetting but suppressing the thin
-// space if it is unavailable, in that the software does not insert it automatically.
-// https://vitrinelinguistique.oqlf.gouv.qc.ca/index.php?id=22039
-// https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles
-//
-// Francophone Switzerland changed in 2015 from not spacing out to following France,
-// but the reference is missing.
-// And Franck Pastor reported on 2009-05-19 in http://www.cuk.ch/articles/4116/ that
-// no-break thin space was already used also before colon and inside anqle quotation
-// marks. In 2020, the University of Geneva has a rule about not spacing out ?!:;«»,
-// but this rule is restricted to electronic usage, as which were considered website
-// publishing, and email text body. Thus the spacing prohibition targets plain text,
-// where NO-BREAK SPACE is unstable and may be replaced with SPACE in mail composers
-// affected by a common bug, and HTML, where NO-BREAK SPACE is justifying, unlike it
-// is in word processors other than Word 2013. As of NARROW NO-BREAK SPACE, it isn’t
-// mentioned in the rule, but print and PDF are not mentioned either in the document
-// https://www.unige.ch/communication/files/7815/9180/2109/ReglesTypographiques-UNIGE-2020.pdf#page=6
-//
-//
-// ###  Technical note about French Old School typesetting
-//
-// Spacing colon and guillemets out with NO-BREAK SPACE does not work well because:
-//
-// 1  NO-BREAK SPACE (NBSP) is defined as justifying in Unicode, followed by HTML,
-//    while in word processors (except MS Word 2013) it is tailored as fixed-width.
-//    As a result, the colon is not spaced out the Old School way in word processors,
-//    while on the web, question and exclamation mark and semicolon are neither.
-// 2  MS Word replaces NBSP with SPACE when copy-pasting to plain text, resulting
-//    in typesetting destruction. Web browsers like Chrome and Firefox do the same.
-// 3  NBSP behaves like (or is replaced with) normal space in e-mail composers and
-//    in web forms in many browsers.
-//
-//
-// ###  French New School typesetting
-//
-// French new-school typesetting spaces out all big punctuation characters using the
-// same non-breaking thin space both for ASCII ?!; and even colon, and for double angle
-// quotation marks. The moderate old-school typesetting exemplified in the style guide
-// of the French National Printing Office makes a special case for the colon, preceded
-// by the justifying NO-BREAK SPACE, while the hard-core old school, described therein,
-// sets apart the angle quotation marks too.
-//
-// The International System of Measures and Units (SI) from the BIPM recommends using
-// a non-breaking thin space as a group separator in numbers, and it is followed by
-// many locales including fr_FR. Also TeX supports it by the means of the '\,' command.
-// Known for its consistency with legacy typographic craftmanship, Donald Knuth’s TeX
-// maintained the thin space’s non-breaking behavior, and as a pre-Unicode environment
-// it presumably informed the seminal Unicode Standard known for carefully maintaining
-// full backwards compatibility.
-//
-// All layouts in this configuration file support mainstream practice used
-// in the French graphic industry, also referred to as French New School.
-// https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
-//
-// The interoperable representation of French New School typesetting uses
-// NARROW NO-BREAK SPACE with all punctuation characters that use to be spaced out,
-// i.e. not only semicolon, exclamation mark and question mark as explicitly stated
-// in the verbatim text of the Imprimerie nationale style guide, 2002 edition:
-// _Lexique des règles typographiques en usage à l’Imprimerie nationale_
-// but also the guillemets the way they are actually typeset in the 2002 edition,
-// March 2017 reprint, ISBN 9782743304829, plus the colon.
-//
-// Single angle quotation marks are spaced out like double angle quotation marks.
-// https://vitrinelinguistique.oqlf.gouv.qc.ca/index.php?id=22039
-//
-//
-// ###  Unicode support for interoperable French
-//
-// In Unicode, a non-breaking thin space is encoded only since version 3.0, released in
-// 1999, when U+202F NARROW NO-BREAK SPACE was encoded for Mongol script, but with the
-// Script property Common and in the General Punctuation block. It was not so earlier,
-// because U+2009 THIN SPACE was not assigned line breaking class GL. Another suitable
-// space character, U+2008 PUNCTUATION SPACE, was not either, unlike U+2007 FIGURE SPACE.
-// That flaw was introduced in the Unicode Standard on purpose, and in this case it is
-// relatively easy to assess intentionality thanks to the typographic space range keeping
-// original code points. Originally the typographic space range U+2000..U+200A was set up
-// to include the two widest spaces both in a breaking variant (U+2000, U+2001) and in
-// a non-breaking variant (U+2002, U+2003), making a clever use of aliases provided in
-// Unicode’s template, the Xerox Character Code Standard, whereas all narrower spaces
-// (U+2004..U+200A) would be non-breaking throughout. The initial design is lacking its
-// official documentation because it was altered in an early stage, so the widest spaces
-// ended up as two pairs of duplicates, defeating the point in encoding them in both a
-// breaking and a non-breaking variant as supported by Donald Knuth’s TeX consistently
-// with TeX’s design goal of supporting the full range of features used in traditional
-// typesetting. Despite Unicode shared this goal, only the digit-wide FIGURE SPACE was
-// given the non-breaking property. However, this space is designed for use as a leading
-// space before numbers, for indentation, not as a group separator space, unlike claimed
-// in the Core Specification 1.0. Likewise, U+2008 PUNCTUATION SPACE was intended to be
-// used for decimal or group separator wide indentation before numbers. Regardless, since
-// the XCCS is lacking the thin space in Character set 0xEE as documented on Wikipedia
-// https://en.wikipedia.org/wiki/Xerox_Character_Code_Standard#Character_set_0xEE
-// — indeed the Unicode Standard outperforms the XCCS by disambiguating SIX-PER-EM SPACE,
-// THIN SPACE and PUNCTUATION SPACE, all of which the XCCS only includes the very last —
-// the PUNCTUATION SPACE would as well be used as a group separator. For that purpose,
-// PUNCTUATION SPACE should be non-breaking. Another reason why it should be so, is
-// consistency with FIGURE SPACE. So there is multiple evidence that the originally
-// intended line breaking class was GL, and only an intentionally destructive move
-// away from the original design prevented PUNCTUATION SPACE and THIN SPACE from being
-// non-breaking right away. That is how French and 57 other locales using space as a 
-// group separator were unsupported by the Unicode Standard for almost a decade, and
-// if Mongol script had been encoded back then, it would have been equally unsupported
-// since it spaces punctuation marks out, much like French does, except that fonts use
-// to be designed for Mongol script with built-in spacing next to punctuation characters.
-//
-// But even after encoding NARROW NO-BREAK SPACE, the need of non-breaking thin space in
-// representing French remained unaddressed until UAX #14 Unicode Line Breaking Algorithm
-// started mentioning it in 2007, and the Core Specification in 2014. Both do now declare
-// U+202F NARROW NO-BREAK SPACE as representing “the space next to certain punctuation
-// characters in French text.” That delay was useful to account for lagging font support.
-// A competing workaround used THIN SPACE followed by then-standard line break preventer
-// U+FEFF ZERO WIDTH NO-BREAK SPACE, or since 2002, U+2060 WORD JOINER. Still in practice,
-// NARROW NO-BREAK SPACE was quickly adopted by the French typesetting industry because it
-// caters for a longstanding demand.
-//
-// The Common Locale Data Repository (CLDR) has started migrating the group separator space
-// from U+00A0 NO-BREAK SPACE to U+202F NARROW NO-BREAK SPACE in version 34 released in 2018.
-// This migration first benefitted the French main locale fr-FR and its heirs, but not fr-CA.
-// It is likely to be extended soon as per comment on 2021-03-12:
-// https://unicode-org.atlassian.net/browse/CLDR-11423?focusedCommentId=160553
-// https://unicode-org.atlassian.net/browse/CLDR-11217
-//
-// In 2019, Unicode had assigned NNBSP the Script_Extensions property value {Latn Mong}
-// tending to discourage other scripts from using the correct group separator space.
-//
-// More information may be found in the following proposals:
-// https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
-// https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
-// https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
-//
-//
-// ## Name and mapping of the level 5 modifier key
+// ## Level 5 modifier
 //
 // The ISO/IEC 9995 standard does not support the level 5 modifier, because it
 // is limited to low-performance Western keyboard layouts and excludes all the
@@ -346,6 +193,211 @@
 // keyboards without support for Japanese modifiers and toggles. A limitation
 // that subsequently backfired by impairing keyboard layout design efforts in
 // Canada, France and other countries.
+//
+//
+// ## French-style punctuation spacing
+//
+// These layouts support output of polygrams after single keystrokes, as needed
+// when spacing out punctuation marks in one go, rather than typing the space
+// separately, while supporting the same punctuation marks unspaced too, and
+// facilitating spacing inhibition as required in runs of exclamation marks and
+// question marks. The user is always in control, as opposed to full automation
+// where runs of question/exclamation marks are unspaced, but turning spacing
+// off entirely requires switching keyboard layouts. Semi-automation makes for
+// all-in-one keyboard layouts, ideally with a level-5 modifier like AltFr.
+//
+//
+// ### Requirements
+//
+// The requirements about spacing out big punctuation marks in French text
+// depend on the sublocale, the typesetting school and, for some sublocales,
+// software support.
+//
+// French new-school rules require a no-break thin space before ? ! : ; » ›,
+// and after « ‹. These rules are followed in print editions of newspapers,
+// namely Le Monde, without being well documented, so as to prevent conflicts
+// with the old school whose specification is the verbatim text of the National
+// Printing Office’s style guide “Lexique des règles typographiques en usage à
+// l’Imprimerie nationale”, stipulating a justifying no-break space before the
+// colon and inside the “guillemet” double angle quotation marks. In its eighth
+// edition published in March 2017, that is a reprint of its July 2002 edition,
+// the colon is indeed spaced out as specified, while the angle quotation marks
+// are spaced out the new-school way, with the same thin space used before the
+// other three big punctuation marks question mark, exclamation mark, and semi-
+// colon. The verbatim text was not synced with the evolving usage, supposedly
+// with respect to the user community, tracking changes, and possibly frowning
+// upon this one, because guillemets spaced-out equally on both sides are often
+// seen in old prints. The new usage of the Imprimerie Nationale as of spacing
+// out guillemets using thin space may be considered as pertaining to a yet to
+// be defined intermediate typesetting school. French new school typesetting is
+// documented on the Mac Generation forum.
+// https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
+//
+// Belgium applies the French Imprimerie Nationale style guide, or NBN Z01-002,
+// specifying that the punctuation marks ? ! : ; must not be spaced out, while
+// not mentioning guillemets or angle quotation marks.
+// https://cuy.be/orthotypo/NORMES_D.pdf#page=12
+//
+// Francophone Canada applies French old school typesetting, but suppresses the
+// thin space if it is unavailable, in that the software does not support it by
+// inserting the no-break thin space automatically, since the Canadian keyboard
+// layout standard was designed and released in 1992, before the required space
+// character U202F NBTSP was encoded.
+// https://vitrinelinguistique.oqlf.gouv.qc.ca/index.php?id=22039
+// https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles
+// https://web.archive.org/web/20230326022601/https://www.tresor.gouv.qc.ca/ressources-informationnelles/architecture-dentreprise-gouvernementale/standards-et-normes/standard-sur-le-clavier-quebecois-sgqri-001/standard-sur-le-clavier-quebecois-sgqri-001-foire-aux-questions/
+// https://web.archive.org/web/20230325043926/http://www.tresor.gouv.qc.ca:80/ressources-informationnelles/architecture-dentreprise-gouvernementale/standards-et-normes/standard-sur-le-clavier-quebecois-sgqri-001/standard-sur-le-clavier-quebecois-sgqri-001-le-clavier-quebecois/
+// https://web.archive.org/web/20230326022601/https://www.tresor.gouv.qc.ca/ressources-informationnelles/architecture-dentreprise-gouvernementale/standards-et-normes/standard-sur-le-clavier-quebecois-sgqri-001/standard-sur-le-clavier-quebecois-sgqri-001-foire-aux-questions/
+// https://web.archive.org/web/20230220160241/https://www.tresor.gouv.qc.ca/fileadmin/PDF/ressources_informationnelles/standard_clavier_quebecois/sgqri001.pdf
+// https://web.archive.org/web/20230903200943/https://www.tresor.gouv.qc.ca/ressources-informationnelles/architecture-dentreprise-gouvernementale/standards-et-normes/standard-sur-le-clavier-quebecois-sgqri-001/standard-sur-le-clavier-quebecois-sgqri-001-caracteres/
+// https://web.archive.org/web/20220520225412/https://www.tresor.gouv.qc.ca/fileadmin/PDF/ressources_informationnelles/illustrations_claviers/clavier_labonte_1.jpg
+// https://web.archive.org/web/20190403184009/https://www.tresor.gouv.qc.ca/fileadmin/PDF/ressources_informationnelles/illustrations_claviers/clavier_labonte_2_noir_blanc.jpg
+// https://web.archive.org/web/20190404014311/https://www.tresor.gouv.qc.ca/fileadmin/PDF/ressources_informationnelles/illustrations_claviers/clavier_labonte_3_Macintosh.jpg
+// https://web.archive.org/web/20190403184112/https://www.tresor.gouv.qc.ca/fileadmin/PDF/ressources_informationnelles/illustrations_claviers/module_alphanumerique_4.jpg
+// https://kbdlayout.info/KBDCAN/
+// https://kbdlayout.info/KBDCAN/download/klc
+//
+// Francophone Switzerland changed in 2015 from not spacing punctuation out to
+// following France (reference missing). Franck Pastor reported on 2009-05-19
+// that no-break thin space was already used also before colon and inside anqle
+// quotation marks.
+// http://www.cuk.ch/articles/4116/
+//
+// In 2020, the University of Geneva has a rule about not spacing out ?!:;«»,
+// but this rule is restricted to electronic usage, as which were considered
+// website publishing and email text body. Thus the spacing prohibition targets
+// plain text, where NO-BREAK SPACE is unstable and may be replaced with SPACE
+// in mail composers affected by a common bug, and HTML, where NO-BREAK SPACE
+// is justifying, unlike it is in word processors other than Word 2013. As of
+// NARROW NO-BREAK SPACE, it is not mentioned in this rule, but print and PDF
+// are not mentioned either.
+// https://www.unige.ch/communication/files/7815/9180/2109/ReglesTypographiques-UNIGE-2020.pdf#page=6
+//
+//
+// ###  Issues affecting French Old School typesetting
+//
+// Spacing out colon and guillemets with NO-BREAK SPACE does not work well
+// because:
+//
+// 1  NO-BREAK SPACE (NBSP) is defined as justifying in Unicode, followed by
+//    HTML, while in word processors (except MS Word 2013) it is tailored as
+//    fixed-width. As a result, the colon is not spaced out the Old School way
+//    in word processors, while on the web, question and exclamation mark and
+//    semicolon are neither.
+// 2  MS Word replaces NBSP with SPACE when copy-pasting to plain text. Web
+//    browsers like Chrome and Firefox do the same.
+// 3  NBSP behaves like (or is replaced with) normal space in e-mail composers
+//    and in web forms in many browsers.
+//
+//
+// ###  French New School typesetting
+//
+// French new-school typesetting spaces out all big punctuation characters with
+// the same no-break thin space both for ASCII ?!; and even for colon, and for
+// double angle quotation marks, as well as for single angle quotation marks.
+// Spacing out colon the same way is particular to new-school, while making an
+// exception for colon and spacing out guillemets the new-school way makes for
+// a moderate old-school as exemplified in the French National Printing Office
+// style guide, where colon is preceded by a justifying NO-BREAK SPACE. This is
+// about the practice, while the rules set apart the angle quotation marks too.
+//
+// The International System of Measures and Units (SI) from the BIPM recommends
+// using a no-break thin space as a group separator in numbers. It is followed
+// by many locales including fr_FR. Also, TeX supports it by the means of the
+// `\,` command. Consistently with legacy typographic craftmanship, TeX is well
+// aware that the thin space is no-break, and as a pre-Unicode environment, TeX
+// presumably informed the seminal Unicode Standard, designed to maintain full
+// backwards compatibility.
+//
+// All layouts in this configuration file support mainstream practice, as used
+// in the French graphic industry, also referred to as French New School.
+// https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
+//
+// The interoperable representation of French New School typesetting uses
+// NARROW NO-BREAK SPACE with all punctuation characters that use to be spaced
+// out, not only semicolon, exclamation mark and question mark as explicitly
+// stated in the verbatim text of the 2002 edition, March 2017 reprint, of the
+// Imprimerie nationale style guide _Lexique des règles typographiques en usage
+// à l’Imprimerie nationale_, ISBN 9782743304829, but also the guillemets the
+// way they are actually typeset, plus the colon.
+//
+// Single angle quotation marks are spaced out like double angle quotation
+// marks.
+// https://vitrinelinguistique.oqlf.gouv.qc.ca/index.php?id=22039
+//
+//
+// ###  Unicode support for interoperable French
+//
+// In Unicode, a no-break thin space is encoded only since version 3.0 released
+// in 1999, when U+202F NARROW NO-BREAK SPACE was encoded for Mongol script but
+// with the Script property Common and in the General Punctuation block. It was
+// not so earlier, because U+2009 THIN SPACE was not assigned the line breaking
+// class GL. Another halfways suitable space character, that could have been an
+// acceptable workaround to be repurposed for spacing out the eight punctuation
+// marks, U+2008 PUNCTUATION SPACE, was not declared GL either, despite it is a
+// counterpart of U+2007 FIGURE SPACE for comma and period, and as such, should
+// have been assigned the same line breaking class, if any, although it did not
+// matter, since both are meant to be used in leading position, before numbers,
+// for indentation when typesetting old-style tables, not at line end where the
+// FIGURE SPACE’s line breaking class GL would make sense. Instead, the Unicode
+// Core Specification (1.0 and) 2.0 claims: “U+2007 FIGURE SPACE is intended to
+// be used as a thousands separator in cases where countries use space to
+// separate groups of digits. Typically it has a fixed width the same size as a
+// digit in a particular font.”
+// https://www.unicode.org/L2/L2020/20008-core-text.pdf#page=7
+//
+// This flaw was introduced in the Unicode Standard on purpose. Intentionality
+// is easy to assess in this case thanks to the typographic space range keeping
+// original code points as designed. The typographic space range U+2000..U+200A
+// was set up to include the two widest spaces both in breaking and in no-break
+// variants: U+2000, U+2001 versus U+2002, U+2003, making a clever use of a set
+// of aliases provided in Unicode’s template, the Xerox Character Code Standard
+// XCCS, while narrower spaces (U+2004..U+200A) were to be no-break throughout,
+// consistently with Donald Knuth’s TeX, designed to support most features used
+// in traditional typesetting. Instead only FIGURE SPACE was given the no-break
+// property, and the widest spaces ended up as two pairs of duplicates, finally
+// declared to be canonically equivalent.
+//
+// The initial design lacks official documentation because it was altered in an
+// early stage.
+//
+// That is how French and 50+ other locales using space to separate groups were
+// unsupported by the Unicode Standard for almost one decade.
+//
+// Ultimately, a no-break thin space has been encoded for Mongol script in 1999
+// for Unicode version 3.0. In Mongol script, punctuation marks are spaced out,
+// much like in French, except that fonts for Mongol have built-in spacing next
+// to punctuation characters.
+//
+// Even after encoding NARROW NO-BREAK SPACE, the need of no-break thin space
+// in representing French remained unaddressed until UAX #14 Unicode Line
+// Breaking Algorithm started mentioning it in 2007, and the Core Specification
+// in 2014 declaring U+202F NARROW NO-BREAK SPACE as representing “the space
+// next to certain punctuation characters in French text.” The delay was useful
+// to account for lagging font support.
+// https://www.unicode.org/L2/L2007/07209-whistler-uax14.txt
+//
+// A competing workaround used THIN SPACE followed by then-standard line break
+// preventer U+FEFF ZERO WIDTH NO-BREAK SPACE; since 2002, U+2060 WORD JOINER.
+// Still in practice, NARROW NO-BREAK SPACE was quickly adopted by the French
+// typesetting industry because it caters for a longstanding demand.
+//
+// The Common Locale Data Repository (CLDR) migrated the group separator space
+// from U+00A0 NO-BREAK SPACE to U+202F NARROW NO-BREAK SPACE in version 34,
+// released in 2018. This migration first benefitted the French main locale and
+// its heirs, but not fr-CA. It is likely to be extended soon, as suggested on
+// 2019-01-11 and on 2021-03-12.
+// https://unicode-org.atlassian.net/browse/CLDR-11217
+// https://unicode-org.atlassian.net/browse/CLDR-11423?focusedCommentId=160553
+//
+// In 2019, Unicode had assigned NNBSP the Script_Extensions property value
+// {Latn Mong} tending to discourage other scripts from using the correct group
+// separator space.
+//
+// Further reading:
+// https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf
+// https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
+// https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 //
 //
 // ###  Punctuation spacing input methods
@@ -510,7 +562,7 @@
 // ampersand, less and greater, the latter two on level 7 (AltGr + AltFr).
 //
 //
-// ### Keyboard levels and groups
+// ## Keyboard levels and groups
 //
 // While “keyboard level” refers to user-perceived modifier key combinations,
 // the 1-based array indices used in the allocation tables are named "Level1"
@@ -563,11 +615,12 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ## New 'AltFr' modifier key
 	//
+	// See ## Level 5 modifier
+	//
 	// The level 5 modifier defaults to the LSGT key but may need to be placed on
 	// CapsLock depending on the hardware. Keyboards for the European market with
 	// key LSGT on right Control need to have LSGT and CAPS swapped, so as to get
 	// CapsLock on right Control, and the level 5 modifier on the CapsLock key.
-	// See ## Name and mapping of the level 5 modifier key
 	//
 	// Correct LSGT key behavior after inclusion of symbols/pc(105):
 
@@ -605,8 +658,6 @@ xkb_symbols "kbfrFRs" {
 	//
 	// See ## XKB layout group 2
 	//
-	// The key used for this additional graphic toggle is TLDE.
-	//
 	// ISO_First_Group is interpreted as: action= LockGroup(group=1)
 	// ISO_Last_Group  is interpreted as: action= LockGroup(group=2)
 	//
@@ -619,37 +670,6 @@ xkb_symbols "kbfrFRs" {
 		[     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,               UEFA1,               UEFA0 ]
 	}; // Level5 yields <variant>; Level6 yields <version>
 
-	//
-	// ## Level inconsistency
-	//
-	// CAUTION: Index 4 is mostly level 5, and conversely.
-	//
-	// On indices 1 through 4, the keysyms are ordered only with respect to the
-	// keyboard view, where the traditional four levels are filled in by parsing
-	// indices 1 through 4 regardless of key types.
-	//
-	// Since dead key syms may be rendered as an ellipsis, because dead_greek (on
-	// older systems also Multi_key) do not have representation tweaks applied so
-	// far as spacing clones of diacritics are available, and 9 of the dead keys
-	// use PUA characters by lack of appropriate keysyms in keysymdef.h, the dead
-	// keys should not show up in the level 4 slot, the less as the dead keys on
-	// level 4 are consistent with the level 3 ASCII symbol map by the means of a
-	// Multi_key equivalent (or two) associated with each dead key.
-	//
-	// Instead, the level 4 position of the layout views is used for level 5,
-	// except on key D01, where the level 3 - level 5 redundancy when both have
-	// the same symbol is not possible, to cater for the Breton trigram because
-	// this is written with a letter apostrophe U02BC and so makes a good point
-	// for being mapped on keyboard layouts beyond the Breton CʼHWERTY, as an
-	// all-in-one sequence with uppercase and titlecase.
-	//
-	// Level: 1        2        3        5        4        6        7        8
-	// Index: 1        2        3        4        5        6        7        8
-	//
-	//                                   Graphic numpad
-	//                          ASCII symbol .... Dead key
-	//        Latin letter ............................... Abbreviation indicator
-	//
 	//
 	// ## Superscript letters
 	//
@@ -752,6 +772,37 @@ xkb_symbols "kbfrFRs" {
 	// Emoji frequency figures are based on:
 	// https://home.unicode.org/emoji/emoji-frequency/
 	// https://www.futurity.org/emoji-countries-1328712-2-2/
+	//
+	//
+	// ## Level inconsistency
+	//
+	// CAUTION: Index 4 is mostly level 5, and conversely.
+	//
+	// On indices 1 through 4, the keysyms are ordered only with respect to the
+	// keyboard view, where the traditional four levels are filled in by parsing
+	// indices 1 through 4 regardless of key types.
+	//
+	// Since dead key syms may be rendered as an ellipsis, because dead_greek (on
+	// older systems also Multi_key) do not have representation tweaks applied so
+	// far as spacing clones of diacritics are available, and 9 of the dead keys
+	// use PUA characters by lack of appropriate keysyms in keysymdef.h, the dead
+	// keys should not show up in the level 4 slot, the less as the dead keys on
+	// level 4 are consistent with the level 3 ASCII symbol map by the means of a
+	// Multi_key equivalent (or two) associated with each dead key.
+	//
+	// Instead, the level 4 position of the layout views is used for level 5,
+	// except on key D01, where the level 3 - level 5 redundancy when both have
+	// the same symbol is not possible, to cater for the Breton trigram because
+	// this is written with a letter apostrophe U02BC and so makes a good point
+	// for being mapped on keyboard layouts beyond the Breton CʼHWERTY, as an
+	// all-in-one sequence with uppercase and titlecase.
+	//
+	// Level: 1        2        3        5        4        6        7        8
+	// Index: 1        2        3        4        5        6        7        8
+	//
+	//                                   Graphic numpad
+	//                          ASCII symbol .... Dead key
+	//        Latin letter ............................... Abbreviation indicator
 	//
 	//
 	// ## Column width
