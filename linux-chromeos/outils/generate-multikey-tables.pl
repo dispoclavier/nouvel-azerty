@@ -3,10 +3,10 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-09-16T2041+0200
+# 2024-10-10T0335+0200
 # = last modified.
 #
-# Generates HTML tables of multi-key sequences from `Compose.yml`.
+# Generates HTML tables of multi-key sequences from Compose.yml.
 #
 # In the input file, parsing starts at `START_MULTI_KEY`, and parsing stops at
 # `START_MATH`.
@@ -18,10 +18,10 @@
 # clarifying advance width and vertical alignment.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
-# target locale as configured under `## Character names localization`.
-# `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
+# target locale as configured under ## Character names localization.
+# ListeNoms.txt is used for characters missing from Udescripteurs.txt.
 # Characters missing from both are counted and listed with their line number
-# in `Compose.yml`.
+# in Compose.yml.
 #
 # The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
 # be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
@@ -54,9 +54,9 @@ my $descriptors_count     = 0;
 my $missing_count         = 0;
 my $missing_cp            = '';
 
-my $file_path = 'Compose.yml';
-open( INPUT, '<', $file_path ) or die $!;
-print( "Opened file $file_path for reading.\n" );
+my $input_path = 'Compose.yml';
+open( INPUT, '<', $input_path ) or die $!;
+print( "Opened file $input_path for reading.\n" );
 
 my $output_directory = 'multikey-tables';
 unless ( -d $output_directory ) {
@@ -119,7 +119,7 @@ while ( my $line = <INPUT> ) {
 	    open( OUTPUT, '>', $output_path ) or die $!;
 			$section_partial_open = !0;
 	    print( "Opened file $output_path for writing.\n" );
-			print( "Processing multi-key sequences from $file_path to $output_path.\n" );
+			print( "Processing multi-key sequences from $input_path to $output_path.\n" );
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $comment -->\n";
 		}
@@ -360,6 +360,7 @@ print OUTPUT $end_tags;
 print WHOLEOUTPUT $end_tags;
 
 close( INPUT );
+print( "Closed file $input_path.\n" );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
