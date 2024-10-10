@@ -2,11 +2,11 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-09-16T2040+0200
+# 2024-10-10T0335+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multi-key sequences in
-# `Compose.yml`.
+# Compose.yml.
 #
 # The input requires the `START_MATH` start tag, and the `END_MATH` end tag.
 #
@@ -17,10 +17,10 @@
 # clarifying advance width and vertical alignment.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
-# target locale as configured under `## Character names localization`.
-# `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
+# target locale as configured under ## Character names localization.
+# ListeNoms.txt is used for characters missing from Udescripteurs.txt.
 # Characters missing from both are counted and listed with their line number
-# in `Compose.yml`.
+# in Compose.yml.
 #
 # In print, Unicode character names may be replaced with descriptors in the
 # last column.
@@ -54,9 +54,9 @@ my $descriptors_count     = 0;
 my $missing_count         = 0;
 my $missing_cp            = '';
 
-my $file_path = 'Compose.yml';
-open( INPUT, '<', $file_path ) or die $!;
-print( "Opened file $file_path.\n" );
+my $input_path = 'Compose.yml';
+open( INPUT, '<', $input_path ) or die $!;
+print( "Opened file $input_path.\n" );
 
 my $output_directory = 'multikey-tables';
 unless ( -d $output_directory ) {
@@ -68,7 +68,7 @@ my $output_path      = "$output_directory/$output_file_name";
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
-print( "Processing math symbols from $file_path to $output_path.\n" );
+print( "Processing math symbols from $input_path to $output_path.\n" );
 my $parse_on              = !1;
 my $date_legend           = 'Tableau mis à jour le ';
 # Courtesy https://stackoverflow.com/a/43881027
@@ -222,7 +222,7 @@ while ( my $line = <INPUT> ) {
 }
 print OUTPUT "</tbody></table></figure>\n";
 close( INPUT );
-print( "Closed file $file_path.\n" );
+print( "Closed file $input_path.\n" );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 print( "Math table generated in $output_directory/.\n" );
