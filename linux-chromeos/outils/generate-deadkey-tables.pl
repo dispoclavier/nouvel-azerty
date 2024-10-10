@@ -3,10 +3,10 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-09-16T2040+0200
+# 2024-10-10T0335+0200
 # = last modified.
 #
-# Generates HTML tables of dead keys from dead key sequences in `Compose.yml`.
+# Generates HTML tables of dead keys from dead key sequences in Compose.yml.
 # Multi_key equivalents are skipped.
 #
 # The input requires `END_MATH` as a start tag. Section headings switch files.
@@ -25,13 +25,13 @@
 #
 # Math symbols get an appended link to their first instance on the math symbols
 # page https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/
-# on the condition that the `math` string is appended as the very last element.
+# on the condition that the "math" string occurs right before the EOL.
 #
 # Localized tooltips require the Unicode NamesList.txt or equivalents in the
-# target locale as configured under `## Character names localization`.
-# `ListeNoms.txt` is used for characters missing from `Udescripteurs.txt`.
+# target locale as configured under ## Character names localization.
+# ListeNoms.txt is used for characters missing from Udescripteurs.txt.
 # Characters missing from both are counted and listed with their line number
-# in `Compose.yml`.
+# in Compose.yml.
 #
 # The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
 # be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
@@ -66,9 +66,9 @@ my $descriptors_count     = 0;
 my $missing_count         = 0;
 my $missing_cp            = '';
 
-my $file_path = 'Compose.yml';
-open( INPUT, '<', $file_path ) or die $!;
-print( "Opened file $file_path.\n" );
+my $input_path = 'Compose.yml';
+open( INPUT, '<', $input_path ) or die $!;
+print( "Opened file $input_path.\n" );
 
 my $output_directory = 'deadkey-tables';
 unless ( -d $output_directory ) {
@@ -86,7 +86,7 @@ my $wholeoutput_path = $output_path;
 $output_path         = $output_path_trunk . $output_file_extension;
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
-print( "Processing dead keys from $file_path to $output_path.\n" );
+print( "Processing dead keys from $input_path to $output_path.\n" );
 
 my $parse_on       = !1;
 my $comprehensive  = !0;
@@ -144,7 +144,7 @@ while ( my $line = <INPUT> ) {
 			++$output_file_index;
 			open( OUTPUT, '>', $output_path ) or die $!;
 			print( "Opened file $output_path.\n" );
-			print( "Processing dead keys from $file_path to $output_path.\n" );
+			print( "Processing dead keys from $input_path to $output_path.\n" );
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
@@ -498,7 +498,7 @@ while ( my $line = <INPUT> ) {
 				}
 
 				# Link to first instance in math list if applicable.
-				if ( $line =~ m/ math/u ) {
+				if ( $line =~ m/ math$/u ) {
 					$line    =~ s/ math//u;
 					$math = " <a href=\"https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/#U+$cp\">math</a>";
 				} else {
@@ -530,6 +530,7 @@ print OUTPUT $end_tags;
 print WHOLEOUTPUT $end_tags;
 
 close( INPUT );
+print( "Closed file $input_path.\n" );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( WHOLEOUTPUT );
