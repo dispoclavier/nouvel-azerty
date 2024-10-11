@@ -1,4 +1,4 @@
-//                       Date: 2024-08-11T0444+0200
+//                       Date: 2024-10-11T1955+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -36,12 +36,12 @@
 //
 // ##   Mapping application shortcuts in keyboard layouts
 //
-// If key types contain mappings for Control, the default behavior based on
+// If key types contain mappings for `Control`, the default behavior based on
 // graphics mapped on Base level and Shift level can be overridden.
 //
-// Mappings including Control are added for completeness on some keys,
-// while technically not mandatory for unremapped alphabetic types in
-// the Latin base alphabet.
+// Mappings including Control are added for completeness on some keys, while
+// technically not mandatory for unremapped alphabetic types in the Latin
+// base alphabet.
 //
 // Shortcuts should be defined by the index of Base level only.
 // But on alphabetic keys they do also work with uppercase, that
@@ -53,10 +53,6 @@
 // Control mappings need to be preserved because else, shortcuts
 // would be output as graphics.
 // Shift needs to be preserved for further processing shortcuts.
-//
-// For Nautilus, shortcut problems can be fixed by editing a
-// configuration file located at `~/.config/nautilus/accels`.
-// Video tutorial: https://www.youtube.com/watch?v=2Birudyo3fs
 //
 //
 // ## Shift cancels Lock
@@ -75,13 +71,23 @@
 //  preserve[             Lock           + LevelFive + LevelThree         ] = Lock;
 //  preserve[             Lock           + LevelFive + LevelThree + Shift ] = Lock;
 //
+//
+// ## Examples
+//
+// <NBTSP> is the no-break thin space U202F NARROW NO-BREAK SPACE.
+// See dispocla.cpp ## French-style punctuation spacing
+// See Compose.yml ### Multicharacter strings for live keys
+//
+// Dead keys are noted with a dead character in pointy brackets.
+//
 
 default partial xkb_types "dispocla" {
 
 	virtual_modifiers LevelThree, LevelFive;
 
 	type "EIGHT_LEVELS_BASIC" {
-		// Based on "EIGHT_LEVEL" in xkb/types/level5(8).
+		// Used on the numpad, TLDE (ModLock), RALT.
+		// Based on "EIGHT_LEVEL" in xkb/types/level5:8.
 		// This type is required for the sake of level names, where "X" is "AltFr".
 
 		modifiers =                            LevelFive + LevelThree + Shift ;
@@ -117,7 +123,7 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1; // ,
-		map[                                                            Shift ] = Level2; // < ?>
+		map[                                                            Shift ] = Level2; // <NBTSP>?
 		map[                                               LevelThree         ] = Level3; // ?
 		map[                                               LevelThree + Shift ] = Level5; // <ç>
 		map[                                   LevelFive                      ] = Level4; // ?
@@ -155,7 +161,7 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;           // group1
 		map[ None                                                             ] = Level1; // <①>
-		map[                                                            Shift ] = Level2; // < »>
+		map[                                                            Shift ] = Level2; // <NBTSP>»
 		map[                                               LevelThree         ] = Level3; // <①>
 		map[                                               LevelThree + Shift ] = Level5; // *
 		map[                                   LevelFive                      ] = Level4; // »
@@ -479,7 +485,7 @@ default partial xkb_types "dispocla" {
 		map[                  Lock                       + LevelThree + Shift ] = Level4; // <~> // ²
 		map[                  Lock           + LevelFive                      ] = Level5; // 2   // 2
 		map[                  Lock           + LevelFive              + Shift ] = Level6; // ²   // ²
-		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 2️⃣  // ₂
+		map[                  Lock           + LevelFive + LevelThree         ] = Level7; // 2️⃣   // ₂
 		map[                  Lock           + LevelFive + LevelThree + Shift ] = Level8; // 2️⃣   // 2️⃣
 		map[                         Control                                  ] = Level3; // 2   // 2
 		map[                         Control                          + Shift ] = Level3; // 2   // 2
@@ -969,7 +975,7 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;
 		map[ None                                                             ] = Level1; // /
-		map[                                                            Shift ] = Level2; // < :>
+		map[                                                            Shift ] = Level2; // <NBTSP>:
 		map[                                               LevelThree         ] = Level3; // :
 		map[                                               LevelThree + Shift ] = Level5; // <ë>
 		map[                                   LevelFive                      ] = Level4; // :
