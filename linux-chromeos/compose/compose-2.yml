@@ -7,6 +7,7 @@
 #        Syntax highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file `Compose.yml`.
 #
+#   START_LATIN_BY_DEAD_KEYS
 #
 #
 ### Dead keys
@@ -311,13 +312,11 @@
 #   names are challenging due to language and conventions. By lack of anything
 #   better, dead keys are ordered following the keyboard layout as in the list
 #   below.
+#   See # # Dead key layout overview
 #
 #   That order is based on the assumption that those ASCII symbols are mapped
-#   in a stable manner.
-#
-#   However, prior to v2, this ASCII map was unstable, due to a combination of
-#   underengineering and lack of consultancy, which is a euphemism for impiety.
-#   https://github.com/dispoclavier/nouvel-azerty/blob/80fb0969cc0c0b465357b8e6ee9552eca3b21074/linux-chromeos/dispocla.cpp#L396
+#   in a stable manner. However, prior to v2, this ASCII map was unstable.
+#   See Compose.yml  Acknowledgements
 #
 #
 # # Proposed dead key layout for AZERTY keyboards
@@ -354,13 +353,14 @@
 #   Each dead key has a stable mapping on level 4 according to the table below.
 #
 #
-#   Overview            Based on AZERTY fr_FR.
-#                       Virtual dead keys on multiple press are listed.
-#                       All non-existing keysyms, flagged *, are new-school.
+# # Dead key layout overview
 #
-#                       IDENTIFIER keysym [codepoint]
+#   Based on AZERTY fr_FR. Virtual dead keys on multiple press are enumerated.
+#   Non-existing keysyms are flagged with a prepended asterisk; all dead key
+#   equivalents of these are picked according to new-school input composition.
 #
 #   Level 2          3  4
+#                       IDENTIFIER keysym [codepoint]
 #
 #   A (Q on QWERTY)  ^  SUPERSCRIPT *dead_superscript UEFD1
 #   Z (W on QWERTY)  %  TURNED *dead_turned UEFD5
@@ -3977,8 +3977,8 @@
 #   SMALL LETTER TURNED E. As such it is in the TURNED dead key, as well as in
 #   group 1 of R for ease of input, and in group 2 of E for ease of retrieval.
 #   See #*# TURNED
-#   See # # GROUP_1
-#   See # # GROUP_2
+#   See #+# GROUP_1
+#   See #+# GROUP_2
 #
 #   Digits yield mathematical backslashes without space termination.
 #   See # # Design of math sequences
@@ -4937,54 +4937,64 @@
 #
 #
 #*# GREEK
-#   greek, circled
+#   Greek letter, circled
 #   dead_greek
 #   Multi_key: ¦@
 #   Dchar: "α" U03B1
 #
+#   The Greek letter dead key is present on several layouts and supported by
+#   XKB thanks to the French ergonomic BÉPO keyboard layout.
+#   https://bepo.fr/wiki/Lettres_grecques
+#   https://bepo.fr/wiki/Version_1.1rc2#Touches_mortes
+#
+#   The Greek dead key is mapped on D06 with a mnemonic based on Y as 'Greek I'
+#   translating its French name: i grec.
+#   See #+# GROUP_6
+#
 #   The list conforms to ISO/IEC 9995-9, that is consistent with the Greek
 #   keyboard layout.
-#
-#   The empty place on Q is used for the theta symbol preferred in Romani when
-#   only the glyph is considered, regardless of word processing concerns.
-#
-#   Greek dead key update
 #
 #   When dead_greek was designed and added to en_US.UTF-8/Compose far ahead of
 #   ISO/IEC 9995-9, mappings were not yet synced with the Greek keyboard. That
 #   is the reason of the discrepancies between en_US.UTF-8/Compose and current
 #   keyboard standards, like NF Z71-300:2019 in sync with ISO/IEC 9995-9:2016.
-#   Please see for reference:
-#   https://bepo.fr/wiki/Version_1.1rc2#Touches_mortes
 #
-#       c : "ψ" was nothing
-#       C : "Ψ" was nothing
-#       j : "ξ" was θ
-#       J : "Ξ" was Θ
-#       q : ""  was χ
-#       Q : ""  was Χ
-#       u : "θ" was υ
-#       U : "Θ" was Υ
-#       v : "ω" was nothing
-#       V : "Ω" was nothing
-#       w : "ς" was ω
-#       W : "Σ" was Ω
-#       x : "χ" was ξ
-#       X : "Χ" was Ξ
-#       y : "υ" was ψ
-#       Y : "Υ" was Ψ
+#       c : "ψ" (was "")
+#       C : "Ψ" (was "")
+#       j : "ξ" (was "θ")
+#       J : "Ξ" (was "Θ")
+#       q : ""  (was "χ")
+#       Q : ""  (was "Χ")
+#       u : "θ" (was "υ")
+#       U : "Θ" (was "Υ")
+#       v : "ω" (was "")
+#       V : "Ω" (was "")
+#       w : "ς" (was "ω")
+#       W : "Σ" (was "Ω")
+#       x : "χ" (was "ξ")
+#       X : "Χ" (was "Ξ")
+#       y : "υ" (was "ψ")
+#       Y : "Υ" (was "Ψ")
 #
-#   The Greek dead key is mapped on D06 with a mnemonic based on Y as 'Greek I'
-#   translating its French name: i grec.
-#   Should this position be used otherwise, dead_greek is not indispensable, as
-#   the Greek base letters are also available in group 6.
-#   See # # GROUP_6
+#   The empty place on Q is used for the theta symbol preferred in Romani when
+#   only the glyph is considered, regardless of word processing concerns.
 #
-#   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345, as
+#   Greek subscript letters and small caps letters are also supported.
+#   See # # GREEK&SUBSCRIPT
+#
+#   Polytonic Greek is supported alongside to meet eventual user expectations,
+#   but due to file size restrictions in the web interface of GitHub, it cannot
+#   be included here, for the same reason that to be usably displayed on GitHub
+#   on full-fledged web pages rather than merely in plain text, this file needs
+#   to be splitted in three partials. The Greek overflow is in part 1.
+#   See ### Greek with diacritics
+#
+#   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as the
 #   most likely to be useful and expected, rather than other diacritical marks.
-#   So is the spacing clone slot used for "ι" U03B9, for consistency with Greek
-#   encoding.
+#   So is the spacing clone slot used for "ι" U1FBE rather than "ι" U03B9, that
+#   is consistent with Greek encoding but is less expected in this place.
 #   https://www.unicode.org/faq/greek.html
+#   https://www.opoudjis.net/unicode/unicode.html
 #
 #   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
 #   alongside dead_greek double press virtualizing the ordinary general-purpose
@@ -4999,22 +5009,14 @@
 <Multi_key><at>                                                                            <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
 <dead_greek>                                                                               <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
 <Multi_key><at>                                                                            <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<dead_greek>                                                                        <nobreakspace> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<Multi_key><at>                                                                     <nobreakspace> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<dead_greek>                                                                               <U202F> : "ι" U03B9 # GREEK SMALL LETTER IOTA
-<Multi_key><at>                                                                            <U202F> : "ι" U03B9 # GREEK SMALL LETTER IOTA
+<dead_greek>                                                                        <nobreakspace> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<Multi_key><at>                                                                     <nobreakspace> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<dead_greek>                                                                               <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<Multi_key><at>                                                                            <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
 <dead_greek>                                                                              <degree> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at>                                                                           <degree> : "⊚" U229A # CIRCLED RING OPERATOR
-<dead_greek>                                                                           <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
-<Multi_key><at>                                                                        <parenleft> : "⊚" U229A # CIRCLED RING OPERATOR
-<dead_greek>                                                                          <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
-<Multi_key><at>                                                                       <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek>                                                                            <multiply> : "⊗" U2297 # CIRCLED TIMES
 <Multi_key><at>                                                                         <multiply> : "⊗" U2297 # CIRCLED TIMES
-<dead_greek>                                                                                <less> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at>                                                                             <less> : "⊗" U2297 # CIRCLED TIMES
-<dead_greek>                                                                             <greater> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><at>                                                                          <greater> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek>                                                                               <minus> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><at>                                                                            <minus> : "⊖" U2296 # CIRCLED MINUS
 <dead_greek>                                                                                <plus> : "⊕" U2295 # CIRCLED PLUS
@@ -8108,19 +8110,24 @@
 #
 # # Long dashes
 #
+#   Encoded in 2012 for Unicode 6.1, the three-em dash may stand for the author
+#   name in bibliographies, and the two-em dash fills gaps from missing letters
+#   or words, that the three-em dash may also be used to represent.
+#
 #   These are documented by Jukka Korpela, who links also to the archive of the
 #   Unicode Public Mailing List.
 #   https://jkorpela.fi/dashes.html
 #   https://unicode.org/mail-arch/unicode-ml/y2010-m01/0219.html
 #
 #   The TWO-EM DASH and THREE-EM DASH are both in group 1, depending on whether
-#   the base is en or em, and in group 2 or 3 according to the number of dashes
-#   represented by the long dash.
+#   the base character is EN DASH or EM DASH, and in group 2 or 3, according to
+#   the number of dashes represented.
 #   See #^# GROUP_2
 #   See #^# GROUP_3
 #
-#   Alongside the support by group selection, multiple-em dashes can be input
-#   by multikey, also supporting other dashes and hyphens as well.
+#   Alongside the support by group and diaeresis dead keys, multiple-em dashes
+#   can be input by multikey, also supporting other dashes and hyphens as well.
+#   See #*# DIAERESIS
 #   See # # Dashes and hyphens
 #
 <UEFD0>                                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
@@ -16537,13 +16544,14 @@
 #   See # # Quotation mark input method
 #
 #   Diaeresis also supports long dashes, with base characters on the upper row,
-#   Shift level, which makes sense because dead_diaeresis is on the base level
-#   of E05. Other facilities are available using multikey.
+#   level 2, key E11 (degree sign) or key E12 (plus), which makes sense as on
+#   base layouts, dead_diaeresis is on E12 level 1. Other facilities are
+#   available in groups and in a dedicated multikey scheme.
 #   See # # Dashes and hyphens
 #   See # # Long dashes
 #
-#   For intuitivity, with asterisk as a base character it yields "⁑" U2051,
-#   consistently with dead_circumflex for "⁂" U2042 ASTERISM.
+#   For intuitivity, with asterisk as a base character, dead_diaeresis yields
+#   "⁑" U2051, consistently with dead_circumflex for "⁂" U2042 ASTERISM.
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as multikey symbol, have quick access
@@ -16592,10 +16600,10 @@
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><colon>                                                                      <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<dead_diaeresis>                                                                          <endash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><colon>                                                                        <endash> : "⸺" U2E3A # TWO-EM DASH
-<dead_diaeresis>                                                                          <emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><colon>                                                                        <emdash> : "⸻" U2E3B # THREE-EM DASH
+<dead_diaeresis>                                                                          <degree> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><colon>                                                                        <degree> : "⸺" U2E3A # TWO-EM DASH
+<dead_diaeresis>                                                                            <plus> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><colon>                                                                          <plus> : "⸻" U2E3B # THREE-EM DASH
 <dead_diaeresis>                                                                     <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <Multi_key><colon>                                                                   <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <dead_diaeresis>                                                                               <0> : "⁰" U2070 # SUPERSCRIPT ZERO
