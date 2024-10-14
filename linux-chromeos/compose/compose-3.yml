@@ -3984,10 +3984,8 @@
 #
 #   This group, using the mnemonic of the Greek dead key in column 6, letter Y
 #   or Greek i (i grec in French), is an alternative Greek letter input method.
-#   It may be used where the Greek letter dead key is missing.
-#
-#   The Greek letter dead key is present on several layouts and it is supported
-#   by XKB thanks to the French ergonomic BÉPO keyboard layout https://bepo.fr.
+#   It may be used where the Greek letter dead key is missing and so, polytonic
+#   Greek and the circled dead key are not supported.
 #   See #*# GREEK
 #
 <UEFD0><6>                                                                                     <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
