@@ -3,13 +3,20 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-10-10T0335+0200
+# 2024-10-14T0506+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
 # Multi_key equivalents are skipped.
 #
-# The input requires `END_MATH` as a start tag. Section headings switch files.
+# The input requires `START_LATIN_BY_DEAD_KEYS` as a start tag.
+#
+# Section headings with a leading `#*#` and the following headings switch files
+# of partial tables:
+#
+#     # # Composed letters for languages in Togo
+#     ### Space and symbol groups
+#     ### Letter groups
 #
 # Parsing `START_LETTER_SYMBOL_GROUPS` as the end tag is commented out, so that
 # space and symbol group tables and letter group tables are generated too.
@@ -109,20 +116,21 @@ my ( @anchors, $anchor, $cp, $descrip, $index, $line_nb, $math, $regex, $str, $t
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
-	if ( $line =~ /END_MATH/ ) {
+	if ( $line =~ /START_LATIN_BY_DEAD_KEYS/ ) {
 		$parse_on = !0;
 	}
 	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
-
-		# Symbol groups and letter groups are included in the comprehensive table
-		# WHOLEOUTPUT. To exclude these from WHOLEOUTPUT, uncomment this line:
-		# $comprehensive = !1;
 
 		# The symbol group table and the letter group table are generated alongside
 		# as an alternative documentation that is searchable, as opposed to the two
 		# image-based tables with tooltips.
 		# To skip these HTML tables, uncomment this line:
 		# $parse_on = !1;
+
+		# If the symbol group and letter group tables are generated, symbol groups
+		# and letter groups are included in the comprehensive table WHOLEOUTPUT.
+		# To exclude these from WHOLEOUTPUT, uncomment this line:
+		# $comprehensive = !1;
 
 	}
 	if ( $parse_on ) {
