@@ -2,9 +2,17 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.6.1 (projet)
+## 4.7.0 (projet)
 
-* Documentation : Corriger des annotations. dispocla.cpp [ff6db0d](https://github.com/dispoclavier/nouvel-azerty/commit/ff6db0d8783a360245ffb2e0d51f97ef7d28d242)
+Prise en charge des lettres grecques polytoniques, par respect pour les utilisateurs et pour le grec.
+
+* Transformations :
+	* Grec ou cerclé :
+		* Ajouter les lettres et diacritiques grecs polytoniques en combinaison avec accent aigu, accent grave, accent circonflexe, tréma, hatchek, macron, crochet en chef, brève inversée, brève, point souscrit. compose-1.yml [899995b](https://github.com/dispoclavier/nouvel-azerty/commit/899995b1418616c872158a02179d468a1178fc90)
+		* Redonder "ι" U+1FBE par espace insécable à la place de "ι" U+03B9, qui est par "i". compose-2.yml [70bee3f](https://github.com/dispoclavier/nouvel-azerty/commit/70bee3f365ab0135a870b4ee3e1e19ad5aea489e)
+		* Supprimer "⊗" U+2297 (sauf par "×" U+00D7), "⊙" U+2299, "⊚" U+229A (sauf par "°" U+00B0), qui sont dans Grec ou cerclé > Cerclé. ibidem
+	* Tréma : Remplacer les caractères de base du tiret double cadratin "⸺" U+2E3A, par "°" U+00B0 au lieu de "–" U+2013, et du tiret triple cadratin "⸻" U+2E3B, par "+" U+002B au lieu de "—" U+2014. ibidem
+* Documentation : Corriger des annotations. dispocla.cpp [ff6db0d](https://github.com/dispoclavier/nouvel-azerty/commit/ff6db0d8783a360245ffb2e0d51f97ef7d28d242), dispotypes.c [dd6abe0](https://github.com/dispoclavier/nouvel-azerty/commit/dd6abe0e5424b29d2555786d2412c191379295b7), compose-1.yml [899995b](https://github.com/dispoclavier/nouvel-azerty/commit/899995b1418616c872158a02179d468a1178fc90), compose-2.yml [70bee3f](https://github.com/dispoclavier/nouvel-azerty/commit/70bee3f365ab0135a870b4ee3e1e19ad5aea489e), compose-3.yml [1ecb108](https://github.com/dispoclavier/nouvel-azerty/commit/1ecb1083d6b62b217b40779c48949172039d1943)
 
 ## 4.6.0 (2024-10-06)
 
@@ -368,7 +376,7 @@ Prise en charge de lettres manquantes.
 * Transformations :
 	* Exposant et tourné : Ajouter "ꭩ" U+AB69. compose-2.yml [6962d96](https://github.com/dispoclavier/nouvel-azerty/commit/6962d966f780f4d8109fa431e68e69b8efb65ed8)
 	* Tourné et tilde : Ajouter "ꭨ" U+AB68. ibidem
-	* Grec et indice : Ajouter "ꭥ" U+AB65. ibidem
+	* Grec ou cerclé et indice : Ajouter "ꭥ" U+AB65. ibidem
 	* Tourné : Supprimer "ⸯ" U+2E2F. compose-2.yml [57cc11e](https://github.com/dispoclavier/nouvel-azerty/commit/57cc11eb43515cb98c12c6ac2f7a6657032c85bc)
 	* Grec ou cerclé : Supprimer "⊝" U+229D par "_". ibidem
 
@@ -962,8 +970,8 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 	* Crochet rétroflexe : Ajouter "˾" U+02FE. ibidem
 	* Crochet palatal : Ajouter "˽" U+02FD. ibidem
 	* Tilde > Double tilde médian : Ajouter "~". ibidem
-	* Grec/cerclé : Ajouter "ι" U+03B9 par espace insécable ou espace fine insécable. ibidem
-	* Grec > Cerclé : Ajouter  "⃝" U+20DD, "⚪" U+26AA. ibidem
+	* Grec ou cerclé : Ajouter "ι" U+03B9 par espace insécable ou espace fine insécable. ibidem
+	* Grec ou cerclé > Cerclé : Ajouter  "⃝" U+20DD, "⚪" U+26AA. ibidem
 	* Point en chef > Ligne verticale en chef : Ajouter "̎" U+030E, "ˈ" U+02C8. ibidem
 	* Brève inversée > Brève inversée souscrite : Ajouter "⁔" U+2054. ibidem
 	* Brève > Brève souscrite : Ajouter "‿" U+203F. ibidem
@@ -976,7 +984,7 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 ## 1.1.3 (2023-10-31)
 
 * Transformations :
-	* Grec/cerclé : Ajouter le iota souscrit avec les caractères de base espace ou césure conditionnelle. compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e)
+	* Grec ou cerclé : Ajouter le iota souscrit avec les caractères de base espace ou césure conditionnelle. compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e)
 	* Drapeau : Doubler l’antiliant "‌" U+200C avec les caractères de base espace ou césure conditionnelle. compose-2.yml [5621bee](https://github.com/dispoclavier/nouvel-azerty/commit/5621bee680e37b31f1752497cf1e6007cdd5bb9d)
 * Documentation. compose-1.yml [c54e67a](https://github.com/dispoclavier/nouvel-azerty/commit/c54e67aedb7fa430a9fbf532734412a4b287af4e), [9238b44](https://github.com/dispoclavier/nouvel-azerty/commit/9238b44d970de629389f5b21cb0b8c4011e6233e), compose-2.yml [9905833](https://github.com/dispoclavier/nouvel-azerty/commit/99058337ad8a2b2872b44ae380a6a7258cf07717)
 
@@ -1056,7 +1064,7 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 	* Tilde :
 		* Déboguer "≃" U+2243, "≈" U+2248. compose-1.yml [93c9fe6](https://github.com/dispoclavier/nouvel-azerty/commit/93c9fe6483f8a0a75e6b604da4b1a087614721a0), [b35266a](https://github.com/dispoclavier/nouvel-azerty/commit/b35266aa9928dfd426678be46690cc88d53888df), compose-2.yml [6560a3a](https://github.com/dispoclavier/nouvel-azerty/commit/6560a3a379683d9146307c29fbe6c4fae9c544d9)
 		* Adapter "̰" U+0330, "̴" U+0334. ibidem
-	* Grec/cerclé :
+	* Grec ou cerclé :
 		* Déboguer "⊖" U+2296. compose-1.yml [93c9fe6](https://github.com/dispoclavier/nouvel-azerty/commit/93c9fe6483f8a0a75e6b604da4b1a087614721a0), [b35266a](https://github.com/dispoclavier/nouvel-azerty/commit/b35266aa9928dfd426678be46690cc88d53888df), compose-2.yml [6560a3a](https://github.com/dispoclavier/nouvel-azerty/commit/6560a3a379683d9146307c29fbe6c4fae9c544d9)
 		* Adapter "❶" U+2776 à "❿" U+277F. ibidem
 	* Accent aigu : Adapter "˶" U+02F6. compose-1.yml [93c9fe6](https://github.com/dispoclavier/nouvel-azerty/commit/93c9fe6483f8a0a75e6b604da4b1a087614721a0), [b35266a](https://github.com/dispoclavier/nouvel-azerty/commit/b35266aa9928dfd426678be46690cc88d53888df), compose-2.yml [6560a3a](https://github.com/dispoclavier/nouvel-azerty/commit/6560a3a379683d9146307c29fbe6c4fae9c544d9)
@@ -1105,7 +1113,7 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 	* Déboguer "⟮" U+27EE, "⟯" U+27EF, "‬" U+202C, "≛" U+225B, "⋊" U+22CA, "◁" U+25C1, "⟜" U+27DC, "⦧" U+29A7. ibidem
 * Transformations :
 	* Exposant : Déboguer "̽" U+033D. ibidem
-	* Grec/cerclé : Supprimer l’accord rayé-crochet rétroflexe. ibidem
+	* Grec ou cerclé : Supprimer l’accord rayé-crochet rétroflexe. ibidem
 	* Groupe : Déboguer les caractères morts "①" U+2460 à "⑫" U+246B. ibidem
 	* Point souscrit : Déboguer "̍" U+030D. ibidem
 	* Tréma : Supprimer "‖" U+2016 par "|". ibidem
