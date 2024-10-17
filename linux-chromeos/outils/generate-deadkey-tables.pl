@@ -3,7 +3,7 @@
 # 2023-08-06T1934+0200
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
-# 2024-10-14T0506+0200
+# 2024-10-16T0034+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -43,12 +43,11 @@
 # The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
 # be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
-# https://wordpress.org/plugins/anrghg/
-# https://wordpress.com/plugins/anrghg
 #
 # The all-in-one table generated alongside can only be included in web pages in
 # WordPress when using the “Include partial” block provided by this plugin, as
 # posts with too much code in HTML blocks are not saved in WordPress.
+#
 #
 # Using old-style file handles.
 use warnings;
