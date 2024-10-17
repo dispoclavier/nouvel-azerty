@@ -1,4 +1,4 @@
-//                       Date: 2024-10-11T1955+0200
+//                       Date: 2024-10-17T1746+0200
 //        Operating file name: dispotypes
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -132,8 +132,6 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 💙
 		map[                         Control                                  ] = Level1; // ,
 		map[                         Control                          + Shift ] = Level1; // ,
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -170,8 +168,6 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // ;
 		map[                         Control                                  ] = Level8; // ;
 		map[                         Control                          + Shift ] = Level8; // ;
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -199,7 +195,7 @@ default partial xkb_types "dispocla" {
 
 		modifiers =                  Control + LevelFive + LevelThree + Shift ;           // group1
 		map[ None                                                             ] = Level1; // ù
-		map[                                                            Shift ] = Level2; // <« >
+		map[                                                            Shift ] = Level2; // «<NBTSP>
 		map[                                               LevelThree         ] = Level3; // …
 		map[                                               LevelThree + Shift ] = Level5; // %
 		map[                                   LevelFive                      ] = Level4; // «
@@ -208,8 +204,6 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // '
 		map[                         Control                                  ] = Level8; // '
 		map[                         Control                          + Shift ] = Level8; // '
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -222,6 +216,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock           + LevelFive              + Shift ] = Lock;
 		preserve[             Lock           + LevelFive + LevelThree         ] = Lock;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Lock;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "AltFr";
@@ -261,10 +259,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level2; // B
 		map[                  Lock + Control                                  ] = Level1; // b
 		map[                  Lock + Control                          + Shift ] = Level2; // B
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -273,6 +267,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -311,10 +309,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level2; // N
 		map[                  Lock + Control                                  ] = Level1; // n
 		map[                  Lock + Control                          + Shift ] = Level2; // N
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -323,6 +317,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -361,10 +359,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level2; // A
 		map[                  Lock + Control                                  ] = Level1; // a
 		map[                  Lock + Control                          + Shift ] = Level2; // A
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -373,6 +367,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -399,12 +397,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 3️⃣  // 3️⃣
 		map[                         Control                                  ] = Level3; // 3  // 3
 		map[                         Control                          + Shift ] = Level3; // 3  // 3
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -442,10 +440,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level3; // 1
 		map[                  Lock + Control                                  ] = Level3; // 1
 		map[                  Lock + Control                          + Shift ] = Level3; // 1
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -454,6 +448,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -491,10 +489,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level3; // 2   // 2
 		map[                  Lock + Control                                  ] = Level3; // 2   // 2
 		map[                  Lock + Control                          + Shift ] = Level3; // 2   // 2
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -503,6 +497,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -540,10 +538,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level3; // 1
 		map[                  Lock + Control                                  ] = Level3; // 1
 		map[                  Lock + Control                          + Shift ] = Level3; // 1
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -552,6 +546,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -590,10 +588,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level3; // 1
 		map[                  Lock + Control                                  ] = Level3; // 1
 		map[                  Lock + Control                          + Shift ] = Level3; // 1
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -602,6 +596,53 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
+
+		level_name[ Level1 ] = "Base";
+		level_name[ Level2 ] = "Majuscule";
+		level_name[ Level3 ] = "AltGr";
+		level_name[ Level4 ] = "Majuscule + AltGr";
+		level_name[ Level5 ] = "AltFr";
+		level_name[ Level6 ] = "Majuscule + AltFr";
+		level_name[ Level7 ] = "AltGr + AltFr";
+		level_name[ Level8 ] = "Majuscule + AltGr + AltFr";
+
+	};
+
+	type "EIGHT_LEVELS_CAPITAL_LEVEL3_CONTROL" {
+		// Used on AE06 (pro parte).
+		// A casing letter on level 1, if any, is passed on to internal capitalization.
+
+		modifiers =                  Control + LevelFive + LevelThree + Shift ;           // g1 // g2
+		map[ None                                                             ] = Level1; // ù  // 6
+		map[                                                            Shift ] = Level2; // ‑  // 6
+		map[                                               LevelThree         ] = Level3; // 6  // 6
+		map[                                               LevelThree + Shift ] = Level4; // |  // ⁶
+		map[                                   LevelFive                      ] = Level5; // 6  // 6
+		map[                                   LevelFive              + Shift ] = Level6; // ⁶  // ⁶
+		map[                                   LevelFive + LevelThree         ] = Level7; // 6️⃣  // ₆
+		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 6️⃣  // 6️⃣
+		map[                         Control                                  ] = Level3; // 6  // 6
+		map[                         Control                          + Shift ] = Level3; // 6  // 6
+		preserve[                                                       Shift ] = Shift;
+		preserve[                                          LevelThree + Shift ] = Shift;
+		preserve[                              LevelFive              + Shift ] = Shift;
+		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[             Lock                                            ] = Lock;
+		preserve[             Lock                                    + Shift ] = Lock;
+		preserve[             Lock                       + LevelThree         ] = Lock;
+		preserve[             Lock                       + LevelThree + Shift ] = Lock;
+		preserve[             Lock           + LevelFive                      ] = Lock;
+		preserve[             Lock           + LevelFive              + Shift ] = Lock;
+		preserve[             Lock           + LevelFive + LevelThree         ] = Lock;
+		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Lock;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -629,12 +670,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 
 		map[                         Control                                  ] = Level1; // 
 		map[                         Control                          + Shift ] = Level1; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -662,12 +703,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level3; // 
 		map[                         Control                                  ] = Level1; // 
 		map[                         Control                          + Shift ] = Level1; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -694,12 +735,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // *️⃣
 		map[                         Control                                  ] = Level8; // -
 		map[                         Control                          + Shift ] = Level8; // -
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -726,12 +767,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // *️⃣
 		map[                         Control                                  ] = Level8; // -
 		map[                         Control                          + Shift ] = Level8; // -
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -759,12 +800,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 
 		map[                         Control                                  ] = Level1; // 
 		map[                         Control                          + Shift ] = Level2; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -792,12 +833,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 
 		map[                         Control                                  ] = Level1; // 
 		map[                         Control                          + Shift ] = Level2; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -826,12 +867,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
 		map[                         Control                                  ] = Level8; // =
 		map[                         Control                          + Shift ] = Level8; // =
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -858,12 +899,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // #️⃣
 		map[                         Control                                  ] = Level8; // =
 		map[                         Control                          + Shift ] = Level8; // =
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -901,14 +942,14 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level8; // 
 		map[                  Lock + Control                                  ] = Level7; // 
 		map[                  Lock + Control                          + Shift ] = Level8; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -946,14 +987,14 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level8; // 
 		map[                  Lock + Control                                  ] = Level7; // 
 		map[                  Lock + Control                          + Shift ] = Level8; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -984,12 +1025,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 😃
 		map[                         Control                                  ] = Level8; // /
 		map[                         Control                          + Shift ] = Level8; // /
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "AltFr";
@@ -1019,12 +1060,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level7; // 😕
 		map[                         Control                                  ] = Level8; // /
 		map[                         Control                          + Shift ] = Level8; // /
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "AltFr";
@@ -1052,12 +1093,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
 		map[                         Control                                  ] = Level8; // 
 		map[                         Control                          + Shift ] = Level8; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -1085,12 +1126,12 @@ default partial xkb_types "dispocla" {
 		map[                                   LevelFive + LevelThree + Shift ] = Level8; // 
 		map[                         Control                                  ] = Level8; // 
 		map[                         Control                          + Shift ] = Level8; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
 		preserve[                              LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -1128,10 +1169,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level8; // 
 		map[                  Lock + Control                                  ] = Level8; // 
 		map[                  Lock + Control                          + Shift ] = Level8; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -1140,6 +1177,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -1177,10 +1218,6 @@ default partial xkb_types "dispocla" {
 		map[                         Control                          + Shift ] = Level8; // 
 		map[                  Lock + Control                                  ] = Level8; // 
 		map[                  Lock + Control                          + Shift ] = Level8; // 
-		preserve[                    Control                                  ] = Control;
-		preserve[                    Control                          + Shift ] = Control + Shift;
-		preserve[             Lock + Control                                  ] = Control;
-		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 		preserve[                                                       Shift ] = Shift;
 		preserve[                                          LevelThree + Shift ] = Shift;
 		preserve[                              LevelFive              + Shift ] = Shift;
@@ -1189,6 +1226,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
@@ -1229,6 +1270,10 @@ default partial xkb_types "dispocla" {
 		preserve[             Lock                       + LevelThree + Shift ] = Shift;
 		preserve[             Lock           + LevelFive              + Shift ] = Shift;
 		preserve[             Lock           + LevelFive + LevelThree + Shift ] = Shift;
+		preserve[                    Control                                  ] = Control;
+		preserve[                    Control                          + Shift ] = Control + Shift;
+		preserve[             Lock + Control                                  ] = Control;
+		preserve[             Lock + Control                          + Shift ] = Control + Shift;
 
 		level_name[ Level1 ] = "Base";
 		level_name[ Level2 ] = "Majuscule";
