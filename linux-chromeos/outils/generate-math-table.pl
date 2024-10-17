@@ -2,10 +2,10 @@
 # 2023-07-19T1747+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-10-10T0335+0200
+# 2024-10-16T0021+0200
 # = last modified.
 #
-# Generates an HTML table of math symbols, based on multi-key sequences in
+# Generates an HTML table of math symbols, based on multikey sequences in
 # Compose.yml.
 #
 # The input requires the `START_MATH` start tag, and the `END_MATH` end tag.
@@ -31,6 +31,7 @@
 #
 # Emoji style display should be deactivated on the page that this math table
 # is included as a partial.
+#
 #
 # Using old-style file handles.
 use warnings;
