@@ -55,34 +55,46 @@
 #
 #                             2. Make sure to be using the full-length file Compose.yml.
 #
-#                             3. Proceed following method A, B, or C:
+#                             3. Proceed following method A, B or C:
 #
-#                                A. Most backward compatible:
-#                                   1. Back up the file /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                   2. Append Compose.yml to /usr/share/X11/locale/en_US.UTF-8/Compose
+#                                CAUTION: If the environment variable $XCOMPOSEFILE is set,
+#                                         its value is used as the path of the Compose file.
+#                                         In case of success, other Compose files are not
+#                                         compiled unless included as documented below.
 #
-#                                      Prepending rather than appending breaks U1E7A and U1E7B
+#                                A. System level:
+#                                   1. Back up the Compose file at the path mapped onto the
+#                                      locale in /usr/share/X11/locale/compose.dir; for fr_FR:
+#                                      /usr/share/X11/locale/en_US.UTF-8/Compose
+#                                   2. Append Compose.yml to the original Compose file.
+#                                      Prepending instead of appending breaks U1E7A and U1E7B
 #                                      overriding U01D5 and U01D6, and "V́" and "v́" overriding
-#                                      U01D7 and U01D8 as defined in en_US.UTF-8/Compose.
+#                                      U01D7 and U01D8, as defined in en_US.UTF-8/Compose.
 #
-#                                B. Shared computer with User Compose:
+#                                B. User level, with Compose in the $HOME directory:
 #                                   1. Back up the file ~/.XCompose.
 #                                   2. Append Compose.yml to ~/.XCompose.
 #
-#                                C. Shared computer without User Compose:
+#                                C. User level, without Compose in the $HOME directory:
 #                                   1. Copy Compose.yml to ~/.XCompose.
-#                                   2. Optionally uncomment the following line:
+#                                   2. For maximum backward compatibility, uncomment this
+#                                      instruction where `%L` expands to the default Compose
+#                                      file path of the current locale. For fr_FR, that is:
+#                                      /usr/share/X11/locale/en_US.UTF-8/Compose
 #
-#                                       include "%L"
+#                                          include "%L"
 #
-#                                   Required for using non-Latin keyboard layouts
-#                                   supported in en_US.UTF-8/Compose, default for fr_FR.
+#                                   This is required for using non-Latin keyboard layouts
+#                                   with dead keys as supported in en_US.UTF-8/Compose.
 #
-#                             The changes take effect in any application after reopening it, or
-#                             after opening a new session if the input method needs to be changed.
+#                                   Any specific Compose file can be included by its path,
+#                                   where `%S` expands to /usr/share/X11/locale.
+#
+#                             The changes take effect in any application after reopening it,
+#                             or after opening a new session if XIM needs to be activated.
 #
 #             Uninstallation: A, B: Restore the previously backed-up original Compose file.
-#                             C:    Delete this Compose file.
+#                             C:    Delete or rename the added file ~/.XCompose.
 #
 #           Acknowledgements: • Our Lord God and Jesus Christ, for ideas, help and direction.
 #                               Consistently with the Cistercian “Soli Deo Gloria”, picked up
@@ -145,9 +157,11 @@
 #   as opposed to XCompose, that has no upper limit on the result length, and
 #   also handles multicharacter strings output on a single live key press.
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
+#   https://www.x.org/archive/X11R7.6/doc/man/man5/Compose.5.xhtml
 #   https://manpages.ubuntu.com/manpages/cosmic/man5/Compose.5.html
 #   https://help.ubuntu.com/community/ComposeKey#Compose_key
 #   https://wiki.debian.org/XCompose
+#   https://manpages.debian.org/bookworm/libx11-doc/XCompose.3.en.html
 #
 #   However, for the multicharacter feature to be effective and actually work,
 #   activating the X Window Input Method, XIM for short, is mandatory.
@@ -776,7 +790,7 @@
 <UEFCB> : "#️⃣"  # U0023 UFE0F U20E3
 #
 #
-#   START_MULTI_KEY
+#   START_MULTIKEY
 #
 ### Multikey sequences
 #
@@ -794,31 +808,17 @@
 #   For maintainability, there is no space between the leading keysyms, but
 #   part of the keysyms may be aligned to the end for readability.
 #
-#   The multikey equivalent is added below each dead key sequence by a script
-#   called generate-multikey.pl, run by multikey.sh, if the sequence is
-#   marked up accordingly. For portability, multikey equivalents are present
-#   regardless whether they make sense, and whether they barely work. So,
-#   three multikey sequences do not work because <numbersign> is used both
-#   as a group dead key and as a base character:
+#   The multikey equivalent below each dead key sequence is added by the script
+#   generate-multikey.pl.
 #
-#       <Multi_key><numbersign>                        <numbersign> : "☐" U2610 # BALLOT BOX
-#       <Multi_key><numbersign><numbersign>            <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-#       <Multi_key><numbersign><numbersign><numbersign><numbersign> : "☒" U2612 # BALLOT BOX WITH X
+#   For portability, multikey equivalents are present regardless whether they
+#   make sense, and require conflictlessness, since else, the dead key content
+#   would not be cross-platform compatible.
 #
-#   With respect to dead key use, these sequences are maintained, but Multi_key
-#   equivalents are actionable only elsewhere.
-#   See # # C01 numbersign
-#   See #^# Square boxes
-#
-#   As a consequence, the multikey equivalents of U2610, U2611 and U2612 in the
-#   first three groups of numbersign are involved in unavoidable conflicts. All
-#   other conflicts and duplicates are checked and fixed using a protocol like
-#   this, where the first steps may be automated by `bhughes339.replacerules`
-#   extension for VSCode.
-#
-#   Base letters are flagged for case, because even case sensitive, the default
-#   sort order prioritizing string length over case hides many conflicts due to
-#   case, sorting A > a > Ab > ab instead of A > Ab > a > ab.
+#   Conflicts and duplicates can be checked following a protocol like this one,
+#   where the first steps may be automated, using the "bhughes339.replacerules"
+#   extension for VSCode, with the JSON below going into user settings, while
+#   sorting needs to be case sensitive, using e.g. "Tyriar.sort-lines" > F9.
 #
 #       {
 #         "replacerules.rules": {
@@ -837,14 +837,6 @@
 #           "startAlignEndAligned": {
 #             "find": "^([^ ]+)( *)([^ ]+)( : .*)$",
 #             "replace": "$1$3$2$4"
-#           },
-#           "flagUppercase": {
-#             "find": "<([A-Z])>",
-#             "replace": "<$1u>"
-#           },
-#           "flagLowercase": {
-#             "find": "<([a-z])>",
-#             "replace": "<$1l>"
 #           }
 #         },
 #         "replacerules.rulesets": {
@@ -853,25 +845,19 @@
 #               "removeCommentLines",
 #               "removeMulticharForLiveKeys",
 #               "removeKeypadEquivalents",
-#               "startAlignEndAligned",
-#               "flagUppercase",
-#               "flagLowercase"
+#               "startAlignEndAligned"
 #             ]
 #           }
 #         }
 #       }
 #
-#       7  Sort lines ascending.
+#       5  Case sensitive sorting.
 #
-#       8  Check for conflicts and duplicates:
-#       ^([^ ]+) .+\n\1(<|\s)
+#       6  Checking for conflicts and duplicates:
+#          ^([^\s]+)\s.+\n\1(<|\s)
 #
 #
 # # Notes about documentation
-#
-#   The plus sign omitted in Unicode code points for interoperability needs to
-#   be readded for documentation.
-#   See # # Notes about syntax
 #
 #   This file is also the source code for HTML table partials, such as those by
 #   the scripts generate-multikey-tables.pl and generate-math-table.pl
@@ -891,6 +877,10 @@
 #   two spreadsheets. These have plain text dumps in this file.
 #   See # # Symbol groups overview
 #   See # # Letter groups overview
+#
+#   The plus sign omitted in Unicode code points for interoperability needs to
+#   be readded for documentation.
+#   See # # Notes about syntax
 #
 #
 #*# COMPOSE
@@ -2753,13 +2743,22 @@
 #
 # # Checkboxes
 #
-#   Sequence with space conflicts with combining ogonek.
-#   Sequence with lowercase v conflicts with "⟏" U27CF SQUARED LOGICAL OR
-#   Sequence with lowercase x conflicts with "⊠" U22A0 SQUARED TIMES.
+#   Regular empty, check-filled and X-filled checkboxes are also in groups 1..3
+#   of bar. Not numbersign because that would not be cross-platform compatible.
+#   The alternative checkbox with a light X is also in group 10 of at.
+#   See # # C10 bar
+#   See # # D06 at, dead_greek
+#
+#   The empty-checkbox sequence includes an underscore instead of a space,
+#   because with space it conflicts with combining ogonek, while the filled
+#   checkbox sequences include uppercase letters rather than lowercase because
+#   the one with lowercase "v" conflicts with "⟏" U27CF SQUARED LOGICAL OR,
+#   and the the one with lowercase "x" conflicts with "⊠" U22A0 SQUARED TIMES.
 #
 <Multi_key><bracketleft><underscore><bracketright>                                                 : "☐" U2610 # BALLOT BOX
 <Multi_key><bracketleft><V><bracketright>                                                          : "☑" U2611 # BALLOT BOX WITH CHECK emoji
 <Multi_key><bracketleft><X><bracketright>                                                          : "☒" U2612 # BALLOT BOX WITH X
+<Multi_key><bracketleft><X><L><bracketright>                                                       : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
 #
 #
 # # Shadowed circle
@@ -3408,13 +3407,14 @@
 #
 # # Double vertical bar
 #
-#   Also supported by dead_macron followed by 2, with the homoglyph "∥" U2225
-#   in slot 4.
+#   Also supported by dead_macron followed by 2, with its almost homoglyph
+#   "∥" U2225 in slot 4.
 #   See #*# MACRON
 #
-#   With similar mnemonic, "‖" U2016 is in group 2 of bar, while "∥" U2225 is
-#   in group 3, mitigating a potential accessibility bias.
+#   With similar mnemonic, "∥" U2225 is in group 12 of bar, while "‖" U2016 is
+#   in the same group of colon, mitigating a potential accessibility bias.
 #   See # # C10 bar
+#   See # # B09 colon
 #
 #   Additionally, this can be input by dead_diaeresis followed by slash (not
 #   bar, due to conflicts with the diaeresis and macron virtual dead keys).
@@ -3422,7 +3422,7 @@
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
 #
-#   In group 2 of |                                                                                : "‖" U2016 # DOUBLE VERTICAL LINE
+#   In group 12 of :                                                                               : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><2><bar>                                                                        <space> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><2><bar>                                                                 <nobreakspace> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><KP_2><bar>                                                                     <space> : "‖" U2016 # DOUBLE VERTICAL LINE
@@ -4218,7 +4218,7 @@
 <Multi_key><slash><underscore><parenright>                                          <nobreakspace> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><slash><backslash><parenright>                                                  <space> : "∢" U2222 # SPHERICAL ANGLE
 <Multi_key><slash><backslash><parenright>                                           <nobreakspace> : "∢" U2222 # SPHERICAL ANGLE
-#   In group 1 of |                                                                                : "∣" U2223 # DIVIDES
+#   In group 11 of |                                                                               : "∣" U2223 # DIVIDES
 #   In #*# MACRON                                                                                  : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                                    <space> : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                             <nobreakspace> : "∣" U2223 # DIVIDES
@@ -4227,7 +4227,7 @@
 #   In #*# STROKE                                                                                  : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                                    <space> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                             <nobreakspace> : "∤" U2224 # DOES NOT DIVIDE
-#   In group 3 of |                                                                                : "∥" U2225 # PARALLEL TO
+#   In group 12 of |                                                                               : "∥" U2225 # PARALLEL TO
 #   In #*# MACRON                                                                                  : "∥" U2225 # PARALLEL TO
 <Multi_key><space><bar><bar>                                                               <space> : "∥" U2225 # PARALLEL TO
 <Multi_key><space><bar><bar>                                                        <nobreakspace> : "∥" U2225 # PARALLEL TO
