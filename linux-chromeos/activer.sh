@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-30T1259+0200
+#                       Date : 2024-10-17T1202+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -40,6 +40,9 @@
 #
 #   Toutefois, les fichiers d’activation au format XKM ne sont pas fournis, à cause
 #   de leur opacité et de leur immuabilité.
+#
+#   Pour une activation manuelle, on peut utiliser la valeur ":0" de la variable
+#   d’environnement $DISPLAY.
 #
 #
 #   Utilisation
@@ -263,7 +266,7 @@ function options_de_disposition {
 	if [ -f "$HOME/.config/dispoclavier/activer/dispo_habituelle.$mode" ]; then
 		echo      '       Pour revenir à la disposition de clavier habituelle, tapez h puis Entrée.'
 	else
-		xkbcomp :0 ~/.config/dispoclavier/activer/dispo_habituelle.$mode
+		xkbcomp $DISPLAY ~/.config/dispoclavier/activer/dispo_habituelle.$mode
 	fi
 	echo      '       Pour quitter, tapez q ou n puis Entrée.'
 	read -p   '    ' repo
@@ -272,7 +275,7 @@ function options_de_disposition {
 			exit
 		;;
 		[hH])
-			xkbcomp -w 0 ~/.config/dispoclavier/activer/dispo_habituelle.$mode :0
+			xkbcomp -w 0 ~/.config/dispoclavier/activer/dispo_habituelle.$mode $DISPLAY
 			echo -e "\n  ✅  La disposition de clavier habituelle vient d’être réactivée.\n"
 		;;
 		*)
@@ -324,7 +327,7 @@ function options_de_disposition {
 			esac
 			chemin_complet="$chemin$suffixe.$mode"
 			if [ -f "activer/$chemin_complet" ]; then
-				xkbcomp -w 0 activer/$chemin_complet :0
+				xkbcomp -w 0 activer/$chemin_complet $DISPLAY
 				mkdir -p ~/.config/dispoclavier/activer
 				echo "$chemin_complet" > ~/.config/dispoclavier/activer/der.txt
 				cp activer/$chemin_complet ~/.config/dispoclavier/activer/der.$mode
@@ -400,10 +403,10 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 					echo "# Activation de la dernière disposition de clavier utilisée." >> der.sh
 					echo "# sleep 3 # La temporisation est dans autostart." >> der.sh
 					echo "failed=0" >> der.sh
-					echo "( $emulateur_terminal -- xkbcomp -w 0 der.$mode :0 && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
+					echo "( $emulateur_terminal -- xkbcomp -w 0 der.$mode $DISPLAY && ( echo -e \"\n  ✅  La disposition de clavier vient d’être activée.\n     Je vous invite à appuyer sur Entrée pour me refermer.\n\n             Bonne utilisation !\n\"; read ) ) || failed=1" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\tfailed=0" >> der.sh
-					echo -e "\txkbcomp -w 0 der.$mode :0 || failed=1" >> der.sh
+					echo -e "\txkbcomp -w 0 der.$mode $DISPLAY || failed=1" >> der.sh
 					echo "fi" >> der.sh
 					echo "if [ \"\$failed\" -eq 1 ]; then" >> der.sh
 					echo -e "\t$navigateur_fichiers $HOME/.config/dispoclavier/activer/der.sh" >> der.sh
@@ -453,7 +456,7 @@ if [ -f "$HOME/.config/dispoclavier/activer/der.txt" ] && [ -d "activer" ]; then
 			;;
 			*)
 				config_xim
-				xkbcomp -w 0 activer/$chemin :0
+				xkbcomp -w 0 activer/$chemin $DISPLAY
 				gestion_compose
 				echo -e "\n  ✅  La disposition de clavier vient d’être activée."
 				echo -e "\n     $message_compose"
@@ -484,7 +487,7 @@ elif [ -f "$HOME/.config/dispoclavier/activer/der.$mode" ]; then
 		;;
 		*)
 			config_xim
-			xkbcomp -w 0 ~/.config/dispoclavier/activer/der.$mode :0
+			xkbcomp -w 0 ~/.config/dispoclavier/activer/der.$mode $DISPLAY
 			gestion_compose
 			echo -e "\n  ✅  La disposition de clavier vient d’être réactivée."
 			echo -e "\n     $message_compose"
