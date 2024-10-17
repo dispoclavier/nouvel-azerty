@@ -1,4 +1,4 @@
-//                       Date: 2024-10-10T0827+0200
+//                       Date: 2024-10-17T1748+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1702,12 +1702,12 @@ xkb_symbols "kbfrFRsr" {
 		[            NoSymbol ]
 	};
 
-	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
+	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE06> {
-		[              ugrave,              Ugrave ],
+		[              ugrave ],
 		[            NoSymbol ]
-	}; // Ugrave for consistency since U2011 is on E07 for accessibility while underscore is on D12 when ModLock is on.
+	};
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
