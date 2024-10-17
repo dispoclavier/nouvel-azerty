@@ -648,14 +648,14 @@
 <Multi_key><numbersign><KP_9>                                                                 <at> : "♍" U264D # VIRGO emoji
 <UEFD0><KP_9>                                                                         <dead_greek> : "♍" U264D # VIRGO emoji
 <Multi_key><numbersign><KP_9>                                                         <dead_greek> : "♍" U264D # VIRGO emoji
-<UEFD0><0>                                                                                    <at> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<Multi_key><numbersign><0>                                                                    <at> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<UEFD0><0>                                                                            <dead_greek> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<Multi_key><numbersign><0>                                                            <dead_greek> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<UEFD0><KP_0>                                                                                 <at> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<Multi_key><numbersign><KP_0>                                                                 <at> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<UEFD0><KP_0>                                                                         <dead_greek> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<Multi_key><numbersign><KP_0>                                                         <dead_greek> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
+<UEFD0><0>                                                                                    <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><0>                                                                    <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><0>                                                                            <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><0>                                                            <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><KP_0>                                                                                 <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><KP_0>                                                                 <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><KP_0>                                                                         <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><KP_0>                                                         <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
 <UEFD0><1>                                                                                    <at> : "⁁" U2041 # CARET INSERTION POINT
 <Multi_key><numbersign><1>                                                                    <at> : "⁁" U2041 # CARET INSERTION POINT
 <UEFD0><1>                                                                            <dead_greek> : "⁁" U2041 # CARET INSERTION POINT
@@ -899,10 +899,9 @@
 #
 # # C01 numbersign
 #
-#   The first three positions are inaccessible by multikey equivalents, due
-#   to an inavoidable interference of numbersign with itself. But these can be
-#   input by multikey using other sequences.
-#   See # # Checkboxes
+#   The first three positions are inaccessible by multikey equivalents, due to
+#   an inavoidable interference of numbersign with itself. As a consequence,
+#   for cross-platform compatibility, these positions cannot be used.
 #   See # # Notes for maintenance
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
@@ -919,16 +918,16 @@
 #   See # # Square emoji
 #   See # # Geometric Shapes in block U25A0 used in mathematics
 #
-<UEFD0>                                                                               <numbersign> : "☐" U2610 # BALLOT BOX
-<Multi_key><numbersign>                                                               <numbersign> : "☐" U2610 # BALLOT BOX
-<UEFD0><UEFD0>                                                                        <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-<Multi_key><numbersign><numbersign>                                                   <numbersign> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
-<UEFD0><3>                                                                            <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><numbersign><3>                                                            <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<UEFD0><KP_3>                                                                         <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><numbersign><KP_3>                                                         <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<UEFD0><UEFD0><UEFD0>                                                                 <numbersign> : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><numbersign><numbersign><numbersign>                                       <numbersign> : "☒" U2612 # BALLOT BOX WITH X
+#   <UEFD0>                                                                           <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <Multi_key><numbersign>                                                           <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <UEFD0><UEFD0>                                                                    <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <Multi_key><numbersign><numbersign>                                               <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <UEFD0><3>                                                                        <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <Multi_key><numbersign><3>                                                        <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <UEFD0><KP_3>                                                                     <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <Multi_key><numbersign><KP_3>                                                     <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <UEFD0><UEFD0><UEFD0>                                                             <numbersign> : # Reserved for the group dead key multikey equivalent.
+#   <Multi_key><numbersign><numbersign><numbersign>                                   <numbersign> : # Reserved for the group dead key multikey equivalent.
 <UEFD0><4>                                                                            <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
 <Multi_key><numbersign><4>                                                            <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
 <UEFD0><KP_4>                                                                         <numbersign> : "⏹" U23F9 # BLACK SQUARE FOR STOP emoji, stop button
@@ -955,10 +954,10 @@
 <Multi_key><numbersign><9>                                                            <numbersign> : "♒" U2652 # AQUARIUS emoji
 <UEFD0><KP_9>                                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
 <Multi_key><numbersign><KP_9>                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
-<UEFD0><0>                                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><0>                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<UEFD0><KP_0>                                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><KP_0>                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><0>                                                                            <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><0>                                                            <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><KP_0>                                                                         <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><KP_0>                                                         <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 <UEFD0><1>                                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN math
 <Multi_key><numbersign><1>                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN math
 <UEFD0><KP_1>                                                                         <numbersign> : "♯" U266F # MUSIC SHARP SIGN math
@@ -1435,13 +1434,20 @@
 # # C10 bar
 #
 #   With respect to mathematical symbols that need to be negated, the positions
-#   in groups 1 to 3 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, then
-#   "‖" U2016 DOUBLE VERTICAL LINE for the “double” mnemonic, and ultimately
-#   "∥" U2225 PARALLEL TO, negated as "∦" U2226, This is required to prevent an
-#   accessibility bias fostering misuse of "‖" U2016 as "∥" U2225.
+#   in groups 11 and 12 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, and
+#   "∥" U2225 PARALLEL TO, negated as "∦" U2226. As of "‖" U2016 DOUBLE VERTICAL
+#   LINE, it is in the same group of colon, preventing a potential accessibility
+#   bias fostering misuse of "∥" U2225 as "‖" U2016.
 #   See # # STROKE&GROUP_1
 #   See # # STROKE&GROUP_2
-#   See # # STROKE&GROUP_3
+#   See # # STROKE&GROUP_11
+#   See # # STROKE&GROUP_12
+#
+#   The empty and filled checkboxes are supported here with slight mnemonics of
+#   "|" and nearby "]", because the same groups of "#" are unusable. Sadly, the
+#   light variant "⮽" U2BBD cannot. As a workaround, it is in group 10 of "@".
+#   See # # D06 at, dead_greek
+#   See # # C01 numbersign
 #
 #   What these positions are not used for is single, double and triple daggers,
 #   more extensively supported together with their left/right guard or turned
@@ -1458,16 +1464,16 @@
 #   it is more easily input through dead_diaeresis followed by backslash.
 #   See # # Symbols for multikey and composition
 #
-<UEFD0>                                                                                      <bar> : "∣" U2223 # DIVIDES math
-<Multi_key><numbersign>                                                                      <bar> : "∣" U2223 # DIVIDES math
-<UEFD0><UEFD0>                                                                               <bar> : "‖" U2016 # DOUBLE VERTICAL LINE math
-<Multi_key><numbersign><numbersign>                                                          <bar> : "‖" U2016 # DOUBLE VERTICAL LINE math
-<UEFD0><3>                                                                                   <bar> : "∥" U2225 # PARALLEL TO math
-<Multi_key><numbersign><3>                                                                   <bar> : "∥" U2225 # PARALLEL TO math
-<UEFD0><KP_3>                                                                                <bar> : "∥" U2225 # PARALLEL TO math
-<Multi_key><numbersign><KP_3>                                                                <bar> : "∥" U2225 # PARALLEL TO math
-<UEFD0><UEFD0><UEFD0>                                                                        <bar> : "∥" U2225 # PARALLEL TO math
-<Multi_key><numbersign><numbersign><numbersign>                                              <bar> : "∥" U2225 # PARALLEL TO math
+<UEFD0>                                                                                      <bar> : "☐" U2610 # BALLOT BOX
+<Multi_key><numbersign>                                                                      <bar> : "☐" U2610 # BALLOT BOX
+<UEFD0><UEFD0>                                                                               <bar> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+<Multi_key><numbersign><numbersign>                                                          <bar> : "☑" U2611 # BALLOT BOX WITH CHECK emoji
+<UEFD0><3>                                                                                   <bar> : "☒" U2612 # BALLOT BOX WITH X
+<Multi_key><numbersign><3>                                                                   <bar> : "☒" U2612 # BALLOT BOX WITH X
+<UEFD0><KP_3>                                                                                <bar> : "☒" U2612 # BALLOT BOX WITH X
+<Multi_key><numbersign><KP_3>                                                                <bar> : "☒" U2612 # BALLOT BOX WITH X
+<UEFD0><UEFD0><UEFD0>                                                                        <bar> : "☒" U2612 # BALLOT BOX WITH X
+<Multi_key><numbersign><numbersign><numbersign>                                              <bar> : "☒" U2612 # BALLOT BOX WITH X
 <UEFD0><4>                                                                                   <bar> : "♂" U2642 # MALE SIGN emoji, Mars, math
 <Multi_key><numbersign><4>                                                                   <bar> : "♂" U2642 # MALE SIGN emoji, Mars, math
 <UEFD0><KP_4>                                                                                <bar> : "♂" U2642 # MALE SIGN emoji, Mars, math
@@ -1498,14 +1504,14 @@
 <Multi_key><numbersign><0>                                                                   <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <UEFD0><KP_0>                                                                                <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
 <Multi_key><numbersign><KP_0>                                                                <bar> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<UEFD0><1>                                                                                   <bar> : "µ" U00B5 # MICRO SIGN
-<Multi_key><numbersign><1>                                                                   <bar> : "µ" U00B5 # MICRO SIGN
-<UEFD0><KP_1>                                                                                <bar> : "µ" U00B5 # MICRO SIGN
-<Multi_key><numbersign><KP_1>                                                                <bar> : "µ" U00B5 # MICRO SIGN
-<UEFD0><2>                                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-<Multi_key><numbersign><2>                                                                   <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-<UEFD0><KP_2>                                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-<Multi_key><numbersign><KP_2>                                                                <bar> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<UEFD0><1>                                                                                   <bar> : "∣" U2223 # DIVIDES math
+<Multi_key><numbersign><1>                                                                   <bar> : "∣" U2223 # DIVIDES math
+<UEFD0><KP_1>                                                                                <bar> : "∣" U2223 # DIVIDES math
+<Multi_key><numbersign><KP_1>                                                                <bar> : "∣" U2223 # DIVIDES math
+<UEFD0><2>                                                                                   <bar> : "∥" U2225 # PARALLEL TO math
+<Multi_key><numbersign><2>                                                                   <bar> : "∥" U2225 # PARALLEL TO math
+<UEFD0><KP_2>                                                                                <bar> : "∥" U2225 # PARALLEL TO math
+<Multi_key><numbersign><KP_2>                                                                <bar> : "∥" U2225 # PARALLEL TO math
 #
 #
 # # B01 slash
@@ -1612,10 +1618,10 @@
 <Multi_key><numbersign><1>                                                              <asterisk> : "∗" U2217 # ASTERISK OPERATOR math
 <UEFD0><KP_1>                                                                        <KP_Multiply> : "∗" U2217 # ASTERISK OPERATOR math
 <Multi_key><numbersign><KP_1>                                                        <KP_Multiply> : "∗" U2217 # ASTERISK OPERATOR math
-<UEFD0><2>                                                                              <asterisk> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<Multi_key><numbersign><2>                                                              <asterisk> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<UEFD0><KP_2>                                                                        <KP_Multiply> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<Multi_key><numbersign><KP_2>                                                        <KP_Multiply> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><2>                                                                              <asterisk> : "※" U203B # REFERENCE MARK, Japanese kome
+<Multi_key><numbersign><2>                                                              <asterisk> : "※" U203B # REFERENCE MARK, Japanese kome
+<UEFD0><KP_2>                                                                        <KP_Multiply> : "※" U203B # REFERENCE MARK, Japanese kome
+<Multi_key><numbersign><KP_2>                                                        <KP_Multiply> : "※" U203B # REFERENCE MARK, Japanese kome
 #
 #
 # # B03 less
@@ -2123,14 +2129,14 @@
 <Multi_key><numbersign><0>                                                                 <colon> : "⏲" U23F2 # TIMER CLOCK emoji
 <UEFD0><KP_0>                                                                              <colon> : "⏲" U23F2 # TIMER CLOCK emoji
 <Multi_key><numbersign><KP_0>                                                              <colon> : "⏲" U23F2 # TIMER CLOCK emoji
-<UEFD0><1>                                                                                 <colon> : "⁝" U205D # TRICOLON
-<Multi_key><numbersign><1>                                                                 <colon> : "⁝" U205D # TRICOLON
-<UEFD0><KP_1>                                                                              <colon> : "⁝" U205D # TRICOLON
-<Multi_key><numbersign><KP_1>                                                              <colon> : "⁝" U205D # TRICOLON
-<UEFD0><2>                                                                                 <colon> : "※" U203B # REFERENCE MARK, Japanese kome
-<Multi_key><numbersign><2>                                                                 <colon> : "※" U203B # REFERENCE MARK, Japanese kome
-<UEFD0><KP_2>                                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
-<Multi_key><numbersign><KP_2>                                                              <colon> : "※" U203B # REFERENCE MARK, Japanese kome
+<UEFD0><1>                                                                                 <colon> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><numbersign><1>                                                                 <colon> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<UEFD0><KP_1>                                                                              <colon> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><numbersign><KP_1>                                                              <colon> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<UEFD0><2>                                                                                 <colon> : "‖" U2016 # DOUBLE VERTICAL LINE math
+<Multi_key><numbersign><2>                                                                 <colon> : "‖" U2016 # DOUBLE VERTICAL LINE math
+<UEFD0><KP_2>                                                                              <colon> : "‖" U2016 # DOUBLE VERTICAL LINE math
+<Multi_key><numbersign><KP_2>                                                              <colon> : "‖" U2016 # DOUBLE VERTICAL LINE math
 #
 #
 # # B10 semicolon, section
