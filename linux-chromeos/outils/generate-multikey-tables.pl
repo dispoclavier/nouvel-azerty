@@ -3,12 +3,12 @@
 # 2023-08-20T0243+0200
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
-# 2024-10-10T0335+0200
+# 2024-10-16T0021+0200
 # = last modified.
 #
-# Generates HTML tables of multi-key sequences from Compose.yml.
+# Generates HTML tables of multikey sequences from Compose.yml.
 #
-# In the input file, parsing starts at `START_MULTI_KEY`, and parsing stops at
+# In the input file, parsing starts at `START_MULTIKEY`, and parsing stops at
 # `START_MATH`.
 #
 # Section headings with a caret between the two leading hashes switch files.
@@ -30,6 +30,7 @@
 # The all-in-one table generated alongside can only be included in web pages in
 # WordPress when using the “Include partial” block provided by this plugin, as
 # posts with too much code in HTML blocks are not saved in WordPress.
+#
 #
 # Using old-style file handles.
 use warnings;
@@ -93,7 +94,7 @@ print WHOLEOUTPUT $start_tags;
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
-	if ( $line =~ /START_MULTI_KEY/ ) {
+	if ( $line =~ /START_MULTIKEY/ ) {
 		$parsing_on = !0;
 	}
 	if ( $line =~ /START_MATH/ ) {
@@ -119,7 +120,7 @@ while ( my $line = <INPUT> ) {
 	    open( OUTPUT, '>', $output_path ) or die $!;
 			$section_partial_open = !0;
 	    print( "Opened file $output_path for writing.\n" );
-			print( "Processing multi-key sequences from $input_path to $output_path.\n" );
+			print( "Processing multikey sequences from $input_path to $output_path.\n" );
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $comment -->\n";
 		}
