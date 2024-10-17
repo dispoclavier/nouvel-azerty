@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-08-30T0733+0200
+#                       Date : 2024-10-17T1950+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -75,11 +75,15 @@
 introduction=0 # Pas faite.
 function afficher {
 	if [ "$introduction" -eq 0 ]; then
-		echo '    Bienvenue dans l’installateur de dispositions de clavier Dispoclavier.'
-		echo '    En vérifiant brièvement l’existant avant de commencer, on peut noter :'
+		echo -e "\n    Bienvenue dans l’installateur de dispositions de clavier Dispoclavier.\n"
+		echo      '    En vérifiant brièvement l’existant avant de commencer, on peut noter :'
 		introduction=1 # Faite.
 	fi
 	echo "$fichier $1."
+}
+
+function confirmation {
+	read -n 1 -s -r -p "   Pour valider, appuyez sur n’importe quelle touche."
 }
 
 function installer_dispo {
@@ -129,12 +133,13 @@ function installer_dispo {
 		echo      '         dans ~/.config/dispoclavier/keycodes/evdev.'
 	fi
 	echo -e "\n     Tous les retours d’expérience sont les bienvenus."
-	echo      '     S’il manque quoi que ce soit, ou à tout autre sujet relatif,'
-	echo      '     n’hésitez pas à créer un rapport de bogue :'
-	echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
-	echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
-	echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
+	echo      '     S’il manque quoi que ce soit, ou à tout autre propos relatif,'
+	echo -e "\n     n’hésitez pas à créer un rapport de bogue :\n"
+	echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
+	echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
+	echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
 	echo -e "\n             Bonne utilisation !\n"
+	confirmation
 }
 
 function supprimer_dispo {
@@ -216,17 +221,16 @@ function supprimer_dispo {
 	if [ "$confirmer_suppression" -eq 1 ]; then
 		# Afficher un dernier message.
 		echo -e "\n  ✅  Ces dispositions de clavier viennent d’être désinstallées."
-		echo      '     À moins d’être réinstallées dans la foulée, ces dispositions'
-		echo      '     auront complètement disparu dès la prochaine session.'
 		echo -e "\n  ⚠  Les redispositions de touches ont été sauvegardées"
 		echo      '         à côté dans sauvegarde/evdev.c'
 		echo      '         et dans ~/.config/dispoclavier/keycodes/evdev.'
 		echo -e "\n     Tous les retours d’expérience sont les bienvenus."
-		echo -e "\n     N’hésitez pas à créer un rapport de bogue :"
-		echo      '     https://github.com/dispoclavier/nouvel-azerty/issues'
-		echo -e "\n     N’hésitez pas non plus à lancer une discussion :"
-		echo      '     https://github.com/dispoclavier/nouvel-azerty/discussions'
+		echo -e "\n     N’hésitez pas à créer un rapport de bogue :\n"
+		echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
+		echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
+		echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
 		echo -e "\n             Merci d’avoir utilisé Dispoclavier.\n"
+		confirmation
 	fi
 }
 
@@ -795,6 +799,7 @@ if [ "$fonctionne" -eq 1 ]; then
 			echo      '     sur la page de la version la plus récente :'
 			echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
 			echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+			confirmation
 		fi
 	else
 		if [ "$installation" -eq 1 ]; then
@@ -838,4 +843,5 @@ else
 	echo      '     du fichier "Compose.yml", qui va dans le dossier personnel, et dans'
 	echo      '     chacun des fichiers qui se trouvent dans le dossier "installer/"'.
 	echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+	confirmation
 fi
