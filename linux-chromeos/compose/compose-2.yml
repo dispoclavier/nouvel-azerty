@@ -728,23 +728,22 @@
 #
 # # Composed diacriticized letters
 #
+#   The XCompose compiler does not parse results defined as multiple keysyms.
+#   Composed letters must be defined as literal strings without keysyms.
+#
+#   In en_US.UTF-8/Compose, the only composed Latin letter is the uppercase and
+#   lowercase "j" with acute accent by dead_acute or by multikey with prepended
+#   or appended ASCII apostrophe or Latin-1 acute:
+#
+#       "J́"   # LATIN CAPITAL LETTER J U004A with COMBINING ACUTE ACCENT U0301
+#       "j́"   # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
+#
 #   Due to a technical limitation on Windows, caused by defining the wrong data
 #   type for dead key output i.e. for the DEADTRANS function’s return value, we
 #   cannot get composed letters nor characters from a Supplemental Multilingual
 #   Plane output by dead keys in the Text Services Framework of Windows. Hence,
-#   this section is not cross-platform compatible. When porting this on Windows
-#   programmatically, the script needs to filter out all composed letters while
-#   listing them in an extra file for documentation in order to advise to input
-#   these sequences on Windows by adding combining diacritics.
+#   this section is not cross-platform compatible.
 #   See # # Combining diacritics
-#
-#   However, in the Unicode encoding model, precomposed letters with peripheral
-#   marks are considered legacy; no new ones are encoded any more.
-#   As a result, many composed letters with diacritics are used in practice.
-#
-#   In XCompose, composed letters must be defined as literal strings.
-#   The only Latin composed letter in en_US.UTF-8/Compose is J WITH ACUTE.
-#   Cyrillic has more.
 #
 #
 # # Composed letters for languages in Togo
@@ -758,8 +757,8 @@
 #   semiautomatic keyboard layout “kbfrAFs” and its remapped variant “kbfrAFsr”
 #   that have live keys for open e (Latin epsilon) and open o.
 #
-#   The shared list also includes M, m with grave accent. Here this is sorted
-#   in dead_grave for consistency.
+#   "M" and "m" with grave accent, included in the shared list, are moved to
+#   dead_grave for consistency.
 #   See #*# GRAVE
 #
 <dead_tilde><dead_grave>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
@@ -8148,6 +8147,28 @@
 <Multi_key><numbersign>                                                                    <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
 #
 #
+# # Micro sign
+#
+#   In any event and for convenience, the micro sign is also in group 1 of the
+#   greater-than double angle quotation mark, on the same key, level 5, as the
+#   group dead key on unremapped layouts of this family, and as the micro sign
+#   printed on the C12 keycap of French AZERTY.
+#
+#   For consistency, the nearby percent sign has a similar facility, and the
+#   multicharacter strings with an NBTSP next to the guillemets are supported,
+#   too. However, the single guillemets are used for "❮" U276E, "❯" U276F.
+#   See # # Ornamental angle quotation marks
+#
+<UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign>                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
+<UEFD0>                                                                                    <UEF65> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign>                                                                    <UEF65> : "µ" U00B5 # MICRO SIGN
+<UEFD0>                                                                            <guillemotleft> : "%" U0025 # PERCENT SIGN
+<Multi_key><numbersign>                                                            <guillemotleft> : "%" U0025 # PERCENT SIGN
+<UEFD0>                                                                                    <UEF64> : "%" U0025 # PERCENT SIGN
+<Multi_key><numbersign>                                                                    <UEF64> : "%" U0025 # PERCENT SIGN
+#
+#
 # # HAIR SPACE
 #
 #   HAIR SPACE may be used in English between single and double quotation marks
@@ -11330,6 +11351,14 @@
 #       "ᵩ" U1D69 # GREEK SUBSCRIPT SMALL LETTER PHI
 #       "ᵪ" U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
 #
+#   This started supporting "⃨" U20E8 COMBINING TRIPLE UNDERDOT when it was
+#   moved in the wake of freeing up groups 1..3 of numbersign, with the
+#   rationale that combining below is lower than the baseline ellipsis, on live
+#   key except in ASCII mode, and that this character has other input methods,
+#   too.
+#   See #*# DOT_BELOW
+#   See # # C01 numbersign
+#
 #   The associated diacritic and its spacing clone are built on the underscore
 #   theme hinted by the subscript’s TeX command: "̲" U0332 and ASCII "_" U005F.
 #   See #*# SUPERSCRIPT
@@ -11352,6 +11381,8 @@
 <Multi_key><underscore>                                                               <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
 <UEFD2>                                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
 <Multi_key><underscore>                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
+<UEFD2>                                                                                 <ellipsis> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><underscore>                                                                 <ellipsis> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <UEFD2>                                                                                        <0> : "₀" U2080 # SUBSCRIPT ZERO
 <Multi_key><underscore>                                                                        <0> : "₀" U2080 # SUBSCRIPT ZERO
 <UEFD2>                                                                                     <KP_0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -12895,12 +12926,6 @@
 <Multi_key><slash><numbersign><KP_3>                                                  <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
 <dead_stroke><UEFD0><UEFD0><UEFD0>                                                    <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><slash><numbersign><numbersign><numbersign>                                <apostrophe> : "⊅" U2285 # NOT A SUPERSET OF
-<dead_stroke><UEFD0><3>                                                                      <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><slash><numbersign><3>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
-<dead_stroke><UEFD0><KP_3>                                                                   <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><slash><numbersign><KP_3>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
-<dead_stroke><UEFD0><UEFD0><UEFD0>                                                           <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><slash><numbersign><numbersign><numbersign>                                       <bar> : "∦" U2226 # NOT PARALLEL TO
 <dead_stroke><UEFD0><3>                                                                        <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
 <Multi_key><slash><numbersign><3>                                                              <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
 <dead_stroke><UEFD0><KP_3>                                                                     <L> : "Ƛ" UA7DC # LATIN CAPITAL LETTER LAMBDA WITH STROKE
@@ -12970,6 +12995,10 @@
 <Multi_key><slash><numbersign><1>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_stroke><UEFD0><KP_1>                                                                     <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_1>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
+<dead_stroke><UEFD0><1>                                                                      <bar> : "∦" U2226 # NOT PARALLEL TO
+<Multi_key><slash><numbersign><1>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
+<dead_stroke><UEFD0><KP_1>                                                                   <bar> : "∦" U2226 # NOT PARALLEL TO
+<Multi_key><slash><numbersign><KP_1>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
 #
 #
 # # STROKE&GROUP_12
@@ -12979,6 +13008,10 @@
 <Multi_key><slash><numbersign><2>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_stroke><UEFD0><KP_2>                                                                     <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_2>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
+<dead_stroke><UEFD0><2>                                                                      <bar> : "∦" U2226 # NOT PARALLEL TO
+<Multi_key><slash><numbersign><2>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
+<dead_stroke><UEFD0><KP_2>                                                                   <bar> : "∦" U2226 # NOT PARALLEL TO
+<Multi_key><slash><numbersign><KP_2>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
 #
 #
 # # STROKE&ACUTE
@@ -16340,10 +16373,14 @@
 #
 #   Digits yield multidot punctuation.
 #
-#   Beware of the glyph disturbance affecting fonts shipped with Ubuntu 16.04,
-#   that makes "⸪" U2E2A TWO DOTS OVER ONE DOT PUNCTUATION look like
-#   "⸬" U2E2C SQUARED FOUR DOT PUNCTUATION, this like
-#   "⸫" U2E2B ONE DOT OVER TWO DOTS PUNCTUATION, and this like U2E2A.
+#   "⃨" U20E8 COMBINING TRIPLE UNDERDOT is also supported, by underscore, since
+#   this diacritic needed to be moved in the wake of freeing up groups 1..3 of
+#   numbersign, with the rationale that it is a variant of underdot, and that
+#   the option dead_belowdot double press followed by period is less intuitive
+#   and far more impractical.
+#   See #^# VERTICAL_LINE_BELOW
+#   See #*# SUBSCRIPT
+#   See # # C01 numbersign
 #
 <dead_belowdot>                                                                            <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
@@ -16353,6 +16390,8 @@
 <Multi_key><exclam>                                                                 <nobreakspace> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <U202F> : "⸳" U2E33 # RAISED DOT
 <Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
+<dead_belowdot>                                                                       <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><exclam>                                                                   <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
@@ -16365,10 +16404,10 @@
 <Multi_key><exclam>                                                                            <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
-<dead_belowdot>                                                                                <3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
-<Multi_key><exclam>                                                                            <3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
-<dead_belowdot>                                                                             <KP_3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
-<Multi_key><exclam>                                                                         <KP_3> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<dead_belowdot>                                                                                <3> : "⁝" U205D # TRICOLON
+<Multi_key><exclam>                                                                            <3> : "⁝" U205D # TRICOLON
+<dead_belowdot>                                                                             <KP_3> : "⁝" U205D # TRICOLON
+<Multi_key><exclam>                                                                         <KP_3> : "⁝" U205D # TRICOLON
 <dead_belowdot>                                                                                <4> : "⁞" U205E # VERTICAL FOUR DOTS
 <Multi_key><exclam>                                                                            <4> : "⁞" U205E # VERTICAL FOUR DOTS
 <dead_belowdot>                                                                             <KP_4> : "⁞" U205E # VERTICAL FOUR DOTS
@@ -16498,6 +16537,14 @@
 #   Multi_key: ¦!!
 #   Dchar: 
 #
+#   This also supports "⃨" U20E8 COMBINING TRIPLE UNDERDOT since it was moved
+#   in the wake of freeing up groups 1..3 of numbersign, with the rationale
+#   that although this option might be considered impractical and even
+#   unintuitive, it is somewhat consistent.
+#   See # # C01 numbersign
+#   See #*# DOT_BELOW
+#   See #*# SUBSCRIPT
+#
 <dead_belowdot><dead_belowdot>                                                             <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                             <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
@@ -16506,8 +16553,6 @@
 <Multi_key><exclam><exclam>                                                         <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                             <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
@@ -16516,6 +16561,10 @@
 <Multi_key><exclam><exclam>                                                           <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                              <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                 <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<dead_belowdot><dead_belowdot>                                                            <period> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><exclam><exclam>                                                               <period> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot><dead_belowdot>                                                                 <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
