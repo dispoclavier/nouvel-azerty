@@ -1,8 +1,8 @@
 #                      Scope: part 2 of Compose
 #                    Version: See `compose-1.yml`
 #                   Encoding: UTF-8
-#                       Type: text/XCompose configuration
-#                Description: Multicharacter strings for live keys and dead key content.
+#                       Type: text/XCompose
+#                Description: Multicharacter and multikey configuration
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
 #        Syntax highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file `Compose.yml`.
@@ -8140,7 +8140,7 @@
 #
 #   Angle quotation mark ornaments are in group 3 of bracketleft and -right,
 #   together with angle bracket ornaments in group 2. The former are also in
-#   group 1 of single angle quotation marks, as added here.
+#   group 1 of single angle quotation marks, as configured here.
 #
 <UEFD0>                                                                                    <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <Multi_key><numbersign>                                                                    <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
@@ -8152,23 +8152,33 @@
 #
 #   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonic, key C12
 #   for hardware compatibility). It has dead key support here because there is
-#   no room in the symbol groups, and most importantly, because the purpose of
-#   this fallback is to cope with a malware simulator shipped with Windows that
-#   requires incomplete (dumbed-down) keyboard layouts.
+#   no room in the appropriate symbol groups of bar on the M key, and because
+#   the purpose of this fallback is to cope with a malware simulator shipped
+#   with Windows that requires incomplete keyboard layouts, while dumbing down
+#   a keyboard layout involves removing the level-5 modifier, and U00B5 is on
+#   level 7 in the first place, both on C12 and on AZERTY M (C10).
 #   https://dispoclavier.com/nouvel-azerty/#malware-windows
 #
 #   In any event and for convenience, the micro sign is thus in group 1 of the
-#   greater-than double angle quotation mark, on the same key, level 5, as the
-#   group dead key on unremapped layouts of this family, and as the micro sign
-#   printed on the C12 keycap of French AZERTY, since angle quotation marks
-#   "«" U00AB, "»" U00BB, "‹" U2039, and "›" U203A are on live keys.
+#   greater-than* double angle quotation mark, that has a live key position on
+#   the same key C12 as the group dead key on unremapped layouts of this family
+#   and as the micro sign on French AZERTY. "»" U00BB is on level 5 of regular
+#   layouts, or on level 3 of dumbed-down layouts, while "<NBTSP>»" UEF65 is on
+#   level 2 both on regular and dumbed-down layouts.
 #
-#   For consistency, the nearby percent sign has a similar facility, and the
-#   multicharacter strings with an NBTSP next to the guillemets are supported,
-#   too.
+#   For consistency, the nearby percent sign, on key C11 of French AZERTY, is
+#   given a similar facility, and the multicharacter strings of spaced-out
+#   guillemets with an NBTSP inside (after/before) are supported, too.
 #
-#   By contrast, the single guillemets are used for "❮" U276E, "❯" U276F.
+#   By contrast, group 1 of single guillemets is used for "❮" U276E, "❯" U276F.
 #   See # # Ornamental angle quotation marks
+#
+#   * "»" U00BB is referred to as "greater-than double angle quotation mark",
+#     since it is always similar in shape to two ">" U003E GREATER-THAN SIGN,
+#     while its other attributes (right, left, closing, opening) depend on the
+#     context it is used in (left-to-right scripts or right-to-left scripts as
+#     of the pointing direction, and the language as of the opening or closing
+#     semantics).
 #
 <UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign>                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
@@ -8355,8 +8365,8 @@
 #
 # # Basic double arrows
 #
-#   Live in default mode on Shift + AltGr + numpad.
-#   Live in   ASCII mode on Shift + AltFr + numpad.
+#   Live in default mode on Shift + AltGr + numpad.
+#   Live in   ASCII mode on Shift + AltFr + numpad.
 #
 <UEFD0><3>                                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><numbersign><3>                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
@@ -8451,8 +8461,8 @@
 #
 #   Arrow emoji are a mix of black and basic simple arrows.
 #
-#   Live in default mode on AltFr + numpad.
-#   Live in   ASCII mode on AltGr + AltFr + numpad.
+#   Live in default mode on AltFr + numpad.
+#   Live in   ASCII mode on AltGr + AltFr + numpad.
 #
 <UEFD0><4>                                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><numbersign><4>                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -8543,8 +8553,8 @@
 #
 # # Black or filled arrows
 #
-#   Live in default mode on Shift + AltFr + numpad.
-#   Live in   ASCII mode on Shift + AltGr + AltFr + numpad.
+#   Live in default mode on Shift + AltFr + numpad.
+#   Live in   ASCII mode on Shift + AltGr + AltFr + numpad.
 #
 <UEFD0><5>                                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
 <Multi_key><numbersign><5>                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
@@ -8595,8 +8605,8 @@
 #
 # # White or empty, outline arrows
 #
-#   Live in default mode on Shift + AltGr + AltFr + numpad.
-#   Live in   ASCII mode on Shift + AltGr + numpad.
+#   Live in default mode on Shift + AltGr + AltFr + numpad.
+#   Live in   ASCII mode on Shift + AltGr + numpad.
 #
 <UEFD0><6>                                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
 <Multi_key><numbersign><6>                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
@@ -8647,7 +8657,7 @@
 #
 # # Triangle-headed arrows
 #
-#   Live in default mode on AltGr + AltFr + numpad.
+#   Live in default mode on AltGr + AltFr + numpad.
 #   Live in   ASCII mode on AltGr + numpad.
 #
 <UEFD0><7>                                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
@@ -12048,8 +12058,8 @@
 #   looking close to it, both half rings "ʾ" U02BE, "ʿ" U02BF are provided as a
 #   workaround, with a rationale based on the laterality of the AltFr and AltGr
 #   modifier keys involved in typing these left and right half rings this way.
-#   AltGr + space yields nobreakspace, and the no-break thin space U202F is on
-#   AltFr + space.
+#   AltGr + space yields nobreakspace, and the no-break thin space U202F is on
+#   AltFr + space.
 #
 <UEFD3>                                                                                    <space> : "̉" U0309 # COMBINING HOOK ABOVE
 <Multi_key><bracketright>                                                                  <space> : "̉" U0309 # COMBINING HOOK ABOVE
@@ -13502,6 +13512,9 @@
 #       <dead_circumflex><n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX: Min Nan
 #
 #   Courtesy https://www.frathwiki.com/Circumflex
+#
+#   For maintainability, these overridden sequences have been removed.
+#   https://github.com/dispoclavier/nouvel-azerty/commit/f1d465e92b885ae0659bfaa5d3d418f18b7f2b13
 #
 #   Cross-platform compatibility is full on MacOS, but only partial on Windows,
 #   that is able to support only lowercase, and only digrams, provided that the
