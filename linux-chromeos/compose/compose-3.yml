@@ -565,16 +565,19 @@
 #
 #   Since v1.7.0, dead_greek is also mapped on level 3 instead of the at sign,
 #   that is supported on base level E11, making its level 3 D06 alias redundant
-#   and making this position available for an easier dead_greek alias.
-#
-#   As a consequence, dead_greek must work as an alias base character for the
-#   symbol groups.
+#   so that this position is available for an easier dead_greek duplicate. As a
+#   consequence, dead_greek must work as an alias base character for the symbol
+#   groups.
 #
 #   "◌" U25CC is in group 1 as the usual pick for the dotted circle, a generic
 #   base character for combining diacritics.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=80
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=132&zoom=100,0,410
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=950
+#
+#   The alternative X-filled checkbox "⮽" U2BBD is here because it has no room
+#   in the groups of the checkbox-supporting symbol bar.
+#   See # # C10 bar
 #
 <UEFD0>                                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
 <Multi_key><numbersign>                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
@@ -648,14 +651,14 @@
 <Multi_key><numbersign><KP_9>                                                                 <at> : "♍" U264D # VIRGO emoji
 <UEFD0><KP_9>                                                                         <dead_greek> : "♍" U264D # VIRGO emoji
 <Multi_key><numbersign><KP_9>                                                         <dead_greek> : "♍" U264D # VIRGO emoji
-<UEFD0><0>                                                                                    <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><0>                                                                    <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<UEFD0><0>                                                                            <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><0>                                                            <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<UEFD0><KP_0>                                                                                 <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><KP_0>                                                                 <at> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<UEFD0><KP_0>                                                                         <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><numbersign><KP_0>                                                         <dead_greek> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><0>                                                                                    <at> : "❍" U274D # SHADOWED WHITE CIRCLE
+<Multi_key><numbersign><0>                                                                    <at> : "❍" U274D # SHADOWED WHITE CIRCLE
+<UEFD0><0>                                                                            <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
+<Multi_key><numbersign><0>                                                            <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
+<UEFD0><KP_0>                                                                                 <at> : "❍" U274D # SHADOWED WHITE CIRCLE
+<Multi_key><numbersign><KP_0>                                                                 <at> : "❍" U274D # SHADOWED WHITE CIRCLE
+<UEFD0><KP_0>                                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
+<Multi_key><numbersign><KP_0>                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
 <UEFD0><1>                                                                                    <at> : "⁁" U2041 # CARET INSERTION POINT
 <Multi_key><numbersign><1>                                                                    <at> : "⁁" U2041 # CARET INSERTION POINT
 <UEFD0><1>                                                                            <dead_greek> : "⁁" U2041 # CARET INSERTION POINT
@@ -664,14 +667,14 @@
 <Multi_key><numbersign><KP_1>                                                                 <at> : "⁁" U2041 # CARET INSERTION POINT
 <UEFD0><KP_1>                                                                         <dead_greek> : "⁁" U2041 # CARET INSERTION POINT
 <Multi_key><numbersign><KP_1>                                                         <dead_greek> : "⁁" U2041 # CARET INSERTION POINT
-<UEFD0><2>                                                                                    <at> : "❍" U274D # SHADOWED WHITE CIRCLE
-<Multi_key><numbersign><2>                                                                    <at> : "❍" U274D # SHADOWED WHITE CIRCLE
-<UEFD0><2>                                                                            <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
-<Multi_key><numbersign><2>                                                            <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
-<UEFD0><KP_2>                                                                                 <at> : "❍" U274D # SHADOWED WHITE CIRCLE
-<Multi_key><numbersign><KP_2>                                                                 <at> : "❍" U274D # SHADOWED WHITE CIRCLE
-<UEFD0><KP_2>                                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
-<Multi_key><numbersign><KP_2>                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
+<UEFD0><2>                                                                                    <at> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><2>                                                                    <at> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><2>                                                                            <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><2>                                                            <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><KP_2>                                                                                 <at> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><KP_2>                                                                 <at> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><KP_2>                                                                         <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<Multi_key><numbersign><KP_2>                                                         <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 #
 #
 # # D07 apostrophe
@@ -901,8 +904,10 @@
 #
 #   The first three positions are inaccessible by multikey equivalents, due to
 #   an inavoidable interference of numbersign with itself. As a consequence,
-#   for cross-platform compatibility, these positions cannot be used.
+#   for cross-platform compatibility, these positions cannot be used. Only the
+#   light checkbox "⮽" U2BBD remains in its place in group 10.
 #   See # # Notes for maintenance
+#   See # # C10 bar
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
 #   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two
@@ -954,10 +959,10 @@
 <Multi_key><numbersign><9>                                                            <numbersign> : "♒" U2652 # AQUARIUS emoji
 <UEFD0><KP_9>                                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
 <Multi_key><numbersign><KP_9>                                                         <numbersign> : "♒" U2652 # AQUARIUS emoji
-<UEFD0><0>                                                                            <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<Multi_key><numbersign><0>                                                            <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<UEFD0><KP_0>                                                                         <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
-<Multi_key><numbersign><KP_0>                                                         <numbersign> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
+<UEFD0><0>                                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><0>                                                            <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<UEFD0><KP_0>                                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><numbersign><KP_0>                                                         <numbersign> : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
 <UEFD0><1>                                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN math
 <Multi_key><numbersign><1>                                                            <numbersign> : "♯" U266F # MUSIC SHARP SIGN math
 <UEFD0><KP_1>                                                                         <numbersign> : "♯" U266F # MUSIC SHARP SIGN math
@@ -1444,25 +1449,14 @@
 #   See # # STROKE&GROUP_12
 #
 #   The empty and filled checkboxes are supported here with slight mnemonics of
-#   "|" and nearby "]", because the same groups of "#" are unusable. Sadly, the
-#   light variant "⮽" U2BBD cannot. As a workaround, it is in group 10 of "@".
-#   See # # D06 at, dead_greek
+#   "|" and nearby "]", because the same groups of "#" are unusable. The light
+#   variant "⮽" U2BBD cannot, but it remains in its place in group 10 of "#".
 #   See # # C01 numbersign
 #
 #   What these positions are not used for is single, double and triple daggers,
 #   more extensively supported together with their left/right guard or turned
 #   counterparts in tilde followed by digits 1 through 6.
 #   See #*# TILDE
-#
-#   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonic, key C12
-#   for hardware compatibility). Its presence in group 11 is designed only as a
-#   fallback, for incomplete layouts required to cope with a malware simulator
-#   shipped with Windows.
-#   https://dispoclavier.com/nouvel-azerty/#malware-windows
-#
-#   "¦" U00A6 BROKEN BAR repurposed as multikey symbol is in group 12 although
-#   it is more easily input through dead_diaeresis followed by backslash.
-#   See # # Symbols for multikey and composition
 #
 <UEFD0>                                                                                      <bar> : "☐" U2610 # BALLOT BOX
 <Multi_key><numbersign>                                                                      <bar> : "☐" U2610 # BALLOT BOX
@@ -2088,6 +2082,17 @@
 # # B09 colon
 #
 #   The watch emoji are mapped here based on the mnemonic of time notation.
+#
+#   "¦" U00A6 BROKEN BAR repurposed as multikey symbol is in group 11, where
+#   the “double” mnemonic is carried by the colon base character, while the
+#   “single” mnemonic is in the group number, as opposed to group 12 used for
+#   "‖" U2016 DOUBLE VERTICAL LINE, consistently with "∥" U2225 in the same
+#   group of bar.
+#   See # # C10 bar
+#
+#   For an easier input method with respect to its potential high frequency,
+#   "¦" U00A6 is also in dead_diaeresis followed by backslash.
+#   See # # Symbols for multikey and composition
 #
 <UEFD0>                                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR math
 <Multi_key><numbersign>                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR math
