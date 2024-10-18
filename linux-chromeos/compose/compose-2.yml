@@ -7925,12 +7925,13 @@
 #   Multi_key: ¦#
 #   Dchar: "①" U2460
 #
-#   Group 1 of every digit activates the corresponding group from 3 through 12.
-#   See ### Group dead key introduction
-#
 #   For balance, this section is limited to digits and non-ASCII symbols.
 #   See ### Space and symbol groups
 #   See ### Letter groups
+#
+#   Group 1 of every digit activates the corresponding group from 3 through 12.
+#   As a consequence, group 1 of digits is not available for mapping.
+#   See ### Group dead key introduction
 #
 #
 # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
@@ -8149,14 +8150,24 @@
 #
 # # Micro sign
 #
-#   In any event and for convenience, the micro sign is also in group 1 of the
+#   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonic, key C12
+#   for hardware compatibility). It has dead key support here because there is
+#   no room in the symbol groups, and most importantly, because the purpose of
+#   this fallback is to cope with a malware simulator shipped with Windows that
+#   requires incomplete (dumbed-down) keyboard layouts.
+#   https://dispoclavier.com/nouvel-azerty/#malware-windows
+#
+#   In any event and for convenience, the micro sign is thus in group 1 of the
 #   greater-than double angle quotation mark, on the same key, level 5, as the
 #   group dead key on unremapped layouts of this family, and as the micro sign
-#   printed on the C12 keycap of French AZERTY.
+#   printed on the C12 keycap of French AZERTY, since angle quotation marks
+#   "«" U00AB, "»" U00BB, "‹" U2039, and "›" U203A are on live keys.
 #
 #   For consistency, the nearby percent sign has a similar facility, and the
 #   multicharacter strings with an NBTSP next to the guillemets are supported,
-#   too. However, the single guillemets are used for "❮" U276E, "❯" U276F.
+#   too.
+#
+#   By contrast, the single guillemets are used for "❮" U276E, "❯" U276F.
 #   See # # Ornamental angle quotation marks
 #
 <UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
