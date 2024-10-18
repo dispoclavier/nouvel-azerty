@@ -4,8 +4,8 @@
 <UEFA0>                     : "version 4.7.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
-#                       Type: text/XCompose configuration
-#                Description: Multicharacter strings for live keys and dead key content.
+#                       Type: text/XCompose
+#                Description: Multicharacter and multikey configuration
 #                   Platform: Linux using XKB with XCompose*
 #        Syntax highlighting: YAML
 #
@@ -154,7 +154,7 @@
 #   Dead key handling XCompose has the ability to output more than one single
 #   code unit, outperforming the misdesigned Windows Text Services Framework,
 #   that can do so by live keys only, and is limited to 16 UTF-16 code units,
-#   and even to only 4 code units on Shift + Ctrl + Alt (modifier byte 0x07),
+#   and even to only 4 code units on Shift + Ctrl + Alt (modifier byte 0x07),
 #   as opposed to XCompose, that does not impose any upper limit on the result
 #   string length, and also handles multicharacter output on single live key
 #   press.
@@ -233,6 +233,23 @@
 #   unless such spelling makes for awkward reading.”
 #   https://brand.tennessee.edu/content-strategy/writing-guide/spelling-and-hyphenation/
 #
+#   Parsing the multikey section, the generate-multikey-tables.pl script needs
+#   a caret between the leading hashes of a subsection heading to start a new
+#   subsection partial table file.
+#   See # # Notes about documentation
+#
+#   The broken bar "¦" U00A6 is repurposed as multikey symbol.
+#   See # # Symbols for multikey and composition
+#
+#   For readability, inline literal multikey sequences are bracketed with
+#   French-style (no-break thin) space padded double angle quotation marks,
+#   because quotedbl, backtick, period, comma and other ASCII symbols likely
+#   to occur next to multikey sequences may also be part of multikey seqences.
+#   The padding space is NBTSP for convenience and consistency. By contrast,
+#   the plus sign after modifier key notations is not NBTSP-padded (although
+#   it normally should be), for maintainability/searchability, and assuming
+#   that NBTSP would be pointless with fixed-width fonts and hard line breaks.
+#
 #
 # # Breton polygraphs
 #
@@ -270,7 +287,7 @@
 #
 #   The variants for Breton and French "kbbrFRs" and "kbbrFRsr" have the Breton
 #   trigraph on Base and Shift levels of key E01 additionally to the support of
-#   the Breton trigraph on (Shift +) AltGr + AltFr + A.
+#   the Breton trigraph on (Shift +) AltGr + AltFr + A.
 #
 #   The Breton trigraph got mnemonic keysyms in keysymdef.h, configured here to
 #   ensure regular support.
@@ -512,13 +529,13 @@
 #   Primarily intended for the extended AltFr-level numpad on the alphanumeric
 #   block. On the dedicated numpad, this may be mapped on Shift + KP_0, since
 #   the cursor key feature on the numpad is deactivated as outdated, redundant
-#   and wasting these now repurposed Shift + KP_* positions.
+#   and wasting these now repurposed Shift + KP_* positions.
 #
 <UEF6D> : "00" #
 #
 #   A triple zero key is useful only on the dedicated numpad. On the extended
 #   AltFr-level numpad, a triple zero is easily input by simultaneously hitting
-#   single and double zeros on AltFr + N and AltFr + B. As a consequence, this
+#   single and double zeros on AltFr + N and AltFr + B. As a consequence, this
 #   triple zero was dropped. But later (2021-07-01T0458+0200) it was readded as
 #   UEF7D for Shift + KP_1.
 #
@@ -889,18 +906,7 @@
 #   Multi_key
 #   Dchar: "¦" U00A6
 #
-#   The generate-multikey-tables.pl script requires a caret between the leading
-#   hashes of a subsection heading to start a new subsection partial table file
-#   while processing the multikey section.
-#   See # # Notes about documentation
-#
-#   The broken bar "¦" U00A6 is repurposed as multikey symbol.
-#   See # # Symbols for multikey and composition
-#
-#   For readability, inline literal multikey sequences are bracketed with
-#   French-style no-break thin space padded double angle quotation marks,
-#   because quotedbl, backtick, period, comma and other ASCII symbols likely
-#   to occur next to multikey sequences may also be part of multikey seqences.
+#   See # # Notes about syntax
 #
 #
 #^# Legacy ordinal indicators
@@ -3302,7 +3308,7 @@
 #   See #*# REVERSED
 #
 #   Sequences including quotedbl need to be replicated using EuroSign instead,
-#   since the euro sign replaces quotedbl on AltGr/Option + E.
+#   since the euro sign replaces quotedbl on AltGr/Option + E.
 #
 #   Sequences including semicolon need to be replicated using section instead,
 #   since the section sign replaces the semicolon in French mode.
@@ -5906,7 +5912,9 @@
 <Multi_key><minus><minus><greater><plus>                                            <nobreakspace> : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><minus><plus>                                                      <space> : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><minus><plus>                                               <nobreakspace> : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
-#   This sequence for U2947 with a leading <minus> and following <x> is possible because there is no barred x, see #*# BAR
+#   This sequence for U2947 with a leading minus and following "x" is possible
+#   because there is no barred x.
+#   See #*# BAR
 <Multi_key><minus><x><minus><greater>                                                      <space> : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
 <Multi_key><minus><x><minus><greater>                                               <nobreakspace> : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
 <Multi_key><less><minus><o><minus><greater>                                                <space> : "⥈" U2948 # LEFT RIGHT ARROW THROUGH SMALL CIRCLE
