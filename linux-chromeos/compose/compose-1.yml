@@ -67,9 +67,10 @@
 #                                      locale in /usr/share/X11/locale/compose.dir; for fr_FR:
 #                                      /usr/share/X11/locale/en_US.UTF-8/Compose
 #                                   2. Append Compose.yml to the original Compose file.
-#                                      Prepending instead of appending breaks U1E7A and U1E7B
-#                                      overriding U01D5 and U01D6, and "V́" and "v́" overriding
-#                                      U01D7 and U01D8, as defined in en_US.UTF-8/Compose.
+#                                      Prepending instead of appending breaks U1E7A and U1E7B,
+#                                      that need to override U01D5 and U01D6 as defined in
+#                                      en_US.UTF-8/Compose. The same holds true for "V́", "v́"
+#                                      overriding legacy sequences for U01D7 and U01D8.
 #
 #                                B. User level, with Compose in the $HOME directory:
 #                                   1. Back up the file ~/.XCompose.
