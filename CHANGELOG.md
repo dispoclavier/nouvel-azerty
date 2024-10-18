@@ -4,11 +4,13 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.7.0 (projet)
 
-Meilleure compatibilité multiplateforme par la suppression des groupes 1 à 3 du croisillon.
+Meilleure compatibilité multiplateforme grâce à la suppression des trois premiers groupes du croisillon.
 
 Prise en charge des lettres grecques polytoniques, par respect pour les utilisateurs et pour le grec.
 
-Amélioration de la versatilité des variantes redisposées.
+Amélioration de la versatilité de la disposition de base et des variantes redisposées.
+
+Robustesse des scripts d’installation et d’activation.
 
 * Disposition : Variantes redisposées : Redonder le trait d’union insécable "‑" U+2011 sur Maj + E06 à la place de "Ù", qui est en Verrouillage Capitales. dispotypes.c [cb06597](https://github.com/dispoclavier/nouvel-azerty/commit/cb0659700d0591c4877274dc4c4563bf4fcbb097), dispocla.cpp [0d88beb](https://github.com/dispoclavier/nouvel-azerty/commit/0d88beb8f3d64d7b15a65625964ef86c16c799b3)
 * Composition : Redonder "⮽" U+2BBD par « ¦[XL] ». compose-1.yml [8f3df49](https://github.com/dispoclavier/nouvel-azerty/commit/8f3df4982258ad5df65b97761d762c15fd04e02f), [021b40d](https://github.com/dispoclavier/nouvel-azerty/commit/021b40df65b6f797e779a5fe5448f21b228f8f99)
@@ -86,11 +88,14 @@ Redisposition des trois premiers groupes du tiret bas.
 
 * Composition : Classer les puces. compose-1.yml [f57e338](https://github.com/dispoclavier/nouvel-azerty/commit/f57e3380a1d6ddd40c86891a0a7cc0bd630bcf75)
 * Transformations :
-	* Groupes des symboles : Redonder "‣" U+2023 à la place de "◦" U+25E6, qui prend la place de "•" U+2022, qui prend la place de "―" U+2015, qui est sur touche vive ou dans le groupe 1 de "ɔ" U+0254, "Ɔ" U+0186, "ñ" U+00F1, "Ñ" U+00D1, "ʻ" U+02BB, "‑" U+2011, dans raie haute et en composition par « ¦8- ». compose-3.yml [d93a4d9](https://github.com/dispoclavier/nouvel-azerty/commit/d93a4d994914a50073429b5e6aade265eec61281), compose-1.yml [f57e338](https://github.com/dispoclavier/nouvel-azerty/commit/f57e3380a1d6ddd40c86891a0a7cc0bd630bcf75)
+	* Groupes des symboles : Redonder "‣" U+2023 à la place de "◦" U+25E6, qui prend la place de "•" U+2022, qui prend la place de "―" U+2015, qui est sur touche vive ou dans le groupe 1 de "ɔ" U+0254, "Ɔ" U+0186, "ñ" U+00F1, "Ñ" U+00D1, "ʻ" U+02BB, "‑" U+2011, dans raie haute et en composition par « ¦8- ». compose-3.yml [d93a4d9](https://github.com/dispoclavier/nouvel-azerty/commit/d93a4d994914a50073429b5e6aade265eec61281)
 	* Accent aigu : Supprimer "ʻ" U+02BB (par ","), qui est dans le groupe 1 de "`" et va dans accent circonflexe (par ","). compose-2.yml [6994434](https://github.com/dispoclavier/nouvel-azerty/commit/6994434b505b5808e887099048acbd26c1da451d)
 	* Accent circonflexe : Redonder "ʻ" U+02BB (par ",") à la place de "ʼ" U+02BC, qui est dans le groupe 1 de "'" et "’". ibidem
 	* Accent grave : Supprimer "ʻ" U+02BB (par ","), qui est dans le groupe 1 de "`" et va dans accent circonflexe (par ","). ibidem
 	* Cédille et accent aigu : Rétablir la symétrie des séquences. ibidem
+* Documentation :
+	* Améliorer la lisibilité des intertitres des groupes des symboles. compose-3.yml [d93a4d9](https://github.com/dispoclavier/nouvel-azerty/commit/d93a4d994914a50073429b5e6aade265eec61281), compose-1.yml [f57e338](https://github.com/dispoclavier/nouvel-azerty/commit/f57e3380a1d6ddd40c86891a0a7cc0bd630bcf75), compose-2.yml [6994434](https://github.com/dispoclavier/nouvel-azerty/commit/6994434b505b5808e887099048acbd26c1da451d)
+	* Corriger des annotations. ibidem
 
 ## 4.3.1 (2024-09-22)
 
