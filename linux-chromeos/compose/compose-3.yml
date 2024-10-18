@@ -334,7 +334,7 @@
 #
 #   Since quotedbl is mapped on the E key in order to be replaced with EuroSign
 #   for compliance with the related recommendation from the European Commission
-#   to map € on AltGr + E, EuroSign works as a base character as well.
+#   to map € on AltGr + E, EuroSign works as a base character as well.
 #   See dispocla.cpp // ## Note about EURO SIGN
 #
 #   "〃" U3003 DITTO MARK is also used in Western contexts.
