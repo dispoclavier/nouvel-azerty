@@ -1,11 +1,11 @@
 #                      Scope: part 2 of Compose
-#                    Version: See `compose-1.yml`
+#                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
-#                   Platform: XKB with XCompose using OSes Linux and ChromeOS*
+#                   Platform: XKB with XCompose using OSes Linux and ChromeOS
 #        Syntax highlighting: YAML
-#               Installation: Please do not use this file but the all-in-one file `Compose.yml`.
+#               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #   START_LATIN_BY_DEAD_KEYS
 #
