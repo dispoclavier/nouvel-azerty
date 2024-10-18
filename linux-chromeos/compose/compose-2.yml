@@ -13006,10 +13006,10 @@
 <Multi_key><slash><numbersign><1>                                                              <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <dead_stroke><UEFD0><KP_1>                                                                     <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 <Multi_key><slash><numbersign><KP_1>                                                           <o> : "ꬾ" UAB3E # LATIN SMALL LETTER BLACKLETTER O WITH STROKE
-<dead_stroke><UEFD0><1>                                                                      <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><slash><numbersign><1>                                                            <bar> : "∦" U2226 # NOT PARALLEL TO
-<dead_stroke><UEFD0><KP_1>                                                                   <bar> : "∦" U2226 # NOT PARALLEL TO
-<Multi_key><slash><numbersign><KP_1>                                                         <bar> : "∦" U2226 # NOT PARALLEL TO
+<dead_stroke><UEFD0><1>                                                                      <bar> : "∤" U2224 # DOES NOT DIVIDE
+<Multi_key><slash><numbersign><1>                                                            <bar> : "∤" U2224 # DOES NOT DIVIDE
+<dead_stroke><UEFD0><KP_1>                                                                   <bar> : "∤" U2224 # DOES NOT DIVIDE
+<Multi_key><slash><numbersign><KP_1>                                                         <bar> : "∤" U2224 # DOES NOT DIVIDE
 #
 #
 # # STROKE&GROUP_12
