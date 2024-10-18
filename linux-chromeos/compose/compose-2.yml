@@ -93,6 +93,11 @@
 #
 # # Introducing new-school input composition
 #
+#   New-school composition is designed to fully support the Latin script. This
+#   requires repurposing several ASCII symbols, so that legacy composition ends
+#   up disrupted, breaking user experience. Such a step is taken only because
+#   it is unavoidable.
+#
 #   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
 #   the parentheses-breve scheme to circumflex and hacek, macron and diaeresis.
 #   For example, new-school multikey sequences include « ¦^ » for superscript,
@@ -324,8 +329,8 @@
 #   30 out of 32 ASCII symbols and punctuation are mapped on level 3 of keys
 #   (B..D)(01..10), and 28 dead keys are mapped on level 4 of the same keys
 #   as the ASCII characters used to emulate those dead keys by multikey, using
-#   new-school input composition. New-school composition is designed to fully
-#   support the Latin script.
+#   new-school input composition.
+#   See # # Introducing new-school input composition
 #
 #   One of those two dead keys that is not mapped on the same key as the symbol
 #   used to emulate it by multikey is dead_abovedot, mapped on P, where level 3
