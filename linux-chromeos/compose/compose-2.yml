@@ -8141,58 +8141,51 @@
 <Multi_key><numbersign>                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
 #
-# # Ornamental angle quotation marks
+# # Micro and pound signs for backward compatibility
 #
-#   Angle quotation mark ornaments are in group 3 of bracketleft and -right,
-#   together with angle bracket ornaments in group 2. The former are also in
-#   group 1 of single angle quotation marks, as configured here.
-#
-<UEFD0>                                                                                    <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign>                                                                    <U2039> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0>                                                                                    <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign>                                                                    <U203A> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-#
-#
-# # Micro sign
-#
-#   "µ" U00B5 MICRO SIGN is usually on live keys (key M for mnemonic, key C12
-#   for hardware compatibility). It has dead key support here because there is
-#   no room in the appropriate symbol groups of bar on the M key, and because
-#   the purpose of this fallback is to cope with a malware simulator shipped
-#   with Windows that requires incomplete keyboard layouts, while dumbing down
-#   a keyboard layout involves removing the level-5 modifier, and U00B5 is on
-#   level 7 in the first place, both on C12 and on AZERTY M (C10).
-#   https://dispoclavier.com/nouvel-azerty/#malware-windows
+#   "£" U00A3 POUND SIGN and "µ" U00B5 MICRO SIGN are both supported on level-5
+#   and level-7 live key positions (key L or M for mnemonic, key D12 or C12 for
+#   hardware compatibility, key D04 or D06 for level-5 positions). Additionally
+#   this group-1 scheme improves backward compatibility.
 #
 #   In any event and for convenience, the micro sign is thus in group 1 of the
 #   greater-than* double angle quotation mark, that has a live key position on
 #   the same key C12 as the group dead key on unremapped layouts of this family
 #   and as the micro sign on French AZERTY. "»" U00BB is on level 5 of regular
-#   layouts, or on level 3 of dumbed-down layouts, while "<NBTSP>»" UEF65 is on
-#   level 2 both on regular and dumbed-down layouts.
+#   layouts, while "<NBTSP>»" UEF65 is on level 2. So is the pound sign in
+#   group 1 of the greater-than* single angle quotation mark on D12.
 #
 #   For consistency, the nearby percent sign, on key C11 of French AZERTY, is
 #   given a similar facility, and the multicharacter strings of spaced-out
-#   guillemets with an NBTSP inside (after/before) are supported, too.
-#
-#   By contrast, group 1 of single guillemets is used for "❮" U276E, "❯" U276F.
-#   See # # Ornamental angle quotation marks
+#   guillemets with an NBTSP inside (after/before) are supported, too. So is
+#   the pound sign on key D12 based on the greater-than* single angle quotation
+#   mark "›" U203A, while the nearby diaeresis gets its spacing clone only, for
+#   feasability on XCompose not supporting chained dead keys.
 #
 #   * "»" U00BB is referred to as "greater-than double angle quotation mark",
 #     since it is always similar in shape to two ">" U003E GREATER-THAN SIGN,
 #     while its other attributes (right, left, closing, opening) depend on the
 #     context it is used in (left-to-right scripts or right-to-left scripts as
 #     of the pointing direction, and the language as of the opening or closing
-#     semantics).
+#     semantics). The same holds true for single and mirrored angle quotation
+#     marks.
 #
 <UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign>                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
 <UEFD0>                                                                                    <UEF65> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign>                                                                    <UEF65> : "µ" U00B5 # MICRO SIGN
+<UEFD0>                                                                                    <U203A> : "£" U00A3 # POUND SIGN
+<Multi_key><numbersign>                                                                    <U203A> : "£" U00A3 # POUND SIGN
+<UEFD0>                                                                                    <UEF67> : "£" U00A3 # POUND SIGN
+<Multi_key><numbersign>                                                                    <UEF67> : "£" U00A3 # POUND SIGN
 <UEFD0>                                                                            <guillemotleft> : "%" U0025 # PERCENT SIGN
 <Multi_key><numbersign>                                                            <guillemotleft> : "%" U0025 # PERCENT SIGN
 <UEFD0>                                                                                    <UEF64> : "%" U0025 # PERCENT SIGN
 <Multi_key><numbersign>                                                                    <UEF64> : "%" U0025 # PERCENT SIGN
+<UEFD0>                                                                                    <U2039> : "¨" U00A8 # DIAERESIS
+<Multi_key><numbersign>                                                                    <U2039> : "¨" U00A8 # DIAERESIS
+<UEFD0>                                                                                    <UEF66> : "¨" U00A8 # DIAERESIS
+<Multi_key><numbersign>                                                                    <UEF66> : "¨" U00A8 # DIAERESIS
 #
 #
 # # HAIR SPACE
