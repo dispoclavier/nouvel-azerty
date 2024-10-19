@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-10-19T0907+0200
+#                       Date : 2024-10-19T0946+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -83,7 +83,7 @@ function afficher {
 }
 
 function confirmation {
-	read -n 1 -s -r -p -e "\n  (Pour valider, appuyez sur une touche.)"
+	read -n 1 -s -r -p "  (Pour valider, appuyez sur une touche.)"
 }
 
 function installer_dispo {
@@ -134,11 +134,11 @@ function installer_dispo {
 	fi
 	echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 	echo      '     S’il manque quoi que ce soit, ou à tout autre propos relatif,'
-	echo -e "\n     n’hésitez pas à créer un rapport de bogue :\n"
+	echo -e   "     n’hésitez pas à créer un rapport de bogue :\n"
 	echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
 	echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
 	echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
-	echo -e "\n                       Bonne utilisation !\n"
+	echo -e "\n                       Bonne utilisation !\n\n"
 	confirmation
 }
 
@@ -229,7 +229,7 @@ function supprimer_dispo {
 		echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
 		echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
 		echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
-		echo -e "\n             Merci d’avoir utilisé Dispoclavier.\n"
+		echo -e "\n             Merci d’avoir utilisé Dispoclavier.\n\n"
 		confirmation
 	fi
 }
@@ -798,7 +798,7 @@ if [ "$fonctionne" -eq 1 ]; then
 			echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
 			echo      '     sur la page de la version la plus récente :'
 			echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
-			echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+			echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n\n"
 			confirmation
 		fi
 	else
@@ -842,6 +842,6 @@ else
 	echo      '     clavier manuellement selon le mode d’emploi figurant dans l’en-tête'
 	echo      '     du fichier "Compose.yml", qui va dans le dossier personnel, et dans'
 	echo      '     chacun des fichiers qui se trouvent dans le dossier "installer/"'.
-	echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n"
+	echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n\n"
 	confirmation
 fi
