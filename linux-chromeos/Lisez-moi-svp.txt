@@ -1,5 +1,5 @@
-                      Date : 2024-10-06T0352+0200
-                   Version : 4.6.0
+                      Date : 2024-10-19T0741+0200
+                   Version : 4.7.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https://github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -135,7 +135,7 @@ Mode d’emploi sous Linux
 
   2  Sous le titre « Assets », télécharger le dossier compressé nommé :
 
-         Nouvel-AZERTY-Linux-4.6.0.zip
+         Nouvel-AZERTY-Linux-4.7.0.zip
 
   3  Décompresser le dossier téléchargé.
 
@@ -150,6 +150,7 @@ Mode d’emploi sous Linux
              xkbcomp :0 normal.xkb
 
          Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
+         (Si ":0" ne fonctionne pas, invoquer la variable d’environnement "$DISPLAY" à la place.)
 
      B2  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
          vers le dossier personnel.
