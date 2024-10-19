@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-10-17T1950+0200
+#                       Date : 2024-10-19T0907+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -83,7 +83,7 @@ function afficher {
 }
 
 function confirmation {
-	read -n 1 -s -r -p "   Pour valider, appuyez sur n’importe quelle touche."
+	read -n 1 -s -r -p -e "\n  (Pour valider, appuyez sur une touche.)"
 }
 
 function installer_dispo {
@@ -138,7 +138,7 @@ function installer_dispo {
 	echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
 	echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
 	echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
-	echo -e "\n             Bonne utilisation !\n"
+	echo -e "\n                       Bonne utilisation !\n"
 	confirmation
 }
 
