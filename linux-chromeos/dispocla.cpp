@@ -1,4 +1,4 @@
-//                       Date: 2024-10-17T1748+0200
+//                       Date: 2024-10-19T0627+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -929,9 +929,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; endash U2013 – EN DASH recommended for noting intervals; 😊 U1F60A SMILING FACE WITH SMILING EYES worldwide fifth-most used emoji, fourth-most used smiling emoji in France
 
 	key <AD06> {
-		[                   y,                   Y,          dead_greek,                 yen,          dead_greek,               U02B8,         Greek_OMEGA,              U1F60D ],
-		[                   y,                   Y,          dead_greek,                 yen,          dead_greek,               U02B8,         Greek_OMEGA,              U1F60D ]
-	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; Greek_OMEGA is preferred for Ohm sign; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES third-most used smiling emoji in France, third-most overall worldwide
+		[                   y,                   Y,          dead_greek,                  mu,          dead_greek,               U02B8,                 yen,              U1F60D ],
+		[                   y,                   Y,          dead_greek,                  mu,          dead_greek,               U02B8,                 yen,              U1F60D ]
+	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES third-most used smiling emoji in France, third-most overall worldwide
 
 	key <AD07> {
 		[                   u,                   U,          apostrophe,                   4,          dead_acute,               U1D58,               UEF9F,               UEF8C ],
@@ -945,9 +945,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AD09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   o,                   O,          braceright,                   6,               UEFD4,               U1D52,               U2126,              U1F601 ],
-		[                   o,                   O,          braceright,                   6,               UEFD4,               U1D52,               U2126,              U1F601 ]
-	}; // U1D52 ᵒ MODIFIER LETTER SMALL O; UEFD4 *dead_retroflexhook; U2126 Ω OHM SIGN (some fonts support this but no Greek); 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
+		[                   o,                   O,          braceright,                   6,               UEFD4,               U1D52,         Greek_OMEGA,              U1F601 ],
+		[                   o,                   O,          braceright,                   6,               UEFD4,               U1D52,         Greek_OMEGA,              U1F601 ]
+	}; // U1D52 ᵒ MODIFIER LETTER SMALL O; UEFD4 *dead_retroflexhook; Greek_OMEGA is preferred over U2126 Ω OHM SIGN; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
 
 	key <AD10> {
 		[                   p,                   P,           ampersand,              period,       dead_abovedot,               U1D56,           paragraph,               UEF8B ],
