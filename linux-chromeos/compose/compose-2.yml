@@ -8160,15 +8160,19 @@
 #   guillemets with an NBTSP inside (after/before) are supported, too. So is
 #   the pound sign on key D12 based on the greater-than* single angle quotation
 #   mark "›" U203A, while the nearby diaeresis gets its spacing clone only, for
-#   feasability on XCompose not supporting chained dead keys.
+#   feasability on XCompose not supporting chained dead keys. The asciicircum,
+#   dollar sign and generic currency sign as printed on keycaps are supported
+#   altogether, and even the equals sign on E12 and the ampersand on E01. But
+#   it stops here, and this fully works on unremapped layouts only, assuming
+#   that remapping defeats the point in backwards compatibility anyway.
 #
 #   * "»" U00BB is referred to as "greater-than double angle quotation mark",
 #     since it is always similar in shape to two ">" U003E GREATER-THAN SIGNs,
 #     while its other attributes (right, left, closing, opening) depend on the
 #     context it is used in (left-to-right scripts or right-to-left scripts as
 #     of the pointing direction, and the language as of the opening or closing
-#     semantics). The same holds true for single angle quotation marks and for
-#     mirrored angle quotation marks.
+#     semantics). The same holds true for the other double angle quotation mark
+#     and for single angle quotation marks.
 #
 <UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign>                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
@@ -8186,6 +8190,16 @@
 <Multi_key><numbersign>                                                                    <U2039> : "¨" U00A8 # DIAERESIS
 <UEFD0>                                                                                    <UEF66> : "¨" U00A8 # DIAERESIS
 <Multi_key><numbersign>                                                                    <UEF66> : "¨" U00A8 # DIAERESIS
+<UEFD0>                                                                               <dead_acute> : "$" U0024 # DOLLAR SIGN
+<Multi_key><numbersign>                                                               <dead_acute> : "$" U0024 # DOLLAR SIGN
+<UEFD0>                                                                               <dead_grave> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><numbersign>                                                               <dead_grave> : "¤" U00A4 # CURRENCY SIGN
+<UEFD0>                                                                          <dead_circumflex> : "^" U005E # CIRCUMFLEX ACCENT
+<Multi_key><numbersign>                                                          <dead_circumflex> : "^" U005E # CIRCUMFLEX ACCENT
+<UEFD0>                                                                           <dead_diaeresis> : "=" U003D # EQUALS SIGN
+<Multi_key><numbersign>                                                           <dead_diaeresis> : "=" U003D # EQUALS SIGN
+<UEFD0>                                                                              <twosuperior> : "&" U0026 # AMPERSAND
+<Multi_key><numbersign>                                                              <twosuperior> : "&" U0026 # AMPERSAND
 #
 #
 # # HAIR SPACE
