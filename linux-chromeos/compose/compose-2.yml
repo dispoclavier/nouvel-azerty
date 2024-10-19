@@ -8163,12 +8163,12 @@
 #   feasability on XCompose not supporting chained dead keys.
 #
 #   * "»" U00BB is referred to as "greater-than double angle quotation mark",
-#     since it is always similar in shape to two ">" U003E GREATER-THAN SIGN,
+#     since it is always similar in shape to two ">" U003E GREATER-THAN SIGNs,
 #     while its other attributes (right, left, closing, opening) depend on the
 #     context it is used in (left-to-right scripts or right-to-left scripts as
 #     of the pointing direction, and the language as of the opening or closing
-#     semantics). The same holds true for single and mirrored angle quotation
-#     marks.
+#     semantics). The same holds true for single angle quotation marks and for
+#     mirrored angle quotation marks.
 #
 <UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
 <Multi_key><numbersign>                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
