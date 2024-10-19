@@ -2,22 +2,28 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.7.0 (projet)
+## 4.7.0 (2024-10-19)
 
 Meilleure compatibilité multiplateforme grâce à la suppression des trois premiers groupes du croisillon.
 
 Prise en charge des lettres grecques polytoniques, par respect pour les utilisateurs et pour le grec.
 
+Facilitation de la saisie du symbole micro "µ" U+00B5, désormais aussi sur AltFr + Y.
+
 Amélioration de la versatilité de la disposition de base et des variantes redisposées.
 
 Robustesse des scripts d’installation et d’activation.
 
-* Disposition : Variantes redisposées : Redonder le trait d’union insécable "‑" U+2011 sur Maj + E06 à la place de "Ù", qui est en Verrouillage Capitales. dispotypes.c [cb06597](https://github.com/dispoclavier/nouvel-azerty/commit/cb0659700d0591c4877274dc4c4563bf4fcbb097), dispocla.cpp [0d88beb](https://github.com/dispoclavier/nouvel-azerty/commit/0d88beb8f3d64d7b15a65625964ef86c16c799b3)
+* Disposition :
+	* Redonder le symbole micro "µ" U+00B5 sur AltFr + Y à la place de "¥" U+00A5, qui va en AltGr + AltFr + Y à la place de la lettre "Ω" U+03A9, qui va sur O à la place du symbole "Ω" U+2126, qui est dans le groupe 1 de l’"}" sur O, et dans les groupes 4 et 12 du O, et en composition par « ¦ohm ». dispocla.cpp [ae82bc3](https://github.com/dispoclavier/nouvel-azerty/commit/ae82bc362da6a778441668fe58eddc1df9b158ee)
+	* Variantes redisposées : Redonder le trait d’union insécable "‑" U+2011 sur Maj + E06 à la place de "Ù", qui est en Verrouillage Capitales. dispotypes.c [cb06597](https://github.com/dispoclavier/nouvel-azerty/commit/cb0659700d0591c4877274dc4c4563bf4fcbb097), dispocla.cpp [0d88beb](https://github.com/dispoclavier/nouvel-azerty/commit/0d88beb8f3d64d7b15a65625964ef86c16c799b3)
 * Composition : Redonder "⮽" U+2BBD par « ¦[XL] ». compose-1.yml [8f3df49](https://github.com/dispoclavier/nouvel-azerty/commit/8f3df4982258ad5df65b97761d762c15fd04e02f), [021b40d](https://github.com/dispoclavier/nouvel-azerty/commit/021b40df65b6f797e779a5fe5448f21b228f8f99)
 * Transformations :
 	* Groupe 1 :
 		* Redonder le symbole micro "µ" U+00B5 dans le groupe 1 du guillemet "»" U+00BB pour la rétrocompatibilité. compose-2.yml [70bee3f](https://github.com/dispoclavier/nouvel-azerty/commit/70bee3f365ab0135a870b4ee3e1e19ad5aea489e), [fb6c67d](https://github.com/dispoclavier/nouvel-azerty/commit/fb6c67dba124bbd95be8e7372cee252e534ae142)
 		* Redonder le "%" dans le groupe 1 du guillemet "«" U+00AB pour la symétrie. ibidem
+		* Redonder le symbole livre "£" U+00A3 dans le groupe 1 du guillemet "›" U+203A pour la rétrocompatibilité à la place de "❯" U+276F, qui est dans le groupe 3 du "]". compose-2.yml [22c3e17](https://github.com/dispoclavier/nouvel-azerty/commit/22c3e17e75e747a0ec807dfdc4b52bb38331fee2)
+		* Redonder le "¨" U+00A8 dans le groupe 1 du guillemet "‹" U+2039 pour la symétrie à la place de "❮" U+276E, qui est dans le groupe 3 du "[". ibidem
 	* Groupes des symboles : Groupes de "#" :
 		* Réserver la place de "☐" U+2610, qui va dans le groupe 1 de "|" à la place de "∣" U+2223, qui va dans le groupe 11 à la place de "µ" U+00B5, qui est sur touche vive et va dans le groupe 1 de "»" U+00BB. compose-3.yml [ad2162a](https://github.com/dispoclavier/nouvel-azerty/commit/ad2162a03398cb8e2a4e97b92cd34ed564f6b1be), [f44a7d4](https://github.com/dispoclavier/nouvel-azerty/commit/f44a7d47e151ff8d7da93ac19c2aedd53dfc45d5)
 		* Réserver la place de "☑" U+2611, qui va dans le groupe 2 de "|" à la place de "‖" U+2016, qui va dans le groupe 12 du ":" à la place de "※" U+203B, qui va dans le groupe 12 de l’"*" à la place de "❖" U+2756, qui va dans le groupe 12 de l’"@" à la place de "❍" U+274D, qui va dans le groupe 10 à la place de l’antiliant U+200C, qui est dans le groupe 10 du "^". ibidem
@@ -249,6 +255,7 @@ Permutation du liant et de l’antiliant, plus fréquent et désormais plus faci
 	* Chaînes de caractères pour touches vives et contenu des touches mortes :
 		* Corriger la description dans l’en-tête. compose-1.yml [823ba32](https://github.com/dispoclavier/nouvel-azerty/commit/823ba3231c7672af253778796ab3864802e91f7f), [ff713ff](https://github.com/dispoclavier/nouvel-azerty/commit/ff713ff537b12f08f25b898fb7c2e1f79528057b), [990db28](https://github.com/dispoclavier/nouvel-azerty/commit/990db28e0725537e3073bc0ddb8d5e0667bd4e43), compose-2.yml [f948ed2](https://github.com/dispoclavier/nouvel-azerty/commit/f948ed2ec1274c967845d8a360e7507cd5687b9c), compose-3.yml [e3d507e](https://github.com/dispoclavier/nouvel-azerty/commit/e3d507ecd767c2354831676804a152978b30e64a)
 		* Corriger les notes à propos des tableaux. compose-1.yml [ff713ff](https://github.com/dispoclavier/nouvel-azerty/commit/ff713ff537b12f08f25b898fb7c2e1f79528057b), [8647ed0](https://github.com/dispoclavier/nouvel-azerty/commit/8647ed07e214334df54f6048c365461efcdfe889), [ed84348](https://github.com/dispoclavier/nouvel-azerty/commit/ed843489a2adb2bd0257f2ef4de3efc6ca0e19d7)
+		* Ajouter le script utilisé pour formater UnicodeData.txt. format-UnicodeData-txt.pl [2ebca95](https://github.com/dispoclavier/nouvel-azerty/commit/2ebca9540230879bfb8a8d8743c0850c0a0215b6)
 	* Arrêt de "∼" U+223C dans le groupe 1 (4.1.0) : Compléter l’annotation. compose-3.yml [6a129d8](https://github.com/dispoclavier/nouvel-azerty/commit/6a129d823e3ded94273e08be43c5fe855f86822f)
 	* Journal des modifications :
 		* Uniformiser l’ordre des entrées. CHANGELOG.md [018acd1](https://github.com/dispoclavier/nouvel-azerty/commit/018acd112a6808fed563582996b6aea7fb044f2b)
