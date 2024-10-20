@@ -50,7 +50,7 @@ Robustesse des scripts d’installation et d’activation.
 	* Rectifier les métadonnées. compose-1.yml [fe56e4f](https://github.com/dispoclavier/nouvel-azerty/commit/fe56e4fa16005c18287e9dacc1e5f0c32c90fad3), compose-2.yml [4227850](https://github.com/dispoclavier/nouvel-azerty/commit/42278508030f2a1594446c1db86b213b4a208ff0), [00d9e99](https://github.com/dispoclavier/nouvel-azerty/commit/00d9e9975d3a77e1df29167f92da9b0bdd42c5e1), compose-3.yml [7f68a73](https://github.com/dispoclavier/nouvel-azerty/commit/7f68a730d80435b5433cf5ba6d855525770c8b18), [d9fd293](https://github.com/dispoclavier/nouvel-azerty/commit/d9fd2933ed85620ff6cd4f149ae523712e64faf7)
 	* Unifier la syntaxe. compose-1.yml [fe56e4f](https://github.com/dispoclavier/nouvel-azerty/commit/fe56e4fa16005c18287e9dacc1e5f0c32c90fad3), compose-2.yml [4227850](https://github.com/dispoclavier/nouvel-azerty/commit/42278508030f2a1594446c1db86b213b4a208ff0), compose-3.yml [0ad96be](https://github.com/dispoclavier/nouvel-azerty/commit/0ad96bed9937cc8060a4f1cf6b063f98a4423ac2)
 	* Corriger l’orthographe. generate-math-table.pl [52ad340](https://github.com/dispoclavier/nouvel-azerty/commit/52ad3408759a49092399ae8ae00d71d8bf68e888), generate-multikey-tables.pl [33ac941](https://github.com/dispoclavier/nouvel-azerty/commit/33ac941b2b09fb6c54a5f0cb69e46349bc9bb469)
-	* Supprimer des liens publicitaires.  generate-deadkey-tables.pl [57cda0b](https://github.com/dispoclavier/nouvel-azerty/commit/57cda0bbc24171fb40bf6ccfa6c2905d9de3bc35)
+	* Supprimer des liens publicitaires. generate-deadkey-tables.pl [57cda0b](https://github.com/dispoclavier/nouvel-azerty/commit/57cda0bbc24171fb40bf6ccfa6c2905d9de3bc35)
 
 ## 4.6.0 (2024-10-06)
 
