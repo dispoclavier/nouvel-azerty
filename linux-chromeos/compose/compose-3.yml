@@ -197,7 +197,7 @@
 #
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π		␣	⌀	➔	−	±	•	⟨	⟩	☐	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
+#	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π		␣	⌀	➔	−	±	•	⟨	⟩	☐	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
 #	  2	♿	‱	∈	√	≈	⚪	⊂	∬	∅	☮		⍽	∂	➜	⁃	∓	◦	❰	❱	☑	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
 #	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	∐	∏		∑	☹	☺	➖	➕	‣	❮	❯	☒	➗	✖	✂	✅	≡	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
@@ -214,10 +214,14 @@
 #
 # # D01 asciicircum
 #
-#   The "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character, superseded
-#   by the use of preformatted superscript small letters for ordinal indicators
-#   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The legacy ordinal indicators are supported by multikey and in group 12.
+#   "ª" U00AA FEMININE ORDINAL INDICATOR is a legacy character, superseded by
+#   the use of preformatted superscript small letters. This new, regular scheme
+#   supports also French, and plural forms, additionally to singular forms, and
+#   to Italian, Portuguese, Spanish. As a result, the legacy scheme turns out
+#   to be a partial solution designed for limited character sets. Sticking with
+#   it in the Unicode era, using live key positions and premium dead key slots,
+#   would be utterly inadequate. Instead, legacy ordinal indicators are placed
+#   here in symbol group 12 (on matching letters) and supported by multikey.
 #   See #^# Legacy ordinal indicators
 #   See # # D09 braceright
 #
@@ -791,15 +795,26 @@
 #
 # # D09 braceright
 #
-#   The "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character, superseded
-#   by the use of preformatted superscript small letters for ordinal indicators
-#   in French, Italian, Portuguese and Spanish, also supporting plural forms.
-#   The legacy ordinal indicators are supported by multikey and in group 12.
+#   Unlike "µ" U00B5 MICRO SIGN, "Ω" U2126 OHM SIGN is not used any longer, and
+#   it has become a legacy character, that Greek "Ω" U03A9 is by far preferred
+#   over. But it is still supported in letter groups and by multikey.
+#   See #^# Abbreviations, Units and Legal Symbols
+#   See #+# GROUP_4
+#   See #+# GROUP_12
+#
+#   "º" U00BA MASCULINE ORDINAL INDICATOR is a legacy character, superseded by
+#   the use of preformatted superscript small letters. This new, regular scheme
+#   supports also French, and plural forms, additionally to singular forms, and
+#   to Italian, Portuguese, Spanish. As a result, the legacy scheme turns out
+#   to be a partial solution designed for limited character sets. Sticking with
+#   it in the Unicode era, using live key positions and premium dead key slots,
+#   would be utterly inadequate. Instead, legacy ordinal indicators are placed
+#   here in symbol group 12 (on matching letters) and supported by multikey.
 #   See #^# Legacy ordinal indicators
 #   See # # D01 asciicircum
 #
-<UEFD0>                                                                               <braceright> : "Ω" U2126 # OHM SIGN
-<Multi_key><numbersign>                                                               <braceright> : "Ω" U2126 # OHM SIGN
+<UEFD0>                                                                               <braceright> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
+<Multi_key><numbersign>                                                               <braceright> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
 <UEFD0><UEFD0>                                                                        <braceright> : "∅" U2205 # EMPTY SET math
 <Multi_key><numbersign><numbersign>                                                   <braceright> : "∅" U2205 # EMPTY SET math
 <UEFD0><3>                                                                            <braceright> : "∐" U2210 # N-ARY COPRODUCT math
