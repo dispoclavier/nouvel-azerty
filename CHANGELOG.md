@@ -35,7 +35,7 @@ Robustesse des scripts d’installation et d’activation.
 		* Redonder "ι" U+1FBE par espace insécable à la place de "ι" U+03B9, qui est par "i". compose-2.yml [70bee3f](https://github.com/dispoclavier/nouvel-azerty/commit/70bee3f365ab0135a870b4ee3e1e19ad5aea489e)
 		* Supprimer "⊗" U+2297 (sauf par "×" U+00D7), "⊙" U+2299, "⊚" U+229A (sauf par "°" U+00B0), qui sont dans grec ou cerclé > cerclé. ibidem
 	* Point souscrit : Rajouter "⁝" U+205D par "3" à la place de "⃨" U+20E8, qui change de saisie par "_". compose-2.yml [de89aba](https://github.com/dispoclavier/nouvel-azerty/commit/de89aba8279e2747b82aff3ed7a3c21d9f1a6899)
-	* Indice : Redonder "⁝" U+205D par "…" U+2026. ibidem
+	* Indice : Redonder "⃨" U+20E8 par "…" U+2026. ibidem
 	* Barré : Redonder "∤" U+2224 dans le groupe 11, "∦" U+2226 dans le groupe 12. ibidem, compose-2.yml [de89aba](https://github.com/dispoclavier/nouvel-azerty/commit/de89aba8279e2747b82aff3ed7a3c21d9f1a6899), [ad9acb8](https://github.com/dispoclavier/nouvel-azerty/commit/ad9acb8603da8092d2222bedde9d935811f6300f)
 	* Tréma : Remplacer les caractères de base du tiret double cadratin "⸺" U+2E3A, par "°" U+00B0 au lieu de "–" U+2013, et du tiret triple cadratin "⸻" U+2E3B, par "+" U+002B au lieu de "—" U+2014. compose-2.yml [70bee3f](https://github.com/dispoclavier/nouvel-azerty/commit/70bee3f365ab0135a870b4ee3e1e19ad5aea489e)
 * Activation : Assurer la compatibilité multiplateforme du script en remplaçant la valeur ":0" d’une variable d’environnement par son nom "$DISPLAY". activer.sh [015f9e5](https://github.com/dispoclavier/nouvel-azerty/commit/fe015f9e592db39d03407a36ca72daba23952205)
