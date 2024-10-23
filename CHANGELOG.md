@@ -2,6 +2,14 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.7.1 (projet)
+
+* Composition :
+	* Lettres-symboles cursives mathématiques comme "ℛ" U+211B : Simplifier les séquences de « ¦R//␣ » en « ¦R~␣ ». compose-1.yml [2189b98](https://github.com/dispoclavier/nouvel-azerty/commit/2189b98287add7c019e27f0f95fdd4f1939ab5b1)
+	* Lettres-symboles italiques ajourées mathématiques comme "ⅅ" U+2145 : Simplifier les séquences de « ¦DD//␣ » en « ¦DD/␣ ». ibidem
+	* Symbole Répons "℟" U+211F : Simplifier la séquence « ¦R/␣ » en « ¦R/ ». ibidem
+* Documentation : Corriger des annotations. ibidem
+
 ## 4.7.0 (2024-10-20)
 
 Meilleure compatibilité multiplateforme grâce à la suppression des trois premiers groupes du croisillon.
