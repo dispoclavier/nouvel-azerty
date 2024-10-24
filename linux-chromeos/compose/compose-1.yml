@@ -881,7 +881,10 @@
 #   This file is also the source code for HTML table partials, such as those by
 #   the scripts generate-multikey-tables.pl and generate-math-table.pl
 #   documenting multikey sequences, and those by generate-deadkey-tables.pl
-#   documenting dead keys, including the letter groups and the symbol groups.
+#   documenting dead keys, including the letter groups and the symbol groups
+#   (but no polytonic Greek, supported only to meet preexisting expectations).
+#   See ### Greek with diacritics
+#   See # # End note about polytonic Greek
 #
 #   The generate-multikey-tables.pl script, processing the multikey section,
 #   expects a caret between the leading hashes of a subsection heading to start
@@ -7737,8 +7740,8 @@
 #   emulated using oxia instead, as since 1986, acute is the official tonos.
 #   https://www.opoudjis.net/unicode/unicode_gkbkgd.html#oxia
 #
-#   For any eventuality, tonos is in dead_doubleacute, with alphabetic mnemonic
-#   based on the Greek initial of Elliniká,
+#   For any eventuality, tonos is in dead_doubleacute, mapped on the E key D03,
+#   with alphabetic mnemonic based on the Greek initial of Elliniká,
 #
 #
 # # GREEK&DOUBLEACUTE
@@ -11757,6 +11760,26 @@
 <Multi_key><colon><grave><at>                                                                  <y> : "ῢ" U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
 <dead_grave><dead_diaeresis><dead_greek>                                                       <y> : "ῢ" U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
 <Multi_key><grave><colon><at>                                                                  <y> : "ῢ" U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+#
+#
+# # End note about polytonic Greek
+#
+#   Here ends the section dedicated to polytonic Greek (that also supports
+#   monotonic Greek alongside). The Greek base alphabet for technical use is
+#   in the Latin dead key section, Greek dead key, that also supports circled,
+#   consistently with its multikey equivalent "@".
+#   See #*# GREEK
+#
+#   As this file is part of a Latin keyboard layout, the polytonic Greek part
+#   is not included in the multikey tables and dead key tables documenting its
+#   dead key content. Indeed, polytonic Greek is supported only in an attempt
+#   to meet eventual user expectations raised by the comprehensive dead key set
+#   supported for completeness with respect to the Latin script. In the context
+#   of a 100% comprehensive support for Latin script, and given that polytonic
+#   Greek is extensively used in Latin culture, unsupporting polytonic Greek is
+#   not an option.
+#   https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Abbreviations/faq0097.html
+#   See # # Notes about documentation
 #
 #   END_GREEK
 #
