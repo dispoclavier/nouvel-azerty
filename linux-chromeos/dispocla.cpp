@@ -1,4 +1,4 @@
-//                       Date: 2024-10-19T0627+0200
+//                       Date: 2024-10-24T2306+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1702,6 +1702,11 @@ xkb_symbols "kbfrFRsr" {
 		[            NoSymbol ]
 	};
 
+	key <AE05> {
+		[      dead_diaeresis ],
+		[            NoSymbol ]
+	};
+
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE06> {
@@ -1733,7 +1738,7 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[               U2011 ],
+		[          underscore ],
 		[            NoSymbol ]
 	};
 
@@ -1842,13 +1847,13 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AC11> {
-		[rightsinglequotemark ],
-		[            NoSymbol ]
+		[rightsinglequotemark,            NoSymbol,          apostrophe ],
+		[            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <BKSL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[               minus,            NoSymbol,      dead_diaeresis ],
+		[               minus,            NoSymbol,            ellipsis ],
 		[               minus,            NoSymbol,           Multi_key ]
 	};
 
