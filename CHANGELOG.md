@@ -2,13 +2,20 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.7.1 (projet)
+## 4.8.0 (projet)
 
+Correction des variantes redisposées pour une meilleure ergonomie.
+
+Simplification de séquences de composition.
+
+* Disposition : Variantes redisposées :
+	* Mettre la touche morte tréma sur E05 à la place du guillemet simple générique "'" U0027, qui va en AltGr de la touche de l’apostrophe "’" U2019 à la place des points de suspension "…" U2026, qui prennent la place laissée par la touche morte tréma sur AltGr + C12. dispocla.cpp [a6470bc](https://github.com/dispoclavier/nouvel-azerty/commit/a6470bc6fca79af95412a386fcfea05a463d8b21)
+	* Redonder le tiret bas "_" U005F sur E12 à la place du trait d’union insécable "‑" U2011, qui est sur Maj + E06. ibidem
 * Composition :
-	* Lettres-symboles cursives mathématiques comme "ℛ" U+211B : Simplifier les séquences de « ¦R//␣ » en « ¦R~␣ ». compose-1.yml [2189b98](https://github.com/dispoclavier/nouvel-azerty/commit/2189b98287add7c019e27f0f95fdd4f1939ab5b1)
-	* Lettres-symboles italiques ajourées mathématiques comme "ⅅ" U+2145 : Simplifier les séquences de « ¦DD//␣ » en « ¦DD/␣ ». ibidem
-	* Symbole Répons "℟" U+211F : Simplifier la séquence « ¦R/␣ » en « ¦R/ ». ibidem
-* Documentation : Corriger des annotations. ibidem
+	* Lettres-symboles cursives mathématiques comme "ℛ" U211B : Simplifier les séquences de « ¦R//␣ » en « ¦R~␣ ». compose-1.yml [2189b98](https://github.com/dispoclavier/nouvel-azerty/commit/2189b98287add7c019e27f0f95fdd4f1939ab5b1)
+	* Lettres-symboles italiques ajourées mathématiques comme "ⅅ" U2145 : Simplifier les séquences de « ¦DD//␣ » en « ¦DD/␣ ». ibidem
+	* Symbole Répons "℟" U211F : Simplifier la séquence « ¦R/␣ » en « ¦R/ ». ibidem
+* Documentation : Corriger des annotations. ibidem, [02e284f](https://github.com/dispoclavier/nouvel-azerty/commit/02e284f8ab38b0f37c6d6b1452059c61024d3402)
 
 ## 4.7.0 (2024-10-20)
 
