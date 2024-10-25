@@ -2,15 +2,17 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.8.0 (projet)
+## 4.8.0 (2024-10-25)
 
-Correction des variantes redisposées pour une meilleure ergonomie.
+Amélioration de l’ergonomie de la touche morte tréma.
 
 Simplification de séquences de composition.
 
-* Disposition : Variantes redisposées :
-	* Mettre la touche morte tréma sur E05 à la place du guillemet simple générique "'" U+0027, qui va en AltGr de la touche de l’apostrophe "’" U+2019 à la place des points de suspension "…" U+2026, qui prennent la place laissée par la touche morte tréma sur AltGr + C12. dispocla.cpp [a6470bc](https://github.com/dispoclavier/nouvel-azerty/commit/a6470bc6fca79af95412a386fcfea05a463d8b21)
-	* Redonder le tiret bas "_" U+005F sur E12 à la place du trait d’union insécable "‑" U+2011, qui est sur Maj + E06. ibidem
+* Disposition :
+	* Permuter la touche morte tréma, qui va sur E05, et le guillemet simple générique, qui prend la place laissée par la touche morte tréma sur E12. dispocla.cpp [7a46213](https://github.com/dispoclavier/nouvel-azerty/commit/7a4621354858142eeadf7294ed6783a73e8ae1f5)
+	* Variantes redisposées :
+		* Mettre la touche morte tréma sur E05 à la place du guillemet simple générique "'" U+0027, qui va sur E12 à la place du trait d’union insécable "‑" U+2011, qui est sur Maj + E06. dispocla.cpp [a6470bc](https://github.com/dispoclavier/nouvel-azerty/commit/a6470bc6fca79af95412a386fcfea05a463d8b21), [7a46213](https://github.com/dispoclavier/nouvel-azerty/commit/7a4621354858142eeadf7294ed6783a73e8ae1f5)
+		* Redonder le tiret bas "_" U+005F sur la place laissée par la touche morte tréma en AltGr de la touche du tiret C12. ibidem
 * Composition :
 	* Lettres-symboles cursives mathématiques comme "ℛ" U+211B : Simplifier les séquences de « ¦R//␣ » en « ¦R~␣ ». compose-1.yml [2189b98](https://github.com/dispoclavier/nouvel-azerty/commit/2189b98287add7c019e27f0f95fdd4f1939ab5b1)
 	* Lettres-symboles italiques ajourées mathématiques comme "ⅅ" U+2145 : Simplifier les séquences de « ¦DD//␣ » en « ¦DD/␣ ». ibidem
