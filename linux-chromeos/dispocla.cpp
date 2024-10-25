@@ -1,4 +1,4 @@
-//                       Date: 2024-10-24T2306+0200
+//                       Date: 2024-10-25T0516+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -845,9 +845,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AE05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          apostrophe,               U00AD,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
+		[      dead_diaeresis,               U00AD,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
 		[                   5,                   5,                   5,               U2075,                   5,               U2075,               U2085,               UEFC5 ]
-	}; // apostrophe: see Apostrophes; U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
+	}; // U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
 
 	key <AE06> {
 		[               minus,               U2011,                   6,                 bar,                   6,               U2076,               UEFC6,               UEFC6 ],
@@ -893,9 +893,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[      dead_diaeresis,                plus,           Multi_key,          braceright,               equal,                   F,               UEFCB,               equal ],
+		[          apostrophe,                plus,           Multi_key,          braceright,               equal,                   F,               UEFCB,               equal ],
 		[               equal,                plus,           Multi_key,               U207A,                   F,               U208A,               UEFCB,               equal ]
-	}; // U207A ⁺ SUPERSCRIPT PLUS; U208A ₊ SUBSCRIPT PLUS; UEFCB #️⃣ keycap hash emoji
+	}; // apostrophe: see Apostrophes; U207A ⁺ SUPERSCRIPT PLUS; U208A ₊ SUBSCRIPT PLUS; UEFCB #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
@@ -1738,7 +1738,7 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[          underscore ],
+		[          apostrophe ],
 		[            NoSymbol ]
 	};
 
@@ -1847,13 +1847,13 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AC11> {
-		[rightsinglequotemark,            NoSymbol,          apostrophe ],
+		[rightsinglequotemark,            NoSymbol,            ellipsis ],
 		[            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <BKSL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[               minus,            NoSymbol,            ellipsis ],
+		[               minus,            NoSymbol,          underscore ],
 		[               minus,            NoSymbol,           Multi_key ]
 	};
 
