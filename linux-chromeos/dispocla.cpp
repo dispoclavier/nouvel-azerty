@@ -1,4 +1,4 @@
-//                       Date: 2024-10-25T0516+0200
+//                       Date: 2024-10-27T1621+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -886,14 +886,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
-		[                  at,              degree,               U1D49,        bracketright,              degree,                   E,               UEFCA,               minus ],
+		[                  at,              degree,               U1D49,        bracketright,               U207B,                   E,               UEFCA,               minus ],
 		[                  at,              degree,               minus,               U207B,                   E,               U208B,               UEFCA,               minus ]
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; U207B ⁻ SUPERSCRIPT MINUS; U208B ₋ SUBSCRIPT MINUS; UEFCA *️⃣ keycap star emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[          apostrophe,                plus,           Multi_key,          braceright,               equal,                   F,               UEFCB,               equal ],
+		[          apostrophe,                plus,           Multi_key,          braceright,               equal,               U207A,                   F,               UEFCB ],
 		[               equal,                plus,           Multi_key,               U207A,                   F,               U208A,               UEFCB,               equal ]
 	}; // apostrophe: see Apostrophes; U207A ⁺ SUPERSCRIPT PLUS; U208A ₊ SUBSCRIPT PLUS; UEFCB #️⃣ keycap hash emoji
 
@@ -957,12 +957,12 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD11> {
-		[     dead_circumflex,               UEF66,          dead_tilde,               U2039,         asciicircum,                   C,      dead_diaeresis,         bracketleft ],
+		[     dead_circumflex,               UEF66,          dead_tilde,               U2039,         asciicircum,      dead_diaeresis,                   C,         bracketleft ],
 		[            quotedbl,           braceleft,         asciicircum,                   C,         asciicircum,         asciicircum,          underscore,         bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
 
 	key <AD12> {
-		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,                   D,            sterling,        bracketright ],
+		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,            sterling,                   D,        bracketright ],
 		[          underscore,          braceright,           Multi_key,                   D,               U207C,               U207C,               U208C,        bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
 
@@ -1024,14 +1024,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
-		[              ugrave,               UEF64,            ellipsis,       guillemotleft,             percent,                   A,             percent,          apostrophe ],
+		[              ugrave,               UEF64,            ellipsis,       guillemotleft,             percent,             percent,                   A,          apostrophe ],
 		[          apostrophe,             percent,               grave,                   A,               U207D,               U207D,               U208D,          apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <BKSL> {
-		[               UEFD0,               UEF65,               UEFD0,      guillemotright,            asterisk,                   B,                  mu,           semicolon ],
+		[               UEFD0,               UEF65,               UEFD0,      guillemotright,            asterisk,                  mu,                   B,           semicolon ],
 		[               minus,            asterisk,               UEFD0,                   B,               U207E,               U207E,               U208E,           semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; U207E ⁾ SUPERSCRIPT RIGHT PARENTHESIS; U208E ₎ SUBSCRIPT RIGHT PARENTHESIS; SEMICOLON for application shortcut mapping
 
