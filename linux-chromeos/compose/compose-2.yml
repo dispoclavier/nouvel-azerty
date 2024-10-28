@@ -8082,37 +8082,6 @@
 <Multi_key><numbersign>                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
 #
 #
-# # NON-BREAKING HYPHEN for Polynesian variants
-#
-#   As variants for French Polynesia have base level support for dead_macron in
-#   lieu of the underscore on E08 or the non-breaking hyphen on E07, the latter
-#   is in group 1 of dead_macron.
-#
-#   On African and Breton variants this feature is unavailable so as to prevent
-#   the Caps Lock toggle state from altering the result.
-#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
-#
-<UEFD0>                                                                              <dead_macron> : "‑" U2011 # NON-BREAKING HYPHEN
-<Multi_key><numbersign>                                                              <dead_macron> : "‑" U2011 # NON-BREAKING HYPHEN
-#
-#
-# # HORIZONTAL BAR for remapped variants
-#
-#   Given that in ASCII mode, the underscore is on unshifted key D12, remapped
-#   variants use the underscore’s remapped key position on unshifted E07 to get
-#   an unshifted position for the non-breaking hyphen, and E06 is dedicated to
-#   casing Ùù for consistency even though uppercase support by Caps Lock would
-#   be sufficient, while on unremapped variants this is the hyphen key with the
-#   non-breaking hyphen on level 2.
-#
-#   As a consequence, in French mode, underscore has no unshifted key support.
-#   To keep running the base level input method for HORIZONTAL BAR in group 1
-#   of underscore, non-breaking hyphen works as a base character, too.
-#
-<UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
-#
-#
 # # Long dashes
 #
 #   Encoded in 2012 for Unicode 6.1, the three-em dash may stand for the author
