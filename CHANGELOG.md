@@ -2,6 +2,16 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.10.0 (2024-10-28)
+
+Amélioration de l’ergonomie des variantes redisposées.
+
+* Disposition : Variantes redisposées :
+	* Égaliser la touche morte accent grave avec les variantes non redisposées en la mettant en AltGr, sur C12 à la place du tiret bas, qui prend la place du guillemet simple générique sur E12, qui prend la place laissée par la touche morte accent grave sur E07. dispocla.cpp [474fcec](https://github.com/dispoclavier/nouvel-azerty/commit/474fcec8ec797be2c2a9f36011fe34fdf41dc7ef)
+	* Variantes régionales : Laisser le guillemet simple générique sur E12 à la place du tiret bas, qui est sur AltGr + C07. ibidem
+* Transformations : Groupe 1 : Supprimer les alternatives obsolètes pour "‑" U+2011, "―" U+2015. compose-2.yml [e5d8048](https://github.com/dispoclavier/nouvel-azerty/commit/e5d8048a79de7a1c154e1d33805621d7c181c55f)
+* Documentation : Tableaux des touches mortes : Mettre à jour la place de la touche morte tréma, sur E05. generate-deadkey-tables.pl [b5caeaf](https://github.com/dispoclavier/nouvel-azerty/commit/b5caeafc4e620a971e993d9362f80e9eca9ce0de), generate-multikey-tables.pl [fc232fd](https://github.com/dispoclavier/nouvel-azerty/commit/fc232fd5715d6bd7286f370a9ea415fe543da85e)
+
 ## 4.9.0 (2024-10-27)
 
 Correction des touches E11 et E12, et C11, C12, D11, D12.
