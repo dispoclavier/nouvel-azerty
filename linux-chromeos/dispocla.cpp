@@ -1,4 +1,4 @@
-//                       Date: 2024-10-27T1621+0100
+//                       Date: 2024-10-28T1842+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1467,6 +1467,13 @@ xkb_symbols "kbbrFRsr" {
 		[            NoSymbol ]
 	};
 
+	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
+	key <AE12> {
+		[          apostrophe ],
+		[            NoSymbol ]
+	};
+
 };
 
 partial alphanumeric_keys
@@ -1532,6 +1539,13 @@ xkb_symbols "kbfrPFsr" {
 		[         dead_macron,               U02BB ],
 		[            NoSymbol ]
 	};// Tārava, tāumi; U02BB ʻeta
+
+	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
+	key <AE12> {
+		[          apostrophe ],
+		[            NoSymbol ]
+	};
 
 };
 
@@ -1608,6 +1622,13 @@ xkb_symbols "kbfrAFsr" {
 		[               U0254,               U0186 ],
 		[            NoSymbol ]
 	}; // ɔ, Ɔ
+
+	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
+	key <AE12> {
+		[          apostrophe ],
+		[            NoSymbol ]
+	};
 
 };
 
@@ -1717,7 +1738,7 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
-		[          dead_grave,      Greek_horizbar ],
+		[          apostrophe,      Greek_horizbar ],
 		[            NoSymbol ]
 	};
 
@@ -1738,7 +1759,7 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
-		[          apostrophe ],
+		[          underscore ],
 		[            NoSymbol ]
 	};
 
@@ -1853,7 +1874,7 @@ xkb_symbols "kbfrFRsr" {
 
 	key <BKSL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[               minus,            NoSymbol,          underscore ],
+		[               minus,            NoSymbol,          dead_grave ],
 		[               minus,            NoSymbol,           Multi_key ]
 	};
 
