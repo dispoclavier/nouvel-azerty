@@ -1,4 +1,4 @@
-//                       Date: 2024-10-28T1842+0100
+//                       Date: 2024-11-07T2349+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -556,7 +556,7 @@
 // https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b
 //
 // The fact that quotedbl is on the E key, and apostrophe is on the U key based
-// on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonics, referring to the EU
+// on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonic if considering the EU
 // initialism. Also, both quotedbl and apostrophe have their HTML named entity,
 // frequent `&quot;` and rare `&apos;`, on level 8 (Shift + AltGr + AltFr) like
 // ampersand, less and greater, the latter two on level 7 (AltGr + AltFr).
@@ -693,11 +693,12 @@ xkb_symbols "kbfrFRs" {
 	// Both the preferred punctuation apostrophe "’" U2019 <rightsinglequotemark>
 	// and the ASCII single quote "'" U0027 <apostrophe> are featured on two base
 	// level live key positions: E04, because this is the traditional apostrophe
-	// key, or remapped on C11, and E05 because this is traditionally the opening
-	// parenthesis, that has its closing counterpart on E11 repurposed for the at
-	// sign required on base level, and that becomes available thanks to moving
-	// both opening and closing parentheses together on C03 and C04, level 3; or
-	// C11, when the keyboard is in ASCII mode.
+	// key, or remapped on C11, and E12 left by the diaeresis dead key moving to
+	// E05 because this is traditionally the opening parenthesis with its closing
+	// counterpart on E11 repurposed for the at sign required on base level, and
+	// that becomes available thanks to moving both parentheses together on C03
+	// and C04, level 3, or remapped on E07 by swapping with the underscore; or
+	// on C11 when the keyboard is in ASCII mode.
 	//
 	// The letter apostrophe "ʼ" U02BC, used in Breton as part of the trigraph
 	// "cʼh", is used in the Breton trigraph <c_h> and is featured in group 1 of
@@ -705,9 +706,23 @@ xkb_symbols "kbfrFRs" {
 	//
 	// Mapping both the punctuation apostrophe and the ASCII apostrophe on two
 	// base level positions is usually frowned upon, but this is the only way
-	// to reconcile two competing requirements that are equally advocated, due to
-	// the frequency and usefulness of both punctuation and ASCII apostrophes.
+	// to reconcile two competing requirements that are equally justified and
+	// consistently advocated, due to the frequency and usefulness of both the
+	// punctuation apostrophe and the ASCII apostrophe.
 	// https://listengine.tuxfamily.org/ergodis.org/discussions/2016/11/msg00152.html
+	//
+	//
+	// ## Level-5 numpad
+	//
+	// A graphics-only, extended numpad on level 5 is consistent with the overlay
+	// numpad of compact keyboards lacking a dedicated numpad except for the zero
+	// key, moved from B07 to B06, duplicated on E10, and completed with a double
+	// zero on B05, while the triple zero is input by pressing simultaneously the
+	// single and double zeros; and exept for the basic arithmetic operators that
+	// are moved to C06, C05, B02, B01 for ASCII, consistent with level-3 ASCII,
+	// and completed with MINUS SIGN on D05, "×" on B03, and "÷" on B04; so as to
+	// make room for both period and comma decimal separators on D10 and C10, and
+	// streamline the use of all three group separators including NBTSP (NNBSP).
 	//
 	//
 	// ## Format controls
