@@ -1,4 +1,4 @@
-//                       Date: 2024-11-07T2349+0100
+//                       Date: 2024-11-09T1410+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -723,6 +723,21 @@ xkb_symbols "kbfrFRs" {
 	// and completed with MINUS SIGN on D05, "×" on B03, and "÷" on B04; so as to
 	// make room for both period and comma decimal separators on D10 and C10, and
 	// streamline the use of all three group separators including NBTSP (NNBSP).
+	//
+	// The other digits are duplicated consistently on E01..E06 for symmetricity
+	// so that with respect to digits, AltFr acts like a lefthand AltGr and like
+	// a Shift key, improving backwards compatibility with legacy AZERTY.
+	//
+	// The remaining keys are used for the degree sign on E11, the equals sign on
+	// E12, other ASCII symbols "^"", "%", "#", "$", "(", ")" as well as euro and
+	// pound signs. Except for the pound sign, these are consistent with level-3
+	// euro and ASCII symbols. The point in having currency symbols on level 5 is
+	// synergy with NBTSP, required like before other measurement units. This is
+	// also the reason why the last available level-5 position, on D06, is used
+	// for the micro sign.
+	//
+	// The punctuation keys B07..B10, C11..C12, D11..D12 are used for the eight
+	// unspaced big punctuation marks that have spaced-out support on level 2.
 	//
 	//
 	// ## Format controls
