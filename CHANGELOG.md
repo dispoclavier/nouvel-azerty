@@ -2,6 +2,17 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.11.0 (2024-11-09)
+
+Amélioration de l’utilité des groupes des symboles grâce à l’assurance de la prise en charge des touches vives sous Windows sans déclencher le malware de Microsoft.
+
+* Composition : Ajouter "↴" U+21B4, "↸" U+21B8. compose-1.yml [1ed0bed](https://github.com/dispoclavier/nouvel-azerty/commit/1ed0bedb0e12e5fa45322881f140b3684859f2da)
+* Transformations : Groupes des symboles :
+	* Permuter "∓" U+2213 et "➕" U+2795, "×" U+00D7 et "✖" U+2716, "÷" U+00F7 et "➗" U+2797. ibidem, compose-3.yml [717e162](https://github.com/dispoclavier/nouvel-azerty/commit/717e162ba294440f4000370d4f266e7f4bac2c2c)
+	* Mettre "➖" U+2796 dans le groupe 2 à la place de "⁃" U+2043, qui prend la place de "−" U+2212, qui prend la place laissée par "➖" U+2796, ibidem
+	* Redonder "≠" U+2260 à la place de "≡" U+2261, qui prend la place du trait d’union insécable "‑" U+2011, qui est sur touche vive. ibidem
+* Documentation : Corriger et compléter des annotations. dispocla.cpp [af33434](https://github.com/dispoclavier/nouvel-azerty/commit/af33434952283d7d62a5f83c5dbe9f78fb2d8df9), [20e4bf1](https://github.com/dispoclavier/nouvel-azerty/commit/20e4bf14c0ee49635dd2d7748a140455274fae6b), compose-2.yml [ca98c7d](https://github.com/dispoclavier/nouvel-azerty/commit/ca98c7d96dcde5ad08a3dbb8ffcbcf8b7337b69b)
+
 ## 4.10.0 (2024-10-28)
 
 Amélioration de l’ergonomie des variantes redisposées.
