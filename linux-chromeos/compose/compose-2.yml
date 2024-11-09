@@ -335,8 +335,8 @@
 #   One of those two dead keys that is not mapped on the same key as the symbol
 #   used to emulate it by multikey is dead_abovedot, mapped on P, where level 3
 #   ampersand is unrelated. However, dead_abovedot’s multikey equivalent period
-#   is mapped on level 5, for use as a decimal separator on the extended AltFr-
-#   level numpad, alongside comma on key C10 (M on AZERTY).
+#   is mapped on level 5, for use as a decimal separator or group separator on
+#   the level-5 numpad, alongside comma on key C10 (M on AZERTY).
 #
 #   The other exception is dead_cedilla on the comma key B07, where level 3 is
 #   used for question mark, that is not an equivalent of any dead key either.
