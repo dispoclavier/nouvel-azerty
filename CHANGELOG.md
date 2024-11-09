@@ -4,7 +4,7 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.11.1 (projet)
 
-* Documentation : Corriger des annotations. compose-1.yml [f7d09dd](https://github.com/dispoclavier/nouvel-azerty/commit/f7d09dd29fbe51aa33a68e7f813a7b9ac8923c4a)
+* Documentation : Corriger des annotations. compose-1.yml [f7d09dd](https://github.com/dispoclavier/nouvel-azerty/commit/f7d09dd29fbe51aa33a68e7f813a7b9ac8923c4a), compose-3.yml [a6bba5d](https://github.com/dispoclavier/nouvel-azerty/commit/a6bba5d9b57ab3178f6cba9bfc937eb5745d9da8)
 
 ## 4.11.0 (2024-11-09)
 
