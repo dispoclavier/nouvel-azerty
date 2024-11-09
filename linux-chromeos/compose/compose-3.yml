@@ -194,12 +194,11 @@
 #   See # # Mathematical Latin alphabets
 #
 #
-#
 # ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
-#	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π		␣	⌀	➔	−	±	•	⟨	⟩	☐	✘	✗	✓	✔	‑	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
-#	  2	♿	‱	∈	√	≈	⚪	⊂	∬	∅	☮		⍽	∂	➜	⁃	∓	◦	❰	❱	☑	÷	×	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
-#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	∐	∏		∑	☹	☺	➖	➕	‣	❮	❯	☒	➗	✖	✂	✅	≡	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
+#	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π		␣	⌀	➔	⁃	±	•	⟨	⟩	☐	✘	✗	✓	✔	≡	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
+#	  2	♿	‱	∈	√	≈	⚪	⊂	∬	∅	☮		⍽	∂	➜	➖	➕	◦	❰	❱	☑	➗	✖	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
+#	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	∐	∏		∑	☹	☺	−	∓	‣	❮	❯	☒	÷	×	✂	✅	≠	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
 #	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	∠	☇	⚕	☢	☠	●	➰	⯀	⛈	☔	▪	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	▫	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	✈	☈	✍	♻	☎	○	➿	▢	⛔	☂	◾	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	◽	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
@@ -1171,22 +1170,31 @@
 #   See # # B05 equal
 #   See # # Dashes and hyphens
 #
-#   Instead, U2212 MINUS SIGN is mapped here with respect to incomplete layouts
-#   lacking arithmetic base operators, usually on level 5 live key positions.
-#
 #   For completeness, U2010 HYPHEN is in group 12 of minus, where it should not
 #   do too much harm.
 #
-<UEFD0>                                                                                    <minus> : "−" U2212 # MINUS SIGN math
-<Multi_key><numbersign>                                                                    <minus> : "−" U2212 # MINUS SIGN math
-<UEFD0><UEFD0>                                                                             <minus> : "⁃" U2043 # HYPHEN BULLET
-<Multi_key><numbersign><numbersign>                                                        <minus> : "⁃" U2043 # HYPHEN BULLET
-<UEFD0><3>                                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<Multi_key><numbersign><3>                                                                 <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<UEFD0><KP_3>                                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
-<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+#   Since the four basic arithmetic operators are on level 5 live key positions
+#   thanks to the level-5 numpad, for maximum usability the typographic aliases
+#   are in group 3 rather than in group 2, used instead for the heavy operators
+#   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
+#   See dispocla.cpp ## Level-5 numpad
+#
+#   In Unicode CLDR, "➖" U2796 HEAVY MINUS SIGN is the range syntax mark.
+#   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L72
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L72
+#   See C08 bracketleft
+#   See C09 bracketright
+#
+<UEFD0>                                                                                    <minus> : "⁃" U2043 # HYPHEN BULLET
+<Multi_key><numbersign>                                                                    <minus> : "⁃" U2043 # HYPHEN BULLET
+<UEFD0><UEFD0>                                                                             <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<Multi_key><numbersign><numbersign>                                                        <minus> : "➖" U2796 # HEAVY MINUS SIGN emoji
+<UEFD0><3>                                                                                 <minus> : "−" U2212 # MINUS SIGN math
+<Multi_key><numbersign><3>                                                                 <minus> : "−" U2212 # MINUS SIGN math
+<UEFD0><KP_3>                                                                        <KP_Subtract> : "−" U2212 # MINUS SIGN math
+<Multi_key><numbersign><KP_3>                                                        <KP_Subtract> : "−" U2212 # MINUS SIGN math
+<UEFD0><UEFD0><UEFD0>                                                                      <minus> : "−" U2212 # MINUS SIGN math
+<Multi_key><numbersign><numbersign><numbersign>                                            <minus> : "−" U2212 # MINUS SIGN math
 <UEFD0><4>                                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <Multi_key><numbersign><4>                                                                 <minus> : "♨" U2668 # HOT SPRINGS emoji
 <UEFD0><KP_4>                                                                        <KP_Subtract> : "♨" U2668 # HOT SPRINGS emoji
@@ -1234,14 +1242,14 @@
 #
 <UEFD0>                                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN math
 <Multi_key><numbersign>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN math
-<UEFD0><UEFD0>                                                                              <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
-<Multi_key><numbersign><numbersign>                                                         <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
-<UEFD0><3>                                                                                  <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<Multi_key><numbersign><3>                                                                  <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<UEFD0><KP_3>                                                                             <KP_Add> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<Multi_key><numbersign><KP_3>                                                             <KP_Add> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<UEFD0><UEFD0><UEFD0>                                                                       <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
-<Multi_key><numbersign><numbersign><numbersign>                                             <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<UEFD0><UEFD0>                                                                              <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<Multi_key><numbersign><numbersign>                                                         <plus> : "➕" U2795 # HEAVY PLUS SIGN emoji
+<UEFD0><3>                                                                                  <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
+<Multi_key><numbersign><3>                                                                  <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
+<UEFD0><KP_3>                                                                             <KP_Add> : "∓" U2213 # MINUS-OR-PLUS SIGN math
+<Multi_key><numbersign><KP_3>                                                             <KP_Add> : "∓" U2213 # MINUS-OR-PLUS SIGN math
+<UEFD0><UEFD0><UEFD0>                                                                       <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
+<Multi_key><numbersign><numbersign><numbersign>                                             <plus> : "∓" U2213 # MINUS-OR-PLUS SIGN math
 <UEFD0><4>                                                                                  <plus> : "⊎" U228E # MULTISET UNION math
 <Multi_key><numbersign><4>                                                                  <plus> : "⊎" U228E # MULTISET UNION math
 <UEFD0><KP_4>                                                                             <KP_Add> : "⊎" U228E # MULTISET UNION math
@@ -1349,6 +1357,10 @@
 #
 # # C08 bracketleft
 #
+#   In Unicode CLDR, "❰" U2770 is the escape start.
+#   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
+#
 <UEFD0>                                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
 <Multi_key><numbersign>                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
 <UEFD0><UEFD0>                                                                      <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
@@ -1400,6 +1412,10 @@
 #
 #
 # # C09 bracketright
+#
+#   In Unicode CLDR, "❱" U2771 is the escape end.
+#   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L74
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L74
 #
 <UEFD0>                                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
 <Multi_key><numbersign>                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
@@ -1525,6 +1541,13 @@
 #
 # # B01 slash
 #
+#   Since the four basic arithmetic operators are on level 5 live key positions
+#   thanks to the level-5 numpad, for maximum usability the typographic aliases
+#   are in group 3 rather than in group 2, used instead for the heavy operators
+#   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
+#   See # # C05 minus
+#   See dispocla.cpp ## Level-5 numpad
+#
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
 #   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two
 #   sets. These also have multikey alternatives.
@@ -1533,14 +1556,14 @@
 #
 <UEFD0>                                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
 <Multi_key><numbersign>                                                                    <slash> : "✘" U2718 # HEAVY BALLOT X
-<UEFD0><UEFD0>                                                                             <slash> : "÷" U00F7 # DIVISION SIGN math
-<Multi_key><numbersign><numbersign>                                                        <slash> : "÷" U00F7 # DIVISION SIGN math
-<UEFD0><3>                                                                                 <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<Multi_key><numbersign><3>                                                                 <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<UEFD0><KP_3>                                                                          <KP_Divide> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<Multi_key><numbersign><KP_3>                                                          <KP_Divide> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<UEFD0><UEFD0><UEFD0>                                                                      <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
-<Multi_key><numbersign><numbersign><numbersign>                                            <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
+<UEFD0><UEFD0>                                                                             <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
+<Multi_key><numbersign><numbersign>                                                        <slash> : "➗" U2797 # HEAVY DIVISION SIGN emoji
+<UEFD0><3>                                                                                 <slash> : "÷" U00F7 # DIVISION SIGN math
+<Multi_key><numbersign><3>                                                                 <slash> : "÷" U00F7 # DIVISION SIGN math
+<UEFD0><KP_3>                                                                          <KP_Divide> : "÷" U00F7 # DIVISION SIGN math
+<Multi_key><numbersign><KP_3>                                                          <KP_Divide> : "÷" U00F7 # DIVISION SIGN math
+<UEFD0><UEFD0><UEFD0>                                                                      <slash> : "÷" U00F7 # DIVISION SIGN math
+<Multi_key><numbersign><numbersign><numbersign>                                            <slash> : "÷" U00F7 # DIVISION SIGN math
 <UEFD0><4>                                                                                 <slash> : "⛆" U26C6 # RAIN
 <Multi_key><numbersign><4>                                                                 <slash> : "⛆" U26C6 # RAIN
 <UEFD0><KP_4>                                                                          <KP_Divide> : "⛆" U26C6 # RAIN
@@ -1583,16 +1606,23 @@
 #
 # # B02 asterisk
 #
+#   Since the four basic arithmetic operators are on level 5 live key positions
+#   thanks to the level-5 numpad, for maximum usability the typographic aliases
+#   are in group 3 rather than in group 2, used instead for the heavy operators
+#   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
+#   See # # C05 minus
+#   See dispocla.cpp ## Level-5 numpad
+#
 <UEFD0>                                                                                 <asterisk> : "✗" U2717 # BALLOT X
 <Multi_key><numbersign>                                                                 <asterisk> : "✗" U2717 # BALLOT X
-<UEFD0><UEFD0>                                                                          <asterisk> : "×" U00D7 # MULTIPLICATION SIGN math
-<Multi_key><numbersign><numbersign>                                                     <asterisk> : "×" U00D7 # MULTIPLICATION SIGN math
-<UEFD0><3>                                                                              <asterisk> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
-<Multi_key><numbersign><3>                                                              <asterisk> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
-<UEFD0><KP_3>                                                                        <KP_Multiply> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
-<Multi_key><numbersign><KP_3>                                                        <KP_Multiply> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
-<UEFD0><UEFD0><UEFD0>                                                                   <asterisk> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
-<Multi_key><numbersign><numbersign><numbersign>                                         <asterisk> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
+<UEFD0><UEFD0>                                                                          <asterisk> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
+<Multi_key><numbersign><numbersign>                                                     <asterisk> : "✖" U2716 # HEAVY MULTIPLICATION X emoji
+<UEFD0><3>                                                                              <asterisk> : "×" U00D7 # MULTIPLICATION SIGN math
+<Multi_key><numbersign><3>                                                              <asterisk> : "×" U00D7 # MULTIPLICATION SIGN math
+<UEFD0><KP_3>                                                                        <KP_Multiply> : "×" U00D7 # MULTIPLICATION SIGN math
+<Multi_key><numbersign><KP_3>                                                        <KP_Multiply> : "×" U00D7 # MULTIPLICATION SIGN math
+<UEFD0><UEFD0><UEFD0>                                                                   <asterisk> : "×" U00D7 # MULTIPLICATION SIGN math
+<Multi_key><numbersign><numbersign><numbersign>                                         <asterisk> : "×" U00D7 # MULTIPLICATION SIGN math
 <UEFD0><4>                                                                              <asterisk> : "❌" U274C # CROSS MARK emoji
 <Multi_key><numbersign><4>                                                              <asterisk> : "❌" U274C # CROSS MARK emoji
 <UEFD0><KP_4>                                                                        <KP_Multiply> : "❌" U274C # CROSS MARK emoji
@@ -1744,19 +1774,16 @@
 #
 # # B05 equal
 #
-#   Due to its importance, "‑" U2011 NON-BREAKING HYPHEN is also on live key.
-#   # # C05 minus
-#
-<UEFD0>                                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
-<Multi_key><numbersign>                                                                    <equal> : "‑" U2011 # NON-BREAKING HYPHEN
+<UEFD0>                                                                                    <equal> : "≡" U2261 # IDENTICAL TO math
+<Multi_key><numbersign>                                                                    <equal> : "≡" U2261 # IDENTICAL TO math
 <UEFD0><UEFD0>                                                                             <equal> : "≙" U2259 # ESTIMATES math
 <Multi_key><numbersign><numbersign>                                                        <equal> : "≙" U2259 # ESTIMATES math
-<UEFD0><3>                                                                                 <equal> : "≡" U2261 # IDENTICAL TO math
-<Multi_key><numbersign><3>                                                                 <equal> : "≡" U2261 # IDENTICAL TO math
-<UEFD0><KP_3>                                                                              <equal> : "≡" U2261 # IDENTICAL TO math
-<Multi_key><numbersign><KP_3>                                                              <equal> : "≡" U2261 # IDENTICAL TO math
-<UEFD0><UEFD0><UEFD0>                                                                      <equal> : "≡" U2261 # IDENTICAL TO math
-<Multi_key><numbersign><numbersign><numbersign>                                            <equal> : "≡" U2261 # IDENTICAL TO math
+<UEFD0><3>                                                                                 <equal> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><numbersign><3>                                                                 <equal> : "≠" U2260 # NOT EQUAL TO
+<UEFD0><KP_3>                                                                              <equal> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><numbersign><KP_3>                                                              <equal> : "≠" U2260 # NOT EQUAL TO
+<UEFD0><UEFD0><UEFD0>                                                                      <equal> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><numbersign><numbersign><numbersign>                                            <equal> : "≠" U2260 # NOT EQUAL TO
 <UEFD0><4>                                                                                 <equal> : "≜" U225C # DELTA EQUAL TO math
 <Multi_key><numbersign><4>                                                                 <equal> : "≜" U225C # DELTA EQUAL TO math
 <UEFD0><KP_4>                                                                              <equal> : "≜" U225C # DELTA EQUAL TO math
@@ -2449,7 +2476,6 @@
 #   This tab-separated table is copied from a spreadsheet.
 #   Plain text displays best with a 6 character tab width.
 #   Empty positions are unassigned.
-#
 #
 #
 #	   	g1	g2	g3	g4	g5	g11	g12	g6	g7	g8	g9	g10
