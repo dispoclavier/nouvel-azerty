@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.10.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.11.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -526,18 +526,18 @@
 #
 # # Double zero
 #
-#   Primarily intended for the extended AltFr-level numpad on the alphanumeric
-#   block. On the dedicated numpad, this may be mapped on Shift + KP_0, since
-#   the cursor key feature on the numpad is deactivated as outdated, redundant
-#   and wasting these now repurposed Shift + KP_* positions.
+#   Primarily intended for the level-5 numpad. On the dedicated numpad this may
+#   be mapped on Shift + KP_0, since the cursor key feature is deactivated as
+#   outdated, redundant and wasting the Shift + KP_* positions.
+#   See dispocla.cpp ## Level-5 numpad
 #
 <UEF6D> : "00" #
 #
-#   A triple zero key is useful only on the dedicated numpad. On the extended
-#   AltFr-level numpad, a triple zero is easily input by simultaneously hitting
-#   single and double zeros on AltFr + N and AltFr + B. As a consequence, this
-#   triple zero was dropped. But later (2021-07-01T0458+0200) it was readded as
-#   UEF7D for Shift + KP_1.
+#   A triple zero key is useful only on the dedicated numpad. On the level-5
+#   numpad, a triple zero is easily input by simultaneously hitting single and
+#   double zeros on AltFr + N and AltFr + B. As a consequence, this triple zero
+#   was dropped. But later (2021-07-01T0458+0200) it was readded as UEF7D for
+#   Shift + KP_1.
 #
 #
 # # Justifying no-break spaces
@@ -1983,8 +1983,8 @@
 # # Degree sign
 #
 #   "°" U00B0 is on live key E11, on level 2 consistently with French AZERTY,
-#   and on level 5 as part of the graphics-only, extended AltFr-level numpad on
-#   the alphanumeric block.
+#   and on level 5 as part of the level-5 numpad.
+#   See dispocla.cpp ## Level-5 numpad
 #
 #   By contrast, the degree sign’s legacy multikey sequence <Multi_key><o><o>
 #   as in en_US.UTF-8/Compose cannot be supported, since it is required for "ꝏ"
@@ -2965,12 +2965,14 @@
 <Multi_key><W><L>                                                                                  : "⌇" U2307 # WAVY LINE
 #
 #
-# # Symbols for Enter and Return key
+# # Symbols related to Enter or Return keys
 #
-#   Case sensitive.
+#   Some of these are case sensitive.
 #
 <Multi_key><e><n><t>                                                                               : "⌤" U2324 # UP ARROWHEAD BETWEEN TWO HORIZONTAL BARS
 <Multi_key><E><N><T>                                                                               : "⎆" U2386 # ENTER SYMBOL
+<Multi_key><l><f>                                                                                  : "↴" U21B4 # RIGHTWARDS ARROW WITH CORNER DOWNWARDS
+<Multi_key><L><F>                                                                                  : "↴" U21B4 # RIGHTWARDS ARROW WITH CORNER DOWNWARDS
 <Multi_key><r><e><t>                                                                               : "↵" U21B5 # DOWNWARDS ARROW WITH CORNER LEFTWARDS
 <Multi_key><R><E><T>                                                                               : "⏎" U23CE # RETURN SYMBOL
 <Multi_key><l><r><e><t>                                                                            : "⮠" U2BA0 # DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
@@ -2983,6 +2985,23 @@
 #
 <Multi_key><t><a><b>                                                                               : "↹" U21B9 # LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR, tab with shift tab
 <Multi_key><T><A><B>                                                                               : "⭾" U2B7E # HORIZONTAL TAB KEY
+#
+#
+# # Symbols for cursor keys
+#
+#   The sequences of the home key are streamlined by truncation.
+#
+#   The symbol of the end key "⇲" U21F2 is uncommon and is not included in the
+#   TeX math package referred to here.
+#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf
+#
+#   This is not a comprehensive set, as arrow keys are supported otherwise.
+#   See # # Arrows in block U2190 used in mathematics
+#   See # # Arrows as on the numpad
+#   See #*# HORN
+#
+<Multi_key><h><o><m>                                                                               : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
+<Multi_key><H><O><M>                                                                               : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
 #
 #
 # # Symbols for deletion keys
@@ -3155,6 +3174,13 @@
 #   in TeX math packages and are thus expected to be supported by input methods
 #   consistently.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
+#
+#   Some of these additional symbols are supported as keyboard symbols:
+#   "↴" U21B4, "↵" U21B5, "↸" U21B8, "↹" U21B9.
+#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=20
+#   See # # Symbols related to Enter or Return keys
+#   See # # Symbols for Tab key
+#   See # # Symbols for cursor keys
 #
 #
 # # Count
@@ -3368,10 +3394,10 @@
 #   See # # B02 asterisk
 #   See # # B01 slash
 #
-#   In group 2 of *                                                                                : "×" U00D7 # MULTIPLICATION SIGN
+#   In group 3 of *                                                                                : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                             <space> : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                      <nobreakspace> : "×" U00D7 # MULTIPLICATION SIGN
-#   In group 2 of /                                                                                : "÷" U00F7 # DIVISION SIGN
+#   In group 3 of /                                                                                : "÷" U00F7 # DIVISION SIGN
 <Multi_key><colon><minus>                                                                  <space> : "÷" U00F7 # DIVISION SIGN
 <Multi_key><colon><minus>                                                           <nobreakspace> : "÷" U00F7 # DIVISION SIGN
 <Multi_key><period><minus><period>                                                         <space> : "÷" U00F7 # DIVISION SIGN
@@ -3907,7 +3933,10 @@
 <Multi_key><bar><minus><greater><underscore>                                        <nobreakspace> : "↦" U21A6 # RIGHTWARDS ARROW FROM BAR
 <Multi_key><bar><minus><greater><bar>                                                      <space> : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
 <Multi_key><bar><minus><greater><bar>                                               <nobreakspace> : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
+#
 #   U21A8 is not labeled as math but is included in TeX math packages.
+#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=20
+#
 <Multi_key><less><minus><greater><bar><bar>                                                <space> : "↨" U21A8 # UP DOWN ARROW WITH BASE
 <Multi_key><less><minus><greater><bar><bar>                                         <nobreakspace> : "↨" U21A8 # UP DOWN ARROW WITH BASE
 #   In group 9 of )                                                                                : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
@@ -3926,8 +3955,10 @@
 <Multi_key><nobreakspace><less><asciitilde><greater>                                <nobreakspace> : "↭" U21AD # LEFT RIGHT WAVE ARROW
 <Multi_key><less><minus><slash><minus><greater>                                            <space> : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
 <Multi_key><less><minus><slash><minus><greater>                                     <nobreakspace> : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
+#
 #   U21AF is not labeled as math but is included in TeX math packages.
-#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=48
+#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=36
+#
 #   In group 4 of %                                                                                : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><N><greater>                                                                    <space> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><N><greater>                                                             <nobreakspace> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
@@ -4161,12 +4192,14 @@
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
 #   On live key AltFr + D05                                                                        : "−" U2212 # MINUS SIGN
-#   In group 1 of -                                                                                : "−" U2212 # MINUS SIGN
+#   In group 3 of -                                                                                : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                                  <space> : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                           <nobreakspace> : "−" U2212 # MINUS SIGN
+#
 #   For "∓" U2213, space termination is skipped like it is for "±" U00B1.
 #   See # # Plus minus
-#   In group 2 of +                                                                                : "∓" U2213 # MINUS-OR-PLUS SIGN
+#
+#   In group 3 of +                                                                                : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><minus><plus>                                                                           : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><period><plus>                                                                  <space> : "∔" U2214 # DOT PLUS
 <Multi_key><period><plus>                                                           <nobreakspace> : "∔" U2214 # DOT PLUS
@@ -4478,9 +4511,10 @@
 <Multi_key><m><equal>                                                               <nobreakspace> : "≞" U225E # MEASURED BY
 <Multi_key><question><equal>                                                               <space> : "≟" U225F # QUESTIONED EQUAL TO
 <Multi_key><question><equal>                                                        <nobreakspace> : "≟" U225F # QUESTIONED EQUAL TO
+#   In group 3 of =                                                                                : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                                  <space> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                           <nobreakspace> : "≠" U2260 # NOT EQUAL TO
-#   In group 3 of =                                                                                : "≡" U2261 # IDENTICAL TO
+#   In group 1 of =                                                                                : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal>                                                                  <space> : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal>                                                           <nobreakspace> : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal><slash>                                                           <space> : "≢" U2262 # NOT IDENTICAL TO
