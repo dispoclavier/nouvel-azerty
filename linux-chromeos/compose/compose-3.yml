@@ -1165,13 +1165,13 @@
 #
 # # C05 minus
 #
-#   Unlike U2011 NON-BREAKING HYPHEN, in group 1 of equal, U2010 HYPHEN is not
-#   in group 1 of minus, because it is a duplicate of U002D HYPHEN-MINUS.
+#   "‐" U2010 HYPHEN is not in group 1 of minus, because it is a duplicate of
+#   "-" U002D HYPHEN-MINUS.
 #   See # # B05 equal
 #   See # # Dashes and hyphens
 #
-#   For completeness, U2010 HYPHEN is in group 12 of minus, where it should not
-#   do too much harm.
+#   For completeness, "‐" U2010 HYPHEN is in group 12 of minus, where it should
+#   not do too much harm.
 #
 #   Since the four basic arithmetic operators are on level 5 live key positions
 #   thanks to the level-5 numpad, for maximum usability the typographic aliases
