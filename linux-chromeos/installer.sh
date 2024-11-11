@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-10-19T0946+0200
+#                       Date : 2024-11-11T2341+0100
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -34,7 +34,7 @@
 #     ◦ Rendre ce script exécutable dans Propriétés > Permissions > Exécuter ;
 #     ◦ Dans Édition > Préférences > Comportement > Fichier texte exécutable,
 #       choisir « Demander chaque fois » ;
-#     ◦ Cliquer ou double-cliquer ce script puis « Lancer dans le terminal ».
+#     ◦ Cliquer ou double-cliquer ce script puis « Lancer dans un terminal ».
 #
 #
 #   Fichiers associés
@@ -47,9 +47,10 @@
 #      [installer.sh]
 #      Compose.yml
 #      installer/
-#         evdev-additions.xml
-#         dispocla.cpp
 #         dispotypes.c
+#         perso.cpp
+#         dispocla.cpp
+#         evdev-additions.xml
 #         dispoled.c
 #         evdev.c
 #         evdev-ansi.c
@@ -97,6 +98,11 @@ function installer_dispo {
 	sudo cp installer/dispotypes.c $X11/xkb/types/dispotypes
 	sudo cp $X11/xkb/types/complete $X11/xkb/types/complete-types-avant-dispoclavier
 	sudo sed -i '/\};/i \ \ \ \ include "dispotypes"' $X11/xkb/types/complete
+	# Installer le fichier de personnalisations s’il n’est pas déjà présent.
+	if [ "$perso" -eq 0 ]; then
+		echo 'Installation du fichier de personnalisations inclus.'
+		sudo cp installer/perso.cpp $X11/xkb/symbols/perso
+	fi
 	# Installer les tableaux d’allocation de touches.
 	echo 'Installation des dispositions de clavier.'
 	sudo cp installer/dispocla.cpp $X11/xkb/symbols/dispocla
@@ -247,6 +253,11 @@ else
 		faux=1
 		afficher 'est défectueux'
 	fi
+fi
+fichier="installer/perso.cpp"
+if [ ! -f "$fichier" ]; then
+	manque=1
+	afficher 'manque'
 fi
 fichier="installer/dispocla.cpp"
 if [ ! -f "$fichier" ]; then
@@ -435,6 +446,15 @@ else
 fi
 # Symbols.
 dossier="$X11/xkb/symbols"
+fichier="$dossier/perso"
+if [ -f "$fichier" ]; then
+	trace=1
+	afficher 'est présent'
+	perso=1
+else
+	installation=0
+	perso=0
+fi
 fichier="$dossier/dispocla"
 if [ -f "$fichier" ]; then
 	trace=1
