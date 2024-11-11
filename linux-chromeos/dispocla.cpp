@@ -1,4 +1,4 @@
-//                       Date: 2024-11-09T1410+0100
+//                       Date: 2024-11-11T2150+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1417,6 +1417,16 @@ xkb_symbols "kbfrFRs" {
 	modifier_map Mod4    { <SUPR> };
 	modifier_map Mod4    { <HYPR> };
 
+	//
+	// Customization facility
+	//
+	// Each keyboard layout configured in this file is customizable by the means
+	// of a separate, unoverwritable configuration file, delivered in the folder
+	// of the installation script, and included last in order to override default
+	// mappings.
+	//
+	include "perso"
+
 };
 
 partial alphanumeric_keys
@@ -1458,6 +1468,8 @@ xkb_symbols "kbbrFRs" {
 		[              ntilde,              Ntilde ],
 		[            NoSymbol ]
 	};
+
+	include "perso"
 
 };
 
@@ -1504,6 +1516,8 @@ xkb_symbols "kbbrFRsr" {
 		[            NoSymbol ]
 	};
 
+	include "perso"
+
 };
 
 partial alphanumeric_keys
@@ -1539,6 +1553,8 @@ xkb_symbols "kbfrPFs" {
 		[         dead_macron,               U02BB ],
 		[            NoSymbol ]
 	};// Tārava, tāumi; U02BB ʻeta
+
+	include "perso"
 
 };
 
@@ -1577,6 +1593,8 @@ xkb_symbols "kbfrPFsr" {
 		[            NoSymbol ]
 	};
 
+	include "perso"
+
 };
 
 partial alphanumeric_keys
@@ -1614,6 +1632,8 @@ xkb_symbols "kbfrAFs" {
 		[               U0254,               U0186 ],
 		[            NoSymbol ]
 	}; // ɔ, Ɔ
+
+	include "perso"
 
 };
 
@@ -1660,6 +1680,8 @@ xkb_symbols "kbfrAFsr" {
 		[            NoSymbol ]
 	};
 
+	include "perso"
+
 };
 
 partial alphanumeric_keys
@@ -1700,6 +1722,8 @@ xkb_symbols "kbfrBEs" {
 		[               minus,          underscore ],
 		[            NoSymbol ]
 	};// Rather than NON-BREAKING HYPHEN.
+
+	include "perso"
 
 };
 
@@ -1915,5 +1939,7 @@ xkb_symbols "kbfrFRsr" {
 		[                   h,                   H,            NoSymbol,            NoSymbol,            NoSymbol,                U02B0 ],
 		[                   h,                   H,            NoSymbol,            NoSymbol,            NoSymbol,                U02B0 ]
 	}; // U02B0 ʰ MODIFIER LETTER SMALL H
+
+	include "perso"
 
 };
