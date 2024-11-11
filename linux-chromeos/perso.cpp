@@ -1,4 +1,4 @@
-//                      Date : 2024-11-11T2133+0100
+//                      Date : 2024-11-11T2310+0100
 //      Nom de fichier final : perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -9,9 +9,8 @@
 //   * Au CLDR d’Unicode, cette plateforme s’appelle ChromeOS, avec comme explication
 //     qu’au CLDR, *Linux* est pris en charge aux côtés de *ChromeOS*, ou par ChromeOS.
 //
-//              Installation : Ajouter ce fichier dans /usr/share/X11/xkb/symbols/perso
-//
-//                             Ce fichier est inclus dans toutes les dispositions de clavier
+//              Installation : Ce fichier est installé par défaut dans /usr/share/X11/xkb/symbols/perso
+//                             car il est inclus dans toutes les dispositions de clavier
 //                             configurées dans /usr/share/X11/xkb/symbols/dispocla dès lors
 //                             que ce nouvel AZERTY a été installé, manuellement ou par le
 //                             script d’installation installer.sh inclus dans le paquetage
