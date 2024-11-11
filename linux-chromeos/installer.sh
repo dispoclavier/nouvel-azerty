@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-11-11T2341+0100
+#                       Date : 2024-11-12T0029+0100
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -448,7 +448,6 @@ fi
 dossier="$X11/xkb/symbols"
 fichier="$dossier/perso"
 if [ -f "$fichier" ]; then
-	trace=1
 	afficher 'est présent'
 	perso=1
 else
