@@ -1,4 +1,4 @@
-//                       Date: 2024-11-11T2150+0100
+//                       Date: 2024-11-11T2312+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -23,19 +23,21 @@
 //   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
 //     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 //
-//               Installation: 1. Add this file in /usr/share/X11/xkb/symbols/dispocla
+//               Installation: 1. Add the file perso.cpp in /usr/share/X11/xkb/symbols/perso
 //
-//                             2. In /usr/share/X11/xkb/rules/evdev
+//                             2. Add this file in /usr/share/X11/xkb/symbols/dispocla
+//
+//                             3. In /usr/share/X11/xkb/rules/evdev
 //                                comment out the rule:
 //                                    *		*		=	+%l[2]%(v[2]):2
 //                                See ## XKB layout group 2
 //
-//                             3. In /usr/share/X11/xkb/rules/evdev.xml
+//                             4. In /usr/share/X11/xkb/rules/evdev.xml
 //                                add the lines enclosed in the file
 //                                    evdev-additions.xml
 //                                before the `</layoutList>` closing tag.
 //
-//                             4. In the locale and language settings make sure
+//                             5. In the locale and language settings make sure
 //                                that the input method is XIM, or use the command
 //                                    im-config -n xim
 //
