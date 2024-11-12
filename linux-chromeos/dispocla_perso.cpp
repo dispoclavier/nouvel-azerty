@@ -1,4 +1,4 @@
-//                      Date : 2024-11-12T0441+0100
+//                      Date : 2024-11-12T0638+0100
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -9,7 +9,8 @@
 //   * Au CLDR d’Unicode, cette plateforme s’appelle ChromeOS, avec comme explication
 //     qu’au CLDR, *Linux* est pris en charge aux côtés de *ChromeOS*, ou par ChromeOS.
 //
-//              Installation : Ce fichier est installé par défaut dans /usr/share/X11/xkb/symbols/perso
+//              Installation : Ce fichier doit être installé en premier dans
+//                             /usr/share/X11/xkb/symbols/dispocla_perso
 //                             car il est inclus dans toutes les dispositions de clavier
 //                             configurées dans /usr/share/X11/xkb/symbols/dispocla dès lors
 //                             que ce nouvel AZERTY a été installé, manuellement ou par le
