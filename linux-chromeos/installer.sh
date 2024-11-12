@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-11-12T0029+0100
+#                       Date : 2024-11-12T0445+0100
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -48,7 +48,7 @@
 #      Compose.yml
 #      installer/
 #         dispotypes.c
-#         perso.cpp
+#         dispocla_perso.cpp
 #         dispocla.cpp
 #         evdev-additions.xml
 #         dispoled.c
@@ -99,9 +99,9 @@ function installer_dispo {
 	sudo cp $X11/xkb/types/complete $X11/xkb/types/complete-types-avant-dispoclavier
 	sudo sed -i '/\};/i \ \ \ \ include "dispotypes"' $X11/xkb/types/complete
 	# Installer le fichier de personnalisations s’il n’est pas déjà présent.
-	if [ "$perso" -eq 0 ]; then
+	if [ "$dispocla_perso" -eq 0 ]; then
 		echo 'Installation du fichier de personnalisations inclus.'
-		sudo cp installer/perso.cpp $X11/xkb/symbols/perso
+		sudo cp installer/dispocla_perso.cpp $X11/xkb/symbols/dispocla_perso
 	fi
 	# Installer les tableaux d’allocation de touches.
 	echo 'Installation des dispositions de clavier.'
@@ -254,7 +254,7 @@ else
 		afficher 'est défectueux'
 	fi
 fi
-fichier="installer/perso.cpp"
+fichier="installer/dispocla_perso.cpp"
 if [ ! -f "$fichier" ]; then
 	manque=1
 	afficher 'manque'
@@ -446,13 +446,13 @@ else
 fi
 # Symbols.
 dossier="$X11/xkb/symbols"
-fichier="$dossier/perso"
+fichier="$dossier/dispocla_perso"
 if [ -f "$fichier" ]; then
 	afficher 'est présent'
-	perso=1
+	dispocla_perso=1
 else
 	installation=0
-	perso=0
+	dispocla_perso=0
 fi
 fichier="$dossier/dispocla"
 if [ -f "$fichier" ]; then
