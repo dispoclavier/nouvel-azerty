@@ -1,5 +1,5 @@
-//                      Date : 2024-11-11T2310+0100
-//      Nom de fichier final : perso
+//                      Date : 2024-11-12T0441+0100
+//      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
 //                   Langage : comme du C
