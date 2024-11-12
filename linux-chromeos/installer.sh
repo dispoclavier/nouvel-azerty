@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-11-12T0445+0100
+#                       Date : 2024-11-12T0622+0100
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -207,6 +207,14 @@ function supprimer_dispo {
 	if [ "$evdev_rules_avant" -eq 1 ]; then
 		sudo mv $X11/xkb/rules/evdev-rules-avant-dispoclavier sauvegarde/archive/evdev-rules-avant.c
 	fi
+	# Désinstaller le fichier de personnalisation de dispositions.
+	if [ "$dispocla_perso" -eq 1 ] && [ "$confirmer_suppression" -eq 1 ]; then
+		echo 'Sauvegarde des personnalisations de dispositions de clavier.'
+		mkdir -p ~/.config/dispoclavier/symbols
+		cp $X11/xkb/symbols/dispocla_perso ~/.config/dispoclavier/symbols/dispocla_perso
+		echo 'Désinstallation des personnalisations de dispositions de clavier.'
+		sudo mv $X11/xkb/symbols/dispocla_perso sauvegarde/archive/dispocla_perso.cpp
+	fi
 	# Désinstaller les tableaux d’allocation de touches.
 	if [ "$dispocla" -eq 1 ]; then
 		echo 'Désinstallation des dispositions de clavier.'
@@ -230,6 +238,9 @@ function supprimer_dispo {
 		echo -e "\n  ⚠  Les redispositions de touches ont été sauvegardées"
 		echo      '         à côté dans sauvegarde/evdev.c'
 		echo      '         et dans ~/.config/dispoclavier/keycodes/evdev.'
+		echo -e "\n  ⚠  Les personnalisations de dispositions ont été sauvegardées"
+		echo      '         à côté dans sauvegarde/dispocla_perso.cpp'
+		echo      '         et dans ~/.config/dispoclavier/symbols/dispocla_perso.'
 		echo -e "\n     Tous les retours d’expérience sont les bienvenus."
 		echo -e "\n     N’hésitez pas à créer un rapport de bogue :\n"
 		echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
@@ -445,15 +456,18 @@ else
 	evdev_xml_rules_avant=0
 fi
 # Symbols.
+## Personnalisation.
 dossier="$X11/xkb/symbols"
 fichier="$dossier/dispocla_perso"
 if [ -f "$fichier" ]; then
+	trace=1
 	afficher 'est présent'
 	dispocla_perso=1
 else
 	installation=0
 	dispocla_perso=0
 fi
+## Dispositions.
 fichier="$dossier/dispocla"
 if [ -f "$fichier" ]; then
 	trace=1
