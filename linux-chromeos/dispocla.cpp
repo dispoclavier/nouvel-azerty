@@ -1,4 +1,4 @@
-//                       Date: 2024-11-11T2312+0100
+//                       Date: 2024-11-12T0450+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -23,7 +23,7 @@
 //   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
 //     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 //
-//               Installation: 1. Add the file perso.cpp in /usr/share/X11/xkb/symbols/perso
+//               Installation: 1. Add the file dispocla_perso.cpp in /usr/share/X11/xkb/symbols/dispocla_perso
 //
 //                             2. Add this file in /usr/share/X11/xkb/symbols/dispocla
 //
@@ -1427,7 +1427,7 @@ xkb_symbols "kbfrFRs" {
 	// of the installation script, and included last in order to override default
 	// mappings.
 	//
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1471,7 +1471,7 @@ xkb_symbols "kbbrFRs" {
 		[            NoSymbol ]
 	};
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1518,7 +1518,7 @@ xkb_symbols "kbbrFRsr" {
 		[            NoSymbol ]
 	};
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1556,7 +1556,7 @@ xkb_symbols "kbfrPFs" {
 		[            NoSymbol ]
 	};// Tārava, tāumi; U02BB ʻeta
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1595,7 +1595,7 @@ xkb_symbols "kbfrPFsr" {
 		[            NoSymbol ]
 	};
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1635,7 +1635,7 @@ xkb_symbols "kbfrAFs" {
 		[            NoSymbol ]
 	}; // ɔ, Ɔ
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1682,7 +1682,7 @@ xkb_symbols "kbfrAFsr" {
 		[            NoSymbol ]
 	};
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1725,7 +1725,7 @@ xkb_symbols "kbfrBEs" {
 		[            NoSymbol ]
 	};// Rather than NON-BREAKING HYPHEN.
 
-	include "perso"
+	include "dispocla_perso"
 
 };
 
@@ -1942,6 +1942,6 @@ xkb_symbols "kbfrFRsr" {
 		[                   h,                   H,            NoSymbol,            NoSymbol,            NoSymbol,                U02B0 ]
 	}; // U02B0 ʰ MODIFIER LETTER SMALL H
 
-	include "perso"
+	include "dispocla_perso"
 
 };
