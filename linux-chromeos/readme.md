@@ -83,7 +83,7 @@ Compte tenu de l’[alerte](#alerte-de-d%C3%A9pannage) plus haut, et pour toute 
 1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
 2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Copier ce fichier vers `/usr/share/X11/xkb/types/dispotypes`.
 3. Dans `/usr/share/X11/xkb/types/complete`, ajouter `include "dispotypes"` sur une nouvelle ligne.
-4. [perso.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/perso.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/perso`.
+4. [dispocla_perso.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla_perso.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/dispocla_perso`.
 5. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/dispocla`.
 6. [evdev-additions.xml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev-additions.xml) : Copier l’élément `<layout>` qui commence à la ligne 50 et le coller dans `/usr/share/X11/xkb/rules/evdev.xml` avant la balise `</layoutList>`.
 7. Dans `/usr/share/X11/xkb/rules/evdev`, désactiver la ligne `*		*		=	+%l[2]%(v[2]):2` en l’effaçant ou en la commentant, en la remplaçant par `// * * = +%l[2]%(v[2]):2`. Cela empêche le système d’écraser le deuxième groupe vif.
