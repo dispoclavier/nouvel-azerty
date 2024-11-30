@@ -1,4 +1,4 @@
-//                       Date: 2024-11-30T1334+0100
+//                       Date: 2024-11-30T2219+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -749,9 +749,15 @@ xkb_symbols "kbfrFRs" {
 	// instead of the en dash recommended for interval notation, that is usefully
 	// added to the G key where the ASCII hyphen is. Mnemonically the word joiner
 	// adds to the plus key rather than to the hyphen key, where it would benefit
-	// from alphabetic mnemonics in French calling the word joiner “gluon”. Since
-	// UI design should not prioritize mnemonics over ergonomics, the en dash is
-	// easier (on G) than the word joiner (on H).
+	// from alphabetic mnemonics in French calling the word joiner “gluon”. Also,
+	// the en dash, called “tiret demi-cadratin”, would benefit from yet another
+	// alphabetic mnemonic on the T key. However, as UI design should not improve
+	// mnemonics at the expense of ergonomics, tbe en dash is on G for easy input
+	// rather than the word joiner, that goes on H rather than plus-minus, moved
+	// to D05 where the minus sign is. There, plus-minus mnemonically supports
+	// another math operator, that may be confused with its ASCII counterpart or
+	// mistaken as yet another dash. Thus, mnemonics thankfully add to ergonomics
+	// rather than conversely.
 	//
 	//
 	// ## Format controls
