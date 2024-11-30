@@ -1,4 +1,4 @@
-//                       Date: 2024-11-12T0450+0100
+//                       Date: 2024-11-30T1334+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -741,6 +741,18 @@ xkb_symbols "kbfrFRs" {
 	// The punctuation keys B07..B10, C11..C12, D11..D12 are used for the eight
 	// unspaced big punctuation marks that have spaced-out support on level 2.
 	//
+	// While level 6 is dedicated to superscript small letters, used as ordinal
+	// indicators and other abbreviation indicators, level 7 is used to complete
+	// the level 5 map with some useful extensions such as the yen sign, leaving
+	// its place on Y to the micro sign. Most notably, the plus-minus sign is not
+	// added to the key of the plus sign (H) but to the key of the minus sign (T)
+	// instead of the en dash recommended for interval notation, that is usefully
+	// added to the G key where the ASCII hyphen is. Mnemonically the word joiner
+	// adds to the plus key rather than to the hyphen key, where it would benefit
+	// from alphabetic mnemonics in French calling the word joiner “gluon”. Since
+	// UI design should not prioritize mnemonics over ergonomics, the en dash is
+	// easier (on G) than the word joiner (on H).
+	//
 	//
 	// ## Format controls
 	//
@@ -956,8 +968,8 @@ xkb_symbols "kbfrFRs" {
 
 	key <AD05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,              endash,              U1F60A ],
-		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,              endash,              U1F60A ]
+		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,           plusminus,              U1F60A ],
+		[                   t,                   T,          asciitilde,               U2212,          dead_tilde,               U1D57,           plusminus,              U1F60A ]
 	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; endash U2013 – EN DASH recommended for noting intervals; 😊 U1F60A SMILING FACE WITH SMILING EYES worldwide fifth-most used emoji, fourth-most used smiling emoji in France
 
 	key <AD06> {
@@ -1023,13 +1035,13 @@ xkb_symbols "kbfrFRs" {
 
 	key <AC05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ],
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,               U2060,              U1F44F ]
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,              endash,              U1F44F ],
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,              endash,              U1F44F ]
 	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC06> {
-		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,           plusminus,              U1F44D ],
-		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,           plusminus,              U1F44D ]
+		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2060,              U1F44D ],
+		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2060,              U1F44D ]
 	}; // U02B0 ʰ MODIFIER LETTER SMALL H; U1F44D 👍 THUMBS UP SIGN worldwide tenth-most used emoji
 
 	key <AC07> {
