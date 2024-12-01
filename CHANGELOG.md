@@ -2,7 +2,7 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.12.0 (projet)
+## 4.12.0 (2024-12-01)
 
 Amélioration de l’ergonomie par la correction d’erreurs au niveau 7 provenant de la version 3.1.0, selon le principe que la mnémonique ne doit pas primer sur l’ergonomie.
 
