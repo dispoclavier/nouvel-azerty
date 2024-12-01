@@ -752,7 +752,7 @@ xkb_symbols "kbfrFRs" {
 	// from alphabetic mnemonics in French calling the word joiner “gluon”. Also,
 	// the en dash, called “tiret demi-cadratin”, would benefit from yet another
 	// alphabetic mnemonic on the T key. However, as UI design should not improve
-	// mnemonics at the expense of ergonomics, tbe en dash is on G for easy input
+	// mnemonics at the expense of ergonomics, the en dash is on G for easy input
 	// rather than the word joiner, that goes on H rather than plus-minus, moved
 	// to D05 where the minus sign is. There, plus-minus mnemonically supports
 	// another math operator, that may be confused with its ASCII counterpart or
