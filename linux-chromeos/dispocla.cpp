@@ -1,4 +1,4 @@
-//                       Date: 2024-11-30T2219+0100
+//                       Date: 2024-12-07T2014+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -696,11 +696,8 @@ xkb_symbols "kbfrFRs" {
 	// and the ASCII single quote "'" U0027 <apostrophe> are featured on two base
 	// level live key positions: E04, because this is the traditional apostrophe
 	// key, or remapped on C11, and E12 left by the diaeresis dead key moving to
-	// E05 because this is traditionally the opening parenthesis with its closing
-	// counterpart on E11 repurposed for the at sign required on base level, and
-	// that becomes available thanks to moving both parentheses together on C03
-	// and C04, level 3, or remapped on E07 by swapping with the underscore; or
-	// on C11 when the keyboard is in ASCII mode.
+	// E05, or remapped on E07 by swapping with the underscore; or in ASCII mode
+	// on C11.
 	//
 	// The letter apostrophe "ʼ" U02BC, used in Breton as part of the trigraph
 	// "cʼh", is used in the Breton trigraph <c_h> and is featured in group 1 of
@@ -752,7 +749,7 @@ xkb_symbols "kbfrFRs" {
 	// from alphabetic mnemonics in French calling the word joiner “gluon”. Also,
 	// the en dash, called “tiret demi-cadratin”, would benefit from yet another
 	// alphabetic mnemonic on the T key. However, as UI design should not improve
-	// mnemonics at the expense of ergonomics, the en dash is on G for easy input
+	// mnemonics at the expense of ergonomics, tbe en dash is on G for easy input
 	// rather than the word joiner, that goes on H rather than plus-minus, moved
 	// to D05 where the minus sign is. There, plus-minus mnemonically supports
 	// another math operator, that may be confused with its ASCII counterpart or
@@ -897,7 +894,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[      dead_diaeresis,               U00AD,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
 		[                   5,                   5,                   5,               U2075,                   5,               U2075,               U2085,               UEFC5 ]
-	}; // U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
+	}; // U00AD SOFT HYPHEN (<hyphen>); U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
 
 	key <AE06> {
 		[               minus,               U2011,                   6,                 bar,                   6,               U2076,               UEFC6,               UEFC6 ],
@@ -1074,7 +1071,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
-		[              ugrave,               UEF64,            ellipsis,       guillemotleft,             percent,             percent,                   A,          apostrophe ],
+		[              ugrave,               UEF64,            ellipsis,       guillemotleft,            currency,             percent,                   A,          apostrophe ],
 		[          apostrophe,             percent,               grave,                   A,               U207D,               U207D,               U208D,          apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
