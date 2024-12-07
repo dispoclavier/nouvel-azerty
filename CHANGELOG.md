@@ -6,7 +6,7 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 Amélioration de la compatibilité ascendante par la prise en charge sur touche vive du symbole monétaire générique de l’AZERTY traditionnel, utilisé en autocorrection.
 
-* Disposition : Mettre "¤" U+00A4 sur Maj + AltGr + C11 à la place de "%" U+0025, qui y est en Maj + AltFr et sur AltGr + Z. dispocla.cpp [eebfe08](https://github.com/dispoclavier/nouvel-azerty/commit/eebfe08878e60eefab6ff74003d23fdc90e39365)
+* Disposition : Mettre "¤" U+00A4 sur Maj + AltGr + C11 à la place de "%" U+0025, qui y est en Maj + AltFr et qui est sur AltGr + Z. dispocla.cpp [eebfe08](https://github.com/dispoclavier/nouvel-azerty/commit/eebfe08878e60eefab6ff74003d23fdc90e39365)
 * Documentation : Corriger des annotations. dispocla.cpp [a51e124](https://github.com/dispoclavier/nouvel-azerty/commit/a51e124b904ec62b29645893767d377f8982e2f3), compose-1.yml [accd312](https://github.com/dispoclavier/nouvel-azerty/commit/accd31212b2f7d148ef4ae942433c9cef613c1ee)
 
 ## 4.12.0 (2024-12-01)
