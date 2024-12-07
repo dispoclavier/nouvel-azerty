@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.12.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.13.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -1499,8 +1499,9 @@
 #   bar dead key. But "—" U2014 EM DASH cannot be supported as-is, i.e. by
 #   <Multi_key><minus><minus><minus>, since this is used as the entry point
 #   of the high bar dead key. Also, "―" U2015 HORIZONTAL BAR needs support as
-#   well, being a ¾-em dash, yet en_US.UTF-8/Compose skips this one, supported
-#   in the high bar dead key by <Multi_key><minus><minus><minus><period>.
+#   well, while for an unknown reason — it may even be designed as a ¾-em dash,
+#   as in Cambria — en_US.UTF-8/Compose skips this one. It is supported in the
+#   high bar dead key by <Multi_key><minus><minus><minus><period>.
 #   See #^# DOUBLE_BAR
 #   See #^# HIGH_BAR
 #
