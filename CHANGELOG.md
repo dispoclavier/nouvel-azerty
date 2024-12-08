@@ -2,11 +2,11 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
-## 4.13.0 (projet)
+## 4.13.0 (2024-12-08)
 
 Amélioration de la compatibilité ascendante par la prise en charge sur touche vive du symbole monétaire générique de l’AZERTY traditionnel, utilisé en autocorrection.
 
-* Disposition : Mettre "¤" U+00A4 sur Maj + AltGr + C11 à la place de "%" U+0025, qui y est en Maj + AltFr et qui est sur AltGr + Z. dispocla.cpp [eebfe08](https://github.com/dispoclavier/nouvel-azerty/commit/eebfe08878e60eefab6ff74003d23fdc90e39365)
+* Disposition : Redonder "¤" U+00A4 sur Maj + AltGr + C11 à la place de "%" U+0025, qui y est en Maj + AltFr et qui est sur AltGr + Z. dispocla.cpp [eebfe08](https://github.com/dispoclavier/nouvel-azerty/commit/eebfe08878e60eefab6ff74003d23fdc90e39365), [2ffbd4d](https://github.com/dispoclavier/nouvel-azerty/commit/2ffbd4d03612af6272ad12d8564089aa5c3f103a)
 * Documentation : Corriger des annotations. dispocla.cpp [a51e124](https://github.com/dispoclavier/nouvel-azerty/commit/a51e124b904ec62b29645893767d377f8982e2f3), compose-1.yml [accd312](https://github.com/dispoclavier/nouvel-azerty/commit/accd31212b2f7d148ef4ae942433c9cef613c1ee)
 
 ## 4.12.0 (2024-12-01)
