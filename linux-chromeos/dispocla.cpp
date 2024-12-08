@@ -1,4 +1,4 @@
-//                       Date: 2024-12-07T2014+0100
+//                       Date: 2024-12-08T0726+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -309,7 +309,7 @@
 // `\,` command. Consistently with legacy typographic craftmanship, TeX is well
 // aware that the thin space is no-break, and as a pre-Unicode environment, TeX
 // presumably informed the seminal Unicode Standard, designed to maintain full
-// backwards compatibility.
+// backward compatibility.
 //
 // All layouts in this configuration file support mainstream practice, as used
 // in the French graphic industry, also referred to as French New School.
@@ -725,7 +725,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// The other digits are duplicated consistently on E01..E06 for symmetricity
 	// so that with respect to digits, AltFr acts like a lefthand AltGr and like
-	// a Shift key, improving backwards compatibility with legacy AZERTY.
+	// a Shift key, improving backward compatibility with legacy AZERTY.
 	//
 	// The remaining keys are used for the degree sign on E11, the equals sign on
 	// E12, other ASCII symbols "^"", "%", "#", "$", "(", ")" as well as euro and
@@ -755,6 +755,27 @@ xkb_symbols "kbfrFRs" {
 	// another math operator, that may be confused with its ASCII counterpart or
 	// mistaken as yet another dash. Thus, mnemonics thankfully add to ergonomics
 	// rather than conversely.
+	//
+	//
+	// ## Backward compatibility
+	//
+	// In an attempt to mitigate inevitable disruption, all letter keys are kept
+	// as-is, including diacriticized letter keys, all digits are on level 5 for
+	// a close emulation of left Shift, and the upper-row ASCII symbols and dead
+	// keys are moved to level 4 except the at sign, now on unshifted E11, and an
+	// instance of asciicircum, moved to level 4 of the dead key D11 instead. The
+	// same holds true for legacy level-1 ASCII on D12 and C12, while the level-2
+	// mappings are moved to level 6 throughout on these four keys.
+	//
+	// As another exception to the rule, the legacy level-3 currency sign on D12
+	// is moved to the unused level-4 position of C11. The option of an all-ASCII
+	// level 4 is too encoding-centered as opposed to the user-interface-centered
+	// approach moving all four level-2 positions to level 6.
+	//
+	// Another no-go would be to maintain "¤" U00A4 on D12, as this would require
+	// mapping it on level 8. This would be both difficult and unconsistent since
+	// the level-8 positions are used for the shortcut characters, with Control
+	// and with the level-8 input method for transparency on all these four keys.
 	//
 	//
 	// ## Format controls
@@ -888,7 +909,7 @@ xkb_symbols "kbfrFRs" {
 	key <AE04> {
 		[rightsinglequotemark,              emdash,                   4,           braceleft,                   4,               U2074,               UEFC4,               UEFC4 ],
 		[                   4,                   4,                   4,               U2074,                   4,               U2074,               U2084,               UEFC4 ]
-	}; // rightsinglequotemark: see Apostrophes; U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4 4️⃣ keycap 4 emoji
+	}; // rightsinglequotemark: see ## Apostrophes; U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4 4️⃣ keycap 4 emoji
 
 	key <AE05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
@@ -942,7 +963,7 @@ xkb_symbols "kbfrFRs" {
 	key <AE12> {
 		[          apostrophe,                plus,           Multi_key,          braceright,               equal,               U207A,                   F,               UEFCB ],
 		[               equal,                plus,           Multi_key,               U207A,                   F,               U208A,               UEFCB,               equal ]
-	}; // apostrophe: see Apostrophes; U207A ⁺ SUPERSCRIPT PLUS; U208A ₊ SUBSCRIPT PLUS; UEFCB #️⃣ keycap hash emoji
+	}; // apostrophe: see ## Apostrophes; U207A ⁺ SUPERSCRIPT PLUS; U208A ₊ SUBSCRIPT PLUS; UEFCB #️⃣ keycap hash emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC_TITLECASE";
@@ -1073,7 +1094,7 @@ xkb_symbols "kbfrFRs" {
 	key <AC11> {
 		[              ugrave,               UEF64,            ellipsis,       guillemotleft,            currency,             percent,                   A,          apostrophe ],
 		[          apostrophe,             percent,               grave,                   A,               U207D,               U207D,               U208D,          apostrophe ]
-	}; // UEF64 '« ' spaced out with NNBSP; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
+	}; // UEF64 '« ' spaced out with NNBSP; currency: see ## Backward compatibility; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
@@ -1714,7 +1735,7 @@ xkb_symbols "kbfrBEs" {
 	// staying a bit more familiar.
 	//
 	// The Belgian layout variant comes without its remapped variant because
-	// the point in having a Belgian variant is a reasonable amount of backwards
+	// the point in having a Belgian variant is a reasonable amount of backward
 	// compatibility with the Belgian AZERTY, and remapping defeats this point.
 
 	include "dispocla(kbfrFRs)"
