@@ -1,6 +1,6 @@
 # Un nouvel AZERTY pour Linux
 
-Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur). Sur l’[utilisation](#utilisation), il est vivement conseillé de se référer à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf) est pareillement disponible en ligne.
+Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur). Sur l’[utilisation](#utilisation), il est vivement conseillé de se reporter à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf) est pareillement disponible en ligne.
 
 ## Alerte d’incompatibilité de Linux Mint
 
@@ -184,13 +184,13 @@ En mode ASCII, les points d’interrogation et d’exclamation restent en Majusc
 
 #### Ponctuations en haut
 
-En mode français, les tirets du 6 et du 8 restent bien à leurs places éponymes, tandis qu’en mode ASCII, quand les chiffres sont verrouillés, ils n’y sont pas en Majuscule, mais plus facilement atteignables en Minuscule sur les touches [$] pour le tiret bas, et [*] pour le trait d’union, quand le guillemet et l’apostrophe bénéficient de facilités similaires, l’un sur la touche [^], l’autre sur [ù].
+En mode français, les tirets du 6 et du 8 restent bien à leurs places éponymes, tandis qu’en mode ASCII, quand les chiffres sont verrouillés, ils n’y sont pas en Majuscule, mais plus facilement atteignables en Minuscule sur les touches [$] pour le tiret bas, et [*] pour le trait d’union, quand le guillemet et l’apostrophe bénéficient de facilités similaires, l’un à la place de la touche morte accent circonflexe [^], l’autre à la place du [ù].
 
-En mode français, l’apostrophe en tant que telle reste elle aussi à sa place traditionnelle, mais elle y change de caractère pour devenir l’apostrophe courbe [’], très appréciée en français, tandis que l’apostrophe droite ['] (qu’on peut appeler « guillemet simple générique » ou « apostrophe ASCII ») prend place sur la touche suivante au lieu de la parenthèse ouvrante.
+En mode français, l’apostrophe en tant que telle reste elle aussi à sa place traditionnelle, mais elle y change de caractère pour devenir l’apostrophe courbe [’], très appréciée en français, tandis que l’apostrophe droite ['] (qu’on peut appeler « guillemet simple générique » ou « apostrophe ASCII ») prend la place du symbole égal, qui lui, est en AltFr sur cette touche.
 
-Les parenthèses elles-mêmes sont désormais réunies en AltGr sur [D] et [F] comme « début » et « fin », sur la rangée de repos pour une saisie très facile, et les crochets y sont sur [K] et [L] en synergie avec les points de suspension sur AltGr + [ù] pour faciliter la saisie des points de suspension entre crochets.
+Les parenthèses elles-mêmes sont désormais réunies en AltGr sur [D] et [F] comme « début » et « fin », sur la rangée de repos pour une saisie facile, et les crochets y sont sur [K] et [L] en synergie avec les points de suspension sur AltGr + [ù] pour faciliter la saisie des points de suspension entre crochets.
 
-Le guillemet double générique en revanche reste inchangé en mode français, et avec lui comme caractère de base, tous les guillemets doubles typographiques autres que les guillemets chevrons sont en touches mortes, les ouvrants par accent circonflexe, les fermants par accent aigu, les allemands par tréma (et les réfléchis par accent grave). Cette méthode de saisie est puissante et intuitive, car elle évite de mémoriser une multitude d’emplacements et permet une prise en charge plus complète. Les guillemets apostrophes en bénéficient pareillement, avec comme caractère de base l’apostrophe courbe (qui en fait partie) sur [4] ou l’apostrophe ASCII sur [5] au choix.
+Le guillemet double générique en revanche reste inchangé en mode français, et avec lui comme caractère de base, tous les guillemets doubles typographiques autres que les guillemets chevrons sont en touches mortes, les ouvrants par accent circonflexe, les fermants par accent aigu, les ouvrants allemands à hauteur de virgule par tréma. Les réfléchis sont aussi accessibles, par accent grave. Cette méthode de saisie puissante et intuitive évite de mémoriser une multitude d’emplacements et permet une prise en charge plus complète. Les guillemets apostrophes simples en bénéficient pareillement, avec comme caractère de base l’apostrophe courbe (qui en fait partie) sur [4] ou l’apostrophe ASCII sur [=] au choix.
 
 ### Symboles ASCII
 
@@ -244,17 +244,17 @@ L’opérateur point « ⋅ » U+22C5 est sur AltGr + AltFr + [X], e
 
 ##### Barre de fraction
 
-La barre de fraction U+2044 est sur AltGr + AltFr + [F]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire dans les logiciels conformes comme Firefox.
+La barre de fraction U+2044 est sur AltGr + AltFr + [/]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire.
 
-La partie entière peut être séparée par le gluon sur AltGr + AltFr + [G], ou par l’antiliant sur AltGr + AltFr + [Q].
+La partie entière peut être séparée par le signe plus invisible sur AltGr + AltFr + [H]. D’autres caractères, invisibles de préférence, comme l’antiliant sur AltGr + AltFr + [W], fonctionnent aussi, sans être destinés à cet usage.
 
 ##### Symbole rapport
 
-Contrairement à beaucoup d’autres doublons inutiles pour lesquels même Unicode est incapable de donner une bonne raison, le symbole rapport « ∶ » ne ressemble que superficiellement à un deux-points. Voici le symbole rapport et le deux-points : « ∶: ».
+Contrairement à beaucoup d’autres doublons inutiles pour lesquels même Unicode ne donne pas de bonne raison, le symbole rapport « ∶ » ne ressemble que superficiellement à un deux-points. Voici le symbole rapport et le deux-points : « ∶: ».
 
-Car selon les polices, soit les deux points sont plus rapprochés, soit le symbole est surélevé et plus haut afin de s’aligner sur les chiffres (« 2∶3 »), non sur les minuscules comme le deux-points (« b:c »).
+Car selon les polices, soit les deux points sont plus rapprochés, soit le symbole est surélevé et plus haut afin de s’aligner sur les chiffres (« 2∶3 »), non sur les minuscules comme le deux-points (« a:b »).
 
-C’est pourquoi le symbole rapport a relayé le symbole racine carrée sur AltGr + AltFr + [R] à la sortie de la version 4.1.0, sachant que les racines carrée, cubique et quatrième sont dans les groupes 2, 3 et 4 de l’oblique inverse sur [R].
+C’est pourquoi le symbole rapport a relayé le symbole racine carrée sur AltGr + AltFr + [R] à la sortie de la version 4.1.0, vu que les racines carrée, cubique et quatrième sont dans les groupes 2, 3 et 4 de l’oblique inverse sur [R].
 
 ### Séquences
 
