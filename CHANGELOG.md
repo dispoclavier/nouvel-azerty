@@ -2,6 +2,19 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦#' ».
 
+## 4.14.0 (2024-12-10)
+
+Meilleure utilité et pertinence accrue grâce au remplacement du gluon par le signe plus invisible.
+
+Amélioration de l’ergonomie du tiret demi-cadratin en notation d’intervalles.
+
+Meilleure prise en charge des deux flèches les plus courantes.
+
+* Disposition :
+	* Redonder le signe plus invisible U+2064 sur AltGr + AltFr + H à la place du gluon U+2060, qui est dans le groupe 10 du trait d’union ASCII. dispocla.cpp [43d829c](https://github.com/dispoclavier/nouvel-azerty/commit/43d829c742478248b5e6c71156102dc205d6591d)
+	* Redonder "→" U+2192 sur AltGr + AltFr + G à la place de "–" U+2013, qui prend la place de "⁄" U+2044 sur AltGr + AltFr + F, qui est au même niveau sur la touche de l’oblique B09. ibidem
+	* Redonder "⇒" U+21D2 sur Maj + AltGr + AltFr + G à la place de "👏" U+1F44F, qui prend la place de "😐" U+1F610 (sur C01), qui n’est pas d’usage courant et dont l’usage trop technique ne justifie pas une place sur touche vive. ibidem
+
 ## 4.13.0 (2024-12-08)
 
 Amélioration de la compatibilité ascendante par la prise en charge sur touche vive du symbole monétaire générique de l’AZERTY traditionnel, utilisé en autocorrection.
