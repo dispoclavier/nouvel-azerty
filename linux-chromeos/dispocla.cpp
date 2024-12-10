@@ -1,4 +1,4 @@
-//                       Date: 2024-12-10T0904+0100
+//                       Date: 2024-12-10T1158+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1157,12 +1157,12 @@ xkb_symbols "kbfrFRs" {
 	key <AB07> {
 		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,              U1F612,              U1F499 ],
 		[               comma,            question,            question,               comma,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
-	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x;' U2007 ' ' FIGURE SPACE; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
+	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x' U2007 ' ' FIGURE SPACE; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
 		[              period,               UEF60,              exclam,              exclam,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
 		[              period,              exclam,              exclam,              period,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
-	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#;' U2008 ' ' PUNCTUATION SPACE; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
+	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#' U2008 ' ' PUNCTUATION SPACE; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
