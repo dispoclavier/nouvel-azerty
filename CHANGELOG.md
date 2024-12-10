@@ -14,7 +14,9 @@ Meilleure prise en charge des deux flèches les plus courantes.
 	* Redonder le signe plus invisible U+2064 sur AltGr + AltFr + H à la place du gluon U+2060, qui est dans le groupe 10 du trait d’union ASCII. dispocla.cpp [43d829c](https://github.com/dispoclavier/nouvel-azerty/commit/43d829c742478248b5e6c71156102dc205d6591d)
 	* Redonder "→" U+2192 sur AltGr + AltFr + G à la place de "–" U+2013, qui prend la place de "⁄" U+2044 sur AltGr + AltFr + F, qui est au même niveau sur la touche de l’oblique B09. ibidem
 	* Redonder "⇒" U+21D2 sur Maj + AltGr + AltFr + G à la place de "👏" U+1F44F, qui prend la place de "😐" U+1F610 (sur C01), qui n’est pas d’usage courant et dont l’usage trop technique ne justifie pas une place sur touche vive. ibidem
-* Documentation : Corriger des annotations. dispocla.cpp [8b2e6be](https://github.com/dispoclavier/nouvel-azerty/commit/8b2e6bedf634a7a0441098a641bc08bc3ac88fec)
+* Documentation :
+	* Mettre à jour le mode d’emploi. linux-chromeos/readme.md [6b9454c](https://github.com/dispoclavier/nouvel-azerty/commit/6b9454cce93f83309974f2bb4ae90838fd213608)
+	* Corriger des annotations. dispocla.cpp [8b2e6be](https://github.com/dispoclavier/nouvel-azerty/commit/8b2e6bedf634a7a0441098a641bc08bc3ac88fec)
 
 ## 4.13.0 (2024-12-08)
 
