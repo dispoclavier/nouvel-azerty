@@ -1,4 +1,4 @@
-//                       Date: 2024-12-08T0726+0100
+//                       Date: 2024-12-10T0904+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -741,20 +741,20 @@ xkb_symbols "kbfrFRs" {
 	// While level 6 is dedicated to superscript small letters, used as ordinal
 	// indicators and other abbreviation indicators, level 7 is used to complete
 	// the level 5 map with some useful extensions such as the yen sign, leaving
-	// its place on Y to the micro sign. Most notably, the plus-minus sign is not
-	// added to the key of the plus sign (H) but to the key of the minus sign (T)
-	// instead of the en dash recommended for interval notation, that is usefully
-	// added to the G key where the ASCII hyphen is. Mnemonically the word joiner
-	// adds to the plus key rather than to the hyphen key, where it would benefit
-	// from alphabetic mnemonics in French calling the word joiner “gluon”. Also,
-	// the en dash, called “tiret demi-cadratin”, would benefit from yet another
-	// alphabetic mnemonic on the T key. However, as UI design should not improve
-	// mnemonics at the expense of ergonomics, tbe en dash is on G for easy input
-	// rather than the word joiner, that goes on H rather than plus-minus, moved
-	// to D05 where the minus sign is. There, plus-minus mnemonically supports
-	// another math operator, that may be confused with its ASCII counterpart or
-	// mistaken as yet another dash. Thus, mnemonics thankfully add to ergonomics
-	// rather than conversely.
+	// its place on Y to the micro sign. Most notably, plusminus is not added to
+	// the key of the plus sign (H), but to the key of the minus sign (T), where
+	// it mnemonically supports another math operator, that may be confused with
+	// its ASCII counterpart or mistaken as yet another dash.
+	//
+	// By contrast, U2013 EN DASH, recommended and extensively used for interval
+	// notation, is usefully added to the F key for optimal ergonomics, although
+	// due to its French name “tiret demi-cadratin”, EN DASH would benefit from
+	// alphabetic mnemonic on the T key, or on the G key from mnemonic based on
+	// similarity with the ASCII hyphen. This is used for the single and double
+	// rightwards arrows U2192 and U21D2 instead, although alphabetic mnemonics
+	// would also work with "F" like “flèche” (like it does for "➔" U2794 and
+	// "➜" U279C in groups 1 and 2 of parenright), following the principle that
+	// mnemonics do not have precedence over ergonomics.
 	//
 	//
 	// ## Backward compatibility
@@ -780,28 +780,41 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ## Format controls
 	//
-	// "⁄" U2044 FRACTION SLASH is mapped on level 7 of the F key, because it is
-	// designed to get ASCII digits formatted as numerators and denominators and
-	// is supported by HarfBuzz and OpenType fonts used in Chromium and Firefox.
+	// "⁄" U2044 FRACTION SLASH is not mapped on level 7 of the F key, because it
+	// is even more intuitively on level 7 of the slash key B09, and also on the
+	// then-available level 6 thereof when the keyboard is in ASCII mode. That is
+	// the reason why duplicating U2044 on the F key would be a nuisance. Instead
+	// of wasting this position for the sake of alphabetic mnemonics, using it as
+	// a more ergonomic way to input U2013 EN DASH, recommended and actually used
+	// for interval notation, is advisable.
+	//
 	// In case of mixed numbers, using the fraction slash as intended requires an
 	// invisible character to separate the whole part and the fractional part, as
 	// in that case there is no space in front of the fraction. Typically this is
-	// U2064 INVISIBLE PLUS or the cursive non-joiner U200C or U2060 WORD JOINER.
+	// U2064 INVISIBLE PLUS, rather than hacky workarounds relying on the cursive
+	// non-joiner U200C or U2060 WORD JOINER instead. These equally work and are
+	// fully functional but expose the use of incomplete keyboard layouts.
+	// https://stackoverflow.com/a/55034877
 	// https://stackoverflow.com/questions/55033436/how-to-display-the-fraction-15-16-nicely-in-unicode
 	//
-	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, abundantly used to
-	// prevent wrong ligatures and therefore on level 7 of the AZERTY W key B01,
-	// next to the AltFr key B00.
+	// This invisible plus U2064 is most mnemonically on level 7 of C06, the key
+	// of the level-3 and level-5 plus sign U002B, rather than on C04 F, required
+	// for the more frequent interval notation en dash U2013.
+	//
+	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, extensively used to
+	// prevent wrong ligatures, and therefore on level 7 of the AZERTY W key B01,
+	// next to the AltFr level-5 modifier B00.
 	// https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
 	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
 	//
 	// U200D ZERO WIDTH JOINER is the cursive joiner on level 7 of AZERTY key Q,
 	// ISO C01, right above the cursive non-joiner.
 	//
-	// U2060 WORD JOINER makes no-break characters out of breaking ones and is on
-	// level 7 of the G key with mnemonics based on French "gluon". It happens to
-	// be next to the fraction slash that it can help bracket the numerators, the
-	// other way around. Previously, the byte order mark UFEFF was used instead.
+	// By contrast, U2060 WORD JOINER is not used in Latin script, except to work
+	// around defective character properties. Therefore, the word joiner does not
+	// have live key support, not even on level 7 of C05 G where it would benefit
+	// from alphabetic mnemonics based on French "gluon", as it does in group 10,
+	// but it is part of the U0020 U2060 sequence UEF6E on level 6 of space bar.
  	//
 	//
 	// ## Overscore
@@ -1038,9 +1051,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AC01> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200D,              U1F610 ],
-		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200D,              U1F610 ]
-	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200D ZERO WIDTH JOINER, cursive joiner; U1F610 😐 NEUTRAL FACE emoji
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200D,              U1F44F ],
+		[                   q,                   Q,          numbersign,          numbersign,               UEFD0,              U107A5,               U200D,              U1F44F ]
+	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200D ZERO WIDTH JOINER, cursive joiner; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC02> {
 		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,             section,              U1F614 ],
@@ -1053,20 +1066,20 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D48 ᵈ MODIFIER LETTER SMALL D; U2300 ⌀ DIAMETER SIGN; U1F606 😆 SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES 16th-ranking emoji
 
 	key <AC04> {
-		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,               U2044,              U1F525 ],
-		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,               U2044,              U1F525 ]
+		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ],
+		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ]
 	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U2044 ⁄ FRACTION SLASH; U1F525 🔥 FIRE 15th-ranking emoji
 
 	key <AC05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,              endash,              U1F44F ],
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,              endash,              U1F44F ]
-	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; U2060 WORD JOINER; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,          rightarrow,             implies ],
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,          rightarrow,             implies ]
+	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; rightarrow U2192 → RIGHTWARDS ARROW; implies U21D2 ⇒ RIGHTWARDS DOUBLE ARROW
 
 	key <AC06> {
-		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2060,              U1F44D ],
-		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2060,              U1F44D ]
-	}; // U02B0 ʰ MODIFIER LETTER SMALL H; U1F44D 👍 THUMBS UP SIGN worldwide tenth-most used emoji
+		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2064,              U1F44D ],
+		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2064,              U1F44D ]
+	}; // U02B0 ʰ MODIFIER LETTER SMALL H; U2064 INVISIBLE PLUS; U1F44D 👍 THUMBS UP SIGN worldwide tenth-most used emoji
 
 	key <AC07> {
 		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ],
@@ -1169,7 +1182,7 @@ xkb_symbols "kbfrFRs" {
 	key <SPCE> {
 		[               space,               space,        nobreakspace,               U202F,               U200B,               UEF6E,               UEF6F,               UEF9B ],
 		[               space,               space,               space,               space,               UEF9B,               UEF9F,               UEF9F,               UEF9B ]
-	}; // U202F ' ' NARROW NO-BREAK SPACE; U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9B '&nbsp;'; UEF9F '&#x202F;' NNBSP
+	}; // U202F ' ' NARROW NO-BREAK SPACE, no-break thin space (CLDR); U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9F '&#x202F;'; UEF9B '&nbsp;'
 
 	//
 	// Numpad
