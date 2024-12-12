@@ -1,4 +1,4 @@
-//                       Date: 2024-12-10T1158+0100
+//                       Date: 2024-12-12T0210+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -797,6 +797,19 @@ xkb_symbols "kbfrFRs" {
 	// https://stackoverflow.com/a/55034877
 	// https://stackoverflow.com/questions/55033436/how-to-display-the-fraction-15-16-nicely-in-unicode
 	//
+	// The relevant advice is not in the answer to the question, but in a comment
+	// answering a question asked in a comment. For easier reference:
+	//
+	//     “To extend on that question, what if I want to display one and fifteen
+	//     sixteenths, rather than one hundred fifteen sixteenths? Is there a
+	//     unicode character I can use to separate the "1" from the "15" so that
+	//     the rendering engine knows that the "1" is separate from the "15⁄16"?”
+	//
+	//     “@M.Justin Any zero-width, invisible character will do the trick.
+	//     I personally prefer using U+2064 INVISIBLE PLUS because it was encoded
+	//     to represent exactly this type of semantic concept, but something like
+	//     U+200C ZERO WIDTH NON-JOINER or U+2060 WORD JOINER will also work.”
+	//
 	// This invisible plus U2064 is most mnemonically on level 7 of C06, the key
 	// of the level-3 and level-5 plus sign U002B, rather than on C04 F, required
 	// for the more frequent interval notation en dash U2013.
@@ -813,8 +826,9 @@ xkb_symbols "kbfrFRs" {
 	// By contrast, U2060 WORD JOINER is not used in Latin script, except to work
 	// around defective character properties. Therefore, the word joiner does not
 	// have live key support, not even on level 7 of C05 G where it would benefit
-	// from alphabetic mnemonics based on French "gluon", as it does in group 10,
-	// but it is part of the U0020 U2060 sequence UEF6E on level 6 of space bar.
+	// from alphabetic mnemonics based on French "gluon", as it does in group 10
+	// of the ASCII hyphen there; except in that it it is part of the U0020 U2060
+	// sequence UEF6E on level 6 (Shift + AltFr) of the space bar in French mode.
  	//
 	//
 	// ## Overscore
