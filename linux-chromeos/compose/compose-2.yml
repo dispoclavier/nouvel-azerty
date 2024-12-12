@@ -376,7 +376,7 @@
 #   U                '  ACUTE dead_acute
 #   I                {  HOOK dead_hook
 #   O                }  RETROFLEX_HOOK *dead_retroflexhook UEFD4
-#   P                &  DOT_ABOVE dead_abovedot, Multi_key ¦.
+#   P                &  DOT_ABOVE dead_abovedot, Multi_key « ¦. »
 #
 #   Q (A on QWERTY)  #  GROUP_1 *dead_group UEFD0
 #   S                $  CURRENCY dead_currency (new-school)
@@ -402,7 +402,7 @@
 #   \ and ;          ;  COMMA_BELOW dead_belowcomma
 #
 #
-#:# Legacy dead keys for French France AZERTY
+#:# Legacy dead keys for Non-Belgian AZERTY
 #
 #   <UEFD9> : "~"  *dead_legacytilde  Legacy tilde dead key: key E02, level 4.
 #   <UEFDA> : "`"  *dead_legacygrave  Legacy grave dead key: key E07, level 4.
@@ -9206,9 +9206,9 @@
 #
 # # Box drawings with rounded corners
 #
-#   Rounded corners use dead_invertedbreve and its multikey equivalent ¦( with
-#   graphic mnemonic based on the shape of uppercase letter D on C03, that the
-#   dead_invertedbreve dead key is on, and with proximity mnemonic, since the
+#   Rounded corners use dead_invertedbreve and its multikey equivalent « ¦( »
+#   with graphic mnemonic based on the shape of uppercase letter D on C03, that
+#   the dead_invertedbreve dead key is on, and with proximity mnemonic, as the
 #   box drawings are mainly in dead_breve on key F, C04.
 #
 <dead_invertedbreve>                                                                  <1><1><0><0> : "╭" U256D # BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
@@ -9845,8 +9845,8 @@
 #
 # # Box drawings
 #
-#   Using the breve dead key and its multikey equivalent ¦) with alphabetic
-#   mnemonic in French, where box drawings are called ‘filets’, as dead_breve
+#   Using the breve dead key and its multikey equivalent « ¦) » with alphabetic
+#   mnemonic in French, where box drawings are called “filets”, as dead_breve
 #   is on level 4 of key F, C04, where the closing parenthesis is on level 3.
 #
 #   The digit position sets the direction clockwise: up, right, down, left;
@@ -9871,9 +9871,9 @@
 #   DRAWINGS LIGHT DIAGONAL UPPER LEFT TO MIDDLE RIGHT TO LOWER LEFT are not
 #   supported yet however.
 #
-#   Rounded corners use dead_invertedbreve and its multikey equivalent ¦( with
-#   graphic mnemonic based on the shape of uppercase letter D on C03, and with
-#   additional mnemonic based on the proximity to key F, C04.
+#   Rounded corners use dead_invertedbreve and its multikey equivalent « ¦( »x
+#   the graphic mnemonic based on the shape of uppercase letter D on C03, and
+#   with additional mnemonic based on the proximity to key F, C04.
 #   See # # Box drawings with rounded corners
 #
 <dead_breve>                                                                          <1><0><1><0> : "─" U2500 # BOX DRAWINGS LIGHT HORIZONTAL
@@ -12182,11 +12182,10 @@
 #   See #*# BAR
 #   See #*# HORN
 #
-#   Digits yield the full collection of simple, multiple, broken ("¦" U00A6)
-#   vertical bars, for convenience, since the other input methods, in groups
-#   or by multikey, may be less mnemonic or more complicated.
+#   Digits yield the full collection of simple and multiple vertical bars, for
+#   convenience, as other input methods, in groups or by multikey, may be less
+#   mnemonic or more complicated.
 #   See # # Design of math sequences
-#   See # # Symbols for multikey and composition
 #
 #   The conjoining variant of the combining diacritic is supported by ampersand
 #   both in macron – "︦" UFE26 – and in macron below.
@@ -14478,11 +14477,12 @@
 #   and triple press is swapped, so that single press outputs an appended ZWNJ,
 #   and triple press outputs regional indicator symbol letters in isolation.
 #
-#   In en_US.UTF-8/Compose, sequences starting with ¦= conflict with currency
-#   symbols and with double acute, given that en_US.UTF-8/Compose uses ¦", not
-#   ¦:, for diaeresis, and so cannot use ¦" for <dead_doubleacute>, so it uses
-#   ¦= instead. Removing currency symbol sequences starting with EQUALS SIGN,
-#   leaving only those ending with EQUALS SIGN, solves this issue.
+#   In en_US.UTF-8/Compose, sequences starting with « ¦= » conflict with
+#   currency symbols and with double acute, given that en_US.UTF-8/Compose uses
+#   « ¦" », not « ¦: », for diaeresis, and so cannot use « ¦" » for
+#   dead_doubleacute, so it uses « ¦= » instead. Removing currency symbol
+#   sequences starting with EQUALS SIGN, and leaving only those ending with
+#   EQUALS SIGN, solves this issue.
 #   See # # Currency symbols
 #
 #
@@ -16373,9 +16373,6 @@
 #   Multi_key: ¦!
 #   Dchar: "ḅ" U1E05
 #
-#   Dot below has no reported usage outside Unicode precomposed letters.
-#   https://www.frathwiki.com/Dot_Below
-#
 #   Digits yield multidot punctuation.
 #
 #   "⃨" U20E8 COMBINING TRIPLE UNDERDOT is also supported, by underscore, since
@@ -16386,6 +16383,9 @@
 #   See #^# VERTICAL_LINE_BELOW
 #   See #*# SUBSCRIPT
 #   See # # C01 numbersign
+#
+#   Dot below has no reported usage outside Unicode precomposed letters.
+#   https://www.frathwiki.com/Dot_Below
 #
 <dead_belowdot>                                                                            <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
@@ -16912,9 +16912,9 @@
 #   Numbers 1..10 followed by a period are in dead_cedilla.
 #   See #*# CEDILLA
 #
-#   For convenience, the multikey sequence ¦§ is also supported to account for
-#   the mapping of the section sign on level 3 of B10 in French mode for the
-#   synergy with digits and keyboard backcompat.
+#   For convenience, the multikey sequence « ¦§ » is also supported to account
+#   for the mapping of the section sign on level 3 of B10 in French mode for
+#   the synergy with digits and for backward compatibility.
 #
 <dead_belowcomma>                                                                          <space> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><semicolon>                                                                     <space> : "̦" U0326 # COMBINING COMMA BELOW
