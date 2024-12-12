@@ -946,6 +946,9 @@
 #
 #^# Abbreviations, Units and Legal Symbols
 #
+#   A design goal is sideways compatibility with en_US.UTF-8/Compose, as in the
+#   pilcrow sign "¶" U00B6 by « ¦p! » and « ¦P! ».
+#
 #   Sequences for "©" U00A9 and "®" U00AE made out of letters only with an "O"
 #   or an "o" are based on en_US.UTF-8/Compose, where "℗" U2117 is missing, as
 #   ASCII fallback sequences « ¦(C) » and « ¦(R) », probably because the latter
@@ -959,8 +962,9 @@
 #   Case may matter as for "⅍" U214D AKTIESELSKAB vs "℁" U2101 ADDRESSED TO THE
 #   SUBJECT, or for "🄯" U1F12F COPYLEFT SYMBOL vs "℄" U2104 CENTRE LINE SYMBOL.
 #
-#   Reverse sequences cannot be supported either for "⅍" U214D as ¦SA conflicts
-#   with "ر.س" Saudi Riyal by ¦SAR, and with "♐" U2650 SAGITTARIUS by ¦SAGI.
+#   Reverse sequences cannot be supported either for "⅍" U214D, because « ¦SA »
+#   conflicts with "ر.س" Saudi Riyal by « ¦SAR », and with "♐" U2650 SAGITTARIUS
+#   by « ¦SAGI ».
 #
 #   The fraction-slash-based abbreviations "℀" U2100, "⅍" U214D, "℁" U2101 and
 #   "℅" U2105 have alias multikey sequences skipping the slash for brevity, and
@@ -980,11 +984,8 @@
 #   so as to prevent a conflict with "⊽" U22BD by « ¦NOR ».
 #   See #^# Legacy ordinal indicators
 #
-#   "¦" U00A6 by « ¦|: » or « ¦:| » is discarded due to conflicts with
-#   DIAERESIS&MACRON multikey equivalents.
-#
 #   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated ("K" U212A)
-#   measurement unit symbols are supported for bsing in the Letterlike Symbols
+#   measurement unit symbols are supported for being in the Letterlike Symbols
 #   block. This however was not fully supported before v1.6.0. Prior to v1.6.0,
 #   important symbols were missing due to not being used in mathematics. This
 #   odd time is over since version 1.6.0 added primarily the VERSICLE and
@@ -1000,6 +1001,8 @@
 <Multi_key><P><exclam>                                                                             : "¶" U00B6 # PILCROW SIGN
 <Multi_key><p><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
 <Multi_key><P><bar>                                                                                : "¶" U00B6 # PILCROW SIGN
+<Multi_key><exclam><p>                                                                             : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><exclam><P>                                                                             : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><bar><p>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><bar><P>                                                                                : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><degree><C>                                                                             : "℃" U2103 # DEGREE CELSIUS
@@ -3073,14 +3076,34 @@
 #   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive
 #   « ¦cmp ». Not « ¦com », to prevent conflicts with "℅" U2105.
 #
-#   The broken bar "¦" U00A6, repurposed as multikey symbol, is input by case
-#   insensitive « ¦mul ».
+<Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+<Multi_key><C><M><P>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
 #
-#   "¦" U00A6 is also in group 12 of bar, in dead_macron "5", and in
-#   dead_diaeresis backslash.
-#   See # # C10 bar
-#   See #*# MACRON
+#   The broken bar "¦" U00A6, repurposed as multikey symbol, may be input by
+#   case insensitive « ¦mul ».
+#
+<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#
+#   A sideways compatible input method for "¦" U00A6 BROKEN BAR, repurposed as
+#   multikey symbol, is available by asciicircum as in en_US.UTF-8/Compose.
+#   See # # Symbols for multikey and composition
+#   The sideways compatible sequence « ¦!^ » as in en_US.UTF-8/Compose could be
+#   supported in dead_belowdot, but since the relationship to the dead key is
+#   merely fortuitous, it is here without the dead key alternative, and without
+#   the reverse sequence, that is used in en_US.UTF-8/Compose for letters with
+#   circumflex and dot below.
+#
+<Multi_key><exclam><asciicircum>                                                                   : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#
+#   Other intuitive options « ¦|: » and « ¦:| » are discarded due to conflicts.
+#   See # # DIAERESIS&MACRON
+#
+#   "¦" U00A6 is also in dead_diaeresis backslash for an easy shortcut using no
+#   more than two unshifted keys, as well as in group 11 of colon for mnemonics
+#   and visibility.
 #   See #*# DIAERESIS
+#   See # # B09 colon
 #
 #   The rationale for providing an alternative "¦" U00A6 to the "⎄" U2384 ISO
 #   symbol is font support and a slimmer, less bulky, visually less impacting,
@@ -3088,15 +3111,9 @@
 #   not make it onto many keyboards, partly because dedicating an entire key
 #   to input composition rather than a mere key position, possibly on level 3,
 #   is not recommended in the presence of a group dead key providing a more
-#   powerful input method for common digraphs.
-#
-#   Downgrading the composition symbol from "⎄" U2384 to "¦" U00A6 as a result
-#   stands for a less screwed-up user experience.
-#
-<Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
-<Multi_key><C><M><P>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
-<Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-<Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#   powerful input method for common digraphs. Downgrading the composition
+#   symbol from "⎄" U2384 to "¦" U00A6 consistently stands for a simpler, more
+#   streamlined and less screwed-up user experience.
 #
 #
 # # Symbols for key events
