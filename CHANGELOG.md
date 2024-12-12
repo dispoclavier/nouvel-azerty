@@ -2,11 +2,14 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.14.1 (projet)
+## 4.15.0 (projet)
 
+* Composition :
+	* Redonder "¦" U+00A6 par « ¦!^ » pour la compatibilité latérale avec les séquences de composition françaises traditionnelles selon en_US.UTF-8/Compose. compose-1.yml [00f4777](https://github.com/dispoclavier/nouvel-azerty/commit/00f4777674b173d8881556a670e57906d53b2d77)
+	* Redonder "⁋" U+204B par « ¦!p » et « ¦!P ». ibidem
 * Documentation :
-	* Corriger le journal des modifications. CHANGELOG.md [8894a3a](https://github.com/dispoclavier/nouvel-azerty/commit/8894a3abf5d812f2cbe58bcc68aecb7760441828), [d8a7fbd](https://github.com/dispoclavier/nouvel-azerty/commit/d8a7fbd0932cf65cf5ef7b6ba62fdf7f1bcad9d6)
-	* Corriger des annotations. compose-1.yml [a0aa719](https://github.com/dispoclavier/nouvel-azerty/commit/a0aa719ab8a9e55ddfba931c88680c5f9fdaa874)
+	* Corriger le journal des modifications. CHANGELOG.md [8894a3a](https://github.com/dispoclavier/nouvel-azerty/commit/8894a3abf5d812f2cbe58bcc68aecb7760441828), [d8a7fbd](https://github.com/dispoclavier/nouvel-azerty/commit/d8a7fbd0932cf65cf5ef7b6ba62fdf7f1bcad9d6), [a0eab99](https://github.com/dispoclavier/nouvel-azerty/commit/a0eab99f4efe236cc0cfdcde16ead1c433783215)
+	* Corriger des annotations. dispocla.cpp [908e70f](https://github.com/dispoclavier/nouvel-azerty/commit/908e70f9ccca56ea77933c2b68b54876640e8f1a), compose-1.yml [a0aa719](https://github.com/dispoclavier/nouvel-azerty/commit/a0aa719ab8a9e55ddfba931c88680c5f9fdaa874), [00f4777](https://github.com/dispoclavier/nouvel-azerty/commit/00f4777674b173d8881556a670e57906d53b2d77), compose-2.yml [884f054](https://github.com/dispoclavier/nouvel-azerty/commit/884f054dd0c774f9c817bcaea01be47bba9e2847)
 
 ## 4.14.0 (2024-12-10)
 
