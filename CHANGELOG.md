@@ -2,12 +2,16 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.15.0 (projet)
+## 4.15.0 (2024-12-18)
 
+Facilitation de la saisie des indices et débogage de l’implémentation sous Windows.
+
+* Disposition : Mode ASCII : Redonder les chiffres, signes, ponctuations et le symbole en indice en Maj + AltGr à la place des chiffres, signes, ponctuations et du symbole en exposant, qui sont en Maj + AltFr. dispoocla.cpp [8c195a3](https://github.com/dispoclavier/nouvel-azerty/commit/8c195a30b0ac950798165939cb5b344fdc69c966), dispotypes.c [a70b9a7](https://github.com/dispoclavier/nouvel-azerty/commit/a70b9a7675d5553cdd193e541c6dfe1172a2fab5)
 * Composition :
 	* Redonder "¦" U+00A6 par « ¦!^ » pour la compatibilité latérale avec les séquences de composition françaises traditionnelles selon en_US.UTF-8/Compose. compose-1.yml [00f4777](https://github.com/dispoclavier/nouvel-azerty/commit/00f4777674b173d8881556a670e57906d53b2d77)
 	* Redonder "⁋" U+204B par « ¦!p » et « ¦!P ». ibidem
 * Documentation :
+	* Mettre à jour le mode d’emploi. linux-chromeos/readme.md [58c7837](https://github.com/dispoclavier/nouvel-azerty/commit/58c78378ba7a6017e52d2065c6480dec17d93b09)
 	* Corriger le journal des modifications. CHANGELOG.md [8894a3a](https://github.com/dispoclavier/nouvel-azerty/commit/8894a3abf5d812f2cbe58bcc68aecb7760441828), [d8a7fbd](https://github.com/dispoclavier/nouvel-azerty/commit/d8a7fbd0932cf65cf5ef7b6ba62fdf7f1bcad9d6), [a0eab99](https://github.com/dispoclavier/nouvel-azerty/commit/a0eab99f4efe236cc0cfdcde16ead1c433783215)
 	* Corriger des annotations. dispocla.cpp [908e70f](https://github.com/dispoclavier/nouvel-azerty/commit/908e70f9ccca56ea77933c2b68b54876640e8f1a), compose-1.yml [a0aa719](https://github.com/dispoclavier/nouvel-azerty/commit/a0aa719ab8a9e55ddfba931c88680c5f9fdaa874), [00f4777](https://github.com/dispoclavier/nouvel-azerty/commit/00f4777674b173d8881556a670e57906d53b2d77), compose-2.yml [884f054](https://github.com/dispoclavier/nouvel-azerty/commit/884f054dd0c774f9c817bcaea01be47bba9e2847)
 
@@ -878,7 +882,9 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
 		* Redonder "•" U+2022 par "1" U+0031 à la place de "♤" U+2664, "◦" U+25E6 par "2" U+0032 à la place de "♢" U+2662, "▪" U+25AA par "4" U+0034 à la place de "♡" U+2661, "▫" U+25AB par "5" U+0035 à la place de "♧" U+2667, "‣" U+2023 par "6" U+0036 à la place de "♠" U+2660. Ajouter "▹" U+25B9 par "7" U+0037 à la place de "♦" U+2666. Redonder "➢" U+27A2 par "9" U+0039 à la place de "♣" U+2663. Ajouter "➣" U+27A3 par "0" U+0030. Redonder "′" U+2032 par "²" U+00B2, "″" U+2033 par "³" U+00B3. compose-2.yml [6603624](https://github.com/dispoclavier/nouvel-azerty/commit/660362419d1d97088c6da803853a43d9f6b0fef7)
 		* Mettre à jour le caractère de base et l’ordre de "♡" U+2661, "♧" U+2667, "♢" U+2662, "♤" U+2664, (ibidem)
 	* Accent grave : Supprimer "(" et ")". ibidem
-	* Tilde : Permuter "⸷" U+2E37 et "⸸" U+2E38. Compléter les séquences de "”" U+201D et "’" U+2019. ibidem et compose-2.yml [368d4aa](https://github.com/dispoclavier/nouvel-azerty/commit/368d4aa29927567a004b9c1a22fa1175104db332)
+	* Tilde :
+		* Permuter "⸷" U+2E37 et "⸸" U+2E38. ibidem
+		* Compléter les séquences de "”" U+201D et "’" U+2019. compose-2.yml [368d4aa](https://github.com/dispoclavier/nouvel-azerty/commit/368d4aa29927567a004b9c1a22fa1175104db332)
 	* Barré : Barre courte : Redonder "Ꝙ" U+A758, "ꝙ" U+A759. compose-2.yml [2c72d23](https://github.com/dispoclavier/nouvel-azerty/commit/2c72d237681dc4e6e09f653977f4a53030fdbeb7)
 * Commutateur : Variante Breton et français redisposée : Ajouter l’icône « br » manquante. evdev-additions.xml [4d148fe](https://github.com/dispoclavier/nouvel-azerty/commit/4d148fe24cae47953da873f6b3a9997330923b1b)
 
