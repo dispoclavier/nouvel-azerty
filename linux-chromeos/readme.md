@@ -164,7 +164,7 @@ Les chiffres sont toujours aussi en AltFr, la nouvelle touche modificatrice sur 
 
 En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en Maj + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
 
-Les émojis chiffres, complétés par les émojis des deux autres touches de téléphone étoile et croisillon ou dièse, sont en AltGr + AltFr sur la rangée des chiffres en mode français, ainsi qu’en Maj + AltGr + AltFr, avec la particularité que l’émoji 10 prend la place de l’émoji chiffre 0. Non toutefois en mode ASCII, où le niveau AltGr + AltFr est pris par les [indices](#exposants-et-indices).
+Les émojis chiffres, complétés par les émojis des deux autres touches de téléphone étoile et croisillon ou dièse, sont en AltGr + AltFr sur la rangée des chiffres en mode français, ainsi qu’en Maj + AltGr + AltFr, avec la particularité que l’émoji 10 prend la place de l’émoji chiffre 0. Non toutefois en mode ASCII, où les niveaux AltGr + AltFr et Maj + AltGr sont pris par les [indices](#exposants-et-indices).
 
 ### Ponctuations
 
@@ -206,11 +206,17 @@ Pour les quatre grandes ponctuations après la touche du [N], le point d’inter
 
 ### Exposants et indices
 
-L’exposant deux de l’AZERTY traditionnel change de touche suite à l’utilisation de sa touche [²] pour la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
+L’exposant deux de l’AZERTY traditionnel change de touche suite à la réaffectation de sa touche traditionnelle [²] à la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
 
-Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres, et les chiffres en indice y sont en AltGr + AltFr. En mode ASCII, les exposants sont aussi en Maj + AltGr pour une saisie encore plus facile, aux dépens des positions rétrocompatibles, présentes uniquement en mode français. Cela permet d’écrire simplement toutes les fractions ordinaires, au-delà des fractions précomposées en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est aussi bien sur [F] en AltGr + AltFr en synergie avec les indices, que sur [/] en synergie avec les indices en AltGr + AltFr, et avec les exposants en Maj + AltFr (ceci uniquement en mode ASCII, car en mode français, c’est le deux-points sans espace).
+Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres.
 
-Alors que les exposants de toutes les minuscules servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », seul le plus fréquent, « ᵉ », est en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Mais toutes les minuscules en exposant sont en Maj + AltFr, chacun sur la touche de sa lettre de base. Les accents peuvent être ajoutés en appuyant sur une touche morte et ensuite sur la barre d’espace. L’accent sera placé parfaitement sur le ᵉ pour peu que la police de caractères le prenne en charge conformément au modèle de codage d’Unicode, qui vaut aussi bien pour les lettres de base que pour leurs exposants et indices.
+En mode capitales, l’indice 2 et l’indice 3 prennent la place des expoants 2 et 3 sur la touche [1&] pour simplifier l’écriture des deux formules chimiques les plus importantes de notre époque, celles du CO₂ et du CH₃, soit celles des deux gaz à effet de serre les plus puissants et les plus préoccupants. Si le dioxyde de carbone n’est plus à présenter, le méthane quant à lui est plus connu sous son nom français, assez bref pour l’emporter sur sa formule, de sorte que l’indice 3 vient compléter l’indice 2 davantage pour la cohérence et la logique que pour l’utilité.
+
+Les indices de tous les dix chiffres sont présents uniquement en mode ASCII, mais alors aussi bien en Maj + AltGr qu’en AltGr + AltFr, car en mode français, le niveau Maj + AltGr des touches de la rangée des chiffres est pris par les caractères rétrocompatibles, et le niveau AltGr + AltFr n’est pas très pratique sur ces touches et sert à redonder les émojis chiffres avec le « 0️⃣ », non le nombre « 🔟 », sur la touche du zéro.
+
+Ces exposants et indices servaient autrefois à composer des fractions ordinaires au-delà des quelques fractions précomposées d’Unicode, tant que la barre de fraction n’était pas encore implémentée comme elle était conçue, ou dans les logiciels où elle ne l’est toujours pas. Cela permet de coder en dur toutes les fractions ordinaires, au-delà des fractions précomposées qui sont en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est sur [/] en synergie avec les indices en AltGr + AltFr, et en mode ASCII, avec les exposants en Maj + AltFr (en mode français, c’est le deux-points sans espace).
+
+En matière d’exposants, les minuscules des lettres de l’alphabet de base sont aussi prises en charge sur touches vives, en Maj + AltFr, chacune sur la touche de sa lettre de base. car ces exposants servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », dont le plus fréquent, « ᵉ », est aussi en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Cela fonctionne aussi pour les lettres diacritées, car les accents peuvent être ajoutés même sur des exposants, pour peu que la police de caractères les prenne en charge. Après l’appui sur la touche morte correspondante, il ne manque plus que d’appuyer sur la barre d’espace.
 
 ### Barre d’espace
 
@@ -232,7 +238,7 @@ Les symboles pour cent et micro, le symbole livre et la touche morte tréma cèd
 
 #### Exposants et indices additionnels
 
-En mode ASCII, quand les chiffres en indice sont en AltGr + AltFr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient arrondir l’ensemble. Pareil pour les chiffres en exposant en Maj + AltGr et en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
+En mode ASCII, quand les chiffres en indice sont en Maj + AltGr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient compléter l’ensemble. Pareil pour les chiffres en exposant en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
 
 #### Opérateurs arithmétiques
 
@@ -262,7 +268,7 @@ La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisé
 
 #### Abréviation numéro
 
-Écrite avec un o en exposant, souvent émulé par le symbole degré, l’abréviation « numéro » est facile à saisir grâce à sa disposition comme séquence tout-en-un sur AltGr + AltFr + [N], et sa majuscule, en ajoutant Maj, sur Maj + AltGr + AltFr + [N].
+Écrite avec un o en exposant, souvent émulé à l’aide du symbole degré, l’abréviation « numéro » est facile à saisir grâce à sa disposition comme séquence tout-en-un, avec son espace fine insécable, sur AltGr + AltFr + [N], et sa majuscule, en ajoutant Maj, sur Maj + AltGr + AltFr + [N].
 
 #### Trigramme breton
 
