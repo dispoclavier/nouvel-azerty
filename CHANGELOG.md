@@ -4,7 +4,7 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.15.0 (2024-12-18)
 
-Facilitation de la saisie des indices et débogage de l’implémentation sous Windows.
+Facilitation de la saisie des indices et adaptation à l’implémentation boguée sous Windows.
 
 * Disposition : Mode ASCII : Redonder les chiffres, signes, ponctuations et le symbole en indice en Maj + AltGr à la place des chiffres, signes, ponctuations et du symbole en exposant, qui sont en Maj + AltFr. dispoocla.cpp [8c195a3](https://github.com/dispoclavier/nouvel-azerty/commit/8c195a30b0ac950798165939cb5b344fdc69c966), dispotypes.c [a70b9a7](https://github.com/dispoclavier/nouvel-azerty/commit/a70b9a7675d5553cdd193e541c6dfe1172a2fab5)
 * Composition :
