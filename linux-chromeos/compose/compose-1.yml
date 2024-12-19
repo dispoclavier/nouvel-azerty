@@ -1231,7 +1231,7 @@
 #       "ﬆ" UFB06 # LATIN SMALL LIGATURE ST
 #
 #   Sequences for combining diacritical marks start with ampersand because this
-#   is no multikey equivalent of any dead key, and because that is consistent
+#   is not a multikey equivalent of any dead key, and because it is consistent
 #   with the “combining” semantics of ampersand in this context.
 #
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
@@ -3588,7 +3588,8 @@
 # # Invisible operators
 #
 #   For intuitivity, these sequences use a leading ampersand, like those of the
-#   combining diacritics, that they share the lack of advance width with.
+#   combining diacritics, that invisible operators have the lack of advance width in
+#   common with.
 #   See # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
 #
 #   This prevents "⨯" U2A2F from needing two leading spaces for disambiguation.
@@ -4959,7 +4960,8 @@
 <Multi_key><greater><underscore><parenright><parenleft><slash>                      <nobreakspace> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 <Multi_key><greater><underscore><parenleft><parenright><slash>                             <space> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 <Multi_key><greater><underscore><parenleft><parenright><slash>                      <nobreakspace> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
-#   The glyphs of "⋢" U22E2, "⋣" U22E3 are defective in some fonts, lacking the underbar or minus sign below for equality.
+#   The glyphs of "⋢" U22E2, "⋣" U22E3 are defective in some fonts, lacking the
+#   underbar or minus sign below for equality.
 <Multi_key><c><bracketleft><slash><minus>                                                  <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketleft><slash><minus>                                           <nobreakspace> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketright><slash><minus>                                                 <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
@@ -5501,7 +5503,7 @@
 #
 <Multi_key><bar><slash><underscore>                                                        <space> : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
 <Multi_key><bar><slash><underscore>                                                 <nobreakspace> : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
-#   The inner triangle of ⟁ U27C1 WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE may erroneously look like a small circle.
+#   The inner triangle of "⟁" U27C1 may erroneously look like a small circle.
 <Multi_key><2><slash><backslash><underscore>                                               <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><slash><backslash><underscore>                                        <nobreakspace> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><slash><backslash><underscore>                                            <space> : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
@@ -5576,7 +5578,12 @@
 <Multi_key><nobreakspace><nobreakspace><space><slash>                               <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                               <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                        <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-#   The maybe rarely used long division symbol, made of a right parenthesis and a kerning overscore, does not conflict with any combining diacritic, see # # SUPERSCRIPT&BREVE
+#
+#   The maybe rarely used long division symbol U27CC, made of right parenthesis
+#   and kerning (almost combining) overscore ("⟌"), does not conflict with non-
+#   existing combining superscript breve.
+#   See # # SUPERSCRIPT&BREVE
+#
 <Multi_key><parenright><underscore><asciicircum>                                           <space> : "⟌" U27CC # LONG DIVISION
 <Multi_key><parenright><underscore><asciicircum>                                    <nobreakspace> : "⟌" U27CC # LONG DIVISION
 #   In #*# REVERSED                                                                                : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
