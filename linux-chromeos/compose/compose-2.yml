@@ -544,7 +544,9 @@
 #   group dead key.
 #
 #   SMP quotation mark ornaments U1F676.. are not supported, for cross-platform
-#   compatibility.
+#   compatibility. But in the light of the new high surrogate input method,
+#   support could be extended.
+#   See # # High surrogate input method
 #
 #
 # # Mathematical symbols
@@ -733,7 +735,9 @@
 #   character after the default mappings of dead keys on level 4, ZWSP,
 #   duplicates the combining diacritics, muck like conversely, the NBSP is
 #   repurposed to yield spacing diacritics as does en_US.UTF-8/Compose with
-#   ordinary space.
+#   ordinary space. The ZWSP input method however is not cross-platform
+#   compatible if high surrogates are in dead keys with combining diacritics.
+#   See # # High surrogate input method
 #
 #   "¤" U00A4 # CURRENCY SIGN is an exception to the rule.
 #
@@ -757,6 +761,23 @@
 #   keys on Windows are limited to single UTF-16 code units, excluding composed
 #   letters and characters in Supplemental Multilingual Planes. Hence, composed
 #   letters are not cross-platform compatible.
+#
+#
+# # High surrogate input method
+#
+#   ZWSP is used as the base character for the high surrogate of SMP letters in
+#   the dead key. In case of multiple high surrogates used in a dead key, the
+#   least frequent ones are in groups 1 and above. High surrogates required for
+#   letters in chained dead keys may be input also by any of the base dead keys
+#   for simplicity.
+#
+#   The reason why ZWSP is that U200B is in synergy with the most comprehensive
+#   map of the dead keys on level 4 of the keys where their ASCII equivalent is
+#   on level 3.
+#
+#   This high surrogate input method is based on the idea 2024-12-18T2228+0100,
+#   got in the context of washing a baby marrow (in French a courgette, Italian
+#   a zucchino).
 #
 #
 # # Composed letters for languages in Togo
