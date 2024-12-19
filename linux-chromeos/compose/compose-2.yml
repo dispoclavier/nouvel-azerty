@@ -228,8 +228,9 @@
 # # Macron below and line below
 #
 #   The deadkeysym dead_lowline is not used to input precomposed letters having
-#   “WITH LINE BELOW” in their name, given in the Latin Extended Additional
-#   block, “the names "WITH LINE BELOW" refer to a macron below the letter.”
+#   “WITH LINE BELOW” in their name, given that in the "Latin Extended
+#   Additional" block, “the names "WITH LINE BELOW" refer to a macron below the
+#   letter.”
 #   https://unicode.org/charts/nameslist/n_1E00.html
 #
 #   These letters are input using dead_belowmacron, which may be virtualized by
@@ -287,8 +288,9 @@
 #
 # # Dead keys not included in keysymdef.h
 #
-#   Some additional dead keys proposed for mapping on an fr-FR keyboard are
-#   listed below.
+#   As these dead keys are required on these fr-FR keyboard layouts, and while
+#   keysymdef.h does not feature them, the following PUA picks are used so far
+#   instead.
 #   See # # Dead characters for portability
 #
 #   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
@@ -321,7 +323,7 @@
 #
 #   That order is based on the assumption that those ASCII symbols are mapped
 #   in a stable manner. However, prior to v2, this ASCII map was unstable.
-#   See Compose.yml  Acknowledgements
+#   See Compose.yml Acknowledgements
 #
 #
 # # Proposed dead key layout for AZERTY keyboards
@@ -471,11 +473,13 @@
 #   be positioned above, stacked in one order or the other way around, e.g. on
 #   "Ṻ" U1E7A and "ṻ" U1E7B versus "Ǖ" U01D5 and "ǖ" U01D6, or when a Multi_key
 #   equivalent would conflict with another input method, e.g. "Ḉ" U1E08 and "ḉ"
-#   U1E09 with "ʻ" U02BB by dead_acute, "Ǘ" U01D7 and "ǘ" U01D8 with "‚" U201A.
+#   U1E09 with "ʻ" U02BB by dead_acute, "Ǘ" U01D7 and "ǘ" U01D8 with "‚" U201A
+#   by dead_diaeresis.
+#   See # # Quotation mark input method
 #
-#   Diacritic or transformational dead keys applied to letters in groups are
-#   to be hit first, before the group dead key. That behavior is consistent,
-#   it helps streamline code and maintenance, and it prevents conflicts.
+#   Diacritic or transformational dead keys applied to letters in groups are to
+#   be hit first, before the group dead key. That behavior is consistent and it
+#   helps streamline code and maintenance, and above all it prevents conflicts.
 #
 #
 # # Quotation mark input method
@@ -513,23 +517,28 @@
 #   See #*# DOUBLE_ACUTE
 #
 #   The rightsinglequotemark base character takes into account that the ASCII
-#   apostrophe on key E04 is replaced with rightsinglequotemark, to enhance UX
-#   in French mode, i.e. when ModLock is off. This is also an unconflicting
-#   base character fostering this quotation mark input method.
+#   apostrophe on key E04 is replaced with rightsinglequotemark to enhance UX,
+#   although apostrophe is on an unshifted key (E12 or E07), again to account
+#   for its extensive use namely due to Wikipedia’s Manual of Style.
+#   https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Apostrophes
+#
+#   Rightsinglequotemark is an unconflicting base character fostering this
+#   quotation mark input method (as of the other single quotation marks).
 #
 #   ASCII apostrophe is supported alongside for interoperability, and because
-#   it is mapped on the base level of key E05 next to rightsinglequotemark. The
-#   conflicts of multikey equivalents with CIRCUMFLEX&ACUTE, DIAERESIS&ACUTE,
-#   are fixed by hitting these dead keys the other way around.
+#   it is mapped on the base level of keys E12 or E07 as an alternative to
+#   rightsinglequotemark on E04 or C11. The conflicts of the related multikey
+#   equivalents with CIRCUMFLEX&ACUTE and DIAERESIS&ACUTE need to be worked
+#   around by hitting these dead keys one way only, not the other way around.
 #   See # # CIRCUMFLEX&ACUTE
-#   See # # ACUTE&DIAERESIS
 #   See # # DIAERESIS&ACUTE
-#   See # # ACUTE&GRAVE, GRAVE&ACUTE
+#   See # # ACUTE&GRAVE
 #
 #   The Unicode informative aliases are appended to the Unicode identifiers of
 #   single and double apostrophe quotation marks and comma quotation marks.
 #   A Unicode informative alias has been given when the Unicode character name
-#   (used as an identifier) was considered suboptimal.
+#   was considered suboptimal but could not be changed any longer, since it is
+#   used as an identifier and as such is protected by a stability policy.
 #
 #   Ornamental quotation marks are input by diacritical dead key followed by
 #   group dead key.
@@ -687,11 +696,11 @@
 #   en_US.UTF-8/Compose has combining diacritics with <nobreakspace>, probably
 #   assuming that both dead keys and NBSP are on level 3, while <space> yields
 #   a legacy spacing character as far as this is available; not for dead_hook,
-#   dead_belowcomma, dead_doubleacute properly, and severl other dead keys.
+#   dead_belowcomma, dead_doubleacute properly, nor for some other dead keys.
 #
 #   Those among these spacing characters that are in the ASCII range, as ^, ~,
-#   ` are not usefully generated by dead key, because they should be easily
-#   accessible on live keys.
+#   `, are not usefully generated by dead key. These are legitimately expected
+#   to be easily accessible on live keys instead.
 #
 #   Hence it is proposed to use space as a base character to get the combining
 #   diacritic throughout, as implemented since 2010 on J. ‘Mach’ Wust’s 
@@ -722,16 +731,16 @@
 #
 #   Following a principle used in en_US.UTF-8/Compose, the most synergistic
 #   character after the default mappings of dead keys on level 4, ZWSP,
-#   duplicates the combining diacritics. Conversely, the NBSP is repurposed to
-#   yield spacing diacritics as does en_US.UTF-8/Compose with ordinary space.
+#   duplicates the combining diacritics, muck like conversely, the NBSP is
+#   repurposed to yield spacing diacritics as does en_US.UTF-8/Compose with
+#   ordinary space.
 #
 #   "¤" U00A4 # CURRENCY SIGN is an exception to the rule.
 #
-#   This list supports combining diacritics from U0300 to U0339 plus U1DCB.
-#   Items are ordered by dead keys. Combined dead keys are listed last.
-#
-#
-# # Composed diacriticized letters
+#   Except composed letters used for languages in Togo, composed letters are
+#   not listed separately any more, since they were moved to the related dead
+#   keys.
+#   See # # Composed letters for languages in Togo
 #
 #   The XCompose compiler does not parse results defined as multiple keysyms.
 #   Composed letters must be defined as literal strings without keysyms.
@@ -744,11 +753,10 @@
 #       "j́"   # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
 #
 #   Due to a technical limitation on Windows, caused by defining the wrong data
-#   type for dead key output i.e. for the DEADTRANS function’s return value, we
-#   cannot get composed letters nor characters from a Supplemental Multilingual
-#   Plane output by dead keys in the Text Services Framework of Windows. Hence,
-#   this section is not cross-platform compatible.
-#   See # # Combining diacritics
+#   type for dead key output, in the DEADTRANS function’s return value, dead
+#   keys on Windows are limited to single UTF-16 code units, excluding composed
+#   letters and characters in Supplemental Multilingual Planes. Hence, composed
+#   letters are not cross-platform compatible.
 #
 #
 # # Composed letters for languages in Togo
@@ -6593,7 +6601,7 @@
 #   Dchar: 
 #
 #   The reverse sequences <dead_grave><dead_acute>[<dead_grave>] are not
-#   supported to prevent conflicts with quotation marks.
+#   supported, to prevent conflicts with quotation marks.
 #   See # # Quotation mark input method
 #
 <dead_acute><dead_grave>                                                                   <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
