@@ -24,3 +24,5 @@
 # Do not include undistributed files.
 /ressource/* linguist-vendored
 /linux-chromeos/outils/* linguist-vendored
+
+*.klc text working-tree-encoding=UTF-16LE-BOM
