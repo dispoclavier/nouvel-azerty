@@ -24,15 +24,22 @@ VERSION	4.15.0.5-work-around-SGCaps-bug
 // Bogues connus :
 // 1) Le guillemet ouvrant avec espace fine insécable est sans espace fine insécable quand les capitales
 //    sont verrouillés. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable.
+//    Car ce guillemet est sur la touche « ù », qui nécessite une fonctionalité appelée « Capitales
+//    allemandes de Suisse » (« Swiss-German Capitals »), qui ne prend en charge ni les touches mortes,
+//    ni les séquences, sans qu’il suffirait de ne définir que le niveau qui en a réellement besoin.
+//    C’est que cette fonctionnalité est en fait un hack concu pour contourner le manque du moyen de
+//    spécifier pour chaque touche ce qu’il y a quand le Verrouillage des Capitales est actif, comme
+//    c’est possible sous Linux et sous macOS.
 // 2) Le niveau AltGr + AltFr ne fonctionne pas en mode ASCII sur les touches sensibles à VerrMod.
 // Known bugs:
 // 1) SGCaps with Caps Lock on deactivates output sequences (ligatures) and dead keys, per Michael Kaplan:
 //    “[Pretty much] All the things you can't do with SGCAPS, and why”
 //    https://archives.miloush.net/michkap/archive/2010/07/07/10032340.html
+//    Nevertheless, SGCaps must be fully defined, including both the unshifted key and the shifted key.
 //    [More generally, keyboard layouts on Windows are a halfbaked hack because the developer (not M. K.)
 //    did not think hard enough. When I do not mind asking God to help me, I code utter bullshit.]
 // 2) When Kana Lock is on, and on the keys sensitive to Kana Lock, level 8 does work, but 7 does not. As a
-//    consequence, moet (not U+2007 and U+2008 on live keys) mappings there (subscripts) are redundant.
+//    consequence, most (not U+2007 and U+2008 on live keys) mappings there (subscripts) are redundant.
 
 MODIFIERS // Courtesy https://kbdlayout.info/KBDCAN/download/klc
 
