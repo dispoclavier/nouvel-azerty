@@ -15,7 +15,11 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 Facilitation de la saisie des indices et adaptation à l’implémentation boguée sous Windows.
 
-* Disposition : Mode ASCII : Redonder les chiffres, signes, ponctuations et le symbole en indice en Maj + AltGr à la place des chiffres, signes, ponctuations et du symbole en exposant, qui sont en Maj + AltFr. dispoocla.cpp [8c195a3](https://github.com/dispoclavier/nouvel-azerty/commit/8c195a30b0ac950798165939cb5b344fdc69c966), dispotypes.c [a70b9a7](https://github.com/dispoclavier/nouvel-azerty/commit/a70b9a7675d5553cdd193e541c6dfe1172a2fab5)
+* Disposition : Mode ASCII : Maj + AltGr :
+	* Redonder les chiffres et signes en indice à la place des chiffres et signes en exposant, qui sont en Maj + AltFr. dispoocla.cpp [8c195a3](https://github.com/dispoclavier/nouvel-azerty/commit/8c195a30b0ac950798165939cb5b344fdc69c966), dispotypes.c [a70b9a7](https://github.com/dispoclavier/nouvel-azerty/commit/a70b9a7675d5553cdd193e541c6dfe1172a2fab5)
+	* Redonder "_" sur D11 à la place de "^", qui y est en AltGr, et en Maj + AltGr en mode français. ibidem
+	* Redonder "₌" U+208C sur D12 à la place de "$", qui y est en Maj + AltGr en mode français. ibidem
+	* Redonder "₍" U+208D et "₎" U+208E sur C11 et C12 à la place de "%" et "*", qui y sont en Maj. ibidem
 * Composition :
 	* Redonder "¦" U+00A6 par « ¦!^ » pour la compatibilité latérale avec les séquences de composition françaises traditionnelles selon en_US.UTF-8/Compose. compose-1.yml [00f4777](https://github.com/dispoclavier/nouvel-azerty/commit/00f4777674b173d8881556a670e57906d53b2d77)
 	* Redonder "⁋" U+204B par « ¦!p » et « ¦!P ». ibidem
