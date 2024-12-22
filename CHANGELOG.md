@@ -5,11 +5,11 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 ## 4.15.1 (projet)
 
 * Implémentation : Réimplémenter ce nouvel AZERTY sous Windows :
-	* Convertir en AZERTY la variante redisposée. kbfrFRs.klc [44ab692](https://github.com/dispoclavier/nouvel-azerty/commit/44ab692a30f868ae0aa16b0bea2a6f768a5599eb), kbcommon.h ibidem, kbfrFRs.C ibidem, kbfrFRs.H ibidem, kbfrFRs.RC ibidem, kbfrFRs.DEF ibidem
-	* Mettre en ligne la variante redisposée. kbfrFRs.klc [d01b210](https://github.com/dispoclavier/nouvel-azerty/commit/d01b2102f2355738d5d9465dca3f6221beaf24fd), kbfrFRs.C ibidem, kbfrFRs.H ibidem, kbfrFRs.RC ibidem, kbfrFRs.DEF ibidem
+	* Convertir en AZERTY la variante redisposée. kbfrFRs.klc [df66c78](https://github.com/dispoclavier/nouvel-azerty/commit/df66c7826f6f7d8e83cf325b8d9e1fbf6c498a9a), kbcommon.h [48bb029](https://github.com/dispoclavier/nouvel-azerty/commit/48bb029946c17ba27c741c3921f0a2d9007aa33b), kbfrFRs.C [44ab692](https://github.com/dispoclavier/nouvel-azerty/commit/44ab692a30f868ae0aa16b0bea2a6f768a5599eb), kbfrFRs.H ibidem, kbfrFRs.DEF ibidem, kbfrFRs.RC [c38441a](https://github.com/dispoclavier/nouvel-azerty/commit/c38441a2b8c14fb6da73b8a10ccf6bbc986baaea)
+	* Mettre en ligne la variante redisposée. kbfrFRs.klc [6728979](https://github.com/dispoclavier/nouvel-azerty/commit/67289790dda2b79e8f63bb25e63173276429e9aa), kbfrFRs.C [d01b210](https://github.com/dispoclavier/nouvel-azerty/commit/d01b2102f2355738d5d9465dca3f6221beaf24fd), kbfrFRs.H ibidem, kbfrFRs.DEF ibidem, kbfrFRs.RC [98a7b66](https://github.com/dispoclavier/nouvel-azerty/commit/98a7b66bf0f481f55ad4d8101367e937d295bc6a)
 * Documentation :
 	* Méthode d’entrée des surrogats hauts par touches mortes. compose-2.yml [4135b4d](https://github.com/dispoclavier/nouvel-azerty/commit/4135b4d3c55dab89f75fedc063640e140ec58981)
-	* Corriger et compléter des annotations. compose-1.yml [79051e7](https://github.com/dispoclavier/nouvel-azerty/commit/79051e74f5810d87d32455c0ef4cce9da6581f66), compose-2.yml [75bc2ac](https://github.com/dispoclavier/nouvel-azerty/commit/75bc2ac2f511d0d6c078ca7f733793f85a7dec65), kbfredis.klc [70a6f97](https://github.com/dispoclavier/nouvel-azerty/commit/70a6f974a190e62ad396695b16e3f11996120ff9), kbfrFRs.klc [3b82b4b](https://github.com/dispoclavier/nouvel-azerty/commit/3b82b4b3f244f6409ea180099786d6ef8a0871b6)
+	* Corriger et compléter des annotations. compose-1.yml [79051e7](https://github.com/dispoclavier/nouvel-azerty/commit/79051e74f5810d87d32455c0ef4cce9da6581f66), compose-2.yml [75bc2ac](https://github.com/dispoclavier/nouvel-azerty/commit/75bc2ac2f511d0d6c078ca7f733793f85a7dec65), kbfredis.klc [e2f7e23](https://github.com/dispoclavier/nouvel-azerty/commit/e2f7e230946ceb82a6efcf6e3daeb2498df6d32b), kbfrFRs.klc [895d2d8](https://github.com/dispoclavier/nouvel-azerty/commit/895d2d8078178da7061a4a7842be07fc9b429a2f)
 
 ## 4.15.0 (2024-12-18)
 
