@@ -27,6 +27,7 @@ VERSION	4.15.0.5-work-around-SGCaps-bug
 // 1) SGCaps with Caps Lock on deactivates output sequences (ligatures) and dead keys, per Michael Kaplan:
 //    “[Pretty much] All the things you can't do with SGCAPS, and why”
 //    https://archives.miloush.net/michkap/archive/2010/07/07/10032340.html
+//    Nevertheless, SGCaps must be fully defined, including both the unshifted key and the shifted key.
 //    [More generally, keyboard layouts on Windows are a halfbaked hack because the developer (not M. K.)
 //    did not think hard enough. When I do not mind asking God to help me, I code utter bullshit.]
 // 2) When Kana Lock is on, and on the keys sensitive to Kana Lock, level 8 does work, but 7 does not. As a
