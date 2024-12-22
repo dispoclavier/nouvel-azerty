@@ -1,1 +1,51 @@
+#include "winver.h"
+1 VERSIONINFO
+ FILEVERSION       4.1.5.5
+ PRODUCTVERSION    4.1.5.5
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+FILEOS 0x40004L
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT2_DRV_KEYBOARD
+BEGIN
+   BLOCK "StringFileInfo"
+   BEGIN
+       BLOCK "000004B0"
+       BEGIN
+           VALUE "CompanyName",     "Dispoclavier\0"
+           VALUE "FileDescription", "France AZERTY semi-automatique Keyboard Layout\0"
+           VALUE "FileVersion",     "4, 1, 5, 5\0"
+           VALUE "InternalName",    "kbfrFRs (4.15)\0"
+           VALUE "ProductName","Transpiled by KbdUTool 3.40\0"
+           VALUE "Release Information","Initial release for Windows\0"
+           VALUE "LegalCopyright",  "(c) 2024\0"
+           VALUE "OriginalFilename","kbfrFRs\0"
+           VALUE "ProductVersion",  "4, 1, 5, 5\0"
+       END
+   END
+   BLOCK "VarFileInfo"
+   BEGIN
+       VALUE "Translation", 0x0000, 0x04B0
+   END
+END
+
+STRINGTABLE DISCARDABLE
+LANGUAGE 9, 1
+BEGIN
+    1200    "fr-FR"
+END
+
+
+STRINGTABLE DISCARDABLE
+LANGUAGE 9, 1
+BEGIN
+    1000    "France AZERTY semi-automatique"
+END
+
+
+STRINGTABLE DISCARDABLE
+LANGUAGE 9, 1
+BEGIN
+    1100    "Français (France)"
+END
 
