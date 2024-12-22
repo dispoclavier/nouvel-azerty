@@ -10,6 +10,7 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 * Documentation :
 	* Méthode d’entrée des surrogats hauts par touches mortes. compose-2.yml [4135b4d](https://github.com/dispoclavier/nouvel-azerty/commit/4135b4d3c55dab89f75fedc063640e140ec58981)
 	* Corriger et compléter des annotations. compose-1.yml [79051e7](https://github.com/dispoclavier/nouvel-azerty/commit/79051e74f5810d87d32455c0ef4cce9da6581f66), compose-2.yml [75bc2ac](https://github.com/dispoclavier/nouvel-azerty/commit/75bc2ac2f511d0d6c078ca7f733793f85a7dec65), kbfredis.klc [e2f7e23](https://github.com/dispoclavier/nouvel-azerty/commit/e2f7e230946ceb82a6efcf6e3daeb2498df6d32b), kbfrFRs.klc [895d2d8](https://github.com/dispoclavier/nouvel-azerty/commit/895d2d8078178da7061a4a7842be07fc9b429a2f)
+	* Corriger le journal des modifications. CHANGELOG.md [fb9c6b3](https://github.com/dispoclavier/nouvel-azerty/commit/fb9c6b3364574d39b30fe7473076a6085ad8490b)
 
 ## 4.15.0 (2024-12-18)
 
