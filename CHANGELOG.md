@@ -4,9 +4,12 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.15.1 (projet)
 
+* Implémentation : Réimplémenter ce nouvel AZERTY sous Windows :
+	* Convertir en AZERTY la variante redisposée. kbfrFRs.klc [44ab692](https://github.com/dispoclavier/nouvel-azerty/commit/44ab692a30f868ae0aa16b0bea2a6f768a5599eb), kbcommon.h ibidem, kbfrFRs.C ibidem, kbfrFRs.H ibidem, kbfrFRs.RC ibidem, kbfrFRs.DEF ibidem
+	* Mettre en ligne la variante redisposée. kbfrFRs.klc [d01b210](https://github.com/dispoclavier/nouvel-azerty/commit/d01b2102f2355738d5d9465dca3f6221beaf24fd), kbfrFRs.C ibidem, kbfrFRs.H ibidem, kbfrFRs.RC ibidem, kbfrFRs.DEF ibidem
 * Documentation :
 	* Méthode d’entrée des surrogats hauts par touches mortes. compose-2.yml [4135b4d](https://github.com/dispoclavier/nouvel-azerty/commit/4135b4d3c55dab89f75fedc063640e140ec58981)
-	* Corriger des annotations. compose-1.yml [79051e7](https://github.com/dispoclavier/nouvel-azerty/commit/79051e74f5810d87d32455c0ef4cce9da6581f66), compose-2.yml [75bc2ac](https://github.com/dispoclavier/nouvel-azerty/commit/75bc2ac2f511d0d6c078ca7f733793f85a7dec65)
+	* Corriger et compléter des annotations. compose-1.yml [79051e7](https://github.com/dispoclavier/nouvel-azerty/commit/79051e74f5810d87d32455c0ef4cce9da6581f66), compose-2.yml [75bc2ac](https://github.com/dispoclavier/nouvel-azerty/commit/75bc2ac2f511d0d6c078ca7f733793f85a7dec65), kbfredis.klc [70a6f97](https://github.com/dispoclavier/nouvel-azerty/commit/70a6f974a190e62ad396695b16e3f11996120ff9), kbfrFRs.klc [3b82b4b](https://github.com/dispoclavier/nouvel-azerty/commit/3b82b4b3f244f6409ea180099786d6ef8a0871b6)
 
 ## 4.15.0 (2024-12-18)
 
