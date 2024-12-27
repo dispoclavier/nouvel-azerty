@@ -1,4 +1,4 @@
-//                       Date: 2024-12-18T0254+0100
+//                       Date: 2024-12-27T0310+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1858,13 +1858,18 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 
+	key <AE03> {
+		[      dead_diaeresis ],
+		[            NoSymbol ]
+	};
+
 	key <AE04> {
 		[          dead_acute ],
 		[            NoSymbol ]
 	};
 
 	key <AE05> {
-		[      dead_diaeresis ],
+		[            quotedbl ],
 		[            NoSymbol ]
 	};
 
