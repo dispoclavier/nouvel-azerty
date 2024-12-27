@@ -13,7 +13,7 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	4.15.0.5-work-around-SGCaps-bug
+VERSION	4.16.0.0
 
 // Pour la documentation. Pour la compilation il faut éditer le numéro de version dans kbfredis.RC.
 // This is not parsed by KbdUTool’s KLC to C transpiler and thus does not reflect in kbfredis.RC.
@@ -23,7 +23,7 @@ VERSION	4.15.0.5-work-around-SGCaps-bug
 
 // Bogues connus :
 // 1) Le guillemet ouvrant avec espace fine insécable est sans espace fine insécable quand les capitales
-//    sont verrouillés. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable.
+//    sont verrouillées. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable.
 //    Car ce guillemet est sur la touche « ù », qui nécessite une fonctionalité appelée « Capitales
 //    allemandes de Suisse » (« Swiss-German Capitals »), qui ne prend en charge ni les touches mortes,
 //    ni les séquences, sans qu’il suffirait de ne définir que le niveau qui en a réellement besoin.
