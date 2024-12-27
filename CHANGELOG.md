@@ -2,11 +2,14 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.15.1 (projet)
+## 4.16.0 (projet)
+
+Amélioration de l’ergonomie des variantes redisposées en mode français par la permutation de la touche morte tréma et du guillemet double générique.
 
 * Implémentation : Réimplémenter ce nouvel AZERTY sous Windows :
 	* Convertir en AZERTY la variante redisposée. kbfrFRs.klc [df66c78](https://github.com/dispoclavier/nouvel-azerty/commit/df66c7826f6f7d8e83cf325b8d9e1fbf6c498a9a), kbcommon.h [48bb029](https://github.com/dispoclavier/nouvel-azerty/commit/48bb029946c17ba27c741c3921f0a2d9007aa33b), kbfrFRs.C [44ab692](https://github.com/dispoclavier/nouvel-azerty/commit/44ab692a30f868ae0aa16b0bea2a6f768a5599eb), kbfrFRs.H ibidem, kbfrFRs.DEF ibidem, kbfrFRs.RC [c38441a](https://github.com/dispoclavier/nouvel-azerty/commit/c38441a2b8c14fb6da73b8a10ccf6bbc986baaea)
 	* Mettre en ligne la variante redisposée. kbfrFRs.klc [6728979](https://github.com/dispoclavier/nouvel-azerty/commit/67289790dda2b79e8f63bb25e63173276429e9aa), kbfrFRs.C [d01b210](https://github.com/dispoclavier/nouvel-azerty/commit/d01b2102f2355738d5d9465dca3f6221beaf24fd), kbfrFRs.H ibidem, kbfrFRs.DEF ibidem, kbfrFRs.RC [98a7b66](https://github.com/dispoclavier/nouvel-azerty/commit/98a7b66bf0f481f55ad4d8101367e937d295bc6a)
+* Disposition : Variantes redisposées : Mode français : Permuter "\"" U+0022 sur E03 et la touche morte tréma sur E05. dispocla.cpp [ac53b5e](https://github.com/dispoclavier/nouvel-azerty/commit/ac53b5e88670a7dca3436ce69997858d571eff68), kbfredis.klc [f1cb9ac](https://github.com/dispoclavier/nouvel-azerty/commit/f1cb9ac6f5d0aacdcf3726a4efe4a25c1bbdb812), kbfredis.C [ea24800](https://github.com/dispoclavier/nouvel-azerty/commit/ea24800c52ef2c355aa10e228f5db07ff2400efa), kbfredis.RC [bc13737](https://github.com/dispoclavier/nouvel-azerty/commit/bc13737428cbcb2e730adc7e585759b522830f8a)
 * Documentation :
 	* Méthode d’entrée des surrogats hauts par touches mortes. compose-2.yml [4135b4d](https://github.com/dispoclavier/nouvel-azerty/commit/4135b4d3c55dab89f75fedc063640e140ec58981)
 	* Corriger et compléter des annotations. compose-1.yml [79051e7](https://github.com/dispoclavier/nouvel-azerty/commit/79051e74f5810d87d32455c0ef4cce9da6581f66), compose-2.yml [75bc2ac](https://github.com/dispoclavier/nouvel-azerty/commit/75bc2ac2f511d0d6c078ca7f733793f85a7dec65), kbfredis.klc [e2f7e23](https://github.com/dispoclavier/nouvel-azerty/commit/e2f7e230946ceb82a6efcf6e3daeb2498df6d32b), kbfrFRs.klc [895d2d8](https://github.com/dispoclavier/nouvel-azerty/commit/895d2d8078178da7061a4a7842be07fc9b429a2f)
