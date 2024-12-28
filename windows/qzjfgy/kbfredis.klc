@@ -15,7 +15,10 @@ LOCALEID	"0000040c"
 
 VERSION	4.16.0.0
 
-// Pour la documentation. Pour la compilation il faut éditer le numéro de version dans kbfredis.RC.
+// Pour la documentation et les noms de dossier, avec d’éventuels mots-clés ajoutés, pas trop
+// longs afin d’assurer la sauvegardabilité. Pour les métadonnées des pilotes compilés, il faut
+// éditer le numéro de version dans kbfredis.RC en s’attendant à voir remis à zéro les numéros
+// à partir du numéro de version mineure à cause d’un bogue dans KbdUTool v3.40 de Microsoft.
 // This is not parsed by KbdUTool’s KLC to C transpiler and thus does not reflect in kbfredis.RC.
 // La source d’en-tête kbfredis.H issue de la transpilation est nécessaire mais défectueuse ;
 // elle et kbd.h doivent être complétées par la source d’en-tête complémentaire kbcommon.h,
