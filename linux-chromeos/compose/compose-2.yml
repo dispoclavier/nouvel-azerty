@@ -7711,8 +7711,8 @@
 <Multi_key><period>                                                                            <d> : "ḋ" U1E0B # LATIN SMALL LETTER D WITH DOT ABOVE
 <dead_abovedot>                                                                                <E> : "Ė" U0116 # LATIN CAPITAL LETTER E WITH DOT ABOVE
 <Multi_key><period>                                                                            <E> : "Ė" U0116 # LATIN CAPITAL LETTER E WITH DOT ABOVE
-<dead_abovedot>                                                                                <er : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
-<Multi_key><period>                                                                            <er : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
+<dead_abovedot>                                                                                <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
+<Multi_key><period>                                                                            <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
 <dead_abovedot>                                                                                <F> : "Ḟ" U1E1E # LATIN CAPITAL LETTER F WITH DOT ABOVE
 <Multi_key><period>                                                                            <F> : "Ḟ" U1E1E # LATIN CAPITAL LETTER F WITH DOT ABOVE
 <dead_abovedot>                                                                                <f> : "ḟ" U1E1F # LATIN SMALL LETTER F WITH DOT ABOVE
