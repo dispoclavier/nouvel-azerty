@@ -2009,8 +2009,8 @@
 #
 <Multi_key><0><percent>                                                                            : "‰" U2030 # PER MILLE SIGN
 <Multi_key><KP_0><percent>                                                                         : "‰" U2030 # PER MILLE SIGN
-<Multi_key><0><0><percent>                                                                         : "‱" U2031 # PER TEN THOUSAND SIGN
-<Multi_key><KP_0><KP_0><percent>                                                                   : "‱" U2031 # PER TEN THOUSAND SIGN
+<Multi_key><0><0>                                                                                  : "‱" U2031 # PER TEN THOUSAND SIGN
+<Multi_key><KP_0><KP_0>                                                                            : "‱" U2031 # PER TEN THOUSAND SIGN
 #
 #
 # # Degree sign
