@@ -1682,15 +1682,6 @@
 <Multi_key><parenleft><parenright><minus>                                                          : "⁐" U2050 # CLOSE UP
 #
 #
-#^# Mixed sequences
-#
-#   These are made of both multikey and dead keys.
-#
-<dead_abovedot><Multi_key><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-<Multi_key><dead_abovedot><f><s>                                                                   : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-<Multi_key><period><Multi_key><f><s>                                                               : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
-#
-#
 #^# Tone bars
 #
 #   The bar may be a dot, and the stem may be to the right or alternatively to
@@ -7813,16 +7804,16 @@
 #   See # # Dead key layout overview
 #   See # # Order of dead key lists
 #
-#       dead_acute          oxia
-#       dead_grave          varia
-#       dead_circumflex     perispomeni
-#       dead_diaeresis      dialytika
-#       dead_caron          vrachy
-#       dead_macron         makron
-#       dead_abovehook      koronis
-#       dead_invertedbreve  dasia
-#       dead_breve          psili
-#       dead_belowdot       ypogegrammeni/prosgegrammeni
+#       dead_acute              oxia
+#       dead_grave              varia
+#       dead_circumflex         perispomeni
+#       dead_diaeresis          dialytika
+#       dead_caron              vrachy
+#       dead_macron             makron
+#       *dead_abovehook UEFD3   koronis
+#       dead_invertedbreve      dasia
+#       dead_breve              psili
+#       dead_belowdot           ypogegrammeni/prosgegrammeni
 #
 #   Monotonic Greek is primarily not supported. If tonos is required, it can be
 #   emulated using oxia instead, as since 1986, acute is the official tonos.
@@ -11194,22 +11185,22 @@
 #   Greek koronis
 #   Dchar: 
 #
-<dead_greek><dead_abovehook>                                                               <space> : "̓" U0343 # COMBINING GREEK KORONIS
-<Multi_key><at><dead_abovehook>                                                            <space> : "̓" U0343 # COMBINING GREEK KORONIS
-<dead_abovehook><dead_greek>                                                               <space> : "̓" U0343 # COMBINING GREEK KORONIS
-<Multi_key><dead_abovehook><at>                                                            <space> : "̓" U0343 # COMBINING GREEK KORONIS
-<dead_greek><dead_abovehook>                                                               <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
-<Multi_key><at><dead_abovehook>                                                            <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
-<dead_abovehook><dead_greek>                                                               <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
-<Multi_key><dead_abovehook><at>                                                            <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
-<dead_greek><dead_abovehook>                                                        <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
-<Multi_key><at><dead_abovehook>                                                     <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
-<dead_abovehook><dead_greek>                                                        <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
-<Multi_key><dead_abovehook><at>                                                     <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
-<dead_greek><dead_abovehook>                                                               <U202F> : "᾽" U1FBD # GREEK KORONIS
-<Multi_key><at><dead_abovehook>                                                            <U202F> : "᾽" U1FBD # GREEK KORONIS
-<dead_abovehook><dead_greek>                                                               <U202F> : "᾽" U1FBD # GREEK KORONIS
-<Multi_key><dead_abovehook><at>                                                            <U202F> : "᾽" U1FBD # GREEK KORONIS
+<dead_greek><UEFD3>                                                                        <space> : "̓" U0343 # COMBINING GREEK KORONIS
+<Multi_key><at><bracketright>                                                              <space> : "̓" U0343 # COMBINING GREEK KORONIS
+<UEFD3><dead_greek>                                                                        <space> : "̓" U0343 # COMBINING GREEK KORONIS
+<Multi_key><bracketright><at>                                                              <space> : "̓" U0343 # COMBINING GREEK KORONIS
+<dead_greek><UEFD3>                                                                        <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
+<Multi_key><at><bracketright>                                                              <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
+<UEFD3><dead_greek>                                                                        <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
+<Multi_key><bracketright><at>                                                              <U200B> : "̓" U0343 # COMBINING GREEK KORONIS
+<dead_greek><UEFD3>                                                                 <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
+<Multi_key><at><bracketright>                                                       <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
+<UEFD3><dead_greek>                                                                 <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
+<Multi_key><bracketright><at>                                                       <nobreakspace> : "᾽" U1FBD # GREEK KORONIS
+<dead_greek><UEFD3>                                                                        <U202F> : "᾽" U1FBD # GREEK KORONIS
+<Multi_key><at><bracketright>                                                              <U202F> : "᾽" U1FBD # GREEK KORONIS
+<UEFD3><dead_greek>                                                                        <U202F> : "᾽" U1FBD # GREEK KORONIS
+<Multi_key><bracketright><at>                                                              <U202F> : "᾽" U1FBD # GREEK KORONIS
 #
 #
 # # GREEK&MACRON
