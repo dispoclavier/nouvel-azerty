@@ -2,6 +2,11 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
+## 4.16.1 (projet)
+
+* Implémentation : Mettre à jour les touches mortes pour Windows.
+* Documentation : Corriger et compléter des annotations. compose-1.yml [212dee8](https://github.com/dispoclavier/nouvel-azerty/commit/212dee873e557c61e3a8df21be470edbf7ff1ad2)
+
 ## 4.16.0 (2024-12-30)
 
 Amélioration de l’ergonomie des variantes redisposées en mode français par la permutation de la touche morte tréma et du guillemet double générique.
