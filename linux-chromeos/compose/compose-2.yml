@@ -4397,6 +4397,11 @@
 #   All letters annotated as for Lithuanian in this file are courtesy:
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
+#   As a fallback convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is
+#   supported by asterisk, like "⁂" U2042 ASTERISM is in dead_circumflex. Due
+#   to conflicts with "᪱" U1AB1, dead_diaeresis cannot do it. Neither can
+#   dead_acute, due to conflicts with "Ǻ" U01FA and "ǻ" U01FB.
+#
 #   The tilde dead key supports daggers, because it is mapped on key T due to
 #   alphabetic mnemonic, and daggers are tied to T by shape-based mnemonic.
 #   The full set of daggers is available by digits 1 through 6 with shape-based
@@ -4447,6 +4452,8 @@
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_tilde>                                                                            <question> : "͠" U0360 # COMBINING DOUBLE TILDE
 <Multi_key><asciitilde>                                                                 <question> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
@@ -7797,6 +7804,32 @@
 <Multi_key><period>                                                                            <Z> : "Ż" U017B # LATIN CAPITAL LETTER Z WITH DOT ABOVE
 <dead_abovedot>                                                                                <z> : "ż" U017C # LATIN SMALL LETTER Z WITH DOT ABOVE
 <Multi_key><period>                                                                            <z> : "ż" U017C # LATIN SMALL LETTER Z WITH DOT ABOVE
+#
+#
+# # DOT_ABOVE&GROUP1
+#   Lenient group selection
+#   Dchar: 
+#
+<dead_abovedot><UEFD0>                                                                         <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><period><numbersign>                                                                <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+#
+#
+# # DOT_ABOVE&GROUP2
+#   Dchar: 
+#
+<dead_abovedot><UEFD0><UEFD0>                                                                  <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><period><numbersign><numbersign>                                                    <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+#
+#
+# # DOT_ABOVE&GROUP3
+#   Dchar: 
+#
+<dead_abovedot><UEFD0><3>                                                                      <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><period><numbersign><3>                                                             <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<dead_abovedot><UEFD0><KP_3>                                                                   <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><period><numbersign><KP_3>                                                          <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<dead_abovedot><UEFD0><UEFD0><UEFD0>                                                           <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key><period><numbersign><numbersign><numbersign>                                        <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 #
 #
 # # DOT_ABOVE&TILDE
@@ -12148,7 +12181,7 @@
 #
 #
 #^# GLOTTAL
-#   *dead_abovehook double press
+#   *dead_abovehook UEFD3 double press
 #   Multi_key: ¦]]
 #   Dchar: 
 #
@@ -13603,7 +13636,8 @@
 #   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 #   Followed by asterisk, dead_circumflex provides a shortcut for 
-#   "⁂" U2042 ASTERISM, consistently with dead_diaeresis for "⁑" U2051.
+#   "⁂" U2042 ASTERISM. Due to conflicts with "᪱" U1AB1 as well as with
+#   "Ǻ" U01FA and "ǻ" U01FB, the equivalent for "⁑" U2051 is in dead_tilde.
 #
 #   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
 #   the question mark as an unconflicting ASCII alternative, for a consistent
@@ -16633,8 +16667,9 @@
 #   See # # Dashes and hyphens
 #   See # # Long dashes
 #
-#   For intuitivity, with asterisk as a base character, dead_diaeresis yields
-#   "⁑" U2051, consistently with dead_circumflex for "⁂" U2042 ASTERISM.
+#   For intuitivity, with asterisk as a base character, dead_diaeresis would
+#   yield "⁑" U2051 consistently with dead_circumflex for "⁂" U2042 ASTERISM.
+#   Due to a conflict with "᪱" U1AB1, "⁑" U2051 is in dead_tilde instead.
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as multikey symbol, have quick access
@@ -16681,8 +16716,6 @@
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
-<dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<Multi_key><colon>                                                                      <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_diaeresis>                                                                          <degree> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><colon>                                                                        <degree> : "⸺" U2E3A # TWO-EM DASH
 <dead_diaeresis>                                                                            <plus> : "⸻" U2E3B # THREE-EM DASH
@@ -16846,14 +16879,14 @@
 # # DIAERESIS&RING_ABOVE
 #   Dchar: 
 #
-<dead_diaeresis><dead_ring>                                                                <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<Multi_key><colon><dead_ring>                                                              <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<dead_ring><dead_diaeresis>                                                                <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<Multi_key><dead_ring><colon>                                                              <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<dead_diaeresis><dead_ring>                                                                <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<Multi_key><colon><dead_ring>                                                              <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<dead_ring><dead_diaeresis>                                                                <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
-<Multi_key><dead_ring><colon>                                                              <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<dead_diaeresis><dead_abovering>                                                           <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<Multi_key><colon><asterisk>                                                               <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<dead_abovering><dead_diaeresis>                                                           <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<Multi_key><asterisk><colon>                                                               <space> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<dead_diaeresis><dead_abovering>                                                           <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<Multi_key><colon><asterisk>                                                               <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<dead_abovering><dead_diaeresis>                                                           <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
+<Multi_key><asterisk><colon>                                                               <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
 #
 #
 # # DIAERESIS&HACEK
@@ -17161,7 +17194,7 @@
 #   COMBINING COMMA ABOVE is the actual encoding of the combining psili.
 #
 #   Nevertheless, the glottal letters are also in a dedicated dead key,
-#   virtualized by dead_abovehook double press.
+#   virtualized by *dead_abovehook UEFD3 double press.
 #   See #^# GLOTTAL
 #
 <dead_belowcomma><dead_belowcomma>                                                         <space> : "̓" U0313 # COMBINING COMMA ABOVE
