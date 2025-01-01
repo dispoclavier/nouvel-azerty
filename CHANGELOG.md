@@ -5,7 +5,8 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 ## 4.16.1 (projet)
 
 * Implémentation : Mettre à jour les touches mortes pour Windows.
-* Documentation : Corriger et compléter des annotations. compose-1.yml [212dee8](https://github.com/dispoclavier/nouvel-azerty/commit/212dee873e557c61e3a8df21be470edbf7ff1ad2)
+* Composition : Simplifier la séquence « ¦0/3 » de "↉" U+2189 en « ¦0/ ». compose-1.yml [b9351a4](https://github.com/dispoclavier/nouvel-azerty/commit/b9351a4b4a5cf16439dab59c5cdf69cd9777a0b8)
+* Documentation : Corriger et compléter des annotations. compose-1.yml [212dee8](https://github.com/dispoclavier/nouvel-azerty/commit/212dee873e557c61e3a8df21be470edbf7ff1ad2), [b9351a4](https://github.com/dispoclavier/nouvel-azerty/commit/b9351a4b4a5cf16439dab59c5cdf69cd9777a0b8)
 
 ## 4.16.0 (2024-12-30)
 
