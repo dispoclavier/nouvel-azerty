@@ -964,6 +964,22 @@
 #           "decodeLegacygrave": {
 #             "find": "<UEFDA",
 #             "replace": "<&legacygrave"
+#           },
+#           "sortEuroSign": {
+#             "find": "<EuroSign",
+#             "replace": "<quotEuroSign"
+#           },
+#           "sortSpaces": {
+#             "find": "<((nobreak)?)space",
+#             "replace": "<z$1space"
+#           },
+#           "decodeNoBreakThinSpace": {
+#             "find": "<U202F",
+#             "replace": "<znobreakthinspace"
+#           },
+#           "decodeZeroWidthSpace": {
+#             "find": "<U200B",
+#             "replace": "<zspacezerowidth"
 #           }
 #         },
 #         "replacerules.rulesets": {
@@ -981,7 +997,11 @@
 #               "decodeFlag",
 #               "decodeBar",
 #               "decodeLegacytilde",
-#               "decodeLegacygrave"
+#               "decodeLegacygrave",
+#               "sortEuroSign",
+#               "sortSpaces",
+#               "decodeNoBreakThinSpace",
+#               "decodeZeroWidthSpace"
 #             ]
 #           }
 #         }
@@ -2076,8 +2096,8 @@
 <Multi_key><KP_1><slash><space>                                                                    : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key><0><3>                                                                                  : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
 <Multi_key><KP_0><KP_3>                                                                            : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
-<Multi_key><0><slash><3>                                                                           : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
-<Multi_key><KP_0><slash><KP_3>                                                                     : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
+<Multi_key><0><slash>                                                                              : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
+<Multi_key><KP_0><slash>                                                                           : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
 #
 #
 #^# Per mille and per myriad
