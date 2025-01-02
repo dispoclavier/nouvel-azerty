@@ -909,7 +909,11 @@
 #          ^([^\s]+)\s.+\n\1(<|\s)
 #
 #   Sortability (and readability alike) may then be further improved using this
-#   follow-up replaceruleset, with the ampersand sorted before digits.
+#   follow-up replaceruleset, with the ampersand sorted before digits, and more
+#   intuitive keysyms instead of some keysyms for letters and dead keys missing
+#   from keysymdef.h.
+#   See # # Dead keys not included in keysymdef.h
+#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
 #
 #       {
 #         "replacerules.rules": {
@@ -965,6 +969,22 @@
 #             "find": "<UEFDA",
 #             "replace": "<&legacygrave"
 #           },
+#           "decodeEopen": {
+#             "find": "<U0190",
+#             "replace": "<Eopen"
+#           },
+#           "decodeeopen": {
+#             "find": "<U025B",
+#             "replace": "<eopen"
+#           },
+#           "decodeOopen": {
+#             "find": "<U0186",
+#             "replace": "<Oopen"
+#           },
+#           "decodeoopen": {
+#             "find": "<U0254",
+#             "replace": "<oopen"
+#           },
 #           "sortEuroSign": {
 #             "find": "<EuroSign",
 #             "replace": "<quotEuroSign"
@@ -998,6 +1018,10 @@
 #               "decodeBar",
 #               "decodeLegacytilde",
 #               "decodeLegacygrave",
+#               "decodeEopen",
+#               "decodeeopen",
+#               "decodeOopen",
+#               "decodeoopen",
 #               "sortEuroSign",
 #               "sortSpaces",
 #               "decodeNoBreakThinSpace",
