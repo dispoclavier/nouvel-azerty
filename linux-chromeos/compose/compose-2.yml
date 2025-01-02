@@ -8125,6 +8125,10 @@
 #   See # # NON-BREAKING HYPHEN for Polynesian variants
 #   See # # C07 underscore
 #
+#   This uses the non-missing keysyms Ntilde and ntilde rather than U00D1 and
+#   00F1, so we don’t need to decode these later.
+#   See # # Notes for maintenance
+#
 #   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
 #   the Cambria font makes the most sense of it, giving it a three-quarter em
 #   length and making it a four-per-three-em dash. Other fonts use this dash
@@ -8136,10 +8140,10 @@
 <Multi_key><numbersign>                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
 <UEFD0>                                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR
-<UEFD0>                                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><numbersign>                                                                    <U00F1> : "―" U2015 # HORIZONTAL BAR
-<UEFD0>                                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><numbersign>                                                                    <U00D1> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                   <ntilde> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                   <ntilde> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                   <Ntilde> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                   <Ntilde> : "―" U2015 # HORIZONTAL BAR
 <UEFD0>                                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
 #
