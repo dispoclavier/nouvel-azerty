@@ -9,6 +9,7 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 * Documentation :
 	* Corriger le code. compose-2.yml [7d8c415](https://github.com/dispoclavier/nouvel-azerty/commit/7d8c41567ec0beddeb9a6ca5b543d99eb0da52db)
 	* Corriger et compléter des annotations. compose-1.yml [212dee8](https://github.com/dispoclavier/nouvel-azerty/commit/212dee873e557c61e3a8df21be470edbf7ff1ad2), [b9351a4](https://github.com/dispoclavier/nouvel-azerty/commit/b9351a4b4a5cf16439dab59c5cdf69cd9777a0b8), [599d3dd](https://github.com/dispoclavier/nouvel-azerty/commit/599d3dd09b969e0ea6ab84a7fa8b4c71f4cf00ae)
+	* Ajouter le code des vues. nouvel-azerty.json, nouvel-azerty-verrcap.json, nouvel-azerty-verrmod.json, nouvel-azerty-verrmod-verrcap.json, qzjfgy.json [44b72f3](https://github.com/dispoclavier/nouvel-azerty/commit/44b72f3e2597a9949010f157471012db3af8163e), readme.md [af1bd30](https://github.com/dispoclavier/nouvel-azerty/commit/af1bd3065f1941f77e4f61000278ac5efc94857a)
 
 ## 4.16.0 (2024-12-30)
 
