@@ -1,8 +1,8 @@
 # Un nouvel AZERTY
 
-Ce nouvel AZERTY permet (sans y obliger) d’écrire facilement en français interopérable, c’est-à-dire avec les grandes ponctuations espacées – et les chiffres groupés – selon Unicode par l’espace fine insécable (U+202F) dont l’industrie graphique française s’est massivement emparée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa version 34 (2018).
+Ce nouvel AZERTY permet (sans y obliger) d’écrire facilement en français interopérable, c’est-à-dire avec les grandes ponctuations espacées – et les chiffres groupés – selon Unicode par l’espace fine insécable (U+202F) dont l’industrie graphique française s’est massivement emparée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa [version 34 (2018)](https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l).
 
-L’écriture avec majuscules diacritées, toutes en `Maj`, ou en capitales diacritées, toutes en `VerrCap`, est aussi facilitée. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, qui dégrade l’expérience utilisateur sous Windows aussi en sortant des diacritiques combinants comme caractères morts partout où c’est possible, au lieu des lettres diacritées qui permettent aussi d’émuler une touche « ê » plutôt que de gaspiller une place pour cette dernière.
+L’écriture avec majuscules diacritées, toutes en `Maj`, ou en capitales diacritées, toutes en `VerrCap`, est aussi facilitée. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, qui dégrade l’expérience utilisateur sous Windows aussi en sortant des diacritiques combinants comme caractères morts partout où c’est possible, au lieu des lettres diacritées qui permettent aussi d’émuler une touche « ê » au lieu de gaspiller une place pour cette dernière.
 
 Ce nouvel AZERTY est la disposition de base au sein d’un ensemble de dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie, notamment au breton, aux langues de Polynésie, au bambara et à d’autres langues d’Afrique francophone. Toutes prennent en charge l’espacement des grandes ponctuations selon la typographie française nouvelle école. L’espacement vieille école manuel du deux-points est facilité pour une saisie de texte selon la pratique de l’Imprimerie nationale qui applique l’espacement nouvelle école aux guillemets chevrons.
 
@@ -19,3 +19,5 @@ Ce nouvel AZERTY en mode français à capitales verrouillées :
 Ce nouvel AZERTY en mode ASCII :
 ![Ce nouvel AZERTY en mode ASCII)](https://dispoclavier.com/img/nouvel-azerty-verrmod.png)
 Voir une [vue interactive avec infobulles](https://dispoclavier.com/nouvel-azerty/#nouvel-azerty)
+
+Ces vues ont été générées par [Keyboard Layout Editor](http://keyboard-layout-editor.com) de Ian Prest, avec le code dans ce dossier.
