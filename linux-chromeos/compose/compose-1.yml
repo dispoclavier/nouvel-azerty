@@ -910,10 +910,13 @@
 #
 #   Sortability (and readability alike) may then be further improved using this
 #   follow-up replaceruleset, with the ampersand sorted before digits, and more
-#   intuitive keysyms instead of some keysyms for letters and dead keys missing
-#   from keysymdef.h.
+#   intuitive keysyms instead of some keysyms for letters, spaces and dead keys
+#   missing from keysymdef.h. Ordinary space and U200B, as well as nobreakspace
+#   and U202F are grouped conveniently and sorted after letters by the means of
+#   a leading "z".
 #   See # # Dead keys not included in keysymdef.h
 #   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
+#   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #       {
 #         "replacerules.rules": {
