@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.16.1" # See # # Notes about syntax
+<UEFA0>                     : "version 4.17.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -887,7 +887,7 @@
 #             "replace": ""
 #           },
 #           "startAlignEndAligned": {
-#             "find": "^([^ ]+)( *)([^ ]+)( : .*)$",
+#             "find": "^([^ ]+)( *)([^ ]+)( *: .*)$",
 #             "replace": "$1$3$2$4"
 #           }
 #         },
@@ -1299,6 +1299,123 @@
 <Multi_key><z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><Z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><z><Z>                                                                                  : "℥" U2125 # OUNCE SIGN
+#
+#
+#^# Circled by leading parenthesis
+#
+#   For numbers by multikey, this intuitive input method is more efficient than
+#   the scheme using the Greek or circled dead key, provided that the redundant
+#   trailing parenthesis found in en_US.UTF-8/Compose is dropped.
+#   See #*# GREEK
+#   See #^# CIRCLED
+#
+#   However, this only supports basic circled digits and numbers, for sideways
+#   compatibility with en_US.UTF-8/Compose, but without circled letters, that
+#   would conflict with dead_invertedbreve.
+#   See #*# INVERTED_BREVE
+#
+<Multi_key><parenleft>                                                             <0><parenright> : "⓪" U24EA # CIRCLED DIGIT ZERO
+<Multi_key><parenleft>                                                          <KP_0><parenright> : "⓪" U24EA # CIRCLED DIGIT ZERO
+<Multi_key><parenleft>                                                             <1><parenright> : "①" U2460 # CIRCLED DIGIT ONE
+<Multi_key><parenleft>                                                          <KP_1><parenright> : "①" U2460 # CIRCLED DIGIT ONE
+<Multi_key><parenleft>                                                             <2><parenright> : "②" U2461 # CIRCLED DIGIT TWO
+<Multi_key><parenleft>                                                          <KP_2><parenright> : "②" U2461 # CIRCLED DIGIT TWO
+<Multi_key><parenleft>                                                             <3><parenright> : "③" U2462 # CIRCLED DIGIT THREE
+<Multi_key><parenleft>                                                          <KP_3><parenright> : "③" U2462 # CIRCLED DIGIT THREE
+<Multi_key><parenleft>                                                             <4><parenright> : "④" U2463 # CIRCLED DIGIT FOUR
+<Multi_key><parenleft>                                                          <KP_4><parenright> : "④" U2463 # CIRCLED DIGIT FOUR
+<Multi_key><parenleft>                                                             <5><parenright> : "⑤" U2464 # CIRCLED DIGIT FIVE
+<Multi_key><parenleft>                                                          <KP_5><parenright> : "⑤" U2464 # CIRCLED DIGIT FIVE
+<Multi_key><parenleft>                                                             <6><parenright> : "⑥" U2465 # CIRCLED DIGIT SIX
+<Multi_key><parenleft>                                                          <KP_6><parenright> : "⑥" U2465 # CIRCLED DIGIT SIX
+<Multi_key><parenleft>                                                             <7><parenright> : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<Multi_key><parenleft>                                                          <KP_7><parenright> : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<Multi_key><parenleft>                                                             <8><parenright> : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<Multi_key><parenleft>                                                          <KP_8><parenright> : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<Multi_key><parenleft>                                                             <9><parenright> : "⑨" U2468 # CIRCLED DIGIT NINE
+<Multi_key><parenleft>                                                          <KP_9><parenright> : "⑨" U2468 # CIRCLED DIGIT NINE
+<Multi_key><parenleft>                                                          <1><0>             : "⑩" U2469 # CIRCLED NUMBER TEN
+<Multi_key><parenleft>                                                    <KP_1><KP_0>             : "⑩" U2469 # CIRCLED NUMBER TEN
+<Multi_key><parenleft>                                                          <1><1>             : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><parenleft>                                                    <KP_1><KP_1>             : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><parenleft>                                                          <1><2>             : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><parenleft>                                                    <KP_1><KP_2>             : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><parenleft>                                                          <1><3>             : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_3>             : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<Multi_key><parenleft>                                                          <1><4>             : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_4>             : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<Multi_key><parenleft>                                                          <1><5>             : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_5>             : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<Multi_key><parenleft>                                                          <1><6>             : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_6>             : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<Multi_key><parenleft>                                                          <1><7>             : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_7>             : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<Multi_key><parenleft>                                                          <1><8>             : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_8>             : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<Multi_key><parenleft>                                                          <1><9>             : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<Multi_key><parenleft>                                                    <KP_1><KP_9>             : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<Multi_key><parenleft>                                                          <2><0>             : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<Multi_key><parenleft>                                                    <KP_2><KP_0>             : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<Multi_key><parenleft>                                                          <2><1>             : "㉑" U3251 # CIRCLED NUMBER TWENTY ONE
+<Multi_key><parenleft>                                                    <KP_2><KP_1>             : "㉑" U3251 # CIRCLED NUMBER TWENTY ONE
+<Multi_key><parenleft>                                                          <2><2>             : "㉒" U3252 # CIRCLED NUMBER TWENTY TWO
+<Multi_key><parenleft>                                                    <KP_2><KP_2>             : "㉒" U3252 # CIRCLED NUMBER TWENTY TWO
+<Multi_key><parenleft>                                                          <2><3>             : "㉓" U3253 # CIRCLED NUMBER TWENTY THREE
+<Multi_key><parenleft>                                                    <KP_2><KP_3>             : "㉓" U3253 # CIRCLED NUMBER TWENTY THREE
+<Multi_key><parenleft>                                                          <2><4>             : "㉔" U3254 # CIRCLED NUMBER TWENTY FOUR
+<Multi_key><parenleft>                                                    <KP_2><KP_4>             : "㉔" U3254 # CIRCLED NUMBER TWENTY FOUR
+<Multi_key><parenleft>                                                          <2><5>             : "㉕" U3255 # CIRCLED NUMBER TWENTY FIVE
+<Multi_key><parenleft>                                                    <KP_2><KP_5>             : "㉕" U3255 # CIRCLED NUMBER TWENTY FIVE
+<Multi_key><parenleft>                                                          <2><6>             : "㉖" U3256 # CIRCLED NUMBER TWENTY SIX
+<Multi_key><parenleft>                                                    <KP_2><KP_6>             : "㉖" U3256 # CIRCLED NUMBER TWENTY SIX
+<Multi_key><parenleft>                                                          <2><7>             : "㉗" U3257 # CIRCLED NUMBER TWENTY SEVEN
+<Multi_key><parenleft>                                                    <KP_2><KP_7>             : "㉗" U3257 # CIRCLED NUMBER TWENTY SEVEN
+<Multi_key><parenleft>                                                          <2><8>             : "㉘" U3258 # CIRCLED NUMBER TWENTY EIGHT
+<Multi_key><parenleft>                                                    <KP_2><KP_8>             : "㉘" U3258 # CIRCLED NUMBER TWENTY EIGHT
+<Multi_key><parenleft>                                                          <2><9>             : "㉙" U3259 # CIRCLED NUMBER TWENTY NINE
+<Multi_key><parenleft>                                                    <KP_2><KP_9>             : "㉙" U3259 # CIRCLED NUMBER TWENTY NINE
+<Multi_key><parenleft>                                                          <3><0>             : "㉚" U325A # CIRCLED NUMBER THIRTY
+<Multi_key><parenleft>                                                    <KP_3><KP_0>             : "㉚" U325A # CIRCLED NUMBER THIRTY
+<Multi_key><parenleft>                                                          <3><1>             : "㉛" U325B # CIRCLED NUMBER THIRTY ONE
+<Multi_key><parenleft>                                                    <KP_3><KP_1>             : "㉛" U325B # CIRCLED NUMBER THIRTY ONE
+<Multi_key><parenleft>                                                          <3><2>             : "㉜" U325C # CIRCLED NUMBER THIRTY TWO
+<Multi_key><parenleft>                                                    <KP_3><KP_2>             : "㉜" U325C # CIRCLED NUMBER THIRTY TWO
+<Multi_key><parenleft>                                                          <3><3>             : "㉝" U325D # CIRCLED NUMBER THIRTY THREE
+<Multi_key><parenleft>                                                    <KP_3><KP_3>             : "㉝" U325D # CIRCLED NUMBER THIRTY THREE
+<Multi_key><parenleft>                                                          <3><4>             : "㉞" U325E # CIRCLED NUMBER THIRTY FOUR
+<Multi_key><parenleft>                                                    <KP_3><KP_4>             : "㉞" U325E # CIRCLED NUMBER THIRTY FOUR
+<Multi_key><parenleft>                                                          <3><5>             : "㉟" U325F # CIRCLED NUMBER THIRTY FIVE
+<Multi_key><parenleft>                                                    <KP_3><KP_5>             : "㉟" U325F # CIRCLED NUMBER THIRTY FIVE
+<Multi_key><parenleft>                                                          <3><6>             : "㊱" U32B1 # CIRCLED NUMBER THIRTY SIX
+<Multi_key><parenleft>                                                    <KP_3><KP_6>             : "㊱" U32B1 # CIRCLED NUMBER THIRTY SIX
+<Multi_key><parenleft>                                                          <3><7>             : "㊲" U32B2 # CIRCLED NUMBER THIRTY SEVEN
+<Multi_key><parenleft>                                                    <KP_3><KP_7>             : "㊲" U32B2 # CIRCLED NUMBER THIRTY SEVEN
+<Multi_key><parenleft>                                                          <3><8>             : "㊳" U32B3 # CIRCLED NUMBER THIRTY EIGHT
+<Multi_key><parenleft>                                                    <KP_3><KP_8>             : "㊳" U32B3 # CIRCLED NUMBER THIRTY EIGHT
+<Multi_key><parenleft>                                                          <3><9>             : "㊴" U32B4 # CIRCLED NUMBER THIRTY NINE
+<Multi_key><parenleft>                                                    <KP_3><KP_9>             : "㊴" U32B4 # CIRCLED NUMBER THIRTY NINE
+<Multi_key><parenleft>                                                          <4><0>             : "㊵" U32B5 # CIRCLED NUMBER FORTY
+<Multi_key><parenleft>                                                    <KP_4><KP_0>             : "㊵" U32B5 # CIRCLED NUMBER FORTY
+<Multi_key><parenleft>                                                          <4><1>             : "㊶" U32B6 # CIRCLED NUMBER FORTY ONE
+<Multi_key><parenleft>                                                    <KP_4><KP_1>             : "㊶" U32B6 # CIRCLED NUMBER FORTY ONE
+<Multi_key><parenleft>                                                          <4><2>             : "㊷" U32B7 # CIRCLED NUMBER FORTY TWO
+<Multi_key><parenleft>                                                    <KP_4><KP_2>             : "㊷" U32B7 # CIRCLED NUMBER FORTY TWO
+<Multi_key><parenleft>                                                          <4><3>             : "㊸" U32B8 # CIRCLED NUMBER FORTY THREE
+<Multi_key><parenleft>                                                    <KP_4><KP_3>             : "㊸" U32B8 # CIRCLED NUMBER FORTY THREE
+<Multi_key><parenleft>                                                          <4><4>             : "㊹" U32B9 # CIRCLED NUMBER FORTY FOUR
+<Multi_key><parenleft>                                                    <KP_4><KP_4>             : "㊹" U32B9 # CIRCLED NUMBER FORTY FOUR
+<Multi_key><parenleft>                                                          <4><5>             : "㊺" U32BA # CIRCLED NUMBER FORTY FIVE
+<Multi_key><parenleft>                                                    <KP_4><KP_5>             : "㊺" U32BA # CIRCLED NUMBER FORTY FIVE
+<Multi_key><parenleft>                                                          <4><6>             : "㊻" U32BB # CIRCLED NUMBER FORTY SIX
+<Multi_key><parenleft>                                                    <KP_4><KP_6>             : "㊻" U32BB # CIRCLED NUMBER FORTY SIX
+<Multi_key><parenleft>                                                          <4><7>             : "㊼" U32BC # CIRCLED NUMBER FORTY SEVEN
+<Multi_key><parenleft>                                                    <KP_4><KP_7>             : "㊼" U32BC # CIRCLED NUMBER FORTY SEVEN
+<Multi_key><parenleft>                                                          <4><8>             : "㊽" U32BD # CIRCLED NUMBER FORTY EIGHT
+<Multi_key><parenleft>                                                    <KP_4><KP_8>             : "㊽" U32BD # CIRCLED NUMBER FORTY EIGHT
+<Multi_key><parenleft>                                                          <4><9>             : "㊾" U32BE # CIRCLED NUMBER FORTY NINE
+<Multi_key><parenleft>                                                    <KP_4><KP_9>             : "㊾" U32BE # CIRCLED NUMBER FORTY NINE
+<Multi_key><parenleft>                                                          <5><0>             : "㊿" U32BF # CIRCLED NUMBER FIFTY
+<Multi_key><parenleft>                                                    <KP_5><KP_0>             : "㊿" U32BF # CIRCLED NUMBER FIFTY
 #
 #
 #^# Circled by leading o
