@@ -293,23 +293,26 @@
 #   instead.
 #   See # # Dead characters for portability
 #
-#   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). Multi_key: ¦#
+#   The sequence in French quotes is the multikey equivalent.
+#   See # # Notes about syntax
+#
+#   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). « ¦# »
 #   <UEFD1> : "^"   *dead_superscript, used in phonetics and as abbreviation
-#                   indicatrs. Multi_key: ¦^
+#                   indicators. « ¦^ »
 #                   As abbreviation indicators, superscripts need to be on live
 #                   keys.
 #                   dead_circumflex is not « ¦^ » but « ¦< » in new-school Compose.
 #   <UEFD2> : "_"   *dead_subscript is required for phonetics as it traditionally
 #                   also includes small caps.
-#   <UEFD3> : "ẻ"   *dead_abovehook, required for disambiguation with dead_hook. Multi_key: ¦]
+#   <UEFD3> : "ẻ"   *dead_abovehook, required for disambiguation with dead_hook. « ¦] »
 #   <UEFD4> : "ɖ"   *dead_retroflexhook, required for disambiguation, consistent with the
-#                   new-school Compose scheme: benefits from brace symmetry. Multi_key: ¦}
-#   <UEFD5> : "ᴚ"   *dead_turned, technically easiest transform. ~70 instances. Multi_key: ¦%
+#                   new-school Compose scheme: benefits from brace symmetry. « ¦} »
+#   <UEFD5> : "ᴚ"   *dead_turned, technically easiest transform. ~70 instances. « ¦% »
 #                   double-press: inverted (20 instances) or sideways (8 letters) in Latin;
-#                   inverted and sideways have an empty intersection. Multi_key: ¦%
-#   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform. ~50 (Latin). Multi_key: ¦\
-#   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. Multi_key: ¦=
-#   <UEFD8> : "ħ"   *dead_bar for barred letters, i.e. with a horizontal stroke. Multi_key: ¦-
+#                   inverted and sideways have an empty intersection. « ¦% »
+#   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform. ~50 (Latin). « ¦\ »
+#   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. « ¦= »
+#   <UEFD8> : "ħ"   *dead_bar for barred letters, i.e. with a horizontal stroke. « ¦- »
 #
 #
 # # Order of dead key lists
@@ -378,7 +381,7 @@
 #   U                '  ACUTE dead_acute
 #   I                {  HOOK dead_hook
 #   O                }  RETROFLEX_HOOK *dead_retroflexhook UEFD4
-#   P                &  DOT_ABOVE dead_abovedot, Multi_key « ¦. »
+#   P                &  DOT_ABOVE dead_abovedot, « ¦. »
 #
 #   Q (A on QWERTY)  #  GROUP_1 *dead_group UEFD0
 #   S                $  CURRENCY dead_currency (new-school)
