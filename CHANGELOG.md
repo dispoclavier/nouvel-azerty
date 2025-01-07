@@ -2,14 +2,20 @@
 
 Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.17.0 (projet)
+## 4.18.0 (projet)
 
 * Implémentation : Mettre à jour les touches mortes pour Windows.
+
+## 4.17.0 (projet)
+
 * Composition :
 	* Prendre en charge les nombres cerclés à la place de la touche morte Brève inversée. compose-1.yml [27e3c4d](https://github.com/dispoclavier/nouvel-azerty/commit/27e3c4d699cf1cc20ee1dfbcf78ae6dd26e4dfa8)
 	* Simplifier les séquences des nombres cerclés. ibidem, compose-1.yml [7a5cb48](https://github.com/dispoclavier/nouvel-azerty/commit/7a5cb485b7065b34ea5325e234f728b7dc5a23a7)
 	* Simplifier la séquence « ¦0/3 » de "↉" U+2189 en « ¦0/ ». compose-1.yml [b9351a4](https://github.com/dispoclavier/nouvel-azerty/commit/b9351a4b4a5cf16439dab59c5cdf69cd9777a0b8)
-	* Supprimer pareillement les caractères non critiques à la fin des séquences de "⇇" U+21C7, "⇈" U+21C8, "⇊" U+21CA, "∯" U+222F, "⋑" U+22D1, "⟁" U+27C1, "⦀" U+2980, "⧈" U+29C8, "⧉" U+29C9, "⩎" U+2A4E, "⩏" U+2A4F, "⩓" U+2A53, "⪢" U+2AA2. compose-1.yml [7a5cb48](https://github.com/dispoclavier/nouvel-azerty/commit/7a5cb485b7065b34ea5325e234f728b7dc5a23a7)
+	* Supprimer pareillement les caractères non critiques à la fin des séquences de "⇇" U+21C7, "⇈" U+21C8, "⇊" U+21CA, "∯" U+222F, "⋑" U+22D1, "⟁" U+27C1, "⦀" U+2980, "⧈" U+29C8, "⩎" U+2A4E, "⩏" U+2A4F, "⩓" U+2A53, "⪢" U+2AA2. compose-1.yml [7a5cb48](https://github.com/dispoclavier/nouvel-azerty/commit/7a5cb485b7065b34ea5325e234f728b7dc5a23a7)
+	* Faire de même pour "⧉" U+29C9. ibidem, compose-1.yml [fcc0cfe](https://github.com/dispoclavier/nouvel-azerty/commit/fcc0cfe45e58f0958e6257db876af94d5e0a9212)
+	* Faire de même pour "ℬ" U+212C, "ℵ" U+2135, "ℶ" U+2136, "∛" U+221B, "∜" U+221C, "∰" U+2230, "♈" U+2648, "♈" U+2648, "♎" U+264E, "♒" U+2652, "♠" U+2660, "♣" U+2663, "⟠" U+27E0, "⟵" U+27F5, "⧞" U+29DE, "⧻" U+29FB, "⨌" U+2A0C, "⨹" U+2A39, "⨻" U+2A3B, "⩘" U+2A58, "⩚" U+2A5A, "⫸" U+2AF8, "⬱" U+2B31, "꜡" U+A721, "👈" U+1F448, "👉" U+1F449. compose-1.yml [fcc0cfe](https://github.com/dispoclavier/nouvel-azerty/commit/fcc0cfe45e58f0958e6257db876af94d5e0a9212)
+	* Corriger une séquence de "⩘" U+2A58. ibidem
 * Transformations :
 	* Grec ou cerclé : Prendre en charge les nombres cerclés. compose-2.yml [07b6f3f](https://github.com/dispoclavier/nouvel-azerty/commit/07b6f3f9334f005f22d50a0570e65cd4a80ef453)
 	* Grec ou cerclé > cerclé : Prendre en charge les nombres double-cerclés. ibidem
@@ -17,7 +23,7 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 	* Brève inversée : Supprimer les nombres cerclés. ibidem
 * Documentation :
 	* Corriger le code. compose-2.yml [7d8c415](https://github.com/dispoclavier/nouvel-azerty/commit/7d8c41567ec0beddeb9a6ca5b543d99eb0da52db)
-	* Corriger et compléter des annotations. compose-1.yml [212dee8](https://github.com/dispoclavier/nouvel-azerty/commit/212dee873e557c61e3a8df21be470edbf7ff1ad2), [b9351a4](https://github.com/dispoclavier/nouvel-azerty/commit/b9351a4b4a5cf16439dab59c5cdf69cd9777a0b8), [599d3dd](https://github.com/dispoclavier/nouvel-azerty/commit/599d3dd09b969e0ea6ab84a7fa8b4c71f4cf00ae), [01ffad1](https://github.com/dispoclavier/nouvel-azerty/commit/01ffad1ae691d6c5888e9be3447daefa0a2df2bd), [27e3c4d](https://github.com/dispoclavier/nouvel-azerty/commit/27e3c4d699cf1cc20ee1dfbcf78ae6dd26e4dfa8), compose-2.yml [41be644](https://github.com/dispoclavier/nouvel-azerty/commit/41be64425c8506414374d48d22677329c0ea5a5f)
+	* Corriger et compléter des annotations. compose-1.yml [212dee8](https://github.com/dispoclavier/nouvel-azerty/commit/212dee873e557c61e3a8df21be470edbf7ff1ad2), [b9351a4](https://github.com/dispoclavier/nouvel-azerty/commit/b9351a4b4a5cf16439dab59c5cdf69cd9777a0b8), [599d3dd](https://github.com/dispoclavier/nouvel-azerty/commit/599d3dd09b969e0ea6ab84a7fa8b4c71f4cf00ae), [01ffad1](https://github.com/dispoclavier/nouvel-azerty/commit/01ffad1ae691d6c5888e9be3447daefa0a2df2bd), [27e3c4d](https://github.com/dispoclavier/nouvel-azerty/commit/27e3c4d699cf1cc20ee1dfbcf78ae6dd26e4dfa8), [fcc0cfe](https://github.com/dispoclavier/nouvel-azerty/commit/fcc0cfe45e58f0958e6257db876af94d5e0a9212), compose-2.yml [41be644](https://github.com/dispoclavier/nouvel-azerty/commit/41be64425c8506414374d48d22677329c0ea5a5f)
 	* Ajouter le code des vues. nouvel-azerty.json, nouvel-azerty-verrcap.json, nouvel-azerty-verrmod.json, nouvel-azerty-verrmod-verrcap.json, qzjfgy.json [44b72f3](https://github.com/dispoclavier/nouvel-azerty/commit/44b72f3e2597a9949010f157471012db3af8163e), readme.md [af1bd30](https://github.com/dispoclavier/nouvel-azerty/commit/af1bd3065f1941f77e4f61000278ac5efc94857a)
 	* Afficher la vue redisposée. windows/qzjfgy/readme.md [7d67c86](https://github.com/dispoclavier/nouvel-azerty/commit/7d67c869a93e66e474600f09f056c33d5ea9c02c)
 
