@@ -2496,6 +2496,12 @@
 #   See dispocla.cpp key <AD12>
 #   See dispocla.cpp key <AC09>
 #
+#   Trailing redundant letters are maintained with respect to ISO codes and for
+#   a predictable behavior, unlike what is done for ad-hoc sequences as used in
+#   the Zodiacal signs and Math symbol sections.
+#   See #^# Western Zodiacal Signs
+#   See # # Design of math sequences
+#
 <Multi_key><a><e><d>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
 <Multi_key><A><E><D>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
 <Multi_key><a><f><n>                                                                               : "؋" U060B # AFGHANI SIGN, Afghani AFGHANISTAN
@@ -4040,11 +4046,11 @@
 <Multi_key><E><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><e><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
 #   In group 7 of g                                                                                : "ℊ" U210A # SCRIPT SMALL G
-<Multi_key><g><tilde>                                                                      <space> : "ℊ" U210A # SCRIPT SMALL G
-<Multi_key><g><tilde>                                                               <nobreakspace> : "ℊ" U210A # SCRIPT SMALL G
+<Multi_key><g><asciitilde>                                                                 <space> : "ℊ" U210A # SCRIPT SMALL G
+<Multi_key><g><asciitilde>                                                          <nobreakspace> : "ℊ" U210A # SCRIPT SMALL G
 #   In group 7 of H                                                                                : "ℋ" U210B # SCRIPT CAPITAL H
-<Multi_key><H><tilde>                                                                      <space> : "ℋ" U210B # SCRIPT CAPITAL H
-<Multi_key><H><tilde>                                                               <nobreakspace> : "ℋ" U210B # SCRIPT CAPITAL H
+<Multi_key><H><asciitilde>                                                                 <space> : "ℋ" U210B # SCRIPT CAPITAL H
+<Multi_key><H><asciitilde>                                                          <nobreakspace> : "ℋ" U210B # SCRIPT CAPITAL H
 #   In group 9 of H                                                                                : "ℌ" U210C # BLACK-LETTER CAPITAL H
 <Multi_key><H><numbersign>                                                                 <space> : "ℌ" U210C # BLACK-LETTER CAPITAL H
 <Multi_key><H><numbersign>                                                          <nobreakspace> : "ℌ" U210C # BLACK-LETTER CAPITAL H
@@ -4062,22 +4068,22 @@
 <Multi_key><P><l><a><n><c><k><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key><p><l><a><n><c><k><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 #   In group 7 of I                                                                                : "ℐ" U2110 # SCRIPT CAPITAL I
-<Multi_key><I><tilde>                                                                      <space> : "ℐ" U2110 # SCRIPT CAPITAL I
-<Multi_key><I><tilde>                                                               <nobreakspace> : "ℐ" U2110 # SCRIPT CAPITAL I
+<Multi_key><I><asciitilde>                                                                 <space> : "ℐ" U2110 # SCRIPT CAPITAL I
+<Multi_key><I><asciitilde>                                                          <nobreakspace> : "ℐ" U2110 # SCRIPT CAPITAL I
 #   In group 9 of I                                                                                : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 <Multi_key><I><numbersign>                                                                 <space> : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 <Multi_key><I><numbersign>                                                          <nobreakspace> : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 #   In group 7 of L                                                                                : "ℒ" U2112 # SCRIPT CAPITAL L
-<Multi_key><L><tilde>                                                                      <space> : "ℒ" U2112 # SCRIPT CAPITAL L
-<Multi_key><L><tilde>                                                               <nobreakspace> : "ℒ" U2112 # SCRIPT CAPITAL L
+<Multi_key><L><asciitilde>                                                                 <space> : "ℒ" U2112 # SCRIPT CAPITAL L
+<Multi_key><L><asciitilde>                                                          <nobreakspace> : "ℒ" U2112 # SCRIPT CAPITAL L
 #   In group 1 of l and L                                                                          : "ℓ" U2113 # SCRIPT SMALL L
-<Multi_key><l><tilde>                                                                      <space> : "ℓ" U2113 # SCRIPT SMALL L
-<Multi_key><l><tilde>                                                               <nobreakspace> : "ℓ" U2113 # SCRIPT SMALL L
+<Multi_key><l><asciitilde>                                                                 <space> : "ℓ" U2113 # SCRIPT SMALL L
+<Multi_key><l><asciitilde>                                                          <nobreakspace> : "ℓ" U2113 # SCRIPT SMALL L
 #   In group 8 of N                                                                                : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
 <Multi_key><N><N>                                                                          <space> : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
 <Multi_key><N><N>                                                                   <nobreakspace> : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
-<Multi_key><P><tilde>                                                                      <space> : "℘" U2118 # SCRIPT CAPITAL P
-<Multi_key><P><tilde>                                                               <nobreakspace> : "℘" U2118 # SCRIPT CAPITAL P
+<Multi_key><P><asciitilde>                                                                 <space> : "℘" U2118 # SCRIPT CAPITAL P
+<Multi_key><P><asciitilde>                                                          <nobreakspace> : "℘" U2118 # SCRIPT CAPITAL P
 #   In group 8 of P                                                                                : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
 <Multi_key><P><P>                                                                          <space> : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
 <Multi_key><P><P>                                                                   <nobreakspace> : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
@@ -4085,8 +4091,8 @@
 <Multi_key><Q><Q>                                                                          <space> : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
 <Multi_key><Q><Q>                                                                   <nobreakspace> : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
 #   In group 7 of R                                                                                : "ℛ" U211B # SCRIPT CAPITAL R
-<Multi_key><R><tilde>                                                                      <space> : "ℛ" U211B # SCRIPT CAPITAL R
-<Multi_key><R><tilde>                                                               <nobreakspace> : "ℛ" U211B # SCRIPT CAPITAL R
+<Multi_key><R><asciitilde>                                                                 <space> : "ℛ" U211B # SCRIPT CAPITAL R
+<Multi_key><R><asciitilde>                                                          <nobreakspace> : "ℛ" U211B # SCRIPT CAPITAL R
 #   In group 9 of R                                                                                : "ℜ" U211C # BLACK-LETTER CAPITAL R
 <Multi_key><R><numbersign>                                                                 <space> : "ℜ" U211C # BLACK-LETTER CAPITAL R
 <Multi_key><R><numbersign>                                                          <nobreakspace> : "ℜ" U211C # BLACK-LETTER CAPITAL R
@@ -4108,26 +4114,26 @@
 <Multi_key><i><percent><at>                                                                <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 <Multi_key><i><percent><at>                                                         <nobreakspace> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 #   In group 7 of B                                                                                : "ℬ" U212C # SCRIPT CAPITAL B
-<Multi_key><B><tilde>                                                                              : "ℬ" U212C # SCRIPT CAPITAL B
+<Multi_key><B><asciitilde>                                                                         : "ℬ" U212C # SCRIPT CAPITAL B
 #   In group 9 of C                                                                                : "ℭ" U212D # BLACK-LETTER CAPITAL C
 <Multi_key><C><numbersign>                                                                 <space> : "ℭ" U212D # BLACK-LETTER CAPITAL C
 <Multi_key><C><numbersign>                                                          <nobreakspace> : "ℭ" U212D # BLACK-LETTER CAPITAL C
 #   In group 7 of e                                                                                : "ℯ" U212F # SCRIPT SMALL E
-<Multi_key><e><tilde>                                                                      <space> : "ℯ" U212F # SCRIPT SMALL E
-<Multi_key><e><tilde>                                                               <nobreakspace> : "ℯ" U212F # SCRIPT SMALL E
+<Multi_key><e><asciitilde>                                                                 <space> : "ℯ" U212F # SCRIPT SMALL E
+<Multi_key><e><asciitilde>                                                          <nobreakspace> : "ℯ" U212F # SCRIPT SMALL E
 #   In group 7 of E                                                                                : "ℰ" U2130 # SCRIPT CAPITAL E
-<Multi_key><E><tilde>                                                                      <space> : "ℰ" U2130 # SCRIPT CAPITAL E
-<Multi_key><E><tilde>                                                               <nobreakspace> : "ℰ" U2130 # SCRIPT CAPITAL E
+<Multi_key><E><asciitilde>                                                                 <space> : "ℰ" U2130 # SCRIPT CAPITAL E
+<Multi_key><E><asciitilde>                                                          <nobreakspace> : "ℰ" U2130 # SCRIPT CAPITAL E
 #   In group 7 of F                                                                                : "ℱ" U2131 # SCRIPT CAPITAL F
-<Multi_key><F><tilde>                                                                      <space> : "ℱ" U2131 # SCRIPT CAPITAL F
-<Multi_key><F><tilde>                                                               <nobreakspace> : "ℱ" U2131 # SCRIPT CAPITAL F
+<Multi_key><F><asciitilde>                                                                 <space> : "ℱ" U2131 # SCRIPT CAPITAL F
+<Multi_key><F><asciitilde>                                                          <nobreakspace> : "ℱ" U2131 # SCRIPT CAPITAL F
 #   In group 7 of M                                                                                : "ℳ" U2133 # SCRIPT CAPITAL M
 #   In #*# CURRENCY                                                                                : "ℳ" U2133 # SCRIPT CAPITAL M
-<Multi_key><M><tilde>                                                                      <space> : "ℳ" U2133 # SCRIPT CAPITAL M
-<Multi_key><M><tilde>                                                               <nobreakspace> : "ℳ" U2133 # SCRIPT CAPITAL M
+<Multi_key><M><asciitilde>                                                                 <space> : "ℳ" U2133 # SCRIPT CAPITAL M
+<Multi_key><M><asciitilde>                                                          <nobreakspace> : "ℳ" U2133 # SCRIPT CAPITAL M
 #   In group 7 of o                                                                                : "ℴ" U2134 # SCRIPT SMALL O
-<Multi_key><o><tilde>                                                                      <space> : "ℴ" U2134 # SCRIPT SMALL O
-<Multi_key><o><tilde>                                                               <nobreakspace> : "ℴ" U2134 # SCRIPT SMALL O
+<Multi_key><o><asciitilde>                                                                 <space> : "ℴ" U2134 # SCRIPT SMALL O
+<Multi_key><o><asciitilde>                                                          <nobreakspace> : "ℴ" U2134 # SCRIPT SMALL O
 <Multi_key><a><backslash>                                                                          : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><A><backslash>                                                                          : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><b><backslash>                                                                          : "ℶ" U2136 # BET SYMBOL
