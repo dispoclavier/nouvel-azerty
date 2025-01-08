@@ -2308,18 +2308,18 @@
 #   These sequences are case insensitive in that they can be typed either in
 #   lowercase or in uppercase (but neither in titlecase nor in mixed case).
 #
-<Multi_key><e><n><f><c><b>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><E><N><F><C><B>                                                                         : "•" U2022 # BULLET, enfilledcircbullet
+<Multi_key><e><n><f><c>                                                                            : "•" U2022 # BULLET, enfilledcircbullet
+<Multi_key><E><N><F><C>                                                                            : "•" U2022 # BULLET, enfilledcircbullet
 <Multi_key><f><r><t><b>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><F><R><T><B>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><p><p><t><d>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><P><P><T><D>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
 <Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
-<Multi_key><e><n><f><s><b>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><E><N><F><S><B>                                                                         : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><e><n><o><s><b>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><E><N><O><S><B>                                                                         : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><e><n><f><s>                                                                            : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><E><N><F><S>                                                                            : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+<Multi_key><e><n><o><s>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><E><N><O><S>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><p><a><c><r>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><P><A><C><R>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
@@ -2346,8 +2346,8 @@
 <Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><e><n><o><c><b>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><E><N><O><C><B>                                                                         : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><e><n><o><c>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><E><N><O><C>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
 <Multi_key><p><a><c><d>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
 <Multi_key><P><A><C><D>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
 <Multi_key><o><s><t><a><r>                                                                         : "☆" U2606 # WHITE STAR, openstar
@@ -2927,8 +2927,8 @@
 #
 <Multi_key><4><asterisk>                                                                           : "♋" U264B # CANCER emoji
 <Multi_key><KP_4><KP_Multiply>                                                                     : "♋" U264B # CANCER emoji
-<Multi_key><c><a><n><c>                                                                            : "♋" U264B # CANCER emoji
-<Multi_key><C><A><N><C>                                                                            : "♋" U264B # CANCER emoji
+<Multi_key><c><a><n>                                                                               : "♋" U264B # CANCER emoji
+<Multi_key><C><A><N>                                                                               : "♋" U264B # CANCER emoji
 #
 #
 #   Leo, Lion
@@ -3317,14 +3317,14 @@
 <Multi_key><X><T><L>                                                                               : "⌫" U232B # ERASE TO THE LEFT
 <Multi_key><x><t><r>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
 <Multi_key><X><T><R>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
-<Multi_key><d><e><l>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
-<Multi_key><D><E><L>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
+<Multi_key><d><e>                                                                                  : "⌧" U2327 # X IN A RECTANGLE BOX
+<Multi_key><D><E>                                                                                  : "⌧" U2327 # X IN A RECTANGLE BOX
 #
 #
 # # Symbol for Escape key
 #
-<Multi_key><e><s><c>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
-<Multi_key><E><S><C>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
+<Multi_key><e><s>                                                                                  : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
+<Multi_key><E><S>                                                                                  : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 #
 #
 # # Symbols for modifier keys
@@ -3364,8 +3364,8 @@
 <Multi_key><C><A><P><L>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
 <Multi_key><n><m><l>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
 <Multi_key><N><M><L>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
-<Multi_key><c><t><l>                                                                               : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
-<Multi_key><C><T><L>                                                                               : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
+<Multi_key><c><t>                                                                                  : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
+<Multi_key><C><T>                                                                                  : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
 <Multi_key><a><l><t>                                                                               : "⎇" U2387 # ALTERNATIVE KEY SYMBOL
 <Multi_key><A><L><T>                                                                               : "⎇" U2387 # ALTERNATIVE KEY SYMBOL
 <Multi_key><o><p><t>                                                                               : "⌥" U2325 # OPTION KEY
@@ -3378,7 +3378,7 @@
 #   « ¦cmp ». Not « ¦com », to prevent conflicts with "℅" U2105.
 #
 <Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
-<Multi_key><C><M><P>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+<Multi_key><C><M>                                                                                  : "⎄" U2384 # COMPOSITION SYMBOL
 #
 #   The broken bar "¦" U00A6, repurposed as multikey symbol, may be input by
 #   case insensitive « ¦mul ».
@@ -3765,12 +3765,9 @@
 <Multi_key><U><at>                                                                  <nobreakspace> : "ϴ" U03F4 # GREEK CAPITAL THETA SYMBOL
 <Multi_key><e><at>                                                                         <space> : "ϵ" U03F5 # GREEK LUNATE EPSILON SYMBOL
 <Multi_key><e><at>                                                                  <nobreakspace> : "ϵ" U03F5 # GREEK LUNATE EPSILON SYMBOL
-<Multi_key><E><at>                                                                         <space> : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
-<Multi_key><E><at>                                                                  <nobreakspace> : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
-<Multi_key><e><backslash><at>                                                              <space> : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
-<Multi_key><e><backslash><at>                                                       <nobreakspace> : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
-<Multi_key><e><at><backslash>                                                              <space> : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
-<Multi_key><e><at><backslash>                                                       <nobreakspace> : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+<Multi_key><E><at>                                                                                 : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+<Multi_key><e><backslash><at>                                                                      : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+<Multi_key><e><at><backslash>                                                                      : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 #
 #
 # # Double vertical bar
@@ -4030,7 +4027,6 @@
 #   Other alphanumeric mathematical symbols are supported in groups 6 to 10,
 #   including some of these that have extra signatures here for convenience.
 #   The liter symbol "ℓ" U2113 goes extra, "𝓁" U1D4C1 is encoded separately.
-#   Space termination is skipped where obviously dispensable.
 #   See # # Mathematical Latin alphabets
 #   See # # Mathematical Greek alphabets and symbols
 #
@@ -4040,8 +4036,9 @@
 #   https://www.unicode.org/charts/nameslist/n_2100.html
 #
 #   In group 8 of C                                                                                : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
-<Multi_key><C><C>                                                                          <space> : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
-<Multi_key><C><C>                                                                   <nobreakspace> : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
+<Multi_key><C><C>                                                                                  : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
+#   These sequences for the Euler constant could be truncated to EUL, but they
+#   are not, with respect to the mathematician’s name.
 <Multi_key><E><U><L><E><R>                                                                         : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><E><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><e><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
@@ -4116,14 +4113,12 @@
 #   In group 7 of B                                                                                : "ℬ" U212C # SCRIPT CAPITAL B
 <Multi_key><B><asciitilde>                                                                         : "ℬ" U212C # SCRIPT CAPITAL B
 #   In group 9 of C                                                                                : "ℭ" U212D # BLACK-LETTER CAPITAL C
-<Multi_key><C><numbersign>                                                                 <space> : "ℭ" U212D # BLACK-LETTER CAPITAL C
-<Multi_key><C><numbersign>                                                          <nobreakspace> : "ℭ" U212D # BLACK-LETTER CAPITAL C
+<Multi_key><C><numbersign>                                                                         : "ℭ" U212D # BLACK-LETTER CAPITAL C
 #   In group 7 of e                                                                                : "ℯ" U212F # SCRIPT SMALL E
 <Multi_key><e><asciitilde>                                                                 <space> : "ℯ" U212F # SCRIPT SMALL E
 <Multi_key><e><asciitilde>                                                          <nobreakspace> : "ℯ" U212F # SCRIPT SMALL E
 #   In group 7 of E                                                                                : "ℰ" U2130 # SCRIPT CAPITAL E
-<Multi_key><E><asciitilde>                                                                 <space> : "ℰ" U2130 # SCRIPT CAPITAL E
-<Multi_key><E><asciitilde>                                                          <nobreakspace> : "ℰ" U2130 # SCRIPT CAPITAL E
+<Multi_key><E><asciitilde>                                                                         : "ℰ" U2130 # SCRIPT CAPITAL E
 #   In group 7 of F                                                                                : "ℱ" U2131 # SCRIPT CAPITAL F
 <Multi_key><F><asciitilde>                                                                 <space> : "ℱ" U2131 # SCRIPT CAPITAL F
 <Multi_key><F><asciitilde>                                                          <nobreakspace> : "ℱ" U2131 # SCRIPT CAPITAL F
@@ -4142,10 +4137,8 @@
 <Multi_key><g><backslash>                                                           <nobreakspace> : "ℷ" U2137 # GIMEL SYMBOL
 <Multi_key><G><backslash>                                                                  <space> : "ℷ" U2137 # GIMEL SYMBOL
 <Multi_key><G><backslash>                                                           <nobreakspace> : "ℷ" U2137 # GIMEL SYMBOL
-<Multi_key><d><backslash>                                                                  <space> : "ℸ" U2138 # DALET SYMBOL
-<Multi_key><d><backslash>                                                           <nobreakspace> : "ℸ" U2138 # DALET SYMBOL
-<Multi_key><D><backslash>                                                                  <space> : "ℸ" U2138 # DALET SYMBOL
-<Multi_key><D><backslash>                                                           <nobreakspace> : "ℸ" U2138 # DALET SYMBOL
+<Multi_key><d><backslash>                                                                          : "ℸ" U2138 # DALET SYMBOL
+<Multi_key><D><backslash>                                                                          : "ℸ" U2138 # DALET SYMBOL
 <Multi_key><p><p><at>                                                                      <space> : "ℼ" U213C # DOUBLE-STRUCK SMALL PI
 <Multi_key><p><p><at>                                                               <nobreakspace> : "ℼ" U213C # DOUBLE-STRUCK SMALL PI
 <Multi_key><g><g><at>                                                                      <space> : "ℽ" U213D # DOUBLE-STRUCK SMALL GAMMA
@@ -4176,8 +4169,7 @@
 #   In # # TURNED&GROUP_1                                                                          : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><Y><percent>                                                                    <space> : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><Y><percent>                                                             <nobreakspace> : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
-<Multi_key><D><D><slash>                                                                   <space> : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
-<Multi_key><D><D><slash>                                                            <nobreakspace> : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
+<Multi_key><D><D>                                                                                  : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
 <Multi_key><d><d><slash>                                                                   <space> : "ⅆ" U2146 # DOUBLE-STRUCK ITALIC SMALL D
 <Multi_key><d><d><slash>                                                            <nobreakspace> : "ⅆ" U2146 # DOUBLE-STRUCK ITALIC SMALL D
 <Multi_key><e><e><slash>                                                                   <space> : "ⅇ" U2147 # DOUBLE-STRUCK ITALIC SMALL E
@@ -4459,8 +4451,8 @@
 #   In group 4 of € and "                                                                          : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                             <space> : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                      <nobreakspace> : "∃" U2203 # THERE EXISTS
-<Multi_key><E><slash>                                                                      <space> : "∄" U2204 # THERE DOES NOT EXIST
-<Multi_key><E><slash>                                                               <nobreakspace> : "∄" U2204 # THERE DOES NOT EXIST
+#   In # # STROKE&GROUP_4                                                                          : "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key><E><slash>                                                                              : "∄" U2204 # THERE DOES NOT EXIST
 #   In group 2 of }                                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><O><slash>                                                                      <space> : "∅" U2205 # EMPTY SET
 <Multi_key><O><slash>                                                               <nobreakspace> : "∅" U2205 # EMPTY SET
@@ -4468,10 +4460,11 @@
 <Multi_key><D>                                                                             <space> : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                      <nobreakspace> : "∆" U2206 # INCREMENT
 #   In group 5 of (                                                                                : "∇" U2207 # NABLA
+#   In #*# GREEK by W                                                                              : "∇" U2207 # NABLA
+<Multi_key><D><percent>                                                                            : "∇" U2207 # NABLA
+#   Nabla may be used to denote the Hessian matrix.
 <Multi_key><H>                                                                             <space> : "∇" U2207 # NABLA
 <Multi_key><H>                                                                      <nobreakspace> : "∇" U2207 # NABLA
-<Multi_key><D><percent>                                                                    <space> : "∇" U2207 # NABLA
-<Multi_key><D><percent>                                                             <nobreakspace> : "∇" U2207 # NABLA
 #   In group 2 of € and "                                                                          : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                             <space> : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                      <nobreakspace> : "∈" U2208 # ELEMENT OF
@@ -4500,10 +4493,8 @@
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
 #   In group 3 of }                                                                                : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><P><percent>                                                                    <space> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><P><percent>                                                             <nobreakspace> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><C><P>                                                                          <space> : "∐" U2210 # N-ARY COPRODUCT
-<Multi_key><C><P>                                                                   <nobreakspace> : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><P><percent>                                                                            : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><C><P>                                                                                  : "∐" U2210 # N-ARY COPRODUCT
 #   In group 3 of $                                                                                : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
@@ -4812,8 +4803,7 @@
 <Multi_key><nobreakspace><asterisk><equal>                                                 <space> : "≛" U225B # STAR EQUALS
 <Multi_key><nobreakspace><asterisk><equal>                                          <nobreakspace> : "≛" U225B # STAR EQUALS
 #   In group 4 of =                                                                                : "≜" U225C # DELTA EQUAL TO
-<Multi_key><D><equal>                                                                      <space> : "≜" U225C # DELTA EQUAL TO
-<Multi_key><D><equal>                                                               <nobreakspace> : "≜" U225C # DELTA EQUAL TO
+<Multi_key><D><equal>                                                                              : "≜" U225C # DELTA EQUAL TO
 <Multi_key><d><e><f><equal>                                                                <space> : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><d><e><f><equal>                                                         <nobreakspace> : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><m><equal>                                                                      <space> : "≞" U225E # MEASURED BY
@@ -6232,8 +6222,7 @@
 <Multi_key><parenleft><greater><minus>                                              <nobreakspace> : "⤼" U293C # TOP ARC CLOCKWISE ARROW WITH MINUS
 <Multi_key><less><parenleft><plus>                                                         <space> : "⤽" U293D # TOP ARC ANTICLOCKWISE ARROW WITH PLUS
 <Multi_key><less><parenleft><plus>                                                  <nobreakspace> : "⤽" U293D # TOP ARC ANTICLOCKWISE ARROW WITH PLUS
-<Multi_key><C><greater><backslash>                                                         <space> : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
-<Multi_key><C><greater><backslash>                                                  <nobreakspace> : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+<Multi_key><C><greater><backslash>                                                                 : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
 <Multi_key><C><greater>                                                                    <space> : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><C><greater>                                                             <nobreakspace> : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><o><less>                                                                       <space> : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
@@ -7664,12 +7653,9 @@
 <Multi_key><nobreakspace><D>                                                        <nobreakspace> : "⫐" U2AD0 # CLOSED SUPERSET
 <Multi_key><c><bar><minus>                                                                 <space> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
 <Multi_key><c><bar><minus>                                                          <nobreakspace> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
-<Multi_key><D><minus>                                                                      <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><D><minus>                                                               <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><b><bar><minus>                                                                 <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><b><bar><minus>                                                          <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><backslash><bar><minus>                                                      <space> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><backslash><bar><minus>                                               <nobreakspace> : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
+<Multi_key><D><minus>                                                                              : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
+<Multi_key><b><bar><minus>                                                                         : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
+<Multi_key><c><backslash><bar><minus>                                                              : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><asciicircum><b>                                                             <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><b>                                                      <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><c><asciicircum><c><c>                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
@@ -7959,16 +7945,14 @@
 <Multi_key><c><a><p>                                                                       <space> : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                <nobreakspace> : "∩" U2229 # INTERSECTION
 <Multi_key><i><n><t><e><r><s><e><c>                                                                : "∩" U2229 # INTERSECTION French truncated name
-<Multi_key><C><a><p>                                                                       <space> : "⋒" U22D2 # DOUBLE INTERSECTION
-<Multi_key><C><a><p>                                                                <nobreakspace> : "⋒" U22D2 # DOUBLE INTERSECTION
+<Multi_key><C><a><p>                                                                               : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><c><a><p><d><o><t>                                                                      : "⩀" U2A40 # INTERSECTION WITH DOT
 #   <Multi_key><c><a><p><p><l><u><s> is not a Unicode character.
 #   In group 4 of '                                                                                : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                       <space> : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                <nobreakspace> : "∪" U222A # UNION
 <Multi_key><u><n><i><o><n>                                                                         : "∪" U222A # UNION French name
-<Multi_key><C><u><p>                                                                       <space> : "⋓" U22D3 # DOUBLE UNION
-<Multi_key><C><u><p>                                                                <nobreakspace> : "⋓" U22D3 # DOUBLE UNION
+<Multi_key><C><u><p>                                                                               : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><c><u><p><d><o><t>                                                                      : "⊍" U228D # MULTISET MULTIPLICATION
 #   In group 4 of +                                                                                : "⊎" U228E # MULTISET UNION
 <Multi_key><c><u><p><p><l><u><s>                                                                   : "⊎" U228E # MULTISET UNION
@@ -7984,9 +7968,7 @@
 <Multi_key><d><i><a><m><e><t><r><e>                                                                : "⌀" U2300 # DIAMETER SIGN simplified French
 #   In group 7 of € and "                                                                          : "✉" U2709 # ENVELOPE
 <Multi_key><E><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE TeX control has title case
-<Multi_key><e><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE
-#   The French sequence « ¦enveloppe » is not supported, because it exceeds
-#   the XCompose upper limit of 9 keysyms (including Multi_key).
+<Multi_key><e><n><v>                                                                               : "✉" U2709 # ENVELOPE
 <Multi_key><L><p><a><r><e><n><g><t>                                                                : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
 <Multi_key><R><p><a><r><e><n><l><t>                                                                : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET TeX + HTML under max 9 keysym constraint
 #
