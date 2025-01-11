@@ -1,14 +1,14 @@
 # Un nouvel AZERTY pour Windows
 
-Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) des pilotes d’essai. Sur l’[utilisation](#utilisation) da la future version complète, il est vivement conseillé de se reporter à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf) est pareillement disponible en ligne.
+Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) des pilotes d’essai. Sur l’[utilisation](#utilisation) da la future version complète, il est vivement conseillé de se reporter à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-symboles-math.pdf) est pareillement disponible en ligne.
 
 ## Installation
 
-Télécharger le dossier « `Nouvel-AZERTY-Windows-`version`.zip` » sous le titre « Assets », l’extraire, aller dans le dossier dont le nom finit en « (installation) », puis dans celui qui commence par « kbfrFRs » (« kbfrFRs v4.16.0.0 installation ») et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « `Un-nouvel-AZERTY-Windows-`version`.zip` » sous le titre « Assets », l’extraire, aller dans le dossier dont le nom finit en « (installation) », puis dans celui qui commence par « kbfrFRs » (« kbfrFRs v4.16.0.0 installation ») et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
 
 ## Utilisation
 
-Ce mode d’emploi condensé ne peut pas remplacer la documentation détaillée citée [au début](#un-nouvel-azerty-pour-linux).
+Ce mode d’emploi condensé ne peut remplacer la documentation détaillée citée [au début](#un-nouvel-azerty-pour-linux).
 
 ### Lettres
 
@@ -256,4 +256,4 @@ L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insé
 
 ### Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `windows/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Nouvel-AZERTY-Windows-`version`.zip` ».
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `windows/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Un-nouvel-AZERTY-Windows-`version`.zip` ».
