@@ -964,27 +964,27 @@
 #             "find": "<UEFD8",
 #             "replace": "<&bar"
 #           },
-#           "decodeLegacytilde": {
+#           "decodeLegacyTilde": {
 #             "find": "<UEFD9",
 #             "replace": "<&legacytilde"
 #           },
-#           "decodeLegacygrave": {
+#           "decodeLegacyGrave": {
 #             "find": "<UEFDA",
 #             "replace": "<&legacygrave"
 #           },
-#           "decodeEopen": {
+#           "decodeCapitalOpenE": {
 #             "find": "<U0190",
 #             "replace": "<Eopen"
 #           },
-#           "decodeeopen": {
+#           "decodeSmallOpenE": {
 #             "find": "<U025B",
 #             "replace": "<eopen"
 #           },
-#           "decodeOopen": {
+#           "decodeCapitalOpenO": {
 #             "find": "<U0186",
 #             "replace": "<Oopen"
 #           },
-#           "decodeoopen": {
+#           "decodeSmallOpenO": {
 #             "find": "<U0254",
 #             "replace": "<oopen"
 #           },
@@ -992,17 +992,29 @@
 #             "find": "<EuroSign",
 #             "replace": "<quotEuroSign"
 #           },
+#           "sortSectionSign": {
+#             "find": "<section",
+#             "replace": "<semsection"
+#           },
+#           "sortRightSingleQuotationMark": {
+#             "find": "<rightsinglequotemark",
+#             "replace": "<aprightsinglequotemark"
+#           },
+#           "sortAsciiAndAliases": {
+#             "find": "<(ampersand|apostrophe|aprightsinglequotemark|asciicircum|asciitilde|asterisk|at|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotEuroSign|quotedbl|semicolon|semsection|slash|underscore)>",
+#             "replace": "<~$1>"
+#           },
 #           "sortSpaces": {
 #             "find": "<((nobreak)?)space",
-#             "replace": "<z$1space"
+#             "replace": "<|$1space"
 #           },
 #           "decodeNoBreakThinSpace": {
 #             "find": "<U202F",
-#             "replace": "<znobreakthinspace"
+#             "replace": "<|nobreakthinspace"
 #           },
 #           "decodeZeroWidthSpace": {
 #             "find": "<U200B",
-#             "replace": "<zspacezerowidth"
+#             "replace": "<|spacezerowidth"
 #           }
 #         },
 #         "replacerules.rulesets": {
@@ -1019,13 +1031,16 @@
 #               "decodeReversed",
 #               "decodeFlag",
 #               "decodeBar",
-#               "decodeLegacytilde",
-#               "decodeLegacygrave",
-#               "decodeEopen",
-#               "decodeeopen",
-#               "decodeOopen",
-#               "decodeoopen",
+#               "decodeLegacyTilde",
+#               "decodeLegacyGrave",
+#               "decodeCapitalOpenE",
+#               "decodeSmallOpenE",
+#               "decodeCapitalOpenO",
+#               "decodeSmallOpenO",
 #               "sortEuroSign",
+#               "sortSectionSign",
+#               "sortRightSingleQuotationMark",
+#               "sortAsciiAndAliases",
 #               "sortSpaces",
 #               "decodeNoBreakThinSpace",
 #               "decodeZeroWidthSpace"
@@ -1114,8 +1129,8 @@
 #
 #^# Abbreviations, Units and Legal Symbols
 #
-#   A design goal is sideways compatibility with en_US.UTF-8/Compose, as in the
-#   pilcrow sign "¶" U00B6 by « ¦p! » and « ¦P! ».
+#   A design goal is sideways compatibility with en_US.UTF-8/Compose as used in
+#   France. One example is the pilcrow sign "¶" U00B6 by « ¦p! » and « ¦P! ».
 #
 #   Sequences for "©" U00A9 and "®" U00AE made out of letters only with an "O"
 #   or an "o" are based on en_US.UTF-8/Compose, where "℗" U2117 is missing, as
@@ -1162,6 +1177,14 @@
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
+#   Leading or trailing space for disambiguation is duplicated for nobreakspace
+#   support, if synergy with Multi_key or an ASCII symbol matters, consistently
+#   with what is done for math symbols.
+#   See # # Design of math sequences
+#
+#   Recycling symbols are grouped separately.
+#   See # # Recycling symbols by initialisms
+#
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
 <Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
 <Multi_key><S><exclam>                                                                             : "§" U00A7 # SECTION SIGN
@@ -1190,11 +1213,11 @@
 <Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
 <Multi_key><a><slash><s>                                                                           : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
-<Multi_key><o><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><O><b><y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><O><B><Y>                                                                               : "🅯" U1F16F # CIRCLED HUMAN FIGURE
-<Multi_key><o><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
-<Multi_key><O><C><C>                                                                               : "🅭" U1F16D # CIRCLED CC
+<Multi_key><o><b>                                                                                  : "🅯" U1F16F # CIRCLED HUMAN FIGURE
+<Multi_key><O><b>                                                                                  : "🅯" U1F16F # CIRCLED HUMAN FIGURE
+<Multi_key><O><B>                                                                                  : "🅯" U1F16F # CIRCLED HUMAN FIGURE
+<Multi_key><o><C>                                                                                  : "🅭" U1F16D # CIRCLED CC
+<Multi_key><O><C>                                                                                  : "🅭" U1F16D # CIRCLED CC
 <Multi_key><c><slash><o>                                                                           : "℅" U2105 # CARE OF
 <Multi_key><c><o>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><c><O>                                                                                  : "℅" U2105 # CARE OF
@@ -1246,12 +1269,13 @@
 <Multi_key><n><O><underscore>                                                                      : "№" U2116 # NUMERO SIGN
 <Multi_key><o><percent>                                                                            : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><O><percent><space>                                                                     : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><O><percent><nobreakspace>                                                              : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><m><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><M><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><M><H><O>                                                                               : "℧" U2127 # INVERTED OHM SIGN
-<Multi_key><o><h><m>                                                                               : "Ω" U2126 # OHM SIGN
-<Multi_key><O><h><m>                                                                               : "Ω" U2126 # OHM SIGN
-<Multi_key><O><H><M>                                                                               : "Ω" U2126 # OHM SIGN
+<Multi_key><o><h>                                                                                  : "Ω" U2126 # OHM SIGN
+<Multi_key><O><h>                                                                                  : "Ω" U2126 # OHM SIGN
+<Multi_key><O><H>                                                                                  : "Ω" U2126 # OHM SIGN
 <Multi_key><o><P>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><O><p>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
 <Multi_key><P><o>                                                                                  : "℗" U2117 # SOUND RECORDING COPYRIGHT
@@ -1302,6 +1326,45 @@
 <Multi_key><z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><Z><z>                                                                                  : "℥" U2125 # OUNCE SIGN
 <Multi_key><z><Z>                                                                                  : "℥" U2125 # OUNCE SIGN
+#
+#
+# # Recycling symbols by initialisms
+#
+#   These plastic recycling symbols are also supported in *dead_retroflexhook.
+#   https://www.unicode.org/L2/L2000/00292-n2240.pdf
+#   See #*# RETROFLEX_HOOK
+#
+#   Polyethylene terephthalate
+<Multi_key><p><e><t>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+<Multi_key><P><E><T>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+#   High density polyethylene
+<Multi_key><h><d><p><e>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><H><D><P><E>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><p><e><h><d>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><P><E><H><D>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+#   Polyvinyl chloride
+<Multi_key><p><v><c>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+<Multi_key><P><V><C>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+#   Low density polyethylene
+<Multi_key><l><d><p><e>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><L><D><P><E>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><p><e><l><d>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><P><E><L><D>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+#   Polypropylene plastic; 3 "p"s due to conflicts with "ℙ" U2119, "ℼ" U213C
+<Multi_key><p><p><p>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+<Multi_key><P><P><P>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+#   Polystyrene
+<Multi_key><p><s>                                                                                  : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+<Multi_key><P><S>                                                                                  : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+#   Other
+<Multi_key><o><t><h>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+<Multi_key><O><T><H>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+#   Autre, with Spanish spelling to avoid conflicts with "Ꜷ" UA736, "ꜷ" UA737
+<Multi_key><o><t><r>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+<Multi_key><O><T><R>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+#   Generic materials
+<Multi_key><g><e><n>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
+<Multi_key><G><E><N>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
 #
 #
 #^# Circled
@@ -2308,20 +2371,28 @@
 #   These sequences are case insensitive in that they can be typed either in
 #   lowercase or in uppercase (but neither in titlecase nor in mixed case).
 #
+#   En filled circular bullet
 <Multi_key><e><n><f><c>                                                                            : "•" U2022 # BULLET, enfilledcircbullet
 <Multi_key><E><N><F><C>                                                                            : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><f><r><t><b>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><F><R><T><B>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><p><p><t><d>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><P><P><T><D>                                                                            : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+#   Filled rightwards triangular bullet
+<Multi_key><f><r><t>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><F><R><T>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+#   Puce pleine triangulaire vers la droite
+<Multi_key><p><t><d>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><P><T><D>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+#   Filled rectangular bullet
 <Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
 <Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
+#   En filled square bullet
 <Multi_key><e><n><f><s>                                                                            : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
 <Multi_key><E><N><F><S>                                                                            : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
+#   En open square bullet
 <Multi_key><e><n><o><s>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
 <Multi_key><E><N><O><S>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><p><a><c><r>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><P><A><C><R>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+#   Puce ajourée carrée
+<Multi_key><p><a><c>                                                                               : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><P><A><C>                                                                               : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+#   Em filled rectangular bullet
 <Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
 <Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
 <Multi_key><p><p><r><c>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
@@ -2330,28 +2401,36 @@
 <Multi_key><E><M><O><R>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
 <Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
 <Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
-<Multi_key><f><t><b><u>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
-<Multi_key><F><T><B><U>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
-<Multi_key><o><t><b><u>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
-<Multi_key><O><T><B><U>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
-<Multi_key><f><t><b><d>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
-<Multi_key><F><T><B><D>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
-<Multi_key><o><t><b><d>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
-<Multi_key><O><T><B><D>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
-<Multi_key><f><l><t><b>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><F><L><T><B>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><p><p><t><g>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><P><P><T><G>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+#   Filled triangular upwards bullet
+<Multi_key><f><t><u>                                                                               : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
+<Multi_key><F><T><U>                                                                               : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
+#   Open triangular upwards bullet
+<Multi_key><o><t><u>                                                                               : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
+<Multi_key><O><T><U>                                                                               : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
+#   Filled triangular downwards bullet
+<Multi_key><f><t><d>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
+<Multi_key><F><T><D>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
+#   Open triangular downwards bullet
+<Multi_key><o><t><d>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+<Multi_key><O><T><D>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+#   Filled leftwards triangular bullet
+<Multi_key><f><l><t>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><F><L><T>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+#   Puce pleine triangulaire vers la gauche
+<Multi_key><p><t><g>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><P><T><G>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
 <Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
 <Multi_key><e><n><o><c>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
 <Multi_key><E><N><O><C>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><p><a><c><d>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><P><A><C><D>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><o><s><t><a><r>                                                                         : "☆" U2606 # WHITE STAR, openstar
-<Multi_key><O><S><T><A><R>                                                                         : "☆" U2606 # WHITE STAR, openstar
+#   Puce ajourée ronde
+<Multi_key><p><a><r>                                                                               : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><P><A><R>                                                                               : "◦" U25E6 # WHITE BULLET, enopencircbullet
+#   Open star; lowercase needs to avoid a conflict with osuperior "ᴖ" U1D16
+<Multi_key><o><s><t>                                                                               : "☆" U2606 # WHITE STAR, openstar
+<Multi_key><O><S>                                                                                  : "☆" U2606 # WHITE STAR, openstar
 #
 #
 #   Tainome and kome
@@ -2376,14 +2455,18 @@
 #   https://www.unicode.org/emoji/charts-15.1/emoji-list.html#hand-single-finger
 #   https://unicode.org/Public/emoji/15.1/emoji-sequences.txt
 #
-<Multi_key><f><i><p><l>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><F><I><P><L>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><i><p><p><g>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><I><P><P><G>                                                                            : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-<Multi_key><f><i><p><r>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-<Multi_key><F><I><P><R>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-<Multi_key><i><p><p><d>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-<Multi_key><I><P><P><D>                                                                            : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+#   Filled leftwards index
+<Multi_key><f><l><i>                                                                               : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><F><L><I>                                                                               : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+#   Index pointant vers la gauche
+<Multi_key><i><p><g>                                                                               : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+<Multi_key><I><P><G>                                                                               : "☚" U261A # BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+#   Filled rightwards index
+<Multi_key><f><r><i>                                                                               : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><F><R><I>                                                                               : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+#   Index pointant vers la droite
+<Multi_key><i><p><d>                                                                               : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+<Multi_key><I><P><D>                                                                               : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
 <Multi_key><b><i><p><l>                                                                            : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
 <Multi_key><B><I><L>                                                                               : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
 <Multi_key><i><r><m><p><g>                                                                         : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
@@ -2403,12 +2486,16 @@
 #   https://github.com/psb1558/Junicode-font/discussions/93
 #   https://en.wikipedia.org/wiki/Signature_mark
 #
-<Multi_key><f><l><p><b>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
-<Multi_key><F><L><P><B>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
+#   Filled leftwards pilcrow bullet
+<Multi_key><f><l><p>                                                                               : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><F><L><P>                                                                               : "⁌" U204C # BLACK LEFTWARDS BULLET
+#   Puce pied-de-mouche gauche
 <Multi_key><p><p><m><g>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><P><P><M><G>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
-<Multi_key><f><r><p><b>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
-<Multi_key><F><R><P><B>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
+#   Filled rightwards pilcrow bullet
+<Multi_key><f><r><p>                                                                               : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<Multi_key><F><R><P>                                                                               : "⁍" U204D # BLACK RIGHTWARDS BULLET
+#   Puce pied-de-mouche droite
 <Multi_key><p><p><m><d>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><P><P><M><D>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 #
@@ -3014,10 +3101,10 @@
 #
 <Multi_key><D><asterisk>                                                                           : "⛎" U26CE # OPHIUCHUS emoji
 <Multi_key><d><asterisk>                                                                           : "⛎" U26CE # OPHIUCHUS emoji
-<Multi_key><o><p><h><i>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
-<Multi_key><O><P><H><I>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
-<Multi_key><s><e><r><p>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
-<Multi_key><S><E><R><P>                                                                            : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><o><p><h>                                                                               : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><O><P><H>                                                                               : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><s><e><r>                                                                               : "⛎" U26CE # OPHIUCHUS emoji
+<Multi_key><S><E><R>                                                                               : "⛎" U26CE # OPHIUCHUS emoji
 #
 #
 #^# Circle quadrants
@@ -3317,8 +3404,8 @@
 <Multi_key><X><T><L>                                                                               : "⌫" U232B # ERASE TO THE LEFT
 <Multi_key><x><t><r>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
 <Multi_key><X><T><R>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
-<Multi_key><d><e>                                                                                  : "⌧" U2327 # X IN A RECTANGLE BOX
-<Multi_key><D><E>                                                                                  : "⌧" U2327 # X IN A RECTANGLE BOX
+<Multi_key><d><e><l>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
+<Multi_key><D><E><L>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
 #
 #
 # # Symbol for Escape key
@@ -3586,8 +3673,10 @@
 #   is required for many math symbols, unless trailing space is non-critical.
 #   Both ASCII space and Latin-1 no-break space are supported as terminating
 #   space, the no-break space because in French mode, it is mapped on level 3,
-#   in synergy with the ASCII symbols that are likely to occur at the end of
-#   math symbol multikey sequences.
+#   in synergy with the ASCII symbols, that are likely to occur at the end of
+#   math symbol multikey sequences; if not, U+00A0 is supported regardless, for
+#   consistency and maintainability and with respect to a following number that
+#   may need to be connected to the symbol by a no-break space.
 #
 #   When things do not work as expected, the likely culprit is a conflict with
 #   a dead key equivalent, or with another math sequence. To fix these issues,
@@ -4037,11 +4126,23 @@
 #
 #   In group 8 of C                                                                                : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
 <Multi_key><C><C>                                                                                  : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
+#
 #   These sequences for the Euler constant could be truncated to EUL, but they
 #   are not, with respect to the mathematician’s name.
+#
+#   However, a space-terminated, case insensitive alternative is also provided.
+#
 <Multi_key><E><U><L><E><R>                                                                         : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><E><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><e><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><U>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><U>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><u>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><u>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><e><U>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><e><U>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><e><u>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><e><u>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
 #   In group 7 of g                                                                                : "ℊ" U210A # SCRIPT SMALL G
 <Multi_key><g><asciitilde>                                                                 <space> : "ℊ" U210A # SCRIPT SMALL G
 <Multi_key><g><asciitilde>                                                          <nobreakspace> : "ℊ" U210A # SCRIPT SMALL G
@@ -4454,8 +4555,7 @@
 #   In # # STROKE&GROUP_4                                                                          : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><E><slash>                                                                              : "∄" U2204 # THERE DOES NOT EXIST
 #   In group 2 of }                                                                                : "∅" U2205 # EMPTY SET
-<Multi_key><O><slash>                                                                      <space> : "∅" U2205 # EMPTY SET
-<Multi_key><O><slash>                                                               <nobreakspace> : "∅" U2205 # EMPTY SET
+<Multi_key><O><slash>                                                                              : "∅" U2205 # EMPTY SET
 #   In group 4 of (                                                                                : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                             <space> : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                      <nobreakspace> : "∆" U2206 # INCREMENT
@@ -4485,10 +4585,15 @@
 <Multi_key><p><underscore>                                                          <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><underscore>                                                      <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><underscore>                                               <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
-<Multi_key><q><e><d>                                                                       <space> : "∎" U220E # END OF PROOF
-<Multi_key><q><e><d>                                                                <nobreakspace> : "∎" U220E # END OF PROOF
-<Multi_key><c><q><f><d>                                                                    <space> : "∎" U220E # END OF PROOF
-<Multi_key><c><q><f><d>                                                             <nobreakspace> : "∎" U220E # END OF PROOF
+#   End of proof
+<Multi_key><e><o>                                                                                  : "∎" U220E # END OF PROOF
+<Multi_key><E><O>                                                                                  : "∎" U220E # END OF PROOF
+#   Quod erat demonstrandum, Q.E.D.
+<Multi_key><q><e>                                                                                  : "∎" U220E # END OF PROOF
+<Multi_key><Q><E>                                                                                  : "∎" U220E # END OF PROOF
+#   Ce qu’il fallait démontrer, C.Q.F.D.
+<Multi_key><c><q>                                                                                  : "∎" U220E # END OF PROOF
+<Multi_key><C><Q>                                                                                  : "∎" U220E # END OF PROOF
 #   In group 3 of &                                                                                : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
@@ -4981,10 +5086,8 @@
 <Multi_key><o><period>                                                              <nobreakspace> : "⊙" U2299 # CIRCLED DOT OPERATOR
 <Multi_key><O><o>                                                                          <space> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><O><o>                                                                   <nobreakspace> : "⊚" U229A # CIRCLED RING OPERATOR
-<Multi_key><o><asterisk>                                                                   <space> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
-<Multi_key><o><asterisk>                                                            <nobreakspace> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
-<Multi_key><O><asterisk>                                                                   <space> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
-<Multi_key><O><asterisk>                                                            <nobreakspace> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
+<Multi_key><o><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
+<Multi_key><O><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><space><o><equal>                                                               <space> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><space><o><equal>                                                        <nobreakspace> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><nobreakspace><o><equal>                                                        <space> : "⊜" U229C # CIRCLED EQUALS
@@ -5603,12 +5706,9 @@
 <Multi_key><O><numbersign>                                                          <nobreakspace> : "●" U25CF # BLACK CIRCLE
 <Multi_key><O><numbersign><bar>                                                            <space> : "◐" U25D0 # CIRCLE WITH LEFT HALF BLACK
 <Multi_key><O><numbersign><bar>                                                     <nobreakspace> : "◐" U25D0 # CIRCLE WITH LEFT HALF BLACK
-<Multi_key><O><bar><numbersign>                                                            <space> : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
-<Multi_key><O><bar><numbersign>                                                     <nobreakspace> : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
-<Multi_key><O><minus><numbersign>                                                          <space> : "◒" U25D2 # CIRCLE WITH LOWER HALF BLACK
-<Multi_key><O><minus><numbersign>                                                   <nobreakspace> : "◒" U25D2 # CIRCLE WITH LOWER HALF BLACK
-<Multi_key><O><numbersign><minus>                                                          <space> : "◓" U25D3 # CIRCLE WITH UPPER HALF BLACK
-<Multi_key><O><numbersign><minus>                                                   <nobreakspace> : "◓" U25D3 # CIRCLE WITH UPPER HALF BLACK
+<Multi_key><O><bar><numbersign>                                                                    : "◑" U25D1 # CIRCLE WITH RIGHT HALF BLACK
+<Multi_key><O><minus><numbersign>                                                                  : "◒" U25D2 # CIRCLE WITH LOWER HALF BLACK
+<Multi_key><O><numbersign><minus>                                                                  : "◓" U25D3 # CIRCLE WITH UPPER HALF BLACK
 <Multi_key><slash><underscore><numbersign><bar>                                            <space> : "◢" U25E2 # BLACK LOWER RIGHT TRIANGLE
 <Multi_key><slash><underscore><numbersign><bar>                                     <nobreakspace> : "◢" U25E2 # BLACK LOWER RIGHT TRIANGLE
 <Multi_key><underscore><slash><numbersign><bar>                                            <space> : "◢" U25E2 # BLACK LOWER RIGHT TRIANGLE
@@ -6024,10 +6124,8 @@
 <Multi_key><nobreakspace><G><backslash>                                             <nobreakspace> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><G>                                                                             <space> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><G>                                                                      <nobreakspace> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
-<Multi_key><o><plus><minus><greater>                                                       <space> : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
-<Multi_key><o><plus><minus><greater>                                                <nobreakspace> : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
-<Multi_key><O><plus><minus><greater>                                                       <space> : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
-<Multi_key><O><plus><minus><greater>                                                <nobreakspace> : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
+<Multi_key><o><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
+<Multi_key><O><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><less><minus><minus><minus>                                                     <space> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><less><minus><minus><minus>                                              <nobreakspace> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><minus><greater>                                                  <space> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
@@ -6592,28 +6690,21 @@
 <Multi_key><O><minus>                                                               <nobreakspace> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><bar>                                                                        <space> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                 <nobreakspace> : "⦶" U29B6 # CIRCLED VERTICAL BAR
-<Multi_key><O><bar><bar>                                                                   <space> : "⦷" U29B7 # CIRCLED PARALLEL
-<Multi_key><O><bar><bar>                                                            <nobreakspace> : "⦷" U29B7 # CIRCLED PARALLEL
+<Multi_key><O><bar><bar>                                                                           : "⦷" U29B7 # CIRCLED PARALLEL
 <Multi_key><space><O><backslash>                                                           <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><space><O><backslash>                                                    <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><nobreakspace><O><backslash>                                                    <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><nobreakspace><O><backslash>                                             <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
-<Multi_key><O><bar><underscore>                                                            <space> : "⦹" U29B9 # CIRCLED PERPENDICULAR
-<Multi_key><O><bar><underscore>                                                     <nobreakspace> : "⦹" U29B9 # CIRCLED PERPENDICULAR
-<Multi_key><O><minus><bar>                                                                 <space> : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
-<Multi_key><O><minus><bar>                                                          <nobreakspace> : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
-<Multi_key><O><X>                                                                          <space> : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
-<Multi_key><O><X>                                                                   <nobreakspace> : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
+<Multi_key><O><bar><underscore>                                                                    : "⦹" U29B9 # CIRCLED PERPENDICULAR
+<Multi_key><O><minus><bar>                                                                         : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
+<Multi_key><O><X>                                                                                  : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
 <Multi_key><space><O><percent>                                                             <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><space><O><percent>                                                      <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><nobreakspace><O><percent>                                                      <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><nobreakspace><O><percent>                                               <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><colon><minus>                                                               <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><colon><minus>                                                        <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><colon><slash>                                                               <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><colon><slash>                                                        <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><asciicircum><bar>                                                           <space> : "⦽" U29BD # UP ARROW THROUGH CIRCLE
-<Multi_key><O><asciicircum><bar>                                                    <nobreakspace> : "⦽" U29BD # UP ARROW THROUGH CIRCLE
+<Multi_key><O><colon><minus>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><O><asciicircum><bar>                                                                   : "⦽" U29BD # UP ARROW THROUGH CIRCLE
 <Multi_key><space><O><o>                                                                   <space> : "⦾" U29BE # CIRCLED WHITE BULLET
 <Multi_key><space><O><o>                                                            <nobreakspace> : "⦾" U29BE # CIRCLED WHITE BULLET
 <Multi_key><nobreakspace><O><o>                                                            <space> : "⦾" U29BE # CIRCLED WHITE BULLET
@@ -6622,10 +6713,8 @@
 <Multi_key><space><O><period>                                                       <nobreakspace> : "⦿" U29BF # CIRCLED BULLET
 <Multi_key><nobreakspace><O><period>                                                       <space> : "⦿" U29BF # CIRCLED BULLET
 <Multi_key><nobreakspace><O><period>                                                <nobreakspace> : "⦿" U29BF # CIRCLED BULLET
-<Multi_key><O><less>                                                                       <space> : "⧀" U29C0 # CIRCLED LESS-THAN
-<Multi_key><O><less>                                                                <nobreakspace> : "⧀" U29C0 # CIRCLED LESS-THAN
-<Multi_key><O><greater>                                                                    <space> : "⧁" U29C1 # CIRCLED GREATER-THAN
-<Multi_key><O><greater>                                                             <nobreakspace> : "⧁" U29C1 # CIRCLED GREATER-THAN
+<Multi_key><O><less>                                                                               : "⧀" U29C0 # CIRCLED LESS-THAN
+<Multi_key><O><greater>                                                                            : "⧁" U29C1 # CIRCLED GREATER-THAN
 <Multi_key><space><space><O><o>                                                            <space> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
 <Multi_key><space><space><O><o>                                                     <nobreakspace> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
 <Multi_key><nobreakspace><space><O><o>                                                     <space> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
@@ -6782,10 +6871,8 @@
 <Multi_key><less><numbersign><greater><bar><greater>                                <nobreakspace> : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
 <Multi_key><a><numbersign><v>                                                              <space> : "⧫" U29EB # BLACK LOZENGE
 <Multi_key><a><numbersign><v>                                                       <nobreakspace> : "⧫" U29EB # BLACK LOZENGE
-<Multi_key><O><bar><greater>                                                               <space> : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
-<Multi_key><O><bar><greater>                                                        <nobreakspace> : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
-<Multi_key><O><numbersign><bar><greater>                                                   <space> : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
-<Multi_key><O><numbersign><bar><greater>                                            <nobreakspace> : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
+<Multi_key><O><bar><greater>                                                                       : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
+<Multi_key><O><numbersign><bar><greater>                                                           : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
 <Multi_key><I><bracketleft><bracketright>                                                  <space> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
 <Multi_key><I><bracketleft><bracketright>                                           <nobreakspace> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
 <Multi_key><I><bracketright><bracketleft>                                                  <space> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
@@ -6894,8 +6981,7 @@
 #   https://www.unicode.org/charts/PDF/U2A00.pdf
 #   https://www.unicode.org/charts/nameslist/n_2A00.html
 #
-<Multi_key><O><period>                                                                     <space> : "⨀" U2A00 # N-ARY CIRCLED DOT OPERATOR
-<Multi_key><O><period>                                                              <nobreakspace> : "⨀" U2A00 # N-ARY CIRCLED DOT OPERATOR
+<Multi_key><O><period>                                                                             : "⨀" U2A00 # N-ARY CIRCLED DOT OPERATOR
 <Multi_key><O><plus>                                                                       <space> : "⨁" U2A01 # N-ARY CIRCLED PLUS OPERATOR
 <Multi_key><O><plus>                                                                <nobreakspace> : "⨁" U2A01 # N-ARY CIRCLED PLUS OPERATOR
 <Multi_key><O><x>                                                                          <space> : "⨂" U2A02 # N-ARY CIRCLED TIMES OPERATOR
@@ -7960,8 +8046,10 @@
 #   In #*# REVERSED                                                                                : "∖" U2216 # SET MINUS
 <Multi_key><s><e><t><m><i><n><u><s>                                                                : "∖" U2216 # SET MINUS
 #   In group 2 of }                                                                                : "∅" U2205 # EMPTY SET
-<Multi_key><e><m><p><t><y><s><e><t>                                                                : "∅" U2205 # EMPTY SET
-<Multi_key><e><n><s><v><i><d><e>                                                                   : "∅" U2205 # EMPTY SET French shortened name
+#   TeX "emptyset" truncated to the unambiguous minimal sequence.
+<Multi_key><e><m><p>                                                                               : "∅" U2205 # EMPTY SET
+#   "ens" short for "ensvide" for "ensemble vide"
+<Multi_key><e><n><s>                                                                               : "∅" U2205 # EMPTY SET French shortened name
 #   In group 1 of (                                                                                : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><d><i><a><m><e><t><e><r>                                                                : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><d><i><a><m><egrave><t><r><e>                                                           : "⌀" U2300 # DIAMETER SIGN French
