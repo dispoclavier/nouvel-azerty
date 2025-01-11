@@ -1,6 +1,6 @@
 # Un nouvel AZERTY pour Linux
 
-Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur). Sur l’[utilisation](#utilisation), il est vivement conseillé de se reporter à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/symboles-mathematiques.pdf) est pareillement disponible en ligne.
+Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur). Sur l’[utilisation](#utilisation), il est vivement conseillé de se reporter à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/) assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-symboles-math.pdf) est pareillement disponible en ligne.
 
 ## Alerte d’incompatibilité de Linux Mint
 
@@ -10,11 +10,11 @@ Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas.
 
 ## Activation sans droits d’administrateur
 
-Télécharger le dossier `Nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+Télécharger le dossier `Un-nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
 ### Script d’activation : mode d’emploi
 
-Le script d’activation « activer.sh » se trouve sur GitHub ([activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
+Le script d’activation « activer.sh » se trouve sur GitHub ([activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Un-nouvel-AZERTY-Linux-`version`.zip`.
 
 Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./activer.sh` après avoir ouvert le dossier dans un terminal.
 
@@ -42,11 +42,11 @@ Pour le navigateur de fichiers, dix logiciels sont pris en charge nativement, e
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « `Nouvel-AZERTY-Linux-`version`.zip` » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh). On peut aussi installer chaque fichier [manuellement](#installation-manuelle).
+Télécharger le dossier « `Un-nouvel-AZERTY-Linux-`version`.zip` » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh). On peut aussi installer chaque fichier [manuellement](#installation-manuelle).
 
 ### Script d’installation : mode d’emploi
 
-Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Nouvel-AZERTY-Linux-`version`.zip`.
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Un-nouvel-AZERTY-Linux-`version`.zip`.
 
 Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./installer.sh` après avoir ouvert le dossier dans un terminal.
 
@@ -80,7 +80,7 @@ Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller
 
 Compte tenu de l’[alerte](#alerte-de-d%C3%A9pannage) plus haut, et pour toute éventualité, la procédure d’installation manuelle est la suivante :
 
-1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
+1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Un-nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
 2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Copier ce fichier vers `/usr/share/X11/xkb/types/dispotypes`.
 3. Dans `/usr/share/X11/xkb/types/complete`, ajouter `include "dispotypes"` sur une nouvelle ligne.
 4. [dispocla_perso.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla_perso.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/dispocla_perso`.
@@ -452,4 +452,4 @@ L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insé
 
 ### Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `linux-chromeos/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Nouvel-AZERTY-Linux-`version`.zip` ».
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `linux-chromeos/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi.md` qu’il est inclus dans le dossier « `Un-nouvel-AZERTY-Linux-`version`.zip` ».
