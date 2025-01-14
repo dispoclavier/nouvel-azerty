@@ -1410,7 +1410,10 @@
 <Multi_key><P><T><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #
 #   Recycling symbol emoji
-#   - filled ("b" for black conflicts with "▮" U25AE)
+#   - green (not black, also because "b" would conflict with "▮" U25AE)
+<Multi_key><r><e><c><g>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><G>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+#   - filled
 <Multi_key><r><e><c><f>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <Multi_key><R><E><C><F>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #   - iconic
