@@ -8,7 +8,9 @@ Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre
 
 ## 4.17.0 (projet)
 
-Simoplification des nombres cerclés et de nombreuses séquences de composition.
+Simplification des nombres cerclés et de nombreuses séquences de composition.
+
+Amélioration de la prise en charge des symboles de recyclage.
 
 * Composition :
 	* Déboguer "ℊ" U+210A, "ℋ" U+210B, "ℐ" U+2110, "ℒ" U+2112, "ℓ" U+2113, "℘" U+2118, "ℛ" U+211B, "ℬ" U+212C, "ℯ" U+212F, "ℰ" U+2130, "ℱ" U+2131, "ℳ" U+2133, "ℴ" U+2134. compose-1.yml [74fec91](https://github.com/dispoclavier/nouvel-azerty/commit/74fec9174c2db2b021320e5cc0cae29e254bd8f7)
