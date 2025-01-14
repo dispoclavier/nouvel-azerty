@@ -6949,9 +6949,11 @@
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# DOT_ABOVE
 #   See # # D04 backslash
+#   See # # Recycling symbols
 #
-#   For these symbols, the R mnemonic is not possible, since the REVERSED dead
-#   key is used for mathematical backslash shaped symbols.
+#   For these symbols, the R mnemonic is limited to the dead key name, since
+#   the R key D04 is used for the REVERSED dead key supporting mathematical
+#   backslash shaped symbols.
 #   See #*# STROKE,
 #
 #   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
