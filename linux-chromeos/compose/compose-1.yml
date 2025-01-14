@@ -1183,7 +1183,7 @@
 #   See # # Design of math sequences
 #
 #   Recycling symbols are grouped separately.
-#   See # # Recycling symbols by initialisms
+#   See # # Recycling symbols
 #
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
 <Multi_key><s><exclam>                                                                             : "§" U00A7 # SECTION SIGN
@@ -1328,43 +1328,103 @@
 <Multi_key><z><Z>                                                                                  : "℥" U2125 # OUNCE SIGN
 #
 #
-# # Recycling symbols by initialisms
+# # Recycling symbols
 #
-#   These plastic recycling symbols are also supported in *dead_retroflexhook.
+#   This input method is based on the idea that very widespread and well-known
+#   plastic type initialisms should be supported for mnemonics, as well as the
+#   initialism "PT" for "plastic type" followed by the conventional number. The
+#   remaining numbers are also supported for completeness, and put to good use
+#   by supporting the non-numeric symbols "♲" U2672, "♻" U267B, and "♺" U267A
+#   associated with digit 8 after 7, rather than 0 that is used for "♲" U2672,
+#   consistently with the way the same recycling symbols are supported in the
+#   retroflex hook dead key (with alphabetic mnemonic based on R).
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# RETROFLEX_HOOK
+#
+#   Semi-numeric sequences based on the "plastic type" initialism are
+#   also supported.
 #
 #   Polyethylene terephthalate
 <Multi_key><p><e><t>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 <Multi_key><P><E><T>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+<Multi_key><p><t><1>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+<Multi_key><P><T><1>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 #   High density polyethylene
 <Multi_key><h><d><p><e>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><H><D><P><E>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><p><e><h><d>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><P><E><H><D>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><p><t><2>                                                                               : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><P><T><2>                                                                               : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 #   Polyvinyl chloride
 <Multi_key><p><v><c>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
 <Multi_key><P><V><C>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+<Multi_key><p><t><3>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+<Multi_key><P><T><3>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
 #   Low density polyethylene
 <Multi_key><l><d><p><e>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><L><D><P><E>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><p><e><l><d>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><P><E><L><D>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><p><t><4>                                                                               : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><P><T><4>                                                                               : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 #   Polypropylene plastic; 3 "p"s due to conflicts with "ℙ" U2119, "ℼ" U213C
 <Multi_key><p><p><p>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
 <Multi_key><P><P><P>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+<Multi_key><p><t><5>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+<Multi_key><P><T><5>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
 #   Polystyrene
 <Multi_key><p><s>                                                                                  : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
 <Multi_key><P><S>                                                                                  : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+<Multi_key><p><t><6>                                                                               : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+<Multi_key><P><T><6>                                                                               : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
 #   Other
 <Multi_key><o><t><h>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 <Multi_key><O><T><H>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 #   Autre, with Spanish spelling to avoid conflicts with "Ꜷ" UA736, "ꜷ" UA737
 <Multi_key><o><t><r>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 <Multi_key><O><T><R>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+<Multi_key><p><t><7>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+<Multi_key><P><T><7>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 #   Generic materials
 <Multi_key><g><e><n>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
 <Multi_key><G><E><N>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
+<Multi_key><p><t><8>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
+<Multi_key><P><T><8>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
+#
+#   Universal recycling symbol
+#   - ajouré
+<Multi_key><r><e><c><a>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><A>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+#   - empty
+<Multi_key><r><e><c><e>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><E>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+#   - outline
+<Multi_key><r><e><c><o>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><O>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+#   - universal
+<Multi_key><r><e><c><u>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><U>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+#   - "plastic type" for completeness
+<Multi_key><p><t><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><P><T><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+#
+#   Recycling symbol emoji
+#   - black
+<Multi_key><r><e><c><b>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><B>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+#   - filled
+<Multi_key><r><e><c><f>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><F>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+#   - iconic
+<Multi_key><r><e><c><i>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><I>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+#   - plein
+<Multi_key><r><e><c><p>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><P>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+#   - "plastic type" for completeness
+<Multi_key><p><t><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><P><T><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #
 #
 #^# Circled
