@@ -444,7 +444,8 @@
 # # D04 backslash
 #
 #   Recycling symbols are more extensively supported in *dead_retroflexhook and
-#   paper symbols in dead_abovedot.
+#   by Multi_key, and paper symbols in dead_abovedot.
+#   See # # Recycling symbols
 #   See #*# RETROFLEX_HOOK
 #   See #*# DOT_ABOVE
 #
