@@ -1394,34 +1394,31 @@
 #
 #   Universal recycling symbol
 #   - ajouré
-<Multi_key><r><e><c><a>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
-<Multi_key><R><E><C><A>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><r><e><c><a>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><A>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #   - empty
-<Multi_key><r><e><c><e>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
-<Multi_key><R><E><C><E>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><r><e><c><e>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><E>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #   - outline
-<Multi_key><r><e><c><o>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
-<Multi_key><R><E><C><O>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><r><e><c><o>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><O>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #   - universal
-<Multi_key><r><e><c><u>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
-<Multi_key><R><E><C><U>                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><r><e><c><u>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><R><E><C><U>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #   - "plastic type" for completeness
 <Multi_key><p><t><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 <Multi_key><P><T><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #
 #   Recycling symbol emoji
-#   - black
-<Multi_key><r><e><c><b>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
-<Multi_key><R><E><C><B>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
-#   - filled
-<Multi_key><r><e><c><f>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
-<Multi_key><R><E><C><F>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+#   - filled ("b" for black conflicts with "▮" U25AE)
+<Multi_key><r><e><c><f>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><F>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #   - iconic
-<Multi_key><r><e><c><i>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
-<Multi_key><R><E><C><I>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><r><e><c><i>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><I>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #   - plein
-<Multi_key><r><e><c><p>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
-<Multi_key><R><E><C><P>                                                                        <9> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><r><e><c><p>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><R><E><C><P>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #   - "plastic type" for completeness
 <Multi_key><p><t><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <Multi_key><P><T><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
