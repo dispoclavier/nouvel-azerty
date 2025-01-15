@@ -6954,7 +6954,8 @@
 #   For these symbols, the R mnemonic is limited to the dead key name, since
 #   the R key D04 is used for the REVERSED dead key supporting mathematical
 #   backslash shaped symbols.
-#   See #*# STROKE,
+#   See #*# REVERSED
+#   See #*# STROKE
 #
 #   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
 #   SHELF, by lack of anything more to the point.
