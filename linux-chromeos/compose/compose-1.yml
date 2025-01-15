@@ -1049,11 +1049,11 @@
 #         }
 #       }
 #
-#   After this, the colons initially in column 100 may be realigned, using e.g.
-#   "matthewthorning.align-vertically", prior to deleting a chunk of those last
-#   whitespaces before the colon, for usability on less-than-ultrawide monitors
-#   when reviewing the reformatted list for redundancies to be redacted for the
-#   sake of streamlining the user experience.
+#   After this, the colons (initially in column 100) should be realigned using
+#   "matthewthorning.align-vertically" after deleting the trailing spaces, for
+#   usability on less-than-ultrawide monitors, while reviewing the reformatted
+#   list for redundancies to be redacted for the sake of streamlining the user
+#   experience.
 #   See #^# Western Zodiacal Signs
 #   See # # Design of math sequences
 #
