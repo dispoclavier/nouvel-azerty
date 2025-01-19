@@ -293,26 +293,47 @@
 #   instead.
 #   See # # Dead characters for portability
 #
-#   The sequence in French quotes is the multikey equivalent.
+#   The sequences in French quotes are the multikey equivalents.
 #   See # # Notes about syntax
 #
 #   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). « ¦# »
+#                   See #*# GROUP_1
 #   <UEFD1> : "^"   *dead_superscript, used in phonetics and as abbreviation
 #                   indicators. « ¦^ »
+#                   See #*# SUPERSCRIPT
 #                   As abbreviation indicators, superscripts need to be on live
 #                   keys.
-#                   dead_circumflex is not « ¦^ » but « ¦< » in new-school Compose.
-#   <UEFD2> : "_"   *dead_subscript is required for phonetics as it traditionally
-#                   also includes small caps.
-#   <UEFD3> : "ẻ"   *dead_abovehook, required for disambiguation with dead_hook. « ¦] »
-#   <UEFD4> : "ɖ"   *dead_retroflexhook, required for disambiguation, consistent with the
-#                   new-school Compose scheme: benefits from brace symmetry. « ¦} »
-#   <UEFD5> : "ᴚ"   *dead_turned, technically easiest transform. ~70 instances. « ¦% »
-#                   double-press: inverted (20 instances) or sideways (8 letters) in Latin;
+#                   See dispocla.cpp ## Superscript letters
+#                   New-school dead_circumflex is « ¦< », not « ¦^ ».
+#                   See #*# CIRCUMFLEX
+#   <UEFD2> : "_"   *dead_subscript is required for phonetics, as traditionally
+#                   it also includes small caps.
+#                   See #*# SUBSCRIPT
+#   <UEFD3> : "ẻ"   *dead_abovehook, required because the hook above intersects
+#                   with dead_hook. « ¦] »
+#                   See #*# HOOK_ABOVE
+#                   See #*# HOOK
+#   <UEFD4> : "ɖ"   *dead_retroflexhook, required to increase diversity and for
+#                   consistency with the new-school Compose scheme benefitting
+#                   from brace symmetry. « ¦} »
+#                   See #*# RETROFLEX_HOOK
+#                   See #*# HOOK
+#   <UEFD5> : "ᴚ"   *dead_turned, technically easiest transform. ~70 instances.
+#                   « ¦% »
+#                   See #*# TURNED
+#                   double-press: inverted (20) or sideways (8) in Latin;
 #                   inverted and sideways have an empty intersection. « ¦% »
-#   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform. ~50 (Latin). « ¦\ »
-#   <UEFD7> : "⚐"   *dead_flag — The Regional Indicator Symbols dead key. « ¦= »
-#   <UEFD8> : "ħ"   *dead_bar for barred letters, i.e. with a horizontal stroke. « ¦- »
+#                   See #^# INVERTED
+#   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform.
+#                   ~50 instances in Latin. « ¦\ »
+#                   See #*# REVERSED
+#   <UEFD7> : "⚐"   *dead_flag is the Regional Indicator Symbols dead key, with
+#                   additional "equal" and "double" semantics. « ¦= »
+#                   See #*# FLAG
+#   <UEFD8> : "ħ"   *dead_bar for barred letters, i.e. with a horizontal stroke
+#                   as opposed to the actual diagonal or oblique stroke. « ¦- »
+#                   See #*# BAR
+#                   See #*# STROKE
 #
 #
 # # Order of dead key lists
@@ -798,6 +819,10 @@
 #   dead_grave for consistency.
 #   See #*# GRAVE
 #
+#   This list also provides alternative input methods with lenient group
+#   selection.
+#   See # # Lenient group selection
+#
 <dead_tilde><dead_grave>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                                 <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
@@ -1092,60 +1117,80 @@
 <Multi_key><grave><asciitilde>                                                                 <u> : "ũ̀" # U0169 U0300 LATIN SMALL LETTER U WITH TILDE AND GRAVE
 <dead_grave>                                                                     <UEFD0><UEFD0><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <Multi_key><grave>                                                     <numbersign><numbersign><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
+<dead_grave>                                                                            <UEFD0><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
+<Multi_key><grave>                                                                 <numbersign><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <dead_hook><dead_grave>                                                                        <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <Multi_key><braceleft><grave>                                                                  <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <dead_grave><dead_hook>                                                                        <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <Multi_key><grave><braceleft>                                                                  <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <dead_grave>                                                                     <UEFD0><UEFD0><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <Multi_key><grave>                                                     <numbersign><numbersign><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
+<dead_grave>                                                                            <UEFD0><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
+<Multi_key><grave>                                                                 <numbersign><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <dead_hook><dead_grave>                                                                        <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <Multi_key><braceleft><grave>                                                                  <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <dead_grave><dead_hook>                                                                        <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <Multi_key><grave><braceleft>                                                                  <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <dead_acute>                                                                     <UEFD0><UEFD0><V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
 <Multi_key><apostrophe>                                                <numbersign><numbersign><V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
+<dead_acute>                                                                            <UEFD0><V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
 <dead_hook><dead_acute>                                                                        <V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
 <Multi_key><braceleft><apostrophe>                                                             <V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
 <dead_acute><dead_hook>                                                                        <V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
 <Multi_key><apostrophe><braceleft>                                                             <V> : "Ʋ́" # U01B2 U0301 LATIN CAPITAL LETTER V WITH HOOK AND ACUTE
 <dead_acute>                                                                     <UEFD0><UEFD0><v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
 <Multi_key><apostrophe>                                                <numbersign><numbersign><v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
+<dead_acute>                                                                            <UEFD0><v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
 <dead_hook><dead_acute>                                                                        <v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
 <Multi_key><braceleft><apostrophe>                                                             <v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
 <dead_acute><dead_hook>                                                                        <v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
 <Multi_key><apostrophe><braceleft>                                                             <v> : "ʋ́" # U028B U0301 LATIN SMALL LETTER V WITH HOOK AND ACUTE
 <dead_circumflex>                                                                <UEFD0><UEFD0><V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
 <Multi_key><less>                                                      <numbersign><numbersign><V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
+<dead_circumflex>                                                                       <UEFD0><V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
+<Multi_key><less>                                                                  <numbersign><V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
 <dead_hook><dead_circumflex>                                                                   <V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
 <Multi_key><braceleft><less>                                                                   <V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
 <dead_circumflex><dead_hook>                                                                   <V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
 <Multi_key><less><braceleft>                                                                   <V> : "Ʋ̂" # U01B2 U0302 LATIN CAPITAL LETTER V WITH HOOK AND CIRCUMFLEX
 <dead_circumflex>                                                                <UEFD0><UEFD0><v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
 <Multi_key><less>                                                      <numbersign><numbersign><v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
+<dead_circumflex>                                                                       <UEFD0><v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
+<Multi_key><less>                                                                  <numbersign><v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
 <dead_hook><dead_circumflex>                                                                   <v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
 <Multi_key><braceleft><less>                                                                   <v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
 <dead_circumflex><dead_hook>                                                                   <v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
 <Multi_key><less><braceleft>                                                                   <v> : "ʋ̂" # U028B U0302 LATIN SMALL LETTER V WITH HOOK AND CIRCUMFLEX
 <dead_macron>                                                                    <UEFD0><UEFD0><V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
 <Multi_key><bar>                                                       <numbersign><numbersign><V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
+<dead_macron>                                                                           <UEFD0><V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
+<Multi_key><bar>                                                                   <numbersign><V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
 <dead_hook><dead_macron>                                                                       <V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
 <Multi_key><braceleft><bar>                                                                    <V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
 <dead_macron><dead_hook>                                                                       <V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
 <Multi_key><bar><braceleft>                                                                    <V> : "Ʋ̄" # U01B2 U0304 LATIN CAPITAL LETTER V WITH HOOK AND MACRON
 <dead_macron>                                                                    <UEFD0><UEFD0><v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
 <Multi_key><bar>                                                       <numbersign><numbersign><v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
+<dead_macron>                                                                           <UEFD0><v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
+<Multi_key><bar>                                                                   <numbersign><v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
 <dead_hook><dead_macron>                                                                       <v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
 <Multi_key><braceleft><bar>                                                                    <v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
 <dead_macron><dead_hook>                                                                       <v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
 <Multi_key><bar><braceleft>                                                                    <v> : "ʋ̄" # U028B U0304 LATIN SMALL LETTER V WITH HOOK AND MACRON
 <dead_caron>                                                                     <UEFD0><UEFD0><V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
 <Multi_key><greater>                                                   <numbersign><numbersign><V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
+<dead_caron>                                                                            <UEFD0><V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
+<Multi_key><greater>                                                               <numbersign><V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
 <dead_hook><dead_caron>                                                                        <V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
 <Multi_key><braceleft><greater>                                                                <V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
 <dead_caron><dead_hook>                                                                        <V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
 <Multi_key><greater><braceleft>                                                                <V> : "Ʋ̌" # U01B2 U030C LATIN CAPITAL LETTER V WITH HOOK AND CARON
 <dead_caron>                                                                     <UEFD0><UEFD0><v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
 <Multi_key><greater>                                                   <numbersign><numbersign><v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
+<dead_caron>                                                                            <UEFD0><v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
+<Multi_key><greater>                                                               <numbersign><v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
 <dead_hook><dead_caron>                                                                        <v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
 <Multi_key><braceleft><greater>                                                                <v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
 <dead_caron><dead_hook>                                                                        <v> : "ʋ̌" # U028B U030C LATIN SMALL LETTER V WITH HOOK AND CARON
@@ -2237,10 +2282,22 @@
 # # SUPERSCRIPT&HOOK
 #   Dchar: "ʱ" U02B1
 #
+#   Empty base letters are filled in with duplicates of superscript with curl,
+#   for a streamlined user experience by cutting off one press of dead_hook.
+#   See # # SUPERSCRIPT&CURL
+#
+#   For this purpose, the dotless j with stroke "𐞘" U10798 is supported as a
+#   turned f, so as to make room for a duplicate of j with crossed-tail
+#   "ᶨ" U1DA8.
+#
 <UEFD1><dead_hook>                                                                             <b> : "𐞅" U10785 # MODIFIER LETTER SMALL B WITH HOOK
 <Multi_key><asciicircum><braceleft>                                                            <b> : "𐞅" U10785 # MODIFIER LETTER SMALL B WITH HOOK
 <dead_hook><UEFD1>                                                                             <b> : "𐞅" U10785 # MODIFIER LETTER SMALL B WITH HOOK
 <Multi_key><braceleft><asciicircum>                                                            <b> : "𐞅" U10785 # MODIFIER LETTER SMALL B WITH HOOK
+<UEFD1><dead_hook>                                                                             <c> : "ᶝ" U1D9D # MODIFIER LETTER SMALL C WITH CURL
+<Multi_key><asciicircum><braceleft>                                                            <c> : "ᶝ" U1D9D # MODIFIER LETTER SMALL C WITH CURL
+<dead_hook><UEFD1>                                                                             <c> : "ᶝ" U1D9D # MODIFIER LETTER SMALL C WITH CURL
+<Multi_key><braceleft><asciicircum>                                                            <c> : "ᶝ" U1D9D # MODIFIER LETTER SMALL C WITH CURL
 <UEFD1><dead_hook>                                                                             <d> : "𐞌" U1078C # MODIFIER LETTER SMALL D WITH HOOK
 <Multi_key><asciicircum><braceleft>                                                            <d> : "𐞌" U1078C # MODIFIER LETTER SMALL D WITH HOOK
 <dead_hook><UEFD1>                                                                             <d> : "𐞌" U1078C # MODIFIER LETTER SMALL D WITH HOOK
@@ -2261,10 +2318,10 @@
 <Multi_key><asciicircum><braceleft>                                                            <h> : "ʱ" U02B1 # MODIFIER LETTER SMALL H WITH HOOK
 <dead_hook><UEFD1>                                                                             <h> : "ʱ" U02B1 # MODIFIER LETTER SMALL H WITH HOOK
 <Multi_key><braceleft><asciicircum>                                                            <h> : "ʱ" U02B1 # MODIFIER LETTER SMALL H WITH HOOK
-<UEFD1><dead_hook>                                                                             <j> : "𐞘" U10798 # MODIFIER LETTER SMALL DOTLESS J WITH STROKE AND HOOK
-<Multi_key><asciicircum><braceleft>                                                            <j> : "𐞘" U10798 # MODIFIER LETTER SMALL DOTLESS J WITH STROKE AND HOOK
-<dead_hook><UEFD1>                                                                             <j> : "𐞘" U10798 # MODIFIER LETTER SMALL DOTLESS J WITH STROKE AND HOOK
-<Multi_key><braceleft><asciicircum>                                                            <j> : "𐞘" U10798 # MODIFIER LETTER SMALL DOTLESS J WITH STROKE AND HOOK
+<UEFD1><dead_hook>                                                                             <j> : "ᶨ" U1DA8 # MODIFIER LETTER SMALL J WITH CROSSED-TAIL
+<Multi_key><asciicircum><braceleft>                                                            <j> : "ᶨ" U1DA8 # MODIFIER LETTER SMALL J WITH CROSSED-TAIL
+<dead_hook><UEFD1>                                                                             <j> : "ᶨ" U1DA8 # MODIFIER LETTER SMALL J WITH CROSSED-TAIL
+<Multi_key><braceleft><asciicircum>                                                            <j> : "ᶨ" U1DA8 # MODIFIER LETTER SMALL J WITH CROSSED-TAIL
 <UEFD1><dead_hook>                                                                             <m> : "ᶬ" U1DAC # MODIFIER LETTER SMALL M WITH HOOK
 <Multi_key><asciicircum><braceleft>                                                            <m> : "ᶬ" U1DAC # MODIFIER LETTER SMALL M WITH HOOK
 <dead_hook><UEFD1>                                                                             <m> : "ᶬ" U1DAC # MODIFIER LETTER SMALL M WITH HOOK
@@ -2281,6 +2338,10 @@
 <Multi_key><asciicircum><braceleft>                                                            <s> : "ᶳ" U1DB3 # MODIFIER LETTER SMALL S WITH HOOK
 <dead_hook><UEFD1>                                                                             <s> : "ᶳ" U1DB3 # MODIFIER LETTER SMALL S WITH HOOK
 <Multi_key><braceleft><asciicircum>                                                            <s> : "ᶳ" U1DB3 # MODIFIER LETTER SMALL S WITH HOOK
+<UEFD1><dead_hook>                                                                             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><braceleft>                                                            <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<dead_hook><UEFD1>                                                                             <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><braceleft><asciicircum>                                                            <t> : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <UEFD1><dead_hook>                                                                             <u> : "ꭟ" UAB5F # MODIFIER LETTER SMALL U WITH LEFT HOOK
 <Multi_key><asciicircum><braceleft>                                                            <u> : "ꭟ" UAB5F # MODIFIER LETTER SMALL U WITH LEFT HOOK
 <dead_hook><UEFD1>                                                                             <u> : "ꭟ" UAB5F # MODIFIER LETTER SMALL U WITH LEFT HOOK
@@ -2289,6 +2350,10 @@
 <Multi_key><asciicircum><braceleft>                                                            <v> : "ᶹ" U1DB9 # MODIFIER LETTER SMALL V WITH HOOK
 <dead_hook><UEFD1>                                                                             <v> : "ᶹ" U1DB9 # MODIFIER LETTER SMALL V WITH HOOK
 <Multi_key><braceleft><asciicircum>                                                            <v> : "ᶹ" U1DB9 # MODIFIER LETTER SMALL V WITH HOOK
+<UEFD1><dead_hook>                                                                             <z> : "ᶽ" U1DBD # MODIFIER LETTER SMALL Z WITH CURL
+<Multi_key><asciicircum><braceleft>                                                            <z> : "ᶽ" U1DBD # MODIFIER LETTER SMALL Z WITH CURL
+<dead_hook><UEFD1>                                                                             <z> : "ᶽ" U1DBD # MODIFIER LETTER SMALL Z WITH CURL
+<Multi_key><braceleft><asciicircum>                                                            <z> : "ᶽ" U1DBD # MODIFIER LETTER SMALL Z WITH CURL
 #
 #
 # # SUPERSCRIPT&HOOK&GROUP_1
@@ -2320,6 +2385,10 @@
 # # SUPERSCRIPT&CURL
 #   Lenient group selection
 #   Dchar: 
+#
+#   Mostly, duplicates are on empty base letters of superscript with hook,
+#   for a streamlined user experience by cutting off one press of dead_hook.
+#   See # # SUPERSCRIPT&HOOK
 #
 <UEFD1><dead_hook><dead_hook>                                                                  <c> : "ᶝ" U1D9D # MODIFIER LETTER SMALL C WITH CURL
 <Multi_key><asciicircum><braceleft><braceleft>                                                 <c> : "ᶝ" U1D9D # MODIFIER LETTER SMALL C WITH CURL
@@ -2978,6 +3047,29 @@
 #   This is required for the many letter-shaped diacritics that can be placed
 #   above Latin letters.
 #
+#   Since all combining capital letters above are small caps, the capital slots
+#   are used for these, and no extra virtual dead key is required.
+#
+#   The combining letter above with cedilla "ᷗ" U1DD7 is supported by its live
+#   key on AZERTY, but for consistency, a virtual dead key is also provided.
+#   See # # COMBINING_ABOVE&CEDILLA
+#
+#   As the three combining letters above with diaeresis "ᷲ" U1DF2, "ᷳ" U1DF3,
+#   "ᷴ" U1DF4 do not intersect with small caps, the capital slots are used for
+#   these too, for convenience, but for consistency, a combining above with
+#   diaeresis virtual dead key is also provided. Additionally, live keys with
+#   diaeresis are also supported.
+#   See # # COMBINING_ABOVE&DIAERESIS
+#
+#   Some other combining characters above are supported likewise using empty
+#   capital slots and base letters with a mnemonic shape:
+#
+#       S   "᷑" U1DD1 COMBINING UR ABOVE
+#       T   "᷵" U1DF5 COMBINING UP TACK ABOVE
+#       V   "᷃" U1DC3 COMBINING SUSPENSION MARK
+#       X   "̽" U033D COMBINING X ABOVE
+#       Z   "͛" U035B COMBINING ZIGZAG ABOVE
+#
 #   The diacritic and its spacing clone try to replicate the scheme used for
 #   combining below, less fortunately.
 #   See #^# COMBINING_BELOW
@@ -3094,6 +3186,10 @@
 <Multi_key><asciicircum><asciicircum>                                                          <z> : "ᷦ" U1DE6 # COMBINING LATIN SMALL LETTER Z
 <UEFD1><UEFD1>                                                                          <ccedilla> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 <Multi_key><asciicircum><asciicircum>                                                   <ccedilla> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<UEFD1><UEFD1>                                                                        <adiaeresis> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key><asciicircum><asciicircum>                                                 <adiaeresis> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<UEFD1><UEFD1>                                                                        <odiaeresis> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key><asciicircum><asciicircum>                                                 <odiaeresis> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <UEFD1><UEFD1>                                                                        <udiaeresis> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum>                                                 <udiaeresis> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <UEFD1><UEFD1>                                                                            <ugrave> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
@@ -3166,6 +3262,32 @@
 <Multi_key><asciicircum><asciicircum><numbersign><2>                                           <t> : "ᫎ" U1ACE # COMBINING LATIN SMALL LETTER INSULAR T
 <UEFD1><UEFD1><UEFD0><KP_2>                                                                    <t> : "ᫎ" U1ACE # COMBINING LATIN SMALL LETTER INSULAR T
 <Multi_key><asciicircum><asciicircum><numbersign><KP_2>                                        <t> : "ᫎ" U1ACE # COMBINING LATIN SMALL LETTER INSULAR T
+#
+#
+# # COMBINING_ABOVE&CEDILLA
+#   Dchar: 
+#
+<UEFD1><UEFD1><dead_cedilla>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><asciicircum><asciicircum><comma>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<dead_cedilla><UEFD1><UEFD1>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><comma><asciicircum><asciicircum>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+#
+#
+# # COMBINING_ABOVE&DIAERESIS
+#   Dchar: 
+#
+<UEFD1><UEFD1><dead_diaeresis>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key><asciicircum><asciicircum><colon>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<dead_diaeresis><UEFD1><UEFD1>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key><colon><asciicircum><asciicircum>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<UEFD1><UEFD1><dead_diaeresis>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key><asciicircum><asciicircum><colon>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<dead_diaeresis><UEFD1><UEFD1>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key><colon><asciicircum><asciicircum>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<UEFD1><UEFD1><dead_diaeresis>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<Multi_key><asciicircum><asciicircum><colon>                                                   <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<dead_diaeresis><UEFD1><UEFD1>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<Multi_key><colon><asciicircum><asciicircum>                                                   <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 #
 #
 #*# TURNED
@@ -4713,7 +4835,7 @@
 #
 #   Other parts of this dead key are dedicated to combining diacritics, with
 #   the ampersand carrying the "combining" semantics.
-#   See # # Combining Diacritical Marks for Symbols in block U20D0 used in mathematics
+#   See # # Combining Diacritical Marks for Symbols used in mathematics
 #
 #   While the mnemonics based on ASCII symbols are obvious, the mnemonics based
 #   on letters use a new-school French AZERTY and its ASCII symbol map on the
@@ -6472,10 +6594,15 @@
 <dead_acute><dead_grave>                                                                   <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
 <Multi_key><apostrophe><grave>                                                             <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
 #
-<dead_acute><dead_grave><dead_acute>                                                       <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
-<Multi_key><apostrophe><grave><apostrophe>                                                 <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
-<dead_acute><dead_grave><dead_acute>                                                       <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
-<Multi_key><apostrophe><grave><apostrophe>                                                 <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
+#   In the triple dead key press scheme <dead_acute><dead_grave><dead_acute>,
+#   the base space characters are skipped for efficiency, as there is nothing
+#   else to support.
+#   See #^# Western Zodiacal Signs
+#   See # # Design of math sequences
+#   See at the end of # # Notes for maintenance
+#
+<dead_acute><dead_grave><dead_acute>                                                               : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
+<Multi_key><apostrophe><grave><apostrophe>                                                         : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 #
 #
 #*# HOOK
