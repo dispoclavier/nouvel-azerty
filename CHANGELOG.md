@@ -1,12 +1,16 @@
 # Journal des modifications
 
-Le deux-barrettes ou la barre brisée, barre discontinue, barre déjointe, barre à trou "¦" U+00A6 représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
+Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
+
+## 4.19.0 (projet)
+
+* Implémentation : Re-porter les touches mortes sous Windows.
 
 ## 4.18.0 (projet)
 
-* Implémentation : Mettre à jour les touches mortes pour Windows.
+* Implémentation : Mettre à jour les touches mortes sous Linux.
 
-## 4.17.0 (projet)
+## 4.17.0 (2025-01-19)
 
 Simplification des nombres cerclés et de nombreuses séquences de composition.
 
