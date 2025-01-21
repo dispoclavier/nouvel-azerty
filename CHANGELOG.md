@@ -9,6 +9,10 @@ Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe
 ## 4.18.0 (projet)
 
 * Implémentation : Mettre à jour les touches mortes sous Linux.
+* Composition :
+	* Simplifier ou corriger les séquences de "𐞉" U+10789, "𐞫" U+107AB. compose-1.yml [f247651](https://github.com/dispoclavier/nouvel-azerty/commit/f24765119811302e5f854adc3300ba4488ebad1f)
+* Documentation :
+	* Améliorer le tri. compose-1.yml [f247651](https://github.com/dispoclavier/nouvel-azerty/commit/f24765119811302e5f854adc3300ba4488ebad1f)
 
 ## 4.17.0 (2025-01-19)
 
