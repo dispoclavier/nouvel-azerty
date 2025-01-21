@@ -1818,10 +1818,13 @@
 #
 # # Small apostrophe n
 #
-#   Deprecated small apostrophe n requires a curly apostrophe live key.
+#   Deprecated Latin small letter n preceded by apostrophe requires a curly
+#   apostrophe live key. The equivalent with ASCII apostrophe would conflict
+#   with "ń" U0144 LATIN SMALL LETTER N WITH ACUTE.
 #
-#   This character is deprecated and its use is strongly discouraged.
-#   It was encoded as a legacy compatibility character for ISO/IEC 6937.
+#   Unicode states that this character is deprecated and its use is strongly
+#   discouraged. It was encoded as a legacy compatibility character for
+#   ISO/IEC 6937.
 #   https://www.unicode.org/Public/15.0.0/ucd/NamesList.txt:1130
 #
 #   Uppercase is "ʼN" U02BC MODIFIER LETTER APOSTROPHE, U004E LATIN CAPITAL
@@ -4153,16 +4156,12 @@
 <Multi_key><ampersand><o><less>                                                                    : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><percent>                                                        : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><backslash>                                                      : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
-<Multi_key><ampersand><3><period>                                                          <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
-<Multi_key><ampersand><3><period>                                                   <nobreakspace> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
-<Multi_key><ampersand><KP_3><KP_Decimal>                                                   <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
-<Multi_key><ampersand><KP_3><KP_Decimal>                                            <nobreakspace> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
+<Multi_key><ampersand><3>                                                                          : "⃛" U20DB # COMBINING THREE DOTS ABOVE
+<Multi_key><ampersand><KP_3>                                                                       : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><period><period><period>                                             <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><period><period><period>                                      <nobreakspace> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
-<Multi_key><ampersand><4><period>                                                          <space> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
-<Multi_key><ampersand><4><period>                                                   <nobreakspace> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
-<Multi_key><ampersand><KP_4><KP_Decimal>                                                   <space> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
-<Multi_key><ampersand><KP_4><KP_Decimal>                                            <nobreakspace> : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
+<Multi_key><ampersand><4>                                                                          : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
+<Multi_key><ampersand><KP_4>                                                                       : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><period><period><period><period>                                             : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><less><greater>                                                              : "⃡" U20E1 # COMBINING LEFT RIGHT ARROW ABOVE
 <Multi_key><ampersand><backslash>                                                                  : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
