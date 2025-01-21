@@ -1,5 +1,7 @@
 # Journal des modifications
 
+Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d’avoir [installé des polices complètes](https://support.microsoft.com/fr-fr/office/ajouter-une-police-b7c5f17c-4426-4b53-967f-455339c564c1#:~:text=Toutes%20les%20polices%20sont%20stock%C3%A9es,Windows%20les%20installeront%20automatiquement.) : BabelStoneHan, Code2000, DejaVuSans, Kelvinch, NishikiTeki.
+
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
 ## 4.20.0 (projet)
