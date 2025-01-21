@@ -2,18 +2,24 @@
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.19.0 (projet)
+## 4.20.0 (projet)
 
 * Implémentation : Re-porter les touches mortes sous Windows.
 
-## 4.18.0 (projet)
+## 4.19.0 (projet)
 
-* Implémentation : Mettre à jour les touches mortes sous Linux.
+* Implémentation : Corriger les touches mortes sous Linux.
+
+## 4.18.0 (2025-01-21)
+
+Débogage des lettres composées pour les langues du Togo.
+
 * Composition :
 	* Simplifier ou corriger les séquences de "𐞉" U+10789, "𐞫" U+107AB. compose-1.yml [f247651](https://github.com/dispoclavier/nouvel-azerty/commit/f24765119811302e5f854adc3300ba4488ebad1f)
 	* Simplifier ou corriger les séquences de "⃛" U+20DB, "⃜" U+20DC. compose-1.yml [1dced0c](https://github.com/dispoclavier/nouvel-azerty/commit/1dced0c7f79ff9a845e56d5c332eed32e4d65b7e)
+* Transformations : Déboguer "Ǝ" U+018E, "ǝ" U+01DD dans les lettres composées pour les langues du Togo. compose-2.yml [b2a40bb](https://github.com/dispoclavier/nouvel-azerty/commit/b2a40bbaeb1ad9e91ac0b8ab7ccd71287664e2c1)
 * Documentation :
-	* Corriger et compléter des annotations. compose-1.yml [1dced0c](https://github.com/dispoclavier/nouvel-azerty/commit/1dced0c7f79ff9a845e56d5c332eed32e4d65b7e)
+	* Corriger et compléter des annotations. compose-1.yml [1dced0c](https://github.com/dispoclavier/nouvel-azerty/commit/1dced0c7f79ff9a845e56d5c332eed32e4d65b7e), compose-2.yml [b2a40bb](https://github.com/dispoclavier/nouvel-azerty/commit/b2a40bbaeb1ad9e91ac0b8ab7ccd71287664e2c1)
 	* Améliorer le tri. compose-1.yml [f247651](https://github.com/dispoclavier/nouvel-azerty/commit/f24765119811302e5f854adc3300ba4488ebad1f)
 
 ## 4.17.0 (2025-01-19)
@@ -35,7 +41,7 @@ Amélioration de la prise en charge des symboles de recyclage.
 	* Simplifier ou corriger les séquences de "‣" U+2023, "⁌" U+204C, "⁍" U+204D, "ℇ" U+2107, "Ω" U+2126, "℧" U+2127, "∅" U+2205, "∎" U+220E, "⊛" U+229B, "⌧" U+2327, "▫" U+25AB, "▴" U+25B4, "▵" U+25B5, "▾" U+25BE, "▿" U+25BF, "◂" U+25C2, "◑" U+25D1, "◒" U+25D2, "◓" U+25D3, "◦" U+25E6, "☆" U+2606, "☚" U+261A, "☛" U+261B, "⛎" U+26CE, "⟴" U+27F4, "⦷" U+29B7, "⦹" U+29B9, "⦺" U+29BA, "⦻" U+29BB, "⦼" U+29BC, "⦽" U+29BD, "⧀" U+29C0, "⧁" U+29C1, "⧬" U+29EC, "⧭" U+29ED, "⨀" U+2A00, "🅭" U+1F16D, "🅯" U+1F16F. compose-1.yml [d7c5ebc](https://github.com/dispoclavier/nouvel-azerty/commit/d7c5ebcafd010b25b5fa65187831fda98d6e73fb)
 	* Simplifier ou corriger les séquences de "᷉" U+1DC9, "᷏" U+1DCF, "᷐" U+1DD0, "᷒" U+1DD2, "⁡" U+2061, "⁢" U+2062, "⁣" U+2063, "⁤" U+2064, "⃐" U+20D0, "⃑" U+20D1, "⃔" U+20D4, "⃕" U+20D5, "⃖" U+20D6, "⃗" U+20D7, "⃚" U+20DA, "⃜" U+20DC, "⃡" U+20E1, "⃥" U+20E5, "⃦" U+20E6, "⃫" U+20EB, "⃬" U+20EC, "⃭" U+20ED, "⃮" U+20EE, "⃯" U+20EF, "⅋" U+214B, "↼" U+21BC, "⥊" U+294A, "⥌" U+294C, "⥎" U+294E, "⥏" U+294F, "⥚" U+295A, "⥜" U+295C, "⥢" U+2962, "⥣" U+2963, "⥦" U+2966, "⥪" U+296A, "⥯" U+296F, "⩯" U+2A6F, "⫨" U+2AE8, "⫩" U+2AE9, "ꝰ" U+A770, "𐞈" U+10788, "𐞉" U+10789, "𐞊" U+1078A, "𐞐" U+10790, "𐞞" U+1079E, "𐞟" U+1079F, "𐞫" U+107AB, "𐞭" U+107AD, "𐞮" U+107AE. compose-1.yml [38e6b9c](https://github.com/dispoclavier/nouvel-azerty/commit/38e6b9c2dbf82307ab6a5bc8eebb11f6410613db)
 * Transformations :
-	* Lettres pour les langues du Togo : Flexibiliser la sélection de groupe. compose-2.yml [cd7aa79](https://github.com/dispoclavier/nouvel-azerty/commit/cd7aa794ad459cc97efa717d1e00c76865a72934)
+	* Lettres composées pour les langues du Togo : Flexibiliser la sélection de groupe. compose-2.yml [cd7aa79](https://github.com/dispoclavier/nouvel-azerty/commit/cd7aa794ad459cc97efa717d1e00c76865a72934)
 	* Exposant et crosse : Dupliquer la plupart des lettres d’exposant et boucle. ibidem
 	* Suscrit > Suscrit et cédille : Ajouter pour redonder "ᷗ" U+1DD7. ibidem
 	* Suscrit > Suscrit et tréma : Ajouter pour redonder "ᷲ" U+1DF2, "ᷳ" U+1DF3, "ᷴ" U+1DF4. ibidem
