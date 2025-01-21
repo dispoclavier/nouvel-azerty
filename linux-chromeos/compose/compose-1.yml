@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.17.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.18.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -909,68 +909,69 @@
 #          ^([^\s]+)\s.+\n\1(<|\s)
 #
 #   Sortability (and readability alike) may then be further improved using this
-#   follow-up replaceruleset, with the ampersand sorted before digits, and more
-#   intuitive keysyms instead of some keysyms for letters, spaces and dead keys
-#   missing from keysymdef.h. Ordinary space and U200B, as well as nobreakspace
-#   and U202F are grouped conveniently and sorted after letters by the means of
-#   a leading "z".
+#   follow-up replaceruleset, where dead key syms missing from keysymdef.h are
+#   decoded, and all dead key syms are streamlined and prefixed with an exclam
+#   so as to be sorted before letters, digits, and ASCII symbols prefixed with
+#   a percent, some more letters get intuitive keysyms, and ordinary space and
+#   U200B, nobreakspace and U202F are grouped conveniently and sorted last by
+#   the means of a leading asciitilde.
 #   See # # Dead keys not included in keysymdef.h
 #   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
 #   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #       {
 #         "replacerules.rules": {
-#           "streamlineDeadKeySyms": {
-#             "find": "<dead_",
-#             "replace": "<&"
-#           },
-#           "fixMultikey": {
-#             "find": "<Multi_key",
-#             "replace": "<&Multikey"
-#           },
 #           "decodeGroup": {
 #             "find": "<UEFD0",
-#             "replace": "<&group"
+#             "replace": "<dead_group"
 #           },
 #           "decodeSuperscript": {
 #             "find": "<UEFD1",
-#             "replace": "<&superscript"
+#             "replace": "<dead_superscript"
 #           },
 #           "decodeSubscript": {
 #             "find": "<UEFD2",
-#             "replace": "<&subscript"
+#             "replace": "<dead_subscript"
 #           },
 #           "decodeAbovehook": {
 #             "find": "<UEFD3",
-#             "replace": "<&abovehook"
+#             "replace": "<dead_abovehook"
 #           },
 #           "decodeRetroflexhook": {
 #             "find": "<UEFD4",
-#             "replace": "<&retroflexhook"
+#             "replace": "<dead_retroflexhook"
 #           },
 #           "decodeTurned": {
 #             "find": "<UEFD5",
-#             "replace": "<&turned"
+#             "replace": "<dead_turned"
 #           },
 #           "decodeReversed": {
 #             "find": "<UEFD6",
-#             "replace": "<&reversed"
+#             "replace": "<dead_reversed"
 #           },
 #           "decodeFlag": {
 #             "find": "<UEFD7",
-#             "replace": "<&flag"
+#             "replace": "<dead_flag"
 #           },
 #           "decodeBar": {
 #             "find": "<UEFD8",
-#             "replace": "<&bar"
+#             "replace": "<dead_bar"
 #           },
 #           "decodeLegacyTilde": {
 #             "find": "<UEFD9",
-#             "replace": "<&legacytilde"
+#             "replace": "<dead_legacytilde"
 #           },
 #           "decodeLegacyGrave": {
 #             "find": "<UEFDA",
-#             "replace": "<&legacygrave"
+#             "replace": "<dead_legacygrave"
+#           },
+#           "streamlineDeadKeySyms": {
+#             "find": "<dead_",
+#             "replace": "<!"
+#           },
+#           "syncMultikey": {
+#             "find": "<Multi_key",
+#             "replace": "<!Multikey"
 #           },
 #           "decodeCapitalOpenE": {
 #             "find": "<U0190",
@@ -1024,8 +1025,6 @@
 #         "replacerules.rulesets": {
 #           "improveComposeSortability": {
 #             "rules": [
-#               "streamlineDeadKeySyms",
-#               "fixMultikey",
 #               "decodeGroup",
 #               "decodeSuperscript",
 #               "decodeSubscript",
@@ -1037,6 +1036,8 @@
 #               "decodeBar",
 #               "decodeLegacyTilde",
 #               "decodeLegacyGrave",
+#               "streamlineDeadKeySyms",
+#               "syncMultikey",
 #               "decodeCapitalOpenE",
 #               "decodeSmallOpenE",
 #               "decodeCapitalOpenO",
@@ -1839,7 +1840,8 @@
 <Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
 <Multi_key><asciicircum><ampersand><d><z>                                                          : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <Multi_key><asciicircum><ampersand><braceright><d>                                                 : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><braceleft><braceleft><d><z>                                    : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><braceleft><d>                                       : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><d>                                                  : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><asciicircum><ampersand><d><3>                                                          : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
 <Multi_key><asciicircum><ampersand><f><g>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <Multi_key><asciicircum><ampersand><f><n>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
@@ -1848,7 +1850,8 @@
 <Multi_key><asciicircum><ampersand><l><3>                                                          : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
 <Multi_key><asciicircum><ampersand><braceright><l>                                                 : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><t><c>                                                          : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><braceright><braceright><t><c>                                  : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><braceleft><t>                                       : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><t>                                                  : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><ampersand><t><s>                                                          : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
 <Multi_key><asciicircum><ampersand><braceright><t>                                                 : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><t><S>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
