@@ -4,13 +4,44 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
+## 4.22.0 (projet)
+
+Mise à jour sous macOS des dispositions émulées selon Linux.
+
+## 4.21.0 (projet)
+
+Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous Linux.
+
 ## 4.20.0 (projet)
 
-* Implémentation : Re-porter les touches mortes sous Windows.
+Correction des touches mortes sous Linux.
 
-## 4.19.0 (projet)
+## 4.19.0 (2025-01-26)
 
-* Implémentation : Corriger les touches mortes sous Linux.
+Amélioration du groupe 1 des lettres pour plus d’intuitivité et de sûreté et moins de redondances.
+
+Débogage, simplification ou correction de plusieurs séquences de composition.
+
+* Composition :
+	* Déboguer "⫊" U+2ACA. compose-1.yml [c54f712](https://github.com/dispoclavier/nouvel-azerty/commit/c54f7127f27bb73ec533caca54bf656682415d06)
+	* Simplifier ou corriger les séquences de "⁄" U+2044, "ℋ" U+210B, "ℐ" U+2110, "ℒ" U+2112, "ℛ" U+211B, "ℱ" U+2131, "ℴ" U+2134, "⌀" U+2300, "⨢" U+2A22, "⫂" U+2AC2, "⫉" U+2AC9, "⫊" U+2ACA, "⫓" U+2AD3, "⫖" U+2AD6, "⫗" U+2AD7. ibidem
+* Transformations :
+	* Simplifier les lettres composées pour les langues du Togo. compose-2.yml [6b4f097](https://github.com/dispoclavier/nouvel-azerty/commit/6b4f0974b0545e6db1234052a6a3e29e3d0441df)
+	* Groupes des lettres :
+		* Groupe 1 :
+			* Mettre "ʿ" U+02BF dans le groupe 1 de "l" U+006C au lieu de "K", à la place de "ℓ" U+2113 qui est dans le groupe 1 de "L". compose-3.yml [8df19c1](https://github.com/dispoclavier/nouvel-azerty/commit/8df19c1e1fc6d85cb080720eaf5eeeacfca265d6)
+			* Mettre "ʾ" U+02BE dans le groupe 1 de "m" au lieu de "k", à la place de "ɩ" U+0269. ibidem
+			* Redonder "ʔ" U+0294 dans le groupe 1 de "M" à la place de "Ɩ" U+0196. ibidem
+			* Mettre "Ɩ" U+0196, "ɩ" U+0269 dans le groupe 1 de "I", "i" à la place de "Ĳ" U+0132, "ĳ" U+0133 qui vont dans le groupe 1 de "J", "j" à la place de "Ɲ" U+019D, "ɲ" U+0272 qui vont dans le groupe 1 de "N", "n" à la place de "Ŋ" U+014A, "ŋ" U+014B qui vont dans le groupe 1 de "G", "g" à la place de "Ə" U+018F, "ə" U+0259 qui vont dans le groupe 1 de "H", "h" à la place de "Ǝ" U+018E, "ǝ" U+01DD qui vont dans le groupe 1 de "E", "e" à la place de "€" U+20AC qui est sur AltGr + E et sur AltFr + E. ibidem
+			* Redonder "Ɑ" U+2C6D, "ɑ" U+0251 dans le groupe 1 de "K", "k" aux places laissées par "ʿ" U+02BF, "ʾ" U+02BE. ibidem
+		* Groupe 2 :
+			* Mettre "Ə" U+018F, "ə" U+0259 à la place de "Ǝ" U+018E, "ǝ" U+01DD, qui est dans le groupe 1. ibidem
+			* Mettre "Ŋ" U+014A, "ŋ" à la place de "Ɲ" U+019D, "ɲ", qui est dans le groupe 1. ibidem
+	* Macron :
+		* Supprimer "ꭗ" U+AB57, qui est dans le groupe 5. compose-2.yml [6b4f097](https://github.com/dispoclavier/nouvel-azerty/commit/6b4f0974b0545e6db1234052a6a3e29e3d0441df)
+		* Supprimer "ꭙ" U+AB59, qui est dans le groupe 11. ibidem
+	* Accent grave : Utiliser "*" au lieu de "x" comme caractère de base de "˟" U+02DF. ibidem
+* Documentation : Corriger et compléter des annotations. compose-1.yml [c54f712](https://github.com/dispoclavier/nouvel-azerty/commit/c54f7127f27bb73ec533caca54bf656682415d06), compose-2.yml [6b4f097](https://github.com/dispoclavier/nouvel-azerty/commit/6b4f0974b0545e6db1234052a6a3e29e3d0441df), compose-3.yml [8df19c1](https://github.com/dispoclavier/nouvel-azerty/commit/8df19c1e1fc6d85cb080720eaf5eeeacfca265d6)
 
 ## 4.18.0 (2025-01-21)
 
