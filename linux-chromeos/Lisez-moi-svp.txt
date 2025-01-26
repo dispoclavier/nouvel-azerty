@@ -1,5 +1,5 @@
-                      Date : 2025-01-21T1425+0100
-                   Version : 4.18.0
+                      Date : 2025-01-26T0516+0100
+                   Version : 4.19.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -43,7 +43,8 @@
     Le dossier `activer` contient en tout 90 fichiers texte qui sont des sources XKB issues de la
     fusion des différents fichiers sources, et qui portent tous l’extension `.xkb` afin d’être
     personnalisables dans tout éditeur de texte, qui permet de rechercher un nom de touche et de
-    remplacer un symbole de touche, soit un caractère, une chaîne, ou une touche morte.
+    remplacer un symbole de touche, soit un caractère, ou une chaîne ou une touche morte définies
+    dans `Compose.yml`.
 
 
 Dispositions de clavier : les variantes
@@ -135,7 +136,7 @@ Mode d’emploi sous Linux
 
   2  Sous le titre « Assets », télécharger le dossier compressé nommé :
 
-         Un-nouvel-AZERTY-Linux-4.18.0.zip
+         Un-nouvel-AZERTY-Linux-4.19.0.zip
 
   3  Décompresser le dossier téléchargé.
 
