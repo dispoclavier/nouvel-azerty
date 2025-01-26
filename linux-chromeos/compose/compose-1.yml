@@ -3382,19 +3382,17 @@
 #
 # # Diameter sign
 #
-#   Also on live key C03 (D), level 6, and in group 1 of ( on D key C03; also
-#   in the circumflex dead key with case insensitive D as a base letter.
-#   See #*# CIRCUMFLEX
-#   See # # C03 parenleft
-#
-#   Despite not being a math symbol, ⌀ U2300 DIAMETER SIGN is space terminated,
-#   like ∅ U2205 EMPTY SET. so as to prevent a conflict with "ℴ" U2134.
+#   This sequence is case sensitive, as uppercase is used for "∅" U2205 EMPTY
+#   SET supported as a mathematical symbol, but not space terminated either,
+#   while "⌀" U2300 DIAMETER SIGN is not a math symbol.
 #   See # # Mathematical symbols in Miscellaneous Technical block U2300
 #
-#   In group 1 of (                                                                                : "⌀" U2300 # DIAMETER SIGN
-#   In #*# CIRCUMFLEX                                                                              : "⌀" U2300 # DIAMETER SIGN
-<Multi_key><o><slash>                                                                      <space> : "⌀" U2300 # DIAMETER SIGN
-<Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
+#   Also on live key C03 (D), level 7, and in group 1 of "(" on "D" key C03;
+#   also in the circumflex dead key with case insensitive D as a base letter.
+#   See # # C03 parenleft
+#   See #*# CIRCUMFLEX
+#
+<Multi_key><o><slash>                                                                              : "⌀" U2300 # DIAMETER SIGN
 #
 #
 # # Power switch
@@ -4024,30 +4022,25 @@
 #
 # # Fraction slash
 #
-#   On complete layouts, "⁄" U2044 FRACTION SLASH is on live keys:
-#   C01, level 6, and B09, level 7, in ASCII mode also on level 6.
+#   On the associated AZERTY layout, "⁄" U2044 FRACTION SLASH is on live key
+#   B09, level 7, in ASCII mode also on level 6.
+#   See dispocla.cpp ## Format controls
 #   See # # Vulgar fractions
 #
-#   Also in dead_stroke followed by 4, without space termination.
+#   Also in dead_stroke followed by 4.
 #   See #*# STROKE
 #
-#   Additionally, "⁄" U2044 FRACTION SLASH is supported by multikey the same
-#   way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, for completeness.
+#   Additionally, "⁄" U2044 FRACTION SLASH is supported by multikey nearly the
+#   same way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, while the letter slash
+#   sequence is case insensitive. and none is space terminated.
 #
-<Multi_key><f><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><f><slash>                                                               <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><F><slash>                                                                      <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><F><slash>                                                               <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><space><space><space><space><slash>                                             <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><space><space><space><space><slash>                                      <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><space><space><space><slash>                                      <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><space><space><space><slash>                               <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><space><space><slash>                               <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><space><space><slash>                        <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><slash>                        <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><slash>                 <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><slash>                 <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><slash>          <nobreakspace> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><f><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
+<Multi_key><F><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
+<Multi_key><space><space><space><space><slash>                                                     : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><space><space><space><slash>                                              : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><nobreakspace><space><space><slash>                                       : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><slash>                                : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><slash>                         : "⁄" U2044 # FRACTION SLASH
 #
 #
 # # Commercial minus sign
@@ -4212,8 +4205,7 @@
 <Multi_key><g><asciitilde>                                                                 <space> : "ℊ" U210A # SCRIPT SMALL G
 <Multi_key><g><asciitilde>                                                          <nobreakspace> : "ℊ" U210A # SCRIPT SMALL G
 #   In group 7 of H                                                                                : "ℋ" U210B # SCRIPT CAPITAL H
-<Multi_key><H><asciitilde>                                                                 <space> : "ℋ" U210B # SCRIPT CAPITAL H
-<Multi_key><H><asciitilde>                                                          <nobreakspace> : "ℋ" U210B # SCRIPT CAPITAL H
+<Multi_key><H><asciitilde>                                                                         : "ℋ" U210B # SCRIPT CAPITAL H
 #   In group 9 of H                                                                                : "ℌ" U210C # BLACK-LETTER CAPITAL H
 <Multi_key><H><numbersign>                                                                 <space> : "ℌ" U210C # BLACK-LETTER CAPITAL H
 <Multi_key><H><numbersign>                                                          <nobreakspace> : "ℌ" U210C # BLACK-LETTER CAPITAL H
@@ -4231,22 +4223,19 @@
 <Multi_key><P><l><a><n><c><k><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key><p><l><a><n><c><k><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 #   In group 7 of I                                                                                : "ℐ" U2110 # SCRIPT CAPITAL I
-<Multi_key><I><asciitilde>                                                                 <space> : "ℐ" U2110 # SCRIPT CAPITAL I
-<Multi_key><I><asciitilde>                                                          <nobreakspace> : "ℐ" U2110 # SCRIPT CAPITAL I
+<Multi_key><I><asciitilde>                                                                         : "ℐ" U2110 # SCRIPT CAPITAL I
 #   In group 9 of I                                                                                : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 <Multi_key><I><numbersign>                                                                 <space> : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 <Multi_key><I><numbersign>                                                          <nobreakspace> : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 #   In group 7 of L                                                                                : "ℒ" U2112 # SCRIPT CAPITAL L
-<Multi_key><L><asciitilde>                                                                 <space> : "ℒ" U2112 # SCRIPT CAPITAL L
-<Multi_key><L><asciitilde>                                                          <nobreakspace> : "ℒ" U2112 # SCRIPT CAPITAL L
+<Multi_key><L><asciitilde>                                                                         : "ℒ" U2112 # SCRIPT CAPITAL L
 #   In group 1 of l and L                                                                          : "ℓ" U2113 # SCRIPT SMALL L
 <Multi_key><l><asciitilde>                                                                 <space> : "ℓ" U2113 # SCRIPT SMALL L
 <Multi_key><l><asciitilde>                                                          <nobreakspace> : "ℓ" U2113 # SCRIPT SMALL L
 #   In group 8 of N                                                                                : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
 <Multi_key><N><N>                                                                          <space> : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
 <Multi_key><N><N>                                                                   <nobreakspace> : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
-<Multi_key><P><asciitilde>                                                                 <space> : "℘" U2118 # SCRIPT CAPITAL P
-<Multi_key><P><asciitilde>                                                          <nobreakspace> : "℘" U2118 # SCRIPT CAPITAL P
+<Multi_key><P><asciitilde>                                                                         : "℘" U2118 # SCRIPT CAPITAL P
 #   In group 8 of P                                                                                : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
 <Multi_key><P><P>                                                                          <space> : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
 <Multi_key><P><P>                                                                   <nobreakspace> : "ℙ" U2119 # DOUBLE-STRUCK CAPITAL P
@@ -4254,8 +4243,7 @@
 <Multi_key><Q><Q>                                                                          <space> : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
 <Multi_key><Q><Q>                                                                   <nobreakspace> : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
 #   In group 7 of R                                                                                : "ℛ" U211B # SCRIPT CAPITAL R
-<Multi_key><R><asciitilde>                                                                 <space> : "ℛ" U211B # SCRIPT CAPITAL R
-<Multi_key><R><asciitilde>                                                          <nobreakspace> : "ℛ" U211B # SCRIPT CAPITAL R
+<Multi_key><R><asciitilde>                                                                         : "ℛ" U211B # SCRIPT CAPITAL R
 #   In group 9 of R                                                                                : "ℜ" U211C # BLACK-LETTER CAPITAL R
 <Multi_key><R><numbersign>                                                                 <space> : "ℜ" U211C # BLACK-LETTER CAPITAL R
 <Multi_key><R><numbersign>                                                          <nobreakspace> : "ℜ" U211C # BLACK-LETTER CAPITAL R
@@ -4286,15 +4274,12 @@
 #   In group 7 of E                                                                                : "ℰ" U2130 # SCRIPT CAPITAL E
 <Multi_key><E><asciitilde>                                                                         : "ℰ" U2130 # SCRIPT CAPITAL E
 #   In group 7 of F                                                                                : "ℱ" U2131 # SCRIPT CAPITAL F
-<Multi_key><F><asciitilde>                                                                 <space> : "ℱ" U2131 # SCRIPT CAPITAL F
-<Multi_key><F><asciitilde>                                                          <nobreakspace> : "ℱ" U2131 # SCRIPT CAPITAL F
+<Multi_key><F><asciitilde>                                                                         : "ℱ" U2131 # SCRIPT CAPITAL F
 #   In group 7 of M                                                                                : "ℳ" U2133 # SCRIPT CAPITAL M
 #   In #*# CURRENCY                                                                                : "ℳ" U2133 # SCRIPT CAPITAL M
-<Multi_key><M><asciitilde>                                                                 <space> : "ℳ" U2133 # SCRIPT CAPITAL M
-<Multi_key><M><asciitilde>                                                          <nobreakspace> : "ℳ" U2133 # SCRIPT CAPITAL M
+<Multi_key><M><asciitilde>                                                                         : "ℳ" U2133 # SCRIPT CAPITAL M
 #   In group 7 of o                                                                                : "ℴ" U2134 # SCRIPT SMALL O
-<Multi_key><o><asciitilde>                                                                 <space> : "ℴ" U2134 # SCRIPT SMALL O
-<Multi_key><o><asciitilde>                                                          <nobreakspace> : "ℴ" U2134 # SCRIPT SMALL O
+<Multi_key><o><asciitilde>                                                                         : "ℴ" U2134 # SCRIPT SMALL O
 <Multi_key><a><backslash>                                                                          : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><A><backslash>                                                                          : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><b><backslash>                                                                          : "ℶ" U2136 # BET SYMBOL
@@ -7149,8 +7134,7 @@
 <Multi_key><z><1>                                                                   <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                       <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
-<Multi_key><o><asciicircum><plus>                                                          <space> : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
-<Multi_key><o><asciicircum><plus>                                                   <nobreakspace> : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+<Multi_key><o><asciicircum>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><less><plus>                                                                    <space> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less><plus>                                                             <nobreakspace> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
@@ -7728,10 +7712,8 @@
 <Multi_key><c><backslash><plus>                                                     <nobreakspace> : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
 <Multi_key><c><x>                                                                          <space> : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><x>                                                                   <nobreakspace> : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><b><x>                                                                          <space> : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><b><x>                                                                   <nobreakspace> : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><c><backslash><x>                                                               <space> : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><c><backslash><x>                                                        <nobreakspace> : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
+<Multi_key><b><x>                                                                                  : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
+<Multi_key><c><backslash><x>                                                                       : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><space><period><c><minus>                                                       <space> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><c><minus>                                                <nobreakspace> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><c><minus>                                                <space> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
@@ -7756,12 +7738,9 @@
 <Multi_key><b><asciitilde>                                                          <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><backslash><asciitilde>                                                      <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><backslash><asciitilde>                                               <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
-<Multi_key><c><asciitilde><asciitilde>                                                     <space> : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
-<Multi_key><c><asciitilde><asciitilde>                                              <nobreakspace> : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
-<Multi_key><b><asciitilde><asciitilde>                                                     <space> : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
-<Multi_key><b><asciitilde><asciitilde>                                              <nobreakspace> : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
-<Multi_key><c><backslash><asciitilde><ascii                                                <space> : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
-<Multi_key><c><backslash><asciitilde><ascii                                         <nobreakspace> : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
+<Multi_key><c><asciitilde><asciitilde>                                                             : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
+<Multi_key><b><asciitilde><asciitilde>                                                             : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
+<Multi_key><c><backslash><asciitilde><asciitilde>                                                  : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><c><equal><slash>                                                               <space> : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
 <Multi_key><c><equal><slash>                                                        <nobreakspace> : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
 <Multi_key><b><equal><slash>                                                               <space> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
@@ -7791,24 +7770,18 @@
 <Multi_key><D><minus>                                                                              : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><b><bar><minus>                                                                         : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
 <Multi_key><c><backslash><bar><minus>                                                              : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><asciicircum><b>                                                             <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><c><asciicircum><b>                                                      <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><c><asciicircum><c><c>                                                          <space> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><c><asciicircum><c><c>                                                   <nobreakspace> : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
+<Multi_key><c><asciicircum><b>                                                                     : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
+<Multi_key><c><asciicircum><c><c>                                                                  : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
 <Multi_key><b><asciicircum><c>                                                             <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><b><asciicircum><c>                                                      <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><backslash><asciicircum><c>                                                  <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><backslash><asciicircum><c>                                           <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                             <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
 <Multi_key><c><asciicircum><c>                                                      <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
-<Multi_key><b><asciicircum><b>                                                             <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><b><asciicircum><b>                                                      <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><c><backslash><asciicircum><c><c>                                               <space> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><c><backslash><asciicircum><c><c>                                        <nobreakspace> : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><b><ampersand><c>                                                               <space> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><b><ampersand><c>                                                        <nobreakspace> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><c><backslash><ampersand><c>                                                    <space> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><c><backslash><ampersand><c>                                             <nobreakspace> : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+<Multi_key><b><asciicircum><b>                                                                     : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
+<Multi_key><c><backslash><asciicircum><c><c>                                                       : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
+<Multi_key><b><ampersand>                                                                          : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+<Multi_key><c><backslash><ampersand>                                                               : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><b><minus><c>                                                                   <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
 <Multi_key><b><minus><c>                                                            <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
 <Multi_key><c><backslash><minus><c>                                                        <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
