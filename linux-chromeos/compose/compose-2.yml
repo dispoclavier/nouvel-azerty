@@ -811,6 +811,10 @@
 #   “Possible to add new precomposed characters for local language in Togo?”
 #   https://unicode.org/mail-arch/unicode-ml/y2016-m02/0071.html
 #
+#   Sequences with Ɛ, ɛ and Ɔ, ɔ keysyms are for use on the Francophone Africa
+#   semiautomatic keyboard layout “kbfrAFs” and its remapped variant “kbfrAFsr”
+#   that have live keys for open e (Latin epsilon) and open o.
+#
 #   For a streamlined user experience, group 1 base letters are used for open
 #   e and o, turned e, Latin iota and Latin upsilon:
 #
@@ -825,11 +829,11 @@
 #       X   "Ɛ" U0190
 #       x   "ɛ" U025B
 #
+#   Consistently, the base letters in this list must be kept in sync with that list.
 #   See #+# GROUP_1
 #
-#   Sequences with Ɛ, ɛ and Ɔ, ɔ keysyms are for use on the Francophone Africa
-#   semiautomatic keyboard layout “kbfrAFs” and its remapped variant “kbfrAFsr”
-#   that have live keys for open e (Latin epsilon) and open o.
+#   Thanks to conflictlessness, the group dead key press may be skipped in some
+#   instances, although it is supported throughout for consistency.
 #
 #   This list also provides alternative input methods with lenient group
 #   selection using group 1 of "v" and "V" ("℣" U2123) for v with hook U01B2,
@@ -872,54 +876,58 @@
 <Multi_key><asciitilde><apostrophe>                                                            <e> : "ẽ́" # U1EBD U0301 LATIN SMALL LETTER E WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                       <e> : "ẽ́" # U1EBD U0301 LATIN SMALL LETTER E WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                            <e> : "ẽ́" # U1EBD U0301 LATIN SMALL LETTER E WITH TILDE AND ACUTE
-<dead_grave>                                                                            <UEFD0><H> : "Ǝ̀" # U018E U0300 LATIN CAPITAL LETTER TURNED E WITH GRAVE
-<Multi_key><grave>                                                                 <numbersign><H> : "Ǝ̀" # U018E U0300 LATIN CAPITAL LETTER TURNED E WITH GRAVE
-<dead_grave>                                                                            <UEFD0><h> : "ǝ̀" # U01DD U0300 LATIN SMALL LETTER TURNED E WITH GRAVE
-<Multi_key><grave>                                                                 <numbersign><h> : "ǝ̀" # U01DD U0300 LATIN SMALL LETTER TURNED E WITH GRAVE
-<dead_acute>                                                                            <UEFD0><H> : "Ǝ́" # U018E U0301 LATIN CAPITAL LETTER TURNED E WITH ACUTE
-<Multi_key><apostrophe>                                                            <numbersign><H> : "Ǝ́" # U018E U0301 LATIN CAPITAL LETTER TURNED E WITH ACUTE
-<dead_acute>                                                                            <UEFD0><h> : "ǝ́" # U01DD U0301 LATIN SMALL LETTER TURNED E WITH ACUTE
-<Multi_key><apostrophe>                                                            <numbersign><h> : "ǝ́" # U01DD U0301 LATIN SMALL LETTER TURNED E WITH ACUTE
-<dead_circumflex>                                                                       <UEFD0><H> : "Ǝ̂" # U018E U0302 LATIN CAPITAL LETTER TURNED E WITH CIRCUMFLEX
-<Multi_key><less>                                                                  <numbersign><H> : "Ǝ̂" # U018E U0302 LATIN CAPITAL LETTER TURNED E WITH CIRCUMFLEX
-<dead_circumflex>                                                                       <UEFD0><h> : "ǝ̂" # U01DD U0302 LATIN SMALL LETTER TURNED E WITH CIRCUMFLEX
-<Multi_key><less>                                                                  <numbersign><h> : "ǝ̂" # U01DD U0302 LATIN SMALL LETTER TURNED E WITH CIRCUMFLEX
-<dead_tilde>                                                                            <UEFD0><H> : "Ǝ̃" # U018E U0303 LATIN CAPITAL LETTER TURNED E WITH TILDE
-<Multi_key><asciitilde>                                                            <numbersign><H> : "Ǝ̃" # U018E U0303 LATIN CAPITAL LETTER TURNED E WITH TILDE
-<dead_tilde>                                                                            <UEFD0><h> : "ǝ̃" # U01DD U0303 LATIN SMALL LETTER TURNED E WITH TILDE
-<Multi_key><asciitilde>                                                            <numbersign><h> : "ǝ̃" # U01DD U0303 LATIN SMALL LETTER TURNED E WITH TILDE
-<dead_tilde><dead_grave>                                                                <UEFD0><H> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
-<Multi_key><asciitilde><grave>                                                     <numbersign><H> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
-<dead_grave><dead_tilde>                                                                <UEFD0><H> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
-<Multi_key><grave><asciitilde>                                                     <numbersign><H> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
-<dead_tilde><dead_grave>                                                                <UEFD0><h> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
-<Multi_key><asciitilde><grave>                                                     <numbersign><h> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
-<dead_grave><dead_tilde>                                                                <UEFD0><h> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
-<Multi_key><grave><asciitilde>                                                     <numbersign><h> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
-<dead_tilde><dead_acute>                                                                <UEFD0><H> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
-<Multi_key><asciitilde><apostrophe>                                                <numbersign><H> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
-<dead_acute><dead_tilde>                                                                <UEFD0><H> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
-<Multi_key><apostrophe><asciitilde>                                                <numbersign><H> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
-<dead_tilde><dead_acute>                                                                <UEFD0><h> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
-<Multi_key><asciitilde><apostrophe>                                                <numbersign><h> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
-<dead_acute><dead_tilde>                                                                <UEFD0><h> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
-<Multi_key><apostrophe><asciitilde>                                                <numbersign><h> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
-<dead_macron>                                                                           <UEFD0><H> : "Ǝ̄" # U018E U0304 LATIN CAPITAL LETTER TURNED E WITH MACRON
-<Multi_key><bar>                                                                   <numbersign><H> : "Ǝ̄" # U018E U0304 LATIN CAPITAL LETTER TURNED E WITH MACRON
-<dead_macron>                                                                           <UEFD0><h> : "ǝ̄" # U01DD U0304 LATIN SMALL LETTER TURNED E WITH MACRON
-<Multi_key><bar>                                                                   <numbersign><h> : "ǝ̄" # U01DD U0304 LATIN SMALL LETTER TURNED E WITH MACRON
-<dead_caron>                                                                            <UEFD0><H> : "Ǝ̌" # U018E U030C LATIN CAPITAL LETTER TURNED E WITH CARON
-<Multi_key><greater>                                                               <numbersign><H> : "Ǝ̌" # U018E U030C LATIN CAPITAL LETTER TURNED E WITH CARON
-<dead_caron>                                                                            <UEFD0><h> : "ǝ̌" # U01DD U030C LATIN SMALL LETTER TURNED E WITH CARON
-<Multi_key><greater>                                                               <numbersign><h> : "ǝ̌" # U01DD U030C LATIN SMALL LETTER TURNED E WITH CARON
+<dead_grave>                                                                            <UEFD0><E> : "Ǝ̀" # U018E U0300 LATIN CAPITAL LETTER TURNED E WITH GRAVE
+<Multi_key><grave>                                                                 <numbersign><E> : "Ǝ̀" # U018E U0300 LATIN CAPITAL LETTER TURNED E WITH GRAVE
+<dead_grave>                                                                            <UEFD0><e> : "ǝ̀" # U01DD U0300 LATIN SMALL LETTER TURNED E WITH GRAVE
+<Multi_key><grave>                                                                 <numbersign><e> : "ǝ̀" # U01DD U0300 LATIN SMALL LETTER TURNED E WITH GRAVE
+<dead_acute>                                                                            <UEFD0><E> : "Ǝ́" # U018E U0301 LATIN CAPITAL LETTER TURNED E WITH ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><E> : "Ǝ́" # U018E U0301 LATIN CAPITAL LETTER TURNED E WITH ACUTE
+<dead_acute>                                                                            <UEFD0><e> : "ǝ́" # U01DD U0301 LATIN SMALL LETTER TURNED E WITH ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><e> : "ǝ́" # U01DD U0301 LATIN SMALL LETTER TURNED E WITH ACUTE
+<dead_circumflex>                                                                       <UEFD0><E> : "Ǝ̂" # U018E U0302 LATIN CAPITAL LETTER TURNED E WITH CIRCUMFLEX
+<Multi_key><less>                                                                  <numbersign><E> : "Ǝ̂" # U018E U0302 LATIN CAPITAL LETTER TURNED E WITH CIRCUMFLEX
+<dead_circumflex>                                                                       <UEFD0><e> : "ǝ̂" # U01DD U0302 LATIN SMALL LETTER TURNED E WITH CIRCUMFLEX
+<Multi_key><less>                                                                  <numbersign><e> : "ǝ̂" # U01DD U0302 LATIN SMALL LETTER TURNED E WITH CIRCUMFLEX
+<dead_tilde>                                                                            <UEFD0><E> : "Ǝ̃" # U018E U0303 LATIN CAPITAL LETTER TURNED E WITH TILDE
+<Multi_key><asciitilde>                                                            <numbersign><E> : "Ǝ̃" # U018E U0303 LATIN CAPITAL LETTER TURNED E WITH TILDE
+<dead_tilde>                                                                            <UEFD0><e> : "ǝ̃" # U01DD U0303 LATIN SMALL LETTER TURNED E WITH TILDE
+<Multi_key><asciitilde>                                                            <numbersign><e> : "ǝ̃" # U01DD U0303 LATIN SMALL LETTER TURNED E WITH TILDE
+<dead_tilde><dead_grave>                                                                <UEFD0><E> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
+<Multi_key><asciitilde><grave>                                                     <numbersign><E> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
+<dead_grave><dead_tilde>                                                                <UEFD0><E> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
+<Multi_key><grave><asciitilde>                                                     <numbersign><E> : "Ǝ̃̀" # U018E U0303 U0300 LATIN CAPITAL LETTER TURNED E WITH TILDE AND GRAVE
+<dead_tilde><dead_grave>                                                                <UEFD0><e> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
+<Multi_key><asciitilde><grave>                                                     <numbersign><e> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
+<dead_grave><dead_tilde>                                                                <UEFD0><e> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
+<Multi_key><grave><asciitilde>                                                     <numbersign><e> : "ǝ̃̀" # U01DD U0303 U0300 LATIN SMALL LETTER TURNED E WITH TILDE AND GRAVE
+<dead_tilde><dead_acute>                                                                <UEFD0><E> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
+<Multi_key><asciitilde><apostrophe>                                                <numbersign><E> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
+<dead_acute><dead_tilde>                                                                <UEFD0><E> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
+<Multi_key><apostrophe><asciitilde>                                                <numbersign><E> : "Ǝ̃́" # U018E U0303 U0301 LATIN CAPITAL LETTER TURNED E WITH TILDE AND ACUTE
+<dead_tilde><dead_acute>                                                                <UEFD0><e> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
+<Multi_key><asciitilde><apostrophe>                                                <numbersign><e> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
+<dead_acute><dead_tilde>                                                                <UEFD0><e> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
+<Multi_key><apostrophe><asciitilde>                                                <numbersign><e> : "ǝ̃́" # U01DD U0303 U0301 LATIN SMALL LETTER TURNED E WITH TILDE AND ACUTE
+<dead_macron>                                                                           <UEFD0><E> : "Ǝ̄" # U018E U0304 LATIN CAPITAL LETTER TURNED E WITH MACRON
+<Multi_key><bar>                                                                   <numbersign><E> : "Ǝ̄" # U018E U0304 LATIN CAPITAL LETTER TURNED E WITH MACRON
+<dead_macron>                                                                           <UEFD0><e> : "ǝ̄" # U01DD U0304 LATIN SMALL LETTER TURNED E WITH MACRON
+<Multi_key><bar>                                                                   <numbersign><e> : "ǝ̄" # U01DD U0304 LATIN SMALL LETTER TURNED E WITH MACRON
+<dead_caron>                                                                            <UEFD0><E> : "Ǝ̌" # U018E U030C LATIN CAPITAL LETTER TURNED E WITH CARON
+<Multi_key><greater>                                                               <numbersign><E> : "Ǝ̌" # U018E U030C LATIN CAPITAL LETTER TURNED E WITH CARON
+<dead_caron>                                                                            <UEFD0><e> : "ǝ̌" # U01DD U030C LATIN SMALL LETTER TURNED E WITH CARON
+<Multi_key><greater>                                                               <numbersign><e> : "ǝ̌" # U01DD U030C LATIN SMALL LETTER TURNED E WITH CARON
 <dead_grave>                                                                               <U0190> : "Ɛ̀" # U0190 U0300 LATIN CAPITAL LETTER OPEN E WITH GRAVE
 <Multi_key><grave>                                                                         <U0190> : "Ɛ̀" # U0190 U0300 LATIN CAPITAL LETTER OPEN E WITH GRAVE
 <dead_grave>                                                                            <UEFD0><X> : "Ɛ̀" # U0190 U0300 LATIN CAPITAL LETTER OPEN E WITH GRAVE
 <Multi_key><grave>                                                                 <numbersign><X> : "Ɛ̀" # U0190 U0300 LATIN CAPITAL LETTER OPEN E WITH GRAVE
+<dead_grave>                                                                                   <X> : "Ɛ̀" # U0190 U0300 LATIN CAPITAL LETTER OPEN E WITH GRAVE
+<Multi_key><grave>                                                                             <X> : "Ɛ̀" # U0190 U0300 LATIN CAPITAL LETTER OPEN E WITH GRAVE
 <dead_grave>                                                                               <U025B> : "ɛ̀" # U025B U0300 LATIN SMALL LETTER OPEN E WITH GRAVE
 <Multi_key><grave>                                                                         <U025B> : "ɛ̀" # U025B U0300 LATIN SMALL LETTER OPEN E WITH GRAVE
 <dead_grave>                                                                            <UEFD0><x> : "ɛ̀" # U025B U0300 LATIN SMALL LETTER OPEN E WITH GRAVE
 <Multi_key><grave>                                                                 <numbersign><x> : "ɛ̀" # U025B U0300 LATIN SMALL LETTER OPEN E WITH GRAVE
+<dead_grave>                                                                                   <x> : "ɛ̀" # U025B U0300 LATIN SMALL LETTER OPEN E WITH GRAVE
+<Multi_key><grave>                                                                             <x> : "ɛ̀" # U025B U0300 LATIN SMALL LETTER OPEN E WITH GRAVE
 <dead_acute>                                                                               <U0190> : "Ɛ́" # U0190 U0301 LATIN CAPITAL LETTER OPEN E WITH ACUTE
 <Multi_key><apostrophe>                                                                    <U0190> : "Ɛ́" # U0190 U0301 LATIN CAPITAL LETTER OPEN E WITH ACUTE
 <dead_acute>                                                                            <UEFD0><X> : "Ɛ́" # U0190 U0301 LATIN CAPITAL LETTER OPEN E WITH ACUTE
@@ -940,58 +948,86 @@
 <Multi_key><asciitilde>                                                                    <U0190> : "Ɛ̃" # U0190 U0303 LATIN CAPITAL LETTER OPEN E WITH TILDE
 <dead_tilde>                                                                            <UEFD0><X> : "Ɛ̃" # U0190 U0303 LATIN CAPITAL LETTER OPEN E WITH TILDE
 <Multi_key><asciitilde>                                                            <numbersign><X> : "Ɛ̃" # U0190 U0303 LATIN CAPITAL LETTER OPEN E WITH TILDE
+<dead_tilde>                                                                                   <X> : "Ɛ̃" # U0190 U0303 LATIN CAPITAL LETTER OPEN E WITH TILDE
+<Multi_key><asciitilde>                                                                        <X> : "Ɛ̃" # U0190 U0303 LATIN CAPITAL LETTER OPEN E WITH TILDE
 <dead_tilde>                                                                               <U025B> : "ɛ̃" # U025B U0303 LATIN SMALL LETTER OPEN E WITH TILDE
 <Multi_key><asciitilde>                                                                    <U025B> : "ɛ̃" # U025B U0303 LATIN SMALL LETTER OPEN E WITH TILDE
 <dead_tilde>                                                                            <UEFD0><x> : "ɛ̃" # U025B U0303 LATIN SMALL LETTER OPEN E WITH TILDE
 <Multi_key><asciitilde>                                                            <numbersign><x> : "ɛ̃" # U025B U0303 LATIN SMALL LETTER OPEN E WITH TILDE
+<dead_tilde>                                                                                   <x> : "ɛ̃" # U025B U0303 LATIN SMALL LETTER OPEN E WITH TILDE
+<Multi_key><asciitilde>                                                                        <x> : "ɛ̃" # U025B U0303 LATIN SMALL LETTER OPEN E WITH TILDE
 <dead_tilde><dead_grave>                                                                   <U0190> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                             <U0190> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_tilde><dead_grave>                                                                <UEFD0><X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                     <numbersign><X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
+<dead_tilde><dead_grave>                                                                       <X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
+<Multi_key><asciitilde><grave>                                                                 <X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                   <U0190> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><grave><asciitilde>                                                             <U0190> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                <UEFD0><X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><grave><asciitilde>                                                     <numbersign><X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
+<dead_grave><dead_tilde>                                                                       <X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
+<Multi_key><grave><asciitilde>                                                                 <X> : "Ɛ̃̀" # U0190 U0303 U0300 LATIN CAPITAL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_tilde><dead_grave>                                                                   <U025B> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                             <U025B> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_tilde><dead_grave>                                                                <UEFD0><x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                     <numbersign><x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
+<dead_tilde><dead_grave>                                                                       <x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
+<Multi_key><asciitilde><grave>                                                                 <x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                   <U025B> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><grave><asciitilde>                                                             <U025B> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                <UEFD0><x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <Multi_key><grave><asciitilde>                                                     <numbersign><x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
+<dead_grave><dead_tilde>                                                                       <x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
+<Multi_key><grave><asciitilde>                                                                 <x> : "ɛ̃̀" # U025B U0303 U0300 LATIN SMALL LETTER OPEN E WITH TILDE AND GRAVE
 <dead_tilde><dead_acute>                                                                   <U0190> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                        <U0190> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_tilde><dead_acute>                                                                <UEFD0><X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                <numbersign><X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
+<dead_tilde><dead_acute>                                                                       <X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
+<Multi_key><asciitilde><apostrophe>                                                            <X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                   <U0190> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                        <U0190> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                <UEFD0><X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                <numbersign><X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
+<dead_acute><dead_tilde>                                                                       <X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
+<Multi_key><apostrophe><asciitilde>                                                            <X> : "Ɛ̃́" # U0190 U0303 U0301 LATIN CAPITAL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_tilde><dead_acute>                                                                   <U025B> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                        <U025B> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_tilde><dead_acute>                                                                <UEFD0><x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                <numbersign><x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
+<dead_tilde><dead_acute>                                                                       <x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
+<Multi_key><asciitilde><apostrophe>                                                            <x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                   <U025B> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                        <U025B> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                <UEFD0><x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                <numbersign><x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
+<dead_acute><dead_tilde>                                                                       <x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
+<Multi_key><apostrophe><asciitilde>                                                            <x> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_macron>                                                                              <U0190> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                           <U0190> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                           <UEFD0><X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                   <numbersign><X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
+<dead_macron>                                                                                  <X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
+<Multi_key><bar>                                                                               <X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                              <U025B> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                           <U025B> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                           <UEFD0><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                   <numbersign><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
+<dead_macron>                                                                                  <x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
+<Multi_key><bar>                                                                               <x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <dead_caron>                                                                               <U0190> : "Ɛ̌" # U0190 U030C LATIN CAPITAL LETTER OPEN E WITH CARON
 <Multi_key><greater>                                                                       <U0190> : "Ɛ̌" # U0190 U030C LATIN CAPITAL LETTER OPEN E WITH CARON
 <dead_caron>                                                                            <UEFD0><X> : "Ɛ̌" # U0190 U030C LATIN CAPITAL LETTER OPEN E WITH CARON
 <Multi_key><greater>                                                               <numbersign><X> : "Ɛ̌" # U0190 U030C LATIN CAPITAL LETTER OPEN E WITH CARON
+<dead_caron>                                                                                   <X> : "Ɛ̌" # U0190 U030C LATIN CAPITAL LETTER OPEN E WITH CARON
+<Multi_key><greater>                                                                           <X> : "Ɛ̌" # U0190 U030C LATIN CAPITAL LETTER OPEN E WITH CARON
 <dead_caron>                                                                               <U025B> : "ɛ̌" # U025B U030C LATIN SMALL LETTER OPEN E WITH CARON
 <Multi_key><greater>                                                                       <U025B> : "ɛ̌" # U025B U030C LATIN SMALL LETTER OPEN E WITH CARON
 <dead_caron>                                                                            <UEFD0><x> : "ɛ̌" # U025B U030C LATIN SMALL LETTER OPEN E WITH CARON
 <Multi_key><greater>                                                               <numbersign><x> : "ɛ̌" # U025B U030C LATIN SMALL LETTER OPEN E WITH CARON
+<dead_caron>                                                                                   <x> : "ɛ̌" # U025B U030C LATIN SMALL LETTER OPEN E WITH CARON
+<Multi_key><greater>                                                                           <x> : "ɛ̌" # U025B U030C LATIN SMALL LETTER OPEN E WITH CARON
 <dead_tilde><dead_grave>                                                                       <I> : "Ĩ̀" # U0128 U0300 LATIN CAPITAL LETTER I WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                                 <I> : "Ĩ̀" # U0128 U0300 LATIN CAPITAL LETTER I WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                       <I> : "Ĩ̀" # U0128 U0300 LATIN CAPITAL LETTER I WITH TILDE AND GRAVE
@@ -1008,34 +1044,38 @@
 <Multi_key><asciitilde><apostrophe>                                                            <i> : "ĩ́" # U0129 U0301 LATIN SMALL LETTER I WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                       <i> : "ĩ́" # U0129 U0301 LATIN SMALL LETTER I WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                            <i> : "ĩ́" # U0129 U0301 LATIN SMALL LETTER I WITH TILDE AND ACUTE
-<dead_grave>                                                                            <UEFD0><M> : "Ɩ̀" # U0196 U0300 LATIN CAPITAL LETTER IOTA WITH GRAVE
-<Multi_key><grave>                                                                 <numbersign><M> : "Ɩ̀" # U0196 U0300 LATIN CAPITAL LETTER IOTA WITH GRAVE
-<dead_grave>                                                                            <UEFD0><m> : "ɩ̀" # U0269 U0300 LATIN SMALL LETTER IOTA WITH GRAVE
-<Multi_key><grave>                                                                 <numbersign><m> : "ɩ̀" # U0269 U0300 LATIN SMALL LETTER IOTA WITH GRAVE
-<dead_acute>                                                                            <UEFD0><M> : "Ɩ́" # U0196 U0301 LATIN CAPITAL LETTER IOTA WITH ACUTE
-<Multi_key><apostrophe>                                                            <numbersign><M> : "Ɩ́" # U0196 U0301 LATIN CAPITAL LETTER IOTA WITH ACUTE
-<dead_acute>                                                                            <UEFD0><m> : "ɩ́" # U0269 U0301 LATIN SMALL LETTER IOTA WITH ACUTE
-<Multi_key><apostrophe>                                                            <numbersign><m> : "ɩ́" # U0269 U0301 LATIN SMALL LETTER IOTA WITH ACUTE
-<dead_circumflex>                                                                       <UEFD0><M> : "Ɩ̂" # U0196 U0302 LATIN CAPITAL LETTER IOTA WITH CIRCUMFLEX
-<Multi_key><less>                                                                  <numbersign><M> : "Ɩ̂" # U0196 U0302 LATIN CAPITAL LETTER IOTA WITH CIRCUMFLEX
-<dead_circumflex>                                                                       <UEFD0><m> : "ɩ̂" # U0269 U0302 LATIN SMALL LETTER IOTA WITH CIRCUMFLEX
-<Multi_key><less>                                                                  <numbersign><m> : "ɩ̂" # U0269 U0302 LATIN SMALL LETTER IOTA WITH CIRCUMFLEX
-<dead_macron>                                                                           <UEFD0><M> : "Ɩ̄" # U0196 U0304 LATIN CAPITAL LETTER IOTA WITH MACRON
-<Multi_key><bar>                                                                   <numbersign><M> : "Ɩ̄" # U0196 U0304 LATIN CAPITAL LETTER IOTA WITH MACRON
-<dead_macron>                                                                           <UEFD0><m> : "ɩ̄" # U0269 U0304 LATIN SMALL LETTER IOTA WITH MACRON
-<Multi_key><bar>                                                                   <numbersign><m> : "ɩ̄" # U0269 U0304 LATIN SMALL LETTER IOTA WITH MACRON
-<dead_caron>                                                                            <UEFD0><M> : "Ɩ̌" # U0196 U030C LATIN CAPITAL LETTER IOTA WITH CARON
-<Multi_key><greater>                                                               <numbersign><M> : "Ɩ̌" # U0196 U030C LATIN CAPITAL LETTER IOTA WITH CARON
-<dead_caron>                                                                            <UEFD0><m> : "ɩ̌" # U0269 U030C LATIN SMALL LETTER IOTA WITH CARON
-<Multi_key><greater>                                                               <numbersign><m> : "ɩ̌" # U0269 U030C LATIN SMALL LETTER IOTA WITH CARON
-<dead_grave>                                                                            <UEFD0><N> : "Ŋ̀" # U014A U0300 LATIN CAPITAL LETTER ENG WITH GRAVE
-<Multi_key><grave>                                                                 <numbersign><N> : "Ŋ̀" # U014A U0300 LATIN CAPITAL LETTER ENG WITH GRAVE
-<dead_grave>                                                                            <UEFD0><n> : "ŋ̀" # U014B U0300 LATIN SMALL LETTER ENG WITH GRAVE
-<Multi_key><grave>                                                                 <numbersign><n> : "ŋ̀" # U014B U0300 LATIN SMALL LETTER ENG WITH GRAVE
-<dead_acute>                                                                            <UEFD0><N> : "Ŋ́" # U014A U0301 LATIN CAPITAL LETTER ENG WITH ACUTE
-<Multi_key><apostrophe>                                                            <numbersign><N> : "Ŋ́" # U014A U0301 LATIN CAPITAL LETTER ENG WITH ACUTE
-<dead_acute>                                                                            <UEFD0><n> : "ŋ́" # U014B U0301 LATIN SMALL LETTER ENG WITH ACUTE
-<Multi_key><apostrophe>                                                            <numbersign><n> : "ŋ́" # U014B U0301 LATIN SMALL LETTER ENG WITH ACUTE
+<dead_grave>                                                                            <UEFD0><I> : "Ɩ̀" # U0196 U0300 LATIN CAPITAL LETTER IOTA WITH GRAVE
+<Multi_key><grave>                                                                 <numbersign><I> : "Ɩ̀" # U0196 U0300 LATIN CAPITAL LETTER IOTA WITH GRAVE
+<dead_grave>                                                                            <UEFD0><i> : "ɩ̀" # U0269 U0300 LATIN SMALL LETTER IOTA WITH GRAVE
+<Multi_key><grave>                                                                 <numbersign><i> : "ɩ̀" # U0269 U0300 LATIN SMALL LETTER IOTA WITH GRAVE
+<dead_acute>                                                                            <UEFD0><I> : "Ɩ́" # U0196 U0301 LATIN CAPITAL LETTER IOTA WITH ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><I> : "Ɩ́" # U0196 U0301 LATIN CAPITAL LETTER IOTA WITH ACUTE
+<dead_acute>                                                                            <UEFD0><i> : "ɩ́" # U0269 U0301 LATIN SMALL LETTER IOTA WITH ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><i> : "ɩ́" # U0269 U0301 LATIN SMALL LETTER IOTA WITH ACUTE
+<dead_circumflex>                                                                       <UEFD0><I> : "Ɩ̂" # U0196 U0302 LATIN CAPITAL LETTER IOTA WITH CIRCUMFLEX
+<Multi_key><less>                                                                  <numbersign><I> : "Ɩ̂" # U0196 U0302 LATIN CAPITAL LETTER IOTA WITH CIRCUMFLEX
+<dead_circumflex>                                                                       <UEFD0><i> : "ɩ̂" # U0269 U0302 LATIN SMALL LETTER IOTA WITH CIRCUMFLEX
+<Multi_key><less>                                                                  <numbersign><i> : "ɩ̂" # U0269 U0302 LATIN SMALL LETTER IOTA WITH CIRCUMFLEX
+<dead_macron>                                                                           <UEFD0><I> : "Ɩ̄" # U0196 U0304 LATIN CAPITAL LETTER IOTA WITH MACRON
+<Multi_key><bar>                                                                   <numbersign><I> : "Ɩ̄" # U0196 U0304 LATIN CAPITAL LETTER IOTA WITH MACRON
+<dead_macron>                                                                           <UEFD0><i> : "ɩ̄" # U0269 U0304 LATIN SMALL LETTER IOTA WITH MACRON
+<Multi_key><bar>                                                                   <numbersign><i> : "ɩ̄" # U0269 U0304 LATIN SMALL LETTER IOTA WITH MACRON
+<dead_caron>                                                                            <UEFD0><I> : "Ɩ̌" # U0196 U030C LATIN CAPITAL LETTER IOTA WITH CARON
+<Multi_key><greater>                                                               <numbersign><I> : "Ɩ̌" # U0196 U030C LATIN CAPITAL LETTER IOTA WITH CARON
+<dead_caron>                                                                            <UEFD0><i> : "ɩ̌" # U0269 U030C LATIN SMALL LETTER IOTA WITH CARON
+<Multi_key><greater>                                                               <numbersign><i> : "ɩ̌" # U0269 U030C LATIN SMALL LETTER IOTA WITH CARON
+<dead_grave>                                                                            <UEFD0><G> : "Ŋ̀" # U014A U0300 LATIN CAPITAL LETTER ENG WITH GRAVE
+<Multi_key><grave>                                                                 <numbersign><G> : "Ŋ̀" # U014A U0300 LATIN CAPITAL LETTER ENG WITH GRAVE
+<dead_grave>                                                                                   <G> : "Ŋ̀" # U014A U0300 LATIN CAPITAL LETTER ENG WITH GRAVE
+<Multi_key><grave>                                                                             <G> : "Ŋ̀" # U014A U0300 LATIN CAPITAL LETTER ENG WITH GRAVE
+<dead_grave>                                                                            <UEFD0><g> : "ŋ̀" # U014B U0300 LATIN SMALL LETTER ENG WITH GRAVE
+<Multi_key><grave>                                                                 <numbersign><g> : "ŋ̀" # U014B U0300 LATIN SMALL LETTER ENG WITH GRAVE
+<dead_grave>                                                                                   <g> : "ŋ̀" # U014B U0300 LATIN SMALL LETTER ENG WITH GRAVE
+<Multi_key><grave>                                                                             <g> : "ŋ̀" # U014B U0300 LATIN SMALL LETTER ENG WITH GRAVE
+<dead_acute>                                                                            <UEFD0><G> : "Ŋ́" # U014A U0301 LATIN CAPITAL LETTER ENG WITH ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><G> : "Ŋ́" # U014A U0301 LATIN CAPITAL LETTER ENG WITH ACUTE
+<dead_acute>                                                                            <UEFD0><g> : "ŋ́" # U014B U0301 LATIN SMALL LETTER ENG WITH ACUTE
+<Multi_key><apostrophe>                                                            <numbersign><g> : "ŋ́" # U014B U0301 LATIN SMALL LETTER ENG WITH ACUTE
 <dead_tilde><dead_grave>                                                                       <O> : "Õ̀" # U00F5 U0300 LATIN CAPITAL LETTER O WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                                 <O> : "Õ̀" # U00F5 U0300 LATIN CAPITAL LETTER O WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                       <O> : "Õ̀" # U00F5 U0300 LATIN CAPITAL LETTER O WITH TILDE AND GRAVE
@@ -1048,10 +1088,14 @@
 <Multi_key><grave>                                                                         <U0186> : "Ɔ̀" # U0186 U0300 LATIN CAPITAL LETTER OPEN O WITH GRAVE
 <dead_grave>                                                                            <UEFD0><C> : "Ɔ̀" # U0186 U0300 LATIN CAPITAL LETTER OPEN O WITH GRAVE
 <Multi_key><grave>                                                                 <numbersign><C> : "Ɔ̀" # U0186 U0300 LATIN CAPITAL LETTER OPEN O WITH GRAVE
+<dead_grave>                                                                                   <C> : "Ɔ̀" # U0186 U0300 LATIN CAPITAL LETTER OPEN O WITH GRAVE
+<Multi_key><grave>                                                                             <C> : "Ɔ̀" # U0186 U0300 LATIN CAPITAL LETTER OPEN O WITH GRAVE
 <dead_grave>                                                                               <U0254> : "ɔ̀" # U0254 U0300 LATIN SMALL LETTER OPEN O WITH GRAVE
 <Multi_key><grave>                                                                         <U0254> : "ɔ̀" # U0254 U0300 LATIN SMALL LETTER OPEN O WITH GRAVE
 <dead_grave>                                                                            <UEFD0><c> : "ɔ̀" # U0254 U0300 LATIN SMALL LETTER OPEN O WITH GRAVE
 <Multi_key><grave>                                                                 <numbersign><c> : "ɔ̀" # U0254 U0300 LATIN SMALL LETTER OPEN O WITH GRAVE
+<dead_grave>                                                                                   <c> : "ɔ̀" # U0254 U0300 LATIN SMALL LETTER OPEN O WITH GRAVE
+<Multi_key><grave>                                                                             <c> : "ɔ̀" # U0254 U0300 LATIN SMALL LETTER OPEN O WITH GRAVE
 <dead_acute>                                                                               <U0186> : "Ɔ́" # U0186 U0301 LATIN CAPITAL LETTER OPEN O WITH ACUTE
 <Multi_key><apostrophe>                                                                    <U0186> : "Ɔ́" # U0186 U0301 LATIN CAPITAL LETTER OPEN O WITH ACUTE
 <dead_acute>                                                                            <UEFD0><C> : "Ɔ́" # U0186 U0301 LATIN CAPITAL LETTER OPEN O WITH ACUTE
@@ -1096,18 +1140,26 @@
 <Multi_key><asciitilde><apostrophe>                                                        <U0186> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_tilde><dead_acute>                                                                <UEFD0><C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                <numbersign><C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
+<dead_tilde><dead_acute>                                                                       <C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
+<Multi_key><asciitilde><apostrophe>                                                            <C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                   <U0186> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                        <U0186> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                <UEFD0><C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                <numbersign><C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
+<dead_acute><dead_tilde>                                                                       <C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
+<Multi_key><apostrophe><asciitilde>                                                            <C> : "Ɔ̃́" # U0186 U0303 U0301 LATIN CAPITAL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_tilde><dead_acute>                                                                   <U0254> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                        <U0254> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_tilde><dead_acute>                                                                <UEFD0><c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><asciitilde><apostrophe>                                                <numbersign><c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
+<dead_tilde><dead_acute>                                                                       <c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
+<Multi_key><asciitilde><apostrophe>                                                            <c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                   <U0254> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                        <U0254> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_acute><dead_tilde>                                                                <UEFD0><c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <Multi_key><apostrophe><asciitilde>                                                <numbersign><c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
+<dead_acute><dead_tilde>                                                                       <c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
+<Multi_key><apostrophe><asciitilde>                                                            <c> : "ɔ̃́" # U0254 U0303 U0301 LATIN SMALL LETTER OPEN O WITH TILDE AND ACUTE
 <dead_macron>                                                                              <U0186> : "Ɔ̄" # U0186 U0304 LATIN CAPITAL LETTER OPEN O WITH MACRON
 <Multi_key><bar>                                                                           <U0186> : "Ɔ̄" # U0186 U0304 LATIN CAPITAL LETTER OPEN O WITH MACRON
 <dead_macron>                                                                           <UEFD0><C> : "Ɔ̄" # U0186 U0304 LATIN CAPITAL LETTER OPEN O WITH MACRON
@@ -1136,6 +1188,8 @@
 <Multi_key><grave>                                                     <numbersign><numbersign><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <dead_grave>                                                                            <UEFD0><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <Multi_key><grave>                                                                 <numbersign><V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
+<dead_grave>                                                                                   <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
+<Multi_key><grave>                                                                             <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <dead_hook><dead_grave>                                                                        <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <Multi_key><braceleft><grave>                                                                  <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
 <dead_grave><dead_hook>                                                                        <V> : "Ʋ̀" # U01B2 U0300 LATIN CAPITAL LETTER V WITH HOOK AND GRAVE
@@ -1144,6 +1198,8 @@
 <Multi_key><grave>                                                     <numbersign><numbersign><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <dead_grave>                                                                            <UEFD0><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <Multi_key><grave>                                                                 <numbersign><v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
+<dead_grave>                                                                                   <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
+<Multi_key><grave>                                                                             <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <dead_hook><dead_grave>                                                                        <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <Multi_key><braceleft><grave>                                                                  <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
 <dead_grave><dead_hook>                                                                        <v> : "ʋ̀" # U028B U0300 LATIN SMALL LETTER V WITH HOOK AND GRAVE
@@ -4720,10 +4776,6 @@
 <Multi_key><asciitilde>                                                                        <W> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
 <dead_tilde>                                                                                   <w> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
 <Multi_key><asciitilde>                                                                        <w> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
-<dead_tilde>                                                                                   <X> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
-<Multi_key><asciitilde>                                                                        <X> : "︢" UFE22 # COMBINING DOUBLE TILDE LEFT HALF
-<dead_tilde>                                                                                   <x> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
-<Multi_key><asciitilde>                                                                        <x> : "︣" UFE23 # COMBINING DOUBLE TILDE RIGHT HALF
 <dead_tilde>                                                                                   <Y> : "Ỹ" U1EF8 # LATIN CAPITAL LETTER Y WITH TILDE
 <Multi_key><asciitilde>                                                                        <Y> : "Ỹ" U1EF8 # LATIN CAPITAL LETTER Y WITH TILDE
 <dead_tilde>                                                                                   <y> : "ỹ" U1EF9 # LATIN SMALL LETTER Y WITH TILDE
@@ -8095,8 +8147,9 @@
 #
 # # HORIZONTAL BAR for African, Breton and Polynesian variants
 #
-#   Two positions on key E08 are used for Ɔɔ U0186, U0254 or Ññ U00D1, U00F1,
-#   or the macron dead key and the ʻeta "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#   The base and shift positions on key E08 are used for "ɔ" U0254, "Ɔ" U0186,
+#   or for "ñ" U00F1, "Ñ" U00D1, or for the macron dead key and ʻeta "ʻ" U02BB
+#   MODIFIER LETTER TURNED COMMA.
 #
 #   To work around the loss of the key position where the HORIZONTAL BAR dash
 #   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
@@ -11930,10 +11983,6 @@
 <Multi_key><bar>                                                                               <V> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_macron>                                                                                  <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <Multi_key><bar>                                                                               <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<dead_macron>                                                                                  <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<Multi_key><bar>                                                                               <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<dead_macron>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
-<Multi_key><bar>                                                                               <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <dead_macron>                                                                                  <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
 <Multi_key><bar>                                                                               <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
 <dead_macron>                                                                                  <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
@@ -15668,6 +15717,8 @@
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <Multi_key><grave>                                                                    <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
+<dead_grave>                                                                            <asterisk> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
+<Multi_key><grave>                                                                      <asterisk> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
 <dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <Multi_key><grave>                                                                         <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
 <dead_grave>                                                                                   <1> : "‵" U2035 # REVERSED PRIME
@@ -15718,10 +15769,6 @@
 <Multi_key><grave>                                                                             <W> : "Ẁ" U1E80 # LATIN CAPITAL LETTER W WITH GRAVE
 <dead_grave>                                                                                   <w> : "ẁ" U1E81 # LATIN SMALL LETTER W WITH GRAVE
 <Multi_key><grave>                                                                             <w> : "ẁ" U1E81 # LATIN SMALL LETTER W WITH GRAVE
-<dead_grave>                                                                                   <X> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
-<Multi_key><grave>                                                                             <X> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
-<dead_grave>                                                                                   <x> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
-<Multi_key><grave>                                                                             <x> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
 <dead_grave>                                                                                   <Y> : "Ỳ" U1EF2 # LATIN CAPITAL LETTER Y WITH GRAVE
 <Multi_key><grave>                                                                             <Y> : "Ỳ" U1EF2 # LATIN CAPITAL LETTER Y WITH GRAVE
 <dead_grave>                                                                                   <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
