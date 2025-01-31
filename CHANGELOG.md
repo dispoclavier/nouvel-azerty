@@ -17,14 +17,8 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 Correction des touches mortes sous Linux.
 
 * Composition : Simplifier ou corriger les séquences de "⇝" U+21DD, "≄" U+2244, "≇" U+2247, "≉" U+2249, "≊" U+224A, "≌" U+224C, "⋍" U+22CD, "⌉" U+2309, "▴" U+25B4, "⟿" U+27FF, "⤨" U+2928, "⤩" U+2929, "⥲" U+2972, "⦭" U+29AD, "⦮" U+29AE, "⧩" U+29E9, "⨳" U+2A33, "⩡" U+2A61, "⩬" U+2A6C, "⩮" U+2A6E, "⪟" U+2A9F, "⪠" U+2AA0, "⫳" U+2AF3, "⭁" U+2B41, "⭇" U+2B47, "⭉" U+2B49. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b)
-* Transformations :
-	* Exposant et tourné : Ajouter un raccourci pour "𐞧" U+107A7. compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374)
-	* Exposant et crochet rétroflexe : Ajouter des raccourcis pour "𐞝" U+1079D et "𐞧" U+107A7. ibidem
-	* Exposant et tourné et crochet rétroflexe : Supprimer comme inutilement long. ibidem
-	* Exposant et tourné et macron et crochet rétroflexe : Supprimer comme inutilement long. ibidem
-	* Exposant et réfléchi et barré : Supprimer comme inutilement long. ibidem
-	* Tilde et perluète : Mettre "△" U+25B3 à la place de "ǃ" U+01C3 comme caractère espaçant vedette, pour la cohérence avec "⃤" U+20E4 et la silhouette de la perluète. ibidem
-* Documentation : Corriger et compléter des annotations. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b), compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374), compose-3.yml [a7f700b](https://github.com/dispoclavier/nouvel-azerty/commit/a7f700b7397ba7c4ca412769291d25f8a93c71c0)
+* Transformations : Tilde et perluète : Redonder "△" U+25B3 à la place de "ǃ" U+01C3 comme caractère espaçant vedette, pour la cohérence avec "⃤" U+20E4 et la silhouette de la perluète. compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374)
+* Documentation : Corriger et compléter des annotations. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b), [fbd6680](https://github.com/dispoclavier/nouvel-azerty/commit/fbd6680fe8c9f79ebf08b55899cf8d19f9db9530), compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374), compose-3.yml [a7f700b](https://github.com/dispoclavier/nouvel-azerty/commit/a7f700b7397ba7c4ca412769291d25f8a93c71c0)
 
 ## 4.19.0 (2025-01-26)
 
