@@ -228,8 +228,8 @@
 #   Consistently, "‍" U200D ZERO WIDTH JOINER is the cursive joiner.
 #   The new names are intended to improve familiarity, as opposed to the legacy
 #   names based on “ZERO WIDTH”.
-#   https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+#   https://github.com/unicode-org/cldr/blob/f7cb2b5ca09cdaf651912695f93903cc35cab69c/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
