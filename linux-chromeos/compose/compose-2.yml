@@ -64,10 +64,11 @@
 #   en_US.UTF-8/Compose need to be redefined, by making more extensive use
 #   of ASCII symbols and punctuation.
 #
-#   With Multi_key thought of as a generic dead key taking arguments,
-#   the base letter that those modifications are applied to is typed last.
-#   This pattern performs much better, as it empowers XCompose to apply
-#   multiple diacritics as used e.g. in Vietnamese and Lithuanian.
+#   With Multi_key thought of as a generic dead key taking arguments, the base
+#   letter that those modifications are applied to is typed last. As this
+#   pattern empowers XCompose to apply multiple diacritics, used e.g. in
+#   Vietnamese and in Lithuanian, it performs much better than the other way
+#   around.
 #
 #   As a result, semantics of paired punctuation may be switched compared to
 #   en_US.UTF-8/Compose. Examples of multikey equivalents for dead_breve:
@@ -494,15 +495,14 @@
 #   Dead key combinations, called chained dead keys on Windows, are actionable
 #   both ways for two diacritics, except when order matters, for diacritics to
 #   be positioned above, stacked in one order or the other way around, e.g. on
-#   "Ṻ" U1E7A and "ṻ" U1E7B versus "Ǖ" U01D5 and "ǖ" U01D6, or when a Multi_key
+#   "Ṻ" U1E7A and "ṻ" U1E7B versus "Ǖ" U01D5 and "ǖ" U01D6; or when a multikey
 #   equivalent would conflict with another input method, e.g. "Ḉ" U1E08 and "ḉ"
 #   U1E09 with "ʻ" U02BB by dead_acute, "Ǘ" U01D7 and "ǘ" U01D8 with "‚" U201A
-#   by dead_diaeresis.
+#   by dead_diaeresis; or when diacritical or transformational dead keys are
+#   applied to letters in groups, as then the group dead key is to be hit last,
+#   next to the base letter, a behavior that is consistent and that prevents
+#   conflicts and helps streamline code and maintenance.
 #   See # # Quotation mark input method
-#
-#   Diacritic or transformational dead keys applied to letters in groups are to
-#   be hit first, before the group dead key. That behavior is consistent and it
-#   helps streamline code and maintenance, and above all it prevents conflicts.
 #
 #
 # # Quotation mark input method
@@ -556,6 +556,7 @@
 #   See # # CIRCUMFLEX&ACUTE
 #   See # # DIAERESIS&ACUTE
 #   See # # ACUTE&GRAVE
+#   See # # Order of mixed dead keys
 #
 #   The Unicode informative aliases are appended to the Unicode identifiers of
 #   single and double apostrophe quotation marks and comma quotation marks.
@@ -1923,13 +1924,6 @@
 #   Lenient group selection
 #   Dchar: "ᵄ" U1D44
 #
-#   This also includes a shortcut for "𐞧" U107A7.
-#   See ### Multikey sequences
-#
-<UEFD1><UEFD5>                                                                        <braceright> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><percent>                                                     <braceright> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD1>                                                                        <braceright> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><asciicircum>                                                     <braceright> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5>                                                                             <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><asciicircum><percent>                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5><UEFD1>                                                                             <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -2079,6 +2073,11 @@
 # # SUPERSCRIPT&TURNED&RETROFLEX_HOOK
 #   Dchar: 
 #
+#   As this dead key exists for "𐞧" U107A7 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
+#
 <UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5><UEFD4>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
@@ -2096,9 +2095,14 @@
 # # SUPERSCRIPT&TURNED&BREVE
 #   Dchar: 
 #
-#   Does not work the way <UEFD1><dead_breve><UEFD5> because the multikey equi-
-#   valents of <UEFD1><dead_breve><UEFD5> and <UEFD1><parenright> conflict, and
-#   the superscript parentheses have precedence.
+#   As this dead key exists for "𐞡" U107A1 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
+#
+#   This does not work the way <UEFD1><dead_breve><UEFD5>, because the multikey
+#   equivalents of <UEFD1><dead_breve><UEFD5> and <UEFD1><parenright> conflict,
+#   and the superscript parentheses have precedence.
 #
 <UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><asciicircum><percent><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
@@ -2143,6 +2147,11 @@
 #
 # # SUPERSCRIPT&TURNED&MACRON&RETROFLEX_HOOK
 #   Dchar: 
+#
+#   As this dead key exists for "𐞧" U107A7 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
 #
 <UEFD1><UEFD5><dead_macron><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><percent><bar><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
@@ -2318,6 +2327,14 @@
 #   Lenient group selection
 #   Dchar: 
 #
+#   As this dead key exists for "𐞴" U107B4 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
+#
+#   This does not work the way <UEFD1><UEFD8><UEFD6>, because the multikey
+#   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
+#   superscript minus sign has precedence.
 #   See # # SUPERSCRIPT&BAR
 #
 <UEFD1><UEFD6><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -2335,7 +2352,18 @@
 # # SUPERSCRIPT&REVERSED&BAR&GROUP_1
 #   Dchar: 
 #
+#   As this dead key exists for "𐞴" U107B4 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
+#
+#   This does not work the way <UEFD1><UEFD8><UEFD6><UEFD0>, because the
+#   multikey equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and
+#   the superscript minus sign has precedence; and because the group dead key
+#   must be pressed last, next to the base letter.
+#   See # # SUPERSCRIPT&REVERSED&BAR
 #   See # # SUPERSCRIPT&BAR
+#   See # # Order of mixed dead keys
 #
 <UEFD1><UEFD6><UEFD8><UEFD0>                                                                   <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus><numbersign>                                         <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -2446,6 +2474,11 @@
 #
 # # SUPERSCRIPT&HOOK&RETROFLEX_HOOK
 #   Dchar: 
+#
+#   As this dead key exists for "𐞍" U1078D only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
 #
 <UEFD1><dead_hook><UEFD4>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><asciicircum><braceleft><braceright>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
@@ -2656,17 +2689,6 @@
 #   Lenient group selection
 #   Dchar: 
 #
-#   This also includes shortcuts for "𐞝" U1079D and "𐞧" U107A7.
-#   See ### Multikey sequences
-#
-<UEFD1><UEFD4>                                                                           <percent> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><braceright>                                                     <percent> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD1>                                                                           <percent> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><asciicircum>                                                     <percent> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><UEFD4>                                                                        <parenright> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><asciicircum><braceright>                                                  <parenright> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><UEFD1>                                                                        <parenright> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><asciicircum>                                                  <parenright> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <UEFD1><UEFD4>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <Multi_key><asciicircum><braceright>                                                           <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <UEFD4><UEFD1>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
@@ -2893,9 +2915,14 @@
 # # SUPERSCRIPT&RETROFLEX_HOOK&BREVE
 #   Dchar: 
 #
-#   Does not work the way <UEFD1><dead_breve><UEFD4> because the multikey equi-
-#   valents of <UEFD1><dead_breve><UEFD4> and <UEFD1><parenright> conflict, and
-#   the superscript parentheses have precedence.
+#   As this dead key exists for "𐞝" U1079D only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
+#
+#   This does not work the way <UEFD1><dead_breve><UEFD4>, because the multikey
+#   equivalents of <UEFD1><dead_breve><UEFD4> and <UEFD1><parenright> conflict,
+#   and the superscript parentheses have precedence.
 #
 <UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><braceright><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
@@ -2911,6 +2938,11 @@
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK&BREVE_BELOW
 #   Dchar: 
+#
+#   As this dead key exists for "𐞝" U1079D only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
 #
 <UEFD1><UEFD4><dead_breve><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><braceright><parenright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
@@ -2954,9 +2986,9 @@
 # # SUPERSCRIPT&BREVE
 #   Dchar: 
 #
-#   Works only the way <dead_breve><UEFD1> because the multikey equivalents of
-#   <UEFD1><dead_breve> and <UEFD1><parenright> conflict, and the superscript
-#   parentheses have precedence.
+#   This works only the way <dead_breve><UEFD1>, because the multikey
+#   equivalents of <UEFD1><dead_breve> and <UEFD1><parenright> conflict, and
+#   the superscript parentheses have precedence.
 #
 <dead_breve><UEFD1>                                                                            <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><asciicircum>                                                           <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
@@ -2968,7 +3000,7 @@
 #   Lenient group selection
 #   Dchar: 
 #
-#   Works only the way <UEFD8><UEFD1> because the multikey equivalents of
+#   This works only the way <UEFD8><UEFD1>, because the multikey equivalents of
 #   <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the superscript minus sign
 #   has precedence.
 #
@@ -2993,7 +3025,12 @@
 # # SUPERSCRIPT&BAR&GROUP_1
 #   Dchar: 
 #
+#   This works only the way <UEFD8><UEFD1><UEFD0>, because the multikey
+#   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
+#   superscript minus sign has precedence; and because the group dead key must
+#   be pressed last, next to the base letter.
 #   See # # SUPERSCRIPT&BAR
+#   See # # Order of mixed dead keys
 #
 <UEFD8><UEFD1><UEFD0>                                                                          <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><minus><asciicircum><numbersign>                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
@@ -3069,6 +3106,11 @@
 # # SUPERSCRIPT&SUBSCRIPT&HOOK
 #   Dchar: 
 #
+#   As this dead key exists for "𐞔" U10794 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
+#
 <UEFD1><UEFD2><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><asciicircum><underscore><braceleft>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <UEFD2><UEFD1><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
@@ -3086,13 +3128,18 @@
 # # SUPERSCRIPT&SUBSCRIPT&BREVE
 #   Dchar: 
 #
-#   Does not work the way <UEFD1><dead_breve><UEFD2> because the multikey equi-
-#   valents of <UEFD1><dead_breve><UEFD2> and <UEFD1><parenright> conflict, and
-#   the superscript parentheses have precedence.
+#   As this dead key exists for "𐞜" U1079C only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
 #
-#   Does not work the way <UEFD2><dead_breve><UEFD1> either, because the multi-
-#   key equivalents of <UEFD2><dead_breve><UEFD1> and <UEFD2><parenright> con-
-#   flict, and the subscript parentheses have precedence.
+#   This does not work the way <UEFD1><dead_breve><UEFD2> because the multikey
+#   equivalents of <UEFD1><dead_breve><UEFD2> and <UEFD1><parenright> conflict,
+#   and the superscript parentheses have precedence.
+#
+#   This does not work the way <UEFD2><dead_breve><UEFD1> either, because the
+#   multikey equivalents of <UEFD2><dead_breve><UEFD1> and <UEFD2><parenright>
+#   conflict, and the subscript parentheses have precedence.
 #
 <UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><asciicircum><underscore><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
@@ -3107,21 +3154,37 @@
 # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   Dchar: 
 #
+#   As this dead key exists for "ᶧ" U1DA7 only, a character that is in the BMP,
+#   it is streamlined by cropping the base character, "I".
+#   See ### Multikey sequences
+#
+#   This does not work the way <UEFD1><UEFD8><UEFD2>, because the multikey
+#   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
+#   superscript minus sign has precedence.
 #   See # # SUPERSCRIPT&BAR
+#
+#   This does not work the way <UEFD2><UEFD8><UEFD1> either, because the
+#   multikey equivalents of <UEFD2><UEFD8> and <UEFD2><minus> conflict, and
+#   the subscript minus sign has precedence.
 #   See # # SUBSCRIPT&BAR
 #
-<UEFD1><UEFD2><UEFD8>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><underscore><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<UEFD2><UEFD1><UEFD8>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><underscore><asciicircum><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<UEFD8><UEFD1><UEFD2>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><minus><asciicircum><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<UEFD8><UEFD2><UEFD1>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><minus><underscore><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<UEFD1><UEFD2><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><asciicircum><underscore><minus>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<UEFD2><UEFD1><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><underscore><asciicircum><minus>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<UEFD8><UEFD1><UEFD2>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><minus><asciicircum><underscore>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<UEFD8><UEFD2><UEFD1>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><minus><underscore><asciicircum>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 #
 #
 # # SUPERSCRIPT&STROKE
 #   Dchar: 
+#
+#   As this dead key exists for "𐞢" U107A2 only, it could be streamlined, but
+#   it is not, with respect to the ability to output the high surrogate.
+#   See ### Multikey sequences
+#   See # # High surrogate input method
 #
 <UEFD1><dead_stroke>                                                                           <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 <Multi_key><asciicircum><slash>                                                                <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
@@ -3357,10 +3420,14 @@
 # # COMBINING_ABOVE&CEDILLA
 #   Dchar: 
 #
-<UEFD1><UEFD1><dead_cedilla>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<Multi_key><asciicircum><asciicircum><comma>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<dead_cedilla><UEFD1><UEFD1>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<Multi_key><comma><asciicircum><asciicircum>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+#   As this dead key exists for "ᷗ" U1DD7 only, a character that is in the BMP,
+#   it is streamlined by cropping the base character, "c".
+#   See ### Multikey sequences
+#
+<UEFD1><UEFD1><dead_cedilla>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><asciicircum><asciicircum><comma>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<dead_cedilla><UEFD1><UEFD1>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><comma><asciicircum><asciicircum>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 #
 #
 # # COMBINING_ABOVE&DIAERESIS
@@ -11368,9 +11435,9 @@
 # # SUBSCRIPT&BREVE
 #   Dchar: 
 #
-#   Works only the way <dead_breve><UEFD2> because the multikey equivalents of
-#   <UEFD2><dead_breve> and <UEFD2><parenright> conflict, and the subscript
-#   parentheses have precedence.
+#   This works only the way <dead_breve><UEFD2>, because the multikey
+#   equivalents of <UEFD2><dead_breve> and <UEFD2><parenright> conflict, and
+#   the subscript parentheses have precedence.
 #
 <dead_breve><UEFD2>                                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><underscore>                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
@@ -11379,9 +11446,9 @@
 # # SUBSCRIPT&BAR
 #   Dchar: 
 #
-#   Works only the way <UEFD8><UEFD2> because the multikey equivalents of
-#   <UEFD2><UEFD8> and <UEFD2><minus> conflict, and the subscript minus
-#   sign has precedence.
+#   This works only the way <UEFD8><UEFD2>, because the multikey
+#   equivalents of <UEFD2><UEFD8> and <UEFD2><minus> conflict, and the
+#   subscript minus sign has precedence.
 #
 <UEFD8><UEFD2>                                                                                 <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
 <Multi_key><minus><underscore>                                                                 <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
