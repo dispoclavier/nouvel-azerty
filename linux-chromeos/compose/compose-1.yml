@@ -828,11 +828,15 @@
 #   the end of the notes for maintenance section.
 #   See # # Notes for maintenance
 #
-#   The scheme stops however where dead keys would need to be replaced with a
-#   bunch of unintuitive shortcuts, as this would defeat the point in enhancing
-#   the user experience.
-#   https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374
-#   https://github.com/dispoclavier/nouvel-azerty/commit/1f90f44e68722348b23680361373aba1e513e6cd
+#   Whether a single-character dead key can be streamlined or not depends on
+#   the length of the code point, as SMP characters need support for the high
+#   surrogate with U200B as a base character.
+#   See # # High surrogate input method
+#   See # # SUPERSCRIPT&SUBSCRIPT&BAR
+#   See # # COMBINING_ABOVE&CEDILLA
+#   for examples that are streamlined, and
+#   See # # SUPERSCRIPT&SUBSCRIPT&BAR
+#   for an example among many others that are not.
 #
 #
 # # Notes for maintenance
@@ -924,7 +928,7 @@
 #       6  Checking for conflicts and duplicates:
 #          ^([^\s]+)\s.+\n\1(<|\s)
 #
-#   Sortability (and readability alike) may then be further improved using this
+#   Sortability and readability may then be further improved using this
 #   follow-up replaceruleset, where dead key syms missing from keysymdef.h are
 #   decoded, and all dead key syms are streamlined and prefixed with an exclam
 #   so as to be sorted before letters, digits, and ASCII symbols prefixed with
