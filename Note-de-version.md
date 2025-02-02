@@ -1,39 +1,30 @@
-# 4.19.0 (2025-01-26)
+# 4.20.0 (2025-02-02)
 
-Amélioration du groupe 1 des lettres pour plus d’intuitivité et de sûreté et moins de redondances.
+Amélioration de l’utilité de la touche morte accent circonflexe par l’hatchek en double frappe.
 
-Débogage, simplification ou correction de plusieurs séquences de composition.
+Simplification ou correction de plusieurs séquences de composition.
 
 ## Modifications
 
 * Composition :
-	* Déboguer "⫊" U+2ACA. compose-1.yml [c54f712](https://github.com/dispoclavier/nouvel-azerty/commit/c54f7127f27bb73ec533caca54bf656682415d06)
-	* Simplifier ou corriger les séquences de "⁄" U+2044, "ℋ" U+210B, "ℐ" U+2110, "ℒ" U+2112, "ℛ" U+211B, "ℱ" U+2131, "ℴ" U+2134, "⌀" U+2300, "⨢" U+2A22, "⫂" U+2AC2, "⫉" U+2AC9, "⫊" U+2ACA, "⫓" U+2AD3, "⫖" U+2AD6, "⫗" U+2AD7. ibidem
+	* Simplifier ou corriger les séquences de "⇝" U+21DD, "≄" U+2244, "≇" U+2247, "≉" U+2249, "≊" U+224A, "≌" U+224C, "⋍" U+22CD, "⌉" U+2309, "▴" U+25B4, "⟿" U+27FF, "⤨" U+2928, "⤩" U+2929, "⥲" U+2972, "⦭" U+29AD, "⦮" U+29AE, "⧩" U+29E9, "⨳" U+2A33, "⩡" U+2A61, "⩬" U+2A6C, "⩮" U+2A6E, "⪟" U+2A9F, "⪠" U+2AA0, "⫳" U+2AF3, "⭁" U+2B41, "⭇" U+2B47, "⭉" U+2B49. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b)
+	* Simplifier ou corriger les séquences de "⋊" U+22CA, "◥" U+25E5, "◹" U+25F9, "⟁" U+27C1, "⤯" U+292F, "⥔" U+2954, "⦠" U+29A0, "⦡" U+29A1, "⦥" U+29A5, "⦩" U+29A9, "⦪" U+29AA, "⧋" U+29CB, "⧌" U+29CC, "⧕" U+29D5, "⧨" U+29E8, "⨲" U+2A32, "⨹" U+2A39, "⨺" U+2A3A, "⨻" U+2A3B. compose-1.yml [29fd230](https://github.com/dispoclavier/nouvel-azerty/commit/29fd2309db10dc20f63469c2696a209dbb53b1d4)
 * Transformations :
-	* Simplifier les lettres composées pour les langues du Togo. compose-2.yml [6b4f097](https://github.com/dispoclavier/nouvel-azerty/commit/6b4f0974b0545e6db1234052a6a3e29e3d0441df)
-	* Groupes des lettres :
-		* Groupe 1 :
-			* Mettre "ʿ" U+02BF dans le groupe 1 de "l" U+006C au lieu de "K", à la place de "ℓ" U+2113 qui est dans le groupe 1 de "L". compose-3.yml [8df19c1](https://github.com/dispoclavier/nouvel-azerty/commit/8df19c1e1fc6d85cb080720eaf5eeeacfca265d6)
-			* Mettre "ʾ" U+02BE dans le groupe 1 de "m" au lieu de "k", à la place de "ɩ" U+0269. ibidem
-			* Redonder "ʔ" U+0294 dans le groupe 1 de "M" à la place de "Ɩ" U+0196. ibidem
-			* Mettre "Ɩ" U+0196, "ɩ" U+0269 dans le groupe 1 de "I", "i" à la place de "Ĳ" U+0132, "ĳ" U+0133 qui vont dans le groupe 1 de "J", "j" à la place de "Ɲ" U+019D, "ɲ" U+0272 qui vont dans le groupe 1 de "N", "n" à la place de "Ŋ" U+014A, "ŋ" U+014B qui vont dans le groupe 1 de "G", "g" à la place de "Ə" U+018F, "ə" U+0259 qui vont dans le groupe 1 de "H", "h" à la place de "Ǝ" U+018E, "ǝ" U+01DD qui vont dans le groupe 1 de "E", "e" à la place de "€" U+20AC qui est sur AltGr + E et sur AltFr + E. ibidem
-			* Redonder "Ɑ" U+2C6D, "ɑ" U+0251 dans le groupe 1 de "K", "k" aux places laissées par "ʿ" U+02BF, "ʾ" U+02BE. ibidem
-		* Groupe 2 :
-			* Mettre "Ə" U+018F, "ə" U+0259 à la place de "Ǝ" U+018E, "ǝ" U+01DD, qui est dans le groupe 1. ibidem
-			* Mettre "Ŋ" U+014A, "ŋ" à la place de "Ɲ" U+019D, "ɲ", qui est dans le groupe 1. ibidem
-	* Macron :
-		* Supprimer "ꭗ" U+AB57, qui est dans le groupe 5. compose-2.yml [6b4f097](https://github.com/dispoclavier/nouvel-azerty/commit/6b4f0974b0545e6db1234052a6a3e29e3d0441df)
-		* Supprimer "ꭙ" U+AB59, qui est dans le groupe 11. ibidem
-	* Accent grave : Utiliser "*" au lieu de "x" comme caractère de base de "˟" U+02DF. ibidem
-* Documentation : Corriger et compléter des annotations. compose-1.yml [c54f712](https://github.com/dispoclavier/nouvel-azerty/commit/c54f7127f27bb73ec533caca54bf656682415d06), compose-2.yml [6b4f097](https://github.com/dispoclavier/nouvel-azerty/commit/6b4f0974b0545e6db1234052a6a3e29e3d0441df), compose-3.yml [8df19c1](https://github.com/dispoclavier/nouvel-azerty/commit/8df19c1e1fc6d85cb080720eaf5eeeacfca265d6)
+	* Exposant : Reprendre "⁂" U+2042, qui était dans accent circonflexe. compose-2.yml [0a72cc6](https://github.com/dispoclavier/nouvel-azerty/commit/0a72cc6c39b50fe691827786ae014c534e5bb6ed)
+	* Exposant et indice (petite capitale) et rayé : Abréger la saisie de "ᶧ" U+1DA7. compose-2.yml [9f856a8](https://github.com/dispoclavier/nouvel-azerty/commit/9f856a82e1dd8b0c18d61ef15027827c81a3f12b)
+	* Combinant en chef et cédille : Abréger la saisie de "ᷗ" U+1DD7. ibidem
+	* Tilde et perluète : Redonder "△" U+25B3 à la place de "ǃ" U+01C3 comme caractère espaçant vedette, pour la cohérence avec "⃤" U+20E4 et la silhouette de la perluète. compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374)
+	* Accent circonflexe : Supprimer "⁂" U+2042, qui va dans exposant. compose-2.yml [0a72cc6](https://github.com/dispoclavier/nouvel-azerty/commit/0a72cc6c39b50fe691827786ae014c534e5bb6ed)
+	* Hatchek : Simplifier le raccourci par accent circonflexe en remplaçant par la double frappe la triple frappe, désormais utilisée pour l’accent circonflexe souscrit, augmenté d’une facilité par l’accord accent circonflexe et rond en chef. ibidem
+* Documentation : Corriger et compléter des annotations. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b), [fbd6680](https://github.com/dispoclavier/nouvel-azerty/commit/fbd6680fe8c9f79ebf08b55899cf8d19f9db9530), [1bb5e82](https://github.com/dispoclavier/nouvel-azerty/commit/1bb5e82ef535715cfcc3dd31eafb49cb2edc67b9), compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374), [9f856a8](https://github.com/dispoclavier/nouvel-azerty/commit/9f856a82e1dd8b0c18d61ef15027827c81a3f12b), [0a72cc6](https://github.com/dispoclavier/nouvel-azerty/commit/0a72cc6c39b50fe691827786ae014c534e5bb6ed), compose-3.yml [a7f700b](https://github.com/dispoclavier/nouvel-azerty/commit/a7f700b7397ba7c4ca412769291d25f8a93c71c0)
 
 ## Un nouvel AZERTY pour Windows
 
-En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai dans le dossier [Un-nouvel-AZERTY-Windows-4.19.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Windows-4.19.0.0.zip).
+En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai dans le dossier [Un-nouvel-AZERTY-Windows-4.20.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Windows-4.20.0.0.zip).
 
 ### Installation
 
-Télécharger le dossier « `Un-nouvel-AZERTY-Windows-4.19.0.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier dont le nom finit en « (installation) », puis dans celui qui commence par « kbfrFRs » (« kbfrFRs v4.19.0.0 installation ») et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « `Un-nouvel-AZERTY-Windows-4.20.0.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier dont le nom finit en « (installation) », puis dans celui qui commence par « kbfrFRs » (« kbfrFRs v4.20.0.0 installation ») et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
 
 ## Un nouvel AZERTY pour Linux
 
@@ -41,7 +32,7 @@ Les dernières [versions de Linux sont défectueuses](https://github.com/dispocl
 
 ### Utilisation sans droits d’administrateur
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.19.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.19.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.20.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.20.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
 Cette méthode est la seule qui fonctionne sous [Linux Mint](https://www.linuxmint.com/edition.php?id=311) à cause de [bogues dans XKB sous Linux Mint](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#linux-mint).
 
@@ -49,7 +40,7 @@ Cette méthode est la seule qui fonctionne sous [Linux Mint](https://www.linuxmi
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.19.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.19.0.zip) » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh) ou installer chaque fichier [manuellement](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md).
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.20.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.20.0.zip) » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh) ou installer chaque fichier [manuellement](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md).
 
 Puis fermer la session et en rouvrir une. 
 
