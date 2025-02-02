@@ -4,24 +4,35 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.22.0 (projet)
+## 4.23.0 (projet)
 
 Mise à jour sous macOS des dispositions émulées selon Linux.
 
-## 4.21.0 (projet)
+## 4.22.0 (projet)
 
 Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous Linux.
 
-## 4.20.0 (projet)
+## 4.21.0 (projet)
 
 Correction des touches mortes sous Linux.
 
-* Composition : Simplifier ou corriger les séquences de "⇝" U+21DD, "≄" U+2244, "≇" U+2247, "≉" U+2249, "≊" U+224A, "≌" U+224C, "⋍" U+22CD, "⌉" U+2309, "▴" U+25B4, "⟿" U+27FF, "⤨" U+2928, "⤩" U+2929, "⥲" U+2972, "⦭" U+29AD, "⦮" U+29AE, "⧩" U+29E9, "⨳" U+2A33, "⩡" U+2A61, "⩬" U+2A6C, "⩮" U+2A6E, "⪟" U+2A9F, "⪠" U+2AA0, "⫳" U+2AF3, "⭁" U+2B41, "⭇" U+2B47, "⭉" U+2B49. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b)
+## 4.20.0 (2025-02-02)
+
+Amélioration de l’utilité de la touche morte accent circonflexe par l’hatchek en double frappe.
+
+Simplification ou correction de plusieurs séquences de composition.
+
+* Composition :
+	* Simplifier ou corriger les séquences de "⇝" U+21DD, "≄" U+2244, "≇" U+2247, "≉" U+2249, "≊" U+224A, "≌" U+224C, "⋍" U+22CD, "⌉" U+2309, "▴" U+25B4, "⟿" U+27FF, "⤨" U+2928, "⤩" U+2929, "⥲" U+2972, "⦭" U+29AD, "⦮" U+29AE, "⧩" U+29E9, "⨳" U+2A33, "⩡" U+2A61, "⩬" U+2A6C, "⩮" U+2A6E, "⪟" U+2A9F, "⪠" U+2AA0, "⫳" U+2AF3, "⭁" U+2B41, "⭇" U+2B47, "⭉" U+2B49. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b)
+	* Simplifier ou corriger les séquences de "⋊" U+22CA, "◥" U+25E5, "◹" U+25F9, "⟁" U+27C1, "⤯" U+292F, "⥔" U+2954, "⦠" U+29A0, "⦡" U+29A1, "⦥" U+29A5, "⦩" U+29A9, "⦪" U+29AA, "⧋" U+29CB, "⧌" U+29CC, "⧕" U+29D5, "⧨" U+29E8, "⨲" U+2A32, "⨹" U+2A39, "⨺" U+2A3A, "⨻" U+2A3B. compose-1.yml [29fd230](https://github.com/dispoclavier/nouvel-azerty/commit/29fd2309db10dc20f63469c2696a209dbb53b1d4)
 * Transformations :
+	* Exposant : Reprendre "⁂" U+2042, qui était dans accent circonflexe. compose-2.yml [0a72cc6](https://github.com/dispoclavier/nouvel-azerty/commit/0a72cc6c39b50fe691827786ae014c534e5bb6ed)
 	* Exposant et indice (petite capitale) et rayé : Abréger la saisie de "ᶧ" U+1DA7. compose-2.yml [9f856a8](https://github.com/dispoclavier/nouvel-azerty/commit/9f856a82e1dd8b0c18d61ef15027827c81a3f12b)
 	* Combinant en chef et cédille : Abréger la saisie de "ᷗ" U+1DD7. ibidem
 	* Tilde et perluète : Redonder "△" U+25B3 à la place de "ǃ" U+01C3 comme caractère espaçant vedette, pour la cohérence avec "⃤" U+20E4 et la silhouette de la perluète. compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374)
-* Documentation : Corriger et compléter des annotations. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b), [fbd6680](https://github.com/dispoclavier/nouvel-azerty/commit/fbd6680fe8c9f79ebf08b55899cf8d19f9db9530), [1bb5e82](https://github.com/dispoclavier/nouvel-azerty/commit/1bb5e82ef535715cfcc3dd31eafb49cb2edc67b9), compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374), [9f856a8](https://github.com/dispoclavier/nouvel-azerty/commit/9f856a82e1dd8b0c18d61ef15027827c81a3f12b), compose-3.yml [a7f700b](https://github.com/dispoclavier/nouvel-azerty/commit/a7f700b7397ba7c4ca412769291d25f8a93c71c0)
+	* Accent circonflexe : Supprimer "⁂" U+2042, qui va dans exposant. compose-2.yml [0a72cc6](https://github.com/dispoclavier/nouvel-azerty/commit/0a72cc6c39b50fe691827786ae014c534e5bb6ed)
+	* Hatchek : Simplifier le raccourci par accent circonflexe en remplaçant par la double frappe la triple frappe, désormais utilisée pour l’accent circonflexe souscrit, augmenté d’une facilité par l’accord accent circonflexe et rond en chef. ibidem
+* Documentation : Corriger et compléter des annotations. compose-1.yml [5f99d7a](https://github.com/dispoclavier/nouvel-azerty/commit/5f99d7a6eca6d996c7319866173f5e918ea3390b), [fbd6680](https://github.com/dispoclavier/nouvel-azerty/commit/fbd6680fe8c9f79ebf08b55899cf8d19f9db9530), [1bb5e82](https://github.com/dispoclavier/nouvel-azerty/commit/1bb5e82ef535715cfcc3dd31eafb49cb2edc67b9), compose-2.yml [e2916a6](https://github.com/dispoclavier/nouvel-azerty/commit/e2916a6cad4db68b44a89ea35cf8c7f973d0a374), [9f856a8](https://github.com/dispoclavier/nouvel-azerty/commit/9f856a82e1dd8b0c18d61ef15027827c81a3f12b), [0a72cc6](https://github.com/dispoclavier/nouvel-azerty/commit/0a72cc6c39b50fe691827786ae014c534e5bb6ed), compose-3.yml [a7f700b](https://github.com/dispoclavier/nouvel-azerty/commit/a7f700b7397ba7c4ca412769291d25f8a93c71c0)
 
 ## 4.19.0 (2025-01-26)
 
