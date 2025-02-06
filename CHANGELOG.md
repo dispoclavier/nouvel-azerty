@@ -14,7 +14,7 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 ## 4.21.0 (projet)
 
-Correction des touches mortes sous Linux.
+Correction des touches mortes sous Linux. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
 
 * Composition : Simplifier ou corriger les séquences de "∦" U+2226, "⊮" U+22AE, "⊯" U+22AF, "⋈" U+22C8, "◺" U+25FA, "⟖" U+27D6, "⟾" U+27FE, "⥒" U+2952, "⧐" U+29D0, "⧒" U+29D2, "⧦" U+29E6, "⫵" U+2AF5.compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
 * Documentation : Corriger et compléter des annotations. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
