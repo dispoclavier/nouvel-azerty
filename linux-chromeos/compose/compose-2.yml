@@ -198,7 +198,7 @@
 #   STROKE are not decomposed.) The T3 also required another three new keysyms:
 #   dead_aboveverticalline, dead_belowverticalline, dead_lowline, although none
 #   of these has any precomposed letters, and Windows’ TSF dead keys are unable
-#   to support decomposed (NFD/NFKD) letters. But the stroke-bar disambiguation
+#   to support decomposed (NFD/NFKD) letters. But the stroke-bar distinction
 #   made a good point for adding the “extra dead elements for German T3 layout”
 #   alongside the use of vertical line below, and its alternate representation
 #   vertical line above, in Yoruba and in other languages.
@@ -10322,7 +10322,7 @@
 #   Dchar: "ħ" U0127
 #
 #   In X11 XKB, the diacritic called “stroke” had an ambiguous shape, until the
-#   horizontal stroke and the oblique stroke were disambiguated, by introducing
+#   horizontal stroke and the oblique stroke were distinguished, by introducing
 #   the new dead_longsolidusoverlay keysym named after U0338 "̸" COMBINING LONG
 #   SOLIDUS OVERLAY as one of four extra dead elements for the German T3 layout
 #   designed around 2010 and standardized in 2012 as DIN 2137:2012.
@@ -12446,7 +12446,7 @@
 #   See #^# OBLIQUE_STROKE
 #
 #   In X11 XKB, the diacritic called “stroke” had an ambiguous shape, until the
-#   horizontal stroke and the slanted strokes were disambiguated by introducing
+#   horizontal stroke and the slanted strokes were distinguished by introducing
 #   the new dead_longsolidusoverlay keysym named after U0338 "̸" COMBINING LONG
 #   SOLIDUS OVERLAY as one of four extra dead elements for the German T3 layout
 #   designed around 2010 and standardized in 2012 as DIN 2137:2012.
@@ -13986,7 +13986,7 @@
 #   However, this redundancy with the subscript dead key is not extended to the
 #   signs and parentheses, as the standard does not require these, and because
 #   their multikey equivalents would conflict with many mathematical symbols.
-#   These would need to be disambiguated by leading space, screwing things up.
+#   These would need to be distinguished by leading space, screwing things up.
 #
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the hacek dead key is also activatable by dead_circumflex triple press,
@@ -16561,7 +16561,7 @@
 #   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
 #   key is not extended to the signs and parentheses since NF Z71-300:2019 does
 #   not require these, and their multikey equivalents would conflict with many
-#   mathematical symbols. that would need to be disambiguated by leading space.
+#   mathematical symbols. that would need to be distinguished by leading space.
 #   See #*# CIRCUMFLEX
 #
 #   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
