@@ -16,11 +16,12 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Correction des touches mortes sous Linux.
 
-Reconception des séquences de composition de plusieurs symboles mathématiques. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
+Reconception des séquences de composition de nombreux symboles mathématiques. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
 
-
-* Composition : Simplifier ou corriger les séquences de "∦" U+2226, "⊮" U+22AE, "⊯" U+22AF, "⋈" U+22C8, "◺" U+25FA, "⟖" U+27D6, "⟾" U+27FE, "⥒" U+2952, "⧐" U+29D0, "⧒" U+29D2, "⧦" U+29E6, "⫵" U+2AF5. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
-* Documentation : Corriger et compléter des annotations. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
+* Composition :
+	* Simplifier ou corriger les séquences de "∦" U+2226, "⊮" U+22AE, "⊯" U+22AF, "⋈" U+22C8, "◺" U+25FA, "⟖" U+27D6, "⟾" U+27FE, "⥒" U+2952, "⧐" U+29D0, "⧒" U+29D2, "⧦" U+29E6, "⫵" U+2AF5. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937)
+	* Simplifier ou corriger les séquences de "←" U+2190, "↑" U+2191, "→" U+2192, "↓" U+2193, "↔" U+2194, "↕" U+2195, "↖" U+2196, "↗" U+2197, "↘" U+2198, "↙" U+2199, "↚" U+219A, "↛" U+219B, "↟" U+219F, "↡" U+21A1 , "↥" U+21A5, "↧" U+21A7, "↨" U+21A8, "⇐" U+21D0, "⇑" U+21D1, "⇒" U+21D2, "⇓" U+21D3, "⇔" U+21D4, "⇕" U+21D5, "⇖" U+21D6, "⇗" U+21D7, "⇘" U+21D8, "⇙" U+21D9, "⇚" U+21DA, "⇛" U+21DB, "∊" U+220A, "∍" U+220D, "∦" U+2226, "≤" U+2264, "≥" U+2265, "≦" U+2266, "≨" U+2268, "≮" U+226E, "≰" U+2270, "≱" U+2271, "⊆" U+2286, "⊇" U+2287, "⊈" U+2288, "⊉" U+2289, "⊊" U+228A, "⊋" U+228B, "⊑" U+2291, "⊒" U+2292, "⊭" U+22AD, "⊮" U+22AE, "⊯" U+22AF, "⊴" U+22B4, "⊵" U+22B5, "⋈" U+22C8, "⋍" U+22CD, "⋚" U+22DA, "⋛" U+22DB, "⋜" U+22DC, "⋝" U+22DD, "⋢" U+22E2, "⋣" U+22E3, "⋤" U+22E4, "⋥" U+22E5, "⋬" U+22EC, "⋭" U+22ED, "⋴" U+22F4, "⋷" U+22F7, "⋸" U+22F8, "⋼" U+22FC, "⋾" U+22FE, "◺" U+25FA, "⟖" U+27D6, "⟾" U+27FE, "⤇" U+2907, "⤊" U+290A, "⤋" U+290B, "⥒" U+2952, "⥖" U+2956, "⥘" U+2958, "⧐" U+29D0, "⧒" U+29D2, "⧡" U+29E1, "⧦" U+29E6, "⩽" U+2A7D, "⩾" U+2A7E, "⩿" U+2A7F, "⪀" U+2A80, "⪃" U+2A83, "⪄" U+2A84, "⪇" U+2A87, "⪈" U+2A88, "⪋" U+2A8B, "⪕" U+2A95, "⪖" U+2A96, "⪚" U+2A9A, "⪛" U+2A9B, "⪜" U+2A9C, "⪬" U+2AAC, "⪭" U+2AAD, "⪯" U+2AAF, "⪰" U+2AB0, "⪱" U+2AB1, "⪲" U+2AB2, "⫃" U+2AC3, "⫄" U+2AC4, "⫢" U+2AE2, "⫵" U+2AF5, "⫹" U+2AF9, "⫺" U+2AFA, "⭅" U+2B45, "⭆" U+2B46. compose-1.yml [cd14b40](https://github.com/dispoclavier/nouvel-azerty/commit/cd14b4079507173f27aef8f23a3f5e9339f7c145)
+* Documentation : Corriger et compléter des annotations. compose-1.yml [d845f0a](https://github.com/dispoclavier/nouvel-azerty/commit/d845f0aa6133d8ed974a2eb45029ee4e77453937), [cd14b40](https://github.com/dispoclavier/nouvel-azerty/commit/cd14b4079507173f27aef8f23a3f5e9339f7c145), compose-2.yml [f49270f](https://github.com/dispoclavier/nouvel-azerty/commit/f49270f6243c20970ebf0c8ae37af320f23ec1c8)
 
 ## 4.20.0 (2025-02-02)
 
