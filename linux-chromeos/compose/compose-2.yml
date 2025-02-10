@@ -12792,58 +12792,6 @@
 <Multi_key><apostrophe><slash>                                                                 <o> : "ǿ" U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
 #
 #
-# # STROKE&FLAG
-#   Dchar: 
-#
-<dead_stroke><UEFD7>                                                                  <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal>                                                             <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<UEFD7><dead_stroke>                                                                  <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash>                                                             <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<dead_stroke><UEFD7>                                                                        <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<Multi_key><slash><equal>                                                                   <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<UEFD7><dead_stroke>                                                                        <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<Multi_key><equal><slash>                                                                   <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<dead_stroke><UEFD7>                                                                     <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-<Multi_key><slash><equal>                                                                <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-<UEFD7><dead_stroke>                                                                     <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-<Multi_key><equal><slash>                                                                <greater> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-#
-#
-# # STROKE&FLAG&GROUP_1
-#   Dchar: 
-#
-<dead_stroke><UEFD7><UEFD0>                                                           <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign>                                                 <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_stroke><UEFD0>                                                           <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign>                                                 <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-#
-#
-# # STROKE&FLAG&GROUP_2
-#   Dchar: 
-#
-<dead_stroke><UEFD7><UEFD0><UEFD0>                                                    <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><numbersign>                                     <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<UEFD7><dead_stroke><UEFD0><UEFD0>                                                    <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><numbersign>                                     <apostrophe> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-#
-#
-# # STROKE&FLAG&GROUP_3
-#   Dchar: 
-#
-<dead_stroke><UEFD7><UEFD0><3>                                                        <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><3>                                              <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_stroke><UEFD7><UEFD0><KP_3>                                                     <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><KP_3>                                           <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<dead_stroke><UEFD7><UEFD0><UEFD0><UEFD0>                                             <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><slash><equal><numbersign><numbersign><numbersign>                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_stroke><UEFD0><3>                                                        <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><3>                                              <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_stroke><UEFD0><KP_3>                                                     <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><KP_3>                                           <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<UEFD7><dead_stroke><UEFD0><UEFD0><UEFD0>                                             <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><equal><slash><numbersign><numbersign><numbersign>                         <apostrophe> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-#
-#
 #^# OBLIQUE_STROKE
 #   dead_stroke double press
 #   Multi_key: ¦//
