@@ -921,7 +921,7 @@
 #   an inavoidable interference of numbersign with itself. As a consequence,
 #   for cross-platform compatibility, these positions cannot be used. Only the
 #   light checkbox "⮽" U2BBD remains in its place in group 10.
-#   See # # Notes for maintenance
+#   See #   Conflictlessness check
 #   See # # C10 bar
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
