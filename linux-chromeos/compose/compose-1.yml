@@ -3791,6 +3791,9 @@
 #   only revealed while running the overall conflictlessness check.
 #   See # # Notes for maintenance
 #
+#
+#   Trailing space
+#
 #   For a conflictless support of variable length sequences, space termination
 #   is required for many math symbols, unless trailing space is non-critical.
 #   Both ASCII space and Latin-1 no-break space are supported as terminating
@@ -3805,6 +3808,9 @@
 #   obvious one gets a terminating, clarifying non-space character instead.
 #   See "⥎" U294E « ¦'-`␣ » versus "⥏" U294F « ¦'-`| » for a single harpoon,
 #   and "⥢" U2962 « ¦'-`-␣ » versus "⥣" U2963 « ¦'-`-| » for double harpoons.
+#
+#
+#   Leading space
 #
 #   When things do not work as expected, the likely culprit is a conflict with
 #   a dead key equivalent as for "≪" U226A, "≫" U226B, "⋘" U22D8, "⋙" U22D9.
@@ -3825,12 +3831,18 @@
 #   Triple:    "⟋" U27CB and "⟍" U27CD;
 #   Quadruple:  "⁄" U2044 and "⧵" U29F5.
 #
+#
+#   Negation
+#
 #   Negated sequences work the other way around: letters first, slash last,
 #   to further prevent conflicts with dead key equivalents, as in "∄" U2204,
 #   "∅" U2205, "∉" U2209; but when required otherwise to distinguish partial
 #   negations from full negations, the slash may not be the last character,
 #   as for "≇" U2247 versus "≆" U2246. Another exception prevents a conflict
 #   of "≮" U226E with "↙" U2199.
+#
+#
+#   Reverse symbols
 #
 #   For opposite or reverse relationships, when the symbol is turned, flipped
 #   horizontally or vertically, a matching alternate slug is used, as well as
@@ -3847,6 +3859,9 @@
 #   "⩖" U2A56  w    |  "⩕" U2A55  aa    w%
 #   "⨈" U2A08  W    |  "⨇" U2A07  AA    W%
 #   "∏" U220F  P    |  "∐" U2210  CP    P%
+#
+#
+#   Slanted variants
 #
 #   Some slanted math symbols are glyph variants selected by VS1 UFE00.
 #   https://www.unicode.org/Public/16.0.0/ucd/StandardizedVariants.txt
@@ -3866,6 +3881,9 @@
 #   "≥" U2265. This is better than repurposing the underscore for slanted, and
 #   introducing minus for not slanted, screwing up some arrows in the process.
 #
+#
+#   Arrows
+#
 #   Arrows are better supported thanks to this scheme, with the minus dedicated
 #   to horizontal stems, the exclamation mark to vertical stems, the slash and
 #   backslash to diagonal stems, while the pipe is required for an actual bar,
@@ -3882,9 +3900,15 @@
 #   unchanged semantics, as for "↥" U21A5. Conflicts with operators are mostly
 #   resolved by tweaking the sequences of these by leading space.
 #
+#
+#   Small symbols
+#
 #   Small alternative symbols ("∊" U220A, "∍" U220D, "⋷" U22F7, "⋾" U22FE,
 #   "⋼" U22FC) are distinguished from normal-size symbols by a trailing comma,
 #   rather than grave or period, with size-based mnemonics.
+#
+#
+#   Outsourcing in dead keys
 #
 #   Slash, pipe, and backslash in leading position followed by a trailing digit
 #   are in the related dead keys for consistency, where the multikey sequences
@@ -3901,7 +3925,7 @@
 #   See #*# REVERSED
 #
 #
-# # Alternative keysyms
+#   Alternative keysyms
 #
 #   Sequences including quotedbl need to be duplicated using EuroSign instead,
 #   since EuroSign replaces quotedbl on AltGr/Option + E.
