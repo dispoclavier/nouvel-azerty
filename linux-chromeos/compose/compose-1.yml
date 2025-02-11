@@ -826,7 +826,7 @@
 #
 #   To achieve this goal, this list is processed and sorted as documented near
 #   the end of the notes for maintenance section.
-#   See # # Notes for maintenance
+#   See #   Conflictlessness check
 #
 #   Whether a single-character dead key can be streamlined or not depends on
 #   the length of the code point, as SMP characters need support for the high
@@ -846,6 +846,14 @@
 #
 #   For maintainability, there is no space between the leading keysyms, but
 #   part of the keysyms may be aligned to the end for readability.
+#
+#   Trailing space should not be cropped programmatically, since empty slots in
+#   the letter groups, ready to receive output, are not populated with the null
+#   character, yet the colons are followed by a space for ease of maintenance.
+#   See # # Maintenance
+#
+#
+#   Symmetrization of chained dead keys
 #
 #   Chained dead keys may be (and have been so in the Polytonic Greek section)
 #   symmetrized using this replaceruleset, in the "bhughes339.replacerules"
@@ -880,6 +888,9 @@
 #         }
 #       }
 #
+#
+#   Multikey equivalents
+#
 #   The multikey equivalent below each dead key sequence is added by the script
 #   generate-multikey.pl.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/generate-multikey.pl
@@ -887,6 +898,9 @@
 #   For portability, multikey equivalents are present regardless whether they
 #   make sense, and require conflictlessness, since else, the dead key content
 #   would not be cross-platform compatible.
+#
+#
+#   Conflictlessness check
 #
 #   Conflicts and duplicates can be checked following a protocol like this one,
 #   where the first steps may be automated using another replaceruleset, while
@@ -3076,7 +3090,7 @@
 #   using the dead key chaining feature, while in XCompose, useless trailing or
 #   interior multikey sequence constituents are only revealed after running and
 #   reviewing a check as documented above.
-#   See # # Notes for maintenance
+#   See #   Conflictlessness check
 #
 #   Base 16 numeric sequences are also supported, not conflicting with vulgar
 #   fractions where for efficiency, the slash is not mandatory, only supported
@@ -3789,7 +3803,7 @@
 #   on Windows, where composition is implemented using chained dead keys. By
 #   contrast, in XCompose, useless trailing multikey sequence constituents are
 #   only revealed while running the overall conflictlessness check.
-#   See # # Notes for maintenance
+#   See #   Conflictlessness check
 #
 #
 #   Trailing space
@@ -3861,7 +3875,7 @@
 #   "∏" U220F  P    |  "∐" U2210  CP    P%
 #
 #
-#   Slanted variants
+#   Slanted symbols
 #
 #   Some slanted math symbols are glyph variants selected by VS1 UFE00.
 #   https://www.unicode.org/Public/16.0.0/ucd/StandardizedVariants.txt
@@ -3908,7 +3922,7 @@
 #   rather than grave or period, with size-based mnemonics.
 #
 #
-#   Outsourcing in dead keys
+#   Outsourcing to dead keys
 #
 #   Slash, pipe, and backslash in leading position followed by a trailing digit
 #   are in the related dead keys for consistency, where the multikey sequences
