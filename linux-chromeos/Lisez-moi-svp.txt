@@ -1,5 +1,5 @@
-                      Date : 2025-02-02T0812+0100
-                   Version : 4.20.0
+                      Date : 2025-02-16T2141+0100
+                   Version : 4.21.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -9,7 +9,7 @@
              URL du projet : https://dispoclavier.com
                     Maxime : Simplifier la dactylographie, pas le français.
                Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
-             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
+             Destinataires : Grand public et développeurs, écrivains, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes
     Identifiants réguliers : kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s)|CHs|FR(s|sr)|PF(s|sr)))
  Identifiants descriptions : kbfrFRs  Français France disposition de clavier semi-automatique
                              kbbrFRs  Breton et français disposition de clavier semi-automatique
@@ -136,7 +136,7 @@ Mode d’emploi sous Linux
 
   2  Sous le titre « Assets », télécharger le dossier compressé nommé :
 
-         Un-nouvel-AZERTY-Linux-4.20.0.zip
+         Un-nouvel-AZERTY-Linux-4.21.0.zip
 
   3  Décompresser le dossier téléchargé.
 
