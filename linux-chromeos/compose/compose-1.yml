@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.21.0d" # See # # Notes about syntax
+<UEFA0>                     : "version 4.21.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -3676,15 +3676,6 @@
 #
 #
 ### Mathematical symbols by multikey
-#
-#   ***************************************************************************
-#   *                                                                         *
-#   *    This section is currently redesigned, and many sequences do not yet  *
-#   *    match the documentation.                                             *
-#   *    See # # Design of math sequences
-#   *                                                                         *
-#   ***************************************************************************
-#
 #
 #   The General Category `Symbol, other` (`So`) does not preclude a symbol from
 #   being a math symbol, despite there is the dedicated `Symbol, math` (`Sm`).
