@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.21.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.22.0d" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -828,9 +828,10 @@
 #   the end of the notes for maintenance section.
 #   See #   Conflictlessness check
 #
-#   Whether a single-character dead key can be streamlined or not depends on
-#   the length of the code point, as SMP characters need support for the high
-#   surrogate with U200B as a base character.
+#   Some virtual dead keys exist for the sake of one single character. Whether
+#   such a single-character dead key can be streamlined or not depends on the
+#   length of the code point, since on Windows, SMP characters need support for
+#   the high surrogate, with U200B as a base character.
 #   See # # High surrogate input method
 #   See # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   See # # COMBINING_ABOVE&CEDILLA
@@ -1814,7 +1815,7 @@
 <Multi_key><O><O>                                                                                  : "Ꝏ" UA74E # LATIN CAPITAL LETTER OO
 #   <Multi_key><O><o>                                                                              : # Reserved for "⊚" U229A CIRCLED RING OPERATOR
 <Multi_key><o><o>                                                                                  : "ꝏ" UA74F # LATIN SMALL LETTER OO
-<Multi_key><o><p><space>                                                                           : "ȹ" U0239 # LATIN SMALL LETTER QP DIGRAPH
+<Multi_key><q><p>                                                                                  : "ȹ" U0239 # LATIN SMALL LETTER QP DIGRAPH
 <Multi_key><O><U>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><O><u>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><o><u>                                                                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
@@ -2335,16 +2336,17 @@
 #
 #^# Vulgar fractions
 #
-#   Since the design of this file was changed to become standalone,
-#   support for vulgar fractions needed to be reimplemented.
+#   Since the design of this file was changed to become standalone, support for
+#   vulgar fractions needed to be reimplemented.
 #
-#   Consistently with en_US.UTF-8/Compose, 2-digit sequences support the
-#   fractions as more frequently used than circled digits, but ⅒ is now
-#   <Multi_key><1><1>, not <Multi_key><1><1><0>.
+#   Consistently with en_US.UTF-8/Compose, 2-digit sequences support the vulgar
+#   fractions ½, ⅓, ⅔, ¼, ¾, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑ and ⅒ as more
+#   frequently used than circled digits, but ⅒ is now <Multi_key><1><1>, not
+#   <Multi_key><1><1><0>.
 #
 #   For a predictable, intuitive, consistent, versatile user experience,
-#   sequences with a slash are also supported, and fraction numerator 1,
-#   initially <Multi_key><1><slash>, is extended with space accordingly,
+#   sequences with a slash are also supported, and fraction numerator 1
+#   "⅟" U215F, in en_US.UTF-8/Compose <Multi_key><1><slash>, is extended with space accordingly,
 #   while its short sequence <Multi_key><1><space> is still supported.
 #
 #   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH.
