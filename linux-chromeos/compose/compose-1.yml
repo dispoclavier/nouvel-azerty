@@ -1999,9 +1999,9 @@
 #   This new multikey sequence is not the most user-friendly, but this is only
 #   about multikey support. U2013 and U2014, and depending on the variant, also
 #   U2015, are in the benefit of level 2 live key positions.
-#   See dispocla.cpp key <AE03>
-#   See dispocla.cpp key <AE04>
-#   See dispocla.cpp key <AE08>
+#   See dispocla.cpp <AE03>
+#   See dispocla.cpp <AE04>
+#   See dispocla.cpp <AE08>
 #
 <Multi_key><minus><minus><minus><minus>                                                            : "—" U2014 # EM DASH
 #
@@ -2336,30 +2336,21 @@
 #
 #^# Vulgar fractions
 #
-#   Since the design of this file was changed to become standalone, support for
-#   vulgar fractions needed to be reimplemented.
-#
 #   Consistently with en_US.UTF-8/Compose, 2-digit sequences support the vulgar
 #   fractions ½, ⅓, ⅔, ¼, ¾, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑ and ⅒ as more
 #   frequently used than circled digits, but ⅒ is now <Multi_key><1><1>, not
 #   <Multi_key><1><1><0>.
+#   See ### Multikey sequences
 #
-#   For a predictable, intuitive, consistent, versatile user experience,
-#   sequences with a slash are also supported, and fraction numerator 1
-#   "⅟" U215F, in en_US.UTF-8/Compose <Multi_key><1><slash>, is extended with space accordingly,
-#   while its short sequence <Multi_key><1><space> is still supported.
+#   Sequences with an interspersed slash are also supported for a predictable,
+#   intuitive, consistent, versatile user experience. As a result, fraction
+#   numerator 1 "⅟" U215F, in en_US.UTF-8/Compose <Multi_key><1><slash>, has
+#   its sequence extended with space accordingly, while it has also a short
+#   sequence <Multi_key><1><space>.
 #
-#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH.
-#   The fraction slash triggers autoformatting of base digits to vulgar
-#   fractions in Unicode-conformant rendering engines like HarfBuzz.
+#   Freely composed vulgar fractions may use "⁄" U2044 FRACTION SLASH with
+#   autoformatted base digits.
 #   See # # Fraction slash
-#   See dispocla.cpp key <AC04>
-#
-#   A workaround for defective renderers is using superscript digits for
-#   numerators, and subscript digits for denominators, with the negative
-#   kerning around FRACTION SLASH independently of OpenType support. The
-#   result is acceptable if super- and subscripts align between baseline
-#   and caps height.
 #
 <Multi_key><1><4>                                                                                  : "¼" U00BC # VULGAR FRACTION ONE QUARTER
 <Multi_key><KP_1><KP_4>                                                                            : "¼" U00BC # VULGAR FRACTION ONE QUARTER
@@ -2703,9 +2694,9 @@
 #
 #   Pound sign is commented out too as conflicting and easy to input on live
 #   keys.
-#   See dispocla.cpp key <AD04>
-#   See dispocla.cpp key <AD12>
-#   See dispocla.cpp key <AC09>
+#   See dispocla.cpp <AD04>
+#   See dispocla.cpp <AD12>
+#   See dispocla.cpp <AC09>
 #
 #   Trailing redundant letters are maintained with respect to ISO codes and for
 #   a predictable behavior, unlike what is done for ad-hoc sequences as used in
@@ -4110,9 +4101,10 @@
 #
 # # Fraction slash
 #
-#   On the associated AZERTY layout, "⁄" U2044 FRACTION SLASH is on live key
+#   On the associated keyboard layouts, "⁄" U2044 FRACTION SLASH is on live key
 #   B09, level 7, in ASCII mode also on level 6.
 #   See dispocla.cpp ## Format controls
+#   See dispocla.cpp <AC04>
 #   See # # Vulgar fractions
 #
 #   Also in dead_stroke followed by 4.
@@ -4121,6 +4113,12 @@
 #   Additionally, "⁄" U2044 FRACTION SLASH is supported by multikey nearly the
 #   same way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, while the letter slash
 #   sequence is case insensitive. and none is space terminated.
+#
+#   A workaround for defective renderers is using superscript digits for
+#   numerators, and subscript digits for denominators, with the negative
+#   kerning around FRACTION SLASH independently of OpenType support. The
+#   result is acceptable if super- and subscripts align between baseline
+#   and caps height.
 #
 <Multi_key><f><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
 <Multi_key><F><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
