@@ -19,7 +19,7 @@ En cours de réimplémentation, la version pour Windows est disponible sous form
 
 ### Installation
 
-Télécharger le dossier « `Un-nouvel-AZERTY-Windows-4.21.0.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier dont le nom finit en « (installation) », puis dans celui qui commence par « kbfrFRs » (« kbfrFRs v4.21.0.0 installation ») et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « `Un-nouvel-AZERTY-Windows-4.21.0.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v4.21.0.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
 
 ## Un nouvel AZERTY pour Linux
 
