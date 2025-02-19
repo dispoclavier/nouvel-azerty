@@ -4,17 +4,21 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.24.0 (projet)
+## 4.25.0 (projet)
 
 Mise à jour sous macOS des dispositions émulées selon Linux.
 
-## 4.23.0 (projet)
+## 4.24.0 (projet)
 
 Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous Linux.
 
-## 4.22.0 (projet)
+## 4.23.0 (projet)
 
-Rectification et simplification des séquences de composition.
+Simplification des séquences de composition sous Linux.
+
+## 4.22.0 (2025-02-19)
+
+Rectification et simplification de la séquence de composition de la ligature "ȹ" U+0239.
 
 * Composition : Rectifier et simplifier "ȹ" U+0239. compose-1.yml [17e32ec](https://github.com/dispoclavier/nouvel-azerty/commit/17e32ec85b5389b781cb05b1eac410eed46d9245)
 * Documentation :
