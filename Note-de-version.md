@@ -1,6 +1,6 @@
 # 4.22.0 (2025-02-19)
 
-Rectification et simplification de la séquence de composition de la ligature "ȹ" U0239.
+Rectification et simplification de la séquence de composition de la ligature "ȹ" U+0239.
 
 ## Modifications
 
