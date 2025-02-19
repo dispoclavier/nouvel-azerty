@@ -16,6 +16,10 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Simplification des séquences de composition sous Linux.
 
+* Documentation :
+	* Rectifier le journal des modifications. CHANGELOG.md [f734ec7](https://github.com/dispoclavier/nouvel-azerty/commit/f734ec792c0bfdde0ebb9a4086689c219aed9294)
+	* Rectifier la note de version. Note-de-version.md [185c875](https://github.com/dispoclavier/nouvel-azerty/commit/185c875fdb105c587f9a4ec8d65676b7c51ae054)
+
 ## 4.22.0 (2025-02-19)
 
 Rectification et simplification de la séquence de composition de la lettre "ȹ" U+0239.
