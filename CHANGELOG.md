@@ -18,7 +18,7 @@ Simplification des séquences de composition sous Linux.
 
 ## 4.22.0 (2025-02-19)
 
-Rectification et simplification de la séquence de composition de la ligature "ȹ" U+0239.
+Rectification et simplification de la séquence de composition de la lettre "ȹ" U+0239.
 
 * Composition : Rectifier et simplifier "ȹ" U+0239. compose-1.yml [17e32ec](https://github.com/dispoclavier/nouvel-azerty/commit/17e32ec85b5389b781cb05b1eac410eed46d9245)
 * Documentation :
