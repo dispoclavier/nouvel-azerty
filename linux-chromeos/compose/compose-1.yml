@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.22.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.23.0d" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -1106,7 +1106,6 @@
 #   documenting all other dead keys including the group dead key that activates
 #   the 12 letter groups and the 12 symbol groups.
 #   See ### Mathematical symbols by multikey
-#   (See) ### Multikey sequences
 #   See #*# COMPOSE
 #   See ### Dead keys
 #   See ### Group dead key introduction
@@ -1710,7 +1709,10 @@
 #
 #   In the sequence for "᷐" U1DD0 the trailing "s" is skipped as redundant, for
 #   efficiency, at the expense of intuitivity.
-#   See # # Design of math sequences
+#   See ### Multikey sequences
+#
+#   "Ꝏ" UA74E LATIN CAPITAL LETTER OO is not supported with a titlecase alias,
+#   because « ¦Oo » is used for "⊚" U229A CIRCLED RING OPERATOR.
 #
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
 <Multi_key><ampersand><a><o>                                                                       : "ᷕ" U1DD5 # COMBINING LATIN SMALL LETTER AO
@@ -1813,12 +1815,11 @@
 <Multi_key><o><s><u><p>                                                                            : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
 <Multi_key><o><i><n><f>                                                                            : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
 <Multi_key><O><O>                                                                                  : "Ꝏ" UA74E # LATIN CAPITAL LETTER OO
-#   <Multi_key><O><o>                                                                              : # Reserved for "⊚" U229A CIRCLED RING OPERATOR
 <Multi_key><o><o>                                                                                  : "ꝏ" UA74F # LATIN SMALL LETTER OO
-<Multi_key><q><p>                                                                                  : "ȹ" U0239 # LATIN SMALL LETTER QP DIGRAPH
 <Multi_key><O><U>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><O><u>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><o><u>                                                                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
+<Multi_key><q><p>                                                                                  : "ȹ" U0239 # LATIN SMALL LETTER QP DIGRAPH
 <Multi_key><r><r>                                                                                  : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
 <Multi_key><R><U><M>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 <Multi_key><R><u><m>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
