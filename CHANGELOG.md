@@ -17,6 +17,7 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 Simplification des séquences de composition sous Linux.
 
 * Documentation :
+	* Corriger et compléter des annotations. compose-1.yml [ae2965f](https://github.com/dispoclavier/nouvel-azerty/commit/ae2965f626abf1185a0e89e5259c98c36b67630c), compose-3.yml [76c7046](https://github.com/dispoclavier/nouvel-azerty/commit/76c7046aef59b07621ee3829ff090a41b759ad45)
 	* Rectifier le journal des modifications. CHANGELOG.md [f734ec7](https://github.com/dispoclavier/nouvel-azerty/commit/f734ec792c0bfdde0ebb9a4086689c219aed9294)
 	* Rectifier la note de version. Note-de-version.md [185c875](https://github.com/dispoclavier/nouvel-azerty/commit/185c875fdb105c587f9a4ec8d65676b7c51ae054)
 
