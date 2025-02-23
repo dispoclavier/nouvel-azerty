@@ -2728,6 +2728,9 @@
 #   Lenient group selection
 #   Dchar: 
 #
+#   Uppercase is used as a shortcut for the letter in group 1 "𐞟" U1079F, as
+#   opposed to "ᶩ" U1DA9.
+#
 <UEFD1><UEFD4>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <Multi_key><asciicircum><braceright>                                                           <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <UEFD4><UEFD1>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
@@ -2773,10 +2776,10 @@
 <Multi_key><asciicircum><braceright><numbersign>                                               <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0>                                                                          <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign>                                               <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0>                                                                          <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign>                                               <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0>                                                                          <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign>                                               <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0>                                                                          <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign>                                               <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0>                                                                          <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign>                                               <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0>                                                                          <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign>                                               <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0>                                                                          <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
@@ -2794,10 +2797,10 @@
 <Multi_key><asciicircum><braceright><numbersign><numbersign>                                   <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0>                                                                   <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign>                                   <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><UEFD0>                                                                   <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><numbersign>                                   <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><UEFD0>                                                                   <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><numbersign>                                   <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><UEFD0>                                                                   <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><numbersign>                                   <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><UEFD0>                                                                   <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><numbersign>                                   <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><UEFD0>                                                                   <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><numbersign>                                   <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0>                                                                   <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
@@ -2823,18 +2826,18 @@
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><3>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><3>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><KP_3>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><KP_3>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><3>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><3>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><KP_3>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><KP_3>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><3>                                                                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><3>                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><KP_3>                                                                    <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><KP_3>                                         <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><3>                                                                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><3>                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><KP_3>                                                                    <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><KP_3>                                         <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign>                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0>                                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign>                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><3>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><3>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_3>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
@@ -2876,18 +2879,18 @@
 <Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><4>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><4>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><KP_4>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><KP_4>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><4>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><4>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><KP_4>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><KP_4>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><4>                                                                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><4>                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><KP_4>                                                                    <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><KP_4>                                         <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><4>                                                                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><4>                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><KP_4>                                                                    <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><KP_4>                                         <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><numbersign><numbersign><numbersign>           <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0>                                                     <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><numbersign><numbersign><numbersign>           <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><4>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><4>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_4>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
@@ -2925,14 +2928,14 @@
 <Multi_key><braceright><asciicircum><numbersign><5>                                            <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD0><KP_5>                                                                    <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <d> : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><5>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><5>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD0><KP_5>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><numbersign><KP_5>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><5>                                                                       <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><5>                                            <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD0><KP_5>                                                                    <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><5>                                                                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><5>                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD0><KP_5>                                                                    <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><numbersign><KP_5>                                         <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><5>                                                                       <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><5>                                            <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD0><KP_5>                                                                    <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <l> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><5>                                                                       <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><numbersign><5>                                            <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD0><KP_5>                                                                    <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
