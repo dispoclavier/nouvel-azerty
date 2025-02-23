@@ -1682,14 +1682,45 @@
 #
 #^# Orthographies and medievalism
 #
-#   Some of these letters are easier input using groups.
-#
-#   Conflicting sequences, e.g. with ISO currency codes,
-#   are fixed by space termination.
+#   "Æ" U00C6, "æ" U00E6, "Œ" U0152, "œ" U0153 and some other letters are
+#   easier input using groups.
+#   See #+# GROUP_1
 #
 #   Titlecase sequences are supported following en_US.UTF-8/Compose, but
 #   reverse sequences are not supported since they would not make much sense
 #   and are prone to conflicts.
+#
+#   Superscript digraphs ("𐞀" U10780.."ꝰ" UA770) have sequences starting with
+#   the superscript trigger asciicircum, followed by ampersand carrying the
+#   polygraph semantic.
+#   See #*# SUPERSCRIPT
+#   See # # Notes on Unicode support
+#
+#   Sequences for combining diacritical marks ("ᷔ" U1DD4.."᷏" U1DCF) start with
+#   ampersand because this is consistent with the “combining” semantic of
+#   ampersand in this context, and given that ampersand is not a multikey
+#   equivalent of any dead key.
+#   See # # Combining Diacritical Marks for Symbols used in mathematics
+#
+#   The letter EZH is represented by digit 3 as a shortcut, in "𐞊" U1078A and
+#   "𐞞" U1079E as opposed to "𐞚" U1079A, while for "𐞟" U1079F it is skipped as
+#   non-critical.
+#   See ### Multikey sequences
+#
+#   "Ꝏ" UA74E LATIN CAPITAL LETTER OO is not supported with a titlecase alias,
+#   because « ¦Oo » is used for "⊚" U229A CIRCLED RING OPERATOR.
+#
+#   In the sequences for "᷐" U1DD0 and "𐞉" U10789, the trailing "s" or "z" is
+#   skipped as non-critical, for efficiency, at the expense of intuitivity.
+#   See ### Multikey sequences
+#
+#   Conflicting sequences, e.g. with ISO currency codes, are fixed by space
+#   termination along the lines of what is done for math symbols. But this only
+#   affects "Æ" U00C6, "æ" U00E6, "Ǳ" U01F1, "ʣ" U02A3, "Ƣ" U01A2, "ƣ" U01A3,
+#   "ꝳ" UA773, "Ŋ" U014A, "ŋ" U014B, "Þ" U00DE, "þ" U00FE, most of which are
+#   supported in letter group 1.
+#   See # # Design of math sequences
+#   See #+# GROUP_1
 #
 #   Deprecated presentation forms for typographic ligatures are not supported,
 #   given that their use is discouraged:
@@ -1702,18 +1733,27 @@
 #       "ﬅ" UFB05 # LATIN SMALL LIGATURE LONG S T
 #       "ﬆ" UFB06 # LATIN SMALL LIGATURE ST
 #
-#   Sequences for combining diacritical marks start with ampersand because this
-#   is not a multikey equivalent of any dead key, and because it is consistent
-#   with the “combining” semantics of ampersand in this context.
-#   See # # Combining Diacritical Marks for Symbols used in mathematics
-#
-#   In the sequence for "᷐" U1DD0 the trailing "s" is skipped as redundant, for
-#   efficiency, at the expense of intuitivity.
-#   See ### Multikey sequences
-#
-#   "Ꝏ" UA74E LATIN CAPITAL LETTER OO is not supported with a titlecase alias,
-#   because « ¦Oo » is used for "⊚" U229A CIRCLED RING OPERATOR.
-#
+<Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
+<Multi_key><asciicircum><ampersand><d><z>                                                          : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
+<Multi_key><asciicircum><ampersand><braceright><d>                                                 : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><ampersand><braceleft><braceleft><d>                                       : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><d>                                                  : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><d><3>                                                          : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
+<Multi_key><asciicircum><ampersand><f><g>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
+<Multi_key><asciicircum><ampersand><f><n>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
+<Multi_key><asciicircum><ampersand><l><s>                                                          : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
+<Multi_key><asciicircum><ampersand><l><z>                                                          : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
+<Multi_key><asciicircum><ampersand><l><3>                                                          : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
+<Multi_key><asciicircum><ampersand><braceright><l>                                                 : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><ampersand><t><c>                                                          : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><braceleft><t>                                       : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><t>                                                  : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><t><s>                                                          : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
+<Multi_key><asciicircum><ampersand><braceright><t>                                                 : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
+<Multi_key><asciicircum><ampersand><t><S>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
+<Multi_key><asciicircum><ampersand><t><e>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
+<Multi_key><asciicircum><ampersand><u>                                                             : "ꝰ" UA770 # MODIFIER LETTER US
+<Multi_key><asciicircum><ampersand><9>                                                             : "ꝰ" UA770 # MODIFIER LETTER US
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
 <Multi_key><ampersand><a><o>                                                                       : "ᷕ" U1DD5 # COMBINING LATIN SMALL LETTER AO
 <Multi_key><ampersand><a><v>                                                                       : "ᷖ" U1DD6 # COMBINING LATIN SMALL LETTER AV
@@ -1875,36 +1915,6 @@
 #   LETTER N.
 #
 <Multi_key><rightsinglequotemark><n>                                                               : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
-#
-#
-# # Superscript digraphs
-#
-#   To support superscript digraphs, the superscript trigger asciicircum is
-#   followed by ampersand.
-#   See #*# SUPERSCRIPT
-#   See # # Notes on Unicode support
-#
-<Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
-<Multi_key><asciicircum><ampersand><d><z>                                                          : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
-<Multi_key><asciicircum><ampersand><braceright><d>                                                 : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><braceleft><braceleft><d>                                       : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><braceleft><d>                                                  : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><d><3>                                                          : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
-<Multi_key><asciicircum><ampersand><f><g>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<Multi_key><asciicircum><ampersand><f><n>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
-<Multi_key><asciicircum><ampersand><l><s>                                                          : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
-<Multi_key><asciicircum><ampersand><l><z>                                                          : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
-<Multi_key><asciicircum><ampersand><l><3>                                                          : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
-<Multi_key><asciicircum><ampersand><braceright><l>                                                 : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><t><c>                                                          : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><braceleft><braceleft><t>                                       : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><braceleft><t>                                                  : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><t><s>                                                          : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
-<Multi_key><asciicircum><ampersand><braceright><t>                                                 : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><t><S>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-<Multi_key><asciicircum><ampersand><t><e>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
-<Multi_key><asciicircum><ampersand><u>                                                             : "ꝰ" UA770 # MODIFIER LETTER US
-<Multi_key><asciicircum><ampersand><9>                                                             : "ꝰ" UA770 # MODIFIER LETTER US
 #
 #
 # # Spaces
@@ -7860,8 +7870,10 @@
 <Multi_key><equal><apostrophe><equal>                                               <nobreakspace> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><rightsinglequotemark><equal>                                            <space> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><rightsinglequotemark><equal>                                     <nobreakspace> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
-<Multi_key><apostrophe><equal><equal>                                                              : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
-<Multi_key><rightsinglequotemark><equal><equal>                                                    : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><apostrophe><equal>                                                             <space> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><apostrophe><equal>                                                      <nobreakspace> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><rightsinglequotemark><equal>                                                   <space> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><rightsinglequotemark><equal>                                            <nobreakspace> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><apostrophe><equal><apostrophe>                                                         : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><rightsinglequotemark><equal><rightsinglequotemark>                                     : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T>                                                                          <space> : "⫪" U2AEA # DOUBLE DOWN TACK
@@ -7872,10 +7884,14 @@
 <Multi_key><equal><apostrophe>                                                      <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                                   <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                            <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
-<Multi_key><apostrophe><equal>                                                             <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><apostrophe><equal>                                                      <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><rightsinglequotemark><equal>                                                   <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><rightsinglequotemark><equal>                                            <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><space><apostrophe><equal>                                                      <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><space><apostrophe><equal>                                               <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><nobreakspace><apostrophe><equal>                                               <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><nobreakspace><apostrophe><equal>                                        <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><space><rightsinglequotemark><equal>                                            <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><space><rightsinglequotemark><equal>                                     <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><nobreakspace><rightsinglequotemark><equal>                                     <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><nobreakspace><rightsinglequotemark><equal>                              <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><bar><backslash>                                                                <space> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><bar><backslash>                                                         <nobreakspace> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><o><i>                                                                          <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
