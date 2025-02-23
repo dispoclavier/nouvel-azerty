@@ -4,23 +4,27 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.25.0 (projet)
+## 4.26.0 (projet)
 
 Mise à jour sous macOS des dispositions émulées selon Linux.
 
-## 4.24.0 (projet)
+## 4.25.0 (projet)
 
 Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous Linux.
 
-## 4.23.0 (projet)
+## 4.24.0 (projet)
 
-Rectification des touches mortes et simplification des séquences de composition sous Linux.
+Simplification des séquences de composition sous Linux.
+
+## 4.23.0 (2025-02-23)
+
+Rectification de touches mortes.
 
 * Composition : Corriger les séquences de "⫨" U+2AE8, "⫭" U+2AED. compose-1.yml [9ffa049](https://github.com/dispoclavier/nouvel-azerty/commit/9ffa049ec9c978ecad7348db76cb7df251fff29d)
 * Transformations : Exposant et crochet rétroflexe, groupes 1–5 : Rectifier "𐞟" U+1079F. compose-2.yml [4032c88](https://github.com/dispoclavier/nouvel-azerty/commit/4032c886ce318fd209cebbe744ec4e698df597ca)
 * Documentation :
 	* Corriger et compléter des annotations. compose-1.yml [ae2965f](https://github.com/dispoclavier/nouvel-azerty/commit/ae2965f626abf1185a0e89e5259c98c36b67630c), [9ffa049](https://github.com/dispoclavier/nouvel-azerty/commit/9ffa049ec9c978ecad7348db76cb7df251fff29d), compose-2.yml [4032c88](https://github.com/dispoclavier/nouvel-azerty/commit/4032c886ce318fd209cebbe744ec4e698df597ca), [71a17aa](https://github.com/dispoclavier/nouvel-azerty/commit/71a17aae237c1f1148c6edf161be49083d9d822f), compose-3.yml [76c7046](https://github.com/dispoclavier/nouvel-azerty/commit/76c7046aef59b07621ee3829ff090a41b759ad45)
-	* Rectifier le journal des modifications. CHANGELOG.md [f734ec7](https://github.com/dispoclavier/nouvel-azerty/commit/f734ec792c0bfdde0ebb9a4086689c219aed9294)
+	* Rectifier le journal des modifications. CHANGELOG.md [f734ec7](https://github.com/dispoclavier/nouvel-azerty/commit/f734ec792c0bfdde0ebb9a4086689c219aed9294), [e433b6d](https://github.com/dispoclavier/nouvel-azerty/commit/e433b6dabf39d6a0219349db933013ba60f3c0bd)
 	* Rectifier la note de version. Note-de-version.md [185c875](https://github.com/dispoclavier/nouvel-azerty/commit/185c875fdb105c587f9a4ec8d65676b7c51ae054)
 
 ## 4.22.0 (2025-02-19)
