@@ -2728,8 +2728,8 @@
 #   Lenient group selection
 #   Dchar: 
 #
-#   Uppercase is used as a shortcut for the letter in group 1 "𐞟" U1079F, as
-#   opposed to "ᶩ" U1DA9.
+#   Uppercase is used as a shortcut for the letter in groups 1..5 "𐞟" U1079F,
+#   as opposed to "ᶩ" U1DA9 in the lowercase slot.
 #
 <UEFD1><UEFD4>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <Multi_key><asciicircum><braceright>                                                           <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
