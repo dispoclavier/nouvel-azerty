@@ -14,7 +14,10 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 ## 4.24.0 (projet)
 
-Simplification des séquences de composition sous Linux.
+Amélioration d’une touche morte.
+
+* Transformations : Exposant et crochet rétroflexe : Améliorer la prise en charge de "𐞹" U107B9, par "k" et "!" au lieu de "m". compose-2.yml [56ae33e](https://github.com/dispoclavier/nouvel-azerty/commit/56ae33eae52518643340c42a3a0314ecab84b42a)
+* Documentation : Corriger et compléter des annotations. compose-2.yml [d717a87](https://github.com/dispoclavier/nouvel-azerty/commit/d717a8770f1bf3f70ee0ad01e21ec6573a56bc9e), compose-3.yml [9385cd1](https://github.com/dispoclavier/nouvel-azerty/commit/9385cd106731dadaf9d0ec6936b7a4a49dec3fa8)
 
 ## 4.23.0 (2025-02-23)
 
