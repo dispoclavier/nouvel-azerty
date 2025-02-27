@@ -22,6 +22,7 @@ Rectification de touches mortes.
 	* Exposant et crochet rétroflexe : Rectifier la prise en charge de "𐞹" U+107B9, par "k" et "!" au lieu de "m". compose-2.yml [56ae33e](https://github.com/dispoclavier/nouvel-azerty/commit/56ae33eae52518643340c42a3a0314ecab84b42a)
 * Documentation :
 	* Corriger et compléter des annotations. compose-2.yml [d717a87](https://github.com/dispoclavier/nouvel-azerty/commit/d717a8770f1bf3f70ee0ad01e21ec6573a56bc9e), compose-3.yml [9385cd1](https://github.com/dispoclavier/nouvel-azerty/commit/9385cd106731dadaf9d0ec6936b7a4a49dec3fa8), dispocla.cpp [2849192](https://github.com/dispoclavier/nouvel-azerty/commit/28491921e564bc4d3f3376a90960dc920b3f0dd9)
+	* Corriger le journal des modifications. CHANGELOG.md [b75f30a](https://github.com/dispoclavier/nouvel-azerty/commit/b75f30a241329b7ebe8c9630c28c46a8bbe4108f)
 
 ## 4.23.0 (2025-02-23)
 
