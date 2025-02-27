@@ -3391,6 +3391,10 @@
 #+# GROUP_5
 #   Group 5 on the base alphabet: Latin letters and symbols (continued)
 #
+#   Click letters have extensive, case insensitive support here in group 5, as
+#   well as in the tilde and ampersand dead key as a more specific alternative.
+#   See # # TILDE&AMPERSAND
+#
 #   "ɞ" U025E LATIN SMALL LETTER CLOSED REVERSED OPEN E has lowercase position,
 #   because "ʚ" U029A LATIN SMALL LETTER CLOSED OPEN E, almost unused, is a
 #   better fit for the uppercase slot, while its reversed variant represents
