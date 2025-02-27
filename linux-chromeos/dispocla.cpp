@@ -1,4 +1,4 @@
-//                       Date: 2024-12-27T0310+0100
+//                       Date: 2025-02-27T2157+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -714,47 +714,52 @@ xkb_symbols "kbfrFRs" {
 	// ## Level-5 numpad
 	//
 	// A graphics-only, extended numpad on level 5 is consistent with the overlay
-	// numpad of compact keyboards lacking a dedicated numpad except for the zero
-	// key, moved from B07 to B06, duplicated on E10, and completed with a double
-	// zero on B05, while the triple zero is input by pressing simultaneously the
-	// single and double zeros; and exept for the basic arithmetic operators that
-	// are moved to C06, C05, B02, B01 for ASCII, consistent with level-3 ASCII,
-	// and completed with MINUS SIGN on D05, "×" on B03, and "÷" on B04; so as to
-	// make room for both period and comma decimal separators on D10 and C10, and
-	// streamline the use of all three group separators including NBTSP (NNBSP).
+	// numpad found on many compact keyboards where a dedicated numpad is missing
+	// and is emulated using 15 keys of the alphanumeric block. However, only the
+	// non-zero digits are consistent, while zero is moved from B07 to B06 and is
+	// duplicated on E10 and completed with a double zero on B05 (the triple zero
+	// is input by pressing simultaneously single and double zeros), separators
+	// are on D10 for dot, C10 for comma, space bar for no-break thin space, and
+	// operators are moved to C06 for plus, C05 for ASCII minus, B02 for asterisk
+	// and B01 for slash consistently with level-3 ASCII. They are completed with
+	// typographic operators MINUS SIGN on D05, "×" on B03, and "÷" on B04.
 	//
-	// The other digits are duplicated consistently on E01..E06 for symmetricity
-	// so that with respect to digits, AltFr acts like a lefthand AltGr and like
-	// a Shift key, improving backward compatibility with legacy AZERTY.
+	// The 1..6 digits are duplicated consistently on E01..E06 for symmetricity,
+	// so that with respect to digits, AltFr acts like a lefthand AltGr, and like
+	// the Shift keys on a legacy AZERTY, improving backward compatibility.
 	//
-	// The remaining keys are used for the degree sign on E11, the equals sign on
-	// E12, other ASCII symbols "^"", "%", "#", "$", "(", ")" as well as euro and
-	// pound signs. Except for the pound sign, these are consistent with level-3
-	// euro and ASCII symbols. The point in having currency symbols on level 5 is
-	// synergy with NBTSP, required like before other measurement units. This is
-	// also the reason why the last available level-5 position, on D06, is used
-	// for the micro sign.
+	// The remaining keys are used for the DEGREE SIGN on E11, the EQUALS SIGN on
+	// E12, other ASCII symbols "^", "%", "#", "$", "(", ")" as well as euro and
+	// pound signs, the former on regular D03 "E", the latter on neighbor D04 "R"
+	// with French alphabetic mnemonic based on "Royaume Uni", and the MICRO SIGN
+	// on the Greek key D06 "Y" consistently with AZERTY supporting MICRO SIGN on
+	// shifted (or even unshifted for Belgium) C12. Except for pound/micro signs,
+	// these are consistent with level-3 ASCII and with the regular D03 EURO SIGN
+	// with the upside of getting this in synergy with NBTSP (NNBSP), required in
+	// front of currency symbols like it is in front of measurement units.
 	//
 	// The punctuation keys B07..B10, C11..C12, D11..D12 are used for the eight
 	// unspaced big punctuation marks that have spaced-out support on level 2.
 	//
-	// While level 6 is dedicated to superscript small letters, used as ordinal
-	// indicators and other abbreviation indicators, level 7 is used to complete
-	// the level 5 map with some useful extensions such as the yen sign, leaving
-	// its place on Y to the micro sign. Most notably, plusminus is not added to
-	// the key of the plus sign (H), but to the key of the minus sign (T), where
-	// it mnemonically supports another math operator, that may be confused with
-	// its ASCII counterpart or mistaken as yet another dash.
+	// Level 6 is used for superscript small letters, used as ordinal indicators
+	// and other abbreviation indicators.
 	//
-	// By contrast, U2013 EN DASH, recommended and extensively used for interval
-	// notation, is usefully added to the F key for optimal ergonomics, although
-	// due to its French name “tiret demi-cadratin”, EN DASH would benefit from
-	// alphabetic mnemonic on the T key, or on the G key from mnemonic based on
-	// similarity with the ASCII hyphen. This is used for the single and double
-	// rightwards arrows U2192 and U21D2 instead, although alphabetic mnemonics
-	// would also work with "F" like “flèche” (like it does for "➔" U2794 and
-	// "➜" U279C in groups 1 and 2 of parenright), following the principle that
-	// mnemonics do not have precedence over ergonomics.
+	// Level 7 completes the level 5 map with some useful extensions such as the
+	// YEN SIGN that leaves its place on Y to the micro sign, and plusminus that
+	// is not added to the key of the plus sign C06 "H", but to the minus sign’s
+	// D05 "T", where it mnemonically supports an operator that may be confused
+	// with its ASCII counterpart or mistaken as yet another dash. By contrast,
+	// U2013 EN DASH, recommended and extensively used for interval notation, is
+	// added to the "F" key C04 for ergonomics at the expense of mnemonics, both
+	// alphabetic based on its French name “tiret demi-cadratin” on D05 "T", and
+	// graphic by similarity of shape with the ASCII hyphen on C05 "G". This is
+	// used for the single and double rightwards arrows U2192 and U21D2 instead.
+	// These are not on the alphabetically mnemonic C04 "F" like “flèche” (this
+	// mnemonic is used for "➔" U2794, "➜" U279C in groups 1 and 2 of parenright)
+	// because mnemonics do not have precedence over ergonomics, and because the
+	// level-8 position of C04 "F" is used for the FIRE emoji U1F525, benefitting
+	// from multilingual alphabetic mnemonic that is actually useful, given that
+	// "🔥" U1F525 is less frequent than "–" U2013 (C04) and "⇒" U21D2 (C05).
 	//
 	//
 	// ## Backward compatibility
@@ -817,8 +822,8 @@ xkb_symbols "kbfrFRs" {
 	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, extensively used to
 	// prevent wrong ligatures, and therefore on level 7 of the AZERTY W key B01,
 	// next to the AltFr level-5 modifier B00.
-	// https://github.com/unicode-org/cldr/blob/c7e39f13da2bfbaf58c1447d610627511c7a6549/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
-	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L40
+	// https://github.com/unicode-org/cldr/blob/f7cb2b5ca09cdaf651912695f93903cc35cab69c/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
+	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
 	//
 	// U200D ZERO WIDTH JOINER is the cursive joiner on level 7 of AZERTY key Q,
 	// ISO C01, right above the cursive non-joiner.
