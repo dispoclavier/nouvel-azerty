@@ -2728,13 +2728,29 @@
 #   Lenient group selection
 #   Dchar: 
 #
-#   Uppercase is used as a shortcut for the letter in groups 1..5 "𐞟" U1079F,
-#   as opposed to "ᶩ" U1DA9 in the lowercase slot.
+#   With "L" as a base letter, uppercase is used as a shortcut for the letter
+#   "𐞟" U1079F that is more consistently supported in groups 1..5, as opposed
+#   to "ᶩ" U1DA9 in the lowercase slot here in group 0.
+#   See # # SUPERSCRIPT&RETROFLEX_HOOK&GROUP_1
 #
+#   Additionally to the exclamation mark, "k" as a base letter for "𐞹" U107B9
+#   is consistent with the support of baseline "𝼊" U1DF0A in group 4, which in
+#   turn is consistent with the support of "ǃ" U01C3 in group 5.
+#   See #+# GROUP_4
+#   See #+# GROUP_5
+#
+<UEFD1><UEFD4>                                                                            <exclam> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright>                                                      <exclam> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<UEFD4><UEFD1>                                                                            <exclam> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum>                                                      <exclam> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <Multi_key><asciicircum><braceright>                                                           <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <UEFD4><UEFD1>                                                                                 <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
 <Multi_key><braceright><asciicircum>                                                           <d> : "𐞋" U1078B # MODIFIER LETTER SMALL D WITH TAIL
+<UEFD1><UEFD4>                                                                                 <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<Multi_key><asciicircum><braceright>                                                           <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<UEFD4><UEFD1>                                                                                 <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+<Multi_key><braceright><asciicircum>                                                           <k> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4>                                                                                 <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright>                                                           <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <UEFD4><UEFD1>                                                                                 <L> : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
@@ -2743,10 +2759,6 @@
 <Multi_key><asciicircum><braceright>                                                           <l> : "ᶩ" U1DA9 # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK
 <UEFD4><UEFD1>                                                                                 <l> : "ᶩ" U1DA9 # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK
 <Multi_key><braceright><asciicircum>                                                           <l> : "ᶩ" U1DA9 # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK
-<UEFD1><UEFD4>                                                                                 <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><asciicircum><braceright>                                                           <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<UEFD4><UEFD1>                                                                                 <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-<Multi_key><braceright><asciicircum>                                                           <m> : "𐞹" U107B9 # MODIFIER LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD1><UEFD4>                                                                                 <n> : "ᶯ" U1DAF # MODIFIER LETTER SMALL N WITH RETROFLEX HOOK
 <Multi_key><asciicircum><braceright>                                                           <n> : "ᶯ" U1DAF # MODIFIER LETTER SMALL N WITH RETROFLEX HOOK
 <UEFD4><UEFD1>                                                                                 <n> : "ᶯ" U1DAF # MODIFIER LETTER SMALL N WITH RETROFLEX HOOK
