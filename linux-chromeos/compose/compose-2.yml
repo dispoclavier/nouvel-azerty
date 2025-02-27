@@ -5026,11 +5026,15 @@
 #   on key D11 level 3, with the ampersand on D10 level 3, according to the new
 #   ASCII symbol map on alphabetic keys.
 #
-#   The TILDE&AMPERSAND dead key is partly dedicated to African click letters
-#   hopefully coming into the benefit of a consistent input method. Three of
-#   these have Latin equivalents in Zulu and are mapped on these letters, while
-#   another two use graphic mnemonics based on O and H, thought of as sideways.
-#   These are case insensitive except q for intuitivity:
+#   The TILDE&AMPERSAND dead key is partly dedicated to African click letters,
+#   hopefully coming into the benefit of a consistent input method additionally
+#   to their support in group 5 with another set of base letters.
+#   See #+# GROUP_5
+#
+#   Three click letters have Latin equivalents in Zulu and are mapped on these
+#   letters consistently, while another two use graphic mnemonics based on "O"
+#   and on H, the latter thought of as sideways. These base letters are case
+#   insensitive except q for intuitivity of the support for the superscript:
 #
 #       c  "ǀ" U01C0 LATIN LETTER DENTAL CLICK
 #       x  "ǁ" U01C1 LATIN LETTER LATERAL CLICK
