@@ -1674,8 +1674,8 @@
 <Multi_key><asciicircum><numbersign>                                                           <s> : "ᶴ" U1DB4 # MODIFIER LETTER SMALL ESH
 <UEFD1><UEFD0>                                                                                 <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key><asciicircum><numbersign>                                                           <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
-<UEFD1><UEFD0>                                                                                 <u> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
-<Multi_key><asciicircum><numbersign>                                                           <u> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
+<UEFD1><UEFD0>                                                                                 <u> : "ᶷ" U1DB7 # MODIFIER LETTER SMALL UPSILON
+<Multi_key><asciicircum><numbersign>                                                           <u> : "ᶷ" U1DB7 # MODIFIER LETTER SMALL UPSILON
 <UEFD1><UEFD0>                                                                                 <v> : "ᶺ" U1DBA # MODIFIER LETTER SMALL TURNED V
 <Multi_key><asciicircum><numbersign>                                                           <v> : "ᶺ" U1DBA # MODIFIER LETTER SMALL TURNED V
 <UEFD1><UEFD0>                                                                                 <w> : "ᶴ" U1DB4 # MODIFIER LETTER SMALL ESH
@@ -1686,6 +1686,10 @@
 #
 # # SUPERSCRIPT&GROUP_2
 #   Dchar: "ᵊ" U1D4A
+#
+#   In group 2, the base letters for "ᶿ" U1DBF are both "t" for intuitivity,
+#   and "u" for consistency with the Greek layout and with group 2.
+#   See #+# GROUP_2
 #
 <UEFD1><UEFD0><UEFD0>                                                                          <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
 <Multi_key><asciicircum><numbersign><numbersign>                                               <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
@@ -1711,8 +1715,8 @@
 <Multi_key><asciicircum><numbersign><numbersign>                                               <s> : "ᶴ" U1DB4 # MODIFIER LETTER SMALL ESH
 <UEFD1><UEFD0><UEFD0>                                                                          <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key><asciicircum><numbersign><numbersign>                                               <t> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
-<UEFD1><UEFD0><UEFD0>                                                                          <u> : "ᶷ" U1DB7 # MODIFIER LETTER SMALL UPSILON
-<Multi_key><asciicircum><numbersign><numbersign>                                               <u> : "ᶷ" U1DB7 # MODIFIER LETTER SMALL UPSILON
+<UEFD1><UEFD0><UEFD0>                                                                          <u> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
+<Multi_key><asciicircum><numbersign><numbersign>                                               <u> : "ᶿ" U1DBF # MODIFIER LETTER SMALL THETA
 <UEFD1><UEFD0><UEFD0>                                                                          <v> : "ᶹ" U1DB9 # MODIFIER LETTER SMALL V WITH HOOK
 <Multi_key><asciicircum><numbersign><numbersign>                                               <v> : "ᶹ" U1DB9 # MODIFIER LETTER SMALL V WITH HOOK
 #
