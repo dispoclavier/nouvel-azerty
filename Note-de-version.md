@@ -1,23 +1,36 @@
-# 4.23.0 (2025-02-23)
+# 4.24.0 (2025-03-03)
 
-Rectification de touches mortes.
+Correction de la prise en charge des émojis "☀" U+2600 et "☠" U+2620.
+
+Rectification de la touche morte exposant.
 
 ## Modifications
 
-* Composition : Corriger les séquences de "⫨" U+2AE8, "⫭" U+2AED. compose-1.yml [9ffa049](https://github.com/dispoclavier/nouvel-azerty/commit/9ffa049ec9c978ecad7348db76cb7df251fff29d)
-* Transformations : Exposant et crochet rétroflexe, groupes 1–5 : Rectifier "𐞟" U+1079F. compose-2.yml [4032c88](https://github.com/dispoclavier/nouvel-azerty/commit/4032c886ce318fd209cebbe744ec4e698df597ca)
+* Composition :
+	* Prendre en charge l’émoji "☀" U+2600 par « ¦sol », « ¦SOL », « ¦sun », « ¦SUN ». compose-1.yml [c4923d0](https://github.com/dispoclavier/nouvel-azerty/commit/c4923d0ab7f738e911a7552de60b6c3877891b52)
+	* Prendre en charge l’émoji "☠" U+2620 par « ¦tox », « ¦TOX ». ibidem
+* Transformations :
+	* Groupes des symboles :
+		* Groupes de "$" :
+			* Ajouter "☼" U+263C dans le groupe 4 à la place de l’émoji "☀" U+2600, qui va dans le groupe extra et en composition. compose-3.yml [01d15e9](https://github.com/dispoclavier/nouvel-azerty/commit/01d15e93e1ab22206a075a9927fb191c5003d215), [c363b25](https://github.com/dispoclavier/nouvel-azerty/commit/c363b256878da34a2baf6e7d86e3430ddf1976c4), [14ff1e4](https://github.com/dispoclavier/nouvel-azerty/commit/14ff1e4372ea62a721aa3f3284b409511ae438e9)
+			* Ajouter un groupe extra pour l’émoji "☀" U+2600. ibidem
+		* Groupes de "~" :
+			* Ajouter "☥" U+2625 dans le groupe 5 à la place de l’émoji "☠" U+2620, qui va dans le groupe extra et en composition. ibidem
+			* Ajouter un groupe extra pour l’émoji "☠" U+2620. ibidem
+	* Exposant groupe 1 par "u" : Mettre "ᶷ" U+1DB7 à la place de "ᶿ" U+1DBF, qui est par "t". compose-2.yml [7a216e6](https://github.com/dispoclavier/nouvel-azerty/commit/7a216e61d3c65f7ac8aeee54e923c22d935f7095)
+	* Exposant groupe 2 par "u" : Redonder "ᶿ" U+1DBF à la place de "ᶷ" U+1DB7, qui est dans exposant groupe 1. ibidem
+	* Exposant et crochet rétroflexe : Rectifier la prise en charge de "𐞹" U+107B9, par "k" et "!" au lieu de "m". compose-2.yml [56ae33e](https://github.com/dispoclavier/nouvel-azerty/commit/56ae33eae52518643340c42a3a0314ecab84b42a)
 * Documentation :
-	* Corriger et compléter des annotations. compose-1.yml [ae2965f](https://github.com/dispoclavier/nouvel-azerty/commit/ae2965f626abf1185a0e89e5259c98c36b67630c), [9ffa049](https://github.com/dispoclavier/nouvel-azerty/commit/9ffa049ec9c978ecad7348db76cb7df251fff29d), compose-2.yml [4032c88](https://github.com/dispoclavier/nouvel-azerty/commit/4032c886ce318fd209cebbe744ec4e698df597ca), [71a17aa](https://github.com/dispoclavier/nouvel-azerty/commit/71a17aae237c1f1148c6edf161be49083d9d822f), compose-3.yml [76c7046](https://github.com/dispoclavier/nouvel-azerty/commit/76c7046aef59b07621ee3829ff090a41b759ad45)
-	* Rectifier le journal des modifications. CHANGELOG.md [f734ec7](https://github.com/dispoclavier/nouvel-azerty/commit/f734ec792c0bfdde0ebb9a4086689c219aed9294), [e433b6d](https://github.com/dispoclavier/nouvel-azerty/commit/e433b6dabf39d6a0219349db933013ba60f3c0bd)
-	* Rectifier la note de version. Note-de-version.md [185c875](https://github.com/dispoclavier/nouvel-azerty/commit/185c875fdb105c587f9a4ec8d65676b7c51ae054)
+	* Corriger et compléter des annotations. compose-2.yml [d717a87](https://github.com/dispoclavier/nouvel-azerty/commit/d717a8770f1bf3f70ee0ad01e21ec6573a56bc9e), [21ccde6](https://github.com/dispoclavier/nouvel-azerty/commit/21ccde69698f9cb501bfbc3ae30fbdf8728cac14), compose-3.yml [9385cd1](https://github.com/dispoclavier/nouvel-azerty/commit/9385cd106731dadaf9d0ec6936b7a4a49dec3fa8), dispocla.cpp [2849192](https://github.com/dispoclavier/nouvel-azerty/commit/28491921e564bc4d3f3376a90960dc920b3f0dd9)
+	* Corriger le journal des modifications. CHANGELOG.md [b75f30a](https://github.com/dispoclavier/nouvel-azerty/commit/b75f30a241329b7ebe8c9630c28c46a8bbe4108f)
 
 ## Un nouvel AZERTY pour Windows
 
-En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai dans le dossier [Un-nouvel-AZERTY-Windows-4.23.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Windows-4.23.0.0.zip).
+En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai dans le dossier [Un-nouvel-AZERTY-Windows-4.24.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Windows-4.24.0.0.zip).
 
 ### Installation
 
-Télécharger le dossier « `Un-nouvel-AZERTY-Windows-4.23.0.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v4.23.0.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « `Un-nouvel-AZERTY-Windows-4.24.0.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v4.24.0.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
 
 ## Un nouvel AZERTY pour Linux
 
@@ -25,7 +38,7 @@ Les dernières [versions de Linux sont défectueuses](https://github.com/dispocl
 
 ### Utilisation sans droits d’administrateur
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.23.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.23.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.24.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.24.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
 Cette méthode est la seule qui fonctionne sous [Linux Mint](https://www.linuxmint.com/edition.php?id=311) à cause de [bogues dans XKB sous Linux Mint](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#linux-mint).
 
@@ -33,7 +46,7 @@ Cette méthode est la seule qui fonctionne sous [Linux Mint](https://www.linuxmi
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.23.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.23.0.zip) » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh) ou installer chaque fichier [manuellement](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md).
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-4.24.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-4.24.0.zip) » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh) ou installer chaque fichier [manuellement](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md).
 
 Puis fermer la session et en rouvrir une. 
 
