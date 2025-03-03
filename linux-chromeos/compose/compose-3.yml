@@ -205,12 +205,18 @@
 #
 #   The glyphs and shapes may not match exactly, as opposed to the character
 #   names. In any event, safety goes first, in order to make this project more
-#   resilient against allegations about facilitating the input of disguised or
-#   explicit symbols related to far-right ideologies or satanism.
+#   resilient against allegations about fostering the input of disguised or
+#   explicit symbols related to far-right ideologies and satanism.
 #   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
 #   https://de.wikipedia.org/wiki/Schwarze_Sonne
 #   https://fr.wikipedia.org/wiki/Soleil_noir_(symbole_occulte)
 #   https://www.lemonde.fr/societe/article/2025/02/15/le-neonazisme-en-france-une-menace-diffuse-et-hybride_6548247_3224.html
+#
+#   The symbols "☀" U2600 and "☠" U2620 are only supported because they are
+#   emoji. If they were not, like "࿕" U0FD5, "࿖" U0FD6, "࿗" U0FD7, "࿘" U0FD8,
+#   they would have no support in this file and on this project, regardless of
+#   their use in various cultures, particularly in Indian religions.
+#   https://en.wikipedia.org/wiki/Swastika
 #
 #
 # # Symbol groups overview
