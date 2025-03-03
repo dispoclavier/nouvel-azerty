@@ -200,11 +200,17 @@
 #   See # # D05 asciitilde
 #
 #   The triggering character is ellipsis, typed right before the base character
-#   and right after the group dead key or its multikey equivalent; « ¦…$ » for
-#   "☀" U2600, « ¦…~ » for "☠" U2620.
+#   and right after the group dead key or its multikey equivalent; « ¦#…$ » for
+#   "☀" U2600, « ¦#…~ » for "☠" U2620.
 #
-#   The issues are documented on Wikipedia:
+#   The glyphs and shapes may not match exactly, as opposed to the character
+#   names. In any event, safety goes first, in order to make this project more
+#   resilient against allegations about facilitating the input of disguised or
+#   explicit symbols related to far-right ideologies or satanism.
 #   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
+#   https://de.wikipedia.org/wiki/Schwarze_Sonne
+#   https://fr.wikipedia.org/wiki/Soleil_noir_(symbole_occulte)
+#   https://www.lemonde.fr/societe/article/2025/02/15/le-neonazisme-en-france-une-menace-diffuse-et-hybride_6548247_3224.html
 #
 #
 # # Symbol groups overview
@@ -217,18 +223,18 @@
 #   See # # Mathematical Latin alphabets
 #
 #
-# ‧	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
+#	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
 #	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	!	:	;	␣	⍽	
 #	  1	⚠	‰	★	☆	≃	◌	ʼ	∫	Ω	π		␣	⌀	➔	⁃	±	•	⟨	⟩	☐	✘	✗	✓	✔	≡	ʻ	❤	¿	‧	¡	⋅	ː	EMSP	MQSP	
 #	  2	♿	‱	∈	√	≈	⚪	⊂	∬	∅	☮		⍽	∂	➜	➖	➕	◦	❰	❱	☑	➗	✖	⩽	⩾	≙	∧	♥	⁇	∙	‼	꞉	ˑ	ENSP	NQSP	
 #	  3	⚛	⚡	∋	∛	≅	⚫	⊃	∭	∐	∏		∑	☹	☺	−	∓	‣	❮	❯	☒	÷	×	✂	✅	≠	∨	♣	❔	ꞏ	❕	⋮	⸫	3/MSP	3/MSP	
-#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☀	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
-#	  5	∠	☇	⚕	☢	☠	●	➰	⯀	⛈	☔	▪	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	▫	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
+#	  4	∀	↯	∃	∜	⛺	⏺	∪	∩	⭕	⛱	⏹	☼	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
+#	  5	∠	☇	⚕	☢	☥	●	➰	⯀	⛈	☔	▪	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	▫	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	✈	☈	✍	♻	☎	○	➿	▢	⛔	☂	◾	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	◽	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
 #	  7	⚓	⚯	✉	♼	☏	⚬	⚭	⚮	⚘	⛸	◼	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	◻	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	⛯	⛪	♽	⚙	☯	⚱	ℹ	☦	⛽	⬛	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⬜	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	〰	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	TSP	TSP	
-#	10	CNJ	CJ	VS16	VS1	VS15	❍	⤴	∝	⤵	⸿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	☚	☛	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
+#	10	ZWNJ	ZWJ	VS16	VS1	VS15	❍	⤴	∝	⤵	⸿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	⋈	❎	☚	☛	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
 #	11	‸	⏫	⏏	®	™	⁁	ˈ	∞	⚒	¶	♯	☉	☾	☽	⁒	✜	➲	❐	❒	∣	▲	∗	©	▼	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP	 
 #	12	ª	⏬	〃	∖	☘	❖	ˌ	♾	º	⛏	⚧	✒	⁀	‿	‐	⁜	⮊	❑	❏	∥	∕	※	✏	⛛	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP	
 #
