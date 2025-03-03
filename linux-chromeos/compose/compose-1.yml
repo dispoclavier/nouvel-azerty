@@ -3324,6 +3324,32 @@
 #^# Emoji by multikey
 #
 #
+# # Sun emoji
+#
+#   Due to its hijacked character, the sun emoji is not supported in group 4 of
+#   "$", but in an extra group of "$", with a consistent alphabetic mnemonic on
+#   C02 "S", and by two case insensitive, less ambiguous English and French (as
+#   well as Italian, Portuguese and Spanish) multikey sequences.
+#   See # # C02 dollar
+#
+<Multi_key><s><u><n>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><S><U><N>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><s><o><l>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><S><O><L>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
+#
+#
+# # Skull and crossbones emoji
+#
+#   This emoji is supported only for its semantic related to toxic substances,
+#   and its case insensitive, multilingual multikey sequence is consistent with
+#   this approach. Additionally it is supported in an extra group of asciitilde
+#   on D05 "T" with a consistent alphabetic mnemonic.
+#   See # # D05 asciitilde
+#
+<Multi_key><t><o><x>                                                                               : "☠" U2620 # SKULL AND CROSSBONES emoji
+<Multi_key><T><O><X>                                                                               : "☠" U2620 # SKULL AND CROSSBONES emoji
+#
+#
 # # Square emoji
 #
 #   The only cross-platform supportable black or white square emoji come in
@@ -3350,6 +3376,11 @@
 #
 #
 # # Smiley emoji
+#
+#   Additionally to support in group 3 of the parentheses, these are supported
+#   by their traditional ASCII representation.
+#   See # # C03 parenleft
+#   See # # C04 parenright
 #
 <Multi_key><colon><parenleft>                                                                      : "☹" U2639 # WHITE FROWNING FACE emoji with skin tone support
 <Multi_key><colon><parenright>                                                                     : "☺" U263A # WHITE SMILING FACE emoji with skin tone support, 25th-ranking
@@ -3450,7 +3481,7 @@
 #
 # # Symbol for SPACE
 #
-#   The open box is also in group 1 of $.
+#   The open box is also in group 1 of dollar.
 #
 <Multi_key><s><p>                                                                                  : "␣" U2423 # OPEN BOX
 <Multi_key><S><P>                                                                                  : "␣" U2423 # OPEN BOX
@@ -3459,7 +3490,7 @@
 # # Symbols for NO-BREAK SPACE
 #
 #   The down-pointing triangle conforms to Gedit’s Draw Spaces extension.
-#   The shouldered open box is also in group 2 of $.
+#   The shouldered open box is also in group 2 of dollar.
 #
 <Multi_key><n><b><s>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><B><S>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
@@ -4947,7 +4978,8 @@
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
 #   Consistently, both U223C and U007E display exactly the same, and semantics
-#   are also unambiguous. As a result, U223C is not supported in group 1 of ~.
+#   are also unambiguous. As a result, U223C is not supported in group 1 of
+#   asciitilde.
 #
 <Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><space><asciitilde>                                                      <nobreakspace> : "∼" U223C # TILDE OPERATOR
