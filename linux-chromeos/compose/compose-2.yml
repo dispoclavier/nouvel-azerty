@@ -4346,12 +4346,11 @@
 #
 #   "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E, "ɘ" U0258 LATIN SMALL LETTER
 #   REVERSED E is no casing pair. The small letter has no capital letter, while
-#   the capital letter is considered a _turned_ e, uppercase of "ǝ" U01DD LATIN
+#   the capital letter is considered a turned "e", uppercase of "ǝ" U01DD LATIN
 #   SMALL LETTER TURNED E. As such it is in the TURNED dead key, as well as in
-#   group 1 of R for ease of input, and in group 2 of E for ease of retrieval.
+#   group 1 of "E".
 #   See #*# TURNED
 #   See #+# GROUP_1
-#   See #+# GROUP_2
 #
 #   Digits yield mathematical backslashes without space termination.
 #   See # # Design of math sequences
@@ -9554,8 +9553,11 @@
 #   Dchar: "ŏ" U014F
 #
 #   "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING is mapped to
-#   unconflicting and case insensitive C, with its left equivalent in
-#   dead_invertedbreve. Raised half rings are in group 1 of K.
+#   unconflicting and case insensitive "C", with its left equivalent
+#   "˓" U02D3 in dead_invertedbreve. Raised half rings "ʿ" U02BF and "ʾ" U02BE
+#   are in group 1 of "l" and "m".
+#   See #*# INVERTED_BREVE
+#   See #+# GROUP_1
 #
 #   This is also the box drawings dead key.
 #   See # # Box drawings
