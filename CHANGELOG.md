@@ -4,15 +4,19 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
-## 4.26.0 (projet)
+## 4.27.0 (projet)
 
 Mise à jour sous macOS des dispositions émulées selon Linux.
 
-## 4.25.0 (projet)
+## 4.26.0 (projet)
 
 Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous Linux.
 
-## 4.24.0 (projet)
+## 4.25.0 (projet)
+
+Simplification des séquences de composition.
+
+## 4.24.0 (2025-03-03)
 
 Correction de la prise en charge des émojis "☀" U+2600 et "☠" U+2620.
 
@@ -24,7 +28,7 @@ Rectification de la touche morte exposant.
 * Transformations :
 	* Groupes des symboles :
 		* Groupes de "$" :
-			* Ajouter "☼" U+263C dans le groupe 4 à la place de l’émoji "☀" U+2600, qui va dans le groupe extra et en composition. compose-3.yml [01d15e9](https://github.com/dispoclavier/nouvel-azerty/commit/01d15e93e1ab22206a075a9927fb191c5003d215)
+			* Ajouter "☼" U+263C dans le groupe 4 à la place de l’émoji "☀" U+2600, qui va dans le groupe extra et en composition. compose-3.yml [01d15e9](https://github.com/dispoclavier/nouvel-azerty/commit/01d15e93e1ab22206a075a9927fb191c5003d215), [c363b25](https://github.com/dispoclavier/nouvel-azerty/commit/c363b256878da34a2baf6e7d86e3430ddf1976c4), [14ff1e4](https://github.com/dispoclavier/nouvel-azerty/commit/14ff1e4372ea62a721aa3f3284b409511ae438e9)
 			* Ajouter un groupe extra pour l’émoji "☀" U+2600. ibidem
 		* Groupes de "~" :
 			* Ajouter "☥" U+2625 dans le groupe 5 à la place de l’émoji "☠" U+2620, qui va dans le groupe extra et en composition. ibidem
