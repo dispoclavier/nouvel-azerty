@@ -206,17 +206,11 @@
 #   The glyphs and shapes may not match exactly, as opposed to the character
 #   names. In any event, safety goes first, in order to make this project more
 #   resilient against allegations about fostering the input of disguised or
-#   explicit symbols related to far-right ideologies and satanism.
+#   explicit symbols related to ideologies that it firmly rejects and condemns.
 #   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
 #   https://de.wikipedia.org/wiki/Schwarze_Sonne
 #   https://fr.wikipedia.org/wiki/Soleil_noir_(symbole_occulte)
 #   https://www.lemonde.fr/societe/article/2025/02/15/le-neonazisme-en-france-une-menace-diffuse-et-hybride_6548247_3224.html
-#
-#   The symbols "☀" U2600 and "☠" U2620 are only supported because they are
-#   emoji. If they were not, like "࿕" U0FD5, "࿖" U0FD6, "࿗" U0FD7, "࿘" U0FD8,
-#   they would have no support in this file and on this project, regardless of
-#   their use in various cultures, particularly in Indian religions.
-#   https://en.wikipedia.org/wiki/Swastika
 #
 #
 # # Symbol groups overview
@@ -225,8 +219,10 @@
 #   Plain text displays best with a 6 character tab width.
 #
 #   Empty positions are reserved, because these sequences
-#   are used for mathematical letters.
+#   are used for mathematical letters or for group dead key
+#   multikey equivalents.
 #   See # # Mathematical Latin alphabets
+#   See # # C01 numbersign
 #
 #
 #	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
@@ -963,20 +959,28 @@
 #
 #   The first three positions are inaccessible by multikey equivalents, due to
 #   an inavoidable interference of numbersign with itself. As a consequence,
-#   for cross-platform compatibility, these positions cannot be used. Only the
-#   light checkbox "⮽" U2BBD remains in its place in group 10.
+#   for cross-platform compatibility, these positions cannot be used for dead
+#   keys either.
 #   See #   Conflictlessness check
+#
+#   The light checkbox "⮽" U2BBD in group 10 is consistent with the other
+#   checkboxes, that the first three groups would be used for and that are
+#   moved to C10 instead.
 #   See # # C10 bar
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
 #   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two
-#   sets. These also have multikey alternatives. "▪" U25AA is considered a
-#   Unicode equivalent of CSS `list-style-type: square`, but it is emoji #1622
-#   and is therefore subject to rendering issues when used as a bullet.
+#   sets, the black ones here with numbersign, consistently with the "black"
+#   semantics of numbersign in math symbol sequences, the white ones on B01.
+#   The multikey equivalents add to the other multikey sequences.
+#   See # # B01 slash
+#   See # # Square emoji
+#
+#   "▪" U25AA is considered a Unicode equivalent of `list-style-type: square`,
+#   yet it is emoji #1622 and is therefore subject to rendering issues when
+#   used as a bullet.
 #   https://www.unicode.org/emoji/charts-15.1/emoji-list.html#25aa
 #   https://github.com/w3c/csswg-drafts/issues/6200
-#   See # # Square emoji
-#   See # # B01 slash
 #
 #   Broader sets of squares are available by multikey.
 #   See # # Square emoji
