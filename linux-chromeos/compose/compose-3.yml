@@ -190,7 +190,7 @@
 #   Two symbols, namely dollar and asciitilde, are having an extra symbol group
 #   for the emoji "☀" U2600 and "☠" U2620 respectively, As these are encoded in
 #   the BMP, they benefit from the full-support policy. Both need a disclaimer.
-#   While the scull-and-crossbones emoji is intrinsically prone to misuse while
+#   While the scull-and-crossbones emoji is intrinsically prone to misuse after
 #   being originally aimed at life threats through toxic substances, the sun is
 #   basically inoffensive but is hijacked as of its black item. The solution is
 #   to use the white sun for the emoji, but the issue went certainly unnoticed.
@@ -203,10 +203,15 @@
 #   and right after the group dead key or its multikey equivalent; « ¦#…$ » for
 #   "☀" U2600, « ¦#…~ » for "☠" U2620.
 #
-#   The glyphs and shapes may not match exactly, as opposed to the character
+#   In French, this extra group is called "groupe 1 bis", with a Latin word for
+#   "twice", in English "group 1a". Consistently, in this code, the extra group
+#   comes after group 1, with "<ellipsis>" prepended to the base character.
+#
+#   Both glyphs and shapes may not match exactly, as opposed to the character
 #   names. In any event, safety goes first, in order to make this project more
-#   resilient against allegations about fostering the input of disguised or
-#   explicit symbols related to ideologies that it firmly rejects and condemns.
+#   resilient against suspicions about fostering the input of either disguised
+#   or explicit symbols related to two ideologies that are firmly rejected and
+#   condemned.
 #   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
 #   https://de.wikipedia.org/wiki/Schwarze_Sonne
 #   https://fr.wikipedia.org/wiki/Soleil_noir_(symbole_occulte)
@@ -554,6 +559,8 @@
 #
 <UEFD0>                                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
 <Multi_key><numbersign>                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
+<UEFD0>                                                                     <ellipsis><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
+<Multi_key><numbersign>                                                     <ellipsis><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
 <UEFD0><UEFD0>                                                                        <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
 <Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
 <UEFD0><3>                                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO math
@@ -600,9 +607,6 @@
 <Multi_key><numbersign><2>                                                            <asciitilde> : "☘" U2618 # SHAMROCK emoji
 <UEFD0><KP_2>                                                                         <asciitilde> : "☘" U2618 # SHAMROCK emoji
 <Multi_key><numbersign><KP_2>                                                         <asciitilde> : "☘" U2618 # SHAMROCK emoji
-#
-<UEFD0><ellipsis>                                                                     <asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
-<Multi_key><numbersign><ellipsis>                                                     <asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
 #
 #
 # # D06 at, dead_greek
@@ -1052,6 +1056,8 @@
 #
 <UEFD0>                                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
 <Multi_key><numbersign>                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
+<UEFD0>                                                                         <ellipsis><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><numbersign>                                                         <ellipsis><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
 <UEFD0><UEFD0>                                                                            <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <Multi_key><numbersign><numbersign>                                                       <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <UEFD0><3>                                                                                <dollar> : "∑" U2211 # N-ARY SUMMATION math
@@ -1098,9 +1104,6 @@
 <Multi_key><numbersign><2>                                                                <dollar> : "✒" U2712 # BLACK NIB emoji, fountain pen
 <UEFD0><KP_2>                                                                             <dollar> : "✒" U2712 # BLACK NIB emoji, fountain pen
 <Multi_key><numbersign><KP_2>                                                             <dollar> : "✒" U2712 # BLACK NIB emoji, fountain pen
-#
-<UEFD0><ellipsis>                                                                         <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
-<Multi_key><numbersign><ellipsis>                                                         <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
 #
 #
 # # C03 parenleft
