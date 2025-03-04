@@ -16,7 +16,7 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Simplification des séquences de composition.
 
-## 4.24.0 (2025-03-03)
+## 4.24.0 (2025-03-04)
 
 Correction de la prise en charge des émojis "☀" U+2600 et "☠" U+2620.
 
@@ -28,16 +28,16 @@ Rectification de la touche morte exposant.
 * Transformations :
 	* Groupes des symboles :
 		* Groupes de "$" :
-			* Ajouter "☼" U+263C dans le groupe 4 à la place de l’émoji "☀" U+2600, qui va dans le groupe extra et en composition. compose-3.yml [01d15e9](https://github.com/dispoclavier/nouvel-azerty/commit/01d15e93e1ab22206a075a9927fb191c5003d215), [c363b25](https://github.com/dispoclavier/nouvel-azerty/commit/c363b256878da34a2baf6e7d86e3430ddf1976c4), [14ff1e4](https://github.com/dispoclavier/nouvel-azerty/commit/14ff1e4372ea62a721aa3f3284b409511ae438e9)
+			* Ajouter "☼" U+263C dans le groupe 4 à la place de l’émoji "☀" U+2600, qui va dans un groupe extra et en composition. compose-3.yml [01d15e9](https://github.com/dispoclavier/nouvel-azerty/commit/01d15e93e1ab22206a075a9927fb191c5003d215), [c363b25](https://github.com/dispoclavier/nouvel-azerty/commit/c363b256878da34a2baf6e7d86e3430ddf1976c4), [14ff1e4](https://github.com/dispoclavier/nouvel-azerty/commit/14ff1e4372ea62a721aa3f3284b409511ae438e9), [35a0eae](https://github.com/dispoclavier/nouvel-azerty/commit/35a0eaed2eed6107e944e1833107ea5904904b01)
 			* Ajouter un groupe extra pour l’émoji "☀" U+2600. ibidem
 		* Groupes de "~" :
-			* Ajouter "☥" U+2625 dans le groupe 5 à la place de l’émoji "☠" U+2620, qui va dans le groupe extra et en composition. ibidem
+			* Ajouter "☥" U+2625 dans le groupe 5 à la place de l’émoji "☠" U+2620, qui va dans un groupe extra et en composition. ibidem
 			* Ajouter un groupe extra pour l’émoji "☠" U+2620. ibidem
 	* Exposant groupe 1 par "u" : Mettre "ᶷ" U+1DB7 à la place de "ᶿ" U+1DBF, qui est par "t". compose-2.yml [7a216e6](https://github.com/dispoclavier/nouvel-azerty/commit/7a216e61d3c65f7ac8aeee54e923c22d935f7095)
 	* Exposant groupe 2 par "u" : Redonder "ᶿ" U+1DBF à la place de "ᶷ" U+1DB7, qui est dans exposant groupe 1. ibidem
 	* Exposant et crochet rétroflexe : Rectifier la prise en charge de "𐞹" U+107B9, par "k" et "!" au lieu de "m". compose-2.yml [56ae33e](https://github.com/dispoclavier/nouvel-azerty/commit/56ae33eae52518643340c42a3a0314ecab84b42a)
 * Documentation :
-	* Corriger et compléter des annotations. compose-2.yml [d717a87](https://github.com/dispoclavier/nouvel-azerty/commit/d717a8770f1bf3f70ee0ad01e21ec6573a56bc9e), [21ccde6](https://github.com/dispoclavier/nouvel-azerty/commit/21ccde69698f9cb501bfbc3ae30fbdf8728cac14), compose-3.yml [9385cd1](https://github.com/dispoclavier/nouvel-azerty/commit/9385cd106731dadaf9d0ec6936b7a4a49dec3fa8), dispocla.cpp [2849192](https://github.com/dispoclavier/nouvel-azerty/commit/28491921e564bc4d3f3376a90960dc920b3f0dd9)
+	* Corriger et compléter des annotations. compose-2.yml [d717a87](https://github.com/dispoclavier/nouvel-azerty/commit/d717a8770f1bf3f70ee0ad01e21ec6573a56bc9e), [21ccde6](https://github.com/dispoclavier/nouvel-azerty/commit/21ccde69698f9cb501bfbc3ae30fbdf8728cac14), compose-3.yml [9385cd1](https://github.com/dispoclavier/nouvel-azerty/commit/9385cd106731dadaf9d0ec6936b7a4a49dec3fa8), [35a0eae](https://github.com/dispoclavier/nouvel-azerty/commit/35a0eaed2eed6107e944e1833107ea5904904b01), dispocla.cpp [2849192](https://github.com/dispoclavier/nouvel-azerty/commit/28491921e564bc4d3f3376a90960dc920b3f0dd9)
 	* Corriger le journal des modifications. CHANGELOG.md [b75f30a](https://github.com/dispoclavier/nouvel-azerty/commit/b75f30a241329b7ebe8c9630c28c46a8bbe4108f)
 
 ## 4.23.0 (2025-02-23)
