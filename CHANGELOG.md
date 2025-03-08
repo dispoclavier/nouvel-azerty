@@ -14,7 +14,17 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 ## 4.25.0 (projet)
 
-Simplification des séquences de composition.
+Simplification et correction de séquences de composition.
+
+Complétion de la touche morte réfléchi.
+
+Introduction du concept de « groupe 1 bis ».
+
+* Composition : Corriger ou simplifier les séquences de "⋍" U+22CD, "⭇" U+2B47. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
+* Transformations : Réfléchi : Prendre en charge "∽" U+223D, qui est aussi en composition par « ¦~\ ». compose-2.yml [9ef34fc](https://github.com/dispoclavier/nouvel-azerty/commit/9ef34fc4f96ad6b6bd965bb649679a517a036f5b)
+* Documentation :
+	* Renommer le « groupe extra » en « groupe 1 bis ». compose-3.yml [8c2c0fd](https://github.com/dispoclavier/nouvel-azerty/commit/8c2c0fd72bef520195db45c6b8d9a9ad154eff88)
+	* Corriger des annotations. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
 
 ## 4.24.0 (2025-03-04)
 
