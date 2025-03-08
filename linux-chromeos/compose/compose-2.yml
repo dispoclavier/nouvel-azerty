@@ -4371,6 +4371,8 @@
 <Multi_key><backslash>                                                                <apostrophe> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                     <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                      <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
+<UEFD6>                                                                               <asciitilde> : "∽" U223D # REVERSED TILDE
+<Multi_key><backslash>                                                                <asciitilde> : "∽" U223D # REVERSED TILDE
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <UEFD6>                                                                                    <grave> : "⌐" U2310 # REVERSED NOT SIGN
