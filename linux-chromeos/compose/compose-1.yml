@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.24.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.25.0d" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -4974,17 +4974,16 @@
 <Multi_key><nobreakspace><asciitilde><colon>                                               <space> : "∻" U223B # HOMOTHETIC
 <Multi_key><nobreakspace><asciitilde><colon>                                        <nobreakspace> : "∻" U223B # HOMOTHETIC
 #
-#   "∼" U223C TILDE OPERATOR was disunified from ASCII tilde without rationale.
+#   Both ASCII tilde "~" and "∼" U223C TILDE OPERATOR display exactly the same,
+#   and semantics is also unambiguous. Consistently, there is no rationale for
+#   their disunification.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
-#
-#   Consistently, both U223C and U007E display exactly the same, and semantics
-#   are also unambiguous. As a result, U223C is not supported in group 1 of
-#   asciitilde.
 #
 <Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><space><asciitilde>                                                      <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><nobreakspace><asciitilde>                                                      <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><nobreakspace><asciitilde>                                               <nobreakspace> : "∼" U223C # TILDE OPERATOR
+#   In #*# REVERSED                                                                                : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                         <space> : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                  <nobreakspace> : "∽" U223D # REVERSED TILDE
 #   In #*# INVERTED                                                                                : "∾" U223E # INVERTED LAZY S
@@ -5436,9 +5435,7 @@
 <Multi_key><backslash><backslash><slash>                                            <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
-<Multi_key><asciitilde><backslash><underscore>                                             <space> : "⋍" U22CD # REVERSED TILDE EQUALS
-<Multi_key><asciitilde><backslash><underscore>                                      <nobreakspace> : "⋍" U22CD # REVERSED TILDE EQUALS
-<Multi_key><backslash><asciitilde><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
+<Multi_key><asciitilde><backslash><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><v><parenright><parenleft>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenright><parenleft>                                               <nobreakspace> : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenleft><parenright>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
@@ -8087,7 +8084,7 @@
 <Multi_key><minus><greater><4>                                                      <nobreakspace> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 <Multi_key><minus><greater><KP_4>                                                          <space> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 <Multi_key><minus><greater><KP_4>                                                   <nobreakspace> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
-<Multi_key><asciitilde><backslash><minus><greater>                                                 : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><asciitilde><backslash><minus>                                                          : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><minus><greater><asciitilde><asciitilde><backslash>                             <space> : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><minus><greater><asciitilde><asciitilde><backslash>                      <nobreakspace> : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><asciitilde><less><minus>                                                               : "⭉" U2B49 # TILDE OPERATOR ABOVE LEFTWARDS ARROW
