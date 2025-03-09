@@ -6970,20 +6970,11 @@
 <Multi_key><m>                                                                      <nobreakspace> : "⧢" U29E2 # SHUFFLE PRODUCT
 <Multi_key><equal><slash><slash>                                                           <space> : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
 <Multi_key><equal><slash><slash>                                                    <nobreakspace> : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
-<Multi_key><asciitilde><numbersign>                                                        <space> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-<Multi_key><asciitilde><numbersign>                                                 <nobreakspace> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-<Multi_key><space><asciitilde><numbersign>                                                 <space> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-<Multi_key><space><asciitilde><numbersign>                                          <nobreakspace> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-<Multi_key><nobreakspace><asciitilde><numbersign>                                          <space> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-<Multi_key><nobreakspace><asciitilde><numbersign>                                   <nobreakspace> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-<Multi_key><space><numbersign><minus>                                                      <space> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><space><numbersign><minus>                                               <nobreakspace> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><nobreakspace><numbersign><minus>                                               <space> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><nobreakspace><numbersign><minus>                                        <nobreakspace> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><space><minus><equal><bar><bar>                                                 <space> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><space><minus><equal><bar><bar>                                          <nobreakspace> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><nobreakspace><minus><equal><bar><bar>                                          <space> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
-<Multi_key><nobreakspace><minus><equal><bar><bar>                                   <nobreakspace> : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
+<Multi_key><space><asciitilde><equal><slash><slash>                                                : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+<Multi_key><nobreakspace><asciitilde><equal><slash><slash>                                         : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+<Multi_key><minus><equal><slash><slash>                                                            : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
+<Multi_key><space><equal><minus><slash>                                                            : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
+<Multi_key><nobreakspace><equal><minus><slash>                                                     : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
 <Multi_key><bar><equal><bar>                                                                       : "⧦" U29E6 # GLEICH STARK
 <Multi_key><space><bar><equal>                                                             <space> : "⧧" U29E7 # THERMODYNAMIC
 <Multi_key><space><bar><equal>                                                      <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
