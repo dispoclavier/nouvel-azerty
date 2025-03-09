@@ -7640,6 +7640,11 @@
 <Multi_key><equal><less><grave>                                                     <nobreakspace> : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
 <Multi_key><equal><greater><grave>                                                         <space> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
 <Multi_key><equal><greater><grave>                                                  <nobreakspace> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
+#
+#   The reversed tilde in "⪝" U2A9D, "⪞" U2A9E, "⪟" U2A9F, "⪠" U2AA0 is a font
+#   issue. This is a tilde like in "⩬" U2A6C, "⪍" U2A8D, "⪎" U2A8E, "⪏" U2A8F,
+#   "⪐" U2A90. Consistently there is no backslash in these multikey sequences.
+#
 <Multi_key><asciitilde><less>                                                              <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><less>                                                       <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><backslash><less>                                                   <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
