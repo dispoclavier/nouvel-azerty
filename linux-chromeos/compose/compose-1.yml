@@ -7504,9 +7504,9 @@
 <Multi_key><V><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><V><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 #
-#   Although SMALL VEE refers to the small letter "v", it is more like a small
-#   version of the XOR symbol "⊻" U22BB and therefore qualifies for a trailing
-#   comma.
+#   Although "small vee" refers to the small letter "v", "⩡" U2A61 is more like
+#   a small version of the XOR symbol "⊻" U22BB and therefore qualifies for the
+#   trailing comma.
 #   See #   Small symbols
 #
 <Multi_key><v><underscore><comma>                                                                  : "⩡" U2A61 # SMALL VEE WITH UNDERBAR
