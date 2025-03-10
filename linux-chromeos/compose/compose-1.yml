@@ -3959,8 +3959,9 @@
 #   Small symbols
 #
 #   Small alternative symbols ("∊" U220A, "∍" U220D, "⋷" U22F7, "⋾" U22FE,
-#   "⋼" U22FC) are distinguished from normal-size symbols by a trailing comma,
-#   rather than grave or period, with size-based mnemonics.
+#   "⋼" U22FC, "⋴" U22F4, "⩡" U2A61) are distinguished from normal-size
+#   symbols by a trailing comma, rather than grave or period, with size-based
+#   mnemonic and to prevent overuse of grave and period.
 #
 #
 #   Outsourcing to dead keys
@@ -5584,8 +5585,8 @@
 <Multi_key><nobreakspace><minus><e>                                                 <nobreakspace> : "⋲" U22F2 # ELEMENT OF WITH LONG HORIZONTAL STROKE
 <Multi_key><e><bar>                                                                        <space> : "⋳" U22F3 # ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><e><bar>                                                                 <nobreakspace> : "⋳" U22F3 # ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-<Multi_key><e><bar><underscore>                                                            <space> : "⋴" U22F4 # SMALL ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-<Multi_key><e><bar><underscore>                                                     <nobreakspace> : "⋴" U22F4 # SMALL ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><e><bar><comma>                                                                 <space> : "⋴" U22F4 # SMALL ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><e><bar><comma>                                                          <nobreakspace> : "⋴" U22F4 # SMALL ELEMENT OF WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><period><e>                                                              <space> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><space><period><e>                                                       <nobreakspace> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><nobreakspace><period><e>                                                       <space> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
@@ -7494,7 +7495,7 @@
 <Multi_key><v><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><V><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><V><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><asciicircum><percent><underscore>                                                      : "⩡" U2A61 # SMALL VEE WITH UNDERBAR
+<Multi_key><asciicircum><percent><underscore><comma>                                               : "⩡" U2A61 # SMALL VEE WITH UNDERBAR
 <Multi_key><minus><minus><v>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
