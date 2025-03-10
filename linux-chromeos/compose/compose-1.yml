@@ -842,6 +842,10 @@
 #
 # # Notes for maintenance
 #
+#   This file needs to be splitted in three partials maxing at 2GB, due to file
+#   size restrictions in the web interface of GitHub, in order to be displayed
+#   on GitHub as full-fledged web pages rather than merely in plain text,
+#
 #   The colon alignment in column 100 is based on longest multikey sequences
 #   in terms of string length, as used for U10789, U107AB.
 #
@@ -3460,16 +3464,21 @@
 # # Diameter sign
 #
 #   This sequence is case sensitive, as uppercase is used for "∅" U2205 EMPTY
-#   SET supported as a mathematical symbol, but not space terminated either,
-#   while "⌀" U2300 DIAMETER SIGN is not a math symbol.
+#   SET (supported as a mathematical symbol without being space terminated),
+#   while "⌀" U2300 DIAMETER SIGN is not a math symbol, yet space termination
+#   is required to prevent a conflict with "♂" U2642 MALE SIGN.
 #   See # # Mathematical symbols in Miscellaneous Technical block U2300
 #
-#   Also on live key C03 (D), level 7, and in group 1 of "(" on "D" key C03;
-#   also in the circumflex dead key with case insensitive D as a base letter.
+#   However, that complication doesn’t matter since "⌀" U2300 is also on live
+#   key C03 "D", level 7, and in group 1 of "(" on "D" key C03.
 #   See # # C03 parenleft
+#
+#   Moreover, this is in the circumflex dead key with case insensitive D as a
+#   base letter.
 #   See #*# CIRCUMFLEX
 #
-<Multi_key><o><slash>                                                                              : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><o><slash>                                                                      <space> : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
 #
 #
 # # Power switch
@@ -3843,12 +3852,6 @@
 #   consistency and maintainability and with respect to a following number that
 #   may need to be connected to the symbol by a no-break space.
 #
-#   Space termination is also used as a way to streamline. Among two competing
-#   sequences, the most obvious one would be space terminated, while the less
-#   obvious one gets a terminating, clarifying non-space character instead.
-#   See "⥎" U294E « ¦'-`␣ » versus "⥏" U294F « ¦'-`| » for a single harpoon,
-#   and "⥢" U2962 « ¦'-`-␣ » versus "⥣" U2963 « ¦'-`-| » for double harpoons.
-#
 #
 #   Leading space
 #
@@ -3876,10 +3879,12 @@
 #
 #   Negated sequences work the other way around: letters first, slash last,
 #   to further prevent conflicts with dead key equivalents, as in "∄" U2204,
-#   "∅" U2205, "∉" U2209; but when required otherwise to distinguish partial
-#   negations from full negations, the slash may not be the last character,
-#   as for "≇" U2247 versus "≆" U2246. Another exception prevents a conflict
-#   of "≮" U226E with "↙" U2199.
+#   "∅" U2205, "∉" U2209.
+#
+#   However, to distinguish partial negations from full negations, the slash
+#   may not be the last character, as for "≇" U2247 versus "≆" U2246. Other
+#   examples include "⊈" U2288 versus "⊊" U228A, "⋢" U22E2 versus "⋤" U22E4.
+#   Another exception prevents a conflict between "≮" U226E and "↙" U2199.
 #
 #
 #   Reverse symbols
@@ -3922,23 +3927,33 @@
 #   introducing minus for not slanted, screwing up some arrows in the process.
 #
 #
-#   Arrows
+#   Arrows and harpoons
 #
 #   Arrows are better supported thanks to this scheme, with the minus dedicated
 #   to horizontal stems, the exclamation mark to vertical stems, the slash and
 #   backslash to diagonal stems, while the pipe is required for an actual bar,
-#   as in "⤆" U2906, "⤇" U2907, "↥" U21A5, "↧" U21A7. Since double arrows also
-#   occur in all eight directions, non-horizontal ones use appended equal in
-#   conjunction with \, !, / for the few existing (mainly "⇑" U21D1, "⇓" U21D3,
-#   "⇕" U21D5, "⇖" U21D6, "⇗" U21D7, "⇘" U21D8, "⇙" U21D9, "⟰" U27F0, "⟱" U27F1
-#   and "⤊" U290A, "⤋" U290B). So, "⇕" U21D5 is "↕" U2195 with appended equal.
-#   Triple and quadruple arrows use appended digit 3 or 4, as for "⇛" U21DB.
+#   as in "⤆" U2906, "⤇" U2907, "↥" U21A5, "↧" U21A7.
+#
+#   Since double arrows also occur in all eight directions, non-horizontal ones
+#   use appended equal in conjunction with \, !, / for the few existing, mainly
+#   the basic "⇑" U21D1, "⇓" U21D3, "⇕" U21D5, "⇖" U21D6, "⇗" U21D7, "⇘" U21D8
+#   and "⇙" U21D9. As a result, "⇕" U21D5 is input like "↕" U2195 with appended
+#   equal.
+#
+#   Triple and quadruple arrows use appended digit 3 or 4, as for "⇛" U21DB,
+#   "⟰" U27F0, "⟱" U27F1, "⤊" U290A, "⤋" U290B.
+#
 #   Long arrows are horizontal and use double minus/equal, as for "⟶" U27F6.
+#
 #   Vertical arrows are composed as if they were turned 90° to the left, i.e.
 #   from top to bottom; up arrows use less, as for "↑" U2191, "⇑" U21D1; down
-#   arrows use greater, as for "↓" U2193, "⇓" U21D3; and the bar has likewise
-#   unchanged semantics, as for "↥" U21A5. Conflicts with operators are mostly
-#   resolved by tweaking the sequences of these by leading space.
+#   arrows use greater, as for "↓" U2193, "⇓" U21D3; by contrast, harpoon barbs
+#   are always grave or apostrophe/rightsinglequotemark depending on the slant,
+#   regardless of stem direction, since horizontal is minus, versus exclam for
+#   vertical. The bar has likewise unchanged semantics, as for "↥" U21A5.
+#
+#   Conflicts with operators are mostly resolved by tweaking the sequences of
+#   these by leading space.
 #
 #
 #   Small symbols
@@ -4524,8 +4539,7 @@
 <Multi_key><less><exclam><bar>                                                      <nobreakspace> : "↥" U21A5 # UPWARDS ARROW FROM BAR
 <Multi_key><bar><minus><greater>                                                           <space> : "↦" U21A6 # RIGHTWARDS ARROW FROM BAR
 <Multi_key><bar><minus><greater>                                                    <nobreakspace> : "↦" U21A6 # RIGHTWARDS ARROW FROM BAR
-<Multi_key><bar><exclam><greater>                                                          <space> : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
-<Multi_key><bar><exclam><greater>                                                   <nobreakspace> : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
+<Multi_key><bar><exclam><greater>                                                                  : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
 #
 #   U21A8 is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=20
@@ -4641,24 +4655,16 @@
 <Multi_key><slash><equal><greater>                                                  <nobreakspace> : "⇏" U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
 <Multi_key><less><equal>                                                                   <space> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
 <Multi_key><less><equal>                                                            <nobreakspace> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-<Multi_key><less><exclam><equal>                                                           <space> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-<Multi_key><less><exclam><equal>                                                    <nobreakspace> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><less><exclam><equal>                                                                   : "⇑" U21D1 # UPWARDS DOUBLE ARROW
 <Multi_key><equal><greater>                                                                <space> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
 <Multi_key><equal><greater>                                                         <nobreakspace> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-<Multi_key><equal><exclam><greater>                                                        <space> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-<Multi_key><equal><exclam><greater>                                                 <nobreakspace> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-<Multi_key><less><equal><greater>                                                          <space> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-<Multi_key><less><equal><greater>                                                   <nobreakspace> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-<Multi_key><less><exclam><greater><equal>                                                  <space> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-<Multi_key><less><exclam><greater><equal>                                           <nobreakspace> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-<Multi_key><less><backslash><equal>                                                        <space> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-<Multi_key><less><backslash><equal>                                                 <nobreakspace> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-<Multi_key><slash><greater><equal>                                                         <space> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<Multi_key><slash><greater><equal>                                                  <nobreakspace> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<Multi_key><backslash><greater><equal>                                                     <space> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-<Multi_key><backslash><greater><equal>                                              <nobreakspace> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-<Multi_key><less><slash><equal>                                                            <space> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-<Multi_key><less><slash><equal>                                                     <nobreakspace> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><equal><exclam><greater>                                                                : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><less><equal><greater>                                                                  : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><less><exclam><greater><equal>                                                          : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><less><backslash><equal>                                                                : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><slash><greater><equal>                                                                 : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><backslash><greater><equal>                                                             : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><less><slash><equal>                                                                    : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
 <Multi_key><less><minus><3>                                                                <space> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
 <Multi_key><less><minus><3>                                                         <nobreakspace> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
 <Multi_key><less><minus><KP_3>                                                             <space> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
@@ -4676,12 +4682,13 @@
 <Multi_key><nobreakspace><less><asciitilde><asciitilde>                                    <space> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
 <Multi_key><nobreakspace><less><asciitilde><asciitilde>                             <nobreakspace> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
 <Multi_key><asciitilde><asciitilde><greater>                                                       : "⇝" U21DD # RIGHTWARDS SQUIGGLE ARROW
-<Multi_key><bar><less><minus>                                                              <space> : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
-<Multi_key><bar><less><minus>                                                       <nobreakspace> : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
+<Multi_key><bar><less><minus>                                                                      : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
 <Multi_key><minus><greater><bar>                                                           <space> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
 <Multi_key><minus><greater><bar>                                                    <nobreakspace> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
-<Multi_key><o><minus><minus><greater>                                                      <space> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
-<Multi_key><o><minus><minus><greater>                                               <nobreakspace> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><space><o><minus><greater>                                                      <space> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><space><o><minus><greater>                                               <nobreakspace> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><nobreakspace><o><minus><greater>                                               <space> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><nobreakspace><o><minus><greater>                                        <nobreakspace> : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><exclam><greater><less><exclam>                                                 <space> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 <Multi_key><exclam><greater><less><exclam>                                          <nobreakspace> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 <Multi_key><space><3><minus><greater>                                                      <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
@@ -4706,10 +4713,10 @@
 <Multi_key><minus><bar><bar><minus><greater>                                        <nobreakspace> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus><greater>                                         <space> : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus><greater>                                  <nobreakspace> : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><bar><minus><minus>                                                       <space> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
-<Multi_key><less><bar><minus><minus>                                                <nobreakspace> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
-<Multi_key><minus><minus><bar><greater>                                                    <space> : "⇾" U21FE # RIGHTWARDS OPEN-HEADED ARROW
-<Multi_key><minus><minus><bar><greater>                                             <nobreakspace> : "⇾" U21FE # RIGHTWARDS OPEN-HEADED ARROW
+<Multi_key><less><bar><minus>                                                              <space> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
+<Multi_key><less><bar><minus>                                                       <nobreakspace> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
+<Multi_key><minus><bar><greater>                                                           <space> : "⇾" U21FE # RIGHTWARDS OPEN-HEADED ARROW
+<Multi_key><minus><bar><greater>                                                    <nobreakspace> : "⇾" U21FE # RIGHTWARDS OPEN-HEADED ARROW
 <Multi_key><less><bar><minus><bar><greater>                                                <space> : "⇿" U21FF # LEFT RIGHT OPEN-HEADED ARROW
 <Multi_key><less><bar><minus><bar><greater>                                         <nobreakspace> : "⇿" U21FF # LEFT RIGHT OPEN-HEADED ARROW
 #
@@ -5484,6 +5491,10 @@
 <Multi_key><space><greater><greater><greater>                                       <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
 <Multi_key><nobreakspace><greater><greater><greater>                                       <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
 <Multi_key><nobreakspace><greater><greater><greater>                                <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+#
+#   Consistently with "≤" U2264, "≥" U2265, underscore is used in sequences for
+#   single-line equal in middle position too, and even in overscore position.
+#
 <Multi_key><less><underscore><greater>                                                     <space> : "⋚" U22DA # LESS-THAN EQUAL TO OR GREATER-THAN
 <Multi_key><less><underscore><greater>                                              <nobreakspace> : "⋚" U22DA # LESS-THAN EQUAL TO OR GREATER-THAN
 <Multi_key><greater><underscore><less>                                                     <space> : "⋛" U22DB # GREATER-THAN EQUAL TO OR LESS-THAN
@@ -5508,8 +5519,10 @@
 <Multi_key><greater><underscore><parenright><parenleft><slash>                      <nobreakspace> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 <Multi_key><greater><underscore><parenleft><parenright><slash>                             <space> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 <Multi_key><greater><underscore><parenleft><parenright><slash>                      <nobreakspace> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
-#   The glyphs of "⋢" U22E2, "⋣" U22E3 are defective in some fonts, lacking the
-#   single-line equal below.
+#
+#   The sequences for "⋢" U22E2, "⋣" U22E3 are based on the character names,
+#   while the glyphs may be lacking the single-line equal below in some fonts.
+#
 <Multi_key><c><bracketleft><slash><underscore>                                             <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketleft><slash><underscore>                                      <nobreakspace> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketright><slash><underscore>                                            <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
@@ -5548,20 +5561,17 @@
 <Multi_key><less><bar><slash><underscore>                                           <nobreakspace> : "⋬" U22EC # NOT NORMAL SUBGROUP OF OR EQUAL TO
 <Multi_key><less><bar><underscore><slash>                                                  <space> : "⋬" U22EC # NOT NORMAL SUBGROUP OF OR EQUAL TO
 <Multi_key><less><bar><underscore><slash>                                           <nobreakspace> : "⋬" U22EC # NOT NORMAL SUBGROUP OF OR EQUAL TO
-<Multi_key><bar><greater><slash><underscore>                                               <space> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><bar><greater><slash><underscore>                                        <nobreakspace> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><bar><greater><underscore><slash>                                               <space> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><bar><greater><underscore><slash>                                        <nobreakspace> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><greater><bar><slash><underscore>                                               <space> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><greater><bar><slash><underscore>                                        <nobreakspace> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><greater><bar><underscore><slash>                                               <space> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><greater><bar><underscore><slash>                                        <nobreakspace> : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
+<Multi_key><bar><greater><slash><underscore>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
+<Multi_key><bar><greater><underscore><slash>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
+<Multi_key><greater><bar><slash><underscore>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
+<Multi_key><greater><bar><underscore><slash>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
 #
-#   For ellipses, space termination is skipped for consistency and as needless.
+#   Consistently with arrows, verticality of ellipsis translates to exclam in
+#   the sequence. Space termination is skipped for consistency and as needless.
 #   See # # Ellipses and leaders
 #
 #   In group 3 of :                                                                                : "⋮" U22EE # VERTICAL ELLIPSIS
-<Multi_key><period><period><period><bar>                                                           : "⋮" U22EE # VERTICAL ELLIPSIS
+<Multi_key><period><period><period><exclam>                                                        : "⋮" U22EE # VERTICAL ELLIPSIS
 #   In group 5 of :                                                                                : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key><period><period><period><minus>                                                         : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 #   In group 6 of :                                                                                : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
@@ -6004,10 +6014,8 @@
 <Multi_key><nobreakspace><o><plus>                                                         <space> : "♀" U2640 # FEMALE SIGN
 <Multi_key><nobreakspace><o><plus>                                                  <nobreakspace> : "♀" U2640 # FEMALE SIGN
 #   In group 4 of |                                                                                : "♂" U2642 # MALE SIGN
-<Multi_key><space><o><minus><greater>                                                      <space> : "♂" U2642 # MALE SIGN
-<Multi_key><space><o><minus><greater>                                               <nobreakspace> : "♂" U2642 # MALE SIGN
-<Multi_key><nobreakspace><o><minus><greater>                                               <space> : "♂" U2642 # MALE SIGN
-<Multi_key><nobreakspace><o><minus><greater>                                        <nobreakspace> : "♂" U2642 # MALE SIGN
+<Multi_key><o><slash><greater>                                                             <space> : "♂" U2642 # MALE SIGN
+<Multi_key><o><slash><greater>                                                      <nobreakspace> : "♂" U2642 # MALE SIGN
 #   In group 5 of ,                                                                                : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><8><greater><numbersign>                                                                : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><KP_8><greater><numbersign>                                                             : "♠" U2660 # BLACK SPADE SUIT
@@ -6388,10 +6396,9 @@
 <Multi_key><nobreakspace><greater><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>         : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><period><period><period><greater>                                               <space> : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
 <Multi_key><period><period><period><greater>                                        <nobreakspace> : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
-<Multi_key><bar><less><minus><bar>                                                         <space> : "⤒" U2912 # UPWARDS ARROW TO BAR
-<Multi_key><bar><less><minus><bar>                                                  <nobreakspace> : "⤒" U2912 # UPWARDS ARROW TO BAR
-<Multi_key><minus><greater><bar><bar>                                                      <space> : "⤓" U2913 # DOWNWARDS ARROW TO BAR
-<Multi_key><minus><greater><bar><bar>                                               <nobreakspace> : "⤓" U2913 # DOWNWARDS ARROW TO BAR
+<Multi_key><bar><less><exclam>                                                                     : "⤒" U2912 # UPWARDS ARROW TO BAR
+<Multi_key><exclam><greater><bar>                                                          <space> : "⤓" U2913 # DOWNWARDS ARROW TO BAR
+<Multi_key><exclam><greater><bar>                                                   <nobreakspace> : "⤓" U2913 # DOWNWARDS ARROW TO BAR
 <Multi_key><greater><minus><bar><minus><greater>                                           <space> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><minus><greater>                                    <nobreakspace> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater>                                      <space> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
@@ -8185,7 +8192,7 @@
 #   emulated using oxia instead, as since 1986, acute is the official tonos.
 #   https://www.opoudjis.net/unicode/unicode_gkbkgd.html#oxia
 #
-#   For any eventuality, tonos is in dead_doubleacute, mapped on the E key D03,
+#   For any eventuality, tonos is in dead_doubleacute, on the "E" key D03,
 #   with alphabetic mnemonic based on the Greek initial of Elliniká,
 #
 #
