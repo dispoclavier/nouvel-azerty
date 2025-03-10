@@ -394,7 +394,7 @@
 #   used to emulate it by multikey is dead_abovedot, mapped on P, where level 3
 #   ampersand is unrelated. However, dead_abovedot’s multikey equivalent period
 #   is mapped on level 5, for use as a decimal separator or group separator on
-#   the level-5 numpad, alongside comma on key C10 (M on AZERTY).
+#   the level-5 numpad, alongside comma on key C10 "M" on AZERTY.
 #
 #   The other exception is dead_cedilla on the comma key B07, where level 3 is
 #   used for question mark, that is not an equivalent of any dead key either.
@@ -572,8 +572,10 @@
 #
 #   The rightsinglequotemark base character takes into account that the ASCII
 #   apostrophe on key E04 is replaced with rightsinglequotemark to enhance UX,
-#   although apostrophe is on an unshifted key (E12 or E07), again to account
-#   for its extensive use namely due to Wikipedia’s Manual of Style.
+#   although apostrophe is on an unshifted key again, either E12 on the base
+#   layout, or E07 on a remapped variant, to account for its extensive usage,
+#   both in wiki syntax and as apostrophe according to Wikipedia’s Manual of
+#   Style.
 #   https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Apostrophes
 #
 #   Rightsinglequotemark is an unconflicting base character fostering this
@@ -5328,14 +5330,17 @@
 #   https://bepo.fr/wiki/Lettres_grecques
 #   https://bepo.fr/wiki/Version_1.1rc2#Touches_mortes
 #
-#   The Greek dead key is mapped on D06 with a mnemonic based on Y as 'Greek I'
-#   translating its French name: i grec. As an exception to the rule, the Greek
-#   dead key is both on the level 4 position and on the level 3 position, given
-#   that its multikey equivalent "@" has a stable level-1 position on E11, i.e.
-#   it is there both in French mode and in ASCII mode, unlike "/", "\", "'" and
-#   quotedbl. This ease of access is consistent with its potentially heavy use,
-#   both for Greek letters and for circled digits, letters and symbols. Group 6
-#   provides an alternative input method for Greek letters.
+#   The Greek dead key is mapped on D06 "Y" with a mnemonic based on 'Greek I',
+#   translating its French name: "i grec". As an exception to the rule that the
+#   dead keys on alphabetic keys are on level 4, the Greek dead key is both on
+#   the level 4 position and on the level 3 position, given that its multikey
+#   equivalent "@" has a stable level-1 position on E11, i.e. both in French
+#   mode and in ASCII mode, unlike slash, backslash, apostrophe and quotedbl.
+#
+#   This ease of access is consistent with its potentially heavy use, both for
+#   Greek letters and for circled digits, letters and symbols.
+#
+#   Group 6 provides an alternative input method for Greek letters.
 #   See #+# GROUP_6
 #
 #   The map for Greek letters to Latin letters conforms to ISO/IEC 9995-9, that
@@ -5366,15 +5371,14 @@
 #   The empty place on Q is used for the theta symbol preferred in Romani when
 #   only the glyph is considered, regardless of word processing concerns.
 #
-#   Greek subscript letters and small caps letters are also supported.
+#   Greek subscript letters and small cap letters are also supported.
 #   See # # GREEK&SUBSCRIPT
 #
 #   Polytonic Greek is supported alongside to meet eventual user expectations,
-#   but due to file size restrictions in the web interface of GitHub, it cannot
-#   be included here, for the same reason that to be usably displayed on GitHub
-#   on full-fledged web pages rather than merely in plain text, this file needs
-#   to be splitted in three partials. The Greek overflow is in part 1.
+#   but due to file size restrictions, it cannot be included here. So, the
+#   Greek overflow is in part 1.
 #   See ### Greek with diacritics
+#   See # # Notes for maintenance
 #
 #   The diacritic slot is used for the combining ypogegrammeni "ͅ" U0345 as the
 #   most likely to be useful and expected, rather than other diacritical marks.
