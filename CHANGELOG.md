@@ -1,6 +1,6 @@
 # Journal des modifications
 
-Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d’avoir [installé des polices complètes](https://support.microsoft.com/fr-fr/office/ajouter-une-police-b7c5f17c-4426-4b53-967f-455339c564c1#:~:text=Toutes%20les%20polices%20sont%20stock%C3%A9es,Windows%20les%20installeront%20automatiquement.) : BabelStoneHan, Code2000, DejaVuSans, Kelvinch, NishikiTeki.
+Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d’avoir [installé des polices complètes](https://support.microsoft.com/fr-fr/office/ajouter-une-police-b7c5f17c-4426-4b53-967f-455339c564c1) : BabelStoneHan, Code2000, DejaVuSans, Kelvinch, NishikiTeki.
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: ».
 
@@ -14,17 +14,23 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 ## 4.25.0 (projet)
 
-Simplification et correction de séquences de composition.
+Correction et simplification de séquences de composition.
 
 Complétion de la touche morte réfléchi.
 
 Introduction du concept de « groupe 1 bis ».
 
-* Composition : Corriger ou simplifier les séquences de "⋍" U+22CD, "⭇" U+2B47. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
-* Transformations : Réfléchi : Prendre en charge "∽" U+223D, qui est aussi en composition par « ¦~\ ». compose-2.yml [9ef34fc](https://github.com/dispoclavier/nouvel-azerty/commit/9ef34fc4f96ad6b6bd965bb649679a517a036f5b)
+* Composition :
+	* Corriger les séquences de "⧤" U+29E4, "⧥" U+29E5. compose-1.yml [d093206](https://github.com/dispoclavier/nouvel-azerty/commit/d0932063616f358c2411ab3fc09cf235565850e1)
+	* Corriger ou simplifier les séquences de "⋍" U+22CD, "⭇" U+2B47. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
+	* Simplifier les séquences de "↧" U+21A7, "⇑" U+21D1, "⇓" U+21D3, "⇔" U+21D4, "⇕" U+21D5, "⇖" U+21D6, "⇗" U+21D7, "⇘" U+21D8, "⇙" U+21D9, "⇤" U+21E4, "⋭" U+22ED, "⤒" U+2912. compose-1.yml [eca3b50](https://github.com/dispoclavier/nouvel-azerty/commit/eca3b5040d2f139ccb1174431048cb52252418c5)
+	* Corriger les séquences de "⇴" U+21F4, "⇽" U+21FD, "⇾" U+21FE, "⋮" U+22EE, "⌀" U+2300, "♂" U+2642, "⤒" U+2912, "⤓" U+2913, "⥡" U+2961. ibidem
+	* Corriger les séquences de "⋴" U+22F4, "⩡" U+2A61. compose-1.yml [b7717d7](https://github.com/dispoclavier/nouvel-azerty/commit/b7717d71e2123af8ca5a74753b222f1f0df8444f)
+* Transformations : Réfléchi : Prendre en charge "∽" U+223D, qui est aussi en composition par « ¦~\ ». compose-2.yml [9ef34fc](https://github.com/dispoclavier/nouvel-azerty/commit/9ef34fc4f96ad6b6bd965bb649679a517a036f5b), compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
 * Documentation :
 	* Renommer le « groupe extra » en « groupe 1 bis ». compose-3.yml [8c2c0fd](https://github.com/dispoclavier/nouvel-azerty/commit/8c2c0fd72bef520195db45c6b8d9a9ad154eff88)
-	* Corriger des annotations. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
+	* Corriger ou ajouter des annotations. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe), [e565f40](https://github.com/dispoclavier/nouvel-azerty/commit/e565f40ecfa19dbd417137238e5ae28a58818dd8), [85f0935](https://github.com/dispoclavier/nouvel-azerty/commit/85f09351973d3b5d36784448452773205b628a9c), [eca3b50](https://github.com/dispoclavier/nouvel-azerty/commit/eca3b5040d2f139ccb1174431048cb52252418c5), compose-2.yml [c557cce](https://github.com/dispoclavier/nouvel-azerty/commit/c557cce828c1e5fbf4ef76b97a417f6400a4a220)
+	* Améliorer la lisibilité des annotations. compose-1.yml [799074f](https://github.com/dispoclavier/nouvel-azerty/commit/799074f785c91dc41dc85de32c4d3b46912c85be)
 
 ## 4.24.0 (2025-03-04)
 
