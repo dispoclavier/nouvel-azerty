@@ -23,9 +23,9 @@ Introduction du concept de « groupe 1 bis ».
 * Composition :
 	* Corriger les séquences de "⧤" U+29E4, "⧥" U+29E5. compose-1.yml [d093206](https://github.com/dispoclavier/nouvel-azerty/commit/d0932063616f358c2411ab3fc09cf235565850e1)
 	* Corriger ou simplifier les séquences de "⋍" U+22CD, "⭇" U+2B47. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
-	* Simplifier les séquences de "↧" U+21A7, "⇑" U+21D1, "⇓" U+21D3, "⇔" U+21D4, "⇕" U+21D5, "⇖" U+21D6, "⇗" U+21D7, "⇘" U+21D8, "⇙" U+21D9, "⇤" U+21E4, "⋭" U+22ED, "⤒" U+2912. compose-1.yml [eca3b50](https://github.com/dispoclavier/nouvel-azerty/commit/eca3b5040d2f139ccb1174431048cb52252418c5)
-	* Corriger les séquences de "⇴" U+21F4, "⇽" U+21FD, "⇾" U+21FE, "⋮" U+22EE, "⌀" U+2300, "♂" U+2642, "⤒" U+2912, "⤓" U+2913, "⥡" U+2961. ibidem
-	* Corriger les séquences de "⋴" U+22F4, "⩡" U+2A61. compose-1.yml [b7717d7](https://github.com/dispoclavier/nouvel-azerty/commit/b7717d71e2123af8ca5a74753b222f1f0df8444f), [c16967c](https://github.com/dispoclavier/nouvel-azerty/commit/c16967c1b8ac6bf3982dd2da71de363b265b937a)
+	* Corriger les séquences de "⇴" U+21F4, "⇽" U+21FD, "⇾" U+21FE, "⋮" U+22EE, "⌀" U+2300, "♂" U+2642, "⤒" U+2912, "⤓" U+2913, "⥡" U+2961. compose-1.yml [eca3b50](https://github.com/dispoclavier/nouvel-azerty/commit/eca3b5040d2f139ccb1174431048cb52252418c5)
+	* Simplifier les séquences de "↧" U+21A7, "⇑" U+21D1, "⇓" U+21D3, "⇔" U+21D4, "⇕" U+21D5, "⇖" U+21D6, "⇗" U+21D7, "⇘" U+21D8, "⇙" U+21D9, "⇤" U+21E4, "⋭" U+22ED, "⤒" U+2912. ibidem
+	* Corriger les séquences de "⋴" U+22F4, "⩡" U+2A61. compose-1.yml [b7717d7](https://github.com/dispoclavier/nouvel-azerty/commit/b7717d71e2123af8ca5a74753b222f1f0df8444f), [c16967c](https://github.com/dispoclavier/nouvel-azerty/commit/c16967c1b8ac6bf3982dd2da71de363b265b937a), [deec65c](https://github.com/dispoclavier/nouvel-azerty/commit/deec65cd343442b41ce90108888371057f58ecd3)
 * Transformations : Réfléchi : Prendre en charge "∽" U+223D, qui est aussi en composition par « ¦~\ ». compose-2.yml [9ef34fc](https://github.com/dispoclavier/nouvel-azerty/commit/9ef34fc4f96ad6b6bd965bb649679a517a036f5b), compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe)
 * Documentation :
 	* Renommer le « groupe extra » en « groupe 1 bis ». compose-3.yml [8c2c0fd](https://github.com/dispoclavier/nouvel-azerty/commit/8c2c0fd72bef520195db45c6b8d9a9ad154eff88)
