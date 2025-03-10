@@ -3721,6 +3721,14 @@
 #
 ### Mathematical symbols by multikey
 #
+#   ***************************************************************************
+#   *                                                                         *
+#   *    This section is currently redesigned, and many sequences do not yet  *
+#   *    match the documentation.                                             *
+#   *    See # # Design of math sequences
+#   *                                                                         *
+#   ***************************************************************************
+#
 #   The General Category `Symbol, other` (`So`) does not preclude a symbol from
 #   being a math symbol, despite there is the dedicated `Symbol, math` (`Sm`).
 #   Indeed both `Sm` and `So` are only informative, not normative.
