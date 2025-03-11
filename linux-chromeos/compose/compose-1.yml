@@ -3919,20 +3919,35 @@
 #   Some slanted math symbols are glyph variants selected by VS1 UFE00.
 #   https://www.unicode.org/Public/16.0.0/ucd/StandardizedVariants.txt
 #   https://unicode.org/Public//6.2.0/ucd/StandardizedVariants.html
+#
 #   But many math symbols with slanted equal sign are hard-coded characters:
 #   "⩽" U2A7D, "⩾" U2A7E, "⩿" U2A7F, "⪀" U2A80, "⪁" U2A81, "⪂" U2A82,
 #   "⪃" U2A83, "⪄" U2A84, "⪓" U2A93, "⪔" U2A94, "⪕" U2A95, "⪖" U2A96,
 #   "⪗" U2A97, "⪘" U2A98, "⪛" U2A9B, "⪜" U2A9C, "⪨" U2AA8, "⪩" U2AA9,
 #   "⫹" U2AF9, "⫺" U2AFA. Some of these do not have straight equivalents.
 #   https://github.com/typst/typst/issues/1521
+#
 #   If the slanted form is not canonical, and there is a competing straight and
 #   horizontal (single-line or double-line) equal, as for "⪙" U2A99, "⪚" U2A9A
 #   versus "⪛" U2A9B, "⪜" U2A9C, the slanted one is distinguished by trailing
-#   grave (backtick), while the single-line equal is underscore throughout, for
-#   sideways compatibility with en_US.UTF-8/Compose, that does not support any
-#   slanted form and uses iconic underscore for single-line equal in "≤" U2264,
-#   "≥" U2265. This is better than repurposing the underscore for slanted, and
-#   introducing minus for not slanted, screwing up some arrows in the process.
+#   grave, with mnemonics based on the slant of the backtick.
+#
+#   While sequences of double-line-equal symbols are built with the equal sign,
+#   single-line equal translates to underscore throughout, at any position in
+#   the symbol: bottom, center, and top, This scheme also enhances sideways
+#   compatibility with en_US.UTF-8/Compose, that does not support any slanted
+#   form, and uses underscore for single-line equal in "≤" U2264, "≥" U2265.
+#
+#   (This scheme is better than repurposing the underscore for slanted, and
+#   introducing minus for not slanted, screwing up some arrows in the process.)
+#
+#
+#   Underscore and overscore
+#
+#   Consistently, an overscore as in "⊼" U22BC and "⊽" U22BD translates to a
+#   leading underscore in the sequence, while for "⊻" U22BB, the underscore is
+#   in trailing position, as vertically stacked symbols are translated reading
+#   from top to bottom.
 #
 #
 #   Arrows and harpoons
@@ -5388,16 +5403,16 @@
 <Multi_key><v><underscore>                                                          <nobreakspace> : "⊻" U22BB # XOR
 <Multi_key><x><o><r>                                                                               : "⊻" U22BB # XOR
 <Multi_key><X><O><R>                                                                               : "⊻" U22BB # XOR
-<Multi_key><space><minus><a>                                                               <space> : "⊼" U22BC # NAND
-<Multi_key><space><minus><a>                                                        <nobreakspace> : "⊼" U22BC # NAND
-<Multi_key><nobreakspace><minus><a>                                                        <space> : "⊼" U22BC # NAND
-<Multi_key><nobreakspace><minus><a>                                                 <nobreakspace> : "⊼" U22BC # NAND
-<Multi_key><minus><v><v>                                                                   <space> : "⊼" U22BC # NAND
-<Multi_key><minus><v><v>                                                            <nobreakspace> : "⊼" U22BC # NAND
+<Multi_key><space><underscore><a>                                                          <space> : "⊼" U22BC # NAND
+<Multi_key><space><underscore><a>                                                   <nobreakspace> : "⊼" U22BC # NAND
+<Multi_key><nobreakspace><underscore><a>                                                   <space> : "⊼" U22BC # NAND
+<Multi_key><nobreakspace><underscore><a>                                            <nobreakspace> : "⊼" U22BC # NAND
+<Multi_key><underscore><v><v>                                                              <space> : "⊼" U22BC # NAND
+<Multi_key><underscore><v><v>                                                       <nobreakspace> : "⊼" U22BC # NAND
 <Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
 <Multi_key><N><A><N><D>                                                                            : "⊼" U22BC # NAND
-<Multi_key><minus><v>                                                                      <space> : "⊽" U22BD # NOR
-<Multi_key><minus><v>                                                               <nobreakspace> : "⊽" U22BD # NOR
+<Multi_key><underscore><v>                                                                 <space> : "⊽" U22BD # NOR
+<Multi_key><underscore><v>                                                          <nobreakspace> : "⊽" U22BD # NOR
 <Multi_key><n><o><r>                                                                               : "⊽" U22BD # NOR
 <Multi_key><N><O><R>                                                                               : "⊽" U22BD # NOR
 <Multi_key><L><parenright>                                                                 <space> : "⊾" U22BE # RIGHT ANGLE WITH ARC
@@ -5599,18 +5614,14 @@
 <Multi_key><space><period><e>                                                       <nobreakspace> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><nobreakspace><period><e>                                                       <space> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><nobreakspace><period><e>                                                <nobreakspace> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
-<Multi_key><space><space><minus><e>                                                        <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><space><space><minus><e>                                                 <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e>                                                 <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e>                                          <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e>                                          <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e>                                   <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
-<Multi_key><space><space><minus><e><comma>                                                 <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
-<Multi_key><space><space><minus><e><comma>                                          <nobreakspace> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e><comma>                                          <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e><comma>                                   <nobreakspace> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e><comma>                                   <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e><comma>                            <nobreakspace> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><space><underscore><e>                                                          <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><space><underscore><e>                                                   <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e>                                                   <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e>                                            <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><space><underscore><e><comma>                                                   <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><space><underscore><e><comma>                                            <nobreakspace> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><comma>                                            <space> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><comma>                                     <nobreakspace> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
 <Multi_key><e><underscore>                                                                 <space> : "⋸" U22F8 # ELEMENT OF WITH UNDERBAR
 <Multi_key><e><underscore>                                                          <nobreakspace> : "⋸" U22F8 # ELEMENT OF WITH UNDERBAR
 <Multi_key><e><equal>                                                                      <space> : "⋹" U22F9 # ELEMENT OF WITH TWO HORIZONTAL STROKES
@@ -5635,30 +5646,22 @@
 <Multi_key><space><bar><e><backslash><comma>                                        <nobreakspace> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><e><comma>                                                <space> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><e><comma>                                         <nobreakspace> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-<Multi_key><space><space><minus><p>                                                        <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><p>                                                 <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><p>                                                 <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><p>                                          <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><p>                                          <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><p>                                   <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><e><backslash>                                             <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><e><backslash>                                      <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e><backslash>                                      <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e><backslash>                               <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e><backslash>                               <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e><backslash>                        <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><p><comma>                                                 <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><p><comma>                                          <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><p><comma>                                          <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><p><comma>                                   <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><p><comma>                                   <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><p><comma>                            <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><e><backslash><comma>                                      <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><space><space><minus><e><backslash><comma>                               <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e><backslash><comma>                               <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><space><minus><e><backslash><comma>                        <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e><backslash><comma>                        <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><nobreakspace><minus><e><backslash><comma>                 <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><p>                                                          <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><p>                                                   <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><p>                                                   <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><p>                                            <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><backslash>                                               <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><backslash>                                        <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><backslash>                                        <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><backslash>                                 <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><p><comma>                                                   <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><p><comma>                                            <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><p><comma>                                            <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><p><comma>                                     <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><backslash><comma>                                        <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><backslash><comma>                                 <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><backslash><comma>                                 <space> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><backslash><comma>                          <nobreakspace> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><e><bracketleft>                                                                <space> : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><e><bracketleft>                                                         <nobreakspace> : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><e><bracketright>                                                               <space> : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
