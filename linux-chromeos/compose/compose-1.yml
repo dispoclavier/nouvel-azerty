@@ -3949,6 +3949,11 @@
 #   in trailing position, as vertically stacked symbols are translated reading
 #   from top to bottom.
 #
+#   The long dash in "⥪" U296A, "⥫" U296B, "⥬" U296C, "⥭" U296D is also parsed
+#   as an under- or overscore, rather than as a barbless harpoon, with the effect
+#   of having less conflicts to address with underscore than with minus (only a
+#   single one: "⥭" U296D with "₋" U208B).
+#
 #
 #   Arrows and harpoons
 #
@@ -3966,9 +3971,10 @@
 #   Triple and quadruple arrows use appended digit 3 or 4, as for "⇛" U21DB,
 #   "⟰" U27F0, "⟱" U27F1, "⤊" U290A, "⤋" U290B.
 #
-#   Long arrows are horizontal and use double minus/equal, as for "⟶" U27F6.
+#   Long arrows are horizontal throughout and are composed with double minus
+#   or double equal, as for "⟶" U27F6.
 #
-#   Vertical arrows are composed as if they were turned 90° to the left, i.e.
+#   Vertical arrow heads are composed as if they were turned 90° to the left,
 #   from top to bottom; up arrows use less, as for "↑" U2191, "⇑" U21D1; down
 #   arrows use greater, as for "↓" U2193, "⇓" U21D3; by contrast, harpoon barbs
 #   are always grave or apostrophe/rightsinglequotemark depending on the slant,
