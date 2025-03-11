@@ -3932,17 +3932,17 @@
 #   versus "⪛" U2A9B, "⪜" U2A9C, the slanted one is distinguished by trailing
 #   grave, with mnemonics based on the slant of the backtick.
 #
-#   While sequences of double-line-equal symbols are built with the equal sign,
-#   single-line equal translates to underscore throughout, at any position in
-#   the symbol: bottom, center, and top, This scheme also enhances sideways
-#   compatibility with en_US.UTF-8/Compose, that does not support any slanted
-#   form, and uses underscore for single-line equal in "≤" U2264, "≥" U2265.
-#
 #   (This scheme is better than repurposing the underscore for slanted, and
 #   introducing minus for not slanted, screwing up some arrows in the process.)
 #
 #
 #   Underscore and overscore
+#
+#   While sequences of double-line-equal symbols are built with the equal sign,
+#   single-line equal translates to underscore throughout, at any position in
+#   the symbol: bottom, center, and top, This scheme also enhances sideways
+#   compatibility with en_US.UTF-8/Compose, that does not support any slanted
+#   form, and uses underscore for single-line equal in "≤" U2264, "≥" U2265.
 #
 #   Consistently, an overscore as in "⊼" U22BC and "⊽" U22BD translates to a
 #   leading underscore in the sequence, while for "⊻" U22BB, the underscore is
@@ -3978,8 +3978,7 @@
 #   from top to bottom; up arrows use less, as for "↑" U2191, "⇑" U21D1; down
 #   arrows use greater, as for "↓" U2193, "⇓" U21D3; by contrast, harpoon barbs
 #   are always grave or apostrophe/rightsinglequotemark depending on the slant,
-#   regardless of stem direction, since horizontal is minus, versus exclam for
-#   vertical. The bar has likewise unchanged semantics, as for "↥" U21A5.
+#   regardless of stem direction.
 #
 #
 #   Small symbols
@@ -6685,18 +6684,18 @@
 <Multi_key><b><less><minus>                                                         <nobreakspace> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><c><c><less><minus>                                                             <space> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><c><c><less><minus>                                                      <nobreakspace> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
-<Multi_key><j><j><minus><underscore>                                                       <space> : "⥼" U297C # LEFT FISH TAIL
-<Multi_key><j><j><minus><underscore>                                                <nobreakspace> : "⥼" U297C # LEFT FISH TAIL
-<Multi_key><space><minus><j><j><underscore>                                                <space> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><space><minus><j><j><underscore>                                         <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><nobreakspace><minus><j><j><underscore>                                         <space> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><nobreakspace><minus><j><j><underscore>                                  <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><j><j><minus><bar>                                                              <space> : "⥾" U297E # UP FISH TAIL
-<Multi_key><j><j><minus><bar>                                                       <nobreakspace> : "⥾" U297E # UP FISH TAIL
-<Multi_key><space><minus><j><j><bar>                                                       <space> : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><space><minus><j><j><bar>                                                <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><nobreakspace><minus><j><j><bar>                                                <space> : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><nobreakspace><minus><j><j><bar>                                         <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><j><j><minus>                                                                   <space> : "⥼" U297C # LEFT FISH TAIL
+<Multi_key><j><j><minus>                                                            <nobreakspace> : "⥼" U297C # LEFT FISH TAIL
+<Multi_key><space><minus><j><j>                                                            <space> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><space><minus><j><j>                                                     <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><nobreakspace><minus><j><j>                                                     <space> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><nobreakspace><minus><j><j>                                              <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><j><j><exclam>                                                                  <space> : "⥾" U297E # UP FISH TAIL
+<Multi_key><j><j><exclam>                                                           <nobreakspace> : "⥾" U297E # UP FISH TAIL
+<Multi_key><space><exclam><j><j>                                                           <space> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><space><exclam><j><j>                                                    <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><nobreakspace><exclam><j><j>                                                    <space> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><nobreakspace><exclam><j><j>                                             <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
 #
 #
 # # Miscellaneous Mathematical Symbols-B of block U2980
