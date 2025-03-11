@@ -5407,12 +5407,16 @@
 <Multi_key><space><underscore><a>                                                   <nobreakspace> : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><underscore><a>                                                   <space> : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><underscore><a>                                            <nobreakspace> : "⊼" U22BC # NAND
-<Multi_key><underscore><v><v>                                                              <space> : "⊼" U22BC # NAND
-<Multi_key><underscore><v><v>                                                       <nobreakspace> : "⊼" U22BC # NAND
+<Multi_key><space><underscore><v><v>                                                       <space> : "⊼" U22BC # NAND
+<Multi_key><space><underscore><v><v>                                                <nobreakspace> : "⊼" U22BC # NAND
+<Multi_key><nobreakspace><underscore><v><v>                                                <space> : "⊼" U22BC # NAND
+<Multi_key><nobreakspace><underscore><v><v>                                         <nobreakspace> : "⊼" U22BC # NAND
 <Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
 <Multi_key><N><A><N><D>                                                                            : "⊼" U22BC # NAND
-<Multi_key><underscore><v>                                                                 <space> : "⊽" U22BD # NOR
-<Multi_key><underscore><v>                                                          <nobreakspace> : "⊽" U22BD # NOR
+<Multi_key><space><underscore><v>                                                          <space> : "⊽" U22BD # NOR
+<Multi_key><space><underscore><v>                                                   <nobreakspace> : "⊽" U22BD # NOR
+<Multi_key><nobreakspace><underscore><v>                                                   <space> : "⊽" U22BD # NOR
+<Multi_key><nobreakspace><underscore><v>                                            <nobreakspace> : "⊽" U22BD # NOR
 <Multi_key><n><o><r>                                                                               : "⊽" U22BD # NOR
 <Multi_key><N><O><R>                                                                               : "⊽" U22BD # NOR
 <Multi_key><L><parenright>                                                                 <space> : "⊾" U22BE # RIGHT ANGLE WITH ARC
