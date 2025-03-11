@@ -3949,10 +3949,11 @@
 #   in trailing position, as vertically stacked symbols are translated reading
 #   from top to bottom.
 #
-#   The long dash in "⥪" U296A, "⥫" U296B, "⥬" U296C, "⥭" U296D is also parsed
-#   as an under- or overscore, rather than as a barbless harpoon, with the effect
-#   of having less conflicts to address with underscore than with minus (only a
-#   single one: "⥭" U296D with "₋" U208B).
+#   The long dash in "⥪" U296A, "⥫" U296B, "⥬" U296C, "⥭" U296D is considered
+#   as an under- or overscore rather than a barbless harpoon, due to the effect
+#   of underscore causing less conflicts than minus (only a single one:
+#   "⥭" U296D with "₋" U208B), and as a result, requiring less leading spaces,
+#   for a more streamlined user experience.
 #
 #
 #   Arrows and harpoons
