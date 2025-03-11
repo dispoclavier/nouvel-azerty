@@ -4727,6 +4727,11 @@
 <Multi_key><nobreakspace><KP_3><KP_Subtract><greater>                               <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><minus><greater><minus><greater><minus><greater>                                <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><minus><greater><minus><greater><minus><greater>                         <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+#
+#   The arrows "⇷" U21F7, "⇸" U21F8 need to be distinguished both from
+#   "↤" U21A4, "↦" U21A6 and from "⇽" U21FD, "⇾" U21FE, hence their sequences
+#   contain minus twice. Those of "⤈" U2908, "⤉" U2909 are consistent.
+#
 <Multi_key><less><minus><bar><minus>                                                       <space> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus>                                                <nobreakspace> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><minus><bar><minus><greater>                                                    <space> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
@@ -6365,6 +6370,10 @@
 <Multi_key><less><equal><bar>                                                              <space> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><less><equal><bar>                                                       <nobreakspace> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><bar><equal><greater>                                                                   : "⤇" U2907 # RIGHTWARDS DOUBLE ARROW FROM BAR
+#
+#   For consistency with "⇷" U21F7, "⇸" U21F8, the sequences of "⤈" U2908,
+#   "⤉" U2909 contain exclam twice.
+#
 <Multi_key><exclam><bar><exclam><greater>                                                  <space> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><exclam><bar><exclam><greater>                                           <nobreakspace> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><exclam><bar><exclam>                                                     <space> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
