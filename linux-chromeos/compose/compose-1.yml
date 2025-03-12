@@ -6381,7 +6381,8 @@
 #
 #   Unlike the sequences of "⇷" U21F7, "⇸" U21F8, those of "⤈" U2908, "⤉" U2909
 #   are streamlined. But intuitive, consistent sequences containing exclam
-#   twice are also provided alongside.
+#   twice are also provided alongside. The one of "⤈" U2908 is truncated for
+#   efficiency, due to the trailing greater being non-critical.
 #   See #   Streamlining
 #
 <Multi_key><exclam><bar><greater>                                                                  : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
@@ -6428,13 +6429,19 @@
 <Multi_key><period><period><period><greater>                                        <nobreakspace> : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
 <Multi_key><bar><less><exclam>                                                                     : "⤒" U2912 # UPWARDS ARROW TO BAR
 <Multi_key><exclam><greater><bar>                                                                  : "⤓" U2913 # DOWNWARDS ARROW TO BAR
+<Multi_key><greater><minus><bar><greater>                                                  <space> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><greater><minus><bar><greater>                                           <nobreakspace> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><minus><greater>                                           <space> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><minus><greater>                                    <nobreakspace> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><greater><minus><bar><bar><greater>                                             <space> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
+<Multi_key><greater><minus><bar><bar><greater>                                      <nobreakspace> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater>                                      <space> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater>                               <nobreakspace> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><greater><greater>                                              <space> : "⤖" U2916 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL
 <Multi_key><greater><minus><greater><greater>                                       <nobreakspace> : "⤖" U2916 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL
+<Multi_key><greater><minus><bar><greater><greater>                                                 : "⤗" U2917 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><minus><greater><greater>                                          : "⤗" U2917 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><greater><minus><bar><bar><greater><greater>                                            : "⤘" U2918 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater><greater>                                     : "⤘" U2918 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><less>                                                                   <space> : "⤙" U2919 # LEFTWARDS ARROW-TAIL
 <Multi_key><minus><less>                                                            <nobreakspace> : "⤙" U2919 # LEFTWARDS ARROW-TAIL
