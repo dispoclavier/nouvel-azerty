@@ -14,7 +14,7 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 ## 4.25.0 (projet)
 
-Rectification et simplification de séquences de composition. compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)
+Rectification et simplification de séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
 Complétion de la touche morte réfléchi.
 
@@ -37,7 +37,7 @@ Introduction du concept de « groupe 1 bis ».
 	* Renommer le « groupe extra » en « groupe 1 bis ». compose-3.yml [8c2c0fd](https://github.com/dispoclavier/nouvel-azerty/commit/8c2c0fd72bef520195db45c6b8d9a9ad154eff88)
 	* Corriger ou ajouter des annotations. compose-1.yml [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe), [e565f40](https://github.com/dispoclavier/nouvel-azerty/commit/e565f40ecfa19dbd417137238e5ae28a58818dd8), [85f0935](https://github.com/dispoclavier/nouvel-azerty/commit/85f09351973d3b5d36784448452773205b628a9c), [eca3b50](https://github.com/dispoclavier/nouvel-azerty/commit/eca3b5040d2f139ccb1174431048cb52252418c5), [7dbc74b](https://github.com/dispoclavier/nouvel-azerty/commit/7dbc74bc447fc5c713477c3de1d5bd12dfeff53d), [47e1c2b](https://github.com/dispoclavier/nouvel-azerty/commit/47e1c2bf8ed3353f861a774f86c27e62c07d616d), [d20979e](https://github.com/dispoclavier/nouvel-azerty/commit/d20979e3405d40baa3dc413753cd1041dec03b77), [bbbdf54](https://github.com/dispoclavier/nouvel-azerty/commit/bbbdf5411493384a39100172479ccfd9e855c295), [e4ce25d](https://github.com/dispoclavier/nouvel-azerty/commit/e4ce25d2cd2b1390bff5305f5ee0bf8bc47241ab), [27caa25](https://github.com/dispoclavier/nouvel-azerty/commit/27caa25d6f8cbdde8e327339231e85c92484c923), [4fe1f28](https://github.com/dispoclavier/nouvel-azerty/commit/4fe1f280e5b143cbc0d0db6151a9ac514ef83cc5), compose-2.yml [c557cce](https://github.com/dispoclavier/nouvel-azerty/commit/c557cce828c1e5fbf4ef76b97a417f6400a4a220)
 	* Améliorer la lisibilité des annotations. compose-1.yml [799074f](https://github.com/dispoclavier/nouvel-azerty/commit/799074f785c91dc41dc85de32c4d3b46912c85be)
-	* Compléter le journal des modifications : Ajouter des liens pour les polices. CHANGELOG,md [f5d8dd9](https://github.com/dispoclavier/nouvel-azerty/commit/f5d8dd993ffdc770c72890d24925e28e61ce986c)
+	* Compléter le journal des modifications : Ajouter des liens pour les polices. CHANGELOG,md [f5d8dd9](https://github.com/dispoclavier/nouvel-azerty/commit/f5d8dd993ffdc770c72890d24925e28e61ce986c), [ffe7a7e](https://github.com/dispoclavier/nouvel-azerty/commit/ffe7a7e59825ed4a75236878b43878ae6adc04f4)
 
 ## 4.24.0 (2025-03-04)
 
