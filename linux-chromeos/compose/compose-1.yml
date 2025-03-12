@@ -3850,14 +3850,14 @@
 #   only revealed while running the overall conflictlessness check.
 #   See #   Conflictlessness check
 #
-#   When streamlining defeats intuitivity, both the intuitive sequence and the
-#   streamlined sequence are supported alongside, as for "⇺" U21FA, "⇻" U21FB,
-#   where the minus standing for the stem next to the arrowhead is optionally
-#   skipped, while that is unfeasible for "⇷" U21F7, "⇸" U21F8 due to conflicts
-#   with the horizontal-only special arrows featuring outline heads on a plain
-#   stem: "⇽" U21FD, "⇾" U21FE. (The third one is "⇿" U21FF.) As a result, the
-#   vertical counterparts "⤈" U2908, "⤉" U2909 have both the long sequences for
-#   intuitivity, and the streamlined sequences for convenience.
+#   When streamlining defeats intuitivity, intuitive sequences are supported
+#   alongside, as for "⇺" U21FA, "⇻" U21FB, where the minus standing for the
+#   stem next to the arrowhead is optionally supported, because skipping is
+#   unfeasible for "⇷" U21F7, "⇸" U21F8 due to conflicts with horizontal-only
+#   special arrows featuring outline heads while the stem is plain: "⇽" U21FD,
+#   "⇾" U21FE. (The third one is "⇿" U21FF.) As a result, the vertical
+#   counterparts "⤈" U2908, "⤉" U2909 have both the streamlined sequences for
+#   convenience, and the long sequences for intuitivity.
 #
 #
 #   Trailing space
@@ -4742,8 +4742,9 @@
 #
 #   The arrows "⇷" U21F7, "⇸" U21F8 need to be distinguished both from
 #   "↤" U21A4, "↦" U21A6 and from "⇽" U21FD, "⇾" U21FE, hence their sequences
-#   contain minus twice. Those of "⤈" U2908, "⤉" U2909 are consistent, while
-#   streamlining goes alongside.
+#   contain minus twice. By contrast, the sequences of "⇺" U21FA, "⇻" U21FB are
+#   streamlined, while consistent sequences are supported alongside.
+#   See #   Streamlining
 #
 <Multi_key><less><minus><bar><minus>                                                       <space> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus>                                                <nobreakspace> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
@@ -4751,14 +4752,14 @@
 <Multi_key><minus><bar><minus><greater>                                             <nobreakspace> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus><greater>                                              <space> : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus><greater>                                       <nobreakspace> : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
-<Multi_key><less><minus><bar><bar><minus>                                                  <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><minus><bar><bar><minus>                                           <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><bar><bar><minus>                                                         <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><bar><bar><minus>                                                  <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><minus><bar><bar><minus><greater>                                               <space> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><minus><bar><bar><minus><greater>                                        <nobreakspace> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><minus><bar><bar><minus>                                                  <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><minus><bar><bar><minus>                                           <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><greater>                                                      <space> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><greater>                                               <nobreakspace> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><minus><bar><bar><minus><greater>                                               <space> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><minus><bar><bar><minus><greater>                                        <nobreakspace> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus><greater>                                         <space> : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus><greater>                                  <nobreakspace> : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><bar><minus>                                                              <space> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
@@ -6388,19 +6389,19 @@
 <Multi_key><less><equal><bar>                                                       <nobreakspace> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><bar><equal><greater>                                                                   : "⤇" U2907 # RIGHTWARDS DOUBLE ARROW FROM BAR
 #
-#   For consistency with "⇷" U21F7, "⇸" U21F8, the sequences of "⤈" U2908,
-#   "⤉" U2909 contain exclam twice. But streamlined sequences are also provided
-#   alongside.
+#   Unlike the sequences of "⇷" U21F7, "⇸" U21F8, those of "⤈" U2908, "⤉" U2909
+#   are streamlined. But intuitive, consistent sequences containing exclam
+#   twice are also provided alongside.
 #   See #   Streamlining
 #
-<Multi_key><exclam><bar><exclam><greater>                                                  <space> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
-<Multi_key><exclam><bar><exclam><greater>                                           <nobreakspace> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><exclam><bar><greater>                                                          <space> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><exclam><bar><greater>                                                   <nobreakspace> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
-<Multi_key><less><exclam><bar><exclam>                                                     <space> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
-<Multi_key><less><exclam><bar><exclam>                                              <nobreakspace> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
+<Multi_key><exclam><bar><exclam><greater>                                                  <space> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
+<Multi_key><exclam><bar><exclam><greater>                                           <nobreakspace> : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><bar><exclam>                                                             <space> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><bar><exclam>                                                      <nobreakspace> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
+<Multi_key><less><exclam><bar><exclam>                                                     <space> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
+<Multi_key><less><exclam><bar><exclam>                                              <nobreakspace> : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><exclam><3>                                                               <space> : "⤊" U290A # UPWARDS TRIPLE ARROW
 <Multi_key><less><exclam><3>                                                        <nobreakspace> : "⤊" U290A # UPWARDS TRIPLE ARROW
 <Multi_key><less><exclam><KP_3>                                                            <space> : "⤊" U290A # UPWARDS TRIPLE ARROW
