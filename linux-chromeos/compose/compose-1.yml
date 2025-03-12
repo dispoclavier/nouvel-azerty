@@ -6641,11 +6641,21 @@
 <Multi_key><c><c><less><minus>                                                             <space> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><c><c><less><minus>                                                      <nobreakspace> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><j><minus>                                                                              : "⥼" U297C # LEFT FISH TAIL
+<Multi_key><J><minus>                                                                              : "⥼" U297C # LEFT FISH TAIL
 <Multi_key><space><minus><j>                                                                       : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><space><minus><J>                                                               <space> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><space><minus><J>                                                        <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
 <Multi_key><nobreakspace><minus><j>                                                                : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><nobreakspace><minus><J>                                                        <space> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><nobreakspace><minus><J>                                                 <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
 <Multi_key><j><exclam>                                                                             : "⥾" U297E # UP FISH TAIL
+<Multi_key><J><exclam>                                                                             : "⥾" U297E # UP FISH TAIL
 <Multi_key><space><exclam><j>                                                                      : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><space><exclam><J>                                                              <space> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><space><exclam><J>                                                       <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
 <Multi_key><nobreakspace><exclam><j>                                                               : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><nobreakspace><exclam><J>                                                       <space> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><nobreakspace><exclam><J>                                                <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
 #
 #
 # # Miscellaneous Mathematical Symbols-B of block U2980
