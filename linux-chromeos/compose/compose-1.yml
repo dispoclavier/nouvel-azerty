@@ -6373,14 +6373,19 @@
 #   https://www.unicode.org/charts/PDF/U2900.pdf
 #   https://www.unicode.org/charts/nameslist/n_2900.html
 #
-<Multi_key><minus><bar><minus><greater><greater>                                           <space> : "⤀" U2900 # RIGHTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
-<Multi_key><minus><bar><minus><greater><greater>                                    <nobreakspace> : "⤀" U2900 # RIGHTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
-<Multi_key><minus><bar><bar><minus><greater><greater>                                      <space> : "⤁" U2901 # RIGHTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><minus><bar><bar><minus><greater><greater>                               <nobreakspace> : "⤁" U2901 # RIGHTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
+#   Consistently with "⇺" U21FA, "⇻" U21FB among others, "⤀" U2900, "⤁" U2901,
+#   "⤂" U2902, "⤃" U2903 are additionally supported with a longer sequence.
+#   See #   Streamlining
+#
+<Multi_key><minus><bar><greater><greater>                                                          : "⤀" U2900 # RIGHTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
+<Multi_key><minus><bar><minus><greater><greater>                                                   : "⤀" U2900 # RIGHTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
+<Multi_key><minus><bar><bar><greater><greater>                                                     : "⤁" U2901 # RIGHTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><minus><bar><bar><minus><greater><greater>                                              : "⤁" U2901 # RIGHTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><bar><equal>                                                                      : "⤂" U2902 # LEFTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><less><equal><bar><equal>                                                       <space> : "⤂" U2902 # LEFTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><less><equal><bar><equal>                                                <nobreakspace> : "⤂" U2902 # LEFTWARDS DOUBLE ARROW WITH VERTICAL STROKE
-<Multi_key><equal><bar><equal><greater>                                                    <space> : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
-<Multi_key><equal><bar><equal><greater>                                             <nobreakspace> : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
+<Multi_key><equal><bar><greater>                                                                   : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
+<Multi_key><equal><bar><equal><greater>                                                            : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><less><equal><bar><equal><greater>                                              <space> : "⤄" U2904 # LEFT RIGHT DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><less><equal><bar><equal><greater>                                       <nobreakspace> : "⤄" U2904 # LEFT RIGHT DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><bar><minus><greater><greater>                                                  <space> : "⤅" U2905 # RIGHTWARDS TWO-HEADED ARROW FROM BAR
