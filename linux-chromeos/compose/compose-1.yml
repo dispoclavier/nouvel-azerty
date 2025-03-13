@@ -3843,11 +3843,12 @@
 #
 #   Intuitivity and efficiency are key, with the stress on efficiency, so that
 #   a sequence may appear truncated because the output is already clear before
-#   a pattern is finished, as for "⃕" U20D5. Redundant characters are cropped
-#   for a streamlined user experience, and also to avoid superfluous dead keys
-#   on Windows, where composition is implemented using chained dead keys. By
-#   contrast, in XCompose, useless trailing multikey sequence constituents are
-#   only revealed while running the overall conflictlessness check.
+#   a pattern is finished, as for "⦭" U29AD, "⦫" U29AB, "⦮" U29AE, "⦯" U29AF.
+#   Redundant characters are cropped for a streamlined user experience, and
+#   also to avoid superfluous dead keys on Windows, where composition is
+#   implemented using chained dead keys. By contrast, in XCompose, useless
+#   trailing multikey sequence constituents are only revealed while checking
+#   conflictlessness.
 #   See #   Conflictlessness check
 #
 #   When streamlining defeats intuitivity, intuitive sequences are supported
