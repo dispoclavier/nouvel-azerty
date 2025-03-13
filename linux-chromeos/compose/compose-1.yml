@@ -6788,30 +6788,23 @@
 <Multi_key><nobreakspace><space><slash><underscore>                                 <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><nobreakspace><nobreakspace><slash><underscore>                                 <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><nobreakspace><nobreakspace><slash><underscore>                          <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><underscore><slash><parenright><greater>                                        <space> : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
-<Multi_key><underscore><slash><parenright><greater>                                 <nobreakspace> : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
-<Multi_key><slash><underscore><parenright><greater>                                        <space> : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
-<Multi_key><slash><underscore><parenright><greater>                                 <nobreakspace> : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
-<Multi_key><backslash><underscore><parenleft><less>                                                : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
-<Multi_key><underscore><backslash><parenleft><less>                                                : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
-<Multi_key><backslash><underscore><parenright>                                                     : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
-<Multi_key><underscore><backslash><parenright>                                                     : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
-<Multi_key><underscore><slash><parenleft><less>                                            <space> : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
-<Multi_key><underscore><slash><parenleft><less>                                     <nobreakspace> : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
-<Multi_key><slash><underscore><parenleft><less>                                            <space> : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
-<Multi_key><slash><underscore><parenleft><less>                                     <nobreakspace> : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
-<Multi_key><slash><bar><parenright><greater>                                               <space> : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
-<Multi_key><slash><bar><parenright><greater>                                        <nobreakspace> : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
-<Multi_key><bar><slash><parenright><greater>                                               <space> : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
-<Multi_key><bar><slash><parenright><greater>                                        <nobreakspace> : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
-<Multi_key><bar><backslash><parenleft>                                                             : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
-<Multi_key><backslash><bar><parenleft>                                                             : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
-<Multi_key><bar><backslash><parenright>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
-<Multi_key><backslash><bar><parenright>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
-<Multi_key><slash><bar><parenleft><less>                                                   <space> : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
-<Multi_key><slash><bar><parenleft><less>                                            <nobreakspace> : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
-<Multi_key><bar><slash><parenleft><less>                                                   <space> : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
-<Multi_key><bar><slash><parenleft><less>                                            <nobreakspace> : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
+#
+#   The sequences of "⦨" U29A8, "⦩" U29A9, "⦪" U29AA, "⦫" U29AB, "⦬" U29AC,
+#   "⦭" U29AD, "⦮" U29AE, "⦯" U29AF are composed parsing the symbols positively
+#   (counter-clockwise), and the arrowed angle leg like an arrow stem and head.
+#   To prevent conflicts with "₍" U208D, "₎" U208E, a horizontal leg is minus,
+#   like a horizontal arrow stem, not underscore. For efficiency, the slash of
+#   "⦫" U29AB is cropped, and so are the less and backslash of "⦭" U29AD, the
+#   greater of "⦮" U29AE, and the bar of "⦯" U29AF.
+#
+<Multi_key><minus><parenright><slash><greater>                                                     : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
+<Multi_key><less><backslash><parenleft><minus>                                                     : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
+<Multi_key><backslash><greater><parenright><minus>                                                 : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
+<Multi_key><minus><parenleft><less>                                                                : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
+<Multi_key><bar><parenright><slash><greater>                                                       : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
+<Multi_key><bar><parenleft>                                                                        : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
+<Multi_key><bar><parenright><backslash>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
+<Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><O><backslash>                                                                  <space> : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><space><minus><O><slash>                                                        <space> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
