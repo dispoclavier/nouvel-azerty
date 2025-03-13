@@ -6793,9 +6793,9 @@
 #   "⦭" U29AD, "⦮" U29AE, "⦯" U29AF are composed parsing the symbols positively
 #   (counter-clockwise), and the arrowed angle leg like an arrow stem and head.
 #   To prevent conflicts with "₍" U208D, "₎" U208E, a horizontal leg is minus,
-#   like a horizontal arrow stem, not underscore. For efficiency, the slash of
-#   "⦫" U29AB is cropped, and so are the less and backslash of "⦭" U29AD, the
-#   greater of "⦮" U29AE, and the bar of "⦯" U29AF.
+#   like a horizontal arrow stem, not underscore. For efficiency, the trailing
+#   slash of "⦫" U29AB is cropped, and so are the trailing less and backslash
+#   of "⦭" U29AD, the trailing greater of "⦮" U29AE, and the bar of "⦯" U29AF.
 #
 <Multi_key><minus><parenright><slash><greater>                                                     : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
 <Multi_key><less><backslash><parenleft><minus>                                                     : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
