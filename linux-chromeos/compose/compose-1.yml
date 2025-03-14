@@ -3993,6 +3993,13 @@
 #   are always grave or apostrophe/rightsinglequotemark depending on the slant,
 #   regardless of stem direction.
 #
+#   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
+#   at least twice, for intuitivity. As a result, the triple asciitilde of the
+#   long variants is inconsistent with the double minus or equal of other long
+#   arrows, due to single asciitilde being required for wave arrows "↜" U219C,
+#   "↝" U219D, while the directly pointing variants "⤳" U2933, "⬿" U2B3F have
+#   a minus stem segment before their arrowhead.
+#
 #
 #   Angle symbols
 #
@@ -4568,14 +4575,10 @@
 <Multi_key><less><minus><slash>                                                     <nobreakspace> : "↚" U219A # LEFTWARDS ARROW WITH STROKE
 <Multi_key><slash><minus><greater>                                                         <space> : "↛" U219B # RIGHTWARDS ARROW WITH STROKE
 <Multi_key><slash><minus><greater>                                                  <nobreakspace> : "↛" U219B # RIGHTWARDS ARROW WITH STROKE
-<Multi_key><space><less><asciitilde>                                                       <space> : "↜" U219C # LEFTWARDS WAVE ARROW
-<Multi_key><space><less><asciitilde>                                                <nobreakspace> : "↜" U219C # LEFTWARDS WAVE ARROW
-<Multi_key><nobreakspace><less><asciitilde>                                                <space> : "↜" U219C # LEFTWARDS WAVE ARROW
-<Multi_key><nobreakspace><less><asciitilde>                                         <nobreakspace> : "↜" U219C # LEFTWARDS WAVE ARROW
-<Multi_key><space><asciitilde><greater>                                                    <space> : "↝" U219D # RIGHTWARDS WAVE ARROW
-<Multi_key><space><asciitilde><greater>                                             <nobreakspace> : "↝" U219D # RIGHTWARDS WAVE ARROW
-<Multi_key><nobreakspace><asciitilde><greater>                                             <space> : "↝" U219D # RIGHTWARDS WAVE ARROW
-<Multi_key><nobreakspace><asciitilde><greater>                                      <nobreakspace> : "↝" U219D # RIGHTWARDS WAVE ARROW
+<Multi_key><less><asciitilde>                                                              <space> : "↜" U219C # LEFTWARDS WAVE ARROW
+<Multi_key><less><asciitilde>                                                       <nobreakspace> : "↜" U219C # LEFTWARDS WAVE ARROW
+<Multi_key><asciitilde><greater>                                                           <space> : "↝" U219D # RIGHTWARDS WAVE ARROW
+<Multi_key><asciitilde><greater>                                                    <nobreakspace> : "↝" U219D # RIGHTWARDS WAVE ARROW
 <Multi_key><less><less><minus>                                                             <space> : "↞" U219E # LEFTWARDS TWO HEADED ARROW
 <Multi_key><less><less><minus>                                                      <nobreakspace> : "↞" U219E # LEFTWARDS TWO HEADED ARROW
 <Multi_key><less><less><exclam>                                                            <space> : "↟" U219F # UPWARDS TWO HEADED ARROW
@@ -4732,10 +4735,8 @@
 #   U21DC is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=37
 #
-<Multi_key><space><less><asciitilde><asciitilde>                                           <space> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
-<Multi_key><space><less><asciitilde><asciitilde>                                    <nobreakspace> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
-<Multi_key><nobreakspace><less><asciitilde><asciitilde>                                    <space> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
-<Multi_key><nobreakspace><less><asciitilde><asciitilde>                             <nobreakspace> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
+<Multi_key><less><asciitilde><asciitilde>                                                  <space> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
+<Multi_key><less><asciitilde><asciitilde>                                           <nobreakspace> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
 <Multi_key><asciitilde><asciitilde><greater>                                                       : "⇝" U21DD # RIGHTWARDS SQUIGGLE ARROW
 <Multi_key><bar><less><minus>                                                                      : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
 <Multi_key><minus><greater><bar>                                                           <space> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
@@ -5214,8 +5215,10 @@
 <Multi_key><less><slash><underscore>                                                <nobreakspace> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <Multi_key><greater><slash><underscore>                                                    <space> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <Multi_key><greater><slash><underscore>                                             <nobreakspace> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-<Multi_key><less><asciitilde>                                                              <space> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
-<Multi_key><less><asciitilde>                                                       <nobreakspace> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
+<Multi_key><space><less><asciitilde>                                                       <space> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
+<Multi_key><space><less><asciitilde>                                                <nobreakspace> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
+<Multi_key><nobreakspace><less><asciitilde>                                                <space> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
+<Multi_key><nobreakspace><less><asciitilde>                                         <nobreakspace> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
 <Multi_key><greater><asciitilde>                                                           <space> : "≳" U2273 # GREATER-THAN OR EQUIVALENT TO
 <Multi_key><greater><asciitilde>                                                    <nobreakspace> : "≳" U2273 # GREATER-THAN OR EQUIVALENT TO
 <Multi_key><less><slash><asciitilde>                                                       <space> : "≴" U2274 # NEITHER LESS-THAN NOR EQUIVALENT TO
@@ -6369,6 +6372,11 @@
 <Multi_key><less><equal><equal><bar>                                                       <space> : "⟽" U27FD # LONG LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><less><equal><equal><bar>                                                <nobreakspace> : "⟽" U27FD # LONG LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><bar><equal><equal><greater>                                                            : "⟾" U27FE # LONG RIGHTWARDS DOUBLE ARROW FROM BAR
+#
+#   "⟿" U27FF and its left-pointing counterpart "⬳" U2B33 use triple asciitilde
+#   as documented.
+#   See #   Squiggle arrows
+#
 <Multi_key><asciitilde><asciitilde><asciitilde><greater>                                           : "⟿" U27FF # LONG RIGHTWARDS SQUIGGLE ARROW
 #
 #
@@ -7598,8 +7606,8 @@
 <Multi_key><less><period><underscore>                                               <nobreakspace> : "⪃" U2A83 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE RIGHT
 <Multi_key><greater><period><underscore>                                                   <space> : "⪄" U2A84 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE LEFT
 <Multi_key><greater><period><underscore>                                            <nobreakspace> : "⪄" U2A84 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE LEFT
-<Multi_key><less><asciitilde><asciitilde>                                                  <space> : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
-<Multi_key><less><asciitilde><asciitilde>                                           <nobreakspace> : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
+<Multi_key><space><less><asciitilde><asciitilde>                                                   : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
+<Multi_key><nobreakspace><less><asciitilde><asciitilde>                                            : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
 <Multi_key><greater><asciitilde><asciitilde>                                               <space> : "⪆" U2A86 # GREATER-THAN OR APPROXIMATE
 <Multi_key><greater><asciitilde><asciitilde>                                        <nobreakspace> : "⪆" U2A86 # GREATER-THAN OR APPROXIMATE
 <Multi_key><less><underscore><slash>                                                       <space> : "⪇" U2A87 # LESS-THAN AND SINGLE-LINE NOT EQUAL TO
@@ -7659,8 +7667,8 @@
 <Multi_key><asciitilde><less>                                                       <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><backslash><less>                                                   <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><backslash><less>                                            <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
-<Multi_key><asciitilde><greater>                                                           <space> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
-<Multi_key><asciitilde><greater>                                                    <nobreakspace> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
+<Multi_key><space><asciitilde><greater>                                                            : "⪞" U2A9E # SIMILAR OR GREATER-THAN
+<Multi_key><nobreakspace><asciitilde><greater>                                                     : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><asciitilde><backslash><greater>                                                <space> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><asciitilde><backslash><greater>                                         <nobreakspace> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><asciitilde><less><equal>                                                               : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
@@ -8030,8 +8038,7 @@
 <Multi_key><less><minus><O><plus>                                                          <space> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 <Multi_key><less><minus><O><plus>                                                   <nobreakspace> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 #   Mirror of U27FF.
-<Multi_key><less><asciitilde><asciitilde><asciitilde>                                      <space> : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
-<Multi_key><less><asciitilde><asciitilde><asciitilde>                               <nobreakspace> : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
+<Multi_key><less><asciitilde><asciitilde><asciitilde>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
 #   Mirrors of U2900, U2901.
 <Multi_key><less><less><minus><bar><minus>                                                 <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                          <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
