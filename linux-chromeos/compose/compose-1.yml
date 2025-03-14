@@ -3998,9 +3998,12 @@
 #
 #   Angles are parsed counter-clockwise in the geometrically positive direction
 #   while translating a horizontal angle leg to minus, like a horizontal arrow
-#   stem, not underscore, to prevent conflicts with "₍" U208D, "₎" U208E in the
-#   sequences of "⦨" U29A8 and the following. By contrast, vertical angle legs
-#   are bar, as in "⟀" U27C0, not exclam like vertical arrow stems.
+#   stem, not underscore, because we have "⦤" U29A4 and "⦥" U29A5 including an
+#   actual underscore, and also to prevent too many conflicts with subscript
+#   parentheses "₍" U208D, "₎" U208E in the sequences of "⦨" U29A8.."⦯" U29AF.
+#
+#   By contrast, vertical angle legs are bar, as in "⟀" U27C0, not exclam like
+#   vertical arrow stems.
 #
 #   For simplicity, right angle is "L", as in "∟" U221F, "⊾" U22BE, "⦜" U299C.
 #
@@ -4920,6 +4923,7 @@
 #   the following, horizontal angle legs translate to minus, not to underscore,
 #   like horizontal arrow stems, while vertical angle legs are bar, not exclam.
 #   For intuitivity, "∠" U2220 is parsed like "∡" U2221.
+#   See #   Angle symbols
 #
 #   In group 5 of "]"                                                                              : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                             <space> : "∟" U221F # RIGHT ANGLE
@@ -6799,13 +6803,15 @@
 <Multi_key><nobreakspace><nobreakspace><slash><minus>                                      <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><nobreakspace><nobreakspace><slash><minus>                               <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 #
-#   The sequences of "⦨" U29A8, "⦩" U29A9, "⦪" U29AA, "⦫" U29AB, "⦬" U29AC,
-#   "⦭" U29AD, "⦮" U29AE, "⦯" U29AF are composed parsing the symbols positively
-#   (counter-clockwise), and the arrowed angle leg like an arrow stem and head.
-#   To prevent conflicts with "₍" U208D, "₎" U208E, a horizontal leg is minus,
-#   like a horizontal arrow stem, not underscore. For efficiency, the trailing
-#   slash of "⦫" U29AB is cropped, and so are the trailing less and backslash
-#   of "⦭" U29AD, the trailing greater of "⦮" U29AE, and the bar of "⦯" U29AF.
+#   The sequences of "⦨" U29A8.."⦯" U29AF are composed parsing the symbols in
+#   the positive direction (counter-clockwise), and the arrowed angle leg like
+#   an arrow stem and head. With respect to "⦤" U29A4, "⦥" U29A5 and to prevent
+#   conflicts with "₍" U208D and "₎" U208E, a horizontal leg is minus, like a
+#   horizontal arrow stem, not underscore. For efficiency, the trailing slash
+#   of "⦫" U29AB is cropped, and so are the trailing less and backslash of
+#   "⦭" U29AD, the trailing greater of "⦮" U29AE, and the bar of "⦯" U29AF.
+#   See #   Angle symbols
+#   See #   Streamlining
 #
 <Multi_key><minus><parenright><slash><greater>                                                     : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
 <Multi_key><less><backslash><parenleft><minus>                                                     : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
