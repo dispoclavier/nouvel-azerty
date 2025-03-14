@@ -3994,6 +3994,19 @@
 #   regardless of stem direction.
 #
 #
+#   Angle symbols
+#
+#   Angles are parsed counter-clockwise in the geometrically positive direction
+#   while translating a horizontal angle leg to minus, like a horizontal arrow
+#   stem, not underscore, to prevent conflicts with "₍" U208D, "₎" U208E in the
+#   sequences of "⦨" U29A8 and the following. By contrast, vertical angle legs
+#   are bar, as in "⟀" U27C0, not exclam like vertical arrow stems.
+#
+#   For simplicity, right angle is "L", as in "∟" U221F, "⊾" U22BE, "⦜" U299C.
+#
+#   For intuitivity, "∠" U2220 is parsed like "∡" U2221.
+#
+#
 #   Small symbols
 #
 #   Small alternative symbols ("∊" U220A, "∍" U220D, "⋷" U22F7, "⋾" U22FE,
@@ -4902,16 +4915,21 @@
 <Multi_key><8>                                                                      <nobreakspace> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                          <space> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                   <nobreakspace> : "∞" U221E # INFINITY
+#
+#   Angles are parsed counter-clockwise, and consistently with "⦨" U29A8 and
+#   the following, horizontal angle legs translate to minus, not to underscore,
+#   like horizontal arrow stems, while vertical angle legs are bar, not exclam.
+#   For intuitivity, "∠" U2220 is parsed like "∡" U2221.
+#
 #   In group 5 of "]"                                                                              : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                             <space> : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                      <nobreakspace> : "∟" U221F # RIGHT ANGLE
 #   In group 5 of "^"                                                                              : "∠" U2220 # ANGLE
-<Multi_key><slash><underscore>                                                             <space> : "∠" U2220 # ANGLE
-<Multi_key><slash><underscore>                                                      <nobreakspace> : "∠" U2220 # ANGLE
-<Multi_key><slash><underscore><parenright>                                                 <space> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><slash><underscore><parenright>                                          <nobreakspace> : "∡" U2221 # MEASURED ANGLE
-<Multi_key><slash><backslash><parenright>                                                  <space> : "∢" U2222 # SPHERICAL ANGLE
-<Multi_key><slash><backslash><parenright>                                           <nobreakspace> : "∢" U2222 # SPHERICAL ANGLE
+<Multi_key><minus><slash>                                                                  <space> : "∠" U2220 # ANGLE
+<Multi_key><minus><slash>                                                           <nobreakspace> : "∠" U2220 # ANGLE
+<Multi_key><minus><parenright><slash>                                                      <space> : "∡" U2221 # MEASURED ANGLE
+<Multi_key><minus><parenright><slash>                                               <nobreakspace> : "∡" U2221 # MEASURED ANGLE
+<Multi_key><backslash><parenright><slash>                                                          : "∢" U2222 # SPHERICAL ANGLE
 #   In group 11 of "|"                                                                             : "∣" U2223 # DIVIDES
 #   In #*# MACRON                                                                                  : "∣" U2223 # DIVIDES
 <Multi_key><space><bar>                                                                    <space> : "∣" U2223 # DIVIDES
@@ -5440,8 +5458,7 @@
 <Multi_key><N><O><R>                                                                               : "⊽" U22BD # NOR
 <Multi_key><L><parenright>                                                                 <space> : "⊾" U22BE # RIGHT ANGLE WITH ARC
 <Multi_key><L><parenright>                                                          <nobreakspace> : "⊾" U22BE # RIGHT ANGLE WITH ARC
-<Multi_key><slash><bar><underscore>                                                        <space> : "⊿" U22BF # RIGHT TRIANGLE
-<Multi_key><slash><bar><underscore>                                                 <nobreakspace> : "⊿" U22BF # RIGHT TRIANGLE
+<Multi_key><slash><minus><bar>                                                                     : "⊿" U22BF # RIGHT TRIANGLE
 <Multi_key><space><A>                                                                      <space> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><space><A>                                                               <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                               <space> : "⋀" U22C0 # N-ARY LOGICAL AND
@@ -6076,8 +6093,7 @@
 #   https://www.unicode.org/charts/PDF/U27C0.pdf
 #   https://www.unicode.org/charts/nameslist/n_27C0.html
 #
-<Multi_key><bar><slash><underscore>                                                        <space> : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
-<Multi_key><bar><slash><underscore>                                                 <nobreakspace> : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
+<Multi_key><minus><slash><bar>                                                                     : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
 #   The inner triangle of "⟁" U27C1 may erroneously look like a small circle.
 <Multi_key><2><slash><backslash>                                                                   : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><slash><backslash>                                                                : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
@@ -6754,41 +6770,37 @@
 <Multi_key><bar><period>                                                            <nobreakspace> : "⦙" U2999 # DOTTED FENCE
 <Multi_key><bar><w>                                                                        <space> : "⦚" U299A # VERTICAL ZIGZAG LINE
 <Multi_key><bar><w>                                                                 <nobreakspace> : "⦚" U299A # VERTICAL ZIGZAG LINE
-<Multi_key><parenleft><backslash><underscore>                                              <space> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-<Multi_key><parenleft><backslash><underscore>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-<Multi_key><parenleft><underscore><backslash>                                              <space> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-<Multi_key><parenleft><underscore><backslash>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-<Multi_key><backslash><underscore><parenleft>                                              <space> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-<Multi_key><backslash><underscore><parenleft>                                       <nobreakspace> : "⦛" U299B # MEASURED ANGLE OPENING LEFT
+<Multi_key><backslash><parenleft><minus>                                                           : "⦛" U299B # MEASURED ANGLE OPENING LEFT
 #   In group 6 of "]"                                                                              : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><bracketright>                                                               <space> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><bracketright>                                                        <nobreakspace> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><parenright><period>                                                         <space> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
 <Multi_key><L><parenright><period>                                                  <nobreakspace> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
-<Multi_key><slash><underscore><s>                                                          <space> : "⦞" U299E # ANGLE WITH S INSIDE
-<Multi_key><slash><underscore><s>                                                   <nobreakspace> : "⦞" U299E # ANGLE WITH S INSIDE
-<Multi_key><space><slash><underscore>                                                      <space> : "⦟" U299F # ACUTE ANGLE
-<Multi_key><space><slash><underscore>                                               <nobreakspace> : "⦟" U299F # ACUTE ANGLE
-<Multi_key><nobreakspace><slash><underscore>                                               <space> : "⦟" U299F # ACUTE ANGLE
-<Multi_key><nobreakspace><slash><underscore>                                        <nobreakspace> : "⦟" U299F # ACUTE ANGLE
-<Multi_key><backslash><slash><parenleft>                                                           : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
-<Multi_key><slash><backslash><parenleft>                                                           : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
-<Multi_key><backslash><slash><parenright>                                                          : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
-<Multi_key><underscore><slash>                                                             <space> : "⦢" U29A2 # TURNED ANGLE
-<Multi_key><underscore><slash>                                                      <nobreakspace> : "⦢" U29A2 # TURNED ANGLE
-<Multi_key><underscore><backslash>                                                         <space> : "⦣" U29A3 # REVERSED ANGLE
-<Multi_key><underscore><backslash>                                                  <nobreakspace> : "⦣" U29A3 # REVERSED ANGLE
-<Multi_key><slash><underscore><underscore>                                                 <space> : "⦤" U29A4 # ANGLE WITH UNDERBAR
-<Multi_key><slash><underscore><underscore>                                          <nobreakspace> : "⦤" U29A4 # ANGLE WITH UNDERBAR
-<Multi_key><backslash><underscore><underscore>                                                     : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
-<Multi_key><backslash><underscore>                                                         <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
-<Multi_key><backslash><underscore>                                                  <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
-<Multi_key><space><space><slash><underscore>                                               <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><space><space><slash><underscore>                                        <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><space><slash><underscore>                                        <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><space><slash><underscore>                                 <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><nobreakspace><slash><underscore>                                 <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><nobreakspace><slash><underscore>                          <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><minus><slash><s>                                                                       : "⦞" U299E # ANGLE WITH S INSIDE
+<Multi_key><space><space><minus><slash>                                                            : "⦟" U299F # ACUTE ANGLE
+<Multi_key><nobreakspace><space><minus><slash>                                                     : "⦟" U299F # ACUTE ANGLE
+<Multi_key><nobreakspace><nobreakspace><minus><slash>                                              : "⦟" U299F # ACUTE ANGLE
+<Multi_key><backslash><parenleft><slash>                                                           : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
+<Multi_key><space><backslash><parenright><slash>                                                   : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
+<Multi_key><nobreakspace><backslash><parenright><slash>                                            : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
+<Multi_key><space><minus><slash>                                                                   : "⦢" U29A2 # TURNED ANGLE
+<Multi_key><nobreakspace><minus><slash>                                                            : "⦢" U29A2 # TURNED ANGLE
+<Multi_key><space><backslash><minus>                                                               : "⦣" U29A3 # REVERSED ANGLE
+<Multi_key><nobreakspace><backslash><minus>                                                        : "⦣" U29A3 # REVERSED ANGLE
+#
+#   Contrary to the rule of parsing angle symbols counter-clockwise, underscore
+#   for "⦤" U29A4 is not leading, to prevent a conflict with "₋" U208B.
+#
+<Multi_key><minus><slash><underscore>                                                              : "⦤" U29A4 # ANGLE WITH UNDERBAR
+<Multi_key><backslash><minus><underscore>                                                          : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
+<Multi_key><minus><backslash>                                                              <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
+<Multi_key><minus><backslash>                                                       <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
+<Multi_key><space><space><slash><minus>                                                    <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><space><space><slash><minus>                                             <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><space><slash><minus>                                             <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><space><slash><minus>                                      <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><nobreakspace><slash><minus>                                      <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><nobreakspace><slash><minus>                               <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 #
 #   The sequences of "⦨" U29A8, "⦩" U29A9, "⦪" U29AA, "⦫" U29AB, "⦬" U29AC,
 #   "⦭" U29AD, "⦮" U29AE, "⦯" U29AF are composed parsing the symbols positively
@@ -7041,8 +7053,8 @@
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><space><backslash>             <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>             <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>      <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><minus><slash>                                                                  <space> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
-<Multi_key><minus><slash>                                                           <nobreakspace> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<Multi_key><underscore><slash>                                                             <space> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<Multi_key><underscore><slash>                                                      <nobreakspace> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><backslash><minus>                                                              <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
 <Multi_key><backslash><minus>                                                       <nobreakspace> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
 #   In #*# STROKE                                                                                  : "⧸" U29F8 # BIG SOLIDUS
