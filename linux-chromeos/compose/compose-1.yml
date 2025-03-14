@@ -6787,11 +6787,8 @@
 <Multi_key><nobreakspace><minus><slash>                                                            : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><space><backslash><minus>                                                               : "⦣" U29A3 # REVERSED ANGLE
 <Multi_key><nobreakspace><backslash><minus>                                                        : "⦣" U29A3 # REVERSED ANGLE
-#
-#   Contrary to the rule of parsing angle symbols counter-clockwise, underscore
-#   for "⦤" U29A4 is not leading, to prevent a conflict with "₋" U208B.
-#
-<Multi_key><minus><slash><underscore>                                                              : "⦤" U29A4 # ANGLE WITH UNDERBAR
+<Multi_key><space><underscore><minus><slash>                                                       : "⦤" U29A4 # ANGLE WITH UNDERBAR
+<Multi_key><nobreakspace><underscore><minus><slash>                                                : "⦤" U29A4 # ANGLE WITH UNDERBAR
 <Multi_key><backslash><minus><underscore>                                                          : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
 <Multi_key><minus><backslash>                                                              <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
 <Multi_key><minus><backslash>                                                       <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
