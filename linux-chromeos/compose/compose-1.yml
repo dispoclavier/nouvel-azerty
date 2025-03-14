@@ -233,10 +233,36 @@
 #   unless such spelling makes for awkward reading.”
 #   https://brand.tennessee.edu/content-strategy/writing-guide/spelling-and-hyphenation/
 #
+#
+#   Headings
+#
+#   Section headings have three leading hashes for visibility. Then come a set
+#   of subsection levels with or without special markup depending on importance
+#   and functionality as follows.
+#
 #   Parsing the multikey section, the generate-multikey-tables.pl script needs
 #   a caret between the leading hashes of a subsection heading to start a new
 #   subsection partial table file.
 #   See # # Notes about documentation
+#
+#   Parsing the deadkey section, the generate-deadkey-tables.pl script needs
+#   an asterisk between the leading hashes of a subsection heading to start a
+#   new subsection partial table file.
+#   See # # Notes about documentation
+#
+#   Annotations feature subsection headings marked up by two leading hashes,
+#   each one followed by a space, and subsection headings without extra markup
+#   besides the start-of-line hash followed by three spaces for a usual margin.
+#
+#
+#   Cross-references
+#
+#   Maintenance is complicated by the potential use of every heading, and even
+#   of some paragraph start, in cross references featuring the instance from
+#   start of line to end of line, or end of keyword, preceded by "#   See ".
+#
+#
+#   Multikey sequence notation
 #
 #   The broken bar "¦" U00A6 is repurposed as multikey symbol.
 #   See # # Symbols for multikey and composition
@@ -3839,6 +3865,17 @@
 #
 # # Design of math sequences
 #
+#   Mnemonicity
+#
+#   Supporting all math symbols by multikey would be pointless if this was only
+#   to introduce another steep learning curve. Therefore, any multikey sequence
+#   must be deducible from the symbol’s shape. To achieve this, every symbol is
+#   parsed according to simple rules, applied consistently. Resulting conflicts
+#   are uniformly resolved by prepending spaces rather than by arbitrary means,
+#   such as randomly duplicating or inverting multikey sequence constituents. A
+#   well-designed sequence is mnemonic thanks to its intuitivity.
+#
+#
 #   Streamlining
 #
 #   Intuitivity and efficiency are key, with the stress on efficiency, so that
@@ -6812,7 +6849,7 @@
 <Multi_key><nobreakspace><nobreakspace><slash><minus>                               <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 #
 #   The sequences of "⦨" U29A8.."⦯" U29AF are composed parsing the symbols in
-#   the positive direction (counter-clockwise), and the arrowed angle leg like
+#   the positive direction, counter-clockwise, and the arrowed angle leg like
 #   an arrow stem and head. With respect to "⦤" U29A4, "⦥" U29A5 and to prevent
 #   conflicts with "₍" U208D and "₎" U208E, a horizontal leg is minus, like a
 #   horizontal arrow stem, not underscore. For efficiency, the trailing slash
