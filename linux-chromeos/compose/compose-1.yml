@@ -4025,10 +4025,11 @@
 #   or double equal, as for "⟶" U27F6.
 #
 #   Vertical arrow heads are composed as if they were turned 90° to the left,
-#   from top to bottom; up arrows use less, as for "↑" U2191, "⇑" U21D1; down
-#   arrows use greater, as for "↓" U2193, "⇓" U21D3; by contrast, harpoon barbs
-#   are always grave or apostrophe/rightsinglequotemark depending on the slant,
-#   regardless of stem direction.
+#   because stacked symbols are parsed from top to bottom; heads of up arrows
+#   translate to less, as for "↑" U2191, "⇑" U21D1; heads of down arrows become
+#   greater, as for "↓" U2193, "⇓" U21D3. By contrast, harpoon barbs are always
+#   grave or apostrophe/rightsinglequotemark depending on the slant, regardless
+#   of stem direction.
 #
 #   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
 #   at least twice, for intuitivity. As a result, the triple asciitilde of the
