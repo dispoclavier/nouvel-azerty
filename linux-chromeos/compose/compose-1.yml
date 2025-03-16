@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.25.0" # See # # Notes about syntax
+<UEFA0>                     : "version 4.26.0d" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -215,12 +215,6 @@
 #
 # # Notes about syntax
 #
-#   On all lines containing a compose sequence to be parsed by the compiler, a
-#   comment is mandatory, for compatibility with non-conformant compilers that
-#   do not parse compose sequences without a comment before the EOL. According
-#   to the spec, section “File Format”, comments are optional.
-#   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
-#
 #   The plus sign in Unicode code points is omitted, also in comments, except
 #   in quotations and in result strings used as placeholders of high surrogates
 #   and intended for display to end-users. This scheme is interoperable with
@@ -229,9 +223,21 @@
 #   script format-UnicodeData-txt.pl.
 #   See # # Notes about documentation
 #
-#   The word "multikey" is not hyphenated. “Multi words are not hyphenated
-#   unless such spelling makes for awkward reading.”
-#   https://brand.tennessee.edu/content-strategy/writing-guide/spelling-and-hyphenation/
+#   Omitting the plus sign is also consistent with the URL scheme used for the
+#   Unicode Code Charts.
+#   https://www.unicode.org/charts/PDF/
+#   https://www.unicode.org/charts/PDF/U0000.pdf
+#
+#
+#   End of line comments
+#
+#   All lines containing a compose sequence must also contain a comment before
+#   the end of line, for compatibility with non-conformant compilers expecting
+#   compose sequences to extend until a numbersign. A lack of numbersign is an
+#   error for these compilers, and the sequence is discarded.
+#
+#   According to the spec, section "File Format", comments are optional.
+#   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
 #
 #   Headings
@@ -277,6 +283,13 @@
 #   that NBTSP would be pointless with fixed-width fonts and hard line breaks.
 #
 #
+#   Spelling of "multikey"
+#
+#   The word "multikey" is not hyphenated. “Multi words are not hyphenated
+#   unless such spelling makes for awkward reading.”
+#   https://brand.tennessee.edu/content-strategy/writing-guide/spelling-and-hyphenation/
+#
+#
 # # Breton polygraphs
 #
 #   The Brezhoneg keyboard layout from An drouizig has its key D01 dedicated to
@@ -320,7 +333,7 @@
 #
 <c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE.
 <C_h> : "Cʼh" #
-<C_H> : "CʼH" # See # # Notes about syntax
+<C_H> : "CʼH" # See #   End of line comments
 #
 #
 # # Punctuation spacing for French, regular with U202F NBTSP
@@ -1170,7 +1183,7 @@
 #   Multi_key
 #   Dchar: "¦" U00A6
 #
-#   See # # Notes about syntax
+#   See #   Multikey sequence notation
 #
 #
 #^# Legacy ordinal indicators
