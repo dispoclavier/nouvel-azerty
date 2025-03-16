@@ -316,7 +316,7 @@
 #   See # # Dead characters for portability
 #
 #   The sequences in French quotes are the multikey equivalents.
-#   See # # Notes about syntax
+#   See #   Multikey sequence notation
 #
 #   <UEFD0> : "①"   *dead_group, for 12 additional groups (0-based). « ¦# »
 #                   See #*# GROUP_1
