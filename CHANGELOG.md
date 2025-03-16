@@ -16,6 +16,10 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+* Documentation :
+	* Ajouter un PDF documentant la touche morte groupe. linux-chromeos/readme.md [b70c9b7](https://github.com/dispoclavier/nouvel-azerty/commit/b70c9b7c26ca633276b98a19084d50a67ecfeaa1), windows/readme.md [0f70813](https://github.com/dispoclavier/nouvel-azerty/commit/0f708130443e4904770b614906f3e8614f57157a)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml [75c4a7e](https://github.com/dispoclavier/nouvel-azerty/commit/75c4a7e3b1542f49a3a3ee2bbdf5f577c8026b62), compose-2.yml [f478020](https://github.com/dispoclavier/nouvel-azerty/commit/f47802067198ddd420fd7911e99945a96b3c7c85)
+
 ## 4.25.0 (2025-03-15)
 
 Correction des groupes des symboles pour plus d’utilité.
@@ -52,7 +56,7 @@ Introduction du concept de « groupe 1 bis ».
 	* Corriger ou ajouter des annotations. compose-1.yml [0c30e4a](https://github.com/dispoclavier/nouvel-azerty/commit/0c30e4ae988e7f43704c5eccc0bdefe55216300b), [5b02559](https://github.com/dispoclavier/nouvel-azerty/commit/5b0255949897d65ec7e712a76593207ddaa886fe), [e565f40](https://github.com/dispoclavier/nouvel-azerty/commit/e565f40ecfa19dbd417137238e5ae28a58818dd8), [85f0935](https://github.com/dispoclavier/nouvel-azerty/commit/85f09351973d3b5d36784448452773205b628a9c), [eca3b50](https://github.com/dispoclavier/nouvel-azerty/commit/eca3b5040d2f139ccb1174431048cb52252418c5), [7dbc74b](https://github.com/dispoclavier/nouvel-azerty/commit/7dbc74bc447fc5c713477c3de1d5bd12dfeff53d), [47e1c2b](https://github.com/dispoclavier/nouvel-azerty/commit/47e1c2bf8ed3353f861a774f86c27e62c07d616d), [d20979e](https://github.com/dispoclavier/nouvel-azerty/commit/d20979e3405d40baa3dc413753cd1041dec03b77), [bbbdf54](https://github.com/dispoclavier/nouvel-azerty/commit/bbbdf5411493384a39100172479ccfd9e855c295), [e4ce25d](https://github.com/dispoclavier/nouvel-azerty/commit/e4ce25d2cd2b1390bff5305f5ee0bf8bc47241ab), [27caa25](https://github.com/dispoclavier/nouvel-azerty/commit/27caa25d6f8cbdde8e327339231e85c92484c923), [4fe1f28](https://github.com/dispoclavier/nouvel-azerty/commit/4fe1f280e5b143cbc0d0db6151a9ac514ef83cc5), [cca4a7d](https://github.com/dispoclavier/nouvel-azerty/commit/cca4a7d5559e10f26b438a110a43817446b2c711), [4aa5cce](https://github.com/dispoclavier/nouvel-azerty/commit/4aa5cce8f0e88a642e451fb9ecb5678cedb40788), [a1f8b75](https://github.com/dispoclavier/nouvel-azerty/commit/a1f8b75ec4d9f710f10fece4164839e8da003c76), [d66fc03](https://github.com/dispoclavier/nouvel-azerty/commit/d66fc032233e10299e794fe0bbff68157a3d8bf2), compose-2.yml [c557cce](https://github.com/dispoclavier/nouvel-azerty/commit/c557cce828c1e5fbf4ef76b97a417f6400a4a220)
 	* Améliorer la lisibilité des annotations. compose-1.yml [799074f](https://github.com/dispoclavier/nouvel-azerty/commit/799074f785c91dc41dc85de32c4d3b46912c85be)
 	* Compléter le journal des modifications : Ajouter des liens pour les polices. CHANGELOG,md [f5d8dd9](https://github.com/dispoclavier/nouvel-azerty/commit/f5d8dd993ffdc770c72890d24925e28e61ce986c), [ffe7a7e](https://github.com/dispoclavier/nouvel-azerty/commit/ffe7a7e59825ed4a75236878b43878ae6adc04f4)
-	* Ajouter un PDF sur la touche morte groupe.
+	* Ajouter un PDF documentant la touche morte groupe.
 
 ## 4.24.0 (2025-03-04)
 
