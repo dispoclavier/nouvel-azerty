@@ -7259,14 +7259,16 @@
 #   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
 #   sequence with a leading space for uniqueness.
 #
-<Multi_key><space><bar><backslash><slash><bar>                                             <space> : "⨝" U2A1D # JOIN
-<Multi_key><space><bar><backslash><slash><bar>                                      <nobreakspace> : "⨝" U2A1D # JOIN
-<Multi_key><nobreakspace><bar><backslash><slash><bar>                                      <space> : "⨝" U2A1D # JOIN
-<Multi_key><nobreakspace><bar><backslash><slash><bar>                               <nobreakspace> : "⨝" U2A1D # JOIN
-<Multi_key><space><bar><slash><backslash><bar>                                             <space> : "⨝" U2A1D # JOIN
-<Multi_key><space><bar><slash><backslash><bar>                                      <nobreakspace> : "⨝" U2A1D # JOIN
-<Multi_key><nobreakspace><bar><slash><backslash><bar>                                      <space> : "⨝" U2A1D # JOIN
-<Multi_key><nobreakspace><bar><slash><backslash><bar>                               <nobreakspace> : "⨝" U2A1D # JOIN
+#   Slash and backslash may be hit in any order. This enables pressing them
+#   simultaneously and prevents screwing up these symbols, as opposed to making
+#   slash-backslash a shortcut for JOIN, reserving backslash-slash for BOWTIE,
+#   under the rule that parsing starts at the upper left corner.
+#   See #   Parsing order
+#
+<Multi_key><space><bar><backslash><slash><bar>                                                     : "⨝" U2A1D # JOIN
+<Multi_key><nobreakspace><bar><backslash><slash><bar>                                              : "⨝" U2A1D # JOIN
+<Multi_key><space><bar><slash><backslash><bar>                                                     : "⨝" U2A1D # JOIN
+<Multi_key><nobreakspace><bar><slash><backslash><bar>                                              : "⨝" U2A1D # JOIN
 <Multi_key><space><slash><backslash><bar>                                                  <space> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 <Multi_key><space><slash><backslash><bar>                                           <nobreakspace> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 <Multi_key><nobreakspace><slash><backslash><bar>                                           <space> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
