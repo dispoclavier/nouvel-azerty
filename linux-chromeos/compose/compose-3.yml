@@ -319,6 +319,16 @@
 #
 # # D02 percent
 #
+#   The symbols "‰" U2030 and "‱" U2031 are scarcely used, except per mille for
+#   blood alcohol level, while being prone to malicious use, fooling distracted
+#   readers into tenfold errors on percentages. Therefore, these are relegated
+#   to groups 11 and 12.
+#
+#   The dagger "†" U2020 is heavily used to note dates of death, matched with
+#   asterisk "*" U002A for dates of birth. Consistently, it is supported here
+#   in group 8, additionally to the full set of daggers in dead_tilde.
+#   See #*# TILDE
+#
 <UEFD0>                                                                                  <percent> : "☆" U2606 # WHITE STAR math
 <Multi_key><numbersign>                                                                  <percent> : "☆" U2606 # WHITE STAR math
 <UEFD0><UEFD0>                                                                           <percent> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
@@ -478,6 +488,12 @@
 #
 #
 # # D04 backslash
+#
+#   The radical symbols "√" U221A, "∛" U221B, "∜" U221C are so important that
+#   they come in the very first groups of backslash, mapped on key D04 "R" for
+#   mnemonics. The more fine-grained mnemonic implied by having the cube root
+#   in group 3 and the fourth root in group 4 is ditched in favor of ergonomics
+#   and usability.
 #
 #   Recycling symbols are more extensively supported in *dead_retroflexhook and
 #   by Multi_key, and paper symbols in dead_abovedot.
