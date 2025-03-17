@@ -3944,10 +3944,12 @@
 #   on level 3 is no-break space in French mode, ASCII space in ASCII mode.
 #
 #   Leading space is also used to distinguish math sequences from each other,
-#   in case intuitivity requires similar sequences for different symbols. This
-#   may require prepending multiple spaces. In case of multiple leading spaces,
-#   the thumb may be lifted from the level 3 modifier after any of them, also
-#   in French mode, requiring alias sequences with leading no-break spaces.
+#   in case intuitivity requires similar sequences for different symbols, like
+#   for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN. This scheme may require prepending
+#   multiple spaces. In that case, the level 3 modifier may be released before
+#   any of them, also in French mode when level 3 of the space bar is no-break
+#   space.
+#
 #   Examples involving single or multiple leading [nobreak]space:
 #   Single:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
 #   Double:    "⧸" U29F8, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
@@ -7253,8 +7255,10 @@
 <Multi_key><nobreakspace><minus><s>                                                 <nobreakspace> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
 <Multi_key><s><underscore>                                                                 <space> : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
 <Multi_key><s><underscore>                                                          <nobreakspace> : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
-#   "⨝" U2A1D looks like a duplicate encoding of "⋈" U22C8 BOWTIE, so it has
-#   the same sequence with a leading space to make a difference.
+#
+#   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
+#   sequence with a leading space for uniqueness.
+#
 <Multi_key><space><bar><backslash><slash><bar>                                             <space> : "⨝" U2A1D # JOIN
 <Multi_key><space><bar><backslash><slash><bar>                                      <nobreakspace> : "⨝" U2A1D # JOIN
 <Multi_key><nobreakspace><bar><backslash><slash><bar>                                      <space> : "⨝" U2A1D # JOIN
