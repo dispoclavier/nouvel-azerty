@@ -3894,21 +3894,31 @@
 #   Intuitivity and efficiency are key, with the stress on efficiency, so that
 #   a sequence may appear truncated because the output is already clear before
 #   a pattern is finished, as for "⦭" U29AD, "⦫" U29AB, "⦮" U29AE, "⦯" U29AF.
-#   Redundant characters are cropped for a streamlined user experience, and
-#   also to avoid superfluous dead keys on Windows, where composition is
-#   implemented using chained dead keys. By contrast, in XCompose, useless
-#   trailing multikey sequence constituents are only revealed while checking
-#   conflictlessness.
+#   Redundant characters are cropped, even as many as for "⤐" U2910, both for
+#   a streamlined user experience and to avoid superfluous dead keys on Windows
+#   where composition is implemented using chained dead keys. In XCompose, by
+#   contrast, useless trailing multikey sequence constituents are only revealed
+#   while checking conflictlessness, and need then to be removed carefully for
+#   the purpose of not imposing any useless workload on end users.
 #   See #   Conflictlessness check
 #
-#   When streamlining defeats intuitivity, intuitive sequences are supported
-#   alongside, as for "⇺" U21FA, "⇻" U21FB, where the minus standing for the
-#   stem next to the arrowhead is optionally supported, because skipping is
-#   unfeasible for "⇷" U21F7, "⇸" U21F8 due to conflicts with horizontal-only
-#   special arrows featuring outline heads while the stem is plain: "⇽" U21FD,
-#   "⇾" U21FE. (The third one is "⇿" U21FF.) As a result, the vertical
-#   counterparts "⤈" U2908, "⤉" U2909 have both the streamlined sequences for
-#   convenience, and the long sequences for intuitivity.
+#   When streamlining defeats intuitivity and consistency, more consistent and
+#   intuitive sequences are supported alongside, as for "⇺" U21FA, "⇻" U21FB,
+#   where the minus standing for the stem next to the arrowhead is optionally
+#   supported, because skipping this constituent is unfeasible for "⇷" U21F7,
+#   "⇸" U21F8 due to conflicts with horizontal-only special arrows featuring
+#   outline heads while the stem is plain: "⇽" U21FD, "⇾" U21FE. (The third one
+#   is "⇿" U21FF.) As a result, the vertical counterparts "⤈" U2908, "⤉" U2909
+#   have both the streamlined sequences for convenience, and the long sequences
+#   for intuitivity.
+#
+#
+#   Parsing order
+#
+#   Symbols are parsed consistently with the Latin script, from left to right
+#   and from top to bottom. As a result, it goes up the x axis, down the y axis
+#   and down the z axis if there is any, as in "⤫" U292B, "⤬" U292C. Without a
+#   z axis, parsing these patterns starts in the upper left corner: "⤧" U2927.
 #
 #
 #   Trailing space
@@ -6392,10 +6402,8 @@
 <Multi_key><less><exclam><4>                                                        <nobreakspace> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><less><exclam><KP_4>                                                            <space> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><less><exclam><KP_4>                                                     <nobreakspace> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
-<Multi_key><exclam><greater><4>                                                            <space> : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
-<Multi_key><exclam><greater><4>                                                     <nobreakspace> : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
-<Multi_key><exclam><greater><KP_4>                                                         <space> : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
-<Multi_key><exclam><greater><KP_4>                                                  <nobreakspace> : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
+<Multi_key><exclam><greater><4>                                                                    : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
+<Multi_key><exclam><greater><KP_4>                                                                 : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
 <Multi_key><space><G><backslash>                                                           <space> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><space><G><backslash>                                                    <nobreakspace> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><nobreakspace><G><backslash>                                                    <space> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
@@ -6451,10 +6459,8 @@
 <Multi_key><less><equal><bar><equal>                                                <nobreakspace> : "⤂" U2902 # LEFTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><equal><bar><greater>                                                                   : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><equal><bar><equal><greater>                                                            : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
-<Multi_key><less><equal><bar><equal><greater>                                              <space> : "⤄" U2904 # LEFT RIGHT DOUBLE ARROW WITH VERTICAL STROKE
-<Multi_key><less><equal><bar><equal><greater>                                       <nobreakspace> : "⤄" U2904 # LEFT RIGHT DOUBLE ARROW WITH VERTICAL STROKE
-<Multi_key><bar><minus><greater><greater>                                                  <space> : "⤅" U2905 # RIGHTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><bar><minus><greater><greater>                                           <nobreakspace> : "⤅" U2905 # RIGHTWARDS TWO-HEADED ARROW FROM BAR
+<Multi_key><less><equal><bar><equal><greater>                                                      : "⤄" U2904 # LEFT RIGHT DOUBLE ARROW WITH VERTICAL STROKE
+<Multi_key><bar><minus><greater><greater>                                                          : "⤅" U2905 # RIGHTWARDS TWO-HEADED ARROW FROM BAR
 <Multi_key><less><equal><bar>                                                              <space> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><less><equal><bar>                                                       <nobreakspace> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><bar><equal><greater>                                                                   : "⤇" U2907 # RIGHTWARDS DOUBLE ARROW FROM BAR
@@ -6469,14 +6475,10 @@
 <Multi_key><exclam><bar><exclam>                                                                   : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><bar><exclam>                                                                     : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><exclam><bar><exclam>                                                             : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
-<Multi_key><less><exclam><3>                                                               <space> : "⤊" U290A # UPWARDS TRIPLE ARROW
-<Multi_key><less><exclam><3>                                                        <nobreakspace> : "⤊" U290A # UPWARDS TRIPLE ARROW
-<Multi_key><less><exclam><KP_3>                                                            <space> : "⤊" U290A # UPWARDS TRIPLE ARROW
-<Multi_key><less><exclam><KP_3>                                                     <nobreakspace> : "⤊" U290A # UPWARDS TRIPLE ARROW
-<Multi_key><exclam><greater><3>                                                            <space> : "⤋" U290B # DOWNWARDS TRIPLE ARROW
-<Multi_key><exclam><greater><3>                                                     <nobreakspace> : "⤋" U290B # DOWNWARDS TRIPLE ARROW
-<Multi_key><exclam><greater><KP_3>                                                         <space> : "⤋" U290B # DOWNWARDS TRIPLE ARROW
-<Multi_key><exclam><greater><KP_3>                                                  <nobreakspace> : "⤋" U290B # DOWNWARDS TRIPLE ARROW
+<Multi_key><less><exclam><3>                                                                       : "⤊" U290A # UPWARDS TRIPLE ARROW
+<Multi_key><less><exclam><KP_3>                                                                    : "⤊" U290A # UPWARDS TRIPLE ARROW
+<Multi_key><exclam><greater><3>                                                                    : "⤋" U290B # DOWNWARDS TRIPLE ARROW
+<Multi_key><exclam><greater><KP_3>                                                                 : "⤋" U290B # DOWNWARDS TRIPLE ARROW
 <Multi_key><less><minus><0><minus>                                                         <space> : "⤌" U290C # LEFTWARDS DOUBLE DASH ARROW
 <Multi_key><less><minus><0><minus>                                                  <nobreakspace> : "⤌" U290C # LEFTWARDS DOUBLE DASH ARROW
 <Multi_key><less><minus><KP_0><KP_Subtract>                                                <space> : "⤌" U290C # LEFTWARDS DOUBLE DASH ARROW
@@ -6498,15 +6500,22 @@
 <Multi_key><minus><0><minus><0><minus><greater><greater>                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                         : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><KP_Subtract><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                   : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-#   The following alternative sequence for "⤐" U2910 accounts for the tail
-#   displayed by some fonts, e.g. DejaVu Serif, and uses the maximum number
-#   of keysyms.
-<Multi_key><space><greater><0><minus><0><minus><greater><greater>                                  : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><nobreakspace><greater><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><space><greater><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><nobreakspace><greater><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>         : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><period><period><period><greater>                                               <space> : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
-<Multi_key><period><period><period><greater>                                        <nobreakspace> : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
+#
+#   The following alternative sequences for "⤐" U2910 account for the tail that
+#   is displayed by some fonts, e.g. DejaVu Serif. The full sequences including
+#   a leading space required because of "₀" U2080 skip the first minus for the
+#   stem end next to the tail under the maximum 9 keysyms constraint:
+#       <Multi_key><space><greater><0><minus><0><minus><greater><greater>
+#   But most of this is non-critical and is therefore cropped, so that the stem
+#   next to the tail is readded. Yet the streamlined sequence still stops after
+#   the first gap.
+#   See #   Streamlining
+#
+<Multi_key><space><greater><minus><0>                                                              : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><nobreakspace><greater><minus><0>                                                       : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><space><greater><minus><KP_0>                                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><nobreakspace><greater><minus><KP_0>                                                    : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><period><period><period><greater>                                                       : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
 <Multi_key><bar><less><exclam>                                                                     : "⤒" U2912 # UPWARDS ARROW TO BAR
 <Multi_key><exclam><greater><bar>                                                                  : "⤓" U2913 # DOWNWARDS ARROW TO BAR
 <Multi_key><greater><minus><bar><greater>                                                  <space> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
@@ -6517,8 +6526,7 @@
 <Multi_key><greater><minus><bar><bar><greater>                                      <nobreakspace> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater>                                      <space> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><minus><greater>                               <nobreakspace> : "⤕" U2915 # RIGHTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
-<Multi_key><greater><minus><greater><greater>                                              <space> : "⤖" U2916 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL
-<Multi_key><greater><minus><greater><greater>                                       <nobreakspace> : "⤖" U2916 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL
+<Multi_key><greater><minus><greater><greater>                                                      : "⤖" U2916 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL
 <Multi_key><greater><minus><bar><greater><greater>                                                 : "⤗" U2917 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><minus><greater><greater>                                          : "⤗" U2917 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><greater><minus><bar><bar><greater><greater>                                            : "⤘" U2918 # RIGHTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
@@ -6531,43 +6539,31 @@
 <Multi_key><greater><greater><minus>                                                               : "⤜" U291C # RIGHTWARDS DOUBLE ARROW-TAIL
 <Multi_key><less><greater><less><minus>                                                    <space> : "⤝" U291D # LEFTWARDS ARROW TO BLACK DIAMOND
 <Multi_key><less><greater><less><minus>                                             <nobreakspace> : "⤝" U291D # LEFTWARDS ARROW TO BLACK DIAMOND
-<Multi_key><minus><greater><less><greater>                                                 <space> : "⤞" U291E # RIGHTWARDS ARROW TO BLACK DIAMOND
-<Multi_key><minus><greater><less><greater>                                          <nobreakspace> : "⤞" U291E # RIGHTWARDS ARROW TO BLACK DIAMOND
-<Multi_key><less><greater><less><minus><bar>                                               <space> : "⤟" U291F # LEFTWARDS ARROW FROM BAR TO BLACK DIAMOND
-<Multi_key><less><greater><less><minus><bar>                                        <nobreakspace> : "⤟" U291F # LEFTWARDS ARROW FROM BAR TO BLACK DIAMOND
-<Multi_key><bar><minus><greater><less><greater>                                            <space> : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
-<Multi_key><bar><minus><greater><less><greater>                                     <nobreakspace> : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
+<Multi_key><minus><greater><less><greater>                                                         : "⤞" U291E # RIGHTWARDS ARROW TO BLACK DIAMOND
+<Multi_key><less><greater><less><minus><bar>                                                       : "⤟" U291F # LEFTWARDS ARROW FROM BAR TO BLACK DIAMOND
+<Multi_key><bar><minus><greater><less>                                                             : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
 <Multi_key><less><backslash><greater>                                                              : "⤡" U2921 # NORTH WEST AND SOUTH EAST ARROW
 <Multi_key><less><slash><greater>                                                                  : "⤢" U2922 # NORTH EAST AND SOUTH WEST ARROW
 <Multi_key><less><backslash><parenright>                                                           : "⤣" U2923 # NORTH WEST ARROW WITH HOOK
-<Multi_key><parenleft><slash><greater>                                                             : "⤤" U2924 # NORTH EAST ARROW WITH HOOK
-<Multi_key><parenleft><backslash><greater>                                                         : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
+<Multi_key><parenleft><slash>                                                                      : "⤤" U2924 # NORTH EAST ARROW WITH HOOK
+<Multi_key><parenleft><backslash>                                                                  : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
 <Multi_key><less><slash><parenright>                                                               : "⤦" U2926 # SOUTH WEST ARROW WITH HOOK
-<Multi_key><less><backslash><slash><greater>                                               <space> : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
-<Multi_key><less><backslash><slash><greater>                                        <nobreakspace> : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
+<Multi_key><less><backslash><slash>                                                                : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
 <Multi_key><backslash><greater><slash>                                                             : "⤨" U2928 # NORTH EAST ARROW AND SOUTH EAST ARROW
 <Multi_key><backslash><greater><less>                                                              : "⤩" U2929 # SOUTH EAST ARROW AND SOUTH WEST ARROW
-<Multi_key><less><backslash><less><slash>                                                  <space> : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
-<Multi_key><less><backslash><less><slash>                                           <nobreakspace> : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
+<Multi_key><less><backslash><less>                                                                 : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
 <Multi_key><slash><backslash>                                                              <space> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
 <Multi_key><slash><backslash>                                                       <nobreakspace> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
 <Multi_key><backslash><slash>                                                              <space> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
 <Multi_key><backslash><slash>                                                       <nobreakspace> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
-<Multi_key><space><backslash><greater><slash><greater>                                     <space> : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><space><backslash><greater><slash><greater>                              <nobreakspace> : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><nobreakspace><backslash><greater><slash><greater>                              <space> : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><nobreakspace><backslash><greater><slash><greater>                       <nobreakspace> : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><slash><greater><backslash><greater>                                            <space> : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
-<Multi_key><slash><greater><backslash><greater>                                     <nobreakspace> : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
+<Multi_key><space><backslash><greater>                                                             : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><nobreakspace><backslash><greater>                                                      : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><slash><greater><backslash>                                                             : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
 <Multi_key><backslash><slash><greater>                                                             : "⤯" U292F # FALLING DIAGONAL CROSSING NORTH EAST ARROW
-<Multi_key><slash><backslash><greater>                                                     <space> : "⤰" U2930 # RISING DIAGONAL CROSSING SOUTH EAST ARROW
-<Multi_key><slash><backslash><greater>                                              <nobreakspace> : "⤰" U2930 # RISING DIAGONAL CROSSING SOUTH EAST ARROW
-<Multi_key><slash><greater><less><backslash>                                               <space> : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
-<Multi_key><slash><greater><less><backslash>                                        <nobreakspace> : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
-<Multi_key><space><less><backslash><slash><greater>                                        <space> : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><space><less><backslash><slash><greater>                                 <nobreakspace> : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><nobreakspace><less><backslash><slash><greater>                                 <space> : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><nobreakspace><less><backslash><slash><greater>                          <nobreakspace> : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><slash><backslash><greater>                                                             : "⤰" U2930 # RISING DIAGONAL CROSSING SOUTH EAST ARROW
+<Multi_key><slash><greater><less>                                                                  : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
+<Multi_key><space><less><backslash>                                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><nobreakspace><less><backslash>                                                         : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><space><asciitilde><minus><greater>                                                     : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
 <Multi_key><nobreakspace><asciitilde><minus><greater>                                              : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
 #   In group 12 of "["                                                                             : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
