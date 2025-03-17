@@ -6873,7 +6873,7 @@
 <Multi_key><less><backslash><parenleft><minus>                                                     : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
 <Multi_key><backslash><greater><parenright><minus>                                                 : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
 <Multi_key><minus><parenleft><less>                                                                : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
-<Multi_key><bar><parenright><slash><greater>                                                       : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
+<Multi_key><slash><greater><parenright>                                                            : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
 <Multi_key><bar><parenleft>                                                                        : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
 <Multi_key><bar><parenright><backslash>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 <Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
