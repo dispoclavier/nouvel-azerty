@@ -18,9 +18,9 @@ Reconception, rectification et simplification des séquences de composition. [co
 
 * Composition :
 	* Rectifier la séquence de "⦬" U+29AC après la version 4.25.0. compose-1.yml [ac148a1](https://github.com/dispoclavier/nouvel-azerty/commit/ac148a1ba51cf8ef443309ab554879f59be3f35a)
-	* Mettre à jour la séquence de "⦽" U+29BD, adapter celles de "⧀" U+29C0. compose-1.yml [4c4e436](https://github.com/dispoclavier/nouvel-azerty/commit/4c4e436f1315d25e37ef3b995277f65e76021abb)
-	* Mettre à jour et simplifier les séquences de "⧪" U+29EA, "⧬" U+29EC, "⧭" U+29ED. compose-1.yml [2a7c850](https://github.com/dispoclavier/nouvel-azerty/commit/2a7c850d52db6defd80ad24f506d0b2fcc6ef6dc)
 	* Simplifier et documenter les séquences de "⤄" U+2904, "⤅" U+2905, "⤊" U+290A, "⤋" U+290B, "⤐" U+2910, "⤑" U+2911, "⤖" U+2916, "⤞" U+291E, "⤟" U+291F, "⤠" U+2920, "⤤" U+2924, "⤥" U+2925, "⤧" U+2927, "⤪" U+292A, "⤭" U+292D, "⤮" U+292E, "⤰" U+2930, "⤱" U+2931, "⤲" U+2932. compose-1.yml [006c816](https://github.com/dispoclavier/nouvel-azerty/commit/006c816e3241aaff1b6dd42b10c0cf5f2b6fd4bd)
+	* Mettre à jour et documenter la séquence de "⦽" U+29BD, adapter celles de "⧀" U+29C0. compose-1.yml [4c4e436](https://github.com/dispoclavier/nouvel-azerty/commit/4c4e436f1315d25e37ef3b995277f65e76021abb), [b9b806d](https://github.com/dispoclavier/nouvel-azerty/commit/b9b806dadd4ad35b3404e33c4d1996d6ef6b5e08)
+	* Mettre à jour et simplifier les séquences de "⧪" U+29EA, "⧬" U+29EC, "⧭" U+29ED. compose-1.yml [2a7c850](https://github.com/dispoclavier/nouvel-azerty/commit/2a7c850d52db6defd80ad24f506d0b2fcc6ef6dc)
 	* Simplifier et annoter les séquences de "⨝" U+2A1D, annoter celles de "⋈" U+22C8. compose-1.yml [b78b3fd](https://github.com/dispoclavier/nouvel-azerty/commit/b78b3fd58cd68ea1362bba084e94c4db01e84fb4), [d0656a5](https://github.com/dispoclavier/nouvel-azerty/commit/d0656a56832868b2ef1468b5477c683d3c7772ef)
 * Documentation :
 	* Ajouter un PDF documentant la touche morte groupe. linux-chromeos/readme.md [b70c9b7](https://github.com/dispoclavier/nouvel-azerty/commit/b70c9b7c26ca633276b98a19084d50a67ecfeaa1), windows/readme.md [0f70813](https://github.com/dispoclavier/nouvel-azerty/commit/0f708130443e4904770b614906f3e8614f57157a)
