@@ -2496,7 +2496,7 @@
 #
 #   The legacy sequence <Multi_key><percent><o> conflicts with "ᴑ" U1D11, so it
 #   cannot be supported. To compensate this loss, new sequences involving zeros
-#   are added, additionally to the support in groups 1 and 2 of "%".
+#   are added, additionally to the support in groups 11 and 12 of "%".
 #   See # # D02 percent
 #
 <Multi_key><0><percent>                                                                            : "‰" U2030 # PER MILLE SIGN
@@ -4685,7 +4685,7 @@
 #   U21AF is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=36
 #
-#   In group 4 of "%"                                                                              : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
+#   In group 3 of "%"                                                                              : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><N><greater>                                                                    <space> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><N><greater>                                                             <nobreakspace> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><less><minus><exclam>                                                           <space> : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
@@ -4864,6 +4864,7 @@
 #   In group 4 of "€" and "\""                                                                     : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                             <space> : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                      <nobreakspace> : "∃" U2203 # THERE EXISTS
+#   In group 4 of "%"                                                                              : "∄" U2204 # THERE DOES NOT EXIST
 #   In # # STROKE&GROUP_4                                                                          : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><E><slash>                                                                              : "∄" U2204 # THERE DOES NOT EXIST
 #   In group 2 of "}"                                                                              : "∅" U2205 # EMPTY SET
@@ -4955,15 +4956,15 @@
 <Multi_key><space><period><period>                                                  <nobreakspace> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><nobreakspace><period><period>                                                  <space> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><nobreakspace><period><period>                                           <nobreakspace> : "∙" U2219 # BULLET OPERATOR
-#   In group 2 of "\"                                                                              : "√" U221A # SQUARE ROOT
+#   In group 1 of "\"                                                                              : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                          <space> : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                   <nobreakspace> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                       <space> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                <nobreakspace> : "√" U221A # SQUARE ROOT
-#   In group 3 of "\"                                                                              : "∛" U221B # CUBE ROOT
+#   In group 2 of "\"                                                                              : "∛" U221B # CUBE ROOT
 <Multi_key><3><v>                                                                                  : "∛" U221B # CUBE ROOT
 <Multi_key><KP_3><v>                                                                               : "∛" U221B # CUBE ROOT
-#   In group 4 of "\"                                                                              : "∜" U221C # FOURTH ROOT
+#   In group 3 of "\"                                                                              : "∜" U221C # FOURTH ROOT
 <Multi_key><4><v>                                                                                  : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                               : "∜" U221C # FOURTH ROOT
 #   In group 10 of "{"                                                                             : "∝" U221D # PROPORTIONAL TO
@@ -5561,7 +5562,7 @@
 <Multi_key><x><period><minus><period>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><period><minus><period><x>                                                      <space> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><period><minus><period><x>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
-#   In group 10 of "/"                                                                             : "⋈" U22C8 # BOWTIE
+#   In group 12 of ">"                                                                             : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><slash><backslash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash>                                                         <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
@@ -5897,7 +5898,7 @@
 <Multi_key><slash><numbersign><underscore><slash>                                   <nobreakspace> : "▰" U25B0 # BLACK PARALLELOGRAM
 <Multi_key><slash><underscore><slash>                                                      <space> : "▱" U25B1 # WHITE PARALLELOGRAM
 <Multi_key><slash><underscore><slash>                                               <nobreakspace> : "▱" U25B1 # WHITE PARALLELOGRAM
-#   In group 11 of "/"                                                                             : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
+#   In group 10 of "<"                                                                             : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><numbersign><underscore><backslash>                                      <space> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><numbersign><underscore><backslash>                               <nobreakspace> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                                  <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
@@ -5922,7 +5923,7 @@
 <Multi_key><space><bar><slash><backslash>                                           <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><slash><backslash>                                           <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><slash><backslash>                                    <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
-#   In group 11 of ">"                                                                             : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
+#   In group 10 of ">"                                                                             : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash>                                      <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash>                               <nobreakspace> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><slash><backslash>                                      <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
@@ -6114,7 +6115,7 @@
 <Multi_key><nobreakspace><space><asterisk><numbersign>                              <nobreakspace> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                              <space> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                       <nobreakspace> : "★" U2605 # BLACK STAR
-#   In group 1 of "\"                                                                              : "☆" U2606 # WHITE STAR
+#   In group 1 of "%"                                                                              : "☆" U2606 # WHITE STAR
 <Multi_key><space><space><asterisk>                                                        <space> : "☆" U2606 # WHITE STAR
 <Multi_key><space><space><asterisk>                                                 <nobreakspace> : "☆" U2606 # WHITE STAR
 <Multi_key><nobreakspace><space><asterisk>                                                 <space> : "☆" U2606 # WHITE STAR
@@ -6566,10 +6567,10 @@
 <Multi_key><nobreakspace><less><backslash>                                                         : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><space><asciitilde><minus><greater>                                                     : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
 <Multi_key><nobreakspace><asciitilde><minus><greater>                                              : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
-#   In group 12 of "["                                                                             : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
+#   In group 6 of "'"                                                                              : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><space><minus><J><less>                                                                 : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><nobreakspace><minus><J><less>                                                          : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
-#   In group 12 of "]"                                                                             : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
+#   In group 5 of "'"                                                                              : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><space><minus><J><greater>                                                              : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><nobreakspace><minus><J><greater>                                                       : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><space><less><J><exclam>                                                                : "⤶" U2936 # ARROW POINTING DOWNWARDS THEN CURVING LEFTWARDS
