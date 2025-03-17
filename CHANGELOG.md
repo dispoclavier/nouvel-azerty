@@ -19,6 +19,7 @@ Reconception, rectification et simplification des séquences de composition. [co
 * Composition : Simplifier et documenter les séquences de "⤄" U2904, "⤅" U2905, "⤊" U290A, "⤋" U290B, "⤐" U2910, "⤑" U2911, "⤖" U2916, "⤞" U291E, "⤟" U291F, "⤠" U2920, "⤤" U2924, "⤥" U2925, "⤧" U2927, "⤪" U292A, "⤭" U292D, "⤮" U292E, "⤰" U2930, "⤱" U2931, "⤲" U2932. compose-1.yml [006c816](https://github.com/dispoclavier/nouvel-azerty/commit/006c816e3241aaff1b6dd42b10c0cf5f2b6fd4bd)
 * Documentation :
 	* Ajouter un PDF documentant la touche morte groupe. linux-chromeos/readme.md [b70c9b7](https://github.com/dispoclavier/nouvel-azerty/commit/b70c9b7c26ca633276b98a19084d50a67ecfeaa1), windows/readme.md [0f70813](https://github.com/dispoclavier/nouvel-azerty/commit/0f708130443e4904770b614906f3e8614f57157a)
+	* Mettre à jour les annotations suite à la version 4.25.0. compose-1.yml [26c6ea2](https://github.com/dispoclavier/nouvel-azerty/commit/26c6ea29b1aa65eb4176b267b29987ff3650f526), compose-3.yml [5899287](https://github.com/dispoclavier/nouvel-azerty/commit/5899287a877749eeaf9f463cde9d714ad4928b1d)
 	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml [75c4a7e](https://github.com/dispoclavier/nouvel-azerty/commit/75c4a7e3b1542f49a3a3ee2bbdf5f577c8026b62), [006c816](https://github.com/dispoclavier/nouvel-azerty/commit/006c816e3241aaff1b6dd42b10c0cf5f2b6fd4bd), compose-2.yml [f478020](https://github.com/dispoclavier/nouvel-azerty/commit/f47802067198ddd420fd7911e99945a96b3c7c85)
 
 ## 4.25.0 (2025-03-15)
