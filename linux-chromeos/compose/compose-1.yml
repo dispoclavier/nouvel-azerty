@@ -7265,6 +7265,7 @@
 #
 #   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
 #   sequence with a leading space for uniqueness.
+#   See #   Leading space
 #
 #   Slash and backslash may be hit in any order. This enables pressing them
 #   simultaneously and prevents screwing up these symbols, as opposed to making
