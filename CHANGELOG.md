@@ -16,7 +16,9 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-* Composition : Simplifier et documenter les séquences de "⤄" U2904, "⤅" U2905, "⤊" U290A, "⤋" U290B, "⤐" U2910, "⤑" U2911, "⤖" U2916, "⤞" U291E, "⤟" U291F, "⤠" U2920, "⤤" U2924, "⤥" U2925, "⤧" U2927, "⤪" U292A, "⤭" U292D, "⤮" U292E, "⤰" U2930, "⤱" U2931, "⤲" U2932. compose-1.yml [006c816](https://github.com/dispoclavier/nouvel-azerty/commit/006c816e3241aaff1b6dd42b10c0cf5f2b6fd4bd)
+* Composition :
+	* Rectifier la séquence de "⦬" U29AC après la version 4.25.0. compose-1.yml [ac148a1](https://github.com/dispoclavier/nouvel-azerty/commit/ac148a1ba51cf8ef443309ab554879f59be3f35a)
+	* Simplifier et documenter les séquences de "⤄" U2904, "⤅" U2905, "⤊" U290A, "⤋" U290B, "⤐" U2910, "⤑" U2911, "⤖" U2916, "⤞" U291E, "⤟" U291F, "⤠" U2920, "⤤" U2924, "⤥" U2925, "⤧" U2927, "⤪" U292A, "⤭" U292D, "⤮" U292E, "⤰" U2930, "⤱" U2931, "⤲" U2932. compose-1.yml [006c816](https://github.com/dispoclavier/nouvel-azerty/commit/006c816e3241aaff1b6dd42b10c0cf5f2b6fd4bd)
 * Documentation :
 	* Ajouter un PDF documentant la touche morte groupe. linux-chromeos/readme.md [b70c9b7](https://github.com/dispoclavier/nouvel-azerty/commit/b70c9b7c26ca633276b98a19084d50a67ecfeaa1), windows/readme.md [0f70813](https://github.com/dispoclavier/nouvel-azerty/commit/0f708130443e4904770b614906f3e8614f57157a)
 	* Mettre à jour les annotations suite à la version 4.25.0. compose-1.yml [26c6ea2](https://github.com/dispoclavier/nouvel-azerty/commit/26c6ea29b1aa65eb4176b267b29987ff3650f526), compose-3.yml [5899287](https://github.com/dispoclavier/nouvel-azerty/commit/5899287a877749eeaf9f463cde9d714ad4928b1d)
