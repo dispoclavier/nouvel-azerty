@@ -6911,7 +6911,7 @@
 <Multi_key><nobreakspace><O><percent>                                               <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><O><colon><minus>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><asciicircum><bar>                                                                   : "⦽" U29BD # UP ARROW THROUGH CIRCLE
+<Multi_key><O><less><exclam>                                                                       : "⦽" U29BD # UP ARROW THROUGH CIRCLE
 <Multi_key><space><O><o>                                                                   <space> : "⦾" U29BE # CIRCLED WHITE BULLET
 <Multi_key><space><O><o>                                                            <nobreakspace> : "⦾" U29BE # CIRCLED WHITE BULLET
 <Multi_key><nobreakspace><O><o>                                                            <space> : "⦾" U29BE # CIRCLED WHITE BULLET
@@ -6920,7 +6920,8 @@
 <Multi_key><space><O><period>                                                       <nobreakspace> : "⦿" U29BF # CIRCLED BULLET
 <Multi_key><nobreakspace><O><period>                                                       <space> : "⦿" U29BF # CIRCLED BULLET
 <Multi_key><nobreakspace><O><period>                                                <nobreakspace> : "⦿" U29BF # CIRCLED BULLET
-<Multi_key><O><less>                                                                               : "⧀" U29C0 # CIRCLED LESS-THAN
+<Multi_key><O><less>                                                                       <space> : "⧀" U29C0 # CIRCLED LESS-THAN
+<Multi_key><O><less>                                                                <nobreakspace> : "⧀" U29C0 # CIRCLED LESS-THAN
 <Multi_key><O><greater>                                                                            : "⧁" U29C1 # CIRCLED GREATER-THAN
 <Multi_key><space><space><O><o>                                                            <space> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
 <Multi_key><space><space><O><o>                                                     <nobreakspace> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
