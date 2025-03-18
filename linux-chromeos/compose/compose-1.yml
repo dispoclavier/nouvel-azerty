@@ -7268,7 +7268,7 @@
 #   sequence with a leading space for uniqueness.
 #   See #   Leading space
 #
-#   Slash and backslash may be hit in any order. This enables pressing them
+#   Slash and backslash can be hit in any order. This enables pressing them
 #   simultaneously and prevents screwing up these symbols, as opposed to making
 #   slash-backslash a shortcut for JOIN, reserving backslash-slash for BOWTIE,
 #   under the rule that parsing starts at the upper left corner.
