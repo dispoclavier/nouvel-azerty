@@ -6569,8 +6569,7 @@
 <Multi_key><slash><greater><less>                                                                  : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
 <Multi_key><space><less><backslash>                                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><less><backslash>                                                         : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
-<Multi_key><space><asciitilde><minus><greater>                                                     : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
-<Multi_key><nobreakspace><asciitilde><minus><greater>                                              : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
+<Multi_key><asciitilde><minus><greater>                                                            : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
 #   In group 6 of "'"                                                                              : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><space><minus><J><less>                                                                 : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><nobreakspace><minus><J><less>                                                          : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
@@ -6703,9 +6702,10 @@
 <Multi_key><space><equal><minus><greater>                                           <nobreakspace> : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
 <Multi_key><nobreakspace><equal><minus><greater>                                           <space> : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
 <Multi_key><nobreakspace><equal><minus><greater>                                    <nobreakspace> : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
-<Multi_key><asciitilde><minus><greater>                                                            : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-<Multi_key><less><minus><asciitilde>                                                       <space> : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
-<Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
+<Multi_key><space><asciitilde><minus>                                                              : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><nobreakspace><asciitilde><minus>                                                       : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><space><less><minus><asciitilde>                                                        : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
+<Multi_key><nobreakspace><less><minus><asciitilde>                                                 : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde>                                                    <space> : "⥴" U2974 # RIGHTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde>                                             <nobreakspace> : "⥴" U2974 # RIGHTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde><asciitilde>                                        <space> : "⥵" U2975 # RIGHTWARDS ARROW ABOVE ALMOST EQUAL TO
@@ -8142,8 +8142,8 @@
 <Multi_key><less><minus><x><minus>                                                         <space> : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 <Multi_key><less><minus><x><minus>                                                  <nobreakspace> : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 #   Mirror of U2933.
-<Multi_key><less><minus><asciicircum>                                                      <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
-<Multi_key><less><minus><asciicircum>                                               <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
+<Multi_key><less><minus><asciitilde>                                                       <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
+<Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 #   Mirrors of U2971, U2972, U2975, U2977, U297A.
 <Multi_key><equal><less><minus>                                                            <space> : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><equal><less><minus>                                                     <nobreakspace> : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
