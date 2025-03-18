@@ -6599,14 +6599,14 @@
 <Multi_key><o><less>                                                                <nobreakspace> : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
 <Multi_key><o><greater>                                                                    <space> : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
 <Multi_key><o><greater>                                                             <nobreakspace> : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
-<Multi_key><minus><minus><greater><less><minus>                                            <space> : "⥂" U2942 # RIGHTWARDS ARROW ABOVE SHORT LEFTWARDS ARROW
-<Multi_key><minus><minus><greater><less><minus>                                     <nobreakspace> : "⥂" U2942 # RIGHTWARDS ARROW ABOVE SHORT LEFTWARDS ARROW
-<Multi_key><space><less><minus><minus><minus><greater>                                     <space> : "⥃" U2943 # LEFTWARDS ARROW ABOVE SHORT RIGHTWARDS ARROW
-<Multi_key><space><less><minus><minus><minus><greater>                              <nobreakspace> : "⥃" U2943 # LEFTWARDS ARROW ABOVE SHORT RIGHTWARDS ARROW
-<Multi_key><nobreakspace><less><minus><minus><minus><greater>                              <space> : "⥃" U2943 # LEFTWARDS ARROW ABOVE SHORT RIGHTWARDS ARROW
-<Multi_key><nobreakspace><less><minus><minus><minus><greater>                       <nobreakspace> : "⥃" U2943 # LEFTWARDS ARROW ABOVE SHORT RIGHTWARDS ARROW
-<Multi_key><minus><greater><less><minus><minus>                                            <space> : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
-<Multi_key><minus><greater><less><minus><minus>                                     <nobreakspace> : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
+#
+#   In "⥂" U2942.."⥄" U2944 featuring a short arrow below or above, this short
+#   stem translates to period, so as to keep the normal-length stem translating
+#   to single minus.
+#
+<Multi_key><minus><greater><less><period>                                                          : "⥂" U2942 # RIGHTWARDS ARROW ABOVE SHORT LEFTWARDS ARROW
+<Multi_key><less><minus><period>                                                                   : "⥃" U2943 # LEFTWARDS ARROW ABOVE SHORT RIGHTWARDS ARROW
+<Multi_key><period><greater><less>                                                                 : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
 <Multi_key><minus><greater><plus>                                                                  : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><plus>                                                                     : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
 #
