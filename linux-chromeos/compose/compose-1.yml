@@ -4832,7 +4832,8 @@
 <Multi_key><minus><bar><minus><greater>                                             <nobreakspace> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus><greater>                                              <space> : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus><greater>                                       <nobreakspace> : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
-<Multi_key><less><bar><bar><minus>                                                                 : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><bar><bar><minus>                                                         <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><bar><bar><minus>                                                  <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus>                                                  <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus>                                           <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><greater>                                                      <space> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
@@ -8102,8 +8103,12 @@
 #   Mirror of U27FF.
 <Multi_key><less><asciitilde><asciitilde><asciitilde>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
 #   Mirrors of U2900, U2901.
+<Multi_key><less><less><bar><minus>                                                        <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
+<Multi_key><less><less><bar><minus>                                                 <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                                 <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                          <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
+<Multi_key><less><less><bar><bar><minus>                                                   <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><less><bar><bar><minus>                                            <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                            <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                     <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 #   Mirror of U2905.
@@ -8123,14 +8128,15 @@
 <Multi_key><less><period><period><period>                                                  <space> : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
 <Multi_key><less><period><period><period>                                           <nobreakspace> : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
 #   Mirrors of U2914..U2918.
-<Multi_key><less><minus><bar><minus><less>                                                 <space> : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
-<Multi_key><less><minus><bar><minus><less>                                          <nobreakspace> : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
-<Multi_key><less><minus><bar><bar><minus><less>                                            <space> : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><minus><bar><bar><minus><less>                                     <nobreakspace> : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><bar><minus><less>                                                                : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><less><minus><bar><minus><less>                                                         : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><less><bar><bar><minus><less>                                                           : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><minus><bar><bar><minus><less>                                                    : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><less>                                                       <space> : "⬻" U2B3B # LEFTWARDS TWO-HEADED ARROW WITH TAIL
 <Multi_key><less><less><minus><less>                                                <nobreakspace> : "⬻" U2B3B # LEFTWARDS TWO-HEADED ARROW WITH TAIL
-<Multi_key><less><less><minus><bar><minus><less>                                           <space> : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
-<Multi_key><less><less><minus><bar><minus><less>                                    <nobreakspace> : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><less><less><bar><minus><less>                                                          : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><less><less><minus><bar><minus><less>                                                   : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
+<Multi_key><less><less><bar><bar><minus><less>                                                     : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus><less>                                              : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 #   Mirror of U2947.
 <Multi_key><less><minus><x><minus>                                                         <space> : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
