@@ -3912,6 +3912,11 @@
 #   have both the streamlined sequences for convenience, and the long sequences
 #   for intuitivity.
 #
+#   Sequences streamlined by cropping non-critical input besides trailing space
+#   are commented out for the purpose of keeping track, in case they need to be
+#   restored to prevent conflicts with new sequences.
+#   
+#
 #
 #   Parsing order
 #
@@ -4277,7 +4282,9 @@
 #
 # # Character tie
 #
+#   In group 12 of "("                                                                             : "⁀" U2040 # CHARACTER TIE
 #   In group 4 of "J"                                                                              : "⁀" U2040 # CHARACTER TIE
+#   In #*# TURNED                                                                                  : "⁀" U2040 # CHARACTER TIE
 <Multi_key><space><parenleft>                                                              <space> : "⁀" U2040 # CHARACTER TIE
 <Multi_key><space><parenleft>                                                       <nobreakspace> : "⁀" U2040 # CHARACTER TIE
 #
@@ -4287,7 +4294,7 @@
 #   On the associated keyboard layouts, "⁄" U2044 FRACTION SLASH is on live key
 #   B09, level 7, in ASCII mode also on level 6.
 #   See dispocla.cpp ## Format controls
-#   See dispocla.cpp <AC04>
+#   See dispocla.cpp <AB09>
 #   See # # Vulgar fractions
 #
 #   Also in dead_stroke followed by 4.
@@ -4408,6 +4415,7 @@
 <Multi_key><nobreakspace><ampersand><bar>                                                  <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><nobreakspace><ampersand><bar>                                           <nobreakspace> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><ampersand><less><parenleft>                                                            : "⃔" U20D4 # COMBINING ANTICLOCKWISE ARROW ABOVE
+#<Multi_key><ampersand><parenleft><greater>
 <Multi_key><ampersand><parenleft>                                                                  : "⃕" U20D5 # COMBINING CLOCKWISE ARROW ABOVE
 <Multi_key><ampersand><less><minus>                                                        <space> : "⃖" U20D6 # COMBINING LEFT ARROW ABOVE
 <Multi_key><ampersand><less><minus>                                                 <nobreakspace> : "⃖" U20D6 # COMBINING LEFT ARROW ABOVE
@@ -6610,8 +6618,8 @@
 <Multi_key><minus><greater><plus>                                                                  : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><plus>                                                                     : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
 #
-#   This sequence for U2947 with a leading minus and following "x" is possible
-#   because there is no barred x.
+#   This sequence for "⥇" U2947 with a leading minus and following "x" is possible
+#   because there is no barred x. — The mirror of U2947 is "⬾" U2B3E.
 #   See #*# BAR
 #
 <Multi_key><minus><x><minus><greater>                                                      <space> : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
