@@ -5918,8 +5918,8 @@
 <Multi_key><slash><underscore><backslash>                                                  <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                           <nobreakspace> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <Multi_key><asciicircum><numbersign><underscore>                                                   : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
-<Multi_key><asciicircum><underscore>                                                       <space> : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
-<Multi_key><asciicircum><underscore>                                                <nobreakspace> : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><space><asciicircum><underscore>                                                        : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><asciicircum><underscore>                                                 : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 #   In group 5 of ">"                                                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign><backslash><slash>                                      <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign><backslash><slash>                               <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
