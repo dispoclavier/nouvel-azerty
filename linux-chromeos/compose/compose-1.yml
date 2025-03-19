@@ -4300,15 +4300,17 @@
 #   Also in dead_stroke followed by 4.
 #   See #*# STROKE
 #
+#   Also in the superscript small cap dead key followed by any of the four
+#   spaces.
+#   See # # SUPERSCRIPT&SUBSCRIPT
+#
 #   Additionally, "⁄" U2044 FRACTION SLASH is supported by multikey nearly the
 #   same way as "⧵" U29F5 REVERSE SOLIDUS OPERATOR, while the letter slash
 #   sequence is case insensitive. and none is space terminated.
 #
-#   A workaround for defective renderers is using superscript digits for
-#   numerators, and subscript digits for denominators, with the negative
-#   kerning around FRACTION SLASH independently of OpenType support. The
-#   result is acceptable if super- and subscripts align between baseline
-#   and caps height.
+#   As an alternative to auto-formatting, custom vulgar fractions can also be
+#   hard-coded using preformatted superscript digits for the numerator, and
+#   subscript digits for the denominator, with the negative kerning of U2044.
 #
 <Multi_key><f><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
 <Multi_key><F><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
