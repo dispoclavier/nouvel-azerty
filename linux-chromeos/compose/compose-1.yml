@@ -3432,23 +3432,25 @@
 # # Heart emoji
 #
 #   Due to its design, the traditional heart multikey sequence is expected to
-#   output "❤" U2764 HEAVY BLACK HEART, France’s most-used (red) heart emoji.
+#   output "❤" U2764 HEAVY BLACK HEART, France’s (red) most-used heart emoji.
 #   It is supported as a dead_circumflex multikey equivalent with digit 3 as a
-#   base character: <Multi_key><less><3>.
+#   base character:
+#   <Multi_key><less><3>.
 #   See #*# CIRCUMFLEX
 #
-#   This however disrupts en_US.UTF-8/Compose supporting the least frequent BMP
-#   heart emoji, "♥" U2665 BLACK HEART SUIT, in the series U2660..U2667. This
-#   14th-ranking emoji has its sequences distinguished by a leading space (as
-#   if it were a math symbol), but in the first place, it is supported by an
-#   alternative sequence still based on shape-driven mnemonics:
+#   This however disrupts en_US.UTF-8/Compose supporting the least frequent
+#   heart emoji, "♥" U2665 BLACK HEART SUIT, the 14th-ranking emoji, in the
+#   suit series U2660..U2667. This is supported by an alternative sequence
+#   still based on shape-driven mnemonics:
 #   <Multi_key><less><8>.
 #   See #*# CIRCUMFLEX
 #
-<Multi_key><space><less><3>                                                                        : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><space><less><KP_3>                                                                     : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><nobreakspace><less><3>                                                                 : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><nobreakspace><less><KP_3>                                                              : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+#   Be it the one or the other, due to the shape of digit 3, hearts are parsed
+#   from the bottom to the top, unlike faces of smilies parsed from the top to
+#   the bottom: ":)" or ":-)". By contrast, "(-:" would be an upside-down face.
+#   The fix is to use digit 8 instead, as digti 8 is usable both ways. This is
+#   the sequence used for "♡" U2661 in the math symbols.
+#   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #
 # # Scissors
@@ -3915,7 +3917,6 @@
 #   Sequences streamlined by cropping non-critical input besides trailing space
 #   are commented out for the purpose of keeping track, in case they need to be
 #   restored to prevent conflicts with new sequences.
-#   
 #
 #
 #   Parsing order
@@ -4025,8 +4026,12 @@
 #
 #   Consistently, an overscore as in "⊼" U22BC and "⊽" U22BD translates to a
 #   leading underscore in the sequence, while for "⊻" U22BB, the underscore is
-#   in trailing position, as vertically stacked symbols are translated reading
-#   from top to bottom.
+#   in trailing position, as vertically stacked symbols are parsed from top to
+#   bottom.
+#
+#   However, for intuitivity, underscore is used in alternative sequences for
+#   combining arrows and harpoons below "⃬" U20EC.."⃯" U20EF, as opposed to the
+#   same above where only minus is used for the stem.
 #
 #   The long dash in "⥪" U296A, "⥫" U296B, "⥬" U296C, "⥭" U296D is considered
 #   as an under- or overscore rather than a barbless harpoon, due to the effect
@@ -4417,7 +4422,7 @@
 <Multi_key><nobreakspace><ampersand><bar>                                                  <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><nobreakspace><ampersand><bar>                                           <nobreakspace> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><ampersand><less><parenleft>                                                            : "⃔" U20D4 # COMBINING ANTICLOCKWISE ARROW ABOVE
-#Multi_key><ampersand><parenleft><greater>
+#Multi_key><ampersand><parenleft><greater>                                                         : "⃕" U20D5 # COMBINING CLOCKWISE ARROW ABOVE
 <Multi_key><ampersand><parenleft>                                                                  : "⃕" U20D5 # COMBINING CLOCKWISE ARROW ABOVE
 <Multi_key><ampersand><less><minus>                                                        <space> : "⃖" U20D6 # COMBINING LEFT ARROW ABOVE
 <Multi_key><ampersand><less><minus>                                                 <nobreakspace> : "⃖" U20D6 # COMBINING LEFT ARROW ABOVE
@@ -4429,10 +4434,12 @@
 <Multi_key><ampersand><o><less>                                                                    : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><percent>                                                        : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><backslash>                                                      : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+#Multi_key><ampersand><3><period>                                                                  : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><3>                                                                          : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><KP_3>                                                                       : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><period><period><period>                                             <space> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><period><period><period>                                      <nobreakspace> : "⃛" U20DB # COMBINING THREE DOTS ABOVE
+#Multi_key><ampersand><4><period>                                                                  : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><4>                                                                          : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><KP_4>                                                                       : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><period><period><period><period>                                             : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
@@ -4444,12 +4451,22 @@
 <Multi_key><ampersand><minus><rightsinglequotemark>                                                : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><underscore><apostrophe>                                                     : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><underscore><rightsinglequotemark>                                           : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+#Multi_key><ampersand><grave><minus>                                                               : "⃭" U20ED # COMBINING LEFTWARDS HARPOON WITH BARB DOWNWARDS
+#Multi_key><ampersand><grave><underscore>                                                          : "⃭" U20ED # COMBINING LEFTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><grave>                                                                      : "⃭" U20ED # COMBINING LEFTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><less><underscore>                                                           : "⃮" U20EE # COMBINING LEFT ARROW BELOW
+<Multi_key><ampersand><space><less><minus>                                                         : "⃮" U20EE # COMBINING LEFT ARROW BELOW
+<Multi_key><ampersand><nobreakspace><less><minus>                                                  : "⃮" U20EE # COMBINING LEFT ARROW BELOW
 <Multi_key><ampersand><underscore><greater>                                                        : "⃯" U20EF # COMBINING RIGHT ARROW BELOW
+<Multi_key><ampersand><space><minus><greater>                                                      : "⃯" U20EF # COMBINING RIGHT ARROW BELOW
+<Multi_key><ampersand><nobreakspace><minus><greater>                                               : "⃯" U20EF # COMBINING RIGHT ARROW BELOW
 #
 #
 # # Letterlike symbols in block U2100 used in mathematics
+#
+#   Sequences for double-struck or outlined symbols use duplication, script is
+#   a trailing asciitilde, blackletter is numbersign, Hebrew gets a trailing
+#   backslash, Greek gets a trailing at sign, and italic gets a trailing slash.
 #
 #   Other alphanumeric mathematical symbols are supported in groups 6 to 10,
 #   including some of these that have extra signatures here for convenience.
@@ -4790,7 +4807,7 @@
 <Multi_key><less><exclam><equal>                                                                   : "⇑" U21D1 # UPWARDS DOUBLE ARROW
 <Multi_key><equal><greater>                                                                <space> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
 <Multi_key><equal><greater>                                                         <nobreakspace> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-<Multi_key><equal><exclam><greater>                                                                : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><exclam><greater><equal>                                                                : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
 <Multi_key><less><equal><greater>                                                                  : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
 <Multi_key><less><exclam><greater><equal>                                                          : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><less><backslash><equal>                                                                : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
@@ -4915,13 +4932,16 @@
 <Multi_key><p><comma>                                                               <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><comma>                                                           <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><comma>                                                    <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
-#   End of proof
+#   End of proof.
+#Multi_key><e><o><p>                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><e><o>                                                                                  : "∎" U220E # END OF PROOF
 <Multi_key><E><O>                                                                                  : "∎" U220E # END OF PROOF
-#   Quod erat demonstrandum, Q.E.D.
+#   Quod erat demonstrandum.
+#Multi_key><q><e><d>                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><q><e>                                                                                  : "∎" U220E # END OF PROOF
 <Multi_key><Q><E>                                                                                  : "∎" U220E # END OF PROOF
-#   Ce qu’il fallait démontrer, C.Q.F.D.
+#   Ce qu’il fallait démontrer.
+#Multi_key><c><q><f><d>                                                                            : "∎" U220E # END OF PROOF
 <Multi_key><c><q>                                                                                  : "∎" U220E # END OF PROOF
 <Multi_key><C><Q>                                                                                  : "∎" U220E # END OF PROOF
 #   In group 3 of "&"                                                                              : "∏" U220F # N-ARY PRODUCT
@@ -5075,8 +5095,7 @@
 #   In # # RING_ABOVE&CURRENCY                                                                     : "∯" U222F # SURFACE INTEGRAL
 #   In # # RING_ABOVE&GROUP_2                                                                      : "∯" U222F # SURFACE INTEGRAL
 <Multi_key><2><s><o>                                                                               : "∯" U222F # SURFACE INTEGRAL
-<Multi_key><KP_2><s><o>                                                                    <space> : "∯" U222F # SURFACE INTEGRAL
-<Multi_key><KP_2><s><o>                                                             <nobreakspace> : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><KP_2><s><o>                                                                            : "∯" U222F # SURFACE INTEGRAL
 #   In #*# CURRENCY                                                                                : "∰" U2230 # VOLUME INTEGRAL
 #   In # # RING_ABOVE&CURRENCY                                                                     : "∰" U2230 # VOLUME INTEGRAL
 #   In # # RING_ABOVE&GROUP_3                                                                      : "∰" U2230 # VOLUME INTEGRAL
@@ -5486,6 +5505,7 @@
 <Multi_key><bar><minus><minus><slash>                                                      <space> : "⊬" U22AC # DOES NOT PROVE
 <Multi_key><bar><minus><minus><slash>                                               <nobreakspace> : "⊬" U22AC # DOES NOT PROVE
 <Multi_key><bar><equal><slash>                                                                     : "⊭" U22AD # NOT TRUE
+#   Optional sequence consistent with "⊨" U22A8 as opposed to "⊧" U22A7.
 <Multi_key><bar><equal><equal><slash>                                                              : "⊭" U22AD # NOT TRUE
 <Multi_key><bar><bar><minus><slash>                                                                : "⊮" U22AE # DOES NOT FORCE
 <Multi_key><bar><bar><equal><slash>                                                                : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
@@ -5576,6 +5596,14 @@
 <Multi_key><x><period><minus><period>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><period><minus><period><x>                                                      <space> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><period><minus><period><x>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
+#
+#   For "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN, slash and backslash can be hit in
+#   any order. This enables pressing them simultaneously and prevents screwing
+#   up these symbols, as opposed to making slash-backslash a shortcut for JOIN,
+#   reserving backslash-slash for BOWTIE, under the rule that parsing starts at
+#   the upper left corner.
+#   See #   Parsing order
+#
 #   In group 12 of ">"                                                                             : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><slash><backslash><bar>                                                            : "⋈" U22C8 # BOWTIE
@@ -5608,6 +5636,8 @@
 <Multi_key><KP_2><c>                                                                <nobreakspace> : "⋐" U22D0 # DOUBLE SUBSET
 <Multi_key><2><b>                                                                                  : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><KP_2><b>                                                                               : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><2><c><c>                                                                               : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><KP_2><c><c>                                                                            : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><2><c><backslash>                                                                       : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><KP_2><c><backslash>                                                                    : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><2><n>                                                                          <space> : "⋒" U22D2 # DOUBLE INTERSECTION
@@ -5710,15 +5740,14 @@
 <Multi_key><less><bar><underscore><slash>                                           <nobreakspace> : "⋬" U22EC # NOT NORMAL SUBGROUP OF OR EQUAL TO
 <Multi_key><bar><greater><slash><underscore>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
 <Multi_key><bar><greater><underscore><slash>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><greater><bar><slash><underscore>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
-<Multi_key><greater><bar><underscore><slash>                                                       : "⋭" U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
 #
 #   Consistently with arrows, verticality of ellipsis translates to exclam in
-#   the sequence. Space termination is skipped for consistency and as needless.
+#   the sequence. For intuitivity, however, bar is supported alongside.
 #   See # # Ellipses and leaders
 #
 #   In group 3 of ":"                                                                              : "⋮" U22EE # VERTICAL ELLIPSIS
 <Multi_key><period><period><period><exclam>                                                        : "⋮" U22EE # VERTICAL ELLIPSIS
+<Multi_key><period><period><period><bar>                                                           : "⋮" U22EE # VERTICAL ELLIPSIS
 #   In group 5 of ":"                                                                              : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key><period><period><period><minus>                                                         : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 #   In group 6 of ":"                                                                              : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
@@ -5773,7 +5802,7 @@
 <Multi_key><space><underscore><e><backslash>                                               <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><e><backslash>                                        <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><backslash>                                        <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
-<Multi_key><nobreakspace><underscore><e><backslash>                                 <nobrea        : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><backslash>                                 <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><p><comma>                                                           : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><p><comma>                                                    : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><e><backslash><comma>                                                : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
@@ -5917,9 +5946,18 @@
 <Multi_key><slash><numbersign><underscore><backslash>                               <nobreakspace> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                                  <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                           <nobreakspace> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
+#
+#   For intuitivity and efficiency, small up-pointing triangles translate to
+#   asciicircum-underscore instead of the usual slash-underscore-backslash.
+#   However, for consistency, long sequences are supported alongside.
+#
 <Multi_key><asciicircum><numbersign><underscore>                                                   : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+<Multi_key><space><slash><numbersign><underscore><backslash>                                       : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><slash><numbersign><underscore><backslash>                                : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><space><asciicircum><underscore>                                                        : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><asciicircum><underscore>                                                 : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><space><slash><underscore><backslash>                                                   : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><slash><underscore><backslash>                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 #   In group 5 of ">"                                                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign><backslash><slash>                                      <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign><backslash><slash>                               <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
@@ -6035,6 +6073,7 @@
 #   U25E5 is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=26
 #
+#Multi_key><underscore><backslash><numbersign><bar>                                                : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
 <Multi_key><underscore><backslash><numbersign>                                                     : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
 <Multi_key><backslash><underscore><numbersign>                                                     : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
 <Multi_key><bracketleft><numbersign><bar><bracketright>                                    <space> : "◧" U25E7 # SQUARE WITH LEFT HALF BLACK
@@ -6144,8 +6183,8 @@
 #   In group 4 of "|"                                                                              : "♂" U2642 # MALE SIGN
 <Multi_key><o><slash><greater>                                                                     : "♂" U2642 # MALE SIGN
 #   In group 5 of ","                                                                              : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><8><greater><numbersign>                                                                : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><KP_8><greater><numbersign>                                                             : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><space><less><3><numbersign>                                                            : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><nobreakspace><less><3><numbersign>                                                     : "♠" U2660 # BLACK SPADE SUIT
 #   In # # CIRCUMFLEX&GROUP_2                                                                      : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><8><greater>                                                                    <space> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><8><greater>                                                             <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
@@ -6155,8 +6194,10 @@
 <Multi_key><space><space><less><greater>                                                   <space> : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><space><space><less><greater>                                            <nobreakspace> : "♢" U2662 # WHITE DIAMOND SUIT
 #   In group 3 of ","                                                                              : "♣" U2663 # BLACK CLUB SUIT
-<Multi_key><8><o><numbersign>                                                                      : "♣" U2663 # BLACK CLUB SUIT
-<Multi_key><KP_8><o><numbersign>                                                                   : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><space><o><8><numbersign>                                                               : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><space><o><KP_8><numbersign>                                                            : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><nobreakspace><o><8><numbersign>                                                        : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><nobreakspace><o><KP_8><numbersign>                                                     : "♣" U2663 # BLACK CLUB SUIT
 #   In group 11 of = on B                                                                          : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                                      <space> : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                               <nobreakspace> : "♭" U266D # MUSIC FLAT SIGN
@@ -6526,6 +6567,9 @@
 #   the first gap.
 #   See #   Streamlining
 #
+#   The following commented-out sequence is provided only for reference and is
+#   not actionable, as it exceeds the maximum input of 9 keysyms.
+#Multi_key><space><greater><minus><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><space><greater><minus><0>                                                              : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><nobreakspace><greater><minus><0>                                                       : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><space><greater><minus><KP_0>                                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
@@ -6885,9 +6929,12 @@
 <Multi_key><minus><parenright><slash><greater>                                                     : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
 <Multi_key><less><backslash><parenleft><minus>                                                     : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
 <Multi_key><backslash><greater><parenright><minus>                                                 : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
+#Multi_key><minus><parenleft><less><slash>                                                         : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
 <Multi_key><minus><parenleft><less>                                                                : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
 <Multi_key><slash><greater><parenright>                                                            : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
+#Multi_key><bar><parenleft><less><backslash>                                                       : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
 <Multi_key><bar><parenleft>                                                                        : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
+#Multi_key><bar><parenright><backslash><greater>                                                   : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 <Multi_key><bar><parenright><backslash>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 <Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><O><backslash>                                                                  <space> : "⦰" U29B0 # REVERSED EMPTY SET
@@ -7274,14 +7321,8 @@
 <Multi_key><s><underscore>                                                          <nobreakspace> : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
 #
 #   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
-#   sequence with a leading space for uniqueness.
+#   sequences with a leading space for uniqueness.
 #   See #   Leading space
-#
-#   Slash and backslash can be hit in any order. This enables pressing them
-#   simultaneously and prevents screwing up these symbols, as opposed to making
-#   slash-backslash a shortcut for JOIN, reserving backslash-slash for BOWTIE,
-#   under the rule that parsing starts at the upper left corner.
-#   See #   Parsing order
 #
 <Multi_key><space><bar><backslash><slash><bar>                                                     : "⨝" U2A1D # JOIN
 <Multi_key><nobreakspace><bar><backslash><slash><bar>                                              : "⨝" U2A1D # JOIN
@@ -8159,12 +8200,12 @@
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                                <space> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                         <nobreakspace> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 #
-#   Among the three greater-minus-greater "↣" U21A3, "⥸" U2978, "⭃" U2B43 and
+#   Among the three greater-minus-greater: "↣" U21A3, "⥸" U2978, "⭃" U2B43, and
 #   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none stands out enough
-#   to deserve the most straightforward access.
+#   to get the most straightforward access.
 #
 #   Mirror of U2977.
-#Multi_key><space><space><greater><minus><greater>
+#Multi_key><space><space><greater><minus><greater>                                                 : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><space><space><greater><minus>                                                          : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><nobreakspace><space><greater><minus>                                                   : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><nobreakspace><nobreakspace><greater><minus>                                            : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
