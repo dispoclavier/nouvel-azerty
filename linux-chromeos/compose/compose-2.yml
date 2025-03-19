@@ -3104,10 +3104,27 @@
 #   The fraction slash is supported alongside as a workaround for incomplete
 #   keyboard layouts lacking a live key position for U2044. The superscript or
 #   subscript dead keys alone cannot include a slash as a base character due to
-#   numerous conflicts with math symbols. Yet another input method is included
-#   in the slash-shaped set supported by dead_stroke, in slot 4.
+#   numerous conflicts with math symbols. Other input methods are included in
+#   the slash-shaped set supported by dead_stroke, in slot 4, and in multikey.
 #   See #*# STROKE
+#   See # # Fraction slash
 #
+<UEFD1><UEFD2>                                                                             <space> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><asciicircum><underscore>                                                       <space> : "⁄" U2044 # FRACTION SLASH
+<UEFD2><UEFD1>                                                                             <space> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><underscore><asciicircum>                                                       <space> : "⁄" U2044 # FRACTION SLASH
+<UEFD1><UEFD2>                                                                             <U200B> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><asciicircum><underscore>                                                       <U200B> : "⁄" U2044 # FRACTION SLASH
+<UEFD2><UEFD1>                                                                             <U200B> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><underscore><asciicircum>                                                       <U200B> : "⁄" U2044 # FRACTION SLASH
+<UEFD1><UEFD2>                                                                      <nobreakspace> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><asciicircum><underscore>                                                <nobreakspace> : "⁄" U2044 # FRACTION SLASH
+<UEFD2><UEFD1>                                                                      <nobreakspace> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><underscore><asciicircum>                                                <nobreakspace> : "⁄" U2044 # FRACTION SLASH
+<UEFD1><UEFD2>                                                                             <U202F> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><asciicircum><underscore>                                                       <U202F> : "⁄" U2044 # FRACTION SLASH
+<UEFD2><UEFD1>                                                                             <U202F> : "⁄" U2044 # FRACTION SLASH
+<Multi_key><underscore><asciicircum>                                                       <U202F> : "⁄" U2044 # FRACTION SLASH
 <UEFD1><UEFD2>                                                                             <slash> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><asciicircum><underscore>                                                       <slash> : "⁄" U2044 # FRACTION SLASH
 <UEFD2><UEFD1>                                                                             <slash> : "⁄" U2044 # FRACTION SLASH
