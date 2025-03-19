@@ -4417,7 +4417,7 @@
 <Multi_key><nobreakspace><ampersand><bar>                                                  <space> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><nobreakspace><ampersand><bar>                                           <nobreakspace> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
 <Multi_key><ampersand><less><parenleft>                                                            : "⃔" U20D4 # COMBINING ANTICLOCKWISE ARROW ABOVE
-#<Multi_key><ampersand><parenleft><greater>
+#Multi_key><ampersand><parenleft><greater>
 <Multi_key><ampersand><parenleft>                                                                  : "⃕" U20D5 # COMBINING CLOCKWISE ARROW ABOVE
 <Multi_key><ampersand><less><minus>                                                        <space> : "⃖" U20D6 # COMBINING LEFT ARROW ABOVE
 <Multi_key><ampersand><less><minus>                                                 <nobreakspace> : "⃖" U20D6 # COMBINING LEFT ARROW ABOVE
@@ -6619,13 +6619,9 @@
 <Multi_key><period><greater><less>                                                                 : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
 <Multi_key><minus><greater><plus>                                                                  : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><plus>                                                                     : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
-#
-#   This sequence for "⥇" U2947 with a leading minus and following "x" is possible
-#   because there is no barred x. — The mirror of U2947 is "⬾" U2B3E.
-#   See #*# BAR
-#
-<Multi_key><minus><x><minus><greater>                                                      <space> : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
-<Multi_key><minus><x><minus><greater>                                               <nobreakspace> : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
+#   Mirror is U2B3E.
+#Multi_key><x><minus><greater>                                                                     : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
+<Multi_key><x><minus>                                                                              : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
 <Multi_key><less><minus><o><minus><greater>                                                <space> : "⥈" U2948 # LEFT RIGHT ARROW THROUGH SMALL CIRCLE
 <Multi_key><less><minus><o><minus><greater>                                         <nobreakspace> : "⥈" U2948 # LEFT RIGHT ARROW THROUGH SMALL CIRCLE
 <Multi_key><less><less><exclam><o>                                                                 : "⥉" U2949 # UPWARDS TWO-HEADED ARROW FROM SMALL CIRCLE
@@ -6724,16 +6720,19 @@
 <Multi_key><space><less><less><minus>                                               <nobreakspace> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
 <Multi_key><nobreakspace><less><less><minus>                                               <space> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
 <Multi_key><nobreakspace><less><less><minus>                                        <nobreakspace> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
-<Multi_key><less><minus><less><minus>                                                      <space> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
-<Multi_key><less><minus><less><minus>                                               <nobreakspace> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
+#   Mirror is U2B43.
+<Multi_key><space><less><minus><less>                                                      <space> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
+<Multi_key><space><less><minus><less>                                               <nobreakspace> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
+<Multi_key><nobreakspace><less><minus><less>                                               <space> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
+<Multi_key><nobreakspace><less><minus><less>                                        <nobreakspace> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
 <Multi_key><space><greater><minus><greater>                                                <space> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
 <Multi_key><space><greater><minus><greater>                                         <nobreakspace> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
 <Multi_key><nobreakspace><greater><minus><greater>                                         <space> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
 <Multi_key><nobreakspace><greater><minus><greater>                                  <nobreakspace> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
 <Multi_key><c><minus><greater>                                                             <space> : "⥹" U2979 # SUBSET ABOVE RIGHTWARDS ARROW
 <Multi_key><c><minus><greater>                                                      <nobreakspace> : "⥹" U2979 # SUBSET ABOVE RIGHTWARDS ARROW
-<Multi_key><less><minus><c><minus>                                                         <space> : "⥺" U297A # LEFTWARDS ARROW THROUGH SUBSET
-<Multi_key><less><minus><c><minus>                                                  <nobreakspace> : "⥺" U297A # LEFTWARDS ARROW THROUGH SUBSET
+#   Mirror is "⭄" U2B44.
+<Multi_key><less><minus><c>                                                                        : "⥺" U297A # LEFTWARDS ARROW THROUGH SUBSET
 <Multi_key><b><less><minus>                                                                <space> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><b><less><minus>                                                         <nobreakspace> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><c><c><less><minus>                                                             <space> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
@@ -8149,27 +8148,30 @@
 <Multi_key><less><less><bar><bar><minus><less>                                                     : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus><less>                                              : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 #   Mirror of U2947.
-<Multi_key><less><minus><x><minus>                                                         <space> : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
-<Multi_key><less><minus><x><minus>                                                  <nobreakspace> : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
+<Multi_key><less><minus><x>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 #   Mirror of U2933.
 <Multi_key><less><minus><asciitilde>                                                       <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 <Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
-#   Mirrors of U2971, U2972, U2975, U2977, U297A.
+#   Mirrors of U2971, U2972, U2975.
 <Multi_key><equal><less><minus>                                                            <space> : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><equal><less><minus>                                                     <nobreakspace> : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><backslash><less><minus>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                                <space> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                         <nobreakspace> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
-<Multi_key><minus><greater><minus><greater>                                                <space> : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
-<Multi_key><minus><greater><minus><greater>                                         <nobreakspace> : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
-<Multi_key><space><minus><b><minus><greater>                                               <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><space><minus><b><minus><greater>                                        <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><nobreakspace><minus><b><minus><greater>                                        <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><nobreakspace><minus><b><minus><greater>                                 <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><space><minus><c><c><minus><greater>                                            <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><space><minus><c><c><minus><greater>                                     <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><nobreakspace><minus><c><c><minus><greater>                                     <space> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
-<Multi_key><nobreakspace><minus><c><c><minus><greater>                              <nobreakspace> : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+#
+#   Among the three greater-minus-greater "↣" U21A3, "⥸" U2978, "⭃" U2B43 and
+#   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none stands out enough
+#   to deserve the most straightforward access.
+#
+#   Mirror of U2977.
+#Multi_key><space><space><greater><minus><greater>
+<Multi_key><space><space><greater><minus>                                                          : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
+<Multi_key><nobreakspace><space><greater><minus>                                                   : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
+<Multi_key><nobreakspace><nobreakspace><greater><minus>                                            : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
+#   Mirror of U297A.
+<Multi_key><b><minus><greater>                                                                     : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+#Multi_key><c><c><minus><greater>                                                                  : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><c><c><minus>                                                                           : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #
 #   Verticals of U2B45, U2B46 are U27F0, U27F1.
 #   U2B45 and U2B46 are not labeled as math but are included in TeX math
