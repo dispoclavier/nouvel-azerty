@@ -6469,6 +6469,7 @@
 <Multi_key><nobreakspace><G><backslash>                                             <nobreakspace> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><G>                                                                             <space> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><G>                                                                      <nobreakspace> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
+#Multi_key><o><plus><minus><greater>                                                               : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><o><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><O><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><less><minus><minus>                                                            <space> : "⟵" U27F5 # LONG LEFTWARDS ARROW
@@ -6531,6 +6532,7 @@
 #   See #   Streamlining
 #
 <Multi_key><exclam><bar><greater>                                                                  : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
+#Multi_key><exclam><bar><exclam><greater>                                                          : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><exclam><bar><exclam>                                                                   : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><bar><exclam>                                                                     : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
 <Multi_key><less><exclam><bar><exclam>                                                             : "⤉" U2909 # UPWARDS ARROW WITH HORIZONTAL STROKE
@@ -6603,27 +6605,38 @@
 <Multi_key><less><greater><less><minus>                                             <nobreakspace> : "⤝" U291D # LEFTWARDS ARROW TO BLACK DIAMOND
 <Multi_key><minus><greater><less><greater>                                                         : "⤞" U291E # RIGHTWARDS ARROW TO BLACK DIAMOND
 <Multi_key><less><greater><less><minus><bar>                                                       : "⤟" U291F # LEFTWARDS ARROW FROM BAR TO BLACK DIAMOND
+#Multi_key><bar><minus><greater><less><greater>                                                    : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
 <Multi_key><bar><minus><greater><less>                                                             : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
 <Multi_key><less><backslash><greater>                                                              : "⤡" U2921 # NORTH WEST AND SOUTH EAST ARROW
 <Multi_key><less><slash><greater>                                                                  : "⤢" U2922 # NORTH EAST AND SOUTH WEST ARROW
 <Multi_key><less><backslash><parenright>                                                           : "⤣" U2923 # NORTH WEST ARROW WITH HOOK
+#Multi_key><parenleft><slash><greater>                                                             : "⤤" U2924 # NORTH EAST ARROW WITH HOOK
 <Multi_key><parenleft><slash>                                                                      : "⤤" U2924 # NORTH EAST ARROW WITH HOOK
+#Multi_key><parenleft><backslash><greater>                                                         : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
 <Multi_key><parenleft><backslash>                                                                  : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
 <Multi_key><less><slash><parenright>                                                               : "⤦" U2926 # SOUTH WEST ARROW WITH HOOK
+#Multi_key><less><backslash><slash><greater>                                                       : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
 <Multi_key><less><backslash><slash>                                                                : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
+#Multi_key><backslash><greater><slash><greater>                                                    : "⤨" U2928 # NORTH EAST ARROW AND SOUTH EAST ARROW
 <Multi_key><backslash><greater><slash>                                                             : "⤨" U2928 # NORTH EAST ARROW AND SOUTH EAST ARROW
+#Multi_key><backslash><greater><less><slash>                                                       : "⤩" U2929 # SOUTH EAST ARROW AND SOUTH WEST ARROW
 <Multi_key><backslash><greater><less>                                                              : "⤩" U2929 # SOUTH EAST ARROW AND SOUTH WEST ARROW
+#Multi_key><less><backslash><less><slash>                                                          : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
 <Multi_key><less><backslash><less>                                                                 : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
 <Multi_key><slash><backslash>                                                              <space> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
 <Multi_key><slash><backslash>                                                       <nobreakspace> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
 <Multi_key><backslash><slash>                                                              <space> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
 <Multi_key><backslash><slash>                                                       <nobreakspace> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
+#Multi_key><space><backslash><greater><slash><greater>                                             : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><space><backslash><greater>                                                             : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><backslash><greater>                                                      : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+#Multi_key><slash><greater><backslash><greater>                                                    : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
 <Multi_key><slash><greater><backslash>                                                             : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
 <Multi_key><backslash><slash><greater>                                                             : "⤯" U292F # FALLING DIAGONAL CROSSING NORTH EAST ARROW
 <Multi_key><slash><backslash><greater>                                                             : "⤰" U2930 # RISING DIAGONAL CROSSING SOUTH EAST ARROW
+#Multi_key><slash><greater><less><backslash>                                                       : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
 <Multi_key><slash><greater><less>                                                                  : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
+#Multi_key><space><less><backslash><slash><greater>                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><space><less><backslash>                                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><less><backslash>                                                         : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><asciitilde><minus><greater>                                                            : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
@@ -6649,7 +6662,8 @@
 <Multi_key><parenleft><greater><minus>                                              <nobreakspace> : "⤼" U293C # TOP ARC CLOCKWISE ARROW WITH MINUS
 <Multi_key><less><parenleft><plus>                                                         <space> : "⤽" U293D # TOP ARC ANTICLOCKWISE ARROW WITH PLUS
 <Multi_key><less><parenleft><plus>                                                  <nobreakspace> : "⤽" U293D # TOP ARC ANTICLOCKWISE ARROW WITH PLUS
-<Multi_key><C><greater><backslash>                                                                 : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+<Multi_key><space><less><C>                                                                        : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+<Multi_key><nobreakspace><less><C>                                                                 : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
 <Multi_key><C><greater>                                                                    <space> : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><C><greater>                                                             <nobreakspace> : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><o><less>                                                                       <space> : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
