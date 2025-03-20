@@ -6220,12 +6220,13 @@
 #   https://www.unicode.org/charts/nameslist/n_27C0.html
 #
 <Multi_key><minus><slash><bar>                                                                     : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
-#   The inner triangle of "⟁" U27C1 may erroneously look like a small circle.
+#Multi_key><2><slash><backslash><underscore>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><slash><backslash>                                                                   : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><slash><backslash>                                                                : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><backslash>                                                                          : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><backslash>                                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><KP_Divide>                                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+#   Some fonts feature a small circle instead of the inner triangle of "⟁" U27C1.
 <Multi_key><slash><backslash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><backslash><slash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
