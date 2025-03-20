@@ -3447,13 +3447,13 @@
 #   from the bottom to the top, unlike faces of smilies parsed from the top to
 #   the bottom: ":)" or ":-)". By contrast, "(-:" would be an upside-down face.
 #   The fix is to use digit 8 instead, as digit 8 is usable both ways. This is
-#   the sequence used for "♡" U2661 in the math symbols.
+#   the sequence used for "♡" U2661 as a math symbol.
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #
 # # Scissors
 #
-#   In group 3 of < on C                                                                           : "✂" U2702 # BLACK SCISSORS emoji
+#   In group 3 of "<" on C                                                                         : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><8><x><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><KP_8><x><space>                                                                        : "✂" U2702 # BLACK SCISSORS emoji
 <Multi_key><8><X><space>                                                                           : "✂" U2702 # BLACK SCISSORS emoji
@@ -6196,11 +6196,15 @@
 <Multi_key><space><o><KP_8><numbersign>                                                            : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><nobreakspace><o><8><numbersign>                                                        : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><nobreakspace><o><KP_8><numbersign>                                                     : "♣" U2663 # BLACK CLUB SUIT
-#   In group 11 of = on B                                                                          : "♭" U266D # MUSIC FLAT SIGN
+#   In group 11 of "=" on B                                                                        : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                                      <space> : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                               <nobreakspace> : "♭" U266D # MUSIC FLAT SIGN
-#   In group 10 of = on B                                                                          : "♮" U266E # MUSIC NATURAL SIGN
-#   In group 11 of ` on N                                                                          : "♮" U266E # MUSIC NATURAL SIGN
+#
+#   The "h" was reportedly used as a fallback to print "♮" named "b quadratum",
+#   hence it is picked as a presumably intuitive multikey sequence constituent.
+#
+#   In group 10 of "=" on B                                                                        : "♮" U266E # MUSIC NATURAL SIGN
+#   In group 11 of "`" on N                                                                        : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><h>                                                                      <space> : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><h>                                                               <nobreakspace> : "♮" U266E # MUSIC NATURAL SIGN
 #   In group 11 of "#"                                                                             : "♯" U266F # MUSIC SHARP SIGN
