@@ -3433,21 +3433,22 @@
 #
 #   Due to its design, the traditional heart multikey sequence is expected to
 #   output "❤" U2764 HEAVY BLACK HEART, France’s (red) most-used heart emoji.
-#   It is supported as a dead_circumflex multikey equivalent with digit 3 as a
-#   base character:                          <Multi_key><less><3>
+#   In this file, this is supported as a dead_circumflex multikey equivalent
+#   with the digit 3 as a base character:    <Multi_key><less><3>
 #   See #*# CIRCUMFLEX
 #
 #   This however disrupts en_US.UTF-8/Compose supporting the least frequent
 #   heart emoji, "♥" U2665 BLACK HEART SUIT, the 14th-ranking emoji, in the
 #   suit series U2660..U2667. This is supported by an alternative sequence
-#   still based on shape-driven mnemonics:   <Multi_key><less><8>
+#   still based on a shape-driven mnemonic:  <Multi_key><less><8>
 #   See #*# CIRCUMFLEX
 #
 #   Be it the one or the other, due to the shape of digit 3, hearts are parsed
 #   from the bottom to the top, unlike faces of smilies parsed from the top to
-#   the bottom: ":)" or ":-)". By contrast, "(-:" would be an upside-down face.
-#   The fix is to use digit 8 instead, as digit 8 is usable both ways. This is
-#   the sequence used for "♡" U2661 as a math symbol.
+#   the bottom: ":)" or ":-)". This is obvious when looking at the opposite, as
+#   "(-:" is in use with the semantic of an actual upside-down face. The fix is
+#   to use digit 8 instead, since digit 8 is usable both ways. Here that is the
+#   sequence used for "♡" U2661 as a math symbol.
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #
@@ -4086,7 +4087,9 @@
 #
 #   For simplicity, right angle is "L", as in "∟" U221F, "⊾" U22BE, "⦜" U299C.
 #
-#   For intuitivity, "∠" U2220 is parsed like "∡" U2221.
+#   All angle symbols are parsed as interior angles, not reflex angles. Some
+#   symbols are explicit about this, like "∡" U2221; others like "∠" U2220 are
+#   assumed to be the same.
 #
 #
 #   Small symbols
@@ -6934,18 +6937,18 @@
 <Multi_key><L><parenright><period>                                                         <space> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
 <Multi_key><L><parenright><period>                                                  <nobreakspace> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
 <Multi_key><minus><slash><s>                                                                       : "⦞" U299E # ANGLE WITH S INSIDE
+<Multi_key><space><minus><s><slash>                                                                : "⦞" U299E # ANGLE WITH S INSIDE
+<Multi_key><nobreakspace><minus><s><slash>                                                         : "⦞" U299E # ANGLE WITH S INSIDE
 <Multi_key><space><space><minus><slash>                                                            : "⦟" U299F # ACUTE ANGLE
 <Multi_key><nobreakspace><space><minus><slash>                                                     : "⦟" U299F # ACUTE ANGLE
 <Multi_key><nobreakspace><nobreakspace><minus><slash>                                              : "⦟" U299F # ACUTE ANGLE
 <Multi_key><backslash><parenleft><slash>                                                           : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
-<Multi_key><space><backslash><parenright><slash>                                                   : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
-<Multi_key><nobreakspace><backslash><parenright><slash>                                            : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
+<Multi_key><slash><parenleft><backslash>                                                           : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
 <Multi_key><space><minus><slash>                                                                   : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><nobreakspace><minus><slash>                                                            : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><space><backslash><minus>                                                               : "⦣" U29A3 # REVERSED ANGLE
 <Multi_key><nobreakspace><backslash><minus>                                                        : "⦣" U29A3 # REVERSED ANGLE
-<Multi_key><space><underscore><minus><slash>                                                       : "⦤" U29A4 # ANGLE WITH UNDERBAR
-<Multi_key><nobreakspace><underscore><minus><slash>                                                : "⦤" U29A4 # ANGLE WITH UNDERBAR
+<Multi_key><underscore><minus><slash>                                                              : "⦤" U29A4 # ANGLE WITH UNDERBAR
 <Multi_key><backslash><minus><underscore>                                                          : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
 <Multi_key><minus><backslash>                                                              <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
 <Multi_key><minus><backslash>                                                       <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
@@ -6976,6 +6979,7 @@
 <Multi_key><bar><parenleft>                                                                        : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
 #Multi_key><bar><parenright><backslash><greater>                                                   : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 <Multi_key><bar><parenright><backslash>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
+#Multi_key><less><slash><parenleft><bar>                                                           : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><O><backslash>                                                                  <space> : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⦰" U29B0 # REVERSED EMPTY SET
