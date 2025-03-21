@@ -1536,9 +1536,10 @@
 #
 #   For numbers by multikey, this intuitive input method is more efficient than
 #   the scheme using the Greek or circled dead key, provided that the redundant
-#   trailing parenthesis found in en_US.UTF-8/Compose is dropped except for two
-#   circled numbers starting with 1: "⑩" U2469, "⑪" U246A, as these conflict
-#   with box drawings with rounded corners "╰" U2570, "╭" U256D.
+#   trailing parenthesis found in en_US.UTF-8/Compose is dropped except for the
+#   digits 0 to 5 and two circled numbers starting with 1: "⑩" U2469, "⑪" U246A
+#   as these conflict with circled numbers or box drawings with rounded corners
+#   "╰" U2570, "╭" U256D.
 #   See #*# GREEK
 #   See #^# CIRCLED
 #
@@ -1559,14 +1560,14 @@
 <Multi_key><parenleft>                                                          <KP_4><parenright> : "④" U2463 # CIRCLED DIGIT FOUR
 <Multi_key><parenleft>                                                             <5><parenright> : "⑤" U2464 # CIRCLED DIGIT FIVE
 <Multi_key><parenleft>                                                          <KP_5><parenright> : "⑤" U2464 # CIRCLED DIGIT FIVE
-<Multi_key><parenleft>                                                             <6><parenright> : "⑥" U2465 # CIRCLED DIGIT SIX
-<Multi_key><parenleft>                                                          <KP_6><parenright> : "⑥" U2465 # CIRCLED DIGIT SIX
-<Multi_key><parenleft>                                                             <7><parenright> : "⑦" U2466 # CIRCLED DIGIT SEVEN
-<Multi_key><parenleft>                                                          <KP_7><parenright> : "⑦" U2466 # CIRCLED DIGIT SEVEN
-<Multi_key><parenleft>                                                             <8><parenright> : "⑧" U2467 # CIRCLED DIGIT EIGHT
-<Multi_key><parenleft>                                                          <KP_8><parenright> : "⑧" U2467 # CIRCLED DIGIT EIGHT
-<Multi_key><parenleft>                                                             <9><parenright> : "⑨" U2468 # CIRCLED DIGIT NINE
-<Multi_key><parenleft>                                                          <KP_9><parenright> : "⑨" U2468 # CIRCLED DIGIT NINE
+<Multi_key><parenleft>                                                             <6>             : "⑥" U2465 # CIRCLED DIGIT SIX
+<Multi_key><parenleft>                                                          <KP_6>             : "⑥" U2465 # CIRCLED DIGIT SIX
+<Multi_key><parenleft>                                                             <7>             : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<Multi_key><parenleft>                                                          <KP_7>             : "⑦" U2466 # CIRCLED DIGIT SEVEN
+<Multi_key><parenleft>                                                             <8>             : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<Multi_key><parenleft>                                                          <KP_8>             : "⑧" U2467 # CIRCLED DIGIT EIGHT
+<Multi_key><parenleft>                                                             <9>             : "⑨" U2468 # CIRCLED DIGIT NINE
+<Multi_key><parenleft>                                                          <KP_9>             : "⑨" U2468 # CIRCLED DIGIT NINE
 <Multi_key><parenleft>                                                          <1><0><parenright> : "⑩" U2469 # CIRCLED NUMBER TEN
 <Multi_key><parenleft>                                                    <KP_1><KP_0><parenright> : "⑩" U2469 # CIRCLED NUMBER TEN
 <Multi_key><parenleft>                                                          <1><1><parenright> : "⑪" U246A # CIRCLED NUMBER ELEVEN
@@ -7121,34 +7122,22 @@
 <Multi_key><space><underscore><X><numbersign><underscore>                           <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><nobreakspace><underscore><X><numbersign><underscore>                           <space> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><nobreakspace><underscore><X><numbersign><underscore>                    <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><w><bracketleft>                                                                <space> : "⧘" U29D8 # LEFT WIGGLY FENCE
-<Multi_key><w><bracketleft>                                                         <nobreakspace> : "⧘" U29D8 # LEFT WIGGLY FENCE
-<Multi_key><w><bracketright>                                                               <space> : "⧙" U29D9 # RIGHT WIGGLY FENCE
-<Multi_key><w><bracketright>                                                        <nobreakspace> : "⧙" U29D9 # RIGHT WIGGLY FENCE
-<Multi_key><w><bracketleft><bracketleft>                                                   <space> : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
-<Multi_key><w><bracketleft><bracketleft>                                            <nobreakspace> : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
-<Multi_key><w><bracketright><bracketright>                                                 <space> : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
-<Multi_key><w><bracketright><bracketright>                                          <nobreakspace> : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
-<Multi_key><space><space><8>                                                               <space> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><space><space><8>                                                        <nobreakspace> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><space><space><KP_8>                                                            <space> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><space><space><KP_8>                                                     <nobreakspace> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><space><8>                                                        <space> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><space><8>                                                 <nobreakspace> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><space><KP_8>                                                     <space> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><space><KP_8>                                              <nobreakspace> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><nobreakspace><8>                                                 <space> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><nobreakspace><8>                                          <nobreakspace> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><nobreakspace><KP_8>                                              <space> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><nobreakspace><nobreakspace><KP_8>                                       <nobreakspace> : "⧜" U29DC # INCOMPLETE INFINITY
-<Multi_key><space><parenleft><8>                                                           <space> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><space><parenleft><8>                                                    <nobreakspace> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><space><parenleft><KP_8>                                                        <space> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><space><parenleft><KP_8>                                                 <nobreakspace> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><nobreakspace><parenleft><8>                                                    <space> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><nobreakspace><parenleft><8>                                             <nobreakspace> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><nobreakspace><parenleft><KP_8>                                                 <space> : "⧝" U29DD # TIE OVER INFINITY
-<Multi_key><nobreakspace><parenleft><KP_8>                                          <nobreakspace> : "⧝" U29DD # TIE OVER INFINITY
+<Multi_key><w><bracketleft>                                                                        : "⧘" U29D8 # LEFT WIGGLY FENCE
+<Multi_key><w><bracketright>                                                                       : "⧙" U29D9 # RIGHT WIGGLY FENCE
+<Multi_key><2><w><bracketleft>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
+<Multi_key><w><w><bracketleft>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
+<Multi_key><2><w><bracketright>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
+<Multi_key><w><w><bracketright>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
+<Multi_key><space><space><8>                                                                       : "⧜" U29DC # INCOMPLETE INFINITY
+<Multi_key><space><space><KP_8>                                                                    : "⧜" U29DC # INCOMPLETE INFINITY
+<Multi_key><nobreakspace><space><8>                                                                : "⧜" U29DC # INCOMPLETE INFINITY
+<Multi_key><nobreakspace><space><KP_8>                                                             : "⧜" U29DC # INCOMPLETE INFINITY
+<Multi_key><nobreakspace><nobreakspace><8>                                                         : "⧜" U29DC # INCOMPLETE INFINITY
+<Multi_key><nobreakspace><nobreakspace><KP_8>                                                      : "⧜" U29DC # INCOMPLETE INFINITY
+<Multi_key><space><parenleft><8>                                                                   : "⧝" U29DD # TIE OVER INFINITY
+<Multi_key><space><parenleft><KP_8>                                                                : "⧝" U29DD # TIE OVER INFINITY
+<Multi_key><nobreakspace><parenleft><8>                                                            : "⧝" U29DD # TIE OVER INFINITY
+<Multi_key><nobreakspace><parenleft><KP_8>                                                         : "⧝" U29DD # TIE OVER INFINITY
 <Multi_key><8><bar>                                                                                : "⧞" U29DE # INFINITY NEGATED WITH VERTICAL BAR
 <Multi_key><KP_8><bar>                                                                             : "⧞" U29DE # INFINITY NEGATED WITH VERTICAL BAR
 <Multi_key><o><minus><o>                                                                   <space> : "⧟" U29DF # DOUBLE-ENDED MULTIMAP
