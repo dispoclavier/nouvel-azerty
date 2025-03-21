@@ -6948,7 +6948,8 @@
 <Multi_key><nobreakspace><minus><slash>                                                            : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><space><backslash><minus>                                                               : "⦣" U29A3 # REVERSED ANGLE
 <Multi_key><nobreakspace><backslash><minus>                                                        : "⦣" U29A3 # REVERSED ANGLE
-<Multi_key><underscore><minus><slash>                                                              : "⦤" U29A4 # ANGLE WITH UNDERBAR
+<Multi_key><space><underscore><minus><slash>                                                       : "⦤" U29A4 # ANGLE WITH UNDERBAR
+<Multi_key><nobreakspace><underscore><minus><slash>                                                : "⦤" U29A4 # ANGLE WITH UNDERBAR
 <Multi_key><backslash><minus><underscore>                                                          : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
 <Multi_key><minus><backslash>                                                              <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
 <Multi_key><minus><backslash>                                                       <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
@@ -7009,12 +7010,12 @@
 <Multi_key><O><bar><underscore>                                                                    : "⦹" U29B9 # CIRCLED PERPENDICULAR
 <Multi_key><O><minus><bar>                                                                         : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
 <Multi_key><O><X>                                                                                  : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
+<Multi_key><O><colon><minus>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><space><O><percent>                                                             <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><space><O><percent>                                                      <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><nobreakspace><O><percent>                                                      <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><nobreakspace><O><percent>                                               <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><colon><minus>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 #
 #   Consistently, "⦽" U29BD is parsed as « ¦O<! » rather than « ¦O^| » that was
 #   an intuitive option by lack of the rules making « ¦O<! » more predictable.
@@ -7057,10 +7058,10 @@
 <Multi_key><KP_2><bracketleft>                                                                     : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><3><bracketleft>                                                                        : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><KP_3><bracketleft>                                                                     : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><2><space>                                                                              : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><KP_2><space>                                                                           : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><2><nobreakspace>                                                                       : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><KP_2><nobreakspace>                                                                    : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><2>                                                                             <space> : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><2>                                                                      <nobreakspace> : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><KP_2>                                                                          <space> : "⧉" U29C9 # TWO JOINED SQUARES
+<Multi_key><KP_2>                                                                   <nobreakspace> : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><period><slash><backslash><underscore>                                          <space> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><period><slash><backslash><underscore>                                   <nobreakspace> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><period><backslash><slash><underscore>                                          <space> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
@@ -7069,6 +7070,7 @@
 <Multi_key><backslash><slash><underscore><underscore>                                              : "⧋" U29CB # TRIANGLE WITH UNDERBAR
 <Multi_key><slash><backslash><underscore><s>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><backslash><slash><underscore><s>                                                       : "⧌" U29CC # S IN TRIANGLE
+#Multi_key><s><slash><backslash><underscore>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><s><slash><backslash>                                                                   : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><s><backslash><slash>                                                                   : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><space><slash><backslash><underscore>                                           <space> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
@@ -7090,6 +7092,7 @@
 <Multi_key><bar><numbersign><backslash><slash><bar>                                 <nobreakspace> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash><bar>                                        <space> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash><bar>                                 <nobreakspace> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
+#Multi_key><bar><backslash><slash><numbersign><bar>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><backslash><slash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><slash><backslash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><numbersign><backslash><slash><numbersign><bar>                            <space> : "⧓" U29D3 # BLACK BOWTIE
@@ -7105,11 +7108,19 @@
 #   In group 10 of ";"                                                                             : "⧖" U29D6 # WHITE HOURGLASS
 <Multi_key><X><underscore><underscore>                                                     <space> : "⧖" U29D6 # WHITE HOURGLASS
 <Multi_key><X><underscore><underscore>                                              <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><space><underscore><X><underscore>                                              <space> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><space><underscore><X><underscore>                                       <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><nobreakspace><underscore><X><underscore>                                       <space> : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><nobreakspace><underscore><X><underscore>                                <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
 #   In group 9 of ";"                                                                              : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore>                                                     <space> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore>                                              <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore><underscore>                                         <space> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><X><numbersign><underscore><underscore>                                  <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><space><underscore><X><numbersign><underscore>                                  <space> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><space><underscore><X><numbersign><underscore>                           <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><nobreakspace><underscore><X><numbersign><underscore>                           <space> : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><nobreakspace><underscore><X><numbersign><underscore>                    <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
 <Multi_key><w><bracketleft>                                                                <space> : "⧘" U29D8 # LEFT WIGGLY FENCE
 <Multi_key><w><bracketleft>                                                         <nobreakspace> : "⧘" U29D8 # LEFT WIGGLY FENCE
 <Multi_key><w><bracketright>                                                               <space> : "⧙" U29D9 # RIGHT WIGGLY FENCE
