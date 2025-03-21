@@ -7417,9 +7417,11 @@
 #Multi_key><asciitilde><plus> conflicts with "Ỡ" U1EE0.                                            : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
-#   In #*# DOT_BELOW, <plus> conflicts with "Ợ" U1EE2.                                             : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+#   When in #*# DOT_BELOW, <plus> conflicts with "Ợ" U1EE2.                                        : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><period>                                                                  <space> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><period>                                                           <nobreakspace> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+#   In #^# MIDDLE_TILDE                                                                            : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
+#Multi_key><asciitilde><asciitilde><plus> is in dead_tilde double press.                           : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                       <nobreakspace> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><space><plus><2>                                                                <space> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
