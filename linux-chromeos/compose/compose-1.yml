@@ -7164,12 +7164,17 @@
 <Multi_key><space><bar><equal>                                                      <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
 <Multi_key><nobreakspace><bar><equal>                                                      <space> : "⧧" U29E7 # THERMODYNAMIC
 <Multi_key><nobreakspace><bar><equal>                                               <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
+#Multi_key><backslash><numbersign><bar><slash>                                                     : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
 <Multi_key><backslash><numbersign><bar>                                                            : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
+#Multi_key><backslash><bar><numbersign><slash>                                                     : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
 <Multi_key><backslash><bar><numbersign>                                                            : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
+#Multi_key><less><numbersign><greater><exclam><greater>                                            : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
 <Multi_key><less><numbersign><greater><exclam>                                                     : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
 <Multi_key><a><numbersign><v>                                                              <space> : "⧫" U29EB # BLACK LOZENGE
 <Multi_key><a><numbersign><v>                                                       <nobreakspace> : "⧫" U29EB # BLACK LOZENGE
+#Multi_key><O><exclam><greater>                                                                    : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
 <Multi_key><O><exclam>                                                                             : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
+#Multi_key><O><numbersign><exclam><greater>                                                        : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
 <Multi_key><O><numbersign><exclam>                                                                 : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
 <Multi_key><I><bracketleft><bracketright>                                                  <space> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
 <Multi_key><I><bracketleft><bracketright>                                           <nobreakspace> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
@@ -7398,11 +7403,21 @@
 <Multi_key><z><1>                                                                   <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                       <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+#   In #*# RING_ABOVE                                                                              : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+#Multi_key><asterisk><plus> is in dead_abovering.                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+#Multi_key><o><asciicircum><plus>                                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><o><asciicircum>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
-<Multi_key><less><plus>                                                                    <space> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-<Multi_key><less><plus>                                                             <nobreakspace> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<Multi_key><space><space><o><plus>                                                                 : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+<Multi_key><nobreakspace><space><o><plus>                                                          : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+<Multi_key><nobreakspace><nobreakspace><o><plus>                                                   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+#   In #*# CIRCUMFLEX                                                                              : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+#Multi_key><less><plus> is in dead_circumflex.                                                     : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+#Multi_key><asciicircum><plus> conflicts with "⁺" U207A.                                           : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<Multi_key><a><plus>                                                                               : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+#Multi_key><asciitilde><plus> conflicts with "Ỡ" U1EE0.                                            : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
+#   In #*# DOT_BELOW, <plus> conflicts with "Ợ" U1EE2.                                             : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><period>                                                                  <space> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><period>                                                           <nobreakspace> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
