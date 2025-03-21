@@ -4794,6 +4794,10 @@
 #   ampersand virtual dead key.
 #   See # # TILDE&AMPERSAND
 #
+#   "⨤" U2A24 PLUS SIGN WITH TILDE ABOVE cannot be supported, due to a conflict
+#   of plus with "Ỡ" U1EE0. As a consequence, it is supported by multikey only.
+#   See # # Supplemental Mathematical Operators of block U2A00
+#
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                               <U200B> : "̃" U0303 # COMBINING TILDE
@@ -5231,6 +5235,8 @@
 <Multi_key><asciitilde><asciitilde>                                                        <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <dead_tilde><dead_tilde>                                                               <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde><asciitilde>                                                    <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
+<dead_tilde><dead_tilde>                                                                    <plus> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
+<Multi_key><asciitilde><asciitilde>                                                         <plus> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <dead_tilde><dead_tilde>                                                                   <equal> : "᷽" U1DFD # COMBINING ALMOST EQUAL TO BELOW
 <Multi_key><asciitilde><asciitilde>                                                        <equal> : "᷽" U1DFD # COMBINING ALMOST EQUAL TO BELOW
 <dead_tilde><dead_tilde>                                                                       <A> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
@@ -16324,6 +16330,10 @@
 #
 #   Dot below has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Dot_Below
+#
+#   "⨥" U2A25 PLUS SIGN WITH DOT BELOW cannot be supported, due to a conflict
+#   of plus with "Ợ" U1EE2. As a consequence, it is supported by multikey only.
+#   See # # Supplemental Mathematical Operators of block U2A00
 #
 <dead_belowdot>                                                                            <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
