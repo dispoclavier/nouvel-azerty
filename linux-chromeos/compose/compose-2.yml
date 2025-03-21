@@ -4806,14 +4806,14 @@
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                          <underscore> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+<Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                            <question> : "͠" U0360 # COMBINING DOUBLE TILDE
 <Multi_key><asciitilde>                                                                 <question> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
@@ -13001,6 +13001,8 @@
 <Multi_key><asterisk>                                                                  <parenleft> : "͑" U0351 # COMBINING LEFT HALF RING ABOVE
 <dead_abovering>                                                                      <parenright> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
 <Multi_key><asterisk>                                                                 <parenright> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
+<dead_abovering>                                                                            <plus> : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+<Multi_key><asterisk>                                                                       <plus> : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <dead_abovering>                                                                          <period> : "⸰" U2E30 # RING POINT
 <Multi_key><asterisk>                                                                     <period> : "⸰" U2E30 # RING POINT
 <dead_abovering>                                                                               <0> : "°" U00B0 # DEGREE SIGN
@@ -13358,6 +13360,8 @@
 <Multi_key><less>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <Multi_key><less>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                       <question> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
