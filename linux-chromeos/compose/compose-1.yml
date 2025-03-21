@@ -7451,14 +7451,12 @@
 <Multi_key><plus><parenright>                                                       <nobreakspace> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
 #
 #   The vector cross product symbol "⨯" U2A2F is confusable with the Latin-1
-#   multiplication symbol "×" U00D7 and is probably another duplicate encoding,
-#   since the vector dot product symbol is the dot operator "⋅" U22C5.
+#   multiplication symbol "×" U00D7, while the vector dot product symbol is
+#   the dot operator "⋅" U22C5.
 #
 #   Consistently, TUS does not mention mathematical operators disunified from
 #   Latin-1 operators, along the lines of Table 22-5. Mathematical Operators
-#   Disunified from Punctuation, as disunifying "⨯" U2A2F from "×" U00D7 was
-#   pointless. As a consequence, people are left stranded when attempting to
-#   make sense of this code point.
+#   Disunified from Punctuation.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
 <Multi_key><space><x>                                                                      <space> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
