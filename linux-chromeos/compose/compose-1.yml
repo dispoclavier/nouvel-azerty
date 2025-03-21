@@ -7127,8 +7127,10 @@
 <Multi_key><w><bracketleft>                                                                        : "⧘" U29D8 # LEFT WIGGLY FENCE
 <Multi_key><w><bracketright>                                                                       : "⧙" U29D9 # RIGHT WIGGLY FENCE
 <Multi_key><2><w><bracketleft>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
+<Multi_key><KP_2><w><bracketleft>                                                                  : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
 <Multi_key><w><w><bracketleft>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
 <Multi_key><2><w><bracketright>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
+<Multi_key><KP_2><w><bracketright>                                                                 : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
 <Multi_key><w><w><bracketright>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
 <Multi_key><space><space><8>                                                                       : "⧜" U29DC # INCOMPLETE INFINITY
 <Multi_key><space><space><KP_8>                                                                    : "⧜" U29DC # INCOMPLETE INFINITY
