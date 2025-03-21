@@ -8046,7 +8046,9 @@
 <Multi_key><c><asciicircum><c>                                                      <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
 <Multi_key><b><asciicircum><b>                                                                     : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
 <Multi_key><c><backslash><asciicircum><c><c>                                                       : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
+#Multi_key><b><ampersand><c>                                                                       : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><b><ampersand>                                                                          : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+#Multi_key><c><backslash><ampersand><c>                                                            : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><c><backslash><ampersand>                                                               : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><b><minus><c>                                                                   <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
 <Multi_key><b><minus><c>                                                            <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
@@ -8292,6 +8294,7 @@
 <Multi_key><minus><greater><4>                                                      <nobreakspace> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 <Multi_key><minus><greater><KP_4>                                                          <space> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 <Multi_key><minus><greater><KP_4>                                                   <nobreakspace> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
+#Multi_key><asciitilde><backslash><minus><greater>                                                 : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><asciitilde><backslash><minus>                                                          : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><minus><greater><asciitilde><asciitilde><backslash>                             <space> : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><minus><greater><asciitilde><asciitilde><backslash>                      <nobreakspace> : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
