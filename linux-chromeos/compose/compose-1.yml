@@ -3915,16 +3915,16 @@
 #   for intuitivity.
 #
 #   Sequences streamlined by cropping non-critical input besides trailing space
-#   are commented out for the purpose of keeping track, in case they need to be
-#   restored to prevent conflicts with new sequences.
+#   are duplicated full-length and commented out for the record, in case some
+#   need to be restored to prevent conflicts with new sequences.
 #
 #
 #   Parsing order
 #
 #   Symbols are parsed consistently with the Latin script, from left to right
-#   and from top to bottom. As a result, it goes up the x axis, down the y axis
-#   and down the z axis if there is any, as in "⤫" U292B, "⤬" U292C. Without a
-#   z axis, parsing these patterns starts in the upper left corner: "⤧" U2927.
+#   and from top to bottom. As a result, for many patterns like "⤧" U2927,
+#   parsing starts in the upper left corner. Consistently, it goes also down
+#   the z axis  first if there is any, as in "⤫" U292B, "⤬" U292C.
 #
 #
 #   Trailing space
