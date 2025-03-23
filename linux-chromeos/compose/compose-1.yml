@@ -79,7 +79,7 @@
 #                                C. User level, without Compose in the $HOME directory:
 #                                   1. Copy Compose.yml to ~/.XCompose.
 #                                   2. For maximum backward compatibility, uncomment this
-#                                      instruction where `%L` expands to the default Compose
+#                                      instruction where "%L" expands to the default Compose
 #                                      file path of the current locale. For fr_FR, that is:
 #                                      /usr/share/X11/locale/en_US.UTF-8/Compose
 #
@@ -89,7 +89,7 @@
 #                                   with dead keys as supported in en_US.UTF-8/Compose.
 #
 #                                   Any specific Compose file can be included by its path,
-#                                   where `%S` expands to /usr/share/X11/locale.
+#                                   where "%S" expands to /usr/share/X11/locale.
 #
 #                             The changes take effect in any application after reopening it,
 #                             or after opening a new session if XIM needs to be activated.
@@ -403,10 +403,10 @@
 #   other typographic space characters in the range U2000..U200A. Accordingly,
 #   the line breaking property was set to no-break for all spaces starting with
 #   U2002, after the two widest spaces in a breaking variant: U2000, U2001, as
-#   opposed to U2002, U2003, consistently with TeX, where `\qquad` and `\quad`
-#   are breaking, while `\emspace`, `\enspace` and `\thinspace` are no-break.
-#   The TeXbook is not very clear about that, but obviously this difference was
-#   well known and fostered the original typographical space range design.
+#   opposed to U2002, U2003, consistently with TeX, where \qquad and \quad are
+#   breaking, while \emspace, \enspace and \thinspace are no-break. Although
+#   this difference does not seem to be documented, it was obviously well known
+#   and fostered the original typographical space range design.
 #   https://ctan.org/tex-archive/systems/knuth/dist/tex/texbook.tex
 #   https://unicode.org/mail-arch/unicode-ml/Archives-Old/UML023/0536.html
 #
@@ -699,7 +699,7 @@
 #
 # # Named entities for SGML, HTML, XML and XHTML
 #
-#   Using `&apos;` may be discouraged, but it may be required in XML, and it is
+#   Using "&apos;" may be discouraged, but it may be required in XML, and it is
 #   supported in HTML5.
 #   https://www.w3.org/International/questions/qa-escapes
 #   https://stackoverflow.com/questions/2083754/why-shouldnt-apos-be-used-to-escape-single-quotes
@@ -2528,7 +2528,7 @@
 #
 #   Default HTML/CSS bullets have equivalents in Unicode as "•" U2022 for the
 #   first level and "◦" U25E6 for the second level. For level 3, "▪" U25AA is
-#   sometimes chosen in an attempt to stick with `list-style-type: square`, but
+#   sometimes chosen in an attempt to stick with "list-style-type: square", but
 #   this is an emoji. That is why as a level 3 bullet, "‣" U2023 may eventually
 #   be an interesting alternative. These are in groups 1..3 of underscore, too.
 #   See # # C07 underscore
@@ -3770,24 +3770,24 @@
 #   *                                                                         *
 #   ***************************************************************************
 #
-#   The General Category `Symbol, other` (`So`) does not preclude a symbol from
-#   being a math symbol, despite there is the dedicated `Symbol, math` (`Sm`).
-#   Indeed both `Sm` and `So` are only informative, not normative.
+#   The General Category "Symbol, other" (So) does not preclude a symbol from
+#   being a math symbol, despite there is the dedicated "Symbol, math" (Sm).
+#   Indeed both Sm and So are only informative, not normative.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=199
 #
-#   The reason why is that labeling all math symbols as `Sm` is not feasible,
+#   The reason why is that labeling all math symbols as Sm is not feasible,
 #   and it is not advisable either, since mathematics repurposed many symbols
 #   intrinsically extraneous to mathematics, such as the male and female signs,
 #   already supercharged as planet symbols ("♀" U2640, "♂" U2642), three music
-#   symbols, one of which is `Sm` ("♯" U266F, and `So` "♭" U266D, "♮" U266E),
+#   symbols, one of which is Sm ("♯" U266F) and two, So ("♭" U266D, "♮" U266E),
 #   and the first four suits, regardless whether filled or empty ("♠" U2660,
 #   "♡" U2661, "♢" U2662, "♣" U2663), but not the last four.
 #
-#   The derived Unicode property `Math` in turn still only defines a subset of
+#   The derived Unicode property "Math" in turn still only defines a subset of
 #   the symbols that need to be supported as math symbols.
 #   https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
 #
-#   E.g. "⭅" U2B45 and "⭆" U2B46 are not labeled as `Math`, yet both are found
+#   E.g. "⭅" U2B45 and "⭆" U2B46 are not labeled as "Math", yet both are found
 #   in TeX math packages and are thus expected to be supported by input methods
 #   consistently.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
@@ -4189,7 +4189,7 @@
 # # Greek mathematical BMP symbols
 #
 #   This section is limited to Greek symbols in the Basic Multilingual Plane
-#   with `Derived Property: Math="Y"`. There are many more Greek symbols.
+#   with the Derived Property "Math". There are many more Greek symbols.
 #   See # # Mathematical Greek alphabets and symbols
 #
 #   The at sign is part of these multikey sequences for consistency with the
