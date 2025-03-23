@@ -4192,14 +4192,12 @@
 #   with `Derived Property: Math="Y"`. There are many more Greek symbols.
 #   See # # Mathematical Greek alphabets and symbols
 #
-#   Some TeX math packages may not support them all, per Will Robertson,
-#   “Symbols defined by unicode-math” (2023-06-21).
-#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=79
-#
 #   The at sign is part of these multikey sequences for consistency with the
 #   Greek dead key. However, in the multikey equivalent of dead_greek, <at>
 #   is in leading position, while here it comes after the letter.
 #   See #*# GREEK
+#
+#   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Characters_in_other_blocks
 #
 <Multi_key><b><at>                                                                         <space> : "ϐ" U03D0 # GREEK BETA SYMBOL
 <Multi_key><b><at>                                                                  <nobreakspace> : "ϐ" U03D0 # GREEK BETA SYMBOL
