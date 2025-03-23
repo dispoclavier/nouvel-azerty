@@ -4151,15 +4151,16 @@
 #
 # # Plus minus
 #
-#   Order matters unlike in en_US.UTF-8/Compose not supporting "∓" U2213.
-#   Still for sideways compatibility, space termination is skipped, for both
-#   "±" U00B1 and "∓" U2213, since it is not required for distinction.
+#   Order matters unlike in en_US.UTF-8/Compose not supporting "∓" U2213. But
+#   the sequence supported here for "±" U00B1, without space termination, is
+#   sideways compatible, while the reverse sequence is used for "∓" U2213.
 #
-#   Like "×" U00D7 and "÷" U00F7, on complete keyboard layouts, "±" U00B1 PLUS-
-#   MINUS SIGN is on live key.
+#   On complete keyboard layouts, "±" U00B1 is on level 7 on the key where the
+#   minus sign "−" U2212 is on level 5.
+#   See dispocla.cpp <AD05> plusminus
 #
-#   Additionally, for incomplete keyboard layouts, there is a fallback input
-#   method in the symbol groups.
+#   Additionally, for intuitivity and completeness and for incomplete keyboard
+#   layouts, there is a fallback input method in the symbol groups.
 #   See # # C06 plus
 #
 #   In group 1 of "+"                                                                              : "±" U00B1 # PLUS-MINUS SIGN
