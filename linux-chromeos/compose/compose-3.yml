@@ -138,9 +138,7 @@
 #   Non-math characters, such as the letter pi and the envelope emoji, are also
 #   given this "math" label, as far as a multikey sequence in the math section
 #   is available for input. This "math" label is therefore more of a UX feature
-#   than of an information about the `Math` status. In this regard, this "math"
-#   label is the opposite of the `Sm` General Category, discussed at the start
-#   of the math section.
+#   than of an information about the "Math" status.
 #   See ### Mathematical symbols by multikey
 #
 #
@@ -996,7 +994,7 @@
 #   See # # B01 slash
 #   See # # Square emoji
 #
-#   "▪" U25AA is considered a Unicode equivalent of `list-style-type: square`,
+#   "▪" U25AA is considered a Unicode equivalent of "list-style-type: square",
 #   yet it is emoji #1622 and is therefore subject to rendering issues when
 #   used as a bullet.
 #   https://www.unicode.org/emoji/charts-15.1/emoji-list.html#25aa
@@ -1746,7 +1744,7 @@
 # # B03 less
 #
 #   Group 10 has the archaic "⁖" U2056 THREE DOT PUNCTUATION, used by the W3C
-#   in a test page for the `:first-letter` pseudoclass, rather than "‏" U200F,
+#   in a test page for the ":first-letter" pseudoclass, rather than "‏" U200F,
 #   to prevent abuse.
 #   https://www.w3.org/Style/CSS/Test/CSS2.1/20100316/xhtml1/first-letter-punctuation-252.xht
 #
@@ -2532,7 +2530,7 @@
 #   These groups contain mainly letters and mathematical letter symbols, but
 #   some groups also contain mathematical digit symbols.
 #
-#   In this section, group headings are prefixed with `#+# `.
+#   In this section, group headings are prefixed with "#+# ".
 #
 #   On the alphabet, the groups yield mainly:
 #
