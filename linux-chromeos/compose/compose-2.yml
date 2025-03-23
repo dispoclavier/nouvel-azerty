@@ -210,8 +210,8 @@
 #   Alas, en_US.UTF-8/Compose has not been updated in the wake. One decade down
 #   the road, while dead_longsolidusoverlay was (expectedly) in use at least in
 #   Cimbali’s partial implementation (skipping unsupported dead key content) of
-#   the newly standardized French AZERTY (NF Z71-300, https://norme-azerty.fr/,
-#   `/usr/share/X11/symbols/fr(afnor)`), that explicitly supports "Ł" U0141 and
+#   the newly standardized (NF Z71-300) French AZERTY https://norme-azerty.fr/
+#   in /usr/share/X11/symbols/fr(afnor), that explicitly supports "Ł" U0141 and
 #   "ł" U0142 as well as "Ƚ" U023D and "ƚ" U019A (another casing letter pair is
 #   less completely enumerated in the standard), Ghost User (@ghost) managed to
 #   toss it out of keysymdef.h.
@@ -1329,8 +1329,8 @@
 #   See # # Actionable dead key layout for Latin keyboards
 #
 #   Heading levels are differentiated, in that the main dead keys with mappings
-#   on keys are prefixed `#*# `, the dead keys virtualized by double or triple,
-#   rarely quadruple press are prefixed `#^# `, and the other dead keys `# # `.
+#   on keys are prefixed "#*# ", the dead keys virtualized by double or triple,
+#   rarely quadruple press are prefixed "#^# ", and the other dead keys "# # ".
 #
 #   Dead keys are further ordered following this scheme:
 #
@@ -1438,7 +1438,7 @@
 #   clone is "‾" U203E, that is also supported on live key.
 #   See #*# SUBSCRIPT
 #   See #*# CIRCUMFLEX
-#   See dispocla.cpp // Overscore
+#   See dispocla.cpp // ## Overscore
 #
 <UEFD1>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
 <Multi_key><asciicircum>                                                                   <space> : "̅" U0305 # COMBINING OVERLINE
