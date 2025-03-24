@@ -4470,22 +4470,10 @@
 #
 #   In group 8 of "C"                                                                              : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
 <Multi_key><C><C>                                                                                  : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
-#
-#   These sequences for the Euler constant could be truncated to "EU", but they
-#   are not, with respect to the mathematician’s name. However, for convenience
-#   a space-terminated, almost case insensitive alternative is also provided.
-#
-<Multi_key><E><U><L><E><R>                                                                         : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><E><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><e><u><l><e><r>                                                                         : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><E><U>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><E><U>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><E><u>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><E><u>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><e><U>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><e><U>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><e><u>                                                                          <space> : "ℇ" U2107 # EULER CONSTANT
-<Multi_key><e><u>                                                                   <nobreakspace> : "ℇ" U2107 # EULER CONSTANT
+#Multi_key><E><U><L><E><R>                                                                         : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><U><L>                                                                               : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><E><u><l>                                                                               : "ℇ" U2107 # EULER CONSTANT
+<Multi_key><e><u><l>                                                                               : "ℇ" U2107 # EULER CONSTANT
 #   In group 7 of "g"                                                                              : "ℊ" U210A # SCRIPT SMALL G
 <Multi_key><g><asciitilde>                                                                         : "ℊ" U210A # SCRIPT SMALL G
 #   In group 7 of "H"                                                                              : "ℋ" U210B # SCRIPT CAPITAL H
@@ -4494,30 +4482,12 @@
 <Multi_key><H><numbersign>                                                                         : "ℌ" U210C # BLACK-LETTER CAPITAL H
 #   In group 8 of "H"                                                                              : "ℍ" U210D # DOUBLE-STRUCK CAPITAL H
 <Multi_key><H><H>                                                                                  : "ℍ" U210D # DOUBLE-STRUCK CAPITAL H
-#
-#   These sequences for the Planck constant could be truncated to "PL", but
-#   they are not, with respect to the physicist’s name. However, for
-#   convenience, an almost case insensitive alternative is also provided.
-#
 #   In group 8-period of "h"                                                                       : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><L><A><N><C><K>                                                              <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><L><A><N><C><K>                                                       <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><l><a><n><c><k>                                                              <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><l><a><n><c><k>                                                       <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><p><l><a><n><c><k>                                                              <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><p><l><a><n><c><k>                                                       <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><L>                                                                          <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><L>                                                                   <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><l>                                                                          <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><l>                                                                   <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><p><l>                                                                          <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><p><l>                                                                   <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><P><L><A><N><C><K><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><P><l><a><n><c><k><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><p><l><a><n><c><k><slash>                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><P><L><slash>                                                                           : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><P><l><slash>                                                                           : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><p><l><slash>                                                                           : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+#Multi_key><P><L><A><N><C><K>                                                                      : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><P><L><A>                                                                               : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><P><l><a>                                                                               : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><p><l><a>                                                                               : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><h><slash>                                                                              : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 #   In group 7 of "I"                                                                              : "ℐ" U2110 # SCRIPT CAPITAL I
 <Multi_key><I><asciitilde>                                                                         : "ℐ" U2110 # SCRIPT CAPITAL I
 #   In group 9 of "I"                                                                              : "ℑ" U2111 # BLACK-LETTER CAPITAL I
