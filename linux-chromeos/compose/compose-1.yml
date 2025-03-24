@@ -4454,7 +4454,8 @@
 #   a trailing asciitilde, blackletter is numbersign, Hebrew gets a trailing
 #   backslash based on the shape of aleph (here the symbol "ℵ" U2135) although
 #   backslash is also the ASCII equivalent of reversed, Greek gets a trailing
-#   at sign, and italic translates to a trailing slash.
+#   at sign, and italic translates to a trailing slash although this is used to
+#   denote negation in other instances: "∄" U2204, "∅" U2205.
 #
 #   Many of these are included in groups 6 to 10, where the complete sets of
 #   alphanumeric mathematical symbols are supported. Not so the liter symbol
@@ -4495,7 +4496,7 @@
 <Multi_key><H><H>                                                                                  : "ℍ" U210D # DOUBLE-STRUCK CAPITAL H
 #
 #   These sequences for the Planck constant could be truncated to "PL", but
-#   they are not, with respect to the physician’s name. However, for
+#   they are not, with respect to the physicist’s name. However, for
 #   convenience, an almost case insensitive alternative is also provided.
 #
 #   In group 8-period of "h"                                                                       : "ℎ" U210E # PLANCK CONSTANT
