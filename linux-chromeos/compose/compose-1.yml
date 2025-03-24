@@ -4470,6 +4470,10 @@
 #
 #   In group 8 of "C"                                                                              : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
 <Multi_key><C><C>                                                                                  : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
+#   In group 1 of "X" as of "Ɛ" U0190                                                              : "ℇ" U2107 # EULER CONSTANT
+#   In group 3 of "E" as of "Ɛ" U0190                                                              : "ℇ" U2107 # EULER CONSTANT
+#   https://en.wikipedia.org/wiki/Talk:Euler%27s_constant#%E2%84%87_(U+2107_EULER_CONSTANT)
+#   https://unicode.org/mail-arch/unicode-ml/y2002-m04/0073.html
 #Multi_key><E><U><L><E><R>                                                                         : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><E><U><L>                                                                               : "ℇ" U2107 # EULER CONSTANT
 <Multi_key><E><u><l>                                                                               : "ℇ" U2107 # EULER CONSTANT
