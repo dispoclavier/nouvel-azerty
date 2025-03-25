@@ -3923,8 +3923,8 @@
 #
 #   Symbols are parsed consistently with the Latin script, from left to right
 #   and from top to bottom. As a result, for many patterns like "⤧" U2927,
-#   parsing starts in the upper left corner. Consistently, it goes also down
-#   the z axis  first if there is any, as in "⤫" U292B, "⤬" U292C.
+#   parsing starts in the upper left corner. Consistently, it also goes down
+#   the z axis first, if there is any, as in "⤫" U292B, "⤬" U292C.
 #
 #
 #   Trailing space
