@@ -3921,10 +3921,22 @@
 #
 #   Parsing order
 #
-#   Symbols are parsed consistently with the Latin script, from left to right
-#   and from top to bottom. As a result, for many patterns like "⤧" U2927,
-#   parsing starts in the upper left corner. Consistently, it also goes down
-#   the z axis first, if there is any, as in "⤫" U292B, "⤬" U292C.
+#   Symbols supported by descriptive sequences are parsed consistently with the
+#   Latin script, from left to right and from top to bottom. As a result, for
+#   many patterns like "⤧" U2927, parsing starts in the upper left corner.
+#   Consistently, it also goes down the z axis first, if there is any, as in
+#   "⤫" U292B, "⤬" U292C.
+#
+#
+#   Order insensitivity
+#
+#   As far as possible, descriptive sequences of symmetric symbols such as
+#   "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN are fully or partly symmetric for the
+#   purpose of enhancing UX. The same holds true for sequences with attributes,
+#   with this section supporting trailing attributes, while related dead keys
+#   have multikey equivalents with the attribute in leading position.
+#   See "⋈" U22C8
+#   See # # Superscript or subscript signs, symbol, punctuation
 #
 #
 #   Trailing space
@@ -4360,8 +4372,10 @@
 #
 # # Superscript or subscript signs, symbol, punctuation
 #
-#   Primarily supported by dead keys and their multikey equivalents, where the
-#   sequences work the other way around, and without space termination.
+#   These are primarily supported by the dead keys dedicated to superscripting
+#   and subscripting not included in keysymdef.h but required for full Unicode
+#   support. Their multikey equivalents are not space terminated and work the
+#   other way around, resulting in a UX enhancing order insensitivity.
 #   See #*# SUPERSCRIPT
 #   See #*# SUBSCRIPT
 #
