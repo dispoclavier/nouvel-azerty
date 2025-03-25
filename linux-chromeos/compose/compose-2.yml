@@ -877,6 +877,11 @@
 #   dead_grave for consistency.
 #   See #*# GRAVE
 #
+#   "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E is called by its Unicode 1.0 name
+#   "LATIN CAPITAL LETTER TURNED E" in this list, since it is the capital of
+#   "ǝ" U01DD LATIN SMALL LETTER TURNED E, not "ɘ" U0258 LATIN SMALL LETTER
+#   REVERSED E.
+#
 <dead_tilde><dead_grave>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                                 <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
