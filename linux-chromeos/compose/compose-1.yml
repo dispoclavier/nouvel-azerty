@@ -4590,9 +4590,11 @@
 #   https://www.unicode.org/charts/PDF/U2190.pdf
 #   https://www.unicode.org/charts/nameslist/n_2190.html
 #
-#   Single-line stem (U2190..) and double-line stem (U21D0..) basic arrows used
-#   in math are also easily input by digits 0..9 in groups 2 and 3.
+#   Single-line stem (U2190..U2199) and double-line stem (U21D0..U21D9) basic
+#   arrows used in math are also easily input by digits 0..9 in groups 2 and 3.
 #   See # # Arrows as on the numpad
+#   See # # Basic simple arrows
+#   See # # Basic double arrows
 #
 <Multi_key><less><minus>                                                                   <space> : "←" U2190 # LEFTWARDS ARROW
 <Multi_key><less><minus>                                                            <nobreakspace> : "←" U2190 # LEFTWARDS ARROW
