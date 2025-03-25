@@ -3938,6 +3938,9 @@
 #   See "⋈" U22C8
 #   See # # Superscript or subscript signs, symbol, punctuation
 #
+#   By contrast, many sequences are required to be order sensitive, as for
+#   "⨤" U2A24 and "⨦" U2A26.
+#
 #
 #   Trailing space
 #
@@ -7376,10 +7379,11 @@
 <Multi_key><nobreakspace><space><o><plus>                                                          : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><nobreakspace><nobreakspace><o><plus>                                                   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #   In #*# CIRCUMFLEX                                                                              : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-#Multi_key><less><plus> is in dead_circumflex.                                                     : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 #Multi_key><asciicircum><plus> conflicts with "⁺" U207A.                                           : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-<Multi_key><a><plus>                                                                               : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+#Multi_key><less><plus> is in dead_circumflex and is symmetricised by this.                        : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<Multi_key><plus><less>                                                                            : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 #Multi_key><asciitilde><plus> conflicts with "Ỡ" U1EE0.                                            : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
+#   See "⨦" U2A26                                                                                  : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 #   When in #*# DOT_BELOW, <plus> conflicts with "Ợ" U1EE2.                                        : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
