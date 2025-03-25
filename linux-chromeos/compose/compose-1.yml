@@ -5552,7 +5552,7 @@
 #   For "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN, slash and backslash can be hit in
 #   any order. This enables pressing them simultaneously and prevents screwing
 #   up these symbols, as opposed to making slash-backslash a shortcut for JOIN,
-#   reserving backslash-slash for BOWTIE, under the rule that parsing starts at
+#   reserving backslash-slash for BOWTIE, under the rule that parsing starts in
 #   the upper left corner.
 #   See #   Parsing order
 #
@@ -7323,6 +7323,7 @@
 #
 #   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
 #   sequences with a leading space for uniqueness.
+#   See "⋈" U22C8
 #   See #   Leading space
 #
 <Multi_key><space><bar><backslash><slash><bar>                                                     : "⨝" U2A1D # JOIN
