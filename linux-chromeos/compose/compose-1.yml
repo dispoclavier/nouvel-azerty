@@ -3609,6 +3609,7 @@
 # # Symbols for deletion keys
 #
 #   Backspace.
+#Multi_key><b><k><s><p>                                                                            : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><b><k><s>                                                                               : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><B><K>                                                                                  : "⟵" U27F5 # LONG LEFTWARDS ARROW
 #   Delete to the left.
@@ -4113,10 +4114,10 @@
 #
 #   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
 #   at least twice, for intuitivity. As a result, the triple asciitilde of the
-#   long variants is inconsistent with the double minus or equal of other long
-#   arrows, due to single asciitilde being required for wave arrows "↜" U219C,
-#   "↝" U219D, while the directly pointing variants "⤳" U2933, "⬿" U2B3F have
-#   a minus stem segment before their arrowhead.
+#   long variants is consistent only with triple minus/equal variant sequences
+#   of the other long arrows, due to single asciitilde being required for wave
+#   arrows "↜" U219C, "↝" U219D, while the directly pointing variants "⤳" U2933
+#   and "⬿" U2B3F have a minus stem segment before their arrowhead.
 #
 #   Vertical arrow heads are composed as if they were turned 90° to the left,
 #   because stacked symbols are parsed from top to bottom; heads of up arrows
