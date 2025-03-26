@@ -4464,6 +4464,7 @@
 <Multi_key><ampersand><less><minus><greater>                                                       : "⃡" U20E1 # COMBINING LEFT RIGHT ARROW ABOVE
 <Multi_key><ampersand><backslash>                                                                  : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
 <Multi_key><ampersand><bar><bar>                                                                   : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
+#Multi_key><ampersand><slash><slash>                                                               : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
 <Multi_key><ampersand><slash>                                                                      : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
 <Multi_key><ampersand><minus><apostrophe>                                                          : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><ampersand><minus><rightsinglequotemark>                                                : "⃬" U20EC # COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
