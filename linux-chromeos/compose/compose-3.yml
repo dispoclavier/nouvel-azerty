@@ -2204,15 +2204,17 @@
 #   The watch emoji are mapped here based on the mnemonic of time notation.
 #
 #   "¦" U00A6 BROKEN BAR repurposed as multikey symbol is in group 11, where
-#   the “double” mnemonic is carried by the colon base character, while the
-#   “single” mnemonic is in the group number, as opposed to group 12 used for
-#   "‖" U2016 DOUBLE VERTICAL LINE, consistently with "∥" U2225 in the same
-#   group of bar.
+#   the vertically “double” mnemonic is carried by the colon base character,
+#   while the horizontally “single” mnemonic is in the group number, as opposed
+#   to group 12 used for "‖" U2016 DOUBLE VERTICAL LINE, consistently with
+#   "∥" U2225 in the same group of bar.
+#   See # # Symbols for multikey and composition
 #   See # # C10 bar
 #
-#   For an easier input method with respect to its potential high frequency,
-#   "¦" U00A6 is also in dead_diaeresis followed by backslash.
-#   See # # Symbols for multikey and composition
+#   For an easier input method with respect to its potentially high frequency
+#   due to its intended repurposing as multikey symbol, "¦" U00A6 is also in
+#   dead_diaeresis followed by backslash.
+#   See #*# DIAERESIS
 #
 <UEFD0>                                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR math
 <Multi_key><numbersign>                                                                    <colon> : "⋅" U22C5 # DOT OPERATOR math
