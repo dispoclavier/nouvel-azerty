@@ -4184,6 +4184,7 @@
 #   Order matters unlike in en_US.UTF-8/Compose not supporting "∓" U2213. But
 #   the sequence supported here for "±" U00B1, without space termination, is
 #   sideways compatible, while the reverse sequence is used for "∓" U2213.
+#   See #   Order sensitivity
 #
 #   On complete keyboard layouts, "±" U00B1 is on level 7 on the key where the
 #   minus sign "−" U2212 is on level 5.
@@ -4396,6 +4397,7 @@
 #   other way around, resulting in a UX enhancing order insensitivity.
 #   See #*# SUPERSCRIPT
 #   See #*# SUBSCRIPT
+#   See #   Order sensitivity
 #
 <Multi_key><plus><asciicircum>                                                                     : "⁺" U207A # SUPERSCRIPT PLUS SIGN
 <Multi_key><minus><asciicircum>                                                            <space> : "⁻" U207B # SUPERSCRIPT MINUS
