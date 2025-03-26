@@ -3342,7 +3342,7 @@
 #
 # # Shadowed circle
 #
-#   Also in group 12 of @.
+#   Also in group 12 of "@".
 #   The sequence « ¦() » conflicts with "≬" U226C BETWEEN.
 #
 <Multi_key><parenleft><underscore><parenright>                                                     : "❍" U274D # SHADOWED WHITE CIRCLE
@@ -3566,12 +3566,16 @@
 #
 #   Some of these are case sensitive.
 #
+#   Enter, case sensitive.
 <Multi_key><e><n><t>                                                                               : "⌤" U2324 # UP ARROWHEAD BETWEEN TWO HORIZONTAL BARS
 <Multi_key><E><N><T>                                                                               : "⎆" U2386 # ENTER SYMBOL
+#   Line feed.
 <Multi_key><l><f>                                                                                  : "↴" U21B4 # RIGHTWARDS ARROW WITH CORNER DOWNWARDS
 <Multi_key><L><F>                                                                                  : "↴" U21B4 # RIGHTWARDS ARROW WITH CORNER DOWNWARDS
+#   Return, case sensitive.
 <Multi_key><r><e><t>                                                                               : "↵" U21B5 # DOWNWARDS ARROW WITH CORNER LEFTWARDS
 <Multi_key><R><E><T>                                                                               : "⏎" U23CE # RETURN SYMBOL
+#   Long return.
 <Multi_key><l><r><e><t>                                                                            : "⮠" U2BA0 # DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
 <Multi_key><L><R><E><T>                                                                            : "⮠" U2BA0 # DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
 #
@@ -3597,24 +3601,30 @@
 #   See # # Arrows as on the numpad
 #   See #*# HORN
 #
+#Multi_key><h><o><m><e>                                                                            : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
 <Multi_key><h><o><m>                                                                               : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
 <Multi_key><H><O><M>                                                                               : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
 #
 #
 # # Symbols for deletion keys
 #
+#   Backspace.
 <Multi_key><b><k><s>                                                                               : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><B><K>                                                                                  : "⟵" U27F5 # LONG LEFTWARDS ARROW
+#   Delete to the left.
 <Multi_key><x><t><l>                                                                               : "⌫" U232B # ERASE TO THE LEFT
 <Multi_key><X><T><L>                                                                               : "⌫" U232B # ERASE TO THE LEFT
-<Multi_key><x><t><r>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
-<Multi_key><X><T><R>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
+#   Delete.
 <Multi_key><d><e><l>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
 <Multi_key><D><E><L>                                                                               : "⌧" U2327 # X IN A RECTANGLE BOX
+#   Delete to the right.
+<Multi_key><x><t><r>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
+<Multi_key><X><T><R>                                                                               : "⌦" U2326 # ERASE TO THE RIGHT
 #
 #
 # # Symbol for Escape key
 #
+#Multi_key><e><s><c>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 <Multi_key><e><s>                                                                                  : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 <Multi_key><E><S>                                                                                  : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 #
@@ -3626,40 +3636,52 @@
 #   increments the level index by 4.
 #   See dispocla.cpp // ##  Name and mapping of the level 5 modifier key
 #
+#   Level 2.
 <Multi_key><l><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><l><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><L><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><L><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+#   Niveau 2.
 <Multi_key><n><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><n><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><N><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><N><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
+#   Level 3.
 <Multi_key><l><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><l><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><L><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><L><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+#   Niveau 3.
 <Multi_key><n><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><n><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><N><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
 <Multi_key><N><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+#   Level 5.
 <Multi_key><l><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><l><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><L><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><L><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+#   Niveau 5.
 <Multi_key><n><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><n><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><N><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><N><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+#   Caps lock.
 <Multi_key><c><a><p><s>                                                                            : "⇪" U21EA # UPWARDS WHITE ARROW FROM BAR, capitals lock
 <Multi_key><C><A><P><S>                                                                            : "⇪" U2BB8 # UPWARDS WHITE ARROW FROM BAR WITH HORIZONTAL BAR, capitals lock
 <Multi_key><c><a><p><l>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
 <Multi_key><C><A><P><L>                                                                            : "⇬" U21EC # UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR, capitals lock
+#   Num lock.
 <Multi_key><n><m><l>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
 <Multi_key><N><M><L>                                                                               : "⇭" U21ED # UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
+#   Control.
+#Multi_key><c><t><r><l>                                                                            : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
 <Multi_key><c><t>                                                                                  : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
 <Multi_key><C><T>                                                                                  : "⎈" U2388 # HELM SYMBOL, Control key ISO symbol
+#   Alt.
 <Multi_key><a><l><t>                                                                               : "⎇" U2387 # ALTERNATIVE KEY SYMBOL
 <Multi_key><A><L><T>                                                                               : "⎇" U2387 # ALTERNATIVE KEY SYMBOL
+#   Option.
 <Multi_key><o><p><t>                                                                               : "⌥" U2325 # OPTION KEY
 <Multi_key><O><P><T>                                                                               : "⌥" U2325 # OPTION KEY
 #
@@ -3678,9 +3700,6 @@
 <Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
-#   A sideways compatible input method for "¦" U00A6 BROKEN BAR, repurposed as
-#   multikey symbol, is available by asciicircum as in en_US.UTF-8/Compose.
-#   See # # Symbols for multikey and composition
 #   The sideways compatible sequence « ¦!^ » as in en_US.UTF-8/Compose could be
 #   supported in dead_belowdot, but since the relationship to the dead key is
 #   merely fortuitous, it is here without the dead key alternative, and without
@@ -4089,7 +4108,15 @@
 #   digits are prepended as for "⇇" U21C7, "⇶" U21F6, "∬" U222C, "⋐" U22D0.
 #
 #   Long arrows are horizontal throughout and are composed with double minus
-#   or double equal, as for "⟶" U27F6.
+#   or double equal for brevity, or triple for unconflicting consistency with
+#   "⟿" U27FF, "⬳" U2B33, as for "⟶" U27F6.
+#
+#   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
+#   at least twice, for intuitivity. As a result, the triple asciitilde of the
+#   long variants is inconsistent with the double minus or equal of other long
+#   arrows, due to single asciitilde being required for wave arrows "↜" U219C,
+#   "↝" U219D, while the directly pointing variants "⤳" U2933, "⬿" U2B3F have
+#   a minus stem segment before their arrowhead.
 #
 #   Vertical arrow heads are composed as if they were turned 90° to the left,
 #   because stacked symbols are parsed from top to bottom; heads of up arrows
@@ -4098,13 +4125,6 @@
 #
 #   Harpoon barbs, by contrast, become grave or apostrophe/rightsinglequotemark
 #   depending on their slant, regardless of stem direction.
-#
-#   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
-#   at least twice, for intuitivity. As a result, the triple asciitilde of the
-#   long variants is inconsistent with the double minus or equal of other long
-#   arrows, due to single asciitilde being required for wave arrows "↜" U219C,
-#   "↝" U219D, while the directly pointing variants "⤳" U2933, "⬿" U2B3F have
-#   a minus stem segment before their arrowhead.
 #
 #
 #   Angle symbols
@@ -4143,7 +4163,7 @@
 #   See #*# STROKE
 #
 #   Vertical bar: "⫾" U2AFE, "∣" U2223, "‖" U2016, "⦀" U2980, "∥" U2225,
-#                 "¦" U00A6, "⫴" U2AF4, "⫿" U2AFF, "⏸" U23F8, "⫼" U2AFC.
+#                 "⫴" U2AF4, "⫿" U2AFF, "⏸" U23F8, "⫼" U2AFC.
 #   See #*# MACRON
 #
 #   Backslash: "∖" U2216, "⧹" U29F9, "⟍" U27CD, "⧵" U29F5.
