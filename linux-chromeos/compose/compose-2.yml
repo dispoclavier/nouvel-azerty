@@ -13330,9 +13330,9 @@
 #   method by <dead_circumflex><f> since French has no words including an -êf-
 #   digram. Plus, <dead_circumflex><dollar> also yields this small letter.
 #
-#   Likewise, U2300 DIAMETER SIGN, in group 1 of (, is given yet another input
-#   method by <dead_circumflex><d>, <dead_circumflex><D> thanks to French not
-#   having any word with -êd-.
+#   Likewise, U2300 DIAMETER SIGN, in group 1 of "(", is given yet another
+#   input method by <dead_circumflex><d>, <dead_circumflex><D> thanks to
+#   French not having any word with -êd-.
 #
 #   U016C LATIN CAPITAL LETTER U WITH BREVE is used in Esperanto and has thus a
 #   shortcut by <dead_circumflex><B>, and U016D LATIN SMALL LETTER U WITH BREVE
@@ -16569,8 +16569,8 @@
 #   See # # MACRON&DIAERESIS
 #   See # # Symbols for multikey and composition
 #
-#   "¦" U00A6 is also in group 12 of |.
-#   See # # C10 bar
+#   "¦" U00A6 is also in group 11 of ":".
+#   See # # B09 colon
 #
 #   Superscript digits, formerly in dead_circumflex, are also supported for the
 #   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
