@@ -3947,7 +3947,8 @@
 #   purpose of enhancing UX. The same holds true for sequences with attributes,
 #   with this section supporting trailing attributes, while related dead keys
 #   have multikey equivalents with the attribute in leading position.
-#   See "⋈" U22C8
+#   See "⨢" U2A22
+#   See "⨣" U2A23
 #   See # # Superscript or subscript signs, symbol, punctuation
 #   See "⁺" U207A
 #
@@ -7386,7 +7387,8 @@
 <Multi_key><z><KP_1>                                                                       <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 #   In #*# RING_ABOVE                                                                              : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
-#Multi_key><asterisk><plus> is in dead_abovering.                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+#Multi_key><asterisk><plus> is in dead_abovering and is symmetricised by this (not in #*# HORN).   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+<Multi_key><plus><asterisk>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #Multi_key><o><asciicircum><plus>                                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><o><asciicircum>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><space><space><o><plus>                                                                 : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
@@ -7394,7 +7396,7 @@
 <Multi_key><nobreakspace><nobreakspace><o><plus>                                                   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #   In #*# CIRCUMFLEX                                                                              : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 #Multi_key><asciicircum><plus> conflicts with "⁺" U207A.                                           : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-#Multi_key><less><plus> is in dead_circumflex and is symmetricised by this.                        : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+#Multi_key><less><plus> is in dead_circumflex and is symmetricised by this (not in #*# HORN).      : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><plus><less>                                                                            : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 #Multi_key><asciitilde><plus> conflicts with "Ỡ" U1EE0.                                            : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 #   See "⨦" U2A26                                                                                  : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
