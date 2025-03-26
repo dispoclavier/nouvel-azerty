@@ -3919,6 +3919,18 @@
 #   need to be restored to prevent conflicts with new sequences.
 #
 #
+#   Design schemes
+#
+#   Math sequences are set up using one of two design schemes, or both:
+#
+#     * Description: ASCII symbols are used as basic shapes and concatenated to
+#       mimick the symbol’s shape, as for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN;
+#
+#     * Modification: An ASCII symbol is used as an attribute and appended to a
+#       preceding symbol, that may be a single character as for "⁺" U207A, or a
+#       description as for "⇖" U21D6.
+#
+#
 #   Parsing order
 #
 #   Symbols supported by descriptive sequences are parsed consistently with the
@@ -3928,7 +3940,7 @@
 #   "⤫" U292B, "⤬" U292C.
 #
 #
-#   Order insensitivity
+#   Order sensitivity
 #
 #   As far as possible, descriptive sequences of symmetric symbols such as
 #   "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN are fully or partly symmetric for the
@@ -3937,9 +3949,11 @@
 #   have multikey equivalents with the attribute in leading position.
 #   See "⋈" U22C8
 #   See # # Superscript or subscript signs, symbol, punctuation
+#   See "⁺" U207A
 #
 #   By contrast, many sequences are required to be order sensitive, as for
-#   "⨤" U2A24 and "⨦" U2A26.
+#   "±" U00B1 and "∓" U2213, "⨤" U2A24 and "⨦" U2A26.
+#   See # # Plus minus
 #
 #
 #   Trailing space
