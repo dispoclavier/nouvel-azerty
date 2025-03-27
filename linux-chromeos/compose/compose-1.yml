@@ -6485,7 +6485,7 @@
 #
 #   "⟵" U27F5.."⟾" U27FE have sequences based on both double and triple minus
 #   or equal for consistency and versatility.
-#   See #   Long arrowss
+#   See #   Long arrows
 #
 <Multi_key><less><minus><minus>                                                            <space> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><less><minus><minus>                                                     <nobreakspace> : "⟵" U27F5 # LONG LEFTWARDS ARROW
