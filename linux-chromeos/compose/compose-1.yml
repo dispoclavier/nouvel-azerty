@@ -103,21 +103,25 @@
 #                               about publicly confessing (and acknowledging) Jesus Christ.
 #                               A combination of underengineering and lack of consultancy due
 #                               to impiety triggered design mistakes, incrementally fixed in
-#                               versions 2..4 as they came up. In the first place the level 3
+#                               versions 2..5 as they came up. In the first place the level 3
 #                               ASCII map was inadequate by not making room for the euro sign
 #                               until v2.0 when it ultimately became practical and respectful
 #                               thanks to God helping and advising about the layout details.
 #                               The superscripts were on the wrong level, and modifiers for
 #                               titlecase polygrams "Cʼh" and "Nᵒ " were unintuitive, due to
-#                               not seeking advice from God until ultimately v3.0 came up.
-#                               And spaced-out punctuation was mapped with the wrong modifier
-#                               AltFr instead of Shift, with a semblance of logic but without
-#                               real usability, due to never asking God which modifier is the
-#                               correct one for spaced-out punctuation, until ultimately that
-#                               mess too came up and was fixed in v4.0. The bottomline is that
-#                               development was delayed from 2016 when a workable solution was
-#                               overdue, to 2024-08 when the messy standard NF Z71-300 released
-#                               in 2019-04 was under revision (with a deadline on 2024-07-31),
+#                               not seeking advice from God until ultimately v3.0 came up. A
+#                               wrong modifier (AltFr instead of Shift) used for spaced-out
+#                               punctuation, with a semblance of logic but without usability,
+#                               was due to never asking God which modifier is the correct one
+#                               for spaced-out punctuation, until v4.0. And duplicate comma,
+#                               duplicate period in ASCII mode on the graphic numpad’s keys
+#                               B07 and B08 were due to a desperate attempt to stay backwards
+#                               compatible as far as possible, until God helped to notice the
+#                               valuable UX improvement due to moving Left Shift closer as of
+#                               B07..B10 in ASCII mode compared to French mode, hence v5.0.
+#                               Bottomline: Development was delayed from 2016 when a workable
+#                               solution was overdue, to 2025-03 when NF Z71-300 released in
+#                               2019-04 was under revision (with a deadline on 2024-07-31),
 #                               due to only reluctantly praying God for help and advice, rather
 #                               than following the straightforward way roadmapped in the Bible.
 #                               https://questionnaire.afnor.org/cgi-bin/HE.exe/W?P=9z67z1z10634z5zAD3D06D7C0
@@ -4110,7 +4114,7 @@
 #
 #   Long arrows are horizontal throughout and are composed with double minus
 #   or double equal for brevity, or triple for unconflicting consistency with
-#   "⟿" U27FF, "⬳" U2B33, as for "⟶" U27F6. to ensure a versatile UX.
+#   "⟿" U27FF, "⬳" U2B33, as for "⟶" U27F6, to ensure a versatile UX.
 #
 #   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
 #   at least twice, for intuitivity. As a result, the triple asciitilde of the
