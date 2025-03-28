@@ -1,4 +1,4 @@
-//                       Date: 2025-02-27T2157+0100
+//                       Date: 2025-03-28T1314+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -83,17 +83,20 @@
 // keyboard between default mode or French mode for instance, and ASCII mode.
 // It affects non-alphabetic keys only, because alphabetic keys should not be
 // affected by ModLock, with respect to cross-platform compatibility, since a
-// similar functionality on Windows is Caps Lock insensitive.
+// similar functionality on Windows (Kana Lock) is Caps Lock insensitive.
 //
-// A second graphic toggle is required to toggle the row E keys between letters
-// and digits, independently of the CapsLock toggle, that is set to also affect
-// the diacriticized letters, most of which are on row E too. The second toggle
-// also maintains level 1 access for the ASCII single and double quotes and the
-// ASCII hyphen and underscore, all of which are on row E level 1 of the French
-// AZERTY. Additionally, ASCII mode has level 2 positions for one set of paired
-// punctuation, used for one out of the two level-3 right-hand pairs. Frequency
-// is the criterion for picking the braces rather than the brackets. Plus, this
-// matches US-QWERTY.
+// The purpose of this required second graphic toggle is to toggle row E keys
+// between letters and digits, independently of the CapsLock toggle, that is
+// set to also affect the diacriticized letters, most of which are on row E.
+//
+// The second toggle also maintains level 1 access to ASCII single and double
+// quotes, underscore and the ASCII hyphen, all of which are on row E, level 1,
+// of the French AZERTY.
+//
+// Additionally, on keys D11 and D12 (consistently with US-QWERTY), ASCII mode
+// has level 2 positions for one set of paired punctuation, used for one out of
+// the two level-3 right-hand pairs. Frequency is the criterion for picking the
+// braces rather than the brackets. Plus, this matches US-QWERTY.
 // http://xahlee.info/comp/computer_language_char_distribution.html
 //
 // ASCII mode is not limited to ASCII, as row E and keys D12, C11, C12 output
@@ -168,18 +171,17 @@
 // Alain LaBonté (initial design). Jan James was tasked with implementing the
 // Canadian multilingual standard keyboard layout for Microsoft, transforming
 // the group selector into a level 5 modifier key, although initially,
-// CAN/CSA Z243.200-92 was meant to comply with ISO/IEC 9995-2. But that is not
-// how things are expected to work on properly designed keyboard layouts.
+// CAN/CSA Z243.200-92 was meant to comply with ISO/IEC 9995-2.
 //
-// Instead, keyboard layouts using a scheme like in this file have a level 5
+// However, keyboard layouts using a scheme like in this file have a level 5
 // modifier located lefthand so as to be usable for an extended numpad below
 // the 7 8 9 0 keys, where embedded numpads on compact keyboards are located,
 // too.
 //
 // The repurposed level 5 modifier is called AltFr by analogy with AltGr and
 // to account for its origin on French keyboard layouts, like Microsoft also
-// called the peculiar Caps Lock mappings 'SGCaps', an abbreviation standing
-// for 'Swiss-German Capitals'.
+// called the peculiar Caps Lock mappings "SGCaps", an abbreviation standing
+// for "Swiss-German Capitals".
 //
 // This level 5 modifier is repurposed and moved to the left on the “ISO key”
 // B00. On ANSI keyboards with ISO compatibility, where the ISO key takes the
@@ -493,7 +495,7 @@
 // Advantages of AltFr over Shift for spaced-out punctuation characters:
 //
 //   1  No inadvertent insertion of NNBSP while typing unspaced punctuation;
-//   2  Consistency with the key name 'AltFr' as 'Alternate French' modifier;
+//   2  Consistency with the key name "AltFr" as "Alternate French" modifier;
 //   3  Shift is often considered too far left, while AltFr is better placed;
 //   4  Stability of the question mark as the only unmoved big punctuation;
 //   5  Minimal cross-mode user experience inconsistency, as Shift is stable;
@@ -615,7 +617,7 @@ xkb_symbols "kbfrFRs" {
 	include "inet(evdev)" // Easy access and internet keys.
 
 	//
-	// ## New 'AltFr' modifier key
+	// ## New "AltFr" modifier key
 	//
 	// See ## Level 5 modifier
 	//
@@ -900,9 +902,9 @@ xkb_symbols "kbfrFRs" {
 	// Level: 1        2        3        5        4        6        7        8
 	// Index: 1        2        3        4        5        6        7        8
 	//
-	//                                   Graphic numpad
-	//                          ASCII symbol .... Dead key
 	//        Latin letter ............................... Abbreviation indicator
+	//                          ASCII symbol .... Dead key ........ Graphics
+	//                                   Graphic numpad .................... More
 	//
 	//
 	// ## Keysyms: maximum number
@@ -1196,13 +1198,13 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <AB07> {
 		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,              U1F612,              U1F499 ],
-		[               comma,            question,            question,               comma,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
-	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x' U2007 ' ' FIGURE SPACE; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji [2021-07-20T2206+0200]; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
+		[               comma,            question,            question,            question,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
+	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
 		[              period,               UEF60,              exclam,              exclam,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
-		[              period,              exclam,              exclam,              period,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
-	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#' U2008 ' ' PUNCTUATION SPACE; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
+		[              period,              exclam,              exclam,              exclam,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
+	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#'; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
