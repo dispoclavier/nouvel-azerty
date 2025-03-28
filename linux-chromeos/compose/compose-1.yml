@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 4.26.0d" # See # # Notes about syntax
+<UEFA0>                     : "version 5.0.0d" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -4112,16 +4112,20 @@
 #   appended like those denoting size as for "◻" U25FB, while multiplying
 #   digits are prepended as for "⇇" U21C7, "⇶" U21F6, "∬" U222C, "⋐" U22D0.
 #
-#   Long arrows are horizontal throughout and are composed with double minus
-#   or double equal for brevity, or triple for unconflicting consistency with
-#   "⟿" U27FF, "⬳" U2B33, as for "⟶" U27F6, to ensure a versatile UX.
+#   Long arrows like "⟶" U27F6, being horizontal throughout, are composed with
+#   double minus or double equal for brevity, as well as triple minus or triple
+#   equal for unconflicting consistency with "⟿" U27FF, "⬳" U2B33, to ensure
+#   a versatile user experience, where it is up to the user to pick consistency
+#   or efficiency as their top priority.
 #
 #   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
 #   at least twice, for intuitivity. As a result, the triple asciitilde of the
 #   long variants is consistent only with triple minus/equal variant sequences
 #   of the other long arrows, due to single asciitilde being required for wave
-#   arrows "↜" U219C, "↝" U219D, while the directly pointing variants "⤳" U2933
-#   and "⬿" U2B3F have a minus stem segment before their arrowhead.
+#   arrows "↜" U219C, "↝" U219D (the directly pointing variants "⤳" U2933 and
+#   "⬿" U2B3F have a minus stem segment before their arrowhead), while normal
+#   length squiggle arrows "⇜" U21DC, "⇝" U21DD are intuitively input by the
+#   means of double asciitilde sequences.
 #
 #   Vertical arrow heads are composed as if they were turned 90° to the left,
 #   because stacked symbols are parsed from top to bottom; heads of up arrows
