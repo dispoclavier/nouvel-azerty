@@ -1,4 +1,4 @@
-//                       Date: 2025-03-28T1314+0100
+//                       Date: 2025-03-28T1617+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -678,16 +678,24 @@ xkb_symbols "kbfrFRs" {
 	// ## Superscript letters
 	//
 	// Level 6 superscript letters are related to indices 1 and 2 but cannot be
-	// mapped on index 3, for the above reasons.
+	// mapped on index 3, with respect to auto-generated keyboard views.
+	// See ## Level inconsistency
 	//
-	// Latin superscript letters are called MODIFIER LETTER except the first few,
-	// despite their use goes far beyond phonetics, given that ᵈ, ᵉ, ʳ, and ˢ are
-	// used as regular ordinal indicators in French, and ᵃ, ᵒ, and ˢ in Italian,
-	// Portuguese and Spanish. The scheme extends to support other abbreviations,
-	// with accented letters composed using combining diacritics.
+	// Most Latin superscript letters have Unicode names based on MODIFIER LETTER
+	// with the rationale that superscripting must be done by formatting software
+	// exclusively when writing natural languages.
+	// See Compose.yml #*# SUPERSCRIPT
+	//
+	// However, in French, superscript letters are abbreviation indicators, hence
+	// the superscript small alphabet is mapped on live keys. Indeed, their use
+	// goes far beyond phonetics, given that ᵈ, ᵉ, ʳ, and ˢ are regular ordinal
+	// indicators in French, and ᵃ, ᵒ, and ˢ in Italian, Portuguese and Spanish.
+	//
+	// The scheme extends to support other abbreviations, with accented letters
+	// composed using combining diacritics.
 	//
 	// As ordinal indicators, ᵈ, ᵉ, ʳ, and ˢ are in Unicode CLDR since v34 (2018)
-	// for the French locale, waiting for the other locales to follow up.
+	// for the French locale, waiting for other locales to follow up.
 	// https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
 	// https://github.com/unicode-org/cldr/blob/release-45/common/main/fr.xml#L1528
 	//
@@ -741,10 +749,15 @@ xkb_symbols "kbfrFRs" {
 	// front of currency symbols like it is in front of measurement units.
 	//
 	// The punctuation keys B07..B10, C11..C12, D11..D12 are used for the eight
-	// unspaced big punctuation marks that have spaced-out support on level 2.
+	// unspaced big punctuation marks that have spaced-out support on level 2. In
+	// ASCII mode, the ASCII subset on B07..B10 is supported consistently for a
+	// stable user experience, as opposed to duplicating comma on B07 and period
+	// on B08 to seemingly improve the graphic numpad, for a level-1 and keycap
+	// consistency defeating the upside of functionally moving Left Shift closer.
 	//
 	// Level 6 is used for superscript small letters, used as ordinal indicators
 	// and other abbreviation indicators.
+	// See ## Superscript letters
 	//
 	// Level 7 completes the level 5 map with some useful extensions such as the
 	// YEN SIGN that leaves its place on Y to the micro sign, and plusminus that
