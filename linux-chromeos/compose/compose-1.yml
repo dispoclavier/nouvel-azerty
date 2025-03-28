@@ -1195,13 +1195,16 @@
 #   The two Latin-1 ordinal indicators "ª" U00AA FEMININE ORDINAL INDICATOR and
 #   "º" U00BA MASCULINE ORDINAL INDICATOR are legacy characters, superseded by
 #   the use of preformatted superscript small letters for ordinal indicators in
-#   Italian, Portuguese and Spanish, also supporting plural forms. Consistently
-#   French ordinal indicators are preformatted superscripts, too: ᵈ, ᵉ, ʳ, ˢ.
+#   Italian, Portuguese and Spanish, also supporting plural forms.
+#
+#   Consistently, French ordinal indicators are preformatted superscripts, too:
+#   "ᵈ" U1D48, "ᵉ" U1D49, "ʳ" U02B3, "ˢ" U02E2.
 #   https://github.com/unicode-org/cldr/blob/2ebe44fd537132620f61830ada804fb7abe1ec6b/common/main/fr.xml#L1546
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L1546
+#   See #*# SUPERSCRIPT
 #
-#   The two legacy ordinal indicators are supported in group 12 of "^" on key A
-#   and in group 12 of "}" on key O.
+#   The two legacy ordinal indicators are supported with alphabetic mnemonics
+#   in group 12 of "^" on key A, and in group 12 of "}" on key O.
 #   See # # D01 asciicircum
 #   See # # D09 braceright
 #
@@ -2099,17 +2102,19 @@
 #   from fully deploying its adverse effects by taking up a live key position,
 #   or even only an easy-access dead key input method like in group 1 of U002D.
 #   (Ultimately, however, U2010 is in group 12 of U002D. And it may be input
-#   using the following mnemonic scheme.)
+#   using the following mnemonic scheme.) Else, U2010 would screw things up,
+#   from undeliverable email to broken links to parse errors.
 #   See # # C05 minus
-#
-#   Else, U2010 would screw everything up, from undeliverable email to broken
-#   links to parse errors.
 #
 #   The reason why Unicode, well aware of the duplicate encoding pitfalls, and
 #   carefully avoiding an extra decimal dot, an extra factorial, and an extra
 #   punctuation apostrophe, was fooled into double-encoding the hyphen, was the
-#   old ISO-8859 misnomer HYPHEN-MINUS, whereas ASCII parenthesized the Minus,
-#   just like it parenthesized the Decimal Point.
+#   old ISO-8859 misnomer HYPHEN-MINUS. ANSI by contrast, when designing ASCII,
+#   parenthesized the Minus, just like it parenthesized the Decimal Point. To
+#   be consistent, ISO should have called U002E *PERIOD-DECIMAL-POINT instead
+#   of PERIOD. ISO calling U002D HYPHEN-MINUS instead of *HYPHEN might be the
+#   reason why Unicode encoded U2010 to name it HYPHEN, instead of encoding no
+#   more than U2212 MINUS SIGN in the matter.
 #   https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf#page=12
 #
 #   Calling U002D "HYPHEN-MINUS" was like calling U002A *ASTERISK-MULTIPLY, and
@@ -2118,15 +2123,18 @@
 #   HYPHEN-MINUS might eventually not be a genuine hyphen. Yet it is, and it is
 #   repurposed in programming like so many other symbols. That is most probably
 #   how Unicode was fooled into encoding an extra hyphen, not noticing that the
-#   hyphen is already there.
+#   hyphen was already there.
 #
 #   As a consequence, we must stop taking the extra hyphen U2010 seriously, in
 #   order to prevent adverse effects on keyboard layout design when attempting
-#   to support U2010 on live key or by premium dead key like group 1 of minus.
+#   to support U2010 on live key or by premium dead key like group 1 of minus,
+#   where we have "⁃" U2043 HYPHEN BULLET instead, while HYPHEN is in group 12,
+#   like the outdated legacy ordinal indicators "ª" U00AA, "º" U00BA.
 #   See # # C05 minus
+#   See #^# Legacy ordinal indicators
 #
-#   By contrast, "‑" U2011 NON-BREAKING HYPHEN is so important that it is also
-#   in group 1 of equal.
+#   By contrast, "‑" U2011 NON-BREAKING HYPHEN is so important that it is on
+#   live key E06, level 2, and also in group 1 of equal.
 #   See # # B05 equal
 #
 #   The dashes based on multiples of the em dash encompass 8 characters listed
