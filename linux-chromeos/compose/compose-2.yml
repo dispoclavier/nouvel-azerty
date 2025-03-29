@@ -82,13 +82,15 @@
 #   tweaks are required, such as supporting superscript and subscript, using
 #   asciicircum and underscore repurposed, formerly circumflex and macron.
 #
-#   So, when "<" and ">" are used for circumflex and hacek (aka hatchek, caron)
-#   and "|" for macron, ":" gets used for diaeresis like in Vim, and <quotedbl>
+#   So, when "<" and ">" are used for circumflex and hacek (hatchek, caron)
+#   and "|" for macron, ":" gets used for diaeresis like in Vim, and quotedbl
 #   looks fine for double acute accent. A change that is the more desirable as
-#   it also fixes an issue with sequences for curly quotation marks.
+#   it supports the use of quotedbl as a base character for curly quotation
+#   marks.
+#   See # # Quotation mark input method
 #
-#   Bottom line: Full Unicode support requires an upgraded multikey scheme aka
-#   new-school input composition.
+#   Bottom line: Full Unicode support requires an upgraded multikey scheme,
+#   called "new-school input composition" for the purpose.
 #
 #
 # # Introducing new-school input composition
@@ -597,8 +599,8 @@
 #   was considered suboptimal but could not be changed any longer, since it is
 #   used as an identifier and as such is protected by a stability policy.
 #
-#   Ornamental quotation marks are input by diacritical dead key followed by
-#   group dead key.
+#   Ornamental quotation marks in the BMP are input by the corresponding diacritical dead
+#   key followed by group dead key.
 #
 #   SMP quotation mark ornaments U1F676.. are not supported, for cross-platform
 #   compatibility. But in the light of the new high surrogate input method,
@@ -822,15 +824,15 @@
 #
 # # High surrogate input method
 #
-#   ZWSP is used as the base character for the high surrogate of SMP letters in
-#   the dead key. In case of multiple high surrogates used in a dead key, the
-#   least frequent ones are in groups 1 and above. High surrogates required for
-#   letters in chained dead keys may be input also by any of the base dead keys
-#   for simplicity.
+#   U200B ZERO WIDTH SPACE (ZWSP) is used as a base character for the high
+#   surrogate of SMP letters in the dead key that they are supported in,
+#   because ZWSP is in synergy with the most comprehensive map of the dead keys
+#   on level 4 of the keys where their ASCII equivalent is on level 3.
 #
-#   The reason why ZWSP is that U200B is in synergy with the most comprehensive
-#   map of the dead keys on level 4 of the keys where their ASCII equivalent is
-#   on level 3.
+#   In case of multiple high surrogates used in a dead key, the least
+#   frequent ones are in groups 1 and above. High surrogates required for
+#   letters in chained dead keys may be input also by any of the base dead
+#   keys, for simplicity.
 #
 #   This high surrogate input method is based on the idea 2024-12-18T2228+0100,
 #   got in the context of washing a baby marrow (in French a courgette, Italian
@@ -839,24 +841,21 @@
 #
 # # Composed letters for languages in Togo
 #
-#   Based on the list that Mats Blakstad (<mats.gbproject_at_gmail.com>) shared
-#   on the Unicode public mailing list in 2016.
+#   This is based on the list that Mats Blakstad <mats.gbproject_at_gmail.com>
+#   shared on the Unicode public mailing list in 2016.
 #   “Possible to add new precomposed characters for local language in Togo?”
 #   https://unicode.org/mail-arch/unicode-ml/y2016-m02/0071.html
 #
 #   Sequences with Ɛ, ɛ and Ɔ, ɔ keysyms are for use on the Francophone Africa
 #   semiautomatic keyboard layout “kbfrAFs” and its remapped variant “kbfrAFsr”
-#   that have live keys for open e (Latin epsilon) and open o.
+#   that have live keys for open e, also known as Latin epsilon, and open o.
 #
 #   For a streamlined user experience, group 1 base letters are used for open
-#   e and o, turned e, Latin iota and Latin upsilon:
+#   e, open o and Latin upsilon, that are regularly supported in group 2 (since
+#   v5.0) while having shortcuts in group 1:
 #
 #       C   "Ɔ" U0186
 #       c   "ɔ" U0254
-#       H   "Ǝ" U018E
-#       h   "ǝ" U01DD
-#       M   "Ɩ" U0196
-#       m   "ɩ" U0269
 #       U   "Ʊ" U01B1
 #       u   "ʊ" U028A
 #       X   "Ɛ" U0190
@@ -8288,10 +8287,11 @@
 # # Ntilde for Breton and Spanish
 #
 #   The dead_tilde key has already an easy duplicate mapping on level 3 of
-#   the dead_circumflex key of AZERTY, and Atilde, Ntilde and Otilde have
-#   shorthands using dead_acute or dead_circumflex followed by A/Egrave or
-#   Ccedilla, but the unused group 1 of Egrave and Udiaeresis is also used,
-#   the latter for a Swiss QWERTZ layout, until another use case emerges.
+#   the dead_circumflex key of AZERTY, Atilde and Otilde have shorthands
+#   using dead_acute followed by Eacute or Agrave, and Ntilde has a
+#   shorthand using dead_circumflex followed by Ccedilla, but the otherwise
+#   unused group 1 of Egrave and Udiaeresis is also used, the latter for a
+#   Swiss QWERTZ layout, until another use case emerges.
 #
 <UEFD0>                                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
 <Multi_key><numbersign>                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
