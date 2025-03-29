@@ -873,8 +873,8 @@
 #
 #   Some virtual dead keys exist for the sake of one single character. Whether
 #   such a single-character dead key can be streamlined or not depends on the
-#   length of the code point, since on Windows, SMP characters need support for
-#   the high surrogate, with U200B as a base character.
+#   length of the code point, since on Windows, characters in the Supplemental
+#   Multilingual Plane (SMP) and above require support for the high surrogate.
 #   See # # High surrogate input method
 #   See # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   See # # COMBINING_ABOVE&CEDILLA
@@ -2061,9 +2061,9 @@
 #   This new multikey sequence is not the most user-friendly, but this is only
 #   about multikey support. U2013 and U2014, and depending on the variant, also
 #   U2015, are in the benefit of level 2 live key positions.
-#   See dispocla.cpp <AE03>
-#   See dispocla.cpp <AE04>
-#   See dispocla.cpp <AE08>
+#   See dispocla.cpp key <AE03>
+#   See dispocla.cpp key <AE04>
+#   See dispocla.cpp key <AE08>
 #
 <Multi_key><minus><minus><minus><minus>                                                            : "—" U2014 # EM DASH
 #
@@ -2148,35 +2148,46 @@
 #   See # # DIAERESIS&GROUP_1
 #   See # # C05 minus
 #
-#              HYPHEN-MINUS   quarter-dash (French “tiret quart-de-cadratin”)
-#                    HYPHEN   quarter-dash (French “tiret quart-de-cadratin”)
-#       NON-BREAKING HYPHEN   quarter-dash (French “tiret quart-de-cadratin”)
-#                   EN DASH   half dash (French “tiret demi-cadratin”)
-#            HORIZONTAL BAR   three-quarter-dash (or conjoining em dash)
-#                   EM DASH   full dash (French “tiret cadratin”)
-#               TWO-EM DASH   missing letters, missing word
-#             THREE-EM DASH   missing word, author’s name repetition
+#   #                NAME  description
 #
-<Multi_key><0><minus>                                                                              : "­" U00AD # SOFT HYPHEN
-<Multi_key><KP_0><KP_Subtract>                                                                     : "­" U00AD # SOFT HYPHEN
-<Multi_key><1><minus>                                                                              : "—" U2014 # EM DASH
-<Multi_key><KP_1><KP_Subtract>                                                                     : "—" U2014 # EM DASH
-<Multi_key><2><minus>                                                                              : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><KP_2><KP_Subtract>                                                                     : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><3><minus>                                                                              : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><KP_3><KP_Subtract>                                                                     : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><4><minus>                                                                              : "‐" U2010 # HYPHEN
-<Multi_key><KP_4><KP_Subtract>                                                                     : "‐" U2010 # HYPHEN
-<Multi_key><5><minus>                                                                              : "–" U2013 # EN DASH
-<Multi_key><KP_5><KP_Subtract>                                                                     : "–" U2013 # EN DASH
-<Multi_key><6><minus>                                                                              : "‑" U2011 # NON-BREAKING HYPHEN
-<Multi_key><KP_6><KP_Subtract>                                                                     : "‑" U2011 # NON-BREAKING HYPHEN
-<Multi_key><7><minus>                                                                              : "‒" U2012 # FIGURE DASH
-<Multi_key><KP_7><KP_Subtract>                                                                     : "‒" U2012 # FIGURE DASH
-<Multi_key><8><minus>                                                                              : "―" U2015 # HORIZONTAL BAR
-<Multi_key><KP_8><KP_Subtract>                                                                     : "―" U2015 # HORIZONTAL BAR
-<Multi_key><9><minus>                                                                              : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><KP_9><KP_Subtract>                                                                     : "⹀" U2E40 # DOUBLE HYPHEN
+#   -        HYPHEN-MINUS  quarter-dash (French “tiret quart-de-cadratin”)
+#
+#   4              HYPHEN  quarter-dash (French “tiret quart-de-cadratin”)
+#   6 NON-BREAKING HYPHEN  quarter-dash (French “tiret quart-de-cadratin”)
+#   5             EN DASH  half dash (French “tiret demi-cadratin”)
+#   8      HORIZONTAL BAR  three-quarter-dash (or conjoining em dash)
+#   1             EM DASH  full dash (French “tiret cadratin”)
+#   2         TWO-EM DASH  double dash (missing letters; missing word)
+#   3       THREE-EM DASH  triple dash (missing word; author’s name repetition)
+#
+#   0         SOFT HYPHEN  break opportunity with hyphenation (unlike U200B)
+#   7         FIGURE DASH  tabular digit dash (used in typesetting, like U2007)
+#   9       DOUBLE HYPHEN  (stable hyphen not due to a line break)
+#
+#   Half of these have live key support, as NON-BREAKING HYPHEN is on level 2
+#   of E06 where French AZERTY has HYPHEN-MINUS, and similar level-2 positions
+#   are allocated to EN DASH on E03, EM DASH on E04, and HORIZONTAL BAR on E08.
+#
+<Multi_key><0>                                                                             <minus> : "­" U00AD # SOFT HYPHEN
+<Multi_key><KP_0>                                                                    <KP_Subtract> : "­" U00AD # SOFT HYPHEN
+<Multi_key><1>                                                                             <minus> : "—" U2014 # EM DASH
+<Multi_key><KP_1>                                                                    <KP_Subtract> : "—" U2014 # EM DASH
+<Multi_key><2>                                                                             <minus> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><KP_2>                                                                    <KP_Subtract> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><3>                                                                             <minus> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><KP_3>                                                                    <KP_Subtract> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><4>                                                                             <minus> : "‐" U2010 # HYPHEN
+<Multi_key><KP_4>                                                                    <KP_Subtract> : "‐" U2010 # HYPHEN
+<Multi_key><5>                                                                             <minus> : "–" U2013 # EN DASH
+<Multi_key><KP_5>                                                                    <KP_Subtract> : "–" U2013 # EN DASH
+<Multi_key><6>                                                                             <minus> : "‑" U2011 # NON-BREAKING HYPHEN
+<Multi_key><KP_6>                                                                    <KP_Subtract> : "‑" U2011 # NON-BREAKING HYPHEN
+<Multi_key><7>                                                                             <minus> : "‒" U2012 # FIGURE DASH
+<Multi_key><KP_7>                                                                    <KP_Subtract> : "‒" U2012 # FIGURE DASH
+<Multi_key><8>                                                                             <minus> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><KP_8>                                                                    <KP_Subtract> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><9>                                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><KP_9>                                                                    <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
 #
 #
 # # Ellipsis and leaders
@@ -2761,9 +2772,9 @@
 #
 #   Pound sign is commented out too as conflicting and easy to input on live
 #   keys.
-#   See dispocla.cpp <AD04>
-#   See dispocla.cpp <AD12>
-#   See dispocla.cpp <AC09>
+#   See dispocla.cpp key <AD04>
+#   See dispocla.cpp key <AD12>
+#   See dispocla.cpp key <AC09>
 #
 #   Trailing redundant letters are maintained with respect to ISO codes and for
 #   a predictable behavior, unlike what is done for ad-hoc sequences as used in
@@ -3802,6 +3813,9 @@
 #   *                                                                         *
 #   ***************************************************************************
 #
+#   This section is limited to symbols in the Basic Multilingual Plane (BMP) of
+#   Unicode.
+#
 #   The General Category "Symbol, other" (So) does not preclude a symbol from
 #   being a math symbol, despite there is the dedicated "Symbol, math" (Sm).
 #   Indeed both Sm and So are only informative, not normative.
@@ -4225,7 +4239,7 @@
 #
 #   On complete keyboard layouts, "±" U00B1 is on level 7 on the key where the
 #   minus sign "−" U2212 is on level 5.
-#   See dispocla.cpp <AD05> plusminus
+#   See dispocla.cpp key <AD05> plusminus
 #
 #   Additionally, for intuitivity and completeness and for incomplete keyboard
 #   layouts, there is a fallback input method in the symbol groups.
@@ -4358,7 +4372,7 @@
 #   On the associated keyboard layouts, "⁄" U2044 FRACTION SLASH is on live key
 #   B09, level 7, in ASCII mode also on level 6.
 #   See dispocla.cpp ## Format controls
-#   See dispocla.cpp <AB09>
+#   See dispocla.cpp key <AB09>
 #   See # # Vulgar fractions
 #
 #   Also in dead_stroke followed by 4.
