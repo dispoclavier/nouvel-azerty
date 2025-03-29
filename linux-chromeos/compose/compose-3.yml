@@ -1188,8 +1188,8 @@
 #   https://listengine.tuxfamily.org/ergodis.org/discussions/2025/02/msg00028.html
 #
 #   The undertie "‿" U203F is supported in group 12 for its use in phonetics to
-#   denote linking, aka liaison, instead of former "❩" U2769, that was intended
-#   to prevent misuse of "☽" U263D, but is nearly unused in practice.
+#   denote linking, also known as liaison, instead of former "❩" U2769 that was
+#   intended to prevent misuse of "☽" U263D, but is nearly unused in practice.
 #
 <UEFD0>                                                                               <parenright> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
 <Multi_key><numbersign>                                                               <parenright> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
