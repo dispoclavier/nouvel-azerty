@@ -2821,8 +2821,11 @@
 #+# GROUP_3
 #   Group 3 on the base alphabet: Latin letters and symbols (continued)
 #
-#   The Latin lambda may look close to an inverted Yy.
+#   Latin lambda may look close to an inverted Yy. It is new to Unicode as of
+#   v16.0.0 (2024), along with its capital with stroke "Ƛ" UA7DC completing the
+#   lowercase "ƛ" U019B.
 #   https://www.unicode.org/L2/L2023/23191-three-latin-additions.pdf
+#   https://www.typotheque.com/blog/new-unicode-characters-for-heiltsuk
 #   https://commons.wikimedia.org/wiki/File:Latin_Lambda.svg
 #
 <UEFD0><3>                                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
