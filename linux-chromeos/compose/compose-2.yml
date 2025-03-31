@@ -12674,6 +12674,9 @@
 #   Lenient group selection
 #   Dchar: 
 #
+#   The capital Latin lambda with stroke "Ƛ" UA7DC is new to Unicode.
+#   See #   Latin lambda
+#
 <dead_stroke><UEFD0>                                                                    <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><slash><numbersign>                                                          <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <dead_stroke><UEFD0>                                                                    <EuroSign> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
