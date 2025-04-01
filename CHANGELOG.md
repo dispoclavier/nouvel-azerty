@@ -60,7 +60,7 @@ Complétion des touches mortes accent circonflexe, tilde et rond en chef.
 * Transformations :
 	* Groupes des lettres :
 		* E :
-			* Mettre "Ɛ" U+0190, "ɛ" U+025B dans le groupe 2 aux places de "Ə" U+018F, "ə" U+0259, qui prennent les places laissées par "Ɛ" U+0190, "ɛ" U+025B dans le groupe 3. compose-3.yml [c876ad6](https://github.com/dispoclavier/nouvel-azerty/commit/c876ad685c3b752dd04e61a6d106cd11315e2fa2), [4e03419](https://github.com/dispoclavier/nouvel-azerty/commit/4e03419204df620598e49a5d2a926c0272e76e8b)
+			* Mettre "Ɛ" U+0190, "ɛ" U+025B dans le groupe 2 aux places de "Ə" U+018F, "ə" U+0259, qui prennent les places laissées par "Ɛ" U+0190, "ɛ" U+025B dans le groupe 3. compose-3.yml [c876ad6](https://github.com/dispoclavier/nouvel-azerty/commit/c876ad685c3b752dd04e61a6d106cd11315e2fa2), [4e03419](https://github.com/dispoclavier/nouvel-azerty/commit/4e03419204df620598e49a5d2a926c0272e76e8b), [aed31c6](https://github.com/dispoclavier/nouvel-azerty/commit/aed31c60cb69df2a81d2e2ca49125247106850f2)
 			* Mettre "ʚ" U+029A du groupe 5 de "E" dans le groupe 5 de "e" à la place de "ɞ" U+025E, qui prend la place du doublon de "ə" U+0259 dans le groupe 4. ibidem
 			* Supprimer le doublon de "Ə" U+018F dans le groupe 4. ibidem
 		* F :
