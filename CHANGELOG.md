@@ -60,7 +60,7 @@ Complétion des touches mortes accent circonflexe, tilde et rond en chef.
 * Transformations :
 	* Groupes des lettres :
 		* E :
-			* Mettre "Ɛ" U+0190, "ɛ" U+025B dans le groupe 2 aux places de "Ə" U+018F, "ə" U+0259, qui prennent les places laissées par "Ɛ" U+0190, "ɛ" U+025B dans le groupe 3. compose-3.yml [c876ad6](https://github.com/dispoclavier/nouvel-azerty/commit/c876ad685c3b752dd04e61a6d106cd11315e2fa2)
+			* Mettre "Ɛ" U+0190, "ɛ" U+025B dans le groupe 2 aux places de "Ə" U+018F, "ə" U+0259, qui prennent les places laissées par "Ɛ" U+0190, "ɛ" U+025B dans le groupe 3. compose-3.yml [c876ad6](https://github.com/dispoclavier/nouvel-azerty/commit/c876ad685c3b752dd04e61a6d106cd11315e2fa2), [4e03419](https://github.com/dispoclavier/nouvel-azerty/commit/4e03419204df620598e49a5d2a926c0272e76e8b)
 			* Mettre "ʚ" U+029A du groupe 5 de "E" dans le groupe 5 de "e" à la place de "ɞ" U+025E, qui prend la place du doublon de "ə" U+0259 dans le groupe 4. ibidem
 			* Supprimer le doublon de "Ə" U+018F dans le groupe 4. ibidem
 		* F :
@@ -74,7 +74,7 @@ Complétion des touches mortes accent circonflexe, tilde et rond en chef.
 		* M : Mettre "Ɯ" U+019C, "ɯ" U+026F dans le groupe 2 aux places de "Ɱ" U+2C6E, "ɱ" U+0271, qui prennent les places laissées par "Ɯ" U+019C, "ɯ" U+026F dans le groupe 4. ibidem
 		* O : Mettre "Ɔ" U+0186, "ɔ" U+0254 dans le groupe 2 aux places de "Ȣ" U+0222, "ȣ" U+0223, qui prennent les places laissées par "Ɔ" U+0186, "ɔ" U+0254 dans le groupe 3. ibidem
 		* X : Mettre "Ꭓ" U+A7B3, "ꭓ" U+AB53 dans le groupe 2 aux places de "ꭘ" U+AB58, "ꭖ" U+AB56, qui prennent les places laissées par "Ꭓ" U+A7B3, "ꭓ" U+AB53 dans le groupe 3. ibidem
-		* Y : Mettre "Ʊ" U+01B1, "ʊ" U+028A dans le groupe 2 aux places de "Ƴ" U+01B3, "ƴ" U+01B4, qui prennent les places laissées par "Ʊ" U+01B1, "ʊ" U+028A dans le groupe 3. ibidem
+	* Lettres composées pour les langues du Togo : Prendre en charge les voyelles des groupes 2 et 3. compose-2.yml [a6d06d7](https://github.com/dispoclavier/nouvel-azerty/commit/a6d06d7a4d7aa351bccb4a2aa3986d36f8b669b4)
 	* Exposant > Exposant et indice (petite capitale) : Améliorer la prise en charge de la barre de fraction "⁄" U+2044. compose-2.yml [962cce4](https://github.com/dispoclavier/nouvel-azerty/commit/962cce42aba2c3b20b24c939ec3f12939691b647), compose-1.yml [1d68090](https://github.com/dispoclavier/nouvel-azerty/commit/1d68090cad95777f33cc58b8766e2249c49cb942)
 	* Tilde > tilde médian ou souscrit : Prendre en charge "⨦" U+2A26. compose-2.yml [677d02c](https://github.com/dispoclavier/nouvel-azerty/commit/677d02c0779cd82ace91a5cef816fb2af096d5b0)
 	* Rond en chef : Prendre en charge "⨢" U+2A22. compose-2.yml [d2bc8dc](https://github.com/dispoclavier/nouvel-azerty/commit/d2bc8dcad83d114bd6961301ab1802f9a520d2b4)
