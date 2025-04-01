@@ -2817,10 +2817,10 @@
 <Multi_key><numbersign><numbersign>                                                            <X> : "Ꭓ" UA7B3 # LATIN CAPITAL LETTER CHI
 <UEFD0><UEFD0>                                                                                 <x> : "ꭓ" UAB53 # LATIN SMALL LETTER CHI
 <Multi_key><numbersign><numbersign>                                                            <x> : "ꭓ" UAB53 # LATIN SMALL LETTER CHI
-<UEFD0><UEFD0>                                                                                 <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<Multi_key><numbersign><numbersign>                                                            <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<UEFD0><UEFD0>                                                                                 <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<Multi_key><numbersign><numbersign>                                                            <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<UEFD0><UEFD0>                                                                                 <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
+<Multi_key><numbersign><numbersign>                                                            <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
+<UEFD0><UEFD0>                                                                                 <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
+<Multi_key><numbersign><numbersign>                                                            <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
 <UEFD0><UEFD0>                                                                                 <Z> : "℥" U2125 # OUNCE SIGN
 <Multi_key><numbersign><numbersign>                                                            <Z> : "℥" U2125 # OUNCE SIGN
 <UEFD0><UEFD0>                                                                                 <z> : "℥" U2125 # OUNCE SIGN
@@ -3129,18 +3129,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
 <UEFD0><UEFD0><UEFD0>                                                                          <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
 <Multi_key><numbersign><numbersign><numbersign>                                                <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
-<UEFD0><3>                                                                                     <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<Multi_key><numbersign><3>                                                                     <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<UEFD0><KP_3>                                                                                  <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<Multi_key><numbersign><KP_3>                                                                  <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<UEFD0><UEFD0><UEFD0>                                                                          <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<Multi_key><numbersign><numbersign><numbersign>                                                <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<UEFD0><3>                                                                                     <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
-<Multi_key><numbersign><3>                                                                     <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
-<UEFD0><KP_3>                                                                                  <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
-<Multi_key><numbersign><KP_3>                                                                  <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
-<UEFD0><UEFD0><UEFD0>                                                                          <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
-<Multi_key><numbersign><numbersign><numbersign>                                                <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
+<UEFD0><3>                                                                                     <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<Multi_key><numbersign><3>                                                                     <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<UEFD0><KP_3>                                                                                  <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<Multi_key><numbersign><KP_3>                                                                  <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<UEFD0><UEFD0><UEFD0>                                                                          <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<Multi_key><numbersign><numbersign><numbersign>                                                <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<UEFD0><3>                                                                                     <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<Multi_key><numbersign><3>                                                                     <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<UEFD0><KP_3>                                                                                  <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<Multi_key><numbersign><KP_3>                                                                  <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<UEFD0><UEFD0><UEFD0>                                                                          <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<Multi_key><numbersign><numbersign><numbersign>                                                <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
 <UEFD0><3>                                                                                     <Z> : "Ᶎ" UA7C6 # LATIN CAPITAL LETTER Z WITH PALATAL HOOK
 <Multi_key><numbersign><3>                                                                     <Z> : "Ᶎ" UA7C6 # LATIN CAPITAL LETTER Z WITH PALATAL HOOK
 <UEFD0><KP_3>                                                                                  <Z> : "Ᶎ" UA7C6 # LATIN CAPITAL LETTER Z WITH PALATAL HOOK
