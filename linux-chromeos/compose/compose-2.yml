@@ -51,11 +51,11 @@
 # # Notes on Unicode support
 #
 #   The extended Latin F & G blocks in the SMP are supported since 2023-05-25.
-#   The issues related to SMP support do not affect ChromeOS, Linux, macOS, as
-#   opposed to Windows, whose Text Services Framework (TSF) is no longer able
-#   to keep the Latin script easy to input. Transpiling the related sequences
-#   to C will require a move to low surrogates from U10780 to U1DF2A (U1DFFF)
-#   along with a facility to input the D801 and D837 high surrogates.
+#   The issues related to SMP support do not affect Linux nor macOS, as opposed
+#   to Windows, whose Text Services Framework (TSF) is no longer able to keep
+#   the Latin script easy to input. Transpiling the related sequences to C will
+#   require a move to low surrogates from U10780 to U1DF2A (U1DFFF) along with
+#   a facility to input the D801 and D837 high surrogates.
 #   https://unicode.org/versions/enumeratedversions.html
 #   https://en.wikipedia.org/wiki/Latin_Extended-F
 #
@@ -12721,6 +12721,10 @@
 <Multi_key><slash>                                                                      <quotedbl> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_stroke>                                                                           <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <Multi_key><slash>                                                                      <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<dead_stroke>                                                                               <less> : "≮" U226E # NOT LESS-THAN
+<Multi_key><slash>                                                                          <less> : "≮" U226E # NOT LESS-THAN
+<dead_stroke>                                                                            <greater> : "≯" U226F # NOT GREATER-THAN
+#   Multikey conflicts with "↗" U2197, "⇗" U21D7, "⤮" U292E, "⤱" U2931, "⦬" U29AC.      <greater> : "≯" U226F # NOT GREATER-THAN
 <dead_stroke>                                                                                  <1> : "∕" U2215 # DIVISION SLASH
 <Multi_key><slash>                                                                             <1> : "∕" U2215 # DIVISION SLASH
 <dead_stroke>                                                                               <KP_1> : "∕" U2215 # DIVISION SLASH
