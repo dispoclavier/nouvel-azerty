@@ -943,10 +943,6 @@
 #   generate-multikey.pl.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/generate-multikey.pl
 #
-#   For portability, multikey equivalents are present regardless whether they
-#   make sense, and require conflictlessness, since else, the dead key content
-#   would not be cross-platform compatible.
-#
 #
 #   Conflictlessness check
 #
@@ -4048,7 +4044,6 @@
 #   However, to distinguish partial negations from full negations, the slash
 #   may not be the last character, as for "≇" U2247 versus "≆" U2246. Other
 #   examples include "⊈" U2288 versus "⊊" U228A, "⋢" U22E2 versus "⋤" U22E4.
-#   Another exception prevents a conflict between "≮" U226E and "↙" U2199.
 #
 #
 #   Reverse symbols
@@ -4690,8 +4685,7 @@
 <Multi_key><minus><greater>                                                         <nobreakspace> : "→" U2192 # RIGHTWARDS ARROW
 <Multi_key><exclam><greater>                                                               <space> : "↓" U2193 # DOWNWARDS ARROW
 <Multi_key><exclam><greater>                                                        <nobreakspace> : "↓" U2193 # DOWNWARDS ARROW
-<Multi_key><less><minus><greater>                                                          <space> : "↔" U2194 # LEFT RIGHT ARROW
-<Multi_key><less><minus><greater>                                                   <nobreakspace> : "↔" U2194 # LEFT RIGHT ARROW
+<Multi_key><less><minus><greater>                                                                  : "↔" U2194 # LEFT RIGHT ARROW
 <Multi_key><less><exclam><greater>                                                         <space> : "↕" U2195 # UP DOWN ARROW
 <Multi_key><less><exclam><greater>                                                  <nobreakspace> : "↕" U2195 # UP DOWN ARROW
 <Multi_key><less><backslash>                                                               <space> : "↖" U2196 # NORTH WEST ARROW
@@ -5339,8 +5333,12 @@
 <Multi_key><parenright><parenleft><slash>                                           <nobreakspace> : "≭" U226D # NOT EQUIVALENT TO
 <Multi_key><parenleft><parenright><slash>                                                  <space> : "≭" U226D # NOT EQUIVALENT TO
 <Multi_key><parenleft><parenright><slash>                                           <nobreakspace> : "≭" U226D # NOT EQUIVALENT TO
-<Multi_key><slash><less>                                                                   <space> : "≮" U226E # NOT LESS-THAN
-<Multi_key><slash><less>                                                            <nobreakspace> : "≮" U226E # NOT LESS-THAN
+#   In #*# STROKE                                                                                  : "≮" U226E # NOT LESS-THAN
+#   In # # STROKE&GROUP_1                                                                          : "≮" U226E # NOT LESS-THAN
+<Multi_key><space><less><slash>                                                                    : "≮" U226E # NOT LESS-THAN
+<Multi_key><nobreakspace><less><slash>                                                             : "≮" U226E # NOT LESS-THAN
+#   In #*# STROKE without multikey.                                                                : "≯" U226F # NOT GREATER-THAN
+#   In # # STROKE&GROUP_1                                                                          : "≯" U226F # NOT GREATER-THAN
 <Multi_key><greater><slash>                                                                <space> : "≯" U226F # NOT GREATER-THAN
 <Multi_key><greater><slash>                                                         <nobreakspace> : "≯" U226F # NOT GREATER-THAN
 <Multi_key><less><slash><underscore>                                                       <space> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
