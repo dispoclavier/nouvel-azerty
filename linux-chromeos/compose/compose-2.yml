@@ -862,8 +862,8 @@
 #       "ŋ" U014B       g          n
 #       "Ɔ" U0186       C          O
 #       "ɔ" U0254       c          o
-#       "Ʋ" U01B2       U          V
-#       "ʋ" U028B       u          v
+#       "Ʋ" U01B2       U                     V
+#       "ʋ" U028B       u                     v
 #
 #   Consistently, the base letters in this list must be in sync with the
 #   letter groups.
