@@ -872,12 +872,10 @@
 #   See #+# GROUP_3
 #
 #   Thanks to conflictlessness, the group dead key press may be skipped in some
-#   instances, although it is supported throughout for consistency.
+#   instances, although it is supported throughout for consistency. For v with
+#   hook "Ʋ" U01B2, "ʋ" U028B, group 1 of "V", "v" is is also supported, while
+#   plain group 1 is "℣" U2123.
 #   See # # Lenient group selection
-#
-#   This list also provides alternative input methods with lenient group
-#   selection using group 1 of "v" and "V" for v with hook "Ʋ" U01B2, "ʋ" U028B
-#   as base letters of several diacritics, while plain group 1 is "℣" U2123.
 #
 #   As this file is also the source code for documentation, order matters in
 #   that the most streamlined input methods need to be listed first, before
