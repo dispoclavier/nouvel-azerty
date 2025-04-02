@@ -4760,8 +4760,7 @@
 <Multi_key><N><greater>                                                             <nobreakspace> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key><less><minus><exclam>                                                           <space> : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
 <Multi_key><less><minus><exclam>                                                    <nobreakspace> : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
-<Multi_key><exclam><minus><greater>                                                        <space> : "↱" U21B1 # UPWARDS ARROW WITH TIP RIGHTWARDS
-<Multi_key><exclam><minus><greater>                                                 <nobreakspace> : "↱" U21B1 # UPWARDS ARROW WITH TIP RIGHTWARDS
+<Multi_key><minus><greater><exclam>                                                                : "↱" U21B1 # UPWARDS ARROW WITH TIP RIGHTWARDS
 <Multi_key><n><less>                                                                       <space> : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
 <Multi_key><n><less>                                                                <nobreakspace> : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
 <Multi_key><n><greater>                                                                    <space> : "↷" U21B7 # CLOCKWISE TOP SEMICIRCLE ARROW
@@ -7467,35 +7466,26 @@
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 #   When in #*# DOT_BELOW, <plus> conflicts with "Ợ" U1EE2.                                        : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
-<Multi_key><plus><period>                                                                  <space> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
-<Multi_key><plus><period>                                                           <nobreakspace> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+<Multi_key><plus><period>                                                                          : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 #   In #^# MIDDLE_TILDE                                                                            : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 #Multi_key><asciitilde><asciitilde><plus> is in dead_tilde double press.                           : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                       <nobreakspace> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
-<Multi_key><space><plus><2>                                                                <space> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><space><plus><2>                                                         <nobreakspace> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><nobreakspace><plus><2>                                                         <space> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><nobreakspace><plus><2>                                                  <nobreakspace> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><space><plus><KP_2>                                                             <space> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><space><plus><KP_2>                                                      <nobreakspace> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><nobreakspace><plus><KP_2>                                                      <space> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><nobreakspace><plus><KP_2>                                               <nobreakspace> : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><space><plus><2>                                                                        : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><nobreakspace><plus><2>                                                                 : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><space><plus><KP_2>                                                                     : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><nobreakspace><plus><KP_2>                                                              : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 #   This black triangle overlay in "⨨" U2A28 is often caret shaped.
-<Multi_key><space><plus><asciicircum>                                                      <space> : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
-<Multi_key><space><plus><asciicircum>                                               <nobreakspace> : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
-<Multi_key><nobreakspace><plus><asciicircum>                                               <space> : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
-<Multi_key><nobreakspace><plus><asciicircum>                                        <nobreakspace> : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
-<Multi_key><comma><minus>                                                                  <space> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
-<Multi_key><comma><minus>                                                           <nobreakspace> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
+<Multi_key><space><plus><asciicircum>                                                              : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
+<Multi_key><nobreakspace><plus><asciicircum>                                                       : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
+#   In #^# COMMA_ABOVE                                                                             : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
+<Multi_key><comma><minus>                                                                          : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
+#   In #*# DOT_BELOW                                                                               : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <Multi_key><minus><period>                                                                 <space> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <Multi_key><minus><period>                                                          <nobreakspace> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
-<Multi_key><period><minus><period><backslash>                                              <space> : "⨫" U2A2B # MINUS SIGN WITH FALLING DOTS
-<Multi_key><period><minus><period><backslash>                                       <nobreakspace> : "⨫" U2A2B # MINUS SIGN WITH FALLING DOTS
-<Multi_key><period><minus><period><slash>                                                  <space> : "⨬" U2A2C # MINUS SIGN WITH RISING DOTS
-<Multi_key><period><minus><period><slash>                                           <nobreakspace> : "⨬" U2A2C # MINUS SIGN WITH RISING DOTS
-<Multi_key><parenleft><plus>                                                               <space> : "⨭" U2A2D # PLUS SIGN IN LEFT HALF CIRCLE
-<Multi_key><parenleft><plus>                                                        <nobreakspace> : "⨭" U2A2D # PLUS SIGN IN LEFT HALF CIRCLE
+<Multi_key><period><minus><period><backslash>                                                      : "⨫" U2A2B # MINUS SIGN WITH FALLING DOTS
+<Multi_key><period><minus><period><slash>                                                          : "⨬" U2A2C # MINUS SIGN WITH RISING DOTS
+<Multi_key><parenleft><plus>                                                                       : "⨭" U2A2D # PLUS SIGN IN LEFT HALF CIRCLE
 <Multi_key><plus><parenright>                                                              <space> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
 <Multi_key><plus><parenright>                                                       <nobreakspace> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
 #
