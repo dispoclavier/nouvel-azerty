@@ -16512,6 +16512,8 @@
 <Multi_key><exclam>                                                                 <nobreakspace> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <U202F> : "⸳" U2E33 # RAISED DOT
 <Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
+<dead_belowdot>                                                                            <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
+<Multi_key><exclam>                                                                        <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                       <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <Multi_key><exclam>                                                                   <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
