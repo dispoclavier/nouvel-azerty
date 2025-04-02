@@ -59,7 +59,7 @@ Complétion des touches mortes accent circonflexe, tilde et rond en chef.
 	* Compléter, simplifier et mettre à jour les séquences de "⇆" U+21C6, "⟵" U+27F5, "⟶" U+27F6, "⟷" U+27F7, "⟸" U+27F8, "⟹" U+27F9, "⟺" U+27FA, "⟻" U+27FB, "⟼" U+27FC, "⟽" U+27FD, "⟾" U+27FE. compose-1.yml [bb3410c](https://github.com/dispoclavier/nouvel-azerty/commit/bb3410c6ec6234150fe6d180652ac016b14a728a), [1562be3](https://github.com/dispoclavier/nouvel-azerty/commit/1562be3e51b8fceadab03b396a534c385b09c698)
 	* Rectifier les séquences de "↱" U+21B1. compose-1.yml [c704e9c](https://github.com/dispoclavier/nouvel-azerty/commit/c704e9c50416c21c25aa9f399bebb6e3fc3ce2f4)
 	* Simplifier les séquences de "⨥" U+2A25, "⨧" U+2A27, "⨨" U+2A28, "⨩" U+2A29, "⨫" U+2A2B, "⨬" U+2A2C, "⨭" U+2A2D. ibidem
-	* Rectifier les séquences de "≮" U+226E. compose-1.yml [ce651e2](https://github.com/dispoclavier/nouvel-azerty/commit/ce651e2da42b228cc5cfb6772feaca61ecda5120)
+	* Rectifier les séquences de "≮" U+226E. compose-1.yml [ce651e2](https://github.com/dispoclavier/nouvel-azerty/commit/ce651e2da42b228cc5cfb6772feaca61ecda5120)
 	* Simplifier les séquences de "↔" U+2194. ibidem
 * Transformations :
 	* Groupes des lettres :
