@@ -2560,12 +2560,12 @@
 #
 #	   	g1	g2	g3	g4	g5	g11	g12	g6	g7	g8	g9	g10
 #	A a	Æ æ	Ʌ ʌ	Ɑ ɑ	⹒ ⁊	Ꜣ ꜣ	Ꞛ ꞛ	ẚ ꬱ	Α α	𝒜 𝒶	𝔸 𝕒	𝔄 𝔞	𝖠 𝖺
-#	B b	Ɖ ɖ	Ɓ ɓ	Ꞵ ꞵ	␢ ␢	ʘ ʘ	Ƅ ƅ	ƾ ʖ	Β β	ℬ 𝒷	𝔹 𝕓	𝔅 𝔟	𝖡 𝖻
+#	B b	Ɖ ɖ	Ꞵ ꞵ	Ɓ ɓ	␢ ␢	ʘ ʘ	Ƅ ƅ	ƾ ʖ	Β β	ℬ 𝒷	𝔹 𝕓	𝔅 𝔟	𝖡 𝖻
 #	C c	Ɔ ɔ	Ƈ ƈ	Ꜿ ꜿ	 ɕ	ʗ ʗ	Ꝯ ꝯ	ʢ ʕ	Ψ ψ	𝒞 𝒸	ℂ 𝕔	ℭ 𝔠	𝖢 𝖼
 #	D d	Ð ð	Ɖ ɖ	ᵟ ẟ	͑ ʿ	̜ ˓	 ꝱ	Ꝺ ꝺ	Δ δ	𝒟 𝒹	𝔻 𝕕	𝔇 𝔡	𝖣 𝖽
 #	E e	Ǝ ǝ	Ɛ ɛ	Ə ə	 ɞ	 ʚ	Ꝫ ꝫ	℈ ꬲ	Ε ε	ℰ ℯ	𝔼 𝕖	𝔈 𝔢	𝖤 𝖾
 #	F f	Ƒ ƒ	ⱷ ɸ	ʩ ꬵ	͗ ʾ	̹ ˒	 ʩ	Ꝼ ꝼ	Φ φ	ℱ 𝒻	𝔽 𝕗	𝔉 𝔣	𝖥 𝖿
-#	G g	Ŋ ŋ	Ȝ ȝ	Ɣ ɣ	Ɤ ɤ	Ɡ ɡ	Ꟑ ꟑ	Ᵹ ᵹ	Γ γ	𝒢 ℊ	𝔾 𝕘	𝔊 𝔤	𝖦 𝗀
+#	G g	Ŋ ŋ	Ɣ ɣ	Ɤ ɤ	Ȝ ȝ	Ɡ ɡ	Ꟑ ꟑ	Ᵹ ᵹ	Γ γ	𝒢 ℊ	𝔾 𝕘	𝔊 𝔤	𝖦 𝗀
 #	H h	Ə ə	Ɥ ɥ	Ɦ ɦ	Ꜧ ꜧ	Ⱶ ⱶ	ꝶ ꝵ	̘ ◌̟	Η η	ℋ 𝒽	ℍ 𝕙	ℌ 𝔥	𝖧 𝗁
 #	I i	Ɩ ɩ	Ɪ ɪ	Ꞽ ꞽ	ℹ ℹ	ǀ ǀ	Ꝭ ꝭ	ꟾ ꟾ	Ι ι	ℐ 𝒾	𝕀 𝕚	ℑ 𝔦	𝖨 𝗂
 #	J j	Ĳ ĳ	Ꞌ ꞌ	Ʝ ʝ	⁀ ‿	ǂ ǂ	Ꝝ ꝝ	̙ ◌̠	Ξ ξ	𝒥 𝒿	𝕁 𝕛	𝔍 𝔧	𝖩 𝗃
@@ -2579,11 +2579,11 @@
 #	R r	℟ ℟	˞ ˞	Ꝛ ꝛ	℟ ꭇ	ꭅ ꭋ	Ʀ ʀ	Ꞃ ꞃ	Ρ ρ	ℛ 𝓇	ℝ 𝕣	ℜ 𝔯	𝖱 𝗋
 #	S s	ẞ ß	Ʃ ʃ	ẛ ſ	Ꟗ ꟗ	ᴤ ꭍ	Ꟙ ꟙ	Ꞅ ꞅ	Σ σ	𝒮 𝓈	𝕊 𝕤	𝔖 𝔰	𝖲 𝗌
 #	T t	Þ þ	ϴ θ	Θ θ	 ʨ	ʧ ʦ	  ꟓ ꝷ	Ꞇ ꞇ	Τ τ	𝒯 𝓉	𝕋 𝕥	𝔗 𝔱	𝖳 𝗍
-#	U u	Ʊ ʊ	Θ θ	Ɥ ɥ	Ɯ ɯ	ꭏ ꭎ	Ꞟ ꞟ	◌᷵ ◌̝	Θ θ	𝒰 𝓊	𝕌 𝕦	𝔘 𝔲	𝖴 𝗎
+#	U u	Ʋ ʋ	Θ θ	Ɥ ɥ	Ɯ ɯ	ꭏ ꭎ	Ꞟ ꞟ	◌᷵ ◌̝	Θ θ	𝒰 𝓊	𝕌 𝕦	𝔘 𝔲	𝖴 𝗎
 #	V v	℣ ℣	Ʋ ʋ	Ꞷ ꞷ	℣ ɷ	Ꝩ ꝩ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
 #	W w	Ʃ ʃ	ʬ ʷ	Ꟃ ꟃ	 ʍ	Ƿ ƿ	  ꟕ ʭ	̍ ◌̩	∇ ς	𝒲 𝓌	𝕎 𝕨	𝔚 𝔴	𝖶 𝗐
 #	X x	Ɛ ɛ	Ꭓ ꭓ	ꭘ ꭖ	ꭔ ꭕ	 ꭗ	 ꭙ	̽ ◌͓	Χ χ	𝒳 𝓍	𝕏 𝕩	𝔛 𝔵	𝖷 𝗑
-#	Y y	Ɣ ɣ	Ƴ ƴ	Ʊ ʊ	Ỿ ỿ	 ꭚ	ʏ ʎ	̞ ◌̞	Υ υ	𝒴 𝓎	𝕐 𝕪	𝔜 𝔶	𝖸 𝗒
+#	Y y	Ʊ ʊ	Ƴ ƴ	Ȝ ȝ	Ỿ ỿ	 ꭚ	ʏ ʎ	̞ ◌̞	Υ υ	𝒴 𝓎	𝕐 𝕪	𝔜 𝔶	𝖸 𝗒
 #	Z z	Ʒ ʒ	℥ ℥	Ᶎ ᶎ	ʓ ʑ	Ɀ ɀ	Ꝣ ꝣ	Ⱬ ⱬ	Ζ ζ	𝒵 𝓏	ℤ 𝕫	ℨ 𝔷	𝖹 𝗓
 #
 #
@@ -2681,10 +2681,10 @@
 <Multi_key><numbersign>                                                                        <T> : "Þ" U00DE # LATIN CAPITAL LETTER THORN
 <UEFD0>                                                                                        <t> : "þ" U00FE # LATIN SMALL LETTER THORN
 <Multi_key><numbersign>                                                                        <t> : "þ" U00FE # LATIN SMALL LETTER THORN
-<UEFD0>                                                                                        <U> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<Multi_key><numbersign>                                                                        <U> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<UEFD0>                                                                                        <u> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<Multi_key><numbersign>                                                                        <u> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<UEFD0>                                                                                        <U> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<Multi_key><numbersign>                                                                        <U> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<UEFD0>                                                                                        <u> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<Multi_key><numbersign>                                                                        <u> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
 <UEFD0>                                                                                        <V> : "℣" U2123 # VERSICLE
 <Multi_key><numbersign>                                                                        <V> : "℣" U2123 # VERSICLE
 <UEFD0>                                                                                        <v> : "℣" U2123 # VERSICLE
@@ -2697,10 +2697,10 @@
 <Multi_key><numbersign>                                                                        <X> : "Ɛ" U0190 # LATIN CAPITAL LETTER OPEN E
 <UEFD0>                                                                                        <x> : "ɛ" U025B # LATIN SMALL LETTER OPEN E
 <Multi_key><numbersign>                                                                        <x> : "ɛ" U025B # LATIN SMALL LETTER OPEN E
-<UEFD0>                                                                                        <Y> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<Multi_key><numbersign>                                                                        <Y> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<UEFD0>                                                                                        <y> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<Multi_key><numbersign>                                                                        <y> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
+<UEFD0>                                                                                        <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<Multi_key><numbersign>                                                                        <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
+<UEFD0>                                                                                        <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<Multi_key><numbersign>                                                                        <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
 <UEFD0>                                                                                        <Z> : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <Multi_key><numbersign>                                                                        <Z> : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <UEFD0>                                                                                        <z> : "ʒ" U0292 # LATIN SMALL LETTER EZH
@@ -2725,10 +2725,10 @@
 <Multi_key><numbersign><numbersign>                                                            <A> : "Ʌ" U0245 # LATIN CAPITAL LETTER TURNED V
 <UEFD0><UEFD0>                                                                                 <a> : "ʌ" U028C # LATIN SMALL LETTER TURNED V
 <Multi_key><numbersign><numbersign>                                                            <a> : "ʌ" U028C # LATIN SMALL LETTER TURNED V
-<UEFD0><UEFD0>                                                                                 <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
-<Multi_key><numbersign><numbersign>                                                            <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
-<UEFD0><UEFD0>                                                                                 <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
-<Multi_key><numbersign><numbersign>                                                            <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<UEFD0><UEFD0>                                                                                 <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
+<Multi_key><numbersign><numbersign>                                                            <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
+<UEFD0><UEFD0>                                                                                 <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
+<Multi_key><numbersign><numbersign>                                                            <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
 <UEFD0><UEFD0>                                                                                 <C> : "Ƈ" U0187 # LATIN CAPITAL LETTER C WITH HOOK
 <Multi_key><numbersign><numbersign>                                                            <C> : "Ƈ" U0187 # LATIN CAPITAL LETTER C WITH HOOK
 <UEFD0><UEFD0>                                                                                 <c> : "ƈ" U0188 # LATIN SMALL LETTER C WITH HOOK
@@ -2745,10 +2745,10 @@
 <Multi_key><numbersign><numbersign>                                                            <F> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
 <UEFD0><UEFD0>                                                                                 <f> : "ɸ" U0278 # LATIN SMALL LETTER PHI
 <Multi_key><numbersign><numbersign>                                                            <f> : "ɸ" U0278 # LATIN SMALL LETTER PHI
-<UEFD0><UEFD0>                                                                                 <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
-<Multi_key><numbersign><numbersign>                                                            <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
-<UEFD0><UEFD0>                                                                                 <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
-<Multi_key><numbersign><numbersign>                                                            <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<UEFD0><UEFD0>                                                                                 <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
+<Multi_key><numbersign><numbersign>                                                            <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
+<UEFD0><UEFD0>                                                                                 <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
+<Multi_key><numbersign><numbersign>                                                            <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
 <UEFD0><UEFD0>                                                                                 <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
 <Multi_key><numbersign><numbersign>                                                            <H> : "Ɥ" UA78D # LATIN CAPITAL LETTER TURNED H
 <UEFD0><UEFD0>                                                                                 <h> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
@@ -2853,18 +2853,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <a> : "ɑ" U0251 # LATIN SMALL LETTER ALPHA
 <UEFD0><UEFD0><UEFD0>                                                                          <a> : "ɑ" U0251 # LATIN SMALL LETTER ALPHA
 <Multi_key><numbersign><numbersign><numbersign>                                                <a> : "ɑ" U0251 # LATIN SMALL LETTER ALPHA
-<UEFD0><3>                                                                                     <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
-<Multi_key><numbersign><3>                                                                     <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
-<UEFD0><KP_3>                                                                                  <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
-<Multi_key><numbersign><KP_3>                                                                  <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
-<UEFD0><UEFD0><UEFD0>                                                                          <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
-<Multi_key><numbersign><numbersign><numbersign>                                                <B> : "Ꞵ" UA7B4 # LATIN CAPITAL LETTER BETA
-<UEFD0><3>                                                                                     <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
-<Multi_key><numbersign><3>                                                                     <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
-<UEFD0><KP_3>                                                                                  <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
-<Multi_key><numbersign><KP_3>                                                                  <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
-<UEFD0><UEFD0><UEFD0>                                                                          <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
-<Multi_key><numbersign><numbersign><numbersign>                                                <b> : "ꞵ" UA7B5 # LATIN SMALL LETTER BETA
+<UEFD0><3>                                                                                     <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<Multi_key><numbersign><3>                                                                     <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<UEFD0><KP_3>                                                                                  <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<Multi_key><numbersign><KP_3>                                                                  <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<UEFD0><UEFD0><UEFD0>                                                                          <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<Multi_key><numbersign><numbersign><numbersign>                                                <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<UEFD0><3>                                                                                     <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<Multi_key><numbersign><3>                                                                     <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<UEFD0><KP_3>                                                                                  <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<Multi_key><numbersign><KP_3>                                                                  <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<UEFD0><UEFD0><UEFD0>                                                                          <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<Multi_key><numbersign><numbersign><numbersign>                                                <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
 <UEFD0><3>                                                                                     <C> : "Ꜿ" UA73E # LATIN CAPITAL LETTER REVERSED C WITH DOT
 <Multi_key><numbersign><3>                                                                     <C> : "Ꜿ" UA73E # LATIN CAPITAL LETTER REVERSED C WITH DOT
 <UEFD0><KP_3>                                                                                  <C> : "Ꜿ" UA73E # LATIN CAPITAL LETTER REVERSED C WITH DOT
@@ -2913,18 +2913,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <f> : "ꬵ" UAB35 # LATIN SMALL LETTER LENIS F
 <UEFD0><UEFD0><UEFD0>                                                                          <f> : "ꬵ" UAB35 # LATIN SMALL LETTER LENIS F
 <Multi_key><numbersign><numbersign><numbersign>                                                <f> : "ꬵ" UAB35 # LATIN SMALL LETTER LENIS F
-<UEFD0><3>                                                                                     <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<Multi_key><numbersign><3>                                                                     <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<UEFD0><KP_3>                                                                                  <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<Multi_key><numbersign><KP_3>                                                                  <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<UEFD0><UEFD0><UEFD0>                                                                          <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<Multi_key><numbersign><numbersign><numbersign>                                                <G> : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<UEFD0><3>                                                                                     <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<Multi_key><numbersign><3>                                                                     <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<UEFD0><KP_3>                                                                                  <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<Multi_key><numbersign><KP_3>                                                                  <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<UEFD0><UEFD0><UEFD0>                                                                          <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<Multi_key><numbersign><numbersign><numbersign>                                                <g> : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
+<UEFD0><3>                                                                                     <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<Multi_key><numbersign><3>                                                                     <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<UEFD0><KP_3>                                                                                  <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<Multi_key><numbersign><KP_3>                                                                  <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<UEFD0><UEFD0><UEFD0>                                                                          <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<Multi_key><numbersign><numbersign><numbersign>                                                <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
+<UEFD0><3>                                                                                     <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
+<Multi_key><numbersign><3>                                                                     <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
+<UEFD0><KP_3>                                                                                  <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
+<Multi_key><numbersign><KP_3>                                                                  <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
+<UEFD0><UEFD0><UEFD0>                                                                          <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
+<Multi_key><numbersign><numbersign><numbersign>                                                <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 <UEFD0><3>                                                                                     <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
 <Multi_key><numbersign><3>                                                                     <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
 <UEFD0><KP_3>                                                                                  <H> : "Ɦ" UA7AA # LATIN CAPITAL LETTER H WITH HOOK
@@ -3129,18 +3129,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
 <UEFD0><UEFD0><UEFD0>                                                                          <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
 <Multi_key><numbersign><numbersign><numbersign>                                                <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
-<UEFD0><3>                                                                                     <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<Multi_key><numbersign><3>                                                                     <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<UEFD0><KP_3>                                                                                  <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<Multi_key><numbersign><KP_3>                                                                  <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<UEFD0><UEFD0><UEFD0>                                                                          <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<Multi_key><numbersign><numbersign><numbersign>                                                <Y> : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
-<UEFD0><3>                                                                                     <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<Multi_key><numbersign><3>                                                                     <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<UEFD0><KP_3>                                                                                  <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<Multi_key><numbersign><KP_3>                                                                  <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<UEFD0><UEFD0><UEFD0>                                                                          <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
-<Multi_key><numbersign><numbersign><numbersign>                                                <y> : "ʊ" U028A # LATIN SMALL LETTER UPSILON
+<UEFD0><3>                                                                                     <Y> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<Multi_key><numbersign><3>                                                                     <Y> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<UEFD0><KP_3>                                                                                  <Y> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<Multi_key><numbersign><KP_3>                                                                  <Y> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<UEFD0><UEFD0><UEFD0>                                                                          <Y> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<Multi_key><numbersign><numbersign><numbersign>                                                <Y> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<UEFD0><3>                                                                                     <y> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><numbersign><3>                                                                     <y> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<UEFD0><KP_3>                                                                                  <y> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><numbersign><KP_3>                                                                  <y> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<UEFD0><UEFD0><UEFD0>                                                                          <y> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><numbersign><numbersign><numbersign>                                                <y> : "ȝ" U021D # LATIN SMALL LETTER YOGH
 <UEFD0><3>                                                                                     <Z> : "Ᶎ" UA7C6 # LATIN CAPITAL LETTER Z WITH PALATAL HOOK
 <Multi_key><numbersign><3>                                                                     <Z> : "Ᶎ" UA7C6 # LATIN CAPITAL LETTER Z WITH PALATAL HOOK
 <UEFD0><KP_3>                                                                                  <Z> : "Ᶎ" UA7C6 # LATIN CAPITAL LETTER Z WITH PALATAL HOOK
@@ -3247,18 +3247,18 @@
 <Multi_key><numbersign><KP_4>                                                                  <f> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <f> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <f> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
-<UEFD0><4>                                                                                     <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
-<Multi_key><numbersign><4>                                                                     <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
-<UEFD0><KP_4>                                                                                  <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
-<Multi_key><numbersign><KP_4>                                                                  <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <G> : "Ɤ" UA7CB # LATIN CAPITAL LETTER RAMS HORN
-<UEFD0><4>                                                                                     <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
-<Multi_key><numbersign><4>                                                                     <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
-<UEFD0><KP_4>                                                                                  <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
-<Multi_key><numbersign><KP_4>                                                                  <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <g> : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
+<UEFD0><4>                                                                                     <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<Multi_key><numbersign><4>                                                                     <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<UEFD0><KP_4>                                                                                  <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<Multi_key><numbersign><KP_4>                                                                  <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <G> : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+<UEFD0><4>                                                                                     <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><numbersign><4>                                                                     <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<UEFD0><KP_4>                                                                                  <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><numbersign><KP_4>                                                                  <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <g> : "ȝ" U021D # LATIN SMALL LETTER YOGH
 <UEFD0><4>                                                                                     <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
 <Multi_key><numbersign><4>                                                                     <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
 <UEFD0><KP_4>                                                                                  <H> : "Ꜧ" UA726 # LATIN CAPITAL LETTER HENG
