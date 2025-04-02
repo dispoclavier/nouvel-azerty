@@ -2580,7 +2580,7 @@
 #	S s	ẞ ß	Ʃ ʃ	ẛ ſ	Ꟗ ꟗ	ᴤ ꭍ	Ꟙ ꟙ	Ꞅ ꞅ	Σ σ	𝒮 𝓈	𝕊 𝕤	𝔖 𝔰	𝖲 𝗌
 #	T t	Þ þ	ϴ θ	Θ θ	 ʨ	ʧ ʦ	  ꟓ ꝷ	Ꞇ ꞇ	Τ τ	𝒯 𝓉	𝕋 𝕥	𝔗 𝔱	𝖳 𝗍
 #	U u	Ʋ ʋ	Θ θ	Ɥ ɥ	Ɯ ɯ	ꭏ ꭎ	Ꞟ ꞟ	◌᷵ ◌̝	Θ θ	𝒰 𝓊	𝕌 𝕦	𝔘 𝔲	𝖴 𝗎
-#	V v	℣ ℣	Ʋ ʋ	Ꞷ ꞷ	℣ ɷ	Ꝩ ꝩ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
+#	V v	℣ ℣	Ꞷ ꞷ	Ʋ ʋ	℣ ɷ	Ꝩ ꝩ	 ꝸ	Ỽ ỽ	Ω ω	𝒱 𝓋	𝕍 𝕧	𝔙 𝔳	𝖵 𝗏
 #	W w	Ʃ ʃ	ʬ ʷ	Ꟃ ꟃ	 ʍ	Ƿ ƿ	  ꟕ ʭ	̍ ◌̩	∇ ς	𝒲 𝓌	𝕎 𝕨	𝔚 𝔴	𝖶 𝗐
 #	X x	Ɛ ɛ	Ꭓ ꭓ	ꭘ ꭖ	ꭔ ꭕ	 ꭗ	 ꭙ	̽ ◌͓	Χ χ	𝒳 𝓍	𝕏 𝕩	𝔛 𝔵	𝖷 𝗑
 #	Y y	Ʊ ʊ	Ƴ ƴ	Ȝ ȝ	Ỿ ỿ	 ꭚ	ʏ ʎ	̞ ◌̞	Υ υ	𝒴 𝓎	𝕐 𝕪	𝔜 𝔶	𝖸 𝗒
@@ -2805,10 +2805,10 @@
 <Multi_key><numbersign><numbersign>                                                            <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA preferred in Rromani
 <UEFD0><UEFD0>                                                                                 <u> : "θ" U03B8 # GREEK SMALL LETTER THETA mapped like on Greek keyboards
 <Multi_key><numbersign><numbersign>                                                            <u> : "θ" U03B8 # GREEK SMALL LETTER THETA mapped like on Greek keyboards
-<UEFD0><UEFD0>                                                                                 <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
-<Multi_key><numbersign><numbersign>                                                            <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
-<UEFD0><UEFD0>                                                                                 <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
-<Multi_key><numbersign><numbersign>                                                            <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<UEFD0><UEFD0>                                                                                 <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
+<Multi_key><numbersign><numbersign>                                                            <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
+<UEFD0><UEFD0>                                                                                 <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
+<Multi_key><numbersign><numbersign>                                                            <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
 <UEFD0><UEFD0>                                                                                 <W> : "ʬ" U02AC # LATIN LETTER BILABIAL PERCUSSIVE
 <Multi_key><numbersign><numbersign>                                                            <W> : "ʬ" U02AC # LATIN LETTER BILABIAL PERCUSSIVE
 <UEFD0><UEFD0>                                                                                 <w> : "ʷ" U02B7 # MODIFIER LETTER SMALL W
@@ -3093,18 +3093,18 @@
 <Multi_key><numbersign><KP_3>                                                                  <u> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
 <UEFD0><UEFD0><UEFD0>                                                                          <u> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
 <Multi_key><numbersign><numbersign><numbersign>                                                <u> : "ɥ" U0265 # LATIN SMALL LETTER TURNED H
-<UEFD0><3>                                                                                     <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
-<Multi_key><numbersign><3>                                                                     <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
-<UEFD0><KP_3>                                                                                  <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
-<Multi_key><numbersign><KP_3>                                                                  <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
-<UEFD0><UEFD0><UEFD0>                                                                          <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
-<Multi_key><numbersign><numbersign><numbersign>                                                <V> : "Ꞷ" UA7B6 # LATIN CAPITAL LETTER OMEGA
-<UEFD0><3>                                                                                     <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
-<Multi_key><numbersign><3>                                                                     <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
-<UEFD0><KP_3>                                                                                  <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
-<Multi_key><numbersign><KP_3>                                                                  <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
-<UEFD0><UEFD0><UEFD0>                                                                          <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
-<Multi_key><numbersign><numbersign><numbersign>                                                <v> : "ꞷ" UA7B7 # LATIN SMALL LETTER OMEGA
+<UEFD0><3>                                                                                     <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<Multi_key><numbersign><3>                                                                     <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<UEFD0><KP_3>                                                                                  <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<Multi_key><numbersign><KP_3>                                                                  <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<UEFD0><UEFD0><UEFD0>                                                                          <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<Multi_key><numbersign><numbersign><numbersign>                                                <V> : "Ʋ" U01B2 # LATIN CAPITAL LETTER V WITH HOOK
+<UEFD0><3>                                                                                     <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<Multi_key><numbersign><3>                                                                     <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<UEFD0><KP_3>                                                                                  <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<Multi_key><numbersign><KP_3>                                                                  <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<UEFD0><UEFD0><UEFD0>                                                                          <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
+<Multi_key><numbersign><numbersign><numbersign>                                                <v> : "ʋ" U028B # LATIN SMALL LETTER V WITH HOOK
 <UEFD0><3>                                                                                     <W> : "Ꟃ" UA7C2 # LATIN CAPITAL LETTER ANGLICANA W
 <Multi_key><numbersign><3>                                                                     <W> : "Ꟃ" UA7C2 # LATIN CAPITAL LETTER ANGLICANA W
 <UEFD0><KP_3>                                                                                  <W> : "Ꟃ" UA7C2 # LATIN CAPITAL LETTER ANGLICANA W
