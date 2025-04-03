@@ -937,13 +937,6 @@
 #       }
 #
 #
-#   Multikey equivalents
-#
-#   The multikey equivalent below each dead key sequence is added by the script
-#   generate-multikey.pl.
-#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/generate-multikey.pl
-#
-#
 #   Conflictlessness check
 #
 #   Conflicts and duplicates can be checked following a protocol like this one,
@@ -3153,10 +3146,8 @@
 #   Input sequences are based on Latin names and on French names and mostly are
 #   four characters long, for conflictless consistency. Ultimately however, any
 #   redundant characters are cropped for a streamlined user experience and also
-#   to avoid superfluous dead keys on Windows, where composition is implemented
-#   using the dead key chaining feature, while in XCompose, useless trailing or
-#   interior multikey sequence constituents are only revealed after running and
-#   reviewing a check as documented above.
+#   to avoid superfluous dead keys on Windows.
+#   See #   Streamlining
 #   See #   Conflictlessness check
 #
 #   Base 16 numeric sequences are also supported, not conflicting with vulgar
@@ -3173,10 +3164,13 @@
 <Multi_key><1><asterisk>                                                                           : "♈" U2648 # ARIES emoji
 <Multi_key><KP_1><KP_Multiply>                                                                     : "♈" U2648 # ARIES emoji
 <Multi_key><a><r><i><e>                                                                            : "♈" U2648 # ARIES emoji
+#Multi_key><A><R><I><E>                                                                           : "♈" U2648 # ARIES emoji
 <Multi_key><A><R>                                                                                  : "♈" U2648 # ARIES emoji
 <Multi_key><b><e><l><i>                                                                            : "♈" U2648 # ARIES emoji
+#Multi_key><B><E><L><I>                                                                            : "♈" U2648 # ARIES emoji
 <Multi_key><B><E>                                                                                  : "♈" U2648 # ARIES emoji
 <Multi_key><b><eacute><l><i>                                                                       : "♈" U2648 # ARIES emoji
+#Multi_key><B><Eacute><L><I>                                                                       : "♈" U2648 # ARIES emoji
 <Multi_key><B><Eacute>                                                                             : "♈" U2648 # ARIES emoji
 #
 #
@@ -3204,7 +3198,9 @@
 #
 <Multi_key><4><asterisk>                                                                           : "♋" U264B # CANCER emoji
 <Multi_key><KP_4><KP_Multiply>                                                                     : "♋" U264B # CANCER emoji
+#Multi_key><c><a><n><c>                                                                            : "♋" U264B # CANCER emoji
 <Multi_key><c><a><n>                                                                               : "♋" U264B # CANCER emoji
+#Multi_key><C><A><N><C>                                                                            : "♋" U264B # CANCER emoji
 <Multi_key><C><A><N>                                                                               : "♋" U264B # CANCER emoji
 #
 #
@@ -3235,6 +3231,7 @@
 <Multi_key><l><i><b><r>                                                                            : "♎" U264E # LIBRA emoji
 <Multi_key><L><I><B><R>                                                                            : "♎" U264E # LIBRA emoji
 <Multi_key><b><a><l><a>                                                                            : "♎" U264E # LIBRA emoji
+#Multi_key><B><A><L><A>                                                                            : "♎" U264E # LIBRA emoji
 <Multi_key><B><A>                                                                                  : "♎" U264E # LIBRA emoji
 #
 #
@@ -3269,6 +3266,7 @@
 <Multi_key><B><asterisk>                                                                           : "♒" U2652 # AQUARIUS emoji
 <Multi_key><b><asterisk>                                                                           : "♒" U2652 # AQUARIUS emoji
 <Multi_key><a><q><u><a>                                                                            : "♒" U2652 # AQUARIUS emoji
+#Multi_key><A><Q><U><A>                                                                            : "♒" U2652 # AQUARIUS emoji
 <Multi_key><A><Q>                                                                                  : "♒" U2652 # AQUARIUS emoji
 <Multi_key><v><e><r><s>                                                                            : "♒" U2652 # AQUARIUS emoji
 <Multi_key><V><E><R><S>                                                                            : "♒" U2652 # AQUARIUS emoji
