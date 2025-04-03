@@ -892,22 +892,23 @@
 #       "Ʋ" U01B2       U                     V
 #       "ʋ" U028B       u                     v
 #
-#   Consistently, the base letters in this list must be in sync with the
-#   letter groups.
+#   Consistently, the base letters in this list must match those in the letter
+#   groups.
 #   See #+# GROUP_1
 #   See #+# GROUP_2
 #   See #+# GROUP_3
 #
 #   Thanks to conflictlessness, the group dead key press may be skipped in some
-#   instances, although it is supported throughout for consistency. For v with
-#   hook "Ʋ" U01B2, "ʋ" U028B, group 1 of "V", "v" is is also supported, while
-#   plain group 1 is "℣" U2123.
+#   instances, although it is supported throughout for consistency. Especially
+#   for V WITH HOOK "Ʋ" U01B2, "ʋ" U028B with diacritics, group 1 of "V", "v"
+#   is also supported, while plain group 1 is VERSICLE "℣" U2123.
+#   See #   The VERSICLE and RESPONSE symbols
 #   See # # Lenient group selection
 #
-#   As this file is also the source code for documentation, order matters in
-#   that the most streamlined input methods need to be listed first, before
-#   coming to the regular, more tedious sequences, that should be sorted by
-#   ascending complexity likewise.
+#   As this file is also the source code for documentation, the order in which
+#   sequences are listed matters in that the most streamlined ones need to be
+#   listed first, before coming to the regular, more tedious sequences, that
+#   should be sorted by ascending complexity likewise.
 #   See # # Notes about documentation
 #
 #   "M" and "m" with grave accent, included in the shared list, are moved to
