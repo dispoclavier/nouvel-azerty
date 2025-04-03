@@ -123,6 +123,28 @@
 #   existing scheme as impracticable.
 #
 #
+# # Multikey equivalents
+#
+#   Following the example of en_US.UTF-8/Compose, dead keys are emulated by
+#   multikey for a versatile user experience on levels 1..3, despite dead keys
+#   are extensively supported on level 4 with a number of level-1/3 duplicates.
+#
+#   Only a subset of the dead key content, however, is supported by multikey,
+#   due to conflicts with math symbols. Conflicting multikey equivalents are
+#   commented out with an enumeration of conflicting characters.
+#   See #   Multikey conflicts with
+#
+#   The resulting inconsistencies due to dead key sequences without a supported
+#   multikey equivalent require transpiling multikey sequences separately, as
+#   opposed to connecting the dead keys to a similar number of multikey entry
+#   points, as it is straightforward when manually configuring the dead keys
+#   on Windows.
+#
+#   Most multikey equivalents below the dead key sequences have been added by
+#   the script generate-multikey.pl.
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/generate-multikey.pl
+#
+#
 # # Virtual dead keys
 #
 #   The French BÉPO ergonomic keyboard layout defines a number of dead keys as
