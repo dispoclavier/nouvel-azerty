@@ -134,6 +134,11 @@
 #   commented out with an enumeration of conflicting characters.
 #   See #   Multikey conflicts with
 #
+#   Extended dead key support — beyond the feasible multikey support level — is
+#   required to make sure that dead keys are usable to an acceptable extent, so
+#   as to avoid an excessive number of failures and deceptions, and foster wide
+#   adoption motivated by the observation of usability and adequacy.
+#
 #   The resulting inconsistencies due to dead key sequences without a supported
 #   multikey equivalent require transpiling multikey sequences separately, as
 #   opposed to connecting the dead keys to a similar number of multikey entry
