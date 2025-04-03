@@ -20,7 +20,7 @@ Reconception, rectification et simplification des séquences de composition. [co
 
 Amélioration de l’utilisabilité de la modificatrice AltFr et des touches B07 et B08 en mode ASCII : stabilité des points d’interrogation et d’exclamation comme du deux-points et du point-virgule.
 
-Amélioration de l’utilisabilité des groupes des lettres : les lettres grecques latines ne sont plus toutes dans le groupe 3.
+Amélioration de l’utilisabilité des groupes des lettres : les lettres grecques latines passent du groupe 3 au groupe 2, le v de ronde est doté d’un raccourci dans le groupe 1.
 
 Amélioration de l’utilisabilité des touches mortes au-delà du contenu pris en charge par équivalence en composition.
 
