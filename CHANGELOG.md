@@ -18,15 +18,19 @@ Reconception, rectification et simplification des séquences de composition. [co
 
 ## 5.0.0 (projet)
 
-Amélioration de l’utilisabilité de la modificatrice AltFr et des touches B07 et B08 en mode ASCII : stabilité des points d’interrogation et d’exclamation comme du deux-points et du point-virgule.
+Amélioration de l’utilisabilité :
 
-Amélioration de l’utilisabilité des groupes des lettres : les lettres grecques latines passent du groupe 3 au groupe 2, le v de ronde est doté d’un raccourci dans le groupe 1.
+* de la modificatrice AltFr et des touches B07 et B08 en mode ASCII : stabilité des points d’interrogation et d’exclamation comme du deux-points et du point-virgule ;
+* des touches mortes au-delà du contenu pris en charge par équivalence en composition ;
+* des groupes des lettres :
+	* les lettres grecques latines passent du groupe 3 au groupe 2 ;
+	* le v de ronde est doté d’un raccourci dans le groupe 1 ;
+	* l’upsilon latin regagne sa place dans le groupe 1 de l’i grec ;
+* des groupes des symboles : gain de trois places dans les premiers groupes du croisillon grâce à la dissociation des touches mortes et de leur équivalent en composition.
 
-Amélioration de l’utilisabilité des touches mortes au-delà du contenu pris en charge par équivalence en composition.
+Complétion des touches mortes : accent circonflexe, tilde, barré, rond en chef.
 
-Complétion des touches mortes accent circonflexe, tilde, barré, rond en chef.
-
-Rectification de nombreuses séquences de composition.
+Rectification de séquences de composition.
 
 * Disposition : Mode ASCII : AltFr :
 	* B07 : Redonder le point d’interrogation (aussi en Maj) à la place de la virgule, qui est sur C10. dispocla.cpp [1b7a98a](https://github.com/dispoclavier/nouvel-azerty/commit/1b7a98ac2f886804dded572df08529d689df77ce)
