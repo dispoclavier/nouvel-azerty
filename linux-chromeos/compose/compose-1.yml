@@ -3451,22 +3451,68 @@
 #
 #   Due to its design, the traditional heart multikey sequence is expected to
 #   output "❤" U2764 HEAVY BLACK HEART, France’s (red) most-used heart emoji.
-#   In this file, this is supported as a dead_circumflex multikey equivalent
-#   with the digit 3 as a base character:    <Multi_key><less><3>
+#   As this conflicts with the multikey equivalent of <dead_circumflex><3>,
+#   expected to output "³" U00B3 due to widespread user expectations (that also
+#   have been escalated to the level of standards support), the functionally
+#   related multikey sequences are configured separately, in this subsection.
 #   See #*# CIRCUMFLEX
 #
+<Multi_key><less>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
+<Multi_key><less>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
+#
 #   This however disrupts en_US.UTF-8/Compose supporting the least frequent
-#   heart emoji, "♥" U2665 BLACK HEART SUIT, the 14th-ranking emoji, in the
-#   suit series U2660..U2667. This is supported by an alternative sequence
-#   still based on a shape-driven mnemonic:  <Multi_key><less><8>
-#   See #*# CIRCUMFLEX
+#   heart emoji, "♥" U2665 BLACK HEART SUIT, the 14th-ranking emoji, from
+#   the suit series U2660..U2667. This heart emoji is supported by this
+#   alternative sequence, still based on a shape-driven mnemonic.
+#
+<Multi_key><less>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
+<Multi_key><less>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
 #
 #   Be it the one or the other, due to the shape of digit 3, hearts are parsed
 #   from the bottom to the top, unlike faces of smilies parsed from the top to
 #   the bottom: ":)" or ":-)". This is obvious when looking at the opposite, as
 #   "(-:" is in use with the semantic of an actual upside-down face. The fix is
-#   to use digit 8 instead, since digit 8 is usable both ways. Here that is the
+#   to use digit 8 instead, since digit 8 is usable both ways. Hence the
 #   sequence used for "♡" U2661 as a math symbol.
+#   See "♡" U2661
+#   See # # Miscellaneous Symbols in block U2600 used in mathematics
+#
+#   For completeness, the remaining digits are supported, too, since all these
+#   sequences are deactivated consistently as multikey equivalents.
+#   See #*# CIRCUMFLEX
+#
+#   One useful functionality is bullets, since the symbol groups are limited to
+#   "•" U2022, "◦" U25E6, "‣" U2023, as well as "⁃" U2043, and "▪" U25AA. As a
+#   complementary, partly intersecting set, this series supports "▪" U25AA,
+#   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3, and also "•" U2022
+#   and "◦" U25E6.
+#   See # # C07 underscore
+#   See # # C05 minus
+#   See # # C01 numbersign
+#   See #^# Bullets
+#
+<Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                              <2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><less>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><less>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+#
+#   Previously, the heart emoji logic was followed through, supporting the full
+#   set of filled suits (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
+#   outlined suits (non-emoji "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664).
+#   See # # B07-level1 comma
+#   See # # CIRCUMFLEX&GROUP_2
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #
