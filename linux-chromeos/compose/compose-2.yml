@@ -1618,9 +1618,7 @@
 #
 #   Followed by asterisk, *dead_superscript provides an intuitive shortcut for 
 #   "⁂" U2042 ASTERISM, with mnemonics based on the ASCII circumflex, no longer
-#   the multikey equivalent of dead_circumflex, that "⁂" U2042 is typically in.
-#   Due to conflicts with "᪱" U1AB1 as well as with "Ǻ" U01FA and "ǻ" U01FB, the
-#   equivalent for "⁑" U2051 is in dead_tilde.
+#   the multikey equivalent of dead_circumflex, that "⁂" U2042 is also in.
 #
 #   To populate the diacritic slot, "̅" U0305 COMBINING OVERLINE is included,
 #   with a mnemonic referring to "̲" U0332 COMBINING LOW LINE that fills this
@@ -5005,8 +5003,6 @@
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
-<dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                            <question> : "͠" U0360 # COMBINING DOUBLE TILDE
@@ -11329,6 +11325,95 @@
 <Multi_key><exclam><plus>                                                                      <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 #
 #
+#^# CIRCUMFLEX_BELOW input facility by HORN
+#   dead_horn double press
+#   Multi_key: ¦++
+#   Dchar: "ḓ" U1E13
+#
+#   For convenience, an alternative input method is provided for the circumflex
+#   below, since dead_circumflex double press is used as a facility for hatchek
+#   to meet potential user expectations.
+#   See #^# CIRCUMFLEX_BELOW
+#   See #^# HACEK input facility by CIRCUMFLEX
+#
+<dead_horn><dead_horn>                                                                     <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<Multi_key><plus><plus>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<dead_horn><dead_horn>                                                                     <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<Multi_key><plus><plus>                                                                    <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+<dead_horn><dead_horn>                                                              <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<Multi_key><plus><plus>                                                             <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<dead_horn><dead_horn>                                                                     <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<Multi_key><plus><plus>                                                                    <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+<dead_horn><dead_horn>                                                                  <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<Multi_key><plus><plus>                                                                 <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<dead_horn><dead_horn>                                                                  <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<Multi_key><plus><plus>                                                                 <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
+<dead_horn><dead_horn>                                                                         <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<Multi_key><plus><plus>                                                                        <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<dead_horn><dead_horn>                                                                         <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<Multi_key><plus><plus>                                                                        <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<dead_horn><dead_horn>                                                                         <C> : "C̭" # U0043 U032D LATIN CAPITAL LETTER C WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <C> : "C̭" # U0043 U032D LATIN CAPITAL LETTER C WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <c> : "c̭" # U0063 U032D LATIN SMALL LETTER C WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <c> : "c̭" # U0063 U032D LATIN SMALL LETTER C WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
+<Multi_key><plus><plus>                                                                        <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
+<dead_horn><dead_horn>                                                                         <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
+<Multi_key><plus><plus>                                                                        <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
+<dead_horn><dead_horn>                                                                         <I> : "I̭" # U0049 U032D LATIN CAPITAL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
+<Multi_key><plus><plus>                                                                        <I> : "I̭" # U0049 U032D LATIN CAPITAL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
+<dead_horn><dead_horn>                                                                         <i> : "i̭" # U0069 U032D LATIN SMALL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
+<Multi_key><plus><plus>                                                                        <i> : "i̭" # U0069 U032D LATIN SMALL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
+<dead_horn><dead_horn>                                                                         <K> : "K̭" # U004B U032D LATIN CAPITAL LETTER K WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <K> : "K̭" # U004B U032D LATIN CAPITAL LETTER K WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <k> : "k̭" # U006B U032D LATIN SMALL LETTER K WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <k> : "k̭" # U006B U032D LATIN SMALL LETTER K WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <O> : "O̭" # U004F U032D LATIN CAPITAL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<Multi_key><plus><plus>                                                                        <O> : "O̭" # U004F U032D LATIN CAPITAL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<dead_horn><dead_horn>                                                                         <o> : "o̭" # U006F U032D LATIN SMALL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<Multi_key><plus><plus>                                                                        <o> : "o̭" # U006F U032D LATIN SMALL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
+<dead_horn><dead_horn>                                                                         <R> : "R̭" # U0052 U032D LATIN CAPITAL LETTER R WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <R> : "R̭" # U0052 U032D LATIN CAPITAL LETTER R WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <r> : "r̭" # U0072 U032D LATIN SMALL LETTER R WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <r> : "r̭" # U0072 U032D LATIN SMALL LETTER R WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <S> : "S̭" # U0053 U032D LATIN CAPITAL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
+<Multi_key><plus><plus>                                                                        <S> : "S̭" # U0053 U032D LATIN CAPITAL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
+<dead_horn><dead_horn>                                                                         <s> : "s̭" # U0073 U032D LATIN SMALL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
+<Multi_key><plus><plus>                                                                        <s> : "s̭" # U0073 U032D LATIN SMALL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
+<dead_horn><dead_horn>                                                                         <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
+<Multi_key><plus><plus>                                                                        <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
+<dead_horn><dead_horn>                                                                         <W> : "W̭" # U0057 U032D LATIN CAPITAL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
+<Multi_key><plus><plus>                                                                        <W> : "W̭" # U0057 U032D LATIN CAPITAL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
+<dead_horn><dead_horn>                                                                         <w> : "w̭" # U0077 U032D LATIN SMALL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
+<Multi_key><plus><plus>                                                                        <w> : "w̭" # U0077 U032D LATIN SMALL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
+<dead_horn><dead_horn>                                                                         <Z> : "Z̭" # U005A U032D LATIN CAPITAL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
+<Multi_key><plus><plus>                                                                        <Z> : "Z̭" # U005A U032D LATIN CAPITAL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
+<dead_horn><dead_horn>                                                                         <z> : "z̭" # U007A U032D LATIN SMALL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
+<Multi_key><plus><plus>                                                                        <z> : "z̭" # U007A U032D LATIN SMALL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
+#
+#
 #*# SUBSCRIPT
 #   subscript, small cap
 #   *dead_subscript UEFD2
@@ -13471,10 +13556,15 @@
 #   Likewise, a Ç key is emulated for use on the Canadian French variant.
 #   See #*# CEDILLA
 #
-#   The circumflex dead key is also expected to support superscript digits, for
-#   the sake of conformance with NF Z71-300:2019, section 6.3.3 page 24, and as
-#   a tribute to the German E DIN 2137-1:2020-11 that has been synced, but only
-#   with the digits part, not the plus and minus signs and parentheses.
+#   For the sake of usability and meeting predictable user expectations (that
+#   also have been escalated to the level of standards support), superscript
+#   digits are supported, at the expense of multikey equivalents.
+#   See NF Z71-300:2019, section 6.3.3 page 24
+#   See E DIN 2137-1:2020-11
+#   See # # Multikey equivalents
+#
+#   The German E DIN 2137-1:2020-11 has been synced, but only with the digits
+#   part, not the plus and minus signs and parentheses.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
 #   In en_US.UTF-8/Compose, that the “superscript digits by dead_circumflex”
@@ -13488,14 +13578,6 @@
 #   with the less frequent "♥" U2665, as of "⁸" U2078 if using the new sequence
 #   <Multi_key><less><8> introduced for "♥" U2665.
 #   See # # Heart emoji
-#
-#   For the sake of usability and meeting predictable user expectations (that
-#   also have been escalated to the level of standards support), superscript
-#   digits are supported, at the expense of multikey equivalents.
-#   See NF Z71-300:2019
-#   See E DIN 2137-1:2020-11
-#   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
-#   See # # Multikey equivalents
 #
 #   For full support including multikey equivalents, the diaeresis dead key may
 #   likely be an acceptable workaround solution for superscript digits, as some
@@ -13515,14 +13597,10 @@
 #   input method by <dead_circumflex><d>, <dead_circumflex><D> thanks to
 #   French not having any word with -êd-.
 #
-#   As "B" has not been encoded with circumflex, and French doesn’t have any
-#   word with -êb-, <dead_circumflex><B> and <dead_circumflex><b> may be used
-#   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
-#   "ŭ" U016D (used in Esperanto). Likewise, "U" mnemonics foster the use of
-#   Ugrave for the same output (by lack of something else for the time being),
-#   since U has not been encoded with circumflex and grave, as opposed to A (by
-#   Agrave on key E10), E (by Egrave on key E07) and O (French AZERTY does not
-#   feature Ograve).
+#   "⁂" U2042 ASTERISM is also expected to be supported by dead_circumflex,
+#   additionally to its support in the symbol groups and by dead_abovering.
+#   See #*# RING_ABOVE
+#   See # # C10 bar
 #
 #   Followed by comma, dead_circumflex provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
@@ -13533,6 +13611,15 @@
 #   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
 #   the question mark as an unconflicting ASCII alternative, for a consistent
 #   input method across all dead keys featuring a double diacritic.
+#
+#   As "B" has not been encoded with circumflex, and French doesn’t have any
+#   word with -êb-, <dead_circumflex><B> and <dead_circumflex><b> may be used
+#   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
+#   "ŭ" U016D (used in Esperanto). Likewise, "U" mnemonics foster the use of
+#   Ugrave for the same output (by lack of something else for the time being),
+#   since U has not been encoded with circumflex and grave, as opposed to A (by
+#   Agrave on key E10), E (by Egrave on key E07) and O (French AZERTY does not
+#   feature Ograve).
 #
 #   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
 #   for portability, but on Linux and ChromeOS it is ineffective.
@@ -13559,6 +13646,8 @@
 <Multi_key><less>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
+<Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                       <question> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
@@ -14083,9 +14172,10 @@
 #   requires virtualizing the circumflex accent below dead key by double press
 #   of the circumflex accent dead key. Usability however imposes to use this as
 #   a shortcut for the hatchek dead key located on B04, level 4, and to move to
-#   triple press the variant below with a shortcut chaining both circumflex and
-#   hatchek as an attempt to restore some ease of input.
+#   triple press the variant below, while providing a shortcut using dead_horn
+#   double press in an attempt to restore some ease of input.
 #   https://bepo.fr/wiki/Touches_mortes#Circonflexe_souscrit
+#   See #^# CIRCUMFLEX_BELOW input facility by HORN
 #
 #   "˿" U02FF MODIFIER LETTER LOW LEFT ARROW has quotedbl and EuroSign as base
 #   characters, with a rationale combining low and less, matching this arrow’s
@@ -14342,171 +14432,6 @@
 <Multi_key><period><greater>                                                                   <S> : "Ṧ" U1E66 # LATIN CAPITAL LETTER S WITH CARON AND DOT ABOVE
 <dead_abovedot><dead_caron>                                                                    <s> : "ṧ" U1E67 # LATIN SMALL LETTER S WITH CARON AND DOT ABOVE
 <Multi_key><period><greater>                                                                   <s> : "ṧ" U1E67 # LATIN SMALL LETTER S WITH CARON AND DOT ABOVE
-#
-#
-#^# CIRCUMFLEX_BELOW input facility by CIRCUMFLEX RING_ABOVE
-#   dead_circumflex dead_abovering
-#   Multi_key: ¦<*
-#   Dchar: "ḓ" U1E13
-#
-#   For convenience, an alternative input method is provided for the circumflex
-#   below, since dead_circumflex double press is used as a facility for hatchek
-#   to meet potential user expectations.
-#   See #^# CIRCUMFLEX_BELOW
-#   See #^# HACEK input facility by CIRCUMFLEX
-#
-<dead_circumflex><dead_abovering>                                                          <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<Multi_key><less><asterisk>                                                                <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_abovering><dead_circumflex>                                                          <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<Multi_key><asterisk><less>                                                                <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_circumflex><dead_abovering>                                                          <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<Multi_key><less><asterisk>                                                                <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_abovering><dead_circumflex>                                                          <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<Multi_key><asterisk><less>                                                                <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<dead_circumflex><dead_abovering>                                                   <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><less><asterisk>                                                         <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<dead_abovering><dead_circumflex>                                                   <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><asterisk><less>                                                         <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<dead_circumflex><dead_abovering>                                                          <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><less><asterisk>                                                                <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<dead_abovering><dead_circumflex>                                                          <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><asterisk><less>                                                                <U202F> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<dead_circumflex><dead_abovering>                                                       <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<Multi_key><less><asterisk>                                                             <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<dead_abovering><dead_circumflex>                                                       <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<Multi_key><asterisk><less>                                                             <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<dead_circumflex><dead_abovering>                                                       <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<Multi_key><less><asterisk>                                                             <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<dead_abovering><dead_circumflex>                                                       <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<Multi_key><asterisk><less>                                                             <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<dead_circumflex><dead_abovering>                                                              <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><less><asterisk>                                                                    <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_abovering><dead_circumflex>                                                              <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><asterisk><less>                                                                    <A> : "A̭" # U0041 U032D LATIN CAPITAL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_circumflex><dead_abovering>                                                              <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><less><asterisk>                                                                    <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_abovering><dead_circumflex>                                                              <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><asterisk><less>                                                                    <a> : "a̭" # U0061 U032D LATIN SMALL LETTER A WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_circumflex><dead_abovering>                                                              <C> : "C̭" # U0043 U032D LATIN CAPITAL LETTER C WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <C> : "C̭" # U0043 U032D LATIN CAPITAL LETTER C WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <C> : "C̭" # U0043 U032D LATIN CAPITAL LETTER C WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <C> : "C̭" # U0043 U032D LATIN CAPITAL LETTER C WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <c> : "c̭" # U0063 U032D LATIN SMALL LETTER C WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <c> : "c̭" # U0063 U032D LATIN SMALL LETTER C WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <c> : "c̭" # U0063 U032D LATIN SMALL LETTER C WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <c> : "c̭" # U0063 U032D LATIN SMALL LETTER C WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <D> : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <d> : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <E> : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <e> : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<Multi_key><less><asterisk>                                                                    <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<dead_abovering><dead_circumflex>                                                              <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<Multi_key><asterisk><less>                                                                    <H> : "H̭" # U0048 U032D LATIN CAPITAL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<dead_circumflex><dead_abovering>                                                              <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<Multi_key><less><asterisk>                                                                    <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<dead_abovering><dead_circumflex>                                                              <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<Multi_key><asterisk><less>                                                                    <h> : "h̭" # U0068 U032D LATIN SMALL LETTER H WITH CIRCUMFLEX BELOW: Demotic transcription
-<dead_circumflex><dead_abovering>                                                              <I> : "I̭" # U0049 U032D LATIN CAPITAL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<Multi_key><less><asterisk>                                                                    <I> : "I̭" # U0049 U032D LATIN CAPITAL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<dead_abovering><dead_circumflex>                                                              <I> : "I̭" # U0049 U032D LATIN CAPITAL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<Multi_key><asterisk><less>                                                                    <I> : "I̭" # U0049 U032D LATIN CAPITAL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<dead_circumflex><dead_abovering>                                                              <i> : "i̭" # U0069 U032D LATIN SMALL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<Multi_key><less><asterisk>                                                                    <i> : "i̭" # U0069 U032D LATIN SMALL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<dead_abovering><dead_circumflex>                                                              <i> : "i̭" # U0069 U032D LATIN SMALL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<Multi_key><asterisk><less>                                                                    <i> : "i̭" # U0069 U032D LATIN SMALL LETTER I WITH CIRCUMFLEX BELOW: Cuneiform transliteration
-<dead_circumflex><dead_abovering>                                                              <K> : "K̭" # U004B U032D LATIN CAPITAL LETTER K WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <K> : "K̭" # U004B U032D LATIN CAPITAL LETTER K WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <K> : "K̭" # U004B U032D LATIN CAPITAL LETTER K WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <K> : "K̭" # U004B U032D LATIN CAPITAL LETTER K WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <k> : "k̭" # U006B U032D LATIN SMALL LETTER K WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <k> : "k̭" # U006B U032D LATIN SMALL LETTER K WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <k> : "k̭" # U006B U032D LATIN SMALL LETTER K WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <k> : "k̭" # U006B U032D LATIN SMALL LETTER K WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <L> : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <l> : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <N> : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <n> : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <O> : "O̭" # U004F U032D LATIN CAPITAL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><less><asterisk>                                                                    <O> : "O̭" # U004F U032D LATIN CAPITAL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_abovering><dead_circumflex>                                                              <O> : "O̭" # U004F U032D LATIN CAPITAL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><asterisk><less>                                                                    <O> : "O̭" # U004F U032D LATIN CAPITAL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_circumflex><dead_abovering>                                                              <o> : "o̭" # U006F U032D LATIN SMALL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><less><asterisk>                                                                    <o> : "o̭" # U006F U032D LATIN SMALL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_abovering><dead_circumflex>                                                              <o> : "o̭" # U006F U032D LATIN SMALL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<Multi_key><asterisk><less>                                                                    <o> : "o̭" # U006F U032D LATIN SMALL LETTER O WITH CIRCUMFLEX BELOW: Juǀʼhoan
-<dead_circumflex><dead_abovering>                                                              <R> : "R̭" # U0052 U032D LATIN CAPITAL LETTER R WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <R> : "R̭" # U0052 U032D LATIN CAPITAL LETTER R WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <R> : "R̭" # U0052 U032D LATIN CAPITAL LETTER R WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <R> : "R̭" # U0052 U032D LATIN CAPITAL LETTER R WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <r> : "r̭" # U0072 U032D LATIN SMALL LETTER R WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <r> : "r̭" # U0072 U032D LATIN SMALL LETTER R WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <r> : "r̭" # U0072 U032D LATIN SMALL LETTER R WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <r> : "r̭" # U0072 U032D LATIN SMALL LETTER R WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <S> : "S̭" # U0053 U032D LATIN CAPITAL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><less><asterisk>                                                                    <S> : "S̭" # U0053 U032D LATIN CAPITAL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_abovering><dead_circumflex>                                                              <S> : "S̭" # U0053 U032D LATIN CAPITAL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><asterisk><less>                                                                    <S> : "S̭" # U0053 U032D LATIN CAPITAL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_circumflex><dead_abovering>                                                              <s> : "s̭" # U0073 U032D LATIN SMALL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><less><asterisk>                                                                    <s> : "s̭" # U0073 U032D LATIN SMALL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_abovering><dead_circumflex>                                                              <s> : "s̭" # U0073 U032D LATIN SMALL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><asterisk><less>                                                                    <s> : "s̭" # U0073 U032D LATIN SMALL LETTER S WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_circumflex><dead_abovering>                                                              <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <T> : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <t> : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <U> : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
-<Multi_key><less><asterisk>                                                                    <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
-<dead_abovering><dead_circumflex>                                                              <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
-<Multi_key><asterisk><less>                                                                    <u> : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
-<dead_circumflex><dead_abovering>                                                              <W> : "W̭" # U0057 U032D LATIN CAPITAL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<Multi_key><less><asterisk>                                                                    <W> : "W̭" # U0057 U032D LATIN CAPITAL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<dead_abovering><dead_circumflex>                                                              <W> : "W̭" # U0057 U032D LATIN CAPITAL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<Multi_key><asterisk><less>                                                                    <W> : "W̭" # U0057 U032D LATIN CAPITAL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<dead_circumflex><dead_abovering>                                                              <w> : "w̭" # U0077 U032D LATIN SMALL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<Multi_key><less><asterisk>                                                                    <w> : "w̭" # U0077 U032D LATIN SMALL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<dead_abovering><dead_circumflex>                                                              <w> : "w̭" # U0077 U032D LATIN SMALL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<Multi_key><asterisk><less>                                                                    <w> : "w̭" # U0077 U032D LATIN SMALL LETTER W WITH CIRCUMFLEX BELOW: Parthian transcription
-<dead_circumflex><dead_abovering>                                                              <Z> : "Z̭" # U005A U032D LATIN CAPITAL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><less><asterisk>                                                                    <Z> : "Z̭" # U005A U032D LATIN CAPITAL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_abovering><dead_circumflex>                                                              <Z> : "Z̭" # U005A U032D LATIN CAPITAL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><asterisk><less>                                                                    <Z> : "Z̭" # U005A U032D LATIN CAPITAL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_circumflex><dead_abovering>                                                              <z> : "z̭" # U007A U032D LATIN SMALL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><less><asterisk>                                                                    <z> : "z̭" # U007A U032D LATIN SMALL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<dead_abovering><dead_circumflex>                                                              <z> : "z̭" # U007A U032D LATIN SMALL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
-<Multi_key><asterisk><less>                                                                    <z> : "z̭" # U007A U032D LATIN SMALL LETTER Z WITH CIRCUMFLEX BELOW: Herero old orthography
 #
 #
 #^# HACEK_BELOW
@@ -16747,9 +16672,12 @@
 #   See # # Dashes and hyphens
 #   See # # Long dashes
 #
-#   For intuitivity, with asterisk as a base character, dead_diaeresis would
-#   yield "⁑" U2051 consistently with *dead_superscript for "⁂" U2042 ASTERISM.
-#   Due to a conflict with "᪱" U1AB1, "⁑" U2051 is in dead_tilde instead.
+#   For intuitivity, with asterisk as a base character, dead_diaeresis should
+#   yield "⁑" U2051 consistently with dead_circumflex and *dead_superscript for
+#   "⁂" U2042 ASTERISM. However, due to a conflict with "᪱" U1AB1, the multikey
+#   equivalent cannot be supported. Anyway, "⁑" U2051 is also in dead_abovering
+#   together with "⁂" U2042 and "⁎" U204E.
+#   See #*# RING_ABOVE
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as multikey symbol, have quick access
@@ -16793,6 +16721,8 @@
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+#   Multikey conflicts with "᪱" U1AB1.                                                   <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_diaeresis>                                                                          <degree> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><colon>                                                                        <degree> : "⸺" U2E3A # TWO-EM DASH
 <dead_diaeresis>                                                                            <plus> : "⸻" U2E3B # THREE-EM DASH
