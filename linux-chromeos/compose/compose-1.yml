@@ -7336,8 +7336,8 @@
 <Multi_key><nobreakspace><space><backslash>                                         <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><backslash>                                         <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><nobreakspace><backslash>                                  <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><plus><plus>                                                                    <space> : "⧺" U29FA # DOUBLE PLUS
-<Multi_key><plus><plus>                                                             <nobreakspace> : "⧺" U29FA # DOUBLE PLUS
+<Multi_key><space><plus><plus>                                                                     : "⧺" U29FA # DOUBLE PLUS
+<Multi_key><nobreakspace><plus><plus>                                                              : "⧺" U29FA # DOUBLE PLUS
 <Multi_key><3><plus>                                                                               : "⧻" U29FB # TRIPLE PLUS
 <Multi_key><KP_3><KP_Add>                                                                          : "⧻" U29FB # TRIPLE PLUS
 <Multi_key><plus><plus><plus>                                                              <space> : "⧻" U29FB # TRIPLE PLUS
