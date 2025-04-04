@@ -132,6 +132,7 @@
 #   Only a subset of the dead key content, however, is supported by multikey,
 #   due to conflicts with math symbols. Conflicting multikey equivalents are
 #   commented out with an enumeration of conflicting characters.
+#   See #   Conflictlessness check
 #   See #   Multikey conflicts with
 #
 #   Extended dead key support — beyond the feasible multikey support level — is
@@ -1612,10 +1613,7 @@
 #   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_superscript
 #   yields high curly quotation marks U201D, U2019 (closing or opening) exactly
 #   like dead_acute does, and dead_tilde as of "”" U201D, for more resilient
-#   keyboard layouts, e.g. with dead_superscript on the base level with respect
-#   to a need for dumbed-down layout drivers to cater for Windows shipping some
-#   malware designed to destroy the reputation of more complete layouts.
-#   https://dispoclavier.com/nouvel-azerty/#malware-windows
+#   keyboard layouts.
 #   See # # Quotation mark input method
 #
 #   Followed by asterisk, *dead_superscript provides an intuitive shortcut for 
@@ -13468,7 +13466,7 @@
 #   Cross-platform compatibility is full on MacOS, but only partial on Windows,
 #   that is able to support only lowercase, and only digrams, provided that the
 #   dead key is assigned the appropriate dead character: "ê" U00EA LATIN SMALL
-#   LETTER E WITH CIRCUMFLEX.
+#   LETTER E WITH CIRCUMFLEX, for instance.
 #
 #   Likewise, a Ç key is emulated for use on the Canadian French variant.
 #   See #*# CEDILLA
@@ -13487,38 +13485,25 @@
 #
 #   Anyway, the multikey equivalents of this way to input superscript digits
 #   cannot be supported, since they conflict with "❤" U2764 as of "³" U00B3, or
-#   with the new sequence <Multi_key><less><8> introduced for the less frequent
-#   "♥" U2665, as of "⁸" U2078.
+#   with the less frequent "♥" U2665, as of "⁸" U2078 if using the new sequence
+#   <Multi_key><less><8> introduced for "♥" U2665.
 #   See # # Heart emoji
 #
-#   The diaeresis dead key offers an acceptable alternative input method for
-#   superscript digits, with some mnemonic using the traditional French AZERTY
-#   mapping of dead_diaeresis on the same key D11 as dead_circumflex, in shift
-#   position.
+#   For the sake of usability and meeting predictable user expectations (that
+#   also have been escalated to the level of standards support), superscript
+#   digits are supported, at the expense of multikey equivalents.
+#   See NF Z71-300:2019
+#   See E DIN 2137-1:2020-11
+#   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
+#   See # # Multikey equivalents
+#
+#   For full support including multikey equivalents, the diaeresis dead key may
+#   likely be an acceptable workaround solution for superscript digits, as some
+#   mnemonic, using the traditional French AZERTY mapping of dead_diaeresis on
+#   the same key (D11) as dead_circumflex, in shift position, might not be too
+#   far-fetched. Superscript digits are also in the superscript dead key.
 #   See #*# DIAERESIS
-#
-#   Ultimately, the “superscript digits by dead_circumflex” feature may be
-#   considered non-critical when a dedicated superscript dead key is present,
-#   and superscript digits as well as small modifier letters (i.e. superscript
-#   small letters) are on live keys for a streamlined user experience.
 #   See #*# SUPERSCRIPT
-#
-#   So the set of remaining numeric base characters is used for other purposes.
-#   One useful functionality is bullets, since the symbol groups are limited to
-#   "•" U2022, "◦" U25E6, "‣" U2023, as well as "⁃" U2043, and "▪" U25AA. As a
-#   complementary, partly intersecting set, dead_circumflex supports "▪" U25AA,
-#   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3, and also "•" U2022.
-#   See # # C07 underscore
-#   See # # C05 minus
-#   See # # C01 numbersign
-#   See #^# Bullets
-#
-#   Previously, the heart emoji logic was followed through, supporting the full
-#   set of filled suits (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
-#   outlined suits (non-emoji "♡" U2661, "♧" U2667, "♢" U2662, "♤" U2664).
-#   See # # B07-level1 comma
-#   See # # CIRCUMFLEX&GROUP_2
-#   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
@@ -13530,11 +13515,14 @@
 #   input method by <dead_circumflex><d>, <dead_circumflex><D> thanks to
 #   French not having any word with -êd-.
 #
-#   U016C LATIN CAPITAL LETTER U WITH BREVE is used in Esperanto and has thus a
-#   shortcut by <dead_circumflex><B>, and U016D LATIN SMALL LETTER U WITH BREVE
-#   may alternatively be input by <dead_circumflex><b>. as French doesn’t have
-#   any word with -êb-. Another pair of shortcuts uses Ugrave, since U has not
-#   been encoded with circumflex and grave, as opposed to A, E and O.
+#   As "B" has not been encoded with circumflex, and French doesn’t have any
+#   word with -êb-, <dead_circumflex><B> and <dead_circumflex><b> may be used
+#   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
+#   "ŭ" U016D (used in Esperanto). Likewise, "U" mnemonics foster the use of
+#   Ugrave for the same output (by lack of something else for the time being),
+#   since U has not been encoded with circumflex and grave, as opposed to A (by
+#   Agrave on key E10), E (by Egrave on key E07) and O (French AZERTY does not
+#   feature Ograve).
 #
 #   Followed by comma, dead_circumflex provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
@@ -13565,6 +13553,8 @@
 <Multi_key><less>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<dead_circumflex>                                                                    <asciicircum> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
+<Multi_key><less>                                                                    <asciicircum> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <Multi_key><less>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
@@ -13579,46 +13569,46 @@
 <Multi_key><less>                                                                    <twosuperior> : "′" U2032 # PRIME
 <dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
 <Multi_key><less>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
-<dead_circumflex>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<dead_circumflex>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<dead_circumflex>                                                                              <1> : "•" U2022 # BULLET
-<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
-<dead_circumflex>                                                                           <KP_1> : "•" U2022 # BULLET
-<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
-<dead_circumflex>                                                                              <2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<Multi_key><less>                                                                              <2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<dead_circumflex>                                                                           <KP_2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<Multi_key><less>                                                                           <KP_2> : "᪰" U1AB0 # COMBINING DOUBLED CIRCUMFLEX ACCENT
-<dead_circumflex>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
-<Multi_key><less>                                                                              <3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
-<dead_circumflex>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
-<Multi_key><less>                                                                           <KP_3> : "❤" U2764 # HEAVY BLACK HEART emoji, red heart, most-used in France
-<dead_circumflex>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE emoji
-<Multi_key><less>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE emoji
-<dead_circumflex>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE emoji
-<Multi_key><less>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE emoji
-<dead_circumflex>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
-<Multi_key><less>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
-<dead_circumflex>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
-<Multi_key><less>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
-<dead_circumflex>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><less>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
-<dead_circumflex>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><less>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
-<dead_circumflex>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
-<Multi_key><less>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
-<dead_circumflex>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
-<Multi_key><less>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
-<dead_circumflex>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><less>                                                                              <8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<dead_circumflex>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<Multi_key><less>                                                                           <KP_8> : "♥" U2665 # BLACK HEART SUIT red emoji, 14th-ranking
-<dead_circumflex>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<dead_circumflex>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<dead_circumflex>                                                                              <0> : "⁰" U2070 # SUPERSCRIPT ZERO
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <0> : "⁰" U2070 # SUPERSCRIPT ZERO
+<dead_circumflex>                                                                           <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
+<dead_circumflex>                                                                              <1> : "¹" U00B9 # SUPERSCRIPT ONE
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <1> : "¹" U00B9 # SUPERSCRIPT ONE
+<dead_circumflex>                                                                           <KP_1> : "¹" U00B9 # SUPERSCRIPT ONE
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_1> : "¹" U00B9 # SUPERSCRIPT ONE
+<dead_circumflex>                                                                              <2> : "²" U00B2 # SUPERSCRIPT TWO
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <2> : "²" U00B2 # SUPERSCRIPT TWO
+<dead_circumflex>                                                                           <KP_2> : "²" U00B2 # SUPERSCRIPT TWO
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_2> : "²" U00B2 # SUPERSCRIPT TWO
+<dead_circumflex>                                                                              <3> : "³" U00B3 # SUPERSCRIPT THREE
+#   Multikey conflicts with "❤" U2764.                                                        <3> : "³" U00B3 # SUPERSCRIPT THREE
+<dead_circumflex>                                                                           <KP_3> : "³" U00B3 # SUPERSCRIPT THREE
+#   Multikey conflicts with "❤" U2764.                                                     <KP_3> : "³" U00B3 # SUPERSCRIPT THREE
+<dead_circumflex>                                                                              <4> : "⁴" U2074 # SUPERSCRIPT FOUR
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <4> : "⁴" U2074 # SUPERSCRIPT FOUR
+<dead_circumflex>                                                                           <KP_4> : "⁴" U2074 # SUPERSCRIPT FOUR
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_4> : "⁴" U2074 # SUPERSCRIPT FOUR
+<dead_circumflex>                                                                              <5> : "⁵" U2075 # SUPERSCRIPT FIVE
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <5> : "⁵" U2075 # SUPERSCRIPT FIVE
+<dead_circumflex>                                                                           <KP_5> : "⁵" U2075 # SUPERSCRIPT FIVE
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_5> : "⁵" U2075 # SUPERSCRIPT FIVE
+<dead_circumflex>                                                                              <6> : "⁶" U2076 # SUPERSCRIPT SIX
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <6> : "⁶" U2076 # SUPERSCRIPT SIX
+<dead_circumflex>                                                                           <KP_6> : "⁶" U2076 # SUPERSCRIPT SIX
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_6> : "⁶" U2076 # SUPERSCRIPT SIX
+<dead_circumflex>                                                                              <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
+<dead_circumflex>                                                                           <KP_7> : "⁷" U2077 # SUPERSCRIPT SEVEN
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_7> : "⁷" U2077 # SUPERSCRIPT SEVEN
+<dead_circumflex>                                                                              <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
+#   Multikey conflicts with "♥" U2665.                                                        <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
+<dead_circumflex>                                                                           <KP_8> : "⁸" U2078 # SUPERSCRIPT EIGHT
+#   Multikey conflicts with "♥" U2665.                                                     <KP_8> : "⁸" U2078 # SUPERSCRIPT EIGHT
+<dead_circumflex>                                                                              <9> : "⁹" U2079 # SUPERSCRIPT NINE
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <9> : "⁹" U2079 # SUPERSCRIPT NINE
+<dead_circumflex>                                                                           <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
+#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
 <dead_circumflex>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -14196,19 +14186,21 @@
 #   These would need to be distinguished by leading space, screwing things up.
 #
 #   For ease of access, and in an attempt to meet potential user expectations,
-#   the hacek dead key is also activatable by dead_circumflex triple press,
-#   following the logic that multiple dead key presses shift diacritics around
-#   and may also turn them. For portability, the full dead key content must be
-#   supported, as well as multikey, even though this does not make sense.
+#   the hacek dead key is also activatable by dead_circumflex double press,
+#   extending the logic that multiple dead key presses shift diacritics around,
+#   to consider that they may also turn them. For portability, the full dead
+#   key content is supported, as well as multikey, even though this does not
+#   make sense.
 #
-#   While the most streamlined implementation would be by adding the triple
+#   While the most streamlined implementation would be by adding the double
 #   dead_circumflex sequences here, for consistency the content is copied and
 #   maintained separately, since this file is also a documentation source.
 #   See #^# HACEK input facility by CIRCUMFLEX
+#   See # # Notes about documentation
 #
 #   Another facility, <dead_grave><dead_acute>, would conflict with "‛" U201B.
 #   The reverse would be counter-intuitive as well as pointless in the presence
-#   of the triple circumflex alternative, using the most easily hit dead key of
+#   of the double circumflex alternative, using the most easily hit dead key of
 #   AZERTY.
 #   See # # Quotation mark input method
 #
@@ -16770,11 +16762,8 @@
 #   "¦" U00A6 is also in group 11 of ":".
 #   See # # B09 colon
 #
-#   Superscript digits, formerly in dead_circumflex, are also supported for the
-#   sake of NF Z71-300:2019. However, this redundancy with the superscript dead
-#   key is not extended to the signs and parentheses since NF Z71-300:2019 does
-#   not require these, and their multikey equivalents would conflict with many
-#   mathematical symbols. that would need to be distinguished by leading space.
+#   Superscript digits are also supported as a full-support alternative to the
+#   partial support in dead_circumflex, lacking the multikey equivalents.
 #   See #*# CIRCUMFLEX
 #
 #   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
