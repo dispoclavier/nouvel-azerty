@@ -1550,9 +1550,8 @@
 #   redundant mappings of higher groups. The goal is to not require activating
 #   the exact group.
 #
-#   This is part of the streamlined user experience as a design principle.
-#   Another, unusual term is “un-screwed-up” meaning that screwing things up
-#   is avoided, if possible; hopefully wherever possible.
+#   This is part of the streamlined, “un-screwed-up” user experience set as a
+#   design goal.
 #
 #
 #*# SUPERSCRIPT
