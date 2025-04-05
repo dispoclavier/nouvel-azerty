@@ -866,6 +866,7 @@
 #   better for a streamlined user experience.
 #   See #^# Western Zodiacal Signs
 #   See # # Design of math sequences
+#   See #   Streamlining
 #
 #   To achieve this goal, this list is processed and sorted as documented near
 #   the end of the notes for maintenance section.
@@ -1126,11 +1127,11 @@
 #         }
 #       }
 #
-#   The removal of the padding spaces is included as it does not affect sorting
-#   prior to realigning the colons using "matthewthorning.align-vertically" for
-#   usability on less-than-ultrawide monitors, while reviewing the reformatted
-#   list for redundancies to be redacted for the sake of streamlining the user
-#   experience.
+#   The removal of padding spaces is included, as it does not affect sorting.
+#   If desired, the colons may then be vertically realigned, using for example
+#   "matthewthorning.align-vertically", prior to reviewing the reformatted list
+#   for redundancies to be redacted for a streamlined user experience.
+#   See #   Streamlining
 #   See ### Multikey sequences
 #
 #
