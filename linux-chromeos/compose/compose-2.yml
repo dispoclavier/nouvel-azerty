@@ -4435,6 +4435,13 @@
 #   and ASCII symbols except ampersand and question mark bijectively.
 #   See # # Introducing new-school input composition
 #
+#   Multikey sequences with quotedbl are duplicated with EuroSign, to account
+#   for the mapping of EuroSign instead of quotedbl for compliance with current
+#   hardware and the European Commission’s recommendation, that is the purpose
+#   of mapping quotedbl and dead_doubleacute on the "E" key (D04), rather than
+#   braceleft and dead_hook (now on D08).
+#   See dispocla.cpp // ## Note about EURO SIGN
+#
 #   Double acute has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Double_Acute_Accent
 #
@@ -4443,13 +4450,6 @@
 #   *dead_flag.
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
-#
-#   Multikey sequences with quotedbl are duplicated with EuroSign, to account
-#   for the mapping of EuroSign instead of quotedbl for compliance with current
-#   hardware and the European Commission’s recommendation, that is the purpose
-#   of mapping quotedbl and dead_doubleacute on the "E" key (D04), rather than
-#   braceleft and dead_hook (now on D08).
-#   See dispocla.cpp // ## Note about EURO SIGN
 #
 <dead_doubleacute>                                                                         <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
@@ -4571,6 +4571,14 @@
 #   See #*# TURNED
 #   See #+# GROUP_1
 #
+#   The two pilcrow bullets "⁌" U204C BLACK LEFTWARDS BULLET and "⁍" U204D
+#   BLACK RIGHTWARDS BULLET are supported by case insensitive "b" and "d",
+#   thanks to the fact that these lowercase letters are the reversed
+#   counterpart of each other and would thus be missing from the reversed
+#   dead key. The association with the pilcrow bullets is based on shape-driven
+#   mnemonics using the rounded and straight parts of the bullets, coming close
+#   to "¶" U00B6 PILCROW SIGN and "⁋" U204B REVERSED PILCROW SIGN.
+#
 #   Digits yield mathematical backslashes without space termination.
 #   See # # Design of math sequences
 #   See #*# STROKE
@@ -4622,12 +4630,16 @@
 <Multi_key><backslash>                                                                         <4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <UEFD6>                                                                                     <KP_4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><backslash>                                                                      <KP_4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<UEFD6>                                                                                        <B> : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<Multi_key><backslash>                                                                         <B> : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <UEFD6>                                                                                        <b> : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><backslash>                                                                         <b> : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <UEFD6>                                                                                        <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <Multi_key><backslash>                                                                         <C> : "Ↄ" U2183 # ROMAN NUMERAL REVERSED ONE HUNDRED
 <UEFD6>                                                                                        <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
 <Multi_key><backslash>                                                                         <c> : "ↄ" U2184 # LATIN SMALL LETTER REVERSED C
+<UEFD6>                                                                                        <D> : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><backslash>                                                                         <D> : "⁌" U204C # BLACK LEFTWARDS BULLET
 <UEFD6>                                                                                        <d> : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><backslash>                                                                         <d> : "⁌" U204C # BLACK LEFTWARDS BULLET
 <UEFD6>                                                                                        <E> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
