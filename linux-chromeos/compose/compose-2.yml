@@ -1603,11 +1603,11 @@
 #   opposed by members of the Consortium, for software marketing reasons. And
 #   when character names on a MODIFIER LETTER basis were introduced, these were
 #   adopted as the new norm for “superscript”. Meanwhile, “subscript” remained
-#   unchanged, meaning that preformatted superscript letters should not be used
-#   in lieu of formatted letters. But the move was biased, since superscript is
-#   a means to carry semantics and is therefore eligible for plain text support
-#   in Unicode. Duly disguising subscript likewise was dropped, probably due to
-#   running out of technical terms.
+#   unchanged, meaning that duly disguising subscript likewise was dropped,
+#   probably due to running out of technical terms. That makes clear that the
+#   preformatted superscript letters were targeted in particular, due to their
+#   use as abbreviation indicators, since superscript is a means to carry
+#   semantics and is therefore eligible for plain text support in Unicode.
 #
 #   Followed by quotedbl, apostrophe or rightsinglequotemark, dead_superscript
 #   yields high curly quotation marks U201D, U2019 (closing or opening) exactly
@@ -4945,18 +4945,17 @@
 #   All letters annotated as for Lithuanian in this file are courtesy:
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
-#   As a fallback convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is
-#   supported by asterisk, like "⁂" U2042 ASTERISM is in *dead_superscript. Due
-#   to conflicts with "᪱" U1AB1, dead_diaeresis cannot do it. Neither can
-#   dead_acute, due to conflicts with "Ǻ" U01FA and "ǻ" U01FB.
+#   As a convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is supported
+#   by asterisk, like "⁂" U2042 ASTERISM is in *dead_superscript, both having
+#   easy mappings on the same key D11.
 #
-#   The tilde dead key supports daggers, because it is mapped on key T due to
-#   alphabetic mnemonic, and daggers are tied to T by shape-based mnemonic.
-#   The full set of daggers is available by digits 1 through 6 with shape-based
-#   mnemonic for simple, double and triple daggers, by 1 through 3, and numpad
-#   positional mnemonic for left/right guard daggers, by 4 and 6 respectively,
-#   around the turned dagger by 5.
-#   Umihotaru’s 'Nishiki-teki' font supports "⹋" U2E4B TRIPLE DAGGER.
+#   The tilde dead key supports daggers, because its default position is mapped
+#   on key T due to alphabetic mnemonic, and daggers have shape-based mnemonic
+#   related to "T". The full set of daggers is available by digits 1 through 6
+#   with shape-based mnemonic for simple, double and triple (already supported
+#   by Umihotaru’s 'Nishiki-teki' font) daggers, by 1..3, and numpad positional
+#   mnemonic for left/right guard daggers, by 4 and 6 respectively, around the
+#   turned dagger by 5.
 #
 #   The remaining digits are used for the four tack modifier letters that are
 #   no superscripts despite the "modifier letter" part in their names. since
@@ -5002,6 +5001,8 @@
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                            <question> : "͠" U0360 # COMBINING DOUBLE TILDE
