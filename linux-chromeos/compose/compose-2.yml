@@ -3745,9 +3745,10 @@
 #   The TURNED dead key supports Lisu letters looking like turned Latin letters
 #   or like the centrally symmetric H, I, N, O, S, X, Z since these may be used
 #   alongside for consistency. But the other Lisu letters, those that cannot be
-#   used as turned Latin letters, are not supported, as this works by dead key,
-#   meaning that this is not fit for writing Lisu. But due to conflicts, TURNED
-#   double press is used for a fuller set.
+#   used as turned Latin letters, are not supported, given that this is not fit
+#   for writing Lisu, due to its dead key based functioning. Still double press
+#   is used for a fuller set.
+#   See #^# INVERTED
 #
 #   Although "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E is used as a turned E,
 #   its usual glyph is a genuine reversed E for aesthetics, unlike what is done
@@ -3759,9 +3760,10 @@
 #
 #   The opening parenthesis yields the character tie "⁀" U2040, since this may
 #   be considered sideways, or like a vertical parenthesis. The undertie
-#   "‿" U203F would conflict with "𐞡" U107A1 by its multikey equivalent, but
-#   it is supported in the double press virtual dead key *dead_inverted. Both
+#   "‿" U203F conflicts with "𐞡" U107A1, "𝼆" U1DF06 by its multikey equivalent,
+#   but it is also supported in the double press virtual dead key. Both
 #   "⁀" U2040 and "‿" U203F are also in group 12 of "(" and ")".
+#   See #^# INVERTED
 #   See # # C03 parenleft
 #   See # # C04 parenright
 #
@@ -3772,7 +3774,7 @@
 #
 #   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
 #   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
-#   better option for typing a U02BB is using group 2 of grave), with no-break
+#   better option for typing a U02BB is using group 1 of grave), with no-break
 #   space or no-break thin space as a base character.
 #
 <UEFD5>                                                                                    <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
@@ -3791,6 +3793,8 @@
 <Multi_key><percent>                                                                   <ampersand> : "⅋" U214B # TURNED AMPERSAND
 <UEFD5>                                                                                <parenleft> : "⁀" U2040 # CHARACTER TIE
 <Multi_key><percent>                                                                   <parenleft> : "⁀" U2040 # CHARACTER TIE
+<UEFD5>                                                                               <parenright> : "‿" U203F # UNDERTIE
+#   Multikey conflicts with "𐞡" U107A1, "𝼆" U1DF06.                                   <parenright> : "‿" U203F # UNDERTIE
 <UEFD5>                                                                                    <comma> : "⸲" U2E32 # TURNED COMMA
 <Multi_key><percent>                                                                       <comma> : "⸲" U2E32 # TURNED COMMA
 <UEFD5>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
@@ -4239,15 +4243,19 @@
 #   Therefore, this supports the Claudian letter "Ⅎ" U2132 that has a lowercase
 #   form "ⅎ" U214E, intended to meet Unicode casing requirements, and thus less
 #   appropriate for support in the single press *dead_turned, where "ɟ" U025F
-#   is more convenient. The other Claudian letters are "Ↄ" U2183, "ↄ" U2184 and
-#   "Ⱶ" U2C75, "ⱶ" U2C76.
+#   is more convenient.
 #   https://en.wikipedia.org/wiki/Claudian_letters
+#
+#   The other Claudian letters are "Ↄ" U2183, "ↄ" U2184
 #   See #*# REVERSED
+#   and "Ⱶ" U2C75, "ⱶ" U2C76.
 #   See #+# GROUP_5
 #
 #   The two parentheses yield the two underties, one of which is inverted:
-#   "⁔" U2054, "‿" U203F. For mnemonic, these are like sideways, or vertical
+#   "⁔" U2054, "‿" U203F. For mnemonics, these are like sideways, or vertical
 #   parentheses. "⁀" U2040 and "‿" U203F are also in group 12 of "(" and ")".
+#   See # # C03 parenleft
+#   See # # C04 parenright
 #
 #   As a diacritic, "̕" U0315 COMBINING COMMA ABOVE RIGHT is included, with the
 #   rationale that turning twice may be used to represent a shift to the right.
@@ -4417,8 +4425,9 @@
 #   Multi_key: ¦"
 #   Dchar: "ű" U0171
 #
-#   This dedicated dead key, supported by XKB, is required to prevent conflicts
-#   due to the dead key based quotation mark input method.
+#   This dead key, dedicated to what could be virtualized by dead_acute double
+#   press, and supported by XKB, is required to prevent conflicts due to the
+#   dead key based quotation mark input method.
 #   See # # Quotation mark input method
 #
 #   The DOUBLE_ACUTE dead key is also required for consistency with the symbols
@@ -4430,13 +4439,16 @@
 #   https://www.frathwiki.com/Double_Acute_Accent
 #
 #   With digits, dead_doubleacute acts as a shortcut for double circled numbers
-#   with “double” mnemonic. Double arrows have their redundancy on *dead_flag.
+#   with “double” mnemonic. Double arrows have their mnemonic redundancy on
+#   *dead_flag.
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
 #
 #   Multikey sequences with quotedbl are duplicated with EuroSign, to account
 #   for the mapping of EuroSign instead of quotedbl for compliance with current
-#   hardware and the European Commission’s recommendation.
+#   hardware and the European Commission’s recommendation, that is the purpose
+#   of mapping quotedbl and dead_doubleacute on the "E" key (D04), rather than
+#   braceleft and dead_hook (now on D08).
 #   See dispocla.cpp // ## Note about EURO SIGN
 #
 <dead_doubleacute>                                                                         <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
