@@ -4577,7 +4577,8 @@
 #   counterpart of each other and would thus be missing from the reversed
 #   dead key. The association with the pilcrow bullets is based on shape-driven
 #   mnemonics using the rounded and straight parts of the bullets, coming close
-#   to "¶" U00B6 PILCROW SIGN and "⁋" U204B REVERSED PILCROW SIGN.
+#   to "¶" U00B6 PILCROW SIGN and "⁋" U204B REVERSED PILCROW SIGN, that is also
+#   supported by remaining "p", and by "paragraph" (U00B6), key D10, level 7.
 #
 #   Digits yield mathematical backslashes without space termination.
 #   See # # Design of math sequences
@@ -4734,18 +4735,6 @@
 # # REVERSED&GROUP_3
 #   Dchar: 
 #
-<UEFD6><UEFD0><3>                                                                              <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><3>                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><KP_3>                                                                           <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><KP_3>                                                       <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><UEFD0><UEFD0>                                                                   <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><numbersign><numbersign>                                     <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><3>                                                                              <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><3>                                                          <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><KP_3>                                                                           <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><KP_3>                                                       <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><UEFD0><UEFD0>                                                                   <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><numbersign><numbersign>                                     <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <UEFD6><UEFD0><3>                                                                              <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><3>                                                          <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6><UEFD0><KP_3>                                                                           <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
@@ -4769,18 +4758,6 @@
 # # REVERSED&GROUP_4
 #   Dchar: 
 #
-<UEFD6><UEFD0><4>                                                                              <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><4>                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><KP_4>                                                                           <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><KP_4>                                                       <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><numbersign><numbersign><numbersign>                         <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><4>                                                                              <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><4>                                                          <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><KP_4>                                                                           <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><KP_4>                                                       <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                            <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><numbersign><numbersign><numbersign>                         <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <UEFD6><UEFD0><4>                                                                              <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><4>                                                          <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6><UEFD0><KP_4>                                                                           <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
@@ -4804,14 +4781,6 @@
 # # REVERSED&GROUP_5
 #   Dchar: 
 #
-<UEFD6><UEFD0><5>                                                                              <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><5>                                                          <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><KP_5>                                                                           <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><KP_5>                                                       <E> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><5>                                                                              <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><5>                                                          <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<UEFD6><UEFD0><KP_5>                                                                           <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
-<Multi_key><backslash><numbersign><KP_5>                                                       <e> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <UEFD6><UEFD0><5>                                                                              <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash><numbersign><5>                                                          <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6><UEFD0><KP_5>                                                                           <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
@@ -4839,66 +4808,19 @@
 # # REVERSED&HOOK&GROUP_1
 #   Dchar: 
 #
-<UEFD6><dead_hook><UEFD0>                                                                      <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
-<Multi_key><backslash><braceleft><numbersign>                                                  <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
-<dead_hook><UEFD6><UEFD0>                                                                      <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
-<Multi_key><braceleft><backslash><numbersign>                                                  <a> : "ᵆ" U1D46 # MODIFIER LETTER SMALL TURNED AE
+<UEFD6><dead_hook><UEFD0>                                                                      <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<Multi_key><backslash><braceleft><numbersign>                                                  <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<dead_hook><UEFD6><UEFD0>                                                                      <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<Multi_key><braceleft><backslash><numbersign>                                                  <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 #
 #
 # # REVERSED&HOOK&GROUP_2
 #   Dchar: 
 #
-<UEFD6><dead_hook><UEFD0><UEFD0>                                                               <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<Multi_key><backslash><braceleft><numbersign><numbersign>                                      <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<dead_hook><UEFD6><UEFD0><UEFD0>                                                               <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-<Multi_key><braceleft><backslash><numbersign><numbersign>                                      <a> : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
-#
-#
-# # REVERSED&HOOK&GROUP_3
-#   Dchar: 
-#
-<UEFD6><dead_hook><UEFD0><3>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><3>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<UEFD6><dead_hook><UEFD0><KP_3>                                                                <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><KP_3>                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<UEFD6><dead_hook><UEFD0><UEFD0><UEFD0>                                                        <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><numbersign><numbersign>                          <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><3>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><3>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><KP_3>                                                                <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><KP_3>                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><UEFD0><UEFD0>                                                        <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><numbersign><numbersign>                          <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-#
-#
-# # REVERSED&HOOK&GROUP_4
-#   Dchar: 
-#
-<UEFD6><dead_hook><UEFD0><4>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><4>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<UEFD6><dead_hook><UEFD0><KP_4>                                                                <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><KP_4>                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<UEFD6><dead_hook><UEFD0><UEFD0><UEFD0><UEFD0>                                                 <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><numbersign><numbersign><numbersign>              <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><4>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><4>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><KP_4>                                                                <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><KP_4>                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><UEFD0><UEFD0><UEFD0>                                                 <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><numbersign><numbersign><numbersign>              <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-#
-#
-# # REVERSED&HOOK&GROUP_5
-#   Dchar: 
-#
-<UEFD6><dead_hook><UEFD0><5>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><5>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<UEFD6><dead_hook><UEFD0><KP_5>                                                                <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><backslash><braceleft><numbersign><KP_5>                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><5>                                                                   <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><5>                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<dead_hook><UEFD6><UEFD0><KP_5>                                                                <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
-<Multi_key><braceleft><backslash><numbersign><KP_5>                                            <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<UEFD6><dead_hook><UEFD0><UEFD0>                                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<Multi_key><backslash><braceleft><numbersign><numbersign>                                      <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<dead_hook><UEFD6><UEFD0><UEFD0>                                                               <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<Multi_key><braceleft><backslash><numbersign><numbersign>                                      <e> : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 #
 #
 # # REVERSED&RETROFLEX_HOOK
@@ -4936,23 +4858,6 @@
 <Multi_key><braceright><backslash><numbersign><numbersign>                                     <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
 #
 #
-# # REVERSED&RETROFLEX_HOOK&GROUP_3
-#   Dchar: 
-#
-<UEFD6><UEFD4><UEFD0><3>                                                                       <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<Multi_key><backslash><braceright><numbersign><3>                                              <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<UEFD6><UEFD4><UEFD0><KP_3>                                                                    <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<Multi_key><backslash><braceright><numbersign><KP_3>                                           <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<UEFD6><UEFD4><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<Multi_key><backslash><braceright><numbersign><numbersign><numbersign>                         <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<UEFD4><UEFD6><UEFD0><3>                                                                       <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<Multi_key><braceright><backslash><numbersign><3>                                              <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<UEFD4><UEFD6><UEFD0><KP_3>                                                                    <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<Multi_key><braceright><backslash><numbersign><KP_3>                                           <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<UEFD4><UEFD6><UEFD0><UEFD0><UEFD0>                                                            <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-<Multi_key><braceright><backslash><numbersign><numbersign><numbersign>                         <e> : "ᶔ" U1D94 # LATIN SMALL LETTER REVERSED OPEN E WITH RETROFLEX HOOK
-#
-#
 #*# TILDE
 #   dead_tilde
 #   Multi_key: ¦~
@@ -4970,8 +4875,8 @@
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
 #   As a convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is supported
-#   by asterisk, like "⁂" U2042 ASTERISM is in *dead_superscript, both having
-#   easy mappings on the same key D11.
+#   by dead_tilde followed by asterisk, like "⁂" U2042 ASTERISM is in
+#   *dead_circumflex, as both have easy mappings on the same key D11.
 #
 #   The tilde dead key supports daggers, because its default position is mapped
 #   on key T due to alphabetic mnemonic, and daggers have shape-based mnemonic
