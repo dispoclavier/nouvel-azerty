@@ -6723,22 +6723,21 @@
 #   yields high curly quotation marks U201D, U2019 (closing or opening).
 #   See # # Quotation mark input method
 #
-#   J WITH ACUTE is in en_US.UTF-8/Compose, but Ĳ́ ĳ́ with acute is not
-#   rendered correctly in some fonts. It should have an accent on each letter
-#   making up the digraph.
+#   Composed "J" with acute "J́" is in en_US.UTF-8/Compose, but composed "Ĳ"
+#   with acute "Ĳ́" is not, nor is it rendered correctly in some fonts, i.e.
+#   with an accent on each letter making up the all-in-one digraph letter.
 #   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
 #
-#   Followed by Éé, acute is a shortcut to Ãã for Portuguese with spatial
-#   mnemonic on AZERTY, where A is close to É.
+#   Followed by Éé, dead_acute is a shortcut to Ãã for Portuguese, with spatial
+#   mnemonic on AZERTY, where "A" (D01) is close to "É" (E02).
 #
-#   Followed by Àà, acute is a shortcut to Õõ for Portuguese with spatial
-#   mnemonic on AZERTY, where O is close to À.
+#   Followed by Àà, dead_acute is a shortcut to Õõ for Portuguese, with spatial
+#   mnemonic on AZERTY, where "O" (D09) is close to "À" (E10).
 #
-#   Comma is not used as a base character, because one way, its multikey
-#   equivalent would conflict with acute and cedilla. Nor is period, that
-#   has the same issue with acute and dot above.
-#   See # # CEDILLA&ACUTE
-#   See # # ACUTE&DOT_ABOVE
+#   The primes by digits sequences add to the support of "′" U2032, "″" U2033,
+#   "‴" U2034, "⁗" U2057 by multikey.
+#   See # # Primes
+#   See # # Quadruple prime
 #
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method, the more as there are no precomposed
@@ -6747,9 +6746,6 @@
 #   for "̗" U0317 COMBINING ACUTE ACCENT BELOW, and by underscore for "ˏ" U02CF
 #   MODIFIER LETTER LOW ACUTE ACCENT.
 #   See #*# GRAVE
-#
-#   The primes by digits sequences add to the support by multikey.
-#   See # # Primes
 #
 <dead_acute>                                                                               <space> : "́" U0301 # COMBINING ACUTE ACCENT
 <Multi_key><apostrophe>                                                                    <space> : "́" U0301 # COMBINING ACUTE ACCENT
@@ -6968,20 +6964,25 @@
 #
 #
 #*# HOOK
+#   hook, fishhook, crook
 #   dead_hook
 #   Multi_key: ¦{
 #   Dchar: "ɱ" U0271
 #
-#   Includes tone bars due to good mnemonic based on I, mapped like { on D08.
-#   For an alternative, see #^# Tone bars
+#   A hook may also be referred to as a shepherd’s staff or crook, that other
+#   languages may name this diacritic after, e.g. French ("crosse") alleviating
+#   the semantically overloaded hook. It may also be referred to as a fishhook,
+#   like in the names of "ɾ" U027E and "𝼑" U1DF11.
 #
-#   A hook may also be referred to as a fishhook.
+#   This includes tone bars, due to good mnemonic based on "I", mapped like "{"
+#   on D08. Tone bars also have dedicated multikey support.
+#   See #^# Tone bars
 #
-#   Followed by period, the hook key yields "⁕" U2055 FLOWER PUNCTUATION MARK.
+#   Followed by period, dead_hook yields "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
 #   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
-#   by lack of anything more appropriate, the spacing modifier slot is
-#   populated with "˽" U02FD MODIFIER LETTER SHELF.
+#   the spacing modifier slot is populated with "˽" U02FD MODIFIER LETTER SHELF
+#   by lack of anything more appropriate.
 #
 <dead_hook>                                                                                <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <Multi_key><braceleft>                                                                     <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
@@ -7420,31 +7421,34 @@
 #
 #
 #*# RETROFLEX_HOOK
-#   retroflex hook, tail, right hook
+#   retroflex hook, hook tail, tail, right hook, squirrel tail
 #   *dead_retroflexhook UEFD4
 #   Multi_key: ¦}
 #   Dchar: "ɖ" U0256
 #
 #   A retroflex hook may be referred to as a tail, a hook tail, a right hook.
 #
-#   "Ꝕ" UA754, "ꝕ" UA755 P WITH SQUIRREL TAIL is made redundant for convenience
-#   and ease of input thanks to availability of the P positions.
+#   A shortcut for "Ꝕ" UA754, "ꝕ" UA755 P WITH SQUIRREL TAIL is provided for
+#   convenience and ease of input, thanks to the availability of the "P", "p"
+#   base characters.
 #   See #^# CURL
 #
-#   RETROFLEX_HOOK supports the full set of 10 recycling symbols, consistently
-#   with the paper symbols in dead_abovedot, with graphic mnemonic based on the
-#   shape of the letter O this dead key is on, and the cycling idea.
-#   The proximity with DOT_ABOVE on P also has a mnemonic upside.
+#   As a result, *dead_retroflexhook supports "ᶏ" U1D8F, "𝼝" U1DF1D, "Ɖ" U0189,
+#   "ɖ" U0256, "ᶒ" U1D92, "ᶖ" U1D96, "ɭ" U026D, "ɳ" U0273, "𝼛" U1DF1B,
+#   "Ꝕ" UA754, "ꝕ" UA755, "Ɋ" U024A, "ɋ" U024B, "Ɽ" U2C64, "ɽ" U027D,
+#   "ʂ" U0282, "Ʈ" U01AE, "ʈ" U0288, "ᶙ" U1D99, "ⱱ" U2C71, "ʐ" U0290.
+#
+#   The full set of 10 recycling symbols is supported with digits as base chars
+#   consistently with the paper symbols in dead_abovedot, with graphic mnemonic
+#   based on the cycle-shaped letter "O" (D09) this dead key is on, by lack of
+#   the alphabetic mnemonic, except when considering the dead key name, since
+#   *dead_retroflexhook moved from key "R" (D04) in the wake of making room for
+#   the Euro sign. The proximity with dead_abovedot also has a mnemonic upside.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# DOT_ABOVE
+#   See #*# REVERSED
 #   See # # D04 backslash
 #   See # # Recycling symbols
-#
-#   For these symbols, the R mnemonic is limited to the dead key name, since
-#   the R key D04 is used for the REVERSED dead key supporting mathematical
-#   backslash shaped symbols.
-#   See #*# REVERSED
-#   See #*# STROKE
 #
 #   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
 #   SHELF, by lack of anything more to the point.
@@ -7947,7 +7951,8 @@
 #   consequence, dotless letters do not need support on live keys or in groups.
 #
 #   This supports various combining dots, with digits as base characters, and
-#   with numpad-based mnemonics:
+#   with numeric or numpad-based mnemonics using the position of the key on the
+#   numpad or the bump on key "5 (C52):
 #
 #       1    "᷺" U1DFA COMBINING DOT BELOW LEFT
 #       3    "᪴" U1AB4 COMBINING TRIPLE DOT
@@ -9252,14 +9257,14 @@
 #   after single and double press, and by case insensitive <Multi_key><x><o>
 #   sequences as sideways compatible multikey equivalents.
 #   See #^# CURRENCY_EXTENDED
-#   See # # Currency symbols
+#   See # # Currency symbols by ISO codes
 #
 #   Letters Jj Qq Vv Xx Zz are unused in en_US.UTF-8/Compose dead_currency,
-#   while 9 symbols are left over among support by base letters.
-#
-#   In en_US.UTF-8/Compose, the BENGALI RUPEE MARK requires a thorn live key,
-#   while the INDIAN RUPEE SIGN is supported only by multikey =R sequences.
-#   The other seven symbols are unsupported in en_US.UTF-8/Compose.
+#   while nine symbols are left over among support by Latin base letters.
+#   In en_US.UTF-8/Compose, the BENGALI RUPEE MARK "৲" U09F2 requires a thorn
+#   live key, as "T", "t" base letters are used up for "₮" U20AE, "৳" U09F3,
+#   while the INDIAN RUPEE SIGN "₹" U20b9 is supported only by multikey « ¦=R »
+#   sequences. The other seven symbols are unsupported in en_US.UTF-8/Compose.
 #
 #   New base:
 #   J        "৲" U09F2 # BENGALI RUPEE MARK
@@ -9293,9 +9298,9 @@
 #   "₵" U20B5 # CEDI SIGN has Ccedilla as a base character too, for consistency
 #   with en_US.UTF-8/Compose.
 #
-#   Integral symbols are also supported, based on S mnemonic, with the
+#   Integral symbols are also supported, based on "S" mnemonic, with the
 #   corresponding digits as base characters. Likewise, contour integrals
-#   are also supported, although they are also in dead_abovering.
+#   are supported too, although these are also in dead_abovering.
 #   See #*# RING_ABOVE
 #
 <dead_currency>                                                                            <space> : "¤" U00A4 # CURRENCY SIGN
@@ -9520,8 +9525,8 @@
 #   Multi_key: ¦(
 #   Dchar: "ȏ" U020F
 #
-#   Breve and inverted breve have each their own dead key for consistency with
-#   the ASCII symbol map and the dead key multikey equivalents.
+#   Both breve and inverted breve have their own dead key, for consistency with
+#   the ASCII symbol map used for dead key multikey equivalents.
 #
 #   As inverted breve has only 6×2 precomposed letters, it might be virtualized
 #   by dead breve double press. Nevertheless it has a dead key of its own, for
@@ -10512,7 +10517,7 @@
 #   of the combining diacritic and the character names containing WITH STROKE
 #   with the meaning of WITH BAR, or BARRED, like UAB33 LATIN SMALL LETTER
 #   BARRED E, or in the Unicode 1.0 name of U0197 LATIN CAPITAL LETTER I WITH
-#   STROKE, previously LATIN CAPITAL LETTER BARRED I.
+#   STROKE, previously LATIN CAPITAL LETTER BARRED I (Unicode 1.0).
 #   See # # Bar and stroke diacritics
 #
 #   But since dead_longsolidusoverlay was removed in 2023, dead_stroke is used
@@ -10533,8 +10538,8 @@
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
 #   See #*# MACRON
 #   See #*# STROKE
-#   See #*# BAR
 #   See #*# HORN
+#   See #   The Chinantec tone marks
 #
 #   As a spacing counterpart of the short bar diacritic "̵" U0335, "˗" U02D7 is
 #   convenient, since it is not the superscript minus sign, despite being named
@@ -10947,7 +10952,7 @@
 #
 #
 #*# HORN
-#   horn, descender, notch
+#   horn; descender; notch
 #   dead_horn
 #   Multi_key: ¦+
 #   Dchar: "ơ" U01A1
@@ -10992,6 +10997,7 @@
 #   See #*# MACRON
 #   See #*# STROKE
 #   See #*# BAR
+#   See #   The Chinantec tone marks
 #
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
@@ -11363,11 +11369,11 @@
 #   for small caps, frequent in phonetics, consistently with other dead key
 #   implementations.
 #
-#   Letters still missing after a proposal advising to encode them all were for
-#   now replaced with "∄" U2204 THERE DOES NOT EXIST.
+#   Letters still missing after a proposal advising to encode them all were
+#   replaced with "∄" U2204 THERE DOES NOT EXIST for the time being.
 #   https://www.unicode.org/L2/L2002/02141-n2419-uralic-phonetic.pdf#page=5
 #
-#   But ultimately all these instances are populated with the remaining Greek
+#   But ultimately, all these instances are populated with the remaining Greek
 #   preformatted letters, both subscript and small caps:
 #
 #       "ᴦ" U1D26 # GREEK LETTER SMALL CAPITAL GAMMA
@@ -11385,15 +11391,15 @@
 #       "ᵪ" U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
 #
 #   This started supporting "⃨" U20E8 COMBINING TRIPLE UNDERDOT when it was
-#   moved in the wake of freeing up groups 1..3 of numbersign, with the
-#   rationale that combining below is lower than the baseline ellipsis, on live
-#   key except in ASCII mode, and that this character has other input methods,
-#   too.
+#   moved in the wake of (temporarily) freeing up groups 1..3 of numbersign,
+#   with the rationale that combining below is lower than the baseline ellipsis
+#   (that is on live key except in ASCII mode), and that this character has
+#   other input methods, too.
 #   See #*# DOT_BELOW
 #   See # # C01 numbersign
 #
-#   The associated diacritic and its spacing clone are built on the underscore
-#   theme hinted by the subscript’s TeX command: "̲" U0332 and ASCII "_" U005F.
+#   The associated diacritic "̲" U0332, and its spacing clone, ASCII "_" U005F
+#   are built on the underscore theme hinted by the subscript’s TeX command.
 #   See #*# SUPERSCRIPT
 #
 <UEFD2>                                                                                    <space> : "̲" U0332 # COMBINING LOW LINE
@@ -12212,6 +12218,7 @@
 #   See #*# STROKE
 #   See #*# BAR
 #   See #*# HORN
+#   See #   The Chinantec tone marks
 #
 #   Digits yield the full collection of simple and multiple vertical bars, for
 #   convenience, as other input methods, in groups or by multikey, may be less
@@ -12754,6 +12761,7 @@
 #   See #*# MACRON
 #   See #*# BAR
 #   See #*# HORN
+#   See #   The Chinantec tone marks
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
@@ -14482,7 +14490,7 @@
 #   dead_doubleacute, so it uses « ¦= » instead. Removing currency symbol
 #   sequences starting with EQUALS SIGN, and leaving only those ending with
 #   EQUALS SIGN, solves this issue.
-#   See # # Currency symbols
+#   See # # Currency symbols by ISO codes
 #
 #
 #   Auxiliary characters
