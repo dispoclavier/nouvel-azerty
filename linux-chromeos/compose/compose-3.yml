@@ -490,8 +490,7 @@
 #   The radical symbols "√" U221A, "∛" U221B, "∜" U221C are so important that
 #   they come in the very first groups of backslash, mapped on key D04 "R" for
 #   mnemonics. The more fine-grained mnemonic implied by having the cube root
-#   in group 3 and the fourth root in group 4 is ditched in favor of ergonomics
-#   and usability.
+#   in group 3 and the fourth root in group 4 is ditched in favor of usability.
 #
 #   Recycling symbols are more extensively supported in *dead_retroflexhook and
 #   by Multi_key, and paper symbols in dead_abovedot.
