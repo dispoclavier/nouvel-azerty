@@ -4879,29 +4879,27 @@
 #   *dead_circumflex, as both have easy mappings on the same key D11.
 #
 #   The tilde dead key supports daggers, because its default position is mapped
-#   on key T due to alphabetic mnemonic, and daggers have shape-based mnemonic
-#   related to "T". The full set of daggers is available by digits 1 through 6
+#   on key "T" due to alphabetic mnemonic, while the "T"-shape-based mnemonic
+#   benefits the daggers. The full set of daggers is available by digits 1..6
 #   with shape-based mnemonic for simple, double and triple (already supported
 #   by Umihotaru’s 'Nishiki-teki' font) daggers, by 1..3, and numpad positional
 #   mnemonic for left/right guard daggers, by 4 and 6 respectively, around the
 #   turned dagger by 5.
 #
-#   The remaining digits are used for the four tack modifier letters that are
-#   no superscripts despite the "modifier letter" part in their names. since
-#   modifier letters are not necessarily superscript. Positional mnemonic is
-#   based on the numpad as far as possible in the remaining slots:
+#   The remaining digits are used for the four tack modifier letters, still for
+#   the sake of alphabetic-graphic mnemonics based on "T". These letters are
+#   no superscripts despite the "modifier letter" part in their names. Mnemonic
+#   is positional based on the numpad as far as possible in the remaining slots
+#   7..9 based on the arrows of the numpad, and 0 based on semantics:
 #
 #      7    "꭪" UAB6A MODIFIER LETTER LEFT TACK
 #      8    "˔" U02D4 MODIFIER LETTER UP TACK
 #      9    "꭫" UAB6B MODIFIER LETTER RIGHT TACK
 #      0    "˕" U02D5 MODIFIER LETTER DOWN TACK
 #
-#   The tilde dead key also has intuitive support for the swung dash "⁓" U2053,
-#   with underscore and the quotation dash U2015 as base characters.
-#
 #   The double diacritic "͠" U0360 has emdash as a mnemonic base character, and
-#   the question mark as an unconflicting ASCII alternative, for a consistent
-#   input method across all dead keys featuring a double diacritic.
+#   the question mark as an unconflicting alternative ASCII base character, for
+#   a consistent input method across all dead keys featuring a double diacritic.
 #
 #   Combining tilde halves above – "︢" UFE22, "︣" UFE23 – are supported on all
 #   fully available base letters for a streamlined user experience.
@@ -4909,6 +4907,10 @@
 #   Halves of combining diacritics are also supported in the tilde and
 #   ampersand virtual dead key.
 #   See # # TILDE&AMPERSAND
+#
+#   The tilde dead key also has intuitive support for the swung dash "⁓" U2053,
+#   with any of the remaining dashes U2013, U2015 as a base character, as well
+#   as with underscore as an alternative ASCII base character.
 #
 #   "⨤" U2A24 PLUS SIGN WITH TILDE ABOVE cannot be supported, due to a conflict
 #   of plus with "Ỡ" U1EE0. As a consequence, it is supported by multikey only.
@@ -4926,8 +4928,12 @@
 <Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                                <plus> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
+#   Multikey conflicts with "Ỡ" U1EE0, "ỡ" U1EE1, "Ữ" U1EEE, "ữ" U1EEF.                     <plus> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <dead_tilde>                                                                          <underscore> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                               <underscore> : "⁓" U2053 # SWUNG DASH
+<dead_tilde>                                                                              <endash> : "⁓" U2053 # SWUNG DASH
+<Multi_key><asciitilde>                                                                   <endash> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
