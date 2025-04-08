@@ -1184,14 +1184,21 @@
 #
 #   The two Latin-1 ordinal indicators "ª" U00AA FEMININE ORDINAL INDICATOR and
 #   "º" U00BA MASCULINE ORDINAL INDICATOR are legacy characters, superseded by
-#   the use of preformatted superscript small letters for ordinal indicators in
-#   Italian, Portuguese and Spanish, also supporting plural forms.
+#   the preformatted superscript small letters to be used as ordinal indicators
+#   in Italian, Portuguese and Spanish as of "ᵃ" U1D43, "ᵒ" U1D52 and "ˢ" U02E2
+#   that allows to support plural forms, as opposed to the legacy characters
+#   designed to support singular only, as the most frequent use case, due to
+#   scarcity of code points in 8-bit charsets.
 #
 #   Consistently, French ordinal indicators are preformatted superscripts, too:
 #   "ᵈ" U1D48, "ᵉ" U1D49, "ʳ" U02B3, "ˢ" U02E2.
 #   https://github.com/unicode-org/cldr/blob/2ebe44fd537132620f61830ada804fb7abe1ec6b/common/main/fr.xml#L1546
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L1546
+#
+#   All preformatted letters benefit from multikey support thanks to multikey
+#   equivalents, for instance by <Multi_key><asciicircum><[the letter]>.
 #   See #*# SUPERSCRIPT
+#   See # # Multikey equivalents
 #
 #   The two legacy ordinal indicators are supported with alphabetic mnemonics
 #   in group 12 of "^" on key A, and in group 12 of "}" on key O.
@@ -7504,7 +7511,7 @@
 #Multi_key><asciicircum><plus> conflicts with "⁺" U207A.                                           : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 #Multi_key><less><plus> is in dead_circumflex and is symmetricised by this (not in #*# HORN).      : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><plus><less>                                                                            : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-#Multi_key><asciitilde><plus> conflicts with "Ỡ" U1EE0.                                            : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
+#   In #*# TILDE without multikey.                                                                 : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 #   See "⨦" U2A26                                                                                  : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
