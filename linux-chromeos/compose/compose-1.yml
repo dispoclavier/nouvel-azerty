@@ -1263,21 +1263,26 @@
 #   See #^# Legacy ordinal indicators
 #
 #   Precomposed ("℃" U2103, "℉" U2109, "Å" U212B) and dedicated ("K" U212A)
-#   measurement unit symbols are supported for being in the Letterlike Symbols
-#   block. This however was not fully supported before v1.6.0. Prior to v1.6.0,
-#   important symbols were missing due to not being used in mathematics. This
-#   odd time is over since version 1.6.0 added primarily the VERSICLE and
-#   RESPONSE symbols "℣" U2123, "℟" U211F, both by multikey and in letter
-#   groups 1 and 4.
+#   measurement unit symbols are supported because their use is not discouraged
+#   and they are in the Letterlike Symbols block.
+#   See #*# RING_ABOVE
+#
+#   The Letterlike Symbols, however, were not fully supported before v1.6.0.
+#   Prior to v1.6.0, important symbols were missing due to not being used in
+#   mathematics. This odd time is over since version 1.6.0 added primarily the
+#   VERSICLE and RESPONSE symbols "℣" U2123, "℟" U211F, both by multikey and in
+#   letter groups 1 and 4.
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
 #   Leading or trailing space for distinction is duplicated for nobreakspace
 #   support, if synergy with Multi_key or an ASCII symbol matters, consistently
 #   with what is done for math symbols.
-#   See # # Design of math sequences
+#   See #   Trailing space
+#   See #   Leading space
 #
-#   Recycling symbols are grouped separately.
+#   Recycling symbols are grouped separately, due to the number of implied
+#   sequences.
 #   See # # Recycling symbols
 #
 <Multi_key><s><S>                                                                                  : "§" U00A7 # SECTION SIGN
