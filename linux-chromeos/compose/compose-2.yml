@@ -4580,9 +4580,11 @@
 #   to "¶" U00B6 PILCROW SIGN and "⁋" U204B REVERSED PILCROW SIGN, that is also
 #   supported by remaining "p", and by "paragraph" (U00B6), key D10, level 7.
 #
-#   Digits yield mathematical backslashes without space termination.
-#   See # # Design of math sequences
+#   Digits yield mathematical backslashes. This is a part of the design of math
+#   sequences.
+#   See #   Outsourcing to dead keys
 #   See #*# STROKE
+#   See #*# MACRON
 #
 #   As a diacritic, "̔" U0314 COMBINING REVERSED COMMA ABOVE is included, along
 #   with its spacing counterpart "ʽ" U02BD.
@@ -4902,10 +4904,9 @@
 #   a consistent input method across all dead keys featuring a double diacritic.
 #
 #   Combining tilde halves above – "︢" UFE22, "︣" UFE23 – are supported on all
-#   fully available base letters for a streamlined user experience.
-#
-#   Halves of combining diacritics are also supported in the tilde and
-#   ampersand virtual dead key.
+#   fully available base letters for a streamlined user experience. Halves of
+#   combining diacritics are also supported in a virtual dead key called
+#   “tilde and ampersand”.
 #   See # # TILDE&AMPERSAND
 #
 #   The tilde dead key also has intuitive support for the swung dash "⁓" U2053,
@@ -5341,10 +5342,9 @@
 #   See #*# BAR
 #
 #   Combining tilde halves below – "︩" UFE29, "︪" UFE2A – are supported by all
-#   fully available base letters for a streamlined user experience.
-#
-#   Halves of combining diacritics are also supported in the virtual dead key
-#   called “tilde and ampersand”.
+#   fully available base letters for a streamlined user experience. Halves of
+#   combining diacritics are also supported in a virtual dead key called
+#   “tilde and ampersand”.
 #   See # # TILDE&AMPERSAND
 #
 <dead_tilde><dead_tilde>                                                                   <space> : "̰" U0330 # COMBINING TILDE BELOW
@@ -10536,10 +10536,10 @@
 #   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
 #   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #   The Chinantec tone marks
 #   See #*# MACRON
 #   See #*# STROKE
 #   See #*# HORN
-#   See #   The Chinantec tone marks
 #
 #   As a spacing counterpart of the short bar diacritic "̵" U0335, "˗" U02D7 is
 #   convenient, since it is not the superscript minus sign, despite being named
@@ -10958,10 +10958,12 @@
 #   Dchar: "ơ" U01A1
 #
 #   As HORN has no reported usage outside Unicode precomposed letters, and the
-#   precomposed letters with horn come in two pairs only, HORN is now extended
-#   to support the historic letters with DESCENDER, as well as the Swedish "ⱸ"
-#   U2C78 LATIN SMALL LETTER E WITH NOTCH. For mnemonics, both may be thought
-#   of as letters with a low horn or a downwards horn.
+#   precomposed letters with horn alone come in two pairs only, dead_horn is
+#   extended to support the Swedish "ⱸ" U2C78 LATIN SMALL LETTER E WITH NOTCH,
+#   and the historic letters with descender "Ⱨ" U2C67, "ⱨ" U2C68, "Ⱪ" U2C69,
+#   "ⱪ" U2C6A, "Ⱬ" U2C6B, "ⱬ" U2C6C, "Ꞑ" UA790, "ꞑ" UA791. The mnemonic is
+#   based on considering the descender and the notch as low horns or downwards
+#   horns.
 #   https://www.frathwiki.com/Horn
 #   https://www.frathwiki.com/Descender
 #   https://fr.wikipedia.org/wiki/%E2%B1%B8
@@ -10970,8 +10972,9 @@
 #   It is not, to prevent HORN from becoming an unmnemonic holdall.
 #   See #^# BREVE_BELOW
 #
-#   Digits yield simple arrows as a redundant facility to meet most common user
-#   expectations. Double arrows are yielded by *dead_flag.
+#   Digits yield simple arrows "←" U2190.."↙" U2199 as a redundant facility
+#   expected to meet most common user expectations. Double arrows are yielded
+#   by *dead_flag.
 #   See #*# FLAG
 #
 #   This also supports "᫉" U1AC9 COMBINING DOUBLE PLUS SIGN ABOVE and "᫊" U1ACA
@@ -10994,10 +10997,10 @@
 #   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
 #   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #   The Chinantec tone marks
 #   See #*# MACRON
 #   See #*# STROKE
 #   See #*# BAR
-#   See #   The Chinantec tone marks
 #
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
@@ -11398,7 +11401,7 @@
 #   See #*# DOT_BELOW
 #   See # # C01 numbersign
 #
-#   The associated diacritic "̲" U0332, and its spacing clone, ASCII "_" U005F
+#   The associated diacritic "̲" U0332 and its spacing clone, ASCII "_" U005F,
 #   are built on the underscore theme hinted by the subscript’s TeX command.
 #   See #*# SUPERSCRIPT
 #
@@ -11883,10 +11886,13 @@
 #   Multi_key: ¦[
 #   Dchar: "ǫ" U01EB
 #
-#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonic.
-#   The multikey equivalent is impractical, but a full ASCII equivalent
-#   would conflict with mathematical symbols.
+#   This supports the keycap diacritic  "⃣" U20E3 with *dead_abovehook UEFD3 as
+#   a base character, and a mnemonic based on the brackets pair. The multikey
+#   equivalent without full ASCII does not make sense, while with full ASCII,
+#   the multikey equivalent would conflict with mathematical symbols and is
+#   thus deactivated, as this facility is not worth screwing up the math.
 #   See #*# HOOK_ABOVE
+#   See # # Multikey equivalents
 #
 #   Digits yield circled sans-serif number dingbats as a shortcut.
 #   See # # CIRCLED_SANS
@@ -11900,7 +11906,7 @@
 <dead_ogonek>                                                                              <U202F> : "˛" U02DB # OGONEK
 <Multi_key><bracketleft>                                                                   <U202F> : "˛" U02DB # OGONEK
 <dead_ogonek>                                                                              <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
-<Multi_key><bracketleft>                                                                   <UEFD3> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+#   Multikey conflicts with "□" U25A1, "▯" U25AF, "◻" U25FB, "◽" U25FD, "⟥" U27E5.  <bracketright> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <dead_ogonek>                                                                                  <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 <Multi_key><bracketleft>                                                                       <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 <dead_ogonek>                                                                               <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
@@ -12064,17 +12070,20 @@
 #   Multi_key: ¦]
 #   Dchar: "ỏ" U1ECF
 #
-#   Supports the keycap diacritic  "⃣" U20E3 with brackets pair mnemonic.
-#   The multikey equivalent is impractical, but a full ASCII equivalent
-#   would conflict with mathematical symbols.
+#   This supports the keycap diacritic  "⃣" U20E3 with dead_ogonek as a base
+#   character, and a mnemonic based on the brackets pair. The multikey
+#   equivalent without full ASCII does not make sense, while with full ASCII,
+#   the multikey equivalent would conflict with mathematical symbols and is
+#   thus deactivated, as this facility is not worth screwing up the math.
 #   See #*# OGONEK
+#   See # # Multikey equivalents
 #
 #   Digits yield negative sans-serif circled number dingbats as a shortcut.
 #   See # # CIRCLED_NEGATIVE_SANS
 #
 #   Since the combining hook above has no spacing clone nor any modifier letter
 #   looking close to it, both half rings "ʾ" U02BE, "ʿ" U02BF are provided as a
-#   workaround, with a rationale based on the laterality of the AltFr and AltGr
+#   stopgap, with a rationale based on the laterality of the AltFr and AltGr
 #   modifier keys involved in typing these left and right half rings this way.
 #   AltGr + space yields nobreakspace, and the no-break thin space U202F is on
 #   AltFr + space.
@@ -12088,7 +12097,7 @@
 <UEFD3>                                                                                    <U202F> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <Multi_key><bracketright>                                                                  <U202F> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <UEFD3>                                                                              <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
-<Multi_key><bracketright>                                                            <dead_ogonek> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+#   Multikey conflicts with "□" U25A1, "▯" U25AF, "◻" U25FB, "◽" U25FD, "⟥" U27E5.   <bracketleft> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <UEFD3>                                                                                        <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <Multi_key><bracketright>                                                                      <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <UEFD3>                                                                                     <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
@@ -12201,32 +12210,40 @@
 #   Multi_key: ¦|
 #   Dchar: "ō" U014D
 #
-#   Long leg is merged with macron thanks to empty intersection and
-#   with mnemonic based on the macron multikey equivalent pipe |.
-#   Small r with long leg has been obsoleted by IPA in 1989.
+#   The historic letters with topbar "Ƃ" U0182, "ƃ" U0183, "Ƌ" U018B, "ƌ" U018C
+#   are supported alongside thanks to an empty intersection, with a rationale
+#   based on the straightforward mnemonic.
 #
-#   Ampersand as a base character supports the conjoining diacritic.
+#   Long leg is merged with macron thanks to an empty intersection and with a
+#   mnemonic based on the macron multikey equivalent pipe "|". However, small
+#   r with long leg "ɼ" U027C has been obsoleted by IPA in 1989.
 #
-#   Cent and Cedi signs are supported by lack of C with macron, and
-#   for consistency with en_US.UTF-8/Compose.
+#   Cedi "₵" U20B5 and Cent "¢" U00A2 signs are supported by lack of C with
+#   macron, and for consistency with en_US.UTF-8/Compose as of the multikey
+#   equivalents.
 #
 #   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
 #   consistently supported across four matching dead keys, with quotedbl and
 #   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
 #   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #   The Chinantec tone marks
 #   See #*# STROKE
 #   See #*# BAR
 #   See #*# HORN
-#   See #   The Chinantec tone marks
 #
-#   Digits yield the full collection of simple and multiple vertical bars, for
-#   convenience, as other input methods, in groups or by multikey, may be less
-#   mnemonic or more complicated.
-#   See # # Design of math sequences
+#   Digits yield the full collection of simple and multiple vertical bars — but
+#   not the broken one "¦" U00A6 — for convenience, since input methods using
+#   groups or multikey may be less mnemonic or more complicated. This is a part
+#   of the design of math sequences.
+#   See #   Outsourcing to dead keys
+#   See #*# STROKE
+#   See #*# REVERSED
 #
-#   The conjoining variant of the combining diacritic is supported by ampersand
-#   both in macron – "︦" UFE26 – and in macron below.
+#   The conjoining variants of the combining diacritics are supported with
+#   ampersand as a base character both in macron and in macron below.
+#   See "︦" UFE26
+#   See "︭" UFE2D
 #
 #   The double diacritic "͞" U035E has emdash as a mnemonic base character, and
 #   the question mark as an unconflicting ASCII alternative, for a consistent
@@ -12234,10 +12251,8 @@
 #
 #   Combining macron halves above – "︤" UFE24, "︥" UFE25 – are supported on all
 #   unconflicting and fully available base letters for a streamlined user
-#   experience.
-#
-#   Halves of combining diacritics are also supported in the virtual dead key
-#   called “tilde and ampersand”.
+#   experience. Halves of combining diacritics are also supported in a virtual
+#   dead key called “tilde and ampersand”.
 #   See # # TILDE&AMPERSAND
 #
 <dead_macron>                                                                              <space> : "̄" U0304 # COMBINING MACRON
@@ -12508,18 +12523,20 @@
 #   Multi_key: ¦||
 #   Dchar: "ḇ" U1E07
 #
-#   Ampersand as a base character supports the conjoining diacritic "︭" UFE2D.
+#   The conjoining variants of the combining diacritics are supported with
+#   ampersand as a base character both in macron and in macron below.
+#   See "︭" UFE2D
+#   See "︦" UFE26
 #
 #   The double diacritic "͟" U035F has emdash as a mnemonic base character, and
 #   the question mark as an unconflicting ASCII alternative, for a consistent
 #   input method across all dead keys featuring a double diacritic.
 #
-#   Combining macron halves below – "︫" UFE2B, "︬" UFE2C – are supported on W
+#   Combining macron halves below "︫" UFE2B, "︬" UFE2C are supported on "W"
 #   as well as on all other available base letters, consistently with
-#   dead_macron single press, for a streamlined user experience.
-#
-#   This is redundant with the tilde and ampersand virtual dead key, that
-#   supports halves of combining diacritics, too.
+#   dead_macron single press, for a streamlined user experience. This is
+#   redundant with the tilde and ampersand virtual dead key, that supports
+#   halves of combining diacritics, too.
 #   See # # TILDE&AMPERSAND
 #
 <dead_macron><dead_macron>                                                                 <space> : "̱" U0331 # COMBINING MACRON BELOW
@@ -12726,6 +12743,7 @@
 #   https://de.wikipedia.org/wiki/DIN_2137#Neufassung_2012
 #   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/6d4acb0e3a6568a8faaa651d4e3d32f917b9067b
 #   https://web.archive.org/web/20250202063718/https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/6d4acb0e3a6568a8faaa651d4e3d32f917b9067b
+#   See #*# BAR
 #
 #   The use of dead_stroke for horizontal, rather than for diagonal while
 #   introducing *dead_bar to cover horizontal, appears to be fueled by the name
@@ -12746,22 +12764,25 @@
 #   with stroke have their barred variant duplicated in this dead key as well,
 #   to make it more lenient, for a streamlined user experience.
 #
-#   Digits yield mathematical slashes without space termination.
-#   See # # Design of math sequences
+#   Digits yield mathematical slashes. This is a part of the design of math
+#   sequences.
+#   See #   Outsourcing to dead keys
 #   See #*# REVERSED
+#   See #*# MACRON
 #
 #   As a spacing counterpart of the long solidus diacritic "̸" U0338, the
 #   division slash "∕" U2215 is picked rather than Chinantec "ꜘ" UA718, that
 #   would be too unexpected and disrupting, with too far-fetched a rationale.
+#
 #   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
 #   consistently supported across four matching dead keys, with quotedbl and
-#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
+#   EuroSign as base characters, or with the no-break spaces as of "ꜚ" UA71A,
 #   featured in lieu of a non-existing spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #   The Chinantec tone marks
 #   See #*# MACRON
 #   See #*# BAR
 #   See #*# HORN
-#   See #   The Chinantec tone marks
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
@@ -13200,24 +13221,29 @@
 #   Multi_key: ¦*
 #   Dchar: "å" U00E5
 #
-#   Supports combining half rings with parentheses as base characters.
+#   This supports combining half rings "͑" U0351, "͗" U0357 with parentheses as
+#   base characters.
 #
-#   Supports spacing right, left, raised, centered half rings, based on digits,
-#   with numpad mnemonics:
+#   This also supports spacing right, left, raised or centered half rings, with
+#   digits as base characters, and with numpad mnemonics:
 #
 #       4  "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING
 #       6  "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING
 #       7  "ʿ" U02BF MODIFIER LETTER LEFT HALF RING
 #       9  "ʾ" U02BE MODIFIER LETTER RIGHT HALF RING
 #
-#   Based on digits, supports asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042,
-#   used as footnote indicators, as well as the asterisk operator "∗" U2217 by
-#   "5" and "8".
-#
-#   This scheme also supports the degree sign "°" U00B0 by "0".
+#   Asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042 are also supported, with
+#   the related digits as base characters, and so is the asterisk operator
+#   "∗" U2217, by "5" and "8", left over after assigning "0" to the degree sign
+#   "°" U00B0.
 #   See # # Degree sign
 #
-#   Supports also discouraged precomposed temperature units.
+#   Unpreferred precomposed temperature units "℃" U2103 and "℉" U2109, but not
+#   conflicting "Å" U212B, are supported too for completeness, and so is the
+#   formally unrelated "K" U212A alongside, although these are all supported by
+#   multikey. As their use is not discouraged, they are supported here for
+#   convenience.
+#   See #^# Abbreviations, Units and Legal Symbols
 #
 #   Ring above has no reported usage beyond precomposed letters.
 #   https://www.frathwiki.com/Ring_Above
@@ -13290,6 +13316,10 @@
 <Multi_key><asterisk>                                                                          <F> : "℉" U2109 # DEGREE FAHRENHEIT
 <dead_abovering>                                                                               <f> : "℉" U2109 # DEGREE FAHRENHEIT
 <Multi_key><asterisk>                                                                          <f> : "℉" U2109 # DEGREE FAHRENHEIT
+<dead_abovering>                                                                               <K> : "K" U212A # KELVIN SIGN
+<Multi_key><asterisk>                                                                          <K> : "K" U212A # KELVIN SIGN
+<dead_abovering>                                                                               <k> : "K" U212A # KELVIN SIGN
+<Multi_key><asterisk>                                                                          <k> : "K" U212A # KELVIN SIGN
 <dead_abovering>                                                                               <l> : "ꬹ" UAB39 # LATIN SMALL LETTER L WITH MIDDLE RING
 <Multi_key><asterisk>                                                                          <l> : "ꬹ" UAB39 # LATIN SMALL LETTER L WITH MIDDLE RING
 <dead_abovering>                                                                               <o> : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
@@ -13496,7 +13526,7 @@
 #   dead key is assigned the appropriate dead character: "ê" U00EA LATIN SMALL
 #   LETTER E WITH CIRCUMFLEX, for instance.
 #
-#   Likewise, a Ç key is emulated for use on the Canadian French variant.
+#   Likewise, a "Ç" key is emulated for use on the Canadian French variant.
 #   See #*# CEDILLA
 #
 #   For the sake of usability and meeting predictable user expectations (that
@@ -13506,8 +13536,8 @@
 #   See E DIN 2137-1:2020-11
 #   See # # Multikey equivalents
 #
-#   The German E DIN 2137-1:2020-11 has been synced, but only with the digits
-#   part, not the plus and minus signs and parentheses.
+#   The German E DIN 2137-1:2020-11 has been synced with NF Z71-300:2019, but
+#   only with the digits part, not the plus and minus signs nor parentheses.
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #
 #   In en_US.UTF-8/Compose, that the “superscript digits by dead_circumflex”
@@ -13536,14 +13566,14 @@
 #   method by <dead_circumflex><f> since French has no words including an -êf-
 #   digram. Plus, <dead_circumflex><dollar> also yields this small letter.
 #
-#   Likewise, U2300 DIAMETER SIGN, in group 1 of "(", is given yet another
-#   input method by <dead_circumflex><d>, <dead_circumflex><D> thanks to
-#   French not having any word with -êd-.
+#   Likewise, U2300 DIAMETER SIGN, in group 1 of "(" on the "D" key C03, is
+#   given yet another input method by dead_circumflex followed by case
+#   insensitive "d", thanks to French not having any word with -êd-.
 #
 #   "⁂" U2042 ASTERISM is also expected to be supported by dead_circumflex,
 #   additionally to its support in the symbol groups and by dead_abovering.
-#   See #*# RING_ABOVE
 #   See # # C10 bar
+#   See #*# RING_ABOVE
 #
 #   Followed by comma, dead_circumflex provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
@@ -14215,8 +14245,8 @@
 #
 #   However, this redundancy with the subscript dead key is not extended to the
 #   signs and parentheses, as the standard does not require these, and because
-#   their multikey equivalents would conflict with many mathematical symbols.
-#   These would need to be distinguished by leading space, screwing things up.
+#   their multikey equivalents would need to be deactivated anyway due to
+#   conflicts with many mathematical symbols, that would require leading space.
 #
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the hacek dead key is also activatable by dead_circumflex double press,
@@ -14231,10 +14261,10 @@
 #   See #^# HACEK input facility by CIRCUMFLEX
 #   See # # Notes about documentation
 #
-#   Another facility, <dead_grave><dead_acute>, would conflict with "‛" U201B.
-#   The reverse would be counter-intuitive as well as pointless in the presence
-#   of the double circumflex alternative, using the most easily hit dead key of
-#   AZERTY.
+#   Another facility, <dead_grave><dead_acute>, would conflict with "‛" U201B
+#   in the quotation mark input method. The reverse would be counter-intuitive
+#   as well as pointless in the presence of the double circumflex alternative,
+#   using the most easily hit dead key of AZERTY.
 #   See # # Quotation mark input method
 #
 <dead_caron>                                                                               <space> : "̌" U030C # COMBINING CARON
@@ -14457,13 +14487,14 @@
 #   See #^# FLAG_EMOJI
 #
 #   In XKB, on single press, letters yield regional indicator symbols with an
-#   appended ZWNJ for letter emoji display and writing words.
+#   appended ZWNJ U200C for letter emoji display and writing words.
 #
 #   Regional indicator symbols in isolation are supported on triple press.
 #   See #^# REGIONAL_INDICATOR_SYMBOL
 #
-#   Digits yield double arrows as a redundant facility to meet most common user
-#   expectations. Single arrows are yielded by dead_horn.
+#   Digits yield double arrows "⇐" U21D0.."⇙" U21D9 as a redundant facility
+#   expected to meet most common user expectations. Single arrows are yielded
+#   by dead_horn.
 #   See #*# HORN
 #
 #   Symbols other than "⹀" U2E40 DOUBLE HYPHEN cannot be supported in group 0,
@@ -14495,16 +14526,21 @@
 #
 #   Auxiliary characters
 #
-#   Auxiliary characters are supported with base characters in synergy:
-#   The multikey equivalents are impractical, but full ASCII equivalents
-#   would conflict with mathematical symbols.
+#   Auxiliary characters are supported with dead keys in synergy as base
+#   characters. The multikey equivalents without full ASCII would not make
+#   sense, while with full ASCII, most multikey equivalents would conflict with
+#   mathematical symbols and are thus deactivated, as this facility is not
+#   worth screwing up the math.
+#   See #*# HOOK_ABOVE
+#   See # # Multikey equivalents
 #
-#   *  ZWNJ is used to prevent an ISO code letter pair from being displayed
-#      as a flag;
-#   *  WJ is used to prevent an RI character from breaking off a character of
-#      another class;
-#   *  Supporting the high surrogate is designed for portability, but on Linux
-#      and ChromeOS it is ineffective.
+#   The rationale for picking the cursive non-joiner U200C ZWNJ is its use to
+#   prevent ISO code letter pairs from being displayed as flags, while the word
+#   joiner U2060 is useful to prevent these regioal indicator characters from
+#   breaking off a character of another class.
+#
+#   Supporting the high surrogate is designed for portability, but on Linux and
+#   ChromeOS it is ineffective.
 #
 #   As a diacritic, we have "͇" U0347 COMBINING EQUALS SIGN BELOW, as there is
 #   no variant above, and as a flipped yet spacing counterpart there is the
@@ -14523,11 +14559,11 @@
 <UEFD7>                                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><equal>                                                                         <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
-<Multi_key><equal>                                                                    <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
+#   Multikey conflicts with "⇒" U21D2, "⪜" U2A9C.                                        <greater> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
-<Multi_key><equal>                                                               <dead_circumflex> : "⁠" U2060 # WORD JOINER
+#   Multikey conflicts with "⪙" U2A99, "⪛" U2A9B, "⭀" U2B40.                                <less> : "⁠" U2060 # WORD JOINER
 <UEFD7>                                                                           <dead_abovering> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
-<Multi_key><equal>                                                                <dead_abovering> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
+<Multi_key><equal>                                                                      <asterisk> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
 <UEFD7>                                                                                        <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><equal>                                                                             <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <UEFD7>                                                                                     <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
