@@ -16638,18 +16638,12 @@
 #   yields low, opening, curly quotation marks U201A, U201E.
 #   See # # Quotation mark input method
 #
-#   Diaeresis also supports long dashes, with base characters on the upper row,
-#   level 2, key E11 (degree sign) or key E12 (plus), which makes sense as on
-#   base layouts, dead_diaeresis is on E12 level 1. Other facilities are
-#   available in groups and in a dedicated multikey scheme.
-#   See # # Dashes and hyphens
-#   See # # Long dashes
-#
-#   For intuitivity, with asterisk as a base character, dead_diaeresis should
-#   yield "⁑" U2051 consistently with dead_circumflex and *dead_superscript for
-#   "⁂" U2042 ASTERISM. However, due to a conflict with "᪱" U1AB1, the multikey
-#   equivalent cannot be supported. Anyway, "⁑" U2051 is also in dead_abovering
-#   together with "⁂" U2042 and "⁎" U204E.
+#   For intuitivity, with asterisk as a base character, dead_diaeresis yields
+#   "⁑" U2051, consistently with dead_circumflex and *dead_superscript for
+#   "⁂" U2042 ASTERISM. (Due to a conflict with "᪱" U1AB1, the multikey
+#   equivalent cannot be supported. "⁑" U2051 is also in dead_abovering,
+#   together with "⁂" U2042 and "⁎" U204E.)
+#   See #*# CIRCUMFLEX
 #   See #*# RING_ABOVE
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
@@ -16696,10 +16690,6 @@
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 #   Multikey conflicts with "᪱" U1AB1.                                                   <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<dead_diaeresis>                                                                          <degree> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key><colon>                                                                        <degree> : "⸺" U2E3A # TWO-EM DASH
-<dead_diaeresis>                                                                            <plus> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key><colon>                                                                          <plus> : "⸻" U2E3B # THREE-EM DASH
 <dead_diaeresis>                                                                     <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <Multi_key><colon>                                                                   <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <dead_diaeresis>                                                                               <0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -16954,7 +16944,7 @@
 #   Numbers 1..10 followed by a period are in dead_cedilla.
 #   See #*# CEDILLA
 #
-#   For convenience, the multikey sequence « ¦§ » is also supported to account
+#   For convenience, the multikey sequence « ¦§ » is also supported, to account
 #   for the mapping of the section sign on level 3 of B10 in French mode for
 #   the synergy with digits and for backward compatibility.
 #
