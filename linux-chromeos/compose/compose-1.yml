@@ -4486,6 +4486,9 @@
 #   resulting uncertainty due to the lack of visual feedback is mitigated by
 #   the cursor advance when a space is typed hereafter.
 #
+#   Two of these are supported on live keys: "⁣" U2063 INVISIBLE SEPARATOR on
+#   B07, "⁤" U2064 INVISIBLE PLUS on C06.
+#
 <Multi_key><ampersand><f>                                                                              : "⁡" U2061 # FUNCTION APPLICATION invisible
 <Multi_key><ampersand><x>                                                                              : "⁢" U2062 # INVISIBLE TIMES
 <Multi_key><ampersand><comma>                                                                          : "⁣" U2063 # INVISIBLE SEPARATOR
