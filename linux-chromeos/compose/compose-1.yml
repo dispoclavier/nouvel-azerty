@@ -7520,7 +7520,7 @@
 #   See "⨦" U2A26                                                                                  : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
-#   When in #*# DOT_BELOW, <plus> conflicts with "Ợ" U1EE2.                                        : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+#   In #*# DOT_BELOW without multikey.                                                             : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><period>                                                                          : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 #   In #^# MIDDLE_TILDE                                                                            : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 #Multi_key><asciitilde><asciitilde><plus> is in dead_tilde double press.                           : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
