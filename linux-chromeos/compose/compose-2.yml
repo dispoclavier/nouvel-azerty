@@ -16089,15 +16089,18 @@
 #   yields reversed high, opening curly quotation marks U201B, U201F.
 #   See # # Quotation mark input method
 #
-#   The digits to reversed primes sequences add to the support by multikey.
+#   The reversed primes by digits sequences add to the support of "‵" U2035,
+#   "‶" U2036, "‷" U2037 by multikey.
 #   See # # Reversed primes
 #
-#   "̖" U0316 COMBINING GRAVE ACCENT BELOW is supported by ampersand, and its
-#   spacing counterpart "ˎ" U02CE MODIFIER LETTER LOW GRAVE ACCENT is supported
-#   by underscore, because double press is the double grave accent. Else double
+#   "̖" U0316 COMBINING GRAVE ACCENT BELOW has ampersand as a base character,
+#   and underscore yields its spacing counterpart "ˎ" U02CE MODIFIER LETTER LOW
+#   GRAVE ACCENT, because double press is the double grave accent. Else, double
 #   press followed by space or no-break space is the most straightforward input
 #   method for the variants below. But there are no precomposed letters with a
-#   grave accent below. Therefore, a virtual dead key is not required.
+#   grave accent below. Therefore, a dedicated virtual dead key is not required
+#   for this diacritic.
+#   See #^# DOUBLE_GRAVE
 #   See #*# ACUTE
 #
 <dead_grave>                                                                               <space> : "̀" U0300 # COMBINING GRAVE ACCENT
@@ -16248,16 +16251,17 @@
 #   Multi_key: ¦,
 #   Dchar: "ç" U00E7
 #
-#   The polygrams make the dead_cedilla key behave like a Ç key in all relevant
-#   cases, along the lines of the Ê-key emulation, for Canadian French QWERTY.
+#   The polygrams make the dead_cedilla key behave like a "Ç" key in all
+#   relevant cases, along the lines of the Ê-key emulation, for Canadian French
+#   QWERTY.
 #   See #*# CIRCUMFLEX
 #
 #   Cedilla has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Cedilla
 #
-#   Digits yield numbers 1 through 10 (i.e. digits 1..9 and number 10) followed
-#   by a period, as an experimental convenience, while parenthesized digits and
-#   letters are not supported. Numbers 11..20 are in dead_belowcomma.
+#   Digits yield numbers 1 through 10 followed by a period, as an experimental
+#   convenience, unlike parenthesized digits and letters, not supported.
+#   Numbers 11..20 are in dead_belowcomma.
 #   See #*# COMMA_BELOW
 #
 <dead_cedilla>                                                                             <space> : "̧" U0327 # COMBINING CEDILLA
@@ -16414,23 +16418,11 @@
 #   Multi_key: ¦!
 #   Dchar: "ḅ" U1E05
 #
-#   Digits yield multidot punctuation.
-#
-#   "⃨" U20E8 COMBINING TRIPLE UNDERDOT is also supported, by underscore, since
-#   this diacritic needed to be moved in the wake of freeing up groups 1..3 of
-#   numbersign, with the rationale that it is a variant of underdot, and that
-#   the option dead_belowdot double press followed by period is less intuitive
-#   and far more impractical.
-#   See #^# VERTICAL_LINE_BELOW
-#   See #*# SUBSCRIPT
-#   See # # C01 numbersign
+#   Digits yield multidot punctuation, and "⃨" U20E8 COMBINING TRIPLE UNDERDOT
+#   has underscore as a base character.
 #
 #   Dot below has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Dot_Below
-#
-#   "⨥" U2A25 PLUS SIGN WITH DOT BELOW cannot be supported, due to a conflict
-#   of plus with "Ợ" U1EE2. As a consequence, it is supported by multikey only.
-#   See # # Supplemental Mathematical Operators of block U2A00
 #
 <dead_belowdot>                                                                            <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
@@ -16442,6 +16434,8 @@
 <Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <Multi_key><exclam>                                                                        <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
+<dead_belowdot>                                                                             <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+#   Multikey conflicts with "Ợ" U1EE2, "ợ" U1EE3, "Ự" U1EF0, "ự" U1EF1.                     <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                       <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <Multi_key><exclam>                                                                   <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
