@@ -1,4 +1,4 @@
-//                       Date: 2025-03-28T1617+0100
+//                       Date: 2025-04-10T0443+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -834,6 +834,10 @@ xkb_symbols "kbfrFRs" {
 	// of the level-3 and level-5 plus sign U002B, rather than on C04 F, required
 	// for the more frequent interval notation en dash U2013.
 	//
+	// U2063 INVISIBLE SEPARATOR is useful in bijective case mapping, as it can
+	// flag medial capitals, like U2064 INVISIBLE PLUS can flag digraphs that
+	// represent ­­"ß" U00DF mapped to uppercase "SS" instead of "ẞ" U1E9E.
+	//
 	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, extensively used to
 	// prevent wrong ligatures, and therefore on level 7 of the AZERTY W key B01,
 	// next to the AltFr level-5 modifier B00.
@@ -981,9 +985,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AE05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[      dead_diaeresis,               U00AD,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
+		[      dead_diaeresis,              hyphen,                   5,         bracketleft,                   5,               U2075,               UEFC5,               UEFC5 ],
 		[                   5,                   5,                   5,               U2085,                   5,               U2075,               U2085,               UEFC5 ]
-	}; // U00AD SOFT HYPHEN (<hyphen>); U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
+	}; // hyphen U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
 
 	key <AE06> {
 		[               minus,               U2011,                   6,                 bar,                   6,               U2076,               UEFC6,               UEFC6 ],
@@ -1210,9 +1214,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <AB07> {
-		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,              U1F612,              U1F499 ],
+		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,               U2063,              U1F499 ],
 		[               comma,            question,            question,            question,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
-	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
+	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U2063 INVISIBLE SEPARATOR; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
 		[              period,               UEF60,              exclam,              exclam,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
@@ -1224,8 +1228,8 @@ xkb_symbols "kbfrFRs" {
 	key <AB09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               slash,               UEF61,               colon,               colon,      dead_diaeresis,               U2044,              U1F615,               slash ],
-		[               colon,               slash,               colon,               colon,      dead_diaeresis,               U2044,              U1F603,               slash ]
-	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F603 😃 SMILING FACE WITH OPEN MOUTH emoji
+		[               colon,               slash,               colon,               colon,      dead_diaeresis,               U2044,              U1F612,               slash ]
+	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji
 
 	key <AB10> {
 		[           backslash,               UEF62,             section,           semicolon,     dead_belowcomma,             section,              U1F494,           backslash ],
