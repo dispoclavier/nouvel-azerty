@@ -125,7 +125,8 @@ Rectification de séquences de composition.
 	* Drapeau :
 		* Désactiver les équivalents en composition de "‌" U+200C, "⁠" U+2060. compose-2.yml [2e3c2aa](https://github.com/dispoclavier/nouvel-azerty/commit/2e3c2aaa19f25f5ede9775abf6363011eb8c70cc)
 		* Corriger l’équivalent en composition de U+D83C. ibidem
-	* Tréma : Redonder "⁑" U+2051 par "*" sans équivalent en composition. ibidem et [43fa20e](https://github.com/dispoclavier/nouvel-azerty/commit/43fa20e8ef2aa3a316dc28048765cb69c54bf20e)
+	* Point souscrit : Redonder "⨥" U+2A25. compose-2.yml [e5fa902](https://github.com/dispoclavier/nouvel-azerty/commit/e5fa90243a958d5d8e862fd6f61bb77d8122de11), compose-1.yml [f6fb44f](https://github.com/dispoclavier/nouvel-azerty/commit/f6fb44fd13c3b8f80af0e01892e8fcfcf536de68)
+	* Tréma : Redonder "⁑" U+2051 par "*" sans équivalent en composition. compose-2.yml [2e3c2aa](https://github.com/dispoclavier/nouvel-azerty/commit/2e3c2aaa19f25f5ede9775abf6363011eb8c70cc), [43fa20e](https://github.com/dispoclavier/nouvel-azerty/commit/43fa20e8ef2aa3a316dc28048765cb69c54bf20e)
 * Documentation :
 	* Ajouter un PDF documentant la touche morte groupe. linux-chromeos/readme.md [b70c9b7](https://github.com/dispoclavier/nouvel-azerty/commit/b70c9b7c26ca633276b98a19084d50a67ecfeaa1), windows/readme.md [0f70813](https://github.com/dispoclavier/nouvel-azerty/commit/0f708130443e4904770b614906f3e8614f57157a)
 	* Mettre à jour les annotations suite à la version 4.25.0. compose-1.yml [26c6ea2](https://github.com/dispoclavier/nouvel-azerty/commit/26c6ea29b1aa65eb4176b267b29987ff3650f526), compose-3.yml [5899287](https://github.com/dispoclavier/nouvel-azerty/commit/5899287a877749eeaf9f463cde9d714ad4928b1d)
