@@ -50,6 +50,8 @@
 #
 # # Notes on Unicode support
 #
+#   Support of the Latin script is up-to-date as of Unicode 16.0 (2024-09-10).
+#
 #   The extended Latin F & G blocks in the SMP are supported since 2023-05-25.
 #   The issues related to SMP support do not affect Linux nor macOS, as opposed
 #   to Windows, whose Text Services Framework (TSF) is no longer able to keep
