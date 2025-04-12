@@ -185,21 +185,27 @@
 #
 # # Extra symbol group
 #
-#   Two symbols, namely dollar and asciitilde, are having an extra symbol group
-#   for the emoji "☀" U2600 and "☠" U2620 respectively, As these are encoded in
-#   the BMP, they benefit from the full-support policy. Both need a disclaimer.
+#   Three symbols, namely dollar, asciitilde and grave, have an extra group for
+#   the emoji "☀" U2600, "☠" U2620 and "❄" U2744, respectively, As these are in
+#   the BMP, they benefit from the full-support policy. All need a disclaimer.
 #   While the scull-and-crossbones emoji is intrinsically prone to misuse after
-#   being originally aimed at life threats through toxic substances, the sun is
-#   basically inoffensive but is hijacked as of its black item. The solution is
-#   to use the white sun for the emoji, but the issue went certainly unnoticed.
+#   its assumed original intent to warn against life threats through poisons,
+#   sun and snowflake are basically inoffensive, but these are hijacked, due to
+#   their "black" text representation as of the sun, or due to the emoji status
+#   and subsequent availability on devices. Against this there is no safeguard,
+#   but for the sun, a possible solution is to use the white sun for the emoji.
 #   See # # Sun emoji
 #   See # # C02 dollar
+#   See "☼" U263C
 #   See # # Skull and crossbones emoji
 #   See # # D05 asciitilde
+#   See "☥" U2625
+#   See # # B06 grave
+#   See "❆" U2746
 #
 #   The triggering character is ellipsis, typed right before the base character
 #   and right after the group dead key or its multikey equivalent; « ¦#…$ » for
-#   "☀" U2600, « ¦#…~ » for "☠" U2620.
+#   "☀" U2600, « ¦#…~ » for "☠" U2620, « ¦#…` » for "❄" U2744.
 #
 #   In French, this extra group is called "groupe 1 bis", with a Latin word for
 #   "twice", in English "group 1a". Consistently, in this code, the extra group
@@ -208,12 +214,13 @@
 #   Both glyphs and shapes may not match exactly, as opposed to the character
 #   names. In any event, safety goes first, in order to make this project more
 #   resilient against suspicions about fostering the input of either disguised
-#   or explicit symbols related to two ideologies that are firmly rejected and
-#   condemned.
+#   or explicit symbols related to ideologies or practices that are firmly
+#   rejected and condemned.
 #   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
 #   https://de.wikipedia.org/wiki/Schwarze_Sonne
 #   https://fr.wikipedia.org/wiki/Soleil_noir_(symbole_occulte)
 #   https://www.lemonde.fr/societe/article/2025/02/15/le-neonazisme-en-france-une-menace-diffuse-et-hybride_6548247_3224.html
+#   https://www.francetvinfo.fr/replay-radio/le-choix-franceinfo/pizza-pilule-bleue-ou-rouge-c-ur-violet-le-sens-cache-de-ces-emojis-que-vous-utilisez-souvent-sur-les-reseaux-sociaux_7130340.html
 #
 #
 # # Symbol groups overview
@@ -236,7 +243,7 @@
 #	  4	∀	∄	∃	♻	⛺	⏺	∪	∩	⭕	⛱	⏹	☼	∆	♀	♨	⊎	♚	♔	◊	♂	⛆	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	∠	☇	⚕	☢	☥	●	⤵	⯀	⛈	☔	▪	⛑	∇	⛲	⛐	☤	♛	♕	∟	☣	▫	⭐	◀	▶	☕	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	✈	☈	✍	♼	☎	○	⤴	▢	⛔	☂	◾	⛷	✡	⚽	☪	☝	♜	♖	⦜	⏯	◽	❇	⏪	⏩	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	⚓	⚯	✉	♽	☏	⚬	⚭	⚮	⚘	⛸	◼	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	◻	✨	⏮	⏭	⛹	❄		♁		❣	⌚	⏳	FSP	FSP	
+#	  7	⚓	⚯	✉	♽	☏	⚬	⚭	⚮	⚘	⛸	◼	⛵	〽	⛴	⛳	⛫	♝	♗	☨	⏸	◻	✨	⏮	⏭	⛹	❆		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⬛	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⬜	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	〰	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	TSP	TSP	
 #	10	ZWNJ	ZWJ	VS16	VS1	VS15	❍	⏫	∝	⏬	⸿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	➿	❎	▲	▼	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
@@ -1906,8 +1913,19 @@
 #   See # # D07 apostrophe
 #   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
+#   The "❄" U2744 emoji, previously in group 7, with French alphabetic mnemonic
+#   based on "neige" and this key’s letter "N", was removed due to repurposing.
+#   https://www.francetvinfo.fr/replay-radio/le-choix-franceinfo/pizza-pilule-bleue-ou-rouge-c-ur-violet-le-sens-cache-de-ces-emojis-que-vous-utilisez-souvent-sur-les-reseaux-sociaux_7130340.html
+#   In the wake it is replaced with "❆" U2746, that cannot be used as emoji and
+#   is excluded from the emoji count in the table, while it maintains the snow
+#   semantics, as a tribute to snow in the current era of scarcity. For those
+#   who are looking for the snow emoji with its genuine semantics, U2744 is in
+#   the extra group.
+#
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD0>                                                                          <ellipsis><grave> : "❄" U2744 # SNOWFLAKE emoji
+<Multi_key><numbersign>                                                          <ellipsis><grave> : "❄" U2744 # SNOWFLAKE emoji
 <UEFD0><UEFD0>                                                                             <grave> : "∧" U2227 # LOGICAL AND math
 <Multi_key><numbersign><numbersign>                                                        <grave> : "∧" U2227 # LOGICAL AND math
 <UEFD0><3>                                                                                 <grave> : "∨" U2228 # LOGICAL OR math
@@ -1930,10 +1948,10 @@
 <Multi_key><numbersign><6>                                                                 <grave> : "☃" U2603 # SNOWMAN emoji, snowman with snow
 <UEFD0><KP_6>                                                                              <grave> : "☃" U2603 # SNOWMAN emoji, snowman with snow
 <Multi_key><numbersign><KP_6>                                                              <grave> : "☃" U2603 # SNOWMAN emoji, snowman with snow
-<UEFD0><7>                                                                                 <grave> : "❄" U2744 # SNOWFLAKE emoji
-<Multi_key><numbersign><7>                                                                 <grave> : "❄" U2744 # SNOWFLAKE emoji
-<UEFD0><KP_7>                                                                              <grave> : "❄" U2744 # SNOWFLAKE emoji
-<Multi_key><numbersign><KP_7>                                                              <grave> : "❄" U2744 # SNOWFLAKE emoji
+<UEFD0><7>                                                                                 <grave> : "❆" U2746 # HEAVY CHEVRON SNOWFLAKE
+<Multi_key><numbersign><7>                                                                 <grave> : "❆" U2746 # HEAVY CHEVRON SNOWFLAKE
+<UEFD0><KP_7>                                                                              <grave> : "❆" U2746 # HEAVY CHEVRON SNOWFLAKE
+<Multi_key><numbersign><KP_7>                                                              <grave> : "❆" U2746 # HEAVY CHEVRON SNOWFLAKE
 <UEFD0><8>                                                                                 <grave> : "⛅" U26C5 # SUN BEHIND CLOUD emoji
 <Multi_key><numbersign><8>                                                                 <grave> : "⛅" U26C5 # SUN BEHIND CLOUD emoji
 <UEFD0><KP_8>                                                                              <grave> : "⛅" U26C5 # SUN BEHIND CLOUD emoji
