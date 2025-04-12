@@ -1,4 +1,4 @@
-//                       Date: 2025-04-10T0443+0200
+//                       Date: 2025-04-12T0240+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -836,7 +836,16 @@ xkb_symbols "kbfrFRs" {
 	//
 	// U2063 INVISIBLE SEPARATOR is useful in bijective case mapping, as it can
 	// flag medial capitals, like U2064 INVISIBLE PLUS can flag digraphs that
-	// represent ­­"ß" U00DF mapped to uppercase "SS" instead of "ẞ" U1E9E.
+	// represent ­­"ß" U00DF mapped to uppercase "SS" instead of "ẞ" U1E9E. Since
+	// these invisible operators are part of the General Punctuation block, and
+	// their presence on web pages does not compromise searchability in browsers,
+	// their use in general purpose text is unproblematic and is only beneficial
+	// in terms of semantic stability and lossless text processing, as critical
+	// information is no longer lost when capitalizing mixed case text.
+	//
+	// As this invisible separator U2063 is also known as invisible comma, it is
+	// most appropriately mapped on level 7 of B07, the key of the comma U002C on
+	// the base level (as opposed to the level-5 comma on C10).
 	//
 	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, extensively used to
 	// prevent wrong ligatures, and therefore on level 7 of the AZERTY W key B01,
