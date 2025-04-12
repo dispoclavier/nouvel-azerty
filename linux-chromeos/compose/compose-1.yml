@@ -4760,8 +4760,7 @@
 <Multi_key><less><slash>                                                            <nobreakspace> : "↙" U2199 # SOUTH WEST ARROW
 <Multi_key><less><minus><slash>                                                            <space> : "↚" U219A # LEFTWARDS ARROW WITH STROKE
 <Multi_key><less><minus><slash>                                                     <nobreakspace> : "↚" U219A # LEFTWARDS ARROW WITH STROKE
-<Multi_key><slash><minus><greater>                                                         <space> : "↛" U219B # RIGHTWARDS ARROW WITH STROKE
-<Multi_key><slash><minus><greater>                                                  <nobreakspace> : "↛" U219B # RIGHTWARDS ARROW WITH STROKE
+<Multi_key><slash><minus><greater>                                                                 : "↛" U219B # RIGHTWARDS ARROW WITH STROKE
 <Multi_key><less><asciitilde>                                                              <space> : "↜" U219C # LEFTWARDS WAVE ARROW
 <Multi_key><less><asciitilde>                                                       <nobreakspace> : "↜" U219C # LEFTWARDS WAVE ARROW
 <Multi_key><asciitilde><greater>                                                           <space> : "↝" U219D # RIGHTWARDS WAVE ARROW
