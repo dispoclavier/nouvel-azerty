@@ -4488,6 +4488,7 @@
 #
 #   Two of these are supported on live keys: "⁣" U2063 INVISIBLE SEPARATOR on
 #   B07, "⁤" U2064 INVISIBLE PLUS on C06.
+#   See dispocla.cpp ## Format controls
 #
 <Multi_key><ampersand><f>                                                                              : "⁡" U2061 # FUNCTION APPLICATION invisible
 <Multi_key><ampersand><x>                                                                              : "⁢" U2062 # INVISIBLE TIMES
@@ -4497,13 +4498,14 @@
 #
 # # Superscript or subscript signs, symbol, punctuation
 #
-#   These are primarily supported by the dead keys dedicated to superscripting
-#   and subscripting not included in keysymdef.h but required for full Unicode
-#   support. Their multikey equivalents are not space terminated and work the
-#   other way around, resulting in a UX enhancing order insensitivity.
+#   These are primarily supported by the dead keys dedicated to superscripts
+#   and subscripts, not included in keysymdef.h but required for full Unicode
+#   support. Their multikey equivalents are not space terminated either, and
+#   since they work the other way around, the result is an order insensitivity
+#   that is beneficial to UX.
+#   See #   Order sensitivity
 #   See #*# SUPERSCRIPT
 #   See #*# SUBSCRIPT
-#   See #   Order sensitivity
 #
 <Multi_key><plus><asciicircum>                                                                     : "⁺" U207A # SUPERSCRIPT PLUS SIGN
 <Multi_key><minus><asciicircum>                                                            <space> : "⁻" U207B # SUPERSCRIPT MINUS
