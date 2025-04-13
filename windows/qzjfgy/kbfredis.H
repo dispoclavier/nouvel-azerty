@@ -9,7 +9,7 @@
 *
 * History:
 *
-* created by KBDTOOL v3.40 Tue Nov 12 23:06:27 2024
+* created by KBDTOOL v3.40 Mon Apr 14 01:00:05 2025
 *
 \***************************************************************************/
 
@@ -36,8 +36,6 @@
 
 #undef  T29
  #define T29 _EQ(                                    #ERROR#                      )
-#undef  T0C
- #define T0C _EQ(                                      OEM_4                      )
 #undef  T11
  #define T11 _EQ(                                        'Z'                      )
 #undef  T12
