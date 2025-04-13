@@ -3412,16 +3412,17 @@
 <Multi_key><S><O>                                                                                  : "☀" U2600 # BLACK SUN WITH RAYS emoji
 #
 #
-# # Snow emoji
+# # Snowflake emoji
 #
-#   Due to its hijacked semantics, the snnw emoji is not supported in group 7
-#   of "`", but in an extra group of "`", with a consistent alphabetic mnemonic
-#   on B06 "N", and by two case insensitive, less ambiguous English and French
-#   multikey sequences.
+#   Due to its hijacked semantics, the snowflake emoji is not supported in
+#   group 7 of "`", but in an extra group of "`", with a consistent alphabetic
+#   mnemonic on B06 "N", and by two case insensitive, less ambiguous English
+#   and French multikey sequences.
 #   See # # B06 grave
 #
 <Multi_key><s><n><o>                                                                               : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><S><N>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
+#Multi_key><n><e><i>                                                                               : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><n><e>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><N><E>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
 #
