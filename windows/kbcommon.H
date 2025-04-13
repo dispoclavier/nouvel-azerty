@@ -11,10 +11,11 @@
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation pro parte;
-* 2015..2024 Dispoclavier (dev@dispoclavier.net)
+* 2015..2025 Dispoclavier (dev@dispoclavier.net)
 *
 * Version history and modification log:
 *
+* Sun Apr 13, 2025  updated some annotations.
 * Wed Dec 04, 2024  commented out unused ligature typedefs.
 * Sun Nov 10, 2024  added section 7.3.1 fixing KbdUTool mistranspiles.
 * Wed Oct 30, 2024  updated to port a new AZERTY on Windows (v 4.10.0)
@@ -197,23 +198,21 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 /**********************************************************************************\
 * 2  KANA TOGGLE KEY MAPPING
 * 
-* The following is added to remap key E00 (ISO/IEC 9995-1) to a KanaLock toggle.
+* The following is added to remap key E00 (ISO/IEC 9995-1) to a Kana Lock toggle.
 * Key E00 is VK_OEM_3 on the US keyboard, and VK_OEM_7 on the French keyboard.
 * Optionally, key C00 (VK_CAPITAL] can be used for that purpose.
 *
-* The Caps Lock and Programmer toggles may be inverted on Windows using the 
+* The Caps Lock and Kana Lock toggles may be inverted on Windows using the 
 * built-in Scancode Mapper, if that is not done in the layout driver.
 *
 * This toggle is needed to switch between a language centered layout and
 * an ASCII supporting layout. It solves the problem of access to digits
 * on layouts that support many precomposed characters or direct access to some
-* current punctuation on the upper row. Digits are then by default on level 1B,
-* and duplicated on level 1A when Programmer mode is on.
+* current punctuation on the upper row. Digits are then by default on level 3,
+* and duplicated on level 1 when Kana Lock is on, i.e. in ASCII mode.
 *
-* The supplemental layout toggle does exist on Linux likewise. On macOS while 
-* the feature is unavailable, Caps Lock can be emulated using an iterative dead 
-* key. (On macOS, any dead key can be iterative when its state is renewed after
-* output, while Keyman can handle an unlimited number of custom flags.)
+* The supplemental layout toggle does exist on Linux likewise. On macOS, where 
+* the feature is unavailable, Kana Lock can be emulated by Karabiner Elements.
 *
 * Thus a supplemental toggle allows to get away from actual hybrid keyboard 
 * layouts that are often not fit for most current purposes when precomposed
@@ -225,27 +224,24 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 * The leftmost key in the upper row is ideally placed for a toggle, because
 *  * it is worst placed for characters;
 *  * it therefore contains the (presumably) least used characters;
-*  * it is in the same row as the Caps Lock toggle;
+*  * it is in the same column as the Caps Lock toggle;
 *  * on native Windows keyboards a toggle always needs a dedicated key;
-*  * in the base row on laptop computers there is no availability.
+*  * in the base row, on laptop computers, there is no room.
 *
 * However, if the Caps Lock toggle key is disliked, Kana Lock may be mapped
 * on this key. E00 eventually may then be mapped to Caps Lock.
 * 
 * The modifier bit used for the Kana toggle is 0x08. Not using the Kana modifier
-* for AltGr allows greater flexibility in mapping the Programmer mode.
+* for AltGr allows greater flexibility in mapping the Kana Lock / ASCII mode.
+* 
 * The recommended modifier bit for AltGr is 0x10. 
-* Then, bicameral letters should not be mapped on levels accessed with AltGr
-* (levels 1B and 2B), because on those levels Caps Lock is disabled.
-*
-* Keys with bicameral letters (in the alphanumerical block) must not be subject 
-* to the Programmer toggle, because on keys where 0x08 is on, Caps Lock is 
-* disabled likewise.
+* 
+* Then, bicameral letters should not be mapped on levels accessed with AltGr,
+* because on those levels, Caps Lock is unavailable.
 *
 * See [WDK]\inc\api\kbd.h
 * and [WDK]\inc\api\WINUSER.H
 *
-* > > THE ACTUAL MAPPING IS DONE IN THE LOCALE HEADER.
 \**********************************************************************************/
 // Key E00 to Kana Lock:
    #undef  T29
@@ -635,4 +631,3 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * End of kbcommon.H
 \**********************************************************************************/
 // EOF
-
