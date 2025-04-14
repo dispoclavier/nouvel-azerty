@@ -18,6 +18,8 @@ Reconception, rectification et simplification des séquences de composition. [co
 
 ## 5.0.0 (projet)
 
+Complétion des touches mortes grâce à la dissociation des équivalents en composition.
+
 Amélioration de l’utilisabilité :
 
 * de la modificatrice AltFr et des touches B07 et B08 en mode ASCII : stabilité des points d’interrogation et d’exclamation comme du deux-points et du point-virgule ;
@@ -30,11 +32,9 @@ Amélioration de l’utilisabilité :
 
 Correction de la prise en charge de l’émoji "❄" U+2744, arrêt de celle de "😃" U+1F603.
 
-Prise en charge sur touche vive du séparateur invisible "⁣" U2063 (en plus du signe plus "⁤" U2064) pour une écriture bicamérale plus résiliente.
+Prise en charge sur touche vive du séparateur invisible "⁣" U+2063, comme du signe plus invisible "⁤" U+2064 pour les fractions ordinaires (depuis la version 4.14), améliorant la résilience des écritures bicamérales.
 
-Complétion des touches mortes.
-
-Rectification de séquences de composition.
+Rectification ou simplification de certaines séquences de composition.
 
 * Disposition :
 	* Mode ASCII : AltFr :
