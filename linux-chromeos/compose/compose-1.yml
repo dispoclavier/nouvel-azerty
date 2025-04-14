@@ -1,7 +1,7 @@
 # START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
 #
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 5.0.0d" # See # # Notes about syntax
+<UEFA0>                     : "version 5.0.0" # See # # Notes about syntax
 #                      Scope: part 1 of Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -3425,7 +3425,6 @@
 #Multi_key><n><e><i>                                                                               : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><n><e>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><N><E>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
-#
 #
 #
 # # Skull and crossbones emoji
