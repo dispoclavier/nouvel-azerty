@@ -18,17 +18,19 @@ Reconception, rectification et simplification des séquences de composition. [co
 
 ## 5.0.0 (2025-04-14)
 
-Complétion des touches mortes grâce à la dissociation des équivalents en composition.
+Amélioration de l’utilisabilité de la modificatrice AltFr et des touches B07 et B08 en mode ASCII par la stabilité des points d’interrogation et d’exclamation.
 
-Amélioration de l’utilisabilité :
+Complétion des touches mortes au-delà du contenu pris en charge par équivalence en composition, grâce à la dissociation des touches mortes et des équivalents en composition.
 
-* de la modificatrice AltFr et des touches B07 et B08 en mode ASCII : stabilité des points d’interrogation et d’exclamation comme du deux-points et du point-virgule ;
-* des touches mortes au-delà du contenu pris en charge par équivalence en composition ;
-* des groupes des lettres :
-	* les lettres grecques latines passent du groupe 3 au groupe 2 ;
-	* le v de ronde est doté d’un raccourci dans le groupe 1 ;
-	* l’upsilon latin regagne sa place dans le groupe 1 de l’i grec ;
-* des groupes des symboles : gain de trois places dans les premiers groupes du croisillon grâce à la dissociation des touches mortes et de leur équivalent en composition.
+Amélioration des groupes des symboles :
+* gain de trois places dans les premiers groupes du croisillon grâce à la dissociation des touches mortes et de leur équivalent en composition ;
+* retour des cases à cocher sur "#" ;
+* intégration des obèles les plus fréquents et de l’astérisme très populaire.
+
+Amélioration des groupes des lettres :
+* les lettres grecques latines passent du groupe 3 au groupe 2 ;
+* le v de ronde est doté d’un raccourci dans le groupe 1 ;
+* l’upsilon latin regagne sa place dans le groupe 1 de l’i grec.
 
 Correction de la prise en charge de l’émoji "❄" U+2744, arrêt de celle de "😃" U+1F603.
 
