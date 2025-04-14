@@ -30,6 +30,8 @@ Amélioration de l’utilisabilité :
 
 Correction de la prise en charge de l’émoji "❄" U+2744, arrêt de celle de "😃" U+1F603.
 
+Prise en charge sur touche vive du séparateur invisible "⁣" U2063 (en plus du signe plus "⁤" U2064) pour une écriture bicamérale plus résiliente.
+
 Complétion des touches mortes.
 
 Rectification de séquences de composition.
