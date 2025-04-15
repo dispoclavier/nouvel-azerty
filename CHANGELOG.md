@@ -16,7 +16,7 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-## 5.0.0 (2025-04-14)
+## 5.0.0 (2025-04-15)
 
 Amélioration de l’utilisabilité de la modificatrice AltFr et des touches B07 et B08 en mode ASCII par la stabilité des points d’interrogation et d’exclamation.
 
