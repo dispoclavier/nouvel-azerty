@@ -1089,9 +1089,9 @@
 #             "find": "<U200B",
 #             "replace": "<~spacezerowidth"
 #           },
-#           "deletePaddingSpaces": {
+#           "collapsePaddingSpaces": {
 #             "find": ">\\s*:",
-#             "replace": ">:"
+#             "replace": "> :"
 #           }
 #         },
 #         "replacerules.rulesets": {
@@ -1121,7 +1121,7 @@
 #               "sortSpaces",
 #               "decodeNoBreakThinSpace",
 #               "decodeZeroWidthSpace",
-#               "deletePaddingSpaces"
+#               "collapsePaddingSpaces"
 #             ]
 #           }
 #         }
