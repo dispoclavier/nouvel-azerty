@@ -1,4 +1,4 @@
-//                       Date: 2025-04-12T0240+0200
+//                       Date: 2025-04-18T0212+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1209,9 +1209,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AB05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   b,                   B,               equal,               UEF6D,               UEFD7,               U1D47,              U1F618,              U1F495 ],
-		[                   b,                   B,               equal,               UEF6D,               UEFD7,               U1D47,              U1F618,              U1F495 ]
-	}; // U1D47 ᵇ MODIFIER LETTER SMALL B; UEFD7 *dead_flag regional indicator letters; UEF6D '00'; U1F618 😘 FACE THROWING A KISS sixth-most [smiling second-most] used emoji in France, ninth-most worldwide; U1F495 💕 TWO HEARTS seventh-most used emoji
+		[                   b,                   B,               equal,               UEF6D,               UEFD7,               U1D47,              U1F618,              U1F970 ],
+		[                   b,                   B,               equal,               UEF6D,               UEFD7,               U1D47,              U1F618,              U1F970 ]
+	}; // U1D47 ᵇ MODIFIER LETTER SMALL B; UEFD7 *dead_flag regional indicator letters; UEF6D '00'; U1F618 😘 FACE THROWING A KISS sixth-most [smiling second-most] used emoji in France, ninth-most worldwide; U1F970 🥰 SMILING FACE WITH SMILING EYES AND THREE HEARTS ranks in the top ten and is semantically broader than U1F495 💕 TWO HEARTS (seventh-most used in 2019)
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
