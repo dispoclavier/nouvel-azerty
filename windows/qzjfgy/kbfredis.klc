@@ -13,7 +13,7 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	5.0.0.0
+VERSION	5.0.1.0
 
 // Pour la documentation et les noms de dossier, avec d’éventuels mots-clés ajoutés, pas trop
 // longs afin d’assurer la sauvegardabilité. Pour les métadonnées des pilotes compilés, il faut
@@ -265,7 +265,7 @@ V		6	0026	g	t	003B		// &gt;
 V		7	D83D	DC96				// 1F496
 B		4	0	0				// CHIFFRE ZÉRO + CHIFFRE ZÉRO
 B		6	D83D	DE18				// 1F618
-B		7	D83D	DC95				// 1F495
+B		7	D83E	DD70				// 1F970
 H		6	n	1D52	202F			// nᵒ + ESPACE FINE INSÉCABLE
 H		7	N	1D52	202F			// Nᵒ + ESPACE FINE INSÉCABLE
 OEM_COMMA		1	202F	003F				// ESPACE FINE INSÉCABLE + POINT D’INTERROGATION
