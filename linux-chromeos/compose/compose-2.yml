@@ -132,10 +132,13 @@
 #   are extensively supported on level 4 with a number of level-1/3 duplicates.
 #
 #   Only a subset of the dead key content, however, is supported by multikey,
-#   due to conflicts with math symbols. Conflicting multikey equivalents are
-#   commented out with an enumeration of conflicting characters.
+#   due to conflicts with the superscript or subscript dead keys, or with the
+#   quotation mark input method, or with math symbols. Conflicting multikey
+#   equivalents are commented out with an enumeration of conflicting characters
+#   or with an annotation in the dead key header.
 #   See #   Conflictlessness check
 #   See #   Multikey conflicts with
+#   See # # Quotation mark input method
 #
 #   Extended dead key support — beyond the feasible multikey support level — is
 #   required to make sure that dead keys are usable to an acceptable extent, so
