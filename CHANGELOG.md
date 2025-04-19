@@ -18,7 +18,7 @@ Mise à jour de la prise en charge des émojis suite à la mise à jour de la [p
 
 Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-Rétablissement de la symétricité des touches mortes suite à la dissociation de celles-ci avec leur équivalent en composition.
+Rétablissement de la symétricité des enchaînements de touches mortes suite à la dissociation de celles-ci avec leur équivalent en composition.
 
 * Disposition : Prendre en charge "🥰" U+1F970 sur B05 "B", niveau 8, à la place de "💕" U+1F495. dispocla.cpp [88719a8](https://github.com/dispoclavier/nouvel-azerty/commit/88719a8cb290420dc871370eb3fa144d8c2087c8), kbfrFRs.klc [96950df](https://github.com/dispoclavier/nouvel-azerty/commit/96950dfbd1209398d6c02688b381c1461179f712), kbfrFRs.C [0c294ff](https://github.com/dispoclavier/nouvel-azerty/commit/0c294ff80c6591b9288255121bd84155229ca127), kbfredis.klc [5f45c24](https://github.com/dispoclavier/nouvel-azerty/commit/5f45c24d25c41d38379078a38cce830a3a34efc8), kbfredis.C [77e3126](https://github.com/dispoclavier/nouvel-azerty/commit/77e312667408bae9d2a8194f19a0d9348ff3f863)
 * Transformations : Rétablir la symétricité sans les équivalents en composition suite à la dissociation de ceux-ci. compose-2.yml [c32ffcc](https://github.com/dispoclavier/nouvel-azerty/commit/c32ffcc62ad3ff8ae66897924d31ab01730d9e91)
