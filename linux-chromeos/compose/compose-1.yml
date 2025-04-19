@@ -12289,7 +12289,7 @@
 #   Greek dialytika tonos
 #   Dchar: 
 #
-#   This does not work the way <dead_diaeresis><dead_doubleacute><dead_greek>,
+#   Multikey does not work the way dead_diaeresis-dead_doubleacute-dead_greek,
 #   so as to prevent a conflict with "„" U201E DOUBLE LOW-9 QUOTATION MARK.
 #   See # # Quotation mark input method
 #
@@ -12305,6 +12305,9 @@
 <dead_doubleacute><dead_greek><dead_diaeresis>                                             <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><at><colon>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+<dead_diaeresis><dead_doubleacute><dead_greek>                                             <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                                     <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                                     <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                             <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
@@ -12320,6 +12323,9 @@
 <dead_doubleacute><dead_greek><dead_diaeresis>                                             <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><at><colon>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+<dead_diaeresis><dead_doubleacute><dead_greek>                                             <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                                     <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                                     <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                             <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
@@ -12335,6 +12341,9 @@
 <dead_doubleacute><dead_greek><dead_diaeresis>                                      <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><at><colon>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
+<dead_diaeresis><dead_doubleacute><dead_greek>                                      <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                              <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                              <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                      <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
@@ -12350,6 +12359,9 @@
 <dead_doubleacute><dead_greek><dead_diaeresis>                                             <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><at><colon>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
+<dead_diaeresis><dead_doubleacute><dead_greek>                                             <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                                     <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
+#   Multikey conflicts with "„" U201E.                                                     <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                             <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
@@ -12365,6 +12377,9 @@
 <dead_doubleacute><dead_greek><dead_diaeresis>                                                 <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><quotedbl><at><colon>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><at><colon>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+<dead_diaeresis><dead_doubleacute><dead_greek>                                                 <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+#   Multikey conflicts with "„" U201E.                                                         <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+#   Multikey conflicts with "„" U201E.                                                         <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                                 <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><quotedbl><colon><at>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><colon><at>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
@@ -12380,6 +12395,9 @@
 <dead_doubleacute><dead_greek><dead_diaeresis>                                                 <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><quotedbl><at><colon>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><at><colon>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+<dead_diaeresis><dead_doubleacute><dead_greek>                                                 <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+#   Multikey conflicts with "„" U201E.                                                         <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+#   Multikey conflicts with "„" U201E.                                                         <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                                 <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><quotedbl><colon><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><colon><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
@@ -12389,7 +12407,7 @@
 #   Greek dialytika oxia
 #   Dchar: 
 #
-#   This does not work the way <dead_diaeresis><dead_acute><dead_greek>, so as
+#   Multikey does not work the way dead_diaeresis-dead_acute-dead_greek, so as
 #   to prevent a conflict with "‚" U201A SINGLE LOW-9 QUOTATION MARK.
 #   See # # Quotation mark input method
 #
@@ -12401,6 +12419,8 @@
 <Multi_key><colon><at><apostrophe>                                                  <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <dead_acute><dead_greek><dead_diaeresis>                                            <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <Multi_key><apostrophe><at><colon>                                                  <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
+<dead_diaeresis><dead_acute><dead_greek>                                            <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
+#   Multikey conflicts with "‚" U201A.                                              <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <dead_acute><dead_diaeresis><dead_greek>                                            <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <Multi_key><apostrophe><colon><at>                                                  <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <dead_greek><dead_diaeresis><dead_acute>                                                   <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
@@ -12411,6 +12431,8 @@
 <Multi_key><colon><at><apostrophe>                                                         <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <dead_acute><dead_greek><dead_diaeresis>                                                   <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <Multi_key><apostrophe><at><colon>                                                         <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
+<dead_diaeresis><dead_acute><dead_greek>                                                   <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
+#   Multikey conflicts with "‚" U201A.                                                     <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <dead_acute><dead_diaeresis><dead_greek>                                                   <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <Multi_key><apostrophe><colon><at>                                                         <U202F> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <dead_greek><dead_diaeresis><dead_acute>                                                       <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
@@ -12421,6 +12443,8 @@
 <Multi_key><colon><at><apostrophe>                                                             <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
 <dead_acute><dead_greek><dead_diaeresis>                                                       <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
 <Multi_key><apostrophe><at><colon>                                                             <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+<dead_diaeresis><dead_acute><dead_greek>                                                       <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+#   Multikey conflicts with "‚" U201A.                                                         <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
 <dead_acute><dead_diaeresis><dead_greek>                                                       <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
 <Multi_key><apostrophe><colon><at>                                                             <i> : "ΐ" U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
 <dead_greek><dead_diaeresis><dead_acute>                                                       <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
@@ -12431,6 +12455,8 @@
 <Multi_key><colon><at><apostrophe>                                                             <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 <dead_acute><dead_greek><dead_diaeresis>                                                       <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 <Multi_key><apostrophe><at><colon>                                                             <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+<dead_diaeresis><dead_acute><dead_greek>                                                       <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+#   Multikey conflicts with "‚" U201A.                                                         <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 <dead_acute><dead_diaeresis><dead_greek>                                                       <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 <Multi_key><apostrophe><colon><at>                                                             <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 #
