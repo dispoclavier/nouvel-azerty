@@ -872,6 +872,9 @@
 #   the end of the notes for maintenance section.
 #   See #   Conflictlessness check
 #
+#
+#   Single-character dead keys
+#
 #   Some virtual dead keys exist for the sake of one single character. Whether
 #   such a single-character dead key can be streamlined or not depends on the
 #   length of the code point, since on Windows, characters in the Supplemental
