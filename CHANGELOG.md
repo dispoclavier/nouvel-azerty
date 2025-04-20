@@ -38,6 +38,7 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 	* Améliorer la symétrisation des enchaînements de touches mortes. compose-1.yml [8d799a3](https://github.com/dispoclavier/nouvel-azerty/commit/8d799a3374fc7bb9679c45fea99d2deff6ccd3c6), [8b41337](https://github.com/dispoclavier/nouvel-azerty/commit/8b41337013b233365373cf59c089718629fddd31)
 	* Améliorer l’intertitrage. compose-1.yml [2ab9521](https://github.com/dispoclavier/nouvel-azerty/commit/2ab9521d1730b4a149c61f9bf8816db1e4f2d8f9)
 	* Préciser des renvois. compose-2.yml [19b1f60](https://github.com/dispoclavier/nouvel-azerty/commit/19b1f603bbe7e0f0f88e0a94063d1bbfe967f216)
+	* Corriger un renvoi et en ajouter un. compose-1.yml [fa0dc2e](https://github.com/dispoclavier/nouvel-azerty/commit/fa0dc2ed98cb0757d3030c9fa1a221dabc4fef0f)
 
 ## 5.0.0 (2025-04-15)
 
