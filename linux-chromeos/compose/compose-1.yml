@@ -1504,7 +1504,7 @@
 <Multi_key><P><T><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #
 #
-#^# Circled
+#^# Circled numbers
 #
 #   The multikey main implementation of circled digits and circled or squared
 #   letters are multikey equivalents of "Greek or circled" dead key dead_greek,
@@ -3840,6 +3840,354 @@
 <Multi_key><i><bar>                                                                                : "⁨" U2068 # FIRST STRONG ISOLATE
 <Multi_key><p><d><i>                                                                               : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 <Multi_key><i><equal>                                                                              : "⁩" U2069 # POP DIRECTIONAL ISOLATE
+#
+#
+#^# Box drawings
+#
+#   Being widely used in documentation of keyboard layouts in source code and
+#   in plain text email footers, BMP box drawings are supported extensively for
+#   usability and completeness.
+#   https://www.unicode.org/charts/nameslist/n_2500.html
+#   https://www.w3.org/TR/xml-entity-names/025.html
+#
+#   Rather than starting with the breve dead key, box drawings are supported
+#   by multikey only, with a leading parenright for mnemonics, as parenright
+#   is on C04 "F", consistently with their French name "filets".
+#
+#   As an exception to the rule, sequences for character cell arcs start with
+#   parenleft for graphic mnemonic based on the shape of uppercase letter D on
+#   C03, that parenleft is on, and with proximity mnemonic, as the bulk of box
+#   drawings starts with parenright on key "F", C04.
+#   See #   Character cell arcs
+#
+#
+# # Classic box drawings
+#
+#   The digit position sets the direction clockwise: up, right, down, left;
+#   and a digit sets the stroke type: 0 for none,
+#                                     1 for light,
+#                                     2 for double,
+#                                     3 for heavy,
+#   as in <1><0><1><0> : "─" U2500 BOX DRAWINGS LIGHT HORIZONTAL.
+#
+#   Multiple dashes are input by the number of dashes, typed once for light,
+#   twice for heavy, terminated by "h" for horizontal, or "v" for vertical,
+#   as in <3><h> : "┄" U2504 BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL, and in
+#   <3><3><h> : "┅" U2505 BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL.
+#
+#   Diagonals are input by 1 for the slash slant, 2 for the backslash slant,
+#   both 1 and 2 for a cross, and terminated by "d" for diagonal, as in
+#   <1><d> : "╱" U2571 BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT,
+#   <1><2><d> : "╳" U2573 BOX DRAWINGS LIGHT DIAGONAL CROSS.
+#
+#   The 16 character cell diagonals, new to Unicode 16.0, from "🯐" U1FBD0 BOX
+#   DRAWINGS LIGHT DIAGONAL MIDDLE RIGHT TO LOWER LEFT through "🯟" U1FBDF BOX
+#   DRAWINGS LIGHT DIAGONAL UPPER LEFT TO MIDDLE RIGHT TO LOWER LEFT are not
+#   supported however, nor are the other SMP box drawings:
+#
+#       * Box drawings "𜰛" U1CC1B.."𜰠" U1CC20.
+#       * Double diagonal box drawings "𜸉" U1CE09.."𜸊" U1CE0A.
+#       * Box drawings "𜸖" U1CE16.."𜸙" U1CE19.
+#       * Diagonal box drawings "🮠" U1FBA0.."🮮" U1FBAE.
+#       * Cross box drawings "🮯" U1FBAF.
+#
+#
+#   Light and heavy solid lines
+#
+<Multi_key><parenright>                                                               <1><0><1><0> : "─" U2500 # BOX DRAWINGS LIGHT HORIZONTAL
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_1><KP_0> : "─" U2500 # BOX DRAWINGS LIGHT HORIZONTAL
+<Multi_key><parenright>                                                               <3><0><3><0> : "━" U2501 # BOX DRAWINGS HEAVY HORIZONTAL
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_3><KP_0> : "━" U2501 # BOX DRAWINGS HEAVY HORIZONTAL
+<Multi_key><parenright>                                                               <0><1><0><1> : "│" U2502 # BOX DRAWINGS LIGHT VERTICAL
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_1> : "│" U2502 # BOX DRAWINGS LIGHT VERTICAL
+<Multi_key><parenright>                                                               <0><3><0><3> : "┃" U2503 # BOX DRAWINGS HEAVY VERTICAL
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_0><KP_3> : "┃" U2503 # BOX DRAWINGS HEAVY VERTICAL
+#
+#
+#   Light and heavy dashed lines
+#
+<Multi_key><parenright>                                                                     <3><h> : "┄" U2504 # BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                  <KP_3><h> : "┄" U2504 # BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                  <3><3><h> : "┅" U2505 # BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                            <KP_3><KP_3><h> : "┅" U2505 # BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                     <3><v> : "┆" U2506 # BOX DRAWINGS LIGHT TRIPLE DASH VERTICAL
+<Multi_key><parenright>                                                                  <KP_3><v> : "┆" U2506 # BOX DRAWINGS LIGHT TRIPLE DASH VERTICAL
+<Multi_key><parenright>                                                                  <3><3><v> : "┇" U2507 # BOX DRAWINGS HEAVY TRIPLE DASH VERTICAL
+<Multi_key><parenright>                                                            <KP_3><KP_3><v> : "┇" U2507 # BOX DRAWINGS HEAVY TRIPLE DASH VERTICAL
+<Multi_key><parenright>                                                                     <4><h> : "┈" U2508 # BOX DRAWINGS LIGHT QUADRUPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                  <KP_4><h> : "┈" U2508 # BOX DRAWINGS LIGHT QUADRUPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                  <4><4><h> : "┉" U2509 # BOX DRAWINGS HEAVY QUADRUPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                            <KP_4><KP_4><h> : "┉" U2509 # BOX DRAWINGS HEAVY QUADRUPLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                     <4><v> : "┊" U250A # BOX DRAWINGS LIGHT QUADRUPLE DASH VERTICAL
+<Multi_key><parenright>                                                                  <KP_4><v> : "┊" U250A # BOX DRAWINGS LIGHT QUADRUPLE DASH VERTICAL
+<Multi_key><parenright>                                                                  <4><4><v> : "┋" U250B # BOX DRAWINGS HEAVY QUADRUPLE DASH VERTICAL
+<Multi_key><parenright>                                                            <KP_4><KP_4><v> : "┋" U250B # BOX DRAWINGS HEAVY QUADRUPLE DASH VERTICAL
+#
+#
+#   Light and heavy line box components
+#
+<Multi_key><parenright>                                                               <1><1><0><0> : "┌" U250C # BOX DRAWINGS LIGHT DOWN AND RIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_0><KP_0> : "┌" U250C # BOX DRAWINGS LIGHT DOWN AND RIGHT
+<Multi_key><parenright>                                                               <3><1><0><0> : "┍" U250D # BOX DRAWINGS DOWN LIGHT AND RIGHT HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_0><KP_0> : "┍" U250D # BOX DRAWINGS DOWN LIGHT AND RIGHT HEAVY
+<Multi_key><parenright>                                                               <1><3><0><0> : "┎" U250E # BOX DRAWINGS DOWN HEAVY AND RIGHT LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_0><KP_0> : "┎" U250E # BOX DRAWINGS DOWN HEAVY AND RIGHT LIGHT
+<Multi_key><parenright>                                                               <3><3><0><0> : "┏" U250F # BOX DRAWINGS HEAVY DOWN AND RIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_0><KP_0> : "┏" U250F # BOX DRAWINGS HEAVY DOWN AND RIGHT
+<Multi_key><parenright>                                                               <0><1><1><0> : "┐" U2510 # BOX DRAWINGS LIGHT DOWN AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_1><KP_0> : "┐" U2510 # BOX DRAWINGS LIGHT DOWN AND LEFT
+<Multi_key><parenright>                                                               <0><1><3><0> : "┑" U2511 # BOX DRAWINGS DOWN LIGHT AND LEFT HEAVY
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_3><KP_0> : "┑" U2511 # BOX DRAWINGS DOWN LIGHT AND LEFT HEAVY
+<Multi_key><parenright>                                                               <0><3><1><0> : "┒" U2512 # BOX DRAWINGS DOWN HEAVY AND LEFT LIGHT
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_1><KP_0> : "┒" U2512 # BOX DRAWINGS DOWN HEAVY AND LEFT LIGHT
+<Multi_key><parenright>                                                               <0><3><3><0> : "┓" U2513 # BOX DRAWINGS HEAVY DOWN AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_3><KP_0> : "┓" U2513 # BOX DRAWINGS HEAVY DOWN AND LEFT
+<Multi_key><parenright>                                                               <1><0><0><1> : "└" U2514 # BOX DRAWINGS LIGHT UP AND RIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_0><KP_1> : "└" U2514 # BOX DRAWINGS LIGHT UP AND RIGHT
+<Multi_key><parenright>                                                               <3><0><0><1> : "┕" U2515 # BOX DRAWINGS UP LIGHT AND RIGHT HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_0><KP_1> : "┕" U2515 # BOX DRAWINGS UP LIGHT AND RIGHT HEAVY
+<Multi_key><parenright>                                                               <1><0><0><3> : "┖" U2516 # BOX DRAWINGS UP HEAVY AND RIGHT LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_0><KP_3> : "┖" U2516 # BOX DRAWINGS UP HEAVY AND RIGHT LIGHT
+<Multi_key><parenright>                                                               <3><0><0><3> : "┗" U2517 # BOX DRAWINGS HEAVY UP AND RIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_0><KP_3> : "┗" U2517 # BOX DRAWINGS HEAVY UP AND RIGHT
+<Multi_key><parenright>                                                               <0><0><1><1> : "┘" U2518 # BOX DRAWINGS LIGHT UP AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_1><KP_1> : "┘" U2518 # BOX DRAWINGS LIGHT UP AND LEFT
+<Multi_key><parenright>                                                               <0><0><3><1> : "┙" U2519 # BOX DRAWINGS UP LIGHT AND LEFT HEAVY
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_3><KP_1> : "┙" U2519 # BOX DRAWINGS UP LIGHT AND LEFT HEAVY
+<Multi_key><parenright>                                                               <0><0><1><3> : "┚" U251A # BOX DRAWINGS UP HEAVY AND LEFT LIGHT
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_1><KP_3> : "┚" U251A # BOX DRAWINGS UP HEAVY AND LEFT LIGHT
+<Multi_key><parenright>                                                               <0><0><3><3> : "┛" U251B # BOX DRAWINGS HEAVY UP AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_3><KP_3> : "┛" U251B # BOX DRAWINGS HEAVY UP AND LEFT
+<Multi_key><parenright>                                                               <1><1><0><1> : "├" U251C # BOX DRAWINGS LIGHT VERTICAL AND RIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_0><KP_1> : "├" U251C # BOX DRAWINGS LIGHT VERTICAL AND RIGHT
+<Multi_key><parenright>                                                               <3><1><0><1> : "┝" U251D # BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_0><KP_1> : "┝" U251D # BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY
+<Multi_key><parenright>                                                               <1><1><0><3> : "┞" U251E # BOX DRAWINGS UP HEAVY AND RIGHT DOWN LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_0><KP_3> : "┞" U251E # BOX DRAWINGS UP HEAVY AND RIGHT DOWN LIGHT
+<Multi_key><parenright>                                                               <1><3><0><1> : "┟" U251F # BOX DRAWINGS DOWN HEAVY AND RIGHT UP LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_0><KP_1> : "┟" U251F # BOX DRAWINGS DOWN HEAVY AND RIGHT UP LIGHT
+<Multi_key><parenright>                                                               <1><3><0><3> : "┠" U2520 # BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_0><KP_3> : "┠" U2520 # BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT
+<Multi_key><parenright>                                                               <3><1><0><3> : "┡" U2521 # BOX DRAWINGS DOWN LIGHT AND RIGHT UP HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_0><KP_3> : "┡" U2521 # BOX DRAWINGS DOWN LIGHT AND RIGHT UP HEAVY
+<Multi_key><parenright>                                                               <3><3><0><1> : "┢" U2522 # BOX DRAWINGS UP LIGHT AND RIGHT DOWN HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_0><KP_1> : "┢" U2522 # BOX DRAWINGS UP LIGHT AND RIGHT DOWN HEAVY
+<Multi_key><parenright>                                                               <3><3><0><3> : "┣" U2523 # BOX DRAWINGS HEAVY VERTICAL AND RIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_0><KP_3> : "┣" U2523 # BOX DRAWINGS HEAVY VERTICAL AND RIGHT
+<Multi_key><parenright>                                                               <0><1><1><1> : "┤" U2524 # BOX DRAWINGS LIGHT VERTICAL AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_1><KP_1> : "┤" U2524 # BOX DRAWINGS LIGHT VERTICAL AND LEFT
+<Multi_key><parenright>                                                               <0><1><3><1> : "┥" U2525 # BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_3><KP_1> : "┥" U2525 # BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY
+<Multi_key><parenright>                                                               <0><1><1><3> : "┦" U2526 # BOX DRAWINGS UP HEAVY AND LEFT DOWN LIGHT
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_1><KP_3> : "┦" U2526 # BOX DRAWINGS UP HEAVY AND LEFT DOWN LIGHT
+<Multi_key><parenright>                                                               <0><3><1><1> : "┧" U2527 # BOX DRAWINGS DOWN HEAVY AND LEFT UP LIGHT
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_1><KP_1> : "┧" U2527 # BOX DRAWINGS DOWN HEAVY AND LEFT UP LIGHT
+<Multi_key><parenright>                                                               <0><3><1><3> : "┨" U2528 # BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_1><KP_3> : "┨" U2528 # BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT
+<Multi_key><parenright>                                                               <0><1><3><3> : "┩" U2529 # BOX DRAWINGS DOWN LIGHT AND LEFT UP HEAVY
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_3><KP_3> : "┩" U2529 # BOX DRAWINGS DOWN LIGHT AND LEFT UP HEAVY
+<Multi_key><parenright>                                                               <0><3><3><1> : "┪" U252A # BOX DRAWINGS UP LIGHT AND LEFT DOWN HEAVY
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_3><KP_1> : "┪" U252A # BOX DRAWINGS UP LIGHT AND LEFT DOWN HEAVY
+<Multi_key><parenright>                                                               <0><3><3><3> : "┫" U252B # BOX DRAWINGS HEAVY VERTICAL AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_3><KP_3> : "┫" U252B # BOX DRAWINGS HEAVY VERTICAL AND LEFT
+<Multi_key><parenright>                                                               <1><1><1><0> : "┬" U252C # BOX DRAWINGS LIGHT DOWN AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_1><KP_0> : "┬" U252C # BOX DRAWINGS LIGHT DOWN AND HORIZONTAL
+<Multi_key><parenright>                                                               <1><1><3><0> : "┭" U252D # BOX DRAWINGS LEFT HEAVY AND RIGHT DOWN LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_3><KP_0> : "┭" U252D # BOX DRAWINGS LEFT HEAVY AND RIGHT DOWN LIGHT
+<Multi_key><parenright>                                                               <3><1><1><0> : "┮" U252E # BOX DRAWINGS RIGHT HEAVY AND LEFT DOWN LIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_1><KP_0> : "┮" U252E # BOX DRAWINGS RIGHT HEAVY AND LEFT DOWN LIGHT
+<Multi_key><parenright>                                                               <3><1><3><0> : "┯" U252F # BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_3><KP_0> : "┯" U252F # BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY
+<Multi_key><parenright>                                                               <1><3><1><0> : "┰" U2530 # BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_1><KP_0> : "┰" U2530 # BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT
+<Multi_key><parenright>                                                               <1><3><3><0> : "┱" U2531 # BOX DRAWINGS RIGHT LIGHT AND LEFT DOWN HEAVY
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_3><KP_0> : "┱" U2531 # BOX DRAWINGS RIGHT LIGHT AND LEFT DOWN HEAVY
+<Multi_key><parenright>                                                               <3><3><1><0> : "┲" U2532 # BOX DRAWINGS LEFT LIGHT AND RIGHT DOWN HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_1><KP_0> : "┲" U2532 # BOX DRAWINGS LEFT LIGHT AND RIGHT DOWN HEAVY
+<Multi_key><parenright>                                                               <3><3><3><0> : "┳" U2533 # BOX DRAWINGS HEAVY DOWN AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_3><KP_0> : "┳" U2533 # BOX DRAWINGS HEAVY DOWN AND HORIZONTAL
+<Multi_key><parenright>                                                               <1><0><1><1> : "┴" U2534 # BOX DRAWINGS LIGHT UP AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_1><KP_1> : "┴" U2534 # BOX DRAWINGS LIGHT UP AND HORIZONTAL
+<Multi_key><parenright>                                                               <1><0><3><1> : "┵" U2535 # BOX DRAWINGS LEFT HEAVY AND RIGHT UP LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_1> : "┵" U2535 # BOX DRAWINGS LEFT HEAVY AND RIGHT UP LIGHT
+<Multi_key><parenright>                                                               <3><0><1><1> : "┶" U2536 # BOX DRAWINGS RIGHT HEAVY AND LEFT UP LIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_1><KP_1> : "┶" U2536 # BOX DRAWINGS RIGHT HEAVY AND LEFT UP LIGHT
+<Multi_key><parenright>                                                               <3><0><3><1> : "┷" U2537 # BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_3><KP_1> : "┷" U2537 # BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY
+<Multi_key><parenright>                                                               <1><0><1><3> : "┸" U2538 # BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_1><KP_3> : "┸" U2538 # BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT
+<Multi_key><parenright>                                                               <1><0><3><3> : "┹" U2539 # BOX DRAWINGS RIGHT LIGHT AND LEFT UP HEAVY
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_3> : "┹" U2539 # BOX DRAWINGS RIGHT LIGHT AND LEFT UP HEAVY
+<Multi_key><parenright>                                                               <3><0><1><3> : "┺" U253A # BOX DRAWINGS LEFT LIGHT AND RIGHT UP HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_1><KP_3> : "┺" U253A # BOX DRAWINGS LEFT LIGHT AND RIGHT UP HEAVY
+<Multi_key><parenright>                                                               <3><0><3><3> : "┻" U253B # BOX DRAWINGS HEAVY UP AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_3><KP_3> : "┻" U253B # BOX DRAWINGS HEAVY UP AND HORIZONTAL
+<Multi_key><parenright>                                                               <1><1><1><1> : "┼" U253C # BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_1><KP_1> : "┼" U253C # BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL
+<Multi_key><parenright>                                                               <1><1><3><1> : "┽" U253D # BOX DRAWINGS LEFT HEAVY AND RIGHT VERTICAL LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_3><KP_1> : "┽" U253D # BOX DRAWINGS LEFT HEAVY AND RIGHT VERTICAL LIGHT
+<Multi_key><parenright>                                                               <3><1><1><1> : "┾" U253E # BOX DRAWINGS RIGHT HEAVY AND LEFT VERTICAL LIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_1><KP_1> : "┾" U253E # BOX DRAWINGS RIGHT HEAVY AND LEFT VERTICAL LIGHT
+<Multi_key><parenright>                                                               <3><1><3><1> : "┿" U253F # BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_3><KP_1> : "┿" U253F # BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY
+<Multi_key><parenright>                                                               <1><1><1><3> : "╀" U2540 # BOX DRAWINGS UP HEAVY AND DOWN HORIZONTAL LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_1><KP_3> : "╀" U2540 # BOX DRAWINGS UP HEAVY AND DOWN HORIZONTAL LIGHT
+<Multi_key><parenright>                                                               <1><3><1><1> : "╁" U2541 # BOX DRAWINGS DOWN HEAVY AND UP HORIZONTAL LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_1><KP_1> : "╁" U2541 # BOX DRAWINGS DOWN HEAVY AND UP HORIZONTAL LIGHT
+<Multi_key><parenright>                                                               <1><3><1><3> : "╂" U2542 # BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_1><KP_3> : "╂" U2542 # BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT
+<Multi_key><parenright>                                                               <1><1><3><3> : "╃" U2543 # BOX DRAWINGS LEFT UP HEAVY AND RIGHT DOWN LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_1><KP_3><KP_3> : "╃" U2543 # BOX DRAWINGS LEFT UP HEAVY AND RIGHT DOWN LIGHT
+<Multi_key><parenright>                                                               <3><1><1><3> : "╄" U2544 # BOX DRAWINGS RIGHT UP HEAVY AND LEFT DOWN LIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_1><KP_3> : "╄" U2544 # BOX DRAWINGS RIGHT UP HEAVY AND LEFT DOWN LIGHT
+<Multi_key><parenright>                                                               <1><3><3><1> : "╅" U2545 # BOX DRAWINGS LEFT DOWN HEAVY AND RIGHT UP LIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_3><KP_1> : "╅" U2545 # BOX DRAWINGS LEFT DOWN HEAVY AND RIGHT UP LIGHT
+<Multi_key><parenright>                                                               <3><3><1><1> : "╆" U2546 # BOX DRAWINGS RIGHT DOWN HEAVY AND LEFT UP LIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_1><KP_1> : "╆" U2546 # BOX DRAWINGS RIGHT DOWN HEAVY AND LEFT UP LIGHT
+<Multi_key><parenright>                                                               <3><1><3><3> : "╇" U2547 # BOX DRAWINGS DOWN LIGHT AND UP HORIZONTAL HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_1><KP_3><KP_3> : "╇" U2547 # BOX DRAWINGS DOWN LIGHT AND UP HORIZONTAL HEAVY
+<Multi_key><parenright>                                                               <3><3><3><1> : "╈" U2548 # BOX DRAWINGS UP LIGHT AND DOWN HORIZONTAL HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_3><KP_1> : "╈" U2548 # BOX DRAWINGS UP LIGHT AND DOWN HORIZONTAL HEAVY
+<Multi_key><parenright>                                                               <1><3><3><3> : "╉" U2549 # BOX DRAWINGS RIGHT LIGHT AND LEFT VERTICAL HEAVY
+<Multi_key><parenright>                                                   <KP_1><KP_3><KP_3><KP_3> : "╉" U2549 # BOX DRAWINGS RIGHT LIGHT AND LEFT VERTICAL HEAVY
+<Multi_key><parenright>                                                               <3><3><1><3> : "╊" U254A # BOX DRAWINGS LEFT LIGHT AND RIGHT VERTICAL HEAVY
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_1><KP_3> : "╊" U254A # BOX DRAWINGS LEFT LIGHT AND RIGHT VERTICAL HEAVY
+<Multi_key><parenright>                                                               <3><3><3><3> : "╋" U254B # BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_3><KP_3><KP_3><KP_3> : "╋" U254B # BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL
+#
+#
+#   Light and heavy dashed lines
+#
+<Multi_key><parenright>                                                                     <2><h> : "╌" U254C # BOX DRAWINGS LIGHT DOUBLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                  <KP_2><h> : "╌" U254C # BOX DRAWINGS LIGHT DOUBLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                  <2><2><h> : "╍" U254D # BOX DRAWINGS HEAVY DOUBLE DASH HORIZONTAL
+<Multi_key><parenright>                                                            <KP_2><KP_2><h> : "╍" U254D # BOX DRAWINGS HEAVY DOUBLE DASH HORIZONTAL
+<Multi_key><parenright>                                                                     <2><v> : "╎" U254E # BOX DRAWINGS LIGHT DOUBLE DASH VERTICAL
+<Multi_key><parenright>                                                                  <KP_2><v> : "╎" U254E # BOX DRAWINGS LIGHT DOUBLE DASH VERTICAL
+<Multi_key><parenright>                                                                  <2><2><v> : "╏" U254F # BOX DRAWINGS HEAVY DOUBLE DASH VERTICAL
+<Multi_key><parenright>                                                            <KP_2><KP_2><v> : "╏" U254F # BOX DRAWINGS HEAVY DOUBLE DASH VERTICAL
+#
+#
+#   Double lines
+#
+<Multi_key><parenright>                                                               <2><0><2><0> : "═" U2550 # BOX DRAWINGS DOUBLE HORIZONTAL
+<Multi_key><parenright>                                                   <KP_2><KP_0><KP_2><KP_0> : "═" U2550 # BOX DRAWINGS DOUBLE HORIZONTAL
+<Multi_key><parenright>                                                               <0><2><0><2> : "║" U2551 # BOX DRAWINGS DOUBLE VERTICAL
+<Multi_key><parenright>                                                   <KP_0><KP_2><KP_0><KP_2> : "║" U2551 # BOX DRAWINGS DOUBLE VERTICAL
+#
+#
+#   Light and double line box components
+#
+<Multi_key><parenright>                                                               <2><1><0><0> : "╒" U2552 # BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE
+<Multi_key><parenright>                                                   <KP_2><KP_1><KP_0><KP_0> : "╒" U2552 # BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE
+<Multi_key><parenright>                                                               <1><2><0><0> : "╓" U2553 # BOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE
+<Multi_key><parenright>                                                   <KP_1><KP_2><KP_0><KP_0> : "╓" U2553 # BOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE
+<Multi_key><parenright>                                                               <2><2><0><0> : "╔" U2554 # BOX DRAWINGS DOUBLE DOWN AND RIGHT
+<Multi_key><parenright>                                                   <KP_2><KP_2><KP_0><KP_0> : "╔" U2554 # BOX DRAWINGS DOUBLE DOWN AND RIGHT
+<Multi_key><parenright>                                                               <0><1><2><0> : "╕" U2555 # BOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_2><KP_0> : "╕" U2555 # BOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE
+<Multi_key><parenright>                                                               <0><2><1><0> : "╖" U2556 # BOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE
+<Multi_key><parenright>                                                   <KP_0><KP_2><KP_1><KP_0> : "╖" U2556 # BOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE
+<Multi_key><parenright>                                                               <0><2><2><0> : "╗" U2557 # BOX DRAWINGS DOUBLE DOWN AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_2><KP_2><KP_0> : "╗" U2557 # BOX DRAWINGS DOUBLE DOWN AND LEFT
+<Multi_key><parenright>                                                               <2><0><0><1> : "╘" U2558 # BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE
+<Multi_key><parenright>                                                   <KP_2><KP_0><KP_0><KP_1> : "╘" U2558 # BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE
+<Multi_key><parenright>                                                               <1><0><0><2> : "╙" U2559 # BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_0><KP_2> : "╙" U2559 # BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE
+<Multi_key><parenright>                                                               <2><0><0><2> : "╚" U255A # BOX DRAWINGS DOUBLE UP AND RIGHT
+<Multi_key><parenright>                                                   <KP_2><KP_0><KP_0><KP_2> : "╚" U255A # BOX DRAWINGS DOUBLE UP AND RIGHT
+<Multi_key><parenright>                                                               <0><0><2><1> : "╛" U255B # BOX DRAWINGS UP SINGLE AND LEFT DOUBLE
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_2><KP_1> : "╛" U255B # BOX DRAWINGS UP SINGLE AND LEFT DOUBLE
+<Multi_key><parenright>                                                               <0><0><1><2> : "╜" U255C # BOX DRAWINGS UP DOUBLE AND LEFT SINGLE
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_1><KP_2> : "╜" U255C # BOX DRAWINGS UP DOUBLE AND LEFT SINGLE
+<Multi_key><parenright>                                                               <0><0><2><2> : "╝" U255D # BOX DRAWINGS DOUBLE UP AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_2><KP_2> : "╝" U255D # BOX DRAWINGS DOUBLE UP AND LEFT
+<Multi_key><parenright>                                                               <2><1><0><1> : "╞" U255E # BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE
+<Multi_key><parenright>                                                   <KP_2><KP_1><KP_0><KP_1> : "╞" U255E # BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE
+<Multi_key><parenright>                                                               <1><2><0><2> : "╟" U255F # BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE
+<Multi_key><parenright>                                                   <KP_1><KP_2><KP_0><KP_2> : "╟" U255F # BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE
+<Multi_key><parenright>                                                               <2><2><0><2> : "╠" U2560 # BOX DRAWINGS DOUBLE VERTICAL AND RIGHT
+<Multi_key><parenright>                                                   <KP_2><KP_2><KP_0><KP_2> : "╠" U2560 # BOX DRAWINGS DOUBLE VERTICAL AND RIGHT
+<Multi_key><parenright>                                                               <0><1><2><1> : "╡" U2561 # BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_2><KP_1> : "╡" U2561 # BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE
+<Multi_key><parenright>                                                               <0><2><1><2> : "╢" U2562 # BOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE
+<Multi_key><parenright>                                                   <KP_0><KP_2><KP_1><KP_2> : "╢" U2562 # BOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE
+<Multi_key><parenright>                                                               <0><2><2><2> : "╣" U2563 # BOX DRAWINGS DOUBLE VERTICAL AND LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_2><KP_2><KP_2> : "╣" U2563 # BOX DRAWINGS DOUBLE VERTICAL AND LEFT
+<Multi_key><parenright>                                                               <2><1><2><0> : "╤" U2564 # BOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE
+<Multi_key><parenright>                                                   <KP_2><KP_1><KP_2><KP_0> : "╤" U2564 # BOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE
+<Multi_key><parenright>                                                               <1><2><1><0> : "╥" U2565 # BOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE
+<Multi_key><parenright>                                                   <KP_1><KP_2><KP_1><KP_0> : "╥" U2565 # BOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE
+<Multi_key><parenright>                                                               <2><2><2><0> : "╦" U2566 # BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_2><KP_2><KP_2><KP_0> : "╦" U2566 # BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL
+<Multi_key><parenright>                                                               <2><0><2><1> : "╧" U2567 # BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE
+<Multi_key><parenright>                                                   <KP_2><KP_0><KP_2><KP_1> : "╧" U2567 # BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE
+<Multi_key><parenright>                                                               <1><0><1><2> : "╨" U2568 # BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_1><KP_2> : "╨" U2568 # BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE
+<Multi_key><parenright>                                                               <2><0><2><2> : "╩" U2569 # BOX DRAWINGS DOUBLE UP AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_2><KP_0><KP_2><KP_2> : "╩" U2569 # BOX DRAWINGS DOUBLE UP AND HORIZONTAL
+<Multi_key><parenright>                                                               <2><1><2><1> : "╪" U256A # BOX DRAWINGS VERTICAL SINGLE AND HORIZONTAL DOUBLE
+<Multi_key><parenright>                                                   <KP_2><KP_1><KP_2><KP_1> : "╪" U256A # BOX DRAWINGS VERTICAL SINGLE AND HORIZONTAL DOUBLE
+<Multi_key><parenright>                                                               <1><2><1><2> : "╫" U256B # BOX DRAWINGS VERTICAL DOUBLE AND HORIZONTAL SINGLE
+<Multi_key><parenright>                                                   <KP_1><KP_2><KP_1><KP_2> : "╫" U256B # BOX DRAWINGS VERTICAL DOUBLE AND HORIZONTAL SINGLE
+<Multi_key><parenright>                                                               <2><2><2><2> : "╬" U256C # BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL
+<Multi_key><parenright>                                                   <KP_2><KP_2><KP_2><KP_2> : "╬" U256C # BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL
+#
+#
+#   Character cell arcs
+#
+<Multi_key><parenleft>                                                                <1><1><0><0> : "╭" U256D # BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
+<Multi_key><parenleft>                                                    <KP_1><KP_1><KP_0><KP_0> : "╭" U256D # BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
+<Multi_key><parenleft>                                                                <0><1><1><0> : "╮" U256E # BOX DRAWINGS LIGHT ARC DOWN AND LEFT
+<Multi_key><parenleft>                                                    <KP_0><KP_1><KP_1><KP_0> : "╮" U256E # BOX DRAWINGS LIGHT ARC DOWN AND LEFT
+<Multi_key><parenleft>                                                                <0><0><1><1> : "╯" U256F # BOX DRAWINGS LIGHT ARC UP AND LEFT
+<Multi_key><parenleft>                                                    <KP_0><KP_0><KP_1><KP_1> : "╯" U256F # BOX DRAWINGS LIGHT ARC UP AND LEFT
+<Multi_key><parenleft>                                                                <1><0><0><1> : "╰" U2570 # BOX DRAWINGS LIGHT ARC UP AND RIGHT
+<Multi_key><parenleft>                                                    <KP_1><KP_0><KP_0><KP_1> : "╰" U2570 # BOX DRAWINGS LIGHT ARC UP AND RIGHT
+#
+#
+#   Character cell diagonals
+#
+<Multi_key><parenright>                                                                     <1><d> : "╱" U2571 # BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT
+<Multi_key><parenright>                                                                  <KP_1><d> : "╱" U2571 # BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT
+<Multi_key><parenright>                                                                     <2><d> : "╲" U2572 # BOX DRAWINGS LIGHT DIAGONAL UPPER LEFT TO LOWER RIGHT
+<Multi_key><parenright>                                                                  <KP_2><d> : "╲" U2572 # BOX DRAWINGS LIGHT DIAGONAL UPPER LEFT TO LOWER RIGHT
+<Multi_key><parenright>                                                                  <1><2><d> : "╳" U2573 # BOX DRAWINGS LIGHT DIAGONAL CROSS
+<Multi_key><parenright>                                                            <KP_1><KP_2><d> : "╳" U2573 # BOX DRAWINGS LIGHT DIAGONAL CROSS
+<Multi_key><parenright>                                                                  <2><1><d> : "╳" U2573 # BOX DRAWINGS LIGHT DIAGONAL CROSS
+<Multi_key><parenright>                                                            <KP_2><KP_1><d> : "╳" U2573 # BOX DRAWINGS LIGHT DIAGONAL CROSS
+#
+#
+#   Light and heavy half lines
+#
+<Multi_key><parenright>                                                               <0><0><1><0> : "╴" U2574 # BOX DRAWINGS LIGHT LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_1><KP_0> : "╴" U2574 # BOX DRAWINGS LIGHT LEFT
+<Multi_key><parenright>                                                               <0><0><0><1> : "╵" U2575 # BOX DRAWINGS LIGHT UP
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_0><KP_1> : "╵" U2575 # BOX DRAWINGS LIGHT UP
+<Multi_key><parenright>                                                               <1><0><0><0> : "╶" U2576 # BOX DRAWINGS LIGHT RIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_0><KP_0> : "╶" U2576 # BOX DRAWINGS LIGHT RIGHT
+<Multi_key><parenright>                                                               <0><1><0><0> : "╷" U2577 # BOX DRAWINGS LIGHT DOWN
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_0> : "╷" U2577 # BOX DRAWINGS LIGHT DOWN
+<Multi_key><parenright>                                                               <0><0><3><0> : "╸" U2578 # BOX DRAWINGS HEAVY LEFT
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_3><KP_0> : "╸" U2578 # BOX DRAWINGS HEAVY LEFT
+<Multi_key><parenright>                                                               <0><0><0><3> : "╹" U2579 # BOX DRAWINGS HEAVY UP
+<Multi_key><parenright>                                                   <KP_0><KP_0><KP_0><KP_3> : "╹" U2579 # BOX DRAWINGS HEAVY UP
+<Multi_key><parenright>                                                               <3><0><0><0> : "╺" U257A # BOX DRAWINGS HEAVY RIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_0><KP_0> : "╺" U257A # BOX DRAWINGS HEAVY RIGHT
+<Multi_key><parenright>                                                               <0><3><0><0> : "╻" U257B # BOX DRAWINGS HEAVY DOWN
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_0><KP_0> : "╻" U257B # BOX DRAWINGS HEAVY DOWN
+#
+#
+#   Mixed light and heavy lines
+#
+<Multi_key><parenright>                                                               <3><0><1><0> : "╼" U257C # BOX DRAWINGS LIGHT LEFT AND HEAVY RIGHT
+<Multi_key><parenright>                                                   <KP_3><KP_0><KP_1><KP_0> : "╼" U257C # BOX DRAWINGS LIGHT LEFT AND HEAVY RIGHT
+<Multi_key><parenright>                                                               <0><3><0><1> : "╽" U257D # BOX DRAWINGS LIGHT UP AND HEAVY DOWN
+<Multi_key><parenright>                                                   <KP_0><KP_3><KP_0><KP_1> : "╽" U257D # BOX DRAWINGS LIGHT UP AND HEAVY DOWN
+<Multi_key><parenright>                                                               <1><0><3><0> : "╾" U257E # BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT
+<Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_0> : "╾" U257E # BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT
+<Multi_key><parenright>                                                               <0><1><0><3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
+<Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
 #
 #
 #   START_MATH
