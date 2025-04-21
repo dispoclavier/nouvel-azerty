@@ -21,6 +21,7 @@ Reconception, rectification et simplification des séquences de composition. [co
 Rétablissement de la symétrie des enchaînements de touches mortes suite à la dissociation de celles-ci avec leur équivalent en composition.
 
 * Disposition : Prendre en charge "🥰" U+1F970 sur B05 "B", niveau 8, à la place de "💕" U+1F495. dispocla.cpp [88719a8](https://github.com/dispoclavier/nouvel-azerty/commit/88719a8cb290420dc871370eb3fa144d8c2087c8), kbfrFRs.klc [96950df](https://github.com/dispoclavier/nouvel-azerty/commit/96950dfbd1209398d6c02688b381c1461179f712), kbfrFRs.C [0c294ff](https://github.com/dispoclavier/nouvel-azerty/commit/0c294ff80c6591b9288255121bd84155229ca127), kbfredis.klc [5f45c24](https://github.com/dispoclavier/nouvel-azerty/commit/5f45c24d25c41d38379078a38cce830a3a34efc8), kbfredis.C [77e3126](https://github.com/dispoclavier/nouvel-azerty/commit/77e312667408bae9d2a8194f19a0d9348ff3f863)
+* Composition : Prendre en charge les filets "─" U+2500.."╿" U+257F. compose-1.yml [2d9fe01](https://github.com/dispoclavier/nouvel-azerty/commit/2d9fe018da074d60c5f40d6a57798d0df83650cd)
 * Transformations : Rétablir la symétrie des enchaînements sans les équivalents en composition, suite à la dissociation de ceux-ci. compose-2.yml [c32ffcc](https://github.com/dispoclavier/nouvel-azerty/commit/c32ffcc62ad3ff8ae66897924d31ab01730d9e91)
 	* Grec et tréma et accent aigu : Idem. compose-1.yml [1230ef2](https://github.com/dispoclavier/nouvel-azerty/commit/1230ef2da60b5ffcb573bbd8b56678122554cbb6)
 	* Grec et tréma et tonos : Idem. ibidem
@@ -33,12 +34,17 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 	* Exposant et petite capitale et rayé : Idem. ibidem
 	* Indice et brève : Idem. ibidem
 	* Indice et rayé : Idem. ibidem
+	* Brève inversée : Supprimer les filets "╭" U+256D.."╰" U+2570, qui vont en composition. compose-2.yml [dce207f](https://github.com/dispoclavier/nouvel-azerty/commit/dce207faecef896a03c010d6d4fe8afc4f8ba10b)
+	* Brève : Supprimer les filets "─" U+2500.."╬" U+256C, "╱" U+2571.."╿" U+257F, qui vont en composition. ibidem
 * Documentation :
 	* Améliorer le tri. compose-1.yml [90ec2e0](https://github.com/dispoclavier/nouvel-azerty/commit/90ec2e0ad57e8bc16d14b6bfcf8ad24312e27b75), [2e00217](https://github.com/dispoclavier/nouvel-azerty/commit/2e00217606c0cdde8a8e6c23e0b888fdb0cad5ab)
 	* Améliorer la symétrisation des enchaînements de touches mortes. compose-1.yml [8d799a3](https://github.com/dispoclavier/nouvel-azerty/commit/8d799a3374fc7bb9679c45fea99d2deff6ccd3c6), [8b41337](https://github.com/dispoclavier/nouvel-azerty/commit/8b41337013b233365373cf59c089718629fddd31)
 	* Améliorer l’intertitrage. compose-1.yml [2ab9521](https://github.com/dispoclavier/nouvel-azerty/commit/2ab9521d1730b4a149c61f9bf8816db1e4f2d8f9)
 	* Préciser des renvois. compose-2.yml [19b1f60](https://github.com/dispoclavier/nouvel-azerty/commit/19b1f603bbe7e0f0f88e0a94063d1bbfe967f216)
 	* Corriger un renvoi et en ajouter un. compose-1.yml [fa0dc2e](https://github.com/dispoclavier/nouvel-azerty/commit/fa0dc2ed98cb0757d3030c9fa1a221dabc4fef0f)
+	* Corriger des annotations. compose-2.yml [15d00ee](https://github.com/dispoclavier/nouvel-azerty/commit/15d00ee4075c1288f7d6d90053f36e2d9bea7668https://github.com/dispoclavier/nouvel-azerty/commit/15d00ee4075c1288f7d6d90053f36e2d9bea7668)
+	* Corriger une annotation avant déplacement. compose-1.yml [24bb803](https://github.com/dispoclavier/nouvel-azerty/commit/24bb8035745d776af9fc13e8ddab1e4fcfff886c)
+	* Mieux regrouper et titrer les annotations. compose-2.yml [9e228d6](https://github.com/dispoclavier/nouvel-azerty/commit/9e228d6709040837da41ed42b6ec3c367339cdff), compose-1.yml [8a2644a](https://github.com/dispoclavier/nouvel-azerty/commit/8a2644a4d96fa60a9e115daacbb6343bf12559df)
 
 ## 5.0.0 (2025-04-15)
 
