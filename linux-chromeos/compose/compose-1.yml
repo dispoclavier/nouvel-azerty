@@ -909,14 +909,12 @@
 #
 #   Symmetrization of chained dead keys
 #
-#   Chained dead keys may be (and have been so in the Polytonic Greek section)
-#   symmetrized using this replaceruleset, in the "bhughes339.replacerules"
-#   extension for VSCode, based on the observation that at this point, chaining
-#   never encompasses more than 4 dead key strokes other than group selection
-#   (that always trails and is thus not symmetrized), with the JSON below going
-#   into user settings (including the "@" prefix for the subsequent multikey
-#   equivalent generation).
-#   See ### Greek with diacritics
+#   Chained dead keys may be symmetrized using the "bhughes339.replacerules"
+#   extension for VSCode with this replaceruleset based on the observation that
+#   at this point, chaining does not encompass more than four dead key strokes
+#   other than group selection, that always trails and is thus not symmetrized.
+#   The JSON below going into user settings has the "@" prefix for subsequent
+#   multikey equivalent generation built in.
 #   See # # Multikey equivalents
 #
 #       {
