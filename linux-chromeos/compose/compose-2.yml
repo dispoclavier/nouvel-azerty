@@ -73,12 +73,13 @@
 #   around.
 #
 #   As a result, semantics of paired punctuation may be switched compared to
-#   en_US.UTF-8/Compose. Examples of multikey equivalents for dead_breve:
-#   In en_US.UTF-8/Compose: <Multi_key><a><parenleft>
-#   In new-school Compose:  <Multi_key><parenright><a>
-#   This scheme is not proper to new school, since in en_US.UTF-8/Compose we
-#   already have U-shape:   <Multi_key><U><a>
-#   As well as the initial: <Multi_key><b><a>
+#   en_US.UTF-8/Compose. For example, the multikey equivalent of dead_breve
+#   in en_US.UTF-8/Compose is <Multi_key><a><parenleft>, while in new-school
+#   input composition it is <Multi_key><parenright><a>.
+#
+#   This scheme is not proper to new school, since in en_US.UTF-8/Compose, we
+#   already have a prepended "U" with shape-based mnemonic (<Multi_key><U><a>),
+#   as well as a prepended initial: <Multi_key><b><a>.
 #
 #   While that change alone would not warrant a comprehensive overhaul, more
 #   tweaks are required, such as supporting superscript and subscript, using
@@ -171,18 +172,17 @@
 #   needs a dedicated dead character.
 #
 #
-# # X11 dead key syms defined in keysymdef.h
+# # X11 dead key syms
 #
-#   Dead keys are defined for Latin and Greek keyboards and for other input
-#   methods. Some new dead keys already had a keysym defined in keysymdef.h,
-#   then got it removed.
+#   The dead key syms defined in keysymdef.h (part of the x11proto-core-dev
+#   package) are so defective that the Latin script cannot be fully supported
+#   without private use area symbols. The most outstanding example is the lack
+#   of a keysym for the bar diacritic, thought of as horizontal, as opposed to
+#   the diagonal stroke.
 #   See # # Bar and stroke diacritics
 #
-#   An up-to-date package can be installed:
-#
-#       sudo apt-get install x11proto-core-dev
-#
-#   For Latin keyboard layouts. The 21 keysyms used in this layout are checked:
+#   Here are the keysyms for Latin keyboard layouts available in keysymdef.h.
+#   The 21 keysyms used in this file are checked:
 #
 #      dead_abovecomma
 #    ✔ dead_abovedot
@@ -215,7 +215,8 @@
 #    ✔ dead_stroke
 #    ✔ dead_tilde
 #
-#   Removed keysyms:
+#   Some new dead keys already had a keysym defined in keysymdef.h, then got it
+#   removed as documented below:
 #
 #      dead_aboveverticalline
 #      dead_belowverticalline
@@ -227,14 +228,14 @@
 #
 #   The keysym dead_stroke was previously used for the horizontal dash overlay,
 #   a.k.a. bar, given that one dead key is not enough to support both "/" and
-#   "-" shaped diacritics, so to cater for Karl Pentzlin’s new German T3 layout
+#   "-" shaped diacritics. To cater for Karl Pentzlin’s new German T3 layout
 #   (DIN 2137:2012), dead_longsolidusoverlay was added based on the name of the
 #   diacritic used to decompose negated math symbols: "̸" U0338 COMBINING LONG
 #   SOLIDUS OVERLAY. (Letters like Oslash "Ø" U00D8 LATIN CAPITAL LETTER O WITH
 #   STROKE are not decomposed.) The T3 also required another three new keysyms:
 #   dead_aboveverticalline, dead_belowverticalline, dead_lowline, although none
 #   of these has any precomposed letters, and Windows’ TSF dead keys are unable
-#   to support decomposed (NFD/NFKD) letters. But the stroke-bar distinction
+#   to support decomposed (NFD/NFKD) letters. But the stroke vs bar distinction
 #   made a good point for adding the “extra dead elements for German T3 layout”
 #   alongside the use of vertical line below, and its alternate representation
 #   vertical line above, in Yoruba and in other languages.
@@ -260,8 +261,8 @@
 #   https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
 #   https://www.reddit.com/r/openSUSE/comments/17guwgm/comment/k6p6ul2/
 #
-#   In Cimbali’s French AFNOR layout, dead_longsolidusoverlay was replaced with
-#   a second instance of dead_stroke.
+#   In Cimbali’s French AFNOR layout, former dead_longsolidusoverlay currently
+#   is a second instance of dead_stroke.
 #
 #   So, none of the 2 French standard layouts can be implemented anymore, using
 #   XKB named keysyms only.
@@ -303,12 +304,23 @@
 #   In en_US.UTF-8/Compose, dead_hook is used both for hook and hook above.
 #   The consequence is that en_US.UTF-8/Compose is unable to support "Ƴ" U01B3
 #   LATIN CAPITAL LETTER Y WITH HOOK and "ƴ" U01B4 LATIN SMALL LETTER Y WITH
-#   HOOK. Hence the need for a keysym dedicated to letters with hook above,
-#   e.g. *dead_abovehook.
+#   HOOK alongside "Ỷ" U1EF6 LATIN CAPITAL LETTER Y WITH HOOK ABOVE and
+#   "ỷ" U1EF7 LATIN SMALL LETTER Y WITH HOOK ABOVE.
 #
-#   Another hook dead key is added because new-school input composition takes
-#   advantage of the brace symmetry to alleviate the overloaded dead_hook by
-#   adding *dead_retroflexhook.
+#   In en_US.UTF-8/Compose, the question mark is used as a multikey equivalent
+#   of hook above, while the many letters with hook that are supported ("Ɓ",
+#   "ɓ", "Ƈ", "ƈ", "Ɗ", "ɗ", "Ƒ", "ƒ", "Ɠ", "ɠ", "ɦ", "Ƙ", "ƙ", "Ɱ", "ɱ", "Ɲ",
+#   "ɲ", "Ƥ", "ƥ", "ʠ", "ɼ", "ʂ", "Ƭ", "ƭ", "Ʋ", "ʋ", "Ⱳ", "ⱳ", "Ȥ", "ȥ") are
+#   so by dead key only (dead_hook), without any multikey equivalent.
+#
+#   Hence the need for a keysym dedicated to letters with hook above, e.g.
+#   *dead_abovehook. As of its multikey equivalent, bracketright is more
+#   convenient than question.
+#
+#   Another hook dead key is added because new-school input composition uses
+#   braceleft as a multikey equivalent of dead_hook, while taking advantage of
+#   the brace symmetry to alleviate the overloaded dead_hook, by adding the new
+#   *dead_retroflexhook dead key, with braceright as a multikey equivalent.
 #
 #
 # # Proposed additional dead key syms
