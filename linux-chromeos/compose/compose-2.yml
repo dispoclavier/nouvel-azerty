@@ -5624,11 +5624,15 @@
 #   https://www.unicode.org/faq/greek.html
 #   https://www.opoudjis.net/unicode/unicode.html
 #
-#   For non-letters, dead_greek single press is used as a dead key for CIRCLED,
-#   alongside dead_greek double press virtualizing the ordinary general-purpose
-#   *dead_circled and supporting also less, greater and underscore, conflicting
-#   with Greek letters when in dead_greek single press.
+#   With non-alphabetic base characters, dead_greek single press is a dead key
+#   for CIRCLED, alongside dead_greek double press, that is the general-purpose
+#   *dead_circled and supports also multikey equivalents with less, greater and
+#   underscore, that otherwise conflict with polytonic Greek letters.
 #   See #^# CIRCLED
+#
+#   The base character for "⊚" U229A is degree, and its ASCII alias parenright
+#   is based on French AZERTY keycap mnemonics, where parenright and degree are
+#   both on E11.
 #
 #   This dead key applies a scheme where zero yields circled number 10. This is
 #   consistent with dead_doubleacute yielding double-circled, and above all, it
@@ -5668,10 +5672,14 @@
 <Multi_key><at>                                                                             <plus> : "⊕" U2295 # CIRCLED PLUS
 <dead_greek>                                                                              <degree> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><at>                                                                           <degree> : "⊚" U229A # CIRCLED RING OPERATOR
+<dead_greek>                                                                          <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
+#   Multikey conflicts with "ἀ" U1F00, "ἂ" U1F02, "ἄ" U1F04, "ἆ" U1F06, "Ἀ" U1F08, […]<parenright> : "⊚" U229A # CIRCLED RING OPERATOR
 <dead_greek>                                                                            <multiply> : "⊗" U2297 # CIRCLED TIMES
 <Multi_key><at>                                                                         <multiply> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek>                                                                            <division> : "⨸" U2A38 # CIRCLED DIVISION SIGN
 <Multi_key><at>                                                                         <division> : "⨸" U2A38 # CIRCLED DIVISION SIGN
+<dead_greek>                                                                          <underscore> : "⊝" U229D # CIRCLED DASH
+#   Multikey conflicts with "ᴦ" U1D26, "ᴧ" U1D27, "ᴨ" U1D28, "ᴩ" U1D29, "ᴪ" U1D2A, […]<underscore> : "⊝" U229D # CIRCLED DASH
 <dead_greek>                                                                              <endash> : "⊝" U229D # CIRCLED DASH
 <Multi_key><at>                                                                           <endash> : "⊝" U229D # CIRCLED DASH
 <dead_greek>                                                                              <emdash> : "⊝" U229D # CIRCLED DASH
@@ -5680,6 +5688,10 @@
 <Multi_key><at>                                                                            <slash> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <dead_greek>                                                                            <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><at>                                                                         <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
+<dead_greek>                                                                                <less> : "⧀" U29C0 # CIRCLED LESS-THAN
+#   Multikey conflicts with "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, "ἦ" U1F26, […]      <less> : "⧀" U29C0 # CIRCLED LESS-THAN
+<dead_greek>                                                                             <greater> : "⧁" U29C1 # CIRCLED GREATER-THAN
+#   Multikey conflicts with "ᾰ" U1FB0, "Ᾰ" U1FB8, "ῐ" U1FD0, "Ῐ" U1FD8, "ῠ" U1FE0, […]   <greater> : "⧁" U29C1 # CIRCLED GREATER-THAN
 <dead_greek>                                                                               <equal> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><at>                                                                            <equal> : "⊜" U229C # CIRCLED EQUALS
 <dead_greek>                                                                              <period> : "⊙" U2299 # CIRCLED DOT OPERATOR
