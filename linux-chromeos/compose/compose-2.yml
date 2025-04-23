@@ -1589,15 +1589,15 @@
 #       4.    #^# Dead key virtualized by multiple press
 #
 #   The order of base characters matters, too, since this file is also used for
-#   documentation: spaces, quotedbl, apostrophes, other symbols/punctuation[1],
-#   digits, letters. As a result, combining marks and spacing clones of
-#   diacritics are listed first, quotation marks come next. ASCII symbols are
-#   intuitively ordered consistently with the dead keys, and non-ASCII aliases
-#   are grouped with their ASCII counterparts.
+#   documentation: spaces, quotedbl, apostrophes, other symbols and punctuation
+#   where ASCII is intuitively ordered consistently with the dead keys, while
+#   non-ASCII aliases are grouped with their ASCII counterparts; digits are
+#   next, then the base alphabet, and ultimately diacriticized letters on live
+#   keys.
+#   See # # Order of dead key lists
 #
-#   [1] For consistency and predictability, the other punctuation and the other
-#       symbols are ordered following the keyboard layout.
-#       See # # Order of dead key lists
+#   As a result, combining marks and spacing clones of diacritics are listed
+#   first, quotation marks come next.
 #
 #
 # # Lenient group selection
