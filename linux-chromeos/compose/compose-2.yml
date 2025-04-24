@@ -5651,7 +5651,7 @@
 #
 #   For sideways compatibility with en_US.UTF-8/Compose, multikey sequences
 #   with a leading opening parenthesis are also supported.
-#   See #^# Circled by leading parenthesis
+#   See # # Circled by leading parenthesis
 #
 #   The efficiency of the level-3 Greek or circled dead key is used to likewise
 #   support circled numbers with inverted colors, called negative (referring to
@@ -5866,190 +5866,108 @@
 <Multi_key><at>                                                                                <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
 #
 #
-# # CIRCLED_NUMBER
-#   dead_greek numbersign
-#   Multi_key: ¦@# 
+# # CIRCLED_TEEN
+#   dead_greek quotedbl
+#   Multi_key: ¦@"
 #   Dchar: 
 #
-#   The leading numbersign (on C01) is in synergy with the level-3 position of
-#   this dead key on D06.
-#
-#   Circled digits from 1 through 9 as well as circled number 10 are supported
-#   in dead_greek single press.
+#   This only supports "⑪" U246A.."⑳" U2473, as circled digits from 0 through 9
+#   as well as circled number 10 are supported in dead_greek single press, and
+#   the full set of basic circled numbers "⓪" U24EA.."㊿" U32BF is supported by
+#   multikey. The parenthesized sequences found in en_US.UTF-8/Compose are
+#   (streamlined and) supported for sideways compatibility in the Multikey
+#   section.
 #   See #*# GREEK
+#   See # # Circled by leading parenthesis
 #
-#   The parenthesized sequences found in en_US.UTF-8/Compose are (streamlined
-#   and) supported for sideways compatibility in the Multikey section.
-#   See #^# Circled by leading parenthesis
+#   Another 11..20 range has been encoded with inverted colors and is supported
+#   likewise as an intrinsically limited set, providing the template that this
+#   arbitrarily limited facility is coded after.
+#   See # # CIRCLED_NEGATIVE_TEEN
 #
-<dead_greek><numbersign>                                                                       <0> : "⓪" U24EA # CIRCLED DIGIT ZERO
-<Multi_key><at><numbersign>                                                                    <0> : "⓪" U24EA # CIRCLED DIGIT ZERO
-<dead_greek><numbersign>                                                                    <KP_0> : "⓪" U24EA # CIRCLED DIGIT ZERO
-<Multi_key><at><numbersign>                                                                 <KP_0> : "⓪" U24EA # CIRCLED DIGIT ZERO
-<dead_greek><numbersign>                                                                    <1><0> : "⑩" U2469 # CIRCLED NUMBER TEN
-<Multi_key><at><numbersign>                                                                 <1><0> : "⑩" U2469 # CIRCLED NUMBER TEN
-<dead_greek><numbersign>                                                              <KP_1><KP_0> : "⑩" U2469 # CIRCLED NUMBER TEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_0> : "⑩" U2469 # CIRCLED NUMBER TEN
-<dead_greek><numbersign>                                                                    <1><1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<Multi_key><at><numbersign>                                                                 <1><1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<dead_greek><numbersign>                                                              <KP_1><KP_1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
-<dead_greek><numbersign>                                                                    <1><2> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<Multi_key><at><numbersign>                                                                 <1><2> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<dead_greek><numbersign>                                                              <KP_1><KP_2> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<Multi_key><at><numbersign>                                                           <KP_1><KP_2> : "⑫" U246B # CIRCLED NUMBER TWELVE
-<dead_greek><numbersign>                                                                    <1><3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
-<Multi_key><at><numbersign>                                                                 <1><3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
-<dead_greek><numbersign>                                                                    <1><4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
-<Multi_key><at><numbersign>                                                                 <1><4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
-<dead_greek><numbersign>                                                                    <1><5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
-<Multi_key><at><numbersign>                                                                 <1><5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
-<dead_greek><numbersign>                                                                    <1><6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
-<Multi_key><at><numbersign>                                                                 <1><6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
-<dead_greek><numbersign>                                                                    <1><7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
-<Multi_key><at><numbersign>                                                                 <1><7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
-<dead_greek><numbersign>                                                                    <1><8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
-<Multi_key><at><numbersign>                                                                 <1><8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
-<dead_greek><numbersign>                                                                    <1><9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
-<Multi_key><at><numbersign>                                                                 <1><9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
-<dead_greek><numbersign>                                                              <KP_1><KP_9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
-<Multi_key><at><numbersign>                                                           <KP_1><KP_9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
-<dead_greek><numbersign>                                                                    <2><0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
-<Multi_key><at><numbersign>                                                                 <2><0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
-<dead_greek><numbersign>                                                              <KP_2><KP_0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
-<Multi_key><at><numbersign>                                                           <KP_2><KP_0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
-<dead_greek><numbersign>                                                                    <2><1> : "㉑" U3251 # CIRCLED NUMBER TWENTY ONE
-<Multi_key><at><numbersign>                                                                 <2><1> : "㉑" U3251 # CIRCLED NUMBER TWENTY ONE
-<dead_greek><numbersign>                                                              <KP_2><KP_1> : "㉑" U3251 # CIRCLED NUMBER TWENTY ONE
-<Multi_key><at><numbersign>                                                           <KP_2><KP_1> : "㉑" U3251 # CIRCLED NUMBER TWENTY ONE
-<dead_greek><numbersign>                                                                    <2><2> : "㉒" U3252 # CIRCLED NUMBER TWENTY TWO
-<Multi_key><at><numbersign>                                                                 <2><2> : "㉒" U3252 # CIRCLED NUMBER TWENTY TWO
-<dead_greek><numbersign>                                                              <KP_2><KP_2> : "㉒" U3252 # CIRCLED NUMBER TWENTY TWO
-<Multi_key><at><numbersign>                                                           <KP_2><KP_2> : "㉒" U3252 # CIRCLED NUMBER TWENTY TWO
-<dead_greek><numbersign>                                                                    <2><3> : "㉓" U3253 # CIRCLED NUMBER TWENTY THREE
-<Multi_key><at><numbersign>                                                                 <2><3> : "㉓" U3253 # CIRCLED NUMBER TWENTY THREE
-<dead_greek><numbersign>                                                              <KP_2><KP_3> : "㉓" U3253 # CIRCLED NUMBER TWENTY THREE
-<Multi_key><at><numbersign>                                                           <KP_2><KP_3> : "㉓" U3253 # CIRCLED NUMBER TWENTY THREE
-<dead_greek><numbersign>                                                                    <2><4> : "㉔" U3254 # CIRCLED NUMBER TWENTY FOUR
-<Multi_key><at><numbersign>                                                                 <2><4> : "㉔" U3254 # CIRCLED NUMBER TWENTY FOUR
-<dead_greek><numbersign>                                                              <KP_2><KP_4> : "㉔" U3254 # CIRCLED NUMBER TWENTY FOUR
-<Multi_key><at><numbersign>                                                           <KP_2><KP_4> : "㉔" U3254 # CIRCLED NUMBER TWENTY FOUR
-<dead_greek><numbersign>                                                                    <2><5> : "㉕" U3255 # CIRCLED NUMBER TWENTY FIVE
-<Multi_key><at><numbersign>                                                                 <2><5> : "㉕" U3255 # CIRCLED NUMBER TWENTY FIVE
-<dead_greek><numbersign>                                                              <KP_2><KP_5> : "㉕" U3255 # CIRCLED NUMBER TWENTY FIVE
-<Multi_key><at><numbersign>                                                           <KP_2><KP_5> : "㉕" U3255 # CIRCLED NUMBER TWENTY FIVE
-<dead_greek><numbersign>                                                                    <2><6> : "㉖" U3256 # CIRCLED NUMBER TWENTY SIX
-<Multi_key><at><numbersign>                                                                 <2><6> : "㉖" U3256 # CIRCLED NUMBER TWENTY SIX
-<dead_greek><numbersign>                                                              <KP_2><KP_6> : "㉖" U3256 # CIRCLED NUMBER TWENTY SIX
-<Multi_key><at><numbersign>                                                           <KP_2><KP_6> : "㉖" U3256 # CIRCLED NUMBER TWENTY SIX
-<dead_greek><numbersign>                                                                    <2><7> : "㉗" U3257 # CIRCLED NUMBER TWENTY SEVEN
-<Multi_key><at><numbersign>                                                                 <2><7> : "㉗" U3257 # CIRCLED NUMBER TWENTY SEVEN
-<dead_greek><numbersign>                                                              <KP_2><KP_7> : "㉗" U3257 # CIRCLED NUMBER TWENTY SEVEN
-<Multi_key><at><numbersign>                                                           <KP_2><KP_7> : "㉗" U3257 # CIRCLED NUMBER TWENTY SEVEN
-<dead_greek><numbersign>                                                                    <2><8> : "㉘" U3258 # CIRCLED NUMBER TWENTY EIGHT
-<Multi_key><at><numbersign>                                                                 <2><8> : "㉘" U3258 # CIRCLED NUMBER TWENTY EIGHT
-<dead_greek><numbersign>                                                              <KP_2><KP_8> : "㉘" U3258 # CIRCLED NUMBER TWENTY EIGHT
-<Multi_key><at><numbersign>                                                           <KP_2><KP_8> : "㉘" U3258 # CIRCLED NUMBER TWENTY EIGHT
-<dead_greek><numbersign>                                                                    <2><9> : "㉙" U3259 # CIRCLED NUMBER TWENTY NINE
-<Multi_key><at><numbersign>                                                                 <2><9> : "㉙" U3259 # CIRCLED NUMBER TWENTY NINE
-<dead_greek><numbersign>                                                              <KP_2><KP_9> : "㉙" U3259 # CIRCLED NUMBER TWENTY NINE
-<Multi_key><at><numbersign>                                                           <KP_2><KP_9> : "㉙" U3259 # CIRCLED NUMBER TWENTY NINE
-<dead_greek><numbersign>                                                                    <3><0> : "㉚" U325A # CIRCLED NUMBER THIRTY
-<Multi_key><at><numbersign>                                                                 <3><0> : "㉚" U325A # CIRCLED NUMBER THIRTY
-<dead_greek><numbersign>                                                              <KP_3><KP_0> : "㉚" U325A # CIRCLED NUMBER THIRTY
-<Multi_key><at><numbersign>                                                           <KP_3><KP_0> : "㉚" U325A # CIRCLED NUMBER THIRTY
-<dead_greek><numbersign>                                                                    <3><1> : "㉛" U325B # CIRCLED NUMBER THIRTY ONE
-<Multi_key><at><numbersign>                                                                 <3><1> : "㉛" U325B # CIRCLED NUMBER THIRTY ONE
-<dead_greek><numbersign>                                                              <KP_3><KP_1> : "㉛" U325B # CIRCLED NUMBER THIRTY ONE
-<Multi_key><at><numbersign>                                                           <KP_3><KP_1> : "㉛" U325B # CIRCLED NUMBER THIRTY ONE
-<dead_greek><numbersign>                                                                    <3><2> : "㉜" U325C # CIRCLED NUMBER THIRTY TWO
-<Multi_key><at><numbersign>                                                                 <3><2> : "㉜" U325C # CIRCLED NUMBER THIRTY TWO
-<dead_greek><numbersign>                                                              <KP_3><KP_2> : "㉜" U325C # CIRCLED NUMBER THIRTY TWO
-<Multi_key><at><numbersign>                                                           <KP_3><KP_2> : "㉜" U325C # CIRCLED NUMBER THIRTY TWO
-<dead_greek><numbersign>                                                                    <3><3> : "㉝" U325D # CIRCLED NUMBER THIRTY THREE
-<Multi_key><at><numbersign>                                                                 <3><3> : "㉝" U325D # CIRCLED NUMBER THIRTY THREE
-<dead_greek><numbersign>                                                              <KP_3><KP_3> : "㉝" U325D # CIRCLED NUMBER THIRTY THREE
-<Multi_key><at><numbersign>                                                           <KP_3><KP_3> : "㉝" U325D # CIRCLED NUMBER THIRTY THREE
-<dead_greek><numbersign>                                                                    <3><4> : "㉞" U325E # CIRCLED NUMBER THIRTY FOUR
-<Multi_key><at><numbersign>                                                                 <3><4> : "㉞" U325E # CIRCLED NUMBER THIRTY FOUR
-<dead_greek><numbersign>                                                              <KP_3><KP_4> : "㉞" U325E # CIRCLED NUMBER THIRTY FOUR
-<Multi_key><at><numbersign>                                                           <KP_3><KP_4> : "㉞" U325E # CIRCLED NUMBER THIRTY FOUR
-<dead_greek><numbersign>                                                                    <3><5> : "㉟" U325F # CIRCLED NUMBER THIRTY FIVE
-<Multi_key><at><numbersign>                                                                 <3><5> : "㉟" U325F # CIRCLED NUMBER THIRTY FIVE
-<dead_greek><numbersign>                                                              <KP_3><KP_5> : "㉟" U325F # CIRCLED NUMBER THIRTY FIVE
-<Multi_key><at><numbersign>                                                           <KP_3><KP_5> : "㉟" U325F # CIRCLED NUMBER THIRTY FIVE
-<dead_greek><numbersign>                                                                    <3><6> : "㊱" U32B1 # CIRCLED NUMBER THIRTY SIX
-<Multi_key><at><numbersign>                                                                 <3><6> : "㊱" U32B1 # CIRCLED NUMBER THIRTY SIX
-<dead_greek><numbersign>                                                              <KP_3><KP_6> : "㊱" U32B1 # CIRCLED NUMBER THIRTY SIX
-<Multi_key><at><numbersign>                                                           <KP_3><KP_6> : "㊱" U32B1 # CIRCLED NUMBER THIRTY SIX
-<dead_greek><numbersign>                                                                    <3><7> : "㊲" U32B2 # CIRCLED NUMBER THIRTY SEVEN
-<Multi_key><at><numbersign>                                                                 <3><7> : "㊲" U32B2 # CIRCLED NUMBER THIRTY SEVEN
-<dead_greek><numbersign>                                                              <KP_3><KP_7> : "㊲" U32B2 # CIRCLED NUMBER THIRTY SEVEN
-<Multi_key><at><numbersign>                                                           <KP_3><KP_7> : "㊲" U32B2 # CIRCLED NUMBER THIRTY SEVEN
-<dead_greek><numbersign>                                                                    <3><8> : "㊳" U32B3 # CIRCLED NUMBER THIRTY EIGHT
-<Multi_key><at><numbersign>                                                                 <3><8> : "㊳" U32B3 # CIRCLED NUMBER THIRTY EIGHT
-<dead_greek><numbersign>                                                              <KP_3><KP_8> : "㊳" U32B3 # CIRCLED NUMBER THIRTY EIGHT
-<Multi_key><at><numbersign>                                                           <KP_3><KP_8> : "㊳" U32B3 # CIRCLED NUMBER THIRTY EIGHT
-<dead_greek><numbersign>                                                                    <3><9> : "㊴" U32B4 # CIRCLED NUMBER THIRTY NINE
-<Multi_key><at><numbersign>                                                                 <3><9> : "㊴" U32B4 # CIRCLED NUMBER THIRTY NINE
-<dead_greek><numbersign>                                                              <KP_3><KP_9> : "㊴" U32B4 # CIRCLED NUMBER THIRTY NINE
-<Multi_key><at><numbersign>                                                           <KP_3><KP_9> : "㊴" U32B4 # CIRCLED NUMBER THIRTY NINE
-<dead_greek><numbersign>                                                                    <4><0> : "㊵" U32B5 # CIRCLED NUMBER FORTY
-<Multi_key><at><numbersign>                                                                 <4><0> : "㊵" U32B5 # CIRCLED NUMBER FORTY
-<dead_greek><numbersign>                                                              <KP_4><KP_0> : "㊵" U32B5 # CIRCLED NUMBER FORTY
-<Multi_key><at><numbersign>                                                           <KP_4><KP_0> : "㊵" U32B5 # CIRCLED NUMBER FORTY
-<dead_greek><numbersign>                                                                    <4><1> : "㊶" U32B6 # CIRCLED NUMBER FORTY ONE
-<Multi_key><at><numbersign>                                                                 <4><1> : "㊶" U32B6 # CIRCLED NUMBER FORTY ONE
-<dead_greek><numbersign>                                                              <KP_4><KP_1> : "㊶" U32B6 # CIRCLED NUMBER FORTY ONE
-<Multi_key><at><numbersign>                                                           <KP_4><KP_1> : "㊶" U32B6 # CIRCLED NUMBER FORTY ONE
-<dead_greek><numbersign>                                                                    <4><2> : "㊷" U32B7 # CIRCLED NUMBER FORTY TWO
-<Multi_key><at><numbersign>                                                                 <4><2> : "㊷" U32B7 # CIRCLED NUMBER FORTY TWO
-<dead_greek><numbersign>                                                              <KP_4><KP_2> : "㊷" U32B7 # CIRCLED NUMBER FORTY TWO
-<Multi_key><at><numbersign>                                                           <KP_4><KP_2> : "㊷" U32B7 # CIRCLED NUMBER FORTY TWO
-<dead_greek><numbersign>                                                                    <4><3> : "㊸" U32B8 # CIRCLED NUMBER FORTY THREE
-<Multi_key><at><numbersign>                                                                 <4><3> : "㊸" U32B8 # CIRCLED NUMBER FORTY THREE
-<dead_greek><numbersign>                                                              <KP_4><KP_3> : "㊸" U32B8 # CIRCLED NUMBER FORTY THREE
-<Multi_key><at><numbersign>                                                           <KP_4><KP_3> : "㊸" U32B8 # CIRCLED NUMBER FORTY THREE
-<dead_greek><numbersign>                                                                    <4><4> : "㊹" U32B9 # CIRCLED NUMBER FORTY FOUR
-<Multi_key><at><numbersign>                                                                 <4><4> : "㊹" U32B9 # CIRCLED NUMBER FORTY FOUR
-<dead_greek><numbersign>                                                              <KP_4><KP_4> : "㊹" U32B9 # CIRCLED NUMBER FORTY FOUR
-<Multi_key><at><numbersign>                                                           <KP_4><KP_4> : "㊹" U32B9 # CIRCLED NUMBER FORTY FOUR
-<dead_greek><numbersign>                                                                    <4><5> : "㊺" U32BA # CIRCLED NUMBER FORTY FIVE
-<Multi_key><at><numbersign>                                                                 <4><5> : "㊺" U32BA # CIRCLED NUMBER FORTY FIVE
-<dead_greek><numbersign>                                                              <KP_4><KP_5> : "㊺" U32BA # CIRCLED NUMBER FORTY FIVE
-<Multi_key><at><numbersign>                                                           <KP_4><KP_5> : "㊺" U32BA # CIRCLED NUMBER FORTY FIVE
-<dead_greek><numbersign>                                                                    <4><6> : "㊻" U32BB # CIRCLED NUMBER FORTY SIX
-<Multi_key><at><numbersign>                                                                 <4><6> : "㊻" U32BB # CIRCLED NUMBER FORTY SIX
-<dead_greek><numbersign>                                                              <KP_4><KP_6> : "㊻" U32BB # CIRCLED NUMBER FORTY SIX
-<Multi_key><at><numbersign>                                                           <KP_4><KP_6> : "㊻" U32BB # CIRCLED NUMBER FORTY SIX
-<dead_greek><numbersign>                                                                    <4><7> : "㊼" U32BC # CIRCLED NUMBER FORTY SEVEN
-<Multi_key><at><numbersign>                                                                 <4><7> : "㊼" U32BC # CIRCLED NUMBER FORTY SEVEN
-<dead_greek><numbersign>                                                              <KP_4><KP_7> : "㊼" U32BC # CIRCLED NUMBER FORTY SEVEN
-<Multi_key><at><numbersign>                                                           <KP_4><KP_7> : "㊼" U32BC # CIRCLED NUMBER FORTY SEVEN
-<dead_greek><numbersign>                                                                    <4><8> : "㊽" U32BD # CIRCLED NUMBER FORTY EIGHT
-<Multi_key><at><numbersign>                                                                 <4><8> : "㊽" U32BD # CIRCLED NUMBER FORTY EIGHT
-<dead_greek><numbersign>                                                              <KP_4><KP_8> : "㊽" U32BD # CIRCLED NUMBER FORTY EIGHT
-<Multi_key><at><numbersign>                                                           <KP_4><KP_8> : "㊽" U32BD # CIRCLED NUMBER FORTY EIGHT
-<dead_greek><numbersign>                                                                    <4><9> : "㊾" U32BE # CIRCLED NUMBER FORTY NINE
-<Multi_key><at><numbersign>                                                                 <4><9> : "㊾" U32BE # CIRCLED NUMBER FORTY NINE
-<dead_greek><numbersign>                                                              <KP_4><KP_9> : "㊾" U32BE # CIRCLED NUMBER FORTY NINE
-<Multi_key><at><numbersign>                                                           <KP_4><KP_9> : "㊾" U32BE # CIRCLED NUMBER FORTY NINE
-<dead_greek><numbersign>                                                                    <5><0> : "㊿" U32BF # CIRCLED NUMBER FIFTY
-<Multi_key><at><numbersign>                                                                 <5><0> : "㊿" U32BF # CIRCLED NUMBER FIFTY
-<dead_greek><numbersign>                                                              <KP_5><KP_0> : "㊿" U32BF # CIRCLED NUMBER FIFTY
-<Multi_key><at><numbersign>                                                           <KP_5><KP_0> : "㊿" U32BF # CIRCLED NUMBER FIFTY
+#   The leading quotedbl or EuroSign on D03 is in synergy with the level-3
+#   position of this dead key on D06.
+#
+<dead_greek><quotedbl>                                                                         <0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<Multi_key><at><quotedbl>                                                                      <0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<dead_greek><EuroSign>                                                                         <0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<Multi_key><at><EuroSign>                                                                      <0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<dead_greek><quotedbl>                                                                      <KP_0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<Multi_key><at><quotedbl>                                                                   <KP_0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<dead_greek><EuroSign>                                                                      <KP_0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<Multi_key><at><EuroSign>                                                                   <KP_0> : "⑳" U2473 # CIRCLED NUMBER TWENTY
+<dead_greek><quotedbl>                                                                         <1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><at><quotedbl>                                                                      <1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<dead_greek><EuroSign>                                                                         <1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><at><EuroSign>                                                                      <1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<dead_greek><quotedbl>                                                                      <KP_1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><at><quotedbl>                                                                   <KP_1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<dead_greek><EuroSign>                                                                      <KP_1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<Multi_key><at><EuroSign>                                                                   <KP_1> : "⑪" U246A # CIRCLED NUMBER ELEVEN
+<dead_greek><quotedbl>                                                                         <2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><at><quotedbl>                                                                      <2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<dead_greek><EuroSign>                                                                         <2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><at><EuroSign>                                                                      <2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<dead_greek><quotedbl>                                                                      <KP_2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><at><quotedbl>                                                                   <KP_2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<dead_greek><EuroSign>                                                                      <KP_2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<Multi_key><at><EuroSign>                                                                   <KP_2> : "⑫" U246B # CIRCLED NUMBER TWELVE
+<dead_greek><quotedbl>                                                                         <3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<Multi_key><at><quotedbl>                                                                      <3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<dead_greek><EuroSign>                                                                         <3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<Multi_key><at><EuroSign>                                                                      <3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<dead_greek><quotedbl>                                                                      <KP_3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<Multi_key><at><quotedbl>                                                                   <KP_3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<dead_greek><EuroSign>                                                                      <KP_3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<Multi_key><at><EuroSign>                                                                   <KP_3> : "⑬" U246C # CIRCLED NUMBER THIRTEEN
+<dead_greek><quotedbl>                                                                         <4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<Multi_key><at><quotedbl>                                                                      <4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<dead_greek><EuroSign>                                                                         <4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<Multi_key><at><EuroSign>                                                                      <4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<dead_greek><quotedbl>                                                                      <KP_4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<Multi_key><at><quotedbl>                                                                   <KP_4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<dead_greek><EuroSign>                                                                      <KP_4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<Multi_key><at><EuroSign>                                                                   <KP_4> : "⑭" U246D # CIRCLED NUMBER FOURTEEN
+<dead_greek><quotedbl>                                                                         <5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<Multi_key><at><quotedbl>                                                                      <5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<dead_greek><EuroSign>                                                                         <5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<Multi_key><at><EuroSign>                                                                      <5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<dead_greek><quotedbl>                                                                      <KP_5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<Multi_key><at><quotedbl>                                                                   <KP_5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<dead_greek><EuroSign>                                                                      <KP_5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<Multi_key><at><EuroSign>                                                                   <KP_5> : "⑮" U246E # CIRCLED NUMBER FIFTEEN
+<dead_greek><quotedbl>                                                                         <6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<Multi_key><at><quotedbl>                                                                      <6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<dead_greek><EuroSign>                                                                         <6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<Multi_key><at><EuroSign>                                                                      <6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<dead_greek><quotedbl>                                                                      <KP_6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<Multi_key><at><quotedbl>                                                                   <KP_6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<dead_greek><EuroSign>                                                                      <KP_6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<Multi_key><at><EuroSign>                                                                   <KP_6> : "⑯" U246F # CIRCLED NUMBER SIXTEEN
+<dead_greek><quotedbl>                                                                         <7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><quotedbl>                                                                      <7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<dead_greek><EuroSign>                                                                         <7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><EuroSign>                                                                      <7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<dead_greek><quotedbl>                                                                      <KP_7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><quotedbl>                                                                   <KP_7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<dead_greek><EuroSign>                                                                      <KP_7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><EuroSign>                                                                   <KP_7> : "⑰" U2470 # CIRCLED NUMBER SEVENTEEN
+<dead_greek><quotedbl>                                                                         <8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><quotedbl>                                                                      <8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<dead_greek><EuroSign>                                                                         <8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><EuroSign>                                                                      <8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<dead_greek><quotedbl>                                                                      <KP_8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><quotedbl>                                                                   <KP_8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<dead_greek><EuroSign>                                                                      <KP_8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><EuroSign>                                                                   <KP_8> : "⑱" U2471 # CIRCLED NUMBER EIGHTEEN
+<dead_greek><quotedbl>                                                                         <9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<Multi_key><at><quotedbl>                                                                      <9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<dead_greek><EuroSign>                                                                         <9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<Multi_key><at><EuroSign>                                                                      <9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<dead_greek><quotedbl>                                                                      <KP_9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<Multi_key><at><quotedbl>                                                                   <KP_9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<dead_greek><EuroSign>                                                                      <KP_9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
+<Multi_key><at><EuroSign>                                                                   <KP_9> : "⑲" U2472 # CIRCLED NUMBER NINETEEN
 #
 #
 # # CIRCLED_NEGATIVE
@@ -6720,7 +6638,7 @@
 #   This scheme supports double-circled numbers, available from 1 through 10,
 #   since single-circled numbers are supported in dead_greek single press.
 #   As a result, dead_greek triple press is not used.
-#   See #^# CIRCLED_NUMBER
+#   See #^# CIRCLED_TEEN
 #
 #   For an easier alternative, double-circled numbers are in dead_doubleacute,
 #   too.
