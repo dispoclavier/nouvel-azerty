@@ -5656,6 +5656,20 @@
 #   The efficiency of the level-3 Greek or circled dead key is used to likewise
 #   support circled numbers with inverted colors, called negative (referring to
 #   photography), and circled sans-serif numbers.
+#
+#   Digits and numbers:
+#
+#       CIRCLED:                             0 ("⓪" U24EA) .. 50 ("㊿" U32BF)
+#       (DINGBAT) NEGATIVE CIRCLED:          0 ("⓿" U24FF) .. 20 ("⓴" U24F4)
+#       DINGBAT CIRCLED SANS-SERIF:          0 ("🄋" U1F10B).. 10 ("➉" U2789)
+#       DINGBAT NEGATIVE CIRCLED SANS-SERIF: 0 ("🄌" U1F10C).. 10 ("➓" U2793)
+#
+#   Letters:
+#
+#       NEGATIVE CIRCLED: A ("🅐" U1F150) .. Z ("🅩" U1F169)
+#       SQUARED:          A ("🄰" U1F130) .. Z ("🅉" U1F149)
+#       NEGATIVE SQUARED: A ("🅰" U1F170) .. Z ("🆉" U1F189)
+#
 #   See # # CIRCLED_NEGATIVE
 #   See # # CIRCLED_NEGATIVE_NUMBER
 #   See # # CIRCLED_SANS
@@ -6364,6 +6378,8 @@
 <dead_greek><backslash><asciitilde>                                                         <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 <Multi_key><at><backslash><asciitilde>                                                      <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 #
+<dead_greek><asciitilde><backslash>                                                        <grave> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
+<Multi_key><at><asciitilde><backslash>                                                     <grave> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
 <dead_greek><asciitilde><backslash>                                                            <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <Multi_key><at><asciitilde><backslash>                                                         <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <dead_greek><asciitilde><backslash>                                                         <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
