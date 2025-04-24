@@ -5671,7 +5671,7 @@
 #       NEGATIVE SQUARED: A ("🅰" U1F170) .. Z ("🆉" U1F189)
 #
 #   See # # CIRCLED_NEGATIVE
-#   See # # CIRCLED_NEGATIVE_NUMBER
+#   See # # CIRCLED_NEGATIVE_TEEN
 #   See # # CIRCLED_SANS
 #   See # # CIRCLED_NEGATIVE_SANS
 #   See # # SQUARED
@@ -6058,7 +6058,9 @@
 #   Dchar: 
 #
 #   The leading backslash (on D04) is in synergy with the level-3 position of
-#   this dead key on D06.
+#   this dead key on D06. Mnemonically, the percent sign would be a better fit,
+#   as this is about inverted colors; yet ergonomically it is worse, due to its
+#   mapping on key D02, two keys farther from D06.
 #
 #   This also supports circled and squared letters. As these come in uppercase
 #   only, for intuitivity, uppercase is used for squared, lowercase for circled
@@ -6215,58 +6217,174 @@
 <Multi_key><at><backslash>                                                                     <z> : "🅩" U1F169 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Z
 #
 #
-# # CIRCLED_NEGATIVE_NUMBER
-#   Multi_key: ¦@\#
+# # CIRCLED_NEGATIVE_TEEN
+#   Multi_key: ¦@\"
 #   Dchar: 
 #
-<dead_greek><backslash><numbersign>                                                            <0> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
-<Multi_key><at><backslash><numbersign>                                                         <0> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
-<dead_greek><backslash><numbersign>                                                         <KP_0> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
-<Multi_key><at><backslash><numbersign>                                                      <KP_0> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
-<dead_greek><backslash><numbersign>                                                         <1><0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><at><backslash><numbersign>                                                      <1><0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
-<dead_greek><backslash><numbersign>                                                         <1><1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
-<Multi_key><at><backslash><numbersign>                                                      <1><1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
-<dead_greek><backslash><numbersign>                                                         <1><2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
-<Multi_key><at><backslash><numbersign>                                                      <1><2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
-<dead_greek><backslash><numbersign>                                                         <1><3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
-<dead_greek><backslash><numbersign>                                                         <1><4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
-<dead_greek><backslash><numbersign>                                                         <1><5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
-<dead_greek><backslash><numbersign>                                                         <1><6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
-<dead_greek><backslash><numbersign>                                                         <1><7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
-<dead_greek><backslash><numbersign>                                                         <1><8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
-<dead_greek><backslash><numbersign>                                                         <1><9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
-<Multi_key><at><backslash><numbersign>                                                      <1><9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
-<dead_greek><backslash><numbersign>                                                   <KP_1><KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
-<Multi_key><at><backslash><numbersign>                                                <KP_1><KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
-<dead_greek><backslash><numbersign>                                                            <2> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
-<Multi_key><at><backslash><numbersign>                                                         <2> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
-<dead_greek><backslash><numbersign>                                                         <KP_2> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
-<Multi_key><at><backslash><numbersign>                                                      <KP_2> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+#   This uses the level-3 graphic on key D03 next to the backslash on D04, with
+#   mnemonics based on the key’s letter "E", for a streamlined user experience.
+#   Similarly to the "10" logic, "20" has "0" as a base character.
+#
+<dead_greek><backslash><quotedbl>                                                              <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><backslash><quotedbl>                                                           <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><backslash><EuroSign>                                                              <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><backslash><EuroSign>                                                           <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><quotedbl><backslash>                                                              <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><quotedbl><backslash>                                                           <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><EuroSign><backslash>                                                              <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><EuroSign><backslash>                                                           <0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><backslash><quotedbl>                                                           <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><backslash><quotedbl>                                                        <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><backslash><EuroSign>                                                           <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><backslash><EuroSign>                                                        <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><quotedbl><backslash>                                                           <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><quotedbl><backslash>                                                        <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><EuroSign><backslash>                                                           <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<Multi_key><at><EuroSign><backslash>                                                        <KP_0> : "⓴" U24F4 # NEGATIVE CIRCLED NUMBER TWENTY
+<dead_greek><backslash><quotedbl>                                                              <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><backslash><quotedbl>                                                           <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><backslash><EuroSign>                                                              <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><backslash><EuroSign>                                                           <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><quotedbl><backslash>                                                              <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><quotedbl><backslash>                                                           <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><EuroSign><backslash>                                                              <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><EuroSign><backslash>                                                           <1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><backslash><quotedbl>                                                           <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><backslash><EuroSign>                                                           <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><quotedbl><backslash>                                                           <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><EuroSign><backslash>                                                           <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_1> : "⓫" U24EB # NEGATIVE CIRCLED NUMBER ELEVEN
+<dead_greek><backslash><quotedbl>                                                              <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><backslash><quotedbl>                                                           <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><backslash><EuroSign>                                                              <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><backslash><EuroSign>                                                           <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><quotedbl><backslash>                                                              <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><quotedbl><backslash>                                                           <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><EuroSign><backslash>                                                              <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><EuroSign><backslash>                                                           <2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><backslash><quotedbl>                                                           <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><backslash><quotedbl>                                                        <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><backslash><EuroSign>                                                           <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><backslash><EuroSign>                                                        <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><quotedbl><backslash>                                                           <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><quotedbl><backslash>                                                        <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><EuroSign><backslash>                                                           <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<Multi_key><at><EuroSign><backslash>                                                        <KP_2> : "⓬" U24EC # NEGATIVE CIRCLED NUMBER TWELVE
+<dead_greek><backslash><quotedbl>                                                              <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><backslash><quotedbl>                                                           <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><backslash><EuroSign>                                                              <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><backslash><EuroSign>                                                           <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><quotedbl><backslash>                                                              <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><quotedbl><backslash>                                                           <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><EuroSign><backslash>                                                              <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><EuroSign><backslash>                                                           <3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_3> : "⓭" U24ED # NEGATIVE CIRCLED NUMBER THIRTEEN
+<dead_greek><backslash><quotedbl>                                                              <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><backslash><quotedbl>                                                           <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><backslash><EuroSign>                                                              <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><backslash><EuroSign>                                                           <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><quotedbl><backslash>                                                              <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><quotedbl><backslash>                                                           <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><EuroSign><backslash>                                                              <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><EuroSign><backslash>                                                           <4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_4> : "⓮" U24EE # NEGATIVE CIRCLED NUMBER FOURTEEN
+<dead_greek><backslash><quotedbl>                                                              <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><backslash><quotedbl>                                                           <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><backslash><EuroSign>                                                              <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><backslash><EuroSign>                                                           <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><quotedbl><backslash>                                                              <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><quotedbl><backslash>                                                           <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><EuroSign><backslash>                                                              <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><EuroSign><backslash>                                                           <5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_5> : "⓯" U24EF # NEGATIVE CIRCLED NUMBER FIFTEEN
+<dead_greek><backslash><quotedbl>                                                              <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><backslash><quotedbl>                                                           <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><backslash><EuroSign>                                                              <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><backslash><EuroSign>                                                           <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><quotedbl><backslash>                                                              <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><quotedbl><backslash>                                                           <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><EuroSign><backslash>                                                              <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><EuroSign><backslash>                                                           <6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_6> : "⓰" U24F0 # NEGATIVE CIRCLED NUMBER SIXTEEN
+<dead_greek><backslash><quotedbl>                                                              <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><backslash><quotedbl>                                                           <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><backslash><EuroSign>                                                              <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><backslash><EuroSign>                                                           <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><quotedbl><backslash>                                                              <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><quotedbl><backslash>                                                           <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><EuroSign><backslash>                                                              <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><EuroSign><backslash>                                                           <7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_7> : "⓱" U24F1 # NEGATIVE CIRCLED NUMBER SEVENTEEN
+<dead_greek><backslash><quotedbl>                                                              <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><backslash><quotedbl>                                                           <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><backslash><EuroSign>                                                              <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><backslash><EuroSign>                                                           <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><quotedbl><backslash>                                                              <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><quotedbl><backslash>                                                           <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><EuroSign><backslash>                                                              <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><EuroSign><backslash>                                                           <8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_8> : "⓲" U24F2 # NEGATIVE CIRCLED NUMBER EIGHTEEN
+<dead_greek><backslash><quotedbl>                                                              <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><backslash><quotedbl>                                                           <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><backslash><EuroSign>                                                              <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><backslash><EuroSign>                                                           <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><quotedbl><backslash>                                                              <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><quotedbl><backslash>                                                           <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><EuroSign><backslash>                                                              <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><EuroSign><backslash>                                                           <9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><backslash><quotedbl>                                                           <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><backslash><quotedbl>                                                        <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><backslash><EuroSign>                                                           <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><backslash><EuroSign>                                                        <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><quotedbl><backslash>                                                           <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><quotedbl><backslash>                                                        <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<dead_greek><EuroSign><backslash>                                                           <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
+<Multi_key><at><EuroSign><backslash>                                                        <KP_9> : "⓳" U24F3 # NEGATIVE CIRCLED NUMBER NINETEEN
 #
 #
 # # CIRCLED_SANS
