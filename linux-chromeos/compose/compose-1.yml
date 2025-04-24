@@ -1535,7 +1535,7 @@
 #   See #^# Box drawings
 #
 #   However, this only supports basic circled digits and numbers, for sideways
-#   compatibility with en_US.UTF-8/Compose, without the font style and color
+#   compatibility with en_US.UTF-8/Compose, without the font type and color
 #   variants, and without circled letters, as these would conflict with
 #   dead_invertedbreve.
 #   See #*# INVERTED_BREVE
@@ -1650,15 +1650,13 @@
 <Multi_key><parenleft>                                                    <KP_5><KP_0>             : "㊿" U32BF # CIRCLED NUMBER FIFTY
 #
 # 
-# Circled by leading o
+# # Circled by leading "o"
 #
-#   This only supports numbers 1–10, since letters would conflict with "œ",
-#   "ꝏ", "©". Other conflicts affect "⫯" U2AEF. Consistently, this way,
-#   en_US.UTF-8/Compose supports only "Ⓐ".
+#   This case insensitive "o" prefix supports only numbers 1..10, since letters
+#   would conflict with "œ", "ꝏ", "©"; and "⫯" U2AEF would be involved in other
+#   conflicts. Consistently, this way, en_US.UTF-8/Compose supports only "Ⓐ".
 #   See #*# GREEK
 #   See #^# CIRCLED
-#
-#   The "o" is case insensitive.
 #
 <Multi_key><o>                                                                                 <0> : "⑩" U2469 # CIRCLED NUMBER TEN
 <Multi_key><o>                                                                              <KP_0> : "⑩" U2469 # CIRCLED NUMBER TEN
