@@ -6060,12 +6060,11 @@
 #   The leading backslash (on D04) is in synergy with the level-3 position of
 #   this dead key on D06.
 #
-#   Not minus, to prevent a conflict with circled minus "⊖" U2296, and given
-#   that these are negative or inverted colors, not negative numbers.
-#
 #   This also supports circled and squared letters. As these come in uppercase
-#   only, lowercase is used for squared. These SMP dingbats have limited cross-
-#   platform compatibility.
+#   only, for intuitivity, uppercase is used for squared, lowercase for circled
+#   consistently with the more rounded shapes of lowercase vs uppercase.
+#
+#   These SMP dingbats have limited cross-platform compatibility.
 #   See # # SQUARED
 #
 <dead_greek><backslash>                                                                    <grave> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
@@ -6110,110 +6109,110 @@
 <Multi_key><at><backslash>                                                                     <9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
 <dead_greek><backslash>                                                                     <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
 <Multi_key><at><backslash>                                                                  <KP_9> : "❾" U277E # DINGBAT NEGATIVE CIRCLED DIGIT NINE
-<dead_greek><backslash>                                                                        <A> : "🅐" U1F150 # NEGATIVE CIRCLED LATIN CAPITAL LETTER A
-<Multi_key><at><backslash>                                                                     <A> : "🅐" U1F150 # NEGATIVE CIRCLED LATIN CAPITAL LETTER A
-<dead_greek><backslash>                                                                        <a> : "🅰" U1F170 # NEGATIVE SQUARED LATIN CAPITAL LETTER A
-<Multi_key><at><backslash>                                                                     <a> : "🅰" U1F170 # NEGATIVE SQUARED LATIN CAPITAL LETTER A
-<dead_greek><backslash>                                                                        <B> : "🅑" U1F151 # NEGATIVE CIRCLED LATIN CAPITAL LETTER B
-<Multi_key><at><backslash>                                                                     <B> : "🅑" U1F151 # NEGATIVE CIRCLED LATIN CAPITAL LETTER B
-<dead_greek><backslash>                                                                        <b> : "🅱" U1F171 # NEGATIVE SQUARED LATIN CAPITAL LETTER B
-<Multi_key><at><backslash>                                                                     <b> : "🅱" U1F171 # NEGATIVE SQUARED LATIN CAPITAL LETTER B
-<dead_greek><backslash>                                                                        <C> : "🅒" U1F152 # NEGATIVE CIRCLED LATIN CAPITAL LETTER C
-<Multi_key><at><backslash>                                                                     <C> : "🅒" U1F152 # NEGATIVE CIRCLED LATIN CAPITAL LETTER C
-<dead_greek><backslash>                                                                        <c> : "🅲" U1F172 # NEGATIVE SQUARED LATIN CAPITAL LETTER C
-<Multi_key><at><backslash>                                                                     <c> : "🅲" U1F172 # NEGATIVE SQUARED LATIN CAPITAL LETTER C
-<dead_greek><backslash>                                                                        <D> : "🅓" U1F153 # NEGATIVE CIRCLED LATIN CAPITAL LETTER D
-<Multi_key><at><backslash>                                                                     <D> : "🅓" U1F153 # NEGATIVE CIRCLED LATIN CAPITAL LETTER D
-<dead_greek><backslash>                                                                        <d> : "🅳" U1F173 # NEGATIVE SQUARED LATIN CAPITAL LETTER D
-<Multi_key><at><backslash>                                                                     <d> : "🅳" U1F173 # NEGATIVE SQUARED LATIN CAPITAL LETTER D
-<dead_greek><backslash>                                                                        <E> : "🅔" U1F154 # NEGATIVE CIRCLED LATIN CAPITAL LETTER E
-<Multi_key><at><backslash>                                                                     <E> : "🅔" U1F154 # NEGATIVE CIRCLED LATIN CAPITAL LETTER E
-<dead_greek><backslash>                                                                        <e> : "🅴" U1F174 # NEGATIVE SQUARED LATIN CAPITAL LETTER E
-<Multi_key><at><backslash>                                                                     <e> : "🅴" U1F174 # NEGATIVE SQUARED LATIN CAPITAL LETTER E
-<dead_greek><backslash>                                                                        <F> : "🅕" U1F155 # NEGATIVE CIRCLED LATIN CAPITAL LETTER F
-<Multi_key><at><backslash>                                                                     <F> : "🅕" U1F155 # NEGATIVE CIRCLED LATIN CAPITAL LETTER F
-<dead_greek><backslash>                                                                        <f> : "🅵" U1F175 # NEGATIVE SQUARED LATIN CAPITAL LETTER F
-<Multi_key><at><backslash>                                                                     <f> : "🅵" U1F175 # NEGATIVE SQUARED LATIN CAPITAL LETTER F
-<dead_greek><backslash>                                                                        <G> : "🅖" U1F156 # NEGATIVE CIRCLED LATIN CAPITAL LETTER G
-<Multi_key><at><backslash>                                                                     <G> : "🅖" U1F156 # NEGATIVE CIRCLED LATIN CAPITAL LETTER G
-<dead_greek><backslash>                                                                        <g> : "🅶" U1F176 # NEGATIVE SQUARED LATIN CAPITAL LETTER G
-<Multi_key><at><backslash>                                                                     <g> : "🅶" U1F176 # NEGATIVE SQUARED LATIN CAPITAL LETTER G
-<dead_greek><backslash>                                                                        <H> : "🅗" U1F157 # NEGATIVE CIRCLED LATIN CAPITAL LETTER H
-<Multi_key><at><backslash>                                                                     <H> : "🅗" U1F157 # NEGATIVE CIRCLED LATIN CAPITAL LETTER H
-<dead_greek><backslash>                                                                        <h> : "🅷" U1F177 # NEGATIVE SQUARED LATIN CAPITAL LETTER H
-<Multi_key><at><backslash>                                                                     <h> : "🅷" U1F177 # NEGATIVE SQUARED LATIN CAPITAL LETTER H
-<dead_greek><backslash>                                                                        <I> : "🅘" U1F158 # NEGATIVE CIRCLED LATIN CAPITAL LETTER I
-<Multi_key><at><backslash>                                                                     <I> : "🅘" U1F158 # NEGATIVE CIRCLED LATIN CAPITAL LETTER I
-<dead_greek><backslash>                                                                        <i> : "🅸" U1F178 # NEGATIVE SQUARED LATIN CAPITAL LETTER I
-<Multi_key><at><backslash>                                                                     <i> : "🅸" U1F178 # NEGATIVE SQUARED LATIN CAPITAL LETTER I
-<dead_greek><backslash>                                                                        <J> : "🅙" U1F159 # NEGATIVE CIRCLED LATIN CAPITAL LETTER J
-<Multi_key><at><backslash>                                                                     <J> : "🅙" U1F159 # NEGATIVE CIRCLED LATIN CAPITAL LETTER J
-<dead_greek><backslash>                                                                        <j> : "🅹" U1F179 # NEGATIVE SQUARED LATIN CAPITAL LETTER J
-<Multi_key><at><backslash>                                                                     <j> : "🅹" U1F179 # NEGATIVE SQUARED LATIN CAPITAL LETTER J
-<dead_greek><backslash>                                                                        <K> : "🅚" U1F15A # NEGATIVE CIRCLED LATIN CAPITAL LETTER K
-<Multi_key><at><backslash>                                                                     <K> : "🅚" U1F15A # NEGATIVE CIRCLED LATIN CAPITAL LETTER K
-<dead_greek><backslash>                                                                        <k> : "🅺" U1F17A # NEGATIVE SQUARED LATIN CAPITAL LETTER K
-<Multi_key><at><backslash>                                                                     <k> : "🅺" U1F17A # NEGATIVE SQUARED LATIN CAPITAL LETTER K
-<dead_greek><backslash>                                                                        <L> : "🅛" U1F15B # NEGATIVE CIRCLED LATIN CAPITAL LETTER L
-<Multi_key><at><backslash>                                                                     <L> : "🅛" U1F15B # NEGATIVE CIRCLED LATIN CAPITAL LETTER L
-<dead_greek><backslash>                                                                        <l> : "🅻" U1F17B # NEGATIVE SQUARED LATIN CAPITAL LETTER L
-<Multi_key><at><backslash>                                                                     <l> : "🅻" U1F17B # NEGATIVE SQUARED LATIN CAPITAL LETTER L
-<dead_greek><backslash>                                                                        <M> : "🅜" U1F15C # NEGATIVE CIRCLED LATIN CAPITAL LETTER M
-<Multi_key><at><backslash>                                                                     <M> : "🅜" U1F15C # NEGATIVE CIRCLED LATIN CAPITAL LETTER M
-<dead_greek><backslash>                                                                        <m> : "🅼" U1F17C # NEGATIVE SQUARED LATIN CAPITAL LETTER M
-<Multi_key><at><backslash>                                                                     <m> : "🅼" U1F17C # NEGATIVE SQUARED LATIN CAPITAL LETTER M
-<dead_greek><backslash>                                                                        <N> : "🅝" U1F15D # NEGATIVE CIRCLED LATIN CAPITAL LETTER N
-<Multi_key><at><backslash>                                                                     <N> : "🅝" U1F15D # NEGATIVE CIRCLED LATIN CAPITAL LETTER N
-<dead_greek><backslash>                                                                        <n> : "🅽" U1F17D # NEGATIVE SQUARED LATIN CAPITAL LETTER N
-<Multi_key><at><backslash>                                                                     <n> : "🅽" U1F17D # NEGATIVE SQUARED LATIN CAPITAL LETTER N
-<dead_greek><backslash>                                                                        <O> : "🅞" U1F15E # NEGATIVE CIRCLED LATIN CAPITAL LETTER O
-<Multi_key><at><backslash>                                                                     <O> : "🅞" U1F15E # NEGATIVE CIRCLED LATIN CAPITAL LETTER O
-<dead_greek><backslash>                                                                        <o> : "🅾" U1F17E # NEGATIVE SQUARED LATIN CAPITAL LETTER O
-<Multi_key><at><backslash>                                                                     <o> : "🅾" U1F17E # NEGATIVE SQUARED LATIN CAPITAL LETTER O
-<dead_greek><backslash>                                                                        <P> : "🅟" U1F15F # NEGATIVE CIRCLED LATIN CAPITAL LETTER P
-<Multi_key><at><backslash>                                                                     <P> : "🅟" U1F15F # NEGATIVE CIRCLED LATIN CAPITAL LETTER P
-<dead_greek><backslash>                                                                        <p> : "🅿" U1F17F # NEGATIVE SQUARED LATIN CAPITAL LETTER P
-<Multi_key><at><backslash>                                                                     <p> : "🅿" U1F17F # NEGATIVE SQUARED LATIN CAPITAL LETTER P
-<dead_greek><backslash>                                                                        <Q> : "🅠" U1F160 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Q
-<Multi_key><at><backslash>                                                                     <Q> : "🅠" U1F160 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Q
-<dead_greek><backslash>                                                                        <q> : "🆀" U1F180 # NEGATIVE SQUARED LATIN CAPITAL LETTER Q
-<Multi_key><at><backslash>                                                                     <q> : "🆀" U1F180 # NEGATIVE SQUARED LATIN CAPITAL LETTER Q
-<dead_greek><backslash>                                                                        <R> : "🅡" U1F161 # NEGATIVE CIRCLED LATIN CAPITAL LETTER R
-<Multi_key><at><backslash>                                                                     <R> : "🅡" U1F161 # NEGATIVE CIRCLED LATIN CAPITAL LETTER R
-<dead_greek><backslash>                                                                        <r> : "🆁" U1F181 # NEGATIVE SQUARED LATIN CAPITAL LETTER R
-<Multi_key><at><backslash>                                                                     <r> : "🆁" U1F181 # NEGATIVE SQUARED LATIN CAPITAL LETTER R
-<dead_greek><backslash>                                                                        <S> : "🅢" U1F162 # NEGATIVE CIRCLED LATIN CAPITAL LETTER S
-<Multi_key><at><backslash>                                                                     <S> : "🅢" U1F162 # NEGATIVE CIRCLED LATIN CAPITAL LETTER S
-<dead_greek><backslash>                                                                        <s> : "🆂" U1F182 # NEGATIVE SQUARED LATIN CAPITAL LETTER S
-<Multi_key><at><backslash>                                                                     <s> : "🆂" U1F182 # NEGATIVE SQUARED LATIN CAPITAL LETTER S
-<dead_greek><backslash>                                                                        <T> : "🅣" U1F163 # NEGATIVE CIRCLED LATIN CAPITAL LETTER T
-<Multi_key><at><backslash>                                                                     <T> : "🅣" U1F163 # NEGATIVE CIRCLED LATIN CAPITAL LETTER T
-<dead_greek><backslash>                                                                        <t> : "🆃" U1F183 # NEGATIVE SQUARED LATIN CAPITAL LETTER T
-<Multi_key><at><backslash>                                                                     <t> : "🆃" U1F183 # NEGATIVE SQUARED LATIN CAPITAL LETTER T
-<dead_greek><backslash>                                                                        <U> : "🅤" U1F164 # NEGATIVE CIRCLED LATIN CAPITAL LETTER U
-<Multi_key><at><backslash>                                                                     <U> : "🅤" U1F164 # NEGATIVE CIRCLED LATIN CAPITAL LETTER U
-<dead_greek><backslash>                                                                        <u> : "🆄" U1F184 # NEGATIVE SQUARED LATIN CAPITAL LETTER U
-<Multi_key><at><backslash>                                                                     <u> : "🆄" U1F184 # NEGATIVE SQUARED LATIN CAPITAL LETTER U
-<dead_greek><backslash>                                                                        <V> : "🅥" U1F165 # NEGATIVE CIRCLED LATIN CAPITAL LETTER V
-<Multi_key><at><backslash>                                                                     <V> : "🅥" U1F165 # NEGATIVE CIRCLED LATIN CAPITAL LETTER V
-<dead_greek><backslash>                                                                        <v> : "🆅" U1F185 # NEGATIVE SQUARED LATIN CAPITAL LETTER V
-<Multi_key><at><backslash>                                                                     <v> : "🆅" U1F185 # NEGATIVE SQUARED LATIN CAPITAL LETTER V
-<dead_greek><backslash>                                                                        <W> : "🅦" U1F166 # NEGATIVE CIRCLED LATIN CAPITAL LETTER W
-<Multi_key><at><backslash>                                                                     <W> : "🅦" U1F166 # NEGATIVE CIRCLED LATIN CAPITAL LETTER W
-<dead_greek><backslash>                                                                        <w> : "🆆" U1F186 # NEGATIVE SQUARED LATIN CAPITAL LETTER W
-<Multi_key><at><backslash>                                                                     <w> : "🆆" U1F186 # NEGATIVE SQUARED LATIN CAPITAL LETTER W
-<dead_greek><backslash>                                                                        <X> : "🅧" U1F167 # NEGATIVE CIRCLED LATIN CAPITAL LETTER X
-<Multi_key><at><backslash>                                                                     <X> : "🅧" U1F167 # NEGATIVE CIRCLED LATIN CAPITAL LETTER X
-<dead_greek><backslash>                                                                        <x> : "🆇" U1F187 # NEGATIVE SQUARED LATIN CAPITAL LETTER X
-<Multi_key><at><backslash>                                                                     <x> : "🆇" U1F187 # NEGATIVE SQUARED LATIN CAPITAL LETTER X
-<dead_greek><backslash>                                                                        <Y> : "🅨" U1F168 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Y
-<Multi_key><at><backslash>                                                                     <Y> : "🅨" U1F168 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Y
-<dead_greek><backslash>                                                                        <y> : "🆈" U1F188 # NEGATIVE SQUARED LATIN CAPITAL LETTER Y
-<Multi_key><at><backslash>                                                                     <y> : "🆈" U1F188 # NEGATIVE SQUARED LATIN CAPITAL LETTER Y
-<dead_greek><backslash>                                                                        <Z> : "🅩" U1F169 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Z
-<Multi_key><at><backslash>                                                                     <Z> : "🅩" U1F169 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Z
-<dead_greek><backslash>                                                                        <z> : "🆉" U1F189 # NEGATIVE SQUARED LATIN CAPITAL LETTER Z
-<Multi_key><at><backslash>                                                                     <z> : "🆉" U1F189 # NEGATIVE SQUARED LATIN CAPITAL LETTER Z
+<dead_greek><backslash>                                                                        <A> : "🅰" U1F170 # NEGATIVE SQUARED LATIN CAPITAL LETTER A
+<Multi_key><at><backslash>                                                                     <A> : "🅰" U1F170 # NEGATIVE SQUARED LATIN CAPITAL LETTER A
+<dead_greek><backslash>                                                                        <a> : "🅐" U1F150 # NEGATIVE CIRCLED LATIN CAPITAL LETTER A
+<Multi_key><at><backslash>                                                                     <a> : "🅐" U1F150 # NEGATIVE CIRCLED LATIN CAPITAL LETTER A
+<dead_greek><backslash>                                                                        <B> : "🅱" U1F171 # NEGATIVE SQUARED LATIN CAPITAL LETTER B
+<Multi_key><at><backslash>                                                                     <B> : "🅱" U1F171 # NEGATIVE SQUARED LATIN CAPITAL LETTER B
+<dead_greek><backslash>                                                                        <b> : "🅑" U1F151 # NEGATIVE CIRCLED LATIN CAPITAL LETTER B
+<Multi_key><at><backslash>                                                                     <b> : "🅑" U1F151 # NEGATIVE CIRCLED LATIN CAPITAL LETTER B
+<dead_greek><backslash>                                                                        <C> : "🅲" U1F172 # NEGATIVE SQUARED LATIN CAPITAL LETTER C
+<Multi_key><at><backslash>                                                                     <C> : "🅲" U1F172 # NEGATIVE SQUARED LATIN CAPITAL LETTER C
+<dead_greek><backslash>                                                                        <c> : "🅒" U1F152 # NEGATIVE CIRCLED LATIN CAPITAL LETTER C
+<Multi_key><at><backslash>                                                                     <c> : "🅒" U1F152 # NEGATIVE CIRCLED LATIN CAPITAL LETTER C
+<dead_greek><backslash>                                                                        <D> : "🅳" U1F173 # NEGATIVE SQUARED LATIN CAPITAL LETTER D
+<Multi_key><at><backslash>                                                                     <D> : "🅳" U1F173 # NEGATIVE SQUARED LATIN CAPITAL LETTER D
+<dead_greek><backslash>                                                                        <d> : "🅓" U1F153 # NEGATIVE CIRCLED LATIN CAPITAL LETTER D
+<Multi_key><at><backslash>                                                                     <d> : "🅓" U1F153 # NEGATIVE CIRCLED LATIN CAPITAL LETTER D
+<dead_greek><backslash>                                                                        <E> : "🅴" U1F174 # NEGATIVE SQUARED LATIN CAPITAL LETTER E
+<Multi_key><at><backslash>                                                                     <E> : "🅴" U1F174 # NEGATIVE SQUARED LATIN CAPITAL LETTER E
+<dead_greek><backslash>                                                                        <e> : "🅔" U1F154 # NEGATIVE CIRCLED LATIN CAPITAL LETTER E
+<Multi_key><at><backslash>                                                                     <e> : "🅔" U1F154 # NEGATIVE CIRCLED LATIN CAPITAL LETTER E
+<dead_greek><backslash>                                                                        <F> : "🅵" U1F175 # NEGATIVE SQUARED LATIN CAPITAL LETTER F
+<Multi_key><at><backslash>                                                                     <F> : "🅵" U1F175 # NEGATIVE SQUARED LATIN CAPITAL LETTER F
+<dead_greek><backslash>                                                                        <f> : "🅕" U1F155 # NEGATIVE CIRCLED LATIN CAPITAL LETTER F
+<Multi_key><at><backslash>                                                                     <f> : "🅕" U1F155 # NEGATIVE CIRCLED LATIN CAPITAL LETTER F
+<dead_greek><backslash>                                                                        <G> : "🅶" U1F176 # NEGATIVE SQUARED LATIN CAPITAL LETTER G
+<Multi_key><at><backslash>                                                                     <G> : "🅶" U1F176 # NEGATIVE SQUARED LATIN CAPITAL LETTER G
+<dead_greek><backslash>                                                                        <g> : "🅖" U1F156 # NEGATIVE CIRCLED LATIN CAPITAL LETTER G
+<Multi_key><at><backslash>                                                                     <g> : "🅖" U1F156 # NEGATIVE CIRCLED LATIN CAPITAL LETTER G
+<dead_greek><backslash>                                                                        <H> : "🅷" U1F177 # NEGATIVE SQUARED LATIN CAPITAL LETTER H
+<Multi_key><at><backslash>                                                                     <H> : "🅷" U1F177 # NEGATIVE SQUARED LATIN CAPITAL LETTER H
+<dead_greek><backslash>                                                                        <h> : "🅗" U1F157 # NEGATIVE CIRCLED LATIN CAPITAL LETTER H
+<Multi_key><at><backslash>                                                                     <h> : "🅗" U1F157 # NEGATIVE CIRCLED LATIN CAPITAL LETTER H
+<dead_greek><backslash>                                                                        <I> : "🅸" U1F178 # NEGATIVE SQUARED LATIN CAPITAL LETTER I
+<Multi_key><at><backslash>                                                                     <I> : "🅸" U1F178 # NEGATIVE SQUARED LATIN CAPITAL LETTER I
+<dead_greek><backslash>                                                                        <i> : "🅘" U1F158 # NEGATIVE CIRCLED LATIN CAPITAL LETTER I
+<Multi_key><at><backslash>                                                                     <i> : "🅘" U1F158 # NEGATIVE CIRCLED LATIN CAPITAL LETTER I
+<dead_greek><backslash>                                                                        <J> : "🅹" U1F179 # NEGATIVE SQUARED LATIN CAPITAL LETTER J
+<Multi_key><at><backslash>                                                                     <J> : "🅹" U1F179 # NEGATIVE SQUARED LATIN CAPITAL LETTER J
+<dead_greek><backslash>                                                                        <j> : "🅙" U1F159 # NEGATIVE CIRCLED LATIN CAPITAL LETTER J
+<Multi_key><at><backslash>                                                                     <j> : "🅙" U1F159 # NEGATIVE CIRCLED LATIN CAPITAL LETTER J
+<dead_greek><backslash>                                                                        <K> : "🅺" U1F17A # NEGATIVE SQUARED LATIN CAPITAL LETTER K
+<Multi_key><at><backslash>                                                                     <K> : "🅺" U1F17A # NEGATIVE SQUARED LATIN CAPITAL LETTER K
+<dead_greek><backslash>                                                                        <k> : "🅚" U1F15A # NEGATIVE CIRCLED LATIN CAPITAL LETTER K
+<Multi_key><at><backslash>                                                                     <k> : "🅚" U1F15A # NEGATIVE CIRCLED LATIN CAPITAL LETTER K
+<dead_greek><backslash>                                                                        <L> : "🅻" U1F17B # NEGATIVE SQUARED LATIN CAPITAL LETTER L
+<Multi_key><at><backslash>                                                                     <L> : "🅻" U1F17B # NEGATIVE SQUARED LATIN CAPITAL LETTER L
+<dead_greek><backslash>                                                                        <l> : "🅛" U1F15B # NEGATIVE CIRCLED LATIN CAPITAL LETTER L
+<Multi_key><at><backslash>                                                                     <l> : "🅛" U1F15B # NEGATIVE CIRCLED LATIN CAPITAL LETTER L
+<dead_greek><backslash>                                                                        <M> : "🅼" U1F17C # NEGATIVE SQUARED LATIN CAPITAL LETTER M
+<Multi_key><at><backslash>                                                                     <M> : "🅼" U1F17C # NEGATIVE SQUARED LATIN CAPITAL LETTER M
+<dead_greek><backslash>                                                                        <m> : "🅜" U1F15C # NEGATIVE CIRCLED LATIN CAPITAL LETTER M
+<Multi_key><at><backslash>                                                                     <m> : "🅜" U1F15C # NEGATIVE CIRCLED LATIN CAPITAL LETTER M
+<dead_greek><backslash>                                                                        <N> : "🅽" U1F17D # NEGATIVE SQUARED LATIN CAPITAL LETTER N
+<Multi_key><at><backslash>                                                                     <N> : "🅽" U1F17D # NEGATIVE SQUARED LATIN CAPITAL LETTER N
+<dead_greek><backslash>                                                                        <n> : "🅝" U1F15D # NEGATIVE CIRCLED LATIN CAPITAL LETTER N
+<Multi_key><at><backslash>                                                                     <n> : "🅝" U1F15D # NEGATIVE CIRCLED LATIN CAPITAL LETTER N
+<dead_greek><backslash>                                                                        <O> : "🅾" U1F17E # NEGATIVE SQUARED LATIN CAPITAL LETTER O
+<Multi_key><at><backslash>                                                                     <O> : "🅾" U1F17E # NEGATIVE SQUARED LATIN CAPITAL LETTER O
+<dead_greek><backslash>                                                                        <o> : "🅞" U1F15E # NEGATIVE CIRCLED LATIN CAPITAL LETTER O
+<Multi_key><at><backslash>                                                                     <o> : "🅞" U1F15E # NEGATIVE CIRCLED LATIN CAPITAL LETTER O
+<dead_greek><backslash>                                                                        <P> : "🅿" U1F17F # NEGATIVE SQUARED LATIN CAPITAL LETTER P
+<Multi_key><at><backslash>                                                                     <P> : "🅿" U1F17F # NEGATIVE SQUARED LATIN CAPITAL LETTER P
+<dead_greek><backslash>                                                                        <p> : "🅟" U1F15F # NEGATIVE CIRCLED LATIN CAPITAL LETTER P
+<Multi_key><at><backslash>                                                                     <p> : "🅟" U1F15F # NEGATIVE CIRCLED LATIN CAPITAL LETTER P
+<dead_greek><backslash>                                                                        <Q> : "🆀" U1F180 # NEGATIVE SQUARED LATIN CAPITAL LETTER Q
+<Multi_key><at><backslash>                                                                     <Q> : "🆀" U1F180 # NEGATIVE SQUARED LATIN CAPITAL LETTER Q
+<dead_greek><backslash>                                                                        <q> : "🅠" U1F160 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Q
+<Multi_key><at><backslash>                                                                     <q> : "🅠" U1F160 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Q
+<dead_greek><backslash>                                                                        <R> : "🆁" U1F181 # NEGATIVE SQUARED LATIN CAPITAL LETTER R
+<Multi_key><at><backslash>                                                                     <R> : "🆁" U1F181 # NEGATIVE SQUARED LATIN CAPITAL LETTER R
+<dead_greek><backslash>                                                                        <r> : "🅡" U1F161 # NEGATIVE CIRCLED LATIN CAPITAL LETTER R
+<Multi_key><at><backslash>                                                                     <r> : "🅡" U1F161 # NEGATIVE CIRCLED LATIN CAPITAL LETTER R
+<dead_greek><backslash>                                                                        <S> : "🆂" U1F182 # NEGATIVE SQUARED LATIN CAPITAL LETTER S
+<Multi_key><at><backslash>                                                                     <S> : "🆂" U1F182 # NEGATIVE SQUARED LATIN CAPITAL LETTER S
+<dead_greek><backslash>                                                                        <s> : "🅢" U1F162 # NEGATIVE CIRCLED LATIN CAPITAL LETTER S
+<Multi_key><at><backslash>                                                                     <s> : "🅢" U1F162 # NEGATIVE CIRCLED LATIN CAPITAL LETTER S
+<dead_greek><backslash>                                                                        <T> : "🆃" U1F183 # NEGATIVE SQUARED LATIN CAPITAL LETTER T
+<Multi_key><at><backslash>                                                                     <T> : "🆃" U1F183 # NEGATIVE SQUARED LATIN CAPITAL LETTER T
+<dead_greek><backslash>                                                                        <t> : "🅣" U1F163 # NEGATIVE CIRCLED LATIN CAPITAL LETTER T
+<Multi_key><at><backslash>                                                                     <t> : "🅣" U1F163 # NEGATIVE CIRCLED LATIN CAPITAL LETTER T
+<dead_greek><backslash>                                                                        <U> : "🆄" U1F184 # NEGATIVE SQUARED LATIN CAPITAL LETTER U
+<Multi_key><at><backslash>                                                                     <U> : "🆄" U1F184 # NEGATIVE SQUARED LATIN CAPITAL LETTER U
+<dead_greek><backslash>                                                                        <u> : "🅤" U1F164 # NEGATIVE CIRCLED LATIN CAPITAL LETTER U
+<Multi_key><at><backslash>                                                                     <u> : "🅤" U1F164 # NEGATIVE CIRCLED LATIN CAPITAL LETTER U
+<dead_greek><backslash>                                                                        <V> : "🆅" U1F185 # NEGATIVE SQUARED LATIN CAPITAL LETTER V
+<Multi_key><at><backslash>                                                                     <V> : "🆅" U1F185 # NEGATIVE SQUARED LATIN CAPITAL LETTER V
+<dead_greek><backslash>                                                                        <v> : "🅥" U1F165 # NEGATIVE CIRCLED LATIN CAPITAL LETTER V
+<Multi_key><at><backslash>                                                                     <v> : "🅥" U1F165 # NEGATIVE CIRCLED LATIN CAPITAL LETTER V
+<dead_greek><backslash>                                                                        <W> : "🆆" U1F186 # NEGATIVE SQUARED LATIN CAPITAL LETTER W
+<Multi_key><at><backslash>                                                                     <W> : "🆆" U1F186 # NEGATIVE SQUARED LATIN CAPITAL LETTER W
+<dead_greek><backslash>                                                                        <w> : "🅦" U1F166 # NEGATIVE CIRCLED LATIN CAPITAL LETTER W
+<Multi_key><at><backslash>                                                                     <w> : "🅦" U1F166 # NEGATIVE CIRCLED LATIN CAPITAL LETTER W
+<dead_greek><backslash>                                                                        <X> : "🆇" U1F187 # NEGATIVE SQUARED LATIN CAPITAL LETTER X
+<Multi_key><at><backslash>                                                                     <X> : "🆇" U1F187 # NEGATIVE SQUARED LATIN CAPITAL LETTER X
+<dead_greek><backslash>                                                                        <x> : "🅧" U1F167 # NEGATIVE CIRCLED LATIN CAPITAL LETTER X
+<Multi_key><at><backslash>                                                                     <x> : "🅧" U1F167 # NEGATIVE CIRCLED LATIN CAPITAL LETTER X
+<dead_greek><backslash>                                                                        <Y> : "🆈" U1F188 # NEGATIVE SQUARED LATIN CAPITAL LETTER Y
+<Multi_key><at><backslash>                                                                     <Y> : "🆈" U1F188 # NEGATIVE SQUARED LATIN CAPITAL LETTER Y
+<dead_greek><backslash>                                                                        <y> : "🅨" U1F168 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Y
+<Multi_key><at><backslash>                                                                     <y> : "🅨" U1F168 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Y
+<dead_greek><backslash>                                                                        <Z> : "🆉" U1F189 # NEGATIVE SQUARED LATIN CAPITAL LETTER Z
+<Multi_key><at><backslash>                                                                     <Z> : "🆉" U1F189 # NEGATIVE SQUARED LATIN CAPITAL LETTER Z
+<dead_greek><backslash>                                                                        <z> : "🅩" U1F169 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Z
+<Multi_key><at><backslash>                                                                     <z> : "🅩" U1F169 # NEGATIVE CIRCLED LATIN CAPITAL LETTER Z
 #
 #
 # # CIRCLED_NEGATIVE_NUMBER
