@@ -951,9 +951,9 @@
 #
 #   Sortability and readability may then be further improved using this
 #   follow-up replaceruleset, where dead key syms missing from keysymdef.h are
-#   decoded, and all dead key syms are streamlined and prefixed with an exclam
-#   so as to be sorted before letters, digits, and ASCII symbols prefixed with
-#   a percent, some more letters get intuitive keysyms, and ordinary space and
+#   decoded, and all dead key syms are prefixed with an exclam so as to be
+#   sorted before letters, digits, and ASCII symbols prefixed with a percent
+#   sign, some more letters get intuitive keysyms, and ordinary space and
 #   U200B, nobreakspace and U202F are grouped conveniently and sorted last by
 #   the means of a leading asciitilde.
 #   See # # Dead keys not included in keysymdef.h
@@ -1010,9 +1010,9 @@
 #             "find": "(above|below)(comma|dot|hook|ring)",
 #             "replace": "$2$1"
 #           },
-#           "streamlineDeadKeySyms": {
+#           "prefixDeadKeySyms": {
 #             "find": "<dead_",
-#             "replace": "<!"
+#             "replace": "<!dead_"
 #           },
 #           "syncMultikey": {
 #             "find": "<Multi_key",
@@ -1046,7 +1046,7 @@
 #             "find": "<rightsinglequotemark",
 #             "replace": "<aprightsinglequotemark"
 #           },
-#           "sortAsciiAndAliases": {
+#           "prefixAsciiAndAliases": {
 #             "find": "<(ampersand|apostrophe|aprightsinglequotemark|asciicircum|asciitilde|asterisk|at|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotEuroSign|quotedbl|semicolon|semsection|slash|underscore)>",
 #             "replace": "<%$1>"
 #           },
@@ -1082,7 +1082,7 @@
 #               "decodeLegacyTilde",
 #               "decodeLegacyGrave",
 #               "reorderAttributes",
-#               "streamlineDeadKeySyms",
+#               "prefixDeadKeySyms",
 #               "syncMultikey",
 #               "decodeCapitalOpenE",
 #               "decodeSmallOpenE",
@@ -1091,7 +1091,7 @@
 #               "sortEuroSign",
 #               "sortSectionSign",
 #               "sortRightSingleQuotationMark",
-#               "sortAsciiAndAliases",
+#               "prefixAsciiAndAliases",
 #               "sortSpaces",
 #               "decodeNoBreakThinSpace",
 #               "decodeZeroWidthSpace",
