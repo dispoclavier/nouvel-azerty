@@ -1517,26 +1517,34 @@
 #
 # # Circled by leading parenthesis
 #
-#   For numbers by multikey, this intuitive input method is more efficient than
-#   the scheme using the Greek or circled dead key, provided that the redundant
-#   trailing parenthesis found in en_US.UTF-8/Compose is dropped except for the
-#   digits 0 to 5 and two circled numbers starting with 1: "⑩" U2469, "⑪" U246A
-#   as these conflict with circled numbers or box drawings with rounded corners
-#   "╰" U2570, "╭" U256D.
+#   For numbers by multikey, this intuitive input method is more comprehensive
+#   than the Greek or circled dead key, and it is equally efficient, provided
+#   that the redundant trailing parenthesis as found in en_US.UTF-8/Compose is
+#   dropped, except for the digits 0 to 5 and two circled numbers starting with
+#   1: "⑩" U2469, "⑪" U246A, as these conflict with circled numbers or with box
+#   drawings with rounded corners "╰" U2570, "╭" U256D, also known as character
+#   cell arcs.
 #   See #*# GREEK
 #   See #^# CIRCLED
 #   See #   Character cell arcs
 #
-#   This scheme is supported by multikey only, assuming that a shortcut for the
-#   sequence partial <Multi_key><parenleft> by using dead_invertedbreve would
-#   be considered pointless, and for technical consistency as of not mixing up
-#   dead keys and multikey.
+#   This scheme is supported by multikey only, assuming that the use of
+#   dead_invertedbreve as a shortcut for the partial <Multi_key><parenleft>
+#   would be considered pointless, and for technical consistency as of not
+#   mixing up dead keys and multikey.
 #   See #^# Box drawings
 #
 #   However, this only supports basic circled digits and numbers, for sideways
-#   compatibility with en_US.UTF-8/Compose, but without circled letters, that
-#   would conflict with dead_invertedbreve.
+#   compatibility with en_US.UTF-8/Compose, without the font style and color
+#   variants, and without circled letters, as these would conflict with
+#   dead_invertedbreve.
 #   See #*# INVERTED_BREVE
+#   See # # CIRCLED_TEEN
+#   See # # CIRCLED_NEGATIVE
+#   See # # CIRCLED_NEGATIVE_TEEN
+#   See # # CIRCLED_SANS
+#   See # # CIRCLED_NEGATIVE_SANS
+#   See # # SQUARED
 #
 <Multi_key><parenleft>                                                             <0><parenright> : "⓪" U24EA # CIRCLED DIGIT ZERO
 <Multi_key><parenleft>                                                          <KP_0><parenright> : "⓪" U24EA # CIRCLED DIGIT ZERO
