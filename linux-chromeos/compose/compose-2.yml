@@ -5705,7 +5705,7 @@
 <dead_greek>                                                                            <multiply> : "⊗" U2297 # CIRCLED TIMES
 <Multi_key><at>                                                                         <multiply> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek>                                                                               <grave> : "⓪" U24EA # CIRCLED DIGIT ZERO
-<Multi_key><at>                                                                            <grave> : "⓪" U24EA # CIRCLED DIGIT ZERO
+#   Multikey conflicts with "ἂ" U1F02, "ἃ" U1F03, "Ἂ" U1F0A, "Ἃ" U1F0B, "ἒ" U1F12, […]     <grave> : "⓪" U24EA # CIRCLED DIGIT ZERO
 <dead_greek>                                                                                   <0> : "⑩" U2469 # CIRCLED NUMBER TEN
 <Multi_key><at>                                                                                <0> : "⑩" U2469 # CIRCLED NUMBER TEN
 <dead_greek>                                                                                <KP_0> : "⑩" U2469 # CIRCLED NUMBER TEN
