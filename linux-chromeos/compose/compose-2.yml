@@ -5655,7 +5655,8 @@
 #
 #   The efficiency of the level-3 Greek or circled dead key is used to likewise
 #   support circled numbers with inverted colors, called negative (referring to
-#   photography), and circled sans-serif numbers.
+#   photography), and circled sans-serif numbers. Unicode has encoded several
+#   font styles in various ranges, listed for reference:
 #
 #   Digits and numbers:
 #
@@ -5670,6 +5671,9 @@
 #       SQUARED:          A ("🄰" U1F130) .. Z ("🅉" U1F149)
 #       NEGATIVE SQUARED: A ("🅰" U1F170) .. Z ("🆉" U1F189)
 #
+#   Among these, most are supported by dead key with multikey equivalent, while
+#   the 21..50 range of circled numbers is supported by multikey only.
+#   See # # CIRCLED_TEEN
 #   See # # CIRCLED_NEGATIVE
 #   See # # CIRCLED_NEGATIVE_TEEN
 #   See # # CIRCLED_SANS
