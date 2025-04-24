@@ -55,6 +55,7 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 	* Corriger des annotations. compose-1.yml [184dcaa](https://github.com/dispoclavier/nouvel-azerty/commit/184dcaae7988e1816792983ec2b0dd4caa61e265), [957f1cf](https://github.com/dispoclavier/nouvel-azerty/commit/957f1cfa73f977f4845a4efd60f92aac10eb4d18), compose-2.yml [15d00ee](https://github.com/dispoclavier/nouvel-azerty/commit/15d00ee4075c1288f7d6d90053f36e2d9bea7668https://github.com/dispoclavier/nouvel-azerty/commit/15d00ee4075c1288f7d6d90053f36e2d9bea7668)
 	* Corriger une annotation avant déplacement. compose-1.yml [24bb803](https://github.com/dispoclavier/nouvel-azerty/commit/24bb8035745d776af9fc13e8ddab1e4fcfff886c)
 	* Mieux regrouper et titrer les annotations. compose-2.yml [9e228d6](https://github.com/dispoclavier/nouvel-azerty/commit/9e228d6709040837da41ed42b6ec3c367339cdff), compose-1.yml [8a2644a](https://github.com/dispoclavier/nouvel-azerty/commit/8a2644a4d96fa60a9e115daacbb6343bf12559df)
+	* Rectifier des annotations. compose-1.yml [a9308e8](https://github.com/dispoclavier/nouvel-azerty/commit/a9308e80b970de8c0d3e6edafcac7a52d14e6196), compose-2.yml [c04e68c](https://github.com/dispoclavier/nouvel-azerty/commit/c04e68cb7be8be8911d379a080d3345e579807d8)
 
 ## 5.0.0 (2025-04-15)
 
