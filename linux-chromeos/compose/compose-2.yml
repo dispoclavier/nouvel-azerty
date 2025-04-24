@@ -5640,17 +5640,17 @@
 #   is based on French AZERTY keycap mnemonics, where semicolon and period are
 #   both on B08, and the dot operator is related to multiplication.
 #
-#   This dead key applies a scheme where zero yields circled number 10. This is
-#   consistent with dead_doubleacute yielding double-circled, and above all, it
-#   accounts for the more frequent use of circled 10 as opposed to circled zero
-#   with its very specialist use (and consistently delayed encoding).
-#   See #*# DOUBLE_ACUTE
+#   Zero yields circled number 10, for usability and consistency with Unicode,
+#   as circled zero "⓪" U24EA, "⓿" U24FF, "🄋" U1F10B, "🄌" U1F10C is so rare
+#   that some items weren’t even encoded in the first place: U24FF was added in
+#   Unicode 4.0, U1F10B and U1F10C were added as late as in Unicode 7.0.
 #
-#   Circled numbers including 10 and the circled 0 are input with a leading "#"
-#   as carrying the number semantics consistently with English usage and keysym
-#   "numbersign", For sideways compatibility with en_US.UTF-8/Compose, multikey
-#   sequences with a leading opening parenthesis are also supported.
-#   See #^# CIRCLED_NUMBER
+#   As a consequence, the base character for circled zero is ASCII grave, with
+#   positional mnemonic based on US-QWERTY’s E00 grave, and with alphabetically
+#   consistent grave on this layout’s key B06, "N" like "null".
+#
+#   For sideways compatibility with en_US.UTF-8/Compose, multikey sequences
+#   with a leading opening parenthesis are also supported.
 #   See #^# Circled by leading parenthesis
 #
 #   The efficiency of the level-3 Greek or circled dead key is used to likewise
@@ -5659,9 +5659,7 @@
 #   See # # CIRCLED_NEGATIVE
 #   See # # CIRCLED_NEGATIVE_NUMBER
 #   See # # CIRCLED_SANS
-#   See # # CIRCLED_SANS_NUMBER
 #   See # # CIRCLED_NEGATIVE_SANS
-#   See # # CIRCLED_NEGATIVE_SANS_NUMBER
 #   See # # SQUARED
 #
 <dead_greek>                                                                               <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
@@ -5706,6 +5704,8 @@
 <Multi_key><at>                                                                        <semicolon> : "⊗" U2297 # CIRCLED TIMES
 <dead_greek>                                                                            <multiply> : "⊗" U2297 # CIRCLED TIMES
 <Multi_key><at>                                                                         <multiply> : "⊗" U2297 # CIRCLED TIMES
+<dead_greek>                                                                               <grave> : "⓪" U24EA # CIRCLED DIGIT ZERO
+<Multi_key><at>                                                                            <grave> : "⓪" U24EA # CIRCLED DIGIT ZERO
 <dead_greek>                                                                                   <0> : "⑩" U2469 # CIRCLED NUMBER TEN
 <Multi_key><at>                                                                                <0> : "⑩" U2469 # CIRCLED NUMBER TEN
 <dead_greek>                                                                                <KP_0> : "⑩" U2469 # CIRCLED NUMBER TEN
@@ -6054,6 +6054,8 @@
 #   platform compatibility.
 #   See # # SQUARED
 #
+<dead_greek><backslash>                                                                    <grave> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
+<Multi_key><at><backslash>                                                                 <grave> : "⓿" U24FF # NEGATIVE CIRCLED DIGIT ZERO
 <dead_greek><backslash>                                                                        <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
 <Multi_key><at><backslash>                                                                     <0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
 <dead_greek><backslash>                                                                     <KP_0> : "❿" U277F # DINGBAT NEGATIVE CIRCLED NUMBER TEN
@@ -6265,6 +6267,8 @@
 #   Also in OGONEK as a shortcut with positional mnemonic.
 #   See #*# OGONEK
 #
+<dead_greek><asciitilde>                                                                   <grave> : "🄋" U1F10B # DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
+<Multi_key><at><asciitilde>                                                                <grave> : "🄋" U1F10B # DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
 <dead_greek><asciitilde>                                                                       <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 <Multi_key><at><asciitilde>                                                                    <0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 <dead_greek><asciitilde>                                                                    <KP_0> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
@@ -6307,24 +6311,6 @@
 <Multi_key><at><asciitilde>                                                                 <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 #
 #
-# # CIRCLED_SANS_NUMBER
-#   dead_greek asciitilde numbersign
-#   Multi_key: ¦@~#
-#   Dchar: 
-#
-#   This only supports 0 and 10, as the only point in having this is to support
-#   "🄋" U1F10B DINGBAT CIRCLED SANS-SERIF DIGIT ZERO.
-#
-<dead_greek><asciitilde><numbersign>                                                           <0> : "🄋" U1F10B # DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
-<Multi_key><at><asciitilde><numbersign>                                                        <0> : "🄋" U1F10B # DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
-<dead_greek><asciitilde><numbersign>                                                        <KP_0> : "🄋" U1F10B # DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
-<Multi_key><at><asciitilde><numbersign>                                                     <KP_0> : "🄋" U1F10B # DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
-<dead_greek><asciitilde><numbersign>                                                           <1> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><asciitilde><numbersign>                                                        <1> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><asciitilde><numbersign>                                                        <KP_1> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><asciitilde><numbersign>                                                     <KP_1> : "➉" U2789 # DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-#
-#
 # # CIRCLED_NEGATIVE_SANS
 #   dead_greek backslash asciitilde
 #   Multi_key: ¦@\~
@@ -6335,6 +6321,8 @@
 #   Also in HOOK_ABOVE as a shortcut.
 #   See #*# HOOK_ABOVE
 #
+<dead_greek><backslash><asciitilde>                                                        <grave> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
+<Multi_key><at><backslash><asciitilde>                                                     <grave> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
 <dead_greek><backslash><asciitilde>                                                            <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <Multi_key><at><backslash><asciitilde>                                                         <0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 <dead_greek><backslash><asciitilde>                                                         <KP_0> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
@@ -6416,33 +6404,6 @@
 <Multi_key><at><asciitilde><backslash>                                                         <9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 <dead_greek><asciitilde><backslash>                                                         <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 <Multi_key><at><asciitilde><backslash>                                                      <KP_9> : "➒" U2792 # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-#
-#
-# # CIRCLED_NEGATIVE_SANS_NUMBER
-#   dead_greek backslash asciitilde numbersign
-#   Multi_key: ¦@\~#
-#   Dchar: 
-#
-#   This only supports 0 and 10, as the only point in having this is to support
-#   "🄌" U1F10C DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-#
-<dead_greek><backslash><asciitilde><numbersign>                                                <0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<Multi_key><at><backslash><asciitilde><numbersign>                                             <0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<dead_greek><backslash><asciitilde><numbersign>                                             <KP_0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<Multi_key><at><backslash><asciitilde><numbersign>                                          <KP_0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<dead_greek><backslash><asciitilde><numbersign>                                                <1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><backslash><asciitilde><numbersign>                                             <1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><backslash><asciitilde><numbersign>                                             <KP_1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><backslash><asciitilde><numbersign>                                          <KP_1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-#
-<dead_greek><asciitilde><backslash><numbersign>                                                <0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<Multi_key><at><asciitilde><backslash><numbersign>                                             <0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<dead_greek><asciitilde><backslash><numbersign>                                             <KP_0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<Multi_key><at><asciitilde><backslash><numbersign>                                          <KP_0> : "🄌" U1F10C # DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-<dead_greek><asciitilde><backslash><numbersign>                                                <1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><asciitilde><backslash><numbersign>                                             <1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<dead_greek><asciitilde><backslash><numbersign>                                             <KP_1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-<Multi_key><at><asciitilde><backslash><numbersign>                                          <KP_1> : "➓" U2793 # DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 #
 #
 # # SQUARED
