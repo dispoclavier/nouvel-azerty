@@ -1506,10 +1506,10 @@
 #
 #^# Circled numbers
 #
-#   The multikey main implementation of circled digits and circled or squared
+#   Another multikey implementation of circled digits and circled or squared
 #   letters are multikey equivalents of "Greek or circled" dead key dead_greek,
 #   because the multikey equivalent of dead_greek is the at sign, due to shape
-#   and since its position on the ASCII symbol map is D06, where AZERTY has the
+#   and since its position is D06, both on levels 4 and 3, where AZERTY has the
 #   Y key, that French calls "Greek I" ("i grec"). Extending dead_greek to also
 #   support circled is convenient, as Greek does not have dedicated digits.
 #   See #*# GREEK
