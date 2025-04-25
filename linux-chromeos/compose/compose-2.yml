@@ -2391,7 +2391,7 @@
 #   Multikey does not work the way UEFD1-dead_breve-UEFD5, because the multikey
 #   equivalents of <UEFD1><dead_breve><UEFD5> and <UEFD1><parenright> conflict,
 #   and the superscript parentheses have precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><asciicircum><percent><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
@@ -2627,7 +2627,7 @@
 #   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
 #   superscript minus sign has precedence.
 #   See # # SUPERSCRIPT&BAR
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><UEFD6><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -2656,7 +2656,7 @@
 #   the superscript minus sign has precedence.
 #   See # # SUPERSCRIPT&REVERSED&BAR
 #   See # # SUPERSCRIPT&BAR
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><UEFD6><UEFD8>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -3233,7 +3233,7 @@
 #   Multikey does not work the way UEFD1-dead_breve-UEFD4, because the multikey
 #   equivalents of <UEFD1><dead_breve><UEFD4> and <UEFD1><parenright> conflict,
 #   and the superscript parentheses have precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><braceright><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
@@ -3302,7 +3302,7 @@
 #   Multikey does not work the way UEFD1-dead_breve, because the multikey
 #   equivalents of <UEFD1><dead_breve> and <UEFD1><parenright> conflict, and
 #   the superscript parentheses have precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><dead_breve>                                                                            <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 #   Multikey conflicts with "⁾" U207E.                                                         <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
@@ -3321,7 +3321,7 @@
 #   Multikey does not work the way UEFD1-UEFD8, because the multikey
 #   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
 #   superscript minus sign has precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><UEFD8>                                                                                 <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
 #   Multikey conflicts with "⁻" U207B.                                                         <B> : "ᴯ" U1D2F # MODIFIER LETTER CAPITAL BARRED B
@@ -3364,7 +3364,7 @@
 #   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
 #   superscript minus sign has precedence.
 #   See # # SUPERSCRIPT&BAR
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD1><UEFD8>                                                                          <UEFD0><q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 #   Multikey conflicts with "⁻" U207B.                                             <numbersign><q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
@@ -3489,7 +3489,7 @@
 #   Multikey does not work the way UEFD1-dead_breve-UEFD2 because the multikey
 #   equivalents of <UEFD1><dead_breve><UEFD2> and <UEFD1><parenright> conflict,
 #   and the superscript parentheses have precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 #   Multikey does not work the way UEFD2-dead_breve-UEFD1 either, because the
 #   multikey equivalents of <UEFD2><dead_breve><UEFD1> and <UEFD2><parenright>
@@ -3521,7 +3521,7 @@
 #   equivalents of <UEFD1><UEFD8> and <UEFD1><minus> conflict, and the
 #   superscript minus sign has precedence.
 #   See # # SUPERSCRIPT&BAR
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 #   Multikey does not work the way UEFD2-UEFD8-UEFD1 either, because the
 #   multikey equivalents of <UEFD2><UEFD8> and <UEFD2><minus> conflict, and
@@ -11326,7 +11326,7 @@
 #   Multikey does not work the way UEFD2-dead_breve, because the multikey
 #   equivalents of <UEFD2><dead_breve> and <UEFD2><parenright> conflict, and
 #   the subscript parentheses have precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD2><dead_breve>                                                                            <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
 #   Multikey conflicts with "₎" U208E.                                                         <L> : "𝼄" U1DF04 # LATIN LETTER SMALL CAPITAL L WITH BELT
@@ -11340,7 +11340,7 @@
 #   Multikey does not work the way UEFD2-UEFD8, because the multikey
 #   equivalents of <UEFD2><UEFD8> and <UEFD2><minus> conflict, and the
 #   subscript minus sign has precedence.
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <UEFD2><UEFD8>                                                                                 <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
 #   Multikey conflicts with "₋" U208B.                                                         <B> : "ᴃ" U1D03 # LATIN LETTER SMALL CAPITAL BARRED B
@@ -12090,6 +12090,7 @@
 #
 #   Order matters when U/u is the base letter, for "Ṻ" U1E7A, "ṻ" U1E7B.
 #   See # # DIAERESIS&MACRON
+#   See # # Input order of mixed dead keys
 #
 <dead_macron><dead_diaeresis>                                                                  <U> : "Ṻ" U1E7A # LATIN CAPITAL LETTER U WITH MACRON AND DIAERESIS
 <Multi_key><bar><colon>                                                                        <U> : "Ṻ" U1E7A # LATIN CAPITAL LETTER U WITH MACRON AND DIAERESIS
@@ -13470,7 +13471,7 @@
 #   Multikey does not work the way dead_circumflex-dead_acute so as to prevent
 #   conflicts with "‘" U2018.
 #   See # # Quotation mark input method
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <dead_circumflex><dead_acute>                                                                  <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
 #   Multikey conflicts with "‘" U2018.                                                         <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
@@ -16400,7 +16401,7 @@
 #   Multikey does not work the way dead_diaeresis-dead_acute so as to prevent
 #   conflicts with "‚" U201A.
 #   See # # Quotation mark input method
-#   See # # Input order of mixed dead keys
+#   See # # Multikey equivalents
 #
 <dead_diaeresis><dead_acute>                                                                   <I> : "Ḯ" U1E2E # LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
 #   Multikey conflicts with "‚" U201A.                                                         <I> : "Ḯ" U1E2E # LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
@@ -16425,6 +16426,7 @@
 #
 #   Order matters when U/u is the base letter, for "Ǖ" U01D5, "ǖ" U01D6.
 #   See # # MACRON&DIAERESIS
+#   See # # Input order of mixed dead keys
 #
 <dead_diaeresis><dead_macron>                                                                  <A> : "Ǟ" U01DE # LATIN CAPITAL LETTER A WITH DIAERESIS AND MACRON
 <Multi_key><colon><bar>                                                                        <A> : "Ǟ" U01DE # LATIN CAPITAL LETTER A WITH DIAERESIS AND MACRON
