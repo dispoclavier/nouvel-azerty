@@ -1,4 +1,4 @@
-//                       Date: 2025-04-18T0212+0200
+//                       Date: 2025-04-27T1902+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -888,7 +888,7 @@ xkb_symbols "kbfrFRs" {
 	// The two emoji-related variation selectors are in group 10 on key E, D03,
 	// for emoji style, VS16 UFE0F, and on key T, D05, for text style, VS15 UFE0E.
 	//
-	// Emoji full list:
+	// Full list:
 	// https://unicode.org/emoji/charts/full-emoji-list.html
 	//
 	// Source list:
@@ -897,7 +897,7 @@ xkb_symbols "kbfrFRs" {
 	// Specification:
 	// https://unicode.org/reports/tr51/
 	//
-	// Emoji frequency figures are based on:
+	// Frequency:
 	// https://home.unicode.org/emoji/emoji-frequency/
 	// https://www.futurity.org/emoji-countries-1328712-2-2/
 	//
