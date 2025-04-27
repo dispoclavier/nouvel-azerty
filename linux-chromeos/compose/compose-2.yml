@@ -10307,17 +10307,17 @@
 #   WITH STROKE, and so makes a good point for support in this double press bar
 #   virtual dead key.
 #
-#   "–" U2013 EN DASH is supported in this double bar dead key for sideways
-#   compatibility with en_US.UTF-8/Compose, that has this multikey sequence for
-#   it: <Multi_key><minus><minus><period>.
+#   "–" U2013 EN DASH is supported in this double bar virtual dead key, with
+#   period as a base character, for sideways compatibility with the sequence in
+#   en_US.UTF-8/Compose: <Multi_key><minus><minus><period>.
 #   See #^# HIGH_BAR
-#   See #^# Punctuation and proofreading
+#   See # # Dashes and hyphens
 #
-#   Budu uses MODIFIER LETTER SHORT EQUALS SIGN "꞊" UA78A as a tone letter, but
-#   in this virtual dead key, UA78A is picked to fill the modifier letter slot
-#   due to its “double” semantics. Additionally, UA78A matches its single press
-#   counterpart "˗" U02D7 MODIFIER LETTER MINUS SIGN, while "˭" U02ED MODIFIER
-#   LETTER UNASPIRATED is in *dead_flag.
+#   Budu uses MODIFIER LETTER SHORT EQUALS SIGN "꞊" UA78A as a tone letter, and
+#   this is picked here to fill the modifier letter slot, due to its “double”
+#   semantics. Additionally, with respect to vertical alignment, UA78A matches
+#   its single press counterpart "˗" U02D7 MODIFIER LETTER MINUS SIGN, while
+#   "˭" U02ED MODIFIER LETTER UNASPIRATED is in *dead_flag.
 #   See #*# BAR
 #   See #*# FLAG
 #
