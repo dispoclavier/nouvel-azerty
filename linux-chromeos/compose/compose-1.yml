@@ -70,7 +70,7 @@
 #                                      Prepending instead of appending breaks U1E7A and U1E7B,
 #                                      that need to override U01D5 and U01D6 as defined in
 #                                      en_US.UTF-8/Compose. The same holds true for "V́", "v́"
-#                                      overriding legacy sequences for U01D7 and U01D8.
+#                                      overriding en_US.UTF-8/Compose for U01D7 and U01D8.
 #
 #                                B. User level, with Compose in the $HOME directory:
 #                                   1. Back up the file ~/.XCompose.
@@ -1946,7 +1946,7 @@
 #   apostrophe live key. The equivalent with ASCII apostrophe would conflict
 #   with "ń" U0144 LATIN SMALL LETTER N WITH ACUTE.
 #
-#   Unicode states that this character is deprecated and its use is strongly
+#   Unicode warns that this character is deprecated and its use is strongly
 #   discouraged. It was encoded as a legacy compatibility character for
 #   ISO/IEC 6937.
 #   https://www.unicode.org/Public/15.0.0/ucd/NamesList.txt:1130
@@ -1987,12 +1987,25 @@
 #
 #^# Punctuation and proofreading
 #
+# # Question and exclamation
+#
+#   Turned Spanish punctuation is supported in en_US.UTF-8/Compose by the most
+#   straightforward multikey sequences, using duplication throughout, thanks to
+#   limiting dead_belowdot to single press.
+#
 <Multi_key><question><question>                                                                    : "¿" U00BF # INVERTED QUESTION MARK
 #
-#   Needs triple, else would conflict with descender, low vertical line:
+#   As dead_belowdot double press is used to virtualize dead_belowverticalline,
+#   the sequence for "¡" U00A1 cannot be fully sideways compatible and needs to
+#   be extended using triplication instead.
+#   See #^# VERTICAL_LINE_BELOW
+#
 <Multi_key><exclam><exclam><exclam>                                                                : "¡" U00A1 # INVERTED EXCLAMATION MARK
 #
-#   Reverse order wrt en_US.UTF-8/Compose to adjust UX to AZERTY:
+#   The interrobang could be fully sideways compatible with en_US.UTF-8/Compose
+#   if not taking into account that French AZERTY maps question and exclam the
+#   other way around with respect to US-QWERTY. Hence the need to adjust UX.
+#
 <Multi_key><question><exclam>                                                                      : "‽" U203D # INTERROBANG
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
 #
@@ -2049,7 +2062,7 @@
 #   See dispocla.cpp key <AD11>
 #   See dispocla.cpp key <AD12>
 #
-#   Also, multikey sequences for these (along the lines of en_US.UTF-8/Compose)
+#   Also, the related multikey sequences provided in en_US.UTF-8/Compose
 #   conflict with sequences for mathematical symbols and with dead key multikey
 #   equivalents.
 #   See #*# SUPERSCRIPT
@@ -2067,9 +2080,12 @@
 #
 <Multi_key><period><asciicircum>                                                                   : "·" U00B7 # MIDDLE DOT
 #
-#   "•" U2022 BULLET has now multiple input methods, while its legacy sequence
+#   "•" U2022 BULLET has now multiple input methods, while en_US.UTF-8/Compose
 #   <Multi_key><period><equal> conflicts with many math symbols, and reverse
-#   <Multi_key><equal><period> conflicts with "⩦" U2A66.
+#   <Multi_key><equal><period> conflicts with "⩦" U2A66. As a consequence,
+#   sideways compatibility with en_US.UTF-8/Compose providing the mnemonic
+#   <Multi_key><period><minus> ("·" U00B7) and <Multi_key><period><equal>
+#   ("•" U2022) sequences cannot be maintained throughout.
 #   See #^# Bullets
 #   See # # C07 underscore
 #
@@ -2555,7 +2571,7 @@
 #
 #^# Per mille and per myriad
 #
-#   The legacy sequence <Multi_key><percent><o> conflicts with "ᴑ" U1D11, so it
+#   en_US.UTF-8/Compose <Multi_key><percent><o> conflicts with "ᴑ" U1D11, so it
 #   cannot be supported. To compensate this loss, new sequences involving zeros
 #   are added, additionally to the support in groups 11 and 12 of "%".
 #   See # # D02 percent
@@ -2572,11 +2588,12 @@
 #   and on level 5 as part of the level-5 numpad.
 #   See dispocla.cpp ## Level-5 numpad
 #
-#   By contrast, the degree sign’s legacy multikey sequence <Multi_key><o><o>
-#   as in en_US.UTF-8/Compose cannot be supported, since it is required for "ꝏ"
-#   UA74F LATIN SMALL LETTER OO. To compensate this loss, "°" U00B0 has support
-#   in dead_abovering on the pattern <Multi_key><asterisk><0> with the dead key
-#   working as a de facto shortcut: <dead_abovering><0>.
+#   By contrast, the degree sign’s en_US.UTF-8/Compose <Multi_key><o><o> cannot
+#   be supported, since it is required for "ꝏ" UA74F LATIN SMALL LETTER OO.
+#
+#   To compensate this loss, "°" U00B0 has support in dead_abovering on the
+#   pattern <Multi_key><asterisk><0> with the dead key working as a de facto
+#   shortcut: <dead_abovering><0>.
 #   See #*# RING_ABOVE
 #
 #
