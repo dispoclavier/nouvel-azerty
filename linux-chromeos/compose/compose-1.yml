@@ -854,12 +854,14 @@
 #
 #   START_MULTIKEY
 #
+#
 ### Multikey sequences
 #
-#   The described behavior of XCompose is based on en_US.UTF-8/Compose,
-#   as it is used in France.
+#   In this file, the reference for XCompose sequences is en_US.UTF-8/Compose,
+#   as it is used — and has been designed — in France.
 #
-#   The maximum number of keysyms is nine. Longer sequences are ignored.
+#   The maximum number of keysyms is nine. Any longer sequences are going to be
+#   ignored by the compiler.
 #
 #   Anyway, brevity is key, to that extent that non-critical elements are cut
 #   off, resulting in truncated sequences that may be counter-intuitive but are
@@ -2002,9 +2004,23 @@
 #
 <Multi_key><exclam><exclam><exclam>                                                                : "¡" U00A1 # INVERTED EXCLAMATION MARK
 #
-#   The interrobang could be fully sideways compatible with en_US.UTF-8/Compose
-#   if not taking into account that French AZERTY maps question and exclam the
-#   other way around with respect to US-QWERTY. Hence the need to adjust UX.
+#   Both however are only a fallback, as these are supported in symbol group 1,
+#   with the unspaced upright marks as base characters. Still in group 1, the
+#   spaced-out exclamation mark UEF60 and the spaced-out question mark UEF63
+#   are also supported as base characters for this turned punctuation.
+#   See # # B07-level3 question
+#   See # # B08-level3 exclam
+#   See # # Turned punctuation marks for Spanish
+#   See # # Punctuation spacing for French, regular with U202F NBTSP
+#
+#
+#   Interrobang
+#
+#   Supported only here by multikey, the interrobang could be fully sideways
+#   compatible with en_US.UTF-8/Compose, if not taking into account that French
+#   AZERTY maps the question and exclamation marks the other way around with
+#   respect to US-QWERTY. Hence the need to adjust the input order to the map
+#   parsed from left to right, for a consistent user experience.
 #
 <Multi_key><question><exclam>                                                                      : "‽" U203D # INTERROBANG
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
@@ -3838,8 +3854,20 @@
 <Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
 <Multi_key><C><M>                                                                                  : "⎄" U2384 # COMPOSITION SYMBOL
 #
-#   The broken bar "¦" U00A6, repurposed as multikey symbol, may be input by
-#   case insensitive « ¦mul ».
+#   The broken bar "¦" U00A6 is repurposed as multikey symbol, and consistently
+#   it is the dead character of Multi_key. As a consequence, it is expected to
+#   be input by hitting the space bar right after the dead key, applying the
+#   legacy scheme still maintained for dead_currency, albeit not for
+#   diacritical dead keys. Yet that conflicts with leading space as part of
+#   many sequences for math symbols. However, given that Multi_key double press
+#   is not used, this is supported as an alternative means to input "¦" U00A6.
+#   See #*# CURRENCY
+#   See # # Combining diacritics
+#   See #   Leading space
+#
+<Multi_key><Multi_key>                                                                             : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#
+#   Another option is case insensitive « ¦mul ».
 #
 <Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
@@ -5427,7 +5455,7 @@
 #   In group 4 of "("                                                                              : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                             <space> : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                      <nobreakspace> : "∆" U2206 # INCREMENT
-#   In #*# GREEK by W                                                                              : "∇" U2207 # NABLA
+#   In #*# GREEK                                                                                   : "∇" U2207 # NABLA
 #   In group 5 of "("                                                                              : "∇" U2207 # NABLA
 <Multi_key><D><percent>                                                                            : "∇" U2207 # NABLA
 #
@@ -6295,10 +6323,12 @@
 <Multi_key><space><period><e>                                                       <nobreakspace> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><nobreakspace><period><e>                                                       <space> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><nobreakspace><period><e>                                                <nobreakspace> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
+#   In #*# MACRON                                                                                  : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
 <Multi_key><space><underscore><e>                                                          <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
 <Multi_key><space><underscore><e>                                                   <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e>                                                   <space> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e>                                            <nobreakspace> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+#   In #*# MACRON                                                                                  : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
 <Multi_key><space><underscore><e><comma>                                                           : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><comma>                                                    : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
 <Multi_key><e><underscore>                                                                 <space> : "⋸" U22F8 # ELEMENT OF WITH UNDERBAR
@@ -6325,6 +6355,7 @@
 <Multi_key><space><bar><e><backslash><comma>                                        <nobreakspace> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><e><comma>                                                <space> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><e><comma>                                         <nobreakspace> : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+#   In #*# MACRON                                                                                  : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><p>                                                          <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><p>                                                   <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><p>                                                   <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
@@ -6333,6 +6364,7 @@
 <Multi_key><space><underscore><e><backslash>                                        <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><backslash>                                        <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><backslash>                                 <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+#   In #*# MACRON                                                                                  : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><p><comma>                                                           : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><p><comma>                                                    : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><e><backslash><comma>                                                : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
@@ -7233,7 +7265,9 @@
 <Multi_key><less><minus><period>                                                                   : "⥃" U2943 # LEFTWARDS ARROW ABOVE SHORT RIGHTWARDS ARROW
 #Multi_key><period><greater><less><minus>                                                          : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
 <Multi_key><period><greater><less>                                                                 : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
+#   In #*# HORN                                                                                    : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><minus><greater><plus>                                                                  : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
+#   In #*# HORN                                                                                    : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><plus>                                                                     : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
 #   Mirror is U2B3E.
 #Multi_key><x><minus><greater>                                                                     : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
@@ -7546,8 +7580,10 @@
 <Multi_key><space><less><minus><O><slash>                                           <nobreakspace> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
 <Multi_key><nobreakspace><less><minus><O><slash>                                           <space> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
 <Multi_key><nobreakspace><less><minus><O><slash>                                    <nobreakspace> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
+#   In #*# BAR                                                                                     : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><minus>                                                                      <space> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><minus>                                                               <nobreakspace> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
+#   In #*# GREEK                                                                                   : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                        <space> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                 <nobreakspace> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar><bar>                                                                           : "⦷" U29B7 # CIRCLED PARALLEL
@@ -7956,7 +7992,7 @@
 <Multi_key><z><KP_1>                                                                       <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 #   In #*# RING_ABOVE                                                                              : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
-#Multi_key><asterisk><plus> is in dead_abovering and is symmetricised by this (not in #*# HORN).   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+#Multi_key><asterisk><plus> is in dead_abovering and is symmetrized by this (not in #*# HORN).     : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><plus><asterisk>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #Multi_key><o><asciicircum><plus>                                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><o><asciicircum>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
@@ -7964,9 +8000,8 @@
 <Multi_key><nobreakspace><space><o><plus>                                                          : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><nobreakspace><nobreakspace><o><plus>                                                   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #   In #*# CIRCUMFLEX                                                                              : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-#Multi_key><asciicircum><plus> conflicts with "⁺" U207A.                                           : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-#Multi_key><less><plus> is in dead_circumflex and is symmetricised by this (not in #*# HORN).      : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-<Multi_key><plus><less>                                                                            : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+#   For intuitivity, <Multi_key><asciicircum><plus> is supported here.                             : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<Multi_key><asciicircum><plus>                                                                     : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 #   In #*# TILDE                                                                                   : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 #   See "⨦" U2A26                                                                                  : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
@@ -8085,10 +8120,12 @@
 <Multi_key><n><period>                                                              <nobreakspace> : "⩀" U2A40 # INTERSECTION WITH DOT
 <Multi_key><u><minus>                                                                      <space> : "⩁" U2A41 # UNION WITH MINUS SIGN
 <Multi_key><u><minus>                                                               <nobreakspace> : "⩁" U2A41 # UNION WITH MINUS SIGN
+#   In #*# MACRON                                                                                  : "⩂" U2A42 # UNION WITH OVERBAR
 <Multi_key><space><minus><u>                                                               <space> : "⩂" U2A42 # UNION WITH OVERBAR
 <Multi_key><space><minus><u>                                                        <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
 <Multi_key><nobreakspace><minus><u>                                                        <space> : "⩂" U2A42 # UNION WITH OVERBAR
 <Multi_key><nobreakspace><minus><u>                                                 <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
+#   In #*# MACRON                                                                                  : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><space><minus><n>                                                               <space> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><space><minus><n>                                                        <nobreakspace> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><nobreakspace><minus><n>                                                        <space> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
@@ -8907,8 +8944,8 @@
 #
 #
 #   END_MATH
-#
 #   START_GREEK
+#
 #
 ### Greek with diacritics
 #
@@ -8922,11 +8959,12 @@
 #   dead key output.
 #   https://www.unicode.org/faq/greek.html
 #
-#   As a consequence, dead keys for Latin diacritics are extended consistently
+#   As a consequence, dead keys for Latin diacritics are extended consistently,
 #   except that for mnemonics, dead_invertedbreve and dead_breve stand for the
-#   dasia and psili aspiration marks, instead of the latter for breve length,
-#   so that the few occurrences of precomposed vrachy are in dead_caron, with
-#   the mnemonic upside of being mapped on the V key.
+#   dasia and psili aspiration marks, instead of the latter for breve length.
+#   The few occurrences of precomposed vrachy are in dead_caron, with the
+#   mnemonic upside that the mapping of dead_caron on the V key also matches
+#   the initial of vrachy.
 #   See # # Dead key layout overview
 #   See # # Order of dead key lists
 #
@@ -8941,12 +8979,16 @@
 #       dead_breve              psili
 #       dead_belowdot           ypogegrammeni/prosgegrammeni
 #
-#   Monotonic Greek is primarily not supported. If tonos is required, it can be
-#   emulated using oxia instead, as since 1986, acute is the official tonos.
+#   Monotonic Greek is supported as a part of polytonic Greek, because tonos
+#   can be emulated using oxia instead, as since 1986, acute is the official
+#   tonos.
 #   https://www.opoudjis.net/unicode/unicode_gkbkgd.html#oxia
 #
-#   For any eventuality, tonos is in dead_doubleacute, on the "E" key D03,
-#   with alphabetic mnemonic based on the Greek initial of Elliniká,
+#   However, for any eventuality, tonos as such is also supported, using
+#   dead_doubleacute, on the "E" key D03, with additional alphabetic mnemonic
+#   based on the initial of Elliniká:
+#
+#       dead_doubleacute        tonos
 #
 #
 # # GREEK&DOUBLEACUTE
