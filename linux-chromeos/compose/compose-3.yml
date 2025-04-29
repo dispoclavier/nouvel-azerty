@@ -108,10 +108,9 @@
 #
 # # Maintenance
 #
-#   Filling empty slots with null output "" U0000 can be avoided. The "" U0000
-#   strings have been removed for ease of maintenance on 2023-01-13T1356+0100.
+#   Filling empty slots with null output "" U0000 can be avoided for ease of
+#   maintenance.
 #   See # # Notes for maintenance
-#
 #
 #
 ### Space and symbol groups
@@ -390,7 +389,7 @@
 #   Since quotedbl is mapped on the E key in order to be replaced with EuroSign
 #   for compliance with the related recommendation from the European Commission
 #   to map € on AltGr + E, EuroSign works as a base character as well.
-#   See dispocla.cpp // ## Note about EURO SIGN
+#   See dispocla.cpp ## Note about EURO SIGN
 #
 #   "〃" U3003 DITTO MARK is also used in Western contexts.
 #   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
@@ -748,59 +747,110 @@
 #
 # # D07 apostrophe
 #
+#   For a straightforward user experience, rightsinglequotemark is synced with
+#   apostrophe so as to work as an alias throughout, as done for math symbols.
+#   See #   Alternative keysyms
+#
 #   Letter apostrophe "ʼ" U02BC, used in Breton, is here in group 1 of
-#   apostrophe as well as in group 1 of rightsinglequotemark.
+#   apostrophe and rightsinglequotemark.
 #   See # # B06 grave
-#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 <UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD0><UEFD0>                                                                        <apostrophe> : "⊂" U2282 # SUBSET OF math
 <Multi_key><numbersign><numbersign>                                                   <apostrophe> : "⊂" U2282 # SUBSET OF math
+<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "⊂" U2282 # SUBSET OF math
+<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "⊂" U2282 # SUBSET OF math
 <UEFD0><3>                                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><3>                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF math
+<UEFD0><3>                                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
+<Multi_key><numbersign><3>                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><KP_3>                                                                         <apostrophe> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><KP_3>                                                         <apostrophe> : "⊃" U2283 # SUPERSET OF math
+<UEFD0><KP_3>                                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
+<Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><UEFD0><UEFD0>                                                                 <apostrophe> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><numbersign><numbersign>                                       <apostrophe> : "⊃" U2283 # SUPERSET OF math
+<UEFD0><UEFD0><UEFD0>                                                       <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
+<Multi_key><numbersign><numbersign><numbersign>                             <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><4>                                                                            <apostrophe> : "∪" U222A # UNION math
 <Multi_key><numbersign><4>                                                            <apostrophe> : "∪" U222A # UNION math
+<UEFD0><4>                                                                  <rightsinglequotemark> : "∪" U222A # UNION math
+<Multi_key><numbersign><4>                                                  <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><KP_4>                                                                         <apostrophe> : "∪" U222A # UNION math
 <Multi_key><numbersign><KP_4>                                                         <apostrophe> : "∪" U222A # UNION math
+<UEFD0><KP_4>                                                               <rightsinglequotemark> : "∪" U222A # UNION math
+<Multi_key><numbersign><KP_4>                                               <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                          <apostrophe> : "∪" U222A # UNION math
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                           <apostrophe> : "∪" U222A # UNION math
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                <rightsinglequotemark> : "∪" U222A # UNION math
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                 <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><5>                                                                            <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <Multi_key><numbersign><5>                                                            <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
+<UEFD0><5>                                                                  <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
+<Multi_key><numbersign><5>                                                  <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <UEFD0><KP_5>                                                                         <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <Multi_key><numbersign><KP_5>                                                         <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
+<UEFD0><KP_5>                                                               <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
+<Multi_key><numbersign><KP_5>                                               <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <UEFD0><6>                                                                            <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <Multi_key><numbersign><6>                                                            <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
+<UEFD0><6>                                                                  <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
+<Multi_key><numbersign><6>                                                  <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <UEFD0><KP_6>                                                                         <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <Multi_key><numbersign><KP_6>                                                         <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
+<UEFD0><KP_6>                                                               <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
+<Multi_key><numbersign><KP_6>                                               <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <UEFD0><7>                                                                            <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><7>                                                            <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
+<UEFD0><7>                                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
+<Multi_key><numbersign><7>                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><KP_7>                                                                         <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><KP_7>                                                         <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
+<UEFD0><KP_7>                                                               <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
+<Multi_key><numbersign><KP_7>                                               <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><8>                                                                            <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><8>                                                            <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
+<UEFD0><8>                                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
+<Multi_key><numbersign><8>                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><KP_8>                                                                         <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><KP_8>                                                         <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
+<UEFD0><KP_8>                                                               <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
+<Multi_key><numbersign><KP_8>                                               <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><9>                                                                            <apostrophe> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><9>                                                            <apostrophe> : "♎" U264E # LIBRA emoji
+<UEFD0><9>                                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
+<Multi_key><numbersign><9>                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><KP_9>                                                                         <apostrophe> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><KP_9>                                                         <apostrophe> : "♎" U264E # LIBRA emoji
+<UEFD0><KP_9>                                                               <rightsinglequotemark> : "♎" U264E # LIBRA emoji
+<Multi_key><numbersign><KP_9>                                               <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><0>                                                                            <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <Multi_key><numbersign><0>                                                            <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
+<UEFD0><0>                                                                  <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
+<Multi_key><numbersign><0>                                                  <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <UEFD0><KP_0>                                                                         <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <Multi_key><numbersign><KP_0>                                                         <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
+<UEFD0><KP_0>                                                               <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
+<Multi_key><numbersign><KP_0>                                               <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <UEFD0><1>                                                                            <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key><numbersign><1>                                                            <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><1>                                                                  <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><1>                                                  <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <UEFD0><KP_1>                                                                         <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key><numbersign><KP_1>                                                         <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><KP_1>                                                               <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><KP_1>                                               <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <UEFD0><2>                                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><2>                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><2>                                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><2>                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <UEFD0><KP_2>                                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><KP_2>                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><KP_2>                                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><KP_2>                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 #
 #
 # # D08 braceleft
@@ -1912,7 +1962,6 @@
 #   for an similar user experience as for "ʼ" U02BC in group 1 of apostrophe.
 #   See #*# CIRCUMFLEX
 #   See # # D07 apostrophe
-#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 #   The "❄" U2744 emoji, previously in group 7, with French alphabetic mnemonic
 #   based on "neige" and this key’s letter "N", was removed due to repurposing.
@@ -2538,7 +2587,6 @@
 <Multi_key><numbersign><2>                                                          <nobreakspace> : "　" U3000 # IDEOGRAPHIC SPACE
 <UEFD0><KP_2>                                                                       <nobreakspace> : "　" U3000 # IDEOGRAPHIC SPACE
 <Multi_key><numbersign><KP_2>                                                       <nobreakspace> : "　" U3000 # IDEOGRAPHIC SPACE
-#
 #
 #
 ### Letter groups
