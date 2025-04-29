@@ -1695,8 +1695,9 @@
 #   The multikey equivalent of "⁻" U207B conflicts with "ᴯ" U1D2F, "ᶤ" U1DA4,
 #   "ᶧ" U1DA7, "ᶱ" U1DB1, "ᶶ" U1DB6, "ꟸ" UA7F8, "𐞕" U10795, "𐞳" U107B3 and
 #   "𐞴" U107B4, but this can be worked around by typing it the other way around
-#   instead. The same holds true for "⁾" U207E conflicting with "𐞛" U1079B,
-#   "𐞜" U1079C, "𐞝" U1079D, "𐞡" U107A1.
+#   instead. The same holds true for "⁺" U207A conflicting with "⨣" U2A23, and
+#   for "⁾" U207E conflicting with "𐞛" U1079B, "𐞜" U1079C, "𐞝" U1079D,
+#   "𐞡" U107A1.
 #   See # # Superscript or subscript signs, symbol, punctuation
 #
 <UEFD1>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
@@ -1722,7 +1723,7 @@
 <UEFD1>                                                                                    <minus> : "⁻" U207B # SUPERSCRIPT MINUS
 #   Multikey conflicts with "ᴯ" U1D2F, "ᶤ" U1DA4, "ᶧ" U1DA7, "ᶱ" U1DB1, "ᶶ" U1DB6, […]     <minus> : "⁻" U207B # SUPERSCRIPT MINUS
 <UEFD1>                                                                                     <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
-<Multi_key><asciicircum>                                                                    <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
+#   Multikey conflicts with "⨣" U2A23.                                                      <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
 <UEFD1>                                                                                 <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><asciicircum>                                                                <asterisk> : "⁂" U2042 # ASTERISM
 <UEFD1>                                                                                     <less> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
@@ -5547,18 +5548,17 @@
 #   The Greek dead key is mapped on D06 "Y" with a mnemonic based on 'Greek I',
 #   translating its French name: "i grec". As an exception to the rule that the
 #   dead keys on alphabetic keys are on level 4, the Greek dead key is both on
-#   the level 4 position and on the level 3 position, given that its multikey
-#   equivalent "@" has a stable level-1 position on E11, i.e. both in French
-#   mode and in ASCII mode, unlike slash, backslash, apostrophe and quotedbl.
+#   level 4 and on level 3, given that its multikey equivalent "@" has a stable
+#   level-1 position on E11 both in French mode and in ASCII mode.
 #
-#   This ease of access is consistent with its potentially heavy use, both for
-#   Greek letters and for circled digits, letters and symbols.
+#   This ease of access is consistent with dead_greek’s potentially heavy use
+#   for Greek letters and for circled digits, letters and symbols alike.
 #
-#   Group 6 provides an alternative input method for Greek letters.
+#   For Greek letters, group 6 provides an alternative input method.
 #   See #+# GROUP_6
 #
-#   The map for Greek letters to Latin letters conforms to ISO/IEC 9995-9, that
-#   is consistent with the Greek keyboard layout.
+#   The Greek-to-Latin map conforms to ISO/IEC 9995-9 consistent with the Greek
+#   keyboard layout.
 #
 #   When dead_greek was designed and added to en_US.UTF-8/Compose far ahead of
 #   ISO/IEC 9995-9, mappings were not yet synced with the Greek keyboard. That
@@ -5678,6 +5678,8 @@
 <Multi_key><at>                                                                           <endash> : "⊝" U229D # CIRCLED DASH
 <dead_greek>                                                                              <emdash> : "⊝" U229D # CIRCLED DASH
 <Multi_key><at>                                                                           <emdash> : "⊝" U229D # CIRCLED DASH
+<dead_greek>                                                                                 <bar> : "⦶" U29B6 # CIRCLED VERTICAL BAR
+#   Multikey conflicts with "¯" U00AF, "ˉ" U02C9, "̄" U0304, "ᾱ" U1FB1, "Ᾱ" U1FB9, […]        <bar> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <dead_greek>                                                                               <slash> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <Multi_key><at>                                                                            <slash> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <dead_greek>                                                                            <asterisk> : "⊛" U229B # CIRCLED ASTERISK OPERATOR
@@ -8448,18 +8450,15 @@
 #   See #*# CIRCUMFLEX
 #   See #*# TURNED
 #
-#   Additionally, "ʻ" U02BB is in group 2 of rightsinglequotemark.
 #
-<UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+# # Turned punctuation marks for Spanish
 #
-#
-# # Turned punctuation characters for Spanish
-#
-#   This is in group 1 with the spaced-out punctuation marks UEF60 and UEF63.
-#   With the unspaced upright marks, the sequences are in the symbol groups.
+#   These are primarily supported in the symbol group 1 with the unspaced
+#   upright marks as base characters. However, as these punctuation marks are
+#   supported on live keys not only in isolation, but also with regular French
+#   spacing, these spaced-out punctuation marks UEF60 and UEF63 are supported
+#   as base characters alongside.
+#   See # # Punctuation spacing for French, regular with U202F NBTSP
 #   See # # B07-level3 question
 #   See # # B08-level3 exclam
 #
@@ -10084,6 +10083,11 @@
 #   convenient, since it is not the superscript minus sign, despite being named
 #   a MODIFIER LETTER.
 #
+#   For consistency with other dead keys supporting diacriticized math symbols,
+#   braceright yields "⦵" U29B5, with mnemonics based on "∅" U2205 in group 2
+#   of braceright.
+#   See # # D09 braceright
+#
 <UEFD8>                                                                                    <space> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <Multi_key><minus>                                                                         <space> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <UEFD8>                                                                                    <U200B> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
@@ -10096,6 +10100,8 @@
 <Multi_key><minus>                                                                      <quotedbl> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 <UEFD8>                                                                                 <EuroSign> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 <Multi_key><minus>                                                                      <EuroSign> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<UEFD8>                                                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
+#   Multikey conflicts with "𝼚" U1DF1A.                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <UEFD8>                                                                              <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <UEFD8>                                                                             <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
@@ -10491,7 +10497,7 @@
 #
 #
 #*# HORN
-#   horn; descender; notch
+#   horn, notch, descender
 #   dead_horn
 #   Multi_key: ¦+
 #   Dchar: "ơ" U01A1
@@ -10541,6 +10547,10 @@
 #   See #*# STROKE
 #   See #*# BAR
 #
+#   For consistency with other dead keys supporting diacriticized math symbols,
+#   and with mnemonics based on dead_horn’s multikey equivalent, less yields
+#   "⥆" U2946, and greater yields "⥅" U2945.
+#
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
 <dead_horn>                                                                                <U200B> : "̛" U031B # COMBINING HORN
@@ -10555,6 +10565,10 @@
 <Multi_key><plus>                                                                       <EuroSign> : "᫉" U1AC9 # COMBINING DOUBLE PLUS SIGN ABOVE
 <dead_horn>                                                                            <ampersand> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
 <Multi_key><plus>                                                                      <ampersand> : "᫊" U1ACA # COMBINING DOUBLE PLUS SIGN BELOW
+<dead_horn>                                                                                 <less> : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
+<Multi_key><plus>                                                                           <less> : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
+<dead_horn>                                                                              <greater> : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
+<Multi_key><plus>                                                                        <greater> : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <dead_horn>                                                                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
 <Multi_key><plus>                                                                              <0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                                 <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
@@ -11801,9 +11815,11 @@
 #   See # # TILDE&AMPERSAND
 #
 #   For consistency with other dead keys supporting diacriticized math symbols,
-#   case insensitive "s" yields "⨛" U2A1B, slash yields ⧶" U29F6, and braceright
-#   yields "⦱" U29B1 consistently with the base character of "∅" U2205 in the
-#   symbol group 2.
+#   case insensitive "s" yields "⨛" U2A1B, "L" yields "⋶" U22F6, "l" yields
+#   "⋷" U22F7, "M" yields "⋽" U22FD, "m" yields "⋾" U22FE, slash yields
+#   ⧶" U29F6, apostrophe and rightsinglequotemark yield "⩂" U2A42 consistently
+#   with the base character of "∪" U222A in the symbol group 4, braceleft yields "⩃" U2A43, and braceright yields "⦱" U29B1, consistently with the
+#   base character of "∅" U2205 in the symbol group 2.
 #   See # # D09 braceright
 #
 <dead_macron>                                                                              <space> : "̄" U0304 # COMBINING MACRON
@@ -11818,8 +11834,14 @@
 <Multi_key><bar>                                                                        <quotedbl> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_macron>                                                                           <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <Multi_key><bar>                                                                        <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<dead_macron>                                                                          <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+#   Multikey conflicts with "Ʋ̄", "ʋ̄".                                                  <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <dead_macron>                                                                         <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 #   Multikey conflicts with "𐞧" U107A7, "𝼈" U1DF08.                                   <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<dead_macron>                                                                         <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
+#   Multikey conflicts with "Ū́", "ū́", "᷄" U1DC4, "Ḗ" U1E16, "ḗ" U1E17, "Ṓ" U1E52, […]  <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
+<dead_macron>                                                               <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
+#   Multikey conflicts with "⥒" U2952, "⥘" U2958.                           <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
 <dead_macron>                                                                          <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <Multi_key><bar>                                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <dead_macron>                                                                              <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
@@ -11912,14 +11934,14 @@
 <Multi_key><bar>                                                                               <K> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_macron>                                                                                  <k> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <Multi_key><bar>                                                                               <k> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<dead_macron>                                                                                  <L> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <L> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <l> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <l> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<dead_macron>                                                                                  <M> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <M> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <m> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <m> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_macron>                                                                                  <L> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><bar>                                                                               <L> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<dead_macron>                                                                                  <l> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><bar>                                                                               <l> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<dead_macron>                                                                                  <M> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><bar>                                                                               <M> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<dead_macron>                                                                                  <m> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><bar>                                                                               <m> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <dead_macron>                                                                                  <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
 <Multi_key><bar>                                                                               <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
 <dead_macron>                                                                                  <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
@@ -13171,7 +13193,6 @@
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #   See # # B06 grave
 #   See #*# CIRCUMFLEX
-#   See # # Letter apostrophe and Polynesian ʻeta, Hawaiʻian ʻokina
 #
 #   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
 #   the question mark as an unconflicting ASCII alternative, for a consistent
