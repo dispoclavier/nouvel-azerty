@@ -5963,7 +5963,7 @@
 #   mapping on key D02, two keys farther from D06.
 #
 #   This also supports circled and squared letters. As these come in uppercase
-#   only, for intuitivity, uppercase is used for squared, lowercase for circled
+#   only, for intuitivity uppercase is used for squared, lowercase for circled
 #   consistently with the more rounded shapes of lowercase vs uppercase.
 #
 #   These SMP dingbats have limited cross-platform compatibility.
@@ -6627,7 +6627,10 @@
 #   See #*# DOUBLE_ACUTE
 #
 #   Circled operators are also supported for consistency, although these are
-#   redundant with dead_greek single press except for "⨷" U2A37.
+#   redundant with dead_greek single press except for "⨷" U2A37, where single
+#   press yields "⊗" U2297, and for "⦸" U29B8, because backslash is used as an
+#   attribute for circled inverted color numbers.
+#   See # # CIRCLED_NEGATIVE
 #
 #   As a diacritic,  "⃝" U20DD is provided, and "⚪" U26AA as a spacing clone.
 #
@@ -6639,6 +6642,8 @@
 <Multi_key><at><at>                                                                 <nobreakspace> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
 <dead_greek><dead_greek>                                                                   <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
 <Multi_key><at><at>                                                                        <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
+<dead_greek><dead_greek>                                                               <backslash> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
+<Multi_key><at><at>                                                                    <backslash> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <dead_greek><dead_greek>                                                               <parenleft> : "⨷" U2A37 # MULTIPLICATION SIGN IN DOUBLE CIRCLE
 <Multi_key><at><at>                                                                    <parenleft> : "⨷" U2A37 # MULTIPLICATION SIGN IN DOUBLE CIRCLE
 <dead_greek><dead_greek>                                                              <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
@@ -8082,12 +8087,8 @@
 #
 #   For consistency with other dead keys supporting diacriticized math symbols,
 #   equal yields "≐" U2250, quotedbl and EuroSign yield "⋵" U22F5, percent
-#   yields "⧊" U29CA, multiply and semicolon yield "⨰" U2A30.
-#
-#   By contrast, dead_abovedot cannot support Chinantec tone marks "ꜗ" UA717,
-#   "ꜘ" UA718, "ꜙ" UA719, due to conflicts with bar and macron combinations.
-#   See # # DOT_ABOVE&BAR
-#   See # # DOT_ABOVE&MACRON
+#   yields "⧊" U29CA, multiply and semicolon yield "⨰" U2A30, grave on B06
+#   yields "⩑" U2A51, question on B07 yields "⩒" U2A52.
 #
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
@@ -8105,6 +8106,10 @@
 <Multi_key><period>                                                                     <EuroSign> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <dead_abovedot>                                                                            <equal> : "≐" U2250 # APPROACHES THE LIMIT
 #   Multikey conflicts with "≐" U2250, "≑" U2251, "≒" U2252, "≓" U2253, "⩧" U2A67.         <equal> : "≐" U2250 # APPROACHES THE LIMIT
+<dead_abovedot>                                                                            <grave> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+#   Multikey conflicts with "᷀" U1DC0, "i̇̀".                                                 <grave> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<dead_abovedot>                                                                         <question> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><period>                                                                     <question> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <dead_abovedot>                                                                        <semicolon> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
 <Multi_key><period>                                                                    <semicolon> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
 <dead_abovedot>                                                                         <multiply> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
@@ -11818,8 +11823,10 @@
 #   case insensitive "s" yields "⨛" U2A1B, "L" yields "⋶" U22F6, "l" yields
 #   "⋷" U22F7, "M" yields "⋽" U22FD, "m" yields "⋾" U22FE, slash yields
 #   ⧶" U29F6, apostrophe and rightsinglequotemark yield "⩂" U2A42 consistently
-#   with the base character of "∪" U222A in the symbol group 4, braceleft yields "⩃" U2A43, and braceright yields "⦱" U29B1, consistently with the
-#   base character of "∅" U2205 in the symbol group 2.
+#   with the base character of "∪" U222A in the symbol group 4, braceleft
+#   yields "⩃" U2A43, braceright yields "⦱" U29B1, consistently with the base
+#   character of "∅" U2205 in the symbol group 2, grave yields "⩞" U2A5E
+#   consistently with the base character of "∧" U2227 in the symbol group 2.
 #   See # # D09 braceright
 #
 <dead_macron>                                                                              <space> : "̄" U0304 # COMBINING MACRON
@@ -11846,6 +11853,8 @@
 <Multi_key><bar>                                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <dead_macron>                                                                              <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 #   Multikey conflicts with "∤" U2224, "⋈" U22C8, "⋉" U22C9, "⟖" U27D6, "⧒" U29D2.         <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<dead_macron>                                                                              <grave> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+#   Multikey conflicts with "᷆" U1DC6, "Ḕ" U1E14, "ḕ" U1E15, "Ṑ" U1E50, "ṑ" U1E51, […]      <grave> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <dead_macron>                                                                           <question> : "͞" U035E # COMBINING DOUBLE MACRON
 <Multi_key><bar>                                                                        <question> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_macron>                                                                             <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
@@ -12122,7 +12131,9 @@
 #   For consistency with other dead keys supporting diacriticized math symbols,
 #   case insensitive "s" yields "⨜" U2A1C, semicolon and multiply yield
 #   "⨱" U2A31, asciicircum yields "⦤" U29A4, backslash yields "⦥" U29A5,
-#   percent yields "⧋" U29CB, and bracketleft/right yield "⦋" U298B, "⦌" U298C.
+#   percent yields "⧋" U29CB, bracketleft/right yield "⦋" U298B, "⦌" U298C,
+#   grave yields "⩟" U2A5F consistently with the base character of "∧" U2227 in
+#   the symbol group 2.
 #
 <dead_macron><dead_macron>                                                                 <space> : "̱" U0331 # COMBINING MACRON BELOW
 <Multi_key><bar><bar>                                                                      <space> : "̱" U0331 # COMBINING MACRON BELOW
@@ -12148,6 +12159,8 @@
 <Multi_key><bar><bar>                                                                <bracketleft> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <dead_macron><dead_macron>                                                          <bracketright> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
 <Multi_key><bar><bar>                                                               <bracketright> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
+<dead_macron><dead_macron>                                                                 <grave> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><bar><bar>                                                                      <grave> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <dead_macron><dead_macron>                                                              <question> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <Multi_key><bar><bar>                                                                   <question> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                                <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
@@ -12278,6 +12291,11 @@
 #   character, that is the plain ASCII underscore. Neither can be replaced with
 #   a valid alternative. So, we have a pair of duplicates across two dead keys.
 #
+#   For consistency with other dead keys supporting diacriticized math symbols,
+#   grave yields "⩠" U2A60 consistently with the base character of "∧" U2227 in
+#   the symbol group 2, additionally to "⩟" U2A5F in dead_belowmacron.
+#   See #^# MACRON_BELOW
+#
 <dead_macron><dead_macron><dead_macron>                                                    <space> : "̲" U0332 # COMBINING LOW LINE
 <Multi_key><bar><bar><bar>                                                                 <space> : "̲" U0332 # COMBINING LOW LINE
 <dead_macron><dead_macron><dead_macron>                                                    <U200B> : "̲" U0332 # COMBINING LOW LINE
@@ -12286,6 +12304,8 @@
 <Multi_key><bar><bar><bar>                                                          <nobreakspace> : "_" U005F # LOW LINE
 <dead_macron><dead_macron><dead_macron>                                                    <U202F> : "_" U005F # LOW LINE
 <Multi_key><bar><bar><bar>                                                                 <U202F> : "_" U005F # LOW LINE
+<dead_macron><dead_macron><dead_macron>                                                    <grave> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><bar><bar><bar>                                                                 <grave> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <dead_macron><dead_macron><dead_macron>                                                        <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW: Languages of Gabon
 <Multi_key><bar><bar><bar>                                                                     <D> : "D̲" # U0044 U0332 LATIN CAPITAL LETTER D WITH LINE BELOW: Languages of Gabon
 <dead_macron><dead_macron><dead_macron>                                                        <d> : "d̲" # U0064 U0332 LATIN SMALL LETTER D WITH LINE BELOW: Languages of Gabon
