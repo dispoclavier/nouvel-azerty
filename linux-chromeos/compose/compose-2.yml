@@ -8085,6 +8085,13 @@
 #       2 and 4    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
 #       8          "♾" U267E PERMANENT PAPER SIGN
 #
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are intuitively
+#   supported with matching base characters bar, slash and minus, without
+#   multikey equivalents, while "ꜚ" UA71A is featured in lieu of a spacing
+#   clone of horn, and the full set has dedicated multikey support.
+#   See #*# HORN
+#   See #^# Chinantec tone marks
+#
 #   For consistency with other dead keys supporting diacriticized math symbols,
 #   equal yields "≐" U2250, quotedbl and EuroSign yield "⋵" U22F5, percent
 #   yields "⧊" U29CA, multiply and semicolon yield "⨰" U2A30, grave on B06
@@ -8104,6 +8111,12 @@
 <Multi_key><period>                                                                     <quotedbl> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <dead_abovedot>                                                                         <EuroSign> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><period>                                                                     <EuroSign> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
+<dead_abovedot>                                                                            <minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+#   Multikey conflicts with "÷" U00F7, "ɟ" U025F, "∸" U2238, "⊷" U22B7, "⋇" U22C7, […]     <minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<dead_abovedot>                                                                              <bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+#   Multikey conflicts with "Ǡ" U01E0, "ǡ" U01E1, "Ȱ" U0230, "ȱ" U0231.                      <bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<dead_abovedot>                                                                            <slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+#   Multikey conflicts with "⁒" U2052, "⧊" U29CA.                                          <slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_abovedot>                                                                            <equal> : "≐" U2250 # APPROACHES THE LIMIT
 #   Multikey conflicts with "≐" U2250, "≑" U2251, "≒" U2252, "≓" U2253, "⩧" U2A67.         <equal> : "≐" U2250 # APPROACHES THE LIMIT
 <dead_abovedot>                                                                            <grave> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
@@ -10074,16 +10087,6 @@
 #   encoded in Unicode, since the overlay bar diacritics do not render well.
 #   https://www.frathwiki.com/Bar
 #
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
-#   consistently supported across four matching dead keys, with quotedbl and
-#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
-#   featured in lieu of a non-existing spacing clone of horn.
-#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
-#   See #   The Chinantec tone marks
-#   See #*# MACRON
-#   See #*# STROKE
-#   See #*# HORN
-#
 #   As a spacing counterpart of the short bar diacritic "̵" U0335, "˗" U02D7 is
 #   convenient, since it is not the superscript minus sign, despite being named
 #   a MODIFIER LETTER.
@@ -10101,10 +10104,6 @@
 <Multi_key><minus>                                                                  <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <UEFD8>                                                                                    <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
-<UEFD8>                                                                                 <quotedbl> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><minus>                                                                      <quotedbl> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<UEFD8>                                                                                 <EuroSign> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><minus>                                                                      <EuroSign> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 <UEFD8>                                                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 #   Multikey conflicts with "𝼚" U1DF1A.                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <UEFD8>                                                                              <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
@@ -10537,20 +10536,15 @@
 #   based on the horn’s shape, although this is a Chinantec tone mark, but a
 #   spacing modifier letter anyway.
 #
-#   The other mnemonic spacing modifier letter, "˖" U02D6 MODIFIER LETTER PLUS
+#   The other Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are in
+#   dead_abovedot, and the full set has dedicated multikey support.
+#   See #*# DOT_ABOVE
+#   See #^# Chinantec tone marks
+#
+#   Another mnemonic spacing modifier letter, "˖" U02D6 MODIFIER LETTER PLUS
 #   SIGN, based on the horn’s multikey equivalent, is supported by other base
 #   letters: case insensitive P as the most mnemonic, but also by all other
 #   fully available base letters for a streamlined user experience.
-#
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
-#   consistently supported across four matching dead keys, with quotedbl and
-#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
-#   featured in lieu of a non-existing spacing clone of horn.
-#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
-#   See #   The Chinantec tone marks
-#   See #*# MACRON
-#   See #*# STROKE
-#   See #*# BAR
 #
 #   For consistency with other dead keys supporting diacriticized math symbols,
 #   and with mnemonics based on dead_horn’s multikey equivalent, less yields
@@ -11786,16 +11780,6 @@
 #   macron, and for consistency with en_US.UTF-8/Compose as of the multikey
 #   equivalents.
 #
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
-#   consistently supported across four matching dead keys, with quotedbl and
-#   EuroSign as base characters or with the no-break spaces as of "ꜚ" UA71A,
-#   featured in lieu of a non-existing spacing clone of horn.
-#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
-#   See #   The Chinantec tone marks
-#   See #*# STROKE
-#   See #*# BAR
-#   See #*# HORN
-#
 #   Digits yield the full collection of simple and multiple vertical bars — but
 #   not the broken one "¦" U00A6 — for convenience, since input methods using
 #   groups or multikey may be less mnemonic or more complicated. This is a part
@@ -11837,10 +11821,6 @@
 <Multi_key><bar>                                                                    <nobreakspace> : "¯" U00AF # MACRON
 <dead_macron>                                                                              <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
-<dead_macron>                                                                           <quotedbl> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><bar>                                                                        <quotedbl> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<dead_macron>                                                                           <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><bar>                                                                        <EuroSign> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_macron>                                                                          <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 #   Multikey conflicts with "Ʋ̄", "ʋ̄".                                                  <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <dead_macron>                                                                         <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
@@ -12390,18 +12370,7 @@
 #   See #*# MACRON
 #
 #   As a spacing counterpart of the long solidus diacritic "̸" U0338, the
-#   division slash "∕" U2215 is picked rather than Chinantec "ꜘ" UA718, that
-#   would be too unexpected and disrupting, with too far-fetched a rationale.
-#
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719, "ꜚ" UA71A are
-#   consistently supported across four matching dead keys, with quotedbl and
-#   EuroSign as base characters, or with the no-break spaces as of "ꜚ" UA71A,
-#   featured in lieu of a non-existing spacing clone of horn.
-#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
-#   See #   The Chinantec tone marks
-#   See #*# MACRON
-#   See #*# BAR
-#   See #*# HORN
+#   division slash "∕" U2215 is picked.
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
@@ -12411,10 +12380,6 @@
 <Multi_key><slash>                                                                  <nobreakspace> : "∕" U2215 # DIVISION SLASH
 <dead_stroke>                                                                              <U202F> : "∕" U2215 # DIVISION SLASH
 <Multi_key><slash>                                                                         <U202F> : "∕" U2215 # DIVISION SLASH
-<dead_stroke>                                                                           <quotedbl> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><slash>                                                                      <quotedbl> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<dead_stroke>                                                                           <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><slash>                                                                      <EuroSign> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
 <dead_stroke>                                                                               <less> : "≮" U226E # NOT LESS-THAN
 <Multi_key><slash>                                                                          <less> : "≮" U226E # NOT LESS-THAN
 <dead_stroke>                                                                            <greater> : "≯" U226F # NOT GREATER-THAN
