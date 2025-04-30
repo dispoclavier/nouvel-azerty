@@ -1181,7 +1181,7 @@
 #   See # # D01 asciicircum
 #   See # # D09 braceright
 #
-#   The following intuitive, case-insensitive, underscore-terminated multikey
+#   The following intuitive, case insensitive, underscore-terminated multikey
 #   sequences add to this support in the symbol groups. Underscore termination
 #   is consistent with "№" U2116 NUMERO SIGN in the next section. Many fonts
 #   give the legacy ordinal indicators a line below, that is not preferred in
@@ -2392,6 +2392,38 @@
 <Multi_key><I><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><I><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+#
+#
+#^# Chinantec tone marks
+#
+#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are intuitively
+#   supported by dead keys. The marks with a dot are in dead_abovedot with base
+#   characters matching the vertical, diagonal or horizontal dash, but without
+#   multikey equivalents, while "ꜚ" UA71A is in dead_horn.
+#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   See #*# DOT_ABOVE
+#   See #*# HORN
+#
+#   For an unconflicting, partially order insensitive emulation of the
+#   deactivated multikey sequences in dead_abovedot, case insensitive "C" is
+#   prepended. "ꜚ" UA71A is supported consistently with minus-bar sequences.
+#
+<Multi_key><C>                                                                       <period><bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+#   <Multi_key><C><bar><period> conflicts with "₵" U20B5.                                          : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><c>                                                                       <period><bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><c>                                                                       <bar><period> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><C>                                                                     <period><slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+#   <Multi_key><C><slash><period> conflicts with "₡" U20A1.                                        : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><c>                                                                     <period><slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><c>                                                                     <slash><period> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><C>                                                                     <period><minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><C>                                                                     <minus><period> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><c>                                                                     <period><minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><c>                                                                     <minus><period> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><C>                                                                        <minus><bar> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+#   <Multi_key><C><bar><minus> conflicts with "₵" U20B5.                                           : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+<Multi_key><c>                                                                        <minus><bar> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+#   <Multi_key><c><bar><minus> conflicts with "⫑" U2AD1.                                           : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
 #
 #
 #^# Zhuang tone letters
