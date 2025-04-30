@@ -261,7 +261,8 @@
 #   to be a partial solution designed for limited character sets. Sticking with
 #   it in the Unicode era, using live key positions and premium dead key slots,
 #   would be utterly inadequate. Instead, legacy ordinal indicators are placed
-#   here in symbol group 12 (on matching letters) and supported by multikey.
+#   here in symbol group 12 consistently with "a" and "o" and are additionally
+#   supported by multikey.
 #   See #^# Legacy ordinal indicators
 #   See # # D09 braceright
 #
@@ -752,7 +753,8 @@
 #   See #   Alternative keysyms
 #
 #   Letter apostrophe "ʼ" U02BC, used in Breton, is here in group 1 of
-#   apostrophe and rightsinglequotemark.
+#   apostrophe and rightsinglequotemark. "ʻ" U02BB is similarly supported in
+#   group 1 of grave.
 #   See # # B06 grave
 #
 <UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -924,7 +926,8 @@
 #   to be a partial solution designed for limited character sets. Sticking with
 #   it in the Unicode era, using live key positions and premium dead key slots,
 #   would be utterly inadequate. Instead, legacy ordinal indicators are placed
-#   here in symbol group 12 (on matching letters) and supported by multikey.
+#   here in symbol group 12 consistently with "a" and "o" and are additionally
+#   supported by multikey.
 #   See #^# Legacy ordinal indicators
 #   See # # D01 asciicircum
 #
