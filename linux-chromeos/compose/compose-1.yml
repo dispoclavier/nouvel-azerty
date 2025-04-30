@@ -7587,6 +7587,7 @@
 <Multi_key><O><bar>                                                                        <space> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                 <nobreakspace> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar><bar>                                                                           : "⦷" U29B7 # CIRCLED PARALLEL
+#   In #^# CIRCLED                                                                                 : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><space><O><backslash>                                                           <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><space><O><backslash>                                                    <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><nobreakspace><O><backslash>                                                    <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
@@ -8172,6 +8173,7 @@
 <Multi_key><space><minus><minus><u><numbersign><percent>                            <nobreakspace> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
 <Multi_key><nobreakspace><minus><minus><u><numbersign><percent>                            <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
 <Multi_key><nobreakspace><minus><minus><u><numbersign><percent>                     <nobreakspace> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+#   In #*# DOT_ABOVE                                                                               : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><space><period><a>                                                              <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><space><period><a>                                                       <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><nobreakspace><period><a>                                                       <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
@@ -8180,6 +8182,7 @@
 <Multi_key><space><period><v><v>                                                    <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><nobreakspace><period><v><v>                                                    <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><nobreakspace><period><v><v>                                             <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+#   In #*# DOT_ABOVE                                                                               : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><space><period><v>                                                              <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><space><period><v>                                                       <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><nobreakspace><period><v>                                                       <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
@@ -8246,6 +8249,7 @@
 <Multi_key><v><minus>                                                               <nobreakspace> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                                      <space> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                               <nobreakspace> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
+#   In #*# MACRON                                                                                  : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                               <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                        <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><percent>                                                      <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
