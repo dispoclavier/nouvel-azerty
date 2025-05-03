@@ -119,7 +119,7 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 		* Améliorer la prise en charge de "⸶" U+2E36. compose-2.yml [dbe8193](https://github.com/dispoclavier/nouvel-azerty/commit/dbe8193eaa54bb9aa5f8a4c35a2fca7890ec7416)
 	* Hatchek :
 		* Améliorer la prise en charge de "⸷" U+2E37. ibidem
-	* Point souscrit : Redonder "⩦" U+2A66. ibidem
+	* Point souscrit : Redonder "⩦" U+2A66. compose-2.yml [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89)
 	* Point souscrit et point en chef :
 		* Renommer de « point en chef et point souscrit ». ibidem
 		* Redonder "≑" U+2251. ibidem
