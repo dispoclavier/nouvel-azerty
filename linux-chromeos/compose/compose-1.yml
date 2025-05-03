@@ -2396,11 +2396,12 @@
 #
 #^# Chinantec tone marks
 #
-#   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are intuitively
-#   supported by dead keys. The marks with a dot are in dead_abovedot with base
-#   characters matching the vertical, diagonal or horizontal dash, but without
-#   multikey equivalents, while "ꜚ" UA71A is in dead_horn.
+#   The dotted Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718 and "ꜙ" UA719 are
+#   intuitively supported in dead_abovedot with base characters matching the
+#   vertical, diagonal or horizontal dash, but without multikey equivalents,
+#   while "ꜚ" UA71A is in dead_horn as a spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   https://www.unicode.org/L2/L2004/04349r-chinantec.pdf
 #   See #*# DOT_ABOVE
 #   See #*# HORN
 #
@@ -3702,12 +3703,8 @@
 #   See # # Mathematical symbols in Miscellaneous Technical block U2300
 #
 #   However, that complication doesn’t matter since "⌀" U2300 is also on live
-#   key C03 "D", level 7, and in group 1 of "(" on "D" key C03.
+#   key C03 "D", level 7, and in group 1 of "(" on the same.
 #   See # # C03 parenleft
-#
-#   Moreover, this is in the circumflex dead key with case insensitive D as a
-#   base letter.
-#   See #*# CIRCUMFLEX
 #
 <Multi_key><o><slash>                                                                      <space> : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
@@ -5848,6 +5845,7 @@
 <Multi_key><question><equal>                                                               <space> : "≟" U225F # QUESTIONED EQUAL TO
 <Multi_key><question><equal>                                                        <nobreakspace> : "≟" U225F # QUESTIONED EQUAL TO
 #   In group 3 of "="                                                                              : "≠" U2260 # NOT EQUAL TO
+#   In #*# STROKE                                                                                  : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                                  <space> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                           <nobreakspace> : "≠" U2260 # NOT EQUAL TO
 #   In group 1 of "="                                                                              : "≡" U2261 # IDENTICAL TO
@@ -5888,15 +5886,17 @@
 <Multi_key><parenleft><parenright><slash>                                                  <space> : "≭" U226D # NOT EQUIVALENT TO
 <Multi_key><parenleft><parenright><slash>                                           <nobreakspace> : "≭" U226D # NOT EQUIVALENT TO
 #   In #*# STROKE                                                                                  : "≮" U226E # NOT LESS-THAN
-#   In # # STROKE&GROUP_1                                                                          : "≮" U226E # NOT LESS-THAN
 <Multi_key><space><less><slash>                                                                    : "≮" U226E # NOT LESS-THAN
 <Multi_key><nobreakspace><less><slash>                                                             : "≮" U226E # NOT LESS-THAN
 #   In #*# STROKE                                                                                  : "≯" U226F # NOT GREATER-THAN
-#   In # # STROKE&GROUP_1                                                                          : "≯" U226F # NOT GREATER-THAN
 <Multi_key><greater><slash>                                                                <space> : "≯" U226F # NOT GREATER-THAN
 <Multi_key><greater><slash>                                                         <nobreakspace> : "≯" U226F # NOT GREATER-THAN
+#   In # # STROKE&GROUP_1                                                                          : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
+#   In # # STROKE&GROUP_2                                                                          : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <Multi_key><less><slash><underscore>                                                       <space> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
 <Multi_key><less><slash><underscore>                                                <nobreakspace> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
+#   In # # STROKE&GROUP_1                                                                          : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
+#   In # # STROKE&GROUP_2                                                                          : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <Multi_key><greater><slash><underscore>                                                    <space> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <Multi_key><greater><slash><underscore>                                             <nobreakspace> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <Multi_key><space><less><asciitilde>                                                       <space> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
@@ -6132,16 +6132,19 @@
 <Multi_key><minus><rightsinglequotemark><rightsinglequotemark><minus>               <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
 <Multi_key><t>                                                                             <space> : "⊺" U22BA # INTERCALATE
 <Multi_key><t>                                                                      <nobreakspace> : "⊺" U22BA # INTERCALATE
+#   In #^# MACRON_BELOW                                                                            : "⊻" U22BB # XOR
 <Multi_key><v><underscore>                                                                 <space> : "⊻" U22BB # XOR
 <Multi_key><v><underscore>                                                          <nobreakspace> : "⊻" U22BB # XOR
 <Multi_key><x><o><r>                                                                               : "⊻" U22BB # XOR
 <Multi_key><X><O><R>                                                                               : "⊻" U22BB # XOR
+#   In #*# MACRON                                                                                  : "⊼" U22BC # NAND
 <Multi_key><space><underscore><a>                                                                  : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><underscore><a>                                                           : "⊼" U22BC # NAND
 <Multi_key><space><underscore><v><v>                                                               : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><underscore><v><v>                                                        : "⊼" U22BC # NAND
 <Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
 <Multi_key><N><A><N><D>                                                                            : "⊼" U22BC # NAND
+#   In #*# MACRON                                                                                  : "⊽" U22BD # NOR
 <Multi_key><space><underscore><v>                                                          <space> : "⊽" U22BD # NOR
 <Multi_key><space><underscore><v>                                                   <nobreakspace> : "⊽" U22BD # NOR
 <Multi_key><nobreakspace><underscore><v>                                                   <space> : "⊽" U22BD # NOR
@@ -8281,13 +8284,13 @@
 <Multi_key><v><minus>                                                               <nobreakspace> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                                      <space> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                               <nobreakspace> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
-#   In #*# MACRON                                                                                  : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                               <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                        <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><percent>                                                      <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><percent>                                               <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><percent>                                                      <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><percent>                                               <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+#   In #^# MACRON_BELOW                                                                            : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><nobreakspace><A><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
@@ -8296,6 +8299,7 @@
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><V><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><V><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+#   In #^# LINE_BELOW                                                                              : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><space><A><underscore><underscore>                                              <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><space><A><underscore><underscore>                                       <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><nobreakspace><A><underscore><underscore>                                       <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
@@ -8305,9 +8309,8 @@
 <Multi_key><V><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><V><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 #
-#   Although "small vee" refers to the small letter "v", "⩡" U2A61 is more like
-#   a small version of the XOR symbol "⊻" U22BB and therefore qualifies for the
-#   trailing comma.
+#   "⩡" U2A61 looks like a small "⊻" U22BB and thus qualifies for a sequence
+#   with trailing comma.
 #   See #   Small symbols
 #
 <Multi_key><v><underscore><comma>                                                                  : "⩡" U2A61 # SMALL VEE WITH UNDERBAR
@@ -8315,6 +8318,7 @@
 <Multi_key><minus><minus><v>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+#   In #^# LINE_BELOW                                                                              : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 <Multi_key><v><underscore><underscore>                                                     <space> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 <Multi_key><v><underscore><underscore>                                              <nobreakspace> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 <Multi_key><z><less><minus><bar>                                                           <space> : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
@@ -8326,6 +8330,7 @@
 #   In #*# DOT_BELOW                                                                               : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
 <Multi_key><equal><period>                                                                 <space> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
 <Multi_key><equal><period>                                                          <nobreakspace> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
+#   In # # DOT_ABOVE&GROUP1                                                                        : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
 <Multi_key><period><minus><equal>                                                          <space> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
 <Multi_key><period><minus><equal>                                                   <nobreakspace> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
 <Multi_key><period><equal><minus>                                                          <space> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
@@ -8334,6 +8339,7 @@
 <Multi_key><minus><equal><bar><bar>                                                 <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar><bar>                                                   <space> : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar><bar>                                            <nobreakspace> : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+#   In #*# DOT_ABOVE                                                                               : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
 <Multi_key><space><period><asciitilde>                                                     <space> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
 <Multi_key><space><period><asciitilde>                                              <nobreakspace> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
 <Multi_key><nobreakspace><period><asciitilde>                                              <space> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
@@ -8343,9 +8349,11 @@
 <Multi_key><period><asciitilde><period><slash>                                             <space> : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
 <Multi_key><period><asciitilde><period><slash>                                      <nobreakspace> : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
 <Multi_key><asciitilde><minus><asciitilde>                                                         : "⩬" U2A6C # SIMILAR MINUS SIMILAR
+#   In # # DOT_ABOVE&GROUP3                                                                        : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><period><asciitilde><equal>                                                     <space> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><period><asciitilde><equal>                                              <nobreakspace> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><asterisk><equal>                                                                       : "⩮" U2A6E # EQUALS WITH ASTERISK
+#   In # # CIRCUMFLEX&GROUP_2                                                                      : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <Multi_key><asciicircum><asciitilde><asciitilde>                                                   : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <Multi_key><space><asciitilde><asciitilde><equal>                                          <space> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
 <Multi_key><space><asciitilde><asciitilde><equal>                                   <nobreakspace> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
@@ -8397,10 +8405,13 @@
 <Multi_key><less><underscore><period>                                               <nobreakspace> : "⩿" U2A7F # LESS-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
 <Multi_key><greater><underscore><period>                                                   <space> : "⪀" U2A80 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
 <Multi_key><greater><underscore><period>                                            <nobreakspace> : "⪀" U2A80 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
-<Multi_key><period><less><underscore>                                                      <space> : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
-<Multi_key><period><less><underscore>                                               <nobreakspace> : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
-<Multi_key><period><greater><underscore>                                                   <space> : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
-<Multi_key><period><greater><underscore>                                            <nobreakspace> : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+#   In #*# DOT_ABOVE                                                                               : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+#   In # # DOT_ABOVE&GROUP2                                                                        : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+#Multi_key><period><less><underscore>                                                              : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+<Multi_key><period><less>                                                                          : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+#   In #*# DOT_ABOVE                                                                               : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+#   In # # DOT_ABOVE&GROUP2                                                                        : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+<Multi_key><period><greater><underscore>                                                           : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
 <Multi_key><less><period><underscore>                                                      <space> : "⪃" U2A83 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE RIGHT
 <Multi_key><less><period><underscore>                                               <nobreakspace> : "⪃" U2A83 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE RIGHT
 <Multi_key><greater><period><underscore>                                                   <space> : "⪄" U2A84 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE LEFT
@@ -8601,10 +8612,12 @@
 <Multi_key><c><x>                                                                   <nobreakspace> : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><b><x>                                                                                  : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><backslash><x>                                                                       : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
+#   In #*# DOT_ABOVE                                                                               : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><c><underscore>                                                  <space> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><c><underscore>                                           <nobreakspace> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><c><underscore>                                           <space> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><c><underscore>                                    <nobreakspace> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
+#   In #*# DOT_ABOVE                                                                               : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><b><underscore>                                                  <space> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><b><underscore>                                           <nobreakspace> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><b><underscore>                                           <space> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
@@ -8716,10 +8729,12 @@
 <Multi_key><equal><bar><bar>                                                        <nobreakspace> : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><bar><minus><bar><minus>                                                        <space> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
 <Multi_key><bar><minus><bar><minus>                                                 <nobreakspace> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
+#   In #*# MACRON                                                                                  : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><apostrophe><equal>                                                      <space> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><apostrophe><equal>                                               <nobreakspace> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><rightsinglequotemark><equal>                                            <space> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><rightsinglequotemark><equal>                                     <nobreakspace> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+#   In #^# MACRON_BELOW                                                                            : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><apostrophe><equal>                                                             <space> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><apostrophe><equal>                                                      <nobreakspace> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><rightsinglequotemark><equal>                                                   <space> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
@@ -8744,12 +8759,14 @@
 <Multi_key><nobreakspace><rightsinglequotemark><equal>                              <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><bar><backslash>                                                                <space> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><bar><backslash>                                                         <nobreakspace> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
+#   In #*# RING_ABOVE                                                                              : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><i>                                                                          <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><i>                                                                   <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><I>                                                                          <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><I>                                                                   <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><bar>                                                                        <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><bar>                                                                 <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
+#   In #^# RING_BELOW                                                                              : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><i><o>                                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><i><o>                                                                   <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><I><o>                                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
@@ -8758,6 +8775,7 @@
 <Multi_key><space><bar><o>                                                          <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><nobreakspace><bar><o>                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><nobreakspace><bar><o>                                                   <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+#   In #^# RING_BELOW                                                                              : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><T><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
@@ -13086,6 +13104,7 @@
 #   not an option.
 #   https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Abbreviations/faq0097.html
 #   See # # Notes about documentation
+#
 #
 #   END_GREEK
 #
