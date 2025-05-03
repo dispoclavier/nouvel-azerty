@@ -145,9 +145,10 @@
 #   Multikey equivalents for math symbols supported by dead key for consistency
 #   are prone to conflicts with mnemonic multikey sequences provided as part of
 #   the math symbol support, that have precedence over multikey equivalents,
-#   for completeness of the math section.
+#   for completeness of the math symbol documentation.
 #   See ### Mathematical symbols by multikey
 #   See #   Multikey is supported as part of math symbols.
+#   See # # Notes about documentation
 #
 #   Extended dead key support — beyond the feasible multikey support level — is
 #   required to make sure that dead keys are usable to an acceptable extent, so
@@ -3860,6 +3861,8 @@
 <Multi_key><percent>                                                                   <parenleft> : "⁀" U2040 # CHARACTER TIE
 <UEFD5>                                                                               <parenright> : "‿" U203F # UNDERTIE
 #   Multikey conflicts with "𐞡" U107A1, "𝼆" U1DF06.                                   <parenright> : "‿" U203F # UNDERTIE
+<UEFD5>                                                                                      <bar> : "⸸" U2E38 # TURNED DAGGER
+#   Multikey conflicts with "ɺ" U027A, "ᶭ" U1DAD, "𐞦" U107A6, "𐞧" U107A7, "𝼈" U1DF08.        <bar> : "⸸" U2E38 # TURNED DAGGER
 <UEFD5>                                                                                    <comma> : "⸲" U2E32 # TURNED COMMA
 <Multi_key><percent>                                                                       <comma> : "⸲" U2E32 # TURNED COMMA
 <UEFD5>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
@@ -13313,6 +13316,8 @@
 <Multi_key><less>                                                                         <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<dead_circumflex>                                                                            <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
+#   Multikey conflicts with "⇺" U21FA, "⇽" U21FD, "⇿" U21FF, "⊲" U22B2, "⊴" U22B4, […]       <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -13504,8 +13509,8 @@
 <Multi_key><less><numbersign>                                                         <apostrophe> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                    <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign>                                               <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-<dead_circumflex><UEFD0>                                                              <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
-<Multi_key><less><numbersign>                                                         <asciitilde> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
+<dead_circumflex><UEFD0>                                                                     <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
+<Multi_key><less><numbersign>                                                                <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 # 
 # # CIRCUMFLEX&GROUP_2
 #   Dchar: 
@@ -13980,6 +13985,8 @@
 <Multi_key><greater>                                                                <nobreakspace> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                               <U202F> : "ˇ" U02C7 # CARON
 <Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
+<dead_caron>                                                                                 <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+#   Multikey conflicts with "⋫" U22EB.                                                       <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
 <Multi_key><greater>                                                                           <0> : "₀" U2080 # SUBSCRIPT ZERO
 <dead_caron>                                                                                <KP_0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -14091,8 +14098,8 @@
 # # HACEK&GROUP_1
 #   Dchar: 
 #
-<dead_caron><UEFD0>                                                                   <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><greater><numbersign>                                                      <asciitilde> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<dead_caron><UEFD0>                                                                          <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<Multi_key><greater><numbersign>                                                             <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_caron><UEFD0>                                                                            <Z> : "Ǯ" U01EE # LATIN CAPITAL LETTER EZH WITH CARON
 <Multi_key><greater><numbersign>                                                               <Z> : "Ǯ" U01EE # LATIN CAPITAL LETTER EZH WITH CARON
 <dead_caron><UEFD0>                                                                            <z> : "ǯ" U01EF # LATIN SMALL LETTER EZH WITH CARON
