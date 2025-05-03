@@ -48,6 +48,7 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 		* Indice et brève : Idem. ibidem
 		* Indice et rayé : Idem. ibidem
 	* Exposant : Désactiver l’équivalent en composition de "⁺" U+207A, "⁻" U+207B, "⁾" U+207E, en composition en tant que symboles mathématiques. compose-2.yml [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89), [67f38c8](https://github.com/dispoclavier/nouvel-azerty/commit/67f38c8c2d76a92701afb1e8b1a28c35f377aa59)
+	* Tourné : Améliorer la prise en charge de "⸸" U+2E38. compose-2.yml [dbe8193](https://github.com/dispoclavier/nouvel-azerty/commit/dbe8193eaa54bb9aa5f8a4c35a2fca7890ec7416)
 	* Réfléchi : Redonder "⦰" U+29B0 par "}". compose-2.yml [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89)
 	* Tilde :
 		* Redonder "⧤" U+29E4. ibidem
@@ -115,6 +116,9 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 		* Supprimer la redondance par "d" ou "D" de "⌀" U+2300, qui est sur touche vive, dans le groupe 1 de "(" et en composition. ibidem
 		* Redonder "⩯" U+2A6F. ibidem
 		* Désactiver l’équivalent en composition de "‘" U+2018. compose-2.yml [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89)
+		* Améliorer la prise en charge de "⸶" U+2E36. compose-2.yml [dbe8193](https://github.com/dispoclavier/nouvel-azerty/commit/dbe8193eaa54bb9aa5f8a4c35a2fca7890ec7416)
+	* Hatchek :
+		* Améliorer la prise en charge de "⸷" U+2E37. ibidem
 	* Point souscrit : Redonder "⩦" U+2A66. ibidem
 	* Point souscrit et point en chef :
 		* Renommer de « point en chef et point souscrit ». ibidem
@@ -135,7 +139,7 @@ Rétablissement de la symétrie des enchaînements de touches mortes suite à la
 	* Mieux regrouper et titrer les annotations. compose-2.yml [9e228d6](https://github.com/dispoclavier/nouvel-azerty/commit/9e228d6709040837da41ed42b6ec3c367339cdff), compose-1.yml [8a2644a](https://github.com/dispoclavier/nouvel-azerty/commit/8a2644a4d96fa60a9e115daacbb6343bf12559df)
 	* Rectifier ou mettre à jour des annotations. compose-1.yml [a9308e8](https://github.com/dispoclavier/nouvel-azerty/commit/a9308e80b970de8c0d3e6edafcac7a52d14e6196), [21b7535](https://github.com/dispoclavier/nouvel-azerty/commit/21b7535de26a51d8f0a8012299c7f66f853ffa18), [0c6da50](https://github.com/dispoclavier/nouvel-azerty/commit/0c6da5070b12c1ad9ffcef17197603f62d08779a), compose-2.yml [c04e68c](https://github.com/dispoclavier/nouvel-azerty/commit/c04e68cb7be8be8911d379a080d3345e579807d8), [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89)
 	* Clarifier ou compléter des annotations. compose-3.yml [f4fb201](https://github.com/dispoclavier/nouvel-azerty/commit/f4fb201fa970113e1f9529f5c36930d2a1a92524)
-	* Améliorer, ajouter ou mettre à jour des annotations. compose-1.yml [0f40ccf](https://github.com/dispoclavier/nouvel-azerty/commit/0f40ccf4ac4f8ab9e5bc3cd7fcad35b1497eba80), compose-2.yml [d57828a](https://github.com/dispoclavier/nouvel-azerty/commit/d57828adffc367830d3a52152af215c113e7afbc)
+	* Améliorer, ajouter ou mettre à jour des annotations. compose-1.yml [0f40ccf](https://github.com/dispoclavier/nouvel-azerty/commit/0f40ccf4ac4f8ab9e5bc3cd7fcad35b1497eba80), compose-2.yml [d57828a](https://github.com/dispoclavier/nouvel-azerty/commit/d57828adffc367830d3a52152af215c113e7afbc), [dbe8193](https://github.com/dispoclavier/nouvel-azerty/commit/dbe8193eaa54bb9aa5f8a4c35a2fca7890ec7416)
 
 ## 5.0.0 (2025-04-15)
 
