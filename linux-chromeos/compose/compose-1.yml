@@ -217,18 +217,24 @@
 #   http://www.kreativekorp.com/ucsur/
 #
 #
-# # Notes about syntax
+# # Notes about syntax and terms
 #
-#   The plus sign in Unicode code points is omitted, also in comments, except
-#   in quotations and in result strings used as placeholders of high surrogates
-#   and intended for display to end-users. This scheme is interoperable with
-#   the code parsed by the Compose compiler, for easier maintenance and easier
-#   reference, using a specially formatted version of UnicodeData.txt by the
-#   script format-UnicodeData-txt.pl.
+#   Characters and dead keys are referred to by their X11 keysyms as defined in
+#   keysymdef.h.
+#   https://fossies.org/linux/tk/xlib/X11/keysymdef.h
+#
+#   For external documentation, generic X11 keysyms for Unicode characters need
+#   to be converted to Unicode code points by adding the plus sign next to the
+#   leading "U".
 #   See # # Notes about documentation
 #
-#   Omitting the plus sign is also consistent with the URL scheme used for the
-#   Unicode Code Charts.
+#   For development, maintenance and reference, UnicodeData.txt is formatted by
+#   the script format-UnicodeData-txt.pl.
+#   https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/format-UnicodeData-txt.pl
+#
+#   The URL scheme used for the Unicode Code Charts is consistent with tbe
+#   omission of the plus sign in X11 keysyms.
 #   https://www.unicode.org/charts/PDF/
 #   https://www.unicode.org/charts/PDF/U0000.pdf
 #
@@ -275,7 +281,7 @@
 #   Multikey sequence notation
 #
 #   The broken bar "¦" U00A6 is repurposed as multikey symbol.
-#   See # # Symbols for multikey and composition
+#   See # # Symbols for multikey
 #
 #   For readability, inline literal multikey sequences are bracketed with
 #   French-style (no-break thin) space padded double angle quotation marks,
@@ -792,8 +798,7 @@
 #
 # # Unicode prefix
 #
-#   'U+' is an ASCII-fied U228E ⊎ MULTISET UNION.
-#   Kenneth WHISTLER exposed the rationale in:
+#   "U+" is an ASCII-fied "⊎" U228E MULTISET UNION.
 #   https://unicode.org/mail-arch/unicode-ml/y2005-m11/0060.html
 #
 #   This sequence was supported initially, then was dropped as overkill.
@@ -1146,7 +1151,7 @@
 #
 #   The plus sign omitted in Unicode code points for interoperability needs to
 #   be readded for documentation.
-#   See # # Notes about syntax
+#   See # # Notes about syntax and terms
 #
 #
 #*# COMPOSE
@@ -1961,10 +1966,10 @@
 #
 # # Spaces
 #
-#   All important space characters are supported on live keys, as the only
-#   acceptable scheme from a user experience point of view. For no-break space
+#   Since all important space characters are supported on live keys as the only
+#   acceptable scheme from a user experience point of view, for no-break space
 #   and no-break thin space, dead key based input methods, including multikey,
-#   can hardly be considered as acceptable workarounds.
+#   are not required.
 #   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose (by « ¦␣␣ »). But
@@ -1980,9 +1985,10 @@
 #   in typesetting old-style tables, is not, although the latter is particular
 #   in that it is an outstandig reminder that all spaces U2002..U200A were
 #   initially designed to be no-break. As <Multi_key><space><period> conflicts
-#   with "⩑" U2A51, and distinguishing this would screw it up (by requiring a
-#   double leading space), it is discarded, and support for spaces by dead keys
-#   is moved to the space groups altogether.
+#   with "∙" U2219, "⋅" U22C5, "⋵" U22F5, "⨰" U2A30, "⩑" U2A51, "⩒" U2A52,
+#   "⩪" U2A6A, "⫃" U2AC3, "⫄" U2AC4, and distinguishing these would screw them
+#   up (by requiring a double leading space), it is discarded, and support for
+#   spaces by dead keys is moved to the space groups altogether.
 #   See # # A03-level1 space
 #   See # # A03-level3 nobreakspace
 #
@@ -2763,12 +2769,16 @@
 #   Index pointant vers la droite
 <Multi_key><i><p><d>                                                                               : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
 <Multi_key><I><P><D>                                                                               : "☛" U261B # BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+#   Backhand index pointing leftwards
 <Multi_key><b><i><p><l>                                                                            : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
 <Multi_key><B><I><L>                                                                               : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
+#   Index de revers de main pointant vers la gauche
 <Multi_key><i><r><m><p><g>                                                                         : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
 <Multi_key><I><R><M><P><G>                                                                         : "👈" U1F448 # WHITE LEFT POINTING BACKHAND INDEX
+#   Backhand index pointing rightwards
 <Multi_key><b><i><p><r>                                                                            : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
 <Multi_key><B><I><R>                                                                               : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
+#   Index de revers de main pointant vers la droite
 <Multi_key><i><r><m><p><d>                                                                         : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
 <Multi_key><I><R><M><P><D>                                                                         : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
 #
@@ -3875,7 +3885,18 @@
 <Multi_key><O><P><T>                                                                               : "⌥" U2325 # OPTION KEY
 #
 #
-# # Symbols for multikey and composition
+# # Symbols for multikey
+#
+#   Input composition, also known as multikey, may be represented by a low-end
+#   alternative "¦" U00A6 additionally to the high-end "⎄" U2384 ISO symbol.
+#   The rationale is better font support and a slimmer, less bulky, visually
+#   less impacting, less outstanding glyph design in documentation, since the
+#   ISO symbol did not make it onto many keyboards, partly because dedicating
+#   an entire key to input composition rather than a mere (possibly level-3)
+#   key position is not recommended in the presence of a group dead key (UEFD0)
+#   providing a more powerful input method for common digraphs. Downgrading the
+#   multikey symbol from "⎄" U2384 to "¦" U00A6 consistently stands for a more
+#   streamlined, less screwed-up user experience.
 #
 #   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive
 #   « ¦cmp ». Not « ¦com », to prevent conflicts with "℅" U2105.
@@ -3884,15 +3905,8 @@
 <Multi_key><C><M>                                                                                  : "⎄" U2384 # COMPOSITION SYMBOL
 #
 #   The broken bar "¦" U00A6 is repurposed as multikey symbol, and consistently
-#   it is the dead character of Multi_key. As a consequence, it is expected to
-#   be input by hitting the space bar right after the dead key, applying the
-#   legacy scheme still maintained for dead_currency, albeit not for
-#   diacritical dead keys. Yet that conflicts with leading space as part of
-#   many sequences for math symbols. However, given that Multi_key double press
-#   is not used, this is supported as an alternative means to input "¦" U00A6.
-#   See #*# CURRENCY
-#   See # # Combining diacritics
-#   See #   Leading space
+#   it is the dead character of Multi_key. Given that Multi_key double press is
+#   not used, this is supported as a means to input "¦" U00A6.
 #
 <Multi_key><Multi_key>                                                                             : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
@@ -3918,20 +3932,10 @@
 #   See #*# DIAERESIS
 #   See # # B09 colon
 #
-#   The rationale for providing an alternative "¦" U00A6 to the "⎄" U2384 ISO
-#   symbol is font support and a slimmer, less bulky, visually less impacting,
-#   less outstanding glyph design in documentation, since the ISO symbol did
-#   not make it onto many keyboards, partly because dedicating an entire key
-#   to input composition rather than a mere key position, possibly on level 3,
-#   is not recommended in the presence of a group dead key providing a more
-#   powerful input method for common digraphs. Downgrading the composition
-#   symbol from "⎄" U2384 to "¦" U00A6 consistently stands for a simpler, more
-#   streamlined and less screwed-up user experience.
-#
 #
 # # Symbols for key events
 #
-#   These are suggested for use as key down, key up events.
+#   These are suggested for use as symbols for key down, key up events.
 #
 <Multi_key><k><d>                                                                                  : "⏷" U23F7 # BLACK MEDIUM DOWN-POINTING TRIANGLE
 <Multi_key><K><D>                                                                                  : "⏷" U23F7 # BLACK MEDIUM DOWN-POINTING TRIANGLE
@@ -3942,7 +3946,7 @@
 # # Referring to en_US.UTF-8/Compose
 #
 #   This output is not cross-platform compatible, since on Windows it will need
-#   to be truncated to a maximum of 16 UTF-16 code units: 'en_US.UTF-8/Comp'.
+#   to be truncated to a maximum of 16 UTF-16 code units: "en_US.UTF-8/Comp".
 #
 <Multi_key><e><n><u><s>                                                                            : "en_US.UTF-8/Compose" # Standard fr_FR Compose sequences.
 #
