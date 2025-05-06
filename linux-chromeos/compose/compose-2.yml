@@ -723,10 +723,14 @@
 #   were combining or standalone. Using the latter as dead characters (Windows)
 #   or terminators (macOS) in dead keys is not possible consistently throughout
 #   and is a reason why many keyboard layouts are not streamlined, and dead key
-#   behavior is inconsistent. The most outstanding example is a dedicated 'ê'
-#   key, when 'ê' is better supported by configuring the circumflex accent dead
+#   behavior is inconsistent. The most outstanding example is a dedicated "ê"
+#   key, when "ê" is better supported by configuring the circumflex accent dead
 #   key accordingly, with "ê" U00EA as a dead character. Other examples include
-#   unrelated dead characters for hook, horn, and for most combinations.
+#   unrelated dead characters for hook and horn and for almost all chained dead
+#   keys.
+#   See #*# CIRCUMFLEX
+#   See #*# HOOK
+#   See #*# HORN
 #
 #   Unicode added U02D8..U02DD to the Latin-1 diacritics merely for roundtrip
 #   compatibility with pre-existing character sets.
@@ -1618,12 +1622,16 @@
 # # Lenient group selection
 #
 #   Diacritical dead keys may combine with the group dead key mainly to support
-#   diacriticized letters in the letter groups. Empty lower groups are used for
-#   redundant mappings of higher groups. The goal is to not require activating
-#   the exact group.
+#   diacriticized letters in the letter groups.
 #
-#   This is part of the streamlined, “un-screwed-up” user experience set as a
-#   design goal.
+#   Where diacritical or transformational dead keys are chained with the group
+#   dead key, empty lower groups are used for redundant mappings of characters
+#   expected in higher groups, so as to not require activating the exact group.
+#
+#   This is part of the streamlined, “un-screwed-up” user experience set as an
+#   implicit design goal.
+#   See #   Streamlining
+#   See # # Symbols for multikey
 #
 #
 #*# SUPERSCRIPT
@@ -4958,7 +4966,7 @@
 #   on key "T" due to alphabetic mnemonic, while the "T"-shape-based mnemonic
 #   benefits the daggers. The full set of daggers is available by digits 1..6
 #   with shape-based mnemonic for simple, double and triple (already supported
-#   by Umihotaru’s 'Nishiki-teki' font) daggers, by 1..3, and numpad positional
+#   by Umihotaru’s Nishiki-teki font) daggers, by 1..3, and numpad positional
 #   mnemonic for left/right guard daggers, by 4 and 6 respectively, around the
 #   turned dagger by 5.
 #
@@ -5558,7 +5566,7 @@
 #   https://bepo.fr/wiki/Lettres_grecques
 #   https://bepo.fr/wiki/Version_1.1rc2#Touches_mortes
 #
-#   The Greek dead key is mapped on D06 "Y" with a mnemonic based on 'Greek I',
+#   The Greek dead key is mapped on D06 "Y" with a mnemonic based on "Greek I",
 #   translating its French name: "i grec". As an exception to the rule that the
 #   dead keys on alphabetic keys are on level 4, the Greek dead key is both on
 #   level 4 and on level 3, given that its multikey equivalent "@" has a stable
@@ -7108,17 +7116,19 @@
 #   Followed by period, dead_hook yields "⁕" U2055 FLOWER PUNCTUATION MARK.
 #
 #   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
-#   the spacing modifier slot is populated with "˽" U02FD MODIFIER LETTER SHELF
-#   by lack of anything more appropriate.
+#   as a spacing modifier letter, "˞" U02DE MODIFIER LETTER RHOTIC HOOK, based
+#   on "ɝ" U025D supported in dead_hook by "e". The rhotic hook in isolation is
+#   also in the letter group 2 by case insensitive "r".
+#   See #+# GROUP_2
 #
 <dead_hook>                                                                                <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <Multi_key><braceleft>                                                                     <space> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <dead_hook>                                                                                <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
 <Multi_key><braceleft>                                                                     <U200B> : "̡" U0321 # COMBINING PALATALIZED HOOK BELOW
-<dead_hook>                                                                         <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
-<Multi_key><braceleft>                                                              <nobreakspace> : "˽" U02FD # MODIFIER LETTER SHELF
-<dead_hook>                                                                                <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
-<Multi_key><braceleft>                                                                     <U202F> : "˽" U02FD # MODIFIER LETTER SHELF
+<dead_hook>                                                                         <nobreakspace> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
+<Multi_key><braceleft>                                                              <nobreakspace> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
+<dead_hook>                                                                                <U202F> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
+<Multi_key><braceleft>                                                                     <U202F> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
 <dead_hook>                                                                               <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <Multi_key><braceleft>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
 <dead_hook>                                                                                    <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -13710,11 +13720,8 @@
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the hacek dead key is also activatable by dead_circumflex double press,
 #   extending the logic that multiple dead key presses shift diacritics around,
-#   to include the idea that a double press may also turn the diacritic if that
-#   is a better option with respect to usability.
-#
-#   For portability, the full dead key content must be supported, including the
-#   the multikey equivalent, even though this may be less interesting.
+#   to include the idea that a double press may also turn the diacritic, if
+#   that is a better option with respect to usability.
 #
 #   The double dead_circumflex sequences are not added right in the HACEK dead
 #   key for maintainability, because this file is also used as the source code
@@ -13843,14 +13850,6 @@
 #   Multi_key: ¦<<<
 #   Dchar: "ḙ" U1E19
 #
-#   Although the circumflex accent below is extremely rare, Unicode has 6 pairs
-#   of Latin letters precomposed with it. Except on Windows, several composed
-#   letters are also supported, as C̭, c̭, K̭, k̭, R̭, r̭ are found in the
-#   “Palette Accent circonflexe souscrit” on Wikipédia, although with redlinks
-#   and without usage information,
-#   https://www.frathwiki.com/Circumflex_Below
-#   https://fr.wikipedia.org/wiki/Mod%C3%A8le:Palette_Accent_circonflexe_souscrit
-#
 #   Consistency with the bépo keyboard layout and other diacritical dead keys
 #   requires virtualizing the circumflex accent below dead key by double press
 #   of the circumflex accent dead key. Usability however imposes to use this as
@@ -13859,6 +13858,14 @@
 #   double press in an attempt to restore some ease of input.
 #   https://bepo.fr/wiki/Touches_mortes#Circonflexe_souscrit
 #   See #^# CIRCUMFLEX_BELOW input facility by HORN
+#
+#   Although the circumflex accent below is extremely rare, Unicode has 6 pairs
+#   of Latin letters precomposed with it. Except on Windows, several composed
+#   letters are also supported, as C̭, c̭, K̭, k̭, R̭, r̭ are found in the
+#   “Palette Accent circonflexe souscrit” on Wikipédia, although with redlinks
+#   and without usage information,
+#   https://www.frathwiki.com/Circumflex_Below
+#   https://fr.wikipedia.org/wiki/Mod%C3%A8le:Palette_Accent_circonflexe_souscrit
 #
 #   "˿" U02FF MODIFIER LETTER LOW LEFT ARROW has quotedbl and EuroSign as base
 #   characters, with a rationale combining low and less, matching this arrow’s
@@ -16390,7 +16397,7 @@
 #   due to conflicts with the diaeresis and macron virtual dead keys).
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
-#   See # # Symbols for multikey and composition
+#   See # # Symbols for multikey
 #
 #   "¦" U00A6 is also in group 11 of ":".
 #   See # # B09 colon
