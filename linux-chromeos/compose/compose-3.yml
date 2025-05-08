@@ -1416,14 +1416,14 @@
 <Multi_key><numbersign><0>                                                                  <plus> : "✙" U2719 # OUTLINED GREEK CROSS
 <UEFD0><KP_0>                                                                             <KP_Add> : "✙" U2719 # OUTLINED GREEK CROSS
 <Multi_key><numbersign><KP_0>                                                             <KP_Add> : "✙" U2719 # OUTLINED GREEK CROSS
-<UEFD0><1>                                                                                  <plus> : "✜" U271C # HEAVY OPEN CENTRE CROSS
-<Multi_key><numbersign><1>                                                                  <plus> : "✜" U271C # HEAVY OPEN CENTRE CROSS
-<UEFD0><KP_1>                                                                             <KP_Add> : "✜" U271C # HEAVY OPEN CENTRE CROSS
-<Multi_key><numbersign><KP_1>                                                             <KP_Add> : "✜" U271C # HEAVY OPEN CENTRE CROSS
-<UEFD0><2>                                                                                  <plus> : "⁜" U205C # DOTTED CROSS, highlighter mark
-<Multi_key><numbersign><2>                                                                  <plus> : "⁜" U205C # DOTTED CROSS, highlighter mark
-<UEFD0><KP_2>                                                                             <KP_Add> : "⁜" U205C # DOTTED CROSS, highlighter mark
-<Multi_key><numbersign><KP_2>                                                             <KP_Add> : "⁜" U205C # DOTTED CROSS, highlighter mark
+<UEFD0><1>                                                                                  <plus> : "⁜" U205C # DOTTED CROSS, highlighter mark
+<Multi_key><numbersign><1>                                                                  <plus> : "⁜" U205C # DOTTED CROSS, highlighter mark
+<UEFD0><KP_1>                                                                             <KP_Add> : "⁜" U205C # DOTTED CROSS, highlighter mark
+<Multi_key><numbersign><KP_1>                                                             <KP_Add> : "⁜" U205C # DOTTED CROSS, highlighter mark
+<UEFD0><2>                                                                                  <plus> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
+<Multi_key><numbersign><2>                                                                  <plus> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
+<UEFD0><KP_2>                                                                             <KP_Add> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
+<Multi_key><numbersign><KP_2>                                                             <KP_Add> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
 #
 #
 # # C07 underscore
@@ -1787,14 +1787,14 @@
 <Multi_key><numbersign><0>                                                              <asterisk> : "❎" U274E # NEGATIVE SQUARED CROSS MARK emoji, cross mark button
 <UEFD0><KP_0>                                                                        <KP_Multiply> : "❎" U274E # NEGATIVE SQUARED CROSS MARK emoji, cross mark button
 <Multi_key><numbersign><KP_0>                                                        <KP_Multiply> : "❎" U274E # NEGATIVE SQUARED CROSS MARK emoji, cross mark button
-<UEFD0><1>                                                                              <asterisk> : "∗" U2217 # ASTERISK OPERATOR math
-<Multi_key><numbersign><1>                                                              <asterisk> : "∗" U2217 # ASTERISK OPERATOR math
-<UEFD0><KP_1>                                                                        <KP_Multiply> : "∗" U2217 # ASTERISK OPERATOR math
-<Multi_key><numbersign><KP_1>                                                        <KP_Multiply> : "∗" U2217 # ASTERISK OPERATOR math
-<UEFD0><2>                                                                              <asterisk> : "※" U203B # REFERENCE MARK, Japanese kome
-<Multi_key><numbersign><2>                                                              <asterisk> : "※" U203B # REFERENCE MARK, Japanese kome
-<UEFD0><KP_2>                                                                        <KP_Multiply> : "※" U203B # REFERENCE MARK, Japanese kome
-<Multi_key><numbersign><KP_2>                                                        <KP_Multiply> : "※" U203B # REFERENCE MARK, Japanese kome
+<UEFD0><1>                                                                              <asterisk> : "※" U203B # REFERENCE MARK, Japanese kome
+<Multi_key><numbersign><1>                                                              <asterisk> : "※" U203B # REFERENCE MARK, Japanese kome
+<UEFD0><KP_1>                                                                        <KP_Multiply> : "※" U203B # REFERENCE MARK, Japanese kome
+<Multi_key><numbersign><KP_1>                                                        <KP_Multiply> : "※" U203B # REFERENCE MARK, Japanese kome
+<UEFD0><2>                                                                              <asterisk> : "∗" U2217 # ASTERISK OPERATOR math
+<Multi_key><numbersign><2>                                                              <asterisk> : "∗" U2217 # ASTERISK OPERATOR math
+<UEFD0><KP_2>                                                                        <KP_Multiply> : "∗" U2217 # ASTERISK OPERATOR math
+<Multi_key><numbersign><KP_2>                                                        <KP_Multiply> : "∗" U2217 # ASTERISK OPERATOR math
 #
 #
 # # B03 less
