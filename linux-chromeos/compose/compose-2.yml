@@ -16156,7 +16156,7 @@
 <dead_belowdot>                                                                            <U202F> : "⸳" U2E33 # RAISED DOT
 <Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
-<Multi_key><exclam>                                                                        <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
+#   Multikey conflicts with "↱" U21B1.                                                     <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                             <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 #   Multikey conflicts with "Ợ" U1EE2, "ợ" U1EE3, "Ự" U1EF0, "ự" U1EF1.                     <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                       <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
