@@ -4418,9 +4418,8 @@
 #
 #         −3 Arabic[-Indic] BMP math symbols
 #        −20 CJK math presentation forms
-#         −1 Hebrew math presentation form
 #       ――――
-#       1114 Western full BMP math symbols and diacritics
+#       1115 Western full BMP math symbols and diacritics
 #
 #
 # # Layout
@@ -4506,6 +4505,7 @@
 #   Sequences streamlined by cropping non-critical input besides trailing space
 #   are duplicated full-length and commented out for the record, in case some
 #   need to be restored to prevent conflicts with new sequences.
+#   See #Multi_key
 #
 #
 #   Design schemes
@@ -5281,112 +5281,87 @@
 #   U21A8 is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=20
 #
-<Multi_key><less><exclam><greater><bar>                                                    <space> : "↨" U21A8 # UP DOWN ARROW WITH BASE
-<Multi_key><less><exclam><greater><bar>                                             <nobreakspace> : "↨" U21A8 # UP DOWN ARROW WITH BASE
+<Multi_key><less><exclam><greater><bar>                                                            : "↨" U21A8 # UP DOWN ARROW WITH BASE
 #   In group 9 of ")"                                                                              : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
-<Multi_key><less><minus><parenright>                                                       <space> : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
-<Multi_key><less><minus><parenright>                                                <nobreakspace> : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
+<Multi_key><less><minus><parenright>                                                               : "↩" U21A9 # LEFTWARDS ARROW WITH HOOK
 #   In group 9 of "("                                                                              : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
-<Multi_key><parenleft><minus><greater>                                                     <space> : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
-<Multi_key><parenleft><minus><greater>                                              <nobreakspace> : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
+<Multi_key><parenleft><minus><greater>                                                             : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
 <Multi_key><less><minus><o>                                                                <space> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
 <Multi_key><less><minus><o>                                                         <nobreakspace> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
-<Multi_key><o><minus><greater>                                                             <space> : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
-<Multi_key><o><minus><greater>                                                      <nobreakspace> : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
-<Multi_key><space><less><asciitilde><greater>                                              <space> : "↭" U21AD # LEFT RIGHT WAVE ARROW
-<Multi_key><space><less><asciitilde><greater>                                       <nobreakspace> : "↭" U21AD # LEFT RIGHT WAVE ARROW
-<Multi_key><nobreakspace><less><asciitilde><greater>                                       <space> : "↭" U21AD # LEFT RIGHT WAVE ARROW
-<Multi_key><nobreakspace><less><asciitilde><greater>                                <nobreakspace> : "↭" U21AD # LEFT RIGHT WAVE ARROW
-<Multi_key><less><minus><slash><minus><greater>                                            <space> : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
-<Multi_key><less><minus><slash><minus><greater>                                     <nobreakspace> : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
+<Multi_key><o><minus><greater>                                                                     : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
+<Multi_key><space><less><asciitilde><greater>                                                      : "↭" U21AD # LEFT RIGHT WAVE ARROW
+<Multi_key><nobreakspace><less><asciitilde><greater>                                               : "↭" U21AD # LEFT RIGHT WAVE ARROW
+#Multi_key><less><minus><slash><minus><greater>                                                    : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
+<Multi_key><less><minus><slash><minus>                                                             : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
 #
 #   U21AF is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=36
 #
-#   In group 3 of "%"                                                                              : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
-<Multi_key><N><greater>                                                                    <space> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
-<Multi_key><N><greater>                                                             <nobreakspace> : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
-<Multi_key><less><minus><exclam>                                                           <space> : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
-<Multi_key><less><minus><exclam>                                                    <nobreakspace> : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
-<Multi_key><minus><greater><exclam>                                                                : "↱" U21B1 # UPWARDS ARROW WITH TIP RIGHTWARDS
-<Multi_key><n><less>                                                                       <space> : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
-<Multi_key><n><less>                                                                <nobreakspace> : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
-<Multi_key><n><greater>                                                                    <space> : "↷" U21B7 # CLOCKWISE TOP SEMICIRCLE ARROW
-<Multi_key><n><greater>                                                             <nobreakspace> : "↷" U21B7 # CLOCKWISE TOP SEMICIRCLE ARROW
+#   In group 3 of "%" on "Z"                                                                       : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
+<Multi_key><N><greater>                                                                            : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
+<Multi_key><less><minus><exclam>                                                                   : "↰" U21B0 # UPWARDS ARROW WITH TIP LEFTWARDS
+<Multi_key><exclam><minus><greater>                                                                : "↱" U21B1 # UPWARDS ARROW WITH TIP RIGHTWARDS
+<Multi_key><n><less>                                                                               : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
+<Multi_key><space><less><n>                                                                        : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
+<Multi_key><nobreakspace><less><n>                                                                 : "↶" U21B6 # ANTICLOCKWISE TOP SEMICIRCLE ARROW
+<Multi_key><n><greater>                                                                            : "↷" U21B7 # CLOCKWISE TOP SEMICIRCLE ARROW
 <Multi_key><apostrophe><minus>                                                             <space> : "↼" U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
 <Multi_key><apostrophe><minus>                                                      <nobreakspace> : "↼" U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
 <Multi_key><rightsinglequotemark><minus>                                                   <space> : "↼" U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
 <Multi_key><rightsinglequotemark><minus>                                            <nobreakspace> : "↼" U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
-<Multi_key><grave><minus><minus>                                                           <space> : "↽" U21BD # LEFTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><grave><minus><minus>                                                    <nobreakspace> : "↽" U21BD # LEFTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><space><grave><exclam>                                                          <space> : "↾" U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
-<Multi_key><space><grave><exclam>                                                   <nobreakspace> : "↾" U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
-<Multi_key><nobreakspace><grave><exclam>                                                   <space> : "↾" U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
-<Multi_key><nobreakspace><grave><exclam>                                            <nobreakspace> : "↾" U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
-<Multi_key><space><apostrophe><exclam>                                                     <space> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><space><apostrophe><exclam>                                              <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><nobreakspace><apostrophe><exclam>                                              <space> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><nobreakspace><apostrophe><exclam>                                       <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><space><rightsinglequotemark><exclam>                                           <space> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><space><rightsinglequotemark><exclam>                                    <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><nobreakspace><rightsinglequotemark><exclam>                                    <space> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><nobreakspace><rightsinglequotemark><exclam>                             <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><minus><minus><grave>                                                           <space> : "⇀" U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
-<Multi_key><minus><minus><grave>                                                    <nobreakspace> : "⇀" U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
-<Multi_key><minus><minus><apostrophe>                                                      <space> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><minus><minus><apostrophe>                                               <nobreakspace> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><minus><minus><rightsinglequotemark>                                            <space> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><minus><minus><rightsinglequotemark>                                     <nobreakspace> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><exclam><grave>                                                                 <space> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
-<Multi_key><exclam><grave>                                                          <nobreakspace> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
-<Multi_key><exclam><apostrophe>                                                            <space> : "⇃" U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><exclam><apostrophe>                                                     <nobreakspace> : "⇃" U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><exclam><rightsinglequotemark>                                                  <space> : "⇃" U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><exclam><rightsinglequotemark>                                           <nobreakspace> : "⇃" U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
-<Multi_key><minus><greater><less><minus>                                                   <space> : "⇄" U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
-<Multi_key><minus><greater><less><minus>                                            <nobreakspace> : "⇄" U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
-<Multi_key><less><exclam><exclam><greater>                                                 <space> : "⇅" U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
-<Multi_key><less><exclam><exclam><greater>                                          <nobreakspace> : "⇅" U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
-<Multi_key><less><minus><minus><greater>                                                   <space> : "⇆" U21C6 # LEFTWARDS ARROW OVER RIGHTWARDS ARROW
-<Multi_key><less><minus><minus><greater>                                            <nobreakspace> : "⇆" U21C6 # LEFTWARDS ARROW OVER RIGHTWARDS ARROW
+<Multi_key><grave><minus>                                                                  <space> : "↽" U21BD # LEFTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><grave><minus>                                                           <nobreakspace> : "↽" U21BD # LEFTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><grave><exclam>                                                                 <space> : "↾" U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
+<Multi_key><grave><exclam>                                                          <nobreakspace> : "↾" U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
+<Multi_key><apostrophe><exclam>                                                            <space> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
+<Multi_key><apostrophe><exclam>                                                     <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
+<Multi_key><rightsinglequotemark><exclam>                                                  <space> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
+<Multi_key><rightsinglequotemark><exclam>                                           <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
+<Multi_key><minus><grave>                                                                  <space> : "⇀" U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
+<Multi_key><minus><grave>                                                           <nobreakspace> : "⇀" U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
+<Multi_key><space><space><minus><apostrophe>                                                       : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><nobreakspace><space><minus><apostrophe>                                                : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><nobreakspace><nobreakspace><minus><apostrophe>                                         : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><space><space><minus><rightsinglequotemark>                                             : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><nobreakspace><space><minus><rightsinglequotemark>                                      : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><nobreakspace><nobreakspace><minus><rightsinglequotemark>                               : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><exclam><apostrophe>                                                            <space> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
+<Multi_key><exclam><apostrophe>                                                     <nobreakspace> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
+<Multi_key><exclam><rightsinglequotemark>                                                  <space> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
+<Multi_key><exclam><rightsinglequotemark>                                           <nobreakspace> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
+<Multi_key><exclam><grave>                                                                 <space> : "⇃" U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
+<Multi_key><exclam><grave>                                                          <nobreakspace> : "⇃" U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
+<Multi_key><minus><greater><less><minus>                                                           : "⇄" U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
+#Multi_key><less><exclam><exclam><greater>                                                         : "⇅" U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
+<Multi_key><less><exclam><exclam>                                                                  : "⇅" U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
+<Multi_key><less><minus><minus><greater>                                                           : "⇆" U21C6 # LEFTWARDS ARROW OVER RIGHTWARDS ARROW
 <Multi_key><2><less><minus>                                                                        : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
 <Multi_key><KP_2><less><minus>                                                                     : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
-<Multi_key><space><less><minus><less><minus>                                               <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
-<Multi_key><space><less><minus><less><minus>                                        <nobreakspace> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><less><minus><less><minus>                                        <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><less><minus><less><minus>                                 <nobreakspace> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
+<Multi_key><less><minus><less><minus>                                                      <space> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
+<Multi_key><less><minus><less><minus>                                               <nobreakspace> : "⇇" U21C7 # LEFTWARDS PAIRED ARROWS
 <Multi_key><2><less><exclam>                                                                       : "⇈" U21C8 # UPWARDS PAIRED ARROWS
 <Multi_key><KP_2><less><exclam>                                                                    : "⇈" U21C8 # UPWARDS PAIRED ARROWS
-<Multi_key><less><exclam><less><exclam>                                                    <space> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
-<Multi_key><less><exclam><less><exclam>                                             <nobreakspace> : "⇈" U21C8 # UPWARDS PAIRED ARROWS
-<Multi_key><space><2><minus><greater>                                                      <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><space><2><minus><greater>                                               <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><2><minus><greater>                                               <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><2><minus><greater>                                        <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><space><KP_2><KP_Subtract><greater>                                             <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><space><KP_2><KP_Subtract><greater>                                      <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><KP_2><KP_Subtract><greater>                                      <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><KP_2><KP_Subtract><greater>                               <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><space><minus><greater><minus><greater>                                         <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><space><minus><greater><minus><greater>                                  <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><minus><greater><minus><greater>                                  <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><minus><greater><minus><greater>                           <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><2><exclam><greater>                                                                    : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
-<Multi_key><KP_2><exclam><greater>                                                                 : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
-<Multi_key><exclam><greater><exclam><greater>                                              <space> : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
-<Multi_key><exclam><greater><exclam><greater>                                       <nobreakspace> : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
-<Multi_key><apostrophe><minus><minus><apostrophe>                                          <space> : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
-<Multi_key><apostrophe><minus><minus><apostrophe>                                   <nobreakspace> : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
-<Multi_key><rightsinglequotemark><minus><minus><rightsinglequotemark>                      <space> : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
-<Multi_key><rightsinglequotemark><minus><minus><rightsinglequotemark>               <nobreakspace> : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
-<Multi_key><minus><grave><grave><minus>                                                    <space> : "⇌" U21CC # RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON
-<Multi_key><minus><grave><grave><minus>                                             <nobreakspace> : "⇌" U21CC # RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON
+<Multi_key><less><exclam><less><exclam>                                                            : "⇈" U21C8 # UPWARDS PAIRED ARROWS
+#Multi_key><space><2><minus><greater>                                                              : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><space><2><minus>                                                                       : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><nobreakspace><2><minus>                                                                : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><space><KP_2><KP_Subtract>                                                              : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><nobreakspace><KP_2><KP_Subtract>                                                       : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><minus><greater><minus><greater>                                                <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><minus><greater><minus><greater>                                         <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+#Multi_key><2><exclam><greater>                                                                    : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
+<Multi_key><2><exclam>                                                                             : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
+<Multi_key><KP_2><exclam>                                                                          : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
+#Multi_key><exclam><greater><exclam><greater>                                                      : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
+<Multi_key><exclam><greater><exclam>                                                               : "⇊" U21CA # DOWNWARDS PAIRED ARROWS
+<Multi_key><apostrophe><minus><minus><apostrophe>                                                  : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><minus><rightsinglequotemark>                              : "⇋" U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
+#Multi_key><minus><grave><grave><minus>                                                            : "⇌" U21CC # RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON
+<Multi_key><minus><grave><grave>                                                                   : "⇌" U21CC # RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON
 <Multi_key><less><equal><slash>                                                            <space> : "⇍" U21CD # LEFTWARDS DOUBLE ARROW WITH STROKE
 <Multi_key><less><equal><slash>                                                     <nobreakspace> : "⇍" U21CD # LEFTWARDS DOUBLE ARROW WITH STROKE
-<Multi_key><less><equal><slash><equal><greater>                                            <space> : "⇎" U21CE # LEFT RIGHT DOUBLE ARROW WITH STROKE
-<Multi_key><less><equal><slash><equal><greater>                                     <nobreakspace> : "⇎" U21CE # LEFT RIGHT DOUBLE ARROW WITH STROKE
-<Multi_key><slash><equal><greater>                                                         <space> : "⇏" U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
-<Multi_key><slash><equal><greater>                                                  <nobreakspace> : "⇏" U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
+<Multi_key><less><equal><slash><greater>                                                           : "⇎" U21CE # LEFT RIGHT DOUBLE ARROW WITH STROKE
+<Multi_key><equal><slash><greater>                                                                 : "⇏" U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
 <Multi_key><less><equal>                                                                   <space> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
 <Multi_key><less><equal>                                                            <nobreakspace> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
 <Multi_key><less><exclam><equal>                                                                   : "⇑" U21D1 # UPWARDS DOUBLE ARROW
@@ -5399,14 +5374,10 @@
 <Multi_key><slash><greater><equal>                                                                 : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <Multi_key><backslash><greater><equal>                                                             : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
 <Multi_key><less><slash><equal>                                                                    : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-<Multi_key><less><minus><3>                                                                <space> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
-<Multi_key><less><minus><3>                                                         <nobreakspace> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
-<Multi_key><less><minus><KP_3>                                                             <space> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
-<Multi_key><less><minus><KP_3>                                                      <nobreakspace> : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
-<Multi_key><minus><greater><3>                                                             <space> : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
-<Multi_key><minus><greater><3>                                                      <nobreakspace> : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
-<Multi_key><minus><greater><KP_3>                                                          <space> : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
-<Multi_key><minus><greater><KP_3>                                                   <nobreakspace> : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
+<Multi_key><less><minus><3>                                                                        : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
+<Multi_key><less><minus><KP_3>                                                                     : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
+<Multi_key><minus><greater><3>                                                                     : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
+<Multi_key><minus><greater><KP_3>                                                                  : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
 #
 #   U21DC is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=37
@@ -5415,51 +5386,53 @@
 <Multi_key><less><asciitilde><asciitilde>                                           <nobreakspace> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
 <Multi_key><asciitilde><asciitilde><greater>                                                       : "⇝" U21DD # RIGHTWARDS SQUIGGLE ARROW
 <Multi_key><bar><less><minus>                                                                      : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
-<Multi_key><minus><greater><bar>                                                           <space> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
-<Multi_key><minus><greater><bar>                                                    <nobreakspace> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
+<Multi_key><minus><greater><bar>                                                                   : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
 <Multi_key><space><o><minus><greater>                                                              : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><nobreakspace><o><minus><greater>                                                       : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
-<Multi_key><exclam><greater><less><exclam>                                                 <space> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
-<Multi_key><exclam><greater><less><exclam>                                          <nobreakspace> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
-<Multi_key><space><3><minus><greater>                                                      <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><space><3><minus><greater>                                               <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><3><minus><greater>                                               <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><3><minus><greater>                                        <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><space><KP_3><KP_Subtract><greater>                                             <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><space><KP_3><KP_Subtract><greater>                                      <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><KP_3><KP_Subtract><greater>                                      <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><KP_3><KP_Subtract><greater>                               <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><minus><greater><minus><greater><minus><greater>                                <space> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><minus><greater><minus><greater><minus><greater>                         <nobreakspace> : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+#Multi_key><exclam><greater><less><exclam>                                                         : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
+<Multi_key><exclam><greater><less>                                                                 : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
+#Multi_key><space><3><minus><greater>                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><space><3>                                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><3>                                                                       : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><space><KP_3>                                                                           : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><KP_3>                                                                    : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+#Multi_key><minus><greater><minus><greater><minus><greater>                                        : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><minus><greater><minus><greater><minus>                                                 : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 #
-#   The arrows "⇷" U21F7, "⇸" U21F8 need to be distinguished both from
-#   "↤" U21A4, "↦" U21A6 and from "⇽" U21FD, "⇾" U21FE, hence their sequences
-#   contain minus twice. By contrast, the sequences of "⇺" U21FA, "⇻" U21FB are
-#   streamlined, while consistent sequences are supported alongside.
-#   See #   Streamlining
+#   The arrows "⇷" U21F7, "⇸" U21F8 need to be distinguished from "↤" U21A4,
+#   "↦" U21A6, and from "⇽" U21FD, "⇾" U21FE. Most intuitively, minus occurs
+#   twice, but leading space is also supported. Similar redundancies exist for
+#   "⇹" U21F9.."⇻" U21FB.
+#   See #   Leading space
 #
 <Multi_key><less><minus><bar><minus>                                                       <space> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus>                                                <nobreakspace> : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
+<Multi_key><space><less><minus><bar>                                                               : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
+<Multi_key><nobreakspace><less><minus><bar>                                                        : "⇷" U21F7 # LEFTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><minus><bar><minus><greater>                                                    <space> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
 <Multi_key><minus><bar><minus><greater>                                             <nobreakspace> : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
-<Multi_key><less><minus><bar><minus><greater>                                              <space> : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
-<Multi_key><less><minus><bar><minus><greater>                                       <nobreakspace> : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
-<Multi_key><less><bar><bar><minus>                                                         <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><bar><bar><minus>                                                  <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+#Multi_key><space><minus><bar><greater>                                                            : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
+<Multi_key><space><minus><bar>                                                                     : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
+<Multi_key><nobreakspace><minus><bar>                                                              : "⇸" U21F8 # RIGHTWARDS ARROW WITH VERTICAL STROKE
+<Multi_key><less><minus><bar><greater>                                                             : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
+<Multi_key><less><minus><bar><minus><greater>                                                      : "⇹" U21F9 # LEFT RIGHT ARROW WITH VERTICAL STROKE
+<Multi_key><less><minus><bar><bar>                                                         <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><minus><bar><bar>                                                  <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus>                                                  <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus>                                           <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><bar><bar><minus>                                                         <space> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><bar><bar><minus>                                                  <nobreakspace> : "⇺" U21FA # LEFTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><greater>                                                      <space> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><greater>                                               <nobreakspace> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><minus><greater>                                               <space> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><bar><bar><minus><greater>                                        <nobreakspace> : "⇻" U21FB # RIGHTWARDS ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><minus><bar><bar><minus><greater>                                         <space> : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><minus><bar><bar><minus><greater>                                  <nobreakspace> : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><less><minus><bar><bar><minus><greater>                                                 : "⇼" U21FC # LEFT RIGHT ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><bar><minus>                                                              <space> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
 <Multi_key><less><bar><minus>                                                       <nobreakspace> : "⇽" U21FD # LEFTWARDS OPEN-HEADED ARROW
 <Multi_key><minus><bar><greater>                                                           <space> : "⇾" U21FE # RIGHTWARDS OPEN-HEADED ARROW
 <Multi_key><minus><bar><greater>                                                    <nobreakspace> : "⇾" U21FE # RIGHTWARDS OPEN-HEADED ARROW
-<Multi_key><less><bar><minus><bar><greater>                                                <space> : "⇿" U21FF # LEFT RIGHT OPEN-HEADED ARROW
-<Multi_key><less><bar><minus><bar><greater>                                         <nobreakspace> : "⇿" U21FF # LEFT RIGHT OPEN-HEADED ARROW
+#Multi_key><less><bar><minus><bar><greater>                                                        : "⇿" U21FF # LEFT RIGHT OPEN-HEADED ARROW
+<Multi_key><less><bar><minus><bar>                                                                 : "⇿" U21FF # LEFT RIGHT OPEN-HEADED ARROW
 #
 #
 # # Mathematical Operators of block U2200
@@ -5477,11 +5450,11 @@
 #   In group 2 of "("                                                                              : "∂" U2202 # PARTIAL DIFFERENTIAL
 <Multi_key><d>                                                                             <space> : "∂" U2202 # PARTIAL DIFFERENTIAL
 <Multi_key><d>                                                                      <nobreakspace> : "∂" U2202 # PARTIAL DIFFERENTIAL
-#   In group 4 of "€" and "\""                                                                     : "∃" U2203 # THERE EXISTS
+#   In group 4 of '"' and "€" on "E"                                                               : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                             <space> : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                      <nobreakspace> : "∃" U2203 # THERE EXISTS
 #   In # # STROKE&GROUP_4                                                                          : "∄" U2204 # THERE DOES NOT EXIST
-#   In group 4 of "%"                                                                              : "∄" U2204 # THERE DOES NOT EXIST
+#   In group 4 of "%" on "Z" next to "E"                                                           : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><E><slash>                                                                              : "∄" U2204 # THERE DOES NOT EXIST
 #   In group 2 of "}"                                                                              : "∅" U2205 # EMPTY SET
 <Multi_key><O><slash>                                                                              : "∅" U2205 # EMPTY SET
@@ -5497,14 +5470,14 @@
 #
 <Multi_key><H>                                                                             <space> : "∇" U2207 # NABLA
 <Multi_key><H>                                                                      <nobreakspace> : "∇" U2207 # NABLA
-#   In group 2 of "€" and "\""                                                                     : "∈" U2208 # ELEMENT OF
+#   In group 2 of '"' and "€"                                                                      : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                             <space> : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                      <nobreakspace> : "∈" U2208 # ELEMENT OF
 <Multi_key><e><slash>                                                                      <space> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><e><slash>                                                               <nobreakspace> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><e><comma>                                                                      <space> : "∊" U220A # SMALL ELEMENT OF
 <Multi_key><e><comma>                                                               <nobreakspace> : "∊" U220A # SMALL ELEMENT OF
-#   In group 3 of "€" and "\""                                                                     : "∋" U220B # CONTAINS AS MEMBER
+#   In group 3 of '"' and "€"                                                                      : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                             <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                      <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                                  <space> : "∋" U220B # CONTAINS AS MEMBER
@@ -5517,25 +5490,25 @@
 <Multi_key><p><comma>                                                               <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><comma>                                                           <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><comma>                                                    <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
-#   End of proof.
+#   "End of proof"
 #Multi_key><e><o><p>                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><e><o>                                                                                  : "∎" U220E # END OF PROOF
 <Multi_key><E><O>                                                                                  : "∎" U220E # END OF PROOF
-#   Quod erat demonstrandum.
+#   "Quod erat demonstrandum"
 #Multi_key><q><e><d>                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><q><e>                                                                                  : "∎" U220E # END OF PROOF
 <Multi_key><Q><E>                                                                                  : "∎" U220E # END OF PROOF
-#   Ce qu’il fallait démontrer.
+#   "Ce qu’il fallait démontrer"
 #Multi_key><c><q><f><d>                                                                            : "∎" U220E # END OF PROOF
 <Multi_key><c><q>                                                                                  : "∎" U220E # END OF PROOF
 <Multi_key><C><Q>                                                                                  : "∎" U220E # END OF PROOF
-#   In group 3 of "&"                                                                              : "∏" U220F # N-ARY PRODUCT
+#   In group 3 of "&" on "P"                                                                       : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
 #   In group 3 of "}"                                                                              : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><percent>                                                                            : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><C><P>                                                                                  : "∐" U2210 # N-ARY COPRODUCT
-#   In group 3 of "$"                                                                              : "∑" U2211 # N-ARY SUMMATION
+#   In group 3 of "$" on "S"                                                                       : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
 #   On live key AltFr + D05                                                                        : "−" U2212 # MINUS SIGN
@@ -5586,7 +5559,7 @@
 #   In group 3 of "\"                                                                              : "∜" U221C # FOURTH ROOT
 <Multi_key><4><v>                                                                                  : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                               : "∜" U221C # FOURTH ROOT
-#   In group 10 of "{"                                                                             : "∝" U221D # PROPORTIONAL TO
+#   In group 10 of "{" on "I"                                                                      : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><8>                                                                      <space> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><8>                                                               <nobreakspace> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><KP_8>                                                                   <space> : "∝" U221D # PROPORTIONAL TO
@@ -5595,7 +5568,7 @@
 <Multi_key><nobreakspace><8>                                                        <nobreakspace> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><KP_8>                                                            <space> : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><KP_8>                                                     <nobreakspace> : "∝" U221D # PROPORTIONAL TO
-#   In group 11 of "{"                                                                             : "∞" U221E # INFINITY
+#   In group 11 of "{" on "I"                                                                      : "∞" U221E # INFINITY
 <Multi_key><8>                                                                             <space> : "∞" U221E # INFINITY
 <Multi_key><8>                                                                      <nobreakspace> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                          <space> : "∞" U221E # INFINITY
@@ -5649,24 +5622,24 @@
 <Multi_key><v>                                                                      <nobreakspace> : "∨" U2228 # LOGICAL OR
 <Multi_key><o><r>                                                                                  : "∨" U2228 # LOGICAL OR
 <Multi_key><O><R>                                                                                  : "∨" U2228 # LOGICAL OR
-#   In group 4 of "{"                                                                              : "∩" U2229 # INTERSECTION
+#   In group 4 of "{" on "I"                                                                       : "∩" U2229 # INTERSECTION
 <Multi_key><n>                                                                             <space> : "∩" U2229 # INTERSECTION
 <Multi_key><n>                                                                      <nobreakspace> : "∩" U2229 # INTERSECTION
-#   In group 4 of "'"                                                                              : "∪" U222A # UNION
+#   In group 4 of "'" and "’"                                                                      : "∪" U222A # UNION
 <Multi_key><u>                                                                             <space> : "∪" U222A # UNION
 <Multi_key><u>                                                                      <nobreakspace> : "∪" U222A # UNION
 #   In #*# CURRENCY                                                                                : "∫" U222B # INTEGRAL
-#   In group 1 of "{"                                                                              : "∫" U222B # INTEGRAL
+#   In group 1 of "{" on "I"                                                                       : "∫" U222B # INTEGRAL
 <Multi_key><s>                                                                             <space> : "∫" U222B # INTEGRAL
 <Multi_key><s>                                                                      <nobreakspace> : "∫" U222B # INTEGRAL
 #   In #*# CURRENCY                                                                                : "∬" U222C # DOUBLE INTEGRAL
-#   In group 2 of "{"                                                                              : "∬" U222C # DOUBLE INTEGRAL
+#   In group 2 of "{" on "I"                                                                       : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><2><s>                                                                          <space> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><2><s>                                                                   <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><KP_2><s>                                                                       <space> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><KP_2><s>                                                                <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
 #   In #*# CURRENCY                                                                                : "∭" U222D # TRIPLE INTEGRAL
-#   In group 3 of "{"                                                                              : "∭" U222D # TRIPLE INTEGRAL
+#   In group 3 of "{" on "I"                                                                       : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><3><s>                                                                          <space> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><3><s>                                                                   <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><KP_3><s>                                                                       <space> : "∭" U222D # TRIPLE INTEGRAL
@@ -5953,10 +5926,10 @@
 <Multi_key><greater><parenright><parenleft><slash>                                  <nobreakspace> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><greater><parenleft><parenright><slash>                                         <space> : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><greater><parenleft><parenright><slash>                                  <nobreakspace> : "⊁" U2281 # DOES NOT SUCCEED
-#   In group 2 of "'"                                                                              : "⊂" U2282 # SUBSET OF
+#   In group 2 of "'" and "’"                                                                      : "⊂" U2282 # SUBSET OF
 <Multi_key><c>                                                                             <space> : "⊂" U2282 # SUBSET OF
 <Multi_key><c>                                                                      <nobreakspace> : "⊂" U2282 # SUBSET OF
-#   In group 3 of "'"                                                                              : "⊃" U2283 # SUPERSET OF
+#   In group 3 of "'" and "’"                                                                      : "⊃" U2283 # SUPERSET OF
 <Multi_key><b>                                                                             <space> : "⊃" U2283 # SUPERSET OF
 <Multi_key><b>                                                                      <nobreakspace> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><backslash>                                                                  <space> : "⊃" U2283 # SUPERSET OF
@@ -6762,7 +6735,7 @@
 #   https://www.unicode.org/charts/PDF/U2600.pdf
 #   https://www.unicode.org/charts/nameslist/n_2600.html
 #
-#   In group 1 of "€" and "\""                                                                     : "★" U2605 # BLACK STAR
+#   In group 1 of '"' and "€"                                                                      : "★" U2605 # BLACK STAR
 <Multi_key><space><space><asterisk><numbersign>                                            <space> : "★" U2605 # BLACK STAR
 <Multi_key><space><space><asterisk><numbersign>                                     <nobreakspace> : "★" U2605 # BLACK STAR
 <Multi_key><nobreakspace><space><asterisk><numbersign>                                     <space> : "★" U2605 # BLACK STAR
@@ -7256,10 +7229,10 @@
 <Multi_key><space><less><backslash>                                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><less><backslash>                                                         : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><asciitilde><minus><greater>                                                            : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
-#   In group 6 of "'"                                                                              : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
+#   In group 6 of "'" and "’"                                                                      : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><space><minus><J><less>                                                                 : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><nobreakspace><minus><J><less>                                                          : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
-#   In group 5 of "'"                                                                              : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
+#   In group 5 of "'" and "’"                                                                      : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><space><minus><J><greater>                                                              : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><nobreakspace><minus><J><greater>                                                       : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><space><less><J><exclam>                                                                : "⤶" U2936 # ARROW POINTING DOWNWARDS THEN CURVING LEFTWARDS
@@ -8947,6 +8920,41 @@
 <Multi_key><minus><greater><asciitilde><backslash>                                  <nobreakspace> : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
 #
 #
+# # Hebrew presentation form in block FB00 used in mathematics
+#
+#   As a matter of cropping the descending arm of the plus sign out of
+#   staurophobia or whatever, an alternative plus sign has been encoded,
+#   although this may also be done at font level.
+#   (download URL) https://ejournal.ust.ac.id/index.php/LOGOS/article/view/3414/2653
+#   https://www.unicode.org/charts/PDF/UFB00.pdf
+#   https://www.unicode.org/charts/nameslist/n_FB00.html
+#
+#   Consistently, this character is a math symbol.
+#   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Characters_in_other_blocks
+#   https://en.wikipedia.org/wiki/Alphabetic_Presentation_Forms
+#
+#   "﬩" UFB29 is supported since 2025-05-08, when it made its way into symbol
+#   group 12 of "+", to fill in an empty slot after "⁜" U205C was moved from
+#   group 12 to group 11 in the wake of the same move for "※" U203B so as to
+#   get "∗" U2217 from group 11 into group 12 consistently with "∖" U2216,
+#   "∥" U2225, "∕" U2215, "⋈" U22C8, "⟂" U27C2 and "‖" U2016.
+#   See # # C06 plus
+#   See # # B02 asterisk
+#   See # # D04 backslash
+#   See # # C10 bar
+#   See # # B01 slash
+#   See # # B04 greater
+#   See # # B06 grave
+#   See # # B09 colon
+#
+#   The sequence has been designed consistently with those for "ℵ" U2135,
+#   "ℶ" U2136, "ℷ" U2137, "ℸ" U2138.
+#   See # # Letterlike symbols in block U2100 used in mathematics
+#
+#   In group 12 of "+"                                                                             : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN
+<Multi_key><plus><backslash>                                                                       : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN
+#
+#
 # # LaTeX codes
 #
 #   Since the maximum number of keysyms is 9, many LaTeX commands need to be
@@ -8964,17 +8972,17 @@
 #   This is also an opportunity to include characters not labeled as math, such
 #   as the Greek small letter pi, or the envelope emoji.
 #
-#   In group 1 of "&"                                                                              : "π" U03C0 # GREEK SMALL LETTER PI
+#   In group 1 of "&" on "P"                                                                       : "π" U03C0 # GREEK SMALL LETTER PI
 <Multi_key><p><i>                                                                          <space> : "π" U03C0 # GREEK SMALL LETTER PI
 <Multi_key><p><i>                                                                   <nobreakspace> : "π" U03C0 # GREEK SMALL LETTER PI
-#   In group 4 of "{"                                                                              : "∩" U2229 # INTERSECTION
+#   In group 4 of "{" on "I"                                                                       : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                       <space> : "∩" U2229 # INTERSECTION
 <Multi_key><c><a><p>                                                                <nobreakspace> : "∩" U2229 # INTERSECTION
 <Multi_key><i><n><t><e><r><s><e><c>                                                                : "∩" U2229 # INTERSECTION French truncated name
 <Multi_key><C><a><p>                                                                               : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><c><a><p><d><o><t>                                                                      : "⩀" U2A40 # INTERSECTION WITH DOT
-#   <Multi_key><c><a><p><p><l><u><s> is not a Unicode character.
-#   In group 4 of "'"                                                                              : "∪" U222A # UNION
+#   The TeX command \capplus is not converted to any Unicode character.
+#   In group 4 of "'" and "’"                                                                      : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                       <space> : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                <nobreakspace> : "∪" U222A # UNION
 <Multi_key><u><n><i><o><n>                                                                         : "∪" U222A # UNION French name
@@ -8994,7 +9002,7 @@
 <Multi_key><d><i><a><m><e><t><e><r>                                                                : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><d><i><a><m><egrave><t><r><e>                                                           : "⌀" U2300 # DIAMETER SIGN French
 <Multi_key><d><i><a><m><e><t><r><e>                                                                : "⌀" U2300 # DIAMETER SIGN simplified French
-#   In group 7 of "€" and "\""                                                                     : "✉" U2709 # ENVELOPE
+#   In group 7 of '"' and "€"                                                                      : "✉" U2709 # ENVELOPE
 <Multi_key><E><n><v><e><l><o><p><e>                                                                : "✉" U2709 # ENVELOPE TeX control has title case
 <Multi_key><e><n><v>                                                                               : "✉" U2709 # ENVELOPE
 <Multi_key><L><p><a><r><e><n><g><t>                                                                : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
