@@ -1,4 +1,4 @@
-#                      Scope: part 3 of Compose
+#                      Scope: part 3 of XCompose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -20,8 +20,8 @@
 #
 #   Usually, however, the scope of the group dead key is limited to a handy set
 #   of characters including the Latin base alphabet, the ten digits and the set
-#   of ASCII symbols mapped on level 3 as of 30 symbols, and level 1 for period
-#   and comma, plus the space bar, with ordinary space and no-break space used.
+#   of ASCII symbols mapped at level 3 as of 30 symbols, and at level 1 as of
+#   period and comma, plus ordinary space and no-break space U00A0.
 #
 #   The resulting letter groups and symbol groups make up the main content of a
 #   standard group dead key as used on this keyboard layout, with support for a
@@ -35,15 +35,25 @@
 #   the default group, that is obiously numbered 0, contrasting with the scheme
 #   introduced by ISO/IEC 9995.
 #
-#   Digits and non-ASCII base characters:
-#   See #*# GROUP_1
-#   and following, up to #^# GROUP_12
-#
 #   ASCII symbols and punctuation, space, no-break space:
 #   See ### Space and symbol groups
 #
 #   Latin base alphabet:
 #   See ### Letter groups
+#
+#   Digits and non-ASCII base characters:
+#   See #*# GROUP_1
+#   See #^# GROUP_2
+#   See #^# GROUP_3
+#   See #^# GROUP_4
+#   See #^# GROUP_5
+#   See #^# GROUP_6
+#   See #^# GROUP_7
+#   See #^# GROUP_8
+#   See #^# GROUP_9
+#   See #^# GROUP_10
+#   See #^# GROUP_11
+#   See #^# GROUP_12
 #
 #   The keysym *dead_group is not supported in keysymdef.h. For the time being,
 #   the private use character UEFB0 is used as the group dead key.
@@ -56,23 +66,26 @@
 #   lack of support for the ISO/IEC 9995 style group dead key in TSF, the Text
 #   Services Framework on Windows, Karl Pentzlin moved the group dead key to a
 #   real dead key taking over the dead key behavior that ISO/IEC 9995 specified
-#   on the level 2 + level 3 modifier combination. A similar dead key included
-#   in other keyboard layouts may be called “Latin and punctuation” as on the
-#   French ergonomic bépo keyboard layout, or “Europe” as in NF Z71-300:2019.
+#   for the level-2 modifier + level-3 modifier combination.
+#
+#   A similar dead key included in other keyboard layouts may be called “Latin
+#   and punctuation” as on the French ergonomic bépo keyboard layout in annex B
+#   of NF Z71-300:2019, or “Europe” as in annex A.
 #   https://bepo.fr/wiki/Latin_et_ponctuation
 #
-#   XKB supports the ISO/IEC 9995 conformant group selection since 2013, see
+#   XKB supports the ISO/IEC 9995 conformant group selection since 2013.
 #   https://bugs.freedesktop.org/show_bug.cgi?id=60991
 #
 #   But XKB keysym mapping is limited to a maximum number of 8 elements. This
 #   array is used up by the extra graphic modifier required for the support of
 #   input methods for the Unicode conformant digital representation of numbers
 #   and measurement units used in 50+ countries, conforming to the guidelines
-#   set up by the Bureau International des Poids et Mesures BIPM, and for input
-#   of French, that uses U202F NARROW NO-BREAK SPACE to space out a number of
-#   punctuation marks following the French Imprimerie Nationale and/or French
-#   new-school typesetting as documented in points (2) and (3) of:
+#   set up by the Bureau International des Poids et Mesures BIPM; and for input
+#   of French, that uses no-break thin space or U202F NARROW NO-BREAK SPACE to
+#   space out a number of punctuation marks as in French Imprimerie Nationale
+#   style guide and/or following French new-school typesetting as documented in
 #   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
+#   points (2) and (3).
 #
 #   Virtual dead keys accessed by multiple dead key presses in turn have been
 #   introduced by the bépo development team in 2015, while upgrading the bépo
@@ -116,11 +129,11 @@
 ### Space and symbol groups
 #
 #   The base characters in this section are mapped on AltGr/Option or unshifted
-#   keys as of comma, period and space. Symbols and punctuation mapped on level
-#   three assume using the group dead key in synergy on AltGr/Option.
+#   keys as of comma, period and space. Symbols and punctuation mapped at
+#   level 3 assume using the group dead key in synergy on AltGr/Option.
 #
 #   Consistently, this section is ordered by keys rather than by groups, while
-#   each one of the 32 ASCII symbols supports all the 12 groups.
+#   each one of the 32 ASCII symbols supports the 12 groups.
 #
 #   Mnemonics use either the ASCII symbols or the letters of the base alphabet.
 #   Accordingly, the ASCII symbols are not meant to be printed on the keycaps.
@@ -247,8 +260,8 @@
 #	  8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⬛	⛩	☸	✊	⛼	⛬	♞	♘	✝	✋	⬜	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♟	♙	⚜	⛰	〰	✳	☄	➸	⚖	☁		♄		∴	⏰	⧗	TSP	TSP	
 #	10	ZWNJ	ZWJ	VS16	VS1	VS15	❍	⏫	∝	⏬	⸿	⮽	FF	CGJ	BOM	WJ	✙	⮈	⟦	⟧	Ⓜ	➿	❎	▲	▼	♮	PDF		♅		∵	⏲	⧖	WNJ	WJ	
-#	11	‸	‰	⏏	®	™	⁁	ˈ	∞	⚒	¶	♯	☉	☾	☽	⁒	✜	➲	❐	❒	∣	➰	∗	©	⛛	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP	 
-#	12	ª	‱	〃	∖	☘	❖	ˌ	♾	º	⛏	⚧	✒	⁀	‿	‐	⁜	⮊	❑	❏	∥	∕	※	✏	⋈	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP	
+#	11	‸	‰	⏏	®	™	⁁	ˈ	∞	⚒	¶ 	♯	☉	 	☽	⁒	⁜	➲	❐	❒	∣	➰	※	©	⛛	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP	 
+#	12	ª	‱	〃	∖	☘	❖	ˌ	♾	º	⛏	⚧	✒	⁀	‿	‐	﬩	⮊	❑	❏	∥	∕	∗	✏	⋈	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP	
 #
 #
 #
@@ -630,23 +643,19 @@
 <Multi_key><numbersign><KP_2>                                                         <asciitilde> : "☘" U2618 # SHAMROCK emoji
 #
 #
-# # D06 at, dead_greek
+# # D06 at
 #
-#   Since v1.7.0, dead_greek is also mapped on level 3 instead of the at sign,
-#   that is supported on base level E11, making its level 3 D06 alias redundant
-#   so that this position is available for an easier dead_greek duplicate. As a
-#   consequence, dead_greek must work as an alias base character for the symbol
-#   groups.
+#   Since v1.7.0, dead_greek is also mapped at level 3 instead of the at sign
+#   on D06, level 3. The at sign is supported on E11, level 1, making its D06,
+#   level 3 instance redundant, so that this position is available for an easy
+#   dead_greek duplicate. As a consequence, for the symbol groups, dead_greek
+#   must work as an alias base character.
 #
-#   "◌" U25CC is in group 1 as the usual pick for the dotted circle, a generic
-#   base character for combining diacritics.
+#   Group 1 has "◌" U25CC as the usual pick for the dotted circle, a generic
+#   base character for combining diacritics in documentation.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=80
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=132&zoom=100,0,410
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=950
-#
-#   The alternative X-filled checkbox "⮽" U2BBD is here because it has no room
-#   in the groups of the checkbox-supporting symbol bar.
-#   See # # C10 bar
 #
 <UEFD0>                                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
 <Multi_key><numbersign>                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
@@ -1302,14 +1311,12 @@
 # # C05 minus
 #
 #   "‐" U2010 HYPHEN is not in group 1 of minus, because it is a duplicate of
-#   "-" U002D HYPHEN-MINUS.
+#   "-" U002D HYPHEN-MINUS. For completeness, it is in group 12 of minus, where
+#   it should not do too much harm.
+#   See #   Hyphens
 #   See # # B05 equal
-#   See # # Dashes and hyphens
 #
-#   For completeness, "‐" U2010 HYPHEN is in group 12 of minus, where it should
-#   not do too much harm.
-#
-#   Since the four basic arithmetic operators are on level 5 live key positions
+#   Since the four basic arithmetic operators are on level-5 live key positions
 #   thanks to the level-5 numpad, for maximum usability the typographic aliases
 #   are in group 3 rather than in group 2, used instead for the heavy operators
 #   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
@@ -1428,17 +1435,36 @@
 #
 # # C07 underscore
 #
-#   "―" U2015 HORIZONTAL BAR is supported in group 1 with other base characters
-#   for regional variants that cannot support this character on live key.
-#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
-#
 #   Thanks to not needing to support U2015 in group 1 of underscore, the first
-#   three groups are available for bullets. While "•" U2022 and "◦" U25E6 are
-#   consistent with mainstream practice, the pick for level 3 is "‣" U2023,
-#   consistently with Unicode scalars, the group number and the level number,
-#   rather than "▪" U25AA, that is an emoji and as such is supported in group 5
-#   of numbersign as part of a set of four.
+#   four groups are available for bullets. While "•" U2022 and "◦" U25E6 are
+#   consistent with mainstream practice, the pick for the intended level-3
+#   bullet is "‣" U2023, consistently with its triangular shape, with the group
+#   number, and with the Unicode scalars. The usual level-3 bullet "▪" U25AA is
+#   an emoji, but it is supported regardless in group 4, consistently with its
+#   quadrangular shape, additionally to its support in group 5 of numbersign
+#   as part of a set of four emoji.
 #   See # # C01 numbersign
+#
+#   Default HTML-CSS bullets are often associated with Unicode characters
+#   "•" U2022 for level 1 "list-style-type: disc", and "◦" U25E6 for level 2
+#   "list-style-type: circle". Things start getting less straightforward when
+#   level 3 and below is usually "list-style-type: square", but "▪" U25AA is
+#   an emoji; yet it is the official square bullet, per The Unicode Standard.
+#   https://www.unicode.org/charts/nameslist/n_25A0.html
+#
+#   There is also "⬝" U2B1D BLACK VERY SMALL SQUARE, but this looks almost
+#   like "·" U00B7 MIDDLE DOT and would thus be too tiny a bullet for general
+#   use. This is why as a level-3 bullet, "‣" U2023 TRIANGULAR BULLET might
+#   eventually be an interesting alternative, while "⁃" U2043 HYPHEN BULLET is
+#   in group 1 of minus.
+#   See # # C05 minus
+#
+#   The rationale for supporting bullets in the groups of underscore is based
+#   on alphabetic mnemonics when underscore was on C09 "L", level 3, but it has
+#   vanished when underscore moved to C07 "J" in the wake of making room for
+#   EuroSign on D03 "E", level 3. Still, even after the move, underscore
+#   remains the only option in the symbol groups, additionally to bullets by
+#   multikey.
 #   See #^# Bullets
 #
 <UEFD0>                                                                              <underscore> : "•" U2022 # BULLET
@@ -1451,36 +1477,36 @@
 <Multi_key><numbersign><KP_3>                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
 <UEFD0><UEFD0><UEFD0>                                                                <underscore> : "‣" U2023 # TRIANGULAR BULLET
 <Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><4>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><4>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><KP_4>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><KP_4>                                                        <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><5>                                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<Multi_key><numbersign><5>                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<UEFD0><KP_5>                                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<Multi_key><numbersign><KP_5>                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<UEFD0><6>                                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
-<Multi_key><numbersign><6>                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
-<UEFD0><KP_6>                                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
-<Multi_key><numbersign><KP_6>                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
-<UEFD0><7>                                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<Multi_key><numbersign><7>                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<UEFD0><KP_7>                                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<Multi_key><numbersign><KP_7>                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<UEFD0><8>                                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<Multi_key><numbersign><8>                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<UEFD0><KP_8>                                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<Multi_key><numbersign><KP_8>                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<UEFD0><9>                                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<Multi_key><numbersign><9>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><KP_9>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<Multi_key><numbersign><KP_9>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><0>                                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
-<Multi_key><numbersign><0>                                                           <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
-<UEFD0><KP_0>                                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
-<Multi_key><numbersign><KP_0>                                                        <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD0><4>                                                                           <underscore> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><numbersign><4>                                                           <underscore> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<UEFD0><KP_4>                                                                        <underscore> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><numbersign><KP_4>                                                        <underscore> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <underscore> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <underscore> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<UEFD0><5>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
+<Multi_key><numbersign><5>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
+<UEFD0><KP_5>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
+<Multi_key><numbersign><KP_5>                                                        <underscore> : "♚" U265A # BLACK CHESS KING
+<UEFD0><6>                                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<Multi_key><numbersign><6>                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<UEFD0><KP_6>                                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<Multi_key><numbersign><KP_6>                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<UEFD0><7>                                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
+<Multi_key><numbersign><7>                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
+<UEFD0><KP_7>                                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
+<Multi_key><numbersign><KP_7>                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
+<UEFD0><8>                                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<Multi_key><numbersign><8>                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<UEFD0><KP_8>                                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<Multi_key><numbersign><KP_8>                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<UEFD0><9>                                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<Multi_key><numbersign><9>                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<UEFD0><KP_9>                                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<Multi_key><numbersign><KP_9>                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<UEFD0><0>                                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<Multi_key><numbersign><0>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<UEFD0><KP_0>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<Multi_key><numbersign><KP_0>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
 <UEFD0><1>                                                                           <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
 <Multi_key><numbersign><1>                                                           <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
 <UEFD0><KP_1>                                                                        <underscore> : "➲" U27B2 # CIRCLED HEAVY WHITE RIGHTWARDS ARROW
@@ -1507,36 +1533,36 @@
 <Multi_key><numbersign><KP_3>                                                       <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <UEFD0><UEFD0><UEFD0>                                                               <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <Multi_key><numbersign><numbersign><numbersign>                                     <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><4>                                                                          <bracketleft> : "♔" U2654 # WHITE CHESS KING
-<Multi_key><numbersign><4>                                                          <bracketleft> : "♔" U2654 # WHITE CHESS KING
-<UEFD0><KP_4>                                                                       <bracketleft> : "♔" U2654 # WHITE CHESS KING
-<Multi_key><numbersign><KP_4>                                                       <bracketleft> : "♔" U2654 # WHITE CHESS KING
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                        <bracketleft> : "♔" U2654 # WHITE CHESS KING
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                         <bracketleft> : "♔" U2654 # WHITE CHESS KING
-<UEFD0><5>                                                                          <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
-<Multi_key><numbersign><5>                                                          <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
-<UEFD0><KP_5>                                                                       <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
-<Multi_key><numbersign><KP_5>                                                       <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
-<UEFD0><6>                                                                          <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
-<Multi_key><numbersign><6>                                                          <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
-<UEFD0><KP_6>                                                                       <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
-<Multi_key><numbersign><KP_6>                                                       <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
-<UEFD0><7>                                                                          <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
-<Multi_key><numbersign><7>                                                          <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
-<UEFD0><KP_7>                                                                       <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
-<Multi_key><numbersign><KP_7>                                                       <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
-<UEFD0><8>                                                                          <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
-<Multi_key><numbersign><8>                                                          <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
-<UEFD0><KP_8>                                                                       <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
-<Multi_key><numbersign><KP_8>                                                       <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
-<UEFD0><9>                                                                          <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
-<Multi_key><numbersign><9>                                                          <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
-<UEFD0><KP_9>                                                                       <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
-<Multi_key><numbersign><KP_9>                                                       <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
-<UEFD0><0>                                                                          <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
-<Multi_key><numbersign><0>                                                          <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
-<UEFD0><KP_0>                                                                       <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
-<Multi_key><numbersign><KP_0>                                                       <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<UEFD0><4>                                                                          <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<Multi_key><numbersign><4>                                                          <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<UEFD0><KP_4>                                                                       <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<Multi_key><numbersign><KP_4>                                                       <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                        <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                         <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET math
+<UEFD0><5>                                                                          <bracketleft> : "♔" U2654 # WHITE CHESS KING
+<Multi_key><numbersign><5>                                                          <bracketleft> : "♔" U2654 # WHITE CHESS KING
+<UEFD0><KP_5>                                                                       <bracketleft> : "♔" U2654 # WHITE CHESS KING
+<Multi_key><numbersign><KP_5>                                                       <bracketleft> : "♔" U2654 # WHITE CHESS KING
+<UEFD0><6>                                                                          <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
+<Multi_key><numbersign><6>                                                          <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
+<UEFD0><KP_6>                                                                       <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
+<Multi_key><numbersign><KP_6>                                                       <bracketleft> : "♕" U2655 # WHITE CHESS QUEEN
+<UEFD0><7>                                                                          <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
+<Multi_key><numbersign><7>                                                          <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
+<UEFD0><KP_7>                                                                       <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
+<Multi_key><numbersign><KP_7>                                                       <bracketleft> : "♖" U2656 # WHITE CHESS ROOK
+<UEFD0><8>                                                                          <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
+<Multi_key><numbersign><8>                                                          <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
+<UEFD0><KP_8>                                                                       <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
+<Multi_key><numbersign><KP_8>                                                       <bracketleft> : "♗" U2657 # WHITE CHESS BISHOP
+<UEFD0><9>                                                                          <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
+<Multi_key><numbersign><9>                                                          <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
+<UEFD0><KP_9>                                                                       <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
+<Multi_key><numbersign><KP_9>                                                       <bracketleft> : "♘" U2658 # WHITE CHESS KNIGHT
+<UEFD0><0>                                                                          <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
+<Multi_key><numbersign><0>                                                          <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
+<UEFD0><KP_0>                                                                       <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
+<Multi_key><numbersign><KP_0>                                                       <bracketleft> : "♙" U2659 # WHITE CHESS PAWN
 <UEFD0><1>                                                                          <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 <Multi_key><numbersign><1>                                                          <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 <UEFD0><KP_1>                                                                       <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
@@ -1563,12 +1589,12 @@
 <Multi_key><numbersign><KP_3>                                                      <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <UEFD0><UEFD0><UEFD0>                                                              <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
 <Multi_key><numbersign><numbersign><numbersign>                                    <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><4>                                                                         <bracketright> : "◊" U25CA # LOZENGE math
-<Multi_key><numbersign><4>                                                         <bracketright> : "◊" U25CA # LOZENGE math
-<UEFD0><KP_4>                                                                      <bracketright> : "◊" U25CA # LOZENGE math
-<Multi_key><numbersign><KP_4>                                                      <bracketright> : "◊" U25CA # LOZENGE math
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "◊" U25CA # LOZENGE math
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "◊" U25CA # LOZENGE math
+<UEFD0><4>                                                                         <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+<Multi_key><numbersign><4>                                                         <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+<UEFD0><KP_4>                                                                      <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+<Multi_key><numbersign><KP_4>                                                      <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
 <UEFD0><5>                                                                         <bracketright> : "∟" U221F # RIGHT ANGLE math
 <Multi_key><numbersign><5>                                                         <bracketright> : "∟" U221F # RIGHT ANGLE math
 <UEFD0><KP_5>                                                                      <bracketright> : "∟" U221F # RIGHT ANGLE math
@@ -1589,10 +1615,10 @@
 <Multi_key><numbersign><9>                                                         <bracketright> : "⚜" U269C # FLEUR-DE-LIS emoji
 <UEFD0><KP_9>                                                                      <bracketright> : "⚜" U269C # FLEUR-DE-LIS emoji
 <Multi_key><numbersign><KP_9>                                                      <bracketright> : "⚜" U269C # FLEUR-DE-LIS emoji
-<UEFD0><0>                                                                         <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
-<Multi_key><numbersign><0>                                                         <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
-<UEFD0><KP_0>                                                                      <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
-<Multi_key><numbersign><KP_0>                                                      <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+<UEFD0><0>                                                                         <bracketright> : "◊" U25CA # LOZENGE math
+<Multi_key><numbersign><0>                                                         <bracketright> : "◊" U25CA # LOZENGE math
+<UEFD0><KP_0>                                                                      <bracketright> : "◊" U25CA # LOZENGE math
+<Multi_key><numbersign><KP_0>                                                      <bracketright> : "◊" U25CA # LOZENGE math
 <UEFD0><1>                                                                         <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
 <Multi_key><numbersign><1>                                                         <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
 <UEFD0><KP_1>                                                                      <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
@@ -1675,7 +1701,7 @@
 #
 # # B01 slash
 #
-#   Since the four basic arithmetic operators are on level 5 live key positions
+#   Since the four basic arithmetic operators are on level-5 live key positions
 #   thanks to the level-5 numpad, for maximum usability the typographic aliases
 #   are in group 3 rather than in group 2, used instead for the heavy operators
 #   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
@@ -1740,7 +1766,7 @@
 #
 # # B02 asterisk
 #
-#   Since the four basic arithmetic operators are on level 5 live key positions
+#   Since the four basic arithmetic operators are on level-5 live key positions
 #   thanks to the level-5 numpad, for maximum usability the typographic aliases
 #   are in group 3 rather than in group 2, used instead for the heavy operators
 #   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
@@ -1972,8 +1998,11 @@
 #   In the wake it is replaced with "❆" U2746, that cannot be used as emoji and
 #   is excluded from the emoji count in the table, while it maintains the snow
 #   semantics, as a tribute to snow in the current era of scarcity. For those
-#   who are looking for the snow emoji with its genuine semantics, U2744 is in
-#   the extra group.
+#   looking for the snow emoji with its genuine semantics, U2744 is in the
+#   extra group.
+#
+#   This also supports "∧" U2227 and "∨" U2228 with graphic mnemonics based on
+#   the shape of "N"
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -2342,7 +2371,7 @@
 #   "⁛" U205B FOUR DOT MARK is a highlighter mark used by scribes in the margin
 #   and is annotated as such in the Unicode Code Charts.
 #
-#   "⟰" U27F0 is repurposed as the level 5 modifier symbol, with the rationale
+#   "⟰" U27F0 is repurposed as the level-5 modifier symbol, with the rationale
 #   that this key increments by 4 the level index. Called AltFr on this layout
 #   and natively supported by XKB and the Windows TSF, this modifier is easily
 #   emulated on macOS. Japanese keyboards have left and right Oyayubi keys that
@@ -2460,25 +2489,29 @@
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L32
 #
 #   U200B ZERO WIDTH SPACE also has an intuitive, to-the-point French name:
-#   CÉSURE CONDITIONNELLE, break opportunity, non-existent in English.
-#
-#   The WNJ is also on live key, level 4 of the space bar, for its use in long
-#   URLs expected to line-wrap after slashes but not doing so in browsers that
-#   are not fully Unicode conformant, and because level 4 of the space bar must
-#   not be used for frequent space characters like U00A0 NBSP and U202F NBTSP.
+#   CÉSURE CONDITIONNELLE, break opportunity. In Latin script, it is useful in
+#   long URLs expected to line-wrap after slashes but not doing so in not fully
+#   Unicode conformant browsers.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=944
 #   https://unicode.org/reports/tr14/#SY
 #
-#   U2002 and U2003 are on level 1 for usability, although these spaces were
-#   originally intended to be no-break. That brings the need to move their two
-#   breaking clones to level3, since these have become canonically equivalent.
-#   U2002..U2006 and U2008..U200A were originally intended to be no-break, just
-#   like U2007 FIGURE SPACE ultimately remained, as sort of the sole survivor.
+#   This WNJ is also on live key, level 4 of the space bar.
+#   See dispocla.cpp ## Format controls
+#   See dispocla.cpp key <SPCE>
 #
-#   Unlike stated in UAX #14, U2007 is not intended for use *in* figures,
-#   but *before* figures for indentation in tables. Therefore, it is also
-#   called tabular digit space, as opposed to the tabular punctuation space
-#   U2008.
+#   U2002 and U2003 are at level 1 for usability, although these spaces were
+#   originally intended to be no-break. That brings the need to move their two
+#   breaking clones " " U2000, " " U2001 to A03-level3, since these have been
+#   made canonically equivalent, as part of mitigating the mess left by the
+#   typographical space range vandalization; U2002..U2006 and U2008..U200A were
+#   originally intended to be no-break, just like U2007 FIGURE SPACE ultimately
+#   remained, as sort of the sole survivor.
+#   See # # Punctuation spacing for French, regular with U202F NBTSP
+#
+#   Unlike stated in UAX #14, U2007 is not intended for use in numbers, but
+#   before numbers for indentation in tables. Therefore, it is also called
+#   tabular digit space, as opposed to the tabular punctuation space U2008.
+#   https://www.unicode.org/reports/tr14/tr14-53.html
 #   https://www.unicode.org/reports/tr14
 #
 #   U205F MEDIUM MATHEMATICAL SPACE is a breaking 4/18 em, or 4½-per-em.
@@ -4212,7 +4245,7 @@
 #   or Greek i (i grec in French), is an alternative Greek letter input method.
 #   It may be used where the Greek letter dead key is missing and so, polytonic
 #   Greek and the circled dead key are not supported.
-#   See #*# GREEK
+#   See #*# GREEK_OR_CIRCLED
 #
 <UEFD0><6>                                                                                     <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
 <Multi_key><numbersign><6>                                                                     <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
@@ -6145,12 +6178,10 @@
 #   MATHEMATICAL SANS-SERIF ITALIC U1D608..       = g10   .
 #   MATHEMATICAL SANS-SERIF BOLD ITALIC U1D63C..  = g10 , .
 #
-#
-#   The high surrogate for all is UD835.
-#
-#   A one-handed input method for cross-platform and cross-layout compatibility
-#   uses superscript digit ² as a base character, as it is on base level with
-#   ModLock off, after dead_circumflex or dead_diaeresis.
+#   The high surrogate for all is U+D835, that has a one-handed input method
+#   for cross-platform and cross-layout compatibility using dead_diaeresis
+#   followed by superscript digit 2 as a base character, as both are at base
+#   level when Mode Lock is off.
 #
 #
 #+# GROUP_7
@@ -9798,4 +9829,4 @@
 #   See #+# GROUP_12
 #
 #
-# END_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
+# END_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
