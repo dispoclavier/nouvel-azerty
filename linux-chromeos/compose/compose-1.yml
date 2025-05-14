@@ -1,13 +1,15 @@
-# START_additions_Compose_Dispoclavier (do not delete - ne pas effacer)
-#
+#                      Scope: part 1 of XCompose.yml
+# START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
+#                       Date: [see XCompose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 5.1.0d" # See # # Notes about syntax
-#                      Scope: part 1 of Compose
+<UEFA0>                     : "version 5.1.0d" # See #   End of line comments
+#       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
-#                   Platform: Linux using XKB with XCompose*
+#                   Platform: Linux using XKB with XCompose**
 #        Syntax highlighting: YAML
+#               Installation: Please do not use this file but the all-in-one file XCompose.yml.
 #
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
@@ -29,58 +31,63 @@
 #                             kbfrPFsr French Polynesia remapped semiautomatic keyboard layout
 #                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 #                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
+#                 (oncoming)  kbfrCAsr French Canada remapped semiautomatic keyboard layout
 #                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
+#                 (oncoming)  kbfrCHsr French Switzerland remapped semiautomatic keyboard layout
 #               Code licence: Apache 2.0
 #           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 #           Non-code licence: CC-BY 4.0
 #       Non-code licence URL: https://creativecommons.org/licenses/by/4.0/deed.fr
 #              Email address: dev@dispoclavier.net
 #
-#   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
+#   * The file name depends on the location and the installation method (A, B or C).
+#  ** In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
 #     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
 #
 #               Installation: 1. Set the input method to XIM, because other input methods may
 #                                not support multi-character output, including composed letters
-#                                required for Unicode conformant output on dead keys; and with
-#                                the input method set to none, this Compose is not compiled.
+#                                required for Unicode conformant output on dead keys; with the
+#                                input method set to none, this XCompose file is not compiled.
 #
 #                                The following command activates the X Window Input Method:
+#
 #                                    im-config -n xim
 #
 #                                The currently active input method displays on line 2 after:
+#
 #                                    im-config -m
 #
 #                                Setting the input method to XIM to begin with is essential,
-#                                because distros may not ship XIM as the default.
+#                                because some Linux distros may not ship XIM as the default.
 #
-#                             2. Make sure to be using the full-length file Compose.yml.
+#                             2. Make sure to be using the full-length file XCompose.yml.
 #
 #                             3. Proceed following method A, B or C:
 #
 #                                CAUTION: If the environment variable $XCOMPOSEFILE is set,
-#                                         its value is used as the path of the Compose file.
-#                                         In case of success, other Compose files are not
+#                                         its value is used as the path of the XCompose file.
+#                                         In case of success, other XCompose files are not
 #                                         compiled unless included as documented below.
 #
 #                                A. System level:
-#                                   1. Back up the Compose file at the path mapped onto the
+#                                   1. Back up the XCompose file at the path mapped onto the
 #                                      locale in /usr/share/X11/locale/compose.dir; for fr_FR:
 #                                      /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                   2. Append Compose.yml to the original Compose file.
+#                                   2. Append XCompose.yml to the original XCompose file.
 #                                      Prepending instead of appending breaks U1E7A and U1E7B,
 #                                      that need to override U01D5 and U01D6 as defined in
 #                                      en_US.UTF-8/Compose. The same holds true for "V́", "v́"
 #                                      overriding en_US.UTF-8/Compose for U01D7 and U01D8.
 #
-#                                B. User level, with Compose in the $HOME directory:
-#                                   1. Back up the file ~/.XCompose.
-#                                   2. Append Compose.yml to ~/.XCompose.
+#                                B. User level, with .XCompose in the $HOME directory:
+#                                   1. Back up the file $HOME/.XCompose.
+#                                   2. Append XCompose.yml to $HOME/.XCompose.
 #
-#                                C. User level, without Compose in the $HOME directory:
-#                                   1. Copy Compose.yml to ~/.XCompose.
+#                                C. User level, without .XCompose in the $HOME directory:
+#                                   1. Copy XCompose.yml to $HOME/.XCompose.
 #                                   2. For maximum backward compatibility, uncomment this
-#                                      instruction where "%L" expands to the default Compose
-#                                      file path of the current locale. For fr_FR, that is:
+#                                      instruction, where "%L" expands to the default XCompose
+#                                      file path of the current locale, that for fr_FR is
 #                                      /usr/share/X11/locale/en_US.UTF-8/Compose
 #
 #                                          include "%L"
@@ -88,14 +95,16 @@
 #                                   This is required for using non-Latin keyboard layouts
 #                                   with dead keys as supported in en_US.UTF-8/Compose.
 #
-#                                   Any specific Compose file can be included by its path,
-#                                   where "%S" expands to /usr/share/X11/locale.
+#                                   Any specific XCompose file can be included by its path,
+#                                   where "%S" expands to /usr/share/X11/locale:
+#
+#                                          include "%S/en_US.UTF-8/Compose"
 #
 #                             The changes take effect in any application after reopening it,
 #                             or after opening a new session if XIM needs to be activated.
 #
-#             Uninstallation: A, B: Restore the previously backed-up original Compose file.
-#                             C:    Delete or rename the added file ~/.XCompose.
+#             Uninstallation: A, B: Restore the previously backed-up original XCompose file.
+#                             C:    Delete or rename the added file $HOME/.XCompose.
 #
 #           Acknowledgements: • Our Lord God and Jesus Christ, for ideas, help and direction.
 #                               Consistently with the Cistercian “Soli Deo Gloria”, picked up
@@ -103,11 +112,11 @@
 #                               about publicly confessing (and acknowledging) Jesus Christ.
 #                               A combination of underengineering and lack of consultancy due
 #                               to impiety triggered design mistakes, incrementally fixed in
-#                               versions 2..5 as they came up. In the first place the level 3
+#                               versions 2..5 as they came up. In the first place the level-3
 #                               ASCII map was inadequate by not making room for the euro sign
 #                               until v2.0 when it ultimately became practical and respectful
 #                               thanks to God helping and advising about the layout details.
-#                               The superscripts were on the wrong level, and modifiers for
+#                               The superscripts were at the wrong level, and modifiers for
 #                               titlecase polygrams "Cʼh" and "Nᵒ " were unintuitive, due to
 #                               not seeking advice from God until ultimately v3.0 came up. A
 #                               wrong modifier (AltFr instead of Shift) used for spaced-out
@@ -203,9 +212,10 @@
 #   The specified format "\0x123A" does not seem to work.
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
-#   These layouts make extensive use of added keysyms as in keysymdef.h:97.
+#   These layouts make extensive use of keysyms added as documented in
+#   keysymdef.h:148.
 #   /usr/X11R6/include/X11/keysymdef.h
-#   https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h
+#   https://fossies.org/linux/tk/xlib/X11/keysymdef.h
 #
 #   The scheme using Private Use characters instead of missing dead keysyms is
 #   found on FDO as well as on GNOME.
@@ -313,6 +323,7 @@
 #   The Public Office of the Breton language OPLB/OPAB has requested the letter
 #   apostrophe to be featured on the NF Z71-300 standard keyboard layouts.
 #   https://listengine.tuxfamily.org/ergodis.org/discussions/2018/10/msg00007.html
+#   https://web.archive.org/web/20250123020930/https://listengine.tuxfamily.org/ergodis.org/discussions/2018/10/msg00007.html
 #   https://www.fr.brezhoneg.bzh/uploads/Document/c8/4004_900_Geriaoueg-al-levraouegou-2021.pdf#page=6&zoom=100,0,800
 #
 #   Consistently, in Microsoft’s implementation of NF Z71-300:2019 AZERTY, the
@@ -329,24 +340,29 @@
 #
 #   The Breton trigraph is regularly composed of a "c" and an "h" separated by
 #   a letter apostrophe U02BC, not a punctuation apostrophe U2019, in order to
-#   avoid inaccurate word boundaries.
-#   https://github.com/unicode-org/cldr/blob/release-34/common/main/br.xml#L1164
-#   https://github.com/unicode-org/cldr/blob/135658d98f51ce881e8cd553c5bd60b0672d9f7a/common/main/br.xml#L1264
-#   https://github.com/unicode-org/cldr/blob/main/common/main/br.xml#L1264
+#   prevent word boundaries around the apostrophe. Consistently, the basic set
+#   of exemplar characters for Breton is in 2025:
+#   [a b {cʼh} {ch} d eê f g h i j k l m nñ o p r s t uù v w x y z]
+#   https://github.com/unicode-org/cldr/blob/7b710d0945fcda011790f37337cdc6d39f66bbcf/common/main/br.xml#L1262
+#   In CLDR version 21 (2012-02-10), the set was already the same.
+#   https://github.com/unicode-org/cldr/blob/release-21/common/main/br.xml#L650
 #
 #   The variants for Breton and French "kbbrFRs" and "kbbrFRsr" have the Breton
-#   trigraph on Base and Shift levels of key E01 additionally to the support of
-#   the Breton trigraph on (Shift +) AltGr + AltFr + A.
+#   trigraph at Base level and Shift level of key E01, additionally to the
+#   support of the Breton trigraph on (Shift +) AltGr + AltFr + A.
+#   See dispocla.cpp xkb_symbols "kbbrFRs"
+#   See dispocla.cpp xkb_symbols "kbbrFRsr"
 #
-#   The Breton trigraph got mnemonic keysyms in keysymdef.h, configured here to
-#   ensure regular support.
+#   To ensure regular support, the Breton trigraph is configured here.
 #
-<c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE.
-<C_h> : "Cʼh" #
-<C_H> : "CʼH" # See #   End of line comments
+<c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE, consistently
+<C_h> : "Cʼh" # with the Breton exemplar characters found in the Common Locale
+<C_H> : "CʼH" # Data Repository, quoted and referenced above.
 #
 #
 # # Punctuation spacing for French, regular with U202F NBTSP
+#
+#   French usage of no-break thin space
 #
 #   This is regular typesetting at Imprimerie nationale except for colon and
 #   quotation marks, although the latter are typeset with narrow space in the
@@ -354,32 +370,14 @@
 #   usage à l’Imprimerie nationale_, Paris, Imprimerie nationale, 2002; only
 #   the rule on page 149 differs.
 #
-#   In mainstream high-quality publishing, referred to as new school, no-break
-#   thin space is used throughout.
-#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
-#
 #   Philippe Verdy reported on the Unicode Public mailing list that the most
 #   straightforward Unicode character representing this no-break thin space is
 #   NARROW NO-BREAK SPACE U+202F.
 #   https://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
-#   Indeed, U202F NNBSP, a.k.a. no-break thin space, is a character that,
-#   despite being encoded for Mongolian with specific handling intended, was
-#   readily ripped off for use in French, Philippe Verdy reported, to that
-#   extent that it is ultimately an encoding error in Mongolian that brought
-#   the long-missing no-break thin space into the UCS, in the block that it
-#   actually belongs to, and where it had been encoded in the beginning if
-#   there had been no desire to keep it proprietary. That is the hidden (almost
-#   occult) fact where stances like “The NNBSP can be used to represent the
-#   narrow space occurring around punctuation characters in French typography,
-#   which is called an ‘espace fine insécable.’ ” (TUS) and “When NARROW
-#   NO-BREAK SPACE occurs in French text, it should be interpreted as an
-#   ‘espace fine insécable’.” (UAX #14) are stemming from. The underlying
-#   meaning is like: “The no-break thin space is usually a vendor-specific
-#   layout control in DTP applications; it’s also available via a TeX command.
-#   However, if you are interested in an interoperable representation, here’s
-#   a Unicode character you can use instead.”
-#   https://www.unicode.org/mail-arch/unicode-ml/y2019-m01/0146.html
+#   In mainstream high-quality publishing, referred to as new school, no-break
+#   thin space is used throughout.
+#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
 #
 #   Imprimerie nationale, France does not formally categorize punctuation marks
 #   into big punctuation and small punctuation or double punctuation and simple
@@ -397,16 +395,35 @@
 #   no-break justifying space. The double angle quotation marks are ruled like
 #   colon but typeset like semicolon.
 #
-#   The no-break thin space is the "espace fine insécable" quoted in Unicode,
-#   a no-break clone of Unicode’s thin space TSP U2009. Consistently, in CLDR,
-#   U202F is the no-break thin space, short NBTSP, since 2024-08-02T0242+0200.
-#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
-#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
-#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#   The no-break thin space seems to be the “espace fine insécable” mentioned
+#   in the Unicode Standard, a no-break clone of Unicode’s thin space TSP U2009
+#   designed to be no-break but ultimately released as breaking.
 #
-#   When U202F was still mainly called NARROW NO-BREAK SPACE, U2009 THIN SPACE
-#   was called "narrow space" for consistency, and abbreviated "NSP".
-#   https://github.com/unicode-org/cldr/commit/e46774fcb6eaea3c106b29e7011d68c8749aefbb
+#
+#   No-break thin space in the Unicode Standard
+#
+#   Indeed, U202F NNBSP, also known as no-break thin space, is a character that
+#   despite being encoded for Mongolian with specific handling intended, was
+#   readily adopted for use in French, Philippe Verdy reported, to that
+#   extent that it was ultimately a special requirement for Mongolian that
+#   brought the long-missing no-break thin space into the UCS, in the block
+#   that it actually belongs to, and where it had been available since the
+#   beginning if there had been no desire to keep the working-as-intended U2009
+#   proprietary.
+#   https://www.unicode.org/mail-arch/unicode-ml/y2019-m01/0146.html
+#
+#   That is the hidden — almost occult — fact where stances like “The NNBSP can
+#   be used to represent the narrow space occurring around punctuation
+#   characters in French typography, which is called an ‘espace fine
+#   insécable.’” (TUS) and “When NARROW NO-BREAK SPACE occurs in French text,
+#   it should be interpreted as an ‘espace fine insécable’.” (UAX #14) are
+#   stemming from. The underlying meaning is like: “The no-break thin space is
+#   usually a vendor-specific layout control in DTP applications; it’s also
+#   available via a TeX command. However, if you are interested in an
+#   interoperable representation, here’s a Unicode character you can use
+#   instead.”
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G26915
+#   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #
 #   Unicode was supposed to encode SI/BIPM number typesetting as well as French
 #   punctuation typesetting, and for that purpose encoded THIN SPACE along with
@@ -421,10 +438,12 @@
 #   https://unicode.org/mail-arch/unicode-ml/Archives-Old/UML023/0536.html
 #
 #   But that design goal was ultimately compromised. To cover up the vandalism,
-#   U2007 FIGURE SPACE was left no-break with the hypocritical allegation that
-#   this space is used “in” numbers, while it was encoded as the tabular space,
-#   to be used before numbers when typesetting tables the old way, alongside an
-#   equivalent indentation by the width of a decimal dot or comma, using U2008.
+#   U2007 FIGURE SPACE was left no-break with the allegation that this space is
+#   used “in” numbers, and even stating that it is digit-wide, defeating the
+#   point in advertising U2007 for use as a group separator. Indeed, U2007 was
+#   encoded as the tabular space, to be used before numbers when typesetting
+#   tables the old way, alongside indentation by the width of a decimal dot or
+#   comma, using U2008 PUNCTUATION SPACE.
 #   https://www.unicode.org/reports/tr14/tr14-51.html
 #
 #       This is the preferred space to use in numbers. It has the same width as
@@ -444,16 +463,19 @@
 #      narrow space occurring around punctuation characters in French
 #      typography, which is called an “espace fine insécable.”
 #
+#   This text is unchanged in version 16.0.0, available in HTML as cited above.
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G26915
+#
 #   In UAX #14, it started with the “Proposed Update Unicode Standard Annex #14
 #   Unicode Line Breaking Algorithm”, Unicode 5.1 Draft 3, 2008-03-07.
 #   https://www.unicode.org/reports/tr14/tr14-21.html#GL
 #
-#   15 years later, 2023-08-15: Unicode® Standard Annex #14,
-#   Unicode Line Breaking Algorithm, Unicode 15.1.0:
-#   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
+#       When NARROW NO-BREAK SPACE occurs in French text, it should be
+#       interpreted as an “espace fine insécable”.
 #
-#      When NARROW NO-BREAK SPACE occurs in French text, it should be
-#      interpreted as an “espace fine insécable”.
+#   15 years later, 2023-08-15, in Unicode® Standard Annex #14,
+#   Unicode Line Breaking Algorithm, Unicode 15.1.0, the text is still there.
+#   https://www.unicode.org/reports/tr14/tr14-51.html#NNBSPdoc
 #
 #   The Unicode position reflects also in a Script Ad Hoc Group (since 2024-03:
 #   Script Encoding Working Group) recommendation made on 2019-07-22 for the
@@ -471,6 +493,20 @@
 #   considered for the purpose of digitally representing natural languages, the
 #   more as the Unicode Standard specifies that it encodes plain text.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=45
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-2/#G642
+#
+#
+#   No-break thin space in Unicode CLDR
+#
+#   Consistently, in CLDR, U202F is the no-break thin space, short NBTSP, since
+#   2024-08-02T0242+0200.
+#   https://github.com/unicode-org/cldr/commit/e302d063b8a62984d82223f96443ab1ed3c4bb35
+#   https://github.com/unicode-org/cldr/blob/a8d3acf6a1a0a17da6fa2e1c488d52e35e48099e/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L27
+#
+#   When U202F was still mainly called NARROW NO-BREAK SPACE, U2009 THIN SPACE
+#   was called "narrow space" for consistency, and abbreviated "NSP".
+#   https://github.com/unicode-org/cldr/commit/e46774fcb6eaea3c106b29e7011d68c8749aefbb
 #
 #   In Unicode CLDR, French migrated from NBSP to NNBSP, i.e. NBTSP, wherever
 #   applicable, in 2018, when CLDR 34 was released on 2018-10-15.
@@ -516,6 +552,7 @@
 #   https://www.unicode.org/L2/L2019/19112-group-separator-space.pdf#page=6&zoom=100,0,640
 #   https://www.unicode.org/cldr/charts/46/by_type/numbers.symbols.html#a1ef41eaeb6982d
 #
+#
 #   Further reading about the topic:
 #   https://www.unicode.org/L2/L2019/19115-fwsp-usability.pdf
 #   https://www.unicode.org/L2/L2019/19116-clarify-nnbsp.pdf
@@ -526,6 +563,9 @@
 #   https://www.unicode.org/L2/L2020/20008-core-text.pdf
 #   https://www.unicode.org/L2/L2020/20088-uax14-spaces.pdf
 #
+#
+#   Input method for NBTSP in association
+#
 #   As of punctuation spacing automation while writing, there is a feedback
 #   item submitted while commenting an LDML extension designed for SIL/Keyman:
 #   “PRI #367: Automated punctuation spacing”
@@ -534,19 +574,21 @@
 <UEF60> : " !" #
 <UEF61> : " :" # [1]
 <UEF62> : " ;" #
-<UEF63> : " ?" #
-<UEF64> : "« " # [2]
-<UEF65> : " »" #
-<UEF66> : "‹ " #
-<UEF67> : " ›" #
+<UEF63> : " ?" # See #   End of line comments
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
 #       in Unicode encoding, the colon has NBSP spacing; but in new-school
 #       French typesetting, the colon is spaced out using NBTSP.
-#   [2] Based on the visual aspect in the current edition of the style manual,
-#       Imprimerie nationale, in Unicode encoding, the guillemets are typeset
-#       with NBTSP, although the rule given on page 149 stipulates that the
-#       guillemets are to be spaced out using a justifying normal-width space.
+#
+#   Based on the visual aspect in the current edition of the style manual,
+#   Imprimerie nationale, in Unicode encoding, the guillemets are typeset with
+#   NBTSP, although the rule given on page 149 stipulates that the guillemets
+#   are to be spaced out using a justifying normal-width space.
+#
+<UEF64> : "« " #
+<UEF65> : " »" #
+<UEF66> : "‹ " #
+<UEF67> : " ›" #
 #
 #
 # # Abbreviation "Numéro" with trailing space
@@ -614,12 +656,14 @@
 #   https://www.unicode.org/L2/L2019/19114-line-break-design.pdf
 #
 <UEF6E> : " ⁠" # With WORD JOINER U2060 [1]
-<UEF6F> : " ﻿" # With ZERO-WIDTH NO-BREAK SPACE UFEFF [2]
 #
 #   [1] OpenOffice Writer and LibreOffice Writer are able to handle WORD JOINER
 #       and even highlight it using the field background color as for NBSP:
 #       Tools > Options > LibreOffice > UI colors > Text documents > Field background
 #       https://ask.libreoffice.org/t/remove-gray-color-of-non-breaking-spaces-in-writer/22106
+#
+<UEF6F> : " ﻿" # With ZERO-WIDTH NO-BREAK SPACE UFEFF [2]
+#
 #   [2] UFEFF is the byte order mark, and its use as ZWNBSP is obsoleted but
 #       may still be supported, as it has 10 years of precedence in that role.
 #
@@ -940,7 +984,7 @@
 #           }
 #         },
 #         "replacerules.rulesets": {
-#           "prepareComposeForCheck": {
+#           "prepareXComposeForCheck": {
 #             "rules": [
 #               "removeCommentLines",
 #               "removeMulticharForLiveKeys",
@@ -1075,7 +1119,7 @@
 #           }
 #         },
 #         "replacerules.rulesets": {
-#           "improveComposeSortability": {
+#           "improveXComposeSortability": {
 #             "rules": [
 #               "decodeGroup",
 #               "decodeSuperscript",
@@ -1516,10 +1560,10 @@
 #   Another multikey implementation of circled digits and circled or squared
 #   letters are multikey equivalents of "Greek or circled" dead key dead_greek,
 #   because the multikey equivalent of dead_greek is the at sign, due to shape
-#   and since its position is D06, both on levels 4 and 3, where AZERTY has the
+#   and since its position is D06, both at levels 3 and 4, where AZERTY has the
 #   Y key, that French calls "Greek I" ("i grec"). Extending dead_greek to also
 #   support circled is convenient, as Greek does not have dedicated digits.
-#   See #*# GREEK
+#   See #*# GREEK_OR_CIRCLED
 #
 #
 # # Circled by leading parenthesis
@@ -1531,7 +1575,7 @@
 #   1: "⑩" U2469, "⑪" U246A, as these conflict with circled numbers or with box
 #   drawings with rounded corners "╰" U2570, "╭" U256D, also known as character
 #   cell arcs.
-#   See #*# GREEK
+#   See #*# GREEK_OR_CIRCLED
 #   See #^# CIRCLED
 #   See #   Character cell arcs
 #
@@ -1662,7 +1706,7 @@
 #   This case insensitive "o" prefix supports only numbers 1..10, since letters
 #   would conflict with "œ", "ꝏ", "©"; and "⫯" U2AEF would be involved in other
 #   conflicts. Consistently, this way, en_US.UTF-8/Compose supports only "Ⓐ".
-#   See #*# GREEK
+#   See #*# GREEK_OR_CIRCLED
 #   See #^# CIRCLED
 #
 <Multi_key><o>                                                                                 <0> : "⑩" U2469 # CIRCLED NUMBER TEN
@@ -2005,15 +2049,18 @@
 #
 #   As dead_belowdot double press is used to virtualize dead_belowverticalline,
 #   the sequence for "¡" U00A1 cannot be fully sideways compatible and needs to
-#   be extended using triplication instead.
+#   be extended by leading space or triplication.
 #   See #^# VERTICAL_LINE_BELOW
+#   See #   Leading space
 #
+<Multi_key><space><exclam><exclam>                                                                 : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><nobreakspace><exclam><exclam>                                                          : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><exclam><exclam><exclam>                                                                : "¡" U00A1 # INVERTED EXCLAMATION MARK
 #
-#   Both however are only a fallback, as these are supported in symbol group 1,
-#   with the unspaced upright marks as base characters. Still in group 1, the
-#   spaced-out exclamation mark UEF60 and the spaced-out question mark UEF63
-#   are also supported as base characters for this turned punctuation.
+#   However, these multikey sequences are superseded by the more streamlined
+#   support of turned punctuation in symbol group 1, either with the unspaced
+#   upright marks as base characters, or with the spaced-out exclamation mark
+#   UEF60 and the spaced-out question mark UEF63.
 #   See # # B07-level3 question
 #   See # # B08-level3 exclam
 #   See # # Turned punctuation marks for Spanish
@@ -2022,13 +2069,15 @@
 #
 #   Interrobang
 #
-#   Supported only here by multikey, the interrobang could be fully sideways
-#   compatible with en_US.UTF-8/Compose, if not taking into account that French
-#   AZERTY maps the question and exclamation marks the other way around with
-#   respect to US-QWERTY. Hence the need to adjust the input order to the map
-#   parsed from left to right, for a consistent user experience.
+#   Supported by multikey only, the interrobang could be fully sideways
+#   compatible with en_US.UTF-8/Compose if not taking into account that
+#   French AZERTY maps the question and exclamation marks the other way around
+#   compared to US-QWERTY. Hence the need to adjust the input order to the map
+#   parsed from left to right, for a predictable, consistent user experience.
 #
+#   Final
 <Multi_key><question><exclam>                                                                      : "‽" U203D # INTERROBANG
+#   Initial for Spanish
 <Multi_key><exclam><question>                                                                      : "⸘" U2E18 # INVERTED INTERROBANG
 #
 #
@@ -2113,6 +2162,8 @@
 #
 #
 # # Dashes and hyphens
+*
+#   Dashes
 #
 #   "–" U2013 EN DASH by <Multi_key><minus><minus><period> is supported in
 #   en_US.UTF-8/Compose and, for sideways compatibility, also in the double
@@ -2131,7 +2182,7 @@
 #
 #   This new multikey sequence is not the most user-friendly, but this is only
 #   about multikey support. U2013 and U2014, and depending on the variant, also
-#   U2015, are in the benefit of level 2 live key positions.
+#   U2015, are in the benefit of level-2 live key positions.
 #   See dispocla.cpp key <AE03>
 #   See dispocla.cpp key <AE04>
 #   See dispocla.cpp key <AE08>
@@ -2139,17 +2190,27 @@
 <Multi_key><minus><minus><minus><minus>                                                            : "—" U2014 # EM DASH
 #
 #
-#   U2010 is not mapped on live key, nor in group 1 of HYPHEN-MINUS, given that
-#   its correct representation is the ASCII hyphen U002D. Assigning it an extra
-#   scalar has mainly had the adverse effect of fooling two font designers into
-#   giving U002D a hybrid glyph, fitting neither the expectations for a hyphen,
-#   nor those for a minus sign, fully expressing its genericity, pointed out in
-#   the Code Chart: “used generically for hyphen, minus sign or en dash, all of
-#   which have dedicated alternatives”. The disconnect is in “all of which”.
+#   Hyphens
 #
-#   U002D HYPHEN-MINUS is the only ASCII punctuation whose usage is discouraged
-#   in currrent writing. So, U2010 appears to be a duplicate encoding of U002D,
-#   as shown in the Unicode Character Database (shortened):
+#   U2010 HYPHEN is not mapped on live key, nor in group 1 of minus, given that
+#   its correct representation is the ASCII hyphen U002D. Assigning it an extra
+#   scalar has mainly had the adverse effect of fooling a close font designer
+#   team into giving U002D a hybrid glyph, fitting neither the expectations for
+#   a hyphen, nor those for a minus sign, fully expressing its genericity
+#   pointed out in the Code Chart since version 14.0.0 (2021):
+#
+#       used generically for hyphen, minus sign or en dash, all of which have
+#       dedicated alternatives
+#
+#   https://www.unicode.org/charts/nameslist/n_0000.html
+#
+#   As a consequence, U002D HYPHEN-MINUS stands out among ASCII punctuation in
+#   that its usage is discouraged in currrent writing in favor of its homoglyph
+#   U2010.
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
+#
+#   The Unicode Character Database (shortened below) shows that U2010 is a
+#   duplicate encoding of U002D.
 #
 #       <char cp="002D" age="1.1" na="HYPHEN-MINUS" gc="Pd" ea="Na" lb="HY" SB="SC" blk="ASCII"/>
 #       <char cp="2010" age="1.1" na="HYPHEN"       gc="Pd" ea="A"  lb="BA" SB="XX" blk="Punctuation"/>
@@ -2158,55 +2219,61 @@
 #   in the sentence break property.
 #
 #   The Unicode Line Breaking Algorithm UAX #14 does not require an extra
-#   hyphen for non-numerical contexts, and HY is BA (break after).
+#   hyphen for non-numerical contexts, and "HYphen" is "Break After".
 #   https://unicode.org/reports/tr14/#HY
 #
 #   East Asian width neither warrants a duplicate hyphen, since Unicode
-#   includes UFF0D FULLWIDTH HYPHEN-MINUS, and HYPHEN as “ambiguous” resolves
-#   to narrow.
+#   includes UFF0D FULLWIDTH HYPHEN-MINUS, and HYPHEN as "Ambiguous" resolves
+#   to "Narrow".
 #
-#   As of text segmentation, HYPHEN is unspecified, rather than SContinue like
-#   HYPHEN-MINUS, and the relevant specification skips “XX” entirely.
+#   As of text segmentation, HYPHEN is unspecified, rather than "SContinue"
+#   like HYPHEN-MINUS, and the related specification skips "XX" entirely.
 #   https://unicode.org/reports/tr29/#SContinue
 #
 #   Bottom line: U2010 is a useless duplicate of U002D and should be prevented
 #   from fully deploying its adverse effects by taking up a live key position,
 #   or even only an easy-access dead key input method like in group 1 of U002D.
-#   (Ultimately, however, U2010 is in group 12 of U002D. And it may be input
-#   using the following mnemonic scheme.) Else, U2010 would screw things up,
-#   from undeliverable email to broken links to parse errors.
-#   See # # C05 minus
+#   Else, U2010 would screw things up, from undeliverable email to broken links
+#   to parse errors.
 #
 #   The reason why Unicode, well aware of the duplicate encoding pitfalls, and
 #   carefully avoiding an extra decimal dot, an extra factorial, and an extra
 #   punctuation apostrophe, was fooled into double-encoding the hyphen, was the
-#   old ISO-8859 misnomer HYPHEN-MINUS. ANSI by contrast, when designing ASCII,
-#   parenthesized the Minus, just like it parenthesized the Decimal Point. To
-#   be consistent, ISO should have called U002E *PERIOD-DECIMAL-POINT instead
-#   of PERIOD. ISO calling U002D HYPHEN-MINUS instead of *HYPHEN might be the
-#   reason why Unicode encoded U2010 to name it HYPHEN, instead of encoding no
-#   more than U2212 MINUS SIGN in the matter.
+#   old ISO-8859 misnomer HYPHEN-MINUS, that made its way into ISO/IEC charsets
+#   despite ANSI parenthesized "Minus" when designing ASCII, just like "Decimal
+#   Point" next.
 #   https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf#page=12
 #
-#   Calling U002D "HYPHEN-MINUS" was like calling U002A *ASTERISK-MULTIPLY, and
-#   U002F *SOLIDUS-DIVIDE. Only the MINUS was appended with a hyphen, prompting
+#   To be consistent, ISO/IEC should have called U002E *PERIOD-DECIMAL-POINT
+#   instead of PERIOD. ISO calling U002D HYPHEN-MINUS instead of *HYPHEN might
+#   be the reason why Unicode encoded U2010, as a matter of getting a character
+#   to be named HYPHEN, instead of adding no more than U2212 MINUS SIGN in the
+#   matter.
+#
+#   Calling U002D HYPHEN-MINUS was like calling U002A *ASTERISK-MULTIPLY, and
+#   U002F *SOLIDUS-DIVIDE. Only "MINUS" was appended with a hyphen, prompting
 #   people to figure out a non-existing reason behind, and to guess that this
 #   HYPHEN-MINUS might eventually not be a genuine hyphen. Yet it is, and it is
 #   repurposed in programming like so many other symbols. That is most probably
 #   how Unicode was fooled into encoding an extra hyphen, not noticing that the
 #   hyphen was already there.
 #
-#   As a consequence, we must stop taking the extra hyphen U2010 seriously, in
+#   As a consequence, the extra hyphen U2010 should not be taken seriously, in
 #   order to prevent adverse effects on keyboard layout design when attempting
-#   to support U2010 on live key or by premium dead key like group 1 of minus,
-#   where we have "⁃" U2043 HYPHEN BULLET instead, while HYPHEN is in group 12,
-#   like the outdated legacy ordinal indicators "ª" U00AA, "º" U00BA.
+#   to support U2010 on live key or by premium dead key like group 1 of minus.
+#   There, "⁃" U2043 HYPHEN BULLET is supported instead, while HYPHEN is in
+#   group 12, like the outdated legacy ordinal indicators "ª" U00AA, "º" U00BA.
 #   See # # C05 minus
 #   See #^# Legacy ordinal indicators
+#   See # # D01 asciicircum
+#   See # # D09 braceright
 #
 #   By contrast, "‑" U2011 NON-BREAKING HYPHEN is so important that it is on
-#   live key E06, level 2, and also in group 1 of equal.
-#   See # # B05 equal
+#   live key E06, level 2.
+#   See dispocla.cpp key <AE06>
+#
+#
+#   Input method for hyphens and dashes
 #
 #   The dashes based on multiples of the em dash encompass 8 characters listed
 #   below. Out of these, seven — all but the ASCII hyphen — are supported by a
@@ -2219,25 +2286,28 @@
 #   See # # DIAERESIS&GROUP_1
 #   See # # C05 minus
 #
-#   #                NAME  description
+#   #                NAME UCODE description
 #
-#   -        HYPHEN-MINUS  quarter-dash (French “tiret quart-de-cadratin”)
+#            HYPHEN-MINUS U002D quarter-dash (French “tiret quart-de-cadratin”)
 #
-#   4              HYPHEN  quarter-dash (French “tiret quart-de-cadratin”)
-#   6 NON-BREAKING HYPHEN  quarter-dash (French “tiret quart-de-cadratin”)
-#   5             EN DASH  half dash (French “tiret demi-cadratin”)
-#   8      HORIZONTAL BAR  three-quarter-dash (or conjoining em dash)
-#   1             EM DASH  full dash (French “tiret cadratin”)
-#   2         TWO-EM DASH  double dash (missing letters; missing word)
-#   3       THREE-EM DASH  triple dash (missing word; author’s name repetition)
+#   4              HYPHEN U2010 quarter-dash (French “tiret quart-de-cadratin”)
+#   6 NON-BREAKING HYPHEN U2011 quarter-dash (French “tiret quart-de-cadratin”)
+#   5             EN DASH U2013 half dash (French “tiret demi-cadratin”)
+#   8      HORIZONTAL BAR U2015 three-quarter dash (or conjoining em dash)
+#   1             EM DASH U2014 full dash (French “tiret cadratin”)
+#   2         TWO-EM DASH U2E3A double dash: missing letters; missing word
+#   3       THREE-EM DASH U2E3B triple dash: missing word; author’s name repetition
 #
-#   0         SOFT HYPHEN  break opportunity with hyphenation (unlike U200B)
-#   7         FIGURE DASH  tabular digit dash (used in typesetting, like U2007)
-#   9       DOUBLE HYPHEN  (stable hyphen not due to a line break)
+#   0         SOFT HYPHEN U00AD break opportunity, with hyphenation, unlike U200B
+#   7         FIGURE DASH U2012 tabular digit dash, used in typesetting like U2007
+#   9       DOUBLE HYPHEN U2E40 marks a hyphen that is not due to the line break
 #
-#   Half of these have live key support, as NON-BREAKING HYPHEN is on level 2
-#   of E06 where French AZERTY has HYPHEN-MINUS, and similar level-2 positions
-#   are allocated to EN DASH on E03, EM DASH on E04, and HORIZONTAL BAR on E08.
+#   Nearly half of these are supported on live keys, as "‑" U2011 NON-BREAKING
+#   HYPHEN is at level 2 of E06, where French AZERTY has "-" U002D HYPHEN-MINUS
+#   at level 1, and other level-2 positions are allocated to "–" U2013 EN DASH
+#   on E03 with code point based numeric mnemonic, to "—" U2014 EM DASH on E04
+#   with mnemonic based on its 4/4-em length, and to "―" U2015 HORIZONTAL BAR
+#   on E08 with keycap based mnemonic using level-1 underscore.
 #
 <Multi_key><0>                                                                             <minus> : "­" U00AD # SOFT HYPHEN
 <Multi_key><KP_0>                                                                    <KP_Subtract> : "­" U00AD # SOFT HYPHEN
@@ -2283,9 +2353,9 @@
 # # Proofreading mark
 #
 #   This only supports the close-up mark. The proofreading marks "‸" U2038 and
-#   "⁁" U2041 are supported in the symbol groups.
+#   "⁁" U2041 are supported in symbol group 11 of "^" and of "@" on "Y".
 #   See # # D01 asciicircum
-#   See # # D06 at, dead_greek
+#   See # # D06 at
 #
 <Multi_key><parenleft><parenright><minus>                                                          : "⁐" U2050 # CLOSE UP
 #
@@ -2639,106 +2709,191 @@
 #
 # # Degree sign
 #
-#   "°" U00B0 is on live key E11, on level 2 consistently with French AZERTY,
-#   and on level 5 as part of the level-5 numpad.
+#   On keyboard layouts sideways compatible with French AZERTY having "°" U00B0
+#   on live key E11, level 2, and with a level-5 numpad consistent with this
+#   feature, the unavailability of en_US.UTF-8/Compose’s support of the degree
+#   sign by <Multi_key><o><o> conflicting with "ꝏ" UA74F LATIN SMALL LETTER OO
+#   does not negatively affect the user experience.
 #   See dispocla.cpp ## Level-5 numpad
 #
-#   By contrast, the degree sign’s en_US.UTF-8/Compose <Multi_key><o><o> cannot
-#   be supported, since it is required for "ꝏ" UA74F LATIN SMALL LETTER OO.
-#
-#   To compensate this loss, "°" U00B0 has support in dead_abovering on the
-#   pattern <Multi_key><asterisk><0> with the dead key working as a de facto
-#   shortcut: <dead_abovering><0>.
+#   However, the degree sign is supported by dead key, too, if only to improve
+#   the usability of multikey. The most straightforward candidates are "0" and
+#   "8" as base characters of dead_abovering, given that "o" is required for
+#   "ⱺ" U2C7A. For multikey, the outcome is <Multi_key><asterisk><0> or -<8>,
+#   and the dead key working as a de facto shortcut goes <dead_abovering><0> or
+#   <dead_abovering><8>.
 #   See #*# RING_ABOVE
 #
 #
 #^# Bullets
 #
-#   In keysymdef.h, 15 bullets are supported, but some comments do not match.
-#   This supports the bullets as implemented and adds support for the intended
-#   open rectangular bullet "▭" U25AD.
-#
-#   Default HTML/CSS bullets have equivalents in Unicode as "•" U2022 for the
-#   first level and "◦" U25E6 for the second level. For level 3, "▪" U25AA is
-#   sometimes chosen in an attempt to stick with "list-style-type: square", but
-#   this is an emoji. That is why as a level 3 bullet, "‣" U2023 may eventually
-#   be an interesting alternative. These are in groups 1..3 of underscore, too.
+#   A set of bullets is supported in the symbol groups.
 #   See # # C07 underscore
+#   See # # C05 minus
 #
-#   Some sequences based on English mnemonic have French equivalents.
+#   In keysymdef.h, 15 bullets are supported, but some comments may not match
+#   the output in some environments.
+#   https://fossies.org/linux/tk/xlib/X11/keysymdef.h
 #
-#   "∎" U220E has bilingual support in the math symbols.
+#   Initially, for these bullets, the results were defined as X11 keysyms, but
+#   the scheme was mainly designed for test purposes. This new facility may be
+#   uncommented as needed. Both lists are ordered by Unicode scalars.
+#
+#   Test multikey sequence          X11 keysym             Intended character in keysymdef.h
+#
+#   <Multi_key><X><1><1><B><1><2> : enfilledcircbullet   # U+2022 BULLET
+#   <Multi_key><X><1><1><B><1><3> : enfilledsqbullet     # U+25AA BLACK SMALL SQUARE
+#   <Multi_key><X><1><1><B><0><7> : enopensquarebullet   # U+25AB WHITE SMALL SQUARE
+#   <Multi_key><X><1><1><B><0><1> : filledrectbullet     # U+25AC BLACK RECTANGLE
+#   <Multi_key><X><1><1><B><0><8> : openrectbullet       # U+25AD WHITE RECTANGLE
+#   <Multi_key><X><1><1><B><0><5> : emfilledrect         # U+25AE BLACK VERTICAL RECTANGLE
+#   <Multi_key><X><1><1><B><1><4> : filledtribulletup    # U+25B2 BLACK UP-POINTING TRIANGLE
+#   <Multi_key><X><1><1><B><0><9> : opentribulletup      # U+25B3 WHITE UP-POINTING TRIANGLE
+#   <Multi_key><X><1><1><B><0><3> : filledrighttribullet # U+25B6 BLACK RIGHT-POINTING TRIANGLE
+#   <Multi_key><X><1><1><B><1><5> : filledtribulletdown  # U+25BC BLACK DOWN-POINTING TRIANGLE
+#   <Multi_key><X><1><1><B><1><0> : opentribulletdown    # U+25BD WHITE DOWN-POINTING TRIANGLE
+#   <Multi_key><X><1><1><B><0><2> : filledlefttribullet  # U+25C0 BLACK LEFT-POINTING TRIANGLE
+#   <Multi_key><X><1><1><B><0><4> : emfilledcircle       # U+25CF BLACK CIRCLE
+#   <Multi_key><X><1><1><B><0><6> : enopencircbullet     # U+25E6 WHITE BULLET
+#   <Multi_key><X><1><1><B><1><1> : openstar             # U+2606 WHITE STAR
+#
+#   The following supports the bullets as implemented, not as intended, except
+#   for the intended open rectangular bullet "▭" U25AD, that is also supported.
+#
+#   Sequences based on English mnemonics have French equivalents.
+#
+#   "∎" U220E END OF PROOF has bilingual support in the math symbols.
 #   See # # Mathematical Operators of block U2200
 #
 #   These sequences are case insensitive in that they can be typed either in
-#   lowercase or in uppercase (but neither in titlecase nor in mixed case).
+#   lowercase or in uppercase, but neither in titlecase nor in mixed case.
 #
-#   En filled circular bullet
-<Multi_key><e><n><f><c>                                                                            : "•" U2022 # BULLET, enfilledcircbullet
-<Multi_key><E><N><F><C>                                                                            : "•" U2022 # BULLET, enfilledcircbullet
-#   Filled rightwards triangular bullet
-<Multi_key><f><r><t>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><F><R><T>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+#   En filled circular bullet, enfilledcircbullet
+<Multi_key><e><n><f><c>                                                                            : "•" U2022 # BULLET
+<Multi_key><E><N><F><C>                                                                            : "•" U2022 # BULLET
+#   Puce pleine circulaire demi-cadratine
+<Multi_key><p><p><c><d>                                                                            : "•" U2022 # BULLET
+<Multi_key><P><P><C><D>                                                                            : "•" U2022 # BULLET
+#   Puce pleine ronde
+<Multi_key><p><p><r><o>                                                                            : "•" U2022 # BULLET
+<Multi_key><P><P><R><O>                                                                            : "•" U2022 # BULLET
+#
+#   Filled rightwards triangular bullet, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><f><r><t>                                                                               : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><F><R><T>                                                                               : "‣" U2023 # TRIANGULAR BULLET
 #   Puce pleine triangulaire vers la droite
-<Multi_key><p><t><d>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><P><T><D>                                                                               : "‣" U2023 # TRIANGULAR BULLET, filledrighttribullet, not U25B6 BLACK RIGHT-POINTING TRIANGLE
-#   Filled rectangular bullet
-<Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
-<Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF, filledrectbullet, not U25AC BLACK RECTANGLE
-#   En filled square bullet
-<Multi_key><e><n><f><s>                                                                            : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-<Multi_key><E><N><F><S>                                                                            : "▪" U25AA # BLACK SMALL SQUARE, enfilledsqbullet
-#   En open square bullet
-<Multi_key><e><n><o><s>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><E><N><O><S>                                                                            : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
+<Multi_key><p><p><t><d>                                                                            : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><P><P><T><D>                                                                            : "‣" U2023 # TRIANGULAR BULLET
+#
+#   Filled rectangular bullet, filledrectbullet, not U25AC BLACK RECTANGLE
+<Multi_key><f><r><b>                                                                               : "∎" U220E # END OF PROOF
+<Multi_key><F><R><B>                                                                               : "∎" U220E # END OF PROOF
+#   Puce pleine rectangulaire
+<Multi_key><p><p><r><e>                                                                            : "∎" U220E # END OF PROOF
+<Multi_key><P><P><R><E>                                                                            : "∎" U220E # END OF PROOF
+#
+#   En filled square bullet, enfilledsqbullet
+<Multi_key><e><n><f><s>                                                                            : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><E><N><F><S>                                                                            : "▪" U25AA # BLACK SMALL SQUARE
+#   Puce pleine carrée
+<Multi_key><p><p><c><a>                                                                            : "▪" U25AA # BLACK SMALL SQUARE
+<Multi_key><P><P><C><A>                                                                            : "▪" U25AA # BLACK SMALL SQUARE
+#
+#   En open square bullet, enopensquarebullet
+<Multi_key><e><n><o><s>                                                                            : "▫" U25AB # WHITE SMALL SQUARE
+<Multi_key><E><N><O><S>                                                                            : "▫" U25AB # WHITE SMALL SQUARE
 #   Puce ajourée carrée
-<Multi_key><p><a><c>                                                                               : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-<Multi_key><P><A><C>                                                                               : "▫" U25AB # WHITE SMALL SQUARE, enopensquarebullet
-#   Em filled rectangular bullet
-<Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><p><p><r><c>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><P><P><R><C>                                                                            : "▬" U25AC # BLACK RECTANGLE, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
-<Multi_key><e><m><o><r>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
-<Multi_key><E><M><O><R>                                                                            : "▭" U25AD # WHITE RECTANGLE, *emopenrectbullet
-<Multi_key><r><e><c><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
-<Multi_key><R><E><C><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
-#   Filled triangular upwards bullet
-<Multi_key><f><t><u>                                                                               : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
-<Multi_key><F><T><U>                                                                               : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
-#   Open triangular upwards bullet
-<Multi_key><o><t><u>                                                                               : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
-<Multi_key><O><T><U>                                                                               : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
-#   Filled triangular downwards bullet
-<Multi_key><f><t><d>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
-<Multi_key><F><T><D>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
-#   Open triangular downwards bullet
-<Multi_key><o><t><d>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
-<Multi_key><O><T><D>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
-#   Filled leftwards triangular bullet
-<Multi_key><f><l><t>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><F><L><T>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><p><a><c><a>                                                                            : "▫" U25AB # WHITE SMALL SQUARE
+<Multi_key><P><A><C><A>                                                                            : "▫" U25AB # WHITE SMALL SQUARE
+#
+#   Em filled rectangular bullet, emfilledrect, not U25AE BLACK VERTICAL RECTANGLE
+<Multi_key><e><m><f><r>                                                                            : "▬" U25AC # BLACK RECTANGLE
+<Multi_key><E><M><F><R>                                                                            : "▬" U25AC # BLACK RECTANGLE
+#   Puce pleine rectangulaire cadratine
+<Multi_key><p><p><r><c>                                                                            : "▬" U25AC # BLACK RECTANGLE
+<Multi_key><P><P><R><C>                                                                            : "▬" U25AC # BLACK RECTANGLE
+#
+#   Em open rectangular bullet, *emopenrectbullet
+<Multi_key><e><m><o><r>                                                                            : "▭" U25AD # WHITE RECTANGLE
+<Multi_key><E><M><O><R>                                                                            : "▭" U25AD # WHITE RECTANGLE
+#   Puce ajourée rectangulaire cadratine
+<Multi_key><p><a><r><c>                                                                            : "▭" U25AD # WHITE RECTANGLE
+<Multi_key><P><A><R><C>                                                                            : "▭" U25AD # WHITE RECTANGLE
+#
+#   En filled rectangular bullet, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
+<Multi_key><e><f><r><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+<Multi_key><E><F><R><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+#   Puce pleine rectangulaire demi-cadratine
+<Multi_key><p><p><r><d>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+<Multi_key><P><P><R><D>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+#
+#   Filled triangular upwards bullet, filledtribulletup, not U25B2 BLACK UP-POINTING TRIANGLE
+<Multi_key><f><t><u>                                                                               : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+<Multi_key><F><T><U>                                                                               : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+#   Puce pleine triangulaire vers le haut
+<Multi_key><p><p><t><h>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+<Multi_key><P><P><T><H>                                                                            : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+#
+#   Open triangular upwards bullet, opentribulletup, not U25B3 WHITE UP-POINTING TRIANGLE
+<Multi_key><o><t><u>                                                                               : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><O><T><U>                                                                               : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+#   Puce ajourée triangulaire vers le haut
+<Multi_key><p><a><t><h>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><P><A><T><H>                                                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+#
+#   Filled triangular downwards bullet, filledtribulletdown, not U25BC BLACK DOWN-POINTING TRIANGLE
+<Multi_key><f><t><d>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><F><T><D>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#   Puce pleine triangulaire vers le bas
+<Multi_key><p><p><t><b>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><P><P><T><B>                                                                            : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#
+#   Open triangular downwards bullet, opentribulletdown, not U25BD WHITE DOWN-POINTING TRIANGLE
+<Multi_key><o><t><d>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><O><T><D>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#   Puce ajourée triangulaire vers le bas
+<Multi_key><p><a><t><b>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><P><A><T><B>                                                                            : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#
+#   Filled leftwards triangular bullet, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
+<Multi_key><f><l><t>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE
+<Multi_key><F><L><T>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE
 #   Puce pleine triangulaire vers la gauche
-<Multi_key><p><t><g>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><P><T><G>                                                                               : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE, filledlefttribullet, not U25C0 BLACK LEFT-POINTING TRIANGLE
-<Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE, emfilledcircle
-<Multi_key><e><n><o><c>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><E><N><O><C>                                                                            : "◦" U25E6 # WHITE BULLET, enopencircbullet
+<Multi_key><p><p><t><g>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE
+<Multi_key><P><P><T><G>                                                                            : "◂" U25C2 # BLACK LEFT-POINTING SMALL TRIANGLE
+#
+#   Em filled circle, emfilledcircle
+<Multi_key><e><m><f><c>                                                                            : "●" U25CF # BLACK CIRCLE
+<Multi_key><E><M><F><C>                                                                            : "●" U25CF # BLACK CIRCLE
+#   Puce pleine circulaire cadratine
+<Multi_key><p><p><c><c>                                                                            : "●" U25CF # BLACK CIRCLE
+<Multi_key><P><P><C><C>                                                                            : "●" U25CF # BLACK CIRCLE
+#
+#   En open circular bullet, enopencircbullet
+<Multi_key><e><n><o><c>                                                                            : "◦" U25E6 # WHITE BULLET
+<Multi_key><E><N><O><C>                                                                            : "◦" U25E6 # WHITE BULLET
+#   Puce ajourée circulaire demi-cadratine
+<Multi_key><p><a><c><d>                                                                            : "◦" U25E6 # WHITE BULLET
+<Multi_key><P><A><C><D>                                                                            : "◦" U25E6 # WHITE BULLET
 #   Puce ajourée ronde
-<Multi_key><p><a><r>                                                                               : "◦" U25E6 # WHITE BULLET, enopencircbullet
-<Multi_key><P><A><R>                                                                               : "◦" U25E6 # WHITE BULLET, enopencircbullet
-#   Open star; lowercase needs to avoid a conflict with osuperior "ᴖ" U1D16
-<Multi_key><o><s><t>                                                                               : "☆" U2606 # WHITE STAR, openstar
-<Multi_key><O><S>                                                                                  : "☆" U2606 # WHITE STAR, openstar
+<Multi_key><p><a><r><o>                                                                            : "◦" U25E6 # WHITE BULLET
+<Multi_key><P><A><R><O>                                                                            : "◦" U25E6 # WHITE BULLET
+#
+#   Open star, openstar; lowercase needs to avoid a conflict with osuperior "ᴖ" U1D16
+<Multi_key><o><s><t>                                                                               : "☆" U2606 # WHITE STAR
+<Multi_key><O><S>                                                                                  : "☆" U2606 # WHITE STAR
+#   Étoile ajourée
+<Multi_key><e><a>                                                                                  : "☆" U2606 # WHITE STAR
+<Multi_key><E><A>                                                                                  : "☆" U2606 # WHITE STAR
+<Multi_key><eacute><a>                                                                             : "☆" U2606 # WHITE STAR
+<Multi_key><Eacute><a>                                                                             : "☆" U2606 # WHITE STAR
 #
 #
 #   Tainome and kome
 #
 #   Japanese tainome and kome are supported with cross-language sequences.
 #
+#   In group 11 of "*" on "X"                                                                      : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><k><o><m>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><K><O><M>                                                                               : "※" U203B # REFERENCE MARK, Japanese kome
 <Multi_key><t><a><i>                                                                               : "◉" U25C9 # FISHEYE, Japanese tainome, bullet
@@ -3422,7 +3577,7 @@
 #^# Circle quadrants
 #
 #   These extend filled and empty circles on D06, groups 1..3.
-#   See # # D06 at, dead_greek
+#   See # # D06 at
 #
 #   Half circles are supported in mathematical symbols.
 #   See # # Geometric Shapes in block U25A0 used in mathematics
@@ -3491,11 +3646,11 @@
 #
 # # End marks
 #
-#   Compose sequences are based on the shadow type: box shadow, or drop shadow;
+#   Multikey sequences are based on the shadow type: box shadow or drop shadow;
 #   on the shadow direction: up or down; and on the shadow side: left or right.
 #
-#   As appropriate for end marks, they cast the shadow to the right, as opposed
-#   to the mathematical "⧠" U29E0 SQUARE WITH CONTOURED OUTLINE = D'Alembertian
+#   As appropriate for end marks, they cast the shadow to the right, unlike
+#   the mathematical "⧠" U29E0 SQUARE WITH CONTOURED OUTLINE = D'Alembertian
 #   (informative Unicode alias), also supported here for a more complete set of
 #   shadowed boxes.
 #
@@ -3621,7 +3776,7 @@
 #   See #*# CIRCUMFLEX
 #
 #   One useful functionality is bullets, since the symbol groups are limited to
-#   "•" U2022, "◦" U25E6, "‣" U2023, as well as "⁃" U2043, and "▪" U25AA. As a
+#   "•" U2022, "◦" U25E6, "‣" U2023 and "▪" U25AA, as well as "⁃" U2043. As a
 #   complementary, partly intersecting set, this series supports "▪" U25AA,
 #   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3, and also "•" U2022
 #   and "◦" U25E6.
@@ -3830,10 +3985,10 @@
 #
 # # Symbols for modifier keys
 #
-#   "⟰" U27F0 UPWARDS QUADRUPLE ARROW is proposed for repurposing as level 5
+#   "⟰" U27F0 UPWARDS QUADRUPLE ARROW is proposed for repurposing as level-5
 #   select, by lack of a quintuple arrow and with the rationale that this key
 #   increments the level index by 4.
-#   See dispocla.cpp // ##  Name and mapping of the level 5 modifier key
+#   See dispocla.cpp ## Level-5 modifier
 #
 #   Level 2.
 <Multi_key><l><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
@@ -3846,15 +4001,15 @@
 <Multi_key><N><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><N><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 #   Level 3.
-<Multi_key><l><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><l><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><L><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><L><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><l><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+<Multi_key><l><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+<Multi_key><L><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+<Multi_key><L><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
 #   Niveau 3.
-<Multi_key><n><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><n><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><N><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
-<Multi_key><N><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level 3 select
+<Multi_key><n><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+<Multi_key><n><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+<Multi_key><N><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+<Multi_key><N><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
 #   Level 5.
 <Multi_key><l><5>                                                                                  : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><l><KP_5>                                                                               : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
@@ -3919,16 +4074,19 @@
 #   supported in dead_belowdot, but since the relationship to the dead key is
 #   merely fortuitous, it is here without the dead key alternative, and without
 #   the reverse sequence, that is used in en_US.UTF-8/Compose for letters with
-#   circumflex and dot below.
+#   circumflex and dot below, and here for "ꜝ" UA71D MODIFIER LETTER RAISED
+#   EXCLAMATION MARK.
+#   See # # CIRCUMFLEX&DOT_BELOW
+#   See #*# SUPERSCRIPT
 #
 <Multi_key><exclam><asciicircum>                                                                   : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
 #   Other intuitive options « ¦|: » and « ¦:| » are discarded due to conflicts.
 #   See # # DIAERESIS&MACRON
 #
-#   "¦" U00A6 is also in dead_diaeresis backslash for an easy shortcut using no
-#   more than two unshifted keys, as well as in group 11 of colon for mnemonics
-#   and visibility.
+#   By contrast, "¦" U00A6 is in dead_diaeresis with backslash as a base
+#   character, for an easy shortcut using no more than two unshifted keys,
+#   and it is in group 11 of colon for mnemonics and visibility.
 #   See #*# DIAERESIS
 #   See # # B09 colon
 #
@@ -3948,7 +4106,7 @@
 #   This output is not cross-platform compatible, since on Windows it will need
 #   to be truncated to a maximum of 16 UTF-16 code units: "en_US.UTF-8/Comp".
 #
-<Multi_key><e><n><u><s>                                                                            : "en_US.UTF-8/Compose" # Standard fr_FR Compose sequences.
+<Multi_key><e><n><u><s>                                                                            : "en_US.UTF-8/Compose" # Standard fr_FR XCompose sequences.
 #
 #
 #^# Bidirectional layout controls
@@ -4528,6 +4686,10 @@
 #   Consistently, it also goes down the z axis first, if there is any, as in
 #   "⤫" U292B, "⤬" U292C.
 #
+#   Angles, however, are parsed counter-clockwise, for consistency and to keep
+#   things simple and straightforward.
+#   See #   Angle symbols
+#
 #
 #   Order sensitivity
 #
@@ -4551,7 +4713,7 @@
 #   For a conflictless support of variable length sequences, space termination
 #   is required for many math symbols, unless trailing space is non-critical.
 #   Both ASCII space and Latin-1 no-break space are supported as terminating
-#   space, the no-break space because in French mode, it is mapped on level 3,
+#   space, the no-break space because in French mode, it is mapped at level 3,
 #   in synergy with the ASCII symbols, that are likely to occur at the end of
 #   math symbol multikey sequences; if not, U+00A0 is supported regardless, for
 #   consistency and maintainability and with respect to a following number that
@@ -4564,14 +4726,14 @@
 #   a dead key equivalent as for "≪" U226A, "≫" U226B, "⋘" U22D8, "⋙" U22D9.
 #   To fix these issues, sequences start with a space, or interchangeably with
 #   a no-break space, supported for the sake of synergy with the Multi_key dead
-#   key, mapped invariably on level 3, both in French mode, where it is on key
+#   key, mapped invariably at level 3, both in French mode, where it is on key
 #   E12, and in ASCII mode where it is also on key D12; yet the space character
-#   on level 3 is no-break space in French mode, ASCII space in ASCII mode.
+#   at level 3 is no-break space in French mode, ASCII space in ASCII mode.
 #
 #   Leading space is also used to distinguish math sequences from each other,
 #   in case intuitivity requires similar sequences for different symbols, like
 #   for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN. This scheme may require prepending
-#   multiple spaces. In that case, the level 3 modifier may be released before
+#   multiple spaces. In that case, the level-3 modifier may be released before
 #   any of them, also in French mode when level 3 of the space bar is no-break
 #   space.
 #
@@ -4715,7 +4877,7 @@
 #
 #   All angle symbols are parsed as interior angles, not reflex angles. Some
 #   symbols are explicit about this, like "∡" U2221; others like "∠" U2220 are
-#   assumed to be the same.
+#   assumed to refer to the same angle.
 #
 #
 #   Small symbols
@@ -4753,7 +4915,7 @@
 #
 #   As rightsinglequotemark is on the apostrophe key in French mode, sequences
 #   with apostrophe should also work with rightsinglequotemark. Yet apostrophe
-#   is on key E12, on the same (base) level as rightsinglequotemark on E04.
+#   is on key E12, at the same (base) level as rightsinglequotemark on E04.
 #
 #
 # # Not sign
@@ -4774,17 +4936,19 @@
 #
 # # Plus minus
 #
-#   Order matters unlike in en_US.UTF-8/Compose not supporting "∓" U2213. But
-#   the sequence supported here for "±" U00B1, without space termination, is
-#   sideways compatible, while the reverse sequence is used for "∓" U2213.
+#   Order matters, unlike in en_US.UTF-8/Compose not supporting "∓" U2213. The
+#   sideways compatible sequence supported here for "±" U00B1 is opposed to the
+#   reverse sequence used for "∓" U2213.
 #   See #   Order sensitivity
+#   See "∓" U2213
 #
-#   On complete keyboard layouts, "±" U00B1 is on level 7 on the key where the
-#   minus sign "−" U2212 is on level 5.
+#   On the associated keyboard layouts, "±" U00B1 is at level 7 on the key
+#   where the minus sign "−" U2212 is at level 5.
 #   See dispocla.cpp key <AD05> plusminus
 #
-#   Additionally, for intuitivity and completeness and for incomplete keyboard
-#   layouts, there is a fallback input method in the symbol groups.
+#   Additionally, for intuitivity and completeness of the symbol groups and
+#   with respect to incomplete keyboard layouts, there is a fallback input
+#   method in group 1 of plus. (And "∓" U2213 is in group 3.)
 #   See # # C06 plus
 #
 #   In group 1 of "+"                                                                              : "±" U00B1 # PLUS-MINUS SIGN
@@ -4819,7 +4983,7 @@
 #   The at sign is part of these multikey sequences for consistency with the
 #   Greek dead key. However, in the multikey equivalent of dead_greek, <at>
 #   is in leading position, while here it trails and triggers the output.
-#   See #*# GREEK
+#   See #*# GREEK_OR_CIRCLED
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Characters_in_other_blocks
 #
@@ -4912,10 +5076,10 @@
 # # Fraction slash
 #
 #   On the associated keyboard layouts, "⁄" U2044 FRACTION SLASH is on live key
-#   B09, level 7, in ASCII mode also on level 6.
+#   B09, level 7, in ASCII mode also at level 6.
+#   See # # Vulgar fractions
 #   See dispocla.cpp ## Format controls
 #   See dispocla.cpp key <AB09>
-#   See # # Vulgar fractions
 #
 #   Also in dead_stroke followed by 4.
 #   See #*# STROKE
@@ -4979,6 +5143,8 @@
 #   Two of these are supported on live keys: "⁣" U2063 INVISIBLE SEPARATOR on
 #   B07, "⁤" U2064 INVISIBLE PLUS on C06.
 #   See dispocla.cpp ## Format controls
+#   See dispocla.cpp key <AB07>
+#   See dispocla.cpp key <AC06>
 #
 <Multi_key><ampersand><f>                                                                              : "⁡" U2061 # FUNCTION APPLICATION invisible
 <Multi_key><ampersand><x>                                                                              : "⁢" U2062 # INVISIBLE TIMES
@@ -5442,17 +5608,18 @@
 #   https://www.unicode.org/charts/PDF/U2200.pdf
 #   https://www.unicode.org/charts/nameslist/n_2200.html
 #
-#   In group 4 of "^"                                                                              : "∀" U2200 # FOR ALL
+#   In group 4 of "^" on "A"                                                                       : "∀" U2200 # FOR ALL
 <Multi_key><A>                                                                             <space> : "∀" U2200 # FOR ALL
 <Multi_key><A>                                                                      <nobreakspace> : "∀" U2200 # FOR ALL
 <Multi_key><C>                                                                             <space> : "∁" U2201 # COMPLEMENT
 <Multi_key><C>                                                                      <nobreakspace> : "∁" U2201 # COMPLEMENT
-#   In group 2 of "("                                                                              : "∂" U2202 # PARTIAL DIFFERENTIAL
+#   In group 2 of "(" on "D"                                                                       : "∂" U2202 # PARTIAL DIFFERENTIAL
 <Multi_key><d>                                                                             <space> : "∂" U2202 # PARTIAL DIFFERENTIAL
 <Multi_key><d>                                                                      <nobreakspace> : "∂" U2202 # PARTIAL DIFFERENTIAL
 #   In group 4 of '"' and "€" on "E"                                                               : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                             <space> : "∃" U2203 # THERE EXISTS
 <Multi_key><E>                                                                      <nobreakspace> : "∃" U2203 # THERE EXISTS
+#   In # # STROKE                                                                                  : "∄" U2204 # THERE DOES NOT EXIST
 #   In # # STROKE&GROUP_4                                                                          : "∄" U2204 # THERE DOES NOT EXIST
 #   In group 4 of "%" on "Z" next to "E"                                                           : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><E><slash>                                                                              : "∄" U2204 # THERE DOES NOT EXIST
@@ -5461,35 +5628,31 @@
 #   In group 4 of "("                                                                              : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                             <space> : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                      <nobreakspace> : "∆" U2206 # INCREMENT
-#   In #*# GREEK                                                                                   : "∇" U2207 # NABLA
+#   In #*# GREEK_OR_CIRCLED                                                                        : "∇" U2207 # NABLA
 #   In group 5 of "("                                                                              : "∇" U2207 # NABLA
 <Multi_key><D><percent>                                                                            : "∇" U2207 # NABLA
 #
 #   As nabla may be used to denote the Hessian matrix, it has a corresponding
-#   sequence.
+#   mnemonic sequence additionally to the turned-capital-delta sequence above.
 #
 <Multi_key><H>                                                                             <space> : "∇" U2207 # NABLA
 <Multi_key><H>                                                                      <nobreakspace> : "∇" U2207 # NABLA
-#   In group 2 of '"' and "€"                                                                      : "∈" U2208 # ELEMENT OF
+#   In group 2 of '"' and "€" on "E"                                                               : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                             <space> : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                      <nobreakspace> : "∈" U2208 # ELEMENT OF
-<Multi_key><e><slash>                                                                      <space> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><e><slash>                                                               <nobreakspace> : "∉" U2209 # NOT AN ELEMENT OF
-<Multi_key><e><comma>                                                                      <space> : "∊" U220A # SMALL ELEMENT OF
-<Multi_key><e><comma>                                                               <nobreakspace> : "∊" U220A # SMALL ELEMENT OF
+#   In # # STROKE&GROUP_2                                                                          : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><e><slash>                                                                              : "∉" U2209 # NOT AN ELEMENT OF
+<Multi_key><e><comma>                                                                              : "∊" U220A # SMALL ELEMENT OF
 #   In group 3 of '"' and "€"                                                                      : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                             <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                      <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                                  <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                           <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
-<Multi_key><p><slash>                                                                      <space> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><p><slash>                                                               <nobreakspace> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><e><backslash><slash>                                                           <space> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><e><backslash><slash>                                                    <nobreakspace> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
-<Multi_key><p><comma>                                                                      <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
-<Multi_key><p><comma>                                                               <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
-<Multi_key><e><backslash><comma>                                                           <space> : "∍" U220D # SMALL CONTAINS AS MEMBER
-<Multi_key><e><backslash><comma>                                                    <nobreakspace> : "∍" U220D # SMALL CONTAINS AS MEMBER
+#   In # # STROKE&GROUP_3                                                                          : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><p><slash>                                                                              : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><e><backslash><slash>                                                                   : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><p><comma>                                                                              : "∍" U220D # SMALL CONTAINS AS MEMBER
+<Multi_key><e><backslash><comma>                                                                   : "∍" U220D # SMALL CONTAINS AS MEMBER
 #   "End of proof"
 #Multi_key><e><o><p>                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><e><o>                                                                                  : "∎" U220E # END OF PROOF
@@ -5505,7 +5668,7 @@
 #   In group 3 of "&" on "P"                                                                       : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
-#   In group 3 of "}"                                                                              : "∐" U2210 # N-ARY COPRODUCT
+#   In group 3 of "}" on "O" next to "P"                                                           : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><percent>                                                                            : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><C><P>                                                                                  : "∐" U2210 # N-ARY COPRODUCT
 #   In group 3 of "$" on "S"                                                                       : "∑" U2211 # N-ARY SUMMATION
@@ -5515,14 +5678,11 @@
 #   In group 3 of "-"                                                                              : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                                  <space> : "−" U2212 # MINUS SIGN
 <Multi_key><space><minus>                                                           <nobreakspace> : "−" U2212 # MINUS SIGN
-#
-#   For "∓" U2213, space termination is skipped like it is for "±" U00B1.
-#   See # # Plus minus
-#
 #   In group 3 of "+"                                                                              : "∓" U2213 # MINUS-OR-PLUS SIGN
+#   See # # Plus minus
 <Multi_key><minus><plus>                                                                           : "∓" U2213 # MINUS-OR-PLUS SIGN
-<Multi_key><period><plus>                                                                  <space> : "∔" U2214 # DOT PLUS
-<Multi_key><period><plus>                                                           <nobreakspace> : "∔" U2214 # DOT PLUS
+#   In #*# DOT_ABOVE                                                                               : "∔" U2214 # DOT PLUS
+<Multi_key><period><plus>                                                                          : "∔" U2214 # DOT PLUS
 #   In #*# STROKE                                                                                  : "∕" U2215 # DIVISION SLASH
 #   In group 12 of "/"                                                                             : "∕" U2215 # DIVISION SLASH
 <Multi_key><space><slash>                                                                  <space> : "∕" U2215 # DIVISION SLASH
@@ -5544,46 +5704,47 @@
 <Multi_key><o>                                                                             <space> : "∘" U2218 # RING OPERATOR
 <Multi_key><o>                                                                      <nobreakspace> : "∘" U2218 # RING OPERATOR
 #   In group 2 of "."                                                                              : "∙" U2219 # BULLET OPERATOR
-<Multi_key><space><period><period>                                                         <space> : "∙" U2219 # BULLET OPERATOR
-<Multi_key><space><period><period>                                                  <nobreakspace> : "∙" U2219 # BULLET OPERATOR
-<Multi_key><nobreakspace><period><period>                                                  <space> : "∙" U2219 # BULLET OPERATOR
-<Multi_key><nobreakspace><period><period>                                           <nobreakspace> : "∙" U2219 # BULLET OPERATOR
-#   In group 1 of "\"                                                                              : "√" U221A # SQUARE ROOT
+<Multi_key><space><space><period>                                                                  : "∙" U2219 # BULLET OPERATOR
+<Multi_key><nobreakspace><space><period>                                                           : "∙" U2219 # BULLET OPERATOR
+<Multi_key><nobreakspace><nobreakspace><period>                                                    : "∙" U2219 # BULLET OPERATOR
+#   In group 1 of "\" on "R"                                                                       : "√" U221A # SQUARE ROOT
+<Multi_key><v><2>                                                                                  : "√" U221A # SQUARE ROOT
+<Multi_key><v><KP_2>                                                                               : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                          <space> : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                   <nobreakspace> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                       <space> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                <nobreakspace> : "√" U221A # SQUARE ROOT
-#   In group 2 of "\"                                                                              : "∛" U221B # CUBE ROOT
+#   In group 2 of "\" on "R"                                                                       : "∛" U221B # CUBE ROOT
+<Multi_key><v><3>                                                                                  : "∛" U221B # CUBE ROOT
+<Multi_key><v><KP_3>                                                                               : "∛" U221B # CUBE ROOT
 <Multi_key><3><v>                                                                                  : "∛" U221B # CUBE ROOT
 <Multi_key><KP_3><v>                                                                               : "∛" U221B # CUBE ROOT
-#   In group 3 of "\"                                                                              : "∜" U221C # FOURTH ROOT
+#   In group 3 of "\" on "R"                                                                       : "∜" U221C # FOURTH ROOT
+<Multi_key><v><4>                                                                                  : "∜" U221C # FOURTH ROOT
+<Multi_key><v><KP_4>                                                                               : "∜" U221C # FOURTH ROOT
 <Multi_key><4><v>                                                                                  : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                               : "∜" U221C # FOURTH ROOT
 #   In group 10 of "{" on "I"                                                                      : "∝" U221D # PROPORTIONAL TO
-<Multi_key><space><8>                                                                      <space> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><space><8>                                                               <nobreakspace> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><space><KP_8>                                                                   <space> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><space><KP_8>                                                            <nobreakspace> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><nobreakspace><8>                                                               <space> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><nobreakspace><8>                                                        <nobreakspace> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><nobreakspace><KP_8>                                                            <space> : "∝" U221D # PROPORTIONAL TO
-<Multi_key><nobreakspace><KP_8>                                                     <nobreakspace> : "∝" U221D # PROPORTIONAL TO
+<Multi_key><8><backslash>                                                                          : "∝" U221D # PROPORTIONAL TO
+<Multi_key><KP_8><backslash>                                                                       : "∝" U221D # PROPORTIONAL TO
+<Multi_key><space><8>                                                                              : "∝" U221D # PROPORTIONAL TO
+<Multi_key><space><KP_8>                                                                           : "∝" U221D # PROPORTIONAL TO
+<Multi_key><nobreakspace><8>                                                                       : "∝" U221D # PROPORTIONAL TO
+<Multi_key><nobreakspace><KP_8>                                                                    : "∝" U221D # PROPORTIONAL TO
 #   In group 11 of "{" on "I"                                                                      : "∞" U221E # INFINITY
 <Multi_key><8>                                                                             <space> : "∞" U221E # INFINITY
 <Multi_key><8>                                                                      <nobreakspace> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                          <space> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                   <nobreakspace> : "∞" U221E # INFINITY
 #
-#   Angles are parsed counter-clockwise, and consistently with "⦨" U29A8 and
-#   the following, horizontal angle legs translate to minus, not to underscore,
-#   like horizontal arrow stems, while vertical angle legs are bar, not exclam.
-#   For intuitivity, "∠" U2220 is parsed like "∡" U2221.
+#   Angles are parsed counter-clockwise.
+#   See #   Parsing order
 #   See #   Angle symbols
 #
-#   In group 5 of "]"                                                                              : "∟" U221F # RIGHT ANGLE
+#   In group 5 of "]" on "L"                                                                       : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                             <space> : "∟" U221F # RIGHT ANGLE
 <Multi_key><L>                                                                      <nobreakspace> : "∟" U221F # RIGHT ANGLE
-#   In group 5 of "^"                                                                              : "∠" U2220 # ANGLE
+#   In group 5 of "^" on "A"                                                                       : "∠" U2220 # ANGLE
 <Multi_key><minus><slash>                                                                  <space> : "∠" U2220 # ANGLE
 <Multi_key><minus><slash>                                                           <nobreakspace> : "∠" U2220 # ANGLE
 <Multi_key><minus><parenright><slash>                                                      <space> : "∡" U2221 # MEASURED ANGLE
@@ -5604,9 +5765,10 @@
 <Multi_key><space><bar><bar>                                                        <nobreakspace> : "∥" U2225 # PARALLEL TO
 <Multi_key><nobreakspace><bar><bar>                                                        <space> : "∥" U2225 # PARALLEL TO
 <Multi_key><nobreakspace><bar><bar>                                                 <nobreakspace> : "∥" U2225 # PARALLEL TO
-#   In #*# STROKE                                                                                  : "∦" U2226 # NOT PARALLEL TO
+#   In # # STROKE&GROUP_1                                                                          : "∦" U2226 # NOT PARALLEL TO
+#   In # # STROKE&GROUP_12                                                                         : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><bar><bar><slash>                                                                       : "∦" U2226 # NOT PARALLEL TO
-#   In group 2 of "`"                                                                              : "∧" U2227 # LOGICAL AND
+#   In group 2 of "`" on "N"                                                                       : "∧" U2227 # LOGICAL AND
 <Multi_key><a>                                                                             <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><a>                                                                      <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><percent>                                                                    <space> : "∧" U2227 # LOGICAL AND
@@ -5689,6 +5851,7 @@
 <Multi_key><space><colon><colon>                                                    <nobreakspace> : "∷" U2237 # PROPORTION
 <Multi_key><nobreakspace><colon><colon>                                                    <space> : "∷" U2237 # PROPORTION
 <Multi_key><nobreakspace><colon><colon>                                             <nobreakspace> : "∷" U2237 # PROPORTION
+#   In #*# DOT_ABOVE                                                                               : "∸" U2238 # DOT MINUS
 <Multi_key><period><minus>                                                                 <space> : "∸" U2238 # DOT MINUS
 <Multi_key><period><minus>                                                          <nobreakspace> : "∸" U2238 # DOT MINUS
 <Multi_key><minus><colon>                                                                  <space> : "∹" U2239 # EXCESS
@@ -5994,26 +6157,43 @@
 <Multi_key><u><bracketleft>                                                         <nobreakspace> : "⊔" U2294 # SQUARE CUP
 <Multi_key><u><bracketright>                                                               <space> : "⊔" U2294 # SQUARE CUP
 <Multi_key><u><bracketright>                                                        <nobreakspace> : "⊔" U2294 # SQUARE CUP
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊕" U2295 # CIRCLED PLUS
+#   In #^# CIRCLED                                                                                 : "⊕" U2295 # CIRCLED PLUS
 <Multi_key><o><plus>                                                                       <space> : "⊕" U2295 # CIRCLED PLUS
 <Multi_key><o><plus>                                                                <nobreakspace> : "⊕" U2295 # CIRCLED PLUS
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊖" U2296 # CIRCLED MINUS
+#   In #^# CIRCLED                                                                                 : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><o><minus>                                                                      <space> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><o><minus>                                                               <nobreakspace> : "⊖" U2296 # CIRCLED MINUS
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊗" U2297 # CIRCLED TIMES
 <Multi_key><o><x>                                                                          <space> : "⊗" U2297 # CIRCLED TIMES
 <Multi_key><o><x>                                                                   <nobreakspace> : "⊗" U2297 # CIRCLED TIMES
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊘" U2298 # CIRCLED DIVISION SLASH
+#   In #^# CIRCLED                                                                                 : "⊘" U2298 # CIRCLED DIVISION SLASH
 <Multi_key><space><o><slash>                                                               <space> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <Multi_key><space><o><slash>                                                        <nobreakspace> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <Multi_key><nobreakspace><o><slash>                                                        <space> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <Multi_key><nobreakspace><o><slash>                                                 <nobreakspace> : "⊘" U2298 # CIRCLED DIVISION SLASH
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊙" U2299 # CIRCLED DOT OPERATOR
+#   In #^# CIRCLED                                                                                 : "⊙" U2299 # CIRCLED DOT OPERATOR
 <Multi_key><o><period>                                                                     <space> : "⊙" U2299 # CIRCLED DOT OPERATOR
 <Multi_key><o><period>                                                              <nobreakspace> : "⊙" U2299 # CIRCLED DOT OPERATOR
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊚" U229A # CIRCLED RING OPERATOR
+#   In #^# CIRCLED                                                                                 : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><O><o>                                                                          <space> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><O><o>                                                                   <nobreakspace> : "⊚" U229A # CIRCLED RING OPERATOR
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊛" U229B # CIRCLED ASTERISK OPERATOR
+#   In #^# CIRCLED                                                                                 : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><o><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><O><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊜" U229C # CIRCLED EQUALS
+#   In #^# CIRCLED                                                                                 : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><space><o><equal>                                                               <space> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><space><o><equal>                                                        <nobreakspace> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><nobreakspace><o><equal>                                                        <space> : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><nobreakspace><o><equal>                                                 <nobreakspace> : "⊜" U229C # CIRCLED EQUALS
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⊝" U229D # CIRCLED DASH
+#   In #^# CIRCLED                                                                                 : "⊝" U229D # CIRCLED DASH
 <Multi_key><o><minus><minus>                                                               <space> : "⊝" U229D # CIRCLED DASH
 <Multi_key><o><minus><minus>                                                        <nobreakspace> : "⊝" U229D # CIRCLED DASH
 <Multi_key><space><o><minus>                                                               <space> : "⊝" U229D # CIRCLED DASH
@@ -7595,7 +7775,7 @@
 #   In #*# BAR                                                                                     : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><minus>                                                                      <space> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><minus>                                                               <nobreakspace> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
-#   In #*# GREEK                                                                                   : "⦶" U29B6 # CIRCLED VERTICAL BAR
+#   In #*# GREEK_OR_CIRCLED                                                                        : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                        <space> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                 <nobreakspace> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar><bar>                                                                           : "⦷" U29B7 # CIRCLED PARALLEL
@@ -8926,12 +9106,10 @@
 #   staurophobia or whatever, an alternative plus sign has been encoded,
 #   although this may also be done at font level.
 #   (download URL) https://ejournal.ust.ac.id/index.php/LOGOS/article/view/3414/2653
-#   https://www.unicode.org/charts/PDF/UFB00.pdf
-#   https://www.unicode.org/charts/nameslist/n_FB00.html
-#
-#   Consistently, this character is a math symbol.
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Characters_in_other_blocks
 #   https://en.wikipedia.org/wiki/Alphabetic_Presentation_Forms
+#   https://www.unicode.org/charts/PDF/UFB00.pdf
+#   https://www.unicode.org/charts/nameslist/n_FB00.html
 #
 #   "﬩" UFB29 is supported since 2025-05-08, when it made its way into symbol
 #   group 12 of "+", to fill in an empty slot after "⁜" U205C was moved from
@@ -8946,9 +9124,10 @@
 #   See # # B04 greater
 #   See # # B06 grave
 #   See # # B09 colon
+#   https://github.com/dispoclavier/nouvel-azerty/commit/b72a8e5752e39e1c82c920dacdd54b93ca145ef7
 #
-#   The sequence has been designed consistently with those for "ℵ" U2135,
-#   "ℶ" U2136, "ℷ" U2137, "ℸ" U2138.
+#   The design of this sequence is consistent with "ℵ" U2135, "ℶ" U2136,
+#   "ℷ" U2137, "ℸ" U2138.
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
 #   In group 12 of "+"                                                                             : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN
@@ -8957,9 +9136,9 @@
 #
 # # LaTeX codes
 #
-#   Since the maximum number of keysyms is 9, many LaTeX commands need to be
-#   truncated to make working multikey sequences out of them, limiting this
-#   input method’s usability.
+#   Since the maximum number of keysyms is 9, including the initial Multi_key
+#   press, many LaTeX commands need to be truncated to make working multikey
+#   sequences out of them, limiting this input method’s usability.
 #
 #   Most short sequences require space termination to prevent conflicts with
 #   longer sequences starting the same way. This is consistent with the way
@@ -8981,7 +9160,6 @@
 <Multi_key><i><n><t><e><r><s><e><c>                                                                : "∩" U2229 # INTERSECTION French truncated name
 <Multi_key><C><a><p>                                                                               : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><c><a><p><d><o><t>                                                                      : "⩀" U2A40 # INTERSECTION WITH DOT
-#   The TeX command \capplus is not converted to any Unicode character.
 #   In group 4 of "'" and "’"                                                                      : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                       <space> : "∪" U222A # UNION
 <Multi_key><c><u><p>                                                                <nobreakspace> : "∪" U222A # UNION
@@ -8994,9 +9172,10 @@
 #   In group 12 of "\"                                                                             : "∖" U2216 # SET MINUS
 <Multi_key><s><e><t><m><i><n><u><s>                                                                : "∖" U2216 # SET MINUS
 #   In group 2 of "}"                                                                              : "∅" U2205 # EMPTY SET
-#   TeX "emptyset" truncated to the unambiguous minimal sequence.
+#Multi_key><e><m><p><t><y><s><e><t>                                                                : "∅" U2205 # EMPTY SET
 <Multi_key><e><m><p>                                                                               : "∅" U2205 # EMPTY SET
-#   "ens" streamlined for "ensvide", short for "ensemble vide".
+#   "ensemble vide"
+#Multi_key><e><n><s><v><i><d><e>                                                                   : "∅" U2205 # EMPTY SET French shortened name
 <Multi_key><e><n><s>                                                                               : "∅" U2205 # EMPTY SET French shortened name
 #   In group 1 of "("                                                                              : "⌀" U2300 # DIAMETER SIGN
 <Multi_key><d><i><a><m><e><t><e><r>                                                                : "⌀" U2300 # DIAMETER SIGN
@@ -9057,7 +9236,7 @@
 #       dead_doubleacute        tonos
 #
 #
-# # GREEK&DOUBLEACUTE
+# # GREEK_OR_CIRCLED&DOUBLEACUTE
 #   Greek tonos
 #   Dchar: 
 #
@@ -9171,7 +9350,7 @@
 <Multi_key><EuroSign><at>                                                                      <y> : "ύ" U03CD # GREEK SMALL LETTER UPSILON WITH TONOS
 #
 #
-# # GREEK&ACUTE
+# # GREEK_OR_CIRCLED&ACUTE
 #   Greek oxia
 #   Dchar: 
 #
@@ -9249,7 +9428,7 @@
 <Multi_key><apostrophe><at>                                                                    <y> : "ύ" U1F7B # GREEK SMALL LETTER UPSILON WITH OXIA
 #
 #
-# # GREEK&ACUTE&DOT_BELOW
+# # GREEK_OR_CIRCLED&ACUTE&DOT_BELOW
 #   Greek oxia ypogegrammeni
 #   Dchar: 
 #
@@ -9291,7 +9470,7 @@
 <Multi_key><exclam><apostrophe><at>                                                            <v> : "ῴ" U1FF4 # GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&INVERTED_BREVE
+# # GREEK_OR_CIRCLED&INVERTED_BREVE
 #   Greek dasia
 #   Dchar: 
 #
@@ -9369,7 +9548,7 @@
 <Multi_key><parenleft><at>                                                                     <y> : "ὑ" U1F51 # GREEK SMALL LETTER UPSILON WITH DASIA
 #
 #
-# # GREEK&INVERTED_BREVE&ACUTE
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&ACUTE
 #   Greek dasia oxia
 #   Dchar: 
 #
@@ -9567,7 +9746,7 @@
 <Multi_key><apostrophe><parenleft><at>                                                         <y> : "ὕ" U1F55 # GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
 #
 #
-# # GREEK&INVERTED_BREVE&ACUTE&DOT_BELOW
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&ACUTE&DOT_BELOW
 #   Greek dasia oxia ypogegrammeni
 #   Dchar: 
 #
@@ -9861,7 +10040,7 @@
 <Multi_key><exclam><apostrophe><parenleft><at>                                                 <v> : "ᾥ" U1FA5 # GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&INVERTED_BREVE&CIRCUMFLEX
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&CIRCUMFLEX
 #   Greek dasia perispomeni
 #   Dchar: 
 #
@@ -10011,7 +10190,7 @@
 <Multi_key><less><parenleft><at>                                                               <y> : "ὗ" U1F57 # GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
 #
 #
-# # GREEK&INVERTED_BREVE&CIRCUMFLEX&DOT_BELOW
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&CIRCUMFLEX&DOT_BELOW
 #   Greek dasia perispomeni ypogegrammeni
 #   Dchar: 
 #
@@ -10305,7 +10484,7 @@
 <Multi_key><exclam><less><parenleft><at>                                                       <v> : "ᾧ" U1FA7 # GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
 #
 #
-# # GREEK&INVERTED_BREVE&GRAVE
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&GRAVE
 #   Greek dasia varia
 #   Dchar: 
 #
@@ -10503,7 +10682,7 @@
 <Multi_key><grave><parenleft><at>                                                              <y> : "ὓ" U1F53 # GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
 #
 #
-# # GREEK&INVERTED_BREVE&GRAVE&DOT_BELOW
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&GRAVE&DOT_BELOW
 #   Greek dasia varia ypogegrammeni
 #   Dchar: 
 #
@@ -10797,7 +10976,7 @@
 <Multi_key><exclam><grave><parenleft><at>                                                      <v> : "ᾣ" U1FA3 # GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&INVERTED_BREVE&DOT_BELOW
+# # GREEK_OR_CIRCLED&INVERTED_BREVE&DOT_BELOW
 #   Greek dasia ypogegrammeni
 #   Dchar: 
 #
@@ -10875,7 +11054,7 @@
 <Multi_key><exclam><parenleft><at>                                                             <v> : "ᾡ" U1FA1 # GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&BREVE
+# # GREEK_OR_CIRCLED&BREVE
 #   Greek psili
 #   Dchar: 
 #
@@ -10945,7 +11124,7 @@
 <Multi_key><parenright><at>                                                                    <y> : "ὐ" U1F50 # GREEK SMALL LETTER UPSILON WITH PSILI
 #
 #
-# # GREEK&BREVE&ACUTE
+# # GREEK_OR_CIRCLED&BREVE&ACUTE
 #   Greek psili oxia
 #   Dchar: 
 #
@@ -11131,7 +11310,7 @@
 <Multi_key><apostrophe><parenright><at>                                                        <y> : "ὔ" U1F54 # GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
 #
 #
-# # GREEK&BREVE&ACUTE&DOT_BELOW
+# # GREEK_OR_CIRCLED&BREVE&ACUTE&DOT_BELOW
 #   Greek psili ypogegrammeni
 #   Dchar: 
 #
@@ -11425,7 +11604,7 @@
 <Multi_key><exclam><apostrophe><parenright><at>                                                <v> : "ᾤ" U1FA4 # GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&BREVE&CIRCUMFLEX
+# # GREEK_OR_CIRCLED&BREVE&CIRCUMFLEX
 #   Greek psili perispomeni
 #   Dchar: 
 #
@@ -11563,7 +11742,7 @@
 <Multi_key><less><parenright><at>                                                              <y> : "ὖ" U1F56 # GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
 #
 #
-# # GREEK&BREVE&CIRCUMFLEX&DOT_BELOW
+# # GREEK_OR_CIRCLED&BREVE&CIRCUMFLEX&DOT_BELOW
 #   Greek psili perispomeni ypogegrammeni
 #   Dchar: 
 #
@@ -11857,7 +12036,7 @@
 <Multi_key><exclam><less><parenright><at>                                                      <v> : "ᾦ" U1FA6 # GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
 #
 #
-# # GREEK&BREVE&GRAVE
+# # GREEK_OR_CIRCLED&BREVE&GRAVE
 #   Greek psili varia
 #   Dchar: 
 #
@@ -12043,7 +12222,7 @@
 <Multi_key><grave><parenright><at>                                                             <y> : "ὒ" U1F52 # GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
 #
 #
-# # GREEK&BREVE&GRAVE&DOT_BELOW
+# # GREEK_OR_CIRCLED&BREVE&GRAVE&DOT_BELOW
 #   Greek psili varia ypogegrammeni
 #   Dchar: 
 #
@@ -12337,7 +12516,7 @@
 <Multi_key><exclam><grave><parenright><at>                                                     <v> : "ᾢ" U1FA2 # GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&BREVE&DOT_BELOW
+# # GREEK_OR_CIRCLED&BREVE&DOT_BELOW
 #   Greek psili ypogegrammeni
 #   Dchar: 
 #
@@ -12415,7 +12594,7 @@
 <Multi_key><exclam><parenright><at>                                                            <v> : "ᾠ" U1FA0 # GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
 #
 #
-# # GREEK&HOOK_ABOVE
+# # GREEK_OR_CIRCLED&HOOK_ABOVE
 #   Greek koronis
 #   Dchar: 
 #
@@ -12437,7 +12616,7 @@
 <Multi_key><bracketright><at>                                                              <U202F> : "᾽" U1FBD # GREEK KORONIS
 #
 #
-# # GREEK&MACRON
+# # GREEK_OR_CIRCLED&MACRON
 #   Greek makron
 #   Dchar: 
 #
@@ -12483,7 +12662,7 @@
 <Multi_key><bar><at>                                                                           <y> : "ῡ" U1FE1 # GREEK SMALL LETTER UPSILON WITH MACRON
 #
 #
-# # GREEK&CIRCUMFLEX
+# # GREEK_OR_CIRCLED&CIRCUMFLEX
 #   Greek perispomeni
 #   Dchar: 
 #
@@ -12525,7 +12704,7 @@
 <Multi_key><less><at>                                                                          <y> : "ῦ" U1FE6 # GREEK SMALL LETTER UPSILON WITH PERISPOMENI
 #
 #
-# # GREEK&CIRCUMFLEX&DOT_BELOW
+# # GREEK_OR_CIRCLED&CIRCUMFLEX&DOT_BELOW
 #   Greek perispomeni ypogegrammeni
 #   Dchar: 
 #
@@ -12567,7 +12746,7 @@
 <Multi_key><exclam><less><at>                                                                  <v> : "ῷ" U1FF7 # GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
 #
 #
-# # GREEK&HACEK
+# # GREEK_OR_CIRCLED&HACEK
 #   Greek vrachy
 #   Dchar: 
 #
@@ -12613,7 +12792,7 @@
 <Multi_key><greater><at>                                                                       <y> : "ῠ" U1FE0 # GREEK SMALL LETTER UPSILON WITH VRACHY
 #
 #
-# # GREEK&GRAVE
+# # GREEK_OR_CIRCLED&GRAVE
 #   Greek varia
 #   Dchar: 
 #
@@ -12691,7 +12870,7 @@
 <Multi_key><grave><at>                                                                         <y> : "ὺ" U1F7A # GREEK SMALL LETTER UPSILON WITH VARIA
 #
 #
-# # GREEK&GRAVE&DOT_BELOW
+# # GREEK_OR_CIRCLED&GRAVE&DOT_BELOW
 #   Greek varia ypogegrammeni
 #   Dchar: 
 #
@@ -12733,7 +12912,7 @@
 <Multi_key><exclam><grave><at>                                                                 <v> : "ῲ" U1FF2 # GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK&DOT_BELOW
+# # GREEK_OR_CIRCLED&DOT_BELOW
 #   Greek ypogegrammeni
 #   Dchar: 
 #
@@ -12779,7 +12958,7 @@
 <Multi_key><exclam><at>                                                                        <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
 #
 #
-# # GREEK&DIAERESIS
+# # GREEK_OR_CIRCLED&DIAERESIS
 #   Greek dialytika
 #   Dchar: 
 #
@@ -12817,7 +12996,7 @@
 <Multi_key><colon><at>                                                                         <y> : "ϋ" U03CB # GREEK SMALL LETTER UPSILON WITH DIALYTIKA
 #
 #
-# # GREEK&DIAERESIS&DOUBLEACUTE
+# # GREEK_OR_CIRCLED&DIAERESIS&DOUBLEACUTE
 #   Greek dialytika tonos
 #   Dchar: 
 #
@@ -12936,7 +13115,7 @@
 <Multi_key><EuroSign><colon><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 #
 #
-# # GREEK&DIAERESIS&ACUTE
+# # GREEK_OR_CIRCLED&DIAERESIS&ACUTE
 #   Greek dialytika oxia
 #   Dchar: 
 #
@@ -12990,7 +13169,7 @@
 <Multi_key><apostrophe><colon><at>                                                             <y> : "ΰ" U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
 #
 #
-# # GREEK&DIAERESIS&CIRCUMFLEX
+# # GREEK_OR_CIRCLED&DIAERESIS&CIRCUMFLEX
 #   Greek dialytika perispomeni
 #   Dchar: 
 #
@@ -13044,7 +13223,7 @@
 <Multi_key><less><colon><at>                                                                   <y> : "ῧ" U1FE7 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
 #
 #
-# # GREEK&DIAERESIS&GRAVE
+# # GREEK_OR_CIRCLED&DIAERESIS&GRAVE
 #   Greek dialytika varia
 #   Dchar: 
 #
@@ -13121,6 +13300,6 @@
 #   END_GREEK
 #
 #
-#   See part 2 in `compose-2.yml`.
-#   See part 3 in `compose-3.yml`.
+#   See part 2 in compose-2.yml.
+#   See part 3 in compose-3.yml.
 #
