@@ -1,4 +1,4 @@
-//                       Date: 2025-04-27T1902+0200
+//                       Date: 2025-05-13T0344+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -61,11 +61,14 @@
 // # Standards compliance
 //
 // This file configures a level 5 modifier key called "AltFr", located lefthand
-// either on B00 or on C00 (CapsLock), and a group 2 toggle called "ModLock" on
-// E00. This file also allocates full sets of eight levels on each graphic key.
-// Neither of these are covered by ISO/IEC 9995. Despite being international by
-// design, this standard does not cover Japanese keyboards either. In fact, the
+// either on B00 or on C00 (Caps Lock), and a group 2 toggle called "Mode Lock"
+// on E00. Neither of these are covered by ISO/IEC 9995. Being international by
+// design, this standard does not cover Japanese keyboards, though. Consequence
+// of this impasse made on Japanese keyboards, ISO/IEC 9995 is unable to cater
+// for keyboard layouts designed to fully support French. In fact, the
 // ISO/IEC keyboard standard only covers low-end Western keyboard layouts.
+//
+// Consistently, this file allocates full sets of 8 levels on each graphic key.
 //
 // Software tools like keyboard layouts do not need to be standardized prior to
 // deployment, and features are not necessarily printed on keycaps. The role of
@@ -86,7 +89,7 @@
 // similar functionality on Windows (Kana Lock) is Caps Lock insensitive.
 //
 // The purpose of this required second graphic toggle is to toggle row E keys
-// between letters and digits, independently of the CapsLock toggle, that is
+// between letters and digits, independently of the Caps Lock toggle, that is
 // set to also affect the diacriticized letters, most of which are on row E.
 //
 // The second toggle also maintains level 1 access to ASCII single and double
@@ -115,7 +118,7 @@
 // commented out in xkb/types/level5(56, 118) back in 2016 consistently, later
 // causing a bug in xkbcomp when these were uncommented again. Repurposing the
 // NumLock toggle is prone to causing issues on compact keyboards with overlay
-// numpad turned on and off by Num Lock.
+// numpad turned on and off by NumLock.
 //
 // The working solution relies on ISO_First_Group and ISO_Last_Group for the
 // purpose of switching between two layout groups. ModLock is implemented as
@@ -155,7 +158,7 @@
 //
 // # Documentation
 //
-// ## Level 5 modifier
+// ## Level-5 modifier
 //
 // The ISO/IEC 9995 standard does not support the level 5 modifier, because it
 // is limited to low-performance Western keyboard layouts and excludes all the
@@ -619,7 +622,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ## New "AltFr" modifier key
 	//
-	// See ## Level 5 modifier
+	// See ## Level-5 modifier
 	//
 	// The level 5 modifier defaults to the LSGT key but may need to be placed on
 	// CapsLock depending on the hardware. Keyboards for the European market with
@@ -862,7 +865,24 @@ xkb_symbols "kbfrFRs" {
 	// from alphabetic mnemonics based on French "gluon", as it does in group 10
 	// of the ASCII hyphen there; except in that it it is part of the U0020 U2060
 	// sequence UEF6E on level 6 (Shift + AltFr) of the space bar in French mode.
- 	//
+	//
+	// U200B ZERO WIDTH SPACE has an alternate, more intuitive and more familiar
+	// acronym: WNJ, for WORD NON-JOINER.
+	// https://unicode-org.atlassian.net/browse/CLDR-16631?focusedCommentId=169819
+	// https://www.unicode.org/mail-arch/unicode-ml/y2007-m11/0119.html
+	// https://github.com/unicode-org/cldr/blob/2b08423c8502f499b334eef17488c730adcd3a6c/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L32
+	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L32
+	//
+	// U200B ZERO WIDTH SPACE also has an intuitive, to-the-point French name:
+	// CÉSURE CONDITIONNELLE, break opportunity.
+	//
+	// This WNJ is at level 4 of the space bar, for its use in long URLs expected
+	// to line-wrap after slashes but not doing so in browsers that are not fully
+	// Unicode conformant, and because level 4 of the space bar must not be used
+	// for frequent space characters like U00A0 NBSP and U202F NBTSP (NNBSP).
+	// https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=944
+	// https://unicode.org/reports/tr14/#SY
+	//
 	//
 	// ## Overscore
 	//    ‾‾‾‾‾‾‾‾‾
@@ -937,7 +957,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// If subscript digits must be in French mode too, rather than in ASCII mode
 	// only, for usability and as a way to mitigate a bug on Windows deactivating
-	// levels 7 and 8 while Kana Lock is on. key AE01 would have no room for the
+	// the level 7 while Kana Lock is on. key AE01 would have no room for the
 	// backward compatible ampersand, due to a constraint limiting the number of 
 	// keysyms per key and per group to a maximum of eight.
 	//
@@ -1537,10 +1557,10 @@ xkb_symbols "kbfrFRs" {
 	modifier_map Mod4    { <HYPR> };
 
 	//
-	// Customization facility
+	// ## Customization facility
 	//
 	// Each keyboard layout configured in this file is customizable by the means
-	// of a separate, unoverwritable configuration file, delivered in the folder
+	// of a separate, unoverwritten configuration file, delivered in the folder
 	// of the installation script, and included last in order to override default
 	// mappings.
 	//
@@ -1588,6 +1608,7 @@ xkb_symbols "kbbrFRs" {
 		[            NoSymbol ]
 	};
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -1635,6 +1656,7 @@ xkb_symbols "kbbrFRsr" {
 		[            NoSymbol ]
 	};
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -1673,6 +1695,7 @@ xkb_symbols "kbfrPFs" {
 		[            NoSymbol ]
 	};// Tārava, tāumi; U02BB ʻeta
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -1712,6 +1735,7 @@ xkb_symbols "kbfrPFsr" {
 		[            NoSymbol ]
 	};
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -1752,6 +1776,7 @@ xkb_symbols "kbfrAFs" {
 		[            NoSymbol ]
 	}; // ɔ, Ɔ
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -1799,6 +1824,7 @@ xkb_symbols "kbfrAFsr" {
 		[            NoSymbol ]
 	};
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -1842,6 +1868,7 @@ xkb_symbols "kbfrBEs" {
 		[            NoSymbol ]
 	};// Rather than NON-BREAKING HYPHEN.
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
@@ -2064,6 +2091,7 @@ xkb_symbols "kbfrFRsr" {
 		[                   h,                   H,            NoSymbol,            NoSymbol,            NoSymbol,                U02B0 ]
 	}; // U02B0 ʰ MODIFIER LETTER SMALL H
 
+	// See ## Customization facility
 	include "dispocla_perso"
 
 };
