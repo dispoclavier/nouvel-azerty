@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-10-17T1202+0200
+#                       Date : 2025-05-16T0354+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -69,7 +69,7 @@
 #   Ce script est susceptible d’utiliser l’un des fichiers suivants :
 #
 #      [activer.sh]
-#      Compose.yml
+#      XCompose.yml
 #      activer/
 #         nouvel-azerty.xkb
 #         nouvel-azerty-ansi.xkb
@@ -232,25 +232,25 @@ function config_xim {
 
 function gestion_compose {
 	message_compose='Ses chaînes de caractères pour touches vives et\n     le contenu de ses touches mortes '
-	if [ -f "Compose.yml" ]; then
+	if [ -f "XCompose.yml" ]; then
 		if [ -f "$HOME/.XCompose" ]; then
-			# Si le Compose Dispoclavier est déjà dans le .XCompose, le supprimer.
-			if ( grep -q 'START_additions_Compose_Dispoclavier' ~/.XCompose && grep -q 'END_additions_Compose_Dispoclavier' ~/.XCompose ); then
-				sed -i '/START_additions_Compose_Dispoclavier/,/END_additions_Compose_Dispoclavier/d' ~/.XCompose
+			# Si le XCompose Dispoclavier est déjà dans le .XCompose, le supprimer.
+			if ( grep -q 'START_additions_X\?Compose_Dispoclavier' ~/.XCompose && grep -q 'END_additions_X\?Compose_Dispoclavier' ~/.XCompose ); then
+				sed -i '/START_additions_X\?Compose_Dispoclavier/,/END_additions_X\?Compose_Dispoclavier/d' ~/.XCompose
 				message_compose+='ont été mis à jour dans\n     le fichier .XCompose existant.'
 			else
 				message_compose+='ont été ajoutés dans\n     le fichier .XCompose existant.'
 			fi
-			# Ajouter le Compose Dispoclavier actuel dans le .XCompose.
-			cat Compose.yml >> ~/.XCompose
+			# Ajouter le XCompose Dispoclavier actuel dans le .XCompose.
+			cat XCompose.yml >> ~/.XCompose
 		else
-			# Placer le Compose Dispoclavier actuel dans un nouveau .XCompose.
-			cp Compose.yml ~/.XCompose
+			# Placer le XCompose Dispoclavier actuel dans un nouveau .XCompose.
+			cp XCompose.yml ~/.XCompose
 			message_compose+='ont été placés dans\n     un fichier .XCompose ajouté à la racine de\n     votre dossier personnel.'
 		fi
-		# Si le Compose de la locale n’est pas déjà inclus, l’inclure.
+		# Si le XCompose de la locale n’est pas déjà inclus, l’inclure.
 		if ! grep -qP '^\s*include "%L"' ~/.XCompose; then
-			sed -ri 's/#.*\s*(include "%L")/\1/' ~/.XCompose
+			sed -ri 's/\s*#.*\s*(include "%L")/\1/' ~/.XCompose
 		fi
 	else
 		message_compose+='n’ont pas pu être\n     pris en charge, espérant qu’ils sont déjà en place.'
@@ -259,7 +259,7 @@ function gestion_compose {
 
 function options_de_disposition {
 	config_xim
-	echo -e "\n  ⚠  Vous pouvez opter pour ce nouvel AZERTY par défaut,"
+	echo -e "\n  ⚠  Vous pouvez opter pour la version par défaut de ce nouvel AZERTY,"
 	echo      '     ou choisir une variante et éventuellement une sous-variante.'
 	echo -e "\n  ❓  Souhaitez-vous choisir rapidement dans deux listes ?"
 	echo -e "\n       Si oui, appuyez sur Entrée."
