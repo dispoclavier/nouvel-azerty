@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2024-11-12T0622+0100
+#                       Date : 2025-05-16T0356+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -45,7 +45,7 @@
 #   l’installation standard fonctionne.
 #
 #      [installer.sh]
-#      Compose.yml
+#      XCompose.yml
 #      installer/
 #         dispotypes.c
 #         dispocla_perso.cpp
@@ -112,9 +112,9 @@ function installer_dispo {
 	sudo sed -ri 's/(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\/\/\ \1/' $X11/xkb/rules/evdev
 	# Installer les séquences et le contenu des touches mortes.
 	echo 'Installation des séquences et du contenu des touches mortes.'
-	sudo cp $X11/locale/en_US.UTF-8/Compose $X11/locale/en_US.UTF-8/Compose-avant-dispoclavier
+	sudo cp $X11/locale/en_US.UTF-8/Compose $X11/locale/en_US.UTF-8/XCompose-avant-dispoclavier
 	sudo chmod 666 $X11/locale/en_US.UTF-8/Compose
-	cat Compose.yml >> $X11/locale/en_US.UTF-8/Compose
+	cat XCompose.yml >> $X11/locale/en_US.UTF-8/Compose
 	sudo chmod 644 $X11/locale/en_US.UTF-8/Compose
 	# Ajouter une extension au commutateur de dispositions.
 	echo 'Ajout de ces dispositions de clavier dans la liste du commutateur.'
@@ -185,18 +185,18 @@ function supprimer_dispo {
 		sudo mv $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml sauvegarde/archive/evdev-xml-rules-avant.xml
 	fi
 	# Désinstaller les séquences et le contenu des touches mortes.
-	cp $X11/locale/en_US.UTF-8/Compose sauvegarde/archive/Compose.yml
-	if [ "$compose_dispoclavier" -eq 2 ]; then
+	cp $X11/locale/en_US.UTF-8/Compose sauvegarde/archive/XCompose.yml
+	if [ "$xcompose_dispoclavier" -eq 2 ]; then
 		echo 'Désinstallation des séquences et du contenu des touches mortes.'
-		sudo sed -i '/START_additions_Compose_Dispoclavier/,/END_additions_Compose_Dispoclavier/d' $X11/locale/en_US.UTF-8/Compose
+		sudo sed -i '/START_additions_X\?Compose_Dispoclavier/,/END_additions_X\?Compose_Dispoclavier/d' $X11/locale/en_US.UTF-8/Compose
 	else
 		echo 'Les séquences et le contenu des touches mortes n’ont pas pu être désinstallés.'
-		if [ "$compose_dispoclavier" -eq 1 ]; then
+		if [ "$xcompose_dispoclavier" -eq 1 ]; then
 			echo 'Il est nécessaire de les supprimer manuellement.'
 		fi
 	fi
-	if [ "$compose_avant" -eq 1 ]; then
-		sudo mv $X11/locale/en_US.UTF-8/Compose-avant-dispoclavier sauvegarde/archive/Compose-avant.yml
+	if [ "$xcompose_avant" -eq 1 ]; then
+		sudo mv $X11/locale/en_US.UTF-8/XCompose-avant-dispoclavier sauvegarde/archive/XCompose-avant.yml
 	fi
 	# Réactiver l’écrasement du deuxième groupe vif.
 	sudo cp $X11/xkb/rules/evdev sauvegarde/archive/evdev-rules.c
@@ -255,12 +255,12 @@ function supprimer_dispo {
 manque=0 # Il ne manque rien.
 sous_variantes=1 # Les sous-variantes sont au complet.
 faux=0 # Tout est bon.
-fichier="Compose.yml"
+fichier="XCompose.yml"
 if [ ! -f "$fichier" ]; then
 	manque=1
 	afficher 'manque'
 else
-	if ! grep -q 'START_additions_Compose_Dispoclavier' $fichier || ! grep -q 'END_additions_Compose_Dispoclavier' $fichier; then
+	if ! grep -q 'START_additions_X\?Compose_Dispoclavier' $fichier || ! grep -q 'END_additions_X\?Compose_Dispoclavier' $fichier; then
 		faux=1
 		afficher 'est défectueux'
 	fi
@@ -350,36 +350,36 @@ fonctionne=1 # XKB est fonctionnel.
 installation=1 # Dispoclavier est installé correctement.
 trace=0 # Il n’y a pas de trace d’installation.
 X11="/usr/share/X11"
-# Compose.
+# XCompose.
 dossier="$X11/locale/en_US.UTF-8"
 fichier="$dossier/Compose"
-compose_dispoclavier=0
+xcompose_dispoclavier=0
 if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
 else
-	if ! grep -q 'START_additions_Compose_Dispoclavier' $fichier && ! grep -q 'END_additions_Compose_Dispoclavier' $fichier; then
+	if ! grep -q 'START_additions_X\?Compose_Dispoclavier' $fichier && ! grep -q 'END_additions_X\?Compose_Dispoclavier' $fichier; then
 		installation=0
 		afficher 'ne contient pas Dispoclavier'
 	else
 		trace=1
-		compose_dispoclavier=2
-		if ! ( grep -q 'START_additions_Compose_Dispoclavier' $fichier && grep -q 'END_additions_Compose_Dispoclavier' $fichier ); then
+		xcompose_dispoclavier=2
+		if ! ( grep -q 'START_additions_X\?Compose_Dispoclavier' $fichier && grep -q 'END_additions_X\?Compose_Dispoclavier' $fichier ); then
 			installation=0
 			afficher 'est défectueux'
-			compose_dispoclavier=1
+			xcompose_dispoclavier=1
 		else
 			afficher 'contient Dispoclavier'
 		fi
 	fi
 fi
-fichier="$dossier/Compose-avant-dispoclavier"
+fichier="$dossier/XCompose-avant-dispoclavier"
 if [ -f "$fichier" ]; then
 	trace=1
 	afficher 'est présent'
-	compose_avant=1
+	xcompose_avant=1
 else
-	compose_avant=0
+	xcompose_avant=0
 fi
 # Keycodes.
 dossier="$X11/xkb/keycodes"
@@ -873,7 +873,7 @@ else
 	echo      '     de clavier, car XKB et XCompose ne se présentent pas comme attendu.'
 	echo -e "\n     Peut-être serait-il envisageable d’installer ces dispositions de"
 	echo      '     clavier manuellement selon le mode d’emploi figurant dans l’en-tête'
-	echo      '     du fichier "Compose.yml", qui va dans le dossier personnel, et dans'
+	echo      '     du fichier "XCompose.yml", qui va dans le dossier personnel, et dans'
 	echo      '     chacun des fichiers qui se trouvent dans le dossier "installer/"'.
 	echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n\n"
 	confirmation
