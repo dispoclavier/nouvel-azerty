@@ -180,17 +180,17 @@
 #   needs a dedicated dead character.
 #
 #
-# # X11 dead key syms
+# # X11 dead keysyms
 #
-#   The dead key syms defined in keysymdef.h (part of the x11proto-core-dev
-#   package) are so defective that the Latin script cannot be fully supported
-#   without private use area symbols. The most outstanding example is the lack
-#   of a keysym for the bar diacritic, thought of as horizontal, as opposed to
+#   The dead keysyms defined in keysymdef.h, that is part of x11proto-core-dev,
+#   are so defective that the Latin script cannot be fully supported without
+#   private use area keysyms. The most outstanding example is the lack of a
+#   keysym for the bar diacritic, thought of as horizontal, as opposed to
 #   the diagonal stroke.
 #   See # # Bar and stroke diacritics
 #
-#   Here are the keysyms for Latin keyboard layouts available in keysymdef.h.
-#   The 21 keysyms used in this file are checked:
+#   Here are the dead keysyms for Latin keyboard layouts configured in
+#   keysymdef.h. The 21 dead keysyms used in this file are checked:
 #
 #      dead_abovecomma
 #    ✔ dead_abovedot
@@ -294,8 +294,8 @@
 #   changes were effective, the instances of dead_longsolidusoverlay have been
 #   replaced with dead_stroke, and *dead_bar has been assigned UEFD8, the ninth
 #   Private Use Area keysym used for regular dead keys in this file, resulting
-#   in more consistency of dead key keysyms with names of diacritics.
-#   See # # Proposed additional dead key syms
+#   in more consistency of dead keysyms with names of diacritics.
+#   See # # Proposed additional dead keysyms
 #
 #
 # # Macron below and line below
@@ -349,7 +349,7 @@
 #   *dead_retroflexhook dead key, with braceright as a multikey equivalent.
 #
 #
-# # Proposed additional dead key syms
+# # Proposed additional dead keysyms
 #
 #   These 8 additional dead keys are required for supporting the Latin script,
 #   and also for consistency with the 30 ASCII symbols and punctuation mapped
@@ -387,10 +387,10 @@
 #   As these dead keys are required on these fr-FR keyboard layouts, and while
 #   keysymdef.h does not feature them, the following Private Use Area picks are
 #   used so far instead, with mnemonic numbers to palliate the lack of mnemonic
-#   dead keysyms (0; 1; 2; 3 has the form of a hook above; 4 has a flection to
+#   dead keysyms: 0; 1; 2; 3 has the form of a hook above; 4 has a flection to
 #   the left; 5 remains readable after it is turned; 7 looks like a flag; and 8
-#   has converging lines where the bar is located on barred letters; the "D" in
-#   second position is mnemonic for "dead key").
+#   has converging lines where the bar is located on barred letters. The "D" in
+#   second position is mnemonic for "dead key".
 #   https://fossies.org/linux/tk/xlib/X11/keysymdef.h
 #   See # # Dead characters for portability
 #
@@ -402,8 +402,7 @@
 #                   See #*# GROUP_1
 #
 #   <UEFD1> : "^"   *dead_superscript, used in phonetics and for abbreviation
-#                   indicators, so important that these are even on live keys;
-#                   « ¦^ »; new-school dead_circumflex is « ¦< ».
+#                   indicators, also on live keys; « ¦^ ».
 #                   See #*# SUPERSCRIPT
 #                   See dispocla.cpp ## Superscript letters
 #                   See #*# CIRCUMFLEX
@@ -458,7 +457,7 @@
 #
 #   That order is based on the assumption that those ASCII symbols are mapped
 #   in a stable manner. However, prior to v2, this ASCII map was unstable.
-#   See XCompose.yml Acknowledgements
+#   See Compose.yml Acknowledgements
 #
 #
 # # Proposed dead key layout for AZERTY keyboards
@@ -12238,7 +12237,7 @@
 #   Combining macron halves below "︫" UFE2B, "︬" UFE2C are supported on "W"
 #   as well as on all other available base letters, consistently with
 #   dead_macron single press, for a streamlined user experience. This is
-#   redundant with the tilde and ampersand virtual dead key, that supports
+#   redundant with the tilde-and-ampersand virtual dead key, that supports
 #   halves of combining diacritics, too.
 #   See # # TILDE&AMPERSAND
 #
@@ -12963,17 +12962,17 @@
 #
 #
 #*# RING_ABOVE
-#   ring above, circle above, ring, middle ring, low ring inside, low right ring
+#   ring, ring above, circle above, middle ring, low ring inside, low right ring
 #   dead_abovering
 #   Multi_key: ¦*
 #   Dchar: "å" U00E5
 #
-#   For "ꭔ" UAB54 LATIN SMALL LETTER CHI WITH LOW RIGHT RING, given that "x" is
-#   required for "ꭖ" UAB56 LATIN SMALL LETTER X WITH LOW RIGHT RING, and "X",
-#   for "ꭘ" UAB58 LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING,
-#   "q" is picked as the most expected base character, because previously, it
-#   had been used as a base character for Greek chi, when phonetic mnemonics
-#   prevailed over graphic mnemonics.
+#   Lowercase "x" is required for "ꭖ" UAB56 LATIN SMALL LETTER X WITH LOW RIGHT
+#   RING as a base character, and uppercase "X" is required for "ꭘ" UAB58 LATIN
+#   SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING. For "ꭔ" UAB54 LATIN
+#   SMALL LETTER CHI WITH LOW RIGHT RING, "q" is picked as the most expected
+#   base character, because previously, it had been used as a base character
+#   for Greek chi, when phonetic mnemonics prevailed over graphic mnemonics.
 #   See #*# GREEK_OR_CIRCLED
 #   See #+# GROUP_3
 #   See #+# GROUP_4
