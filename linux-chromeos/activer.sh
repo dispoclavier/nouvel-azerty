@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-05-16T0354+0200
+#                       Date : 2025-05-19T2021+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -69,7 +69,7 @@
 #   Ce script est susceptible d’utiliser l’un des fichiers suivants :
 #
 #      [activer.sh]
-#      XCompose.yml
+#      Compose.yml
 #      activer/
 #         nouvel-azerty.xkb
 #         nouvel-azerty-ansi.xkb
@@ -232,7 +232,7 @@ function config_xim {
 
 function gestion_compose {
 	message_compose='Ses chaînes de caractères pour touches vives et\n     le contenu de ses touches mortes '
-	if [ -f "XCompose.yml" ]; then
+	if [ -f "Compose.yml" ]; then
 		if [ -f "$HOME/.XCompose" ]; then
 			# Si le XCompose Dispoclavier est déjà dans le .XCompose, le supprimer.
 			if ( grep -q 'START_additions_X\?Compose_Dispoclavier' ~/.XCompose && grep -q 'END_additions_X\?Compose_Dispoclavier' ~/.XCompose ); then
@@ -242,10 +242,10 @@ function gestion_compose {
 				message_compose+='ont été ajoutés dans\n     le fichier .XCompose existant.'
 			fi
 			# Ajouter le XCompose Dispoclavier actuel dans le .XCompose.
-			cat XCompose.yml >> ~/.XCompose
+			cat Compose.yml >> ~/.XCompose
 		else
 			# Placer le XCompose Dispoclavier actuel dans un nouveau .XCompose.
-			cp XCompose.yml ~/.XCompose
+			cp Compose.yml ~/.XCompose
 			message_compose+='ont été placés dans\n     un fichier .XCompose ajouté à la racine de\n     votre dossier personnel.'
 		fi
 		# Si le XCompose de la locale n’est pas déjà inclus, l’inclure.
