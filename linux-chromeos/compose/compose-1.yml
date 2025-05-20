@@ -40,9 +40,12 @@
 #       Non-code licence URL: https://creativecommons.org/licenses/by/4.0/deed.fr
 #              Email address: dev@dispoclavier.net
 #
-#   * The file name depends on the location and the installation method (A, B or C).
+#   * The file name depends on the location and the installation method (A, B or C);
+#     in the $HOME/ directory, this is a hidden file named XCompose: ".XCompose";
+#     inside the X11/ subdirectory in /usr/share/, this file is named only "Compose",
+#     because the context is clear and the file names do not need to be any more specific.
 #  ** In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
-#     in the CLDR, *Linux* is supported alongside *ChromeOS*, or through ChromeOS.
+#     in the CLDR, the Linux OS is supported alongside ChromeOS, or through ChromeOS.
 #
 #               Installation: 1. Set the input method to XIM, because other input methods may
 #                                not support multi-character output, including composed letters
@@ -73,18 +76,18 @@
 #                                   1. Back up the XCompose file at the path mapped onto the
 #                                      locale in /usr/share/X11/locale/compose.dir; for fr_FR:
 #                                      /usr/share/X11/locale/en_US.UTF-8/Compose
-#                                   2. Append XCompose.yml to the original XCompose file.
+#                                   2. Append Compose.yml to the original XCompose file.
 #                                      Prepending instead of appending breaks U1E7A and U1E7B,
 #                                      that need to override U01D5 and U01D6 as defined in
 #                                      en_US.UTF-8/Compose. The same holds true for "V́", "v́"
 #                                      overriding en_US.UTF-8/Compose for U01D7 and U01D8.
 #
-#                                B. User level, with .XCompose in the $HOME directory:
+#                                B. User level, with .XCompose in the $HOME/ directory:
 #                                   1. Back up the file $HOME/.XCompose.
-#                                   2. Append XCompose.yml to $HOME/.XCompose.
+#                                   2. Append Compose.yml to $HOME/.XCompose.
 #
-#                                C. User level, without .XCompose in the $HOME directory:
-#                                   1. Copy XCompose.yml to $HOME/.XCompose.
+#                                C. User level, without .XCompose in the $HOME/ directory:
+#                                   1. Copy Compose.yml to $HOME/.XCompose.
 #                                   2. For maximum backward compatibility, uncomment this
 #                                      instruction, where "%L" expands to the default XCompose
 #                                      file path of the current locale, that for fr_FR is
@@ -310,15 +313,28 @@
 #   https://brand.tennessee.edu/content-strategy/writing-guide/spelling-and-hyphenation/
 #
 #
-# # Breton polygraphs
+# # Breton trigraph
 #
-#   The Brezhoneg keyboard layout from An drouizig has its key D01 dedicated to
+#   Breton using "c" only as initial of the two polygraphs "cʼh" and "ch" is
+#   prone to being supported by a keyboard layout featuring these as all-in-one
+#   strings in lowercase, titlecase (Shift) and uppercase (Caps Lock).
+#
+#   The Brezhoneg keyboard layout from An drouizig has its key D01 featuring
 #   the Breton trigraph.
 #   https://drouizig.org/outils-et-ressources/clavier-chwerty/
 #   https://web.archive.org/web/20221007070728/http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/162-faq-foire-aux-questions
 #   https://bugs.freedesktop.org/show_bug.cgi?id=19506
 #   https://bugs.freedesktop.org/show_bug.cgi?id=25349
 #   https://dominiko.livejournal.com/22848.html
+#
+#   The reason why supporting the Breton trigraph as an all-in-one string makes
+#   much sense is the required medial letter apostrophe "ʼ" U02BC. Alongside,
+#   Breton requires the usual punctuation apostrophe "’" U2019.
+#
+#   In 2011, James Cloos reported, and Denis Jacquerye confirmed citing CLDR,
+#   that the apostrophe in the Breton trigraph is the letter apostrophe U02BC.
+#   https://bugs.freedesktop.org/show_bug.cgi?id=19506#c15
+#   https://bugs.freedesktop.org/show_bug.cgi?id=19506#c16
 #
 #   The Public Office of the Breton language OPLB/OPAB has requested the letter
 #   apostrophe to be featured on the NF Z71-300 standard keyboard layouts.
@@ -338,26 +354,32 @@
 #   https://blogs.windows.com/windows-insider/2022/11/18/announcing-windows-11-insider-preview-build-25247/
 #   https://forum.bepo.fr/d/2020-bepo-desormais-inclus-dans-windows-11-insider-preview
 #
-#   The Breton trigraph is regularly composed of a "c" and an "h" separated by
-#   a letter apostrophe U02BC, not a punctuation apostrophe U2019, in order to
-#   prevent word boundaries around the apostrophe. Consistently, the basic set
-#   of exemplar characters for Breton is in 2025:
+#   The reason why the Breton trigraph is regularly composed of a "c" and an
+#   "h" separated by a letter apostrophe U02BC, not a punctuation apostrophe
+#   U2019, is to prevent word boundaries around the apostrophe.
+#
+#   Consistently, the basic set of exemplar characters for Breton is (at least
+#   since CLDR version 21 (2012-02-10)):
 #   [a b {cʼh} {ch} d eê f g h i j k l m nñ o p r s t uù v w x y z]
 #   https://github.com/unicode-org/cldr/blob/7b710d0945fcda011790f37337cdc6d39f66bbcf/common/main/br.xml#L1262
-#   In CLDR version 21 (2012-02-10), the set was already the same.
 #   https://github.com/unicode-org/cldr/blob/release-21/common/main/br.xml#L650
 #
 #   The variants for Breton and French "kbbrFRs" and "kbbrFRsr" have the Breton
-#   trigraph at Base level and Shift level of key E01, additionally to the
-#   support of the Breton trigraph on (Shift +) AltGr + AltFr + A.
+#   trigraph at Base level and Shift level of key E01. All variants, including
+#   the base variant and the remapped variants, support the Breton trigraph on
+#   (Shift +) AltGr + AltFr + A, key D01 as on the CʼHWERTY keyboard layout. On
+#   Linux and macOS, this is Caps Lock sensitive, too. Additionally, the letter
+#   apostrophe is in group 1 of apostrophe and rightsinglequotemark.
 #   See dispocla.cpp xkb_symbols "kbbrFRs"
 #   See dispocla.cpp xkb_symbols "kbbrFRsr"
+#   See dispocla.cpp key <AD01>
+#   See # # D07 apostrophe
 #
 #   To ensure regular support, the Breton trigraph is configured here.
 #
-<c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE, consistently
-<C_h> : "Cʼh" # with the Breton exemplar characters found in the Common Locale
-<C_H> : "CʼH" # Data Repository, quoted and referenced above.
+<c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE,
+<C_h> : "Cʼh" # consistently with the Breton exemplar "{cʼh}" stored in the
+<C_H> : "CʼH" # Common Locale Data Repository (CLDR), cited and quoted above.
 #
 #
 # # Punctuation spacing for French, regular with U202F NBTSP
@@ -1001,8 +1023,8 @@
 #          ^([^\s]+)\s.+\n\1(<|\s)
 #
 #   Sortability and readability may then be further improved using this
-#   follow-up replaceruleset, where dead key syms missing from keysymdef.h are
-#   decoded, and all dead key syms are prefixed with an exclam so as to be
+#   follow-up replaceruleset, where dead keysyms missing from keysymdef.h are
+#   decoded, and all dead keysyms are prefixed with an exclam so as to be
 #   sorted before letters, digits, and ASCII symbols prefixed with a percent
 #   sign, some more letters get intuitive keysyms, and ordinary space and
 #   U200B, nobreakspace and U202F are grouped conveniently and sorted last by
@@ -2205,12 +2227,16 @@
 #   https://www.unicode.org/charts/nameslist/n_0000.html
 #
 #   As a consequence, U002D HYPHEN-MINUS stands out among ASCII punctuation in
-#   that its usage is discouraged in currrent writing in favor of its homoglyph
+#   that its usage is discouraged in current writing in favor of its homoglyph
 #   U2010.
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
 #
-#   The Unicode Character Database (shortened below) shows that U2010 is a
-#   duplicate encoding of U002D.
+#   The Unicode Character Database in XML (quoted below [shortened]) shows that
+#   U2010 is a duplicate of U002D, encoded for an extrinsic undocumented reason
+#   discussed below.
+#   See #   The reason why Unicode
+#   https://www.unicode.org/Public/16.0.0/ucdxml/ucd.nounihan.flat.zip
+#   https://www.unicode.org/reports/tr42/
 #
 #       <char cp="002D" age="1.1" na="HYPHEN-MINUS" gc="Pd" ea="Na" lb="HY" SB="SC" blk="ASCII"/>
 #       <char cp="2010" age="1.1" na="HYPHEN"       gc="Pd" ea="A"  lb="BA" SB="XX" blk="Punctuation"/>
@@ -2244,27 +2270,43 @@
 #   Point" next.
 #   https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf#page=12
 #
-#   To be consistent, ISO/IEC should have called U002E *PERIOD-DECIMAL-POINT
-#   instead of PERIOD. ISO calling U002D HYPHEN-MINUS instead of *HYPHEN might
-#   be the reason why Unicode encoded U2010, as a matter of getting a character
-#   to be named HYPHEN, instead of adding no more than U2212 MINUS SIGN in the
-#   matter.
+#       Parenthesized additions to character names in ASCII
 #
-#   Calling U002D HYPHEN-MINUS was like calling U002A *ASTERISK-MULTIPLY, and
-#   U002F *SOLIDUS-DIVIDE. Only "MINUS" was appended with a hyphen, prompting
-#   people to figure out a non-existing reason behind, and to guess that this
-#   HYPHEN-MINUS might eventually not be a genuine hyphen. Yet it is, and it is
-#   repurposed in programming like so many other symbols. That is most probably
-#   how Unicode was fooled into encoding an extra hyphen, not noticing that the
-#   hyphen was already there.
+#       Space (Normally Nonprinting)
+#       Quotation Marks (Diaeresis)
+#       Apostrophe (Closing Single Quotation Mark; Acute Accent)
+#       Comma (Cedilla)
+#       Hyphen (Minus)
+#       Period (Decimal Point)
+#       Opening Single Quotation Mark (Grave Accent)
+#
+#   To be consistent, ISO/IEC should have called U002E *PERIOD-DECIMAL-POINT
+#   instead of PERIOD, and so on. ISO calling U002D HYPHEN-MINUS instead of
+#   *HYPHEN is probably why Unicode encoded U2010, as a matter of getting a
+#   character to be named HYPHEN, additionally to encoding U2212 MINUS SIGN.
+#
+#   If ISO/IEC’s motivation to retain the "-MINUS" appendix was the desire to
+#   complete the mathematical base operators beyond U002B PLUS, then why not
+#   calling U002A *ASTERISK-MULTIPLY, and U002F *SOLIDUS-DIVIDE? Only "MINUS"
+#   was appended with a hyphen, prompting people to figure out a non-existing
+#   reason behind, and to guess that this HYPHEN-MINUS might eventually not be
+#   a genuine hyphen. Yet it is, and it is repurposed in programming like so
+#   many other symbols. That is most probably how Unicode was fooled into
+#   encoding an extra hyphen, not noticing that the hyphen was already there.
+#
+#   Even the most complete Latin ISO charset ISO/IEC 6937, including PLUS-MINUS
+#   and other math operators and even HORIZONTAL BAR, does not feature any of
+#   hyphen and minus sign other than the well-established 0x2D, despite several
+#   unallocated code points. There was no need for backward compatibility.
+#   https://en.wikipedia.org/wiki/T.51/ISO/IEC_6937#Codepage_layout
 #
 #   As a consequence, the extra hyphen U2010 should not be taken seriously, in
 #   order to prevent adverse effects on keyboard layout design when attempting
 #   to support U2010 on live key or by premium dead key like group 1 of minus.
 #   There, "⁃" U2043 HYPHEN BULLET is supported instead, while HYPHEN is in
 #   group 12, like the outdated legacy ordinal indicators "ª" U00AA, "º" U00BA.
-#   See # # C05 minus
 #   See #^# Legacy ordinal indicators
+#   See # # C05 minus
 #   See # # D01 asciicircum
 #   See # # D09 braceright
 #
@@ -2286,20 +2328,26 @@
 #   See # # DIAERESIS&GROUP_1
 #   See # # C05 minus
 #
+#   The mnemonic of "5" for EN DASH is the decimal form "0.5" for "½", while
+#   HORIZONTAL BAR is associated with "8" due to keycap-based mnemonics on the
+#   unremapped, unlocalized French AZERTY layout where HORIZONTAL BAR is on key
+#   E08, level 2. Else, "7" would be convenient, based on "0.75" for "¾"; but
+#   the rounded-up value "0.8" falls back on the "8" mnemonic.
+#
 #   #                NAME UCODE description
 #
-#            HYPHEN-MINUS U002D quarter-dash (French “tiret quart-de-cadratin”)
+#            HYPHEN-MINUS U002D quarter dash (French “tiret quart-de-cadratin”)
 #
-#   4              HYPHEN U2010 quarter-dash (French “tiret quart-de-cadratin”)
-#   6 NON-BREAKING HYPHEN U2011 quarter-dash (French “tiret quart-de-cadratin”)
+#   4              HYPHEN U2010 quarter dash (French “tiret quart-de-cadratin”)
+#   6 NON-BREAKING HYPHEN U2011 quarter dash (French “tiret quart-de-cadratin”)
 #   5             EN DASH U2013 half dash (French “tiret demi-cadratin”)
 #   8      HORIZONTAL BAR U2015 three-quarter dash (or conjoining em dash)
 #   1             EM DASH U2014 full dash (French “tiret cadratin”)
 #   2         TWO-EM DASH U2E3A double dash: missing letters; missing word
-#   3       THREE-EM DASH U2E3B triple dash: missing word; author’s name repetition
+#   3       THREE-EM DASH U2E3B triple dash: missing word; author name repetition
 #
 #   0         SOFT HYPHEN U00AD break opportunity, with hyphenation, unlike U200B
-#   7         FIGURE DASH U2012 tabular digit dash, used in typesetting like U2007
+#   7         FIGURE DASH U2012 tabular minus, for typesetting, like U2007, U2008
 #   9       DOUBLE HYPHEN U2E40 marks a hyphen that is not due to the line break
 #
 #   Nearly half of these are supported on live keys, as "‑" U2011 NON-BREAKING
@@ -2353,7 +2401,7 @@
 # # Proofreading mark
 #
 #   This only supports the close-up mark. The proofreading marks "‸" U2038 and
-#   "⁁" U2041 are supported in symbol group 11 of "^" and of "@" on "Y".
+#   "⁁" U2041 are supported in group 11 of "^" and of "@" on "Y".
 #   See # # D01 asciicircum
 #   See # # D06 at
 #
@@ -2727,9 +2775,35 @@
 #
 #^# Bullets
 #
-#   A set of bullets is supported in the symbol groups.
+#   A set of bullets is supported in the symbol groups, but it is limited to
+#   "•" U2022, "◦" U25E6, "‣" U2023 and "⬝" U2B1D, as well as "▪" U25AA and
+#   "⁃" U2043.
 #   See # # C07 underscore
+#   See # # C01 numbersign
 #   See # # C05 minus
+#
+#   A complementary, partly intersecting set including "▪" U25AA, "▫" U25AB,
+#   "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3, and "•" U2022 and "◦" U25E6,
+#   fills the slots resulting from the heart emoji multikey sequences when
+#   completing the digits beyond "3" and "8".
+#   See # # Heart emoji
+#
+<Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
+<Multi_key><less>                                                                              <2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
+<Multi_key><less>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><less>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE emoji
+<Multi_key><less>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
+<Multi_key><less>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><less>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
+<Multi_key><less>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
+<Multi_key><less>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
 #
 #   In keysymdef.h, 15 bullets are supported, but some comments may not match
 #   the output in some environments.
@@ -3774,33 +3848,7 @@
 #   For completeness, the remaining digits are supported, too, since all these
 #   sequences are deactivated consistently as multikey equivalents.
 #   See #*# CIRCUMFLEX
-#
-#   One useful functionality is bullets, since the symbol groups are limited to
-#   "•" U2022, "◦" U25E6, "‣" U2023 and "▪" U25AA, as well as "⁃" U2043. As a
-#   complementary, partly intersecting set, this series supports "▪" U25AA,
-#   "▫" U25AB, "‣" U2023, "▹" U25B9, "➢" U27A2, "➣" U27A3, and also "•" U2022
-#   and "◦" U25E6.
-#   See # # C07 underscore
-#   See # # C05 minus
-#   See # # C01 numbersign
 #   See #^# Bullets
-#
-<Multi_key><less>                                                                              <0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                           <KP_0> : "➣" U27A3 # THREE-D BOTTOM-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                              <1> : "•" U2022 # BULLET
-<Multi_key><less>                                                                           <KP_1> : "•" U2022 # BULLET
-<Multi_key><less>                                                                              <2> : "◦" U25E6 # WHITE BULLET
-<Multi_key><less>                                                                           <KP_2> : "◦" U25E6 # WHITE BULLET
-<Multi_key><less>                                                                              <4> : "▪" U25AA # BLACK SMALL SQUARE emoji
-<Multi_key><less>                                                                           <KP_4> : "▪" U25AA # BLACK SMALL SQUARE emoji
-<Multi_key><less>                                                                              <5> : "▫" U25AB # WHITE SMALL SQUARE emoji
-<Multi_key><less>                                                                           <KP_5> : "▫" U25AB # WHITE SMALL SQUARE emoji
-<Multi_key><less>                                                                              <6> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><less>                                                                           <KP_6> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><less>                                                                              <7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
-<Multi_key><less>                                                                           <KP_7> : "▹" U25B9 # WHITE RIGHT-POINTING SMALL TRIANGLE
-<Multi_key><less>                                                                              <9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
-<Multi_key><less>                                                                           <KP_9> : "➢" U27A2 # THREE-D TOP-LIGHTED RIGHTWARDS ARROWHEAD
 #
 #   Previously, the heart emoji logic was followed through, supporting the full
 #   set of filled suits (emoji "♥" U2665, "♣" U2663, "♦" U2666, "♠" U2660) and
@@ -4686,8 +4734,8 @@
 #   Consistently, it also goes down the z axis first, if there is any, as in
 #   "⤫" U292B, "⤬" U292C.
 #
-#   Angles, however, are parsed counter-clockwise, for consistency and to keep
-#   things simple and straightforward.
+#   Symbols for angles, however, are parsed counter-clockwise, for consistency
+#   and to keep things simple and straightforward.
 #   See #   Angle symbols
 #
 #
@@ -4936,14 +4984,14 @@
 #
 # # Plus minus
 #
-#   Order matters, unlike in en_US.UTF-8/Compose not supporting "∓" U2213. The
-#   sideways compatible sequence supported here for "±" U00B1 is opposed to the
-#   reverse sequence used for "∓" U2213.
+#   Order matters, unlike in en_US.UTF-8/Compose not supporting "∓" U2213.
+#   The sideways compatible sequence supported here for "±" U00B1 contrasts
+#   with the reverse sequence used for "∓" U2213.
 #   See #   Order sensitivity
 #   See "∓" U2213
 #
 #   On the associated keyboard layouts, "±" U00B1 is at level 7 on the key
-#   where the minus sign "−" U2212 is at level 5.
+#   (D05) where the minus sign "−" U2212 is at level 5.
 #   See dispocla.cpp key <AD05> plusminus
 #
 #   Additionally, for intuitivity and completeness of the symbol groups and
@@ -9111,11 +9159,11 @@
 #   https://www.unicode.org/charts/PDF/UFB00.pdf
 #   https://www.unicode.org/charts/nameslist/n_FB00.html
 #
-#   "﬩" UFB29 is supported since 2025-05-08, when it made its way into symbol
-#   group 12 of "+", to fill in an empty slot after "⁜" U205C was moved from
-#   group 12 to group 11 in the wake of the same move for "※" U203B so as to
-#   get "∗" U2217 from group 11 into group 12 consistently with "∖" U2216,
-#   "∥" U2225, "∕" U2215, "⋈" U22C8, "⟂" U27C2 and "‖" U2016.
+#   "﬩" UFB29 is supported since 2025-05-08, when it made its way into group 12
+#   of "+" to fill the empty slot left by "⁜" U205C when it moved from group 12
+#   to group 11 in the wake of a similar move of "※" U203B, designed to unite
+#   "∗" U2217 with "∖" U2216, "∥" U2225, "∕" U2215, "⋈" U22C8, "⟂" U27C2 and
+#   "‖" U2016 in group 12.
 #   See # # C06 plus
 #   See # # B02 asterisk
 #   See # # D04 backslash
