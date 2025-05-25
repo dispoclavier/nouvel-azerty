@@ -119,11 +119,20 @@
 #   https://pqrs.org/osx/karabiner/
 #
 #
-# # Maintenance
+# # Maintenance of letter groups
 #
-#   Filling empty slots with null output "" U0000 can be avoided for ease of
-#   maintenance.
-#   See # # Notes for maintenance
+#   While fully allocating symbol groups is a straightforward design decision,
+#   letter groups do have unused slots. Filling these with null output "" U0000
+#   or the respective group number could be avoided for ease of maintenance.
+#
+#   However, for clarification with respect to combining diacritics, the group
+#   number or its unity (as of group 11, for cross-platform compatibility) is
+#   output in the few empty instances in groups 3..5, 11, without mention in
+#   the documentation.
+#   See # Available.
+#   See # # Notes about documentation
+#
+#   See also # # Notes for maintenance
 #
 #
 ### Space and symbol groups
@@ -2638,19 +2647,34 @@
 #
 #   On the alphabet, the groups yield mainly:
 #
-#   Group  0  (g0): live keys (default, no group selected);
-#   Group  1  (g1): group pressed once: Latin;
-#   Group  2  (g2): group pressed twice: Latin;
-#   Group  3  (g3): group pressed thrice or followed by digit 3: Latin;
-#   Group  4  (g4): group pressed 4 times or followed by digit 4: Latin;
-#   Group  5  (g5): group then digit 5: Latin;
-#   Group  6  (g6): group then digit 6: Greek and Greek math symbols;
-#   Group  7  (g7): group then digit 7: Latin script style math symbols;
-#   Group  8  (g8): group then digit 8: Latin double-struck/bold/italic math symbols;
-#   Group  9  (g9): group then digit 9: Latin fraktur/monospace math symbols;
-#   Group 10 (g10): group then digit 0: Latin sans-serif math symbols;
-#   Group 11 (g11): group then digit 1: Latin;
-#   Group 12 (g12): group then digit 2: Latin.
+#   Group  0  (g0): live keys (default, no group selected)
+#   Group  1  (g1): group pressed once: Latin
+#   Group  2  (g2): group pressed twice: Latin
+#   Group  3  (g3): group pressed thrice or followed by digit 3: Latin
+#   Group  4  (g4): group pressed 4 times or followed by digit 4: Latin
+#   Group  5  (g5): group then digit 5: Latin
+#   Group  6  (g6): group then digit 6: Greek, and Greek math symbols
+#   Group  7  (g7): group then digit 7: Latin script style math symbols
+#   Group  8  (g8): group then digit 8: Latin double-struck/bold/italic math symbols
+#   Group  9  (g9): group then digit 9: Latin fraktur/monospace math symbols
+#   Group 10 (g10): group then digit 0: Latin sans-serif math symbols
+#   Group 11 (g11): group then digit 1: Latin
+#   Group 12 (g12): group then digit 2: Latin
+#
+#   See #+# GROUP_1
+#   See #+# GROUP_2
+#   See #+# GROUP_3
+#   See #+# GROUP_4
+#   See #+# GROUP_5
+#   See #+# GROUP_6
+#   See #+# GROUP_7
+#   See #+# GROUP_8
+#   See #+# GROUP_9
+#   See #+# GROUP_10
+#   See #+# GROUP_11
+#   See #+# GROUP_12
+#   See # # Mathematical Greek alphabets and symbols
+#   See # # Mathematical Latin alphabets
 #
 #
 # # Letter groups overview
@@ -3090,12 +3114,12 @@
 <Multi_key><numbersign><KP_3>                                                                  <l> : "ꝇ" UA747 # LATIN SMALL LETTER BROKEN L
 <UEFD0><UEFD0><UEFD0>                                                                          <l> : "ꝇ" UA747 # LATIN SMALL LETTER BROKEN L
 <Multi_key><numbersign><numbersign><numbersign>                                                <l> : "ꝇ" UA747 # LATIN SMALL LETTER BROKEN L
-<UEFD0><3>                                                                                     <M> : 
-<Multi_key><numbersign><3>                                                                     <M> : 
-<UEFD0><KP_3>                                                                                  <M> : 
-<Multi_key><numbersign><KP_3>                                                                  <M> : 
-<UEFD0><UEFD0><UEFD0>                                                                          <M> : 
-<Multi_key><numbersign><numbersign><numbersign>                                                <M> : 
+<UEFD0><3>                                                                                     <M> : "3" U0033 # Available.
+<Multi_key><numbersign><3>                                                                     <M> : "3" U0033 # Available.
+<UEFD0><KP_3>                                                                                  <M> : "3" U0033 # Available.
+<Multi_key><numbersign><KP_3>                                                                  <M> : "3" U0033 # Available.
+<UEFD0><UEFD0><UEFD0>                                                                          <M> : "3" U0033 # Available.
+<Multi_key><numbersign><numbersign><numbersign>                                                <M> : "3" U0033 # Available.
 <UEFD0><3>                                                                                     <m> : "ɰ" U0270 # LATIN SMALL LETTER TURNED M WITH LONG LEG
 <Multi_key><numbersign><3>                                                                     <m> : "ɰ" U0270 # LATIN SMALL LETTER TURNED M WITH LONG LEG
 <UEFD0><KP_3>                                                                                  <m> : "ɰ" U0270 # LATIN SMALL LETTER TURNED M WITH LONG LEG
@@ -3305,12 +3329,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <b> : "␢" U2422 # BLANK SYMBOL
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <b> : "␢" U2422 # BLANK SYMBOL
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <b> : "␢" U2422 # BLANK SYMBOL
-<UEFD0><4>                                                                                     <C> : 
-<Multi_key><numbersign><4>                                                                     <C> : 
-<UEFD0><KP_4>                                                                                  <C> : 
-<Multi_key><numbersign><KP_4>                                                                  <C> : 
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <C> : 
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <C> : 
+<UEFD0><4>                                                                                     <C> : "4" U0034 # Available.
+<Multi_key><numbersign><4>                                                                     <C> : "4" U0034 # Available.
+<UEFD0><KP_4>                                                                                  <C> : "4" U0034 # Available.
+<Multi_key><numbersign><KP_4>                                                                  <C> : "4" U0034 # Available.
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <C> : "4" U0034 # Available.
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <C> : "4" U0034 # Available.
 <UEFD0><4>                                                                                     <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <Multi_key><numbersign><4>                                                                     <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <UEFD0><KP_4>                                                                                  <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
@@ -3329,12 +3353,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <d> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <d> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <d> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
-<UEFD0><4>                                                                                     <E> : 
-<Multi_key><numbersign><4>                                                                     <E> : 
-<UEFD0><KP_4>                                                                                  <E> : 
-<Multi_key><numbersign><KP_4>                                                                  <E> : 
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <E> : 
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <E> : 
+<UEFD0><4>                                                                                     <E> : "4" U0034 # Available.
+<Multi_key><numbersign><4>                                                                     <E> : "4" U0034 # Available.
+<UEFD0><KP_4>                                                                                  <E> : "4" U0034 # Available.
+<Multi_key><numbersign><KP_4>                                                                  <E> : "4" U0034 # Available.
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <E> : "4" U0034 # Available.
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <E> : "4" U0034 # Available.
 <UEFD0><4>                                                                                     <e> : "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E
 <Multi_key><numbersign><4>                                                                     <e> : "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E
 <UEFD0><KP_4>                                                                                  <e> : "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E
@@ -3509,12 +3533,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <s> : "ꟗ" UA7D7 # LATIN SMALL LETTER MIDDLE SCOTS S
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <s> : "ꟗ" UA7D7 # LATIN SMALL LETTER MIDDLE SCOTS S
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <s> : "ꟗ" UA7D7 # LATIN SMALL LETTER MIDDLE SCOTS S
-<UEFD0><4>                                                                                     <T> : 
-<Multi_key><numbersign><4>                                                                     <T> : 
-<UEFD0><KP_4>                                                                                  <T> : 
-<Multi_key><numbersign><KP_4>                                                                  <T> : 
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <T> : 
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <T> : 
+<UEFD0><4>                                                                                     <T> : "4" U0034 # Available.
+<Multi_key><numbersign><4>                                                                     <T> : "4" U0034 # Available.
+<UEFD0><KP_4>                                                                                  <T> : "4" U0034 # Available.
+<Multi_key><numbersign><KP_4>                                                                  <T> : "4" U0034 # Available.
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <T> : "4" U0034 # Available.
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <T> : "4" U0034 # Available.
 <UEFD0><4>                                                                                     <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <Multi_key><numbersign><4>                                                                     <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
 <UEFD0><KP_4>                                                                                  <t> : "ʨ" U02A8 # LATIN SMALL LETTER TC DIGRAPH WITH CURL
@@ -3545,12 +3569,12 @@
 <Multi_key><numbersign><KP_4>                                                                  <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <v> : "ɷ" U0277 # LATIN SMALL LETTER CLOSED OMEGA
-<UEFD0><4>                                                                                     <W> : 
-<Multi_key><numbersign><4>                                                                     <W> : 
-<UEFD0><KP_4>                                                                                  <W> : 
-<Multi_key><numbersign><KP_4>                                                                  <W> : 
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <W> : 
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <W> : 
+<UEFD0><4>                                                                                     <W> : "4" U0034 # Available.
+<Multi_key><numbersign><4>                                                                     <W> : "4" U0034 # Available.
+<UEFD0><KP_4>                                                                                  <W> : "4" U0034 # Available.
+<Multi_key><numbersign><KP_4>                                                                  <W> : "4" U0034 # Available.
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <W> : "4" U0034 # Available.
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <W> : "4" U0034 # Available.
 <UEFD0><4>                                                                                     <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
 <Multi_key><numbersign><4>                                                                     <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
 <UEFD0><KP_4>                                                                                  <w> : "ʍ" U028D # LATIN SMALL LETTER TURNED W
@@ -3635,10 +3659,10 @@
 <Multi_key><numbersign><5>                                                                     <d> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <UEFD0><KP_5>                                                                                  <d> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><numbersign><KP_5>                                                                  <d> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<UEFD0><5>                                                                                     <E> : 
-<Multi_key><numbersign><5>                                                                     <E> : 
-<UEFD0><KP_5>                                                                                  <E> : 
-<Multi_key><numbersign><KP_5>                                                                  <E> : 
+<UEFD0><5>                                                                                     <E> : "5" U0035 # Available.
+<Multi_key><numbersign><5>                                                                     <E> : "5" U0035 # Available.
+<UEFD0><KP_5>                                                                                  <E> : "5" U0035 # Available.
+<Multi_key><numbersign><KP_5>                                                                  <E> : "5" U0035 # Available.
 <UEFD0><5>                                                                                     <e> : "ʚ" U029A # LATIN SMALL LETTER CLOSED OPEN E
 <Multi_key><numbersign><5>                                                                     <e> : "ʚ" U029A # LATIN SMALL LETTER CLOSED OPEN E
 <UEFD0><KP_5>                                                                                  <e> : "ʚ" U029A # LATIN SMALL LETTER CLOSED OPEN E
@@ -3787,18 +3811,18 @@
 <Multi_key><numbersign><5>                                                                     <w> : "ƿ" U01BF # LATIN LETTER WYNN
 <UEFD0><KP_5>                                                                                  <w> : "ƿ" U01BF # LATIN LETTER WYNN
 <Multi_key><numbersign><KP_5>                                                                  <w> : "ƿ" U01BF # LATIN LETTER WYNN
-<UEFD0><5>                                                                                     <X> : 
-<Multi_key><numbersign><5>                                                                     <X> : 
-<UEFD0><KP_5>                                                                                  <X> : 
-<Multi_key><numbersign><KP_5>                                                                  <X> : 
+<UEFD0><5>                                                                                     <X> : "5" U0035 # Available.
+<Multi_key><numbersign><5>                                                                     <X> : "5" U0035 # Available.
+<UEFD0><KP_5>                                                                                  <X> : "5" U0035 # Available.
+<Multi_key><numbersign><KP_5>                                                                  <X> : "5" U0035 # Available.
 <UEFD0><5>                                                                                     <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <Multi_key><numbersign><5>                                                                     <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <UEFD0><KP_5>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <Multi_key><numbersign><KP_5>                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
-<UEFD0><5>                                                                                     <Y> : 
-<Multi_key><numbersign><5>                                                                     <Y> : 
-<UEFD0><KP_5>                                                                                  <Y> : 
-<Multi_key><numbersign><KP_5>                                                                  <Y> : 
+<UEFD0><5>                                                                                     <Y> : "5" U0035 # Available.
+<Multi_key><numbersign><5>                                                                     <Y> : "5" U0035 # Available.
+<UEFD0><KP_5>                                                                                  <Y> : "5" U0035 # Available.
+<Multi_key><numbersign><KP_5>                                                                  <Y> : "5" U0035 # Available.
 <UEFD0><5>                                                                                     <y> : "ꭚ" UAB5A # LATIN SMALL LETTER Y WITH SHORT RIGHT LEG
 <Multi_key><numbersign><5>                                                                     <y> : "ꭚ" UAB5A # LATIN SMALL LETTER Y WITH SHORT RIGHT LEG
 <UEFD0><KP_5>                                                                                  <y> : "ꭚ" UAB5A # LATIN SMALL LETTER Y WITH SHORT RIGHT LEG
@@ -3850,10 +3874,10 @@
 <Multi_key><numbersign><1>                                                                     <c> : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <UEFD0><KP_1>                                                                                  <c> : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <Multi_key><numbersign><KP_1>                                                                  <c> : "ꝯ" UA76F # LATIN SMALL LETTER CON
-<UEFD0><1>                                                                                     <D> : 
-<Multi_key><numbersign><1>                                                                     <D> : 
-<UEFD0><KP_1>                                                                                  <D> : 
-<Multi_key><numbersign><KP_1>                                                                  <D> : 
+<UEFD0><1>                                                                                     <D> : "1" U0031 # Available.
+<Multi_key><numbersign><1>                                                                     <D> : "1" U0031 # Available.
+<UEFD0><KP_1>                                                                                  <D> : "1" U0031 # Available.
+<Multi_key><numbersign><KP_1>                                                                  <D> : "1" U0031 # Available.
 <UEFD0><1>                                                                                     <d> : "ꝱ" UA771 # LATIN SMALL LETTER DUM
 <Multi_key><numbersign><1>                                                                     <d> : "ꝱ" UA771 # LATIN SMALL LETTER DUM
 <UEFD0><KP_1>                                                                                  <d> : "ꝱ" UA771 # LATIN SMALL LETTER DUM
@@ -3866,10 +3890,10 @@
 <Multi_key><numbersign><1>                                                                     <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
 <UEFD0><KP_1>                                                                                  <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
 <Multi_key><numbersign><KP_1>                                                                  <e> : "ꝫ" UA76B # LATIN SMALL LETTER ET
-<UEFD0><1>                                                                                     <F> : 
-<Multi_key><numbersign><1>                                                                     <F> : 
-<UEFD0><KP_1>                                                                                  <F> : 
-<Multi_key><numbersign><KP_1>                                                                  <F> : 
+<UEFD0><1>                                                                                     <F> : "1" U0031 # Available.
+<Multi_key><numbersign><1>                                                                     <F> : "1" U0031 # Available.
+<UEFD0><KP_1>                                                                                  <F> : "1" U0031 # Available.
+<Multi_key><numbersign><KP_1>                                                                  <F> : "1" U0031 # Available.
 <UEFD0><1>                                                                                     <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <Multi_key><numbersign><1>                                                                     <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <UEFD0><KP_1>                                                                                  <f> : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
@@ -3922,18 +3946,18 @@
 <Multi_key><numbersign><1>                                                                     <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
 <UEFD0><KP_1>                                                                                  <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
 <Multi_key><numbersign><KP_1>                                                                  <l> : "ꝲ" UA772 # LATIN SMALL LETTER LUM
-<UEFD0><1>                                                                                     <M> : 
-<Multi_key><numbersign><1>                                                                     <M> : 
-<UEFD0><KP_1>                                                                                  <M> : 
-<Multi_key><numbersign><KP_1>                                                                  <M> : 
+<UEFD0><1>                                                                                     <M> : "1" U0031 # Available.
+<Multi_key><numbersign><1>                                                                     <M> : "1" U0031 # Available.
+<UEFD0><KP_1>                                                                                  <M> : "1" U0031 # Available.
+<Multi_key><numbersign><KP_1>                                                                  <M> : "1" U0031 # Available.
 <UEFD0><1>                                                                                     <m> : "ꝳ" UA773 # LATIN SMALL LETTER MUM
 <Multi_key><numbersign><1>                                                                     <m> : "ꝳ" UA773 # LATIN SMALL LETTER MUM
 <UEFD0><KP_1>                                                                                  <m> : "ꝳ" UA773 # LATIN SMALL LETTER MUM
 <Multi_key><numbersign><KP_1>                                                                  <m> : "ꝳ" UA773 # LATIN SMALL LETTER MUM
-<UEFD0><1>                                                                                     <N> : 
-<Multi_key><numbersign><1>                                                                     <N> : 
-<UEFD0><KP_1>                                                                                  <N> : 
-<Multi_key><numbersign><KP_1>                                                                  <N> : 
+<UEFD0><1>                                                                                     <N> : "1" U0031 # Available.
+<Multi_key><numbersign><1>                                                                     <N> : "1" U0031 # Available.
+<UEFD0><KP_1>                                                                                  <N> : "1" U0031 # Available.
+<Multi_key><numbersign><KP_1>                                                                  <N> : "1" U0031 # Available.
 <UEFD0><1>                                                                                     <n> : "ꝴ" UA774 # LATIN SMALL LETTER NUM
 <Multi_key><numbersign><1>                                                                     <n> : "ꝴ" UA774 # LATIN SMALL LETTER NUM
 <UEFD0><KP_1>                                                                                  <n> : "ꝴ" UA774 # LATIN SMALL LETTER NUM
@@ -3994,10 +4018,10 @@
 <Multi_key><numbersign><1>                                                                     <u> : "ꞟ" UA79F # LATIN SMALL LETTER VOLAPUK UE
 <UEFD0><KP_1>                                                                                  <u> : "ꞟ" UA79F # LATIN SMALL LETTER VOLAPUK UE
 <Multi_key><numbersign><KP_1>                                                                  <u> : "ꞟ" UA79F # LATIN SMALL LETTER VOLAPUK UE
-<UEFD0><1>                                                                                     <V> : 
-<Multi_key><numbersign><1>                                                                     <V> : 
-<UEFD0><KP_1>                                                                                  <V> : 
-<Multi_key><numbersign><KP_1>                                                                  <V> : 
+<UEFD0><1>                                                                                     <V> : "1" U0031 # Available.
+<Multi_key><numbersign><1>                                                                     <V> : "1" U0031 # Available.
+<UEFD0><KP_1>                                                                                  <V> : "1" U0031 # Available.
+<Multi_key><numbersign><KP_1>                                                                  <V> : "1" U0031 # Available.
 <UEFD0><1>                                                                                     <v> : "ꝸ" UA778 # LATIN SMALL LETTER UM
 <Multi_key><numbersign><1>                                                                     <v> : "ꝸ" UA778 # LATIN SMALL LETTER UM
 <UEFD0><KP_1>                                                                                  <v> : "ꝸ" UA778 # LATIN SMALL LETTER UM
@@ -4010,10 +4034,10 @@
 <Multi_key><numbersign><1>                                                                     <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
 <UEFD0><KP_1>                                                                                  <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
 <Multi_key><numbersign><KP_1>                                                                  <w> : "ʭ" U02AD # LATIN LETTER BIDENTAL PERCUSSIVE
-<UEFD0><1>                                                                                     <X> : 
-<Multi_key><numbersign><1>                                                                     <X> : 
-<UEFD0><KP_1>                                                                                  <X> : 
-<Multi_key><numbersign><KP_1>                                                                  <X> : 
+<UEFD0><1>                                                                                     <X> : "1" U0031 # Available.
+<Multi_key><numbersign><1>                                                                     <X> : "1" U0031 # Available.
+<UEFD0><KP_1>                                                                                  <X> : "1" U0031 # Available.
+<Multi_key><numbersign><KP_1>                                                                  <X> : "1" U0031 # Available.
 <UEFD0><1>                                                                                     <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <Multi_key><numbersign><1>                                                                     <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <UEFD0><KP_1>                                                                                  <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
@@ -6204,7 +6228,14 @@
 #   The mnemonic is based on the intrinsic slant of both digit 7 and the
 #   "script" typeface style.
 #
-#   Italic of group 7 is used as a shorthand for Bold italic of group 8.
+#   Bold is not script; it is referred to as calligraphic, with normal font
+#   weight.
+#   See # # Calligraphic Latin alphabet, named BOLD SCRIPT
+#
+#   The slot of intrinsically impossible italic script is repurposed as a
+#   shortcut for the generic bold-italic typeface style in group 8.
+#   See # # Shortcut for Bold italic Latin alphabet in group 8
+#   See # # Bold italic Latin alphabet
 #
 #
 # # Script Latin alphabet
@@ -6631,7 +6662,7 @@
 <Multi_key><numbersign><KP_7><comma>                                                           <z> : "𝔃" U1D503 # MATHEMATICAL BOLD SCRIPT SMALL Z
 #
 #
-# # Shorthand for Bold italic Latin alphabet of group 8
+# # Shortcut for Bold italic Latin alphabet in group 8
 #   See # # Bold italic Latin alphabet
 #
 <UEFD0><7><period>                                                                             <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
@@ -6850,6 +6881,13 @@
 #
 #   The mnemonic is based on the "double" concept found both in digit 8 and in
 #   the "double-struck" or "blackboard bold" typeface style.
+#
+#   This group also supports generic bold, italic, and bold-italic, because
+#   there is room, without any mnemonic.
+#   See # # Bold digits
+#   See # # Bold Latin alphabet
+#   See # # Italic Latin alphabet
+#   See # # Bold italic Latin alphabet
 #
 #
 # # Double-struck digits
@@ -7579,7 +7617,7 @@
 # # Bold italic Latin alphabet
 #
 #   A shortcut is available in group 7.
-#   See # # Shorthand for Bold italic Latin alphabet of group 8
+#   See # # Shortcut for Bold italic Latin alphabet in group 8
 #
 <UEFD0><8><comma><period>                                                                      <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
 <Multi_key><numbersign><8><comma><period>                                                      <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A
@@ -8009,6 +8047,11 @@
 #   variant of this letter.
 #   https://en.wikipedia.org/wiki/Blackletter
 #   https://www.masterclass.com/articles/blackletter-typeface-guide
+#
+#   This group also supports monospace, because there is room, without any
+#   mnemonic.
+#   See # # Monospace digits
+#   See # # Monospace Latin alphabet
 #
 #
 # # Fraktur alphabet
@@ -8481,7 +8524,9 @@
 #
 # # Monospace Latin alphabet
 #
-#   For convenience, FIGURE SPACE is also supported, like in group 7 of space.
+#   For convenience, " " U2007 FIGURE SPACE is also supported, as its width is
+#   consistent with the monospace typeface style.
+#   See # # A03-level1 space
 #
 <UEFD0><9><period>                                                                         <space> : " " U2007 # FIGURE SPACE
 <Multi_key><numbersign><9><period>                                                         <space> : " " U2007 # FIGURE SPACE
@@ -8705,6 +8750,11 @@
 #   starting with <*dead_group><0>, and the almost-synonymity of "0" and "sans"
 #   as in "0 sugar" for "no isolated sugar" (usually worded as “no added sugar”
 #   to insinuate that sugar is intrinsically isolated, a false assumption).
+#   See # # Sans-serif Latin alphabet
+#   See # # Sans-serif bold digits
+#   See # # Sans-serif bold Latin alphabet
+#   See # # Sans-serif italic Latin alphabet
+#   See # # Sans-serif bold italic Latin alphabet
 #
 #
 # # Sans-serif digits
