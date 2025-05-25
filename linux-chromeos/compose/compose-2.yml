@@ -180,6 +180,22 @@
 #   needs a dedicated dead character.
 #
 #
+#   Single-character dead keys
+#
+#   Some virtual dead keys exist for the sake of one single character. Whether
+#   such a single-character dead key can be streamlined or not depends on the
+#   length of the code point, since on Windows, characters in the Supplemental
+#   Multilingual Plane (SMP) and above require support for the high surrogate.
+#   See # # High surrogate input method
+#   See # # SUPERSCRIPT&SUBSCRIPT&BAR
+#   See # # COMBINING_ABOVE&CEDILLA
+#   for examples that are streamlined, and
+#   See # # SUPERSCRIPT&STROKE
+#   for an example among many others that are not.
+#   See #   As this dead key exists for
+#   to retrieve other examples, including the cited ones.
+#
+#
 # # X11 dead keysyms
 #
 #   The dead keysyms defined in keysymdef.h, that is part of x11proto-core-dev,
@@ -772,8 +788,10 @@
 #
 # # Dead characters for portability
 #
-#   This representative sign works on Windows as the so-called dead character.
-#   On MacOS it is the terminator. Both OSes output it when the base character
+#   On Windows, each dead key has a mandatory and unique dead character through
+#   which it exists in the C source, while on MacOS, dead keys have arbitrary
+#   identifiers, and the optional character related to a dead key is merely a
+#   UX feature called terminator. Both OSes output it when the base character
 #   is not listed with the current dead key, prior to outputting the unchanged
 #   base character itself. XCompose, by contrast, has no output in this case.
 #
@@ -784,18 +802,18 @@
 #   a correct level, also with respect to the use on macOS of these characters
 #   as terminators displayed on a yellow background during an ongoing sequence,
 #   and in support of the new XKB feature displaying underlined dead characters
-#   (picked in a system file), as opposed to Windows not providing feedback.
+#   picked in a system file, as opposed to Windows not providing any feedback.
 #
-#   The topmost reason for picking the base character from the dead key output
+#   Yet, many diacritics do not have any spacing clone to be picked as a dead
+#   character or terminator. By contrast, picking the dead character from the
+#   dead key output is universal.
+#
+#   The topmost reason for picking the dead character from the dead key output
 #   is that an Ê-key emulation on the circumflex accent dead key requires ê as
 #   a dead character in dead_circumflex, and so does the Ç-key emulation for ç
 #   in dead_cedilla. But this is limited to Windows.
 #   See #*# CIRCUMFLEX
 #   See #*# CEDILLA
-#
-#   Moreover, many diacritics do not have a spacing clone.
-#
-#   Consistently, dead keys have their dead character picked from their output.
 #
 #   For dead_tilde, the dead character base letter is "e" for consistency with
 #   dead_belowtilde, that is precomposed only with e, i, u, and for equity, as
@@ -8647,9 +8665,9 @@
 # # Ntilde for Breton and Spanish
 #
 #   The dead_tilde key has already an easy duplicate mapping at level 3 of
-#   the dead_circumflex key of AZERTY, Atilde and Otilde have shorthands
+#   the dead_circumflex key of AZERTY, Atilde and Otilde have shortcuts
 #   using dead_acute followed by Eacute or Agrave, and Ntilde has a
-#   shorthand using dead_circumflex followed by Ccedilla, but the otherwise
+#   shortcut using dead_circumflex followed by Ccedilla, but the otherwise
 #   unused group 1 of Egrave and Udiaeresis is also used, the latter for a
 #   Swiss QWERTZ layout, until another use case emerges.
 #
