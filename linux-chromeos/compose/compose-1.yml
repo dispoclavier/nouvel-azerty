@@ -946,45 +946,32 @@
 #   See #   Conflictlessness check
 #
 #
-#   Single-character dead keys
-#
-#   Some virtual dead keys exist for the sake of one single character. Whether
-#   such a single-character dead key can be streamlined or not depends on the
-#   length of the code point, since on Windows, characters in the Supplemental
-#   Multilingual Plane (SMP) and above require support for the high surrogate.
-#   See # # High surrogate input method
-#   See # # SUPERSCRIPT&SUBSCRIPT&BAR
-#   See # # COMBINING_ABOVE&CEDILLA
-#   for examples that are streamlined, and
-#   See # # SUPERSCRIPT&STROKE
-#   for an example among many others that are not.
-#   See #   As this dead key exists for
-#   to retrieve other examples, including the cited ones.
-#
-#
 # # Notes for maintenance
 #
-#   This file needs to be splitted in three partials maxing at 2GB, due to file
-#   size restrictions in the web interface of GitHub, in order to be displayed
-#   on GitHub as full-fledged web pages rather than merely in plain text,
+#   For display in browsers on GitHub as full-fledged web pages rather than
+#   merely in plain text, this file needs to be split in three partials maxing
+#   at 2GB, due to file size restrictions in the web interface of GitHub.
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml
 #
 #   The colon alignment in column 100 is based on longest multikey sequences
-#   in terms of string length, as used for U10789, U107AB.
+#   in terms of string length.
+#   See # # SUPERSCRIPT&CURL&GROUP_4
+#   See "𐞉" U10789
+#   See "𐞫" U107AB
 #
 #   For maintainability, there is no space between the leading keysyms, but
 #   part of the keysyms may be aligned to the end for readability.
 #
-#   Trailing space should not be cropped programmatically, since empty slots in
-#   the letter groups, ready to receive output, are not populated with the null
-#   character, yet the colons are followed by a space for ease of maintenance.
-#   See # # Maintenance
+#   See also # # Maintenance of letter groups
 #
 #
 #   Conflictlessness check
 #
 #   Conflicts and duplicates can be checked following a protocol like this one,
-#   where the first steps may be automated using another replaceruleset, while
-#   sorting needs to be case sensitive, using e.g. "Tyriar.sort-lines" > F9.
+#   where the first steps may be automated using the "bhughes339.replacerules"
+#   extension for VSCode with this replaceruleset.
 #
 #       {
 #         "replacerules.rules": {
@@ -1017,7 +1004,7 @@
 #         }
 #       }
 #
-#       5  Case sensitive sorting.
+#       5  Case sensitive sorting, using e.g. "Tyriar.sort-lines" > F9.
 #
 #       6  Checking for conflicts and duplicates:
 #          ^([^\s]+)\s.+\n\1(<|\s)
