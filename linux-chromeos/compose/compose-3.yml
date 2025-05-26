@@ -128,7 +128,8 @@
 #   However, for clarification with respect to combining diacritics, the group
 #   number or its unity (as of group 11, for cross-platform compatibility) is
 #   output in the few empty instances in groups 3..5, 11, without mention in
-#   the documentation.
+#   the documentation. To achieve this, the keyword "available" must be present
+#   in the EOL comment of these instances.
 #   See # Available.
 #   See # # Notes about documentation
 #
