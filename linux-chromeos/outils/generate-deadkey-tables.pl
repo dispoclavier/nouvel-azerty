@@ -4,7 +4,7 @@
 # 2023-12-27T1519+0100
 # 2024-05-16T1520+0200
 # 2024-10-28T1416+0100
-# 2025-05-25T2117+0200
+# 2025-05-26T2331+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -156,7 +156,11 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
-		unless ( $line =~ /^<Multi_key>/ || $line =~ /^#/ || $line =~ /<KP_/ || $line =~ /# Available\.?$/ ) {
+		unless ( $line =~ /^<Multi_key>/             # Multikey equivalents are skipped.
+			|| $line =~ /^#/                 # Annotations are not (yet) processed.
+			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
+			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
+		) {
 			if ( $line =~ /<Multi_key>/
 				|| $line =~ /<dead_abovedot>/
 				|| $line =~ /<dead_abovering>/
