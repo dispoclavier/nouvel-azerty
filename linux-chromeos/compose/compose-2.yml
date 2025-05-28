@@ -5015,7 +5015,9 @@
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
 #   should not depend on user input, but on font settings instead.
 #
-#   All letters annotated as for Lithuanian in this file are courtesy:
+#   All letters annotated as for Lithuanian in this file are by courtesy of
+#   Vilnius University, the State Commission of the Lithuanian language, 
+#   Lithuanian Standards Board.
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
 #   As a convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is supported
@@ -16076,8 +16078,8 @@
 #   Dchar: "ç" U00E7
 #
 #   The polygrams make the dead_cedilla key behave like a "Ç" key in all
-#   relevant cases, along the lines of the Ê-key emulation, for Canadian French
-#   QWERTY.
+#   relevant cases, along the lines of the Ê-key emulation, for the
+#   Canadian French QWERTY variants.
 #   See #*# CIRCUMFLEX
 #
 #   Cedilla has no reported usage outside Unicode precomposed letters.
@@ -17061,6 +17063,7 @@
 <Multi_key><section><section>                                                                  <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
 <dead_belowcomma><dead_belowcomma>                                                             <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 <Multi_key><semicolon><semicolon>                                                              <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
+<Multi_key><section><section>                                                                  <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 #
 #
 #   See part 3 in compose-3.yml.
