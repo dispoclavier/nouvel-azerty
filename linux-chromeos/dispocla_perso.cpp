@@ -1,4 +1,4 @@
-//                      Date : 2024-11-12T0638+0100
+//                      Date : 2025-05-28T0428+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -18,10 +18,6 @@
 //                             téléchargeable depuis son dépôt GitHub à l’adresse suivante :
 //
 //                                 https://github.com/dispoclavier/nouvel-azerty/releases/latest
-//
-//                             L’inclusion dans les dispositions de clavier configurées se
-//                             fait à la fin, afin que les personnalisations remplacent la
-//                             disposition d’origine.
 //
 //                             Les personnalisations peuvent se mettre à la place de toute
 //                             instance de NoSymbol (qui signifie « rien d’autre »).
