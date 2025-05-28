@@ -2724,6 +2724,18 @@
 #   (as for v4.19.0 on 2025-01-25).
 #   See # # Composed letters for languages in Togo
 #
+#   Letters with hook "Ƒ" U0191, "ƒ" U0192, "Ɲ" U019D, "ɲ" U0272, "Ʋ" U01B2,
+#   "ʋ" U028B are supported for convenience as a subset of those supported by
+#   dead_hook. "Ʋ" U01B2, "ʋ" U028B with "U", "u" as a base character is a
+#   shortcut for the same with "V", "v" as a base character in group 3, while
+#   "Ɲ" U019D, "ɲ" U0272 is regularly supported with "N", "n" as a base letter,
+#   as opposed to "Ŋ" U014A, "ŋ" U014B equally used in Bambara, Mali, and
+#   supported by a group-1 shortcut with intuitive "G", "g" as a base letter,
+#   additionally to its regular support with "N", "n" as a base character in
+#   group 2.
+#   https://en.wikipedia.org/wiki/Bambara_language
+#   See #*# HOOK
+#
 #   The VERSICLE and RESPONSE symbols "℣" U2123, "℟" U211F are supported since
 #   version 1.6.0 both by multikey and in letter groups 1 and 4.
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
@@ -2839,10 +2851,13 @@
 #
 #   Group 2 of the base alphabet: Latin letters and symbols (continued)
 #
-#   Letters with hook "Ɓ" U0181, "ɓ" U0253, "Ƈ" U0187, "ƈ" U0188, "Ƙ" U0198,
-#   "ƙ" U0199, "Ƥ" U01A4, "ƥ" U01A5, "Ʋ" U01B2, "ʋ" U028B are supported for
-#   convenience as a subset of those supported by dead_hook.
+#   Letters with hook "Ƈ" U0187, "ƈ" U0188, "Ƙ" U0198, "ƙ" U0199, "Ƥ" U01A4,
+#   "ƥ" U01A5, "Ƴ" U01B3, "ƴ" U01B4 are supported for convenience as a subset
+#   of those supported by dead_hook.
 #   See #*# HOOK
+#
+#   "Ƴ" U01B3, "ƴ" U01B4 in particular is used in Niger and Senegal.
+#   https://fr.wikipedia.org/wiki/%C6%B3
 #
 #   The deprecated l with middle dot "Ŀ" U013F, "ŀ" U0140 is supported in the
 #   dead_abovedot dead key, not in any group, the less as it is nearly unused,
@@ -2960,16 +2975,17 @@
 #
 #   Group 3 of the base alphabet: Latin letters and symbols (continued)
 #
+#   Letters with hook "Ɓ" U0181, "ɓ" U0253, "Ɦ" UA7AA, "ɦ" U0266, "Ʋ" U01B2,
+#   "ʋ" U028B are supported for convenience as a subset of those supported by
+#   dead_hook.
+#   See #*# HOOK
+#
 #   Latin lambda may look close to an inverted Yy. It is new to Unicode as of
 #   v16.0.0 (2024), along with its capital with stroke "Ƛ" UA7DC completing the
 #   lowercase "ƛ" U019B.
 #   https://www.unicode.org/L2/L2023/23191-three-latin-additions.pdf
 #   https://www.typotheque.com/blog/new-unicode-characters-for-heiltsuk
 #   https://commons.wikimedia.org/wiki/File:Latin_Lambda.svg
-#
-#   Letters with hook "Ɦ" UA7AA, "ɦ" U0266, "Ƴ" U01B3, "ƴ" U01B4 are supported
-#   for convenience as a subset of those supported by dead_hook.
-#   See #*# HOOK
 #
 <UEFD0><3>                                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
 <Multi_key><numbersign><3>                                                                     <A> : "Ɑ" U2C6D # LATIN CAPITAL LETTER ALPHA
