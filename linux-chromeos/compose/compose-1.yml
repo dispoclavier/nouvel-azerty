@@ -262,6 +262,11 @@
 #   According to the spec, section "File Format", comments are optional.
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
 #
+#   This issue is relevant to very few multicharacter keysyms only, as XCompose
+#   results are typically annotated with Unicode character names, and even most
+#   multicharacter string output requires a clarifying annotation.
+#   See # # Double zero
+#
 #
 #   Headings
 #
@@ -593,40 +598,56 @@
 #   “PRI #367: Automated punctuation spacing”
 #   https://unicode-org.atlassian.net/browse/CLDR-10904
 #
-<UEF60> : " !" #
-<UEF61> : " :" # [1]
-<UEF62> : " ;" #
-<UEF63> : " ?" # See #   End of line comments
+<UEF60> : " !" # U202F U0021
+<UEF61> : " :" # U202F U003A [1]
+<UEF62> : " ;" # U202F U003B
+<UEF63> : " ?" # U202F U003F
 #
 #   [1] When typeset in compliance with the Imprimerie nationale style manual,
 #       in Unicode encoding, the colon has NBSP spacing; but in new-school
 #       French typesetting, the colon is spaced out using NBTSP.
+#       See #   French usage of no-break thin space
 #
 #   Based on the visual aspect in the current edition of the style manual,
 #   Imprimerie nationale, in Unicode encoding, the guillemets are typeset with
 #   NBTSP, although the rule given on page 149 stipulates that the guillemets
-#   are to be spaced out using a justifying normal-width space.
+#   are to be spaced out using a justifying normal-width space; and single
+#   guillemets go unmentioned.
 #
-<UEF64> : "« " #
-<UEF65> : " »" #
-<UEF66> : "‹ " #
-<UEF67> : " ›" #
+<UEF64> : "« " # U00AB U202F
+<UEF65> : " »" # U202F U00BB
+<UEF66> : "‹ " # U2039 U202F
+<UEF67> : " ›" # U202F U203A
 #
 #
 # # Abbreviation "Numéro" with trailing space
 #
-#   With regular superscript "ᵒ" U1D52 and NBTSP.
+#   On Linux, the "Numéro" abbreviation is provided in lowercase and titlecase,
+#   only with the regular superscript lowercase "ᵒ" U1D52 MODIFIER LETTER SMALL
+#   O, due to XKB restricting to 8 the number of keysyms per key per group, and
+#   the required use of 6 keysyms for other purposes (letter, ASCII, dead key,
+#   superscript, level-5 numpad), but macOS is able to support caps lock
+#   sensitive uppercase using "ᴼ" U1D3C MODIFIER LETTER CAPITAL O.
 #
-<UEF68> : "nᵒ " #
-<UEF69> : "Nᵒ " #
+#   As a trailing space, the no-break thin space U202F meets expectations best,
+#   following the logic of the short width associated with abbreviated units in
+#   the CLDR.
+#   https://cldr.unicode.org/translation/units/unit-names-and-patterns
+#   https://github.com/unicode-org/cldr/blob/2dc55845db031c0d1c2327f2a7f0d030f631de54/common/main/fr.xml#L11417
+#
+<UEF68> : "nᵒ " # U006E U1D52 U202F
+<UEF69> : "Nᵒ " # U004E U1D52 U202F
 #
 #
 # # Abbreviation "Numéro" without spacing
 #
-#   With regular superscript "ᵒ" U1D52.
+#   These strings are pointless as they fail to meet user expectations raised
+#   by keyboard layouts supporting semi-automated punctuation spacing, but they
+#   are provided regardless, for user experience test purposes.
+#   See dispocla_perso.cpp
 #
-<UEF6A> : "nᵒ" #
-<UEF6B> : "Nᵒ" #
+<UEF6A> : "nᵒ" # U006E U1D52
+<UEF6B> : "Nᵒ" # U004E U1D52
 #
 #
 # # Ordinal indicator with trailing space
@@ -634,7 +655,7 @@
 #   Ordinal indicator "ᵉ" with automated spacing by NBTSP, intended for typing
 #   French style century figures using Roman numerals.
 #
-<UEF6C> : "ᵉ " #
+<UEF6C> : "ᵉ " # U1D49 U202F
 #
 #
 # # Double zero
@@ -644,13 +665,14 @@
 #   outdated, redundant and wasting the Shift + KP_* positions.
 #   See dispocla.cpp ## Level-5 numpad
 #
-<UEF6D> : "00" #
+<UEF6D> : "00" # See #   End of line comments
 #
 #   A triple zero key is useful only on the dedicated numpad. On the level-5
 #   numpad, a triple zero is easily input by simultaneously hitting single and
 #   double zeros on AltFr + N and AltFr + B. As a consequence, this triple zero
 #   was dropped. But later (2021-07-01T0458+0200) it was readded as UEF7D for
 #   Shift + KP_1.
+#   See # # Prefixes, and triple zero for numpad
 #
 #
 # # Justifying no-break spaces
@@ -668,8 +690,8 @@
 #   « Word is the "poor man's", or simple man's, document publishing tool. »
 #
 #   The workaround using justifying no-break strings composed of a space and a
-#   trailing break-preventer is courtesy Jakub Stachu, who reported this usage
-#   on November 5, 2017 in "Non‐breakable space justification in Word 2016",
+#   trailing break-preventer is by courtesy of Jakub Stachu, who reported this
+#   usage on 2017-11-05 in "Non‐breakable space justification in Word 2016",
 #   Microsoft Community forum MS Office > Word > Windows 8, page 3.
 #   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
 #
@@ -677,17 +699,17 @@
 #   “Proposal to focus line break prevention design on end-user input”.
 #   https://www.unicode.org/L2/L2019/19114-line-break-design.pdf
 #
-<UEF6E> : " ⁠" # With WORD JOINER U2060 [1]
+<UEF6E> : " ⁠" # U0020 U2060 WORD JOINER [1]
 #
 #   [1] OpenOffice Writer and LibreOffice Writer are able to handle WORD JOINER
 #       and even highlight it using the field background color as for NBSP:
 #       Tools > Options > LibreOffice > UI colors > Text documents > Field background
 #       https://ask.libreoffice.org/t/remove-gray-color-of-non-breaking-spaces-in-writer/22106
 #
-<UEF6F> : " ﻿" # With ZERO-WIDTH NO-BREAK SPACE UFEFF [2]
+<UEF6F> : " ﻿" # U0020 UFEFF ZERO-WIDTH NO-BREAK SPACE [2]
 #
-#   [2] UFEFF is the byte order mark, and its use as ZWNBSP is obsoleted but
-#       may still be supported, as it has 10 years of precedence in that role.
+#   [2] The use of UFEFF BYTE ORDER MARK as ZWNBSP is obsoleted but may still
+#       be supported, as it has 10 years of precedence in that role.
 #
 #
 # # Punctuation spacing for French, legacy
@@ -704,32 +726,32 @@
 #   Once some “dysfunctional” keyboard layout variants supported some of these.
 #   Now none of these are supported anymore.
 #
-<UEF70> : " !" # (discouraged by Imprimerie nationale)
-<UEF71> : " :" # (required by Imprimerie nationale)
-<UEF72> : " ;" # (discouraged by Imprimerie nationale)
-<UEF73> : " ?" # (discouraged by Imprimerie nationale)
-<UEF74> : "« " # (recommended but not applied by Imprimerie nationale)
-<UEF75> : " »" # (recommended but not applied by Imprimerie nationale)
-<UEF76> : "‹ " # (not mentioned by Imprimerie nationale)
-<UEF77> : " ›" # (not mentioned by Imprimerie nationale)
+<UEF70> : " !" # U00A0 U0021 discouraged by Imprimerie nationale
+<UEF71> : " :" # U00A0 U003A required by Imprimerie nationale
+<UEF72> : " ;" # U00A0 U003B discouraged by Imprimerie nationale
+<UEF73> : " ?" # U00A0 U003F discouraged by Imprimerie nationale
+<UEF74> : "« " # U00AB U00A0 recommended but not applied by Imprimerie nationale
+<UEF75> : " »" # U00A0 U00BB recommended but not applied by Imprimerie nationale
+<UEF76> : "‹ " # U2039 U00A0 not mentioned by Imprimerie nationale
+<UEF77> : " ›" # U00A0 U203A not mentioned by Imprimerie nationale
 #
 #
 # # Abbreviation "Numéro" with legacy NBSP
 #
 #   With regular superscript "ᵒ" U1D52.
 #
-<UEF78> : "nᵒ " #
-<UEF79> : "Nᵒ " #
+<UEF78> : "nᵒ " # U006E U1D52 U00A0
+<UEF79> : "Nᵒ " # U004E U1D52 U00A0
 #
 #
 # # Prefixes, and triple zero for numpad
 #
-<UEF7A> : "&#"   #
-<UEF7B> : "&#x"  #
-<UEF7C> : "0x"   #
+<UEF7A> : "&#"   # Decimal NCR
+<UEF7B> : "&#x"  # Hexadecimal NCR
+<UEF7C> : "0x"   # Hexadecimal number
 <UEF7D> : "000"  # See # # Double zero
-<UEF7E> : "\\u{" #
-<UEF7F> : "\\x{" #
+<UEF7E> : "\\u{" # C, JS, Java, Ruby, Rust
+<UEF7F> : "\\x{" # Perl
 #
 #
 # # Punctuation spacing for French using U2009 TSP, UFEFF ZWNBSP
@@ -750,27 +772,27 @@
 #
 #   These spaces are U2009 THIN SPACE followed by UFEFF ZWNBSP.
 #
-<UEF80> : " ﻿!" #
-<UEF81> : " ﻿:" #
-<UEF82> : " ﻿;" #
-<UEF83> : " ﻿?" #
-<UEF84> : "« ﻿" #
-<UEF85> : " ﻿»" #
-<UEF86> : "‹ ﻿" #
-<UEF87> : " ﻿›" #
+<UEF80> : " ﻿!" # U2009 UFEFF U0021
+<UEF81> : " ﻿:" # U2009 UFEFF U003A
+<UEF82> : " ﻿;" # U2009 UFEFF U003B
+<UEF83> : " ﻿?" # U2009 UFEFF U003F
+<UEF84> : "« ﻿" # U00AB U2009 UFEFF
+<UEF85> : " ﻿»" # U2009 UFEFF U00BB
+<UEF86> : "‹ ﻿" # U2039 U2009 UFEFF
+<UEF87> : " ﻿›" # U2009 UFEFF U203A
 #
 #
 # # Abbreviation "Numéro" with a THIN SPACE, ZWNBSP string
 #
 #   With regular superscript "ᵒ" U1D52.
 #
-<UEF88> : "nᵒ ﻿" #
-<UEF89> : "Nᵒ ﻿" #
+<UEF88> : "nᵒ ﻿" # U006E U1D52 U2009 UFEFF
+<UEF89> : "Nᵒ ﻿" # U004E U1D52 U2009 UFEFF
 #
 #
 # # Composed no-break THIN SPACE - ZWNBSP string in isolation
 #
-<UEF8A> : " ﻿" #
+<UEF8A> : " ﻿" # U2009 UFEFF
 #
 #
 # # Named entities for SGML, HTML, XML and XHTML
@@ -807,27 +829,27 @@
 #
 #   These spaces are U2009 THIN SPACE followed by U2060 WORD JOINER.
 #
-<UEF90> : " ⁠!" #
-<UEF91> : " ⁠:" #
-<UEF92> : " ⁠;" #
-<UEF93> : " ⁠?" #
-<UEF94> : "« ⁠" #
-<UEF95> : " ⁠»" #
-<UEF96> : "‹ ⁠" #
-<UEF97> : " ⁠›" #
+<UEF90> : " ⁠!" # U2009 U2060 U0021
+<UEF91> : " ⁠:" # U2009 U2060 U003A
+<UEF92> : " ⁠;" # U2009 U2060 U003B
+<UEF93> : " ⁠?" # U2009 U2060 U003F
+<UEF94> : "« ⁠" # U00AB U2009 U2060
+<UEF95> : " ⁠»" # U2009 U2060 U00BB
+<UEF96> : "‹ ⁠" # U2039 U2009 U2060
+<UEF97> : " ⁠›" # U2009 U2060 U203A
 #
 #
 # # Abbreviation "Numéro" with TSP WJ
 #
 #   With regular superscript "ᵒ" U1D52.
 #
-<UEF98> : "nᵒ ⁠" #
-<UEF99> : "Nᵒ ⁠" #
+<UEF98> : "nᵒ ⁠" # U006E U1D52 U2009 U2060
+<UEF99> : "Nᵒ ⁠" # U004E U1D52 U2009 U2060
 #
 #
 # # Composed no-break THIN SPACE - WJ string in isolation
 #
-<UEF9A> : " ⁠" #
+<UEF9A> : " ⁠" # U2009 U2060
 #
 #
 # # HTML entity for no-break space
@@ -842,21 +864,15 @@
 #   Hexadecimal is preferred for readability.
 #
 <UEF9C> : "&#x2009;" # U2009 THIN SPACE [1]
+<UEF9D> : "&#x2008;" # U2008 PUNCTUATION SPACE [2]
+#         "&#8199;"  # U2007 FIGURE SPACE [3]
+<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE [4]
 #
 #   [1] Should be no-break but is breaking in Unicode.
-#
-<UEF9D> : "&#x2008;" # U2008 PUNCTUATION SPACE [2]
-#
 #   [2] Should be no-break like FIGURE SPACE.
-#
-#         "&#8199;" # U2007 FIGURE SPACE [3]
-#
 #   [3] Is no-break in Unicode for nearly no reason, which is why it is
 #       the only no-break space in that range where all spaces from U2002
 #       through U200A were originally designed to be no-break.
-#
-<UEF9E> : "&#x202F;" # U202F NARROW NO-BREAK SPACE [4]
-#
 #   [4] No-break thin space NBTSP, has become a usable avatar of
 #       U2009 THIN SPACE as originally intended.
 #       See # # Punctuation spacing for French, regular with U202F NBTSP
@@ -867,9 +883,9 @@
 #   "U+" is an ASCII-fied "⊎" U228E MULTISET UNION.
 #   https://unicode.org/mail-arch/unicode-ml/y2005-m11/0060.html
 #
-#   This sequence was supported initially, then was dropped as overkill.
-#   On 2022-11-11T1420+0100 it was readded. As of v2 it is on the U key
-#   (Shift + AltFr + D07).
+#   This sequence was supported initially, then it was dropped as overkill.
+#   On 2022-11-11T1420+0100 it was readded. As of v2, it is on the U key,
+#   level 7 (AltGr + AltFr + D07).
 #
 <UEF9F> : "U+" #
 #
@@ -909,18 +925,18 @@
 #   ENCLOSING KEYCAP.
 #   https://www.unicode.org/emoji/charts/full-emoji-list.html#keycap
 #
-<UEFC0> : "0️⃣"  # U0030 UFE0F U20E3
-<UEFC1> : "1️⃣"  # U0031 UFE0F U20E3
-<UEFC2> : "2️⃣"  # U0032 UFE0F U20E3
-<UEFC3> : "3️⃣"  # U0033 UFE0F U20E3
-<UEFC4> : "4️⃣"  # U0034 UFE0F U20E3
-<UEFC5> : "5️⃣"  # U0035 UFE0F U20E3
-<UEFC6> : "6️⃣"  # U0036 UFE0F U20E3
-<UEFC7> : "7️⃣"  # U0037 UFE0F U20E3
-<UEFC8> : "8️⃣"  # U0038 UFE0F U20E3
-<UEFC9> : "9️⃣"  # U0039 UFE0F U20E3
-<UEFCA> : "*️⃣"  # U002A UFE0F U20E3
-<UEFCB> : "#️⃣"  # U0023 UFE0F U20E3
+<UEFC0> : "0️⃣" # U0030 UFE0F U20E3
+<UEFC1> : "1️⃣" # U0031 UFE0F U20E3
+<UEFC2> : "2️⃣" # U0032 UFE0F U20E3
+<UEFC3> : "3️⃣" # U0033 UFE0F U20E3
+<UEFC4> : "4️⃣" # U0034 UFE0F U20E3
+<UEFC5> : "5️⃣" # U0035 UFE0F U20E3
+<UEFC6> : "6️⃣" # U0036 UFE0F U20E3
+<UEFC7> : "7️⃣" # U0037 UFE0F U20E3
+<UEFC8> : "8️⃣" # U0038 UFE0F U20E3
+<UEFC9> : "9️⃣" # U0039 UFE0F U20E3
+<UEFCA> : "*️⃣" # U002A UFE0F U20E3
+<UEFCB> : "#️⃣" # U0023 UFE0F U20E3
 #
 #
 #   START_MULTIKEY
@@ -1180,10 +1196,11 @@
 #   See #*# COMPOSE
 #   See ### Dead keys
 #   See ### Group dead key introduction
+#   https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/outils
 #
 #   Polytonic Greek, however, is not documented in tables, as it is supported
-#   mainly to meet eventual user expectations, and documenting it would be like
-#   somewhat overkill.
+#   mainly to meet eventual preexisting user expectations, without any intent
+#   to raise such expectations.
 #   See ### Greek with diacritics
 #   See # # End note about polytonic Greek
 #
@@ -1193,17 +1210,20 @@
 #   generate-deadkey-tables.pl, expects an asterisk between the hashes in the
 #   same position. The dead key tables are numbered, while the multikey tables
 #   are not, since their number is not finite. Adding a new file start heading
-#   does not alter existing file names. However, each of these headings is used
-#   to make a file name, and they are expected to be unique.
-#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/generate-multikey-tables.pl
+#   does not alter existing file names. However, as each of these headings is
+#   used to make a file name out of it, they are expected to be unique.
 #
 #   The letter groups and symbol groups are also documented on screenshots of
-#   two spreadsheets. These have plain text dumps in this file.
+#   two spreadsheets dumped in plain text in this file, online with tooltips.
 #   See # # Symbol groups overview
 #   See # # Letter groups overview
+#   https://dispoclavier.com/img/symboles.png
+#   https://dispoclavier.com/img/lettres.png
+#   https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-symboles
+#   https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-lettres
 #
-#   The plus sign omitted in Unicode code points for interoperability needs to
-#   be readded for documentation.
+#   The plus sign omitted in Unicode code points for compatibility with X11
+#   keysyms needs to be readded for documentation.
 #   See # # Notes about syntax and terms
 #
 #
