@@ -631,9 +631,12 @@
 #
 #   As a trailing space, the no-break thin space U202F meets expectations best,
 #   following the logic of the short width associated with abbreviated units in
-#   the CLDR.
+#   the Unicode Common Locale Data Repository.
 #   https://cldr.unicode.org/translation/units/unit-names-and-patterns
 #   https://github.com/unicode-org/cldr/blob/2dc55845db031c0d1c2327f2a7f0d030f631de54/common/main/fr.xml#L11417
+#   See #   No-break thin space in Unicode CLDR
+#   See #   No-break thin space in the Unicode Standard
+#   See #   French usage of no-break thin space
 #
 <UEF68> : "nᵒ " # U006E U1D52 U202F
 <UEF69> : "Nᵒ " # U004E U1D52 U202F
@@ -652,8 +655,10 @@
 #
 # # Ordinal indicator with trailing space
 #
-#   Ordinal indicator "ᵉ" with automated spacing by NBTSP, intended for typing
-#   French style century figures using Roman numerals.
+#   This ordinal indicator "ᵉ" with automated spacing by NBTSP is intended for
+#   typing French style century figures using Roman numerals. Not included in
+#   the associated keyboard layouts, it is provided for customization.
+#   See (in French) dispocla_perso.cpp # Exemple
 #
 <UEF6C> : "ᵉ " # U1D49 U202F
 #
