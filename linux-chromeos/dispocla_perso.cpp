@@ -1,13 +1,13 @@
-//                      Date : 2025-05-28T0428+0200
+//                      Date : 2025-05-29T0349+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
-//                   Langage : comme du C
+//                   Langage : semblable à C
 //               Description : tables d’allocation de touches XKB
 //                Plateforme : systèmes d’exploitation Linux et ChromeOS* utilisant XKB avec XCompose
 //
 //   * Au CLDR d’Unicode, cette plateforme s’appelle ChromeOS, avec comme explication
-//     qu’au CLDR, *Linux* est pris en charge aux côtés de *ChromeOS*, ou par ChromeOS.
+//     qu’au CLDR, Linux est pris en charge aux côtés de ChromeOS, ou par ChromeOS.
 //
 //              Installation : Ce fichier doit être installé en premier dans
 //                             /usr/share/X11/xkb/symbols/dispocla_perso
@@ -21,6 +21,38 @@
 //
 //                             Les personnalisations peuvent se mettre à la place de toute
 //                             instance de NoSymbol (qui signifie « rien d’autre »).
+//
+//
+// # Exemple
+//
+// L’indicateur ordinal "ᵉ" U1D49 est au niveau 3 de la touche E11, en synergie
+// avec l’espace insécable U00A0, dans dispocla.cpp :
+//
+//	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
+//	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
+//	key <AE11> {
+//		[                  at,              degree,               U1D49,        bracketright,               U207B,                   E,               UEFCA,               minus ],
+//		[                  at,              degree,               minus,               U208B,                   E,               U207B,               UEFCA,               minus ]
+//	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; U207B ⁻ SUPERSCRIPT MINUS; U208B ₋ SUBSCRIPT MINUS; UEFCA *️⃣ keycap star emoji
+//
+// Pour lui ajouter une espace fine insécable comme l’espace fine insécable des
+// guillemets ouvrants en Majuscule, la séquence UEF6C dans Compose.yml :
+//
+//     <UEF6C> : "ᵉ " # U1D49 U202F
+//
+// va dans key <AE11> en mode français dans dispocla_perso.cpp :
+//
+//	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
+//	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
+//	key <AE11> {
+//		[            NoSymbol,            NoSymbol,               UEF6C,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+//		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
+//	};
+//
+// Les nouvelles personnalisations deviennent effectives à partir de la
+// prochaine session. Les personnalisations ne sont pas affectées par les mises
+// à jour vers les nouvelles versions. Lors de la désinstallation, elles sont
+// sauvegardées.
 //
 
 default partial alphanumeric_keys keypad_keys
