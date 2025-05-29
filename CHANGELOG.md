@@ -16,11 +16,13 @@ Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous
 
 Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-## 5.1.0 (projet)
+## 5.1.0 (2025-05-29)
 
 Mise à jour de la prise en charge des émojis suite à la mise à jour de la [page d’Unicode sur les fréquences](https://home.unicode.org/emoji/emoji-frequency/).
 
 Rétablissement de la symétrie des enchaînements de touches mortes suite à la dissociation de celles-ci avec leur équivalent en composition.
+
+Complétion des touches mortes grâce à cet allègement des contraintes.
 
 Rectification et amélioration des groupes des symboles.
 
@@ -167,6 +169,7 @@ Reconception, rectification et simplification de séquences de composition.
 	* Rectifier les mots-clés balises au début et à la fin du fichier Compose.yml. compose-1.yml [d424a41](https://github.com/dispoclavier/nouvel-azerty/commit/d424a41a2a53831e0d461a71cc1b59ee292544e7), compose-3.yml [92f0932](https://github.com/dispoclavier/nouvel-azerty/commit/92f0932217cf3a9187a3fa76efa93f849b553dda), installer.sh [0defb75](https://github.com/dispoclavier/nouvel-azerty/commit/0defb7509be305fc463c6c17e80fbb9428541884), activer.sh [ee8fbfa](https://github.com/dispoclavier/nouvel-azerty/commit/ee8fbfa504dcb77fc5df52f299b2f7cfb3a145b1)
 	* Confirmer le nom de fichier Compose.yml. installer.sh [0defb75](https://github.com/dispoclavier/nouvel-azerty/commit/0defb7509be305fc463c6c17e80fbb9428541884), [8783c09](https://github.com/dispoclavier/nouvel-azerty/commit/8783c09bbf4c245f2d7048e1c1fed55d9c165a26), activer.sh [ee8fbfa](https://github.com/dispoclavier/nouvel-azerty/commit/ee8fbfa504dcb77fc5df52f299b2f7cfb3a145b1), [7b88b38](https://github.com/dispoclavier/nouvel-azerty/commit/7b88b38c6bdfec2ace1ddd02ec74df279eec9c72), compose-1.yml [d424a41](https://github.com/dispoclavier/nouvel-azerty/commit/d424a41a2a53831e0d461a71cc1b59ee292544e7), [bb0a703](https://github.com/dispoclavier/nouvel-azerty/commit/bb0a703572d86236efa39c58e71d3b8f0a12bc97)
 * Documentation :
+	* Fusionner l’introduction et les deux modes d’emploi, et répartir le contenu sur trois modes d’emploi. readme.md alias Mode-d-emploi-commun.md [3483ed3](https://github.com/dispoclavier/nouvel-azerty/commit/3483ed3a70f3803d9d657a141c6d05a27004381d), linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.md [5f2387c](https://github.com/dispoclavier/nouvel-azerty/commit/5f2387c05b1cec8a6c93b2216b6d780ea1962ba7), windows/readme.md alias Mode-d-emploi-sous-Windows.md [370efda](https://github.com/dispoclavier/nouvel-azerty/commit/370efdac4c75bce77c006adc5f2b93c0e98f3c53)
 	* Améliorer le tri. compose-1.yml [90ec2e0](https://github.com/dispoclavier/nouvel-azerty/commit/90ec2e0ad57e8bc16d14b6bfcf8ad24312e27b75), [2e00217](https://github.com/dispoclavier/nouvel-azerty/commit/2e00217606c0cdde8a8e6c23e0b888fdb0cad5ab), [a5e998d](https://github.com/dispoclavier/nouvel-azerty/commit/a5e998da7547ff2ded9a28c1d505aa240cdb054a)
 	* Améliorer la symétrisation des enchaînements de touches mortes. compose-1.yml [8d799a3](https://github.com/dispoclavier/nouvel-azerty/commit/8d799a3374fc7bb9679c45fea99d2deff6ccd3c6), [8b41337](https://github.com/dispoclavier/nouvel-azerty/commit/8b41337013b233365373cf59c089718629fddd31)
 	* Améliorer l’intertitrage. compose-1.yml [2ab9521](https://github.com/dispoclavier/nouvel-azerty/commit/2ab9521d1730b4a149c61f9bf8816db1e4f2d8f9)
@@ -190,11 +193,13 @@ Amélioration de l’utilisabilité de la modificatrice AltFr et des touches B07
 Complétion des touches mortes au-delà du contenu pris en charge par équivalence en composition, grâce à la dissociation des touches mortes et des équivalents en composition.
 
 Amélioration des groupes des symboles :
+
 * gain de trois places dans les premiers groupes du croisillon grâce à la dissociation des touches mortes et de leur équivalent en composition ;
 * retour des cases à cocher sur "#" ;
 * intégration des obèles les plus fréquents et de l’astérisme très populaire.
 
 Amélioration des groupes des lettres :
+
 * les lettres grecques latines passent du groupe 3 au groupe 2 ;
 * le v de ronde est doté d’un raccourci dans le groupe 1 ;
 * l’upsilon latin regagne sa place dans le groupe 1 de l’i grec.
