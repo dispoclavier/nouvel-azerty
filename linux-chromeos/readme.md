@@ -10,13 +10,13 @@ Plus d’informations sous le titre [Linux Mint](#linux-mint) plus bas.
 
 ## Activation sans droits d’administrateur
 
-Télécharger le dossier `Un-nouvel-AZERTY-Linux-`version`.zip` sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+Télécharger le dossier « Un-nouvel-AZERTY-Linux-[version].zip » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
 
 ### Script d’activation : mode d’emploi
 
-Le script d’activation « activer.sh » se trouve sur GitHub ([activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Un-nouvel-AZERTY-Linux-`version`.zip`.
+Le script d’activation « activer.sh » se trouve sur GitHub ([activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh)) à la racine du dossier « linux-chromeos/ », ainsi qu’à la racine du paquet distribué « Un-nouvel-AZERTY-Linux-[version].zip ».
 
-Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./activer.sh` après avoir ouvert le dossier dans un terminal.
+Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande « ./activer.sh » après avoir ouvert le dossier dans un terminal.
 
 Ce script commence par sauvegarder la disposition de clavier actuelle, afin de pouvoir par la suite proposer de revenir à la disposition de clavier habituelle. Cela est utile pour rapidement mettre fin à un test, par la même méthode qui a mis ce test en route. Cette option était prévue dès le début quand le seul moyen était l’activation manuelle documentée dans le [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt).
 
@@ -26,7 +26,7 @@ Sinon, après avoir appuyé sur Entrée, on peut choisir la variante de disposit
 
 Pour finaliser l’activation, les chaînes de caractères pour touches vives et le contenu des touches mortes sont mis en place dans le dossier personnel, le cas échéant à la suite des séquences de composition existantes.
 
-Par la suite, la disposition de clavier dernièrement utilisée parmi celles incluses dans ce nouvel AZERTY (qui inclut aussi les variantes redisposées) sera réactivée le plus facilement, après un appui sur Entrée. Ce sera la version la plus à jour disponible localement, si le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) est lancé depuis un paquetage téléchargé. Sinon ce sera la version dernièrement utilisée, mise en cache dans le dossier personnel, dans un sous-dossier `dispoclavier/activer/` au sein du sous-dossier caché `.config/`.
+Par la suite, la disposition de clavier dernièrement utilisée parmi celles incluses dans ce nouvel AZERTY (qui inclut aussi les variantes redisposées) sera réactivée le plus facilement, après un appui sur Entrée. Ce sera la version la plus à jour disponible localement, si le script [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) est lancé depuis un paquetage téléchargé. Sinon ce sera la version dernièrement utilisée, mise en cache dans le dossier personnel, dans un sous-dossier « dispoclavier/activer/ » au sein du sous-dossier caché « .config/ ».
 
 Le script d’activation propose aussi de (semi-)automatiser l’activation à l’ouverture de session selon une méthode uniformisée, utile pour compléter l’installation par l’activation, mais cette fonctionnalité est affectée par le problème mentionné ci-après.
 
@@ -42,13 +42,13 @@ Pour le navigateur de fichiers, dix logiciels sont pris en charge nativement, e
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « `Un-nouvel-AZERTY-Linux-`version`.zip` » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh). On peut aussi installer chaque fichier [manuellement](#installation-manuelle).
+Télécharger le dossier « Un-nouvel-AZERTY-Linux-[version].zip » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh). On peut aussi installer chaque fichier [manuellement](#installation-manuelle).
 
 ### Script d’installation : mode d’emploi
 
-Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier `linux-chromeos/`, ainsi qu’à la racine du paquet distribué `Un-nouvel-AZERTY-Linux-`version`.zip`.
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier « linux-chromeos/ », ainsi qu’à la racine du paquet distribué « Un-nouvel-AZERTY-Linux-[version].zip ».
 
-Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande `./installer.sh` après avoir ouvert le dossier dans un terminal.
+Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande « ./installer.sh » après avoir ouvert le dossier dans un terminal.
 
 Le script commence par analyser la situation, et propose normalement soit d’installer ces dispositions de clavier, soit de les mettre à jour ou de les désinstaller.
 
@@ -56,7 +56,7 @@ Au début de l’installation, le script demande s’il faut **redisposer des to
 
 Après la sortie d’une nouvelle version, pour **mettre à jour** ces dispositions de clavier par le script, il faut lancer celui-ci, appuyer sur Entrée, saisir le mot de passe administrateur et faire Entrée une dernière fois.
 
-Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation et d’une mise à jour. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : `$HOME/.config/dispoclavier/keycodes/`. Au cours de la désinstallation, le même fichier est sauvegardé aussi dans un dossier `sauvegarde/` créé à côté du script.
+Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation et d’une mise à jour. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : « $HOME/.config/dispoclavier/keycodes/ ». Au cours de la désinstallation, le même fichier est sauvegardé aussi dans un dossier « sauvegarde/ » créé à côté du script.
 
 Au moment d’installer ou de réinstaller ces dispositions de clavier, si le script détecte un fichier à ces deux endroits, il propose de l’utiliser.
 
@@ -68,53 +68,60 @@ En cas d’incompatibilité ou de configurations logicielles particulières, l�
 
 #### Alerte de dépannage
 
-Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans `/usr/share/X11/xkb/`, que le système a zéro tolérance sur certaines fautes de frappe, erreurs de syntaxe et incohérences comme l’utilisation d’un type de touche non défini. Pour tester des modifications dans XKB, il ne suffit pas non plus de rouvrir une application, contrairement aux modifications dans XCompose (`/usr/share/X11/locale/`),
+Par sécurité, il faut alerter, avant de suggérer de modifier manuellement des fichiers dans « /usr/share/X11/xkb/ », que le système a zéro tolérance sur certaines fautes de frappe, erreurs de syntaxe et incohérences comme l’utilisation d’un type de touche non défini. Pour tester des modifications dans XKB, il ne suffit pas non plus de rouvrir une application, contrairement aux modifications dans XCompose,
 
 Ainsi, quand une erreur dans les fichiers de configuration d’XKB a rendu le système d’exploitation inutilisable, il ne peut être débogué que depuis **un(e) autre (instance du) système** dans une autre partition ou une clé USB démarrable.
 
 #### Droits d’écriture
 
-Pour faciliter ces opérations de fichiers, le plus simple est de déverrouiller le dossier `X11/` par la commande `sudo chmod --recursive 777 /usr/share/X11`, ou d’ouvrir une instance d’administrateur du navigateur de fichiers par `sudo `(nom de l’application), par exemple `sudo nemo` ou `sudo nautilus`.
+Pour faciliter ces opérations de fichiers, le plus simple est d’ouvrir une instance d’administrateur du navigateur de fichiers par sudo [nom de l’application].
 
 #### L’installation pas à pas
 
 Compte tenu de l’[alerte](#alerte-de-d%C3%A9pannage) plus haut, et pour toute éventualité, la procédure d’installation manuelle est la suivante :
 
-1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier `Un-nouvel-AZERTY-Linux-`version`.zip`, et ajouter son contenu à la fin du fichier `X11/locale/en_US.UTF-8/Compose`.
-2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Copier ce fichier vers `/usr/share/X11/xkb/types/dispotypes`.
-3. Dans `/usr/share/X11/xkb/types/complete`, ajouter `include "dispotypes"` sur une nouvelle ligne.
-4. [dispocla_perso.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla_perso.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/dispocla_perso`.
-5. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Copier ce fichier vers `/usr/share/X11/xkb/symbols/dispocla`.
-6. [evdev-additions.xml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev-additions.xml) : Copier l’élément `<layout>` qui commence à la ligne 50 et le coller dans `/usr/share/X11/xkb/rules/evdev.xml` avant la balise `</layoutList>`.
-7. Dans `/usr/share/X11/xkb/rules/evdev`, désactiver la ligne `*		*		=	+%l[2]%(v[2]):2` en l’effaçant ou en la commentant, en la remplaçant par `// * * = +%l[2]%(v[2]):2`. Cela empêche le système d’écraser le deuxième groupe vif.
-8. [evdev.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev.c) : Mettre ce fichier à la place de `/usr/share/X11/xkb/keycodes/evdev` après avoir renommé celui-ci. Décommenter le cas échéant les définitions de touches souhaitées concernant Effacement arrière, AltFr et VerrCap.
-9. [dispoled.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispoled.c) : Copier ce fichier vers `/usr/share/X11/xkb/compat/dispoled`.
-10. Dans `/usr/share/X11/xkb/compat/complete`, ajouter `include "dispoled"` sur une nouvelle ligne.
-11. Veiller à ce que la méthode d’entrée soit XIM. Ce réglage se trouve par exemple (Ubuntu 24.04) dans `Système` > `Pays et langue` > `Système` > `Gérer les langues installées` > `Langue` > `Système de saisie au clavier` [iBus, XIM, Aucun]. Il peut aussi être effectué par la commande `im-config -n xim`.
+1. [Compose.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/Compose.yml) : Prendre le fichier d’un seul tenant, qui se trouve aussi à la racine du dossier « Un-nouvel-AZERTY-Linux-[version].zip », et ajouter son contenu à la fin du fichier « X11/locale/en_US.UTF-8/Compose ».
+2. [dispotypes.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispotypes.c) : Copier ce fichier vers « /usr/share/X11/xkb/types/dispotypes ».
+3. Dans « /usr/share/X11/xkb/types/complete », ajouter « include "dispotypes" » sur une nouvelle ligne.
+4. [dispocla_perso.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla_perso.cpp) : Copier ce fichier vers « /usr/share/X11/xkb/symbols/dispocla_perso ».
+5. [dispocla.cpp](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispocla.cpp) : Copier ce fichier vers « /usr/share/X11/xkb/symbols/dispocla ».
+6. [evdev-additions.xml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev-additions.xml) : Copier l’élément `<layout>` qui commence à la ligne 50, et le coller dans « /usr/share/X11/xkb/rules/evdev.xml » avant la balise `</layoutList>`.
+7. Dans « /usr/share/X11/xkb/rules/evdev », empêcher le système d’écraser le deuxième groupe vif, en désactivant la ligne :
+
+*		*		=	+%l[2]%(v[2]):2
+
+   Pour ce faire, à défaut de supprimer cette ligne, on peut la remplacer par :
+   
+       // * * = +%l[2]%(v[2]):2
+
+8. [evdev.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/evdev.c) : Mettre ce fichier à la place de « /usr/share/X11/xkb/keycodes/evdev » après avoir renommé celui-ci. Décommenter le cas échéant les définitions de touches souhaitées concernant Effacement arrière, AltFr et VerrCap.
+9. [dispoled.c](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/dispoled.c) : Copier ce fichier vers « /usr/share/X11/xkb/compat/dispoled ».
+10. Dans « /usr/share/X11/xkb/compat/complete », ajouter « include "dispoled" » sur une nouvelle ligne.
+11. Veiller à ce que la méthode d’entrée soit XIM. Ce réglage se trouve par exemple (Ubuntu 24.04) dans Système > Pays et langue > Système > Gérer les langues installées > Langue > Système de saisie au clavier [iBus, XIM, Aucun]. Il peut aussi être effectué par la commande « im-config -n xim ».
 
 Puis fermer la session et en rouvrir une.
 
 #### Disposition de clavier par défaut
 
-Si la disposition de clavier par défaut doit aussi être reconfigurée, ouvrir le fichier `/etc/default/keyboard` et changer les valeurs par exemple en `XKBLAYOUT="dispocla"` et `XKBVARIANT="kbfrFRs"`. Dans ce cas, on peut aussi laisser `XKBVARIANT=""` vide, car `"kbfrFRs"` est la disposition de base de ce nouvel AZERTY.
+Si la disposition de clavier par défaut doit aussi être reconfigurée, ouvrir le fichier « /etc/default/keyboard » et changer les valeurs par exemple en « XKBLAYOUT="dispocla" » et « XKBVARIANT="kbfrFRs" ». Dans ce cas, on peut aussi laisser « XKBVARIANT="" » vide, car « "kbfrFRs" » est la disposition de base de ce nouvel AZERTY.
 
 ## Commutateur de dispositions de clavier
 
-Ce nouvel AZERTY figure dans le dossier des dispositions de clavier `Français (France)` sous le nom `Français France disposition de clavier semi-automatique` et peut être ajouté aux dispositions actives. Afin de l’activer sous une version de Linux sortie entre 2018 et 2024 (ou plus), il est nécessaire de désactiver l’autre disposition, car comme expliqué plus bas, le commutateur ne fonctionne plus.
+Ce nouvel AZERTY figure dans le dossier des dispositions de clavier « Français (France) » sous le nom « Français France disposition de clavier semi-automatique » et peut être ajouté aux dispositions actives. Afin de l’activer sous une version de Linux sortie entre 2018 et 2024 (ou plus), il est nécessaire de désactiver l’autre disposition, car comme expliqué plus bas, le commutateur ne fonctionne plus.
 
 Les variantes AZERTY s’appellent :
 
-* `Breton et français disposition de clavier semi-automatique` ;
-* `Polynésie Française disposition de clavier semi-automatique` ;
-* `Afrique francophone disposition de clavier semi-automatique` ;
-* `Français Belgique disposition de clavier semi-automatique`.
+* Breton et français disposition de clavier semi-automatique ;
+* Polynésie Française disposition de clavier semi-automatique ;
+* Afrique francophone disposition de clavier semi-automatique ;
+* Français Belgique disposition de clavier semi-automatique.
 
 Les variantes redisposées QZJFGY s’appellent :
 
-* `Français France disposition de clavier semi-automatique redisposée` ;
-* `Breton et français disposition de clavier semi-automatique redisposée` ;
-* `Polynésie française disposition de clavier semi-automatique redisposée` ;
-* `Afrique francophone disposition de clavier semi-automatique redisposée`.
+* Français France disposition de clavier semi-automatique redisposée ;
+* Breton et français disposition de clavier semi-automatique redisposée ;
+* Polynésie française disposition de clavier semi-automatique redisposée ;
+* Afrique francophone disposition de clavier semi-automatique redisposée.
 
 La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va à l’encontre de cet objectif.
 
@@ -138,7 +145,7 @@ Ce nouvel AZERTY ne peut pas être installé normalement sous [Linux Mint Cinnam
 
 #### Bogue d’AltFr
 
-Ce nouvel AZERTY utilise la modificatrice de niveau 5 `ISO_Level5_Shift`, qui s’y appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant qu’`ISO_Level3_Shift` est bien distincte.
+Ce nouvel AZERTY utilise la modificatrice de niveau 5 « ISO_Level5_Shift », qui s’y appelle « AltFr ». Or sous Linux Mint 21.3, celle-ci est parfois convertie en touche AltGr, qui en tant qu’« ISO_Level3_Shift » est bien distincte.
 
 Quand il est en cours d’exécution, ce bogue désactive les ponctuations non espacées, le pavé numérique graphique disposé sur le bloc alphanumérique, l’alphabet minuscule en exposant sur touches vives ; en somme, tout ou partie des fonctionnalités disposées aux niveaux 5 à 8.
 
@@ -146,13 +153,13 @@ Quand il est en cours d’exécution, ce bogue désactive les ponctuations non e
 
 Linux Mint est parfois aussi affecté par un bogue qui transforme la bascule « VerrMod » en touche pour passer d’une disposition de clavier à une autre, parmi celles qui sont dans le commutateur.
 
-Sur ce nouvel AZERTY, « VerrMod » bascule entre `ISO_Last_Group` et `ISO_First_Group`, soit entre les deux groupes de disposition de chaque touche, qui permettent de disposer les huit positions séparément pour le mode français et le mode ASCII. Cette deuxième bascule graphique, dédiée aux chiffres, permet de dédier aux lettres la bascule traditionnelle VerrMaj, désormais VerrCap.
+Sur ce nouvel AZERTY, « VerrMod » bascule entre « ISO_Last_Group » et « ISO_First_Group », soit entre les deux groupes de disposition de chaque touche, qui permettent de disposer les huit positions séparément pour le mode français et le mode ASCII. Cette deuxième bascule graphique, dédiée aux chiffres, permet de dédier aux lettres la bascule traditionnelle VerrMaj, désormais VerrCap.
 
 Sous Linux Mint, parfois on ne peut pas verrouiller les chiffres, et le mode ASCII est alors inaccessible.
 
 #### Bogue du compilateur
 
-Un troisième bogue est situé dans le compilateur, qui sous Linux Mint ne peut plus toujours lire les redéfinitions partielles de touches. Quand une touche d’une disposition incluse dans une autre disposition est partiellement redéfinie – les autres positions sont omises ou remplacées par `NoSymbol`, qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère » –, le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte tout ou partie des touches de la rangée E et met en panne des touches sur les variantes régionales et les variantes redisposées. Il serait facile à contourner, mais vu les autres bogues, cela serait une perte de temps inutile.
+Un troisième bogue est situé dans le compilateur, qui sous Linux Mint ne peut plus toujours lire les redéfinitions partielles de touches. Quand une touche d’une disposition incluse dans une autre disposition est partiellement redéfinie – les autres positions sont omises ou remplacées par « NoSymbol », qui ne signifie pas « aucun caractère », mais « pas de nouveau caractère » –, le compilateur peut effacer toute la touche et ne renseigner que les positions redéfinies. Ce bogue affecte tout ou partie des touches de la rangée E et met en panne des touches sur les variantes régionales et les variantes redisposées. Il serait facile à contourner, mais vu les autres bogues, cela serait une perte de temps inutile.
 
 #### Bogue du commutateur
 
@@ -202,8 +209,20 @@ Aussi les chromebooks sont-ils invendables à moins d’être bradés.
 
 ## Extensions de fichiers
 
-À l’usage, la plupart des fichiers pour Linux de ce nouvel AZERTY sont sans extension. Les extensions .c, .cpp et .yml servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension `.cpp` a été choisie pour éviter `dispocla.c`. (Les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives.) Dans ce dépôt, les statistiques de langage sont de toute manière désactivées.
+À l’usage, la plupart des fichiers pour Linux de ce nouvel AZERTY sont sans extension. Les extensions « .c », « .cpp » et « .yml » servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension « .cpp » a été choisie pour éviter « dispocla.c ». (Les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives.) Les statistiques de langage sont de toute manière désactivées dans ce dépôt.
 
+## Utilisation
+
+Les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge sont présentées dans le « Mode-d-emploi-commun.md ».
+
+Ce mode d’emploi complémentaire présente uniquement ce qui est particulier à Linux.
+
+### Lettres
+
+#### Émulation de touche « ê »
+
+L’émulation de touche « ê » par la touche morte accent circonflexe fonctionne aussi en capitales, et [x] donne « êch ».
+ 
 ## Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier `linux-chromeos/` où il se trouve. Mais c’est sous le nom de `Mode-d-emploi-sous-Linux.md` qu’il est inclus dans le dossier « `Un-nouvel-AZERTY-Linux-`version`.zip` ».
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « linux-chromeos/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Linux.md » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Linux-[version].zip ».
