@@ -10,11 +10,16 @@ Mise à jour sous macOS des dispositions émulées selon Linux.
 
 ## 5.3.0 (projet)
 
-Réimplémentation des touches mortes sous Windows sur le modèle finalisé sous Linux.
+Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+
+Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
 
 ## 5.2.0 (projet)
 
-Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+Réimplémentation des touches mortes diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
+
+* Documentation :
+	* Corriger les modes d’emploi. readme.md alias Mode-d-emploi-commun.md [bdc4fb2](https://github.com/dispoclavier/nouvel-azerty/commit/bdc4fb2a3154765ce199a13ecb8ad06a1954184d), linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.md [efc166f](https://github.com/dispoclavier/nouvel-azerty/commit/efc166f66eb0370739b37d58ee253266b28030ba), windows/readme.md alias Mode-d-emploi-sous-Windows.md [dcf4231](https://github.com/dispoclavier/nouvel-azerty/commit/dcf423167fa52a6ae0b1875bf68b846817e2ae46)
 
 ## 5.1.0 (2025-05-29)
 
