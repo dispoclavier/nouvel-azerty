@@ -25,15 +25,21 @@ Ces vues ont été générées par [Keyboard Layout Editor](https://keyboard-lay
 
 ## Utilisation
 
+Ce mode d’emploi commun présente les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge. Les particularités sont évoquées dans le mode d’emploi propre à chaque système.
+
 ### Lettres
 
 La disposition de toutes les minuscules, y compris accentuées ou avec cédille, est identique à l’AZERTY traditionnel.
 
-Les différences sont dans les touches mortes. Celle de l’accent circonflexe fonctionne optionnellement comme une touche [ê] avant [k], [l], [m], [n], [p], [q], [r], [t], [v] ; « ê » s’insère ensemble avec l’une de ces lettres si le [e] n’est pas saisi avant. Cela fonctionne aussi en capitales (sauf sous Windows), et [x] donne « êch » (sauf sous Windows).
+Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr.
+
+#### Émulation de touche « ê »
+
+La touche morte de l’accent circonflexe fonctionne optionnellement comme une touche [ê] avant [k], [l], [m], [n], [p], [q], [r], [t], [v] ; « ê » s’insère ensemble avec l’une de ces lettres si le [e] n’est pas saisi avant.
 
 #### Verrouillage des capitales
 
-Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr. Quant aux capitales, aussi les É, È, Ç, À et Ù, elles sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.)
+Les capitales y compris É, È, Ç, À et Ù sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.)
 
 #### Touche morte groupe
 
@@ -273,4 +279,4 @@ L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insé
 
 ## Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dépôt de ce nouvel AZERTY où il se trouve. Mais c’est sous le nom de `Mode-d-emploi-commun.md` qu’il est inclus dans les dossiers des versions.
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dépôt de ce nouvel AZERTY où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-commun.md » qu’il est inclus dans les dossiers des versions.
