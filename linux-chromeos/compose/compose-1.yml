@@ -1123,6 +1123,10 @@
 #             "find": "<section",
 #             "replace": "<semsection"
 #           },
+#           "sortAtSign": {
+#             "find": "<at",
+#             "replace": "<aat"
+#           },
 #           "sortRightSingleQuotationMark": {
 #             "find": "<rightsinglequotemark",
 #             "replace": "<aprightsinglequotemark"
@@ -1171,6 +1175,7 @@
 #               "decodeSmallOpenO",
 #               "sortEuroSign",
 #               "sortSectionSign",
+#               "sortAtSign",
 #               "sortRightSingleQuotationMark",
 #               "prefixAsciiAndAliases",
 #               "sortSpaces",
