@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Test high surr. v5.2.0.1 Wed Jun 04 19:08 2025
 * Test dead keys v5.2      Tue Jun 03 23:09 2025
 * Update group char v5.2   Mon Jun 02 04:03 2025
 * Sync key D07, v5.1       Mon Apr 28 09:20 2025
@@ -1997,7 +1998,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_superscript>*/	DEADTRANS(	0x00A0	,L'^'	,0x203E	,0x0000	), // OVERLINE
 /*<!dead_superscript>*/	DEADTRANS(	0x202F	,L'^'	,0x203E	,0x0000	), // OVERLINE
 /*<!dead_superscript>*/	DEADTRANS(	L' '	,L'^'	,0x0305	,0x0000	), // COMBINING OVERLINE
-/*<!dead_superscript>*/	DEADTRANS(	0x200B	,L'^'	,0x0305	,0x0000	), // COMBINING OVERLINE
+/*<!dead_superscript>*/	DEADTRANS(	0x200B	,L'^'	,0xD801	,0x0000	), // High surrogate
 /*<!dead_superscript>*/	DEADTRANS(	L'0'	,L'^'	,0x2070	,0x0000	), // SUPERSCRIPT ZERO
 /*<!dead_superscript>*/	DEADTRANS(	L'1'	,L'^'	,0x00B9	,0x0000	), // SUPERSCRIPT ONE
 /*<!dead_superscript>*/	DEADTRANS(	L'2'	,L'^'	,0x00B2	,0x0000	), // SUPERSCRIPT TWO
@@ -2182,7 +2183,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 /*ACUTE&DOT_ABOVE    */	DEADTRANS(	L'S'	,0x1e65	,0x1e64	,0x0000	), // LATIN CAPITAL LETTER S WITH ACUTE AND DOT ABOVE
 /*ACUTE&DOT_ABOVE    */	DEADTRANS(	L's'	,0x1e65	,0x1e65	,0x0000	), // LATIN SMALL LETTER S WITH ACUTE AND DOT ABOVE
-/*ACUTE_ACCENT       */	DEADTRANS(	0x0020	,0x00e1	,L'O'	,0x0000	), // COMBINING ACUTE ACCENT
+/*ACUTE_ACCENT       */	DEADTRANS(	0x0020	,0x00e1	,L'O'	,0x0000	), // Effectiveness check
 /*ACUTE_ACCENT       */	DEADTRANS(	0x00a0	,0x00e1	,0x00b4	,0x0000	), // ACUTE ACCENT
 /*ACUTE_ACCENT       */	DEADTRANS(	0x202f	,0x00e1	,0x02ca	,0x0000	), // MODIFIER LETTER ACUTE ACCENT
 /*ACUTE_ACCENT       */	DEADTRANS(	L'A'	,0x00e1	,0x00c1	,0x0000	), // LATIN CAPITAL LETTER A WITH ACUTE
