@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-04T0630+0200
+# 2025-06-05T0059+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -64,13 +64,35 @@
 # dead keys, ZERO WIDTH SPACE is an alternate base character for the combining
 # diacritic.
 #
+# Automating the generation of the high surrogate input method is pointless, as
+# it is prone to suboptimal outcomes. Instead, the high surrogate intput method
+# is configured in a separate file, dead-key-convert-high-surrogates-in.txt. To
+# help with setting this file up, the required high surrogates and related dead
+# keys are listed in dead-key-convert-high-surrogates-out.txt.
+#
+# The number of required high surrogates amounts to six:
+#
+#     D801, D807,
+#     D835, D837, D83C, D83E.
+#
+# These can be dispatched among dead keys most straightforwardly as follows:
+#
+#     D801 dead_superscript (modifier letters)
+#     D807 dead_turned [dead_turned] (U+11FB0 "𑾰" LISU LETTER YHA)
+#     D835 dead_group (mathematical alphanumeric symbols)
+#     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook (Latin)
+#     D83C dead_flag, dead_greek (flag letters, squared letters)
+#     D83E dead_group (1)1, dead_group (1)2 (arrows)
+#
 # The output is directly in C, where a series of DEADTRANS function calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
-# under DEADKEY headers. Transpilation by KbdUTool goes also at the expense of
-# comments that are placed in the KLC file, that furthermore only supports EOL
-# comments, while leading block comments in addition to EOL comments are best
-# for human readability, and with long lists are more readable than grouped
-# layout.
+# under DEADKEY headers. Transpilation by KbdUTool produces C code without any
+# of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
+# comments, while leading block comments (in addition to EOL comments) are best
+# for human readability, and with long lists are more readable than the grouped
+# layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
+# and unable to support the Kana Lock levels, using the KLC format is pointless
+# and induces a significant amount of waste.
 #
 # XKB keysyms are converted as needed, without directly using keysymdef.h.
 #
@@ -94,12 +116,14 @@ print( "Opened file $output_path.\n" );
 
 print( "Processing content from $input_path to $output_path.\n" );
 
-my ( $deadkey, $input, $output_string, $output_code, $comment, $deadchar, $print, $high, $number_bad_format );
-my $multichar       = 0;
-my $half            = 0;
-my $full            = 0;
-my @high_surrogates = ();
-my @bad_format      = ();
+my ( $deadkey, $input, $output_string, $output_code, $comment, $deadchar, $print,
+     $high_su, $high_out, $number_bad_format );
+my $multichar        = 0;
+my $half             = 0;
+my $full             = 0;
+my @high_surrogates  = ();
+my @deadkey_high     = ([]);
+my @bad_format       = ();
 
 sub keysymsToDchars {
 	my ( $deadkeys ) = @_;
@@ -162,7 +186,7 @@ while ( my $line = <INPUT> ) {
 			$output_string = $3;
 			$output_code   = $4;
 			$comment       = $5;
-			
+
 			if ( $deadkey =~ /^<[^>]+>$/ ) {
 				$deadchar = $deadkey;
 				$deadchar =~ s/<(.+)>/$1/;
@@ -170,7 +194,7 @@ while ( my $line = <INPUT> ) {
 			} else {
 				$deadchar = 'dead';
 			}
-				
+
 			$input = keysymsToDchars( $input );
 			$input =~ s/U([0-9A-F]{4})/$1/;
 			$input =~ s/~spacezerowidth/200B/;
@@ -246,25 +270,28 @@ while ( my $line = <INPUT> ) {
 			$input =~ s/Oopen/0186/;
 
 			if ( $output_code =~ /[0-9A-F]{5}/ ) {
-				$high = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
-				unless ( grep( /^$high$/, @high_surrogates ) ) {
-					push( @high_surrogates, $high );
+				$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
+				unless ( grep( /^$high_su$/, @high_surrogates ) ) {
+					push( @high_surrogates, $high_su );
 				}
-				$high        = 'High surrogate: ' . $high . '; Unicode: U+' . $output_code . ' ';
+				$high_out    = 'High surrogate: ' . $high_su . '; Unicode: U+' . $output_code . ' ';
 				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
 				++$half;
+				unless ( grep( { /$deadkey/ && /$high_su/ } @deadkey_high ) ) {
+					push( @deadkey_high, ( $deadkey, $high_su ) );
+				}
 			} else {
-				$high = '';
+				$high_out = '';
 				++$full;
 			}
-			
-			$print = '/*' . $deadkey . "*/\tDEADTRANS(\t" . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high . $comment . "\n";
+
+			$print = '/*' . $deadkey . "*/\tDEADTRANS(\t" . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . '"' . $output_string . '" ' . $comment . "\n";
 		}
 	} else {
 		++$multichar;
 		$print = '';
 	}
-
+	
 	print OUTPUT $print;
 
 }
@@ -279,6 +306,7 @@ unless ( @bad_format == 0 ) {
 }
 print( "  $full potentially functional dead key sequences generated.\n" );
 print( "  $half additional dead key sequences output only a low surrogate.\n" );
-print( "  The required high surrogate(s): @high_surrogates.\n" );
+print( "  The required high surrogates are @high_surrogates.\n" );
+print( "  Their relationship to the dead keys is @deadkey_high.\n" );
 print( "  $multichar multicharacter output dead key sequences not processed.\n\n" );
 print( "Done processing.\n" );
