@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see XCompose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 5.1.0" # See #   End of line comments
+<UEFA0>                     : "version 5.2.0d" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -962,8 +962,7 @@
 #   See # # Design of math sequences
 #   See #   Streamlining
 #
-#   To achieve this goal, this list is processed and sorted as documented near
-#   the end of the notes for maintenance section.
+#   To achieve this goal, this list is processed and sorted as documented.
 #   See #   Conflictlessness check
 #
 #
@@ -1087,10 +1086,6 @@
 #             "find": "<UEFDA",
 #             "replace": "<dead_legacygrave"
 #           },
-#           "reorderAttributes": {
-#             "find": "(above|below)(comma|dot|hook|ring)",
-#             "replace": "$2$1"
-#           },
 #           "prefixDeadKeySyms": {
 #             "find": "<dead_",
 #             "replace": "<!dead_"
@@ -1166,7 +1161,6 @@
 #               "decodeBar",
 #               "decodeLegacyTilde",
 #               "decodeLegacyGrave",
-#               "reorderAttributes",
 #               "prefixDeadKeySyms",
 #               "syncMultikey",
 #               "decodeCapitalOpenE",
