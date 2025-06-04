@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-05T0059+0200
+# 2025-06-05T0150+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -56,19 +56,9 @@
 # 1 926 dead key sequences yield Latin letters or mathematical symbols encoded
 # in the SMP that Windows is unable to output in one go by a dead key. As a
 # workaround, the dead key output is restricted to the low surrogate. An input
-# method for the high surrogate should use the same dead key, followed by the
-# ZERO WIDTH SPACE U+200B, on level 4 of the space bar in French mode. In case
-# of chained dead keys, the high surrogate should be supported by any of the
-# constituent dead keys. The SMP letters in a dead key mostly share the same
-# high surrogate; if not, the least frequent ones should be in groups. On most
-# dead keys, ZERO WIDTH SPACE is an alternate base character for the combining
-# diacritic.
-#
-# Automating the generation of the high surrogate input method is pointless, as
-# it is prone to suboptimal outcomes. Instead, the high surrogate intput method
-# is configured in a separate file, dead-key-convert-high-surrogates-in.txt. To
-# help with setting this file up, the required high surrogates and related dead
-# keys are listed in dead-key-convert-high-surrogates-out.txt.
+# method for the high surrogates is provided separately at the root of related
+# dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
+# most dead keys, on level 4 of the space bar in French mode.
 #
 # The number of required high surrogates amounts to six:
 #
@@ -82,7 +72,7 @@
 #     D835 dead_group (mathematical alphanumeric symbols)
 #     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook (Latin)
 #     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83E dead_group (1)1, dead_group (1)2 (arrows)
+#     D83E dead_group dead_group (wide-headed arrows)
 #
 # The output is directly in C, where a series of DEADTRANS function calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
@@ -93,6 +83,10 @@
 # layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
 # and unable to support the Kana Lock levels, using the KLC format is pointless
 # and induces a significant amount of waste.
+#
+# As a result, any DEADTRANS function call can be overridden by a similar call,
+# with the same input and the same dead character, but another output, provided
+# that the valid call precedes in the C source.
 #
 # XKB keysyms are converted as needed, without directly using keysymdef.h.
 #
