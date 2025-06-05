@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-05T0150+0200
+# 2025-06-05T0249+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -70,9 +70,9 @@
 #     D801 dead_superscript (modifier letters)
 #     D807 dead_turned [dead_turned] (U+11FB0 "𑾰" LISU LETTER YHA)
 #     D835 dead_group (mathematical alphanumeric symbols)
-#     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook (Latin)
+#     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
 #     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83E dead_group dead_group (wide-headed arrows)
+#     D83E dead_group dead_group, or alternate mnemonics (wide-headed arrows)
 #
 # The output is directly in C, where a series of DEADTRANS function calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
