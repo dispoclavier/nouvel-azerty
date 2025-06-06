@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Add 0xD83D               Fri Jun 06 08:45 2025
 * Support high surrogates  Thu Jun 05 03:07 2025
 * Simple deadkeys v5.2.0.0 Thu Jun 05 03:07 2025
 * Update group char v5.2   Mon Jun 02 04:03 2025
@@ -590,10 +591,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 # dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
 # most dead keys, on level 4 of the space bar in French mode.
 #
-# The number of required high surrogates amounts to six:
+# The number of required high surrogates amounts to seven:
 #
 #     D801, D807,
-#     D835, D837, D83C, D83E.
+#     D835, D837, D83C, D83D, D83E.
 #
 # These can be dispatched among dead keys most straightforwardly as follows:
 #
@@ -602,7 +603,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 #     D835 dead_group (mathematical alphanumeric symbols)
 #     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
 #     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83E dead_group dead_group or alternate mnemonics (wide-headed arrows)
+#     D83D dead_doubleacute (ornamental quotation marks)
+#     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 #
 # The output is directly in C, where a series of DEADTRANS function calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
@@ -632,11 +634,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_circumflex>*/    DEADTRANS( 0x200B ,0x00EA ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_currency>*/      DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for wide-headed arrows.
 /*<!dead_diaeresis>*/     DEADTRANS( 0x200B ,0x00EB ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_doubleacute>*/   DEADTRANS( 0x200B ,0x0151 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_flag>*/          DEADTRANS( 0x200B ,0x2690 ,0xD837 ,0x0000 ), // High surrogate for flag letters, squared letters.
+/*<!dead_doubleacute>*/   DEADTRANS( 0x200B ,0x0151 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
+/*<!dead_flag>*/          DEADTRANS( 0x200B ,0x2690 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
 /*<!dead_grave>*/         DEADTRANS( 0x200B ,0x00F2 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_greek>*/         DEADTRANS( 0x200B ,0x03B5 ,0xD837 ,0x0000 ), // High surrogate for flag letters, squared letters.
-/*<!dead_group>*/         DEADTRANS( 0x200B ,0x2460 ,0xD837 ,0x0000 ), // High surrogate for mathematical alphanumeric symbols.
+/*<!dead_greek>*/         DEADTRANS( 0x200B ,0x03B5 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
+/*<!dead_group>*/         DEADTRANS( 0x200B ,0x2460 ,0xD835 ,0x0000 ), // High surrogate for mathematical alphanumeric symbols.
 /*<!dead_hook>*/          DEADTRANS( 0x200B ,0x0192 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_horn>*/          DEADTRANS( 0x200B ,0x01A1 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_invertedbreve>*/ DEADTRANS( 0x200B ,0x0213 ,0xD837 ,0x0000 ), // High surrogate for Latin.
@@ -644,11 +646,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_ogonek>*/        DEADTRANS( 0x200B ,0x01EB ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_retroflexhook>*/ DEADTRANS( 0x200B ,0x0273 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_reversed>*/      DEADTRANS( 0x200B ,0x019E ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_stroke>*/        DEADTRANS( 0x200B ,0x00F8 ,0xD837 ,0x0000 ), // High surrogate for wide-headed arrows.
+/*<!dead_stroke>*/        DEADTRANS( 0x200B ,0x00F8 ,0xD83E ,0x0000 ), // High surrogate for wide-headed arrows.
 /*<!dead_subscript>*/     DEADTRANS( 0x200B ,L'_'   ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_superscript>*/   DEADTRANS( 0x200B ,L'^'   ,0xD837 ,0x0000 ), // High surrogate for modifier letters.
+/*<!dead_superscript>*/   DEADTRANS( 0x200B ,L'^'   ,0xD801 ,0x0000 ), // High surrogate for modifier letters.
 /*<!dead_tilde>*/         DEADTRANS( 0x200B ,0x00F5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_turned>*/        DEADTRANS( 0x200B ,0x0250 ,0xD837 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
+/*<!dead_turned>*/        DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
 
 /*<!dead_abovedot>*/	DEADTRANS(	L'\''	,0x1E57	,0x2AC3	,0x0000	), // SUBSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	0x2019	,0x1E57	,0x2AC3	,0x0000	), // SUBSET OF OR EQUAL TO WITH DOT ABOVE
