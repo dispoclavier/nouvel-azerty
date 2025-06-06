@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-06T2321+0200
+# 2025-06-07T0052+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -72,7 +72,7 @@
 #     D835 dead_group (mathematical alphanumeric symbols)
 #     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
 #     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83D dead_doubleacute (ornamental quotation marks)
+#     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
 #     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 #
 # The output is directly in C, where a series of DEADTRANS function calls makes
