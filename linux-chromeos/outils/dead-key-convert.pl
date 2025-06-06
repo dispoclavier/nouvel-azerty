@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-05T0249+0200
+# 2025-06-06T2321+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -46,24 +46,24 @@
 # The issue is also documented.
 # See Compose.yml # # Order of mixed dead keys
 #
-# On 2025-06-02, 1 091 sequences have multicharacter output. Most are letters
+# On 2025-06-06, 1 085 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
 # not have precomposed equivalents. But Windows is unable to output any of them
 # by dead keys. As a consequence, the sequences are skipped throughout in order
 # to not compromise the "ê" key and "ç" key emulations. Windows users are aware
 # that composed letters are input the other way around.
 #
-# 1 926 dead key sequences yield Latin letters or mathematical symbols encoded
+# 1 915 dead key sequences yield Latin letters or mathematical symbols encoded
 # in the SMP that Windows is unable to output in one go by a dead key. As a
 # workaround, the dead key output is restricted to the low surrogate. An input
 # method for the high surrogates is provided separately at the root of related
 # dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
 # most dead keys, on level 4 of the space bar in French mode.
 #
-# The number of required high surrogates amounts to six:
+# The number of required high surrogates amounts to seven:
 #
 #     D801, D807,
-#     D835, D837, D83C, D83E.
+#     D835, D837, D83C, D83D, D83E.
 #
 # These can be dispatched among dead keys most straightforwardly as follows:
 #
@@ -72,7 +72,8 @@
 #     D835 dead_group (mathematical alphanumeric symbols)
 #     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
 #     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83E dead_group dead_group, or alternate mnemonics (wide-headed arrows)
+#     D83D dead_doubleacute (ornamental quotation marks)
+#     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 #
 # The output is directly in C, where a series of DEADTRANS function calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
@@ -81,8 +82,8 @@
 # comments, while leading block comments (in addition to EOL comments) are best
 # for human readability, and with long lists are more readable than the grouped
 # layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
-# and unable to support the Kana Lock levels, using the KLC format is pointless
-# and induces a significant amount of waste.
+# and unable to support dead characters above 0x0FFF, and the Kana Lock levels,
+# using the KLC format is pointless and induces a significant amount of waste.
 #
 # As a result, any DEADTRANS function call can be overridden by a similar call,
 # with the same input and the same dead character, but another output, provided
@@ -108,6 +109,10 @@ my $output_path = 'WINDOWS/dead-keys.c';
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
+my $log_path = 'WINDOWS/dead-key-high-log.txt';
+open( LOG, '>', $log_path ) or die $!;
+print( "Opened file $log_path.\n" );
+
 print( "Processing content from $input_path to $output_path.\n" );
 
 my ( $deadkey, $input, $output_string, $output_code, $comment, $deadchar, $print,
@@ -116,7 +121,6 @@ my $multichar        = 0;
 my $half             = 0;
 my $full             = 0;
 my @high_surrogates  = ();
-my @deadkey_high     = ([]);
 my @bad_format       = ();
 
 sub keysymsToDchars {
@@ -271,9 +275,8 @@ while ( my $line = <INPUT> ) {
 				$high_out    = 'High surrogate: ' . $high_su . '; Unicode: U+' . $output_code . ' ';
 				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
 				++$half;
-				unless ( grep( { /$deadkey/ && /$high_su/ } @deadkey_high ) ) {
-					push( @deadkey_high, ( $deadkey, $high_su ) );
-				}
+				print LOG $high_su . ', ' . $deadkey . "\n";
+				
 			} else {
 				$high_out = '';
 				++$full;
@@ -293,7 +296,9 @@ while ( my $line = <INPUT> ) {
 close( INPUT );
 print( "Closed file $input_path.\n" );
 close( OUTPUT );
-print( "Closed file $output_path.\n\n" );
+print( "Closed file $output_path.\n" );
+close( LOG );
+print( "Closed file $log_path.\n\n" );
 unless ( @bad_format == 0 ) {
 	$number_bad_format = @bad_format;
 	print( "  $number_bad_format characters are in a bad format: @bad_format.\n\n" );
@@ -301,6 +306,6 @@ unless ( @bad_format == 0 ) {
 print( "  $full potentially functional dead key sequences generated.\n" );
 print( "  $half additional dead key sequences output only a low surrogate.\n" );
 print( "  The required high surrogates are @high_surrogates.\n" );
-print( "  Their relationship to the dead keys is @deadkey_high.\n" );
+print( "  Their relationship to the dead keys is logged in $log_path.\n" );
 print( "  $multichar multicharacter output dead key sequences not processed.\n\n" );
 print( "Done processing.\n" );
