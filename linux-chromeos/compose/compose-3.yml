@@ -6232,11 +6232,6 @@
 #   MATHEMATICAL SANS-SERIF ITALIC U1D608..       = g10   .
 #   MATHEMATICAL SANS-SERIF BOLD ITALIC U1D63C..  = g10 , .
 #
-#   The high surrogate for all is U+D835, that has a one-handed input method
-#   for cross-platform and cross-layout compatibility using dead_diaeresis
-#   followed by superscript digit 2 as a base character, as both are at base
-#   level when Mode Lock is off.
-#
 #
 #+# GROUP_7
 #
