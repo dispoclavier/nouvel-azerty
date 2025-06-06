@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Correct high surrogates  Sat Jun 07 00:42 2025
 * Add 0xD83D               Fri Jun 06 08:45 2025
 * Support high surrogates  Thu Jun 05 02:55 2025
 * Test high surr. v5.2.0.1 Wed Jun 04 19:08 2025
@@ -607,7 +608,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 #     D835 dead_group (mathematical alphanumeric symbols)
 #     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
 #     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83D dead_doubleacute (ornamental quotation marks)
+#     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
 #     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 #
 # The output is directly in C, where a series of DEADTRANS function calls makes
@@ -627,17 +628,17 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 /*<!dead_abovedot>*/      DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_abovehook>*/     DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_abovering>*/     DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for wide-headed arrows.
-/*<!dead_acute>*/         DEADTRANS( 0x200B ,0x00E1 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_abovering>*/     DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_acute>*/         DEADTRANS( 0x200B ,0x00E1 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
 /*<!dead_bar>*/           DEADTRANS( 0x200B ,0x024D ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_belowcomma>*/    DEADTRANS( 0x200B ,0x0219 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_belowdot>*/      DEADTRANS( 0x200B ,0x1E05 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_breve>*/         DEADTRANS( 0x200B ,0x0115 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_caron>*/         DEADTRANS( 0x200B ,0x021F ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_cedilla>*/       DEADTRANS( 0x200B ,0x0229 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_circumflex>*/    DEADTRANS( 0x200B ,0x00EA ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_currency>*/      DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for wide-headed arrows.
-/*<!dead_diaeresis>*/     DEADTRANS( 0x200B ,0x00EB ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_circumflex>*/    DEADTRANS( 0x200B ,0x00EA ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
+/*<!dead_currency>*/      DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_diaeresis>*/     DEADTRANS( 0x200B ,0x00EB ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
 /*<!dead_doubleacute>*/   DEADTRANS( 0x200B ,0x0151 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
 /*<!dead_flag>*/          DEADTRANS( 0x200B ,0x2690 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
 /*<!dead_grave>*/         DEADTRANS( 0x200B ,0x00F2 ,0xD837 ,0x0000 ), // High surrogate for Latin.
