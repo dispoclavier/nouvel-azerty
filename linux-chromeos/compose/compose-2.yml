@@ -56,9 +56,7 @@
 #   The extended Latin F & G blocks in the SMP are supported since 2023-05-25.
 #   The issues related to SMP support do not affect Linux nor macOS, as opposed
 #   to Windows, whose Text Services Framework (TSF) is no longer able to keep
-#   the Latin script easy to input. Transpiling the related sequences to C will
-#   require a move to low surrogates from U10780 to U1DF2A (U1DFFF) along with
-#   a facility to input the D801 and D837 high surrogates.
+#   the Latin script easy to input.
 #   https://unicode.org/versions/enumeratedversions.html
 #   https://en.wikipedia.org/wiki/Latin_Extended-F
 #
@@ -182,18 +180,12 @@
 #
 #   Single-character dead keys
 #
-#   Some virtual dead keys exist for the sake of one single character. Whether
-#   such a single-character dead key can be streamlined or not depends on the
-#   length of the code point, since on Windows, characters in the Supplemental
-#   Multilingual Plane (SMP) and above require support for the high surrogate.
-#   See # # High surrogate input method
+#   Some virtual dead keys exist for the sake of one single character. All of
+#   these are streamlined by cropping the base character.
+#   See #   As this dead key exists for
 #   See # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   See # # COMBINING_ABOVE&CEDILLA
-#   for examples that are streamlined, and
 #   See # # SUPERSCRIPT&STROKE
-#   for an example among many others that are not.
-#   See #   As this dead key exists for
-#   to retrieve other examples, including the cited ones.
 #
 #
 # # X11 dead keysyms
@@ -680,11 +672,11 @@
 #
 #   Common quotation marks:
 #
-#       Acute accent: high           closing or opening   U2019, U201D
-#       See #*# ACUTE
-#
 #       Circumflex:   turned high    opening or closing   U2018, U201C
 #       See #*# CIRCUMFLEX
+#
+#       Acute accent: high           closing or opening   U2019, U201D
+#       See #*# ACUTE
 #
 #       Diaeresis:    low            opening              U201A, U201E
 #       See #*# DIAERESIS
@@ -739,13 +731,9 @@
 #
 #   Ornamental quotation marks
 #
-#   Ornamental quotation marks in the BMP are input by the corresponding diacritical dead
-#   key followed by group dead key.
-#
-#   SMP quotation mark ornaments U1F676.. are not supported, for cross-platform
-#   compatibility. But in the light of the new high surrogate input method,
-#   support could be extended.
-#   See # # High surrogate input method
+#   "❝" U275D, "❞" U275E, "❠" U2760, as well as "❛" U275B, "❜" U275C "❟" U275F,
+#   are supported in group 1, and "🙶" U1F676, "🙷" U1F677, "🙸" U1F678 are in
+#   group 2.
 #
 #
 # # Mathematical symbols
@@ -938,11 +926,9 @@
 #
 #   Following a principle used in en_US.UTF-8/Compose, the most synergistic
 #   character after the default mappings of dead keys at level 4, ZWSP,
-#   duplicates the combining diacritics, muck like conversely, the NBSP is
+#   duplicates the combining diacritics, much like conversely, the NBSP is
 #   repurposed to yield spacing diacritics as does en_US.UTF-8/Compose with
-#   ordinary space. The ZWSP input method however is not cross-platform
-#   compatible if high surrogates are in dead keys with combining diacritics.
-#   See # # High surrogate input method
+#   ordinary space.
 #
 #   "¤" U00A4 # CURRENCY SIGN is an exception to the rule.
 #
@@ -966,23 +952,6 @@
 #   keys on Windows are limited to single UTF-16 code units, excluding composed
 #   letters and characters in Supplemental Multilingual Planes. Hence, composed
 #   letters are not cross-platform compatible.
-#
-#
-# # High surrogate input method
-#
-#   U200B ZERO WIDTH SPACE (ZWSP) is used as a base character for the high
-#   surrogate of SMP letters in the dead key that they are supported in,
-#   because ZWSP is in synergy with the most comprehensive map of the dead keys
-#   at level 4 of the keys where their ASCII equivalent is at level 3.
-#
-#   In case of multiple high surrogates used in a dead key, the least
-#   frequent ones are in groups 1 and above. High surrogates required for
-#   letters in chained dead keys may be input also by any of the base dead
-#   keys, for simplicity.
-#
-#   This high surrogate input method is based on the idea 2024-12-18T2228+0100,
-#   got in the context of washing a baby marrow (in French a courgette, Italian
-#   a zucchino).
 #
 #
 # # Composed letters for languages in Togo
@@ -2439,44 +2408,44 @@
 # # SUPERSCRIPT&TURNED&RETROFLEX_HOOK
 #   Dchar: 
 #
-#   As this dead key exists for "𐞧" U107A7 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞧" U107A7 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD1><UEFD4><UEFD5>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><UEFD5><UEFD4>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD1><UEFD5><UEFD4>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><percent><braceright>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD4><UEFD1><UEFD5>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD5><UEFD1>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD4><UEFD5><UEFD1>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><percent><asciicircum>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD1><UEFD4>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD5><UEFD1><UEFD4>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><asciicircum><braceright>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD4><UEFD1>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD5><UEFD4><UEFD1>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><braceright><asciicircum>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 #
 #
 # # SUPERSCRIPT&TURNED&BREVE
 #   Dchar: 
 #
-#   As this dead key exists for "𐞡" U107A1 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞡" U107A1 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<UEFD1><UEFD5><dead_breve>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><asciicircum><percent><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<UEFD1><dead_breve><UEFD5>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<UEFD1><dead_breve><UEFD5>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><asciicircum><parenright><percent>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<UEFD5><UEFD1><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<UEFD5><UEFD1><dead_breve>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><percent><asciicircum><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<dead_breve><UEFD1><UEFD5>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<dead_breve><UEFD1><UEFD5>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><parenright><asciicircum><percent>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<UEFD5><dead_breve><UEFD1>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<UEFD5><dead_breve><UEFD1>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><percent><parenright><asciicircum>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<dead_breve><UEFD5><UEFD1>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<dead_breve><UEFD5><UEFD1>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <Multi_key><parenright><percent><asciicircum>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 #
 #
@@ -2512,58 +2481,58 @@
 # # SUPERSCRIPT&TURNED&MACRON&RETROFLEX_HOOK
 #   Dchar: 
 #
-#   As this dead key exists for "𐞧" U107A7 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞧" U107A7 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD5><dead_macron><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD1><UEFD5><dead_macron><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD1><UEFD5><dead_macron><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><percent><bar><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD1><dead_macron><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD5><UEFD1><dead_macron><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><asciicircum><bar><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><dead_macron><UEFD5><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD1><dead_macron><UEFD5><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><bar><percent><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><dead_macron><UEFD1><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD5><dead_macron><UEFD1><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><bar><asciicircum><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<dead_macron><UEFD1><UEFD5><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<dead_macron><UEFD1><UEFD5><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><bar><asciicircum><percent><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<dead_macron><UEFD5><UEFD1><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<dead_macron><UEFD5><UEFD1><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><bar><percent><asciicircum><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><UEFD5><UEFD4><dead_macron>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD1><UEFD5><UEFD4><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><percent><braceright><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD1><UEFD4><dead_macron>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD5><UEFD1><UEFD4><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><asciicircum><braceright><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><dead_macron><UEFD4><UEFD5>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD1><dead_macron><UEFD4><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><bar><braceright><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><dead_macron><UEFD4><UEFD1>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD5><dead_macron><UEFD4><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><bar><braceright><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<dead_macron><UEFD1><UEFD4><UEFD5>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<dead_macron><UEFD1><UEFD4><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><bar><asciicircum><braceright><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<dead_macron><UEFD5><UEFD4><UEFD1>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<dead_macron><UEFD5><UEFD4><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><bar><percent><braceright><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><UEFD4><UEFD5><dead_macron>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD1><UEFD4><UEFD5><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><percent><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD4><UEFD1><dead_macron>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD5><UEFD4><UEFD1><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><braceright><asciicircum><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD1><UEFD4><dead_macron><UEFD5>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD1><UEFD4><dead_macron><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><asciicircum><braceright><bar><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD5><UEFD4><dead_macron><UEFD1>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD5><UEFD4><dead_macron><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><percent><braceright><bar><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<dead_macron><UEFD4><UEFD1><UEFD5>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<dead_macron><UEFD4><UEFD1><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><bar><braceright><asciicircum><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<dead_macron><UEFD4><UEFD5><UEFD1>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<dead_macron><UEFD4><UEFD5><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><bar><braceright><percent><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD1><UEFD5><dead_macron>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD4><UEFD1><UEFD5><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><percent><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD5><UEFD1><dead_macron>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD4><UEFD5><UEFD1><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><percent><asciicircum><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD1><dead_macron><UEFD5>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD4><UEFD1><dead_macron><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><asciicircum><bar><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><UEFD5><dead_macron><UEFD1>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD4><UEFD5><dead_macron><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><percent><bar><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><dead_macron><UEFD1><UEFD5>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD4><dead_macron><UEFD1><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><bar><asciicircum><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<UEFD4><dead_macron><UEFD5><UEFD1>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<UEFD4><dead_macron><UEFD5><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <Multi_key><braceright><bar><percent><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 #
 #
@@ -2691,44 +2660,44 @@
 #   Lenient group selection
 #   Dchar: 
 #
-#   As this dead key exists for "𐞴" U107B4 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞴" U107B4 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD6><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD1><UEFD6><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD1><UEFD6><UEFD8>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD1><UEFD8><UEFD6>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD1><UEFD8><UEFD6>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><minus><backslash>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD6><UEFD1><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD6><UEFD1><UEFD8>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><backslash><asciicircum><minus>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD8><UEFD1><UEFD6>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD8><UEFD1><UEFD6>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><minus><asciicircum><backslash>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD6><UEFD8><UEFD1>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD6><UEFD8><UEFD1>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><backslash><minus><asciicircum>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD8><UEFD6><UEFD1>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD8><UEFD6><UEFD1>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><minus><backslash><asciicircum>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 #
 #
 # # SUPERSCRIPT&REVERSED&BAR&GROUP_1
 #   Dchar: 
 #
-#   As this dead key exists for "𐞴" U107B4 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞴" U107B4 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD6><UEFD8>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD1><UEFD6><UEFD8>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD1><UEFD6><UEFD8> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><backslash><minus>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD1><UEFD8><UEFD6>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD1><UEFD8><UEFD6> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><asciicircum><minus><backslash>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD6><UEFD1><UEFD8>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD6><UEFD1><UEFD8> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><backslash><asciicircum><minus>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD8><UEFD1><UEFD6>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD8><UEFD1><UEFD6> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><minus><asciicircum><backslash>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD6><UEFD8><UEFD1>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD6><UEFD8><UEFD1> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><backslash><minus><asciicircum>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<UEFD8><UEFD6><UEFD1>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+#UEFD8><UEFD6><UEFD1> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><minus><backslash><asciicircum>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 #
 #
@@ -2830,22 +2799,22 @@
 # # SUPERSCRIPT&HOOK&RETROFLEX_HOOK
 #   Dchar: 
 #
-#   As this dead key exists for "𐞍" U1078D only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞍" U1078D only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><dead_hook><UEFD4>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+#UEFD1><dead_hook><UEFD4>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<UEFD1><dead_hook><UEFD4>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><asciicircum><braceleft><braceright>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<UEFD1><UEFD4><dead_hook>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<UEFD1><UEFD4><dead_hook>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><asciicircum><braceright><braceleft>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<dead_hook><UEFD4><UEFD1>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<dead_hook><UEFD4><UEFD1>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><braceleft><braceright><asciicircum>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<dead_hook><UEFD1><UEFD4>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<dead_hook><UEFD1><UEFD4>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><braceleft><asciicircum><braceright>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<UEFD4><dead_hook><UEFD1>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<UEFD4><dead_hook><UEFD1>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><braceright><braceleft><asciicircum>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<UEFD4><UEFD1><dead_hook>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<UEFD4><UEFD1><dead_hook>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <Multi_key><braceright><asciicircum><braceleft>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 #
 #
@@ -3285,52 +3254,52 @@
 # # SUPERSCRIPT&RETROFLEX_HOOK&BREVE
 #   Dchar: 
 #
-#   As this dead key exists for "𐞝" U1079D only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞝" U1079D only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD1><UEFD4><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><braceright><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD1><dead_breve><UEFD4>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD1><dead_breve><UEFD4>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><parenright><braceright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><UEFD1><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD4><UEFD1><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><asciicircum><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD1><UEFD4>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><UEFD1><UEFD4>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><asciicircum><braceright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><dead_breve><UEFD1>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD4><dead_breve><UEFD1>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><parenright><asciicircum>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD4><UEFD1>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><UEFD4><UEFD1>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><braceright><asciicircum>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 #
 #
 # # SUPERSCRIPT&RETROFLEX_HOOK&BREVE_BELOW
 #   Dchar: 
 #
-#   As this dead key exists for "𐞝" U1079D only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞝" U1079D only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD4><dead_breve><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD1><UEFD4><dead_breve><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD1><UEFD4><dead_breve><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><asciicircum><braceright><parenright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><dead_breve><UEFD4><UEFD1>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><dead_breve><UEFD4><UEFD1>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><parenright><braceright><asciicircum>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD4><dead_breve><UEFD1>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><UEFD4><dead_breve><UEFD1>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><braceright><parenright><asciicircum>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD4><UEFD1><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#dead_breve><UEFD4><UEFD1><dead_breve> streamlined                                            : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><braceright><asciicircum><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><dead_breve><UEFD1><UEFD4>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><dead_breve><UEFD1><UEFD4>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><parenright><asciicircum><braceright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD1><dead_breve><UEFD4>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><UEFD1><dead_breve><UEFD4>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><asciicircum><parenright><braceright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD1><UEFD4><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#dead_breve><UEFD1><UEFD4><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><asciicircum><braceright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><dead_breve><dead_breve><UEFD1>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD4><dead_breve><dead_breve><UEFD1>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><parenright><parenright><asciicircum>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><dead_breve><UEFD1><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD4><dead_breve><UEFD1><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><parenright><asciicircum><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><UEFD1><dead_breve><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD4><UEFD1><dead_breve><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><asciicircum><parenright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 #
 #
@@ -3498,80 +3467,80 @@
 # # SUPERSCRIPT&SUBSCRIPT&HOOK
 #   Dchar: 
 #
-#   As this dead key exists for "𐞔" U10794 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞔" U10794 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD2><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+#UEFD1><UEFD2><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<UEFD1><UEFD2><dead_hook>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><asciicircum><underscore><braceleft>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<UEFD2><UEFD1><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<UEFD2><UEFD1><dead_hook>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><underscore><asciicircum><braceleft>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<UEFD1><dead_hook><UEFD2>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<UEFD1><dead_hook><UEFD2>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><asciicircum><braceleft><underscore>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<UEFD2><dead_hook><UEFD1>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<UEFD2><dead_hook><UEFD1>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><underscore><braceleft><asciicircum>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<dead_hook><UEFD1><UEFD2>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<dead_hook><UEFD1><UEFD2>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><braceleft><asciicircum><underscore>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<dead_hook><UEFD2><UEFD1>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<dead_hook><UEFD2><UEFD1>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <Multi_key><braceleft><underscore><asciicircum>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 #
 #
 # # SUPERSCRIPT&SUBSCRIPT&BREVE
 #   Dchar: 
 #
-#   As this dead key exists for "𐞜" U1079C only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞜" U1079C only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<UEFD1><UEFD2><dead_breve>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><asciicircum><underscore><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<UEFD1><dead_breve><UEFD2>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<UEFD1><dead_breve><UEFD2>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><asciicircum><parenright><underscore>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<UEFD2><UEFD1><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<UEFD2><UEFD1><dead_breve>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><underscore><asciicircum><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<dead_breve><UEFD1><UEFD2>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<dead_breve><UEFD1><UEFD2>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><asciicircum><underscore>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<UEFD2><dead_breve><UEFD1>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<UEFD2><dead_breve><UEFD1>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><underscore><parenright><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<dead_breve><UEFD2><UEFD1>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<dead_breve><UEFD2><UEFD1>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><underscore><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 #
 #
 # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   Dchar: 
 #
-#   As this dead key exists for "ᶧ" U1DA7 only, a character that is in the BMP,
-#   it is streamlined by cropping the base character, "I".
+#   As this dead key exists for "ᶧ" U1DA7 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
+#UEFD1><UEFD2><UEFD8>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD1><UEFD2><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><underscore><minus>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><asciicircum><underscore><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD1><UEFD8><UEFD2>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><minus><underscore>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><asciicircum><minus><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><UEFD1><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><underscore><asciicircum><minus>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><underscore><asciicircum><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD8><UEFD1><UEFD2>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><minus><asciicircum><underscore>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><minus><asciicircum><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><UEFD8><UEFD1>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><underscore><minus><asciicircum>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><underscore><minus><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD8><UEFD2><UEFD1>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><minus><underscore><asciicircum>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><minus><underscore><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 #
 #
 # # SUPERSCRIPT&STROKE
 #   Dchar: 
 #
-#   As this dead key exists for "𐞢" U107A2 only, it could be streamlined, but
-#   it is not, with respect to the ability to output the high surrogate.
+#   As this dead key exists for "𐞢" U107A2 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
-#   See # # High surrogate input method
 #
-<UEFD1><dead_stroke>                                                                           <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
+#UEFD1><dead_stroke>                                                                           <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
+<UEFD1><dead_stroke>                                                                               : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 <Multi_key><asciicircum><slash>                                                                <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
-<dead_stroke><UEFD1>                                                                           <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
+<dead_stroke><UEFD1>                                                                               : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 <Multi_key><slash><asciicircum>                                                                <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 #
 #
@@ -3803,14 +3772,15 @@
 # # COMBINING_ABOVE&CEDILLA
 #   Dchar: 
 #
-#   As this dead key exists for "ᷗ" U1DD7 only, a character that is in the BMP,
-#   it is streamlined by cropping the base character, "c".
+#   As this dead key exists for "ᷗ" U1DD7 only, it is streamlined by cropping
+#   the base character, except for the multikey equivalents.
 #   See #   Single-character dead keys
 #
+#UEFD1><UEFD1><dead_cedilla>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 <UEFD1><UEFD1><dead_cedilla>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<Multi_key><asciicircum><asciicircum><comma>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><asciicircum><asciicircum><comma>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 <dead_cedilla><UEFD1><UEFD1>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<Multi_key><comma><asciicircum><asciicircum>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><comma><asciicircum><asciicircum>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 #
 #
 # # COMBINING_ABOVE&DIAERESIS
@@ -7116,6 +7086,15 @@
 <Multi_key><apostrophe><numbersign>                                                            <a> : "ǽ" U01FD # LATIN SMALL LETTER AE WITH ACUTE
 #
 #
+# # ACUTE&GROUP_2
+#   Dchar: 
+#
+<dead_acute><UEFD0><UEFD0>                                                              <quotedbl> : "🙷" U1F677 # SANS-SERIF HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign><numbersign>                                         <quotedbl> : "🙷" U1F677 # SANS-SERIF HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_acute><UEFD0><UEFD0>                                                              <EuroSign> : "🙷" U1F677 # SANS-SERIF HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><apostrophe><numbersign><numbersign>                                         <EuroSign> : "🙷" U1F677 # SANS-SERIF HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
+#
+#
 # # ACUTE&DOT_ABOVE
 #   Dchar: 
 #
@@ -9414,10 +9393,10 @@
 #
 # # Wide-headed light barb arrows
 #
-<UEFD0><1>                                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><1>                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_1>                                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><1>                                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><1>                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_1>                                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><1>                                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
@@ -9434,10 +9413,10 @@
 <Multi_key><numbersign><1>                                                                     <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><KP_1>                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-<UEFD0><1>                                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><1>                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_1>                                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><1>                                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><1>                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_1>                                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><1>                                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
@@ -9462,10 +9441,10 @@
 #
 # # Wide-headed very heavy barb arrows
 #
-<UEFD0><2>                                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><2>                                                                     <0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_2>                                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_0> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><2>                                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><2>                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_2>                                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><2>                                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
@@ -9482,10 +9461,10 @@
 <Multi_key><numbersign><2>                                                                     <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><KP_2>                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-<UEFD0><2>                                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><2>                                                                     <5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<UEFD0><KP_2>                                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_5> : "surrogat_haut_U+D83E" # Wide-headed arrow high surrogate
+<UEFD0><2>                                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><2>                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_2>                                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><2>                                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
@@ -13407,9 +13386,6 @@
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   plus yields "⨣" U2A23, and asciitilde yields "⩯" U2A6F.
 #
-#   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
-#   for portability, but on Linux and ChromeOS it is ineffective.
-#
 <dead_circumflex>                                                                          <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <Multi_key><less>                                                                          <space> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                          <U200B> : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
@@ -13447,45 +13423,45 @@
 <dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
 <Multi_key><less>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
 <dead_circumflex>                                                                              <0> : "⁰" U2070 # SUPERSCRIPT ZERO
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <0> : "⁰" U2070 # SUPERSCRIPT ZERO
+#   Multikey conflicts with "➣" U27A3.                                                         <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <dead_circumflex>                                                                           <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
+#   Multikey conflicts with "➣" U27A3.                                                      <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <dead_circumflex>                                                                              <1> : "¹" U00B9 # SUPERSCRIPT ONE
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <1> : "¹" U00B9 # SUPERSCRIPT ONE
+#   Multikey conflicts with "•" U2022.                                                         <1> : "¹" U00B9 # SUPERSCRIPT ONE
 <dead_circumflex>                                                                           <KP_1> : "¹" U00B9 # SUPERSCRIPT ONE
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_1> : "¹" U00B9 # SUPERSCRIPT ONE
+#   Multikey conflicts with "•" U2022.                                                      <KP_1> : "¹" U00B9 # SUPERSCRIPT ONE
 <dead_circumflex>                                                                              <2> : "²" U00B2 # SUPERSCRIPT TWO
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <2> : "²" U00B2 # SUPERSCRIPT TWO
+#   Multikey conflicts with "◦" U25E6.                                                         <2> : "²" U00B2 # SUPERSCRIPT TWO
 <dead_circumflex>                                                                           <KP_2> : "²" U00B2 # SUPERSCRIPT TWO
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_2> : "²" U00B2 # SUPERSCRIPT TWO
+#   Multikey conflicts with "◦" U25E6.                                                      <KP_2> : "²" U00B2 # SUPERSCRIPT TWO
 <dead_circumflex>                                                                              <3> : "³" U00B3 # SUPERSCRIPT THREE
 #   Multikey conflicts with "❤" U2764.                                                        <3> : "³" U00B3 # SUPERSCRIPT THREE
 <dead_circumflex>                                                                           <KP_3> : "³" U00B3 # SUPERSCRIPT THREE
 #   Multikey conflicts with "❤" U2764.                                                     <KP_3> : "³" U00B3 # SUPERSCRIPT THREE
 <dead_circumflex>                                                                              <4> : "⁴" U2074 # SUPERSCRIPT FOUR
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <4> : "⁴" U2074 # SUPERSCRIPT FOUR
+#   Multikey conflicts with "▪" U25AA.                                                         <4> : "⁴" U2074 # SUPERSCRIPT FOUR
 <dead_circumflex>                                                                           <KP_4> : "⁴" U2074 # SUPERSCRIPT FOUR
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_4> : "⁴" U2074 # SUPERSCRIPT FOUR
+#   Multikey conflicts with "▪" U25AA.                                                      <KP_4> : "⁴" U2074 # SUPERSCRIPT FOUR
 <dead_circumflex>                                                                              <5> : "⁵" U2075 # SUPERSCRIPT FIVE
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <5> : "⁵" U2075 # SUPERSCRIPT FIVE
+#   Multikey conflicts with "▫" U25AB.                                                         <5> : "⁵" U2075 # SUPERSCRIPT FIVE
 <dead_circumflex>                                                                           <KP_5> : "⁵" U2075 # SUPERSCRIPT FIVE
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_5> : "⁵" U2075 # SUPERSCRIPT FIVE
+#   Multikey conflicts with "▫" U25AB.                                                      <KP_5> : "⁵" U2075 # SUPERSCRIPT FIVE
 <dead_circumflex>                                                                              <6> : "⁶" U2076 # SUPERSCRIPT SIX
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <6> : "⁶" U2076 # SUPERSCRIPT SIX
+#   Multikey conflicts with "‣" U2023.                                                         <6> : "⁶" U2076 # SUPERSCRIPT SIX
 <dead_circumflex>                                                                           <KP_6> : "⁶" U2076 # SUPERSCRIPT SIX
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_6> : "⁶" U2076 # SUPERSCRIPT SIX
+#   Multikey conflicts with "‣" U2023.                                                      <KP_6> : "⁶" U2076 # SUPERSCRIPT SIX
 <dead_circumflex>                                                                              <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
+#   Multikey conflicts with "▹" U25B9.                                                         <7> : "⁷" U2077 # SUPERSCRIPT SEVEN
 <dead_circumflex>                                                                           <KP_7> : "⁷" U2077 # SUPERSCRIPT SEVEN
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_7> : "⁷" U2077 # SUPERSCRIPT SEVEN
+#   Multikey conflicts with "▹" U25B9.                                                      <KP_7> : "⁷" U2077 # SUPERSCRIPT SEVEN
 <dead_circumflex>                                                                              <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
 #   Multikey conflicts with "♥" U2665.                                                        <8> : "⁸" U2078 # SUPERSCRIPT EIGHT
 <dead_circumflex>                                                                           <KP_8> : "⁸" U2078 # SUPERSCRIPT EIGHT
 #   Multikey conflicts with "♥" U2665.                                                     <KP_8> : "⁸" U2078 # SUPERSCRIPT EIGHT
 <dead_circumflex>                                                                              <9> : "⁹" U2079 # SUPERSCRIPT NINE
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                             <9> : "⁹" U2079 # SUPERSCRIPT NINE
+#   Multikey conflicts with "➢" U27A2.                                                         <9> : "⁹" U2079 # SUPERSCRIPT NINE
 <dead_circumflex>                                                                           <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
-#   Multikey conflicts with "❤" U2764, "♥" U2665 as of <3>, <8>.                          <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
+#   Multikey conflicts with "➢" U27A2.                                                      <KP_9> : "⁹" U2079 # SUPERSCRIPT NINE
 <dead_circumflex>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <A> : "Â" U00C2 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <a> : "â" U00E2 # LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -13636,6 +13612,10 @@
 #   suits.
 #   See # # B07-level1 comma
 #
+<dead_circumflex><UEFD0><UEFD0>                                                         <quotedbl> : "🙶" U1F676 # SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><numbersign><numbersign>                                               <quotedbl> : "🙶" U1F676 # SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<dead_circumflex><UEFD0><UEFD0>                                                         <EuroSign> : "🙶" U1F676 # SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+<Multi_key><less><numbersign><numbersign>                                               <EuroSign> : "🙶" U1F676 # SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0><UEFD0>                                                       <asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <Multi_key><less><numbersign><numbersign>                                             <asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <dead_circumflex><UEFD0><UEFD0>                                                            <comma> : "♡" U2661 # WHITE HEART SUIT
@@ -14364,9 +14344,6 @@
 #   joiner U2060 is useful to prevent these regioal indicator characters from
 #   breaking off a character of another class.
 #
-#   Supporting the high surrogate is designed for portability, but on Linux and
-#   ChromeOS it is ineffective.
-#
 #   As a diacritic, there is "͇" U0347 COMBINING EQUALS SIGN BELOW, and no
 #   variant above. As a flipped, yet spacing, counterpart there is
 #   "˭" U02ED MODIFIER LETTER UNASPIRATED, while "꞊" UA78A MODIFIER LETTER
@@ -14387,8 +14364,6 @@
 #   Multikey conflicts with "⇒" U21D2, "⪜" U2A9C.                                        <greater> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
 #   Multikey conflicts with "⪙" U2A99, "⪛" U2A9B, "⭀" U2B40.                                <less> : "⁠" U2060 # WORD JOINER
-<UEFD7>                                                                           <dead_abovering> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
-<Multi_key><equal>                                                                      <asterisk> : "surrogat_haut_U+D83C" # Regional Indicator Symbol high surrogate
 <UEFD7>                                                                                        <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><equal>                                                                             <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <UEFD7>                                                                                     <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
@@ -16517,9 +16492,6 @@
 #   but also "Ø" U00D8, "ø" U00F8 for convenience.
 #   See # # Oslash for Danish, Norwegian and other languages
 #
-#   Supporting the Mathematical Alphanumeric Symbols high surrogate is designed
-#   for portability, but on Linux and ChromeOS, this is ineffective.
-#
 <dead_diaeresis>                                                                           <space> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                                         <space> : "̈" U0308 # COMBINING DIAERESIS
 <dead_diaeresis>                                                                           <U200B> : "̈" U0308 # COMBINING DIAERESIS
@@ -16542,8 +16514,6 @@
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 #   Multikey conflicts with "᪱" U1AB1.                                                   <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
-<dead_diaeresis>                                                                     <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
-<Multi_key><colon>                                                                   <twosuperior> : "surrogat_haut_U+D835" # Mathematical Alphanumeric Symbol high surrogate
 <dead_diaeresis>                                                                               <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <Multi_key><colon>                                                                             <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <dead_diaeresis>                                                                            <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -16651,6 +16621,15 @@
 <Multi_key><colon><numbersign>                                              <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <Multi_key><colon><numbersign>                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+#
+#
+# # DIAERESIS&GROUP_2
+#   Dchar: 
+#
+<dead_diaeresis><UEFD0><UEFD0>                                                          <quotedbl> : "🙸" U1F678 # SANS-SERIF HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><numbersign><numbersign>                                              <quotedbl> : "🙸" U1F678 # SANS-SERIF HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<dead_diaeresis><UEFD0><UEFD0>                                                          <EuroSign> : "🙸" U1F678 # SANS-SERIF HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
+<Multi_key><colon><numbersign><numbersign>                                              <EuroSign> : "🙸" U1F678 # SANS-SERIF HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 #
 #
 # # DIAERESIS&ACUTE
