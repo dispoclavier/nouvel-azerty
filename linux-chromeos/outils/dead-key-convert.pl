@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-07T0052+0200
+# 2025-06-07T1751+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -81,13 +81,14 @@
 # of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
 # comments, while leading block comments (in addition to EOL comments) are best
 # for human readability, and with long lists are more readable than the grouped
-# layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
-# and unable to support dead characters above 0x0FFF, and the Kana Lock levels,
-# using the KLC format is pointless and induces a significant amount of waste.
+# layout. Given that furthermore the KLC-to-C transpiler in KbdUTool is broken,
+# as it is unable to handle dead characters above 0x0FFF, and to transpile Kana
+# Lock levels, using the KLC format is pointless and would induce a significant
+# amount of waste.
 #
 # As a result, any DEADTRANS function call can be overridden by a similar call,
 # with the same input and the same dead character, but another output, provided
-# that the valid call precedes in the C source.
+# that the valid call precedes anyhow in the source code.
 #
 # XKB keysyms are converted as needed, without directly using keysymdef.h.
 #
