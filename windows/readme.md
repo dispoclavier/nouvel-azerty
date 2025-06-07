@@ -30,6 +30,16 @@ La raison est que ce guillemet est sur la touche « ù », qui nécessite un
 
 Ce bogue n’affecte pas les variantes redisposées, où aucune lettre n’est sur la même touche qu’une ponctuation espacée, car la place du « ù » est prise par l’apostrophe, tandis que le « ù » prend la place du tiret du 6 (qui prend la place de la touche morte groupe, qui va sur la touche au-dessus à la place de la touche morte accent aigu, qui prend la place laissée par l’apostrophe).
 
+### Chiffres
+
+#### Bascule de mode
+
+##### Mode ASCII
+
+En mode ASCII, le niveau 7 ne fonctionne pas, sur les touches qui sont en mode ASCII, les touches graphiques autres que les lettres simples, et la barre d’espace. Ces touches ne donnent rien en AltGr + AltFr, mais elles fonctionnent bien en Maj + AltFr et en Maj + AltGr + AltFr.
+
+Afin de mitiger ce bogue du niveau 7, en mode ASCII, le niveau 7 est aussi redondant que possible. Ainsi les chiffres en indice sont en Maj + AltGr en plus d’être en AltGr + AltFr.
+
 ## Nom de fichier
 
 Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « windows/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Windows.md » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Windows-[version].zip ».
