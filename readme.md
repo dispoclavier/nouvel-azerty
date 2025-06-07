@@ -59,11 +59,19 @@ Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposé
 
 ### Chiffres
 
-Les chiffres sont en Minuscule, en Majuscule pour la rétrocompatibilité, et en AltGr pour la synergie avec la touche morte « groupe » tant que le clavier est en mode ASCII par la bascule VerrMod sur la touche [²]. Sinon, en mode français, les chiffres sont en AltGr, afin de libérer les places en Majuscule pour les majuscules É, È, Ç et À et pour les tirets autres que le tiret du 6 et le tiret du 8, qui restent inchangés.
+Les chiffres sont en AltGr, afin de libérer les places en Majuscule pour les majuscules É, È, Ç et À et pour les tirets autres que le tiret du 6 et le tiret du 8, qui restent inchangés.
 
-Les chiffres sont toujours aussi en AltFr, la nouvelle touche modificatrice sur la touche [><]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7], [8], [9], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M], afin que toutes les quatre grandes ponctuations ASCII soient toujours en AltFr sur les touches entre [N] et [Majuscule].
+Les chiffres sont aussi en AltFr, la nouvelle touche modificatrice sur la touche [><]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7], [8], [9], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M], afin que toutes les quatre grandes ponctuations ASCII soient toujours en AltFr sur les touches entre [N] et [Majuscule].
 
-En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en Maj + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
+#### Bascule de mode
+
+La touche [²] est une deuxième bascule graphique, appelée « VerrMod », qui met une partie du clavier en mode ASCII, toutes les touches graphiques sauf les lettres simples, et la barre d’espace.
+
+##### Mode ASCII
+
+Tant que le clavier est en mode ASCII, les chiffres sont en Minuscule, et en Majuscule pour la rétrocompatibilité, en plus de continuer d’être en AltGr pour la synergie avec la touche morte « groupe ».
+
+En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
 
 Les émojis chiffres, complétés par les émojis des deux autres touches de téléphone étoile et croisillon ou dièse, sont en AltGr + AltFr sur la rangée des chiffres en mode français, ainsi qu’en Maj + AltGr + AltFr, avec la particularité que l’émoji 10 prend la place de l’émoji chiffre 0. Non toutefois en mode ASCII, où les niveaux AltGr + AltFr et Maj + AltGr sont pris par les [indices](#exposants-et-indices).
 
