@@ -18,6 +18,10 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 
 Réimplémentation des touches mortes diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
 
+Meilleure prise en charge des demi-codets hauts.
+
+Simplification et complétion des touches mortes sous Linux en fonction de ces améliorations.
+
 * Transformations :
 	* Changer le caractère mort de la touche morte groupe de "²" U+00B2 en  "①" U+2460. kbfredis.klc [13e3cd6](https://github.com/dispoclavier/nouvel-azerty/commit/13e3cd6c9b034d914dfa24768c1221c90b9b8465)
 	* Convertir les touches mortes d’XCompose en C. dead-key-convert.pl [58d3c22](https://github.com/dispoclavier/nouvel-azerty/commit/58d3c2294dead063d317747af194fb67d0ae01ed), kbfredis.C [e2062be](https://github.com/dispoclavier/nouvel-azerty/commit/e2062be76f506149c71f61197e810e791da730dc), kbfrFRs.C [0563872](https://github.com/dispoclavier/nouvel-azerty/commit/05638729cb98e370a4d54b4df30d2dd425069011)
