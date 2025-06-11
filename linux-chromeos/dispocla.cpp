@@ -1,4 +1,4 @@
-//                       Date: 2025-05-13T0344+0200
+//                       Date: 2025-06-09T0952+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -633,7 +633,8 @@ xkb_symbols "kbfrFRs" {
 
 	modifier_map Mod3 { <MDSW> };
 
-	// See also the complete modifier map list at the bottom of this section.
+	// The complete modifier map list is located near the end.
+	// See ## Modifier maps
 
 	include "level5(lsgt_switch)"
 
@@ -1144,9 +1145,9 @@ xkb_symbols "kbfrFRs" {
 	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200D ZERO WIDTH JOINER, cursive joiner; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC02> {
-		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,             section,              U1F614 ],
-		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,             section,              U1F614 ]
-	}; // U02E2 ˢ MODIFIER LETTER SMALL S; U1F614 😔 PENSIVE FACE 4th-top sad face emoji
+		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              U1F642,              U1F614 ],
+		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              U1F642,              U1F614 ]
+	}; // U02E2 ˢ MODIFIER LETTER SMALL S; U1F642 🙂 SLIGHTLY SMILING FACE 49th-ranking emoji in 2019; U1F614 😔 PENSIVE FACE 4th-top sad face emoji
 
 	key <AC03> {
 		[                   d,                   D,           parenleft,           parenleft,  dead_invertedbreve,               U1D48,               U2300,              U1F606 ],
@@ -1273,7 +1274,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U202F ' ' NARROW NO-BREAK SPACE, no-break thin space (CLDR); U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9F '&#x202F;'; UEF9B '&nbsp;'
 
 	//
-	// Numpad
+	// # Numpad
 	//
 	// On an overlay numpad with Fn held down, the AltFr modifier must be pressed
 	// before the Fn key.
@@ -1287,7 +1288,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	//
-	// Operator keys
+	// ## Operator keys
 	//
 	// Typographic basic arithmetic symbols are featured on the `Keypad math area
 	// with non-CS operators` keypad(ossmath), © Nicolas Mailhot
@@ -1327,7 +1328,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
-	// Digit keys
+	// ## Digit keys
 	//
 	// The edit key feature on the numpad is deactivated as outdated, redundant,
 	// and wasting positions. Instead, level 2 is repurposed for double zero and
@@ -1473,7 +1474,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	//
-	// Decimal separator key
+	// ## Decimal separator key
 	//
 	// The numpad dot key can deliver all 3 separators used as decimal separator
 	// or as group separator, also called thousands separator. Both dot and comma
@@ -1538,7 +1539,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	//
-	// Modifier maps
+	// ## Modifier maps
 	//
 
 	modifier_map Control { <LCTL> };
