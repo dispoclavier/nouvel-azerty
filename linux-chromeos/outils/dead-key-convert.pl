@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-07T1751+0200
+# 2025-06-11T1008+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -75,7 +75,7 @@
 #     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
 #     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 #
-# The output is directly in C, where a series of DEADTRANS function calls makes
+# The output is directly in C, where a series of DEADTRANS macro calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
 # under DEADKEY headers. Transpilation by KbdUTool produces C code without any
 # of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
@@ -86,7 +86,7 @@
 # Lock levels, using the KLC format is pointless and would induce a significant
 # amount of waste.
 #
-# As a result, any DEADTRANS function call can be overridden by a similar call,
+# As a result, any DEADTRANS macro call can be overridden by a similar call,
 # with the same input and the same dead character, but another output, provided
 # that the valid call precedes anyhow in the source code.
 #
