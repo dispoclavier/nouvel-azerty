@@ -25,7 +25,7 @@ Ces vues ont été générées par [Keyboard Layout Editor](https://keyboard-lay
 
 ## Utilisation
 
-Ce mode d’emploi commun présente les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge. Les particularités sont évoquées dans le mode d’emploi propre à chaque système.
+Ce mode d’emploi commun présente les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge. Les particularités sont évoquées dans le mode d’emploi propre à chaque système : [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md).
 
 ### Lettres
 
@@ -35,7 +35,7 @@ Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce po
 
 #### Émulation de touche « ê »
 
-La touche morte de l’accent circonflexe fonctionne optionnellement comme une touche [ê] avant [k], [l], [m], [n], [p], [q], [r], [t], [v] ; « ê » s’insère ensemble avec l’une de ces lettres si le [e] n’est pas saisi avant.
+La touche morte de l’accent circonflexe fonctionne optionnellement comme une touche "ê" avant "k", "l", "m", "n", "p", "q", "r", "t", "v" ; "ê" s’insère ensemble avec l’une de ces lettres si le "e" n’est pas saisi avant.
 
 #### Verrouillage des capitales
 
@@ -47,7 +47,7 @@ Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche
 
 #### Touche de composition
 
-Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$]. Son symbole ISO est [⎄] U+2384. Sur ce nouvel AZERTY, son symbole est le deux-barrettes [¦] U+00A6, souvent appelé barre brisée, plus facile à afficher, saisi le plus rapidement par la touche morte tréma suivie de la contre-oblique. La touche de composition offre une méthode de saisie alternative, quoique peu intéressante, pour le o-e entrelacé par [¦][o][e] ; elle est aussi le seul moyen de saisir des lettres comme « ꜳ » U+A733.
+Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$]. Son symbole ISO est "⎄" U+2384. Sur ce nouvel AZERTY, son symbole est le deux-barrettes "¦" U+00A6, souvent appelé barre brisée, plus facile à afficher, saisi le plus rapidement par la touche morte tréma suivie de la contre-oblique. La touche de composition offre une méthode de saisie alternative, quoique peu intéressante, pour le o-e entrelacé par [¦][o][e] ; elle est aussi le seul moyen de saisir des lettres comme « ꜳ » U+A733.
 
 #### Touches mortes spécialisées
 
@@ -109,7 +109,7 @@ Surtout, tous les symboles ASCII sauf la virgule et le point sont désormais dis
 
 Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur la gauche, crochets et accolades sur la droite, ces dernières sur [I] et [O] pour respecter l’anatomie de la main, les crochets en dessous sur [K] et [L] pour la cohérence et la synergie avec les points de suspension sur AltGr + [ù], les parenthèses en regard sur [D] et [F], sous le symbole euro sur [E], à la suite du symbole dollar sur [S], et au-dessus des symboles inférieur/supérieur ou crochets pointus, qui sont disposés sur [C] et [V] à la suite de l’oblique sur [W] et de l’astérisque sur [X], pour les synergies requises en langages informatiques, au niveau des balises en SGML/HTML/XML et des commentaires (en blocs) C/C++/CSS/PHP.
 
-D’autres symboles ASCII sont disposés sur les places vacantes avec des mnémoniques alphabétiques ou graphiques : la perluète [&] sur [P], le croisillon [#] sur [Q], le symbole pour cent [%] sur [Z], le circonflexe ASCII [^] sur [A], le tilde [~] sur [T], la contre-oblique [\\] sur [R], la barre verticale ou tuyau [|] sur [M] parce que c’est l’équivalent en composition de la touche morte macron, le symbole égal [=] sur [B], l’accent grave ASCII [`] sur [N], le tiret-moins [-] sur [G], le signe plus [+] sur [H], et enfin le tiret bas [_] sur [J], et l’apostrophe ASCII ['] sur [U].
+D’autres symboles ASCII sont disposés sur les places vacantes avec des mnémoniques alphabétiques ou graphiques : la perluète "&" sur [P], le croisillon "#" sur [Q], le symbole pour cent "%" sur [Z], le circonflexe ASCII "^" sur [A], le tilde "~" sur [T], la contre-oblique "\\" sur [R], la barre verticale ou tuyau "|" sur [M] parce que c’est l’équivalent en composition de la touche morte macron, le symbole égal "=" sur [B], l’accent grave ASCII "`" sur [N], le tiret-moins "-" sur [G], le signe plus "+" sur [H], et enfin le tiret bas "_" sur [J], et l’apostrophe ASCII "'" sur [U].
 
 Pour les quatre grandes ponctuations après la touche du [N], le point d’interrogation, le point d’exclamation, le deux-points et le point-virgule, la disposition varie légèrement entre les modes français et ASCII :
 * En mode français, toutes sauf le point-virgule sont aussi en AltGr sur la touche où elles sont en Majuscule avec espace, et en AltFr sans espace. Le point-virgule cède sa place en AltGr au symbole paragraphe, afin que celui-ci soit en synergie avec les chiffres, pour la rétrocompatibilité avec le symbole paragraphe sur l’AZERTY traditionnel, où il est pareillement en synergie avec les chiffres, mais en Majuscule.
@@ -127,7 +127,7 @@ Les indices de tous les dix chiffres sont présents uniquement en mode ASCII, ma
 
 Ces exposants et indices servaient autrefois à composer des fractions ordinaires au-delà des quelques fractions précomposées d’Unicode, tant que la barre de fraction n’était pas encore implémentée comme elle était conçue, ou dans les logiciels où elle ne l’est toujours pas. Cela permet de coder en dur toutes les fractions ordinaires, au-delà des fractions précomposées qui sont en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est sur [/] en synergie avec les indices en AltGr + AltFr, et en mode ASCII, avec les exposants en Maj + AltFr (en mode français, c’est le deux-points sans espace).
 
-En matière d’exposants, les minuscules des lettres de l’alphabet de base sont aussi prises en charge sur touches vives, en Maj + AltFr, chacune sur la touche de sa lettre de base. car ces exposants servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux « ᵈ, ᵉ, ʳ, ˢ », dont le plus fréquent, « ᵉ », est aussi en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Cela fonctionne aussi pour les lettres diacritées, car les accents peuvent être ajoutés même sur des exposants, pour peu que la police de caractères les prenne en charge. Après l’appui sur la touche morte correspondante, il ne manque plus que d’appuyer sur la barre d’espace.
+En matière d’exposants, les minuscules des lettres de l’alphabet de base sont aussi prises en charge sur touches vives, en Maj + AltFr, chacune sur la touche de sa lettre de base. car ces exposants servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux "ᵈ", "ᵉ", "ʳ", "ˢ", dont le plus fréquent, "ᵉ", est aussi en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Cela fonctionne aussi pour les lettres diacritées, car les accents peuvent être ajoutés même sur des exposants, pour peu que la police de caractères les prenne en charge. Après l’appui sur la touche morte correspondante, il ne manque plus que d’appuyer sur la barre d’espace.
 
 ### Barre d’espace
 
@@ -149,7 +149,7 @@ Les symboles pour cent et micro, le symbole livre et la touche morte tréma cèd
 
 #### Exposants et indices additionnels
 
-En mode ASCII, quand les chiffres en indice sont en Maj + AltGr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le « ₋ » sur la touche [)], le « ₊ » sur la touche [=]. S’y ajoutent le symbole égal en indice « ₌ » sur [$], et les parenthèses en indice « ₍ » sur [ù] et « ₎ » sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient compléter l’ensemble. Pareil pour les chiffres en exposant en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
+En mode ASCII, quand les chiffres en indice sont en Maj + AltGr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le "₋" sur la touche [)], le "₊" sur la touche [=]. S’y ajoutent le symbole égal en indice "₌" sur [$], et les parenthèses en indice "₍" sur [ù] et "₎" sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient compléter l’ensemble. Pareil pour les chiffres en exposant en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
 
 #### Opérateurs arithmétiques
 
@@ -157,7 +157,7 @@ En AltFr, les chiffres sont accompagnés d’opérateurs non-ASCII et de symbole
 
 ##### Opérateur point
 
-L’opérateur point « ⋅ » U+22C5 est sur AltGr + AltFr + [X], et aussi dans le groupe 1 du deux-points, et dans le groupe 4 du point.
+L’opérateur point "⋅" U+22C5 est sur AltGr + AltFr + [X], et aussi dans le groupe 1 du deux-points, et dans le groupe 4 du point.
 
 ##### Barre de fraction
 
@@ -167,7 +167,7 @@ La partie entière peut être séparée par le signe plus invisible U+2064 sur A
 
 ##### Symbole rapport
 
-Contrairement à un certain nombre de doublons inutiles, le symbole rapport « ∶ » U+2236 ne ressemble que superficiellement à un deux-points. Voici le symbole rapport et le deux-points côte à côte : « ∶: ».
+Contrairement à un certain nombre de doublons inutiles, le symbole rapport "∶" U+2236 ne ressemble que superficiellement à un deux-points. Voici le symbole rapport et le deux-points côte à côte : « ∶: ».
 
 Car selon les polices, le symbole rapport est surélevé au-dessus de la ligne de base, et il est un peu plus grand afin de se centrer sur les chiffres (« 2∶3 »), non sur les minuscules comme le deux-points (« a:b »).
 
@@ -191,15 +191,15 @@ L’espace suivie du gluon qui est le caractère régulier pour empêcher un ret
 
 L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word parce que l’espace insécable y est justifiante uniquement dans Word 2013.
 
-L’entité nommée de l’espace insécable « &‍nbsp; » est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
+L’entité nommée de l’espace insécable "&‍nbsp;" est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
 
-En mode ASCII, la référence de caractère numérique de l’espace fine insécable « &‍#x202F; » est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
+En mode ASCII, la référence de caractère numérique de l’espace fine insécable "&‍#x202F;" est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
 
 #### Séquences d’échappement
 
 Les entités nommées des symboles « < » et « > », soit « &‍lt; » et « &‍gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
 
-Les entités nommées des symboles « " » et « ' », soit « &‍quot; » et « &‍apos; » (moins utilisée), sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] ou [U].
+Les entités nommées des symboles « " » et « ' », soit « &‍quot; » et « &‍apos; » (moins utilisée), sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] (où le symbole euro prend la place du guillemet double générique "\""), ou [U].
 
 #### Références de caractères
 
@@ -257,13 +257,13 @@ Quelques autres problèmes laissés en suspens sur [Le Robert](https://dictionn
 
 Grâce au fait que les guillemets chevrons existent aussi en version simple, l’inclusion d’une citation dans une autre citation ne nécessite plus le recours aux « guillemets anglais », ni la répétition des guillemets chevrons doubles, avec omission du deuxième d’affilée en cas de collision de fins de citation (comme recommandé dans le *Lexique*).
 
-Quitte à se résigner à l’emploi de « guillemets anglais », autant encastrer les guillemets à l’anglaise, ou à l’américaine, mais à la française. À l’anglaise au sens où les guillemets de second (ou deuxième) niveau sont simples si les guillemets de premier niveau (ou rang) sont doubles, comme c’est le cas en écrivant à l’américaine. À la française au sens où les guillemets sont des guillemets chevrons.
+Quitte à se résigner à l’emploi de « guillemets anglais », autant encastrer les guillemets à l’anglaise, ou à l’américaine, mais à la française. À l’américaine au sens où les guillemets de second (ou deuxième) niveau sont simples si les guillemets de premier niveau (ou rang) sont doubles, comme c’est le cas aux États-Unis. À la française au sens où les guillemets sont des guillemets chevrons.
 
 En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscule sur les touches [^] et [$], au-dessus des touches [ù] et [*] où les guillemets chevrons doubles sont disposés en Majuscule. Ces quatre guillemets sont déjà espacés à l’aide de la fine. Sur les mêmes touches en AltFr, les mêmes guillemets sont sans espace.
 
 #### Guillemets en langues voisines
 
-En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin « » » sur [*], ou « › » sur [$], et en finissant par le guillemet pointant vers le début « « » sur [ù], ou « ‹ » sur [^].
+En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin "»" sur [*], ou "›" sur [$], et en finissant par le guillemet pointant vers le début "«" sur [ù], ou "‹" sur [^].
 
 (On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » ou « supérieur à », réfléchis eux aussi, si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
 
@@ -275,13 +275,13 @@ L’usage des guillemets chevrons simples pour les citations incluses permet de 
 
 Plutôt que les guillemets doubles génériques de la touche [3"], les guillemets de distanciation et les guillemets en anglais – que ce soit en anglais britannique ou en anglais américain – sont les guillemets apostrophes doubles (distanciation en français, premier niveau en anglais américain) ou simples (premier niveau en anglais britannique), dont les ouvrants en français et en anglais sont dans la touche morte accent circonflexe, et les fermants, dans la touche morte accent aigu sur la touche à côté, [$].
 
-En retour, ce système de guillemets de distanciation permet de réserver les guillemets chevrons aux citations. À la clé, les textes gagnent en univocité, et partant, en [clarté](https://www.ledevoir.com/societe/488139/mises-aux-points-les-antiguillemets-comme-symboles-de-la-postverite).
+En retour, ce système de guillemets de distanciation permet de réserver les guillemets chevrons aux citations. À la clé, les textes gagnent en univocité, et partant, en clarté, comme l’a expliqué un article paru dans le journal québécois [Le Devoir](https://www.ledevoir.com/societe/488139/mises-aux-points-les-antiguillemets-comme-symboles-de-la-postverite).
 
 ## Notes techniques
 
 ### Usage du liant
 
-Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [W] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], et le signe plus invisible U+2064 sur AltGr + AltFr + [H]. Les deux premiers sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. Il y a aussi le gluon dans le même groupe du tiret du 6 sur [G]. Le signe plus invisible est aussi pris en charge par composition « ¦&+ » dans le cadre des symboles mathématiques.
+Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [W] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], le signe plus invisible U+2064 sur AltGr + AltFr + [H], et le séparateur invisble U+2063 sur AltGr + AltFr + [,]. Les deux premiers sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. Il y a aussi le gluon dans le même groupe du tiret du 6 sur [G]. Le signe plus invisible est aussi pris en charge par composition « ¦&+ » dans le cadre des symboles mathématiques.
 
 L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’espace nulle.
 
