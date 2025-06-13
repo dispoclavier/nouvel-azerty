@@ -213,15 +213,15 @@ Aussi les chromebooks sont-ils invendables à moins d’être bradés.
 
 ## Utilisation
 
-Les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge sont présentées dans le « Mode-d-emploi-commun.md ».
+Les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge sont présentées dans le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
 
 Ce mode d’emploi complémentaire présente uniquement ce qui est particulier à Linux.
 
 ### Lettres
 
-#### Émulation de touche « ê »
+#### Émulation de touche "ê"
 
-L’émulation de touche « ê » par la touche morte accent circonflexe fonctionne aussi en capitales, et [x] donne « êch ».
+L’émulation de touche "ê" par la touche morte accent circonflexe fonctionne aussi en capitales, et "x" donne "êch".
  
 ## Nom de fichier
 
