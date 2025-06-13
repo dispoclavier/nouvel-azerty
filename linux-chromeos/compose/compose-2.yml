@@ -797,9 +797,9 @@
 #   dead key output is universal.
 #
 #   The topmost reason for picking the dead character from the dead key output
-#   is that an Ê-key emulation on the circumflex accent dead key requires ê as
-#   a dead character in dead_circumflex, and so does the Ç-key emulation for ç
-#   in dead_cedilla. But this is limited to Windows.
+#   is that an "Ê" key emulation on the circumflex accent dead key requires "ê"
+#   as a dead character in dead_circumflex, and so does the "Ç" key emulation
+#   require "ç" in dead_cedilla. But this is limited to Windows.
 #   See #*# CIRCUMFLEX
 #   See #*# CEDILLA
 #
@@ -13289,13 +13289,13 @@
 #   See # # Quotation mark input method
 #   See # # Comma-shaped quotation marks
 #
-#   The polygrams -êk-, -êl-, -êm-, -ên-, -êp-, -êq-, -êr-, -êt-, -êv-, -êch-
+#   The polygrams "êk", "êl", "êm", "ên", "êp", "êq", "êr", "êt", "êv", "êch"
 #   make dead_circumflex behave like an Ê key in most cases by using the fact
 #   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
 #   letters with circumflex accent, and most of these are not in usage either
 #   with combining circumflex as known composed letters. Those that are, will
 #   need to be overridden, so as to prioritize the Ê key emulation sequences.
-#   French usage information: Courtesy _La fée des lettres_.
+#   French usage information by courtesy of _La fée des lettres_.
 #   https://www.motsavec.com
 #
 #   This is the full list of composed letters unsupported for the sake of Ê key
@@ -13306,7 +13306,8 @@
 #       <dead_circumflex><N> : "N̂" # U004E U0302 LATIN CAPITAL LETTER N WITH CIRCUMFLEX: Min Nan
 #       <dead_circumflex><n> : "n̂" # U006E U0302 LATIN SMALL LETTER N WITH CIRCUMFLEX: Min Nan
 #
-#   Courtesy https://www.frathwiki.com/Circumflex
+#   By courtesy of FrathWiki.
+#   https://www.frathwiki.com/Circumflex
 #
 #   For maintainability, these overridden sequences have been removed.
 #   https://github.com/dispoclavier/nouvel-azerty/commit/f1d465e92b885ae0659bfaa5d3d418f18b7f2b13
@@ -13353,7 +13354,7 @@
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
 #   U017F LATIN SMALL LETTER LONG S, in group 3 of s, has an additional input
-#   method by <dead_circumflex><f>, since French has no words including an -êf-
+#   method by <dead_circumflex><f>, since French has no words including an "êf"
 #   digram. Plus, <dead_circumflex><dollar> also yields this small letter.
 #
 #   "⁂" U2042 ASTERISM is also expected to be supported by dead_circumflex,
@@ -13367,7 +13368,7 @@
 #   See #*# CIRCUMFLEX
 #
 #   The doubled diacritic "᪰" U1AB0 has case insensitive "d" as base
-#   characters, thanks to French not having any word with -êd-.
+#   characters, thanks to French not having any word with "êd".
 #
 #   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
 #   equal as an ASCII alternative with "double" semantics, for consistent
@@ -13375,7 +13376,7 @@
 #   See #*# FLAG
 #
 #   As "B" has not been encoded with circumflex, and French doesn’t have any
-#   word with -êb-, <dead_circumflex><B> and <dead_circumflex><b> may be used
+#   word with "êb", <dead_circumflex><B> and <dead_circumflex><b> may be used
 #   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
 #   "ŭ" U016D (used in Esperanto). Likewise, "U" mnemonics foster the use of
 #   Ugrave for the same output (by lack of something else for the time being),
@@ -16052,9 +16053,9 @@
 #   Multi_key: ¦,
 #   Dchar: "ç" U00E7
 #
-#   The polygrams make the dead_cedilla key behave like a "Ç" key in all
-#   relevant cases, along the lines of the Ê-key emulation, for the
-#   Canadian French QWERTY variants.
+#   The polygrams with "a", "o" and "u" make the dead_cedilla key behave like a
+#   "Ç" key in all relevant cases, along the lines of the "Ê" key emulation,
+#   for the Canadian French QWERTY variant.
 #   See #*# CIRCUMFLEX
 #
 #   Cedilla has no reported usage outside Unicode precomposed letters.
