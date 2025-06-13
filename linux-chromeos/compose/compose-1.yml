@@ -403,7 +403,14 @@
 #   https://www.unicode.org/mail-arch/unicode-ml/y2015-m06/0220.html
 #
 #   In mainstream high-quality publishing, referred to as new school, no-break
-#   thin space is used throughout.
+#   thin space is used throughout. This new school is implicitly represented by
+#   Éditions Le Robert, recommending thin space to space out the colon, the
+#   most outstanding punctuation that old school spaces out using a justifying
+#   space. Le Robert states: “Le deux-points est précédé d'une espace fine et
+#   suivi d'une espace normale” (the colon is preceded by a thin space and
+#   followed by a normal space). And on the MacGeneration forum, claude72 has
+#   contributed an explicit documentation of French new school.
+#   https://dictionnaire.lerobert.com/guide/ponctuation-et-espace
 #   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
 #
 #   Imprimerie nationale, France does not formally categorize punctuation marks
@@ -9203,7 +9210,7 @@
 #   longer sequences starting the same way. This is consistent with the way
 #   TeX control words are terminated.
 #
-#   Courtesy Scott Pakin, David Carlisle and Alexander Holt,
+#   By courtesy of Scott Pakin, David Carlisle and Alexander Holt,
 #   The Comprehensive LaTeX Symbol List, 19 January 2017
 #   http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf
 #
