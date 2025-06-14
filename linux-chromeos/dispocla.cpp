@@ -1,4 +1,4 @@
-//                       Date: 2025-06-09T0952+0200
+//                       Date: 2025-06-14T0303+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -105,7 +105,7 @@
 // ASCII mode is not limited to ASCII, as row E and keys D12, C11, C12 output
 // subscript digits, signs and punctuation not there in default mode, where
 // keypad emoji are easier accessed instead. ASCII symbols printed on these
-// keys are also accessible in default mode on level 4 as a fallback commodity,
+// keys are also accessible in default mode at level 4 as a fallback commodity,
 // but not in ASCII mode.
 //
 // The key used for this additional graphic toggle is TLDE, consistently with
@@ -178,8 +178,8 @@
 //
 // However, keyboard layouts using a scheme like in this file have a level 5
 // modifier located lefthand so as to be usable for an extended numpad below
-// the 7 8 9 0 keys, where embedded numpads on compact keyboards are located,
-// too.
+// the "7", "8", "9", "0" keys, where embedded numpads on compact keyboards
+// are located, too.
 //
 // The repurposed level 5 modifier is called AltFr by analogy with AltGr and
 // to account for its origin on French keyboard layouts, like Microsoft also
@@ -430,13 +430,13 @@
 // punctuation characters, ideally less. This requirement can be met in 2 ways:
 //
 // a. Synergistic punctuation spacing.
-//    Punctuation characters and no-break space are mapped on the same level.
+//    Punctuation characters and no-break space are mapped at the same level.
 //    That can be level 2, level 3 or level 5. Some layouts feature angle
-//    quotation marks and NBSP on level 3, while 2-parts ASCII punctuation
-//    (?!:;) is mostly on level 1 or on level 2, where the space bar yields
-//    breaking space except on the French BÉPO layout where 2-parts punctuation
-//    is on level 2 along with no-break thin space NNBSP on the space bar as of
-//    v1.1; NBSP in v1.0.
+//    quotation marks and NBSP at level 3, while 2-parts ASCII punctuation
+//    (?!:;) is mostly at level 1 or at level 2, where the space bar yields
+//    breaking space, except on the French BÉPO layout, where 2-parts ASCII
+//    punctuation is at level 2 along with no-break thin space NNBSP on the
+//    space bar as of v1.1; NBSP in v1.0.
 //    https://bepo.fr/wiki/Version_1.1rc1/Touches_vives/Espaces
 //
 // b. Semi-automatic punctuation spacing.
@@ -512,11 +512,11 @@
 //
 // The NARROW NO-BREAK SPACE is used mainly as a group separator, for SI/BIPM
 // conformant representation of numeric values with more than 3 digits before
-// the comma. That brings the need to map NNBSP and digits on the same level.
+// the comma. That brings the need to map NNBSP and digits at the same level.
 // The first possible level is level 3 (when row E has diacriticized letters)
-// and the next possible level is level 5. The digits on level 3 are used for
+// and the next possible level is level 5. The digits at level 3 are used for
 // short numbers followed by a word, where the justifying NO-BREAK SPACE must
-// be used between the number and word. The digits on level 5 are mapped both
+// be used between the number and word. The digits at level 5 are mapped both
 // the traditional way on row E, and in a pad below 7 8 9 with 0 on N, and 00
 // on B, for easy input of numbers grouped into triads by the group separator
 // NARROW NO-BREAK SPACE, which is a no-break thin space and as such is fixed
@@ -535,12 +535,13 @@
 // https://www.open-std.org/cen/tc304/Euro/Euroreport.html
 //
 // To achieve this, quotedbl is mapped on that key in order to be replaced by
-// the euro sign due to being redundant, since quotedbl is on the base level,
+// the euro sign due to being redundant, since quotedbl is at the base level,
 // in French mode and in ASCII mode alike, keys E03 and D11, respectively.
 //
 // Additionally, EuroSign is tied to quotedbl by obvious mnemonics based on the
 // double bar in the round (C-like) E, that the double acute accent on key E,
-// level 4, also resonates with. Its Multi_key equivalent is quotedbl.
+// level 4, also resonates with, the more as its Multi_key equivalent is
+// quotedbl.
 //
 // The apparent isolation of quotedbl, away from apostrophe / single quote,
 // benefits ergonomics of backslash in synergy with digits, while apostrophe is
@@ -552,8 +553,8 @@
 //
 // The euro sign is attached to the preceding numeric value using NNBSP, also
 // used before abbreviated measurement units. As a consequence, the euro sign
-// needs to be mapped on level 5 alongside, in synergy with NNBSP, and so are
-// the dollar, pound, and yen signs, the latter two not on level 3 though.
+// needs to be mapped at level 5 alongside, in synergy with NNBSP, and so are
+// the dollar, pound, and yen signs, the latter two not at level 3 though.
 //
 // The linked page (https://www.open-std.org/cen/tc304/Euro/Euroreport.html)
 // is from 1998 when the only “hard space” was NBSP, Since 1999 we have a NNBSP
@@ -562,11 +563,11 @@
 // is justifying on the web and in MS Word 2013.
 // https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b
 //
-// The fact that quotedbl is on the E key, and apostrophe is on the U key based
+// The fact that quotedbl is on the "E" key, and apostrophe is on the "U" key based
 // on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonic if considering the EU
 // initialism. Also, both quotedbl and apostrophe have their HTML named entity,
-// frequent `&quot;` and rare `&apos;`, on level 8 (Shift + AltGr + AltFr) like
-// ampersand, less and greater, the latter two on level 7 (AltGr + AltFr).
+// frequent `&quot;` and rare `&apos;`, at level 8 (Shift + AltGr + AltFr) like
+// ampersand, less and greater, the latter two at level 7 (AltGr + AltFr).
 //
 //
 // ## Keyboard levels and groups
@@ -605,7 +606,7 @@
 // goes at least up to 4. That is why groups are a 0-based array of 13 groups,
 // where index 0 is the default layout. Digits 0..2 are used for groups 10..12.
 //
-// Given access to uppercase must be intuitive, digits are mapped on level 3.
+// Given access to uppercase must be intuitive, digits are mapped at level 3.
 //
 
 default partial alphanumeric_keys modifier_keys keypad_keys
@@ -714,8 +715,8 @@ xkb_symbols "kbfrFRs" {
 	// on C11.
 	//
 	// The letter apostrophe "ʼ" U02BC, used in Breton as part of the trigraph
-	// "cʼh", is used in the Breton trigraph <c_h> and is featured in group 1 of
-	// the ASCII apostrophe as well as in group 1 of the punctuation apostrophe.
+	// "cʼh", is consistently used in the Breton trigraph <c_h> and is featured
+	// in group 1 of the ASCII apostrophe and its alias punctuation apostrophe.
 	//
 	// Mapping both the punctuation apostrophe and the ASCII apostrophe on two
 	// base level positions is usually frowned upon, but this is the only way
@@ -727,7 +728,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ## Level-5 numpad
 	//
-	// A graphics-only, extended numpad on level 5 is consistent with the overlay
+	// A graphics-only, extended numpad at level 5 is consistent with the overlay
 	// numpad found on many compact keyboards where a dedicated numpad is missing
 	// and is emulated using 15 keys of the alphanumeric block. However, only the
 	// non-zero digits are consistent, while zero is moved from B07 to B06 and is
@@ -753,7 +754,7 @@ xkb_symbols "kbfrFRs" {
 	// front of currency symbols like it is in front of measurement units.
 	//
 	// The punctuation keys B07..B10, C11..C12, D11..D12 are used for the eight
-	// unspaced big punctuation marks that have spaced-out support on level 2. In
+	// unspaced big punctuation marks that have spaced-out support at level 2. In
 	// ASCII mode, the ASCII subset on B07..B10 is supported consistently for a
 	// stable user experience, as opposed to duplicating comma on B07 and period
 	// on B08 to seemingly improve the graphic numpad, for a level-1 and keycap
@@ -784,7 +785,7 @@ xkb_symbols "kbfrFRs" {
 	// ## Backward compatibility
 	//
 	// In an attempt to mitigate inevitable disruption, all letter keys are kept
-	// as-is, including diacriticized letter keys, all digits are on level 5 for
+	// as-is, including diacriticized letter keys, all digits are at level 5 for
 	// a close emulation of left Shift, and the upper-row ASCII symbols and dead
 	// keys are moved to level 4 except the at sign, now on unshifted E11, and an
 	// instance of asciicircum, moved to level 4 of the dead key D11 instead. The
@@ -797,20 +798,20 @@ xkb_symbols "kbfrFRs" {
 	// approach moving all four level-2 positions to level 6.
 	//
 	// Another no-go would be to maintain "¤" U00A4 on D12, as this would require
-	// mapping it on level 8. This would be both difficult and unconsistent since
+	// mapping it at level 8. This would be both difficult and unconsistent since
 	// the level-8 positions are used for the shortcut characters, with Control
 	// and with the level-8 input method for transparency on all these four keys.
 	//
 	//
 	// ## Format controls
 	//
-	// "⁄" U2044 FRACTION SLASH is not mapped on level 7 of the F key, because it
-	// is even more intuitively on level 7 of the slash key B09, and also on the
-	// then-available level 6 thereof when the keyboard is in ASCII mode. That is
-	// the reason why duplicating U2044 on the F key would be a nuisance. Instead
-	// of wasting this position for the sake of alphabetic mnemonics, using it as
-	// a more ergonomic way to input U2013 EN DASH, recommended and actually used
-	// for interval notation, is advisable.
+	// "⁄" U2044 FRACTION SLASH is not mapped at level 7 of the "F" key, because
+	// it is even more intuitively at level 7 of the slash key B09, and also at
+	// the then-available level 6 thereof when the keyboard is in ASCII mode.
+	// That is the reason why duplicating U2044 on the "F" key would be a
+	// nuisance. Instead of wasting this position for the sake of alphabetic
+	// mnemonics, using it as a more ergonomic way to input U2013 EN DASH,
+	// recommended and actually used for interval notation, is advisable.
 	//
 	// In case of mixed numbers, using the fraction slash as intended requires an
 	// invisible character to separate the whole part and the fractional part, as
@@ -834,7 +835,7 @@ xkb_symbols "kbfrFRs" {
 	//     to represent exactly this type of semantic concept, but something like
 	//     U+200C ZERO WIDTH NON-JOINER or U+2060 WORD JOINER will also work.”
 	//
-	// This invisible plus U2064 is most mnemonically on level 7 of C06, the key
+	// This invisible plus U2064 is most mnemonically at level 7 of C06, the key
 	// of the level-3 and level-5 plus sign U002B, rather than on C04 F, required
 	// for the more frequent interval notation en dash U2013.
 	//
@@ -847,25 +848,26 @@ xkb_symbols "kbfrFRs" {
 	// in terms of semantic stability and lossless text processing, as critical
 	// information is no longer lost when capitalizing mixed case text.
 	//
-	// As this invisible separator U2063 is also known as invisible comma, it is
-	// most appropriately mapped on level 7 of B07, the key of the comma U002C on
-	// the base level (as opposed to the level-5 comma on C10).
+	// Since this invisible separator U2063 is also known as invisible comma, it
+	// is most appropriately mapped at level 7 of B07, the key of the comma U002C
+	// at the base level (as opposed to the level-5 comma on C10).
 	//
 	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, extensively used to
-	// prevent wrong ligatures, and therefore on level 7 of the AZERTY W key B01,
-	// next to the AltFr level-5 modifier B00.
+	// prevent wrong ligatures, and therefore at level 7 of the AZERTY "W" key
+	// B01, next to the "AltFr" level-5 modifier B00.
 	// https://github.com/unicode-org/cldr/blob/f7cb2b5ca09cdaf651912695f93903cc35cab69c/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
 	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
 	//
-	// U200D ZERO WIDTH JOINER is the cursive joiner on level 7 of AZERTY key Q,
-	// ISO C01, right above the cursive non-joiner.
+	// U200D ZERO WIDTH JOINER is the cursive joiner at level 7 of AZERTY key
+	// "Q", ISO C01, right above the cursive non-joiner.
 	//
 	// By contrast, U2060 WORD JOINER is not used in Latin script, except to work
 	// around defective character properties. Therefore, the word joiner does not
-	// have live key support, not even on level 7 of C05 G where it would benefit
-	// from alphabetic mnemonics based on French "gluon", as it does in group 10
-	// of the ASCII hyphen there; except in that it it is part of the U0020 U2060
-	// sequence UEF6E on level 6 (Shift + AltFr) of the space bar in French mode.
+	// have live key support, not even at level 7 of C05 "G", where it would
+	// benefit from alphabetic mnemonics based on French "gluon", as it does in
+	// group 10 of the ASCII hyphen there; except in that it it is part of the
+	// U0020 U2060 sequence UEF6E at level 6 (Shift + AltFr) of the space bar in
+	// French mode.
 	//
 	// U200B ZERO WIDTH SPACE has an alternate, more intuitive and more familiar
 	// acronym: WNJ, for WORD NON-JOINER.
@@ -887,7 +889,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ## Overscore
 	//    ‾‾‾‾‾‾‾‾‾
-	// "‾" U203E OVERLINE is on level 7 of the underscore key C07 for the purpose
+	// "‾" U203E OVERLINE is at level 7 of the underscore key C07 for the purpose
 	// of typing sequences displaying as unbroken lines, that can be used e.g. in
 	// fixed-width plain text to underline headings like above.
 	// https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=302&zoom=100,0,600
@@ -935,7 +937,7 @@ xkb_symbols "kbfrFRs" {
 	// older systems also Multi_key) do not have representation tweaks applied so
 	// far as spacing clones of diacritics are available, and 9 of the dead keys
 	// use PUA characters by lack of appropriate keysyms in keysymdef.h, the dead
-	// keys should not show up in the level 4 slot, the less as the dead keys on
+	// keys should not show up in the level 4 slot, the less as the dead keys at
 	// level 4 are consistent with the level 3 ASCII symbol map by the means of a
 	// Multi_key equivalent (or two) associated with each dead key.
 	//
@@ -963,7 +965,7 @@ xkb_symbols "kbfrFRs" {
 	// keysyms per key and per group to a maximum of eight.
 	//
 	// However, for backward compatibility and for cross-platform consistency the
-	// issue is solved by duplicating subscript digits on level 4 in ASCII mode,
+	// issue is solved by duplicating subscript digits at level 4 in ASCII mode,
 	// instead of duplicating the superscript digits there for usability.
 	//
 	//
@@ -1340,7 +1342,7 @@ xkb_symbols "kbfrFRs" {
 	// row E digits, and both decimal separators dot and comma on D10 and C10 due
 	// to using B07..B10 for unspaced punctuation marks, constrain the hex letter
 	// digits to keys (C..E)(11..12). As a consequence, the numpad features A..F
-	// on level 2 of keys 2, 3, 5, 6, 8 and 9, with a downside of not featuring
+	// at level 2 of keys 2, 3, 5, 6, 8 and 9, with a downside of not featuring
 	// the E in the center on key 5 like on the `Hexadecimal Numpad` keypad(hex)
 	// by Roland Kaufmann <rlndkfmn at gmail dot com>.
 	//
@@ -1374,7 +1376,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// Basic arrow emoji  U27A1, U2B05..U2B07, U2194..U2199  ↕↙⬇↘⬅↔➡↖⬆↗
 	//
-	// For a consistent user experience, the basic arrow emoji are mapped on a
+	// For a consistent user experience, the basic arrow emoji are mapped at a
 	// dedicated level, additionally to the sets of simple and filled arrows.
 	//
 	// On desktop keyboards, the combos involving both LevelThree and LevelFive
@@ -1505,7 +1507,7 @@ xkb_symbols "kbfrFRs" {
 	// The map below does not match the Brazilian locale, where KPDL is mapped to
 	// KP_Separator, KPPT to KP_Decimal; it only ensures that there is a key for
 	// comma and a key for period on numpads with two separator keys, and both
-	// have NARROW NO-BREAK SPACE on level 3 and on level 5, although in
+	// have NARROW NO-BREAK SPACE at level 3 and at level 5, although in
 	// Brazilian Portuguese, the group separator is period, as opposed to
 	// European Portuguese, where the decimal separator is comma.
 	// https://bugzilla.redhat.com/show_bug.cgi?id=470153#c27
@@ -1580,9 +1582,10 @@ xkb_symbols "kbbrFRs" {
 	// representation uses a letter apostrophe.
 	// https://github.com/unicode-org/cldr/blob/release-42/common/main/br.xml#L1265
 	//
-	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as Ñ key have other
-	// input methods. Underscore is on level 3 of C09, and in ASCII mode it is on
-	// unshifted D12. "―" U2015 is also in group 1 of Ññ, for Breton variants.
+	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as "Ñ" key have
+	// other input methods. Underscore is at level 3 of C09, and in ASCII mode it
+	// is on unshifted D12. "―" U2015 is also in group 1 of "Ñ", "ñ", for Breton
+	// variants.
 
 	include "dispocla(kbfrFRs)"
 
@@ -1622,8 +1625,9 @@ xkb_symbols "kbbrFRsr" {
 	// "Breton et français disposition de clavier semi-automatique redisposée"
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
-	// as Ñ key may be input using group 1 of equal or underscore. "―" U2015 also
-	// in group 1 of Ññ, and "‑" U2011 by dead_diaeresis followed by ASCII hyphen.
+	// as "Ñ" key may be input using group 1 of equal or underscore. "―" U2015 is
+	// also in group 1 of "ñ", "Ñ", and "‑" U2011 can be input by dead_diaeresis
+	// followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
@@ -1709,8 +1713,9 @@ xkb_symbols "kbfrPFsr" {
 	// "Polynésie française disposition de clavier semi-automatique redisposée"
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
-	// as Ñ key may be input using group 1 of equal or underscore. "―" U2015 also
-	// in group 1 of Ññ, and "‑" U2011 by dead_diaeresis followed by ASCII hyphen.
+	// as "Ñ" key may be input using group 1 of equal or underscore. "―" U2015 is
+	// also in group 1 of "ñ", "Ñ", and "‑" U2011 can be input by dead_diaeresis
+	// followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
@@ -1748,9 +1753,10 @@ xkb_symbols "kbfrAFs" {
 	name[Group2] = "Francophone Africa semiautomatic keyboard layout, ASCII mode";
 	// "Afrique francophone disposition de clavier semi-automatique"
 	//
-	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as Ɔ key have other
-	// input methods. Underscore is on level 3 of C09, and in ASCII mode it is on
-	// unshifted D12. "―" U2015 is also in group 1 of Ɔɔ, for African variants.
+	// "_" U005F and "―" U2015 HORIZONTAL BAR on E08 required as "Ɔ" key have
+	// other input methods. Underscore is at level 3 of C09, and in ASCII mode,
+	// it is on unshifted D12. "―" U2015 is also in group 1 of "ɔ" and "Ɔ", for
+	// African variants.
 
 	include "dispocla(kbfrFRs)"
 
@@ -1790,8 +1796,9 @@ xkb_symbols "kbfrAFsr" {
 	// "Afrique francophone disposition de clavier semi-automatique redisposée"
 	//
 	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
-	// as Ɔ key may be input using group 1 of equal or underscore. "―" U2015 also
-	// in group 1 of Ɔɔ, and "‑" U2011 by dead_diaeresis followed by ASCII hyphen.
+	// as "Ɔ" key may be input using group 1 of equal or underscore. "―" U2015 is
+	// also in group 1 of "ɔ", "Ɔ", and "‑" U2011 can be input by dead_diaeresis
+	// followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
