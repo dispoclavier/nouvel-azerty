@@ -18,7 +18,7 @@ Ce mode d’emploi complémentaire présente uniquement ce qui est particulier �
 
 L’émulation d’une touche "ê" par la touche morte accent circonflexe ne fonctionne pas en capitales, et "x" ne donne pas "êch". Pour atténuer ce mauvais fonctionnement, la touche morte accent circonflexe suivie de "x" donne "ê", afin d’éviter que l’on se retrouve avec "êx" et que l’on soit obligé d’effacer le "x" avant de pouvoir saisir le "ch" manquant dont on avait pris l’habitude sous Linux ou sous macOS.
 
-De même, la touche morte accent circonflexe suivie de "K", "L", "M", "N", "P", "Q", "R", "T", "V" OU "X" donne "Ê", afin d’interrompre au minimum le flux de l’écriture et de permettre, dans la plupart des cas, de faire une double frappe sur la consonne pour obtenir le même résultat que la simple frappe donne sous Linux et sous macOS.
+De même, la touche morte accent circonflexe suivie de "K", "L", "M", "N", "P", "Q", "R", "T", "V" ou "X" donne "Ê", afin d’interrompre au minimum le flux de l’écriture et de permettre, dans la plupart des cas, de faire une double frappe sur la consonne pour obtenir le même résultat que la simple frappe donne sous Linux et sous macOS.
 
 (La raison de ce dysfonctionnement est que sous Windows, les touches mortes sont incapables d’émettre des chaînes multicaractères et des caractères au-dessus d’U+FFFF, et que la situation n’est sauvée que grâce au fait que sous Windows, chaque touche morte a un caractère mort, et que ce caractère mort sort tel quel si le caractère de base, celui saisi après la touche morte, n’est pas pris en charge. Grâce à cette fonctionnalité de Windows, l’émulation de touche "ê" par la touche accent circonflexe fonctionne en minuscules.)
 
