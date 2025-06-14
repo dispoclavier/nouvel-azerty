@@ -2,7 +2,7 @@
 
 Ce nouvel AZERTY permet – sans y obliger – d’écrire facilement en français interopérable, c’est-à-dire avec les grandes ponctuations espacées et les chiffres groupés selon Unicode par l’espace fine insécable U+202F, que l’industrie graphique française s’est massivement appropriée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa [version 34 (2018)](https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l).
 
-Sont facilitées aussi l’écriture avec majuscules diacritées, dont les plus courantes sont en Majuscule, et l’écriture en capitales diacritées, en Verrouillage Capitales pour autant que leurs minuscules ont une touche vive sur l’AZERTY. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, sans gaspiller de place pour une touche « ê », émulée par la touche morte accent circonflexe, dont la position reste inchangée.
+Sont facilitées aussi l’écriture avec majuscules diacritées, dont les plus courantes sont en Majuscule, et l’écriture en capitales diacritées, en Verrouillage Capitales pour autant que leurs minuscules ont une touche vive sur l’AZERTY. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, sans gaspiller de place pour une touche "ê", émulée par la touche morte accent circonflexe, dont la position reste inchangée.
 
 Ce nouvel AZERTY est la disposition de base au sein d’un ensemble de dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie, notamment au breton, aux langues de Polynésie, au bambara et à d’autres langues d’Afrique francophone. Toutes prennent en charge l’espacement des grandes ponctuations avec l’espace fine insécable selon la typographie française nouvelle école. L’espacement vieille école manuel du deux-points est facilité pour une saisie de texte selon la pratique de l’Imprimerie nationale, qui applique déjà l’espacement nouvelle école aux guillemets chevrons.
 
@@ -33,7 +33,7 @@ La disposition de toutes les minuscules, y compris accentuées ou avec cédille,
 
 Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr.
 
-#### Émulation de touche « ê »
+#### Émulation de touche "ê"
 
 La touche morte de l’accent circonflexe fonctionne optionnellement comme une touche "ê" avant "k", "l", "m", "n", "p", "q", "r", "t", "v" ; "ê" s’insère ensemble avec l’une de ces lettres si le "e" n’est pas saisi avant.
 
@@ -41,21 +41,29 @@ La touche morte de l’accent circonflexe fonctionne optionnellement comme une t
 
 Les capitales y compris É, È, Ç, À et Ù sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.)
 
-#### Touche morte groupe
-
-Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte groupe, notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche morte groupe peut activer 12 [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles). Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
-
-#### Touche de composition
-
-Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$]. Son symbole ISO est "⎄" U+2384. Sur ce nouvel AZERTY, son symbole est le deux-barrettes "¦" U+00A6, souvent appelé barre brisée, plus facile à afficher, saisi le plus rapidement par la touche morte tréma suivie de la contre-oblique. La touche de composition offre une méthode de saisie alternative, quoique peu intéressante, pour le o-e entrelacé par [¦][o][e] ; elle est aussi le seul moyen de saisir des lettres comme « ꜳ » U+A733.
-
-#### Touches mortes spécialisées
+#### Touches mortes
 
 Plus généralement, toutes les lettres accentuées ou autrement diacritées sont dans les touches mortes, dont les deux les plus traditionnelles, l’accent circonflexe et le tréma, sont l’une à sa place historique, l’autre pareillement en Minuscule mais une touche plus loin au-dessus, sur [=], au lieu de rester en Majuscule sur la touche de l’accent circonflexe, cette place étant utilisée pour le guillemet français simple ouvrant. Mais la touche morte tréma y reste accessible en Maj + AltFr pour la rétrocompatibilité.
 
 Les deux autres touches mortes de l’AZERTY traditionnel, qui ont fait leur entrée après l’avènement de l’AZERTY d’ordinateur, l’accent grave et le tilde, sont toujours en AltGr mais sur la touche de l’accent circonflexe pour le tilde, et sur la touche [$] pour l’accent grave, car en Minuscule, c’est la touche de la touche morte accent aigu, qui sert aussi à la saisie des [guillemets apostrophes](#guillemets-de-distanciation) doubles et simples, ensemble avec la touche morte accent circonflexe. Toutefois, pour la rétrocompatibilité, les touches mortes tilde et accent grave sont aussi sur leurs touches historiques, en Maj + AltGr en mode français, sous des formes rétrocompatibles qui émettent des symboles ASCII quand on fait suivre un appui sur la barre d’espace ou qu’on appuie deux fois sur l’une de ces touches mortes. Celles-ci sont destinées uniquement à assurer un maximum de rétrocompatibilité.
 
 Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposées en Maj + AltGr, chacune sur la touche de son équivalent en composition, sauf la touche morte grec ou cerclé sur [Y], disposée aussi en AltGr à la place de son équivalent en composition, l’arobase, en Minuscule sur [)]. Les autres touches mortes transformationnelles appliquent elles aussi des transformations aux lettres et aux chiffres plutôt que d’ajouter des diacritiques. Partiellement cela est aussi le cas des touches mortes diacritiques, comme pour la saisie des [guillemets apostrophes](#guillemets-de-distanciation). Elles sont toutes documentées sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/).
+
+#### Touche morte groupe
+
+Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte groupe, notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche morte groupe peut activer 12 [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles). Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
+
+#### Touche de composition
+
+Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$].
+
+Le symbole ISO de la touche de composition est "⎄" U+2384. Sur ce nouvel AZERTY, son symbole est le deux-barrettes "¦" U+00A6, souvent appelé barre brisée, plus facile à afficher, saisi le plus rapidement par la touche morte tréma suivie de la contre-oblique.
+
+La notation des séquences de composition utilise les guillemets français pour la clarté, avec l’espacement à l’intérieur.
+
+La première utilité de la touche de composition est la saisie des fractions précomposées. "½" est « ¦12 ».
+
+La touche de composition offre une méthode de saisie alternative, quoique peu intéressante, pour le o-e entrelacé par « ¦oe » ; elle est aussi le seul moyen de saisir des lettres comme "ꜳ" U+A733 (« ¦aa »).
 
 ### Chiffres
 
@@ -69,7 +77,7 @@ La touche [²] est une deuxième bascule graphique, appelée « VerrMod »,
 
 ##### Mode ASCII
 
-Tant que le clavier est en mode ASCII, les chiffres sont en Minuscule, et en Majuscule pour la rétrocompatibilité, en plus de continuer d’être en AltGr pour la synergie avec la touche morte « groupe ».
+Tant que le clavier est en mode ASCII, les chiffres sont en Minuscule, et en Majuscule pour la rétrocompatibilité, en plus de continuer d’être en AltGr pour la synergie avec la touche morte groupe.
 
 En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
 
@@ -123,7 +131,7 @@ Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Ma
 
 En mode capitales, l’indice 2 et l’indice 3 prennent la place des expoants 2 et 3 sur la touche [1&] pour simplifier l’écriture des deux formules chimiques les plus importantes de notre époque, celles du CO₂ et du CH₃, soit celles des deux gaz à effet de serre les plus puissants et les plus préoccupants. Si le dioxyde de carbone n’est plus à présenter, le méthane quant à lui est plus connu sous son nom français, assez bref pour l’emporter sur sa formule, de sorte que l’indice 3 vient compléter l’indice 2 davantage pour la cohérence et la logique que pour l’utilité.
 
-Les indices de tous les dix chiffres sont présents uniquement en mode ASCII, mais alors aussi bien en Maj + AltGr qu’en AltGr + AltFr, car en mode français, le niveau Maj + AltGr des touches de la rangée des chiffres est pris par les caractères rétrocompatibles, et le niveau AltGr + AltFr n’est pas très pratique sur ces touches et sert à redonder les émojis chiffres avec le « 0️⃣ », non le nombre « 🔟 », sur la touche du zéro.
+Les indices de tous les dix chiffres sont présents uniquement en mode ASCII, mais alors aussi bien en Maj + AltGr qu’en AltGr + AltFr, car en mode français, le niveau Maj + AltGr des touches de la rangée des chiffres est pris par les caractères rétrocompatibles, et le niveau AltGr + AltFr n’est pas très pratique sur ces touches et sert à redonder les émojis chiffres avec le "0️⃣", non le nombre "🔟", sur la touche du zéro.
 
 Ces exposants et indices servaient autrefois à composer des fractions ordinaires au-delà des quelques fractions précomposées d’Unicode, tant que la barre de fraction n’était pas encore implémentée comme elle était conçue, ou dans les logiciels où elle ne l’est toujours pas. Cela permet de coder en dur toutes les fractions ordinaires, au-delà des fractions précomposées qui sont en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est sur [/] en synergie avec les indices en AltGr + AltFr, et en mode ASCII, avec les exposants en Maj + AltFr (en mode français, c’est le deux-points sans espace).
 
