@@ -4686,8 +4686,9 @@
 #    128  # # Miscellaneous Mathematical Symbols-B of block U2980
 #    256  # # Supplemental Mathematical Operators of block U2A00
 #     29  # # Miscellaneous Symbols and Arrows in block U2B00 used in mathematics
+#      1  # # Hebrew presentation form in block FB00 used in mathematics
 #   ――――
-#   1114
+#   1115
 #
 #
 # # Design of math sequences
