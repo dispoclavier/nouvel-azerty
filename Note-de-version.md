@@ -1,6 +1,6 @@
 # 5.2.0 (2025-06-15)
 
-ᶜᵃᵇRéimplémentation des touches mortes simples diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
+Réimplémentation des touches mortes simples diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
 
 Meilleure prise en charge des demi-codets hauts.
 
