@@ -13,7 +13,7 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	5.2.0.4
+VERSION	5.2.0.5
 
 // Pour la documentation et les noms de dossier, avec d’éventuels mots-clés ajoutés, pas trop
 // longs afin d’assurer la sauvegardabilité. Pour les métadonnées des pilotes compilés, il faut
