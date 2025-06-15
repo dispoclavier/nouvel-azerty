@@ -221,7 +221,7 @@ Ce mode d’emploi complémentaire présente uniquement ce qui est particulier �
 
 #### Émulation de touche "ê"
 
-L’émulation de touche "ê" par la touche morte accent circonflexe fonctionne aussi en capitales, et "x" donne "êch".
+L’émulation de touche "ê" par la touche morte accent circonflexe fonctionne aussi en capitales, "q" donne "êqu", et "x" donne "êch".
  
 ## Nom de fichier
 
