@@ -13282,6 +13282,8 @@
 #   Multi_key: ¦<
 #   Dchar: "ê" U00EA
 #
+#   Quotation mark input method
+#
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_circumflex yields turned high curly quotation marks U2018, U201C
 #   (opening or closing). A conflicting multikey equivalent is commented out
@@ -13289,7 +13291,10 @@
 #   See # # Quotation mark input method
 #   See # # Comma-shaped quotation marks
 #
-#   The polygrams "êk", "êl", "êm", "ên", "êp", "êq", "êr", "êt", "êv", "êch"
+#
+#   "Ê" key emulation
+#
+#   The polygrams "êk", "êl", "êm", "ên", "êp", "êqu", "êr", "êt", "êv", "êch"
 #   make dead_circumflex behave like an Ê key in most cases by using the fact
 #   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
 #   letters with circumflex accent, and most of these are not in usage either
@@ -13319,6 +13324,9 @@
 #
 #   Likewise, a "Ç" key is emulated for use on the Canadian French variant.
 #   See #*# CEDILLA
+#
+#
+#   Superscript digits
 #
 #   For the sake of usability and meeting predictable user expectations (that
 #   also have been escalated to the level of standards support), superscript
@@ -13351,6 +13359,9 @@
 #   See #*# DIAERESIS
 #   See #*# SUPERSCRIPT
 #
+#
+#   Shortcuts
+#
 #   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
 #
 #   U017F LATIN SMALL LETTER LONG S, in group 3 of s, has an additional input
@@ -13367,14 +13378,6 @@
 #   See # # B06 grave
 #   See #*# CIRCUMFLEX
 #
-#   The doubled diacritic "᪰" U1AB0 has case insensitive "d" as base
-#   characters, thanks to French not having any word with "êd".
-#
-#   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
-#   equal as an ASCII alternative with "double" semantics, for consistent
-#   input methods across all dead keys featuring a double diacritic.
-#   See #*# FLAG
-#
 #   As "B" has not been encoded with circumflex, and French doesn’t have any
 #   word with "êb", <dead_circumflex><B> and <dead_circumflex><b> may be used
 #   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
@@ -13383,6 +13386,20 @@
 #   since U has not been encoded with circumflex and grave, as opposed to A (by
 #   Agrave on key E10), E (by Egrave on key E07) and O (French AZERTY does not
 #   feature Ograve).
+#
+#
+#   Diacritics
+#
+#   The doubled diacritic "᪰" U1AB0 has case insensitive "d" as base
+#   characters, thanks to French not having any word with "êd".
+#
+#   The double diacritic "᷍" U1DCD has emdash as a mnemonic base character, and
+#   equal as an ASCII alternative with "double" semantics, for consistent
+#   input methods across all dead keys featuring a double diacritic.
+#   See #*# FLAG
+#
+#
+#   Math symbols
 #
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   plus yields "⨣" U2A23, and asciitilde yields "⩯" U2A6F.
@@ -13527,10 +13544,10 @@
 <Multi_key><less>                                                                              <P> : "ÊP" # U00CA U0050 French: Ê key emulation
 <dead_circumflex>                                                                              <p> : "êp" # U00EA U0070 French: Ê key emulation
 <Multi_key><less>                                                                              <p> : "êp" # U00EA U0070 French: Ê key emulation
-<dead_circumflex>                                                                              <Q> : "ÊQ" # U00CA U0051 French: Ê key emulation
-<Multi_key><less>                                                                              <Q> : "ÊQ" # U00CA U0051 French: Ê key emulation
-<dead_circumflex>                                                                              <q> : "êq" # U00EA U0071 French: Ê key emulation
-<Multi_key><less>                                                                              <q> : "êq" # U00EA U0071 French: Ê key emulation
+<dead_circumflex>                                                                              <Q> : "ÊQU" # U00CA U0051 U0055 French: Ê key emulation
+<Multi_key><less>                                                                              <Q> : "ÊQU" # U00CA U0051 U0055 French: Ê key emulation
+<dead_circumflex>                                                                              <q> : "êqu" # U00EA U0071 U0075 French: Ê key emulation
+<Multi_key><less>                                                                              <q> : "êqu" # U00EA U0071 U0075 French: Ê key emulation
 <dead_circumflex>                                                                              <R> : "ÊR" # U00CA U0052 French: Ê key emulation
 <Multi_key><less>                                                                              <R> : "ÊR" # U00CA U0052 French: Ê key emulation
 <dead_circumflex>                                                                              <r> : "êr" # U00EA U0072 French: Ê key emulation
