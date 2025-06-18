@@ -7,6 +7,10 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Debug level-9 infrastructure        5.3.0.3.00-Wed-2025-06-18T0317+0200
+* Complete level-9 infrastructure     5.3.0.2.00-Tue-2025-06-17T1656+0200
+* Replicate row-E emoji on level 9    5.3.0.1.00-Mon-2025-06-16T2153+0200
+* Support regional indicator letters  5.3.0.0.00-Mon-2025-06-16T1643+0200
 * Debug circumflex in legacy code     5.2.0.5.00-Sun-2025-06-15T1249+0200
 * Add U+1F642 emoji, debug cedilla    5.2.0.4.00-Fri-2025-06-13T0645+0200
 * Change cedilla dead character       5.2.0.3.12-Thu-2025-06-12T2329+0200
@@ -174,9 +178,10 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_SHIFT    ,   KBDSHIFT     },
     { VK_CONTROL  ,   KBDCTRL      },
     { VK_MENU     ,   KBDALT       },
-    { VK_OEM_AX   ,   16           },
-    { VK_OEM_102  ,   32           },
-    { 0           ,   0           }
+    { VK_OEM_AX   ,   16           }, // AltGr key
+    { VK_OEM_102  ,   32           }, // AltFr key
+    { VK_CAPITAL  ,   64           }, // Caps Lock additionally a modifier
+    { 0           ,   0            }
 };
 
 /***************************************************************************\
@@ -188,68 +193,84 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
     &aVkToBits[0],
-    57,
+    72, // Decimal # of the last shift state in this array.
+        // Any shift state beyond is ignored.
     {
-    //  Modification# //  Keys Pressed
-    //  ============= // =============
-        0,            // 
-        1,            // Shift 
-        8,            // Control 
-        SHFT_INVALID, // Shift + Control 
-        SHFT_INVALID, // Menu 
-        SHFT_INVALID, // Shift + Menu 
-        SHFT_INVALID, // Control + Menu 
-        SHFT_INVALID, // Shift + Control + Menu 
-        9,            // Ror# 
-        10,            // Shift + Ror# 
-        SHFT_INVALID, // Control + Ror# 
-        SHFT_INVALID, // Shift + Control + Ror# 
-        SHFT_INVALID, // Menu + Ror# 
-        SHFT_INVALID, // Shift + Menu + Ror# 
-        SHFT_INVALID, // Control + Menu + Ror# 
-        SHFT_INVALID, // Shift + Control + Menu + Ror# 
-        2,            // Oem_102 
-        3,            // Shift + Oem_102 
-        SHFT_INVALID, // Control + Oem_102 
-        SHFT_INVALID, // Shift + Control + Oem_102 
-        SHFT_INVALID, // Menu + Oem_102 
-        SHFT_INVALID, // Shift + Menu + Oem_102 
-        SHFT_INVALID, // Control + Menu + Oem_102 
-        SHFT_INVALID, // Shift + Control + Menu + Oem_102 
-        11,            // Ror# + Oem_102 
-        12,            // Shift + Ror# + Oem_102 
-        SHFT_INVALID, // Control + Ror# + Oem_102 
-        SHFT_INVALID, // Shift + Control + Ror# + Oem_102 
-        SHFT_INVALID, // Menu + Ror# + Oem_102 
-        SHFT_INVALID, // Shift + Menu + Ror# + Oem_102 
-        SHFT_INVALID, // Control + Menu + Ror# + Oem_102 
-        SHFT_INVALID, // Shift + Control + Menu + Ror# + Oem_102 
-        4,            // Ror# 
-        5,            // Shift + Ror# 
-        SHFT_INVALID, // Control + Ror# 
-        SHFT_INVALID, // Shift + Control + Ror# 
-        SHFT_INVALID, // Menu + Ror# 
-        SHFT_INVALID, // Shift + Menu + Ror# 
-        SHFT_INVALID, // Control + Menu + Ror# 
-        SHFT_INVALID, // Shift + Control + Menu + Ror# 
-        13,            // Ror# + Ror# 
-        14,            // Shift + Ror# + Ror# 
-        SHFT_INVALID, // Control + Ror# + Ror# 
-        SHFT_INVALID, // Shift + Control + Ror# + Ror# 
-        SHFT_INVALID, // Menu + Ror# + Ror# 
-        SHFT_INVALID, // Shift + Menu + Ror# + Ror# 
-        SHFT_INVALID, // Control + Menu + Ror# + Ror# 
-        SHFT_INVALID, // Shift + Control + Menu + Ror# + Ror# 
-        6,            // Oem_102 + Ror# 
-        7,            // Shift + Oem_102 + Ror# 
-        SHFT_INVALID, // Control + Oem_102 + Ror# 
-        SHFT_INVALID, // Shift + Control + Oem_102 + Ror# 
-        SHFT_INVALID, // Menu + Oem_102 + Ror# 
-        SHFT_INVALID, // Shift + Menu + Oem_102 + Ror# 
-        SHFT_INVALID, // Control + Menu + Oem_102 + Ror# 
-        SHFT_INVALID, // Shift + Control + Menu + Oem_102 + Ror# 
-        15,            // Ror# + Oem_102 + Ror# 
-        16             // Shift + Ror# + Oem_102 + Ror# 
+    //  Modification# //            Keys Pressed or KANA toggle
+    //  ============= // ======================================
+        0,            //   0  0x00
+        1,            //   1  0x01  Shift
+        8,            //   2  0x02  Control
+        SHFT_INVALID, //   3  0x03  Shift + Control
+        SHFT_INVALID, //   4  0x04  Menu
+        SHFT_INVALID, //   5  0x05  Shift + Menu
+        SHFT_INVALID, //   6  0x06  Control + Menu
+        SHFT_INVALID, //   7  0x07  Shift + Control + Menu
+        9,            //   8  0x08  KANA
+        10,           //   9  0x09  Shift + KANA
+        SHFT_INVALID, //  10  0x0a  Control + KANA
+        SHFT_INVALID, //  11  0x0b  Shift + Control + KANA
+        SHFT_INVALID, //  12  0x0c  Menu + KANA
+        SHFT_INVALID, //  13  0x0d  Shift + Menu + KANA
+        SHFT_INVALID, //  14  0x0e  Control + Menu + KANA
+        SHFT_INVALID, //  15  0x0f  Shift + Control + Menu + KANA
+        2,            //  16  0x10  OEM_AX
+        3,            //  17  0x11  Shift + OEM_AX
+        SHFT_INVALID, //  18  0x12  Control + OEM_AX
+        SHFT_INVALID, //  19  0x13  Shift + Control + OEM_AX
+        SHFT_INVALID, //  20  0x14  Menu + OEM_AX
+        SHFT_INVALID, //  21  0x15  Shift + Menu + OEM_AX
+        SHFT_INVALID, //  22  0x16  Control + Menu + OEM_AX
+        SHFT_INVALID, //  23  0x17  Shift + Control + Menu + OEM_AX
+        11,           //  24  0x18  KANA + OEM_AX
+        12,           //  25  0x19  Shift + KANA + OEM_AX
+        SHFT_INVALID, //  26  0x1a  Control + KANA + OEM_AX
+        SHFT_INVALID, //  27  0x1b  Shift + Control + KANA + OEM_AX
+        SHFT_INVALID, //  28  0x1c  Menu + KANA + OEM_AX
+        SHFT_INVALID, //  29  0x1d  Shift + Menu + KANA + OEM_AX
+        SHFT_INVALID, //  30  0x1e  Control + Menu + KANA + OEM_AX
+        SHFT_INVALID, //  31  0x1f  Shift + Control + Menu + KANA + OEM_AX
+        4,            //  32  0x20  OEM_102
+        5,            //  33  0x21  Shift + OEM_102
+        SHFT_INVALID, //  34  0x22  Control + OEM_102
+        SHFT_INVALID, //  35  0x23  Shift + Control + OEM_102
+        SHFT_INVALID, //  36  0x24  Menu + OEM_102
+        SHFT_INVALID, //  37  0x25  Shift + Menu + OEM_102
+        SHFT_INVALID, //  38  0x26  Control + Menu + OEM_102
+        SHFT_INVALID, //  39  0x27  Shift + Control + Menu + OEM_102
+        13,           //  40  0x28  KANA + OEM_102
+        14,           //  41  0x29  Shift + KANA + OEM_102
+        SHFT_INVALID, //  42  0x2a  Control + KANA + OEM_102
+        SHFT_INVALID, //  43  0x2b  Shift + Control + KANA + OEM_102
+        SHFT_INVALID, //  44  0x2c  Menu + KANA + OEM_102
+        SHFT_INVALID, //  45  0x2d  Shift + Menu + KANA + OEM_102
+        SHFT_INVALID, //  46  0x2e  Control + Menu + KANA + OEM_102
+        SHFT_INVALID, //  47  0x2f  Shift + Control + Menu + KANA + OEM_102
+        6,            //  48  0x30  OEM_AX + OEM_102
+        7,            //  49  0x31  Shift + OEM_AX + OEM_102
+        SHFT_INVALID, //  50  0x32  Control + OEM_AX + OEM_102
+        SHFT_INVALID, //  51  0x33  Shift + Control + OEM_AX + OEM_102
+        SHFT_INVALID, //  52  0x34  Menu + OEM_AX + OEM_102
+        SHFT_INVALID, //  53  0x35  Shift + Menu + OEM_AX + OEM_102
+        SHFT_INVALID, //  54  0x36  Control + Menu + OEM_AX + OEM_102
+        SHFT_INVALID, //  55  0x37  Shift + Control + Menu + OEM_AX + OEM_102
+        15,           //  56  0x38  KANA + OEM_AX + OEM_102
+        16,           //  57  0x39  Shift + KANA + OEM_AX + OEM_102
+        SHFT_INVALID, //  58  0x3a
+        SHFT_INVALID, //  59  0x3b
+        SHFT_INVALID, //  60  0x3c
+        SHFT_INVALID, //  61  0x3d
+        SHFT_INVALID, //  62  0x3e
+        SHFT_INVALID, //  63  0x3f
+        17,           //  64  0x40  CAPITAL
+        SHFT_INVALID, //  65  0x41
+        SHFT_INVALID, //  66  0x42
+        SHFT_INVALID, //  67  0x43
+        SHFT_INVALID, //  68  0x44
+        SHFT_INVALID, //  69  0x45
+        SHFT_INVALID, //  70  0x46
+        SHFT_INVALID, //  71  0x47
+        17            //  72  0x48  CAPITAL + KANA
      }
 };
 
@@ -342,98 +363,98 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
   {0            ,0      ,0        ,0        }
 };
 
-static ALLOC_SECTION_LDATA VK_TO_WCHARS17 aVkToWch17[] = {
-//                      |         |  Shift  |  AltGr  |S+AltGr  |  AltFr  |S+AltFr  |AltGr+Fr |S+Gr+Fr  |  Ctrl   |  Kana   |Shft+Kana| AltGr+K |S+AltGr+K| AltFr+K |S+AltFr+K|AlGr+Fr+K|S+Gr+Fr+K|
-//                      |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
-  {VK_OEM_102   ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'1'          ,SGCAPS ,0x00b2   ,0x00b3   ,'1'      ,'&'      ,'1'      ,0x00b9   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'1'      ,'1'      ,'1'      ,0x2081   ,'1'      ,0x00b9   ,0x2081   ,WCH_LGTR },
+static ALLOC_SECTION_LDATA VK_TO_WCHARS18 aVkToWch18[] = {
+//                      |         |  Shift  |  AltGr  |S+AltGr  |  AltFr  |S+AltFr  |AltGr+Fr |S+Gr+Fr  |  Ctrl   |  Kana   |Shft+Kana| AltGr+K |S+AltGr+K| AltFr+K |S+AltFr+K|AlGr+Fr+K|S+Gr+Fr+K|Capital |
+//                      |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|========|
+  {VK_OEM_102   ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'1'          ,SGCAPS ,0x00b2   ,0x00b3   ,'1'      ,'&'      ,'1'      ,0x00b9   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'1'      ,'1'      ,'1'      ,0x2081   ,'1'      ,0x00b9   ,0x2081   ,WCH_LGTR ,WCH_LGTR },
   {'1'          ,0      ,0x2082   ,0x2083   },
-  {'2'          ,KBD    ,0x00e0   ,0x00c0   ,'2'      ,WCH_DEAD ,'2'      ,0x00b2   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'2'      ,'2'      ,'2'      ,0x2082   ,'2'      ,0x00b2   ,0x2082   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'~'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'3'          ,ALTGR  ,WCH_DEAD ,0x2013   ,'3'      ,'#'      ,'3'      ,0x00b3   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'3'      ,'3'      ,'3'      ,0x2083   ,'3'      ,0x00b3   ,0x2083   ,WCH_LGTR },
-  {0xff         ,0      ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'4'          ,ALTGR  ,WCH_DEAD ,0x2014   ,'4'      ,'{'      ,'4'      ,0x2074   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'4'      ,'4'      ,'4'      ,0x2084   ,'4'      ,0x2074   ,0x2084   ,WCH_LGTR },
-  {0xff         ,0      ,0x00e1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'5'          ,ALTGR  ,'\"'     ,0x00ad   ,'5'      ,'['      ,'5'      ,0x2075   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'5'      ,'5'      ,'5'      ,0x2085   ,'5'      ,0x2075   ,0x2085   ,WCH_LGTR },
-  {'6'          ,SGCAPS ,0x00f9   ,0x2011   ,'6'      ,'|'      ,'6'      ,0x2076   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'6'      ,'6'      ,'6'      ,0x2086   ,'6'      ,0x2076   ,0x2086   ,WCH_LGTR },
+  {'2'          ,KBD    ,0x00e0   ,0x00c0   ,'2'      ,WCH_DEAD ,'2'      ,0x00b2   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'2'      ,'2'      ,'2'      ,0x2082   ,'2'      ,0x00b2   ,0x2082   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'~'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'3'          ,ALTGR  ,WCH_DEAD ,0x2013   ,'3'      ,'#'      ,'3'      ,0x00b3   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'3'      ,'3'      ,'3'      ,0x2083   ,'3'      ,0x00b3   ,0x2083   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'4'          ,ALTGR  ,WCH_DEAD ,0x2014   ,'4'      ,'{'      ,'4'      ,0x2074   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'4'      ,'4'      ,'4'      ,0x2084   ,'4'      ,0x2074   ,0x2084   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,0x00e1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'5'          ,ALTGR  ,'\"'     ,0x00ad   ,'5'      ,'['      ,'5'      ,0x2075   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'5'      ,'5'      ,'5'      ,0x2085   ,'5'      ,0x2075   ,0x2085   ,WCH_LGTR ,WCH_LGTR },
+  {'6'          ,SGCAPS ,0x00f9   ,0x2011   ,'6'      ,'|'      ,'6'      ,0x2076   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'6'      ,'6'      ,'6'      ,0x2086   ,'6'      ,0x2076   ,0x2086   ,WCH_LGTR ,WCH_LGTR },
   {'6'          ,0      ,0x00d9   ,0x2011   },
-  {'7'          ,ALTGR  ,'\''     ,0x2015   ,'7'      ,WCH_DEAD ,'7'      ,0x2077   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'7'      ,'7'      ,'7'      ,0x2087   ,'7'      ,0x2077   ,0x2087   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'`'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'8'          ,KBD    ,0x00e8   ,0x00c8   ,'8'      ,'\\'     ,'8'      ,0x2078   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'8'      ,'8'      ,'8'      ,0x2088   ,'8'      ,0x2078   ,0x2088   ,WCH_LGTR },
-  {'9'          ,KBD    ,0x00e7   ,0x00c7   ,'9'      ,'('      ,'9'      ,0x2079   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'9'      ,'9'      ,'9'      ,0x2089   ,'9'      ,0x2079   ,0x2089   ,WCH_LGTR },
-  {'0'          ,KBD    ,0x00e9   ,0x00c9   ,'0'      ,')'      ,'0'      ,0x2070   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'0'      ,'0'      ,'0'      ,0x2080   ,'0'      ,0x2070   ,0x2080   ,WCH_LGTR },
-  {VK_OEM_MINUS ,ALTGR  ,'@'      ,0x00b0   ,0x1d49   ,']'      ,0x00b0   ,0x207b   ,'E'      ,WCH_LGTR ,WCH_NONE ,'@'      ,0x00b0   ,'-'      ,0x208b   ,'E'      ,0x207b   ,0x208b   ,WCH_LGTR },
-  {VK_OEM_PLUS  ,ALTGR  ,'_'      ,'+'      ,WCH_DEAD ,'}'      ,'='      ,0x207a   ,'F'      ,WCH_LGTR ,WCH_NONE ,'='      ,'+'      ,WCH_DEAD ,0x208a   ,'F'      ,0x207a   ,0x208a   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Q'          ,CAPLOK ,'q'      ,'Q'      ,'^'      ,WCH_DEAD ,'^'      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'^'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Z'          ,CAPLOK ,'z'      ,'Z'      ,'%'      ,WCH_DEAD ,'%'      ,0x1dbb   ,0x2032   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0250   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'J'          ,CAPLOK ,'j'      ,'J'      ,0x20ac   ,WCH_DEAD ,0x20ac   ,0x02b2   ,0x2033   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0151   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'F'          ,CAPLOK ,'f'      ,'F'      ,'\\'     ,WCH_DEAD ,0x00a3   ,0x1da0   ,0x2236   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x019e   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'G'          ,CAPLOK ,'g'      ,'G'      ,'~'      ,WCH_DEAD ,0x2212   ,0x1d4d   ,0x00b1   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00f5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Y'          ,CAPLOK ,'y'      ,'Y'      ,WCH_DEAD ,WCH_DEAD ,0x00b5   ,0x02b8   ,0x00a5   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x03b5   ,0x03b5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'M'          ,CAPLOK ,'m'      ,'M'      ,'\''     ,WCH_DEAD ,'4'      ,0x1d50   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00e1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'L'          ,CAPLOK ,'l'      ,'L'      ,'{'      ,WCH_DEAD ,'5'      ,0x02e1   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0192   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'D'          ,CAPLOK ,'d'      ,'D'      ,'}'      ,WCH_DEAD ,'6'      ,0x1d48   ,0x03a9   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0273   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'K'          ,CAPLOK ,'k'      ,'K'      ,'&'      ,WCH_DEAD ,'.'      ,0x1d4f   ,0x00b6   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1e57   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_6     ,ALTGR  ,WCH_DEAD ,WCH_LGTR ,WCH_DEAD ,'^'      ,0x2039   ,WCH_DEAD ,'C'      ,'['      ,WCH_NONE ,'"'      ,'{'      ,'^'      ,'_'      ,'C'      ,'^'      ,'_'      ,'['      },
-  {0xff         ,0      ,0x00ea   ,WCH_NONE ,0x00f5   ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_1     ,ALTGR  ,WCH_DEAD ,WCH_LGTR ,WCH_DEAD ,'$'      ,0x203a   ,0x00a3   ,'D'      ,']'      ,WCH_NONE ,'_'      ,'}'      ,WCH_DEAD ,0x208c   ,'D'      ,0x207c   ,0x208c   ,']'      },
-  {0xff         ,0      ,0x2460   ,WCH_NONE ,0x2460   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x2460   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'A'          ,CAPLOK ,'a'      ,'A'      ,'#'      ,WCH_DEAD ,'#'      ,0x1d43   ,0x200d   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x2460   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'S'          ,CAPLOK ,'s'      ,'S'      ,'$'      ,WCH_DEAD ,'$'      ,0x02e2   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a4   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'E'          ,CAPLOK ,'e'      ,'E'      ,'('      ,WCH_DEAD ,'('      ,0x1d49   ,0x2300   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0213   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'R'          ,CAPLOK ,'r'      ,'R'      ,')'      ,WCH_DEAD ,')'      ,0x02b3   ,0x2013   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0115   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'T'          ,CAPLOK ,'t'      ,'T'      ,'-'      ,WCH_DEAD ,'-'      ,0x1d57   ,0x2192   ,0x21d2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x024d   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'U'          ,CAPLOK ,'u'      ,'U'      ,'+'      ,WCH_DEAD ,'+'      ,0x1d58   ,0x2064   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x01a1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'N'          ,CAPLOK ,'n'      ,'N'      ,'_'      ,WCH_DEAD ,'1'      ,0x207f   ,0x203e   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'_'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'O'          ,CAPLOK ,'o'      ,'O'      ,'['      ,WCH_DEAD ,'2'      ,0x1d52   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x01eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'I'          ,CAPLOK ,'i'      ,'I'      ,']'      ,WCH_DEAD ,'3'      ,0x2071   ,0x00a3   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1ebb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'P'          ,CAPLOK ,'p'      ,'P'      ,'|'      ,WCH_DEAD ,','      ,0x1d56   ,0x00b5   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0101   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_3     ,ALTGR  ,0x2019   ,WCH_LGTR ,0x2026   ,0x00a4   ,0x00ab   ,'%'      ,'A'      ,'\''     ,WCH_NONE ,'\''     ,'%'      ,'`'      ,0x208d   ,'A'      ,0x207d   ,0x208d   ,'\''     },
-  {VK_OEM_5     ,ALTGR  ,'-'      ,WCH_LGTR ,WCH_DEAD ,'*'      ,0x00bb   ,0x00b5   ,'B'      ,';'      ,WCH_NONE ,'-'      ,'*'      ,WCH_DEAD ,0x208e   ,'B'      ,0x207e   ,0x208e   ,';'      },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x00f2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'W'          ,CAPLOK ,'w'      ,'W'      ,'/'      ,WCH_DEAD ,'/'      ,0x02b7   ,0x200c   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00f8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'X'          ,CAPLOK ,'x'      ,'X'      ,'*'      ,WCH_DEAD ,'*'      ,0x02e3   ,0x22c5   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00e5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'C'          ,CAPLOK ,'c'      ,'C'      ,'<'      ,WCH_DEAD ,0x00d7   ,0x1d9c   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00ea   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'V'          ,CAPLOK ,'v'      ,'V'      ,'>'      ,WCH_DEAD ,0x00f7   ,0x1d5b   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x021f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'B'          ,CAPLOK ,'b'      ,'B'      ,'='      ,WCH_DEAD ,WCH_LGTR ,0x1d47   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x2690   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'H'          ,CAPLOK ,'h'      ,'H'      ,'`'      ,WCH_DEAD ,'0'      ,0x02b0   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00f2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_COMMA ,ALTGR  ,','      ,WCH_LGTR ,'?'      ,WCH_DEAD ,'?'      ,'?'      ,0x2063   ,WCH_LGTR ,WCH_NONE ,','      ,'?'      ,'?'      ,WCH_DEAD ,'?'      ,WCH_LGTR ,0x2007   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00E7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00E7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_PERIOD,ALTGR  ,'.'      ,WCH_LGTR ,'!'      ,WCH_DEAD ,'!'      ,'!'      ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'.'      ,'!'      ,'!'      ,WCH_DEAD ,'!'      ,WCH_LGTR ,0x2008   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1e05   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1e05   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_2     ,ALTGR  ,'/'      ,WCH_LGTR ,':'      ,WCH_DEAD ,':'      ,':'      ,0x2044   ,WCH_LGTR ,WCH_NONE ,':'      ,'/'      ,':'      ,WCH_DEAD ,':'      ,0x2044   ,0x2044   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_8     ,ALTGR  ,'\\'     ,WCH_LGTR ,0x00a7   ,WCH_DEAD ,';'      ,';'      ,0x00a7   ,WCH_LGTR ,WCH_NONE ,';'      ,'\\'     ,';'      ,WCH_DEAD ,';'      ,0x00a7   ,0x00a7   ,WCH_LGTR },
-  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0219   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0219   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_SPACE     ,ALTGR  ,' '      ,' '      ,0x00a0   ,0x200b   ,0x202f   ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,' '      ,' '      ,' '      ,' '      ,WCH_LGTR ,' '      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR },
-  {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
+  {'7'          ,ALTGR  ,'\''     ,0x2015   ,'7'      ,WCH_DEAD ,'7'      ,0x2077   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'7'      ,'7'      ,'7'      ,0x2087   ,'7'      ,0x2077   ,0x2087   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'`'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'8'          ,KBD    ,0x00e8   ,0x00c8   ,'8'      ,'\\'     ,'8'      ,0x2078   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'8'      ,'8'      ,'8'      ,0x2088   ,'8'      ,0x2078   ,0x2088   ,WCH_LGTR ,WCH_LGTR },
+  {'9'          ,KBD    ,0x00e7   ,0x00c7   ,'9'      ,'('      ,'9'      ,0x2079   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'9'      ,'9'      ,'9'      ,0x2089   ,'9'      ,0x2079   ,0x2089   ,WCH_LGTR ,WCH_LGTR },
+  {'0'          ,KBD    ,0x00e9   ,0x00c9   ,'0'      ,')'      ,'0'      ,0x2070   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'0'      ,'0'      ,'0'      ,0x2080   ,'0'      ,0x2070   ,0x2080   ,WCH_LGTR ,WCH_LGTR },
+  {VK_OEM_MINUS ,ALTGR  ,'@'      ,0x00b0   ,0x1d49   ,']'      ,0x00b0   ,0x207b   ,'E'      ,WCH_LGTR ,WCH_NONE ,'@'      ,0x00b0   ,'-'      ,0x208b   ,'E'      ,0x207b   ,0x208b   ,WCH_LGTR ,WCH_LGTR },
+  {VK_OEM_PLUS  ,ALTGR  ,'_'      ,'+'      ,WCH_DEAD ,'}'      ,'='      ,0x207a   ,'F'      ,WCH_LGTR ,WCH_NONE ,'='      ,'+'      ,WCH_DEAD ,0x208a   ,'F'      ,0x207a   ,0x208a   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Q'          ,CAPLOK ,'q'      ,'Q'      ,'^'      ,WCH_DEAD ,'^'      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'^'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Z'          ,CAPLOK ,'z'      ,'Z'      ,'%'      ,WCH_DEAD ,'%'      ,0x1dbb   ,0x2032   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0250   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'J'          ,CAPLOK ,'j'      ,'J'      ,0x20ac   ,WCH_DEAD ,0x20ac   ,0x02b2   ,0x2033   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0151   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'F'          ,CAPLOK ,'f'      ,'F'      ,'\\'     ,WCH_DEAD ,0x00a3   ,0x1da0   ,0x2236   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x019e   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'G'          ,CAPLOK ,'g'      ,'G'      ,'~'      ,WCH_DEAD ,0x2212   ,0x1d4d   ,0x00b1   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00f5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,CAPLOK ,'y'      ,'Y'      ,WCH_DEAD ,WCH_DEAD ,0x00b5   ,0x02b8   ,0x00a5   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x03b5   ,0x03b5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'M'          ,CAPLOK ,'m'      ,'M'      ,'\''     ,WCH_DEAD ,'4'      ,0x1d50   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00e1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'L'          ,CAPLOK ,'l'      ,'L'      ,'{'      ,WCH_DEAD ,'5'      ,0x02e1   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0192   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'D'          ,CAPLOK ,'d'      ,'D'      ,'}'      ,WCH_DEAD ,'6'      ,0x1d48   ,0x03a9   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0273   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'K'          ,CAPLOK ,'k'      ,'K'      ,'&'      ,WCH_DEAD ,'.'      ,0x1d4f   ,0x00b6   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1e57   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,ALTGR  ,WCH_DEAD ,WCH_LGTR ,WCH_DEAD ,'^'      ,0x2039   ,WCH_DEAD ,'C'      ,'['      ,WCH_NONE ,'"'      ,'{'      ,'^'      ,'_'      ,'C'      ,'^'      ,'_'      ,'['      ,WCH_LGTR },
+  {0xff         ,0      ,0x00ea   ,WCH_NONE ,0x00f5   ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,ALTGR  ,WCH_DEAD ,WCH_LGTR ,WCH_DEAD ,'$'      ,0x203a   ,0x00a3   ,'D'      ,']'      ,WCH_NONE ,'_'      ,'}'      ,WCH_DEAD ,0x208c   ,'D'      ,0x207c   ,0x208c   ,']'      ,WCH_LGTR },
+  {0xff         ,0      ,0x2460   ,WCH_NONE ,0x2460   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x2460   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'A'          ,CAPLOK ,'a'      ,'A'      ,'#'      ,WCH_DEAD ,'#'      ,0x1d43   ,0x200d   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x2460   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'S'          ,CAPLOK ,'s'      ,'S'      ,'$'      ,WCH_DEAD ,'$'      ,0x02e2   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a4   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'E'          ,CAPLOK ,'e'      ,'E'      ,'('      ,WCH_DEAD ,'('      ,0x1d49   ,0x2300   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0213   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'R'          ,CAPLOK ,'r'      ,'R'      ,')'      ,WCH_DEAD ,')'      ,0x02b3   ,0x2013   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0115   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'T'          ,CAPLOK ,'t'      ,'T'      ,'-'      ,WCH_DEAD ,'-'      ,0x1d57   ,0x2192   ,0x21d2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x024d   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'U'          ,CAPLOK ,'u'      ,'U'      ,'+'      ,WCH_DEAD ,'+'      ,0x1d58   ,0x2064   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x01a1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'N'          ,CAPLOK ,'n'      ,'N'      ,'_'      ,WCH_DEAD ,'1'      ,0x207f   ,0x203e   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'_'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'O'          ,CAPLOK ,'o'      ,'O'      ,'['      ,WCH_DEAD ,'2'      ,0x1d52   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x01eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'I'          ,CAPLOK ,'i'      ,'I'      ,']'      ,WCH_DEAD ,'3'      ,0x2071   ,0x00a3   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1ebb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'P'          ,CAPLOK ,'p'      ,'P'      ,'|'      ,WCH_DEAD ,','      ,0x1d56   ,0x00b5   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0101   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,ALTGR  ,0x2019   ,WCH_LGTR ,0x2026   ,0x00a4   ,0x00ab   ,'%'      ,'A'      ,'\''     ,WCH_NONE ,'\''     ,'%'      ,'`'      ,0x208d   ,'A'      ,0x207d   ,0x208d   ,'\''     ,WCH_LGTR },
+  {VK_OEM_5     ,ALTGR  ,'-'      ,WCH_LGTR ,WCH_DEAD ,'*'      ,0x00bb   ,0x00b5   ,'B'      ,';'      ,WCH_NONE ,'-'      ,'*'      ,WCH_DEAD ,0x208e   ,'B'      ,0x207e   ,0x208e   ,';'      ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x00f2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'W'          ,CAPLOK ,'w'      ,'W'      ,'/'      ,WCH_DEAD ,'/'      ,0x02b7   ,0x200c   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00f8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'X'          ,CAPLOK ,'x'      ,'X'      ,'*'      ,WCH_DEAD ,'*'      ,0x02e3   ,0x22c5   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00e5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'C'          ,CAPLOK ,'c'      ,'C'      ,'<'      ,WCH_DEAD ,0x00d7   ,0x1d9c   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00ea   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'V'          ,CAPLOK ,'v'      ,'V'      ,'>'      ,WCH_DEAD ,0x00f7   ,0x1d5b   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x021f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'B'          ,CAPLOK ,'b'      ,'B'      ,'='      ,WCH_DEAD ,WCH_LGTR ,0x1d47   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x2690   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,CAPLOK ,'h'      ,'H'      ,'`'      ,WCH_DEAD ,'0'      ,0x02b0   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00f2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,ALTGR  ,','      ,WCH_LGTR ,'?'      ,WCH_DEAD ,'?'      ,'?'      ,0x2063   ,WCH_LGTR ,WCH_NONE ,','      ,'?'      ,'?'      ,WCH_DEAD ,'?'      ,WCH_LGTR ,0x2007   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00E7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00E7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,ALTGR  ,'.'      ,WCH_LGTR ,'!'      ,WCH_DEAD ,'!'      ,'!'      ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,'.'      ,'!'      ,'!'      ,WCH_DEAD ,'!'      ,WCH_LGTR ,0x2008   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1e05   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x1e05   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,ALTGR  ,'/'      ,WCH_LGTR ,':'      ,WCH_DEAD ,':'      ,':'      ,0x2044   ,WCH_LGTR ,WCH_NONE ,':'      ,'/'      ,':'      ,WCH_DEAD ,':'      ,0x2044   ,0x2044   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,ALTGR  ,'\\'     ,WCH_LGTR ,0x00a7   ,WCH_DEAD ,';'      ,';'      ,0x00a7   ,WCH_LGTR ,WCH_NONE ,';'      ,'\\'     ,';'      ,WCH_DEAD ,';'      ,0x00a7   ,0x00a7   ,WCH_LGTR ,WCH_LGTR },
+  {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0219   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0219   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,ALTGR  ,' '      ,' '      ,0x00a0   ,0x200b   ,0x202f   ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,' '      ,' '      ,' '      ,' '      ,WCH_LGTR ,' '      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,0x200c   },
+  {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
@@ -447,8 +468,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
 };
 
 // Put this last so that VkKeyScan interprets number characters
-// as coming from the main section of the kbd (aVkToWch2 and
-// aVkToWch5) before considering the numpad (aVkToWch1).
+// as coming from the main section of the kbd (aVkToWch18)
+// before considering the numpad (aVkToWch1).
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS1 aVkToWch1[] = {
     { VK_NUMPAD0   , 0      ,  '0'   },
@@ -465,7 +486,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS1 aVkToWch1[] = {
 };
 
 static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
-    {  (PVK_TO_WCHARS1)aVkToWch17, 17, sizeof(aVkToWch17[0]) },
+    {  (PVK_TO_WCHARS1)aVkToWch18, 18, sizeof(aVkToWch18[0]) },
     {  (PVK_TO_WCHARS1)aVkToWch9, 9, sizeof(aVkToWch9[0]) },
     {  (PVK_TO_WCHARS1)aVkToWch2, 2, sizeof(aVkToWch2[0]) },
     {  (PVK_TO_WCHARS1)aVkToWch1, 1, sizeof(aVkToWch1[0]) },
@@ -683,11 +704,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 # degradation of the user experience compared to Linux and macOS (and ChromeOS’
 # precompiled Linux layouts) should be mitigated as far as possible.
 #
-# On Linux and macOS, the "Ê" key emulation supports uppercase, and "x" yields
-# the "êch" trigraph. On Windows, lowercase works as intended due to default
-# handling of the dead character, while uppercase is mixed with lowercase "ê".
-# To mitigate the UX disruption, unsupported letters output the start of the
-# full sequence, A "Ç" key is also emulated, for Canadian French.
+# On Linux and macOS, the "Ê" key emulation supports uppercase, "êq" expands to
+# "êqu", and "x" yields the "êch" trigraph. On Windows, lowercase works as
+# intended due to default handling of the dead character, while uppercase would
+# be mixed with lowercase "ê". To mitigate this UX disruption, unsupported
+# letters output the start of the full sequence.
+#
+# A "Ç" key is also emulated, for Canadian French.
 \*****************************************************************************/
 
 /*<!dead_circumflex>*/	DEADTRANS(	L'K'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
@@ -704,6 +727,71 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_cedilla>*/	DEADTRANS(	L'A'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
 /*<!dead_cedilla>*/	DEADTRANS(	L'O'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
 /*<!dead_cedilla>*/	DEADTRANS(	L'U'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+
+/*****************************************************************************\
+# Flag letters need to be adapted to Windows, where a single dead key press is
+# to output the regional indicator symbol letter’s low surrogate right away, as
+# the system is unable to output more than a single code unit (as opposed to
+# Linux and macOS, where the single-press output fits the needs of writing in
+# letter emoji, by appending a cursive non-joiner U200C ZWNJ).
+\*****************************************************************************/
+
+/*<!dead_flag>*/	DEADTRANS(	L'a'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
+/*<!dead_flag>*/	DEADTRANS(	L'A'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
+/*<!dead_flag>*/	DEADTRANS(	L'b'	,0x2690	,0xDDE7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E7 "🇧" REGIONAL INDICATOR SYMBOL LETTER B
+/*<!dead_flag>*/	DEADTRANS(	L'B'	,0x2690	,0xDDE7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E7 "🇧" REGIONAL INDICATOR SYMBOL LETTER B
+/*<!dead_flag>*/	DEADTRANS(	L'c'	,0x2690	,0xDDE8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E8 "🇨" REGIONAL INDICATOR SYMBOL LETTER C
+/*<!dead_flag>*/	DEADTRANS(	L'C'	,0x2690	,0xDDE8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E8 "🇨" REGIONAL INDICATOR SYMBOL LETTER C
+/*<!dead_flag>*/	DEADTRANS(	L'd'	,0x2690	,0xDDE9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E9 "🇩" REGIONAL INDICATOR SYMBOL LETTER D
+/*<!dead_flag>*/	DEADTRANS(	L'D'	,0x2690	,0xDDE9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E9 "🇩" REGIONAL INDICATOR SYMBOL LETTER D
+/*<!dead_flag>*/	DEADTRANS(	L'e'	,0x2690	,0xDDEA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EA "🇪" REGIONAL INDICATOR SYMBOL LETTER E
+/*<!dead_flag>*/	DEADTRANS(	L'E'	,0x2690	,0xDDEA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EA "🇪" REGIONAL INDICATOR SYMBOL LETTER E
+/*<!dead_flag>*/	DEADTRANS(	L'f'	,0x2690	,0xDDEB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EB "🇫" REGIONAL INDICATOR SYMBOL LETTER F
+/*<!dead_flag>*/	DEADTRANS(	L'F'	,0x2690	,0xDDEB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EB "🇫" REGIONAL INDICATOR SYMBOL LETTER F
+/*<!dead_flag>*/	DEADTRANS(	L'g'	,0x2690	,0xDDEC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EC "🇬" REGIONAL INDICATOR SYMBOL LETTER G
+/*<!dead_flag>*/	DEADTRANS(	L'G'	,0x2690	,0xDDEC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EC "🇬" REGIONAL INDICATOR SYMBOL LETTER G
+/*<!dead_flag>*/	DEADTRANS(	L'h'	,0x2690	,0xDDED	,0x0000	), // High surrogate: D83C; Unicode: U+1F1ED "🇭" REGIONAL INDICATOR SYMBOL LETTER H
+/*<!dead_flag>*/	DEADTRANS(	L'H'	,0x2690	,0xDDED	,0x0000	), // High surrogate: D83C; Unicode: U+1F1ED "🇭" REGIONAL INDICATOR SYMBOL LETTER H
+/*<!dead_flag>*/	DEADTRANS(	L'i'	,0x2690	,0xDDEE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EE "🇮" REGIONAL INDICATOR SYMBOL LETTER I
+/*<!dead_flag>*/	DEADTRANS(	L'I'	,0x2690	,0xDDEE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EE "🇮" REGIONAL INDICATOR SYMBOL LETTER I
+/*<!dead_flag>*/	DEADTRANS(	L'j'	,0x2690	,0xDDEF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EF "🇯" REGIONAL INDICATOR SYMBOL LETTER J
+/*<!dead_flag>*/	DEADTRANS(	L'J'	,0x2690	,0xDDEF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EF "🇯" REGIONAL INDICATOR SYMBOL LETTER J
+/*<!dead_flag>*/	DEADTRANS(	L'k'	,0x2690	,0xDDF0	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F0 "🇰" REGIONAL INDICATOR SYMBOL LETTER K
+/*<!dead_flag>*/	DEADTRANS(	L'K'	,0x2690	,0xDDF0	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F0 "🇰" REGIONAL INDICATOR SYMBOL LETTER K
+/*<!dead_flag>*/	DEADTRANS(	L'l'	,0x2690	,0xDDF1	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F1 "🇱" REGIONAL INDICATOR SYMBOL LETTER L
+/*<!dead_flag>*/	DEADTRANS(	L'L'	,0x2690	,0xDDF1	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F1 "🇱" REGIONAL INDICATOR SYMBOL LETTER L
+/*<!dead_flag>*/	DEADTRANS(	L'm'	,0x2690	,0xDDF2	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F2 "🇲" REGIONAL INDICATOR SYMBOL LETTER M
+/*<!dead_flag>*/	DEADTRANS(	L'M'	,0x2690	,0xDDF2	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F2 "🇲" REGIONAL INDICATOR SYMBOL LETTER M
+/*<!dead_flag>*/	DEADTRANS(	L'n'	,0x2690	,0xDDF3	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F3 "🇳" REGIONAL INDICATOR SYMBOL LETTER N
+/*<!dead_flag>*/	DEADTRANS(	L'N'	,0x2690	,0xDDF3	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F3 "🇳" REGIONAL INDICATOR SYMBOL LETTER N
+/*<!dead_flag>*/	DEADTRANS(	L'o'	,0x2690	,0xDDF4	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F4 "🇴" REGIONAL INDICATOR SYMBOL LETTER O
+/*<!dead_flag>*/	DEADTRANS(	L'O'	,0x2690	,0xDDF4	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F4 "🇴" REGIONAL INDICATOR SYMBOL LETTER O
+/*<!dead_flag>*/	DEADTRANS(	L'p'	,0x2690	,0xDDF5	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F5 "🇵" REGIONAL INDICATOR SYMBOL LETTER P
+/*<!dead_flag>*/	DEADTRANS(	L'P'	,0x2690	,0xDDF5	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F5 "🇵" REGIONAL INDICATOR SYMBOL LETTER P
+/*<!dead_flag>*/	DEADTRANS(	L'q'	,0x2690	,0xDDF6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F6 "🇶" REGIONAL INDICATOR SYMBOL LETTER Q
+/*<!dead_flag>*/	DEADTRANS(	L'Q'	,0x2690	,0xDDF6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F6 "🇶" REGIONAL INDICATOR SYMBOL LETTER Q
+/*<!dead_flag>*/	DEADTRANS(	L'r'	,0x2690	,0xDDF7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F7 "🇷" REGIONAL INDICATOR SYMBOL LETTER R
+/*<!dead_flag>*/	DEADTRANS(	L'R'	,0x2690	,0xDDF7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F7 "🇷" REGIONAL INDICATOR SYMBOL LETTER R
+/*<!dead_flag>*/	DEADTRANS(	L's'	,0x2690	,0xDDF8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F8 "🇸" REGIONAL INDICATOR SYMBOL LETTER S
+/*<!dead_flag>*/	DEADTRANS(	L'S'	,0x2690	,0xDDF8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F8 "🇸" REGIONAL INDICATOR SYMBOL LETTER S
+/*<!dead_flag>*/	DEADTRANS(	L't'	,0x2690	,0xDDF9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F9 "🇹" REGIONAL INDICATOR SYMBOL LETTER T
+/*<!dead_flag>*/	DEADTRANS(	L'T'	,0x2690	,0xDDF9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F9 "🇹" REGIONAL INDICATOR SYMBOL LETTER T
+/*<!dead_flag>*/	DEADTRANS(	L'u'	,0x2690	,0xDDFA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FA "🇺" REGIONAL INDICATOR SYMBOL LETTER U
+/*<!dead_flag>*/	DEADTRANS(	L'U'	,0x2690	,0xDDFA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FA "🇺" REGIONAL INDICATOR SYMBOL LETTER U
+/*<!dead_flag>*/	DEADTRANS(	L'v'	,0x2690	,0xDDFB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FB "🇻" REGIONAL INDICATOR SYMBOL LETTER V
+/*<!dead_flag>*/	DEADTRANS(	L'V'	,0x2690	,0xDDFB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FB "🇻" REGIONAL INDICATOR SYMBOL LETTER V
+/*<!dead_flag>*/	DEADTRANS(	L'w'	,0x2690	,0xDDFC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FC "🇼" REGIONAL INDICATOR SYMBOL LETTER W
+/*<!dead_flag>*/	DEADTRANS(	L'W'	,0x2690	,0xDDFC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FC "🇼" REGIONAL INDICATOR SYMBOL LETTER W
+/*<!dead_flag>*/	DEADTRANS(	L'x'	,0x2690	,0xDDFD	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FD "🇽" REGIONAL INDICATOR SYMBOL LETTER X
+/*<!dead_flag>*/	DEADTRANS(	L'X'	,0x2690	,0xDDFD	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FD "🇽" REGIONAL INDICATOR SYMBOL LETTER X
+/*<!dead_flag>*/	DEADTRANS(	L'y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
+/*<!dead_flag>*/	DEADTRANS(	L'Y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
+/*<!dead_flag>*/	DEADTRANS(	L'z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
+/*<!dead_flag>*/	DEADTRANS(	L'Z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
+
+/*****************************************************************************\
+* Single-press dead key content is up-to-date and overrides the legacy code.
+\*****************************************************************************/
 
 /*<!dead_abovedot>*/	DEADTRANS(	L'\''	,0x1E57	,0x2AC3	,0x0000	), // "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	0x2019	,0x1E57	,0x2AC3	,0x0000	), // "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
@@ -8797,39 +8885,51 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'1'          ,6      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,7      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,16     ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'1'          ,17     ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'2'          ,6      ,'2'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'2'          ,7      ,'2'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'2'          ,16     ,'2'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'2'          ,17     ,'2'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'3'          ,6      ,'3'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'3'          ,7      ,'3'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'3'          ,16     ,'3'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'3'          ,17     ,'3'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'4'          ,6      ,'4'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'4'          ,7      ,'4'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'4'          ,16     ,'4'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'4'          ,17     ,'4'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'5'          ,6      ,'5'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'5'          ,7      ,'5'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'5'          ,16     ,'5'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'5'          ,17     ,'5'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'6'          ,6      ,'6'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'6'          ,7      ,'6'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'6'          ,16     ,'6'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'6'          ,17     ,'6'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'7'          ,6      ,'7'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'7'          ,7      ,'7'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'7'          ,16     ,'7'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'7'          ,17     ,'7'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,6      ,'8'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,7      ,'8'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,16     ,'8'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'8'          ,17     ,'8'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,6      ,'9'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,7      ,'9'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,16     ,'9'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'9'          ,17     ,'9'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'0'          ,6      ,'0'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'0'          ,7      ,0xd83d   ,0xdd1f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'0'          ,16     ,'0'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'0'          ,17     ,'0'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,6      ,'*'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,7      ,'*'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,16     ,'*'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,17     ,'*'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PLUS  ,6      ,'#'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PLUS  ,7      ,'#'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PLUS  ,16     ,'#'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,17     ,0xd83d   ,0xdff0   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'Q'          ,5      ,0xd801   ,0xdfa5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'Q'          ,6      ,'c'      ,0x02bc   ,'h'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'Q'          ,7      ,'C'      ,0x02bc   ,'h'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -8845,7 +8945,9 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'D'          ,7      ,0xd83d   ,0xde01   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'K'          ,7      ,'&'      ,'a'      ,'m'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,1      ,0x2039   ,0x202f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_1     ,1      ,0x202f   ,0x203a   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,17     ,0xd83d   ,0xdcb2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'A'          ,7      ,0xd83d   ,0xdc4f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,6      ,0xd83d   ,0xde42   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,7      ,0xd83d   ,0xde14   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -8858,7 +8960,9 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'I'          ,7      ,0xd83e   ,0xdd23   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'P'          ,7      ,0xd83d   ,0xde37   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_3     ,1      ,0x00ab   ,0x202f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,17     ,'#'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_5     ,1      ,0x202f   ,0x00bb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,17     ,'*'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'W'          ,7      ,0xd83d   ,0xde22   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'X'          ,7      ,0xd83c   ,0xdf1f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,6      ,'&'      ,'l'      ,'t'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -8874,22 +8978,53 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_COMMA ,7      ,0xd83d   ,0xdc99   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,14     ,'&'      ,'#'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,16     ,0xd83d   ,0xdc9a   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,1      ,0x202f   ,'!'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,6      ,0xd83d   ,0xde31   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,7      ,0xd83d   ,0xdce3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,14     ,'&'      ,'#'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,16     ,0xd83d   ,0xdce2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,1      ,0x202f   ,':'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,7      ,0xd83d   ,0xde15   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,16     ,0xd83d   ,0xde12   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,1      ,0x202f   ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,7      ,0xd83d   ,0xdc94   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,16     ,0xd83d   ,0xde09   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,5      ,' '      ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,12     ,'&'      ,'n'      ,'b'      ,'s'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,14     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,15     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,16     ,'&'      ,'n'      ,'b'      ,'s'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  // Regional indicator symbol letters.
+  {'A'          ,17     ,0xd83c   ,0xDDE6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'B'          ,17     ,0xd83c   ,0xDDE7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'C'          ,17     ,0xd83c   ,0xDDE8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'D'          ,17     ,0xd83c   ,0xDDE9   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'E'          ,17     ,0xd83c   ,0xDDEA   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'F'          ,17     ,0xd83c   ,0xDDEB   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'G'          ,17     ,0xd83c   ,0xDDEC   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,17     ,0xd83c   ,0xDDED   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'I'          ,17     ,0xd83c   ,0xDDEE   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'J'          ,17     ,0xd83c   ,0xDDEF   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'K'          ,17     ,0xd83c   ,0xDDF0   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'L'          ,17     ,0xd83c   ,0xDDF1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'M'          ,17     ,0xd83c   ,0xDDF2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'N'          ,17     ,0xd83c   ,0xDDF3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'O'          ,17     ,0xd83c   ,0xDDF4   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'P'          ,17     ,0xd83c   ,0xDDF5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Q'          ,17     ,0xd83c   ,0xDDF6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'R'          ,17     ,0xd83c   ,0xDDF7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'S'          ,17     ,0xd83c   ,0xDDF8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'T'          ,17     ,0xd83c   ,0xDDF9   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'U'          ,17     ,0xd83c   ,0xDDFA   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'V'          ,17     ,0xd83c   ,0xDDFB   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'W'          ,17     ,0xd83c   ,0xDDFC   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'X'          ,17     ,0xd83c   ,0xDDFD   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,17     ,0xd83c   ,0xDDFE   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Z'          ,17     ,0xd83c   ,0xDDFF   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
 
