@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see XCompose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 5.2.0" # See #   End of line comments
+<UEFA0>                     : "version 5.3.0d" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -1266,7 +1266,7 @@
 #   See # # Multikey equivalents
 #
 #   The two legacy ordinal indicators are supported with alphabetic mnemonics
-#   in group 12 of "^" on key A, and in group 12 of "}" on key O.
+#   in group 12 of "^" on key "A", and in group 12 of "}" on key "O".
 #   See # # D01 asciicircum
 #   See # # D09 braceright
 #
@@ -9275,7 +9275,7 @@
 #   except that for mnemonics, dead_invertedbreve and dead_breve stand for the
 #   dasia and psili aspiration marks, instead of the latter for breve length.
 #   The few occurrences of precomposed vrachy are in dead_caron, with the
-#   mnemonic upside that the mapping of dead_caron on the V key also matches
+#   mnemonic upside that the mapping of dead_caron on the "V" key also matches
 #   the initial of vrachy.
 #   See # # Dead key layout overview
 #   See # # Order of dead key lists
