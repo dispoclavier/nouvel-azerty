@@ -4,17 +4,34 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: », « ¦¦ ».
 
-## 5.4.0 (projet)
+## 5.5.0 (projet)
 
 Mise à jour sous macOS des dispositions émulées selon Linux.
 
-## 5.3.0 (projet)
+## 5.4.0 (projet)
 
 Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
 Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
 
 Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
+
+## 5.3.0 (projet)
+
+Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windows.
+
+Débogage de la touche morte drapeau sous Windows.
+
+* Disposition : Niveau 9 :
+	* Redonder les émojis lettres indicateurs régionaux "🇦" U+1F1E6 .. "🇿" U+1F1FF sur les touches alphabétiques. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
+	* Redonder l’antiliant "‌" 200C sur la barre d’espace. ibidem
+	* Redonder les émojis chiffres "0️⃣".."9️⃣" et l’émoji touche de téléphone "*️⃣" sur les premières touches de la rangée E. ibidem
+	* Ajouter "🟰" U+1F7F0 sur E12 où il est imprimé. ibidem
+	* Ajouter "💲" U+1F4B2 sur D12 où il est imprimé. ibidem
+	* Redonder "*️⃣" sur C12 où il est imprimé. ibidem
+	* Redonder "#️⃣" sur C11 pour compléter la nouvelle dispositon des émojis touches de téléphone. ibidem
+* Transformations : Drapeau : Adapter à Windows la touche morte simple pour émettre les émojis lettres indicateurs régionaux sans antiliant. ibidem
+* Documentation : Corriger des annotations. compose-1.yml [e081f7a](https://github.com/dispoclavier/nouvel-azerty/commit/e081f7ad67386e2a1fc21c663a8f6f0ae7c6ebb1), compose-2.yml [1bf7c4e](https://github.com/dispoclavier/nouvel-azerty/commit/1bf7c4e344f333f30bd2848993aa91b028b5ec6d), compose-3.yml [d9eed3f](https://github.com/dispoclavier/nouvel-azerty/commit/d9eed3ff745cba72eb3c4f73b429dd4e6c864cfd), generate-deadkey-tables.pl [534188e](https://github.com/dispoclavier/nouvel-azerty/commit/534188e52c03eef6063c9bad60e583e0a26f1236)
 
 ## 5.2.0 (2025-06-15)
 
@@ -31,8 +48,8 @@ Prise en charge d’un émoji supplémentaire sur touche vive.
 	* Changer le caractère mort de la touche morte groupe de "²" U+00B2 en "①" U+2460. kbfredis.klc [13e3cd6](https://github.com/dispoclavier/nouvel-azerty/commit/13e3cd6c9b034d914dfa24768c1221c90b9b8465), kbfrFRs.klc [b28de47](https://github.com/dispoclavier/nouvel-azerty/commit/b28de473c5a2596b3be90716ace5e953859c1636), kbfrFRs.C [e439bc6](https://github.com/dispoclavier/nouvel-azerty/commit/e439bc645b6eaad8f481c4e8d696b6892e193b95)
 	* Changer le caractère mort de la touche morte cédille de "ȩ" U+0229 en "ç" U+00E7. kbfrFRs.klc [b28de47](https://github.com/dispoclavier/nouvel-azerty/commit/b28de473c5a2596b3be90716ace5e953859c1636), kbfrFRs.C [e439bc6](https://github.com/dispoclavier/nouvel-azerty/commit/e439bc645b6eaad8f481c4e8d696b6892e193b95), kbfredis.klc [1053c20](https://github.com/dispoclavier/nouvel-azerty/commit/1053c201fe9799b122c0e7c0bacb4e1eba4e2fe6), kbfredis.C [c7017f9](https://github.com/dispoclavier/nouvel-azerty/commit/c7017f9e95d89d00aa2a20e1d5010d2b9e2a3f02), dead-key-convert.pl [bc8d230](https://github.com/dispoclavier/nouvel-azerty/commit/bc8d2303cf88146c294391de05cd8aa9081b1140)
 * Transformations :
-	* Émulation de touche "ê" : Compléter le digramme "êq" en trigramme "êqu". compose-2.yml [bd2cbcb](https://github.com/dispoclavier/nouvel-azerty/commit/bd2cbcbfc7c2d8f7c996e30f60bf7c935e6c664e)
-	* Atténuer la disruption de l’expérience utilisateur entre Linux/macOS et Windows en matière d’émulation de touches "ê" et "ç". kbfrFRs.C [e439bc6](https://github.com/dispoclavier/nouvel-azerty/commit/e439bc645b6eaad8f481c4e8d696b6892e193b95), [97701e0](https://github.com/dispoclavier/nouvel-azerty/commit/97701e0eb410ca910fd485db3b0163fdc3add50c), kbfredis.C [c7017f9](https://github.com/dispoclavier/nouvel-azerty/commit/c7017f9e95d89d00aa2a20e1d5010d2b9e2a3f02), [75ab534](https://github.com/dispoclavier/nouvel-azerty/commit/75ab53455834b4342c7035f3df3b394a1e04e528)
+	* Émulation de touche "Ê" : Compléter le digramme "êq" en trigramme "êqu". compose-2.yml [bd2cbcb](https://github.com/dispoclavier/nouvel-azerty/commit/bd2cbcbfc7c2d8f7c996e30f60bf7c935e6c664e)
+	* Atténuer la disruption de l’expérience utilisateur entre Linux/macOS et Windows en matière d’émulation de touches "Ê" et "Ç". kbfrFRs.C [e439bc6](https://github.com/dispoclavier/nouvel-azerty/commit/e439bc645b6eaad8f481c4e8d696b6892e193b95), [97701e0](https://github.com/dispoclavier/nouvel-azerty/commit/97701e0eb410ca910fd485db3b0163fdc3add50c), kbfredis.C [c7017f9](https://github.com/dispoclavier/nouvel-azerty/commit/c7017f9e95d89d00aa2a20e1d5010d2b9e2a3f02), [75ab534](https://github.com/dispoclavier/nouvel-azerty/commit/75ab53455834b4342c7035f3df3b394a1e04e528)
 	* Convertir les touches mortes simples d’XCompose en C. dead-key-convert.pl [58d3c22](https://github.com/dispoclavier/nouvel-azerty/commit/58d3c2294dead063d317747af194fb67d0ae01ed), kbfredis.C [e2062be](https://github.com/dispoclavier/nouvel-azerty/commit/e2062be76f506149c71f61197e810e791da730dc), kbfrFRs.C [0563872](https://github.com/dispoclavier/nouvel-azerty/commit/05638729cb98e370a4d54b4df30d2dd425069011)
 	* Prendre en charge les demi-codets hauts. dead-key-convert.pl [228e8de](https://github.com/dispoclavier/nouvel-azerty/commit/228e8de2dfd811d20843709cd7a4f6dd656608e6), [ad8fcb3](https://github.com/dispoclavier/nouvel-azerty/commit/ad8fcb3e1c7c8b3f7cf140fa51afc9e7bb1b8986), [28b1f18](https://github.com/dispoclavier/nouvel-azerty/commit/28b1f18fea37267e3300b5528c9d6a014c8701a2), [1337c45](https://github.com/dispoclavier/nouvel-azerty/commit/1337c45f970d465ed5357053dbbd13fd98fd8333), [7dc449d](https://github.com/dispoclavier/nouvel-azerty/commit/7dc449d71fa63a9f6cab651b1f653cdab5709f87), [5dabd2a](https://github.com/dispoclavier/nouvel-azerty/commit/5dabd2a39e8847c89f3ac38514e162ba16482fcf), kbfredis.C [c7f17d4](https://github.com/dispoclavier/nouvel-azerty/commit/c7f17d407333cab18f59d9b7ccd4a90ea1f01fe1), [bce4e8f](https://github.com/dispoclavier/nouvel-azerty/commit/bce4e8ff153c2e142c3a313a4821fe509768ad5a), [6b3445a](https://github.com/dispoclavier/nouvel-azerty/commit/6b3445a8dcf48b057b9c16927f1fa885821f0697), [5ddca95](https://github.com/dispoclavier/nouvel-azerty/commit/5ddca95c07f2a6f6ca06066a1805f8314f230c6c), kbfrFRs.C [0563872](https://github.com/dispoclavier/nouvel-azerty/commit/05638729cb98e370a4d54b4df30d2dd425069011), [dcc9e7b](https://github.com/dispoclavier/nouvel-azerty/commit/dcc9e7b6926ef3a412333f8c82163f78f75c6bfe), [7fcc8e1](https://github.com/dispoclavier/nouvel-azerty/commit/7fcc8e14be3892752be14afb7825720c18b3c6ac)
 	* Simplifier la saisie de "𐞍" U+1078D, "𐞔" U+10794, "𐞜" U+1079C, "𐞝" U+1079D, "𐞡" U+107A1, "𐞢" U+107A2, "𐞧" U+107A7, "𐞴" U+107B4. compose-2.yml [f65ce6e](https://github.com/dispoclavier/nouvel-azerty/commit/f65ce6e0983576c1489a2df9af72323b6367105c)
