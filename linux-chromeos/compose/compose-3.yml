@@ -190,17 +190,19 @@
 #   as inappropriate on a general-purpose keyboard layout without extensive
 #   emoji support.
 #
-#   Emoji full list:
+#   Colorful emoji lists:
+#   https://unicode.org/emoji/charts/emoji-list.html
 #   https://unicode.org/emoji/charts/full-emoji-list.html
-#   https://www.unicode.org/emoji/charts-15.1/emoji-list.html
 #
-#   The source list:
-#   https://unicode.org/Public/emoji/15.1/emoji-sequences.txt
+#   Plain text emoji list:
+#   https://unicode.org/Public/emoji/latest/emoji-sequences.txt
+#   This list is abbreviated. Contiguous code points are replaced with ranges.
+#   As a consequence, searchability is limited.
 #
-#   The specification:
+#   Specification:
 #   https://unicode.org/reports/tr51/
 #
-#   Emoji frequency figures are based on:
+#   Frequency:
 #   https://home.unicode.org/emoji/emoji-frequency/
 #   https://www.futurity.org/emoji-countries-1328712-2-2/
 #
