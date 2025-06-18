@@ -5,6 +5,7 @@
 # 2024-05-16T1520+0200
 # 2024-10-28T1416+0100
 # 2025-05-26T2331+0200
+# 2025-06-18T0815+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -51,15 +52,15 @@
 #
 #
 # Using old-style file handles.
-use warnings;
 use strict;
+use warnings;
 use utf8;
 use feature 'unicode_strings';
 
-# Courtesy https://stackoverflow.com/a/12291409
+# By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-# Courtesy https://www.geeksforgeeks.org/perl-date-and-time/
+# By courtesy of https://www.geeksforgeeks.org/perl-date-and-time/
 use DateTime;
 
 ## Convert character names to localized names
@@ -98,7 +99,8 @@ print( "Processing dead keys from $input_path to $output_path.\n" );
 my $parse_on       = !1;
 my $comprehensive  = !0;
 my $date_legend    = 'Tableau mis à jour le ';
-# Courtesy https://stackoverflow.com/a/43881027
+
+# By courtesy of https://stackoverflow.com/a/43881027
 my $nowDate        = DateTime->now(time_zone => 'local');
 my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
 my $date           = "$day/$month/$year";
@@ -156,12 +158,12 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
-		unless ( $line =~ /^<Multi_key>/             # Multikey equivalents are skipped.
+		unless ( $line =~ /^<Multi_key>/         # Multikey equivalents are skipped.
 			|| $line =~ /^#/                 # Annotations are not (yet) processed.
 			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
 			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
 		) {
-			if ( $line =~ /<Multi_key>/
+			if ( $line =~ /<Multi_key>/ # The only instance of non-initial "Multi_key" is "Multi_key" double press.
 				|| $line =~ /<dead_abovedot>/
 				|| $line =~ /<dead_abovering>/
 				|| $line =~ /<dead_acute>/
@@ -318,10 +320,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<(.)>/$1/g;
 
 				# Translate English comments to French.
-				$line =~ s/ # Mathematical Alphanumeric Symbol high surrogate/ # Surrogat haut de symbole mathématique alphanumérique/g;
-				$line =~ s/ # Regional Indicator Symbol high surrogate/ # Surrogat haut de symbole drapeau/g;
 				$line =~ s/ # Wide-headed arrow high surrogate/ # Surrogat haut de flèche à pointe large/g;
-				$line =~ s/( # .*) (.) key emulation/$1 émulation de touche $2/g;
+				$line =~ s/( # .*) "(.)" key emulation/$1 émulation de touche &quot;$2&quot;/g;
 				$line =~ s/( # .*) (\d\d?)th-ranking/$1 classé au rang $2/g;
 				$line =~ s/( # .*) \(lenient\)/$1 pour une expérience utilisateur plus lisse/g;
 				$line =~ s/( # .*) \(Pe̍h-ōe-jī orthography\)/$1 (orthographe Pe̍h-ōe-jī)/g;
@@ -392,7 +392,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) next track button/$1 bouton de la piste suivante/g;
 				$line =~ s/( # .*) no-break space/$1 espace insécable/g;
 				$line =~ s/( # .*) outline scissors/$1 ciseaux ajourés/g;
-				$line =~ s/( # .*) overridden by Ê key emulation/$1 remplacé par l’émulation de touche Ê/g;
 				$line =~ s/( # .*) overrides/$1 remplace/g;
 				$line =~ s/( # .*) Overrides/$1 Remplace/g;
 				$line =~ s/( # .*) page break in plain text/$1 saut de page en texte brut/g;
