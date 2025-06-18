@@ -478,13 +478,15 @@
 #   See # # Introducing new-school input composition
 #
 #   One of those two dead keys that is not mapped on the same key as the symbol
-#   used to emulate it by multikey is dead_abovedot, mapped on P, where level-3
-#   ampersand is unrelated. However, dead_abovedot’s multikey equivalent period
-#   is mapped at level 5, for use as a decimal separator or group separator on
-#   the level-5 numpad, alongside comma on key C10 "M" on AZERTY.
+#   used to emulate it by multikey is dead_abovedot, mapped on key "P", where
+#   level-3 ampersand is unrelated. However, dead_abovedot’s multikey
+#   equivalent period is mapped at level 5, for use as a decimal separator or
+#   group separator on the level-5 numpad, alongside comma on key C10 "M" on
+#   AZERTY.
 #
-#   The other exception is dead_cedilla on the comma key B07, where level 3 is
-#   used for question mark, that is not an equivalent of any dead key either.
+#   The other exception is dead_cedilla on the "comma" key B07, where level 3
+#   is used for question mark, that is not an equivalent of any dead key
+#   either.
 #
 #   As a result, most dead keys are mnemonically related to the ASCII symbols
 #   mapped on the same keys, the more as all level-4 positions are available
@@ -8130,7 +8132,7 @@
 #
 #   This supports various combining dots, with digits as base characters, and
 #   with numeric or numpad-based mnemonics using the position of the key on the
-#   numpad or the bump on key "5 (C52):
+#   numpad or the bump on key "5" (C52):
 #
 #       1    "᷺" U1DFA COMBINING DOT BELOW LEFT
 #       3    "᪴" U1AB4 COMBINING TRIPLE DOT
@@ -8664,11 +8666,12 @@
 #
 # # Superscript square and cube for African and Breton variants
 #
-#   The lower- and uppercase positions on key E01 are used for ɛ, Ɛ or cʼh, Cʼh
-#   on the variants for Breton and Francophone Africa, instead of superscripts.
+#   The lower- and uppercase positions on key E01 are used for "ɛ", "Ɛ" or
+#   "cʼh", "Cʼh" on the variants for Breton and Francophone Africa, instead of
+#   superscripts.
 #
-#   For ease of access, the ² and ³ superscripts are also in groups 1 and 2 of
-#   eacute and Eacute, mapped on key 2 of the AZERTY.
+#   For ease of access, the "²" and "³" superscripts are also in groups 1 and 2
+#   of eacute and Eacute, mapped on key 2 of the AZERTY.
 #
 <UEFD0>                                                                                   <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
 <Multi_key><numbersign>                                                                   <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
@@ -13299,7 +13302,9 @@
 #   that the letters k, l, m, n, p, q, r, t, v, x do not exist as precomposed
 #   letters with circumflex accent, and most of these are not in usage either
 #   with combining circumflex as known composed letters. Those that are, will
-#   need to be overridden, so as to prioritize the Ê key emulation sequences.
+#   need to be overridden, so as to prioritize the "Ê" key emulation
+#   sequences.
+#
 #   French usage information by courtesy of _La fée des lettres_.
 #   https://www.motsavec.com
 #
@@ -13520,62 +13525,62 @@
 <Multi_key><less>                                                                              <J> : "Ĵ" U0134 # LATIN CAPITAL LETTER J WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <j> : "ĵ" U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <j> : "ĵ" U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
-<dead_circumflex>                                                                              <K> : "ÊK" # U00CA U004B French: Ê key emulation
-<Multi_key><less>                                                                              <K> : "ÊK" # U00CA U004B French: Ê key emulation
-<dead_circumflex>                                                                              <k> : "êk" # U00EA U006B French: Ê key emulation
-<Multi_key><less>                                                                              <k> : "êk" # U00EA U006B French: Ê key emulation
-<dead_circumflex>                                                                              <L> : "ÊL" # U00CA U004C French: Ê key emulation
-<Multi_key><less>                                                                              <L> : "ÊL" # U00CA U004C French: Ê key emulation
-<dead_circumflex>                                                                              <l> : "êl" # U00EA U006C French: Ê key emulation
-<Multi_key><less>                                                                              <l> : "êl" # U00EA U006C French: Ê key emulation
-<dead_circumflex>                                                                              <M> : "ÊM" # U00CA U004D French: Ê key emulation; overrides "M̂" # U004D U0302
-<Multi_key><less>                                                                              <M> : "ÊM" # U00CA U004D French: Ê key emulation; overrides "M̂" # U004D U0302
-<dead_circumflex>                                                                              <m> : "êm" # U00EA U006D French: Ê key emulation; overrides "m̂" # U006D U0302
-<Multi_key><less>                                                                              <m> : "êm" # U00EA U006D French: Ê key emulation; overrides "m̂" # U006D U0302
-<dead_circumflex>                                                                              <N> : "ÊN" # U00CA U004E French: Ê key emulation; overrides "N̂" # U004E U0302
-<Multi_key><less>                                                                              <N> : "ÊN" # U00CA U004E French: Ê key emulation; overrides "N̂" # U004E U0302
-<dead_circumflex>                                                                              <n> : "ên" # U00EA U006E French: Ê key emulation; overrides "n̂" # U006E U0302
-<Multi_key><less>                                                                              <n> : "ên" # U00EA U006E French: Ê key emulation; overrides "n̂" # U006E U0302
+<dead_circumflex>                                                                              <K> : "ÊK" # U00CA U004B French: "Ê" key emulation
+<Multi_key><less>                                                                              <K> : "ÊK" # U00CA U004B French: "Ê" key emulation
+<dead_circumflex>                                                                              <k> : "êk" # U00EA U006B French: "Ê" key emulation
+<Multi_key><less>                                                                              <k> : "êk" # U00EA U006B French: "Ê" key emulation
+<dead_circumflex>                                                                              <L> : "ÊL" # U00CA U004C French: "Ê" key emulation
+<Multi_key><less>                                                                              <L> : "ÊL" # U00CA U004C French: "Ê" key emulation
+<dead_circumflex>                                                                              <l> : "êl" # U00EA U006C French: "Ê" key emulation
+<Multi_key><less>                                                                              <l> : "êl" # U00EA U006C French: "Ê" key emulation
+<dead_circumflex>                                                                              <M> : "ÊM" # U00CA U004D French: "Ê" key emulation; overrides "M̂" # U004D U0302
+<Multi_key><less>                                                                              <M> : "ÊM" # U00CA U004D French: "Ê" key emulation; overrides "M̂" # U004D U0302
+<dead_circumflex>                                                                              <m> : "êm" # U00EA U006D French: "Ê" key emulation; overrides "m̂" # U006D U0302
+<Multi_key><less>                                                                              <m> : "êm" # U00EA U006D French: "Ê" key emulation; overrides "m̂" # U006D U0302
+<dead_circumflex>                                                                              <N> : "ÊN" # U00CA U004E French: "Ê" key emulation; overrides "N̂" # U004E U0302
+<Multi_key><less>                                                                              <N> : "ÊN" # U00CA U004E French: "Ê" key emulation; overrides "N̂" # U004E U0302
+<dead_circumflex>                                                                              <n> : "ên" # U00EA U006E French: "Ê" key emulation; overrides "n̂" # U006E U0302
+<Multi_key><less>                                                                              <n> : "ên" # U00EA U006E French: "Ê" key emulation; overrides "n̂" # U006E U0302
 <dead_circumflex>                                                                              <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
-<dead_circumflex>                                                                              <P> : "ÊP" # U00CA U0050 French: Ê key emulation
-<Multi_key><less>                                                                              <P> : "ÊP" # U00CA U0050 French: Ê key emulation
-<dead_circumflex>                                                                              <p> : "êp" # U00EA U0070 French: Ê key emulation
-<Multi_key><less>                                                                              <p> : "êp" # U00EA U0070 French: Ê key emulation
-<dead_circumflex>                                                                              <Q> : "ÊQU" # U00CA U0051 U0055 French: Ê key emulation
-<Multi_key><less>                                                                              <Q> : "ÊQU" # U00CA U0051 U0055 French: Ê key emulation
-<dead_circumflex>                                                                              <q> : "êqu" # U00EA U0071 U0075 French: Ê key emulation
-<Multi_key><less>                                                                              <q> : "êqu" # U00EA U0071 U0075 French: Ê key emulation
-<dead_circumflex>                                                                              <R> : "ÊR" # U00CA U0052 French: Ê key emulation
-<Multi_key><less>                                                                              <R> : "ÊR" # U00CA U0052 French: Ê key emulation
-<dead_circumflex>                                                                              <r> : "êr" # U00EA U0072 French: Ê key emulation
-<Multi_key><less>                                                                              <r> : "êr" # U00EA U0072 French: Ê key emulation
+<dead_circumflex>                                                                              <P> : "ÊP" # U00CA U0050 French: "Ê" key emulation
+<Multi_key><less>                                                                              <P> : "ÊP" # U00CA U0050 French: "Ê" key emulation
+<dead_circumflex>                                                                              <p> : "êp" # U00EA U0070 French: "Ê" key emulation
+<Multi_key><less>                                                                              <p> : "êp" # U00EA U0070 French: "Ê" key emulation
+<dead_circumflex>                                                                              <Q> : "ÊQU" # U00CA U0051 U0055 French: "Ê" key emulation
+<Multi_key><less>                                                                              <Q> : "ÊQU" # U00CA U0051 U0055 French: "Ê" key emulation
+<dead_circumflex>                                                                              <q> : "êqu" # U00EA U0071 U0075 French: "Ê" key emulation
+<Multi_key><less>                                                                              <q> : "êqu" # U00EA U0071 U0075 French: "Ê" key emulation
+<dead_circumflex>                                                                              <R> : "ÊR" # U00CA U0052 French: "Ê" key emulation
+<Multi_key><less>                                                                              <R> : "ÊR" # U00CA U0052 French: "Ê" key emulation
+<dead_circumflex>                                                                              <r> : "êr" # U00EA U0072 French: "Ê" key emulation
+<Multi_key><less>                                                                              <r> : "êr" # U00EA U0072 French: "Ê" key emulation
 <dead_circumflex>                                                                              <S> : "Ŝ" U015C # LATIN CAPITAL LETTER S WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <S> : "Ŝ" U015C # LATIN CAPITAL LETTER S WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <s> : "ŝ" U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <s> : "ŝ" U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
-<dead_circumflex>                                                                              <T> : "ÊT" # U00CA U0054 French: Ê key emulation
-<Multi_key><less>                                                                              <T> : "ÊT" # U00CA U0054 French: Ê key emulation
-<dead_circumflex>                                                                              <t> : "êt" # U00EA U0074 French: Ê key emulation
-<Multi_key><less>                                                                              <t> : "êt" # U00EA U0074 French: Ê key emulation
+<dead_circumflex>                                                                              <T> : "ÊT" # U00CA U0054 French: "Ê" key emulation
+<Multi_key><less>                                                                              <T> : "ÊT" # U00CA U0054 French: "Ê" key emulation
+<dead_circumflex>                                                                              <t> : "êt" # U00EA U0074 French: "Ê" key emulation
+<Multi_key><less>                                                                              <t> : "êt" # U00EA U0074 French: "Ê" key emulation
 <dead_circumflex>                                                                              <U> : "Û" U00DB # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <U> : "Û" U00DB # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <u> : "û" U00FB # LATIN SMALL LETTER U WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <u> : "û" U00FB # LATIN SMALL LETTER U WITH CIRCUMFLEX
-<dead_circumflex>                                                                              <V> : "ÊV" # U00CA U0056 French: Ê key emulation
-<Multi_key><less>                                                                              <V> : "ÊV" # U00CA U0056 French: Ê key emulation
-<dead_circumflex>                                                                              <v> : "êv" # U00EA U0076 French: Ê key emulation
-<Multi_key><less>                                                                              <v> : "êv" # U00EA U0076 French: Ê key emulation
+<dead_circumflex>                                                                              <V> : "ÊV" # U00CA U0056 French: "Ê" key emulation
+<Multi_key><less>                                                                              <V> : "ÊV" # U00CA U0056 French: "Ê" key emulation
+<dead_circumflex>                                                                              <v> : "êv" # U00EA U0076 French: "Ê" key emulation
+<Multi_key><less>                                                                              <v> : "êv" # U00EA U0076 French: "Ê" key emulation
 <dead_circumflex>                                                                              <W> : "Ŵ" U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <W> : "Ŵ" U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <w> : "ŵ" U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <w> : "ŵ" U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
-<dead_circumflex>                                                                              <X> : "ÊCH" # U00CA U0043 U0048 French: Ê key emulation
-<Multi_key><less>                                                                              <X> : "ÊCH" # U00CA U0043 U0048 French: Ê key emulation
-<dead_circumflex>                                                                              <x> : "êch" # U00EA U0063 U0068 French: Ê key emulation
-<Multi_key><less>                                                                              <x> : "êch" # U00EA U0063 U0068 French: Ê key emulation
+<dead_circumflex>                                                                              <X> : "ÊCH" # U00CA U0043 U0048 French: "Ê" key emulation
+<Multi_key><less>                                                                              <X> : "ÊCH" # U00CA U0043 U0048 French: "Ê" key emulation
+<dead_circumflex>                                                                              <x> : "êch" # U00EA U0063 U0068 French: "Ê" key emulation
+<Multi_key><less>                                                                              <x> : "êch" # U00EA U0063 U0068 French: "Ê" key emulation
 <dead_circumflex>                                                                              <Y> : "Ŷ" U0176 # LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <Y> : "Ŷ" U0176 # LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <y> : "ŷ" U0177 # LATIN SMALL LETTER Y WITH CIRCUMFLEX
@@ -16131,10 +16136,10 @@
 <Multi_key><comma>                                                                             <9> : "⒐" U2490 # DIGIT NINE FULL STOP
 <dead_cedilla>                                                                              <KP_9> : "⒐" U2490 # DIGIT NINE FULL STOP
 <Multi_key><comma>                                                                          <KP_9> : "⒐" U2490 # DIGIT NINE FULL STOP
-<dead_cedilla>                                                                                 <A> : "ÇA" # U00C7 U0041 Canadian French: Ç key emulation
-<Multi_key><comma>                                                                             <A> : "ÇA" # U00C7 U0041 Canadian French: Ç key emulation
-<dead_cedilla>                                                                                 <a> : "ça" # U00E7 U0061 Canadian French: Ç key emulation
-<Multi_key><comma>                                                                             <a> : "ça" # U00E7 U0061 Canadian French: Ç key emulation
+<dead_cedilla>                                                                                 <A> : "ÇA" # U00C7 U0041 Canadian French: "Ç" key emulation
+<Multi_key><comma>                                                                             <A> : "ÇA" # U00C7 U0041 Canadian French: "Ç" key emulation
+<dead_cedilla>                                                                                 <a> : "ça" # U00E7 U0061 Canadian French: "Ç" key emulation
+<Multi_key><comma>                                                                             <a> : "ça" # U00E7 U0061 Canadian French: "Ç" key emulation
 <dead_cedilla>                                                                                 <C> : "Ç" U00C7 # LATIN CAPITAL LETTER C WITH CEDILLA
 <Multi_key><comma>                                                                             <C> : "Ç" U00C7 # LATIN CAPITAL LETTER C WITH CEDILLA
 <dead_cedilla>                                                                                 <c> : "ç" U00E7 # LATIN SMALL LETTER C WITH CEDILLA
@@ -16167,10 +16172,10 @@
 <Multi_key><comma>                                                                             <N> : "Ņ" U0145 # LATIN CAPITAL LETTER N WITH CEDILLA
 <dead_cedilla>                                                                                 <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
 <Multi_key><comma>                                                                             <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
-<dead_cedilla>                                                                                 <O> : "ÇO" # U00C7 U004F Canadian French: Ç key emulation
-<Multi_key><comma>                                                                             <O> : "ÇO" # U00C7 U004F Canadian French: Ç key emulation
-<dead_cedilla>                                                                                 <o> : "ço" # U00E7 U006F Canadian French: Ç key emulation
-<Multi_key><comma>                                                                             <o> : "ço" # U00E7 U006F Canadian French: Ç key emulation
+<dead_cedilla>                                                                                 <O> : "ÇO" # U00C7 U004F Canadian French: "Ç" key emulation
+<Multi_key><comma>                                                                             <O> : "ÇO" # U00C7 U004F Canadian French: "Ç" key emulation
+<dead_cedilla>                                                                                 <o> : "ço" # U00E7 U006F Canadian French: "Ç" key emulation
+<Multi_key><comma>                                                                             <o> : "ço" # U00E7 U006F Canadian French: "Ç" key emulation
 <dead_cedilla>                                                                                 <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
 <Multi_key><comma>                                                                             <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
 <dead_cedilla>                                                                                 <r> : "ŗ" U0157 # LATIN SMALL LETTER R WITH CEDILLA
@@ -16183,10 +16188,10 @@
 <Multi_key><comma>                                                                             <T> : "Ţ" U0162 # LATIN CAPITAL LETTER T WITH CEDILLA
 <dead_cedilla>                                                                                 <t> : "ţ" U0163 # LATIN SMALL LETTER T WITH CEDILLA
 <Multi_key><comma>                                                                             <t> : "ţ" U0163 # LATIN SMALL LETTER T WITH CEDILLA
-<dead_cedilla>                                                                                 <U> : "ÇU" # U00C7 U0055 Canadian French: Ç key emulation
-<Multi_key><comma>                                                                             <U> : "ÇU" # U00C7 U0055 Canadian French: Ç key emulation
-<dead_cedilla>                                                                                 <u> : "çu" # U00E7 U0075 Canadian French: Ç key emulation
-<Multi_key><comma>                                                                             <u> : "çu" # U00E7 U0075 Canadian French: Ç key emulation
+<dead_cedilla>                                                                                 <U> : "ÇU" # U00C7 U0055 Canadian French: "Ç" key emulation
+<Multi_key><comma>                                                                             <U> : "ÇU" # U00C7 U0055 Canadian French: "Ç" key emulation
+<dead_cedilla>                                                                                 <u> : "çu" # U00E7 U0075 Canadian French: "Ç" key emulation
+<Multi_key><comma>                                                                             <u> : "çu" # U00E7 U0075 Canadian French: "Ç" key emulation
 #
 #
 # # CEDILLA&ACUTE
