@@ -14315,7 +14315,8 @@
 #   See #^# FLAG_EMOJI
 #
 #   In XKB, on single press, letters yield regional indicator symbols with an
-#   appended ZWNJ U200C for letter emoji display and writing words.
+#   appended cursieve non-joiner ZWNJ U200C for letter emoji display and
+#   writing words.
 #
 #   Regional indicator symbols in isolation are supported on triple press.
 #   See #^# REGIONAL_INDICATOR_SYMBOL
@@ -14373,10 +14374,12 @@
 #   SHORT EQUALS SIGN is consistently in *dead_bar double press.
 #   See #^# DOUBLE_BAR
 #
+#   U200B ZERO WIDTH SPACE cannot be used as a base character, due to its
+#   involvement in the TAG dead key.
+#   See # # TAG
+#
 <UEFD7>                                                                                    <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <Multi_key><equal>                                                                         <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
-<UEFD7>                                                                                    <U200B> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
-<Multi_key><equal>                                                                         <U200B> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <UEFD7>                                                                             <nobreakspace> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <Multi_key><equal>                                                                  <nobreakspace> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <UEFD7>                                                                                    <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
@@ -14570,156 +14573,248 @@
 <Multi_key><equal><numbersign><numbersign><numbersign>                                     <grave> : "⊽" U22BD # NOR
 #
 #
-# # Private use area characters
+# # TAG
+#   tag characters
+#   *dead_flag ZWSP
+#   Multi_key: ¦=,
 #   Dchar: 
 #
-#   This facility to input the first 62 private-use characters uses the
-#   regional indicator letter dead key followed by comma.
+#   Tag characters are supported due to the use of lowercase letter tags and
+#   cancel tag in subdivision flag sequences.
+#   https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
 #
-<UEFD7><comma>                                                                                 <0> : "" UE000 # PRIVATE USE CHARACTER E000
-<Multi_key><equal><comma>                                                                      <0> : "" UE000 # PRIVATE USE CHARACTER E000
-<UEFD7><comma>                                                                              <KP_0> : "" UE000 # PRIVATE USE CHARACTER E000
-<Multi_key><equal><comma>                                                                   <KP_0> : "" UE000 # PRIVATE USE CHARACTER E000
-<UEFD7><comma>                                                                                 <1> : "" UE001 # PRIVATE USE CHARACTER E001
-<Multi_key><equal><comma>                                                                      <1> : "" UE001 # PRIVATE USE CHARACTER E001
-<UEFD7><comma>                                                                              <KP_1> : "" UE001 # PRIVATE USE CHARACTER E001
-<Multi_key><equal><comma>                                                                   <KP_1> : "" UE001 # PRIVATE USE CHARACTER E001
-<UEFD7><comma>                                                                                 <2> : "" UE002 # PRIVATE USE CHARACTER E002
-<Multi_key><equal><comma>                                                                      <2> : "" UE002 # PRIVATE USE CHARACTER E002
-<UEFD7><comma>                                                                              <KP_2> : "" UE002 # PRIVATE USE CHARACTER E002
-<Multi_key><equal><comma>                                                                   <KP_2> : "" UE002 # PRIVATE USE CHARACTER E002
-<UEFD7><comma>                                                                                 <3> : "" UE003 # PRIVATE USE CHARACTER E003
-<Multi_key><equal><comma>                                                                      <3> : "" UE003 # PRIVATE USE CHARACTER E003
-<UEFD7><comma>                                                                              <KP_3> : "" UE003 # PRIVATE USE CHARACTER E003
-<Multi_key><equal><comma>                                                                   <KP_3> : "" UE003 # PRIVATE USE CHARACTER E003
-<UEFD7><comma>                                                                                 <4> : "" UE004 # PRIVATE USE CHARACTER E004
-<Multi_key><equal><comma>                                                                      <4> : "" UE004 # PRIVATE USE CHARACTER E004
-<UEFD7><comma>                                                                              <KP_4> : "" UE004 # PRIVATE USE CHARACTER E004
-<Multi_key><equal><comma>                                                                   <KP_4> : "" UE004 # PRIVATE USE CHARACTER E004
-<UEFD7><comma>                                                                                 <5> : "" UE005 # PRIVATE USE CHARACTER E005
-<Multi_key><equal><comma>                                                                      <5> : "" UE005 # PRIVATE USE CHARACTER E005
-<UEFD7><comma>                                                                              <KP_5> : "" UE005 # PRIVATE USE CHARACTER E005
-<Multi_key><equal><comma>                                                                   <KP_5> : "" UE005 # PRIVATE USE CHARACTER E005
-<UEFD7><comma>                                                                                 <6> : "" UE006 # PRIVATE USE CHARACTER E006
-<Multi_key><equal><comma>                                                                      <6> : "" UE006 # PRIVATE USE CHARACTER E006
-<UEFD7><comma>                                                                              <KP_6> : "" UE006 # PRIVATE USE CHARACTER E006
-<Multi_key><equal><comma>                                                                   <KP_6> : "" UE006 # PRIVATE USE CHARACTER E006
-<UEFD7><comma>                                                                                 <7> : "" UE007 # PRIVATE USE CHARACTER E007
-<Multi_key><equal><comma>                                                                      <7> : "" UE007 # PRIVATE USE CHARACTER E007
-<UEFD7><comma>                                                                              <KP_7> : "" UE007 # PRIVATE USE CHARACTER E007
-<Multi_key><equal><comma>                                                                   <KP_7> : "" UE007 # PRIVATE USE CHARACTER E007
-<UEFD7><comma>                                                                                 <8> : "" UE008 # PRIVATE USE CHARACTER E008
-<Multi_key><equal><comma>                                                                      <8> : "" UE008 # PRIVATE USE CHARACTER E008
-<UEFD7><comma>                                                                              <KP_8> : "" UE008 # PRIVATE USE CHARACTER E008
-<Multi_key><equal><comma>                                                                   <KP_8> : "" UE008 # PRIVATE USE CHARACTER E008
-<UEFD7><comma>                                                                                 <9> : "" UE009 # PRIVATE USE CHARACTER E009
-<Multi_key><equal><comma>                                                                      <9> : "" UE009 # PRIVATE USE CHARACTER E009
-<UEFD7><comma>                                                                              <KP_9> : "" UE009 # PRIVATE USE CHARACTER E009
-<Multi_key><equal><comma>                                                                   <KP_9> : "" UE009 # PRIVATE USE CHARACTER E009
-<UEFD7><comma>                                                                                 <A> : "" UE00B # PRIVATE USE CHARACTER E00B
-<Multi_key><equal><comma>                                                                      <A> : "" UE00B # PRIVATE USE CHARACTER E00B
-<UEFD7><comma>                                                                                 <a> : "" UE00A # PRIVATE USE CHARACTER E00A
-<Multi_key><equal><comma>                                                                      <a> : "" UE00A # PRIVATE USE CHARACTER E00A
-<UEFD7><comma>                                                                                 <B> : "" UE00D # PRIVATE USE CHARACTER E00D
-<Multi_key><equal><comma>                                                                      <B> : "" UE00D # PRIVATE USE CHARACTER E00D
-<UEFD7><comma>                                                                                 <b> : "" UE00C # PRIVATE USE CHARACTER E00C
-<Multi_key><equal><comma>                                                                      <b> : "" UE00C # PRIVATE USE CHARACTER E00C
-<UEFD7><comma>                                                                                 <C> : "" UE00F # PRIVATE USE CHARACTER E00F
-<Multi_key><equal><comma>                                                                      <C> : "" UE00F # PRIVATE USE CHARACTER E00F
-<UEFD7><comma>                                                                                 <c> : "" UE00E # PRIVATE USE CHARACTER E00E
-<Multi_key><equal><comma>                                                                      <c> : "" UE00E # PRIVATE USE CHARACTER E00E
-<UEFD7><comma>                                                                                 <D> : "" UE011 # PRIVATE USE CHARACTER E011
-<Multi_key><equal><comma>                                                                      <D> : "" UE011 # PRIVATE USE CHARACTER E011
-<UEFD7><comma>                                                                                 <d> : "" UE010 # PRIVATE USE CHARACTER E010
-<Multi_key><equal><comma>                                                                      <d> : "" UE010 # PRIVATE USE CHARACTER E010
-<UEFD7><comma>                                                                                 <E> : "" UE013 # PRIVATE USE CHARACTER E013
-<Multi_key><equal><comma>                                                                      <E> : "" UE013 # PRIVATE USE CHARACTER E013
-<UEFD7><comma>                                                                                 <e> : "" UE012 # PRIVATE USE CHARACTER E012
-<Multi_key><equal><comma>                                                                      <e> : "" UE012 # PRIVATE USE CHARACTER E012
-<UEFD7><comma>                                                                                 <F> : "" UE015 # PRIVATE USE CHARACTER E015
-<Multi_key><equal><comma>                                                                      <F> : "" UE015 # PRIVATE USE CHARACTER E015
-<UEFD7><comma>                                                                                 <f> : "" UE014 # PRIVATE USE CHARACTER E014
-<Multi_key><equal><comma>                                                                      <f> : "" UE014 # PRIVATE USE CHARACTER E014
-<UEFD7><comma>                                                                                 <G> : "" UE017 # PRIVATE USE CHARACTER E017
-<Multi_key><equal><comma>                                                                      <G> : "" UE017 # PRIVATE USE CHARACTER E017
-<UEFD7><comma>                                                                                 <g> : "" UE016 # PRIVATE USE CHARACTER E016
-<Multi_key><equal><comma>                                                                      <g> : "" UE016 # PRIVATE USE CHARACTER E016
-<UEFD7><comma>                                                                                 <H> : "" UE019 # PRIVATE USE CHARACTER E019
-<Multi_key><equal><comma>                                                                      <H> : "" UE019 # PRIVATE USE CHARACTER E019
-<UEFD7><comma>                                                                                 <h> : "" UE018 # PRIVATE USE CHARACTER E018
-<Multi_key><equal><comma>                                                                      <h> : "" UE018 # PRIVATE USE CHARACTER E018
-<UEFD7><comma>                                                                                 <I> : "" UE01B # PRIVATE USE CHARACTER E01B
-<Multi_key><equal><comma>                                                                      <I> : "" UE01B # PRIVATE USE CHARACTER E01B
-<UEFD7><comma>                                                                                 <i> : "" UE01A # PRIVATE USE CHARACTER E01A
-<Multi_key><equal><comma>                                                                      <i> : "" UE01A # PRIVATE USE CHARACTER E01A
-<UEFD7><comma>                                                                                 <J> : "" UE01D # PRIVATE USE CHARACTER E01D
-<Multi_key><equal><comma>                                                                      <J> : "" UE01D # PRIVATE USE CHARACTER E01D
-<UEFD7><comma>                                                                                 <j> : "" UE01C # PRIVATE USE CHARACTER E01C
-<Multi_key><equal><comma>                                                                      <j> : "" UE01C # PRIVATE USE CHARACTER E01C
-<UEFD7><comma>                                                                                 <K> : "" UE01F # PRIVATE USE CHARACTER E01F
-<Multi_key><equal><comma>                                                                      <K> : "" UE01F # PRIVATE USE CHARACTER E01F
-<UEFD7><comma>                                                                                 <k> : "" UE01E # PRIVATE USE CHARACTER E01E
-<Multi_key><equal><comma>                                                                      <k> : "" UE01E # PRIVATE USE CHARACTER E01E
-<UEFD7><comma>                                                                                 <L> : "" UE021 # PRIVATE USE CHARACTER E021
-<Multi_key><equal><comma>                                                                      <L> : "" UE021 # PRIVATE USE CHARACTER E021
-<UEFD7><comma>                                                                                 <l> : "" UE020 # PRIVATE USE CHARACTER E020
-<Multi_key><equal><comma>                                                                      <l> : "" UE020 # PRIVATE USE CHARACTER E020
-<UEFD7><comma>                                                                                 <M> : "" UE023 # PRIVATE USE CHARACTER E023
-<Multi_key><equal><comma>                                                                      <M> : "" UE023 # PRIVATE USE CHARACTER E023
-<UEFD7><comma>                                                                                 <m> : "" UE022 # PRIVATE USE CHARACTER E022
-<Multi_key><equal><comma>                                                                      <m> : "" UE022 # PRIVATE USE CHARACTER E022
-<UEFD7><comma>                                                                                 <N> : "" UE025 # PRIVATE USE CHARACTER E025
-<Multi_key><equal><comma>                                                                      <N> : "" UE025 # PRIVATE USE CHARACTER E025
-<UEFD7><comma>                                                                                 <n> : "" UE024 # PRIVATE USE CHARACTER E024
-<Multi_key><equal><comma>                                                                      <n> : "" UE024 # PRIVATE USE CHARACTER E024
-<UEFD7><comma>                                                                                 <O> : "" UE027 # PRIVATE USE CHARACTER E027
-<Multi_key><equal><comma>                                                                      <O> : "" UE027 # PRIVATE USE CHARACTER E027
-<UEFD7><comma>                                                                                 <o> : "" UE026 # PRIVATE USE CHARACTER E026
-<Multi_key><equal><comma>                                                                      <o> : "" UE026 # PRIVATE USE CHARACTER E026
-<UEFD7><comma>                                                                                 <P> : "" UE029 # PRIVATE USE CHARACTER E029
-<Multi_key><equal><comma>                                                                      <P> : "" UE029 # PRIVATE USE CHARACTER E029
-<UEFD7><comma>                                                                                 <p> : "" UE028 # PRIVATE USE CHARACTER E028
-<Multi_key><equal><comma>                                                                      <p> : "" UE028 # PRIVATE USE CHARACTER E028
-<UEFD7><comma>                                                                                 <Q> : "" UE02B # PRIVATE USE CHARACTER E02B
-<Multi_key><equal><comma>                                                                      <Q> : "" UE02B # PRIVATE USE CHARACTER E02B
-<UEFD7><comma>                                                                                 <q> : "" UE02A # PRIVATE USE CHARACTER E02A
-<Multi_key><equal><comma>                                                                      <q> : "" UE02A # PRIVATE USE CHARACTER E02A
-<UEFD7><comma>                                                                                 <R> : "" UE02D # PRIVATE USE CHARACTER E02D
-<Multi_key><equal><comma>                                                                      <R> : "" UE02D # PRIVATE USE CHARACTER E02D
-<UEFD7><comma>                                                                                 <r> : "" UE02C # PRIVATE USE CHARACTER E02C
-<Multi_key><equal><comma>                                                                      <r> : "" UE02C # PRIVATE USE CHARACTER E02C
-<UEFD7><comma>                                                                                 <S> : "" UE02F # PRIVATE USE CHARACTER E02F
-<Multi_key><equal><comma>                                                                      <S> : "" UE02F # PRIVATE USE CHARACTER E02F
-<UEFD7><comma>                                                                                 <s> : "" UE02E # PRIVATE USE CHARACTER E02E
-<Multi_key><equal><comma>                                                                      <s> : "" UE02E # PRIVATE USE CHARACTER E02E
-<UEFD7><comma>                                                                                 <T> : "" UE031 # PRIVATE USE CHARACTER E031
-<Multi_key><equal><comma>                                                                      <T> : "" UE031 # PRIVATE USE CHARACTER E031
-<UEFD7><comma>                                                                                 <t> : "" UE030 # PRIVATE USE CHARACTER E030
-<Multi_key><equal><comma>                                                                      <t> : "" UE030 # PRIVATE USE CHARACTER E030
-<UEFD7><comma>                                                                                 <U> : "" UE033 # PRIVATE USE CHARACTER E033
-<Multi_key><equal><comma>                                                                      <U> : "" UE033 # PRIVATE USE CHARACTER E033
-<UEFD7><comma>                                                                                 <u> : "" UE032 # PRIVATE USE CHARACTER E032
-<Multi_key><equal><comma>                                                                      <u> : "" UE032 # PRIVATE USE CHARACTER E032
-<UEFD7><comma>                                                                                 <V> : "" UE035 # PRIVATE USE CHARACTER E035
-<Multi_key><equal><comma>                                                                      <V> : "" UE035 # PRIVATE USE CHARACTER E035
-<UEFD7><comma>                                                                                 <v> : "" UE034 # PRIVATE USE CHARACTER E034
-<Multi_key><equal><comma>                                                                      <v> : "" UE034 # PRIVATE USE CHARACTER E034
-<UEFD7><comma>                                                                                 <W> : "" UE037 # PRIVATE USE CHARACTER E037
-<Multi_key><equal><comma>                                                                      <W> : "" UE037 # PRIVATE USE CHARACTER E037
-<UEFD7><comma>                                                                                 <w> : "" UE036 # PRIVATE USE CHARACTER E036
-<Multi_key><equal><comma>                                                                      <w> : "" UE036 # PRIVATE USE CHARACTER E036
-<UEFD7><comma>                                                                                 <X> : "" UE039 # PRIVATE USE CHARACTER E039
-<Multi_key><equal><comma>                                                                      <X> : "" UE039 # PRIVATE USE CHARACTER E039
-<UEFD7><comma>                                                                                 <x> : "" UE038 # PRIVATE USE CHARACTER E038
-<Multi_key><equal><comma>                                                                      <x> : "" UE038 # PRIVATE USE CHARACTER E038
-<UEFD7><comma>                                                                                 <Y> : "" UE03B # PRIVATE USE CHARACTER E03B
-<Multi_key><equal><comma>                                                                      <Y> : "" UE03B # PRIVATE USE CHARACTER E03B
-<UEFD7><comma>                                                                                 <y> : "" UE03A # PRIVATE USE CHARACTER E03A
-<Multi_key><equal><comma>                                                                      <y> : "" UE03A # PRIVATE USE CHARACTER E03A
-<UEFD7><comma>                                                                                 <Z> : "" UE03D # PRIVATE USE CHARACTER E03D
-<Multi_key><equal><comma>                                                                      <Z> : "" UE03D # PRIVATE USE CHARACTER E03D
-<UEFD7><comma>                                                                                 <z> : "" UE03C # PRIVATE USE CHARACTER E03C
-<Multi_key><equal><comma>                                                                      <z> : "" UE03C # PRIVATE USE CHARACTER E03C
+#   The only standardized subdivision flags are Enland, Scotland and Wales.
+#   https://blog.unicode.org/2022/03/the-past-and-future-of-flag-emoji.html
+#
+#   A waving black flag "🏴" U1F3F4 is appended with tag small letters "gbeng",
+#   "gbsct", "gbwls", and the sequence is terminated by UE007F CANCEL TAG.
+#
+#   As UE0001 LANGUAGE TAG is deprecated, a second instance of
+#   UE007F CANCEL TAG takes up its place, for a less screwed-up user experience
+#   due to the ability to use either no-break space or no-break thin space as a
+#   base character to terminate a subdivision flag.
+#
+#   This virtual dead key is set up by appending U200B ZERO WIDTH SPACE, or
+#   comma as of the multikey equivalents, as an ad-hoc solution benefiting from
+#   the synergy with the dead key.
+#   See # # TILDE&AMPERSAND
+#
+<UEFD7><U200B>                                                                             <space> : "󠀠" UE0020 # TAG SPACE
+<Multi_key><equal><comma>                                                                  <space> : "󠀠" UE0020 # TAG SPACE
+<UEFD7><U200B>                                                                             <U200B> : "*" UDB40 # Tag high surrogate
+<Multi_key><equal><comma>                                                                  <U200B> : "*" UDB40 # Tag high surrogate
+<UEFD7><U200B>                                                                      <nobreakspace> : "󠁿" UE007F # CANCEL TAG
+<Multi_key><equal><comma>                                                           <nobreakspace> : "󠁿" UE007F # CANCEL TAG
+<UEFD7><U200B>                                                                             <U202F> : "󠁿" UE007F # CANCEL TAG
+<Multi_key><equal><comma>                                                                  <U202F> : "󠁿" UE007F # CANCEL TAG
+<UEFD7><U200B>                                                                            <exclam> : "󠀡" UE0021 # TAG EXCLAMATION MARK
+<Multi_key><equal><comma>                                                                 <exclam> : "󠀡" UE0021 # TAG EXCLAMATION MARK
+<UEFD7><U200B>                                                                          <quotedbl> : "󠀢" UE0022 # TAG QUOTATION MARK
+<Multi_key><equal><comma>                                                               <quotedbl> : "󠀢" UE0022 # TAG QUOTATION MARK
+<UEFD7><U200B>                                                                        <numbersign> : "󠀣" UE0023 # TAG NUMBER SIGN
+<Multi_key><equal><comma>                                                             <numbersign> : "󠀣" UE0023 # TAG NUMBER SIGN
+<UEFD7><U200B>                                                                            <dollar> : "󠀤" UE0024 # TAG DOLLAR SIGN
+<Multi_key><equal><comma>                                                                 <dollar> : "󠀤" UE0024 # TAG DOLLAR SIGN
+<UEFD7><U200B>                                                                           <percent> : "󠀥" UE0025 # TAG PERCENT SIGN
+<Multi_key><equal><comma>                                                                <percent> : "󠀥" UE0025 # TAG PERCENT SIGN
+<UEFD7><U200B>                                                                         <ampersand> : "󠀦" UE0026 # TAG AMPERSAND
+<Multi_key><equal><comma>                                                              <ampersand> : "󠀦" UE0026 # TAG AMPERSAND
+<UEFD7><U200B>                                                                        <apostrophe> : "󠀧" UE0027 # TAG APOSTROPHE
+<Multi_key><equal><comma>                                                             <apostrophe> : "󠀧" UE0027 # TAG APOSTROPHE
+<UEFD7><U200B>                                                                         <parenleft> : "󠀨" UE0028 # TAG LEFT PARENTHESIS
+<Multi_key><equal><comma>                                                              <parenleft> : "󠀨" UE0028 # TAG LEFT PARENTHESIS
+<UEFD7><U200B>                                                                        <parenright> : "󠀩" UE0029 # TAG RIGHT PARENTHESIS
+<Multi_key><equal><comma>                                                             <parenright> : "󠀩" UE0029 # TAG RIGHT PARENTHESIS
+<UEFD7><U200B>                                                                          <asterisk> : "󠀪" UE002A # TAG ASTERISK
+<Multi_key><equal><comma>                                                               <asterisk> : "󠀪" UE002A # TAG ASTERISK
+<UEFD7><U200B>                                                                              <plus> : "󠀫" UE002B # TAG PLUS SIGN
+<Multi_key><equal><comma>                                                                   <plus> : "󠀫" UE002B # TAG PLUS SIGN
+<UEFD7><U200B>                                                                             <comma> : "󠀬" UE002C # TAG COMMA
+<Multi_key><equal><comma>                                                                  <comma> : "󠀬" UE002C # TAG COMMA
+<UEFD7><U200B>                                                                             <minus> : "󠀭" UE002D # TAG HYPHEN-MINUS
+<Multi_key><equal><comma>                                                                  <minus> : "󠀭" UE002D # TAG HYPHEN-MINUS
+<UEFD7><U200B>                                                                            <period> : "󠀮" UE002E # TAG FULL STOP
+<Multi_key><equal><comma>                                                                 <period> : "󠀮" UE002E # TAG FULL STOP
+<UEFD7><U200B>                                                                             <slash> : "󠀯" UE002F # TAG SOLIDUS
+<Multi_key><equal><comma>                                                                  <slash> : "󠀯" UE002F # TAG SOLIDUS
+<UEFD7><U200B>                                                                             <colon> : "󠀺" UE003A # TAG COLON
+<Multi_key><equal><comma>                                                                  <colon> : "󠀺" UE003A # TAG COLON
+<UEFD7><U200B>                                                                         <semicolon> : "󠀻" UE003B # TAG SEMICOLON
+<Multi_key><equal><comma>                                                              <semicolon> : "󠀻" UE003B # TAG SEMICOLON
+<UEFD7><U200B>                                                                              <less> : "󠀼" UE003C # TAG LESS-THAN SIGN
+<Multi_key><equal><comma>                                                                   <less> : "󠀼" UE003C # TAG LESS-THAN SIGN
+<UEFD7><U200B>                                                                             <equal> : "󠀽" UE003D # TAG EQUALS SIGN
+<Multi_key><equal><comma>                                                                  <equal> : "󠀽" UE003D # TAG EQUALS SIGN
+<UEFD7><U200B>                                                                           <greater> : "󠀾" UE003E # TAG GREATER-THAN SIGN
+<Multi_key><equal><comma>                                                                <greater> : "󠀾" UE003E # TAG GREATER-THAN SIGN
+<UEFD7><U200B>                                                                          <question> : "󠀿" UE003F # TAG QUESTION MARK
+<Multi_key><equal><comma>                                                               <question> : "󠀿" UE003F # TAG QUESTION MARK
+<UEFD7><U200B>                                                                                <at> : "󠁀" UE0040 # TAG COMMERCIAL AT
+<Multi_key><equal><comma>                                                                     <at> : "󠁀" UE0040 # TAG COMMERCIAL AT
+<UEFD7><U200B>                                                                       <bracketleft> : "󠁛" UE005B # TAG LEFT SQUARE BRACKET
+<Multi_key><equal><comma>                                                            <bracketleft> : "󠁛" UE005B # TAG LEFT SQUARE BRACKET
+<UEFD7><U200B>                                                                         <backslash> : "󠁜" UE005C # TAG REVERSE SOLIDUS
+<Multi_key><equal><comma>                                                              <backslash> : "󠁜" UE005C # TAG REVERSE SOLIDUS
+<UEFD7><U200B>                                                                      <bracketright> : "󠁝" UE005D # TAG RIGHT SQUARE BRACKET
+<Multi_key><equal><comma>                                                           <bracketright> : "󠁝" UE005D # TAG RIGHT SQUARE BRACKET
+<UEFD7><U200B>                                                                       <asciicircum> : "󠁞" UE005E # TAG CIRCUMFLEX ACCENT
+<Multi_key><equal><comma>                                                            <asciicircum> : "󠁞" UE005E # TAG CIRCUMFLEX ACCENT
+<UEFD7><U200B>                                                                        <underscore> : "󠁟" UE005F # TAG LOW LINE
+<Multi_key><equal><comma>                                                             <underscore> : "󠁟" UE005F # TAG LOW LINE
+<UEFD7><U200B>                                                                             <grave> : "󠁠" UE0060 # TAG GRAVE ACCENT
+<Multi_key><equal><comma>                                                                  <grave> : "󠁠" UE0060 # TAG GRAVE ACCENT
+<UEFD7><U200B>                                                                         <braceleft> : "󠁻" UE007B # TAG LEFT CURLY BRACKET
+<Multi_key><equal><comma>                                                              <braceleft> : "󠁻" UE007B # TAG LEFT CURLY BRACKET
+<UEFD7><U200B>                                                                               <bar> : "󠁼" UE007C # TAG VERTICAL LINE
+<Multi_key><equal><comma>                                                                    <bar> : "󠁼" UE007C # TAG VERTICAL LINE
+<UEFD7><U200B>                                                                        <braceright> : "󠁽" UE007D # TAG RIGHT CURLY BRACKET
+<Multi_key><equal><comma>                                                             <braceright> : "󠁽" UE007D # TAG RIGHT CURLY BRACKET
+<UEFD7><U200B>                                                                        <asciitilde> : "󠁾" UE007E # TAG TILDE
+<Multi_key><equal><comma>                                                             <asciitilde> : "󠁾" UE007E # TAG TILDE
+<UEFD7><U200B>                                                                                 <0> : "󠀰" UE0030 # TAG DIGIT ZERO
+<Multi_key><equal><comma>                                                                      <0> : "󠀰" UE0030 # TAG DIGIT ZERO
+<UEFD7><U200B>                                                                              <KP_0> : "󠀰" UE0030 # TAG DIGIT ZERO
+<Multi_key><equal><comma>                                                                   <KP_0> : "󠀰" UE0030 # TAG DIGIT ZERO
+<UEFD7><U200B>                                                                                 <1> : "󠀱" UE0031 # TAG DIGIT ONE
+<Multi_key><equal><comma>                                                                      <1> : "󠀱" UE0031 # TAG DIGIT ONE
+<UEFD7><U200B>                                                                              <KP_1> : "󠀱" UE0031 # TAG DIGIT ONE
+<Multi_key><equal><comma>                                                                   <KP_1> : "󠀱" UE0031 # TAG DIGIT ONE
+<UEFD7><U200B>                                                                                 <2> : "󠀲" UE0032 # TAG DIGIT TWO
+<Multi_key><equal><comma>                                                                      <2> : "󠀲" UE0032 # TAG DIGIT TWO
+<UEFD7><U200B>                                                                              <KP_2> : "󠀲" UE0032 # TAG DIGIT TWO
+<Multi_key><equal><comma>                                                                   <KP_2> : "󠀲" UE0032 # TAG DIGIT TWO
+<UEFD7><U200B>                                                                                 <3> : "󠀳" UE0033 # TAG DIGIT THREE
+<Multi_key><equal><comma>                                                                      <3> : "󠀳" UE0033 # TAG DIGIT THREE
+<UEFD7><U200B>                                                                              <KP_3> : "󠀳" UE0033 # TAG DIGIT THREE
+<Multi_key><equal><comma>                                                                   <KP_3> : "󠀳" UE0033 # TAG DIGIT THREE
+<UEFD7><U200B>                                                                                 <4> : "󠀴" UE0034 # TAG DIGIT FOUR
+<Multi_key><equal><comma>                                                                      <4> : "󠀴" UE0034 # TAG DIGIT FOUR
+<UEFD7><U200B>                                                                              <KP_4> : "󠀴" UE0034 # TAG DIGIT FOUR
+<Multi_key><equal><comma>                                                                   <KP_4> : "󠀴" UE0034 # TAG DIGIT FOUR
+<UEFD7><U200B>                                                                                 <5> : "󠀵" UE0035 # TAG DIGIT FIVE
+<Multi_key><equal><comma>                                                                      <5> : "󠀵" UE0035 # TAG DIGIT FIVE
+<UEFD7><U200B>                                                                              <KP_5> : "󠀵" UE0035 # TAG DIGIT FIVE
+<Multi_key><equal><comma>                                                                   <KP_5> : "󠀵" UE0035 # TAG DIGIT FIVE
+<UEFD7><U200B>                                                                                 <6> : "󠀶" UE0036 # TAG DIGIT SIX
+<Multi_key><equal><comma>                                                                      <6> : "󠀶" UE0036 # TAG DIGIT SIX
+<UEFD7><U200B>                                                                              <KP_6> : "󠀶" UE0036 # TAG DIGIT SIX
+<Multi_key><equal><comma>                                                                   <KP_6> : "󠀶" UE0036 # TAG DIGIT SIX
+<UEFD7><U200B>                                                                                 <7> : "󠀷" UE0037 # TAG DIGIT SEVEN
+<Multi_key><equal><comma>                                                                      <7> : "󠀷" UE0037 # TAG DIGIT SEVEN
+<UEFD7><U200B>                                                                              <KP_7> : "󠀷" UE0037 # TAG DIGIT SEVEN
+<Multi_key><equal><comma>                                                                   <KP_7> : "󠀷" UE0037 # TAG DIGIT SEVEN
+<UEFD7><U200B>                                                                                 <8> : "󠀸" UE0038 # TAG DIGIT EIGHT
+<Multi_key><equal><comma>                                                                      <8> : "󠀸" UE0038 # TAG DIGIT EIGHT
+<UEFD7><U200B>                                                                              <KP_8> : "󠀸" UE0038 # TAG DIGIT EIGHT
+<Multi_key><equal><comma>                                                                   <KP_8> : "󠀸" UE0038 # TAG DIGIT EIGHT
+<UEFD7><U200B>                                                                                 <9> : "󠀹" UE0039 # TAG DIGIT NINE
+<Multi_key><equal><comma>                                                                      <9> : "󠀹" UE0039 # TAG DIGIT NINE
+<UEFD7><U200B>                                                                              <KP_9> : "󠀹" UE0039 # TAG DIGIT NINE
+<Multi_key><equal><comma>                                                                   <KP_9> : "󠀹" UE0039 # TAG DIGIT NINE
+<UEFD7><U200B>                                                                                 <A> : "󠁁" UE0041 # TAG LATIN CAPITAL LETTER A
+<Multi_key><equal><comma>                                                                      <A> : "󠁁" UE0041 # TAG LATIN CAPITAL LETTER A
+<UEFD7><U200B>                                                                                 <a> : "󠁡" UE0061 # TAG LATIN SMALL LETTER A
+<Multi_key><equal><comma>                                                                      <a> : "󠁡" UE0061 # TAG LATIN SMALL LETTER A
+<UEFD7><U200B>                                                                                 <B> : "󠁂" UE0042 # TAG LATIN CAPITAL LETTER B
+<Multi_key><equal><comma>                                                                      <B> : "󠁂" UE0042 # TAG LATIN CAPITAL LETTER B
+<UEFD7><U200B>                                                                                 <b> : "󠁢" UE0062 # TAG LATIN SMALL LETTER B
+<Multi_key><equal><comma>                                                                      <b> : "󠁢" UE0062 # TAG LATIN SMALL LETTER B
+<UEFD7><U200B>                                                                                 <C> : "󠁃" UE0043 # TAG LATIN CAPITAL LETTER C
+<Multi_key><equal><comma>                                                                      <C> : "󠁃" UE0043 # TAG LATIN CAPITAL LETTER C
+<UEFD7><U200B>                                                                                 <c> : "󠁣" UE0063 # TAG LATIN SMALL LETTER C
+<Multi_key><equal><comma>                                                                      <c> : "󠁣" UE0063 # TAG LATIN SMALL LETTER C
+<UEFD7><U200B>                                                                                 <D> : "󠁄" UE0044 # TAG LATIN CAPITAL LETTER D
+<Multi_key><equal><comma>                                                                      <D> : "󠁄" UE0044 # TAG LATIN CAPITAL LETTER D
+<UEFD7><U200B>                                                                                 <d> : "󠁤" UE0064 # TAG LATIN SMALL LETTER D
+<Multi_key><equal><comma>                                                                      <d> : "󠁤" UE0064 # TAG LATIN SMALL LETTER D
+<UEFD7><U200B>                                                                                 <E> : "󠁅" UE0045 # TAG LATIN CAPITAL LETTER E
+<Multi_key><equal><comma>                                                                      <E> : "󠁅" UE0045 # TAG LATIN CAPITAL LETTER E
+<UEFD7><U200B>                                                                                 <e> : "󠁥" UE0065 # TAG LATIN SMALL LETTER E
+<Multi_key><equal><comma>                                                                      <e> : "󠁥" UE0065 # TAG LATIN SMALL LETTER E
+<UEFD7><U200B>                                                                                 <F> : "󠁆" UE0046 # TAG LATIN CAPITAL LETTER F
+<Multi_key><equal><comma>                                                                      <F> : "󠁆" UE0046 # TAG LATIN CAPITAL LETTER F
+<UEFD7><U200B>                                                                                 <f> : "󠁦" UE0066 # TAG LATIN SMALL LETTER F
+<Multi_key><equal><comma>                                                                      <f> : "󠁦" UE0066 # TAG LATIN SMALL LETTER F
+<UEFD7><U200B>                                                                                 <G> : "󠁇" UE0047 # TAG LATIN CAPITAL LETTER G
+<Multi_key><equal><comma>                                                                      <G> : "󠁇" UE0047 # TAG LATIN CAPITAL LETTER G
+<UEFD7><U200B>                                                                                 <g> : "󠁧" UE0067 # TAG LATIN SMALL LETTER G
+<Multi_key><equal><comma>                                                                      <g> : "󠁧" UE0067 # TAG LATIN SMALL LETTER G
+<UEFD7><U200B>                                                                                 <H> : "󠁈" UE0048 # TAG LATIN CAPITAL LETTER H
+<Multi_key><equal><comma>                                                                      <H> : "󠁈" UE0048 # TAG LATIN CAPITAL LETTER H
+<UEFD7><U200B>                                                                                 <h> : "󠁨" UE0068 # TAG LATIN SMALL LETTER H
+<Multi_key><equal><comma>                                                                      <h> : "󠁨" UE0068 # TAG LATIN SMALL LETTER H
+<UEFD7><U200B>                                                                                 <I> : "󠁉" UE0049 # TAG LATIN CAPITAL LETTER I
+<Multi_key><equal><comma>                                                                      <I> : "󠁉" UE0049 # TAG LATIN CAPITAL LETTER I
+<UEFD7><U200B>                                                                                 <i> : "󠁩" UE0069 # TAG LATIN SMALL LETTER I
+<Multi_key><equal><comma>                                                                      <i> : "󠁩" UE0069 # TAG LATIN SMALL LETTER I
+<UEFD7><U200B>                                                                                 <J> : "󠁊" UE004A # TAG LATIN CAPITAL LETTER J
+<Multi_key><equal><comma>                                                                      <J> : "󠁊" UE004A # TAG LATIN CAPITAL LETTER J
+<UEFD7><U200B>                                                                                 <j> : "󠁪" UE006A # TAG LATIN SMALL LETTER J
+<Multi_key><equal><comma>                                                                      <j> : "󠁪" UE006A # TAG LATIN SMALL LETTER J
+<UEFD7><U200B>                                                                                 <K> : "󠁋" UE004B # TAG LATIN CAPITAL LETTER K
+<Multi_key><equal><comma>                                                                      <K> : "󠁋" UE004B # TAG LATIN CAPITAL LETTER K
+<UEFD7><U200B>                                                                                 <k> : "󠁫" UE006B # TAG LATIN SMALL LETTER K
+<Multi_key><equal><comma>                                                                      <k> : "󠁫" UE006B # TAG LATIN SMALL LETTER K
+<UEFD7><U200B>                                                                                 <L> : "󠁌" UE004C # TAG LATIN CAPITAL LETTER L
+<Multi_key><equal><comma>                                                                      <L> : "󠁌" UE004C # TAG LATIN CAPITAL LETTER L
+<UEFD7><U200B>                                                                                 <l> : "󠁬" UE006C # TAG LATIN SMALL LETTER L
+<Multi_key><equal><comma>                                                                      <l> : "󠁬" UE006C # TAG LATIN SMALL LETTER L
+<UEFD7><U200B>                                                                                 <M> : "󠁍" UE004D # TAG LATIN CAPITAL LETTER M
+<Multi_key><equal><comma>                                                                      <M> : "󠁍" UE004D # TAG LATIN CAPITAL LETTER M
+<UEFD7><U200B>                                                                                 <m> : "󠁭" UE006D # TAG LATIN SMALL LETTER M
+<Multi_key><equal><comma>                                                                      <m> : "󠁭" UE006D # TAG LATIN SMALL LETTER M
+<UEFD7><U200B>                                                                                 <N> : "󠁎" UE004E # TAG LATIN CAPITAL LETTER N
+<Multi_key><equal><comma>                                                                      <N> : "󠁎" UE004E # TAG LATIN CAPITAL LETTER N
+<UEFD7><U200B>                                                                                 <n> : "󠁮" UE006E # TAG LATIN SMALL LETTER N
+<Multi_key><equal><comma>                                                                      <n> : "󠁮" UE006E # TAG LATIN SMALL LETTER N
+<UEFD7><U200B>                                                                                 <O> : "󠁏" UE004F # TAG LATIN CAPITAL LETTER O
+<Multi_key><equal><comma>                                                                      <O> : "󠁏" UE004F # TAG LATIN CAPITAL LETTER O
+<UEFD7><U200B>                                                                                 <o> : "󠁯" UE006F # TAG LATIN SMALL LETTER O
+<Multi_key><equal><comma>                                                                      <o> : "󠁯" UE006F # TAG LATIN SMALL LETTER O
+<UEFD7><U200B>                                                                                 <P> : "󠁐" UE0050 # TAG LATIN CAPITAL LETTER P
+<Multi_key><equal><comma>                                                                      <P> : "󠁐" UE0050 # TAG LATIN CAPITAL LETTER P
+<UEFD7><U200B>                                                                                 <p> : "󠁰" UE0070 # TAG LATIN SMALL LETTER P
+<Multi_key><equal><comma>                                                                      <p> : "󠁰" UE0070 # TAG LATIN SMALL LETTER P
+<UEFD7><U200B>                                                                                 <Q> : "󠁑" UE0051 # TAG LATIN CAPITAL LETTER Q
+<Multi_key><equal><comma>                                                                      <Q> : "󠁑" UE0051 # TAG LATIN CAPITAL LETTER Q
+<UEFD7><U200B>                                                                                 <q> : "󠁱" UE0071 # TAG LATIN SMALL LETTER Q
+<Multi_key><equal><comma>                                                                      <q> : "󠁱" UE0071 # TAG LATIN SMALL LETTER Q
+<UEFD7><U200B>                                                                                 <R> : "󠁒" UE0052 # TAG LATIN CAPITAL LETTER R
+<Multi_key><equal><comma>                                                                      <R> : "󠁒" UE0052 # TAG LATIN CAPITAL LETTER R
+<UEFD7><U200B>                                                                                 <r> : "󠁲" UE0072 # TAG LATIN SMALL LETTER R
+<Multi_key><equal><comma>                                                                      <r> : "󠁲" UE0072 # TAG LATIN SMALL LETTER R
+<UEFD7><U200B>                                                                                 <S> : "󠁓" UE0053 # TAG LATIN CAPITAL LETTER S
+<Multi_key><equal><comma>                                                                      <S> : "󠁓" UE0053 # TAG LATIN CAPITAL LETTER S
+<UEFD7><U200B>                                                                                 <s> : "󠁳" UE0073 # TAG LATIN SMALL LETTER S
+<Multi_key><equal><comma>                                                                      <s> : "󠁳" UE0073 # TAG LATIN SMALL LETTER S
+<UEFD7><U200B>                                                                                 <T> : "󠁔" UE0054 # TAG LATIN CAPITAL LETTER T
+<Multi_key><equal><comma>                                                                      <T> : "󠁔" UE0054 # TAG LATIN CAPITAL LETTER T
+<UEFD7><U200B>                                                                                 <t> : "󠁴" UE0074 # TAG LATIN SMALL LETTER T
+<Multi_key><equal><comma>                                                                      <t> : "󠁴" UE0074 # TAG LATIN SMALL LETTER T
+<UEFD7><U200B>                                                                                 <U> : "󠁕" UE0055 # TAG LATIN CAPITAL LETTER U
+<Multi_key><equal><comma>                                                                      <U> : "󠁕" UE0055 # TAG LATIN CAPITAL LETTER U
+<UEFD7><U200B>                                                                                 <u> : "󠁵" UE0075 # TAG LATIN SMALL LETTER U
+<Multi_key><equal><comma>                                                                      <u> : "󠁵" UE0075 # TAG LATIN SMALL LETTER U
+<UEFD7><U200B>                                                                                 <V> : "󠁖" UE0056 # TAG LATIN CAPITAL LETTER V
+<Multi_key><equal><comma>                                                                      <V> : "󠁖" UE0056 # TAG LATIN CAPITAL LETTER V
+<UEFD7><U200B>                                                                                 <v> : "󠁶" UE0076 # TAG LATIN SMALL LETTER V
+<Multi_key><equal><comma>                                                                      <v> : "󠁶" UE0076 # TAG LATIN SMALL LETTER V
+<UEFD7><U200B>                                                                                 <W> : "󠁗" UE0057 # TAG LATIN CAPITAL LETTER W
+<Multi_key><equal><comma>                                                                      <W> : "󠁗" UE0057 # TAG LATIN CAPITAL LETTER W
+<UEFD7><U200B>                                                                                 <w> : "󠁷" UE0077 # TAG LATIN SMALL LETTER W
+<Multi_key><equal><comma>                                                                      <w> : "󠁷" UE0077 # TAG LATIN SMALL LETTER W
+<UEFD7><U200B>                                                                                 <X> : "󠁘" UE0058 # TAG LATIN CAPITAL LETTER X
+<Multi_key><equal><comma>                                                                      <X> : "󠁘" UE0058 # TAG LATIN CAPITAL LETTER X
+<UEFD7><U200B>                                                                                 <x> : "󠁸" UE0078 # TAG LATIN SMALL LETTER X
+<Multi_key><equal><comma>                                                                      <x> : "󠁸" UE0078 # TAG LATIN SMALL LETTER X
+<UEFD7><U200B>                                                                                 <Y> : "󠁙" UE0059 # TAG LATIN CAPITAL LETTER Y
+<Multi_key><equal><comma>                                                                      <Y> : "󠁙" UE0059 # TAG LATIN CAPITAL LETTER Y
+<UEFD7><U200B>                                                                                 <y> : "󠁹" UE0079 # TAG LATIN SMALL LETTER Y
+<Multi_key><equal><comma>                                                                      <y> : "󠁹" UE0079 # TAG LATIN SMALL LETTER Y
+<UEFD7><U200B>                                                                                 <Z> : "󠁚" UE005A # TAG LATIN CAPITAL LETTER Z
+<Multi_key><equal><comma>                                                                      <Z> : "󠁚" UE005A # TAG LATIN CAPITAL LETTER Z
+<UEFD7><U200B>                                                                                 <z> : "󠁺" UE007A # TAG LATIN SMALL LETTER Z
+<Multi_key><equal><comma>                                                                      <z> : "󠁺" UE007A # TAG LATIN SMALL LETTER Z
 #
 #
 #^# FLAG_EMOJI
@@ -14727,10 +14822,9 @@
 #   Multi_key: ¦==
 #   Dchar: 
 #
-#   Flags are supported on double press followed by the ISO country code.
-#   This list is up-to-date as of Unicode v15.0.
-#   Full list of the main country flags:
-#   https://unicode.org/emoji/charts/full-emoji-list.html
+#   The 258 country flags are supported on double press, followed by two-letter
+#   ISO country code written in regional indicator symbol letters.
+#   https://unicode.org/emoji/charts/emoji-list.html#flags
 #
 #   As a combining diacritic, by lack of a combining equals sign above, a close
 #   relative, "͌" U034C COMBINING ALMOST EQUAL TO ABOVE, fills in the slot.
@@ -14743,7 +14837,8 @@
 #   since the flag used as a base character for subdivision flags, "🏴" U1F3F4
 #   WAVING BLACK FLAG, is in the SMP, cross-platform incompatible.
 #
-#   However, U1F3F4 WAVING BLACK FLAG is output by backslash.
+#   However, "🏴" U1F3F4 WAVING BLACK FLAG is supported by backslash, with
+#   phonetic mnemonics, and "🏳" U1F3F3 WAVING WHITE FLAG, by slash.
 #
 <UEFD7><UEFD7>                                                                             <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><equal><equal>                                                                  <space> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
@@ -14753,6 +14848,8 @@
 <Multi_key><equal><equal>                                                           <nobreakspace> : "⚑" U2691 # BLACK FLAG
 <UEFD7><UEFD7>                                                                             <U202F> : "⚐" U2690 # WHITE FLAG
 <Multi_key><equal><equal>                                                                  <U202F> : "⚐" U2690 # WHITE FLAG
+<UEFD7><UEFD7>                                                                             <slash> : "🏳" U1F3F3 # WAVING WHITE FLAG
+<Multi_key><equal><equal>                                                                  <slash> : "🏳" U1F3F3 # WAVING WHITE FLAG
 <UEFD7><UEFD7>                                                                         <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <Multi_key><equal><equal>                                                              <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <UEFD7><UEFD7>                                                                              <A><C> : "🇦🇨" # Ascension Island
