@@ -22,15 +22,32 @@ Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windo
 
 Débogage de la touche morte drapeau sous Windows.
 
-* Disposition : Niveau 9 :
-	* Redonder les émojis lettres indicateurs régionaux "🇦" U+1F1E6 .. "🇿" U+1F1FF sur les touches alphabétiques. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
-	* Redonder l’antiliant "‌" 200C sur la barre d’espace. ibidem
-	* Redonder les émojis chiffres "0️⃣".."9️⃣" et l’émoji touche de téléphone "*️⃣" sur les premières touches de la rangée E. ibidem
-	* Ajouter "🟰" U+1F7F0 sur E12 où il est imprimé. ibidem
-	* Ajouter "💲" U+1F4B2 sur D12 où il est imprimé. ibidem
-	* Redonder "*️⃣" sur C12 où il est imprimé. ibidem
-	* Redonder "#️⃣" sur C11 pour compléter la nouvelle dispositon des émojis touches de téléphone. ibidem
-* Transformations : Drapeau : Adapter à Windows la touche morte simple pour émettre les émojis lettres indicateurs régionaux sans antiliant. ibidem
+Prise en charge de tous les drapeaux régionaux par une touche morte dédiée sous Linux et au niveau 10 sous Windows.
+
+* Disposition :
+	* Niveau 9 :
+		* Redonder les émojis lettres indicateurs régionaux "🇦" U+1F1E6 .. "🇿" U+1F1FF sur les touches alphabétiques. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
+		* Redonder l’antiliant "‌" 200C sur la barre d’espace. ibidem
+		* Redonder les émojis chiffres "0️⃣".."9️⃣" et l’émoji touche de téléphone "*️⃣" sur les premières touches de la rangée E. ibidem
+		* Ajouter "🟰" U+1F7F0 sur E12 où il est imprimé. ibidem
+		* Ajouter "💲" U+1F4B2 sur D12 où il est imprimé. ibidem
+		* Redonder "*️⃣" sur C12 où il est imprimé. ibidem
+		* Redonder "#️⃣" sur C11 pour compléter la nouvelle dispositon des émojis touches de téléphone. ibidem
+		* Ajouter "🏳" U+1F3F3 sur la touche "/" B09. kbfrFRs.C [3299c32](https://github.com/dispoclavier/nouvel-azerty/commit/3299c322f1a2432bbb8d308e496ab89e325af2af), kbfredis.C [7bd66c5](https://github.com/dispoclavier/nouvel-azerty/commit/7bd66c5ca3854bcadc7365ad2c9d359603da0400)
+		* Redonder "🏴" U+1F3F4 sur la touche "\" B10.
+	* Niveau 10 :
+		* Redonder sur touches vives les étiquettes minuscules.
+		* Redonder sur la barre d’espace l’étiquette d’annulation utilisée dans des drapeaux.
+		* Pallier le bogue de la colonne 02 en redondant sur les touches non numériques ou non alphabétiques les étiquettes disposées sur les touches B02 (x), C02 (s), D02 (z), E02 (2).
+* Transformations :
+	* Drapeau : Adapter à Windows la touche morte simple pour émettre les émojis lettres indicateurs régionaux sans antiliant. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
+	* Drapeau > Étiquettes :
+		* Ajouter les étiquettes minuscules U+E0061..U+E007A à la place de caractères d’usage privé sur les touches alphabétiques pour les drapeaux de subdivisions. compose-2.yml [3f11897](https://github.com/dispoclavier/nouvel-azerty/commit/3f11897053f470d1d01eb44c2ee732e79925b076)
+		* Ajouter l’étiquette d’annulation U+E007F pour les drapeaux de subdivisions. ibidem
+		* Ajouter les étiquettes capitales U+E0041..U+E005A et les étiquettes chiffres U+E0030..U+E0039 à la place de caractères d’usage privé sur les touches alphabétiques. ibidem
+		* Compléter les étiquettes par l’étiquette espace U+E0020 et les étiquettes symboles et ponctuations. en synergie sur la barre d’espace. ibidem
+		* Limiter la virgule aux équivalents en composition, et utiliser plutôt la césure conditionnelle en synergie sur la barre d’espace. ibidem
+	* Drapeau > Émojis nationaux : Ajouter "🏳" U+1F3F3 par "/". ibidem
 * Documentation : Corriger des annotations. compose-1.yml [e081f7a](https://github.com/dispoclavier/nouvel-azerty/commit/e081f7ad67386e2a1fc21c663a8f6f0ae7c6ebb1), compose-2.yml [1bf7c4e](https://github.com/dispoclavier/nouvel-azerty/commit/1bf7c4e344f333f30bd2848993aa91b028b5ec6d), compose-3.yml [d9eed3f](https://github.com/dispoclavier/nouvel-azerty/commit/d9eed3ff745cba72eb3c4f73b429dd4e6c864cfd), generate-deadkey-tables.pl [534188e](https://github.com/dispoclavier/nouvel-azerty/commit/534188e52c03eef6063c9bad60e583e0a26f1236)
 
 ## 5.2.0 (2025-06-15)
