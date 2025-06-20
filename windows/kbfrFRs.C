@@ -1047,7 +1047,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_bar>*/	DEADTRANS(	L'u'	,0x024D	,0x0289	,0x0000	), // "ʉ" LATIN SMALL LETTER U BAR
 /*<!dead_bar>*/	DEADTRANS(	L'Y'	,0x024D	,0x024E	,0x0000	), // "Ɏ" LATIN CAPITAL LETTER Y WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'y'	,0x024D	,0x024F	,0x0000	), // "ɏ" LATIN SMALL LETTER Y WITH STROKE
-/*<!dead_bar>*/	DEADTRANS(	L'Z'	,0x024D	,0x01B5	,0x0D:\2023-12-18\Documents\keyboards\Dispoclavier\dev000	), // "Ƶ" LATIN CAPITAL LETTER Z WITH STROKE
+/*<!dead_bar>*/	DEADTRANS(	L'Z'	,0x024D	,0x01B5	,0x0000	), // "Ƶ" LATIN CAPITAL LETTER Z WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'z'	,0x024D	,0x01B6	,0x0000	), // "ƶ" LATIN SMALL LETTER Z WITH STROKE
 /*<!dead_belowcomma>*/	DEADTRANS(	0x00A0	,0x0219	,0x2E34	,0x0000	), // "⸴" RAISED COMMA
 /*<!dead_belowcomma>*/	DEADTRANS(	0x202F	,0x0219	,0x2E34	,0x0000	), // "⸴" RAISED COMMA
