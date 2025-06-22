@@ -14314,9 +14314,10 @@
 #   press, supporting the full set of existing flag emoji.
 #   See #^# FLAG_EMOJI
 #
-#   In XKB, on single press, letters yield regional indicator symbols with an
-#   appended cursieve non-joiner ZWNJ U200C for letter emoji display and
-#   writing words.
+#   In XKB, on single press, letters yield regional indicator symbol letters
+#   with an appended word joiner U2060. rather than a cursive non-joiner U200C,
+#   as this only enables runs of letter emoji, without preventing the intended
+#   words from randomly breaking apart at line end.
 #
 #   Regional indicator symbols in isolation are supported on triple press.
 #   See #^# REGIONAL_INDICATOR_SYMBOL
@@ -14334,14 +14335,13 @@
 #   Cross-platform compatibility
 #
 #   Windows supports an extra modifier added on Caps Lock for continuous input,
-#   and also for composing flags. As in continuous input, ZERO WIDTH NON-JOINER
-#   should be appended, on Windows, Shift would need to be held down for
-#   writing words consistently with the uppercase display of letter emoji, but
-#   not when inputting flags.
+#   and also for composing flags. As for letter emoji, WORD JOINER needs to be
+#   appended, on Windows, Shift would need to be held down for writing words,
+#   consistently with the uppercase display of letter emoji, but not for flags.
 #
 #   MacOS supports an iterative dead key for continuous input, on triple press.
 #   As XKB has no support for iterative dead keys, the behavior of single press
-#   and triple press is swapped, so that single press outputs an appended ZWNJ,
+#   and triple press is swapped, so that single press outputs an appended WJ,
 #   and triple press outputs regional indicator symbol letters in isolation.
 #
 #   In en_US.UTF-8/Compose, sequences starting with « ¦= » conflict with
@@ -14430,110 +14430,110 @@
 <Multi_key><equal>                                                                             <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <UEFD7>                                                                                     <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <Multi_key><equal>                                                                          <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<UEFD7>                                                                                        <A> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <A> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <a> : "🇦‌" # U1F1E6 U200C REGIONAL INDICATOR SYMBOL LETTER A, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <B> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <B> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <b> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <b> : "🇧‌" # U1F1E7 U200C REGIONAL INDICATOR SYMBOL LETTER B, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <C> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <C> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <c> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <c> : "🇨‌" # U1F1E8 U200C REGIONAL INDICATOR SYMBOL LETTER C, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <D> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <D> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <d> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <d> : "🇩‌" # U1F1E9 U200C REGIONAL INDICATOR SYMBOL LETTER D, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <E> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <E> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <e> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <e> : "🇪‌" # U1F1EA U200C REGIONAL INDICATOR SYMBOL LETTER E, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <F> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <F> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <f> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <f> : "🇫‌" # U1F1EB U200C REGIONAL INDICATOR SYMBOL LETTER F, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <G> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <G> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <g> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <g> : "🇬‌" # U1F1EC U200C REGIONAL INDICATOR SYMBOL LETTER G, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <H> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <H> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <h> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <h> : "🇭‌" # U1F1ED U200C REGIONAL INDICATOR SYMBOL LETTER H, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <I> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <I> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <i> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <i> : "🇮‌" # U1F1EE U200C REGIONAL INDICATOR SYMBOL LETTER I, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <J> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <J> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <j> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <j> : "🇯‌" # U1F1EF U200C REGIONAL INDICATOR SYMBOL LETTER J, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <K> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <K> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <k> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <k> : "🇰‌" # U1F1F0 U200C REGIONAL INDICATOR SYMBOL LETTER K, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <L> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <L> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <l> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <l> : "🇱‌" # U1F1F1 U200C REGIONAL INDICATOR SYMBOL LETTER L, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <M> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <M> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <m> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <m> : "🇲‌" # U1F1F2 U200C REGIONAL INDICATOR SYMBOL LETTER M, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <N> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <N> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <n> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <n> : "🇳‌" # U1F1F3 U200C REGIONAL INDICATOR SYMBOL LETTER N, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <O> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <O> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <o> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <o> : "🇴‌" # U1F1F4 U200C REGIONAL INDICATOR SYMBOL LETTER O, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <P> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <P> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <p> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <p> : "🇵‌" # U1F1F5 U200C REGIONAL INDICATOR SYMBOL LETTER P, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <Q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <Q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <q> : "🇶‌" # U1F1F6 U200C REGIONAL INDICATOR SYMBOL LETTER Q, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <R> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <R> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <r> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <r> : "🇷‌" # U1F1F7 U200C REGIONAL INDICATOR SYMBOL LETTER R, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <S> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <S> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <s> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <s> : "🇸‌" # U1F1F8 U200C REGIONAL INDICATOR SYMBOL LETTER S, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <T> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <T> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <t> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <t> : "🇹‌" # U1F1F9 U200C REGIONAL INDICATOR SYMBOL LETTER T, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <U> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <U> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <u> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <u> : "🇺‌" # U1F1FA U200C REGIONAL INDICATOR SYMBOL LETTER U, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <V> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <V> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <v> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <v> : "🇻‌" # U1F1FB U200C REGIONAL INDICATOR SYMBOL LETTER V, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <W> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <W> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <w> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <w> : "🇼‌" # U1F1FC U200C REGIONAL INDICATOR SYMBOL LETTER W, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <X> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <X> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <x> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <x> : "🇽‌" # U1F1FD U200C REGIONAL INDICATOR SYMBOL LETTER X, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <Y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <Y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <y> : "🇾‌" # U1F1FE U200C REGIONAL INDICATOR SYMBOL LETTER Y, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <Z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
-<UEFD7>                                                                                        <z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
-<Multi_key><equal>                                                                             <z> : "🇿‌" # U1F1FF U200C REGIONAL INDICATOR SYMBOL LETTER Z, ZERO WIDTH NON-JOINER
+<UEFD7>                                                                                        <A> : "🇦⁠" # U1F1E6 U2060 REGIONAL INDICATOR SYMBOL LETTER A, WORD JOINER
+<Multi_key><equal>                                                                             <A> : "🇦⁠" # U1F1E6 U2060 REGIONAL INDICATOR SYMBOL LETTER A, WORD JOINER
+<UEFD7>                                                                                        <a> : "🇦⁠" # U1F1E6 U2060 REGIONAL INDICATOR SYMBOL LETTER A, WORD JOINER
+<Multi_key><equal>                                                                             <a> : "🇦⁠" # U1F1E6 U2060 REGIONAL INDICATOR SYMBOL LETTER A, WORD JOINER
+<UEFD7>                                                                                        <B> : "🇧⁠" # U1F1E7 U2060 REGIONAL INDICATOR SYMBOL LETTER B, WORD JOINER
+<Multi_key><equal>                                                                             <B> : "🇧⁠" # U1F1E7 U2060 REGIONAL INDICATOR SYMBOL LETTER B, WORD JOINER
+<UEFD7>                                                                                        <b> : "🇧⁠" # U1F1E7 U2060 REGIONAL INDICATOR SYMBOL LETTER B, WORD JOINER
+<Multi_key><equal>                                                                             <b> : "🇧⁠" # U1F1E7 U2060 REGIONAL INDICATOR SYMBOL LETTER B, WORD JOINER
+<UEFD7>                                                                                        <C> : "🇨⁠" # U1F1E8 U2060 REGIONAL INDICATOR SYMBOL LETTER C, WORD JOINER
+<Multi_key><equal>                                                                             <C> : "🇨⁠" # U1F1E8 U2060 REGIONAL INDICATOR SYMBOL LETTER C, WORD JOINER
+<UEFD7>                                                                                        <c> : "🇨⁠" # U1F1E8 U2060 REGIONAL INDICATOR SYMBOL LETTER C, WORD JOINER
+<Multi_key><equal>                                                                             <c> : "🇨⁠" # U1F1E8 U2060 REGIONAL INDICATOR SYMBOL LETTER C, WORD JOINER
+<UEFD7>                                                                                        <D> : "🇩⁠" # U1F1E9 U2060 REGIONAL INDICATOR SYMBOL LETTER D, WORD JOINER
+<Multi_key><equal>                                                                             <D> : "🇩⁠" # U1F1E9 U2060 REGIONAL INDICATOR SYMBOL LETTER D, WORD JOINER
+<UEFD7>                                                                                        <d> : "🇩⁠" # U1F1E9 U2060 REGIONAL INDICATOR SYMBOL LETTER D, WORD JOINER
+<Multi_key><equal>                                                                             <d> : "🇩⁠" # U1F1E9 U2060 REGIONAL INDICATOR SYMBOL LETTER D, WORD JOINER
+<UEFD7>                                                                                        <E> : "🇪⁠" # U1F1EA U2060 REGIONAL INDICATOR SYMBOL LETTER E, WORD JOINER
+<Multi_key><equal>                                                                             <E> : "🇪⁠" # U1F1EA U2060 REGIONAL INDICATOR SYMBOL LETTER E, WORD JOINER
+<UEFD7>                                                                                        <e> : "🇪⁠" # U1F1EA U2060 REGIONAL INDICATOR SYMBOL LETTER E, WORD JOINER
+<Multi_key><equal>                                                                             <e> : "🇪⁠" # U1F1EA U2060 REGIONAL INDICATOR SYMBOL LETTER E, WORD JOINER
+<UEFD7>                                                                                        <F> : "🇫⁠" # U1F1EB U2060 REGIONAL INDICATOR SYMBOL LETTER F, WORD JOINER
+<Multi_key><equal>                                                                             <F> : "🇫⁠" # U1F1EB U2060 REGIONAL INDICATOR SYMBOL LETTER F, WORD JOINER
+<UEFD7>                                                                                        <f> : "🇫⁠" # U1F1EB U2060 REGIONAL INDICATOR SYMBOL LETTER F, WORD JOINER
+<Multi_key><equal>                                                                             <f> : "🇫⁠" # U1F1EB U2060 REGIONAL INDICATOR SYMBOL LETTER F, WORD JOINER
+<UEFD7>                                                                                        <G> : "🇬⁠" # U1F1EC U2060 REGIONAL INDICATOR SYMBOL LETTER G, WORD JOINER
+<Multi_key><equal>                                                                             <G> : "🇬⁠" # U1F1EC U2060 REGIONAL INDICATOR SYMBOL LETTER G, WORD JOINER
+<UEFD7>                                                                                        <g> : "🇬⁠" # U1F1EC U2060 REGIONAL INDICATOR SYMBOL LETTER G, WORD JOINER
+<Multi_key><equal>                                                                             <g> : "🇬⁠" # U1F1EC U2060 REGIONAL INDICATOR SYMBOL LETTER G, WORD JOINER
+<UEFD7>                                                                                        <H> : "🇭⁠" # U1F1ED U2060 REGIONAL INDICATOR SYMBOL LETTER H, WORD JOINER
+<Multi_key><equal>                                                                             <H> : "🇭⁠" # U1F1ED U2060 REGIONAL INDICATOR SYMBOL LETTER H, WORD JOINER
+<UEFD7>                                                                                        <h> : "🇭⁠" # U1F1ED U2060 REGIONAL INDICATOR SYMBOL LETTER H, WORD JOINER
+<Multi_key><equal>                                                                             <h> : "🇭⁠" # U1F1ED U2060 REGIONAL INDICATOR SYMBOL LETTER H, WORD JOINER
+<UEFD7>                                                                                        <I> : "🇮⁠" # U1F1EE U2060 REGIONAL INDICATOR SYMBOL LETTER I, WORD JOINER
+<Multi_key><equal>                                                                             <I> : "🇮⁠" # U1F1EE U2060 REGIONAL INDICATOR SYMBOL LETTER I, WORD JOINER
+<UEFD7>                                                                                        <i> : "🇮⁠" # U1F1EE U2060 REGIONAL INDICATOR SYMBOL LETTER I, WORD JOINER
+<Multi_key><equal>                                                                             <i> : "🇮⁠" # U1F1EE U2060 REGIONAL INDICATOR SYMBOL LETTER I, WORD JOINER
+<UEFD7>                                                                                        <J> : "🇯⁠" # U1F1EF U2060 REGIONAL INDICATOR SYMBOL LETTER J, WORD JOINER
+<Multi_key><equal>                                                                             <J> : "🇯⁠" # U1F1EF U2060 REGIONAL INDICATOR SYMBOL LETTER J, WORD JOINER
+<UEFD7>                                                                                        <j> : "🇯⁠" # U1F1EF U2060 REGIONAL INDICATOR SYMBOL LETTER J, WORD JOINER
+<Multi_key><equal>                                                                             <j> : "🇯⁠" # U1F1EF U2060 REGIONAL INDICATOR SYMBOL LETTER J, WORD JOINER
+<UEFD7>                                                                                        <K> : "🇰⁠" # U1F1F0 U2060 REGIONAL INDICATOR SYMBOL LETTER K, WORD JOINER
+<Multi_key><equal>                                                                             <K> : "🇰⁠" # U1F1F0 U2060 REGIONAL INDICATOR SYMBOL LETTER K, WORD JOINER
+<UEFD7>                                                                                        <k> : "🇰⁠" # U1F1F0 U2060 REGIONAL INDICATOR SYMBOL LETTER K, WORD JOINER
+<Multi_key><equal>                                                                             <k> : "🇰⁠" # U1F1F0 U2060 REGIONAL INDICATOR SYMBOL LETTER K, WORD JOINER
+<UEFD7>                                                                                        <L> : "🇱⁠" # U1F1F1 U2060 REGIONAL INDICATOR SYMBOL LETTER L, WORD JOINER
+<Multi_key><equal>                                                                             <L> : "🇱⁠" # U1F1F1 U2060 REGIONAL INDICATOR SYMBOL LETTER L, WORD JOINER
+<UEFD7>                                                                                        <l> : "🇱⁠" # U1F1F1 U2060 REGIONAL INDICATOR SYMBOL LETTER L, WORD JOINER
+<Multi_key><equal>                                                                             <l> : "🇱⁠" # U1F1F1 U2060 REGIONAL INDICATOR SYMBOL LETTER L, WORD JOINER
+<UEFD7>                                                                                        <M> : "🇲⁠" # U1F1F2 U2060 REGIONAL INDICATOR SYMBOL LETTER M, WORD JOINER
+<Multi_key><equal>                                                                             <M> : "🇲⁠" # U1F1F2 U2060 REGIONAL INDICATOR SYMBOL LETTER M, WORD JOINER
+<UEFD7>                                                                                        <m> : "🇲⁠" # U1F1F2 U2060 REGIONAL INDICATOR SYMBOL LETTER M, WORD JOINER
+<Multi_key><equal>                                                                             <m> : "🇲⁠" # U1F1F2 U2060 REGIONAL INDICATOR SYMBOL LETTER M, WORD JOINER
+<UEFD7>                                                                                        <N> : "🇳⁠" # U1F1F3 U2060 REGIONAL INDICATOR SYMBOL LETTER N, WORD JOINER
+<Multi_key><equal>                                                                             <N> : "🇳⁠" # U1F1F3 U2060 REGIONAL INDICATOR SYMBOL LETTER N, WORD JOINER
+<UEFD7>                                                                                        <n> : "🇳⁠" # U1F1F3 U2060 REGIONAL INDICATOR SYMBOL LETTER N, WORD JOINER
+<Multi_key><equal>                                                                             <n> : "🇳⁠" # U1F1F3 U2060 REGIONAL INDICATOR SYMBOL LETTER N, WORD JOINER
+<UEFD7>                                                                                        <O> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
+<Multi_key><equal>                                                                             <O> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
+<UEFD7>                                                                                        <o> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
+<Multi_key><equal>                                                                             <o> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
+<UEFD7>                                                                                        <P> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
+<Multi_key><equal>                                                                             <P> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
+<UEFD7>                                                                                        <p> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
+<Multi_key><equal>                                                                             <p> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
+<UEFD7>                                                                                        <Q> : "🇶⁠" # U1F1F6 U2060 REGIONAL INDICATOR SYMBOL LETTER Q, WORD JOINER
+<Multi_key><equal>                                                                             <Q> : "🇶⁠" # U1F1F6 U2060 REGIONAL INDICATOR SYMBOL LETTER Q, WORD JOINER
+<UEFD7>                                                                                        <q> : "🇶⁠" # U1F1F6 U2060 REGIONAL INDICATOR SYMBOL LETTER Q, WORD JOINER
+<Multi_key><equal>                                                                             <q> : "🇶⁠" # U1F1F6 U2060 REGIONAL INDICATOR SYMBOL LETTER Q, WORD JOINER
+<UEFD7>                                                                                        <R> : "🇷⁠" # U1F1F7 U2060 REGIONAL INDICATOR SYMBOL LETTER R, WORD JOINER
+<Multi_key><equal>                                                                             <R> : "🇷⁠" # U1F1F7 U2060 REGIONAL INDICATOR SYMBOL LETTER R, WORD JOINER
+<UEFD7>                                                                                        <r> : "🇷⁠" # U1F1F7 U2060 REGIONAL INDICATOR SYMBOL LETTER R, WORD JOINER
+<Multi_key><equal>                                                                             <r> : "🇷⁠" # U1F1F7 U2060 REGIONAL INDICATOR SYMBOL LETTER R, WORD JOINER
+<UEFD7>                                                                                        <S> : "🇸⁠" # U1F1F8 U2060 REGIONAL INDICATOR SYMBOL LETTER S, WORD JOINER
+<Multi_key><equal>                                                                             <S> : "🇸⁠" # U1F1F8 U2060 REGIONAL INDICATOR SYMBOL LETTER S, WORD JOINER
+<UEFD7>                                                                                        <s> : "🇸⁠" # U1F1F8 U2060 REGIONAL INDICATOR SYMBOL LETTER S, WORD JOINER
+<Multi_key><equal>                                                                             <s> : "🇸⁠" # U1F1F8 U2060 REGIONAL INDICATOR SYMBOL LETTER S, WORD JOINER
+<UEFD7>                                                                                        <T> : "🇹⁠" # U1F1F9 U2060 REGIONAL INDICATOR SYMBOL LETTER T, WORD JOINER
+<Multi_key><equal>                                                                             <T> : "🇹⁠" # U1F1F9 U2060 REGIONAL INDICATOR SYMBOL LETTER T, WORD JOINER
+<UEFD7>                                                                                        <t> : "🇹⁠" # U1F1F9 U2060 REGIONAL INDICATOR SYMBOL LETTER T, WORD JOINER
+<Multi_key><equal>                                                                             <t> : "🇹⁠" # U1F1F9 U2060 REGIONAL INDICATOR SYMBOL LETTER T, WORD JOINER
+<UEFD7>                                                                                        <U> : "🇺⁠" # U1F1FA U2060 REGIONAL INDICATOR SYMBOL LETTER U, WORD JOINER
+<Multi_key><equal>                                                                             <U> : "🇺⁠" # U1F1FA U2060 REGIONAL INDICATOR SYMBOL LETTER U, WORD JOINER
+<UEFD7>                                                                                        <u> : "🇺⁠" # U1F1FA U2060 REGIONAL INDICATOR SYMBOL LETTER U, WORD JOINER
+<Multi_key><equal>                                                                             <u> : "🇺⁠" # U1F1FA U2060 REGIONAL INDICATOR SYMBOL LETTER U, WORD JOINER
+<UEFD7>                                                                                        <V> : "🇻⁠" # U1F1FB U2060 REGIONAL INDICATOR SYMBOL LETTER V, WORD JOINER
+<Multi_key><equal>                                                                             <V> : "🇻⁠" # U1F1FB U2060 REGIONAL INDICATOR SYMBOL LETTER V, WORD JOINER
+<UEFD7>                                                                                        <v> : "🇻⁠" # U1F1FB U2060 REGIONAL INDICATOR SYMBOL LETTER V, WORD JOINER
+<Multi_key><equal>                                                                             <v> : "🇻⁠" # U1F1FB U2060 REGIONAL INDICATOR SYMBOL LETTER V, WORD JOINER
+<UEFD7>                                                                                        <W> : "🇼⁠" # U1F1FC U2060 REGIONAL INDICATOR SYMBOL LETTER W, WORD JOINER
+<Multi_key><equal>                                                                             <W> : "🇼⁠" # U1F1FC U2060 REGIONAL INDICATOR SYMBOL LETTER W, WORD JOINER
+<UEFD7>                                                                                        <w> : "🇼⁠" # U1F1FC U2060 REGIONAL INDICATOR SYMBOL LETTER W, WORD JOINER
+<Multi_key><equal>                                                                             <w> : "🇼⁠" # U1F1FC U2060 REGIONAL INDICATOR SYMBOL LETTER W, WORD JOINER
+<UEFD7>                                                                                        <X> : "🇽⁠" # U1F1FD U2060 REGIONAL INDICATOR SYMBOL LETTER X, WORD JOINER
+<Multi_key><equal>                                                                             <X> : "🇽⁠" # U1F1FD U2060 REGIONAL INDICATOR SYMBOL LETTER X, WORD JOINER
+<UEFD7>                                                                                        <x> : "🇽⁠" # U1F1FD U2060 REGIONAL INDICATOR SYMBOL LETTER X, WORD JOINER
+<Multi_key><equal>                                                                             <x> : "🇽⁠" # U1F1FD U2060 REGIONAL INDICATOR SYMBOL LETTER X, WORD JOINER
+<UEFD7>                                                                                        <Y> : "🇾⁠" # U1F1FE U2060 REGIONAL INDICATOR SYMBOL LETTER Y, WORD JOINER
+<Multi_key><equal>                                                                             <Y> : "🇾⁠" # U1F1FE U2060 REGIONAL INDICATOR SYMBOL LETTER Y, WORD JOINER
+<UEFD7>                                                                                        <y> : "🇾⁠" # U1F1FE U2060 REGIONAL INDICATOR SYMBOL LETTER Y, WORD JOINER
+<Multi_key><equal>                                                                             <y> : "🇾⁠" # U1F1FE U2060 REGIONAL INDICATOR SYMBOL LETTER Y, WORD JOINER
+<UEFD7>                                                                                        <Z> : "🇿⁠" # U1F1FF U2060 REGIONAL INDICATOR SYMBOL LETTER Z, WORD JOINER
+<Multi_key><equal>                                                                             <Z> : "🇿⁠" # U1F1FF U2060 REGIONAL INDICATOR SYMBOL LETTER Z, WORD JOINER
+<UEFD7>                                                                                        <z> : "🇿⁠" # U1F1FF U2060 REGIONAL INDICATOR SYMBOL LETTER Z, WORD JOINER
+<Multi_key><equal>                                                                             <z> : "🇿⁠" # U1F1FF U2060 REGIONAL INDICATOR SYMBOL LETTER Z, WORD JOINER
 #
 #
 # # FLAG&GROUP_1
