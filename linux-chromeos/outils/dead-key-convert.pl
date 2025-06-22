@@ -4,7 +4,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-06-01T2127+0200
-# 2025-06-13T0738+0200
+# 2025-06-22T1558+0200
 # = last modified.
 #
 # This “dead key converter” takes in a preprocessed dead key list derived from
@@ -12,20 +12,13 @@
 # # # Notes for maintenance, and sorting lines in a case insensitive ascending
 # order so as to get uppercase and lowercase together in the output.
 #
-# Multikey sequences need to be processed separately, since these are either
-# unrelated to or not congruent with the dead key output.
+# Multikey sequences need to be processed separately, since these are unrelated
+# to or not congruent with the dead key output, as some are commented out.
 #
-# The greek dead key terminated sequences are required because dead_greek is
+# The sequences ending in dead_greek are required because dead_greek is
 # duplicated on the position of the at sign in the ASCII symbol map.
 #
-# Since not all chained dead keys are strictly symmetric, and with multikey too
-# order may matter or it may not, taking advantage of a full verbatim list like
-# the one derived from the lower part of Compose.yml, with multikey equivalents
-# removed, but with redundant dead key lists, is advisable. Automating further
-# processing is the only working solution when facing 9 500+ dead key sequences
-# without their multikey equivalents, that need to be supported separately, by
-# connecting them to the dead keys. Asymmetrically chained dead keys are found
-# in the following sections.
+# Not all chained dead keys are symmetric.
 # See Compose.yml # # GREEK&DIAERESIS&DOUBLEACUTE
 # See Compose.yml # # GREEK&DIAERESIS&ACUTE
 # See Compose.yml # # MACRON&DIAERESIS
@@ -38,53 +31,49 @@
 # See Compose.yml # # SUBSCRIPT&BREVE
 # See Compose.yml # # SUBSCRIPT&BAR
 #
-# Asymmetric multikey sequences are found in these sections.
-# See Compose.yml #^# Abbreviations, Units and Legal Symbols
-# See Compose.yml #^# Tone bars
-# See Compose.yml # # Plus minus
-#
 # The issue is also documented.
 # See Compose.yml # # Order of mixed dead keys
 #
-# On 2025-06-06, 1 085 sequences have multicharacter output. Most are letters
+# On 2025-06-22, 1 091 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
 # not have precomposed equivalents. But Windows is unable to output any of them
 # by dead keys. As a consequence, the sequences are skipped throughout in order
 # to not compromise the "ê" key and "ç" key emulations. Windows users are aware
 # that composed letters are input the other way around.
 #
-# 1 915 dead key sequences yield Latin letters or mathematical symbols encoded
+# 2 013 dead key sequences yield Latin letters or mathematical symbols encoded
 # in the SMP that Windows is unable to output in one go by a dead key. As a
 # workaround, the dead key output is restricted to the low surrogate. An input
 # method for the high surrogates is provided separately at the root of related
 # dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
 # most dead keys, on level 4 of the space bar in French mode.
 #
-# The number of required high surrogates amounts to seven:
+# The number of required high surrogates amounts to eight:
 #
 #     D801, D807,
-#     D835, D837, D83C, D83D, D83E.
+#     D835, D837, D83C, D83D, D83E,
+#     DB40.
 #
 # These can be dispatched among dead keys most straightforwardly as follows:
 #
 #     D801 dead_superscript (modifier letters)
-#     D807 dead_turned [dead_turned] (U+11FB0 "𑾰" LISU LETTER YHA)
+#     D807 dead_turned (U+11FB0 "𑾰" LISU LETTER YHA)
 #     D835 dead_group (mathematical alphanumeric symbols)
-#     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
-#     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
-#     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
+#     D837 dead_bar; dead_breve; dead_hook; dead_retroflexhook; others (Latin)
+#     D83C dead_flag; dead_greek (flag letters, squared letters)
+#     D83D dead_doubleacute; dead_acute; others (ornamental quotation marks)
+#     D83E dead_stroke; dead_group 11 and 12 as built-in (wide-headed arrows)
+#     DB40 dead_flag as built-in (tag characters)
 #
 # The output is directly in C, where an array of DEADTRANS macro calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
-# under DEADKEY headers. Transpilation by KbdUTool produces C code without any
-# of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
-# comments, while leading block comments (in addition to EOL comments) are best
-# for human readability, and with long lists are more readable than the grouped
-# layout. Given that furthermore the KLC-to-C transpiler in KbdUTool is broken,
-# as it is unable to handle dead characters above 0x0FFF, and to transpile Kana
-# Lock levels, using the KLC format is pointless and would induce a significant
-# amount of waste.
+# under DEADKEY headers. When KbdUTool transpiles from KLC to C, comments are
+# ignored under the assumption that development happens in KLC only. But this
+# is just not possible, given that KbdUTool’s KLC-to-C transpiler is broken, as
+# it is unable to handle dead characters above 0x0FFF and to transpile KanaLock
+# levels. Anyway, KLC only supports end-of-line comments, while leading block
+# comments (in addition to EOL comments) are best for human readability, and
+# with long lists are more readable than the grouped layout.
 #
 # As a result, any DEADTRANS macro call can be overridden by a similar call,
 # with the same input and the same dead character, but another output, provided
@@ -273,7 +262,7 @@ while ( my $line = <INPUT> ) {
 				unless ( grep( /^$high_su$/, @high_surrogates ) ) {
 					push( @high_surrogates, $high_su );
 				}
-				$high_out    = 'High surrogate: ' . $high_su . '; Unicode: U+' . $output_code . ' ';
+				$high_out    = 'High surrogate: ' . $high_su . '; U+' . $output_code . ' ';
 				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
 				++$half;
 				print LOG $high_su . ', ' . $deadkey . "\n";
@@ -304,9 +293,10 @@ unless ( @bad_format == 0 ) {
 	$number_bad_format = @bad_format;
 	print( "  $number_bad_format characters are in a bad format: @bad_format.\n\n" );
 }
+@high_surrogates = sort( @high_surrogates );
 print( "  $full potentially functional dead key sequences generated.\n" );
 print( "  $half additional dead key sequences output only a low surrogate.\n" );
-print( "  The required high surrogates are @high_surrogates.\n" );
+print( "  The " . @high_surrogates . " required high surrogates are @high_surrogates.\n" );
 print( "  Their relationship to the dead keys is logged in $log_path.\n" );
-print( "  $multichar multicharacter output dead key sequences not processed.\n\n" );
+print( "  $multichar unsupported multicharacter output dead key sequences not processed.\n\n" );
 print( "Done processing.\n" );
