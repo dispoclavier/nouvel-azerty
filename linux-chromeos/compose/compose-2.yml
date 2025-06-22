@@ -14583,11 +14583,14 @@
 #   cancel tag in subdivision flag sequences.
 #   https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
 #
-#   The only standardized subdivision flags are Enland, Scotland and Wales.
+#   The only standardized subdivision flags are England, Scotland and Wales.
 #   https://blog.unicode.org/2022/03/the-past-and-future-of-flag-emoji.html
 #
 #   A waving black flag "🏴" U1F3F4 is appended with tag small letters "gbeng",
-#   "gbsct", "gbwls", and the sequence is terminated by UE007F CANCEL TAG.
+#   "gbsct", "gbwls", and the sequence is terminated by UE007F CANCEL TAG. The
+#   resulting string is 7 characters long, as opposed to the two-character flag
+#   emoji.
+#   See #^# FLAG_EMOJI
 #
 #   As UE0001 LANGUAGE TAG is deprecated, a second instance of
 #   UE007F CANCEL TAG takes up its place, for a less screwed-up user experience
@@ -14822,14 +14825,46 @@
 #   Multi_key: ¦==
 #   Dchar: 
 #
-#   The 258 country flags are supported on double press, followed by two-letter
-#   ISO country code written in regional indicator symbol letters.
+#   The 258 country flags are supported on double press followed by a
+#   two-letter ISO country code or one of the following additional codes,
+#   written in regional indicator symbol letters.
 #   https://unicode.org/emoji/charts/emoji-list.html#flags
+#   https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+#
+#       AC  "🇦🇨" Ascension Island
+#       CP  "🇨🇵" Clipperton Island
+#       DG  "🇩🇬" Diego Garcia
+#       EA  "🇪🇦" Ceuta & Melilla
+#       EU  "🇪🇺" European Union
+#       IC  "🇮🇨" Canary Islands
+#       TA  "🇹🇦" Tristan da Cunha
+#       UN  "🇺🇳" United Nations
+#       XK  "🇽🇰" Kosovo
+#
+#   The 3 subdivision flags supported by Unicode (after projecting to support
+#   all subdivision flags, and devising a scheme to do so) have base characters
+#   consistent with the level-10 map on Windows using the AltFl modifier (AltDr
+#   in French, based on "drapeau" for "flag") added on top of the Caps Lock key
+#   (using it requires resetting the toggle in the wake), on key C12 for Wales,
+#   D12 for England, and E12 for Scotland, with geospatial mnemonics using the
+#   stacked layout of these keys, with respect to the requirement of duplicate
+#   mappings of C02 on C11, D02 on D11, and E02 on E11 due to the column-02 bug
+#   on Windows, affecting level 10 i.e. Shift + AltFl (decimal 65, 0x41), and
+#   with keycap mnemonics using "£" printed in shift position on D12 of French
+#   AZERTY, on C12 of Belgian AZERTY.
+#
+#   For convenience, on Linux, a geographically more accurate layout featuring
+#   Wales on key D11 is also provided; and with respect to remapped variants,
+#   Scotland is replicated on key E11 by at sign, while England has also minus
+#   as a base character.
+#   https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
+#   See # # TAG
+#   See #   Subdivision flags
 #
 #   As a combining diacritic, by lack of a combining equals sign above, a close
 #   relative, "͌" U034C COMBINING ALMOST EQUAL TO ABOVE, fills in the slot.
-#   This happens to match the waving flags, that non-country / non-subdivision
-#   flags are typically pictured as, for iconicity.
+#   This happens to match the waving flags, that flags are typically pictured
+#   as, for iconicity.
 #
 #   The sequences with no-break space and no-break thin space, used for spacing
 #   clones of diacritics or for modifier letters on most dead keys, output a
@@ -14852,6 +14887,10 @@
 <Multi_key><equal><equal>                                                                  <slash> : "🏳" U1F3F3 # WAVING WHITE FLAG
 <UEFD7><UEFD7>                                                                         <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <Multi_key><equal><equal>                                                              <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
+#
+#
+#   Country flags
+#
 <UEFD7><UEFD7>                                                                              <A><C> : "🇦🇨" # Ascension Island
 <Multi_key><equal><equal>                                                                   <A><C> : "🇦🇨" # Ascension Island
 <UEFD7><UEFD7>                                                                              <a><c> : "🇦🇨" # Ascension Island
@@ -15884,6 +15923,22 @@
 <Multi_key><equal><equal>                                                                   <Z><W> : "🇿🇼" # Zimbabwe
 <UEFD7><UEFD7>                                                                              <z><w> : "🇿🇼" # Zimbabwe
 <Multi_key><equal><equal>                                                                   <z><w> : "🇿🇼" # Zimbabwe
+#
+#
+#   Subdivision flags
+#
+<UEFD7><UEFD7>                                                                        <dead_acute> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
+<Multi_key><equal><equal>                                                             <dead_acute> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
+<UEFD7><UEFD7>                                                                             <minus> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
+<Multi_key><equal><equal>                                                                  <minus> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
+<UEFD7><UEFD7>                                                                        <apostrophe> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
+<Multi_key><equal><equal>                                                             <apostrophe> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
+<UEFD7><UEFD7>                                                                                <at> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
+<Multi_key><equal><equal>                                                                     <at> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
+<UEFD7><UEFD7>                                                                             <UEFD0> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
+<Multi_key><equal><equal>                                                                  <UEFD0> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
+<UEFD7><UEFD7>                                                                   <dead_circumflex> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
+<Multi_key><equal><equal>                                                        <dead_circumflex> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
 #
 #
 #^# REGIONAL_INDICATOR_SYMBOL
