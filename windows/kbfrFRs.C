@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* [Simplify annotations.]
 * Debug level-10 digit emoji         5.3.0.11.00-Sun-2025-06-22T0639+0200
 * Append WJ to level-10 digit emoji  5.3.0.10.00-Sun-2025-06-22T0519+0200
 * Replace cursive non-joiner with WJ  5.3.0.9.00-Sat-2025-06-21T0826+0200
@@ -1734,7 +1735,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_hook>*/	DEADTRANS(	L'j'	,0x0192	,0x0284	,0x0000	), // "ʄ" LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 /*<!dead_hook>*/	DEADTRANS(	L'K'	,0x0192	,0x0198	,0x0000	), // "Ƙ" LATIN CAPITAL LETTER K WITH HOOK
 /*<!dead_hook>*/	DEADTRANS(	L'k'	,0x0192	,0x0199	,0x0000	), // "ƙ" LATIN SMALL LETTER K WITH HOOK
-/*<!dead_hook>*/	DEADTRANS(	L'l'	,0x0192	,0xDF11	,0x0000	), // High surrogate: D837; Unicode: U+1DF11 "𝼑" LATIN SMALL LETTER L WITH FISHHOOK
+/*<!dead_hook>*/	DEADTRANS(	L'l'	,0x0192	,0xDF11	,0x0000	), // High surrogate: D837; U+1DF11 "𝼑" LATIN SMALL LETTER L WITH FISHHOOK
 /*<!dead_hook>*/	DEADTRANS(	L'm'	,0x0192	,0x0271	,0x0000	), // "ɱ" LATIN SMALL LETTER M WITH HOOK
 /*<!dead_hook>*/	DEADTRANS(	L'M'	,0x0192	,0x2C6E	,0x0000	), // "Ɱ" LATIN CAPITAL LETTER M WITH HOOK
 /*<!dead_hook>*/	DEADTRANS(	L'N'	,0x0192	,0x019D	,0x0000	), // "Ɲ" LATIN CAPITAL LETTER N WITH LEFT HOOK
@@ -1839,7 +1840,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'E'	,0x0213	,0x0206	,0x0000	), // "Ȇ" LATIN CAPITAL LETTER E WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'e'	,0x0213	,0x0207	,0x0000	), // "ȇ" LATIN SMALL LETTER E WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	0x2014	,0x0213	,0x0361	,0x0000	), // "͡" COMBINING DOUBLE INVERTED BREVE
-/*<!dead_invertedbreve>*/	DEADTRANS(	L'f'	,0x0213	,0xDF00	,0x0000	), // High surrogate: D837; Unicode: U+1DF00 "𝼀" LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+/*<!dead_invertedbreve>*/	DEADTRANS(	L'f'	,0x0213	,0xDF00	,0x0000	), // High surrogate: D837; U+1DF00 "𝼀" LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'g'	,0x0213	,0x2050	,0x0000	), // "⁐" CLOSE UP
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'G'	,0x0213	,0x2050	,0x0000	), // "⁐" CLOSE UP
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'I'	,0x0213	,0x020A	,0x0000	), // "Ȋ" LATIN CAPITAL LETTER I WITH INVERTED BREVE
@@ -1981,7 +1982,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_ogonek>*/	DEADTRANS(	L'o'	,0x01EB	,0x01EB	,0x0000	), // "ǫ" LATIN SMALL LETTER O WITH OGONEK
 /*<!dead_ogonek>*/	DEADTRANS(	L'U'	,0x01EB	,0x0172	,0x0000	), // "Ų" LATIN CAPITAL LETTER U WITH OGONEK
 /*<!dead_ogonek>*/	DEADTRANS(	L'u'	,0x01EB	,0x0173	,0x0000	), // "ų" LATIN SMALL LETTER U WITH OGONEK
-/*<!dead_retroflexhook>*/	DEADTRANS(	L'!'	,0x0273	,0xDF0A	,0x0000	), // High surrogate: D837; Unicode: U+1DF0A "𝼊" LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+/*<!dead_retroflexhook>*/	DEADTRANS(	L'!'	,0x0273	,0xDF0A	,0x0000	), // High surrogate: D837; U+1DF0A "𝼊" LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	0x00A0	,0x0273	,0x02FE	,0x0000	), // "˾" MODIFIER LETTER OPEN SHELF
 /*<!dead_retroflexhook>*/	DEADTRANS(	0x202F	,0x0273	,0x02FE	,0x0000	), // "˾" MODIFIER LETTER OPEN SHELF
 /*<!dead_retroflexhook>*/	DEADTRANS(	L' '	,0x0273	,0x0322	,0x0000	), // "̢" COMBINING RETROFLEX HOOK BELOW
@@ -1997,14 +1998,14 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'8'	,0x0273	,0x267A	,0x0000	), // "♺" RECYCLING SYMBOL FOR GENERIC MATERIALS
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'9'	,0x0273	,0x267B	,0x0000	), // "♻" BLACK UNIVERSAL RECYCLING SYMBOL emoji
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'a'	,0x0273	,0x1D8F	,0x0000	), // "ᶏ" LATIN SMALL LETTER A WITH RETROFLEX HOOK
-/*<!dead_retroflexhook>*/	DEADTRANS(	L'c'	,0x0273	,0xDF1D	,0x0000	), // High surrogate: D837; Unicode: U+1DF1D "𝼝" LATIN SMALL LETTER C WITH RETROFLEX HOOK
+/*<!dead_retroflexhook>*/	DEADTRANS(	L'c'	,0x0273	,0xDF1D	,0x0000	), // High surrogate: D837; U+1DF1D "𝼝" LATIN SMALL LETTER C WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'D'	,0x0273	,0x0189	,0x0000	), // "Ɖ" LATIN CAPITAL LETTER AFRICAN D
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'd'	,0x0273	,0x0256	,0x0000	), // "ɖ" LATIN SMALL LETTER D WITH TAIL
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'e'	,0x0273	,0x1D92	,0x0000	), // "ᶒ" LATIN SMALL LETTER E WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'i'	,0x0273	,0x1D96	,0x0000	), // "ᶖ" LATIN SMALL LETTER I WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'l'	,0x0273	,0x026D	,0x0000	), // "ɭ" LATIN SMALL LETTER L WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'n'	,0x0273	,0x0273	,0x0000	), // "ɳ" LATIN SMALL LETTER N WITH RETROFLEX HOOK
-/*<!dead_retroflexhook>*/	DEADTRANS(	L'o'	,0x0273	,0xDF1B	,0x0000	), // High surrogate: D837; Unicode: U+1DF1B "𝼛" LATIN SMALL LETTER O WITH RETROFLEX HOOK
+/*<!dead_retroflexhook>*/	DEADTRANS(	L'o'	,0x0273	,0xDF1B	,0x0000	), // High surrogate: D837; U+1DF1B "𝼛" LATIN SMALL LETTER O WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'P'	,0x0273	,0xA754	,0x0000	), // "Ꝕ" LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'p'	,0x0273	,0xA755	,0x0000	), // "ꝕ" LATIN SMALL LETTER P WITH SQUIRREL TAIL
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'Q'	,0x0273	,0x024A	,0x0000	), // "Ɋ" LATIN CAPITAL LETTER SMALL Q WITH HOOK TAIL
@@ -2045,13 +2046,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_reversed>*/	DEADTRANS(	L'E'	,0x019E	,0x018E	,0x0000	), // "Ǝ" LATIN CAPITAL LETTER REVERSED E
 /*<!dead_reversed>*/	DEADTRANS(	L'e'	,0x019E	,0x0258	,0x0000	), // "ɘ" LATIN SMALL LETTER REVERSED E
 /*<!dead_reversed>*/	DEADTRANS(	L'F'	,0x019E	,0xA7FB	,0x0000	), // "ꟻ" LATIN EPIGRAPHIC LETTER REVERSED F
-/*<!dead_reversed>*/	DEADTRANS(	L'g'	,0x019E	,0xDF01	,0x0000	), // High surrogate: D837; Unicode: U+1DF01 "𝼁" LATIN SMALL LETTER REVERSED SCRIPT G
+/*<!dead_reversed>*/	DEADTRANS(	L'g'	,0x019E	,0xDF01	,0x0000	), // High surrogate: D837; U+1DF01 "𝼁" LATIN SMALL LETTER REVERSED SCRIPT G
 /*<!dead_reversed>*/	DEADTRANS(	L'H'	,0x019E	,0xA7F5	,0x0000	), // "Ꟶ" LATIN CAPITAL LETTER REVERSED HALF H
 /*<!dead_reversed>*/	DEADTRANS(	L'h'	,0x019E	,0xA7F6	,0x0000	), // "ꟶ" LATIN SMALL LETTER REVERSED HALF H
-/*<!dead_reversed>*/	DEADTRANS(	L'k'	,0x019E	,0xDF03	,0x0000	), // High surrogate: D837; Unicode: U+1DF03 "𝼃" LATIN SMALL LETTER REVERSED K
+/*<!dead_reversed>*/	DEADTRANS(	L'k'	,0x019E	,0xDF03	,0x0000	), // High surrogate: D837; U+1DF03 "𝼃" LATIN SMALL LETTER REVERSED K
 /*<!dead_reversed>*/	DEADTRANS(	L'L'	,0x019E	,0x2143	,0x0000	), // "⅃" REVERSED SANS-SERIF CAPITAL L
 /*<!dead_reversed>*/	DEADTRANS(	L'N'	,0x019E	,0x1D0E	,0x0000	), // "ᴎ" LATIN LETTER SMALL CAPITAL REVERSED N
-/*<!dead_reversed>*/	DEADTRANS(	L'n'	,0x019E	,0xDF07	,0x0000	), // High surrogate: D837; Unicode: U+1DF07 "𝼇" LATIN SMALL LETTER REVERSED ENG
+/*<!dead_reversed>*/	DEADTRANS(	L'n'	,0x019E	,0xDF07	,0x0000	), // High surrogate: D837; U+1DF07 "𝼇" LATIN SMALL LETTER REVERSED ENG
 /*<!dead_reversed>*/	DEADTRANS(	L'o'	,0x019E	,0xAB43	,0x0000	), // "ꭃ" LATIN SMALL LETTER TURNED O OPEN-O
 /*<!dead_reversed>*/	DEADTRANS(	L'p'	,0x019E	,0x204B	,0x0000	), // "⁋" REVERSED PILCROW SIGN
 /*<!dead_reversed>*/	DEADTRANS(	L'P'	,0x019E	,0xA7FC	,0x0000	), // "ꟼ" LATIN EPIGRAPHIC LETTER REVERSED P
@@ -2066,7 +2067,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_reversed>*/	DEADTRANS(	L'X'	,0x019E	,0xA7AB	,0x0000	), // "Ɜ" LATIN CAPITAL LETTER REVERSED OPEN E
 /*<!dead_reversed>*/	DEADTRANS(	L'Z'	,0x019E	,0x01B8	,0x0000	), // "Ƹ" LATIN CAPITAL LETTER EZH REVERSED
 /*<!dead_reversed>*/	DEADTRANS(	L'z'	,0x019E	,0x01B9	,0x0000	), // "ƹ" LATIN SMALL LETTER EZH REVERSED
-/*<!dead_stroke>*/	DEADTRANS(	L'^'	,0x00F8	,0xDFA2	,0x0000	), // High surrogate: D801; Unicode: U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
+/*<!dead_stroke>*/	DEADTRANS(	L'^'	,0x00F8	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 /*<!dead_stroke>*/	DEADTRANS(	L'|'	,0x00F8	,0x2224	,0x0000	), // "∤" DOES NOT DIVIDE
 /*<!dead_stroke>*/	DEADTRANS(	L'='	,0x00F8	,0x2260	,0x0000	), // "≠" NOT EQUAL TO
 /*<!dead_stroke>*/	DEADTRANS(	L'>'	,0x00F8	,0x226F	,0x0000	), // "≯" NOT GREATER-THAN
@@ -2199,7 +2200,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_subscript>*/	DEADTRANS(	L'y'	,L'_'	,0x1D67	,0x0000	), // "ᵧ" GREEK SUBSCRIPT SMALL LETTER GAMMA
 /*<!dead_subscript>*/	DEADTRANS(	L'Z'	,L'_'	,0x1D22	,0x0000	), // "ᴢ" LATIN LETTER SMALL CAPITAL Z
 /*<!dead_subscript>*/	DEADTRANS(	L'z'	,L'_'	,0x1D2A	,0x0000	), // "ᴪ" GREEK LETTER SMALL CAPITAL PSI
-/*<!dead_superscript>*/	DEADTRANS(	0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; Unicode: U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
+/*<!dead_superscript>*/	DEADTRANS(	0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 /*<!dead_superscript>*/	DEADTRANS(	L'\''	,L'^'	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!dead_superscript>*/	DEADTRANS(	0x2019	,L'^'	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!dead_superscript>*/	DEADTRANS(	L'*'	,L'^'	,0x2042	,0x0000	), // "⁂" ASTERISM
@@ -2262,7 +2263,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_superscript>*/	DEADTRANS(	L'o'	,L'^'	,0x1D52	,0x0000	), // "ᵒ" MODIFIER LETTER SMALL O
 /*<!dead_superscript>*/	DEADTRANS(	L'P'	,L'^'	,0x1D3E	,0x0000	), // "ᴾ" MODIFIER LETTER CAPITAL P
 /*<!dead_superscript>*/	DEADTRANS(	L'p'	,L'^'	,0x1D56	,0x0000	), // "ᵖ" MODIFIER LETTER SMALL P
-/*<!dead_superscript>*/	DEADTRANS(	L'q'	,L'^'	,0xDFA5	,0x0000	), // High surrogate: D801; Unicode: U+107A5 "𐞥" MODIFIER LETTER SMALL Q
+/*<!dead_superscript>*/	DEADTRANS(	L'q'	,L'^'	,0xDFA5	,0x0000	), // High surrogate: D801; U+107A5 "𐞥" MODIFIER LETTER SMALL Q
 /*<!dead_superscript>*/	DEADTRANS(	L'Q'	,L'^'	,0xA7F4	,0x0000	), // "ꟴ" MODIFIER LETTER CAPITAL Q
 /*<!dead_superscript>*/	DEADTRANS(	L'r'	,L'^'	,0x02B3	,0x0000	), // "ʳ" MODIFIER LETTER SMALL R
 /*<!dead_superscript>*/	DEADTRANS(	L'R'	,L'^'	,0x1D3F	,0x0000	), // "ᴿ" MODIFIER LETTER CAPITAL R
