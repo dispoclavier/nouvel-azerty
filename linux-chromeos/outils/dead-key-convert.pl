@@ -1,16 +1,14 @@
 #!/usr/bin/perl
 # 2024-10-10T0617+0200
-# 2024-10-14T0744+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-06-01T2127+0200
-# 2025-06-22T1558+0200
+# 2025-06-26T0810+0200
 # = last modified.
 #
-# This “dead key converter” takes in a preprocessed dead key list derived from
-# Compose.yml by running the two replacerulesets documented under the heading
-# # # Notes for maintenance, and sorting lines in a case insensitive ascending
-# order so as to get uppercase and lowercase together in the output.
+# This “dead key converter” takes in the dead key configuration file for Linux,
+# Compose.yml, due to having the two replacerulesets documented there under the
+# heading "# # Notes for maintenance" built in, and thanks to improved sorting.
+# https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 #
 # Multikey sequences need to be processed separately, since these are unrelated
 # to or not congruent with the dead key output, as some are commented out.
@@ -91,7 +89,7 @@ use feature 'unicode_strings';
 # By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-my $input_path = 'dead-key-out.yml';
+my $input_path = 'Compose.yml';
 open( INPUT, '<', $input_path ) or die $!;
 print( "Opened file $input_path.\n" );
 
@@ -105,6 +103,7 @@ print( "Opened file $log_path.\n" );
 
 print( "Processing content from $input_path to $output_path.\n" );
 
+my @dead_key_out = ();
 my ( $deadkey, $input, $output_string, $output_code, $comment, $deadchar, $print,
      $high_su, $high_out, $number_bad_format );
 my $multichar        = 0;
@@ -166,6 +165,55 @@ sub formatCharacter {
 }
 
 while ( my $line = <INPUT> ) {
+
+	unless ( $line =~ /^<Multi_key>/         # Multikey not yet processed.
+		|| $line =~ /^#/                 # Annotations.
+		|| $line =~ /^<[^>]+> * :/       # Multichar for live keys.
+		|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
+		|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
+	) {
+		# Remove spaces.
+		$line =~ s/ {2,}/ /g;
+		$line =~ s/> </></g;
+
+		# Decode keysyms.
+		$line =~ s/<UEFD0>/<dead_group>/g;
+		$line =~ s/<UEFD1>/<dead_superscript>/g;
+		$line =~ s/<UEFD2>/<dead_subscript>/g;
+		$line =~ s/<UEFD3>/<dead_abovehook>/g;
+		$line =~ s/<UEFD4>/<dead_retroflexhook>/g;
+		$line =~ s/<UEFD5>/<dead_turned>/g;
+		$line =~ s/<UEFD6>/<dead_reversed>/g;
+		$line =~ s/<UEFD7>/<dead_flag>/g;
+		$line =~ s/<UEFD8>/<dead_bar>/g;
+		$line =~ s/<UEFD9>/<dead_legacytilde>/g;
+		$line =~ s/<UEFDA>/<dead_legacygrave>/g;
+		$line =~ s/<dead_/<!dead_/g;
+		$line =~ s/<U0190>/<Eopen>/g;
+		$line =~ s/<U025B>/<eopen>/g;
+		$line =~ s/<U0186>/<Oopen>/g;
+		$line =~ s/<U0254>/<oopen>/g;
+
+		# Prepare for sorting, further decode.
+		$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
+		$line =~ s/<section>/<\%semsection>/g;
+		$line =~ s/<at>/<\%aat>/g;
+		$line =~ s/<rightsinglequotemark>/<\%aprightsinglequotemark>/g;
+		$line =~ s/<(ampersand|apostrophe|asciicircum|asciitilde|asterisk|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/g;
+		$line =~ s/<((nobreak)?)space>/<~$1space>/g;
+		$line =~ s/<U202F>/<~nobreakthinspace>/g;
+		$line =~ s/<U200B>/<~spacezerowidth>/g;
+
+		push( @dead_key_out, $line );
+	}
+}
+
+# Case insensitive sorting.
+# By courtesy of https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
+@dead_key_out = sort { "\L$a" cmp "\L$b" } @dead_key_out;
+
+foreach my $line ( @dead_key_out ) {
+
 	if ( $line =~ /" U[0-9A-F]{4,5}/ ) {
 		unless ( $line =~ /<UEF/ ) {
 			$line =~ m/(<.+>)<(.+)> : "(.+)" U([0-9A-F]{4,5}) # (.+)/u;
@@ -266,7 +314,7 @@ while ( my $line = <INPUT> ) {
 				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
 				++$half;
 				print LOG $high_su . ', ' . $deadkey . "\n";
-				
+
 			} else {
 				$high_out = '';
 				++$full;
@@ -278,7 +326,7 @@ while ( my $line = <INPUT> ) {
 		++$multichar;
 		$print = '';
 	}
-	
+
 	print OUTPUT $print;
 
 }
