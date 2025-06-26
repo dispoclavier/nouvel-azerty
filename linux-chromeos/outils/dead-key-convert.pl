@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-06-26T0810+0200
+# 2025-06-26T1734+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -97,55 +97,60 @@ my $output_path = 'WINDOWS/dead-keys.c';
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 
+my $list_path = 'WINDOWS/dead-keys.txt';
+open( LIST, '>', $list_path ) or die $!;
+print( "Opened file $list_path.\n" );
+
 my $log_path = 'WINDOWS/dead-key-high-log.txt';
 open( LOG, '>', $log_path ) or die $!;
 print( "Opened file $log_path.\n" );
 
 print( "Processing content from $input_path to $output_path.\n" );
 
-my @dead_key_out = ();
+my @dead_key_out      = ();
+my @chained_dead_keys = ();
+my @high_surrogates   = ();
+my @bad_format        = ();
 my ( $deadkey, $input, $output_string, $output_code, $comment, $deadchar, $print,
      $high_su, $high_out, $number_bad_format );
-my $multichar        = 0;
-my $half             = 0;
-my $full             = 0;
-my @high_surrogates  = ();
-my @bad_format       = ();
+my $multichar = 0;
+my $half      = 0;
+my $full      = 0;
 
 sub keysymsToDchars {
 	my ( $deadkeys ) = @_;
-	$deadkeys =~ s/!dead_superscript/^/;
-	$deadkeys =~ s/!dead_turned/0250/;
-	$deadkeys =~ s/!dead_doubleacute/0151/;
-	$deadkeys =~ s/!dead_reversed/019E/;
-	$deadkeys =~ s/!dead_tilde/00F5/;
-	$deadkeys =~ s/!dead_greek/03B5/;
-	$deadkeys =~ s/!dead_acute/00E1/;
-	$deadkeys =~ s/!dead_hook/0192/;
-	$deadkeys =~ s/!dead_retroflexhook/0273/;
-	$deadkeys =~ s/!dead_abovedot/1E57/;
-	$deadkeys =~ s/!dead_group/2460/;
-	$deadkeys =~ s/!dead_currency/00A4/;
-	$deadkeys =~ s/!dead_invertedbreve/0213/;
-	$deadkeys =~ s/!dead_breve/0115/;
-	$deadkeys =~ s/!dead_bar/024D/;
-	$deadkeys =~ s/!dead_horn/01A1/;
-	$deadkeys =~ s/!dead_subscript/_/;
-	$deadkeys =~ s/!dead_ogonek/01EB/;
-	$deadkeys =~ s/!dead_abovehook/1EBB/;
-	$deadkeys =~ s/!dead_macron/0101/;
-	$deadkeys =~ s/!dead_stroke/00F8/;
-	$deadkeys =~ s/!dead_abovering/00E5/;
-	$deadkeys =~ s/!dead_circumflex/00EA/;
-	$deadkeys =~ s/!dead_caron/021F/;
-	$deadkeys =~ s/!dead_flag/2690/;
-	$deadkeys =~ s/!dead_grave/00F2/;
-	$deadkeys =~ s/!dead_cedilla/00E7/;
-	$deadkeys =~ s/!dead_belowdot/1E05/;
-	$deadkeys =~ s/!dead_diaeresis/00EB/;
-	$deadkeys =~ s/!dead_belowcomma/0219/;
-	$deadkeys =~ s/!dead_legacygrave/`/;
-	$deadkeys =~ s/!dead_legacytilde/~/;
+	$deadkeys =~ s/!superscript/^/;
+	$deadkeys =~ s/!turned/0250/;
+	$deadkeys =~ s/!doubleacute/0151/;
+	$deadkeys =~ s/!reversed/019E/;
+	$deadkeys =~ s/!tilde/00F5/;
+	$deadkeys =~ s/!greek/03B5/;
+	$deadkeys =~ s/!acute/00E1/;
+	$deadkeys =~ s/!hook/0192/;
+	$deadkeys =~ s/!retroflexhook/0273/;
+	$deadkeys =~ s/!abovedot/1E57/;
+	$deadkeys =~ s/!group/2460/;
+	$deadkeys =~ s/!currency/00A4/;
+	$deadkeys =~ s/!invertedbreve/0213/;
+	$deadkeys =~ s/!breve/0115/;
+	$deadkeys =~ s/!bar/024D/;
+	$deadkeys =~ s/!horn/01A1/;
+	$deadkeys =~ s/!subscript/_/;
+	$deadkeys =~ s/!ogonek/01EB/;
+	$deadkeys =~ s/!abovehook/1EBB/;
+	$deadkeys =~ s/!macron/0101/;
+	$deadkeys =~ s/!stroke/00F8/;
+	$deadkeys =~ s/!abovering/00E5/;
+	$deadkeys =~ s/!circumflex/00EA/;
+	$deadkeys =~ s/!caron/021F/;
+	$deadkeys =~ s/!flag/2690/;
+	$deadkeys =~ s/!grave/00F2/;
+	$deadkeys =~ s/!cedilla/00E7/;
+	$deadkeys =~ s/!belowdot/1E05/;
+	$deadkeys =~ s/!diaeresis/00EB/;
+	$deadkeys =~ s/!belowcomma/0219/;
+	$deadkeys =~ s/!legacygrave/`/;
+	$deadkeys =~ s/!legacytilde/~/;
 	return $deadkeys;
 }
 
@@ -188,11 +193,13 @@ while ( my $line = <INPUT> ) {
 		$line =~ s/<UEFD8>/<dead_bar>/g;
 		$line =~ s/<UEFD9>/<dead_legacytilde>/g;
 		$line =~ s/<UEFDA>/<dead_legacygrave>/g;
-		$line =~ s/<dead_/<!dead_/g;
 		$line =~ s/<U0190>/<Eopen>/g;
 		$line =~ s/<U025B>/<eopen>/g;
 		$line =~ s/<U0186>/<Oopen>/g;
 		$line =~ s/<U0254>/<oopen>/g;
+		
+		# Sort and simplify dead key names.
+		$line =~ s/<dead_/<!/g;
 
 		# Prepare for sorting, further decode.
 		$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
@@ -228,6 +235,13 @@ foreach my $line ( @dead_key_out ) {
 				$deadchar =~ s/<(.+)>/$1/;
 				$deadchar = keysymsToDchars( $deadchar );
 			} else {
+				unless ( grep( /^$deadkey$/, @chained_dead_keys ) ) {
+					push( @chained_dead_keys, $deadkey );
+				}
+				
+				
+				
+				
 				$deadchar = 'dead';
 			}
 
@@ -320,7 +334,7 @@ foreach my $line ( @dead_key_out ) {
 				++$full;
 			}
 
-			$print = '/*' . $deadkey . "*/\tDEADTRANS(\t" . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . '"' . $output_string . '" ' . $comment . "\n";
+			$print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) . "*/ DEADTRANS( " . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . '"' . $output_string . '" ' . $comment . "\n";
 		}
 	} else {
 		++$multichar;
@@ -331,12 +345,20 @@ foreach my $line ( @dead_key_out ) {
 
 }
 
+@chained_dead_keys = sort( @chained_dead_keys );
+print LIST ( "This is the full list of " . @chained_dead_keys . " chained dead keys to transpile.\n\n" );;
+foreach my $line ( @chained_dead_keys ) {
+	print LIST $line . "\n";
+}
+
 close( INPUT );
 print( "Closed file $input_path.\n" );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 close( LOG );
-print( "Closed file $log_path.\n\n" );
+print( "Closed file $log_path.\n" );
+close( LIST );
+print( "Closed file $list_path.\n\n" );
 unless ( @bad_format == 0 ) {
 	$number_bad_format = @bad_format;
 	print( "  $number_bad_format characters are in a bad format: @bad_format.\n\n" );
