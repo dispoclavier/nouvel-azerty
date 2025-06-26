@@ -7,7 +7,8 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
-* [Simplify annotations.]
+* Debug dead key content sort order  5.3.0.12.01-Thu-2025-06-26T0819+0200
+* Test KANA modifier on KanaLock key 5.3.0.12.00-Tue-2025-06-24T0450+0200
 * Debug level-10 digit emoji         5.3.0.11.00-Sun-2025-06-22T0640+0200
 * Append WJ to level-10 digit emoji  5.3.0.10.00-Sun-2025-06-22T0520+0200
 * Replace cursive non-joiner with WJ  5.3.0.9.00-Sat-2025-06-21T0826+0200
@@ -189,7 +190,8 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_MENU     ,   KBDALT       },
     { VK_OEM_AX   ,   16           }, // AltGr key
     { VK_OEM_102  ,   32           }, // AltFr key
-    { VK_CAPITAL  ,   64           }, // Caps Lock additionally a modifier
+    { VK_CAPITAL  ,   64           }, // CapsLock key additionally a modifier
+    { VK_KANA     ,   128          }, // KanaLock key additionally a modifier
     { 0           ,   0            }
 };
 
@@ -202,11 +204,11 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
     &aVkToBits[0],
-    73, // Decimal # of the last shift state in this array.
-        // Any shift state beyond is ignored.
+    249, // Decimal # of the last shift state in this array.
+         // Any shift state beyond is ignored.
     {
-    //  Modification# //            Keys Pressed or KANA toggle
-    //  ============= // ======================================
+    //  Modification# //            Keys Pressed Or KanaLock Toggle On
+    //  ============= // =============================================
         0,            //   0  0x00
         1,            //   1  0x01  Shift
         8,            //   2  0x02  Control
@@ -215,14 +217,14 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //   5  0x05  Shift + Menu
         SHFT_INVALID, //   6  0x06  Control + Menu
         SHFT_INVALID, //   7  0x07  Shift + Control + Menu
-        9,            //   8  0x08  KANA
-        10,           //   9  0x09  Shift + KANA
-        SHFT_INVALID, //  10  0x0a  Control + KANA
-        SHFT_INVALID, //  11  0x0b  Shift + Control + KANA
-        SHFT_INVALID, //  12  0x0c  Menu + KANA
-        SHFT_INVALID, //  13  0x0d  Shift + Menu + KANA
-        SHFT_INVALID, //  14  0x0e  Control + Menu + KANA
-        SHFT_INVALID, //  15  0x0f  Shift + Control + Menu + KANA
+        9,            //   8  0x08  KanaLock
+        10,           //   9  0x09  KanaLock + Shift
+        SHFT_INVALID, //  10  0x0a  KanaLock + Control
+        SHFT_INVALID, //  11  0x0b  KanaLock + Shift + Control
+        SHFT_INVALID, //  12  0x0c  KanaLock + Menu
+        SHFT_INVALID, //  13  0x0d  KanaLock + Shift + Menu
+        SHFT_INVALID, //  14  0x0e  KanaLock + Control + Menu
+        SHFT_INVALID, //  15  0x0f  KanaLock + Shift + Control + Menu
         2,            //  16  0x10  OEM_AX
         3,            //  17  0x11  Shift + OEM_AX
         SHFT_INVALID, //  18  0x12  Control + OEM_AX
@@ -231,14 +233,14 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  21  0x15  Shift + Menu + OEM_AX
         SHFT_INVALID, //  22  0x16  Control + Menu + OEM_AX
         SHFT_INVALID, //  23  0x17  Shift + Control + Menu + OEM_AX
-        11,           //  24  0x18  KANA + OEM_AX
-        12,           //  25  0x19  Shift + KANA + OEM_AX
-        SHFT_INVALID, //  26  0x1a  Control + KANA + OEM_AX
-        SHFT_INVALID, //  27  0x1b  Shift + Control + KANA + OEM_AX
-        SHFT_INVALID, //  28  0x1c  Menu + KANA + OEM_AX
-        SHFT_INVALID, //  29  0x1d  Shift + Menu + KANA + OEM_AX
-        SHFT_INVALID, //  30  0x1e  Control + Menu + KANA + OEM_AX
-        SHFT_INVALID, //  31  0x1f  Shift + Control + Menu + KANA + OEM_AX
+        11,           //  24  0x18  KanaLock + OEM_AX
+        12,           //  25  0x19  KanaLock + Shift + OEM_AX
+        SHFT_INVALID, //  26  0x1a  KanaLock + Control + OEM_AX
+        SHFT_INVALID, //  27  0x1b  KanaLock + Shift + Control + OEM_AX
+        SHFT_INVALID, //  28  0x1c  KanaLock + Menu + OEM_AX
+        SHFT_INVALID, //  29  0x1d  KanaLock + Shift + Menu + OEM_AX
+        SHFT_INVALID, //  30  0x1e  KanaLock + Control + Menu + OEM_AX
+        SHFT_INVALID, //  31  0x1f  KanaLock + Shift + Control + Menu + OEM_AX
         4,            //  32  0x20  OEM_102
         5,            //  33  0x21  Shift + OEM_102
         SHFT_INVALID, //  34  0x22  Control + OEM_102
@@ -247,24 +249,24 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  37  0x25  Shift + Menu + OEM_102
         SHFT_INVALID, //  38  0x26  Control + Menu + OEM_102
         SHFT_INVALID, //  39  0x27  Shift + Control + Menu + OEM_102
-        13,           //  40  0x28  KANA + OEM_102
-        14,           //  41  0x29  Shift + KANA + OEM_102
-        SHFT_INVALID, //  42  0x2a  Control + KANA + OEM_102
-        SHFT_INVALID, //  43  0x2b  Shift + Control + KANA + OEM_102
-        SHFT_INVALID, //  44  0x2c  Menu + KANA + OEM_102
-        SHFT_INVALID, //  45  0x2d  Shift + Menu + KANA + OEM_102
-        SHFT_INVALID, //  46  0x2e  Control + Menu + KANA + OEM_102
-        SHFT_INVALID, //  47  0x2f  Shift + Control + Menu + KANA + OEM_102
+        13,           //  40  0x28  KanaLock + OEM_102
+        14,           //  41  0x29  KanaLock + Shift + OEM_102
+        SHFT_INVALID, //  42  0x2a  KanaLock + Control + OEM_102
+        SHFT_INVALID, //  43  0x2b  KanaLock + Shift + Control + OEM_102
+        SHFT_INVALID, //  44  0x2c  KanaLock + Menu + OEM_102
+        SHFT_INVALID, //  45  0x2d  KanaLock + Shift + Menu + OEM_102
+        SHFT_INVALID, //  46  0x2e  KanaLock + Control + Menu + OEM_102
+        SHFT_INVALID, //  47  0x2f  KanaLock + Shift + Control + Menu + OEM_102
         6,            //  48  0x30  OEM_AX + OEM_102
         7,            //  49  0x31  Shift + OEM_AX + OEM_102
-        SHFT_INVALID, //  50  0x32  Control + OEM_AX + OEM_102
-        SHFT_INVALID, //  51  0x33  Shift + Control + OEM_AX + OEM_102
-        SHFT_INVALID, //  52  0x34  Menu + OEM_AX + OEM_102
-        SHFT_INVALID, //  53  0x35  Shift + Menu + OEM_AX + OEM_102
-        SHFT_INVALID, //  54  0x36  Control + Menu + OEM_AX + OEM_102
-        SHFT_INVALID, //  55  0x37  Shift + Control + Menu + OEM_AX + OEM_102
-        15,           //  56  0x38  KANA + OEM_AX + OEM_102
-        16,           //  57  0x39  Shift + KANA + OEM_AX + OEM_102
+        SHFT_INVALID, //  50  0x32
+        SHFT_INVALID, //  51  0x33
+        SHFT_INVALID, //  52  0x34
+        SHFT_INVALID, //  53  0x35
+        SHFT_INVALID, //  54  0x36
+        SHFT_INVALID, //  55  0x37
+        15,           //  56  0x38  KanaLock + OEM_AX + OEM_102
+        16,           //  57  0x39  KanaLock + Shift + OEM_AX + OEM_102
         SHFT_INVALID, //  58  0x3a
         SHFT_INVALID, //  59  0x3b
         SHFT_INVALID, //  60  0x3c
@@ -279,8 +281,184 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  69  0x45
         SHFT_INVALID, //  70  0x46
         SHFT_INVALID, //  71  0x47
-        17,           //  72  0x48  CAPITAL + KANA
-        18            //  73  0x49  Shift + CAPITAL + KANA
+        17,           //  72  0x48  KanaLock + CAPITAL
+        18,           //  73  0x49  KanaLock + Shift + CAPITAL
+        SHFT_INVALID, //  74  0x4a
+        SHFT_INVALID, //  75  0x4b
+        SHFT_INVALID, //  76  0x4c
+        SHFT_INVALID, //  77  0x4d
+        SHFT_INVALID, //  78  0x4e
+        SHFT_INVALID, //  79  0x4f
+        17,           //  80  0x50  OEM_AX + CAPITAL
+        18,           //  81  0x51  Shift + OEM_AX + CAPITAL
+        SHFT_INVALID, //  82  0x52
+        SHFT_INVALID, //  83  0x53
+        SHFT_INVALID, //  84  0x54
+        SHFT_INVALID, //  85  0x55
+        SHFT_INVALID, //  86  0x56
+        SHFT_INVALID, //  87  0x57
+        17,           //  88  0x58  KanaLock + OEM_AX + CAPITAL
+        18,           //  89  0x59  KanaLock + Shift + OEM_AX + CAPITAL
+        SHFT_INVALID, //  90  0x5a
+        SHFT_INVALID, //  91  0x5b
+        SHFT_INVALID, //  92  0x5c
+        SHFT_INVALID, //  93  0x5d
+        SHFT_INVALID, //  94  0x5e
+        SHFT_INVALID, //  95  0x5f
+        17,           //  96  0x60  OEM_102 + CAPITAL
+        18,           //  97  0x61  Shift + OEM_102 + CAPITAL
+        SHFT_INVALID, //  98  0x62
+        SHFT_INVALID, //  99  0x63
+        SHFT_INVALID, // 100  0x64
+        SHFT_INVALID, // 101  0x65
+        SHFT_INVALID, // 102  0x66
+        SHFT_INVALID, // 103  0x67
+        17,           // 104  0x68  KanaLock + OEM_102 + CAPITAL
+        18,           // 105  0x69  KanaLock + Shift + OEM_102 + CAPITAL
+        SHFT_INVALID, // 106  0x6a
+        SHFT_INVALID, // 107  0x6b
+        SHFT_INVALID, // 108  0x6c
+        SHFT_INVALID, // 109  0x6d
+        SHFT_INVALID, // 110  0x6e
+        SHFT_INVALID, // 111  0x6f
+        17,           // 112  0x70  OEM_AX + OEM_102 + CAPITAL
+        18,           // 113  0x71  Shift + OEM_AX + OEM_102 + CAPITAL
+        SHFT_INVALID, // 114  0x72
+        SHFT_INVALID, // 115  0x73
+        SHFT_INVALID, // 116  0x74
+        SHFT_INVALID, // 117  0x75
+        SHFT_INVALID, // 118  0x76
+        SHFT_INVALID, // 119  0x77
+        17,           // 120  0x78  KanaLock + OEM_AX + OEM_102 + CAPITAL
+        18,           // 121  0x79  KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
+        SHFT_INVALID, // 122  0x7a
+        SHFT_INVALID, // 123  0x7b
+        SHFT_INVALID, // 124  0x7c
+        SHFT_INVALID, // 125  0x7d
+        SHFT_INVALID, // 126  0x7e
+        SHFT_INVALID, // 127  0x7f
+        17,           // 128  0x80  KANA
+        18,           // 129  0x81  Shift + KANA
+        SHFT_INVALID, // 130  0x82
+        SHFT_INVALID, // 131  0x83
+        SHFT_INVALID, // 132  0x84
+        SHFT_INVALID, // 133  0x85
+        SHFT_INVALID, // 134  0x86
+        SHFT_INVALID, // 135  0x87
+        17,           // 136  0x88  KanaLock + KANA
+        18,           // 137  0x89  KanaLock + Shift + KANA
+        SHFT_INVALID, // 138  0x8a
+        SHFT_INVALID, // 139  0x8b
+        SHFT_INVALID, // 140  0x8c
+        SHFT_INVALID, // 141  0x8d
+        SHFT_INVALID, // 142  0x8e
+        SHFT_INVALID, // 143  0x8f
+        2,            // 144  0x90  OEM_AX + KANA
+        3,            // 145  0x91  Shift + OEM_AX + KANA
+        SHFT_INVALID, // 146  0x92
+        SHFT_INVALID, // 147  0x93
+        SHFT_INVALID, // 148  0x94
+        SHFT_INVALID, // 149  0x95
+        SHFT_INVALID, // 150  0x96
+        SHFT_INVALID, // 151  0x97
+        11,           // 152  0x98  KanaLock + OEM_AX + KANA
+        12,           // 153  0x99  KanaLock + Shift + OEM_AX + KANA
+        SHFT_INVALID, // 154  0x9a
+        SHFT_INVALID, // 155  0x9b
+        SHFT_INVALID, // 156  0x9c
+        SHFT_INVALID, // 157  0x9d
+        SHFT_INVALID, // 158  0x9e
+        SHFT_INVALID, // 159  0x9f
+        4,            // 160  0xa0  OEM_102 + KANA
+        5,            // 161  0xa1  Shift + OEM_102 + KANA
+        SHFT_INVALID, // 162  0xa2
+        SHFT_INVALID, // 163  0xa3
+        SHFT_INVALID, // 164  0xa4
+        SHFT_INVALID, // 165  0xa5
+        SHFT_INVALID, // 166  0xa6
+        SHFT_INVALID, // 167  0xa7
+        13,           // 168  0xa8  KanaLock + OEM_102 + KANA
+        14,           // 169  0xa9  KanaLock + Shift + OEM_102 + KANA
+        SHFT_INVALID, // 170  0xaa
+        SHFT_INVALID, // 171  0xab
+        SHFT_INVALID, // 172  0xac
+        SHFT_INVALID, // 173  0xad
+        SHFT_INVALID, // 174  0xae
+        SHFT_INVALID, // 175  0xaf
+        6,            // 176  0xb0  OEM_AX + OEM_102 + KANA
+        7,            // 177  0xb1  Shift + OEM_AX + OEM_102 + KANA
+        SHFT_INVALID, // 178  0xb2
+        SHFT_INVALID, // 179  0xb3
+        SHFT_INVALID, // 180  0xb4
+        SHFT_INVALID, // 181  0xb5
+        SHFT_INVALID, // 182  0xb6
+        SHFT_INVALID, // 183  0xb7
+        15,           // 184  0xb8  KanaLock + OEM_AX + OEM_102 + KANA
+        16,           // 185  0xb9  KanaLock + Shift + OEM_AX + OEM_102 + KANA
+        SHFT_INVALID, // 186  0xba
+        SHFT_INVALID, // 187  0xbb
+        SHFT_INVALID, // 188  0xbc
+        SHFT_INVALID, // 189  0xbd
+        SHFT_INVALID, // 190  0xbe
+        SHFT_INVALID, // 191  0xbf
+        17,           // 192  0xc0  CAPITAL + KANA
+        18,           // 193  0xc1  Shift + CAPITAL + KANA
+        SHFT_INVALID, // 194  0xc2
+        SHFT_INVALID, // 195  0xc3
+        SHFT_INVALID, // 196  0xc4
+        SHFT_INVALID, // 197  0xc5
+        SHFT_INVALID, // 198  0xc6
+        SHFT_INVALID, // 199  0xc7
+        17,           // 200  0xc8  KanaLock + CAPITAL + KANA
+        18,           // 201  0xc9  KanaLock + Shift + CAPITAL + KANA
+        SHFT_INVALID, // 202  0xca
+        SHFT_INVALID, // 203  0xcb
+        SHFT_INVALID, // 204  0xcc
+        SHFT_INVALID, // 205  0xcd
+        SHFT_INVALID, // 206  0xce
+        SHFT_INVALID, // 207  0xcf
+        17,           // 208  0xd0  OEM_AX + CAPITAL + KANA
+        18,           // 209  0xd1  Shift + OEM_AX + CAPITAL + KANA
+        SHFT_INVALID, // 210  0xd2
+        SHFT_INVALID, // 211  0xd3
+        SHFT_INVALID, // 212  0xd4
+        SHFT_INVALID, // 213  0xd5
+        SHFT_INVALID, // 214  0xd6
+        SHFT_INVALID, // 215  0xd7
+        17,           // 216  0xd8  KanaLock + OEM_AX + CAPITAL + KANA
+        18,           // 217  0xd9  KanaLock + Shift + OEM_AX + CAPITAL + KANA
+        SHFT_INVALID, // 218  0xda
+        SHFT_INVALID, // 219  0xdb
+        SHFT_INVALID, // 220  0xdc
+        SHFT_INVALID, // 221  0xdd
+        SHFT_INVALID, // 222  0xde
+        SHFT_INVALID, // 223  0xdf
+        17,           // 224  0xe0  OEM_102 + CAPITAL + KANA
+        18,           // 225  0xe1  Shift + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 226  0xe2
+        SHFT_INVALID, // 227  0xe3
+        SHFT_INVALID, // 228  0xe4
+        SHFT_INVALID, // 229  0xe5
+        SHFT_INVALID, // 230  0xe6
+        SHFT_INVALID, // 231  0xe7
+        17,           // 232  0xe8  KanaLock + OEM_102 + CAPITAL + KANA
+        18,           // 233  0xe9  KanaLock + Shift + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 234  0xea
+        SHFT_INVALID, // 235  0xeb
+        SHFT_INVALID, // 236  0xec
+        SHFT_INVALID, // 237  0xed
+        SHFT_INVALID, // 238  0xee
+        SHFT_INVALID, // 239  0xef
+        17,           // 240  0xf0  OEM_AX + OEM_102 + CAPITAL + KANA
+        18,           // 241  0xf1  Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 242  0xf2
+        SHFT_INVALID, // 243  0xf3
+        SHFT_INVALID, // 244  0xf4
+        SHFT_INVALID, // 245  0xf5
+        SHFT_INVALID, // 246  0xf6
+        SHFT_INVALID, // 247  0xf7
+        17,           // 248  0xf8  KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
+        18,           // 249  0xf9  KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
      }
 };
 
@@ -377,16 +555,16 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
 * Known bugs
 *
 * The level 7 (AltGr + AltFr i.e. VK_OEM_AX + VK_OEM_102) does not work when
-* KANA is on, if the key is subject to KANA. To work around this issue, the
-* level 7 with KANA should be redundant.
+* KanaLock is on, if the key is subject to KanaLock. To work around this issue,
+* the level 7 with KanaLock should be redundant.
 *
 * The level 10 (Shift + CAPITAL, where CAPITAL is the modifier added on top
 * of the Caps Lock toggle key) does not work on column 02, i.e. keys "2",
 * "W", "S", "X" of the US-QWERTY. To work around this issue, mappings on
 * these keys are replicated on unused keys.
-\*****************************************************************************/                                                                                               // This column                  This does not
+\*****************************************************************************/                                                                                             // This column                  This does not
                                                                                                                                                                             // does not work.               work on keys
-static ALLOC_SECTION_LDATA VK_TO_WCHARS19 aVkToWch19[] = {                                                                                                                  //|||||||||||                   (B..E)02. 
+static ALLOC_SECTION_LDATA VK_TO_WCHARS19 aVkToWch19[] = {                                                                                                                  //|||||||||||                   (B..E)02.
 //                      |         |  Shift  |  AltGr  | S+AltGr |  AltFr  | S+AltFr |AltGr+Fr | S+Gr+Fr |  Ctrl   |  Kana   |Shft+Kana| AltGr+K |S+AltGr+K| AltFr+K |S+AltFr+K|AlGr+Fr+K|S+Gr+Fr+K| CAPITAL |S+CAPITAL|
 //                      |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
   {VK_OEM_102   ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -834,10 +1012,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_abovedot>*/	DEADTRANS(	L';'	,0x1E57	,0x2A30	,0x0000	), // "⨰" MULTIPLICATION SIGN WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	L'/'	,0x1E57	,0xA718	,0x0000	), // "ꜘ" MODIFIER LETTER DOT SLASH
 /*<!dead_abovedot>*/	DEADTRANS(	L'_'	,0x1E57	,0xA719	,0x0000	), // "ꜙ" MODIFIER LETTER DOT HORIZONTAL BAR
-/*<!dead_abovedot>*/	DEADTRANS(	0x00A0	,0x1E57	,0x02D9	,0x0000	), // "˙" DOT ABOVE
-/*<!dead_abovedot>*/	DEADTRANS(	0x202F	,0x1E57	,0x02D9	,0x0000	), // "˙" DOT ABOVE
-/*<!dead_abovedot>*/	DEADTRANS(	L' '	,0x1E57	,0x0307	,0x0000	), // "̇" COMBINING DOT ABOVE
-/*<!dead_abovedot>*/	DEADTRANS(	0x200B	,0x1E57	,0x0307	,0x0000	), // "̇" COMBINING DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	L'0'	,0x1E57	,0x267C	,0x0000	), // "♼" RECYCLED PAPER SYMBOL
 /*<!dead_abovedot>*/	DEADTRANS(	L'1'	,0x1E57	,0x1DFA	,0x0000	), // "᷺" COMBINING DOT BELOW LEFT
 /*<!dead_abovedot>*/	DEADTRANS(	L'2'	,0x1E57	,0x267D	,0x0000	), // "♽" PARTIALLY-RECYCLED PAPER SYMBOL
@@ -866,8 +1040,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_abovedot>*/	DEADTRANS(	L'h'	,0x1E57	,0x1E23	,0x0000	), // "ḣ" LATIN SMALL LETTER H WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	L'I'	,0x1E57	,0x0130	,0x0000	), // "İ" LATIN CAPITAL LETTER I WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	L'i'	,0x1E57	,0x0131	,0x0000	), // "ı" LATIN SMALL LETTER DOTLESS I
-/*<!dead_abovedot>*/	DEADTRANS(	L'j'	,0x1E57	,0x0237	,0x0000	), // "ȷ" LATIN SMALL LETTER DOTLESS J
 /*<!dead_abovedot>*/	DEADTRANS(	L'J'	,0x1E57	,0x0237	,0x0000	), // "ȷ" LATIN SMALL LETTER DOTLESS J
+/*<!dead_abovedot>*/	DEADTRANS(	L'j'	,0x1E57	,0x0237	,0x0000	), // "ȷ" LATIN SMALL LETTER DOTLESS J
 /*<!dead_abovedot>*/	DEADTRANS(	L'L'	,0x1E57	,0x013F	,0x0000	), // "Ŀ" LATIN CAPITAL LETTER L WITH MIDDLE DOT
 /*<!dead_abovedot>*/	DEADTRANS(	L'l'	,0x1E57	,0x0140	,0x0000	), // "ŀ" LATIN SMALL LETTER L WITH MIDDLE DOT
 /*<!dead_abovedot>*/	DEADTRANS(	L'M'	,0x1E57	,0x1E40	,0x0000	), // "Ṁ" LATIN CAPITAL LETTER M WITH DOT ABOVE
@@ -893,11 +1067,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_abovedot>*/	DEADTRANS(	L'y'	,0x1E57	,0x1E8F	,0x0000	), // "ẏ" LATIN SMALL LETTER Y WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	L'Z'	,0x1E57	,0x017B	,0x0000	), // "Ż" LATIN CAPITAL LETTER Z WITH DOT ABOVE
 /*<!dead_abovedot>*/	DEADTRANS(	L'z'	,0x1E57	,0x017C	,0x0000	), // "ż" LATIN SMALL LETTER Z WITH DOT ABOVE
+/*<!dead_abovedot>*/	DEADTRANS(	0x00A0	,0x1E57	,0x02D9	,0x0000	), // "˙" DOT ABOVE
+/*<!dead_abovedot>*/	DEADTRANS(	0x202F	,0x1E57	,0x02D9	,0x0000	), // "˙" DOT ABOVE
+/*<!dead_abovedot>*/	DEADTRANS(	L' '	,0x1E57	,0x0307	,0x0000	), // "̇" COMBINING DOT ABOVE
+/*<!dead_abovedot>*/	DEADTRANS(	0x200B	,0x1E57	,0x0307	,0x0000	), // "̇" COMBINING DOT ABOVE
 /*<!dead_abovehook>*/	DEADTRANS(	0x01EB	,0x1EBB	,0x20E3	,0x0000	), // "⃣" COMBINING ENCLOSING KEYCAP
-/*<!dead_abovehook>*/	DEADTRANS(	0x00A0	,0x1EBB	,0x02BE	,0x0000	), // "ʾ" MODIFIER LETTER RIGHT HALF RING
-/*<!dead_abovehook>*/	DEADTRANS(	0x202F	,0x1EBB	,0x02BF	,0x0000	), // "ʿ" MODIFIER LETTER LEFT HALF RING
-/*<!dead_abovehook>*/	DEADTRANS(	L' '	,0x1EBB	,0x0309	,0x0000	), // "̉" COMBINING HOOK ABOVE
-/*<!dead_abovehook>*/	DEADTRANS(	0x200B	,0x1EBB	,0x0309	,0x0000	), // "̉" COMBINING HOOK ABOVE
 /*<!dead_abovehook>*/	DEADTRANS(	L'0'	,0x1EBB	,0x2793	,0x0000	), // "➓" DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
 /*<!dead_abovehook>*/	DEADTRANS(	L'1'	,0x1EBB	,0x278A	,0x0000	), // "➊" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
 /*<!dead_abovehook>*/	DEADTRANS(	L'2'	,0x1EBB	,0x278B	,0x0000	), // "➋" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
@@ -920,16 +1094,16 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_abovehook>*/	DEADTRANS(	L'u'	,0x1EBB	,0x1EE7	,0x0000	), // "ủ" LATIN SMALL LETTER U WITH HOOK ABOVE
 /*<!dead_abovehook>*/	DEADTRANS(	L'Y'	,0x1EBB	,0x1EF6	,0x0000	), // "Ỷ" LATIN CAPITAL LETTER Y WITH HOOK ABOVE
 /*<!dead_abovehook>*/	DEADTRANS(	L'y'	,0x1EBB	,0x1EF7	,0x0000	), // "ỷ" LATIN SMALL LETTER Y WITH HOOK ABOVE
+/*<!dead_abovehook>*/	DEADTRANS(	0x00A0	,0x1EBB	,0x02BE	,0x0000	), // "ʾ" MODIFIER LETTER RIGHT HALF RING
+/*<!dead_abovehook>*/	DEADTRANS(	0x202F	,0x1EBB	,0x02BF	,0x0000	), // "ʿ" MODIFIER LETTER LEFT HALF RING
+/*<!dead_abovehook>*/	DEADTRANS(	L' '	,0x1EBB	,0x0309	,0x0000	), // "̉" COMBINING HOOK ABOVE
+/*<!dead_abovehook>*/	DEADTRANS(	0x200B	,0x1EBB	,0x0309	,0x0000	), // "̉" COMBINING HOOK ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'|'	,0x00E5	,0x2AEF	,0x0000	), // "⫯" VERTICAL LINE WITH CIRCLE ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'}'	,0x00E5	,0x29B2	,0x0000	), // "⦲" EMPTY SET WITH SMALL CIRCLE ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'('	,0x00E5	,0x0351	,0x0000	), // "͑" COMBINING LEFT HALF RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L')'	,0x00E5	,0x0357	,0x0000	), // "͗" COMBINING RIGHT HALF RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'.'	,0x00E5	,0x2E30	,0x0000	), // "⸰" RING POINT
 /*<!dead_abovering>*/	DEADTRANS(	L'+'	,0x00E5	,0x2A22	,0x0000	), // "⨢" PLUS SIGN WITH SMALL CIRCLE ABOVE
-/*<!dead_abovering>*/	DEADTRANS(	0x00A0	,0x00E5	,0x02DA	,0x0000	), // "˚" RING ABOVE
-/*<!dead_abovering>*/	DEADTRANS(	0x202F	,0x00E5	,0x02DA	,0x0000	), // "˚" RING ABOVE
-/*<!dead_abovering>*/	DEADTRANS(	L' '	,0x00E5	,0x030A	,0x0000	), // "̊" COMBINING RING ABOVE
-/*<!dead_abovering>*/	DEADTRANS(	0x200B	,0x00E5	,0x030A	,0x0000	), // "̊" COMBINING RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'0'	,0x00E5	,0x00B0	,0x0000	), // "°" DEGREE SIGN
 /*<!dead_abovering>*/	DEADTRANS(	L'1'	,0x00E5	,0x204E	,0x0000	), // "⁎" LOW ASTERISK
 /*<!dead_abovering>*/	DEADTRANS(	L'2'	,0x00E5	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
@@ -942,34 +1116,34 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_abovering>*/	DEADTRANS(	L'9'	,0x00E5	,0x02BE	,0x0000	), // "ʾ" MODIFIER LETTER RIGHT HALF RING
 /*<!dead_abovering>*/	DEADTRANS(	L'A'	,0x00E5	,0x00C5	,0x0000	), // "Å" LATIN CAPITAL LETTER A WITH RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'a'	,0x00E5	,0x00E5	,0x0000	), // "å" LATIN SMALL LETTER A WITH RING ABOVE
-/*<!dead_abovering>*/	DEADTRANS(	L'c'	,0x00E5	,0x2103	,0x0000	), // "℃" DEGREE CELSIUS
 /*<!dead_abovering>*/	DEADTRANS(	L'C'	,0x00E5	,0x2103	,0x0000	), // "℃" DEGREE CELSIUS
-/*<!dead_abovering>*/	DEADTRANS(	L'f'	,0x00E5	,0x2109	,0x0000	), // "℉" DEGREE FAHRENHEIT
+/*<!dead_abovering>*/	DEADTRANS(	L'c'	,0x00E5	,0x2103	,0x0000	), // "℃" DEGREE CELSIUS
 /*<!dead_abovering>*/	DEADTRANS(	L'F'	,0x00E5	,0x2109	,0x0000	), // "℉" DEGREE FAHRENHEIT
-/*<!dead_abovering>*/	DEADTRANS(	L'k'	,0x00E5	,0x212A	,0x0000	), // "K" KELVIN SIGN
+/*<!dead_abovering>*/	DEADTRANS(	L'f'	,0x00E5	,0x2109	,0x0000	), // "℉" DEGREE FAHRENHEIT
 /*<!dead_abovering>*/	DEADTRANS(	L'K'	,0x00E5	,0x212A	,0x0000	), // "K" KELVIN SIGN
+/*<!dead_abovering>*/	DEADTRANS(	L'k'	,0x00E5	,0x212A	,0x0000	), // "K" KELVIN SIGN
 /*<!dead_abovering>*/	DEADTRANS(	L'l'	,0x00E5	,0xAB39	,0x0000	), // "ꬹ" LATIN SMALL LETTER L WITH MIDDLE RING
 /*<!dead_abovering>*/	DEADTRANS(	L'o'	,0x00E5	,0x2C7A	,0x0000	), // "ⱺ" LATIN SMALL LETTER O WITH LOW RING INSIDE
 /*<!dead_abovering>*/	DEADTRANS(	L'q'	,0x00E5	,0xAB54	,0x0000	), // "ꭔ" LATIN SMALL LETTER CHI WITH LOW RIGHT RING
 /*<!dead_abovering>*/	DEADTRANS(	L'r'	,0x00E5	,0xAB4C	,0x0000	), // "ꭌ" LATIN SMALL LETTER SCRIPT R WITH RING
-/*<!dead_abovering>*/	DEADTRANS(	L't'	,0x00E5	,0x27DF	,0x0000	), // "⟟" UP TACK WITH CIRCLE ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'T'	,0x00E5	,0x27DF	,0x0000	), // "⟟" UP TACK WITH CIRCLE ABOVE
+/*<!dead_abovering>*/	DEADTRANS(	L't'	,0x00E5	,0x27DF	,0x0000	), // "⟟" UP TACK WITH CIRCLE ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'U'	,0x00E5	,0x016E	,0x0000	), // "Ů" LATIN CAPITAL LETTER U WITH RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'u'	,0x00E5	,0x016F	,0x0000	), // "ů" LATIN SMALL LETTER U WITH RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'w'	,0x00E5	,0x1E98	,0x0000	), // "ẘ" LATIN SMALL LETTER W WITH RING ABOVE
 /*<!dead_abovering>*/	DEADTRANS(	L'x'	,0x00E5	,0xAB56	,0x0000	), // "ꭖ" LATIN SMALL LETTER X WITH LOW RIGHT RING
 /*<!dead_abovering>*/	DEADTRANS(	L'X'	,0x00E5	,0xAB58	,0x0000	), // "ꭘ" LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
 /*<!dead_abovering>*/	DEADTRANS(	L'y'	,0x00E5	,0x1E99	,0x0000	), // "ẙ" LATIN SMALL LETTER Y WITH RING ABOVE
+/*<!dead_abovering>*/	DEADTRANS(	0x00A0	,0x00E5	,0x02DA	,0x0000	), // "˚" RING ABOVE
+/*<!dead_abovering>*/	DEADTRANS(	0x202F	,0x00E5	,0x02DA	,0x0000	), // "˚" RING ABOVE
+/*<!dead_abovering>*/	DEADTRANS(	L' '	,0x00E5	,0x030A	,0x0000	), // "̊" COMBINING RING ABOVE
+/*<!dead_abovering>*/	DEADTRANS(	0x200B	,0x00E5	,0x030A	,0x0000	), // "̊" COMBINING RING ABOVE
 /*<!dead_acute>*/	DEADTRANS(	L'&'	,0x00E1	,0x0317	,0x0000	), // "̗" COMBINING ACUTE ACCENT BELOW
 /*<!dead_acute>*/	DEADTRANS(	L'\''	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!dead_acute>*/	DEADTRANS(	0x2019	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!dead_acute>*/	DEADTRANS(	L'"'	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!dead_acute>*/	DEADTRANS(	0x20AC	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!dead_acute>*/	DEADTRANS(	L'_'	,0x00E1	,0x02CF	,0x0000	), // "ˏ" MODIFIER LETTER LOW ACUTE ACCENT
-/*<!dead_acute>*/	DEADTRANS(	0x00A0	,0x00E1	,0x00B4	,0x0000	), // "´" ACUTE ACCENT
-/*<!dead_acute>*/	DEADTRANS(	0x202F	,0x00E1	,0x02CA	,0x0000	), // "ˊ" MODIFIER LETTER ACUTE ACCENT
-/*<!dead_acute>*/	DEADTRANS(	L' '	,0x00E1	,0x0301	,0x0000	), // "́" COMBINING ACUTE ACCENT
-/*<!dead_acute>*/	DEADTRANS(	0x200B	,0x00E1	,0x0301	,0x0000	), // "́" COMBINING ACUTE ACCENT
 /*<!dead_acute>*/	DEADTRANS(	L'1'	,0x00E1	,0x2032	,0x0000	), // "′" PRIME
 /*<!dead_acute>*/	DEADTRANS(	L'2'	,0x00E1	,0x2033	,0x0000	), // "″" DOUBLE PRIME
 /*<!dead_acute>*/	DEADTRANS(	L'3'	,0x00E1	,0x2034	,0x0000	), // "‴" TRIPLE PRIME
@@ -1014,13 +1188,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_acute>*/	DEADTRANS(	L'y'	,0x00E1	,0x00FD	,0x0000	), // "ý" LATIN SMALL LETTER Y WITH ACUTE
 /*<!dead_acute>*/	DEADTRANS(	L'Z'	,0x00E1	,0x0179	,0x0000	), // "Ź" LATIN CAPITAL LETTER Z WITH ACUTE
 /*<!dead_acute>*/	DEADTRANS(	L'z'	,0x00E1	,0x017A	,0x0000	), // "ź" LATIN SMALL LETTER Z WITH ACUTE
+/*<!dead_acute>*/	DEADTRANS(	0x00A0	,0x00E1	,0x00B4	,0x0000	), // "´" ACUTE ACCENT
+/*<!dead_acute>*/	DEADTRANS(	0x202F	,0x00E1	,0x02CA	,0x0000	), // "ˊ" MODIFIER LETTER ACUTE ACCENT
+/*<!dead_acute>*/	DEADTRANS(	L' '	,0x00E1	,0x0301	,0x0000	), // "́" COMBINING ACUTE ACCENT
+/*<!dead_acute>*/	DEADTRANS(	0x200B	,0x00E1	,0x0301	,0x0000	), // "́" COMBINING ACUTE ACCENT
 /*<!dead_bar>*/	DEADTRANS(	L'}'	,0x024D	,0x29B5	,0x0000	), // "⦵" CIRCLE WITH HORIZONTAL BAR
 /*<!dead_bar>*/	DEADTRANS(	L'['	,0x024D	,0x2045	,0x0000	), // "⁅" LEFT SQUARE BRACKET WITH QUILL
 /*<!dead_bar>*/	DEADTRANS(	L']'	,0x024D	,0x2046	,0x0000	), // "⁆" RIGHT SQUARE BRACKET WITH QUILL
-/*<!dead_bar>*/	DEADTRANS(	0x00A0	,0x024D	,0x02D7	,0x0000	), // "˗" MODIFIER LETTER MINUS SIGN
-/*<!dead_bar>*/	DEADTRANS(	0x202F	,0x024D	,0x02D7	,0x0000	), // "˗" MODIFIER LETTER MINUS SIGN
-/*<!dead_bar>*/	DEADTRANS(	L' '	,0x024D	,0x0335	,0x0000	), // "̵" COMBINING SHORT STROKE OVERLAY
-/*<!dead_bar>*/	DEADTRANS(	0x200B	,0x024D	,0x0335	,0x0000	), // "̵" COMBINING SHORT STROKE OVERLAY
 /*<!dead_bar>*/	DEADTRANS(	L'2'	,0x024D	,0x01BB	,0x0000	), // "ƻ" LATIN LETTER TWO WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'7'	,0x024D	,0x02A1	,0x0000	), // "ʡ" LATIN LETTER GLOTTAL STOP WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'A'	,0x024D	,0xA73A	,0x0000	), // "Ꜻ" LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
@@ -1050,8 +1224,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_bar>*/	DEADTRANS(	L'o'	,0x024D	,0x0275	,0x0000	), // "ɵ" LATIN SMALL LETTER BARRED O
 /*<!dead_bar>*/	DEADTRANS(	L'p'	,0x024D	,0x1D7D	,0x0000	), // "ᵽ" LATIN SMALL LETTER P WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'P'	,0x024D	,0x2C63	,0x0000	), // "Ᵽ" LATIN CAPITAL LETTER P WITH STROKE
-/*<!dead_bar>*/	DEADTRANS(	L'q'	,0x024D	,0x02A1	,0x0000	), // "ʡ" LATIN LETTER GLOTTAL STOP WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'Q'	,0x024D	,0x02A1	,0x0000	), // "ʡ" LATIN LETTER GLOTTAL STOP WITH STROKE
+/*<!dead_bar>*/	DEADTRANS(	L'q'	,0x024D	,0x02A1	,0x0000	), // "ʡ" LATIN LETTER GLOTTAL STOP WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'R'	,0x024D	,0x024C	,0x0000	), // "Ɍ" LATIN CAPITAL LETTER R WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'r'	,0x024D	,0x024D	,0x0000	), // "ɍ" LATIN SMALL LETTER R WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'S'	,0x024D	,0xA7C9	,0x0000	), // "Ꟊ" LATIN CAPITAL LETTER S WITH SHORT STROKE OVERLAY
@@ -1064,10 +1238,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_bar>*/	DEADTRANS(	L'y'	,0x024D	,0x024F	,0x0000	), // "ɏ" LATIN SMALL LETTER Y WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'Z'	,0x024D	,0x01B5	,0x0000	), // "Ƶ" LATIN CAPITAL LETTER Z WITH STROKE
 /*<!dead_bar>*/	DEADTRANS(	L'z'	,0x024D	,0x01B6	,0x0000	), // "ƶ" LATIN SMALL LETTER Z WITH STROKE
-/*<!dead_belowcomma>*/	DEADTRANS(	0x00A0	,0x0219	,0x2E34	,0x0000	), // "⸴" RAISED COMMA
-/*<!dead_belowcomma>*/	DEADTRANS(	0x202F	,0x0219	,0x2E34	,0x0000	), // "⸴" RAISED COMMA
-/*<!dead_belowcomma>*/	DEADTRANS(	L' '	,0x0219	,0x0326	,0x0000	), // "̦" COMBINING COMMA BELOW
-/*<!dead_belowcomma>*/	DEADTRANS(	0x200B	,0x0219	,0x0326	,0x0000	), // "̦" COMBINING COMMA BELOW
+/*<!dead_bar>*/	DEADTRANS(	0x00A0	,0x024D	,0x02D7	,0x0000	), // "˗" MODIFIER LETTER MINUS SIGN
+/*<!dead_bar>*/	DEADTRANS(	0x202F	,0x024D	,0x02D7	,0x0000	), // "˗" MODIFIER LETTER MINUS SIGN
+/*<!dead_bar>*/	DEADTRANS(	L' '	,0x024D	,0x0335	,0x0000	), // "̵" COMBINING SHORT STROKE OVERLAY
+/*<!dead_bar>*/	DEADTRANS(	0x200B	,0x024D	,0x0335	,0x0000	), // "̵" COMBINING SHORT STROKE OVERLAY
 /*<!dead_belowcomma>*/	DEADTRANS(	L'0'	,0x0219	,0x249B	,0x0000	), // "⒛" NUMBER TWENTY FULL STOP
 /*<!dead_belowcomma>*/	DEADTRANS(	L'1'	,0x0219	,0x2492	,0x0000	), // "⒒" NUMBER ELEVEN FULL STOP
 /*<!dead_belowcomma>*/	DEADTRANS(	L'2'	,0x0219	,0x2493	,0x0000	), // "⒓" NUMBER TWELVE FULL STOP
@@ -1090,14 +1264,14 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_belowcomma>*/	DEADTRANS(	L't'	,0x0219	,0x021B	,0x0000	), // "ț" LATIN SMALL LETTER T WITH COMMA BELOW
 /*<!dead_belowcomma>*/	DEADTRANS(	L'U'	,0x0219	,0xA7BE	,0x0000	), // "Ꞿ" LATIN CAPITAL LETTER GLOTTAL U
 /*<!dead_belowcomma>*/	DEADTRANS(	L'u'	,0x0219	,0xA7BF	,0x0000	), // "ꞿ" LATIN SMALL LETTER GLOTTAL U
+/*<!dead_belowcomma>*/	DEADTRANS(	0x00A0	,0x0219	,0x2E34	,0x0000	), // "⸴" RAISED COMMA
+/*<!dead_belowcomma>*/	DEADTRANS(	0x202F	,0x0219	,0x2E34	,0x0000	), // "⸴" RAISED COMMA
+/*<!dead_belowcomma>*/	DEADTRANS(	L' '	,0x0219	,0x0326	,0x0000	), // "̦" COMBINING COMMA BELOW
+/*<!dead_belowcomma>*/	DEADTRANS(	0x200B	,0x0219	,0x0326	,0x0000	), // "̦" COMBINING COMMA BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'='	,0x1E05	,0x2A66	,0x0000	), // "⩦" EQUALS SIGN WITH DOT BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'-'	,0x1E05	,0x2A2A	,0x0000	), // "⨪" MINUS SIGN WITH DOT BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'+'	,0x1E05	,0x2A25	,0x0000	), // "⨥" PLUS SIGN WITH DOT BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'_'	,0x1E05	,0x20E8	,0x0000	), // "⃨" COMBINING TRIPLE UNDERDOT
-/*<!dead_belowdot>*/	DEADTRANS(	0x00A0	,0x1E05	,0x2E33	,0x0000	), // "⸳" RAISED DOT
-/*<!dead_belowdot>*/	DEADTRANS(	0x202F	,0x1E05	,0x2E33	,0x0000	), // "⸳" RAISED DOT
-/*<!dead_belowdot>*/	DEADTRANS(	L' '	,0x1E05	,0x0323	,0x0000	), // "̣" COMBINING DOT BELOW
-/*<!dead_belowdot>*/	DEADTRANS(	0x200B	,0x1E05	,0x0323	,0x0000	), // "̣" COMBINING DOT BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'0'	,0x1E05	,0x2E2A	,0x0000	), // "⸪" TWO DOTS OVER ONE DOT PUNCTUATION
 /*<!dead_belowdot>*/	DEADTRANS(	L'1'	,0x1E05	,0x2E2B	,0x0000	), // "⸫" ONE DOT OVER TWO DOTS PUNCTUATION
 /*<!dead_belowdot>*/	DEADTRANS(	L'2'	,0x1E05	,0x205A	,0x0000	), // "⁚" TWO DOT PUNCTUATION
@@ -1146,17 +1320,17 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_belowdot>*/	DEADTRANS(	L'y'	,0x1E05	,0x1EF5	,0x0000	), // "ỵ" LATIN SMALL LETTER Y WITH DOT BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'Z'	,0x1E05	,0x1E92	,0x0000	), // "Ẓ" LATIN CAPITAL LETTER Z WITH DOT BELOW
 /*<!dead_belowdot>*/	DEADTRANS(	L'z'	,0x1E05	,0x1E93	,0x0000	), // "ẓ" LATIN SMALL LETTER Z WITH DOT BELOW
+/*<!dead_belowdot>*/	DEADTRANS(	0x00A0	,0x1E05	,0x2E33	,0x0000	), // "⸳" RAISED DOT
+/*<!dead_belowdot>*/	DEADTRANS(	0x202F	,0x1E05	,0x2E33	,0x0000	), // "⸳" RAISED DOT
+/*<!dead_belowdot>*/	DEADTRANS(	L' '	,0x1E05	,0x0323	,0x0000	), // "̣" COMBINING DOT BELOW
+/*<!dead_belowdot>*/	DEADTRANS(	0x200B	,0x1E05	,0x0323	,0x0000	), // "̣" COMBINING DOT BELOW
 /*<!dead_breve>*/	DEADTRANS(	L'='	,0x0115	,0x035D	,0x0000	), // "͝" COMBINING DOUBLE BREVE
-/*<!dead_breve>*/	DEADTRANS(	0x00A0	,0x0115	,0x02D8	,0x0000	), // "˘" BREVE
-/*<!dead_breve>*/	DEADTRANS(	0x202F	,0x0115	,0x02D8	,0x0000	), // "˘" BREVE
-/*<!dead_breve>*/	DEADTRANS(	L' '	,0x0115	,0x0306	,0x0000	), // "̆" COMBINING BREVE
-/*<!dead_breve>*/	DEADTRANS(	0x200B	,0x0115	,0x0306	,0x0000	), // "̆" COMBINING BREVE
 /*<!dead_breve>*/	DEADTRANS(	L'A'	,0x0115	,0x0102	,0x0000	), // "Ă" LATIN CAPITAL LETTER A WITH BREVE
 /*<!dead_breve>*/	DEADTRANS(	L'a'	,0x0115	,0x0103	,0x0000	), // "ă" LATIN SMALL LETTER A WITH BREVE
 /*<!dead_breve>*/	DEADTRANS(	0x00C0	,0x0115	,0x1EB0	,0x0000	), // "Ằ" LATIN CAPITAL LETTER A WITH BREVE AND GRAVE
 /*<!dead_breve>*/	DEADTRANS(	0x00E0	,0x0115	,0x1EB1	,0x0000	), // "ằ" LATIN SMALL LETTER A WITH BREVE AND GRAVE
-/*<!dead_breve>*/	DEADTRANS(	L'c'	,0x0115	,0x02D2	,0x0000	), // "˒" MODIFIER LETTER CENTRED RIGHT HALF RING
 /*<!dead_breve>*/	DEADTRANS(	L'C'	,0x0115	,0x02D2	,0x0000	), // "˒" MODIFIER LETTER CENTRED RIGHT HALF RING
+/*<!dead_breve>*/	DEADTRANS(	L'c'	,0x0115	,0x02D2	,0x0000	), // "˒" MODIFIER LETTER CENTRED RIGHT HALF RING
 /*<!dead_breve>*/	DEADTRANS(	L'E'	,0x0115	,0x0114	,0x0000	), // "Ĕ" LATIN CAPITAL LETTER E WITH BREVE
 /*<!dead_breve>*/	DEADTRANS(	L'e'	,0x0115	,0x0115	,0x0000	), // "ĕ" LATIN SMALL LETTER E WITH BREVE
 /*<!dead_breve>*/	DEADTRANS(	0x2014	,0x0115	,0x035D	,0x0000	), // "͝" COMBINING DOUBLE BREVE
@@ -1171,11 +1345,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_breve>*/	DEADTRANS(	L'U'	,0x0115	,0x016C	,0x0000	), // "Ŭ" LATIN CAPITAL LETTER U WITH BREVE
 /*<!dead_breve>*/	DEADTRANS(	L'u'	,0x0115	,0x016D	,0x0000	), // "ŭ" LATIN SMALL LETTER U WITH BREVE
 /*<!dead_breve>*/	DEADTRANS(	L'y'	,0x0115	,0xAB5A	,0x0000	), // "ꭚ" LATIN SMALL LETTER Y WITH SHORT RIGHT LEG
+/*<!dead_breve>*/	DEADTRANS(	0x00A0	,0x0115	,0x02D8	,0x0000	), // "˘" BREVE
+/*<!dead_breve>*/	DEADTRANS(	0x202F	,0x0115	,0x02D8	,0x0000	), // "˘" BREVE
+/*<!dead_breve>*/	DEADTRANS(	L' '	,0x0115	,0x0306	,0x0000	), // "̆" COMBINING BREVE
+/*<!dead_breve>*/	DEADTRANS(	0x200B	,0x0115	,0x0306	,0x0000	), // "̆" COMBINING BREVE
 /*<!dead_caron>*/	DEADTRANS(	L'|'	,0x021F	,0x2E37	,0x0000	), // "⸷" DAGGER WITH RIGHT GUARD
-/*<!dead_caron>*/	DEADTRANS(	0x00A0	,0x021F	,0x02C7	,0x0000	), // "ˇ" CARON
-/*<!dead_caron>*/	DEADTRANS(	0x202F	,0x021F	,0x02C7	,0x0000	), // "ˇ" CARON
-/*<!dead_caron>*/	DEADTRANS(	L' '	,0x021F	,0x030C	,0x0000	), // "̌" COMBINING CARON
-/*<!dead_caron>*/	DEADTRANS(	0x200B	,0x021F	,0x030C	,0x0000	), // "̌" COMBINING CARON
 /*<!dead_caron>*/	DEADTRANS(	L'0'	,0x021F	,0x2080	,0x0000	), // "₀" SUBSCRIPT ZERO
 /*<!dead_caron>*/	DEADTRANS(	L'1'	,0x021F	,0x2081	,0x0000	), // "₁" SUBSCRIPT ONE
 /*<!dead_caron>*/	DEADTRANS(	L'2'	,0x021F	,0x2082	,0x0000	), // "₂" SUBSCRIPT TWO
@@ -1219,10 +1393,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_caron>*/	DEADTRANS(	L'u'	,0x021F	,0x01D4	,0x0000	), // "ǔ" LATIN SMALL LETTER U WITH CARON
 /*<!dead_caron>*/	DEADTRANS(	L'Z'	,0x021F	,0x017D	,0x0000	), // "Ž" LATIN CAPITAL LETTER Z WITH CARON
 /*<!dead_caron>*/	DEADTRANS(	L'z'	,0x021F	,0x017E	,0x0000	), // "ž" LATIN SMALL LETTER Z WITH CARON
-/*<!dead_cedilla>*/	DEADTRANS(	0x00A0	,0x00E7	,0x00B8	,0x0000	), // "¸" CEDILLA
-/*<!dead_cedilla>*/	DEADTRANS(	0x202F	,0x00E7	,0x00B8	,0x0000	), // "¸" CEDILLA
-/*<!dead_cedilla>*/	DEADTRANS(	L' '	,0x00E7	,0x0327	,0x0000	), // "̧" COMBINING CEDILLA
-/*<!dead_cedilla>*/	DEADTRANS(	0x200B	,0x00E7	,0x0327	,0x0000	), // "̧" COMBINING CEDILLA
+/*<!dead_caron>*/	DEADTRANS(	0x00A0	,0x021F	,0x02C7	,0x0000	), // "ˇ" CARON
+/*<!dead_caron>*/	DEADTRANS(	0x202F	,0x021F	,0x02C7	,0x0000	), // "ˇ" CARON
+/*<!dead_caron>*/	DEADTRANS(	L' '	,0x021F	,0x030C	,0x0000	), // "̌" COMBINING CARON
+/*<!dead_caron>*/	DEADTRANS(	0x200B	,0x021F	,0x030C	,0x0000	), // "̌" COMBINING CARON
 /*<!dead_cedilla>*/	DEADTRANS(	L'0'	,0x00E7	,0x2491	,0x0000	), // "⒑" NUMBER TEN FULL STOP
 /*<!dead_cedilla>*/	DEADTRANS(	L'1'	,0x00E7	,0x2488	,0x0000	), // "⒈" DIGIT ONE FULL STOP
 /*<!dead_cedilla>*/	DEADTRANS(	L'2'	,0x00E7	,0x2489	,0x0000	), // "⒉" DIGIT TWO FULL STOP
@@ -1255,6 +1429,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_cedilla>*/	DEADTRANS(	L's'	,0x00E7	,0x015F	,0x0000	), // "ş" LATIN SMALL LETTER S WITH CEDILLA
 /*<!dead_cedilla>*/	DEADTRANS(	L'T'	,0x00E7	,0x0162	,0x0000	), // "Ţ" LATIN CAPITAL LETTER T WITH CEDILLA
 /*<!dead_cedilla>*/	DEADTRANS(	L't'	,0x00E7	,0x0163	,0x0000	), // "ţ" LATIN SMALL LETTER T WITH CEDILLA
+/*<!dead_cedilla>*/	DEADTRANS(	0x00A0	,0x00E7	,0x00B8	,0x0000	), // "¸" CEDILLA
+/*<!dead_cedilla>*/	DEADTRANS(	0x202F	,0x00E7	,0x00B8	,0x0000	), // "¸" CEDILLA
+/*<!dead_cedilla>*/	DEADTRANS(	L' '	,0x00E7	,0x0327	,0x0000	), // "̧" COMBINING CEDILLA
+/*<!dead_cedilla>*/	DEADTRANS(	0x200B	,0x00E7	,0x0327	,0x0000	), // "̧" COMBINING CEDILLA
 /*<!dead_circumflex>*/	DEADTRANS(	L'\''	,0x00EA	,0x2018	,0x0000	), // "‘" LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!dead_circumflex>*/	DEADTRANS(	0x2019	,0x00EA	,0x2018	,0x0000	), // "‘" LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!dead_circumflex>*/	DEADTRANS(	L'~'	,0x00EA	,0x2A6F	,0x0000	), // "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
@@ -1266,10 +1444,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_circumflex>*/	DEADTRANS(	L'+'	,0x00EA	,0x2A23	,0x0000	), // "⨣" PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 /*<!dead_circumflex>*/	DEADTRANS(	L'"'	,0x00EA	,0x201C	,0x0000	), // "“" LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 /*<!dead_circumflex>*/	DEADTRANS(	0x20AC	,0x00EA	,0x201C	,0x0000	), // "“" LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
-/*<!dead_circumflex>*/	DEADTRANS(	0x00A0	,0x00EA	,0x005E	,0x0000	), // "^" CIRCUMFLEX ACCENT
-/*<!dead_circumflex>*/	DEADTRANS(	0x202F	,0x00EA	,0x02C6	,0x0000	), // "ˆ" MODIFIER LETTER CIRCUMFLEX ACCENT
-/*<!dead_circumflex>*/	DEADTRANS(	L' '	,0x00EA	,0x0302	,0x0000	), // "̂" COMBINING CIRCUMFLEX ACCENT
-/*<!dead_circumflex>*/	DEADTRANS(	0x200B	,0x00EA	,0x0302	,0x0000	), // "̂" COMBINING CIRCUMFLEX ACCENT
 /*<!dead_circumflex>*/	DEADTRANS(	L'0'	,0x00EA	,0x2070	,0x0000	), // "⁰" SUPERSCRIPT ZERO
 /*<!dead_circumflex>*/	DEADTRANS(	L'1'	,0x00EA	,0x00B9	,0x0000	), // "¹" SUPERSCRIPT ONE
 /*<!dead_circumflex>*/	DEADTRANS(	L'2'	,0x00EA	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO
@@ -1290,8 +1464,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_circumflex>*/	DEADTRANS(	L'c'	,0x00EA	,0x0109	,0x0000	), // "ĉ" LATIN SMALL LETTER C WITH CIRCUMFLEX
 /*<!dead_circumflex>*/	DEADTRANS(	0x00C7	,0x00EA	,0x00D1	,0x0000	), // "Ñ" LATIN CAPITAL LETTER N WITH TILDE
 /*<!dead_circumflex>*/	DEADTRANS(	0x00E7	,0x00EA	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE
-/*<!dead_circumflex>*/	DEADTRANS(	L'd'	,0x00EA	,0x1AB0	,0x0000	), // "᪰" COMBINING DOUBLED CIRCUMFLEX ACCENT
 /*<!dead_circumflex>*/	DEADTRANS(	L'D'	,0x00EA	,0x1AB0	,0x0000	), // "᪰" COMBINING DOUBLED CIRCUMFLEX ACCENT
+/*<!dead_circumflex>*/	DEADTRANS(	L'd'	,0x00EA	,0x1AB0	,0x0000	), // "᪰" COMBINING DOUBLED CIRCUMFLEX ACCENT
 /*<!dead_circumflex>*/	DEADTRANS(	L'E'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
 /*<!dead_circumflex>*/	DEADTRANS(	L'e'	,0x00EA	,0x00EA	,0x0000	), // "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX
 /*<!dead_circumflex>*/	DEADTRANS(	0x00C9	,0x00EA	,0x1EBE	,0x0000	), // "Ế" LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND ACUTE
@@ -1325,10 +1499,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_circumflex>*/	DEADTRANS(	L'y'	,0x00EA	,0x0177	,0x0000	), // "ŷ" LATIN SMALL LETTER Y WITH CIRCUMFLEX
 /*<!dead_circumflex>*/	DEADTRANS(	L'Z'	,0x00EA	,0x1E90	,0x0000	), // "Ẑ" LATIN CAPITAL LETTER Z WITH CIRCUMFLEX
 /*<!dead_circumflex>*/	DEADTRANS(	L'z'	,0x00EA	,0x1E91	,0x0000	), // "ẑ" LATIN SMALL LETTER Z WITH CIRCUMFLEX
-/*<!dead_currency>*/	DEADTRANS(	0x00A0	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
-/*<!dead_currency>*/	DEADTRANS(	0x202F	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
-/*<!dead_currency>*/	DEADTRANS(	L' '	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
-/*<!dead_currency>*/	DEADTRANS(	0x200B	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
+/*<!dead_circumflex>*/	DEADTRANS(	0x00A0	,0x00EA	,0x005E	,0x0000	), // "^" CIRCUMFLEX ACCENT
+/*<!dead_circumflex>*/	DEADTRANS(	0x202F	,0x00EA	,0x02C6	,0x0000	), // "ˆ" MODIFIER LETTER CIRCUMFLEX ACCENT
+/*<!dead_circumflex>*/	DEADTRANS(	L' '	,0x00EA	,0x0302	,0x0000	), // "̂" COMBINING CIRCUMFLEX ACCENT
+/*<!dead_circumflex>*/	DEADTRANS(	0x200B	,0x00EA	,0x0302	,0x0000	), // "̂" COMBINING CIRCUMFLEX ACCENT
 /*<!dead_currency>*/	DEADTRANS(	L'0'	,0x00A4	,0x2231	,0x0000	), // "∱" CLOCKWISE INTEGRAL
 /*<!dead_currency>*/	DEADTRANS(	L'1'	,0x00A4	,0x222B	,0x0000	), // "∫" INTEGRAL
 /*<!dead_currency>*/	DEADTRANS(	L'2'	,0x00A4	,0x222C	,0x0000	), // "∬" DOUBLE INTEGRAL
@@ -1345,30 +1519,30 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_currency>*/	DEADTRANS(	L'B'	,0x00A4	,0x20B1	,0x0000	), // "₱" PESO SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'c'	,0x00A4	,0x00A2	,0x0000	), // "¢" CENT SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'C'	,0x00A4	,0x20A1	,0x0000	), // "₡" COLON SIGN
-/*<!dead_currency>*/	DEADTRANS(	0x00E7	,0x00A4	,0x20B5	,0x0000	), // "₵" CEDI SIGN
 /*<!dead_currency>*/	DEADTRANS(	0x00C7	,0x00A4	,0x20B5	,0x0000	), // "₵" CEDI SIGN
+/*<!dead_currency>*/	DEADTRANS(	0x00E7	,0x00A4	,0x20B5	,0x0000	), // "₵" CEDI SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'd'	,0x00A4	,0x20AB	,0x0000	), // "₫" DONG SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'D'	,0x00A4	,0x20AF	,0x0000	), // "₯" DRACHMA SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'E'	,0x00A4	,0x20A0	,0x0000	), // "₠" EURO-CURRENCY SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'e'	,0x00A4	,0x20AC	,0x0000	), // "€" EURO SIGN
-/*<!dead_currency>*/	DEADTRANS(	L'F'	,0x00A4	,0x20A3	,0x0000	), // "₣" FRENCH FRANC SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'f'	,0x00A4	,0x0192	,0x0000	), // "ƒ" LATIN SMALL LETTER F WITH HOOK
-/*<!dead_currency>*/	DEADTRANS(	L'g'	,0x00A4	,0x20B2	,0x0000	), // "₲" GUARANI SIGN
+/*<!dead_currency>*/	DEADTRANS(	L'F'	,0x00A4	,0x20A3	,0x0000	), // "₣" FRENCH FRANC SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'G'	,0x00A4	,0x20B2	,0x0000	), // "₲" GUARANI SIGN
-/*<!dead_currency>*/	DEADTRANS(	L'h'	,0x00A4	,0x20B4	,0x0000	), // "₴" HRYVNIA SIGN
+/*<!dead_currency>*/	DEADTRANS(	L'g'	,0x00A4	,0x20B2	,0x0000	), // "₲" GUARANI SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'H'	,0x00A4	,0x20B4	,0x0000	), // "₴" HRYVNIA SIGN
+/*<!dead_currency>*/	DEADTRANS(	L'h'	,0x00A4	,0x20B4	,0x0000	), // "₴" HRYVNIA SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'I'	,0x00A4	,0x17DB	,0x0000	), // "៛" KHMER CURRENCY SYMBOL RIEL
 /*<!dead_currency>*/	DEADTRANS(	L'i'	,0x00A4	,0xFDFC	,0x0000	), // "﷼" RIAL SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'J'	,0x00A4	,0x09F2	,0x0000	), // "৲" BENGALI RUPEE MARK
 /*<!dead_currency>*/	DEADTRANS(	L'j'	,0x00A4	,0x20B9	,0x0000	), // "₹" INDIAN RUPEE SIGN
-/*<!dead_currency>*/	DEADTRANS(	L'k'	,0x00A4	,0x20AD	,0x0000	), // "₭" KIP SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'K'	,0x00A4	,0x20AD	,0x0000	), // "₭" KIP SIGN
+/*<!dead_currency>*/	DEADTRANS(	L'k'	,0x00A4	,0x20AD	,0x0000	), // "₭" KIP SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'l'	,0x00A4	,0x00A3	,0x0000	), // "£" POUND SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'L'	,0x00A4	,0x20A4	,0x0000	), // "₤" LIRA SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'm'	,0x00A4	,0x20A5	,0x0000	), // "₥" MILL SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'M'	,0x00A4	,0x2133	,0x0000	), // "ℳ" SCRIPT CAPITAL M
-/*<!dead_currency>*/	DEADTRANS(	L'n'	,0x00A4	,0x20A6	,0x0000	), // "₦" NAIRA SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'N'	,0x00A4	,0x20A6	,0x0000	), // "₦" NAIRA SIGN
+/*<!dead_currency>*/	DEADTRANS(	L'n'	,0x00A4	,0x20A6	,0x0000	), // "₦" NAIRA SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'O'	,0x00A4	,0x0AF1	,0x0000	), // "૱" GUJARATI RUPEE SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'o'	,0x00A4	,0x0BF9	,0x0000	), // "௹" TAMIL RUPEE SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'P'	,0x00A4	,0x20A7	,0x0000	), // "₧" PESETA SIGN
@@ -1385,14 +1559,18 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_currency>*/	DEADTRANS(	L'U'	,0x00A4	,0x5713	,0x0000	), // "圓" YUAN / WEN
 /*<!dead_currency>*/	DEADTRANS(	L'V'	,0x00A4	,0x20BA	,0x0000	), // "₺" TURKISH LIRA SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'v'	,0x00A4	,0x20BE	,0x0000	), // "₾" LARI SIGN
-/*<!dead_currency>*/	DEADTRANS(	L'w'	,0x00A4	,0x20A9	,0x0000	), // "₩" WON SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'W'	,0x00A4	,0x20A9	,0x0000	), // "₩" WON SIGN
+/*<!dead_currency>*/	DEADTRANS(	L'w'	,0x00A4	,0x20A9	,0x0000	), // "₩" WON SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'X'	,0x00A4	,0x20B8	,0x0000	), // "₸" TENGE SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'x'	,0x00A4	,0x20BC	,0x0000	), // "₼" MANAT SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'y'	,0x00A4	,0x00A5	,0x0000	), // "¥" YEN SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'Y'	,0x00A4	,0x5186	,0x0000	), // "円" YEN
 /*<!dead_currency>*/	DEADTRANS(	L'z'	,0x00A4	,0x20B7	,0x0000	), // "₷" SPESMILO SIGN
 /*<!dead_currency>*/	DEADTRANS(	L'Z'	,0x00A4	,0x20BD	,0x0000	), // "₽" RUBLE SIGN
+/*<!dead_currency>*/	DEADTRANS(	0x00A0	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
+/*<!dead_currency>*/	DEADTRANS(	0x202F	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
+/*<!dead_currency>*/	DEADTRANS(	L' '	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
+/*<!dead_currency>*/	DEADTRANS(	0x200B	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
 /*<!dead_diaeresis>*/	DEADTRANS(	L'\''	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!dead_diaeresis>*/	DEADTRANS(	0x2019	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!dead_diaeresis>*/	DEADTRANS(	L'*'	,0x00EB	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
@@ -1400,10 +1578,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_diaeresis>*/	DEADTRANS(	L'"'	,0x00EB	,0x201E	,0x0000	), // "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!dead_diaeresis>*/	DEADTRANS(	0x20AC	,0x00EB	,0x201E	,0x0000	), // "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!dead_diaeresis>*/	DEADTRANS(	L'/'	,0x00EB	,0x2016	,0x0000	), // "‖" DOUBLE VERTICAL LINE
-/*<!dead_diaeresis>*/	DEADTRANS(	0x00A0	,0x00EB	,0x00A8	,0x0000	), // "¨" DIAERESIS
-/*<!dead_diaeresis>*/	DEADTRANS(	0x202F	,0x00EB	,0x00A8	,0x0000	), // "¨" DIAERESIS
-/*<!dead_diaeresis>*/	DEADTRANS(	L' '	,0x00EB	,0x0308	,0x0000	), // "̈" COMBINING DIAERESIS
-/*<!dead_diaeresis>*/	DEADTRANS(	0x200B	,0x00EB	,0x0308	,0x0000	), // "̈" COMBINING DIAERESIS
 /*<!dead_diaeresis>*/	DEADTRANS(	L'0'	,0x00EB	,0x2070	,0x0000	), // "⁰" SUPERSCRIPT ZERO
 /*<!dead_diaeresis>*/	DEADTRANS(	L'1'	,0x00EB	,0x00B9	,0x0000	), // "¹" SUPERSCRIPT ONE
 /*<!dead_diaeresis>*/	DEADTRANS(	L'2'	,0x00EB	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO
@@ -1437,13 +1611,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_diaeresis>*/	DEADTRANS(	L'x'	,0x00EB	,0x1E8D	,0x0000	), // "ẍ" LATIN SMALL LETTER X WITH DIAERESIS
 /*<!dead_diaeresis>*/	DEADTRANS(	L'y'	,0x00EB	,0x00FF	,0x0000	), // "ÿ" LATIN SMALL LETTER Y WITH DIAERESIS
 /*<!dead_diaeresis>*/	DEADTRANS(	L'Y'	,0x00EB	,0x0178	,0x0000	), // "Ÿ" LATIN CAPITAL LETTER Y WITH DIAERESIS
+/*<!dead_diaeresis>*/	DEADTRANS(	0x00A0	,0x00EB	,0x00A8	,0x0000	), // "¨" DIAERESIS
+/*<!dead_diaeresis>*/	DEADTRANS(	0x202F	,0x00EB	,0x00A8	,0x0000	), // "¨" DIAERESIS
+/*<!dead_diaeresis>*/	DEADTRANS(	L' '	,0x00EB	,0x0308	,0x0000	), // "̈" COMBINING DIAERESIS
+/*<!dead_diaeresis>*/	DEADTRANS(	0x200B	,0x00EB	,0x0308	,0x0000	), // "̈" COMBINING DIAERESIS
 /*<!dead_doubleacute>*/	DEADTRANS(	L'\''	,0x0151	,0x030E	,0x0000	), // "̎" COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 /*<!dead_doubleacute>*/	DEADTRANS(	0x2019	,0x0151	,0x030E	,0x0000	), // "̎" COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 /*<!dead_doubleacute>*/	DEADTRANS(	L'='	,0x0151	,0x02F6	,0x0000	), // "˶" MODIFIER LETTER MIDDLE DOUBLE ACUTE ACCENT
-/*<!dead_doubleacute>*/	DEADTRANS(	0x00A0	,0x0151	,0x02DD	,0x0000	), // "˝" DOUBLE ACUTE ACCENT
-/*<!dead_doubleacute>*/	DEADTRANS(	0x202F	,0x0151	,0x02DD	,0x0000	), // "˝" DOUBLE ACUTE ACCENT
-/*<!dead_doubleacute>*/	DEADTRANS(	L' '	,0x0151	,0x030B	,0x0000	), // "̋" COMBINING DOUBLE ACUTE ACCENT
-/*<!dead_doubleacute>*/	DEADTRANS(	0x200B	,0x0151	,0x030B	,0x0000	), // "̋" COMBINING DOUBLE ACUTE ACCENT
 /*<!dead_doubleacute>*/	DEADTRANS(	L'0'	,0x0151	,0x24FE	,0x0000	), // "⓾" DOUBLE CIRCLED NUMBER TEN
 /*<!dead_doubleacute>*/	DEADTRANS(	L'1'	,0x0151	,0x24F5	,0x0000	), // "⓵" DOUBLE CIRCLED DIGIT ONE
 /*<!dead_doubleacute>*/	DEADTRANS(	L'2'	,0x0151	,0x24F6	,0x0000	), // "⓶" DOUBLE CIRCLED DIGIT TWO
@@ -1458,12 +1632,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_doubleacute>*/	DEADTRANS(	L'o'	,0x0151	,0x0151	,0x0000	), // "ő" LATIN SMALL LETTER O WITH DOUBLE ACUTE
 /*<!dead_doubleacute>*/	DEADTRANS(	L'U'	,0x0151	,0x0170	,0x0000	), // "Ű" LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
 /*<!dead_doubleacute>*/	DEADTRANS(	L'u'	,0x0151	,0x0171	,0x0000	), // "ű" LATIN SMALL LETTER U WITH DOUBLE ACUTE
+/*<!dead_doubleacute>*/	DEADTRANS(	0x00A0	,0x0151	,0x02DD	,0x0000	), // "˝" DOUBLE ACUTE ACCENT
+/*<!dead_doubleacute>*/	DEADTRANS(	0x202F	,0x0151	,0x02DD	,0x0000	), // "˝" DOUBLE ACUTE ACCENT
+/*<!dead_doubleacute>*/	DEADTRANS(	L' '	,0x0151	,0x030B	,0x0000	), // "̋" COMBINING DOUBLE ACUTE ACCENT
+/*<!dead_doubleacute>*/	DEADTRANS(	0x200B	,0x0151	,0x030B	,0x0000	), // "̋" COMBINING DOUBLE ACUTE ACCENT
 /*<!dead_flag>*/	DEADTRANS(	0x021F	,0x2690	,0x200C	,0x0000	), // "‌" ZERO WIDTH NON-JOINER, cursive non-joiner
 /*<!dead_flag>*/	DEADTRANS(	0x00EA	,0x2690	,0x2060	,0x0000	), // "⁠" WORD JOINER
 /*<!dead_flag>*/	DEADTRANS(	L'-'	,0x2690	,0x2E40	,0x0000	), // "⹀" DOUBLE HYPHEN
-/*<!dead_flag>*/	DEADTRANS(	0x00A0	,0x2690	,0x02ED	,0x0000	), // "˭" MODIFIER LETTER UNASPIRATED
-/*<!dead_flag>*/	DEADTRANS(	0x202F	,0x2690	,0x02ED	,0x0000	), // "˭" MODIFIER LETTER UNASPIRATED
-/*<!dead_flag>*/	DEADTRANS(	L' '	,0x2690	,0x0347	,0x0000	), // "͇" COMBINING EQUALS SIGN BELOW
 /*<!dead_flag>*/	DEADTRANS(	L'0'	,0x2690	,0x21D5	,0x0000	), // "⇕" UP DOWN DOUBLE ARROW
 /*<!dead_flag>*/	DEADTRANS(	L'1'	,0x2690	,0x21D9	,0x0000	), // "⇙" SOUTH WEST DOUBLE ARROW
 /*<!dead_flag>*/	DEADTRANS(	L'2'	,0x2690	,0x21D3	,0x0000	), // "⇓" DOWNWARDS DOUBLE ARROW
@@ -1474,6 +1649,9 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_flag>*/	DEADTRANS(	L'7'	,0x2690	,0x21D6	,0x0000	), // "⇖" NORTH WEST DOUBLE ARROW
 /*<!dead_flag>*/	DEADTRANS(	L'8'	,0x2690	,0x21D1	,0x0000	), // "⇑" UPWARDS DOUBLE ARROW
 /*<!dead_flag>*/	DEADTRANS(	L'9'	,0x2690	,0x21D7	,0x0000	), // "⇗" NORTH EAST DOUBLE ARROW
+/*<!dead_flag>*/	DEADTRANS(	0x00A0	,0x2690	,0x02ED	,0x0000	), // "˭" MODIFIER LETTER UNASPIRATED
+/*<!dead_flag>*/	DEADTRANS(	0x202F	,0x2690	,0x02ED	,0x0000	), // "˭" MODIFIER LETTER UNASPIRATED
+/*<!dead_flag>*/	DEADTRANS(	L' '	,0x2690	,0x0347	,0x0000	), // "͇" COMBINING EQUALS SIGN BELOW
 /*<!dead_grave>*/	DEADTRANS(	L'&'	,0x00F2	,0x0316	,0x0000	), // "̖" COMBINING GRAVE ACCENT BELOW
 /*<!dead_grave>*/	DEADTRANS(	L'\''	,0x00F2	,0x201B	,0x0000	), // "‛" SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 /*<!dead_grave>*/	DEADTRANS(	0x2019	,0x00F2	,0x201B	,0x0000	), // "‛" SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
@@ -1482,10 +1660,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_grave>*/	DEADTRANS(	L'"'	,0x00F2	,0x201F	,0x0000	), // "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 /*<!dead_grave>*/	DEADTRANS(	0x20AC	,0x00F2	,0x201F	,0x0000	), // "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 /*<!dead_grave>*/	DEADTRANS(	L'_'	,0x00F2	,0x02CE	,0x0000	), // "ˎ" MODIFIER LETTER LOW GRAVE ACCENT
-/*<!dead_grave>*/	DEADTRANS(	0x00A0	,0x00F2	,0x0060	,0x0000	), // "`" GRAVE ACCENT
-/*<!dead_grave>*/	DEADTRANS(	0x202F	,0x00F2	,0x02CB	,0x0000	), // "ˋ" MODIFIER LETTER GRAVE ACCENT
-/*<!dead_grave>*/	DEADTRANS(	L' '	,0x00F2	,0x0300	,0x0000	), // "̀" COMBINING GRAVE ACCENT
-/*<!dead_grave>*/	DEADTRANS(	0x200B	,0x00F2	,0x0300	,0x0000	), // "̀" COMBINING GRAVE ACCENT
 /*<!dead_grave>*/	DEADTRANS(	L'1'	,0x00F2	,0x2035	,0x0000	), // "‵" REVERSED PRIME
 /*<!dead_grave>*/	DEADTRANS(	L'2'	,0x00F2	,0x2036	,0x0000	), // "‶" REVERSED DOUBLE PRIME
 /*<!dead_grave>*/	DEADTRANS(	L'3'	,0x00F2	,0x2037	,0x0000	), // "‷" REVERSED TRIPLE PRIME
@@ -1505,6 +1679,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_grave>*/	DEADTRANS(	L'w'	,0x00F2	,0x1E81	,0x0000	), // "ẁ" LATIN SMALL LETTER W WITH GRAVE
 /*<!dead_grave>*/	DEADTRANS(	L'Y'	,0x00F2	,0x1EF2	,0x0000	), // "Ỳ" LATIN CAPITAL LETTER Y WITH GRAVE
 /*<!dead_grave>*/	DEADTRANS(	L'y'	,0x00F2	,0x1EF3	,0x0000	), // "ỳ" LATIN SMALL LETTER Y WITH GRAVE
+/*<!dead_grave>*/	DEADTRANS(	0x00A0	,0x00F2	,0x0060	,0x0000	), // "`" GRAVE ACCENT
+/*<!dead_grave>*/	DEADTRANS(	0x202F	,0x00F2	,0x02CB	,0x0000	), // "ˋ" MODIFIER LETTER GRAVE ACCENT
+/*<!dead_grave>*/	DEADTRANS(	L' '	,0x00F2	,0x0300	,0x0000	), // "̀" COMBINING GRAVE ACCENT
+/*<!dead_grave>*/	DEADTRANS(	0x200B	,0x00F2	,0x0300	,0x0000	), // "̀" COMBINING GRAVE ACCENT
 /*<!dead_greek>*/	DEADTRANS(	L'*'	,0x03B5	,0x229B	,0x0000	), // "⊛" CIRCLED ASTERISK OPERATOR
 /*<!dead_greek>*/	DEADTRANS(	L'|'	,0x03B5	,0x29B6	,0x0000	), // "⦶" CIRCLED VERTICAL BAR
 /*<!dead_greek>*/	DEADTRANS(	L':'	,0x03B5	,0x2A38	,0x0000	), // "⨸" CIRCLED DIVISION SIGN
@@ -1519,10 +1697,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_greek>*/	DEADTRANS(	L';'	,0x03B5	,0x2297	,0x0000	), // "⊗" CIRCLED TIMES
 /*<!dead_greek>*/	DEADTRANS(	L'/'	,0x03B5	,0x2298	,0x0000	), // "⊘" CIRCLED DIVISION SLASH
 /*<!dead_greek>*/	DEADTRANS(	L'_'	,0x03B5	,0x229D	,0x0000	), // "⊝" CIRCLED DASH
-/*<!dead_greek>*/	DEADTRANS(	0x00A0	,0x03B5	,0x1FBE	,0x0000	), // "ι" GREEK PROSGEGRAMMENI
-/*<!dead_greek>*/	DEADTRANS(	0x202F	,0x03B5	,0x1FBE	,0x0000	), // "ι" GREEK PROSGEGRAMMENI
-/*<!dead_greek>*/	DEADTRANS(	L' '	,0x03B5	,0x0345	,0x0000	), // "ͅ" COMBINING GREEK YPOGEGRAMMENI
-/*<!dead_greek>*/	DEADTRANS(	0x200B	,0x03B5	,0x0345	,0x0000	), // "ͅ" COMBINING GREEK YPOGEGRAMMENI
 /*<!dead_greek>*/	DEADTRANS(	L'0'	,0x03B5	,0x2469	,0x0000	), // "⑩" CIRCLED NUMBER TEN
 /*<!dead_greek>*/	DEADTRANS(	L'1'	,0x03B5	,0x2460	,0x0000	), // "①" CIRCLED DIGIT ONE
 /*<!dead_greek>*/	DEADTRANS(	L'2'	,0x03B5	,0x2461	,0x0000	), // "②" CIRCLED DIGIT TWO
@@ -1570,8 +1744,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_greek>*/	DEADTRANS(	L'o'	,0x03B5	,0x03BF	,0x0000	), // "ο" GREEK SMALL LETTER OMICRON
 /*<!dead_greek>*/	DEADTRANS(	L'P'	,0x03B5	,0x03A0	,0x0000	), // "Π" GREEK CAPITAL LETTER PI
 /*<!dead_greek>*/	DEADTRANS(	L'p'	,0x03B5	,0x03C0	,0x0000	), // "π" GREEK SMALL LETTER PI
-/*<!dead_greek>*/	DEADTRANS(	L'q'	,0x03B5	,0x03D1	,0x0000	), // "ϑ" GREEK THETA SYMBOL
 /*<!dead_greek>*/	DEADTRANS(	L'Q'	,0x03B5	,0x03F4	,0x0000	), // "ϴ" GREEK CAPITAL THETA SYMBOL
+/*<!dead_greek>*/	DEADTRANS(	L'q'	,0x03B5	,0x03D1	,0x0000	), // "ϑ" GREEK THETA SYMBOL
 /*<!dead_greek>*/	DEADTRANS(	L'R'	,0x03B5	,0x03A1	,0x0000	), // "Ρ" GREEK CAPITAL LETTER RHO
 /*<!dead_greek>*/	DEADTRANS(	L'r'	,0x03B5	,0x03C1	,0x0000	), // "ρ" GREEK SMALL LETTER RHO
 /*<!dead_greek>*/	DEADTRANS(	L'S'	,0x03B5	,0x03A3	,0x0000	), // "Σ" GREEK CAPITAL LETTER SIGMA
@@ -1582,14 +1756,18 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_greek>*/	DEADTRANS(	L'u'	,0x03B5	,0x03B8	,0x0000	), // "θ" GREEK SMALL LETTER THETA
 /*<!dead_greek>*/	DEADTRANS(	L'V'	,0x03B5	,0x03A9	,0x0000	), // "Ω" GREEK CAPITAL LETTER OMEGA
 /*<!dead_greek>*/	DEADTRANS(	L'v'	,0x03B5	,0x03C9	,0x0000	), // "ω" GREEK SMALL LETTER OMEGA
-/*<!dead_greek>*/	DEADTRANS(	L'W'	,0x03B5	,0x2207	,0x0000	), // "∇" NABLA
 /*<!dead_greek>*/	DEADTRANS(	L'w'	,0x03B5	,0x03C2	,0x0000	), // "ς" GREEK SMALL LETTER FINAL SIGMA
+/*<!dead_greek>*/	DEADTRANS(	L'W'	,0x03B5	,0x2207	,0x0000	), // "∇" NABLA
 /*<!dead_greek>*/	DEADTRANS(	L'X'	,0x03B5	,0x03A7	,0x0000	), // "Χ" GREEK CAPITAL LETTER CHI
 /*<!dead_greek>*/	DEADTRANS(	L'x'	,0x03B5	,0x03C7	,0x0000	), // "χ" GREEK SMALL LETTER CHI
 /*<!dead_greek>*/	DEADTRANS(	L'Y'	,0x03B5	,0x03A5	,0x0000	), // "Υ" GREEK CAPITAL LETTER UPSILON
 /*<!dead_greek>*/	DEADTRANS(	L'y'	,0x03B5	,0x03C5	,0x0000	), // "υ" GREEK SMALL LETTER UPSILON
 /*<!dead_greek>*/	DEADTRANS(	L'Z'	,0x03B5	,0x0396	,0x0000	), // "Ζ" GREEK CAPITAL LETTER ZETA
 /*<!dead_greek>*/	DEADTRANS(	L'z'	,0x03B5	,0x03B6	,0x0000	), // "ζ" GREEK SMALL LETTER ZETA
+/*<!dead_greek>*/	DEADTRANS(	0x00A0	,0x03B5	,0x1FBE	,0x0000	), // "ι" GREEK PROSGEGRAMMENI
+/*<!dead_greek>*/	DEADTRANS(	0x202F	,0x03B5	,0x1FBE	,0x0000	), // "ι" GREEK PROSGEGRAMMENI
+/*<!dead_greek>*/	DEADTRANS(	L' '	,0x03B5	,0x0345	,0x0000	), // "ͅ" COMBINING GREEK YPOGEGRAMMENI
+/*<!dead_greek>*/	DEADTRANS(	0x200B	,0x03B5	,0x0345	,0x0000	), // "ͅ" COMBINING GREEK YPOGEGRAMMENI
 /*<!dead_group>*/	DEADTRANS(	0x00E1	,0x2460	,0x0024	,0x0000	), // "$" DOLLAR SIGN
 /*<!dead_group>*/	DEADTRANS(	0x00EA	,0x2460	,0x005E	,0x0000	), // "^" CIRCUMFLEX ACCENT
 /*<!dead_group>*/	DEADTRANS(	0x00EB	,0x2460	,0x003D	,0x0000	), // "=" EQUALS SIGN
@@ -1630,9 +1808,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_group>*/	DEADTRANS(	0x00A7	,0x2460	,0x02D0	,0x0000	), // "ː" MODIFIER LETTER TRIANGULAR COLON
 /*<!dead_group>*/	DEADTRANS(	L'/'	,0x2460	,0x2718	,0x0000	), // "✘" HEAVY BALLOT X
 /*<!dead_group>*/	DEADTRANS(	L'_'	,0x2460	,0x2022	,0x0000	), // "•" BULLET
-/*<!dead_group>*/	DEADTRANS(	0x00A0	,0x2460	,0x2001	,0x0000	), // " " EM QUAD
-/*<!dead_group>*/	DEADTRANS(	0x202F	,0x2460	,0x200A	,0x0000	), // " " HAIR SPACE
-/*<!dead_group>*/	DEADTRANS(	L' '	,0x2460	,0x2003	,0x0000	), // " " EM SPACE
 /*<!dead_group>*/	DEADTRANS(	L'A'	,0x2460	,0x00C6	,0x0000	), // "Æ" LATIN CAPITAL LETTER AE
 /*<!dead_group>*/	DEADTRANS(	L'a'	,0x2460	,0x00E6	,0x0000	), // "æ" LATIN SMALL LETTER AE
 /*<!dead_group>*/	DEADTRANS(	0x00C4	,0x2460	,0x00C5	,0x0000	), // "Å" LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
@@ -1649,8 +1824,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_group>*/	DEADTRANS(	L'd'	,0x2460	,0x00F0	,0x0000	), // "ð" LATIN SMALL LETTER ETH
 /*<!dead_group>*/	DEADTRANS(	L'E'	,0x2460	,0x018E	,0x0000	), // "Ǝ" LATIN CAPITAL LETTER REVERSED E
 /*<!dead_group>*/	DEADTRANS(	L'e'	,0x2460	,0x01DD	,0x0000	), // "ǝ" LATIN SMALL LETTER TURNED E
-/*<!dead_group>*/	DEADTRANS(	0x00E9	,0x2460	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO shortcut for African and Breton variants
 /*<!dead_group>*/	DEADTRANS(	0x00C9	,0x2460	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO shortcut for African and Breton variants
+/*<!dead_group>*/	DEADTRANS(	0x00E9	,0x2460	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO shortcut for African and Breton variants
 /*<!dead_group>*/	DEADTRANS(	0x00C8	,0x2460	,0x00D1	,0x0000	), // "Ñ" LATIN CAPITAL LETTER N WITH TILDE shortcut
 /*<!dead_group>*/	DEADTRANS(	0x00E8	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut
 /*<!dead_group>*/	DEADTRANS(	0x2014	,0x2460	,0x2E3B	,0x0000	), // "⸻" THREE-EM DASH
@@ -1669,8 +1844,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_group>*/	DEADTRANS(	L'j'	,0x2460	,0x0133	,0x0000	), // "ĳ" LATIN SMALL LIGATURE IJ
 /*<!dead_group>*/	DEADTRANS(	L'k'	,0x2460	,0x0251	,0x0000	), // "ɑ" LATIN SMALL LETTER ALPHA
 /*<!dead_group>*/	DEADTRANS(	L'K'	,0x2460	,0x2C6D	,0x0000	), // "Ɑ" LATIN CAPITAL LETTER ALPHA
-/*<!dead_group>*/	DEADTRANS(	L'L'	,0x2460	,0x2113	,0x0000	), // "ℓ" SCRIPT SMALL L
 /*<!dead_group>*/	DEADTRANS(	L'l'	,0x2460	,0x02BF	,0x0000	), // "ʿ" MODIFIER LETTER LEFT HALF RING
+/*<!dead_group>*/	DEADTRANS(	L'L'	,0x2460	,0x2113	,0x0000	), // "ℓ" SCRIPT SMALL L
 /*<!dead_group>*/	DEADTRANS(	L'M'	,0x2460	,0x0294	,0x0000	), // "ʔ" LATIN LETTER GLOTTAL STOP
 /*<!dead_group>*/	DEADTRANS(	L'm'	,0x2460	,0x02BE	,0x0000	), // "ʾ" MODIFIER LETTER RIGHT HALF RING
 /*<!dead_group>*/	DEADTRANS(	L'N'	,0x2460	,0x019D	,0x0000	), // "Ɲ" LATIN CAPITAL LETTER N WITH LEFT HOOK
@@ -1683,23 +1858,23 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_group>*/	DEADTRANS(	0x00F6	,0x2460	,0x00F8	,0x0000	), // "ø" LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
 /*<!dead_group>*/	DEADTRANS(	0x0254	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
 /*<!dead_group>*/	DEADTRANS(	0x0186	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
-/*<!dead_group>*/	DEADTRANS(	L'p'	,0x2460	,0x00B7	,0x0000	), // "·" MIDDLE DOT
 /*<!dead_group>*/	DEADTRANS(	L'P'	,0x2460	,0x00B7	,0x0000	), // "·" MIDDLE DOT
+/*<!dead_group>*/	DEADTRANS(	L'p'	,0x2460	,0x00B7	,0x0000	), // "·" MIDDLE DOT
 /*<!dead_group>*/	DEADTRANS(	L'Q'	,0x2460	,0x0241	,0x0000	), // "Ɂ" LATIN CAPITAL LETTER GLOTTAL STOP
 /*<!dead_group>*/	DEADTRANS(	L'q'	,0x2460	,0x0242	,0x0000	), // "ɂ" LATIN SMALL LETTER GLOTTAL STOP
-/*<!dead_group>*/	DEADTRANS(	L'r'	,0x2460	,0x211F	,0x0000	), // "℟" RESPONSE
 /*<!dead_group>*/	DEADTRANS(	L'R'	,0x2460	,0x211F	,0x0000	), // "℟" RESPONSE
+/*<!dead_group>*/	DEADTRANS(	L'r'	,0x2460	,0x211F	,0x0000	), // "℟" RESPONSE
 /*<!dead_group>*/	DEADTRANS(	L's'	,0x2460	,0x00DF	,0x0000	), // "ß" LATIN SMALL LETTER SHARP S
 /*<!dead_group>*/	DEADTRANS(	L'S'	,0x2460	,0x1E9E	,0x0000	), // "ẞ" LATIN CAPITAL LETTER SHARP S
 /*<!dead_group>*/	DEADTRANS(	L'T'	,0x2460	,0x00DE	,0x0000	), // "Þ" LATIN CAPITAL LETTER THORN
 /*<!dead_group>*/	DEADTRANS(	L't'	,0x2460	,0x00FE	,0x0000	), // "þ" LATIN SMALL LETTER THORN
 /*<!dead_group>*/	DEADTRANS(	0x00B2	,0x2460	,0x0026	,0x0000	), // "&" AMPERSAND
-/*<!dead_group>*/	DEADTRANS(	L'U'	,0x2460	,0x01B2	,0x0000	), // "Ʋ" LATIN CAPITAL LETTER V WITH HOOK
-/*<!dead_group>*/	DEADTRANS(	L'u'	,0x2460	,0x028B	,0x0000	), // "ʋ" LATIN SMALL LETTER V WITH HOOK
 /*<!dead_group>*/	DEADTRANS(	0x02BB	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
 /*<!dead_group>*/	DEADTRANS(	0x2039	,0x2460	,0x00A8	,0x0000	), // "¨" DIAERESIS
 /*<!dead_group>*/	DEADTRANS(	0x203A	,0x2460	,0x00A3	,0x0000	), // "£" POUND SIGN
 /*<!dead_group>*/	DEADTRANS(	0x2212	,0x2460	,0x2012	,0x0000	), // "‒" FIGURE DASH
+/*<!dead_group>*/	DEADTRANS(	L'U'	,0x2460	,0x01B2	,0x0000	), // "Ʋ" LATIN CAPITAL LETTER V WITH HOOK
+/*<!dead_group>*/	DEADTRANS(	L'u'	,0x2460	,0x028B	,0x0000	), // "ʋ" LATIN SMALL LETTER V WITH HOOK
 /*<!dead_group>*/	DEADTRANS(	0x00DC	,0x2460	,0x00D1	,0x0000	), // "Ñ" LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
 /*<!dead_group>*/	DEADTRANS(	0x00FC	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
 /*<!dead_group>*/	DEADTRANS(	0x00FC	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
@@ -1708,8 +1883,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_group>*/	DEADTRANS(	0x00FC	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
 /*<!dead_group>*/	DEADTRANS(	0x00FC	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
 /*<!dead_group>*/	DEADTRANS(	0x00FC	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
-/*<!dead_group>*/	DEADTRANS(	L'v'	,0x2460	,0x2123	,0x0000	), // "℣" VERSICLE
 /*<!dead_group>*/	DEADTRANS(	L'V'	,0x2460	,0x2123	,0x0000	), // "℣" VERSICLE
+/*<!dead_group>*/	DEADTRANS(	L'v'	,0x2460	,0x2123	,0x0000	), // "℣" VERSICLE
 /*<!dead_group>*/	DEADTRANS(	L'W'	,0x2460	,0x01A9	,0x0000	), // "Ʃ" LATIN CAPITAL LETTER ESH
 /*<!dead_group>*/	DEADTRANS(	L'w'	,0x2460	,0x0283	,0x0000	), // "ʃ" LATIN SMALL LETTER ESH
 /*<!dead_group>*/	DEADTRANS(	L'X'	,0x2460	,0x0190	,0x0000	), // "Ɛ" LATIN CAPITAL LETTER OPEN E
@@ -1718,11 +1893,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_group>*/	DEADTRANS(	L'y'	,0x2460	,0x028A	,0x0000	), // "ʊ" LATIN SMALL LETTER UPSILON
 /*<!dead_group>*/	DEADTRANS(	L'Z'	,0x2460	,0x01B7	,0x0000	), // "Ʒ" LATIN CAPITAL LETTER EZH
 /*<!dead_group>*/	DEADTRANS(	L'z'	,0x2460	,0x0292	,0x0000	), // "ʒ" LATIN SMALL LETTER EZH
+/*<!dead_group>*/	DEADTRANS(	0x00A0	,0x2460	,0x2001	,0x0000	), // " " EM QUAD
+/*<!dead_group>*/	DEADTRANS(	0x202F	,0x2460	,0x200A	,0x0000	), // " " HAIR SPACE
+/*<!dead_group>*/	DEADTRANS(	L' '	,0x2460	,0x2003	,0x0000	), // " " EM SPACE
 /*<!dead_hook>*/	DEADTRANS(	L'.'	,0x0192	,0x2055	,0x0000	), // "⁕" FLOWER PUNCTUATION MARK
-/*<!dead_hook>*/	DEADTRANS(	0x00A0	,0x0192	,0x02DE	,0x0000	), // "˞" MODIFIER LETTER RHOTIC HOOK
-/*<!dead_hook>*/	DEADTRANS(	0x202F	,0x0192	,0x02DE	,0x0000	), // "˞" MODIFIER LETTER RHOTIC HOOK
-/*<!dead_hook>*/	DEADTRANS(	L' '	,0x0192	,0x0321	,0x0000	), // "̡" COMBINING PALATALIZED HOOK BELOW
-/*<!dead_hook>*/	DEADTRANS(	0x200B	,0x0192	,0x0321	,0x0000	), // "̡" COMBINING PALATALIZED HOOK BELOW
 /*<!dead_hook>*/	DEADTRANS(	L'1'	,0x0192	,0x02E9	,0x0000	), // "˩" MODIFIER LETTER EXTRA-LOW TONE BAR
 /*<!dead_hook>*/	DEADTRANS(	L'2'	,0x0192	,0x02E8	,0x0000	), // "˨" MODIFIER LETTER LOW TONE BAR
 /*<!dead_hook>*/	DEADTRANS(	L'3'	,0x0192	,0x02E7	,0x0000	), // "˧" MODIFIER LETTER MID TONE BAR
@@ -1765,15 +1939,15 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_hook>*/	DEADTRANS(	L'y'	,0x0192	,0x01B4	,0x0000	), // "ƴ" LATIN SMALL LETTER Y WITH HOOK
 /*<!dead_hook>*/	DEADTRANS(	L'Z'	,0x0192	,0x0224	,0x0000	), // "Ȥ" LATIN CAPITAL LETTER Z WITH HOOK
 /*<!dead_hook>*/	DEADTRANS(	L'z'	,0x0192	,0x0225	,0x0000	), // "ȥ" LATIN SMALL LETTER Z WITH HOOK
+/*<!dead_hook>*/	DEADTRANS(	0x00A0	,0x0192	,0x02DE	,0x0000	), // "˞" MODIFIER LETTER RHOTIC HOOK
+/*<!dead_hook>*/	DEADTRANS(	0x202F	,0x0192	,0x02DE	,0x0000	), // "˞" MODIFIER LETTER RHOTIC HOOK
+/*<!dead_hook>*/	DEADTRANS(	L' '	,0x0192	,0x0321	,0x0000	), // "̡" COMBINING PALATALIZED HOOK BELOW
+/*<!dead_hook>*/	DEADTRANS(	0x200B	,0x0192	,0x0321	,0x0000	), // "̡" COMBINING PALATALIZED HOOK BELOW
 /*<!dead_horn>*/	DEADTRANS(	L'&'	,0x01A1	,0x1ACA	,0x0000	), // "᫊" COMBINING DOUBLE PLUS SIGN BELOW
 /*<!dead_horn>*/	DEADTRANS(	L'>'	,0x01A1	,0x2945	,0x0000	), // "⥅" RIGHTWARDS ARROW WITH PLUS BELOW
 /*<!dead_horn>*/	DEADTRANS(	L'<'	,0x01A1	,0x2946	,0x0000	), // "⥆" LEFTWARDS ARROW WITH PLUS BELOW
 /*<!dead_horn>*/	DEADTRANS(	L'"'	,0x01A1	,0x1AC9	,0x0000	), // "᫉" COMBINING DOUBLE PLUS SIGN ABOVE
 /*<!dead_horn>*/	DEADTRANS(	0x20AC	,0x01A1	,0x1AC9	,0x0000	), // "᫉" COMBINING DOUBLE PLUS SIGN ABOVE
-/*<!dead_horn>*/	DEADTRANS(	0x00A0	,0x01A1	,0xA71A	,0x0000	), // "ꜚ" MODIFIER LETTER LOWER RIGHT CORNER ANGLE
-/*<!dead_horn>*/	DEADTRANS(	0x202F	,0x01A1	,0xA71A	,0x0000	), // "ꜚ" MODIFIER LETTER LOWER RIGHT CORNER ANGLE
-/*<!dead_horn>*/	DEADTRANS(	L' '	,0x01A1	,0x031B	,0x0000	), // "̛" COMBINING HORN
-/*<!dead_horn>*/	DEADTRANS(	0x200B	,0x01A1	,0x031B	,0x0000	), // "̛" COMBINING HORN
 /*<!dead_horn>*/	DEADTRANS(	L'0'	,0x01A1	,0x2195	,0x0000	), // "↕" UP DOWN ARROW emoji
 /*<!dead_horn>*/	DEADTRANS(	L'1'	,0x01A1	,0x2199	,0x0000	), // "↙" SOUTH WEST ARROW emoji
 /*<!dead_horn>*/	DEADTRANS(	L'2'	,0x01A1	,0x2193	,0x0000	), // "↓" DOWNWARDS ARROW
@@ -1784,74 +1958,74 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_horn>*/	DEADTRANS(	L'7'	,0x01A1	,0x2196	,0x0000	), // "↖" NORTH WEST ARROW emoji
 /*<!dead_horn>*/	DEADTRANS(	L'8'	,0x01A1	,0x2191	,0x0000	), // "↑" UPWARDS ARROW
 /*<!dead_horn>*/	DEADTRANS(	L'9'	,0x01A1	,0x2197	,0x0000	), // "↗" NORTH EAST ARROW emoji
-/*<!dead_horn>*/	DEADTRANS(	L'a'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'A'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'b'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'a'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'B'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'c'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'b'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'C'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'd'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'c'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'D'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'd'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'e'	,0x01A1	,0x2C78	,0x0000	), // "ⱸ" LATIN SMALL LETTER E WITH NOTCH
-/*<!dead_horn>*/	DEADTRANS(	L'f'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'F'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'g'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'f'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'G'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'g'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'H'	,0x01A1	,0x2C67	,0x0000	), // "Ⱨ" LATIN CAPITAL LETTER H WITH DESCENDER
 /*<!dead_horn>*/	DEADTRANS(	L'h'	,0x01A1	,0x2C68	,0x0000	), // "ⱨ" LATIN SMALL LETTER H WITH DESCENDER
-/*<!dead_horn>*/	DEADTRANS(	L'i'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'I'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'j'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'i'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'J'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'j'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'K'	,0x01A1	,0x2C69	,0x0000	), // "Ⱪ" LATIN CAPITAL LETTER K WITH DESCENDER
 /*<!dead_horn>*/	DEADTRANS(	L'k'	,0x01A1	,0x2C6A	,0x0000	), // "ⱪ" LATIN SMALL LETTER K WITH DESCENDER
-/*<!dead_horn>*/	DEADTRANS(	L'l'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'L'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'm'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'l'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'M'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'm'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'N'	,0x01A1	,0xA790	,0x0000	), // "Ꞑ" LATIN CAPITAL LETTER N WITH DESCENDER
 /*<!dead_horn>*/	DEADTRANS(	L'n'	,0x01A1	,0xA791	,0x0000	), // "ꞑ" LATIN SMALL LETTER N WITH DESCENDER
 /*<!dead_horn>*/	DEADTRANS(	L'O'	,0x01A1	,0x01A0	,0x0000	), // "Ơ" LATIN CAPITAL LETTER O WITH HORN
 /*<!dead_horn>*/	DEADTRANS(	L'o'	,0x01A1	,0x01A1	,0x0000	), // "ơ" LATIN SMALL LETTER O WITH HORN
-/*<!dead_horn>*/	DEADTRANS(	L'p'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'P'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'q'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'p'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'Q'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'r'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'q'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'R'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L's'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'r'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'S'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L't'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L's'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'T'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L't'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'U'	,0x01A1	,0x01AF	,0x0000	), // "Ư" LATIN CAPITAL LETTER U WITH HORN
 /*<!dead_horn>*/	DEADTRANS(	L'u'	,0x01A1	,0x01B0	,0x0000	), // "ư" LATIN SMALL LETTER U WITH HORN
 /*<!dead_horn>*/	DEADTRANS(	0x00F9	,0x01A1	,0x1EEA	,0x0000	), // "Ừ" LATIN CAPITAL LETTER U WITH HORN AND GRAVE
 /*<!dead_horn>*/	DEADTRANS(	0x00F9	,0x01A1	,0x1EEB	,0x0000	), // "ừ" LATIN SMALL LETTER U WITH HORN AND GRAVE
-/*<!dead_horn>*/	DEADTRANS(	L'v'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'V'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'w'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'v'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'W'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'x'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'w'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'X'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
-/*<!dead_horn>*/	DEADTRANS(	L'y'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'x'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'Y'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
+/*<!dead_horn>*/	DEADTRANS(	L'y'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!dead_horn>*/	DEADTRANS(	L'Z'	,0x01A1	,0x2C6B	,0x0000	), // "Ⱬ" LATIN CAPITAL LETTER Z WITH DESCENDER
 /*<!dead_horn>*/	DEADTRANS(	L'z'	,0x01A1	,0x2C6C	,0x0000	), // "ⱬ" LATIN SMALL LETTER Z WITH DESCENDER
+/*<!dead_horn>*/	DEADTRANS(	0x00A0	,0x01A1	,0xA71A	,0x0000	), // "ꜚ" MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+/*<!dead_horn>*/	DEADTRANS(	0x202F	,0x01A1	,0xA71A	,0x0000	), // "ꜚ" MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+/*<!dead_horn>*/	DEADTRANS(	L' '	,0x01A1	,0x031B	,0x0000	), // "̛" COMBINING HORN
+/*<!dead_horn>*/	DEADTRANS(	0x200B	,0x01A1	,0x031B	,0x0000	), // "̛" COMBINING HORN
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'='	,0x0213	,0x0361	,0x0000	), // "͡" COMBINING DOUBLE INVERTED BREVE
-/*<!dead_invertedbreve>*/	DEADTRANS(	0x00A0	,0x0213	,0xAB5B	,0x0000	), // "꭛" MODIFIER BREVE WITH INVERTED BREVE
-/*<!dead_invertedbreve>*/	DEADTRANS(	0x202F	,0x0213	,0xAB5B	,0x0000	), // "꭛" MODIFIER BREVE WITH INVERTED BREVE
-/*<!dead_invertedbreve>*/	DEADTRANS(	L' '	,0x0213	,0x0311	,0x0000	), // "̑" COMBINING INVERTED BREVE
-/*<!dead_invertedbreve>*/	DEADTRANS(	0x200B	,0x0213	,0x0311	,0x0000	), // "̑" COMBINING INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'A'	,0x0213	,0x0202	,0x0000	), // "Ȃ" LATIN CAPITAL LETTER A WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'a'	,0x0213	,0x0203	,0x0000	), // "ȃ" LATIN SMALL LETTER A WITH INVERTED BREVE
-/*<!dead_invertedbreve>*/	DEADTRANS(	L'c'	,0x0213	,0x02D3	,0x0000	), // "˓" MODIFIER LETTER CENTRED LEFT HALF RING
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'C'	,0x0213	,0x02D3	,0x0000	), // "˓" MODIFIER LETTER CENTRED LEFT HALF RING
+/*<!dead_invertedbreve>*/	DEADTRANS(	L'c'	,0x0213	,0x02D3	,0x0000	), // "˓" MODIFIER LETTER CENTRED LEFT HALF RING
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'E'	,0x0213	,0x0206	,0x0000	), // "Ȇ" LATIN CAPITAL LETTER E WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'e'	,0x0213	,0x0207	,0x0000	), // "ȇ" LATIN SMALL LETTER E WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	0x2014	,0x0213	,0x0361	,0x0000	), // "͡" COMBINING DOUBLE INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'f'	,0x0213	,0xDF00	,0x0000	), // High surrogate: D837; U+1DF00 "𝼀" LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
-/*<!dead_invertedbreve>*/	DEADTRANS(	L'g'	,0x0213	,0x2050	,0x0000	), // "⁐" CLOSE UP
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'G'	,0x0213	,0x2050	,0x0000	), // "⁐" CLOSE UP
+/*<!dead_invertedbreve>*/	DEADTRANS(	L'g'	,0x0213	,0x2050	,0x0000	), // "⁐" CLOSE UP
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'I'	,0x0213	,0x020A	,0x0000	), // "Ȋ" LATIN CAPITAL LETTER I WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'i'	,0x0213	,0x020B	,0x0000	), // "ȋ" LATIN SMALL LETTER I WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'O'	,0x0213	,0x020E	,0x0000	), // "Ȏ" LATIN CAPITAL LETTER O WITH INVERTED BREVE
@@ -1860,7 +2034,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'r'	,0x0213	,0x0213	,0x0000	), // "ȓ" LATIN SMALL LETTER R WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'U'	,0x0213	,0x0216	,0x0000	), // "Ȗ" LATIN CAPITAL LETTER U WITH INVERTED BREVE
 /*<!dead_invertedbreve>*/	DEADTRANS(	L'u'	,0x0213	,0x0217	,0x0000	), // "ȗ" LATIN SMALL LETTER U WITH INVERTED BREVE
-/*<!dead_legacygrave>*/	DEADTRANS(	L' '	,L'`'	,0x0060	,0x0000	), // "`" GRAVE ACCENT
+/*<!dead_invertedbreve>*/	DEADTRANS(	0x00A0	,0x0213	,0xAB5B	,0x0000	), // "꭛" MODIFIER BREVE WITH INVERTED BREVE
+/*<!dead_invertedbreve>*/	DEADTRANS(	0x202F	,0x0213	,0xAB5B	,0x0000	), // "꭛" MODIFIER BREVE WITH INVERTED BREVE
+/*<!dead_invertedbreve>*/	DEADTRANS(	L' '	,0x0213	,0x0311	,0x0000	), // "̑" COMBINING INVERTED BREVE
+/*<!dead_invertedbreve>*/	DEADTRANS(	0x200B	,0x0213	,0x0311	,0x0000	), // "̑" COMBINING INVERTED BREVE
 /*<!dead_legacygrave>*/	DEADTRANS(	L'A'	,L'`'	,0x00C0	,0x0000	), // "À" LATIN CAPITAL LETTER A WITH GRAVE
 /*<!dead_legacygrave>*/	DEADTRANS(	L'a'	,L'`'	,0x00E0	,0x0000	), // "à" LATIN SMALL LETTER A WITH GRAVE
 /*<!dead_legacygrave>*/	DEADTRANS(	L'E'	,L'`'	,0x00C8	,0x0000	), // "È" LATIN CAPITAL LETTER E WITH GRAVE
@@ -1877,7 +2054,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_legacygrave>*/	DEADTRANS(	L'w'	,L'`'	,0x1E81	,0x0000	), // "ẁ" LATIN SMALL LETTER W WITH GRAVE
 /*<!dead_legacygrave>*/	DEADTRANS(	L'Y'	,L'`'	,0x1EF2	,0x0000	), // "Ỳ" LATIN CAPITAL LETTER Y WITH GRAVE
 /*<!dead_legacygrave>*/	DEADTRANS(	L'y'	,L'`'	,0x1EF3	,0x0000	), // "ỳ" LATIN SMALL LETTER Y WITH GRAVE
-/*<!dead_legacytilde>*/	DEADTRANS(	L' '	,L'~'	,0x007E	,0x0000	), // "~" TILDE
+/*<!dead_legacygrave>*/	DEADTRANS(	L' '	,L'`'	,0x0060	,0x0000	), // "`" GRAVE ACCENT
 /*<!dead_legacytilde>*/	DEADTRANS(	L'A'	,L'~'	,0x00C3	,0x0000	), // "Ã" LATIN CAPITAL LETTER A WITH TILDE
 /*<!dead_legacytilde>*/	DEADTRANS(	L'a'	,L'~'	,0x00E3	,0x0000	), // "ã" LATIN SMALL LETTER A WITH TILDE
 /*<!dead_legacytilde>*/	DEADTRANS(	L'E'	,L'~'	,0x1EBC	,0x0000	), // "Ẽ" LATIN CAPITAL LETTER E WITH TILDE
@@ -1894,6 +2071,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_legacytilde>*/	DEADTRANS(	L'v'	,L'~'	,0x1E7D	,0x0000	), // "ṽ" LATIN SMALL LETTER V WITH TILDE
 /*<!dead_legacytilde>*/	DEADTRANS(	L'Y'	,L'~'	,0x1EF8	,0x0000	), // "Ỹ" LATIN CAPITAL LETTER Y WITH TILDE
 /*<!dead_legacytilde>*/	DEADTRANS(	L'y'	,L'~'	,0x1EF9	,0x0000	), // "ỹ" LATIN SMALL LETTER Y WITH TILDE
+/*<!dead_legacytilde>*/	DEADTRANS(	L' '	,L'~'	,0x007E	,0x0000	), // "~" TILDE
 /*<!dead_macron>*/	DEADTRANS(	L'&'	,0x0101	,0xFE26	,0x0000	), // "︦" COMBINING CONJOINING MACRON
 /*<!dead_macron>*/	DEADTRANS(	L'\''	,0x0101	,0x2A42	,0x0000	), // "⩂" UNION WITH OVERBAR
 /*<!dead_macron>*/	DEADTRANS(	0x2019	,0x0101	,0x2A42	,0x0000	), // "⩂" UNION WITH OVERBAR
@@ -1903,10 +2081,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_macron>*/	DEADTRANS(	L'`'	,0x0101	,0x22BC	,0x0000	), // "⊼" NAND
 /*<!dead_macron>*/	DEADTRANS(	L'?'	,0x0101	,0x22BD	,0x0000	), // "⊽" NOR
 /*<!dead_macron>*/	DEADTRANS(	L'/'	,0x0101	,0x29F6	,0x0000	), // "⧶" SOLIDUS WITH OVERBAR
-/*<!dead_macron>*/	DEADTRANS(	0x00A0	,0x0101	,0x00AF	,0x0000	), // "¯" MACRON
-/*<!dead_macron>*/	DEADTRANS(	0x202F	,0x0101	,0x02C9	,0x0000	), // "ˉ" MODIFIER LETTER MACRON
-/*<!dead_macron>*/	DEADTRANS(	L' '	,0x0101	,0x0304	,0x0000	), // "̄" COMBINING MACRON
-/*<!dead_macron>*/	DEADTRANS(	0x200B	,0x0101	,0x0304	,0x0000	), // "̄" COMBINING MACRON
 /*<!dead_macron>*/	DEADTRANS(	L'0'	,0x0101	,0x2AFE	,0x0000	), // "⫾" WHITE VERTICAL BAR
 /*<!dead_macron>*/	DEADTRANS(	L'1'	,0x0101	,0x2223	,0x0000	), // "∣" DIVIDES
 /*<!dead_macron>*/	DEADTRANS(	L'2'	,0x0101	,0x2016	,0x0000	), // "‖" DOUBLE VERTICAL LINE
@@ -1954,10 +2128,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_macron>*/	DEADTRANS(	L'q'	,0x0101	,0xFE25	,0x0000	), // "︥" COMBINING MACRON RIGHT HALF
 /*<!dead_macron>*/	DEADTRANS(	L'R'	,0x0101	,0x027A	,0x0000	), // "ɺ" LATIN SMALL LETTER TURNED R WITH LONG LEG
 /*<!dead_macron>*/	DEADTRANS(	L'r'	,0x0101	,0x027C	,0x0000	), // "ɼ" LATIN SMALL LETTER R WITH LONG LEG
-/*<!dead_macron>*/	DEADTRANS(	L's'	,0x0101	,0x2A1B	,0x0000	), // "⨛" INTEGRAL WITH OVERBAR
 /*<!dead_macron>*/	DEADTRANS(	L'S'	,0x0101	,0x2A1B	,0x0000	), // "⨛" INTEGRAL WITH OVERBAR
-/*<!dead_macron>*/	DEADTRANS(	L't'	,0x0101	,0x2AE7	,0x0000	), // "⫧" SHORT DOWN TACK WITH OVERBAR
+/*<!dead_macron>*/	DEADTRANS(	L's'	,0x0101	,0x2A1B	,0x0000	), // "⨛" INTEGRAL WITH OVERBAR
 /*<!dead_macron>*/	DEADTRANS(	L'T'	,0x0101	,0x2AE7	,0x0000	), // "⫧" SHORT DOWN TACK WITH OVERBAR
+/*<!dead_macron>*/	DEADTRANS(	L't'	,0x0101	,0x2AE7	,0x0000	), // "⫧" SHORT DOWN TACK WITH OVERBAR
 /*<!dead_macron>*/	DEADTRANS(	L'U'	,0x0101	,0x016A	,0x0000	), // "Ū" LATIN CAPITAL LETTER U WITH MACRON
 /*<!dead_macron>*/	DEADTRANS(	L'u'	,0x0101	,0x016B	,0x0000	), // "ū" LATIN SMALL LETTER U WITH MACRON
 /*<!dead_macron>*/	DEADTRANS(	L'V'	,0x0101	,0xFE24	,0x0000	), // "︤" COMBINING MACRON LEFT HALF
@@ -1966,11 +2140,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_macron>*/	DEADTRANS(	L'y'	,0x0101	,0x0233	,0x0000	), // "ȳ" LATIN SMALL LETTER Y WITH MACRON
 /*<!dead_macron>*/	DEADTRANS(	L'Z'	,0x0101	,0xFE24	,0x0000	), // "︤" COMBINING MACRON LEFT HALF
 /*<!dead_macron>*/	DEADTRANS(	L'z'	,0x0101	,0xFE25	,0x0000	), // "︥" COMBINING MACRON RIGHT HALF
+/*<!dead_macron>*/	DEADTRANS(	0x00A0	,0x0101	,0x00AF	,0x0000	), // "¯" MACRON
+/*<!dead_macron>*/	DEADTRANS(	0x202F	,0x0101	,0x02C9	,0x0000	), // "ˉ" MODIFIER LETTER MACRON
+/*<!dead_macron>*/	DEADTRANS(	L' '	,0x0101	,0x0304	,0x0000	), // "̄" COMBINING MACRON
+/*<!dead_macron>*/	DEADTRANS(	0x200B	,0x0101	,0x0304	,0x0000	), // "̄" COMBINING MACRON
 /*<!dead_ogonek>*/	DEADTRANS(	0x1EBB	,0x01EB	,0x20E3	,0x0000	), // "⃣" COMBINING ENCLOSING KEYCAP
-/*<!dead_ogonek>*/	DEADTRANS(	0x00A0	,0x01EB	,0x02DB	,0x0000	), // "˛" OGONEK
-/*<!dead_ogonek>*/	DEADTRANS(	0x202F	,0x01EB	,0x02DB	,0x0000	), // "˛" OGONEK
-/*<!dead_ogonek>*/	DEADTRANS(	L' '	,0x01EB	,0x0328	,0x0000	), // "̨" COMBINING OGONEK
-/*<!dead_ogonek>*/	DEADTRANS(	0x200B	,0x01EB	,0x0328	,0x0000	), // "̨" COMBINING OGONEK
 /*<!dead_ogonek>*/	DEADTRANS(	L'0'	,0x01EB	,0x2789	,0x0000	), // "➉" DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 /*<!dead_ogonek>*/	DEADTRANS(	L'1'	,0x01EB	,0x2780	,0x0000	), // "➀" DINGBAT CIRCLED SANS-SERIF DIGIT ONE
 /*<!dead_ogonek>*/	DEADTRANS(	L'2'	,0x01EB	,0x2781	,0x0000	), // "➁" DINGBAT CIRCLED SANS-SERIF DIGIT TWO
@@ -1991,11 +2165,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_ogonek>*/	DEADTRANS(	L'o'	,0x01EB	,0x01EB	,0x0000	), // "ǫ" LATIN SMALL LETTER O WITH OGONEK
 /*<!dead_ogonek>*/	DEADTRANS(	L'U'	,0x01EB	,0x0172	,0x0000	), // "Ų" LATIN CAPITAL LETTER U WITH OGONEK
 /*<!dead_ogonek>*/	DEADTRANS(	L'u'	,0x01EB	,0x0173	,0x0000	), // "ų" LATIN SMALL LETTER U WITH OGONEK
+/*<!dead_ogonek>*/	DEADTRANS(	0x00A0	,0x01EB	,0x02DB	,0x0000	), // "˛" OGONEK
+/*<!dead_ogonek>*/	DEADTRANS(	0x202F	,0x01EB	,0x02DB	,0x0000	), // "˛" OGONEK
+/*<!dead_ogonek>*/	DEADTRANS(	L' '	,0x01EB	,0x0328	,0x0000	), // "̨" COMBINING OGONEK
+/*<!dead_ogonek>*/	DEADTRANS(	0x200B	,0x01EB	,0x0328	,0x0000	), // "̨" COMBINING OGONEK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'!'	,0x0273	,0xDF0A	,0x0000	), // High surrogate: D837; U+1DF0A "𝼊" LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
-/*<!dead_retroflexhook>*/	DEADTRANS(	0x00A0	,0x0273	,0x02FE	,0x0000	), // "˾" MODIFIER LETTER OPEN SHELF
-/*<!dead_retroflexhook>*/	DEADTRANS(	0x202F	,0x0273	,0x02FE	,0x0000	), // "˾" MODIFIER LETTER OPEN SHELF
-/*<!dead_retroflexhook>*/	DEADTRANS(	L' '	,0x0273	,0x0322	,0x0000	), // "̢" COMBINING RETROFLEX HOOK BELOW
-/*<!dead_retroflexhook>*/	DEADTRANS(	0x200B	,0x0273	,0x0322	,0x0000	), // "̢" COMBINING RETROFLEX HOOK BELOW
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'0'	,0x0273	,0x2672	,0x0000	), // "♲" UNIVERSAL RECYCLING SYMBOL
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'1'	,0x0273	,0x2673	,0x0000	), // "♳" RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'2'	,0x0273	,0x2674	,0x0000	), // "♴" RECYCLING SYMBOL FOR TYPE-2 PLASTICS
@@ -2027,6 +2201,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'u'	,0x0273	,0x1D99	,0x0000	), // "ᶙ" LATIN SMALL LETTER U WITH RETROFLEX HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'v'	,0x0273	,0x2C71	,0x0000	), // "ⱱ" LATIN SMALL LETTER V WITH RIGHT HOOK
 /*<!dead_retroflexhook>*/	DEADTRANS(	L'z'	,0x0273	,0x0290	,0x0000	), // "ʐ" LATIN SMALL LETTER Z WITH RETROFLEX HOOK
+/*<!dead_retroflexhook>*/	DEADTRANS(	0x00A0	,0x0273	,0x02FE	,0x0000	), // "˾" MODIFIER LETTER OPEN SHELF
+/*<!dead_retroflexhook>*/	DEADTRANS(	0x202F	,0x0273	,0x02FE	,0x0000	), // "˾" MODIFIER LETTER OPEN SHELF
+/*<!dead_retroflexhook>*/	DEADTRANS(	L' '	,0x0273	,0x0322	,0x0000	), // "̢" COMBINING RETROFLEX HOOK BELOW
+/*<!dead_retroflexhook>*/	DEADTRANS(	0x200B	,0x0273	,0x0322	,0x0000	), // "̢" COMBINING RETROFLEX HOOK BELOW
 /*<!dead_reversed>*/	DEADTRANS(	L'\''	,0x019E	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
 /*<!dead_reversed>*/	DEADTRANS(	0x2019	,0x019E	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
 /*<!dead_reversed>*/	DEADTRANS(	L'~'	,0x019E	,0x223D	,0x0000	), // "∽" REVERSED TILDE
@@ -2038,20 +2216,16 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_reversed>*/	DEADTRANS(	L';'	,0x019E	,0x204F	,0x0000	), // "⁏" REVERSED SEMICOLON
 /*<!dead_reversed>*/	DEADTRANS(	0x00A7	,0x019E	,0x204F	,0x0000	), // "⁏" REVERSED SEMICOLON
 /*<!dead_reversed>*/	DEADTRANS(	L'_'	,0x019E	,0x2B88	,0x0000	), // "⮈" LEFTWARDS BLACK CIRCLED WHITE ARROW
-/*<!dead_reversed>*/	DEADTRANS(	0x00A0	,0x019E	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
-/*<!dead_reversed>*/	DEADTRANS(	0x202F	,0x019E	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
-/*<!dead_reversed>*/	DEADTRANS(	L' '	,0x019E	,0x0314	,0x0000	), // "̔" COMBINING REVERSED COMMA ABOVE
-/*<!dead_reversed>*/	DEADTRANS(	0x200B	,0x019E	,0x0314	,0x0000	), // "̔" COMBINING REVERSED COMMA ABOVE
 /*<!dead_reversed>*/	DEADTRANS(	L'1'	,0x019E	,0x2216	,0x0000	), // "∖" SET MINUS
 /*<!dead_reversed>*/	DEADTRANS(	L'2'	,0x019E	,0x29F9	,0x0000	), // "⧹" BIG REVERSE SOLIDUS
 /*<!dead_reversed>*/	DEADTRANS(	L'3'	,0x019E	,0x27CD	,0x0000	), // "⟍" MATHEMATICAL FALLING DIAGONAL
 /*<!dead_reversed>*/	DEADTRANS(	L'4'	,0x019E	,0x29F5	,0x0000	), // "⧵" REVERSE SOLIDUS OPERATOR
-/*<!dead_reversed>*/	DEADTRANS(	L'b'	,0x019E	,0x204D	,0x0000	), // "⁍" BLACK RIGHTWARDS BULLET
 /*<!dead_reversed>*/	DEADTRANS(	L'B'	,0x019E	,0x204D	,0x0000	), // "⁍" BLACK RIGHTWARDS BULLET
+/*<!dead_reversed>*/	DEADTRANS(	L'b'	,0x019E	,0x204D	,0x0000	), // "⁍" BLACK RIGHTWARDS BULLET
 /*<!dead_reversed>*/	DEADTRANS(	L'C'	,0x019E	,0x2183	,0x0000	), // "Ↄ" ROMAN NUMERAL REVERSED ONE HUNDRED
 /*<!dead_reversed>*/	DEADTRANS(	L'c'	,0x019E	,0x2184	,0x0000	), // "ↄ" LATIN SMALL LETTER REVERSED C
-/*<!dead_reversed>*/	DEADTRANS(	L'd'	,0x019E	,0x204C	,0x0000	), // "⁌" BLACK LEFTWARDS BULLET
 /*<!dead_reversed>*/	DEADTRANS(	L'D'	,0x019E	,0x204C	,0x0000	), // "⁌" BLACK LEFTWARDS BULLET
+/*<!dead_reversed>*/	DEADTRANS(	L'd'	,0x019E	,0x204C	,0x0000	), // "⁌" BLACK LEFTWARDS BULLET
 /*<!dead_reversed>*/	DEADTRANS(	L'E'	,0x019E	,0x018E	,0x0000	), // "Ǝ" LATIN CAPITAL LETTER REVERSED E
 /*<!dead_reversed>*/	DEADTRANS(	L'e'	,0x019E	,0x0258	,0x0000	), // "ɘ" LATIN SMALL LETTER REVERSED E
 /*<!dead_reversed>*/	DEADTRANS(	L'F'	,0x019E	,0xA7FB	,0x0000	), // "ꟻ" LATIN EPIGRAPHIC LETTER REVERSED F
@@ -2068,14 +2242,18 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_reversed>*/	DEADTRANS(	0x00A7	,0x019E	,0x204B	,0x0000	), // "⁋" REVERSED PILCROW SIGN
 /*<!dead_reversed>*/	DEADTRANS(	L'q'	,0x019E	,0x0295	,0x0000	), // "ʕ" LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 /*<!dead_reversed>*/	DEADTRANS(	L'Q'	,0x019E	,0x02A2	,0x0000	), // "ʢ" LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
-/*<!dead_reversed>*/	DEADTRANS(	L'R'	,0x019E	,0x1D19	,0x0000	), // "ᴙ" LATIN LETTER SMALL CAPITAL REVERSED R
 /*<!dead_reversed>*/	DEADTRANS(	L'r'	,0x019E	,0x027F	,0x0000	), // "ɿ" LATIN SMALL LETTER REVERSED R WITH FISHHOOK
+/*<!dead_reversed>*/	DEADTRANS(	L'R'	,0x019E	,0x1D19	,0x0000	), // "ᴙ" LATIN LETTER SMALL CAPITAL REVERSED R
 /*<!dead_reversed>*/	DEADTRANS(	L'S'	,0x019E	,0x01AA	,0x0000	), // "ƪ" LATIN LETTER REVERSED ESH LOOP
 /*<!dead_reversed>*/	DEADTRANS(	L's'	,0x019E	,0x0285	,0x0000	), // "ʅ" LATIN SMALL LETTER SQUAT REVERSED ESH
 /*<!dead_reversed>*/	DEADTRANS(	L'x'	,0x019E	,0x025C	,0x0000	), // "ɜ" LATIN SMALL LETTER REVERSED OPEN E
 /*<!dead_reversed>*/	DEADTRANS(	L'X'	,0x019E	,0xA7AB	,0x0000	), // "Ɜ" LATIN CAPITAL LETTER REVERSED OPEN E
 /*<!dead_reversed>*/	DEADTRANS(	L'Z'	,0x019E	,0x01B8	,0x0000	), // "Ƹ" LATIN CAPITAL LETTER EZH REVERSED
 /*<!dead_reversed>*/	DEADTRANS(	L'z'	,0x019E	,0x01B9	,0x0000	), // "ƹ" LATIN SMALL LETTER EZH REVERSED
+/*<!dead_reversed>*/	DEADTRANS(	0x00A0	,0x019E	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
+/*<!dead_reversed>*/	DEADTRANS(	0x202F	,0x019E	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
+/*<!dead_reversed>*/	DEADTRANS(	L' '	,0x019E	,0x0314	,0x0000	), // "̔" COMBINING REVERSED COMMA ABOVE
+/*<!dead_reversed>*/	DEADTRANS(	0x200B	,0x019E	,0x0314	,0x0000	), // "̔" COMBINING REVERSED COMMA ABOVE
 /*<!dead_stroke>*/	DEADTRANS(	L'^'	,0x00F8	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 /*<!dead_stroke>*/	DEADTRANS(	L'|'	,0x00F8	,0x2224	,0x0000	), // "∤" DOES NOT DIVIDE
 /*<!dead_stroke>*/	DEADTRANS(	L'='	,0x00F8	,0x2260	,0x0000	), // "≠" NOT EQUAL TO
@@ -2083,10 +2261,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_stroke>*/	DEADTRANS(	L'<'	,0x00F8	,0x226E	,0x0000	), // "≮" NOT LESS-THAN
 /*<!dead_stroke>*/	DEADTRANS(	L'"'	,0x00F8	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
 /*<!dead_stroke>*/	DEADTRANS(	0x20AC	,0x00F8	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
-/*<!dead_stroke>*/	DEADTRANS(	0x00A0	,0x00F8	,0x2215	,0x0000	), // "∕" DIVISION SLASH
-/*<!dead_stroke>*/	DEADTRANS(	0x202F	,0x00F8	,0x2215	,0x0000	), // "∕" DIVISION SLASH
-/*<!dead_stroke>*/	DEADTRANS(	L' '	,0x00F8	,0x0338	,0x0000	), // "̸" COMBINING LONG SOLIDUS OVERLAY
-/*<!dead_stroke>*/	DEADTRANS(	0x200B	,0x00F8	,0x0338	,0x0000	), // "̸" COMBINING LONG SOLIDUS OVERLAY
 /*<!dead_stroke>*/	DEADTRANS(	L'1'	,0x00F8	,0x2215	,0x0000	), // "∕" DIVISION SLASH
 /*<!dead_stroke>*/	DEADTRANS(	L'2'	,0x00F8	,0x29F8	,0x0000	), // "⧸" BIG SOLIDUS
 /*<!dead_stroke>*/	DEADTRANS(	L'3'	,0x00F8	,0x27CB	,0x0000	), // "⟋" MATHEMATICAL RISING DIAGONAL
@@ -2137,15 +2311,15 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_stroke>*/	DEADTRANS(	L'y'	,0x00F8	,0x024F	,0x0000	), // "ɏ" LATIN SMALL LETTER Y WITH STROKE (lenient)
 /*<!dead_stroke>*/	DEADTRANS(	L'Z'	,0x00F8	,0x01B5	,0x0000	), // "Ƶ" LATIN CAPITAL LETTER Z WITH STROKE (lenient)
 /*<!dead_stroke>*/	DEADTRANS(	L'z'	,0x00F8	,0x01B6	,0x0000	), // "ƶ" LATIN SMALL LETTER Z WITH STROKE (lenient)
+/*<!dead_stroke>*/	DEADTRANS(	0x00A0	,0x00F8	,0x2215	,0x0000	), // "∕" DIVISION SLASH
+/*<!dead_stroke>*/	DEADTRANS(	0x202F	,0x00F8	,0x2215	,0x0000	), // "∕" DIVISION SLASH
+/*<!dead_stroke>*/	DEADTRANS(	L' '	,0x00F8	,0x0338	,0x0000	), // "̸" COMBINING LONG SOLIDUS OVERLAY
+/*<!dead_stroke>*/	DEADTRANS(	0x200B	,0x00F8	,0x0338	,0x0000	), // "̸" COMBINING LONG SOLIDUS OVERLAY
 /*<!dead_subscript>*/	DEADTRANS(	L'='	,L'_'	,0x208C	,0x0000	), // "₌" SUBSCRIPT EQUALS SIGN
 /*<!dead_subscript>*/	DEADTRANS(	L'-'	,L'_'	,0x208B	,0x0000	), // "₋" SUBSCRIPT MINUS
 /*<!dead_subscript>*/	DEADTRANS(	L'('	,L'_'	,0x208D	,0x0000	), // "₍" SUBSCRIPT LEFT PARENTHESIS
 /*<!dead_subscript>*/	DEADTRANS(	L')'	,L'_'	,0x208E	,0x0000	), // "₎" SUBSCRIPT RIGHT PARENTHESIS
 /*<!dead_subscript>*/	DEADTRANS(	L'+'	,L'_'	,0x208A	,0x0000	), // "₊" SUBSCRIPT PLUS SIGN
-/*<!dead_subscript>*/	DEADTRANS(	0x00A0	,L'_'	,0x005F	,0x0000	), // "_" LOW LINE
-/*<!dead_subscript>*/	DEADTRANS(	0x202F	,L'_'	,0x005F	,0x0000	), // "_" LOW LINE
-/*<!dead_subscript>*/	DEADTRANS(	L' '	,L'_'	,0x0332	,0x0000	), // "̲" COMBINING LOW LINE
-/*<!dead_subscript>*/	DEADTRANS(	0x200B	,L'_'	,0x0332	,0x0000	), // "̲" COMBINING LOW LINE
 /*<!dead_subscript>*/	DEADTRANS(	L'0'	,L'_'	,0x2080	,0x0000	), // "₀" SUBSCRIPT ZERO
 /*<!dead_subscript>*/	DEADTRANS(	L'1'	,L'_'	,0x2081	,0x0000	), // "₁" SUBSCRIPT ONE
 /*<!dead_subscript>*/	DEADTRANS(	L'2'	,L'_'	,0x2082	,0x0000	), // "₂" SUBSCRIPT TWO
@@ -2156,59 +2330,63 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_subscript>*/	DEADTRANS(	L'7'	,L'_'	,0x2087	,0x0000	), // "₇" SUBSCRIPT SEVEN
 /*<!dead_subscript>*/	DEADTRANS(	L'8'	,L'_'	,0x2088	,0x0000	), // "₈" SUBSCRIPT EIGHT
 /*<!dead_subscript>*/	DEADTRANS(	L'9'	,L'_'	,0x2089	,0x0000	), // "₉" SUBSCRIPT NINE
-/*<!dead_subscript>*/	DEADTRANS(	L'a'	,L'_'	,0x2090	,0x0000	), // "ₐ" LATIN SUBSCRIPT SMALL LETTER A
 /*<!dead_subscript>*/	DEADTRANS(	L'A'	,L'_'	,0x1D00	,0x0000	), // "ᴀ" LATIN LETTER SMALL CAPITAL A
+/*<!dead_subscript>*/	DEADTRANS(	L'a'	,L'_'	,0x2090	,0x0000	), // "ₐ" LATIN SUBSCRIPT SMALL LETTER A
 /*<!dead_subscript>*/	DEADTRANS(	L'B'	,L'_'	,0x0299	,0x0000	), // "ʙ" LATIN LETTER SMALL CAPITAL B
 /*<!dead_subscript>*/	DEADTRANS(	L'b'	,L'_'	,0x1D66	,0x0000	), // "ᵦ" GREEK SUBSCRIPT SMALL LETTER BETA
 /*<!dead_subscript>*/	DEADTRANS(	L'C'	,L'_'	,0x1D04	,0x0000	), // "ᴄ" LATIN LETTER SMALL CAPITAL C
 /*<!dead_subscript>*/	DEADTRANS(	L'c'	,L'_'	,0x1D28	,0x0000	), // "ᴨ" GREEK LETTER SMALL CAPITAL PI
 /*<!dead_subscript>*/	DEADTRANS(	L'D'	,L'_'	,0x1D05	,0x0000	), // "ᴅ" LATIN LETTER SMALL CAPITAL D
 /*<!dead_subscript>*/	DEADTRANS(	L'd'	,L'_'	,0x1D29	,0x0000	), // "ᴩ" GREEK LETTER SMALL CAPITAL RHO
-/*<!dead_subscript>*/	DEADTRANS(	L'e'	,L'_'	,0x2091	,0x0000	), // "ₑ" LATIN SUBSCRIPT SMALL LETTER E
 /*<!dead_subscript>*/	DEADTRANS(	L'E'	,L'_'	,0x1D07	,0x0000	), // "ᴇ" LATIN LETTER SMALL CAPITAL E
+/*<!dead_subscript>*/	DEADTRANS(	L'e'	,L'_'	,0x2091	,0x0000	), // "ₑ" LATIN SUBSCRIPT SMALL LETTER E
 /*<!dead_subscript>*/	DEADTRANS(	0x2026	,L'_'	,0x20E8	,0x0000	), // "⃨" COMBINING TRIPLE UNDERDOT
-/*<!dead_subscript>*/	DEADTRANS(	L'F'	,L'_'	,0xA730	,0x0000	), // "ꜰ" LATIN LETTER SMALL CAPITAL F
 /*<!dead_subscript>*/	DEADTRANS(	L'f'	,L'_'	,0x1D69	,0x0000	), // "ᵩ" GREEK SUBSCRIPT SMALL LETTER PHI
+/*<!dead_subscript>*/	DEADTRANS(	L'F'	,L'_'	,0xA730	,0x0000	), // "ꜰ" LATIN LETTER SMALL CAPITAL F
 /*<!dead_subscript>*/	DEADTRANS(	L'G'	,L'_'	,0x0262	,0x0000	), // "ɢ" LATIN LETTER SMALL CAPITAL G
 /*<!dead_subscript>*/	DEADTRANS(	L'g'	,L'_'	,0x1D26	,0x0000	), // "ᴦ" GREEK LETTER SMALL CAPITAL GAMMA
-/*<!dead_subscript>*/	DEADTRANS(	L'h'	,L'_'	,0x2095	,0x0000	), // "ₕ" LATIN SUBSCRIPT SMALL LETTER H
 /*<!dead_subscript>*/	DEADTRANS(	L'H'	,L'_'	,0x029C	,0x0000	), // "ʜ" LATIN LETTER SMALL CAPITAL H
-/*<!dead_subscript>*/	DEADTRANS(	L'i'	,L'_'	,0x1D62	,0x0000	), // "ᵢ" LATIN SUBSCRIPT SMALL LETTER I
+/*<!dead_subscript>*/	DEADTRANS(	L'h'	,L'_'	,0x2095	,0x0000	), // "ₕ" LATIN SUBSCRIPT SMALL LETTER H
 /*<!dead_subscript>*/	DEADTRANS(	L'I'	,L'_'	,0x026A	,0x0000	), // "ɪ" LATIN LETTER SMALL CAPITAL I
-/*<!dead_subscript>*/	DEADTRANS(	L'j'	,L'_'	,0x2C7C	,0x0000	), // "ⱼ" LATIN SUBSCRIPT SMALL LETTER J
+/*<!dead_subscript>*/	DEADTRANS(	L'i'	,L'_'	,0x1D62	,0x0000	), // "ᵢ" LATIN SUBSCRIPT SMALL LETTER I
 /*<!dead_subscript>*/	DEADTRANS(	L'J'	,L'_'	,0x1D0A	,0x0000	), // "ᴊ" LATIN LETTER SMALL CAPITAL J
-/*<!dead_subscript>*/	DEADTRANS(	L'k'	,L'_'	,0x2096	,0x0000	), // "ₖ" LATIN SUBSCRIPT SMALL LETTER K
+/*<!dead_subscript>*/	DEADTRANS(	L'j'	,L'_'	,0x2C7C	,0x0000	), // "ⱼ" LATIN SUBSCRIPT SMALL LETTER J
 /*<!dead_subscript>*/	DEADTRANS(	L'K'	,L'_'	,0x1D0B	,0x0000	), // "ᴋ" LATIN LETTER SMALL CAPITAL K
-/*<!dead_subscript>*/	DEADTRANS(	L'l'	,L'_'	,0x2097	,0x0000	), // "ₗ" LATIN SUBSCRIPT SMALL LETTER L
+/*<!dead_subscript>*/	DEADTRANS(	L'k'	,L'_'	,0x2096	,0x0000	), // "ₖ" LATIN SUBSCRIPT SMALL LETTER K
 /*<!dead_subscript>*/	DEADTRANS(	L'L'	,L'_'	,0x029F	,0x0000	), // "ʟ" LATIN LETTER SMALL CAPITAL L
-/*<!dead_subscript>*/	DEADTRANS(	L'm'	,L'_'	,0x2098	,0x0000	), // "ₘ" LATIN SUBSCRIPT SMALL LETTER M
+/*<!dead_subscript>*/	DEADTRANS(	L'l'	,L'_'	,0x2097	,0x0000	), // "ₗ" LATIN SUBSCRIPT SMALL LETTER L
 /*<!dead_subscript>*/	DEADTRANS(	L'M'	,L'_'	,0x1D0D	,0x0000	), // "ᴍ" LATIN LETTER SMALL CAPITAL M
-/*<!dead_subscript>*/	DEADTRANS(	L'n'	,L'_'	,0x2099	,0x0000	), // "ₙ" LATIN SUBSCRIPT SMALL LETTER N
+/*<!dead_subscript>*/	DEADTRANS(	L'm'	,L'_'	,0x2098	,0x0000	), // "ₘ" LATIN SUBSCRIPT SMALL LETTER M
 /*<!dead_subscript>*/	DEADTRANS(	L'N'	,L'_'	,0x0274	,0x0000	), // "ɴ" LATIN LETTER SMALL CAPITAL N
-/*<!dead_subscript>*/	DEADTRANS(	L'o'	,L'_'	,0x2092	,0x0000	), // "ₒ" LATIN SUBSCRIPT SMALL LETTER O
+/*<!dead_subscript>*/	DEADTRANS(	L'n'	,L'_'	,0x2099	,0x0000	), // "ₙ" LATIN SUBSCRIPT SMALL LETTER N
 /*<!dead_subscript>*/	DEADTRANS(	L'O'	,L'_'	,0x1D0F	,0x0000	), // "ᴏ" LATIN LETTER SMALL CAPITAL O
-/*<!dead_subscript>*/	DEADTRANS(	L'p'	,L'_'	,0x209A	,0x0000	), // "ₚ" LATIN SUBSCRIPT SMALL LETTER P
+/*<!dead_subscript>*/	DEADTRANS(	L'o'	,L'_'	,0x2092	,0x0000	), // "ₒ" LATIN SUBSCRIPT SMALL LETTER O
 /*<!dead_subscript>*/	DEADTRANS(	L'P'	,L'_'	,0x1D18	,0x0000	), // "ᴘ" LATIN LETTER SMALL CAPITAL P
-/*<!dead_subscript>*/	DEADTRANS(	L'Q'	,L'_'	,0xA7AF	,0x0000	), // "ꞯ" LATIN LETTER SMALL CAPITAL Q
+/*<!dead_subscript>*/	DEADTRANS(	L'p'	,L'_'	,0x209A	,0x0000	), // "ₚ" LATIN SUBSCRIPT SMALL LETTER P
 /*<!dead_subscript>*/	DEADTRANS(	L'q'	,L'_'	,0x1D68	,0x0000	), // "ᵨ" GREEK SUBSCRIPT SMALL LETTER RHO
-/*<!dead_subscript>*/	DEADTRANS(	L'r'	,L'_'	,0x1D63	,0x0000	), // "ᵣ" LATIN SUBSCRIPT SMALL LETTER R
+/*<!dead_subscript>*/	DEADTRANS(	L'Q'	,L'_'	,0xA7AF	,0x0000	), // "ꞯ" LATIN LETTER SMALL CAPITAL Q
 /*<!dead_subscript>*/	DEADTRANS(	L'R'	,L'_'	,0x0280	,0x0000	), // "ʀ" LATIN LETTER SMALL CAPITAL R
+/*<!dead_subscript>*/	DEADTRANS(	L'r'	,L'_'	,0x1D63	,0x0000	), // "ᵣ" LATIN SUBSCRIPT SMALL LETTER R
 /*<!dead_subscript>*/	DEADTRANS(	L's'	,L'_'	,0x209B	,0x0000	), // "ₛ" LATIN SUBSCRIPT SMALL LETTER S
 /*<!dead_subscript>*/	DEADTRANS(	L'S'	,L'_'	,0xA731	,0x0000	), // "ꜱ" LATIN LETTER SMALL CAPITAL S
-/*<!dead_subscript>*/	DEADTRANS(	L't'	,L'_'	,0x209C	,0x0000	), // "ₜ" LATIN SUBSCRIPT SMALL LETTER T
 /*<!dead_subscript>*/	DEADTRANS(	L'T'	,L'_'	,0x1D1B	,0x0000	), // "ᴛ" LATIN LETTER SMALL CAPITAL T
-/*<!dead_subscript>*/	DEADTRANS(	L'u'	,L'_'	,0x1D64	,0x0000	), // "ᵤ" LATIN SUBSCRIPT SMALL LETTER U
+/*<!dead_subscript>*/	DEADTRANS(	L't'	,L'_'	,0x209C	,0x0000	), // "ₜ" LATIN SUBSCRIPT SMALL LETTER T
 /*<!dead_subscript>*/	DEADTRANS(	L'U'	,L'_'	,0x1D1C	,0x0000	), // "ᴜ" LATIN LETTER SMALL CAPITAL U
-/*<!dead_subscript>*/	DEADTRANS(	L'v'	,L'_'	,0x1D65	,0x0000	), // "ᵥ" LATIN SUBSCRIPT SMALL LETTER V
+/*<!dead_subscript>*/	DEADTRANS(	L'u'	,L'_'	,0x1D64	,0x0000	), // "ᵤ" LATIN SUBSCRIPT SMALL LETTER U
 /*<!dead_subscript>*/	DEADTRANS(	L'V'	,L'_'	,0x1D20	,0x0000	), // "ᴠ" LATIN LETTER SMALL CAPITAL V
+/*<!dead_subscript>*/	DEADTRANS(	L'v'	,L'_'	,0x1D65	,0x0000	), // "ᵥ" LATIN SUBSCRIPT SMALL LETTER V
 /*<!dead_subscript>*/	DEADTRANS(	L'W'	,L'_'	,0x1D21	,0x0000	), // "ᴡ" LATIN LETTER SMALL CAPITAL W
 /*<!dead_subscript>*/	DEADTRANS(	L'w'	,L'_'	,0x1D27	,0x0000	), // "ᴧ" GREEK LETTER SMALL CAPITAL LAMDA
-/*<!dead_subscript>*/	DEADTRANS(	L'x'	,L'_'	,0x2093	,0x0000	), // "ₓ" LATIN SUBSCRIPT SMALL LETTER X
 /*<!dead_subscript>*/	DEADTRANS(	L'X'	,L'_'	,0x1D6A	,0x0000	), // "ᵪ" GREEK SUBSCRIPT SMALL LETTER CHI
+/*<!dead_subscript>*/	DEADTRANS(	L'x'	,L'_'	,0x2093	,0x0000	), // "ₓ" LATIN SUBSCRIPT SMALL LETTER X
 /*<!dead_subscript>*/	DEADTRANS(	L'Y'	,L'_'	,0x028F	,0x0000	), // "ʏ" LATIN LETTER SMALL CAPITAL Y
 /*<!dead_subscript>*/	DEADTRANS(	L'y'	,L'_'	,0x1D67	,0x0000	), // "ᵧ" GREEK SUBSCRIPT SMALL LETTER GAMMA
 /*<!dead_subscript>*/	DEADTRANS(	L'Z'	,L'_'	,0x1D22	,0x0000	), // "ᴢ" LATIN LETTER SMALL CAPITAL Z
 /*<!dead_subscript>*/	DEADTRANS(	L'z'	,L'_'	,0x1D2A	,0x0000	), // "ᴪ" GREEK LETTER SMALL CAPITAL PSI
+/*<!dead_subscript>*/	DEADTRANS(	0x00A0	,L'_'	,0x005F	,0x0000	), // "_" LOW LINE
+/*<!dead_subscript>*/	DEADTRANS(	0x202F	,L'_'	,0x005F	,0x0000	), // "_" LOW LINE
+/*<!dead_subscript>*/	DEADTRANS(	L' '	,L'_'	,0x0332	,0x0000	), // "̲" COMBINING LOW LINE
+/*<!dead_subscript>*/	DEADTRANS(	0x200B	,L'_'	,0x0332	,0x0000	), // "̲" COMBINING LOW LINE
 /*<!dead_superscript>*/	DEADTRANS(	0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 /*<!dead_superscript>*/	DEADTRANS(	L'\''	,L'^'	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!dead_superscript>*/	DEADTRANS(	0x2019	,L'^'	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
@@ -2226,10 +2404,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_superscript>*/	DEADTRANS(	L'+'	,L'^'	,0x207A	,0x0000	), // "⁺" SUPERSCRIPT PLUS SIGN
 /*<!dead_superscript>*/	DEADTRANS(	L'"'	,L'^'	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!dead_superscript>*/	DEADTRANS(	0x20AC	,L'^'	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-/*<!dead_superscript>*/	DEADTRANS(	0x00A0	,L'^'	,0x203E	,0x0000	), // "‾" OVERLINE
-/*<!dead_superscript>*/	DEADTRANS(	0x202F	,L'^'	,0x203E	,0x0000	), // "‾" OVERLINE
-/*<!dead_superscript>*/	DEADTRANS(	L' '	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
-/*<!dead_superscript>*/	DEADTRANS(	0x200B	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
 /*<!dead_superscript>*/	DEADTRANS(	L'0'	,L'^'	,0x2070	,0x0000	), // "⁰" SUPERSCRIPT ZERO
 /*<!dead_superscript>*/	DEADTRANS(	L'1'	,L'^'	,0x00B9	,0x0000	), // "¹" SUPERSCRIPT ONE
 /*<!dead_superscript>*/	DEADTRANS(	L'2'	,L'^'	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO
@@ -2272,12 +2446,12 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_superscript>*/	DEADTRANS(	L'o'	,L'^'	,0x1D52	,0x0000	), // "ᵒ" MODIFIER LETTER SMALL O
 /*<!dead_superscript>*/	DEADTRANS(	L'P'	,L'^'	,0x1D3E	,0x0000	), // "ᴾ" MODIFIER LETTER CAPITAL P
 /*<!dead_superscript>*/	DEADTRANS(	L'p'	,L'^'	,0x1D56	,0x0000	), // "ᵖ" MODIFIER LETTER SMALL P
-/*<!dead_superscript>*/	DEADTRANS(	L'q'	,L'^'	,0xDFA5	,0x0000	), // High surrogate: D801; U+107A5 "𐞥" MODIFIER LETTER SMALL Q
 /*<!dead_superscript>*/	DEADTRANS(	L'Q'	,L'^'	,0xA7F4	,0x0000	), // "ꟴ" MODIFIER LETTER CAPITAL Q
+/*<!dead_superscript>*/	DEADTRANS(	L'q'	,L'^'	,0xDFA5	,0x0000	), // High surrogate: D801; U+107A5 "𐞥" MODIFIER LETTER SMALL Q
 /*<!dead_superscript>*/	DEADTRANS(	L'r'	,L'^'	,0x02B3	,0x0000	), // "ʳ" MODIFIER LETTER SMALL R
 /*<!dead_superscript>*/	DEADTRANS(	L'R'	,L'^'	,0x1D3F	,0x0000	), // "ᴿ" MODIFIER LETTER CAPITAL R
-/*<!dead_superscript>*/	DEADTRANS(	L'S'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
 /*<!dead_superscript>*/	DEADTRANS(	L's'	,L'^'	,0x02E2	,0x0000	), // "ˢ" MODIFIER LETTER SMALL S
+/*<!dead_superscript>*/	DEADTRANS(	L'S'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
 /*<!dead_superscript>*/	DEADTRANS(	L'T'	,L'^'	,0x1D40	,0x0000	), // "ᵀ" MODIFIER LETTER CAPITAL T
 /*<!dead_superscript>*/	DEADTRANS(	L't'	,L'^'	,0x1D57	,0x0000	), // "ᵗ" MODIFIER LETTER SMALL T
 /*<!dead_superscript>*/	DEADTRANS(	L'U'	,L'^'	,0x1D41	,0x0000	), // "ᵁ" MODIFIER LETTER CAPITAL U
@@ -2286,12 +2460,16 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_superscript>*/	DEADTRANS(	L'V'	,L'^'	,0x2C7D	,0x0000	), // "ⱽ" MODIFIER LETTER CAPITAL V
 /*<!dead_superscript>*/	DEADTRANS(	L'w'	,L'^'	,0x02B7	,0x0000	), // "ʷ" MODIFIER LETTER SMALL W
 /*<!dead_superscript>*/	DEADTRANS(	L'W'	,L'^'	,0x1D42	,0x0000	), // "ᵂ" MODIFIER LETTER CAPITAL W
-/*<!dead_superscript>*/	DEADTRANS(	L'X'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
 /*<!dead_superscript>*/	DEADTRANS(	L'x'	,L'^'	,0x02E3	,0x0000	), // "ˣ" MODIFIER LETTER SMALL X
-/*<!dead_superscript>*/	DEADTRANS(	L'Y'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
+/*<!dead_superscript>*/	DEADTRANS(	L'X'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
 /*<!dead_superscript>*/	DEADTRANS(	L'y'	,L'^'	,0x02B8	,0x0000	), // "ʸ" MODIFIER LETTER SMALL Y
-/*<!dead_superscript>*/	DEADTRANS(	L'Z'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
+/*<!dead_superscript>*/	DEADTRANS(	L'Y'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
 /*<!dead_superscript>*/	DEADTRANS(	L'z'	,L'^'	,0x1DBB	,0x0000	), // "ᶻ" MODIFIER LETTER SMALL Z
+/*<!dead_superscript>*/	DEADTRANS(	L'Z'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
+/*<!dead_superscript>*/	DEADTRANS(	0x00A0	,L'^'	,0x203E	,0x0000	), // "‾" OVERLINE
+/*<!dead_superscript>*/	DEADTRANS(	0x202F	,L'^'	,0x203E	,0x0000	), // "‾" OVERLINE
+/*<!dead_superscript>*/	DEADTRANS(	L' '	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
+/*<!dead_superscript>*/	DEADTRANS(	0x200B	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
 /*<!dead_tilde>*/	DEADTRANS(	L'*'	,0x00F5	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
 /*<!dead_tilde>*/	DEADTRANS(	L'='	,0x00F5	,0x0360	,0x0000	), // "͠" COMBINING DOUBLE TILDE
 /*<!dead_tilde>*/	DEADTRANS(	L'#'	,0x00F5	,0x29E4	,0x0000	), // "⧤" EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
@@ -2299,10 +2477,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_tilde>*/	DEADTRANS(	L'"'	,0x00F5	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!dead_tilde>*/	DEADTRANS(	0x20AC	,0x00F5	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!dead_tilde>*/	DEADTRANS(	L'_'	,0x00F5	,0x2053	,0x0000	), // "⁓" SWUNG DASH
-/*<!dead_tilde>*/	DEADTRANS(	0x00A0	,0x00F5	,0x007E	,0x0000	), // "~" TILDE
-/*<!dead_tilde>*/	DEADTRANS(	0x202F	,0x00F5	,0x02DC	,0x0000	), // "˜" SMALL TILDE
-/*<!dead_tilde>*/	DEADTRANS(	L' '	,0x00F5	,0x0303	,0x0000	), // "̃" COMBINING TILDE
-/*<!dead_tilde>*/	DEADTRANS(	0x200B	,0x00F5	,0x0303	,0x0000	), // "̃" COMBINING TILDE
 /*<!dead_tilde>*/	DEADTRANS(	L'0'	,0x00F5	,0x02D5	,0x0000	), // "˕" MODIFIER LETTER DOWN TACK
 /*<!dead_tilde>*/	DEADTRANS(	L'1'	,0x00F5	,0x2020	,0x0000	), // "†" DAGGER
 /*<!dead_tilde>*/	DEADTRANS(	L'2'	,0x00F5	,0x2021	,0x0000	), // "‡" DOUBLE DAGGER
@@ -2351,6 +2525,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_tilde>*/	DEADTRANS(	L'Y'	,0x00F5	,0x1EF8	,0x0000	), // "Ỹ" LATIN CAPITAL LETTER Y WITH TILDE
 /*<!dead_tilde>*/	DEADTRANS(	L'y'	,0x00F5	,0x1EF9	,0x0000	), // "ỹ" LATIN SMALL LETTER Y WITH TILDE
 /*<!dead_tilde>*/	DEADTRANS(	L'z'	,0x00F5	,0x1D76	,0x0000	), // "ᵶ" LATIN SMALL LETTER Z WITH MIDDLE TILDE
+/*<!dead_tilde>*/	DEADTRANS(	0x00A0	,0x00F5	,0x007E	,0x0000	), // "~" TILDE
+/*<!dead_tilde>*/	DEADTRANS(	0x202F	,0x00F5	,0x02DC	,0x0000	), // "˜" SMALL TILDE
+/*<!dead_tilde>*/	DEADTRANS(	L' '	,0x00F5	,0x0303	,0x0000	), // "̃" COMBINING TILDE
+/*<!dead_tilde>*/	DEADTRANS(	0x200B	,0x00F5	,0x0303	,0x0000	), // "̃" COMBINING TILDE
 /*<!dead_turned>*/	DEADTRANS(	L'&'	,0x0250	,0x214B	,0x0000	), // "⅋" TURNED AMPERSAND
 /*<!dead_turned>*/	DEADTRANS(	L'\''	,0x0250	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
 /*<!dead_turned>*/	DEADTRANS(	0x2019	,0x0250	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
@@ -2362,10 +2540,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_turned>*/	DEADTRANS(	L'?'	,0x0250	,0x00BF	,0x0000	), // "¿" INVERTED QUESTION MARK
 /*<!dead_turned>*/	DEADTRANS(	L';'	,0x0250	,0x2E35	,0x0000	), // "⸵" TURNED SEMICOLON
 /*<!dead_turned>*/	DEADTRANS(	0x00A7	,0x0250	,0x2E35	,0x0000	), // "⸵" TURNED SEMICOLON
-/*<!dead_turned>*/	DEADTRANS(	0x00A0	,0x0250	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
-/*<!dead_turned>*/	DEADTRANS(	0x202F	,0x0250	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
-/*<!dead_turned>*/	DEADTRANS(	L' '	,0x0250	,0x0312	,0x0000	), // "̒" COMBINING TURNED COMMA ABOVE
-/*<!dead_turned>*/	DEADTRANS(	0x200B	,0x0250	,0x0312	,0x0000	), // "̒" COMBINING TURNED COMMA ABOVE
 /*<!dead_turned>*/	DEADTRANS(	L'2'	,0x0250	,0x218A	,0x0000	), // "↊" TURNED DIGIT TWO
 /*<!dead_turned>*/	DEADTRANS(	L'3'	,0x0250	,0x218B	,0x0000	), // "↋" TURNED DIGIT THREE
 /*<!dead_turned>*/	DEADTRANS(	L'8'	,0x0250	,0x221E	,0x0000	), // "∞" INFINITY
@@ -2379,12 +2553,12 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_turned>*/	DEADTRANS(	L'e'	,0x0250	,0x01DD	,0x0000	), // "ǝ" LATIN SMALL LETTER TURNED E
 /*<!dead_turned>*/	DEADTRANS(	L'f'	,0x0250	,0x025F	,0x0000	), // "ɟ" LATIN SMALL LETTER DOTLESS J WITH STROKE
 /*<!dead_turned>*/	DEADTRANS(	L'F'	,0x0250	,0xA4DE	,0x0000	), // "ꓞ" LISU LETTER TSHA
-/*<!dead_turned>*/	DEADTRANS(	L'G'	,0x0250	,0x2141	,0x0000	), // "⅁" TURNED SANS-SERIF CAPITAL G
 /*<!dead_turned>*/	DEADTRANS(	L'g'	,0x0250	,0x1D77	,0x0000	), // "ᵷ" LATIN SMALL LETTER TURNED G
+/*<!dead_turned>*/	DEADTRANS(	L'G'	,0x0250	,0x2141	,0x0000	), // "⅁" TURNED SANS-SERIF CAPITAL G
 /*<!dead_turned>*/	DEADTRANS(	L'h'	,0x0250	,0x0265	,0x0000	), // "ɥ" LATIN SMALL LETTER TURNED H
 /*<!dead_turned>*/	DEADTRANS(	L'H'	,0x0250	,0xA78D	,0x0000	), // "Ɥ" LATIN CAPITAL LETTER TURNED H
-/*<!dead_turned>*/	DEADTRANS(	L'I'	,0x0250	,0xA7F7	,0x0000	), // "ꟷ" LATIN EPIGRAPHIC LETTER SIDEWAYS I
 /*<!dead_turned>*/	DEADTRANS(	L'i'	,0x0250	,0x1D09	,0x0000	), // "ᴉ" LATIN SMALL LETTER TURNED I
+/*<!dead_turned>*/	DEADTRANS(	L'I'	,0x0250	,0xA7F7	,0x0000	), // "ꟷ" LATIN EPIGRAPHIC LETTER SIDEWAYS I
 /*<!dead_turned>*/	DEADTRANS(	L'J'	,0x0250	,0xA4E9	,0x0000	), // "ꓩ" LISU LETTER FA
 /*<!dead_turned>*/	DEADTRANS(	L'k'	,0x0250	,0x029E	,0x0000	), // "ʞ" LATIN SMALL LETTER TURNED K
 /*<!dead_turned>*/	DEADTRANS(	L'K'	,0x0250	,0xA7B0	,0x0000	), // "Ʞ" LATIN CAPITAL LETTER TURNED K
@@ -2402,14 +2576,18 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_turned>*/	DEADTRANS(	L'S'	,0x0250	,0xA4E2	,0x0000	), // "ꓢ" LISU LETTER SA
 /*<!dead_turned>*/	DEADTRANS(	L't'	,0x0250	,0x0287	,0x0000	), // "ʇ" LATIN SMALL LETTER TURNED T
 /*<!dead_turned>*/	DEADTRANS(	L'T'	,0x0250	,0xA7B1	,0x0000	), // "Ʇ" LATIN CAPITAL LETTER TURNED T
-/*<!dead_turned>*/	DEADTRANS(	L'u'	,0x0250	,0xAB51	,0x0000	), // "ꭑ" LATIN SMALL LETTER TURNED UI
 /*<!dead_turned>*/	DEADTRANS(	L'U'	,0x0250	,0xA4F5	,0x0000	), // "ꓵ" LISU LETTER UE
+/*<!dead_turned>*/	DEADTRANS(	L'u'	,0x0250	,0xAB51	,0x0000	), // "ꭑ" LATIN SMALL LETTER TURNED UI
 /*<!dead_turned>*/	DEADTRANS(	L'V'	,0x0250	,0x0245	,0x0000	), // "Ʌ" LATIN CAPITAL LETTER TURNED V
 /*<!dead_turned>*/	DEADTRANS(	L'v'	,0x0250	,0x028C	,0x0000	), // "ʌ" LATIN SMALL LETTER TURNED V
 /*<!dead_turned>*/	DEADTRANS(	L'X'	,0x0250	,0xA4EB	,0x0000	), // "ꓫ" LISU LETTER SHA
-/*<!dead_turned>*/	DEADTRANS(	L'Y'	,0x0250	,0x2144	,0x0000	), // "⅄" TURNED SANS-SERIF CAPITAL Y
 /*<!dead_turned>*/	DEADTRANS(	L'y'	,0x0250	,0x028E	,0x0000	), // "ʎ" LATIN SMALL LETTER TURNED Y
+/*<!dead_turned>*/	DEADTRANS(	L'Y'	,0x0250	,0x2144	,0x0000	), // "⅄" TURNED SANS-SERIF CAPITAL Y
 /*<!dead_turned>*/	DEADTRANS(	L'Z'	,0x0250	,0xA4DC	,0x0000	), // "ꓜ" LISU LETTER DZA
+/*<!dead_turned>*/	DEADTRANS(	0x00A0	,0x0250	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
+/*<!dead_turned>*/	DEADTRANS(	0x202F	,0x0250	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
+/*<!dead_turned>*/	DEADTRANS(	L' '	,0x0250	,0x0312	,0x0000	), // "̒" COMBINING TURNED COMMA ABOVE
+/*<!dead_turned>*/	DEADTRANS(	0x200B	,0x0250	,0x0312	,0x0000	), // "̒" COMBINING TURNED COMMA ABOVE
 
 /*****************************************************************************\
 * Legacy dead key content is partly overridden by the transpile above.
@@ -8917,18 +9095,18 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 *
 * The 3 subdivision flags supported by Unicode (after projecting to support all
 * subdivision flags and devising a scheme to do so) are supported as all-in-one
-* sequences rather than supporting the tag small letters despite the absence of
-* other subdivision flags. Their level-10 map, using the AltFl modifier (AltDr
-* in French, based on "drapeau" for "flag") added on top of the Caps Lock key
+* sequences, in lieu of the tag small letters, given the absence of other flags
+* in this category. Their level-10 map, using the AltFl modifier (alliteration
+* with "AltFr", based on "flag") added on top of the Caps Lock toggle key
 * (using it requires resetting the toggle in the wake), is stacked, on key C12
 * for Wales, D12 for England, and E12 for Scotland, with geospatial mnemonics
 # using the stacked layout of these keys, with respect to the requirement of
 # duplicate mappings of C02 on C11, D02 on D11, and E02 on E11 due to the
 # column-02 bug affecting level 10, i.e. Shift + AltFl (decimal 65, 0x41), and
-# with keycap mnemonics using "£" printed in shift position on D12 of French
+# with keycap mnemonics using "£" printed in Shift position on D12 of French
 # AZERTY, on C12 of Belgian AZERTY.
 * https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
-* See Known bugs
+* See * Known bugs
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
@@ -9058,7 +9236,13 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_SPACE     ,14     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,15     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,16     ,'&'      ,'n'      ,'b'      ,'s'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  // Regional indicator symbol letters.
+
+  /*****************************************************************************\
+  * Regional indicator symbol letters.
+  *
+  * Standalone regional indicator symbol letters as a country flag input method.
+  \*****************************************************************************/
+
   {'A'          ,17     ,0xd83c   ,0xDDE6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'B'          ,17     ,0xd83c   ,0xDDE7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,17     ,0xd83c   ,0xDDE8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
