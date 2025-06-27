@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Allocate 3 empty level-9 positions 5.3.0.13.00-Sat-2025-06-27T2327+0200
 * Move ligatures below alloc tables  5.3.0.12.03-Thu-2025-06-26T1755+0200
 * Improve dead key content layout    5.3.0.12.02-Thu-2025-06-26T1743+0200
 * Debug dead key content sort order  5.3.0.12.01-Thu-2025-06-26T0819+0200
@@ -266,74 +267,74 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  52  0x34
         SHFT_INVALID, //  53  0x35
         SHFT_INVALID, //  54  0x36
-        SHFT_INVALID, //  55  0x37
-        15,           //  56  0x38  KanaLock + OEM_AX + OEM_102
+        SHFT_INVALID, //  55  0x37  # This does not work.
+        15,           //  56  0x38  # KanaLock + OEM_AX + OEM_102
         16,           //  57  0x39  KanaLock + Shift + OEM_AX + OEM_102
-        SHFT_INVALID, //  58  0x3a
+        SHFT_INVALID, //  58  0x3a  This works.
         SHFT_INVALID, //  59  0x3b
         SHFT_INVALID, //  60  0x3c
         SHFT_INVALID, //  61  0x3d
         SHFT_INVALID, //  62  0x3e
         SHFT_INVALID, //  63  0x3f
         17,           //  64  0x40  CAPITAL
-        18,           //  65  0x41  Shift + CAPITAL
-        SHFT_INVALID, //  66  0x42
+        18,           //  65  0x41  # Shift + CAPITAL
+        SHFT_INVALID, //  66  0x42  # This only works on keys other than (B..E)02.
         SHFT_INVALID, //  67  0x43
         SHFT_INVALID, //  68  0x44
         SHFT_INVALID, //  69  0x45
         SHFT_INVALID, //  70  0x46
         SHFT_INVALID, //  71  0x47
         17,           //  72  0x48  KanaLock + CAPITAL
-        18,           //  73  0x49  KanaLock + Shift + CAPITAL
-        SHFT_INVALID, //  74  0x4a
+        18,           //  73  0x49  # KanaLock + Shift + CAPITAL
+        SHFT_INVALID, //  74  0x4a  # This only works on keys other than (B..E)02.
         SHFT_INVALID, //  75  0x4b
         SHFT_INVALID, //  76  0x4c
         SHFT_INVALID, //  77  0x4d
         SHFT_INVALID, //  78  0x4e
         SHFT_INVALID, //  79  0x4f
         17,           //  80  0x50  OEM_AX + CAPITAL
-        18,           //  81  0x51  Shift + OEM_AX + CAPITAL
-        SHFT_INVALID, //  82  0x52
+        18,           //  81  0x51  # Shift + OEM_AX + CAPITAL
+        SHFT_INVALID, //  82  0x52  # This only works on keys other than (B..E)02.
         SHFT_INVALID, //  83  0x53
         SHFT_INVALID, //  84  0x54
         SHFT_INVALID, //  85  0x55
         SHFT_INVALID, //  86  0x56
         SHFT_INVALID, //  87  0x57
         17,           //  88  0x58  KanaLock + OEM_AX + CAPITAL
-        18,           //  89  0x59  KanaLock + Shift + OEM_AX + CAPITAL
-        SHFT_INVALID, //  90  0x5a
+        18,           //  89  0x59  # KanaLock + Shift + OEM_AX + CAPITAL
+        SHFT_INVALID, //  90  0x5a  # This only works on keys other than (B..E)02.
         SHFT_INVALID, //  91  0x5b
         SHFT_INVALID, //  92  0x5c
         SHFT_INVALID, //  93  0x5d
         SHFT_INVALID, //  94  0x5e
-        SHFT_INVALID, //  95  0x5f
-        17,           //  96  0x60  OEM_102 + CAPITAL
-        18,           //  97  0x61  Shift + OEM_102 + CAPITAL
-        SHFT_INVALID, //  98  0x62
+        SHFT_INVALID, //  95  0x5f  # This only works on keys other than (C..D)(05..06).
+        17,           //  96  0x60  # OEM_102 + CAPITAL
+        18,           //  97  0x61  # Shift + OEM_102 + CAPITAL
+        SHFT_INVALID, //  98  0x62  # This does not work.
         SHFT_INVALID, //  99  0x63
         SHFT_INVALID, // 100  0x64
         SHFT_INVALID, // 101  0x65
         SHFT_INVALID, // 102  0x66
-        SHFT_INVALID, // 103  0x67
-        17,           // 104  0x68  KanaLock + OEM_102 + CAPITAL
-        18,           // 105  0x69  KanaLock + Shift + OEM_102 + CAPITAL
-        SHFT_INVALID, // 106  0x6a
+        SHFT_INVALID, // 103  0x67  # This only works on keys other than (C..D)(05..06).
+        17,           // 104  0x68  # KanaLock + OEM_102 + CAPITAL
+        18,           // 105  0x69  # KanaLock + Shift + OEM_102 + CAPITAL
+        SHFT_INVALID, // 106  0x6a  # This does not work.
         SHFT_INVALID, // 107  0x6b
         SHFT_INVALID, // 108  0x6c
         SHFT_INVALID, // 109  0x6d
         SHFT_INVALID, // 110  0x6e
-        SHFT_INVALID, // 111  0x6f
-        17,           // 112  0x70  OEM_AX + OEM_102 + CAPITAL
-        18,           // 113  0x71  Shift + OEM_AX + OEM_102 + CAPITAL
-        SHFT_INVALID, // 114  0x72
+        SHFT_INVALID, // 111  0x6f  # This only works on keys other than (C..D)(05..06).
+        17,           // 112  0x70  # OEM_AX + OEM_102 + CAPITAL
+        18,           // 113  0x71  # Shift + OEM_AX + OEM_102 + CAPITAL
+        SHFT_INVALID, // 114  0x72  # This does not work.
         SHFT_INVALID, // 115  0x73
         SHFT_INVALID, // 116  0x74
         SHFT_INVALID, // 117  0x75
         SHFT_INVALID, // 118  0x76
-        SHFT_INVALID, // 119  0x77
-        17,           // 120  0x78  KanaLock + OEM_AX + OEM_102 + CAPITAL
-        18,           // 121  0x79  KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
-        SHFT_INVALID, // 122  0x7a
+        SHFT_INVALID, // 119  0x77  # This only works on keys other than (C..D)(05..06).
+        17,           // 120  0x78  # KanaLock + OEM_AX + OEM_102 + CAPITAL
+        18,           // 121  0x79  # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
+        SHFT_INVALID, // 122  0x7a  # This does not work.
         SHFT_INVALID, // 123  0x7b
         SHFT_INVALID, // 124  0x7c
         SHFT_INVALID, // 125  0x7d
@@ -354,114 +355,114 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, // 140  0x8c
         SHFT_INVALID, // 141  0x8d
         SHFT_INVALID, // 142  0x8e
-        SHFT_INVALID, // 143  0x8f
-        2,            // 144  0x90  OEM_AX + KANA
-        3,            // 145  0x91  Shift + OEM_AX + KANA
-        SHFT_INVALID, // 146  0x92
+        SHFT_INVALID, // 143  0x8f  # This does not work.
+        2,            // 144  0x90  # OEM_AX + KANA
+        3,            // 145  0x91  # Shift + OEM_AX + KANA
+        SHFT_INVALID, // 146  0x92  # This does not work.
         SHFT_INVALID, // 147  0x93
         SHFT_INVALID, // 148  0x94
         SHFT_INVALID, // 149  0x95
         SHFT_INVALID, // 150  0x96
-        SHFT_INVALID, // 151  0x97
-        11,           // 152  0x98  KanaLock + OEM_AX + KANA
-        12,           // 153  0x99  KanaLock + Shift + OEM_AX + KANA
-        SHFT_INVALID, // 154  0x9a
+        SHFT_INVALID, // 151  0x97  # This does not work.
+        11,           // 152  0x98  # KanaLock + OEM_AX + KANA
+        12,           // 153  0x99  # KanaLock + Shift + OEM_AX + KANA
+        SHFT_INVALID, // 154  0x9a  # This does not work.
         SHFT_INVALID, // 155  0x9b
         SHFT_INVALID, // 156  0x9c
         SHFT_INVALID, // 157  0x9d
         SHFT_INVALID, // 158  0x9e
-        SHFT_INVALID, // 159  0x9f
-        4,            // 160  0xa0  OEM_102 + KANA
-        5,            // 161  0xa1  Shift + OEM_102 + KANA
-        SHFT_INVALID, // 162  0xa2
+        SHFT_INVALID, // 159  0x9f  # This does not work.
+        4,            // 160  0xa0  # OEM_102 + KANA
+        5,            // 161  0xa1  # Shift + OEM_102 + KANA
+        SHFT_INVALID, // 162  0xa2  # This does not work.
         SHFT_INVALID, // 163  0xa3
         SHFT_INVALID, // 164  0xa4
         SHFT_INVALID, // 165  0xa5
         SHFT_INVALID, // 166  0xa6
-        SHFT_INVALID, // 167  0xa7
-        13,           // 168  0xa8  KanaLock + OEM_102 + KANA
-        14,           // 169  0xa9  KanaLock + Shift + OEM_102 + KANA
-        SHFT_INVALID, // 170  0xaa
+        SHFT_INVALID, // 167  0xa7  # This does not work.
+        13,           // 168  0xa8  # KanaLock + OEM_102 + KANA
+        14,           // 169  0xa9  # KanaLock + Shift + OEM_102 + KANA
+        SHFT_INVALID, // 170  0xaa  # This does not work.
         SHFT_INVALID, // 171  0xab
         SHFT_INVALID, // 172  0xac
         SHFT_INVALID, // 173  0xad
         SHFT_INVALID, // 174  0xae
-        SHFT_INVALID, // 175  0xaf
-        6,            // 176  0xb0  OEM_AX + OEM_102 + KANA
-        7,            // 177  0xb1  Shift + OEM_AX + OEM_102 + KANA
-        SHFT_INVALID, // 178  0xb2
+        SHFT_INVALID, // 175  0xaf  # This does not work.
+        6,            // 176  0xb0  # OEM_AX + OEM_102 + KANA
+        7,            // 177  0xb1  # Shift + OEM_AX + OEM_102 + KANA
+        SHFT_INVALID, // 178  0xb2  # This does not work.
         SHFT_INVALID, // 179  0xb3
         SHFT_INVALID, // 180  0xb4
         SHFT_INVALID, // 181  0xb5
         SHFT_INVALID, // 182  0xb6
-        SHFT_INVALID, // 183  0xb7
-        15,           // 184  0xb8  KanaLock + OEM_AX + OEM_102 + KANA
-        16,           // 185  0xb9  KanaLock + Shift + OEM_AX + OEM_102 + KANA
-        SHFT_INVALID, // 186  0xba
+        SHFT_INVALID, // 183  0xb7  # This does not work.
+        15,           // 184  0xb8  # KanaLock + OEM_AX + OEM_102 + KANA
+        16,           // 185  0xb9  # KanaLock + Shift + OEM_AX + OEM_102 + KANA
+        SHFT_INVALID, // 186  0xba  # This does not work.
         SHFT_INVALID, // 187  0xbb
         SHFT_INVALID, // 188  0xbc
         SHFT_INVALID, // 189  0xbd
         SHFT_INVALID, // 190  0xbe
         SHFT_INVALID, // 191  0xbf
         17,           // 192  0xc0  CAPITAL + KANA
-        18,           // 193  0xc1  Shift + CAPITAL + KANA
-        SHFT_INVALID, // 194  0xc2
+        18,           // 193  0xc1  # Shift + CAPITAL + KANA
+        SHFT_INVALID, // 194  0xc2  # This only works on keys other than (B..E)02.
         SHFT_INVALID, // 195  0xc3
         SHFT_INVALID, // 196  0xc4
         SHFT_INVALID, // 197  0xc5
         SHFT_INVALID, // 198  0xc6
         SHFT_INVALID, // 199  0xc7
         17,           // 200  0xc8  KanaLock + CAPITAL + KANA
-        18,           // 201  0xc9  KanaLock + Shift + CAPITAL + KANA
-        SHFT_INVALID, // 202  0xca
+        18,           // 201  0xc9  # KanaLock + Shift + CAPITAL + KANA
+        SHFT_INVALID, // 202  0xca  # This only works on keys other than (B..E)02.
         SHFT_INVALID, // 203  0xcb
         SHFT_INVALID, // 204  0xcc
         SHFT_INVALID, // 205  0xcd
         SHFT_INVALID, // 206  0xce
         SHFT_INVALID, // 207  0xcf
         17,           // 208  0xd0  OEM_AX + CAPITAL + KANA
-        18,           // 209  0xd1  Shift + OEM_AX + CAPITAL + KANA
-        SHFT_INVALID, // 210  0xd2
+        18,           // 209  0xd1  # Shift + OEM_AX + CAPITAL + KANA
+        SHFT_INVALID, // 210  0xd2  # This only works on keys other than (B..E)02.
         SHFT_INVALID, // 211  0xd3
         SHFT_INVALID, // 212  0xd4
         SHFT_INVALID, // 213  0xd5
         SHFT_INVALID, // 214  0xd6
         SHFT_INVALID, // 215  0xd7
         17,           // 216  0xd8  KanaLock + OEM_AX + CAPITAL + KANA
-        18,           // 217  0xd9  KanaLock + Shift + OEM_AX + CAPITAL + KANA
-        SHFT_INVALID, // 218  0xda
+        18,           // 217  0xd9  # KanaLock + Shift + OEM_AX + CAPITAL + KANA
+        SHFT_INVALID, // 218  0xda  # This only works on keys other than (B..E)02.
         SHFT_INVALID, // 219  0xdb
         SHFT_INVALID, // 220  0xdc
         SHFT_INVALID, // 221  0xdd
         SHFT_INVALID, // 222  0xde
-        SHFT_INVALID, // 223  0xdf
-        17,           // 224  0xe0  OEM_102 + CAPITAL + KANA
-        18,           // 225  0xe1  Shift + OEM_102 + CAPITAL + KANA
-        SHFT_INVALID, // 226  0xe2
+        SHFT_INVALID, // 223  0xdf  # This only works on keys other than (C..D)(05..06).
+        17,           // 224  0xe0  # OEM_102 + CAPITAL + KANA
+        18,           // 225  0xe1  # Shift + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 226  0xe2  # This does not work.
         SHFT_INVALID, // 227  0xe3
         SHFT_INVALID, // 228  0xe4
         SHFT_INVALID, // 229  0xe5
         SHFT_INVALID, // 230  0xe6
-        SHFT_INVALID, // 231  0xe7
-        17,           // 232  0xe8  KanaLock + OEM_102 + CAPITAL + KANA
-        18,           // 233  0xe9  KanaLock + Shift + OEM_102 + CAPITAL + KANA
-        SHFT_INVALID, // 234  0xea
+        SHFT_INVALID, // 231  0xe7  # This only works on keys other than (C..D)(05..06).
+        17,           // 232  0xe8  # KanaLock + OEM_102 + CAPITAL + KANA
+        18,           // 233  0xe9  # KanaLock + Shift + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 234  0xea  # This does not work.
         SHFT_INVALID, // 235  0xeb
         SHFT_INVALID, // 236  0xec
         SHFT_INVALID, // 237  0xed
         SHFT_INVALID, // 238  0xee
-        SHFT_INVALID, // 239  0xef
-        17,           // 240  0xf0  OEM_AX + OEM_102 + CAPITAL + KANA
-        18,           // 241  0xf1  Shift + OEM_AX + OEM_102 + CAPITAL + KANA
-        SHFT_INVALID, // 242  0xf2
+        SHFT_INVALID, // 239  0xef  # This only works on keys other than (C..D)(05..06).
+        17,           // 240  0xf0  # OEM_AX + OEM_102 + CAPITAL + KANA
+        18,           // 241  0xf1  # Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 242  0xf2  # This does not work.
         SHFT_INVALID, // 243  0xf3
         SHFT_INVALID, // 244  0xf4
         SHFT_INVALID, // 245  0xf5
         SHFT_INVALID, // 246  0xf6
-        SHFT_INVALID, // 247  0xf7
-        17,           // 248  0xf8  KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
-        18,           // 249  0xf9  KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
-     }
+        SHFT_INVALID, // 247  0xf7  # This only works on keys other than (C..D)(05..06).
+        17,           // 248  0xf8  # KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
+        18,           // 249  0xf9  # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+     }                //            # This does not work.
 };
 
 /*****************************************************************************\
@@ -786,7 +787,7 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'D'          ,7      ,0xd83d   ,0xde01   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'K'          ,7      ,'&'      ,'a'      ,'m'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,1      ,0x2039   ,0x202f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_6     ,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,17     ,0x26a0   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,18     ,0xd83c   ,0xDDFF   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_1     ,1      ,0x202f   ,0x203a   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_1     ,17     ,0xd83d   ,0xdcb2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -823,14 +824,14 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_COMMA ,7      ,0xd83d   ,0xdc99   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,14     ,'&'      ,'#'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,16     ,0xd83d   ,0xdc9a   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_COMMA ,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,17     ,0x2753   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,18     ,0xd83c   ,0xDDFD   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,1      ,0x202f   ,'!'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,6      ,0xd83d   ,0xde31   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,7      ,0xd83d   ,0xdce3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,14     ,'&'      ,'#'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,16     ,0xd83d   ,0xdce2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_PERIOD,17     ,0x0000   ,0x0000   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,17     ,0x2757   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,18     ,0xd83c   ,0xDDFD   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,1      ,0x202f   ,':'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,7      ,0xd83d   ,0xde15   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -933,6 +934,7 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Z'          ,18     ,0xd83c   ,0xDDFF   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
+
 /*****************************************************************************\
 * aKeyNames[], aKeyNamesExt[]  - Virtual Scancode to Key Name tables
 *
@@ -1231,6 +1233,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 /*****************************************************************************\
 * Single-press dead key content is up-to-date and overrides the legacy code.
+*
+* This code is generated. Please do not edit in place.
+*
+* Cross-platform compatible changes should be done in the source Compose.yml.
+* Windows-specific changes may be done in copies of DEADTRANS macro calls moved
+* to the top, or in the script dead-key-convert.pl.
+* https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/dead-key-convert.pl
 \*****************************************************************************/
 
 /*<!abovedot>                                                      */ DEADTRANS( L'\''	,0x1E57	,0x2AC3	,0x0000	), // "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
