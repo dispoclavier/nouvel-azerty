@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Prep support more live key emoji   5.3.0.17.00-Sun-2025-06-29T1634+0200
 * Debug math alphabets on live keys  5.3.0.16.00-Sun-2025-06-29T0044+0200
 * Add 4 math alphabets on live keys  5.3.0.15.00-Sat-2025-06-28T1957+0200
 * Test alloc table emoji extension   5.3.0.14.00-Sat-2025-06-28T0859+0200
@@ -201,259 +202,259 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
     249, // Decimal # of the last shift state in this array.
          // Any shift state beyond is ignored.
     {
-    //  Modification# //            Keys Pressed Or KanaLock Toggle On
-    //  ============= // =============================================
-        0,            //   0  0x00
-        1,            //   1  0x01  Shift
-        8,            //   2  0x02  Control
-        SHFT_INVALID, //   3  0x03  Shift + Control
-        SHFT_INVALID, //   4  0x04  Menu
-        SHFT_INVALID, //   5  0x05  Shift + Menu
-        SHFT_INVALID, //   6  0x06  Control + Menu
-        SHFT_INVALID, //   7  0x07  Shift + Control + Menu
-        9,            //   8  0x08  KanaLock
-        10,           //   9  0x09  KanaLock + Shift
-        SHFT_INVALID, //  10  0x0a  KanaLock + Control
-        SHFT_INVALID, //  11  0x0b  KanaLock + Shift + Control
-        SHFT_INVALID, //  12  0x0c  KanaLock + Menu
-        SHFT_INVALID, //  13  0x0d  KanaLock + Shift + Menu
-        SHFT_INVALID, //  14  0x0e  KanaLock + Control + Menu
-        SHFT_INVALID, //  15  0x0f  KanaLock + Shift + Control + Menu
-        2,            //  16  0x10  OEM_AX
-        3,            //  17  0x11  Shift + OEM_AX
-        SHFT_INVALID, //  18  0x12  Control + OEM_AX
-        SHFT_INVALID, //  19  0x13  Shift + Control + OEM_AX
-        SHFT_INVALID, //  20  0x14  Menu + OEM_AX
-        SHFT_INVALID, //  21  0x15  Shift + Menu + OEM_AX
-        SHFT_INVALID, //  22  0x16  Control + Menu + OEM_AX
-        SHFT_INVALID, //  23  0x17  Shift + Control + Menu + OEM_AX
-        11,           //  24  0x18  KanaLock + OEM_AX
-        12,           //  25  0x19  KanaLock + Shift + OEM_AX
-        SHFT_INVALID, //  26  0x1a  KanaLock + Control + OEM_AX
-        SHFT_INVALID, //  27  0x1b  KanaLock + Shift + Control + OEM_AX
-        SHFT_INVALID, //  28  0x1c  KanaLock + Menu + OEM_AX
-        SHFT_INVALID, //  29  0x1d  KanaLock + Shift + Menu + OEM_AX
-        SHFT_INVALID, //  30  0x1e  KanaLock + Control + Menu + OEM_AX
-        SHFT_INVALID, //  31  0x1f  KanaLock + Shift + Control + Menu + OEM_AX
-        4,            //  32  0x20  OEM_102
-        5,            //  33  0x21  Shift + OEM_102
-        SHFT_INVALID, //  34  0x22  Control + OEM_102
-        SHFT_INVALID, //  35  0x23  Shift + Control + OEM_102
-        SHFT_INVALID, //  36  0x24  Menu + OEM_102
-        SHFT_INVALID, //  37  0x25  Shift + Menu + OEM_102
-        SHFT_INVALID, //  38  0x26  Control + Menu + OEM_102
-        SHFT_INVALID, //  39  0x27  Shift + Control + Menu + OEM_102
-        13,           //  40  0x28  KanaLock + OEM_102
-        14,           //  41  0x29  KanaLock + Shift + OEM_102
-        SHFT_INVALID, //  42  0x2a  KanaLock + Control + OEM_102
-        SHFT_INVALID, //  43  0x2b  KanaLock + Shift + Control + OEM_102
-        SHFT_INVALID, //  44  0x2c  KanaLock + Menu + OEM_102
-        SHFT_INVALID, //  45  0x2d  KanaLock + Shift + Menu + OEM_102
-        SHFT_INVALID, //  46  0x2e  KanaLock + Control + Menu + OEM_102
-        SHFT_INVALID, //  47  0x2f  KanaLock + Shift + Control + Menu + OEM_102
-        6,            //  48  0x30  OEM_AX + OEM_102
-        7,            //  49  0x31  Shift + OEM_AX + OEM_102
-        SHFT_INVALID, //  50  0x32
-        SHFT_INVALID, //  51  0x33
-        SHFT_INVALID, //  52  0x34
-        SHFT_INVALID, //  53  0x35
-        SHFT_INVALID, //  54  0x36
-        SHFT_INVALID, //  55  0x37  # This does not work.
-        15,           //  56  0x38  # KanaLock + OEM_AX + OEM_102
-        16,           //  57  0x39  KanaLock + Shift + OEM_AX + OEM_102
-        SHFT_INVALID, //  58  0x3a  This works.
-        SHFT_INVALID, //  59  0x3b
-        SHFT_INVALID, //  60  0x3c
-        SHFT_INVALID, //  61  0x3d
-        SHFT_INVALID, //  62  0x3e
-        SHFT_INVALID, //  63  0x3f
-        17,           //  64  0x40  CAPITAL
-        18,           //  65  0x41  # Shift + CAPITAL
-        SHFT_INVALID, //  66  0x42  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, //  67  0x43
-        SHFT_INVALID, //  68  0x44
-        SHFT_INVALID, //  69  0x45
-        SHFT_INVALID, //  70  0x46
-        SHFT_INVALID, //  71  0x47
-        17,           //  72  0x48  KanaLock + CAPITAL
-        18,           //  73  0x49  # KanaLock + Shift + CAPITAL
-        SHFT_INVALID, //  74  0x4a  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, //  75  0x4b
-        SHFT_INVALID, //  76  0x4c
-        SHFT_INVALID, //  77  0x4d
-        SHFT_INVALID, //  78  0x4e
-        SHFT_INVALID, //  79  0x4f
-        15,           //  80  0x50  OEM_AX + CAPITAL
-        18,           //  81  0x51  # Shift + OEM_AX + CAPITAL
-        SHFT_INVALID, //  82  0x52  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, //  83  0x53
-        SHFT_INVALID, //  84  0x54
-        SHFT_INVALID, //  85  0x55
-        SHFT_INVALID, //  86  0x56
-        SHFT_INVALID, //  87  0x57
-        15,           //  88  0x58  KanaLock + OEM_AX + CAPITAL
-        18,           //  89  0x59  # KanaLock + Shift + OEM_AX + CAPITAL
-        SHFT_INVALID, //  90  0x5a  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, //  91  0x5b
-        SHFT_INVALID, //  92  0x5c
-        SHFT_INVALID, //  93  0x5d
-        SHFT_INVALID, //  94  0x5e
-        SHFT_INVALID, //  95  0x5f  # This only works on keys other than (C..D)(05..06).
-        17,           //  96  0x60  # OEM_102 + CAPITAL
-        18,           //  97  0x61  # Shift + OEM_102 + CAPITAL
-        SHFT_INVALID, //  98  0x62  # This does not work.
-        SHFT_INVALID, //  99  0x63
-        SHFT_INVALID, // 100  0x64
-        SHFT_INVALID, // 101  0x65
-        SHFT_INVALID, // 102  0x66
-        SHFT_INVALID, // 103  0x67  # This only works on keys other than (C..D)(05..06).
-        17,           // 104  0x68  # KanaLock + OEM_102 + CAPITAL
-        18,           // 105  0x69  # KanaLock + Shift + OEM_102 + CAPITAL
-        SHFT_INVALID, // 106  0x6a  # This does not work.
-        SHFT_INVALID, // 107  0x6b
-        SHFT_INVALID, // 108  0x6c
-        SHFT_INVALID, // 109  0x6d
-        SHFT_INVALID, // 110  0x6e
-        SHFT_INVALID, // 111  0x6f  # This only works on keys other than (C..D)(05..06).
-        17,           // 112  0x70  # OEM_AX + OEM_102 + CAPITAL
-        18,           // 113  0x71  # Shift + OEM_AX + OEM_102 + CAPITAL
-        SHFT_INVALID, // 114  0x72  # This does not work.
-        SHFT_INVALID, // 115  0x73
-        SHFT_INVALID, // 116  0x74
-        SHFT_INVALID, // 117  0x75
-        SHFT_INVALID, // 118  0x76
-        SHFT_INVALID, // 119  0x77  # This only works on keys other than (C..D)(05..06).
-        17,           // 120  0x78  # KanaLock + OEM_AX + OEM_102 + CAPITAL
-        18,           // 121  0x79  # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
-        SHFT_INVALID, // 122  0x7a  # This does not work.
-        SHFT_INVALID, // 123  0x7b
-        SHFT_INVALID, // 124  0x7c
-        SHFT_INVALID, // 125  0x7d
-        SHFT_INVALID, // 126  0x7e
-        SHFT_INVALID, // 127  0x7f
-        19,           // 128  0x80  KANA
-        20,           // 129  0x81  Shift + KANA
-        SHFT_INVALID, // 130  0x82
-        SHFT_INVALID, // 131  0x83
-        SHFT_INVALID, // 132  0x84
-        SHFT_INVALID, // 133  0x85
-        SHFT_INVALID, // 134  0x86
-        SHFT_INVALID, // 135  0x87
-        19,           // 136  0x88  KanaLock + KANA
-        20,           // 137  0x89  KanaLock + Shift + KANA
-        SHFT_INVALID, // 138  0x8a
-        SHFT_INVALID, // 139  0x8b
-        SHFT_INVALID, // 140  0x8c
-        SHFT_INVALID, // 141  0x8d
-        SHFT_INVALID, // 142  0x8e
-        SHFT_INVALID, // 143  0x8f
-        21,           // 144  0x90  OEM_AX + KANA
-        22,           // 145  0x91  Shift + OEM_AX + KANA
-        SHFT_INVALID, // 146  0x92
-        SHFT_INVALID, // 147  0x93
-        SHFT_INVALID, // 148  0x94
-        SHFT_INVALID, // 149  0x95
-        SHFT_INVALID, // 150  0x96
-        SHFT_INVALID, // 151  0x97
-        21,           // 152  0x98  KanaLock + OEM_AX + KANA
-        22,           // 153  0x99  KanaLock + Shift + OEM_AX + KANA
-        SHFT_INVALID, // 154  0x9a
-        SHFT_INVALID, // 155  0x9b
-        SHFT_INVALID, // 156  0x9c
-        SHFT_INVALID, // 157  0x9d
-        SHFT_INVALID, // 158  0x9e
-        SHFT_INVALID, // 159  0x9f
-        23,           // 160  0xa0  OEM_102 + KANA
-        24,           // 161  0xa1  Shift + OEM_102 + KANA
-        SHFT_INVALID, // 162  0xa2
-        SHFT_INVALID, // 163  0xa3
-        SHFT_INVALID, // 164  0xa4
-        SHFT_INVALID, // 165  0xa5
-        SHFT_INVALID, // 166  0xa6
-        SHFT_INVALID, // 167  0xa7
-        23,           // 168  0xa8  KanaLock + OEM_102 + KANA
-        24,           // 169  0xa9  KanaLock + Shift + OEM_102 + KANA
-        SHFT_INVALID, // 170  0xaa
-        SHFT_INVALID, // 171  0xab
-        SHFT_INVALID, // 172  0xac
-        SHFT_INVALID, // 173  0xad
-        SHFT_INVALID, // 174  0xae
-        SHFT_INVALID, // 175  0xaf
-        25,           // 176  0xb0  OEM_AX + OEM_102 + KANA
-        26,           // 177  0xb1  Shift + OEM_AX + OEM_102 + KANA
-        SHFT_INVALID, // 178  0xb2
-        SHFT_INVALID, // 179  0xb3
-        SHFT_INVALID, // 180  0xb4
-        SHFT_INVALID, // 181  0xb5
-        SHFT_INVALID, // 182  0xb6
-        SHFT_INVALID, // 183  0xb7
-        25,           // 184  0xb8  KanaLock + OEM_AX + OEM_102 + KANA
-        26,           // 185  0xb9  KanaLock + Shift + OEM_AX + OEM_102 + KANA
-        SHFT_INVALID, // 186  0xba
-        SHFT_INVALID, // 187  0xbb
-        SHFT_INVALID, // 188  0xbc
-        SHFT_INVALID, // 189  0xbd
-        SHFT_INVALID, // 190  0xbe
-        SHFT_INVALID, // 191  0xbf
-        27,           // 192  0xc0  CAPITAL + KANA
-        18,           // 193  0xc1  # Shift + CAPITAL + KANA
-        SHFT_INVALID, // 194  0xc2  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, // 195  0xc3
-        SHFT_INVALID, // 196  0xc4
-        SHFT_INVALID, // 197  0xc5
-        SHFT_INVALID, // 198  0xc6
-        SHFT_INVALID, // 199  0xc7
-        27,           // 200  0xc8  KanaLock + CAPITAL + KANA
-        18,           // 201  0xc9  # KanaLock + Shift + CAPITAL + KANA
-        SHFT_INVALID, // 202  0xca  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, // 203  0xcb
-        SHFT_INVALID, // 204  0xcc
-        SHFT_INVALID, // 205  0xcd
-        SHFT_INVALID, // 206  0xce
-        SHFT_INVALID, // 207  0xcf
-        28,           // 208  0xd0  OEM_AX + CAPITAL + KANA
-        18,           // 209  0xd1  # Shift + OEM_AX + CAPITAL + KANA
-        SHFT_INVALID, // 210  0xd2  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, // 211  0xd3
-        SHFT_INVALID, // 212  0xd4
-        SHFT_INVALID, // 213  0xd5
-        SHFT_INVALID, // 214  0xd6
-        SHFT_INVALID, // 215  0xd7
-        28,           // 216  0xd8  KanaLock + OEM_AX + CAPITAL + KANA
-        18,           // 217  0xd9  # KanaLock + Shift + OEM_AX + CAPITAL + KANA
-        SHFT_INVALID, // 218  0xda  # This only works on keys other than (B..E)02.
-        SHFT_INVALID, // 219  0xdb
-        SHFT_INVALID, // 220  0xdc
-        SHFT_INVALID, // 221  0xdd
-        SHFT_INVALID, // 222  0xde
-        SHFT_INVALID, // 223  0xdf  # This only works on keys other than (C..D)(05..06).
-        17,           // 224  0xe0  # OEM_102 + CAPITAL + KANA
-        18,           // 225  0xe1  # Shift + OEM_102 + CAPITAL + KANA
-        SHFT_INVALID, // 226  0xe2  # This does not work.
-        SHFT_INVALID, // 227  0xe3
-        SHFT_INVALID, // 228  0xe4
-        SHFT_INVALID, // 229  0xe5
-        SHFT_INVALID, // 230  0xe6
-        SHFT_INVALID, // 231  0xe7  # This only works on keys other than (C..D)(05..06).
-        17,           // 232  0xe8  # KanaLock + OEM_102 + CAPITAL + KANA
-        18,           // 233  0xe9  # KanaLock + Shift + OEM_102 + CAPITAL + KANA
-        SHFT_INVALID, // 234  0xea  # This does not work.
-        SHFT_INVALID, // 235  0xeb
-        SHFT_INVALID, // 236  0xec
-        SHFT_INVALID, // 237  0xed
-        SHFT_INVALID, // 238  0xee
-        SHFT_INVALID, // 239  0xef  # This only works on keys other than (C..D)(05..06).
-        17,           // 240  0xf0  # OEM_AX + OEM_102 + CAPITAL + KANA
-        18,           // 241  0xf1  # Shift + OEM_AX + OEM_102 + CAPITAL + KANA
-        SHFT_INVALID, // 242  0xf2  # This does not work.
-        SHFT_INVALID, // 243  0xf3
-        SHFT_INVALID, // 244  0xf4
-        SHFT_INVALID, // 245  0xf5
-        SHFT_INVALID, // 246  0xf6
-        SHFT_INVALID, // 247  0xf7  # This only works on keys other than (C..D)(05..06).
-        17,           // 248  0xf8  # KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
-        18,           // 249  0xf9  # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
-     }                //            # This does not work.
+    //  Modification# //           Keys Pressed Or KanaLock Toggle On
+    //  ============= // ============================================
+        0,            //   0, 0x00
+        1,            //   1, 0x01 Shift
+        8,            //   2, 0x02 Control
+        SHFT_INVALID, //   3, 0x03 Shift + Control
+        SHFT_INVALID, //   4, 0x04 Menu
+        SHFT_INVALID, //   5, 0x05 Shift + Menu
+        SHFT_INVALID, //   6, 0x06 Control + Menu
+        SHFT_INVALID, //   7, 0x07 Shift + Control + Menu
+        9,            //   8, 0x08 KanaLock
+        10,           //   9, 0x09 KanaLock + Shift
+        SHFT_INVALID, //  10, 0x0a KanaLock + Control
+        SHFT_INVALID, //  11, 0x0b KanaLock + Shift + Control
+        SHFT_INVALID, //  12, 0x0c KanaLock + Menu
+        SHFT_INVALID, //  13, 0x0d KanaLock + Shift + Menu
+        SHFT_INVALID, //  14, 0x0e KanaLock + Control + Menu
+        SHFT_INVALID, //  15, 0x0f KanaLock + Shift + Control + Menu
+        2,            //  16, 0x10 OEM_AX
+        3,            //  17, 0x11 Shift + OEM_AX
+        SHFT_INVALID, //  18, 0x12 Control + OEM_AX
+        SHFT_INVALID, //  19, 0x13 Shift + Control + OEM_AX
+        SHFT_INVALID, //  20, 0x14 Menu + OEM_AX
+        SHFT_INVALID, //  21, 0x15 Shift + Menu + OEM_AX
+        SHFT_INVALID, //  22, 0x16 Control + Menu + OEM_AX
+        SHFT_INVALID, //  23, 0x17 Shift + Control + Menu + OEM_AX
+        11,           //  24, 0x18 KanaLock + OEM_AX
+        12,           //  25, 0x19 KanaLock + Shift + OEM_AX
+        SHFT_INVALID, //  26, 0x1a KanaLock + Control + OEM_AX
+        SHFT_INVALID, //  27, 0x1b KanaLock + Shift + Control + OEM_AX
+        SHFT_INVALID, //  28, 0x1c KanaLock + Menu + OEM_AX
+        SHFT_INVALID, //  29, 0x1d KanaLock + Shift + Menu + OEM_AX
+        SHFT_INVALID, //  30, 0x1e KanaLock + Control + Menu + OEM_AX
+        SHFT_INVALID, //  31, 0x1f KanaLock + Shift + Control + Menu + OEM_AX
+        4,            //  32, 0x20 OEM_102
+        5,            //  33, 0x21 Shift + OEM_102
+        SHFT_INVALID, //  34, 0x22 Control + OEM_102
+        SHFT_INVALID, //  35, 0x23 Shift + Control + OEM_102
+        SHFT_INVALID, //  36, 0x24 Menu + OEM_102
+        SHFT_INVALID, //  37, 0x25 Shift + Menu + OEM_102
+        SHFT_INVALID, //  38, 0x26 Control + Menu + OEM_102
+        SHFT_INVALID, //  39, 0x27 Shift + Control + Menu + OEM_102
+        13,           //  40, 0x28 KanaLock + OEM_102
+        14,           //  41, 0x29 KanaLock + Shift + OEM_102
+        SHFT_INVALID, //  42, 0x2a KanaLock + Control + OEM_102
+        SHFT_INVALID, //  43, 0x2b KanaLock + Shift + Control + OEM_102
+        SHFT_INVALID, //  44, 0x2c KanaLock + Menu + OEM_102
+        SHFT_INVALID, //  45, 0x2d KanaLock + Shift + Menu + OEM_102
+        SHFT_INVALID, //  46, 0x2e KanaLock + Control + Menu + OEM_102
+        SHFT_INVALID, //  47, 0x2f KanaLock + Shift + Control + Menu + OEM_102
+        6,            //  48, 0x30 OEM_AX + OEM_102
+        7,            //  49, 0x31 Shift + OEM_AX + OEM_102
+        SHFT_INVALID, //  50, 0x32
+        SHFT_INVALID, //  51, 0x33
+        SHFT_INVALID, //  52, 0x34
+        SHFT_INVALID, //  53, 0x35
+        SHFT_INVALID, //  54, 0x36
+        SHFT_INVALID, //  55, 0x37 # This does not work.
+        15,           //  56, 0x38 # KanaLock + OEM_AX + OEM_102
+        16,           //  57, 0x39 KanaLock + Shift + OEM_AX + OEM_102
+        SHFT_INVALID, //  58, 0x3a This works.
+        SHFT_INVALID, //  59, 0x3b
+        SHFT_INVALID, //  60, 0x3c
+        SHFT_INVALID, //  61, 0x3d
+        SHFT_INVALID, //  62, 0x3e
+        SHFT_INVALID, //  63, 0x3f
+        17,           //  64, 0x40 CAPITAL
+        18,           //  65, 0x41 # Shift + CAPITAL
+        SHFT_INVALID, //  66, 0x42 # This only works on keys other than (B..E)02.
+        SHFT_INVALID, //  67, 0x43
+        SHFT_INVALID, //  68, 0x44
+        SHFT_INVALID, //  69, 0x45
+        SHFT_INVALID, //  70, 0x46
+        SHFT_INVALID, //  71, 0x47
+        17,           //  72, 0x48 KanaLock + CAPITAL
+        18,           //  73, 0x49 # KanaLock + Shift + CAPITAL
+        SHFT_INVALID, //  74, 0x4a # This only works on keys other than (B..E)02.
+        SHFT_INVALID, //  75, 0x4b
+        SHFT_INVALID, //  76, 0x4c
+        SHFT_INVALID, //  77, 0x4d
+        SHFT_INVALID, //  78, 0x4e
+        SHFT_INVALID, //  79, 0x4f (This works around the level 56  0x38
+        15,           //  80, 0x50 OEM_AX + CAPITAL
+        18,           //  81, 0x51 # Shift + OEM_AX + CAPITAL
+        SHFT_INVALID, //  82, 0x52 # This only works on keys other than (B..E)02.
+        SHFT_INVALID, //  83, 0x53
+        SHFT_INVALID, //  84, 0x54
+        SHFT_INVALID, //  85, 0x55
+        SHFT_INVALID, //  86, 0x56
+        SHFT_INVALID, //  87, 0x57
+        15,           //  88, 0x58 KanaLock + OEM_AX + CAPITAL
+        18,           //  89, 0x59 # KanaLock + Shift + OEM_AX + CAPITAL
+        SHFT_INVALID, //  90, 0x5a # This only works on keys other than (B..E)02.
+        SHFT_INVALID, //  91, 0x5b
+        SHFT_INVALID, //  92, 0x5c
+        SHFT_INVALID, //  93, 0x5d
+        SHFT_INVALID, //  94, 0x5e
+        SHFT_INVALID, //  95, 0x5f # This only works on keys other than (C..D)(05..06).
+        17,           //  96, 0x60 # OEM_102 + CAPITAL
+        18,           //  97, 0x61 # Shift + OEM_102 + CAPITAL
+        SHFT_INVALID, //  98, 0x62 # This does not work.
+        SHFT_INVALID, //  99, 0x63
+        SHFT_INVALID, // 100, 0x64
+        SHFT_INVALID, // 101, 0x65
+        SHFT_INVALID, // 102, 0x66
+        SHFT_INVALID, // 103, 0x67 # This only works on keys other than (C..D)(05..06).
+        17,           // 104, 0x68 # KanaLock + OEM_102 + CAPITAL
+        18,           // 105, 0x69 # KanaLock + Shift + OEM_102 + CAPITAL
+        SHFT_INVALID, // 106, 0x6a # This does not work.
+        SHFT_INVALID, // 107, 0x6b
+        SHFT_INVALID, // 108, 0x6c
+        SHFT_INVALID, // 109, 0x6d
+        SHFT_INVALID, // 110, 0x6e
+        SHFT_INVALID, // 111, 0x6f # This only works on keys other than (C..D)(05..06).
+        17,           // 112, 0x70 # OEM_AX + OEM_102 + CAPITAL
+        18,           // 113, 0x71 # Shift + OEM_AX + OEM_102 + CAPITAL
+        SHFT_INVALID, // 114, 0x72 # This does not work.
+        SHFT_INVALID, // 115, 0x73
+        SHFT_INVALID, // 116, 0x74
+        SHFT_INVALID, // 117, 0x75
+        SHFT_INVALID, // 118, 0x76
+        SHFT_INVALID, // 119, 0x77 # This only works on keys other than (C..D)(05..06).
+        17,           // 120, 0x78 # KanaLock + OEM_AX + OEM_102 + CAPITAL
+        18,           // 121, 0x79 # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
+        SHFT_INVALID, // 122, 0x7a # This does not work.
+        SHFT_INVALID, // 123, 0x7b
+        SHFT_INVALID, // 124, 0x7c
+        SHFT_INVALID, // 125, 0x7d
+        SHFT_INVALID, // 126, 0x7e
+        SHFT_INVALID, // 127, 0x7f
+        19,           // 128, 0x80 KANA
+        20,           // 129, 0x81 Shift + KANA
+        SHFT_INVALID, // 130, 0x82
+        SHFT_INVALID, // 131, 0x83
+        SHFT_INVALID, // 132, 0x84
+        SHFT_INVALID, // 133, 0x85
+        SHFT_INVALID, // 134, 0x86
+        SHFT_INVALID, // 135, 0x87
+        19,           // 136, 0x88 KanaLock + KANA
+        20,           // 137, 0x89 KanaLock + Shift + KANA
+        SHFT_INVALID, // 138, 0x8a
+        SHFT_INVALID, // 139, 0x8b
+        SHFT_INVALID, // 140, 0x8c
+        SHFT_INVALID, // 141, 0x8d
+        SHFT_INVALID, // 142, 0x8e
+        SHFT_INVALID, // 143, 0x8f
+        21,           // 144, 0x90 OEM_AX + KANA
+        22,           // 145, 0x91 Shift + OEM_AX + KANA
+        SHFT_INVALID, // 146, 0x92
+        SHFT_INVALID, // 147, 0x93
+        SHFT_INVALID, // 148, 0x94
+        SHFT_INVALID, // 149, 0x95
+        SHFT_INVALID, // 150, 0x96
+        SHFT_INVALID, // 151, 0x97
+        21,           // 152, 0x98 KanaLock + OEM_AX + KANA
+        22,           // 153, 0x99 KanaLock + Shift + OEM_AX + KANA
+        SHFT_INVALID, // 154, 0x9a
+        SHFT_INVALID, // 155, 0x9b
+        SHFT_INVALID, // 156, 0x9c
+        SHFT_INVALID, // 157, 0x9d
+        SHFT_INVALID, // 158, 0x9e
+        SHFT_INVALID, // 159, 0x9f
+        23,           // 160, 0xa0 OEM_102 + KANA
+        24,           // 161, 0xa1 Shift + OEM_102 + KANA
+        SHFT_INVALID, // 162, 0xa2
+        SHFT_INVALID, // 163, 0xa3
+        SHFT_INVALID, // 164, 0xa4
+        SHFT_INVALID, // 165, 0xa5
+        SHFT_INVALID, // 166, 0xa6
+        SHFT_INVALID, // 167, 0xa7
+        23,           // 168, 0xa8 KanaLock + OEM_102 + KANA
+        24,           // 169, 0xa9 KanaLock + Shift + OEM_102 + KANA
+        SHFT_INVALID, // 170, 0xaa
+        SHFT_INVALID, // 171, 0xab
+        SHFT_INVALID, // 172, 0xac
+        SHFT_INVALID, // 173, 0xad
+        SHFT_INVALID, // 174, 0xae
+        SHFT_INVALID, // 175, 0xaf
+        25,           // 176, 0xb0 OEM_AX + OEM_102 + KANA
+        26,           // 177, 0xb1 Shift + OEM_AX + OEM_102 + KANA
+        SHFT_INVALID, // 178, 0xb2
+        SHFT_INVALID, // 179, 0xb3
+        SHFT_INVALID, // 180, 0xb4
+        SHFT_INVALID, // 181, 0xb5
+        SHFT_INVALID, // 182, 0xb6
+        SHFT_INVALID, // 183, 0xb7
+        25,           // 184, 0xb8 KanaLock + OEM_AX + OEM_102 + KANA
+        26,           // 185, 0xb9 KanaLock + Shift + OEM_AX + OEM_102 + KANA
+        SHFT_INVALID, // 186, 0xba
+        SHFT_INVALID, // 187, 0xbb
+        SHFT_INVALID, // 188, 0xbc
+        SHFT_INVALID, // 189, 0xbd
+        SHFT_INVALID, // 190, 0xbe
+        SHFT_INVALID, // 191, 0xbf
+        27,           // 192, 0xc0 CAPITAL + KANA
+        18,           // 193, 0xc1 # Shift + CAPITAL + KANA
+        SHFT_INVALID, // 194, 0xc2 # This only works on keys other than (B..E)02.
+        SHFT_INVALID, // 195, 0xc3
+        SHFT_INVALID, // 196, 0xc4
+        SHFT_INVALID, // 197, 0xc5
+        SHFT_INVALID, // 198, 0xc6
+        SHFT_INVALID, // 199, 0xc7
+        27,           // 200, 0xc8 KanaLock + CAPITAL + KANA
+        18,           // 201, 0xc9 # KanaLock + Shift + CAPITAL + KANA
+        SHFT_INVALID, // 202, 0xca # This only works on keys other than (B..E)02.
+        SHFT_INVALID, // 203, 0xcb
+        SHFT_INVALID, // 204, 0xcc
+        SHFT_INVALID, // 205, 0xcd
+        SHFT_INVALID, // 206, 0xce
+        SHFT_INVALID, // 207, 0xcf
+        28,           // 208, 0xd0 OEM_AX + CAPITAL + KANA
+        18,           // 209, 0xd1 # Shift + OEM_AX + CAPITAL + KANA
+        SHFT_INVALID, // 210, 0xd2 # This only works on keys other than (B..E)02.
+        SHFT_INVALID, // 211, 0xd3
+        SHFT_INVALID, // 212, 0xd4
+        SHFT_INVALID, // 213, 0xd5
+        SHFT_INVALID, // 214, 0xd6
+        SHFT_INVALID, // 215, 0xd7
+        28,           // 216, 0xd8 KanaLock + OEM_AX + CAPITAL + KANA
+        18,           // 217, 0xd9 # KanaLock + Shift + OEM_AX + CAPITAL + KANA
+        SHFT_INVALID, // 218, 0xda # This only works on keys other than (B..E)02.
+        SHFT_INVALID, // 219, 0xdb
+        SHFT_INVALID, // 220, 0xdc
+        SHFT_INVALID, // 221, 0xdd
+        SHFT_INVALID, // 222, 0xde
+        SHFT_INVALID, // 223, 0xdf # This only works on keys other than (C..D)(05..06).
+        17,           // 224, 0xe0 # OEM_102 + CAPITAL + KANA
+        18,           // 225, 0xe1 # Shift + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 226, 0xe2 # This does not work.
+        SHFT_INVALID, // 227, 0xe3
+        SHFT_INVALID, // 228, 0xe4
+        SHFT_INVALID, // 229, 0xe5
+        SHFT_INVALID, // 230, 0xe6
+        SHFT_INVALID, // 231, 0xe7 # This only works on keys other than (C..D)(05..06).
+        17,           // 232, 0xe8 # KanaLock + OEM_102 + CAPITAL + KANA
+        18,           // 233, 0xe9 # KanaLock + Shift + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 234, 0xea # This does not work.
+        SHFT_INVALID, // 235, 0xeb
+        SHFT_INVALID, // 236, 0xec
+        SHFT_INVALID, // 237, 0xed
+        SHFT_INVALID, // 238, 0xee
+        SHFT_INVALID, // 239, 0xef # This only works on keys other than (C..D)(05..06).
+        17,           // 240, 0xf0 # OEM_AX + OEM_102 + CAPITAL + KANA
+        18,           // 241, 0xf1 # Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+        SHFT_INVALID, // 242, 0xf2 # This does not work.
+        SHFT_INVALID, // 243, 0xf3
+        SHFT_INVALID, // 244, 0xf4
+        SHFT_INVALID, // 245, 0xf5
+        SHFT_INVALID, // 246, 0xf6
+        SHFT_INVALID, // 247, 0xf7 # This only works on keys other than (C..D)(05..06).
+        17,           // 248, 0xf8 # KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
+        18,           // 249, 0xf9 # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+     }                //           # This does not work.
 };
 
 /*****************************************************************************\
@@ -549,13 +550,13 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
 * Known bugs
 *
 * The level 7 (AltGr + AltFr i.e. VK_OEM_AX + VK_OEM_102) does not work when
-* KANA is on, if the key is subject to KANA. To work around this issue, the
-* level 7 with KANA should be redundant.
+* KanaLock is on, if the key is subject to KanaLock. To work around this issue,
+* the level 7 with KanaLock should be redundant.
 *
 * The level 10 (Shift + CAPITAL, where CAPITAL is the modifier added on top
 * of the Caps Lock toggle key) does not work on column 02, i.e. keys "2",
 * "W", "S", "X" of the US-QWERTY. To work around this issue, mappings on
-* these keys are replicated on unused keys as there are to the right.
+* these keys are replicated on unused keys.
 \*****************************************************************************/                                                                                             // KanaLock+AltGr+AltFr         Shift+CAPITAL
                                                                                                                                                                             // does not work.               does not work on keys
 static ALLOC_SECTION_LDATA VK_TO_WCHARS29 aVkToWch29[] = {                                                                                                                  //|||||||||||                   (B..E)02.
@@ -698,8 +699,6 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
 /*****************************************************************************\
 * Ligature array.
 *
-* Modification # 17 and 18 are also grouped below.
-*
 * 16 is the maximum number of code units supported by ligatures on Windows, and
 * 14 code units are required for subdivision flags.
 *
@@ -717,6 +716,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
 # AZERTY, on C12 of Belgian AZERTY.
 * https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
 * See * Known bugs
+*
+* Modification # 17 and 18 are also grouped below.
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
@@ -1268,45 +1269,144 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Z'          ,26     ,0xd835   ,0xDDED   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Emoji.
+  * Emoji (oncoming).
   \*****************************************************************************/
 
-  {'0'          ,27     ,'0'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'1'          ,27     ,'1'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'2'          ,27     ,'2'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'3'          ,27     ,'3'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'4'          ,27     ,'4'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'5'          ,27     ,'5'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'6'          ,27     ,'6'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'7'          ,27     ,'7'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'8'          ,27     ,'8'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'9'          ,27     ,'9'      ,0xfe0f   ,0x20e3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'A'          ,27     ,0xd83c   ,0xDDE6   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'B'          ,27     ,0xd83c   ,0xDDE7   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'C'          ,27     ,0xd83c   ,0xDDE8   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'D'          ,27     ,0xd83c   ,0xDDE9   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'E'          ,27     ,0xd83c   ,0xDDEA   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'F'          ,27     ,0xd83c   ,0xDDEB   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'G'          ,27     ,0xd83c   ,0xDDEC   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'H'          ,27     ,0xd83c   ,0xDDED   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'I'          ,27     ,0xd83c   ,0xDDEE   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'J'          ,27     ,0xd83c   ,0xDDEF   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'K'          ,27     ,0xd83c   ,0xDDF0   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'L'          ,27     ,0xd83c   ,0xDDF1   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'M'          ,27     ,0xd83c   ,0xDDF2   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'N'          ,27     ,0xd83c   ,0xDDF3   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'O'          ,27     ,0xd83c   ,0xDDF4   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'P'          ,27     ,0xd83c   ,0xDDF5   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Q'          ,27     ,0xd83c   ,0xDDF6   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'R'          ,27     ,0xd83c   ,0xDDF7   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'S'          ,27     ,0xd83c   ,0xDDF8   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'T'          ,27     ,0xd83c   ,0xDDF9   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'U'          ,27     ,0xd83c   ,0xDDFA   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'V'          ,27     ,0xd83c   ,0xDDFB   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'W'          ,27     ,0xd83c   ,0xDDFC   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'X'          ,27     ,0xd83c   ,0xDDFD   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Y'          ,27     ,0xd83c   ,0xDDFE   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Z'          ,27     ,0xd83c   ,0xDDFF   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PLUS  ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_1     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_5     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,19     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,20     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,21     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,22     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,23     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,24     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'0'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'1'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'2'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'3'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'4'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'5'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'6'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'7'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'8'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'9'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'A'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'B'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'C'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'D'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'E'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'F'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'G'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'I'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'J'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'K'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'L'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'M'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'N'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'O'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'P'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Q'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'R'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'S'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'T'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'U'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'V'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'W'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'X'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'Z'          ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
