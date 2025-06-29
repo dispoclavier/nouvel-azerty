@@ -975,9 +975,9 @@
 #
 # # Notes for maintenance
 #
-#   For display in browsers on GitHub as full-fledged web pages rather than
-#   merely in plain text, this file needs to be split in three partials maxing
-#   at 2GB, due to file size restrictions in the web interface of GitHub.
+#   For display in browsers as full-fledged web pages rather than merely in
+#   plain text, this file needs to be split in three partials maxing at 2GB,
+#   due to file size restrictions in GitHub’s web interface.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml
@@ -1226,8 +1226,8 @@
 #
 #   The letter groups and symbol groups are also documented on screenshots of
 #   two spreadsheets dumped in plain text in this file, online with tooltips.
-#   See # # Symbol groups overview
-#   See # # Letter groups overview
+#   See # # Symbol group overview
+#   See # # Letter group overview
 #   https://dispoclavier.com/img/symboles.png
 #   https://dispoclavier.com/img/lettres.png
 #   https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-symboles
@@ -4628,7 +4628,7 @@
 #       2314 total characters set out for use in math
 #
 #       −996 SMP alphanumeric math symbols in groups 6..10
-#            See # # Mathematical Latin alphabets
+#            See # # Mathematical Latin alphabets and digits
 #            See # # Mathematical Greek alphabets and symbols
 #       −143 SMP Arabic mathematical characters
 #       ――――
@@ -5329,7 +5329,7 @@
 #   Many of these are included in groups 6 to 10, where the complete sets of
 #   alphanumeric mathematical symbols are supported. Not so the liter symbol
 #   "ℓ" U2113, as "𝓁" U1D4C1 is encoded separately.
-#   See # # Mathematical Latin alphabets
+#   See # # Mathematical Latin alphabets and digits
 #   See # # Mathematical Greek alphabets and symbols
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Letterlike_Symbols_block
