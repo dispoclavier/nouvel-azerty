@@ -1010,6 +1010,9 @@
 #   "ǝ" U01DD LATIN SMALL LETTER TURNED E, not "ɘ" U0258 LATIN SMALL LETTER
 #   REVERSED E.
 #
+#   Many Latin letters did not make it into keysymdef.h, e.g. U0190 (*Eopen),
+#   U025B (*eopen), U0186 (*Oopen), U0254 (*oopen).
+#
 <dead_tilde><dead_grave>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                                 <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <dead_grave><dead_tilde>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
