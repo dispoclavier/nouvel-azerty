@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-06-26T1734+0200
+# 2025-06-29T0454+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -69,9 +69,11 @@
 # ignored under the assumption that development happens in KLC only. But this
 # is just not possible, given that KbdUTool’s KLC-to-C transpiler is broken, as
 # it is unable to handle dead characters above 0x0FFF and to transpile KanaLock
-# levels. Anyway, KLC only supports end-of-line comments, while leading block
-# comments (in addition to EOL comments) are best for human readability, and
-# with long lists are more readable than the grouped layout.
+# levels. Moreover, ligatures are transpiled only up to 5 code units due to the
+# general header not supporting the architectural limit almost exhausted by the
+# subdivision flags. And KLC only supports end-of-line comments, while leading
+# block comments (in addition to EOL comments) are best for human readability,
+# and with long lists are more readable than the grouped layout.
 #
 # As a result, any DEADTRANS macro call can be overridden by a similar call,
 # with the same input and the same dead character, but another output, provided
