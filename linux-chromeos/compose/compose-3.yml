@@ -248,7 +248,7 @@
 #   https://www.francetvinfo.fr/replay-radio/le-choix-franceinfo/pizza-pilule-bleue-ou-rouge-c-ur-violet-le-sens-cache-de-ces-emojis-que-vous-utilisez-souvent-sur-les-reseaux-sociaux_7130340.html
 #
 #
-# # Symbol groups overview
+# # Symbol group overview
 #
 #   This tab-separated table is copied from a spreadsheet.
 #   Plain text displays best with a 6 character tab width.
@@ -256,7 +256,7 @@
 #   Empty positions are reserved, because these sequences
 #   are used for mathematical letters or for group dead key
 #   multikey equivalents.
-#   See # # Mathematical Latin alphabets
+#   See # # Mathematical Latin alphabets and digits
 #   See # # C01 numbersign
 #
 #
@@ -2643,8 +2643,10 @@
 #
 ### Letter groups
 #
-#   These groups contain mainly letters and mathematical letter symbols, but
-#   some groups also contain mathematical digit symbols.
+#   Starting with 1, these groups relying on the group dead key contain mainly
+#   letters and mathematical letter symbols. Some groups also contain
+#   mathematical digit symbols.
+#   See #*# GROUP_1
 #
 #   In this section, group headings are prefixed with "#+# ".
 #
@@ -2677,10 +2679,10 @@
 #   See #+# GROUP_11
 #   See #+# GROUP_12
 #   See # # Mathematical Greek alphabets and symbols
-#   See # # Mathematical Latin alphabets
+#   See # # Mathematical Latin alphabets and digits
 #
 #
-# # Letter groups overview
+# # Letter group overview
 #
 #   This tab-separated table is copied from a spreadsheet.
 #   Plain text displays best with a 6 character tab width.
@@ -4302,6 +4304,7 @@
 #   It may be used where the Greek letter dead key is missing and so, polytonic
 #   Greek and the circled dead key are not supported.
 #   See #*# GREEK_OR_CIRCLED
+#   See # # Mathematical Greek alphabets and symbols
 #
 <UEFD0><6>                                                                                     <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
 <Multi_key><numbersign><6>                                                                     <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
@@ -4516,6 +4519,10 @@
 #
 # # Mathematical Greek alphabets and symbols
 #
+#   5 preformatted Greek alphabets cater for the needs of mathematicians, when
+#   the Greek alphabet turns out unable to support the full range of required
+#   Greek variable or constant names.
+#
 #   MATHEMATICAL BOLD U1D6A8..                    = g6 ,
 #   MATHEMATICAL ITALIC U1D6E2..                  = g6    .
 #   MATHEMATICAL BOLD ITALIC U1D71C..             = g6 ,  .
@@ -4523,6 +4530,7 @@
 #   MATHEMATICAL SANS-SERIF BOLD ITALIC U1D790..  = g6 ,, .
 #
 #   Nabla and theta symbol are supported, other special symbols are not yet.
+#   See also # # Mathematical Latin alphabets and digits
 #
 #
 # # Bold Greek alphabet
@@ -6210,23 +6218,30 @@
 #
 #
 #
-# # Mathematical Latin alphabets
+# # Mathematical Latin alphabets and digits
 #
-#   Mathematical Greek alphabets are supported in group 6, that includes in the
-#   first place the Greek base alphabet.
+#   13 preformatted Latin alphabets cater for the needs of mathematicians, when
+#   the Latin alphabet turns out unable to support the full range of required
+#   Latin variable or constant names.
+#
+#   Mathematical Greek alphabets are supported in group 6, that includes the
+#   Greek base alphabet in the first place.
 #   See # # Mathematical Greek alphabets and symbols
 #
-#   Additional alphabets in groups 7 through 10 are input using comma or period
-#   or both, as hinted after the group number here below:
+#   These alphabets may also be used (repurposed) to write text, the better as
+#   combining diacritics are supported.
 #
-#   MATHEMATICAL SCRIPT U1D49C..                  = g7 
-#   MATHEMATICAL BOLD SCRIPT U1D4D0..             = g7  ,    AKA CALLIGRAPHIC
+#   Additional alphabets in groups 7 through 10 are input using comma or period
+#   or both, as hinted after the group number.
+#
+#   MATHEMATICAL SCRIPT U1D49C..                  = g7
+#   MATHEMATICAL BOLD SCRIPT U1D4D0..             = g7  ,    CALLIGRAPHIC
 #   MATHEMATICAL BOLD ITALIC U1D468.. (short)     = g7    .
-#   MATHEMATICAL DOUBLE-STRUCK U1D53B..           = g8       digits: U1D7D8..
+#   MATHEMATICAL DOUBLE-STRUCK U1D538..           = g8       digits: U1D7D8..
 #   MATHEMATICAL BOLD U1D400..                    = g8  ,    digits: U1D7CE..
 #   MATHEMATICAL ITALIC U1D434..                  = g8    .
 #   MATHEMATICAL BOLD ITALIC U1D468..             = g8  , .
-#   MATHEMATICAL FRAKTUR U1D504..                 = g9 
+#   MATHEMATICAL FRAKTUR U1D504..                 = g9
 #   MATHEMATICAL BOLD FRAKTUR U1D56C..            = g9  ,
 #   MATHEMATICAL MONOSPACE U1D670..               = g9    .  digits: U1D7F6..
 #   MATHEMATICAL SANS-SERIF U1D5A0..              = g10      digits: U1D7E2..
@@ -6237,13 +6252,13 @@
 #
 #+# GROUP_7
 #
-#   Group 7 of the base alphabet: Script, Bold script
+#   Group 7 of the base alphabet: Script, Calligraphic
 #
 #   The mnemonic is based on the intrinsic slant of both digit 7 and the
 #   "script" typeface style.
 #
-#   Bold is not script; it is referred to as calligraphic, with normal font
-#   weight.
+#   Bold script, rather than being script, is referred to as calligraphic, with
+#   normal font weight.
 #   See # # Calligraphic Latin alphabet, named BOLD SCRIPT
 #
 #   The slot of intrinsically impossible italic script is repurposed as a
