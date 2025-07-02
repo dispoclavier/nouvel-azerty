@@ -1,20 +1,20 @@
 /****************************** H Module Header ***********************************\
 * charset=UTF-16 LE
 * Module Name=kbcommon.h
-* Version=4.12.0
-* Last edited=
-2024-12-04T1252+0100
 *
 * Content=Keyboard layout header: Various defines for use in keyboard layout configurations.
-* Description=Kana toggle; Modifier keys; Compose key; Numerical keypad accessibility and enhancement.
-* See kbd.h for a general description
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation pro parte;
 * 2015..2025 Dispoclavier (dev@dispoclavier.net)
 *
-* Version history and modification log:
-*
+* Uncomment numpad defines           5.3.0.20.00-Tue-2025-07-01T1712+0200
+* Ditch pointless editing DEADTRANS   5.2.0.3.12-Thu-2025-06-12T2133+0200
+* Debug DEADTRANS macro               5.2.0.3.11-Thu-2025-06-12T0556+0200
+* Debug DEADTRANS macro               5.2.0.3.10-Thu-2025-06-12T0515+0200
+* Debug DEADTRANS macro               5.2.0.3.09-Thu-2025-06-12T0428+0200
+* Update typedefs of DEADTRANS macro  5.2.0.3.08-Thu-2025-06-12T0043+0200
+* Wed Jun 11, 2025  extended DEADTRANS macro.
 * Sun Apr 13, 2025  updated some annotations.
 * Wed Dec 04, 2024  commented out unused ligature typedefs.
 * Sun Nov 10, 2024  added section 7.3.1 fixing KbdUTool mistranspiles.
@@ -28,13 +28,13 @@
 * Thu Nov 16, 2017  updated to test JUNJA and other VKs
 * Mon Dec 12, 2016        revised comment on ligature table typedefs
 * Tue Sep 20, 2016        revised comments on modifier bits
-* Mon Sep 19, 2016  v4.0  moved allocation table typedef to locale header; 
+* Mon Sep 19, 2016  v4.0  moved allocation table typedef to locale header;
 * Fri Sep 02, 2016        reviewed comments before posting on GitLab
 * Sun Aug 08, 2016  v3.0  Pause remapping commented out;
 * Sun Jul 17, 2016
 * Fri Jul 15, 2016
 * Wed Jun 22, 2016  v2.0
-* Fri Jun 03, 2016  
+* Fri Jun 03, 2016
 * Thu Jun 02, 2016        added Group Select key
 * Sun May 22, 2016        moved TYPEDEF_LIGATURE(16) here and completed
 * Sat May 21, 2016        commented out TYPEDEF_VK_TO_WCHARS(10)
@@ -45,7 +45,7 @@
 * Sat Dec 12, 2015  v0.0  renamed to 'kbdcom-A.H'
 * Mon Oct 19, 2915
 * Thu Oct 01, 2015
-* Wed Sep 23, 2015  
+* Wed Sep 23, 2015
 * Tue Sep 22, 2015  merged general parts of keyboard specific headers into this.
 * Fri Sep 18, 2015
 * Thu Sep 17, 2015
@@ -105,27 +105,27 @@
 * as they are specified in the standard, are not fit for general use.
 *
 * To stay user-friendly, any keyboard should not display more than five
-* characters per key. Thus the deadkey accessed ISO groups should not be 
-* printed on the keycaps. The Function layer may be indicated with a glyph 
-* in the center of the keycap or in another free place. On Kana-togglable 
+* characters per key. Thus the deadkey accessed ISO groups should not be
+* printed on the keycaps. The Function layer may be indicated with a glyph
+* in the center of the keycap or in another free place. On Kana-togglable
 * keys, the Kana shift states should be centered:
-*  ---------   ---------   ---------   ---------   ---------  
+*  ---------   ---------   ---------   ---------   ---------
 *  | 2   4 |   | 2   4 |   | 2     |   | 2  4  |   | 2 4   |  = with Shift
-*  |   5   |   |   5   |   |   5   |   |       |   |     5 | 
-*  | 1   3 |   |     3 |   |     3 |   |   3   |   |   3   |  = without Shift     
-*  ---------   ---------   ---------   ---------   --------- 
+*  |   5   |   |   5   |   |   5   |   |       |   |     5 |
+*  | 1   3 |   |     3 |   |     3 |   |   3   |   |   3   |  = without Shift
+*  ---------   ---------   ---------   ---------   ---------
 * The ISO/IEC 9995-1 keycap design scheme is not as legible:
-*  --------- 
+*  ---------
 *  | 2   6 |  Note: ISO/IEC 9995-1 prohibits the use of levels 4 and 8,
 *  | 1   5 |        because that modifier combination is used as a remnant
 *  | 3   7 |        group selector. That feature can be used on Linux only.
-*  --------- 
+*  ---------
 *
 * 0.4.2  Usefulness and practicity
 *
 * A closer analysis shows that locale-unrelated characters and dead keys
 * should be deferred to a multiple group selector dead key and to composition.
-* * A multiple group selector in third level on space bar is an easy access 
+* * A multiple group selector in third level on space bar is an easy access
 *   to multiple layout groups for bicameral letters and for symbols.
 * * Compose is able (1) to emulate any dead key; (2) to represent digraphs and
 *   those characters that can be resolved to a digraph.
@@ -139,15 +139,15 @@
 *  * It makes for confusing keycap engravings and overloaded keytops.
 *  * It induces high training costs on complex keyboards.
 *
-* 
+*
 * 0.5  Proposed keyboard layout level scheme
 *
 * 0.5.1  Groups
 *
-* The fourth level is no longer prohibited, since the group selector cannot 
-* be defined as a combination of level-2-selector and level-3-selector, 
+* The fourth level is no longer prohibited, since the group selector cannot
+* be defined as a combination of level-2-selector and level-3-selector,
 * unless it is publicly accepted that the whole scheme is deliberately not
-* cross-platform implementable. As that is not a working strategy, only those 
+* cross-platform implementable. As that is not a working strategy, only those
 * features are retained that can be implemented both on any version of Windows
 * from Windows 2000 upwards, and on any version of macOS from Mac OS X 10.2.
 *
@@ -162,30 +162,30 @@
 * On the other hand, advanced users are given a convenient way to input any
 * character of the mainly supported script, as well as an unlimited number of
 * symbols and other characters.
-* 
+*
 * 0.5.2  Levels
 *
-* To become more intelligible, the levels are reordered in two piles of two 
-* levels each, numbered 1A, 2A, 1B, 2B. The pile selector is typically AltGr 
+* To become more intelligible, the levels are reordered in two piles of two
+* levels each, numbered 1A, 2A, 1B, 2B. The pile selector is typically AltGr
 * or Right Option.
 *
-* To work around the inability of Windows to produce more than one single 
-* UTF-16 code unit per dead key sequence, Windows is granted the use of the 
-* Control + Alt key combination to access pile C with levels 1C and 2C on 
+* To work around the inability of Windows to produce more than one single
+* UTF-16 code unit per dead key sequence, Windows is granted the use of the
+* Control + Alt key combination to access pile C with levels 1C and 2C on
 * a limited panel of keys typically not used for application shortcuts.
-* By contrast, AltGr is no longer an equivalent of Ctrl + Alt, given the 
+* By contrast, AltGr is no longer an equivalent of Ctrl + Alt, given the
 * multiple issues related to interference with application shortcuts. See:
 http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 *
-* When the last keypress in a dead key sequence is with legacy AltGr, Word 
-* disregards the dead key. That does not occur when another modifier is used 
+* When the last keypress in a dead key sequence is with legacy AltGr, Word
+* disregards the dead key. That does not occur when another modifier is used
 * on the AltGr key.
-* 
+*
 * Some third party applications may not be able to process those modifiers.
 *
-* Additionally, on all operating systems, the use of upper levels of the Numbers 
+* Additionally, on all operating systems, the use of upper levels of the Numbers
 * modifier can be used for input of additional characters in a locale tailoring,
-* e.g. superscript small letters for locales using superscript abbreviations, 
+* e.g. superscript small letters for locales using superscript abbreviations,
 * such as ordinal indicators, so as to get an interoperable digital representation.
 *
 \**********************************************************************************/
@@ -197,12 +197,12 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 \**********************************************************************************/
 /**********************************************************************************\
 * 2  KANA TOGGLE KEY MAPPING
-* 
+*
 * The following is added to remap key E00 (ISO/IEC 9995-1) to a Kana Lock toggle.
 * Key E00 is VK_OEM_3 on the US keyboard, and VK_OEM_7 on the French keyboard.
 * Optionally, key C00 (VK_CAPITAL] can be used for that purpose.
 *
-* The Caps Lock and Kana Lock toggles may be inverted on Windows using the 
+* The Caps Lock and Kana Lock toggles may be inverted on Windows using the
 * built-in Scancode Mapper, if that is not done in the layout driver.
 *
 * This toggle is needed to switch between a language centered layout and
@@ -211,16 +211,16 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 * current punctuation on the upper row. Digits are then by default on level 3,
 * and duplicated on level 1 when Kana Lock is on, i.e. in ASCII mode.
 *
-* The supplemental layout toggle does exist on Linux likewise. On macOS, where 
+* The supplemental layout toggle does exist on Linux likewise. On macOS, where
 * the feature is unavailable, Kana Lock can be emulated by Karabiner Elements.
 *
-* Thus a supplemental toggle allows to get away from actual hybrid keyboard 
+* Thus a supplemental toggle allows to get away from actual hybrid keyboard
 * layouts that are often not fit for most current purposes when precomposed
 * characters for locales take the place of characters used in programming,
 * while often not ensuring a correct input of the locales they are meant to
 * support, or when they do, making the keyboard unfit for other purposes.
 * According to modern usage, uppercase letters should be provided throughout,
-* 
+*
 * The leftmost key in the upper row is ideally placed for a toggle, because
 *  * it is worst placed for characters;
 *  * it therefore contains the (presumably) least used characters;
@@ -230,12 +230,12 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 *
 * However, if the Caps Lock toggle key is disliked, Kana Lock may be mapped
 * on this key. E00 eventually may then be mapped to Caps Lock.
-* 
+*
 * The modifier bit used for the Kana toggle is 0x08. Not using the Kana modifier
 * for AltGr allows greater flexibility in mapping the Kana Lock / ASCII mode.
-* 
-* The recommended modifier bit for AltGr is 0x10. 
-* 
+*
+* The recommended modifier bit for AltGr is 0x10.
+*
 * Then, bicameral letters should not be mapped on levels accessed with AltGr,
 * because on those levels, Caps Lock is unavailable.
 *
@@ -297,7 +297,7 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 * Right Alt may be reintroduced onto the keyboard by mapping
 * the Applications (context menu) or Right Windows key scan code
 * to an unused scancode defined as RMENU.
-* The scancode used here is T5E (VK_OEM_BACKTAB), see kbd.h(1123).
+* The scancode used here is T5E (VK_OEM_BACKTAB), see kbd.h:1123.
 \**********************************************************************************/
 // Dedicated modifier on Right Alt:
    #undef  X38
@@ -329,7 +329,7 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 \**********************************************************************************/
 /**********************************************************************************\
 * 3.3  KANA ON KEY B00 (VK_OEM_102)
-* 
+*
 * On keyboards with either B00 (VK_OEM_102) or Right Windows (or both),
 * B00 is preferredly mapped to Shift, following user preferences,
 * while the actual Shift key or Left Windows key could be mapped to Alt.
@@ -341,7 +341,7 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * the mappings doing some fine tuning with the Scan Code Mapper, eventually
 * by choosing from a set of predefined registry key values.
 *
-* The unused SC is T5A (VK_OEM_WSCTRL), see WINUSER.H(615) and kbd.h(1119).
+* The unused SC is T5A (VK_OEM_WSCTRL), see WINUSER.H:615 and kbd.h:1119.
 * Conversely the original mapping of B00 as VK_OEM_102 may be restored
 * using the Scan Code Mapper.
 \**********************************************************************************/
@@ -367,12 +367,12 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 /**********************************************************************************\
 * 4  HIGHER MODIFIER KEYS
 *
-* Beyond Kana, four other modifier keys are available for support of supplemental 
+* Beyond Kana, four other modifier keys are available for support of supplemental
 * shift states, notably the two Oyayubi modifiers and the Group Select Aping key.
 *
-* Both Oyayubi keys are used as supplemental modifiers on keyboards of the 
+* Both Oyayubi keys are used as supplemental modifiers on keyboards of the
 * Oasys terminals from Fujitsu. There are various uses of them on Western keyboards
-* as well. For instance, a pair of supplemental modifiers is used on the German 
+* as well. For instance, a pair of supplemental modifiers is used on the German
 * Neo2 ergonomical layout. On Windows this is implemented using Right Oyayubi.
 * To input sequences in other scripts, modifiers may also be added on toggle keys,
 * in order to use the continuous keypress with the modifier, and short press-and-
@@ -387,14 +387,14 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * The code below is added to get more explicit or less confusing names.
 * For locale specific modifier naming, please see the locale header files.
 \**********************************************************************************/
-// #define KBDROYAYUBI   0x10      // KBDROYA in kbd.h(61), Right Oyayubi;
-// #define KBDLOYAYUBI   0x20      // KBDLOYA in kbd.h(62), Left Oyayubi.
-// #define KBDGRPSELT    0x80      // KBDGRPSELTAP in kbd.h(63)
+// #define KBDROYAYUBI   0x10      // KBDROYA in kbd.h:61, Right Oyayubi;
+// #define KBDLOYAYUBI   0x20      // KBDLOYA in kbd.h:62, Left Oyayubi.
+// #define KBDGRPSELT    0x80      // KBDGRPSELTAP in kbd.h:63
 /**********************************************************************************\
 * 5  COMPOSE KEY MAPPING
 *
 * The Compose dead key may be Kana + Space, or AltGr + Space, depending on
-* whether Right Alt is Kana or AltGr. But this combination is preferredly 
+* whether Right Alt is Kana or AltGr. But this combination is preferredly
 * used as group selector.
 *
 * Thus the Compose key may be mapped to any key place, e.g. AltGr + O.
@@ -405,7 +405,7 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * Compose may be mapped to whatever key (e.g. Applications, Right Windows)
 * using the built-in Windows Scan Code Mapper for keyboards with the scan code
 * of the Brazilian VK_ABNT_C2 (T7E).
-* 
+*
 * The virtual key name VK_OEM_7 is available because T29 is remapped
 * (please refer to #1).
 *
@@ -420,46 +420,46 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 /**********************************************************************************\
 * 6.1  DIGITS AND DECIMAL SEPARATOR
 *
-* The following are added to disable Numpad Specials. 
-* This allows netbook users to enter digits on the overlay numpad 
+* The following are added to disable Numpad Specials.
+* This allows netbook users to enter digits on the overlay numpad
 * without toggling NumLock. Pressing Function (and hold it down
 * while entering the digits) is sufficient.
-*  
-* Numpad specials are legacy features that are no longer needed 
-* since they are available on dedicated keys. 
+*
+* Numpad specials are legacy features that are no longer needed
+* since they are available on dedicated keys.
 * They are already disabled on performative products like the MacBook,
 * as well as on the entire panel of Apple Mac computers.
 *
-* The most what numpad specials can do today, is to worsen ergonomics 
-* on compact keyboards like those of netbooks, where a numpad 
+* The most what numpad specials can do today, is to worsen ergonomics
+* on compact keyboards like those of netbooks, where a numpad
 * is emulated on most models. This numpad is often referred to
-* as not existent, because it is lacking ease of access to digit keys, 
-* which is one of the main advantages of a numpad. Operators are already 
+* as not existent, because it is lacking ease of access to digit keys,
+* which is one of the main advantages of a numpad. Operators are already
 * available simply when Fn is pressed. Now, digits are, too.
 *
 \**********************************************************************************/
-// #undef  T47
-// #define T47 _EQ(                                     NUMPAD7                      )
-// #undef  T48
-// #define T48 _EQ(                                     NUMPAD8                      )
-// #undef  T49
-// #define T49 _EQ(                                     NUMPAD9                      )
-// #undef  T4B
-// #define T4B _EQ(                                     NUMPAD4                      )
-// #undef  T4C
-// #define T4C _EQ(                                     NUMPAD5                      )
-// #undef  T4D
-// #define T4D _EQ(                                     NUMPAD6                      )
-// #undef  T4F
-// #define T4F _EQ(                                     NUMPAD1                      )
-// #undef  T50
-// #define T50 _EQ(                                     NUMPAD2                      )
-// #undef  T51
-// #define T51 _EQ(                                     NUMPAD3                      )
-// #undef  T52
-// #define T52 _EQ(                                     NUMPAD0                      )
-// #undef  T53
-// #define T53 _EQ(                                     DECIMAL                      )
+ #undef  T47
+ #define T47 _EQ(                                     NUMPAD7                      )
+ #undef  T48
+ #define T48 _EQ(                                     NUMPAD8                      )
+ #undef  T49
+ #define T49 _EQ(                                     NUMPAD9                      )
+ #undef  T4B
+ #define T4B _EQ(                                     NUMPAD4                      )
+ #undef  T4C
+ #define T4C _EQ(                                     NUMPAD5                      )
+ #undef  T4D
+ #define T4D _EQ(                                     NUMPAD6                      )
+ #undef  T4F
+ #define T4F _EQ(                                     NUMPAD1                      )
+ #undef  T50
+ #define T50 _EQ(                                     NUMPAD2                      )
+ #undef  T51
+ #define T51 _EQ(                                     NUMPAD3                      )
+ #undef  T52
+ #define T52 _EQ(                                     NUMPAD0                      )
+ #undef  T53
+ #define T53 _EQ(                                     DECIMAL                      )
 /**********************************************************************************\
 * 6.2  NUMLOCK KEY A SECOND BACKSPACE
 *
@@ -468,11 +468,11 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * This is inspired from Mac OS X. See #4.1 above.
 *
 * This define was also used for small laptops, where Numlock is coupled
-* with the Function Lock On NumPad toggle. This toggle should be placed 
+* with the Function Lock On NumPad toggle. This toggle should be placed
 * in the Base shift state, or in the Function shift state on CapsLock.
 * NumLock was then defined on Pause (see next).
 *
-* However, this proved not to work because Pause got the Backspace 
+* However, this proved not to work because Pause got the Backspace
 * functionality as well, worsening user experience on netbooks.
 * Therefore, this remapping is better performed using the built-in
 * Scan Code Mapper for Keyboards (see #2).
@@ -490,7 +490,7 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * netbooks) was remapped to NumLock, unifying thus the layout for most
 * keyboard models using physical keys (except small models without
 * even an emulated Numpad). However, the Pause key proves to be relegated
-* to shifted levels or even missing on many machines. That leads to 
+* to shifted levels or even missing on many machines. That leads to
 * disable this remapping.
 *
 * A Num Lock toggle is needed even on desktop keyboards because
@@ -505,12 +505,12 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * To resume, type 'n' (no) before hitting the Enter key.
 *
 * Despite of being used in command prompts, the Pause key is
-* nevertheless missing on some laptop models. This makes for 
+* nevertheless missing on some laptop models. This makes for
 * worktool value lowering. Consistently, these models usually
 * lack even an emulated numpad either. This prevents users from
 * entering special characters using the Alt+NumPad input method.
 * Therefore, laptop computers without any numpad, whether emulated
-* or physical, are not Windows conformant. Consequently, the purchase 
+* or physical, are not Windows conformant. Consequently, the purchase
 * of those laptops is strongly discouraged.
 \**********************************************************************************/
 // Pause to Num Lock:
@@ -562,11 +562,11 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * that are supported as a sequence by the related Windows API, and to complete
 * the range started in kbd.h(465..469) for smaller sequence tables.
 *
-*  |||   Note that kbd.h(469) defines sequences already up to five WCHARS,
+*  |||   Note that kbd.h:469 defines sequences already up to five WCHARS,
 *  |||   that is more than the implemented limitation in MSKLC 1.4 which
-*  |||   is set to four WCHARS because it was believed that this was the 
-*  |||   architectural limit. That is true for Shift + AltGr only. Longer 
-*  |||   sequences in Shift + AltGr cause the keyboard layout to fail, and 
+*  |||   is set to four WCHARS because it was believed that this was the
+*  |||   architectural limit. That is true for Shift + AltGr only. Longer
+*  |||   sequences in Shift + AltGr cause the keyboard layout to fail, and
 *  |||   the system to bug if that layout is the default.
 *
 \**********************************************************************************/
@@ -601,7 +601,7 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 /**********************************************************************************\
 * 7.3.2  LAYOUT
 *
-* The following are added to make the source code fit into the fixed 
+* The following are added to make the source code fit into the fixed
 * 8 characters tabulation width of the built-in Windows NotePad, for
 * best display of static ALLOC_SECTION_LDATA VK_TO_WCHARS##n aVkToWch##n[].
 * The original, unshortened values are: WCH_NONE, WCH_DEAD, WCH_LGTR.
@@ -620,13 +620,13 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * The following are added to facilitate source layout with 8 char tabulations
 * and to enhance transparency in static ALLOC_SECTION_LDATA DEADKEY aDeadKey[].
 *
-* The default define is in kbd.h(439):  #define DKF_DEAD  0x0001
+* The default define is in kbd.h:443:  #define DKF_DEAD  0x0001
 * For 0x0000 no alternate flag name is defined in kbd.h.
 * DKF stands for 'Dead Key Flag', which is null by default.
-* This flag is referred to as a "uFlag" in kbd.h(437).
+* This flag is referred to as a "uFlag" in kbd.h:435.
 \**********************************************************************************/
-// #define DKF_0 0x0000  // name used for 0 flag
-// #define CHAIN 0x0001  // name used for 1 flag
+// #define DKF_0 0x0000  // name used for flag 0
+// #define CHAIN 0x0001  // name used for flag 1
 /**********************************************************************************\
 * End of kbcommon.H
 \**********************************************************************************/
