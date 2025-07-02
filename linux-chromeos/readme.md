@@ -223,6 +223,12 @@ Ce mode d’emploi complémentaire présente uniquement ce qui est particulier �
 
 L’émulation de touche "ê" par la touche morte accent circonflexe fonctionne aussi en capitales, "q" donne "êqu", et "x" donne "êch".
  
+### Séquences
+
+#### Trigramme breton
+
+La capitale "CʼH" du trigramme breton s’insère à la place de la minuscule sur AltGr + AltFr + [A] quand les capitales sont verrouillées.
+
 ## Nom de fichier
 
 Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « linux-chromeos/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Linux.md » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Linux-[version].zip ».
