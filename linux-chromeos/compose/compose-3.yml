@@ -130,10 +130,9 @@
 #   output in the few empty instances in groups 3..5, 11, without mention in
 #   the documentation. To achieve this, the keyword "available" must be present
 #   in the EOL comment of these instances.
-#   See # Available.
+#   See […] # Available.
 #   See # # Notes about documentation
-#
-#   See also # # Notes for maintenance
+#   See # # Notes for maintenance
 #
 #
 ### Space and symbol groups
@@ -2654,7 +2653,7 @@
 #
 #   The rationale for this pick is alphabetic mnemonics, based on "emoji", with
 #   the default mapping of dead_doubleacute on key D03 "E", and *dead_reversed
-#   on key D04 "R", making for an easy, order insensitive combo.
+#   on key D04 "R", making for an easy, order insensitive combination.
 #
 #   This subsection was moved here after its then-66kB brought compose-2.yml to
 #   the brink of oversize under the GitHub 2MB file size constraint for the use
@@ -4983,7 +4982,8 @@
 #   MATHEMATICAL SANS-SERIF BOLD ITALIC U1D790..  = g6 ,, .
 #
 #   Nabla and theta symbol are supported, other special symbols are not yet.
-#   See also # # Mathematical Latin alphabets and digits
+#   Western Arabic digits are supported as part of the Latin math alphabets.
+#   See # # Mathematical Latin alphabets and digits
 #
 #
 # # Bold Greek alphabet
