@@ -542,8 +542,15 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * Special values for Attributes (column 2)
 *     CAPLOK bit    - CAPS-LOCK affect this key like SHIFT
+*     SGCAPS        - Swiss-German Capitals: CAPS-LOCK changes the map at levels 1 & 2.
+*                     This is also subject to KANA-LOCK
+*     KANALOK       - KANA-LOCK affects this key
+*     ALTGR         - KANA-LOCK affects this key (KbdUTool transpile)
+*     KBD           - CAPS-LOCK and KANA-LOCK affect this key (KbdUTool transpile)
 *
-* Special values for wch[*] (column 3 & 4)
+*                   See kbcommon.h subsection 7.3
+*
+* Special values for wch[*] (columns 3..)
 *     WCH_NONE      - No character
 *     WCH_DEAD      - Dead Key (diaresis) or invalid (US keyboard has none)
 *     WCH_LGTR      - Ligature (generates multiple characters)
@@ -678,7 +685,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
 
 // Put this last so that VkKeyScan interprets number characters
 // as coming from the main section of the kbd (aVkToWch33)
-// before considering the numpad (aVkToWch1).
+// before considering the numpad (aVkToWch17).
+// See kbcommon.h subsection 6.1
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS17 aVkToWch17[] = {
 //                      |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |
