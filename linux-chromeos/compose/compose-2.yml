@@ -4546,6 +4546,10 @@
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
 #
+#   Double acute is chained with reversed for an emoji dead key that is located
+#   after the symbol groups due to a file size restriction.
+#   See # # EMOJI_READY
+#
 <dead_doubleacute>                                                                         <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><EuroSign>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
