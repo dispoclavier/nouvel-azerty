@@ -25,7 +25,7 @@ Ces vues ont été générées par [Keyboard Layout Editor](https://keyboard-lay
 
 ## Utilisation
 
-Ce mode d’emploi commun présente les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge. Les particularités sont évoquées dans le mode d’emploi propre à chaque système : [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md).
+Ce mode d’emploi commun présente les fonctionnalités communes à toutes les installations distribuées. Les particularités des différents systèmes d’exploitation sont présentées dans le [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), le [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md), et le Mode d’emploi sous macOS (à venir).
 
 ### Lettres
 
@@ -51,7 +51,11 @@ Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposé
 
 #### Touche morte groupe
 
-Les lettres qui manquent même en minuscule, comme æ et œ, sont dans la touche morte groupe, notée « ① », disposée sur [*] en Minuscule et en AltGr, et documentée sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/). Répétée ou suivie d’un chiffre, la touche morte groupe peut activer 12 [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles). Le o-e entrelacé est saisi par [①][o], sa majuscule par [①][O]. Dans chaque groupe, les chiffres sont aussi pris en charge en tant que caractères de base de cette touche morte. Dans les premiers groupes, quelques autres caractères fonctionnent aussi dans ce rôle.
+La touche morte groupe s’appelle aussi « touche groupe ». Elle est notée « ① » et disposée sur [*] en Minuscule et en AltGr.
+
+La touche groupe met la disposition dans le groupe 1. Il y a les lettres françaises "œ" et "æ", de nombreuses autres lettres documentées dans [ce tableau](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-lettres), le point médian sur [p] et [P], le symbole litre « ℓ » sur [L], le demi-anneau gauche « ʿ » sur [l], le demi-anneau droit « ʾ » sur [m], les symboles verset « ℣ » et répons « ℟ » sur [V] et [R], et les symboles documentés dans [ce tableau](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-symboles).
+
+Répétée ou suivie d’un chiffre, la touche morte groupe peut activer 11 autres [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 11 autres [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles).
 
 #### Touche de composition
 
@@ -73,7 +77,9 @@ Les chiffres sont aussi en AltFr, la nouvelle touche modificatrice sur la touche
 
 #### Bascule de mode
 
-La touche [²] est une deuxième bascule graphique, appelée « VerrMod », qui met une partie du clavier en mode ASCII, toutes les touches graphiques sauf les lettres simples, et la barre d’espace.
+La touche [₂] est une deuxième bascule graphique, appelée « VerrMod » pour « verrouillage de mode ». Elle met en mode ASCII une partie du clavier. Sont concernées toutes les touches graphiques sauf les lettres simples, et la barre d’espace.
+
+La touche [₂] est celle entre [Échap] et [Tab], à gauche de [1]. Pour la ressemblance, elle est représentée par l’indice 2 « [₂] » plutôt que l’exposant 2 « [²] ».
 
 ##### Mode ASCII
 
@@ -120,12 +126,13 @@ Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur
 D’autres symboles ASCII sont disposés sur les places vacantes avec des mnémoniques alphabétiques ou graphiques : la perluète "&" sur [P], le croisillon "#" sur [Q], le symbole pour cent "%" sur [Z], le circonflexe ASCII "^" sur [A], le tilde "~" sur [T], la contre-oblique "\\" sur [R], la barre verticale ou tuyau "|" sur [M] parce que c’est l’équivalent en composition de la touche morte macron, le symbole égal "=" sur [B], l’accent grave ASCII "`" sur [N], le tiret-moins "-" sur [G], le signe plus "+" sur [H], et enfin le tiret bas "_" sur [J], et l’apostrophe ASCII "'" sur [U].
 
 Pour les quatre grandes ponctuations après la touche du [N], le point d’interrogation, le point d’exclamation, le deux-points et le point-virgule, la disposition varie légèrement entre les modes français et ASCII :
-* En mode français, toutes sauf le point-virgule sont aussi en AltGr sur la touche où elles sont en Majuscule avec espace, et en AltFr sans espace. Le point-virgule cède sa place en AltGr au symbole paragraphe, afin que celui-ci soit en synergie avec les chiffres, pour la rétrocompatibilité avec le symbole paragraphe sur l’AZERTY traditionnel, où il est pareillement en synergie avec les chiffres, mais en Majuscule.
+
+* En mode français, elles sont en Majuscule avec espace, et en AltFr sans espace. Toutes sauf le point-virgule sont aussi en AltGr. Le point-virgule cède sa place en AltGr au symbole paragraphe, afin que celui-ci soit en synergie avec les chiffres, pour la rétrocompatibilité avec le symbole paragraphe sur l’AZERTY traditionnel, où il est pareillement en synergie avec les chiffres (sauf que c’est en Majuscule).
 * En mode ASCII, toutes les quatre grandes ponctuations ASCII sont toujours en AltFr, mais aussi en AltGr ; deux – le deux-points et le point-virgule – sont aussi en Minuscule ; et les deux autres sont aussi en Majuscule : les points d’interrogation et d’exclamation — mais sans espace, pour s’adapter au mode ASCII. Pour ces deux dernières, peu importe alors que l’on appuie sur [Majuscule] ou sur [AltFr].
 
 ### Exposants et indices
 
-L’exposant deux de l’AZERTY traditionnel change de touche suite à la réaffectation de sa touche traditionnelle [²] à la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
+L’exposant deux de l’AZERTY traditionnel change de touche suite à la réaffectation de sa touche traditionnelle [₂] à la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
 
 Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres.
 
@@ -191,23 +198,27 @@ La possibilité qu’a ce nouvel AZERTY d’émettre des séquences est utilisé
 
 #### Trigramme breton
 
-Le trigramme breton « cʼh » avec lettre apostrophe est sur AltGr + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton. Sa majuscule « Cʼh » est sur Maj + AltGr + AltFr + [A], tandis que sa capitale s’insère à la place de la minuscule quand les capitales sont verrouillées. Ce n’est pas qu’il manquerait la lettre apostrophe, dans le groupe 1 de l’apostrophe.
+Le trigramme breton "cʼh" avec lettre apostrophe est sur AltGr + AltFr + [A] afin de se trouver sur la première touche alphabétique, à l’instar de ce qui est fait sur le CʼHWERTY, la dispositon de clavier conçue pour le breton.
+
+La majuscule "Cʼh" du trigramme breton est sur Maj + AltGr + AltFr + [A].
+
+Ce n’est pas qu’il manquerait la lettre apostrophe. La lettre apostrophe "ʼ" U+02BC est dans le groupe 1 de l’apostrophe.
 
 #### Espaces composées
 
-L’espace suivie du gluon qui est le caractère régulier pour empêcher un retour à la ligne automatique : cette séquence est sur Maj + AltFr + [Espace], pour insérer une espace insécable justifiante dans LibreOffice Writer parce que l’espace insécable sur AltGr + Espace y est à chasse fixe pour espacer les ponctuations en français.
+L’espace suivie du gluon, qui est le caractère régulier pour empêcher un retour à la ligne automatique : cette séquence est sur Maj + AltFr + [Espace], pour insérer une espace insécable justifiante dans LibreOffice Writer, parce que l’espace insécable sur AltGr + Espace y est à chasse fixe, étant détournée pour espacer les ponctuations en français.
 
-L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word parce que l’espace insécable y est justifiante uniquement dans Word 2013.
+L’espace suivie de l’indicateur d’ordre des octets est sur AltGr + AltFr + [Espace], pour insérer une espace insécable justifiante sous les anciennes versions de Windows, où les polices ne contenaient pas le gluon, dans Microsoft Word, parce que l’espace insécable y est justifiante uniquement dans Word 2013.
+
+#### Séquences d’échappement
 
 L’entité nommée de l’espace insécable "&‍nbsp;" est sur Maj + AltGr + AltFr + [Espace], et aussi sur Maj + AltGr + [Espace] en mode ASCII.
 
 En mode ASCII, la référence de caractère numérique de l’espace fine insécable "&‍#x202F;" est sur Maj + AltFr + [Espace] et sur AltGr + AltFr + [Espace].
 
-#### Séquences d’échappement
+Les entités nommées des symboles "<" et ">", soit « &‍lt; » et « &‍gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
 
-Les entités nommées des symboles « < » et « > », soit « &‍lt; » et « &‍gt; », sont sur AltGr + AltFr plus la touche où ils sont en AltGr : [C] ou [V].
-
-Les entités nommées des symboles « " » et « ' », soit « &‍quot; » et « &‍apos; » (moins utilisée), sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] (où le symbole euro prend la place du guillemet double générique "\""), ou [U].
+Les entités nommées des symboles « " » ("\"") et « ' » ("'"), soit « &‍quot; » et « &‍apos; » (moins utilisée), sont sur Maj + AltGr + AltFr plus la touche où ils sont ou seraient en AltGr : [E] (où le symbole euro prend la place du guillemet double générique "\""), ou [U].
 
 #### Références de caractères
 
@@ -221,7 +232,29 @@ Le préfixe « \u{ » est sur AltGr + AltFr + [I], qui est aussi la 
 
 ### Émojis
 
-Une sélection d’émojis documentée dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis)est disposée sur les places de touches vives qui restent, parce que cela doit fonctionner aussi sous Windows, système mal conçu, dysfonctionnel, dont les dispositions de clavier ont été programmées par un seul développeur, de qui les erreurs de conception ont durablement dégradé l’utilisabilité des ordinateurs de la majorité. Alors que tous les émojis codés sur deux ou trois octets à part les sinogrammes sont pris en charge par touches mortes dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), seuls quelques émoji codés sur quatre octets, triés sur le volet, sont pris en charge, sur touches vives uniquement.
+154 émojis sont dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-symboles), soit presque tous les émojis codés sur 2 octets, faciles à saisir par touches mortes sous tous les systèmes d’exploitation.
+
+Par exemple, l’émoji "⚠" « attention danger » est dans le groupe 1 du circonflexe "^". Pour le saisir, plusieurs possibilités :
+
+• En AltGr :
+
+  1. Touche morte groupe : AltGr + [*]
+  2. Circonflexe : AltGr + [A]
+
+• En AltGr en mode ASCII :
+
+  1. Basculer en mode ASCII : touche [₂]
+  2. Touche morte groupe : AltGr + [*]
+  3. Circonflexe : AltGr + [^]
+
+• En Maj + AltGr en mode français :
+
+  1. Touche morte groupe : Maj + AltGr + [Q]
+  2. Circonflexe : Maj + AltGr + [^]
+
+44 émojis sont disposés sur touches vives et documentés dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis).
+
+Les 258 émojis drapeaux nationaux sont composés par code ISO à l’aide des indicateurs régionaux, qui servent aussi d’émojis lettres.
 
 ## Typographie
 
@@ -231,9 +264,9 @@ Ces quelques notes visent seulement à clarifier le [mode d’emploi condensé](
 
 Sous les systèmes d’exploitation qui prennent en charge le jeu de caractères Unicode, le français utilise trois espaces :
 
-* L’espace normale U+0020, aussi appelée espace mot ou espace-mot, qui est sécable et justifiante (elle peut s’étirer quand le texte est aligné aussi bien à gauche qu’à droite) ;
-* L’espace insécable U+00A0, ou espace mot insécable, qui a la même largeur qu’une espace normale, et qui est justifiante dans les navigateurs et dans Word 2013, mais pas dans les autres traitements de texte ;
-* L’espace fine insécable U+202F, aussi appelée espace fine ou la fine (qui en principe est toujours insécable), à chasse fixe.
+* L’espace normale U+0020, aussi appelée « espace mot » ou « espace-mot », qui est sécable et justifiante (elle peut s’étirer quand le texte est aligné aussi bien à gauche qu’à droite) ;
+* L’espace insécable U+00A0, ou « espace mot insécable », qui a la même largeur qu’une espace normale, et qui est justifiante dans les navigateurs et dans Word 2013, mais pas dans les autres traitements de texte ;
+* L’espace fine insécable U+202F, aussi appelée « espace fine » ou « la fine », qui n’est pas justifiante mais à largeur fixe (« chasse fixe »). Si on l’appelle « fine » sans préciser, c’est qu’avant Unicode, il n’y avait qu’une seule espace fine, et elle était insécable.
 
 #### Nouvelle école de typographie française
 
@@ -289,7 +322,7 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 ### Usage du liant
 
-Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [W] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], le signe plus invisible U+2064 sur AltGr + AltFr + [H], et le séparateur invisble U+2063 sur AltGr + AltFr + [,]. Les deux premiers sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe ASCII sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. Il y a aussi le gluon dans le même groupe du tiret du 6 sur [G]. Le signe plus invisible est aussi pris en charge par composition « ¦&+ » dans le cadre des symboles mathématiques.
+Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [W] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], le signe plus invisible U+2064 sur AltGr + AltFr + [H], et le séparateur invisble U+2063 sur AltGr + AltFr + [,]. Les deux premiers sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe "^" sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. Il y a aussi le gluon dans le même groupe du tiret du 6 sur [G]. Le signe plus invisible est aussi pris en charge par composition « ¦&+ » dans le cadre des symboles mathématiques.
 
 L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’espace nulle.
 
