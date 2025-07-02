@@ -991,7 +991,9 @@
 #   For maintainability, there is no space between the leading keysyms, but
 #   part of the keysyms may be aligned to the end for readability.
 #
-#   See also # # Maintenance of letter groups
+#   Empty slots in letter groups are filled with the group number, and skipped
+#   in documentation.
+#   See # # Maintenance of letter groups
 #
 #
 #   Conflictlessness check
