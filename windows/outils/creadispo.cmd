@@ -1,4 +1,4 @@
-:: charset=OEM 850
+:: charset=OEM 65001
 @echo off
 chcp 65001
 rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows est faite.
