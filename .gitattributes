@@ -4,6 +4,7 @@
 # Courtesy https://stackoverflow.com/a/50062746
 /ressource/ export-ignore
 /linux-chromeos/outils/ export-ignore
+/windows/outils/ export-ignore
 /.gitattributes export-ignore
 
 
