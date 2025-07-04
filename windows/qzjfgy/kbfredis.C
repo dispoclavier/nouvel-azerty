@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Fill unused levels of numpad keys  5.3.0.22.00-Thu-2025-07-03T2048+0200
 * Upgrade numpad as designed         5.3.0.21.00-Wed-2025-07-02T1314+0200
 * Test numpad Shift level            5.3.0.20.00-Tue-2025-07-01T1714+0200
 * Test numpad extension              5.3.0.19.00-Tue-2025-07-01T1604+0200
@@ -686,17 +687,27 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
 // Put this last so that VkKeyScan interprets number characters
 // as coming from the main section of the kbd (aVkToWch33)
 // before considering the numpad (aVkToWch17).
+//
+// Numpad specials are deactivated as redundant and detrimentally affecting the
+// user experience while the numlock toggle is repurposed for the integrated or
+// overlay numpad on compact keyboards.
 // See kbcommon.h subsection 6.1
+//
+// While on digit keys, all 8 levels are used for the sake of arrows, depending
+// on the KanaLock toggle state, the decimal separator and operator keys offer
+// only minimal functionality, as AltGr is unfit for the numpad. However, so as
+// to prevent these keys from seeming broken, level 5 is replicated at levels 3
+// and 7, and so is level 6 at levels 4 and 8.
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS17 aVkToWch17[] = {
 //                      |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |
 //                      |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  Ctrl   |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |
 //                      |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
-  {VK_DIVIDE    ,KANALOK,'/'      ,0x00F7   ,0x221A   ,'('      ,0x221A   ,'('      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'/'      ,'('      ,'['      ,WCH_LGTR ,'['      ,WCH_LGTR ,WCH_NONE ,WCH_NONE },
-  {VK_MULTIPLY  ,KANALOK,'*'      ,0x00D7   ,'^'      ,')'      ,'^'      ,')'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'*'      ,')'      ,']'      ,WCH_LGTR ,']'      ,WCH_LGTR ,WCH_NONE ,WCH_NONE },
-  {VK_SUBTRACT  ,KANALOK,'-'      ,0x2212   ,'='      ,0x2243   ,'='      ,0x2243   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'-'      ,'^'      ,'='      ,'}'      ,'='      ,'}'      ,WCH_NONE ,WCH_NONE },
-  {VK_ADD       ,KANALOK,'+'      ,':'      ,0x00B1   ,0x2248   ,0x00B1   ,0x2248   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'+'      ,':'      ,0x00B1   ,WCH_LGTR ,0x00B1   ,WCH_LGTR ,WCH_NONE ,WCH_NONE },
-  {VK_DECIMAL   ,CAPLOK ,'.'      ,','      ,0x202F   ,0x00A0   ,0x202F   ,0x00A0   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_DIVIDE    ,KANALOK,'/'      ,0x00F7   ,0x221A   ,'('      ,0x221A   ,'('      ,0x221A   ,'('      ,WCH_NONE ,'/'      ,'('      ,'['      ,WCH_LGTR ,'['      ,WCH_LGTR ,'['      ,WCH_LGTR },
+  {VK_MULTIPLY  ,KANALOK,'*'      ,0x00D7   ,'^'      ,')'      ,'^'      ,')'      ,'^'      ,')'      ,WCH_NONE ,'*'      ,')'      ,']'      ,WCH_LGTR ,']'      ,WCH_LGTR ,']'      ,WCH_LGTR },
+  {VK_SUBTRACT  ,KANALOK,'-'      ,0x2212   ,'='      ,0x2243   ,'='      ,0x2243   ,'='      ,0x2243   ,WCH_NONE ,'-'      ,'^'      ,'='      ,'}'      ,'='      ,'}'      ,'='      ,'}'      },
+  {VK_ADD       ,KANALOK,'+'      ,':'      ,0x00B1   ,0x2248   ,0x00B1   ,0x2248   ,0x00B1   ,0x2248   ,WCH_NONE ,'+'      ,':'      ,0x00B1   ,WCH_LGTR ,0x00B1   ,WCH_LGTR ,0x00B1   ,WCH_LGTR },
+  {VK_DECIMAL   ,CAPLOK ,'.'      ,','      ,0x202F   ,0x00A0   ,0x202F   ,0x00A0   ,0x202F   ,0x00A0   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_NUMPAD0   ,KANALOK,'0'      ,WCH_LGTR ,0x2195   ,0x21D5   ,0x2195   ,0x2B0D   ,0x2B65   ,0x21F3   ,WCH_NONE ,'0'      ,WCH_LGTR ,0x2B65   ,0x21F3   ,0x2195   ,0x21D5   ,0x2195   ,0x2B0D   },
   {VK_NUMPAD1   ,KANALOK,'1'      ,WCH_LGTR ,0x2199   ,0x21D9   ,0x2199   ,0x2B0B   ,0x2B69   ,0x2B03   ,WCH_NONE ,'1'      ,WCH_LGTR ,0x2B69   ,0x2B03   ,0x2199   ,0x21D9   ,0x2199   ,0x2B0B   },
   {VK_NUMPAD2   ,KANALOK,'2'      ,'A'      ,0x2193   ,0x21D3   ,0x2B07   ,0x2B07   ,0x2B63   ,0x21E9   ,WCH_NONE ,'2'      ,'a'      ,0x2B63   ,0x21E9   ,0x2193   ,0x21D3   ,0x2B07   ,0x2B07   },
@@ -876,10 +887,13 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_NUMPAD4   ,1      ,'U'      ,'+'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_DIVIDE    ,12     ,'\\'     ,'u'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_DIVIDE    ,14     ,'\\'     ,'u'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_DIVIDE    ,16     ,'\\'     ,'u'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_MULTIPLY  ,12     ,'\\'     ,'x'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_MULTIPLY  ,14     ,'\\'     ,'x'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_MULTIPLY  ,16     ,'\\'     ,'x'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_ADD       ,12     ,'0'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_ADD       ,14     ,'0'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ADD       ,16     ,'0'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
   * Regional indicator symbol letters.
