@@ -1,5 +1,5 @@
                       Date : 2025-06-15T0756+0200
-                   Version : 5.2.0
+                   Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -136,7 +136,7 @@ Mode d’emploi sous Linux
 
   2  Sous le titre « Assets », télécharger le dossier compressé nommé :
 
-         Un-nouvel-AZERTY-Linux-5.2.0.zip
+         Un-nouvel-AZERTY-Linux-5.3.0.zip
 
   3  Décompresser le dossier téléchargé.
 
