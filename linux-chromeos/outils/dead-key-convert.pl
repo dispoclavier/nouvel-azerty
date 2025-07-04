@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-06-29T0454+0200
+# 2025-07-04T1708+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -200,7 +200,7 @@ while ( my $line = <INPUT> ) {
 		$line =~ s/<U0186>/<Oopen>/g;
 		$line =~ s/<U0254>/<oopen>/g;
 		
-		# Sort and simplify dead key names.
+		# Simplify dead key names and prepare for sorting.
 		$line =~ s/<dead_/<!/g;
 
 		# Prepare for sorting, further decode.
@@ -318,6 +318,8 @@ foreach my $line ( @dead_key_out ) {
 			$input =~ s/Udiaeresis/00DC/;
 			$input =~ s/ntilde/00F1/;
 			$input =~ s/Ntilde/00D1/;
+			$input =~ s/eopen/025B/;
+			$input =~ s/Eopen/0190/;
 			$input =~ s/oopen/0254/;
 			$input =~ s/Oopen/0186/;
 
