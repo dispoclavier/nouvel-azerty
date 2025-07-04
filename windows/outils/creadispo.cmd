@@ -8,7 +8,7 @@ rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows es
 ::  description  programme de commandes en batch pour l’interpréteur cmd.exe de Windows
 ::               utilisant le KbdUTool 3.40 du Microsoft Keyboard Layout Creator 1.4
 ::  version      1.8.4                (1.8.3)
-::  date         2025-07-04T1218+0200 (2018-03-15T1954+0100)
+::  date         2025-07-04T1229+0200 (2018-03-15T1954+0100)
 ::  contact      dev@dispoclavier.net
 ::  ressources   https://dispoclavier.com
 ::
@@ -37,7 +37,7 @@ set MSKLCprofile="%ProgramFiles%\Microsoft Keyboard Layout Creator 1.4"
 set soundfile="C:\Windows\Media\Windows Print complete.wav"
 set seen=no
 :: Crée les dossiers de stockage :
-rem  Pour augmenter la clarté du script, on utilise les commandes longues :
+rem  Commandes longues pour la clarté :
 rem    chdir  à la place de  cd
 rem    mkdir  à la place de  md
 rem    rename à la place de ren
