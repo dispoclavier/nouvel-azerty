@@ -7,8 +7,8 @@ rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows es
 ::  nom          creadispo
 ::  description  programme de commandes en batch pour l’interpréteur cmd.exe de Windows
 ::               utilisant le KbdUTool 3.40 du Microsoft Keyboard Layout Creator 1.4
-::  version      1.8.4                (1.8.3)
-::  date         2025-07-04T1229+0200 (2018-03-15T1954+0100)
+::  version      1.9.0
+::  date         2025-07-04T1835+0200 (1.8.3 : 2018-03-15T1954+0100)
 ::  contact      dev@dispoclavier.net
 ::  ressources   https://dispoclavier.com
 ::
@@ -27,7 +27,7 @@ rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows es
 :: Paramètres d’exécution de ce script
 setlocal EnableExtensions EnableDelayedExpansion
 :: titre de la fenêtre de cmd.exe
-title Creadispo  1.8.4
+title Creadispo  1.9.0
 color 13
 rem  Cette couleur introduit la transition du fond noir par défaut vers le fond blanc.
 rem  Les couleurs d’affichage sont personnalisables dans les préférences de ce script.
@@ -135,7 +135,7 @@ if exist creadispo-projet.txt (
 color 73
 :: Adapte les formes grammaticales et les nombres :
 if "%machine%" equ "i386" (
-	set nmb=un&   set pls=&  set plx=&  set vbe=est&  set vba=a&   set ard=l'&   set ari=un&  set arp=du&  set pps=son&  set ppp=ses&   set bit=32
+	set nmb=un&   set pls=&  set plx=&  set vbe=est&  set vba=a&   set ard=l’&   set ari=un&  set arp=du&  set pps=son&  set ppp=ses&   set bit=32
 ) else (
 	set nmb=deux& set pls=s& set plx=x& set vbe=sont& set vba=ont& set ard=les & set ari=des& set arp=des& set pps=leur& set ppp=leurs& set bit=64
 )
@@ -280,7 +280,7 @@ set seen=yes
 echo.&echo.&echo.&echo.
 echo    %hello%, je m’appelle Creadispo, je suis là pour vous assister à certaines
 echo    étapes de la confection de dispositions de clavier pour votre ordinateur,
-echo    compatibles Windows 10, 8, 7, Vista, Server 2003, XP, 2000, et NT 4.0.
+echo    compatibles Windows 11, 10, 8, 7, Vista, Server 2003, XP, 2000, et NT 4.0.
 echo.
 
 if exist %MSKLCprofile%\MSKLC.exe (
@@ -390,7 +390,7 @@ echo.
 echo    Pour m’indiquer le chemin exact du MSKLC dans votre ordinateur,
 echo    voici comment vous pouvez procéder :
 echo.
-echo    1   Naviguez jusqu'à lui dans l’Explorateur Windows.
+echo    1   Naviguez jusqu’à lui dans l’Explorateur Windows.
 echo.
 echo    2   Une fois dans son dossier racine, cliquez dans la partie droite
 echo        de la barre de chemin.
@@ -446,7 +446,7 @@ set seen=yes
 echo.&echo.
 echo    %hello%, je m’appelle Creadispo, et en l’occurrence je suis là pour faire
 echo    le%pls% pilote%pls% de disposition de clavier à partir des sources ici, qui ser%vba%
-echo    compatible%pls% Windows 10, 8.1, 8, 7, Vista, Server 2003, XP, 2000, et NT 4.0.
+echo    compatible%pls% Windows 11, 10, 8.1, 8, 7, Vista, Server 2003, XP, 2000, et NT 4.0.
 
 if exist %MSKLCprofile%\MSKLC.exe (
 echo.
@@ -505,7 +505,7 @@ goto :eof
 :help
 color fa
 echo.
-echo                                                M E N U   D E   L ' A I D E
+echo                                                M E N U   D E   L ’ A I D E
 echo     ^>  Comment puis-je vous aider ?
 echo.
 echo    T = Téléchargement gratuit du MSKLC sur le site officiel de Microsoft      1
@@ -526,7 +526,7 @@ color fa
 echo.   
 echo    D = Déboguer une disposition de clavier :  AltGr, touches mortes, …     10
 echo.
-echo    R = Refaire le parcours de prise en main en commençant par l'étape 2 :  2-10
+echo    R = Refaire le parcours de prise en main en commençant par l’étape 2 :  2-10
 color f2
 echo.
 echo    M = Menu principal
@@ -568,7 +568,7 @@ echo      ______________________________________________________________________
 echo     /                                                                      \
 echo    I  Le MSKLC et les pilotes de disposition qu’il génère sont entièrement  I
 echo    I  compatibles avec toutes les versions de Windows de notre millénaire,  I
-echo    I  y compris les dernières (Windows 10,  Windows 8 et 8.1,  Windows 7).  I
+echo    I  y compris les dernières (Windows 11, 10, Windows 8 et 8.1, Windows 7).I
 echo    I  Elles fonctionnent toutes parfaitement avec le MSKLC parce que        I
 echo    I  les parties concernées du système d’exploitation avaient été figées   I
 echo.   I  au tournant du siècle pour justement assurer la rétrocompatibilité.   I
@@ -605,7 +605,7 @@ goto :eof
 :helpMSKLCstart
 color f9
 echo.&echo.&echo.
-echo    L’aide du MSKLC, richement illustrée de captures d'écran, est en anglais
+echo    L’aide du MSKLC, richement illustrée de captures d’écran, est en anglais
 echo    mais une page du Forum HardWare.fr présente un certain nombre de points
 echo    essentiels dans notre langue, et les captures ne manquent pas non plus.
 echo.
@@ -619,7 +619,7 @@ echo       Ce paramètre sera enregistré pour les prochains démarrages.
 echo.
 echo       Les touches rectangulaires, à l’air tassé, ont été choisies par
 echo       rapport au fait que le MSKLC gère aussi les séquences de caractères,
-echo       jusqu'à quatre unités de code par emplacement de touche.
+echo       jusqu’à quatre unités de code par emplacement de touche.
 echo.
 echo    2  De plus, vous pouvez colorer les touches du MSKLC à votre guise
 echo       grâce à l’outil en bas à gauche. Cette fonctionnalité est aussi
@@ -839,7 +839,7 @@ echo    - Une bascule et des modificatrices supplémentaires sont indisponibles
 echo      sauf en éditant les sources, et Michael KAPLAN en a parlé sur son blog.
 color f1
 echo.
-echo    - L’appui sur une touche peut insérer jusqu'à 16 unités de code, ce qui
+echo    - L’appui sur une touche peut insérer jusqu’à 16 unités de code, ce qui
 echo      équivaut à 16 lettres latines, sauf sur Maj+AltGr où la limite est 4.
 echo      Le MSKLC généralise cette limite basse. -- Par ailleurs il ne gère pas
 echo      ces séquences en AltGr, un bug que Michael KAPLAN a amèrement déploré
@@ -924,7 +924,7 @@ color f9
 echo.&echo.&echo.
 echo    Certaines fonctionnalités très utiles sont disponibles uniquement  ( 8/10 )
 echo    lorsque les sources des pilotes de disposition sont éditées de manière
-echo    traditionnelle, à l’aide d'éditeurs de texte et éventuellement de tableurs.
+echo    traditionnelle, à l’aide d’éditeurs de texte et éventuellement de tableurs.
 echo.
 echo    La page   ^<^< Création d’un clavier Windows ^>^>   du site de l’association
 echo    MON NOM ACCENTUÉ qui milite depuis longtemps pour l’orthographe complète,
@@ -1607,7 +1607,7 @@ echo    première ligne, qui pourtant contient le nom de fichier, est "!klc1stli
 	) else (
 echo    Pour l’instant je ne trouve aucun fichier autour de moi qui contienne
 echo    les renseignements dont j’aurai besoin. Je vais donc vous prier de me
-echo    communiquer un certain nombre d'éléments pour que je puisse créér le
+echo    communiquer un certain nombre d’éléments pour que je puisse créér le
 echo    fichier des propriétés du projet, qui sera nommé "creadispo-projet.txt".
 	)
 )
@@ -1639,7 +1639,7 @@ echo     ^>  Le projet va-t-il porter un nom ?
 echo.
 echo    Nommer votre projet est utile surtout dans le cas d’un multiprojet.
 echo.&echo.
-echo    Il n’est pas nécessaire d'être sûr des différents noms maintenant,
+echo    Il n’est pas nécessaire d’être sûr des différents noms maintenant,
 echo    car le fichier des propriétés du projet est modifiable jusqu’au lancement
 echo    des cycles de compilation.
 echo.&echo.&echo.
@@ -1649,7 +1649,7 @@ echo.
 echo    Dans le cas d’un multiprojet j’utiliserai alors le nom générique :
 echo    Multidispo.
 echo.
-echo    Dans le cas d’une disposition seule j'éviterai de la ranger dans
+echo    Dans le cas d’une disposition seule j’éviterai de la ranger dans
 echo    un surdossier si le projet n’est pas nommé.
 echo.
 echo                                                               Aide :  ? Entrée
@@ -1757,7 +1757,7 @@ echo    Les noms de fichier des dispositions de clavier doivent être exempts
 echo    de points. Un point dans le nom d’une disposition de clavier conduit
 echo    à un blocage au moment de la compilation.
 echo.&echo.&echo.&echo.&echo.
-echo    D’autres caractères inutilisables dans ce contexte sont '/', '\', et '?',
+echo    D’autres caractères inutilisables dans ce contexte sont "/", "\", et "?",
 echo    ainsi que tous les caractères non ASCII.
 echo.
 echo    Mais à ce propos vous êtes prévenu directement par le MSKLC.
@@ -1785,7 +1785,7 @@ echo     ^>  Il est recommandé de commencer le nom de fichier des
 echo        pilotes de disposition par les lettres "kb", pour "keyboard",
 echo        ou si possible même "kbd" pour "keyboard driver".
 echo.&echo.
-echo    Cette convention permet d'éviter d'éventuelles confusions,
+echo    Cette convention permet d’éviter d’éventuelles confusions,
 echo    mais au-delà elle n’a rien d’obligatoire.
 echo.&echo.&echo.&echo.&echo.&echo.
 echo    Si vous souhaitez garder le nom %name% malgré qu’il ne commence pas
@@ -1932,11 +1932,11 @@ echo Le nom est le nom de fichier ;  dans la Barre des langues l’utilisateur l
 echo Ajoutez un point-virgule et la description, par exemple :  kbdnom;Clavier pour Claude>> creadispo-projet.txt
 echo N’utilisez pas de point-virgule par ailleurs, car il est pris pour un séparateur.>> creadispo-projet.txt
 echo Pour une reconnaissance correcte des diacrités français ce fichier doit être en OEM 850.>> creadispo-projet.txt
-echo Si l'édition des ressources est active, la description est celle figurant au fichier .RC.>> creadispo-projet.txt
-echo N’effacez ni ligne ni caractères avant les signes '=' car la lecture dépend de la position.>> creadispo-projet.txt
+echo Si l’édition des ressources est active, la description est celle figurant au fichier .RC.>> creadispo-projet.txt
+echo N’effacez ni ligne ni caractères avant les signes "=" car la lecture dépend de la position.>> creadispo-projet.txt
 echo ------------------------------------------------------------------------------------------->> creadispo-projet.txt
 echo                       Nom du projet ou du produit=%projectname%>> creadispo-projet.txt
-echo         Nom de l'éventuelle source header commune=%cmheader%>> creadispo-projet.txt
+echo         Nom de l’éventuelle source header commune=%cmheader%>> creadispo-projet.txt
 echo ----------------------------------------------------------------------------------------->> creadispo-projet.txt
 :: Nom (et description) de la (première) disposition :
 if defined description ( set separ=;) else ( set separ=)
@@ -2122,7 +2122,7 @@ echo    Au cas où vous décideriez de ne pas utiliser d’en-tête commun,
 echo    je vous invite à simplement effacer son nom dans les données mais
 echo    à laisser la ligne où il figure.
 echo.
-echo    J’attends jusqu'à ce que vous ayez enregistré vos modifications.
+echo    J’attends jusqu’à ce que vous ayez enregistré vos modifications.
 echo.
 echo    Le moment venu, appuyez-moi de nouveau sur une touche,
 echo    et je reprendrai lecture du fichier des propriétés du projet.
@@ -2233,7 +2233,7 @@ echo  de les remplacer par celles qu’il va générer au cours de la procédure
 	)
 )
 if exist %cmheader%.H (
-echo  La source en-tête [header] commune -- %cmheader%.H -- n’a pas besoin d'être
+echo  La source en-tête [header] commune -- %cmheader%.H -- n’a pas besoin d’être
 echo  protégée contre la réécriture car KbdUTool ne génère pas de source à ce nom.
 )
 if %nbroa% gtr 0 (
@@ -2761,7 +2761,7 @@ echo  Je l’ai aussi inscrit au log de restauration.
 
 :: Ajoute un fichier texte :
 echo Le contenu de ce dossier permet de restaurer la disposition %name%> %ProgramData%\creadispo\%name%_ANCIEN\Note.txt
-echo à l'état où elle se trouvait avant le test %name%_%timestamp%.>> %ProgramData%\creadispo\%name%_ANCIEN\Note.txt
+echo à l’état où elle se trouvait avant le test %name%_%timestamp%.>> %ProgramData%\creadispo\%name%_ANCIEN\Note.txt
 echo.&echo.&echo.&echo.&echo.
 echo    J’ai fini d’archiver les anciens pilotes. Je pourrai les restaurer à
 echo    votre demande. Dans ce cas choisissez dans le menu l’option Restauration.
@@ -2806,7 +2806,7 @@ echo  J’ai fait compiler le pilote 32 bit et l’ai placé dans le dossier sys
 echo  C:\Windows\System32  en remplacement de celui qui s’y trouvait. Et j’ai mis
 echo  deux copies dans le dossier%testdirname%, dont
 echo  une en .bak pour qu’elle survive aux restaurations du système
-echo  (pour l'éventualité qu’il y en aura une).
+echo  (pour l’éventualité qu’il y en aura une).
 goto finishtest
 
 :: Compile le pilote 64 bit pour les machines 64 bit sauf Intel Itanium :
@@ -2866,7 +2866,7 @@ echo  J’ai fait compiler le pilote auxiliaire pour applications 32 bit et l’
 echo  mis dans le dossier système  C:\Windows\SysWOW64  à la place de l’ancien.
 echo  J’ai toujours aussi placé deux copies de chaque pilote dans le dossier
 echo  %testdirname%, dont une en .bak pour qu’elle survive
-echo  aux restaurations du système (pour l'éventualité qu’il y en aura une).
+echo  aux restaurations du système (pour l’éventualité qu’il y en aura une).
 
 :: Range le dossier dans le surdossier :
 :finishtest
@@ -2930,7 +2930,7 @@ echo.&echo.
 pause >nul
 goto eof
 
-:: Message d'échec :
+:: Message d’échec :
 :failure
 call :unlocksources
 color cf
@@ -2939,11 +2939,8 @@ echo                Une erreur s’est produite lors de la compilation.
 echo.
 echo                   KbdUTool n’a pu produire le pilote demandé,
 echo.
-echo                      pour des raisons indiquées ci-dessus.
-echo.&echo.&echo.
-echo                                  [Ne pas réussir du premier coup est normal.]
-echo                                  Passer la moitié du temps à déboguer, aussi.
-echo.&echo.
+echo                      pour les raisons indiquées ci-dessus.
+echo.&echo.&echo.&echo.&echo.&echo.&echo.
 echo    Appuyez sur Entrée pour me changer de couleur puis me relancer.
 echo.&echo.&echo.
 set testres=
@@ -2980,9 +2977,9 @@ color f5
 echo.&echo.&echo.
 echo         R E S T A U R A T I O N   D E   D I S P O S I T I O N
 echo.
-echo    Cette fonctionnalité restaure une disposition à l'état où elle se
+echo    Cette fonctionnalité restaure une disposition à l’état où elle se
 echo    trouvait avant que des modifications soient testées sur elle avec
-echo    mon concours. Les états antérieurs, dont je n'étais pas au courant,
+echo    mon concours. Les états antérieurs, dont je n’étais pas au courant,
 echo    sont par contre au-delà de mes possibilités. En l’absence d’autres
 echo    moyens, seule une restauration du système peut -- éventuellement --
 echo    vous les restituer.
@@ -2994,7 +2991,7 @@ echo.
 if not exist RestorePathDefaultName (
 echo.&echo.
 echo    Actuellement je ne peux encore restaurer aucune disposition, car
-echo    jusqu'à présent je n’ai pas eu l’occasion d’en archiver à cet effet.
+echo    jusqu’à présent je n’ai pas eu l’occasion d’en archiver à cet effet.
 echo.&echo.&echo.
 echo     ^>  Pour retourner au menu, appuyez sur une touche…
 echo.
@@ -3367,7 +3364,7 @@ echo Disposition de clavier %name%%sep%%description% v%version%> Note.txt
 echo.>> Note.txt
 echo Datant du %timestamp%>> Note.txt
 echo.>> Note.txt
-echo Cette disposition de clavier est compatible Windows 10, 8.1, 8, 7, Vista,>> Note.txt
+echo Cette disposition de clavier est compatible Windows 11, 10, 8.1, 8, 7, Vista,>> Note.txt
 echo Server 2003, XP, 2000, et NT 4.0.>> Note.txt
 echo.>> Note.txt
 echo Elle est sous licence Apache 2.0.>> Note.txt
@@ -3425,7 +3422,7 @@ echo Disposition de clavier %name%%sep%%description% v%version%> Note.txt
 echo.>> Note.txt
 echo Datant du %timestamp%>> Note.txt
 echo.>> Note.txt
-echo Cette disposition de clavier est compatible Windows 10, 8.1, 8, 7, Vista,>> Note.txt
+echo Cette disposition de clavier est compatible Windows 11, 10, 8.1, 8, 7, Vista,>> Note.txt
 echo Server 2003, XP, 2000, et NT 4.0.>> Note.txt
 echo.>> Note.txt
 echo Elle est sous licence Apache 2.0.>> Note.txt
@@ -3461,7 +3458,7 @@ echo Disposition de clavier %name%%sep%%description% v%version%> Note.txt
 echo.>> Note.txt
 echo Datant du %timestamp%>> Note.txt
 echo.>> Note.txt
-echo Cette disposition de clavier est compatible Windows 10, 8.1, 8, 7, Vista,>> Note.txt
+echo Cette disposition de clavier est compatible Windows 11, 10, 8.1, 8, 7, Vista,>> Note.txt
 echo Server 2003, XP, 2000, et NT 4.0.>> Note.txt
 echo.>> Note.txt
 echo La source KLC n’est pas censée contenir cette disposition de clavier.>> Note.txt
@@ -3694,7 +3691,7 @@ goto :eof
 ::                                    "if defined bg ( color %bg%%fg% ) else "
 :colours
 echo.&echo.&echo.
-echo    C O U L E U R S   D ' A F F I C H A G E
+echo    C O U L E U R S   D ’ A F F I C H A G E
 echo.
 echo    J’utilise des couleurs différenciées afin de rendre l’affichage plus
 echo    significatif et plus vivant. Toutefois vous pourriez préconiser un
@@ -3702,7 +3699,7 @@ echo    affichage uniforme dans vos couleurs de fond et de texte préférées.
 echo.
 echo    Si vous éprouvez le besoin de vous familiariser avec les 16 couleurs
 echo    de CMD.exe, je vous propose de les essayer à volonté ici. Chacune est
-echo    appelée par un chiffre hexadécimal dans l’ordre où elles s'égrènent au
+echo    appelée par un chiffre hexadécimal dans l’ordre où elles s’égrènent au
 echo    nuancier de l’onglet Couleurs des Propriétés (clic droit en haut).
 echo    Une même gamme se décline en sombre et en clair (0-8 ;  9-f).
 echo.
@@ -3714,7 +3711,7 @@ echo    Faites S pour enregistrer, R pour restaurer les couleurs contextuelles,
 echo    ou M pour retourner au menu sans enregistrer, toujours suivis d’Entrée.
 echo.
 echo    Si la couleur pour le fond est la même que pour le texte ou inversement,
-echo    CMD.exe attend votre prochain choix jusqu'à ce que les deux couleurs
+echo    CMD.exe attend votre prochain choix jusqu’à ce que les deux couleurs
 echo    soient différentes.
 echo.
 set bgin=
@@ -3861,7 +3858,7 @@ echo.&echo.
 pause >nul
 goto :eof
 
-:: Personnaliser l’intervalle de l'émulation du minuteur :
+:: Personnaliser l’intervalle de l’émulation du minuteur :
 :customwait
 echo.&echo.&echo.
 echo    F R É Q U E N C E   D E   C L I G N O T E M E N T
