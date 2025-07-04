@@ -1,4 +1,4 @@
-//                       Date: 2025-06-14T0303+0200
+//                       Date: 2025-07-03T2013+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -999,6 +999,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              eacute,              Eacute,                   2,               UEFD9,                   2,         twosuperior,               UEFC2,               UEFC2 ],
 		[                   2,                   2,                   2,               U2082,                   2,         twosuperior,               U2082,               UEFC2 ]
 	}; // U2082 ₂ SUBSCRIPT TWO; UEFC2 2️⃣ keycap 2 emoji; UEFD9 *dead_legacytilde
@@ -1006,11 +1007,13 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            quotedbl,              endash,                   3,          numbersign,                   3,       threesuperior,               UEFC3,               UEFC3 ],
 		[                   3,                   3,                   3,               U2083,                   3,       threesuperior,               U2083,               UEFC3 ]
 	}; // U2083 ₃ SUBSCRIPT THREE; UEFC3 3️⃣ keycap 3 emoji
 
 	key <AE04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[rightsinglequotemark,              emdash,                   4,           braceleft,                   4,               U2074,               UEFC4,               UEFC4 ],
 		[                   4,                   4,                   4,               U2084,                   4,               U2074,               U2084,               UEFC4 ]
 	}; // rightsinglequotemark: see ## Apostrophes; U2074 ⁴ SUPERSCRIPT FOUR; U2084 ₄ SUBSCRIPT FOUR; UEFC4 4️⃣ keycap 4 emoji
@@ -1022,6 +1025,7 @@ xkb_symbols "kbfrFRs" {
 	}; // hyphen U00AD SOFT HYPHEN; U2075 ⁵ SUPERSCRIPT FIVE; U2085 ₅ SUBSCRIPT FIVE; UEFC5 5️⃣ keycap 5 emoji
 
 	key <AE06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               minus,               U2011,                   6,                 bar,                   6,               U2076,               UEFC6,               UEFC6 ],
 		[                   6,                   6,                   6,               U2086,                   6,               U2076,               U2086,               UEFC6 ]
 	}; // U2011 ‑ NON-BREAKING HYPHEN; U2076 ⁶ SUPERSCRIPT SIX; U2086 ₆ SUBSCRIPT SIX; UEFC6 6️⃣ keycap 6 emoji
@@ -1029,6 +1033,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              egrave,              Egrave,                   7,               UEFDA,                   7,               U2077,               UEFC7,               UEFC7 ],
 		[                   7,                   7,                   7,               U2087,                   7,               U2077,               U2087,               UEFC7 ]
 	}; // U2077 ⁷ SUPERSCRIPT SEVEN; U2087 ₇ SUBSCRIPT SEVEN; UEFC7 7️⃣ keycap 7 emoji; UEFDA *dead_legacygrave
@@ -1036,6 +1041,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          underscore,      Greek_horizbar,                   8,           backslash,                   8,               U2078,               UEFC8,               UEFC8 ],
 		[                   8,                   8,                   8,               U2088,                   8,               U2078,               U2088,               UEFC8 ]
 	}; // Greek_horizbar ― U2015 HORIZONTAL BAR; U2078 ⁸ SUPERSCRIPT EIGHT; U2088 ₈ SUBSCRIPT EIGHT; UEFC8 8️⃣ keycap 8 emoji
@@ -1051,6 +1057,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              agrave,              Agrave,                   0,          parenright,                   0,               U2070,               UEFC0,              U1F51F ],
 		[                   0,                   0,                   0,               U2080,                   0,               U2070,               U2080,               UEFC0 ]
 	}; // U2070 ⁰ SUPERSCRIPT ZERO; U2080 ₀ SUBSCRIPT ZERO; UEFC0 0️⃣ keycap 0 emoji; U1F51F 🔟 KEYCAP TEN emoji
@@ -1058,6 +1065,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                  at,              degree,               U1D49,        bracketright,               U207B,                   E,               UEFCA,               minus ],
 		[                  at,              degree,               minus,               U208B,                   E,               U207B,               UEFCA,               minus ]
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; U207B ⁻ SUPERSCRIPT MINUS; U208B ₋ SUBSCRIPT MINUS; UEFCA *️⃣ keycap star emoji
@@ -1065,6 +1073,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          apostrophe,                plus,           Multi_key,          braceright,               equal,               U207A,                   F,               UEFCB ],
 		[               equal,                plus,           Multi_key,               U208A,                   F,               U207A,               UEFCB,               equal ]
 	}; // apostrophe: see ## Apostrophes; U207A ⁺ SUPERSCRIPT PLUS; U208A ₊ SUBSCRIPT PLUS; UEFCB #️⃣ keycap hash emoji
@@ -1080,16 +1089,19 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   z,                   Z,             percent,             percent,               UEFD5,               U1DBB,             minutes,              U1F627 ],
 		[                   z,                   Z,             percent,             percent,               UEFD5,               U1DBB,             minutes,              U1F627 ]
 	}; // U1DBB ᶻ MODIFIER LETTER SMALL Z; UEFD5 *dead_turned; 😧 U1F627 ANGUISHED FACE emoji
 
 	key <AD03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   e,                   E,            EuroSign,            EuroSign,    dead_doubleacute,               U1D49,             seconds,               UEF8D ],
 		[                   e,                   E,            EuroSign,            EuroSign,    dead_doubleacute,               U1D49,             seconds,               UEF8D ]
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; UEF8D '&quot;'
 
 	key <AD04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   r,                   R,           backslash,            sterling,               UEFD6,               U02B3,               U2236,              U1F914 ],
 		[                   r,                   R,           backslash,            sterling,               UEFD6,               U02B3,               U2236,              U1F914 ]
 	}; // U02B3 ʳ MODIFIER LETTER SMALL R; UEFD6 *dead_reversed; U2236 ∶ RATIO; 🤔 U1F914 THINKING FACE 20th-ranking emoji [🙄 U1F644 FACE WITH ROLLING EYES 23rd-ranking emoji is not supported]
@@ -1101,16 +1113,19 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; U2212 − MINUS SIGN; endash U2013 – EN DASH recommended for noting intervals; 😊 U1F60A SMILING FACE WITH SMILING EYES worldwide fifth-most used emoji, fourth-most used smiling emoji in France
 
 	key <AD06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   y,                   Y,          dead_greek,                  mu,          dead_greek,               U02B8,                 yen,              U1F60D ],
 		[                   y,                   Y,          dead_greek,                  mu,          dead_greek,               U02B8,                 yen,              U1F60D ]
 	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES third-most used smiling emoji in France, third-most overall worldwide
 
 	key <AD07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   u,                   U,          apostrophe,                   4,          dead_acute,               U1D58,               UEF9F,               UEF8C ],
 		[                   u,                   U,          apostrophe,                   4,          dead_acute,               U1D58,               UEF9F,               UEF8C ]
 	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEF9F Unicode prefix 'U+'; UEF8C '&apos;'
 
 	key <AD08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   i,                   I,           braceleft,                   5,           dead_hook,               U2071,               UEF7E,              U1F64F ],
 		[                   i,                   I,           braceleft,                   5,           dead_hook,               U2071,               UEF7E,              U1F64F ]
 	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF7E '\\u{'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
@@ -1122,6 +1137,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U1D52 ᵒ MODIFIER LETTER SMALL O; UEFD4 *dead_retroflexhook; Greek_OMEGA is preferred over U2126 Ω OHM SIGN; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
 
 	key <AD10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   p,                   P,           ampersand,              period,       dead_abovedot,               U1D56,           paragraph,               UEF8B ],
 		[                   p,                   P,           ampersand,              period,       dead_abovedot,               U1D56,           paragraph,               UEF8B ]
 	}; // U1D56 ᵖ MODIFIER LETTER SMALL P; UEF8B '&amp;'
@@ -1129,11 +1145,13 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[     dead_circumflex,               UEF66,          dead_tilde,               U2039,         asciicircum,      dead_diaeresis,                   C,         bracketleft ],
 		[            quotedbl,           braceleft,         asciicircum,                   C,          underscore,         asciicircum,          underscore,         bracketleft ]
 	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
 
 	key <AD12> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,            sterling,                   D,        bracketright ],
 		[          underscore,          braceright,           Multi_key,                   D,               U208C,               U207C,               U208C,        bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
@@ -1147,16 +1165,19 @@ xkb_symbols "kbfrFRs" {
 	}; // U107A5 𐞥 MODIFIER LETTER SMALL Q; UEFD0 *dead_group; U200D ZERO WIDTH JOINER, cursive joiner; U1F44F 👏 CLAPPING HANDS SIGN worldwide twelvth-most used emoji
 
 	key <AC02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              U1F642,              U1F614 ],
 		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              U1F642,              U1F614 ]
 	}; // U02E2 ˢ MODIFIER LETTER SMALL S; U1F642 🙂 SLIGHTLY SMILING FACE 49th-ranking emoji in 2019; U1F614 😔 PENSIVE FACE 4th-top sad face emoji
 
 	key <AC03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   d,                   D,           parenleft,           parenleft,  dead_invertedbreve,               U1D48,               U2300,              U1F606 ],
 		[                   d,                   D,           parenleft,           parenleft,  dead_invertedbreve,               U1D48,               U2300,              U1F606 ]
 	}; // U1D48 ᵈ MODIFIER LETTER SMALL D; U2300 ⌀ DIAMETER SIGN; U1F606 😆 SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES 16th-ranking emoji
 
 	key <AC04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ],
 		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ]
 	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U2044 ⁄ FRACTION SLASH; U1F525 🔥 FIRE 15th-ranking emoji
@@ -1173,11 +1194,13 @@ xkb_symbols "kbfrFRs" {
 	}; // U02B0 ʰ MODIFIER LETTER SMALL H; U2064 INVISIBLE PLUS; U1F44D 👍 THUMBS UP SIGN worldwide tenth-most used emoji
 
 	key <AC07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ],
 		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ]
 	}; // U02B2 ʲ MODIFIER LETTER SMALL J; UEFD2 *dead_subscript; U203E ‾ OVERLINE; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
 
 	key <AC08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   k,                   K,         bracketleft,                   2,         dead_ogonek,               U1D4F,               UEF7B,              U1F605 ],
 		[                   k,                   K,         bracketleft,                   2,         dead_ogonek,               U1D4F,               UEF7B,              U1F605 ]
 	}; // U1D4F ᵏ MODIFIER LETTER SMALL K; UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
@@ -1189,6 +1212,7 @@ xkb_symbols "kbfrFRs" {
 	}; // U02E1 ˡ MODIFIER LETTER SMALL L; UEFD3 *dead_abovehook; U1F923 🤣 ROLLING ON THE FLOOR LAUGHING fourth-most used emoji
 
 	key <AC10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   m,                   M,                 bar,               comma,         dead_macron,               U1D50,                  mu,              U1F637 ],
 		[                   m,                   M,                 bar,               comma,         dead_macron,               U1D50,                  mu,              U1F637 ]
 	}; // U1D50 ᵐ MODIFIER LETTER SMALL M; U1F637 😷 FACE WITH MEDICAL MASK emoji
@@ -1196,6 +1220,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              ugrave,               UEF64,            ellipsis,       guillemotleft,            currency,             percent,                   A,          apostrophe ],
 		[          apostrophe,             percent,               grave,                   A,               U208D,               U207D,               U208D,          apostrophe ]
 	}; // UEF64 '« ' spaced out with NNBSP; currency: see ## Backward compatibility; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
@@ -1203,6 +1228,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <BKSL> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               UEFD0,               UEF65,               UEFD0,      guillemotright,            asterisk,                  mu,                   B,           semicolon ],
 		[               minus,            asterisk,               UEFD0,                   B,               U208E,               U207E,               U208E,           semicolon ]
 	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; U207E ⁾ SUPERSCRIPT RIGHT PARENTHESIS; U208E ₎ SUBSCRIPT RIGHT PARENTHESIS; SEMICOLON for application shortcut mapping
@@ -1216,16 +1242,19 @@ xkb_symbols "kbfrFRs" {
 	}; // U02B7 ʷ MODIFIER LETTER SMALL W; U200C ZERO WIDTH NON-JOINER, cursive non-joiner; U1F622 😢 CRYING FACE 19th-ranking emoji
 
 	key <AB02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U22C5,              U1F31F ],
 		[                   x,                   X,            asterisk,            asterisk,      dead_abovering,               U02E3,               U22C5,              U1F31F ]
 	}; // U02E3 ˣ MODIFIER LETTER SMALL X; U22C5 ⋅ DOT OPERATOR; U1F31F 🌟 GLOWING STAR emoji
 
 	key <AB03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F62D ],
 		[                   c,                   C,                less,            multiply,     dead_circumflex,               U1D9C,               UEF8E,              U1F62D ]
 	}; // U1D9C ᶜ MODIFIER LETTER SMALL C; UEF8E '&lt;'; U1F62D 😭 LOUDLY CRYING FACE worldwide eighth-most used emoji
 
 	key <AB04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   v,                   V,             greater,            division,          dead_caron,               U1D5B,               UEF8F,              U1F496 ],
 		[                   v,                   V,             greater,            division,          dead_caron,               U1D5B,               UEF8F,              U1F496 ]
 	}; // U1D5B ᵛ MODIFIER LETTER SMALL V; UEF8F '&gt;'; U1F496 💖	SPARKLING HEART 17th-ranking emoji
@@ -1239,6 +1268,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key <AB06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   n,                   N,               grave,                   0,          dead_grave,               U207F,               UEF68,               UEF69 ],
 		[                   n,                   N,               grave,                   0,          dead_grave,               U207F,               UEF68,               UEF69 ]
 	}; // U207F ⁿ SUPERSCRIPT LATIN SMALL LETTER N; UEF68 'nᵒ ' with U1D52 and U202F; UEF69 'Nᵒ ' with U1D52 and U202F
@@ -1246,11 +1276,13 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <AB07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,               U2063,              U1F499 ],
 		[               comma,            question,            question,            question,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
 	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U2063 INVISIBLE SEPARATOR; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              period,               UEF60,              exclam,              exclam,       dead_belowdot,              exclam,              U1F631,              U1F4E3 ],
 		[              period,              exclam,              exclam,              exclam,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
 	}; // UEF60 ' !' spaced out with NNBSP; UEF7A '&#'; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
@@ -1264,6 +1296,7 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji
 
 	key <AB10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[           backslash,               UEF62,             section,           semicolon,     dead_belowcomma,             section,              U1F494,           backslash ],
 		[           semicolon,           backslash,           semicolon,           semicolon,     dead_belowcomma,             section,              U1F609,           backslash ]
 	}; // UEF62 ' ;' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
@@ -1271,6 +1304,7 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <SPCE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               space,               space,        nobreakspace,               U202F,               U200B,               UEF6E,               UEF6F,               UEF9B ],
 		[               space,               space,               space,               space,               UEF9B,               UEF9F,               UEF9F,               UEF9B ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE, no-break thin space (CLDR); U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9F '&#x202F;'; UEF9B '&nbsp;'
@@ -1303,30 +1337,35 @@ xkb_symbols "kbfrFRs" {
 	// approximations. Numeric character reference prefixes and the closing brace
 	// fill up the remaining positions in ASCII mode.
 	//
-	// LevelThree (impractical) and LevelFive (recommended) have same effect.
+	// LevelThree (impractical) and LevelFive (recommended) have same effect, as
+	// well as their combination in order to prevent the keyboard from seeming
+	// broken.
 	//
 
 	key.type[Group1] = "EIGHT_LEVELS_BASIC";
 	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <KPDV> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[           KP_Divide,            division,             radical,           parenleft,             radical,           parenleft ],
-		[           KP_Divide,           parenleft,         bracketleft,               UEF7E,         bracketleft,               UEF7E ]
+		[           KP_Divide,            division,             radical,           parenleft,             radical,           parenleft,             radical,           parenleft ],
+		[           KP_Divide,           parenleft,         bracketleft,               UEF7E,         bracketleft,               UEF7E,         bracketleft,               UEF7E ]
 	}; // UEF7E '\u{'
 
 	key <KPMU> {
-		[         KP_Multiply,            multiply,         asciicircum,          parenright,         asciicircum,          parenright ],
-		[         KP_Multiply,          parenright,        bracketright,               UEF7F,        bracketright,               UEF7F ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[         KP_Multiply,            multiply,         asciicircum,          parenright,         asciicircum,          parenright,         asciicircum,          parenright ],
+		[         KP_Multiply,          parenright,        bracketright,               UEF7F,        bracketright,               UEF7F,        bracketright,               UEF7F ]
 	}; // UEF7F '\x{'
 
 	key <KPSU> {
-		[         KP_Subtract,               U2212,               equal,               U2243,               equal,               U2243 ],
-		[         KP_Subtract,         asciicircum,               equal,          braceright,               equal,          braceright ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[         KP_Subtract,               U2212,               equal,               U2243,               equal,               U2243,               equal,               U2243 ],
+		[         KP_Subtract,         asciicircum,               equal,          braceright,               equal,          braceright,               equal,          braceright ]
 	}; // U2212 − MINUS SIGN; U2243 ≃ ASYMPTOTICALLY EQUAL
 
 	key <KPAD> {
-		[              KP_Add,               colon,           plusminus,               U2248,           plusminus,               U2248 ],
-		[              KP_Add,               colon,           plusminus,               UEF7C,           plusminus,               UEF7C ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[              KP_Add,               colon,           plusminus,               U2248,           plusminus,               U2248,           plusminus,               U2248 ],
+		[              KP_Add,               colon,           plusminus,               UEF7C,           plusminus,               UEF7C,           plusminus,               UEF7C ]
 	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
@@ -1411,6 +1450,7 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF6D '00'
 
 	key <KP1>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_1,               UEF7D,               U2199,               U21D9,               U2199,               U2B0B,               U2B69,               U2B03 ],
 		// Category:    digit,            sequence,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
@@ -1418,6 +1458,7 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF7D '000'
 
 	key <KP2>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_2,                   A,               U2193,               U21D3,               U2B07,               U2B07,               U2B63,               U21E9 ],
 		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
@@ -1425,6 +1466,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	key <KP3>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_3,                   B,               U2198,               U21D8,               U2198,               U2B0A,               U2B68,               U2B02 ],
 		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
@@ -1440,6 +1482,7 @@ xkb_symbols "kbfrFRs" {
 	}; // UEF9F 'U+'
 
 	key <KP5>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_5,                   C,               U2194,               U21D4,               U2194,               U2B0C,               U2B64,               U2B04 ],
 		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
@@ -1447,6 +1490,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	key <KP6>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_6,                   D,               U2192,               U21D2,               U27A1,               U27A1,               U2B62,               U21E8 ],
 		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
@@ -1454,6 +1498,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	key <KP7>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit,      fraction slash,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_7,               U2044,               U2196,               U21D6,               U2196,               U2B09,               U2B66,               U2B01 ],
 		// Category:    digit,    escape character,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
@@ -1469,6 +1514,7 @@ xkb_symbols "kbfrFRs" {
 	};
 
 	key <KP9>  {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[                KP_9,                   F,               U2197,               U21D7,               U2197,               U2B08,               U2B67,               U2B00 ],
 		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
@@ -1518,26 +1564,29 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_NUMPAD_SEPARATOR";
 	key <KPDL> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
+		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,               U202F,        nobreakspace ],
+		[          KP_Decimal,        KP_Separator,               U202F,        nobreakspace,               U202F,        nobreakspace,               U202F,        nobreakspace ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	key <KPPT> {
-		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ],
-		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,            NoSymbol,            NoSymbol ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,               U202F,        nobreakspace ],
+		[        KP_Separator,          KP_Decimal,               U202F,        nobreakspace,               U202F,        nobreakspace,               U202F,        nobreakspace ]
 	}; // U202F ' ' NARROW NO-BREAK SPACE
 
 	//
 	// Key AB11 for ABNT-2 keyboards
 	//
-	// For completeness, alongside KPPT, as in br(abnt2).
+	// For completeness, alongside KPPT, as in br(abnt2), but with the levels
+	// duplicated to prevent this key from seeming broken compared to the others.
 	//
 
 	key.type[Group1] = "EIGHT_LEVELS_BASIC";
 	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <AB11> {
-		[               slash,            question,              degree,        questiondown,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		[               slash,            question,              degree,        questiondown,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[               slash,            question,              degree,        questiondown,               slash,            question,              degree,        questiondown ],
+		[               slash,            question,              degree,        questiondown,               slash,            question,              degree,        questiondown ]
 	};
 
 	//
@@ -1987,16 +2036,19 @@ xkb_symbols "kbfrFRsr" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   j,                   J,            NoSymbol,            NoSymbol,            NoSymbol,               U02B2 ],
 		[                   j,                   J,            NoSymbol,            NoSymbol,            NoSymbol,               U02B2 ]
 	}; // U02B2 ʲ MODIFIER LETTER SMALL J
 
 	key <AD04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   f,                   F,            NoSymbol,            NoSymbol,            NoSymbol,               U1DA0 ],
 		[                   f,                   F,            NoSymbol,            NoSymbol,            NoSymbol,               U1DA0 ]
 	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F
 
 	key <AD05> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   g,                   G,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4D ],
 		[                   g,                   G,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4D ]
 	}; // U1D4D ᵍ MODIFIER LETTER SMALL G
@@ -2008,16 +2060,19 @@ xkb_symbols "kbfrFRsr" {
 	}; // U1D50 ᵐ MODIFIER LETTER SMALL M
 
 	key <AD08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   l,                   L,            NoSymbol,            NoSymbol,            NoSymbol,               U02E1 ],
 		[                   l,                   L,            NoSymbol,            NoSymbol,            NoSymbol,               U02E1 ]
 	}; // U02E1 ˡ MODIFIER LETTER SMALL L
 
 	key <AD09> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   d,                   D,            NoSymbol,            NoSymbol,            NoSymbol,               U1D48 ],
 		[                   d,                   D,            NoSymbol,            NoSymbol,            NoSymbol,               U1D48 ]
 	}; // U1D48 ᵈ MODIFIER LETTER SMALL D
 
 	key <AD10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   k,                   K,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4F ],
 		[                   k,                   K,            NoSymbol,            NoSymbol,            NoSymbol,               U1D4F ]
 	}; // U1D4F ᵏ MODIFIER LETTER SMALL K
@@ -2038,16 +2093,19 @@ xkb_symbols "kbfrFRsr" {
 	}; // U1D43 ᵃ MODIFIER LETTER SMALL A
 
 	key <AC03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   e,                   E,            NoSymbol,            NoSymbol,            NoSymbol,               U1D49 ],
 		[                   e,                   E,            NoSymbol,            NoSymbol,            NoSymbol,               U1D49 ]
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E
 
 	key <AC04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   r,                   R,            NoSymbol,            NoSymbol,            NoSymbol,               U02B3 ],
 		[                   r,                   R,            NoSymbol,            NoSymbol,            NoSymbol,               U02B3 ]
 	}; // U02B3 ʳ MODIFIER LETTER SMALL R
 
 	key <AC05> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   t,                   T,            NoSymbol,            NoSymbol,            NoSymbol,               U1D57 ],
 		[                   t,                   T,            NoSymbol,            NoSymbol,            NoSymbol,               U1D57 ]
 	}; // U1D57 ᵗ MODIFIER LETTER SMALL T
@@ -2059,21 +2117,25 @@ xkb_symbols "kbfrFRsr" {
 	}; // U1D58 ᵘ MODIFIER LETTER SMALL U
 
 	key <AC07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   n,                   N,            NoSymbol,            NoSymbol,            NoSymbol,               U207F ],
 		[                   n,                   N,            NoSymbol,            NoSymbol,            NoSymbol,               U207F ]
 	}; // U207F ⁿ SUPERSCRIPT SMALL N
 
 	key <AC08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   o,                   O,            NoSymbol,            NoSymbol,            NoSymbol,               U1D52 ],
 		[                   o,                   O,            NoSymbol,            NoSymbol,            NoSymbol,               U1D52 ]
 	}; // U1D52 ᵒ MODIFIER LETTER SMALL O
 
 	key <AC09> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   i,                   I,            NoSymbol,            NoSymbol,            NoSymbol,               U2071 ],
 		[                   i,                   I,            NoSymbol,            NoSymbol,            NoSymbol,               U2071 ]
 	}; // U2071 ⁱ MODIFIER LETTER SMALL I
 
 	key <AC10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   p,                   P,            NoSymbol,            NoSymbol,            NoSymbol,               U1D56 ],
 		[                   p,                   P,            NoSymbol,            NoSymbol,            NoSymbol,               U1D56 ]
 	}; // U1D56 ᵖ MODIFIER LETTER SMALL P
