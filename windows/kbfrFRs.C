@@ -7,6 +7,9 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* Debug variant name output          5.3.0.25.00-Sat-2025-07-05T1742+0200
+* Debug variant name output          5.3.0.24.00-Sat-2025-07-05T1706+0200
+* Debug BACK, add variant&version    5.3.0.23.00-Sat-2025-07-05T1619+0200
 * Fill unused levels of numpad keys  5.3.0.22.00-Thu-2025-07-03T2047+0200
 * Upgrade numpad as designed         5.3.0.21.00-Wed-2025-07-02T1314+0200
 * Test numpad Shift level            5.3.0.20.00-Tue-2025-07-01T1714+0200
@@ -668,10 +671,14 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {                      
 };
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
-//                      |         |  Shift  |         |S+       |         |S+       |         |S+       |  Ctrl   |
-//                      |=========|=========|=========|=========|=========|=========|=========|=========|=========|
+  //                    |         |  Shift  |         |S+       |         |S+       |         |S+       |  Ctrl   |
+  //                    |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |
+  //                    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  Ctrl   |
+  //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|
+  // The backspace key is bugged with Shift and does not work with nor without the modification  #1 allocation.
   {VK_BACK      ,0      ,'\b'     ,'\b'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x007f   },
-  {VK_ESCAPE    ,0      ,0x001b   ,0x001b   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x001b   },
+  // The escape key yields the variant name at level 5, and the version # at level 6.
+  {VK_ESCAPE    ,0      ,0x001b   ,0x001b   ,WCH_NONE ,WCH_NONE ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,0x001b   },
   {VK_RETURN    ,0      ,'\r'     ,'\r'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'\n'     },
   {VK_CANCEL    ,0      ,0x0003   ,0x0003   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0003   },
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
@@ -747,6 +754,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
+  {VK_ESCAPE    ,5      ,' '      ,'5'      ,'_'      ,'3'      ,'_'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ESCAPE    ,4      ,' '      ,'f'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'s'      ,'e'      ,'m'      ,'i'      ,'_'      ,'a'      ,'u'      ,'t'      ,'o'      },
   {'1'          ,6      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,7      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,16     ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
