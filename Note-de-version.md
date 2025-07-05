@@ -17,10 +17,10 @@ Mise à niveau du pavé numérique sous Windows.
 	* Niveau 9 :
 		* Redonder les émojis lettres indicateurs régionaux "🇦" U+1F1E6 .. "🇿" U+1F1FF sur les touches alphabétiques. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
 		* Redonder les émojis chiffres "0️⃣".."9️⃣" et l’émoji touche de téléphone "*️⃣" sur les premières touches de la rangée E. ibidem
-		* Ajouter "🟰" U+1F7F0 sur E12 où il est imprimé. ibidem
-		* Ajouter "💲" U+1F4B2 sur D12 où il est imprimé. ibidem
-		* Redonder "*️⃣" sur C12 où il est imprimé. ibidem
-		* Redonder "#️⃣" sur C11 pour compléter la nouvelle dispositon des émojis touches de téléphone. ibidem
+		* Ajouter "🟰" U+1F7F0 sur la touche "=" E12. ibidem
+		* Ajouter "💲" U+1F4B2 sur la touche "$" D12. ibidem
+		* Redonder "*️⃣" sur la touche "\*" C12. ibidem
+		* Redonder "#️⃣" sur la touche C11 pour compléter. ibidem
 		* Redonder "⚠" U+26A0 sur la touche "^" D11. kbfrFRs.C [6bf10f9](https://github.com/dispoclavier/nouvel-azerty/commit/6bf10f9b903831985b42a24784c9020bc0446647), kbfredis.C [1d3cb07](https://github.com/dispoclavier/nouvel-azerty/commit/1d3cb075796c999ee24b56b6fa52df73cab3d924)
 		* Redonder "❓" U+2753 sur la touche "?" B07. ibidem
 		* Redonder "❗" U+2757 sur la touche "!" B08. ibidem
