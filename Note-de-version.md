@@ -14,32 +14,36 @@ Mise à niveau du pavé numérique sous Windows.
 	* Pavé numérique :
 		* Mettre à niveau sous Windows selon le pavé numérique pour Linux. kbcommon.H [eda6c76](https://github.com/dispoclavier/nouvel-azerty/commit/eda6c7662762cf75a58c5c6cd1db3762485b0305), kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
 		* Remplir les positions vides. dispocla.cpp [4517a6d](https://github.com/dispoclavier/nouvel-azerty/commit/4517a6db7a9f8be2511b0b0f5d9402bebeda7296), kbfrFRs.C [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5ea4c28](https://github.com/dispoclavier/nouvel-azerty/commit/5ea4c28f2ef48eb2315c231564cad4403b9d50aa)
-	* Niveau 9 :
-		* Redonder les émojis lettres indicateurs régionaux "🇦" U+1F1E6 .. "🇿" U+1F1FF sur les touches alphabétiques. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
-		* Redonder les émojis chiffres "0️⃣".."9️⃣" et l’émoji touche de téléphone "*️⃣" sur les premières touches de la rangée E. ibidem
-		* Ajouter "🟰" U+1F7F0 sur la touche "=" E12. ibidem
-		* Ajouter "💲" U+1F4B2 sur la touche "$" D12. ibidem
-		* Redonder "*️⃣" sur la touche "\*" C12. ibidem
-		* Redonder "#️⃣" sur la touche C11 pour compléter. ibidem
-		* Redonder "⚠" U+26A0 sur la touche "^" D11. kbfrFRs.C [6bf10f9](https://github.com/dispoclavier/nouvel-azerty/commit/6bf10f9b903831985b42a24784c9020bc0446647), kbfredis.C [1d3cb07](https://github.com/dispoclavier/nouvel-azerty/commit/1d3cb075796c999ee24b56b6fa52df73cab3d924)
-		* Redonder "❓" U+2753 sur la touche "?" B07. ibidem
-		* Redonder "❗" U+2757 sur la touche "!" B08. ibidem
-		* Ajouter "🏳" U+1F3F3 sur la touche "/" B09. kbfrFRs.C [3299c32](https://github.com/dispoclavier/nouvel-azerty/commit/3299c322f1a2432bbb8d308e496ab89e325af2af), [0f620d6](https://github.com/dispoclavier/nouvel-azerty/commit/0f620d6ee3870983706080ffaddd01c4628ba322), kbfredis.C [7bd66c5](https://github.com/dispoclavier/nouvel-azerty/commit/7bd66c5ca3854bcadc7365ad2c9d359603da0400)
-		* Redonder "🏴" U+1F3F4 sur la touche "\" B10. ibidem
-		* Redonder le gluon "⁠" U+2060 sur la barre d’espace pour écrire en émojis lettres. kbfrFRs.C [f04d39c](https://github.com/dispoclavier/nouvel-azerty/commit/f04d39c0525359698b613ea2d00ac308bcdaab83), kbfredis.C [9d7c86e](https://github.com/dispoclavier/nouvel-azerty/commit/9d7c86ef5c0383ddb97f085b8d284c87b2e1c6ad)
-	* Niveau 10 :
-		* Redonder les émojis lettres avec gluon "⁠" U+2060 pour écrire en émojis lettres, plutôt que les étiquettes minuscules pour composer des drapeaux régionaux. ibidem
-		* Ajouter les 3 seuls drapeaux régionaux "🏴󠁧󠁢󠁷󠁬󠁳󠁿" sur C12, "🏴󠁧󠁢󠁥󠁮󠁧󠁿" sur D12, "🏴󠁧󠁢󠁳󠁣󠁴󠁿" sur E12. ibidem
-		* Redonder sur la barre d’espace l’espace normale pour écrire en émojis. ibidem
-		* Pallier le bogue de la colonne 02 en redondant dans la colonne 11, ou sur les touches après "N", les émojis lettres ou chiffre disposés sur les touches B02 (🇽⁠), C02 (🇸⁠), D02 (🇿⁠), E02 (2️⃣⁠). ibidem
-	* Niveaux (Maj +) AltQr : Redonder "𝐴" U+1D434.."𝑧" U+1D467, "𝟢" U+1D7E2.."𝟫" U+1D7EB. kbfrFRs.C [730f762](https://github.com/dispoclavier/nouvel-azerty/commit/730f76215002565795d3198c2ebf7e6bbb545581), kbfredis.C [0c097c4](https://github.com/dispoclavier/nouvel-azerty/commit/0c097c40e79a41834d804140b7030b331101d375)
-	* Niveaux (Maj +) AltGr + AltQr : Redonder "𝔸" U+1D538.."𝕫" U+1D56B, "𝟘" U+1D7D8.."𝟡" U+1D7E1. ibidem
-	* Niveaux (Maj +) AltFr + AltQr : Redonder "𝓐" U+1D4D0.."𝔃" U+1D503, "𝟶" U+1D7F6.."𝟿" U+1D7FF. ibidem
-	* Niveaux (Maj +) AltGr + AltFr + AltQr : Redonder "𝗔" U+1D5D4.."𝘇" U+1D607, "𝟬" U+1D7EC.."𝟵" U+1D7F5. ibidem
-	* Niveaux (AltGr +) AltDr + AltQr : Redonder "𝒜" U+1D49C.."𝓏" U+1D4CF, "𝟎" U+1D7CE.."𝟗" U+1D7D7. kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
-	* Niveaux au-dessus de 10 : Préparer pour la prise en charge d’émojis additionnels sur touches vives. kbfrFRs.C [5f0349e](https://github.com/dispoclavier/nouvel-azerty/commit/5f0349e1a347984578a7591ec741521ab1760eb5), kbfredis.C [762a7a7](https://github.com/dispoclavier/nouvel-azerty/commit/762a7a7be03980880e28b1c0f241af70404f32c1)
+	* Bloc alphanumérique sous Windows :
+		* Niveau 9 :
+			* Redonder les émojis lettres indicateurs régionaux "🇦" U+1F1E6 .. "🇿" U+1F1FF sur les touches alphabétiques. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
+			* Redonder les émojis chiffres "0️⃣".."9️⃣" et l’émoji touche de téléphone "*️⃣" sur les premières touches de la rangée E. ibidem
+			* Ajouter "🟰" U+1F7F0 sur la touche "=" E12. ibidem
+			* Ajouter "💲" U+1F4B2 sur la touche "$" D12. ibidem
+			* Redonder "*️⃣" sur la touche "\*" C12. ibidem
+			* Redonder "#️⃣" sur la touche C11 pour compléter. ibidem
+			* Redonder "⚠" U+26A0 sur la touche "^" D11. kbfrFRs.C [6bf10f9](https://github.com/dispoclavier/nouvel-azerty/commit/6bf10f9b903831985b42a24784c9020bc0446647), kbfredis.C [1d3cb07](https://github.com/dispoclavier/nouvel-azerty/commit/1d3cb075796c999ee24b56b6fa52df73cab3d924)
+			* Redonder "❓" U+2753 sur la touche "?" B07. ibidem
+			* Redonder "❗" U+2757 sur la touche "!" B08. ibidem
+			* Ajouter "🏳" U+1F3F3 sur la touche "/" B09. kbfrFRs.C [3299c32](https://github.com/dispoclavier/nouvel-azerty/commit/3299c322f1a2432bbb8d308e496ab89e325af2af), [0f620d6](https://github.com/dispoclavier/nouvel-azerty/commit/0f620d6ee3870983706080ffaddd01c4628ba322), kbfredis.C [7bd66c5](https://github.com/dispoclavier/nouvel-azerty/commit/7bd66c5ca3854bcadc7365ad2c9d359603da0400)
+			* Redonder "🏴" U+1F3F4 sur la touche "\" B10. ibidem
+			* Redonder le gluon "⁠" U+2060 sur la barre d’espace pour écrire en émojis lettres. kbfrFRs.C [f04d39c](https://github.com/dispoclavier/nouvel-azerty/commit/f04d39c0525359698b613ea2d00ac308bcdaab83), kbfredis.C [9d7c86e](https://github.com/dispoclavier/nouvel-azerty/commit/9d7c86ef5c0383ddb97f085b8d284c87b2e1c6ad)
+		* Niveau 10 :
+			* Redonder les émojis lettres avec gluon "⁠" U+2060 pour écrire en émojis lettres, plutôt que les étiquettes minuscules pour composer des drapeaux régionaux. ibidem
+			* Ajouter les 3 seuls drapeaux régionaux "🏴󠁧󠁢󠁷󠁬󠁳󠁿" sur C12, "🏴󠁧󠁢󠁥󠁮󠁧󠁿" sur D12, "🏴󠁧󠁢󠁳󠁣󠁴󠁿" sur E12. ibidem
+			* Redonder sur la barre d’espace l’espace normale pour écrire en émojis. ibidem
+			* Pallier le bogue de la colonne 02 en redondant dans la colonne 11, ou sur les touches après "N", les émojis lettres ou chiffre disposés sur les touches B02 (🇽⁠), C02 (🇸⁠), D02 (🇿⁠), E02 (2️⃣⁠). ibidem
+		* Niveaux (Maj +) AltQr : Redonder "𝐴" U+1D434.."𝑧" U+1D467, "𝟢" U+1D7E2.."𝟫" U+1D7EB. kbfrFRs.C [730f762](https://github.com/dispoclavier/nouvel-azerty/commit/730f76215002565795d3198c2ebf7e6bbb545581), kbfredis.C [0c097c4](https://github.com/dispoclavier/nouvel-azerty/commit/0c097c40e79a41834d804140b7030b331101d375)
+		* Niveaux (Maj +) AltGr + AltQr : Redonder "𝔸" U+1D538.."𝕫" U+1D56B, "𝟘" U+1D7D8.."𝟡" U+1D7E1. ibidem
+		* Niveaux (Maj +) AltFr + AltQr : Redonder "𝓐" U+1D4D0.."𝔃" U+1D503, "𝟶" U+1D7F6.."𝟿" U+1D7FF. ibidem
+		* Niveaux (Maj +) AltGr + AltFr + AltQr : Redonder "𝗔" U+1D5D4.."𝘇" U+1D607, "𝟬" U+1D7EC.."𝟵" U+1D7F5. ibidem
+		* Niveaux (AltGr +) AltDr + AltQr : Redonder "𝒜" U+1D49C.."𝓏" U+1D4CF, "𝟎" U+1D7CE.."𝟗" U+1D7D7. kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
+		* Niveaux au-dessus de 10 : Préparer pour la prise en charge d’émojis additionnels sur touches vives. kbfrFRs.C [5f0349e](https://github.com/dispoclavier/nouvel-azerty/commit/5f0349e1a347984578a7591ec741521ab1760eb5), kbfredis.C [762a7a7](https://github.com/dispoclavier/nouvel-azerty/commit/762a7a7be03980880e28b1c0f241af70404f32c1)
+		* Touche échappement :
+			* Niveau 5 : Ajouter le nom de la variante.  kbfrFRs.C [f17bf4f](https://github.com/dispoclavier/nouvel-azerty/commit/f17bf4f0055aa836832c214e4c1e122c7c669a22), kbfredis.C [9b675ce](https://github.com/dispoclavier/nouvel-azerty/commit/9b675ce2710b45fd31add8f8996e1a9abe047c8a)
+			* Niveau 6 : Ajouter le numéro de version. ibidem
 * Transformations :
-	* Double accent aigu > Emojis rapides : Préparer pour la prise en charge d’émojis additionnels sur touche morte. compose-2.yml [00222c4](https://github.com/dispoclavier/nouvel-azerty/commit/00222c4150cb16103a15344123e59479ff477c33), [b10174f](https://github.com/dispoclavier/nouvel-azerty/commit/b10174f270774e29970340cf3b42f8a14dbc2991), compose-3.yml [a907d8b](https://github.com/dispoclavier/nouvel-azerty/commit/a907d8b52e2b8028e56fb93763e9f80bd91afa2b), [dd1017c](https://github.com/dispoclavier/nouvel-azerty/commit/dd1017c76d2111c9baf4ff92dee0679c1821937a)
+	* Double accent aigu > Emojis rapides : Préparer pour la prise en charge d’émojis additionnels par touche morte. compose-2.yml [00222c4](https://github.com/dispoclavier/nouvel-azerty/commit/00222c4150cb16103a15344123e59479ff477c33), [b10174f](https://github.com/dispoclavier/nouvel-azerty/commit/b10174f270774e29970340cf3b42f8a14dbc2991), compose-3.yml [a907d8b](https://github.com/dispoclavier/nouvel-azerty/commit/a907d8b52e2b8028e56fb93763e9f80bd91afa2b), [dd1017c](https://github.com/dispoclavier/nouvel-azerty/commit/dd1017c76d2111c9baf4ff92dee0679c1821937a)
 	* Drapeau :
 		* Ajouter le gluon "⁠" U+2060 à la place de l’antiliant "‌" U+200C. compose-2.yml [4d09722](https://github.com/dispoclavier/nouvel-azerty/commit/4d09722041e6559c0f548a125a7bb6a11e3df8fe)
 		* Adapter à Windows la touche morte simple pour émettre les émojis lettres indicateurs régionaux sans gluon "⁠" U+2060. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
