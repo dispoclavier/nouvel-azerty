@@ -1,14 +1,14 @@
-:: charset=OEM 65001
+:: charset=OEM 65001 BOM
 @echo off
 chcp 65001
 rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows est faite.
 ::
-::  encodage     OEM 65001 (UTF-8)
+::  encodage     OEM 65001 (UTF-8) avec indicateur d’ordre des octets
 ::  nom          creadispo
 ::  description  programme de commandes en batch pour l’interpréteur cmd.exe de Windows
 ::               utilisant le KbdUTool 3.40 du Microsoft Keyboard Layout Creator 1.4
-::  version      1.9.0
-::  date         2025-07-04T1835+0200 (1.8.3 : 2018-03-15T1954+0100)
+::  version      1.9.1
+::  date         2025-07-07T1426+0200 (1.8.3 : 2018-03-15T1954+0100)
 ::  contact      dev@dispoclavier.net
 ::  ressources   https://dispoclavier.com
 ::
