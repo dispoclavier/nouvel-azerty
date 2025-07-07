@@ -8,6 +8,7 @@
 /.gitattributes export-ignore
 /.gitconfig export-ignore
 
+*.reg diff
  *.reg diff=localizablestrings
 
 ## Language stats
