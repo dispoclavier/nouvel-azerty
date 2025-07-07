@@ -1,2 +1,7 @@
- [diff "localizablestrings"]
- textconv = "iconv -f utf-16 -t utf-8"
+
+## False positives
+
+This is to prevent GitHub from claiming text files are binary.
+By courtesy of https://stackoverflow.com/questions/777949/can-i-make-git-recognize-a-utf-16-file-as-text
+[diff "localizablestrings"]
+textconv = "iconv -f utf-16 -t utf-8"
