@@ -8,9 +8,6 @@
 /.gitattributes export-ignore
 /.gitconfig export-ignore
 
-*.reg diff
- *.reg diff=localizablestrings
-
 ## Language stats
 
 # Include YAML in stats for consistency.
@@ -28,3 +25,11 @@
 # Do not include undistributed files.
 /ressource/* linguist-vendored
 /linux-chromeos/outils/* linguist-vendored
+/windows/outils/* linguist-vendored
+
+## False positives
+
+This is to prevent GitHub from claiming text files are binary.
+By courtesy of https://stackoverflow.com/questions/777949/can-i-make-git-recognize-a-utf-16-file-as-text
+*.reg diff
+*.reg diff=localizablestrings
