@@ -23,7 +23,7 @@ nouvelle demande de confirmation.
 
 Si une valeur "Scancode Map" existe et qu’elle doit être conservée
 (par exemple parce qu’elle ne provient pas de l’une des clés incluses
-dans ce pack), commencer par l’étape 0. Sinon commencer par l’étape 1.
+dans ce dossier), commencer par l’étape 0. Sinon commencer par l’étape 1.
 
 Étape 0 : Ouvrir l’Éditeur de Registre regedit.exe, aller à la clé
           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
@@ -32,18 +32,18 @@ dans ce pack), commencer par l’étape 0. Sinon commencer par l’étape 1.
           afin qu’elle puisse être restaurée le cas échéant.
 
 Étape 1 : Voir si l’une des redispositions proposées dans ce dossier répond
-          aux attentes, ou sinon choisir celle qui s’en rapproche le plus.
+          aux attentes ; sinon choisir celle qui s’en rapproche le plus.
 
-Étape 2 : Ouvrir ce fichier .reg dans un éditeur de texte pour le modifier,
-          ou au moins pour le vérifier.
+Étape 2 : Ouvrir ce fichier .reg dans un éditeur de texte pour le vérifier,
+          voire pour le modifier.
 
 Étape 3 : Ouvrir le fichier .reg fini avec l’Éditeur du Registre.
 
 Étape 4 : Confirmer en cliquant [Oui] dans l’alerte qui s’affiche.
 
-Étape 5 : Lire et fermer l’alerte de accomplissement affichée ensuite.
+Étape 5 : Lire et fermer l’alerte d’accomplissement affichée ensuite.
 
-Étape 6 : Redémarrer l’ordinateur pour une prise d’effet immédiate.
+Étape 6 : Redémarrer l’ordinateur pour la prise d’effet.
 
 
 Pour tout annuler :
@@ -62,11 +62,7 @@ b2) Si la valeur "Scancode Map" a été renommée :
     Supprimer la valeur "Scancode Map" existante, et
     renommer l’autre valeur en "Scancode Map".
 
-Ensuite :
-    Redémarrer l’ordinateur en cas de redémarrage après l’inscription à 
-    annuler.
-    Sinon, il n’est pas nécessaire de redémarrer l’ordinateur pour rendre
-    l’annulation effective.
+Puis redémarrer l’ordinateur.
 
 
 ## Références du redisposeur de codes matériels de touches de clavier
@@ -82,7 +78,7 @@ https://support.microsoft.com/fr-fr/help/310516/how-to-add--modify--or-delete-re
 
 2) Ressource en anglais :
 
-https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
+https://learn.microsoft.com/fr-fr/previous-versions/windows/hardware/hid/keyboard-and-mouse-class-drivers#scan-code-mapper-for-keyboards
 
 
 3) Syntaxe des commentaires :
@@ -153,7 +149,8 @@ Permute les touches d’Effacement arrière et Contrôle droite.
 
 ### ansi-iso.reg
 
-Permute les touches de Verrouillage des Capitales et [<>] qui se trouve à la place de Contrôle droite et qui devient la touche AltFr.
+Permute les touches de Verrouillage des Capitales et [<>], qui se trouve à la place de Contrôle droite
+et qui devient la touche AltFr.
 
 * VerrCap devient [<>] sur Contrôle droite.
 * [<>] sur Contrôle droite (AltFr) devient VerrCap.
@@ -163,6 +160,7 @@ Permute les touches de Verrouillage des Capitales et [<>] qui se trouve à la pl
 
 Permute les touches de Verrouillage des Capitales et [<>] qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
+
 Permute aussi les touches d’Effacement arrière et Menu.
 
 * VerrCap devient [<>] et sert de touche AltFr.
@@ -175,6 +173,7 @@ Permute aussi les touches d’Effacement arrière et Menu.
 
 Permute les touches de Verrouillage des Capitales et [<>] qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
+
 Redonde aussi l’Effacement arrière sur la touche Menu et laisse la touche d’Effacement arrière inchangée.
 
 * VerrCap devient [<>] et sert de touche AltFr.
@@ -252,6 +251,6 @@ Liste non exhaustive.
 
 ## À propos
 
-Ce fichier est distribué dans le dossier redipositions/ sous le nom de Scancode_Map.txt,
+Ce fichier est distribué dans le dossier redipositions/ sous le nom de _Scancode_Map.txt,
 tandis que sur GitHub il sert de readme.md dans windows/redispositions/. Il est basé sur
 une version précédente datant de 2018-08-10T1041+0200.
