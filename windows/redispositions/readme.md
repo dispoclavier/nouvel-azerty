@@ -110,7 +110,7 @@ Supprime la valeur "Scancode Map" pour restaurer l’état par défaut.
 
 Redonde l’Effacement arrière sur Windows droite.
 
-* Windows droite devient une deuxième touche d’Effacement arrière.
+* Windows droite devient une deuxième touche d’Effacement arrière,
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
@@ -118,8 +118,8 @@ Redonde l’Effacement arrière sur Windows droite.
 
 Redonde l’Effacement arrière sur Windows droite et désactive la touche Menu.
 
-* Windows droite devient une deuxième touche d’Effacement arrière.
-* Menu devient une troisième touche d’Effacement arrière afin d’empêcher l’ouverture accidentelle du menu.
+* Windows droite devient une deuxième touche d’Effacement arrière,
+* Menu devient une troisième touche d’Effacement arrière afin d’empêcher l’ouverture accidentelle du menu,
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
@@ -127,7 +127,7 @@ Redonde l’Effacement arrière sur Windows droite et désactive la touche Menu.
 
 Permute les touches d’Effacement arrière et Menu.
 
-* Menu devient Effacement arrière.
+* Menu devient Effacement arrière,
 * Effacement arrière devient Menu.
 
 
@@ -135,7 +135,7 @@ Permute les touches d’Effacement arrière et Menu.
 
 Redonde l’Effacement arrière sur la touche Menu et laisse la touche d’Effacement arrière inchangée.
 
-* Menu devient une deuxième touche d’Effacement arrière.
+* Menu devient une deuxième touche d’Effacement arrière,
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
@@ -143,7 +143,7 @@ Redonde l’Effacement arrière sur la touche Menu et laisse la touche d’Effac
 
 Permute les touches d’Effacement arrière et Contrôle droite.
 
-* Contrôle droite devient Effacement arrière.
+* Contrôle droite devient Effacement arrière,
 * Effacement arrière devient Contrôle droite.
 
 
@@ -152,7 +152,7 @@ Permute les touches d’Effacement arrière et Contrôle droite.
 Permute les touches de Verrouillage des Capitales et [<>], qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
-* VerrCap devient [<>] sur Contrôle droite.
+* VerrCap devient [<>] sur Contrôle droite,
 * [<>] sur Contrôle droite (AltFr) devient VerrCap.
 
 
@@ -163,9 +163,9 @@ et qui devient la touche AltFr.
 
 Permute aussi les touches d’Effacement arrière et Menu.
 
-* VerrCap devient [<>] et sert de touche AltFr.
-* [<>] sur Contrôle droite devient VerrCap.
-* Menu devient Effacement arrière.
+* VerrCap devient [<>] et sert de touche AltFr,
+* [<>] sur Contrôle droite devient VerrCap,
+* Menu devient Effacement arrière,
 * Effacement arrière devient Menu.
 
 
@@ -176,9 +176,9 @@ et qui devient la touche AltFr.
 
 Redonde aussi l’Effacement arrière sur la touche Menu et laisse la touche d’Effacement arrière inchangée.
 
-* VerrCap devient [<>] et sert de touche AltFr.
-* [<>] sur Contrôle droite devient VerrCap.
-* Menu devient une deuxième touche d’Effacement arrière.
+* VerrCap devient [<>] et sert de touche AltFr,
+* [<>] sur Contrôle droite devient VerrCap,
+* Menu devient une deuxième touche d’Effacement arrière,
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
@@ -186,7 +186,7 @@ Redonde aussi l’Effacement arrière sur la touche Menu et laisse la touche d�
 
 Introduit la touche AltFr à gauche sur la touche de Verrouillage des Capitales, qui passe sur Contrôle droite.
 
-* VerrCap devient [<>] (AltFr).
+* VerrCap devient [<>] (AltFr),
 * Contrôle droite devient VerrCap.
 
 
@@ -194,11 +194,15 @@ Introduit la touche AltFr à gauche sur la touche de Verrouillage des Capitales,
 ## Codes matériels de touches (scancodes)
 
 Entre parenthèses figure le code hexadécimal petit-boutien.
-Le sens de lecture est de gauche à droite dans les octets (groupes de 2 chiffres hex)
-et dans l’ensemble, mais de droite à gauche dans les DWORDS (groupes de 4 octets).
-L’ancien code matériel figure à droite, le nouveau à gauche. La relation est « devient ».
-Chaque code matériel occupe un WORD (2 octets), dont le premier octet, nul par défaut,
-est réservé au préfixe « E0 » des codes matériels étendus (notés « X## »).
+
+Les deux chiffres hexadécimaux des octets se lisent bien de gauche à droite, mais
+les groupes de 4 octets appelés DWORDS se lisent de droite à gauche.
+
+Chaque code matériel occupe un WORD, dont le premier octet, nul par défaut,
+est réservé au préfixe "e0" des codes matériels étendus, notés « X## ».
+
+L’ancien code matériel figure à droite, le nouveau à gauche.
+La relation est « devient ».
 
 Liste non exhaustive.
 
