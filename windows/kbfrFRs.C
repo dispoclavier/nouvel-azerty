@@ -7,6 +7,7 @@
 * Copyright (c) 2015-2025, Dispoclavier
 *
 * History:
+* [annotations]                      5.3.0.25.01-Wed-2025-07-09T1845+0200
 * Debug variant name output          5.3.0.25.00-Sat-2025-07-05T1742+0200
 * Debug variant name output          5.3.0.24.00-Sat-2025-07-05T1706+0200
 * Debug BACK, add variant&version    5.3.0.23.00-Sat-2025-07-05T1619+0200
@@ -182,10 +183,20 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 *
 * See kbd.h for a full description.
 *
-* The keyboard has only three shifter keys:
-*     SHIFT (L & R) affects alphabnumeric keys,
-*     CTRL  (L & R) is used to generate control characters
-*     ALT   (L & R) used for generating characters by number with numpad
+* The keyboard has seven shifter keys:
+*     SHIFT (L & R) affects alphanumeric keys;
+*     CTRL  (L & R) is used to generate control characters;
+*     ALT   (Left)  used for generating characters by number with numpad.
+*     0x10  (Right) emulates the Alternate Graphic modifier key
+*     0x20  (Left)  AltFr (Alt French) for unspaced punctuation, graphic numpad
+*     0x40  (Left)  AltLe (Alt Letter emoji) for country flags, other emoji
+*     0x80  (Left)  AltQr (Alt Quick response) for math alphabets and emoji
+*
+* While AltGr is right Alt, AltFr is the ISO key B00, or it goes on Caps Lock,
+* that goes then on right Control.
+*
+* For Kana Lock and AltQr, key E00 is repurposed (as on French AZERTY, this is
+* superscript 2).
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_SHIFT    ,   KBDSHIFT     },
@@ -193,8 +204,8 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_MENU     ,   KBDALT       },
     { VK_OEM_AX   ,   16           }, // AltGr key
     { VK_OEM_102  ,   32           }, // AltFr key
-    { VK_CAPITAL  ,   64           }, // AltFl on top of CapsLock key
-    { VK_KANA     ,   128          }, // AltQr on top of KanaLock key
+    { VK_CAPITAL  ,   64           }, // AltLe key on top of Caps Lock key
+    { VK_KANA     ,   128          }, // AltQr key on top of Kana Lock key
     { 0           ,   0            }
 };
 
@@ -738,13 +749,13 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
 * The 3 subdivision flags supported by Unicode (after projecting to support all
 * subdivision flags and devising a scheme to do so) are supported as all-in-one
 * sequences, in lieu of the tag small letters, given the absence of other flags
-* in this category. Their level-10 map, using the AltFl modifier (alliteration
+* in this category. Their level-10 map, using the AltLe modifier (alliteration
 * with "AltFr", based on "flag") added on top of the Caps Lock toggle key
 * (using it requires resetting the toggle in the wake), is stacked, on key C12
 * for Wales, D12 for England, and E12 for Scotland, with geospatial mnemonics
 # using the stacked layout of these keys, with respect to the requirement of
 # duplicate mappings of C02 on C11, D02 on D11, and E02 on E11 due to the
-# column-02 bug affecting level 10, i.e. Shift + AltFl (decimal 65, 0x41), and
+# column-02 bug affecting level 10, i.e. Shift + AltLe (decimal 65, 0x41), and
 # with keycap mnemonics using "£" printed in Shift position on D12 of French
 # AZERTY, on C12 of Belgian AZERTY.
 * https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
@@ -1327,8 +1338,8 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   /*****************************************************************************\
   * Script "𝒜" U1D49C.."𝓏" U1D4CF with bold "𝟎" U1D7CE.."𝟗" U1D7D7.
   *
-  * These are the user-perceived (AltGr +) AltFl + AltQr levels, as
-  * Shift + AltFl (CAPITAL) does not work in column 02.
+  * These are the user-perceived (AltGr +) AltLe + AltQr levels, as
+  * Shift + AltLe (CAPITAL) does not work in column 02.
   *
   * Depending on the font, this may be the most inconsistent alphabet encoded
   * in two blocks. Consistently, it is the worst supported, at a level with a
