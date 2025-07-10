@@ -4,11 +4,13 @@ Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windo
 
 Prise en charge des 3 drapeaux régionaux par touche morte sous Linux.
 
-Prise en charge sur touches vives sous Windows de 5 alphabets mathématiques préformatés.
+Prise en charge de 5 alphabets mathématiques préformatés sur touches vives sous Windows.
 
 Mise à niveau du pavé numérique sous Windows.
 
-Fourniture de fichiers de redisposition sous Windows correspondant aux sous-variantes sous Linux.
+Prise en charge des sous-variantes sous Windows.
+
+Personnalisation facilitée aussi sous Windows.
 
 ## Modifications
 
