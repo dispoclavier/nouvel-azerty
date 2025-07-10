@@ -39,10 +39,10 @@ Fourniture de fichiers de redisposition sous Windows correspondant aux sous-vari
 		* Niveaux (Maj +) AltGr + AltQr : Redonder "𝔸" U+1D538.."𝕫" U+1D56B, "𝟘" U+1D7D8.."𝟡" U+1D7E1. ibidem
 		* Niveaux (Maj +) AltFr + AltQr : Redonder "𝓐" U+1D4D0.."𝔃" U+1D503, "𝟶" U+1D7F6.."𝟿" U+1D7FF. ibidem
 		* Niveaux (Maj +) AltGr + AltFr + AltQr : Redonder "𝗔" U+1D5D4.."𝘇" U+1D607, "𝟬" U+1D7EC.."𝟵" U+1D7F5. ibidem
-		* Niveaux (AltGr +) AltDr + AltQr : Redonder "𝒜" U+1D49C.."𝓏" U+1D4CF, "𝟎" U+1D7CE.."𝟗" U+1D7D7. kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
+		* Niveaux (AltGr +) AltEl + AltQr : Redonder "𝒜" U+1D49C.."𝓏" U+1D4CF, "𝟎" U+1D7CE.."𝟗" U+1D7D7. kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
 		* Niveaux au-dessus de 10 : Préparer pour la prise en charge d’émojis additionnels sur touches vives. kbfrFRs.C [5f0349e](https://github.com/dispoclavier/nouvel-azerty/commit/5f0349e1a347984578a7591ec741521ab1760eb5), kbfredis.C [762a7a7](https://github.com/dispoclavier/nouvel-azerty/commit/762a7a7be03980880e28b1c0f241af70404f32c1)
 		* Touche échappement :
-			* Niveau 5 : Ajouter le nom de la variante.  kbfrFRs.C [f17bf4f](https://github.com/dispoclavier/nouvel-azerty/commit/f17bf4f0055aa836832c214e4c1e122c7c669a22), kbfredis.C [9b675ce](https://github.com/dispoclavier/nouvel-azerty/commit/9b675ce2710b45fd31add8f8996e1a9abe047c8a)
+			* Niveau 5 : Ajouter le nom de la variante. kbfrFRs.C [f17bf4f](https://github.com/dispoclavier/nouvel-azerty/commit/f17bf4f0055aa836832c214e4c1e122c7c669a22), kbfredis.C [9b675ce](https://github.com/dispoclavier/nouvel-azerty/commit/9b675ce2710b45fd31add8f8996e1a9abe047c8a)
 			* Niveau 6 : Ajouter le numéro de version. ibidem
 * Transformations :
 	* Double accent aigu > Emojis rapides : Préparer pour la prise en charge d’émojis additionnels par touche morte. compose-2.yml [00222c4](https://github.com/dispoclavier/nouvel-azerty/commit/00222c4150cb16103a15344123e59479ff477c33), [b10174f](https://github.com/dispoclavier/nouvel-azerty/commit/b10174f270774e29970340cf3b42f8a14dbc2991), compose-3.yml [a907d8b](https://github.com/dispoclavier/nouvel-azerty/commit/a907d8b52e2b8028e56fb93763e9f80bd91afa2b), [dd1017c](https://github.com/dispoclavier/nouvel-azerty/commit/dd1017c76d2111c9baf4ff92dee0679c1821937a)
@@ -59,8 +59,8 @@ Fourniture de fichiers de redisposition sous Windows correspondant aux sous-vari
 		* Ajouter "🏳" U+1F3F3 par "/". ibidem
 		* Ajouter les drapeaux de l’Angleterre, de l’Écosse et du Pays de Galles. compose-2.yml [7551293](https://github.com/dispoclavier/nouvel-azerty/commit/755129326d948956a6ef324e98450d53bb2f14e3)
 * Sous-variantes :
-	* Corriger les fichiers pour Linux et les mettre en ligne. evdev.c [20f6df1](https://github.com/dispoclavier/nouvel-azerty/commit/20f6df1504136fa544a60a9c2a2dce5fcf1c53c2), linux/chromeos/redispositions/* [19b2ece](https://github.com/dispoclavier/nouvel-azerty/commit/19b2ece949e1de96cc2bd9f5c6191cf126ef71be)
-	* Ajouter l’équivalent pour Windows. windows/redispositions/readme.md alias _Scancode_Map.txt [859528e](https://github.com/dispoclavier/nouvel-azerty/commit/859528eca5a6d43b5f828f6f315375162f76bd11), [7ca3436](https://github.com/dispoclavier/nouvel-azerty/commit/7ca3436c120f6d60ff84461c55831190ee3037bc), [40bea50](https://github.com/dispoclavier/nouvel-azerty/commit/40bea506488a325a7b789cfc55bfa6f3cd79c6eb), windows/redispositions/* [1a46fc8](https://github.com/dispoclavier/nouvel-azerty/commit/1a46fc852dee5659bec5378a6622d6b2a25d96ae), [b3865f1](https://github.com/dispoclavier/nouvel-azerty/commit/b3865f1d63343884e744db3c78392bf5fc810e0a), [6a4c947](https://github.com/dispoclavier/nouvel-azerty/commit/6a4c947006073ef9888a99d1b14134b548cdbda3), [ed21663](https://github.com/dispoclavier/nouvel-azerty/commit/ed2166302fc7b33fe56bd06b70c7d4766469ad2d), [f58bb25](https://github.com/dispoclavier/nouvel-azerty/commit/f58bb25c905adde87a930f7e825612b903d2e594)
+	* Corriger les fichiers pour Linux et les mettre en ligne. evdev.c [20f6df1](https://github.com/dispoclavier/nouvel-azerty/commit/20f6df1504136fa544a60a9c2a2dce5fcf1c53c2), linux/chromeos/redispositions/evdev-ansi.c, evdev-ansi-menu.c, evdev-ansi-menu-sans.c, evdev-ansi-pur.c, evdev-ctrl.c, evdev-menu.c, evdev-menu-sans.c, evdev-win.c, evdev-win-sans.c [19b2ece](https://github.com/dispoclavier/nouvel-azerty/commit/19b2ece949e1de96cc2bd9f5c6191cf126ef71be)
+	* Ajouter l’équivalent pour Windows. windows/redispositions/readme.md alias _Scancode_Map.txt [859528e](https://github.com/dispoclavier/nouvel-azerty/commit/859528eca5a6d43b5f828f6f315375162f76bd11), [7ca3436](https://github.com/dispoclavier/nouvel-azerty/commit/7ca3436c120f6d60ff84461c55831190ee3037bc), [40bea50](https://github.com/dispoclavier/nouvel-azerty/commit/40bea506488a325a7b789cfc55bfa6f3cd79c6eb), windows/redispositions/annulation.reg, ansi-iso.reg, ansi-iso_menu=ret-arr_sans-menu.reg, ansi-iso_menu=x=ret-arr.reg, ansi-pur.reg, ctrl-dr=x=ret-arr.reg, menu=ret-arr_sans-menu.reg, menu=x=ret-arr.reg, win-dr=ret-arr.reg, win-dr=ret-arr_sans-menu.reg [1a46fc8](https://github.com/dispoclavier/nouvel-azerty/commit/1a46fc852dee5659bec5378a6622d6b2a25d96ae), [b3865f1](https://github.com/dispoclavier/nouvel-azerty/commit/b3865f1d63343884e744db3c78392bf5fc810e0a), [6a4c947](https://github.com/dispoclavier/nouvel-azerty/commit/6a4c947006073ef9888a99d1b14134b548cdbda3), [ed21663](https://github.com/dispoclavier/nouvel-azerty/commit/ed2166302fc7b33fe56bd06b70c7d4766469ad2d), [f58bb25](https://github.com/dispoclavier/nouvel-azerty/commit/f58bb25c905adde87a930f7e825612b903d2e594)
 * Personnalisation :
 	* Mettre en ligne le script de compilation utilisé revu, corrigé, mis à jour et désormais en UTF-8. windows/outils/creadispo.cmd [416474a](https://github.com/dispoclavier/nouvel-azerty/commit/416474acf550216599ac44445c612f0338304974), [e922a72](https://github.com/dispoclavier/nouvel-azerty/commit/e922a72afce2d9982fc90d1364159cef3bc99a9d), [31f44c7](https://github.com/dispoclavier/nouvel-azerty/commit/31f44c747ad3d640f904aec1cf43d751ef2a44b2), [dfdc733](https://github.com/dispoclavier/nouvel-azerty/commit/dfdc733a753bf98f8fe8c1b33586a8ee423ff2aa)
 	* Ajouter l’indicateur d’ordre des octets (téléverser le script). creadispo.cmd [11138e8](https://github.com/dispoclavier/nouvel-azerty/commit/11138e81282c01f7eeaebaa2d4422c5d33068a94), [a3bb72c](https://github.com/dispoclavier/nouvel-azerty/commit/a3bb72cf65718a24922fc4b8ccda8be55b71660f)
@@ -70,27 +70,29 @@ Fourniture de fichiers de redisposition sous Windows correspondant aux sous-vari
 	* Simplifier les annotations. dead-key-convert.pl [e0d0479](https://github.com/dispoclavier/nouvel-azerty/commit/e0d047907061bbbd509a4f724d6ac4f2d7dae303), kbfrFRs.C [3689891](https://github.com/dispoclavier/nouvel-azerty/commit/36898916c864988b53035ef0f344b370a9a570bf), kbfredis.C [5e90ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5e90ac4c49895eab430bbc6021184bed08601a62)
 	* Améliorer la présentation du contenu des touches mortes. dead-key-convert.pl [99ab07b](https://github.com/dispoclavier/nouvel-azerty/commit/99ab07b1ca6ea0d638b9955ae228ce6f10ae5912), [d5585fe](https://github.com/dispoclavier/nouvel-azerty/commit/d5585fea0cfea5fc9b1722d6f9498496429661cd), kbfrFRs.C [85240b2](https://github.com/dispoclavier/nouvel-azerty/commit/85240b2d66ca768e8a91183c1874483c015e1e18), [a5f285a](https://github.com/dispoclavier/nouvel-azerty/commit/a5f285a873d1d663938692971517727358a62dc2), kbfredis.C [b0b4cd7](https://github.com/dispoclavier/nouvel-azerty/commit/b0b4cd79e5f5125e58c5ccef567f5655c2b088eb), [96196a7](https://github.com/dispoclavier/nouvel-azerty/commit/96196a75b487286974e7c4705691bebc36a27dd4)
 
-## Un nouvel AZERTY pour Windows
+## Un nouvel AZERTY pour Linux et Windows (et bientôt pour macOS)
+
+### Windows
 
 En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai dans le dossier [Un-nouvel-AZERTY-Windows-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Windows-5.3.0.zip).
 
 Toutes les touches vives sont à jour, toutes les touches mortes simples aussi. Le contenu des touches mortes enchaînées et de la touche de composition est basé sur la précédente implémentation.
 
-### Installation
+#### Installation
 
-Télécharger le dossier « `Un-nouvel-AZERTY-Windows-5.3.0.zip` » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v5.3.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « Un-nouvel-AZERTY-Windows-5.3.0.zip » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v5.3.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
 
-## Un nouvel AZERTY pour Linux
+### Linux
 
-Les dernières [versions de Linux sont défectueuses](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#installation) au niveau du commutateur de dispositions de clavier.
+Dans les dernières versions de Linux, il faut s’attendre à ce que le commutateur de dispositions de clavier est bogué ; mais en n’utilisant qu’une seule disposition, il n’y a pas de problème, comme expliqué dans le [mode d’emploi sous Linux sous le titre « Installation »](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#installation).
 
-### Utilisation sans droits d’administrateur
+#### Utilisation sans droits d’administrateur
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-5.3.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre le mode d’emploi dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus dans ce dossier.
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/latest/download/Un-nouvel-AZERTY-Linux-5.3.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre les instructions dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus.
 
-Cette méthode est la seule qui fonctionne sous [Linux Mint](https://www.linuxmint.com/edition.php?id=311) à cause de [bogues dans XKB sous Linux Mint](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#linux-mint).
+Sous [Linux Mint](https://www.linuxmint.com/edition.php?id=311), cette méthode est la seule qui fonctionne, en raison de [bogues dans XKB sous Linux Mint](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#linux-mint).
 
-### Installation
+#### Installation
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
@@ -98,21 +100,21 @@ Télécharger le dossier « [Un-nouvel-AZERTY-Linux-5.3.0.zip](https://github.
 
 Puis fermer la session et en rouvrir une. 
 
-Ce nouvel AZERTY figure dans le dossier des dispositions de clavier `Français (France)` sous le nom `Français France disposition de clavier semi-automatique` et peut être ajouté aux dispositions actives. Afin de l’activer, il est devenu nécessaire de désactiver l’autre disposition.
+Ce nouvel AZERTY figure dans le dossier des dispositions de clavier « Français (France) » sous le nom « Français France disposition de clavier semi-automatique » et peut être ajouté aux dispositions actives. Afin de l’activer, il est devenu nécessaire de désactiver l’autre disposition.
 
 Les variantes AZERTY s’appellent :
 
-* `Breton et français disposition de clavier semi-automatique` ;
-* `Polynésie Française disposition de clavier semi-automatique` ;
-* `Afrique francophone disposition de clavier semi-automatique` ;
-* `Français Belgique disposition de clavier semi-automatique`.
+* Breton et français disposition de clavier semi-automatique
+* Polynésie Française disposition de clavier semi-automatique
+* Afrique francophone disposition de clavier semi-automatique
+* Français Belgique disposition de clavier semi-automatique
 
 Les variantes redisposées QZJFGY s’appellent :
 
-* `Français France disposition de clavier semi-automatique redisposée` ;
-* `Breton et français disposition de clavier semi-automatique redisposée` ;
-* `Polynésie française disposition de clavier semi-automatique redisposée` ;
-* `Afrique francophone disposition de clavier semi-automatique redisposée`.
+* Français France disposition de clavier semi-automatique redisposée
+* Breton et français disposition de clavier semi-automatique redisposée
+* Polynésie française disposition de clavier semi-automatique redisposée
+* Afrique francophone disposition de clavier semi-automatique redisposée
 
 La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va à l’encontre de cet objectif.
 
