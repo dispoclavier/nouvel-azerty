@@ -1,5 +1,8 @@
 # 5.3.0 (prépublication)
 
+|Tant que les modes d’emploi ne sont pas à jour, la version 5.3.0 reste en prépublication.|
+|:-:|
+
 Rectification des groupes des symboles.
 
 Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windows.
