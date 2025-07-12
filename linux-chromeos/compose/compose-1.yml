@@ -45,7 +45,7 @@
 #     inside the X11/ subdirectory in /usr/share/, this file is named only "Compose",
 #     because the context is clear and the file names do not need to be any more specific.
 #  ** In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
-#     in the CLDR, the Linux OS is supported alongside ChromeOS, or through ChromeOS.
+#     in the CLDR, Linux is supported alongside ChromeOS, or through ChromeOS.
 #
 #               Installation: 1. Set the input method to XIM, because other input methods may
 #                                not support multi-character output, including composed letters
@@ -4195,7 +4195,10 @@
 <Multi_key><nobreakspace><less>                                                     <nobreakspace> : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><e><greater>                                                                            : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
 <Multi_key><e><less>                                                                               : "‫" U202B # RIGHT-TO-LEFT EMBEDDING
+#   <Multi_key><d><equal> conflicts with "₫" U20AB.                                                : "‬" U202C # POP DIRECTIONAL FORMATTING
+#   <Multi_key><d><greater> conflicts with "ǆ" U01C6.                                              : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><d><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><d><bar>                                                                                : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><p><greater>                                                                            : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><p><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><f><greater>                                                                            : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
