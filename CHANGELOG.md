@@ -18,6 +18,8 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 
 ## 5.3.0 (projet)
 
+Rectification des groupes des symboles.
+
 Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windows.
 
 Prise en charge des 3 drapeaux régionaux par touche morte sous Linux.
