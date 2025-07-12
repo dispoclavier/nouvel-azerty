@@ -16,6 +16,9 @@ la valeur "Scancode Map" qui sera ajoutée ou remplacée dans cette clé :
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 
+| La clé "Keyboard Layouts" au pluriel contient des dispositions de clavier. |
+|:--------------------------------------------------------------------------:|
+
 Le reste du contenu de cette clé n’est pas affecté par l’opération,
 qui est une fusion. La nouvelle valeur est inscrite dans la clé, et
 si une valeur du même nom existe déjà, celle-ci est remplacée sans
@@ -71,27 +74,27 @@ Puis redémarrer l’ordinateur.
 0) Nom anglais : Scancode Mapper for Keyboards
 
 
-1) Tutoriel en français :
+1) Tutoriel en français
 
 https://support.microsoft.com/fr-fr/help/310516/how-to-add--modify--or-delete-registry-subkeys-and-values-by-using-a
 
 
-2) Ressource en anglais :
+2) Ressource en anglais
 
 https://learn.microsoft.com/fr-fr/previous-versions/windows/hardware/hid/keyboard-and-mouse-class-drivers#scan-code-mapper-for-keyboards
 
 
-3) Syntaxe des commentaires :
+3) Syntaxe des commentaires
 
 https://stackoverflow.com/questions/27632612/comment-in-reg-file
 
 
-4) Article Wikipédia « Scancode »:
+4) Article Wikipédia « Scancode »
 
 https://en.wikipedia.org/wiki/Scancode#PC_compatibles
 
 
-5) Listes de codes matériels de touches de clavier :
+5) Listes de codes matériels de touches de clavier
 
 http://www.quadibloc.com/comp/scan.htm
 
@@ -110,32 +113,38 @@ Supprime la valeur "Scancode Map" pour restaurer l’état par défaut.
 
 Redonde l’Effacement arrière sur Windows droite.
 
-* Windows droite devient une deuxième touche d’Effacement arrière,
+* Windows droite devient une deuxième touche d’Effacement arrière ;
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
 ### win-dr=ret-arr_sans-menu.reg
 
-Redonde l’Effacement arrière sur Windows droite et désactive la touche Menu.
+Redonde l’Effacement arrière sur Windows droite et sur la touche Menu.
 
-* Windows droite devient une deuxième touche d’Effacement arrière,
-* Menu devient une troisième touche d’Effacement arrière afin d’empêcher l’ouverture accidentelle du menu,
+* Windows droite devient une deuxième touche d’Effacement arrière ;
+* Menu devient une troisième touche d’Effacement arrière ;
 * La touche d’Effacement arrière conserve sa fonctionnalité.
+
+Le but est d’empêcher l’ouverture accidentelle du menu.
+Plutôt que de priver de fonctionnalité la touche Menu en la désactivant,
+on lui fait endosser la même fonctionnalité qu’à sa voisine,
+afin que le dépassement du pouce reste sans effet.
 
 
 ### menu=x=ret-arr.reg
 
 Permute les touches d’Effacement arrière et Menu.
 
-* Menu devient Effacement arrière,
+* Menu devient Effacement arrière ;
 * Effacement arrière devient Menu.
 
 
 ### menu=ret-arr_sans-menu.reg
 
-Redonde l’Effacement arrière sur la touche Menu et laisse la touche d’Effacement arrière inchangée.
+Redonde l’Effacement arrière sur la touche Menu
+et laisse la touche d’Effacement arrière inchangée.
 
-* Menu devient une deuxième touche d’Effacement arrière,
+* Menu devient une deuxième touche d’Effacement arrière ;
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
@@ -143,50 +152,55 @@ Redonde l’Effacement arrière sur la touche Menu et laisse la touche d’Effac
 
 Permute les touches d’Effacement arrière et Contrôle droite.
 
-* Contrôle droite devient Effacement arrière,
+* Contrôle droite devient Effacement arrière ;
 * Effacement arrière devient Contrôle droite.
 
 
 ### ansi-iso.reg
 
-Permute les touches de Verrouillage des Capitales et [<>], qui se trouve à la place de Contrôle droite
+Permute les touches de Verrouillage des Capitales et [<>],
+qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
-* VerrCap devient [<>] sur Contrôle droite,
+* VerrCap devient [<>] sur Contrôle droite ;
 * [<>] sur Contrôle droite (AltFr) devient VerrCap.
 
 
 ### ansi-iso_menu=x=ret-arr.reg
 
-Permute les touches de Verrouillage des Capitales et [<>] qui se trouve à la place de Contrôle droite
+Permute les touches de Verrouillage des Capitales et [<>],
+qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
 Permute aussi les touches d’Effacement arrière et Menu.
 
-* VerrCap devient [<>] et sert de touche AltFr,
-* [<>] sur Contrôle droite devient VerrCap,
-* Menu devient Effacement arrière,
+* VerrCap devient [<>] et sert de touche AltFr ;
+* [<>] sur Contrôle droite devient VerrCap ;
+* Menu devient Effacement arrière ;
 * Effacement arrière devient Menu.
 
 
 ### ansi-iso_menu=ret-arr_sans-menu.reg
 
-Permute les touches de Verrouillage des Capitales et [<>] qui se trouve à la place de Contrôle droite
+Permute les touches de Verrouillage des Capitales et [<>],
+qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
-Redonde aussi l’Effacement arrière sur la touche Menu et laisse la touche d’Effacement arrière inchangée.
+Redonde aussi l’Effacement arrière sur la touche Menu
+et laisse la touche d’Effacement arrière inchangée.
 
-* VerrCap devient [<>] et sert de touche AltFr,
-* [<>] sur Contrôle droite devient VerrCap,
-* Menu devient une deuxième touche d’Effacement arrière,
+* VerrCap devient [<>] et sert de touche AltFr ;
+* [<>] sur Contrôle droite devient VerrCap ;
+* Menu devient une deuxième touche d’Effacement arrière ;
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
 
 ### ansi-pur.reg
 
-Introduit la touche AltFr à gauche sur la touche de Verrouillage des Capitales, qui passe sur Contrôle droite.
+Introduit la touche AltFr à gauche sur la touche de Verrouillage des Capitales,
+qui passe sur Contrôle droite.
 
-* VerrCap devient [<>] (AltFr),
+* VerrCap devient [<>] (AltFr) ;
 * Contrôle droite devient VerrCap.
 
 
@@ -218,7 +232,7 @@ Liste non exhaustive.
     T2A (2a,00) Maj gauche
     T36 (36,00) Maj droite
 
-    T38 (38,00) Alt
+    T38 (38,00) Alt (gauche)
     X38 (38,e0) AltGr
 
     T3A (3a,00) VerrCap / VerrMaj
@@ -229,15 +243,17 @@ Liste non exhaustive.
 
     X5D (5d,e0) Menu/applications (Menu contextuel)
 
-    T29 (29,00) Touche TLDE E00 [²]
-    T2B (2b,00) Touche BKSL C12 [*]
-    T56 (56,00) Touche LSGT B00 [<]
+    T29 (29,00) Touche E00 [²]
+    T2B (2b,00) Touche C12 [*]
+    T56 (56,00) Touche B00 [<]
 
-    T2C (2c,00) Touche AB01 [W]
-    T2D (2d,00) Touche AB02 [X]
-    T2E (2e,00) Touche AB03 [C]
-    T2F (2f,00) Touche AB04 [V]
-    T30 (30,00) Touche AB05 [B]
+    T2C (2c,00) Touche B01 [W]
+    T2D (2d,00) Touche B02 [X]
+    T2E (2e,00) Touche B03 [C]
+    T2F (2f,00) Touche B04 [V]
+    T30 (30,00) Touche B05 [B]
+
+    Nul (00,00) Aucune touche
 
 
 
