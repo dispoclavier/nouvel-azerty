@@ -1184,10 +1184,10 @@
 <Multi_key><numbersign><9>                                                                <dollar> : "♓" U2653 # PISCES emoji
 <UEFD0><KP_9>                                                                             <dollar> : "♓" U2653 # PISCES emoji
 <Multi_key><numbersign><KP_9>                                                             <dollar> : "♓" U2653 # PISCES emoji
-<UEFD0><0>                                                                                <dollar> : "" U000C # FORM FEED, page break in plain text
-<Multi_key><numbersign><0>                                                                <dollar> : "" U000C # FORM FEED, page break in plain text
-<UEFD0><KP_0>                                                                             <dollar> : "" U000C # FORM FEED, page break in plain text
-<Multi_key><numbersign><KP_0>                                                             <dollar> : "" U000C # FORM FEED, page break in plain text
+<UEFD0><0>                                                                                <dollar> : "§" U00A7 # SECTION SIGN
+<Multi_key><numbersign><0>                                                                <dollar> : "§" U00A7 # SECTION SIGN
+<UEFD0><KP_0>                                                                             <dollar> : "§" U00A7 # SECTION SIGN
+<Multi_key><numbersign><KP_0>                                                             <dollar> : "§" U00A7 # SECTION SIGN
 <UEFD0><1>                                                                                <dollar> : "☉" U2609 # SUN
 <Multi_key><numbersign><1>                                                                <dollar> : "☉" U2609 # SUN
 <UEFD0><KP_1>                                                                             <dollar> : "☉" U2609 # SUN
@@ -2057,10 +2057,10 @@
 <Multi_key><numbersign><9>                                                                 <grave> : "☁" U2601 # CLOUD emoji
 <UEFD0><KP_9>                                                                              <grave> : "☁" U2601 # CLOUD emoji
 <Multi_key><numbersign><KP_9>                                                              <grave> : "☁" U2601 # CLOUD emoji
-<UEFD0><0>                                                                                 <grave> : "‬" U202C # POP DIRECTIONAL FORMATTING
-<Multi_key><numbersign><0>                                                                 <grave> : "‬" U202C # POP DIRECTIONAL FORMATTING
-<UEFD0><KP_0>                                                                              <grave> : "‬" U202C # POP DIRECTIONAL FORMATTING
-<Multi_key><numbersign><KP_0>                                                              <grave> : "‬" U202C # POP DIRECTIONAL FORMATTING
+<UEFD0><0>                                                                                 <grave> : "" U000C # FORM FEED, page break in plain text
+<Multi_key><numbersign><0>                                                                 <grave> : "" U000C # FORM FEED, page break in plain text
+<UEFD0><KP_0>                                                                              <grave> : "" U000C # FORM FEED, page break in plain text
+<Multi_key><numbersign><KP_0>                                                              <grave> : "" U000C # FORM FEED, page break in plain text
 <UEFD0><1>                                                                                 <grave> : "♮" U266E # MUSIC NATURAL SIGN math
 <Multi_key><numbersign><1>                                                                 <grave> : "♮" U266E # MUSIC NATURAL SIGN math
 <UEFD0><KP_1>                                                                              <grave> : "♮" U266E # MUSIC NATURAL SIGN math
