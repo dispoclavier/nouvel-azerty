@@ -29,7 +29,8 @@ par exemple parce qu’elle ne provient pas de l’une des clés incluses
 dans ce dossier, commencer par l’étape 0. Sinon, commencer par l’étape 1.
 
 Étape 0 : Ouvrir l’Éditeur de Registre regedit.exe (taper Windows + R,
-          saisir "regedit" et appuyer sur Entrée), aller à la clé
+          saisir "regedit", appuyer sur Entrée, et lui donner l’autorisation
+          d’« apporter des modifications à votre appareil »), aller à la clé
           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
           et renommer la valeur "Scancode Map" (p.ex. en "Scancode Map 0").
           Ou exporter la clé "Keyboard Layout" (clic droit ou menu Fichier),
@@ -38,69 +39,40 @@ dans ce dossier, commencer par l’étape 0. Sinon, commencer par l’étape 1.
 Étape 1 : Voir si l’une des redispositions proposées dans ce dossier répond
           aux attentes ; sinon choisir celle qui s’en rapproche le plus.
 
-Étape 2 : Ouvrir ce fichier .reg dans un éditeur de texte pour le vérifier,
-          voire pour le modifier.
+Étape 2 : Ouvrir ce fichier .reg dans un éditeur de texte pour le vérifier
+          et, le cas échéant, pour le modifier.
 
 Étape 3 : Ouvrir le fichier .reg fini avec l’Éditeur du Registre.
 
-Étape 4 : Confirmer en cliquant [Oui] dans l’alerte qui s’affiche.
+Étape 4 : Cliquer sur [Exécuter] dans l’Avertissement de sécurité.
 
-Étape 5 : Lire et fermer l’alerte d’accomplissement affichée ensuite.
+Étape 5 : Cliquer sur [Oui] dans le Contrôle de compte d’utilisateur.
 
-Étape 6 : Redémarrer l’ordinateur pour la prise d’effet.
+Étape 6 : Répondre par « Oui » à la question de l’Éditeur du Registre de savoir si
+          vous êtes sûr de vouloir continuer.
+
+Étape 7 : Lire et fermer l’alerte d’accomplissement affichée ensuite.
+
+Étape 8 : Redémarrer l’ordinateur pour la prise d’effet.
 
 
 Pour tout annuler :
 ===================
 
-a)  Si l’étape 0 n’a pas été faite :
-    Suivre les étapes 3 à 5, ou 3 à 6, en utilisant le fichier 
-    annulation.reg.
+a) Si l’étape 0 n’a pas été faite :
+   Suivre les étapes 2 à 8 en utilisant le fichier annulation.reg.
 
-b)  Si l’étape 0 a été faite :
+b) Si l’étape 0 a été faite :
 
-b1) Si la clé a été exportée :
-    Importer la clé préalablement exportée.
+b) a) Si la clé a été exportée :
+      Importer la clé préalablement exportée.
 
-b2) Si la valeur "Scancode Map" a été renommée :
-    Supprimer la valeur "Scancode Map" existante, et
-    renommer l’autre valeur en "Scancode Map".
+b) b) Si la valeur "Scancode Map" a été renommée :
+      Supprimer la valeur "Scancode Map" existante, et
+      renommer l’autre valeur en "Scancode Map".
 
-Puis redémarrer l’ordinateur.
+   Redémarrer l’ordinateur.
 
-
-## Références du redisposeur de codes matériels de touches de clavier
-
-
-0) Nom anglais : Scancode Mapper for Keyboards
-
-
-1) Tutoriel en français
-
-https://support.microsoft.com/fr-fr/help/310516/how-to-add--modify--or-delete-registry-subkeys-and-values-by-using-a
-
-
-2) Ressource en anglais
-
-https://learn.microsoft.com/fr-fr/previous-versions/windows/hardware/hid/keyboard-and-mouse-class-drivers#scan-code-mapper-for-keyboards
-
-
-3) Syntaxe des commentaires
-
-https://stackoverflow.com/questions/27632612/comment-in-reg-file
-
-
-4) Article Wikipédia « Scancode »
-
-https://en.wikipedia.org/wiki/Scancode#PC_compatibles
-
-
-5) Listes de codes matériels de touches de clavier
-
-https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#scan-codes
-
-Dans la liste à cette adresse, "Backspace" s’appelle « Delete ».
-("Delete" s’y appelle « Delete Forward ».)
 
 
 
@@ -208,7 +180,51 @@ qui passe sur Contrôle droite.
 
 
 
-## Codes matériels de touches (scancodes)
+
+## Références du redisposeur de codes matériels de touches de clavier
+
+
+### Nom anglais
+
+Scancode Mapper for Keyboards
+
+
+### Tutoriel en français
+
+https://support.microsoft.com/fr-fr/help/310516/how-to-add--modify--or-delete-registry-subkeys-and-values-by-using-a
+
+
+### Ressource en anglais
+
+https://learn.microsoft.com/fr-fr/previous-versions/windows/hardware/hid/keyboard-and-mouse-class-drivers#scan-code-mapper-for-keyboards
+
+
+### Syntaxe des annotations
+
+https://stackoverflow.com/questions/27632612/comment-in-reg-file
+
+
+### Article Wikipédia « Scancode »
+
+https://en.wikipedia.org/wiki/Scancode#PC_compatibles
+
+
+### Listes de codes matériels de touches de clavier
+
+#### Microsoft
+
+Ici, "Backspace" s’appelle « Delete », et "Delete", « Delete Forward ».
+
+https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#scan-codes
+
+#### Quadibloc
+
+http://www.quadibloc.com/comp/scan.htm
+
+
+
+
+## Codes matériels de touches
 
 Entre parenthèses figure le code hexadécimal petit-boutien.
 
@@ -330,6 +346,7 @@ Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
   ce qui fonctionne le mieux, en éditant directement les fichiers de
   configuration.
   https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
+
 
 
 ## À propos
