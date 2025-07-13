@@ -16,23 +16,24 @@ la valeur "Scancode Map" qui sera ajoutée ou remplacée dans cette clé :
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 
-| La clé "Keyboard Layouts" au pluriel contient des dispositions de clavier. |
-|:--------------------------------------------------------------------------:|
+| La clé "Keyboard Layouts" au pluriel contient les clés des dispositions de clavier installées. |
+|:----------------------------------------------------------------------------------------------:|
 
-Le reste du contenu de cette clé n’est pas affecté par l’opération,
-qui est une fusion. La nouvelle valeur est inscrite dans la clé, et
-si une valeur du même nom existe déjà, celle-ci est remplacée sans
-nouvelle demande de confirmation.
+Le reste de la clé "Keyboard Layout" (qui par défaut contient deux autres
+clés) n’est pas affecté. La nouvelle valeur est inscrite dans la clé, et
+si une valeur du même nom existe déjà, celle-ci est remplacée sans nouvelle
+demande de confirmation.
 
-Si une valeur "Scancode Map" existe et qu’elle doit être conservée
-(par exemple parce qu’elle ne provient pas de l’une des clés incluses
-dans ce dossier), commencer par l’étape 0. Sinon commencer par l’étape 1.
+Si une valeur "Scancode Map" existe déjà et qu’elle doit être conservée,
+par exemple parce qu’elle ne provient pas de l’une des clés incluses
+dans ce dossier, commencer par l’étape 0. Sinon, commencer par l’étape 1.
 
-Étape 0 : Ouvrir l’Éditeur de Registre regedit.exe, aller à la clé
+Étape 0 : Ouvrir l’Éditeur de Registre regedit.exe (taper Windows + R,
+          saisir "regedit" et appuyer sur Entrée), aller à la clé
           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
           et renommer la valeur "Scancode Map" (p.ex. en "Scancode Map 0").
           Ou exporter la clé "Keyboard Layout" (clic droit ou menu Fichier),
-          afin qu’elle puisse être restaurée le cas échéant.
+          afin qu’elle puisse être réimportée pour la restaurer le cas échéant.
 
 Étape 1 : Voir si l’une des redispositions proposées dans ce dossier répond
           aux attentes ; sinon choisir celle qui s’en rapproche le plus.
