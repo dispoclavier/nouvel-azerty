@@ -3,17 +3,17 @@
 |Tant que les modes d’emploi ne sont pas à jour, la version 5.3.0 reste en prépublication.|
 |:-:|
 
-Rectification des groupes des symboles.
+Rectification du groupe 10 des symboles.
 
 Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windows.
 
-Prise en charge des 3 drapeaux régionaux par touche morte sous Linux.
+Prise en charge par touche morte sous Linux, des 3 drapeaux régionaux sur touche vive sous Windows.
+
+Mise à niveau du pavé numérique sous Windows selon le pavé numérique complet sous Linux.
 
 Prise en charge de 5 alphabets mathématiques préformatés sur touches vives sous Windows.
 
-Mise à niveau du pavé numérique sous Windows.
-
-Prise en charge des sous-variantes sous Windows.
+Prise en charge sous Windows des redispositions basées sur les sous-variantes sous Linux.
 
 Personnalisation facilitée aussi sous Windows.
 
@@ -69,7 +69,7 @@ Personnalisation facilitée aussi sous Windows.
 	* Groupes des symboles : Groupes de "$" : Redonder "§" U+00A7 dans le groupe 10 à la place de "" U+000C, qui va dans le groupe 10 de "`" à la place de "‬" U+202C, qui est en composition. compose-3.yml [f2bf3f6](https://github.com/dispoclavier/nouvel-azerty/commit/f2bf3f68eb3161235a9a81be61c226855b49ea52)
 * Sous-variantes :
 	* Corriger les fichiers pour Linux et les mettre en ligne. evdev.c [20f6df1](https://github.com/dispoclavier/nouvel-azerty/commit/20f6df1504136fa544a60a9c2a2dce5fcf1c53c2), linux/chromeos/redispositions/evdev-ansi.c, evdev-ansi-menu.c, evdev-ansi-menu-sans.c, evdev-ansi-pur.c, evdev-ctrl.c, evdev-menu.c, evdev-menu-sans.c, evdev-win.c, evdev-win-sans.c [19b2ece](https://github.com/dispoclavier/nouvel-azerty/commit/19b2ece949e1de96cc2bd9f5c6191cf126ef71be)
-	* Ajouter l’équivalent pour Windows. windows/redispositions/readme.md alias _Scancode_Map.txt [859528e](https://github.com/dispoclavier/nouvel-azerty/commit/859528eca5a6d43b5f828f6f315375162f76bd11), [7ca3436](https://github.com/dispoclavier/nouvel-azerty/commit/7ca3436c120f6d60ff84461c55831190ee3037bc), [40bea50](https://github.com/dispoclavier/nouvel-azerty/commit/40bea506488a325a7b789cfc55bfa6f3cd79c6eb), [6b2d0d4](https://github.com/dispoclavier/nouvel-azerty/commit/6b2d0d458f36338dc00dac75447e65928eec26de), [eeb4811](https://github.com/dispoclavier/nouvel-azerty/commit/eeb4811589389e8ca846ef8bb350a23f14eefd13), [964feb7](https://github.com/dispoclavier/nouvel-azerty/commit/964feb7fea816929436b39195e2875bbd0226350), windows/redispositions/annulation.reg, ansi-iso.reg, ansi-iso_menu=ret-arr_sans-menu.reg, ansi-iso_menu=x=ret-arr.reg, ansi-pur.reg, ctrl-dr=x=ret-arr.reg, menu=ret-arr_sans-menu.reg, menu=x=ret-arr.reg, win-dr=ret-arr.reg, win-dr=ret-arr_sans-menu.reg [1a46fc8](https://github.com/dispoclavier/nouvel-azerty/commit/1a46fc852dee5659bec5378a6622d6b2a25d96ae), [b3865f1](https://github.com/dispoclavier/nouvel-azerty/commit/b3865f1d63343884e744db3c78392bf5fc810e0a), [6a4c947](https://github.com/dispoclavier/nouvel-azerty/commit/6a4c947006073ef9888a99d1b14134b548cdbda3), [ed21663](https://github.com/dispoclavier/nouvel-azerty/commit/ed2166302fc7b33fe56bd06b70c7d4766469ad2d), [f58bb25](https://github.com/dispoclavier/nouvel-azerty/commit/f58bb25c905adde87a930f7e825612b903d2e594)
+	* Ajouter l’équivalent pour Windows. windows/redispositions/readme.md alias _Scancode_Map.txt [859528e](https://github.com/dispoclavier/nouvel-azerty/commit/859528eca5a6d43b5f828f6f315375162f76bd11), [7ca3436](https://github.com/dispoclavier/nouvel-azerty/commit/7ca3436c120f6d60ff84461c55831190ee3037bc), [40bea50](https://github.com/dispoclavier/nouvel-azerty/commit/40bea506488a325a7b789cfc55bfa6f3cd79c6eb), [6b2d0d4](https://github.com/dispoclavier/nouvel-azerty/commit/6b2d0d458f36338dc00dac75447e65928eec26de), [eeb4811](https://github.com/dispoclavier/nouvel-azerty/commit/eeb4811589389e8ca846ef8bb350a23f14eefd13), [964feb7](https://github.com/dispoclavier/nouvel-azerty/commit/964feb7fea816929436b39195e2875bbd0226350), [923d88a](https://github.com/dispoclavier/nouvel-azerty/commit/923d88a599b74229b95ff0135d6c94eb6c623924), windows/redispositions/annulation.reg, ansi-iso.reg, ansi-iso_menu=ret-arr_sans-menu.reg, ansi-iso_menu=x=ret-arr.reg, ansi-pur.reg, ctrl-dr=x=ret-arr.reg, menu=ret-arr_sans-menu.reg, menu=x=ret-arr.reg, win-dr=ret-arr.reg, win-dr=ret-arr_sans-menu.reg [1a46fc8](https://github.com/dispoclavier/nouvel-azerty/commit/1a46fc852dee5659bec5378a6622d6b2a25d96ae), [b3865f1](https://github.com/dispoclavier/nouvel-azerty/commit/b3865f1d63343884e744db3c78392bf5fc810e0a), [6a4c947](https://github.com/dispoclavier/nouvel-azerty/commit/6a4c947006073ef9888a99d1b14134b548cdbda3), [ed21663](https://github.com/dispoclavier/nouvel-azerty/commit/ed2166302fc7b33fe56bd06b70c7d4766469ad2d), [f58bb25](https://github.com/dispoclavier/nouvel-azerty/commit/f58bb25c905adde87a930f7e825612b903d2e594)
 * Personnalisation sous Windows :
 	* Mettre en ligne le script de compilation revu, corrigé, mis à jour et désormais en UTF-8. windows/outils/creadispo.cmd [416474a](https://github.com/dispoclavier/nouvel-azerty/commit/416474acf550216599ac44445c612f0338304974), [e922a72](https://github.com/dispoclavier/nouvel-azerty/commit/e922a72afce2d9982fc90d1364159cef3bc99a9d), [31f44c7](https://github.com/dispoclavier/nouvel-azerty/commit/31f44c747ad3d640f904aec1cf43d751ef2a44b2), [dfdc733](https://github.com/dispoclavier/nouvel-azerty/commit/dfdc733a753bf98f8fe8c1b33586a8ee423ff2aa)
 	* Ajouter l’indicateur d’ordre des octets (téléverser le script). creadispo.cmd [11138e8](https://github.com/dispoclavier/nouvel-azerty/commit/11138e81282c01f7eeaebaa2d4422c5d33068a94), [a3bb72c](https://github.com/dispoclavier/nouvel-azerty/commit/a3bb72cf65718a24922fc4b8ccda8be55b71660f)
@@ -79,7 +79,7 @@ Personnalisation facilitée aussi sous Windows.
 	* Simplifier les annotations. dead-key-convert.pl [e0d0479](https://github.com/dispoclavier/nouvel-azerty/commit/e0d047907061bbbd509a4f724d6ac4f2d7dae303), kbfrFRs.C [3689891](https://github.com/dispoclavier/nouvel-azerty/commit/36898916c864988b53035ef0f344b370a9a570bf), kbfredis.C [5e90ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5e90ac4c49895eab430bbc6021184bed08601a62)
 	* Améliorer la présentation du contenu des touches mortes. dead-key-convert.pl [99ab07b](https://github.com/dispoclavier/nouvel-azerty/commit/99ab07b1ca6ea0d638b9955ae228ce6f10ae5912), [d5585fe](https://github.com/dispoclavier/nouvel-azerty/commit/d5585fea0cfea5fc9b1722d6f9498496429661cd), kbfrFRs.C [85240b2](https://github.com/dispoclavier/nouvel-azerty/commit/85240b2d66ca768e8a91183c1874483c015e1e18), [a5f285a](https://github.com/dispoclavier/nouvel-azerty/commit/a5f285a873d1d663938692971517727358a62dc2), kbfredis.C [b0b4cd7](https://github.com/dispoclavier/nouvel-azerty/commit/b0b4cd79e5f5125e58c5ccef567f5655c2b088eb), [96196a7](https://github.com/dispoclavier/nouvel-azerty/commit/96196a75b487286974e7c4705691bebc36a27dd4)
 
-## Un nouvel AZERTY pour Linux et Windows (et bientôt pour macOS)
+## Un nouvel AZERTY pour Linux et Windows, et bientôt pour macOS
 
 ### Windows
 
@@ -89,7 +89,7 @@ Toutes les touches vives sont à jour, toutes les touches mortes simples aussi. 
 
 #### Installation
 
-Télécharger le dossier « Un-nouvel-AZERTY-Windows-5.3.0.zip » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v5.3.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « Un-nouvel-AZERTY-Windows-5.3.0.zip » sous le titre « Assets », l’extraire, aller dans le dossier « kbfrFRs v5.3.0 installation » et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
 
 ### Linux
 
