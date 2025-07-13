@@ -96,8 +96,10 @@ https://en.wikipedia.org/wiki/Scancode#PC_compatibles
 
 5) Listes de codes matériels de touches de clavier
 
-http://www.quadibloc.com/comp/scan.htm
+https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#scan-codes
 
+Dans la liste à cette adresse, "Backspace" s’appelle « Delete ».
+("Delete" s’y appelle « Delete Forward ».)
 
 
 
@@ -218,40 +220,100 @@ est réservé au préfixe "e0" des codes matériels étendus, notés « X## 
 L’ancien code matériel figure à droite, le nouveau à gauche.
 La relation est « devient ».
 
-Liste non exhaustive.
+Ces chiffres hexadécimaux sont insensibles à la casse.
 
-    T0E (0e,00) Retour arrière
-    X53 (53,e0) Suppression
+Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
 
-    T0F (0f,00) Tabulation
-    T1C (1c,00) Entrée (bloc alphanumérique)
+    T0E (0E,00) Retour arrière
+    X53 (53,E0) Suppression
 
-    T1D (1d,00) Ctrl gauche
-    X1D (1d,e0) Ctrl droite
+    T0F (0F,00) Tabulation
+    T1C (1C,00) Entrée (bloc alphanumérique)
 
-    T2A (2a,00) Maj gauche
+    T1D (1D,00) Ctrl gauche
+    X1D (1D,E0) Ctrl droite
+
+    T2A (2A,00) Maj gauche
     T36 (36,00) Maj droite
 
     T38 (38,00) Alt (gauche)
-    X38 (38,e0) AltGr
+    X38 (38,E0) AltGr
 
-    T3A (3a,00) VerrCap / VerrMaj
+    X5B (5B,E0) Windows gauche
+    X5C (5C,E0) Windows droite
+
+    X5D (5D,E0) Menu/applications (Menu contextuel)
+
+    T3A (3A,00) VerrCap / VerrMaj
     T45 (45,00) VerrNum (claviers compacts : + VerrFonction sur pavé numérique)
 
-    X5B (5b,e0) Windows gauche
-    X5C (5c,e0) Windows droite
-
-    X5D (5d,e0) Menu/applications (Menu contextuel)
-
+    T01 (01,00) Échappement
+		
     T29 (29,00) Touche E00 [²]
-    T2B (2b,00) Touche C12 [*]
     T56 (56,00) Touche B00 [<]
 
-    T2C (2c,00) Touche B01 [W]
-    T2D (2d,00) Touche B02 [X]
-    T2E (2e,00) Touche B03 [C]
-    T2F (2f,00) Touche B04 [V]
+    T02 (02,00) Touche E01 [1]
+    T03 (03,00) Touche E02 [2]
+    T04 (04,00) Touche E03 [3]
+    T05 (05,00) Touche E04 [4]
+    T06 (06,00) Touche E05 [5]
+    T07 (07,00) Touche E06 [6]
+    T08 (08,00) Touche E07 [7]
+    T09 (09,00) Touche E08 [8]
+    T0A (0A,00) Touche E09 [9]
+    T0B (0B,00) Touche E10 [0]
+    T0C (0C,00) Touche E11 [)]
+    T0D (0D,00) Touche E12 [=]
+
+    T10 (10,00) Touche D01 [A]
+    T11 (11,00) Touche D02 [Z]
+    T12 (12,00) Touche D03 [E]
+    T13 (13,00) Touche D04 [R]
+    T14 (14,00) Touche D05 [T]
+    T15 (15,00) Touche D06 [Y]
+    T16 (16,00) Touche D07 [U]
+    T17 (17,00) Touche D08 [I]
+    T18 (18,00) Touche D09 [O]
+    T19 (19,00) Touche D10 [P]
+    T1A (1A,00) Touche D11 [^]
+    T1B (1B,00) Touche D12 [$]
+
+    T1E (1E,00) Touche C01 [Q]
+    T1F (1F,00) Touche C02 [S]
+    T20 (20,00) Touche C03 [D]
+    T21 (21,00) Touche C04 [F]
+    T22 (22,00) Touche C05 [G]
+    T23 (23,00) Touche C06 [H]
+    T24 (24,00) Touche C07 [J]
+    T25 (25,00) Touche C08 [K]
+    T26 (26,00) Touche C09 [L]
+    T27 (27,00) Touche C10 [M]
+    T28 (28,00) Touche C11 [ù]
+    T2B (2B,00) Touche C12 [*]
+
+    T2C (2C,00) Touche B01 [W]
+    T2D (2D,00) Touche B02 [X]
+    T2E (2E,00) Touche B03 [C]
+    T2F (2F,00) Touche B04 [V]
     T30 (30,00) Touche B05 [B]
+    T31 (31,00) Touche B06 [N]
+    T32 (32,00) Touche B07 [?]
+    T33 (33,00) Touche B08 [.]
+    T34 (34,00) Touche B09 [/]
+    T35 (35,00) Touche B10 [§]
+
+    T3B (02,00) F1
+    T3C (03,00) F2
+    T3D (04,00) F3
+    T3E (05,00) F4
+    T3F (06,00) F5
+    T40 (07,00) F6
+    T41 (08,00) F7
+    T42 (09,00) F8
+    T43 (0A,00) F9
+    T44 (0B,00) F10
+    T57 (0C,00) F11
+    T58 (0D,00) F12
 
     Nul (00,00) Aucune touche
 
