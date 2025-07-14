@@ -55,7 +55,7 @@ Personnalisation facilitée aussi sous Windows.
 * Transformations :
 	* Double accent aigu > Emojis rapides : Préparer pour la prise en charge d’émojis additionnels par touche morte. compose-2.yml [00222c4](https://github.com/dispoclavier/nouvel-azerty/commit/00222c4150cb16103a15344123e59479ff477c33), [b10174f](https://github.com/dispoclavier/nouvel-azerty/commit/b10174f270774e29970340cf3b42f8a14dbc2991), compose-3.yml [a907d8b](https://github.com/dispoclavier/nouvel-azerty/commit/a907d8b52e2b8028e56fb93763e9f80bd91afa2b), [dd1017c](https://github.com/dispoclavier/nouvel-azerty/commit/dd1017c76d2111c9baf4ff92dee0679c1821937a)
 	* Drapeau :
-		* Ajouter le gluon "⁠" U+2060 à la place de l’antiliant "‌" U+200C. compose-2.yml [4d09722](https://github.com/dispoclavier/nouvel-azerty/commit/4d09722041e6559c0f548a125a7bb6a11e3df8fe)
+		* Remplacer l’antiliant "‌" U+200C par le gluon "⁠" U+2060 derrière les lettres émojis. compose-2.yml [4d09722](https://github.com/dispoclavier/nouvel-azerty/commit/4d09722041e6559c0f548a125a7bb6a11e3df8fe)
 		* Adapter à Windows la touche morte simple pour émettre les émojis lettres indicateurs régionaux sans gluon "⁠" U+2060. kbfrFRs.C [7822970](https://github.com/dispoclavier/nouvel-azerty/commit/78229701e973a3d94f6c06ca222cddfde37adda6), kbfredis.C [70c6263](https://github.com/dispoclavier/nouvel-azerty/commit/70c62635d0c0d79fd250903e181889c0b8596212)
 	* Drapeau > Étiquettes :
 		* Ajouter les étiquettes minuscules U+E0061..U+E007A à la place de caractères d’usage privé sur les touches alphabétiques pour les drapeaux de subdivisions. compose-2.yml [3f11897](https://github.com/dispoclavier/nouvel-azerty/commit/3f11897053f470d1d01eb44c2ee732e79925b076)
