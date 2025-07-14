@@ -48,8 +48,8 @@ dans ce dossier, commencer par l’étape 0. Sinon, commencer par l’étape 1.
 
 Étape 5 : Cliquer sur [Oui] dans le Contrôle de compte d’utilisateur.
 
-Étape 6 : Répondre par « Oui » à la question de l’Éditeur du Registre de savoir si
-          vous êtes sûr de vouloir continuer.
+Étape 6 : Répondre par « Oui » à la question de l’Éditeur du Registre de savoir
+          si vous êtes sûr de vouloir continuer.
 
 Étape 7 : Lire et fermer l’alerte d’accomplissement affichée ensuite.
 
@@ -161,7 +161,7 @@ Permute les touches de Verrouillage des Capitales et [<>],
 qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
-Redonde aussi l’Effacement arrière sur la touche Menu
+Redonde aussi l’Effacement arrière sur la touche Menu,
 et laisse la touche d’Effacement arrière inchangée.
 
 * VerrCap devient [<>] et sert de touche AltFr ;
@@ -204,7 +204,7 @@ https://learn.microsoft.com/fr-fr/previous-versions/windows/hardware/hid/keyboar
 https://stackoverflow.com/questions/27632612/comment-in-reg-file
 
 
-### Article Wikipédia « Scancode »
+### Article « Scancode » sur Wikipedia anglophone
 
 https://en.wikipedia.org/wiki/Scancode#PC_compatibles
 
@@ -213,61 +213,81 @@ https://en.wikipedia.org/wiki/Scancode#PC_compatibles
 
 #### Microsoft
 
-Ici, "Backspace" s’appelle « Delete », et "Delete", « Delete Forward ».
+Ici, Retour arrière s’appelle « Delete », et Suppression s’appelle « Delete Forward ».
 
 https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#scan-codes
 
 #### Quadibloc
+
+Ici, les codes matériels sont classés par codes sous l’alinéa qui commence par
+Here is a table of keyboard scan codes
 
 http://www.quadibloc.com/comp/scan.htm
 
 
 
 
-## Codes matériels de touches
+## Syntaxe des codes matériels de touches
 
-Entre parenthèses figure le code hexadécimal petit-boutien.
+Ces fichiers d’inscription au Registre utilisent une syntaxe particulière.
 
-Les deux chiffres hexadécimaux des octets se lisent bien de gauche à droite, mais
-les groupes de 4 octets appelés DWORDS se lisent de droite à gauche.
+Les deux chiffres hexadécimaux des octets se lisent de gauche à droite, mais
+les groupes de quatre octets appelés « DWORD » se lisent de droite à gauche.
 
-Chaque code matériel occupe un WORD, dont le premier octet, nul par défaut,
-est réservé au préfixe "e0" des codes matériels étendus, notés « X## ».
-
-L’ancien code matériel figure à droite, le nouveau à gauche.
+Cela fait que l’ancien code matériel figure à droite, le nouveau à gauche.
 La relation est « devient ».
 
-Ces chiffres hexadécimaux sont insensibles à la casse.
+Chaque code matériel occupe un « WORD », dont le premier octet, nul par défaut,
+est réservé au préfixe "E0" des codes matériels étendus.
+
+Les codes matériels étendus sont ceux dont l’identifiant commence par "X".
+
+Ces chiffres hexadécimaux sont insensibles à la casse, car les lettres peuvent
+être aussi bien en capitales qu’en minuscules.
+
+Les octets de ces chiffres sont séparés par une virgule, et ils doivent tous
+être sur une seule et même ligne. C’est pourquoi, dans ces fichiers, les fins
+de ligne sont échappées.
+
+Les annotations dans ces fichiers sont des commentaires de fin de ligne, dont
+le début est un point-virgule.
+
+
+
+
+## Codes matériels de quelques touches
 
 Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
+
+Entre parenthèses figure le code hexadécimal petit-boutien.
 
     T0E (0E,00) Retour arrière
     X53 (53,E0) Suppression
 
+    T1C (1C,00) Entrée
+
+    T3A (3A,00) Verrouillage Majuscules / Verrouillage Capitales
+
     T0F (0F,00) Tabulation
-    T1C (1C,00) Entrée (bloc alphanumérique)
 
-    T1D (1D,00) Ctrl gauche
-    X1D (1D,E0) Ctrl droite
+    T1D (1D,00) Contrôle gauche
+    X1D (1D,E0) Contrôle droite
 
-    T2A (2A,00) Maj gauche
-    T36 (36,00) Maj droite
+    T2A (2A,00) Majuscule gauche
+    T36 (36,00) Majuscule droite
 
-    T38 (38,00) Alt (gauche)
+    T38 (38,00) Alt
     X38 (38,E0) AltGr
 
     X5B (5B,E0) Windows gauche
     X5C (5C,E0) Windows droite
 
-    X5D (5D,E0) Menu/applications (Menu contextuel)
-
-    T3A (3A,00) VerrCap / VerrMaj
-    T45 (45,00) VerrNum (claviers compacts : + VerrFonction sur pavé numérique)
+    X5D (5D,E0) Menu
 
     T01 (01,00) Échappement
 		
     T29 (29,00) Touche E00 [²]
-    T56 (56,00) Touche B00 [<]
+    T56 (56,00) Touche B00 [<>]
 
     T02 (02,00) Touche E01 [1]
     T03 (03,00) Touche E02 [2]
@@ -279,8 +299,8 @@ Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
     T09 (09,00) Touche E08 [8]
     T0A (0A,00) Touche E09 [9]
     T0B (0B,00) Touche E10 [0]
-    T0C (0C,00) Touche E11 [)]
-    T0D (0D,00) Touche E12 [=]
+    T0C (0C,00) Touche E11 [°)]
+    T0D (0D,00) Touche E12 [+=]
 
     T10 (10,00) Touche D01 [A]
     T11 (11,00) Touche D02 [Z]
@@ -292,8 +312,8 @@ Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
     T17 (17,00) Touche D08 [I]
     T18 (18,00) Touche D09 [O]
     T19 (19,00) Touche D10 [P]
-    T1A (1A,00) Touche D11 [^]
-    T1B (1B,00) Touche D12 [$]
+    T1A (1A,00) Touche D11 [¨^]
+    T1B (1B,00) Touche D12 [£$]
 
     T1E (1E,00) Touche C01 [Q]
     T1F (1F,00) Touche C02 [S]
@@ -305,8 +325,8 @@ Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
     T25 (25,00) Touche C08 [K]
     T26 (26,00) Touche C09 [L]
     T27 (27,00) Touche C10 [M]
-    T28 (28,00) Touche C11 [ù]
-    T2B (2B,00) Touche C12 [*]
+    T28 (28,00) Touche C11 [%ù]
+    T2B (2B,00) Touche C12 [µ*]
 
     T2C (2C,00) Touche B01 [W]
     T2D (2D,00) Touche B02 [X]
@@ -314,10 +334,10 @@ Cette liste ne contient qu’une sélection sur le bloc alphanumérique.
     T2F (2F,00) Touche B04 [V]
     T30 (30,00) Touche B05 [B]
     T31 (31,00) Touche B06 [N]
-    T32 (32,00) Touche B07 [?]
-    T33 (33,00) Touche B08 [.]
-    T34 (34,00) Touche B09 [/]
-    T35 (35,00) Touche B10 [§]
+    T32 (32,00) Touche B07 [?,]
+    T33 (33,00) Touche B08 [.;]
+    T34 (34,00) Touche B09 [/:]
+    T35 (35,00) Touche B10 [§!]
 
     T3B (02,00) F1
     T3C (03,00) F2
