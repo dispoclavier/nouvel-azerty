@@ -1,0 +1,13 @@
+Copyright 2014–2025 "Marcel Schneider" <dev@dispoclavier.net>
+
+Le contenu de ce dossier est placé sous licence Apache, Version 2.0
+(la « Licence »), et doit être utilisé uniquement en conformité avec
+la Licence, dont une copie se trouve ci-jointe et qui est consultable
+à l’adresse suivante :
+
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Sous réserve de la législation en vigueur, et sauf accord écrit, tout
+logiciel distribué sous la Licence est distribué tel quel sans aucune
+condition ni garantie, ni explicite ni implicite, et avec toutes les
+autorisations et limitations stipulées dans la Licence.
