@@ -1,8 +1,8 @@
-//                       Date: 2025-07-06T2056+0200
+//                       Date: 2025-07-14T1950+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
-//                   Language: C-like
+//     Syntactic highlighting: C
 //                Description: X key codes to XKB key labels map
 //                   Platform: Linux using XKB with XCompose*
 //            Particularités : Redisposition pour agencement ANSI en AZERTY, avec AltFr sur la touche de Verrouillage Majuscule, et le Verrouillage des capitales sur la touche [<>] de l’AZERTY à la place de Contrôle droite, avec l’Effacement arrière sur la touche Menu, et Menu sur la touche d’Effacement arrière.

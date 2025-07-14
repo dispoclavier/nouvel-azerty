@@ -1,8 +1,8 @@
-//                       Date: 2025-07-06T2055+0200
+//                       Date: 2025-07-14T1950+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
-//                   Language: C-like
+//     Syntactic highlighting: C
 //                Description: X key codes to XKB key labels map
 //                   Platform: Linux using XKB with XCompose*
 //            Particularités : Redisposition avec l’Effacement arrière sur la touche Windows droite, et la touche Menu désactivée.
