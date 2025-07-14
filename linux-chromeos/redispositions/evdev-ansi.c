@@ -3,7 +3,7 @@
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
 //                   Language: C-like
-//                Description: X key code to XKB key label conversion
+//                Description: X key codes to XKB key labels map
 //                   Platform: Linux using XKB with XCompose*
 //            Particularités : Redisposition pour agencement ANSI en AZERTY, avec AltFr sur la touche de Verrouillage Majuscule, et le Verrouillage des capitales sur la touche [<>] de l’AZERTY à la place de Contrôle droite.
 //
@@ -19,7 +19,7 @@
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
 //       Non-code licence URL: https://creativecommons.org/licenses/by/4.0/deed.fr
-//              Email address: dev@dispoclavier.net
+//              Email address: dev[arobase]dispoclavier.com
 //
 //   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
 //     in the CLDR, Linux is supported alongside ChromeOS, or through ChromeOS.
