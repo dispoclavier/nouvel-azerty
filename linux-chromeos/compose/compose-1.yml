@@ -2307,8 +2307,8 @@
 #
 #   If ISO/IEC’s motivation to retain the "-MINUS" appendix was the desire to
 #   complete the mathematical base operators beyond U002B PLUS, then why not
-#   calling U002A *ASTERISK-MULTIPLY, and U002F *SOLIDUS-DIVIDE? Only "MINUS"
-#   was appended with a hyphen, prompting people to figure out a non-existing
+#   call U002A *ASTERISK-MULTIPLY, and U002F *SOLIDUS-DIVIDE? Only "MINUS" was
+#   appended with a hyphen, prompting people to figure out the (non-existing)
 #   reason behind, and to guess that this HYPHEN-MINUS might eventually not be
 #   a genuine hyphen. Yet it is, and it is repurposed in programming like so
 #   many other symbols. That is most probably how Unicode was fooled into
@@ -2319,6 +2319,9 @@
 #   hyphen and minus sign other than the well-established 0x2D, despite several
 #   unallocated code points. There was no need for backward compatibility.
 #   https://en.wikipedia.org/wiki/T.51/ISO/IEC_6937#Codepage_layout
+#
+#
+#   Keyboard support for hyphens
 #
 #   As a consequence, the extra hyphen U2010 should not be taken seriously, in
 #   order to prevent adverse effects on keyboard layout design when attempting
