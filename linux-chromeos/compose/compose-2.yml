@@ -621,7 +621,9 @@
 #   "Ṻ" U1E7A and "ṻ" U1E7B versus "Ǖ" U01D5 and "ǖ" U01D6, the only case, for
 #   instance. All other dead key combinations are symmetric and are symmetrized
 #   consistently, multikey equivalents not withstanding.
-#   See #   Order matters
+#   See #   # # Plus minus
+#   See #   # # MACRON&DIAERESIS
+#   See #   # # DIAERESIS&MACRON
 #   See # # Multikey equivalents
 #
 #
@@ -992,7 +994,7 @@
 #   instances, although it is supported throughout for consistency. Especially
 #   for V WITH HOOK "Ʋ" U01B2, "ʋ" U028B with diacritics, group 1 of "V", "v"
 #   is also supported, while plain group 1 is VERSICLE "℣" U2123.
-#   See #   The VERSICLE and RESPONSE symbols
+#   See #   VERSICLE and RESPONSE
 #   See # # Lenient group selection
 #
 #   As this file is also the source code for documentation, the order in which
