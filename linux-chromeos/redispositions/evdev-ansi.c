@@ -1,20 +1,14 @@
-//                       Date: 2025-07-14T1949+0200
+//                       Date: 2025-07-15T0723+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
 //     Syntactic highlighting: C
 //                Description: X key codes to XKB key labels map
 //                   Platform: Linux using XKB with XCompose*
-//            Particularités : Redisposition pour agencement ANSI en AZERTY, avec AltFr sur la touche de Verrouillage Majuscule, et le Verrouillage des capitales sur la touche [<>] de l’AZERTY à la place de Contrôle droite.
+//            Particularités : Redisposition pour agencement ANSI en AZERTY, avec AltFr sur Verrouillage Majuscule, et le Verrouillage des capitales sur la touche [<>] de l’AZERTY à la place de Contrôle droite.
 //
 //               Project name: Dispoclavier
 //                Project URL: https://dispoclavier.com
-//                      Maxim: Simplify typewriting, not French.
-//                    Maxime : Simplifier la dactylographie, pas le français.
-//        English description: Keyboard layouts fit for national, regional and neighbor languages of Francophonie.
-//     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
-//              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers
-//             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
