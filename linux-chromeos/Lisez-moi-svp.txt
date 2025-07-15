@@ -1,4 +1,4 @@
-                      Date : 2025-07-15T1052+0200
+                      Date : 2025-07-15T1628+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -10,7 +10,7 @@
                     Maxime : Simplifier la dactylographie, pas le français.
                Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
              Destinataires : Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
-    Identifiants réguliers : kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s)|CHs|FR(s|sr)|PF(s|sr)))
+    Identifiants réguliers : kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s|sr)|CH(s|sr)|FR(s|sr)|PF(s|sr)))
  Identifiants descriptions : kbbrFRs  Breton et français disposition de clavier semi-automatique
                              kbbrFRsr Breton et français disposition de clavier semi-automatique redisposée
                              kbfrAFs  Afrique francophone disposition de clavier semi-automatique
@@ -22,9 +22,9 @@
                              kbfrPFsr Polynésie française disposition de clavier semi-automatique redisposée
                    À venir : kbfrCAms Canadien multilingue disposition de clavier semi-automatique
                    À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique
-                   À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique redisposée
+                   À venir : kbfrCAsr Français Canada disposition de clavier semi-automatique redisposée
                    À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique
-                   À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique redisposée
+                   À venir : kbfrCHsr Français Suisse disposition de clavier semi-automatique redisposée
               Licence code : Apache 2.0
           URL licence code : https://www.apache.org/licenses/LICENSE-2.0
           Licence non-code : CC-BY 4.0
