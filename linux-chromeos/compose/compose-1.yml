@@ -17,8 +17,8 @@
 #                    Maxime : Simplifier la dactylographie, pas le français.
 #        English description: Keyboard layouts fit for national, regional and neighbor languages of Francophonie.
 #     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
-#              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers.
-#             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes.
+#              Target public: General public and developers, editors, journalists, programmers, publishers, scientists, secretaries, translators, typographers, writers.
+#             Destinataires : Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 #              Regular names: kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s)|CHs|FR(s|sr)|PF(s|sr)))
 #   Full names, descriptions: kbbrFRs  Breton and French semiautomatic keyboard layout
 #                             kbbrFRsr Breton and French remapped semiautomatic keyboard layout
@@ -254,18 +254,11 @@
 #
 #   End of line comments
 #
-#   All lines containing a compose sequence must also contain a comment before
-#   the end of line, for compatibility with non-conformant compilers expecting
-#   compose sequences to extend until a numbersign. A lack of numbersign is an
-#   error for these compilers, and the sequence is discarded.
-#
-#   According to the spec, section "File Format", comments are optional.
+#   All lines containing a compose sequence also contain a comment before the
+#   end of line, for safety, as it happened that sequences without a trailing
+#   numbersign were ignored, and appending a hash fixed the bug. Anyway, EOL
+#   comments are specified as optional.
 #   https://www.x.org/releases/X11R7.5/doc/man/man5/Compose.5.html
-#
-#   This issue is relevant to very few multicharacter keysyms only, as XCompose
-#   results are typically annotated with Unicode character names, and even most
-#   multicharacter string output requires a clarifying annotation.
-#   See # # Double zero
 #
 #
 #   Headings
@@ -285,15 +278,19 @@
 #   See # # Notes about documentation
 #
 #   Annotations feature subsection headings marked up by two leading hashes,
-#   each one followed by a space, and subsection headings without extra markup
-#   besides the start-of-line hash followed by three spaces for a usual margin.
+#   each one followed by a space. Inside the subsections, low-level subsection
+#   headings without extra markup may occur, like here.
 #
 #
 #   Cross-references
 #
-#   Maintenance is complicated by the potential use of every heading, and even
-#   several paragraph starts, in cross references featuring the instance from
-#   start of line to end of line, or end of keyword, preceded by "#   See ".
+#   All headings may be used in cross-references starting with "#   See ". Some
+#   frequent line starts like "#   Multikey conflicts with" followed by an
+#   enumeration, or "#   Multikey is supported as part of math symbols." or 
+#   "#   As this dead key exists for" as a typical paragraph start may also be
+#   used in this setting.
+#
+#   As a consequence, edits need to be synced by global search-and-replace.
 #
 #
 #   Multikey sequence notation
@@ -2254,7 +2251,7 @@
 #   The Unicode Character Database in XML (quoted below [shortened]) shows that
 #   U2010 is a duplicate of U002D, encoded for an extrinsic undocumented reason
 #   discussed below.
-#   See #   The reason why Unicode
+#   See #   Discussion of the hyphen encoding
 #   https://www.unicode.org/Public/16.0.0/ucdxml/ucd.nounihan.flat.zip
 #   https://www.unicode.org/reports/tr42/
 #
@@ -2281,6 +2278,9 @@
 #   or even only an easy-access dead key input method like in group 1 of U002D.
 #   Else, U2010 would screw things up, from undeliverable email to broken links
 #   to parse errors.
+#
+#
+#   Discussion of the hyphen encoding
 #
 #   The reason why Unicode, well aware of the duplicate encoding pitfalls, and
 #   carefully avoiding an extra decimal dot, an extra factorial, and an extra
