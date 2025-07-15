@@ -1,4 +1,4 @@
-//                       Date: 2025-07-14T2018+0200
+//                       Date: 2025-07-15T0728+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -8,12 +8,6 @@
 //
 //               Project name: Dispoclavier
 //                Project URL: https://dispoclavier.com
-//                      Maxim: Simplify typewriting, not French.
-//                    Maxime : Simplifier la dactylographie, pas le français.
-//        English description: Keyboard layouts fit for national, regional and neighbor languages of Francophonie.
-//     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
-//              Target public: General public and developers, journalists, scientists, secretaries, translators, typographers and writers.
-//             Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes.
 //               Code licence: Apache 2.0
 //           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 //           Non-code licence: CC-BY 4.0
