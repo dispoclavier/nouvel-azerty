@@ -621,9 +621,9 @@
 #   "Ṻ" U1E7A and "ṻ" U1E7B versus "Ǖ" U01D5 and "ǖ" U01D6, the only case, for
 #   instance. All other dead key combinations are symmetric and are symmetrized
 #   consistently, multikey equivalents not withstanding.
-#   See #   # # Plus minus
-#   See #   # # MACRON&DIAERESIS
-#   See #   # # DIAERESIS&MACRON
+#   See # # Plus minus
+#   See # # MACRON&DIAERESIS
+#   See # # DIAERESIS&MACRON
 #   See # # Multikey equivalents
 #
 #
