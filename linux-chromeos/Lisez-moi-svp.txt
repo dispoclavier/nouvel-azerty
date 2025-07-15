@@ -1,4 +1,4 @@
-                      Date : 2025-06-15T0756+0200
+                      Date : 2025-07-15T1052+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -8,43 +8,47 @@
              Nom du projet : Dispoclavier
              URL du projet : https://dispoclavier.com
                     Maxime : Simplifier la dactylographie, pas le français.
-               Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
-             Destinataires : Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes
+               Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
+             Destinataires : Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
     Identifiants réguliers : kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s)|CHs|FR(s|sr)|PF(s|sr)))
- Identifiants descriptions : kbfrFRs  Français France disposition de clavier semi-automatique
-                             kbbrFRs  Breton et français disposition de clavier semi-automatique
-                             kbfrPFs  Polynésie française disposition de clavier semi-automatique
-                             kbfrAFs  Afrique francophone disposition de clavier semi-automatique
-                             kbfrBEs  Français Belgique disposition de clavier semi-automatique
-                             kbfrFRsr Français France disposition de clavier semi-automatique redisposée
+ Identifiants descriptions : kbbrFRs  Breton et français disposition de clavier semi-automatique
                              kbbrFRsr Breton et français disposition de clavier semi-automatique redisposée
-                             kbfrPFsr Polynésie française disposition de clavier semi-automatique redisposée
+                             kbfrAFs  Afrique francophone disposition de clavier semi-automatique
                              kbfrAFsr Afrique francophone disposition de clavier semi-automatique redisposée
+                             kbfrBEs  Français Belgique disposition de clavier semi-automatique
+                             kbfrFRs  Français France disposition de clavier semi-automatique
+                             kbfrFRsr Français France disposition de clavier semi-automatique redisposée
+                             kbfrPFs  Polynésie française disposition de clavier semi-automatique
+                             kbfrPFsr Polynésie française disposition de clavier semi-automatique redisposée
                    À venir : kbfrCAms Canadien multilingue disposition de clavier semi-automatique
                    À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique
+                   À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique redisposée
                    À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique
+                   À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique redisposée
               Licence code : Apache 2.0
           URL licence code : https://www.apache.org/licenses/LICENSE-2.0
           Licence non-code : CC-BY 4.0
       URL Licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
-                   Contact : dev@dispoclavier.net
+                   Contact : dev[arobase]dispoclavier.com
 
+
+Dossiers et fichiers
 
   • Les chaînes de caractères pour touches vives et le contenu des touches mortes se trouvent dans
-    le fichier `Compose.yml`. Son extension `.yml` sert uniquement à l’ouverture et à l’affichage.
-    Ce fichier est personnalisable.
+    le fichier Compose.yml. Son extension .yml sert uniquement à l’ouverture et à l’affichage.
 
-  • Le reste des dispositions de clavier se trouve dans les dossiers `installer` et `activer`,
-    utilisés par les scripts `installer.sh` et `activer.sh`. On a le choix entre l’installation et
-    l’activation. L’installation nécessite des droits d’administrateur ; l’activation se fait sans
-    droits d’administrateur. Sous Ubuntu, l’installation est suffisante ; sous Linux Mint, il faut
-    toujours aussi activer la disposition de clavier, parce que l’installation est défectueuse.
+  • Le reste des dispositions de clavier se trouve dans les dossiers installer/ et activer/.
+    Le dossier activer/ contient 90 fichiers .xkb issus de la fusion de fichiers dans installer/.
 
-    Le dossier `activer` contient en tout 90 fichiers texte qui sont des sources XKB issues de la
-    fusion des différents fichiers sources, et qui portent tous l’extension `.xkb` afin d’être
-    personnalisables dans tout éditeur de texte, qui permet de rechercher un nom de touche et de
-    remplacer un symbole de touche, soit un caractère, ou une chaîne ou une touche morte définies
-    dans `Compose.yml`.
+
+Installer ou activer
+
+  • Activer une disposition de clavier ne nécessite pas de droits d’administrateur et fonctionne
+    aussi sous Linux Mint. C’est ce qui est détaillé sous le titre « Mode d’emploi sous Linux ».
+
+  • Installer toutes les dispositions de clavier de ce nouvel AZERTY permet de passer l’étape
+    d’activation, comme expliqué dans le fichier « Mode-d-emploi-sous-Linux.md ». Le plus simple
+    est d’utiliser le script installer.sh, mais l’installation manuelle est aussi possible.
 
 
 Dispositions de clavier : les variantes
@@ -200,10 +204,28 @@ Mode d’emploi sous Linux
      grâce au fichier mis en place au point 1.
 
 
+
+Personnalisation
+
+  • Les touches vives sont personnalisables dans le fichier .xkb utilisé pour l’activation, ou
+    dans le fichier dispocla_perso.cpp installé sous le nom dispocla_perso
+
+  • Les touches mortes sont personnalisables dans le dossier personnel, soit dans le fichier
+    .XCompose qui y a été placé lors de l’activation, soit dans un fichier .XCompose ajouté
+    en plus du fichier Compose.yml installé sous le nom de Compose dans son dossier système.
+    Dans ce cas, il faut y mettre une ligne comme ceci :
+
+        include "%L"
+
+    Puis ajouter en dessous, les séquences qui doivent remplacer des séquences existantes,
+
+
+
 Critiques, suggestions et retours d’expérience
 
   N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
-  à l’adresse dev@dispoclavier.net.
+  à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains en substituant
+  "[arobase]" à "@". L’extension .com plutôt que .net est en vigueur depuis le 14/07/2025.
 
   N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
   le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
