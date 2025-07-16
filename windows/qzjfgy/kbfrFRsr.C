@@ -1,13 +1,14 @@
 /*****************************************************************************\
-* Module Name: kbfredis.C
+* Module Name: kbfrFRsr.C
 *
 * keyboard layout
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2015-2025, Dispoclavier
+* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* [annotations]                      5.3.0.25.01-Wed-2025-07-09T1845+0200
+* Update copyright notice            5.3.0.25.02-Wed-2025-07-16T1621+0200
+* Rename file to kbfrFRsr.C          5.3.0.25.01-Wed-2025-07-16T0046+0200
 * Debug variant name output          5.3.0.25.00-Sat-2025-07-05T1742+0200
 * Debug variant name output          5.3.0.24.00-Sat-2025-07-05T1706+0200
 * Debug BACK, add variant&version    5.3.0.23.00-Sat-2025-07-05T1619+0200
