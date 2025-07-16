@@ -1,15 +1,17 @@
 /****************************** Module Header ******************************\
-* Module Name: kbfredis.H
+* Module Name: kbfrFRsr.H
 *
 * keyboard layout header
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
+* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * Various defines for use by keyboard input code.
 *
 * History:
 *
-* created by KBDTOOL v3.40 Mon Apr 14 01:00:05 2025
+* renamed to kbfrFRsr.H    Wed 2025-07-16T1322+0200
+* created by KBDTOOL v3.40 Tue Jun 03 20:53:25 2025
 *
 \***************************************************************************/
 
