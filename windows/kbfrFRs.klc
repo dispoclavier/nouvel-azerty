@@ -1,14 +1,6 @@
-// UTF-16 LE (Avec d’autres encodages, KbdUTool plante.)
-// Largeur des tabulations : 12 caractères.
-// Le délimiteur de commentaire point-virgule ne fonctionne pas dans le tableau d’allocation. Il est écarté pour la cohérence et la lisibilité.
-// The semicolon line comment delimiter does not work in the allocation table, so it is ditched throughout, for consistency and readability.
-// Ce fichier ne contient qu’une forme rudimentaire de la disposition, car il n’est pas transpilé.
-// La disposition actuelle est dans la source C.
-// The current layout is in the C source only.
-
 KBD	kbfrFRs	"France AZERTY semi-automatique"
 
-COPYRIGHT	"(c) 2025"
+COPYRIGHT	"(c) 2014–2025 Marcel Schneider dev[arobase]dispoclavier.com"
 
 COMPANY	"Dispoclavier"
 
@@ -18,438 +10,122 @@ LOCALEID	"0000040c"
 
 VERSION	5.3.0.25
 
-// Pour la documentation et les noms de dossier, avec d’éventuels mots-clés ajoutés, pas trop
-// longs afin d’assurer la sauvegardabilité. Pour les métadonnées des pilotes compilés, il faut
-// éditer le numéro de version dans kbfrFRs.RC en s’attendant à voir remis à zéro les numéros
-// à partir du numéro de version mineure à cause d’un bogue dans KbdUTool v3.40 de Microsoft.
-// Seul le numéro de « version du produit » est correctement transposé dans les métadonnées.
-// This is not parsed by KbdUTool’s KLC to C transpiler and thus does not reflect in kbfrFRs.RC.
-// La source d’en-tête kbfrFRs.H issue de la transpilation est nécessaire mais défectueuse ;
-// elle et kbd.h doivent être complétées par la source d’en-tête complémentaire kbcommon.h,
-// à inclure dans kbfrFRs.C seulement après kbfrFRs.h, par la ligne : #include "kbcommon.h"
-
-// Bogues connus :
-// 1) Le guillemet ouvrant avec espace fine insécable est sans espace fine insécable quand les capitales
-//    sont verrouillées. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable.
-//    Car ce guillemet est sur la touche « ù », qui nécessite une fonctionalité appelée « Capitales
-//    allemandes de Suisse » (« Swiss-German Capitals »), qui ne prend en charge ni les touches mortes,
-//    ni les séquences, sans qu’il suffirait de ne définir que le niveau qui en a réellement besoin.
-//    C’est que cette fonctionnalité est en fait un hack concu pour contourner le manque du moyen de
-//    spécifier pour chaque touche ce qu’il y a quand le Verrouillage des Capitales est actif, comme
-//    c’est possible sous Linux et sous macOS.
-// 2) Le niveau AltGr + AltFr ne fonctionne pas en mode ASCII sur les touches sensibles à VerrMod.
-//
-// Known bugs:
-// 1) SGCaps with Caps Lock on deactivates output sequences (ligatures) and dead keys, per Michael Kaplan:
-//    “[Pretty much] All the things you can't do with SGCAPS, and why”
-//    https://archives.miloush.net/michkap/archive/2010/07/07/10032340.html
-//    Nevertheless, SGCaps must be fully defined, including both the unshifted key and the shifted key.
-//    [More generally, keyboard layouts on Windows are a halfbaked hack because the developer (not M. K.)
-//    did not think hard enough. When I do not mind asking God to help me, I code utter bullshit.]
-// 2) When Kana Lock is on, and on the keys sensitive to Kana Lock, level 8 does work, but 7 does not. As a
-//    consequence, most (not U+2007 and U+2008 on live keys) mappings there (subscripts) are redundant.
-
-MODIFIERS // Courtesy https://kbdlayout.info/KBDCAN/download/klc
-
-// Pour rendre AltGr plus robuste et plus fiable, Marc Durdin conseille d’utiliser une autre modificatrice à la place de Ctrl+Alt (0x06).
-// https://blog.keyman.com/2008/06/robust-key-mess/
-// « (hint: AltGr is only one of the modifiers available for Windows keyboards) »
-// « Don’t do a special-case for AltGr – other modifiers are also legal. »
-// Ctrl+Alt (0x06) est remplacée par 0x10, qui continue ici d’être désigné par "AltGr" pour la familiarité.
-// 0x10 ne peut pas être sensible à VerrCap et ne se prête donc pas aux lettres. De toute manière, l’"œ" est dans le groupe 1, par la touche morte "groupe" suivie de "o".
-// Pour que cela fonctionne, le code de touche logiciel natif "RMENU" doit être remplacé par un autre code, par exemple (comme ici) "OEM_AX".
-// Mais KbdUTool est programmé pour rejeter ce code comme erroné. C’est pourquoi il faut éditer kbfrFRs.C et écraser cette définition dans kbfrFRs.H.
-OEM_AX	16 // AltGr 0x10 (kbcommon.h:301) This VK is not included in KbdUTool’s very limited VK whitelist.
-	   // Dans kbfrFRs.C aussi, "OEM_AX" est transpilé par "#ERROR#", à remplacer par "VK_OEM_AX".
-OEM_102	32 // AltFr 0x20
-
 SHIFTSTATE
 
-// Ces correspondances sont transpilées correctement malgré que KbdUTool tronque le tableau.
-// This shift state enumeration mapping to modification numbers is transpiled accurately.
+0	//Column 4
+1	//Column 5 : Shft
+2	//Column 6 :       Ctrl
+6	//Column 7 :       Ctrl Alt
 
-0	// Mod#  0
-1	// Mod#  1 :       Shft
-16	// Mod#  2 :             AltGr
-17	// Mod#  3 :       Shft  AltGr
-32	// Mod#  4 :                    AltFr
-33	// Mod#  5 :       Shft         AltFr
-48	// Mod#  6 :             AltGr  AltFr
-49	// Mod#  7 :       Shft  AltGr  AltFr
-2	// Mod#  8 :                           Ctrl
-	// Sans le niveau Contrôle, le transpilateur du KbdUTool ne fournit pas de code.
-	// The Control level is required. By lack of Ctrl, the transpiler throws an error.
-	// In the allocation table, KbdUTool does not transpile the following columns, stopping at Mod# 8.
-	// Dans le tableau d’allocation, les colonnes ci-après ne sont pas transpilées. Il faut les ajouter manuellement en C.
-8	// Mod#  9 : Kana
-9	// Mod# 10 : Kana  Shft
-24	// Mod# 11 : Kana        AltGr
-25	// Mod# 12 : Kana  Shft  AltGr
-40	// Mod# 13 : Kana               AltFr
-41	// Mod# 14 : Kana  Shft         AltFr
-56	// Mod# 15 : Kana        AltGr  AltFr
-57	// Mod# 16 : Kana  Shft  AltGr  AltFr
+LAYOUT		;an extra '@' at the end is a dead key
 
-LAYOUT
+//SC	VK_		Cap	0	1	2	6
+//--	----		----	----	----	----	----
 
-// Touches mortes
-// Un "@" ajouté est une touche morte et doit avoir au moins une entrée "DEADKEY".
-// An appended "@" is a dead key and must have at least a "DEADKEY" entry below.
-// Ne sont transpilées que les touches mortes dont le caractère mort < U+1000.
-// Les autres sont à programmer manuellement en C. Pour faciliter cela, 4 remplaçants sont utilisés :
-// 0E05 pour 1E05 point souscrit, 0E57 pour 1E57 point en chef, 0EBB pour 1EBB crochet en chef, 0690 pour 2690 drapeau.
-// KbdUTool transpiles dead keys on the condition that the dead character is below U+1000.
-// Yet in that range, there is no precomposed letter with hook or dot above, or dot below.
-// As a consequence, 4 placeholders are used, to be replaced in C by changing the fourth hex digit from 0 to 1 or 2:
-// 0E05 for 1E05 dot below, 0E57 for 1E57 dot above, 0EBB for 1EBB hook above, 0690 for 2690 flag.
-//
-// Sensibilité aux bascules (colonne "Attr")
-// L’attribut "8" pour VerrKana est transpilé par "ALTGR", à remplacer par "0x08" ou à définir ainsi.
-// L’attribut "9" pour VerrCap&VerrKana est transpilé par "KBD", à remplacer par "0x09" ou à définir ainsi.
-// L’attribut "a" n’est pas transpilé. À la place, il faut remplacer "SGCAPS" par "0x0a" ou le redéfinir ainsi.
-// KbdUTool correctly transpiles the "1" attribute to "CAPLOK", defined as "0x01" in kbd.h:368.
-// KbdUTool correctly transpiles the "2" or "SGCap" attribute to "SGCAPS", defined as "0x02" in kbd.h:369.
-// But it transpiles "8" to "ALTGR", unlike kbd.h:372 defining "KANALOK" for that purpose as "0x08".
-// And it transpiles "9" to "KBD", that is defined nowhere in kbd.h.
-// Moreover, it throws an error when it should transpile "a" to "0x0a" or anything defined as such.
-// As a consequence, these mistranspiles are defined accurately in kbdcommon.h.
-// Also, "SGCAPS" is redefined as "0x0a" consistently.
-//
-
-29	KANA
-// The KANA wirtual key is the hiragana-katakana toggle repurposed as ModLock.
-// Unless scancode T29 is defined here, it gets the T28 VK, and KbdUTool throws a duplicate VK error.
-// As a consequence, scancode T29 must be present here, and it must be redefined as KANA in kbcommon.h,
-// since KANA is not whitelisted in the KbdUTool transpiler.
-// "kbcommon.h" must be included AFTER the layout specific header (where KANA is transpiled to #ERROR#).
-// La liste des codes matériels des touches ("SC") doit être complète pour éviter les erreurs de transpilation, L’ordre croissant n’est pas nécessaire.
-// Les codes logiciels des touches ("VK_") sont redisposés avec les lettres pour la cohérence de l’expérience utilisateur et la compatibilité multiplateforme.
-
-56	OEM_102	0		-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	// <none>, <none>, FOUR, <none>, <none>
-// Virtual key OEM_102 on B00 is the level-5 modifier AltFr.
-// This is supported by KbdUTool, so it can be defined here.
-
-// Colonnes
-// KbdUTool ne transpile que 8 colonnes à caractères. Les autres sont à programmer manuellement en C.
-// The KbdUTool transpiler stops at 9 character columns, so the rest is to be manually added in C unless writing a transpiler.
-// Les codes de caractères ne sont pas sensibles à la casse, donc ils sont en capitales pour l’interopérabilité.
-// As these character codes are not case sensitive, they have been converted to uppercase for interoperability.
-//
-//				Ces colonnes sont transpilées par le transpilateur de KLC en C.				Ces colonnes ne sont pas transpilées et devront être ajoutées manuellment en C.
-//				These columns are transpiled by the KLC to C transpiler.					These columns are not transpiled and need to be added manually in C.
-//			Mod#	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16
-//			Shft#	0	1	16	17	32	33	48	49	2	8	9	24	25	40	41	56	57
-// SC	VK_	Attr		Base	Shift	AltGr	Sh+AltGr	AltFr	Sh+AltFr	AltGr+Fr	Sh+AltGr+Fr	Ctrl	Kana	Kana+Shift	Kana+AltGr	K+Sh+AltGr	K+AltFr	K+Sh+AltFr	K+AltGr+Fr	K+Sh+AltGr+Fr
-// --	----	----		----	----	----	----	----	----	----	----	----	----	----	----	----	----	----	----	----
-
-02	1	SGCap		00B2	00B3	1	0026	1	00B9	%%	%%	-1	1	1	1	2081	1	00B9	2081	%%	// EXPOSANT CHIFFRE DEUX, EXPOSANT CHIFFRE TROIS, <none>, CHIFFRE UN, DEUX-BARRETTES
--1	-1	0		2082	2083																// VK_1 SGCap: INDICE CHIFFRE DEUX, INDICE CHIFFRE TROIS
-03	2	9		00E9	00C9	2	007E@	2	00B2	%%	%%	-1	2	2	2	2082	2	00B2	2082	%%	// MINUSCULE LATINE A ACCENT GRAVE, CAPITALE LATINE A ACCENT GRAVE, <none>, CHIFFRE DEUX, SYMBOLE DIAMÈTRE
-04	3	8		0022	2013	3	0023	3	00B3	%%	%%	-1	3	3	3	2083	3	00B3	2083	%%	// GUILLEMET DOUBLE GÉNÉRIQUE, TIRET DEMI-CADRATIN, <none>, CHIFFRE TROIS, DOUBLE PRIME
-05	4	8		2019	2014	4	007B	4	2074	%%	%%	-1	4	4	4	2084	4	2074	2084	%%	// MINUSCULE LATINE E TRÉMA, TIRET CADRATIN, <none>, CHIFFRE QUATRE, PRIME
-06	5	8		00EB@	00AD	5	005B	5	2075	%%	%%	-1	5	5	5	2085	5	2075	2085	%%	// GUILLEMET SIMPLE GÉNÉRIQUE, TRAIT DE CÉSURE CONDITIONNEL, <none>, CHIFFRE CINQ, BOÎTE OUVERTE
-07	6	8		002D	2011	6	007C	6	2076	%%	%%	-1	6	6	6	2086	6	2076	2086	%%	// MINUSCULE LATINE U ACCENT GRAVE, TRAIT D’UNION INSÉCABLE, <none>, CHIFFRE SIX, GLUON
-08	7	8		00E8	00C8	7	0060@	7	2077	%%	%%	-1	7	7	7	2087	7	2077	2087	%%	// MINUSCULE LATINE A ACCENT AIGU, TIRET TROIS QUARTS DE CADRATIN, <none>, CHIFFRE SEPT, BARRE DE FRACTION
-09	8	9		005F	2015	8	005C	8	2078	%%	%%	-1	8	8	8	2088	8	2078	2088	%%	// MINUSCULE LATINE E ACCENT GRAVE, CAPITALE LATINE E ACCENT GRAVE, <none>, CHIFFRE HUIT, TIRET HAUT
-0a	9	9		00E7	00C7	9	0028	9	2079	%%	%%	-1	9	9	9	2089	9	2079	2089	%%	// MINUSCULE LATINE C CÉDILLE, CAPITALE LATINE C CÉDILLE, <none>, CHIFFRE NEUF, ANTILIANT
-0b	0	9		00E0	00C0	0	0029	0	2070	%%	%%	-1	0	0	0	2080	0	2070	2080	%%	// MINUSCULE LATINE E ACCENT AIGU, CAPITALE LATINE E ACCENT AIGU, <none>, CHIFFRE ZÉRO, CÉSURE CONDITIONNELLE
-0c	OEM_MINUS	8		0040	00B0	1D49	005D	00B0	207B	E	%%	-1	0040	00B0	002D	208B	E	207B	208B	%%	// AROBASE, SYMBOLE DEGRÉ, <none>, EXPOSANT MINUSCULE LATINE E, SYMBOLE PARAGRAPHE
-0d	OEM_PLUS	8		0027	002B	00A6@	007D	003D	207A	F	%%	-1	003D	002B	00A6@	208A	F	207A	208A	%%	// TIRET BAS, SIGNE PLUS, <none>, ACCENT CIRCONFLEXE, PIED-DE-MOUCHE
-10	A	1		a	A	005E	005E@	005E	1D43	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE Q, CAPITALE LATINE Q, <none>, ACCENT CIRCONFLEXE, ACCENT CIRCONFLEXE
-11	Z	1		z	Z	0025	0250@	0025	1DBB	2032	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE Z, CAPITALE LATINE Z, <none>, SYMBOLE POUR CENT, MINUSCULE LATINE OE TOURNÉ
-12	E	1		e	E	20AC	0151@	20AC	1D49	2033	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE J, CAPITALE LATINE J, <none>, SYMBOLE EURO, MINUSCULE LATINE O DOUBLE ACCENT AIGU
-13	R	1		r	R	005C	019E@	00A3	02B3	2236	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE F, CAPITALE LATINE F, <none>, OBLIQUE INVERSE, MINUSCULE LATINE N PROLONGÉ À DROITE
-14	T	1		t	T	007E	00F5@	2212	1D57	00B1	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE G, CAPITALE LATINE G, <none>, TILDE, MINUSCULE LATINE O TILDE
-15	Y	1		y	Y	03B5@	03B5@	00B5	02B8	00A5	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE Y, CAPITALE LATINE Y, <none>, DEUX-BARRETTES, MINUSCULE GRECQUE EPSILON
-16	U	1		u	U	0027	00E1@	4	1D58	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE M, CAPITALE LATINE M, <none>, MINUSCULE LATINE O ACCENT GRAVE, MINUSCULE LATINE A ACCENT AIGU
-17	I	1		i	I	007B	0192@	5	2071	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE L, CAPITALE LATINE L, <none>, ACCOLADE OUVRANTE, MINUSCULE LATINE F HAMEÇON
-18	O	1		o	O	007D	0273@	6	1D52	03A9	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE D, CAPITALE LATINE D, <none>, ACCOLADE FERMANTE, MINUSCULE LATINE N HAMEÇON RÉTROFLEXE
-19	P	1		p	P	0026	0E57@	002E	1D56	00B6	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE K, CAPITALE LATINE K, <none>, PERLUÈTE, MINUSCULE LATINE P POINT EN CHEF
-1a	OEM_6	8		00EA@	%%	00F5@	005E	2039	00EB@	C	005B	001B	0022	007B	005E	005F	C	005E	005F	005B	// MINUSCULE LATINE E ACCENT CIRCONFLEXE, <null>, ESCAPE, GUILLEMET SIMPLE INFÉRIOÏDE, POINT MÉDIAN
-1b	OEM_1	8		00E1@	%%	00F2@	0024	203A	00A3	D	005D	001D	005F	007D	00A6@	208C	D	207C	208C	005D	// EXPOSANT CHIFFRE DEUX, <null>, INFORMATION SEPARATOR THREE, GUILLEMET SIMPLE SUPÉRIOÏDE, SYMBOLE LIVRE
-1e	Q	1		q	Q	0023	2460@	0023	%%	200D	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE A, CAPITALE LATINE A, <none>, CROISILLON, EXPOSANT CHIFFRE DEUX
-1f	S	1		s	S	0024	00A4@	0024	02E2	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE S, CAPITALE LATINE S, <none>, SYMBOLE DOLLAR, SYMBOLE MONÉTAIRE GÉNÉRIQUE
-20	D	1		d	D	0028	0213@	0028	1D48	2300	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE E, CAPITALE LATINE E, <none>, PARENTHÈSE OUVRANTE, MINUSCULE LATINE R BRÈVE INVERSÉE
-21	F	1		f	F	0029	0115@	0029	1DA0	2013	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE R, CAPITALE LATINE R, <none>, PARENTHÈSE FERMANTE, MINUSCULE LATINE E BRÈVE
-22	G	1		g	G	002D	024D@	002D	1D4D	2192	21D2	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE T, CAPITALE LATINE T, <none>, TIRET, MINUSCULE LATINE R RAYÉ
-23	H	1		h	H	002B	01A1@	002B	02B0	2064	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE U, CAPITALE LATINE U, <none>, SIGNE PLUS, MINUSCULE LATINE O CORNU
-24	J	1		j	J	005F	005F@	1	02B2	203E	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE N, CAPITALE LATINE N, <none>, POINTS DE SUSPENSION, SYMBOLE DOUBLE INFÉRIEUR SOULIGNÉ
-25	K	1		k	K	005B	01EB@	2	1D4F	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE O, CAPITALE LATINE O, <none>, CROCHET OUVRANT, MINUSCULE LATINE O OGONEK
-26	L	1		l	L	005D	0EBB@	3	02E1	00A3	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE I, CAPITALE LATINE I, <none>, CROCHET FERMANT, MINUSCULE LATINE E CROCHET EN CHEF
-27	M	1		m	M	007C	0101@	002C	1D50	00B5	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE P, CAPITALE LATINE P, <none>, BARRE VERTICALE, MINUSCULE LATINE A MACRON
-28	OEM_3	SGCap		00F9	%%	2026	00A4	00AB	0025	A	0027	-1	0027	0025	0060	208D	A	207D	208D	0027	// GUILLEMET APOSTROPHE, <null>, <none>, GUILLEMET INFÉRIOÏDE, OPÉRATEUR POINT
--1	-1	0		00D9	00AB																// VK_6 SGCap: CAPITALE LATINE U ACCENT GRAVE, TRAIT D’UNION INSÉCABLE
-2b	OEM_5	8		2460@	%%	2460@	002A	00BB	00B5	B	003B	001C	002D	002A	2460@	208E	B	207E	208E	003B	// TIRET, <null>, INFORMATION SEPARATOR FOUR, GUILLEMET SUPÉRIOÏDE, SYMBOLE MICRO
-2c	W	1		w	W	002F	00F8@	002F	02B7	200C	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE W, CAPITALE LATINE W, <none>, OBLIQUE, MINUSCULE LATINE O BARRÉ
-2d	X	1		x	X	002A	00E5@	002A	02E3	22C5	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE X, CAPITALE LATINE X, <none>, ASTÉRISQUE, MINUSCULE LATINE A ROND EN CHEF
-2e	C	1		c	C	003C	00EA@	00D7	1D9C	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE C, CAPITALE LATINE C, <none>, SYMBOLE INFÉRIEUR, MINUSCULE LATINE E ACCENT CIRCONFLEXE
-2f	V	1		v	V	003E	021F@	00F7	1D5B	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE V, CAPITALE LATINE V, <none>, SYMBOLE SUPÉRIEUR, MINUSCULE LATINE H HATCHEK
-30	B	1		b	B	003D	0690@	%%	1D47	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE B, CAPITALE LATINE B, <none>, SYMBOLE ÉGAL, DRAPEAU NEUTRE
-31	N	1		n	N	0060	00F2@	0	207F	%%	%%	-1	-1	-1	-1	-1	-1	-1	-1	-1	// MINUSCULE LATINE H, CAPITALE LATINE H, <none>, ACCENT GRAVE, MINUSCULE LATINE O ACCENT GRAVE
-32	OEM_COMMA	8		002C	%%	003F	00E7@	003F	003F	2063	%%	-1	002C	003F	003F	00E7@	003F	%%	2007	%%	// VIRGULE, <null>, <none>, POINT D’INTERROGATION, MINUSCULE LATINE E CÉDILLE
-33	OEM_PERIOD	8		002E	%%	0021	0E05@	0021	0021	%%	%%	-1	002E	0021	0021	0E05@	0021	%%	2008	%%	// POINT, <null>, <none>, POINT D’EXCLAMATION, MINUSCULE LATINE B POINT SOUSCRIT
-34	OEM_2	8		002F	%%	003A	00EB@	003A	003A	2044	%%	-1	003A	002F	003A	00EB@	003A	2044	2044	%%	// OBLIQUE, <null>, <none>, DEUX-POINTS, MINUSCULE LATINE E TRÉMA
-35	OEM_8	8		005C	%%	00A7	0219@	003B	003B	00A7	%%	-1	003B	005C	003B	0219@	003B	00A7	00A7	%%	// OBLIQUE INVERSE, <null>, <none>, POINT-VIRGULE, MINUSCULE LATINE S VIRGULE SOUSCRITE
-39	SPACE	8		0020	0020	00A0	200B	202F	%%	%%	%%	0020	0020	0020	0020	%%	0020	%%	%%	%%	// ESPACE, ESPACE, ESPACE, ESPACE FINE INSÉCABLE, ESPACE INSÉCABLE
-
-53	DECIMAL	1		002E	002C	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	// POINT, VIRGULE, , , 
+02	1		1	0026	1	-1	-1		// PERLUÈTE, CHIFFRE UN, <none>, <none>
+03	2		1	00e9	2	-1	007e@		// MINUSCULE LATINE E ACCENT AIGU, CHIFFRE DEUX, <none>, TILDE
+04	3		1	0022	3	-1	0023		// GUILLEMET DOUBLE GÉNÉRIQUE, CHIFFRE TROIS, <none>, CROISILLON
+05	4		1	0027	4	-1	007b		// GUILLEMET SIMPLE GÉNÉRIQUE, CHIFFRE QUATRE, <none>, ACCOLADE OUVRANTE
+06	5		1	0028	5	-1	005b		// PARENTHÈSE OUVRANTE, CHIFFRE CINQ, <none>, CROCHET OUVRANT
+07	6		1	002d	6	-1	007c		// TIRET, CHIFFRE SIX, <none>, BARRE VERTICALE
+08	7		1	00e8	7	-1	0060@		// MINUSCULE LATINE E ACCENT GRAVE, CHIFFRE SEPT, <none>, ACCENT GRAVE
+09	8		1	005f	8	-1	005c		// TIRET BAS, CHIFFRE HUIT, <none>, OBLIQUE INVERSE
+0a	9		1	00e7	9	-1	005e		// MINUSCULE LATINE C CÉDILLE, CHIFFRE NEUF, <none>, ACCENT CIRCONFLEXE
+0b	0		1	00e0	0	-1	0040		// MINUSCULE LATINE A ACCENT GRAVE, CHIFFRE ZÉRO, <none>, AROBASE
+0c	OEM_4		1	0029	00b0	-1	005d		// PARENTHÈSE FERMANTE, SYMBOLE DEGRÉ, <none>, CROCHET FERMANT
+0d	OEM_PLUS	1	003d	002b	-1	007d		// SYMBOLE ÉGAL, SIGNE PLUS, <none>, ACCOLADE FERMANTE
+10	A		1	a	A	-1	-1		// MINUSCULE LATINE A, CAPITALE LATINE A, <none>, <none>
+11	Z		1	z	Z	-1	-1		// MINUSCULE LATINE Z, CAPITALE LATINE Z, <none>, <none>
+12	E		1	e	E	-1	20ac		// MINUSCULE LATINE E, CAPITALE LATINE E, <none>, SYMBOLE EURO
+13	R		1	r	R	-1	-1		// MINUSCULE LATINE R, CAPITALE LATINE R, <none>, <none>
+14	T		1	t	T	-1	-1		// MINUSCULE LATINE T, CAPITALE LATINE T, <none>, <none>
+15	Y		1	y	Y	-1	-1		// MINUSCULE LATINE Y, CAPITALE LATINE Y, <none>, <none>
+16	U		1	u	U	-1	-1		// MINUSCULE LATINE U, CAPITALE LATINE U, <none>, <none>
+17	I		1	i	I	-1	-1		// MINUSCULE LATINE I, CAPITALE LATINE I, <none>, <none>
+18	O		1	o	O	-1	-1		// MINUSCULE LATINE O, CAPITALE LATINE O, <none>, <none>
+19	P		1	p	P	-1	-1		// MINUSCULE LATINE P, CAPITALE LATINE P, <none>, <none>
+1a	OEM_6		1	005e@	00a8@	001b	-1		// ACCENT CIRCONFLEXE, TRÉMA, ESCAPE, <none>
+1b	OEM_1		1	0024	00a3	001d	00a4		// SYMBOLE DOLLAR, SYMBOLE LIVRE, INFORMATION SEPARATOR THREE, SYMBOLE MONÉTAIRE GÉNÉRIQUE
+1e	Q		1	q	Q	-1	-1		// MINUSCULE LATINE Q, CAPITALE LATINE Q, <none>, <none>
+1f	S		1	s	S	-1	-1		// MINUSCULE LATINE S, CAPITALE LATINE S, <none>, <none>
+20	D		1	d	D	-1	-1		// MINUSCULE LATINE D, CAPITALE LATINE D, <none>, <none>
+21	F		1	f	F	-1	-1		// MINUSCULE LATINE F, CAPITALE LATINE F, <none>, <none>
+22	G		1	g	G	-1	-1		// MINUSCULE LATINE G, CAPITALE LATINE G, <none>, <none>
+23	H		1	h	H	-1	-1		// MINUSCULE LATINE H, CAPITALE LATINE H, <none>, <none>
+24	J		1	j	J	-1	-1		// MINUSCULE LATINE J, CAPITALE LATINE J, <none>, <none>
+25	K		1	k	K	-1	-1		// MINUSCULE LATINE K, CAPITALE LATINE K, <none>, <none>
+26	L		1	l	L	-1	-1		// MINUSCULE LATINE L, CAPITALE LATINE L, <none>, <none>
+27	M		1	m	M	-1	-1		// MINUSCULE LATINE M, CAPITALE LATINE M, <none>, <none>
+28	OEM_3		1	00f9	0025	-1	-1		// MINUSCULE LATINE U ACCENT GRAVE, SYMBOLE POUR CENT, <none>, <none>
+29	OEM_7		0	00b2	-1	-1	-1		// EXPOSANT CHIFFRE DEUX, <none>, <none>, <none>
+2b	OEM_5		1	002a	00b5	001c	-1		// ASTÉRISQUE, SYMBOLE MICRO, INFORMATION SEPARATOR FOUR, <none>
+2c	W		1	w	W	-1	-1		// MINUSCULE LATINE W, CAPITALE LATINE W, <none>, <none>
+2d	X		1	x	X	-1	-1		// MINUSCULE LATINE X, CAPITALE LATINE X, <none>, <none>
+2e	C		1	c	C	-1	-1		// MINUSCULE LATINE C, CAPITALE LATINE C, <none>, <none>
+2f	V		1	v	V	-1	-1		// MINUSCULE LATINE V, CAPITALE LATINE V, <none>, <none>
+30	B		1	b	B	-1	-1		// MINUSCULE LATINE B, CAPITALE LATINE B, <none>, <none>
+31	N		1	n	N	-1	-1		// MINUSCULE LATINE N, CAPITALE LATINE N, <none>, <none>
+32	OEM_COMMA	1	002c	003f	-1	-1		// VIRGULE, POINT D’INTERROGATION, <none>, <none>
+33	OEM_PERIOD	1	003b	002e	-1	-1		// POINT-VIRGULE, POINT, <none>, <none>
+34	OEM_2		1	003a	002f	-1	-1		// DEUX-POINTS, OBLIQUE, <none>, <none>
+35	OEM_8		1	0021	00a7	-1	-1		// POINT D’EXCLAMATION, SYMBOLE PARAGRAPHE, <none>, <none>
+39	SPACE		0	0020	0020	0020	-1		// ESPACE, ESPACE, ESPACE, <none>
+56	OEM_102	0	003c	003e	001c	-1		// SYMBOLE INFÉRIEUR, SYMBOLE SUPÉRIEUR, INFORMATION SEPARATOR FOUR, <none>
+53	DECIMAL	0	002e	002e	-1	-1		// POINT, POINT, , 
 
 
-LIGATURE
+DEADKEY	007e
 
-// Multiunit strings for live keys are transpiled only if their length does not exceed five UTF-16 code units,
-// as ligatures are defined in kbd.h:473 only up to a length of 5 units. Consistently, KbdUTool throws a warning.
-// Getting support for ligatures up to the architectural limit of 16 code units only takes defining them accordingly,
-// as done in kbcommon.h, section 7.2, and synching static ALLOC_SECTION_LDATA LIGATURE5 aLigature[], where LIGATURE5
-// is now LIGATURE16; as well as setting sizeof(aLigature[0]) to 16, too.
+006e	00f1	// n -> ñ
+006f	00f5	// o -> õ
+0061	00e3	// a -> ã
+004e	00d1	// N -> Ñ
+004f	00d5	// O -> Õ
+0041	00c3	// A -> Ã
+0020	007e	//   -> ~
 
-//VK_		Mod#	Char1	Char2	Char3	Char4	Char5
-//----		----	-----	-----	-----	-----	-----
+DEADKEY	0060
 
-1		6	1	FE0F	20E3			// CHIFFRE UN + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-1		7	1	FE0F	20E3			// CHIFFRE UN + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-1		16	1	FE0F	20E3			// CHIFFRE UN + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-2		6	2	FE0F	20E3			// CHIFFRE DEUX + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-2		7	2	FE0F	20E3			// CHIFFRE DEUX + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-2		16	2	FE0F	20E3			// CHIFFRE DEUX + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-3		6	3	FE0F	20E3			// CHIFFRE TROIS + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-3		7	3	FE0F	20E3			// CHIFFRE TROIS + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-3		16	3	FE0F	20E3			// CHIFFRE TROIS + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-4		6	4	FE0F	20E3			// CHIFFRE QUATRE + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-4		7	4	FE0F	20E3			// CHIFFRE QUATRE + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-4		16	4	FE0F	20E3			// CHIFFRE QUATRE + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-5		6	5	FE0F	20E3			// CHIFFRE CINQ + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-5		7	5	FE0F	20E3			// CHIFFRE CINQ + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-5		16	5	FE0F	20E3			// CHIFFRE CINQ + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-6		6	6	FE0F	20E3			// CHIFFRE SIX + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-6		7	6	FE0F	20E3			// CHIFFRE SIX + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-6		16	6	FE0F	20E3			// CHIFFRE SIX + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-7		6	7	FE0F	20E3			// CHIFFRE SEPT + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-7		7	7	FE0F	20E3			// CHIFFRE SEPT + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-7		16	7	FE0F	20E3			// CHIFFRE SEPT + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-8		6	8	FE0F	20E3			// CHIFFRE HUIT + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-8		7	8	FE0F	20E3			// CHIFFRE HUIT + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-8		16	8	FE0F	20E3			// CHIFFRE HUIT + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-9		6	9	FE0F	20E3			// CHIFFRE NEUF + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-9		7	9	FE0F	20E3			// CHIFFRE NEUF + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-9		16	9	FE0F	20E3			// CHIFFRE NEUF + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-0		6	0	FE0F	20E3			// CHIFFRE ZÉRO + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-0		7	D83D	DD1F				// 1F51F
-0		16	0	FE0F	20E3			// CHIFFRE ZÉRO + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-OEM_MINUS		6	002A	FE0F	20E3			// ASTÉRISQUE + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-OEM_MINUS		7	002A	FE0F	20E3			// ASTÉRISQUE + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-OEM_MINUS		16	002A	FE0F	20E3			// ASTÉRISQUE + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-OEM_PLUS		6	0023	FE0F	20E3			// CROISILLON + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-OEM_PLUS		7	0023	FE0F	20E3			// CROISILLON + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-OEM_PLUS		16	0023	FE0F	20E3			// CROISILLON + SÉLECTEUR DE VARIANTE-16 + DIACRITIQUE TOUCHE ENGLOBANTE
-A		6	c	02BC	h			// cʼh
-A		7	C	02BC	h			// Cʼh
-Z		7	D83D	DE27				// 1F627
-E		7	0026	q	u	o	t	// &quot;
-R		7	D83E	DD14				// 1F914
-T		7	D83D	DE0A				// 1F60A
-Y		7	D83D	DE0D				// 1F60D
-U		6	U	002B				// U+
-U		7	0026	a	p	o	s	// &apos;
-I		6	005C	u	007B			// \u{
-I		7	D83D	DE4F				// 1F64F
-O		7	D83D	DE01				// 1F601
-P		7	0026	a	m	p	003B	// &amp;
-OEM_6		1	2039	202F				// GUILLEMET SIMPLE INFÉRIOÏDE + ESPACE FINE INSÉCABLE
-OEM_1		1	202F	203A				// ESPACE FINE INSÉCABLE + GUILLEMET SIMPLE SUPÉRIOÏDE
-Q		5	D801	DFA5				// 107A5 EXPOSANT MINUSCULE LATINE Q
-Q		7	D83D	DC4F				// 1F44F
-S		6	D83D	DE42				// 1F642
-S		7	D83D	DE14				// 1F614
-D		7	D83D	DE06				// 1F606
-F		7	D83D	DD25				// 1F525
-H		7	D83D	DC4D				// 1F44D
-J		7	D83D	DE02				// 1F602
-K		6	0026	0023	x			// &#x
-K		7	D83D	DE05				// 1F605
-L		7	D83E	DD23				// 1F923
-M		7	D83D	DE37				// 1F637
-OEM_3		1	00AB	202F				// GUILLEMET INFÉRIOÏDE + ESPACE FINE INSÉCABLE
-OEM_5		1	202F	00BB				// ESPACE FINE INSÉCABLE + GUILLEMET SUPÉRIOÏDE
-W		7	D83D	DE22				// 1F622
-X		7	D83C	DF1F				// 1F31F
-C		6	0026	l	t	003B		// &lt;
-C		7	D83D	DE2D				// 1F62D
-V		6	0026	g	t	003B		// &gt;
-V		7	D83D	DC96				// 1F496
-B		4	0	0				// CHIFFRE ZÉRO + CHIFFRE ZÉRO
-B		6	D83D	DE18				// 1F618
-B		7	D83E	DD70				// 1F970
-N		6	n	1D52	202F			// nᵒ + ESPACE FINE INSÉCABLE
-N		7	N	1D52	202F			// Nᵒ + ESPACE FINE INSÉCABLE
-OEM_COMMA		1	202F	003F				// ESPACE FINE INSÉCABLE + POINT D’INTERROGATION
-OEM_COMMA		7	D83D	DC99				// 1F499
-OEM_COMMA		14	0026	0023	x			// &#x
-OEM_COMMA		16	D83D	DC9A				// 1F49A
-OEM_PERIOD		1	202F	0021				// ESPACE FINE INSÉCABLE + POINT D’EXCLAMATION
-OEM_PERIOD		6	D83D	DE31				// 1F631
-OEM_PERIOD		7	D83D	DCE3				// 1F4E3
-OEM_PERIOD		14	0026	0023				// &#
-OEM_PERIOD		16	D83D	DCE2				// 1F4E2
-OEM_2		1	202F	003A				// ESPACE FINE INSÉCABLE + DEUX-POINTS
-OEM_2		7	D83D	DE15				// 1F615
-OEM_2		16	D83D	DE12				// 1F612
-OEM_8		1	202F	003B				// ESPACE FINE INSÉCABLE + POINT-VIRGULE
-OEM_8		7	D83D	DC94				// 1F494
-OEM_8		16	D83D	DE09				// 1F609
-SPACE		5	0020	2060				// ESPACE + GLUON
-SPACE		12	0026	n	b	s	p	// &nbsp;
-SPACE		14	0026	0023	x	2	0	// &#x202F;
-SPACE		15	0026	0023	x	2	0	// &#x202F;
-SPACE		16	0026	n	b	s	p	// &nbsp;
-
-DEADKEY	007E	// TILDE RÉTROCOMPATIBLE
-
-A	00C3	// A -> Ã
-a	00E3	// a -> ã
-E	1EBC	// E -> Ẽ
-e	1EBD	// e -> ẽ
-I	0128	// I -> Ĩ
-i	0129	// i -> ĩ
-N	00D1	// N -> Ñ
-n	00F1	// n -> ñ
-O	00D5	// O -> Õ
-o	00F5	// o -> õ
-U	0168	// U -> Ũ
-u	0169	// u -> ũ
-V	1E7C	// V -> Ṽ
-v	1E7D	// v -> ṽ
-Y	1EF8	// Y -> Ỹ
-y	1EF9	// y -> ỹ
-0020	007E	//   -> ~
-
-DEADKEY	0060	// ACCENT GRAVE RÉTROCOMPATIBLE
-
-A	00C0	// A -> À
-a	00E0	// a -> à
-E	00C8	// E -> È
-e	00E8	// e -> è
-I	00CC	// I -> Ì
-i	00EC	// i -> ì
-N	01F8	// N -> Ǹ
-n	01F9	// n -> ǹ
-O	00D2	// O -> Ò
-o	00F2	// o -> ò
-U	00D9	// U -> Ù
-u	00F9	// u -> ù
-W	1E80	// W -> Ẁ
-w	1E81	// w -> ẁ
-Y	1EF2	// Y -> Ỳ
-y	1EF3	// y -> ỳ
+0065	00e8	// e -> è
+0075	00f9	// u -> ù
+0069	00ec	// i -> ì
+006f	00f2	// o -> ò
+0061	00e0	// a -> à
+0045	00c8	// E -> È
+0055	00d9	// U -> Ù
+0049	00cc	// I -> Ì
+004f	00d2	// O -> Ò
+0041	00c0	// A -> À
 0020	0060	//   -> `
 
-DEADKEY	00EB
-
-
-DEADKEY	00E1
-
-
-DEADKEY	005E
-
-
-DEADKEY	005E
-
-
-DEADKEY	0250
-
-
-DEADKEY	0151
-
-
-DEADKEY	019E
-
-
-DEADKEY	00F5
-
-
-DEADKEY	00A6
-
-
-DEADKEY	03B5
-
-
-DEADKEY	00F2
-
-
-DEADKEY	00E1
-
-
-DEADKEY	0192
-
-
-DEADKEY	0273
-
-
-DEADKEY	0E57
-
-
-DEADKEY	00EA
-
-
-DEADKEY	2460
-
-
-DEADKEY	00A4
-
-
-DEADKEY	0213
-
-
-DEADKEY	0115
-
-
-DEADKEY	024D
-
-
-DEADKEY	01A1
-
-
-DEADKEY	005F
-
-
-DEADKEY	01EB
-
-
-DEADKEY	0EBB
-
-
-DEADKEY	0101
-
-
-DEADKEY	00F8
-
-
-DEADKEY	00E5
-
-
-DEADKEY	00EA
-
-
-DEADKEY	021F
-
-
-DEADKEY	0690
-
-
-DEADKEY	00F2
-
-
-DEADKEY	00E7
-
-
-DEADKEY	0E05
-
-
-DEADKEY	00EB
-
-
-DEADKEY	0219
-
+DEADKEY	005e
+
+0065	00ea	// e -> ê
+0075	00fb	// u -> û
+0069	00ee	// i -> î
+006f	00f4	// o -> ô
+0061	00e2	// a -> â
+0045	00ca	// E -> Ê
+0055	00db	// U -> Û
+0049	00ce	// I -> Î
+004f	00d4	// O -> Ô
+0041	00c2	// A -> Â
+0020	005e	//   -> ^
+
+DEADKEY	00a8
+
+0065	00eb	// e -> ë
+0075	00fc	// u -> ü
+0069	00ef	// i -> ï
+0079	00ff	// y -> ÿ
+006f	00f6	// o -> ö
+0061	00e4	// a -> ä
+0045	00cb	// E -> Ë
+0055	00dc	// U -> Ü
+0049	00cf	// I -> Ï
+004f	00d6	// O -> Ö
+0041	00c4	// A -> Ä
+0020	00a8	//   -> ¨
 
 
 KEYNAME
@@ -533,50 +209,16 @@ KEYNAME_EXT
 
 KEYNAME_DEAD
 
-00EB	"MINUSCULE LATINE E TRÉMA"
-00E1	"MINUSCULE LATINE A ACCENT AIGU"
-005E	"ACCENT CIRCONFLEXE"
-005E	"ACCENT CIRCONFLEXE"
-0250	"MINUSCULE LATINE A TOURNÉ"
-0151	"MINUSCULE LATINE O DOUBLE ACCENT AIGU"
-019E	"MINUSCULE LATINE N PROLONGÉ À DROITE"
-00F5	"MINUSCULE LATINE O TILDE"
-00A6	"DEUX-BARRETTES"
-03B5	"MINUSCULE GRECQUE EPSILON"
-00F2	"MINUSCULE LATINE O ACCENT GRAVE"
-00E1	"MINUSCULE LATINE A ACCENT AIGU"
-0192	"MINUSCULE LATINE F HAMEÇON"
-0273	"MINUSCULE LATINE N HAMEÇON RÉTROFLEXE"
-0E57	"MINUSCULE LATINE P POINT EN CHEF" // 1E57
-00EA	"MINUSCULE LATINE E ACCENT CIRCONFLEXE"
-2460	"NOMBRE UN CERCLÉ"
-00A4	"SYMBOLE MONÉTAIRE GÉNÉRIQUE"
-0213	"MINUSCULE LATINE R BRÈVE INVERSÉE"
-0115	"MINUSCULE LATINE E BRÈVE"
-024D	"MINUSCULE LATINE R RAYÉ"
-01A1	"MINUSCULE LATINE O CORNU"
-005F	"TIRET BAS"
-01EB	"MINUSCULE LATINE O OGONEK"
-0EBB	"MINUSCULE LATINE E CROCHET EN CHEF" // 1EBB
-0101	"MINUSCULE LATINE A MACRON"
-00F8	"MINUSCULE LATINE O BARRÉ"
-00E5	"MINUSCULE LATINE A ROND EN CHEF"
-00EA	"MINUSCULE LATINE E ACCENT CIRCONFLEXE"
-021F	"MINUSCULE LATINE H HATCHEK"
-0690	"DRAPEAU NEUTRE" // 2690
-00F2	"MINUSCULE LATINE O ACCENT GRAVE"
-00E7	"MINUSCULE LATINE C CÉDILLE"
-0E05	"MINUSCULE LATINE B POINT SOUSCRIT" // 1E05
-00EB	"MINUSCULE LATINE E TRÉMA"
-0219	"MINUSCULE LATINE S VIRGULE SOUSCRITE"
+007e	"TILDE"
+0060	"ACCENT GRAVE"
+005e	"ACCENT CIRCONFLEXE"
+00a8	"TRÉMA"
 
 
 DESCRIPTIONS
 
 0409	France AZERTY semi-automatique
-
 LANGUAGENAMES
 
-0409	Français (France)
-
+0409	French (France)
 ENDKBD
