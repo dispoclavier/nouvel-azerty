@@ -1,4 +1,4 @@
-                      Date : 2025-07-15T1628+0200
+                      Date : 2025-07-18T0452+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -44,7 +44,7 @@ Dossiers et fichiers
 Installer ou activer
 
   • Activer une disposition de clavier ne nécessite pas de droits d’administrateur et fonctionne
-    aussi sous Linux Mint. C’est ce qui est détaillé sous le titre « Mode d’emploi sous Linux ».
+    aussi sous Linux Mint. La marche à suivre est sous le titre "Comment activer ce nouvel AZERTY".
 
   • Installer toutes les dispositions de clavier de ce nouvel AZERTY permet de passer l’étape
     d’activation, comme expliqué dans le fichier « Mode-d-emploi-sous-Linux.md ». Le plus simple
@@ -53,29 +53,29 @@ Installer ou activer
 
 Dispositions de clavier : les variantes
 
-  • Les fichiers dont les noms commencent par `nouvel-azerty` contiennent la disposition de base
-    de ce nouvel AZERTY. Ils sont rangés à la racine du dossier `activer`, et ils sont identiques
-    aux fichiers dont les noms commencent par `kbfrFRs`, qui sont rangés dans un dossier du même nom
-    à l’intérieur du dossier `Variantes`.
+  • Les fichiers dont les noms commencent par "nouvel-azerty" contiennent la disposition de base
+    de ce nouvel AZERTY. Ils sont rangés à la racine du dossier activer/, et ils sont identiques
+    aux fichiers dont les noms commencent par "kbfrFRs", qui sont rangés dans un dossier du même nom
+    à l’intérieur du dossier Variantes/.
 
-  • Les fichiers dans le dossier `kbbrFRs`, dont les noms commencent par `kbbrFRs`, contiennent
+  • Les fichiers dans le dossier kbbrFRs/, dont les noms commencent par "kbbrFRs", contiennent
     une disposition optimisée pour la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
 
-  • Les fichiers dans le dossier `kbfrPFs`, dont les noms commencent par `kbfrPFs`, contiennent
+  • Les fichiers dans le dossier kbfrPFs/, dont les noms commencent par "kbfrPFs", contiennent
     une disposition optimisée pour les langues de Polynésie française, avec une touche morte macron
     sur le 8, et le ʻeta sur Maj + 8.
 
-  • Les fichiers dans le dossier `kbfrAFs`, dont les noms commencent par `kbfrAFs`, contiennent
+  • Les fichiers dans le dossier kbfrAFs/, dont les noms commencent par "kbfrAFs", contiennent
     une disposition optimisée pour les langues d’Afrique, pour le bambara en particulier, avec
     le ɛ sur le 1, et le ɔ sur le 8.
 
-  • Les fichiers dans le dossier `kbfrBEs`, dont les noms commencent par `kbfrBEs`, contiennent
+  • Les fichiers dans le dossier kbfrBEs/, dont les noms commencent par "kbfrBEs", contiennent
     une disposition optimisée pour la Belgique, avec le § sur le 6, le tiret du 6 sur le 8, et
     le tiret du 8 sur Maj + 8. Cette disposition représente un compromis entre l’AZERTY belge et
     les fonctionnalités de ce nouvel AZERTY français.
 
   • Les fichiers dont le nom – ou la première partie du nom pour les sous-variantes – se termine
-    en `r` contiennent des dispositions optimisées pour une saisie un peu plus ergonomique de
+    en "r" contiennent des dispositions optimisées pour une saisie un peu plus ergonomique de
     l’alphabet de base et des lettres diacritées, afin que les exigences d’ergonomie n’obligent
     pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
@@ -86,14 +86,13 @@ Dispositions de clavier : les variantes
 
 Options de disposition : les sous-variantes
 
-  Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles
-  pour chaque variante :
+Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles.
 
   • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [<>]
     prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées
     afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour
     la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique.
-    Ce sont les sous-variantes avec les suffixes « -ansi », « -ansi-menu », « -ansi-menu-sans ».
+    Ce sont les sous-variantes avec les suffixes "-ansi", "-ansi-menu", "-ansi-menu-sans".
 
   • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
     Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
@@ -101,38 +100,41 @@ Options de disposition : les sous-variantes
     sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, celle-ci
     est optionnellement désactivée.
 
-    ◦ Les sous-variantes avec le suffixe « -win » ont Effacement arrière sur Windows droite.
-      Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée, mais
-      il est possible de la paramétrer dans `evdev(.c)` en installant ce nouvel AZERTY.
+      ◦ Les sous-variantes avec le suffixe "-win" ont Effacement arrière sur Windows droite.
+        Une sous-variante avec Windows droite sur Effacement arrière n’est pas distribuée, mais
+        il est possible de la paramétrer dans le fichier evdev(.c) en installant ce nouvel AZERTY.
 
-    ◦ Les sous-variantes avec le suffixe « -win-sans » ont Effacement arrière sur Windows droite,
-      et la touche Menu est désactivée pour éviter l’ouverture intempestive du menu contextuel.
+      ◦ Les sous-variantes avec le suffixe "-win-sans" ont Effacement arrière sur Windows droite,
+        et la touche Menu est désactivée pour éviter l’ouverture intempestive du menu contextuel.
 
-    ◦ Les sous-variantes avec les suffixes « -menu » ou « -ansi-menu » ont Effacement arrière sur
-      Menu, et Menu sur Effacement arrière.
+      ◦ Les sous-variantes avec les suffixes "-menu" ou "-ansi-menu" ont Effacement arrière sur
+        Menu, et Menu sur Effacement arrière.
 
-    ◦ Les sous-variantes avec les suffixes « -menu-sans » ou « -ansi-menu-sans » ont Effacement
-      arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que
-      des applications puissent lui attribuer des raccourcis comme `deleteLeft`, et avec Contrôle,
-      `deleteWordLeft`.
+      ◦ Les sous-variantes avec les suffixes "-menu-sans" ou "-ansi-menu-sans" ont Effacement
+        arrière sur Menu, tandis que la touche Effacement arrière reste telle quelle afin que
+        des applications puissent lui attribuer des raccourcis comme "deleteLeft", et avec Contrôle,
+        "deleteWordLeft".
 
-    ◦ Les sous-variantes avec le suffixe « -ctrl » ont les touches Effacement arrière et
-      Contrôle droite permutées.
+      ◦ Les sous-variantes avec le suffixe "-ctrl" ont les touches Effacement arrière et
+        Contrôle droite permutées.
 
 
 Témoin lumineux
 
-  Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode ASCII par la bascule
-  VerrMod sur la touche E00 au-dessus de Tab à gauche du 1. Ce témoin lumineux manque sur beaucoup
-  d’ordinateurs portables récents, mais il est présent sur la plupart des claviers externes, tels
-  que les claviers compacts USB ou sans fil.
+Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode ASCII par la bascule
+VerrMod sur la touche E00 au-dessus de Tab à gauche du 1. Ce témoin lumineux manque sur beaucoup
+d’ordinateurs portables récents, mais il est présent sur la plupart des claviers externes, tels
+que les claviers compacts USB ou sans fil.
 
 
-Mode d’emploi sous Linux
 
-  Linux est affecté par un certain nombre de problèmes détaillés dans le Lisez-moi pour Linux :
+Comment activer ce nouvel AZERTY
 
-         https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md
+Linux est affecté par un certain nombre de problèmes détaillés dans le Lisez-moi pour Linux :
+
+    https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md
+
+Ainsi prévenu, on peut effectuer les étapes de l’activation :
 
   1  Aller sur la page de la version courante :
 
@@ -144,32 +146,32 @@ Mode d’emploi sous Linux
 
   3  Décompresser le dossier téléchargé.
 
-  4  Choisir entre l’activation par le script `activer.sh` (A) et l’activation manuelle (B).
+  4  Choisir entre l’activation par le script activer.sh (A) et l’activation manuelle (B).
 
-     A   Lancer le script `activer.sh` et se laisser guider. Ce script est documenté dans son en-tête et sur :
+     A   Lancer le script activer.sh et se laisser guider. Ce script est documenté dans son en-tête et sur :
 
              https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#script-dactivation-mode-demploi
 
-     B1  Ouvrir un terminal dans le dossier personnel et sauvegarder la disposition actuelle dans `normal.xkb` :
+     B1  Ouvrir un terminal dans le dossier personnel et sauvegarder la disposition actuelle dans normal.xkb :
 
              xkbcomp :0 normal.xkb
 
          Ce fichier pourra servir à revenir à la disposition actuelle sans fermer la session.
          (Si ":0" ne fonctionne pas, invoquer la variable d’environnement "$DISPLAY" à la place.)
 
-     B2  Copier les fichiers `Compose.yml` et `nouvel-azerty.xkb` ou celui de la variante choisie
+     B2  Copier les fichiers Compose.yml et nouvel-azerty.xkb ou celui de la variante choisie
          vers le dossier personnel.
 
-     B3  Si le dossier personnel contient déjà un fichier invisible `.XCompose`, ajouter le contenu
-         du fichier `Compose.yml` dans ce fichier au début pour ignorer les séquences en conflit, ou
+     B3  Si le dossier personnel contient déjà un fichier invisible .XCompose, ajouter le contenu
+         du fichier Compose.yml dans ce fichier au début pour ignorer les séquences en conflit, ou
          à la fin pour remplacer les séquences en conflit.
 
-         Sinon, renommer `Compose.yml` en `.XCompose`. Si les règles de `en_US.UTF-8/Compose` doivent
+         Sinon, renommer Compose.yml en .XCompose. Si les règles de en_US.UTF-8/Compose doivent
          continuer de s’appliquer si elles ne sont pas en conflit, décommenter la ligne suivante :
 
              include "%L"
 
-         Si les règles de `en_US.UTF-8/Compose` sont prioritaires, décommenter cette ligne et la
+         Si les règles de en_US.UTF-8/Compose sont prioritaires, décommenter cette ligne et la
          placer à la fin du fichier.
 
      B4  Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de
@@ -179,7 +181,7 @@ Mode d’emploi sous Linux
 
              xkbcomp nouvel-azerty.xkb :0
 
-         Le cas échéant, remplacer `nouvel-azerty.xkb` par le nom de la variante et sous-variante
+         Le cas échéant, remplacer nouvel-azerty.xkb par le nom de la variante et sous-variante
          choisie.
 
          Sur ce, xkbcomp signale qu’aucun symbole n’est défini pour les touches de fonction 19 et 24,
@@ -241,4 +243,4 @@ Critiques, suggestions et retours d’expérience
   De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
   que dans une discussion lancée à cet effet.
 
-      Merci d’avance de tous vos retours.
+      Merci d’avance de tout retour.
