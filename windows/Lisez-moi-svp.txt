@@ -1,4 +1,4 @@
-                      Date : 2025-07-18T0452+0200
+                      Date : 2025-07-18T2257+0200
                    Version : 5.3.0.26
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -76,11 +76,11 @@ Installer
     Et ce alors qu’en l’occurrence, les alertes de Windows sont à prendre avec des pincettes, puisque les
     logiciels critiqués n’ont été générés par rien d’autre qu’une suite de logiciels Microsoft :
 
-      • Le Microsoft Keyboard Layout Creator (MSKLC), distribué par Microsoft à titre gratuit :
+      ◦ Le Microsoft Keyboard Layout Creator (MSKLC), distribué par Microsoft à titre gratuit :
 
             https://www.microsoft.com/en-us/download/details.aspx?id=102134
 
-      • Le Keyboard Table Generation Tool (Unicode) (KbdUTool), inclus dans le MSKLC et utilisable à part,
+      ◦ Le Keyboard Table Generation Tool (Unicode) (KbdUTool), inclus dans le MSKLC et utilisable à part,
         en vertu du contrat de licence fourni avec le MSKLC, permettant l’utilisation des composants. 
 
     L’affirmation selon laquelle l’éditeur du setup.exe et des trois installateurs *_amd64.msi, *_i386.msi
@@ -119,22 +119,27 @@ Dispositions de clavier : les variantes
 
   • À terme, toutes les variantes disponibles sous Linux seront disponibles aussi sous Windows :
 
-      • Variantes AZERTY :
+      ◦ Variantes AZERTY :
 
-          • Breton et français disposition de clavier semi-automatique
-          • Polynésie Française disposition de clavier semi-automatique
-          • Afrique francophone disposition de clavier semi-automatique
-          • Français Belgique disposition de clavier semi-automatique
+          ‣ Breton et français disposition de clavier semi-automatique
 
-      • Autres variantes redisposées QZJFGY :
+          ‣ Polynésie Française disposition de clavier semi-automatique
 
-          • Breton et français disposition de clavier semi-automatique redisposée
-          • Polynésie française disposition de clavier semi-automatique redisposée
-          • Afrique francophone disposition de clavier semi-automatique redisposée
+          ‣ Afrique francophone disposition de clavier semi-automatique
 
-        La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante
-        belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va
-        à l’encontre de cet objectif.
+          ‣ Français Belgique disposition de clavier semi-automatique
+
+      ◦ Autres variantes redisposées QZJFGY :
+
+          ‣ Breton et français disposition de clavier semi-automatique redisposée
+
+          ‣ Polynésie française disposition de clavier semi-automatique redisposée
+
+          ‣ Afrique francophone disposition de clavier semi-automatique redisposée
+
+        La variante belge ne se décline pas en variante redisposée, parce que l’intérêt d’avoir une
+        variante belge est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition
+        va à l’encontre de cet objectif.
 
 
 Options de disposition
@@ -188,13 +193,14 @@ Personnalisation
   • La plupart des touches vives émettant une seule unité de code sont personnalisables dans la source .C
     dans le tableau static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[].
 
-  • Les touches vives émettant plusieurs unités de code sont personnalisables dans la source .C dans le
-    tableau static ALLOC_SECTION_LDATA LIGATURE16 aLigature[].
+  • Les touches vives émettant plusieurs unités de code (et quelques-unes qui en émettent une seule) sont
+    personnalisables dans la source .C dans le tableau static ALLOC_SECTION_LDATA LIGATURE16 aLigature[].
 
-  • Les touches mortes sont personnalisables dans la source .C dans le tableau static ALLOC_SECTION_LDATA
-    DEADKEY aDeadKey[], en plaçant les entrées modifiées avant les entrées d’origine.
+  • Les touches mortes, toutes incapables d’émettre plusieurs unités de code, sont personnalisables dans
+    la source .C dans le tableau static ALLOC_SECTION_LDATA DEADKEY aDeadKey[], avec les entrées modifiées
+    placées avant les entrées d’origine.
 
-Ensuite, il faut recompiler les pilotes de disposition comme indiqué sous le titre « Installer », puis
+Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le titre « Installer », puis
 remplacer les pilotes d’origine dans deux dossiers système :
 
   • amd64 : C:\Windows\System32\
@@ -205,22 +211,22 @@ remplacer les pilotes d’origine dans deux dossiers système :
 
 Critiques, suggestions et retours d’expérience
 
-  N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
-  à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains en substituant
-  "[arobase]" à "@". L’extension .com plutôt que .net est en vigueur depuis le 14/07/2025.
+N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
+à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains, en substituant
+"@" à "[arobase]". (L’extension .com plutôt que .net est en vigueur depuis le 14/07/2025.)
 
-  N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
-  le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
+N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
+le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
 
-  Pour signaler un bogue :
+  • Pour signaler un bogue :
 
-      https://github.com/dispoclavier/nouvel-azerty/issues
+        https://github.com/dispoclavier/nouvel-azerty/issues
 
-  Pour lancer une discussion :
+  • Pour lancer une discussion :
 
-      https://github.com/dispoclavier/nouvel-azerty/discussions
+        https://github.com/dispoclavier/nouvel-azerty/discussions
 
-  De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
-  que dans une discussion lancée à cet effet.
+De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
+que dans une discussion lancée à cet effet.
 
-      Merci d’avance de tout retour.
+    Merci d’avance de tout retour.
