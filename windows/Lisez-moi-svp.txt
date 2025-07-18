@@ -1,0 +1,226 @@
+                      Date : 2025-07-18T0452+0200
+                   Version : 5.3.0.26
+            Nom du produit : Un nouvel AZERTY
+              Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
+          Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
+             Documentation : https://dispoclavier.com/nouvel-azerty/
+
+             Nom du projet : Dispoclavier
+             URL du projet : https://dispoclavier.com
+                    Maxime : Simplifier la dactylographie, pas le français.
+               Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
+             Destinataires : Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
+    Identifiants réguliers : kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s|sr)|CH(s|sr)|FR(s|sr)|PF(s|sr)))
+ Identifiants descriptions : kbbrFRs  Breton et français disposition de clavier semi-automatique
+                             kbbrFRsr Breton et français disposition de clavier semi-automatique redisposée
+                             kbfrAFs  Afrique francophone disposition de clavier semi-automatique
+                             kbfrAFsr Afrique francophone disposition de clavier semi-automatique redisposée
+                             kbfrBEs  Français Belgique disposition de clavier semi-automatique
+                             kbfrFRs  Français France disposition de clavier semi-automatique
+                             kbfrFRsr Français France disposition de clavier semi-automatique redisposée
+                             kbfrPFs  Polynésie française disposition de clavier semi-automatique
+                             kbfrPFsr Polynésie française disposition de clavier semi-automatique redisposée
+                   À venir : kbfrCAms Canadien multilingue disposition de clavier semi-automatique
+                   À venir : kbfrCAs  Français Canada disposition de clavier semi-automatique
+                   À venir : kbfrCAsr Français Canada disposition de clavier semi-automatique redisposée
+                   À venir : kbfrCHs  Français Suisse disposition de clavier semi-automatique
+                   À venir : kbfrCHsr Français Suisse disposition de clavier semi-automatique redisposée
+              Licence code : Apache 2.0
+          URL licence code : https://www.apache.org/licenses/LICENSE-2.0
+          Licence non-code : CC-BY 4.0
+      URL Licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
+                   Contact : dev[arobase]dispoclavier.com
+
+
+Dossiers et fichiers
+
+  • Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-5.3.0.26-installation » avec ses 4 pilotes de disposition,
+    ses 3 installateurs et son « setup.exe »
+
+  • Le dossier « kbfrFRsr-5.3.0.26-installation » contient la même chose pour la variante redisposée de base de ce
+    nouvel AZERTY, qui est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
+
+  • Dans le dossier « redispositions » se trouvent les fichiers d’inscription au Registre avec leur description
+    « _Scancode_Map.txt », qui permettent d’obtenir des redispositions similaires aux sous-variantes sous Linux.
+
+
+Installer
+
+  • En cliquant tout de suite sur le setup.exe, on ouvre une fenêtre bleue qui dit :
+
+        Windows a protégé votre ordinateur
+        Microsoft Defender SmartScreen a empêché le démarrage d’une application non reconnue.
+        L’exécution de cette application peut mettre votre ordinateur en danger.
+        Informations complémentaires
+
+    Prise à la lettre, c’est une fausse alerte, car ce qui « peut mettre votre ordinateur en danger » n’est pas
+    l’« exécution de cette application », mais l’exécution d’une application non reconnue en général. Nuance.
+
+    Pour passer le Microsoft Defender SmartScreen, vous avez deux options, et moi j’en ai une seule.
+
+  • Cliquer sur « Informations complémentaires ». Car en plus de celles-ci (« Application : setup.exe
+    Éditeur : Éditeur inconnu ») s’affiche alors un bouton « Exécuter quand même ». Cliquer celui-ci
+    ouvre tout de suite le Setup Wizard de la disposition, qui annonce que l’installation est terminée.
+
+  • Ouvrir les propriétés du setup.exe en faisant un clic droit dessus et en cliquant « Propriétés » tout en bas.
+    Car au bas du premier onglet, on peut alors cocher la case « ☐ Débloquer » derrière « Sécurité : Ce fichier
+    provient d’un autre ordinateur et peut éventuellement être bloqué pour protéger cet ordinateur. »
+    Ensuite on peut valider en cliquant sur « OK » ou en appuyant sur Entrée.
+
+  • Ma seule manière de vous éviter le Microsoft Defender SmartScreen est de louer – pour plus de 500 € par an –
+    un certificat de signature de code à validation étendue (Extended Validation Code Signing Certificate).
+
+        https://www.reddit.com/r/electronjs/comments/17sizjf/a_guide_to_code_signing_certificates_for_the/
+        https://www.sectigo.com/ssl-certificates-tls/code-signing
+
+    Et ce alors qu’en l’occurrence, les alertes de Windows sont à prendre avec des pincettes, puisque les
+    logiciels critiqués n’ont été générés par rien d’autre qu’une suite de logiciels Microsoft :
+
+      • Le Microsoft Keyboard Layout Creator (MSKLC), distribué par Microsoft à titre gratuit :
+
+            https://www.microsoft.com/en-us/download/details.aspx?id=102134
+
+      • Le Keyboard Table Generation Tool (Unicode) (KbdUTool), inclus dans le MSKLC et utilisable à part,
+        en vertu du contrat de licence fourni avec le MSKLC, permettant l’utilisation des composants. 
+
+    L’affirmation selon laquelle l’éditeur du setup.exe et des trois installateurs *_amd64.msi, *_i386.msi
+    et *_ia64.msi serait inconnu est fausse en l’occurrence, puisque les seules modifications ont été faites
+    par le MSKLC lui-même, en paquetant les pilotes de disposition compilés sur les ordres du KbdUTool.
+    À ce propos, on peut consulter les métadonnées, par exemple :
+
+        Description :     Keyboard Layout Creator Bootstrap
+        Copyright :       Copyright © 2007 Microsoft Corporation
+        Type du fichier : Package Windows Installer (.msi)
+
+  • Pour pallier un manque de confiance, on peut toujours faire compiler et paqueter ses propres pilotes.
+    Le logiciel est disponible chez Microsoft (ci-dessus), les sources sont sur GitHub, la licence permet
+    la redistribution, et la marche à suivre est détaillée sur la page de création de clavier de MNA :
+
+        http://accentuez.mon.nom.free.fr/Clavier-CreationClavier.php
+
+    Pour l’exhaustivité, le script creadispo.cmd doit aussi être mentionné. Conçu vers 2018 pour offrir une
+    expérience utilisateur conviviale à bas seuil, il a le potentiel de faciliter tout ce travail ; mais
+    étant un script, il nécessite une revue complète avant utilisation et n’est disponible que sur GitHub,
+    car tout comme les autres outils du projet, il est exclu des paquets de code source téléchargeables :
+
+        https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/outils/creadispo.cmd
+
+    Une copie de ce script ne peut fonctionner que si elle a été téléchargée en entier, avec l’indicateur
+    d’ordre des octets à son début, car l’IOO (BOM) au début n’est pas copié dans le presse-papiers ;
+    or il est indispensable pour faire tourner sous Windows ce script, qui autrement sort n’importe quoi.
+
+
+Dispositions de clavier : les variantes
+
+  • À présent, seules la disposition de base de ce nouvel AZERTY et sa variante redisposée de base qzjfgy
+    sont disponibles, afin de rationaliser et accélérer le développement, car à la différence de l’XKB, qui
+    est disponible sous Linux uniquement, sous Windows, à part la source d’en-tête commune kbcommon.H,
+    chaque variante nécessite un jeu complet de sources et de pilotes de disposition.
+
+  • À terme, toutes les variantes disponibles sous Linux seront disponibles aussi sous Windows :
+
+      • Variantes AZERTY :
+
+          • Breton et français disposition de clavier semi-automatique
+          • Polynésie Française disposition de clavier semi-automatique
+          • Afrique francophone disposition de clavier semi-automatique
+          • Français Belgique disposition de clavier semi-automatique
+
+      • Autres variantes redisposées QZJFGY :
+
+          • Breton et français disposition de clavier semi-automatique redisposée
+          • Polynésie française disposition de clavier semi-automatique redisposée
+          • Afrique francophone disposition de clavier semi-automatique redisposée
+
+        La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante
+        belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va
+        à l’encontre de cet objectif.
+
+
+Options de disposition
+
+Des optimisations optionnelles par redisposition de touches sont possibles indépendamment des pilotes
+de disposition. Elles font appel au Redisposeur de codes matériels pour claviers, un logiciel de Windows,
+et elles sont documentées dans le fichier _Scancode_Map.txt dans le dossier redispositions/.
+
+  • Sur les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [<>] prend
+    la place de Contrôle droite, les touches ISO et Verrouillage Capitales doivent être permutées,
+    afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour
+    la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique.
+    Ce sont les fichiers d’inscription au Registre dont les noms commencent par "ansi-iso".
+
+  • Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas.
+    Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement
+    de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Effacement arrière
+    sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, celle-ci
+    devient optionnellement une troisième touche d’Effacement arrière.
+
+      ◦ Les fichiers d’inscription au Registre dont les noms commencent par "win-dr=" redondent
+        Effacement arrière sur Windows droite.
+
+      ◦ Le fichier d’inscription au Registre "win-dr=ret-arr_sans-menu.reg" redonde Effacement arrière
+        aussi bien sur Windows droite que sur la touche Menu, afin d'éviter l’ouverture intempestive du
+        menu contextuel.
+
+      ◦ Les fichiers d’inscription au Registre dont les noms contiennent "menu" mettent Effacement arrière
+        sur Menu, et Menu sur Effacement arrière sauf si le nom se termine en "_sans-menu".
+
+      ◦ Le fichier d’inscription au Registre "ctrl-dr=x=ret-arr.reg" permute les touches Effacement arrière
+        et Contrôle droite.
+
+
+Témoin lumineux
+
+Le témoin lumineux d’Arrêt Défilement devrait pouvoir servir de témoin du verrouillage en mode ASCII
+par la bascule VerrMod sur la touche E00 au-dessus de Tab à gauche du 1, mais à ce jour, cela fonctionne
+sous Linux uniquement, sans compter que de nombreux ordinateurs portables sont dépourvus de ce témoin.
+
+Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on se trouve, cela est possible
+aussi lors de la saisie de mots de passe, à condition que ceux-ci commencent tous par le chiffre 5, car en
+mode français, la touche [5] de ce nouvel AZERTY est la touche morte tréma, de sorte que l’absence de
+retour visuel indique tout de suite que le clavier est en mode français. À supposer que pour la saisie de
+mots de passe, le mode préféré est le mode ASCII.
+
+
+
+Personnalisation
+
+  • La plupart des touches vives émettant une seule unité de code sont personnalisables dans la source .C
+    dans le tableau static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[].
+
+  • Les touches vives émettant plusieurs unités de code sont personnalisables dans la source .C dans le
+    tableau static ALLOC_SECTION_LDATA LIGATURE16 aLigature[].
+
+  • Les touches mortes sont personnalisables dans la source .C dans le tableau static ALLOC_SECTION_LDATA
+    DEADKEY aDeadKey[], en plaçant les entrées modifiées avant les entrées d’origine.
+
+Ensuite, il faut recompiler les pilotes de disposition comme indiqué sous le titre « Installer », puis
+remplacer les pilotes d’origine dans deux dossiers système :
+
+  • amd64 : C:\Windows\System32\
+
+  • wow64 : C:\Windows\SysWOW64\
+
+
+
+Critiques, suggestions et retours d’expérience
+
+  N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
+  à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains en substituant
+  "[arobase]" à "@". L’extension .com plutôt que .net est en vigueur depuis le 14/07/2025.
+
+  N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
+  le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
+
+  Pour signaler un bogue :
+
+      https://github.com/dispoclavier/nouvel-azerty/issues
+
+  Pour lancer une discussion :
+
+      https://github.com/dispoclavier/nouvel-azerty/discussions
+
+  De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
+  que dans une discussion lancée à cet effet.
+
+      Merci d’avance de tout retour.
