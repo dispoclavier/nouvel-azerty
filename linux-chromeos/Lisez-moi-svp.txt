@@ -1,4 +1,4 @@
-                      Date : 2025-07-18T0452+0200
+                      Date : 2025-07-18T2256+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -225,22 +225,22 @@ Personnalisation
 
 Critiques, suggestions et retours d’expérience
 
-  N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
-  à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains en substituant
-  "[arobase]" à "@". L’extension .com plutôt que .net est en vigueur depuis le 14/07/2025.
+N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
+à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains, en substituant
+"@" à "[arobase]". (L’extension .com plutôt que .net est en vigueur depuis le 14/07/2025.)
 
-  N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
-  le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
+N’hésitez pas non plus à créer un rapport de bogue ou une demande de fonctionnalité dans
+le dépôt GitHub de ce nouvel AZERTY, ni à y lancer une discussion.
 
-  Pour signaler un bogue :
+  • Pour signaler un bogue :
 
-      https://github.com/dispoclavier/nouvel-azerty/issues
+        https://github.com/dispoclavier/nouvel-azerty/issues
 
-  Pour lancer une discussion :
+  • Pour lancer une discussion :
 
-      https://github.com/dispoclavier/nouvel-azerty/discussions
+        https://github.com/dispoclavier/nouvel-azerty/discussions
 
-  De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
-  que dans une discussion lancée à cet effet.
+De nouvelles fonctionnalités peuvent être demandées aussi bien sous forme d’un rapport de bogue
+que dans une discussion lancée à cet effet.
 
-      Merci d’avance de tout retour.
+    Merci d’avance de tout retour.
