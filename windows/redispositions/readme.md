@@ -1,7 +1,8 @@
-# Redisposition de codes matériels de touches
+# Redisposition de codes matériels de touches de clavier
 
 La partie logicielle nécessaire à la redisposition de codes matériels de
-touches est fournie depuis Windows 2000. 
+touches, le Redisposeur de codes matériels pour claviers, est incluse
+dans Windows depuis Windows 2000. 
 
 ```
    ====================================================================
@@ -181,7 +182,7 @@ qui passe sur Contrôle droite.
 
 
 
-## Références du redisposeur de codes matériels de touches de clavier
+## Références du Redisposeur de codes matériels pour claviers
 
 
 ### Nom anglais
