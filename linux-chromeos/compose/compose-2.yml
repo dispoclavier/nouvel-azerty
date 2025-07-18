@@ -14839,6 +14839,7 @@
 #   written in regional indicator symbol letters.
 #   https://unicode.org/emoji/charts/emoji-list.html#flags
 #   https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+#   See #   Country flags
 #
 #       AC  "🇦🇨" Ascension Island
 #       CP  "🇨🇵" Clipperton Island
@@ -14861,14 +14862,19 @@
 #   on Windows, affecting level 10 i.e. Shift + AltFl (decimal 65, 0x41), and
 #   with keycap mnemonics using "£" printed in shift position on D12 of French
 #   AZERTY, on C12 of Belgian AZERTY.
+#   See #   Subdivision flags
 #
 #   For convenience, on Linux, a geographically more accurate layout featuring
 #   Wales on key D11 is also provided; and with respect to remapped variants,
 #   Scotland is replicated on key E11 by at sign, while England has also minus
 #   as a base character.
 #   https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
+#
+#   For intuitivity, an alphabetic alternative is also provided, although "GB"
+#   is used for the country flag, and country flag input is case insensitive.
+#   As a workaround, the unused "UK" is prefixed instead, and sequences based
+#   on "gbeng", "gbsct", "gbwls" are streamlined to "UKE", "UKS", "UKW".
 #   See # # TAG
-#   See #   Subdivision flags
 #
 #   As a combining diacritic, by lack of a combining equals sign above, a close
 #   relative, "͌" U034C COMBINING ALMOST EQUAL TO ABOVE, fills in the slot.
@@ -15936,18 +15942,35 @@
 #
 #   Subdivision flags
 #
-<UEFD7><UEFD7>                                                                        <dead_acute> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
-<Multi_key><equal><equal>                                                             <dead_acute> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
-<UEFD7><UEFD7>                                                                             <minus> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
-<Multi_key><equal><equal>                                                                  <minus> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F England
-<UEFD7><UEFD7>                                                                        <apostrophe> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
-<Multi_key><equal><equal>                                                             <apostrophe> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
-<UEFD7><UEFD7>                                                                                <at> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
-<Multi_key><equal><equal>                                                                     <at> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F Scotland
-<UEFD7><UEFD7>                                                                             <UEFD0> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
-<Multi_key><equal><equal>                                                                  <UEFD0> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
-<UEFD7><UEFD7>                                                                   <dead_circumflex> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
-<Multi_key><equal><equal>                                                        <dead_circumflex> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F Wales
+#   England
+<UEFD7><UEFD7>                                                                           <U><K><E> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<Multi_key><equal><equal>                                                                <U><K><E> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<UEFD7><UEFD7>                                                                           <u><k><e> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<Multi_key><equal><equal>                                                                <u><k><e> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<UEFD7><UEFD7>                                                                        <dead_acute> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<Multi_key><equal><equal>                                                             <dead_acute> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<UEFD7><UEFD7>                                                                             <minus> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+<Multi_key><equal><equal>                                                                  <minus> : "🏴󠁧󠁢󠁥󠁮󠁧󠁿" # U1F3F4 UE0067 UE0062 UE0065 UE006E UE0067 UE007F
+#
+#   Scotland
+<UEFD7><UEFD7>                                                                           <U><K><S> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<Multi_key><equal><equal>                                                                <U><K><S> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<UEFD7><UEFD7>                                                                           <u><k><s> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<Multi_key><equal><equal>                                                                <u><k><s> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<UEFD7><UEFD7>                                                                        <apostrophe> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<Multi_key><equal><equal>                                                             <apostrophe> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<UEFD7><UEFD7>                                                                                <at> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+<Multi_key><equal><equal>                                                                     <at> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿" # U1F3F4 UE0067 UE0062 UE0073 UE0063 UE0074 UE007F
+#
+#   Wales
+<UEFD7><UEFD7>                                                                           <U><K><W> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<Multi_key><equal><equal>                                                                <U><K><W> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<UEFD7><UEFD7>                                                                           <u><k><w> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<Multi_key><equal><equal>                                                                <u><k><w> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<UEFD7><UEFD7>                                                                             <UEFD0> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<Multi_key><equal><equal>                                                                  <UEFD0> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<UEFD7><UEFD7>                                                                   <dead_circumflex> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
+<Multi_key><equal><equal>                                                        <dead_circumflex> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿" # U1F3F4 UE0067 UE0062 UE0077 UE006C UE0073 UE007F
 #
 #
 #^# REGIONAL_INDICATOR_SYMBOL
