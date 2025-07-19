@@ -36,6 +36,15 @@ SHIFTSTATE
 
 LAYOUT		;an extra '@' at the end is a dead key
 
+29	KANA
+// The KANA wirtual key is the hiragana-katakana toggle repurposed as ModLock.
+// Unless scancode T29 is defined here, it gets the T28 VK, and KbdUTool throws a duplicate VK error.
+// As a consequence, scancode T29 must be present here, and it must be redefined as KANA in kbcommon.h,
+// since KANA is not whitelisted in the KbdUTool transpiler.
+// "kbcommon.h" must be included AFTER the layout specific header (where KANA is transpiled to #ERROR#).
+// La liste des codes matériels des touches ("SC") doit être complète pour éviter les erreurs de transpilation, L’ordre croissant n’est pas nécessaire.
+// Les codes logiciels des touches ("VK_") sont redisposés avec les lettres pour la cohérence de l’expérience utilisateur et la compatibilité multiplateforme.
+
 //SC	VK_		Cap	0	1	2	6	7
 //--	----		----	----	----	----	----	----
 
