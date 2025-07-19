@@ -1,5 +1,6 @@
-                      Date : 2025-07-18T2257+0200
-                   Version : 5.3.0.26
+                      Date : 2025-07-19T2023+0200
+                   Version : 5.3.0
+ Version compilation/build : 5.3.0.26
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -146,7 +147,7 @@ Options de disposition
 
 Des optimisations optionnelles par redisposition de touches sont possibles indépendamment des pilotes
 de disposition. Elles font appel au Redisposeur de codes matériels pour claviers, un logiciel de Windows,
-et elles sont documentées dans le fichier _Scancode_Map.txt dans le dossier redispositions/.
+et elles sont documentées dans le fichier _Scancode_Map.txt dans le dossier redispositions\.
 
   • Sur les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [<>] prend
     la place de Contrôle droite, les touches ISO et Verrouillage Capitales doivent être permutées,
@@ -200,12 +201,73 @@ Personnalisation
     la source .C dans le tableau static ALLOC_SECTION_LDATA DEADKEY aDeadKey[], avec les entrées modifiées
     placées avant les entrées d’origine.
 
-Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le titre « Installer », puis
-remplacer les pilotes d’origine dans deux dossiers système :
+Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le titre « Installer » :
 
-  • amd64 : C:\Windows\System32\
+  1 Télécharger le Microsoft Keyboard Layout Creator (MSKLC) depuis sa page officielle :
 
-  • wow64 : C:\Windows\SysWOW64\
+        https://www.microsoft.com/en-us/download/details.aspx?id=102134
+
+  2 Cliquer sur le fichier MSKLC.exe et valider l’extraction du fichier vers le dossier MSKLC\.
+
+  3 Dans le dossier MSKLC\, cliquer sur le setup.exe et se laisser guider par le
+    Microsoft Keyboard Layout Creator 1.4 Setup Wizard.
+
+  4 Appuyer sur la touche Windows et cliquer sur « Microsoft Keyboard Layout Creator 1.4 » sous le titre
+    « Récemment ajoutées ».
+
+  5 Télécharger le code source de ce nouvel AZERTY depuis la page d’accueil ou la page d’une version :
+
+        https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip
+        https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/5.3.0.zip
+
+  6 Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
+
+  7 Mettre à jour les propriétés par « Project > Properties… » en veillant à ce que les noms
+    de fichier soient égaux au nom de la disposition, champ « Name », et comportent huit lettres
+    ou chiffres ASCII maximum.
+
+  8 Faire générer le setup.exe et les trois paquetages d’Installateur Windows *.msi par
+    « Project > Build DLL and Setup Package ». Quatre pilotes, les Dynamic Link Libraries, sont
+    aussi générés mais sont d’une utilité quasi nulle, car ce fichier *.klc est incomplet, faute
+    de quoi il ne pourrait servir à faire tourner le MSKLC et lui faire afficher un aperçu de
+    la disposition, qui correspond à la disposition configurée dans ce fichier mais n’est pas
+    la vraie disposition de ce nouvel AZERTY.
+
+  9 Faire compiler les vrais pilotes, les DLL, par le Keyboard Table Generation Tool (Unicode)
+    qui se trouve dans le MSKLC :
+
+        C:\Program Files (x86)\Microsoft Keyboard Layout Creator 1.4\bin\i386\kbdutool.exe
+
+    Contrairement à la licence de Windows, la licence du MSKLC n’interdit pas l’utilisation
+    des composants, que Microsoft fournit intentionnellement au détail, sans les envelopper
+    dans un exécutable monolithique.
+
+    Pour compiler, il faut mettre la source *.C en lecture seule, et veiller à ce que la source
+    d’en-tête commune kbcommon.H soit aussi présente. Dans une invite de commande ouverte dans
+    le dossier des sources *.klc, *.C et kbcommon.H, la commande pour le pilote amd64 est :
+
+        "C:\Program Files (x86)\Microsoft Keyboard Layout Creator 1.4\bin\i386\kbdutool.exe" -u -m *.klc
+
+    Avec le nom de la disposition à la place de l’astérisque, même avec une seule source *.klc.
+    Puis il faut emballer sans tarder le pilote généré dans son dossier amd64\, car le KbdUTool
+    est incapable de lire un chemin de sortie, sort le pilote directement à côté de la source *.C,
+    et l’écraserait par le suivant, le pilote wow64, généré sur cette commande :
+
+        "C:\Program Files (x86)\Microsoft Keyboard Layout Creator 1.4\bin\i386\kbdutool.exe" -u -o *.klc
+
+ 10 Enfin, il faut ou bien remplacer les pilotes d’origine dans deux dossiers système :
+
+      • amd64 : C:\Windows\System32\
+
+      • wow64 : C:\Windows\SysWOW64\
+
+    Ou bien, si les noms de fichier ont changé, il faut installer la nouvelle disposition de clavier :
+
+      1 Cliquer le nouveau setup.exe généré par le MSKLC.
+
+      2 Aller sur la fenêtre de Contrôle de compte d’utilisateur et approuver les modifications.
+
+      3 Prendre connaissance du message d’achèvement du Setup Wizard de la nouvelle disposition.
 
 
 
