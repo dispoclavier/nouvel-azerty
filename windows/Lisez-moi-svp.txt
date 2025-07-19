@@ -1,4 +1,4 @@
-                      Date : 2025-07-19T2023+0200
+                      Date : 2025-07-19T2046+0200
                    Version : 5.3.0
  Version compilation/build : 5.3.0.26
             Nom du produit : Un nouvel AZERTY
@@ -98,6 +98,9 @@ Installer
     la redistribution, et la marche à suivre est détaillée sur la page de création de clavier de MNA :
 
         http://accentuez.mon.nom.free.fr/Clavier-CreationClavier.php
+
+    Un mode d’emploi de la compilation figure aussi directement dans ce fichier, plus bas sous le titre
+    « Personnalisation ».
 
     Pour l’exhaustivité, le script creadispo.cmd doit aussi être mentionné. Conçu vers 2018 pour offrir une
     expérience utilisateur conviviale à bas seuil, il a le potentiel de faciliter tout ce travail ; mais
