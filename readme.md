@@ -1,8 +1,12 @@
 # Un nouvel AZERTY
 
-Ce nouvel AZERTY permet – sans y obliger – d’écrire facilement en français interopérable, c’est-à-dire avec les grandes ponctuations espacées et les chiffres groupés selon Unicode par l’espace fine insécable U+202F, que l’industrie graphique française s’est massivement appropriée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa [version 34 (2018)](https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l).
+À l’heure où le mot d’ordre est d’éponger la dette publique, tous les gains de productivité sont les bienvenus. Aussi ce nouvel AZERTY vient-il à point nommé, car il élimine les tâches fastidieuses jusqu’à présent synonymes de production de textes utilisables, prêts à diffuser.
+
+Ce nouvel AZERTY permet en effet d’écrire facilement en français interopérable, avec les grandes ponctuations espacées et les chiffres groupés selon l’Imprimerie nationale, [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace) et [Unicode](https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G26915) par l’espace fine insécable U+202F, que l’industrie graphique française a massivement adoptée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa [version 34 (2018)](https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l).
 
 Sont facilitées aussi l’écriture avec majuscules diacritées, dont les plus courantes sont en Majuscule, et l’écriture en capitales diacritées, en Verrouillage Capitales pour autant que leurs minuscules ont une touche vive sur l’AZERTY. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, sans gaspiller de place pour une touche "ê", émulée par la touche morte accent circonflexe, dont la position reste inchangée.
+
+Cela dit, rien n’oblige à utiliser ces nouvelles fonctionnalités, car l’écriture traditionnelle ou en langues étrangères sans espaces fines est tout aussi simple.
 
 Ce nouvel AZERTY est la disposition de base au sein d’un ensemble de dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie, notamment au breton, aux langues de Polynésie, au bambara et à d’autres langues d’Afrique francophone. Toutes prennent en charge l’espacement des grandes ponctuations avec l’espace fine insécable selon la typographie française nouvelle école. L’espacement vieille école manuel du deux-points est facilité pour une saisie de texte selon la pratique de l’Imprimerie nationale, qui applique déjà l’espacement nouvelle école aux guillemets chevrons.
 
@@ -21,11 +25,41 @@ Ce nouvel AZERTY en mode ASCII :
 Ce nouvel AZERTY en mode ASCII à capitales verrouillées :
 ![Ce nouvel AZERTY en mode ASCII à capitales verrouillées](https://dispoclavier.com/img/nouvel-azerty-verrmod-verrcap.png)
 
-Ces vues ont été générées par [Keyboard Layout Editor](https://keyboard-layout-editor.com) de Ian Prest.
+Ces vues ont été générées par le [Keyboard Layout Editor](https://keyboard-layout-editor.com) de Ian Prest.
 
 ## Utilisation
 
 Ce mode d’emploi commun présente les fonctionnalités communes à toutes les installations distribuées. Les particularités des différents systèmes d’exploitation sont présentées dans le [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), le [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md), et le Mode d’emploi sous macOS (à venir).
+
+### Touches
+
+Sur ce nouvel AZERTY, plusieurs touches changent de fonctionnalité afin de rendre le clavier mieux adapté à l’écriture de la langue française.
+
+#### Bascules
+
+Ce nouvel AZERTY introduit une nouvelle bascule, et deux bascules existantes voient leur mode de fonctionnement modifié.
+
+##### Verrouillage de mode
+
+La touche [₂] ([²]) à gauche de [1] et au-dessus de [Tab] devient une deuxième bascule graphique pour délester la bascule Verrouillage Majuscule de l’AZERTY traditionnel.
+
+Le VerrMaj tel qu’on le connaît est bon pour les machines à écrire. Mais sur l’ordinateur, émuler la machine à écrire n’a aucun sens.
+
+###### Effets
+
+La nouvelle bascule VerrMod met les chiffres de sa rangée en Minuscule, et aussi en Majuscule pour la rétrocompatibilité et la synergie avec les lettres majuscules dans les tableurs, tout en les laissant aussi en AltGr afin de maintenir les synergies habituelles.
+
+Les autres touches non alphabétiques sont alors optimisées pour coder, dans ce qu’on peut appeler un mode ASCII, considéré comme le mode par excellence, autrement que le mode capitales classique, au point de donner son nom à cette nouvelle bascule, prise en charge nativement par Windows et Linux.
+
+En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule sur les touches à gauche d’Entrée, "-" sur [*], "_" sur [$].
+
+De même, les guillemets ASCII vont sur les touches à côté, le double sur [^], le simple (l’apostrophe ASCII) sur [ù], afin de continuer d’être à portée.
+
+Aussi, le symbole égale (souvent appelé « signe égale » par calque sur l’anglais britannique, ou « signe égal » par calque sur l’anglais américain) regagne sa touche [=].
+
+De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui montent en Majuscule à leur place. Ainsi la touche [/:] devient 100 % rétrocompatible, et la touche suivante lui emboîte le pas avec ";" à la place de "!", et "\" à la place de "§".
+
+##### Verrouillage capitales
 
 ### Lettres
 
@@ -270,7 +304,7 @@ Sous les systèmes d’exploitation qui prennent en charge le jeu de caractères
 
 #### Nouvelle école de typographie française
 
-L’espace fine (insécable U+202F) sert à espacer toutes les grandes ponctuations, ou les ponctuations doubles plus les guillemets chevrons simples. Selon [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace), même le « deux-points est précédé d'une espace fine et suivi d'une espace normale ».
+L’espace fine (insécable U+202F) sert à espacer toutes les grandes ponctuations, c’est-à-dire les ponctuations doubles plus les guillemets chevrons simples. Selon [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace), même le « deux-points est précédé d'une espace fine et suivi d'une espace normale ».
 
 Cette nouvelle école ne s’est pas formellement constituée, mais claude72 l’a mentionnée déjà en 2005 sur [forums.macg.co](https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119).
 
