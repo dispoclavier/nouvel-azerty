@@ -1,23 +1,23 @@
 /****************************** H Module Header ***********************************\
-* charset=UTF-16 LE
-* Module Name=kbcommon.h
+* Module Name=kbcommon.H
 *
-* Content=Keyboard layout header: Various defines for use in keyboard layout configurations.
+* Keyboard layout header: Various defines for use in keyboard layout configurations.
 *
 * Copyright:
-* 1985..2001 Microsoft Corporation pro parte;
-* 2015..2025 Dispoclavier (dev@dispoclavier.net)
+* 1985..2001 Microsoft Corporation pro parte
+* 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Uncomment numpad defines           5.3.0.20.00-Tue-2025-07-01T1712+0200
-* Ditch pointless editing DEADTRANS   5.2.0.3.12-Thu-2025-06-12T2133+0200
-* Debug DEADTRANS macro               5.2.0.3.11-Thu-2025-06-12T0556+0200
-* Debug DEADTRANS macro               5.2.0.3.10-Thu-2025-06-12T0515+0200
-* Debug DEADTRANS macro               5.2.0.3.09-Thu-2025-06-12T0428+0200
-* Update typedefs of DEADTRANS macro  5.2.0.3.08-Thu-2025-06-12T0043+0200
-* Wed Jun 11, 2025  extended DEADTRANS macro.
-* Sun Apr 13, 2025  updated some annotations.
+* Fix misspelling of mistranspilation          5.3.0.27.00 Sun 2025-07-20T0406+0200
+* Uncomment numpad defines                     5.3.0.20.00 Tue 2025-07-01T1712+0200
+* Ditch pointless editing DEADTRANS             5.2.0.3.12 Thu 2025-06-12T2133+0200
+* Debug DEADTRANS macro                         5.2.0.3.11 Thu 2025-06-12T0556+0200
+* Debug DEADTRANS macro                         5.2.0.3.10 Thu 2025-06-12T0515+0200
+* Debug DEADTRANS macro                         5.2.0.3.09 Thu 2025-06-12T0428+0200
+* Update typedefs of DEADTRANS macro            5.2.0.3.08 Thu 2025-06-12T0043+0200
+* Extend DEADTRANS macro.                                  Wed Jun 11, 2025
+* Update some annotations.                                 Sun Apr 13, 2025
 * Wed Dec 04, 2024  commented out unused ligature typedefs.
-* Sun Nov 10, 2024  added section 7.3.1 fixing KbdUTool mistranspiles.
+* Sun Nov 10, 2024  added section 7.3.1 fixing KbdUTool mistranspilations.
 * Wed Oct 30, 2024  updated to port a new AZERTY on Windows (v 4.10.0)
 * Tue Mar 21, 2018  updated for implementing bépo (v 4.4)
 * Tue Mar 21, 2018  completed updating comments (v 4.3)
@@ -586,18 +586,22 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 *
 * 7.3.1  ATTRIBUTES
 *
-* KbdUTool correctly transpiles the "1" attribute to "CAPLOK", defined as "0x01" in kbd.h:368.
-* KbdUTool correctly transpiles the "2" or "SGCap" attribute to "SGCAPS", defined as "0x02" in kbd.h:369.
-* But it transpiles "8" to "ALTGR", unlike kbd.h:372 defining "KANALOK" for that purpose as "0x08".
+* KbdUTool correctly transpiles the "1" attribute to "CAPLOK", defined as "0x01" in
+* kbd.h:368.
+* KbdUTool correctly transpiles the "2" or "SGCap" attribute to "SGCAPS", defined
+* as "0x02" in kbd.h:369.
+* But it transpiles "8" to "ALTGR", unlike kbd.h:372 defining "KANALOK" for that
+* purpose as "0x08".
 * And it transpiles "9" to "KBD", that is defined nowhere in kbd.h.
-* Moreover, it throws an error when it should transpile "a" to "0x0a" or anything defined as such.
-* As a consequence, these mistranspiles are defined accurately here.
+* Moreover, it throws an error when it should transpile "a" to "0x0a" or anything
+* defined as such.
+* As a consequence, these mistranspilations are defined accurately here.
 * Also, "SGCAPS" is redefined as "0x0a" consistently.
 \**********************************************************************************/
 #undef SGCAPS
 #define SGCAPS  0x0a  // SGCAPS is upgraded to support Kana Lock alongside.
-#define ALTGR   0x08  // ALTGR is a mistranspile from KbdUTool instead of KANALOK.
-#define KBD     0x09  // KBD is a fancy mistranspile from KbdUTool; kbd.h has none.
+#define ALTGR   0x08  // ALTGR is a mistranspilation instead of KANALOK.
+#define KBD     0x09  // KBD is a fancy mistranspilation; kbd.h has none.
 /**********************************************************************************\
 * 7.3.2  LAYOUT
 *
