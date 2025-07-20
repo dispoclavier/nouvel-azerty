@@ -55,7 +55,7 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 			* Ajouter les 3 seuls drapeaux régionaux "🏴󠁧󠁢󠁷󠁬󠁳󠁿" sur C12, "🏴󠁧󠁢󠁥󠁮󠁧󠁿" sur D12, "🏴󠁧󠁢󠁳󠁣󠁴󠁿" sur E12. ibidem
 			* Redonder sur la barre d’espace l’espace normale pour écrire en émojis. ibidem
 			* Pallier le bogue de la colonne 02 en redondant dans la colonne 11, ou sur la touche après "N", les émojis lettres ou chiffre disposés sur les touches B02 (🇽⁠), C02 (🇸⁠), D02 (🇿⁠), E02 (2️⃣⁠). ibidem
-			* Redonder les drapeaux de la France, de l’Europe et des Nations unies sur les touches B08, B09 et B10.
+			* Redonder les drapeaux de la France, de l’Union Européenne et des Nations Unies sur les touches B08, B09 et B10. kbfrFRs.C [5ed3aee](https://github.com/dispoclavier/nouvel-azerty/commit/5ed3aeee1011ce38fd23615533bbcc7fdf4072fa), kbfrFRsr.C [6a43fc4](https://github.com/dispoclavier/nouvel-azerty/commit/6a43fc48eba83f4ab22d3ef65e750017fd9ae837)
 		* Niveaux (Maj +) AltQr : Redonder "𝐴" U+1D434.."𝑧" U+1D467, "𝟢" U+1D7E2.."𝟫" U+1D7EB. kbfrFRs.C [730f762](https://github.com/dispoclavier/nouvel-azerty/commit/730f76215002565795d3198c2ebf7e6bbb545581), kbfredis.C [0c097c4](https://github.com/dispoclavier/nouvel-azerty/commit/0c097c40e79a41834d804140b7030b331101d375)
 		* Niveaux (Maj +) AltGr + AltQr : Redonder "𝔸" U+1D538.."𝕫" U+1D56B, "𝟘" U+1D7D8.."𝟡" U+1D7E1. ibidem
 		* Niveaux (Maj +) AltFr + AltQr : Redonder "𝓐" U+1D4D0.."𝔃" U+1D503, "𝟶" U+1D7F6.."𝟿" U+1D7FF. ibidem
