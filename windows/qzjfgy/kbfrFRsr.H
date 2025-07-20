@@ -10,8 +10,9 @@
 *
 * History:
 *
-* renamed to kbfrFRsr.H    Wed 2025-07-16T1322+0200
-* created by KBDTOOL v3.40 Tue Jun 03 20:53:25 2025
+* Fix non-transpilation of KANA          Sun 2025-07-20T0355+0200
+* Rename to kbfrFRsr.H                   Wed 2025-07-16T1322+0200
+* created by KBDTOOL v3.40               Tue Jun 03 20:53:25 2025
 *
 \***************************************************************************/
 
@@ -37,7 +38,7 @@
 \****+-------+_+----------+----------+----------+----------+----------+----------+*/
 
 #undef  T29
- #define T29 _EQ(                                    #ERROR#                      )
+ #define T29 _EQ(                                       KANA                      )
 #undef  T11
  #define T11 _EQ(                                        'Z'                      )
 #undef  T12
