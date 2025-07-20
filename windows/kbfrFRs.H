@@ -4,12 +4,14 @@
 * keyboard layout header
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
+* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * Various defines for use by keyboard input code.
 *
 * History:
 *
-* created by KBDTOOL v3.40 Mon Apr 14 01:00:01 2025
+* Fix non-transpilation of KANA          Sun 2025-07-20T0354+0200
+* created by KBDTOOL v3.40               Tue Jun 03 20:53:21 2025
 *
 \***************************************************************************/
 
@@ -35,7 +37,7 @@
 \****+-------+_+----------+----------+----------+----------+----------+----------+*/
 
 #undef  T29
- #define T29 _EQ(                                    #ERROR#                      )
+ #define T29 _EQ(                                       KANA                      )
 #undef  T10
  #define T10 _EQ(                                        'A'                      )
 #undef  T11
