@@ -1,4 +1,4 @@
-                      Date : 2025-07-20T0938+0200
+                      Date : 2025-07-20T1616+0200
                    Version : 5.3.0
  Version compilation/build : 5.3.0.27
             Nom du produit : Un nouvel AZERTY
@@ -36,10 +36,10 @@
 Dossiers et fichiers
 
   • Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-5.3.0.27-installation » avec ses 4 pilotes de disposition,
-    ses 3 installateurs et son « setup.exe »
+    ses 3 installateurs et son setup.exe.
 
-  • Le dossier « kbfrFRsr-5.3.0.27-installation » contient la même chose pour la variante redisposée de base de ce
-    nouvel AZERTY, qui est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
+  • Le dossier « kbfrFRsr-5.3.0.27-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui
+    est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
 
   • Dans le dossier « redispositions » se trouvent les fichiers d’inscription au Registre avec leur description
     « _Scancode_Map.txt », qui permettent d’obtenir des redispositions similaires aux sous-variantes sous Linux.
@@ -66,7 +66,8 @@ Installer
   • Ouvrir les propriétés du setup.exe en faisant un clic droit dessus et en cliquant « Propriétés » tout en bas.
     Car au bas du premier onglet, on peut alors cocher la case « ☐ Débloquer » derrière « Sécurité : Ce fichier
     provient d’un autre ordinateur et peut éventuellement être bloqué pour protéger cet ordinateur. »
-    Ensuite on peut valider en cliquant sur « OK » ou en appuyant sur Entrée.
+    Ensuite on peut valider en cliquant sur « OK » ou en appuyant sur Entrée. Cliquer ensuite le setup.exe
+    ouvre tout de suite le Setup Wizard de la disposition, qui annonce que l’installation est terminée.
 
   • Ma seule manière de vous éviter le Microsoft Defender SmartScreen est de louer – pour plus de 500 € par an –
     un certificat de signature de code à validation étendue (Extended Validation Code Signing Certificate).
@@ -112,6 +113,19 @@ Installer
     Une copie de ce script ne peut fonctionner que si elle a été téléchargée en entier, avec l’indicateur
     d’ordre des octets à son début, car l’IOO (BOM) au début n’est pas copié dans le presse-papiers ;
     or il est indispensable pour faire tourner sous Windows ce script, qui autrement sort n’importe quoi.
+
+  • Quand tout cela aura finalement été réglé, l’installation de ce nouvel AZERTY peut être menée à bien :
+
+      1 Cliquer le setup.exe si ce n’est déjà fait.
+
+      2 Le cas échéant, aller sur la fenêtre de Contrôle de compte d’utilisateur et approuver qu’il y aura
+        des modifications.
+
+      3 Prendre connaissance du message d’achèvement du Setup Wizard de la nouvelle disposition.
+
+      4 Si la nouvelle disposition n’apparaît pas encore dans la barre des langues près de l’horloge
+        dans la barre des tâches, après le prochain démarrage tout fonctionnera normalement, et ce
+        nouvel AZERTY figurera dans la liste comme « France AZERTY semi-automatique ».
 
 
 Dispositions de clavier : les variantes
@@ -268,9 +282,14 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
       1 Cliquer le nouveau setup.exe généré par le MSKLC.
 
-      2 Aller sur la fenêtre de Contrôle de compte d’utilisateur et approuver les modifications.
+      2 Aller sur la fenêtre de Contrôle de compte d’utilisateur et approuver qu’il y aura des
+        modifications.
 
       3 Prendre connaissance du message d’achèvement du Setup Wizard de la nouvelle disposition.
+
+      4 Si la nouvelle disposition n’apparaît pas encore dans la barre des langues près de l’horloge
+        dans la barre des tâches, après le prochain démarrage tout fonctionnera normalement, et ce
+        nouvel AZERTY figurera dans la liste comme « France AZERTY semi-automatique ».
 
 
 
