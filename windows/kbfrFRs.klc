@@ -22,14 +22,17 @@ VERSION	5.3.0.27
 // et qui ne sont pas pris en charge par le KbdUTool, capable uniquement de les
 // faire compiler, pas de les transpiler.
 //
-// La vraie disposition de clavier est configurée dans le fichier kbfrFRsr.C et
+// La vraie disposition de clavier est configurée dans le fichier kbfrFRs.C et
 // sa dépendance kbcommon.H. La fourniture des autres dépendances, notamment du
-// fichier d’en-tête kbfrFRsr.H, n’est pas requise, car le KbdUTool les génère
+// fichier d’en-tête kbfrFRs.H, n’est pas requise, car le KbdUTool les génère
 // à la volée, certes avec une erreur due à la non-transpilation de "KANA",
 // erreur corrigée dans kbcommon.H.
 //
-// Dans le présent fichier, le code et ses annotations sont générés par le
-// MSKLC, mais la mise en page par tabulations a été légèrement retouchée.
+// Dans le présent fichier, une partie du code et de ses annotations ont été
+// générés par le MSKLC en utilisant une liste de descripteurs (noms) français
+// disponible sur GitHub et placée dans %LOCALAPPDATA%\MSKLC\.
+// https://github.com/dispoclavier/nouvel-azerty/blob/main/ressource/MSKLC/nameslist.txt
+// (La mise en page par tabulations a été retouchée.)
 //
 // L’indicateur de commentaire point-virgule ne fonctionne pas dans le tableau
 // d’allocation et n’est pas utilisé non plus dans ces annotations ajoutées.
