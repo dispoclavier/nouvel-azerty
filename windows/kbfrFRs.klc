@@ -8,23 +8,31 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	5.3.0.26
+VERSION	5.3.0.27
 
 // Encodage : UTF-16 LE (sinon, KbdUTool plante).
 // Largeur des tabulations : 12 caractères.
 //
-// Conçu pour permettre au Microsoft Keyboard Layout Creator (MSKLC) de l’ouvrir
-// afin de générer le setup.exe et les paquetages pour Installateur Windows (MSI),
-// ce fichier ne fait afficher qu’un aperçu de la vraie disposition de clavier et
-// ne peut être transpilé par le Keyboard Table Generation Tool (Unicode) (KbdUTool)
-// à cause des caractères morts au-dessus de U+0FFF qu’il contient et qui ne sont
-// pas transpilés par le KbdUTool, qui peut uniquement les compiler, pas transpiler.
+// Ce fichier est conçu pour se laisser effectivement ouvrir dans le
+// Microsoft Keyboard Layout Creator (MSKLC), d’abord dans l’objectif d’y faire
+// générer le setup.exe et les paquetages pour Installateur Windows (MSI), et
+// ensuite afin que le MSKLC affiche un aperçu de la vraie disposition, quitte
+// à ce que le Keyboard Table Generation Tool (Unicode) (KbdUTool) ne puisse le
+// transpiler, à cause des caractères morts au-dessus de U+0FFF qu’il contient,
+// et qui ne sont pas pris en charge par le KbdUTool, capable uniquement de les
+// faire compiler, pas de les transpiler.
 //
-// Dans ce fichier, le code et ses annotations sont générés par le MSKLC, mais la
-// mise en page par tabulations a été légèrement retouchée.
+// La vraie disposition de clavier est configurée dans le fichier kbfrFRsr.C et
+// sa dépendance kbcommon.H. La fourniture des autres dépendances, notamment du
+// fichier d’en-tête kbfrFRsr.H, n’est pas requise, car le KbdUTool les génère
+// à la volée, certes avec une erreur due à la non-transpilation de "KANA",
+// erreur corrigée dans kbcommon.H.
 //
-// L’indicateur de commentaire point-virgule, qui ne fonctionne pas dans le tableau
-// d’allocation, n’est pas utilisé non plus dans ces annotations ajoutées.
+// Dans le présent fichier, le code et ses annotations sont générés par le
+// MSKLC, mais la mise en page par tabulations a été légèrement retouchée.
+//
+// L’indicateur de commentaire point-virgule ne fonctionne pas dans le tableau
+// d’allocation et n’est pas utilisé non plus dans ces annotations ajoutées.
 
 SHIFTSTATE
 
@@ -37,13 +45,21 @@ SHIFTSTATE
 LAYOUT		;an extra '@' at the end is a dead key
 
 29	KANA
+
+// La liste des codes matériels des touches ("SC") doit être complète, pour
+// éviter les erreurs de transpilation, mais il n’est pas nécessaire qu’elle
+// soit classée par ordre croissant.
+//
 // The KANA wirtual key is the hiragana-katakana toggle repurposed as ModLock.
-// Unless scancode T29 is defined here, it gets the T28 VK, and KbdUTool throws a duplicate VK error.
-// As a consequence, scancode T29 must be present here, and it must be redefined as KANA in kbcommon.h,
-// since KANA is not whitelisted in the KbdUTool transpiler.
-// "kbcommon.h" must be included AFTER the layout specific header (where KANA is transpiled to #ERROR#).
-// La liste des codes matériels des touches ("SC") doit être complète pour éviter les erreurs de transpilation, L’ordre croissant n’est pas nécessaire.
-// Les codes logiciels des touches ("VK_") sont redisposés avec les lettres pour la cohérence de l’expérience utilisateur et la compatibilité multiplateforme.
+// Unless scancode T29 is defined here, it gets the T28 VK, and KbdUTool throws
+// a duplicate VK error.
+//
+// As a consequence, scancode T29 must be present here, and it must be
+// redefined as KANA in kbcommon.h, since KANA is not whitelisted in the
+// KbdUTool transpiler.
+//
+// "kbcommon.h" must be included **after** the layout specific header, where
+// KANA is transpiled to #ERROR#.
 
 //SC	VK_		Cap	0	1	2	6	7
 //--	----		----	----	----	----	----	----
