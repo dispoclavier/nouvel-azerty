@@ -7,53 +7,53 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Update copyright notice            5.3.0.25.02-Wed-2025-07-16T1621+0200
-* Rename file to kbfrFRsr.C          5.3.0.25.01-Wed-2025-07-16T0046+0200
-* Debug variant name output          5.3.0.25.00-Sat-2025-07-05T1742+0200
-* Debug variant name output          5.3.0.24.00-Sat-2025-07-05T1706+0200
-* Debug BACK, add variant&version    5.3.0.23.00-Sat-2025-07-05T1619+0200
-* Fill unused levels of numpad keys  5.3.0.22.00-Thu-2025-07-03T2048+0200
-* Upgrade numpad as designed         5.3.0.21.00-Wed-2025-07-02T1314+0200
-* Test numpad Shift level            5.3.0.20.00-Tue-2025-07-01T1714+0200
-* Test numpad extension              5.3.0.19.00-Tue-2025-07-01T1604+0200
-* Add script math alpha, more emoji  5.3.0.18.00-Mon-2025-06-30T1402+0200
-* Prep support more live key emoji   5.3.0.17.00-Sun-2025-06-29T1634+0200
-* Debug math alphabets on live keys  5.3.0.16.00-Sun-2025-06-29T0044+0200
-* Add 4 math alphabets on live keys  5.3.0.15.00-Sat-2025-06-28T1958+0200
-* Test alloc table emoji extension   5.3.0.14.00-Sat-2025-06-28T0833+0200
-* Allocate 3 empty level-9 positions 5.3.0.13.00-Fri-2025-06-27T2327+0200
-* Move ligatures below alloc tables  5.3.0.12.03-Thu-2025-06-26T1755+0200
-* Improve dead key content layout    5.3.0.12.02-Thu-2025-06-26T1743+0200
-* Debug dead key content sort order  5.3.0.12.01-Thu-2025-06-26T0819+0200
-* Test KANA modifier on KanaLock key 5.3.0.12.00-Tue-2025-06-24T0450+0200
-* Debug level-10 digit emoji         5.3.0.11.00-Sun-2025-06-22T0640+0200
-* Append WJ to level-10 digit emoji  5.3.0.10.00-Sun-2025-06-22T0520+0200
-* Replace cursive non-joiner with WJ  5.3.0.9.00-Sat-2025-06-21T0826+0200
-* Debug level-10 letter emoji         5.3.0.8.00-Fri-2025-06-20T0934+0200
-* Level 10 letter emoji, subdiv flags 5.3.0.7.00-Fri-2025-06-20T0717+0200
-* Work around the column-02 bug       5.3.0.6.00-Thu-2025-06-19T0817+0200
-* Debug level-10 tag characters       5.3.0.5.00-Thu-2025-06-19T0641+0200
-* Level 10 for tag characters         5.3.0.4.00-Thu-2025-06-19T0504+0200
-* Debug level-9 infrastructure        5.3.0.3.00-Wed-2025-06-18T0317+0200
-* Complete level-9 infrastructure     5.3.0.2.00-Tue-2025-06-17T1656+0200
-* Replicate row-E emoji on level 9    5.3.0.1.00-Mon-2025-06-16T2153+0200
-* Support regional indicator letters  5.3.0.0.00-Mon-2025-06-16T1643+0200
-* Debug circumflex in legacy code     5.2.0.5.00-Sun-2025-06-15T1249+0200
-* Add U+1F642 emoji, debug cedilla    5.2.0.4.00-Fri-2025-06-13T0645+0200
-* Change cedilla dead character       5.2.0.3.12-Thu-2025-06-12T2329+0200
-* Debug DEADTRANS macro               5.2.0.3.11-Thu-2025-06-12T0556+0200
-* Debug DEADTRANS macro               5.2.0.3.10-Thu-2025-06-12T0514+0200
-* Debug DEADTRANS macro               5.2.0.3.09-Thu-2025-06-12T0426+0200
-* Update typedefs of DEADTRANS macro  5.2.0.3.08-Thu-2025-06-12T0038+0200
-* Extend DEADTRANS macro              5.2.0.3.07-Wed-2025-06-11T2337+0200
-* Test 16-bit literals                5.2.0.3.06-Tue-2025-06-10T0707+0200
-* Test multicharacter array           5.2.0.3.05-Tue-2025-06-10T0503+0200
-* Test UTF-32 character code          5.2.0.3.04-Tue-2025-06-10T0413+0200
-* Debug SMP emoji literal             5.2.0.3.03-Tue-2025-06-10T0321+0200
-* Test SMP emoji literal              5.2.0.3.02-Tue-2025-06-10T0252+0200
-* Debug string output                 5.2.0.3.01-Mon-2025-06-09T1448+0200
-* Test string output                  5.2.0.3.00-Mon-2025-06-09T0744+0200
-* Correct high surrogates             5.2.0.2    Sat-Jun 07 00:42 2025
+* Add all-in-one FR, EU, UN flags    5.3.0.27.00 Sun 2025-07-20T0233+0200
+* Rename file to kbfrFRsr.C          5.3.0.26.00 Wed 2025-07-16T0046+0200
+* Debug variant name output          5.3.0.25.00 Sat 2025-07-05T1742+0200
+* Debug variant name output          5.3.0.24.00 Sat 2025-07-05T1706+0200
+* Debug BACK, add variant&version    5.3.0.23.00 Sat 2025-07-05T1619+0200
+* Fill unused levels of numpad keys  5.3.0.22.00 Thu 2025-07-03T2048+0200
+* Upgrade numpad as designed         5.3.0.21.00 Wed 2025-07-02T1314+0200
+* Test numpad Shift level            5.3.0.20.00 Tue 2025-07-01T1714+0200
+* Test numpad extension              5.3.0.19.00 Tue 2025-07-01T1604+0200
+* Add script math alpha, more emoji  5.3.0.18.00 Mon 2025-06-30T1402+0200
+* Prep support more live key emoji   5.3.0.17.00 Sun 2025-06-29T1634+0200
+* Debug math alphabets on live keys  5.3.0.16.00 Sun 2025-06-29T0044+0200
+* Add 4 math alphabets on live keys  5.3.0.15.00 Sat 2025-06-28T1958+0200
+* Test alloc table emoji extension   5.3.0.14.00 Sat 2025-06-28T0833+0200
+* Allocate 3 empty level-9 positions 5.3.0.13.00 Fri 2025-06-27T2327+0200
+* Move ligatures below alloc tables  5.3.0.12.03 Thu 2025-06-26T1755+0200
+* Improve dead key content layout    5.3.0.12.02 Thu 2025-06-26T1743+0200
+* Debug dead key content sort order  5.3.0.12.01 Thu 2025-06-26T0819+0200
+* Test KANA modifier on KanaLock key 5.3.0.12.00 Tue 2025-06-24T0450+0200
+* Debug level-10 digit emoji         5.3.0.11.00 Sun 2025-06-22T0640+0200
+* Append WJ to level-10 digit emoji  5.3.0.10.00 Sun 2025-06-22T0520+0200
+* Replace cursive non-joiner with WJ  5.3.0.9.00 Sat 2025-06-21T0826+0200
+* Debug level-10 letter emoji         5.3.0.8.00 Fri 2025-06-20T0934+0200
+* Level 10 letter emoji, subdiv flags 5.3.0.7.00 Fri 2025-06-20T0717+0200
+* Work around the column-02 bug       5.3.0.6.00 Thu 2025-06-19T0817+0200
+* Debug level-10 tag characters       5.3.0.5.00 Thu 2025-06-19T0641+0200
+* Level 10 for tag characters         5.3.0.4.00 Thu 2025-06-19T0504+0200
+* Debug level-9 infrastructure        5.3.0.3.00 Wed 2025-06-18T0317+0200
+* Complete level-9 infrastructure     5.3.0.2.00 Tue 2025-06-17T1656+0200
+* Replicate row-E emoji on level 9    5.3.0.1.00 Mon 2025-06-16T2153+0200
+* Support regional indicator letters  5.3.0.0.00 Mon 2025-06-16T1643+0200
+* Debug circumflex in legacy code     5.2.0.5.00 Sun 2025-06-15T1249+0200
+* Add U+1F642 emoji, debug cedilla    5.2.0.4.00 Fri 2025-06-13T0645+0200
+* Change cedilla dead character       5.2.0.3.12 Thu 2025-06-12T2329+0200
+* Debug DEADTRANS macro               5.2.0.3.11 Thu 2025-06-12T0556+0200
+* Debug DEADTRANS macro               5.2.0.3.10 Thu 2025-06-12T0514+0200
+* Debug DEADTRANS macro               5.2.0.3.09 Thu 2025-06-12T0426+0200
+* Update typedefs of DEADTRANS macro  5.2.0.3.08 Thu 2025-06-12T0038+0200
+* Extend DEADTRANS macro              5.2.0.3.07 Wed 2025-06-11T2337+0200
+* Test 16-bit literals                5.2.0.3.06 Tue 2025-06-10T0707+0200
+* Test multicharacter array           5.2.0.3.05 Tue 2025-06-10T0503+0200
+* Test UTF-32 character code          5.2.0.3.04 Tue 2025-06-10T0413+0200
+* Debug SMP emoji literal             5.2.0.3.03 Tue 2025-06-10T0321+0200
+* Test SMP emoji literal              5.2.0.3.02 Tue 2025-06-10T0252+0200
+* Debug string output                 5.2.0.3.01 Mon 2025-06-09T1448+0200
+* Test string output                  5.2.0.3.00 Mon 2025-06-09T0744+0200
+* Correct high surrogates             5.2.0.2    Sat Jun 07 00:42 2025
 * Add 0xD83D                                     Fri Jun 06 08:45 2025
 * Support high surrogates                        Thu Jun 05 02:55 2025
 * Test high surr.                     5.2.0.1    Wed Jun 04 19:08 2025
@@ -68,7 +68,7 @@
 * Streamline SGCaps                              Thu Dec 19 08:44 2024
 * Fix ligatures, 4.15                            Wed Dec 18 19:51 2024
 * Fix KbdUTool transpiler                        Mon Dec 16 01:19 2024
-* KBDTOOL v3.40 - Created                       Sun Dec 15 20:52:48 2024
+* KBDTOOL v3.40 - Created                        Sun Dec 15 20:52:48 2024
 \*****************************************************************************/
 
 #include <windows.h>
@@ -773,8 +773,10 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
+	
   {VK_ESCAPE    ,5      ,' '      ,'5'      ,'_'      ,'3'      ,'_'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_ESCAPE    ,4      ,' '      ,'f'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'r'      ,'e'      ,'d'      ,'i'      ,'s'      ,'p'      ,'o'      ,'s'      ,0x00e9   },
+	
   {'1'          ,6      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,7      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,16     ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -885,17 +887,17 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_PERIOD,14     ,'&'      ,'#'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,16     ,0xd83d   ,0xdce2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_PERIOD,17     ,0x2757   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_PERIOD,18     ,0xd83c   ,0xDDFD   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_PERIOD,18     ,0xd83c   ,0xDDEB   ,0xd83c   ,0xDDF7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,1      ,0x202f   ,':'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,7      ,0xd83d   ,0xde15   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,16     ,0xd83d   ,0xde12   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_2     ,17     ,0xd83c   ,0xdff3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_2     ,18     ,0xd83c   ,0xDDFD   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_2     ,18     ,0xd83c   ,0xDDEA   ,0xd83c   ,0xDDFA   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,1      ,0x202f   ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,7      ,0xd83d   ,0xdc94   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,16     ,0xd83d   ,0xde09   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,17     ,0xd83c   ,0xdff4   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_8     ,18     ,0xd83c   ,0xDDFD   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_8     ,18     ,0xd83c   ,0xDDFA   ,0xd83c   ,0xDDF3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,5      ,' '      ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,12     ,'&'      ,'n'      ,'b'      ,'s'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,14     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1871,44 +1873,46 @@ static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
     NULL
 };
 
-static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
-
 /*****************************************************************************\
-# On Windows, the dead key output is restricted to the low surrogate. An input
-# method for the high surrogates is provided separately at the root of related
-# dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
-# most dead keys, on level 4 of the space bar in French mode.
-#
-# The number of required high surrogates amounts to seven:
-#
-#     D801, D807,
-#     D835, D837, D83C, D83D, D83E.
-#
-# These can be dispatched among dead keys most straightforwardly as follows:
-#
-#     D801 dead_superscript (modifier letters)
-#     D807 dead_turned [dead_turned] (U+11FB0 "𑾰" LISU LETTER YHA)
-#     D835 dead_group (mathematical alphanumeric symbols)
-#     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
-#     D83C dead_flag, dead_greek (flag letters, squared letters)
-#     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
-#     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
-#
-# The output is directly in C, where an array of DEADTRANS macro calls makes
-# for a flat layout of dead key data, while in KLC format, the data is grouped
-# under DEADKEY headers. Transpilation by KbdUTool produces C code without any
-# of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
-# comments, while leading block comments (in addition to EOL comments) are best
-# for human readability, and with long lists are more readable than the grouped
-# layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
-# and unable to support the Kana Lock levels, using the KLC format is pointless
-# and induces a significant amount of waste.
-#
-# As a result, any DEADTRANS macro call can be overridden by a similar call,
-# with the same input and the same dead character, but another output, provided
-# that the valid call precedes anyhow in the source code.
+* Dead key array.
+*
+* On Windows, the dead key output is restricted to the low surrogate. An input
+* method for the high surrogates is provided separately at the root of related
+* dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
+* most dead keys, on level 4 of the space bar in French mode.
+*
+* The number of required high surrogates amounts to seven:
+*
+*     D801, D807,
+*     D835, D837, D83C, D83D, D83E.
+*
+* These can be dispatched among dead keys most straightforwardly as follows:
+*
+*     D801 dead_superscript (modifier letters)
+*     D807 dead_turned [dead_turned] (U+11FB0 "𑾰" LISU LETTER YHA)
+*     D835 dead_group (mathematical alphanumeric symbols)
+*     D837 dead_bar, dead_breve, dead_hook, dead_retroflexhook, others (Latin)
+*     D83C dead_flag, dead_greek (flag letters, squared letters)
+*     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
+*     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
+*
+* The output is directly in C, where an array of DEADTRANS macro calls makes
+* for a flat layout of dead key data, while in KLC format, the data is grouped
+* under DEADKEY headers. Transpilation by KbdUTool produces C code without any
+* of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
+* comments, while leading block comments (in addition to EOL comments) are best
+* for human readability, and with long lists are more readable than the grouped
+* layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
+* and unable to support the Kana Lock levels, using the KLC format is pointless
+* and induces a significant amount of waste.
+*
+* As a result, any DEADTRANS macro call can be overridden by a similar call,
+* with the same input and the same dead character, but another output, provided
+* that the valid call precedes anyhow in the source code.
 \*****************************************************************************/
 
+static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
+	
 /*<!dead_abovedot>*/      DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_abovehook>*/     DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_abovering>*/     DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
