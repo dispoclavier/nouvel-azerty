@@ -100,6 +100,7 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 	* Mettre en ligne le script de compilation revu, corrigé, mis à jour et désormais en UTF-8. windows/outils/creadispo.cmd [416474a](https://github.com/dispoclavier/nouvel-azerty/commit/416474acf550216599ac44445c612f0338304974)
 	* Corriger le script. creadispo.cmd [e922a72](https://github.com/dispoclavier/nouvel-azerty/commit/e922a72afce2d9982fc90d1364159cef3bc99a9d), [31f44c7](https://github.com/dispoclavier/nouvel-azerty/commit/31f44c747ad3d640f904aec1cf43d751ef2a44b2), [dfdc733](https://github.com/dispoclavier/nouvel-azerty/commit/dfdc733a753bf98f8fe8c1b33586a8ee423ff2aa)
 	* Ajouter l’indicateur d’ordre des octets par téléversement. creadispo.cmd [11138e8](https://github.com/dispoclavier/nouvel-azerty/commit/11138e81282c01f7eeaebaa2d4422c5d33068a94), [a3bb72c](https://github.com/dispoclavier/nouvel-azerty/commit/a3bb72cf65718a24922fc4b8ccda8be55b71660f)
+	* Mettre à jour les informations sur la ListeNoms.txt. creadispo.cmd [410128a](https://github.com/dispoclavier/nouvel-azerty/commit/410128acfec9b75a0ce27255a4422b48f903f30f)
 * Documentation :
 	* Modes d’emploi :
 		* Ultra-condensé : Sous Windows : Ajouter. windows/Démarrage-rapide.txt [6143fe0](https://github.com/dispoclavier/nouvel-azerty/commit/6143fe060f5c6beac7b41eb7d8695efd4959a254)
