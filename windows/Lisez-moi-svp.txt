@@ -1,4 +1,4 @@
-                      Date : 2025-07-20T1616+0200
+                      Date : 2025-07-21T0358+0200
                    Version : 5.3.0
  Version compilation/build : 5.3.0.27
             Nom du produit : Un nouvel AZERTY
@@ -56,6 +56,7 @@ Installer
 
     Prise à la lettre, c’est une fausse alerte, car ce qui « peut mettre votre ordinateur en danger » n’est pas
     l’« exécution de cette application », mais l’exécution d’une application non reconnue en général. Nuance.
+    Cette application est incapable de mettre votre ordinateur en danger,
 
     Pour passer le Microsoft Defender SmartScreen, vous avez deux options, et moi j’en ai une seule.
 
@@ -66,10 +67,52 @@ Installer
   • Ouvrir les propriétés du setup.exe en faisant un clic droit dessus et en cliquant « Propriétés » tout en bas.
     Car au bas du premier onglet, on peut alors cocher la case « ☐ Débloquer » derrière « Sécurité : Ce fichier
     provient d’un autre ordinateur et peut éventuellement être bloqué pour protéger cet ordinateur. »
-    Ensuite on peut valider en cliquant sur « OK » ou en appuyant sur Entrée. Cliquer ensuite le setup.exe
-    ouvre tout de suite le Setup Wizard de la disposition, qui annonce que l’installation est terminée.
 
-  • Ma seule manière de vous éviter le Microsoft Defender SmartScreen est de louer – pour plus de 500 € par an –
+      1 Cliquer sur « ☐ Débloquer » derrière « Sécurité : Ce fichier provient d’un autre ordinateur et
+        peut éventuellement être bloqué pour protéger cet ordinateur. »
+
+      2 Valider en cliquant sur « OK » ou en appuyant sur Entrée.
+
+      3 Cliquer sur le setup.exe. Une fenêtre s’ouvre et se referme immédiatement, dû à un bogue dans
+        ce logiciel pourtant de Microsoft. Il faut patienter 2 ou 3 secondes.
+
+      4 La suite dépend des paramètres du Contrôle de compte d’utilisateur. S’ils sont réglés au niveau
+        par défaut, il faut éventuellement aller chercher la fenêtre dans la Barre des tâches, tout à la fin,
+        où apparaît l’icône du Contrôle de compte d’utilisateur, et où il faut cliquer pour qu’elle s’affiche.
+        S’ils sont réglés au niveau en dessous, le Bureau n’est pas estompé, et la fenêtre du Contrôle de
+        compte d’utilisateur s’affiche directement, sans qu’il faille aller la chercher.
+
+      5 Répondre à la question du Contrôle de compte d’utilisateur : « Voulez-vous autoriser cette application
+        provenant d’un éditeur inconnu à apporter des modifications à votre ordinateur ? » Éventuellement,
+        cliquer sur « Afficher plus de détail » (le singulier est d’origine). Le logiciel indiqué est le
+        *_amd64.msi, non le setup.exe, car celui-ci a déjà lancé le Paquetage pour Installateur Windows qui
+        correspond à l’architecture de l’ordinateur.
+
+      6 Si la réponse est « Non », le Setup Wizard de la disposition de clavier indique que l’installation
+        a été interrompue avant que « France AZERTY semi-automatique » a pu être installé, et qu’il faut
+        relancer l’installateur pour essayer de nouveau (au sens où ‹ si jamais…, alors il faudrait… ›).
+
+        Si au contraire, la réponse est « Oui », le Setup Wizard de la disposition de clavier indique que
+        l’installation est achevée, « Installation Complete », en précisant que la disposition de clavier
+        a été installée avec succès, et invite à cliquer sur « Close » pour le quitter.
+
+        L’installation ajoute la nouvelle disposition automatiquement aux dispositions de clavier de la
+        langue « Français (France) » mais ne l’ajoute pas tout de suite à la Barre de langues, qui reste
+        cachée jusqu’au prochain démarrage en cas de disposition de clavier unique. Il en va de même du
+        raccourci Windows + Espace, qui ne permet pas encore de basculer vers la nouvelle disposition.
+
+      7 Ouvrir les Paramètres par Windows + i et aller dans Heure et langue > Langue > Clavier. Sous le
+        titre « Remplacer la méthode d’entrée par défaut » se trouve un menu déroulant où choisir
+        « France AZERTY semi-automatique » l’active immédiatement jusqu’à l’utilisation du raccourci
+        Windows + Espace, mais l’établit aussi comme disposition de clavier par défaut, jusqu’à nouvel
+        ordre.
+
+      8 Après le prochain démarrage apparaît la Barre de langues près de l’horloge dans la Barre des
+        tâches, si elle n’y était déjà, avec dans sa liste, la disposition de clavier nouvellement
+        installée.
+
+
+  • Ma seule manière de vous éviter le Microsoft Defender SmartScreen est de louer pour plus de 500 € par an
     un certificat de signature de code à validation étendue (Extended Validation Code Signing Certificate).
 
         https://www.reddit.com/r/electronjs/comments/17sizjf/a_guide_to_code_signing_certificates_for_the/
@@ -83,7 +126,7 @@ Installer
             https://www.microsoft.com/en-us/download/details.aspx?id=102134
 
       ◦ Le Keyboard Table Generation Tool (Unicode) (KbdUTool), inclus dans le MSKLC et utilisable à part,
-        en vertu du contrat de licence fourni avec le MSKLC, permettant l’utilisation des composants. 
+        en vertu du contrat de licence fourni avec le MSKLC, permettant l’utilisation des composants.
 
     L’affirmation selon laquelle l’éditeur du setup.exe et des trois installateurs *_amd64.msi, *_i386.msi
     et *_ia64.msi serait inconnu est fausse en l’occurrence, puisque les seules modifications ont été faites
@@ -114,18 +157,6 @@ Installer
     d’ordre des octets à son début, car l’IOO (BOM) au début n’est pas copié dans le presse-papiers ;
     or il est indispensable pour faire tourner sous Windows ce script, qui autrement sort n’importe quoi.
 
-  • Quand tout cela aura finalement été réglé, l’installation de ce nouvel AZERTY peut être menée à bien :
-
-      1 Cliquer le setup.exe si ce n’est déjà fait.
-
-      2 Le cas échéant, aller sur la fenêtre de Contrôle de compte d’utilisateur et approuver qu’il y aura
-        des modifications.
-
-      3 Prendre connaissance du message d’achèvement du Setup Wizard de la nouvelle disposition.
-
-      4 Si la nouvelle disposition n’apparaît pas encore dans la barre des langues près de l’horloge
-        dans la barre des tâches, après le prochain démarrage tout fonctionnera normalement, et ce
-        nouvel AZERTY figurera dans la liste comme « France AZERTY semi-automatique ».
 
 
 Dispositions de clavier : les variantes
