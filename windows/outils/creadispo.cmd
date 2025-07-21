@@ -7,10 +7,10 @@ rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows es
 ::  nom          creadispo
 ::  description  programme de commandes en batch pour l’interpréteur cmd.exe de Windows
 ::               utilisant le KbdUTool 3.40 du Microsoft Keyboard Layout Creator 1.4
-::  version      1.9.1
-::  date         2025-07-07T1426+0200 (1.8.3 : 2018-03-15T1954+0100)
-::  contact      dev@dispoclavier.net
-::  ressources   https://dispoclavier.com
+::  version      1.9.3
+::  date         2025-07-21T0707+0200 (1.8.3 : 2018-03-15T1954+0100)
+::  contact      dev[arobase]dispoclavier.com
+::  dépôt        https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/outils/creadispo.cmd
 ::
 ::  Licensed under the Apache License, Version 2.0 (the "License");
 ::  you may not use this file except in compliance with the License.
@@ -741,23 +741,22 @@ echo     ^>  Exemple 2 :  Noms en français dans le MSKLC                    ( 5
 echo.
 echo    Pour que le MSKLC puisse afficher les noms des caractères, il est fourni
 echo    avec le code source des tableaux de code Unicode dans leur version actuelle
-echo    de son époque (5.0). C’est la Names List, destinée à la lecture humaine car
-echo    son contenu n’est autre que le texte imprimé en tant que Code Charts. Ces
-echo    dernières contiennent aussi pour chaque caractère un exemple de glyphe.
+echo    de son époque (5.0). C’est le fichier nameslist.txt, dont le MSKLC dépose
+echo    et utilise une copie dans %%LOCALAPPDATA%%\MSKLC\.
 echo.
 echo    Une fonctionnalité de mise à jour permet au MSKLC de télécharger sur demande
 echo    la version la plus récente (Help ^> Update Unicode character data). Mais les
 echo    noms seront toujours en anglais. Pour les avoir en français, utilisez la
-echo    traduction française Liste des Noms, qui est le code source de la version
+echo    traduction française ListeNoms.txt, qui est le code source de la version
 echo    française d’ISO 10646, l’avatar du standard Unicode au niveau de l’ISO.
 echo.
-echo    Sur le site québecois HAPAX vous trouverez une version assez récente de la
-echo    Liste des Noms, sachant qu’elle est en cours de mise à jour ;  à la rubrique
-echo    Tableaux de codes et liste de noms annotés (Unicode 5.0 et 7.0), cliquez sur
-echo             Liste des noms Unicode 7.0 et ISO/CEI 10646:2014 annotés
+echo    Sur le site québecois HAPAX vous trouverez la version à jour de ce fichier,
+echo    de nouveau activement maintenu. Sous le titre « Tableaux de codes et liste
+echo    de noms annotés (Unicode 16.0, 15.1, 15.0, 14.0 et 13.0), cliquez sur
+echo             Liste des noms Unicode 16.0 et ISO/CEI 10646:2020 annotés
 echo.
-echo    Placez-en une copie dans le(s) dossier(s) MSKLC utilisateur. Vous basculerez
-echo    entre le français et l’anglais selon lequel des deux fichiers sera (re)nommé
+echo    Placez-en une copie dans le dossier MSKLC utilisateur. Vous basculerez
+echo    entre le français et l’anglais selon lequel des deux fichiers sera renommé
 echo    en "nameslist.txt". Je vais ouvrir votre dossier MSKLC, et faire afficher
 echo    l’accueil d’Hapax et deux pages sur Unicode.org ;  appuyez sur une touche…
 color f2
@@ -3274,9 +3273,9 @@ echo  Les sources dans le dossier sont au complet.
 :: Pack d’installation :
 :versioncompile
 :: Fait compiler et emballe les pilotes (avec une copie de sauvegarde) :
-set idirname="%name%%sep%%description% v%version% installation"
+set idirname="%name%%sep%%description%-%version%-installation"
 mkdir %idirname%
-echo  J’ai créé le dosssier %idirname%.
+echo  J’ai créé le dossier %idirname%.
 
 :: 'i386'
 echo.
@@ -3484,7 +3483,7 @@ echo  J’ai rangé le dossier archivable dans son surdossier.
 :: Range le dossier de compilinstallation dans le surdossier correspondant du projet :
 if exist %comidirproject% (
 	move %comidirname% %comidirproject%
-echo  J’ai rangé le dosssier de compilinstallation de %name% dans son surdossier.
+echo  J’ai rangé le dossier de compilinstallation de %name% dans son surdossier.
 echo  du projet %projectname%.
 )
 :: Range le dossier d’installation dans le surdossier correspondant du projet :
