@@ -1,8 +1,8 @@
 # Redisposition de codes matériels de touches de clavier
 
-La partie logicielle nécessaire à la redisposition de codes matériels de
-touches, le Redisposeur de codes matériels pour claviers, est incluse
-dans Windows depuis Windows 2000. 
+La partie logicielle nécessaire à la redisposition de codes matériels
+de touches, le Redisposeur de codes matériels pour claviers, est
+incluse dans Windows depuis Windows 2000. 
 
 ```
    ====================================================================
@@ -29,9 +29,9 @@ Si une valeur "Scancode Map" existe déjà et qu’elle doit être conservée,
 par exemple parce qu’elle ne provient pas de l’une des clés incluses
 dans ce dossier, commencer par l’étape 0. Sinon, commencer par l’étape 1.
 
-Étape 0 : Ouvrir l’Éditeur de Registre regedit.exe (taper Windows + R,
+Étape 0 : Ouvrir l’Éditeur de Registre regedit.exe – taper Windows + R,
           saisir "regedit", appuyer sur Entrée, et lui donner l’autorisation
-          d’« apporter des modifications à votre appareil »), aller à la clé
+          d’« apporter des modifications à votre appareil » –, aller à la clé
           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
           et renommer la valeur "Scancode Map" (p.ex. en "Scancode Map 0").
           Ou exporter la clé "Keyboard Layout" (clic droit ou menu Fichier),
@@ -61,19 +61,24 @@ Pour tout annuler :
 ===================
 
 a) Si l’étape 0 n’a pas été faite :
-   Suivre les étapes 2 à 8 en utilisant le fichier annulation.reg.
+
+     Suivre les étapes 2 à 8 en utilisant le fichier annulation.reg.
 
 b) Si l’étape 0 a été faite :
 
-b) a) Si la clé a été exportée :
-      Importer la clé préalablement exportée.
+b.a) Si la clé "Keyboard Layout" a été exportée :
 
-b) b) Si la valeur "Scancode Map" a été renommée :
-      Supprimer la valeur "Scancode Map" existante, et
-      renommer l’autre valeur en "Scancode Map".
+       1. Importer la clé préalablement exportée ;
 
-   Redémarrer l’ordinateur.
+       2. Redémarrer l’ordinateur.
 
+b.b) Si la valeur "Scancode Map" a été renommée :
+
+       1. Supprimer la valeur "Scancode Map" existante ;
+
+       2. Renommer l’autre valeur en "Scancode Map" ;
+
+       3. Redémarrer l’ordinateur.
 
 
 
@@ -134,39 +139,39 @@ Permute les touches d’Effacement arrière et Contrôle droite.
 
 ### ansi-iso.reg
 
-Permute les touches de Verrouillage des Capitales et [<>],
+Permute les touches de Verrouillage des Capitales et [><],
 qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
-* VerrCap devient [<>] sur Contrôle droite ;
-* [<>] sur Contrôle droite (AltFr) devient VerrCap.
+* VerrCap devient [><] sur Contrôle droite ;
+* [><] sur Contrôle droite (AltFr) devient VerrCap.
 
 
 ### ansi-iso_menu=x=ret-arr.reg
 
-Permute les touches de Verrouillage des Capitales et [<>],
+Permute les touches de Verrouillage des Capitales et [><],
 qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
 Permute aussi les touches d’Effacement arrière et Menu.
 
-* VerrCap devient [<>] et sert de touche AltFr ;
-* [<>] sur Contrôle droite devient VerrCap ;
+* VerrCap devient [><] et sert de touche AltFr ;
+* [><] sur Contrôle droite devient VerrCap ;
 * Menu devient Effacement arrière ;
 * Effacement arrière devient Menu.
 
 
 ### ansi-iso_menu=ret-arr_sans-menu.reg
 
-Permute les touches de Verrouillage des Capitales et [<>],
+Permute les touches de Verrouillage des Capitales et [><],
 qui se trouve à la place de Contrôle droite
 et qui devient la touche AltFr.
 
 Redonde aussi l’Effacement arrière sur la touche Menu,
 et laisse la touche d’Effacement arrière inchangée.
 
-* VerrCap devient [<>] et sert de touche AltFr ;
-* [<>] sur Contrôle droite devient VerrCap ;
+* VerrCap devient [><] et sert de touche AltFr ;
+* [><] sur Contrôle droite devient VerrCap ;
 * Menu devient une deuxième touche d’Effacement arrière ;
 * La touche d’Effacement arrière conserve sa fonctionnalité.
 
@@ -176,7 +181,7 @@ et laisse la touche d’Effacement arrière inchangée.
 Introduit la touche AltFr à gauche sur la touche de Verrouillage des Capitales,
 qui passe sur Contrôle droite.
 
-* VerrCap devient [<>] (AltFr) ;
+* VerrCap devient [><] (AltFr) ;
 * Contrôle droite devient VerrCap.
 
 
@@ -288,7 +293,7 @@ Entre parenthèses figure le code hexadécimal petit-boutien.
     T01 (01,00) Échappement
 		
     T29 (29,00) Touche E00 [²]
-    T56 (56,00) Touche B00 [<>]
+    T56 (56,00) Touche B00 [><]
 
     T02 (02,00) Touche E01 [1]
     T03 (03,00) Touche E02 [2]
