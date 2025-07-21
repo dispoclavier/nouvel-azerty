@@ -1,4 +1,4 @@
-                      Date : 2025-07-18T2256+0200
+                      Date : 2025-07-21T1821+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -88,7 +88,7 @@ Options de disposition : les sous-variantes
 
 Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles.
 
-  • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [<>]
+  • Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [><]
     prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées
     afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour
     la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique.
