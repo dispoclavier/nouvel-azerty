@@ -1,16 +1,16 @@
-Ce nouvel AZERTY est dans « kbfrFRs-[numéro de version et numéro de build]-installation ».
+1. Ce nouvel AZERTY est dans « kbfrFRs-[numéro de version et numéro de build]-installation ».
 
-Ouvrir les Propriétés du setup.exe et cocher la case Débloquer en bas à droite.
+2. Ouvrir les Propriétés du setup.exe et cocher la case Débloquer en bas à droite.
 
-Faire deux fois Entrée, une fois pour valider et fermer les Propriétés, une fois pour lancer le setup.exe.
+3. Faire deux fois Entrée, une fois pour valider et fermer les Propriétés, une fois pour lancer le setup.exe.
 
-Cliquer sur Oui dans la fenêtre du Contrôle de compte d’utilisateur.
+4. Cliquer sur Oui dans la fenêtre du Contrôle de compte d’utilisateur.
 
-Cliquer sur Close dans la fenêtre du Setup Wizard de la disposition de clavier France AZERTY semi-automatique.
+5. Cliquer sur Close dans la fenêtre du Setup Wizard de la disposition de clavier France AZERTY semi-automatique.
 
-Ensuite, ou bien activer la disposition de clavier France AZERTY semi-automatique dans les Paramètres :
-    Heure et langue > Langue > Clavier > Remplacer la méthode d’entrée par défaut.
-Ou bien redémarrer l’ordinateur et utiliser le commutateur appelé « Barre de langues » près de l’horloge.
+6. Ensuite, ou bien activer la disposition de clavier France AZERTY semi-automatique dans les Paramètres :
+       Heure et langue > Langue > Clavier > Remplacer la méthode d’entrée par défaut.
+6. Ou bien redémarrer l’ordinateur et utiliser le commutateur appelé « Barre de langues » près de l’horloge.
 
 
 N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience

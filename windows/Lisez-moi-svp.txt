@@ -197,7 +197,7 @@ Des optimisations optionnelles par redisposition de touches sont possibles indé
 de disposition. Elles font appel au Redisposeur de codes matériels pour claviers, un logiciel de Windows,
 et elles sont documentées dans le fichier _Scancode_Map.txt dans le dossier redispositions\.
 
-  • Sur les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [<>] prend
+  • Sur les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [><] prend
     la place de Contrôle droite, les touches ISO et Verrouillage Capitales doivent être permutées,
     afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour
     la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique.
