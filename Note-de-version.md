@@ -87,11 +87,13 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 	* Mettre en ligne le script de compilation revu, corrigé, mis à jour et désormais en UTF-8. windows/outils/creadispo.cmd [416474a](https://github.com/dispoclavier/nouvel-azerty/commit/416474acf550216599ac44445c612f0338304974)
 	* Corriger le script. creadispo.cmd [e922a72](https://github.com/dispoclavier/nouvel-azerty/commit/e922a72afce2d9982fc90d1364159cef3bc99a9d), [31f44c7](https://github.com/dispoclavier/nouvel-azerty/commit/31f44c747ad3d640f904aec1cf43d751ef2a44b2), [dfdc733](https://github.com/dispoclavier/nouvel-azerty/commit/dfdc733a753bf98f8fe8c1b33586a8ee423ff2aa)
 	* Ajouter l’indicateur d’ordre des octets par téléversement. creadispo.cmd [11138e8](https://github.com/dispoclavier/nouvel-azerty/commit/11138e81282c01f7eeaebaa2d4422c5d33068a94), [a3bb72c](https://github.com/dispoclavier/nouvel-azerty/commit/a3bb72cf65718a24922fc4b8ccda8be55b71660f)
+	* Mettre à jour les informations sur la ListeNoms.txt. creadispo.cmd [410128a](https://github.com/dispoclavier/nouvel-azerty/commit/410128acfec9b75a0ce27255a4422b48f903f30f)
 * Documentation :
 	* Modes d’emploi :
+		* Ultra-condensé : Sous Windows : Ajouter. windows/Démarrage-rapide.txt [6143fe0](https://github.com/dispoclavier/nouvel-azerty/commit/6143fe060f5c6beac7b41eb7d8695efd4959a254)
 		* Condensés :
 			* Sous Linux : Mettre à jour. linux-chromeos/Lisez-moi-svp.txt [6cade34](https://github.com/dispoclavier/nouvel-azerty/commit/6cade34234e2190a2edcccb45459c5bdf1c8ab52), [f40b5f7](https://github.com/dispoclavier/nouvel-azerty/commit/f40b5f7b9855704e96ce65cf2be0468a8e3a4300), [396799d](https://github.com/dispoclavier/nouvel-azerty/commit/396799de0c3fcf75cd573b5069fa5ac2ba524cd2), [e7954fc](https://github.com/dispoclavier/nouvel-azerty/commit/e7954fc79d363958b96724f604bc1960684be3ea)
-			* Sous Windows : Ajouter. windows/Lisez-moi-svp.txt [d99e2b5](https://github.com/dispoclavier/nouvel-azerty/commit/d99e2b59e766f4378371488dc29551f5a967931f), [b6ae8b9](https://github.com/dispoclavier/nouvel-azerty/commit/b6ae8b9eb37de8352bda885bb23ef1716321cb9f), [e5a9e90](https://github.com/dispoclavier/nouvel-azerty/commit/e5a9e9062918ac96cb16de575d80149792770961), [7f95b0e](https://github.com/dispoclavier/nouvel-azerty/commit/7f95b0e0516b8b332669271f3aa69a84af7be824), [add3647](https://github.com/dispoclavier/nouvel-azerty/commit/add364718fb6c50865e674393b879512cce74469)
+			* Sous Windows : Ajouter. windows/Lisez-moi-svp.txt [d99e2b5](https://github.com/dispoclavier/nouvel-azerty/commit/d99e2b59e766f4378371488dc29551f5a967931f), [b6ae8b9](https://github.com/dispoclavier/nouvel-azerty/commit/b6ae8b9eb37de8352bda885bb23ef1716321cb9f), [e5a9e90](https://github.com/dispoclavier/nouvel-azerty/commit/e5a9e9062918ac96cb16de575d80149792770961), [7f95b0e](https://github.com/dispoclavier/nouvel-azerty/commit/7f95b0e0516b8b332669271f3aa69a84af7be824), [add3647](https://github.com/dispoclavier/nouvel-azerty/commit/add364718fb6c50865e674393b879512cce74469), [aacf24d](https://github.com/dispoclavier/nouvel-azerty/commit/aacf24d2b1277dd67d929d5ce187bfaf07f7d35a)
 		* Détaillés :
 			* Commun : readme.md alias Mode-d-emploi-commun.md [66bc697](https://github.com/dispoclavier/nouvel-azerty/commit/66bc697465aaf70fcd1d17944371d1b13064507b), [ccbaca1](https://github.com/dispoclavier/nouvel-azerty/commit/ccbaca16d9cf775d547d99652b772a88a1ef05e9)
 			* Sous Linux : linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.md [2b43aaa](https://github.com/dispoclavier/nouvel-azerty/commit/2b43aaa8e0e21e8ea77219a8264da81d18fc0c45)
@@ -113,7 +115,7 @@ Toutes les touches vives sont à jour, toutes les touches mortes simples aussi. 
 
 #### Installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Windows-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/5.3.0/Un-nouvel-AZERTY-Windows-5.3.0.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans le Lisez-moi-svp.txt inclus.
+Télécharger le dossier « [Un-nouvel-AZERTY-Windows-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/5.3.0/Un-nouvel-AZERTY-Windows-5.3.0.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « Démarrage-rapide.txt » ou dans « Lisez-moi-svp.txt ».
 
 ### Linux
 
