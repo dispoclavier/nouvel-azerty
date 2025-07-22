@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* NBTSP U+202F on Shift + VK_NUMPAD4 5.3.0.28.00 Tue 2025-07-22T0353+0200
 * Add all-in-one FR, EU, UN flags    5.3.0.27.00 Sun 2025-07-20T0233+0200
 * Rename file to kbfrFRsr.C          5.3.0.26.00 Wed 2025-07-16T0046+0200
 * Debug variant name output          5.3.0.25.00 Sat 2025-07-05T1742+0200
@@ -731,7 +732,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS17 aVkToWch17[] = {
   {VK_NUMPAD1   ,KANALOK,'1'      ,WCH_LGTR ,0x2199   ,0x21D9   ,0x2199   ,0x2B0B   ,0x2B69   ,0x2B03   ,WCH_NONE ,'1'      ,WCH_LGTR ,0x2B69   ,0x2B03   ,0x2199   ,0x21D9   ,0x2199   ,0x2B0B   },
   {VK_NUMPAD2   ,KANALOK,'2'      ,'A'      ,0x2193   ,0x21D3   ,0x2B07   ,0x2B07   ,0x2B63   ,0x21E9   ,WCH_NONE ,'2'      ,'a'      ,0x2B63   ,0x21E9   ,0x2193   ,0x21D3   ,0x2B07   ,0x2B07   },
   {VK_NUMPAD3   ,KANALOK,'3'      ,'B'      ,0x2198   ,0x21D8   ,0x2198   ,0x2B0A   ,0x2B68   ,0x2B02   ,WCH_NONE ,'3'      ,'b'      ,0x2B68   ,0x2B02   ,0x2198   ,0x21D8   ,0x2198   ,0x2B0A   },
-  {VK_NUMPAD4   ,KANALOK,'4'      ,WCH_LGTR ,0x2190   ,0x21D0   ,0x2B05   ,0x2B05   ,0x2B60   ,0x21E6   ,WCH_NONE ,'4'      ,'#'      ,0x2B60   ,0x21E6   ,0x2190   ,0x21D0   ,0x2B05   ,0x2B05   },
+  {VK_NUMPAD4   ,KANALOK,'4'      ,0x202F   ,0x2190   ,0x21D0   ,0x2B05   ,0x2B05   ,0x2B60   ,0x21E6   ,WCH_NONE ,'4'      ,'#'      ,0x2B60   ,0x21E6   ,0x2190   ,0x21D0   ,0x2B05   ,0x2B05   },
   {VK_NUMPAD5   ,KANALOK,'5'      ,'C'      ,0x2194   ,0x21D4   ,0x2194   ,0x2B0C   ,0x2B64   ,0x2B04   ,WCH_NONE ,'5'      ,'c'      ,0x2B64   ,0x2B04   ,0x2194   ,0x21D4   ,0x2194   ,0x2B0C   },
   {VK_NUMPAD6   ,KANALOK,'6'      ,'D'      ,0x2192   ,0x21D2   ,0x27A1   ,0x27A1   ,0x2B62   ,0x21E8   ,WCH_NONE ,'6'      ,'d'      ,0x2B62   ,0x21E8   ,0x2192   ,0x21D2   ,0x27A1   ,0x27A1   },
   {VK_NUMPAD7   ,KANALOK,'7'      ,0x2044   ,0x2196   ,0x21D6   ,0x2196   ,0x2B09   ,0x2B66   ,0x2B01   ,WCH_NONE ,'7'      ,'\\'     ,0x2B66   ,0x2B01   ,0x2196   ,0x21D6   ,0x2196   ,0x2B09   },
@@ -907,7 +908,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_NUMPAD0   ,10     ,'0'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_NUMPAD1   ,1      ,'0'      ,'0'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_NUMPAD1   ,10     ,'0'      ,'0'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_NUMPAD4   ,1      ,'U'      ,'+'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_DIVIDE    ,12     ,'\\'     ,'u'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_DIVIDE    ,14     ,'\\'     ,'u'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_DIVIDE    ,16     ,'\\'     ,'u'      ,'{'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
