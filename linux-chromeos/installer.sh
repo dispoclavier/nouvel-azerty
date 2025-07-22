@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-22T1307+0200
+#                       Date : 2025-07-22T1912+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -63,12 +63,8 @@
 #   Les extensions .c, .cpp et .yml servent à la coloration syntaxique et
 #   à faciliter l’ouverture sous Windows dans un souci d’interopérabilité.
 #
-#
 # L’absence des booléens dans Bash est palliée par le recours aux comparaisons
-# arithmétiques. On en profite pour inverser 0 et 1 — qui dans Bash signifient
-# vrai et faux, contrairement à la plupart des autres langages où ils
-# signifient faux et vrai — dans un souci de lisibilité.
-#
+# arithmétiques. Pour la lisibilité, 0 et 1 sont inversés en "vrai" et "faux".
 
 introduction=0 # Pas faite.
 function afficher {
