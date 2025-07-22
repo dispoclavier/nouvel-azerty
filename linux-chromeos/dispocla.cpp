@@ -1,4 +1,4 @@
-//                       Date: 2025-07-22T0340+0200
+//                       Date: 2025-07-22T0656+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1358,8 +1358,8 @@ xkb_symbols "kbfrFRs" {
 
 	key <KPAD> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[              KP_Add,               colon,           plusminus,               U2248,           plusminus,               U2248,           plusminus,               U2248 ],
-		[              KP_Add,               colon,           plusminus,               UEF7C,           plusminus,               UEF7C,           plusminus,               UEF7C ]
+		[              KP_Add,               U202F,           plusminus,               U2248,           plusminus,               U2248,           plusminus,               U2248 ],
+		[              KP_Add,          numbersign,           plusminus,               UEF7C,           plusminus,               UEF7C,           plusminus,               UEF7C ]
 	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
@@ -1470,9 +1470,9 @@ xkb_symbols "kbfrFRs" {
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		// Category:    digit,           separator,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
-		[                KP_4,               U202F,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
-		// Category:    digit,              prefix,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
-		[                KP_4,          numbersign,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
+		[                KP_4,               colon,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
+		// Category:    digit,           separator,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
+		[                KP_4,               colon,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
 	};
 
 	key <KP5>  {
