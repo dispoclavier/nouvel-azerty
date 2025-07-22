@@ -4,7 +4,7 @@ Ceci est un mode d’emploi couvrant principalement l’[installation](#installa
 
 ## Installation
 
-Télécharger le dossier « Un-nouvel-AZERTY-Windows-[version].zip » sous le titre « Assets », l’extraire, aller dans le dossier dont le nom finit en « (installation) », puis dans celui qui commence par « kbfrFRs » (« kbfrFRs v4.16.0.0 installation ») et lancer le setup.exe. S’ouvre alors une fenêtre « Windows a protégé votre ordinateur », où il faut cliquer sur « Informations complémentaires » puis sur « Exécuter quand même ». Puis se laisser guider par le « France AZERTY semi-automatique Setup Wizard ». Une fois fini, il faut redémarrer l’ordinateur pour que la nouvelle disposition apparaisse dans la barre des langues près de l’horloge dans la barre des tâches.
+Télécharger le dossier « Un-nouvel-AZERTY-Windows-[version].zip » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « Démarrage-rapide.txt » ou dans « Lisez-moi-svp.txt ».
 
 ## Utilisation
 
