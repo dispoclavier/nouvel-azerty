@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-05-19T2021+0200
+#                       Date : 2025-07-22T1307+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -8,14 +8,11 @@
 #
 #                     Projet : Dispoclavier
 #              URL du projet : https://dispoclavier.com
-#                     Maxime : Simplifier la dactylographie, pas le français.
-#                Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
-#              Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 #               Licence code : Apache 2.0
 #     URL de la licence code : https://www.apache.org/licenses/LICENSE-2.0
 #           Licence non-code : CC-BY 4.0
 # URL de la licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
-#               Adresse mail : dev@dispoclavier.net
+#               Adresse mail : dev[arobase]dispoclavier.com
 #
 #
 #   Utilisation
@@ -98,10 +95,13 @@ function installer_dispo {
 	sudo cp installer/dispotypes.c $X11/xkb/types/dispotypes
 	sudo cp $X11/xkb/types/complete $X11/xkb/types/complete-types-avant-dispoclavier
 	sudo sed -i '/\};/i \ \ \ \ include "dispotypes"' $X11/xkb/types/complete
-	# Installer le fichier de personnalisations s’il n’est pas déjà présent.
+	# Installer le fichier de personnalisation s’il n’est pas déjà présent.
 	if [ "$dispocla_perso" -eq 0 ]; then
-		echo 'Installation du fichier de personnalisations inclus.'
+		echo 'Installation du fichier de personnalisation inclus.'
 		sudo cp installer/dispocla_perso.cpp $X11/xkb/symbols/dispocla_perso
+	else
+		echo 'Confirmation de la présence d’un fichier de personnalisation.'
+		echo 'Un fichier "dispocla_perso" est présent et ne bouge pas.'
 	fi
 	# Installer les tableaux d’allocation de touches.
 	echo 'Installation des dispositions de clavier.'
@@ -213,7 +213,10 @@ function supprimer_dispo {
 		mkdir -p ~/.config/dispoclavier/symbols
 		cp $X11/xkb/symbols/dispocla_perso ~/.config/dispoclavier/symbols/dispocla_perso
 		echo 'Désinstallation des personnalisations de dispositions de clavier.'
-		sudo mv $X11/xkb/symbols/dispocla_perso sauvegarde/archive/dispocla_perso.cpp
+		sudo mv $X11/xkb/symbols/dispocla_perso sauvegarde/dispocla_perso.cpp
+	else
+		echo 'Confirmation de la présence d’un fichier de personnalisation.'
+		echo 'Un fichier "dispocla_perso" est présent et ne bouge pas.'
 	fi
 	# Désinstaller les tableaux d’allocation de touches.
 	if [ "$dispocla" -eq 1 ]; then
@@ -493,7 +496,7 @@ if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
 else
-	if [ "$dispotypes" -eq 1 ] && ! grep -qP 'include\s*"dispotypes"' $fichier; then
+	if ! grep -qP 'include\s*"dispotypes"' $fichier; then
 		installation=0
 		afficher 'n’inclut pas "dispotypes"'
 	else
@@ -524,7 +527,7 @@ if [ ! -f "$fichier" ]; then
 	fonctionne=0
 	afficher 'manque'
 else
-	if [ "$dispoled" -eq 1 ] && ! grep -qP 'include\s*"dispoled"' $fichier; then
+	if ! grep -qP 'include\s*"dispoled"' $fichier; then
 		installation=0
 		afficher 'n’inclut pas "dispoled"'
 	else
@@ -613,10 +616,10 @@ if [ "$fonctionne" -eq 1 ]; then
 							esac
 						fi
 						if [ -f "$HOME/.config/dispoclavier/keycodes/evdev" ] && [ "$fait" -eq 0 ]; then
-							echo -e "\n  ❓  Souhaitez-vous réinstaller les redispositions de touches"
-							echo      '       sauvegardées dans ~/.config/dispoclavier/keycodes/ ?'
+							echo -e "\n  ❓  Ou souhaitez-vous réinstaller les redispositions de touches"
+							echo      '       sauvegardées, elles, dans ~/.config/dispoclavier/keycodes/ ?'
 							echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
-							echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
+							echo      '       Pour les ignorer aussi, tapez i ou p puis Entrée.'
 							echo      '       Pour quitter, tapez q puis Entrée.'
 							read -p   '    ' repo
 							case $repo in
