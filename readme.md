@@ -2,11 +2,11 @@
 
 À l’heure où le mot d’ordre est d’éponger la dette publique, tous les gains de productivité sont les bienvenus. Aussi ce nouvel AZERTY vient-il à point nommé, car il élimine les tâches fastidieuses jusqu’à présent synonymes de production de textes utilisables, prêts à diffuser.
 
-Ce nouvel AZERTY permet en effet d’écrire facilement en français interopérable, avec les grandes ponctuations espacées et les chiffres groupés selon l’Imprimerie nationale, [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace) et [Unicode](https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G26915) par l’espace fine insécable U+202F, que l’industrie graphique française a massivement adoptée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa [version 34 (2018)](https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l).
+Ce nouvel AZERTY permet en effet d’écrire facilement en [français interopérable](https://blog.dispoclavier.eu/2020/05/19/ecriture-du-francais/#25-ecrire-en-francais-interoperable), avec les grandes ponctuations espacées et les chiffres groupés selon l’Imprimerie nationale, [Le Robert](https://dictionnaire.lerobert.com/guide/ponctuation-et-espace) et [Unicode](https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G26915) par l’espace fine insécable U+202F, que l’industrie graphique française a massivement adoptée depuis sa sortie dans Unicode 3.0 en 1999, et qui est prise en charge par le CLDR d’Unicode depuis sa [version 34 (2018)](https://cldr.unicode.org/downloads/cldr-34#h.q1mr39yetx2z_l) ; et avec les indicateurs ordinaux "ᵈ", "ᵉ", "ʳ" et "ˢ", recommandés par l’[Académie française](https://www.academie-francaise.fr/abreviations-des-adjectifs-numeraux) et pareillement pris en charge par le [CLDR](https://github.com/unicode-org/cldr/blob/01d3fe0c2168336453b5ec1a34837da1ba9fbc6c/common/main/fr.xml#L1528), dont le plus fréquent, "ᵉ", est en AltGr en synergie avec les chiffres.
 
-Sont facilitées aussi l’écriture avec majuscules diacritées, dont les plus courantes sont en Majuscule, et l’écriture en capitales diacritées, en Verrouillage Capitales pour autant que leurs minuscules ont une touche vive sur l’AZERTY. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, sans gaspiller de place pour une touche "ê", émulée par la touche morte accent circonflexe, dont la position reste inchangée.
+Sont facilitées aussi l’écriture avec [majuscules diacritées](https://www.academie-francaise.fr/questions-de-langue#5_strong-em-accentuation-des-majuscules-em-strong), dont les plus courantes sont en Majuscule, et l’écriture en capitales diacritées, en Verrouillage Capitales pour autant que leurs minuscules ont une touche vive sur l’AZERTY. Cela tranche avec le niveau de service fourni par l’AZERTY de la norme de clavier NF Z71‑300:2019, sans gaspiller de place pour une touche "ê", [émulée](#émulation-de-touche-ê) par la touche morte accent circonflexe, dont la position reste inchangée.
 
-Cela dit, rien n’oblige à utiliser ces nouvelles fonctionnalités, car l’écriture traditionnelle ou en langues étrangères sans espaces fines est tout aussi simple.
+Cela dit, rien n’oblige à utiliser ces nouvelles fonctionnalités, car l’écriture traditionnelle ou en langues étrangères sans espaces fines est tout aussi simple, grâce à la nouvelle modificatrice « AltFr » entre Majuscule et [W], ou sur Verrouillage Capitales qui passe alors sur [><] ou sur Contrôle droite.
 
 Ce nouvel AZERTY est la disposition de base au sein d’un ensemble de dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie, notamment au breton, aux langues de Polynésie, au bambara et à d’autres langues d’Afrique francophone. Toutes prennent en charge l’espacement des grandes ponctuations avec l’espace fine insécable selon la typographie française nouvelle école. L’espacement vieille école manuel du deux-points est facilité pour une saisie de texte selon la pratique de l’Imprimerie nationale, qui applique déjà l’espacement nouvelle école aux guillemets chevrons.
 
@@ -39,61 +39,73 @@ Sur ce nouvel AZERTY, plusieurs touches changent de fonctionnalité afin de rend
 
 Ce nouvel AZERTY introduit une nouvelle bascule, et deux bascules existantes voient leur mode de fonctionnement modifié.
 
-##### Verrouillage de mode
+##### Verrouillage Mode
 
-La touche [₂] ([²]) à gauche de [1] et au-dessus de [Tab] devient une deuxième bascule graphique pour délester la bascule Verrouillage Majuscule de l’AZERTY traditionnel.
+La touche [²] à gauche de [1&] et au-dessus de la touche de tabulation devient une deuxième bascule graphique pour délester la bascule Verrouillage Majuscule de l’AZERTY traditionnel. Cette deuxième bascule graphique s’appelle « VerrMod » pour « verrouillage (de) mode ». Elle met en mode ASCII une partie du clavier, la barre d’espace et toutes les touches graphiques sauf les lettres simples.
 
-Le VerrMaj tel qu’on le connaît est bon pour les machines à écrire. Mais sur l’ordinateur, émuler la machine à écrire n’a aucun sens.
-
-###### Effets
+###### Mode ASCII
 
 La nouvelle bascule VerrMod met les chiffres de sa rangée en Minuscule, et aussi en Majuscule pour la rétrocompatibilité et la synergie avec les lettres majuscules dans les tableurs, tout en les laissant aussi en AltGr afin de maintenir les synergies habituelles.
 
 Les autres touches non alphabétiques sont alors optimisées pour coder, dans ce qu’on peut appeler un mode ASCII, considéré comme le mode par excellence, autrement que le mode capitales classique, au point de donner son nom à cette nouvelle bascule, prise en charge nativement par Windows et Linux.
 
-En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule sur les touches à gauche d’Entrée, "-" sur [*], "_" sur [$].
+En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule sur les touches à gauche d’Entrée, "-" sur [µ*], "_" sur [£$¤].
 
-De même, les guillemets ASCII vont sur les touches à côté, le double sur [^], le simple (l’apostrophe ASCII) sur [ù], afin de continuer d’être à portée.
+De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨^], le simple (l’apostrophe ASCII) sur [%ù], afin de continuer d’être à portée.
 
-Aussi, le symbole égale (souvent appelé « signe égale » par calque sur l’anglais britannique, ou « signe égal » par calque sur l’anglais américain) regagne sa touche [=].
+Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}].
 
-De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui montent en Majuscule à leur place. Ainsi la touche [/:] devient 100 % rétrocompatible, et la touche suivante lui emboîte le pas avec ";" à la place de "!", et "\" à la place de "§".
+De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui montent en Majuscule à leur place. Ainsi, la touche [/:] devient 100 % rétrocompatible, et la touche suivante lui emboîte le pas avec ";" à la place de "!", et "\" à la place de "§".
 
-##### Verrouillage capitales
+En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [%ù], B sur [µ*], C sur [¨^], D sur [£$¤], E sur [°)\]] et F sur [+=}]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
+
+##### Verrouillage Capitales
+
+Les capitales y compris É, È, Ç, À et Ù sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules.
+
+C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.
+
+Le VerrMaj tel qu’on le connaît est bon pour les machines à écrire. Mais sur l’ordinateur, émuler la machine à écrire tire la productivité vers le bas dans une logique à courte vue axée sur un marketing simpliste et populiste qui trahissait les utilisateurs et les sacrifiait sur l’autel du profit facile.
+
+##### Verrouillage Numérique
+
+Cette bascule est réservée aux claviers compacts et n’a plus aucun effet sur les claviers complets style ISO 9995. Faire autrement reviendrait à dégrader les conditions de travail sur les claviers qui ont le pavé numérique sur les touches alphabétiques, alors que sur les claviers avec un pavé numérique à part, tout le monde veut que le verrouillage numérique s’allume automatiquement et reste allumé en permanence.
+
+(Les vieux claviers de PC IBM ont eu le mérite d’obliger les éditeurs de systèmes à prendre en charge le verrouillage numérique en vue de sa future utilisation sur les claviers sans pavé numérique dédié mais avec les flèches et autres touches d’édition.)
+
+Le pavé numérique est désormais aussi bien en Fonction qu’en Verrouillage Numérique. Le réglage dans le BIOS est parfois caché sous la rubrique « POST Behavior » sans avoir rien à voir avec le Power-On Self-Test.
+
+Le niveau Majuscule est graphique désormais même sur les 10 touches à chiffres du pavé numérique. Cela permet de saisir directement sur le pavé numérique tous les chiffres hexadécimaux, avec "A" sur [2], "B" sur [3], "C" sur [5], "D" sur [6], "E" sur [8] et "F" sur [9] pour la cohérence avec le pavé numérique graphique en AltFr en mode ASCII. De plus, en Majuscule il y a la virgule sur le point, la barre de fraction U+2044 sur le [7], le triple zéro sur [1], le double sur [0], le deux-points sur [4], et le séparateur des milliers français, l’espace fine insécable est sur [+].
 
 ### Lettres
 
 La disposition de toutes les minuscules, y compris accentuées ou avec cédille, est identique à l’AZERTY traditionnel.
 
-Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr.
+Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce pourquoi les chiffres pour leur part sont en AltGr et en AltFr.
 
 #### Émulation de touche "ê"
 
 La touche morte de l’accent circonflexe fonctionne optionnellement comme une touche "ê" avant "k", "l", "m", "n", "p", "q", "r", "t", "v" ; "ê" s’insère ensemble avec l’une de ces lettres si le "e" n’est pas saisi avant.
 
-#### Verrouillage des capitales
-
-Les capitales y compris É, È, Ç, À et Ù sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules. (C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.)
-
 #### Touches mortes
 
-Plus généralement, toutes les lettres accentuées ou autrement diacritées sont dans les touches mortes, dont les deux les plus traditionnelles, l’accent circonflexe et le tréma, sont l’une à sa place historique, l’autre pareillement en Minuscule mais une touche plus loin au-dessus, sur [=], au lieu de rester en Majuscule sur la touche de l’accent circonflexe, cette place étant utilisée pour le guillemet français simple ouvrant. Mais la touche morte tréma y reste accessible en Maj + AltFr pour la rétrocompatibilité.
+Plus généralement, toutes les lettres accentuées ou autrement diacritées sont dans les touches mortes, dont les deux les plus traditionnelles, l’accent circonflexe et le tréma, sont l’une à sa place historique, l’autre pareillement en Minuscule mais une touche plus loin au-dessus, sur [+=}], au lieu de rester en Majuscule sur la touche de l’accent circonflexe, cette place étant utilisée pour le guillemet français simple ouvrant. Mais la touche morte tréma y reste accessible en Maj + AltFr pour la rétrocompatibilité.
 
-Les deux autres touches mortes de l’AZERTY traditionnel, qui ont fait leur entrée après l’avènement de l’AZERTY d’ordinateur, l’accent grave et le tilde, sont toujours en AltGr mais sur la touche de l’accent circonflexe pour le tilde, et sur la touche [$] pour l’accent grave, car en Minuscule, c’est la touche de la touche morte accent aigu, qui sert aussi à la saisie des [guillemets apostrophes](#guillemets-de-distanciation) doubles et simples, ensemble avec la touche morte accent circonflexe. Toutefois, pour la rétrocompatibilité, les touches mortes tilde et accent grave sont aussi sur leurs touches historiques, en Maj + AltGr en mode français, sous des formes rétrocompatibles qui émettent des symboles ASCII quand on fait suivre un appui sur la barre d’espace ou qu’on appuie deux fois sur l’une de ces touches mortes. Celles-ci sont destinées uniquement à assurer un maximum de rétrocompatibilité.
+Les deux autres touches mortes de l’AZERTY traditionnel, qui ont fait leur entrée après l’avènement de l’AZERTY d’ordinateur, l’accent grave et le tilde, sont toujours en AltGr mais sur la touche de l’accent circonflexe pour le tilde, et sur la touche [£$¤] pour l’accent grave, car en Minuscule, c’est la touche de la touche morte accent aigu, qui sert aussi à la saisie des [guillemets apostrophes](#guillemets-de-distanciation) doubles et simples, ensemble avec la touche morte accent circonflexe. Toutefois, pour la rétrocompatibilité, les touches mortes tilde et accent grave sont aussi sur leurs touches historiques, en Maj + AltGr en mode français, sous des formes rétrocompatibles qui émettent des symboles ASCII quand on fait suivre un appui sur la barre d’espace ou qu’on appuie deux fois sur l’une de ces touches mortes. Celles-ci sont destinées uniquement à assurer un maximum de rétrocompatibilité.
 
-Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposées en Maj + AltGr, chacune sur la touche de son équivalent en composition, sauf la touche morte grec ou cerclé sur [Y], disposée aussi en AltGr à la place de son équivalent en composition, l’arobase, en Minuscule sur [)]. Les autres touches mortes transformationnelles appliquent elles aussi des transformations aux lettres et aux chiffres plutôt que d’ajouter des diacritiques. Partiellement cela est aussi le cas des touches mortes diacritiques, comme pour la saisie des [guillemets apostrophes](#guillemets-de-distanciation). Elles sont toutes documentées sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/).
+Toutes les 30 touches mortes diacritiques ou transformationnelles sont disposées en Maj + AltGr, chacune sur la touche de son équivalent en composition, sauf la touche morte grec ou cerclé sur [Y], disposée aussi en AltGr à la place de son équivalent en composition, l’arobase, en Minuscule sur [°)\]]. Les autres touches mortes transformationnelles appliquent elles aussi des transformations aux lettres et aux chiffres plutôt que d’ajouter des diacritiques. Partiellement cela est aussi le cas des touches mortes diacritiques, comme pour la saisie des [guillemets apostrophes](#guillemets-de-distanciation). Elles sont toutes documentées sur [cette page](https://dispoclavier.com/nouvel-azerty/touches-mortes/).
 
 #### Touche morte groupe
 
-La touche morte groupe s’appelle aussi « touche groupe ». Elle est notée « ① » et disposée sur [*] en Minuscule et en AltGr.
+La touche morte groupe s’appelle aussi « touche groupe ». Elle est notée « ① » et disposée sur [µ*] en Minuscule et en AltGr.
 
-La touche groupe met la disposition dans le groupe 1. Il y a les lettres françaises "œ" et "æ", de nombreuses autres lettres documentées dans [ce tableau](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-lettres), le point médian sur [p] et [P], le symbole litre « ℓ » sur [L], le demi-anneau gauche « ʿ » sur [l], le demi-anneau droit « ʾ » sur [m], les symboles verset « ℣ » et répons « ℟ » sur [V] et [R], et les symboles documentés dans [ce tableau](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-symboles).
+La touche groupe met la disposition dans le groupe 1. Il y a les lettres françaises "œ" et "æ", de nombreuses autres lettres documentées dans [ce tableau](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-lettres), le point médian sur [P] en Minuscule et en Majuscule, le symbole litre « ℓ » sur [L] en Majuscule, les demi-anneaux gauche « ʿ » et droit « ʾ » sur [L] et [M] en Minuscule, les symboles verset « ℣ » et répons « ℟ » sur [V] et [R], et les symboles documentés dans [ce tableau](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#groupes-des-symboles).
 
 Répétée ou suivie d’un chiffre, la touche morte groupe peut activer 11 autres [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres) et 11 autres [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles).
 
 #### Touche de composition
 
-Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [=]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [$].
+Deuxième touche morte générique après la touche morte groupe, la touche de composition se trouve en AltGr sur la dernière touche en haut à droite, [+=}]. En mode ASCII, elle est doublée à la place de la touche morte accent grave, en AltGr sur [£$¤].
 
 Le symbole ISO de la touche de composition est "⎄" U+2384. Sur ce nouvel AZERTY, son symbole est le deux-barrettes "¦" U+00A6, souvent appelé barre brisée, plus facile à afficher, saisi le plus rapidement par la touche morte tréma suivie de la contre-oblique.
 
@@ -107,20 +119,9 @@ La touche de composition offre une méthode de saisie alternative, quoique peu i
 
 Les chiffres sont en AltGr, afin de libérer les places en Majuscule pour les majuscules É, È, Ç et À et pour les tirets autres que le tiret du 6 et le tiret du 8, qui restent inchangés.
 
-Les chiffres sont aussi en AltFr, la nouvelle touche modificatrice sur la touche [><]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7], [8], [9], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M], afin que toutes les quatre grandes ponctuations ASCII soient toujours en AltFr sur les touches entre [N] et [Majuscule].
+Les chiffres sont aussi en AltFr, la nouvelle touche modificatrice sur la touche [><]. Pour les chiffres, AltFr fonctionne comme une deuxième touche AltGr. De plus, en AltFr, les chiffres sont aussi disposés en pavé en dessous des touches [7è`], [8_\\], [9ç^], avec le zéro sur [N], le double zéro sur [B], le point sur [P] et la virgule sur [M], afin que toutes les quatre grandes ponctuations ASCII soient toujours en AltFr sur les touches entre [N] et Majuscule.
 
-#### Bascule de mode
-
-La touche [₂] est une deuxième bascule graphique, appelée « VerrMod » pour « verrouillage de mode ». Elle met en mode ASCII une partie du clavier. Sont concernées toutes les touches graphiques sauf les lettres simples, et la barre d’espace.
-
-La touche [₂] est celle entre [Échap] et [Tab], à gauche de [1]. Pour la ressemblance, elle est représentée par l’indice 2 « [₂] » plutôt que l’exposant 2 « [²] ».
-
-##### Mode ASCII
-
-Tant que le clavier est en mode ASCII, les chiffres sont en Minuscule, et en Majuscule pour la rétrocompatibilité, en plus de continuer d’être en AltGr pour la synergie avec la touche morte groupe.
-
-En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [ù], B sur [*], C sur [^], D sur [$], E sur [)] et F sur [=]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
-
+Quand le clavier est en mode ASCII, les chiffres sont en Minuscule, et en Majuscule pour la rétrocompatibilité, en plus de continuer d’être en AltGr pour la synergie avec la touche morte groupe.
 Les émojis chiffres, complétés par les émojis des deux autres touches de téléphone étoile et croisillon ou dièse, sont en AltGr + AltFr sur la rangée des chiffres en mode français, ainsi qu’en Maj + AltGr + AltFr, avec la particularité que l’émoji 10 prend la place de l’émoji chiffre 0. Non toutefois en mode ASCII, où les niveaux AltGr + AltFr et Maj + AltGr sont pris par les [indices](#exposants-et-indices).
 
 ### Ponctuations
@@ -131,42 +132,42 @@ En Minuscule sur les deux premières touches après le [N], la virgule ne change
 
 En mode français, toutes les grandes ponctuations sont en Majuscule, et elles sont déjà espacées. Non espacées en mode français, elles sont en AltFr. Ainsi, le point d’interrogation est à sa place traditionnelle mais déjà espacé. Pour l’avoir non espacé, il faut appuyer sur AltFr au lieu d’appuyer sur Maj.
 
-Le point d’exclamation quant à lui prend la place du point, afin de pouvoir laisser sa place au point-virgule. Mais le deux-points reste bien sur sa touche. Les [guillemets](#guillemets) français, au nombre de quatre — deux doubles et deux simples —, prennent les quatre places en Majuscule à gauche de la touche Entrée, les doubles aux places de [%] et [µ], les simples aux places de [¨] et [£]. Eux aussi sont en AltFr sans espace à l’intérieur, pour leur usage en allemand et dans d’autres langues.
+Le point d’exclamation quant à lui prend la place du point, afin de pouvoir laisser sa place au point-virgule. Mais le deux-points reste bien sur sa touche. Les [guillemets](#guillemets) français, au nombre de quatre — deux doubles et deux simples —, prennent les quatre places en Majuscule à gauche de la touche Entrée, les doubles sur [%ù] et [µ*], les simples sur [¨^] et [£$¤]. Eux aussi sont en AltFr sans espace à l’intérieur, pour leur usage en allemand et dans d’autres langues.
 
 L’espacement automatique des ponctuations en Majuscule se fait par la seule espace insécable Unicode utilisable à cet effet, l’espace fine insécable U+202F. L’autocorrection des traitements de texte, qui espace les ponctuations par l’espace insécable U+00A0, peut et doit être désactivée, avec d’autant plus de raison que l’espacement qu’elle applique [n’est pas français](#typographie) et fonctionne très mal voire pas du tout.
 
 En cas de points d’interrogation ou d’exclamation multiples, l’espace devant le deuxième est évitée manuellement. Plutôt que de changer de touche modificatrice, on peut maintenir l’appui sur Majuscule et ajouter un appui sur AltFr.
 
-En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points et le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
+En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points et le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi, la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
 
 #### Ponctuations en haut
 
-En mode français, les tirets du 6 et du 8 restent bien à leurs places éponymes, tandis qu’en mode ASCII, quand les chiffres sont verrouillés, ils n’y sont pas en Majuscule, mais plus facilement atteignables en Minuscule sur les touches [$] pour le tiret bas, et [*] pour le trait d’union, quand le guillemet et l’apostrophe bénéficient de facilités similaires, l’un à la place de la touche morte accent circonflexe [^], l’autre à la place du [ù].
+En mode français, les tirets du 6 et du 8 restent bien à leurs places éponymes, tandis qu’en mode ASCII, quand les chiffres sont verrouillés, ils n’y sont pas en Majuscule, mais plus facilement atteignables en Minuscule sur les touches [£$¤] pour le tiret bas, et [µ*] pour le trait d’union, quand le guillemet et l’apostrophe bénéficient de facilités similaires, l’un à la place de la touche morte accent circonflexe [¨^], l’autre à la place du [%ù].
 
-En mode français, l’apostrophe en tant que telle reste elle aussi à sa place traditionnelle, mais elle y change de caractère pour devenir l’apostrophe courbe [’], très appréciée en français, tandis que l’apostrophe droite ['] (qu’on peut appeler « guillemet simple générique » ou « apostrophe ASCII ») prend la place du symbole égal, qui lui, est en AltFr sur cette touche.
+En mode français, l’apostrophe en tant que telle reste elle aussi à sa place traditionnelle, mais elle y change de caractère pour devenir l’apostrophe courbe "’", très appréciée en français, tandis que l’apostrophe droite "'" (qu’on peut appeler « guillemet simple générique » ou « apostrophe ASCII ») prend la place du symbole égal, qui lui, est en AltFr sur cette touche.
 
-Les parenthèses elles-mêmes sont désormais réunies en AltGr sur [D] et [F] comme « début » et « fin », sur la rangée de repos pour une saisie facile, et les crochets y sont sur [K] et [L] en synergie avec les points de suspension sur AltGr + [ù] pour faciliter la saisie des points de suspension entre crochets.
+Les parenthèses elles-mêmes sont désormais réunies en AltGr sur [D] et [F] comme « début » et « fin », sur la rangée de repos pour une saisie facile, et les crochets y sont sur [K] et [L] en synergie avec les points de suspension sur AltGr + [%ù] pour faciliter la saisie des points de suspension entre crochets.
 
-Le guillemet double générique en revanche reste inchangé en mode français, et avec lui comme caractère de base, tous les guillemets doubles typographiques autres que les guillemets chevrons sont en touches mortes, les ouvrants par accent circonflexe, les fermants par accent aigu, les ouvrants allemands à hauteur de virgule par tréma. Les réfléchis sont aussi accessibles, par accent grave. Cette méthode de saisie puissante et intuitive évite de mémoriser une multitude d’emplacements et permet une prise en charge plus complète. Les guillemets apostrophes simples en bénéficient pareillement, avec comme caractère de base l’apostrophe courbe (qui en fait partie) sur [4] ou l’apostrophe ASCII sur [=] au choix.
+Le guillemet double générique en revanche reste inchangé en mode français, et avec lui comme caractère de base, tous les guillemets doubles typographiques autres que les guillemets chevrons sont en touches mortes, les ouvrants par accent circonflexe, les fermants par accent aigu, les ouvrants allemands à hauteur de virgule par tréma. Les réfléchis sont aussi accessibles, par accent grave. Cette méthode de saisie puissante et intuitive évite de mémoriser une multitude d’emplacements et permet une prise en charge plus complète. Les guillemets apostrophes simples en bénéficient pareillement, avec comme caractère de base l’apostrophe courbe (qui en fait partie) sur [4'{] ou l’apostrophe ASCII sur [+=}] au choix.
 
 ### Symboles ASCII
 
-La plupart des symboles en Minuscule ou en AltGr sur les touches des chiffres y tiennent désormais des places en Majuscule + AltGr pour la rétrocompatibilité, en mode français uniquement. C’est le cas de la perluète sur Maj + AltGr + [1] parce qu’elle laisse sa place à l’exposant deux, du tilde sur [2] sous la forme de sa traditionnelle touche morte, du croisillon sur [3], de l’accolade ouvrante sur [4], du crochet ouvrant sur [5], de la barre verticale ou tube sur [6], de l’accent grave ASCII en touche morte sur [7], de la contre-oblique sur [8], du crochet fermant et de l’accolade fermante sur les deux dernières touches. Ces places sur [9] et [0] par contre sont utilisées pour disposer les parenthèses, parce que l’arobase est en Minuscule sur la touche suivante, et le circonflexe ASCII est en Majuscule + AltGr sur la touche de la touche morte accent circonflexe. 
+La plupart des symboles en Minuscule ou en AltGr sur les touches des chiffres y tiennent désormais des places en Majuscule + AltGr pour la rétrocompatibilité, en mode français uniquement. C’est le cas de la perluète sur Maj + AltGr + [1&] parce qu’elle laisse sa place à l’exposant deux, du tilde sur [2é~] sous la forme de sa traditionnelle touche morte, du croisillon sur [3"#], de l’accolade ouvrante sur [4'{], du crochet ouvrant sur [5(\[], de la barre verticale ou tube sur [6-|], de l’accent grave ASCII en touche morte sur [7è`], de la contre-oblique sur [8_\\], du crochet fermant et de l’accolade fermante sur les deux dernières touches. Ces places sur [9ç^] et [0à@] par contre sont utilisées pour disposer les parenthèses, parce que l’arobase est en Minuscule sur la touche suivante, et le circonflexe ASCII est en Majuscule + AltGr sur la touche de la touche morte accent circonflexe. 
 
 Surtout, tous les symboles ASCII sauf la virgule et le point sont désormais disposés en AltGr sur les touches des lettres et les quatre touches de ponctuations qui leur font suite, sauf l’arobase qui reçoit une position stable en Minuscule à la place de la parenthèse fermante et permet ainsi d’utiliser sa place en AltGr sur [Y] pour une deuxième instance de la touche morte grec ou cerclé, et le guillemet double générique ou ASCII, qui garde sa place sur la touche [3"] et cède sa place en AltGr au symbole euro sur [E]. Le symbole dollar lui aussi a une place prédéfinie sur AltGr + [S].
 
-Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur la gauche, crochets et accolades sur la droite, ces dernières sur [I] et [O] pour respecter l’anatomie de la main, les crochets en dessous sur [K] et [L] pour la cohérence et la synergie avec les points de suspension sur AltGr + [ù], les parenthèses en regard sur [D] et [F], sous le symbole euro sur [E], à la suite du symbole dollar sur [S], et au-dessus des symboles inférieur/supérieur ou crochets pointus, qui sont disposés sur [C] et [V] à la suite de l’oblique sur [W] et de l’astérisque sur [X], pour les synergies requises en langages informatiques, au niveau des balises en SGML/HTML/XML et des commentaires (en blocs) C/C++/CSS/PHP.
+Viennent ensuite tous les symboles ASCII appariés, parenthèses et chevrons sur la gauche, crochets et accolades sur la droite, ces dernières sur [I] et [O] pour respecter l’anatomie de la main, les crochets en dessous sur [K] et [L] pour la cohérence et la synergie avec les points de suspension sur AltGr + [%ù], les parenthèses en regard sur [D] et [F], sous le symbole euro sur [E], à la suite du symbole dollar sur [S], et au-dessus des symboles inférieur/supérieur ou crochets pointus, qui sont disposés sur [C] et [V] à la suite de l’oblique sur [W] et de l’astérisque sur [X], pour les synergies requises en langages informatiques, au niveau des balises en SGML/HTML/XML et des commentaires (en blocs) C/C++/CSS/PHP.
 
 D’autres symboles ASCII sont disposés sur les places vacantes avec des mnémoniques alphabétiques ou graphiques : la perluète "&" sur [P], le croisillon "#" sur [Q], le symbole pour cent "%" sur [Z], le circonflexe ASCII "^" sur [A], le tilde "~" sur [T], la contre-oblique "\\" sur [R], la barre verticale ou tuyau "|" sur [M] parce que c’est l’équivalent en composition de la touche morte macron, le symbole égal "=" sur [B], l’accent grave ASCII "`" sur [N], le tiret-moins "-" sur [G], le signe plus "+" sur [H], et enfin le tiret bas "_" sur [J], et l’apostrophe ASCII "'" sur [U].
 
 Pour les quatre grandes ponctuations après la touche du [N], le point d’interrogation, le point d’exclamation, le deux-points et le point-virgule, la disposition varie légèrement entre les modes français et ASCII :
 
 * En mode français, elles sont en Majuscule avec espace, et en AltFr sans espace. Toutes sauf le point-virgule sont aussi en AltGr. Le point-virgule cède sa place en AltGr au symbole paragraphe, afin que celui-ci soit en synergie avec les chiffres, pour la rétrocompatibilité avec le symbole paragraphe sur l’AZERTY traditionnel, où il est pareillement en synergie avec les chiffres (sauf que c’est en Majuscule).
-* En mode ASCII, toutes les quatre grandes ponctuations ASCII sont toujours en AltFr, mais aussi en AltGr ; deux – le deux-points et le point-virgule – sont aussi en Minuscule ; et les deux autres sont aussi en Majuscule : les points d’interrogation et d’exclamation — mais sans espace, pour s’adapter au mode ASCII. Pour ces deux dernières, peu importe alors que l’on appuie sur [Majuscule] ou sur [AltFr].
+* En mode ASCII, toutes les quatre grandes ponctuations ASCII sont toujours en AltFr, mais aussi en AltGr ; deux – le deux-points et le point-virgule – sont aussi en Minuscule ; et les deux autres sont aussi en Majuscule : les points d’interrogation et d’exclamation — mais sans espace, pour s’adapter au mode ASCII. Pour ces deux dernières, peu importe alors que l’on appuie sur Majuscule ou sur AltFr.
 
 ### Exposants et indices
 
-L’exposant deux de l’AZERTY traditionnel change de touche suite à la réaffectation de sa touche traditionnelle [₂] à la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
+L’exposant deux de l’AZERTY traditionnel change de touche suite à la réaffectation de sa touche traditionnelle [²] à la bascule VerrMod. Sauf sur les variantes pour le breton, pour la Polynésie française et pour l’Afrique francophone, l’exposant 2 est sur la touche [1&], et l’exposant 3 vient le rejoindre en Majuscule afin de couvrir toutes les utilisations d’unités de mesure au carré et au cube.
 
 Au-delà du carré et du cube, les exposants de tous les dix chiffres sont en Maj + AltFr sur les touches des chiffres.
 
@@ -174,9 +175,9 @@ En mode capitales, l’indice 2 et l’indice 3 prennent la place des expoants
 
 Les indices de tous les dix chiffres sont présents uniquement en mode ASCII, mais alors aussi bien en Maj + AltGr qu’en AltGr + AltFr, car en mode français, le niveau Maj + AltGr des touches de la rangée des chiffres est pris par les caractères rétrocompatibles, et le niveau AltGr + AltFr n’est pas très pratique sur ces touches et sert à redonder les émojis chiffres avec le "0️⃣", non le nombre "🔟", sur la touche du zéro.
 
-Ces exposants et indices servaient autrefois à composer des fractions ordinaires au-delà des quelques fractions précomposées d’Unicode, tant que la barre de fraction n’était pas encore implémentée comme elle était conçue, ou dans les logiciels où elle ne l’est toujours pas. Cela permet de coder en dur toutes les fractions ordinaires, au-delà des fractions précomposées qui sont en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est sur [/] en synergie avec les indices en AltGr + AltFr, et en mode ASCII, avec les exposants en Maj + AltFr (en mode français, c’est le deux-points sans espace).
+Ces exposants et indices servaient autrefois à composer des fractions ordinaires au-delà des quelques fractions précomposées d’Unicode, tant que la barre de fraction n’était pas encore implémentée comme elle était conçue, ou dans les logiciels où elle ne l’est toujours pas. Cela permet de coder en dur toutes les fractions ordinaires, au-delà des fractions précomposées qui sont en composition. Les fractions ordinaires s’écrivent à l’aide de la barre de fraction U+2044 qui est sur [/:] en synergie avec les indices en AltGr + AltFr, et en mode ASCII, avec les exposants en Maj + AltFr (en mode français, c’est le deux-points sans espace).
 
-En matière d’exposants, les minuscules des lettres de l’alphabet de base sont aussi prises en charge sur touches vives, en Maj + AltFr, chacune sur la touche de sa lettre de base. car ces exposants servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux "ᵈ", "ᵉ", "ʳ", "ˢ", dont le plus fréquent, "ᵉ", est aussi en AltGr sur [)] à la suite des chiffres et en synergie avec ceux-ci. Cela fonctionne aussi pour les lettres diacritées, car les accents peuvent être ajoutés même sur des exposants, pour peu que la police de caractères les prenne en charge. Après l’appui sur la touche morte correspondante, il ne manque plus que d’appuyer sur la barre d’espace.
+En matière d’exposants, les minuscules des lettres de l’alphabet de base sont aussi prises en charge sur touches vives, en Maj + AltFr, chacune sur la touche de sa lettre de base. car ces exposants servent d’indicateurs d’abréviation, à commencer par les indicateurs ordinaux "ᵈ", "ᵉ", "ʳ", "ˢ", dont le plus fréquent, "ᵉ", est aussi en AltGr sur [°)\]] à la suite des chiffres et en synergie avec ceux-ci. Cela fonctionne aussi pour les lettres diacritées, car les accents peuvent être ajoutés même sur des exposants, pour peu que la police de caractères les prenne en charge. Après l’appui sur la touche morte correspondante, il ne manque plus que d’appuyer sur la barre d’espace.
 
 ### Barre d’espace
 
@@ -198,7 +199,7 @@ Les symboles pour cent et micro, le symbole livre et la touche morte tréma cèd
 
 #### Exposants et indices additionnels
 
-En mode ASCII, quand les chiffres en indice sont en Maj + AltGr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le "₋" sur la touche [)], le "₊" sur la touche [=]. S’y ajoutent le symbole égal en indice "₌" sur [$], et les parenthèses en indice "₍" sur [ù] et "₎" sur [*]. Sur [^], le tiret bas, symbole de l’indiciation, vient compléter l’ensemble. Pareil pour les chiffres en exposant en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
+En mode ASCII, quand les chiffres en indice sont en Maj + AltGr, ces indices sont complétés par les signes moins et plus en indice sur les touches moins et plus, nommées d’après leur fonctionnalité en Contrôle pour les raccourcis clavier, le "₋" sur la touche [°)\]], le "₊" sur la touche [+=}]. S’y ajoutent le symbole égal en indice "₌" sur [£$¤], et les parenthèses en indice "₍" sur [%ù] et "₎" sur [µ*]. Sur [¨^], le tiret bas, symbole de l’indiciation, vient compléter l’ensemble. Pareil pour les chiffres en exposant en Maj + AltFr, toujours en mode ASCII, avec le circonflexe ASCII en tant que symbole de l’exponentiation.
 
 #### Opérateurs arithmétiques
 
@@ -210,9 +211,9 @@ L’opérateur point "⋅" U+22C5 est sur AltGr + AltFr + [X], et aussi 
 
 ##### Barre de fraction
 
-La barre de fraction U+2044 est sur AltGr + AltFr + [/]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire.
+La barre de fraction U+2044 est sur AltGr + AltFr + [/:]. Entre des chiffres ordinaires, elle déclenche la mise en forme de fraction ordinaire.
 
-La partie entière peut être séparée par le signe plus invisible U+2064 sur AltGr + AltFr + [H]. D’autres caractères, invisibles de préférence, comme l’antiliant U+200C sur AltGr + AltFr + [W], ou le séparateur invisible U+2063 sur AltGr + AltFr + [?], fonctionnent aussi, sans être destinés à cet usage.
+La partie entière peut être séparée par le signe plus invisible U+2064 sur AltGr + AltFr + [H]. D’autres caractères, invisibles de préférence, comme l’antiliant U+200C sur AltGr + AltFr + [W], ou le séparateur invisible U+2063 sur AltGr + AltFr + [?,], fonctionnent aussi, sans être destinés à cet usage.
 
 ##### Symbole rapport
 
@@ -272,19 +273,19 @@ Par exemple, l’émoji "⚠" « attention danger » est dans le groupe 1 d
 
 • En AltGr :
 
-  1. Touche morte groupe : AltGr + [*]
+  1. Touche morte groupe : AltGr + [µ*]
   2. Circonflexe : AltGr + [A]
 
 • En AltGr en mode ASCII :
 
-  1. Basculer en mode ASCII : touche [₂]
-  2. Touche morte groupe : AltGr + [*]
-  3. Circonflexe : AltGr + [^]
+  1. Basculer en mode ASCII : touche [²]
+  2. Touche morte groupe : AltGr + [µ*]
+  3. Circonflexe : AltGr + [¨^]
 
 • En Maj + AltGr en mode français :
 
   1. Touche morte groupe : Maj + AltGr + [Q]
-  2. Circonflexe : Maj + AltGr + [^]
+  2. Circonflexe : Maj + AltGr + [¨^]
 
 44 émojis sont disposés sur touches vives et documentés dans [ce tableau](https://dispoclavier.com/nouvel-azerty/#tableau-emojis).
 
@@ -334,11 +335,11 @@ Grâce au fait que les guillemets chevrons existent aussi en version simple, l�
 
 Quitte à se résigner à l’emploi de « guillemets anglais », autant encastrer les guillemets à l’anglaise, ou à l’américaine, mais à la française. À l’américaine au sens où les guillemets de second (ou deuxième) niveau sont simples si les guillemets de premier niveau (ou rang) sont doubles, comme c’est le cas aux États-Unis. À la française au sens où les guillemets sont des guillemets chevrons.
 
-En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscule sur les touches [^] et [$], au-dessus des touches [ù] et [*] où les guillemets chevrons doubles sont disposés en Majuscule. Ces quatre guillemets sont déjà espacés à l’aide de la fine. Sur les mêmes touches en AltFr, les mêmes guillemets sont sans espace.
+En mode français, ce nouvel AZERTY a les guillemets chevrons simples en Majuscule sur les touches [¨^] et [£$¤], au-dessus des touches [%ù] et [µ*] où les guillemets chevrons doubles sont disposés en Majuscule. Ces quatre guillemets sont déjà espacés à l’aide de la fine. Sur les mêmes touches en AltFr, les mêmes guillemets sont sans espace.
 
 #### Guillemets en langues voisines
 
-En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin "»" sur [*], ou "›" sur [$], et en finissant par le guillemet pointant vers le début "«" sur [ù], ou "‹" sur [^].
+En allemand d’Allemagne et d’Autriche, où les guillemets chevrons servent aussi, les doubles pour les citations de premier niveau, les simples pour les citations de second niveau, leur saisie se fait sur les mêmes touches mais en AltFr et dans l’autre sens, en commençant par le guillemet pointant vers la fin "»" sur [µ*], ou "›" sur [£$¤], et en finissant par le guillemet pointant vers le début "«" sur [%ù], ou "‹" sur [¨^].
 
 (On ne peut pas appeler ces guillemets « ouvrants » ou « fermants » sauf en précisant « français », car s’ils sont ouvrants ou fermants dépend de la langue. On ne peut pas les appeler « gauches » ou « droits » non plus, ni même « pointant vers la gauche » ou « pointant vers la droite », car dans toutes les écritures de droite à gauche, ces guillemets sont réfléchis. Par contre on peut les appeler « croissants » ou « décroissants » par analogie avec les symboles « inférieur à » ou « supérieur à », réfléchis eux aussi, si l’on veut éviter le recours aux termes « pointant vers le début » et « pointant vers la fin ».)
 
@@ -348,7 +349,7 @@ Contrairement à l’allemand d’Allemagne et d’Autriche, l’allemand de Sui
 
 L’usage des guillemets chevrons simples pour les citations incluses permet de réserver les « guillemets anglais » aux usages où les guillemets ne signalent pas une citation, mais une distanciation. Dans ce sens, les guillemets sont aussi appelés « guillemets d’ironie », bien que l’ironie ne soit pas la seule connotation qu’ils véhiculent. Aussi s’appellent-ils en anglais « scare quotes ».
 
-Plutôt que les guillemets doubles génériques de la touche [3"], les guillemets de distanciation et les guillemets en anglais – que ce soit en anglais britannique ou en anglais américain – sont les guillemets apostrophes doubles (distanciation en français, premier niveau en anglais américain) ou simples (premier niveau en anglais britannique), dont les ouvrants en français et en anglais sont dans la touche morte accent circonflexe, et les fermants, dans la touche morte accent aigu sur la touche à côté, [$].
+Plutôt que les guillemets doubles génériques de la touche [3"], les guillemets de distanciation et les guillemets en anglais – que ce soit en anglais britannique ou en anglais américain – sont les guillemets apostrophes doubles (distanciation en français, premier niveau en anglais américain) ou simples (premier niveau en anglais britannique), dont les ouvrants en français et en anglais sont dans la touche morte accent circonflexe, et les fermants, dans la touche morte accent aigu sur la touche à côté, [£$¤].
 
 En retour, ce système de guillemets de distanciation permet de réserver les guillemets chevrons aux citations. À la clé, les textes gagnent en univocité, et partant, en clarté, comme l’a expliqué un article paru dans le journal québécois [Le Devoir](https://www.ledevoir.com/societe/488139/mises-aux-points-les-antiguillemets-comme-symboles-de-la-postverite).
 
@@ -356,7 +357,7 @@ En retour, ce système de guillemets de distanciation permet de réserver les gu
 
 ### Usage du liant
 
-Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [W] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], le signe plus invisible U+2064 sur AltGr + AltFr + [H], et le séparateur invisble U+2063 sur AltGr + AltFr + [,]. Les deux premiers sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe "^" sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. Il y a aussi le gluon dans le même groupe du tiret du 6 sur [G]. Le signe plus invisible est aussi pris en charge par composition « ¦&+ » dans le cadre des symboles mathématiques.
+Les entités HTML documentées dans ce fichier à cause de leur disposition sur le clavier ne sont pas échappées par « &‍amp; », afin d’en garantir la lisibilité directe non seulement en affichage Markdown, mais aussi en texte brut. À la place, elles sont désactivées par l’insertion d’un liant après la perluète. Le caractère souvent préféré dans ce rôle est l’antiliant, disposé sur AltGr + AltFr + [W] à cause de son utilisation pour empêcher les ligatures typographiques intempestives. Mais ce nouvel AZERTY offre le choix entre l’antiliant U+200C sur AltGr + AltFr + [W], le liant U+200D sur AltGr + AltFr + [Q], le signe plus invisible U+2064 sur AltGr + AltFr + [H], et le séparateur invisble U+2063 sur AltGr + AltFr + [?,]. Les deux premiers sont aussi dans la touche morte groupe, l’antiliant dans le groupe 10 du circonflexe "^" sur [A], le liant dans le même groupe du symbole pour cent sur [Z]. Il y a aussi le gluon dans le même groupe du tiret du 6 sur [G]. Le signe plus invisible est aussi pris en charge par composition « ¦&+ » dans le cadre des symboles mathématiques.
 
 L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insérer un caractère invisible qui ne soit pas l’espace nulle.
 
