@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-22T1912+0200
+#                       Date : 2025-07-22T2201+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -13,6 +13,15 @@
 #           Licence non-code : CC-BY 4.0
 # URL de la licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
 #               Adresse mail : dev[arobase]dispoclavier.com
+#
+#
+#   AVERTISSEMENT
+#
+#   Ce script met tous les fichiers installés en lecture-écriture pour tout le
+#   monde, "666", car même avec 644, l’administrateur est exclu, ce qui dégrade
+#   l’expérience utilisateur. Si ces permissions ne conviennent pas, la valeur
+#   doit être modifiée au tout début du script selon les exigences.
+#
 #
 #
 #   Utilisation
@@ -66,6 +75,10 @@
 # L’absence des booléens dans Bash est palliée par le recours aux comparaisons
 # arithmétiques. Pour la lisibilité, 0 et 1 sont inversés en "vrai" et "faux".
 
+permissions=666 # Accès en écriture pour tout le monde, car même avec 644,
+                # l’administrateur est exclu, ce qui dégrade l’expérience
+               	# utilisateur. Modifier cette valeur selon les exigences.
+
 introduction=0 # Pas faite.
 function afficher {
 	if [ "$introduction" -eq 0 ]; then
@@ -85,16 +98,19 @@ function installer_dispo {
 		echo 'Réinstallation du fichier de redisposition de touches'
 		echo '  en utilisant "sauvegarde/evdev.c".'
 		sudo cp sauvegarde/evdev.c $X11/xkb/keycodes/evdev
+		sudo chmod $permissions $X11/xkb/keycodes/evdev
 	fi
 	# Installer les types de touches.
 	echo 'Installation des types de touches.'
 	sudo cp installer/dispotypes.c $X11/xkb/types/dispotypes
 	sudo cp $X11/xkb/types/complete $X11/xkb/types/complete-types-avant-dispoclavier
 	sudo sed -i '/\};/i \ \ \ \ include "dispotypes"' $X11/xkb/types/complete
+	sudo chmod $permissions $X11/xkb/types/complete
 	# Installer le fichier de personnalisation s’il n’est pas déjà présent.
 	if [ "$dispocla_perso" -eq 0 ]; then
 		echo 'Installation du fichier de personnalisation inclus.'
 		sudo cp installer/dispocla_perso.cpp $X11/xkb/symbols/dispocla_perso
+		sudo chmod $permissions $X11/xkb/symbols/dispocla_perso
 	else
 		echo 'Confirmation de la présence d’un fichier de personnalisation.'
 		echo 'Un fichier "dispocla_perso" est présent et ne bouge pas.'
@@ -102,16 +118,18 @@ function installer_dispo {
 	# Installer les tableaux d’allocation de touches.
 	echo 'Installation des dispositions de clavier.'
 	sudo cp installer/dispocla.cpp $X11/xkb/symbols/dispocla
+	sudo chmod $permissions $X11/xkb/symbols/dispocla
 	# Désactiver l’écrasement du deuxième groupe vif.
 	echo 'Désactivation de l’écrasement du deuxième groupe vif.'
 	sudo cp $X11/xkb/rules/evdev $X11/xkb/rules/evdev-rules-avant-dispoclavier
 	sudo sed -ri 's/(\*\s*\*\s*=\s*\+%l\[2\]%\(v\[2\]\):2)/\/\/\ \1/' $X11/xkb/rules/evdev
+	sudo chmod $permissions $X11/xkb/rules/evdev
 	# Installer les séquences et le contenu des touches mortes.
 	echo 'Installation des séquences et du contenu des touches mortes.'
 	sudo cp $X11/locale/en_US.UTF-8/Compose $X11/locale/en_US.UTF-8/Compose-avant-dispoclavier
-	sudo chmod 666 $X11/locale/en_US.UTF-8/Compose
+	sudo chmod $permissions $X11/locale/en_US.UTF-8/Compose
 	cat Compose.yml >> $X11/locale/en_US.UTF-8/Compose
-	sudo chmod 644 $X11/locale/en_US.UTF-8/Compose
+	sudo chmod $permissions $X11/locale/en_US.UTF-8/Compose
 	# Ajouter une extension au commutateur de dispositions.
 	echo 'Ajout de ces dispositions de clavier dans la liste du commutateur.'
 	sudo cp $X11/xkb/rules/evdev.xml $X11/xkb/rules/evdev-xml-rules-avant-dispoclavier.xml
@@ -119,9 +137,11 @@ function installer_dispo {
 	sudo sed -n '/<layout><!-- Dispoclavier/,/<\/layout><!-- FIN_Dispoclavier/p' installer/evdev-additions.xml > installer/evdev-additions-seules.xml
 	sudo sed -i '/ajouts-dispoclavier/r installer/evdev-additions-seules.xml' $X11/xkb/rules/evdev.xml
 	sudo sed -i '/ajouts-dispoclavier/d' $X11/xkb/rules/evdev.xml
+	sudo chmod $permissions $X11/xkb/rules/evdev.xml
 	# Installer l’allumage du témoin lumineux Arrêt défilement en mode ASCII.
 	echo 'Rattachement du témoin lumineux Arrêt défilement au mode ASCII.'
 	sudo cp installer/dispoled.c $X11/xkb/compat/dispoled
+	sudo chmod $permissions $X11/xkb/compat/dispoled
 	sudo cp $X11/xkb/compat/complete $X11/xkb/compat/complete-compat-avant-dispoclavier
 	sudo sed -i '/\};/i \ \ \ \ include "dispoled"' $X11/xkb/compat/complete
 	# Afficher un dernier message.
@@ -230,7 +250,7 @@ function supprimer_dispo {
 		sudo mv $X11/xkb/types/complete-types-avant-dispoclavier sauvegarde/archive/complete-types-avant.c
 	fi
 	# Rendre les fichiers sauvegardés éditables.
-	sudo chmod --recursive 777 sauvegarde
+	sudo chmod --recursive 666 sauvegarde
 	if [ "$confirmer_suppression" -eq 1 ]; then
 		# Afficher un dernier message.
 		echo -e "\n  ✅  Ces dispositions de clavier viennent d’être désinstallées."
