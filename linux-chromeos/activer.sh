@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-22T1912+0200
+#                       Date : 2025-07-22T2216+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -14,7 +14,7 @@
 # URL de la licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
 #               Adresse mail : dev[arobase]dispoclavier.com
 #
-#   ALERTES
+#   AVERTISSEMENTS
 #
 #   Ce script utilise l’utilitaire xkbcomp documenté par IBM pour son OS AIX :
 #   https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command
