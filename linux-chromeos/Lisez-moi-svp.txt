@@ -1,4 +1,4 @@
-                      Date : 2025-07-21T1821+0200
+                      Date : 2025-07-22T1926+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -29,16 +29,16 @@
           URL licence code : https://www.apache.org/licenses/LICENSE-2.0
           Licence non-code : CC-BY 4.0
       URL Licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
-                   Contact : dev[arobase]dispoclavier.com
+              Adresse mail : dev[arobase]dispoclavier.com
 
 
 Dossiers et fichiers
 
   • Les chaînes de caractères pour touches vives et le contenu des touches mortes se trouvent dans
-    le fichier Compose.yml. Son extension .yml sert uniquement à l’ouverture et à l’affichage.
+    le fichier Compose.yml. L’extension .yml sert à la coloration syntaxique et l’interopérabilité.
 
   • Le reste des dispositions de clavier se trouve dans les dossiers installer/ et activer/.
-    Le dossier activer/ contient 90 fichiers .xkb issus de la fusion de fichiers dans installer/.
+    Les fichiers .xkb dans activer/ sont issus de la fusion de fichiers comme dans installer/.
 
 
 Installer ou activer
