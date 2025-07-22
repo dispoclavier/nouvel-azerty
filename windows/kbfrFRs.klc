@@ -8,7 +8,7 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	5.3.0.29
+VERSION	5.3.0.30
 
 // Encodage : UTF-16 LE (sinon, KbdUTool plante).
 // Largeur des tabulations : 12 caractères.
@@ -150,17 +150,33 @@ LAYOUT		;an extra '@' at the end is a dead key
 
 LIGATURE
 
-//VK_		Mod#	Char0	Char1	Char2	Char3
-//----		----	----	----	----	----
+// Windows crashed when a multiunit string with five or more code units is at
+// the Shift + Ctrl + Alt level in the default keyboard layout.
+//
+// The MSKLC therefore does not support longer sequences. Safety first.
+// MSKLC developer M. S. Kaplan was asked about the topic and responded.
+// https://archives.miloush.net/michkap/archive/2015/08/07/8770668856267196989.html
+//
+// Multiunit strings for live keys are transpiled only if their length does not
+// exceed five UTF-16 code units, as ligatures are defined in kbd.h:473 only up
+// to a length of 5 units. Consistently, KbdUTool throws a warning.
+//
+// Getting support for ligatures up to the architectural limit of 16 code units
+// only takes defining them accordingly, as done in kbcommon.h, section 7.2,
+// and synching static ALLOC_SECTION_LDATA LIGATURE5 aLigature[], where
+// LIGATURE5 is now LIGATURE16; as well as setting sizeof(aLigature[0]) to 16.
 
-OEM_1		1	202f	203a			// ESPACE FINE INSÉCABLE + GUILLEMET SIMPLE SUPÉRIOÏDE
-OEM_COMMA		1	202f	003f			// ESPACE FINE INSÉCABLE + POINT D’INTERROGATION
-OEM_PERIOD		1	202f	0021			// ESPACE FINE INSÉCABLE + POINT D’EXCLAMATION
-OEM_2		1	202f	003a			// ESPACE FINE INSÉCABLE + DEUX-POINTS
-OEM_3		1	00ab	202f			// GUILLEMET INFÉRIOÏDE + ESPACE FINE INSÉCABLE
-OEM_5		1	202f	00bb			// ESPACE FINE INSÉCABLE + GUILLEMET SUPÉRIOÏDE
-OEM_6		1	2039	202f			// GUILLEMET SIMPLE INFÉRIOÏDE + ESPACE FINE INSÉCABLE
-OEM_8		1	202f	003b			// ESPACE FINE INSÉCABLE + POINT-VIRGULE
+//VK_	Mod#	Char0	Char1	Char2	Char3
+//----	----	----	----	----	----
+
+OEM_1	1	202f	203a			// ESPACE FINE INSÉCABLE + GUILLEMET SIMPLE SUPÉRIOÏDE
+OEM_COMMA	1	202f	003f			// ESPACE FINE INSÉCABLE + POINT D’INTERROGATION
+OEM_PERIOD	1	202f	0021			// ESPACE FINE INSÉCABLE + POINT D’EXCLAMATION
+OEM_2	1	202f	003a			// ESPACE FINE INSÉCABLE + DEUX-POINTS
+OEM_3	1	00ab	202f			// GUILLEMET INFÉRIOÏDE + ESPACE FINE INSÉCABLE
+OEM_5	1	202f	00bb			// ESPACE FINE INSÉCABLE + GUILLEMET SUPÉRIOÏDE
+OEM_6	1	2039	202f			// GUILLEMET SIMPLE INFÉRIOÏDE + ESPACE FINE INSÉCABLE
+OEM_8	1	202f	003b			// ESPACE FINE INSÉCABLE + POINT-VIRGULE
 
 DEADKEY	007e
 
