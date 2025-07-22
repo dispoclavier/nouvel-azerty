@@ -1,4 +1,4 @@
-//                      Date : 2025-07-14T2017+0200
+//                      Date : 2025-07-22T1107+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -20,7 +20,7 @@
 //                                 https://github.com/dispoclavier/nouvel-azerty/releases/latest
 //
 //                             Les personnalisations peuvent se mettre à la place de toute
-//                             instance de NoSymbol (qui signifie « rien d’autre »).
+//                             instance de NoSymbol, qui signifie « rien d’autre ».
 //
 //
 // # Exemple
@@ -31,6 +31,7 @@
 //	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 //	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 //	key <AE11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 //		[                  at,              degree,               U1D49,        bracketright,               U207B,                   E,               UEFCA,               minus ],
 //		[                  at,              degree,               minus,               U208B,                   E,               U207B,               UEFCA,               minus ]
 //	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; U207B ⁻ SUPERSCRIPT MINUS; U208B ₋ SUBSCRIPT MINUS; UEFCA *️⃣ keycap star emoji
@@ -45,6 +46,7 @@
 //	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 //	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 //	key <AE11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 //		[            NoSymbol,            NoSymbol,               UEF6C,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 //		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 //	};
@@ -72,6 +74,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -79,11 +82,13 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AE04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -95,6 +100,7 @@ xkb_symbols "perso" {
 	};
 
 	key <AE06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -102,6 +108,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -109,6 +116,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -124,6 +132,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key <AE10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -131,6 +140,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
 	key <AE11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -138,6 +148,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
 	key <AE12> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -153,16 +164,19 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AD03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AD04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -174,16 +188,19 @@ xkb_symbols "perso" {
 	};
 
 	key <AD06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AD07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AD08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -195,6 +212,7 @@ xkb_symbols "perso" {
 	};
 
 	key <AD10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -202,11 +220,13 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <AD11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AD12> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -220,16 +240,19 @@ xkb_symbols "perso" {
 	};
 
 	key <AC02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AC03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AC04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -241,16 +264,19 @@ xkb_symbols "perso" {
 	};
 
 	key <AC06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AC07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AC08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -262,6 +288,7 @@ xkb_symbols "perso" {
 	};
 
 	key <AC10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -269,6 +296,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -276,6 +304,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <BKSL> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -289,16 +318,19 @@ xkb_symbols "perso" {
 	};
 
 	key <AB02> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AB03> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AB04> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -312,6 +344,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC_LASTALPHABETIC";
 	key <AB06> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -319,11 +352,13 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <AB07> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <AB08> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -337,6 +372,7 @@ xkb_symbols "perso" {
 	};
 
 	key <AB10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -344,6 +380,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key <SPCE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -358,8 +395,9 @@ xkb_symbols "perso" {
 	key.type[Group1]= "ONE_LEVEL";
 	key.type[Group2]= "ONE_LEVEL";
 	key <KPEQ> {
-		[            KP_Equal ],
-		[            KP_Equal ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	//
@@ -370,23 +408,26 @@ xkb_symbols "perso" {
 	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <KPDV> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[           KP_Divide,            division,             radical,           parenleft,             radical,           parenleft ],
-		[           KP_Divide,           parenleft,         bracketleft,               UEF7E,         bracketleft,               UEF7E ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KPMU> {
-		[         KP_Multiply,            multiply,         asciicircum,          parenright,         asciicircum,          parenright ],
-		[         KP_Multiply,          parenright,        bracketright,               UEF7F,        bracketright,               UEF7F ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KPSU> {
-		[         KP_Subtract,               U2212,               equal,               U2243,               equal,               U2243 ],
-		[         KP_Subtract,         asciicircum,               equal,          braceright,               equal,          braceright ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KPAD> {
-		[              KP_Add,               colon,           plusminus,               U2248,           plusminus,               U2248 ],
-		[              KP_Add,               colon,           plusminus,               UEF7C,           plusminus,               UEF7C ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	//
@@ -400,74 +441,61 @@ xkb_symbols "perso" {
 	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <KP0>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit,            sequence,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP1>  {
-		// Category:    digit,            sequence,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit,            sequence,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP2>  {
-		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP3>  {
-		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:    digit,              prefix,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit,              prefix,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP5>  {
-		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP6>  {
-		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP7>  {
-		// Category:    digit,      fraction slash,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit,    escape character,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP8>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
 	key <KP9>  {
-		// Category:    digit, uppercase hex digit,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow,     triangle-headed,       outline arrow
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
-		// Category:    digit, lowercase hex digit,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji simple arrow,        filled arrow
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
 
@@ -489,6 +517,7 @@ xkb_symbols "perso" {
 	};
 
 	key <KPPT> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
@@ -500,6 +529,7 @@ xkb_symbols "perso" {
 	key.type[Group1] = "EIGHT_LEVELS_BASIC";
 	key.type[Group2] = "EIGHT_LEVELS_BASIC";
 	key <AB11> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 	};
