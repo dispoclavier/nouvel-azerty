@@ -1,4 +1,4 @@
-//                       Date: 2025-07-15T0728+0200
+//                       Date: 2025-07-22T0340+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -29,7 +29,7 @@
 //                             4. In /usr/share/X11/xkb/rules/evdev.xml
 //                                add the lines enclosed in the file
 //                                    evdev-additions.xml
-//                                before the `</layoutList>` closing tag.
+//                                before the </layoutList> closing tag.
 //
 //                             5. In the locale and language settings make sure
 //                                that the input method is XIM, or use the command
@@ -40,7 +40,7 @@
 //             Uninstallation: Delete those lines, uncomment the rule, remove the file.
 //
 //      Login keyboard layout: The keyboard layout used to log in is configured in
-//                             `/etc/default/keyboard`.
+//                             /etc/default/keyboard.
 //                             https://manpages.debian.org/jessie/keyboard-configuration/keyboard.5.en.html
 //
 //                             # KEYBOARD CONFIGURATION FILE
@@ -305,7 +305,7 @@
 // The International System of Measures and Units (SI) from the BIPM recommends
 // using a no-break thin space as a group separator in numbers. It is followed
 // by many locales including fr_FR. Also, TeX supports it by the means of the
-// `\,` command. Consistently with legacy typographic craftmanship, TeX is well
+// "\," command. Consistently with legacy typographic craftmanship, TeX is well
 // aware that the thin space is no-break, and as a pre-Unicode environment, TeX
 // presumably informed the seminal Unicode Standard, designed to maintain full
 // backward compatibility.
@@ -475,7 +475,7 @@
 // spacing, where the spaced-out punctuation characters and the unspaced-out
 // ones are on the same key with different modifiers: Shift for spaced-out,
 // AltFr for unspaced-out while the spacebar yields the no-break thin space.
-// Additionally, Shift + AltFr yields unspaced-out punctuation marks `?!:;`,
+// Additionally, Shift + AltFr yields unspaced-out punctuation marks "?!:;",
 // with the rationale that after typing a spaced-out punctuation and while the
 // little finger is still on Shift, the ring finger can easily press AltFr, so
 // as to inhibit spacing before an additional question or exclamation mark.
@@ -560,7 +560,7 @@
 // The fact that quotedbl is on the "E" key, and apostrophe is on the "U" key based
 // on AZERTY-QWERTY-QWERTZ, builds up some extra mnemonic if considering the EU
 // initialism. Also, both quotedbl and apostrophe have their HTML named entity,
-// frequent `&quot;` and rare `&apos;`, at level 8 (Shift + AltGr + AltFr) like
+// frequent "&quot;" and rare "&apos;", at level 8 (Shift + AltGr + AltFr) like
 // ampersand, less and greater, the latter two at level 7 (AltGr + AltFr).
 //
 //
@@ -1320,11 +1320,11 @@ xkb_symbols "kbfrFRs" {
 	//
 	// ## Operator keys
 	//
-	// Typographic basic arithmetic symbols are featured on the `Keypad math area
-	// with non-CS operators` keypad(ossmath), © Nicolas Mailhot
+	// Typographic basic arithmetic symbols are featured on the "Keypad math area
+	// with non-CS operators" keypad(ossmath), © Nicolas Mailhot
 	// <nicolas.mailhot @ laposte.net>, whose keypad(legacynumber_wang) and
 	// keypad(ossnumber_wang) also feature the asciicircum, while the colon and
-	// the equals as well as parentheses are featured on the `Hexadecimal Numpad`
+	// the equals as well as parentheses are featured on the "Hexadecimal Numpad"
 	// keypad(hex) by Roland Kaufmann <rlndkfmn at gmail dot com>.
 	//
 	// Additionally, plusminus and radical are also included, and two symbols for
@@ -1376,16 +1376,16 @@ xkb_symbols "kbfrFRs" {
 	// to using B07..B10 for unspaced punctuation marks, constrain the hex letter
 	// digits to keys (C..E)(11..12). As a consequence, the numpad features A..F
 	// at level 2 of keys 2, 3, 5, 6, 8 and 9, with a downside of not featuring
-	// the E in the center on key 5 like on the `Hexadecimal Numpad` keypad(hex)
+	// the E in the center on key 5 like on the "Hexadecimal Numpad" keypad(hex)
 	// by Roland Kaufmann <rlndkfmn at gmail dot com>.
 	//
 	// In default mode, these level 2 hex digits are uppercase, but lowercase in
 	// ASCII mode, where also backslash is output rather than the fraction slash,
-	// filling up the shifted position on shape-mnemonic key 7, while key 4 on U
-	// has room for the full Unicode prefix in default mode, a `#` in ASCII mode.
+	// filling up the shifted position on shape-mnemonic key 7, while key 4 has
+	// the group separator NBTSP U202F for usability, but "#" in ASCII mode.
 	//
 	// Arrows on digit keys are based on the simple and double arrows featured in
-	// the `Keypad number area with arrow symbols` keypad(ossnumber), included in
+	// the "Keypad number area with arrow symbols" keypad(ossnumber), included in
 	// fr(oss), © Nicolas Mailhot <nicolas.mailhot @ laposte.net>. As a feature-
 	// rich layout, fr(oss) is found in libraries running Linux on public PCs.
 	//
@@ -1469,11 +1469,11 @@ xkb_symbols "kbfrFRs" {
 
 	key <KP4>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		// Category:    digit,              prefix,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
-		[                KP_4,               UEF9F,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
+		// Category:    digit,           separator,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow,     triangle-headed,       outline arrow
+		[                KP_4,               U202F,               U2190,               U21D0,               U2B05,               U2B05,               U2B60,               U21E6 ],
 		// Category:    digit,              prefix,     triangle-headed,       outline arrow,        simple arrow,        double arrow,  emoji filled arrow,        filled arrow
 		[                KP_4,          numbersign,               U2B60,               U21E6,               U2190,               U21D0,               U2B05,               U2B05 ]
-	}; // UEF9F 'U+'
+	};
 
 	key <KP5>  {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
