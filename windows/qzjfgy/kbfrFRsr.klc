@@ -8,7 +8,7 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	5.3.0.27
+VERSION	5.3.0.29
 
 // Encodage : UTF-16 LE (sinon, KbdUTool plante).
 // Largeur des tabulations : 12 caractères.
@@ -68,6 +68,36 @@ LAYOUT		;an extra '@' at the end is a dead key
 // "kbcommon.h" must be included **after** the layout specific header, where
 // KANA is transpiled to #ERROR#.
 
+56	OEM_102		0	-1	-1	001c	-1	-1		// <none>, <none>, INFORMATION SEPARATOR FOUR, <none>, <none>
+
+// Virtual key OEM_102 on B00 is the level-5 modifier AltFr.
+// This is supported by KbdUTool, so it can be defined here.
+
+// Pour rendre AltGr plus robuste et plus fiable, Marc Durdin conseille
+// d’utiliser une autre modificatrice à la place de Ctrl+Alt (0x06).
+// https://blog.keyman.com/2008/06/robust-key-mess/
+// « (hint: AltGr is only one of the modifiers available for Windows keyboards) »
+// « Don’t do a special-case for AltGr – other modifiers are also legal. »
+//
+// Ctrl+Alt (0x06) est remplacée par 0x10, qui continue ici d’être désigné par
+// "AltGr" pour la familiarité.
+//
+// 0x10 ne peut pas être sensible à VerrCap et ne se prête donc pas aux lettres.
+// De toute manière, l’"œ" est dans le groupe 1, par la touche morte "groupe"
+// suivie de "o".
+//
+// Pour que cela fonctionne, le code de touche logiciel natif "RMENU" doit être
+// remplacé par un autre code, par exemple (comme ici) "OEM_AX".
+// Mais KbdUTool est programmé pour rejeter ce code comme erroné.
+// C’est pourquoi il faut éditer kbfrFRs.C et écraser cette définition
+// dans kbfrFRs.H ou kbcommon.H.
+//
+// Le MSKLC ne peut rien lire de tout cela et rejetterait cela comme erroné.
+//
+// OEM_AX	16 // AltGr 0x10 (kbcommon.h:301) This VK is not included in KbdUTool’s very limited VK whitelist.
+// 	   // Dans kbfrFRs.C aussi, "OEM_AX" est transpilé par "#ERROR#", à remplacer par "VK_OEM_AX".
+// OEM_102	32 // AltFr 0x20
+
 //SC	VK_		Cap	0	1	2	6	7
 //--	----		----	----	----	----	----	----
 
@@ -120,7 +150,6 @@ LAYOUT		;an extra '@' at the end is a dead key
 34	OEM_2		0	002f	%%	-1	003a	00eb@		// OBLIQUE, <null>, <none>, DEUX-POINTS, MINUSCULE LATINE E TRÉMA
 35	OEM_8		0	005c	%%	-1	00a7	0219@		// OBLIQUE INVERSE, <null>, <none>, SYMBOLE PARAGRAPHE, MINUSCULE LATINE S VIRGULE SOUSCRITE
 39	SPACE		0	0020	0020	0020	00a0	200b		// ESPACE, ESPACE, ESPACE, ESPACE INSÉCABLE, CÉSURE CONDITIONNELLE
-56	OEM_102		0	-1	-1	001c	-1	-1		// <none>, <none>, INFORMATION SEPARATOR FOUR, <none>, <none>
 53	DECIMAL		1	002e	002c	-1	202f	00a0		// POINT, VIRGULE, , ESPACE FINE INSÉCABLE, ESPACE INSÉCABLE
 
 LIGATURE
