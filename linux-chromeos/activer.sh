@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-05-19T2021+0200
+#                       Date : 2025-07-22T1912+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -8,14 +8,11 @@
 #
 #                     Projet : Dispoclavier
 #              URL du projet : https://dispoclavier.com
-#                     Maxime : Simplifier la dactylographie, pas le français.
-#                Description : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie
-#              Destinataires : Grand public et développeurs, écrivains, journalistes, scientifiques, secrétaires, traducteurs et typographes
 #               Licence code : Apache 2.0
 #     URL de la licence code : https://www.apache.org/licenses/LICENSE-2.0
 #           Licence non-code : CC-BY 4.0
 # URL de la licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
-#               Adresse mail : dev@dispoclavier.net
+#               Adresse mail : dev[arobase]dispoclavier.com
 #
 #   ALERTES
 #
@@ -41,7 +38,7 @@
 #   Toutefois, les fichiers d’activation au format XKM ne sont pas fournis, à cause
 #   de leur opacité et de leur immuabilité.
 #
-#   Pour une activation manuelle, on peut utiliser la valeur ":0" de la variable
+#   Pour une activation manuelle, on peut utiliser l’alias ":0" de la variable
 #   d’environnement $DISPLAY.
 #
 #
@@ -177,10 +174,8 @@
 #   et éditables pour de petites personnalisations.
 #
 # L’absence des booléens dans Bash est palliée par le recours aux comparaisons
-# arithmétiques. On en profite pour inverser 0 et 1 — qui dans Bash signifient
-# vrai et faux, contrairement à la plupart des autres langages où ils
-# signifient faux et vrai — dans un souci de lisibilité.
-#
+# arithmétiques. Pour la lisibilité, 0 et 1 sont inversés en "vrai" et "faux".
+
 intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
 emulateur_terminal="gnome-terminal" # Personnaliser si différent.
 navigateur_fichiers="dolphin" # Personnaliser si différent.
