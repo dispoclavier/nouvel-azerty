@@ -1,4 +1,4 @@
-                      Date : 2025-07-22T1456+0200
+                      Date : 2025-07-22T1754+0200
                    Version : 5.3.0
  Version compilation/build : 5.3.0.30
             Nom du produit : Un nouvel AZERTY
@@ -30,7 +30,7 @@
           URL licence code : https://www.apache.org/licenses/LICENSE-2.0
           Licence non-code : CC-BY 4.0
       URL Licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
-                   Contact : dev[arobase]dispoclavier.com
+              Adresse mail : dev[arobase]dispoclavier.com
 
 
 Dossiers et fichiers
