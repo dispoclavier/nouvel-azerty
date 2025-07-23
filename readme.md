@@ -25,17 +25,19 @@ Ce nouvel AZERTY en mode ASCII :
 Ce nouvel AZERTY en mode ASCII à capitales verrouillées :
 ![Ce nouvel AZERTY en mode ASCII à capitales verrouillées](https://dispoclavier.com/img/nouvel-azerty-verrmod-verrcap.png)
 
-Ces vues ont été générées par le [Keyboard Layout Editor](https://keyboard-layout-editor.com) de Ian Prest.
+Ces vues ont été générées par le [Keyboard Layout Editor](https://keyboard-layout-editor.com) de [Ian Prest](https://github.com/ijprest).
 
 ## Utilisation
 
-Ce mode d’emploi commun présente les fonctionnalités communes à toutes les installations distribuées. Les particularités des différents systèmes d’exploitation sont présentées dans le [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), le [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md), et le Mode d’emploi sous macOS (à venir).
+Ce mode d’emploi commun introduit aux fonctionnalités communes à toutes les versions distribuées. Les fonctionnalités propres aux versions pour tel système d’exploitation sont décrites dans le [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), le [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md), et le Mode d’emploi sous macOS qui sera fourni avec la mise à jour de la mise en œuvre sous macOS.
 
-Ce faisant, il s’agit de faire comprendre que les innovations proposées sur ce nouvel AZERTY⁠ sont incontournables. C’est un gros défi parce que malgré qu’à bien y regarder, tout aille de soi, beaucoup refusent de voir les problèmes sous-jacents comme ils sont, afin d’éviter simplement de se prendre la tête, comme il arrive tant que la solution n’est pas sur la table.
+Ce faisant, il s’agit aussi de documenter que les innovations proposées sur ce nouvel AZERTY⁠ sont incontournables. Gros défi, car malgré qu’à bien y regarder, tout aille de soi, les problèmes sous-jacents peinent à se frayer un chemin vers la visibilité, source de prise de tête et de perte de temps tant que la solution n’est pas sur la table.
 
-Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est littéralement sur la table –, la tentation est grande de passer à côté, afin d’éviter de reconnaître de s’être embêté “pour rien” jusqu’à présent. Personne n’a envie de se dire d’avoir “attendu” ce nouvel AZERTY pour commencer à travailler normalement et confortablement.
+Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est littéralement sur la table –, la tentation est grande de passer à côté plutôt que de se rendre à l’évidence de s’être embêté “pour rien” jusqu’à présent, et de se se retrouver avec l’air d’avoir “attendu” ce nouvel AZERTY pour commencer à travailler normalement et confortablement.
 
-Une issue possible est l’attitude pragmatique. Quand des gains de productivité sont aussi faciles à prendre, il n’y a pas de raison de s’en priver.
+Cette situation ubuesque appelle un aveu de culpabilité, puisque ce nouvel AZERTY est finalement le fruit du rattrapage d’un cheminement qu’il aurait mieux valu démarrer il y a 11 + 2 + 21 ans, quand exactement les mêmes problèmes étaient déjà d’actualité pour quiconque pensait à s’en occuper.
+
+Aujourd’hui, une sortie possible de ce gâchis phénoménal conséquence de l’incurie est l’attitude pragmatique. Quand des gains de productivité sont à portée de main, plutôt que de continuer de s’en priver, la bonne attitude est d’en profiter.
 
 ### Touches
 
