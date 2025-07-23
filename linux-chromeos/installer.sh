@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-22T2201+0200
+#                       Date : 2025-07-23T0244+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -90,7 +90,7 @@ function afficher {
 }
 
 function confirmation {
-	read -n 1 -s -r -p "  (Pour valider, appuyez sur une touche.)"
+	read -n 1 -s -r -p "  Pour valider, appuyez sur une touche."
 }
 
 function installer_dispo {
@@ -160,7 +160,7 @@ function installer_dispo {
 	echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
 	echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
 	echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
-	echo -e "\n                       Bonne utilisation !\n\n"
+	echo -e "\n\n                       Bonne utilisation !\n\n"
 	confirmation
 }
 
@@ -265,7 +265,7 @@ function supprimer_dispo {
 		echo      '         https://github.com/dispoclavier/nouvel-azerty/issues'
 		echo -e "\n     N’hésitez pas non plus à lancer une discussion :\n"
 		echo      '         https://github.com/dispoclavier/nouvel-azerty/discussions'
-		echo -e "\n             Merci d’avoir utilisé Dispoclavier.\n\n"
+		echo -e "\n\n             Merci d’avoir utilisé Dispoclavier.\n\n"
 		confirmation
 	fi
 }
@@ -850,7 +850,7 @@ if [ "$fonctionne" -eq 1 ]; then
 			echo -e "\n     Le mieux est de télécharger un nouveau paquetage"
 			echo      '     sur la page de la version la plus récente :'
 			echo      '     https://github.com/dispoclavier/nouvel-azerty/releases/latest'
-			echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n\n"
+			echo -e "\n\n         Avec toutes nos excuses pour ce désagrément.\n\n"
 			confirmation
 		fi
 	else
@@ -894,6 +894,6 @@ else
 	echo      '     clavier manuellement selon le mode d’emploi figurant dans l’en-tête'
 	echo      '     du fichier "Compose.yml", qui va dans le dossier personnel, et dans'
 	echo      '     chacun des fichiers qui se trouvent dans le dossier "installer/"'.
-	echo -e "\n     Avec toutes nos excuses pour ce désagrément.\n\n"
+	echo -e "\n\n         Avec toutes nos excuses pour ce désagrément.\n\n"
 	confirmation
 fi
