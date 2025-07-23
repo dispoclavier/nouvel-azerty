@@ -31,6 +31,12 @@ Ces vues ont été générées par le [Keyboard Layout Editor](https://keyboard-
 
 Ce mode d’emploi commun présente les fonctionnalités communes à toutes les installations distribuées. Les particularités des différents systèmes d’exploitation sont présentées dans le [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), le [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md), et le Mode d’emploi sous macOS (à venir).
 
+Ce faisant, il s’agit de faire comprendre que les innovations proposées sur ce nouvel AZERTY⁠ sont incontournables. C’est un gros défi parce que malgré qu’à bien y regarder, tout aille de soi, beaucoup refusent de voir les problèmes sous-jacents comme ils sont, afin d’éviter simplement de se prendre la tête, comme il arrive tant que la solution n’est pas sur la table.
+
+Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est littéralement sur la table –, la tentation est grande de passer à côté, afin d’éviter de reconnaître de s’être embêté “pour rien” jusqu’à présent. Personne n’a envie de se dire d’avoir “attendu” ce nouvel AZERTY pour commencer à travailler normalement et confortablement.
+
+Une issue possible est l’attitude pragmatique. Quand des gains de productivité sont aussi faciles à prendre, il n’y a pas de raison de s’en priver.
+
 ### Touches
 
 Sur ce nouvel AZERTY, plusieurs touches changent de fonctionnalité afin de rendre le clavier mieux adapté à l’écriture de la langue française.
@@ -41,27 +47,33 @@ Ce nouvel AZERTY introduit une nouvelle bascule, et deux bascules existantes voi
 
 ##### Verrouillage Mode
 
-La touche [²] à gauche de [1&] et au-dessus de la touche de tabulation devient une deuxième bascule graphique pour délester la bascule Verrouillage Majuscule de l’AZERTY traditionnel. Cette deuxième bascule graphique s’appelle « VerrMod » pour « verrouillage (de) mode ». Elle met en mode ASCII une partie du clavier, la barre d’espace et toutes les touches graphiques sauf les lettres simples.
+La touche [²] à gauche de [1&] et au-dessus de la touche de tabulation devient une deuxième bascule graphique pour délester la bascule Verrouillage Majuscule de l’AZERTY traditionnel.
+
+La bascule hybride des machines à écrire est mauvaise sur l’ordinateur, car il y a moyen de la transformer en Verrouillage Capitales, afin que cela fonctionne comme il faut, et qu’on puisse travailler selon les règles du français. En conséquence, les chiffres ont besoin d’une bascule à part.
+
+Cette deuxième bascule graphique s’appelle « VerrMod » pour « verrouillage (de) mode ». Elle met en mode ASCII toutes les touches sauf celles de l’alphabet, et permet donc de basculer entre le mode français et le mode ASCII.
+
+Vu que Windows a depuis longtemps une bascule de verrouillage « KANA » pour basculer entre hiragana et katakana, et que Linux a de quoi basculer entre deux « groupes », ne pas l’utiliser sur l’AZERTY où elle résoud tout un tas de problèmes serait vraiment bête, faut-il préciser pour contrer la suspicion de « changer pour changer ».
+
+Ainsi, le simple appui sur Majuscule remplace l’utilisation de codes Alt fastidieux. À la clé, les gains de productivité que la France appelle de ses vœux entrent dans son escarcelle comme par miracle.
 
 ###### Mode ASCII
 
 La nouvelle bascule VerrMod met les chiffres de sa rangée en Minuscule, et aussi en Majuscule pour la rétrocompatibilité et la synergie avec les lettres majuscules dans les tableurs, tout en les laissant aussi en AltGr afin de maintenir les synergies habituelles.
 
-Les autres touches non alphabétiques sont alors optimisées pour coder, dans ce qu’on peut appeler un mode ASCII, considéré comme le mode par excellence, autrement que le mode capitales classique, au point de donner son nom à cette nouvelle bascule, prise en charge nativement par Windows et Linux.
-
 En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule sur les touches à gauche d’Entrée, "-" sur [µ*], "_" sur [£$¤].
 
-De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨^], le simple (l’apostrophe ASCII) sur [%ù], afin de continuer d’être à portée.
+De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨^], le simple (l’apostrophe ASCII) sur [%ù], afin de continuer d’être à portée de doigts comme sur l’AZERTY traditionnel, conservant précieusement ses avantages sur l’US-QWERTY (guillemet, tiret bas et deux-points en Minuscule).
 
 Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}].
 
 De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui montent en Majuscule à leur place. Ainsi, la touche [/:] devient 100 % rétrocompatible, et la touche suivante lui emboîte le pas avec ";" à la place de "!", et "\" à la place de "§".
 
-En mode ASCII, les chiffres en AltFr sont complétés par les lettres hexadécimales A sur [%ù], B sur [µ*], C sur [¨^], D sur [£$¤], E sur [°)\]] et F sur [+=}]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
+(En mode ASCII, les chiffres en pavé en AltFr sont complétés par les lettres hexadécimales A sur [%ù], B sur [µ*], C sur [¨^], D sur [£$¤], E sur [°)\]] et F sur [+=}]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.)
 
 ##### Verrouillage Capitales
 
-Les capitales y compris É, È, Ç, À et Ù sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules.
+Les capitales, y compris É, È, Ç, À et Ù, sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules.
 
 C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.
 
