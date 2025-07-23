@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-23T2302+0200
+#                       Date : 2025-07-23T2317+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -147,7 +147,8 @@ function installer_dispo {
 		echo      '     Les nouveautés prendront effet dès la prochaine session.'
 	else
 		echo -e "\n  ✅  Ces dispositions de clavier viennent d’être installées."
-		echo      '     Elles sont activables dès la prochaine session.'
+		echo      '     Elles sont activables dès la prochaine session, et'
+		echo      '     jusqu’à la prochaine mise à jour de la distro Linux.'
 		echo -e "\n     Les redispositions actuelles de touches ont été sauvegardées"
 		echo      '         dans ~/.config/dispoclavier/keycodes/evdev.'
 	fi
