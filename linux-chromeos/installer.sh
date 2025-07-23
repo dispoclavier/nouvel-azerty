@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-23T0244+0200
+#                       Date : 2025-07-23T2302+0200
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -17,11 +17,12 @@
 #
 #   AVERTISSEMENT
 #
-#   Ce script met tous les fichiers installés en lecture-écriture pour tout le
+#   Ce script met tous les fichiers installés en lecture/écriture pour tout le
 #   monde, "666", car même avec 644, l’administrateur est exclu, ce qui dégrade
 #   l’expérience utilisateur. Si ces permissions ne conviennent pas, la valeur
-#   doit être modifiée au tout début du script selon les exigences.
+#   doit être modifiée ici selon les exigences.
 #
+permissions=666
 #
 #
 #   Utilisation
@@ -75,10 +76,6 @@
 # L’absence des booléens dans Bash est palliée par le recours aux comparaisons
 # arithmétiques. Pour la lisibilité, 0 et 1 sont inversés en "vrai" et "faux".
 
-permissions=666 # Accès en écriture pour tout le monde, car même avec 644,
-                # l’administrateur est exclu, ce qui dégrade l’expérience
-               	# utilisateur. Modifier cette valeur selon les exigences.
-
 introduction=0 # Pas faite.
 function afficher {
 	if [ "$introduction" -eq 0 ]; then
@@ -113,7 +110,7 @@ function installer_dispo {
 		sudo chmod $permissions $X11/xkb/symbols/dispocla_perso
 	else
 		echo 'Confirmation de la présence d’un fichier de personnalisation.'
-		echo 'Un fichier "dispocla_perso" est présent et ne bouge pas.'
+		echo 'Un fichier "dispocla_perso" est présent et reste bien en place.'
 	fi
 	# Installer les tableaux d’allocation de touches.
 	echo 'Installation des dispositions de clavier.'
@@ -165,12 +162,14 @@ function installer_dispo {
 }
 
 function supprimer_dispo {
-	# Désinstaller le témoin lumineux Arrêt défilement pour le mode ASCII.
+	# Commencer par la saisie du mot de passe administrateur.
+	sudo echo ''
+	# Désinstaller le rattachement du témoin lumineux Arrêt défilement au mode ASCII.
 	mkdir -p sauvegarde/archive
 	cp $X11/xkb/compat/complete sauvegarde/archive/complete-compat.c
 	if [ "$dispoled" -eq 1 ]; then
-		sudo sed -i '/include "dispoled"/d' $X11/xkb/compat/complete
 		echo 'Détachement du témoin lumineux Arrêt défilement du mode ASCII.'
+		sudo sed -i '/include "dispoled"/d' $X11/xkb/compat/complete
 		sudo mv $X11/xkb/compat/dispoled sauvegarde/archive/dispoled.c
 	fi
 	if [ "$complete_compat_avant" -eq 1 ]; then
@@ -185,6 +184,7 @@ function supprimer_dispo {
 		echo 'Désinstallation du fichier permettant de redisposer des touches.'
 		cp $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier sauvegarde/evdev-keycodes-avant.c
 		sudo mv $X11/xkb/keycodes/evdev-keycodes-avant-dispoclavier $X11/xkb/keycodes/evdev
+		sudo chmod $permissions $X11/xkb/keycodes/evdev
 	fi
 	# Supprimer l’extension du commutateur de dispositions.
 	cp $X11/xkb/rules/evdev.xml sauvegarde/archive/evdev-xml-rules.xml
@@ -232,7 +232,7 @@ function supprimer_dispo {
 		sudo mv $X11/xkb/symbols/dispocla_perso sauvegarde/dispocla_perso.cpp
 	else
 		echo 'Confirmation de la présence d’un fichier de personnalisation.'
-		echo 'Un fichier "dispocla_perso" est présent et ne bouge pas.'
+		echo 'Un fichier "dispocla_perso" est présent et reste bien en place.'
 	fi
 	# Désinstaller les tableaux d’allocation de touches.
 	if [ "$dispocla" -eq 1 ]; then
@@ -249,7 +249,7 @@ function supprimer_dispo {
 	if [ "$complete_types_avant" -eq 1 ]; then
 		sudo mv $X11/xkb/types/complete-types-avant-dispoclavier sauvegarde/archive/complete-types-avant.c
 	fi
-	# Rendre les fichiers sauvegardés éditables.
+	# Pour rendre modifiables les fichiers sauvegardés.
 	sudo chmod --recursive 666 sauvegarde
 	if [ "$confirmer_suppression" -eq 1 ]; then
 		# Afficher un dernier message.
@@ -503,21 +503,20 @@ if [ -f "$fichier" ]; then
 	trace=1
 	afficher 'est présent'
 	dispotypes=1
+	fichier="$dossier/complete"
+	if [ -f "$fichier" ]; then
+		if ! grep -qP 'include\s*"dispotypes"' $fichier; then
+			installation=0
+			afficher 'n’inclut pas "dispotypes"'
+		else
+			afficher 'inclut "dispotypes"'
+		fi
+	else
+		fonctionne=0
+	fi
 else
 	installation=0
 	dispotypes=0
-fi
-fichier="$dossier/complete"
-if [ ! -f "$fichier" ]; then
-	fonctionne=0
-	afficher 'manque'
-else
-	if ! grep -qP 'include\s*"dispotypes"' $fichier; then
-		installation=0
-		afficher 'n’inclut pas "dispotypes"'
-	else
-		afficher 'inclut "dispotypes"'
-	fi
 fi
 fichier="$dossier/complete-types-avant-dispoclavier"
 if [ -f "$fichier" ]; then
@@ -534,21 +533,20 @@ if [ -f "$fichier" ]; then
 	trace=1
 	afficher 'est présent'
 	dispoled=1
+	fichier="$dossier/complete"
+	if [ -f "$fichier" ]; then
+		if ! grep -qP 'include\s*"dispoled"' $fichier; then
+			installation=0
+			afficher 'n’inclut pas "dispoled"'
+		else
+			afficher 'inclut "dispoled"'
+		fi
+	else
+		fonctionne=0
+	fi
 else
 	installation=0
 	dispoled=0
-fi
-fichier="$dossier/complete"
-if [ ! -f "$fichier" ]; then
-	fonctionne=0
-	afficher 'manque'
-else
-	if ! grep -qP 'include\s*"dispoled"' $fichier; then
-		installation=0
-		afficher 'n’inclut pas "dispoled"'
-	else
-		afficher 'inclut "dispoled"'
-	fi
 fi
 fichier="$dossier/complete-compat-avant-dispoclavier"
 if [ -f "$fichier" ]; then
@@ -614,6 +612,7 @@ if [ "$fonctionne" -eq 1 ]; then
 							echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
 							echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
 							echo      '       Pour quitter, tapez q puis Entrée.'
+							prem=1
 							read -p   '    ' repo
 							case $repo in
 								[iIpP])
@@ -630,12 +629,21 @@ if [ "$fonctionne" -eq 1 ]; then
 									fait=1
 								;;
 							esac
+						else
+							prem=0
 						fi
 						if [ -f "$HOME/.config/dispoclavier/keycodes/evdev" ] && [ "$fait" -eq 0 ]; then
-							echo -e "\n  ❓  Ou souhaitez-vous réinstaller les redispositions de touches"
-							echo      '       sauvegardées, elles, dans ~/.config/dispoclavier/keycodes/ ?'
-							echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
-							echo      '       Pour les ignorer aussi, tapez i ou p puis Entrée.'
+							if [ "$prem" -eq 1 ]; then
+								echo -e "\n  ❓  Ou souhaitez-vous réinstaller les redispositions de touches"
+								echo      '       sauvegardées, elles, dans ~/.config/dispoclavier/keycodes/ ?'
+								echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
+								echo      '       Pour les ignorer aussi, tapez i ou p puis Entrée.'
+							else
+								echo -e "\n  ❓  Souhaitez-vous réinstaller les redispositions de touches"
+								echo      '       sauvegardées dans ~/.config/dispoclavier/keycodes/ ?'
+								echo -e "\n       Pour les réinstaller, appuyez sur Entrée."
+								echo      '       Pour les ignorer, tapez i ou p puis Entrée.'
+							fi
 							echo      '       Pour quitter, tapez q puis Entrée.'
 							read -p   '    ' repo
 							case $repo in
