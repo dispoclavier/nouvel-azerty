@@ -37,7 +37,7 @@ Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est l
 
 Cette situation ubuesque appelle un aveu de culpabilité, puisque ce nouvel AZERTY est finalement le fruit du rattrapage d’un cheminement qu’il aurait mieux valu démarrer il y a 11 + 2 + 21 ans, quand exactement les mêmes problèmes étaient déjà d’actualité pour quiconque pensait à s’en occuper.
 
-Aujourd’hui, une sortie possible de ce gâchis phénoménal conséquence de l’incurie est l’attitude pragmatique. Quand des gains de productivité sont à portée de main, plutôt que de continuer de s’en priver, la bonne attitude est d’en profiter.
+Aujourd’hui, une sortie possible de ce gâchis phénoménal, conséquence de l’incurie, de l’impiété, et de l’addiction aux nootropes caféine, théobromine et théophylline, est l’attitude pragmatique. Quand des gains de productivité sont à portée de main, plutôt que de continuer de s’en priver, la bonne attitude est d’en profiter.
 
 ### Touches
 
