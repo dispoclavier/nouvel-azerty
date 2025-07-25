@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see XCompose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 5.3.0" # See #   End of line comments
+<UEFA0>                     : "version 6.0.0" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -657,14 +657,13 @@
 <UEF6B> : "Nᵒ" # U004E U1D52
 #
 #
-# # Ordinal indicator with trailing space
+# # Bracketed ellipsis
 #
-#   This ordinal indicator "ᵉ" with automated spacing by NBTSP is intended for
-#   typing French style century figures using Roman numerals. Not included in
-#   the associated keyboard layouts, it is provided for customization.
-#   See (in French) dispocla_perso.cpp # Exemple
+#   As used in shortened quotations. Although the constituents are in synergy
+#   on keys C08, C11, C09, an all-in-one alternative is provided one level up
+#   on key C11, as a matter of improving the level of support.
 #
-<UEF6C> : "ᵉ " # U1D49 U202F
+<UEF6C> : "[…]" # U005B U2026 U005D
 #
 #
 # # Double zero
