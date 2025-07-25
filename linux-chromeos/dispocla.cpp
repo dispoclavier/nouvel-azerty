@@ -1,4 +1,4 @@
-//                       Date: 2025-07-22T0656+0200
+//                       Date: 2025-07-25T2035+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -23,16 +23,21 @@
 //
 //                             3. In /usr/share/X11/xkb/rules/evdev
 //                                comment out the rule:
+//
 //                                    *		*		=	+%l[2]%(v[2]):2
+//
 //                                See ## XKB layout group 2
 //
 //                             4. In /usr/share/X11/xkb/rules/evdev.xml
 //                                add the lines enclosed in the file
+//
 //                                    evdev-additions.xml
+//
 //                                before the </layoutList> closing tag.
 //
 //                             5. In the locale and language settings make sure
 //                                that the input method is XIM, or use the command
+//
 //                                    im-config -n xim
 //
 //                             The changes take effect when reopening a session.
@@ -40,17 +45,22 @@
 //             Uninstallation: Delete those lines, uncomment the rule, remove the file.
 //
 //      Login keyboard layout: The keyboard layout used to log in is configured in
-//                             /etc/default/keyboard.
+//
+//                                 /etc/default/keyboard.
+//
 //                             https://manpages.debian.org/jessie/keyboard-configuration/keyboard.5.en.html
 //
-//                             # KEYBOARD CONFIGURATION FILE
-//                             
-//                             # Consult the keyboard(5) manual page.
-//                             
-//                             XKBMODEL="pc105"
-//                             XKBLAYOUT="dispocla"
-//                             XKBVARIANT="kbfrFRs"
-//                             XKBOPTIONS=""
+//                                 # KEYBOARD CONFIGURATION FILE
+//                                 
+//                                 # Consult the keyboard(5) manual page.
+//                                 
+//                                 XKBMODEL="pc105"
+//                                 XKBLAYOUT="dispocla"
+//                                 XKBVARIANT="kbfrFRs"
+//                                 XKBOPTIONS=""
+//
+//
+//*****************************************************************************
 //
 // # Standards compliance
 //
@@ -68,6 +78,8 @@
 // deployment, and features are not necessarily printed on keycaps. The role of
 // standards is to serve the users, not to dominate users by curtailing the use
 // and compromising the usability of work tools.
+//
+//*****************************************************************************
 //
 //
 // # Configuration
@@ -275,7 +287,7 @@
 // https://www.unige.ch/communication/files/7815/9180/2109/ReglesTypographiques-UNIGE-2020.pdf#page=6
 //
 //
-// ###  Issues affecting French Old School typesetting
+// ### Issues affecting French Old School typesetting
 //
 // Spacing out colon and guillemets with NO-BREAK SPACE does not work well
 // because:
@@ -291,7 +303,7 @@
 //    and in web forms in many browsers.
 //
 //
-// ###  French New School typesetting
+// ### French New School typesetting
 //
 // French new-school typesetting spaces out all big punctuation characters with
 // the same no-break thin space both for ASCII ?!; and even for colon, and for
@@ -327,7 +339,7 @@
 // https://vitrinelinguistique.oqlf.gouv.qc.ca/index.php?id=22039
 //
 //
-// ###  Unicode support for interoperable French
+// ### Unicode support for interoperable French
 //
 // In Unicode, a no-break thin space is encoded only since version 3.0 released
 // in 1999, when U+202F NARROW NO-BREAK SPACE was encoded for Mongol script but
@@ -401,7 +413,7 @@
 // https://www.unicode.org/L2/L2019/19169-nnbsp-thin-space.pdf
 //
 //
-// ###  Punctuation spacing input methods
+// ### Punctuation spacing input methods
 //
 // Since computerized typewriting and typesetting have made horizontal spacing
 // a question of inserting characters, both users and implementers are tempted
@@ -502,7 +514,7 @@
 // See Compose.yml  Acknowledgements
 //
 //
-// ###  Standard typographic number input
+// ### Standard typographic number input
 //
 // The NARROW NO-BREAK SPACE is used mainly as a group separator, for SI/BIPM
 // conformant representation of numeric values with more than 3 digits before
@@ -610,7 +622,8 @@ xkb_symbols "kbfrFRs" {
 	name[Group2] = "French France semiautomatic keyboard layout, ASCII mode";
 	// "Français France disposition de clavier semi-automatique"
 
-	// Includes files from the symbols/ directory.
+	// Include files from the symbols/ directory:
+	
 	include "pc(pc105)"   // Basic functionality.
 	include "inet(evdev)" // Easy access and internet keys.
 
@@ -919,6 +932,19 @@ xkb_symbols "kbfrFRs" {
 	// https://www.futurity.org/emoji-countries-1328712-2-2/
 	//
 	//
+	// ## Sequences
+	//
+	// Beyond punctuation spacing, strings like multiple zeros, escape sequences,
+	// prefixes, bracketed ellipsis and keycap emoji are supported for usability,
+	// providing a convenient level of support, and as part of unlocking the full
+	// potential of computers compared to typewriters. As a result, not doing so
+	// would be extremely disrespectful toward end users.
+	//
+	// See ### Punctuation spacing input methods
+	// See Compose.yml ### Multicharacter strings for live keys
+	// See Compose.yml # # Bracketed ellipsis
+	//
+	//
 	// ## Level inconsistency
 	//
 	// CAUTION: Index 4 is mostly level 5, and conversely.
@@ -1147,7 +1173,7 @@ xkb_symbols "kbfrFRs" {
 	key <AD12> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,            sterling,                   D,        bracketright ],
-		[          underscore,          braceright,           Multi_key,                   D,               U208C,               U207C,               U208C,        bracketright ]
+		[          underscore,          braceright,           Multi_key,                   D,            currency,               U207C,               U208C,        bracketright ]
 	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1215,9 +1241,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_CAPITAL_LEVEL8_CONTROL";
 	key <AC11> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[              ugrave,               UEF64,            ellipsis,       guillemotleft,            currency,             percent,                   A,          apostrophe ],
+		[              ugrave,               UEF64,            ellipsis,       guillemotleft,               UEF6C,             percent,                   A,          apostrophe ],
 		[          apostrophe,             percent,               grave,                   A,               U208D,               U207D,               U208D,          apostrophe ]
-	}; // UEF64 '« ' spaced out with NNBSP; currency: see ## Backward compatibility; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
+	}; // UEF64 '« ' spaced out with NNBSP; UEF6C '[…]' See ## Sequences; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
@@ -1304,10 +1330,13 @@ xkb_symbols "kbfrFRs" {
 	}; // U202F ' ' NARROW NO-BREAK SPACE, no-break thin space (CLDR); U200B '​' ZERO WIDTH SPACE; UEF6E ' ⁠' U0020 U2060 justifying no-break space using WORD JOINER; UEF6F ' ﻿' U0020 UFEFF justifying no-break space using ZERO WIDTH NO-BREAK SPACE; UEF9F '&#x202F;'; UEF9B '&nbsp;'
 
 	//
+	//
 	// # Numpad
 	//
-	// On an overlay numpad with Fn held down, the AltFr modifier must be pressed
-	// before the Fn key.
+	// WARNING
+	//
+	// On overlay numpads with Fn held down, the AltFr modifier may not work when
+	// it is not pressed before the Fn key.
 	//
 
 	key.type[Group1]= "ONE_LEVEL";
