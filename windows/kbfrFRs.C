@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update dead key content "reversed" 5.3.0.34.00 Sat 2025-07-26T2136+0200
 * Restore initial dead char U+1D19   5.3.0.33.00 Sat 2025-07-26T1723+0200
 * Readd (move) currency sign         5.3.0.32.00 Fri 2025-07-25T2358+0200
 * Add support for bracketed ellipsis 5.3.0.31.00 Fri 2025-07-25T2119+0200
@@ -3264,12 +3265,16 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!retroflexhook>                                                 */ DEADTRANS( 0x200B	,0x0273	,0x0322	,0x0000	), // "̢" COMBINING RETROFLEX HOOK BELOW
 /*<!reversed>                                                      */ DEADTRANS( L'\''	,0x1D19	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
 /*<!reversed>                                                      */ DEADTRANS( 0x2019	,0x1D19	,0x02BD	,0x0000	), // "ʽ" MODIFIER LETTER REVERSED COMMA
+/*<!reversed>                                                      */ DEADTRANS( L'^'	,0x1D19	,0x29A3	,0x0000	), // "⦣" REVERSED ANGLE
 /*<!reversed>                                                      */ DEADTRANS( L'~'	,0x1D19	,0x223D	,0x0000	), // "∽" REVERSED TILDE
+/*<!reversed>                                                      */ DEADTRANS( L'|'	,0x1D19	,0x2AEE	,0x0000	), // "⫮" DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 /*<!reversed>                                                      */ DEADTRANS( L'}'	,0x1D19	,0x29B0	,0x0000	), // "⦰" REVERSED EMPTY SET
 /*<!reversed>                                                      */ DEADTRANS( L','	,0x1D19	,0x2E41	,0x0000	), // "⹁" REVERSED COMMA
 /*<!reversed>                                                      */ DEADTRANS( L'='	,0x1D19	,0x22CD	,0x0000	), // "⋍" REVERSED TILDE EQUALS
 /*<!reversed>                                                      */ DEADTRANS( L'`'	,0x1D19	,0x2310	,0x0000	), // "⌐" REVERSED NOT SIGN
 /*<!reversed>                                                      */ DEADTRANS( L'?'	,0x1D19	,0x2E2E	,0x0000	), // "⸮" REVERSED QUESTION MARK
+/*<!reversed>                                                      */ DEADTRANS( L'"'	,0x1D19	,0x201F	,0x0000	), // "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+/*<!reversed>                                                      */ DEADTRANS( 0x20AC	,0x1D19	,0x201F	,0x0000	), // "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK
 /*<!reversed>                                                      */ DEADTRANS( L';'	,0x1D19	,0x204F	,0x0000	), // "⁏" REVERSED SEMICOLON
 /*<!reversed>                                                      */ DEADTRANS( 0x00A7	,0x1D19	,0x204F	,0x0000	), // "⁏" REVERSED SEMICOLON
 /*<!reversed>                                                      */ DEADTRANS( L'_'	,0x1D19	,0x2B88	,0x0000	), // "⮈" LEFTWARDS BLACK CIRCLED WHITE ARROW
@@ -3277,6 +3282,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!reversed>                                                      */ DEADTRANS( L'2'	,0x1D19	,0x29F9	,0x0000	), // "⧹" BIG REVERSE SOLIDUS
 /*<!reversed>                                                      */ DEADTRANS( L'3'	,0x1D19	,0x27CD	,0x0000	), // "⟍" MATHEMATICAL FALLING DIAGONAL
 /*<!reversed>                                                      */ DEADTRANS( L'4'	,0x1D19	,0x29F5	,0x0000	), // "⧵" REVERSE SOLIDUS OPERATOR
+/*<!reversed>                                                      */ DEADTRANS( L'A'	,0x1D19	,0x29A5	,0x0000	), // "⦥" REVERSED ANGLE WITH UNDERBAR
+/*<!reversed>                                                      */ DEADTRANS( L'a'	,0x1D19	,0xAB31	,0x0000	), // "ꬱ" LATIN SMALL LETTER A REVERSED-SCHWA
 /*<!reversed>                                                      */ DEADTRANS( L'B'	,0x1D19	,0x204D	,0x0000	), // "⁍" BLACK RIGHTWARDS BULLET
 /*<!reversed>                                                      */ DEADTRANS( L'b'	,0x1D19	,0x204D	,0x0000	), // "⁍" BLACK RIGHTWARDS BULLET
 /*<!reversed>                                                      */ DEADTRANS( L'C'	,0x1D19	,0x2183	,0x0000	), // "Ↄ" ROMAN NUMERAL REVERSED ONE HUNDRED
@@ -3285,12 +3292,14 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!reversed>                                                      */ DEADTRANS( L'd'	,0x1D19	,0x204C	,0x0000	), // "⁌" BLACK LEFTWARDS BULLET
 /*<!reversed>                                                      */ DEADTRANS( L'E'	,0x1D19	,0x018E	,0x0000	), // "Ǝ" LATIN CAPITAL LETTER REVERSED E
 /*<!reversed>                                                      */ DEADTRANS( L'e'	,0x1D19	,0x0258	,0x0000	), // "ɘ" LATIN SMALL LETTER REVERSED E
+/*<!reversed>                                                      */ DEADTRANS( L'f'	,0x1D19	,0x2619	,0x0000	), // "☙" REVERSED ROTATED FLORAL HEART BULLET
 /*<!reversed>                                                      */ DEADTRANS( L'F'	,0x1D19	,0xA7FB	,0x0000	), // "ꟻ" LATIN EPIGRAPHIC LETTER REVERSED F
 /*<!reversed>                                                      */ DEADTRANS( L'g'	,0x1D19	,0xDF01	,0x0000	), // High surrogate: D837; U+1DF01 "𝼁" LATIN SMALL LETTER REVERSED SCRIPT G
 /*<!reversed>                                                      */ DEADTRANS( L'H'	,0x1D19	,0xA7F5	,0x0000	), // "Ꟶ" LATIN CAPITAL LETTER REVERSED HALF H
 /*<!reversed>                                                      */ DEADTRANS( L'h'	,0x1D19	,0xA7F6	,0x0000	), // "ꟶ" LATIN SMALL LETTER REVERSED HALF H
 /*<!reversed>                                                      */ DEADTRANS( L'k'	,0x1D19	,0xDF03	,0x0000	), // High surrogate: D837; U+1DF03 "𝼃" LATIN SMALL LETTER REVERSED K
 /*<!reversed>                                                      */ DEADTRANS( L'L'	,0x1D19	,0x2143	,0x0000	), // "⅃" REVERSED SANS-SERIF CAPITAL L
+/*<!reversed>                                                      */ DEADTRANS( L'l'	,0x1D19	,0x2BFE	,0x0000	), // "⯾" REVERSED RIGHT ANGLE
 /*<!reversed>                                                      */ DEADTRANS( L'N'	,0x1D19	,0x1D0E	,0x0000	), // "ᴎ" LATIN LETTER SMALL CAPITAL REVERSED N
 /*<!reversed>                                                      */ DEADTRANS( L'n'	,0x1D19	,0xDF07	,0x0000	), // High surrogate: D837; U+1DF07 "𝼇" LATIN SMALL LETTER REVERSED ENG
 /*<!reversed>                                                      */ DEADTRANS( L'o'	,0x1D19	,0xAB43	,0x0000	), // "ꭃ" LATIN SMALL LETTER TURNED O OPEN-O
@@ -3303,6 +3312,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!reversed>                                                      */ DEADTRANS( L'R'	,0x1D19	,0x1D19	,0x0000	), // "ᴙ" LATIN LETTER SMALL CAPITAL REVERSED R
 /*<!reversed>                                                      */ DEADTRANS( L'S'	,0x1D19	,0x01AA	,0x0000	), // "ƪ" LATIN LETTER REVERSED ESH LOOP
 /*<!reversed>                                                      */ DEADTRANS( L's'	,0x1D19	,0x0285	,0x0000	), // "ʅ" LATIN SMALL LETTER SQUAT REVERSED ESH
+/*<!reversed>                                                      */ DEADTRANS( L'V'	,0x1D19	,0xA73E	,0x0000	), // "Ꜿ" LATIN CAPITAL LETTER REVERSED C WITH DOT
+/*<!reversed>                                                      */ DEADTRANS( L'v'	,0x1D19	,0xA73F	,0x0000	), // "ꜿ" LATIN SMALL LETTER REVERSED C WITH DOT
+/*<!reversed>                                                      */ DEADTRANS( L'W'	,0x1D19	,0x2AED	,0x0000	), // "⫭" REVERSED DOUBLE STROKE NOT SIGN
+/*<!reversed>                                                      */ DEADTRANS( L'w'	,0x1D19	,0x2AED	,0x0000	), // "⫭" REVERSED DOUBLE STROKE NOT SIGN
 /*<!reversed>                                                      */ DEADTRANS( L'x'	,0x1D19	,0x025C	,0x0000	), // "ɜ" LATIN SMALL LETTER REVERSED OPEN E
 /*<!reversed>                                                      */ DEADTRANS( L'X'	,0x1D19	,0xA7AB	,0x0000	), // "Ɜ" LATIN CAPITAL LETTER REVERSED OPEN E
 /*<!reversed>                                                      */ DEADTRANS( L'Z'	,0x1D19	,0x01B8	,0x0000	), // "Ƹ" LATIN CAPITAL LETTER EZH REVERSED
