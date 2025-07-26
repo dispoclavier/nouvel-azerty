@@ -8,7 +8,7 @@ LOCALENAME	"fr-FR"
 
 LOCALEID	"0000040c"
 
-VERSION	5.3.0.32
+VERSION	5.3.0.33
 
 // Encodage : UTF-16 LE (sinon, KbdUTool plante).
 // Largeur des tabulations : 12 caractères.
@@ -55,9 +55,9 @@ LAYOUT		;an extra '@' at the end is a dead key
 //
 // Pour faire transpiler des touches mortes par KbdUTool, le code du caractère
 // mort ne doit pas dépasser 0FFF. Cette contrainte peut être satisfaite par
-// l’utilisation de remplaçants à corriger manuellement en C, par exemple
-// 0E05 pour 1E05 point souscrit, 0E57 pour 1E57 point en chef, 0EBB pour 1EBB
-// crochet en chef, 0690 pour 2690 drapeau.
+// l’utilisation de remplaçants à corriger manuellement en C, par exemple (sans
+// préfixe) : 0D19 pour 1D19 réfléchi, 0E05 pour 1E05 point souscrit, 0E57 pour
+// 1E57 point en chef, 0EBB pour 1EBB crochet en chef, 0690 pour 2690 drapeau.
 
 29	KANA
 
@@ -134,7 +134,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 10	A		1	q	Q	-1	005e	005e@		// MINUSCULE LATINE Q, CAPITALE LATINE Q, <none>, ACCENT CIRCONFLEXE, ACCENT CIRCONFLEXE
 11	Z		1	z	Z	-1	0025	0250@		// MINUSCULE LATINE Z, CAPITALE LATINE Z, <none>, SYMBOLE POUR CENT, MINUSCULE LATINE A TOURNÉ
 12	E		1	j	J	-1	20ac	0151@		// MINUSCULE LATINE J, CAPITALE LATINE J, <none>, SYMBOLE EURO, MINUSCULE LATINE O DOUBLE ACCENT AIGU
-13	R		1	f	F	-1	005c	019e@		// MINUSCULE LATINE F, CAPITALE LATINE F, <none>, OBLIQUE INVERSE, MINUSCULE LATINE N PROLONGÉ À DROITE
+13	R		1	f	F	-1	005c	1d19@		// MINUSCULE LATINE F, CAPITALE LATINE F, <none>, OBLIQUE INVERSE, MINUSCULE LATINE N PROLONGÉ À DROITE
 14	T		1	g	G	-1	007e	00f5@		// MINUSCULE LATINE G, CAPITALE LATINE G, <none>, TILDE, MINUSCULE LATINE O TILDE
 15	Y		1	y	Y	-1	03b5@	03b5@		// MINUSCULE LATINE Y, CAPITALE LATINE Y, <none>, MINUSCULE GRECQUE EPSILON, MINUSCULE GRECQUE EPSILON
 16	U		1	m	M	-1	0027	00e1@		// MINUSCULE LATINE M, CAPITALE LATINE M, <none>, GUILLEMET SIMPLE GÉNÉRIQUE, MINUSCULE LATINE A ACCENT AIGU
@@ -268,7 +268,7 @@ DEADKEY	0250
 DEADKEY	0151
 
 
-DEADKEY	019e
+DEADKEY	1d19
 
 
 DEADKEY	00f5
@@ -457,7 +457,7 @@ KEYNAME_DEAD
 005e	"ACCENT CIRCONFLEXE"
 0250	"MINUSCULE LATINE A TOURNÉ"
 0151	"MINUSCULE LATINE O DOUBLE ACCENT AIGU"
-019e	"MINUSCULE LATINE N PROLONGÉ À DROITE"
+1d19	"PETITE CAPITALE LATINE R RÉFLÉCHI"
 00f5	"MINUSCULE LATINE O TILDE"
 03b5	"MINUSCULE GRECQUE EPSILON"
 03b5	"MINUSCULE GRECQUE EPSILON"
