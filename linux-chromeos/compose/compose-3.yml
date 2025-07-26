@@ -8,6 +8,8 @@
 #               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #
+#
+#
 #   START_LETTER_SYMBOL_GROUPS
 #
 #
@@ -2769,10 +2771,8 @@
 <Multi_key><backslash><EuroSign>                                                           <colon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <dead_doubleacute><UEFD6>                                                              <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><quotedbl><backslash>                                                       <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
-<Multi_key><quotedbl><backslash>                                                       <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><EuroSign><backslash>                                                       <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <UEFD6><dead_doubleacute>                                                              <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
-<Multi_key><backslash><quotedbl>                                                       <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><backslash><quotedbl>                                                       <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><backslash><EuroSign>                                                       <semicolon> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <dead_doubleacute><UEFD6>                                                                <section> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
