@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-07-04T1708+0200
+# 2025-07-26T1631+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -124,7 +124,7 @@ sub keysymsToDchars {
 	$deadkeys =~ s/!superscript/^/;
 	$deadkeys =~ s/!turned/0250/;
 	$deadkeys =~ s/!doubleacute/0151/;
-	$deadkeys =~ s/!reversed/019E/;
+	$deadkeys =~ s/!reversed/1D19/;
 	$deadkeys =~ s/!tilde/00F5/;
 	$deadkeys =~ s/!greek/03B5/;
 	$deadkeys =~ s/!acute/00E1/;
@@ -173,7 +173,7 @@ sub formatCharacter {
 
 while ( my $line = <INPUT> ) {
 
-	unless ( $line =~ /^<Multi_key>/         # Multikey not yet processed.
+	unless ( $line =~ /^<Multi_key>/             # Multikey is not processed.
 		|| $line =~ /^#/                 # Annotations.
 		|| $line =~ /^<[^>]+> * :/       # Multichar for live keys.
 		|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
