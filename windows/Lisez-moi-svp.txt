@@ -1,6 +1,6 @@
-                      Date : 2025-07-26T0500+0200
+                      Date : 2025-07-26T2242+0200
                    Version : 5.3.0
- Version compilation/build : 5.3.0.32
+ Version compilation/build : 5.3.0.34
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -35,10 +35,10 @@
 
 Dossiers et fichiers
 
-  • Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-5.3.0.32-installation » avec ses 4 pilotes de disposition,
+  • Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-5.3.0.34-installation » avec ses 4 pilotes de disposition,
     ses 3 installateurs et son setup.exe.
 
-  • Le dossier « kbfrFRsr-5.3.0.32-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui
+  • Le dossier « kbfrFRsr-5.3.0.34-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui
     est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
 
   • Dans le dossier « redispositions » se trouvent les fichiers d’inscription au Registre avec leur description
@@ -56,9 +56,10 @@ Installer
 
     Prise à la lettre, c’est une fausse alerte, car ce qui « peut mettre votre ordinateur en danger » n’est pas
     l’« exécution de cette application », mais l’exécution d’une application non reconnue en général. Nuance.
-    Cette application est incapable de mettre votre ordinateur en danger,
+    Cette application-ci est incapable de mettre votre ordinateur en danger.
 
-    Pour passer le Microsoft Defender SmartScreen, vous avez deux options, et moi j’en ai une seule.
+    Pour passer le Microsoft Defender SmartScreen, vous avez deux options. Pour ne pas le voir, il y a
+    une seule option.
 
   • Cliquer sur « Informations complémentaires ». Car en plus de celles-ci (« Application : setup.exe
     Éditeur : Éditeur inconnu ») s’affiche alors un bouton « Exécuter quand même ». Cliquer celui-ci
@@ -112,7 +113,7 @@ Installer
         installée.
 
 
-  • Ma seule manière de vous éviter le Microsoft Defender SmartScreen est de louer pour plus de 500 € par an
+  • La seule manière d’éviter le Microsoft Defender SmartScreen est de louer pour plus de 500 € par an
     un certificat de signature de code à validation étendue (Extended Validation Code Signing Certificate).
 
         https://www.reddit.com/r/electronjs/comments/17sizjf/a_guide_to_code_signing_certificates_for_the/
@@ -324,7 +325,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 
 
-Critiques, suggestions et retours d’expérience
+Retours d’expérience, suggestions et critiques
 
 N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
 à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains, en substituant
