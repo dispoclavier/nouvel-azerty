@@ -874,7 +874,7 @@
 #   <UEFD3>                  <*dead_abovehook>          "ỏ" U1ECF LATIN SMALL LETTER O WITH HOOK ABOVE
 #   <UEFD4>                  <*dead_retroflexhook>      "ɖ" U0256 LATIN SMALL LETTER D WITH TAIL
 #   <UEFD5>                  <*dead_turned>             "ɐ" U0250 LATIN SMALL LETTER TURNED A
-#   <UEFD6>                  <*dead_reversed>           "ɘ" U0258 LATIN SMALL LETTER REVERSED E
+#   <UEFD6>                  <*dead_reversed>           "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
 #   <UEFD7>                  <*dead_flag>               "⚐" U2690 WHITE FLAG
 #   <UEFD8>                  <*dead_bar>                "ħ" U0127 LATIN SMALL LETTER H WITH STROKE
 #   <UEFD8><UEFD8>           <*dead_bar><*dead_bar>     "ⱡ" U2C61 LATIN SMALL LETTER L WITH DOUBLE BAR
@@ -4662,7 +4662,7 @@
 #*# REVERSED
 #   *dead_reversed UEFD6
 #   Multi_key: ¦\
-#   Dchar: "ɘ" U0258
+#   Dchar: "ᴙ" U1D19
 #
 #   "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E, "ɘ" U0258 LATIN SMALL LETTER
 #   REVERSED E is no casing pair. The small letter has no capital letter, while
@@ -4705,16 +4705,24 @@
 <Multi_key><backslash>                                                              <nobreakspace> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                                    <U202F> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                                     <U202F> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
+<UEFD6>                                                                                 <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+#   Multikey conflicts with EMOJI_READY.                                                <quotedbl> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+<UEFD6>                                                                                 <EuroSign> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+#   Multikey conflicts with EMOJI_READY.                                                <EuroSign> : "‟" U201F # DOUBLE HIGH-REVERSED-9 QUOTATION MARK
 <UEFD6>                                                                               <apostrophe> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                                <apostrophe> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                     <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                      <rightsinglequotemark> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
+<UEFD6>                                                                              <asciicircum> : "⦣" U29A3 # REVERSED ANGLE
+#   Multikey conflicts with "ᴲ" U1D32.                                               <asciicircum> : "⦣" U29A3 # REVERSED ANGLE
 <UEFD6>                                                                               <asciitilde> : "∽" U223D # REVERSED TILDE
 <Multi_key><backslash>                                                                <asciitilde> : "∽" U223D # REVERSED TILDE
 <UEFD6>                                                                               <braceright> : "⦰" U29B0 # REVERSED EMPTY SET
 #   Multikey conflicts with "ʅ" U0285, "ᶔ" U1D94.                                     <braceright> : "⦰" U29B0 # REVERSED EMPTY SET
 <UEFD6>                                                                               <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
 #   Multikey conflicts with "ᴎ" U1D0E, "ᴙ" U1D19, "◥" U25E5, "◹" U25F9, "⨲" U2A32.    <underscore> : "⮈" U2B88 # LEFTWARDS BLACK CIRCLED WHITE ARROW
+<UEFD6>                                                                                      <bar> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
+#   Multikey conflicts with "⧩" U29E9.                                                       <bar> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <UEFD6>                                                                                    <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><backslash>                                                                     <equal> : "⋍" U22CD # REVERSED TILDE EQUALS
 <UEFD6>                                                                                    <grave> : "⌐" U2310 # REVERSED NOT SIGN
@@ -4745,6 +4753,10 @@
 <Multi_key><backslash>                                                                         <4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <UEFD6>                                                                                     <KP_4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><backslash>                                                                      <KP_4> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<UEFD6>                                                                                        <A> : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
+<Multi_key><backslash>                                                                         <A> : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
+<UEFD6>                                                                                        <a> : "ꬱ" UAB31 # LATIN SMALL LETTER A REVERSED-SCHWA
+<Multi_key><backslash>                                                                         <a> : "ꬱ" UAB31 # LATIN SMALL LETTER A REVERSED-SCHWA
 <UEFD6>                                                                                        <B> : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><backslash>                                                                         <B> : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <UEFD6>                                                                                        <b> : "⁍" U204D # BLACK RIGHTWARDS BULLET
@@ -4763,6 +4775,8 @@
 <Multi_key><backslash>                                                                         <e> : "ɘ" U0258 # LATIN SMALL LETTER REVERSED E
 <UEFD6>                                                                                        <F> : "ꟻ" UA7FB # LATIN EPIGRAPHIC LETTER REVERSED F
 <Multi_key><backslash>                                                                         <F> : "ꟻ" UA7FB # LATIN EPIGRAPHIC LETTER REVERSED F
+<UEFD6>                                                                                        <f> : "☙" U2619 # REVERSED ROTATED FLORAL HEART BULLET
+<Multi_key><backslash>                                                                         <f> : "☙" U2619 # REVERSED ROTATED FLORAL HEART BULLET
 <UEFD6>                                                                                        <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash>                                                                         <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6>                                                                                        <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
@@ -4773,6 +4787,8 @@
 <Multi_key><backslash>                                                                         <k> : "𝼃" U1DF03 # LATIN SMALL LETTER REVERSED K
 <UEFD6>                                                                                        <L> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><backslash>                                                                         <L> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
+<UEFD6>                                                                                        <l> : "⯾" U2BFE # REVERSED RIGHT ANGLE
+<Multi_key><backslash>                                                                         <l> : "⯾" U2BFE # REVERSED RIGHT ANGLE
 <UEFD6>                                                                                        <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
 <Multi_key><backslash>                                                                         <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
 <UEFD6>                                                                                        <n> : "𝼇" U1DF07 # LATIN SMALL LETTER REVERSED ENG
@@ -4795,6 +4811,14 @@
 <Multi_key><backslash>                                                                         <S> : "ƪ" U01AA # LATIN LETTER REVERSED ESH LOOP
 <UEFD6>                                                                                        <s> : "ʅ" U0285 # LATIN SMALL LETTER SQUAT REVERSED ESH
 <Multi_key><backslash>                                                                         <s> : "ʅ" U0285 # LATIN SMALL LETTER SQUAT REVERSED ESH
+<UEFD6>                                                                                        <V> : "Ꜿ" UA73E # LATIN CAPITAL LETTER REVERSED C WITH DOT
+<Multi_key><backslash>                                                                         <V> : "Ꜿ" UA73E # LATIN CAPITAL LETTER REVERSED C WITH DOT
+<UEFD6>                                                                                        <v> : "ꜿ" UA73F # LATIN SMALL LETTER REVERSED C WITH DOT
+<Multi_key><backslash>                                                                         <v> : "ꜿ" UA73F # LATIN SMALL LETTER REVERSED C WITH DOT
+<UEFD6>                                                                                        <W> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><backslash>                                                                         <W> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<UEFD6>                                                                                        <w> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><backslash>                                                                         <w> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <UEFD6>                                                                                        <X> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <Multi_key><backslash>                                                                         <X> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <UEFD6>                                                                                        <x> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
