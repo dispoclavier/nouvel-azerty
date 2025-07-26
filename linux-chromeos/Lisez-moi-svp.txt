@@ -1,4 +1,4 @@
-                      Date : 2025-07-22T1926+0200
+                      Date : 2025-07-26T2242+0200
                    Version : 5.3.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
@@ -223,7 +223,7 @@ Personnalisation
 
 
 
-Critiques, suggestions et retours d’expérience
+Retours d’expérience, suggestions et critiques
 
 N’hésitez pas à envoyer toutes critiques, conseils d’amélioration et retours d’expérience
 à l’adresse mail dans l’en-tête de ce fichier, adresse réservée aux humains, en substituant
