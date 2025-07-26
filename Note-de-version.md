@@ -1,6 +1,6 @@
-# 6.0.0 (prépublication)
+# 5.3.0 (prépublication)
 
-|Tant que les modes d’emploi ne sont pas à jour, la version 6.0.0 reste en prépublication.|
+|Tant que les modes d’emploi ne sont pas à jour, la version 5.3.0 reste en prépublication.|
 |:-:|
 
 Amélioration de la rétrocompatibilité des touches de ponctuation en bas.
@@ -149,7 +149,7 @@ Toutes les touches vives sont à jour, toutes les touches mortes simples aussi. 
 
 #### Installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Windows-6.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.0/Un-nouvel-AZERTY-Windows-6.0.0.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.txt) » ou dans « [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.txt) ».
+Télécharger le dossier « [Un-nouvel-AZERTY-Windows-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/5.3.0/Un-nouvel-AZERTY-Windows-5.3.0.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.txt) » ou dans « [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.txt) ».
 
 ### Linux
 
@@ -157,7 +157,7 @@ Dans les dernières versions de Linux, il faut s’attendre à ce que le commuta
 
 #### Utilisation sans droits d’administrateur
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.0/Un-nouvel-AZERTY-Linux-6.0.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre les instructions dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus.
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/5.3.0/Un-nouvel-AZERTY-Linux-5.3.0.zip) » sous le titre « Assets », et lancer le script d’activation [activer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/activer.sh) ou suivre les instructions dans le fichier [Lisez-moi-svp.txt](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.txt) inclus.
 
 Sous [Linux Mint](https://www.linuxmint.com/edition.php?id=311), cette méthode est la seule qui fonctionne, en raison de [bogues dans XKB sous Linux Mint](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#linux-mint).
 
@@ -165,7 +165,7 @@ Sous [Linux Mint](https://www.linuxmint.com/edition.php?id=311), cette méthode 
 
 Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.0.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.0/Un-nouvel-AZERTY-Linux-6.0.0.zip) » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh) ou installer chaque fichier [manuellement](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#installation-manuelle).
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-5.3.0.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/5.3.0/Un-nouvel-AZERTY-Linux-5.3.0.zip) » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/installer.sh) ou installer chaque fichier [manuellement](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md#installation-manuelle).
 
 Puis fermer la session et en rouvrir une. 
 
