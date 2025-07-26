@@ -137,13 +137,13 @@ Quand le clavier est en mode ASCII, les chiffres sont en Minuscule, et en Majusc
 
 ### Ponctuations
 
-Ce nouvel AZERTY perpétue bien sûr la tradition de l’AZERTY de dédier aux ponctuations quatre touches entre [N] et Majuscule, mais il veille à ce que toutes les grandes ponctuations soient aussi bien en Majuscule qu’en AltFr, afin de pouvoir les espacer automatiquement, en Majuscule, ou non, en AltFr.
+Ce nouvel AZERTY perpétue bien sûr la tradition de l’AZERTY de dédier aux ponctuations quatre touches entre [N] et Majuscule, mais il veille à ce que toutes les grandes ponctuations soient aussi bien en Majuscule (à l’instar du point d’interrogation) qu’en AltFr, afin de pouvoir les espacer automatiquement (en Majuscule) ou non (en AltFr).
 
 #### Petites ponctuations
 
 En Minuscule sur la première touche après le [N], la virgule est 100 % rétrocompatible. (Insister là-dessus vaut la peine depuis qu’en 2019, une norme AFNOR a déplacé la virgule sur la touche suivante.)
 
-Sur la touche suivante, le point est lui aussi sur sa touche traditionnelle, mais en Minuscule. Cela répond à une demande majoritaire, et c’est aussi que les chiffres ne sont plus en Majuscule et ne nécessitent donc plus de point en Majuscule en synergie (sans compter que le séparateur décimal français est la virgule, et que l’espace en Majuscule ne fonctionne plus pour séparer les milliers).
+Sur la touche suivante, le point est lui aussi sur sa touche traditionnelle, mais en Minuscule. Cela répond à une [demande majoritaire](https://dispoclavier.com/afnor/enq2017/comm/public/point/), et c’est aussi que les chiffres ne sont plus en Majuscule et ne nécessitent donc plus de point en Majuscule en synergie (sans compter que le séparateur décimal français est la virgule, et que l’espace en Majuscule ne fonctionne plus pour séparer les milliers).
 
 #### Barres obliques
 
