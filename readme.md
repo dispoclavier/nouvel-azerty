@@ -35,7 +35,7 @@ Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est l
 
 Cette situation ubuesque appelle un aveu de culpabilité, puisque ce nouvel AZERTY est finalement le fruit du rattrapage d’un cheminement qu’il aurait mieux valu démarrer il y a 11 + 2 + 21 ans (en 1991), à une époque où exactement les mêmes problèmes étaient déjà d’actualité pour quiconque était au courant et pensait à s’en occuper.
 
-Aujourd’hui, une sortie possible de ce gâchis phénoménal (conséquence de l’incurie, de l’impiété, et de l’addiction aux nootropes caféine, théobromine et théophylline, faut-il préciser afin de mettre tout le monde en état de comprendre ce qui nous arrive ; car exister, c’est aussi cela (Germaine Tillion), et ce qui est arrivé au clavier d’ordinateur de France n’est pas normal) est de prendre une posture pragmatique. Quand des gains de productivité sont à portée de main, plutôt que de continuer à s’en priver, la bonne attitude est d’en profiter.
+Aujourd’hui, une sortie possible de ce gâchis phénoménal (conséquence de l’incurie, de l’impiété, et de l’addiction aux nootropes caféine, théobromine et théophylline, faut-il préciser afin de mettre tout le monde en état de comprendre ce qui nous arrive ; car exister, c’est aussi cela ([Germaine Tillion](https://hal.science/hal-02458674v2/document)), et ce qui est arrivé au clavier d’ordinateur de France n’est pas normal) est de prendre une posture pragmatique. Quand des gains de productivité sont à portée de main, plutôt que de continuer à s’en priver, mieux vaut en profiter.
 
 ### Touches
 
