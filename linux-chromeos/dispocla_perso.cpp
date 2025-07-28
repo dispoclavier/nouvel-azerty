@@ -1,4 +1,4 @@
-//                      Date : 2025-07-22T1107+0200
+//                      Date : 2025-07-28T1207+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -6,11 +6,21 @@
 //               Description : tables d’allocation de touches XKB
 //                Plateforme : systèmes d’exploitation Linux et ChromeOS* utilisant XKB avec XCompose
 //
+//             Nom du projet : Dispoclavier
+//             URL du projet : https://dispoclavier.com
+//              Licence code : Apache 2.0
+//          URL licence code : https://www.apache.org/licenses/LICENSE-2.0
+//          Licence non-code : CC-BY 4.0
+//      URL licence non-code : https://creativecommons.org/licenses/by/4.0/deed.fr
+//              Adresse mail : dev[arobase]dispoclavier.com
+//
 //   * Au CLDR d’Unicode, cette plateforme s’appelle ChromeOS, avec comme explication
 //     qu’au CLDR, Linux est pris en charge aux côtés de ChromeOS, ou par ChromeOS.
 //
 //              Installation : Ce fichier doit être installé en premier dans
-//                             /usr/share/X11/xkb/symbols/dispocla_perso
+//
+//                                 /usr/share/X11/xkb/symbols/dispocla_perso
+//
 //                             car il est inclus dans toutes les dispositions de clavier
 //                             configurées dans /usr/share/X11/xkb/symbols/dispocla dès lors
 //                             que ce nouvel AZERTY a été installé, manuellement ou par le
@@ -25,29 +35,25 @@
 //
 // # Exemple
 //
-// L’indicateur ordinal "ᵉ" U1D49 est au niveau 3 de la touche E11, en synergie
-// avec l’espace insécable U00A0, dans dispocla.cpp :
+// Le point médian "·" U00B7 est au niveau 1 de la touche B10, en synergie
+// avec les minuscules ou les capitales selon l’état de la bascule VerrCap.
 //
-//	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
-//	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
-//	key <AE11> {
-		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-//		[                  at,              degree,               U1D49,        bracketright,               U207B,                   E,               UEFCA,               minus ],
-//		[                  at,              degree,               minus,               U208B,                   E,               U207B,               UEFCA,               minus ]
-//	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; U207B ⁻ SUPERSCRIPT MINUS; U208B ₋ SUBSCRIPT MINUS; UEFCA *️⃣ keycap star emoji
+//	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
+//	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
+//	key <AB10> {
+//		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+//		[      periodcentered,               UEF60,             section,              exclam,     dead_belowcomma,             section,              U1F494,           backslash ],
+//		[           semicolon,              exclam,           semicolon,              exclam,     dead_belowcomma,             section,              U1F609,           backslash ]
+//	}; // UEF60 ' !' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 //
-// Pour lui ajouter une espace fine insécable comme l’espace fine insécable des
-// guillemets ouvrants en Majuscule, la séquence UEF6C dans Compose.yml :
+// Pour y avoir plutôt la contre-oblique à cause de son usage fréquent en TeX
+// et LaTeX, et sachant que le point médian est aussi dans le groupe 1 de p/P : 
 //
-//     <UEF6C> : "ᵉ " # U1D49 U202F
-//
-// va dans key <AE11> en mode français dans dispocla_perso.cpp :
-//
-//	key.type[Group1] = "EIGHT_LEVELS_MINUS_GROUP1";
-//	key.type[Group2] = "EIGHT_LEVELS_MINUS_GROUP2";
-//	key <AE11> {
-		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-//		[            NoSymbol,            NoSymbol,               UEF6C,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+//	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
+//	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
+//	key <AB10> {
+//		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+//		[           backslash,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
 //		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 //	};
 //
