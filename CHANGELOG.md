@@ -43,15 +43,15 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 * Disposition :
 	* Touches B08 et B10 :
 		* Mode français :
-			* Permuter le point d’exclamation et le point-virgule espacés en Maj et non espacés en AltFr pour les remettre sur leurs touches historiques. (reste à faire)
-			* Mettre le point médian "·" U+00B7 sur touche vive en Minuscule sur B10 à la place de la contre-oblique "\\" U+005C, qui est sur AltGr + R. (reste à faire)
-			* En AltGr, laisser "§" U+00A7 sur B10 pour la rétrocompatibilité, et "!" U+0021 sur B08 pour la synergie avec "<" U+003C, plutôt que d’y faire suivre ";" U+003B. (reste à faire)
+			* Permuter le point d’exclamation et le point-virgule espacés en Maj, et non espacés en AltFr et en Maj + AltFr, pour les remettre sur leurs touches historiques. dispocla.cpp [82e9d24](https://github.com/dispoclavier/nouvel-azerty/commit/82e9d2491813bdd5b6fa34996bd8423d4e437765), kbfrFRs.klc [296e005](https://github.com/dispoclavier/nouvel-azerty/commit/296e005d99eb73fa0369cb21ff3ee77ffd0bfa21), kbfrFRsr.klc [cce59f2](https://github.com/dispoclavier/nouvel-azerty/commit/cce59f2df32436404dcb1d17d71e4e3ac8789605), kbfrFRs.C [f49c397](https://github.com/dispoclavier/nouvel-azerty/commit/f49c3976e715eb76d64b06b9e4b979606cc2d3d8), kbfrFRsr.C [2421757](https://github.com/dispoclavier/nouvel-azerty/commit/2421757a63fcf19113c305fccb1c50ac60441306)
+			* Mettre le point médian "·" U+00B7 sur touche vive en Minuscule sur B10 à la place de la contre-oblique "\\" U+005C, qui est sur AltGr + R. ibidem
+			* En AltGr, laisser "§" U+00A7 sur B10 pour la rétrocompatibilité, et "!" U+0021 sur B08 pour la synergie avec "<" U+003C, plutôt que d’y faire suivre ";" U+003B.
 		* Mode ASCII :
-			* Ne pas permuter "." U+002E et ";" U+003B, quitte à ne pas remettre le point-virgule sur sa place historique, afin d’assurer la stabilité du point, tout en remettant le point-virgule en Minuscule. (reste à faire)
-			* En Maj, permuter "\\" U+005C et "!" U+0021 pour remettre le point d’exclamation sur sa touche historique. (reste à faire)
-			* En AltFr, permuter "!" U+0021 et ";" U+003B pour la cohérence avec le mode français. (reste à faire)
-			* En AltGr, ne pas permuter "!" U+0021 et ";" U+003B, pour la cohérence avec le mode français et la stabilité du point d’exclamation en AltGr. (reste à faire)
-		* En Maj + AltGr, ne pas permuter les touches mortes point souscrit et virgule souscrite, pour la cohérence avec "!" U+0021 et ";" U+003B (ou "§" U+00A7) en AltGr, et parce que le point souscrit est plus fréquent que la virgule souscrite. (reste à faire)
+			* Ne pas permuter "." U+002E et ";" U+003B, quitte à ne pas remettre le point-virgule sur sa place historique, afin d’assurer la stabilité du point, tout en ayant le point-virgule en Minuscule.
+			* En Maj, permuter "\\" U+005C et "!" U+0021 pour remettre le point d’exclamation sur sa touche historique. ibidem
+			* En AltFr, permuter "!" U+0021 et ";" U+003B pour la cohérence avec le mode français. ibidem
+			* En AltGr, ne pas permuter "!" U+0021 et ";" U+003B, pour la cohérence avec le mode français et la stabilité du point d’exclamation en AltGr.
+		* En Maj + AltGr, ne pas permuter les touches mortes point souscrit et virgule souscrite, pour la cohérence avec "!" U+0021 et ";" U+003B (ou "§" U+00A7) en AltGr, et parce que le point souscrit est plus fréquent que la virgule souscrite.
 	* Pavé numérique :
 		* Mettre à niveau sous Windows selon le pavé numérique pour Linux. kbcommon.H [eda6c76](https://github.com/dispoclavier/nouvel-azerty/commit/eda6c7662762cf75a58c5c6cd1db3762485b0305), kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
 		* Remplir les positions vides. dispocla.cpp [4517a6d](https://github.com/dispoclavier/nouvel-azerty/commit/4517a6db7a9f8be2511b0b0f5d9402bebeda7296), kbfrFRs.C [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5ea4c28](https://github.com/dispoclavier/nouvel-azerty/commit/5ea4c28f2ef48eb2315c231564cad4403b9d50aa)
@@ -134,7 +134,9 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 	* Sous Linux : Déboguer, corriger, compléter et mettre à jour le script. installer.sh [590d72e](https://github.com/dispoclavier/nouvel-azerty/commit/590d72ed168f1795ad437501bbe95516e8179318), [88810ee](https://github.com/dispoclavier/nouvel-azerty/commit/88810eeae0cc5e7f99b0a5a4922c66c9284c503c), [0238803](https://github.com/dispoclavier/nouvel-azerty/commit/02388033494d3c600b38ce205931c0981dd475aa), [e7f1fc6](https://github.com/dispoclavier/nouvel-azerty/commit/e7f1fc635061d70b250e7ba428c496a159fdf1be), [5ad9bde](https://github.com/dispoclavier/nouvel-azerty/commit/5ad9bde450b43c39240558c8f095453d06c0a828), [113d63b](https://github.com/dispoclavier/nouvel-azerty/commit/113d63bb123558cd49e6f3ac079ad3953b74ef86)
 * Activation sous Linux : Corriger et mettre à jour les annotations du script. activer.sh [f8369cd](https://github.com/dispoclavier/nouvel-azerty/commit/f8369cd7dcf114ee588aeebb44193b1bb3410780), [c34b0e4](https://github.com/dispoclavier/nouvel-azerty/commit/c34b0e40144de8879e02ec2d16c1c2abd3e1f74b)
 * Personnalisation :
-	* Sous Linux : Déboguer, corriger et compléter le fichier de redisposition. dispocla_perso.cpp [1cf270f](https://github.com/dispoclavier/nouvel-azerty/commit/1cf270f83739e37e4a695e849edd0175e60d1081)
+	* Sous Linux :
+		* Déboguer, corriger et compléter le fichier de redisposition. dispocla_perso.cpp [1cf270f](https://github.com/dispoclavier/nouvel-azerty/commit/1cf270f83739e37e4a695e849edd0175e60d1081)
+		* Mettre à jour l’exemple. dispocla_perso.cpp [0b1a5cc](https://github.com/dispoclavier/nouvel-azerty/commit/0b1a5cc8f6caba87fc9009b1f7cfe765ffd9671b)
 	* Sous Windows :
 		* Mettre en ligne le script de compilation revu, corrigé, mis à jour et désormais en UTF-8. windows/outils/creadispo.cmd [416474a](https://github.com/dispoclavier/nouvel-azerty/commit/416474acf550216599ac44445c612f0338304974)
 		* Corriger le script. creadispo.cmd [e922a72](https://github.com/dispoclavier/nouvel-azerty/commit/e922a72afce2d9982fc90d1364159cef3bc99a9d), [31f44c7](https://github.com/dispoclavier/nouvel-azerty/commit/31f44c747ad3d640f904aec1cf43d751ef2a44b2), [dfdc733](https://github.com/dispoclavier/nouvel-azerty/commit/dfdc733a753bf98f8fe8c1b33586a8ee423ff2aa)
