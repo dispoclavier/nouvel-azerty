@@ -7,6 +7,7 @@
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
+* Fix misspelling                              6.0.0.00.00 Tue 2025-07-29T0457+0200
 * Fix misspelling of mistranspilation          5.3.0.27.00 Sun 2025-07-20T0406+0200
 * Uncomment numpad defines                     5.3.0.20.00 Tue 2025-07-01T1712+0200
 * Ditch pointless editing DEADTRANS             5.2.0.3.12 Thu 2025-06-12T2133+0200
@@ -192,7 +193,7 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 /**********************************************************************************\
 * 1  ALPHABETIC AND PUNCTUATION KEY REMAPPINGS
 *
-* See VK redefines in the locale specific header files.
+* See VK redefinitions in the locale specific header files.
 *
 \**********************************************************************************/
 /**********************************************************************************\
