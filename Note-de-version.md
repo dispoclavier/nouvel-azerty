@@ -1,7 +1,7 @@
 # 6.0.0 (prépublication)
 
 |*Les modes d’emploi ne sont pas encore inclus, faute d’être à jour.*|
-|:-:|
+|:-|
 |*Tant que les modes d’emploi ne sont pas à jour, la version 6.0.0 doit rester en prépublication.*|
 
 Meilleure rétrocompatibilité de la touche du point-virgule et de celle du point d’exclamation.
