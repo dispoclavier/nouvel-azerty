@@ -1,5 +1,5 @@
-                      Date : 2025-07-26T2242+0200
-                   Version : 5.3.0
+                      Date : 2025-07-30T0345+0200
+                   Version : 6.0.0
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -142,7 +142,7 @@ Ainsi prévenu, on peut effectuer les étapes de l’activation :
 
   2  Sous le titre « Assets », télécharger le dossier compressé nommé :
 
-         Un-nouvel-AZERTY-Linux-5.3.0.zip
+         Un-nouvel-AZERTY-Linux-6.0.0.zip
 
   3  Décompresser le dossier téléchargé.
 
