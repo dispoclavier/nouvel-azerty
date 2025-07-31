@@ -12,7 +12,7 @@ Ce nouvel AZERTY est la disposition de base au sein d’un ensemble de dispositi
 
 Ces fonctionnalités nécessitent la mise en œuvre des ressources nativement disponibles sous Windows et sous Linux pour ajouter une deuxième bascule graphique, appelée « VerrMod » ou verrouillage en mode ASCII, ainsi qu’une troisième modificatrice graphique, nommée « AltFr », pour les ponctuations non espacées et pour les chiffres groupés à la française par l’espace fine insécable, ou à l’anglaise ou à l’américaine par le point ou la virgule.
 
-Des versions de ces vues avec infobulles et bascules cliquables sont en ligne sur la [page d’accueil de ce nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/#vue-interactive) sur [dispoclavier.com](https://dispoclavier.com).
+Ces vues sont en ligne [avec infobulles et bascules cliquables](https://dispoclavier.com/nouvel-azerty/#vue-interactive) sur la [page d’accueil de ce nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) sur [dispoclavier.com](https://dispoclavier.com).
 
 Ce nouvel AZERTY en mode français :
 ![Ce nouvel AZERTY en mode français](https://dispoclavier.com/img/nouvel-azerty.png)
@@ -31,7 +31,7 @@ Ce mode d’emploi commun introduit aux fonctionnalités communes à toutes les 
 
 Ce faisant, il s’agit aussi de documenter que les innovations proposées sur ce nouvel AZERTY⁠ sont incontournables. Gros défi, car malgré qu’à bien y regarder, tout aille de soi, les problèmes sous-jacents peinent à se frayer un chemin vers la visibilité, source de prise de tête et de perte de temps tant que la solution n’est pas sur la table.
 
-Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est littéralement sur la table –, la tentation est grande de passer à côté plutôt que de se rendre à l’évidence de s’être embêté “pour rien” jusqu’à présent, et de se retrouver avec l’air d’avoir “attendu” ce nouvel AZERTY pour commencer à travailler normalement et confortablement. Bouder ce nouvel AZERTY est même le réflexe le plus naturel après trente ans supplémentaires de maltraitance promue au rang de normalité, qui a eu l’effet de désensibiliser les utilisateurs dans une logique d’autodéfense. Histoire de garder le moral.
+Même une fois qu’elle l’est – la solution qu’est ce nouvel AZERTY est littéralement sur la table –, la tentation est grande de passer à côté plutôt que de se rendre à l’évidence de s’être embêté “pour rien” jusqu’à présent, et de se retrouver avec l’air d’avoir “attendu” ce nouvel AZERTY pour commencer à travailler normalement et confortablement. Bouder ce nouvel AZERTY est même le réflexe le plus naturel après trente ans supplémentaires de maltraitance promue au rang de normalité, qui a eu l’effet de désensibiliser les personnes utilisatrices dans une logique d’autodéfense. Histoire de garder le moral.
 
 Cette situation ubuesque appelle un aveu de culpabilité, puisque ce nouvel AZERTY est finalement le fruit du rattrapage d’un cheminement qu’il aurait mieux valu démarrer il y a 11 + 2 + 21 ans (en 1991), à une époque où exactement les mêmes problèmes étaient déjà d’actualité pour quiconque était au courant et pensait à s’en occuper.
 
@@ -77,7 +77,7 @@ Les capitales, y compris É, È, Ç, À et Ù, sont toutes en Minuscule quand le
 
 C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.
 
-Le VerrMaj tel qu’on le connaît est bon pour les machines à écrire. Mais sur l’ordinateur, émuler la machine à écrire tire la productivité vers le bas dans une logique à courte vue axée sur un marketing simpliste et populiste qui trahissait les utilisateurs et les sacrifiait sur l’autel du profit facile.
+Le VerrMaj tel qu’on le connaît est bon pour les machines à écrire. Mais sur l’ordinateur, émuler la machine à écrire tire la productivité vers le bas dans une logique à courte vue axée sur un marketing simpliste et populiste qui trahissait les personnes utilisatrices et les sacrifiait sur l’autel du profit facile.
 
 ##### Verrouillage Numérique
 
@@ -145,13 +145,7 @@ En Minuscule sur la première touche après le [N], la virgule est 100 % rétr
 
 Sur la touche suivante, le point est lui aussi sur sa touche traditionnelle, mais en Minuscule. Cela répond à une [demande majoritaire](https://dispoclavier.com/afnor/enq2017/comm/public/point/), et c’est aussi que les chiffres ne sont plus en Majuscule et ne nécessitent donc plus de point en Majuscule en synergie (sans compter que le séparateur décimal français est la virgule, et que l’espace en Majuscule ne fonctionne plus pour séparer les milliers).
 
-#### Barres obliques
-
-Sur les deux dernières touches, en mode français, les places en Minuscule sont données l’une à l’oblique sur sa touche traditionnelle, l’autre à la contre-oblique pour faciliter la saisie de diverses commandes et séquences d’échappement.
-
-C’est la suite logique de la réunion en Majuscule de toutes les grandes ponctuations
-
-En mode ASCII, le deux-points et le point-virgule redescendent en Minuscule en se permutant avec l’oblique et la contre-oblique.
+Sur la touche du point d’exclamation, et à la place de celui-ci, le point médian est en Minuscule, pour son utilisation en écriture inclusive qui est [très utile](https://lejournal.cnrs.fr/articles/lecriture-inclusive-par-dela-le-point-median) et dont les critiques sont [inaudibles](https://www.onufemmes.fr/nos-actualites/2019/11/25/feminicides-etat-des-lieux-de-la-situation-dans-le-monde).
 
 #### Grandes ponctuations
 
@@ -164,6 +158,16 @@ L’espacement automatique des ponctuations en Majuscule se fait par la seule es
 En cas de points d’interrogation ou d’exclamation multiples, l’espace devant le deuxième est évitée manuellement. Plutôt que de changer de touche modificatrice, on peut maintenir l’appui sur Majuscule et ajouter un appui sur AltFr.
 
 En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points et le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi, la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
+
+#### Barres obliques
+
+Sur l’avant-dernière touche, en mode français, la place en Minuscule est donnée à l’oblique sur sa touche traditionnelle.
+
+C’est la suite logique de la réunion en Majuscule (et en AltFr) de toutes les grandes ponctuations.
+
+En mode ASCII, l’oblique remonte à sa place traditionnelle, car le deux-points redescend en Minuscule. Le point-virgule aussi, sur la dernière touche, libérant sa place en Majuscule sur la touche du point en faveur de la contre-oblique.
+
+Ces deux obliques ont aussi des places stables, l’oblique sur AltGr + [W], la contre-oblique sur AltGr + [R].
 
 #### Ponctuations sur la rangée haute
 
