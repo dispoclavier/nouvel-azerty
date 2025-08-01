@@ -157,7 +157,7 @@ L’espacement automatique des ponctuations en Majuscule se fait par la seule es
 
 En cas de points d’interrogation ou d’exclamation multiples, l’espace devant le deuxième est évitée manuellement. Plutôt que de changer de touche modificatrice, on peut maintenir l’appui sur Majuscule et ajouter un appui sur AltFr.
 
-En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points et le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi, la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et la contre-oblique au lieu du point d’exclamation et du symbole paragraphe. En mode français, celui-ci y est toutefois en AltGr, en synergie avec les chiffres.
+En mode ASCII, les points d’interrogation et d’exclamation restent en Majuscule mais sans espace, tandis que le deux-points et le point-virgule redescendent en Minuscule tous les deux et laissent aux obliques leurs places en Majuscule. Ainsi, la touche du deux-points se retrouve disposée à l’ancienne, tandis que la touche suivante a le point-virgule et le point d’exclamation.
 
 #### Barres obliques
 
