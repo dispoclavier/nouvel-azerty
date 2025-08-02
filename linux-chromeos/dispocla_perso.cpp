@@ -1,4 +1,4 @@
-//                      Date : 2025-07-28T1207+0200
+//                      Date : 2025-08-02T0748+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -36,7 +36,8 @@
 // # Exemple
 //
 // Le point médian "·" U00B7 est au niveau 1 de la touche B10, en synergie
-// avec les minuscules ou les capitales selon l’état de la bascule VerrCap.
+// avec les minuscules ou les capitales selon l’état de la bascule VerrCap,
+// sauf sur les variantes redisposées qui, elles, y ont la contre-oblique.
 //
 //	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
 //	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
@@ -46,8 +47,10 @@
 //		[           semicolon,              exclam,           semicolon,              exclam,     dead_belowcomma,             section,              U1F609,           backslash ]
 //	}; // UEF60 ' !' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 //
-// Pour y avoir plutôt la contre-oblique à cause de son usage fréquent en TeX
-// et LaTeX, et sachant que le point médian est aussi dans le groupe 1 de p/P : 
+// Pour y avoir la contre-oblique aussi sur les AZERTY, à cause de son usage en
+// TeX et LaTeX, sachant que le point médian est aussi dans le groupe 1 de p/P,
+// il faut mettre "backslash" à la place de "NoSymbol" à l’index 1 du groupe 1
+// de la touche "AB10".
 //
 //	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
 //	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
