@@ -1,4 +1,4 @@
-//                       Date: 2025-07-28T2233+0200
+//                       Date: 2025-08-02T0739+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -2187,6 +2187,14 @@ xkb_symbols "kbfrFRsr" {
 		[                   h,                   H,            NoSymbol,            NoSymbol,            NoSymbol,                U02B0 ],
 		[                   h,                   H,            NoSymbol,            NoSymbol,            NoSymbol,                U02B0 ]
 	}; // U02B0 ʰ MODIFIER LETTER SMALL H
+
+	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
+	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
+	key <AB10> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[           backslash ],
+		[            NoSymbol ]
+	};
 
 	// See ## Customization facility
 	include "dispocla_perso"
