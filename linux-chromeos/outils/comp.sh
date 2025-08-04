@@ -2,25 +2,28 @@
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
 # 2024-08-26T0303+0200
-# 2025-08-03T0408+0200
-# == last modified.
+# 2025-08-04T0457+0200
+# = last modified.
 #
-# Generates all-in-one keymap files from X display, the installed and currently
-# active keyboard layout.
+# Generates all-in-one keymap files from "X display", the currently active
+# keyboard layout.
 #
-# Requires to manually configure the subvariants in xkb/keycodes/evdev.
-#
-# Automatically switches layouts while compiling a subvariant as configured.
+# Automatically switches layouts while merging or compiling a subvariant as
+# configured.
 # By courtesy of Stack Overflow.
 # https://askubuntu.com/questions/209597/how-do-i-change-keyboards-from-the-command-line
 #
-# The recommended output format is ".xkb" keymap source files, but the compiled
-# ".xkm" keymap file output is also supported. This can be activated by editing
-# the de-facto boolean "human_readable" below.
+# Requires to manually configure the subvariants in
+#
+#     /usr/share/X11/xkb/keycodes/evdev
+#
+# The default output format is .xkb (keymap source). The .xkm (compiled keymap)
+# format is also supported. This can be activated by editing the ad-hoc boolean
+# $human_readable.
 #
 human_readable=1 # The integer 1 is used with "true" semantics.
 #
-# Rather than distributing compiled ".xkm" files, distributing merged ".xkb" is
+# Rather than distributing compiled .xkm files, distributing merged .xkb is
 # preferable for transparency (the user is able to check what they got) and for
 # usability alike, since the user can directly customize the layout by making a
 # small edit right in the source file.
@@ -28,7 +31,7 @@ human_readable=1 # The integer 1 is used with "true" semantics.
 # The xkbcomp command is documented by IBM.
 # https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command
 #
-# For this to work, the keyboard layouts must be activated and set up in the
+# For this to work, these keyboard layouts must be activated and set up in the
 # Gnome switch in the following order:
 #
 #     0  kbfrFRsr
@@ -116,7 +119,7 @@ case $re in
 	;;
 esac
 
-# Output the variants.
+# Output the configured subvariant for each variant.
 merge_or_compile "kbfrFRs"  "1"
 merge_or_compile "kbbrFRs"  "2"
 merge_or_compile "kbfrPFs"  "3"
