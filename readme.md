@@ -41,6 +41,8 @@ Aujourd’hui, une sortie possible de ce gâchis phénoménal (conséquence de l
 
 Sur ce nouvel AZERTY, plusieurs touches changent de fonctionnalité afin de rendre le clavier mieux adapté à l’écriture de la langue française.
 
+#### Modificatrices
+
 #### Bascules
 
 Ce nouvel AZERTY introduit une nouvelle bascule, et deux bascules existantes voient leur mode de fonctionnement modifié.
@@ -51,21 +53,21 @@ La touche [²] à gauche de [1&] et au-dessus de la touche de tabulation devient
 
 La bascule hybride des machines à écrire est mauvaise sur l’ordinateur, car il y a moyen de la transformer en Verrouillage Capitales, afin que cela fonctionne comme il faut, et qu’on puisse travailler selon les règles du français. En conséquence, les chiffres ont besoin d’une bascule à part.
 
-Cette deuxième bascule graphique s’appelle « VerrMod » pour « verrouillage en mode ASCII ». Elle met en mode ASCII toutes les touches sauf celles de l’alphabet, et permet donc de basculer entre le mode français et le mode ASCII.
+Cette deuxième bascule graphique s’appelle « VerrMod » pour « verrouillage en mode ASCII ». Elle met en mode ASCII toutes les touches sauf celles de l’alphabet, et permet de basculer entre le mode français et le mode ASCII.
 
-Vu que Windows a depuis longtemps une bascule de verrouillage « KANA » pour basculer entre hiragana et katakana, et que Linux a de quoi basculer entre deux « groupes », ne pas l’utiliser sur l’AZERTY où elle résoud tout un tas de problèmes serait vraiment bête, faut-il préciser pour contrer la suspicion de « changer pour changer ».
+Cette fonctionnalité résoud tout un tas de problèmes sur l’AZERTY, de sorte que ne pas l’y utiliser serait d’autant plus incompréhensible qu’elle est nativement prise en charge sous Windows, qui a depuis longtemps une bascule de verrouillage « KANA » pour basculer entre hiragana et katakana, et sous Linux où XKB peut basculer entre deux « groupes ».
 
-Ainsi, le simple appui sur Majuscule remplace l’utilisation de codes Alt fastidieux. À la clé, les gains de productivité que la France appelle de ses vœux entrent dans son escarcelle comme par miracle.
+Ainsi, le simple appui sur Majuscule et le verrouillage en capitales remplacent l’utilisation de codes Alt fastidieux. À la clé, les gains de productivité que la France appelle de ses vœux entrent dans son escarcelle à point nommé.
 
 ###### Mode ASCII
 
 La nouvelle bascule VerrMod met les chiffres de sa rangée en Minuscule, et aussi en Majuscule pour la rétrocompatibilité et la synergie avec les lettres majuscules dans les tableurs, tout en les laissant aussi en AltGr afin de maintenir les synergies habituelles.
 
-En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule sur les touches à gauche d’Entrée, "-" sur [µ*], "_" sur [£$¤].
+En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule en allant sur les touches à gauche d’Entrée, "-" sur [µ*], "_" sur [£$¤].
 
-De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨^], le simple (l’apostrophe ASCII) sur [%ù], afin de continuer d’être à portée de doigts comme sur l’AZERTY traditionnel, conservant précieusement ses avantages sur l’US-QWERTY (guillemet, tiret bas et deux-points en Minuscule).
+De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨^], le simple ou l’apostrophe ASCII sur [%ù], afin de continuer d’être à portée de doigts. Ainsi, les avantages de l’AZERTY traditionnel sur l’US-QWERTY (guillemet, tiret bas et deux-points tous en Minuscule) sont précieusement conservés.
 
-Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}].
+Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}] (où il est aussi en AltFr).
 
 De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui montent en Majuscule à leur place. Ainsi, la touche [/:] devient 100 % rétrocompatible, et la touche suivante lui emboîte le pas avec ";" à la place de "!", et "\" à la place de "§".
 
