@@ -2,7 +2,7 @@
 # 2023-01-14T1934+0100
 # 2023-12-02T2050+0100
 # 2024-08-26T0303+0200
-# 2025-08-04T0457+0200
+# 2025-08-07T0409+0200
 # = last modified.
 #
 # Generates all-in-one keymap files from "X display", the currently active
@@ -81,7 +81,7 @@ function merge_or_compile {
 	fi
 	gsettings set org.gnome.desktop.input-sources current $2
 	sleep 1s
-	xkbcomp -$mode :0 $1/$1$suffix.$mode
+	xkbcomp -$mode $DISPLAY $1/$1$suffix.$mode
 	echo  "$1$suffix.$mode $action."
 }
 
