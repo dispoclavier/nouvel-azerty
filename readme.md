@@ -43,6 +43,27 @@ Sur ce nouvel AZERTY, plusieurs touches changent de fonctionnalité afin de rend
 
 #### Modificatrices
 
+Même avec les deux modificatrices Majuscule et AltGr des claviers d’ordinateur, l’AZERTY s’en sort mal, car :
+
+* des majuscules et des chiffres se disputent les places en Majuscule ;
+* il faut les grandes ponctuations aussi bien sans espace qu’avec la fine qui les accompagne en français.
+
+Dans de telles conditions, ne pas utiliser la troisième modificatrice prise en charge nativement sous Windows et sous Linux – et même sous macOS jusqu’à sa désactivation – serait une privation inutile et incompréhensible dont les premières victimes seraient les personnes utilisatrices, condamnées à composer les ponctuations péniblement au détail (au risque d’abandonner), ou à presser trois touches pour une majuscule (avec l’envie de laisser tomber), ou aux deux astreintes à la fois.
+
+Quand la solution est aussi simple que d’activer une modificatrice, ne pas la mettre en œuvre s’analyse en maltraitance.
+
+##### Majuscule
+
+
+
+##### AltGr
+
+
+
+##### AltFr
+
+
+
 #### Bascules
 
 Ce nouvel AZERTY introduit une nouvelle bascule, et deux bascules existantes voient leur mode de fonctionnement modifié.
