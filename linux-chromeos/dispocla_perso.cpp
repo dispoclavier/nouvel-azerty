@@ -1,4 +1,4 @@
-//                      Date : 2025-08-02T0748+0200
+//                      Date : 2025-08-08T0740+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -32,8 +32,23 @@
 //                             Les personnalisations peuvent se mettre à la place de toute
 //                             instance de NoSymbol, qui signifie « rien d’autre ».
 //
+// ## Avertissement
 //
-// # Exemple
+// Les mises à jour de Linux effacent les fichiers ajoutés dans /usr/share/X11/
+// et nécessitent la réinstallation des dispositions de clavier utilisées.
+//
+// Avant toute mise à jour du système il faut sauvegarder les personnalisations
+// faites dans /usr/share/X11/, par exemple en désinstallant ces dispositions.
+//
+// Les personnalisations ne sont pas affectées par les mises à jour vers une
+// nouvelle version de ces dispositions de clavier. Lors de la désinstallation,
+// elles sont sauvegardées.
+//
+// Les nouvelles personnalisations deviennent effectives à partir de la
+// prochaine session.
+//
+//
+// ## Exemple
 //
 // Le point médian "·" U00B7 est au niveau 1 de la touche B10, en synergie
 // avec les minuscules ou les capitales selon l’état de la bascule VerrCap,
@@ -60,10 +75,16 @@
 //		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 //	};
 //
-// Les nouvelles personnalisations deviennent effectives à partir de la
-// prochaine session. Les personnalisations ne sont pas affectées par les mises
-// à jour vers les nouvelles versions. Lors de la désinstallation, elles sont
-// sauvegardées.
+// Pour y mettre plutôt le trait d’union Unicode U2010, à cause de son glyphe
+// (et de celui du trait d’union ASCII U002D) dans Lucida Sans Unicode :
+//
+//	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
+//	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
+//	key <AB10> {
+//		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+//		[               U2010,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+//		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
+//	};
 //
 
 default partial alphanumeric_keys keypad_keys
