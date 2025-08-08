@@ -1,10 +1,10 @@
-#                      Scope: part 3 of XCompose.yml
+#                      Scope: part 3 of Compose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS
-#        Syntax highlighting: YAML
+#     Syntactic highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #
@@ -16,9 +16,11 @@
 ### Group dead key introduction
 #
 #   The group dead key is a special dead key designed to remap every single key
-#   position. E.g. group 1 of Ɔɔ, Ññ and non-breaking hyphen outputs "―" U2015,
-#   a feature designed for African, Breton, and remapped variants.
-#   See #*# GROUP_1
+#   position. E.g. group 1 of "Ɔ", "ɔ", "Ñ", "ñ", SOFT HYPHEN and NON-BREAKING
+#   HYPHEN outputs "―" U2015 HORIZONTAL BAR, a feature designed for African,
+#   Breton and Polynesian variants, or as a fallback.
+#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
+#   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   Usually, however, the scope of the group dead key is limited to a handy set
 #   of base characters including the Latin base alphabet, the 10 digits and the
