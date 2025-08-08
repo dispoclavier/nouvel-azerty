@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-07-26T1631+0200
+# 2025-08-08T0930+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -10,8 +10,8 @@
 # heading "# # Notes for maintenance" built in, and thanks to improved sorting.
 # https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 #
-# Multikey sequences need to be processed separately, since these are unrelated
-# to or not congruent with the dead key output, as some are commented out.
+# Multikey sequences need to be processed separately. These are unrelated to,
+# or not congruent with, the dead key output, as some are commented out.
 #
 # The sequences ending in dead_greek are required because dead_greek is
 # duplicated on the position of the at sign in the ASCII symbol map.
@@ -288,18 +288,19 @@ foreach my $line ( @dead_key_out ) {
 			$input =~ s/%aprightsinglequotemark/2019/;
 			$input =~ s/%semsection/00A7/;
 			$input =~ s/%quotEuroSign/20AC/;
+			$input =~ s/paragraph/00A7/;
+			$input =~ s/guillemotleft/00AB/;
+			$input =~ s/guillemotright/00BB/;
+			$input =~ s/hyphen/00AD/;
 			$input =~ s/degree/00B0/;
 			$input =~ s/twosuperior/00B2/;
 			$input =~ s/threesuperior/00B3/;
 			$input =~ s/multiply/00D7/;
 			$input =~ s/division/00F7/;
-			$input =~ s/paragraph/00A7/;
 			$input =~ s/endash/2013/;
 			$input =~ s/emdash/2014/;
 			$input =~ s/Greek_horizbar/2015/;
 			$input =~ s/ellipsis/2026/;
-			$input =~ s/guillemotleft/00AB/;
-			$input =~ s/guillemotright/00BB/;
 			$input =~ s/eacute/00E9/;
 			$input =~ s/Eacute/00C9/;
 			$input =~ s/egrave/00E8/;
@@ -309,7 +310,7 @@ foreach my $line ( @dead_key_out ) {
 			$input =~ s/agrave/00E0/;
 			$input =~ s/Agrave/00C0/;
 			$input =~ s/ugrave/00F9/;
-			$input =~ s/Ugrave/00F9/;
+			$input =~ s/Ugrave/00D9/;
 			$input =~ s/adiaeresis/00E4/;
 			$input =~ s/Adiaeresis/00C4/;
 			$input =~ s/odiaeresis/00F6/;
@@ -350,7 +351,7 @@ foreach my $line ( @dead_key_out ) {
 }
 
 @chained_dead_keys = sort( @chained_dead_keys );
-print LIST ( "This is the full list of " . @chained_dead_keys . " chained dead keys to transpile.\n\n" );;
+print LIST ( "This is the full list of " . @chained_dead_keys . " chained dead keys to transpile.\n\n" );
 foreach my $line ( @chained_dead_keys ) {
 	print LIST $line . "\n";
 }
@@ -364,13 +365,17 @@ print( "Closed file $log_path.\n" );
 close( LIST );
 print( "Closed file $list_path.\n\n" );
 unless ( @bad_format == 0 ) {
-	$number_bad_format = @bad_format;
-	print( "  $number_bad_format characters are in a bad format: @bad_format.\n\n" );
+	if ( @bad_format == 1 ) {
+		print( '  ' . @bad_format . " character is in a bad format: @bad_format.\n\n" );
+	} else {
+		print( '  ' . @bad_format . " characters are in a bad format: @bad_format.\n\n" );
+	}
 }
 @high_surrogates = sort( @high_surrogates );
-print( "  $full potentially functional dead key sequences generated.\n" );
+print( "  $full potentially functional dead key sequences in $output_path.\n" );
 print( "  $half additional dead key sequences output only a low surrogate.\n" );
 print( "  The " . @high_surrogates . " required high surrogates are @high_surrogates.\n" );
 print( "  Their relationship to the dead keys is logged in $log_path.\n" );
+print( "  The chained dead keys to transpile are listed in $list_path.\n" );
 print( "  $multichar unsupported multicharacter output dead key sequences not processed.\n\n" );
 print( "Done processing.\n" );
