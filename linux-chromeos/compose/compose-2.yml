@@ -1,10 +1,10 @@
-#                      Scope: part 2 of XCompose.yml
+#                      Scope: part 2 of Compose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS
-#        Syntax highlighting: YAML
+#     Syntactic highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file XCompose.yml.
 #
 #
@@ -8703,44 +8703,45 @@
 #   "cʼh", "Cʼh" on the variants for Breton and Francophone Africa, instead of
 #   superscripts.
 #
-#   For ease of access, the "²" and "³" superscripts are also in groups 1 and 2
-#   of eacute and Eacute, mapped on key 2 of the AZERTY.
+#   For ease of access, the "²" and "³" superscripts are also in groups 1, 2
+#   and 3 of eacute and Eacute, mapped on key E02 of the AZERTY, where group 1
+#   provides easy access, while groups 2 and 3 are both case insensitive and
+#   mnemonic.
 #
-<UEFD0>                                                                                   <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
-<Multi_key><numbersign>                                                                   <Eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
-<UEFD0>                                                                                   <eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
-<Multi_key><numbersign>                                                                   <eacute> : "²" U00B2 # SUPERSCRIPT TWO shortcut for African and Breton variants
-<UEFD0><UEFD0>                                                                            <Eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
-<Multi_key><numbersign><numbersign>                                                       <Eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
-<UEFD0><UEFD0>                                                                            <eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
-<Multi_key><numbersign><numbersign>                                                       <eacute> : "³" U00B3 # SUPERSCRIPT THREE shortcut for African and Breton variants
+<UEFD0>                                                                                   <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<Multi_key><numbersign>                                                                   <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<UEFD0>                                                                                   <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign>                                                                   <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><UEFD0>                                                                            <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<Multi_key><numbersign><numbersign>                                                       <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<UEFD0><UEFD0>                                                                            <Eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<Multi_key><numbersign><numbersign>                                                       <Eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<UEFD0><3>                                                                                <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><3>                                                                <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><KP_3>                                                                             <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><KP_3>                                                             <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><UEFD0><UEFD0>                                                                     <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><numbersign><numbersign>                                           <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><3>                                                                                <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><3>                                                                <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><KP_3>                                                                             <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><KP_3>                                                             <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><UEFD0><UEFD0>                                                                     <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><numbersign><numbersign>                                           <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
 #
 #
 # # HORIZONTAL BAR for African, Breton and Polynesian variants
 #
-#   The base and shift positions on key E08 are used for "ɔ" U0254, "Ɔ" U0186,
-#   or for "ñ" U00F1, "Ñ" U00D1, or for the macron dead key and ʻeta "ʻ" U02BB
-#   MODIFIER LETTER TURNED COMMA.
+#   On Breton variants, the base and shift positions of key E08 are used for
+#   "ñ" U00F1, "Ñ" U00D1; on African variants, for "ɔ" U0254, "Ɔ" U0186; on
+#   Polynesian variants, for the macron dead key and ʻeta "ʻ" U02BB MODIFIER
+#   LETTER TURNED COMMA.
 #
 #   To work around the loss of the key position where the HORIZONTAL BAR dash
 #   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
 #   mapped on that key in African and Breton variants respectively. Given that
 #   the default mapping of the HORIZONTAL BAR is on shifted E08, the Polynesian
-#   variants use U02BB as a base character for HORIZONTAL BAR, while unshifted
-#   key E08 or E07 yields the NON-BREAKING HYPHEN based on the macron dead key.
-#   See # # NON-BREAKING HYPHEN for Polynesian variants
-#   See # # C07 underscore
-#
-#   This uses the non-missing keysyms Ntilde and ntilde rather than U00D1 and
-#   00F1, so we don’t need to decode these later.
-#   See # # Notes for maintenance
-#
-#   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
-#   the Cambria font makes the most sense of it, giving it a three-quarter em
-#   length and making it a four-per-three-em dash. Other fonts use this dash
-#   to have a conjoining em dash, while em dash may not be conjoining.
-#   See # # Long dashes
-#   See #   Dashes
+#   variants use U02BB as a base character for HORIZONTAL BAR.
 #
 <UEFD0>                                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
@@ -8754,11 +8755,45 @@
 <Multi_key><numbersign>                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
 #
 #
+# # Fallback input methods for HORIZONTAL BAR
+#
+#   As U2015 HORIZONTAL BAR is rather rare, its key position may be used for
+#   the Unicode HYPHEN U2010, if this does not require an unshifted position
+#   such as the one on key B10. In any event, if making room for the Unicode
+#   HYPHEN U2010 meets user preferences, e.g. when Lucida Sans Unicode is used,
+#   then these dead key based ways to input HORIZONTAL BAR ease the removal of
+#   U2015 on non-regional layouts, too.
+#
+#   (The bad support of the Unicode HYPHEN is a well-founded design decision.)
+#   See #   Hyphens
+#
+#   Given that EN DASH and EM DASH are used as base characters for TWO-EM DASH
+#   U2E3A and THREE-EM DASH U2E3B, the SOFT HYPHEN and NON-BREAKING HYPHEN are
+#   left over as base characters for HORIZONTAL BAR.
+#   See ### Group dead key introduction
+#   See # # C07 underscore
+#
+#   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
+#   the Cambria font makes the most sense of it, giving it a three-quarter em
+#   length and making it a four-per-three-em dash. Other fonts use this dash
+#   to feature a conjoining EM DASH, while EM DASH is often not conjoining
+#   (which is the reason why the TWO- and THREE-EM DASHes have been encoded).
+#   See # # Long dashes
+#   See #   Dashes
+#
+#   (The XKB keysym "hyphen" is U00AD SOFT HYPHEN.)
+#
+<UEFD0>                                                                                   <hyphen> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                   <hyphen> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
+#
+#
 # # Long dashes
 #
-#   Encoded in 2012 for Unicode 6.1, the three-em dash may stand for the author
-#   name in bibliographies, and the two-em dash fills gaps from missing letters
-#   or words, that the three-em dash may also be used to represent.
+#   Encoded in 2012 for Unicode 6.1, the THREE-EM DASH may stand for the author
+#   name in bibliographies, and the TWO-EM DASH fills gaps from missing letters
+#   or words, that the THREE-EM DASH may also be used to represent.
 #
 #   These are documented by Jukka Korpela, who links also to the archive of the
 #   Unicode Public Mailing List.
@@ -8772,8 +8807,9 @@
 #   See #^# GROUP_2
 #   See #^# GROUP_3
 #
-#   Alongside the support by group and diaeresis dead keys, multiple-em dashes
-#   can be input by multikey, also supporting other dashes and hyphens as well.
+#   Alternative input methods by dead_diaeresis and by multikey are also
+#   available, the former easing the input by proximity of the dead key and the
+#   base characters, the latter supporting other dashes and hyphens as well.
 #   See #*# DIAERESIS
 #   See #   Input method for hyphens and dashes
 #
@@ -16694,6 +16730,10 @@
 #   See # # Quotation mark input method
 #   See # # Comma-shaped quotation marks
 #
+#   Superscript digits are also supported as a full-support alternative to the
+#   partial support in dead_circumflex, lacking the multikey equivalents.
+#   See #*# CIRCUMFLEX
+#
 #   For intuitivity, with asterisk as a base character, dead_diaeresis yields
 #   "⁑" U2051, consistently with dead_circumflex and *dead_superscript for
 #   "⁂" U2042 ASTERISM. "⁑" U2051, "⁂" U2042 and "⁎" U204E are also in
@@ -16715,9 +16755,11 @@
 #   "¦" U00A6 is also in group 11 of ":".
 #   See # # B09 colon
 #
-#   Superscript digits are also supported as a full-support alternative to the
-#   partial support in dead_circumflex, lacking the multikey equivalents.
-#   See #*# CIRCUMFLEX
+#   An alternative input method for multiple-em dashes ("⸺" U2E3A by "–" U2013,
+#   "⸻" U2E3B by "—" U2014) is also provided, easing the input by proximity of
+#   the dead key and the base characters.
+#   See # # Long dashes
+#   See #   Input method for hyphens and dashes
 #
 #   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
 #   but also "Ø" U00D8, "ø" U00F8 for convenience.
@@ -16745,6 +16787,10 @@
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 #   Multikey conflicts with "᪱" U1AB1.                                                   <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<dead_diaeresis>                                                                          <endash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><colon>                                                                        <endash> : "⸺" U2E3A # TWO-EM DASH
+<dead_diaeresis>                                                                          <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><colon>                                                                        <emdash> : "⸻" U2E3B # THREE-EM DASH
 <dead_diaeresis>                                                                               <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <Multi_key><colon>                                                                             <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <dead_diaeresis>                                                                            <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
