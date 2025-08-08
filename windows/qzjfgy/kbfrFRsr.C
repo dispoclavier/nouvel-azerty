@@ -7,6 +7,8 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update dead key content            6.0.0.02.00 Fri 2025-08-08T0942+0200
+* Update dead key content "group"    6.0.0.01.00 Thu 2025-08-07T1823+0200
 * Partially swap B08 and B10         6.0.0.00.00 Mon 2025-07-28T1434+0200
 * Update dead key content "reversed" 5.3.0.34.00 Sat 2025-07-26T2136+0200
 * Restore initial dead char U+1D19   5.3.0.33.00 Sat 2025-07-26T1723+0200
@@ -2561,7 +2563,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!circumflex>                                                    */ DEADTRANS( 0x00B2	,0x00EA	,0x2032	,0x0000	), // "′" PRIME
 /*<!circumflex>                                                    */ DEADTRANS( L'U'	,0x00EA	,0x00DB	,0x0000	), // "Û" LATIN CAPITAL LETTER U WITH CIRCUMFLEX
 /*<!circumflex>                                                    */ DEADTRANS( L'u'	,0x00EA	,0x00FB	,0x0000	), // "û" LATIN SMALL LETTER U WITH CIRCUMFLEX
-/*<!circumflex>                                                    */ DEADTRANS( 0x00F9	,0x00EA	,0x016C	,0x0000	), // "Ŭ" LATIN CAPITAL LETTER U WITH BREVE
+/*<!circumflex>                                                    */ DEADTRANS( 0x00D9	,0x00EA	,0x016C	,0x0000	), // "Ŭ" LATIN CAPITAL LETTER U WITH BREVE
 /*<!circumflex>                                                    */ DEADTRANS( 0x00F9	,0x00EA	,0x016D	,0x0000	), // "ŭ" LATIN SMALL LETTER U WITH BREVE
 /*<!circumflex>                                                    */ DEADTRANS( L'W'	,0x00EA	,0x0174	,0x0000	), // "Ŵ" LATIN CAPITAL LETTER W WITH CIRCUMFLEX
 /*<!circumflex>                                                    */ DEADTRANS( L'w'	,0x00EA	,0x0175	,0x0000	), // "ŵ" LATIN SMALL LETTER W WITH CIRCUMFLEX
@@ -2664,6 +2666,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!diaeresis>                                                     */ DEADTRANS( 0x00E7	,0x00EB	,0x00F8	,0x0000	), // "ø" LATIN SMALL LETTER O WITH STROKE
 /*<!diaeresis>                                                     */ DEADTRANS( L'E'	,0x00EB	,0x00CB	,0x0000	), // "Ë" LATIN CAPITAL LETTER E WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'e'	,0x00EB	,0x00EB	,0x0000	), // "ë" LATIN SMALL LETTER E WITH DIAERESIS
+/*<!diaeresis>                                                     */ DEADTRANS( 0x2014	,0x00EB	,0x2E3B	,0x0000	), // "⸻" THREE-EM DASH
+/*<!diaeresis>                                                     */ DEADTRANS( 0x2013	,0x00EB	,0x2E3A	,0x0000	), // "⸺" TWO-EM DASH
 /*<!diaeresis>                                                     */ DEADTRANS( L'H'	,0x00EB	,0x1E26	,0x0000	), // "Ḧ" LATIN CAPITAL LETTER H WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'h'	,0x00EB	,0x1E27	,0x0000	), // "ḧ" LATIN SMALL LETTER H WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'I'	,0x00EB	,0x00CF	,0x0000	), // "Ï" LATIN CAPITAL LETTER I WITH DIAERESIS
@@ -2673,7 +2677,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!diaeresis>                                                     */ DEADTRANS( L't'	,0x00EB	,0x1E97	,0x0000	), // "ẗ" LATIN SMALL LETTER T WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'U'	,0x00EB	,0x00DC	,0x0000	), // "Ü" LATIN CAPITAL LETTER U WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'u'	,0x00EB	,0x00FC	,0x0000	), // "ü" LATIN SMALL LETTER U WITH DIAERESIS
-/*<!diaeresis>                                                     */ DEADTRANS( 0x00F9	,0x00EB	,0x01DB	,0x0000	), // "Ǜ" LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
+/*<!diaeresis>                                                     */ DEADTRANS( 0x00D9	,0x00EB	,0x01DB	,0x0000	), // "Ǜ" LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 /*<!diaeresis>                                                     */ DEADTRANS( 0x00F9	,0x00EB	,0x01DC	,0x0000	), // "ǜ" LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 /*<!diaeresis>                                                     */ DEADTRANS( L'W'	,0x00EB	,0x1E84	,0x0000	), // "Ẅ" LATIN CAPITAL LETTER W WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'w'	,0x00EB	,0x1E85	,0x0000	), // "ẅ" LATIN SMALL LETTER W WITH DIAERESIS
@@ -2894,8 +2898,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!group>                                                         */ DEADTRANS( L'd'	,0x2460	,0x00F0	,0x0000	), // "ð" LATIN SMALL LETTER ETH
 /*<!group>                                                         */ DEADTRANS( L'E'	,0x2460	,0x018E	,0x0000	), // "Ǝ" LATIN CAPITAL LETTER REVERSED E
 /*<!group>                                                         */ DEADTRANS( L'e'	,0x2460	,0x01DD	,0x0000	), // "ǝ" LATIN SMALL LETTER TURNED E
-/*<!group>                                                         */ DEADTRANS( 0x00C9	,0x2460	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO shortcut for African and Breton variants
-/*<!group>                                                         */ DEADTRANS( 0x00E9	,0x2460	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO shortcut for African and Breton variants
+/*<!group>                                                         */ DEADTRANS( 0x00E9	,0x2460	,0x00B2	,0x0000	), // "²" SUPERSCRIPT TWO
+/*<!group>                                                         */ DEADTRANS( 0x00C9	,0x2460	,0x00B3	,0x0000	), // "³" SUPERSCRIPT THREE
 /*<!group>                                                         */ DEADTRANS( 0x00C8	,0x2460	,0x00D1	,0x0000	), // "Ñ" LATIN CAPITAL LETTER N WITH TILDE shortcut
 /*<!group>                                                         */ DEADTRANS( 0x00E8	,0x2460	,0x00F1	,0x0000	), // "ñ" LATIN SMALL LETTER N WITH TILDE shortcut
 /*<!group>                                                         */ DEADTRANS( 0x2014	,0x2460	,0x2E3B	,0x0000	), // "⸻" THREE-EM DASH
@@ -2908,6 +2912,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!group>                                                         */ DEADTRANS( 0x00BB	,0x2460	,0x00B5	,0x0000	), // "µ" MICRO SIGN
 /*<!group>                                                         */ DEADTRANS( L'H'	,0x2460	,0x018F	,0x0000	), // "Ə" LATIN CAPITAL LETTER SCHWA
 /*<!group>                                                         */ DEADTRANS( L'h'	,0x2460	,0x0259	,0x0000	), // "ə" LATIN SMALL LETTER SCHWA
+/*<!group>                                                         */ DEADTRANS( 0x00AD	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
 /*<!group>                                                         */ DEADTRANS( L'I'	,0x2460	,0x0196	,0x0000	), // "Ɩ" LATIN CAPITAL LETTER IOTA
 /*<!group>                                                         */ DEADTRANS( L'i'	,0x2460	,0x0269	,0x0000	), // "ɩ" LATIN SMALL LETTER IOTA
 /*<!group>                                                         */ DEADTRANS( L'J'	,0x2460	,0x0132	,0x0000	), // "Ĳ" LATIN CAPITAL LIGATURE IJ
@@ -2940,6 +2945,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!group>                                                         */ DEADTRANS( L't'	,0x2460	,0x00FE	,0x0000	), // "þ" LATIN SMALL LETTER THORN
 /*<!group>                                                         */ DEADTRANS( 0x00B2	,0x2460	,0x0026	,0x0000	), // "&" AMPERSAND
 /*<!group>                                                         */ DEADTRANS( 0x02BB	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
+/*<!group>                                                         */ DEADTRANS( 0x2011	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
 /*<!group>                                                         */ DEADTRANS( 0x2039	,0x2460	,0x00A8	,0x0000	), // "¨" DIAERESIS
 /*<!group>                                                         */ DEADTRANS( 0x203A	,0x2460	,0x00A3	,0x0000	), // "£" POUND SIGN
 /*<!group>                                                         */ DEADTRANS( 0x2212	,0x2460	,0x2012	,0x0000	), // "‒" FIGURE DASH
@@ -3069,7 +3075,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!horn>                                                          */ DEADTRANS( L't'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!horn>                                                          */ DEADTRANS( L'U'	,0x01A1	,0x01AF	,0x0000	), // "Ư" LATIN CAPITAL LETTER U WITH HORN
 /*<!horn>                                                          */ DEADTRANS( L'u'	,0x01A1	,0x01B0	,0x0000	), // "ư" LATIN SMALL LETTER U WITH HORN
-/*<!horn>                                                          */ DEADTRANS( 0x00F9	,0x01A1	,0x1EEA	,0x0000	), // "Ừ" LATIN CAPITAL LETTER U WITH HORN AND GRAVE
+/*<!horn>                                                          */ DEADTRANS( 0x00D9	,0x01A1	,0x1EEA	,0x0000	), // "Ừ" LATIN CAPITAL LETTER U WITH HORN AND GRAVE
 /*<!horn>                                                          */ DEADTRANS( 0x00F9	,0x01A1	,0x1EEB	,0x0000	), // "ừ" LATIN SMALL LETTER U WITH HORN AND GRAVE
 /*<!horn>                                                          */ DEADTRANS( L'V'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
 /*<!horn>                                                          */ DEADTRANS( L'v'	,0x01A1	,0x02D6	,0x0000	), // "˖" MODIFIER LETTER PLUS SIGN
