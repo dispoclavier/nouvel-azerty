@@ -110,7 +110,15 @@ C’est que la touche [><] devient la troisième modificatrice, AltFr comme Alte
 
 En pavé, les chiffres en AltFr sont en dessous de [7è`], [8_\\], [9ç^] comme sur les claviers compacts, sauf pour le zéro, qui est à la fois sur [0à@] et sur [N], et en tant que double zéro sur [B]. (Pour le triple zéro, on fait AltFr + [B] + [N].) Ainsi, pour les chiffres en rangée, AltFr est comme une touche AltGr gauche, et presque comme Majuscule gauche.
 
-En Majuscule + AltFr se trouvent tous les exposants, minuscules pour les lettres, ainsi que les quatre grandes ponctuations au cas où il s’agit d’en saisir plusieurs à la suite, sans espace entre elles.
+En Majuscule + AltFr se trouvent tous les exposants, minuscules pour les lettres, ainsi que les quatre grandes ponctuations au cas où il s’agit d’en saisir plusieurs à la suite, sans espace entre elles :
+
+1. Espace fine insécable et point d’interrogation : Maj + [?,] ;
+2. Point d’interrogation : Maj + AltFr + [?,] ;
+3. Point d’exclamation : Maj + AltFr + [§!].
+
+Ce cas de figure illustre la possibilité de ne pas lever l’auriculaire gauche de la touche Majuscule tout en enchaînant avec des ponctuations non espacées. C’est l’annulaire qui se charge d’ajouter l’appui sur AltFr pendant que la main droite continue de saisir.
+
+Quant aux exposants minuscules, ils permettent de composer des abréviations interopérables comme « Mᵐᵉ » ou « 1ᵉʳ ». Le plus fréquent, le "ᵉ", est redondé sur AltGr + [°)\]], en synergie avec les chiffres : « 2ᵉ ».
 
 En AltGr + AltFr, on a le symbole livre sur [L] (mais "£" est aussi sur Maj + AltFr + [£$¤], et plus simple sur AltFr + [R], à égalité avec "€" sur AltFr + [E], et avec "$" sur AltFr + [S]), le symbole yen sur AltGr + AltFr + [Y], et le symbole micro sur AltGr + AltFr + [M] (mais "µ" est aussi sur Maj + AltFr + [µ*], et plus simple sur AltFr + [Y]).
 
@@ -134,13 +142,13 @@ Ainsi, le simple appui sur Majuscule et le verrouillage en capitales remplacent 
 
 La nouvelle bascule VerrMod met les chiffres de sa rangée en Minuscule, et aussi en Majuscule pour la rétrocompatibilité et la synergie avec les lettres majuscules dans les tableurs, tout en les laissant aussi en AltGr afin de maintenir les synergies habituelles.
 
-En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII U+002D et le tiret bas U+005F) restent en Minuscule en allant sur les touches à gauche d’Entrée, "-" sur [µ*], "_" sur [£$¤].
+En mode ASCII, afin de maintenir l’utilisabilité du clavier, les tirets du 6 et du 8 (soit le tiret ASCII "-" U+002D et le tiret bas "\_" U+005F) restent en Minuscule en allant sur les touches à gauche d’Entrée, "-" sur [µ*], "_" sur [£$¤].
 
 De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨^], le simple ou l’apostrophe ASCII sur [%ù], afin de continuer d’être à portée de doigts. Ainsi, les avantages de l’AZERTY traditionnel sur l’US-QWERTY (guillemet, tiret bas et deux-points tous en Minuscule) sont précieusement conservés.
 
-Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}] (où il est aussi en AltFr).
+Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}] (où, en mode français, il est en AltFr).
 
-De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui montent en Majuscule à leur place. Ainsi, la touche [/:] devient 100 % rétrocompatible, et la touche suivante lui emboîte le pas avec ";" à la place de "!", et "\" à la place de "§".
+De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui se mettent en Majuscule à leurs places. Ainsi, la touche [/:] devient 100 % rétrocompatible, tandis que la touche suivante lui emboîte le pas en ce qu’en Minuscule, elle prend le point-virgule, qui laisse sa place sur [.;] à la contre-oblique sans déranger le point en Minuscule.
 
 (En mode ASCII, les chiffres en pavé en AltFr sont complétés par les lettres hexadécimales A sur [%ù], B sur [µ*], C sur [¨^], D sur [£$¤], E sur [°)\]] et F sur [+=}]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.)
 
