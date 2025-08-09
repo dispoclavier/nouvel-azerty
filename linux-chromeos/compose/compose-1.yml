@@ -2242,6 +2242,12 @@
 #
 #   https://www.unicode.org/charts/nameslist/n_0000.html
 #
+#   Most confusingly, in the Core Specification, Unicode claims that in what is
+#   obviously a matter of font design, the ASCII hyphen U002D is longer than an
+#   average HYPHEN U2010, despite virtually all fonts except a single one give
+#   both hyphens exactly the same glyph.
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
+#
 #   As a consequence, U002D HYPHEN-MINUS stands out among ASCII punctuation in
 #   that its usage is sort of deprecated, if not discouraged in current writing
 #   in favor of its homoglyph U2010.
@@ -2321,12 +2327,24 @@
 #   The real-world fallout of the HYPHEN encoding error is the glyph of U002D
 #   in the 1993 typeface Lucida Sans Unicode, whose designers were almost
 #   Unicode’s neighbors and decided to break with longstanding practice when
-#   noticing in the then-Code Charts that there is an extra hyphen, and that
-#   Unicode points out that the ASCII hyphen is “used for either hyphen or
-#   minus sign” consistently with its erroneous ISO name that Unicode was
-#   forced to maintain, as opposed to other symbols repurposed as arithmetic
-#   operators, like ASTERISK, that was not annotated with the hint that it is
-#   also used as multiplication symbol. So the ASCII hyphen got that disruptive
+#   noticing in the then-Code Charts that there is an extra hyphen, and misled
+#   by the then-Core Specification’s point about “Loose vs. Precise Semantics”
+#   stating: “Some ASCII characters have multiple uses, either through
+#   ambiguity in the original standards or through accumulated
+#   reinterpretations of a limited codeset. For example, 27 hex is defined in
+#   ANSI X3.4 as apostrophe (closing single qutation mark; acute accent), and
+#   2D hex as hyphen minus. In general, the Unicode standard provides the same
+#   interpretation for the equivalent code values, without adding to or
+#   subtracting from their semantics. The Unicode standard supplies unambiguous
+#   codes elsewhere for the most useful particular interpretations of these
+#   ASCII values; the corresponding unambiguous characters are cross-referenced
+#   in the character names list for this block. In a few cases, the Unicode
+#   standard indicates the generic interpretation of an ASCII code in the name
+#   of the corresponding Unicode character, for example U+0027 is
+#   APOSTROPHE-QUOTE ’.” In the Code Chart of this block, Unicode points out
+#   that the ASCII hyphen is “used for either hyphen or minus sign”
+#   consistently with its erroneous ISO name that Unicode was forced to
+#   maintain. So, in Lucida Sans Unicode, the ASCII hyphen got that disruptive
 #   glyph halving the HYPHEN’s thickness and doubling its length, just a bit
 #   less than MINUS SIGN, while nobody noticed that a type foundry is not in a
 #   position to force the use of U2010 in current writing in lieu of U002D, and
@@ -2353,8 +2371,8 @@
 #
 #   https://web.archive.org/web/20221019184912/http://www.unicode.org/reports/tr14/
 #
-#   It was the month after the Unicode Consortium moved from Mountain View to
-#   South San Francisco.
+#   It was the month after the Unicode Consortium moved its headquarters from
+#   Mountain View to South San Francisco.
 #   https://web.archive.org/web/20220927085408/https://home.unicode.org/
 #   https://web.archive.org/web/20220928085512/https://home.unicode.org/
 #
@@ -2367,20 +2385,23 @@
 #   locale mode and ASCII mode, so as to keep coding out of harm’s way.
 #
 #   The keyboard layouts configured in these files require such a toggle, but
-#   for other purposes. Featuring the Unicode HYPHEN in locale mode is prone to
-#   raise issues about a “fake hyphen” looking like an ASCII hyphen in almost
-#   all fonts but not working as such.
-#   See # # Fallback input methods for HORIZONTAL BAR
+#   for the purpose of getting digits on unshifted keys in an “ASCII mode” that
+#   contrasts with “French mode”. Featuring the Unicode HYPHEN in locale mode
+#   would be prone to raising issues and triggering angry feedback about that
+#   “fake hyphen” looking like an ASCII hyphen in almost all fonts without
+#   working as expected.
 #
-#   As a consequence, the extra hyphen U2010 should not be taken seriously, in
-#   order to prevent adverse effects on keyboard layout design when attempting
-#   to support U2010 on live key or by premium dead key like group 1 of minus.
+#   As a consequence, keyboard layout design should not take this extra hyphen
+#   U2010 seriously, in order to prevent adverse effects while attempting to
+#   support it on live key or by a premium dead key such as group 1 of minus.
 #   There, "⁃" U2043 HYPHEN BULLET is supported instead, while HYPHEN is in
-#   group 12, like the outdated legacy ordinal indicators "ª" U00AA, "º" U00BA.
+#   group 12, like the outdated legacy ordinal indicators "ª" U00AA, "º" U00BA
+#   are in group 12 of asciicircum and braceright, respectively.
 #   See #^# Legacy ordinal indicators
 #   See # # C05 minus
 #   See # # D01 asciicircum
 #   See # # D09 braceright
+#   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   By contrast, "‑" U2011 NON-BREAKING HYPHEN is so important that it is on
 #   live key E06, level 2.
@@ -2391,20 +2412,35 @@
 #
 #   The dashes based on multiples of the em dash encompass 8 characters listed
 #   below. Out of these, seven — all but the ASCII hyphen — are supported by a
-#   digit-based multikey scheme including ten dashes and hyphens, additionally
+#   digit-based multikey scheme supporting ten dashes and hyphens, additionally
 #   to partial support in groups and diacritical dead keys.
 #   See # # Long dashes
 #   See #^# DOUBLE_BAR
 #   See #^# HIGH_BAR
 #   See #*# FLAG
-#   See # # DIAERESIS&GROUP_1
+#   See #*# DIAERESIS
 #   See # # C05 minus
 #
-#   The mnemonic of "5" for EN DASH is the decimal form "0.5" for "½", while
-#   HORIZONTAL BAR is associated with "8" due to keycap-based mnemonics on the
-#   unremapped, unlocalized French AZERTY layout where HORIZONTAL BAR is on key
-#   E08, level 2. Else, "7" would be convenient, based on "0.75" for "¾"; but
-#   the rounded-up value "0.8" falls back on the "8" mnemonic.
+#   The mnemonic of "5" for U2013 EN DASH is the decimal form "0.5" for "½",
+#   while U2015 HORIZONTAL BAR is associated with "7" based on "0.75" for "¾".
+#
+#   The mnemonic of "8" for U2E40 DOUBLE HYPHEN is the shape of the digit.
+#
+#   The mnemonic of "6" for U2011 NON-BREAKING HYPHEN is the thumbs-up shape of
+#   the digit in appreciation of NON-BREAKING HYPHEN’s extraordinary usefulness
+#   in preventing orthographic hyphens from being treated as line break
+#   opportunities when they are not.
+#
+#   By contrast, the "9" mnemonic for U2012 FIGURE DASH is the exact opposite,
+#   the thumbs-down shape symbolic when considering that consistently with its
+#   white-space counterparts U2007 FIGURE SPACE and U2008 PUNCTUATION SPACE,
+#   FIGURE DASH serves literally no purpose unless negative digits are to be
+#   indented. The advice to use FIGURE DASH for interval notation disregards
+#   the official recommendation to use EN DASH for that purpose since the very
+#   first version of the Unicode Core Specification.
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
+#   https://web.archive.org/web/20210224183416/http://www.technicalauthoring.com/wiki/index.php/Figure_dash
+#
 #
 #   #                NAME UCODE description
 #
@@ -2413,14 +2449,15 @@
 #   4              HYPHEN U2010 quarter dash (French “tiret quart-de-cadratin”)
 #   6 NON-BREAKING HYPHEN U2011 quarter dash (French “tiret quart-de-cadratin”)
 #   5             EN DASH U2013 half dash (French “tiret demi-cadratin”)
-#   8      HORIZONTAL BAR U2015 three-quarter dash (or conjoining em dash)
+#   7      HORIZONTAL BAR U2015 three-quarter dash (or conjoining em dash)
 #   1             EM DASH U2014 full dash (French “tiret cadratin”)
 #   2         TWO-EM DASH U2E3A double dash: missing letters; missing word
 #   3       THREE-EM DASH U2E3B triple dash: missing word; author name repetition
 #
-#   0         SOFT HYPHEN U00AD break opportunity, with hyphenation, unlike U200B
-#   7         FIGURE DASH U2012 tabular minus, for typesetting, like U2007, U2008
-#   9       DOUBLE HYPHEN U2E40 marks a hyphen that is not due to the line break
+#   0         SOFT HYPHEN U00AD break opportunity with hyphenation, unlike U200B
+#   8       DOUBLE HYPHEN U2E40 marks a hyphen that is not due to the line break
+#
+#   9         FIGURE DASH U2012 tabular minus, for typesetting, like U2007, U2008
 #
 #   Nearly half of these are supported on live keys, as "‑" U2011 NON-BREAKING
 #   HYPHEN is at level 2 of E06, where French AZERTY has "-" U002D HYPHEN-MINUS
@@ -2443,12 +2480,12 @@
 <Multi_key><KP_5>                                                                    <KP_Subtract> : "–" U2013 # EN DASH
 <Multi_key><6>                                                                             <minus> : "‑" U2011 # NON-BREAKING HYPHEN
 <Multi_key><KP_6>                                                                    <KP_Subtract> : "‑" U2011 # NON-BREAKING HYPHEN
-<Multi_key><7>                                                                             <minus> : "‒" U2012 # FIGURE DASH
-<Multi_key><KP_7>                                                                    <KP_Subtract> : "‒" U2012 # FIGURE DASH
-<Multi_key><8>                                                                             <minus> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><KP_8>                                                                    <KP_Subtract> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><9>                                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><KP_9>                                                                    <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><7>                                                                             <minus> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><KP_7>                                                                    <KP_Subtract> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><8>                                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><KP_8>                                                                    <KP_Subtract> : "⹀" U2E40 # DOUBLE HYPHEN
+<Multi_key><9>                                                                             <minus> : "‒" U2012 # FIGURE DASH
+<Multi_key><KP_9>                                                                    <KP_Subtract> : "‒" U2012 # FIGURE DASH
 #
 #
 # # Ellipses and leaders
