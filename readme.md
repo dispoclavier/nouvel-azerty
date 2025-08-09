@@ -148,17 +148,19 @@ De même, les guillemets ASCII vont sur les touches à côté, le double sur [¨
 
 Aussi, le symbole égal (souvent appelé « signe égal » par calque sur l’anglais américain, ou « signe égale » par calque sur l’anglais britannique) regagne sa touche [+=}] (où, en mode français, il est en AltFr).
 
-De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui se mettent en Majuscule à leurs places. Ainsi, la touche [/:] devient 100 % rétrocompatible, tandis que la touche suivante lui emboîte le pas en ce qu’en Minuscule, elle prend le point-virgule, qui laisse sa place sur [.;] à la contre-oblique sans déranger le point en Minuscule.
+De plus, le deux-points et le point-virgule descendent en Minuscule, en échange des deux barres obliques qui se mettent en Majuscule à leurs places. Ainsi, la touche [/:] devient 100 % rétrocompatible, tandis que la touche suivante, [§!], lui emboîte le pas en ce qu’en Minuscule, elle prend le point-virgule, qui laisse sa place sur [.;] à la contre-oblique sans déranger le point en Minuscule.
 
-(En mode ASCII, les chiffres en pavé en AltFr sont complétés par les lettres hexadécimales A sur [%ù], B sur [µ*], C sur [¨^], D sur [£$¤], E sur [°)\]] et F sur [+=}]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.)
+Enfin, en mode ASCII, les chiffres en pavé en AltFr sont complétés par les lettres hexadécimales A sur [%ù], B sur [µ*], C sur [¨^], D sur [£$¤], E sur [°)\]] et F sur [+=}]. En mode français, ces six lettres sont en AltGr + AltFr sur ces mêmes touches, afin que la saisie d’un chiffre hexadécimal en AltFr ne nécessite pas de basculer en mode ASCII.
 
 ##### Verrouillage Capitales
 
-Les capitales, y compris É, È, Ç, À et Ù, sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais appelée Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules.
+Les capitales, y compris É, È, Ç, À et Ù, sont toutes en Minuscule quand le clavier est en mode capitales par l’ancienne bascule Verrouillage Majuscule (VerrMaj), désormais Verrouillage Capitales (VerrCap), parce qu’elle ne verrouille plus le clavier en Majuscule, mais uniquement les lettres en capitales, afin de rendre l’écriture tout-en-capitales aussi simple que l’écriture en minuscules.
 
 C’est la manière dont fonctionnent la plupart des dispositions de clavier d’ordinateur.
 
-Le VerrMaj tel qu’on le connaît est bon pour les machines à écrire. Mais sur l’ordinateur, émuler la machine à écrire tire la productivité vers le bas dans une logique à courte vue axée sur un marketing simpliste et populiste qui trahissait les personnes utilisatrices et les sacrifiait sur l’autel du profit facile.
+Le VerrMaj tel qu’on le connaît est la seule solution pour les machines à écrire à barres. Mais dès la fin des barres (boule, marguerite, ordinateur), émuler la machine à barres tire la productivité vers le bas dans une logique à courte vue axée sur un marketing simpliste et populiste qui trahissait les personnes utilisatrices et les sacrifiait sur l’autel du profit facile, car sous prétexte d’une transition sans faille, les simplifications rendues possibles par la technologie, qui n’auraient nécessité qu’un apprentissage minimal très rémunérateur, leur étaient refusées.
+
+Ce nouvel AZERTY propose de rattraper d’un seul coup toutes les occasions manquées, et de rendre le travail sur ordinateur vraiment productif.
 
 ##### Verrouillage Numérique
 
@@ -166,9 +168,11 @@ Cette bascule est réservée aux claviers compacts et n’a plus aucun effet sur
 
 (Les vieux claviers de PC IBM ont eu le mérite d’obliger les éditeurs de systèmes à prendre en charge le verrouillage numérique en vue de sa future utilisation sur les claviers sans pavé numérique dédié mais avec les flèches et autres touches d’édition.)
 
-Le pavé numérique est désormais aussi bien en Fonction qu’en Verrouillage Numérique. Le réglage dans le BIOS est parfois caché sous la rubrique « POST Behavior » sans avoir rien à voir avec le Power-On Self-Test.
+Le pavé numérique dit intégré est désormais aussi bien en Fonction qu’en Verrouillage Numérique. Le réglage dans le BIOS est parfois caché sous la rubrique « POST Behavior » sans avoir rien à voir avec le Power-On Self-Test.
 
-Le niveau Majuscule est graphique désormais même sur les 10 touches à chiffres du pavé numérique. Cela permet de saisir directement sur le pavé numérique tous les chiffres hexadécimaux, avec "A" sur [2], "B" sur [3], "C" sur [5], "D" sur [6], "E" sur [8] et "F" sur [9] pour la cohérence avec le pavé numérique graphique en AltFr en mode ASCII. De plus, en Majuscule il y a la virgule sur le point, la barre de fraction U+2044 sur le [7], le triple zéro sur [1], le double sur [0], le deux-points sur [4], et le séparateur des milliers français, l’espace fine insécable est sur [+].
+Le niveau Majuscule est graphique désormais même sur les 10 touches à chiffres du pavé numérique. Cela permet de saisir directement sur le pavé numérique tous les chiffres hexadécimaux, avec "A" sur [2], "B" sur [3], "C" sur [5], "D" sur [6], "E" sur [8] et "F" sur [9] pour la cohérence avec le pavé numérique graphique en AltFr en mode ASCII.
+
+De plus, en Majuscule il y a la virgule sur le point, la barre de fraction U+2044 sur le [7], le triple zéro sur [1], le double sur [0], le deux-points sur [4], et le séparateur des milliers français, l’espace fine insécable est sur [+].
 
 ### Lettres
 
