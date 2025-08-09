@@ -16783,6 +16783,8 @@
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<dead_diaeresis>                                                                           <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+#   Multikey conflicts with "÷" U00F7, "∺" U223A, "⋇" U22C7, "⧴" U29F4.                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
@@ -16896,8 +16898,6 @@
 <Multi_key><colon><numbersign>                                                        <apostrophe> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <dead_diaeresis><UEFD0>                                                     <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
 <Multi_key><colon><numbersign>                                              <rightsinglequotemark> : "❟" U275F # HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
-<dead_diaeresis><UEFD0>                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><colon><numbersign>                                                             <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 #
 #
 # # DIAERESIS&GROUP_2
