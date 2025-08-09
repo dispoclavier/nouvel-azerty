@@ -2245,7 +2245,11 @@
 #   Most confusingly, in the Core Specification, Unicode claims that in what is
 #   obviously a matter of font design, the ASCII hyphen U002D is longer than an
 #   average HYPHEN U2010, despite virtually all fonts except a single one give
-#   both hyphens exactly the same glyph.
+#   both hyphens exactly the same glyph, and the one that does not has been
+#   designed under the influence of the new Unicode Standard and its misleading
+#   and even downright wrong documentation of the ASCII hyphen and its Unicode
+#   counterpart.
+#   https://www.unicode.org/versions/Unicode1.0.0/ch03_1.pdf
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
 #
 #   As a consequence, U002D HYPHEN-MINUS stands out among ASCII punctuation in
@@ -2349,6 +2353,17 @@
 #   less than MINUS SIGN, while nobody noticed that a type foundry is not in a
 #   position to force the use of U2010 in current writing in lieu of U002D, and
 #   everybody was confident that Unicode’s recommendation would do the trick.
+#   https://www.unicode.org/versions/Unicode1.0.0/
+#   https://www.unicode.org/versions/Unicode1.0.0/ch03_1.pdf
+#
+#   The initial draft from Joe Becker read correctly:
+#
+#       […] and U+002D as "Hyphen (Minus)".
+#
+#   Indeed ANSI parenthesized the "Minus" part, as it was not an intrinsic part
+#   of the character name, only an indication about usage in practice.
+#   https://www.unicode.org/L2/Historical/Unicode-Pre1.0-Draft-Sept27-1990.txt
+#   See #   Discussion of the hyphen encoding
 #
 #   In October 2022, Unicode stopped using Lucida Sans Unicode in the tables of
 #   its Standard Annexes and Technical Reports. E.g. in UAX #14:
