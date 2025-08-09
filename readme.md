@@ -50,47 +50,63 @@ Même avec les deux modificatrices Majuscule et AltGr des claviers d’ordinateu
 
 Dans de telles conditions, ne pas utiliser la troisième modificatrice prise en charge nativement sous Windows et sous Linux – et même sous macOS jusqu’à sa désactivation vers 2015 – serait une privation inutile et incompréhensible dont les premières victimes seraient les personnes utilisatrices, condamnées à composer les ponctuations péniblement au détail (au risque d’abandonner), ou à presser trois touches pour une majuscule (avec l’envie de laisser tomber), ou aux deux astreintes à la fois.
 
-Quand la solution est aussi simple que d’activer une modificatrice, ne pas la mettre en œuvre s’analyse en maltraitance.
+Quand la solution est aussi simple que d’activer une modificatrice (ou de l’émuler à l’aide de [Karabiner Elements](https://karabiner-elements.pqrs.org/)), ne pas la mettre en œuvre s’analyse en maltraitance.
 
 ##### Majuscule
 
-Rendue à son usage premier de saisie des majuscules, la touche Majuscule permet de saisir facilement le "É", le "À", le "Ç" et le "È", mais pas le "Ù", réservé à la préposition « OÙ » toute en capitales.
+Rendue à son usage premier de saisie des majuscules, la touche Majuscule permet de saisir facilement le "É", le "À", le "Ç" et le "È" (pas le "Ù", réservé à la préposition « OÙ » toute en capitales).
 
 Majuscule est aussi la touche des grandes ponctuations espacées, sur les huit touches en bas et à droite : quatre ponctuations doubles sur les touches [?,], [.;], [/:] et [§!] où elles sont imprimées, les deux guillemets chevrons "«" et "»" sur [%ù] et [µ*], et les deux guillemets chevrons simples "‹" et "›" sur [¨^] et [£$¤].
 
 Enfin, Majuscule donne accès à trois tirets, deux traits d’union, et l’exposant 3 qui, lui, n’est pas sur la touche [²] mais une touche plus loin où l’exposant 2 est en Minuscule.
 
-Les trois tirets :
+• Les trois tirets :
 
-* tiret cadratin "—" U+2014 sur [4'{] ;
-* tiret demi-cadratin "–" U+2013 sur [3"#] ;
-* tiret trois quarts de cadratin ou barre de dialogue ou de citation "―" U+2015 sur [8_\\].
+* Tiret cadratin "—" U+2014 sur [4'{] ;
+* Tiret demi-cadratin "–" U+2013 sur [3"#] ;
+* Tiret trois quarts de cadratin ou barre de dialogue ou de citation "―" U+2015 sur [8_\\].
 
-Les deux traits d’union :
+• Les deux traits d’union :
 
-* trait d’union insécable "‑" U+2011 sur [6-|] ;
-* trait d’union virtuel "­" U+00AD sur [5([].
+* Trait d’union insécable "‑" U+2011 sur [6-|] ;
+* Trait d’union virtuel "­" U+00AD sur [5([].
 
-Contrairement au trait d’union virtuel, cette césure conditionnelle avec trait d’union, et contrairement au trait d’union insécable, jamais en fin de ligne, le « trait d’union » "‐" U+2010 n’est pas sur touche vive. Non faute de place, mais parce qu’il est un doublon du tiret du 6, du trait d’union ASCII (sauf dans Lucida Sans Unicode), mais un doublon qui dans une partie des cas ne fonctionne pas. La disposition de clavier avec deux traits d’union sécables, un faux en mode français, et le vrai en mode ASCII, est du domaine de la personnalisation, car elle n’intéresse virtuellement personne.
+Le trait d’union qu’il n’y a pas (et ce n’est pas un oubli) :
+
+* Contrairement au trait d’union insécable, jamais en fin de ligne, et
+* contrairement au trait d’union virtuel, cette césure conditionnelle avec trait d’union,
+* le « trait d’union » "‐" U+2010 n’est pas sur touche vive.
+
+Non faute de place, mais parce qu’il est un doublon du tiret du 6, un doublon du trait d’union ASCII (sauf dans Lucida Sans Unicode), mais un doublon qui dans une partie des cas ne fonctionne pas.
+
+La disposition de clavier avec deux traits d’union sécables, dont un faux en mode français uniquement (aux dépens du point médian en Minuscule), est du domaine de la personnalisation, car elle intéresse uniquement les personnes utilisant Lucida Sans Unicode, police de caractères inutilisée en pratique, car inutilisable sans disposition de clavier avec deux traits d’union sécables en Minuscule.
+
+Pour preuve : même Unicode, qui [utilisait cette police dans les tableaux](https://web.archive.org/web/20221005223038/https://www.unicode.org/reports/tr14/#GL), a [cessé de l’utiliser](https://web.archive.org/web/20221019184912/http://www.unicode.org/reports/tr14/#GL).
 
 ##### AltGr
 
-La touche AltGr gagne en importance, car elle sert à saisir les chiffres et le symbole paragraphe "§" sur sa touche, en plus du symbole euro, désormais en synergie.
+La touche AltGr gagne en importance, car elle sert à saisir les chiffres et le symbole paragraphe "§" sur leurs touches, ainsi que l’espace insécable sur la barre, en plus du symbole euro, désormais en synergie avec tout cela :
+
+1. Chiffre trois : AltGr + [3"#] ;
+2. Espace insécable : AltGr + Espace ;
+3. Symbole euro : AltGr + [E€].
 
 Sont aussi en AltGr tous les symboles et ponctuations ASCII sauf la virgule, le point, l’arobase et le guillemet, tous en Minuscule sur leurs touches ou, pour l’arobase, sur la touche d’à côté.
 
-Parmi ces symboles en AltGr, les parenthèses sont sur [D] comme début et [F] comme fin, directement sous les doigts sur la rangée de repos.
+Parmi ces symboles en AltGr, les parenthèses sont "(" sur AltGr + [D] comme début, et ")" sur AltGr + [F] comme fin, directement sous les doigts sur la rangée de repos.
 
-Les symboles inférieur et supérieur (à) sont sur [C] et [V] en synergie avec l’oblique sur [W], avec le point d’exclamation sur [.;] (en AltGr il n’est pas sur sa touche), avec le trait d’union sur [G], avec le point d’interrogation sur [?,], et avec le symbole égal sur [B].
+Les symboles inférieur et supérieur (à) sont "<" sur AltGr + [C], et ">" sur AltGr + [V], en synergie avec l’oblique sur AltGr + [W], avec le point d’exclamation sur AltGr + [.;] (en AltGr il n’est pas sur sa touche), avec le trait d’union sur AltGr + [G], avec le point d’interrogation sur AltGr + [?,], et avec le symbole égal sur AltGr + [B].
+
+Les crochets sont "[" sur AltGr + [K], et "]" sur AltGr + [L], en synergie avec les points de suspension "…" sur AltGr + [%ù]. (Les points de suspension entre crochets "[…]" sont aussi sur Maj + AltGr + [%ù].)
 
 ##### AltFr
 
 C’est que la touche [><] devient la troisième modificatrice, AltFr comme Alternative Française (*Alternate French*), car en plus d’avoir les chiffres en rangée et en pavé en dessous, elle a l’espace fine insécable sur la barre, et toutes les huit grandes ponctuations sans espace, pour la compositin au détail de séquences comme le point d’interrogation entre parenthèses :
 
-1. espace fine insécable sur AltFr + Espace ;
-2. parenthèse ouvrante sur AltFr + [D] ;
-3. point d’interrogation sur AltFr + [?,] ;
-4. parenthèse fermante sur AltFr + [F].
+1. Espace fine insécable : AltFr + Espace ;
+2. Parenthèse ouvrante : AltFr + [D] ;
+3. Point d’interrogation : AltFr + [?,] ;
+4. Parenthèse fermante : AltFr + [F].
 
 En pavé, les chiffres en AltFr sont en dessous de [7è`], [8_\\], [9ç^] comme sur les claviers compacts, sauf pour le zéro, qui est à la fois sur [0à@] et sur [N], et en tant que double zéro sur [B]. (Pour le triple zéro, on fait AltFr + [B] + [N].) Ainsi, pour les chiffres en rangée, AltFr est comme une touche AltGr gauche, et presque comme Majuscule gauche.
 
