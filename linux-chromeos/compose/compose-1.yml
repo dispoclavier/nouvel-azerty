@@ -2243,32 +2243,31 @@
 #   https://www.unicode.org/charts/nameslist/n_0000.html
 #
 #   As a consequence, U002D HYPHEN-MINUS stands out among ASCII punctuation in
-#   that its usage is discouraged in current writing in favor of its homoglyph
-#   U2010.
+#   that its usage is sort of deprecated, if not discouraged in current writing
+#   in favor of its homoglyph U2010.
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
 #
-#   The Unicode Character Database in XML (quoted below [shortened]) shows that
-#   U2010 is a duplicate of U002D, encoded for an extrinsic undocumented reason
-#   discussed below.
-#   See #   Discussion of the hyphen encoding
+#   The Unicode Character Database in XML shows that U2010 is a duplicate of
+#   U002D, encoded for an extrinsic undocumented reason discussed below.
 #   https://www.unicode.org/Public/16.0.0/ucdxml/ucd.nounihan.flat.zip
 #   https://www.unicode.org/reports/tr42/
+#   See #   Discussion of the hyphen encoding
 #
-#       <char cp="002D" age="1.1" na="HYPHEN-MINUS" gc="Pd" ea="Na" lb="HY" SB="SC" blk="ASCII"/>
+#       <char cp="002D" age="1.1" na="HYPHEN-MINUS" gc="Pd" ea="Na" lb="HY" SB="SC" blk="ASCII"      />
 #       <char cp="2010" age="1.1" na="HYPHEN"       gc="Pd" ea="A"  lb="BA" SB="XX" blk="Punctuation"/>
 #
 #   Noticeable differences are in East Asian width, in the line break class and
 #   in the sentence break property.
 #
 #   The Unicode Line Breaking Algorithm UAX #14 does not require an extra
-#   hyphen for non-numerical contexts, and "HYphen" is "Break After".
+#   hyphen for non-numerical contexts, and "HY[phen]" is "B[reak ]A[fter]".
 #   https://unicode.org/reports/tr14/#HY
 #
-#   East Asian width neither warrants a duplicate hyphen, since Unicode
+#   East Asian width [ea] neither warrants a duplicate hyphen, since Unicode
 #   includes UFF0D FULLWIDTH HYPHEN-MINUS, and HYPHEN as "Ambiguous" resolves
 #   to "Narrow".
 #
-#   As of text segmentation, HYPHEN is unspecified, rather than "SContinue"
+#   As of text segmentation, HYPHEN is unspecified, rather than "SC[ontinue]"
 #   like HYPHEN-MINUS, and the related specification skips "XX" entirely.
 #   https://unicode.org/reports/tr29/#SContinue
 #
@@ -2319,18 +2318,58 @@
 #   unallocated code points. There was no need for backward compatibility.
 #   https://en.wikipedia.org/wiki/T.51/ISO/IEC_6937#Codepage_layout
 #
+#   The real-world fallout of the HYPHEN encoding error is the glyph of U002D
+#   in the 1993 typeface Lucida Sans Unicode, whose designers were almost
+#   Unicode’s neighbors and decided to break with longstanding practice when
+#   noticing in the then-Code Charts that there is an extra hyphen, and that
+#   Unicode points out that the ASCII hyphen is “used for either hyphen or
+#   minus sign” consistently with its erroneous ISO name that Unicode was
+#   forced to maintain, as opposed to other symbols repurposed as arithmetic
+#   operators, like ASTERISK, that was not annotated with the hint that it is
+#   also used as multiplication symbol. So the ASCII hyphen got that disruptive
+#   glyph halving the HYPHEN’s thickness and doubling its length, just a bit
+#   less than MINUS SIGN, while nobody noticed that a type foundry is not in a
+#   position to force the use of U2010 in current writing in lieu of U002D, and
+#   everybody was confident that Unicode’s recommendation would do the trick.
+#
+#   In October 2022, Unicode stopped using Lucida Sans Unicode in the tables of
+#   its Standard Annexes and Technical Reports. E.g. in UAX #14:
+#
+#   * Before (October 5, 2022):
+#
+#       th, td  { border-spacing: 0; border-collapse: collapse;
+#          border-style: solid; border-color: black; border-width: 1px;
+#          font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial, sans-serif;
+#          […] }
+#
+#   https://web.archive.org/web/20221005223038/https://www.unicode.org/reports/tr14/
+#
+#   * After (October 19, 2022):
+#
+#       th, td  { border-spacing: 0; border-collapse: collapse;
+#          border-style: solid; border-color: black; border-width: 1px;
+#          font-family: Arial, Geneva, sans-serif;
+#          […] }
+#
+#   https://web.archive.org/web/20221019184912/http://www.unicode.org/reports/tr14/
+#
+#   It was the month after the Unicode Consortium moved from Mountain View to
+#   South San Francisco.
+#   https://web.archive.org/web/20220927085408/https://home.unicode.org/
+#   https://web.archive.org/web/20220928085512/https://home.unicode.org/
+#
 #
 #   Keyboard support for hyphens
 #
 #   If the Unicode HYPHEN U2010 is expected to be used routinely as a hyphen,
 #   then it must be mapped at the base level just like the ASCII hyphen. That
 #   may be feasible on condition that the keyboard layout has a toggle between
-#   locale mode and ASCII mode.
+#   locale mode and ASCII mode, so as to keep coding out of harm’s way.
 #
 #   The keyboard layouts configured in these files require such a toggle, but
 #   for other purposes. Featuring the Unicode HYPHEN in locale mode is prone to
 #   raise issues about a “fake hyphen” looking like an ASCII hyphen in almost
-#   all fonts (not in Lucida Sans Unicode) but not working as such.
+#   all fonts but not working as such.
 #   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   As a consequence, the extra hyphen U2010 should not be taken seriously, in
