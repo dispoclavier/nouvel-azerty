@@ -4724,7 +4724,7 @@
 #   See # # Symbols for cursor keys
 #
 #
-# # Count
+# # Count of math symbols
 #
 #       2310 total characters with Derived Property Math
 #            https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
@@ -4757,7 +4757,7 @@
 #       1115 Western full BMP math symbols and diacritics
 #
 #
-# # Layout
+# # Layout of math symbols
 #
 #   For maintainability, the symbols are ordered by ascending code point.
 #
@@ -4769,7 +4769,7 @@
 #   the preposition is “in”.
 #
 #
-# # Overview
+# # Overview of math symbols
 #
 #      1  # # Not sign
 #      1  # # Plus minus
@@ -5432,10 +5432,10 @@
 #
 #   Sequences for double-struck or outlined symbols use duplication, script is
 #   a trailing asciitilde, blackletter is numbersign, Hebrew gets a trailing
-#   backslash based on the shape of aleph (here the symbol "ℵ" U2135) although
-#   backslash is also the ASCII equivalent of reversed, Greek gets a trailing
-#   at sign, and italic translates to a trailing slash although this is used to
-#   denote negation in other instances: "∄" U2204, "∅" U2205.
+#   backslash based on the shape of aleph (for instance the symbol "ℵ" U2135)
+#   although backslash is also the ASCII equivalent of reversed, Greek gets a
+#   trailing at sign, and italic translates to a trailing slash although this
+#   is used to denote negation in other instances: "∄" U2204, "∅" U2205.
 #
 #   Many of these are included in groups 6 to 10, where the complete sets of
 #   alphanumeric mathematical symbols are supported. Not so the liter symbol
