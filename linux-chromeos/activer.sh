@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-22T2216+0200
+#                       Date : 2025-08-10T0440+0200
 #                    Fichier : activer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -16,7 +16,7 @@
 #
 #   AVERTISSEMENTS
 #
-#   Ce script utilise l’utilitaire xkbcomp documenté par IBM pour son OS AIX :
+#   Ce script utilise l’utilitaire xkbcomp documenté par IBM pour AIX :
 #   https://www.ibm.com/docs/en/aix/7.3?topic=x-xkbcomp-command
 #
 #   L’activation automatique à l’ouverture de session, faute de fonctionner par
@@ -24,16 +24,25 @@
 #   navigateur de fichiers. Si ce n’est pas l’un des 10 recommandés sur la page
 #   https://www.geeksforgeeks.org/10-best-file-managers-for-linux/
 #   soit Dolphin, Double Commander, Konqueror, Krusader, Midnight Commander,
-#   Nautilus (GNOME Files), Nemo, Nnn, PCManFM ou Thunar, et si votre terminal
-#   n’est pas GNOME Terminal, ils peuvent être personnalisés plus bas dans :
+#   Nautilus (GNOME Files), Nemo, Nnn, PCManFM ou Thunar, et si le terminal
+#   n’est pas GNOME Terminal, ils peuvent être personnalisés dans :
 #
-#      emulateur_terminal="gnome-terminal" # Personnaliser si différent.
-#      navigateur_fichiers="dolphin" # Personnaliser si différent.
+emulateur_terminal="gnome-terminal" # Personnaliser si différent.
+navigateur_fichiers="dolphin" # Personnaliser si différent.
+navigateur_fichiers_1="doublecmd-gtk"
+navigateur_fichiers_2="konqueror"
+navigateur_fichiers_3="krusader"
+navigateur_fichiers_4="mc"
+navigateur_fichiers_5="nautilus"
+navigateur_fichiers_6="nemo"
+navigateur_fichiers_7="nnn"
+navigateur_fichiers_8="pcmanfm"
+navigateur_fichiers_9="thunar"
 #
 #   De même, si le format XKB n’est pas préféré, le format compilé
 #   peut être choisi en altérant la valeur 1 de cette variable :
 #
-#      intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
+intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
 #
 #   Toutefois, les fichiers d’activation au format XKM ne sont pas fournis, à cause
 #   de leur opacité et de leur immuabilité.
@@ -175,19 +184,6 @@
 #
 # L’absence des booléens dans Bash est palliée par le recours aux comparaisons
 # arithmétiques. Pour la lisibilité, 0 et 1 sont inversés en "vrai" et "faux".
-
-intelligible=1 # 1 = format XKB. Changer pour prendre en charge le format XKM.
-emulateur_terminal="gnome-terminal" # Personnaliser si différent.
-navigateur_fichiers="dolphin" # Personnaliser si différent.
-navigateur_fichiers_1="doublecmd-gtk"
-navigateur_fichiers_2="konqueror"
-navigateur_fichiers_3="krusader"
-navigateur_fichiers_4="mc"
-navigateur_fichiers_5="nautilus"
-navigateur_fichiers_6="nemo"
-navigateur_fichiers_7="nnn"
-navigateur_fichiers_8="pcmanfm"
-navigateur_fichiers_9="thunar"
 
 if [ "$intelligible" -eq 1 ]; then
 	mode="xkb"
