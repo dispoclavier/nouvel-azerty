@@ -14897,7 +14897,7 @@
 #   The 258 country flags are supported on double press followed by a
 #   two-letter ISO country code or one of the following additional codes,
 #   written in regional indicator symbol letters.
-#   https://unicode.org/emoji/charts/emoji-list.html#flags
+#   https://unicode.org/emoji/charts/emoji-list.html#country-flag
 #   https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 #   See #   Country flags
 #
@@ -14913,22 +14913,33 @@
 #
 #   The 3 subdivision flags supported by Unicode (after projecting to support
 #   all subdivision flags, and devising a scheme to do so) have base characters
-#   consistent with the level-10 map on Windows using the AltFl modifier (AltDr
-#   in French, based on "drapeau" for "flag") added on top of the Caps Lock key
-#   (using it requires resetting the toggle in the wake), on key C12 for Wales,
-#   D12 for England, and E12 for Scotland, with geospatial mnemonics using the
-#   stacked layout of these keys, with respect to the requirement of duplicate
-#   mappings of C02 on C11, D02 on D11, and E02 on E11 due to the column-02 bug
-#   on Windows, affecting level 10 i.e. Shift + AltFl (decimal 65, 0x41), and
-#   with keycap mnemonics using "£" printed in shift position on D12 of French
-#   AZERTY, on C12 of Belgian AZERTY.
-#   See #   Subdivision flags
+#   consistent with the level-10 map on Windows using the AltLe modifier ("Le"
+#   for "Letter emoji") added on top of the Caps Lock key (using it requires
+#   resetting the toggle in the wake), at the Shift + AltLe level:
+#   https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
+#
+#       C12: Wales
+#       D12: England
+#       E12: Scotland
+#
+#   Mnemonics is geospatial, using the stacked layout of these keys. This in
+#   turn is constrained by the requirement of duplicate mappings due to the
+#   column-02 bug on Windows, affecting level 10 i.e. Shift + AltLe, decimal 65
+#   and hex 0x41:
+#
+#       B02 is duplicated on B07
+#       C02 is duplicated on C11
+#       D02 is duplicated on D11
+#       E02 is duplicated on E11
+#
+#   Partial keycap mnemonics uses "£" printed in shift position on D12 of
+#   French AZERTY, on C12 of Belgian AZERTY.
 #
 #   For convenience, on Linux, a geographically more accurate layout featuring
 #   Wales on key D11 is also provided; and with respect to remapped variants,
 #   Scotland is replicated on key E11 by at sign, while England has also minus
 #   as a base character.
-#   https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
+#   See #   Subdivision flags
 #
 #   For intuitivity, an alphabetic alternative is also provided, although "GB"
 #   is used for the country flag, and country flag input is case insensitive.
