@@ -184,7 +184,7 @@ Les majuscules qui manquent sur l’AZERTY traditionnel sont en Majuscule, ce po
 
 La touche morte de l’accent circonflexe fonctionne optionnellement comme une touche "ê" avant "k", "l", "m", "n", "p", "q", "r", "t", "v" ; "ê" s’insère ensemble avec l’une de ces lettres si le "e" n’est pas saisi avant.
 
-#### Touches mortes
+### Touches mortes
 
 Plus généralement, toutes les lettres accentuées ou autrement diacritées sont dans les touches mortes, dont les deux les plus traditionnelles, l’accent circonflexe et le tréma, sont l’une à sa place historique, l’autre pareillement en Minuscule mais une touche plus loin au-dessus, sur [+=}], au lieu de rester en Majuscule sur la touche de l’accent circonflexe, cette place étant utilisée pour le guillemet français simple ouvrant. Mais la touche morte tréma y reste accessible en Maj + AltFr pour la rétrocompatibilité.
 
