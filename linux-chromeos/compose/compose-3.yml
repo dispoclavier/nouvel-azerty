@@ -6898,15 +6898,30 @@
 #   Greek base alphabet in the first place.
 #   See # # Mathematical Greek alphabets and symbols
 #
-#   These alphabets may also be used (repurposed) to write text, the better as
-#   combining diacritics are supported.
+#   https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols
+#
+#   Part of these symbols are encoded in the Letterlike Symbols block.
+#   See # # Letterlike symbols in block U2100 used in mathematics
+#
+#   These symbols add to the math symbol support by multikey.
+#   See # # Count of math symbols
+#
+#   Unicode warns that “[t]he characters in this block are intended for use
+#   only in mathematical or technical notation, and not in nontechnical text.”
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/#G15993
+#
+#   However, in search engines, these characters are fully equivalent to the
+#   Latin base alphabet, even when entered in double quotes, to account for the
+#   fact that these alphabets are used/repurposed to write formatted text in
+#   fields accepting only plain text, the better as combining diacritics are
+#   supported.
 #
 #   Additional alphabets in groups 7 through 10 are input using comma or period
 #   or both, as hinted after the group number.
 #
 #   MATHEMATICAL SCRIPT U1D49C..                  = g7
-#   MATHEMATICAL BOLD SCRIPT U1D4D0..             = g7  ,    CALLIGRAPHIC
-#   MATHEMATICAL BOLD ITALIC U1D468.. (short)     = g7    .
+#   MATHEMATICAL BOLD SCRIPT U1D4D0..             = g7  ,
+#   Shortcut: MATHEMATICAL BOLD ITALIC U1D468..   = g7    .
 #   MATHEMATICAL DOUBLE-STRUCK U1D538..           = g8       digits: U1D7D8..
 #   MATHEMATICAL BOLD U1D400..                    = g8  ,    digits: U1D7CE..
 #   MATHEMATICAL ITALIC U1D434..                  = g8    .
@@ -6922,14 +6937,25 @@
 #
 #+# GROUP_7
 #
-#   Group 7 of the base alphabet: Script, Calligraphic
+#   Group 7 of the base alphabet: Script, Roundhand; Calligraphic, Chancery
 #
 #   The mnemonic is based on the intrinsic slant of both digit 7 and the
-#   "script" typeface style.
+#   script typeface style.
 #
-#   Bold script, rather than being script, is referred to as calligraphic, with
-#   normal font weight.
-#   See # # Calligraphic Latin alphabet, named BOLD SCRIPT
+#   This font styls is called script, calligraphy, calligraphic interchangeably
+#   and is prone to variations due to font design. The W3C even notes that
+#   “[t]he font used should offer at least the upper case letters in two
+#   styles. Roundhand (also known as Script, \mathscr in LaTeX) and Chancery
+#   (also known as Calligraphic, \mathcal in LaTeX). The default may be in
+#   either form. Variation selector U+FE00 may be used to force
+#   Chancery/Calligraphic style and variation selector U+FE01 may be used to
+#   force Roundhand/Script style.”
+#   https://www.w3.org/TR/xml-entity-names/script.html
+#
+#   Unlike script, encoded in two blocks, bold script is designed consistently
+#   across the alphabet even in fonts failing to ensure consistency dealing
+#   with multiple blocks for a single character set like normal-weight script.
+#   https://www.w3.org/TR/xml-entity-names/bold-script.html
 #
 #   The slot of intrinsically impossible italic script is repurposed as a
 #   shortcut for the generic bold-italic typeface style in group 8.
@@ -7149,7 +7175,7 @@
 <Multi_key><numbersign><KP_7>                                                                  <z> : "𝓏" U1D4CF # MATHEMATICAL SCRIPT SMALL Z
 #
 #
-# # Calligraphic Latin alphabet, named BOLD SCRIPT
+# # Bold script Latin alphabet
 #
 <UEFD0><7><comma>                                                                              <A> : "𝓐" U1D4D0 # MATHEMATICAL BOLD SCRIPT CAPITAL A
 <Multi_key><numbersign><7><comma>                                                              <A> : "𝓐" U1D4D0 # MATHEMATICAL BOLD SCRIPT CAPITAL A
