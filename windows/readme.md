@@ -12,7 +12,55 @@ Les fonctionnalités implémentables sous tous les systèmes d’exploitation pr
 
 Ce mode d’emploi complémentaire présente uniquement ce qui est particulier à Windows.
 
-#### Verrouillage des capitales
+### Touches
+
+#### Modificatrices
+
+Ce nouvel AZERTY utilise toutes les modificatrices que Windows prend en charge, afin de dédommager de la mauvaise mise en œuvre des touches mortes sous Windows.
+
+Alerter les personnes utilisatrices que les touches mortes façon Windows dysfonctionnent, sans leur proposer des compensations grâce aux points forts de Windows, serait extrêmement mauvais. En conséquence, les développeurs de dispositions de clavier sous Windows n’ont pas le droit de priver de fonctionnalités les personnes intéressées.
+
+C’est pourquoi on ne saurait faire l’économie des modificatrices AltLe et AltQr ajoutées sur les bascules Verrouillage Capitales et Verrouillage Mode.
+
+##### AltGr
+
+D’habitude, sous Windows, AltGr est Contrôle + Alt. Comme cette émulation est [déconseillée](https://blog.keyman.com/2008/06/robust-key-mess/), elle est remplacée par l’une des quatre autres modificatrices disponibles.
+
+##### AltFr
+
+Pour mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Contrôle droite, en cas d’absence de la touche ISO entre Majuscule gauche et [W], des fichiers de redisposition de codes matériels de touches se trouvent dans le dossier redispositions\\.
+
+##### AltLe
+
+"Le" dans le nom de la nouvelle modificatrice « AltLe » signifie « Lettres émojis ».
+
+AltLe s’ajoute sur VerrCap. Tant que l’on appuie sur VerrCap, AltLe est active.
+
+On peut alors saisir [tous les drapeaux nationaux]() par leur code à deux lettres.
+
+Plusieurs drapeaux sont aussi précomposés :
+
+* France 🇫🇷 : Maj + AltLe + [.;] ;
+* Union Européenne 🇪🇺 : Maj + AltLe + [/:] ;
+* Nations Unies 🇺🇳 : Maj + AltLe + [§!].
+
+Les trois seuls drapeaux régionaux, [codés différemment](https://blog.unicode.org/2022/03/the-past-and-future-of-flag-emoji.html), sont précomposés :
+
+* Angleterre 🏴󠁧󠁢󠁥󠁮󠁧󠁿 : Maj + AltLe + [£$¤] ;
+* Écosse 🏴󠁧󠁢󠁳󠁣󠁴󠁿 : Maj + AltLe + [+=}] ;
+* Pays de Galles 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : Maj + AltLe + [µ*].
+
+##### AltQr
+
+"Qr" dans le nom de la nouvelle modificatrice « AltQr » signifie « Quick response » comme dans les QR codes.
+
+AltQr s’ajoute sur VerrMod. Tant que l’on appuie sur VerrMod, AltQr est active.
+
+On peut alors saisir les lettres symboles mathématiques italiques, pour 𝑒́𝑐𝑟𝑖𝑟𝑒 𝑒𝑛 𝑖𝑡𝑎𝑙𝑖𝑞𝑢𝑒.
+
+#### Bascules
+
+##### Verrouillage Capitales
 
 Quand les capitales sont verrouillées, le guillemet ouvrant avec espace fine insécable est sans espace fine insécable. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable, qui y est en synergie.
 
