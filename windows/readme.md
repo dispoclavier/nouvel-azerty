@@ -18,7 +18,7 @@ Ce mode d’emploi complémentaire présente uniquement ce qui est particulier �
 
 Ce nouvel AZERTY utilise toutes les modificatrices que Windows prend en charge, afin de dédommager de la mauvaise mise en œuvre des touches mortes sous Windows.
 
-Alerter les personnes utilisatrices que les touches mortes façon Windows dysfonctionnent, sans leur proposer des compensations grâce aux points forts de Windows, serait extrêmement mauvais. En conséquence, les développeurs de dispositions de clavier sous Windows n’ont pas le droit de priver de fonctionnalités les personnes intéressées.
+Alerter les personnes utilisatrices que les touches mortes façon Windows dysfonctionnent, sans leur proposer de compensations grâce aux points forts de Windows, serait extrêmement mauvais. En conséquence, les développeurs de dispositions de clavier sous Windows n’ont pas le droit de priver de fonctionnalités les personnes intéressées.
 
 C’est pourquoi on ne saurait faire l’économie des modificatrices AltLe et AltQr ajoutées sur les bascules Verrouillage Capitales et Verrouillage Mode.
 
@@ -36,9 +36,9 @@ Pour mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Co
 
 AltLe s’ajoute sur VerrCap. Tant que l’on appuie sur VerrCap, AltLe est active.
 
-On peut alors saisir [tous les drapeaux nationaux]() par leur code à deux lettres.
+On peut alors saisir [tous les drapeaux nationaux](https://unicode.org/emoji/charts/emoji-list.html#country-flag) par leur [code ISO à deux lettres](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) ou AC 🇦🇨, CP 🇨🇵, DG 🇩🇬, EA 🇪🇦, EU 🇪🇺, IC 🇮🇨, TA 🇹🇦, UN 🇺🇳, XK 🇽🇰.
 
-Plusieurs drapeaux sont aussi précomposés :
+Plusieurs drapeaux – national, supranational, international – sont aussi précomposés :
 
 * France 🇫🇷 : Maj + AltLe + [.;] ;
 * Union Européenne 🇪🇺 : Maj + AltLe + [/:] ;
@@ -50,13 +50,30 @@ Les trois seuls drapeaux régionaux, [codés différemment](https://blog.unicode
 * Écosse 🏴󠁧󠁢󠁳󠁣󠁴󠁿 : Maj + AltLe + [+=}] ;
 * Pays de Galles 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : Maj + AltLe + [µ*].
 
+On peut aussi écrire en 🇱⁠🇪⁠🇹⁠🇹⁠🇷⁠🇪⁠🇸⁠ 🇪⁠🇲⁠🇴⁠🇯⁠🇮⁠🇸 non accentuées⁠. Deux possibilités pour cela :
+
+* Entre deux lettres, appuyer sur la barre d’espace.
+* Écrire en Maj + AltLe, en utilisant pour la lettre dans la colonne 2 de chaque rangée la touche après la dernière lettre de cette rangée, et appuyer sur la barre d’espace entre deux mots (sans avoir besoin de lever les doigts de Maj + AltLe).
+
 ##### AltQr
 
 "Qr" dans le nom de la nouvelle modificatrice « AltQr » signifie « Quick response » comme dans les QR codes.
 
 AltQr s’ajoute sur VerrMod. Tant que l’on appuie sur VerrMod, AltQr est active.
 
-On peut alors saisir les lettres symboles mathématiques italiques, pour 𝑒́𝑐𝑟𝑖𝑟𝑒 𝑒𝑛 𝑖𝑡𝑎𝑙𝑖𝑞𝑢𝑒.
+On peut alors saisir les lettres symboles mathématiques italiques, pour 𝑒́𝑐𝑟𝑖𝑟𝑒 𝑒𝑛 𝑖𝑡𝑎𝑙𝑖𝑞𝑢𝑒 même là où la mise en forme n’est pas prise en charge, avec des diacritiques ajoutés par un appui sur la touche morte suivi d’espace :
+
+1. Symbole "𝑒" : AltQr + [E] ;
+2. Accent aigu, étape 1 : [£$¤] ;
+3. Accent aigu, étape 2 : Espace.
+
+En AltFr + AltQr se trouvent les lettres symboles mathématiques calligraphiques grasses, pour 𝓮́𝓬𝓻𝓲𝓻𝓮 𝓮𝓷 𝓮́𝓬𝓻𝓲𝓽𝓾𝓻𝓮 𝓬𝓾𝓻𝓼𝓲𝓿𝓮 𝓬𝓪𝓵𝓵𝓲𝓰𝓻𝓪𝓹𝓱𝓲𝓺𝓾𝓮. (Grasses plutôt que normales parce que, codées dans un seul bloc, elles sont uniformes.)
+
+En AltGr + AltQr se trouvent les lettres symboles mathématiques ajourées, pour 𝕖́𝕔𝕣𝕚𝕣𝕖 𝕖𝕟 𝕒𝕛𝕠𝕦𝕣𝕖́.
+
+En AltGr + AltFr + AltQr se trouvent les lettres symboles mathématiques grasses sans empattements, pour 𝗲́𝗰𝗿𝗶𝗿𝗲 𝗲𝗻 𝗴𝗿𝗮𝘀.
+
+La combinaison AltLe + AltQr fonctionne mal, mais on peut y utiliser les minuscules mathématiques calligraphiques normales, souvent incohérentes dans les polices de caractères car codées dans deux blocs. Toutes leurs majuscules sont en AltGr + AltLe + AltQr, et la plupart sont aussi en AltGr + AltLe + AltQr, sauf trois à cause d’un bogue dans la colonne 2.
 
 #### Bascules
 
@@ -97,7 +114,7 @@ Par exemple, en plus d’être sur touche vive, le "q" minuscule en exposant "�
 3. Maj + AltGr + [A]
 4. [Q]
 
-Les caractères pris en charge par les touches mortes de ce nouvel AZERTY nécessitent 7 demi-codets hauts, ainsi répartis sur les touches mortes :
+Les caractères pris en charge par les touches mortes de ce nouvel AZERTY nécessitent 8 demi-codets hauts, ainsi répartis sur les touches mortes :
 
 * U+D801 exposant : lettres modificatives en exposant
 * U+D807 tourné : "𑾰" U+11FB0 LETTRE LISSOU YHA
@@ -106,12 +123,11 @@ Les caractères pris en charge par les touches mortes de ce nouvel AZERTY néces
 * U+D83C drapeau, grec ou cerclé : lettres pour drapeaux, lettres encadrées
 * U+D83D accent circonflexe, accent aigu, tréma : guillemets décoratifs
 * U+D83E barré, groupes 11 et 12 comme intégré : flèches à pointe large
+* U+DB40 drapeau : étiquettes
 
-Cette méthode d’entrée des demi-codets hauts est basée sur une idée datant du 18 décembre 2024 à 22:28 (en lavant une courgette).
+La raison de cette complication est que sous Windows, les caractères sont codés sur 16 bits, et le système Windows de pilotes de disposition a été conçu à une époque où Unicode était de fait un jeu de caractères sur 16 bits, car aucun caractère n’était plus grand que U+FFFF (et par un développeur qui pensait que cela allait rester comme cela).
 
-La raison de cette complication est que sous Windows, les caractères sont codés sur 16 bits, et le système Windows des pilotes de disposition a été conçu à une époque où Unicode était de fait un jeu de caractères sur 16 bits (aucun caractère n’était plus grand que U+FFFF), et par un développeur qui pensait que cela allait rester comme cela.
-
-Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes il aurait simplement fallu ajouter une colonne, et programmer Windows pour la consulter et ajouter son contenu s’il n’est pas nul.
+Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes, il aurait simplement fallu ajouter une colonne, et programmer Windows pour la consulter et ajouter son contenu s’il n’est pas nul.
 
 ##### Lettres composées
 
@@ -119,16 +135,16 @@ Les diacritiques des lettres composées doivent être saisis individuellement ap
 
 Les touches mortes diacritiques éligibles émettent le diacrique combinant quand elles sont suivies de l’espace. (Traditionnellement, c’était le mode de saisie du diacritique espaçant, saisi désormais par la touche morte suivie d’une espace insécable.)
 
-Par exemple, pour saisir le o ouvert accent aigu, il faut d’abord saisir le o ouvert tel quel, et ensuite le coiffer d’un accent aigu en faisant suivre un appui sur la touche morte et un coup sur la barre d’espace. Soit en détail :
+Par exemple, pour saisir le o ouvert accent aigu, il faut d’abord saisir le o ouvert tel quel, et ensuite le coiffer d’un accent aigu en faisant suivre un appui sur la touche morte accent aigu et un coup sur la barre d’espace. Soit en détail :
 
-1. Touche morte groupe sur [*]
-2. [C]
-3. Touche morte accent aigu sur [$]
-4. [Espace]
+1. Touche morte groupe : [µ*] ;
+2. [C] ;
+3. Touche morte accent aigu : [£$¤] ;
+4. Espace.
 
-La raison de cette complication est que le système Windows des pilotes de disposition a été conçu à une époque où les langues les mieux établies et les plus réactives, comme le grec et le vietnamien, se faisaient doter de jeux complets de lettres diacritées précomposées, et par un développeur qui ne pensait sans doute pas aux autres langues, et qui n’était peut-être pas au courant du modèle d’encodage d’Unicode ni de la recommandation de prendre en charge les lettres composées par touches mortes.
+La raison de cette complication est que le système Windows de pilotes de disposition a été conçu à une époque où les langues les mieux établies et les plus réactives, comme le grec et le vietnamien, se faisaient doter de jeux complets de lettres diacritées précomposées, et par un développeur qui ne pensait sans doute pas aux autres langues, et qui n’était peut-être pas au courant du modèle d’encodage d’Unicode ni de la recommandation de prendre en charge les lettres composées par touches mortes.
 
-Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes il aurait simplement fallu ajouter cinq colonnes, et programmer Windows pour les consulter et ajouter leur contenu s’il n’est pas nul.
+Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes il aurait simplement fallu ajouter 5 colonnes (ou plus, car on n’est pas à quelques kilooctets près, puisque les pilotes de ce nouvel AZERTY sont déjà dix fois plus lourds qu’un pilote moyen et restent parfaitement fonctionnels, et Windows aussi), et programmer Windows pour les consulter et ajouter leur contenu s’il n’est pas nul.
 
 ### Chiffres
 
@@ -142,7 +158,9 @@ Afin de mitiger ce bogue du niveau 7, en mode ASCII, le niveau 7 est aussi red
 
 ### Émojis
 
- est disposée sur les places de touches vives qui restent, parce que cela doit fonctionner aussi sous Windows, système mal conçu, dysfonctionnel, dont les dispositions de clavier ont été programmées par un seul développeur, de qui les erreurs de conception ont durablement dégradé l’utilisabilité des ordinateurs de la majorité. Alors que tous les émojis codés sur deux ou trois octets à part les sinogrammes sont pris en charge par touches mortes dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), seuls quelques émoji codés sur quatre octets, triés sur le volet, sont pris en charge, sur touches vives uniquement.
+Tous les émojis codés sur deux ou trois octets à part les sinogrammes sont pris en charge par touches mortes dans les 12 [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles), seuls quelques émoji codés sur quatre octets, triés sur le volet, sont pris en charge, sur touches vives uniquement.
+
+Une sélection d’émojis codés sur 4 octets est disposée sur les places de touches vives qui restent, et avec les nouvelles modificatrices il y a de la place pour en mettre plus.
 
 ## Nom de fichier
 
