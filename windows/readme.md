@@ -12,16 +12,6 @@ Les fonctionnalités implémentables sous tous les systèmes d’exploitation pr
 
 Ce mode d’emploi complémentaire présente uniquement ce qui est particulier à Windows.
 
-### Lettres
-
-#### Émulation de touche "ê"
-
-L’émulation d’une touche "ê" par la touche morte accent circonflexe ne fonctionne pas en capitales, et "x" ne donne pas "êch". Pour atténuer ce mauvais fonctionnement, la touche morte accent circonflexe suivie de "x" donne "ê", afin d’éviter que l’on se retrouve avec "êx" et que l’on soit obligé d’effacer le "x" avant de pouvoir saisir le "ch" manquant dont on avait pris l’habitude sous Linux ou sous macOS.
-
-De même, la touche morte accent circonflexe suivie de "K", "L", "M", "N", "P", "Q", "R", "T", "V" OU "X" donne "Ê", afin d’interrompre au minimum le flux de l’écriture et de permettre, dans la plupart des cas, de faire une double frappe sur la consonne pour obtenir le même résultat que la simple frappe donne sous Linux et sous macOS.
-
-(La raison de ce dysfonctionnement est que sous Windows, les touches mortes sont incapables d’émettre des chaînes multicaractères et des caractères au-dessus d’U+FFFF, et que la situation n’est sauvée que grâce au fait que sous Windows, chaque touche morte a un caractère mort, et que ce caractère mort sort tel quel si le caractère de base, celui saisi après la touche morte, n’est pas pris en charge. Grâce à cette fonctionnalité de Windows, l’émulation de touche "ê" par la touche accent circonflexe fonctionne en minuscules.)
-
 #### Verrouillage des capitales
 
 Quand les capitales sont verrouillées, le guillemet ouvrant avec espace fine insécable est sans espace fine insécable. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable, qui y est en synergie.
@@ -33,6 +23,16 @@ La raison est que ce guillemet est sur la touche [ù], qui nécessite une foncti
 Ce bogue n’affecte pas les variantes redisposées, où aucune lettre n’est sur la même touche qu’une ponctuation espacée, car la place du "ù" est prise par l’apostrophe, tandis que le "ù" prend la place du tiret du 6 (qui prend la place de la touche morte groupe, qui va sur la touche au-dessus à la place de la touche morte accent aigu, qui prend la place laissée par l’apostrophe).
 
 Ce bogue est [documenté](https://github.com/dispoclavier/nouvel-azerty/commit/c22acd3fab99782947ef3e14e8893476935325b4).
+
+### Lettres
+
+#### Émulation de touche "ê"
+
+L’émulation d’une touche "ê" par la touche morte accent circonflexe ne fonctionne pas en capitales, et "x" ne donne pas "êch". Pour atténuer ce mauvais fonctionnement, la touche morte accent circonflexe suivie de "x" donne "ê", afin d’éviter que l’on se retrouve avec "êx" et que l’on soit obligé d’effacer le "x" avant de pouvoir saisir le "ch" manquant dont on avait pris l’habitude sous Linux ou sous macOS.
+
+De même, la touche morte accent circonflexe suivie de "K", "L", "M", "N", "P", "Q", "R", "T", "V" OU "X" donne "Ê", afin d’interrompre au minimum le flux de l’écriture et de permettre, dans la plupart des cas, de faire une double frappe sur la consonne pour obtenir le même résultat que la simple frappe donne sous Linux et sous macOS.
+
+(La raison de ce dysfonctionnement est que sous Windows, les touches mortes sont incapables d’émettre des chaînes multicaractères et des caractères au-dessus d’U+FFFF, et que la situation n’est sauvée que grâce au fait que sous Windows, chaque touche morte a un caractère mort, et que ce caractère mort sort tel quel si le caractère de base, celui saisi après la touche morte, n’est pas pris en charge. Grâce à cette fonctionnalité de Windows, l’émulation de touche "ê" par la touche accent circonflexe fonctionne en minuscules.)
 
 #### Touches mortes
 
