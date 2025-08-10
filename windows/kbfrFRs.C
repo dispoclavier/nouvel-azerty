@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update dead key content            6.0.0.04.00 Sat 2025-08-09T2027+0200
 * Move ligatures to the top          6.0.0.03.00 Fri 2025-08-08T1855+0200
 * Update dead key content            6.0.0.02.00 Fri 2025-08-08T0942+0200
 * Update dead key content "group"    6.0.0.01.00 Thu 2025-08-07T1824+0200
@@ -85,7 +86,7 @@
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE    ,5      ,' '      ,'5'      ,'_'      ,'3'      ,'_'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'_'      ,'0'      ,'_'      ,'0'      ,'_'      ,'0'      ,'4'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_ESCAPE    ,4      ,' '      ,'f'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'s'      ,'e'      ,'m'      ,'i'      ,'_'      ,'a'      ,'u'      ,'t'      ,'o'      },
 
   /*****************************************************************************\
@@ -2651,6 +2652,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!diaeresis>                                                     */ DEADTRANS( 0x2019	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( L'*'	,0x00EB	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
 /*<!diaeresis>                                                     */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000	), // "¦" BROKEN BAR repurposed as multikey symbol
+/*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000	), // "⹀" DOUBLE HYPHEN
 /*<!diaeresis>                                                     */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000	), // "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( 0x20AC	,0x00EB	,0x201E	,0x0000	), // "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( L'/'	,0x00EB	,0x2016	,0x0000	), // "‖" DOUBLE VERTICAL LINE
