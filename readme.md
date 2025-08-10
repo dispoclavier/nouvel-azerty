@@ -95,7 +95,7 @@ Sont aussi en AltGr tous les symboles et ponctuations ASCII sauf la virgule, le 
 
 Parmi ces symboles en AltGr, les parenthèses sont "(" sur AltGr + [D] comme début, et ")" sur AltGr + [F] comme fin, directement sous les doigts sur la rangée de repos.
 
-Les symboles inférieur et supérieur (à) sont "<" sur AltGr + [C], et ">" sur AltGr + [V], en synergie avec l’oblique sur AltGr + [W], avec le point d’exclamation sur AltGr + [.;] (en AltGr il n’est pas sur sa touche), avec le trait d’union sur AltGr + [G], avec le point d’interrogation sur AltGr + [?,], et avec le symbole égal sur AltGr + [B].
+Les symboles inférieur et supérieur (à) sont "<" sur AltGr + [C], et ">" sur AltGr + [V], en synergie avec l’oblique sur AltGr + [W] (en AltGr elle n’est pas sur sa touche), avec le point d’exclamation sur AltGr + [.;] (en AltGr il n’est pas sur sa touche), avec le trait d’union sur AltGr + [G] (en AltGr il n’est pas sur sa touche), avec le point d’interrogation sur AltGr + [?,], et avec le symbole égal sur AltGr + [B] (en AltGr il n’est pas sur sa touche).
 
 Les crochets sont "[" sur AltGr + [K], et "]" sur AltGr + [L], en synergie avec les points de suspension "…" sur AltGr + [%ù]. (Les points de suspension entre crochets "[…]" sont aussi sur Maj + AltGr + [%ù].)
 
