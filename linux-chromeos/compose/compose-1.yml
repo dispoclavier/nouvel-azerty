@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see Compose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.0" # See #   End of line comments
+<UEFA0>                     : "version 6.0.1" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -486,7 +486,7 @@
 #   https://www.unicode.org/versions/Unicode7.0.0/ch06.pdf#G1834
 #
 #   Also: The Unicode Standard, version 15.0.0, 2022, p. 268, subheading
-#   “Narrow No-Break Space”, e.g. in the full text PDF:
+#   “Narrow No-Break Space”, in the full text PDF:
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=294&zoom=100,0,300
 #
 #      Narrow No-Break Space. U+202F NARROW NO-BREAK SPACE (NNBSP) is a narrow
@@ -1029,21 +1029,19 @@
 #         }
 #       }
 #
-#       5  Case sensitive sorting, using e.g. "Tyriar.sort-lines" > F9.
+#       5  Case sensitive sorting, using "Tyriar.sort-lines" > F9.
 #
 #       6  Checking for conflicts and duplicates:
 #          ^([^\s]+)\s.+\n\1(<|\s)
 #
 #   Sortability and readability may then be further improved using this
-#   follow-up replaceruleset, where dead keysyms missing from keysymdef.h are
-#   decoded, and all dead keysyms are prefixed with an exclam so as to be
-#   sorted before letters, digits, and ASCII symbols prefixed with a percent
-#   sign, some more letters get intuitive keysyms, and ordinary space and
-#   U200B, nobreakspace and U202F are grouped conveniently and sorted last by
-#   the means of a leading asciitilde.
+#   follow-up replaceruleset, where dead keysyms missing from keysymdef.h
+#   replace the generic private use keysyms, all dead keysyms are prefixed with
+#   an exclam so as to be sorted before letters and digits, as well as before
+#   ASCII symbols prefixed with a percent sign, some more letters get intuitive
+#   keysyms, and ordinary space and U200B, nobreakspace and U202F are grouped
+#   conveniently and sorted last by the means of a prepended asciitilde.
 #   See # # Dead keys not included in keysymdef.h
-#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
-#   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #       {
 #         "replacerules.rules": {
@@ -1843,12 +1841,12 @@
 #   skipped as non-critical, for efficiency, at the expense of intuitivity.
 #   See ### Multikey sequences
 #
-#   Conflicting sequences, e.g. with ISO currency codes, are fixed by space
+#   Sequences conflicting with ISO currency codes or others are fixed by space
 #   termination along the lines of what is done for math symbols. But this only
 #   affects "Æ" U00C6, "æ" U00E6, "Ǳ" U01F1, "ʣ" U02A3, "Ƣ" U01A2, "ƣ" U01A3,
 #   "ꝳ" UA773, "Ŋ" U014A, "ŋ" U014B, "Þ" U00DE, "þ" U00FE, most of which are
 #   supported in letter group 1.
-#   See # # Design of math sequences
+#   See #   Leading space
 #   See #+# GROUP_1
 #
 #   Deprecated presentation forms for typographic ligatures are not supported,
@@ -4908,12 +4906,13 @@
 #   E12, and in ASCII mode where it is also on key D12; yet the space character
 #   at level 3 is no-break space in French mode, ASCII space in ASCII mode.
 #
-#   Leading space is also used to distinguish math sequences from each other,
-#   in case intuitivity requires similar sequences for different symbols, like
-#   for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN. This scheme may require prepending
-#   multiple spaces. In that case, the level-3 modifier may be released before
-#   any of them, also in French mode when level 3 of the space bar is no-break
-#   space.
+#   Distinguishing math sequences from each other is another usage for leading
+#   space. This occurs when intuitivity requires similar sequences for various
+#   symbols, like for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN.
+#
+#   This scheme may require prepending multiple spaces. Then the level-3/AltGr
+#   modifier key may be released before any of them, in particular in French
+#   mode where level 3 of the space bar is no-break space.
 #
 #   Examples involving single or multiple leading [nobreak]space:
 #   Single:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
@@ -7510,10 +7509,12 @@
 <Multi_key><KP_Subtract><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                   : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 #
 #   The following alternative sequences for "⤐" U2910 account for the tail that
-#   is displayed by some fonts, e.g. DejaVu Serif. The full sequences including
-#   a leading space required because of "₀" U2080 skip the first minus for the
+#   is displayed by some fonts (DejaVu Serif). The full sequences including a
+#   leading space required because of "₀" U2080 skip the first minus for the
 #   stem end next to the tail under the maximum 9 keysyms constraint:
+#
 #       <Multi_key><space><greater><0><minus><0><minus><greater><greater>
+#
 #   But most of this is non-critical and is therefore cropped, so that the stem
 #   next to the tail is readded. Yet the streamlined sequence still stops after
 #   the first gap.
@@ -7521,6 +7522,7 @@
 #
 #   The following commented-out sequence is provided only for reference and is
 #   not actionable, as it exceeds the maximum input of 9 keysyms.
+#
 #Multi_key><space><greater><minus><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><space><greater><minus><0>                                                              : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><nobreakspace><greater><minus><0>                                                       : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
@@ -8153,9 +8155,9 @@
 <Multi_key><colon><minus><minus><greater>                                           <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
 #
 #   "⧵" U29F5 REVERSE SOLIDUS OPERATOR is likely a duplicate of "∖" U2216 SET
-#   MINUS with the potential to fool people into decisions causing issues, e.g.
-#   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems”
+#   MINUS with the potential to fool people into decisions causing issues.
 #   https://github.com/tudace/tuda_latex_templates/issues/409
+#   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems”
 #
 #   Consistently, "⧵" U29F5 goes unmentioned in TUS, Table 22-5. Mathematical
 #   Operators Disunified from Punctuation, as disunifying this from "\" U005C
@@ -9208,7 +9210,7 @@
 <Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><KP_Subtract>                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 #
 #   The following alternative sequence for U2B37 accounts for the tail found in
-#   some fonts, e.g. DejaVu Serif. See U2910.
+#   some fonts (DejaVu Serif). See U2910.
 #
 <Multi_key><less><less><minus><0><minus><0><less>                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><less>                                      : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
