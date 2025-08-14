@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Debug Shift + CAPITAL + KANA       6.0.1.00.00 Wed 2025-08-13T1934+0200
 * Use Shift + CAPITAL + KANA fwiw    6.0.0.06.00 Sun 2025-08-10T1736+0200
 * Swap bold and monospace digits     6.0.0.05.00 Sun 2025-08-10T1547+0200
 * Update dead key content            6.0.0.04.00 Sat 2025-08-09T2027+0200
@@ -88,7 +89,7 @@
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'_'      ,'0'      ,'_'      ,'0'      ,'_'      ,'0'      ,'6'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'.'      ,'0'      ,'.'      ,'1'      ,'.'      ,'0'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_ESCAPE    ,4      ,' '      ,'f'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'s'      ,'e'      ,'m'      ,'i'      ,'_'      ,'a'      ,'u'      ,'t'      ,'o'      },
 
   /*****************************************************************************\
@@ -717,7 +718,8 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 	* with monospace "𝟶" U1D7F6.."𝟿" U1D7FF.
   *
   * These are the user-perceived (AltGr +) AltLe + AltQr levels, as
-  * Shift + AltLe (CAPITAL) does not work in column 02.
+  * Shift + AltLe does not work in column 02. But Shift + AltLe + AltQr is
+	* supported regardless, with colum 02 duplicated in columns 11 or 07.
   *
   * Depending on the font, this may be the most inconsistent alphabet encoded
   * in two blocks. Consistently, it is the worst supported, at a level with a
@@ -764,6 +766,7 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'0'          ,28     ,0xd835   ,0xDFF6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,28     ,0xd835   ,0xDFF7   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'2'          ,28     ,0xd835   ,0xDFF8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_MINUS ,28     ,0xd835   ,0xDFF8   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'3'          ,28     ,0xd835   ,0xDFF9   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'4'          ,28     ,0xd835   ,0xDFFA   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'5'          ,28     ,0xd835   ,0xDFFB   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -790,13 +793,16 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Q'          ,28     ,0xd835   ,0xDCAC   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'R'          ,28     ,0x211B   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,28     ,0xd835   ,0xDCAE   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,28     ,0xd835   ,0xDCAE   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'T'          ,28     ,0xd835   ,0xDCAF   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'U'          ,28     ,0xd835   ,0xDCB0   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'V'          ,28     ,0xd835   ,0xDCB1   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'W'          ,28     ,0xd835   ,0xDCB2   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'X'          ,28     ,0xd835   ,0xDCB3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_COMMA ,28     ,0xd835   ,0xDCB3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'Y'          ,28     ,0xd835   ,0xDCB4   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'Z'          ,28     ,0xd835   ,0xDCB5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_6     ,28     ,0xd835   ,0xDCB5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
   * Emoji (oncoming).
@@ -822,7 +828,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_MINUS ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_MINUS ,28     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_MINUS ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -850,7 +855,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_6     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_6     ,28     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {VK_OEM_6     ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
@@ -878,7 +882,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_3     ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_3     ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_3     ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_3     ,28     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_3     ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {VK_OEM_3     ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {VK_OEM_3     ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
@@ -906,7 +909,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {VK_OEM_COMMA ,25     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,26     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,27     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_COMMA ,28     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_COMMA ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1320,14 +1322,14 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  55, 0x37 / This does not work.
         15,           //  56, 0x38 # KanaLock + OEM_AX + OEM_102
         16,           //  57, 0x39 KanaLock + Shift + OEM_AX + OEM_102
-        SHFT_INVALID, //  58, 0x3a This works.
+        SHFT_INVALID, //  58, 0x3a \ This works.
         SHFT_INVALID, //  59, 0x3b
         SHFT_INVALID, //  60, 0x3c
         SHFT_INVALID, //  61, 0x3d
         SHFT_INVALID, //  62, 0x3e
         SHFT_INVALID, //  63, 0x3f
         17,           //  64, 0x40 CAPITAL
-        18,           //  65, 0x41 # Shift + CAPITAL
+        18,           //  65, 0x41 Shift + CAPITAL
         SHFT_INVALID, //  66, 0x42 \ This only works on keys other than (B..E)02.
         SHFT_INVALID, //  67, 0x43
         SHFT_INVALID, //  68, 0x44
@@ -1335,22 +1337,22 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  70, 0x46
         SHFT_INVALID, //  71, 0x47
         17,           //  72, 0x48 KanaLock + CAPITAL
-        18,           //  73, 0x49 # KanaLock + Shift + CAPITAL
+        18,           //  73, 0x49 KanaLock + Shift + CAPITAL
         SHFT_INVALID, //  74, 0x4a \ This only works on keys other than (B..E)02.
         SHFT_INVALID, //  75, 0x4b
         SHFT_INVALID, //  76, 0x4c
         SHFT_INVALID, //  77, 0x4d
         SHFT_INVALID, //  78, 0x4e
-        SHFT_INVALID, //  79, 0x4f / This works around the bugged level 56  0x38.
-        15,           //  80, 0x50 OEM_AX + CAPITAL
+        SHFT_INVALID, //  79, 0x4f / This does not work.
+        15,           //  80, 0x50 # OEM_AX + CAPITAL
         18,           //  81, 0x51 # Shift + OEM_AX + CAPITAL
         SHFT_INVALID, //  82, 0x52 \ This only works on keys other than (B..E)02.
         SHFT_INVALID, //  83, 0x53
         SHFT_INVALID, //  84, 0x54
         SHFT_INVALID, //  85, 0x55
         SHFT_INVALID, //  86, 0x56
-        SHFT_INVALID, //  87, 0x57
-        15,           //  88, 0x58 KanaLock + OEM_AX + CAPITAL
+        SHFT_INVALID, //  87, 0x57 / This does not work.
+        15,           //  88, 0x58 # KanaLock + OEM_AX + CAPITAL
         18,           //  89, 0x59 # KanaLock + Shift + OEM_AX + CAPITAL
         SHFT_INVALID, //  90, 0x5a \ This only works on keys other than (B..E)02.
         SHFT_INVALID, //  91, 0x5b
@@ -1463,23 +1465,23 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, // 198, 0xc6
         SHFT_INVALID, // 199, 0xc7
         27,           // 200, 0xc8 KanaLock + CAPITAL + KANA
-        18,           // 201, 0xc9 # KanaLock + Shift + CAPITAL + KANA
+        28,           // 201, 0xc9 Shift + CAPITAL + KANA
         SHFT_INVALID, // 202, 0xca \ This only works on keys other than (B..E)02.
-        SHFT_INVALID, // 203, 0xcb
+        SHFT_INVALID, // 203, 0xcb  \ Therefore it is redundant at 216, 0xd8.
         SHFT_INVALID, // 204, 0xcc
         SHFT_INVALID, // 205, 0xcd
         SHFT_INVALID, // 206, 0xce
-        SHFT_INVALID, // 207, 0xcf
+        SHFT_INVALID, // 207, 0xcf / This is redundant for 193, 0xc1.
         28,           // 208, 0xd0 OEM_AX + CAPITAL + KANA
-        18,           // 209, 0xd1 # Shift + OEM_AX + CAPITAL + KANA
+        18,           // 209, 0xd1 Shift + OEM_AX + CAPITAL + KANA
         SHFT_INVALID, // 210, 0xd2 \ This only works on keys other than (B..E)02.
         SHFT_INVALID, // 211, 0xd3
         SHFT_INVALID, // 212, 0xd4
         SHFT_INVALID, // 213, 0xd5
         SHFT_INVALID, // 214, 0xd6
-        SHFT_INVALID, // 215, 0xd7
+        SHFT_INVALID, // 215, 0xd7 / This is redundant for 201, 0xc9.
         28,           // 216, 0xd8 KanaLock + OEM_AX + CAPITAL + KANA
-        18,           // 217, 0xd9 # KanaLock + Shift + OEM_AX + CAPITAL + KANA
+        18,           // 217, 0xd9 KanaLock + Shift + OEM_AX + CAPITAL + KANA
         SHFT_INVALID, // 218, 0xda \ This only works on keys other than (B..E)02.
         SHFT_INVALID, // 219, 0xdb
         SHFT_INVALID, // 220, 0xdc
