@@ -6,6 +6,7 @@
 # 2024-10-28T1416+0100
 # 2025-05-26T2331+0200
 # 2025-06-18T0815+0200
+# 2025-08-14T1938+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -18,6 +19,7 @@
 #
 #     # # Composed letters for languages in Togo
 #     ### Space and symbol groups
+#     # # EMOJI_READY
 #     ### Letter groups
 #
 # Parsing `START_LETTER_SYMBOL_GROUPS` as the end tag is commented out, so that
@@ -48,7 +50,7 @@
 #
 # The all-in-one table generated alongside can only be included in web pages in
 # WordPress when using the “Include partial” block provided by this plugin, as
-# posts with too much code in HTML blocks are not saved in WordPress.
+# posts with too much code in HTML blocks are not saved to the database.
 #
 #
 # Using old-style file handles.
@@ -139,6 +141,7 @@ while ( my $line = <INPUT> ) {
 		if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
 			|| $line =~ /^### Space and symbol groups/
+			|| $line =~ /^# # EMOJI_READY/
 			|| $line =~ /^### Letter groups/
 		) {
 			print OUTPUT $end_tags;
@@ -158,9 +161,10 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
-		unless ( $line =~ /^<Multi_key>/         # Multikey equivalents are skipped.
+		unless ( $line =~ /^<Multi_key>/   # Multikey equivalents are skipped.
 			|| $line =~ /^#/                 # Annotations are not (yet) processed.
 			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
+			|| $line =~ /high surrogate/     # High surrogates, a Windows feature.
 			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
 		) {
 			if ( $line =~ /<Multi_key>/ # The only instance of non-initial "Multi_key" is "Multi_key" double press.
@@ -199,10 +203,10 @@ while ( my $line = <INPUT> ) {
 			) {
 
 				# Convert dead keys.
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + += ou AltGr\/Option + £\$ en mode ASCII">¦<\/kbd>/g;
+				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + +=} ou AltGr\/Option + £\$¤ (en mode ASCII uniquement)">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + P">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + X">rond en chef<\/kbd>/g;
-				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$ ou Maj + AltGr\/Option + U">aigu<\/kbd>/g;
+				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$¤ ou Maj + AltGr\/Option + U">aigu<\/kbd>/g;
 				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + §!">virgule souscrite<\/kbd>/g;
 				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + .;">point souscrit<\/kbd>/g;
 				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + F">brève<\/kbd>/g;
@@ -210,9 +214,9 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ?,">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ¨^ ou Maj + AltGr\/Option + C">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte monétaire Maj + AltGr\/Option + S">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5( ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche 5([ ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + E">double aigu<\/kbd>/g;
-				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave AltGr\/Option + £\$ ou Maj + AltGr\/Option + N">grave<\/kbd>/g;
+				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave AltGr\/Option + £\$¤ ou Maj + AltGr\/Option + N">grave<\/kbd>/g;
 				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte grec ou cerclé AltGr\/Option + Y ou Maj + AltGr\/Option + Y">grec<\/kbd>/g;
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + I">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + H">cornu<\/kbd>/g;
@@ -221,7 +225,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_ogonek>/<kbd class="deadkey" title="Touche morte ogonek Maj + AltGr\/Option + K">ogonek<\/kbd>/g;
 				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte barré Maj + AltGr\/Option + W">barré<\/kbd>/g;
 				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde AltGr\/Option + ¨^ ou Maj + AltGr\/Option + T">tilde<\/kbd>/g;
-				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte sélectrice de groupe Touche µ* ou Maj + AltGr\/Option + Q">groupe<\/kbd>/g;
+				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte groupe Touche µ* ou Maj + AltGr\/Option + Q">groupe<\/kbd>/g;
 				$line =~ s/<UEFD1>/<kbd class="deadkey" title="Touche morte exposant Maj + AltGr\/Option + A">exposant<\/kbd>/g;
 				$line =~ s/<UEFD2>/<kbd class="deadkey" title="Touche morte indice Maj + AltGr\/Option + J">indice<\/kbd>/g;
 				$line =~ s/<UEFD3>/<kbd class="deadkey long" title="Touche morte crochet en chef Maj + AltGr\/Option + L">crochet en chef<\/kbd>/g;
@@ -230,33 +234,33 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<UEFD6>/<kbd class="deadkey" title="Touche morte réfléchi Maj + AltGr\/Option + R">réfléchi<\/kbd>/g;
 				$line =~ s/<UEFD7>/<kbd class="deadkey" title="Touche morte drapeau Maj + AltGr\/Option + B">drapeau<\/kbd>/g;
 				$line =~ s/<UEFD8>/<kbd class="deadkey" title="Touche morte rayé Maj + AltGr\/Option + G">rayé<\/kbd>/g;
-				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é">tilde rétrocompatible<\/kbd>/g;
-				$line =~ s/<UEFDA>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è">grave rétrocompatible<\/kbd>/g;
+				$line =~ s/<UEFD9>/<kbd class="deadkey long" title="Touche morte tilde rétrocompatible Maj + AltGr\/Option + 2é~">tilde rétrocompatible<\/kbd>/g;
+				$line =~ s/<UEFDA>/<kbd class="deadkey long" title="Touche morte accent grave rétrocompatible Maj + AltGr\/Option + 7è`">grave rétrocompatible<\/kbd>/g;
 
 				# Remove spaces.
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 
 				# Mark up invisibles or confusables.
-				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace">fine insécable<\/kbd>/g;
-				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace">espace nulle<\/kbd>/g;
-				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;">— tiret cadratin<\/kbd>/g;
-				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;">– tiret demi-cadratin<\/kbd>/g;
+				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + Espace (en mode français uniquement)">fine insécable<\/kbd>/g;
+				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + Espace (en mode français uniquement)">espace nulle<\/kbd>/g;
+				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + 4&#x27;{">— tiret cadratin<\/kbd>/g;
+				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + 3&#x22;#">– tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U2212>/<kbd class="livekey" title="Signe moins AltFr + T">− signe moins<\/kbd>/g;
-				$line =~ s/<U02BB>/<kbd class="livekey" title="Lettre apostrophe tournée Maj + 8_ sur les variantes pour la Polynésie">ʻ lettre apostrophe tournée<\/kbd>/g;
-				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + .;">[fine insécable]!<\/kbd>/g;
+				$line =~ s/<U02BB>/<kbd class="livekey" title="Lettre apostrophe tournée Maj + 8_\\ sur les variantes pour la Polynésie">ʻ lettre apostrophe tournée<\/kbd>/g;
+				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + §!">[fine insécable]!<\/kbd>/g;
 				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ?,">[fine insécable]?<\/kbd>/g;
 
 				# Add tooltips.
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
-				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace">⍽<\/span>/g;
-				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
-				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche 5( en mode français, ou touche %ù en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
-				$line =~ s/<degree>/<span class="tooltip" title="Symbole degré Maj + °)">°<\/span>/g;
+				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + Espace (en mode français uniquement)">⍽<\/span>/g;
+				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;{">’<\/span>/g;
+				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche +=} en mode français, ou touche %ù en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
+				$line =~ s/<degree>/<span class="tooltip" title="Symbole degré Maj + °)]">°<\/span>/g;
 				$line =~ s/<multiply>/<span class="tooltip" title="Symbole multiplication AltFr + C">×<\/span>/g;
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + P">¶<\/span>/g;
-				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple Maj + ¨^">‹<\/span>/g;
-				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple Maj + £\$">›<\/span>/g;
+				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple AltFr + ¨^">‹<\/span>/g;
+				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple AltFr + £\$¤">›<\/span>/g;
 
 				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
@@ -432,81 +436,78 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) emoji/$1 émoji/g;
 				$line =~ s/( # .*\w); /$1 ; /g;
 
-				unless ( $line =~ m/: +"surrogat_haut_U"/u ) {
-
 				# Text style emoji for searchability.
-					if ( $line =~ m/ émoji/u ) {
-						$line    =~ m/^.+ : +"(.+?)"/u;
-						$text    = "$1&#xFE0E; ";
-					} else {
-						$text    = '';
-					}
-
-					# Localized tooltips.
+				if ( $line =~ m/ émoji/u ) {
 					$line    =~ m/^.+ : +"(.+?)"/u;
-					$str     = $1;
-					$tooltip = '';
-					$ucodes  = '';
-					$anchor  = '';
-					until ( $str eq '' ) {
-						$cp      = ord( $str );
-						$cp      = sprintf( "%X", $cp ); # To hex.
-						$cp      =~ s/^(.)$/000$1/;
-						$cp      =~ s/^(..)$/00$1/;
-						$cp      =~ s/^(...)$/0$1/;
-						$descrip = '';
-						if ( $descriptors_file_path ) {
-							open( DESCRIP, '<', $descriptors_file_path ) or die $!;
-							while ( my $des_line = <DESCRIP> ) {
-								if ( $des_line =~ /U$cp;/ ) {
-									chomp( $des_line );
-									$des_line =~ s/^.+; (.+)$/$1/;
-									$descrip = $des_line;
-									++$descriptors_count;
-									last;
-								}
-							}
-							close( DESCRIP );
-						}
-						unless ( $descrip ) {
-							open( NAMES, '<', $names_file_path ) or die $!;
-							while ( my $name_line = <NAMES> ) {
-								if ( $name_line =~ /^$cp\t/ ) {
-									chomp( $name_line );
-									$name_line =~ s/^.+\t(.+)$/$1/;
-									$descrip = $name_line;
-									++$names_count;
-									last;
-								}
-							}
-							close( NAMES );
-						}
-						unless ( $descrip ) {
-							++$missing_count;
-							$missing_cp .= $cp . ' (:' . $line_nb . ")\n";
-						}
-						$tooltip .= $descrip . " U+$cp\n";
-						$ucodes  .= "U+$cp<br />";
-						$anchor  .= 'U+' . $cp . '-';
-						$str     =~ s/.//u;
-					}
-					$tooltip =~ s/\n$//;
-					$ucodes  =~ s/<br \/>$//;
-
-					# Disambiguate anchors.
-					$anchor  =~ s/-$//;
-					$regex   = quotemeta( $anchor );
-					$index   = 0;
-					if ( grep( /^$regex$/, @anchors ) ) {
-						$test = $regex;
-						while ( grep( /^$test$/, @anchors ) ) {
-							++$index;
-							$test = $regex . '_' . $index;
-						}
-						$anchor = $anchor . '_' . $index;
-					}
-					push( @anchors, $anchor );
+					$text    = "$1&#xFE0E; ";
+				} else {
+					$text    = '';
 				}
+
+				# Localized tooltips.
+				$line    =~ m/^.+ : +"(.+?)"/u;
+				$str     = $1;
+				$tooltip = '';
+				$ucodes  = '';
+				$anchor  = '';
+				until ( $str eq '' ) {
+					$cp      = ord( $str );
+					$cp      = sprintf( "%X", $cp ); # To hex.
+					$cp      =~ s/^(.)$/000$1/;
+					$cp      =~ s/^(..)$/00$1/;
+					$cp      =~ s/^(...)$/0$1/;
+					$descrip = '';
+					if ( $descriptors_file_path ) {
+						open( DESCRIP, '<', $descriptors_file_path ) or die $!;
+						while ( my $des_line = <DESCRIP> ) {
+							if ( $des_line =~ /U$cp;/ ) {
+								chomp( $des_line );
+								$des_line =~ s/^.+; (.+)$/$1/;
+								$descrip = $des_line;
+								++$descriptors_count;
+								last;
+							}
+						}
+						close( DESCRIP );
+					}
+					unless ( $descrip ) {
+						open( NAMES, '<', $names_file_path ) or die $!;
+						while ( my $name_line = <NAMES> ) {
+							if ( $name_line =~ /^$cp\t/ ) {
+								chomp( $name_line );
+								$name_line =~ s/^.+\t(.+)$/$1/;
+								$descrip = $name_line;
+								++$names_count;
+								last;
+							}
+						}
+						close( NAMES );
+					}
+					unless ( $descrip ) {
+						++$missing_count;
+						$missing_cp .= $cp . ' (:' . $line_nb . ")\n";
+					}
+					$tooltip .= $descrip . " U+$cp\n";
+					$ucodes  .= "U+$cp<br />";
+					$anchor  .= 'U+' . $cp . '-';
+					$str     =~ s/.//u;
+				}
+				$tooltip =~ s/\n$//;
+				$ucodes  =~ s/<br \/>$//;
+
+				# Disambiguate anchors.
+				$anchor  =~ s/-$//;
+				$regex   = quotemeta( $anchor );
+				$index   = 0;
+				if ( grep( /^$regex$/, @anchors ) ) {
+					$test = $regex;
+					while ( grep( /^$test$/, @anchors ) ) {
+						++$index;
+						$test = $regex . '_' . $index;
+					}
+					$anchor = $anchor . '_' . $index;
+				}
+				push( @anchors, $anchor );
 
 				# Link to first instance in math list if applicable.
 				if ( $line =~ m/ math$/u ) {
