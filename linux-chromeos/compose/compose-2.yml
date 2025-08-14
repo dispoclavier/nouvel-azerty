@@ -54,11 +54,13 @@
 #   Support of the Latin script is up-to-date as of Unicode 16.0 (2024-09-10).
 #
 #   The extended Latin F & G blocks in the SMP are supported since 2023-05-25.
-#   The issues related to SMP support do not affect Linux nor macOS, as opposed
-#   to Windows, whose Text Services Framework (TSF) is no longer able to keep
-#   the Latin script easy to input.
 #   https://unicode.org/versions/enumeratedversions.html
 #   https://en.wikipedia.org/wiki/Latin_Extended-F
+#
+#   The issues related to SMP support do not affect Linux nor macOS, as opposed
+#   to Windows, whose DEADTRANS macro only supports one single code unit output
+#   instead of 2, 5 or more, and as a consequence, SMP characters are hard to
+#   input by dead keys.
 #
 #   Due to more comprehensive support for Unicode characters used in Latin
 #   script as encoded since version 1.1 of the Standard, some sequences in
@@ -66,10 +68,9 @@
 #   of ASCII symbols and punctuation.
 #
 #   With Multi_key thought of as a generic dead key taking arguments, the base
-#   letter that those modifications are applied to is typed last. As this
-#   pattern empowers XCompose to apply multiple diacritics, used e.g. in
-#   Vietnamese and in Lithuanian, it performs much better than the other way
-#   around.
+#   letter that those modifications are applied to is typed last. This pattern
+#   empowers XCompose to apply multiple diacritics as used in Vietnamese and in
+#   Lithuanian. Therefore, it performs much better than the other way around.
 #
 #   As a result, semantics of paired punctuation may be switched compared to
 #   en_US.UTF-8/Compose. For example, the multikey equivalent of dead_breve
@@ -258,11 +259,13 @@
 #   (given that Oslash "Ø" U00D8 LATIN CAPITAL LETTER O WITH STROKE and similar
 #   letters are not decomposed). T3 also required another three new keysyms:
 #   dead_aboveverticalline, dead_belowverticalline, dead_lowline, although none
-#   of these has any precomposed letters, and Windows’ TSF dead keys are unable
-#   to support decomposed (NFD/NFKD) letters. But the stroke vs bar distinction
-#   made a good point for adding the “extra dead elements for German T3 layout”
-#   alongside the use of vertical line below, and its alternate representation
-#   vertical line above, in Yoruba and in other languages.
+#   of these has any precomposed letters, and Windows’ DEADTRANS macro only
+#   supports one single code unit output instead of 2, 5 or more, and as a
+#   consequence, decomposed (NFD/NFKD) letters cannot be input by dead key like
+#   precomposed letters. But the stroke vs bar distinction made a good point
+#   for adding the “extra dead elements for German T3 layout” alongside the use
+#   of vertical line below and its alternate representation vertical line above
+#   in Yoruba and in other languages.
 #
 #   Initially, the new keysym was called "dead_longsolidus", and "dead_stroke"
 #   was disruptively renamed to "dead_shortstroke" as well.
@@ -347,9 +350,9 @@
 #   "ɲ", "Ƥ", "ƥ", "ʠ", "ɼ", "ʂ", "Ƭ", "ƭ", "Ʋ", "ʋ", "Ⱳ", "ⱳ", "Ȥ", "ȥ") are
 #   so by dead key only (dead_hook), without any multikey equivalent.
 #
-#   Hence the need for a keysym dedicated to letters with hook above, e.g.
-#   *dead_abovehook. As of its multikey equivalent, bracketright is more
-#   convenient than question.
+#   Hence the need for a keysym dedicated to letters with hook above. The most
+#   obvious is *dead_abovehook. As of its multikey equivalent, bracketright is
+#   more convenient than question.
 #
 #   Another hook dead key is added because new-school input composition uses
 #   braceleft as a multikey equivalent of dead_hook, while taking advantage of
@@ -671,8 +674,8 @@
 #   base level mappings.
 #
 #   This is part of the dead key enhancement based on considering each dead key
-#   a group selector activating the "<dead key> group", e.g. "circumflex group"
-#   or "dead_circumflex group".
+#   a group selector activating the "<dead key> group": "circumflex group", or
+#   "dead_circumflex group".
 #
 #   Common quotation marks:
 #
@@ -894,7 +897,7 @@
 #
 #   en_US.UTF-8/Compose has combining diacritics with <nobreakspace>, probably
 #   assuming that both dead keys and NBSP are at level 3, while <space> yields
-#   a legacy spacing character as far as this is available; it is not e.g. for
+#   a legacy spacing character as far as this is available; it is not for
 #   dead_hook, dead_belowcomma, dead_doubleacute properly.
 #
 #   Those among these spacing characters that are in the ASCII range, as "^",
@@ -1012,8 +1015,8 @@
 #   "ǝ" U01DD LATIN SMALL LETTER TURNED E, not "ɘ" U0258 LATIN SMALL LETTER
 #   REVERSED E.
 #
-#   Many Latin letters did not make it into keysymdef.h, e.g. U0190 (*Eopen),
-#   U025B (*eopen), U0186 (*Oopen), U0254 (*oopen).
+#   Many Latin letters did not make it into keysymdef.h. Examples include
+#   U0190 (*Eopen), U025B (*eopen), U0186 (*Oopen), U0254 (*oopen).
 #
 <dead_tilde><dead_grave>                                                                       <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
 <Multi_key><asciitilde><grave>                                                                 <A> : "Ã̀" # U00C3 U0300 LATIN CAPITAL LETTER A WITH TILDE AND GRAVE
@@ -7181,9 +7184,9 @@
 #   Dchar: "ɱ" U0271
 #
 #   A hook may also be referred to as a shepherd’s staff or crook, that other
-#   languages may name this diacritic after, e.g. French ("crosse") alleviating
-#   the semantically overloaded hook. It may also be referred to as a fishhook,
-#   like in the names of "ɾ" U027E and "𝼑" U1DF11.
+#   languages may name this diacritic after. French calls it "crosse" and thus
+#   alleviates the semantically overloaded hook (“crochet”). It may also be
+#   referred to as a fishhook, like in the names of "ɾ" U027E and "𝼑" U1DF11.
 #
 #   This includes tone bars, due to good mnemonic based on "I", mapped like "{"
 #   on D08. Tone bars also have dedicated multikey support.
@@ -8760,9 +8763,9 @@
 #   As U2015 HORIZONTAL BAR is rather rare, its key position may be used for
 #   the Unicode HYPHEN U2010, if this does not require an unshifted position
 #   such as the one on key B10. In any event, if making room for the Unicode
-#   HYPHEN U2010 meets user preferences, e.g. when Lucida Sans Unicode is used,
-#   then these dead key based ways to input HORIZONTAL BAR ease the removal of
-#   U2015 on non-regional layouts, too.
+#   HYPHEN U2010 meets user preferences, most famously when Lucida Sans Unicode
+#   is used, then these dead key based ways to input HORIZONTAL BAR ease the
+#   removal of U2015 on non-regional layouts, too.
 #
 #   (The bad support of the Unicode HYPHEN is a well-founded design decision.)
 #   See #   Hyphens
@@ -8941,21 +8944,30 @@
 #   on the numpad on keys 2, 4, 6, 7 and 8. The remaining single headed arrows
 #   are extrapolated; double-headed left-right is placed on 5, up-down on 0.
 #
-#   The arrow emoji are heterogeneous in that the diagonal and bidirectional
-#   arrows are basic arrows, whereas the cardinal arrows are picked from the
-#   plain arrows. For UX consistency, this mix makes up an extra set.
+#   The arrow emoji are heterogeneous in that the cardinal arrows are plain
+#   arrows ("⬅" U2B05 LEFTWARDS BLACK ARROW and 3 others), whereas the diagonal
+#   and bidirectional arrows are picked from the basic arrows. For a consistent
+#   user experience, this mix makes up an extra set.
+#   See # # Arrow emoji
 #
 #   Group 1 is not used here, since digits in group 1 are dead keys activating
 #   other groups. And groups 8 and 10 are used for mathematical digit symbols:
-#   double-struck (U1D7D8..) and sans-serif (U1D7E2..). So groups 9, 11 and 12
-#   are used for additional arrow sets: triangle-headed to bar (U2B70..) as of
-#   BMP arrows, and the wide-headed light (U1F860..) and very heavy (U1F880..)
-#   in the SMP. The sans-serif set U1F850.. is skipped as not providing enough
-#   added value with respect to the fact that on most computers (Windows), SMP
-#   characters are hard to input inside the TSF using only layout drivers with
-#   an inappropriate data type picked for dead key output. 0 and 5 are used to
-#   input the high surrogate, since these arrows do not include bidirectionals.
+#   double-struck (U1D7D8..) and sans-serif (U1D7E2..).
+#
+#   So, groups 9, 11 and 12 are used for additional arrow sets: triangle-headed
+#   to bar (U2B70..) as of BMP arrows, and the wide-headed light (U1F860..) and
+#   very heavy (U1F880..) in the SMP. The sans-serif set U1F850.. is skipped as
+#   not providing enough added value with respect to the fact that on Windows,
+#   the DEADTRANS macro only supports one single code unit output instead of 2,
+#   5 or more, and as a consequence, SMP characters are hard to input by dead
+#   keys.
+#
+#   0 and 5 are used to input the high surrogate, thanks to the fact that these
+#   arrows do not include bidirectional, double-headed arrows pointing in
+#   opposite directions.
+#
 #   The numpad live key level depends on the Mode Lock toggle state.
+#
 #
 #   Group  Description                         Example   Numpad live key level
 #
