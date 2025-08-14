@@ -65,31 +65,23 @@
 #
 # # History
 #
-#   The group dead key has been introduced by Karl Pentzlin during the
-#   implementation of the new DIN 2137-2:2012 standard on Windows. Noticing the
-#   lack of support for the ISO/IEC 9995 style group dead key in TSF, the Text
-#   Services Framework on Windows, Karl Pentzlin moved the group dead key to a
-#   real dead key taking over the dead key behavior that ISO/IEC 9995 specified
-#   for the level-2 modifier + level-3 modifier combination.
+#   The group dead key has been introduced by Karl Pentzlin implementating the
+#   new DIN 2137-2:2012 standard on Windows. Noticing that Windows-style layout
+#   drivers cannot support the ISO/IEC-9995-style group dead key, Karl Pentzlin
+#   moved the group dead key to a real dead key emulating the dead key behavior
+#   that ISO/IEC 9995 specified for the level-2 modifier + level-3 modifier key
+#   combination.
 #
 #   A similar dead key included in other keyboard layouts may be called “Latin
 #   and punctuation” as on the French ergonomic bépo keyboard layout in annex B
-#   of NF Z71-300:2019, or “Europe” as in annex A.
+#   of NF Z71-300:2019, or “Europe” as in annex A, worded “Caractères européens
+#   additionnels” in Microsoft’s implementation ("CaractÃ¨res europÃ©ens
+#   additionnels").
+#   https://kbdlayout.info/kbdfrna/download/klc
 #   https://bepo.fr/wiki/Latin_et_ponctuation
 #
 #   XKB supports the ISO/IEC 9995 conformant group selection since 2013.
 #   https://bugs.freedesktop.org/show_bug.cgi?id=60991
-#
-#   But XKB keysym mapping is limited to a maximum number of 8 elements. This
-#   array is used up by the extra graphic modifier required for the support of
-#   input methods for the Unicode conformant digital representation of numbers
-#   and measurement units used in 50+ countries, conforming to the guidelines
-#   set up by the Bureau International des Poids et Mesures BIPM; and for input
-#   of French, that uses no-break thin space or U202F NARROW NO-BREAK SPACE to
-#   space out a number of punctuation marks as in French Imprimerie Nationale
-#   style guide and/or following French new-school typesetting as documented in
-#   https://forums.macg.co/threads/typo-caracteres-capitales-accentues.25739/page-5#post-3151119
-#   points (2) and (3).
 #
 #   Virtual dead keys accessed by multiple dead key presses in turn have been
 #   introduced by the bépo development team in 2015, while upgrading the bépo
@@ -104,8 +96,8 @@
 #   with 1, because a group accessed by an n-uple press on the group dead key
 #   must be called “group n” rather than “group n+1”. The ISO/IEC 9995 standard
 #   uses 1-based numbering because it uses the terms “primary” and “secondary”
-#   with respect to groups and fails to consider dead key based group selection
-#   with support for multiple presses.
+#   with respect to groups, and fails to consider dead key based group
+#   selection with support for multiple presses.
 #
 #   As a short identifier for "group #", "g#" is proposed.
 #
@@ -2392,10 +2384,10 @@
 #
 #   "⟰" U27F0 is repurposed as the level-5 modifier symbol, with the rationale
 #   that this key increments by 4 the level index. Called AltFr on this layout
-#   and natively supported by XKB and the Windows TSF, this modifier is easily
-#   emulated on macOS. Japanese keyboards have left and right Oyayubi keys that
-#   made it into the Windows layout driver source code by Ian James as LOYA and
-#   ROYA, but not into ISO/IEC 9995.
+#   and natively supported by XKB and Windows layout drivers, this modifier is
+#   easily emulated on macOS. Japanese keyboards have left and right Oyayubi
+#   keys that made it into the Windows layout driver source code by Ian James
+#   as LOYA and ROYA, but not into ISO/IEC 9995.
 #
 <UEFD0>                                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
 <Multi_key><numbersign>                                                                <semicolon> : "ː" U02D0 # MODIFIER LETTER TRIANGULAR COLON
@@ -2649,19 +2641,22 @@
 #   Dchar: 
 #
 #   This virtual dead key was added when live key support for a set of emoji
-#   was added on Windows in the wake of implementing one more extra modifier as
-#   a counterbalance for the misdesigned dead key support on Windows.
+#   was added on Windows in the wake of implementing one more extra modifier
+#   as a counterbalance to the misdesigned dead key support on Windows.
 #
 #   These emoji add to the cross-platform compatible set supported on the basic
 #   keyboard layout.
 #
-#   The rationale for this pick is alphabetic mnemonics, based on "emoji", with
-#   the default mapping of dead_doubleacute on key D03 "E", and *dead_reversed
-#   on key D04 "R", making for an easy, order insensitive combination.
+#   The rationale for this pick is ergonomics paired with alphabetic mnemonics.
+#   First of all, the dead key chord should encompass 2 dead keys next to each
+#   other, that are not usually associated in dead key chains. Additionally,
+#   the pair should be mnemonic. This works based on "emoji", with the default
+#   mapping of dead_doubleacute on key D03 "E", and "reversed", *dead_reversed
+#   being on key D04 "R". Hence an easy (order insensitive) combination.
 #
 #   This subsection was moved here after its then-66kB brought compose-2.yml to
-#   the brink of oversize under the GitHub 2MB file size constraint for the use
-#   of its web interface.
+#   the brink of oversize under the GitHub 2MB file size restriction for the
+#   use of its web interface.
 #
 <dead_doubleacute><UEFD6>                                                                 <exclam> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><quotedbl><backslash>                                                          <exclam> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
