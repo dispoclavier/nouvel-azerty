@@ -73,7 +73,7 @@ En AltGr + AltQr se trouvent les lettres symboles mathématiques ajourées, 
 
 En AltGr + AltFr + AltQr se trouvent les lettres symboles mathématiques grasses sans empattements, pour 𝗲́𝗰𝗿𝗶𝗿𝗲 𝗲𝗻 𝗴𝗿𝗮𝘀.
 
-La combinaison AltLe + AltQr fonctionne mal, mais on peut y utiliser les minuscules mathématiques calligraphiques normales, souvent incohérentes dans les polices de caractères car codées dans deux blocs. Toutes leurs majuscules sont en AltGr + AltLe + AltQr, et la plupart sont aussi en Maj + AltLe + AltQr, sauf trois à cause d’un bogue dans la colonne 2.
+La combinaison AltLe + AltQr fonctionne mal, mais on peut y utiliser les minuscules mathématiques calligraphiques normales, souvent incohérentes dans les polices de caractères car codées dans deux blocs. Toutes leurs majuscules sont en AltGr + AltLe + AltQr, et elles sont aussi en Maj + AltLe + AltQr, sauf que celles sur [Z], [S] et [X] sont sur les touches après [P], [M] et [N]. (La raison est qu’en Maj + AltLe, la colonne 02 est boguée.)
 
 #### Bascules
 
