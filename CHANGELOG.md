@@ -20,7 +20,7 @@ Réimplémentation des touches mortes enchaînées diacritiques ou transformatio
 
 Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
 
-## 6.0.1 (2025-08-14)
+## 6.0.1 (prépublication)
 
 Débogage du niveau Maj + AltLe + AltQr.
 
