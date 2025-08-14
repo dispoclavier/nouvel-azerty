@@ -4,9 +4,11 @@ Débogage du niveau Maj + AltLe + AltQr.
 
 ## Modifications
 
-* Disposition : Niveau Maj + AltLe + AltQr :
-	* Déboguer par rapport à la bascule VerrMod. kbfrFRs.C [d4d7bc1](https://github.com/dispoclavier/nouvel-azerty/commit/d4d7bc1305c97a80bdcd9cac1924bbb292ebd6b6), kbfrFRsr.C [5b3c05d](https://github.com/dispoclavier/nouvel-azerty/commit/5b3c05dfa4e52bb1264c80157e19631a1d99a7a8)
-	* Doubler les touches de la colonne 02 (en panne) dans les colonnes 11 (rangées C, D, E) ou 07 (rangée B).
+* Disposition :
+	* Niveau Maj + AltLe + AltQr :
+		* Déboguer par rapport à la bascule VerrMod. kbfrFRs.C [d4d7bc1](https://github.com/dispoclavier/nouvel-azerty/commit/d4d7bc1305c97a80bdcd9cac1924bbb292ebd6b6), kbfrFRsr.C [5b3c05d](https://github.com/dispoclavier/nouvel-azerty/commit/5b3c05dfa4e52bb1264c80157e19631a1d99a7a8)
+		* Doubler les touches de la colonne 02 (en panne) dans les colonnes 11 (rangées C, D, E) ou 07 (rangée B). ibidem
+	* Niveau AltGr + AltLe + AltQr : Maintenir les majuscules du niveau Maj + AltLe + AltQr.
 * Documentation :
 	* Mettre à jour le mode d’emploi. windows/readme.md alias Mode-d-emploi-sous-Windows.md [d223b29](https://github.com/dispoclavier/nouvel-azerty/commit/d223b292108c9c17affc87ac9c9aa8354c4750e1)
 	* Mettre à jour les tableaux de touches mortes. generate-deadkey-tables.pl [85f388a](https://github.com/dispoclavier/nouvel-azerty/commit/85f388a4dff37f7091056bbf9e663cd3de9ca0fd)
