@@ -1,4 +1,4 @@
-# 6.0.1 (2025-08-14)
+# 6.0.1 (prépublication)
 
 Débogage du niveau Maj + AltLe + AltQr.
 
