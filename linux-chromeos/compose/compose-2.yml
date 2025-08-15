@@ -954,11 +954,55 @@
 #       "J́"   # LATIN CAPITAL LETTER J U004A with COMBINING ACUTE ACCENT U0301
 #       "j́"   # LATIN SMALL LETTER J U006A with COMBINING ACUTE ACCENT U0301
 #
-#   Due to a technical limitation on Windows, caused by defining the wrong data
-#   type for dead key output, in the DEADTRANS function’s return value, dead
-#   keys on Windows are limited to single UTF-16 code units, excluding composed
-#   letters and characters in Supplemental Multilingual Planes. Hence, composed
-#   letters are not cross-platform compatible.
+#   Due to a technical limitation on Windows (the DEADTRANS macro only supports
+#   one single code unit output instead of 2, 5 or more), dead keys on Windows
+#   are limited to single UTF-16 code units, excluding composed letters and
+#   characters in the Supplemental Multilingual Plane. Hence, composed letters
+#   are not cross-platform compatible.
+#
+#
+# # Enumeration order of dead keys
+#
+#   Dead keys in this file are ordered following the AZERTY keyboard layout.
+#   See # # Actionable dead key layout for Latin keyboards
+#
+#   Heading levels are differentiated, in that the main dead keys with mappings
+#   on keys are prefixed "#*# ", the dead keys virtualized by double or triple,
+#   rarely quadruple press are prefixed "#^# ", and the other dead keys "# # ".
+#
+#   Dead keys are further ordered following this scheme:
+#
+#       1.    #*# Main dead key
+#       2.    # # Dead key in group
+#       3.    # # Dead key combination with one or more other dead keys
+#       4.    #^# Dead key virtualized by multiple press
+#
+#   The order of base characters matters, too, since this file is also used for
+#   documentation: spaces, quotedbl, apostrophes, other symbols and punctuation
+#   where ASCII is intuitively ordered consistently with the dead keys, while
+#   non-ASCII aliases are grouped with their ASCII counterparts; digits are
+#   next, then the base alphabet, and ultimately diacriticized letters on live
+#   keys.
+#   See # # Order of dead key lists
+#
+#   As a result, combining marks and spacing clones of diacritics are listed
+#   first, quotation marks come next.
+#
+#
+# # Lenient group selection
+#
+#   Diacritical dead keys may combine with the group dead key mainly to support
+#   diacriticized letters in the letter groups.
+#
+#   Where diacritical or transformational dead keys are chained with the group
+#   dead key, empty lower groups are used for redundant mappings of characters
+#   expected in higher groups, so as to not require activating the exact group.
+#   See #   Lenient group selection
+#
+#   This is part of the streamlined, “un-screwed-up” user experience set as an
+#   implicit design goal.
+#   See #   Streamlining
+#   See # # Symbols for multikey
 #
 #
 # # Composed letters for languages in Togo
@@ -1612,49 +1656,6 @@
 <Multi_key><greater>                                                                           <y> : "ʊ̌" # U028A U030C LATIN SMALL LETTER UPSILON WITH CARON
 <dead_caron>                                                                            <UEFD0><y> : "ʊ̌" # U028A U030C LATIN SMALL LETTER UPSILON WITH CARON
 <Multi_key><greater>                                                               <numbersign><y> : "ʊ̌" # U028A U030C LATIN SMALL LETTER UPSILON WITH CARON
-#
-#
-# # Enumeration order of dead keys
-#
-#   Dead keys in this file are ordered following the AZERTY keyboard layout.
-#   See # # Actionable dead key layout for Latin keyboards
-#
-#   Heading levels are differentiated, in that the main dead keys with mappings
-#   on keys are prefixed "#*# ", the dead keys virtualized by double or triple,
-#   rarely quadruple press are prefixed "#^# ", and the other dead keys "# # ".
-#
-#   Dead keys are further ordered following this scheme:
-#
-#       1.    #*# Main dead key
-#       2.    # # Dead key in group
-#       3.    # # Dead key combination with one or more other dead keys
-#       4.    #^# Dead key virtualized by multiple press
-#
-#   The order of base characters matters, too, since this file is also used for
-#   documentation: spaces, quotedbl, apostrophes, other symbols and punctuation
-#   where ASCII is intuitively ordered consistently with the dead keys, while
-#   non-ASCII aliases are grouped with their ASCII counterparts; digits are
-#   next, then the base alphabet, and ultimately diacriticized letters on live
-#   keys.
-#   See # # Order of dead key lists
-#
-#   As a result, combining marks and spacing clones of diacritics are listed
-#   first, quotation marks come next.
-#
-#
-# # Lenient group selection
-#
-#   Diacritical dead keys may combine with the group dead key mainly to support
-#   diacriticized letters in the letter groups.
-#
-#   Where diacritical or transformational dead keys are chained with the group
-#   dead key, empty lower groups are used for redundant mappings of characters
-#   expected in higher groups, so as to not require activating the exact group.
-#
-#   This is part of the streamlined, “un-screwed-up” user experience set as an
-#   implicit design goal.
-#   See #   Streamlining
-#   See # # Symbols for multikey
 #
 #
 #*# SUPERSCRIPT
