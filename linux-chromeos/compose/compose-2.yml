@@ -670,10 +670,22 @@
 # # Lenient dead key press
 #
 #   When dead keys are chained, dead keys virtualized by multiple press may be
-#   abbreviated to single press. This is part of a streamlined user experience.
-#   See # # Lenient group selection
+#   abbreviated to single press so as to streamline the user experience.
 #   See #   Lenient dead key press
 #   See # # INVERTED&CURL
+#
+#   When the scheme applies to the group dead key, it is called “lenient group
+#   selection” for clarity.
+#   See #   Lenient group selection
+#
+#   Where diacritical or transformational dead keys are chained with the group
+#   dead key, empty lower groups are used for redundant mappings of characters
+#   expected in higher groups, so as to not require activating the exact group.
+#
+#   This is part of the streamlined, “un-screwed-up” user experience set as an
+#   implicit design goal.
+#   See #   Streamlining
+#   See # # Symbols for multikey
 #
 #
 # # Quotation mark input method
@@ -997,22 +1009,6 @@
 #   first, quotation marks come next.
 #
 #
-# # Lenient group selection
-#
-#   Diacritical dead keys may combine with the group dead key mainly to support
-#   diacriticized letters in the letter groups.
-#
-#   Where diacritical or transformational dead keys are chained with the group
-#   dead key, empty lower groups are used for redundant mappings of characters
-#   expected in higher groups, so as to not require activating the exact group.
-#   See #   Lenient group selection
-#
-#   This is part of the streamlined, “un-screwed-up” user experience set as an
-#   implicit design goal.
-#   See #   Streamlining
-#   See # # Symbols for multikey
-#
-#
 # # Composed letters for languages in Togo
 #
 #   This is based on the list that Mats Blakstad <mats.gbproject_at_gmail.com>
@@ -1050,7 +1046,7 @@
 #   for V WITH HOOK "Ʋ" U01B2, "ʋ" U028B with diacritics, group 1 of "V", "v"
 #   is also supported, while plain group 1 is VERSICLE "℣" U2123.
 #   See #   VERSICLE and RESPONSE
-#   See # # Lenient group selection
+#   See # # Lenient dead key press
 #
 #   As this file is also the source code for documentation, the order in which
 #   sequences are listed matters in that the most streamlined ones need to be
@@ -8242,7 +8238,7 @@
 #   "⩭" U2A6D in groups 1..3 (lenient group selection); apostrophe and
 #   rightsinglequotemark (where "⊂" U2282 is in group 2) yield "⫃" U2AC3;
 #   braceleft (key D08, while apostrophe is D07) yields "⫄" U2AC4.
-#   See # # Lenient group selection
+#   See # # Lenient dead key press
 #
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
@@ -10514,28 +10510,6 @@
 <Multi_key><braceright><minus>                                                                 <i> : "𝼚" U1DF1A # LATIN SMALL LETTER I WITH STROKE AND RETROFLEX HOOK
 #
 #
-# # BAR&CURL
-#   Dchar: 
-#
-<UEFD8><dead_hook><dead_hook>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<Multi_key><minus><braceleft><braceleft>                                                       <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<dead_hook><UEFD8><dead_hook>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<Multi_key><braceleft><minus><braceleft>                                                       <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<dead_hook><dead_hook><UEFD8>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<Multi_key><braceleft><braceleft><minus>                                                       <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-#
-#
-# # BAR&CURL&GROUP_1
-#   Dchar: 
-#
-<UEFD8><dead_hook><dead_hook><UEFD0>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<Multi_key><minus><braceleft><braceleft><numbersign>                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<dead_hook><UEFD8><dead_hook><UEFD0>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<Multi_key><braceleft><minus><braceleft><numbersign>                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<dead_hook><dead_hook><UEFD8><UEFD0>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-<Multi_key><braceleft><braceleft><minus><numbersign>                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
-#
-#
 # # BAR&STROKE
 #   Dchar: 
 #
@@ -10629,8 +10603,25 @@
 #
 #
 # # DOUBLE_BAR&CURL
+#   Lenient dead key press
 #   Dchar: 
 #
+<UEFD8><dead_hook>                                                                             <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><minus><braceleft>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<dead_hook><UEFD8>                                                                             <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><braceleft><minus>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<UEFD8><UEFD8><dead_hook>                                                                      <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><minus><minus><braceleft>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<dead_hook><UEFD8><UEFD8>                                                                      <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><braceleft><minus><minus>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<UEFD8><dead_hook><UEFD8>                                                                      <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><minus><braceleft><minus>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<UEFD8><dead_hook><dead_hook>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><minus><braceleft><braceleft>                                                       <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<dead_hook><UEFD8><dead_hook>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><braceleft><minus><braceleft>                                                       <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<dead_hook><dead_hook><UEFD8>                                                                  <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
+<Multi_key><braceleft><braceleft><minus>                                                       <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
 <UEFD8><UEFD8><dead_hook><dead_hook>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
 <Multi_key><minus><minus><braceleft><braceleft>                                                <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
 <dead_hook><dead_hook><UEFD8><UEFD8>                                                           <s> : "𝼌" U1DF0C # LATIN SMALL LETTER ESH WITH DOUBLE BAR AND CURL
