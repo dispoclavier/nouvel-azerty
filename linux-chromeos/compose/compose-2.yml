@@ -175,11 +175,10 @@
 #
 #   Based on this, triple or quadruple press virtual dead keys may also be
 #   supported as required. Additionally, mixing multiple diacritics on the
-#   same letter also requires virtual dead keys. Each one of these dead keys
-#   needs a dedicated dead character.
+#   same letter also requires virtual dead keys.
 #
 #
-#   Single-character dead keys
+# # Single-character dead keys
 #
 #   Some virtual dead keys exist for the sake of one single character. All of
 #   these are streamlined by cropping the base character.
@@ -187,6 +186,13 @@
 #   See # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   See # # COMBINING_ABOVE&CEDILLA
 #   See # # SUPERSCRIPT&STROKE
+#
+#   As a result, the character is output as soon as the dead key combination is
+#   complete.
+#
+#   This is part of the streamlined user experience as an implicit design goal.
+#   See #   Streamlining
+#   See # # Lenient dead key press
 #
 #
 # # X11 dead keysyms
@@ -2425,7 +2431,7 @@
 #
 #   As this dead key exists for "𐞧" U107A7 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD5>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
@@ -2447,7 +2453,7 @@
 #
 #   As this dead key exists for "𐞡" U107A1 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD1><UEFD5><dead_breve>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
@@ -2498,7 +2504,7 @@
 #
 #   As this dead key exists for "𐞧" U107A7 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD5><dead_macron><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5><dead_macron><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
@@ -2677,7 +2683,7 @@
 #
 #   As this dead key exists for "𐞴" U107B4 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD6><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD1><UEFD6><UEFD8>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -2699,7 +2705,7 @@
 #
 #   As this dead key exists for "𐞴" U107B4 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD6><UEFD8>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 #UEFD1><UEFD6><UEFD8> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
@@ -2816,7 +2822,7 @@
 #
 #   As this dead key exists for "𐞍" U1078D only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><dead_hook><UEFD4>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <UEFD1><dead_hook><UEFD4>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
@@ -3271,7 +3277,7 @@
 #
 #   As this dead key exists for "𐞝" U1079D only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <UEFD1><UEFD4><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
@@ -3293,7 +3299,7 @@
 #
 #   As this dead key exists for "𐞝" U1079D only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD4><dead_breve><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 #UEFD1><UEFD4><dead_breve><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
@@ -3484,7 +3490,7 @@
 #
 #   As this dead key exists for "𐞔" U10794 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD2><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <UEFD1><UEFD2><dead_hook>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
@@ -3506,7 +3512,7 @@
 #
 #   As this dead key exists for "𐞜" U1079C only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD1><UEFD2><dead_breve>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
@@ -3528,7 +3534,7 @@
 #
 #   As this dead key exists for "ᶧ" U1DA7 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD2><UEFD8>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD1><UEFD2><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
@@ -3550,7 +3556,7 @@
 #
 #   As this dead key exists for "𐞢" U107A2 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><dead_stroke>                                                                           <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 <UEFD1><dead_stroke>                                                                               : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
@@ -3789,7 +3795,7 @@
 #
 #   As this dead key exists for "ᷗ" U1DD7 only, it is streamlined by cropping
 #   the base character, except for the multikey equivalents.
-#   See #   Single-character dead keys
+#   See # # Single-character dead keys
 #
 #UEFD1><UEFD1><dead_cedilla>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 <UEFD1><UEFD1><dead_cedilla>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
@@ -7796,6 +7802,7 @@
 #
 #
 # # RETROFLEX_HOOK&GROUP_1
+#   Lenient group selection
 #   Dchar: 
 #
 <UEFD4><UEFD0>                                                                                 <a> : "ᶐ" U1D90 # LATIN SMALL LETTER ALPHA WITH RETROFLEX HOOK
@@ -7988,18 +7995,14 @@
 <Multi_key><braceright><numbersign><KP_5>                                                      <t> : "ꭧ" UAB67 # LATIN SMALL LETTER TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
-# # RETROFLEX_HOOK&BREVE
+# # RETROFLEX_HOOK&BREVE_BELOW
+#   Lenient dead key press
 #   Dchar: 
 #
 <UEFD4><dead_breve>                                                                            <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><parenright>                                                            <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <dead_breve><UEFD4>                                                                            <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <Multi_key><parenright><braceright>                                                            <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
-#
-#
-# # RETROFLEX_HOOK&BREVE_BELOW
-#   Dchar: 
-#
 <UEFD4><dead_breve><dead_breve>                                                                <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <Multi_key><braceright><parenright><parenright>                                                <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
 <dead_breve><UEFD4><dead_breve>                                                                <l> : "ꞎ" UA78E # LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT
@@ -10046,9 +10049,6 @@
 #   See #*# INVERTED_BREVE
 #   See #+# GROUP_1
 #
-#   This is also the box drawings dead key.
-#   See # # Box drawings
-#
 #   The double diacritic "͝" U035D has emdash as a mnemonic base character, and
 #   equal as an ASCII alternative with "double" semantics, for consistent
 #   input methods across all dead keys featuring a double diacritic.
@@ -10116,17 +10116,6 @@
 <Multi_key><parenright>                                                                   <Agrave> : "Ằ" U1EB0 # LATIN CAPITAL LETTER A WITH BREVE AND GRAVE
 <dead_breve>                                                                              <agrave> : "ằ" U1EB1 # LATIN SMALL LETTER A WITH BREVE AND GRAVE
 <Multi_key><parenright>                                                                   <agrave> : "ằ" U1EB1 # LATIN SMALL LETTER A WITH BREVE AND GRAVE
-#
-#
-# # BREVE&PALATAL_HOOK
-#   Dchar: 
-#
-<dead_breve><UEFD4><UEFD4>                                                                     <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><parenright><braceright><braceright>                                                <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<UEFD4><dead_breve><UEFD4>                                                                     <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><braceright><parenright><braceright>                                                <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<UEFD4><UEFD4><dead_breve>                                                                     <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><braceright><braceright><parenright>                                                <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
 #
 #
 # # BREVE&TILDE
@@ -10279,20 +10268,30 @@
 #
 #
 # # BREVE_BELOW&PALATAL_HOOK
+#   Lenient dead key press
 #   Dchar: 
 #
-<dead_breve><dead_breve><UEFD4><UEFD4>                                                        <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><parenright><parenright><braceright><braceright>                                   <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<dead_breve><UEFD4><dead_breve><UEFD4>                                                        <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><parenright><braceright><parenright><braceright>                                   <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<dead_breve><UEFD4><UEFD4><dead_breve>                                                        <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><parenright><braceright><braceright><parenright>                                   <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<UEFD4><dead_breve><dead_breve><UEFD4>                                                        <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><braceright><parenright><parenright><braceright>                                   <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<UEFD4><dead_breve><UEFD4><dead_breve>                                                        <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><braceright><parenright><braceright><parenright>                                   <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<UEFD4><UEFD4><dead_breve><dead_breve>                                                        <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
-<Multi_key><braceright><braceright><parenright><parenright>                                   <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+#   If palatal hook was streamlined here, this would conflict with "ꞎ" UA78E.
+#   See # # RETROFLEX_HOOK&BREVE_BELOW
+#
+<dead_breve><UEFD4><UEFD4>                                                                     <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><parenright><braceright><braceright>                                                <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<UEFD4><dead_breve><UEFD4>                                                                     <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><braceright><parenright><braceright>                                                <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<UEFD4><UEFD4><dead_breve>                                                                     <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><braceright><braceright><parenright>                                                <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<dead_breve><dead_breve><UEFD4><UEFD4>                                                         <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><parenright><parenright><braceright><braceright>                                    <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<dead_breve><UEFD4><dead_breve><UEFD4>                                                         <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><parenright><braceright><parenright><braceright>                                    <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<dead_breve><UEFD4><UEFD4><dead_breve>                                                         <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><parenright><braceright><braceright><parenright>                                    <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<UEFD4><dead_breve><dead_breve><UEFD4>                                                         <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><braceright><parenright><parenright><braceright>                                    <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<UEFD4><dead_breve><UEFD4><dead_breve>                                                         <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><braceright><parenright><braceright><parenright>                                    <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<UEFD4><UEFD4><dead_breve><dead_breve>                                                         <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
+<Multi_key><braceright><braceright><parenright><parenright>                                    <l> : "𝼓" U1DF13 # LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
 #
 #
 #*# BAR
