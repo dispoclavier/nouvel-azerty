@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-08-08T0930+0200
+# 2025-08-16T1056+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -10,15 +10,18 @@
 # heading "# # Notes for maintenance" built in, and thanks to improved sorting.
 # https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 #
+# Polytonic Greek is skipped as off-topic, to alleviate development of premium
+# user experience on Windows. This saves 1,886 dead key sequences and, above
+# all, 256 chained dead keys.
+#
 # Multikey sequences need to be processed separately. These are unrelated to,
-# or not congruent with, the dead key output, as some are commented out.
+# or not congruent with, the dead key output, as about 100 multikey equivalents
+# are commented out due to conflicts.
 #
 # The sequences ending in dead_greek are required because dead_greek is
 # duplicated on the position of the at sign in the ASCII symbol map.
 #
 # Not all chained dead keys are symmetric.
-# See Compose.yml # # GREEK&DIAERESIS&DOUBLEACUTE
-# See Compose.yml # # GREEK&DIAERESIS&ACUTE
 # See Compose.yml # # MACRON&DIAERESIS
 # See Compose.yml # # DIAERESIS&MACRON
 # See Compose.yml # # SUPERSCRIPT&TURNED&BREVE
@@ -109,6 +112,7 @@ print( "Opened file $log_path.\n" );
 
 print( "Processing content from $input_path to $output_path.\n" );
 
+my $parse_on          = !0;
 my @dead_key_out      = ();
 my @chained_dead_keys = ();
 my @high_surrogates   = ();
@@ -172,48 +176,60 @@ sub formatCharacter {
 }
 
 while ( my $line = <INPUT> ) {
+	if ( $line =~ /START_GREEK/ ) {
 
-	unless ( $line =~ /^<Multi_key>/             # Multikey is not processed.
-		|| $line =~ /^#/                 # Annotations.
-		|| $line =~ /^<[^>]+> * :/       # Multichar for live keys.
-		|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
-		|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
-	) {
-		# Remove spaces.
-		$line =~ s/ {2,}/ /g;
-		$line =~ s/> </></g;
+		# If polytonic Greek should be included, comment this out.
+		$parse_on = !1;
 
-		# Decode keysyms.
-		$line =~ s/<UEFD0>/<dead_group>/g;
-		$line =~ s/<UEFD1>/<dead_superscript>/g;
-		$line =~ s/<UEFD2>/<dead_subscript>/g;
-		$line =~ s/<UEFD3>/<dead_abovehook>/g;
-		$line =~ s/<UEFD4>/<dead_retroflexhook>/g;
-		$line =~ s/<UEFD5>/<dead_turned>/g;
-		$line =~ s/<UEFD6>/<dead_reversed>/g;
-		$line =~ s/<UEFD7>/<dead_flag>/g;
-		$line =~ s/<UEFD8>/<dead_bar>/g;
-		$line =~ s/<UEFD9>/<dead_legacytilde>/g;
-		$line =~ s/<UEFDA>/<dead_legacygrave>/g;
-		$line =~ s/<U0190>/<Eopen>/g;
-		$line =~ s/<U025B>/<eopen>/g;
-		$line =~ s/<U0186>/<Oopen>/g;
-		$line =~ s/<U0254>/<oopen>/g;
-		
-		# Simplify dead key names and prepare for sorting.
-		$line =~ s/<dead_/<!/g;
+	}
+	if ( $line =~ /START_LATIN_BY_DEAD_KEYS/ ) {
+		$parse_on = !0;
+	}
 
-		# Prepare for sorting, further decode.
-		$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
-		$line =~ s/<section>/<\%semsection>/g;
-		$line =~ s/<at>/<\%aat>/g;
-		$line =~ s/<rightsinglequotemark>/<\%aprightsinglequotemark>/g;
-		$line =~ s/<(ampersand|apostrophe|asciicircum|asciitilde|asterisk|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/g;
-		$line =~ s/<((nobreak)?)space>/<~$1space>/g;
-		$line =~ s/<U202F>/<~nobreakthinspace>/g;
-		$line =~ s/<U200B>/<~spacezerowidth>/g;
+	if ( $parse_on ) {                   # Polytonic Greek may not be processed.
+		unless ( $line =~ /^<Multi_key>/   # Multikey is not processed.
+			|| $line =~ /^<[^>]+> * :/       # Multichar for live keys.
+			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
+			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
+			|| $line =~ /^#/                 # Annotations.
+		) {
 
-		push( @dead_key_out, $line );
+			# Remove spaces.
+			$line =~ s/ {2,}/ /g;
+			$line =~ s/> </></g;
+
+			# Decode keysyms.
+			$line =~ s/<UEFD0>/<dead_group>/g;
+			$line =~ s/<UEFD1>/<dead_superscript>/g;
+			$line =~ s/<UEFD2>/<dead_subscript>/g;
+			$line =~ s/<UEFD3>/<dead_abovehook>/g;
+			$line =~ s/<UEFD4>/<dead_retroflexhook>/g;
+			$line =~ s/<UEFD5>/<dead_turned>/g;
+			$line =~ s/<UEFD6>/<dead_reversed>/g;
+			$line =~ s/<UEFD7>/<dead_flag>/g;
+			$line =~ s/<UEFD8>/<dead_bar>/g;
+			$line =~ s/<UEFD9>/<dead_legacytilde>/g;
+			$line =~ s/<UEFDA>/<dead_legacygrave>/g;
+			$line =~ s/<U0190>/<Eopen>/g;
+			$line =~ s/<U025B>/<eopen>/g;
+			$line =~ s/<U0186>/<Oopen>/g;
+			$line =~ s/<U0254>/<oopen>/g;
+
+			# Simplify dead key names and prepare for sorting.
+			$line =~ s/<dead_/<!/g;
+
+			# Prepare for sorting, further decode.
+			$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
+			$line =~ s/<section>/<\%semsection>/g;
+			$line =~ s/<at>/<\%aat>/g;
+			$line =~ s/<rightsinglequotemark>/<\%aprightsinglequotemark>/g;
+			$line =~ s/<(ampersand|apostrophe|asciicircum|asciitilde|asterisk|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/g;
+			$line =~ s/<((nobreak)?)space>/<~$1space>/g;
+			$line =~ s/<U202F>/<~nobreakthinspace>/g;
+			$line =~ s/<U200B>/<~spacezerowidth>/g;
+
+			push( @dead_key_out, $line );
+		}
 	}
 }
 
@@ -225,7 +241,7 @@ foreach my $line ( @dead_key_out ) {
 
 	if ( $line =~ /" U[0-9A-F]{4,5}/ ) {
 		unless ( $line =~ /<UEF/ ) {
-			$line =~ m/(<.+>)<(.+)> : "(.+)" U([0-9A-F]{4,5}) # (.+)/u;
+			$line          =~ m/(<.+>)<(.+)> : "(.+)" U([0-9A-F]{4,5}) # (.+)/u;
 			$deadkey       = $1;
 			$input         = $2;
 			$output_string = $3;
@@ -240,10 +256,10 @@ foreach my $line ( @dead_key_out ) {
 				unless ( grep( /^$deadkey$/, @chained_dead_keys ) ) {
 					push( @chained_dead_keys, $deadkey );
 				}
-				
-				
-				
-				
+
+				# Chained dead keys are postponed.
+				# For the time being, a placeholder is used instead.
+
 				$deadchar = 'dead';
 			}
 
