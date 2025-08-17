@@ -168,10 +168,12 @@
 # # Virtual dead keys
 #
 #   The French BÉPO ergonomic keyboard layout defines a number of dead keys as
-#   virtualized by dead key double press. The diacritic is either doubled or
-#   transformed, i.e. it is shifted to the less frequently diacriticized side
-#   of the letter. More information is available in French on the bépo website:
+#   virtualized by dead key double press.
 #   https://bepo.fr/wiki/Version_1.1rc1/Touches_mortes/Pressions_multiples
+#
+#   The diacritics supported by double-press virtual dead keys are doubled or
+#   transformed by shifting to the less frequently diacriticized side of the
+#   letter.
 #
 #   Based on this, triple or quadruple press virtual dead keys may also be
 #   supported as required. Additionally, mixing multiple diacritics on the
@@ -404,12 +406,18 @@
 #   As these dead keys are required on these fr-FR keyboard layouts, and while
 #   keysymdef.h does not feature them, the following Private Use Area picks are
 #   used so far instead, with mnemonic numbers to palliate the lack of mnemonic
-#   dead keysyms: 0; 1; 2; 3 has the form of a hook above; 4 has a flection to
-#   the left; 5 remains readable after it is turned; 7 looks like a flag; and 8
-#   has converging lines where the bar is located on barred letters. The "D" in
-#   second position is mnemonic for "dead key".
+#   dead keysyms.
 #   https://fossies.org/linux/tk/xlib/X11/keysymdef.h
 #   See # # Dead characters for portability
+#
+#   0 is for the group dead key, 1 is for superscript, and 2 is for subscript,
+#   given that these three are both the most outstanding and the most obvious
+#   new dead keys; 3 has the form of a hook above; 4 has a flection to the left
+#   making it mnemonic for retroflex; 5 remains readable after it is turned;
+#   7 looks close to a flag; and 8 has lines converging at the exact location
+#   of the bar crossing barred letters. The least mnemonic is 6 for reversed.
+#
+#   The "D" in second position is mnemonic for "dead key".
 #
 #   The sequences in French quotes are the multikey equivalents.
 #   See #   Multikey sequence notation
@@ -443,7 +451,7 @@
 #                   « ¦% ».
 #                   See #*# TURNED
 #                   double-press: inverted (20) or sideways (8) in Latin;
-#                   inverted and sideways have an empty intersection; « ¦% ».
+#                   inverted and sideways have an empty intersection; « ¦%% ».
 #                   See #^# INVERTED
 #
 #   <UEFD6> : "ᴙ"   *dead_reversed, second-most frequent transform;
@@ -454,9 +462,9 @@
 #                   additional "double" and "equal" semantics; « ¦= ».
 #                   See #*# FLAG
 #
-#   <UEFD8> : "ħ"   *dead_bar for barred letters, i.e. with a horizontal line
-#                   through, as opposed to the diagonal or oblique stroke;
-#                   « ¦- ».
+#   <UEFD8> : "ħ"   *dead_bar for barred letters, with the meaning of a
+#                   horizontal line through, as opposed to the diagonal or
+#                   oblique stroke; « ¦- ».
 #                   See # # Bar and stroke diacritics
 #                   See #*# BAR
 #                   See #*# STROKE
@@ -3827,7 +3835,7 @@
 #   Multi_key: ¦%
 #   Dchar: "ɐ" U0250
 #
-#   The rotation angle may be 180° as for TURNED letters, or 90° i.e. SIDEWAYS.
+#   The rotation angle may be 180° as for TURNED, or 90° as for SIDEWAYS.
 #
 #   "ɟ" U025F LATIN SMALL LETTER DOTLESS J WITH STROKE being “typographically a
 #   turned f, but better thought of as a form of j” (Unicode Code Charts), for
@@ -4352,20 +4360,21 @@
 #   Dchar: "ᴟ" U1D1F
 #
 #   This supports the full set of those among the Old Lisu letters that can be
-#   used for writing in turned Latin letters, i.e. without M, Q, W, except for
-#   "ꓞ" UA4DE, that is in the single press dead key for the sake of "ɟ" U025F.
-#   See #*# TURNED
-#
-#   Therefore, this supports the Claudian letter "Ⅎ" U2132 that has a lowercase
+#   used for writing in turned Latin letters, except "ꓞ" UA4DE, that is in the
+#   single press dead key for the sake of using the uppercase slot of "ɟ" U025F
+#   and making room for the Claudian letter "Ⅎ" U2132, that has a lowercase
 #   form "ⅎ" U214E, intended to meet Unicode casing requirements, and thus less
 #   appropriate for support in the single press *dead_turned, where "ɟ" U025F
 #   is more convenient.
-#   https://en.wikipedia.org/wiki/Claudian_letters
+#   See #*# TURNED
 #
 #   The other Claudian letters are "Ↄ" U2183, "ↄ" U2184
+#   https://en.wikipedia.org/wiki/Claudian_letters
 #   See #*# REVERSED
 #   and "Ⱶ" U2C75, "ⱶ" U2C76.
 #   See #+# GROUP_5
+#
+#   Old Lisu does not turn the letters M, Q, W.
 #
 #   The two parentheses yield the two underties, one of which is inverted:
 #   "⁔" U2054, "‿" U203F. For mnemonics, these are like sideways, or vertical
@@ -6967,8 +6976,8 @@
 #   See # # Comma-shaped quotation marks
 #
 #   Composed "J" with acute "J́" is in en_US.UTF-8/Compose, but composed "Ĳ"
-#   with acute "Ĳ́" is not, nor is it rendered correctly in some fonts, i.e.
-#   with an accent on each letter making up the all-in-one digraph letter.
+#   with acute "Ĳ́" is not, nor do all fonts render it correctly with an accent
+#   on each letter partial making up the all-in-one digraph letter.
 #   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
 #
 #   Followed by Éé, dead_acute is a shortcut to Ãã for Portuguese, with spatial
@@ -10215,8 +10224,8 @@
 #
 #   The rationale for merging the BELT dead key with the BREVE dead key is
 #   similarity in shape. But in practice, BELT cannot be merged with BREVE,
-#   since we have a composed L with combining breve, used in Inng. As a result,
-#   *dead_belt is merged with dead_belowbreve, i.e. dead_breve double press.
+#   because of the composed L with combining breve used in Inng. As a result,
+#   *dead_belt is merged with dead_belowbreve, dead_breve double press.
 #
 #   As an easier alternative, HORN could be used, but it is not, for the sake
 #   of mnemonics, and to prevent HORN from becoming a holdall dead key.
@@ -14961,9 +14970,9 @@
 #       E12: Scotland
 #
 #   Mnemonics is geospatial, using the stacked layout of these keys. This in
-#   turn is constrained by the requirement of duplicate mappings due to the
-#   column-02 bug on Windows, affecting level 10 i.e. Shift + AltLe, decimal 65
-#   and hex 0x41:
+#   turn is constrained by the requirement of duplicate mappings to work around
+#   the column-02 bug on Windows, affecting level 10, decimal 65, hex 0x41,
+#   the Shift + AltLe level.
 #
 #       B02 is duplicated on B07
 #       C02 is duplicated on C11
