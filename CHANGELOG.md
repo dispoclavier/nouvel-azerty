@@ -20,6 +20,22 @@ Réimplémentation des touches mortes enchaînées diacritiques ou transformatio
 
 Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
 
+## 6.0.2 (projet)
+
+* Transformations :
+	* Tourné et bouclé : Simplifier la saisie de "𝼍" U+1DF0D. compose-2.yml [152a0c5](https://github.com/dispoclavier/nouvel-azerty/commit/152a0c5ad60b1800779926ce7d548ac729e187c6)
+	* Inversé et groupe 1 :
+		* Simplifier la saisie de "ᴒ" U+1D12. ibidem
+		* Simplifier la saisie de "℧" U+2127. ibidem
+	* Inversé et bouclé : Simplifier la saisie de "𝼎" U+1DF0E. ibidem
+	* Rayé et bouclé : Simplifier "𝼌" U+1DF0C. compose-2.yml [036d33d](https://github.com/dispoclavier/nouvel-azerty/commit/036d33d02386ee5ca662bdacd7df0829dd018014)
+	* Grec polytonique : Ajourner la prise en charge sous Windows. dead-key-convert.pl [f422ee2](https://github.com/dispoclavier/nouvel-azerty/commit/f422ee268e130436b0d9b2da349ddc04296998dd)
+* Documentation :
+	* Corriger une annotation. compose-2.yml [68652c1](https://github.com/dispoclavier/nouvel-azerty/commit/68652c1fe505832e5710194dbb029d0a3a55e923)
+	* Déplacer 2 sous-sections. ibidem
+	* Corriger des annotations. compose-2.yml [152a0c5](https://github.com/dispoclavier/nouvel-azerty/commit/152a0c5ad60b1800779926ce7d548ac729e187c6), [036d33d](https://github.com/dispoclavier/nouvel-azerty/commit/036d33d02386ee5ca662bdacd7df0829dd018014), [052452c](https://github.com/dispoclavier/nouvel-azerty/commit/052452c7ad675cf414514b0f693b5090d8a0b6f8)
+	* Corriger et compléter des annotations. compose-1.yml [a9f732a](https://github.com/dispoclavier/nouvel-azerty/commit/a9f732a6441200a1b824df997a93b9b87b48e290), compose-2.yml [e2c728b](https://github.com/dispoclavier/nouvel-azerty/commit/e2c728bb273d93813bd687269778dbdc2e65282c), compose-3.yml [5795e3b](https://github.com/dispoclavier/nouvel-azerty/commit/5795e3b373162fefc7d9a7d4395299b1d9ecf5a8)
+
 ## 6.0.1 (2025-08-14)
 
 Débogage du niveau Maj + AltLe + AltQr.
