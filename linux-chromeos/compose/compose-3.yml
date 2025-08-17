@@ -146,9 +146,9 @@
 #
 # # Math symbols in symbol groups
 #
-#   Mathematical symbols outside the math section, i.e. in the dead key section
-#   and especially in the symbol groups, are labeled as "math" since this label
-#   is converted into link text, with a hyperlink to the first instance of that
+#   Mathematical symbols outside the math section, in the dead key section and
+#   especially in the symbol groups, are labeled as "math", because this label
+#   is converted to link text, with a hyperlink to the first instance of that
 #   symbol on the math symbols page, on the condition that the "math" string is
 #   appended as the very last element.
 #
