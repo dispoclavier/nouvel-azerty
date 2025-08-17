@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see Compose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.1" # See #   End of line comments
+<UEFA0>                     : "version 6.0.2" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -539,7 +539,7 @@
 #   was called "narrow space" for consistency, and abbreviated "NSP".
 #   https://github.com/unicode-org/cldr/commit/e46774fcb6eaea3c106b29e7011d68c8749aefbb
 #
-#   In Unicode CLDR, French migrated from NBSP to NNBSP, i.e. NBTSP, wherever
+#   In Unicode CLDR, French migrated from NBSP to NNBSP, now NBTSP, wherever
 #   applicable, in 2018, when CLDR 34 was released on 2018-10-15.
 #
 #   In the release note, section Detailed Data Changes:
@@ -2203,11 +2203,13 @@
 #
 #   "–" U2013 EN DASH by <Multi_key><minus><minus><period> is supported in
 #   en_US.UTF-8/Compose and, for sideways compatibility, also in the double
-#   bar dead key. But "—" U2014 EM DASH cannot be supported as-is, i.e. by
-#   <Multi_key><minus><minus><minus>, since this is used as the entry point
-#   of the high bar dead key. Also, "―" U2015 HORIZONTAL BAR needs support as
-#   well, while for an unknown reason — it may even be designed as a ¾-em dash,
-#   as in Cambria — en_US.UTF-8/Compose skips this one. It is supported in the
+#   bar dead key. But "—" U2014 EM DASH cannot be supported as it is in
+#   en_US.UTF-8/Compose by <Multi_key><minus><minus><minus>, because this is
+#   used as the entry point of the high bar dead key.
+#
+#   Also, "―" U2015 HORIZONTAL BAR needs support as well, while for an unknown
+#   reason — it may even be designed as a ¾-em dash, as in Cambria —
+#   en_US.UTF-8/Compose skips this one. HORIZONTAL BAR is supported in the
 #   high bar dead key by <Multi_key><minus><minus><minus><period>.
 #   See #^# DOUBLE_BAR
 #   See #^# HIGH_BAR
@@ -9390,7 +9392,7 @@
 #   The few occurrences of precomposed vrachy are in dead_caron, with the
 #   mnemonic upside that the mapping of dead_caron on the "V" key also matches
 #   the initial of vrachy.
-#   See # # Dead key layout overview
+#   See #   Dead key layout overview
 #   See # # Order of dead key lists
 #
 #       dead_acute              oxia
