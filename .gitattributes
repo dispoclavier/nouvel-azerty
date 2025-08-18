@@ -11,16 +11,13 @@
 ## Language stats
 
 # Beside .pl and .xml, file extensions are only used for syntactic highlighting and interoperability.
-# By courtesy of https://www.reddit.com/r/github/comments/1ehrtwc/how_to_get_rid_of_languages_used/
 # See /linux-chromeos/readme.md.
-*.yml -linguist-detectable
-*.c -linguist-detectable
-*.cpp -linguist-detectable
+/linux-chromeos/** -linguist-detectable
 
 # Do not include undistributed files.
-/ressource/* linguist-vendored
-/linux-chromeos/outils/* linguist-vendored
-/windows/outils/* linguist-vendored
+/ressource/** linguist-vendored
+/linux-chromeos/outils/** linguist-vendored
+/windows/outils/** linguist-vendored
 
 ## False positives
 
