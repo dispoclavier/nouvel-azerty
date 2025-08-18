@@ -165,45 +165,6 @@
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/generate-multikey.pl
 #
 #
-# # Virtual dead keys
-#
-#   The French BÉPO ergonomic keyboard layout defines a number of dead keys as
-#   virtualized by dead key double press.
-#   https://bepo.fr/wiki/Version_1.1rc1/Touches_mortes/Pressions_multiples
-#
-#   The diacritics supported by double-press virtual dead keys are doubled or
-#   transformed by shifting to the less frequently diacriticized side of the
-#   letter.
-#
-#   Based on this, triple or quadruple press virtual dead keys may also be
-#   supported as required. Additionally, mixing multiple diacritics on the
-#   same letter also requires virtual dead keys.
-#
-#
-# # Single-character dead keys
-#
-#   Some virtual dead keys exist for the sake of one single character, and so
-#   offer the opportunity to be streamlined by cropping the base character.
-#   See #   As this dead key exists for
-#
-#   As a result, the letter is output as soon as the dead key combination is
-#   complete, without waiting for the base character, given the lack of
-#   multiple options.
-#   See # # SUPERSCRIPT&SUBSCRIPT&BAR
-#   See # # COMBINING_ABOVE&CEDILLA
-#   See # # SUPERSCRIPT&STROKE
-#
-#   One multikey equivalent, however, is not included in the scheme, because it
-#   conflicts with the math symbol "⟌" U27CC and thus requires the base letter
-#   as a terminator.
-#   See # # SUPERSCRIPT&SUBSCRIPT&BREVE_BELOW
-#
-#   This feature is part of the streamlined user experience set as an implicit
-#   design goal.
-#   See #   Streamlining
-#   See # # Lenient dead key press
-#
-#
 # # X11 dead keysyms
 #
 #   The dead keysyms defined in keysymdef.h, that is part of x11proto-core-dev,
@@ -635,6 +596,45 @@
 <UEFDA>                                                                                        <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
 <UEFDA>                                                                                    <space> : "`" U0060 # GRAVE ACCENT
 <UEFDA>                                                                                    <UEFDA> : "``" # U0060 U0060 GRAVE ACCENT twice
+#
+#
+# # Virtual dead keys
+#
+#   The French BÉPO ergonomic keyboard layout defines a number of dead keys as
+#   virtualized by dead key double press.
+#   https://bepo.fr/wiki/Version_1.1rc1/Touches_mortes/Pressions_multiples
+#
+#   The diacritics supported by double-press virtual dead keys are doubled or
+#   transformed by shifting to the less frequently diacriticized side of the
+#   letter.
+#
+#   Based on this, triple or quadruple press virtual dead keys may also be
+#   supported as required. Additionally, mixing multiple diacritics on the
+#   same letter also requires virtual dead keys.
+#
+#
+# # Single-character dead keys
+#
+#   Some virtual dead keys exist for the sake of one single character, and so
+#   offer the opportunity to be streamlined by cropping the base character.
+#   See #   As this dead key exists for
+#
+#   As a result, the letter is output as soon as the dead key combination is
+#   complete, without waiting for the base character, given the lack of
+#   multiple options.
+#   See # # SUPERSCRIPT&SUBSCRIPT&BAR
+#   See # # COMBINING_ABOVE&CEDILLA
+#   See # # SUPERSCRIPT&STROKE
+#
+#   One multikey equivalent, however, is not included in the scheme, because it
+#   conflicts with the math symbol "⟌" U27CC and thus requires the base letter
+#   as a terminator.
+#   See # # SUPERSCRIPT&SUBSCRIPT&BREVE_BELOW
+#
+#   This feature is part of the streamlined user experience set as an implicit
+#   design goal.
+#   See #   Streamlining
+#   See # # Lenient dead key press
 #
 #
 # # Input order of mixed dead keys
