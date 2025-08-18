@@ -1,7 +1,7 @@
 ## Releases
 
 # Do not package resources nor tools in released source code.
-# Courtesy https://stackoverflow.com/a/50062746
+# By courtesy of https://stackoverflow.com/a/50062746
 /ressource/ export-ignore
 /linux-chromeos/outils/ export-ignore
 /windows/outils/ export-ignore
@@ -10,15 +10,14 @@
 
 ## Language stats
 
-# Include YAML in stats for consistency.
-# Courtesy https://github.com/github-linguist/linguist/issues/4848
-# *.yml linguist-detectable=true
-# *.yml linguist-language=YAML
-# Beside `.xml`, file extensions are used for syntactic highlighting.
+# Beside .pl and .xml, file extensions are only used for syntactic highlighting and interoperability.
+*.yml linguist-detectable=false
+*.c linguist-detectable=false
+*.cpp linguist-detectable=false
 
 # Exclude files from language stats to prevent inaccuracy.
-# See `/linux-chromeos/readme.md`.
-# Courtesy https://proandroiddev.com/removing-noise-from-your-github-language-stats-e96113f8183d
+# See /linux-chromeos/readme.md.
+# By courtesy of https://proandroiddev.com/removing-noise-from-your-github-language-stats-e96113f8183d
 *.c linguist-vendored
 *.cpp linguist-vendored
 
@@ -29,7 +28,7 @@
 
 ## False positives
 
-This is to prevent GitHub from claiming text files are binary.
+This is meant to prevent GitHub from claiming text files are binary.
 By courtesy of https://stackoverflow.com/questions/777949/can-i-make-git-recognize-a-utf-16-file-as-text
 *.reg diff
 *.reg diff=localizablestrings
