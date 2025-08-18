@@ -133,10 +133,10 @@
 #   are extensively supported at level 4 with a number of level-1/3 duplicates.
 #
 #   Only a subset of the dead key content, however, is supported by multikey,
-#   due to conflicts with the superscript or subscript dead keys, or with the
-#   quotation mark input method, or with math symbols. Conflicting multikey
-#   equivalents are commented out with an enumeration of conflicting characters
-#   and eventually with a comment in the dead key header.
+#   due to numerous conflicts, such as with the superscript or subscript dead
+#   keys, with the quotation mark input method, with math symbols. Conflicting
+#   multikey equivalents are commented out, with an enumeration of conflicting
+#   characters, and eventually with a comment in the dead key header.
 #   See # # Quotation mark input method
 #   See #   Conflictlessness check
 #   See #   Multikey conflicts with
@@ -182,17 +182,24 @@
 #
 # # Single-character dead keys
 #
-#   Some virtual dead keys exist for the sake of one single character. All of
-#   these are streamlined by cropping the base character.
+#   Some virtual dead keys exist for the sake of one single character, and so
+#   offer the opportunity to be streamlined by cropping the base character.
 #   See #   As this dead key exists for
+#
+#   As a result, the letter is output as soon as the dead key combination is
+#   complete, without waiting for the base character, given the lack of
+#   multiple options.
 #   See # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   See # # COMBINING_ABOVE&CEDILLA
 #   See # # SUPERSCRIPT&STROKE
 #
-#   As a result, the character is output as soon as the dead key combination is
-#   complete.
+#   One multikey equivalent, however, is not included in the scheme, because it
+#   conflicts with the math symbol "⟌" U27CC and thus requires the base letter
+#   as a terminator.
+#   See # # SUPERSCRIPT&SUBSCRIPT&BREVE_BELOW
 #
-#   This is part of the streamlined user experience as an implicit design goal.
+#   This feature is part of the streamlined user experience set as an implicit
+#   design goal.
 #   See #   Streamlining
 #   See # # Lenient dead key press
 #
@@ -651,7 +658,8 @@
 #   at this point, chaining does not encompass more than four dead key strokes
 #   other than group selection, that always trails and is thus not symmetrized.
 #   The JSON below going into user settings has the "@" prefix for subsequent
-#   multikey equivalent generation built in.
+#   multikey equivalent generation built in and supports a number of likely
+#   use cases.
 #   See # # Multikey equivalents
 #
 #       {
@@ -660,9 +668,33 @@
 #             "find": "^(<[^<>]+>)(<[^<>]+>)( .+)",
 #             "replace": "@$1$2$3\n@$2$1$3"
 #           },
+#           "permutate2SameAnd1": {
+#             "find": "^(<[^<>]+>)\\1(<[^<>]+>)( .+)",
+#             "replace": "@$1$1$2$3\n@$1$2$1$3\n@$2$1$1$3"
+#           },
+#           "permutate1And2Same": {
+#             "find": "^(<[^<>]+>)(<[^<>]+>)\\2( .+)",
+#             "replace": "@$1$2$2$3\n@$2$1$2$3\n@$2$2$1$3"
+#           },
 #           "permutate3": {
 #             "find": "^(<[^<>]+>)(<[^<>]+>)(<[^<>]+>)( .+)",
 #             "replace": "@$1$2$3$4\n@$1$3$2$4\n@$2$1$3$4\n@$3$1$2$4\n@$2$3$1$4\n@$3$2$1$4"
+#           },
+#           "permutate2SameAnd2Same": {
+#             "find": "^(<[^<>]+>)\\1(<[^<>]+>)\\2( .+)",
+#             "replace": "@$1$1$2$2$3\n@$1$2$1$2$3\n@$2$1$2$1$3\n@$2$2$1$1$3"
+#           },
+#           "permutate2SameAnd2": {
+#             "find": "^(<[^<>]+>)\\1(<[^<>]+>)(<[^<>]+>)( .+)",
+#             "replace": "@$1$1$2$3$4\n@$1$1$3$2$4\n@$1$2$1$3$4\n@$1$2$3$1$4\n@$1$3$1$2$4\n@$1$3$2$1$4\n@$2$1$1$3$4\n@$2$1$3$1$4\n@$2$3$1$1$4\n@$3$1$1$2$4\n@$3$1$2$1$4\n@$3$2$1$1$4"
+#           },
+#           "permutate1And2SameAnd1": {
+#             "find": "^(<[^<>]+>)(<[^<>]+>)\\2(<[^<>]+>)( .+)",
+#             "replace": "@$1$2$2$3$4\n@$1$2$3$2$4\n@$1$3$2$2$4\n@$2$1$2$3$4\n@$2$1$3$2$4\n@$2$2$1$3$4\n@$2$2$3$1$4\n@$2$3$1$2$4\n@$2$3$2$1$4\n@$3$1$2$2$4\n@$3$2$1$2$4\n@$3$2$2$1$4"
+#           },
+#           "permutate2And2Same": {
+#             "find": "^(<[^<>]+>)(<[^<>]+>)(<[^<>]+>)\\3( .+)",
+#             "replace": "@$1$2$3$3$4\n@$1$3$2$3$4\n@$1$3$3$2$4\n@$2$1$3$3$4\n@$2$3$1$3$4\n@$2$3$3$1$4\n@$3$1$2$3$4\n@$3$1$3$2$4\n@$3$2$1$3$4\n@$3$2$3$1$4\n@$3$3$1$2$4\n@$3$3$2$1$4"
 #           },
 #           "permutate4": {
 #             "find": "^(<[^<>]+>)(<[^<>]+>)(<[^<>]+>)(<[^<>]+>)( .+)",
@@ -673,7 +705,13 @@
 #           "symmetrizeChainedDeadKeys": {
 #             "rules": [
 #               "permutate2",
+#               "permutate2SameAnd1",
+#               "permutate1And2Same",
 #               "permutate3",
+#               "permutate2SameAnd2Same",
+#               "permutate2SameAnd2",
+#               "permutate1And2SameAnd1",
+#               "permutate2And2Same",
 #               "permutate4"
 #             ]
 #           }
@@ -1792,7 +1830,7 @@
 <UEFD1>                                                                                    <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <Multi_key><asciicircum>                                                                   <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <UEFD1>                                                                                    <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><asciicircum>                                                                   <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+#   Multikey conflicts with "ᷗ" U1DD7.                                                      <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD1>                                                                                   <period> : "·" U00B7 # MIDDLE DOT
 <Multi_key><asciicircum>                                                                  <period> : "·" U00B7 # MIDDLE DOT
 <UEFD1>                                                                                   <exclam> : "ꜝ" UA71D # MODIFIER LETTER RAISED EXCLAMATION MARK
@@ -2437,45 +2475,76 @@
 # # SUPERSCRIPT&TURNED&RETROFLEX_HOOK
 #   Dchar: 
 #
+#   This is a shortcut skipping the long-leg diacritic.
+#   See # # SUPERSCRIPT&TURNED&MACRON&RETROFLEX_HOOK
+#
 #   As this dead key exists for "𐞧" U107A7 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
 #UEFD1><UEFD4><UEFD5>                                                                          <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD4><UEFD5>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><percent>                                                      : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5><UEFD4>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><percent><braceright>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><asciicircum><percent><braceright>                                                      : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD4><UEFD1><UEFD5>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><percent>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><percent>                                                      : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD4><UEFD5><UEFD1>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><percent><asciicircum>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><braceright><percent><asciicircum>                                                      : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD5><UEFD1><UEFD4>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><asciicircum><braceright>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><percent><asciicircum><braceright>                                                      : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD5><UEFD4><UEFD1>                                                                              : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><braceright><asciicircum>                                                  <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><percent><braceright><asciicircum>                                                      : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 #
 #
-# # SUPERSCRIPT&TURNED&BREVE
+# # SUPERSCRIPT&TURNED&BREVE_BELOW
+#   Lenient dead key press
 #   Dchar: 
 #
 #   As this dead key exists for "𐞡" U107A1 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
+#   Commented-out sequences are streamlined but maintained for documentation.
+#
 #UEFD1><UEFD5><dead_breve>                                                                     <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#UEFD1><UEFD5><dead_breve><dead_breve>                                                         <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD1><UEFD5><dead_breve>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><asciicircum><percent><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><asciicircum><percent><parenright>                                                      : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD1><dead_breve><UEFD5>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><asciicircum><parenright><percent>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><asciicircum><parenright><percent>                                                      : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD5><UEFD1><dead_breve>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><percent><asciicircum><parenright>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><percent><asciicircum><parenright>                                                      : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <dead_breve><UEFD1><UEFD5>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><parenright><asciicircum><percent>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><parenright><asciicircum><percent>                                                      : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <UEFD5><dead_breve><UEFD1>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><percent><parenright><asciicircum>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><percent><parenright><asciicircum>                                                      : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 <dead_breve><UEFD5><UEFD1>                                                                         : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
-<Multi_key><parenright><percent><asciicircum>                                                  <y> : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><parenright><percent><asciicircum>                                                      : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#UEFD1><UEFD5><dead_breve><dead_breve>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#Multi_key><asciicircum><percent><parenright><parenright>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#UEFD1><dead_breve><UEFD5><dead_breve>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#Multi_key><asciicircum><parenright><percent><parenright>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<UEFD1><dead_breve><dead_breve><UEFD5>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><asciicircum><parenright><parenright><percent>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#UEFD5><UEFD1><dead_breve><dead_breve>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#Multi_key><percent><asciicircum><parenright><parenright>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#UEFD5><dead_breve><UEFD1><dead_breve>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#Multi_key><percent><parenright><asciicircum><parenright>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<UEFD5><dead_breve><dead_breve><UEFD1>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><percent><parenright><parenright><asciicircum>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#dead_breve><UEFD1><UEFD5><dead_breve>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#Multi_key><parenright><asciicircum><percent><parenright>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<dead_breve><UEFD1><dead_breve><UEFD5>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><parenright><asciicircum><parenright><percent>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#dead_breve><UEFD5><UEFD1><dead_breve>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+#Multi_key><parenright><percent><asciicircum><parenright>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<dead_breve><UEFD5><dead_breve><UEFD1>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><parenright><percent><parenright><asciicircum>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<dead_breve><dead_breve><UEFD1><UEFD5>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><parenright><parenright><asciicircum><percent>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<dead_breve><dead_breve><UEFD5><UEFD1>                                                             : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
+<Multi_key><parenright><parenright><percent><asciicircum>                                          : "𐞡" U107A1 # MODIFIER LETTER SMALL TURNED Y WITH BELT
 #
 #
 # # SUPERSCRIPT&TURNED&MACRON
@@ -2510,74 +2579,98 @@
 # # SUPERSCRIPT&TURNED&MACRON&RETROFLEX_HOOK
 #   Dchar: 
 #
+#   This dead key is further streamlined by skipping the long-leg diacritic.
+#   See # # SUPERSCRIPT&TURNED&RETROFLEX_HOOK
+#
 #   As this dead key exists for "𐞧" U107A7 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
+#
+#   Commented-out sequences are streamlined but maintained for documentation.
 #
 #UEFD1><UEFD5><dead_macron><UEFD4>                                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD5><dead_macron><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><percent><bar><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><asciicircum><percent><bar><braceright>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD5><UEFD1><dead_macron><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><asciicircum><bar><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><percent><asciicircum><bar><braceright>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><dead_macron><UEFD5><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><bar><percent><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><asciicircum><bar><percent><braceright>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD5><dead_macron><UEFD1><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><bar><asciicircum><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><percent><bar><asciicircum><braceright>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <dead_macron><UEFD1><UEFD5><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><bar><asciicircum><percent><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><bar><asciicircum><percent><braceright>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <dead_macron><UEFD5><UEFD1><UEFD4>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><bar><percent><asciicircum><braceright>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-#UEFD1><UEFD5><UEFD4><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><percent><braceright><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-#UEFD5><UEFD1><UEFD4><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><asciicircum><braceright><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><bar><percent><asciicircum><braceright>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD1><UEFD5><UEFD4><dead_macron>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#Multi_key><asciicircum><percent><braceright><bar>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD5><UEFD1><UEFD4><dead_macron>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#Multi_key><percent><asciicircum><braceright><bar>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><dead_macron><UEFD4><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><bar><braceright><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><asciicircum><bar><braceright><percent>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD5><dead_macron><UEFD4><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><bar><braceright><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><percent><bar><braceright><asciicircum>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <dead_macron><UEFD1><UEFD4><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><bar><asciicircum><braceright><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><bar><asciicircum><braceright><percent>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <dead_macron><UEFD5><UEFD4><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><bar><percent><braceright><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-#UEFD1><UEFD4><UEFD5><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><percent><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-#UEFD5><UEFD4><UEFD1><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><braceright><asciicircum><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><bar><percent><braceright><asciicircum>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD1><UEFD4><UEFD5><dead_macron>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#Multi_key><asciicircum><braceright><percent><bar>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD5><UEFD4><UEFD1><dead_macron>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#Multi_key><percent><braceright><asciicircum><bar>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD1><UEFD4><dead_macron><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><asciicircum><braceright><bar><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><asciicircum><braceright><bar><percent>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD5><UEFD4><dead_macron><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><percent><braceright><bar><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><percent><braceright><bar><asciicircum>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <dead_macron><UEFD4><UEFD1><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><bar><braceright><asciicircum><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><bar><braceright><asciicircum><percent>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <dead_macron><UEFD4><UEFD5><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><bar><braceright><percent><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-#UEFD4><UEFD1><UEFD5><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><percent><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-#UEFD4><UEFD5><UEFD1><dead_macron> streamlined                                                     : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><percent><asciicircum><bar>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><bar><braceright><percent><asciicircum>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD4><UEFD1><UEFD5><dead_macron>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#Multi_key><braceright><asciicircum><percent><bar>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#UEFD4><UEFD5><UEFD1><dead_macron>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+#Multi_key><braceright><percent><asciicircum><bar>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD4><UEFD1><dead_macron><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><asciicircum><bar><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><braceright><asciicircum><bar><percent>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD4><UEFD5><dead_macron><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><percent><bar><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><braceright><percent><bar><asciicircum>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD4><dead_macron><UEFD1><UEFD5>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><bar><asciicircum><percent>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><braceright><bar><asciicircum><percent>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 <UEFD4><dead_macron><UEFD5><UEFD1>                                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
-<Multi_key><braceright><bar><percent><asciicircum>                                             <r> : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
+<Multi_key><braceright><bar><percent><asciicircum>                                                 : "𐞧" U107A7 # MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 #
 #
 # # SUPERSCRIPT&INVERTED
+#   Lenient dead key press
 #   Dchar: "ʶ" U02B6
 #
+<UEFD1><UEFD5>                                                                            <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
+<Multi_key><asciicircum><percent>                                                         <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
+<UEFD5><UEFD1>                                                                            <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
+<Multi_key><percent><asciicircum>                                                         <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
 <UEFD1><UEFD5><UEFD5>                                                                     <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
 <Multi_key><asciicircum><percent><percent>                                                <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
+<UEFD5><UEFD1><UEFD5>                                                                     <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
+<Multi_key><percent><asciicircum><percent>                                                <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
 <UEFD5><UEFD5><UEFD1>                                                                     <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
 <Multi_key><percent><percent><asciicircum>                                                <exclam> : "ꜞ" UA71E # MODIFIER LETTER RAISED INVERTED EXCLAMATION MARK
+<UEFD1><UEFD5>                                                                                 <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
+<Multi_key><asciicircum><percent>                                                              <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
+<UEFD5><UEFD1>                                                                                 <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
+<Multi_key><percent><asciicircum>                                                              <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
 <UEFD1><UEFD5><UEFD5>                                                                          <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
 <Multi_key><asciicircum><percent><percent>                                                     <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
+<UEFD5><UEFD1><UEFD5>                                                                          <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
+<Multi_key><percent><asciicircum><percent>                                                     <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
 <UEFD5><UEFD5><UEFD1>                                                                          <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
 <Multi_key><percent><percent><asciicircum>                                                     <R> : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
+<UEFD1><UEFD5>                                                                                 <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
+<Multi_key><asciicircum><percent>                                                              <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
+<UEFD5><UEFD1>                                                                                 <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
+<Multi_key><percent><asciicircum>                                                              <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
 <UEFD1><UEFD5><UEFD5>                                                                          <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
 <Multi_key><asciicircum><percent><percent>                                                     <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
+<UEFD5><UEFD1><UEFD5>                                                                          <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
+<Multi_key><percent><asciicircum><percent>                                                     <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
 <UEFD5><UEFD5><UEFD1>                                                                          <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
 <Multi_key><percent><percent><asciicircum>                                                     <u> : "ᵙ" U1D59 # MODIFIER LETTER SMALL SIDEWAYS U
 #
@@ -2690,44 +2783,23 @@
 #   Dchar: 
 #
 #   As this dead key exists for "𐞴" U107B4 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character. As a consequence, the group dead key is skipped
+#   altogether, so there is no SUPERSCRIPT&REVERSED&BAR&GROUP_1.
 #   See # # Single-character dead keys
 #
 #UEFD1><UEFD6><UEFD8>                                                                          <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD1><UEFD6><UEFD8>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><backslash><minus>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><asciicircum><backslash><minus>                                                         : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD1><UEFD8><UEFD6>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus><backslash>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><asciicircum><minus><backslash>                                                         : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD6><UEFD1><UEFD8>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><backslash><asciicircum><minus>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><backslash><asciicircum><minus>                                                         : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD8><UEFD1><UEFD6>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><minus><asciicircum><backslash>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><minus><asciicircum><backslash>                                                         : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD6><UEFD8><UEFD1>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><backslash><minus><asciicircum>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><backslash><minus><asciicircum>                                                         : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD8><UEFD6><UEFD1>                                                                              : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><minus><backslash><asciicircum>                                                     <q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#
-#
-# # SUPERSCRIPT&REVERSED&BAR&GROUP_1
-#   Dchar: 
-#
-#   As this dead key exists for "𐞴" U107B4 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
-#   See # # Single-character dead keys
-#
-#UEFD1><UEFD6><UEFD8>                                                                   <UEFD0><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#UEFD1><UEFD6><UEFD8> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><backslash><minus>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#UEFD1><UEFD8><UEFD6> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus><backslash>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#UEFD6><UEFD1><UEFD8> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><backslash><asciicircum><minus>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#UEFD8><UEFD1><UEFD6> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><minus><asciicircum><backslash>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#UEFD6><UEFD8><UEFD1> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><backslash><minus><asciicircum>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-#UEFD8><UEFD6><UEFD1> streamlined                                                       <UEFD0>    : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><minus><backslash><asciicircum>                                         <numbersign><q> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><minus><backslash><asciicircum>                                                         : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 #
 #
 # # SUPERSCRIPT&TILDE
@@ -2829,22 +2901,22 @@
 #   Dchar: 
 #
 #   As this dead key exists for "𐞍" U1078D only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
 #UEFD1><dead_hook><UEFD4>                                                                      <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <UEFD1><dead_hook><UEFD4>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<Multi_key><asciicircum><braceleft><braceright>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<Multi_key><asciicircum><braceleft><braceright>                                                    : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <UEFD1><UEFD4><dead_hook>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<Multi_key><asciicircum><braceright><braceleft>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<Multi_key><asciicircum><braceright><braceleft>                                                    : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <dead_hook><UEFD4><UEFD1>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<Multi_key><braceleft><braceright><asciicircum>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<Multi_key><braceleft><braceright><asciicircum>                                                    : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <dead_hook><UEFD1><UEFD4>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<Multi_key><braceleft><asciicircum><braceright>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<Multi_key><braceleft><asciicircum><braceright>                                                    : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <UEFD4><dead_hook><UEFD1>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<Multi_key><braceright><braceleft><asciicircum>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<Multi_key><braceright><braceleft><asciicircum>                                                    : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 <UEFD4><UEFD1><dead_hook>                                                                          : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
-<Multi_key><braceright><asciicircum><braceleft>                                                <d> : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
+<Multi_key><braceright><asciicircum><braceleft>                                                    : "𐞍" U1078D # MODIFIER LETTER SMALL D WITH HOOK AND TAIL
 #
 #
 # # SUPERSCRIPT&CURL
@@ -3280,60 +3352,56 @@
 <Multi_key><braceright><asciicircum><numbersign><KP_5>                                         <t> : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 #
 #
-# # SUPERSCRIPT&RETROFLEX_HOOK&BREVE
+# # SUPERSCRIPT&RETROFLEX_HOOK&BREVE_BELOW
+#   Lenient dead key press
 #   Dchar: 
 #
 #   As this dead key exists for "𐞝" U1079D only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
+#
+#   Commented-out sequences are streamlined but maintained for documentation.
 #
 #UEFD1><UEFD4><dead_breve>                                                                     <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD1><UEFD4><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><asciicircum><braceright><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD1><dead_breve><UEFD4>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><asciicircum><parenright><braceright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><UEFD1><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><asciicircum><parenright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD1><UEFD4>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><asciicircum><braceright>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<UEFD4><dead_breve><UEFD1>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><parenright><asciicircum>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<dead_breve><UEFD4><UEFD1>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><braceright><asciicircum>                                               <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-#
-#
-# # SUPERSCRIPT&RETROFLEX_HOOK&BREVE_BELOW
-#   Dchar: 
-#
-#   As this dead key exists for "𐞝" U1079D only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
-#   See # # Single-character dead keys
-#
 #UEFD1><UEFD4><dead_breve><dead_breve>                                                         <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-#UEFD1><UEFD4><dead_breve><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><asciicircum><braceright><parenright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD1><UEFD4><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><asciicircum><braceright><parenright>                                                   : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD1><dead_breve><UEFD4>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><asciicircum><parenright><braceright>                                                   : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD4><UEFD1><dead_breve>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><braceright><asciicircum><parenright>                                                   : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><UEFD1><UEFD4>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><parenright><asciicircum><braceright>                                                   : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<UEFD4><dead_breve><UEFD1>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><braceright><parenright><asciicircum>                                                   : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<dead_breve><UEFD4><UEFD1>                                                                         : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><parenright><braceright><asciicircum>                                                   : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD1><UEFD4><dead_breve><dead_breve>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#Multi_key><asciicircum><braceright><parenright><parenright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <dead_breve><dead_breve><UEFD4><UEFD1>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><parenright><braceright><asciicircum>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><parenright><parenright><braceright><asciicircum>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <dead_breve><UEFD4><dead_breve><UEFD1>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><braceright><parenright><asciicircum>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-#dead_breve><UEFD4><UEFD1><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><braceright><asciicircum><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><parenright><braceright><parenright><asciicircum>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#dead_breve><UEFD4><UEFD1><dead_breve>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#Multi_key><parenright><braceright><asciicircum><parenright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <dead_breve><dead_breve><UEFD1><UEFD4>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><parenright><asciicircum><braceright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><parenright><parenright><asciicircum><braceright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <dead_breve><UEFD1><dead_breve><UEFD4>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><asciicircum><parenright><braceright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-#dead_breve><UEFD1><UEFD4><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><parenright><asciicircum><braceright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><parenright><asciicircum><parenright><braceright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#dead_breve><UEFD1><UEFD4><dead_breve>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#Multi_key><parenright><asciicircum><braceright><parenright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 <UEFD4><dead_breve><dead_breve><UEFD1>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><parenright><parenright><asciicircum>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-#UEFD4><dead_breve><UEFD1><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><parenright><asciicircum><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-#UEFD4><UEFD1><dead_breve><dead_breve> streamlined                                                 : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
-<Multi_key><braceright><asciicircum><parenright><parenright>                                   <l> : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+<Multi_key><braceright><parenright><parenright><asciicircum>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD4><dead_breve><UEFD1><dead_breve>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#Multi_key><braceright><parenright><asciicircum><parenright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#UEFD4><UEFD1><dead_breve><dead_breve>                                                             : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
+#Multi_key><braceright><asciicircum><parenright><parenright>                                       : "𐞝" U1079D # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK AND BELT
 #
 #
 # # SUPERSCRIPT&PALATAL_HOOK
 #   Dchar: 
+#
+#   Due to "ᶩ" U1DA9, lenient dead key press would conflict.
 #
 <UEFD1><UEFD4><UEFD4>                                                                          <l> : "ᶪ" U1DAA # MODIFIER LETTER SMALL L WITH PALATAL HOOK
 <Multi_key><asciicircum><braceright><braceright>                                               <l> : "ᶪ" U1DAA # MODIFIER LETTER SMALL L WITH PALATAL HOOK
@@ -3497,80 +3565,109 @@
 #   Dchar: 
 #
 #   As this dead key exists for "𐞔" U10794 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
 #UEFD1><UEFD2><dead_hook>                                                                      <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <UEFD1><UEFD2><dead_hook>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<Multi_key><asciicircum><underscore><braceleft>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<Multi_key><asciicircum><underscore><braceleft>                                                    : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <UEFD2><UEFD1><dead_hook>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<Multi_key><underscore><asciicircum><braceleft>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<Multi_key><underscore><asciicircum><braceleft>                                                    : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <UEFD1><dead_hook><UEFD2>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<Multi_key><asciicircum><braceleft><underscore>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<Multi_key><asciicircum><braceleft><underscore>                                                    : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <UEFD2><dead_hook><UEFD1>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<Multi_key><underscore><braceleft><asciicircum>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<Multi_key><underscore><braceleft><asciicircum>                                                    : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <dead_hook><UEFD1><UEFD2>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<Multi_key><braceleft><asciicircum><underscore>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<Multi_key><braceleft><asciicircum><underscore>                                                    : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 <dead_hook><UEFD2><UEFD1>                                                                          : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
-<Multi_key><braceleft><underscore><asciicircum>                                                <G> : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
+<Multi_key><braceleft><underscore><asciicircum>                                                    : "𐞔" U10794 # MODIFIER LETTER SMALL CAPITAL G WITH HOOK
 #
 #
-# # SUPERSCRIPT&SUBSCRIPT&BREVE
+# # SUPERSCRIPT&SUBSCRIPT&BREVE_BELOW
+#   Lenient dead key press
 #   Dchar: 
 #
 #   As this dead key exists for "𐞜" U1079C only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character, except for one multikey equivalent conflicting with
+#   "⟌" U27CC.
 #   See # # Single-character dead keys
 #
+#   Commented-out sequences are streamlined but maintained for documentation.
+#
 #UEFD1><UEFD2><dead_breve>                                                                     <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#UEFD1><UEFD2><dead_breve><dead_breve>                                                         <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD1><UEFD2><dead_breve>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><asciicircum><underscore><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><asciicircum><underscore><parenright>                                                   : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD1><dead_breve><UEFD2>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><asciicircum><parenright><underscore>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><asciicircum><parenright><underscore>                                                   : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD2><UEFD1><dead_breve>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><underscore><asciicircum><parenright>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><underscore><asciicircum><parenright>                                                   : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <dead_breve><UEFD1><UEFD2>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><parenright><asciicircum><underscore>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><parenright><asciicircum><underscore>                                                   : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <UEFD2><dead_breve><UEFD1>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
-<Multi_key><underscore><parenright><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><underscore><parenright><asciicircum>                                                   : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <dead_breve><UEFD2><UEFD1>                                                                         : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 <Multi_key><parenright><underscore><asciicircum>                                               <L> : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#UEFD1><UEFD2><dead_breve><dead_breve>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#Multi_key><asciicircum><underscore><parenright><parenright>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#UEFD1><dead_breve><UEFD2><dead_breve>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#Multi_key><asciicircum><parenright><underscore><parenright>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<UEFD1><dead_breve><dead_breve><UEFD2>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><asciicircum><parenright><parenright><underscore>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#UEFD2><UEFD1><dead_breve><dead_breve>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#Multi_key><underscore><asciicircum><parenright><parenright>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#UEFD2><dead_breve><UEFD1><dead_breve>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#Multi_key><underscore><parenright><asciicircum><parenright>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<UEFD2><dead_breve><dead_breve><UEFD1>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><underscore><parenright><parenright><asciicircum>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#dead_breve><UEFD1><UEFD2><dead_breve>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#Multi_key><parenright><asciicircum><underscore><parenright>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<dead_breve><UEFD1><dead_breve><UEFD2>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><parenright><asciicircum><parenright><underscore>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+#dead_breve><UEFD2><UEFD1><dead_breve>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><parenright><underscore><asciicircum><parenright>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<dead_breve><UEFD2><dead_breve><UEFD1>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><parenright><underscore><parenright><asciicircum>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<dead_breve><dead_breve><UEFD1><UEFD2>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><parenright><parenright><asciicircum><underscore>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<dead_breve><dead_breve><UEFD2><UEFD1>                                                             : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
+<Multi_key><parenright><parenright><underscore><asciicircum>                                       : "𐞜" U1079C # MODIFIER LETTER SMALL CAPITAL L WITH BELT
 #
 #
 # # SUPERSCRIPT&SUBSCRIPT&BAR
 #   Dchar: 
 #
 #   As this dead key exists for "ᶧ" U1DA7 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
 #UEFD1><UEFD2><UEFD8>                                                                          <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD1><UEFD2><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><underscore><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><asciicircum><underscore><minus>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD1><UEFD8><UEFD2>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><asciicircum><minus><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><asciicircum><minus><underscore>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><UEFD1><UEFD8>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><underscore><asciicircum><minus>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><underscore><asciicircum><minus>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD8><UEFD1><UEFD2>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><minus><asciicircum><underscore>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><minus><asciicircum><underscore>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD2><UEFD8><UEFD1>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><underscore><minus><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><underscore><minus><asciicircum>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <UEFD8><UEFD2><UEFD1>                                                                              : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
-<Multi_key><minus><underscore><asciicircum>                                                    <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<Multi_key><minus><underscore><asciicircum>                                                        : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 #
 #
 # # SUPERSCRIPT&STROKE
 #   Dchar: 
 #
 #   As this dead key exists for "𐞢" U107A2 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
 #UEFD1><dead_stroke>                                                                           <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 <UEFD1><dead_stroke>                                                                               : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
-<Multi_key><asciicircum><slash>                                                                <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
+<Multi_key><asciicircum><slash>                                                                    : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 <dead_stroke><UEFD1>                                                                               : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
-<Multi_key><slash><asciicircum>                                                                <o> : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
+<Multi_key><slash><asciicircum>                                                                    : "𐞢" U107A2 # MODIFIER LETTER SMALL O WITH STROKE
 #
 #
 #^# COMBINING_ABOVE
@@ -3799,30 +3896,50 @@
 #
 #
 # # COMBINING_ABOVE&CEDILLA
+#   Lenient dead key press
 #   Dchar: 
 #
 #   As this dead key exists for "ᷗ" U1DD7 only, it is streamlined by cropping
-#   the base character, except for the multikey equivalents.
+#   the base character.
 #   See # # Single-character dead keys
 #
+#   Commented-out sequences are streamlined but maintained for documentation.
+#
+#UEFD1><dead_cedilla>                                                                          <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 #UEFD1><UEFD1><dead_cedilla>                                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<UEFD1><dead_cedilla>                                                                              : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><asciicircum><comma>                                                                    : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<dead_cedilla><UEFD1>                                                                              : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><comma><asciicircum>                                                                    : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 <UEFD1><UEFD1><dead_cedilla>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<Multi_key><asciicircum><asciicircum><comma>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<dead_cedilla><UEFD1><UEFD1>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
-<Multi_key><comma><asciicircum><asciicircum>                                                   <c> : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+<Multi_key><asciicircum><asciicircum><comma>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+#UEFD1><dead_cedilla><UEFD1>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+#Multi_key><asciicircum><comma><asciicircum>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+#dead_cedilla><UEFD1><UEFD1>                                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
+#Multi_key><comma><asciicircum><asciicircum>                                                       : "ᷗ" U1DD7 # COMBINING LATIN SMALL LETTER C CEDILLA
 #
 #
 # # COMBINING_ABOVE&DIAERESIS
+#   Lenient dead key press
 #   Dchar: 
 #
+<UEFD1><dead_diaeresis>                                                                        <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<dead_diaeresis><UEFD1>                                                                        <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key><colon><asciicircum>                                                                <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <UEFD1><UEFD1><dead_diaeresis>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum><colon>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <dead_diaeresis><UEFD1><UEFD1>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <Multi_key><colon><asciicircum><asciicircum>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<UEFD1><dead_diaeresis>                                                                        <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<dead_diaeresis><UEFD1>                                                                        <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key><colon><asciicircum>                                                                <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <UEFD1><UEFD1><dead_diaeresis>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum><colon>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <dead_diaeresis><UEFD1><UEFD1>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><colon><asciicircum><asciicircum>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<UEFD1><dead_diaeresis>                                                                        <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<dead_diaeresis><UEFD1>                                                                        <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<Multi_key><colon><asciicircum>                                                                <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <UEFD1><UEFD1><dead_diaeresis>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum><colon>                                                   <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <dead_diaeresis><UEFD1><UEFD1>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
