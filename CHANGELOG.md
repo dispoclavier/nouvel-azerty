@@ -29,10 +29,24 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 		* Simplifier la saisie de "℧" U+2127. ibidem
 	* Inversé et bouclé : Simplifier la saisie de "𝼎" U+1DF0E. ibidem
 	* Rayé et bouclé : Simplifier "𝼌" U+1DF0C. compose-2.yml [036d33d](https://github.com/dispoclavier/nouvel-azerty/commit/036d33d02386ee5ca662bdacd7df0829dd018014)
+	* Exposant inversé : Simplifier la saisie de "ʶ" U+02B6, "ᵙ" U+1D59, "ꜞ" U+A71E. compose-2.yml [269d887](https://github.com/dispoclavier/nouvel-azerty/commit/269d8879c35021d3538e23bce138e7c81de71483)
+	* Suscrit et cédille : Simplifier la saisie de "ᷗ" U+1DD7. ibidem
+	* Suscrit et tréma : Simplifier la saisie de "ᷲ" U+1DF2, "ᷳ" U+1DF3, "ᷴ" U+1DF4. ibidem
+	* Exposant tourné crochet rétroflexe : Simplifier la saisie de "𐞧" U+107A7. ibidem
+	* Exposant tourné sanglé : Corriger puis simplifier la saisie de "𐞡" U+107A1. ibidem
+	* Exposant réfléchi rayé : Simplifier la saisie de "𐞴" U+107B4. ibidem
+	* Exposant crosse crochet rétroflexe : Simplifier la saisie de "𐞍" U+1078D. ibidem
+	* Exposant crochet rétroflexe sanglé : Simplifier la saisie de "𐞝" U+1079D. ibidem
+	* Exposant petite capitale crosse : Simplifier la saisie de "𐞔" U+10794. ibidem
+	* Exposant petite capitale sanglée : Corriger puis simplifier la saisie de "𐞜" U+1079C. ibidem
+	* Exposant petite capitale rayée : Simplifier la saisie de "ᶧ" U+1DA7. ibidem
+	* Exposant barré : Simplifier la saisie de "𐞢" U+107A2. ibidem
 	* Grec polytonique : Ajourner la prise en charge sous Windows. dead-key-convert.pl [f422ee2](https://github.com/dispoclavier/nouvel-azerty/commit/f422ee268e130436b0d9b2da349ddc04296998dd)
 * Documentation :
+	* Déboguer la symétrisation des touches mortes. compose-2.yml [269d887](https://github.com/dispoclavier/nouvel-azerty/commit/269d8879c35021d3538e23bce138e7c81de71483)
 	* Corriger une annotation. compose-2.yml [68652c1](https://github.com/dispoclavier/nouvel-azerty/commit/68652c1fe505832e5710194dbb029d0a3a55e923)
 	* Déplacer 2 sous-sections. ibidem
+	* Déplacer 2 sous-sections. compose-2.yml [241ced3](https://github.com/dispoclavier/nouvel-azerty/commit/241ced375485ba550814c929fea021a2c989320e)
 	* Corriger des annotations. compose-2.yml [152a0c5](https://github.com/dispoclavier/nouvel-azerty/commit/152a0c5ad60b1800779926ce7d548ac729e187c6), [036d33d](https://github.com/dispoclavier/nouvel-azerty/commit/036d33d02386ee5ca662bdacd7df0829dd018014), [052452c](https://github.com/dispoclavier/nouvel-azerty/commit/052452c7ad675cf414514b0f693b5090d8a0b6f8)
 	* Corriger et compléter des annotations. compose-1.yml [a9f732a](https://github.com/dispoclavier/nouvel-azerty/commit/a9f732a6441200a1b824df997a93b9b87b48e290), compose-2.yml [e2c728b](https://github.com/dispoclavier/nouvel-azerty/commit/e2c728bb273d93813bd687269778dbdc2e65282c), compose-3.yml [5795e3b](https://github.com/dispoclavier/nouvel-azerty/commit/5795e3b373162fefc7d9a7d4395299b1d9ecf5a8)
 
