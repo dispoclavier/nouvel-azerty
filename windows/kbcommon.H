@@ -7,16 +7,16 @@
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Fix misspelling                              6.0.0.00.00 Tue 2025-07-29T0457+0200
-* Fix misspelling of mistranspilation          5.3.0.27.00 Sun 2025-07-20T0406+0200
-* Uncomment numpad defines                     5.3.0.20.00 Tue 2025-07-01T1712+0200
-* Ditch pointless editing DEADTRANS             5.2.0.3.12 Thu 2025-06-12T2133+0200
-* Debug DEADTRANS macro                         5.2.0.3.11 Thu 2025-06-12T0556+0200
-* Debug DEADTRANS macro                         5.2.0.3.10 Thu 2025-06-12T0515+0200
-* Debug DEADTRANS macro                         5.2.0.3.09 Thu 2025-06-12T0428+0200
-* Update typedefs of DEADTRANS macro            5.2.0.3.08 Thu 2025-06-12T0043+0200
-* Extend DEADTRANS macro.                                  Wed Jun 11, 2025
-* Update some annotations.                                 Sun Apr 13, 2025
+* Fix misspelling                        6.0.0.00.00 Tue 2025-07-29T0457+0200
+* Fix misspelling of mistranspilation    5.3.0.27.00 Sun 2025-07-20T0406+0200
+* Uncomment numpad defines               5.3.0.20.00 Tue 2025-07-01T1712+0200
+* Ditch pointless editing DEADTRANS       5.2.0.3.12 Thu 2025-06-12T2133+0200
+* Debug DEADTRANS macro                   5.2.0.3.11 Thu 2025-06-12T0556+0200
+* Debug DEADTRANS macro                   5.2.0.3.10 Thu 2025-06-12T0515+0200
+* Debug DEADTRANS macro                   5.2.0.3.09 Thu 2025-06-12T0428+0200
+* Update typedefs of DEADTRANS macro      5.2.0.3.08 Thu 2025-06-12T0043+0200
+* Extend DEADTRANS macro.                            Wed Jun 11, 2025
+* Update some annotations.                           Sun Apr 13, 2025
 * Wed Dec 04, 2024  commented out unused ligature typedefs.
 * Sun Nov 10, 2024  added section 7.3.1 fixing KbdUTool mistranspilations.
 * Wed Oct 30, 2024  updated to port a new AZERTY on Windows (v 4.10.0)
@@ -632,7 +632,5 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 \**********************************************************************************/
 // #define DKF_0 0x0000  // name used for flag 0
 // #define CHAIN 0x0001  // name used for flag 1
-/**********************************************************************************\
-* End of kbcommon.H
-\**********************************************************************************/
+
 // EOF
