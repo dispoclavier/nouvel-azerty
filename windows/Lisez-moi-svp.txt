@@ -1,6 +1,6 @@
-                      Date : 2025-08-14T0851+0200
-                   Version : 6.0.1
- Version compilation/build : 6.0.1.00
+                      Date : 2025-08-19T2051+0200
+                   Version : 6.0.2
+ Version compilation/build : 6.0.2.01
             Nom du produit : Un nouvel AZERTY
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
           Version courante : https:/github.com/dispoclavier/nouvel-azerty/releases/latest
@@ -35,10 +35,10 @@
 
 Dossiers et fichiers
 
-  • Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-6.0.1.00-installation » avec ses 4 pilotes de disposition,
+  • Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-6.0.2.01-installation » avec ses 4 pilotes de disposition,
     ses 3 installateurs et son setup.exe.
 
-  • Le dossier « kbfrFRsr-6.0.1.00-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui
+  • Le dossier « kbfrFRsr-6.0.2.01-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui
     est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
 
   • Dans le dossier « redispositions » se trouvent les fichiers d’inscription au Registre avec leur description
@@ -267,7 +267,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
   5 Télécharger le code source de ce nouvel AZERTY depuis la page d’accueil ou la page d’une version :
 
         https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip
-        https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.1.zip
+        https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.2.zip
 
   6 Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
 
