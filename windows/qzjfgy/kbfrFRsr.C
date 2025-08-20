@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Sync annotation with kbfrFRs.c         6.0.3.00.00
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
 * Replace duplicate with SEAL U1F9AD     6.0.2.00.00 Tue 2025-08-19T1710+0200
 * Debug Shift + CAPITAL + KANA           6.0.1.00.00 Wed 2025-08-13T1934+0200
@@ -734,7 +735,8 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 	* with monospace "𝟶" U1D7F6.."𝟿" U1D7FF.
   *
   * These are the user-perceived (AltGr +) AltLe + AltQr levels, as
-  * Shift + AltLe (CAPITAL) does not work in column 02.
+  * Shift + AltLe does not work in column 02. But Shift + AltLe + AltQr is
+	* supported regardless, with colum 02 duplicated in columns 11 or 07.
   *
   * Depending on the font, this may be the most inconsistent alphabet encoded
   * in two blocks. Consistently, it is the worst supported, at a level with a
