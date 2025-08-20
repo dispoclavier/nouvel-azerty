@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Sync ligatures with kbfrFRsr.c         6.0.3.00.00
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
 * Replace duplicate with SEAL U1F9AD     6.0.2.00.00 Tue 2025-08-19T1710+0200
 * Debug Shift + CAPITAL + KANA           6.0.1.00.00 Wed 2025-08-13T1934+0200
@@ -93,7 +94,7 @@
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'.'      ,'0'      ,'.'      ,'2'      ,'.'      ,'0'      ,'1'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'.'      ,'0'      ,'.'      ,'3'      ,'.'      ,'0'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_ESCAPE    ,4      ,' '      ,'f'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'s'      ,'e'      ,'m'      ,'i'      ,'_'      ,'a'      ,'u'      ,'t'      ,'o'      },
 
   /*****************************************************************************\
@@ -811,14 +812,18 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   /*****************************************************************************\
   * Emoji (oncoming).
   *
-  * Non-alphanumeric keys at the levels of the math alphabets, except the space
-  * bar used for ordinary interword space in synergy with math alphabets, are
-  * used for emoji, with an expected mnemonic benefit.
+  * Non-alphanumeric keys at the levels of the math alphabets are used for
+  * emoji, except the space bar used for ordinary interword space in synergy
+  * with math alphabets.
   *
   * Additionally, 4 partially working levels without and with KanaLock are used
   * for emoji too. The blackout affects keys C05, C06, C11, D05, D06, D11, D12.
   * Depending on the layout, the affected alphabetic keys are "G", "H", "T" and
-  * "Y", or "G", "T", "U" and "Y".
+  * "Y", or "G", "T", "U" and "Y". As a consequence, keys "G", "T" and "Y" are
+  * not used, while keys "H" and "U" should be synced.
+  *
+  * The spacebar is used for WORD JOINER, as this is more useful than anything
+  * else, thanks to preventing emoji sequences from being broken across lines.
   *
   * The placeholder emoji is "🔜" U1F51C SOON WITH RIGHTWARDS ARROW ABOVE.
   \*****************************************************************************/
@@ -970,14 +975,22 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'7'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
+  // These do not work.
+  {'G'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'T'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+
+  // Either of these does not work.
+  {'U'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
   {'A'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'B'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'D'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'E'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'F'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'G'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'H'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'I'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'J'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'K'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -989,14 +1002,10 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Q'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'R'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'T'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'U'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'V'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'W'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'X'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Y'          ,29     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'Z'          ,29     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_SPACE     ,29     ,' '      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   {'0'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1008,14 +1017,22 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'7'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
+  // These do not work.
+  {'G'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'T'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+
+  // Either of these does not work.
+  {'U'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
   {'A'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'B'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'D'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'E'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'F'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'G'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'H'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'I'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'J'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'K'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1027,14 +1044,10 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Q'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'R'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'T'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'U'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'V'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'W'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'X'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Y'          ,30     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'Z'          ,30     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_SPACE     ,30     ,' '      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   {'0'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1046,14 +1059,22 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'7'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
+  // These do not work.
+  {'G'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'T'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+
+  // Either of these does not work.
+  {'U'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
   {'A'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'B'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'D'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'E'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'F'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'G'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'H'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'I'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'J'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'K'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1065,14 +1086,10 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Q'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'R'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'T'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'U'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'V'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'W'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'X'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Y'          ,31     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'Z'          ,31     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_SPACE     ,31     ,' '      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   {'0'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1084,14 +1101,22 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'7'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'8'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'9'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
+  // These do not work.
+  {'G'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'T'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+  {'Y'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
+
+  // Either of these does not work.
+  {'U'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'H'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+
   {'A'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'B'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'D'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'E'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'F'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'G'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'H'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'I'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'J'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'K'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -1103,14 +1128,10 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
   {'Q'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'R'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'S'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'T'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
-  {'U'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'V'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'W'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'X'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'Y'          ,32     ,' '      ,'n'      ,'e'      ,' '      ,'m'      ,'a'      ,'r'      ,'c'      ,'h'      ,'e'      ,' '      ,'p'      ,'a'      ,'s'      ,WCH_NONE ,WCH_NONE },
   {'Z'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_SPACE     ,32     ,' '      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
@@ -1598,7 +1619,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 *                   See kbcommon.h subsection 7.3
 *
-* Special values for wch[*] (column 3 & 4)
+* Special values for wch[*] (columns 3..)
 *     WCH_NONE      - No character
 *     WCH_DEAD      - Dead Key (diaresis) or invalid (US keyboard has none)
 *     WCH_LGTR      - Ligature (able to generate multiple characters)
@@ -1722,7 +1743,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {                      
   {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00eb   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,ALTGR  ,0x00b7   ,WCH_LGTR ,0x00a7   ,WCH_DEAD ,'!'      ,'!'      ,0x00a7   ,WCH_LGTR ,WCH_NONE ,';'      ,'!'      ,';'      ,WCH_DEAD ,'!'      ,0x00a7   ,0x00a7   ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR },
   {0xff         ,0      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0219   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0219   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_SPACE     ,ALTGR  ,' '      ,' '      ,0x00a0   ,0x200b   ,0x202f   ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,' '      ,' '      ,' '      ,' '      ,WCH_LGTR ,' '      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,0x2060   ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR },
+  {VK_SPACE     ,ALTGR  ,' '      ,' '      ,0x00a0   ,0x200b   ,0x202f   ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,' '      ,' '      ,' '      ,' '      ,WCH_LGTR ,' '      ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,0x2060   ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,' '      ,0x2060   ,0x2060   ,0x2060   ,0x2060   },
   //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
   //                    |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |   17    |   18    |   19    |   20    |   21    |   22    |   23    |   24    |   25    |   26    |   27    |   28    |   29    |   30    |   31    |   32    |
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
