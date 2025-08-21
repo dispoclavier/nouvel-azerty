@@ -18,7 +18,7 @@
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'.'      ,'0'      ,'.'      ,'3'      ,'.'      ,'0'      ,'0'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ESCAPE    ,5      ,' '      ,'6'      ,'.'      ,'0'      ,'.'      ,'3'      ,'.'      ,'0'      ,'2'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
   * Ligature array.

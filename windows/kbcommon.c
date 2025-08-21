@@ -496,11 +496,11 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * Special values for Attributes (column 2)
 *     CAPLOK bit    - CAPS-LOCK affects this key like SHIFT, that swaps effect.
-*     SGCAPS        - Swiss-German Capitals: CAPS-LOCK changes the map at levels 1 & 2.
+*     SGCAPS        - Swiss-German Capitals: CAPS-LOCK remaps levels 1 & 2.
 *                     This is also subject to KANA-LOCK.
 *     KANALOK       - KANA-LOCK affects this key.
 *     ALTGR         - KANA-LOCK affects this key (KbdUTool transpilation).
-*     KBD           - CAPS-LOCK and KANA-LOCK affect this key (KbdUTool transpilation).
+*     KBD           - CAPS-LOCK and KANA-LOCK affect this key (KbdUTool).
 *
 *                   See kbcommon.h subsection 7.3
 *
@@ -509,6 +509,17 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *     WCH_DEAD      - Dead Key (diaresis) or invalid (US keyboard has none)
 *     WCH_LGTR      - Ligature (able to generate multiple characters)
 *
+*
+* Known bugs
+*
+* The level 7 (AltGr + AltFr, i.e. VK_OEM_AX + VK_OEM_102) does not work when
+* KanaLock is on, if the key is subject to KanaLock. To work around this issue,
+* the level 7 with KanaLock should be redundant.
+*
+* The level 10 (Shift + CAPITAL, where CAPITAL is the modifier added on top
+* of the Caps Lock toggle key) does not work on column 02, i.e. keys "2",
+* "W", "S", "X" of the US-QWERTY. To work around this issue, mappings on
+* these keys are replicated on unused keys.
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
@@ -576,9 +587,9 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS17 aVkToWch17[] = {
 
 static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
   {  (PVK_TO_WCHARS1)aVkToWch2 ,  2, sizeof(aVkToWch2[0]) },
-  {  (PVK_TO_WCHARS1)aVkToWch33, 33, sizeof(aVkToWch33[0]) },
   {  (PVK_TO_WCHARS1)aVkToWch9 ,  9, sizeof(aVkToWch9[0]) },
   {  (PVK_TO_WCHARS1)aVkToWch17, 17, sizeof(aVkToWch17[0]) },
+  {  (PVK_TO_WCHARS1)aVkToWch33, 33, sizeof(aVkToWch33[0]) },
   {                       NULL ,  0, 0                    },
 };
 
