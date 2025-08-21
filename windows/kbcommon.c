@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0325+0200
 * Move the common rest to kbcommon.c     6.0.3.01.00 Wed 2025-08-20T2203+0200
 *
 *
@@ -422,6 +423,11 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 };
 
 /*****************************************************************************\
+* Allocation tables
+*
+* When the Keyboard Table Generation Tool (Unicode) transpiles a KLC file,
+* it generates this list based on the assumption that keyboard layouts may use
+* up to 56 shift states.
 *
 * aVkToWch2[]  - Virtual Key to WCHAR translation for 2 shift states
 * aVkToWch3[]  - Virtual Key to WCHAR translation for 3 shift states
@@ -506,8 +512,8 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
-//                      |         |  Shift  |
-//                      |=========|=========|
+  //                    |         |  Shift  |
+  //                    |=========|=========|
   {VK_TAB       ,0      ,'\t'     ,'\t'     },
   {0            ,0      ,0        ,0        }
 };
@@ -519,32 +525,37 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
   //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|
   // The backspace key is bugged with Shift and does not work with nor without the modification #1 allocation.
   {VK_BACK      ,0      ,'\b'     ,'\b'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x007f   },
-  // The escape key yields the variant name at level 5, and the version # at level 6.
+  // The escape key yields a short variant descriptor at level 5, and the version # at level 6.
   {VK_ESCAPE    ,0      ,0x001b   ,0x001b   ,WCH_NONE ,WCH_NONE ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,0x001b   },
   {VK_RETURN    ,0      ,'\r'     ,'\r'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'\n'     },
   {VK_CANCEL    ,0      ,0x0003   ,0x0003   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0003   },
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
 
+/*****************************************************************************\
+* Numeric keypad
+*
+* The Keyboard Table Generation Tool (Unicode) built-in transpiler advises to
 // Put this last so that VkKeyScan interprets number characters
-// as coming from the main section of the kbd (aVkToWch33)
-// before considering the numpad (aVkToWch17).
-//
-// Numpad specials are deactivated as redundant and detrimentally affecting the
-// user experience while the numlock toggle is repurposed for the integrated or
-// overlay numpad on compact keyboards.
-// See kbcommon.h subsection 6.1
-//
-// While on digit keys, all 8 levels are used for the sake of arrows, depending
-// on the KanaLock toggle state, the decimal separator and operator keys offer
-// only minimal functionality, as AltGr is unfit for the numpad. However, so as
-// to prevent these keys from seeming broken, level 5 is replicated at levels 3
-// and 7, and so is level 6 at levels 4 and 8.
+// as coming from the main section of the kbd [aVkToWch33 for instance]
+// before considering the numpad [aVkToWch17 for instance].
+*
+* Numpad specials are deactivated as redundant and detrimentally affecting the
+* user experience while the numlock toggle is repurposed for the integrated or
+* overlay numpad on compact keyboards.
+* See kbcommon.h subsection 6.1
+*
+* While on digit keys, all 8 levels are used for the sake of arrows, depending
+* on the KanaLock toggle state, the decimal separator and operator keys offer
+* only minimal functionality, as AltGr is unfit for the numpad. However, so as
+* to prevent these keys from seeming broken, level 5 is replicated at levels 3
+* and 7, and so is level 6 at levels 4 and 8.
+\*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS17 aVkToWch17[] = {
-//                      |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |
-//                      |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  Ctrl   |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |
-//                      |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
+  // Modification #     |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |
+  // UX Level           |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  Ctrl   |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |
+  //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
   {VK_DIVIDE    ,KANALOK,'/'      ,0x00F7   ,0x221A   ,'('      ,0x221A   ,'('      ,0x221A   ,'('      ,WCH_NONE ,'/'      ,'('      ,'['      ,WCH_LGTR ,'['      ,WCH_LGTR ,'['      ,WCH_LGTR },
   {VK_MULTIPLY  ,KANALOK,'*'      ,0x00D7   ,'^'      ,')'      ,'^'      ,')'      ,'^'      ,')'      ,WCH_NONE ,'*'      ,')'      ,']'      ,WCH_LGTR ,']'      ,WCH_LGTR ,']'      ,WCH_LGTR },
   {VK_SUBTRACT  ,KANALOK,'-'      ,0x2212   ,'='      ,0x2243   ,'='      ,0x2243   ,'='      ,0x2243   ,WCH_NONE ,'-'      ,'^'      ,'='      ,'}'      ,'='      ,'}'      ,'='      ,'}'      },
