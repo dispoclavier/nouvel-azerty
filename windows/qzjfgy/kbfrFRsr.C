@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0342+0200
 * Move the common rest to kbcommon.c     6.0.3.01.00 Wed 2025-08-20T2203+0200
 * Streamline ligatures at mod# 29..32    6.0.3.00.00
 * U2060 on spacebar at mod# 29..32       6.0.3.00.00
@@ -119,6 +120,30 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 };
 
 /*****************************************************************************\
+* aVkToWch33[]  - Virtual Key to WCHAR translation for 33 shift states
+*
+* Main allocation table
+*
+* Special values for VirtualKey (column 1)
+*     0xff          - dead chars for the previous entry
+*     0             - terminate the list
+*
+* Special values for Attributes (column 2)
+*     CAPLOK bit    - CAPS-LOCK affects this key like SHIFT, that swaps effect.
+*     SGCAPS        - Swiss-German Capitals: CAPS-LOCK remaps levels 1 & 2.
+*                     This is also subject to KANA-LOCK.
+*     KANALOK       - KANA-LOCK affects this key.
+*     ALTGR         - KANA-LOCK affects this key (KbdUTool transpilation).
+*     KBD           - CAPS-LOCK and KANA-LOCK affect this key (KbdUTool).
+*
+*                   See kbcommon.h subsection 7.3
+*
+* Special values for wch[*] (columns 3..)
+*     WCH_NONE      - No character
+*     WCH_DEAD      - Dead Key (diaresis) or invalid (US keyboard has none)
+*     WCH_LGTR      - Ligature (able to generate multiple characters)
+*
+*
 * Known bugs
 *
 * The level 7 (AltGr + AltFr, i.e. VK_OEM_AX + VK_OEM_102) does not work when
