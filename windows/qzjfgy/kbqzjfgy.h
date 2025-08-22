@@ -1,31 +1,35 @@
-/****************************** Module Header ******************************\
-* Module Name: kbfrFRsr.H
+/*****************************************************************************\
+* Module Name: kbqzjfgy.h
 *
-* keyboard layout header
+* Generic locale keyboard layout header
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Various defines for use by keyboard input code.
+* Various defines for use by keyboard input on French QZJFGY.
 *
 * History:
 *
+* Rename from kbfrFRsr.H to kbqzjfgy.h   Fri 2025-08-22T1135+0200
 * Fix non-transpilation of KANA          Sun 2025-07-20T0355+0200
 * Rename to kbfrFRsr.H                   Wed 2025-07-16T1322+0200
 * created by KBDTOOL v3.40               Tue Jun 03 20:53:25 2025
 *
-\***************************************************************************/
+\*****************************************************************************/
 
 /*
  * kbd type should be controlled by cl command-line argument
  */
 #define KBD_TYPE 4
 
+#include <windows.h>
+
 /*
-* Include the basis of all keyboard table values
-*/
+ * Include the basis of all keyboard table values
+ */
 #include "kbd.h"
-/***************************************************************************\
+
+/**********************************************************************************\
 * The table below defines the virtual keys for various keyboard types where
 * the keyboard differ from the US keyboard.
 *
