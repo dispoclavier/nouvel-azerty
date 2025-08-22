@@ -7,7 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Support Breton variant on Windows      6.0.3.03.00 Fri 2025-08-22T1207+0200
+* Support Breton variant on Windows      6.0.3.03.00 Fri 2025-08-22T2258+0200
 * Move rows A..D to kbcomqzjfgy.c        6.0.3.02.00 Thu 2025-08-21T1653+0200
 * Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0342+0200
 * Move the common rest to kbcommon.c     6.0.3.01.00 Wed 2025-08-20T2203+0200
@@ -174,7 +174,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {
 * The .def file is not provided. The Keyboard Table Generation Tool (Unicode)
 * generates a .def file on the fly while transpiling kbfrFRsr.klc right before
 * giving the sources to the compiler. So, no need to support the .def file as
-* a part of the source code, and to double the number of files per layout.
+* a part of the source code. In the process, 25% less files.
 *
 * For reference, this is the content of kbfrFRsr.DEF:
 
