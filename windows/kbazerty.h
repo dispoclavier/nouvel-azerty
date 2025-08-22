@@ -1,30 +1,34 @@
-/****************************** Module Header ******************************\
-* Module Name: kbfrFRs.H
+/*****************************************************************************\
+* Module Name: kbazerty.h
 *
-* keyboard layout header
+* Generic locale keyboard layout header
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Various defines for use by keyboard input code.
+* Various defines for use by keyboard input on French AZERTY.
 *
 * History:
 *
+* Rename from kbfrFRs.H to kbazerty.h    Fri 2025-08-22T1127+0200
 * Fix non-transpilation of KANA          Sun 2025-07-20T0354+0200
 * created by KBDTOOL v3.40               Tue Jun 03 20:53:21 2025
 *
-\***************************************************************************/
+\*****************************************************************************/
 
 /*
  * kbd type should be controlled by cl command-line argument
  */
 #define KBD_TYPE 4
 
+#include <windows.h>
+
 /*
-* Include the basis of all keyboard table values
-*/
+ * Include the basis of all keyboard table values
+ */
 #include "kbd.h"
-/***************************************************************************\
+
+/**********************************************************************************\
 * The table below defines the virtual keys for various keyboard types where
 * the keyboard differ from the US keyboard.
 *
