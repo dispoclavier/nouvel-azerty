@@ -1,5 +1,5 @@
 /*****************************************************************************\
-* Module Name: kbcomqzjfgy.C
+* Module Name: kbcomredispo.c
 *
 * Rows A..D of keyboard layout
 *
@@ -7,7 +7,8 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move rows A..D to kbcomqzjfgy.c        6.0.3.02.00 Thu 2025-08-21T1653+0200
+* Rename from kbcomqzjfgy.c to kbcomredispo.c        Sat 2025-08-23T1631+0200
+* Move rows A..D to kbcomqzjfgy.c                    Thu 2025-08-21T1653+0200
 \*****************************************************************************/
 
 /*****************************************************************************\
