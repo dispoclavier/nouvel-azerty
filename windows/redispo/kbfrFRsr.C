@@ -7,11 +7,13 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Genericize file names and paths        6.0.3.04.00 Sat 2025-08-23T2211+0200
 * Support Breton variant on Windows      6.0.3.03.00 Fri 2025-08-22T2258+0200
 * Move rows A..D to kbcomqzjfgy.c        6.0.3.02.00 Thu 2025-08-21T1653+0200
 * Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0342+0200
-* Move the common rest to kbcommon.c     6.0.3.01.00 Wed 2025-08-20T2203+0200
-* Streamline ligatures at mod# 29..32    6.0.3.00.00
+* Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
+* Move MCUs to kbligatures.c & others    6.0.3.00.02 Wed 2025-08-20T1930+0200
+* Streamline ligatures at mod# 29..32    6.0.3.00.01
 * U2060 on spacebar at mod# 29..32       6.0.3.00.00
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
 * Replace duplicate with SEAL U1F9AD     6.0.2.00.00 Tue 2025-08-19T1710+0200
@@ -94,7 +96,7 @@
 * KBDTOOL v3.40 - Created                            Sun Dec 15 20:52:48 2024
 \*****************************************************************************/
 
-#include "kbqzjfgy.h"
+#include "kbredispo.h"
 #include "kbcommon.h"
 
 #if defined(_M_IA64)
@@ -105,13 +107,13 @@
 #define ALLOC_SECTION_LDATA
 #endif
 
-// See #include "kbcomqzjfgy.c" in the allocation table.
-// See #include "kbcommon.c" at the end.
+// See #include "kbcommon.c" at file end.
+// See #include "kbcomredispo.c" at allocation table end.
 #include "kbdeadtrans.c"
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  #include "kbligqzjfgy.c"
+  #include "kbligredispo.c"
 
   {VK_ESCAPE    ,4      ,' '      ,'f'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'r'      ,'e'      ,'d'      ,'i'      ,'s'      ,'p'      ,'o'      ,'s'      ,0x00e9   },
 
@@ -126,10 +128,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 * See the full description in kbcommon.c.
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {
-
-  // Rows A..D are common to all QZJFGY variants.
-  #include "kbcomqzjfgy.c"
-
   //                    |         |  Shift  |  AltGr  | S+AltGr |  AltFr  | S+AltFr |AltGr+Fr | S+Gr+Fr |  Ctrl   | KanaLock| KL+Shift| KL+AltGr|KL+S+AlGr| KL+AltFr|KL+S+AlFr|KL+AGr+Fr|KL+S+Gr+F| CAPITAL |S+CAPITAL|
   //                    |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |AlFr+AlQr|S+AFr+AQr|         |AGr+CAPIT|
   //                    |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |   17    |   18    |   19    |   20    |   21    |   22    |   23    |   24    |   25    |   26    |   27    |   28    |   29    |   30    |   31    |   32    |
@@ -156,6 +154,10 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {
   {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
   //                    |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |   17    |   18    |   19    |   20    |   21    |   22    |   23    |   24    |   25    |   26    |   27    |   28    |   29    |   30    |   31    |   32    |
+
+  // Rows A..D are common to all QZJFGY variants.
+  #include "kbcomredispo.c"
+
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
 
@@ -178,7 +180,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {
 *
 * For reference, this is the content of kbfrFRsr.DEF:
 
-LIBRARY kbfrFRs
+LIBRARY kbfrFRsr
  
  EXPORTS 
     KbdLayerDescriptor @1
