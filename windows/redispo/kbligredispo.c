@@ -1,5 +1,5 @@
 /*****************************************************************************\
-* Module Name: kbligqzjfgy.c
+* Module Name: kbligredispo.c
 *
 * Multiple code units, called ligatures
 *
@@ -7,8 +7,9 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move MCUs to kbligatures.c & others    6.0.3.00.00 Wed 2025-08-20T1930+0200
 *
+* Rename from kbligqzjfgy.c to kbligredispo.c        Sat 2025-08-23T1637+0200
+* Move MCUs to kbligatures.c and other files         Wed 2025-08-20T1930+0200
 *
 * This file only contains ligatures particular to QZJFGY. Keys that do not
 * change across layouts are commented out, and only one sample is provided.
