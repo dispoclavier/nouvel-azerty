@@ -7,8 +7,9 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Document disordered table dead key bug 6.0.4.00.00 Sat 2025-08-23T2207+0200
 * Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0325+0200
-* Move the common rest to kbcommon.c     6.0.3.01.00 Wed 2025-08-20T2203+0200
+* Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
 *
 *
 * Due to the static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[],
@@ -510,16 +511,43 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *     WCH_LGTR      - Ligature (able to generate multiple characters)
 *
 *
-* Known bugs
+* ## Known bugs
+*    ‾‾‾‾‾‾‾‾‾‾
+* ### Level 7 bug
 *
 * The level 7 (AltGr + AltFr, i.e. VK_OEM_AX + VK_OEM_102) does not work when
-* KanaLock is on, if the key is subject to KanaLock. To work around this issue,
-* the level 7 with KanaLock should be redundant.
+* KanaLock is on, if the key is subject to KanaLock.
+*
+* To work around this issue, the level 7 with KanaLock should be redundant.
+*
+*
+* ### Level 10 bug
 *
 * The level 10 (Shift + CAPITAL, where CAPITAL is the modifier added on top
 * of the Caps Lock toggle key) does not work on column 02, i.e. keys "2",
-* "W", "S", "X" of the US-QWERTY. To work around this issue, mappings on
-* these keys are replicated on unused keys.
+* "W", "S", "X" of the US-QWERTY.
+*
+* To work around this issue, mappings on these keys are replicated on unused
+* keys.
+*
+*
+* ## Dead key bug
+*
+* A dead key bug that occurred while the main allocation table was upside down.
+* Dead keys get buggy in that they are turned off or randomly add diacritics
+* without being pressed, when the allocation table is in an unusual order, as
+* it may happen when partials are included while prioritizing the visibility
+* of the #include rather than the usual order of rows starting with E and
+* ending with A.
+*
+* The only time this bug occurred was in version 6.0.3.03. The table started
+* with row D and ended with row E, as rows A..D are included depending on
+* whether the layout is AZERTY or remapped (to QZJFGY for instance).
+*
+* Admittedly, such a bug is unexpected in a robust rock-solid operating system.
+* Consistently, this disorder is unheard of on Linux and macOS. So the question
+* is why it could happen on Windows. The defective DEADTRANS macro as discussed
+* in kbdeadtrans.c hints that other parts may be sloppy, too.
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
