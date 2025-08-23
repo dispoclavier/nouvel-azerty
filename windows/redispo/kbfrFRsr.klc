@@ -1,0 +1,523 @@
+KBD	kbfrFRsr	"Français qzjfgy"
+
+COPYRIGHT	"(c) 2014–2025 Marcel Schneider dev[arobase]dispoclavier.com"
+
+COMPANY	"Dispoclavier"
+
+LOCALENAME	"fr-FR"
+
+LOCALEID	"0000040c"
+
+VERSION	6.0.3.04
+
+// Encodage : UTF-16 LE (sinon, KbdUTool plante).
+// Largeur des tabulations : 12 caractères.
+//
+// Ce fichier est conçu pour se laisser effectivement ouvrir dans le
+// Microsoft Keyboard Layout Creator (MSKLC), d’abord dans l’objectif d’y faire
+// générer le setup.exe et les paquetages pour Installateur Windows (MSI), et
+// ensuite afin que le MSKLC affiche un aperçu de la vraie disposition, quitte
+// à ce que le Keyboard Table Generation Tool (Unicode) (KbdUTool) ne puisse le
+// transpiler, à cause des caractères morts au-dessus de U+0FFF qu’il contient,
+// et qui ne sont pas pris en charge par le KbdUTool, capable uniquement de les
+// faire compiler, pas de les transpiler.
+//
+// La vraie disposition de clavier est configurée dans le fichier kbfrFRsr.C et
+// sa dépendance kbcommon.H. La fourniture des autres dépendances, notamment du
+// fichier d’en-tête kbfrFRsr.H, n’est pas requise, car le KbdUTool les génère
+// à la volée, certes avec une erreur due à la non-transpilation de "KANA",
+// erreur corrigée dans kbcommon.H.
+//
+// Dans le présent fichier, une partie du code et de ses annotations ont été
+// générés par le MSKLC en utilisant une liste de descripteurs (noms) français
+// disponible sur GitHub et placée dans %LOCALAPPDATA%\MSKLC\.
+// https://github.com/dispoclavier/nouvel-azerty/blob/main/ressource/MSKLC/nameslist.txt
+// (La mise en page par tabulations a été retouchée.)
+//
+// L’indicateur de commentaire point-virgule ne fonctionne pas dans le tableau
+// d’allocation et n’est pas utilisé non plus dans ces annotations ajoutées.
+
+SHIFTSTATE
+
+0	//Column 4
+1	//Column 5 : Shft
+2	//Column 6 :       Ctrl
+6	//Column 7 :       Ctrl Alt
+7	//Column 8 : Shft  Ctrl Alt
+
+LAYOUT		;an extra '@' at the end is a dead key
+
+// Les touches mortes n’ont toutes leur vrai caractère mort que parce que ce
+// fichier n’est plus destiné à la transpilation par KbdUTool, mais ne sert
+// qu’à afficher la disposition dans le MSKLC et à faire tourner celui-ci
+// pour générer le setup.exe et les paquetages pour Installateur Windows *.msi,
+// et pour faire tourner KbdUTool en vue de la compilation des pilotes.
+//
+// Pour faire transpiler des touches mortes par KbdUTool, le code du caractère
+// mort ne doit pas dépasser 0FFF. Cette contrainte peut être satisfaite par
+// l’utilisation de remplaçants à corriger manuellement en C, par exemple (sans
+// préfixe) : 0D19 pour 1D19 réfléchi, 0E05 pour 1E05 point souscrit, 0E57 pour
+// 1E57 point en chef, 0EBB pour 1EBB crochet en chef, 0690 pour 2690 drapeau.
+
+// Les codes matériels des touches ("SC") doivent être au complet ici, pour
+// éviter les erreurs de transpilation, mais il n’est pas nécessaire qu’ils
+// soient classés par ordre croissant.
+//
+// Les codes logiciels des touches ("VK_") sont redisposés avec les lettres
+// pour la cohérence de l’expérience utilisateur et la compatibilité
+// multiplateforme.
+//
+// T29 est la touche E00, qui sert de bascule de verrouillage kana. "KANA" est
+// défini dans kbcommon.H, mais pour l’affichage dans le MSKLC, la séquence
+// "Verr" comme "Verrouillage en mode ASCII" est configurée à la place.
+//
+// 29	KANA
+
+29	OEM_7		0	%%	%%	-1	%%	%%		// <null>, <null>, <none>, <null>, <null>
+
+// The KANA wirtual key is the hiragana-katakana toggle repurposed as ModLock.
+// Unless scancode T29 is defined here, it gets the virtual key of T28, and
+// KbdUTool throws a duplicate VK error.
+//
+// As a consequence, scancode T29 must be present here, and it must be
+// redefined as KANA in kbcommon.h, since KANA is not whitelisted in the
+// KbdUTool transpiler.
+//
+// "kbcommon.h" must be included **after** the layout specific header, where
+// KANA is transpiled to #ERROR#.
+//
+// T56 est la touche B00, qui sert de modificatrice de niveau 5 appelée AltFr.
+// Mais pour l’affichage dans le MSKLC, la séquence "AlFr" pour "AltFr" est
+// configurée à la place. (Le MSKLC limite les séquences à 4 unités de code,
+// à cause d’un plantage de Windows en présence de séquences de 5 unités ou
+// plus, au niveau Maj + Contrôle + Alt, dans la disposition par défaut.)
+
+56	OEM_102	0	%%	%%	001c	%%	%%		// <null>, <null>, INFORMATION SEPARATOR FOUR, <null>, <null>
+
+// Virtual key OEM_102 on B00 is the level-5 modifier AltFr.
+// This is supported by KbdUTool, so it can be defined here.
+
+// Pour rendre AltGr plus robuste et plus fiable, Marc Durdin conseille
+// d’utiliser une autre modificatrice à la place de Ctrl+Alt (0x06).
+// https://blog.keyman.com/2008/06/robust-key-mess/
+// « (hint: AltGr is only one of the modifiers available for Windows keyboards) »
+// « Don’t do a special-case for AltGr – other modifiers are also legal. »
+//
+// Ctrl+Alt (0x06) est remplacée par 0x10, qui continue ici d’être désigné par
+// "AltGr" pour la familiarité.
+//
+// 0x10 ne peut pas être sensible à VerrCap et ne se prête donc pas aux lettres.
+// De toute manière, l’"œ" est dans le groupe 1, par la touche morte "groupe"
+// suivie de "o".
+//
+// Pour que cela fonctionne, le code de touche logiciel natif "RMENU" doit être
+// remplacé par un autre code, par exemple (comme ici) "OEM_AX".
+// Mais KbdUTool est programmé pour rejeter ce code comme erroné.
+// C’est pourquoi il faut éditer kbfrFRs.C et écraser cette définition
+// dans kbfrFRs.H ou kbcommon.H.
+//
+// Le MSKLC ne peut rien lire de tout cela et rejetterait cela comme erroné.
+// https://stackoverflow.com/a/55896233/30229702
+// https://stackoverflow.com/questions/661722/extracting-keyboard-layouts-from-windows
+//
+// OEM_AX	16 // AltGr 0x10 (kbcommon.h:301) This VK is not included in
+//             // KbdUTool’s very limited VK whitelist.
+// 	   // Dans kbfrFRs.C aussi, "OEM_AX" est transpilé par "#ERROR#",
+//             // à remplacer par "VK_OEM_AX".
+// OEM_102	32 // AltFr 0x20
+
+//SC	VK_		Cap	0	1	2	6	7
+//--	----		----	----	----	----	----	----
+
+02	1		SGCap	00b2	00b3	-1	1	0026		// EXPOSANT CHIFFRE DEUX, EXPOSANT CHIFFRE TROIS, <none>, CHIFFRE UN, PERLUÈTE
+-1	-1		0	2082	2083					// INDICE CHIFFRE DEUX, INDICE CHIFFRE TROIS
+03	2		1	00e0	00c0	-1	2	007e@		// MINUSCULE LATINE A ACCENT GRAVE, CAPITALE LATINE A ACCENT GRAVE, <none>, CHIFFRE DEUX, TILDE
+04	3		0	00eb@	2013	-1	3	0023		// MINUSCULE LATINE E TRÉMA, TIRET DEMI-CADRATIN, <none>, CHIFFRE TROIS, CROISILLON
+05	4		0	00e1@	2014	-1	4	007b		// MINUSCULE LATINE A ACCENT AIGU, TIRET CADRATIN, <none>, CHIFFRE QUATRE, ACCOLADE OUVRANTE
+06	5		0	0022	00ad	-1	5	005b		// GUILLEMET DOUBLE GÉNÉRIQUE, TRAIT DE CÉSURE CONDITIONNEL, <none>, CHIFFRE CINQ, CROCHET OUVRANT
+07	6		SGCap	00f9	2011	-1	6	007c		// MINUSCULE LATINE U ACCENT GRAVE, TRAIT D’UNION INSÉCABLE, <none>, CHIFFRE SIX, BARRE VERTICALE
+-1	-1		0	00d9	2011					// CAPITALE LATINE U ACCENT GRAVE, TRAIT D’UNION INSÉCABLE
+08	7		0	0027	2015	-1	7	0060@		// GUILLEMET SIMPLE GÉNÉRIQUE, TIRET TROIS QUARTS DE CADRATIN, <none>, CHIFFRE SEPT, ACCENT GRAVE
+09	8		1	00e8	00c8	-1	8	005c		// MINUSCULE LATINE E ACCENT GRAVE, CAPITALE LATINE E ACCENT GRAVE, <none>, CHIFFRE HUIT, OBLIQUE INVERSE
+0a	9		1	00e7	00c7	-1	9	0028		// MINUSCULE LATINE C CÉDILLE, CAPITALE LATINE C CÉDILLE, <none>, CHIFFRE NEUF, PARENTHÈSE OUVRANTE
+0b	0		1	00e9	00c9	-1	0	0029		// MINUSCULE LATINE E ACCENT AIGU, CAPITALE LATINE E ACCENT AIGU, <none>, CHIFFRE ZÉRO, PARENTHÈSE FERMANTE
+0c	OEM_MINUS		0	0040	00b0	-1	1d49	005d		// AROBASE, SYMBOLE DEGRÉ, <none>, EXPOSANT MINUSCULE LATINE E, CROCHET FERMANT
+0d	OEM_PLUS		0	005f	002b	-1	00a6@	007d		// TIRET BAS, SIGNE PLUS, <none>, DEUX-BARRETTES, ACCOLADE FERMANTE
+10	A		1	q	Q	-1	005e	005e@		// MINUSCULE LATINE Q, CAPITALE LATINE Q, <none>, ACCENT CIRCONFLEXE, ACCENT CIRCONFLEXE
+11	Z		1	z	Z	-1	0025	0250@		// MINUSCULE LATINE Z, CAPITALE LATINE Z, <none>, SYMBOLE POUR CENT, MINUSCULE LATINE A TOURNÉ
+12	E		1	j	J	-1	20ac	0151@		// MINUSCULE LATINE J, CAPITALE LATINE J, <none>, SYMBOLE EURO, MINUSCULE LATINE O DOUBLE ACCENT AIGU
+13	R		1	f	F	-1	005c	1d19@		// MINUSCULE LATINE F, CAPITALE LATINE F, <none>, OBLIQUE INVERSE, MINUSCULE LATINE N PROLONGÉ À DROITE
+14	T		1	g	G	-1	007e	00f5@		// MINUSCULE LATINE G, CAPITALE LATINE G, <none>, TILDE, MINUSCULE LATINE O TILDE
+15	Y		1	y	Y	-1	03b5@	03b5@		// MINUSCULE LATINE Y, CAPITALE LATINE Y, <none>, MINUSCULE GRECQUE EPSILON, MINUSCULE GRECQUE EPSILON
+16	U		1	m	M	-1	0027	00e1@		// MINUSCULE LATINE M, CAPITALE LATINE M, <none>, GUILLEMET SIMPLE GÉNÉRIQUE, MINUSCULE LATINE A ACCENT AIGU
+17	I		1	l	L	-1	007b	0192@		// MINUSCULE LATINE L, CAPITALE LATINE L, <none>, ACCOLADE OUVRANTE, MINUSCULE LATINE F HAMEÇON
+18	O		1	d	D	-1	007d	0273@		// MINUSCULE LATINE D, CAPITALE LATINE D, <none>, ACCOLADE FERMANTE, MINUSCULE LATINE N HAMEÇON RÉTROFLEXE
+19	P		1	k	K	-1	0026	1e57@		// MINUSCULE LATINE K, CAPITALE LATINE K, <none>, PERLUÈTE, MINUSCULE LATINE P POINT EN CHEF
+1a	OEM_6		0	00ea@	%%	-1	00f5@	005e		// MINUSCULE LATINE E ACCENT CIRCONFLEXE, <null>, <none>, MINUSCULE LATINE O TILDE, ACCENT CIRCONFLEXE
+1b	OEM_1		0	2460@	%%	-1	2460@	0024		// NOMBRE UN CERCLÉ, <null>, <none>, NOMBRE UN CERCLÉ, SYMBOLE DOLLAR
+1e	Q		1	a	A	-1	0023	2460@		// MINUSCULE LATINE A, CAPITALE LATINE A, <none>, CROISILLON, NOMBRE UN CERCLÉ
+1f	S		1	s	S	-1	0024	00a4@		// MINUSCULE LATINE S, CAPITALE LATINE S, <none>, SYMBOLE DOLLAR, SYMBOLE MONÉTAIRE GÉNÉRIQUE
+20	D		1	e	E	-1	0028	0213@		// MINUSCULE LATINE E, CAPITALE LATINE E, <none>, PARENTHÈSE OUVRANTE, MINUSCULE LATINE R BRÈVE INVERSÉE
+21	F		1	r	R	-1	0029	0115@		// MINUSCULE LATINE R, CAPITALE LATINE R, <none>, PARENTHÈSE FERMANTE, MINUSCULE LATINE E BRÈVE
+22	G		1	t	T	-1	002d	024d@		// MINUSCULE LATINE T, CAPITALE LATINE T, <none>, TIRET, MINUSCULE LATINE R RAYÉ
+23	H		1	u	U	-1	002b	01a1@		// MINUSCULE LATINE U, CAPITALE LATINE U, <none>, SIGNE PLUS, MINUSCULE LATINE O CORNU
+24	J		1	n	N	-1	005f	005f@		// MINUSCULE LATINE N, CAPITALE LATINE N, <none>, TIRET BAS, TIRET BAS
+25	K		1	o	O	-1	005b	01eb@		// MINUSCULE LATINE O, CAPITALE LATINE O, <none>, CROCHET OUVRANT, MINUSCULE LATINE O OGONEK
+26	L		1	i	I	-1	005d	1ebb@		// MINUSCULE LATINE I, CAPITALE LATINE I, <none>, CROCHET FERMANT, MINUSCULE LATINE E CROCHET EN CHEF
+27	M		1	p	P	-1	007c	0101@		// MINUSCULE LATINE P, CAPITALE LATINE P, <none>, BARRE VERTICALE, MINUSCULE LATINE A MACRON
+28	OEM_3		0	2019	%%	-1	2026	%%		// GUILLEMET APOSTROPHE, <null>, <none>, POINTS DE SUSPENSION, <null>
+2b	OEM_5		0	002d	%%	001c	00f2@	002a		// TIRET, <null>, INFORMATION SEPARATOR FOUR, MINUSCULE LATINE O ACCENT GRAVE, ASTÉRISQUE
+2c	W		1	w	W	-1	002f	00f8@		// MINUSCULE LATINE W, CAPITALE LATINE W, <none>, OBLIQUE, MINUSCULE LATINE O BARRÉ
+2d	X		1	x	X	-1	002a	00e5@		// MINUSCULE LATINE X, CAPITALE LATINE X, <none>, ASTÉRISQUE, MINUSCULE LATINE A ROND EN CHEF
+2e	C		1	c	C	-1	003c	00ea@		// MINUSCULE LATINE C, CAPITALE LATINE C, <none>, SYMBOLE INFÉRIEUR, MINUSCULE LATINE E ACCENT CIRCONFLEXE
+2f	V		1	v	V	-1	003e	021f@		// MINUSCULE LATINE V, CAPITALE LATINE V, <none>, SYMBOLE SUPÉRIEUR, MINUSCULE LATINE H HATCHEK
+30	B		1	b	B	-1	003d	2690@		// MINUSCULE LATINE B, CAPITALE LATINE B, <none>, SYMBOLE ÉGAL, DRAPEAU NEUTRE
+31	N		1	h	H	-1	0060	00f2@		// MINUSCULE LATINE H, CAPITALE LATINE H, <none>, ACCENT GRAVE, MINUSCULE LATINE O ACCENT GRAVE
+32	OEM_COMMA		0	002c	%%	-1	003f	00e7@		// VIRGULE, <null>, <none>, POINT D’INTERROGATION, MINUSCULE LATINE C CÉDILLE
+33	OEM_PERIOD		0	002e	%%	-1	0021	1e05@		// POINT, <null>, <none>, POINT D’EXCLAMATION, MINUSCULE LATINE B POINT SOUSCRIT
+34	OEM_2		0	002f	%%	-1	003a	00eb@		// OBLIQUE, <null>, <none>, DEUX-POINTS, MINUSCULE LATINE E TRÉMA
+35	OEM_8		0	005c	%%	-1	00a7	0219@		// OBLIQUE INVERSE, <null>, <none>, SYMBOLE PARAGRAPHE, MINUSCULE LATINE S VIRGULE SOUSCRITE
+39	SPACE		0	0020	0020	0020	00a0	200b		// ESPACE, ESPACE, ESPACE, ESPACE INSÉCABLE, CÉSURE CONDITIONNELLE
+53	DECIMAL		1	002e	002c	-1	202f	00a0		// POINT, VIRGULE, , ESPACE FINE INSÉCABLE, ESPACE INSÉCABLE
+
+LIGATURE
+
+// Windows crashed when a multiunit string with five or more code units is at
+// the Shift + Ctrl + Alt level in the default keyboard layout.
+//
+// The MSKLC therefore does not support longer sequences. Safety first.
+// MSKLC developer M. S. Kaplan was asked about the topic and responded.
+// https://archives.miloush.net/michkap/archive/2015/08/07/8770668856267196989.html
+//
+// Multiunit strings for live keys are transpiled only if their length does not
+// exceed five UTF-16 code units, as ligatures are defined in kbd.h:473 only up
+// to a length of 5 units. Consistently, KbdUTool throws a warning.
+//
+// Getting support for ligatures up to the architectural limit of 16 code units
+// only takes defining them accordingly, as done in kbcommon.h, section 7.2,
+// and synching static ALLOC_SECTION_LDATA LIGATURE5 aLigature[], where
+// LIGATURE5 is now LIGATURE16; as well as setting sizeof(aLigature[0]) to 16.
+
+//VK_	Mod#	Char0	Char1	Char2	Char3
+//----	----	----	----	----	----
+
+OEM_1	1	202f	203a			// ESPACE FINE INSÉCABLE + GUILLEMET SIMPLE SUPÉRIOÏDE
+OEM_COMMA	1	202f	003f			// ESPACE FINE INSÉCABLE + POINT D’INTERROGATION
+OEM_PERIOD	1	202f	003b			// ESPACE FINE INSÉCABLE + POINT-VIRGULE
+OEM_2	1	202f	003a			// ESPACE FINE INSÉCABLE + DEUX-POINTS
+OEM_3	1	00ab	202f			// GUILLEMET INFÉRIOÏDE + ESPACE FINE INSÉCABLE
+OEM_3	4	005b	2026	005d		// CROCHET OUVRANT + POINTS DE SUSPENSION + CROCHET FERMANT
+OEM_5	1	202f	00bb			// ESPACE FINE INSÉCABLE + GUILLEMET SUPÉRIOÏDE
+OEM_6	1	2039	202f			// GUILLEMET SIMPLE INFÉRIOÏDE + ESPACE FINE INSÉCABLE
+OEM_8	1	202f	0021			// ESPACE FINE INSÉCABLE + POINT D’EXCLAMATION
+OEM_102	0	0041	006c	0046	0072	// CAPITALE LATINE A + MINUSCULE LATINE L + CAPITALE LATINE F + MINUSCULE LATINE R
+OEM_102	1	0041	006c	0046	0072	// CAPITALE LATINE A + MINUSCULE LATINE L + CAPITALE LATINE F + MINUSCULE LATINE R
+OEM_102	3	0041	006c	0046	0072	// CAPITALE LATINE A + MINUSCULE LATINE L + CAPITALE LATINE F + MINUSCULE LATINE R
+OEM_102	4	0041	006c	0046	0072	// CAPITALE LATINE A + MINUSCULE LATINE L + CAPITALE LATINE F + MINUSCULE LATINE R
+OEM_7	0	0056	0065	0072	0072	// CAPITALE LATINE V + MINUSCULE LATINE E + MINUSCULE LATINE R + MINUSCULE LATINE R
+OEM_7	1	0056	0065	0072	0072	// CAPITALE LATINE V + MINUSCULE LATINE E + MINUSCULE LATINE R + MINUSCULE LATINE R
+OEM_7	3	0056	0065	0072	0072	// CAPITALE LATINE V + MINUSCULE LATINE E + MINUSCULE LATINE R + MINUSCULE LATINE R
+OEM_7	4	0056	0065	0072	0072	// CAPITALE LATINE V + MINUSCULE LATINE E + MINUSCULE LATINE R + MINUSCULE LATINE R
+
+DEADKEY	007e
+
+0041	00c3	// A -> Ã
+0061	00e3	// a -> ã
+0045	1ebc	// E -> Ẽ
+0065	1ebd	// e -> ẽ
+0049	0128	// I -> Ĩ
+0069	0129	// i -> ĩ
+004e	00d1	// N -> Ñ
+006e	00f1	// n -> ñ
+004f	00d5	// O -> Õ
+006f	00f5	// o -> õ
+0055	0168	// U -> Ũ
+0075	0169	// u -> ũ
+0056	1e7c	// V -> Ṽ
+0076	1e7d	// v -> ṽ
+0059	1ef8	// Y -> Ỹ
+0079	1ef9	// y -> ỹ
+0020	007e	//   -> ~
+
+DEADKEY	00eb
+
+
+DEADKEY	0060
+
+0041	00c0	// A -> À
+0061	00e0	// a -> à
+0045	00c8	// E -> È
+0065	00e8	// e -> è
+0049	00cc	// I -> Ì
+0069	00ec	// i -> ì
+004e	01f8	// N -> Ǹ
+006e	01f9	// n -> ǹ
+004f	00d2	// O -> Ò
+006f	00f2	// o -> ò
+0055	00d9	// U -> Ù
+0075	00f9	// u -> ù
+0057	1e80	// W -> Ẁ
+0077	1e81	// w -> ẁ
+0059	1ef2	// Y -> Ỳ
+0079	1ef3	// y -> ỳ
+0020	0060	//   -> `
+
+DEADKEY	00a6
+
+
+DEADKEY	005e
+
+0065	00ea	// e -> ê
+0075	00fb	// u -> û
+0069	00ee	// i -> î
+006f	00f4	// o -> ô
+0061	00e2	// a -> â
+0045	00ca	// E -> Ê
+0055	00db	// U -> Û
+0049	00ce	// I -> Î
+004f	00d4	// O -> Ô
+0041	00c2	// A -> Â
+0020	005e	//   -> ^
+
+DEADKEY	0250
+
+
+DEADKEY	0151
+
+
+DEADKEY	1d19
+
+
+DEADKEY	00f5
+
+
+DEADKEY	03b5
+
+
+DEADKEY	03b5
+
+
+DEADKEY	00e1
+
+
+DEADKEY	0192
+
+
+DEADKEY	0273
+
+
+DEADKEY	1e57
+
+
+DEADKEY	00ea
+
+
+DEADKEY	00f5
+
+
+DEADKEY	00e1
+
+
+DEADKEY	00f2
+
+
+DEADKEY	2460
+
+
+DEADKEY	00a4
+
+
+DEADKEY	0213
+
+
+DEADKEY	0115
+
+
+DEADKEY	024d
+
+
+DEADKEY	01a1
+
+
+DEADKEY	005f
+
+
+DEADKEY	01eb
+
+
+DEADKEY	1ebb
+
+
+DEADKEY	0101
+
+
+DEADKEY	2460
+
+
+DEADKEY	2460
+
+
+DEADKEY	00f8
+
+
+DEADKEY	00e5
+
+
+DEADKEY	00ea
+
+
+DEADKEY	021f
+
+
+DEADKEY	2690
+
+
+DEADKEY	00f2
+
+
+DEADKEY	00e7
+
+
+DEADKEY	1e05
+
+
+DEADKEY	00eb
+
+
+DEADKEY	0219
+
+
+
+KEYNAME
+
+01	Esc
+0e	Backspace
+0f	Tab
+1c	Enter
+1d	Ctrl
+2a	Shift
+36	"Right Shift"
+37	"Num *"
+38	Alt
+39	Space
+3a	"Caps Lock"
+3b	F1
+3c	F2
+3d	F3
+3e	F4
+3f	F5
+40	F6
+41	F7
+42	F8
+43	F9
+44	F10
+45	Pause
+46	"Scroll Lock"
+47	"Num 7"
+48	"Num 8"
+49	"Num 9"
+4a	"Num -"
+4b	"Num 4"
+4c	"Num 5"
+4d	"Num 6"
+4e	"Num +"
+4f	"Num 1"
+50	"Num 2"
+51	"Num 3"
+52	"Num 0"
+53	"Num Del"
+54	"Sys Req"
+57	F11
+58	F12
+7c	F13
+7d	F14
+7e	F15
+7f	F16
+80	F17
+81	F18
+82	F19
+83	F20
+84	F21
+85	F22
+86	F23
+87	F24
+
+KEYNAME_EXT
+
+1c	"Num Enter"
+1d	"Right Ctrl"
+35	"Num /"
+37	"Prnt Scrn"
+38	"Right Alt"
+45	"Num Lock"
+46	Break
+47	Home
+48	Up
+49	"Page Up"
+4b	Left
+4d	Right
+4f	End
+50	Down
+51	"Page Down"
+52	Insert
+53	Delete
+54	<00>
+56	Help
+5b	"Left Windows"
+5c	"Right Windows"
+5d	Application
+
+KEYNAME_DEAD
+
+007e	"TILDE"
+00eb	"MINUSCULE LATINE E TRÉMA"
+00e1	"MINUSCULE LATINE A ACCENT AIGU"
+0060	"ACCENT GRAVE"
+00a6	"DEUX-BARRETTES"
+005e	"ACCENT CIRCONFLEXE"
+0250	"MINUSCULE LATINE A TOURNÉ"
+0151	"MINUSCULE LATINE O DOUBLE ACCENT AIGU"
+1d19	"PETITE CAPITALE LATINE R RÉFLÉCHI"
+00f5	"MINUSCULE LATINE O TILDE"
+03b5	"MINUSCULE GRECQUE EPSILON"
+03b5	"MINUSCULE GRECQUE EPSILON"
+00e1	"MINUSCULE LATINE A ACCENT AIGU"
+0192	"MINUSCULE LATINE F HAMEÇON"
+0273	"MINUSCULE LATINE N HAMEÇON RÉTROFLEXE"
+1e57	"MINUSCULE LATINE P POINT EN CHEF"
+00ea	"MINUSCULE LATINE E ACCENT CIRCONFLEXE"
+00f5	"MINUSCULE LATINE O TILDE"
+2460	"NOMBRE UN CERCLÉ"
+2460	"NOMBRE UN CERCLÉ"
+2460	"NOMBRE UN CERCLÉ"
+00a4	"SYMBOLE MONÉTAIRE GÉNÉRIQUE"
+0213	"MINUSCULE LATINE R BRÈVE INVERSÉE"
+0115	"MINUSCULE LATINE E BRÈVE"
+024d	"MINUSCULE LATINE R RAYÉ"
+01a1	"MINUSCULE LATINE O CORNU"
+005f	"TIRET BAS"
+01eb	"MINUSCULE LATINE O OGONEK"
+1ebb	"MINUSCULE LATINE E CROCHET EN CHEF"
+0101	"MINUSCULE LATINE A MACRON"
+00f2	"MINUSCULE LATINE O ACCENT GRAVE"
+00f8	"MINUSCULE LATINE O BARRÉ"
+00e5	"MINUSCULE LATINE A ROND EN CHEF"
+00ea	"MINUSCULE LATINE E ACCENT CIRCONFLEXE"
+021f	"MINUSCULE LATINE H HATCHEK"
+2690	"DRAPEAU NEUTRE"
+00f2	"MINUSCULE LATINE O ACCENT GRAVE"
+00e7	"MINUSCULE LATINE C CÉDILLE"
+1e05	"MINUSCULE LATINE B POINT SOUSCRIT"
+00eb	"MINUSCULE LATINE E TRÉMA"
+0219	"MINUSCULE LATINE S VIRGULE SOUSCRITE"
+
+
+DESCRIPTIONS
+
+0409	Français qzjfgy
+
+LANGUAGENAMES
+
+0409	French (France)
+
+ENDKBD
