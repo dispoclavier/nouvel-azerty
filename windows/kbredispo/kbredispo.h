@@ -1,5 +1,5 @@
 /*****************************************************************************\
-* Module Name: kbqzjfgy.h
+* Module Name: kbredispo.h
 *
 * Generic locale keyboard layout header
 *
@@ -10,10 +10,11 @@
 *
 * History:
 *
-* Rename from kbfrFRsr.H to kbqzjfgy.h   Fri 2025-08-22T1135+0200
-* Fix non-transpilation of KANA          Sun 2025-07-20T0355+0200
-* Rename to kbfrFRsr.H                   Wed 2025-07-16T1322+0200
-* created by KBDTOOL v3.40               Tue Jun 03 20:53:25 2025
+* Rename from kbqzjfgy.h to kbredispo.h              Sat 2025-08-23T1633+0200
+* Rename from kbfrFRsr.H to kbqzjfgy.h               Fri 2025-08-22T1135+0200
+* Fix non-transpilation of KANA                      Sun 2025-07-20T0355+0200
+* Rename to kbfrFRsr.H                               Wed 2025-07-16T1322+0200
+* created by KBDTOOL v3.40                           Tue Jun 03 20:53:25 2025
 *
 \*****************************************************************************/
 
