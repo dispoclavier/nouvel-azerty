@@ -20,24 +20,33 @@ Réimplémentation des touches mortes enchaînées diacritiques ou transformatio
 
 Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
 
-## 6.0.3 (projet)
+## 6.0.3 (2025-08-24)
 
-Fin de l’indisponibilité des variantes régionales sous Windows.
+Variante bretonne AZERTY sous Windows.
+
+Débogage de 2 touches AZERTY sous Windows.
 
 * Disposition :
 	* Déboguer les touches E07 et E08. kbfrFRs.klc [ac61bdd](https://github.com/dispoclavier/nouvel-azerty/commit/ac61bdd8d23a011b85ef3f30416531af1a8f8ff7), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
 	* (AltGr +) AltFr + AltLe (+ AltQr) : Redonder le gluon U+2060 sur la barre d’espace. kbfrFRs.C [454cec1](https://github.com/dispoclavier/nouvel-azerty/commit/454cec12f53328113cde8017d9b1ccafcb19506c), kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
 	* Simplifier les séquences. ibidem, kbfrFRs.C [2446f85](https://github.com/dispoclavier/nouvel-azerty/commit/2446f85262e50a1051eb4acca84cfd2970109af1), kbligatures.c idem, kbligazerty.c idem, kbfrFRsr.C [89205d9](https://github.com/dispoclavier/nouvel-azerty/commit/89205d9f64cec8da6cbc074812c10a350a33b523), kbligqzjfgy.c idem
-	* Variantes régionales et variantes redisposées :
+	* Variantes régionales :
 		* Compléter la simplification des sources. kbfrFRs.C [7c4f414](https://github.com/dispoclavier/nouvel-azerty/commit/7c4f414fd50b1a72ffe4ec94570349f1d0318309), kbcommon.c idem, kbfrFRsr.C [bb33ef4](https://github.com/dispoclavier/nouvel-azerty/commit/bb33ef48fbd1c709197647c96ea90e268cc1a1cb) ; kbfrFRs.C [b092d35](https://github.com/dispoclavier/nouvel-azerty/commit/b092d3571b0bd49b9af985cb6a509d2e1ab24062), kbcommon.c idem, kbcomazerty.c idem, kbligatures.c idem, kbfrFRsr.C [c79e328](https://github.com/dispoclavier/nouvel-azerty/commit/c79e328c434145357b2f71733761aa8474381e63), kbcomqzjfgy.c idem
 			* Renommer kbfrFRs.H en kbazerty.h. kbazerty.h [48cd71b](https://github.com/dispoclavier/nouvel-azerty/commit/48cd71b279c87423b24f71a78f89ad4f109bf486), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
 			* Renommer kbfrFRsr.H en kbqzjfgy.h. kbqzjfgy.h [48cf9f4](https://github.com/dispoclavier/nouvel-azerty/commit/48cf9f4e75d79278fdcd80950486951f6b6459f8), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80)
 			* Supprimer les fichiers .DEF. kbfrFRs.DEF [11e7ab3](https://github.com/dispoclavier/nouvel-azerty/commit/11e7ab384484ad5191707be9620011b673287051), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc), [edefb2a](https://github.com/dispoclavier/nouvel-azerty/commit/edefb2a74a6389fcab7853ef930e81fe17fb3c69), kbfrFRsr.DEF [3854057](https://github.com/dispoclavier/nouvel-azerty/commit/3854057d42bb7fb43c2fc4d11ed365904571184d), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80), [8c477ab](https://github.com/dispoclavier/nouvel-azerty/commit/8c477abf7388b25f9481a4249731e0f918999a98)
-		* Ajouter la variante bretonne AZERTY sous Windows. kbbrFRs.klc [2457768](https://github.com/dispoclavier/nouvel-azerty/commit/2457768fc41eaddd200212930466ceec46368eb9), kbbrFRs.C idem, kbbrFRs.RC idem
-	* Déboguer (mettre à jour) #include "kbfrFRsr.h". kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
+		* Ajouter la variante bretonne AZERTY sous Windows. kbbrFRs.klc [2457768](https://github.com/dispoclavier/nouvel-azerty/commit/2457768fc41eaddd200212930466ceec46368eb9), kbbrFRs.C idem, kbbrFRs.RC idem, [8aff57c](https://github.com/dispoclavier/nouvel-azerty/commit/8aff57cd7715367b158e1a8448850c31fa6a6af2)
+	* Variantes redisposées :
+		* Déboguer (mettre à jour) #include "kbfrFRsr.h". kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
+		* Génériquer les noms et chemins de fichier :
+			* Renommer qzjfgy/kbqzjfgy.h en redispo/kbredispo.h. kbredispo.h. [adbb925](https://github.com/dispoclavier/nouvel-azerty/commit/adbb92571d127e32b5cb34c0f39e8acb6bdd646e), [edbd074](https://github.com/dispoclavier/nouvel-azerty/commit/edbd07459b12801dcfa89304d4e3013de98bd7a2), [88f0ae5](https://github.com/dispoclavier/nouvel-azerty/commit/88f0ae51f3d2f6588cded980ecc3b89b7b65de67), kbfrFRsr.C [aff7996](https://github.com/dispoclavier/nouvel-azerty/commit/aff799611295b94cbf56daf948146afb64e85d52), kbfrFRsr.klc [a1c3087](https://github.com/dispoclavier/nouvel-azerty/commit/a1c308705f024f19425671b0bfdef155dc218226), [d4c7249](https://github.com/dispoclavier/nouvel-azerty/commit/d4c7249a389566754498a97514f2e64b081b0299), kbfrFRsr.RC [40a92e5](https://github.com/dispoclavier/nouvel-azerty/commit/40a92e55d06815f36a1a2754c9c8477ec07f4706), [d4c7249](https://github.com/dispoclavier/nouvel-azerty/commit/d4c7249a389566754498a97514f2e64b081b0299)
+			* Renommer qzjfgy/kbcomqzjfgy.c en redispo/kbcomredispo.c. kbcomredispo.c. [3a5be6c](https://github.com/dispoclavier/nouvel-azerty/commit/3a5be6c127c2459badc45bfce4c414060c980a06)
+			* Renommer qzjfgy/kbligqzjfgy.c en redispo/kbligredispo.c. kbligredispo.c. [267e21a](https://github.com/dispoclavier/nouvel-azerty/commit/267e21a419206ee7b8977609912ebe813d6d6b4c)
 * Documentation :
+	* Mettre à jour les modes d’emploi sous Windows. windows/Lisez-moi-svp.txt [6108bc1](https://github.com/dispoclavier/nouvel-azerty/commit/6108bc1f24aa0118adf2c293809b912e34020a81), windows/readme.md alias Mode-d-emploi-sous-Windows.md [ae3cd54](https://github.com/dispoclavier/nouvel-azerty/commit/ae3cd54e6e7d21ef3f63e1fdaf3dbcee86c7d767)
 	* Mettre à jour une annotation. kbfrFRsr.C [50a2645](https://github.com/dispoclavier/nouvel-azerty/commit/50a264556ba806f16aa97c82d3f02075bdf99a4b)
 	* Corriger et compléter les annotations. kbcommon.c [05665f6](https://github.com/dispoclavier/nouvel-azerty/commit/05665f6e25d3a3646ce00ee7e8c75b926298b221), kbfrFRs.C [5d8ecb5](https://github.com/dispoclavier/nouvel-azerty/commit/5d8ecb5000329041ec9a24ed35b36b86458388e7), kbfrFRsr.C [34f5162](https://github.com/dispoclavier/nouvel-azerty/commit/34f51624bf901e9af12227205da1cade1148a43e)
+	* Compléter la documentation des bogues connus. kbcommon.c [e075f0a](https://github.com/dispoclavier/nouvel-azerty/commit/e075f0aaf8d1eba76d323517cbd1a49a9be93132)
 
 ## 6.0.2 (2025-08-19)
 
