@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Try to debug allocation table          6.0.3.04.00 Sat 2025-08-23T1704+0200
 * Support Breton variant on Windows      6.0.3.03.00 Fri 2025-08-22T2248+0200
 \*****************************************************************************/
 
@@ -21,8 +22,8 @@
 #define ALLOC_SECTION_LDATA
 #endif
 
-// See #include "kbcomazerty.c" in the allocation table.
-// See #include "kbcommon.c" at the end.
+// See #include "kbcommon.c" at file end.
+// See #include "kbcomazerty.c" at allocation table end.
 #include "kbdeadtrans.c"
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
@@ -42,10 +43,6 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 * See the full description in kbcommon.c.
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {
-
-  // Rows A..D are common to the main layout and all AZERTY variants.
-  #include "kbcomazerty.c"
-
   //                    |         |  Shift  |  AltGr  | S+AltGr |  AltFr  | S+AltFr |AltGr+Fr | S+Gr+Fr |  Ctrl   | KanaLock| KL+Shift| KL+AltGr|KL+S+AlGr| KL+AltFr|KL+S+AlFr|KL+AGr+Fr|KL+S+Gr+F| CAPITAL |S+CAPITAL|
   //                    |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |AlFr+AlQr|S+AFr+AQr|         |AGr+CAPIT|
   //                    |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |   17    |   18    |   19    |   20    |   21    |   22    |   23    |   24    |   25    |   26    |   27    |   28    |   29    |   30    |   31    |   32    |
@@ -70,6 +67,10 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS33 aVkToWch33[] = {
   {0xff         ,0      ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x00a6   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|=========|
   //                    |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |   17    |   18    |   19    |   20    |   21    |   22    |   23    |   24    |   25    |   26    |   27    |   28    |   29    |   30    |   31    |   32    |
+
+  // Rows A..D are common to the main layout and all AZERTY variants.
+  #include "kbcomazerty.c"
+
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };
 
