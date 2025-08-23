@@ -77,6 +77,14 @@ La combinaison AltLe + AltQr fonctionne mal, mais on peut y utiliser les min
 
 #### Bascules
 
+##### Verrouillage Mode
+
+###### Mode ASCII
+
+En mode ASCII, le niveau 7 ne fonctionne pas, sur les touches qui sont en mode ASCII, les touches graphiques autres que les lettres simples, et la barre d’espace. Ces touches ne donnent rien en AltGr + AltFr, mais elles fonctionnent bien en Maj + AltFr et en Maj + AltGr + AltFr.
+
+Afin de mitiger ce bogue du niveau 7, en mode ASCII, le niveau 7 est aussi redondant que possible. Ainsi les chiffres en indice sont en Maj + AltGr en plus d’être en AltGr + AltFr.
+
 ##### Verrouillage Capitales
 
 Quand les capitales sont verrouillées, le guillemet ouvrant avec espace fine insécable est sans espace fine insécable. À la place, il faut le saisir en AltFr afin d’ajouter l’espace fine insécable, qui y est en synergie.
@@ -145,16 +153,6 @@ Par exemple, pour saisir le o ouvert accent aigu, il faut d’abord saisir le o 
 La raison de cette complication est que le système Windows de pilotes de disposition a été conçu à une époque où les langues les mieux établies et les plus réactives, comme le grec et le vietnamien, se faisaient doter de jeux complets de lettres diacritées précomposées, et par un développeur qui ne pensait sans doute pas aux autres langues, et qui n’était peut-être pas au courant du modèle d’encodage d’Unicode ni de la recommandation de prendre en charge les lettres composées par touches mortes.
 
 Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes il aurait simplement fallu ajouter 5 colonnes (ou plus, car on n’est pas à quelques kilooctets près, puisque les pilotes de ce nouvel AZERTY sont déjà dix fois plus lourds qu’un pilote moyen et restent parfaitement fonctionnels, et Windows aussi), et programmer Windows pour les consulter et ajouter leur contenu s’il n’est pas nul.
-
-### Chiffres
-
-#### Bascule de mode
-
-##### Mode ASCII
-
-En mode ASCII, le niveau 7 ne fonctionne pas, sur les touches qui sont en mode ASCII, les touches graphiques autres que les lettres simples, et la barre d’espace. Ces touches ne donnent rien en AltGr + AltFr, mais elles fonctionnent bien en Maj + AltFr et en Maj + AltGr + AltFr.
-
-Afin de mitiger ce bogue du niveau 7, en mode ASCII, le niveau 7 est aussi redondant que possible. Ainsi les chiffres en indice sont en Maj + AltGr en plus d’être en AltGr + AltFr.
 
 ### Émojis
 
