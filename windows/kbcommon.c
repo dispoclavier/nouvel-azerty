@@ -7,7 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Document disordered table dead key bug 6.0.4.00.00 Sat 2025-08-23T2207+0200
+* Document disordered table dead key bug 6.0.4.00.00 Sun 2025-08-24T1334+0200
 * Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0325+0200
 * Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
 *
@@ -534,15 +534,25 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * ## Dead key bug
 *
 * A dead key bug that occurred while the main allocation table was upside down.
-* Dead keys get buggy in that they are turned off or randomly add diacritics
-* without being pressed, when the allocation table is in an unusual order, as
-* it may happen when partials are included while prioritizing the visibility
-* of the #include rather than the usual order of rows starting with E and
-* ending with A.
 *
-* The only time this bug occurred was in version 6.0.3.03. The table started
+* Dead keys get buggy in that they are turned off or randomly add diacritics
+* without being pressed, like so:
+*
+*     ôoôooooôooôooôoôôôooôooooooooooooooôoôoooôooôooôoôoooôoǒôoôôôoôooôooooôoôoooooôô
+*     2025-08-23T0656+0200
+*
+* Rebooting Windows 10 Pro 22H2 19045.2006 fixed it for a while.
+*
+* This bug occurred when partials were included while prioritizing visibility
+* of the #include rather than the usual order of rows starting with row E and
+* ending with row A.
+*
+* The only time this happened was in version 6.0.3.03. The table started
 * with row D and ended with row E, as rows A..D are included depending on
 * whether the layout is AZERTY or remapped (to QZJFGY for instance).
+*
+* Version 6.0.3.03 is available as a pre-release for test purposes:
+* https://github.com/dispoclavier/nouvel-azerty/releases/tag/6.0.3.03
 *
 * Admittedly, such a bug is unexpected in a robust rock-solid operating system.
 * Consistently, this disorder is unheard of on Linux and macOS. So the question
