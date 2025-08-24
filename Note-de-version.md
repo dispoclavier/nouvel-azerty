@@ -24,7 +24,7 @@ Débogage de 2 touches AZERTY sous Windows.
 			* Renommer qzjfgy/kbligqzjfgy.c en redispo/kbligredispo.c. kbligredispo.c. [267e21a](https://github.com/dispoclavier/nouvel-azerty/commit/267e21a419206ee7b8977609912ebe813d6d6b4c)
 * Documentation :
 	* Mettre à jour les modes d’emploi sous Windows. windows/Lisez-moi-svp.txt [6108bc1](https://github.com/dispoclavier/nouvel-azerty/commit/6108bc1f24aa0118adf2c293809b912e34020a81), windows/readme.md alias Mode-d-emploi-sous-Windows.md [ae3cd54](https://github.com/dispoclavier/nouvel-azerty/commit/ae3cd54e6e7d21ef3f63e1fdaf3dbcee86c7d767)
-	* Mettre à jour une annotation. kbfrFRsr.C [50a2645](https://github.com/dispoclavier/nouvel-azerty/commit/50a264556ba806f16aa97c82d3f02075bdf99a4b)
+	* Mettre à jour une annotation. kbfrFRsr.C [50a2645](https://github.com/dispoclavier/nouvel-azerty/commit/50a264556ba806f16aa97c82d3f02075bdf99a4b) ; dispocla.cpp [3113e61](https://github.com/dispoclavier/nouvel-azerty/commit/3113e617611a838f4c020d7f1e84b5fb7ef4a3a0)
 	* Corriger et compléter les annotations. kbcommon.c [05665f6](https://github.com/dispoclavier/nouvel-azerty/commit/05665f6e25d3a3646ce00ee7e8c75b926298b221), kbfrFRs.C [5d8ecb5](https://github.com/dispoclavier/nouvel-azerty/commit/5d8ecb5000329041ec9a24ed35b36b86458388e7), kbfrFRsr.C [34f5162](https://github.com/dispoclavier/nouvel-azerty/commit/34f51624bf901e9af12227205da1cade1148a43e)
 	* Compléter la documentation des bogues connus. kbcommon.c [e075f0a](https://github.com/dispoclavier/nouvel-azerty/commit/e075f0aaf8d1eba76d323517cbd1a49a9be93132), [0e92baf](https://github.com/dispoclavier/nouvel-azerty/commit/0e92baf5dc50e0dae3fe7f788b0fd36badbca719)
 
@@ -34,7 +34,7 @@ Débogage de 2 touches AZERTY sous Windows.
 
 En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai.
 
-Toutes les touches vives sont à jour, toutes les touches mortes simples aussi. Le contenu des touches mortes enchaînées et de la touche de composition est basé sur la précédente implémentation.
+Toutes les touches vives sont à jour, toutes les touches mortes simples aussi. Le contenu des enchaînements de touches mortes, dont ceux de la touche de composition, est basé sur la précédente implémentation de 2018.
 
 #### Installation
 
