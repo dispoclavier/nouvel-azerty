@@ -1,4 +1,4 @@
-//                       Date: 2025-08-02T0739+0200
+//                       Date: 2025-08-24T1417+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -68,15 +68,20 @@
 //
 // # Standards compliance
 //
-// This file configures a level 5 modifier key called "AltFr", located lefthand
-// either on B00 or on C00 (Caps Lock), and a group 2 toggle called "Mode Lock"
-// on E00. Neither of these are covered by ISO/IEC 9995. Being international by
-// design, this standard does not cover Japanese keyboards, though. Consequence
-// of this impasse made on Japanese keyboards, ISO/IEC 9995 is unable to cater
-// for keyboard layouts designed to fully support French. In fact, the
-// ISO/IEC keyboard standard only covers low-end Western keyboard layouts.
+// These files configure a level 5 modifier key called AltFr, located lefthand
+// either on B00 or on C00 (with Caps Lock going onto Right Control, hijacked
+// anyway when B00 is missing while the target is ISO keyboard markets), and a
+// second graphic toggle called "Mode Lock" or "ModLock" on E00.
 //
-// Consistently, this file allocates full sets of 8 levels on each graphic key.
+// Neither of these are covered by ISO/IEC 9995. International by design, this
+// standard does not cover Japanese keyboards either. A result of this impasse
+// on Japanese keyboards is that ISO/IEC 9995 is unable to cater for keyboard
+// layouts designed for its core locales, fully supporting French, and that
+// the ISO/IEC keyboard standard covers only low-end Western keyboard layouts.
+//
+// Consistently, on each graphic key, this file allocates full sets of 8 levels
+// in 2 layout “groups”, more accurately referred to as “modes” since 12 groups
+// are accessed by a dedicated dead key replacing the ISO-style group selector.
 //
 // Software tools like keyboard layouts do not need to be standardized prior to
 // deployment, and features are not necessarily printed on keycaps. The role of
@@ -688,7 +693,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,               UEFA1,               UEFA0 ],
 		[     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,               UEFA1,               UEFA0 ]
-	}; // Level5 yields <variant>; Level6 yields <version>
+	}; // UEFA1 variant descriptor; UEFA0 version number
 
 	//
 	// ## Superscript letters
@@ -1665,13 +1670,13 @@ xkb_symbols "kbbrFRs" {
 
 	include "dispocla(kbfrFRs)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ]
-	};
+	}; // UEFA2 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1707,13 +1712,13 @@ xkb_symbols "kbbrFRsr" {
 
 	include "dispocla(kbfrFRsr)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ]
-	};
+	}; // UEFAA variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1761,13 +1766,13 @@ xkb_symbols "kbfrPFs" {
 
 	include "dispocla(kbfrFRs)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ]
-	};
+	}; // UEFA3 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1795,13 +1800,13 @@ xkb_symbols "kbfrPFsr" {
 
 	include "dispocla(kbfrFRsr)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ]
-	};
+	}; // UEFAB variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1836,13 +1841,13 @@ xkb_symbols "kbfrAFs" {
 
 	include "dispocla(kbfrFRs)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ]
-	};
+	}; // UEFA4 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1878,13 +1883,13 @@ xkb_symbols "kbfrAFsr" {
 
 	include "dispocla(kbfrFRsr)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ]
-	};
+	}; // UEFAC variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1925,19 +1930,19 @@ xkb_symbols "kbfrBEs" {
 	// and would heavily impact user experience far beyond the small benefit of
 	// staying a bit more familiar.
 	//
-	// The Belgian layout variant comes without its remapped variant because
+	// The Belgian layout variant comes without its remapped variant, because
 	// the point in having a Belgian variant is a reasonable amount of backward
 	// compatibility with the Belgian AZERTY, and remapping defeats this point.
 
 	include "dispocla(kbfrFRs)"
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ]
-	};
+	}; // UEFA5 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1950,7 +1955,7 @@ xkb_symbols "kbfrBEs" {
 	key <AE08> {
 		[               minus,          underscore ],
 		[            NoSymbol ]
-	};// Rather than NON-BREAKING HYPHEN.
+	};
 
 	// See ## Customization facility
 	include "dispocla_perso"
@@ -1983,13 +1988,13 @@ xkb_symbols "kbfrFRsr" {
 	// since the layout uses the full set of 8 indices, and shortcut remapping
 	// requires one out of them.
 
-	// Variant name.
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ],
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ]
-	};
+	}; // UEFA9 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
