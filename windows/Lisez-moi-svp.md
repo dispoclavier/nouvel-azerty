@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.0.3
-    Version et nᵒ de build : 6.0.3.04
-                      Date : 2025-08-24T1753+0200
+                   Version : 6.0.4
+    Version et nᵒ de build : 6.0.4.02
+                      Date : 2025-08-27T2133+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -19,11 +19,11 @@ Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs
 
 ## Dossiers et fichiers
 
-* Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-6.0.3.04-installation » avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
+* Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-6.0.4.02-installation » avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
 
-* Le dossier « kbbrFRs-6.0.3.04-installation » contient la variante pour la langue bretonne, avec le trigramme sur la touche du 1, et le "ñ" sur la touche du 8 à la place du tiret bas, qui est aussi sur AltGr + J.
+* Le dossier « kbbrFRs-6.0.4.02-installation » contient la variante pour la langue bretonne, avec le trigramme sur la touche du 1, et le "ñ" sur la touche du 8 à la place du tiret bas, qui est aussi sur AltGr + J.
 
-* Le dossier « kbfrFRsr-6.0.3.04-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
+* Le dossier « kbfrFRsr-6.0.4.02-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
 
 * Dans le dossier « redispositions » se trouvent les fichiers d’inscription au Registre avec leur description « _Scancode_Map.txt », pour des redispositions similaires aux sous-variantes sous Linux.
 
@@ -166,7 +166,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 4. Appuyer sur la touche Windows et cliquer sur « Microsoft Keyboard Layout Creator 1.4 » sous le titre « Récemment ajoutées ».
 
-5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.3.zip).
+5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.4.zip).
 
 6. Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
 
