@@ -7,7 +7,9 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Document disordered table dead key bug 6.0.4.00.00 Sun 2025-08-24T1334+0200
+* Add mod# 33 in main allocation table   6.0.4.01.00 Wed 2025-08-27T1834+0200
+* Redocument circumflex dead key bug     6.0.4.00.00 Wed 2025-08-27T1827+0200
+* Document disordered table dead key bug 6.0.3.04.00 Sun 2025-08-24T1334+0200
 * Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0325+0200
 * Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
 *
@@ -141,8 +143,8 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 * While AltGr is right Alt, AltFr is the ISO key B00, or it goes on Caps Lock,
 * that goes then on right Control.
 *
-* For Kana Lock and AltQr, key E00 is repurposed (as on French AZERTY, this is
-* superscript 2).
+* For Kana Lock and AltQr, key E00 is repurposed (given that on French AZERTY,
+* E00 is just superscript 2).
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_SHIFT    ,   KBDSHIFT     },
@@ -161,6 +163,11 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 * See kbd.h for a full description.
 *
 * This is an edited transpilation by KbdUTool.
+*
+* 33 is an extra modification number for broken modifier key combinations. It
+* just outputs the okay emoji "🆗" U1F197 so nobody is afraid of missing out on
+* anything when some keys happen to work in between. 
+*
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
@@ -250,48 +257,48 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, //  77, 0x4d
         SHFT_INVALID, //  78, 0x4e
         SHFT_INVALID, //  79, 0x4f / This does not work.
-        15,           //  80, 0x50 # OEM_AX + CAPITAL
-        18,           //  81, 0x51 # Shift + OEM_AX + CAPITAL
+        33,           //  80, 0x50 # OEM_AX + CAPITAL
+        33,           //  81, 0x51 # Shift + OEM_AX + CAPITAL
         SHFT_INVALID, //  82, 0x52 \ This only works on keys other than (B..E)02.
         SHFT_INVALID, //  83, 0x53
         SHFT_INVALID, //  84, 0x54
         SHFT_INVALID, //  85, 0x55
         SHFT_INVALID, //  86, 0x56
         SHFT_INVALID, //  87, 0x57 / This does not work.
-        15,           //  88, 0x58 # KanaLock + OEM_AX + CAPITAL
-        18,           //  89, 0x59 # KanaLock + Shift + OEM_AX + CAPITAL
+        33,           //  88, 0x58 # KanaLock + OEM_AX + CAPITAL
+        33,           //  89, 0x59 # KanaLock + Shift + OEM_AX + CAPITAL
         SHFT_INVALID, //  90, 0x5a \ This only works on keys other than (B..E)02.
         SHFT_INVALID, //  91, 0x5b
         SHFT_INVALID, //  92, 0x5c
         SHFT_INVALID, //  93, 0x5d
         SHFT_INVALID, //  94, 0x5e
         SHFT_INVALID, //  95, 0x5f / This only works on keys other than C05,06,11, D05,06,11,12.
-        29,           //  96, 0x60 # OEM_102 + CAPITAL
-        18,           //  97, 0x61 # Shift + OEM_102 + CAPITAL
+        29,           //  96, 0x60 OEM_102 + CAPITAL
+        33,           //  97, 0x61 # Shift + OEM_102 + CAPITAL
         SHFT_INVALID, //  98, 0x62 \ This does not work.
         SHFT_INVALID, //  99, 0x63
         SHFT_INVALID, // 100, 0x64
         SHFT_INVALID, // 101, 0x65
         SHFT_INVALID, // 102, 0x66
         SHFT_INVALID, // 103, 0x67 / This only works on keys other than C05,06,11, D05,06,11,12.
-        29,           // 104, 0x68 # KanaLock + OEM_102 + CAPITAL
-        18,           // 105, 0x69 # KanaLock + Shift + OEM_102 + CAPITAL
+        29,           // 104, 0x68 KanaLock + OEM_102 + CAPITAL
+        33,           // 105, 0x69 # KanaLock + Shift + OEM_102 + CAPITAL
         SHFT_INVALID, // 106, 0x6a \ This does not work.
         SHFT_INVALID, // 107, 0x6b
         SHFT_INVALID, // 108, 0x6c
         SHFT_INVALID, // 109, 0x6d
         SHFT_INVALID, // 110, 0x6e
         SHFT_INVALID, // 111, 0x6f / This only works on keys other than C05,06,11, D05,06,11,12.
-        30,           // 112, 0x70 # OEM_AX + OEM_102 + CAPITAL
-        18,           // 113, 0x71 # Shift + OEM_AX + OEM_102 + CAPITAL
+        30,           // 112, 0x70 OEM_AX + OEM_102 + CAPITAL
+        33,           // 113, 0x71 # Shift + OEM_AX + OEM_102 + CAPITAL
         SHFT_INVALID, // 114, 0x72 \ This does not work.
         SHFT_INVALID, // 115, 0x73
         SHFT_INVALID, // 116, 0x74
         SHFT_INVALID, // 117, 0x75
         SHFT_INVALID, // 118, 0x76
         SHFT_INVALID, // 119, 0x77 / This only works on keys other than C05,06,11, D05,06,11,12.
-        30,           // 120, 0x78 # KanaLock + OEM_AX + OEM_102 + CAPITAL
-        18,           // 121, 0x79 # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
+        30,           // 120, 0x78 KanaLock + OEM_AX + OEM_102 + CAPITAL
+        33,           // 121, 0x79 # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL
         SHFT_INVALID, // 122, 0x7a \ This does not work.
         SHFT_INVALID, // 123, 0x7b
         SHFT_INVALID, // 124, 0x7c
@@ -379,7 +386,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, // 206, 0xce
         SHFT_INVALID, // 207, 0xcf / This is redundant for 193, 0xc1.
         28,           // 208, 0xd0 OEM_AX + CAPITAL + KANA
-        18,           // 209, 0xd1 Shift + OEM_AX + CAPITAL + KANA
+        33,           // 209, 0xd1 Shift + OEM_AX + CAPITAL + KANA
         SHFT_INVALID, // 210, 0xd2 \ This only works on keys other than (B..E)02.
         SHFT_INVALID, // 211, 0xd3
         SHFT_INVALID, // 212, 0xd4
@@ -387,39 +394,39 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
         SHFT_INVALID, // 214, 0xd6
         SHFT_INVALID, // 215, 0xd7 / This is redundant for 201, 0xc9.
         28,           // 216, 0xd8 KanaLock + OEM_AX + CAPITAL + KANA
-        18,           // 217, 0xd9 KanaLock + Shift + OEM_AX + CAPITAL + KANA
+        33,           // 217, 0xd9 KanaLock + Shift + OEM_AX + CAPITAL + KANA
         SHFT_INVALID, // 218, 0xda \ This only works on keys other than (B..E)02.
         SHFT_INVALID, // 219, 0xdb
         SHFT_INVALID, // 220, 0xdc
         SHFT_INVALID, // 221, 0xdd
         SHFT_INVALID, // 222, 0xde
         SHFT_INVALID, // 223, 0xdf / This only works on keys other than C05,06,11, D05,06,11,12.
-        31,           // 224, 0xe0 # OEM_102 + CAPITAL + KANA
-        18,           // 225, 0xe1 # Shift + OEM_102 + CAPITAL + KANA
+        31,           // 224, 0xe0 OEM_102 + CAPITAL + KANA
+        33,           // 225, 0xe1 # Shift + OEM_102 + CAPITAL + KANA
         SHFT_INVALID, // 226, 0xe2 \ This does not work.
         SHFT_INVALID, // 227, 0xe3
         SHFT_INVALID, // 228, 0xe4
         SHFT_INVALID, // 229, 0xe5
         SHFT_INVALID, // 230, 0xe6
         SHFT_INVALID, // 231, 0xe7 / This only works on keys other than C05,06,11, D05,06,11,12.
-        31,           // 232, 0xe8 # KanaLock + OEM_102 + CAPITAL + KANA
-        18,           // 233, 0xe9 # KanaLock + Shift + OEM_102 + CAPITAL + KANA
+        31,           // 232, 0xe8 KanaLock + OEM_102 + CAPITAL + KANA
+        33,           // 233, 0xe9 # KanaLock + Shift + OEM_102 + CAPITAL + KANA
         SHFT_INVALID, // 234, 0xea \ This does not work.
         SHFT_INVALID, // 235, 0xeb
         SHFT_INVALID, // 236, 0xec
         SHFT_INVALID, // 237, 0xed
         SHFT_INVALID, // 238, 0xee
         SHFT_INVALID, // 239, 0xef / This only works on keys other than C05,06,11, D05,06,11,12.
-        32,           // 240, 0xf0 # OEM_AX + OEM_102 + CAPITAL + KANA
-        18,           // 241, 0xf1 # Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+        32,           // 240, 0xf0 OEM_AX + OEM_102 + CAPITAL + KANA
+        33,           // 241, 0xf1 # Shift + OEM_AX + OEM_102 + CAPITAL + KANA
         SHFT_INVALID, // 242, 0xf2 \ This does not work.
         SHFT_INVALID, // 243, 0xf3
         SHFT_INVALID, // 244, 0xf4
         SHFT_INVALID, // 245, 0xf5
         SHFT_INVALID, // 246, 0xf6
         SHFT_INVALID, // 247, 0xf7 / This only works on keys other than C05,06,11, D05,06,11,12.
-        32,           // 248, 0xf8 # KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
-        18,           // 249, 0xf9 # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
+        32,           // 248, 0xf8 KanaLock + OEM_AX + OEM_102 + CAPITAL + KANA
+        33,           // 249, 0xf9 # KanaLock + Shift + OEM_AX + OEM_102 + CAPITAL + KANA
      }                //           \ This does not work.
 };
 
@@ -531,28 +538,33 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * keys.
 *
 *
-* ## Dead key bug
+* ### Circumflex dead key bug
 *
-* A dead key bug that occurred while the main allocation table was upside down.
-*
-* Dead keys get buggy in that they are turned off or randomly add diacritics
-* without being pressed, like so:
+* Dead keys may get buggy in that they are turned off, or the circumflex dead
+* key randomly adds its diacritic without being pressed, like so:
 *
 *     ôoôooooôooôooôoôôôooôooooooooooooooôoôoooôooôooôoôoooôoǒôoôôôoôooôooooôoôoooooôô
 *     2025-08-23T0656+0200
 *
+*     buĝ̂  2025-08-27T1133+0200 cîrĉumflêê̂ deâ᪰̂̂̂ ̂ key rân᪰᪰ômly âctîvâtêd̂̂ŵîtĥoût presŝinǧît
+*
+* (bug […] circumflex dead key randomly activated without pressing it)
+*
 * Rebooting Windows 10 Pro 22H2 19045.2006 fixed it for a while.
 *
-* This bug occurred when partials were included while prioritizing visibility
-* of the #include rather than the usual order of rows starting with row E and
-* ending with row A.
+* This bug only occurred in builds 6.0.3.03 and 6.0.3.04, where windows.h was
+* included in a header instead of being included in the main C source, and so
+* was kbd.h.
 *
-* The only time this happened was in version 6.0.3.03. The table started
-* with row D and ended with row E, as rows A..D are included depending on
-* whether the layout is AZERTY or remapped (to QZJFGY for instance).
+* As in build 6.0.3.03, the main allocation table was also upside down, it
+* seemed like this was causing the bug. But ultimately it was not, since the
+* next build 6.0.3.04 fixed that.
 *
-* Version 6.0.3.03 is available as a pre-release for test purposes:
+* Build 6.0.3.03 is available as a pre-release for test purposes:
 * https://github.com/dispoclavier/nouvel-azerty/releases/tag/6.0.3.03
+*
+* Build 6.0.3.04 was released as version 6.0.3 because it seemed okay, but it
+* ended up turning crazy three days later.
 *
 * Admittedly, such a bug is unexpected in a robust rock-solid operating system.
 * Consistently, this disorder is unheard of on Linux and macOS. So the question
@@ -627,7 +639,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
   {  (PVK_TO_WCHARS1)aVkToWch2 ,  2, sizeof(aVkToWch2[0]) },
   {  (PVK_TO_WCHARS1)aVkToWch9 ,  9, sizeof(aVkToWch9[0]) },
   {  (PVK_TO_WCHARS1)aVkToWch17, 17, sizeof(aVkToWch17[0]) },
-  {  (PVK_TO_WCHARS1)aVkToWch33, 33, sizeof(aVkToWch33[0]) },
+  {  (PVK_TO_WCHARS1)aVkToWch34, 34, sizeof(aVkToWch34[0]) },
   {                       NULL ,  0, 0                    },
 };
 

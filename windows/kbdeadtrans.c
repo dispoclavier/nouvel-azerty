@@ -5,6 +5,7 @@
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
+* Udpdate to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2006+0200
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
 *
 * By courtesy of answers to:
@@ -19,10 +20,11 @@
 * dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
 * most dead keys, on level 4 of the space bar in French mode.
 *
-* The number of required high surrogates amounts to seven:
+* The number of required high surrogates amounts to eight:
 *
 *     D801, D807,
-*     D835, D837, D83C, D83D, D83E.
+*     D835, D837, D83C, D83D, D83E,
+*     DB40.
 *
 * These can be dispatched among dead keys most straightforwardly as follows:
 *
@@ -33,6 +35,7 @@
 *     D83C dead_flag, dead_greek (flag letters, squared letters)
 *     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
 *     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
+*     DB40 dead_flag as built-in (tag characters)
 *
 * The output is directly in C, where an array of DEADTRANS macro calls makes
 * for a flat layout of dead key data, while in KLC format, the data is grouped
@@ -83,46 +86,51 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_turned>*/        DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
 
 /*****************************************************************************\
-# On Windows, the dead key output is restricted to a single code unit, due to a
-# bad design decision, based on a misconception of Unicode as a 16-bit charset,
-# and on the ignorance of the Unicode encoding model using combining diacritics
-# whenever possible, and the Unicode recommendation to support composed letters
-# by dead keys. Since extending the DEADTRANS macro to support 5 of the missing
-# code units would be pointless, due to Windows’ inability to look the array up
-# for the additional code units, and append them to the output if non-null, the
-# degradation of the user experience compared to Linux and macOS (and ChromeOS’
-# precompiled Linux layouts) should be mitigated as far as possible.
-#
-# On Linux and macOS, the "Ê" key emulation supports uppercase, "êq" expands to
-# "êqu", and "x" yields the "êch" trigraph. On Windows, lowercase works as
-# intended due to default handling of the dead character, while uppercase would
-# be mixed with lowercase "ê". To mitigate this UX disruption, unsupported
-# letters output the start of the full sequence.
-#
-# A "Ç" key is also emulated, for Canadian French.
+* On Windows, the dead key output is restricted to a single code unit, due to a
+* bad design decision, based on a misconception of Unicode as a 16-bit charset,
+* and on the ignorance of the Unicode encoding model using combining diacritics
+* whenever possible, and the Unicode recommendation to support composed letters
+* by dead keys. Since extending the DEADTRANS macro to support 5 of the missing
+* code units would be pointless, due to Windows’ inability to look the array up
+* for the additional code units, and append them to the output if non-null, the
+* degradation of the user experience compared to Linux and macOS (and ChromeOS’
+* precompiled Linux layouts) should be mitigated as far as possible.
+*
+* On Linux and macOS, the "ê" key emulation supports uppercase, "êq" expands to
+* "êqu", and "x" yields the "êch" trigraph. On Windows, lowercase works as
+* intended due to default handling of the dead character, while uppercase would
+* be mixed with lowercase "ê". To mitigate this UX disruption, unsupported
+* letters output the start of the full sequence.
+*
+* A "ç" key is also emulated, for Canadian French.
 \*****************************************************************************/
 
-/*<!dead_circumflex>*/	DEADTRANS(	L'K'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'L'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'M'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'N'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'P'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'Q'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'R'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'T'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'V'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'X'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/	DEADTRANS(	L'x'	,0x00EA	,0x00EA	,0x0000	), // "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX
-/*<!dead_cedilla>*/	DEADTRANS(	L'A'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
-/*<!dead_cedilla>*/	DEADTRANS(	L'O'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
-/*<!dead_cedilla>*/	DEADTRANS(	L'U'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+/*<!dead_circumflex>*/ DEADTRANS(	L'K'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'L'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'M'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'N'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'P'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'Q'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'R'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'T'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'V'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'X'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS(	L'x'	,0x00EA	,0x00EA	,0x0000	), // "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX
+/*<!dead_cedilla>*/    DEADTRANS(	L'A'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+/*<!dead_cedilla>*/    DEADTRANS(	L'O'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+/*<!dead_cedilla>*/    DEADTRANS(	L'U'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
 
 /*****************************************************************************\
-# Flag letters need to be adapted to Windows, where a single dead key press is
-# to output the regional indicator symbol letter’s low surrogate right away, as
-# the system is unable to output more than a single code unit (as opposed to
-# Linux and macOS, where the single-press output fits the needs of writing in
-# letter emoji, by appending a cursive non-joiner U200C ZWNJ).
+* Windows has flag letters on live keys, level AltLe (like Letter emoji), and
+* flag letters with an appended word joiner one level up for writing in letter
+* emoji fluently. AltLe is on top of the CapsLock key.
+*
+* As a result, flag letters by dead keys on Windows are pointless, the more as
+* they would need to be adapted to Windows, where a single dead key press is
+* to output the regional indicator symbol letter’s low surrogate right away, as
+* the system is unable to output more than a single code unit (as opposed to
+* Linux and macOS, where the single-press output fits the needs of writing in
+* letter emoji, by appending a word joiner U2060 WJ).
 \*****************************************************************************/
 
 /*<!dead_flag>*/	DEADTRANS(	L'a'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
@@ -524,7 +532,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!belowdot>                                                      */ DEADTRANS( 0x202F	,0x1E05	,0x2E33	,0x0000	), // "⸳" RAISED DOT
 /*<!belowdot>                                                      */ DEADTRANS( L' '	,0x1E05	,0x0323	,0x0000	), // "̣" COMBINING DOT BELOW
 /*<!belowdot>                                                      */ DEADTRANS( 0x200B	,0x1E05	,0x0323	,0x0000	), // "̣" COMBINING DOT BELOW
-/*<!breve>                                                         */ DEADTRANS( L'='	,0x0115	,0x035D	,0x0000	), // "͝" COMBINING DOUBLE BREVE
+/*<!breve>                                                         */ DEADTRANS( L'$'	,0x0115	,0x035D	,0x0000	), // "͝" COMBINING DOUBLE BREVE
 /*<!breve>                                                         */ DEADTRANS( L'A'	,0x0115	,0x0102	,0x0000	), // "Ă" LATIN CAPITAL LETTER A WITH BREVE
 /*<!breve>                                                         */ DEADTRANS( L'a'	,0x0115	,0x0103	,0x0000	), // "ă" LATIN SMALL LETTER A WITH BREVE
 /*<!breve>                                                         */ DEADTRANS( 0x00C0	,0x0115	,0x1EB0	,0x0000	), // "Ằ" LATIN CAPITAL LETTER A WITH BREVE AND GRAVE
@@ -591,12 +599,15 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!caron>                                                         */ DEADTRANS( L't'	,0x021F	,0x0165	,0x0000	), // "ť" LATIN SMALL LETTER T WITH CARON
 /*<!caron>                                                         */ DEADTRANS( L'U'	,0x021F	,0x01D3	,0x0000	), // "Ǔ" LATIN CAPITAL LETTER U WITH CARON
 /*<!caron>                                                         */ DEADTRANS( L'u'	,0x021F	,0x01D4	,0x0000	), // "ǔ" LATIN SMALL LETTER U WITH CARON
+/*<!caron>                                                         */ DEADTRANS( L'W'	,0x021F	,0x1ACF	,0x0000	), // "᫏" COMBINING DOUBLE CARON
+/*<!caron>                                                         */ DEADTRANS( L'w'	,0x021F	,0x1ACF	,0x0000	), // "᫏" COMBINING DOUBLE CARON
 /*<!caron>                                                         */ DEADTRANS( L'Z'	,0x021F	,0x017D	,0x0000	), // "Ž" LATIN CAPITAL LETTER Z WITH CARON
 /*<!caron>                                                         */ DEADTRANS( L'z'	,0x021F	,0x017E	,0x0000	), // "ž" LATIN SMALL LETTER Z WITH CARON
 /*<!caron>                                                         */ DEADTRANS( 0x00A0	,0x021F	,0x02C7	,0x0000	), // "ˇ" CARON
 /*<!caron>                                                         */ DEADTRANS( 0x202F	,0x021F	,0x02C7	,0x0000	), // "ˇ" CARON
 /*<!caron>                                                         */ DEADTRANS( L' '	,0x021F	,0x030C	,0x0000	), // "̌" COMBINING CARON
 /*<!caron>                                                         */ DEADTRANS( 0x200B	,0x021F	,0x030C	,0x0000	), // "̌" COMBINING CARON
+/*<!cedilla>                                                       */ DEADTRANS( L'^'	,0x00E7	,0x1DD7	,0x0000	), // "ᷗ" COMBINING LATIN SMALL LETTER C CEDILLA
 /*<!cedilla>                                                       */ DEADTRANS( L'0'	,0x00E7	,0x2491	,0x0000	), // "⒑" NUMBER TEN FULL STOP
 /*<!cedilla>                                                       */ DEADTRANS( L'1'	,0x00E7	,0x2488	,0x0000	), // "⒈" DIGIT ONE FULL STOP
 /*<!cedilla>                                                       */ DEADTRANS( L'2'	,0x00E7	,0x2489	,0x0000	), // "⒉" DIGIT TWO FULL STOP
@@ -639,8 +650,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!circumflex>                                                    */ DEADTRANS( L'*'	,0x00EA	,0x2042	,0x0000	), // "⁂" ASTERISM
 /*<!circumflex>                                                    */ DEADTRANS( L'|'	,0x00EA	,0x2E36	,0x0000	), // "⸶" DAGGER WITH LEFT GUARD
 /*<!circumflex>                                                    */ DEADTRANS( L','	,0x00EA	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
-/*<!circumflex>                                                    */ DEADTRANS( L'$'	,0x00EA	,0x017F	,0x0000	), // "ſ" LATIN SMALL LETTER LONG S
-/*<!circumflex>                                                    */ DEADTRANS( L'='	,0x00EA	,0x1DCD	,0x0000	), // "᷍" COMBINING DOUBLE CIRCUMFLEX ABOVE
+/*<!circumflex>                                                    */ DEADTRANS( L'$'	,0x00EA	,0x1DCD	,0x0000	), // "᷍" COMBINING DOUBLE CIRCUMFLEX ABOVE
 /*<!circumflex>                                                    */ DEADTRANS( L'+'	,0x00EA	,0x2A23	,0x0000	), // "⨣" PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 /*<!circumflex>                                                    */ DEADTRANS( L'"'	,0x00EA	,0x201C	,0x0000	), // "“" LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 /*<!circumflex>                                                    */ DEADTRANS( 0x20AC	,0x00EA	,0x201C	,0x0000	), // "“" LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
@@ -773,6 +783,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!currency>                                                      */ DEADTRANS( 0x200B	,0x00A4	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
 /*<!diaeresis>                                                     */ DEADTRANS( L'\''	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( 0x2019	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
+/*<!diaeresis>                                                     */ DEADTRANS( L'^'	,0x00EB	,0x1ADC	,0x0000	), // "᫜" COMBINING DIAERESIS WITH RAISED LEFT DOT
 /*<!diaeresis>                                                     */ DEADTRANS( L'*'	,0x00EB	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
 /*<!diaeresis>                                                     */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000	), // "¦" BROKEN BAR repurposed as multikey symbol
 /*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000	), // "⹀" DOUBLE HYPHEN
@@ -854,7 +865,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!flag>                                                          */ DEADTRANS( L'9'	,0x2690	,0x21D7	,0x0000	), // "⇗" NORTH EAST DOUBLE ARROW
 /*<!flag>                                                          */ DEADTRANS( 0x00A0	,0x2690	,0x02ED	,0x0000	), // "˭" MODIFIER LETTER UNASPIRATED
 /*<!flag>                                                          */ DEADTRANS( 0x202F	,0x2690	,0x02ED	,0x0000	), // "˭" MODIFIER LETTER UNASPIRATED
-/*<!flag>                                                          */ DEADTRANS( L' '	,0x2690	,0x0347	,0x0000	), // "͇" COMBINING EQUALS SIGN BELOW
+/*<!flag>                                                          */ DEADTRANS( L' '	,0x2690	,0x1AE8	,0x0000	), // "᫨" COMBINING EQUALS SIGN ABOVE
 /*<!grave>                                                         */ DEADTRANS( L'&'	,0x00F2	,0x0316	,0x0000	), // "̖" COMBINING GRAVE ACCENT BELOW
 /*<!grave>                                                         */ DEADTRANS( L'\''	,0x00F2	,0x201B	,0x0000	), // "‛" SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 /*<!grave>                                                         */ DEADTRANS( 0x2019	,0x00F2	,0x201B	,0x0000	), // "‛" SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
@@ -1220,7 +1231,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!horn>                                                          */ DEADTRANS( 0x202F	,0x01A1	,0xA71A	,0x0000	), // "ꜚ" MODIFIER LETTER LOWER RIGHT CORNER ANGLE
 /*<!horn>                                                          */ DEADTRANS( L' '	,0x01A1	,0x031B	,0x0000	), // "̛" COMBINING HORN
 /*<!horn>                                                          */ DEADTRANS( 0x200B	,0x01A1	,0x031B	,0x0000	), // "̛" COMBINING HORN
-/*<!invertedbreve>                                                 */ DEADTRANS( L'='	,0x0213	,0x0361	,0x0000	), // "͡" COMBINING DOUBLE INVERTED BREVE
+/*<!invertedbreve>                                                 */ DEADTRANS( L'$'	,0x0213	,0x0361	,0x0000	), // "͡" COMBINING DOUBLE INVERTED BREVE
 /*<!invertedbreve>                                                 */ DEADTRANS( L'A'	,0x0213	,0x0202	,0x0000	), // "Ȃ" LATIN CAPITAL LETTER A WITH INVERTED BREVE
 /*<!invertedbreve>                                                 */ DEADTRANS( L'a'	,0x0213	,0x0203	,0x0000	), // "ȃ" LATIN SMALL LETTER A WITH INVERTED BREVE
 /*<!invertedbreve>                                                 */ DEADTRANS( L'C'	,0x0213	,0x02D3	,0x0000	), // "˓" MODIFIER LETTER CENTRED LEFT HALF RING
@@ -1282,7 +1293,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!macron>                                                        */ DEADTRANS( 0x2019	,0x0101	,0x2A42	,0x0000	), // "⩂" UNION WITH OVERBAR
 /*<!macron>                                                        */ DEADTRANS( L'{'	,0x0101	,0x2A43	,0x0000	), // "⩃" INTERSECTION WITH OVERBAR
 /*<!macron>                                                        */ DEADTRANS( L'}'	,0x0101	,0x29B1	,0x0000	), // "⦱" EMPTY SET WITH OVERBAR
-/*<!macron>                                                        */ DEADTRANS( L'='	,0x0101	,0x035E	,0x0000	), // "͞" COMBINING DOUBLE MACRON
+/*<!macron>                                                        */ DEADTRANS( L'$'	,0x0101	,0x035E	,0x0000	), // "͞" COMBINING DOUBLE MACRON
 /*<!macron>                                                        */ DEADTRANS( L'`'	,0x0101	,0x22BC	,0x0000	), // "⊼" NAND
 /*<!macron>                                                        */ DEADTRANS( L'?'	,0x0101	,0x22BD	,0x0000	), // "⊽" NOR
 /*<!macron>                                                        */ DEADTRANS( L'/'	,0x0101	,0x29F6	,0x0000	), // "⧶" SOLIDUS WITH OVERBAR
@@ -1441,6 +1452,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!reversed>                                                      */ DEADTRANS( L'e'	,0x1D19	,0x0258	,0x0000	), // "ɘ" LATIN SMALL LETTER REVERSED E
 /*<!reversed>                                                      */ DEADTRANS( L'f'	,0x1D19	,0x2619	,0x0000	), // "☙" REVERSED ROTATED FLORAL HEART BULLET
 /*<!reversed>                                                      */ DEADTRANS( L'F'	,0x1D19	,0xA7FB	,0x0000	), // "ꟻ" LATIN EPIGRAPHIC LETTER REVERSED F
+/*<!reversed>                                                      */ DEADTRANS( L'G'	,0x1D19	,0x0295	,0x0000	), // "ʕ" LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 /*<!reversed>                                                      */ DEADTRANS( L'g'	,0x1D19	,0xDF01	,0x0000	), // High surrogate: D837; U+1DF01 "𝼁" LATIN SMALL LETTER REVERSED SCRIPT G
 /*<!reversed>                                                      */ DEADTRANS( L'H'	,0x1D19	,0xA7F5	,0x0000	), // "Ꟶ" LATIN CAPITAL LETTER REVERSED HALF H
 /*<!reversed>                                                      */ DEADTRANS( L'h'	,0x1D19	,0xA7F6	,0x0000	), // "ꟶ" LATIN SMALL LETTER REVERSED HALF H
@@ -1453,8 +1465,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!reversed>                                                      */ DEADTRANS( L'p'	,0x1D19	,0x204B	,0x0000	), // "⁋" REVERSED PILCROW SIGN
 /*<!reversed>                                                      */ DEADTRANS( L'P'	,0x1D19	,0xA7FC	,0x0000	), // "ꟼ" LATIN EPIGRAPHIC LETTER REVERSED P
 /*<!reversed>                                                      */ DEADTRANS( 0x00A7	,0x1D19	,0x204B	,0x0000	), // "⁋" REVERSED PILCROW SIGN
-/*<!reversed>                                                      */ DEADTRANS( L'q'	,0x1D19	,0x0295	,0x0000	), // "ʕ" LATIN LETTER PHARYNGEAL VOICED FRICATIVE
-/*<!reversed>                                                      */ DEADTRANS( L'Q'	,0x1D19	,0x02A2	,0x0000	), // "ʢ" LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
+/*<!reversed>                                                      */ DEADTRANS( L'Q'	,0x1D19	,0xA7CE	,0x0000	), // "꟎" LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
+/*<!reversed>                                                      */ DEADTRANS( L'q'	,0x1D19	,0xA7CF	,0x0000	), // "꟏" LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
 /*<!reversed>                                                      */ DEADTRANS( L'r'	,0x1D19	,0x027F	,0x0000	), // "ɿ" LATIN SMALL LETTER REVERSED R WITH FISHHOOK
 /*<!reversed>                                                      */ DEADTRANS( L'R'	,0x1D19	,0x1D19	,0x0000	), // "ᴙ" LATIN LETTER SMALL CAPITAL REVERSED R
 /*<!reversed>                                                      */ DEADTRANS( L'S'	,0x1D19	,0x01AA	,0x0000	), // "ƪ" LATIN LETTER REVERSED ESH LOOP
@@ -1604,6 +1616,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!subscript>                                                     */ DEADTRANS( 0x202F	,L'_'	,0x005F	,0x0000	), // "_" LOW LINE
 /*<!subscript>                                                     */ DEADTRANS( L' '	,L'_'	,0x0332	,0x0000	), // "̲" COMBINING LOW LINE
 /*<!subscript>                                                     */ DEADTRANS( 0x200B	,L'_'	,0x0332	,0x0000	), // "̲" COMBINING LOW LINE
+/*<!superscript>                                                   */ DEADTRANS( 0x00E7	,L'^'	,0x1DD7	,0x0000	), // "ᷗ" COMBINING LATIN SMALL LETTER C CEDILLA
 /*<!superscript>                                                   */ DEADTRANS( 0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 /*<!superscript>                                                   */ DEADTRANS( L'\''	,L'^'	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!superscript>                                                   */ DEADTRANS( 0x2019	,L'^'	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
@@ -1668,7 +1681,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!superscript>                                                   */ DEADTRANS( L'r'	,L'^'	,0x02B3	,0x0000	), // "ʳ" MODIFIER LETTER SMALL R
 /*<!superscript>                                                   */ DEADTRANS( L'R'	,L'^'	,0x1D3F	,0x0000	), // "ᴿ" MODIFIER LETTER CAPITAL R
 /*<!superscript>                                                   */ DEADTRANS( L's'	,L'^'	,0x02E2	,0x0000	), // "ˢ" MODIFIER LETTER SMALL S
-/*<!superscript>                                                   */ DEADTRANS( L'S'	,L'^'	,0x2204	,0x0000	), // "∄" THERE DOES NOT EXIST
+/*<!superscript>                                                   */ DEADTRANS( L'S'	,L'^'	,0xA7F1	,0x0000	), // "꟱" MODIFIER LETTER CAPITAL S
 /*<!superscript>                                                   */ DEADTRANS( L'T'	,L'^'	,0x1D40	,0x0000	), // "ᵀ" MODIFIER LETTER CAPITAL T
 /*<!superscript>                                                   */ DEADTRANS( L't'	,L'^'	,0x1D57	,0x0000	), // "ᵗ" MODIFIER LETTER SMALL T
 /*<!superscript>                                                   */ DEADTRANS( L'U'	,L'^'	,0x1D41	,0x0000	), // "ᵁ" MODIFIER LETTER CAPITAL U
@@ -1688,7 +1701,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!superscript>                                                   */ DEADTRANS( L' '	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
 /*<!superscript>                                                   */ DEADTRANS( 0x200B	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
 /*<!tilde>                                                         */ DEADTRANS( L'*'	,0x00F5	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
-/*<!tilde>                                                         */ DEADTRANS( L'='	,0x00F5	,0x0360	,0x0000	), // "͠" COMBINING DOUBLE TILDE
+/*<!tilde>                                                         */ DEADTRANS( L'$'	,0x00F5	,0x0360	,0x0000	), // "͠" COMBINING DOUBLE TILDE
+/*<!tilde>                                                         */ DEADTRANS( L'='	,0x00F5	,0x034C	,0x0000	), // "͌" COMBINING ALMOST EQUAL TO ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'#'	,0x00F5	,0x29E4	,0x0000	), // "⧤" EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'+'	,0x00F5	,0x2A24	,0x0000	), // "⨤" PLUS SIGN WITH TILDE ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'"'	,0x00F5	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
@@ -1786,6 +1800,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!turned>                                                        */ DEADTRANS( L'N'	,0x0250	,0xA4E0	,0x0000	), // "ꓠ" LISU LETTER NA
 /*<!turned>                                                        */ DEADTRANS( L'o'	,0x0250	,0x1D11	,0x0000	), // "ᴑ" LATIN SMALL LETTER SIDEWAYS O
 /*<!turned>                                                        */ DEADTRANS( L'O'	,0x0250	,0xA4F3	,0x0000	), // "ꓳ" LISU LETTER O
+/*<!turned>                                                        */ DEADTRANS( L'p'	,0x0250	,0x1AE3	,0x0000	), // "᫣" COMBINING INVERTED BRIDGE ABOVE
 /*<!turned>                                                        */ DEADTRANS( L'P'	,0x0250	,0xA4D2	,0x0000	), // "ꓒ" LISU LETTER PHA
 /*<!turned>                                                        */ DEADTRANS( L'Q'	,0x0250	,0x213A	,0x0000	), // "℺" ROTATED CAPITAL Q
 /*<!turned>                                                        */ DEADTRANS( L'r'	,0x0250	,0x0279	,0x0000	), // "ɹ" LATIN SMALL LETTER TURNED R

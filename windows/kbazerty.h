@@ -10,9 +10,10 @@
 *
 * History:
 *
-* Rename from kbfrFRs.H to kbazerty.h    Fri 2025-08-22T1127+0200
-* Fix non-transpilation of KANA          Sun 2025-07-20T0354+0200
-* created by KBDTOOL v3.40               Tue Jun 03 20:53:21 2025
+* Move #include <windows.h> back to C sources        Wed 2025-08-27T1300+0200
+* Rename from kbfrFRs.H to kbazerty.h                Fri 2025-08-22T1127+0200
+* Fix non-transpilation of KANA                      Sun 2025-07-20T0354+0200
+* created by KBDTOOL v3.40                           Tue Jun 03 20:53:21 2025
 *
 \*****************************************************************************/
 
@@ -20,8 +21,6 @@
  * kbd type should be controlled by cl command-line argument
  */
 #define KBD_TYPE 4
-
-#include <windows.h>
 
 /*
  * Include the basis of all keyboard table values
