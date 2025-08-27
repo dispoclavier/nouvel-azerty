@@ -14,11 +14,70 @@ Prise en charge par touches mortes sous Linux et macOS, des émojis additionnels
 
 ## 6.1.0 (projet)
 
-Reconception, rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
-
 Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
 
 Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
+
+## 6.0.5 (projet)
+
+Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+
+## 6.0.4 (2025-08-27)
+
+Mise à jour vers Unicode 17.0.
+
+Dans réfléchi, "ʕ" U+0295 est désormais par "G" au lieu de "q".
+
+* Disposition : Disposer "🆗" U+1F197 sur toutes les combinaisons de touches qui fonctionnent sous Windows. kbazerty.h, kbbrFRs.C, kbbrFRs.klc, kbcomazerty.c, kbcommon.c, kbdeadtrans.c, kbfrFRs.C, kbfrFRs.klc, kbligatures.c [4f2c6d2](https://github.com/dispoclavier/nouvel-azerty/commit/4f2c6d2a912cee94aa75f39a9fc8190c607d4e66), kbcomredispo.c, kbfrFRsr.C, kbfrFRsr.klc, kbredispo.h [2ec8ac6](https://github.com/dispoclavier/nouvel-azerty/commit/2ec8ac6a983d50d01e5f0a797a0e6d5996791233)
+* Transformations :
+	* Groupes des lettres :
+		* Groupe 4 :
+			* Ajouter "꟒" U+A7D2 par "T". compose-3.yml [58a2c65](https://github.com/dispoclavier/nouvel-azerty/commit/58a2c650268a292feec3253470ba967625960d47)
+			* Par "t", faire suivre "ꟓ" U+A7D3 du groupe 11 par "T" à la place de "ʨ" U+02A8, qui va par "C".
+			* Ajouter "꟔" U+A7D4 par "W".
+			* Permuter "ꟕ" U+A7D5 du groupe 11 et "ʍ" U+028D du groupe 4.
+		* Groupes 3 et 5 : Permuter "Ꟃ" U+A7C2 et "Ƿ" U+01F7, "ꟃ" U+A7C3 et "ƿ" U+01BF.
+	* Exposant :
+		* Ajouter "꟱" U+A7F1 par "S". compose-2.yml [9440bdb](https://github.com/dispoclavier/nouvel-azerty/commit/9440bdbb9be8eb9ced2e995155341b5c724e7d61)
+		* Suscrit :
+			* Ajouter "᫙" U+1AD9 par "D", "᫚" U+1ADA par "B".
+			* Ajouter "᫛" U+1ADB par "0", "᫠" U+1AE0 par "4", "᫡" U+1AE1 par "6".
+			* Ajouter "᫤" U+1AE4 par "C", "᫫" U+1AEB par "F".
+			* Groupe 1 : Ajouter "᫥" U+1AE5 par "m", "᫧" U+1AE7 par "M", "᫩" U+1AE9 par "c", "᫪" U+1AEA par "f", "᫫" U+1AEB par "F".
+	* Tourné : Ajouter "᫣" U+1AE3 par "p".
+	* Réfléchi :
+		* Changer le caractère de base de "ʕ" U+0295 de "q" en "G".
+		* Ajouter "꟎" U+A7CE par "Q" à la place de "ʢ" U+02A2, qui va dans réfléchi rayé par "q" 
+		* Ajouter "꟏" U+A7CF par "q" à la place de "ʕ" U+0295, qui va par "G".
+		* Réfléchi rayé : Ajouter pour "ʢ" U+02A2, qui était dans réfléchi par "Q".
+	* Tilde :
+		* Ajouter "͌" U+034C par "=" à la place de "͠" U+0360, qui est par "—" U+2014 et par "$".
+		* Changer le caractère de base ASCII de "͠" U+0360 de "=" en "$".
+	* Point en chef > ligne verticale en chef : Ajouter "᫐" U+1AD0, "᫑" U+1AD1, "᫒" U+1AD2, "᫓" U+1AD3, "᫔" U+1AD4, "᫕" U+1AD5, "᫖" U+1AD6, "᫗" U+1AD7 par les touches mortes impliquées suivies d’espace.
+	* Symbole monétaire > symbole monétaire étendu : Ajouter "⃁" U+20C1 par "S" à la place de "₷" U+20B7, qui est par "s".
+	* Brève inversée :
+		* Changer le caractère de base ASCII de "͡" U+0361 de "=" en "$".
+		* Brève inversée souscrite : Changer le caractère de base ASCII de "᷼" U+1DFC de "=" en "$".
+	* Brève :
+		* Changer le caractère de base ASCII de "͝" U+035D de "=" en "$".
+		* Brève souscrite : Changer le caractère de base ASCII de "͜" U+035C de "=" en "$".
+	* Rayé > Raie haute : Ajouter "᫢" U+1AE2 par espace à la place de "͆" U+0346, qui est dans le groupe 5 de "P".
+	* Indice > souscrit :
+		* Redonder "̼" U+033C par "m".
+		* Ajouter "᫦" U+1AE6 par "M".
+	* Macron :
+		* Ajouter "᫘" U+1AD8 par les touches mortes impliquées suivies d’espace.
+		* Changer le caractère de base ASCII de "͞" U+035E de "=" en "$".
+		* Macron souscrit : Changer le caractère de base ASCII de "͟" U+035F de "=" en "$".
+	* Accent circonflexe :
+		* Supprimer "ſ" U+017F par "$".
+		* Changer le caractère de base ASCII de "᷍" U+1DCD de "=" en "$".
+	* Hatchek : Ajouter "᫏" U+1ACF par "w".
+	* Drapeau : Ajouter "᫨" U+1AE8 par espace à la place de "͇" U+0347, qui va en double frappe à la place de "͌" U+034C, qui va dans tilde par "=".
+	* Tréma :
+		* Ajouter "᫜" U+1ADC par "^".
+		* Tréma souscrit : Ajouter "᫝" U+1ADD par "*".
+* Documentation : Convertir le Démarrage-rapide.txt de texte brut en Markdown et le fournir en PDF. Démarrage-rqpide.md [8d3d6e1](https://github.com/dispoclavier/nouvel-azerty/commit/8d3d6e17721137c34753a90b8b0e1c89f211159a)
 
 ## 6.0.3 (2025-08-24)
 
@@ -27,14 +86,14 @@ Variante bretonne AZERTY sous Windows.
 Débogage de 2 touches AZERTY sous Windows.
 
 * Disposition :
-	* Déboguer les touches E07 et E08. kbfrFRs.klc [ac61bdd](https://github.com/dispoclavier/nouvel-azerty/commit/ac61bdd8d23a011b85ef3f30416531af1a8f8ff7), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
+	* Déboguer les touches E07 et E08 par rapport au verrouillage des capitales. kbfrFRs.klc [ac61bdd](https://github.com/dispoclavier/nouvel-azerty/commit/ac61bdd8d23a011b85ef3f30416531af1a8f8ff7), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
 	* (AltGr +) AltFr + AltLe (+ AltQr) : Redonder le gluon U+2060 sur la barre d’espace. kbfrFRs.C [454cec1](https://github.com/dispoclavier/nouvel-azerty/commit/454cec12f53328113cde8017d9b1ccafcb19506c), kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
-	* Simplifier les séquences. ibidem, kbfrFRs.C [2446f85](https://github.com/dispoclavier/nouvel-azerty/commit/2446f85262e50a1051eb4acca84cfd2970109af1), kbligatures.c idem, kbligazerty.c idem, kbfrFRsr.C [89205d9](https://github.com/dispoclavier/nouvel-azerty/commit/89205d9f64cec8da6cbc074812c10a350a33b523), kbligqzjfgy.c idem
+	* Simplifier le code source des séquences. ibidem, kbfrFRs.C [2446f85](https://github.com/dispoclavier/nouvel-azerty/commit/2446f85262e50a1051eb4acca84cfd2970109af1), kbligatures.c idem, kbligazerty.c idem, kbfrFRsr.C [89205d9](https://github.com/dispoclavier/nouvel-azerty/commit/89205d9f64cec8da6cbc074812c10a350a33b523), kbligqzjfgy.c idem
 	* Variantes régionales :
-		* Compléter la simplification des sources. kbfrFRs.C [7c4f414](https://github.com/dispoclavier/nouvel-azerty/commit/7c4f414fd50b1a72ffe4ec94570349f1d0318309), kbcommon.c idem, kbfrFRsr.C [bb33ef4](https://github.com/dispoclavier/nouvel-azerty/commit/bb33ef48fbd1c709197647c96ea90e268cc1a1cb) ; kbfrFRs.C [b092d35](https://github.com/dispoclavier/nouvel-azerty/commit/b092d3571b0bd49b9af985cb6a509d2e1ab24062), kbcommon.c idem, kbcomazerty.c idem, kbligatures.c idem, kbfrFRsr.C [c79e328](https://github.com/dispoclavier/nouvel-azerty/commit/c79e328c434145357b2f71733761aa8474381e63), kbcomqzjfgy.c idem
+		* Compléter la simplification du code source. kbfrFRs.C [7c4f414](https://github.com/dispoclavier/nouvel-azerty/commit/7c4f414fd50b1a72ffe4ec94570349f1d0318309), kbcommon.c idem, kbfrFRsr.C [bb33ef4](https://github.com/dispoclavier/nouvel-azerty/commit/bb33ef48fbd1c709197647c96ea90e268cc1a1cb) ; kbfrFRs.C [b092d35](https://github.com/dispoclavier/nouvel-azerty/commit/b092d3571b0bd49b9af985cb6a509d2e1ab24062), kbcommon.c idem, kbcomazerty.c idem, kbligatures.c idem, kbfrFRsr.C [c79e328](https://github.com/dispoclavier/nouvel-azerty/commit/c79e328c434145357b2f71733761aa8474381e63), kbcomqzjfgy.c idem
 			* Renommer kbfrFRs.H en kbazerty.h. kbazerty.h [48cd71b](https://github.com/dispoclavier/nouvel-azerty/commit/48cd71b279c87423b24f71a78f89ad4f109bf486), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
 			* Renommer kbfrFRsr.H en kbqzjfgy.h. kbqzjfgy.h [48cf9f4](https://github.com/dispoclavier/nouvel-azerty/commit/48cf9f4e75d79278fdcd80950486951f6b6459f8), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80)
-			* Supprimer les fichiers .DEF. kbfrFRs.DEF [11e7ab3](https://github.com/dispoclavier/nouvel-azerty/commit/11e7ab384484ad5191707be9620011b673287051), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc), [edefb2a](https://github.com/dispoclavier/nouvel-azerty/commit/edefb2a74a6389fcab7853ef930e81fe17fb3c69), kbfrFRsr.DEF [3854057](https://github.com/dispoclavier/nouvel-azerty/commit/3854057d42bb7fb43c2fc4d11ed365904571184d), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80), [8c477ab](https://github.com/dispoclavier/nouvel-azerty/commit/8c477abf7388b25f9481a4249731e0f918999a98)
+			* Supprimer les fichiers *.DEF. kbfrFRs.DEF [11e7ab3](https://github.com/dispoclavier/nouvel-azerty/commit/11e7ab384484ad5191707be9620011b673287051), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc), [edefb2a](https://github.com/dispoclavier/nouvel-azerty/commit/edefb2a74a6389fcab7853ef930e81fe17fb3c69), kbfrFRsr.DEF [3854057](https://github.com/dispoclavier/nouvel-azerty/commit/3854057d42bb7fb43c2fc4d11ed365904571184d), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80), [8c477ab](https://github.com/dispoclavier/nouvel-azerty/commit/8c477abf7388b25f9481a4249731e0f918999a98)
 		* Ajouter la variante bretonne AZERTY sous Windows. kbbrFRs.klc [2457768](https://github.com/dispoclavier/nouvel-azerty/commit/2457768fc41eaddd200212930466ceec46368eb9), kbbrFRs.C idem, kbbrFRs.RC idem, [8aff57c](https://github.com/dispoclavier/nouvel-azerty/commit/8aff57cd7715367b158e1a8448850c31fa6a6af2)
 	* Variantes redisposées :
 		* Déboguer (mettre à jour) #include "kbfrFRsr.h". kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
@@ -45,7 +104,7 @@ Débogage de 2 touches AZERTY sous Windows.
 * Documentation :
 	* Modes d’emploi :
 		* Mettre à jour les modes d’emploi sous Windows. windows/Lisez-moi-svp.txt [6108bc1](https://github.com/dispoclavier/nouvel-azerty/commit/6108bc1f24aa0118adf2c293809b912e34020a81), windows/readme.md alias Mode-d-emploi-sous-Windows.md [ae3cd54](https://github.com/dispoclavier/nouvel-azerty/commit/ae3cd54e6e7d21ef3f63e1fdaf3dbcee86c7d767)
-		* Convertir les Lisez-moi-svp de texte brut en Markdown. linux-chromeos/Lisez-moi-svp.md [9afbb54](https://github.com/dispoclavier/nouvel-azerty/commit/9afbb54e6f597f8c3717f6a242a9077306002428), windows/Lisez-moi-svp.md [94b59ef](https://github.com/dispoclavier/nouvel-azerty/commit/94b59ef0efa9439a73365c48033db1f68df8420a)
+		* Convertir les Lisez-moi-svp de texte brut en Markdown et les fournir en PDF. linux-chromeos/Lisez-moi-svp.md [9afbb54](https://github.com/dispoclavier/nouvel-azerty/commit/9afbb54e6f597f8c3717f6a242a9077306002428), windows/Lisez-moi-svp.md [94b59ef](https://github.com/dispoclavier/nouvel-azerty/commit/94b59ef0efa9439a73365c48033db1f68df8420a)
 	* Code source :
 		* Mettre à jour une annotation. kbfrFRsr.C [50a2645](https://github.com/dispoclavier/nouvel-azerty/commit/50a264556ba806f16aa97c82d3f02075bdf99a4b) ; dispocla.cpp [3113e61](https://github.com/dispoclavier/nouvel-azerty/commit/3113e617611a838f4c020d7f1e84b5fb7ef4a3a0)
 		* Corriger et compléter les annotations. kbcommon.c [05665f6](https://github.com/dispoclavier/nouvel-azerty/commit/05665f6e25d3a3646ce00ee7e8c75b926298b221), kbfrFRs.C [5d8ecb5](https://github.com/dispoclavier/nouvel-azerty/commit/5d8ecb5000329041ec9a24ed35b36b86458388e7), kbfrFRsr.C [34f5162](https://github.com/dispoclavier/nouvel-azerty/commit/34f51624bf901e9af12227205da1cade1148a43e)
