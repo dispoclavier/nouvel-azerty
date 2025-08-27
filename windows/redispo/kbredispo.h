@@ -10,6 +10,7 @@
 *
 * History:
 *
+* Move #include <windows.h> back to C sources        Wed 2025-08-27T1259+0200
 * Rename from kbqzjfgy.h to kbredispo.h              Sat 2025-08-23T1633+0200
 * Rename from kbfrFRsr.H to kbqzjfgy.h               Fri 2025-08-22T1135+0200
 * Fix non-transpilation of KANA                      Sun 2025-07-20T0355+0200
@@ -22,8 +23,6 @@
  * kbd type should be controlled by cl command-line argument
  */
 #define KBD_TYPE 4
-
-#include <windows.h>
 
 /*
  * Include the basis of all keyboard table values
