@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see Compose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.4" # See #   End of line comments
+<UEFA0>                     : "version 6.0.5" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -5911,6 +5911,7 @@
 <Multi_key><nobreakspace><8>                                                                       : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><KP_8>                                                                    : "∝" U221D # PROPORTIONAL TO
 #   In group 11 of "{" on "I"                                                                      : "∞" U221E # INFINITY
+#   In #*# TURNED                                                                                  : "∞" U221E # INFINITY
 <Multi_key><8>                                                                             <space> : "∞" U221E # INFINITY
 <Multi_key><8>                                                                      <nobreakspace> : "∞" U221E # INFINITY
 <Multi_key><KP_8>                                                                          <space> : "∞" U221E # INFINITY
@@ -6000,20 +6001,17 @@
 #   In # # RING_ABOVE&GROUP_3                                                                      : "∰" U2230 # VOLUME INTEGRAL
 <Multi_key><3><s><o>                                                                               : "∰" U2230 # VOLUME INTEGRAL
 <Multi_key><KP_3><s><o>                                                                            : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><s><greater>                                                                    <space> : "∱" U2231 # CLOCKWISE INTEGRAL
-<Multi_key><s><greater>                                                             <nobreakspace> : "∱" U2231 # CLOCKWISE INTEGRAL
-<Multi_key><s><o><greater>                                                                 <space> : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
-<Multi_key><s><o><greater>                                                          <nobreakspace> : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
-<Multi_key><s><o><less>                                                                    <space> : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
-<Multi_key><s><o><less>                                                             <nobreakspace> : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
+<Multi_key><s><greater>                                                                            : "∱" U2231 # CLOCKWISE INTEGRAL
+#   In #*# CURRENCY                                                                                : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
+<Multi_key><s><o><greater>                                                                         : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
+#   In #*# CURRENCY                                                                                : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
+<Multi_key><s><o><less>                                                                            : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
 #   In group 9 of "!"                                                                              : "∴" U2234 # THEREFORE
-<Multi_key><period><period><period><a>                                                     <space> : "∴" U2234 # THEREFORE
-<Multi_key><period><period><period><a>                                              <nobreakspace> : "∴" U2234 # THEREFORE
-<Multi_key><period><period><period><v><v>                                                  <space> : "∴" U2234 # THEREFORE
-<Multi_key><period><period><period><v><v>                                           <nobreakspace> : "∴" U2234 # THEREFORE
+<Multi_key><period><period><period><a>                                                             : "∴" U2234 # THEREFORE
+<Multi_key><period><period><period><A>                                                             : "∴" U2234 # THEREFORE
 #   In group 10 of "!"                                                                             : "∵" U2235 # BECAUSE
-<Multi_key><period><period><period><v>                                                     <space> : "∵" U2235 # BECAUSE
-<Multi_key><period><period><period><v>                                              <nobreakspace> : "∵" U2235 # BECAUSE
+<Multi_key><period><period><period><v>                                                             : "∵" U2235 # BECAUSE
+<Multi_key><period><period><period><V>                                                             : "∵" U2235 # BECAUSE
 #
 #   "∶" U2236 RATIO is disunified from the colon with the rationale that
 #   unlike the punctuation, it is visibly padded as a relational operator.
