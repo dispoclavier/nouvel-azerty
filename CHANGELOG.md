@@ -77,7 +77,7 @@ Dans réfléchi, "ʕ" U+0295 est désormais par "G" au lieu de "q".
 	* Tréma :
 		* Ajouter "᫜" U+1ADC par "^".
 		* Tréma souscrit : Ajouter "᫝" U+1ADD par "*".
-* Documentation : Convertir le Démarrage-rapide.txt de texte brut en Markdown et le fournir en PDF. Démarrage-rqpide.md [8d3d6e1](https://github.com/dispoclavier/nouvel-azerty/commit/8d3d6e17721137c34753a90b8b0e1c89f211159a)
+* Documentation : Convertir le Démarrage-rapide.txt de texte brut en Markdown et le fournir en PDF. Démarrage-rapide.md [8d3d6e1](https://github.com/dispoclavier/nouvel-azerty/commit/8d3d6e17721137c34753a90b8b0e1c89f211159a)
 
 ## 6.0.3 (2025-08-24)
 
