@@ -16,19 +16,19 @@ Ce mode d’emploi complémentaire présente uniquement ce qui est particulier �
 
 #### Modificatrices
 
-Ce nouvel AZERTY utilise toutes les modificatrices que Windows prend en charge, afin de dédommager de la mauvaise mise en œuvre des touches mortes sous Windows.
+Ce nouvel AZERTY permet d’utiliser toutes les modificatrices que Windows prend en charge, afin de dédommager de la mauvaise mise en œuvre des touches mortes par Microsoft (qui a confié ce chantier à un développeur pas assez qualifié qui ne travaillait pas assez bien).
 
 Alerter les personnes utilisatrices que les touches mortes façon Windows dysfonctionnent, sans leur proposer de compensations grâce aux points forts de Windows, serait extrêmement mauvais. En conséquence, les développeurs de dispositions de clavier sous Windows n’ont pas le droit de priver de fonctionnalités les personnes intéressées.
 
-C’est pourquoi on ne saurait faire l’économie des modificatrices AltLe et AltQr ajoutées sur les bascules Verrouillage Capitales et Verrouillage Mode.
+C’est pourquoi on ne saurait faire l’économie des modificatrices AltLe et AltQr, ajoutées sur les bascules Verrouillage Capitales et Verrouillage Mode, et qui facilitent énormément la saisie des émojis drapeaux et de plusieurs alphabets mathématiques préformatés.
 
 ##### AltGr
 
-D’habitude, sous Windows, AltGr est Contrôle + Alt. Comme cette émulation est [déconseillée](https://blog.keyman.com/2008/06/robust-key-mess/), elle est remplacée par l’une des quatre autres modificatrices disponibles.
+D’habitude, sous Windows, AltGr est Contrôle + Alt et interfère avec les raccourcis clavier si les applications ne gèrent pas ces conflits. Word les gère très bien, mais c’est loin d’être le cas de tous les programmes. C’est pourquoi cette émulation est [déconseillée](https://blog.keyman.com/2008/06/robust-key-mess/) et remplacée par l’une des quatre autres modificatrices disponibles (peu importe laquelle, mais le plus logique est de prendre la première, 0x10).
 
 ##### AltFr
 
-Pour mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Contrôle droite, en cas d’absence de la touche ISO entre Majuscule gauche et [W], des fichiers de redisposition de codes matériels de touches se trouvent dans le dossier redispositions\\.
+Comme AltFr est sur la touche ISO entre Majuscule gauche et [W], et que cette touche manque sur les agencements ANSI, on peut mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Contrôle droite. Pour ce faire, des fichiers de redisposition de codes matériels de touches se trouvent dans le dossier redispositions\\.
 
 ##### AltLe
 
