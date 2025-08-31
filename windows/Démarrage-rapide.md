@@ -2,7 +2,7 @@
 
 ## Installation sous Windows
 
-1. Ce nouvel AZERTY est dans « kbfrFRs-[numéro de version et numéro de build]-installation ».
+1. Ce nouvel AZERTY est dans le dossier installer\\Un-nouvel-AZERTY.
 
 2. Ouvrir les Propriétés du setup.exe et cocher la case Débloquer en bas à droite.
 
@@ -14,7 +14,7 @@
 
 6. Ensuite, pour commencer à utiliser ce nouvel AZERTY :
 
-* Ou bien activer la disposition de clavier France AZERTY semi-automatique dans les Paramètres : Heure et langue > Langue > Clavier > Remplacer la méthode d’entrée par défaut.
+* Ou bien activer la disposition de clavier « France AZERTY semi-automatique » dans les Paramètres > Heure et langue > Langue > Clavier > Remplacer la méthode d’entrée par défaut.
 
 * Ou bien redémarrer l’ordinateur et utiliser le commutateur « Barre de langues » près de l’horloge.
 
