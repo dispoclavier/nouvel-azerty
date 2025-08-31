@@ -18,9 +18,27 @@ Réimplémentation des touches mortes enchaînées diacritiques ou transformatio
 
 Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
 
-## 6.0.5 (projet)
+## 6.0.6 (projet)
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+
+## 6.0.5 (2025-08-31)
+
+Variantes pour la Polynésie française et pour l’Afrique francophone AZERTY sous Windows.
+
+Rectification et simplification de séquences de composition.
+
+* Disposition :
+	* Variantes :
+		* Ajouter la variante Polynésie française AZERTY sous Windows. kbfrPFs.C, kbfrPFs.klc, kbcomazerty.c [f3c0922](https://github.com/dispoclavier/nouvel-azerty/commit/f3c09220211458f3bf009d5e8a308749c79bec79), kbcomredispo.c [4e0f39e](https://github.com/dispoclavier/nouvel-azerty/commit/4e0f39ea52ccda80d6052c4e2928a12b859daace)
+		* Ajouter la variante Afrique francophone AZERTY sous Windows. kbfrAFs.C, kbfrAFs.klc ibidem
+* Composition :
+	* Simplifier, améliorer ou corriger les séquences de "∱" U+2231, "∲" U+2232, "∳" U+2233, "∴" U+2234, "∵" U+2235. compose-1.yml [6bf5037](https://github.com/dispoclavier/nouvel-azerty/commit/6bf5037c7b71fe8c493e5143aab88cf68880a814)
+	* Simplifier, améliorer ou corriger les séquences de "∷" U+2237, "∹" U+2239, "∺" U+223A, "∻" U+223B, "∾" U+223E, "∿" U+223F, "≀" U+2240, "≂" U+2242, "≋" U+224B, "≎" U+224E, "≎" U+224E, "≒" U+2252, "≓" U+2253, "≔" U+2254, "≕" U+2255, "≖" U+2256, "≗" U+2257, "≘" U+2258, "≙" U+2259, "≙" U+2259, "≚" U+225A, "≛" U+225B, "≝" U+225D. compose-1.yml [3f9ab87](https://github.com/dispoclavier/nouvel-azerty/commit/3f9ab8791478048f0e4f3b90bd02f53d1a2d023d)
+* Documentation :
+	* Mettre à jour les modes d’emploi. windows/readme.md [2c20a49](https://github.com/dispoclavier/nouvel-azerty/commit/2c20a496ae4916f6f621d2887d733cb25f657fa6), [9529865](https://github.com/dispoclavier/nouvel-azerty/commit/9529865df20c98d248cf882271885b3be2b850bf), [bd3c651](https://github.com/dispoclavier/nouvel-azerty/commit/bd3c651f6f8b484fa73e670c4974d278bc24b08c), Démarrage-rapide.md [d71be81](https://github.com/dispoclavier/nouvel-azerty/commit/d71be816c73cd7bf8bef1c71a9f84a2a1f552504), Lisez-moi-svp.md [0a31ebc](https://github.com/dispoclavier/nouvel-azerty/commit/0a31ebcff4ec7156ce443d9b18b57173edecfafb), linux-chromeos/readme.md [cbe0a60](https://github.com/dispoclavier/nouvel-azerty/commit/cbe0a60e0194d75d7f6d94aaaccbb195726fbd3e), Lisez-moi-svp.md [3a34a5b](https://github.com/dispoclavier/nouvel-azerty/commit/3a34a5b36d870f525a738265994b3848ddb616ab)
+	* Mieux décrire les bogues connus. kbcommon.c [f3c0922](https://github.com/dispoclavier/nouvel-azerty/commit/f3c09220211458f3bf009d5e8a308749c79bec79)
+	* Simplifier la maintenance des séquences de composition. compose-1.yml [aa51478](https://github.com/dispoclavier/nouvel-azerty/commit/aa5147813f7872b2d3fe7faca6b3f6a5c6fd2ca6)
 
 ## 6.0.4 (2025-08-27)
 
@@ -88,13 +106,13 @@ Débogage de 2 touches AZERTY sous Windows.
 * Disposition :
 	* Déboguer les touches E07 et E08 par rapport au verrouillage des capitales. kbfrFRs.klc [ac61bdd](https://github.com/dispoclavier/nouvel-azerty/commit/ac61bdd8d23a011b85ef3f30416531af1a8f8ff7), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
 	* (AltGr +) AltFr + AltLe (+ AltQr) : Redonder le gluon U+2060 sur la barre d’espace. kbfrFRs.C [454cec1](https://github.com/dispoclavier/nouvel-azerty/commit/454cec12f53328113cde8017d9b1ccafcb19506c), kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
-	* Simplifier le code source des séquences. ibidem, kbfrFRs.C [2446f85](https://github.com/dispoclavier/nouvel-azerty/commit/2446f85262e50a1051eb4acca84cfd2970109af1), kbligatures.c idem, kbligazerty.c idem, kbfrFRsr.C [89205d9](https://github.com/dispoclavier/nouvel-azerty/commit/89205d9f64cec8da6cbc074812c10a350a33b523), kbligqzjfgy.c idem
+	* Simplifier le code source des séquences. ibidem, kbfrFRs.C, kbligatures.c, kbligazerty.c [2446f85](https://github.com/dispoclavier/nouvel-azerty/commit/2446f85262e50a1051eb4acca84cfd2970109af1), kbfrFRsr.C, kbligqzjfgy.c [89205d9](https://github.com/dispoclavier/nouvel-azerty/commit/89205d9f64cec8da6cbc074812c10a350a33b523)
 	* Variantes régionales :
-		* Compléter la simplification du code source. kbfrFRs.C [7c4f414](https://github.com/dispoclavier/nouvel-azerty/commit/7c4f414fd50b1a72ffe4ec94570349f1d0318309), kbcommon.c idem, kbfrFRsr.C [bb33ef4](https://github.com/dispoclavier/nouvel-azerty/commit/bb33ef48fbd1c709197647c96ea90e268cc1a1cb) ; kbfrFRs.C [b092d35](https://github.com/dispoclavier/nouvel-azerty/commit/b092d3571b0bd49b9af985cb6a509d2e1ab24062), kbcommon.c idem, kbcomazerty.c idem, kbligatures.c idem, kbfrFRsr.C [c79e328](https://github.com/dispoclavier/nouvel-azerty/commit/c79e328c434145357b2f71733761aa8474381e63), kbcomqzjfgy.c idem
+		* Compléter la simplification du code source. kbfrFRs.C, kbcommon.c [7c4f414](https://github.com/dispoclavier/nouvel-azerty/commit/7c4f414fd50b1a72ffe4ec94570349f1d0318309), kbfrFRsr.C [bb33ef4](https://github.com/dispoclavier/nouvel-azerty/commit/bb33ef48fbd1c709197647c96ea90e268cc1a1cb) ; kbfrFRs.C, kbcommon.c, kbcomazerty.c, kbligatures.c [b092d35](https://github.com/dispoclavier/nouvel-azerty/commit/b092d3571b0bd49b9af985cb6a509d2e1ab24062), kbfrFRsr.C, kbcomqzjfgy.c [c79e328](https://github.com/dispoclavier/nouvel-azerty/commit/c79e328c434145357b2f71733761aa8474381e63)
 			* Renommer kbfrFRs.H en kbazerty.h. kbazerty.h [48cd71b](https://github.com/dispoclavier/nouvel-azerty/commit/48cd71b279c87423b24f71a78f89ad4f109bf486), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc)
 			* Renommer kbfrFRsr.H en kbqzjfgy.h. kbqzjfgy.h [48cf9f4](https://github.com/dispoclavier/nouvel-azerty/commit/48cf9f4e75d79278fdcd80950486951f6b6459f8), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80)
 			* Supprimer les fichiers *.DEF. kbfrFRs.DEF [11e7ab3](https://github.com/dispoclavier/nouvel-azerty/commit/11e7ab384484ad5191707be9620011b673287051), kbfrFRs.C [9a345fe](https://github.com/dispoclavier/nouvel-azerty/commit/9a345fe47ba09516e0fad02197433e4e9a43e7fc), [edefb2a](https://github.com/dispoclavier/nouvel-azerty/commit/edefb2a74a6389fcab7853ef930e81fe17fb3c69), kbfrFRsr.DEF [3854057](https://github.com/dispoclavier/nouvel-azerty/commit/3854057d42bb7fb43c2fc4d11ed365904571184d), kbfrFRsr.C [cea8dfc](https://github.com/dispoclavier/nouvel-azerty/commit/cea8dfc7a8f02b11bbdf380c38d576da25abfc80), [8c477ab](https://github.com/dispoclavier/nouvel-azerty/commit/8c477abf7388b25f9481a4249731e0f918999a98)
-		* Ajouter la variante bretonne AZERTY sous Windows. kbbrFRs.klc [2457768](https://github.com/dispoclavier/nouvel-azerty/commit/2457768fc41eaddd200212930466ceec46368eb9), kbbrFRs.C idem, kbbrFRs.RC idem, [8aff57c](https://github.com/dispoclavier/nouvel-azerty/commit/8aff57cd7715367b158e1a8448850c31fa6a6af2)
+		* Ajouter la variante bretonne AZERTY sous Windows. kbbrFRs.klc, kbbrFRs.C, kbbrFRs.RC [2457768](https://github.com/dispoclavier/nouvel-azerty/commit/2457768fc41eaddd200212930466ceec46368eb9), [8aff57c](https://github.com/dispoclavier/nouvel-azerty/commit/8aff57cd7715367b158e1a8448850c31fa6a6af2)
 	* Variantes redisposées :
 		* Déboguer (mettre à jour) #include "kbfrFRsr.h". kbfrFRsr.C [26edd8e](https://github.com/dispoclavier/nouvel-azerty/commit/26edd8ea8ea5e92832e32cf74dd5204d9aceb57e)
 		* Génériquer les noms et chemins de fichier :
@@ -116,7 +134,7 @@ L’émoji du phoque sur touche vive sous Windows.
 
 Des touches mortes simplifiées.
 
-* Disposition : E11, niveau 9 : Ajouter "🦭" U+1F9AD à la place de "*️⃣", qui est sur C12. kbfrFRs.C [87810e2](https://github.com/dispoclavier/nouvel-azerty/commit/87810e28077c6f8dfa7cc7558fc3b50ed1b79dfb), kbdeadtrans.c idem, kbfrFRsr.C [12f7083](https://github.com/dispoclavier/nouvel-azerty/commit/12f708311f1068818be416c81f2cd6bb1db0a792)
+* Disposition : E11, niveau 9 : Ajouter "🦭" U+1F9AD à la place de "*️⃣", qui est sur C12. kbfrFRs.C, kbcommon.H, kbdeadtrans.c [87810e2](https://github.com/dispoclavier/nouvel-azerty/commit/87810e28077c6f8dfa7cc7558fc3b50ed1b79dfb), kbfrFRsr.C [12f7083](https://github.com/dispoclavier/nouvel-azerty/commit/12f708311f1068818be416c81f2cd6bb1db0a792)
 * Transformations :
 	* Tourné et bouclé : Simplifier la saisie de "𝼍" U+1DF0D. compose-2.yml [152a0c5](https://github.com/dispoclavier/nouvel-azerty/commit/152a0c5ad60b1800779926ce7d548ac729e187c6)
 	* Inversé et groupe 1 :
@@ -229,6 +247,16 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 		* Touche échappement :
 			* Niveau 5 : Ajouter le nom de la variante. kbfrFRs.C [f17bf4f](https://github.com/dispoclavier/nouvel-azerty/commit/f17bf4f0055aa836832c214e4c1e122c7c669a22), kbfredis.C [9b675ce](https://github.com/dispoclavier/nouvel-azerty/commit/9b675ce2710b45fd31add8f8996e1a9abe047c8a)
 			* Niveau 6 : Ajouter le numéro de version. ibidem
+	* Variantes :
+		* Variante redisposée de base : Aligner les noms de fichier sur les noms établis.
+			* kbfredis.C devient kbfrFRsr.C. [730f0f9](https://github.com/dispoclavier/nouvel-azerty/commit/730f0f9d4889c363f30c6375347c4308b7c6fda8)
+			* kbfredis.DEF devient kbfrFRsr.DEF. [e2dea1b](https://github.com/dispoclavier/nouvel-azerty/commit/e2dea1b3f8264a3c2741453957576c39c4f78a81)
+			* kbfredis.H devient kbfrFRsr.H. [c685d07](https://github.com/dispoclavier/nouvel-azerty/commit/c685d073a528f02dcfca8403bc28f3c952da353b)
+			* kbfredis.RC devient kbfrFRsr.RC. [84a648a](https://github.com/dispoclavier/nouvel-azerty/commit/84a648ac537988bae50f132c1f5e1bfc079a5f8d)
+			* kbfredis.klc devient kbfrFRsr.klc. [a2da410](https://github.com/dispoclavier/nouvel-azerty/commit/a2da41057cd5ee795b41478bd1a92f04d484c1a5)
+	* Sous-variantes :
+		* Corriger les fichiers pour Linux et les mettre en ligne. evdev.c [20f6df1](https://github.com/dispoclavier/nouvel-azerty/commit/20f6df1504136fa544a60a9c2a2dce5fcf1c53c2), [6c1a939](https://github.com/dispoclavier/nouvel-azerty/commit/6c1a9394e0e2fa7d80e2261c43e05eb8bbe13795), [43b9b0b](https://github.com/dispoclavier/nouvel-azerty/commit/43b9b0b3a2cc6ba11f2451f3978cb6c7f4141c4e), linux/chromeos/redispositions/evdev-ansi.c, evdev-ansi-menu.c, evdev-ansi-menu-sans.c, evdev-ansi-pur.c, evdev-ctrl.c, evdev-menu.c, evdev-menu-sans.c, evdev-win.c, evdev-win-sans.c [19b2ece](https://github.com/dispoclavier/nouvel-azerty/commit/19b2ece949e1de96cc2bd9f5c6191cf126ef71be), [5bc557e](https://github.com/dispoclavier/nouvel-azerty/commit/5bc557ef5a4ad8091a9072f6e5506690d59e232a), [9098687](https://github.com/dispoclavier/nouvel-azerty/commit/9098687b4bee70cf6029f59b7de3a68225075b20), [6865ae0](https://github.com/dispoclavier/nouvel-azerty/commit/6865ae028ea303b7ee0fa416b434e6105acdfe39)
+		* Ajouter l’équivalent pour Windows. windows/redispositions/readme.md alias _Scancode_Map.txt [859528e](https://github.com/dispoclavier/nouvel-azerty/commit/859528eca5a6d43b5f828f6f315375162f76bd11), [7ca3436](https://github.com/dispoclavier/nouvel-azerty/commit/7ca3436c120f6d60ff84461c55831190ee3037bc), [40bea50](https://github.com/dispoclavier/nouvel-azerty/commit/40bea506488a325a7b789cfc55bfa6f3cd79c6eb), [6b2d0d4](https://github.com/dispoclavier/nouvel-azerty/commit/6b2d0d458f36338dc00dac75447e65928eec26de), [eeb4811](https://github.com/dispoclavier/nouvel-azerty/commit/eeb4811589389e8ca846ef8bb350a23f14eefd13), [964feb7](https://github.com/dispoclavier/nouvel-azerty/commit/964feb7fea816929436b39195e2875bbd0226350), [923d88a](https://github.com/dispoclavier/nouvel-azerty/commit/923d88a599b74229b95ff0135d6c94eb6c623924), [6dffbaf](https://github.com/dispoclavier/nouvel-azerty/commit/6dffbaf9c7796bbd0d2c80f450c1925b45b14364), [b1f81ad](https://github.com/dispoclavier/nouvel-azerty/commit/b1f81ad57704c481b045e403ba1d4644ff72dbcf), [8c03400](https://github.com/dispoclavier/nouvel-azerty/commit/8c03400541bc7bb78b822fbe1533920ce48b0343), [46bd178](https://github.com/dispoclavier/nouvel-azerty/commit/46bd178b2f15883a376fa2e68abe4831d07afbcd), windows/redispositions/annulation.reg, ansi-iso.reg, ansi-iso_menu=ret-arr_sans-menu.reg, ansi-iso_menu=x=ret-arr.reg, ansi-pur.reg, ctrl-dr=x=ret-arr.reg, menu=ret-arr_sans-menu.reg, menu=x=ret-arr.reg, win-dr=ret-arr.reg, win-dr=ret-arr_sans-menu.reg [1a46fc8](https://github.com/dispoclavier/nouvel-azerty/commit/1a46fc852dee5659bec5378a6622d6b2a25d96ae), [b3865f1](https://github.com/dispoclavier/nouvel-azerty/commit/b3865f1d63343884e744db3c78392bf5fc810e0a), [6a4c947](https://github.com/dispoclavier/nouvel-azerty/commit/6a4c947006073ef9888a99d1b14134b548cdbda3), [ed21663](https://github.com/dispoclavier/nouvel-azerty/commit/ed2166302fc7b33fe56bd06b70c7d4766469ad2d), [f58bb25](https://github.com/dispoclavier/nouvel-azerty/commit/f58bb25c905adde87a930f7e825612b903d2e594), [b84b94f](https://github.com/dispoclavier/nouvel-azerty/commit/b84b94f143e5ee8c67b9f6765fd5961c44fb69e5), [d9932ab](https://github.com/dispoclavier/nouvel-azerty/commit/d9932ab9621a4830ca11202689648de53164ed0a)
 * Composition :
 	* Ajouter « ¦d| » pour "‬" U+202C. compose-1.yml [e1e7e69](https://github.com/dispoclavier/nouvel-azerty/commit/e1e7e6933d618630cb0a6bf010500e2e92fabd18)
 	* Changer la séquence de "―" U+2015 de « ¦8- » en « ¦7- ». compose-1.yml [e3de699](https://github.com/dispoclavier/nouvel-azerty/commit/e3de699bff76a6932a15bc55a54fea656933cc64)
@@ -273,16 +301,6 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 		* Déboguer "Ǜ" U+01DB. ibidem
 		* Redonder "⸺" U+2E3A par "–" U+2013, "⸻" U+2E3B par "—" U+2014. ibidem
 		* Redonder "⹀" U+2E40 par "-", l’enlever du groupe 1. compose-2.yml [1192b90](https://github.com/dispoclavier/nouvel-azerty/commit/1192b90c34ae4e6e95c006570317bca7f67a2658), kbfrFRs.C [5de5a1c](https://github.com/dispoclavier/nouvel-azerty/commit/5de5a1c98c27f304465042980794a192e8a8512b), kbfrFRsr.C [dd49f4d](https://github.com/dispoclavier/nouvel-azerty/commit/dd49f4dae9adc0a8f67cbc7e143f709822de55d2)
-* Variantes de disposition :
-	* Variante redisposée de base : Aligner les noms de fichier sur les noms établis.
-		* kbfredis.C devient kbfrFRsr.C. [730f0f9](https://github.com/dispoclavier/nouvel-azerty/commit/730f0f9d4889c363f30c6375347c4308b7c6fda8)
-		* kbfredis.DEF devient kbfrFRsr.DEF. [e2dea1b](https://github.com/dispoclavier/nouvel-azerty/commit/e2dea1b3f8264a3c2741453957576c39c4f78a81)
-		* kbfredis.H devient kbfrFRsr.H. [c685d07](https://github.com/dispoclavier/nouvel-azerty/commit/c685d073a528f02dcfca8403bc28f3c952da353b)
-		* kbfredis.RC devient kbfrFRsr.RC. [84a648a](https://github.com/dispoclavier/nouvel-azerty/commit/84a648ac537988bae50f132c1f5e1bfc079a5f8d)
-		* kbfredis.klc devient kbfrFRsr.klc. [a2da410](https://github.com/dispoclavier/nouvel-azerty/commit/a2da41057cd5ee795b41478bd1a92f04d484c1a5)
-	* Sous-variantes :
-		* Corriger les fichiers pour Linux et les mettre en ligne. evdev.c [20f6df1](https://github.com/dispoclavier/nouvel-azerty/commit/20f6df1504136fa544a60a9c2a2dce5fcf1c53c2), [6c1a939](https://github.com/dispoclavier/nouvel-azerty/commit/6c1a9394e0e2fa7d80e2261c43e05eb8bbe13795), [43b9b0b](https://github.com/dispoclavier/nouvel-azerty/commit/43b9b0b3a2cc6ba11f2451f3978cb6c7f4141c4e), linux/chromeos/redispositions/evdev-ansi.c, evdev-ansi-menu.c, evdev-ansi-menu-sans.c, evdev-ansi-pur.c, evdev-ctrl.c, evdev-menu.c, evdev-menu-sans.c, evdev-win.c, evdev-win-sans.c [19b2ece](https://github.com/dispoclavier/nouvel-azerty/commit/19b2ece949e1de96cc2bd9f5c6191cf126ef71be), [5bc557e](https://github.com/dispoclavier/nouvel-azerty/commit/5bc557ef5a4ad8091a9072f6e5506690d59e232a), [9098687](https://github.com/dispoclavier/nouvel-azerty/commit/9098687b4bee70cf6029f59b7de3a68225075b20), [6865ae0](https://github.com/dispoclavier/nouvel-azerty/commit/6865ae028ea303b7ee0fa416b434e6105acdfe39)
-		* Ajouter l’équivalent pour Windows. windows/redispositions/readme.md alias _Scancode_Map.txt [859528e](https://github.com/dispoclavier/nouvel-azerty/commit/859528eca5a6d43b5f828f6f315375162f76bd11), [7ca3436](https://github.com/dispoclavier/nouvel-azerty/commit/7ca3436c120f6d60ff84461c55831190ee3037bc), [40bea50](https://github.com/dispoclavier/nouvel-azerty/commit/40bea506488a325a7b789cfc55bfa6f3cd79c6eb), [6b2d0d4](https://github.com/dispoclavier/nouvel-azerty/commit/6b2d0d458f36338dc00dac75447e65928eec26de), [eeb4811](https://github.com/dispoclavier/nouvel-azerty/commit/eeb4811589389e8ca846ef8bb350a23f14eefd13), [964feb7](https://github.com/dispoclavier/nouvel-azerty/commit/964feb7fea816929436b39195e2875bbd0226350), [923d88a](https://github.com/dispoclavier/nouvel-azerty/commit/923d88a599b74229b95ff0135d6c94eb6c623924), [6dffbaf](https://github.com/dispoclavier/nouvel-azerty/commit/6dffbaf9c7796bbd0d2c80f450c1925b45b14364), [b1f81ad](https://github.com/dispoclavier/nouvel-azerty/commit/b1f81ad57704c481b045e403ba1d4644ff72dbcf), [8c03400](https://github.com/dispoclavier/nouvel-azerty/commit/8c03400541bc7bb78b822fbe1533920ce48b0343), [46bd178](https://github.com/dispoclavier/nouvel-azerty/commit/46bd178b2f15883a376fa2e68abe4831d07afbcd), windows/redispositions/annulation.reg, ansi-iso.reg, ansi-iso_menu=ret-arr_sans-menu.reg, ansi-iso_menu=x=ret-arr.reg, ansi-pur.reg, ctrl-dr=x=ret-arr.reg, menu=ret-arr_sans-menu.reg, menu=x=ret-arr.reg, win-dr=ret-arr.reg, win-dr=ret-arr_sans-menu.reg [1a46fc8](https://github.com/dispoclavier/nouvel-azerty/commit/1a46fc852dee5659bec5378a6622d6b2a25d96ae), [b3865f1](https://github.com/dispoclavier/nouvel-azerty/commit/b3865f1d63343884e744db3c78392bf5fc810e0a), [6a4c947](https://github.com/dispoclavier/nouvel-azerty/commit/6a4c947006073ef9888a99d1b14134b548cdbda3), [ed21663](https://github.com/dispoclavier/nouvel-azerty/commit/ed2166302fc7b33fe56bd06b70c7d4766469ad2d), [f58bb25](https://github.com/dispoclavier/nouvel-azerty/commit/f58bb25c905adde87a930f7e825612b903d2e594), [b84b94f](https://github.com/dispoclavier/nouvel-azerty/commit/b84b94f143e5ee8c67b9f6765fd5961c44fb69e5), [d9932ab](https://github.com/dispoclavier/nouvel-azerty/commit/d9932ab9621a4830ca11202689648de53164ed0a)
 * Installation :
 	* Sous Windows : Fichiers .klc :
 		* Déboguer pour le Microsoft Keyboard Layout Creator (MSKLC). kbfrFRs.klc. [93980ca](https://github.com/dispoclavier/nouvel-azerty/commit/93980ca84d340f5b65749388f919e0fd5cda0893), kbfrFRsr.klc. [a2da410](https://github.com/dispoclavier/nouvel-azerty/commit/a2da41057cd5ee795b41478bd1a92f04d484c1a5)
@@ -1630,7 +1648,7 @@ Script d’installation amélioré.
 
 ## 2.3.1 (2024-06-12)
 
-* Variantes redisposées : Disposition : Restaurer la touche morte accent grave, perdue dès la version 2.0.0. dispocla.cpp [3447c5d](https://github.com/dispoclavier/nouvel-azerty/commit/3447c5dd892925f994af6e36f249f137b0a57e5f)
+* Disposition : Variantes redisposées : Restaurer la touche morte accent grave, perdue dès la version 2.0.0. dispocla.cpp [3447c5d](https://github.com/dispoclavier/nouvel-azerty/commit/3447c5dd892925f994af6e36f249f137b0a57e5f)
 * Documentation. dispocla.cpp [ff2ae89](https://github.com/dispoclavier/nouvel-azerty/commit/ff2ae89b787340d93e2956e1561ef18e5cdbaca9), [a765295](https://github.com/dispoclavier/nouvel-azerty/commit/a765295c5159be22d6a8c4084850542870b8a25e), [abad9ea](https://github.com/dispoclavier/nouvel-azerty/commit/abad9ea974e0f2e65584a9f6262e6c3ebd017740), [3447c5d](https://github.com/dispoclavier/nouvel-azerty/commit/3447c5dd892925f994af6e36f249f137b0a57e5f), compose-1.yml [479e3fa](https://github.com/dispoclavier/nouvel-azerty/commit/479e3fa96252ef1396c917695fff971cb4a9ab20), [7b1dc2b](https://github.com/dispoclavier/nouvel-azerty/commit/7b1dc2ba2994e69c0b36f3dc345d1bb99e3f76ff), compose-2.yml [ca21e7b](https://github.com/dispoclavier/nouvel-azerty/commit/ca21e7b84d88fbfe062d0d7e26f812a7476e9ed0), compose-3.yml [41fd139](https://github.com/dispoclavier/nouvel-azerty/commit/41fd139c247d8c45cc70c0a208acd76f1a672ec4)
 
 ## 2.3.0 (2024-06-08)
@@ -1886,7 +1904,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
 
 ## 1.4.0 (2023-12-06)
 
-* Variantes : Polynésie :
+* Disposition : Variantes : Polynésie :
 	* Restaurer la touche morte accent grave. dispocla.cpp [dc8c459](https://github.com/dispoclavier/nouvel-azerty/commit/dc8c459efc700caa76344415f461a6d68f29efe6), [66de23c](https://github.com/dispoclavier/nouvel-azerty/commit/66de23c18921158c464c915a8baa7f117e826671)
 	* Utiliser la touche E08 (ou E07 sur la variante redisposée) pour la touche morte macron et pour le ʻeta polynésien afin de l’avoir sur touche vive. ibidem
 * Transformations : Groupes des symboles : Redonder "―" U+2015 et "‑" U+2011 par "ʻ" U+02BB et la touche morte macron sur E08 ou E07 des variantes pour la Polynésie. compose-2.yml [5506742](https://github.com/dispoclavier/nouvel-azerty/commit/55067425c798e52db60680c8ed445d86917392a2), dispocla.cpp [ff3a66d](https://github.com/dispoclavier/nouvel-azerty/commit/ff3a66d129082374dc9d814fa20b16ae11448ba3)
@@ -1894,7 +1912,7 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
 
 ## 1.3.0 (2023-12-03)
 
-* Variantes : Ajouter des variantes redisposées :
+* Disposition : Variantes : Ajouter des variantes redisposées :
 	* Breton et français disposition de clavier semi-automatique redisposée. dispocla.cpp [df98b31](https://github.com/dispoclavier/nouvel-azerty/commit/df98b3125d4f39de7e60a5c81333daa32e6063b9), [ef0eba1](https://github.com/dispoclavier/nouvel-azerty/commit/ef0eba1031c37950960ccfe59297cc638b4d485e), compose-1.yml [edd54e1](https://github.com/dispoclavier/nouvel-azerty/commit/edd54e1af53ff129c4ee63050ad0b221e338d88f), [259a61d](https://github.com/dispoclavier/nouvel-azerty/commit/259a61da12da22541050ae6faa2b9c9e10015c3e), evdev-additions.xml [b2317cd](https://github.com/dispoclavier/nouvel-azerty/commit/b2317cdfe18dadd19f5805fb4e6774d5662e3809), dispotypes.c [e6c157b](https://github.com/dispoclavier/nouvel-azerty/commit/e6c157b7bb4a235ee3641af0387dbe9b82c9c390), dispoled.c [69ab89f](https://github.com/dispoclavier/nouvel-azerty/commit/69ab89fbd6f88a1df2111c3e89ff8057b32a8c1e)
 	* Polynésie française disposition de clavier semi-automatique redisposée. ibidem
 	* Afrique francophone disposition de clavier semi-automatique redisposée. ibidem
@@ -1944,10 +1962,10 @@ Version 2.0 due à la nécessité de redonder en AltGr le symbole euro, de redis
 
 ## 1.1.7 (2023-11-05)
 
-Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.yml [71a5e2d](https://github.com/dispoclavier/nouvel-azerty/commit/71a5e2d0c91c4359ad2e3d4fb4a35a6e1fbe62b4), compose-2.yml [8a64209](https://github.com/dispoclavier/nouvel-azerty/commit/8a64209bb0c0c63b70661b8b3ba11885af366bc7), compose-3.yml [60d1889](https://github.com/dispoclavier/nouvel-azerty/commit/60d1889ac60af7ce367b377b441a6dd97e97b82d)
 * Composition :
 	* Déboguer "⫴" U+2AF4, "⟧" U+27E7, "⋘" U+22D8. compose-1.yml [7d54a6f](https://github.com/dispoclavier/nouvel-azerty/commit/7d54a6f5cae08b862526e5b722282aa82980bc72) (aussi [1b197a0](https://github.com/dispoclavier/nouvel-azerty/commit/1b197a039e765268c3b80d609a3a3194c8698e88))
 	* Ajouter la termination par espace insécable pour tous les symboles terminés par espace. ibidem
+	* Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.yml [71a5e2d](https://github.com/dispoclavier/nouvel-azerty/commit/71a5e2d0c91c4359ad2e3d4fb4a35a6e1fbe62b4), compose-2.yml [8a64209](https://github.com/dispoclavier/nouvel-azerty/commit/8a64209bb0c0c63b70661b8b3ba11885af366bc7), compose-3.yml [60d1889](https://github.com/dispoclavier/nouvel-azerty/commit/60d1889ac60af7ce367b377b441a6dd97e97b82d)
 * Transformations : Hatchek > hatchek souscrit : Ajouter "˰" U+02F0, "˱" U+02F1, "˲" U+02F2. compose-2.yml [c267636](https://github.com/dispoclavier/nouvel-azerty/commit/c267636c75deb04aef6efe56f1175dd17269dab9) (aussi [e29ce4d](https://github.com/dispoclavier/nouvel-azerty/commit/e29ce4d2b18f50002cdbaec02b08b6226f2a6f3d))
 
 ## 1.1.6 (2023-11-04)
@@ -2220,6 +2238,11 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 
 ## 1.0.7 (2023-08-19)
 
+* Disposition :
+	* Variantes :
+		* Supprimer provisoirement les 2 variantes pour le Canada et la variante pour la Suisse pour faciliter la maintenance. dispocla.cpp [bd73f72](https://github.com/dispoclavier/nouvel-azerty/commit/bd73f72760988046ca1c9fcdaeba0ff59e577408)
+		* Supprimer définitivement les 3 variantes hybrides. dispocla.cpp [31919ac](https://github.com/dispoclavier/nouvel-azerty/commit/31919ac3fa37cfb3114762809c6ecd39f0f0d3b3)
+	* Sous-variantes : Effacement arrière : Déplacer sur Windows droite par erreur. evdev.c [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973)
 * Composition :
 	* Déboguer la saisie de "⎋" U+238B. compose-1.yml [5d3f7a6](https://github.com/dispoclavier/nouvel-azerty/commit/5d3f7a618c77f2e01d23def1d93efeac0722a7ec)
 	* Ajouter le caractère de "▮" U+25AE (openrectbullet). compose-1.yml [c1d9ec1](https://github.com/dispoclavier/nouvel-azerty/commit/c1d9ec15431e67f09f93d1b81f52ffa866207b7c)
@@ -2230,10 +2253,6 @@ Nouvelle répartition pour rester en dessous de 2 Mo par fichier. compose-1.ym
 	* Simplifier le code de la barre d’espace. dispocla.cpp [4c4a106](https://github.com/dispoclavier/nouvel-azerty/commit/4c4a106ff4921c1adae901f0e5e3b6e54a076c47), dispotypes.c [763d8b0](https://github.com/dispoclavier/nouvel-azerty/commit/763d8b0dc11221c335c1375e59f3f28960901cee)
 	* Simplifier le code des touches B07..B10. dispocla.cpp [84d81db](https://github.com/dispoclavier/nouvel-azerty/commit/84d81dbf7fd34ac78fbab69db294cbd344e4018f), [08a425e](https://github.com/dispoclavier/nouvel-azerty/commit/08a425e4646dda045406b199198c6484b9d4a3ed), dispotypes.c [5acd8f8](https://github.com/dispoclavier/nouvel-azerty/commit/5acd8f8bdaaca2543f1a07b65954f3490d04b4e6), [074154a](https://github.com/dispoclavier/nouvel-azerty/commit/074154a4411c635d4d7f0eabe53ac3d412766e84), [3537120](https://github.com/dispoclavier/nouvel-azerty/commit/3537120e6583430f167af227d775ff835dac995a), [ab6b2d6](https://github.com/dispoclavier/nouvel-azerty/commit/ab6b2d6a79067556ccc8d69793710004b9aae9d0)
 	* Simplifier le code des touches B01..B06, C01..D12. dispocla.cpp [9485620](https://github.com/dispoclavier/nouvel-azerty/commit/9485620a726089ad6268f93cb6bbf2e315d3af7a), [6198799](https://github.com/dispoclavier/nouvel-azerty/commit/6198799c997d10faaf65eedac93ca94c7a5b1b13), [907ff0e](https://github.com/dispoclavier/nouvel-azerty/commit/907ff0e6517603c96667415223bdde3d2b33802c), dispotypes.c [1246e6d](https://github.com/dispoclavier/nouvel-azerty/commit/1246e6d4cbb109329649f9740a2a22131e0054c0), [89f1d98](https://github.com/dispoclavier/nouvel-azerty/commit/89f1d9823390ef2b6548e234b410308b07eb36f5), [cb5ab2a](https://github.com/dispoclavier/nouvel-azerty/commit/cb5ab2af0e965736278c55d6d72b0751c4b4802f), [ab6b2d6](https://github.com/dispoclavier/nouvel-azerty/commit/ab6b2d6a79067556ccc8d69793710004b9aae9d0)
-* Variantes :
-	* Supprimer provisoirement les 2 variantes pour le Canada et la variante pour la Suisse pour faciliter la maintenance. dispocla.cpp [bd73f72](https://github.com/dispoclavier/nouvel-azerty/commit/bd73f72760988046ca1c9fcdaeba0ff59e577408)
-	* Supprimer définitivement les 3 variantes hybrides. dispocla.cpp [31919ac](https://github.com/dispoclavier/nouvel-azerty/commit/31919ac3fa37cfb3114762809c6ecd39f0f0d3b3)
-* Sous-variantes : Effacement arrière : Déplacer sur Windows droite par erreur. evdev.c [0559e8f](https://github.com/dispoclavier/nouvel-azerty/commit/0559e8ff5b8b34ce91f775624f6293e0a8f98973)
 
 ## 1.0.6 (2023-08-15)
 
