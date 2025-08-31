@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2106+0200
 * Add mod# 33 in main allocation table   6.0.4.01.00 Wed 2025-08-27T1834+0200
 * Redocument circumflex dead key bug     6.0.4.00.00 Wed 2025-08-27T1827+0200
 * Document disordered table dead key bug 6.0.3.04.00 Sun 2025-08-24T1334+0200
@@ -15,8 +16,11 @@
 *
 *
 * Due to the static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[],
-* this file needs to be incldued after all the allocation tables. So, this
+* this file needs to be included after all the allocation tables. So, this
 * #include stands typically near the file end.
+*
+* Known bugs are documented in this file.
+* See ## Known bugs
 \*****************************************************************************/
 
 /*****************************************************************************\
@@ -132,28 +136,33 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 * See kbd.h for a full description.
 *
 * The keyboard has seven shifter keys:
-*     SHIFT (L & R) affects alphanumeric keys;
-*     CTRL  (L & R) is used to generate control characters;
-*     ALT   (Left)  used for generating characters by number with numpad.
-*     0x10  (Right) emulates the Alternate Graphic modifier key
+*     SHIFT (L & R) affects alphanumeric keys
+*     CTRL  (L & R) is used to generate control characters
+*     ALT   (Left)  used for generating characters by number with numpad
+*     0x10  (Right) used for the Alternate Graphic modifier key
 *     0x20  (Left)  AltFr (Alt French) for unspaced punctuation, graphic numpad
 *     0x40  (Left)  AltLe (Alt Letter emoji) for country flags, other emoji
 *     0x80  (Left)  AltQr (Alt Quick response) for math alphabets and emoji
 *
-* While AltGr is right Alt, AltFr is the ISO key B00, or it goes on Caps Lock,
-* that goes then on right Control.
+* The 8th shifter (0x08) is used by the Kana Lock toggle.
+*
+* AltGr is right Alt, but it is not emulated by the Ctrl + Alt combo any more.
+*
+* AltFr is the ISO key B00, or it goes on the Caps Lock key, and that toggle
+* goes then on right Control.
 *
 * For Kana Lock and AltQr, key E00 is repurposed (given that on French AZERTY,
 * E00 is just superscript 2).
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
-    { VK_SHIFT    ,   KBDSHIFT     },
-    { VK_CONTROL  ,   KBDCTRL      },
-    { VK_MENU     ,   KBDALT       },
+    { VK_SHIFT    ,   KBDSHIFT     }, // 1
+    { VK_CONTROL  ,   KBDCTRL      }, // 2
+    { VK_MENU     ,   KBDALT       }, // 4
+                                      // 8 is KANA
     { VK_OEM_AX   ,   16           }, // AltGr key
     { VK_OEM_102  ,   32           }, // AltFr key
-    { VK_CAPITAL  ,   64           }, // AltLe key on top of Caps Lock key
-    { VK_KANA     ,   128          }, // AltQr key on top of Kana Lock key
+    { VK_CAPITAL  ,   64           }, // AltLe key on top of Caps Lock
+    { VK_KANA     ,   128          }, // AltQr key on top of Kana Lock
     { 0           ,   0            }
 };
 
@@ -515,11 +524,34 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * Special values for wch[*] (columns 3..)
 *     WCH_NONE      - No character
 *     WCH_DEAD      - Dead Key (diaresis) or invalid (US keyboard has none)
-*     WCH_LGTR      - Ligature (able to generate multiple characters)
+*     WCH_LGTR      - Ligature (able to generate multiple code units)
 *
 *
 * ## Known bugs
 *    ‾‾‾‾‾‾‾‾‾‾
+* ### Caps Lock bug
+*
+* The feature named Swiss German Capitals (SGCAPS) is unable to support dead
+* keys, and above all, it is unable to support multiple code units (ligatures).
+*
+* https://archives.miloush.net/michkap/archive/2010/07/07/10032340.html
+* https://archives.miloush.net/michkap/archive/2006/01/16/513088.html
+*
+* As a consequence, on AZERTY, where key C11 (VK_OEM_3) has "ù" and requires
+* SGCaps to support "Ù", the spaced-out double angle quotation mark at the
+* shift level of that key is unspaced-out when Caps Lock is on, because as a
+* ligature it just does not work, given the feature is halfways broken.
+*
+* This bug was documented in the code as follows:
+*
+// This key is bugged, as neither the short form nor the long form works as designed. 2025-06-08T0338+0200
+  {VK_OEM_3     ,SGCAPS ,0x00f9   ,WCH_LGTR ,0x2026   ,WCH_LGTR ,0x00ab   ,'%'      ,'A'      ,'\''     ,WCH_NONE ,'\''     ,'%'      ,'`'      ,0x208d   ,'A'      ,0x207d   ,0x208d   ,'\''     ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR ,WCH_LGTR },
+//{0xff         ,0      ,0x00d9   ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {0xff         ,0      ,0x00d9   ,0x00ab   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+//{VK_OEM_3     ,0      ,0x00d9   ,WCH_LGTR }, // This does not work.
+//{VK_OEM_3     ,0      ,0x00d9   ,0x00ab   }, // This works.
+*
+*
 * ### Level 7 bug
 *
 * The level 7 (AltGr + AltFr, i.e. VK_OEM_AX + VK_OEM_102) does not work when
@@ -556,20 +588,23 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * included in a header instead of being included in the main C source, and so
 * was kbd.h.
 *
-* As in build 6.0.3.03, the main allocation table was also upside down, it
-* seemed like this was causing the bug. But ultimately it was not, since the
-* next build 6.0.3.04 fixed that.
+* The bug did not occur since #include <windows.h> was moved back to C sources
+* for the next version 6.0.4.00 on Wed 2025-08-27T1304+0200, so the cause of
+* the bug is narrowed down to the way how the windows.h header is included.
 *
-* Build 6.0.3.03 is available as a pre-release for test purposes:
+* As in build 6.0.3.03, the main allocation table was also upside down, it
+* seemed like this was causing the bug. But ultimately it was not.
+*
+* Anyway, build 6.0.3.03 is available as a pre-release for test purposes:
 * https://github.com/dispoclavier/nouvel-azerty/releases/tag/6.0.3.03
 *
-* Build 6.0.3.04 was released as version 6.0.3 because it seemed okay, but it
-* ended up turning crazy three days later.
+* Build 6.0.3.04 was released as version 6.0.3 on 2025-08-24T2048+0200 because
+* it seemed okay. It ended up turning crazy days later (2025-08-27T1133+0200).
 *
 * Admittedly, such a bug is unexpected in a robust rock-solid operating system.
 * Consistently, this disorder is unheard of on Linux and macOS. So the question
 * is why it could happen on Windows. The defective DEADTRANS macro as discussed
-* in kbdeadtrans.c hints that other parts may be sloppy, too.
+* in kbdeadtrans.c hints that other parts may be problematic, too.
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
@@ -639,7 +674,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
   {  (PVK_TO_WCHARS1)aVkToWch2 ,  2, sizeof(aVkToWch2[0]) },
   {  (PVK_TO_WCHARS1)aVkToWch9 ,  9, sizeof(aVkToWch9[0]) },
   {  (PVK_TO_WCHARS1)aVkToWch17, 17, sizeof(aVkToWch17[0]) },
-  {  (PVK_TO_WCHARS1)aVkToWch34, 34, sizeof(aVkToWch34[0]) },
+  {  (PVK_TO_WCHARS1)aVkToWch40, 40, sizeof(aVkToWch40[0]) },
   {                       NULL ,  0, 0                    },
 };
 
