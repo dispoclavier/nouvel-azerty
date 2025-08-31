@@ -1,4 +1,4 @@
-# 6.0.5 (2025-08-31)
+# 6.0.5 (2025-08-31) mise à jour
 
 Variantes pour la Polynésie française et pour l’Afrique francophone AZERTY sous Windows.
 
@@ -18,22 +18,31 @@ Rectification et simplification de séquences de composition.
 	* Mieux décrire les bogues connus. kbcommon.c [f3c0922](https://github.com/dispoclavier/nouvel-azerty/commit/f3c09220211458f3bf009d5e8a308749c79bec79)
 	* Simplifier la maintenance des séquences de composition. compose-1.yml [aa51478](https://github.com/dispoclavier/nouvel-azerty/commit/aa5147813f7872b2d3fe7faca6b3f6a5c6fd2ca6)
 
-## Un nouvel AZERTY pour Linux et Windows, et bientôt pour macOS
 
-### Windows
+## Pour Windows
 
 En cours de réimplémentation, la version pour Windows est disponible sous forme de pilotes d’essai. Toutes les touches vives sont à jour, toutes les touches mortes simples aussi.
 
-Le contenu des enchaînements de touches mortes, dont ceux de la touche de composition, est basé sur la précédente implémentation de 2018.
+Le contenu des enchaînements de touches mortes, dont ceux de la touche de composition, est basé sur la précédente implémentation de 2018 (parce que le script qui transpile le fichier « Compose.yml » n’est pas fini).
 
-#### Installation
+La variante AZERTY pour la langue bretonne, celle pour la Polynésie française, celle pour l’Afrique francophone ainsi que la variante redisposée de base sont déjà fournies, et toutes les sous-variantes sont prises en charge par fichiers d’entrées d’inscription .reg pour le Registre.
+
+### Installation
 
 Télécharger le dossier « [Un-nouvel-AZERTY-Windows-6.0.5.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.5/Un-nouvel-AZERTY-Windows-6.0.5.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
 
-### Linux
+## Pour Linux
 
-La version pour Linux est entièrement à jour.
+La version pour Linux est entièrement à jour. Non seulement les touches vives, mais aussi le contenu des touches mortes, le fichier « Compose.yml » étant (partiellement) transpilé en C pour Windows.
 
-#### Activation ou installation
+Toutes les variantes AZERTY ou redisposées sont incluses (installation) ou fournies (activation), et toutes les sous-variantes sont pareillement prises en charge.
+
+### Activation ou installation
 
 Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.0.5.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.5/Un-nouvel-AZERTY-Linux-6.0.5.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
+
+## Pour macOS
+
+La version pour macOS est en instance de réimplémentation.
+
+À ce jour, seule une [précédente mise en œuvre](https://dispoclavier.com/doc/kbfrintu/#macos) est disponible, encore sans fichiers de configuration pour [Karabiner-Elements](https://karabiner-elements.pqrs.org).
