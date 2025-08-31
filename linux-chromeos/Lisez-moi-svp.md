@@ -56,12 +56,11 @@ Outre la disposition standard et ses variantes, des optimisations optionnelles s
 
     * Les sous-variantes avec le suffixe "-ctrl" ont les touches Effacement arrière et Contrôle droite permutées.
 
-
 ## Installer ou activer
 
 * Activer une disposition de clavier ne nécessite pas de droits d’administrateur et fonctionne aussi sous Linux Mint. La marche à suivre est sous le titre "Comment activer ce nouvel AZERTY".
 
-* Installer toutes les dispositions de clavier de ce nouvel AZERTY permet de passer l’étape d’activation, comme expliqué dans le fichier « Mode-d-emploi-sous-Linux.md ». Le plus simple est d’utiliser le script installer.sh, mais l’installation manuelle est aussi possible.
+* Installer toutes les dispositions de clavier de ce nouvel AZERTY permet de passer l’étape d’activation, comme expliqué dans le fichier « Mode-d-emploi-sous-Linux.pdf ». Le plus simple est d’utiliser le script installer.sh, mais l’installation manuelle est aussi possible.
 
 ### Comment activer ce nouvel AZERTY
 
@@ -100,6 +99,34 @@ Ce nouvel AZERTY peut maintenant être testé.
 La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente grâce au fichier mis en place à l’étape 1 est :
 
         xkbcomp normal.xkb :0
+
+### Comment installer ce nouvel AZERTY
+
+Sous les versions de Linux postérieures à [Ubuntu 16.04](https://releases.ubuntu.com/16.04/) ou équivalent, il ne paraît pas possible d’alterner entre plusieurs dispositions de clavier, mais on peut changer de disposition en désactivant l’ancienne après avoir activé la nouvelle.
+
+Télécharger le dossier « Un-nouvel-AZERTY-Linux-[version].zip » sous le titre « Assets », et lancer le script [installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh). On peut aussi installer chaque fichier [manuellement](#installation-manuelle).
+
+#### Installation par le script installer.sh
+
+Le script d’installation s’appelle « installer.sh » d’après le verbe français. Il se trouve sur GitHub ([installer.sh](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/installer.sh)) à la racine du dossier « linux-chromeos/ », ainsi qu’à la racine du paquet distribué « Un-nouvel-AZERTY-Linux-[version].zip ».
+
+Selon les réglages, on peut lancer ce script en le cliquant ou en le double-cliquant, et de toute manière par la commande « ./installer.sh » après avoir ouvert le dossier dans un terminal.
+
+Le script commence par analyser la situation, et propose normalement soit d’installer ces dispositions de clavier, soit de les mettre à jour ou de les désinstaller.
+
+Au début de l’installation, le script demande s’il faut **redisposer des touches.** Il s’agit de la touche AltFr, qui peut être redisposée sur la touche de Verrouillage des Capitales, et de la touche d’Effacement arrière, qui peut être redisposée sur la touche Menu, ou sur Windows droite ou Contrôle droite.
+
+Après la sortie d’une nouvelle version, pour **mettre à jour** ces dispositions de clavier par le script, il faut lancer celui-ci, appuyer sur Entrée, saisir le mot de passe administrateur et faire Entrée une dernière fois.
+
+Les **redispositions de touches** sont sauvegardées aussi bien lors de l’installation que lors de la désinstallation et d’une mise à jour. Ces sauvegardes sont enregistrées dans le dossier des configurations dans le dossier personnel de l’utilisateur qui effectue la mise à jour : « $HOME/.config/dispoclavier/keycodes/ ». Au cours de la désinstallation, le même fichier est sauvegardé aussi dans un dossier « sauvegarde/ » créé à côté du script.
+
+Au moment d’installer ou de réinstaller ces dispositions de clavier, si le script détecte un fichier à ces deux endroits, il propose de l’utiliser.
+
+Le fichier de redisposition sauvegardé à côté de ce script offre la facilité d’une **personnalisation** aisée avant sa réinstallation, tandis que celui dans les configurations personnelles assure la pérennité des redispositions à travers les mises à jour du système d’exploitation.
+
+#### Installation manuelle
+
+L’installation pas à pas est décrite dans le « Mode-d-emploi-sous-Linux.pdf ».
 
 ## Témoin lumineux
 
