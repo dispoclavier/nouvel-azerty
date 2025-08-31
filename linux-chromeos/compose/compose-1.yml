@@ -165,6 +165,12 @@
 #                               ⸻ https://unicode.org/mail-arch/unicode-ml/y2016-m02/0071.html
 #
 #
+#
+#   PDFs with parameters like "[URL]/[file name].pdf#page=6&zoom=100,0,800"
+#   require a supporting browser such as Chrome.
+#
+#
+#
 ### Multicharacter strings for live keys
 #
 #   Dead key handling XCompose has the ability to output more than one single
@@ -1244,6 +1250,7 @@
 #
 #   Many characters supported by multikey in this section are also supported by
 #   dead keys, but for maintainability these are not cross-referenced.
+#   https://github.com/dispoclavier/nouvel-azerty/commit/aa5147813f7872b2d3fe7faca6b3f6a5c6fd2ca6
 #
 #
 #^# Legacy ordinal indicators
@@ -2255,12 +2262,16 @@
 #   and even downright wrong documentation of the ASCII hyphen and its Unicode
 #   counterpart.
 #   https://www.unicode.org/versions/Unicode1.0.0/ch03_1.pdf
-#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
 #
 #   As a consequence, U002D HYPHEN-MINUS stands out among ASCII punctuation in
 #   that its usage is sort of deprecated, if not discouraged in current writing
 #   in favor of its homoglyph U2010.
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-6/#G6120
+#
+#   This however is counterbalanced in the section about mathematical symbols,
+#   where the ASCII hyphen is categorized as a punctuation and opposed to the
+#   minus sign as a math symbol, thus implicitly doing away with the duplicate.
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/#G58950
 #
 #   The Unicode Character Database in XML shows that U2010 is a duplicate of
 #   U002D, encoded for an extrinsic undocumented reason discussed below.
@@ -5905,36 +5916,30 @@
 #   unlike the punctuation, it is visibly padded as a relational operator.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
-#   Additionally its vertical alignment matches digits, not the x height.
+#   Additionally, its vertical alignment matches digits, not the x height.
 #   https://github.com/microsoft/cascadia-code/issues/572
+#   (Colon’s does, too, provided that the font supports this.)
+#   https://ux.stackexchange.com/questions/122248/should-u2236-ratio-be-used-as-a-time-separator-instead-of-u003a-colon
 #
 <Multi_key><space><colon>                                                                  <space> : "∶" U2236 # RATIO
 <Multi_key><space><colon>                                                           <nobreakspace> : "∶" U2236 # RATIO
 <Multi_key><nobreakspace><colon>                                                           <space> : "∶" U2236 # RATIO
 <Multi_key><nobreakspace><colon>                                                    <nobreakspace> : "∶" U2236 # RATIO
-<Multi_key><space><colon><colon>                                                           <space> : "∷" U2237 # PROPORTION
-<Multi_key><space><colon><colon>                                                    <nobreakspace> : "∷" U2237 # PROPORTION
-<Multi_key><nobreakspace><colon><colon>                                                    <space> : "∷" U2237 # PROPORTION
-<Multi_key><nobreakspace><colon><colon>                                             <nobreakspace> : "∷" U2237 # PROPORTION
+<Multi_key><space><colon><colon>                                                                   : "∷" U2237 # PROPORTION
+<Multi_key><nobreakspace><colon><colon>                                                            : "∷" U2237 # PROPORTION
 <Multi_key><period><minus>                                                                 <space> : "∸" U2238 # DOT MINUS
 <Multi_key><period><minus>                                                          <nobreakspace> : "∸" U2238 # DOT MINUS
-<Multi_key><minus><colon>                                                                  <space> : "∹" U2239 # EXCESS
-<Multi_key><minus><colon>                                                           <nobreakspace> : "∹" U2239 # EXCESS
-<Multi_key><colon><minus><colon>                                                           <space> : "∺" U223A # GEOMETRIC PROPORTION
-<Multi_key><colon><minus><colon>                                                    <nobreakspace> : "∺" U223A # GEOMETRIC PROPORTION
-<Multi_key><space><colon><asciitilde>                                                      <space> : "∻" U223B # HOMOTHETIC
-<Multi_key><space><colon><asciitilde>                                               <nobreakspace> : "∻" U223B # HOMOTHETIC
-<Multi_key><nobreakspace><colon><asciitilde>                                               <space> : "∻" U223B # HOMOTHETIC
-<Multi_key><nobreakspace><colon><asciitilde>                                        <nobreakspace> : "∻" U223B # HOMOTHETIC
-<Multi_key><space><asciitilde><colon>                                                      <space> : "∻" U223B # HOMOTHETIC
-<Multi_key><space><asciitilde><colon>                                               <nobreakspace> : "∻" U223B # HOMOTHETIC
-<Multi_key><nobreakspace><asciitilde><colon>                                               <space> : "∻" U223B # HOMOTHETIC
-<Multi_key><nobreakspace><asciitilde><colon>                                        <nobreakspace> : "∻" U223B # HOMOTHETIC
+<Multi_key><minus><colon>                                                                          : "∹" U2239 # EXCESS
+<Multi_key><colon><minus><colon>                                                                   : "∺" U223A # GEOMETRIC PROPORTION
+<Multi_key><space><colon><asciitilde>                                                              : "∻" U223B # HOMOTHETIC
+<Multi_key><nobreakspace><colon><asciitilde>                                                       : "∻" U223B # HOMOTHETIC
+<Multi_key><space><asciitilde><colon>                                                              : "∻" U223B # HOMOTHETIC
+<Multi_key><nobreakspace><asciitilde><colon>                                                       : "∻" U223B # HOMOTHETIC
 #
-#   Both ASCII tilde "~" and "∼" U223C TILDE OPERATOR display exactly the same,
-#   and semantics is also unambiguous. Consistently, there is no rationale for
-#   their disunification.
+#   ASCII tilde "~" and "∼" U223C TILDE OPERATOR have different glyphs in some
+#   fonts. Consistently, they are disunified.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/#G58950
 #
 <Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
 <Multi_key><space><asciitilde>                                                      <nobreakspace> : "∼" U223C # TILDE OPERATOR
@@ -5944,26 +5949,18 @@
 <Multi_key><asciitilde><backslash>                                                  <nobreakspace> : "∽" U223D # REVERSED TILDE
 <Multi_key><s><percent>                                                                    <space> : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><percent>                                                             <nobreakspace> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent><percent>                                                           <space> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent><percent>                                                    <nobreakspace> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><backslash><percent>                                                         <space> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><backslash><percent>                                                  <nobreakspace> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent><backslash>                                                         <space> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent><backslash>                                                  <nobreakspace> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><i><n>                                                                       <space> : "∿" U223F # SINE WAVE
-<Multi_key><s><i><n>                                                                <nobreakspace> : "∿" U223F # SINE WAVE
-<Multi_key><S><I><N>                                                                       <space> : "∿" U223F # SINE WAVE
-<Multi_key><S><I><N>                                                                <nobreakspace> : "∿" U223F # SINE WAVE
-<Multi_key><space><asciitilde><percent>                                                    <space> : "≀" U2240 # WREATH PRODUCT
-<Multi_key><space><asciitilde><percent>                                             <nobreakspace> : "≀" U2240 # WREATH PRODUCT
-<Multi_key><nobreakspace><asciitilde><percent>                                             <space> : "≀" U2240 # WREATH PRODUCT
-<Multi_key><nobreakspace><asciitilde><percent>                                      <nobreakspace> : "≀" U2240 # WREATH PRODUCT
+<Multi_key><s><percent><percent>                                                                   : "∾" U223E # INVERTED LAZY S
+<Multi_key><s><backslash><percent>                                                                 : "∾" U223E # INVERTED LAZY S
+<Multi_key><s><percent><backslash>                                                                 : "∾" U223E # INVERTED LAZY S
+<Multi_key><s><i><n>                                                                               : "∿" U223F # SINE WAVE
+<Multi_key><S><I><N>                                                                               : "∿" U223F # SINE WAVE
+<Multi_key><space><asciitilde><percent>                                                            : "≀" U2240 # WREATH PRODUCT
+<Multi_key><nobreakspace><asciitilde><percent>                                                     : "≀" U2240 # WREATH PRODUCT
 <Multi_key><space><asciitilde><slash>                                                      <space> : "≁" U2241 # NOT TILDE
 <Multi_key><space><asciitilde><slash>                                               <nobreakspace> : "≁" U2241 # NOT TILDE
 <Multi_key><nobreakspace><asciitilde><slash>                                               <space> : "≁" U2241 # NOT TILDE
 <Multi_key><nobreakspace><asciitilde><slash>                                        <nobreakspace> : "≁" U2241 # NOT TILDE
-<Multi_key><minus><asciitilde>                                                             <space> : "≂" U2242 # MINUS TILDE
-<Multi_key><minus><asciitilde>                                                      <nobreakspace> : "≂" U2242 # MINUS TILDE
+<Multi_key><minus><asciitilde>                                                                     : "≂" U2242 # MINUS TILDE
 <Multi_key><asciitilde><minus>                                                             <space> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus>                                                      <nobreakspace> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                                              : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
@@ -5982,56 +5979,38 @@
 <Multi_key><nobreakspace><asciitilde><asciitilde>                                   <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><slash>                                                         : "≉" U2249 # NOT ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><minus>                                                         : "≊" U224A # ALMOST EQUAL OR EQUAL TO
-<Multi_key><space><asciitilde><asciitilde><asciitilde>                                     <space> : "≋" U224B # TRIPLE TILDE
-<Multi_key><space><asciitilde><asciitilde><asciitilde>                              <nobreakspace> : "≋" U224B # TRIPLE TILDE
-<Multi_key><nobreakspace><asciitilde><asciitilde><asciitilde>                              <space> : "≋" U224B # TRIPLE TILDE
-<Multi_key><nobreakspace><asciitilde><asciitilde><asciitilde>                       <nobreakspace> : "≋" U224B # TRIPLE TILDE
+<Multi_key><space><asciitilde><asciitilde><asciitilde>                                             : "≋" U224B # TRIPLE TILDE
+<Multi_key><nobreakspace><asciitilde><asciitilde><asciitilde>                                      : "≋" U224B # TRIPLE TILDE
 <Multi_key><asciitilde><backslash><equal>                                                          : "≌" U224C # ALL EQUAL TO
 <Multi_key><parenright><parenleft>                                                         <space> : "≍" U224D # EQUIVALENT TO
 <Multi_key><parenright><parenleft>                                                  <nobreakspace> : "≍" U224D # EQUIVALENT TO
-<Multi_key><space><parenleft><equal><parenright>                                           <space> : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
-<Multi_key><space><parenleft><equal><parenright>                                    <nobreakspace> : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
-<Multi_key><nobreakspace><parenleft><equal><parenright>                                    <space> : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
-<Multi_key><nobreakspace><parenleft><equal><parenright>                             <nobreakspace> : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
+#Multi_key><space><parenleft><equal><parenright>                                                   : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
+<Multi_key><space><parenleft><equal>                                                               : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
+<Multi_key><nobreakspace><parenleft><equal>                                                        : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
 <Multi_key><parenleft><minus>                                                              <space> : "≏" U224F # DIFFERENCE BETWEEN
 <Multi_key><parenleft><minus>                                                       <nobreakspace> : "≏" U224F # DIFFERENCE BETWEEN
 <Multi_key><period><equal>                                                                 <space> : "≐" U2250 # APPROACHES THE LIMIT
 <Multi_key><period><equal>                                                          <nobreakspace> : "≐" U2250 # APPROACHES THE LIMIT
 <Multi_key><period><equal><period>                                                         <space> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <Multi_key><period><equal><period>                                                  <nobreakspace> : "≑" U2251 # GEOMETRICALLY EQUAL TO
-<Multi_key><period><equal><period><backslash>                                              <space> : "≒" U2252 # APPROXIMATELY EQUAL TO OR THE IMAGE OF
-<Multi_key><period><equal><period><backslash>                                       <nobreakspace> : "≒" U2252 # APPROXIMATELY EQUAL TO OR THE IMAGE OF
-<Multi_key><period><equal><period><slash>                                                  <space> : "≓" U2253 # IMAGE OF OR APPROXIMATELY EQUAL TO
-<Multi_key><period><equal><period><slash>                                           <nobreakspace> : "≓" U2253 # IMAGE OF OR APPROXIMATELY EQUAL TO
-<Multi_key><colon><equal>                                                                  <space> : "≔" U2254 # COLON EQUALS
-<Multi_key><colon><equal>                                                           <nobreakspace> : "≔" U2254 # COLON EQUALS
-<Multi_key><equal><colon>                                                                  <space> : "≕" U2255 # EQUALS COLON
-<Multi_key><equal><colon>                                                           <nobreakspace> : "≕" U2255 # EQUALS COLON
-<Multi_key><space><minus><o><minus>                                                        <space> : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><space><minus><o><minus>                                                 <nobreakspace> : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><nobreakspace><minus><o><minus>                                                 <space> : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><nobreakspace><minus><o><minus>                                          <nobreakspace> : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><o><equal>                                                                      <space> : "≗" U2257 # RING EQUAL TO
-<Multi_key><o><equal>                                                               <nobreakspace> : "≗" U2257 # RING EQUAL TO
-<Multi_key><parenleft><equal>                                                              <space> : "≘" U2258 # CORRESPONDS TO
-<Multi_key><parenleft><equal>                                                       <nobreakspace> : "≘" U2258 # CORRESPONDS TO
-<Multi_key><a><equal>                                                                      <space> : "≙" U2259 # ESTIMATES
-<Multi_key><a><equal>                                                               <nobreakspace> : "≙" U2259 # ESTIMATES
-<Multi_key><v><v><equal>                                                                   <space> : "≙" U2259 # ESTIMATES
-<Multi_key><v><v><equal>                                                            <nobreakspace> : "≙" U2259 # ESTIMATES
-<Multi_key><space><asciicircum><equal>                                                     <space> : "≙" U2259 # ESTIMATES
-<Multi_key><space><asciicircum><equal>                                              <nobreakspace> : "≙" U2259 # ESTIMATES
-<Multi_key><nobreakspace><asciicircum><equal>                                              <space> : "≙" U2259 # ESTIMATES
-<Multi_key><nobreakspace><asciicircum><equal>                                       <nobreakspace> : "≙" U2259 # ESTIMATES
-<Multi_key><v><equal>                                                                      <space> : "≚" U225A # EQUIANGULAR TO
-<Multi_key><v><equal>                                                               <nobreakspace> : "≚" U225A # EQUIANGULAR TO
-<Multi_key><space><asterisk><equal>                                                        <space> : "≛" U225B # STAR EQUALS
-<Multi_key><space><asterisk><equal>                                                 <nobreakspace> : "≛" U225B # STAR EQUALS
-<Multi_key><nobreakspace><asterisk><equal>                                                 <space> : "≛" U225B # STAR EQUALS
-<Multi_key><nobreakspace><asterisk><equal>                                          <nobreakspace> : "≛" U225B # STAR EQUALS
+<Multi_key><period><equal><period><backslash>                                                      : "≒" U2252 # APPROXIMATELY EQUAL TO OR THE IMAGE OF
+<Multi_key><period><equal><period><slash>                                                          : "≓" U2253 # IMAGE OF OR APPROXIMATELY EQUAL TO
+<Multi_key><colon><equal>                                                                          : "≔" U2254 # COLON EQUALS
+<Multi_key><equal><colon>                                                                          : "≕" U2255 # EQUALS COLON
+<Multi_key><space><minus><o><minus>                                                                : "≖" U2256 # RING IN EQUAL TO
+<Multi_key><nobreakspace><minus><o><minus>                                                         : "≖" U2256 # RING IN EQUAL TO
+<Multi_key><o><equal>                                                                              : "≗" U2257 # RING EQUAL TO
+<Multi_key><parenleft><equal>                                                                      : "≘" U2258 # CORRESPONDS TO
+<Multi_key><a><equal>                                                                              : "≙" U2259 # ESTIMATES
+<Multi_key><v><v><equal>                                                                           : "≙" U2259 # ESTIMATES
+<Multi_key><space><asciicircum><equal>                                                             : "≙" U2259 # ESTIMATES
+<Multi_key><nobreakspace><asciicircum><equal>                                                      : "≙" U2259 # ESTIMATES
+<Multi_key><v><equal>                                                                              : "≚" U225A # EQUIANGULAR TO
+<Multi_key><space><asterisk><equal>                                                                : "≛" U225B # STAR EQUALS
+<Multi_key><nobreakspace><asterisk><equal>                                                         : "≛" U225B # STAR EQUALS
 <Multi_key><D><equal>                                                                              : "≜" U225C # DELTA EQUAL TO
-<Multi_key><d><e><f><equal>                                                                <space> : "≝" U225D # EQUAL TO BY DEFINITION
-<Multi_key><d><e><f><equal>                                                         <nobreakspace> : "≝" U225D # EQUAL TO BY DEFINITION
+#Multi_key><d><e><f><equal>                                                                        : "≝" U225D # EQUAL TO BY DEFINITION
+<Multi_key><d><e><f>                                                                               : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><m><equal>                                                                      <space> : "≞" U225E # MEASURED BY
 <Multi_key><m><equal>                                                               <nobreakspace> : "≞" U225E # MEASURED BY
 <Multi_key><question><equal>                                                               <space> : "≟" U225F # QUESTIONED EQUAL TO
