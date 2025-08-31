@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.0.4
-    Version et nᵒ de build : 6.0.4.02
-                      Date : 2025-08-27T2133+0200
+                   Version : 6.0.5
+    Version et nᵒ de build : 6.0.5.01
+                      Date : 2025-08-31T0624+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -19,13 +19,15 @@ Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs
 
 ## Dossiers et fichiers
 
-* Ce nouvel AZERTY se trouve dans le dossier « kbfrFRs-6.0.4.02-installation » avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
+* Ce nouvel AZERTY se trouve dans le sous-dossier « Un-nouvel-AZERTY » à l’intérieur du dossier « installer », avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
 
-* Le dossier « kbbrFRs-6.0.4.02-installation » contient la variante pour la langue bretonne, avec le trigramme sur la touche du 1, et le "ñ" sur la touche du 8 à la place du tiret bas, qui est aussi sur AltGr + J.
+* Dans le dossier « installer », le sous-dossier « Variantes » contient toute la gamme disponible sous Windows, soit actuellement ce nouvel AZERTY dans « kbfrFRs-6.0.5.01 » ainsi que :
+  * Le dossier « kbbrFRs-6.0.5.01 » contient la variante AZERTY pour la langue bretonne, avec le trigramme sur la touche du 1, et avec le "ñ" sur la touche du 8 à la place du tiret bas, qui est aussi sur AltGr + J.
+  * Le dossier « kbfrPFs-6.0.5.01 » contient la variante AZERTY pour la Polynésie française, avec la touche morte macron en Minuscule sur la touche du 8, et avec le ʻeta sur la même touche en Majuscule.
+  * Le dossier « kbfrAFs-6.0.5.01 » contient la variante AZERTY pour l’Afrique francophone, avec l’epsilon latin sur la touche du 1, et avec le o ouvert sur la touche du 8, toujours en Minuscule et en Majuscule.
+  * Le dossier « kbfrFRsr-6.0.5.01 » contient la variante redisposée de base de ce nouvel AZERTY, qui est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
 
-* Le dossier « kbfrFRsr-6.0.4.02-installation » contient la variante redisposée de base de ce nouvel AZERTY, qui est disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY.
-
-* Dans le dossier « redispositions » se trouvent les fichiers d’inscription au Registre avec leur description « _Scancode_Map.txt », pour des redispositions similaires aux sous-variantes sous Linux.
+* Dans le dossier « redispositions » se trouvent des fichiers d’inscription au Registre avec leur description « _Scancode_Map.txt », pour des redispositions similaires aux sous-variantes sous Linux.
 
 ## Installer
 
@@ -61,11 +63,11 @@ Pour passer le Microsoft Defender SmartScreen, vous avez deux options. Pour ne p
 
 6. Si la réponse est « Non », le Setup Wizard de la disposition de clavier indique que l’installation a été interrompue avant que « France AZERTY semi-automatique » a pu être installé, et qu’il faut relancer l’installateur pour essayer de nouveau (au sens où ‹ si jamais…, alors il faudrait… ›).  
   Si au contraire, la réponse est « Oui », le Setup Wizard de la disposition de clavier indique que l’installation est achevée, « Installation Complete », en précisant que la disposition de clavier a été installée avec succès, et invite à cliquer sur « Close » pour le quitter.  
-  L’installation ajoute la nouvelle disposition automatiquement aux dispositions de clavier de la langue « Français (France) » mais ne l’ajoute pas tout de suite à la Barre de langues, qui reste cachée jusqu’au prochain démarrage en cas de disposition de clavier unique. Il en va de même du raccourci Windows + Espace, qui ne permet pas encore de basculer vers la nouvelle disposition.
+  L’installation ajoute la nouvelle disposition automatiquement aux dispositions de clavier de la langue « Français (France) » mais ne l’ajoute pas tout de suite à la Barre de langues. Si celle-ci ne s’affichait pas, elle reste cachée jusqu’au prochain démarrage. Il en va de même du raccourci Windows + Espace, qui ne permet pas encore de basculer vers la nouvelle disposition.
 
-7. Ouvrir les Paramètres par Windows + i et aller dans Heure et langue > Langue > Clavier. Sous le titre « Remplacer la méthode d’entrée par défaut » se trouve un menu déroulant où choisir « France AZERTY semi-automatique » l’active immédiatement jusqu’à l’utilisation du raccourci Windows + Espace, mais l’établit aussi comme disposition de clavier par défaut, jusqu’à nouvel ordre.
+7. Ouvrir éventuellement les Paramètres par Windows + i et aller dans Heure et langue > Langue > Clavier. Sous le titre « Remplacer la méthode d’entrée par défaut » se trouve un menu déroulant, où choisir « France AZERTY semi-automatique » active celle-ci immédiatement mais l’établit aussi comme disposition de clavier par défaut, jusqu’à nouvel ordre.
 
-8. Après le prochain démarrage apparaît la Barre de langues près de l’horloge dans la Barre des tâches, si elle n’y était déjà, avec dans sa liste, la disposition de clavier nouvellement installée.
+8. Après le prochain démarrage apparaît la Barre de langues près de l’horloge dans la Barre des tâches, si elle n’y était déjà, avec dans sa liste, la disposition de clavier « France AZERTY semi-automatique ».
 
 ### Comment éviter le Microsoft Defender SmartScreen
 
@@ -166,7 +168,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 4. Appuyer sur la touche Windows et cliquer sur « Microsoft Keyboard Layout Creator 1.4 » sous le titre « Récemment ajoutées ».
 
-5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.4.zip).
+5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.5.zip).
 
 6. Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
 
