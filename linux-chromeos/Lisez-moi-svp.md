@@ -7,7 +7,7 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
                    Version : 6.0.5
-                      Date : 2025-08-31T0533+0200
+                      Date : 2025-08-31T0713+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
