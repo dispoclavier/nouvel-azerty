@@ -17,9 +17,9 @@
 #
 #   The group dead key is a special dead key designed to remap every single key
 #   position. E.g. group 1 of "Ɔ", "ɔ", "Ñ", "ñ", SOFT HYPHEN and NON-BREAKING
-#   HYPHEN outputs "―" U2015 HORIZONTAL BAR, a feature designed for African,
-#   Breton and Polynesian variants, or as a fallback.
-#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
+#   HYPHEN outputs "―" U2015 HORIZONTAL BAR, a feature designed for African and
+#   Breton variants and as a fallback.
+#   See # # HORIZONTAL BAR for African and Breton variants
 #   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   Usually, however, the scope of the group dead key is limited to a handy set
@@ -1447,9 +1447,8 @@
 #   consistent with mainstream practice, the pick for the intended level-3
 #   bullet is "‣" U2023, consistently with its triangular shape, with the group
 #   number, and with the Unicode scalars. The usual level-3 bullet "▪" U25AA is
-#   an emoji, but it is supported regardless in group 4, consistently with its
-#   quadrangular shape, additionally to its support in group 5 of numbersign
-#   as part of a set of four emoji.
+#   an emoji, and as such it is supported group 4 of numbersign as part of a
+#   set of four emoji.
 #   See # # C01 numbersign
 #
 #   Default HTML-CSS bullets are often associated with Unicode characters
@@ -1473,9 +1472,10 @@
 #   The rationale for supporting bullets in the groups of underscore is based
 #   on alphabetic mnemonics when underscore was on C09 "L", level 3, but it has
 #   vanished when underscore moved to C07 "J" in the wake of making room for
-#   EuroSign on D03 "E", level 3. Still, even after the move, underscore
-#   remains the only option in the symbol groups, additionally to bullets by
-#   multikey.
+#   EuroSign on D03 "E", level 3 (requiring the braces to move to "I" and "O"
+#   for ergonomics, and the brackets to move to "K" and "L" for consistency).
+#   Still, even after the move, underscore remains the only option for bullets
+#   in the symbol groups, additionally to bullets by multikey.
 #   See #^# Bullets
 #
 <UEFD0>                                                                              <underscore> : "•" U2022 # BULLET
