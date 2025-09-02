@@ -36,7 +36,7 @@ Rectification et simplification de séquences de composition.
 	* Changer la séquence de "⎋" U+238B de « ¦es » en « ¦esc ». compose-1.yml [94916d7](https://github.com/dispoclavier/nouvel-azerty/commit/94916d75a177870fbfebf901c9c179a0df22bd05)
 	* Changer la séquence de "℮" U+212E de « ¦␣e » en « ¦est ». ibidem
 	* Simplifier, améliorer ou corriger les séquences de "∋" U+220B, "∌" U+220C, "∍" U+220D, "≞" U+225E, "≟" U+225F, "≡" U+2261, "≢" U+2262, "≣" U+2263, "≨" U+2268, "≩" U+2269, "≭" U+226D, "≰" U+2270, "≱" U+2271, "≴" U+2274, "≵" U+2275, "≸" U+2278, "≹" U+2279, "⊀" U+2280, "⊁" U+2281, "⊃" U+2283, "⊅" U+2285, "⊇" U+2287, "⊉" U+2289, "⊐" U+2290, "⊒" U+2292, "⟄" U+27C4, "⥻" U+297B, "⋥" U+22E5, "⟄" U+27C4, "⟉" U+27C9. ibidem
-* Transformations : Touche morte groupe : Groupe 1 : Supprimer "―" U+2015 par "ʻ" U+02BB, qui ne prend plus la place de "―" U+2015 sur les variantes pour la Polynésie. compose-3.yml [3d8f321](https://github.com/dispoclavier/nouvel-azerty/commit/3d8f321bad3f40336de986504ae0534da8c5584f)
+* Transformations : Touche morte groupe : Groupe 1 : Supprimer "―" U+2015 par "ʻ" U+02BB, qui ne prend plus la place de "―" U+2015 sur les variantes pour la Polynésie. compose-2.yml [844c0bf](https://github.com/dispoclavier/nouvel-azerty/commit/844c0bfc11f01c55c2e16c92c43a55cf03848319)
 * Documentation : Mettre à jour et déboguer les modes d’emploi :
 	* Commun : readme.md [d66b174](https://github.com/dispoclavier/nouvel-azerty/commit/d66b1747204665b2f7a6ed60d075da06bce85356)
 	* Linux : linux-chromeos/readme.md [8f51187](https://github.com/dispoclavier/nouvel-azerty/commit/8f511879a37714f0b82b6a0a36770eb8d3a3b989), Lisez-moi-svp.md [313a75f](https://github.com/dispoclavier/nouvel-azerty/commit/313a75f44083c1eb534f942acd3137a848570aea).
