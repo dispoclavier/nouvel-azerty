@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see Compose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.5" # See #   End of line comments
+<UEFA0>                     : "version 6.0.6" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -1414,8 +1414,8 @@
 <Multi_key><s><c><r>                                                                               : "℈" U2108 # SCRUPLE
 <Multi_key><S><c><r>                                                                               : "℈" U2108 # SCRUPLE
 <Multi_key><S><C><R>                                                                               : "℈" U2108 # SCRUPLE
-<Multi_key><space><e>                                                                              : "℮" U212E # ESTIMATED SYMBOL
-<Multi_key><nobreakspace><e>                                                                       : "℮" U212E # ESTIMATED SYMBOL
+<Multi_key><e><s><t>                                                                               : "℮" U212E # ESTIMATED SYMBOL
+<Multi_key><E><S><T>                                                                               : "℮" U212E # ESTIMATED SYMBOL
 <Multi_key><f><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
 <Multi_key><F><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
 <Multi_key><F><A><X>                                                                               : "℻" U213B # FACSIMILE SIGN
@@ -4165,9 +4165,8 @@
 #
 # # Symbol for Escape key
 #
-#Multi_key><e><s><c>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
-<Multi_key><e><s>                                                                                  : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
-<Multi_key><E><S>                                                                                  : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
+<Multi_key><e><s><c>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
+<Multi_key><E><S><C>                                                                               : "⎋" U238B # BROKEN CIRCLE WITH NORTHWEST ARROW
 #
 #
 # # Symbols for modifier keys
@@ -4944,26 +4943,49 @@
 #
 #   However, to distinguish partial negations from full negations, the slash
 #   may not be the last character, as for "≇" U2247 versus "≆" U2246. Other
-#   examples include "⊈" U2288 versus "⊊" U228A, "⋢" U22E2 versus "⋤" U22E4.
+#   examples include "⊈" U2288 versus "⊊" U228A, "⋢" U22E2 versus "⋤" U22E4,
+#   "≴" U2274 and "≵" U2275 versus "⋦" U22E6 and "⋧" U22E7.
+#
+#   Another option is slash always last, and leading space for partial, but
+#   this would be less efficient and even less intuitive.
+#
+#   Yet another option is to have a slash after each negated element, but this
+#   would be tedious and streamlined to the first option, as the negated part
+#   is always at the bottom.
 #
 #
 #   Reverse symbols
 #
 #   For opposite or reverse relationships, when the symbol is turned, flipped
 #   horizontally or vertically, a matching alternate slug is used, as well as
-#   a trailing percent sign or a trailing backslash with dead key semantics,
-#   so as to provide both a streamlined and an intuitive input method. Most
-#   slugs use graphic mnemonics, while H and CP use alphabetic mnemonics based
-#   on HARP for "∇" U2207 or on COPRODUCT for "∐" U2210. Examples:
+#   duplication or a trailing transform.
 #
-#   Symbol A   Slug |  Symbol B   Slug  Alternative with trailing transform
-#   "∈" U2208  e    |  "∋" U220B  p     e\
-#   "⊂" U2282  c    |  "⊃" U2283  b     c\
-#   "∆" U2206  D    |  "∇" U2207  H     D%
-#   "∨" U2228  v    |  "∧" U2227  a     v%
-#   "⩖" U2A56  w    |  "⩕" U2A55  aa    w%
-#   "⨈" U2A08  W    |  "⨇" U2A07  AA    W%
-#   "∏" U220F  P    |  "∐" U2210  CP    P%
+#   The preferred or primary slug for simple symbols is a simple letter. So,
+#   while for superset "⊂" U2282, the matching "c" is used, and "ɔ" for subset
+#   "⊃" U2283 is not in the base alphabet, "b" is used instead.
+#
+#   But for intuitivity, "cc" is supported as well. So is "c\", where backslash
+#   is the transform for reversed, due to multikey equivalence.
+#   See #*# REVERSED
+#
+#   The goal is to provide both streamlined and intuitive input methods.
+#
+#   Most slugs use graphic mnemonics, while H and CP use alphabetic mnemonics
+#   based on HARP for "∇" U2207 or on COPRODUCT for "∐" U2210.
+#
+#   When graphic mnemonic competes with alphabetic mnemonic, the former has
+#   precedence, so that "m" is used for "⧢" U29E2, not "∋" U220B.
+#
+#   Examples:
+#
+#   Symbol A   Slug |  Symbol B   Primary  Duplication  Trailing transform
+#   "∈" U2208  e    |  "∋" U220B  p        ee           e\
+#   "⊂" U2282  c    |  "⊃" U2283  b        cc           c\
+#   "∆" U2206  D    |  "∇" U2207  H                     D%
+#   "∨" U2228  v    |  "∧" U2227  a        vv           v%
+#   "⩖" U2A56  w    |  "⩕" U2A55  aa                    w%
+#   "⨈" U2A08  W    |  "⨇" U2A07  AA                    W%
+#   "∏" U220F  P    |  "∐" U2210  CP                    P%
 #
 #
 #   Slanted symbols
@@ -4982,10 +5004,10 @@
 #   If the slanted form is not canonical, and there is a competing straight and
 #   horizontal (single-line or double-line) equal, as for "⪙" U2A99, "⪚" U2A9A
 #   versus "⪛" U2A9B, "⪜" U2A9C, the slanted one is distinguished by trailing
-#   grave, with mnemonics based on the slant of the backtick.
+#   grave, with mnemonics based on the backtick’s slant.
 #
-#   (This scheme is better than repurposing the underscore for slanted, and
-#   introducing minus for not slanted, screwing up some arrows in the process.)
+#   This scheme seems better than repurposing the underscore for slanted, and
+#   introducing minus for not slanted, screwing up some arrows in the process.
 #
 #
 #   Underscore and overscore
@@ -5776,11 +5798,19 @@
 <Multi_key><e><comma>                                                                              : "∊" U220A # SMALL ELEMENT OF
 <Multi_key><p>                                                                             <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p>                                                                      <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
+<Multi_key><space><e><e>                                                                   <space> : "∋" U220B # CONTAINS AS MEMBER
+<Multi_key><space><e><e>                                                            <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
+<Multi_key><nobreakspace><e><e>                                                            <space> : "∋" U220B # CONTAINS AS MEMBER
+<Multi_key><nobreakspace><e><e>                                                     <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                                  <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                           <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p><slash>                                                                              : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><space><e><e><slash>                                                                    : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><nobreakspace><e><e><slash>                                                             : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><e><backslash><slash>                                                                   : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><p><comma>                                                                              : "∍" U220D # SMALL CONTAINS AS MEMBER
+<Multi_key><space><e><e><comma>                                                                    : "∍" U220D # SMALL CONTAINS AS MEMBER
+<Multi_key><nobreakspace><e><e><comma>                                                             : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><comma>                                                                   : "∍" U220D # SMALL CONTAINS AS MEMBER
 #   "End of proof"
 #Multi_key><e><o><p>                                                                               : "∎" U220E # END OF PROOF
@@ -6011,18 +6041,22 @@
 <Multi_key><D><equal>                                                                              : "≜" U225C # DELTA EQUAL TO
 #Multi_key><d><e><f><equal>                                                                        : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><d><e><f>                                                                               : "≝" U225D # EQUAL TO BY DEFINITION
-<Multi_key><m><equal>                                                                      <space> : "≞" U225E # MEASURED BY
-<Multi_key><m><equal>                                                               <nobreakspace> : "≞" U225E # MEASURED BY
-<Multi_key><question><equal>                                                               <space> : "≟" U225F # QUESTIONED EQUAL TO
-<Multi_key><question><equal>                                                        <nobreakspace> : "≟" U225F # QUESTIONED EQUAL TO
+<Multi_key><m><equal>                                                                              : "≞" U225E # MEASURED BY
+<Multi_key><question><equal>                                                                       : "≟" U225F # QUESTIONED EQUAL TO
 <Multi_key><equal><slash>                                                                  <space> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                           <nobreakspace> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><equal><minus>                                                                  <space> : "≡" U2261 # IDENTICAL TO
+<Multi_key><equal><minus>                                                           <nobreakspace> : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal>                                                                  <space> : "≡" U2261 # IDENTICAL TO
 <Multi_key><minus><equal>                                                           <nobreakspace> : "≡" U2261 # IDENTICAL TO
+<Multi_key><equal><minus><slash>                                                           <space> : "≢" U2262 # NOT IDENTICAL TO
+<Multi_key><equal><minus><slash>                                                    <nobreakspace> : "≢" U2262 # NOT IDENTICAL TO
 <Multi_key><minus><equal><slash>                                                           <space> : "≢" U2262 # NOT IDENTICAL TO
 <Multi_key><minus><equal><slash>                                                    <nobreakspace> : "≢" U2262 # NOT IDENTICAL TO
-<Multi_key><minus><equal><minus>                                                           <space> : "≣" U2263 # STRICTLY EQUIVALENT TO
-<Multi_key><minus><equal><minus>                                                    <nobreakspace> : "≣" U2263 # STRICTLY EQUIVALENT TO
+<Multi_key><minus><equal><minus>                                                                   : "≣" U2263 # STRICTLY EQUIVALENT TO
+<Multi_key><space><space><equal><equal>                                                            : "≣" U2263 # STRICTLY EQUIVALENT TO
+<Multi_key><nobreakspace><space><equal><equal>                                                     : "≣" U2263 # STRICTLY EQUIVALENT TO
+<Multi_key><nobreakspace><nobreakspace><equal><equal>                                              : "≣" U2263 # STRICTLY EQUIVALENT TO
 <Multi_key><less><underscore>                                                              <space> : "≤" U2264 # LESS-THAN OR EQUAL TO
 <Multi_key><less><underscore>                                                       <nobreakspace> : "≤" U2264 # LESS-THAN OR EQUAL TO
 <Multi_key><greater><underscore>                                                           <space> : "≥" U2265 # GREATER-THAN OR EQUAL TO
@@ -6033,12 +6067,9 @@
 <Multi_key><nobreakspace><less><equal>                                              <nobreakspace> : "≦" U2266 # LESS-THAN OVER EQUAL TO
 <Multi_key><greater><equal>                                                                <space> : "≧" U2267 # GREATER-THAN OVER EQUAL TO
 <Multi_key><greater><equal>                                                         <nobreakspace> : "≧" U2267 # GREATER-THAN OVER EQUAL TO
-<Multi_key><space><less><equal><slash>                                                     <space> : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
-<Multi_key><space><less><equal><slash>                                              <nobreakspace> : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
-<Multi_key><nobreakspace><less><equal><slash>                                              <space> : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
-<Multi_key><nobreakspace><less><equal><slash>                                       <nobreakspace> : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
-<Multi_key><greater><equal><slash>                                                         <space> : "≩" U2269 # GREATER-THAN BUT NOT EQUAL TO
-<Multi_key><greater><equal><slash>                                                  <nobreakspace> : "≩" U2269 # GREATER-THAN BUT NOT EQUAL TO
+<Multi_key><space><less><equal><slash>                                                             : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
+<Multi_key><nobreakspace><less><equal><slash>                                                      : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
+<Multi_key><greater><equal><slash>                                                                 : "≩" U2269 # GREATER-THAN BUT NOT EQUAL TO
 <Multi_key><space><less><less>                                                             <space> : "≪" U226A # MUCH LESS-THAN
 <Multi_key><space><less><less>                                                      <nobreakspace> : "≪" U226A # MUCH LESS-THAN
 <Multi_key><nobreakspace><less><less>                                                      <space> : "≪" U226A # MUCH LESS-THAN
@@ -6049,36 +6080,28 @@
 <Multi_key><nobreakspace><greater><greater>                                         <nobreakspace> : "≫" U226B # MUCH GREATER-THAN
 <Multi_key><parenleft><parenright>                                                         <space> : "≬" U226C # BETWEEN
 <Multi_key><parenleft><parenright>                                                  <nobreakspace> : "≬" U226C # BETWEEN
-<Multi_key><parenright><parenleft><slash>                                                  <space> : "≭" U226D # NOT EQUIVALENT TO
-<Multi_key><parenright><parenleft><slash>                                           <nobreakspace> : "≭" U226D # NOT EQUIVALENT TO
-<Multi_key><parenleft><parenright><slash>                                                  <space> : "≭" U226D # NOT EQUIVALENT TO
-<Multi_key><parenleft><parenright><slash>                                           <nobreakspace> : "≭" U226D # NOT EQUIVALENT TO
+<Multi_key><parenright><parenleft><slash>                                                          : "≭" U226D # NOT EQUIVALENT TO
+<Multi_key><parenleft><parenright><slash>                                                          : "≭" U226D # NOT EQUIVALENT TO
 <Multi_key><space><less><slash>                                                                    : "≮" U226E # NOT LESS-THAN
 <Multi_key><nobreakspace><less><slash>                                                             : "≮" U226E # NOT LESS-THAN
 <Multi_key><greater><slash>                                                                <space> : "≯" U226F # NOT GREATER-THAN
 <Multi_key><greater><slash>                                                         <nobreakspace> : "≯" U226F # NOT GREATER-THAN
-<Multi_key><less><slash><underscore>                                                       <space> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<Multi_key><less><slash><underscore>                                                <nobreakspace> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
-<Multi_key><greater><slash><underscore>                                                    <space> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
-<Multi_key><greater><slash><underscore>                                             <nobreakspace> : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
+<Multi_key><less><slash><underscore>                                                               : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
+<Multi_key><greater><slash><underscore>                                                            : "≱" U2271 # NEITHER GREATER-THAN NOR EQUAL TO
 <Multi_key><space><less><asciitilde>                                                       <space> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
 <Multi_key><space><less><asciitilde>                                                <nobreakspace> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
 <Multi_key><nobreakspace><less><asciitilde>                                                <space> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
 <Multi_key><nobreakspace><less><asciitilde>                                         <nobreakspace> : "≲" U2272 # LESS-THAN OR EQUIVALENT TO
 <Multi_key><greater><asciitilde>                                                           <space> : "≳" U2273 # GREATER-THAN OR EQUIVALENT TO
 <Multi_key><greater><asciitilde>                                                    <nobreakspace> : "≳" U2273 # GREATER-THAN OR EQUIVALENT TO
-<Multi_key><less><slash><asciitilde>                                                       <space> : "≴" U2274 # NEITHER LESS-THAN NOR EQUIVALENT TO
-<Multi_key><less><slash><asciitilde>                                                <nobreakspace> : "≴" U2274 # NEITHER LESS-THAN NOR EQUIVALENT TO
-<Multi_key><greater><slash><asciitilde>                                                    <space> : "≵" U2275 # NEITHER GREATER-THAN NOR EQUIVALENT TO
-<Multi_key><greater><slash><asciitilde>                                             <nobreakspace> : "≵" U2275 # NEITHER GREATER-THAN NOR EQUIVALENT TO
+<Multi_key><less><slash><asciitilde>                                                               : "≴" U2274 # NEITHER LESS-THAN NOR EQUIVALENT TO
+<Multi_key><greater><slash><asciitilde>                                                            : "≵" U2275 # NEITHER GREATER-THAN NOR EQUIVALENT TO
 <Multi_key><less><greater>                                                                 <space> : "≶" U2276 # LESS-THAN OR GREATER-THAN
 <Multi_key><less><greater>                                                          <nobreakspace> : "≶" U2276 # LESS-THAN OR GREATER-THAN
 <Multi_key><greater><less>                                                                 <space> : "≷" U2277 # GREATER-THAN OR LESS-THAN
 <Multi_key><greater><less>                                                          <nobreakspace> : "≷" U2277 # GREATER-THAN OR LESS-THAN
-<Multi_key><less><greater><slash>                                                          <space> : "≸" U2278 # NEITHER LESS-THAN NOR GREATER-THAN
-<Multi_key><less><greater><slash>                                                   <nobreakspace> : "≸" U2278 # NEITHER LESS-THAN NOR GREATER-THAN
-<Multi_key><greater><less><slash>                                                          <space> : "≹" U2279 # NEITHER GREATER-THAN NOR LESS-THAN
-<Multi_key><greater><less><slash>                                                   <nobreakspace> : "≹" U2279 # NEITHER GREATER-THAN NOR LESS-THAN
+<Multi_key><less><greater><slash>                                                                  : "≸" U2278 # NEITHER LESS-THAN NOR GREATER-THAN
+<Multi_key><greater><less><slash>                                                                  : "≹" U2279 # NEITHER GREATER-THAN NOR LESS-THAN
 <Multi_key><less><parenright><parenleft>                                                   <space> : "≺" U227A # PRECEDES
 <Multi_key><less><parenright><parenleft>                                            <nobreakspace> : "≺" U227A # PRECEDES
 <Multi_key><less><parenleft><parenright>                                                   <space> : "≺" U227A # PRECEDES
@@ -6103,30 +6126,33 @@
 <Multi_key><greater><parenright><parenleft><asciitilde>                             <nobreakspace> : "≿" U227F # SUCCEEDS OR EQUIVALENT TO
 <Multi_key><greater><parenleft><parenright><asciitilde>                                    <space> : "≿" U227F # SUCCEEDS OR EQUIVALENT TO
 <Multi_key><greater><parenleft><parenright><asciitilde>                             <nobreakspace> : "≿" U227F # SUCCEEDS OR EQUIVALENT TO
-<Multi_key><less><parenright><parenleft><slash>                                            <space> : "⊀" U2280 # DOES NOT PRECEDE
-<Multi_key><less><parenright><parenleft><slash>                                     <nobreakspace> : "⊀" U2280 # DOES NOT PRECEDE
-<Multi_key><less><parenleft><parenright><slash>                                            <space> : "⊀" U2280 # DOES NOT PRECEDE
-<Multi_key><less><parenleft><parenright><slash>                                     <nobreakspace> : "⊀" U2280 # DOES NOT PRECEDE
-<Multi_key><greater><parenright><parenleft><slash>                                         <space> : "⊁" U2281 # DOES NOT SUCCEED
-<Multi_key><greater><parenright><parenleft><slash>                                  <nobreakspace> : "⊁" U2281 # DOES NOT SUCCEED
-<Multi_key><greater><parenleft><parenright><slash>                                         <space> : "⊁" U2281 # DOES NOT SUCCEED
-<Multi_key><greater><parenleft><parenright><slash>                                  <nobreakspace> : "⊁" U2281 # DOES NOT SUCCEED
+<Multi_key><less><parenright><parenleft><slash>                                                    : "⊀" U2280 # DOES NOT PRECEDE
+<Multi_key><less><parenleft><parenright><slash>                                                    : "⊀" U2280 # DOES NOT PRECEDE
+<Multi_key><greater><parenright><parenleft><slash>                                                 : "⊁" U2281 # DOES NOT SUCCEED
+<Multi_key><greater><parenleft><parenright><slash>                                                 : "⊁" U2281 # DOES NOT SUCCEED
+#@
 <Multi_key><c>                                                                             <space> : "⊂" U2282 # SUBSET OF
 <Multi_key><c>                                                                      <nobreakspace> : "⊂" U2282 # SUBSET OF
 <Multi_key><b>                                                                             <space> : "⊃" U2283 # SUPERSET OF
 <Multi_key><b>                                                                      <nobreakspace> : "⊃" U2283 # SUPERSET OF
+<Multi_key><c><c>                                                                          <space> : "⊃" U2283 # SUPERSET OF
+<Multi_key><c><c>                                                                   <nobreakspace> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><backslash>                                                                  <space> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><backslash>                                                           <nobreakspace> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><slash>                                                                      <space> : "⊄" U2284 # NOT A SUBSET OF
 <Multi_key><c><slash>                                                               <nobreakspace> : "⊄" U2284 # NOT A SUBSET OF
 <Multi_key><b><slash>                                                                      <space> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><b><slash>                                                               <nobreakspace> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><c><c><slash>                                                                   <space> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><c><c><slash>                                                            <nobreakspace> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><c><backslash><slash>                                                           <space> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><c><backslash><slash>                                                    <nobreakspace> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><c><underscore>                                                                 <space> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><c><underscore>                                                          <nobreakspace> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><b><underscore>                                                                 <space> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><b><underscore>                                                          <nobreakspace> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
+<Multi_key><c><c><underscore>                                                              <space> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
+<Multi_key><c><c><underscore>                                                       <nobreakspace> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><c><backslash><underscore>                                                      <space> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><c><backslash><underscore>                                               <nobreakspace> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 #
@@ -6136,16 +6162,14 @@
 #
 <Multi_key><c><slash><underscore>                                                          <space> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 <Multi_key><c><slash><underscore>                                                   <nobreakspace> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-<Multi_key><b><slash><underscore>                                                          <space> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><b><slash><underscore>                                                   <nobreakspace> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><c><backslash><slash><underscore>                                               <space> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><c><backslash><slash><underscore>                                        <nobreakspace> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><b><slash><underscore>                                                                  : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><c><c><slash><underscore>                                                               : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><c><backslash><slash><underscore>                                                       : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><c><underscore><slash>                                                          <space> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><c><underscore><slash>                                                   <nobreakspace> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><b><underscore><slash>                                                          <space> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><b><underscore><slash>                                                   <nobreakspace> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><c><backslash><underscore><slash>                                               <space> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><c><backslash><underscore><slash>                                        <nobreakspace> : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><b><underscore><slash>                                                                  : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><c><c><underscore><slash>                                                               : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><c><backslash><underscore><slash>                                                       : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><u><less>                                                                       <space> : "⊌" U228C # MULTISET
 <Multi_key><u><less>                                                                <nobreakspace> : "⊌" U228C # MULTISET
 <Multi_key><u><period>                                                                     <space> : "⊍" U228D # MULTISET MULTIPLICATION
@@ -6158,6 +6182,8 @@
 <Multi_key><c><bracketright>                                                        <nobreakspace> : "⊏" U228F # SQUARE IMAGE OF
 <Multi_key><b><bracketright>                                                               <space> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><b><bracketright>                                                        <nobreakspace> : "⊐" U2290 # SQUARE ORIGINAL OF
+<Multi_key><c><c><bracketright>                                                            <space> : "⊐" U2290 # SQUARE ORIGINAL OF
+<Multi_key><c><c><bracketright>                                                     <nobreakspace> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><c><backslash><bracketright>                                                    <space> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><c><backslash><bracketright>                                             <nobreakspace> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><c><bracketleft><underscore>                                                    <space> : "⊑" U2291 # SQUARE IMAGE OF OR EQUAL TO
@@ -6166,6 +6192,8 @@
 <Multi_key><c><bracketright><underscore>                                            <nobreakspace> : "⊑" U2291 # SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><b><bracketright><underscore>                                                   <space> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><b><bracketright><underscore>                                            <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><c><bracketright><underscore>                                                <space> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><c><bracketright><underscore>                                         <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore>                                        <space> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore>                                 <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><n><bracketleft>                                                                <space> : "⊓" U2293 # SQUARE CAP
@@ -6459,6 +6487,8 @@
 <Multi_key><c><bracketright><underscore><slash>                                     <nobreakspace> : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
 <Multi_key><b><bracketright><underscore><slash>                                            <space> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><b><bracketright><underscore><slash>                                     <nobreakspace> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><c><bracketright><underscore><slash>                                         <space> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><c><bracketright><underscore><slash>                                  <nobreakspace> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore><slash>                                 <space> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore><slash>                          <nobreakspace> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><less><asciitilde><slash>                                                       <space> : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
@@ -6960,14 +6990,12 @@
 <Multi_key><space><c><o>                                                            <nobreakspace> : "⟃" U27C3 # OPEN SUBSET
 <Multi_key><nobreakspace><c><o>                                                            <space> : "⟃" U27C3 # OPEN SUBSET
 <Multi_key><nobreakspace><c><o>                                                     <nobreakspace> : "⟃" U27C3 # OPEN SUBSET
-<Multi_key><space><b><o>                                                                   <space> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><space><b><o>                                                            <nobreakspace> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><nobreakspace><b><o>                                                            <space> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><nobreakspace><b><o>                                                     <nobreakspace> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><space><c><c><o>                                                                <space> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><space><c><c><o>                                                         <nobreakspace> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><nobreakspace><c><c><o>                                                         <space> : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><nobreakspace><c><c><o>                                                  <nobreakspace> : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><space><b><o>                                                                           : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><nobreakspace><b><o>                                                                    : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><space><c><c><o>                                                                        : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><nobreakspace><c><c><o>                                                                 : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><space><c><backslash><o>                                                                : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><nobreakspace><c><backslash><o>                                                         : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><s><braceleft>                                                                  <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><s><braceleft>                                                           <nobreakspace> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><S><braceleft>                                                                  <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
@@ -6988,14 +7016,12 @@
 <Multi_key><space><slash><c>                                                        <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><slash><c>                                                        <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><slash><c>                                                 <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><space><b><slash>                                                               <space> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><space><b><slash>                                                        <nobreakspace> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><nobreakspace><b><slash>                                                        <space> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><nobreakspace><b><slash>                                                 <nobreakspace> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><space><c><c><slash>                                                            <space> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><space><c><c><slash>                                                     <nobreakspace> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><nobreakspace><c><c><slash>                                                     <space> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><nobreakspace><c><c><slash>                                              <nobreakspace> : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><space><b><slash>                                                                       : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><nobreakspace><b><slash>                                                                : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><space><c><c><slash>                                                                    : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><nobreakspace><c><c><slash>                                                             : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><space><c><backslash><slash>                                                            : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><nobreakspace><c><backslash><slash>                                                     : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><bar><minus>                                                             <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><space><bar><minus>                                                      <nobreakspace> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                                      <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
@@ -7540,10 +7566,9 @@
 <Multi_key><c><minus><greater>                                                      <nobreakspace> : "⥹" U2979 # SUBSET ABOVE RIGHTWARDS ARROW
 #   Mirror is "⭄" U2B44.
 <Multi_key><less><minus><c>                                                                        : "⥺" U297A # LEFTWARDS ARROW THROUGH SUBSET
-<Multi_key><b><less><minus>                                                                <space> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
-<Multi_key><b><less><minus>                                                         <nobreakspace> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
-<Multi_key><c><c><less><minus>                                                             <space> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
-<Multi_key><c><c><less><minus>                                                      <nobreakspace> : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><b><less><minus>                                                                        : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><c><c><less><minus>                                                                     : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><c><backslash><less><minus>                                                             : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 #
 #   Fishtails "⥼" U297C.."⥿" U297F are supported by two iconic multikey options
 #   in parallel, for everybody to pick their preferred one: case insensitive J,
