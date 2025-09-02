@@ -6,8 +6,8 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.0.5
-                      Date : 2025-08-31T0713+0200
+                   Version : 6.0.6
+                      Date : 2025-09-02T1936+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -18,9 +18,11 @@ Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs
 
 ## Dossiers et fichiers
 
-* Les chaînes de caractères pour touches vives et le contenu des touches mortes se trouvent dans le fichier Compose.yml. (L’extension .yml facilite la coloration syntaxique et l’interopérabilité.)
+* Les chaînes de caractères pour touches vives et le contenu des touches mortes se trouvent dans le fichier Compose.yml (.yml uniquement pour faciliter la coloration syntaxique et l’interopérabilité).
 
-* Le reste des dispositions de clavier se trouve dans les dossiers installer/ et activer/. Les fichiers .xkb dans activer/ sont issus de la fusion de fichiers comme dans installer/.
+* Les dispositions des caractères, des chaînes et des touches mortes se trouvent dans le dossier installer/.
+
+* Le dossier activer/ contient des fichiers .xkb issus de la fusion d’une partie des fichiers réunis dans installer/.
 
 ### Dispositions de clavier : les variantes
 
