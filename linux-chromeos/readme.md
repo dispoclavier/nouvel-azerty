@@ -1,6 +1,8 @@
 # Un nouvel AZERTY pour Linux
 
-Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur). Sur l’[utilisation](#utilisation), il est vivement conseillé de se reporter au [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md) ainsi qu’à la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) ou sa [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty.pdf) et à la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touches-mortes.pdf) est aussi disponible en ligne, et qui est assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touche-morte-groupe.pdf)), ainsi qu’à la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-symboles-math.pdf) est pareillement disponible en ligne, ainsi qu’une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-composition-non-math.pdf) de la composition non mathématique. Ces 5 PDF sont réunis dans le dossier « Un-nouvel-AZERTY-Documentation-[version] ».
+Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur), afin de compléter le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
+
+Ces modes d’emploi complètent à leur tour la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) et sa [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty.pdf), la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touches-mortes.pdf) est aussi disponible en ligne, et qui est assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touche-morte-groupe.pdf)), ainsi que la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-composition-non-math.pdf)) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-symboles-math.pdf) est pareillement disponible en ligne. Ces cinq PDF sont réunis dans le dossier « Un-nouvel-AZERTY-Documentation-[version].zip ».
 
 ## Alerte d’incompatibilité de Linux Mint
 
@@ -107,7 +109,9 @@ Si la disposition de clavier par défaut doit aussi être reconfigurée, ouvrir 
 
 ## Commutateur de dispositions de clavier
 
-Ce nouvel AZERTY figure dans le dossier des dispositions de clavier « Français (France) » sous le nom « Français France disposition de clavier semi-automatique » et peut être ajouté aux dispositions actives. Afin de l’activer sous une version de Linux sortie entre 2018 et 2024 (ou plus), il est nécessaire de désactiver l’autre disposition, car comme expliqué plus bas, le commutateur ne fonctionne plus.
+Ce nouvel AZERTY figure dans le dossier des dispositions de clavier « Français (France) » sous le nom « Français France disposition de clavier semi-automatique ».
+
+Sous une version de Linux sortie entre 2018 et 2024 voire plus, il est nécessaire de désactiver l’autre disposition, car le commutateur ne fonctionne plus.
 
 Les variantes AZERTY s’appellent :
 
@@ -123,7 +127,7 @@ Les variantes redisposées QZJFGY s’appellent :
 * Polynésie française disposition de clavier semi-automatique redisposée ;
 * Afrique francophone disposition de clavier semi-automatique redisposée.
 
-La variante belge ne se décline pas en variante redisposée parce que l’intérêt d’avoir une variante belge, c’est une assez bonne rétrocompatibilité avec l’AZERTY belge, et la redisposition va à l’encontre de cet objectif.
+La variante belge ne se décline pas en variante redisposée, parce que l’intérêt d’une variante belge est une certaine rétrocompatibilité avec l’AZERTY belge, et la redisposition l’en éloignerait davantage.
 
 ## Vues de disposition
 
@@ -131,7 +135,7 @@ Les vues de ces dispositions dans Gnome se veulent un compromis entre les 8 pos
 
 Sur les vues de disposition de ce nouvel AZERTY, sur le bloc alphabétique et la barre d’espace, le niveau 4 montre le niveau 5, c’est-à-dire les caractères disposés en AltFr, qui incluent les ponctuations non espacées et le pavé numérique graphique disposé sur le bloc alphanumérique, tandis que sur la rangée des chiffres, le niveau 4 montre réellement ce qui se trouve au niveau 4 : les positions rétrocompatibles du mode français. Car sur les touches des chiffres, le niveau 5 est identique au niveau 3 avec les chiffres, la touche moins a le symbole degré du niveau 2, et la touche plus a le symbole égal du niveau 1 du mode ASCII.
 
-Les rectangles avec un code sont soit des touches mortes, comme la touche morte groupe « EFD0 » sur la touche [*], soit des séquences, comme les ponctuations espacées en Majuscule, ou le double zéro « EF6D » sur [B].
+Les rectangles avec un code sont soit des touches mortes, comme la touche morte groupe « EFD0 » sur la touche ⟦*⟧, soit des séquences, comme les ponctuations espacées en Majuscule, ou le double zéro « EF6D » sur ⟦B⟧.
 
 Ces touches mortes et ces séquences sont définies dans le répertoire des touches mortes et des séquences Compose(.yml), consultable sur GitHub en trois parties à cause d’une limitation de taille de fichier : [compose-1.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml) pour les séquences sur touches vives et les séquences de composition, [compose-2.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml) pour les touches mortes, et [compose-3.yml](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml) pour les [groupes des symboles](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-symboles) et les [groupes des lettres](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/#1566-groupes-des-lettres), qui font partie de la [touche morte groupe](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/).
 
@@ -227,7 +231,7 @@ L’émulation de touche "ê" par la touche morte accent circonflexe fonctionne 
 
 #### Trigramme breton
 
-La capitale "CʼH" du trigramme breton s’insère à la place de la minuscule sur AltGr + AltFr + [A] quand les capitales sont verrouillées.
+La capitale "CʼH" du trigramme breton s’insère à la place de la minuscule sur AltGr + AltFr + ⟦A⟧ quand les capitales sont verrouillées.
 
 ## Nom de fichier
 
