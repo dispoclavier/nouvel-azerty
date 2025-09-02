@@ -1,4 +1,4 @@
-//                       Date: 2025-08-24T1417+0200
+//                       Date: 2025-09-02T0305+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1704,11 +1704,6 @@ xkb_symbols "kbbrFRsr" {
 	name[Group1] = "Breton and French remapped semiautomatic keyboard layout";
 	name[Group2] = "Breton and French remapped semiautomatic keyboard layout, ASCII mode";
 	// "Breton et français disposition de clavier semi-automatique redisposée"
-	//
-	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
-	// as "Ñ" key may be input using group 1 of equal or underscore. "―" U2015 is
-	// also in group 1 of "ñ", "Ñ", and "‑" U2011 can be input by dead_diaeresis
-	// followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
@@ -1756,13 +1751,13 @@ xkb_symbols "kbfrPFs" {
 	//
 	// The grave accent is used in Polynesia alongside the macron, but while the
 	// acute accent is not, it is part of the quotation mark input method and so
-	// cannot be replaced with the macron dead key either. As a consequence, E08
-	// is repurposed like on African and Breton variants, the better as this has
-	// the upside of freeing up a live key position for Polynesian ʻeta.
+	// cannot be replaced with the macron dead key either.
 	//
-	// "―" U2015 HORIZONTAL BAR on shifted E08 is in group 1 of U02BB ʻeta, while
-	// group 1 of dead_macron has U2011 NON-BREAKING HYPHEN with respect to the
-	// Polynesian remapped variant.
+	// As a consequence, unshifted E08 is repurposed along the lines of African
+	// and Breton variants, while shifted is not, because Polynesian ʻeta gets
+	// another unshifted position on E01, still along the lines of Breton and
+	// African variants, while shifted E01 is used up for letter apostrophe as
+	// a matching counterpart.
 
 	include "dispocla(kbfrFRs)"
 
@@ -1776,10 +1771,18 @@ xkb_symbols "kbfrPFs" {
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
-	key <AE08> {
-		[         dead_macron,               U02BB ],
+	key <AE01> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[               U02BB,               U02BC,            NoSymbol,            NoSymbol,                   1,         onesuperior,               UEFC1 ],
 		[            NoSymbol ]
-	};// Tārava, tāumi; U02BB ʻeta
+	}; // U02BB ʻeta; U02BC letter apostrophe; UEFC1 1️⃣ keycap 1 emoji
+
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
+	key <AE08> {
+		[         dead_macron ],
+		[            NoSymbol ]
+	};// Tārava, tāumi
 
 	// See ## Customization facility
 	include "dispocla_perso"
@@ -1792,11 +1795,6 @@ xkb_symbols "kbfrPFsr" {
 	name[Group1] = "French Polynesia remapped semiautomatic keyboard layout";
 	name[Group2] = "French Polynesia remapped semiautomatic keyboard layout, ASCII mode";
 	// "Polynésie française disposition de clavier semi-automatique redisposée"
-	//
-	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
-	// as "Ñ" key may be input using group 1 of equal or underscore. "―" U2015 is
-	// also in group 1 of "ñ", "Ñ", and "‑" U2011 can be input by dead_diaeresis
-	// followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
@@ -1810,10 +1808,18 @@ xkb_symbols "kbfrPFsr" {
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
-	key <AE07> {
-		[         dead_macron,               U02BB ],
+	key <AE01> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[               U02BB,               U02BC,            NoSymbol,            NoSymbol,                   1,         onesuperior,               UEFC1 ],
 		[            NoSymbol ]
-	};// Tārava, tāumi; U02BB ʻeta
+	}; // U02BB ʻeta; U02BC letter apostrophe; UEFC1 1️⃣ keycap 1 emoji
+
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
+	key <AE07> {
+		[         dead_macron ],
+		[            NoSymbol ]
+	};// Tārava, tāumi
 
 	key.type[Group1] = "EIGHT_LEVELS_PLUS_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PLUS_GROUP2";
@@ -1875,11 +1881,6 @@ xkb_symbols "kbfrAFsr" {
 	name[Group1] = "Francophone Africa remapped semiautomatic keyboard layout";
 	name[Group2] = "Francophone Africa remapped semiautomatic keyboard layout, ASCII mode";
 	// "Afrique francophone disposition de clavier semi-automatique redisposée"
-	//
-	// "‑" U2011 NON-BREAKING HYPHEN and "―" U2015 HORIZONTAL BAR on E07 required
-	// as "Ɔ" key may be input using group 1 of equal or underscore. "―" U2015 is
-	// also in group 1 of "ɔ", "Ɔ", and "‑" U2011 can be input by dead_diaeresis
-	// followed by ASCII hyphen.
 
 	include "dispocla(kbfrFRsr)"
 
