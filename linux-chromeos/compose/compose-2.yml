@@ -53,6 +53,7 @@
 #
 #   Support of the Latin script is up-to-date as of Unicode 17.0 (2025-09-09).
 #   https://www.unicode.org/versions/Unicode17.0.0/
+#   https://github.com/dispoclavier/nouvel-azerty/releases/tag/6.0.4
 #
 #   The extended Latin F & G blocks in the SMP are supported since 2023-05-25.
 #   https://unicode.org/versions/enumeratedversions.html
@@ -9079,18 +9080,15 @@
 <Multi_key><numbersign><numbersign><numbersign>                                           <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
 #
 #
-# # HORIZONTAL BAR for African, Breton and Polynesian variants
+# # HORIZONTAL BAR for African and Breton variants
 #
 #   On Breton variants, the base and shift positions of key E08 are used for
-#   "ñ" U00F1, "Ñ" U00D1; on African variants, for "ɔ" U0254, "Ɔ" U0186; on
-#   Polynesian variants, for the macron dead key and ʻeta "ʻ" U02BB MODIFIER
-#   LETTER TURNED COMMA.
+#   "ñ" U00F1, "Ñ" U00D1; on African variants, for "ɔ" U0254, "Ɔ" U0186. (On
+#   Polynesian variants, only unshifted E08 is used for the macron dead key.)
 #
 #   To work around the loss of the key position where the HORIZONTAL BAR dash
 #   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
-#   mapped on that key in African and Breton variants respectively. Given that
-#   the default mapping of the HORIZONTAL BAR is on shifted E08, the Polynesian
-#   variants use U02BB as a base character for HORIZONTAL BAR.
+#   mapped on that key in African and Breton variants respectively.
 #
 <UEFD0>                                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
@@ -9100,8 +9098,6 @@
 <Multi_key><numbersign>                                                                   <ntilde> : "―" U2015 # HORIZONTAL BAR
 <UEFD0>                                                                                   <Ntilde> : "―" U2015 # HORIZONTAL BAR
 <Multi_key><numbersign>                                                                   <Ntilde> : "―" U2015 # HORIZONTAL BAR
-<UEFD0>                                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
-<Multi_key><numbersign>                                                                    <U02BB> : "―" U2015 # HORIZONTAL BAR
 #
 #
 # # Fallback input methods for HORIZONTAL BAR
@@ -9111,9 +9107,8 @@
 #   such as the one on key B10. In any event, if making room for the Unicode
 #   HYPHEN U2010 meets user preferences, most famously when Lucida Sans Unicode
 #   is used, then these dead key based ways to input HORIZONTAL BAR ease the
-#   removal of U2015 on non-regional layouts, too.
-#
-#   (The bad support of the Unicode HYPHEN is a well-founded design decision.)
+#   removal of U2015 on non-regional layouts, too. (The bad support of the
+#   Unicode HYPHEN is a well-founded design decision.)
 #   See #   Hyphens
 #
 #   Given that EN DASH and EM DASH are used as base characters for TWO-EM DASH
@@ -10976,8 +10971,8 @@
 #   length of three quarters of an em dash, being a four-per-three-em dash; and
 #   a new multikey sequence made of a quadruple minus is added to support U2014
 #   by multikey, although all of these three dashes are on live keys except for
-#   "―" U2015 on regional variants.
-#   See # # HORIZONTAL BAR for African, Breton and Polynesian variants
+#   "―" U2015 on part of the regional variants.
+#   See # # HORIZONTAL BAR for African and Breton variants
 #   See #   Dashes
 #   See #^# DOUBLE_BAR
 #
@@ -14848,7 +14843,7 @@
 <UEFD7>                                                                                    <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <Multi_key><equal>                                                                         <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <UEFD7>                                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-<Multi_key><equal>                                                                         <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+#   Multikey conflicts with "≡" U2261.                                                     <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 #   Multikey conflicts with "⇒" U21D2, "⪜" U2A9C.                                        <greater> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 <UEFD7>                                                                          <dead_circumflex> : "⁠" U2060 # WORD JOINER
