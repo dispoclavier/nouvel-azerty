@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1427+0200
 * Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2006+0200
 * Udpdate to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2007+0200
 * Add okay emoji for broken key combos   6.0.4.01.00 Wed 2025-08-27T1840+0200

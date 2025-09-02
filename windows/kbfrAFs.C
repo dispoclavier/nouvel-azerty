@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1427+0200
 * Support Francophone African variant    6.0.5.01.00 Sat 2025-08-30T2309+0200
 \*****************************************************************************/
 

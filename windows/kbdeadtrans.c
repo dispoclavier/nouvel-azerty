@@ -5,6 +5,7 @@
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
+* Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1459+0200
 * Udpdate to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2006+0200
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
 *
@@ -53,7 +54,11 @@
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
-	
+
+/*****************************************************************************\
+* High surrogates.
+\*****************************************************************************/
+
 /*<!dead_abovedot>*/      DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_abovehook>*/     DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_abovering>*/     DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
@@ -86,6 +91,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_turned>*/        DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
 
 /*****************************************************************************\
+* Diacriticized key emulations.
+*
 * On Windows, the dead key output is restricted to a single code unit, due to a
 * bad design decision, based on a misconception of Unicode as a 16-bit charset,
 * and on the ignorance of the Unicode encoding model using combining diacritics
@@ -121,6 +128,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_cedilla>*/    DEADTRANS(	L'U'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
 
 /*****************************************************************************\
+* Flag letters.
+*
 * Windows has flag letters on live keys, level AltLe (like Letter emoji), and
 * flag letters with an appended word joiner one level up for writing in letter
 * emoji fluently. AltLe is on top of the CapsLock key.
@@ -187,9 +196,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_flag>*/	DEADTRANS(	L'Z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
 
 /*****************************************************************************\
-* Single-press dead key content is up-to-date and overrides the legacy code.
+* Single-press dead key content.
 *
-* This code is generated. Please do not edit in place.
+* This is up-to-date and overrides the legacy dead key content.
+*
+* The code below is generated. Please do not edit in place.
 *
 * Cross-platform compatible changes should be done in the source Compose.yml.
 * Windows-specific changes may be done in copies of DEADTRANS macro calls moved
@@ -1084,7 +1095,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!group>                                                         */ DEADTRANS( L'T'	,0x2460	,0x00DE	,0x0000	), // "Þ" LATIN CAPITAL LETTER THORN
 /*<!group>                                                         */ DEADTRANS( L't'	,0x2460	,0x00FE	,0x0000	), // "þ" LATIN SMALL LETTER THORN
 /*<!group>                                                         */ DEADTRANS( 0x00B2	,0x2460	,0x0026	,0x0000	), // "&" AMPERSAND
-/*<!group>                                                         */ DEADTRANS( 0x02BB	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
 /*<!group>                                                         */ DEADTRANS( 0x2011	,0x2460	,0x2015	,0x0000	), // "―" HORIZONTAL BAR
 /*<!group>                                                         */ DEADTRANS( 0x2039	,0x2460	,0x00A8	,0x0000	), // "¨" DIAERESIS
 /*<!group>                                                         */ DEADTRANS( 0x203A	,0x2460	,0x00A3	,0x0000	), // "£" POUND SIGN
@@ -1822,7 +1832,9 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!turned>                                                        */ DEADTRANS( 0x200B	,0x0250	,0x0312	,0x0000	), // "̒" COMBINING TURNED COMMA ABOVE
 
 /*****************************************************************************\
-* Legacy dead key content is partly overridden by the transpilation above.
+* Legacy dead key content.
+*
+* This is partly overridden by the transpilation above.
 \*****************************************************************************/
 
 /*ACUTE&DOT_ABOVE    */	DEADTRANS(	L'S'	,0x1e65	,0x1e64	,0x0000	), // LATIN CAPITAL LETTER S WITH ACUTE AND DOT ABOVE
