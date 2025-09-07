@@ -22,6 +22,12 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+* Composition :
+	* Simplifier, améliorer ou corriger les séquences de "⊈" U+2288, "⊊" U+228A, "⊌" U+228C, "⊍" U+228D, "⊎" U+228E, "⊓" U+2293, "⊔" U+2294, "⊗" U+2297, "⊘" U+2298, "⊙" U+2299, "⊜" U+229C, "⊝" U+229D, "⊞" U+229E, "⊟" U+229F, "⊠" U+22A0, "⊡" U+22A1. compose-1.yml [f01f779](https://github.com/dispoclavier/nouvel-azerty/commit/f01f779bf8a154853fb866d1ae6c2758e932c12d)
+* Transformations :
+	* Accent grave :
+		* Redonder "⟦" U+27E6, "⟧" U+27E7 par "[", "]". compose-2.yml [059a209](https://github.com/dispoclavier/nouvel-azerty/commit/059a20953480fecb38ea7b07d1dbea28054c8ceb)
+
 ## 6.0.6 (2025-09-03)
 
 Meilleure variante pour la Polynésie française avec le ʻeta en Minuscule.
