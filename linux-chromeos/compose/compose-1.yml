@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: [see Compose.yml]
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.6" # See #   End of line comments
+<UEFA0>                     : "version 6.0.7" # See #   End of line comments
 #       Operating file name*: Compose or .XCompose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -6130,7 +6130,6 @@
 <Multi_key><less><parenleft><parenright><slash>                                                    : "⊀" U2280 # DOES NOT PRECEDE
 <Multi_key><greater><parenright><parenleft><slash>                                                 : "⊁" U2281 # DOES NOT SUCCEED
 <Multi_key><greater><parenleft><parenright><slash>                                                 : "⊁" U2281 # DOES NOT SUCCEED
-#@
 <Multi_key><c>                                                                             <space> : "⊂" U2282 # SUBSET OF
 <Multi_key><c>                                                                      <nobreakspace> : "⊂" U2282 # SUBSET OF
 <Multi_key><b>                                                                             <space> : "⊃" U2283 # SUPERSET OF
@@ -6159,23 +6158,20 @@
 #   The underscore in the "⊈" U2288 and "⊉" U2289 sequences trails, so as to
 #   distinguish these sequences from those of "⊊" U228A and "⊋" U228B, where
 #   the slash trails.
+#   See #   Negation
 #
-<Multi_key><c><slash><underscore>                                                          <space> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-<Multi_key><c><slash><underscore>                                                   <nobreakspace> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
+<Multi_key><c><slash><underscore>                                                                  : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
 <Multi_key><b><slash><underscore>                                                                  : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><c><c><slash><underscore>                                                               : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><c><backslash><slash><underscore>                                                       : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><c><underscore><slash>                                                          <space> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
-<Multi_key><c><underscore><slash>                                                   <nobreakspace> : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
+<Multi_key><c><underscore><slash>                                                                  : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><b><underscore><slash>                                                                  : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><c><c><underscore><slash>                                                               : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><c><backslash><underscore><slash>                                                       : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
-<Multi_key><u><less>                                                                       <space> : "⊌" U228C # MULTISET
-<Multi_key><u><less>                                                                <nobreakspace> : "⊌" U228C # MULTISET
-<Multi_key><u><period>                                                                     <space> : "⊍" U228D # MULTISET MULTIPLICATION
-<Multi_key><u><period>                                                              <nobreakspace> : "⊍" U228D # MULTISET MULTIPLICATION
-<Multi_key><u><plus>                                                                       <space> : "⊎" U228E # MULTISET UNION
-<Multi_key><u><plus>                                                                <nobreakspace> : "⊎" U228E # MULTISET UNION
+#Multi_key><u><less><minus>                                                                        : "⊌" U228C # MULTISET
+<Multi_key><u><less>                                                                               : "⊌" U228C # MULTISET
+<Multi_key><u><period>                                                                             : "⊍" U228D # MULTISET MULTIPLICATION
+<Multi_key><u><plus>                                                                               : "⊎" U228E # MULTISET UNION
 <Multi_key><c><bracketleft>                                                                <space> : "⊏" U228F # SQUARE IMAGE OF
 <Multi_key><c><bracketleft>                                                         <nobreakspace> : "⊏" U228F # SQUARE IMAGE OF
 <Multi_key><c><bracketright>                                                               <space> : "⊏" U228F # SQUARE IMAGE OF
@@ -6196,60 +6192,38 @@
 <Multi_key><c><c><bracketright><underscore>                                         <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore>                                        <space> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore>                                 <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
-<Multi_key><n><bracketleft>                                                                <space> : "⊓" U2293 # SQUARE CAP
-<Multi_key><n><bracketleft>                                                         <nobreakspace> : "⊓" U2293 # SQUARE CAP
-<Multi_key><n><bracketright>                                                               <space> : "⊓" U2293 # SQUARE CAP
-<Multi_key><n><bracketright>                                                        <nobreakspace> : "⊓" U2293 # SQUARE CAP
-<Multi_key><u><bracketleft>                                                                <space> : "⊔" U2294 # SQUARE CUP
-<Multi_key><u><bracketleft>                                                         <nobreakspace> : "⊔" U2294 # SQUARE CUP
-<Multi_key><u><bracketright>                                                               <space> : "⊔" U2294 # SQUARE CUP
-<Multi_key><u><bracketright>                                                        <nobreakspace> : "⊔" U2294 # SQUARE CUP
+<Multi_key><n><bracketleft>                                                                        : "⊓" U2293 # SQUARE CAP
+<Multi_key><n><bracketright>                                                                       : "⊓" U2293 # SQUARE CAP
+<Multi_key><u><bracketleft>                                                                        : "⊔" U2294 # SQUARE CUP
+<Multi_key><u><bracketright>                                                                       : "⊔" U2294 # SQUARE CUP
 <Multi_key><o><plus>                                                                       <space> : "⊕" U2295 # CIRCLED PLUS
 <Multi_key><o><plus>                                                                <nobreakspace> : "⊕" U2295 # CIRCLED PLUS
 <Multi_key><o><minus>                                                                      <space> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><o><minus>                                                               <nobreakspace> : "⊖" U2296 # CIRCLED MINUS
-<Multi_key><o><x>                                                                          <space> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><o><x>                                                                   <nobreakspace> : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><space><o><slash>                                                               <space> : "⊘" U2298 # CIRCLED DIVISION SLASH
-<Multi_key><space><o><slash>                                                        <nobreakspace> : "⊘" U2298 # CIRCLED DIVISION SLASH
-<Multi_key><nobreakspace><o><slash>                                                        <space> : "⊘" U2298 # CIRCLED DIVISION SLASH
-<Multi_key><nobreakspace><o><slash>                                                 <nobreakspace> : "⊘" U2298 # CIRCLED DIVISION SLASH
-<Multi_key><o><period>                                                                     <space> : "⊙" U2299 # CIRCLED DOT OPERATOR
-<Multi_key><o><period>                                                              <nobreakspace> : "⊙" U2299 # CIRCLED DOT OPERATOR
+<Multi_key><o><x>                                                                                  : "⊗" U2297 # CIRCLED TIMES
+<Multi_key><space><o><slash>                                                                       : "⊘" U2298 # CIRCLED DIVISION SLASH
+<Multi_key><nobreakspace><o><slash>                                                                : "⊘" U2298 # CIRCLED DIVISION SLASH
+<Multi_key><o><period>                                                                             : "⊙" U2299 # CIRCLED DOT OPERATOR
 <Multi_key><O><o>                                                                          <space> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><O><o>                                                                   <nobreakspace> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><o><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><O><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
-<Multi_key><space><o><equal>                                                               <space> : "⊜" U229C # CIRCLED EQUALS
-<Multi_key><space><o><equal>                                                        <nobreakspace> : "⊜" U229C # CIRCLED EQUALS
-<Multi_key><nobreakspace><o><equal>                                                        <space> : "⊜" U229C # CIRCLED EQUALS
-<Multi_key><nobreakspace><o><equal>                                                 <nobreakspace> : "⊜" U229C # CIRCLED EQUALS
-<Multi_key><o><minus><minus>                                                               <space> : "⊝" U229D # CIRCLED DASH
-<Multi_key><o><minus><minus>                                                        <nobreakspace> : "⊝" U229D # CIRCLED DASH
+<Multi_key><space><o><equal>                                                                       : "⊜" U229C # CIRCLED EQUALS
+<Multi_key><nobreakspace><o><equal>                                                                : "⊜" U229C # CIRCLED EQUALS
+<Multi_key><o><minus><minus>                                                                       : "⊝" U229D # CIRCLED DASH
 <Multi_key><space><o><minus>                                                               <space> : "⊝" U229D # CIRCLED DASH
 <Multi_key><space><o><minus>                                                        <nobreakspace> : "⊝" U229D # CIRCLED DASH
 <Multi_key><nobreakspace><o><minus>                                                        <space> : "⊝" U229D # CIRCLED DASH
 <Multi_key><nobreakspace><o><minus>                                                 <nobreakspace> : "⊝" U229D # CIRCLED DASH
-<Multi_key><bracketleft><plus>                                                             <space> : "⊞" U229E # SQUARED PLUS
-<Multi_key><bracketleft><plus>                                                      <nobreakspace> : "⊞" U229E # SQUARED PLUS
-<Multi_key><plus><bracketright>                                                            <space> : "⊞" U229E # SQUARED PLUS
-<Multi_key><plus><bracketright>                                                     <nobreakspace> : "⊞" U229E # SQUARED PLUS
-<Multi_key><bracketleft><plus><bracketright>                                               <space> : "⊞" U229E # SQUARED PLUS
-<Multi_key><bracketleft><plus><bracketright>                                        <nobreakspace> : "⊞" U229E # SQUARED PLUS
-<Multi_key><bracketleft><minus><bracketright>                                              <space> : "⊟" U229F # SQUARED MINUS
-<Multi_key><bracketleft><minus><bracketright>                                       <nobreakspace> : "⊟" U229F # SQUARED MINUS
-<Multi_key><bracketleft><x>                                                                <space> : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><bracketleft><x>                                                         <nobreakspace> : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><x><bracketright>                                                               <space> : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><x><bracketright>                                                        <nobreakspace> : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><bracketleft><x><bracketright>                                                  <space> : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><bracketleft><x><bracketright>                                           <nobreakspace> : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><bracketleft><period>                                                           <space> : "⊡" U22A1 # SQUARED DOT OPERATOR
-<Multi_key><bracketleft><period>                                                    <nobreakspace> : "⊡" U22A1 # SQUARED DOT OPERATOR
-<Multi_key><period><bracketright>                                                          <space> : "⊡" U22A1 # SQUARED DOT OPERATOR
-<Multi_key><period><bracketright>                                                   <nobreakspace> : "⊡" U22A1 # SQUARED DOT OPERATOR
-<Multi_key><bracketleft><period><bracketright>                                             <space> : "⊡" U22A1 # SQUARED DOT OPERATOR
-<Multi_key><bracketleft><period><bracketright>                                      <nobreakspace> : "⊡" U22A1 # SQUARED DOT OPERATOR
+#Multi_key><bracketleft><plus><bracketright>                                                       : "⊞" U229E # SQUARED PLUS
+<Multi_key><bracketleft><plus>                                                                     : "⊞" U229E # SQUARED PLUS
+#Multi_key><bracketleft><minus><bracketright>                                                      : "⊟" U229F # SQUARED MINUS
+<Multi_key><bracketleft><minus>                                                                    : "⊟" U229F # SQUARED MINUS
+#Multi_key><bracketleft><x><bracketright>                                                          : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><x>                                                                        : "⊠" U22A0 # SQUARED TIMES
+#Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
+<Multi_key><bracketleft><period>                                                                   : "⊡" U22A1 # SQUARED DOT OPERATOR
+#@
 <Multi_key><bar><minus><minus>                                                             <space> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><bar><minus><minus>                                                      <nobreakspace> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><minus><minus><bar>                                                             <space> : "⊣" U22A3 # LEFT TACK
