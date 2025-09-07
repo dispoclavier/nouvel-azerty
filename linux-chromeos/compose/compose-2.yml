@@ -16559,6 +16559,12 @@
 #   "‶" U2036, "‷" U2037 by multikey.
 #   See # # Reversed primes
 #
+#   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
+#   dead_grave by "[" and "]" to work around the special formatting triggered
+#   by some ASCII-bracketed strings in Markdown while the actual intent is to
+#   mark up keycaps in documentation.
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
+#
 #   "̖" U0316 COMBINING GRAVE ACCENT BELOW has ampersand as a base character,
 #   and underscore yields its spacing counterpart "ˎ" U02CE MODIFIER LETTER LOW
 #   GRAVE ACCENT, because double press is the double grave accent. Else, double
@@ -16589,6 +16595,10 @@
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <Multi_key><grave>                                                                    <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
+<dead_grave>                                                                         <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><grave>                                                                   <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<dead_grave>                                                                        <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><grave>                                                                  <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <dead_grave>                                                                            <asterisk> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
 <Multi_key><grave>                                                                      <asterisk> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
 <dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
