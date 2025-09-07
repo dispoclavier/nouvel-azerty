@@ -5,6 +5,7 @@
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
+* Support outline math brackets U27E6..  6.0.7.00.00 Wed 2025-09-03T0803+0200
 * Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1459+0200
 * Udpdate to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2006+0200
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
@@ -881,6 +882,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!grave>                                                         */ DEADTRANS( L'\''	,0x00F2	,0x201B	,0x0000	), // "‛" SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 /*<!grave>                                                         */ DEADTRANS( 0x2019	,0x00F2	,0x201B	,0x0000	), // "‛" SINGLE HIGH-REVERSED-9 QUOTATION MARK, single reversed comma quotation mark
 /*<!grave>                                                         */ DEADTRANS( L'*'	,0x00F2	,0x02DF	,0x0000	), // "˟" MODIFIER LETTER CROSS ACCENT, Swedish grave accent
+/*<!grave>                                                         */ DEADTRANS( L'['	,0x00F2	,0x27E6	,0x0000	), // "⟦" MATHEMATICAL LEFT WHITE SQUARE BRACKET
+/*<!grave>                                                         */ DEADTRANS( L']'	,0x00F2	,0x27E7	,0x0000	), // "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!grave>                                                         */ DEADTRANS( L'='	,0x00F2	,0x02F4	,0x0000	), // "˴" MODIFIER LETTER MIDDLE GRAVE ACCENT
 /*<!grave>                                                         */ DEADTRANS( L'"'	,0x00F2	,0x201F	,0x0000	), // "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
 /*<!grave>                                                         */ DEADTRANS( 0x20AC	,0x00F2	,0x201F	,0x0000	), // "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK, double reversed comma quotation mark
