@@ -4954,7 +4954,7 @@
 #   is always at the bottom.
 #
 #
-#   Reverse symbols
+#   Reverse or turned symbols
 #
 #   For opposite or reverse relationships, when the symbol is turned, flipped
 #   horizontally or vertically, a matching alternate slug is used, as well as
@@ -5094,6 +5094,20 @@
 #   assumed to refer to the same angle.
 #
 #
+#   Mathematical tack symbols
+#
+#   The most straightforward multikey sequences for tacks are based on capital
+#   letter T, with both graphic and alphabetic mnemonics. Non-down tacks have a
+#   trailing transform in their sequence: "%" for down tacks with a multikey
+#   equivalent based mnemonic, and "<" for left tacks, ">" for right tacks. But
+#   other sequences accumulated over time as well, descriptive or elsewise, and
+#   are maintained for variety, since removing any is unnecessary so far.
+#
+#   Various lengths (short, long) are supported by leading space or by trailing
+#   additional transforms: "'" for short tacks, "|" for long tacks, at the very
+#   end of the sequence.
+#
+#
 #   Small symbols
 #
 #   Small alternative symbols ("∊" U220A, "∍" U220D, "⋷" U22F7, "⋾" U22FE,
@@ -5137,7 +5151,7 @@
 #   The not sign is also in group 4 of grave on the N key.
 #
 #   These sequences need to be consistent with those of "⫬" U2AEC and "⫭" U2AED
-#   below. There is also a not-math turned not sign "⌙" U2319.
+#   below. There is also a non-math TURNED NOT SIGN "⌙" U2319.
 #   See # # TURNED&GROUP_1
 #   See # # TURNED&GROUP_2
 #
@@ -6221,12 +6235,16 @@
 <Multi_key><bracketleft><x>                                                                        : "⊠" U22A0 # SQUARED TIMES
 #Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period>                                                                   : "⊡" U22A1 # SQUARED DOT OPERATOR
+#
+#   The duplicate minus in "⊢" U22A2, "⊣" U22A3 accounts for "⊦" U22A6 ASSERTION and "⫞" U2ADE SHORT LEFT TACK.
+#
 <Multi_key><bar><minus><minus>                                                             <space> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><bar><minus><minus>                                                      <nobreakspace> : "⊢" U22A2 # RIGHT TACK
-#
-#   The duplicate minus in "⊣" U22A3 accounts for "⫞" U2ADE SHORT LEFT TACK.
-#
+<Multi_key><T><greater>                                                                    <space> : "⊢" U22A2 # RIGHT TACK
+<Multi_key><T><greater>                                                             <nobreakspace> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><minus><minus><bar>                                                                     : "⊣" U22A3 # LEFT TACK
+<Multi_key><T><less>                                                                       <space> : "⊣" U22A3 # LEFT TACK
+<Multi_key><T><less>                                                                <nobreakspace> : "⊣" U22A3 # LEFT TACK
 #@
 <Multi_key><T>                                                                             <space> : "⊤" U22A4 # DOWN TACK
 <Multi_key><T>                                                                      <nobreakspace> : "⊤" U22A4 # DOWN TACK
@@ -7070,30 +7088,19 @@
 <Multi_key><bracketright><slash><backslash><bracketleft>                            <nobreakspace> : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><bracketright><backslash><slash><bracketleft>                                   <space> : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><bracketright><backslash><slash><bracketleft>                            <nobreakspace> : "⟗" U27D7 # FULL OUTER JOIN
-<Multi_key><T><bar>                                                                        <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><T><bar>                                                                 <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><space><space><T><T>                                                            <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><space><space><T><T>                                                     <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><space><T><T>                                                     <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><space><T><T>                                              <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><nobreakspace><T><T>                                              <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><nobreakspace><T><T>                                       <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><T><percent><bar>                                                               <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><T><percent><bar>                                                        <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><space><space><T><percent>                                                      <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><space><space><T><percent>                                               <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><space><T><percent>                                               <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><space><T><percent>                                        <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><nobreakspace><T><percent>                                        <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><nobreakspace><T><percent>                                 <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><I><underscore><bar>                                                            <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><I><underscore><bar>                                                     <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><space><space><I><underscore>                                                   <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><space><space><I><underscore>                                            <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><space><I><underscore>                                            <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><space><I><underscore>                                     <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><nobreakspace><I><underscore>                                     <space> : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><nobreakspace><nobreakspace><I><underscore>                              <nobreakspace> : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><T><T><bar>                                                                             : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><space><space><T><T>                                                                    : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><space><T><T>                                                             : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><nobreakspace><T><T>                                                      : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><T><percent><bar>                                                                       : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><space><space><T><percent>                                                              : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><space><T><percent>                                                       : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><nobreakspace><T><percent>                                                : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><I><underscore><bar>                                                                    : "⟘" U27D8 # LARGE UP TACK
+#Multi_key><space><space><I><underscore>                                                           : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><space><space><I>                                                                       : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><space><I>                                                                : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><nobreakspace><I>                                                         : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><T>                                                               <space> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><space><space><T>                                                        <nobreakspace> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><nobreakspace><space><T>                                                        <space> : "⟙" U27D9 # LARGE DOWN TACK
@@ -8791,40 +8798,25 @@
 <Multi_key><nobreakspace><bar><parenright>                                          <nobreakspace> : "⫝" U2ADD # NONFORKING
 <Multi_key><minus><bar>                                                                    <space> : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><minus><bar>                                                             <nobreakspace> : "⫞" U2ADE # SHORT LEFT TACK
-<Multi_key><T><apostrophe>                                                                 <space> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><T><apostrophe>                                                          <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><T><apostrophe>                                                                         : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><T>                                                                      <space> : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><T>                                                               <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><space><minus><apostrophe><minus>                                               <space> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><space><minus><apostrophe><minus>                                        <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><nobreakspace><minus><apostrophe><minus>                                        <space> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><nobreakspace><minus><apostrophe><minus>                                 <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><space><minus><rightsinglequotemark><minus>                                     <space> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><space><minus><rightsinglequotemark><minus>                              <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><nobreakspace><minus><rightsinglequotemark><minus>                              <space> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><nobreakspace><minus><rightsinglequotemark><minus>                       <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><T><T><apostrophe>                                                              <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><T><T><apostrophe>                                                       <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><space><T><T>                                                                   <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><space><T><T>                                                            <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><nobreakspace><T><T>                                                            <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><nobreakspace><T><T>                                                     <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><T><percent><apostrophe>                                                        <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><T><percent><apostrophe>                                                 <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><space><T><percent>                                                             <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><space><T><percent>                                                      <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><nobreakspace><T><percent>                                                      <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><nobreakspace><T><percent>                                               <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><I><underscore><apostrophe>                                                     <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><I><underscore><apostrophe>                                              <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><space><I><underscore>                                                          <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><space><I><underscore>                                                   <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><nobreakspace><I><underscore>                                                   <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><nobreakspace><I><underscore>                                            <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><minus><apostrophe><minus>                                                      <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><minus><apostrophe><minus>                                               <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><minus><rightsinglequotemark><minus>                                            <space> : "⫠" U2AE0 # SHORT UP TACK
-<Multi_key><minus><rightsinglequotemark><minus>                                     <nobreakspace> : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><space><minus><apostrophe><minus>                                                       : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><nobreakspace><minus><apostrophe><minus>                                                : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><space><minus><rightsinglequotemark><minus>                                             : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><nobreakspace><minus><rightsinglequotemark><minus>                                      : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><T><T><apostrophe>                                                                      : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><space><T><T>                                                                           : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><nobreakspace><T><T>                                                                    : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><percent><apostrophe>                                                                : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><space><T><percent>                                                                     : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><nobreakspace><T><percent>                                                              : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><I><underscore><apostrophe>                                                             : "⫠" U2AE0 # SHORT UP TACK
+#Multi_key><space><I><underscore>                                                                  : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><space><I>                                                                              : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><nobreakspace><I>                                                                       : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><minus><apostrophe><minus>                                                              : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><minus><rightsinglequotemark><minus>                                                    : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><bar><underscore><s>                                                                    : "⫡" U2AE1 # PERPENDICULAR WITH S
 <Multi_key><bar><minus><equal>                                                                     : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
 <Multi_key><bar><equal><minus>                                                                     : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
